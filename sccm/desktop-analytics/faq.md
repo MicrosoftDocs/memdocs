@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 10/15/2019
+ms.date: 10/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -124,9 +124,13 @@ Once devices are enrolled, to see the migrated inputs in the Desktop Analytics p
 
 The migration process is transactional. You'll see either all inputs migrated without corruption, or no migrated inputs at all. If you don't see the migrated inputs in 24 hours, contact Microsoft Support. Start tagging apps as you see the migrated inputs. If you've already tagged some apps, Desktop Analytics keeps those inputs in case they conflict with the inputs from Windows Analytics.
 
-### I'm not ready yet, can I migrate after the initial onboarding?
+### How long do I have to migrate my data?
 
-Yes.<!-- 5202803 --> Existing Windows Analytics customers can now migrate data after initial onboarding. Go to **Connected services** in the Desktop Analytics portal, and select the option to migrate data from Windows Analytics.
+Windows Analytics Upgrade Readiness solution is being [retired on January 31st, 2020](https://aka.ms/waretirement). After retirement, based on the Log Analytics workspace retention policy, data will go away over time. Customers that want to keep the data need to migrate or export before that occurs.
+
+### Can I migrate after the initial onboarding?
+
+Yes.<!-- 5202803 --> As long as you set an existing Windows Analytics workspace as Desktop Analytics workspace during [Initial onboarding](/sccm/desktop-analytics/set-up#initial-onboarding), existing Windows Analytics customers can now migrate data after the initial onboarding. Go to **Connected services** in the Desktop Analytics portal, and select the option to migrate data from Windows Analytics.
 
 ### Can I use Update Compliance together with Desktop Analytics?
 
