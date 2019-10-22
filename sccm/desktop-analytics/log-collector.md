@@ -29,8 +29,8 @@ Starting in Configuration Manager version 1906, use the **DesktopAnalyticsLogsCo
 
 - For Windows 7 with Service Pack 1, PowerShell version 4.0 or later
     - [.NET framework version 4.6 or later](https://dotnet.microsoft.com/download/dotnet-framework)
-    - [Windows Management Framework version 4.0](http://aka.ms/wmf4download) or [later](http://aka.ms/wmf5download).
 
+    - [Windows Management Framework version 4.0](http://aka.ms/wmf4download) or [later](http://aka.ms/wmf5download)
 
 ## Usage
 
