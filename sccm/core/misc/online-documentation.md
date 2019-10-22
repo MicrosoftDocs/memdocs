@@ -1,6 +1,6 @@
 ---
-title: "Online Documentation"
-titleSuffix: "Configuration Manager"
+title: Online Documentation
+titleSuffix: Configuration Manager
 ms.date: 10/06/2016
 ms.topic: conceptual
 ms.prod: configuration-manager
@@ -54,7 +54,7 @@ Find the documentation library for the product version that you use:
 
 **Release notes:** Release notes for this technical preview are included with the core documentation for this release, and are presented in-line with the information for each feature.  
 
-**Accessibility:** Accessibility information for this technical preview is unchanged from System Center 2012 Configuration Manager. See [Accessibility Features of Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=258586), for information about the features, products, and services that make Configuration Manager more accessible for people with disabilities.  
+**Accessibility:** Accessibility information for this technical preview is unchanged from System Center 2012 Configuration Manager. See [Accessibility Features of Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=258586), for information about the features, products, and services that make Configuration Manager more accessible for people with disabilities.  
 
 ## System Center 2012 Configuration Manager  
 **On-line documentation:** for the following:  
@@ -85,10 +85,10 @@ you can view the on-line documentation  in the following guides on TechNet:
 
   **Release notes and technical publications:** The release notes and technical publications supplement the Configuration Manager guides. The release notes contain information that is not available in the product documentation and that is required to successfully install Configuration Manager. Technical publications provide additional information that supports Configuration Manager.  
 
-- [Release Notes for System Center 2012 Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=529437)  
+- [Release Notes for System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=529437)  
 
-- [Technical Publications for System Center 2012 Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=261032)  
+- [Technical Publications for System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=261032)  
 
-**Accessibility:** See the online topic, [Accessibility Features of Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=258586), for information about the features, products, and services that make Configuration Manager more accessible for people with disabilities.  
+**Accessibility:** See the online topic, [Accessibility Features of Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=258586), for information about the features, products, and services that make Configuration Manager more accessible for people with disabilities.  
 
-**Downloadable documentation:** You can download a [copy of this technical documentation from the Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=253643). Use the on-line TechNet library for the most up-to-date information.
+**Downloadable documentation:** You can download a [copy of this technical documentation from the Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=253643). Use the on-line TechNet library for the most up-to-date information.

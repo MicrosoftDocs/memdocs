@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 08/09/2019
+ms.date: 08/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -86,9 +86,10 @@ Enables [peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) for Con
 ### Minimum duration before cached content can be removed (minutes)
 
 <!--4485509-->
-Starting in version 1906, specify the minimum time for the Configuration Manager client to keep cached content. This client setting controls how long the client stores content in the cache before deleting it.
+Starting in version 1906, specify the minimum time for the Configuration Manager client to keep cached content. This client setting defines the minimum amount of time Configuration Manager agent should wait before it can remove content from the cache in case more space is needed.
 
 By default this value is 1,440 minutes (24 hours).
+The maximum value for this setting is 10,080 minutes (1 week).
 
 This setting gives you greater control over the client cache on different types of devices. You might reduce the value on clients that have small hard drives and don't need to keep existing content before another deployment runs.
 
@@ -319,8 +320,8 @@ The following settings must be shorter in duration than the shortest maintenance
 
 For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
 
-- **Specify the snooze duration for computer restart countdown notifications (hours)** (Starting in version 1906)<!--3976435-->
-  - The default value is 4 hours.
+- **Specify the snooze duration for computer restart countdown notifications (minutes)** (Starting in version 1906)<!--3976435-->
+  - The default value is 240 minutes.
   - Your snooze duration value should be less than the temporary notification value minus the value for the notification the user cant dismiss.
   - For more information, see [Device restart notifications](/sccm/core/clients/deploy/device-restart-notifications).
 

@@ -102,7 +102,7 @@ Class SMS_TaskSequence_ConnectNetworkFolderAction : SMS_TaskSequence_Action
 
  Password to use to connect to the network share.  
 
- The task sequence variable associated with this property is SMSConnectNetworkFolderPassword. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is SMSConnectNetworkFolderPassword. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Path`  
  Data type: `String`  
@@ -140,7 +140,7 @@ Class SMS_TaskSequence_ConnectNetworkFolderAction : SMS_TaskSequence_Action
 
  Account that should be used to connect to the network share.  
 
- The task sequence variable associated with this property is SMSConnectNetworkFolderAccount. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is SMSConnectNetworkFolderAccount. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
 ## Remarks  
  Class qualifiers for this class include:  

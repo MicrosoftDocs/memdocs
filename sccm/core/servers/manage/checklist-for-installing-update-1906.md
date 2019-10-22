@@ -2,7 +2,7 @@
 title: Checklist for 1906
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1906.
-ms.date: 08/09/2019
+ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -63,13 +63,13 @@ The first time you use a Configuration Manager console after the update has fini
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of <Date>, version 1906 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
+As of August 16, 2019, version 1906 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
 
-At this time, version 1906 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 1906:
+<!--At this time, version 1906 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 1906: 
 
 [Version 1906 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
-Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
+<!--Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!Note]  
 > The version 1906 update is only applicable to sites running version 1802 or later.
@@ -88,7 +88,7 @@ To opt-in to the early update ring:
 The version 1906 update should now be available in the console.
 
 > [!Important]  
-> This script only adds your site to the early update ring for version 1906. It's not a permanent change.
+> This script only adds your site to the early update ring for version 1906. It's not a permanent change. -->
 
 
 ## Checklist
@@ -196,6 +196,12 @@ Before you update a site, stop antivirus software on the Configuration Manager s
 Before you update a site, back up the site database at the CAS and primary sites. This backup makes sure you have a successful backup to use for disaster recovery.
 
 For more information, see [Backup and recovery](/sccm/protect/understand/backup-and-recovery).
+
+### Back up customized files
+
+If you or a third-party product customizes any Configuration Manager configuration files, save a copy of your customizations.
+
+For example, you add custom entries to the **osdinjection.xml** file in the `bin\X64` folder of your Configuration Manager installation directory. After you update Configuration Manager, these customizations don't persist. You need to reapply your customizations.
 
 ### Plan for client piloting
 

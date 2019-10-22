@@ -15,9 +15,6 @@ ms.collection: M365-identity-device-management
 
 # How to enroll devices in Desktop Analytics
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 When you [connect Configuration Manager](/sccm/desktop-analytics/connect-configmgr) to Desktop Analytics, you configure settings to enroll devices to Desktop Analytics. You can change these settings at any time. Also make sure the devices are up to date.
 
 
@@ -50,7 +47,7 @@ Windows 10 includes the compatibility component. To get the latest compatibility
 
 #### Windows 8.1
 
-Download the update: [KB 2976978](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2976978) 
+Download the update: [KB 2976978](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2976978) 
 
 Runs diagnostics on the Windows 8.1 systems that participate in the Windows Customer Experience Improvement Program. These diagnostics help determine whether you might have compatibility issues when upgrading to Windows 10.
 
@@ -58,7 +55,7 @@ For more information, see [Compatibility update for keeping Windows up-to-date i
 
 #### Windows 7 with Service Pack 1
 
-Download the update: [KB 2952664](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2952664) 
+Download the update: [KB 2952664](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2952664) 
 
 Runs diagnostics on the Windows 7 with Service Pack 1 (SP1) systems that participate in the Windows Customer Experience Improvement Program. These diagnostics help determine whether you might have compatibility issues when upgrading to Windows 10.
 

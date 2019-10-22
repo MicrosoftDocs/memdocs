@@ -77,17 +77,17 @@ If you spend much time around Configuration Manager you become aware that much o
 ### More Resources  
  **Books:** There are numerous books available for WMI. A few example books are listed below.  
 
-- [Developing WMI Solutions: A Guide to Windows Management Instrumentation](http://www.amazon.com/gp/product/0201616130/ref=pd_lpo_k2_dp_sr_1?pf_rd_p=1535523722&pf_rd_s=lpo-top-stripe-1&pf_rd_t=201&pf_rd_i=1578702607&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=05X3A23E6YKTXGZ0P9NZ)  
+- [Developing WMI Solutions: A Guide to Windows Management Instrumentation](https://www.amazon.com/gp/product/0201616130/ref=pd_lpo_k2_dp_sr_1?pf_rd_p=1535523722&pf_rd_s=lpo-top-stripe-1&pf_rd_t=201&pf_rd_i=1578702607&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=05X3A23E6YKTXGZ0P9NZ)  
 
-- [Windows Management Instrumentation](http://www.amazon.com/Windows-Management-Instrumentation-Matthew-Lavy/dp/1578702607)  
+- [Windows Management Instrumentation](https://www.amazon.com/Windows-Management-Instrumentation-Matthew-Lavy/dp/1578702607)  
 
-- [Microsoft® Windows® Scripting with WMI: Self-Paced Learning Guide](http://www.amazon.com/Microsoft-Windows-Scripting-WMI-Self-Paced/dp/0735622310/ref=sr_1_5?ie=UTF8&qid=1383150816&sr=8-5&keywords=wmi+books)  
+- [Microsoft® Windows® Scripting with WMI: Self-Paced Learning Guide](https://www.amazon.com/Microsoft-Windows-Scripting-WMI-Self-Paced/dp/0735622310/ref=sr_1_5?ie=UTF8&qid=1383150816&sr=8-5&keywords=wmi+books)  
 
   **Videos:** There are numerous videos available for WMI. A few example videos are listed below.  
 
-- [YouTube: WMI Powershell Introduction](http://www.youtube.com/watch?v=5qZfs4j73IQ)  
+- [YouTube: WMI Powershell Introduction](https://www.youtube.com/watch?v=5qZfs4j73IQ)  
 
-- [YouTube: What is WMI and how to enable remote WMI ?](http://www.youtube.com/watch?v=Nlf3IuTY9wA)  
+- [YouTube: What is WMI and how to enable remote WMI ?](https://www.youtube.com/watch?v=Nlf3IuTY9wA)  
 
   **Other:** Other resources for WMI are listed below.  
 

@@ -2,7 +2,7 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 07/26/2019
+ms.date: 10/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -251,17 +251,13 @@ Stores the site code of the Configuration Manager site.
 
 This variable stores the time zone information in the following format:
 
-```
-Bias,StandardBias,DaylightBias,StandardDate.wYear,wMonth,wDayOfWeek,wDay,wHour,wMinute,wSecond,wMilliseconds,DaylightDate.wYear,wMonth,wDayOfWeek,wDay,wHour,wMinute,wSecond,wMilliseconds,StandardName,DaylightName
-```
+`Bias,StandardBias,DaylightBias,StandardDate.wYear,wMonth,wDayOfWeek,wDay,wHour,wMinute,wSecond,wMilliseconds,DaylightDate.wYear,wMonth,wDayOfWeek,wDay,wHour,wMinute,wSecond,wMilliseconds,StandardName,DaylightName`
 
 #### Example
 
 For the time zone **Eastern Time (US and Canada)**:
 
-```
-300,0,-60,0,11,0,1,2,0,0,0,0,3,0,2,2,0,0,0,Eastern Standard Time,Eastern Daylight Time
-```
+`300,0,-60,0,11,0,1,2,0,0,0,0,3,0,2,2,0,0,0,Eastern Standard Time,Eastern Daylight Time`
 
 ### <a name="SMSTSType"></a> _SMSTSType
 
@@ -1519,29 +1515,14 @@ Specifies the message to display in the restart notification dialog. If this var
 
 ### <a name="SMSTSRebootRequested"></a> SMSTSRebootRequested
 
-Indicates that a restart is requested after the current task sequence step is completed. If a restart is required, set this variable to `true`, and the task sequence manager restarts the computer after this task sequence step. If the task sequence step requires a restart to complete the action, set this variable. After the computer restarts, the task sequence continues to run from the next task sequence step.
+Indicates that a restart is requested after the current task sequence step is completed. If the task sequence step requires a restart to complete the action, set this variable. After the computer restarts, the task sequence continues to run from the next task sequence step.
+
+- `HD`: Restart to the installed OS
+- `WinPE`: Restart to the associated boot image
 
 ### <a name="SMSTSRetryRequested"></a> SMSTSRetryRequested
 
 Requests a retry after the current task sequence step is completed. If this task sequence variable is set, also set the [SMSTSRebootRequested](#SMSTSRebootRequested) variable to `true`. After the computer is restarted, the task sequence manager reruns the same task sequence step.
-
-### <a name="SMSTSRunCommandLineUserName"></a> SMSTSRunCommandLineUserName
-
-*Applies to the [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) step.*
-
-(input)
-
-Specifies the account by which the command line is run. The value is a string of the form username or domain\username. Specify the account password with the [SMSTSRunCommandLinePassword](#SMSTSRunCommandLinePassword) variable.
-
-For more information on the task sequence run-as account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
-
-### <a name="SMSTSRunCommandLinePassword"></a> SMSTSRunCommandLinePassword
-
-*Applies to the [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) step.*
-
-(input)
-
-Specifies the password for the account specified by the [SMSTSRunCommandLineUserName](#SMSTSRunCommandLineUserName) variable.
 
 ### <a name="SMSTSSoftwareUpdateScanTimeout"></a> SMSTSSoftwareUpdateScanTimeout
 
@@ -1574,10 +1555,13 @@ Set the SMSTSWaitForSecondReboot value in seconds to specify how long the task s
 
 For example, if you set SMSTSWaitForSecondReboot to `600`, the task sequence pauses for 10 minutes after a restart before additional steps run. This variable is useful when a single Install Software Updates task sequence step installs hundreds of software updates.
 
+> [!Note]
+> This variable only applies to a task sequence that deploys an OS. It doesn't work in a custom task sequence. <!-- 2839998 -->
+
 ### <a name="TSDebugMode"></a> TSDebugMode
 
 <!--3612274-->
-Starting in version 1906, set this variable to `TRUE` on a collection to which a task sequence is deployed. This variable changes the behavior of any task sequence on any device in that collection to use the task sequence debugger.
+Starting in version 1906, set this variable to `TRUE` on a collection or computer object to which the task sequence is deployed. Any device that has this variable set will put any task sequence deployed to it into debug mode.
 
 For more information, see [Debug a task sequence](/sccm/osd/deploy-use/debug-task-sequence).
 

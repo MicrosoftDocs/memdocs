@@ -15,9 +15,6 @@ ms.collection: M365-identity-device-management
 
 # How to deploy to pilot with Desktop Analytics
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 One of the benefits of Desktop Analytics is to help identify the smallest set of devices that provide the widest coverage of factors. It focuses on the factors that are most important to a pilot of Windows upgrades and updates. Making sure the pilot is more successful allows you to move more quickly and confidently to broad deployments in production.  
 
 [!INCLUDE [Definition of pilot and production](includes/define-pilot-prod.md)]

@@ -1,6 +1,6 @@
 ---
 title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER EVALUATION"
-ms.date: 1/12/2017
+ms.date: 01/12/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -55,11 +55,11 @@ ms.collection: M365-identity-device-management
 
    3.  **Included Microsoft Programs.** The software contains other Microsoft programs. These license terms identify them, and indicate if other license terms apply to your use of those programs, or if these license terms apply to your use of them. For the program included but not identified, the license terms with those programs apply to your use.  
 
-   4.  **Third Party Programs.** The software may include third party programs that Microsoft, not the third party, licenses to you under this agreement. Notices, if any, for the third party programs are included for your information only at http://go.microsoft.com/fwlink/?LinkID=789409.  
+   4.  **Third Party Programs.** The software may include third party programs that Microsoft, not the third party, licenses to you under this agreement. Notices, if any, for the third party programs are included for your information only at https://go.microsoft.com/fwlink/?LinkID=789409.  
 
 2. **ADDITIONAL LICENSING REQUIREMENT AND/OR USE RIGHTS.**  
 
-   1.  **SQL Server Branded Components.** The software contains Microsoft SQL Server branded components and the license terms that would apply to your use of these programs are at http://go.microsoft.com/fwlink/?LinkID=787077. If you do not agree to their license terms, you may not use these programs.  
+   1.  **SQL Server Branded Components.** The software contains Microsoft SQL Server branded components and the license terms that would apply to your use of these programs are at https://go.microsoft.com/fwlink/?LinkID=787077. If you do not agree to their license terms, you may not use these programs.  
 
    2.  **Site Hierarchy - Geographical View.** The Server Software may include a feature that retrieves content such as maps, images and other data through the Bing Maps (or successor branded) application programming interface (the "Bing Maps API"). The purpose of this feature is to display site data on top of maps, aerial and hybrid imagery. You may use the feature to display the site data on your screen or print a written report including that display. This may be done only in conjunction with and through methods and means of access integrated in the software. You may not otherwise copy, store, archive, or create a database of the content available through the Bing Maps API. You may not use the following for any purpose even if they are available through the Bing Maps API:  
 
@@ -67,13 +67,13 @@ ms.collection: M365-identity-device-management
 
        -   any Road Traffic Data or Bird's Eye Imagery (or associated metadata).  
 
-       Your use of the Bing Maps API and associated content is also subject to the additional terms and conditions at http://go.microsoft.com/fwlink/?LinkID=223934.  
+       Your use of the Bing Maps API and associated content is also subject to the additional terms and conditions at https://go.microsoft.com/fwlink/?LinkID=223934.  
 
    3.  **No Copying or Distributing Data Sets.** You may not copy or distribute any data set (or any portion of a data set) included in the software.  
 
 3. **INTERNET-BASED SERVICES.** Microsoft provides Internet-based services with the software. It may change or cancel them at any time.  
 
-   1.  **Consent for Internet-Based Services.** The software features described below and in the System Center Configuration Manager Privacy Statement connect to Microsoft or service provider computer systems over the Internet. In some cases, you will not receive a separate notice when they connect. In some cases, you may switch off these features or not use them. For more information about these features and how to control settings, see http://go.microsoft.com/fwlink/?LinkID=619434. **By using these features, you consent to the transmission of this information.** Microsoft does not use the information to identify or contact you.  
+   1.  **Consent for Internet-Based Services.** The software features described below and in the System Center Configuration Manager Privacy Statement connect to Microsoft or service provider computer systems over the Internet. In some cases, you will not receive a separate notice when they connect. In some cases, you may switch off these features or not use them. For more information about these features and how to control settings, see https://go.microsoft.com/fwlink/?LinkID=619434. **By using these features, you consent to the transmission of this information.** Microsoft does not use the information to identify or contact you.  
 
        1.  **Computer Information.** The following features use Internet protocols, which send to the appropriate systems computer information, such as your Internet protocol address, the type of operating system, browser and name and version of the software you are using, and the language code of the device where you installed the software. Microsoft uses this information to make the Internet-based services available to you.  
 
@@ -97,7 +97,7 @@ ms.collection: M365-identity-device-management
 
                In some cases, you will not receive a separate notice before this feature takes effect. By installing the software, you consent to the transmission of standard computer information and the automatic downloading and installation of Updates.  
 
-           -   **Customer Experience Improvement Program (CEIP).** This software uses CEIP. CEIP automatically sends Microsoft information about your hardware and how you use this software. We do not use this information to identify or contact you. To learn more about CEIP, see http://go.microsoft.com/fwlink/?LinkId=52097.  
+           -   **Customer Experience Improvement Program (CEIP).** This software uses CEIP. CEIP automatically sends Microsoft information about your hardware and how you use this software. We do not use this information to identify or contact you. To learn more about CEIP, see https://go.microsoft.com/fwlink/?LinkId=52097.  
 
            -   **Usage Data.** Microsoft automatically collects usage data over the internet. Microsoft uses this data to: a) help improve your installation or upgrade experience, and b) improve the quality and security of Microsoft products and services. There are 3 levels of usage data (Basic, Enhanced and Full). This feature is set on the "Enhanced" level by default.  
 
@@ -107,7 +107,7 @@ ms.collection: M365-identity-device-management
 
                -   **"Full"** includes all data collected in "Basic" and "Enhanced" levels as well as data about endpoint protection (number of devices in different EP states), update compliance percentages, and software updates. This level can also include advanced diagnostic information like system files and memory snapshots which may include personal information that existed in memory or log files at the time of capture.  Microsoft will not use this information to identify you, contact you, or for advertising purposes.  
 
-               Administrators can change the level of data collected in the Usage Data setting of the Configuration Manager console. For more information, see the "Learn More" article about Usage Data Levels and Settings at http://go.microsoft.com/fwlink/?LinkId=624310 and the Privacy Statement for System Center Configuration Manager at http://go.microsoft.com/fwlink/?LinkID=619434.  
+               Administrators can change the level of data collected in the Usage Data setting of the Configuration Manager console. For more information, see the "Learn More" article about Usage Data Levels and Settings at https://go.microsoft.com/fwlink/?LinkId=624310 and the Privacy Statement for System Center Configuration Manager at https://go.microsoft.com/fwlink/?LinkID=619434.  
 
            -   **Microsoft Error Reporting Service.** This feature helps Microsoft and Windows partners diagnose problems in the software and provide solutions. Not all problems will have a solution but when a solution is available, it will be offered as a step to solve a problem you have reported or as an update to install. As part of setup and installation, the Microsoft Error Reporting Service sends to Microsoft information about setup and installation failures in order to attempt to diagnose the problem. To help prevent problems and make the software more reliable, some solutions are also included in service packs and future versions of the software.  
 

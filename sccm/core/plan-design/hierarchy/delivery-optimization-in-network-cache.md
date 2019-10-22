@@ -2,7 +2,7 @@
 title: Delivery Optimization In-Network Cache
 titleSuffix: Configuration Manager
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization
-ms.date: 07/30/2019
+ms.date: 09/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -15,6 +15,8 @@ manager: dougeby
 
 # Delivery Optimization In-Network Cache in Configuration Manager
 
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 <!--3555764-->
 
 Starting in version 1906, you can install a Delivery Optimization In-Network Cache (DOINC) server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links.
@@ -24,7 +26,7 @@ This cache server acts as an on-demand transparent cache for content downloaded 
 This cache is separate from Configuration Manager's distribution point content. If you choose the same drive as the distribution point role, it stores content separately.
 
 > [!Note]  
-> Delivery Optimization In-Network Cache server is a Windows Server feature that's still in development. It's tagged with a *beta* label in the Configuration Manager console.  
+> Delivery Optimization In-Network Cache server is an application installed on Windows Server that's still in development.  
 
 
 ## How it works
@@ -39,7 +41,7 @@ When you configure clients to use the Delivery Optimization In-Network Cache ser
 
 3. Client A requests content from the DO cache server.
 
-4. If the cache doesn't include the content, then Client A gets it from the CDN.
+4. If the cache doesn't include the content, then the DO cache server gets it from the CDN.
 
 5. If the cache server fails to respond, the client downloads the content from the CDN.
 
@@ -73,7 +75,7 @@ When you configure clients to use the Delivery Optimization In-Network Cache ser
 
         View and accept the license terms.
 
-    2. **Local drive to be used**: Select the disk to use for the cache. **Automatic** is the default value, which uses the disk with the most free space.  
+    2. **Local drive to be used**: Select the disk to use for the cache. **Automatic** is the default value, which uses the disk with the most free space.<sup>[Note 1](#bkmk_note1)</sup>  
 
         > [!Note]  
         > You can change this drive later. Any cached content is lost, unless you copy it to the new drive.
@@ -87,6 +89,17 @@ When you configure clients to use the Delivery Optimization In-Network Cache ser
 
 1. In client settings, in the **Delivery Optimization** group, configure the setting to **Enable devices managed by Configuration Manager to use Delivery Optimization In-Network Cache servers (Beta) for content download**.  
 
+### <a name="bkmk_note1"></a> Note 1: About drive selection
+
+If you select **Automatic**, when Configuration Manager installs the DOINC component, it honors the **no_sms_on_drive.sms** file. For example, the distribution point has the file `C:\no_sms_on_drive.sms`. Even if the C: drive has the most free space, Configuration Manager configures DOINC to use another drive for its cache.
+
+If you select a specific drive that already has the **no_sms_on_drive.sms** file, Configuration Manager ignores the file. Configuring DOINC to use that drive is an explicit intent. For example, the distribution point has the file `F:\no_sms_on_drive.sms`. When you explicitly configure the distribution point properties to use the **F:** drive, Configuration Manager configures DOINC to use the F: drive for its cache.
+
+To change the drive after DOINC is installed:
+
+- Manually configure the distribution point properties to use a specific drive letter.
+
+- If set to automatic, first create the **no_sms_on_drive.sms** file. Then make some change to the distribution point properties to trigger a configuration change.
 
 ## Verify
 
@@ -105,7 +118,10 @@ On Windows 10 version 1809 or later, verify this behavior with the **Get-Deliver
 
 If the cache server returns any HTTP failure, the Delivery Optimization client falls back to the original cloud source.
 
+For more detailed information, see [Troubleshoot Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/servers/deploy/configure/troubleshoot-delivery-optimization-in-network-cache).
 
 ## See also
 
 [Optimize Windows 10 updates with Delivery Optimization](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)
+
+[Troubleshoot Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/servers/deploy/configure/troubleshoot-delivery-optimization-in-network-cache)

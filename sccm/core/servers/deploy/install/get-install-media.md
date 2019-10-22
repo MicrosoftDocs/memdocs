@@ -2,7 +2,7 @@
 title: "Get installation media"
 titleSuffix: "Configuration Manager"
 description: "Where to find installation media for new System Center Configuration Manager installations."
-ms.date: 1/11/2017
+ms.date: 01/11/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -20,6 +20,6 @@ If you have System Center Configuration Manager volume licenses with Software As
 
 If you have a System Center Configuration Manager license from EMS, Microsoft 365, or a Cloud Solution Provider (CSP), please see the [Product and Licensing FAQ](/sccm/core/understand/product-and-licensing-faq#bkmk_csp).
 
-If you would like to purchase volume licenses for System Center Configuration Manager, contact your preferred Microsoft Reseller or see [How to purchase through Volume Licensing]( https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx). You can also download media to install an evaluation edition of System Center Configuration Manager from the [TechNet Evaluation Center]( https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) website.
+If you would like to purchase volume licenses for System Center Configuration Manager, contact your preferred Microsoft Reseller or see [How to purchase through Volume Licensing](https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx). You can also download media to install an evaluation edition of System Center Configuration Manager from the [TechNet Evaluation Center]( https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) website.
 
 To learn about baseline media for Configuration Manager, see [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines).

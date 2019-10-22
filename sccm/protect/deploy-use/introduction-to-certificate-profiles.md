@@ -60,7 +60,7 @@ To deploy certificate profiles that use SCEP, install the certificate registrati
 
 PFX certificates also require a certificate registration point. Also specify the certificate authority (CA) for the certificate and the relevant access credentials. Starting with version 1706, you may specify either Microsoft or Entrust as certificate authorities.  
 
-For more information about how the Network Device Enrollment Service supports a policy module so that Configuration Manager can deploy certificates, see [Using a Policy Module with the Network Device Enrollment Service](http://go.microsoft.com/fwlink/p/?LinkId=328657).  
+For more information about how the Network Device Enrollment Service supports a policy module so that Configuration Manager can deploy certificates, see [Using a Policy Module with the Network Device Enrollment Service](https://go.microsoft.com/fwlink/p/?LinkId=328657).  
 
 Depending on the requirements, Configuration Manager supports deploying certificates to different certificate stores on various device types and operating systems. The following devices and operating systems are supported:  
 

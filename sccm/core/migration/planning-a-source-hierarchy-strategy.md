@@ -2,7 +2,7 @@
 title: "Source hierarchy strategy"
 titleSuffix: "Configuration Manager"
 description: "Configure a source hierarchy and gather data from a source site before you configure a System Center Configuration Manager migration job."
-ms.date: 1/3/2017
+ms.date: 01/3/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

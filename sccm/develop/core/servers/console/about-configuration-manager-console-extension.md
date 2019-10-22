@@ -51,7 +51,7 @@ The System Center Configuration Manager console has an XML-based architecture th
 
 ## Accessibility
 
-When developing console extensions, they should be based on designs with accessibility considerations.  For example, you can make use of color, layout, intelligent default values, sound, and exposing appropriate keyboard focus.  By using various accessibility techniques, you will make it easier for users with disabilities to use your software.  For additional information about how you can develop applications for accessibility, see [Designing Accessible Applications](http://go.microsoft.com/fwlink/?LinkId=272471).  
+When developing console extensions, they should be based on designs with accessibility considerations.  For example, you can make use of color, layout, intelligent default values, sound, and exposing appropriate keyboard focus.  By using various accessibility techniques, you will make it easier for users with disabilities to use your software.  For additional information about how you can develop applications for accessibility, see [Designing Accessible Applications](https://go.microsoft.com/fwlink/?LinkId=272471).  
 
 
 ## See Also  

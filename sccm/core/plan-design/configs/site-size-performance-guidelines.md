@@ -64,7 +64,7 @@ Where possible, minimize collections that have expensive or complicated dynamic 
 
 Enabling incremental updates on collections ensures quick and timely updates to collection membership. But even though incremental updates are efficient, they still put load on the system. Balance the change frequency you anticipate with the need for near real-time updates on membership. For example, say you expect heavy churn in collection members, but you don't require near real-time membership updates. It's more efficient and produces less load on the system to update the collection with a scheduled full update at some interval, than to enable incremental updates. 
 
-When you enable incremental updates, reduce any scheduled full updates on the same collections. They're only a backup method of evaluation, since incremental updates should keep your collection membership updated in near real time. [Best practices for collections](../../clients/manage/collections/best-practices-for-collections.md#do-not-use-incremental-updates-for-a-large-number-of-collections) recommends a maximum number of total collections for incremental updates, but as the article points out, your experience can vary based on many factors.
+When you enable incremental updates, reduce any scheduled full updates on the same collections. They're only a backup method of evaluation, since incremental updates should keep your collection membership updated in near real time. [Best practices for collections](/sccm/core/clients/manage/collections/best-practices-for-collections#bkmk_incremental) recommends a maximum number of total collections for incremental updates, but as the article points out, your experience can vary based on many factors.
 
 Collections with only direct membership rules and with a limiting collection that isn't performing incremental updates don't need scheduled full updates. Disable update schedules for these types of collections to prevent unnecessary load on the system. If the limiting collection uses incremental updates, collections with only direct membership rules may not reflect membership updates for up to 24 hours, or until a scheduled refresh takes place.
 
@@ -147,19 +147,19 @@ See [Example disk configurations](#example-disk-configurations) for test results
    `DiskSpd.exe -r -w100 -t8 -o8 -b64K -c100G -d300 -h -L G:\\test\testfile.dat`
    
 1. Review the output from the second test to find the total IOPS in the **I/O per s** column. In the following example, the total IOPS are **3929.18**.
-   
-   ```
+
+   ``` Output
    Total IO
    | thread |  bytes      |  I/Os   |  MB/s  | I/O per s | AvgLat | LatStdDev |
-   |--------|-------------|---------|--------|-----------|--------|-----------| 
-   |   1    |  9651814400 |  147275 |  30.68 |    490.92 | 16.294 | 10.210    | 
+   |--------|-------------|---------|--------|-----------|--------|-----------|
+   |   1    |  9651814400 |  147275 |  30.68 |    490.92 | 16.294 | 10.210    |
    |   2    |  9676652544 |  147654 |  30.76 |    492.18 | 16.252 |  9.998    |
    |   3    |  9638248448 |  147068 |  30.64 |    490.23 | 16.317 | 10.295    |
-   |   4    |  9686089728 |  147798 |  30.79 |    492.66 | 16.236 | 10.072    | 
-   |   5    |  9590931456 |  146346 |  30.49 |    487.82 | 16.398 | 10.384    | 
+   |   4    |  9686089728 |  147798 |  30.79 |    492.66 | 16.236 | 10.072    |
+   |   5    |  9590931456 |  146346 |  30.49 |    487.82 | 16.398 | 10.384    |
    |   6    |  9677242368 |  147663 |  30.76 |    492.21 | 16.251 | 10.067    |
-   |   7    |  9637330944 |  147054 |  30.64 |    490.18 | 16.319 | 10.249    | 
-   |   8    |  9692577792 |  147897 |  30.81 |    492.99 | 16.225 | 10.125    | 
+   |   7    |  9637330944 |  147054 |  30.64 |    490.18 | 16.319 | 10.249    |
+   |   8    |  9692577792 |  147897 |  30.81 |    492.99 | 16.225 | 10.125    |
    | Total: | 77250887680 | 1178755 | 245.57 |   3929.18 | 16.286 | 10.176    |
    ```
 

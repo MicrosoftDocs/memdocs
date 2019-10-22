@@ -2,7 +2,7 @@
 title: "Cryptographic controls technical reference"
 titleSuffix: "Configuration Manager"
 description: "Learn how signing and encryption can help protect attacks from reading data in System Center Configuration Manager."
-ms.date: 12/8/2017
+ms.date: 12/08/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -191,21 +191,17 @@ System Center Configuration Manager uses signing and encryption to help protect 
 
 - Multicast-enabled distribution point  
 
-- Out of band service point  
-
 - Reporting services point  
 
 - Software update point  
 
 - State migration point  
 
-- System Health Validator point  
-
 - Microsoft Intune connector  
 
-  These certificates are managed automatically by Configuration Manager, and where necessary, automatically generated.  
+These certificates are managed automatically by Configuration Manager, and where necessary, automatically generated.  
 
-  Configuration Manager also uses a client authentication certificate to send status messages from the distribution point to the management point. When the management point is configured for HTTPS client connections only, you must use a PKI certificate. If the management point accepts HTTP connections, you can use a PKI certificate or select the option to use a self-signed certificate that has client authentication capability, uses SHA-256, and has a key length of 2048 bits.  
+Configuration Manager also uses a client authentication certificate to send status messages from the distribution point to the management point. When the management point is configured for HTTPS client connections only, you must use a PKI certificate. If the management point accepts HTTP connections, you can use a PKI certificate or select the option to use a self-signed certificate that has client authentication capability, uses SHA-256, and has a key length of 2048 bits.  
 
 ### Server communication between sites  
  Configuration Manager transfers data between sites by using database replication and file-based replication. For more information, see [Communications between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints).  

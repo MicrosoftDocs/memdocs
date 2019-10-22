@@ -2,7 +2,7 @@
 title: "Setup reference"
 titleSuffix: "Configuration Manager"
 description: "Review this reference to help you prepare to install a Configuration Manager site or hierarchy."
-ms.date: 4/18/2017
+ms.date: 04/18/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -41,7 +41,7 @@ You can download client software for Configuration Manager from the Microsoft Do
 
 Use the following links to download clients for the version of Configuration Manager you use:  
 
--   See [Microsoft System Center Configuration Manager - Clients for Additional Operating Systems](http://www.microsoft.com/download/details.aspx?id=47719)  
+-   See [Microsoft System Center Configuration Manager - Clients for Additional Operating Systems](https://www.microsoft.com/download/details.aspx?id=47719)  
 
 ##  <a name="bkmk_usage"></a> Usage data levels and settings  
 When you install your first System Center Configuration Manager site, Configuration Manager automatically installs and configures a new site system role, the **service connection point**,  on the site server. The service connection point has these default settings:  
@@ -66,4 +66,4 @@ Data collection includes these three levels:
 
 For more information, including disclosure of the details collected by each level, see [Diagnostics and usage data for System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
-To view the System Center Configuration Manager Privacy Statement on-line, go to [http://go.microsoft.com/fwlink/?LinkID=626527](http://go.microsoft.com/fwlink/?LinkID=626527).
+To view the System Center Configuration Manager Privacy Statement on-line, go to [https://go.microsoft.com/fwlink/?LinkID=626527](https://go.microsoft.com/fwlink/?LinkID=626527).

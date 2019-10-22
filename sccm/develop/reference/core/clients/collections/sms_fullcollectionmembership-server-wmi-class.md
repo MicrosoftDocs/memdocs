@@ -19,8 +19,6 @@ The `SMS_FullCollectionMembership` Windows Management Instrumentation (WMI) clas
 ```  
 Class SMS_FullCollectionMembership : SMS_BaseClass   
 {   
-      String AMTFullVersion;  
-      UInt32 AMTStatus;  
       UInt32 ClientCertType;  
       UInt32 ClientType;   
       String ClientVersion;   
@@ -45,7 +43,6 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
       UInt32 ResourceType;   
       String SiteCode;   
       String SMSID;  
-      Boolean SuppressAutoProvision;  
 };  
 ```  
 
@@ -53,24 +50,6 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
  The `SMS_FullCollectionMembership` class does not define any methods.  
 
 ## Properties  
- `AMTFullVersion`  
- Data type: `String`  
-
- Access type: Read Only  
-
- Qualifiers: None  
-
- Starting with Configuration Manager version 1606, this property is no longer used.  
-
- `AMTStatus`  
- Data type: `UInt32`  
-
- Access type: Read Only  
-
- Qualifiers: None  
-
- Starting with Configuration Manager version 1606, this property is no longer used.  
-
  `ClientCertType`  
  Data type: `UInt32`  
 
@@ -311,15 +290,6 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
   Qualifiers: None  
 
   Configuration Manager unique ID.  
-
-  `SuppressAutoProvision`  
-  Data type: `Boolean`  
-
-  Access type: Read Only  
-
-  Qualifiers: None  
-
-  When set to `true` and when this resource belongs to a collection configured for automatic provisioning, prevents the resource from being automatically provisioned by an Out of Band service point.  
 
 ## Remarks  
  Class qualifiers for this class include:  

@@ -90,7 +90,7 @@ Operating system images in System Center Configuration Manager are WIM files and
     > [!IMPORTANT]  
     >  The [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) task sequence step attempts to reset the local administrator password on the reference computer to a blank value before Sysprep runs. If the Local Security policy **Password must meet complexity requirements** is enabled, this task sequence step fails to reset the administrator password. In this scenario, disable this policy before you run the task sequence.  
 
-     For more information about Sysprep, see [System Preparation (Sysprep) Technical Reference](http://go.microsoft.com/fwlink/?LinkId=280286).  
+     For more information about Sysprep, see [System Preparation (Sysprep) Technical Reference](https://go.microsoft.com/fwlink/?LinkId=280286).  
 
 -   **Appropriate tools and scripts required to mitigate installation scenarios**  
 

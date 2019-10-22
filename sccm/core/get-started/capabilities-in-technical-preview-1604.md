@@ -22,7 +22,7 @@ This article introduces the features that are available in the Technical Preview
  The following are new features you can try out with this version.  
 
 ##  <a name="BKMK_WindowsVPP"></a> Manage volume-purchased apps from the Windows Store for Business  
- The [Windows Store for Business](https://www.microsoft.com/en-us/business-store) is where you can find and purchase apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can manage volume-purchased apps from the Configuration Manager console, for example:  
+ The [Windows Store for Business](https://www.microsoft.com/business-store) is where you can find and purchase apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can manage volume-purchased apps from the Configuration Manager console, for example:  
 
 -   You can synchronize the list of purchased apps with Configuration Manager  
 

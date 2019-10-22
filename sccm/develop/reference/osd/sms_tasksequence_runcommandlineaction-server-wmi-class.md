@@ -88,7 +88,7 @@ Class SMS_TaskSequence_RunCommandLineAction : SMS_TaskSequence_Action
 
  `true` if the execution engine disables Wow64 file redirection and 64-bit registry redirection when the task sequence is evaluating file, folder, and registry conditions on a 64-bit operating system. The default value is `false`.  
 
- The task sequence variable associated with this property is SMSTSDisableWow64Redirection. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is SMSTSDisableWow64Redirection. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Enabled`  
  Data type: `Boolean`  

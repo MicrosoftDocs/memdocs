@@ -85,7 +85,6 @@ Class SMS_UpdateComplianceStatus : SMS_BaseClass
 |0|NONE|  
 |1|SMS|  
 |2|USER|  
-|3|NAP|  
 
  `LastEnforcementMessageID`  
  Data type: `UInt32`  

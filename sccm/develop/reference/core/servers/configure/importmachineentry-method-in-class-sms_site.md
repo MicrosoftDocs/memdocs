@@ -26,8 +26,6 @@ uint32 ImportMachineEntry
     [IN]    String MACAddress  
     [IN]    Boolean OverwriteExistingRecord  
     [IN]    String FQDN  
-    [IN]    Boolean IsAMTMachine  
-    [IN]    String MEBxPassword  
     [IN]    String AdminPassword  
     [IN]    Boolean AddToCollection  
     [IN]    SMS_CollectionRule CollectionRule  
@@ -74,20 +72,6 @@ uint32 ImportMachineEntry
  Qualifiers: [id("4"), in, optional]  
 
  Fully qualified domain name of this computer.  
-
- `IsAMTMachine`  
- Data type: `Boolean`  
-
- Qualifiers: [id("5"), in, optional]  
-
- Enable out of band functionality on this computer.  
-
- `MEBxPassword`  
- Data type: `String`  
-
- Qualifiers: [id("6"), in, optional]  
-
- Management Engine BIOS extension (MEBx) password for the built-in Intel Active Management Technology (Intel AMT) firmware administrative user.  
 
  `AdminPassword`  
  Data type: `String`  

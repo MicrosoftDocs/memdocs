@@ -2,7 +2,7 @@
 title: "View software inventory with Resource Explorer"
 titleSuffix: "Configuration Manager"
 description: "Use Resource Explorer to view software inventory in System Center Configuration Manager."
-ms.date: 2/22/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual

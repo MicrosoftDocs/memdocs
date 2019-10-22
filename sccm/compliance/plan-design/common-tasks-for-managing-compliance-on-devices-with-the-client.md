@@ -1,7 +1,7 @@
 ---
-title: "Common compliance management tasks for client-managed devices "
-titleSuffix: "Configuration Manager"
-description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
+title: Common compliance management tasks
+titleSuffix: Configuration Manager
+description: Learn about Configuration Manager compliance settings by working through some common scenarios.
 ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -12,7 +12,8 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Common tasks for managing compliance on devices with the System Center Configuration Manager client
+
+# Common tasks for managing compliance on devices with the Configuration Manager client
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 

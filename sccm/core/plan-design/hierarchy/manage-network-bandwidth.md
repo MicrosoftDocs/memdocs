@@ -2,7 +2,7 @@
 title: "Manage network bandwidth for content"
 titleSuffix: "Configuration Manager"
 description: "Configure scheduling, throttling, and prestaged content for System Center Configuration Manager."
-ms.date: 2/6/2017
+ms.date: 02/6/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

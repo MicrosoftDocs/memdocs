@@ -58,7 +58,8 @@ This tile shows when Configuration Manager syncs with the Desktop Analytics clou
 - **Next service sync**: When you can expect the next daily snapshot in Desktop Analytics.
 
 > [!Note]  
-> None of these values automatically update when you request an on-demand snapshot. For more information, see [Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).
+> When you first enroll devices into Desktop Analytics, it can take several days for data to upload and process. During this time, the **Last sync details** tile may appear blank. 
+> Additionally, none of the values in this tile automatically update when you request an on-demand snapshot. For more information, see [Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).
 
 If you think some devices aren't showing in Desktop Analytics, make sure the devices are supported by Desktop Analytics. For more information, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).
 
@@ -224,7 +225,8 @@ For more information, review M365AHandler.log on the client.
 Check for the following file: `%windir%\System32\CompatTelRunner.exe`. If it doesn't exist, reinstall the required [compatibility updates](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser). Make sure no other system component is removing this file, such as group policy or an antimalware service.
 
 If the M365AHandler.log file on the client includes one of the following errors:
-```
+
+``` Log
 RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x800703F1
 RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x80070005
 RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x80080005
