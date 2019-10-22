@@ -66,8 +66,8 @@ To enable data sharing, configure your proxy server to allow the following endpo
 | Endpoint  | Function  |
 |-----------|-----------|
 | `https://aka.ms` | Used to locate the service |
-| `https://v10c.events.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1703 or later, with the 2018-09 cumulative update or later installed. |
-| `https://v10.events.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1803, or later, _without_ the 2018-09 cumulative update installed. |
+| `https://v10c.events.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1809 or later, or version 1803 with the 2018-09 cumulative update or later installed. |
+| `https://v10.events.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1803 _without_ the 2018-09 cumulative update installed. |
 | `https://v10.vortex-win.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1709 or earlier. |
 | `https://vortex-win.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 7 and Windows 8.1 |
 | `https://settings-win.data.microsoft.com` | Enables the compatibility update to send data to Microsoft. |
@@ -90,10 +90,13 @@ Make sure that a proxy doesn't block the diagnostic data because of authenticati
 
 - **Bypass** (recommended): Configure your proxy servers to not require proxy authentication for traffic to the diagnostic data endpoints. This option is the most comprehensive solution. It works for all versions of Windows 10.  
 
-- **User proxy authentication**: Configure devices to use the signed-in user's context for proxy authentication. This method requires the devices to run Windows 10, version 1703 or later. Make sure that the users have proxy permission to reach the diagnostic data endpoints. This option requires that the devices have console users with proxy permissions, so you can't use this method with headless devices.  
+- **User proxy authentication**: Configure devices to use the signed-in user's context for proxy authentication. This method requires the devices to run Windows 10, version 1703 or later, and have user-level proxy configured (WinINET proxy), typically in Internet Explorer or Windows Settings app (Network & Internet / Proxy). Make sure that the users have proxy permission to reach the diagnostic data endpoints. This option requires that the devices have console users with proxy permissions, so you can't use this method with headless devices.
 
-- **Device proxy authentication**:
+> [!IMPORTANT]
+> The user proxy authentication approach is incompatible with the use of Microsoft Defender Advanced Threat Protection. This is because it relies on **DisableEnterpriseAuthProxy = 0** registry key, while Microsoft Defender ATP requires it to be set to 1.(Read more here)[<https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection>]
 
-    - Configure a system-level proxy server on the devices.  
-    - Configure these devices to use device-based outbound proxy authentication.  
-    - Configure proxy servers to allow the machine accounts to access the diagnostic data endpoints.  
+- **Device proxy authentication**: This is the most complex approach, requiring:
+    - Ensure devices can reach proxy server through WinHTTP in local system context, configured either through 'netsh winhttp set proxy' command, WPAD, transparent proxy, routed/NATted connection, etc.
+    - Configure proxy servers to allow the computer accounts in Active Directory to access the diagnostic data endpoints. This requires proxy servers to support Windows Integrated Authentication.  
+
+
