@@ -84,6 +84,18 @@ No. You're licensed to use the current branch while you have active SA. For exam
 
 No. The only way to get rights to use Configuration Manager is to acquire a license with SA or through an equivalent subscription. There are developer programs like MSDN where Configuration Manager is offered for development and test purposes, but not production usage.
 
+### <a name="bkmk_lab"></a> Does a non-production environment for testing or development require an explicit license?
+
+<!-- SCCMDocs#1848 -->
+
+- If you use the same current branch software as your production environment, you need an explicit license. Check with your account team to determine if your specific license agreement covers multiple instances in multiple environments.
+
+- Some developer programs like MSDN offer products like Configuration Manager for development and test, but not production use.
+
+- For a temporary environment, you can use the [evaluation version](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) for 180 days.
+
+- For a lab environment, you can use the [technical preview branch](/sccm/core/get-started/technical-preview). Technical preview has the same functionality as current branch, but has some limitations in terms of scale and supported platforms.
+
 ### <a name="bkmk_update-rights"></a> Do I have rights to install any update in the Configuration Manager console?
 
 If you have active *SA*, you do have rights.
