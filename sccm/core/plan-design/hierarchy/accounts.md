@@ -2,7 +2,7 @@
 title: Accounts used
 titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL objects used in Configuration Manager.
-ms.date: 05/01/2019
+ms.date: 10/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -651,7 +651,7 @@ Asset Intelligence Update Synchronization. ConfigMgr grants the computer account
 
 ### smsdbrole_AMTSP
 
-Out of Bound Management. This role is used by Configuration Manager AMT role to retrieve data on devices that supported Intel AMT.
+Out of Band Management. This role is used by Configuration Manager AMT role to retrieve data on devices that supported Intel AMT.
 
 > [!NOTE]  
 > This role is deprecated in newer releases of ConfigMgr.
