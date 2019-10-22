@@ -537,7 +537,7 @@ The Windows Preinstallation Environment (PE) component of the Windows ADK is ins
 
 *Applies to: Central administration site, primary site*
 
-The Active Directory domain functional level is a minimum of Windows Server 2008 R2.
+The Active Directory domain and forest functional level is a minimum of Windows Server 2008 R2. For more information, see [Support for Active Directory domains](/sccm/core/plan-design/configs/support-for-active-directory-domains).
 
 ### Administrative rights on distribution point
 
