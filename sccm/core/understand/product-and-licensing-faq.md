@@ -2,7 +2,7 @@
 title: Product and licensing FAQ
 titleSuffix: Configuration Manager
 description: Find answers for common product and license questions for System Center Configuration Manager.
-ms.date: 03/05/2019
+ms.date: 10/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -54,6 +54,22 @@ For more information about license offerings, see [Ways to buy](https://www.micr
 
 Equivalent subscriptions refer to programs like [Enterprise Mobility + Security](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) (EMS) or [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise). There can be others, but these programs are the most common. The Microsoft Volume Licensing Product Terms refers to these programs as Management License Equivalent Licenses.
 
+Configuration Manager is included in the following plans:
+
+- Intune user subscription license (USL)
+- EMS E3
+- EMS E5
+- Microsoft 365 E3
+- Microsoft 365 E5
+- Microsoft 365 F1
+
+<!-- Sources:
+https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans
+https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing
+-->
+
+> [!IMPORTANT]
+> Configuration Manager isn't included in the [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business) plan.
 
 ### <a name="bkmk_ems-expires"></a> I have Enterprise Mobility + Security and it expired, what must I do now?  
 
