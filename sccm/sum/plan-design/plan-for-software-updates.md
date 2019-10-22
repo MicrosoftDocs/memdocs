@@ -5,7 +5,7 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.prod: configuration-manager 
 ms.technology: configmgr-sum
@@ -453,7 +453,7 @@ For more information about maintenance windows, see [How to use maintenance wind
 
 When a software update that requires a restart is deployed and installed using Configuration Manager, the client schedules a pending restart and displays a restart dialog box.
 
-When there's a pending restart for a Configuration Manager software update, the option to **Update and Restart** and **Update and Shutdown** is available on Windows 10 computers in the Windows power options. After using one of these options, the restart dialog doesn't display after the computer restarts.
+When there's a pending restart for a Configuration Manager software update, the option to **Update and Restart** and **Update and Shutdown** is available on Windows 10 computers in the Windows power options. After using one of these options, the restart dialog doesn't display after the computer restarts. In certain circumstances, the operating system may remove the pending restart options. This can happen if the Fast Startup feature in Windows 10 is enabled. For more information, see [Updates may not be installed with Fast Startup in Windows 10](https://support.microsoft.com/help/4011287/windows-updates-not-install-with-fast-startup).
 
 
 

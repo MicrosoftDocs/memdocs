@@ -442,7 +442,7 @@ Figure 2. Folder structure for UDI development
   -   Adds information that will be shown on the **Summary** page using the **SaveFields** method  
 
 #####  <a name="TheNextButtonisClickedinCustomWizardPage"></a> Step 4: The Next Button Is Clicked in the Custom Wizard Page  
- When the user completes the fields on the custom wizard page, he or she clicks **Next**, which calls the **OnNextClicked** method. The **OnNextClicked** method performs any necessary tasks before proceeding to the next wizard page, such as recording any configuration changes made on the custom wizard page.  
+ When the user completes the fields on the custom wizard page, they click **Next**, which calls the **OnNextClicked** method. The **OnNextClicked** method performs any necessary tasks before proceeding to the next wizard page, such as recording any configuration changes made on the custom wizard page.  
 
  For the example custom wizard page, the override for the **OnNextClicked** method is implemented in the LocationPage.ccp file. In the **OnNextClicked** method in the example custom wizard page, the following methods are called:  
 
@@ -3632,7 +3632,7 @@ FieldData="{Binding DataContext.Location, ElementName=ControlRoot}"
  This property allows you to set the text that will appear in the header of the control. Think of this property as a title for the control; by default, it appears as bold, orange text.  
 
 ###### InstructionText  
- Set this property to the text you want to appear below the header—typically instruction text that tells the user of your custom editor when and why he or she would want to modify the behavior of the field.  
+ Set this property to the text you want to appear below the header—typically instruction text that tells the user of your custom editor when and why they would want to modify the behavior of the field.  
 
 ### Interfaces  
 Table 70 lists the interfaces that you can use to create custom wizard page editors.  
