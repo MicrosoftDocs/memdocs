@@ -206,6 +206,8 @@
       href: plan-design/diagnostics/diagnostics-and-usage-data.md
     - name: How diagnostics and usage data is used
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
+    - name: Diagnostic data for 1910
+      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1910.md
     - name: Diagnostic data for 1906
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
     - name: Diagnostic data for 1902
@@ -498,6 +500,8 @@
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: Use the Hotfix Installer
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Checklist for installing update 1910
+      href: servers/manage/checklist-for-installing-update-1910.md
     - name: Checklist for installing update 1906
       href: servers/manage/checklist-for-installing-update-1906.md
     - name: Checklist for installing update 1902
