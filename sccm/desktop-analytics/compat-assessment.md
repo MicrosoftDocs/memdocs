@@ -2,7 +2,7 @@
 title: Compatibility assessment
 titleSuffix: Configuration Manager
 description: Learn about compatibility assessment for Windows apps and drivers in Desktop Analytics.
-ms.date: 07/26/2019
+ms.date: 10/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -53,6 +53,22 @@ You'll see the following issues on the app properties pane as **MS known issues*
 ### Application is removed during upgrade
 
 Windows detected compatibility issues. The application won't migrate to the new OS version. No action is required for the upgrade to continue.
+
+<!-- 3594545 -->
+Windows can partially or fully remove these apps:
+
+- Full removal: Windows setup completely removes the app from the device during upgrade.
+- Partial removal: Windows setup partially removes the app from the device. You need to manually uninstall the app after you upgrade Windows.
+
+In both the cases, the user can't use the app after you upgrade Windows.
+
+To see this recommendation in the Desktop Analytics portal:
+
+1. In a deployment plan, select **Prepare pilot**.
+1. Select an asset from the list.
+1. View the compatibility risk factors and recommendations in the side pane.
+
+![Screenshot of asset recommendation in Desktop Analytics portal](media/3594545-app-removed.png)
 
 ### Blocking upgrade
 

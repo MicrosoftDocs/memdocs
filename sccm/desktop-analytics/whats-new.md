@@ -2,7 +2,7 @@
 title: What's new in Desktop Analytics
 titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
-ms.date: 10/08/2019
+ms.date: 10/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -24,6 +24,12 @@ To get notified when this page is updated, copy and paste the following URL into
 <!-- a locale is required for the RSS search string -->
 
 ## October 2019
+
+### Improvements to application compatibility recommendations
+
+<!-- 3594545 -->
+
+Desktop Analytics now provides additional detail when it detects that the Windows upgrade will completely or partially remove an application. For more information, see [Compatibility assessment](/sccm/desktop-analytics/compat-assessment#application-is-removed-during-upgrade).
 
 ### Migrate from Windows Analytics to existing tenant
 
