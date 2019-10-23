@@ -52,7 +52,7 @@ You'll see the following issues on the app properties pane as **MS known issues*
 
 ### Application is removed during upgrade
 
-Windows detected compatibility issues. The application won't migrate to the new OS version. No action is required for the upgrade to continue.
+Windows detected compatibility issues. The application won't migrate to the new OS version. No action is required for the upgrade to continue. Install a compatible version of the application on the new OS version.
 
 ### Blocking upgrade
 
