@@ -81,7 +81,7 @@ ms.collection: M365-identity-device-management
 <!--4224414-->
 *(Introduced in version 1906)*
 
-You can drill through compliance statistics to see which devices require a specific Office 365 software update. To view the device list, you need permission to view updates and the collections the devices belong to. To drill down into the device list:
+You can drill through compliance statistics to see which devices require a specific Windows 10 feature update. To view the device list, you need permission to view updates and the collections the devices belong to. To drill down into the device list:
 
 1. Go to **Software Library** > **Windows 10 Servicing** > **All Windows 10 Updates**.
 1. Select any update that is required by at least one device.
