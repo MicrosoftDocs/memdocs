@@ -5,7 +5,7 @@ description: "Review Office 365 client information from the Office 365 Client Ma
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -88,6 +88,8 @@ To help you determine which devices are ready to upgrade to Office 365 ProPlus, 
 - Macro readiness
 - Macro advisories
 
+If you need a more detailed evaluation for macros, use the the **Office Readiness Toolkit**. For more information, see [Use the Readiness Toolkit to assess application compatibility for Office 365 ProPlus](https://aka.ms/readinesstoolkit).
+
 ### Using the Office 365 ProPlus upgrade readiness dashboard
  
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Office 365 Client Management**.
@@ -99,6 +101,8 @@ To help you determine which devices are ready to upgrade to Office 365 ProPlus, 
 ![Office 365 ProPlus upgrade readiness dashboard](./media/4021125-office-365-to-add-ins.png)
 
 ![Office 365 ProPlus upgrade readiness dashboard](./media/4021125-office-365-macro-advisories.png)
+
+
 
 ## Next steps
 
