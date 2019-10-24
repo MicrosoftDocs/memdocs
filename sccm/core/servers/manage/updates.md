@@ -2,7 +2,7 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 07/26/2019
+ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -57,11 +57,11 @@ The following supported versions of Configuration Manager are currently availabl
 
 | Version | Availability date | [Support end date](/sccm/core/servers/manage/current-branch-versions-supported) | Baseline | In-console update |  
 |-------------|-----------|------------|--------------|------------------------|  
+| [1910](/sccm/core/plan-design/changes/whats-new-in-version-1910)<br /><br /> 5.00.8910.1000 | November 25, 2019 | May 25, 2021 | No | Yes |
 | [1906](/sccm/core/plan-design/changes/whats-new-in-version-1906)<br /><br /> 5.00.8853.1000 | July 26, 2019 | January 26, 2021 | No | Yes |
 | [1902](/sccm/core/plan-design/changes/whats-new-in-version-1902)<br /><br /> 5.00.8790.1000 | March 27, 2019 | September 27, 2020 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)<br /><br /> 5.00.8740.1000 | November 27, 2018 | May 27, 2020 | No | Yes |
 | [1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)<br /><br /> 5.00.8692.1000 | July 31, 2018 | January 31, 2020 | No | Yes |
-| [1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000 | March 22, 2018 | September 22, 2019 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 
 <a name="bkmk_note1"></a>
 
@@ -80,6 +80,7 @@ The following table lists historical versions of Configuration Manager current b
 
 | Version | Availability date | Support end date | Baseline | In-console update |  
 |-------------|-----------|------------|--------------|------------------------|  
+| 1802 <br /><br /> 5.00.8634.1000 | March 22, 2018 | September 22, 2019 | Yes | Yes |
 | 1710 <br /><br /> 5.00.8577.1000 | November 20, 2017 | May 20, 2019 | No | Yes |
 | 1706 <br /><br /> 5.00.8540.1000 | July 31, 2017 | July 31, 2018 | No | Yes |
 | 1702 <br /><br /> 5.00.8498.1000 | March 27, 2017 | March 27, 2018 | Yes | Yes |
@@ -91,7 +92,7 @@ The following table lists historical versions of Configuration Manager current b
 
 #### How to check the version
 
-To check the version of your Configuration Manager site, in the console go to **About System Center Configuration Manager** at the top-left corner of the console. This dialog displays the site and console versions.  
+To check the version of your Configuration Manager site, in the console go to **About Configuration Manager** at the top-left corner of the console. This dialog displays the site and console versions.  
 
 > [!Note]  
 > The console version is slightly different from the site version. The minor version of the console corresponds to the Configuration Manager release version. For example, in Configuration Manager version 1802 the initial site version is 5.0.8634.1000, and the initial console version is 5.**1802**.1082.1700. The build (1082) and revision (1700) numbers may change with future hotfixes.

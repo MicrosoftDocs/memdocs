@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 07/31/2019
+ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -25,10 +25,10 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 1910](/sccm/core/plan-design/changes/whats-new-in-version-1910)
 - [What's new in version 1906](/sccm/core/plan-design/changes/whats-new-in-version-1906)  
 - [What's new in version 1902](/sccm/core/plan-design/changes/whats-new-in-version-1902)
 - [What's new in version 1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)
-- [What's new in version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 
 > [!Tip]  
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: 
@@ -69,20 +69,6 @@ If you then expand a standalone primary site to a hierarchy with a central admin
 
 Renew the key associated with the app registration in Azure AD. For more information, see [Renew secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
 
-
-### Setup command-line option JoinCEIP must be specified
-
-<!--510806-->
-*Applies to: Configuration Manager version 1802*
-
-Starting in Configuration Manager version 1802, the Customer Experience Improvement Program (CEIP) feature is removed from the product. When [automating installation](/sccm/core/servers/deploy/install/command-line-options-for-setup) of a new site from a command-line or unattended script, setup returns an error that a required parameter is missing.
-
-#### Workaround
-
-While it has no effect on the outcome of the setup process, include the **JoinCEIP** parameter in your setup command line.
-
-> [!Note]  
-> The EnableSQM parameter for [console setup](/sccm/core/servers/deploy/install/install-consoles) is not required.
 
 ### Cloud service manager component stopped on site server in passive mode
 
@@ -143,22 +129,6 @@ Create a custom security role. Copy an existing security role, and add the follo
 
 For more information, see [Create custom security roles](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole)
 
-### Changing Office 365 client setting doesn't apply
-
-<!--511551-->
-*Applies to: Configuration Manager version 1802*  
-
-Deploy a [client setting](/sccm/core/clients/deploy/about-client-settings#enable-management-of-the-office-365-client-agent) with **Enable Management of the Office 365 Client Agent** configured to `Yes`. Then change that setting to `No` or `Not Configured`. After updating policy on targeted clients, Office 365 updates are still managed by Configuration Manager.
-
-#### Workaround
-
-Change the following registry value to `0` and restart the **Microsoft Office Click-to-Run Service** (ClickToRunSvc):
-
-```Registry
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\office\16.0\Common\officeupdate]
-"OfficeMgmtCOM"=dword:00000000
-```
-
 ## Desktop Analytics
 
 ### If you use hardware inventory for distributed views, you can't onboard to Desktop Analytics
@@ -194,32 +164,3 @@ When you remove a collection, select **OK** to close the properties window. Then
 When you use the Configuration Manager console to monitor your pilot deployment status, pilot devices that are up-to-date on the target version of Windows for that deployment plan show as **undefined** in the Pilot status tile.  
 
 These **undefined** devices are **up-to-date** with the target version of the OS for that deployment plan. No further action is necessary.
-
-
-## Mobile device management  
-
-### Validation for iOS app link sometimes fails on valid link
-
-*Applies to: Configuration Manager version 1810 and earlier*
-
-<!-- LSI 106004348 -->
-When you create a new application of type **App Package for iOS from App Store**, the validator doesn't accept some valid URLs for the **Location**. Specifically, the iOS App Store doesn't require a value for the app name section of the URL. For example, both of the following links are valid and point to the same app, but the **Create Application Wizard** only accepts the first:
-
-- `https://itunes.apple.com/us/app/app-name/id123456789?mt=8`
-- `https://itunes.apple.com/us/app//id123456789?mt=8`
-
-#### Workaround
-
-When you create an iOS app that's missing the app name from the URL, add any value as if it were the app name to the URL. For example:
-
-- `https://itunes.apple.com/us/app/any-string/id123456789?mt=8`
-
-This action allows you to complete the wizard. The app is still successfully deployed to iOS devices. The string you add to the URL appears as the **Name** on the **General Information** tab in the wizard. It's also the app's label in the Company Portal.
-
-
-
-
-<!-- ## Reports and monitoring    -->
-<!-- ## Conditional access   -->
-
-<!-- ## Endpoint Protection -->
