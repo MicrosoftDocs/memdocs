@@ -32,7 +32,8 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## <a name="bkmk_infra"></a> Site infrastructure
 
-
+### Reclaim SEDO lock
+<!--4786915-->
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
@@ -44,6 +45,15 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## <a name="bkmk_real"></a> Real-time management
 
+### Optimizations to the CMPivot engine that pushes more of the processing to the ConfigMgr client
+<!--3197353-->
+
+
+### Enable ATP and CMPivot to link to each other
+<!--4775821--?-->
+
+### Additional CMPivot Entities and Enhancements
+<!--5410930-->
 
 
 ## <a name="bkmk_content"></a> Content management
@@ -51,6 +61,11 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## <a name="bkmk_client"></a> Client management
 
+### Include custom configuration baselines as part of compliance policy assessment
+<!--3608345-->
+
+### Enable user policy for Windows 10 Enterprise multi-session
+<!--4737447-->
 
 ## <a name="bkmk_comgmt"></a> Co-management
 
@@ -59,32 +74,80 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## <a name="bkmk_app"></a> Application management
 
+### Deploy Microsoft Edge, version 77 and later
+<!--4561024-->
 
+### Improvements to application groups
+<!--4760058-->
 
 ## <a name="bkmk_osd"></a> OS deployment
 
+### Output the results of a run command line step to a variable during a task sequence
+<!--4977616-->
 
+### Import a single index of an Operating System Upgrade Package
+<!--4931110-->
 
+### Custom Default Keyboard Layout in Boot Image Properties
+<!--4910348-->
 
+### Task Sequence Editor Search
+<!--4621085-->
+
+### Task Sequence Performance Improvements - Power Plans
+<!--3555926-->
+
+### Copy and Paste Task Sequence Conditions
+<!--4621098-->
+
+### Task sequence download on demand over the internet
+<!--3601238-->
+ 
 ## <a name="bkmk_userxp"></a> Software Center
 
 
 ## <a name="bkmk_sum"></a> Software updates
 
+### Additional options for third-party update catalogs
+<!--4469002-->
+
+### Use Delivery Optimization for all Windows updates
+<!--4699118-->
+
+### Additional software update filter for ADRs
+<!--4852033-->
 
 
 ## <a name="bkmk_o365"></a> Office management
 
+### Office 365 ProPlus Health Dashboard
+<!--4488301-->
 
+### Office 365 ProPlus Pilot and Health Dashboard
+<!--4488272-->
 
 ## <a name="bkmk_protect"></a> Protection
 
+### Bitlocker Management (MBAM)
+<!--3601034-->
 
 
 ## <a name="bkmk_admin"></a> Configuration Manager console
 
+### View active consoles and message administrators through Console Connections 
+<!--4923997-->
+
+### Client Diagnostics Actions
+<!--4433455-->
+
+### Attach files to feedback
+<!--3556011-->
 
 ## Other updates
+
+### Extend and Migrate on-premises Configuration Manager environment to Microsoft Azure
+<!--3556022-->
+
 
 As of this version, the following features are no longer pre-release:
 <!--
