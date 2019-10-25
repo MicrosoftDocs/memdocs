@@ -19,7 +19,9 @@ ms.collection: M365-identity-device-management
 
 When you use the current branch of Configuration Manager, you can install the in-console update for version 1910 to update your hierarchy from a previous version. <!-- baseline only statement:(Because version 1902 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)-->
 
-To get the update for version 1910, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. After your hierarchy downloads the update package from Microsoft, find it in the console. In the **Administration** workspace, select the **Updates and Servicing** node.
+To get the update for version 1910, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. To download the update when your service connection point is offline, [use the service connection tool](/sccm/core/servers/manage/use-the-service-connection-tool).<!-- SCCMDocs#1946 -->
+
+After your hierarchy downloads the update package from Microsoft, find it in the console. In the **Administration** workspace, select the **Updates and Servicing** node.
 
 - When the update is listed as **Available**, the update is ready to install. Before installing version 1910, review the following information [about installing update 1910](#about-installing-update-1910) and the [checklist](#checklist) for configurations to make before starting the update.
 
