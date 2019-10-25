@@ -2,7 +2,7 @@
 title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud
-ms.date: 08/27/2019
+ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -18,7 +18,6 @@ ms.collection: M365-identity-device-management
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 Configuration Manager synchronizes with the Microsoft cloud service to get updates. Then install these updates from within the Configuration Manager console.
-
 
 ## Get available updates
 
@@ -97,13 +96,13 @@ Review the following steps before you install an update from within the Configur
 
 Review the applicable update checklist for actions to take before you start the update:
 
+- [Checklist for installing update 1910](/sccm/core/servers/manage/checklist-for-installing-update-1910)  
+
 - [Checklist for installing update 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906)  
 
 - [Checklist for installing update 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902)
 
 - [Checklist for installing update 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810)  
-
-- [Checklist for installing update 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806)  
 
 ### <a name="bkmk_step2"></a> Step 2: Run the prerequisite checker before installing an update  
 
@@ -205,11 +204,12 @@ Use the following steps to monitor progress:
 - View the **CMUpdate.log** file in `<ConfigMgr_Installation_Directory>\Logs` on the site server.  
 
 >[!NOTE]
-> - Starting in version 1906, you can see the state of the **Upgrade ConfigMgr database** task during the **Installation** phase.
->   - If the database upgrade is blocked, then you'll be given the warning **In progress, needs attention**.
->     - The cmupdate.log will log the program name and sessionid from SQL that is blocking the database upgrade.
->   - When the database upgrade is no longer blocked, the status will be reset to **In progress** or **Complete**.
->     - When the database upgrade is blocked, a check is done every 5 minutes to see if it's still blocked.
+> Starting in version 1906, you can see the state of the **Upgrade ConfigMgr database** task during the **Installation** phase.
+>
+> - If the database upgrade is blocked, then you'll be given the warning **In progress, needs attention**.
+>   - The cmupdate.log will log the program name and sessionid from SQL that is blocking the database upgrade.
+> - When the database upgrade is no longer blocked, the status will be reset to **In progress** or **Complete**.
+>   - When the database upgrade is blocked, a check is done every 5 minutes to see if it's still blocked.
 
 #### 4. When the update installation completes
 
@@ -231,7 +231,7 @@ After a central administration site or primary site updates, each Configuration 
 
 Update the console right away after the site updates.  
 
-After the console update completes, verify the console and site versions are correct. Go to **About System Center Configuration Manager** at the top-left corner of the console.  
+After the console update completes, verify the console and site versions are correct. Go to **About Configuration Manager** at the top-left corner of the console.  
 
 > [!Note]  
 > The console version is slightly different from the site version. The minor version of the console corresponds to the Configuration Manager release version. For example, in Configuration Manager version 1802 the initial site version is 5.0.8634.1000, and the initial console version is 5.**1802**.1082.1700. The build (1082) and revision (1700) numbers may change with future hotfixes.
@@ -360,19 +360,17 @@ Go to the **Monitoring** workspace, and select the **Site Servicing Status** nod
 
 - **Ignore prerequisite warnings**: If the update install stops because of a warning, you can then select **Ignore prerequisite warnings**. This action allows the installation of the update to continue after a few minutes, and uses the option to ignore prerequisite warnings.  
 
-
 ## <a name="bkmk_after"></a> After a site installs an update  
 
 After the site updates, review the post-update checklist for the applicable version:  
+
+- [Post-update checklist for version 1910](/sccm/core/servers/manage/checklist-for-installing-update-1910#post-update-checklist)  
 
 - [Post-update checklist for version 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906#post-update-checklist)  
 
 - [Post-update checklist for version 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist)  
 
 - [Post-update checklist for version 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist)  
-
-- [Post-update checklist for version 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)  
-
 
 ## <a name="bkmk_options"></a> Enable optional features from updates  
 
