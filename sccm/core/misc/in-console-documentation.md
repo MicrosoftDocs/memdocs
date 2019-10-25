@@ -99,10 +99,12 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 ## New and updated support articles
 
-Support articles that are new or updated between between July 11 and August 12, 2019.
+Support articles that are new or updated between between August 13 and October 24, 2019.
 
-- [KB 4511621: "Not enough memory resources" error when you create standalone or prestaged media in Configuration Manager](https://support.microsoft.com/help/4511621)
-- [KB 4511618: Certificate is not updated on a PXE-enabled DP and you see multiple log error entries](https://support.microsoft.com/help/4511618)
-- [KB 4509382: Troubleshooting application deployment in Configuration Manager](https://support.microsoft.com/help/4509382)
-
+- [KB 4517137: Computer hangs at "Just a moment" in a debug deployment for a Configuration Manager task sequence](https://support.microsoft.com/help/4517137)
+- [KB 4517138: Debug deployment for a task sequence is not displayed in Configuration Manager](https://support.microsoft.com/help/4517138)
+- [KB 4517870: Scheduled Updates fails if the Configuration Manager SMS provider server is on Windows Server 2012 R2 or Windows Server 2012](https://support.microsoft.com/help/4517870)
+- [KB 4458143: Hash mismatch error when clients download Contentinfo.tar from cloud DPs that are assigned to multiple primary sites](https://support.microsoft.com/help/4458143)
+- [KB 4517482: August 2019 .NET 4.7.2 updates fail to synchronize in System Center Configuration Manager](https://support.microsoft.com/help/4517482)
+- [KB 4517869: Update Rollup for System Center Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869)
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **System Center Configuration Manager**.  
