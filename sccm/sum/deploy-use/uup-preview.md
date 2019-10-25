@@ -21,7 +21,7 @@ ms.collection: M365-identity-device-management
 
 ## Introduction
 
-The Unified Update Platform (UUP) is the packaging and publishing platform that consumer and enterprise devices use to receive updates from Windows Update for Business. The UUP private preview program is for customers who have agreed to help Microsoft validate the use of UUP updates in Configuration Manager. These updates aren't currently publicly available.
+The Unified Update Platform (UUP) is the packaging and publishing platform that consumer and enterprise devices use to receive updates from Windows Update for Business. The UUP private preview program is for customers who have agreed to help Microsoft validate the use of UUP updates in Configuration Manager to help solve problems that customers report with servicing Windows today. These updates aren't currently publicly available.
 
 For more information on UUP, see the following Windows blog post: [An update on our Unified Update Platform (UUP)](https://blogs.windows.com/windowsexperience/2017/03/02/an-update-on-our-unified-update-platform-uup/).
 
