@@ -2,7 +2,7 @@
 title: UUP preview
 titleSuffix: Configuration Manager
 description: Instructions for preview of UUP integration
-ms.date: 10/02/2019
+ms.date: 10/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
