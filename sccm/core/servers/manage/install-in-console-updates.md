@@ -204,11 +204,12 @@ Use the following steps to monitor progress:
 - View the **CMUpdate.log** file in `<ConfigMgr_Installation_Directory>\Logs` on the site server.  
 
 >[!NOTE]
-> - Starting in version 1906, you can see the state of the **Upgrade ConfigMgr database** task during the **Installation** phase.
->   - If the database upgrade is blocked, then you'll be given the warning **In progress, needs attention**.
->     - The cmupdate.log will log the program name and sessionid from SQL that is blocking the database upgrade.
->   - When the database upgrade is no longer blocked, the status will be reset to **In progress** or **Complete**.
->     - When the database upgrade is blocked, a check is done every 5 minutes to see if it's still blocked.
+> Starting in version 1906, you can see the state of the **Upgrade ConfigMgr database** task during the **Installation** phase.
+>
+> - If the database upgrade is blocked, then you'll be given the warning **In progress, needs attention**.
+>   - The cmupdate.log will log the program name and sessionid from SQL that is blocking the database upgrade.
+> - When the database upgrade is no longer blocked, the status will be reset to **In progress** or **Complete**.
+>   - When the database upgrade is blocked, a check is done every 5 minutes to see if it's still blocked.
 
 #### 4. When the update installation completes
 
@@ -359,19 +360,17 @@ Go to the **Monitoring** workspace, and select the **Site Servicing Status** nod
 
 - **Ignore prerequisite warnings**: If the update install stops because of a warning, you can then select **Ignore prerequisite warnings**. This action allows the installation of the update to continue after a few minutes, and uses the option to ignore prerequisite warnings.  
 
-
 ## <a name="bkmk_after"></a> After a site installs an update  
 
 After the site updates, review the post-update checklist for the applicable version:  
+
+- [Post-update checklist for version 1910](/sccm/core/servers/manage/checklist-for-installing-update-1910#post-update-checklist)  
 
 - [Post-update checklist for version 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906#post-update-checklist)  
 
 - [Post-update checklist for version 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist)  
 
 - [Post-update checklist for version 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist)  
-
-- [Post-update checklist for version 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)  
-
 
 ## <a name="bkmk_options"></a> Enable optional features from updates  
 
