@@ -166,19 +166,19 @@ While you might see multiple UUP-tagged updates available, start with the **Sept
 - Feature update to Windows 10, version 1809 x64 2019-09B
 - Feature update to Windows 10, version 1803 x64 2019-09B
 
-### Scenarios to test
+## Scenarios to test
 
-#### Test feature updates
+### Test feature updates
 
 - Update straight to your chosen security compliance level  
 
 - Install FODs and language packs before the update. Make sure the update preserves these components.  
 
-#### Test cumulative updates
+### Test cumulative updates
 
 During the preview, keep clients compliant using the UUP type update for multiple consecutive updates. This test helps you understand the ongoing behavior.
 
-#### Test content
+### Test content
 
 The first update for each major version (1809, 1803, 1709), architecture, and language combination will appear to be large. This size is both in number of files and disk space, compared to what you previously saw with non-UUP updates. This extra content is primarily for all the FOD and language packs for cumulative updates. For feature updates, there's additional large content for that first update.
 
@@ -186,7 +186,7 @@ For future cumulative and feature updates, the amount of new content that the si
 
 When you look at the total content that's downloaded and distributed over a 12-month period for *non-express*, Windows 10 version 1803 without UUP should be about the same as version 1809 with UUP. The total content downloaded and distributed over the entire lifespan of the release is smaller in version 1809 with UUP.
 
-#### Supported content channels
+### Supported content channels
 
 For the preview, test your typical real-world scenarios. UUP supports all content channels, including:
 
