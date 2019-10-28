@@ -13,7 +13,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Extend and Migrate on-premises site to Microsoft Azure
+# Extend and migrate on-premises site to Microsoft Azure
 
 *Applies to: Configuration Manager (Current Branch)*
 
@@ -42,7 +42,7 @@ This tool, introduced in version 1910, helps you to programmatically create Azur
     > [!TIP]
     > You may need to add `https://*.microsoft.com` to your trusted websites list to correctly sign in.
 
-    ![Azure Information tab in the Extend and Migrate tool](./media/3556022-azure-information-tab.png)
+    [ ![Azure Information tab in the Extend and Migrate tool](./media/3556022-azure-information-tab.png)](./media/3556022-azure-information-tab.png#lightbox)
 
 1. After you sign in, select your **Subscription ID** and **Virtual network**. The tool only lists networks with an ExpressRoute gateway.
 
@@ -84,7 +84,7 @@ This tool, introduced in version 1910, helps you to programmatically create Azur
 
 1. Once the site adds the site server in passive mode, the **Site Server High Availability** tab shows the status.
 
-   ![Passive site server added to Site Server High Availability tab](./media/3556022-site-server-passive-mode.png)
+   [![Passive site server added to Site Server High Availability tab](./media/3556022-site-server-passive-mode.png)](./media/3556022-site-server-passive-mode.png#lightbox)
 
 1. Next, go to the [Deployments in Azure](#bkmk_deploy-azure) tab to finish the deployment.
 
@@ -100,7 +100,7 @@ The tool doesn't currently have any tasks to migrate the database from on-premis
 
 1. Switch to the **Site System Roles** tab. To provision a new site system role with the default settings, select **Create new**. You can provision roles such as the management point, distribution point, and software update point. Not all roles are currently available in the tool.
 
-    ![Site System Roles tab in the Extend and Migrate tool](./media/3556022-site-system-roles-tab.png)
+    [![Site System Roles tab in the Extend and Migrate tool](./media/3556022-site-system-roles-tab.png)](./media/3556022-site-system-roles-tab.png#lightbox)
 
 1. In the provisioning window, fill in the fields to provision the site role's VM in Azure. These details are similar to the above list for the site server.
 
@@ -121,6 +121,6 @@ The tool doesn't currently have any tasks to migrate the database from on-premis
 
 1. Select **Run** to start the PowerShell script.
 
-    ![Deploy site roles by running the generated PowerShell script](./media/3556022-run-powershell-script-deployment.png)
+    [![Deploy site roles by running the generated PowerShell script](./media/3556022-run-powershell-script-deployment.png)](./media/3556022-run-powershell-script-deployment.png#lightbox)
 
 1. Repeat this process to configure more roles.

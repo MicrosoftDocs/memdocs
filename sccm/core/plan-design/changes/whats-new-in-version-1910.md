@@ -145,7 +145,7 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## Other updates
 
-### Extend and Migrate on-premises site to Microsoft Azure
+### Extend and migrate on-premises site to Microsoft Azure
 <!--3556022-->
 
 This new tool helps you to programmatically create Azure virtual machines (VMs) for Configuration Manager. It can install with default settings site roles like a passive site server, management points, and distribution points. Once you validate the new roles, use them as additional site systems for high availability. You can also remove the on-premises site system role and only keep the Azure VM role. For more information, see [Extend and migrate on-premises site to Microsoft Azure](/sccm/core/support/azure-migration-tool).
