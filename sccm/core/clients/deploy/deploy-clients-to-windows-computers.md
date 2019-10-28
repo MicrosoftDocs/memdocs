@@ -179,7 +179,7 @@ Use the Windows Installer package CCMSetup.msi for Group Policy-based installati
 > [!IMPORTANT]  
 > You must have administrator permissions to access the client installation files.  
 
-- If you've extended the Active Directory schema for Configuration Manager, and you selected **Publish this site in Active Directory Domain Services** on the **Advanced** tab of the **Site Properties** dialog box, client computers automatically search Active Directory Domain Services for installation properties. For more information, see [About client installation properties published to Active Directory Domain Services](/sccm/core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services).  
+- If you've extended the Active Directory schema for Configuration Manager, and you selected **Publish this site in Active Directory Domain Services** on the **Publishing** tab of the **Site Properties** dialog box, client computers automatically search Active Directory Domain Services for installation properties. For more information, see [About client installation properties published to Active Directory Domain Services](/sccm/core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services).  
 
 - If you haven't extended the Active Directory schema, see the section on [provisioning client installation properties](#BKMK_Provision) for information about storing installation properties in the Windows registry of computers. The client uses these installation properties when it installs.  
 
