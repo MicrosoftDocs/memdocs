@@ -623,6 +623,8 @@
       href: support/content-library-transfer.md
     - name: Content Ownership Tool
       href: support/content-ownership-tool.md
+    - name: Extend and migrate to Microsoft Azure
+      href: support/azure-migration-tool.md
     - name: Role-based Administration and Auditing Tool
       href: support/rbaviewer.md
     - name: Run Meter Summarization Tool
