@@ -88,7 +88,7 @@ Make sure that a proxy doesn't block the diagnostic data because of authenticati
 
 - **Bypass** (recommended): Configure your proxy servers to not require proxy authentication for traffic to the diagnostic data endpoints. This option is the most comprehensive solution. It works for all versions of Windows 10.  
 
-- **User proxy authentication**: Configure devices to use the signed-in user's context for proxy authentication. This method requires the devices to run Windows 10, version 1703 or later. Make sure that the users have proxy permission to reach the diagnostic data endpoints. This option requires that the devices have console users with proxy permissions, so you can't use this method with headless devices.  
+- **User proxy authentication**: Configure devices to use the signed-in user's context for proxy authentication. This method requires the devices to have current quality update Rollup for Windows 7, 8.1 or Windows 10, version 1703 or later. Make sure that the users have proxy permission to reach the diagnostic data endpoints. This option requires that the devices have console users with proxy permissions, so you can't use this method with headless devices.  
 
 - **Device proxy authentication**:
 
