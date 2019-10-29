@@ -23,7 +23,7 @@ Typical problems with application deployments fall into one of the following cat
 
 - Application deployment compliance stuck at 0%
 
-If you experience either of these issues, this article provides some steps you can use to troubleshoot. For more in-depth troubleshooting, see [Troubleshooting application deployment technical reference](/sccm/apps/understand/app-deployment-technical-reference)
+If you experience either of these issues, this article provides some steps you can use to troubleshoot. For more in-depth troubleshooting, see [Troubleshooting application deployment technical reference](/sccm/apps/understand/app-deployment-technical-reference).
 
 
 ## Download failures
