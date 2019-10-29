@@ -11,81 +11,92 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
+
 # SMS_Client Client WMI Class
+
 The `SMS_Client` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents the client and facilitates manipulation and retrieval of client information.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
 ## Syntax  
 
-```  
+```syntax
 Class SMS_Client  
-{  
+{
       Boolean AllowLocalAdminOverride;  
       UInt32 ClientType;  
       String ClientVersion;  
       Boolean EnableAutoAssignment;  
-};  
-```  
+};
+```
 
-## Methods  
- The following table shows the methods in `SMS_Client`.  
+## Methods
 
-|Method|Description|  
-|------------|-----------------|  
-|[EvaluateMachinePolicy Method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/evaluatemachinepolicy-method-in-class-sms_client.md)|Initiates the evaluation of the policy assigned to a specified computer or device.|  
-|[GetAssignedSite Method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/getassignedsite-method-in-class-sms_client.md)|Gets the current assigned site of the client.|  
-|[RequestMachinePolicy Method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/requestmachinepolicy-method-in-class-sms_client.md)|Initiates a request for machine policy.|  
-|[ResetPolicy Method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/resetpolicy-method-in-class-sms_client.md)|Resets the policy on a client.|  
-|[SetAssignedSite Method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/setassignedsite-method-in-class-sms_client.md)|Sets the client's assigned site.|  
-|**SetClientProvisioningMode**|Reserved.|  
-|[SetGlobalLoggingConfiguration Method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/setgloballoggingconfiguration-method-in-class-sms_client.md)|Defines the default logging configuration.|  
-|[TriggerSchedule Method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/triggerschedule-method-in-class-sms_client.md)|Triggers the client to execute the specified schedule.|  
+The following table shows the methods in `SMS_Client`.  
 
-## Properties  
- `AllowLocalAdminOverride`  
- Data type: `Boolean`  
+|Method|Description|
+|------------|-----------------|
+|[EvaluateMachinePolicy Method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/evaluatemachinepolicy-method-in-class-sms_client.md)|Initiates the evaluation of the policy assigned to a specified computer or device.|
+|[GetAssignedSite Method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/getassignedsite-method-in-class-sms_client.md)|Gets the current assigned site of the client.|
+|[RequestMachinePolicy Method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/requestmachinepolicy-method-in-class-sms_client.md)|Initiates a request for machine policy.|
+|[ResetPolicy Method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/resetpolicy-method-in-class-sms_client.md)|Resets the policy on a client.|
+|[SetAssignedSite Method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/setassignedsite-method-in-class-sms_client.md)|Sets the client's assigned site.|
+|**SetClientProvisioningMode**|Reserved.|
+|[SetGlobalLoggingConfiguration Method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/setgloballoggingconfiguration-method-in-class-sms_client.md)|Defines the default logging configuration.|
+|[TriggerSchedule Method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/triggerschedule-method-in-class-sms_client.md)|Triggers the client to execute the specified schedule.|
 
- Access type: Read/Write  
+## Properties
 
- Qualifiers: None  
+### `AllowLocalAdminOverride`
 
- Reserved.  
+Data type: `Boolean`
 
- `ClientType`  
- Data type: `UInt32`  
+Access type: Read/Write
 
- Access type: Read/Write  
+Qualifiers: None
 
- Qualifiers: None  
+Reserved.
 
- Reserved. Always 1.  
+### `ClientType`
 
- `ClientVersion`  
- Data type: `String`  
+Data type: `UInt32`
 
- Access type: Read/Write  
+Access type: Read/Write
 
- Qualifiers: None  
+Qualifiers: None
 
- Version number of the client.  
+Reserved. Always 1.
 
- `EnableAutoAssignment`  
- Data type: `Boolean`  
+### `ClientVersion`
 
- Access type: Read/Write  
+Data type: `String`
 
- Qualifiers: None  
+Access type: Read/Write
 
- `true` if automatic assignment is enabled.  
+Qualifiers: None
 
-## Requirements  
+Version number of the client.
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+### `EnableAutoAssignment`
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+Data type: `Boolean`
 
-## See Also  
- [Client Framework and Data Transfer Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/client-framework-and-data-transfer-client-wmi-classes.md)
+Access type: Read/Write
+
+Qualifiers: None
+
+`true` if automatic assignment is enabled.
+
+## Requirements
+
+### Runtime Requirements
+
+For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+
+### Development Requirements
+
+For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+
+## See Also
+
+[Client Framework and Data Transfer Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/client-framework-and-data-transfer-client-wmi-classes.md)
