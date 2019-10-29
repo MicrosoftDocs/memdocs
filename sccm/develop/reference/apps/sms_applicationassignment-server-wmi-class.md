@@ -330,6 +330,10 @@ Class SMS_ApplicationAssignment : SMS_CIAssignmentBaseClass
 |-|-|  
 |1|PREDEPLOY|  
 |2|ONDEMAND|  
+|4|ENABLEPROCESSTERMINATION|  
+|8|ALLOWUSERSTOREPAIRAPP|  
+|16|RELATIVESCHEDULE|  
+|32|HIGHIMPACTDEPLOYMENT|  
 
  `OfferTypeID`  
  Data type: `SInt32`  

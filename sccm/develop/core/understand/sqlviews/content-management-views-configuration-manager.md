@@ -83,7 +83,7 @@ This view can be joined to other views by using the **DPNalPath** column.
 
 ### v_Content
 
-Lists, by package ID, each content package at the site, including the content ID, version, size of the source files, and more.
+Lists, by package ID, each content package at the site, including the content ID, version, size of the source files in bytes, and more.
 This view can be joined to other views by using the **PkgID** column.
 
 ### v_ContDistStatSummary
