@@ -201,7 +201,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 5.  Verify that the appropriate deployment share folders have been created using the **dir** command, as show in the following example:  
 
     ```powershell  
-    dir ds002:  
+    Get-ChildItem ds002:  
     ```  
 
      The list of default folders in the root of the deployment share is displayed.  
@@ -585,10 +585,10 @@ ForEach-Object ($App in $List) {
 
      The list of Windows PowerShell drives provided using the MDTProvider are listed, one for each deployment share  
 
-4.  Create a folder named *Windows_8* in the Operating Systems folder in a deployment share using the **mkdir** command, as shown in the following example:  
+4.  Create a folder named *Windows_8* in the Operating Systems folder in a deployment share using the **New-Item** command, as shown in the following example:  
 
     ```powershell 
-    mkdir "DS002:\Operating Systems\Windows_8"  
+    New-Item "DS002:\Operating Systems\Windows_8"  
     ```  
 
      In this example, *DS002:* is the name of a Windows PowerShell drive returned in step 3.  
@@ -596,7 +596,7 @@ ForEach-Object ($App in $List) {
 5.  Verify that the folder is created correctly by typing the following command:  
 
     ```powershell  
-    dir "DS002:\Operating Systems"  
+    Get-ChildItem "DS002:\Operating Systems"  
     ```  
 
      The Windows_8 folder and any other existing folders in the Operating Systems folder is displayed.  
@@ -612,7 +612,7 @@ ForEach-Object ($App in $List) {
 7.  Verify that the folder is created correctly by typing the following command:  
 
     ```  
-    dir "DS002:\Operating Systems"  
+    Get-ChildItem "DS002:\Operating Systems"  
     ```  
 
      The Windows_7 folder and any other existing folders in the Operating Systems folder is displayed.  
@@ -639,10 +639,10 @@ ForEach-Object ($App in $List) {
 
      The list of Windows PowerShell drives provided using the MDTProvider are listed, one for each deployment share.  
 
-4.  Delete (remove) a folder named *Windows_8* in the Operating Systems folder in a deployment share using the **mkdir** command, as shown in the following example:  
+4.  Delete (remove) a folder named *Windows_8* in the Operating Systems folder in a deployment share using the **New-Item** command, as shown in the following example:  
 
     ```powershell  
-    rmdir "DS002:\Operating Systems\Windows_8"  
+    Remove-Item "DS002:\Operating Systems\Windows_8"  
     ```  
 
      In this example, *DS002:* is the name of a Windows PowerShell drive returned in step 3.  
@@ -650,7 +650,7 @@ ForEach-Object ($App in $List) {
 5.  Verify that the folder is removed correctly by typing the following command:  
 
     ```powershell  
-    dir "DS002:\Operating Systems"  
+    Get-ChildItem "DS002:\Operating Systems"  
     ```  
 
      The Windows_8 folder is no longer displayed in the list of folders in the Operating Systems folder  
@@ -666,7 +666,7 @@ ForEach-Object ($App in $List) {
 7.  Verify that the folder is created correctly by typing the following command:  
 
     ```powershell  
-    dir "DS002:\Operating Systems"  
+    Get-ChildItem "DS002:\Operating Systems"  
     ```  
 
      The Windows_7 folder is no longer displayed in the list of folders in the Operating Systems folder.  
@@ -704,7 +704,7 @@ ForEach-Object ($App in $List) {
 5.  Verify that the folder is removed correctly by typing the following command:  
 
     ```powershell  
-    dir "DS002:\Operating Systems"  
+    Get-ChildItem "DS002:\Operating Systems"  
     ```  
 
      The Windows_8 folder is renamed to *Win_8*.  
@@ -720,7 +720,7 @@ ForEach-Object ($App in $List) {
 7.  Verify that the folder is created correctly by typing the following command:  
 
     ```powershell  
-    dir "DS002:\Operating Systems"  
+    Get-ChildItem "DS002:\Operating Systems"  
     ```  
 
      The Windows_7 folder is renamed to *Win_7*.  
@@ -3637,14 +3637,14 @@ New-PSDrive -Name "MEDIA001" -PSProvider "MDTProvider" -Root "D:\Media\Content" 
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn  
-New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
+New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share" 
 Generate-MDTMedia -path "DS002:\Media\MEDIA001" -Verbose  
 ```  
 
 ###  <a name="DeleteMedia"></a> Deleting Media  
 The following Windows PowerShell command deletes the MEDIA001 media from the Production deployment share.  
 
-```  
+```powershell
 Remove-item -path "DS002:\Media\MEDIA001" -Verbose
 ```  
 
