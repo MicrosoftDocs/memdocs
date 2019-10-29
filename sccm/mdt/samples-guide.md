@@ -3533,7 +3533,7 @@ Import-mdtoperatingsystem -path "DS002:\Operating Systems" -SourcePath "D:\Opera
 ###  <a name="DeleteOpSys"></a> Deleting an Operating System  
  The following Windows PowerShell command deletes the Windows Vista HOMEBASIC operating system from the Production deployment share.  
 
-```  
+```powershell 
 Remove-item -path "DS002:\Operating Systems\Windows Vista HOMEBASIC in Windows Vista x86 install.wim" -Verbose  
 ```  
 
