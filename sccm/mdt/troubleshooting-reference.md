@@ -271,8 +271,6 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 
    This information indicates that a networking problem may exist on the target computer or between the target computer and the server on which the deployment share resides. These problems might include network drivers not being installed properly or a mismatch in speed and duplex settings.  
 
-   **Possible Solution 2:** Use the Microsoft Exchange Server Error Code Look-up utility. This command-line utility is valuable in assisting with error code translation. It is available for download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=985).  
-
 ### Review of Sample Logs  
  MDT creates log files that you can use to troubleshoot problems in the MDT deployment process. The following sections provide examples of how to use the MDT log files to troubleshoot the deployment process:  
 
