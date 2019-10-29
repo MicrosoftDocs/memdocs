@@ -24,7 +24,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 
   Configuration Manager uses the User State Migration Tool (USMT) 10.0 to manage the migration of user state data from a source computer to a destination computer after the operating system installation completes. For more information about common migration scenarios for the USMT 10.0, see  [Common Migration Scenarios](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx).  
 
-  Use the folowing sections to help you capture and restore user data.
+  Use the following sections to help you capture and restore user data.
 
 
 ##  <a name="BKMK_StoringUserData"></a> Store user state data  
