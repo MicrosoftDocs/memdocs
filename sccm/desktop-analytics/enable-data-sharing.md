@@ -98,7 +98,11 @@ Configure your proxy servers to not require proxy authentication for traffic to 
 
 ### User proxy authentication
 
-Configure devices to use the signed-in user's context for proxy authentication. This method requires the devices to run Windows 10, version 1703 or later, and have user-level proxy configured (WinINET proxy). Configure this setting in **Proxy settings** in the Network & Internet group of Windows Settings. You can also use the legacy Internet Options control panel. Make sure that the users have proxy permission to reach the diagnostic data endpoints. This option requires that the devices have console users with proxy permissions, so you can't use this method with headless devices.
+Configure devices to use the signed-in user's context for proxy authentication. This method requires the following configurations:
+
+- Devices have the current quality update for Windows 7, Windows 8.1, or Windows 10, version 1703 or later
+- Configure user-level proxy (WinINET proxy) in **Proxy settings** in the Network & Internet group of Windows Settings. You can also use the legacy Internet Options control panel. 
+- Make sure that the users have proxy permission to reach the diagnostic data endpoints. This option requires that the devices have console users with proxy permissions, so you can't use this method with headless devices.
 
 > [!IMPORTANT]
 > The user proxy authentication approach is incompatible with the use of Microsoft Defender Advanced Threat Protection. This behavior is because this authentication relies on the **DisableEnterpriseAuthProxy** registry key set to `0`, while Microsoft Defender ATP requires it to be set to `1`. For more information, see [Configure machine proxy and Internet connectivity settings](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
