@@ -1,11 +1,11 @@
 ---
-title: Technical reference for application deployment
+title: Application deployment policy technical reference
 titleSuffix: Configuration Manager
-description: Technical reference for troubleshooting application deployment in Configuration Manager.
+description: Troubleshooting application deployment policies technical reference for Configuration Manager.
 ms.date: 11/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: bf24fb83-521f-4a41-ab8e-df70a6c10e78
 author: aczechowski
 ms.author: aaroncz
@@ -25,7 +25,7 @@ When you deploy an application, an instance of [SMS_ApplicationAssignment](/sccm
 SMS Provider    Auditing: User CONTOSO\Admin created an instance of class SMS_ApplicationAssignment.~
 </code></pre>
 
-In the Configuration Manager database, this information is stored in the `CI_CIAssignments` table where `AssignmentType` 2 represents an application deployment. When the assignment is created, SMS Database Monitor component detects a change in the table then notifies Object Replication Manager to process the CI Assignment (CIA) policy. Object Replication Manager component then creates the policy for the application assignment in the database, which is stored in the `Policy` table in the database, and the Policy ID is based on the Application Unique ID. This activity can be tracked in the **objreplmgr.log** by referencing the Assignment Unique ID, which can be obtained from the SQL query referenced in the [Before You Begin](/sccm/apps/understand/technicalreference-app-deployment#before-you-begin) section.
+In the Configuration Manager database, this information is stored in the `CI_CIAssignments` table where `AssignmentType` 2 represents an application deployment. When the assignment is created, SMS Database Monitor component detects a change in the table then notifies Object Replication Manager to process the CI Assignment (CIA) policy. Object Replication Manager component then creates the policy for the application assignment in the database, which is stored in the `Policy` table in the database, and the Policy ID is based on the Application Unique ID. This activity can be tracked in the **objreplmgr.log** by referencing the Assignment Unique ID, which can be obtained from the SQL query referenced in the [Before You Begin](/sccm/apps/understand/app-deployment-technical-reference#before-you-begin) section.
 
 <pre><code class="lang-text">***** Processing Application Assignment {<b>3AC57DFE-3F87-4C59-930B-B9F57CB41B91</b>} *****
 </code></pre>
@@ -51,5 +51,5 @@ After the policy is generated, the Policy Provider component assigns this policy
 
 ## Next Steps
 
-- [Application Deployment to Device Collections](/sccm/apps/understand/technicalreference-app-deployment-device)
-- [Application Deployment to User Collections](/sccm/apps/understand/technicalreference-app-deployment-user)
+- [Application Deployment to Device Collections](/sccm/apps/understand/device-deployment-technical-reference)
+- [Application Deployment to User Collections](/sccm/apps/understand/user-deployment-technical-reference)

@@ -1,11 +1,11 @@
 ---
-title: Technical reference for application deployment
+title: App deployment to users technical reference
 titleSuffix: Configuration Manager
-description: Technical reference for troubleshooting application deployment in Configuration Manager.
+description: Troubleshooting application deployments to users technical reference for Configuration Manager.
 ms.date: 11/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: b8e9dbfe-a046-4e06-8dec-cf0bc41ba095
 author: aczechowski
 ms.author: aaroncz
@@ -20,11 +20,11 @@ ms.collection: M365-identity-device-management
 When an application is deployed to a User collection, the policy for the deployment is created for Required deployments only. For Available deployments, the policy is created when the user attempts to install the application from the Software Center. This article will explain the deployment process for Required as well as Available deployments.
 
 > [!TIP]
-> All the information necessary to review the client logs can be obtained by running the SQL query referenced in the [Before you begin](/sccm/apps/understand/technicalreference-app-deployment#before-you-begin) section.
+> All the information necessary to review the client logs can be obtained by running the SQL query referenced in the [Before you begin](/sccm/apps/understand/app-deployment-technical-reference#before-you-begin) section.
 
 ## Required Deployments
 
-The policy for a required application deployment to a User collection is targeted to all the users in the collection when the deployment is created. Client-side processing for these deployments is similar to a required deployment to a Device collection. Deployment activation occurs at the defined Available Time, and enforcement occurs at the defined Deadline time. For more information, see [Application Deployment to Device Collections](/sccm/apps/understand/technicalreference-app-deployment-device).
+The policy for a required application deployment to a User collection is targeted to all the users in the collection when the deployment is created. Client-side processing for these deployments is similar to a required deployment to a Device collection. Deployment activation occurs at the defined Available Time, and enforcement occurs at the defined Deadline time. For more information, see [Application Deployment to Device Collections](/sccm/apps/understand/device-deployment-technical-reference).
 
 ## Available Deployments
 
@@ -47,4 +47,4 @@ The deployment is activated when the user selects the application and clicks on 
 
 ## Next Steps
 
-- [Understanding application deployment client components](/sccm/apps/understand/technicalreference-app-deployment-components)
+- [Understanding application deployment client components](/sccm/apps/understand/client-components-technical-reference)

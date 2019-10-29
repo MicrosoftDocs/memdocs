@@ -1,11 +1,11 @@
 ---
-title: Technical reference for application deployment
+title: Application evaluation technical reference
 titleSuffix: Configuration Manager
-description: Technical reference for troubleshooting application deployment in Configuration Manager.
+description: Troubleshooting application evaluation technical reference for Configuration Manager.
 ms.date: 11/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: a7035223-d7bd-47b4-896f-08de3416a4eb
 author: aczechowski
 ms.author: aaroncz
@@ -17,9 +17,9 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Before you continue, please review [Application deployment client components](/sccm/apps/understand/technicalreference-app-deployment-components) to understand DCM and CI Agent job processing.
+Before you continue, please review [Application deployment client components](/sccm/apps/understand/client-components-technical-reference) to understand DCM and CI Agent job processing.
 
-Application evaluation is performed by the DCM Agent and CI Agent components when the deployment is activated. To understand when the assignment is activated, see the [Application Deployment to Device Collections](/sccm/apps/understand/technicalreference-app-deployment-device) or [Application Deployment to User Collections](/sccm/apps/understand/technicalreference-app-deployment-user) articles.
+Application evaluation is performed by the DCM Agent and CI Agent components when the deployment is activated. To understand when the assignment is activated, see the [Application Deployment to Device Collections](/sccm/apps/understand/device-deployment-technical-reference) or [Application Deployment to User Collections](/sccm/apps/understand/user-deployment-technical-reference) articles.
 
 ## Application Detection and Evaluation
 
@@ -55,4 +55,4 @@ In the log entry above, **Current State** indicates whether the application is c
 
 ## Next Steps
 
-- [Application Download](/sccm/apps/understand/technicalreference-app-deployment-download)
+- [Application Download](/sccm/apps/understand/deployment-download-technical-reference)

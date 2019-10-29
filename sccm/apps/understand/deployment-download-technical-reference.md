@@ -1,11 +1,11 @@
 ---
-title: Technical reference for application deployment
+title: Application download technical reference
 titleSuffix: Configuration Manager
-description: Technical reference for troubleshooting application deployment in Configuration Manager.
+description: Troubleshooting application download technical reference for Configuration Manager.
 ms.date: 11/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 41c29a07-9bf6-4ec4-b3f2-1c05e001eff7
 author: aczechowski
 ms.author: aaroncz
@@ -13,18 +13,18 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Application Download
+# Application Download in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Before you continue, please review [Application deployment client components](/sccm/apps/understand/technicalreference-app-deployment-components) to understand DCM and CI Agent job processing.
+Before you continue, please review [Application deployment client components](/sccm/apps/understand/client-components-technical-reference) to understand DCM and CI Agent job processing.
 
 ## Download Initiation
 
 Application content download is initiated by the CI Agent component on the client during the **StateDownloadingContents** phase. This process is the same, regardless of whether the application is deployed to a Device Collection or a User collection.
 
 - For **Available** deployments, application content is downloaded when the user initiates the application installation from Software Center.
-- For **Required** deployments, application content is downloaded when the assignment is activated and the application is found Applicable after evaluation. To understand when the assignment is activated, see the [Application Deployment to Device Collections](/sccm/apps/understand/technicalreference-app-deployment-device) or [Application Deployment to User Collections](/sccm/apps/understand/technicalreference-app-deployment-user) articles.
+- For **Required** deployments, application content is downloaded when the assignment is activated and the application is found Applicable after evaluation. To understand when the assignment is activated, see the [Application Deployment to Device Collections](/sccm/apps/understand/device-deployment-technical-reference) or [Application Deployment to User Collections](/sccm/apps/understand/user-deployment-technical-reference) articles.
 
 When CI Agent initiates the content download, it creates a task that is handled by the CI Task Manager component. CI Task Manager then initiates the content download. This activity can be tracked in the **CITaskMgr.log** by using the Deployment Type Unique ID.
 
@@ -83,4 +83,4 @@ Finally, after content is verified, CI Agent receives the task complete notifica
 
 ## Next Steps
 
-- [Application Installation](/sccm/apps/understand/technicalreference-app-deployment-install)
+- [Application Installation](/sccm/apps/understand/deployment-install-technical-reference)

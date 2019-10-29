@@ -1,11 +1,11 @@
 ---
-title: Technical reference for application deployment
+title: Troubleshooting application deployment technical reference
 titleSuffix: Configuration Manager
 description: Technical reference for troubleshooting application deployment in Configuration Manager.
 ms.date: 11/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: a4eb09c8-e570-4369-9adb-ded9c8ad3400
 author: aczechowski
 ms.author: aaroncz
@@ -54,4 +54,4 @@ WHERE APP.IsLatest = 1 AND APP.DisplayName = 'Application Name' -- Replace Appli
 
 ## Next Steps
 
-- [Application Deployment Policy](/sccm/apps/understand/technicalreference-app-deployment-policy)
+- [Application Deployment Policy](/sccm/apps/understand/deployment-policy-technical-reference)

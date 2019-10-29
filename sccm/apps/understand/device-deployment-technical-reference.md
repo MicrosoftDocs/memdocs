@@ -1,11 +1,11 @@
 ---
-title: Technical reference for application deployment
+title: App deployment to device collections technical reference
 titleSuffix: Configuration Manager
-description: Technical reference for troubleshooting application deployment in Configuration Manager.
+description: Troubleshooting application deployments to device collections technical reference for Configuration Manager.
 ms.date: 11/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 4e62b04d-fe56-42ed-87dc-e673cf061d52
 author: aczechowski
 ms.author: aaroncz
@@ -20,7 +20,7 @@ ms.collection: M365-identity-device-management
 When an application is deployed to a Device collection, the policy is targeted to all the devices in the collection regardless of the deployment purpose. This article explains the policy download and deployment processing on the client.
 
 > [!TIP]
-> All the information necessary to review the client logs can be obtained by running the SQL query referenced in the [Before you begin](/sccm/apps/understand/technicalreference-app-deployment#before-you-begin) section.
+> All the information necessary to review the client logs can be obtained by running the SQL query referenced in the [Before you begin](/sccm/apps/understand/app-deployment-technical-reference#before-you-begin) section.
 
 ## Policy Download
 
@@ -84,4 +84,4 @@ Application installation is initiated when the deployment is enforced.
 
 ## Next Steps
 
-- [Understanding application deployment client components](/sccm/apps/understand/technicalreference-app-deployment-components)
+- [Understanding application deployment client components](/sccm/apps/understand/client-components-technical-reference)

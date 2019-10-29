@@ -1,11 +1,11 @@
 ---
-title: Technical reference for application deployment
+title: Application deployment client components technical reference
 titleSuffix: Configuration Manager
-description: Technical reference for troubleshooting application deployment in Configuration Manager.
+description: Client components used for troubleshooting application deployment in Configuration Manager.
 ms.date: 11/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 701a3456-9dd6-4aaa-9c5a-37c1e1773216
 author: aczechowski
 ms.author: aaroncz
@@ -83,13 +83,13 @@ A typical CI Agent job goes through multiple phases, which can be identified by 
   - During this phase, application metadata required to evaluate the application is downloaded. The metadata includes detection method, requirement rules, global conditions, etc. This activity can be tracked in **CIDownloader.log** and **DataTransferService.log**. For **Available** deployments, this process occurs during the first evaluation of the application. For **Required** deployments however, this process occurs immediately after the policy is downloaded.
 
 - **InvokingSdmMethod**
-  - During this phase, the application detection method is used to check if the application is installed and the desired state is determined. This activity can be tracked in **AppDiscovery.log** and **AppIntentEval.log**. For more information about this phase, see [Application Evaluation](/sccm/apps/understand/technicalreference-app-deployment-evaluation).
+  - During this phase, the application detection method is used to check if the application is installed and the desired state is determined. This activity can be tracked in **AppDiscovery.log** and **AppIntentEval.log**. For more information about this phase, see [Application Evaluation](/sccm/apps/understand/deployment-evaluation-technical-reference).
 
 - **StateDownloadingContents**
-  - During this phase, application content is downloaded if necessary. This activity can be tracked in **CAS.log**, **ContentTransferManager.log**, **LocationServices.log**, and **DataTransferService.log**. For more information about this phase, see [Application Download](/sccm/apps/understand/technicalreference-app-deployment-download).
+  - During this phase, application content is downloaded if necessary. This activity can be tracked in **CAS.log**, **ContentTransferManager.log**, **LocationServices.log**, and **DataTransferService.log**. For more information about this phase, see [Application Download](/sccm/apps/understand/deployment-download-technical-reference).
 
 - **StateEnforcingCIs**
-  - During this phase, the application installation is initiated. This activity can be tracked in **AppEnforce.log**. For more information about this phase, see [Application Installation](/sccm/apps/understand/technicalreference-app-deployment-install).
+  - During this phase, the application installation is initiated. This activity can be tracked in **AppEnforce.log**. For more information about this phase, see [Application Installation](/sccm/apps/understand/deployment-install-technical-reference).
 
 - **StateEnforcementReporting**
   - During this phase, application installation state is recorded for reporting to the Management Point. This activity can be tracked in **StateMessage.log**.
@@ -103,6 +103,6 @@ Although the CI Agent job goes through all the phases, it skips the phase if it 
 
 ## Next Steps
 
-- [Application Evaluation](/sccm/apps/understand/technicalreference-app-deployment-evaluation)
-- [Application Download](/sccm/apps/understand/technicalreference-app-deployment-download)
-- [Application Installation](/sccm/apps/understand/technicalreference-app-deployment-install)
+- [Application Evaluation](/sccm/apps/understand/deployment-evaluation-technical-reference)
+- [Application Download](/sccm/apps/understand/deployment-download-technical-reference)
+- [Application Installation](/sccm/apps/understand/deployment-install-technical-reference)

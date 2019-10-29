@@ -1,11 +1,11 @@
 ---
-title: Technical reference for application deployment
+title: Application installation technical reference
 titleSuffix: Configuration Manager
-description: Technical reference for troubleshooting application deployment in Configuration Manager.
+description: Troubleshooting application installations technical reference for Configuration Manager.
 ms.date: 11/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 2af4f9c3-16b8-4691-a59d-aea6241d288e
 author: aczechowski
 ms.author: aaroncz
@@ -17,9 +17,9 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Before you continue, please review [Application deployment client components](/sccm/apps/understand/technicalreference-app-deployment-components) to understand DCM and CI Agent job processing.
+Before you continue, please review [Application deployment client components](/sccm/apps/understand/client-components-technical-reference) to understand DCM and CI Agent job processing.
 
-Application installation is performed by DCM Agent and CI Agent components when the deployment is enforced. The enforcement time differs for Available and Required deployments. To understand when the assignment is enforced, see the [Application Deployment to Device Collections](/sccm/apps/understand/technicalreference-app-deployment-device) or [Application Deployment to User Collections](/sccm/apps/understand/technicalreference-app-deployment-user) articles.
+Application installation is performed by DCM Agent and CI Agent components when the deployment is enforced. The enforcement time differs for Available and Required deployments. To understand when the assignment is enforced, see the [Application Deployment to Device Collections](/sccm/apps/understand/device-deployment-technical-reference) or [Application Deployment to User Collections](/sccm/apps/understand/user-deployment-technical-reference) articles.
 
 ## Enforcement Initiation
 
