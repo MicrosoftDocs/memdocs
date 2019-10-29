@@ -135,7 +135,7 @@ The app is dependent on a driver. Desktop Analytics recommends the app for pilot
 ### Additional insights
 
 <!-- 4021225 -->
-When you update the Configuration Manager site and clients to version 1906, clients also report these additional insights:
+When you update the Configuration Manager site and clients to version 1906, clients also report these additional insights, when diagnostic data level is set to Enhanced Limited:
 
 > [!Important]  
 > To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. This scenario isn't functional until the client version is also the latest.
