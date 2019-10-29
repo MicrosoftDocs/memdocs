@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 07/26/2019
+ms.date: 10/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -130,23 +130,18 @@ Contoso has a standalone primary site in an on-premises datacenter at their head
 
 As clients roam onto the internet, they communicate with the CMG in the East US Azure region. The CMG forwards this communication through both of the CMG connection points.
 
-#### Example 2: hierarchy with site-specific CMG
+#### Example 2: hierarchy
 
 Fourth Coffee has a central administration site in an on-premises datacenter at their headquarters in Seattle. One primary site is in the same datacenter, and the other primary site is in their main European office in Paris.
 
-- On the central administration site, they create two CMG services:
-     - One CMG in the West US Azure region.
-     - One CMG in the West Europe Azure region.
-- On the Seattle-based primary site, they create a CMG connection point linked to the West US CMG.
-- On the Paris-based primary site, they create a CMG connection point linked to the West Europe CMG.
+- On the central administration site, they create a CMG service in the West US Azure region. They scale the number of VMs for the expected load of roaming clients in the entire hierarchy.
+- On the Seattle-based primary site, they create a CMG connection point linked to the single CMG.
+- On the Paris-based primary site, they create a CMG connection point linked to the single CMG.
 
-As Seattle-based clients roam onto the internet, they communicate with the CMG in the West US Azure region. The CMG forwards this communication to the Seattle-based CMG connection point.
+As clients roam onto the internet, they communicate with the CMG in the West US Azure region. The CMG forwards this communication to the CMG connection point in the client's assigned primary site.
 
-Similarly, as Paris-based clients roam onto the internet, they communicate with the CMG in the West Europe Azure region. The CMG forwards this communication to the Paris-based CMG connection point. When Paris-based users travel to the company headquarters in Seattle, their computers continue to communicate with the CMG in the West Europe Azure region.
-
-> [!Note]  
-> Fourth Coffee considered creating another CMG connection point on the Paris-based primary site linked to the West US CMG. Paris-based clients would then use both CMGs, regardless of their location. While this configuration helps load balance traffic and provide service redundancy, it can also cause delays when Paris-based clients communicate with the US-based CMG. Configuration Manager clients aren't currently aware of their geographical region, so don't prefer a CMG that's geographically closer. Clients randomly use an available CMG.
-
+> [!TIP]
+> You don't need to deploy multiple CMG instances for the purposes of geolocation. The Configuration Manager client is mostly unaffected by the slightly latency that occurs with the cloud service, even when geographically distant.
 
 ## Requirements
 

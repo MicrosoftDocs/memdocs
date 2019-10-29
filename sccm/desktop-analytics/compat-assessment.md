@@ -52,7 +52,7 @@ You'll see the following issues on the app properties pane as **MS known issues*
 
 ### Asset is removed during upgrade
 
-Windows detected compatibility issues with an application or driver. The asset won't migrate to the new OS version. No action is required for the upgrade to continue.
+Windows detected compatibility issues with an application or driver. The asset won't migrate to the new OS version. No action is required for the upgrade to continue. Install a compatible version of the application or driver on the new OS version.
 
 <!-- 3594545 -->
 Windows can partially or fully remove these assets:

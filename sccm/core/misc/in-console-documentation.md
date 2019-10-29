@@ -2,7 +2,7 @@
 title: In-console documentation
 titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
-ms.date: 09/09/2019
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -23,7 +23,7 @@ ms.collection: M365-identity-device-management
 
 # Configuration Manager documentation
 
-*Last update: September 09, 2019*
+*Last update: October 22, 2019*
 
 This content can assist you in learning and supporting Configuration Manager.
 
@@ -51,22 +51,22 @@ A curated list of important articles.
 
 ## Trending
 
-The most popular articles between August 1 and August 31, 2019.
+The most popular articles between September 1 and September 30, 2019.
 
 | Page views | Title |
 |------------|-------|
-| 18594 | [Log file reference](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
-| 18045 | [What's new in version 1906](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1906) |
-| 16244 | [How to enable TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
-| 11902 | [Ports used for connections](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
-| 11233 | [Deploy clients to Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 8663 | [Support for Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
-| 8399 | [Desktop Analytics](https://docs.microsoft.com/sccm/desktop-analytics/overview) |
-| 8391 | [Updates and servicing](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
-| 8229 | [Client settings](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-settings) |
-| 8069 | [Task sequence steps](https://docs.microsoft.com/sccm/osd/understand/task-sequence-steps) |
+| 19123 | [How to enable TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
+| 18310 | [Log file reference](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+| 16614 | [What's new in version 1906](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1906) |
+| 12623 | [Ports used for connections](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+| 12293 | [Deploy clients to Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 9371 | [Support for Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 8894 | [Client settings](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-settings) |
+| 8803 | [Updates and servicing](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 8692 | [Desktop Analytics](https://docs.microsoft.com/sccm/desktop-analytics/overview) |
+| 8558 | [Software Center user guide](https://docs.microsoft.com/sccm/core/understand/software-center) |
 
-The [Configuration Manager hub page](https://docs.microsoft.com/sccm/) received 22,991 page views in this time period.
+The [Configuration Manager hub page](https://docs.microsoft.com/sccm/) received 22,293 page views in this time period.
 
 ## Recently updated
 
@@ -74,16 +74,16 @@ Articles with a recent and significant update.
 
 | Last reviewed | Title |
 |---------------|-------|
-| 8/30/2019 | [Technical preview 1908.2](https://docs.microsoft.com/sccm/core/get-started/2019/technical-preview-1908-2) |
-| 8/30/2019 | [Troubleshoot MSfB integration](https://docs.microsoft.com/sccm/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration) |
-| 8/23/2019 | [FAQ for Desktop Analytics](https://docs.microsoft.com/sccm/desktop-analytics/faq) |
-| 8/23/2019 | [Device restart notifications](https://docs.microsoft.com/sccm/core/clients/deploy/device-restart-notifications) |
-| 8/22/2019 | [Prerequisites for software updates](https://docs.microsoft.com/sccm/sum/plan-design/prerequisites-for-software-updates) |
-| 8/21/2019 | [Setup command-line options](https://docs.microsoft.com/sccm/core/servers/deploy/install/command-line-options-for-setup) |
-| 8/15/2019 | [What's new in Desktop Analytics](https://docs.microsoft.com/sccm/desktop-analytics/whats-new) |
-| 8/9/2019 | [Troubleshoot SQL replication](https://docs.microsoft.com/sccm/core/servers/manage/replication/overview) |
-| 8/9/2019 | [Database replication](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/database-replication) |
-| 8/8/2019 | [Internet access requirements](https://docs.microsoft.com/sccm/core/plan-design/network/internet-endpoints) |
+| 9/30/2019 | [Technical preview releases](https://docs.microsoft.com/sccm/core/get-started/technical-preview) |
+| 9/25/2019 | [Support for Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 9/25/2019 | [Configure classifications and products to synchronize](https://docs.microsoft.com/sccm/sum/get-started/configure-classifications-and-products) |
+| 9/19/2019 | [Troubleshooting CMPivot](https://docs.microsoft.com/sccm/core/servers/manage/cmpivot-tsg) |
+| 9/10/2019 | [How to close your account](https://docs.microsoft.com/sccm/desktop-analytics/account-close) |
+| 9/10/2019 | [Delivery Optimization In-Network Cache](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache) |
+| 9/6/2019 | [Troubleshoot DOINC](https://docs.microsoft.com/sccm/core/servers/deploy/configure/troubleshoot-delivery-optimization-in-network-cache) |
+| 9/6/2019 | [Deprecated features](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) |
+| 9/6/2019 | [Co-management workloads](https://docs.microsoft.com/sccm/comanage/workloads) |
+| 9/3/2019 | [Reference for maintenance tasks](https://docs.microsoft.com/sccm/core/servers/manage/reference-for-maintenance-tasks) |
 
 ## Troubleshooting articles
 
@@ -99,10 +99,12 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 ## New and updated support articles
 
-Support articles that are new or updated between between July 11 and August 12, 2019.
+Support articles that are new or updated between between August 13 and October 24, 2019.
 
-- [KB 4511621: "Not enough memory resources" error when you create standalone or prestaged media in Configuration Manager](https://support.microsoft.com/help/4511621)
-- [KB 4511618: Certificate is not updated on a PXE-enabled DP and you see multiple log error entries](https://support.microsoft.com/help/4511618)
-- [KB 4509382: Troubleshooting application deployment in Configuration Manager](https://support.microsoft.com/help/4509382)
-
+- [KB 4517137: Computer hangs at "Just a moment" in a debug deployment for a Configuration Manager task sequence](https://support.microsoft.com/help/4517137)
+- [KB 4517138: Debug deployment for a task sequence is not displayed in Configuration Manager](https://support.microsoft.com/help/4517138)
+- [KB 4517870: Scheduled Updates fails if the Configuration Manager SMS provider server is on Windows Server 2012 R2 or Windows Server 2012](https://support.microsoft.com/help/4517870)
+- [KB 4458143: Hash mismatch error when clients download Contentinfo.tar from cloud DPs that are assigned to multiple primary sites](https://support.microsoft.com/help/4458143)
+- [KB 4517482: August 2019 .NET 4.7.2 updates fail to synchronize in System Center Configuration Manager](https://support.microsoft.com/help/4517482)
+- [KB 4517869: Update Rollup for System Center Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869)
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **System Center Configuration Manager**.  
