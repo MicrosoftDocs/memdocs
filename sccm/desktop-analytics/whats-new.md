@@ -25,11 +25,11 @@ To get notified when this page is updated, copy and paste the following URL into
 
 ## October 2019
 
-### Improvements to application compatibility recommendations
+### Improvements to compatibility recommendations
 
 <!-- 3594545 -->
 
-Desktop Analytics now provides additional detail when it detects that the Windows upgrade will completely or partially remove an application. For more information, see [Compatibility assessment](/sccm/desktop-analytics/compat-assessment#application-is-removed-during-upgrade).
+Desktop Analytics now provides additional detail when it detects that the Windows upgrade will completely or partially remove an application or driver. For more information, see [Compatibility assessment](/sccm/desktop-analytics/compat-assessment#asset-is-removed-during-upgrade).
 
 ### Migrate from Windows Analytics to existing tenant
 

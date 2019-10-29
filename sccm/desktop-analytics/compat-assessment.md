@@ -50,17 +50,17 @@ Desktop Analytics looks at the Microsoft app compatibility database for any know
 
 You'll see the following issues on the app properties pane as **MS known issues**:
 
-### Application is removed during upgrade
+### Asset is removed during upgrade
 
-Windows detected compatibility issues. The application won't migrate to the new OS version. No action is required for the upgrade to continue.
+Windows detected compatibility issues with an application or driver. The asset won't migrate to the new OS version. No action is required for the upgrade to continue.
 
 <!-- 3594545 -->
-Windows can partially or fully remove these apps:
+Windows can partially or fully remove these assets:
 
-- Full removal: Windows setup completely removes the app from the device during upgrade.
-- Partial removal: Windows setup partially removes the app from the device. You need to manually uninstall the app after you upgrade Windows.
+- Full removal: Windows setup completely removes the app or driver from the device during upgrade.
+- Partial removal: Windows setup partially removes the app or driver from the device. You need to manually uninstall it after you upgrade Windows.
 
-In both the cases, the user can't use the app after you upgrade Windows.
+In both the cases, after you upgrade Windows the user can't use the app or the hardware associated with the driver.
 
 To see this recommendation in the Desktop Analytics portal:
 
