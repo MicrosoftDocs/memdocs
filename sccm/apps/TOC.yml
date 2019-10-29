@@ -107,5 +107,21 @@
         href: pcm/error-messages.md
 - name: Technical references
   items:
-  - name: Preload app technical reference
-    href: understand/techref-app-deployment.md
+  - name: Troubleshooting Application Deployments
+    items:
+    - name: Before You Begin
+      href: understand/technicalreference-app-deployment.md
+    - name: Application Deployment Policy
+      href: understand/technicalreference-app-deployment-policy.md
+    - name: Application Deployment for Devices
+      href: understand/technicalreference-app-deployment-device.md
+    - name: Application Deployment for Users
+      href: understand/technicalreference-app-deployment-user.md
+    - name: Application Deployment Client Components
+      href: understand/technicalreference-app-deployment-components.md
+    - name: Application Evaluation
+      href: understand/technicalreference-app-deployment-evaluation.md
+    - name: Application Download
+      href: understand/technicalreference-app-deployment-download.md
+    - name: Application Installation
+      href: understand/technicalreference-app-deployment-install.md
