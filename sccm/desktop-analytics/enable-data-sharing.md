@@ -24,20 +24,26 @@ To enroll devices to Desktop Analytics, they need to send diagnostic data to Mic
 
 When you integrate Configuration Manager with Desktop Analytics, you also use it to manage the diagnostic data level on devices. For the best experience, use Configuration Manager.
 
-The basic functionality of Desktop Analytics works at the **Basic** [diagnostic data level](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels). You won't get usage or health data for your updated devices without configuring the **Enhanced (Limited)** level in Configuration Manager. 
+The basic functionality of Desktop Analytics works at the **Basic** [diagnostic data level](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels). If you don't configure the **Enhanced (Limited)** level in Configuration Manager, you won't get the following features of Desktop Analytics:
 
-> [!TIP]
-> The **Enhanced (Limited)** setting in Configuration Manager is the **Limit Enhanced diagnostic data to the minimum required by Windows Analytics** policy on devices running Windows 10, version 1709 and later. Microsoft recommends that you enable the **Enhanced (Limited)** diagnostic data level with Desktop Analytics.
+- App usage
+- [Additional app insights](https://docs.microsoft.com/sccm/desktop-analytics/compat-assessment#additional-insights)
+- Deployment status data
+- Health monitoring data
+
+Microsoft recommends that you enable the **Enhanced (Limited)** diagnostic data level with Desktop Analytics to maximize the benefits you get from it. 
+
+> [!Tip]
+> The **Enhanced (Limited)** setting in Configuration Manager is the same setting as **Limit Enhanced diagnostic data to the minimum required by Windows Analytics** policy avaliable on devices running Windows 10, version 1709 and later. 
 >
-> Devices running Windows 10, version 1703 and earlier don't have this policy setting. When you configure the **Enhanced (Limited)** setting in Configuration Manager, these devices fall back to the **Basic** level.
+> Devices running Windows 10, version 1703 and earlier, Windows 8.1, or Windows 7 don't have this policy setting. When you configure the **Enhanced (Limited)** setting in Configuration Manager, these devices fall back to the **Basic** level.
+>
+> Devices running Windows 10, version 1709 have this policy setting. However, when you configure the **Enhanced (Limited)** setting in Configuration Manager, these devices also fall back to the **Basic** level.
 
-For more information, see [Windows 10 enhanced diagnostic data events and fields](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
+For more information about diagnostic data shared with Microsoft with **Enhanced (Limited)**, see [Windows 10 enhanced diagnostic data events and fields](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
 
 > [!Important]   
-> Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, Microsoft doesn't collect the following data from devices located in European countries (EEA and Switzerland):
->
-> - Windows diagnostic data from Windows 8.1 devices
-> - App usage data for Windows 7
+> Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, while Desktop Analytics supports Windows 8.1 devices, Microsoft doesn't collect Windows diagnostic data from Windows 8.1 devices located in European countries (EEA and Switzerland).
 
 For more information, see [Desktop Analytics privacy](/sccm/desktop-analytics/privacy).
 
