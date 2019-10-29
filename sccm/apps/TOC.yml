@@ -100,23 +100,23 @@
 #       href: pcm/plugin-config-xml.md
 - name: Troubleshoot
   items:
-  - name: Troubleshoot Application Deployments
+  - name: Troubleshoot application deployments
     items:
-    - name: Before You Begin
+    - name: Before you begin
       href: understand/app-deployment-technical-reference.md
-    - name: Application Deployment Policy
+    - name: Application deployment policy
       href: understand/deployment-policy-technical-reference.md
-    - name: Application Deployment for Devices
+    - name: Application deployment for devices
       href: understand/device-deployment-technical-reference.md
-    - name: Application Deployment for Users
+    - name: Application deployment for users
       href: understand/user-deployment-technical-reference.md
-    - name: Application Deployment Client Components
+    - name: Application deployment client components
       href: understand/client-components-technical-reference.md
-    - name: Application Evaluation
+    - name: Application evaluation
       href: understand/deployment-evaluation-technical-reference.md
-    - name: Application Download
+    - name: Application download
       href: understand/deployment-download-technical-reference.md
-    - name: Application Installation
+    - name: Application installation
       href: understand/deployment-install-technical-reference.md
   - name: Troubleshoot Microsoft Store for Business integration
     href: deploy-use/troubleshoot-microsoft-store-for-business-integration.md
