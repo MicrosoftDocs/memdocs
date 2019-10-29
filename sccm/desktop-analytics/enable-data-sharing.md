@@ -2,7 +2,7 @@
 title: Enable data sharing
 titleSuffix: Configuration Manager
 description: A reference guide for sharing diagnostics data with Desktop Analytics.
-ms.date: 10/18/2019
+ms.date: 10/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -88,15 +88,25 @@ To enable data sharing, configure your proxy server to allow the following endpo
 
 Make sure that a proxy doesn't block the diagnostic data because of authentication. If your organization uses proxy server authentication for outbound traffic, use one or more of the following approaches:
 
-- **Bypass** (recommended): Configure your proxy servers to not require proxy authentication for traffic to the diagnostic data endpoints. This option is the most comprehensive solution. It works for all versions of Windows 10.  
+### Bypass (recommended)
 
-- **User proxy authentication**: Configure devices to use the signed-in user's context for proxy authentication. This method requires the devices to run Windows 10, version 1703 or later, and have user-level proxy configured (WinINET proxy), typically in Internet Explorer or Windows Settings app (Network & Internet / Proxy). Make sure that the users have proxy permission to reach the diagnostic data endpoints. This option requires that the devices have console users with proxy permissions, so you can't use this method with headless devices.
+Configure your proxy servers to not require proxy authentication for traffic to the diagnostic data endpoints. This option is the most comprehensive solution. It works for all versions of Windows 10.  
+
+### User proxy authentication
+
+Configure devices to use the signed-in user's context for proxy authentication. This method requires the devices to run Windows 10, version 1703 or later, and have user-level proxy configured (WinINET proxy). Configure this setting in **Proxy settings** in the Network & Internet group of Windows Settings. You can also use the legacy Internet Options control panel. Make sure that the users have proxy permission to reach the diagnostic data endpoints. This option requires that the devices have console users with proxy permissions, so you can't use this method with headless devices.
 
 > [!IMPORTANT]
-> The user proxy authentication approach is incompatible with the use of Microsoft Defender Advanced Threat Protection. This is because it relies on **DisableEnterpriseAuthProxy = 0** registry key, while Microsoft Defender ATP requires it to be set to 1.(Read more here)[<https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection>]
+> The user proxy authentication approach is incompatible with the use of Microsoft Defender Advanced Threat Protection. This behavior is because this authentication relies on the **DisableEnterpriseAuthProxy** registry key set to `0`, while Microsoft Defender ATP requires it to be set to `1`. For more information, see [Configure machine proxy and Internet connectivity settings](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
-- **Device proxy authentication**: This is the most complex approach, requiring:
-    - Ensure devices can reach proxy server through WinHTTP in local system context, configured either through 'netsh winhttp set proxy' command, WPAD, transparent proxy, routed/NATted connection, etc.
-    - Configure proxy servers to allow the computer accounts in Active Directory to access the diagnostic data endpoints. This requires proxy servers to support Windows Integrated Authentication.  
+### Device proxy authentication
 
+This approach is the most complex because it requires the following configurations:
 
+- Make sure devices can reach the proxy server through WinHTTP in local system context. Use one of the following options to configure this behavior:
+  - The command line 'netsh winhttp set proxy'
+  - Web Proxy Auto-discovery Protocol (WPAD)
+  - Transparent proxy
+  - Routed connection, or that uses network address translation (NAT)
+
+- Configure proxy servers to allow the computer accounts in Active Directory to access the diagnostic data endpoints. This configuration requires proxy servers to support Windows Integrated Authentication.  
