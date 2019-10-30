@@ -2,7 +2,7 @@
 title: Enroll devices in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn how to enroll devices in Desktop Analytics.
-ms.date: 04/22/2019
+ms.date: 10/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -142,7 +142,11 @@ To change these settings, use the following procedure:
 
 ### Windows settings
 
-Configuration Manager sets the following Windows settings under the IT policy path `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`, the user preference path `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`, or both:
+Configuration Manager sets Windows policies in one or both of the following registry keys:
+
+- **IT policy**: `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
+
+- **User** preference: `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
 
 | Policy   | Path | Value  | 
 |----------|------|--------|
