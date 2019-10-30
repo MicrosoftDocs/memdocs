@@ -93,11 +93,9 @@ Microsoft supports each technical preview version up until three successive vers
 
 ### Active baseline versions
 
-Install a baseline version for up to one year after its release. When you install a new technical preview site, if more than one baseline version is currently available, use the latest baseline version.
+Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version.
 
 - **Technical preview version 1911**: The Configuration Manager technical preview branch version 1911 is available as both an in-console update and as a new baseline version.
-
-- **Technical preview version 1907**: The Configuration Manager technical preview version 1907 is available as both an in-console update and as a baseline version.
 
 Download a baseline version from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
