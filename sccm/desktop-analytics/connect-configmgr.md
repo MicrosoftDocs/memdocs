@@ -37,7 +37,7 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Select **Configure Azure Services** in the ribbon.  
 
     > [!Tip]  
-    > In the Configuration Manager console, go to the **Software Library** workspace, and select the **Desktop Analytics Servicing** node. In the *New to Desktop Analytics?* box, select the second link to *Connect Configuration Manager to the Desktop Analytics service*.  
+    > Connect to the service directly from the **Desktop Analytics Servicing** node. In the Configuration Manager console, go to the **Software Library** workspace, and select the **Desktop Analytics Servicing** node. In the *New to Desktop Analytics?* box, select the second link to *Connect Configuration Manager to the Desktop Analytics service*.  
 
 2. On the **Azure Services** page of the Azure Services Wizard, configure the following settings:  
 
