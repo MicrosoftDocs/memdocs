@@ -31,20 +31,20 @@ Antivirus real-time protection can cause many problems on Configuration Manager 
 
 The following is a non-comprehensive list of possible symptoms:
 
-- Remote site system components are not installed. SiteComp.log, Distmgr.log, hman.log or other Configuration Manager log files may contain errors such as error 80070005.
-- The Configuration Manager client cannot be installed by using Client Push.
+- Remote site system components aren't installed. SiteComp.log, Distmgr.log, hman.log, or other Configuration Manager log files may contain errors such as error 80070005.
+- The Configuration Manager client can't be installed by using Client Push.
 - Client inventory information is inaccurate, missing, or out-of-date.
 - Backlogs occur in the *Install_Directory*\Program Files\Microsoft Configuration Manager\Inboxes folders.
-- Software Center is not populated by deployed software on client systems, or does not start. Also, the CCMRepair.log file may contain errors that resemble the following:
+- Software Center is not populated by deployed software on client systems, or doesn't start. Also, the CCMRepair.log file may contain errors that resemble the following example:
 
   > Database verification failed with result: 0x80004005 but DB: C:\Windows\CCM\filename.sdf could be opened, skipping DB repair.
 
-- Software that is deployed to clients cannot be installed.
+- Software that is deployed to clients can't be installed.
 - Compliance data for software deployments is inaccurate.
 
 ## Exclusions
 
-To prevent such problems, we recommend that you add the following real-time protection exclusions.
+To prevent such problems, we recommend that you add the following real-time protection exclusions:
 
 ### Default Installation Folders
 
@@ -95,7 +95,7 @@ To prevent such problems, we recommend that you add the following real-time prot
 Process exclusions are necessary only if aggressive antivirus programs consider System Center Configuration Manager program files (.exe files) to be high-risk processes.
 
 - *ConfigMgr Installation Folder*\bin\64\Smsexec.exe
-- Either of the following:
+- Either of the following processes:
   - *Client Installation Folder*\Ccmexec.exe
   - *MP Installation Folder*\Ccmexec.exe
 - *Client Installation Folder*\CmRcService.exe (client-side)
@@ -108,11 +108,11 @@ Process exclusions are necessary only if aggressive antivirus programs consider 
 
 ## Next steps
 
-For additional information about antivirus exclusions, see the following articles:
+For more information about antivirus exclusions, see the following articles:
 
 [Configuration Manager Current Branch Antivirus Exclusions -System Center Premier Field Engineer Blog](https://blogs.technet.microsoft.com/systemcenterpfe/2017/05/24/configuration-manager-current-branch-antivirus-update/)
 
-[Updated System Center 2012 Configuration Manager Antivirus Exclusions with more details on OSD and Boot Images, etc&hellip;](https://blogs.technet.microsoft.com/systemcenterpfe/2013/01/11/updated-system-center-2012-configuration-manager-antivirus-exclusions-with-more-details-on-osd-and-boot-images-etc/)
+[Updated System Center 2012 Configuration Manager Antivirus Exclusions with more details on OSD and Boot Images](https://blogs.technet.microsoft.com/systemcenterpfe/2013/01/11/updated-system-center-2012-configuration-manager-antivirus-exclusions-with-more-details-on-osd-and-boot-images-etc/)
 
 [How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/en-us/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
 
