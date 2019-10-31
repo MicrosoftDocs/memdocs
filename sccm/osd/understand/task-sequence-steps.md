@@ -1910,7 +1910,7 @@ This step performs the following actions:
 
 #### Set up the Configuration Manager client  
 
-1. After Windows mini-setup finishes, the task sequence resumes by using setupcomplete.cmd.  
+1. After Windows mini-setup finishes, the task sequence resumes by using setupcomplete.cmd. For more information, see [Run a script after setup is complete (SetupComplete.cmd)](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd).  
 
 2. Enable or disable the local Administrator account, based on the option selected in the **Apply Windows Settings** step.  
 
@@ -1923,7 +1923,7 @@ This step performs the following actions:
 The task sequence continues running the next step.  
 
 > [!Note]  
-> Windows group policy normally doesn't process until after the task sequence is complete. This behavior is consistent across different versions of Windows. Other custom actions during the task sequence can trigger group policy evaluation.<!-- 2841304 -->
+> Windows group policy normally doesn't process until after the task sequence is complete. This behavior is consistent across different versions of Windows. Other custom actions during the task sequence can trigger group policy evaluation. For more information, see #3 under [Run a script after setup is complete (SetupComplete.cmd)](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd). <!-- 2841304 -->
 
 
 ### Properties  
