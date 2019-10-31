@@ -2,7 +2,7 @@
 title: Management insights
 titleSuffix: Configuration Manager
 description: Learn about the management insights functionality available in the Configuration Manager console.
-ms.date: 08/08/2019
+ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -17,8 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Management insights in Configuration Manager provide information about the current state of your environment. The information is based on analysis of data from the site database. Insights help you to better understand your environment and take action based on the insight. This feature was released in Configuration Manager version 1802. <!--1353967-->
-
+Management insights in Configuration Manager provide information about the current state of your environment. The information is based on analysis of data from the site database. Insights help you to better understand your environment and take action based on the insight. <!--1353967-->
 
 ## Review management insights
 
@@ -51,7 +50,6 @@ The **Prerequisites** pane lists the required items needed to run the rule.
 
 Select a rule and then select **More Details** to see the rule details.
 
-
 ## Operations
 
 The management insight rules reevaluate their applicability on a weekly schedule. To reevaluate a rule on-demand, right-click the rule and select **Re-evaluate**.
@@ -59,14 +57,13 @@ The management insight rules reevaluate their applicability on a weekly schedule
 The log file for management insight rules is **SMS_DataEngine.log** on the site server.
 
 <!--1357930-->
-Starting in version 1806, some rules let you take action. Select a rule, select **More Details**, and then if available select **Take action**.
+Some rules let you take action. Select a rule, select **More Details**, and then if available select **Take action**.
 
 Depending upon the rule, this action has one of the following behaviors:  
 
 - Automatically navigate in the console to the node where you can take further action. For example, if the management insight recommends changing a client setting, taking action navigates to the Client Settings node. Then take further action by modifying the default or a custom client settings object.  
 
 - Navigate to a filtered view based on a query. For example, taking action on the empty collections rule shows just these collections in the list of collections. Then take further action, such as deleting a collection or modifying its membership rules.  
-
 
 ## <a name="bkmk_insights"></a> Management insights dashboard
 
@@ -91,12 +88,11 @@ The dashboard includes the following tiles:
 
 - **All insights**: A table of insights including priority and state. Use the **Filter** field at the top of the table to match strings in any of the available columns. The dashboard sorts the table in the following order:
 
-    - Status: Action Needed, Completed, Unknown  
-    - Priority: Critical, Recommended, Optional  
-    - Last Changed: older dates on top  
+  - Status: Action Needed, Completed, Unknown  
+  - Priority: Critical, Recommended, Optional  
+  - Last Changed: older dates on top  
 
 ![Screenshot of management insights dashboard](media/1357979-management-insights-dashboard.png)
-
 
 ## Groups and rules
 
@@ -145,17 +141,16 @@ Starting in version 1902, there are new rules with recommendations on managing c
 
 - The following rules include configurations that potentially cause unnecessary load on the site. Review these collections, then either delete them, or disable rule evaluation:  
 
-    - **Collections with no query rules and incremental updates enabled**  
+  - **Collections with no query rules and incremental updates enabled**  
 
-    - **Collections with no query rules and enabled for scheduled or incremental evaluation**  
+  - **Collections with no query rules and enabled for scheduled or incremental evaluation**  
 
-    - **Collections with no query rules and schedule full evaluation selected**  
-
+  - **Collections with no query rules and schedule full evaluation selected**  
 
 ### Proactive maintenance
 
 <!--1352184-->
-Starting in version 1806, the rules in this group highlight potential configuration issues to avoid through upkeep of Configuration Manager objects.
+The rules in this group highlight potential configuration issues to avoid through upkeep of Configuration Manager objects.
 
 - **Boundary groups with no assigned site systems**: Without assigned site systems, boundary groups can only be used for site assignment. For more information, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).  
 
@@ -189,12 +184,11 @@ Insights that help you simplify the day-to-day management of your environment.
 
 - **Update clients to a supported Windows 10 version**: Starting in version 1902, this rule reports on clients that are running a version of Windows 10 that's no longer supported. It also includes clients with a Windows 10 version that's near end of service (three months).<!--3897268-->  
 
-
 ### Software Center
 
 Insights for managing Software Center.
 
-- **Direct users to Software Center instead of Application Catalog**: Check if users have installed or requested applications from the application catalog in the last 14 days. The primary functionality of application catalog is now included in Software Center. The application catalog is deprecated. For more information, see [Deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#deprecated-features).  
+- **Direct users to Software Center instead of Application Catalog**: Check if users have installed or requested applications from the application catalog in the last 14 days. The primary functionality of application catalog is now included in Software Center. Support ends for the application catalog roles with version 1910. For more information, see [Deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#deprecated-features).  
 
 - **Use the new version of Software Center**: The previous version of Software Center is no longer supported. Set up clients to use the new Software Center by enabling the client setting **Use new Software Center** in the **Computer Agent** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#use-new-software-center).  
 

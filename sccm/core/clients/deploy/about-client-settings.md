@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 08/23/2019
+ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -185,7 +185,7 @@ For more information about the following three settings, see [User notifications
 ### Default Application Catalog website point
 
 > [!Important]  
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -197,7 +197,7 @@ Configuration Manager uses this setting to connect users to the application cata
 ### Add default Application Catalog website to Internet Explorer trusted sites zone
 
 > [!Important]  
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -651,8 +651,10 @@ When you enable this option, applications that are already installed no longer s
 
 ### <a name="bkmk_HideAppCat"></a> Hide Application Catalog link in Software Center
 
-Starting in Configuration Manager version 1806, you can specify the visibility of the application catalog web site link in Software Center. When this option is set, users won't see the application catalog web site link in the Installation status node of Software Center. <!--1358214-->
+Specify the visibility of the application catalog web site link in Software Center. When this option is set, users won't see the application catalog web site link in the Installation status node of Software Center. <!--1358214-->
 
+> [!Important]  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 
 ### Software Center tab visibility
 
@@ -686,7 +688,7 @@ Configure the additional settings in this group to **Yes** to make the following
 - **Installation Status**
 - **Device Compliance**
 - **Options**
-- **Specify a custom tab for Software Center** (starting in version 1806) <!--1358132-->
+- **Specify a custom tab for Software Center** <!--1358132-->
     - **Tab name**
     - **Content URL**
 
