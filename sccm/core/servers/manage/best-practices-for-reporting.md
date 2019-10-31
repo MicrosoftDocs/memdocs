@@ -28,7 +28,7 @@ Typically, any reporting delays are because of the time it takes to run queries 
 Whenever possible, schedule report subscription processing to run outside normal office standard hours to minimize the CPU processing on the Configuration Manager site database server. This practice also improves availability for unpredicted report requests.  
 
 ## Updating Built-In Reports
-If you modify a standard report the site will rename it with an underscore prefix (_) upon update. This behavior makes sure that it's not overwritten by the standard report during the update process.
+If you modify a standard report, when the site updates it renames the report with an underscore prefix (`_`). This behavior makes sure that the site update doesn't overwrite the modified report by the standard report.
 
 ## Next steps
 [Configure reporting](configuring-reporting.md)
