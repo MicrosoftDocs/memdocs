@@ -37,7 +37,7 @@ The Office 365 Client Management dashboard starts displaying data as hardware in
 
 *(Introduced in version 1906 as a prerequisite)*
 
-Starting in version 1906, devices that have Office installed need internet connectivity to populate add-in information for the [Office 365 ProPlus upgrade readiness dashboard](bkmk_readiness-dash). Devices download an add-in readiness file from the [Office Content Delivery Network](https://docs.microsoft.com/office365/enterprise/content-delivery-networks#the-office-365-cdn). This file contains the full list of add-ins that are known to Microsoft and details of their expected performance on Office 365 ProPlus. Each device uses the information from the file to determine add-in compatibility. If a device can't download the file, it will have an add-in readiness status of **Needs Review**.
+Starting in version 1906, devices that have Office installed need internet connectivity to populate add-in information for the [Office 365 ProPlus upgrade readiness dashboard](#bkmk_readiness-dash). Devices download an add-in readiness file from the [Office Content Delivery Network](https://docs.microsoft.com/office365/enterprise/content-delivery-networks#the-office-365-cdn). This file contains the full list of add-ins that are known to Microsoft and details of their expected performance on Office 365 ProPlus. Each device uses the information from the file to determine add-in compatibility. If a device can't download the file, it will have an add-in readiness status of **Needs Review**.
 
 ## Viewing the Office 365 Client Management dashboard
 
