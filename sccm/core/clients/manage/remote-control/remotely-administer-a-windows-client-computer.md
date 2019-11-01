@@ -2,7 +2,7 @@
 title: "Remotely administer Windows computer"
 titleSuffix: "Configuration Manager"
 description: "Administer a remote Windows client computer by using System Center Configuration Manager."
-ms.date: 04/17/2019
+ms.date: 11/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -17,9 +17,9 @@ ms.collection: M365-identity-device-management
 *Applies to: System Center Configuration Manager (Current Branch)*
 Configuration Manager allows you to connect to client computers using **Configuration Manager Remote Control**. Before you begin to use remote control, ensure that you review the information in the following articles:  
 
--   [Prerequisites for remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/prerequisites-for-remote-control.md)  
+-   [Prerequisites for remote control in System Center Configuration Manager](/sccm/core/clients/manage/remote-control/prerequisites-for-remote-control)  
 
--   [Configuring remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/configuring-remote-control.md)  
+-   [Configuring remote control in System Center Configuration Manager](/sccm/core/clients/manage/remote-control/configuring-remote-control)  
 
 Here are three ways to start the remote control viewer:  
 
@@ -36,7 +36,7 @@ Here are three ways to start the remote control viewer:
 3.  Select the computer that you want to remotely administer and then, in the **Home** tab, in the **Device** group, choose **Start** > **Remote Control**.  
 
     > [!IMPORTANT]  
-    >  If the client setting **Prompt user for Remote Control** permission is set to **True**, the connection does not initiate until the user at the remote computer agrees to the remote control prompt. For more information, see [Configuring remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/configuring-remote-control.md).  
+    >  If the client setting **Prompt user for Remote Control** permission is set to **True**, the connection does not initiate until the user at the remote computer agrees to the remote control prompt. For more information, see [Configuring remote control in System Center Configuration Manager](/sccm/core/clients/manage/remote-control/configuring-remote-control).  
 
 4.  After the **Configuration Manager Remote Control** window opens, you can remotely administer the client computer. Use the following options to configure the connection.  
 
@@ -75,11 +75,11 @@ Here are three ways to start the remote control viewer:
     -   **Help**
         - **About Remote Control** - Displays the current version of the viewer.  
 
-5.  Users at the remote computer can view more information about the remote control session when they click the Configuration Manager**Remote Control** icon. The icon is in the Windows notification area or the icon on the remote control session bar.  
+5.  Users at the remote computer can view more information about the remote control session when they click the Configuration Manager **Remote Control** icon. The icon is in the Windows notification area or the icon on the remote control session bar.  
 
 ## To start the remote control viewer from the Windows command line  
 
--   At the Windows command prompt, type _<Configuration Manager Installation Folder\>_**\AdminConsole\Bin\x64\CmRcViewer.exe**  
+-   At the Windows command prompt, type _<Configuration Manager Installation Folder\>_**\AdminConsole\Bin\i386\CmRcViewer.exe**  
 
 CmRcViewer.exe supports the following command-line options:  
 
@@ -87,7 +87,11 @@ CmRcViewer.exe supports the following command-line options:
 - *Site Server Name* - Specifies the name of the System Center Configuration Manager site server to which you want to send status messages that are related to the remote control session.
 - **/?** - Displays the command-line options for the remote control viewer.  
      
-**Example:CmRcViewer.exe** *<Address\>* *<\\\Site Server Name>*  
+**Example:CmRcViewer.exe** *<Address\>* *<\\\Site Server Name>* 
 
-       > [!NOTE]  
-       >  CmRcViewer.exe is supported on Windows 7/Windows Server 2008 R2 and later.
+> [!NOTE]  
+> The remote control viewer is supported on all operating systems that are supported for the Configuration Manager console. For information, see [Supported configurations for System Center Configuration Manager consoles](/sccm/core/plan-design/configs/supported-operating-systems-consoles) and [Prerequisites for remote control in System Center Configuration Manager](/sccm/core/clients/manage/remote-control/prerequisites-for-remote-control).
+
+## Next steps
+
+[Audit remote control usage](/sccm/core/clients/manage/remote-control/audit-remote-control-usage)
