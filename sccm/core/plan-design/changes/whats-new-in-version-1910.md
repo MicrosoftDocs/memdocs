@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # What's new in version 1910 of Configuration Manager current branch
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Update 1910 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1806 or later. <!-- baseline only statement:When installing a new site, it's also available as a baseline version.--> This article summarizes the changes and new features in Configuration Manager, version 1910.  
 
@@ -34,6 +34,9 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ### Reclaim SEDO lock
 <!--4786915-->
+
+### Extend and Migrate on-premises Configuration Manager environment to Microsoft Azure
+<!--3556022-->
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
@@ -82,27 +85,39 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## <a name="bkmk_osd"></a> OS deployment
 
-### Output the results of a run command line step to a variable during a task sequence
+### Output the results of a Run Command Line step to a variable during a task sequence
 <!--4977616-->
 
-### Import a single index of an Operating System Upgrade Package
+### Import a single index of an OS upgrade package
 <!--4931110-->
 
-### Custom Default Keyboard Layout in Boot Image Properties
+### Custom default keyboard layout in boot image properties
 <!--4910348-->
 
-### Task Sequence Editor Search
+### Task sequence editor search
 <!--4621085-->
 
-### Task Sequence Performance Improvements - Power Plans
+### Task sequence performance improvements - power plans
 <!--3555926-->
 
-### Copy and Paste Task Sequence Conditions
+### Copy and paste task sequence conditions
 <!--4621098-->
 
 ### Task sequence download on demand over the internet
 <!--3601238-->
- 
+
+### Set keyboard layout during OS deployment
+<!--5138936-->
+
+### Improvements to task sequence debugger
+<!-- 5012536, 5012509 -->
+
+### Improved language support in task sequence
+<!--5411057-->
+
+### New variable for Windows 10 in-place upgrade
+<!--4680263-->
+
 ## <a name="bkmk_userxp"></a> Software Center
 
 
@@ -128,13 +143,13 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## <a name="bkmk_protect"></a> Protection
 
-### Bitlocker Management (MBAM)
+### BitLocker Management (MBAM)
 <!--3601034-->
 
 
 ## <a name="bkmk_admin"></a> Configuration Manager console
 
-### View active consoles and message administrators through Console Connections 
+### View active consoles and message administrators through Console Connections
 <!--4923997-->
 
 ### Client Diagnostics Actions
@@ -149,6 +164,11 @@ To take full advantage of new Configuration Manager features, after you update t
 <!--3556022-->
 
 This new tool helps you to programmatically create Azure virtual machines (VMs) for Configuration Manager. It can install with default settings site roles like a passive site server, management points, and distribution points. Once you validate the new roles, use them as additional site systems for high availability. You can also remove the on-premises site system role and only keep the Azure VM role. For more information, see [Extend and migrate on-premises site to Microsoft Azure](/sccm/core/support/azure-migration-tool).
+
+### Improvements to console search
+<!--4640570-->
+
+## Other updates
 
 As of this version, the following features are no longer pre-release:
 <!--

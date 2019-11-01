@@ -2,7 +2,7 @@
 title: Plan for Software Center
 titleSuffix: Configuration Manager
 description: Decide how you want to configure and brand Software Center for users to interact with Configuration Manager.
-ms.date: 08/07/2019
+ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -32,7 +32,7 @@ Review the following improvements to Software Center:
 >
 > - The Silverlight user experience isn't supported as of current branch version 1806.
 > - Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles.
-> - In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> - Support ends for the application catalog roles with version 1910.  
 
 ### Starting in version 1802
 
@@ -153,7 +153,7 @@ Configuration Manager applies custom branding for Software Center according to t
 #### Application catalog branding priorities
 
 > [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 
 If you're using the application catalog, branding follows these priorities:  
 

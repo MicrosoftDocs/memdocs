@@ -124,3 +124,7 @@ The tool doesn't currently have any tasks to migrate the database from on-premis
     [![Deploy site roles by running the generated PowerShell script](./media/3556022-run-powershell-script-deployment.png)](./media/3556022-run-powershell-script-deployment.png#lightbox)
 
 1. Repeat this process to configure more roles.
+
+## Next steps
+
+Review your changes in the [Azure portal](https://portal.azure.com)

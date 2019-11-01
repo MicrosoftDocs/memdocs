@@ -2,7 +2,7 @@
 title: Site system roles for clients
 titleSuffix: Configuration Manager
 description: Determine site system roles for clients in System Center Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -82,7 +82,7 @@ Configuration Manager requires the enrollment point and the enrollment proxy poi
 ## Application catalog
 
 > [!Important]  
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
