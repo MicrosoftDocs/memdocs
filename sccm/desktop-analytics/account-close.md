@@ -2,7 +2,7 @@
 title: How to close your account
 titleSuffix: Configuration Manager
 description: How to remove Desktop Analytics from your Azure account
-ms.date: 07/08/2019
+ms.date: 10/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -15,16 +15,35 @@ ms.collection: M365-identity-device-management
 
 # How to close your account
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 If you set up Desktop Analytics in your environment, and then decide you need to remove it, use this process to close your account.
 
-## Contact support
+## Prerequisites
 
-The first step is to contact Microsoft Support. Open a support case to close your Desktop Analytics account. Don't continue with additional steps until you receive confirmation that Microsoft closed your account.
+Only a **Global Administrator** can close or reactivate the account in the Azure portal.
+
+## Process to offboard
+
+1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics) in Microsoft 365 Device Management as a user with the **Global Administrator** role.
+
+1. In the **Global Settings** menu, select **Connected services**. In the enroll devices section, select the option to **Offboard**.
+
+1. If you decide to continue, your account is closed.
+
+> [!Important]
+> Only continue with the rest of this article after 90 days, or if you won't reactivate.
+>
+> If you want to completely close your account without waiting for 90 days, first [Reset](/sccm/desktop-analytics/account-reset) your account.
+
+## Reactivate
+
+For the next 90 days, any administrator from your organization who accesses the Desktop Analytics portal will see a notice that you opted to offboard.
+
+A global administrator can reactivate the account within 90 days. To restore Desktop Analytics for your organization, select the option to **Take me back**.
 
 ## Delete the solution
+
+> [!Warning]
+> Only continue with the rest of this article after 90 days, or if you won't reactivate. If you delete and disconnect these other components, don't try to reactivate.
 
 1. Sign in to the [Azure portal](https://portal.azure.com) as a user with the **Global administrator** role.
 
@@ -64,6 +83,12 @@ The Desktop Analytics data ages out based on your data retention policy for the 
 1. Go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node.
 
 1. Delete the Desktop Analytics service.
+
+### Delete collections for the pilot and production deployments
+
+1. In the Configuration Manager console, select **Device Collections** in the **Assets and Compliance** workspace.
+
+1. Delete any collections you're no longer using. By default, the collections are located under the **Deployment Plans** folder.  
 
 ## Reconfigure clients
 

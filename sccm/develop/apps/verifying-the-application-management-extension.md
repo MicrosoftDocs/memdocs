@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
      ![Screenshot showing successful registration](../../develop/apps/media/appmanregistrationscreenshot.gif "AppManRegistrationScreenshot")  
 
 > [!TIP]
->  For additional information on using the Create Application Wizard, see [How to Create Applications in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=215691).  
+>  For additional information on using the Create Application Wizard, see [How to Create Applications in Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=215691).  
 
 #### Create an application using the Create Application Wizard  
 
@@ -44,7 +44,7 @@ ms.collection: M365-identity-device-management
 5.  Continue through the wizard until successful completion.  
 
 > [!TIP]
->  For additional information on using the Create Application Wizard, see [How to Create Applications in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=215691).  
+>  For additional information on using the Create Application Wizard, see [How to Create Applications in Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=215691).  
 
 #### Create a deployment type using the Create Deployment Type Wizard  
 
@@ -59,7 +59,7 @@ ms.collection: M365-identity-device-management
 5.  Continue through the wizard until successful completion.  
 
 > [!TIP]
->  For additional information on using the Create Application Wizard, see [How to Create Deployment Types in Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=215692).  
+>  For additional information on using the Create Application Wizard, see [How to Create Deployment Types in Configuration Manager](https://go.microsoft.com/fwlink/?LinkID=215692).  
 
 #### Check the Deployment Type Properties  
 

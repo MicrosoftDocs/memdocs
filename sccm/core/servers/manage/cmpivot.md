@@ -162,7 +162,7 @@ The CMPivot window contains the following elements:
 
      - **Show devices without**: Query for devices without this value for this property. For example, from the results of the `OS` query, select this option on a cell in the Version row: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
 
-     - **Bing it**: Launch the default web browser to www.bing.com with this value as the query string.  
+     - **Bing it**: Launch the default web browser to https://www.bing.com with this value as the query string.  
 
    - Click any hyperlinked text to pivot the view on that specific information.  
 
@@ -293,33 +293,36 @@ CMPivot now includes basic support for the KQL [render operator](https://docs.mi
 #### Example: bar chart
 The following query renders the most recently used applications as a bar chart:
 
-```
+``` Kusto
 CCMRecentlyUsedApplications
 | summarize dcount( Device ) by ProductName
 | top 10 by dcount_
 | render barchart
 ```
+
 ![Example of CMPivot bar chart visualization](media/1359068-cmpivot-barchart.png)
 
 #### Example: time chart
 To render time charts, use the new **bin()** operator to group events in time. The following query shows when devices have started in the last seven days:
 
-``` 
-OperatingSystem 
+``` Kusto
+OperatingSystem
 | where LastBootUpTime <= ago(7d)
 | summarize count() by bin(LastBootUpTime,1d)
 | render timechart
 ```
+
 ![Example of CMPivot time chart visualization](media/1359068-cmpivot-timechart.png)
 
 #### Example: pie chart
 The following query displays all OS versions in a pie chart:
 
-```
-OperatingSystem 
+``` Kusto
+OperatingSystem
 | summarize count() by Caption
 | render piechart
 ```
+
 ![Example of CMPivot pie chart visualization](media/1359068-cmpivot-piechart.png)
 
 
@@ -329,12 +332,14 @@ Use CMPivot to query any hardware inventory class. These classes include any cus
 The color saturation of the data in the results table or chart indicates if the data is live or cached. For example, dark blue is real-time data from an online client. Light blue is cached data.
 
 #### Example
-```
+
+``` Kusto
 LogicalDisk
 | summarize sum( FreeSpace ) by Device
 | order by sum_ desc
 | render columnchart
 ```
+
 ![Example of CMPivot inventory query with column chart visualization](media/1359068-cmpivot-inventory.png)
 
 #### Limitations
@@ -384,7 +389,7 @@ MessageId 40805: User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Sc
 
 - 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 is the Script-Guid for CMPivot.
 - The Script-Hash can be seen in the client's scripts.log file.
-- You can also see the hash stored in the client's script score. The filename on the client is &lt;Script-Guid>_&lt;Script-Hash>.
+- You can also see the hash stored in the client's script store. The filename on the client is &lt;Script-Guid>_&lt;Script-Hash>.
     - Example file name: C:\Windows\CCM\ScriptStore\7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14_abc1d23e45678901fabc123d456ce789fa1b2cd3e456789123fab4c56789d0123.ps
    
 
@@ -396,7 +401,7 @@ Starting in Configuration Manager version 1902, you can run CMPivot from the cen
 
 Running CMPivot on the CAS will require additional permissions when SQL or the provider aren't on the same machine or in the case of SQL Always On configuration. With these remote configurations, you have a “double hop scenario” for CMPivot.
 
-To get CMPivot to work on the CAS in such a “double hop scenario”, you can define constrained delegation. To understand the security implications of this configuration, read the [Kerberos constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. If you have more than one remote configuration such as SQL or SCCM Provider being colocated with the CAS or not, you may require a combination of permission settings. Below are the steps that you need to take:
+To get CMPivot to work on the CAS in such a “double hop scenario”, you can define constrained delegation. To understand the security implications of this configuration, read the [Kerberos constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. If you have more than one remote configuration such as SQL or SMS Provider being colocated with the CAS or not, you may require a combination of permission settings. Below are the steps that you need to take:
 
 ### CAS has a remote SQL server
 
@@ -513,7 +518,7 @@ The render operator already exists in CMPivot. Support for multiple series and t
 
 - Show device, manufacturer, model, and OSVersion:
 
-   ```
+   ``` Kusto
    ComputerSystem
    | project Device, Manufacturer, Model
    | join (OperatingSystem | project Device, OSVersion=Caption)
@@ -521,7 +526,7 @@ The render operator already exists in CMPivot. Support for multiple series and t
 
 - Show graph of boot times for a device:
 
-   ```
+   ``` Kusto
    SystemBootData
    | where Device == 'MyDevice'
    | project SystemStartTime, BootDuration, OSStart=EventLogStart, GPDuration, UpdateDuration

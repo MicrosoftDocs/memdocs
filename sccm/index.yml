@@ -71,6 +71,9 @@ conceptualContent:
         - text: Set up Desktop Analytics
           url: https://docs.microsoft.com/sccm/desktop-analytics/set-up
           itemType: how-to-guide
+        - text: Office 365 dashboard
+          url: https://docs.microsoft.com/sccm/sum/deploy-use/office-365-dashboard
+          itemType: learn
       footerLink:
         text: See more
         url: https://docs.microsoft.com/sccm/desktop-analytics/overview

@@ -141,7 +141,7 @@ Use the following procedure to deploy a task sequence to the computers in a coll
 
     - **Write filter handling for Windows Embedded devices**: This setting controls the installation behavior on Windows Embedded devices that are enabled with a write filter. Choose the option to commit changes at the installation deadline or during a maintenance window. When you select this option, a restart is required and the changes persist on the device. Otherwise, the application is installed to the temporary overlay, and committed later. When you deploy a task sequence to a Windows Embedded device, make sure the device is a member of a collection that has a configured maintenance window.  
 
-    - **Allow task sequence to run for client on the Internet**: Specify whether the task sequence is allowed to run on an internet-based client. Operations that install software, such as an OS, aren't supported with this setting. Use this option only for generic script-based task sequences that perform operations in the standard OS.  
+    - **Allow task sequence to run for client on the Internet**: Specify whether the task sequence is allowed to run on an internet-based client. Operations that require a boot media, such as the installation of an OS, aren't supported with this setting. Use this option only for generic software installations or script-based task sequences that perform operations in the standard OS.  
 
         - Starting in version 1802, this setting is supported for deployments of a Windows 10 in-place upgrade task sequence to internet-based clients through the cloud management gateway. For more information, see [Deploy Windows 10 in-place upgrade via CMG](#deploy-windows-10-in-place-upgrade-via-cmg).  
 

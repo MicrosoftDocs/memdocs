@@ -20,9 +20,9 @@ The public key infrastructure (PKI) certificates that you might require for Conf
 
 For more about Active Directory Certificate Services, see the following documentation:  
 
-- For Windows Server 2012: [Active Directory Certificate Services Overview](http://go.microsoft.com/fwlink/p/?LinkId=286744)  
+- For Windows Server 2012: [Active Directory Certificate Services Overview](https://go.microsoft.com/fwlink/p/?LinkId=286744)  
 
-- For Windows Server 2008: [Active Directory Certificate Services in Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)
+- For Windows Server 2008: [Active Directory Certificate Services in Windows Server 2008](https://go.microsoft.com/fwlink/p/?LinkId=115018)
 
 For information about using Cryptography API: Next Generation (CNG) certificates with Configuration Manager, see [CNG certificates overview](cng-certificates-overview.md).
 
@@ -34,7 +34,7 @@ For information about using Cryptography API: Next Generation (CNG) certificates
 >
 >Effective February 14, 2017, Windows no longer trusts certain certificates signed with SHA-1. In general, we recommend that you issue new server and client authentication certificates signed with SHA-2 (which includes SHA-256 and SHA-512, among others). Additionally, we recommend that any internet-facing services use a SHA-2 certificate. For example, if you purchase a public certificate for use with a cloud management gateway, make sure that you purchase a SHA-2 certificate."
 >
-> In most cases, the change to SHA-2 certificates has no impact on operations. For more information, see [Windows Enforcement of SHA1 certificates](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx).
+> In most cases, the change to SHA-2 certificates has no impact on operations. For more information, see [Windows Enforcement of SHA1 certificates](https://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx).
 
 You can use any PKI to create, deploy, and manage these certificates, with the following exceptions:
 

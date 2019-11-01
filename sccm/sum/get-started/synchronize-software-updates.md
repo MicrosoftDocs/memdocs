@@ -74,7 +74,7 @@ The top-level Software Update Point uses WSUS to get information about software 
 
 ### To import an update from the Microsoft Update Catalog
 
-1. Open the WSUS administration console and connect it to the top-level WSUS server in your SCCM hierarchy. 
+1. Open the WSUS administration console and connect it to the top-level WSUS server in your hierarchy.
    - If Internet Explorer isn't the computer's default web browser, temporarily set it as the default.
 2. Click on **Updates** or click your WSUS server's name. 
 3. In the **Actions** pane, select **Import Updates...** which will open a browser window to the [Microsoft Update Catalog](https://catalog.update.microsoft.com).

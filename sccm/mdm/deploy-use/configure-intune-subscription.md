@@ -29,7 +29,7 @@ The Intune subscription does the following:
 
 ## To create the Microsoft Intune subscription
 
-1.  If you haven't already, sign up for a Microsoft Intune account at [Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=258216).  After creating your Intune account, you do not need to add any users to the Intune account or perform additional settings configurations.
+1.  If you haven't already, sign up for a Microsoft Intune account at [Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=258216).  After creating your Intune account, you do not need to add any users to the Intune account or perform additional settings configurations.
 
 2.  In the Configuration Manager console, click **Administration**.
 

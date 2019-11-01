@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 08/30/2019
+ms.date: 10/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -73,11 +73,7 @@ The technical preview branch of Configuration Manager supports the following pro
     - SQL Server 2014 (with service pack 1 or later)
     - SQL Server 2012 (with service pack 3 or later)  
 
-- The site supports up to 10 clients, which must run one of the following versions of Windows:  
-
-    - Windows 10  
-    - Windows 8.1  
-    - Windows 7  
+- The site supports up to 10 clients, which can run any [supported client OS version](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).<!-- SCCMDocs#1656 -->
 
 > [!Note]  
 > The inclusion of these products in this content doesn't imply an extension of support for a version that's beyond its support lifecycle. Configuration Manager doesn't support products that are beyond their support lifecycle. For more information, see [Microsoft Lifecycle Policy](https://go.microsoft.com/fwlink/p/?LinkId=208270).  
@@ -118,14 +114,20 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical preview version 1908.2
+### Technical preview version 1910
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
-- [Improvements to Console Connections](/sccm/core/get-started/2019/technical-preview-1908-2#improvements-to-console-connections) <!--4923997-->
-- [Improvements to multicast-enabled distribution points](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_multicast) <!--3785535-->
-- [Optimizations to the CMPivot engine](/sccm/core/get-started/2019/technical-preview-1908-2#optimizations-to-the-cmpivot-engine) <!--3197353-->
-- [Set keyboard layout during OS deployment](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_osd) <!--5138936-->
+- [Deploy Microsoft Edge, version 77 and later](/sccm/core/get-started/2019/technical-preview-1910#bkmk_Microsoft_Edge) <!--4561024-->
+- [Include custom configuration baselines as part of compliance policy assessment](/sccm/core/get-started/2019/technical-preview-1910#bkmk_CAbaselines) <!--3608345-->
+- [Improvements to application groups](/sccm/core/get-started/2019/technical-preview-1910#bkmk_appgrp) <!--4760058-->
+- [Reclaim SEDO lock](/sccm/core/get-started/2019/technical-preview-1910#bkmk_sedo) <!--4786915-->
+- [Attach files to feedback](/sccm/core/get-started/2019/technical-preview-1910#attach-files-to-feedback) <!--3556011-->
+- [Client diagnostic actions](/sccm/core/get-started/2019/technical-preview-1910#bkmk_diag) <!--4433455-->
+- [Office 365 ProPlus pilot and health dashboard](/sccm/core/get-started/2019/technical-preview-1910#office-365-proplus-pilot-and-health-dashboard) <!--4488272-->
+- [Improvements to console search](/sccm/core/get-started/2019/technical-preview-1910#bkmk_search) <!--4640570-->
+- [New variable for Windows 10 in-place upgrade](/sccm/core/get-started/2019/technical-preview-1910#bkmk_osdvar) <!--4680263-->
+- [Improvements to Windows Virtual Desktop support](/sccm/core/get-started/2019/technical-preview-1910#bkmk_wvd) <!--4737447-->
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
@@ -134,6 +136,25 @@ The following features are available with the most recent Configuration Manager 
 ## Features in recent technical previews
 
 The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1906:
+
+### Technical preview version 1909
+
+- [Orchestration Groups](/sccm/core/get-started/2019/technical-preview-1909#bkmk_OGs) <!--3098816-->
+- [Improvements to BitLocker management](/sccm/core/get-started/2019/technical-preview-1909#bkmk_bitlocker) <!--3601034-->
+- [Extend and migrate an on-premises site to Microsoft Azure](/sccm/core/get-started/2019/technical-preview-1909#bkmk_Azure-migration) <!--3556022-->
+- [Additional CMPivot entities and enhancements](/sccm/core/get-started/2019/technical-preview-1909#bkmk_CMPivot) <!--5410930-->
+- [Task sequence download on demand over the internet](/sccm/core/get-started/2019/technical-preview-1909#bkmk_dodcmg) <!--3601238-->
+- [Support for Windows Insider](/sccm/core/get-started/2019/technical-preview-1909#bkmk_wifb) <!--3556023-->
+- [Improved language support in task sequence](/sccm/core/get-started/2019/technical-preview-1909#bkmk_osd) <!--5411057-->
+- [Office 365 ProPlus health dashboard](/sccm/core/get-started/2019/technical-preview-1909#bkmk_o365health) <!--4488301-->
+- [Improvements to task sequence debugger](/sccm/core/get-started/2019/technical-preview-1909#bkmk_tsdebug) <!-- 5012536, 5012509 -->
+
+### Technical preview version 1908.2
+
+- [Improvements to Console Connections](/sccm/core/get-started/2019/technical-preview-1908-2#improvements-to-console-connections) <!--4923997-->
+- [Improvements to multicast-enabled distribution points](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_multicast) <!--3785535-->
+- [Optimizations to the CMPivot engine](/sccm/core/get-started/2019/technical-preview-1908-2#optimizations-to-the-cmpivot-engine) <!--3197353-->
+- [Set keyboard layout during OS deployment](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_osd) <!--5138936-->
 
 ### Technical preview version 1908
 

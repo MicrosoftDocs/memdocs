@@ -2,7 +2,7 @@
 title: "Evaluate in a lab environment"
 titleSuffix: "Configuration Manager"
 description: "Create a lab environment to evaluate System Center Configuration Manager for use in your organization."
-ms.date: 2/28/2017
+ms.date: 02/28/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

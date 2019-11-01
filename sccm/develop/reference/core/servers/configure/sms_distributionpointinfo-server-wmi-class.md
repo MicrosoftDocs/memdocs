@@ -518,6 +518,4 @@ For more information, see [Configuration Manager server development requirements
 
 ## See also
 
-- [Software distribution server WMI classes](/sccm/develop/reference/core/servers/configure/software-distribution-server-wmi-classes)
-
 - [SMS_DistributionPoint server WMI class](/sccm/develop/reference/core/servers/configure/sms_distributionpoint-server-wmi-class)

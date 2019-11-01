@@ -30,7 +30,7 @@ Use these steps to configure your infrastructure for SCEP, or PFX certificates.
 
 ### To install and configure the Network Device Enrollment Service and dependencies  
 
-1. On a server that is running Windows Server 2012 R2, install and configure the Network Device Enrollment Service role service for the Active Directory Certificate Services server role. For more information, see [Network Device Enrollment Service Guidance](http://go.microsoft.com/fwlink/p/?LinkId=309016) in the Active Directory Certificate Services library on TechNet.  
+1. On a server that is running Windows Server 2012 R2, install and configure the Network Device Enrollment Service role service for the Active Directory Certificate Services server role. For more information, see [Network Device Enrollment Service Guidance](https://go.microsoft.com/fwlink/p/?LinkId=309016) in the Active Directory Certificate Services library on TechNet.  
 
 2. Check, and if necessary, modify the security permissions for the certificate templates that the Network Device Enrollment Service is using:  
 
@@ -40,7 +40,7 @@ Use these steps to configure your infrastructure for SCEP, or PFX certificates.
 
    -   For the SCEP Service account that the Network Device Enrollment Service application pool uses: **Read** and **Enroll** permissions.  
 
-        This requirement is not specific to System Center Configuration Manager but is part of configuring the Network Device Enrollment Service. For more information, see [Network Device Enrollment Service Guidance](http://go.microsoft.com/fwlink/p/?LinkId=309016) in the Active Directory Certificate Services library on TechNet.  
+        This requirement is not specific to System Center Configuration Manager but is part of configuring the Network Device Enrollment Service. For more information, see [Network Device Enrollment Service Guidance](https://go.microsoft.com/fwlink/p/?LinkId=309016) in the Active Directory Certificate Services library on TechNet.  
 
    > [!TIP]  
    >  To identify which certificate templates the Network Device Enrollment Service is using, view the following registry key on the server that is running the Network Device Enrollment Service: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP.  
@@ -65,7 +65,7 @@ Use these steps to configure your infrastructure for SCEP, or PFX certificates.
 
    - Set the **MaxRequestBytes** key to **16777216**.  
 
-     For more information, see article [820129: Http.sys registry settings for Windows](http://go.microsoft.com/fwlink/?LinkId=309013) in the Microsoft Knowledge Base.  
+     For more information, see article [820129: Http.sys registry settings for Windows](https://go.microsoft.com/fwlink/?LinkId=309013) in the Microsoft Knowledge Base.  
 
 6. On the same server, in Internet Information Services (IIS) Manager, modify the request-filtering settings for the /certsrv/mscep application, and then restart the server. In the **Edit Request Filtering Settings** dialog box, the **Request Limits** settings should be as follows:  
 
@@ -75,7 +75,7 @@ Use these steps to configure your infrastructure for SCEP, or PFX certificates.
 
    - **Maximum query string (Bytes)**: **65534**  
 
-     For more information about these settings and how to configure them, see [Requests Limits](http://go.microsoft.com/fwlink/?LinkId=309014) in the IIS Reference Library.  
+     For more information about these settings and how to configure them, see [Requests Limits](https://go.microsoft.com/fwlink/?LinkId=309014) in the IIS Reference Library.  
 
 7. If you want to be able to request a certificate that has a lower validity period than the certificate template that you are using: This configuration is disabled by default for an enterprise CA. To enable this option on an enterprise CA, use the Certutil command-line tool, and then stop and restart the certificate service by using the following commands:  
 
@@ -85,7 +85,7 @@ Use these steps to configure your infrastructure for SCEP, or PFX certificates.
 
    3. **net start certsvc**  
 
-      For more information, see [Certificate Services Tools and Settings](http://go.microsoft.com/fwlink/p/?LinkId=309015) in the PKI Technologies library on TechNet.  
+      For more information, see [Certificate Services Tools and Settings](https://go.microsoft.com/fwlink/p/?LinkId=309015) in the PKI Technologies library on TechNet.  
 
 8. Verify that the Network Device Enrollment Service is working by using the following link as an example: **https://server.contoso.com/certsrv/mscep/mscep.dll**. You should see the built-in Network Device Enrollment Service webpage. This webpage explains what the service is and explains that network devices use the URL to submit certificate requests.  
 

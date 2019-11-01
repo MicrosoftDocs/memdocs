@@ -2,7 +2,7 @@
 title: Deployment Monitoring Tool
 titleSuffix: Configuration Manager
 description: Use the Deployment Monitoring Tool to troubleshoot software deployments on a Configuration Manager client.
-ms.date: 07/30/2018
+ms.date: 09/24/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

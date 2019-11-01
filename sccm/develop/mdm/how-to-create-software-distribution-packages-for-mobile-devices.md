@@ -21,7 +21,7 @@ System Center Configuration Manager device management enables mobile device soft
 -   [How to Create an Advertisement](../../develop/core/servers/configure/how-to-create-an-advertisement.md)  
 
 > [!IMPORTANT]
->  This topic only applies to the Mobile Device Legacy Client. For addition information on the Mobile Device Legacy Client platforms, see the Mobile Device Legacy Client section of the [Supported Configurations for Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=272885).  
+>  This topic only applies to the Mobile Device Legacy Client. For addition information on the Mobile Device Legacy Client platforms, see the Mobile Device Legacy Client section of the [Supported Configurations for Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=272885).  
 
 ## Packages  
  Packages for mobile devices in System Center Configuration Manager generally represent a software application to be installed on a mobile device, but they might also contain individual files, updates, or even an individual command.  

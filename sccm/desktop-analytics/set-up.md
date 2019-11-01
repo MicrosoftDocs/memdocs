@@ -15,9 +15,6 @@ ms.collection: M365-identity-device-management
 
 # How to set up Desktop Analytics
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 Use this procedure to sign in to Desktop Analytics and configure it in your subscription. This procedure is a one-time process to set up Desktop Analytics for your organization.  
 
 
@@ -57,7 +54,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
     - To create a workspace for Desktop Analytics, select **Add workspace**.  
 
-        1. Enter a **Workspace name**.<!--do we have any guidance for this name?-->  
+        1. Enter a globally unique **Workspace name**.<!--do we have any guidance for this name?-->  
 
         2. Select the drop-down list to **Select the Azure subscription name for this workspace**, and choose the Azure subscription for this workspace.  
 

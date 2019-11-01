@@ -2,7 +2,7 @@
 title: "Security best practices and privacy information"
 titleSuffix: "Configuration Manager"
 description: "Find resources that provide security best practices and privacy information for System Center Configuration Manager."
-ms.date: 1/3/2017
+ms.date: 01/3/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

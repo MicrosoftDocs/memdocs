@@ -1,8 +1,8 @@
 ---
-title: "Troubleshooting Windows Defender or Endpoint Protection client"
-titleSuffix: "Configuration Manager"
-description: "Learn how to troubleshoot problems with Windows Defender and Endpoint Protection."
-ms.date: 03/22/2018
+title: Troubleshoot Endpoint Protection
+titleSuffix: Configuration Manager
+description: Learn how to troubleshoot problems with Windows Defender and Endpoint Protection.
+ms.date: 09/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -12,291 +12,189 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Troubleshooting Windows Defender or Endpoint Protection client
+
+# Troubleshoot Windows Defender or Endpoint Protection client
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
+If you come across problems with Windows Defender or Endpoint Protection, use this article to troubleshoot the following problems:  
 
-If you encounter problems with Windows Defender or Endpoint Protection, contact your security administrator for support. You can also try to troubleshoot the following problems:  
+- [Update Windows Defender or Endpoint Protection](#update-windows-defender-or-endpoint-protection)  
+- [Starting Windows Defender or Endpoint Protection service](#starting-windows-defender-or-endpoint-protection-service)  
+- [Internet connection issues](#internet-connection-issues)  
+- [Detected threat can't be remediated](#detected-threat-cant-be-remediated)  
 
--   [Update Windows Defender or Endpoint Protection](#update-windows-defender-or-endpoint-protection)  
--   [Starting Windows Defender or Endpoint Protection service](#starting-windows-defender-or-endpoint-protection-service)  
--   [Internet connection issues](#internet-connection-issues)  
--   [Detected threat can't be remediated](#detected-threat-cant-be-remediated)  
--   [Install the Endpoint Protection client](#install-the-endpoint-protection-client)  
+## Update Windows Defender or Endpoint Protection
 
-##  Update Windows Defender or Endpoint Protection  
- Windows Defender or Endpoint Protection works automatically with Microsoft Update to ensure that your virus and spyware definitions are kept up to date.  
+### Symptoms
 
- **Symptoms**  
+Windows Defender or Endpoint Protection works automatically with Microsoft Update to make sure that your virus and spyware definitions are kept up-to-date.  
 
- This article addresses common issues with automatic updates, including the following situations:  
+This section addresses common issues with automatic updates, including the following situations:  
 
 - You see error messages indicating that updates have failed.  
 
-- When you check for updates, you receive an error message that the virus and spyware definition updates cannot be checked, downloaded, or installed.  
+- When you check for updates, you receive an error message that the virus and spyware definition updates can't be checked, downloaded, or installed.  
 
-- Even though you are connected to the internet, the updates fail.  
+- Even though your device is connected to the internet, the updates fail.  
 
-- Updates are not automatically installing as scheduled.  
+- Updates aren't automatically installing as scheduled.  
 
-  **Cause**  
+### Causes
 
-  The most common causes for update issues are problems with internet connectivity. However, if you know you are connected to the internet because you can browse to other Web sites, the issue might be caused by conflicts with your settings in Windows Internet Explorer.  
+The most common causes for update issues are problems with internet connectivity. If you know your device is connected to the internet because you can browse to other Web sites, the issue might be caused by conflicts with your internet settings in Windows.  
 
-> [!IMPORTANT]  
->  You have to exit Internet Explorer to complete these steps. Therefore, print them, write them down, or copy them to another file, and then bookmark this topic for future access.  
+### Options to resolve
 
-### Step 1: Reset your Internet Explorer settings  
+#### Step 1: Reset your internet settings  
 
-1.  Exit all open programs, including Internet Explorer.  
+1. Exit all open programs, including the web browser.  
 
     > [!NOTE]  
-    >  Resetting these settings in Internet Explorer deletes your temporary files, cookies, browsing history, and your online passwords. But, your favorites are not deleted.  
+    > When you reset these internet settings, it may delete your browser temporary files, cookies, browsing history, and online passwords. It doesn't delete your favorites.  
 
-2.  Click **Start** and search for **inetcpl.cpl**, and then press **Enter**.  
+2. Go to the **Start** menu, and open `inetcpl.cpl`.  
 
-3.  In the **Internet Options** dialog box, click the **Advanced** tab.  
+3. Switch to the **Advanced** tab.  
 
-4.  Under the **Reset Internet Explorer settings**, click **Reset**, and then click **Reset** again.  
+4. In the section to **Reset Internet Explorer settings**, select **Reset**, and then select **Reset** again to confirm.  
 
-5.  Wait until Internet Explorer finishes resetting the settings, and then click **OK**.  
+5. Select **OK** when the settings are reset.
 
-6.  Open Internet Explorer.  
+6. Try to update Windows Defender again.
 
-7.  Open Microsoft Security Essentials, click the **Update** tab, and then click **Update**.  
+If the issue persists, continue to the next step.  
 
-8.  If the issue persists, proceed to the next step.  
+#### Step 2: Make sure that the date and time are set correctly on your computer  
 
-### Step 2: Set Internet Explorer as the default browser  
+If the error message contains the code 0x80072f8f, the problem is most likely caused by an incorrect date or time setting on your computer. Go to the **Start** menu, select **Settings**, select **Time & language**, and select **Date & time**.
 
-1.  Exit all open programs, including Internet Explorer.  
+#### Step 3: Rename the Software Distribution folder on your computer  
 
-2.  Click **Start** and search for **inetcpl.cpl**, and then press **Enter**.  
+1. Stop the **Windows Update** service.  
 
-3.  In the **Internet Options** dialog box, click the **Programs** tab.  
+    1. Go to **Start**, and open **services.msc**.  
 
-4.  Under **Default Web browser**, click **Make default**.  
+    2. Select the **Windows Update** service. Go to the **Action** menu, and select **Stop**.
 
-5.  Click **OK**.  
+2. Rename the **SoftwareDistribution** directory.  
 
-6.  Open Windows Defender or Endpoint Protection. Click the **Update** tab, and then click **Update**.  
+    1. Open a command prompt as an administrator.  
 
-7.  If the issue persists, proceed to the next step.  
+    2. Enter the following commands:
 
-### Step 3: Ensure that the date and time are set correctly on your computer  
+        ```cmd
+        cd %windir%
+        ren SoftwareDistribution SDTemp
+        exit
+        ```
 
-1.  Open Windows Defender or Endpoint Protection.  
+3. Restart the **Windows Update** service.
 
-2.  If the error message that you received contains the code 0x80072f8f, the problem is most likely caused by an incorrect date or time setting on your computer.  
+    1. Switch back to the **Services** window.  
 
-3.  To reset your computer's date or time setting, follow the steps in [Fix broken desktop shortcuts and common system maintenance tasks](http://go.microsoft.com/fwlink/?LinkId=155579) (http://go.microsoft.com/fwlink/?LinkId=155579).  
+    2. Select the **Windows Update** service. Go to the **Action** menu, and select **Start**.
 
-### Step 4: Rename the Software Distribution folder on your computer  
+    3. Close the Services window.  
 
-1. Stop the Automatic Updates service  
+#### Step 4: Reset the Microsoft antivirus update engine on your computer  
 
-    1.  Click **Start** and search for **services.msc**, and then click **OK**.  
+1. Open a command prompt as an administrator.
 
-    2.  Right-click the **Automatic Updates service**, and then click **Stop**.  
+2. Enter the following commands:
 
-    3.  Minimize the Services snap-in.  
+    ```cmd
+    cd \
 
-2.  Rename the **SoftwareDistribution** directory as follows:  
+    cd program files\windows defender
 
-    1.  Click **Start** and search for  **cmd**, and then click **OK**.  
+    MpCmdRun -RemoveDefinitions -all
 
-    2.  Type **cd %windir%**, and then press **Enter**.  
+    exit
+    ```
 
-    3.  Type **ren SoftwareDistribution SDTemp**, and then press **Enter**.  
+3. Restart the computer.  
 
-    4.  Type **exit**, and then press **Enter**.  
+4. Try to update Windows Defender again.
 
-3.  Start the Automatic Updates service as follows:  
+If the issue persists, continue to the next step.  
 
-    1.  Maximize the Services snap-in.  
+#### Step 5: Manually install the definition updates  
 
-    2.  Right-click **Automatic Updates service**, and then click **Start**.  
+[Manually download the latest updates](https://www.microsoft.com/en-us/wdsi/defenderupdates).  
 
-    3.  Close the Services snap-in window.  
+#### Step 6: Contact Microsoft support  
 
-### Step 5: Reset the Microsoft antivirus update engine on your computer  
+If these steps didn't resolve the issue, contact Microsoft support. For more information, see [Support options and community resources](/sccm/core/understand/find-help#BKMK_SupportOptions).  
 
-1.  Click **Start** and search for  **cmd**, and then click **OK**and then right-click **Command Prompt**, and then select **Run as administrator**.  
+## Starting Windows Defender or Endpoint Protection service
 
-2.  In the **Command Prompt** window, type the following commands and press **Enter** after each command:  
+### Symptom
 
-     **Cd\\**  
+You receive a message notifying you that **Windows Defender or Endpoint Protection isn't monitoring your computer because the program's service stopped. You should restart it now.**
 
-     **Cd program files\windows defender**  
+### Solution
 
-     **Mpcmdrun -RemoveDefinitions -all**  
+#### Step 1: Restart your computer
 
-     **Exit**  
+Close all applications and restart your computer.  
 
-3.  Restart your computer.  
+#### Step 2: Check the Windows service
 
-4.  Open Windows Defender or  
-          Endpoint Protection, click the **Update** tab, and then click **Update**.  
+1. Go to **Start**, and open **services.msc**.  
 
-5.  If the issue persists, proceed to the next step.  
+2. Select the **Windows Defender Antivirus Service**.  
 
-### Step 6: Manually install the virus and spyware definition updates  
+3. Make sure that the **Startup Type** is set to **Automatic**.
 
--   [Download the latest updates manually](https://www.microsoft.com/wdsi/definitions/).  
+4. Go to the **Action** menu and select **Start**.
 
+    1. If this action isn't available, select **Stop**. Wait for the service to stop, and then select the **Start** action to restart the service.  
 
-### Step 7: Contact Support  
+Note any errors that may appear during this process. [Contact Microsoft Support](/sccm/core/understand/find-help#BKMK_SupportOptions) and provide the error information.  
 
--   If the steps did not resolve the issue, contact support. For more information, see [Customer Support](https://support.microsoft.com/contactus/).  
-
-##  Starting Windows Defender or Endpoint Protection service  
- **Symptom**  
-
- You receive a message notifying you that **Windows Defender or Endpoint Protection isn't monitoring your computer because the program's service stopped. You should restart it now.** 
-
- **Solution**  
-
-### Step 1: Restart your computer.  
-
--   Close all applications and restart your computer.  
-
-### Step 2: Make sure the "Windows Defender" or "Endpoint Protection service" is set to automatic and is started  
-
-1.  Click **Start** and search for **services.msc**, and then press **Enter**.  
-
-2.  Search for **Microsoft Antimalware Service**. Right click it and select **Properties** or double-click it to open the service.  
-
-3.  Check to make sure that the "**Startup Type**" is set to "**Automatic**".  
-
-4.  Click the **Start** button to start the service. If the **Start** button is not available, click the **Stop** button, and then click the **Start** button to restart the service.  
-
-5.  Make sure you note any errors that may appear during this process, submit a case online, and include the error information.  
-
-### Step 3: Remove any existing internet security programs  
-
-1.  Click **Start** and search for **appwiz.cpl**, and then press **Enter**.  
-
-2.  In the list of installed programs, uninstall any third-party internet security programs.*  
-
-3.  Restart your computer, and then try to install Windows Defender or  
-          Endpoint Protection again.  
+#### Step 3: Remove any third-party security programs  
 
 > [!NOTE]  
->  Some internet security applications do not uninstall completely. You may need to download and run a cleanup utility for your previous security application in order for it to be completely removed.  
+> Some security applications don't uninstall completely. You may need to download and run a cleanup utility for your previous security application to completely remove it.  
+
+1. Go to **Start** and open **appwiz.cpl**.  
+
+2. In the list of installed programs, uninstall any third-party security programs.
+
+3. Restart your computer.  
 
 > [!CAUTION]  
-> When you remove security programs, your computer is unprotected. If you have problems installing Windows Defender after you remove existing security programs, contact [Microsoft Support](https://support.microsoft.com/supportforbusiness/productselection) for **Windows Defender** in the **Security** product family.  
+> When you remove security programs, your computer may be unprotected. If you have problems installing Windows Defender after you remove existing security programs, contact [Microsoft Support](https://support.microsoft.com/supportforbusiness/productselection). Select the **Security** product family, and then the **Windows Defender** product.
 
-### Step 4: Uninstall/reinstall Endpoint Protection  
+## Internet connection issues
 
-1.  Click **Start** and search for **appwiz.cpl**, and then press **Enter**.  
+For your computer to receive the latest updates from Windows Update, connect it to the internet.  
 
-2.  In the list of installed programs, click **Endpoint Protection**, and then uninstall it.  
+1. Go to **Start** and open **ncpa.cpl**.  
 
-3.  If prompted, restart your computer, and then try to install Endpoint Protection again.  
+2. Open the connection name to view the connection **Status**.  
 
-##  Internet connection issues  
- In order to make sure that your computer receives the latest updates from Windows Update, you must be connected to the internet.  
+3. If your computer is connected, the **IPv4 connectivity** and/or **IPv6 connectivity** status is **Internet**.  
 
-### Step 1: Verify that your computer is connected to the internet  
+4. If your computer doesn't appear to be connected, select the connection name, and select **Diagnose this connection**.
 
-1.  Click **Start**and search for **ncpa.cpl**, and then press **Enter**.  
+Close any open programs and restart your computer.  
 
-2.  Right-click the connection name and then click **Status**.  
+## Detected threat can't be remediated
 
-3.  If your computer is connected, in Windows XP the connection status will appear as **Connected**, **Enabled**, or **Authentication** succeeded. In Windows Vista and Windows 7, the **IPv4** status will appear as **Internet**.  
-
-4.  If your computer doesn't appear to be connected, right-click the connection name, and then click **Connect**, **Enable**, **Authenticate**, or **Repair**.  
-
-### Step 3: Restart your computer  
-
--   Close any open programs and restart your computer.  
-
-### Step 4: If you still can't connect to the internet, check your connections  
-
-1.  If you use a dial-up connection, make sure the telephone cord connection in the wall jack and in your modem are firmly connected.  
-
-2.  If you use a cable modem, make sure the cable connection to the modem and the connection from the modem to your computer are firmly connected.  
-
-3.  If you use a cable modem or DSL router, make sure the connections to the router and to the computer are firmly connected. Try unplugging and turning off the router and modem. Wait a few minutes, plug in the modem in first, wait one minute, then plug in the router, and restart your computer.  
-
-##  Detected threat can't be remediated  
- When Windows Defender or Endpoint Protection detects a potential threat that's hiding inside a compressed file with a .zip file name extension or within a network share, it tries to deal with the threat by quarantining or removing the threat.  
+When Windows Defender or Endpoint Protection detects a potential threat, it tries to mitigate the threat by quarantining or removing the threat. These threats can hide inside a compressed archive (`.zip`) or in a network share.
 
 ### Remove or scan the file  
 
--   If the detected threat was in a .zip file, browse to the .zip file, and then either remove the file or scan it by right-clicking the file and selecting **Scan with Windows Defender** or **Scan with Endpoint Protection**. If Windows Defender or Endpoint Protection detects additional threats in the file, it notifies you about these threats and enables you to choose an appropriate action.  
+- If the detected threat was in a compressed archive file, browse to the file. Delete the file, or manually scan it. Right-click the file and select **Scan with Windows Defender**. If Windows Defender detects additional threats in the file, it notifies you. Then you can choose an appropriate action.  
 
--   If the detected threat was in a network share, browse to the network share and scan it by right-clicking the file and selecting **Scan with Windows Defender** or **Scan with Endpoint Protection**. If Windows Defender or Endpoint Protection detects additional threats in the network share, it notifies you about these threats and enables you to choose an appropriate action.  
+- If the detected threat was in a network share, open the share, and manually scan it. Right-click the file and select **Scan with Windows Defender**. If Windows Defender detects additional threats in the network share, it notifies you. Then you can choose an appropriate action.  
 
--   If you're not sure of the file's origin, one of the best solutions is to run a full scan on your computer. A full scan may take some time to complete, but it makes it possible for Windows Defender or Endpoint Protection to look for the source of the infection and clean it.  
+- If you're not sure of the file's origin, run a full scan on your computer. A full scan may take some time to complete.  
 
-##  Install the Endpoint Protection client  
+## See also
 
-> [!NOTE]  
->  Windows Defender is installed with the operating system on Windows 10 PC's.  
+[Endpoint Protection client frequently asked questions](/sccm/protect/deploy-use/endpoint-protection-client-faq)
 
- **Symptoms**  
-
- Installation fails for an unknown reason, or you receive an error message with error code, such as 0x80070643, 0X8007064A, 0x8004FF2E, 0x8004FF01, 0x8004FF07, 0x80070002, 0x8007064C, 0x8004FF00, 0x80070001, 0x80070656, 0x8004FF40, 0xC0000156, 0x8004FF41 0x8004FF0B, 0x8004FF11, 0x80240022, 0x8004FF04, 0x80070660, 0x800106B5, 0x80070715, 0x80070005, 0x8004EE00, 0x8007003, 0x800B0100, 0x8007064E, or 0x8007007E.  
-
- If your computer is running Windows XP Service Pack 2 (SP2), you might see one or more of the following error messages:  
-
-- Installation Wizard is missing a filter manager rollup package needed to complete the installation.  
-
-- KB914882 Setup Error, Setup cannot update your Windows XP files because the language installed on your system is different from the update language.  
-
-  **Cause**  
-
-  Endpoint Protection cannot be installed on a computer that is running other security programs. Sometimes, even if you remove other security programs, they do not completely uninstall. You must be running a genuine version of the Windows operating system to install Endpoint Protection.  
-
-  **Solution**  
-
-> [!IMPORTANT]  
->  You will need to restart your computer while resolving this issue. Bookmark this page (mark it as a Favorite) to make it easier to find this topic again or print it for easy reference.  
-
-### Step 1: Remove any existing security programs  
-**Endpoint Protection only**
-
-1.  Completely uninstall any existing Internet security programs.  
-
-2.  Restart your computer.  
-
-3.  Install Endpoint Protection again. If this does not resolve the issue, continue to the next step.  
-
-### Step 2: Ensure that the Windows Installer service is running  
-
-1.  Click **Start** and search for **services.msc**, and then press **Enter**.  
-
-2.  Right-click **Windows Installer**, and then click **Start**. If **Start** is unavailable and the **Stop** and **Restart** options are available, this tells you that the service is already started.  
-
-3.  On the **Services** page, on the **File** menu, click **Exit**.  
-
-4.  Click **Start** and search for **command prompt**. Right-click **Command Prompt**, and then click **Run as administrator**.  
-
-5.  Type **MSIEXEC /REGSERVER**, and then press **Enter**.  
-
-    > [!NOTE]  
-    >  There is no indication that this command has succeeded or failed.  
-
-6.  Install Endpoint Protection again. If this does not resolve the issue, continue to the next step.  
-
-### Step 3: Start Windows in Selective Startup mode  
-
-1.  Click **Start** and search for **msconfig**, and then press **Enter**.  
-
-2.  On the **General** tab, click **Selective Startup**, and then clear the **Load Startup Items** check box.  
-
-3.  On the **Services** tab, select the **Hide All Microsoft Services** check box, and then clear all the check boxes for the services that remain in the list.  
-
-4.  Click **OK**, and then click **Restart** to restart the computer.  
-
-5.  Try to install Endpoint Protection again.  
-
-
-
-### See also  
- [Endpoint Protection client frequently asked questions](../../protect/deploy-use/endpoint-protection-client-faq.md)   
-
- [Endpoint Protection Client Help](../../protect/deploy-use/endpoint-protection-client-help.md)
+[Endpoint Protection client help](/sccm/protect/deploy-use/endpoint-protection-client-help)

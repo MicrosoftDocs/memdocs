@@ -2,7 +2,7 @@
 title: "Plan for migration"
 titleSuffix: "Configuration Manager"
 description: "Learn about sites and hierarchies before you migrate data to a System Center Configuration Manager destination hierarchy."
-ms.date: 1/12/2017
+ms.date: 01/12/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

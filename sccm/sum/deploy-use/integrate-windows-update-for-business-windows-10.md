@@ -1,7 +1,7 @@
 ---
-title: Integration with Windows Update for Business in Windows 10
-titleSuffix: "Configuration Manager"
-description: "Use Windows Update for Business to keep Windows 10-based devices in your organization up-to-date for devices connected to the Windows Update service."
+title: Integrate Windows Update for Business
+titleSuffix: Configuration Manager
+description: Use Windows Update for Business (WUfB) to keep Windows 10 up-to-date for devices connected to the Windows Update service.
 author: mestew  
 ms.author: mstewart
 manager: dougeby
@@ -12,7 +12,8 @@ ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 ms.collection: M365-identity-device-management
 ---
-# Integration with Windows Update for Business in Windows 10
+
+# Integrate with Windows Update for Business
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -59,7 +60,8 @@ Windows Update for Business (WUfB) allows you to keep Windows 10-based devices i
 2.  There's a new attribute, **UseWUServer**, under the **Windows Update** node in Configuration Manager Resource Explorer.  
 
 3.  Create a collection based on the **UseWUServer** attribute for all the computers that are connected via WUfB for updates and upgrades. You can create a collection based on a query similar to the one below:  
-    ``` 
+
+    ``` WQL
     Select sr.* from SMS_R_System as sr join SMS_G_System_WINDOWSUPDATE as su on sr.ResourceID=su.ResourceID where su.UseWUServer is null
     ```
 

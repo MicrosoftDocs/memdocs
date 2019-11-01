@@ -5,7 +5,7 @@ description: Learn about the workloads that you can switch from Configuration Ma
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 08/01/2019
+ms.date: 09/06/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -16,6 +16,8 @@ ms.collection: M365-identity-device-management
 # Co-management workloads
 
 You don't have to switch the workloads, or you can do them individually when you're ready. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
+
+If you switch a workload to Intune, but later change your mind, you can switch it back to Configuration Manager.
 
 Co-management supports the following workloads:
 

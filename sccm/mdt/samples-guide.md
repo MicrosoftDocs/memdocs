@@ -160,7 +160,7 @@ This guide is part of Microsoft Deployment Toolkit (MDT) and guides a specialist
 ####  <a name="LoadMDTSnapInCmdlet"></a> Load the MDT Windows PowerShell Snap-In Using the Add-PSSnapIn Cmdlet  
  You can load the MDT Windows PowerShell snap-in **Microsoft.BDD.PSSnapIn** from any Windows PowerShell environment using the [Add-PSSnapIn](https://technet.microsoft.com/library/hh849705.aspx) cmdlet, as show in the following example:  
 
-```  
+```powershell
 Add-PSSnapin -Name Microsoft.BDD.PSSnapIn  
 ```  
 
@@ -173,7 +173,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 2.  Create the folder that will be the root of the new deployment share using the **New-Item** cmdlet, as shown in the following example and described in [Using the New-Item Cmdlet](https://technet.microsoft.com/library/ee176914.aspx):  
 
-    ```  
+    ```powershell
     New-Item "C:\MDTDeploymentShare$" -Type directory  
     ```  
 
@@ -181,7 +181,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 3.  Share the folder created in the previous step using the **WMI win32_share** class as sown in the following example:  
 
-    ```  
+    ```powershell  
     ([wmiclass]"win32_share").Create("C:\MDTDeploymentShare$", "MDTDeploymentShare$",0)  
     ```  
 
@@ -189,7 +189,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 4.  Specify the new shared folder as a deployment share using the [NewPSDrive](https://technet.microsoft.com/library/dd315340.aspx) cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     New-PSDrive -Name "DS002" -PSProvider "MDTProvider" -Root "C:\MDTDeploymentShare$" -Description "MDT Deployment Share Created with Cmdlets" -NetworkPath "\\WDG-MDT-01\MDTDeploymentShare$" -Verbose  
     ```  
 
@@ -200,15 +200,15 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 5.  Verify that the appropriate deployment share folders have been created using the **dir** command, as show in the following example:  
 
-    ```  
-    dir ds002:  
+    ```powershell  
+    Get-ChildItem ds002:  
     ```  
 
      The list of default folders in the root of the deployment share is displayed.  
 
 6.  Add the new deployment share to the list of persisted MDT deployment shares using the **Add-MDTPersistentDrive** cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     $NewDS=Get-PSDrive "DS002"  
     Add-MDTPersistentDrive  -Name "DS002" -InputObject $NewDS Verbose  
     ```  
@@ -217,7 +217,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
      Alternatively, you could have combined the [NewPSDrive](https://technet.microsoft.com/library/dd315340.aspx) and **Add-MDTPersistentDrive** cmdlets, as shown in the following example:  
 
-    ```  
+    ```powershell  
     New-PSDrive -Name "DS002" -PSProvider "MDTProvider" -Root "C:\MDTDeploymentShare$" -Description "MDT Deployment Share Created with Cmdlets" -NetworkPath "\\WDG-MDT-01\MDTDeploymentShare$" -Verbose | Add-MDTPersistentDrive -Verbose  
     ```  
 
@@ -232,7 +232,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 2.  Ensure the MDT deployments share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Restore-MDTPersistentDrive -Verbose  
     ```  
 
@@ -241,7 +241,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as follows:  
 
-    ```  
+    ```powershell  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
     ```  
 
@@ -249,7 +249,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 4.  View the properties of the deployment share using the [Get-ItemProperty](https://technet.microsoft.com/library/hh849851.aspx) cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Get-ItemProperty "DS002:"  
     ```  
 
@@ -264,7 +264,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 2.  Ensure that the MDT deployments share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Restore-MDTPersistentDrive -Verbose  
     ```  
 
@@ -273,7 +273,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 3.  View the list of MDT deployments that share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as follows:  
 
-    ```  
+    ```powershell  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
     ```  
 
@@ -288,7 +288,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 2.  Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Restore-MDTPersistentDrive -Verbose  
     ```  
 
@@ -297,7 +297,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as follows:  
 
-    ```  
+    ```powershell  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
     ```  
 
@@ -305,7 +305,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 4.  Update the deployment share using the **Update-MDTDeploymentShare** cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Update-MDTDeploymentShare -Path "DS002:" -Force  
     ```  
 
@@ -325,7 +325,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 2.  Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Restore-MDTPersistentDrive -Verbose  
     ```  
 
@@ -334,7 +334,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as follows:  
 
-    ```  
+    ```powershell  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
     ```  
 
@@ -342,7 +342,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 4.  Update the deployment share using the **Update-MDTDeploymentShare** cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Update-MDTLinkedDS -Path "DS002:\Linked Deployment Shares\LINKED002"  
     ```  
 
@@ -374,7 +374,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 2.  Ensure that the MDT deployments share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Restore-MDTPersistentDrive -Verbose  
     ```  
 
@@ -383,7 +383,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as follows:  
 
-    ```  
+    ```powershell  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
     ```  
 
@@ -391,7 +391,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 4.  Update the deployment share using the **Update-MDTDeploymentShare** cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell 
     Update-MDTLinkedDS -Path "DS002:\Linked Deployment Shares\LINKED002"  
     ```  
 
@@ -431,7 +431,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 2.  Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Restore-MDTPersistentDrive -Verbose  
     ```  
 
@@ -440,7 +440,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as shown in the following example:  
 
-    ```  
+    ``` powershell 
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
     ```  
 
@@ -448,7 +448,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 4.  Return a list of the items for the type of item for which you are wanting to view the properties using the [Get-Item](https://technet.microsoft.com/library/hh849788) cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Get-Item "DS001:\Operating Systems\*" | Format-List  
     ```  
 
@@ -459,7 +459,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 5.  View the properties of one of the items listed in the previous step using the [Get-ItemProperty](https://technet.microsoft.com/library/hh849851.aspx) cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Get-ItemProperty -Path "DS002:\Operating Systems\Windows 8 in Windows 8 x64 install.wim"  
     ```  
 
@@ -477,7 +477,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 2.  Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example.  
 
-    ```  
+    ```powershell  
     Restore-MDTPersistentDrive -Verbose  
     ```  
 
@@ -486,7 +486,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
     ```  
 
@@ -494,7 +494,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 4.  Return a list of the items for the type of item for which you are wanting to view the properties using the [Get-Item](https://technet.microsoft.com/library/hh849788) cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Get-Item "DS001:\Operating Systems\*" | Format-List  
     ```  
 
@@ -505,7 +505,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
 5.  Remove one of the items listed in the previous step using the [Remove-Item](https://technet.microsoft.com/library/hh849765) cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Remove-Item -Path "DS002:\Operating Systems\Windows 8 in Windows 8 x64 install.wim"  
     ```  
 
@@ -525,10 +525,10 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
  The following is an excerpt of a Windows PowerShell script to import a list of applications based on information in a .csv file using the [Import-CSV](https://technet.microsoft.com/library/dd347665.aspx), [ForEach-Object](https://technet.microsoft.com/library/hh849731), and **Import-MDTApplication** cmdlets:  
 
-```  
+```powershell  
 $List=Import-CSV "C:\MDT\Import-MDT-Apps.csv"  
 ForEach-Object ($App in $List) {  
-Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App.DescriptiveName –ShortName $App.Shortname –Version $App.Version –Publisher $App.Publisher –Language $App.Language –CommandLine $App.CommandLine –WorkingDirectory $App.WorkingDirectory –ApplicationSourcePath $App.SourceFolder –DestinationFolder $App.DestinationFolder –Verbose  
+     Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App.DescriptiveName –ShortName $App.Shortname –Version $App.Version –Publisher $App.Publisher –Language $App.Language –CommandLine $App.CommandLine –WorkingDirectory $App.WorkingDirectory –ApplicationSourcePath $App.SourceFolder –DestinationFolder $App.DestinationFolder –Verbose  
 }  
 ```  
 
@@ -570,7 +570,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
 2.  Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Restore-MDTPersistentDrive -Verbose  
     ```  
 
@@ -579,24 +579,24 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
 3.  View the list of MDT deployments that share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet as follows:  
 
-    ```  
+    ```powershell 
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
     ```  
 
      The list of Windows PowerShell drives provided using the MDTProvider are listed, one for each deployment share  
 
-4.  Create a folder named *Windows_8* in the Operating Systems folder in a deployment share using the **mkdir** command, as shown in the following example:  
+4.  Create a folder named *Windows_8* in the Operating Systems folder in a deployment share using the **New-Item** command, as shown in the following example:  
 
-    ```  
-    mkdir "DS002:\Operating Systems\Windows_8"  
+    ```powershell 
+    New-Item "DS002:\Operating Systems\Windows_8"  
     ```  
 
      In this example, *DS002:* is the name of a Windows PowerShell drive returned in step 3.  
 
 5.  Verify that the folder is created correctly by typing the following command:  
 
-    ```  
-    dir "DS002:\Operating Systems"  
+    ```powershell  
+    Get-ChildItem "DS002:\Operating Systems"  
     ```  
 
      The Windows_8 folder and any other existing folders in the Operating Systems folder is displayed.  
@@ -612,7 +612,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 7.  Verify that the folder is created correctly by typing the following command:  
 
     ```  
-    dir "DS002:\Operating Systems"  
+    Get-ChildItem "DS002:\Operating Systems"  
     ```  
 
      The Windows_7 folder and any other existing folders in the Operating Systems folder is displayed.  
@@ -624,7 +624,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
 2.  Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Restore-MDTPersistentDrive -Verbose  
     ```  
 
@@ -633,31 +633,31 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
 3.  View the list of MDT deployments that share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet as follows:  
 
-    ```  
+    ```powershell  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
     ```  
 
      The list of Windows PowerShell drives provided using the MDTProvider are listed, one for each deployment share.  
 
-4.  Delete (remove) a folder named *Windows_8* in the Operating Systems folder in a deployment share using the **mkdir** command, as shown in the following example:  
+4.  Delete (remove) a folder named *Windows_8* in the Operating Systems folder in a deployment share using the **New-Item** command, as shown in the following example:  
 
-    ```  
-    rmdir "DS002:\Operating Systems\Windows_8"  
+    ```powershell  
+    Remove-Item "DS002:\Operating Systems\Windows_8"  
     ```  
 
      In this example, *DS002:* is the name of a Windows PowerShell drive returned in step 3.  
 
 5.  Verify that the folder is removed correctly by typing the following command:  
 
-    ```  
-    dir "DS002:\Operating Systems"  
+    ```powershell  
+    Get-ChildItem "DS002:\Operating Systems"  
     ```  
 
      The Windows_8 folder is no longer displayed in the list of folders in the Operating Systems folder  
 
 6.  Delete (remove) a folder named *Windows_7* folder in the Operating Systems folder in a deployment share using the [Remove-Item](https://technet.microsoft.com/library/hh849765) cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Remove-Item "DS002:\Operating Systems\Windows_7"  
     ```  
 
@@ -665,8 +665,8 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
 7.  Verify that the folder is created correctly by typing the following command:  
 
-    ```  
-    dir "DS002:\Operating Systems"  
+    ```powershell  
+    Get-ChildItem "DS002:\Operating Systems"  
     ```  
 
      The Windows_7 folder is no longer displayed in the list of folders in the Operating Systems folder.  
@@ -678,7 +678,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
 2.  Ensure that the MDT deployments share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Restore-MDTPersistentDrive -Verbose  
     ```  
 
@@ -687,7 +687,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
 3.  View the list of MDT deployments share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet as follows:  
 
-    ```  
+    ```powershell  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
     ```  
 
@@ -695,7 +695,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
 4.  Rename a folder named *Windows_8* to *Win_8* in the Operating Systems folder in a deployment share using the **ren** command, as shown in the following example:  
 
-    ```  
+    ```powershell  
     ren "DS002:\Operating Systems\Windows_8" "Win_8"  
     ```  
 
@@ -703,15 +703,15 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
 5.  Verify that the folder is removed correctly by typing the following command:  
 
-    ```  
-    dir "DS002:\Operating Systems"  
+    ```powershell  
+    Get-ChildItem "DS002:\Operating Systems"  
     ```  
 
      The Windows_8 folder is renamed to *Win_8*.  
 
 6.  Rename a folder named *Windows_7* to *Win-7* in the Operating Systems folder in a deployment share using the [Rename-Item](https://technet.microsoft.com/library/hh849763) cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Rename-Item "DS002:\Operating Systems\Windows_7" "Win_7"  
     ```  
 
@@ -719,8 +719,8 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
 7.  Verify that the folder is created correctly by typing the following command:  
 
-    ```  
-    dir "DS002:\Operating Systems"  
+    ```powershell  
+    Get-ChildItem "DS002:\Operating Systems"  
     ```  
 
      The Windows_7 folder is renamed to *Win_7*.  
@@ -745,7 +745,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
 2. Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:  
 
-   ```  
+   ```powershell  
    Restore-MDTPersistentDrive -Verbose  
    ```  
 
@@ -754,7 +754,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
 3. View the list of MDT deployments share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as shown in the following example:  
 
-   ```  
+   ```powershell  
    Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
    ```  
 
@@ -762,15 +762,15 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
 4. Remove the folder for the existing operating system from the deployment share using the [Get-ChildItem](https://technet.microsoft.com/library/hh849800) and [Remove-Item](https://technet.microsoft.com/library/hh849765) cmdlets, as shown in the following example:  
 
-   ```  
-   Get-ChildItem “DS002:\Operating Systems\Windows 7” –recurse | Remove-Item –recurse –force  
+   ```powershell  
+   Get-ChildItem "DS002:\Operating Systems\Windows 7" –recurse | Remove-Item –recurse –force  
    ```  
 
     In this example, *DS002:* is the name of a Windows PowerShell drive returned in step 3.  
 
 5. Copy the contents of the operating system source files that have the service pack integrated using the [Copy-Item](https://technet.microsoft.com/library/hh849793) cmdlet, as shown in the following example:  
 
-   ```  
+   ```powershell  
    Copy-Item "E:\*" -Destination "DS002:\Operating Systems\Windows 7"-Recurse -Force  
    ```  
 
@@ -807,7 +807,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
 5.  Ensure the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Restore-MDTPersistentDrive -Verbose  
     ```  
 
@@ -816,7 +816,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
 6.  View the list of MDT deployments share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
     ```  
 
@@ -824,7 +824,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
 7.  Copy the .wim file captured in step 3 over the Install.wim file in the operating system in the deployment share using the [Copy-Item](https://technet.microsoft.com/library/hh849793) cmdlet, as shown in the following example:  
 
-    ```  
+    ```powershell  
     Copy-Item "DS002:\Captures\Win7SP1.wim" -Destination "DS002:\Operating Systems\Windows 7\sources\Install.wim" Force  
     ```  
 
@@ -854,7 +854,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
    **Listing 1. Example of Customizing Deployment Based on Chassis Type in the CustomSettings.ini File**  
 
-```  
+```ini  
 [Settings]  
 
 Priority=...,ByLaptopType,ByDesktopType,ByServerType  
@@ -917,7 +917,7 @@ Subsection=Server-%IsServer%
 
     **SQL Query to Populate the Table**  
 
-   ```  
+   ```sql  
    use [MDTDB]  
    go  
    INSERT INTO [PackageMapping] (ARPName, Packages) VALUES('Office12.0', 'XXX0000F:Install Office 2010 Professional Plus')  
@@ -930,7 +930,7 @@ Subsection=Server-%IsServer%
 
 3. Create a stored procedure to simplify joining the information in the new table with the inventory data.  
 
-   ```  
+   ```sql  
    use [MDTDB]  
    go  
 
@@ -959,7 +959,7 @@ Subsection=Server-%IsServer%
 
 4. Configure the CustomSettings.ini file to query this database table by specifying the name of a section (`[DynamicPackages]` in the **Priority** list) that points to the database information.  
 
-   ```  
+   ```ini  
    [Settings]  
    …  
    Priority=MacAddress, DefaultGateway, DynamicPackages, Default  
@@ -968,14 +968,14 @@ Subsection=Server-%IsServer%
 
 5. Create a `[DynamicPackages]` section to specify the name of a database section.  
 
-   ```  
+   ```ini  
    [DynamicPackages]  
    SQLDefault=DB_DynamicPackages  
    ```  
 
 6. Create a database section to specify the database information and query details.  
 
-   ```  
+   ```ini  
    [DB_DynamicPackages]  
    SQLServer=SERVER1  
    Database=MDTDB  
@@ -991,7 +991,7 @@ Subsection=Server-%IsServer%
 
    When ZTIGather.wsf runs, a Structured Query Language (SQL) `SELECT` statement is automatically generated, and the value of the **MakeModelQuery** custom key is passed as a parameter to the query:  
 
-   ```  
+   ```sql  
    EXECUTE RetrievePackages ?  
    ```  
 
@@ -1047,7 +1047,7 @@ For each wizard page skipped, provide the values for the corresponding propertie
 ## Fully Automated LTI Deployment for a Refresh Computer Scenario  
  The following illustrates a CustomSettings.ini file used for a Refresh Computer scenario to skip all Windows Deployment Wizard pages. In this sample, the properties to provide when skipping the wizard page are immediately beneath the property that skips the wizard page.  
 
-```  
+```ini  
 [Settings]  
 Priority=Default  
 Properties=MyCustomProperty  
@@ -1111,7 +1111,7 @@ Powerusers001=DomainName\Username
 ## Fully Automated LTI Deployment for a New Computer Scenario  
  The following is an example of a CustomSettings.ini file used for a New Computer scenario to skip all Windows Deployment Wizard pages. In this sample, the properties to provide when skipping the wizard page are immediately beneath the property that skips the wizard page.  
 
-```  
+```ini  
 [Settings]  
 Priority=Default  
 Properties=MyCustomProperty  
@@ -1164,7 +1164,7 @@ SkipSummary=YES
 Powerusers001=WOODGROVEBANK\PilarA  
 CaptureGroups=YES  
 SLShare=\\WDG-MDT-01\UserData$\Logs  
-Home_page=http://www.microsoft.com/NewComputer  
+Home_page=https://www.microsoft.com/NewComputer  
 ```  
 
 ## Calling Web Services in MDT  
@@ -1174,7 +1174,7 @@ Home_page=http://www.microsoft.com/NewComputer
 
  The following shows how to configure CustomSettings.ini to call a particular web service. In this scenario, the web service is chosen at random from an Internet search. It takes a postal code as input and returns the city, state, area code, and time zone (as a letter) for the specified postal code.  
 
-```  
+```ini  
 [Settings]  
 Priority=Default, USZipService  
 Properties=USZip, City, State, Zip, Area_Code, Time_Zones   
@@ -1231,7 +1231,7 @@ Obtained AREA_CODE value from web service:  AREA_CODE = 425
  Using the ZTIConnect.wsf script, you can connect to other servers and access resources on them. The syntax for the ZTIConnect.wsf script is as follows (where *unc_path* is a Universal Naming Convention [UNC] path to connect to the server):  
 
 ```  
-Cscript.exe “%SCRIPTROOT%\ZTIConnect.wsf” /uncpath:unc_path  
+cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path  
 ```  
 
  In most instances, you run the ZTIConnect.wsf script as a Task Sequencer task. Run the ZTIConnect.wsf script prior to tasks requiring access to a server other than the server hosting the deployment share.  
@@ -1258,7 +1258,7 @@ Cscript.exe “%SCRIPTROOT%\ZTIConnect.wsf” /uncpath:unc_path
    |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
    |    **Name**     |                         Type **Connect to server** (where server is the name of the server to which to connect).                          |
    | **Description** |                                       Type text that explains why the connection needs to be made.                                        |
-   |   **Command**   | Type **Cscript.exe “%SCRIPTROOT%\ZTIConnect.wsf” /uncpath:unc_path** (where *unc_path* is the UNC path to a shared folder on the server). |
+   |   **Command**   | Type **cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path** (where *unc_path* is the UNC path to a shared folder on the server). |
 
 
 7. Complete the **Options** tab of the new task using the following information. Unless specified, accept default values, and then click **OK**.  
@@ -1283,7 +1283,7 @@ Cscript.exe “%SCRIPTROOT%\ZTIConnect.wsf” /uncpath:unc_path
 
 4.  In the **Properties** dialog box, click the **Rules** tab.  
 
-5.  Create aliases for hardware types in the Make and Model sections of the MDT DB. Truncate the model type at the open parentheses “(” in the model name. For example, *HP DL360 (G112)* becomes *HP DL360*.  
+5.  Create aliases for hardware types in the Make and Model sections of the MDT DB. Truncate the model type at the open parentheses "(" in the model name. For example, *HP DL360 (G112)* becomes *HP DL360*.  
 
 6.  Add the custom variable **ModelAlias** to each section.  
 
@@ -1291,7 +1291,7 @@ Cscript.exe “%SCRIPTROOT%\ZTIConnect.wsf” /uncpath:unc_path
 
 8.  Add the `[SetModel]` section to the **Priority** settings in the `[Settings]` section.  
 
-9. Add a line to the `ModelAlias` section to refer to a user exit script that will truncate the model name at the “(”.  
+9. Add a line to the `ModelAlias` section to refer to a user exit script that will truncate the model name at the "(".  
 
 10. Create an **MMApplications** database lookup where **ModelAlias** is equal to **Model**.  
 
@@ -1301,7 +1301,7 @@ Cscript.exe “%SCRIPTROOT%\ZTIConnect.wsf” /uncpath:unc_path
 
      **CustomSettings.ini**:  
 
-    ```  
+    ```ini  
     [Settings]   
     Priority=SetModel, MMApplications, Default   
     Properties= ModelAlias   
@@ -1321,7 +1321,7 @@ Cscript.exe “%SCRIPTROOT%\ZTIConnect.wsf” /uncpath:unc_path
 
      **User Exit Script**:  
 
-    ```  
+    ```vbs  
     Function UserExit(sType, sWhen, sDetail, bSkip)   
       UserExit = Success   
     End Function   
@@ -1546,7 +1546,7 @@ Cscript.exe “%SCRIPTROOT%\ZTIConnect.wsf” /uncpath:unc_path
  Multiple conditions can be grouped using **IF** statements to create complex conditions. For instance, imagine that a particular step should only be run for Contoso 1950 computers running Windows Server 2003 or Windows Server 2008. Written as a programmatic **IF** statement, it would look similar to the following:  
 
 ```  
-IF ((Computer Model IS “Contoso 1950”) AND (operating system=2003 OR operating system=2008))  
+IF ((Computer Model IS "Contoso 1950") AND (operating system=2003 OR operating system=2008))  
 ```  
 
  **To add a complex condition**  
@@ -1559,7 +1559,7 @@ IF ((Computer Model IS “Contoso 1950”) AND (operating system=2003 OR operati
 
 4.  Click the condition statement, click **Add condition**, and then click **WMI Query**.  
 
-5.  Ensure **root\cimv2** is specified as the WMI namespace, and then, in the **WQL Query** box, type **SELECT \* FROM Win32_ComputerSystem WHERE ComputerModel LIKE “%Contoso%1950%”**. Click **OK**.  
+5.  Ensure **root\cimv2** is specified as the WMI namespace, and then, in the **WQL Query** box, type **SELECT \* FROM Win32_ComputerSystem WHERE ComputerModel LIKE "%Contoso%1950%"**. Click **OK**.  
 
 6.  Click the **IF** statement, and then click **Add condition**. Click **If statement**, and then click **Any condition**. Click **OK**.  
 
@@ -1967,7 +1967,7 @@ IF ((Computer Model IS “Contoso 1950”) AND (operating system=2003 OR operati
 
     **Sample CustomSettings.ini Configured for Scalable LTI Deployment Infrastructure**  
 
-```  
+```ini
 [Settings]  
 Priority=CSettings,CPackages, CApps, CAdmins, CRoles, Default  
 Properties=MyCustomProperty  
@@ -2149,9 +2149,9 @@ ParameterCondition=OR
         <Server1>\\STLDS01\Deployment$</Server1>  
         <Server2>\\STLDS02\Deployment$</Server2>  
         <Server3>\\STLDS03\Deployment$</Server3>  
-        <Server weight=”1”>\\STLDS01\Deployment$</Server>  
-        <Server weight=”2”>\\STLDS02\Deployment$</Server>  
-        <Server weight=”4”>\\STLDS03\Deployment$</Server>  
+        <Server weight="1">\\STLDS01\Deployment$</Server>  
+        <Server weight="2">\\STLDS02\Deployment$</Server>  
+        <Server weight="4">\\STLDS03\Deployment$</Server>  
     </server>  
     <server>  
         <serverid>2</serverid>  
@@ -2327,7 +2327,7 @@ ParameterCondition=OR
 
      **Customized CustomSettings.ini File**  
 
-    ```  
+    ```ini  
     [Settings]  
     Priority=Default  
     Properties=MyCustomProperty  
@@ -2534,7 +2534,7 @@ ParameterCondition=OR
 
  **Example Script Using ZTIUtility Logging: ZTI_Example.wsf**  
 
-```  
+```vbs  
 <job id="ZTI_Example">  
 <script language="VBScript" src="ZTIUtility.vbs"/>  
 <script language="VBScript">  
@@ -2945,7 +2945,7 @@ The following table details some useful functions available, and their output. F
 
    **Sample CustomSettings.ini Configured for a Hardware-Specific Application Installation**  
 
-```  
+```ini  
 [Settings]  
 Priority=Make, Default  
 Properties=MyCustomProperty  
@@ -3460,28 +3460,19 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 ###  <a name="CreateNewDeployShare"></a> Creating a New Deployment Share  
  The following Windows PowerShell commands create a new deployment share at D:\Production Deployment Share named *Production$*. The new deployment share will be displayed in the Deployment Workbench as Production.  
 
--   ```  
-    Add-PSSnapIn Microsoft.BDD.PSSnapIn  
-    ```  
-
--   ```  
-    New-PSDrive -Name "DS002" -PSProvider "MDTProvider" -Root "D:\Production Deployment Share" -Description "Production" -NetworkPath "\\Deployment_Server\Production$" -Verbose | add-MDTPersistentDrive -Verbose  
-    ```  
+```powershell
+Add-PSSnapIn Microsoft.BDD.PSSnapIn  
+New-PSDrive -Name "DS002" -PSProvider "MDTProvider" -Root "D:\Production Deployment Share" -Description "Production" -NetworkPath "\\Deployment_Server\Production$" -Verbose | add-MDTPersistentDrive -Verbose  
+```  
 
 ###  <a name="CreateFolder"></a> Creating a Folder  
  The following Windows PowerShell commands create an Adobe folder in the Deployment Workbench console tree at Deployment Workbench\/Deployment Shares\/Production\/Applications.  
 
--   ```  
-    Add-PSSnapIn Microsoft.BDD.PSSnapIn  
-    ```  
-
--   ```  
-    New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
-    ```  
-
--   ```  
-    New-item -path "DS002:\Applications" -enable "True" -Name "Adobe" -Comments "This folder contains Adobe software" -ItemType "folder" -Verbose remove-psdrive DS001 -Verbose  
-    ```  
+```powershell
+Add-PSSnapIn Microsoft.BDD.PSSnapIn  
+New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
+New-item -path "DS002:\Applications" -enable "True" -Name "Adobe" -Comments "This folder contains Adobe software" -ItemType "folder" -Verbose remove-psdrive DS001 -Verbose  
+```  
 
     > [!NOTE]
     >  Adding "`remove-psdrive`" to the script ensures that the background process finishes before proceeding.  
@@ -3489,17 +3480,11 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 ###  <a name="DeleteFolder"></a> Deleting a Folder  
  The following Windows PowerShell commands delete the Deployment Workbench\/Deployment Shares\/Production\/Applications\/Adobe folder.  
 
--   ```  
-    Add-PSSnapIn Microsoft.BDD.PSSnapIn  
-    ```  
-
--   ```  
-    New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
-    ```  
-
--   ```  
-    Remove-item -path "DS002:\Applications\Adobe" -Verbose  
-    ```  
+```powershell
+Add-PSSnapIn Microsoft.BDD.PSSnapIn  
+New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
+Remove-item -path "DS002:\Applications\Adobe" -Verbose  
+```  
 
 > [!NOTE]
 >  The script will fail if the folder is not empty.  
@@ -3507,236 +3492,160 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 ###  <a name="ImportDeviceDriver"></a> Importing a Device Driver  
  The following Windows PowerShell commands will import the Dell 2407 WFP monitor device driver into the Production deployment share.  
 
--   ```  
-    Add-PSSnapIn Microsoft.BDD.PSSnapIn  
-    ```  
-
--   ```  
-    New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
-    ```  
-
--   ```  
-    Import-mdtdriver -path "DS002:\Out-of-Box Drivers\Monitor" -SourcePath "D:\Drivers\Dell\2407 WFP" -Verbose  
-    ```  
+```powershell
+Add-PSSnapIn Microsoft.BDD.PSSnapIn  
+New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
+Import-mdtdriver -path "DS002:\Out-of-Box Drivers\Monitor" -SourcePath "D:\Drivers\Dell\2407 WFP" -Verbose  
+```  
 
 ###  <a name="DeleteDeviceDriver"></a> Deleting a Device Driver  
- The following Windows PowerShell command deletes the Dell 2407 WFP monitor driver from the Production deployment share.  
+The following Windows PowerShell command deletes the Dell 2407 WFP monitor driver from the Production deployment share.  
 
-```  
+```powershell  
 Remove-item -path "DS002:\Out-of-Box Drivers\Dell Inc. Monitor 2407WFP.INF 1.0" -Verbose  
 ```  
 
 ###  <a name="ImportOpSysPackage"></a> Importing an Operating System Package  
  The following Windows PowerShell commands import all operating system packages located under D:\\Updates\\Microsoft\\Vista. These operating system packages will be stored in the Production deployment share, which is in D:\\Production Deployment Share.  
 
--   ```  
-    Add-PSSnapIn Microsoft.BDD.PSSnapIn  
-    ```  
-
--   ```  
-    New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
-    ```  
-
--   ```  
-    Import-mdtpackage -path "DS002:\Packages" -SourcePath "D:\Updates\Microsoft\Vista" -Verbose  
-    ```  
+```powershell
+Add-PSSnapIn Microsoft.BDD.PSSnapIn  
+New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
+Import-mdtpackage -path "DS002:\Packages" -SourcePath "D:\Updates\Microsoft\Vista" -Verbose  
+```  
 
 ###  <a name="DeleteOpSysPackage"></a> Deleting an Operating System Package  
- The following Windows PowerShell command deletes the specified operating system package from the Production deployment share.  
+The following Windows PowerShell command deletes the specified operating system package from the Production deployment share.  
 
-```  
+```powershell  
 Remove-item -path "DS002:\Packages\Package_1_for_KB940105 neutral x86 6.0.1.0 KB940105" -Verbose  
 ```  
 
 ###  <a name="ImportOpSys"></a> Importing an Operating System  
  The following Windows PowerShell commands import the Windows Vista operating system located in D:\\Operating Systems\\Windows Vista x86. The operating system will be stored in the Production deployment share, which is in D:\\Production Deployment Share.  
 
--   ```  
-    Add-PSSnapIn Microsoft.BDD.PSSnapIn  
-    ```  
-
--   ```  
-    New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
-    ```  
-
--   ```  
-    Import-mdtoperatingsystem -path "DS002:\Operating Systems" -SourcePath "D:\Operating Systems\Windows Vista x86" -DestinationFolder "Windows Vista x86" -Verbose  
-    ```  
+```powershell
+Add-PSSnapIn Microsoft.BDD.PSSnapIn  
+New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
+Import-mdtoperatingsystem -path "DS002:\Operating Systems" -SourcePath "D:\Operating Systems\Windows Vista x86" -DestinationFolder "Windows Vista x86" -Verbose  
+```  
 
 ###  <a name="DeleteOpSys"></a> Deleting an Operating System  
  The following Windows PowerShell command deletes the Windows Vista HOMEBASIC operating system from the Production deployment share.  
 
-```  
+```powershell 
 Remove-item -path "DS002:\Operating Systems\Windows Vista HOMEBASIC in Windows Vista x86 install.wim" -Verbose  
 ```  
 
 ###  <a name="CreateApplication"></a> Creating an Application  
  The following Windows PowerShell commands create the Adobe Reader 9 application using source files from D:\\Software\\Adobe\\Reader 9. The application will be stored in the Production deployment share, which is in D:\\Production Deployment Share.  
 
--   ```  
-    Add-PSSnapIn Microsoft.BDD.PSSnapIn  
-    ```  
-
--   ```  
-    New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
-    ```  
-
--   ```  
-    Import-MDTApplication -path "DS002:\Applications" -enable "True" -Name "Adobe Reader 9" -ShortName "Reader" -Version "9" -Publisher "Adobe" -Language "" -CommandLine "setup.exe" -WorkingDirectory ".\Applications\Adobe Reader 9" -ApplicationSourcePath "D:\Software\Adobe\Reader 9" -DestinationFolder "Adobe Reader 9" -Source ".\Applications\Adobe Reader 9" -Verbose  
-    ```  
+```powershell
+Add-PSSnapIn Microsoft.BDD.PSSnapIn  
+New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
+Import-MDTApplication -path "DS002:\Applications" -enable "True" -Name "Adobe Reader 9" -ShortName "Reader" -Version "9" -Publisher "Adobe" -Language "" -CommandLine "setup.exe" -WorkingDirectory ".\Applications\Adobe Reader 9" -ApplicationSourcePath "D:\Software\Adobe\Reader 9" -DestinationFolder "Adobe Reader 9" -Source ".\Applications\Adobe Reader 9" -Verbose  
+```  
 
 ###  <a name="DeleteApplication"></a> Deleting an Application  
  The following Windows PowerShell command deletes the Adobe Reader 9 application from the Production deployment share.  
 
-```  
+```powershell  
 Remove-item -path "DS002:\Applications\Adobe Reader 9" -Verbose  
 ```  
 
 ###  <a name="CreateTaskSequence"></a> Creating a Task Sequence  
  The following Windows PowerShell commands create the **Windows Vista Production Build** task sequence in the Production deployment share, which is located in D:\\Production Deployment Share.  
 
--   ```  
-    Add-PSSnapIn Microsoft.BDD.PSSnapIn  
-    ```  
-
--   ```  
-    New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
-    ```  
-
--   ```  
-    Import-mdttasksequence -path "DS002:\Task Sequences" -Name "Windows Vista Business Production Build" -Template "Client.xml" -Comments "Approved for use in the production environment.  This task sequence uses the Standard Client task sequence template" -ID "Vista_Ref" -Version "1.0" -OperatingSystemPath "DS002:\Operating Systems\Windows Vista BUSINESS in Windows Vista x86 install.wim" -FullName "Fabrikam User" -OrgName "Fabrikam" -HomePage "http://www.Fabrikam.com" -AdminPassword "secure_password" -Verbose  
-    ```  
+```powershell
+Add-PSSnapIn Microsoft.BDD.PSSnapIn  
+New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
+Import-mdttasksequence -path "DS002:\Task Sequences" -Name "Windows Vista Business Production Build" -Template "Client.xml" -Comments "Approved for use in the production environment.  This task sequence uses the Standard Client task sequence template" -ID "Vista_Ref" -Version "1.0" -OperatingSystemPath "DS002:\Operating Systems\Windows Vista BUSINESS in Windows Vista x86 install.wim" -FullName "Fabrikam User" -OrgName "Fabrikam" -HomePage "http://www.Fabrikam.com" -AdminPassword "secure_password" -Verbose  
+```  
 
 ###  <a name="DeleteTaskSequence"></a> Deleting a Task Sequence  
  The following Windows PowerShell command deletes the **Windows Vista Production Build** task sequence from the Production deployment share.  
 
-```  
+```powershell  
 Remove-item -path "DS002:\Task Sequences\Windows Vista Business Production Build" -force -Verbose  
 ```  
 
 ###  <a name="CreateMDTDB"></a> Creating an MDT DB  
  The following Windows PowerShell commands create a new MDT DB on the *deployment\_server* server for the Production deployment share. The database connection will be via TCP\/IP.  
 
--   ```  
-    Add-PSSnapIn Microsoft.BDD.PSSnapIn  
-    ```  
-
--   ```  
-    New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
-    ```  
-
--   ```  
-    New-MDTDatabase -path "DS002:" -SQLServer "DeploymentServer" -Netlib "DBMSSOCN" -Database "MDT2010" -SQLShare "DB_Connect" -Force -Verbose  
-    ```  
+```powershell
+Add-PSSnapIn Microsoft.BDD.PSSnapIn  
+New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
+New-MDTDatabase -path "DS002:" -SQLServer "DeploymentServer" -Netlib "DBMSSOCN" -Database "MDT2010" -SQLShare "DB_Connect" -Force -Verbose  
+```  
 
 ###  <a name="CreateSelectProfile"></a> Creating a Selection Profile  
  The following Windows PowerShell commands create a new Applications selection profile.  
 
--   ```  
-    Add-PSSnapIn Microsoft.BDD.PSSnapIn  
-    ```  
-
--   ```  
-    New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
-    ```  
-
--   ```  
-    New-item -path "DS002:\Selection Profiles" -enable "True" -Name "Applications" -Comments "" -Definition "<SelectionProfile><Include path="Applications" /></SelectionProfile>" -ReadOnly "False" -Verbose  
-    ```  
+```powershell
+Add-PSSnapIn Microsoft.BDD.PSSnapIn  
+New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
+New-item -path "DS002:\Selection Profiles" -enable "True" -Name "Applications" -Comments "" -Definition "<SelectionProfile><Include path="Applications" /></SelectionProfile>" -ReadOnly "False" -Verbose  
+```  
 
 ###  <a name="UpdatingDeployShare"></a> Updating a Deployment Share  
  The following Windows PowerShell commands update the Production deployment share, which is in D:\\Production Deployment Share.  
 
--   ```  
-    Add-PSSnapIn Microsoft.BDD.PSSnapIn  
-    ```  
-
--   ```  
-    New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
-    ```  
-
--   ```
-    Update\-MDTDeploymentShare \-path "DS002:" \-Verbose  
-    ```
+```powershell
+Add-PSSnapIn Microsoft.BDD.PSSnapIn  
+New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
+Update\-MDTDeploymentShare \-path "DS002:" \-Verbose  
+```
 
 ###  <a name="CreateLinkedDeployShare"></a> Creating a Linked Deployment Share  
  The following Windows PowerShell commands create a deployment share that is linked to the Production deployment share and resides under the \\\\*remote\_server\_name*\\Deployment$ share. The Everything selection profile is used to determine which content is replicated to the linked deployment share. Content from the Production deployment share will be merged with content that already exists in the \\\\*remote\_server\_name*\\Deployment$ share.  
 
--   ```  
-    Add-PSSnapIn Microsoft.BDD.PSSnapIn  
-    ```  
-
--   ```  
-    New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
-    ```  
-
--   ```  
-    New-item -path "DS002:\Linked Deployment Shares" -enable "True" -Name "LINKED001" -Comments "" -Root "\\RemoteServerName\Deployment$" -SelectionProfile "Everything" -Replace "False" -Verbose  
-    ```  
+```powershell
+Add-PSSnapIn Microsoft.BDD.PSSnapIn  
+New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
+New-item -path "DS002:\Linked Deployment Shares" -enable "True" -Name "LINKED001" -Comments "" -Root "\\RemoteServerName\Deployment$" -SelectionProfile "Everything" -Replace "False" -Verbose  
+```  
 
 ###  <a name="UpdatingLinkedDeployShare"></a> Updating a Linked Deployment Share  
  The following Windows PowerShell commands update the LINKED001 deployment share.  
 
--   ```  
-    Add-PSSnapIn Microsoft.BDD.PSSnapIn  
-    ```  
-
--   ```  
-    New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
-    ```  
-
--   ```  
-    Replicate-MDTContent -path "DS002:\Linked Deployment Shares\LINKED001" -Verbose  
-    ```  
+```powershell
+Add-PSSnapIn Microsoft.BDD.PSSnapIn  
+New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
+Replicate-MDTContent -path "DS002:\Linked Deployment Shares\LINKED001" -Verbose  
+```
 
 ###  <a name="DeleteLinkedDeployShare"></a> Deleting a Linked Deployment Share  
  The following Windows PowerShell commands delete the LINKED001 deployment share.  
 
--   Add\-PSSnapIn Microsoft.BDD.PSSnapIn  
-
--   ```  
-    Remove-item -path "DS002:\Linked Deployment Shares\LINKED001" -Verbose  
-    ```  
+```powershell
+Add-PSSnapIn Microsoft.BDD.PSSnapIn  
+Remove-item -path "DS002:\Linked Deployment Shares\LINKED001" -Verbose  
+```  
 
 ###  <a name="CreateMedia"></a> Creating Media  
  The following Windows PowerShell commands create a source folder that contains content used to create bootable media. The Production deployment share will be used as the source. The Everything selection profile determines what content is placed in the media content folder. The LiteTouchMedia.iso file will be created when the media is generated. The media will support both x86 and x64 platforms.  
 
--   ```  
-    Add-PSSnapIn Microsoft.BDD.PSSnapIn  
-    ```  
-
--   ```  
-    New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
-    ```  
-
--   ```  
-    New-item -path "DS002:\Media" -enable "True" -Name "MEDIA001" -Comments "some comment here" -Root "D:\Media" -SelectionProfile "Everything" -SupportX86 "True" -SupportX64 "True" -GenerateISO "True" -ISOName "LiteTouchMedia.iso" -Verbose  
-    ```  
-
--   ```  
-    New-PSDrive -Name "MEDIA001" -PSProvider "MDTProvider" -Root "D:\Media\Content" -Description "Embedded media deployment share" -Force -Verbose  
-    ```  
+```powershell
+Add-PSSnapIn Microsoft.BDD.PSSnapIn  
+New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
+New-item -path "DS002:\Media" -enable "True" -Name "MEDIA001" -Comments "some comment here" -Root "D:\Media" -SelectionProfile "Everything" -SupportX86 "True" -SupportX64 "True" -GenerateISO "True" -ISOName "LiteTouchMedia.iso" -Verbose  
+New-PSDrive -Name "MEDIA001" -PSProvider "MDTProvider" -Root "D:\Media\Content" -Description "Embedded media deployment share" -Force -Verbose  
+```  
 
 ###  <a name="GenerateMedia"></a> Generating Media  
  The following Windows PowerShell commands create the LiteTouchMedia.iso file in D:\\Media, which will use content from the MEDIA001 media source folder.  
 
--   ```  
-    Add-PSSnapIn Microsoft.BDD.PSSnapIn  
-    ```  
-
--   ```  
-    New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
-    ```  
-
--   ```  
-    Generate-MDTMedia -path "DS002:\Media\MEDIA001" -Verbose  
-    ```  
+```powershell
+Add-PSSnapIn Microsoft.BDD.PSSnapIn  
+New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share" 
+Generate-MDTMedia -path "DS002:\Media\MEDIA001" -Verbose  
+```  
 
 ###  <a name="DeleteMedia"></a> Deleting Media  
- The following Windows PowerShell command deletes the MEDIA001 media from the Production deployment share.  
+The following Windows PowerShell command deletes the MEDIA001 media from the Production deployment share.  
 
-```  
-Remove-item -path "DS002:\Media\MEDIA001" -Verbos  
+```powershell
+Remove-item -path "DS002:\Media\MEDIA001" -Verbose
 ```  
 
 ## Delaying Domain Join to Avoid Application of Group Policy Objects  

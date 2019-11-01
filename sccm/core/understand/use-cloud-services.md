@@ -1,7 +1,7 @@
 ---
-title: "Use cloud services to supplement on-premises infrastructure"
-titleSuffix: "Configuration Manager"
-description: "Provision cloud resources for System Center Configuration Manager to supplement your on-premises infrastructure."
+title: Use cloud services
+titleSuffix: Configuration Manager
+description: Provision cloud resources for Configuration Manager to supplement your on-premises infrastructure.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,11 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Use cloud services with System Center Configuration Manager
+
+# Use cloud services with Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager supports several cloud-based options. These can supplement your on-premises infrastructure, and can help solve business problems like:  
+Configuration Manager supports several cloud-based options. These can supplement your on-premises infrastructure, and can help solve business problems like:  
 
 -   How to manage BYOD (by using Intune for mobile device management).  
 
@@ -31,7 +32,7 @@ Although provisioning cloud resources is not something you must do before you de
 
 -   For information about cloud-based distribution points, see [Install cloud-based distribution points](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure).
 
--   For more information about Azure, see [Azure](http://go.microsoft.com/fwlink/p/?LinkId=262965) in the MSDN Library.  
+-   For more information about Azure, see [Azure](https://go.microsoft.com/fwlink/p/?LinkId=262965) in the MSDN Library.  
 
 ### Azure virtual machines (for cloud-based infrastructure)  
  Configuration Manager supports using computers that run in virtual machines in Azure, just as it does when run on-premises within your physical corporate network. You can use Azure virtual machines in the following scenarios:  
@@ -75,10 +76,10 @@ These additional capabilities do not require you to have an Azure subscription. 
 
  For more information, see the details for the different cloud-based resource scenarios. You can also view the following topics for Azure security:  
 
--   [Azure: Understanding Security Account Management in Azure](http://go.microsoft.com/fwlink/p/?LinkId=262968)  
+-   [Azure: Understanding Security Account Management in Azure](https://go.microsoft.com/fwlink/p/?LinkId=262968)  
 
--   [Azure Security Overview](http://go.microsoft.com/fwlink/p/?LinkId=262970)  
+-   [Azure Security Overview](https://go.microsoft.com/fwlink/p/?LinkId=262970)  
 
--   [Get Past the Security Crossroads in Your Cloud Migration](http://go.microsoft.com/fwlink/p/?LinkId=262971)  
+-   [Get Past the Security Crossroads in Your Cloud Migration](https://go.microsoft.com/fwlink/p/?LinkId=262971)  
 
--   [Data Security in Azure Part 1 of 2](http://go.microsoft.com/fwlink/p/?LinkId=262974)  
+-   [Data Security in Azure Part 1 of 2](https://go.microsoft.com/fwlink/p/?LinkId=262974)  

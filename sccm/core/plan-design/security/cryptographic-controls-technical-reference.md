@@ -2,7 +2,7 @@
 title: "Cryptographic controls technical reference"
 titleSuffix: "Configuration Manager"
 description: "Learn how signing and encryption can help protect attacks from reading data in System Center Configuration Manager."
-ms.date: 12/8/2017
+ms.date: 12/08/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual

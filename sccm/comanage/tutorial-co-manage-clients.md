@@ -1,5 +1,5 @@
 ---
-title: Tutorial&#58; Enable co-management of existing Configuration Manager clients
+title: Tutorial&#58; Enable co-management for existing clients
 titleSuffix: Configuration Manager
 description: Configure co-management with Microsoft Intune when you already manage Windows 10 devices with Configuration Manager.
 ms.date: 07/26/2019

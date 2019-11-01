@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 07/29/2019
+ms.date: 10/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -14,9 +14,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # What is Desktop Analytics?
-
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
 Desktop Analytics is a cloud-based service that integrates with Configuration Manager. The service provides insight and intelligence for you to make more informed decisions about the update readiness of your Windows clients. It combines data from your organization with data aggregated from millions of devices connected to Microsoft cloud services.
 
@@ -64,10 +61,10 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Technical
 
-- An active Azure subscription, with [Global Admin](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permissions. [Microsoft Accounts](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) aren't supported.  
+- An active Azure subscription, with [Global Admin](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) permissions. [Microsoft Accounts](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) aren't supported.  
 
     > [!Important]  
-    > Desktop Analytics is currently offered as an Office 365 service and requires an Office 365 subscription in your Azure AD tenant. This may not be a requirement in the future.
+    > Desktop Analytics currently requires that you deploy an Office 365 service in your Azure AD tenant. This won't be a requirement in the future.
 
     - **Workspace owner** or **contributor** permissions to **Set up your workspace**, and the following roles:  
 
@@ -103,16 +100,21 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [How to enable data sharing](/sccm/desktop-analytics/enable-data-sharing)  
 
+> [!Important]   
+> Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, Microsoft doesn't collect the following data from devices located in European countries (EEA and Switzerland):
+>
+> - Windows diagnostic data from Windows 8.1 devices
+> - App usage data for Windows 7
 
 ### Licensing and costs
 
-Desktop Analytics requires one of the following license subscriptions:
+Devices enrolled in Desktop Analytics may only be used by licensed users of:
 
-- Windows 10 Enterprise E3 or E5; or Microsoft 365 F1, E3, or E5  
+- Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F1, E3, or E5)
 
-- Windows 10 Education A3 or A5; or Microsoft 365 A3 or A5  
+- Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 
-- Windows VDA E3 or E5  
+- Windows Virtual Desktop Access E3 or E5  
 
 Beyond the cost of license subscriptions, there's no additional cost for using Desktop Analytics. Within Azure Log Analytics, Desktop Analytics is "zero-rated." This rating means it's excluded from data limits and costs, regardless of the Azure Log Analytics pricing tier you chose. For more information on Azure Log Analytics pricing tiers, see [Pricing - Log Analytics](https://azure.microsoft.com/pricing/details/monitor/).
 

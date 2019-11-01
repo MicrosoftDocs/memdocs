@@ -2,7 +2,7 @@
 title: What's new in Desktop Analytics
 titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
-ms.date: 09/03/2019
+ms.date: 10/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -15,9 +15,6 @@ manager: dougeby
 
 # What's new in Desktop Analytics
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 Learn what's new each month in Desktop Analytics.
 
 > [!Tip]
@@ -26,6 +23,20 @@ Learn what's new each month in Desktop Analytics.
 To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
 
+## October 2019
+
+### Improvements to compatibility recommendations
+
+<!-- 3594545 -->
+
+Desktop Analytics now provides additional detail when it detects that the Windows upgrade will completely or partially remove an application or driver. For more information, see [Compatibility assessment](/sccm/desktop-analytics/compat-assessment#asset-is-removed-during-upgrade).
+
+### Migrate from Windows Analytics to existing tenant
+
+<!-- 5202803 -->
+
+You can now migrate inputs from an existing Windows Analytics workspace after onboarding to Desktop Analytics. For more information, see the FAQ for [Existing Windows Analytics customers](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
+
 ## September 2019
 
 ### Migrate inputs from Windows Analytics
@@ -33,6 +44,12 @@ To get notified when this page is updated, copy and paste the following URL into
 <!-- 4252663 -->
 
 During onboarding, you can now migrate inputs from an existing Windows Analytics workspace. For more information, see the FAQ for [Existing Windows Analytics customers](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
+
+### Offboard from Desktop Analytics
+
+<!-- 4972396 -->
+
+If you set up Desktop Analytics in your environment, but want to stop using the service, you can now close your account. If you change your mind in 90 days, you can reactivate the account. For more information, see [How to close your account](/sccm/desktop-analytics/account-close).
 
 
 ## August 2019

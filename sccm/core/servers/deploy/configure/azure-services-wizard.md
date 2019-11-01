@@ -220,7 +220,7 @@ After specifying the web and native apps on the Apps page, the Azure Services Wi
 
 - **Cloud Management** service, **Discovery** page: [Configure Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
 
-- **Log Analytics Connector** service, **Configuration** page: [Configure the connection to Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics#configure-the-connection-to-log-analytics)  
+- **Log Analytics Connector** service, **Configuration** page: [Configure the connection to Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics#grant-configuration-manager-with-permissions-to-log-analytics)  
 
 - **Upgrade Readiness Connector** service, **Configuration** page: [Use the Azure Wizard to create the connection](/sccm/core/clients/manage/upgrade/upgrade-analytics#use-the-azure-wizard-to-create-the-connection)  
 

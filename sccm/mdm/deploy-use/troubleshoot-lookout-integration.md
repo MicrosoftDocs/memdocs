@@ -25,7 +25,7 @@ Lookout MTP is configured to  allow only users from a configured Azure AD group 
 You can contact Lookout Support through on the following methods:
 
 * Email: enterprisesupport@lookout.com
-* Login to the  [MTP  Console](http://aad.lookout.com), and navigate to the **Support** module.
+* Login to the  [MTP  Console](https://aad.lookout.com), and navigate to the **Support** module.
 * Go to:  https://enterprise.support.lookout.com/hc/requests and make a support request.
 
 ### Unable to sign in

@@ -2,7 +2,7 @@
 title: Configure availability groups
 titleSuffix: Configuration Manager
 description: Set up and manage SQL Server Always On availability groups with Configuration Manager
-ms.date: 7/19/2019
+ms.date: 09/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -115,13 +115,9 @@ When your site database is hosted in an availability group, use the following pr
 <!--3127336-->
 Starting in version 1906, run Configuration Manager setup to add a new synchronous replica member.
 
-1. Use the [hierarchy maintenance tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) to stop the site: `preinst.exe /stopsite`
+1. Add a secondary replica using the SQL Server procedures.
 
-1. Modify the availability group using SQL Server procedures:
-
-    1. [Create a backup](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server) of the site database from the primary replica.
-
-    1. [Restore that backup](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms) to the new secondary replica server.
+    1. [Add a secondary replica to an Always On Availability Group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
 
     1. Watch the status in SQL Management Studio. Wait for the availability group to return to full health.
 

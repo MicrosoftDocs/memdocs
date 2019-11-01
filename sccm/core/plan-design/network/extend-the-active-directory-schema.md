@@ -2,7 +2,7 @@
 title: "Publishing and the Active Directory schema"
 titleSuffix: "Configuration Manager"
 description: "Extend the Active Directory schema for System Center Configuration Manager to simplify the process of deploying and configuring clients."
-ms.date: 2/6/2017
+ms.date: 09/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

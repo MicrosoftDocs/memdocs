@@ -2,7 +2,7 @@
 title: "Supported configurations"
 titleSuffix: "Configuration Manager"
 description: "Identify key configurations and requirements so you can plan, deploy, and maintain a functional System Center Configuration Manager deployment."
-ms.date: 10/06/2016
+ms.date: 10/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -22,10 +22,10 @@ The information in this and the following topics is essential for helping you id
 
 When a Configuration Manager feature or capability requires more specific configurations, that information is included with the feature-specific documentation, and is supplemental to the more general configuration details.  
 
- The products and technologies that are described in the following topics are supported by Configuration Manager. However, their inclusion in this content does not imply an extension of support for any product beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager. For more information about Microsoft Support Lifecycles, visit the [Microsoft Support Lifecycle](http://go.microsoft.com/fwlink/p/?LinkId=208270) website.  
+ The products and technologies that are described in the following topics are supported by Configuration Manager. However, their inclusion in this content does not imply an extension of support for any product beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager, including any products that are covered under the [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) program. For more information about Microsoft Support Lifecycles, visit the [Microsoft Support Lifecycle](https://go.microsoft.com/fwlink/p/?LinkId=208270) website. For more information about Extended Security Updates in Configuration Manager, see [Supported OS versions for clients and devices for Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#bkmk_ESU).
 
 > [!NOTE]  
->  For information about Microsoft support lifecycle policy, go to the Microsoft Support Lifecycle Support Policy FAQ website at [Microsoft Support Lifecycle Policy FAQ](http://go.microsoft.com/fwlink/p/?LinkId=31976).  
+>  For information about Microsoft support lifecycle policy, go to the Microsoft Support Lifecycle Support Policy FAQ website at [Microsoft Support Lifecycle Policy FAQ](https://go.microsoft.com/fwlink/p/?LinkId=31976).  
 
  Additionally, products and product versions that are not listed in the following topics are not supported with System Center Configuration Manager unless they have been announced on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/).  At times, the content on this blog precedes an update to this body of documentation.
 

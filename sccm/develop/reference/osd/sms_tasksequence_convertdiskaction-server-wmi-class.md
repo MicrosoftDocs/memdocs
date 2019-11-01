@@ -72,7 +72,7 @@ Class SMS_TaskSequence_ConvertDiskAction : SMS_TaskSequence_Action
 
  The physical disk number to convert.  
 
- The task sequence variable associated with this property is OSDConvertDiskIndex. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDConvertDiskIndex. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Enabled`  
  Data type: `Boolean`  

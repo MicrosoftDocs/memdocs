@@ -1,8 +1,8 @@
 ---
-title: "Set up your lab"
-titleSuffix: "Configuration Manager"
-description: "Set up a lab for evaluating Configuration Manager with simulated real-life activities."
-ms.date: 09/21/2017
+title: Set up your lab
+titleSuffix: Configuration Manager
+description: Set up a lab for evaluating Configuration Manager with simulated real-life activities.
+ms.date: 09/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,11 +12,15 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Set up your System Center Configuration Manager lab
+
+# Set up a Configuration Manager lab
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 Following the guidance in this topic will enable you to set up a lab for evaluating Configuration Manager with simulated real-life activities.  
+
+> [!NOTE]
+> Microsoft offers a pre-configured version of this lab using an evaluation version of Configuration Manager. For more information, see [Windows and Office deployment and management lab kit](https://docs.microsoft.com/microsoft-365/enterprise/modern-desktop-deployment-and-management-lab). 
 
 ##  <a name="BKMK_LabCore"></a> Core components  
  Setting up your environment for System Center Configuration Manager requires some core components to support the installation of Configuration Manager.    
@@ -29,7 +33,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
 -   **The lab environment uses SQL Server 2012 SP2** for the site database.  
 
-     You can download an evaluation version of SQL Server 2012 from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=29066).  
+     You can download an evaluation version of SQL Server 2012 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29066).  
 
      SQL Server has [Supported versions of SQL Server](../../core/plan-design/configs/support-for-sql-server-versions.md#bkmk_SQLVersions) that must be met for use with System Center Configuration Manager.  
 
@@ -188,7 +192,7 @@ The next steps required to enable Configuration Manager clients to query Active 
 
 9. Click **Install** and verify that the installation completed properly in the **Notifications** pane of **Server Manager**.  
 
-10. After the base installation of .NET completes, navigate to  the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=42643) to obtain the web installer for the .NET Framework 4.5.2. Click the **Download** button, then **Run** the installer. It will automatically detect and install the required components in your selected language.  
+10. After the base installation of .NET completes, navigate to  the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=42643) to obtain the web installer for the .NET Framework 4.5.2. Click the **Download** button, then **Run** the installer. It will automatically detect and install the required components in your selected language.  
 
 For additional information, please review the following articles for why these .NET Frameworks are required:  
 

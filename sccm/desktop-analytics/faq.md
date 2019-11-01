@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 09/03/2019
+ms.date: 10/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -15,12 +15,9 @@ ms.collection: M365-identity-device-management
 
 # Desktop Analytics FAQ
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 ## Prerequisites
 
-### Can I use Desktop Analytics with Intune-managed devices? 
+### <a name="bkmk_intune"></a> Can I use Desktop Analytics with Intune-managed devices? 
 
 The vast majority of customers that can benefit from the Desktop Analytics workflow use Configuration Manager to deploy Windows. We know Intune customers love the additional insights from Analytics data, and we're working on ways to share insights with them as well.
 
@@ -34,6 +31,19 @@ When you first set up Desktop Analytics, the reports in Configuration Manager an
 - Check devices that you've associated with your organization in the last seven days. In the [Desktop Analytics portal](https://aka.ms/desktopanalytics), go to the **Connected services** pane. Select **Enroll devices**, and **View recent data**
 
 If devices are properly configured, and you're still not seeing data in your workspace, [contact Microsoft support](https://support.microsoft.com/hub/4343728/support-for-business).
+
+## Connect Configuration Manager
+
+### Can I change the target or additional collections?
+
+Yes, use the following process:
+
+- In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Open the properties for the entry associated with your Desktop Analytics service.
+
+- On the **Desktop Analtyics Connection** tab, change the **Target Collection** or manage the additional collections.
+
+> [!IMPORTANT]  
+> Configuration Manager uses a settings policy to configure devices in the target collection. This policy includes the diagnostic data settings to enable devices to send data to Microsoft. Changing the target collection doesn't undo the settings policy on devices no longer in the target collection. If you don't want your devices to continue sending diagnostic data, [reconfigure the devices](/sccm/desktop-analytics/account-close#reconfigure-clients).
 
 ## Windows upgrade
 
@@ -114,15 +124,64 @@ Once devices are enrolled, to see the migrated inputs in the Desktop Analytics p
 
 The migration process is transactional. You'll see either all inputs migrated without corruption, or no migrated inputs at all. If you don't see the migrated inputs in 24 hours, contact Microsoft Support. Start tagging apps as you see the migrated inputs. If you've already tagged some apps, Desktop Analytics keeps those inputs in case they conflict with the inputs from Windows Analytics.
 
-### I'm not ready yet, can I migrate after the initial onboarding?
+### How long do I have to migrate my data?
 
-No, at this time you have to decide to migrate during [Initial onboarding](/sccm/desktop-analytics/set-up#initial-onboarding).
+Windows Analytics Upgrade Readiness solution is being [retired on January 31st, 2020](https://aka.ms/waretirement). After retirement, based on the Log Analytics workspace retention policy, data will go away over time. Customers that want to keep the data need to migrate or export before that occurs.
+
+### Can I migrate after the initial onboarding?
+
+Yes.<!-- 5202803 --> As long as you set an existing Windows Analytics workspace as Desktop Analytics workspace during [Initial onboarding](/sccm/desktop-analytics/set-up#initial-onboarding), existing Windows Analytics customers can now migrate data after the initial onboarding. Go to **Connected services** in the Desktop Analytics portal, and select the option to migrate data from Windows Analytics.
+
+### Can I use Update Compliance together with Desktop Analytics?
+
+Yes. If you use [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) in the Azure portal today, you can continue to do so now and beyond January 2020.
+
+For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+
+### Are there any Windows Analytics features that aren't available in Desktop Analytics?
+
+<!-- 3616924 -->
+Yes, the following Windows Analytics features will either be retired or aren't yet available in Desktop Analytics:
+
+#### General
+
+- Support for scenarios that don't require Configuration Manager. For example, [Intune support](#bkmk_intune).
+- Licensing prerequisite of any valid Windows license versus E3, E5
+- Support for multiple workspaces per Azure AD tenant
+- Ability to run custom queries and export raw solution data
+- Data model documentation for custom reports
+
+#### Upgrade Readiness
+
+- Internet Explorer Site Discovery data
+- Office add-in insights (now [available in Configuration Manager](#bkmk_office))
+- Feedback Hub insights
+
+#### Update Compliance
+
+- Support for Windows Update for Business
+- Delivery Optimization insights
+- Support for Windows 10 long-term servicing channel (LTSC)
+- Windows Insider reports
+- Windows Defender status
+
+> [!Note]
+> All existing Update Compliance features, including those not available in Desktop Analytics, remain available in the [Update Compliance](/windows/deployment/update/update-compliance-get-started) solution in the Azure portal.
+
+#### Device Health
+
+- Driver health
+- App health (outside of a deployment plan)
+- Frequently crashing devices or driver-induced crashes
+- Windows sign-in health
+- Windows Information Protection
+- Support for Windows Server
 
 ## Other
 
-### Can I use Desktop Analytics for my Office 365 ProPlus upgrades?
+### <a name="bkmk_office"></a> Can I use Desktop Analytics for my Office 365 ProPlus upgrades?
 
-No, Desktop Analytics is focused on Windows. Microsoft developed Desktop Analytics in close collaboration with many customers. Through the preview program, customer feedback was about how Desktop Analytics improved their ability to confidently manage Windows deployments. They also told us they wanted [Office 365 ProPlus readiness](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness) more closely integrated with office management tools in Configuration Manager and Intune. Microsoft will continue to make investments in those areas, while focusing on Windows scenarios in Desktop Analytics.
+No, Desktop Analytics is focused on Windows. Microsoft developed Desktop Analytics in close collaboration with many customers. Customer feedback is about how Desktop Analytics improves their ability to confidently manage Windows deployments. They also tell us they want [Office 365 ProPlus readiness](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness) more closely integrated with Office management tools in Configuration Manager and Intune. Microsoft continues to invest in those areas, while focusing on Windows scenarios in Desktop Analytics.
 
 ### How can I provide feedback about Desktop Analytics?
 

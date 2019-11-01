@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 07/26/2019
+ms.date: 10/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -863,6 +863,13 @@ Use the following task sequence variables with this step:
 
 To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Format and Partition Disk**.
 
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtssteppartitiondisk?view=sccm-ps)
+- [New-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtssteppartitiondisk?view=sccm-ps)
+- [Remove-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtssteppartitiondisk?view=sccm-ps)
+- [Set-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtssteppartitiondisk?view=sccm-ps)
+
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
@@ -1044,6 +1051,12 @@ Use the following task sequence variables with this step:
 - [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand) (starting in version 1806)<!--1358493-->  
 
 To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Package**.
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallsoftware?view=sccm-ps)
+- [New-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallsoftware?view=sccm-ps)
+- [Remove-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallsoftware?view=sccm-ps)
+- [Set-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallsoftware?view=sccm-ps)
 
 ### Properties  
 
@@ -1115,6 +1128,13 @@ Use the following task sequence variables with this step:
 
 To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Software Updates**.
 
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallupdate?view=sccm-ps)
+- [New-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallupdate?view=sccm-ps)
+- [Remove-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallupdate?view=sccm-ps)
+- [Set-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallupdate?view=sccm-ps)
+
 For more recommendations and a technical flow chart diagram for this step, see [Install Software Updates](/sccm/osd/understand/install-software-updates).
 
 ### Properties  
@@ -1137,7 +1157,7 @@ Many of these updates have dependencies. For example, install update ABC before 
 
 In most circumstances, use the default setting to use cached scan results.
 
-The **SMSTSSoftwareUpdateScanTimeout** variable controls the software updates scan timeout during this step. The default value is 30 minutes. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout).
+The **SMSTSSoftwareUpdateScanTimeout** variable controls the software updates scan timeout during this step. The default value is 60 minutes. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout).
 
 ### Options  
 
@@ -1369,6 +1389,13 @@ Use the following task sequence variables with this step:
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Restart Computer**.
 
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepreboot?view=sccm-ps)
+- [New-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepreboot?view=sccm-ps)
+- [Remove-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepreboot?view=sccm-ps)
+- [Set-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepreboot?view=sccm-ps)
+
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
@@ -1462,11 +1489,16 @@ Use the following task sequence variables with this step:
 
 - [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand) (starting in version 1902)<!--3654172-->  
 - [SMSTSDisableWow64Redirection](/sccm/osd/understand/task-sequence-variables#SMSTSDisableWow64Redirection)  
-- [SMSTSRunCommandLineUserName](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName)  
-- [SMSTSRunCommandLinePassword](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLinePassword)  
 - [WorkingDirectory](/sccm/osd/understand/task-sequence-variables#WorkingDirectory)  
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Run Command Line**.
+
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepruncommandline?view=sccm-ps)
+- [New-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepruncommandline?view=sccm-ps)
+- [Remove-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepruncommandline?view=sccm-ps)
+- [Set-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepruncommandline?view=sccm-ps)
 
 ### Properties  
 
@@ -1553,6 +1585,13 @@ Use the following task sequence variables with this step:
 - [OSDLogPowerShellParameters](/sccm/osd/understand/task-sequence-variables#OSDLogPowerShellParameters) (starting in version 1902)<!--3556028-->  
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Run PowerShell Script**.
+
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtssteprunpowershellscript?view=sccm-ps)
+- [New-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtssteprunpowershellscript?view=sccm-ps)
+- [Remove-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtssteprunpowershellscript?view=sccm-ps)
+- [Set-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtssteprunpowershellscript?view=sccm-ps)
 
 > [!Note]  
 > Use signed PowerShell scripts in Unicode format. ANSI format, which is the default, doesn't work with this step.
@@ -1673,10 +1712,14 @@ This step runs another task sequence. It creates a parent-child relationship bet
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Run Task Sequence**.
 
-Starting in version 1906, manage this step with the following PowerShell cmdlets:<!-- 2839943, SCCMDocs #1118 -->
+Starting in version 1906, manage this step with the following PowerShell cmdlets:<!-- 2839943, SCCMDocs#1118 -->
 
+- **Get-CMTSStepRunTaskSequence**
 - **New-CMTSStepRunTaskSequence**
+- **Remove-CMTSStepRunTaskSequence**
 - **Set-CMTSStepRunTaskSequence**
+
+For more information, see [1906 release notes - New cmdlets](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps#new-cmdlets).
 
 ### Specifications and limitations
 
@@ -1732,6 +1775,13 @@ This step can be run in either the full OS or Windows PE.
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Set Dynamic Variables**.
 
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepSetDynamicVariable](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetdynamicvariable?view=sccm-ps)
+- [New-CMTSStepSetDynamicVariable](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetdynamicvariable?view=sccm-ps)
+- [Remove-CMTSStepSetDynamicVariable](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetdynamicvariable?view=sccm-ps)
+- [Set-CMTSStepSetDynamicVariable](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetdynamicvariable?view=sccm-ps)
+
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
@@ -1778,6 +1828,13 @@ Task sequence variables are read by task sequence actions and specify the behavi
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Set Task Sequence Variable**.
 
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetvariable?view=sccm-ps)
+- [New-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetvariable?view=sccm-ps)
+- [Remove-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetvariable?view=sccm-ps)
+- [Set-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetvariable?view=sccm-ps)
+
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
@@ -1813,6 +1870,13 @@ Use the following task sequence variables with this step:
 This step replaces sysprep.inf or unattend.xml directory variables, such as `%WINDIR%` and `%ProgramFiles%`, with the Windows PE installation directory, `X:\Windows`. The task sequence ignores variables specified by using these environment variables.  
 
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Setup Windows and ConfigMgr**.
+
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [New-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Remove-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Set-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
 
 ### Step actions
 

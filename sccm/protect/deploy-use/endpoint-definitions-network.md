@@ -1,7 +1,7 @@
 ---
-title: "Endpoint Protection malware definitions from network share"
-titleSuffix: "Configuration Manager"
-description: "Learn how to manually download the latest definition updates from Microsoft and then configure clients to download these definitions."
+title: Download definitions from a network share
+titleSuffix: Configuration Manager
+description: Learn how to manually download the latest definition updates from Microsoft and then configure clients to download these definitions.
 ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -13,7 +13,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Enable Endpoint Protection malware definitions to download from a network share for Configuration Manager
+# Enable Endpoint Protection malware definitions to download from a network share
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 

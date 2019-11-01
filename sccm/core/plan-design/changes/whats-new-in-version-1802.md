@@ -2,7 +2,7 @@
 title: New version 1802
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1802 of Configuration Manager.
-ms.date: 04/05/2019
+ms.date: 10/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -133,7 +133,7 @@ You can configure the length of strings to be greater than 255 characters for ha
 
  ### Deprecation announcement for Linux and Unix client support
  <!--510139-->
-Microsoft intends to deprecate the Linux and UNIX client support in System Center Configuration Manager roughly one year from now, such that the clients will not be included in the SCCM 1902 release in early calendar 2019. The Configuration Manager 1810 release, in late calendar 2018, will be the last release to include the Linux and UNIX clients, and they will be supported for the full lifecycle of Configuration Manager 1810. After Configuration Manager 1810, customers should consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
+Microsoft intends to deprecate the Linux and UNIX client support in System Center Configuration Manager roughly one year from now, such that the clients will not be included in version 1902 in early calendar 2019. The Configuration Manager 1810 release, in late calendar 2018, will be the last release to include the Linux and UNIX clients, and they will be supported for the full lifecycle of Configuration Manager 1810. After Configuration Manager 1810, customers should consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
 
 ### Surface device dashboard
 <!--1355788-->
@@ -281,7 +281,7 @@ The **Windows 10 Servicing details for a specific collection** report displays g
 
 ### Improvements to Configuration Manager Policies for Windows Defender Exploit Guard
 <!-- 1356220 -->
-Additional policy settings for the [Attack Surface Reduction](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_ASR) and [Controlled folder access](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_CFA) components have been added in Configuration Manager for [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
+Additional policy settings for the [Attack Surface Reduction](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_ASR) and [Controlled folder access](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_CFA) components have been added in Configuration Manager for [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction).
 
 ### New host interaction settings for Windows Defender Application Guard
 <!-- 1356256 -->

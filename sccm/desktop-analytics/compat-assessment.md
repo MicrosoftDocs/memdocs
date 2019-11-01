@@ -2,7 +2,7 @@
 title: Compatibility assessment
 titleSuffix: Configuration Manager
 description: Learn about compatibility assessment for Windows apps and drivers in Desktop Analytics.
-ms.date: 07/26/2019
+ms.date: 10/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -15,9 +15,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # Compatibility assessment in Desktop Analytics
-
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
 Upgrade assessments in Windows Analytics were generic, for example: Attention Needed or Fix available. It doesn't provide any visual indicator on how to prioritize apps or drivers with issues or upgrade insights. Desktop Analytics replaces this feature with **Compatibility Risk**. Desktop Analytics shows the assessment for apps only in the deployment view for a pre-upgrade scenario. It categorizes the apps based on insights Microsoft gets from the machines included in a current deployment plan.
 
@@ -53,9 +50,25 @@ Desktop Analytics looks at the Microsoft app compatibility database for any know
 
 You'll see the following issues on the app properties pane as **MS known issues**:
 
-### Application is removed during upgrade
+### Asset is removed during upgrade
 
-Windows detected compatibility issues. The application won't migrate to the new OS version. No action is required for the upgrade to continue.
+Windows detected compatibility issues with an application or driver. The asset won't migrate to the new OS version. No action is required for the upgrade to continue. Install a compatible version of the application or driver on the new OS version.
+
+<!-- 3594545 -->
+Windows can partially or fully remove these assets:
+
+- Full removal: Windows setup completely removes the app or driver from the device during upgrade.
+- Partial removal: Windows setup partially removes the app or driver from the device. You need to manually uninstall it after you upgrade Windows.
+
+In both the cases, after you upgrade Windows the user can't use the app or the hardware associated with the driver.
+
+To see this recommendation in the Desktop Analytics portal:
+
+1. In a deployment plan, select **Prepare pilot**.
+1. Select an asset from the list.
+1. View the compatibility risk factors and recommendations in the side pane.
+
+![Screenshot of asset recommendation in Desktop Analytics portal](media/3594545-app-removed.png)
 
 ### Blocking upgrade
 
@@ -138,7 +151,7 @@ The app is dependent on a driver. Desktop Analytics recommends the app for pilot
 ### Additional insights
 
 <!-- 4021225 -->
-When you update the Configuration Manager site and clients to version 1906, clients also report these additional insights:
+When you update the Configuration Manager site and clients to version 1906, clients also report these additional insights, when diagnostic data level is set to Enhanced Limited:
 
 > [!Important]  
 > To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. This scenario isn't functional until the client version is also the latest.

@@ -51,6 +51,6 @@ There are several package types that System Center Configuration Manager uses to
 
 ## See also
 
-[OS deployment server WMI classes](/sccm/develop/reference/osd/operating-system-deployment-server-wmi-classes)
+[Operating System Deployment Task Sequence Object Model](/sccm/develop/osd/operating-system-deployment-task-sequence-object-model)
 
 [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
