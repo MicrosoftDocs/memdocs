@@ -2,7 +2,7 @@
 title: Manage Windows as a Service
 titleSuffix: Configuration Manager
 description: View the state of Windows as a Service (WaaS) using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows 10 clients are near end of support.
-ms.date: 08/22/2019
+ms.date: 11/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -181,7 +181,7 @@ You can drill through compliance statistics to see which devices require a speci
 
    -   **Software available time**: Select one of the following settings to specify when the software updates are available to clients:  
 
-       -   **As soon as possible**: Select this setting to make the software updates that are included in the deployment available to the client computers as soon as possible. When you create the deployment with this setting selected, Configuration Manager updates the client policy. Then, at the next client policy polling cycle, clients become  aware of the deployment and can obtain the updates that are available for installation.  
+       - **As soon as possible**: Select this setting to make the software updates that are included in the deployment available to the client computers as soon as possible. When you create the deployment with this setting selected, Configuration Manager updates the client policy. Then, at the next client policy polling cycle, clients become  aware of the deployment and can obtain the updates that are available for installation.  
 
        -   **Specific time**: Select this setting to make the software updates that are included in the deployment available to the client computers at a specific date and time. When you create the deployment with this setting enabled, Configuration Manager updates the client policy. Then, at the next client policy polling cycle, clients become aware of the deployment. However, the software updates in the deployment are not available for installation until after the configured date and time.  
 
@@ -196,6 +196,8 @@ You can drill through compliance statistics to see which devices require a speci
            >   
            >  You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
+       -   **Delay enforcement of this deployment according to user preferences, up to the grace period defined on the client**: Select this option to honor the [**Grace period for enforcement after deployment deadline (hours)** client setting](/sccm/core/clients/deploy/about-client-settings#grace-period-for-enforcement-after-deployment-deadline-hours).
+
 9. On the User Experience page, configure the following settings:  
 
     -   **User notifications**: Specify whether to display notification of the updates in Software Center on the client computer at the configured **Software available time** and whether to display user notifications on the client computers.  
@@ -206,19 +208,20 @@ You can drill through compliance statistics to see which devices require a speci
 
     -   **Write filter handling for Windows Embedded devices**: When you deploy updates to Windows Embedded devices that are write filter enabled, you can specify to install the update on the temporary overlay and either commit changes later or commit the changes at the installation deadline or during a maintenance window. When you commit changes at the installation deadline or during a maintenance window, a restart is required and the changes persist on the device.  
         - When you deploy an update to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window.  
+    -   **Software updates deployment re-evaluation behavior upon restart**: To force another update deployment evaluation cycle after restart, select the option **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**. 
 
-10. On the Deployment Package page, select an existing deployment package or configure the following settings to create a new deployment package:  
+10. On the Deployment Package page, select an existing deployment package, no deployment package, or configure the following settings to create a new deployment package:  
 
-    1.  **Name**: Specify the name of the deployment package. This name must be unique and describes the package content. It is limited to 50 characters.  
+    1. **Name**: Specify the name of the deployment package. This name must be unique and describes the package content. It is limited to 50 characters.  
 
-    2.  **Description**: Specify a description that provides information about the deployment package. The description is limited to 127 characters.  
+    1. **Description**: Specify a description that provides information about the deployment package. The description is limited to 127 characters.  
 
-    3.  **Package source**: Specifies the location of the software update source files. Type a network path for the source location, for example, **\\\server\sharename\path**, or click **Browse** to find the network location. Create the shared folder for the deployment package source files before you proceed to the next page.  
+    1. **Package source**: Specifies the location of the software update source files. Type a network path for the source location, for example, **\\\server\sharename\path**, or click **Browse** to find the network location. Create the shared folder for the deployment package source files before you proceed to the next page.  
         - The deployment package source location that you specify cannot be used by another software deployment package.  
         - The SMS Provider computer account and the user that is running the wizard to download the software updates must both have **Write** NTFS permissions on the download location. You should carefully restrict access to the download location in order to reduce the risk of attackers tampering with the software update source files.  
         - You can change the package source location in the deployment package properties after Configuration Manager creates the deployment package. But if you do so, you must first copy the content from the original package source to the new package source location.  
-
-    4.  **Sending priority**: Specify the sending priority for the deployment package. Configuration Manager uses the sending priority for the deployment package when it sends the package to distribution points. Deployment packages are sent in priority order: High, Medium, or Low. Packages with identical priorities are sent in the order in which they were created. If there is no backlog, the package processes immediately regardless of its priority.  
+    1. **Sending priority**: Specify the sending priority for the deployment package. Configuration Manager uses the sending priority for the deployment package when it sends the package to distribution points. Deployment packages are sent in priority order: High, Medium, or Low. Packages with identical priorities are sent in the order in which they were created. If there is no backlog, the package processes immediately regardless of its priority.
+    1. **Enable binary differential replication**: Enable this option if you want to use binary differential replication.  
 
 11. On the Distribution Points page, specify the distribution points or distribution point groups that host the update files. For more information about distribution points, see [Configure a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs).
 
@@ -257,13 +260,7 @@ Use the following procedure to modify the properties of a servicing plan.
 
     **Deployment Settings**: On the Deployment Settings tab, configure the following settings:  
 
-    -   **Type of deployment**: Specify the deployment type for the software update deployment. Select **Required** to create a mandatory software update deployment in which the software updates are automatically installed on clients before a configured installation deadline. Select **Available** to create an optional software update deployment that is available for users to install from Software Center.  
-
-        > [!IMPORTANT]  
-        > - After you create the software update deployment, you cannot later change the type of deployment.  
-        > - A software update group deployed as **Required** is downloaded in the background and honors BITS settings, if configured. However, software update groups deployed as **Available** are downloaded in the foreground and ignore BITS settings.  
-
-    -   **Use Wake-on-LAN to wake up clients for required deployments**: Specify whether to enable Wake On LAN at the deadline to send wake-up packets to computers that require one or more software updates in the deployment. Any computers that are in sleep mode at the installation deadline time are awakened so the software update installation can initiate. Clients that are in sleep mode that do not require any software updates in the deployment are not started. By default, this setting is not enabled and is available only when **Type of deployment** is set to **Required**.  
+    -   **Use Wake-on-LAN to wake up clients for required deployments**: Specify whether to enable Wake On LAN at the deadline to send wake-up packets to computers that require one or more software updates in the deployment. Any computers that are in sleep mode at the installation deadline time are awakened so the software update installation can initiate. Clients that are in sleep mode that do not require any software updates in the deployment are not started. By default, this setting is not enabled.  
 
         > [!WARNING]  
         >  Before you can use this option, computers and networks must be configured for Wake On LAN.  
@@ -284,7 +281,7 @@ Use the following procedure to modify the properties of a servicing plan.
 
     -   Specify whether to allow clients to download after an installation deadline when they use metered Internet connections. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered Internet connection.   
 
-    **Alerts**: On the Alerts tab, configure how Configuration Manager and System Center Operations Manager generate alerts for this deployment. You can configure alerts only when **Type of deployment** is set to **Required** on the Deployment Settings page.  
+    **Alerts**: On the Alerts tab, configure how Configuration Manager and System Center Operations Manager generate alerts for this deployment. 
     - You can review recent software updates alerts from the **Software Updates** node in the **Software Library** workspace.  
 
 ## Next steps
