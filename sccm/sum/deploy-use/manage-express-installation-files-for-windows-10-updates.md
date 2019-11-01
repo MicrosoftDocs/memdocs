@@ -5,7 +5,7 @@ description: Configuration Manager supports express installation files for Windo
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 06/15/2018
+ms.date: 11/02/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -55,3 +55,8 @@ Once you deploy client settings to enable this functionality on the client, it a
 3. Select the appropriate client settings, and click **Properties** on the ribbon.  
 
 4. Select the **Software Updates** group. Configure to **Yes** the setting to **Enable installation of Express Updates on clients**. Configure the **Port used to download content for Express Updates** with the port used by the HTTP listener on the client.
+    - In version 1902, **Port used to download content for Express Updates** was changed to **Port that clients use to receive requests for delta content**.
+
+## Next steps
+
+[Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates)
