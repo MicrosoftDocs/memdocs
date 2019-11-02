@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 10/17/2019
+ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-The following task sequence steps can be added to a Configuration Manager task sequence. For information about editing a task sequence, see [Edit a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_ModifyTaskSequence).  
+The following task sequence steps can be added to a Configuration Manager task sequence. For more information, see [Use the task sequence editor](/sccm/osd/understand/task-sequence-editor).  
 
 The following settings are common to all task sequence steps:
 
@@ -35,7 +35,7 @@ The rest of this article describes the other settings on the **Properties** tab 
 
 - **Continue on error**: If an error occurs while running the step, the task sequence continues. For more information, see [Planning considerations for automating tasks](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups).  
 
-- **Add Condition**: The task sequence evaluates these conditional statements to determine if it runs the step. For an example of using a task sequence variable as a condition, see [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables#bkmk_access-condition).  
+- **Add Condition**: The task sequence evaluates these conditional statements to determine if it runs the step. For an example of using a task sequence variable as a condition, see [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables#bkmk_access-condition). For more information about conditions, see [Task sequence editor - Conditions](/sccm/osd/understand/task-sequence-editor#bkmk_conditions).
 
 The sections below for specific task sequence steps describe other possible settings on the **Options** tab.
 

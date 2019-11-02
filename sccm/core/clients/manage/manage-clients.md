@@ -195,7 +195,7 @@ Refresh the console view with the latest data in the database. For example, if a
 
 View the discovery data and deployments targeted for the client.
 
-You can also configure variables that task sequences use to deploy an OS to the device. For more information, se [Create task sequence variables for computers and collections](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_CreateTSVariables).
+You can also configure variables that task sequences use to deploy an OS to the device. For more information, se [Create task sequence variables for devices and collections](/sccm/osd/understand/using-task-sequence-variables#bkmk_set-coll-var).
 
 
 ## <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Manage clients from the **Device Collections** node
