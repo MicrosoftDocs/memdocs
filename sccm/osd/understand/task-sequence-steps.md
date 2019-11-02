@@ -101,7 +101,7 @@ Use the following task sequence variables with this step:
 - [OSDApplyDriverBootCriticalHardwareComponent](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalHardwareComponent)  
 - [OSDApplyDriverBootCriticalID](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalID)  
 - [OSDApplyDriverBootCriticalINFFile](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalINFFile)  
-- [OSDInstallDriversAdditionalOptions](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)<!--516679/2840016--> (starting in version 1806)  
+- [OSDInstallDriversAdditionalOptions](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)<!--516679/2840016-->
 
 To add this step in the task sequence editor, select **Add**, select **Drivers**, and select **Apply Driver Package**.
 
@@ -831,7 +831,7 @@ To encrypt a specific, non-OS data drive, select **Specific drive**. Then select
 #### Use full disk encryption
 
 <!--SCCMDocs-pr issue 2671-->
-By default, this step only encrypts used space on the drive. This default behavior is recommended, as it's faster and more efficient. Starting in version 1806, if your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives.
+By default, this step only encrypts used space on the drive. This default behavior is recommended, as it's faster and more efficient. If your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives.
 
 #### Choose where to create the recovery key
 
@@ -1048,7 +1048,7 @@ This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 
 Use the following task sequence variables with this step:  
 
-- [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand) (starting in version 1806)<!--1358493-->  
+- [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand) <!--1358493-->  
 
 To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Package**.
 Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
@@ -1257,7 +1257,7 @@ Select this option to prevent Sysprep from resetting the product activation flag
 #### Shutdown the computer after running this action
 
 <!--SCCMDocs-pr issue 2695-->
-Starting in version 1806, this option instructs Sysprep to shutdown the computer instead of its default restart behavior.
+This option instructs Sysprep to shutdown the computer instead of its default restart behavior.
 
 Starting in version 1810, this step is used in the [Windows Autopilot for existing devices](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices) task sequence.
 
@@ -1289,7 +1289,7 @@ Specify the drive for which you want to enable BitLocker. BitLocker only encrypt
 #### Use full disk encryption
 
 <!--SCCMDocs-pr issue 2671-->
-By default, this step only encrypts used space on the drive. This default behavior is recommended, as it's faster and more efficient. Starting in version 1806, if your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives.
+By default, this step only encrypts used space on the drive. This default behavior is recommended, as it's faster and more efficient. If your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives.
 
 #### Skip this step for computers that do not have a TPM or when TPM is not enabled
 
@@ -1846,7 +1846,7 @@ Specify the name of a task sequence built-in or action variable, or specify your
 #### Do not display this value
 
 <!--1358330-->
-Starting in version 1806, enable this option to mask sensitive data stored in task sequence variables. For example, when specifying a password.
+Enable this option to mask sensitive data stored in task sequence variables. For example, when specifying a password.
 
 > [!Note]  
 > Enable this option and then set the value of the task sequence variable. Otherwise the variable value isn't set as you intend, which may cause unexpected behaviors when the task sequence runs.<!--SCCMdocs issue #800-->
@@ -2006,7 +2006,7 @@ Specify the number of minutes before Configuration Manager fails this step. This
 Perform the Windows Setup compatibility scan without starting the upgrade process. This setting corresponds to the Windows Setup command-line option `/Compat ScanOnly`. Deploy the entire OS upgrade package with this option.
 
 <!--SCCMDocs-pr issue 2812-->
-Starting in version 1806, when you enable this option, this step doesn't put the Configuration Manager client into provisioning mode. Windows Setup runs silently in the background, and the client continues to function as normal. For more information, see [Provisioning mode](/sccm/osd/understand/provisioning-mode).
+When you enable this option, this step doesn't put the Configuration Manager client into provisioning mode. Windows Setup runs silently in the background, and the client continues to function as normal. For more information, see [Provisioning mode](/sccm/osd/understand/provisioning-mode).
 
 Setup returns an exit code as a result of the scan. The following table provides some of the more common exit codes:  
 
