@@ -21,82 +21,42 @@ When you [connect Configuration Manager](/sccm/desktop-analytics/connect-configm
 
 ## Update devices
 
-There are two types of updates that you need to apply for the best experience with Desktop Analytics:
+There are two main Windows components that Desktop Analytics uses:
 
-- [Compatibility updates](#bkmk_appraiser)  
-- [Connected User Experiences and Telemetry service](#bkmk_diagtrack)
+- **Compatibility component**. The compatibility component (Appraiser) runs diagnostics on the Windows device to evaluate its compatibility status with the latest versions of the Windows 10. 
 
+- **Connected User Experiences and Telemetry service**. With Windows diagnostic data enabled, the Connected User Experience and Telemetry service (DiagTrack) collects system, application, and driver data. Microsoft analyzes this data, and shares it back to you via Desktop Analytics.
 
-### <a name="bkmk_appraiser"></a> Compatibility updates
+Windows 10 already includes these components, but Windows 7 SP1 and Windows 8.1 require specific updates to be installed. Regardless of the operating system version, Microsoft recommends having a recent version of these components to get the best experience with Desktop Analytics.
 
-The compatibility component (Appraiser) runs diagnostics on the Windows device to evaluate its compatibility status with the latest versions of the Windows 10.
+The following table shows the minimum and recommended updates for each operating system to use Desktop Analytics:
 
-Microsoft regularly increments the updates for this component, but the associated KB number doesn't change. Make sure that you always have the latest version of the update.
+| OS Version    | Minimum Update | Recommended update |
+| --------------| -----------------------  | -------------------|
+| Windows 10 1903   | Included  | [Latest cumulative update](https://support.microsoft.com/help/4498140) |
+| Windows 10 1809   | Included  | [Latest cumulative update](https://support.microsoft.com/help/4464619) |
+| Windows 10 1803   | Included  | [Latest cumulative update](https://support.microsoft.com/en-us/help/4099479), or at least [September 26, 2018 Cumulative Update (KB 4458469)](https://support.microsoft.com/help/4458469) |
+| Windows 10 1709   | Included | [Latest cumulative update](https://support.microsoft.com/en-us/help/4043454), or at least [September 26, 2018 Cumulative Update (KB 4457136)](https://support.microsoft.com/help/4457136) |
+| Windows 8.1   | [KB 2976978](https://support.microsoft.com/help/2976978) | [Latest monthly rollup](https://support.microsoft.com/en-us/help/4009470), or at least [October 9, 2018 Monthly Rollup (KB 4462926)](https://support.microsoft.com/help/4462926) |
+| Windows 7 SP1 | [KB 2952664](https://support.microsoft.com/help/2952664) | [Latest monthly rollup](https://support.microsoft.com/en-us/help/4009469), or at least [October 9, 2018 monthly rollup (KB 4462923)](https://support.microsoft.com/help/4462923) |
 
-Restart devices after you install the compatibility updates for the first time.
-
-> [!Tip]  
-> Use Configuration Manager to automatically install the latest version of these updates. For more information, see [Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates).  
 
 > [!Note]  
-> There's a related optional update, [KB 3150513](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=3150513). This update provides updated configuration and definitions for older compatibility updates. For more information, see [Latest compatibility definition update for Windows](https://support.microsoft.com/help/3150513).  
-
-#### Windows 10
-
-Windows 10 includes the compatibility component. To get the latest compatibility update, install the latest Windows 10 cumulative update.
-
-#### Windows 8.1
-
-Download the update: [KB 2976978](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2976978) 
-
-Runs diagnostics on the Windows 8.1 systems that participate in the Windows Customer Experience Improvement Program. These diagnostics help determine whether you might have compatibility issues when upgrading to Windows 10.
-
-For more information, see [Compatibility update for keeping Windows up-to-date in Windows 8.1](https://support.microsoft.com/help/2976978).
-
-#### Windows 7 with Service Pack 1
-
-Download the update: [KB 2952664](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2952664) 
-
-Runs diagnostics on the Windows 7 with Service Pack 1 (SP1) systems that participate in the Windows Customer Experience Improvement Program. These diagnostics help determine whether you might have compatibility issues when upgrading to Windows 10.
-
-For more information, see [Compatibility update for keeping Windows up-to-date in Windows 7](https://support.microsoft.com/help/2952664).
-
-
-### <a name="bkmk_diagtrack"></a> Connected User Experiences and Telemetry service
-
-With Windows diagnostic data enabled, the Connected User Experience and Telemetry service (DiagTrack) collects system, application, and driver data. Microsoft analyzes this data, and shares it back to you via Desktop Analytics.
-
-For the best experience, install the following updates depending upon the OS version.
-
-> [!Note]  
-> When you install these updates, expect the following behaviors:
+> When you install the September 26, 2018 Cumulative Update or later on Windows 10 1803 or earlier devices, or the October 9, 2018 Monthly Rollup or later on Windows 7 SP1 or Windows 8.1 devices, you will get the following benefits on those operating systems:
 > 
 > - Devices that you enroll to Desktop Analytics show up in the service in less than an hour  
 > - Devices quickly report the status on Windows feature and quality updates  
 >
 > Without these updates, these processes can take over 48 hours for a device to report to Desktop Analytics.  
 
+> [!Note]  
+> For Windows 7 SP1 and Windows 8.1, there's a related optional update, [KB 3150513](https://support.microsoft.com/help/3150513) on top of either [KB 2952664](https://support.microsoft.com/help/2952664) or [KB 2976978](https://support.microsoft.com/help/2976978) respectively. This update provides updated configuration and definitions for older compatibility updates. This update is not needed if you install October 9, 2018 Monthly Rollup or later.
 
-#### Windows 10
+> [!Note]
+> If your organization does not apply "Monthly Quality Rollup" updates to Windows 7 devices, and only applies "Security Only" updates, you will find some "Security Only" updates in the [list of updates superseding KB 2952664](https://www.catalog.update.microsoft.com/ScopedViewInline.aspx?updateid=ad3652cd-2689-4726-b3ef-b086ded23c7c), that you can install instead of KB 2952664. This is not the case for Windows 8.1, where updates to KB 2976978 are only provided as part of "Monthly Quality Rollup" updates.
 
-Install the latest Windows 10 cumulative update.
-
-<!-- 
-- Windows 10 1809: Included in RTM build
-- Windows 10 1803: [KB4458469](https://support.microsoft.com/help/4458469) (OS Build 17134.319)
-- Windows 10 1709: [KB4457136](https://support.microsoft.com/help/4457136) (OS Build 16299.697)
-- Windows 10 1703: [KB4457141](https://support.microsoft.com/help/4457141) (OS Build 15063.1358)
-- Windows 10 1607: [KB4457127](https://support.microsoft.com/help/4457127) (OS Build 14393.2517)
- -->
-
-#### Windows 8.1
-
-Install the October 2018 monthly rollup, [KB4462926](https://support.microsoft.com/help/4462926)
-
-#### Windows 7
-
-Install the October 2018 monthly rollup, [KB4462923](https://support.microsoft.com/help/4462923)
-
+> [!Tip]  
+> Use Configuration Manager to automatically install these updates, and restart devices after you install the compatibility updates for the first time. For more information, see [Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates).  
 
 
 ## Device enrollment
