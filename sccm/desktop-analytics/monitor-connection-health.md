@@ -2,7 +2,7 @@
 title: Monitor connection health
 titleSuffix: Configuration Manager
 description: Details on how to monitor the connection health and device states for Desktop Analytics in Configuration Manager.
-ms.date: 06/11/2019
+ms.date: 10/31/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -290,8 +290,8 @@ Devices verify connectivity with a GET request to the following endpoint based o
 
 | OS version | Endpoint |
 |------------|----------|
-| Windows 10, version 1803 or later with the latest cumulative update | `https://v10c.events.data.microsoft.com/health/keepalive` |
-| Windows 10, version 1803 or later without the 2018-09 or later cumulative update | `https://v10.events.data.microsoft.com/health/keepalive` |
+| - Windows 10, version 1809 or later<br/>- Windows 10, version 1803 with the 2018-09 cumulative update or later | `https://v10c.events.data.microsoft.com/health/keepalive` |
+| Windows 10, version 1803 *without* the 2018-09 or later cumulative update | `https://v10.events.data.microsoft.com/health/keepalive` |
 | Windows 10, version 1709 or earlier | `https://v10.vortex-win.data.microsoft.com/health/keepalive` |
 | Windows 7 or Windows 8.1 | `https://vortex-win.data.microsoft.com/health/keepalive` |
 
