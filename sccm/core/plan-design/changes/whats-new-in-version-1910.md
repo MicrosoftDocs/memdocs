@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
-manager: dougeby
+manager: dougeby 
 ms.collection: M365-identity-device-management
 ---
 
@@ -48,15 +48,21 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## <a name="bkmk_real"></a> Real-time management
 
-### Optimizations to the CMPivot engine that pushes more of the processing to the ConfigMgr client
+### Optimizations to the CMPivot engine
 <!--3197353-->
-
-
-### Enable ATP and CMPivot to link to each other
-<!--4775821--?-->
+We've added some significant optimizations to the CMPivot engine that allows us to push more of the processing to the ConfigMgr client. The optimizations drastically reduce the network and server CPU load needed to run CMPivot queries. With these optimizations, we can now sift through gigabytes of client data in real time. For more information, see [Optimizations to the CMPivot engine](/sccm/core/servers/manage/cmpivot#bkmk_optimization).
 
 ### Additional CMPivot Entities and Enhancements
-<!--5410930-->
+<!--5410930-->'
+We've added a number of new CMPivot entities and entity enhancements to aid in troubleshooting and hunting. We've included the following entities to query:
+
+- Windows event logs ([WinEvent](/sccm/core/servers/manage/cmpivot#bkmk_WinEvent))
+- File content ([FileContent](/sccm/core/servers/manage/cmpivot#bkmk_File))
+- Dlls loaded by processes ([ProcessModule](/sccm/core/servers/manage/cmpivot#bkmk_ProcessModule))
+- Azure Active Directory information ([AADStatus](/sccm/core/servers/manage/cmpivot#bkmk_AadStatus))
+- Endpoint protection status ([EPStatus](/sccm/core/servers/manage/cmpivot#bkmk_EPStatus))
+
+This release also includes several [other enhancements](/sccm/core/servers/manage/cmpivot#bkmk_Other) to CMPivot. For more information, see [CMPivot starting in version 1910](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1910)
 
 
 ## <a name="bkmk_content"></a> Content management
