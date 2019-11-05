@@ -29,8 +29,6 @@ In System Center Configuration Manager, Windows PowerShell allows you to manage 
 
 - [TechNet: Using Windows PowerShell](https://msdn.microsoft.com/powershell/scripting/getting-started/fundamental/using-windows-powershell)  
 
-- [TechNet: Core Modules in Windows PowerShell](https://technet.microsoft.com/library/hh847741.aspx)  
-
 - [TechNet: Cmdlets in System Center Configuration Manager](https://technet.microsoft.com/library/jj849987.aspx)  
 
   **Books:** There are numerous books available for PowerShell. A few example books are listed below.  
