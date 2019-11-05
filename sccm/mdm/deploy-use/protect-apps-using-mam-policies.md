@@ -37,7 +37,7 @@ To apply restrictions to an app, the app must incorporate the Microsoft Intune A
 -   **Use a "wrapped" app** (Android and iOS): These apps are repackaged to include the App SDK by using the **Microsoft Intune App Wrapping Tool**. This tool is typically used to process company apps that were created in-house. It cannot be used to process apps that were downloaded from the app store. See the following articles for more information:
     - [Prepare iOS apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/library/dn878028.aspx)
 
-    - [Prepare Android apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/library/mt147413.aspx)  
+    - [Prepare Android apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://docs.microsoft.com/intune/developer/app-wrapper-prepare-android)  
 
 ## Create and deploy an app with a mobile application management policy  
 

@@ -5,7 +5,7 @@ description: Follow these steps to configure software update classifications and
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 11/02/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -43,13 +43,15 @@ Software updates metadata is retrieved during the synchronization process in Con
      - **Updates**: Specifies a widely released fix for a specific problem. An update addresses a non-critical, non-security-related bug.  
      - **Upgrade**: Specifies an  upgrade for Windows 10 features and functionality. Your software update points and sites must run a minimum of WSUS 6.2 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) to get the **Upgrade** classification. For more information about installing this update and other updates for **Upgrades**, see [Prerequisites for software updates](/sccm/sum/plan-design/prerequisites-for-software-updates#BKMK_wsus2012).
 
-    > [!NOTE] 
+    > [!NOTE]
     > 
-    > Beginning in Configuration Manager version 1706, you can select the **Include Microsoft Surface drivers and firmware updates** checkbox to synchronize Microsoft Surface drivers.<!--1098490--> All software update points must run Windows Server 2016 to successfully synchronize Surface drivers. If you enable a software update point on a computer running Windows Server 2012 after you enable Surface drivers, the scan results for the driver updates are not accurate. This results in incorrect compliance data displayed in the Configuration Manager console and in Configuration Manager reports.  
+    > You can select the **Include Microsoft Surface drivers and firmware updates** checkbox to synchronize Microsoft Surface drivers.<!--1098490--> All software update points must run Windows Server 2016 to successfully synchronize Surface drivers. If you enable a software update point on a computer running Windows Server 2012 after you enable Surface drivers, the scan results for the driver updates are not accurate. This results in incorrect compliance data displayed in the Configuration Manager console and in Configuration Manager reports.  
     >  
     > - This feature was first introduced in version 1706 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1710, this feature is no longer a pre-release feature.  
     >  
     > - Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+    >
+    > - Drivers for ARM devices aren't supported for synchronization.
 
 5. On the **Products** tab, specify the products for which you want to synchronize software updates, and then click **Close**.  
 
