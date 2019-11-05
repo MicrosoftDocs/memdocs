@@ -5,7 +5,7 @@ description: "Review Office 365 client information from the Office 365 Client Ma
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/01/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -78,7 +78,7 @@ By default, the scanning agent looks at the most recently used (MRU) files list 
 - Macro-enabled Office file formats, such as Excel macro-enabled workbooks (.xlsm) or Word macro-enabled document (.docm)  
 - Older Office formats that don't indicate whether there's macro content. For example, an Excel 97-2003 workbook (.xls).
 
-If you need a more detailed evaluation, deploy the **Office Readiness Toolkit**. This tool analyzes the code within a macro file. It checks if there are any potential compatibility concerns. For example, the file uses a function that changed in a more recent version of Office. After you run the Office Readiness Toolkit, Configuration Manager can use its results. This additional data enhances the device readiness calculation. For more information, see [Use the Readiness Toolkit to assess application compatibility for Office 365 ProPlus](https://aka.ms/readinesstoolkit).
+If you need a more detailed information about macro compatibility, deploy the **Readiness Toolkit for Office** to analyze the code within the macro files. It checks if there are any potential compatibility concerns. For example, the file uses a function that changed in a more recent version of Office. After you run the Readiness Toolkit for Office, Configuration Manager can use its results. This additional data enhances the device readiness calculation. For more information, see [Use the Readiness Toolkit for Office to assess application compatibility for Office 365 ProPlus](https://aka.ms/readinesstoolkit).
 
 ## <a name="bkmk_readiness-dash"></a> Office 365 ProPlus upgrade readiness dashboard
 
@@ -129,7 +129,7 @@ Configuration Manager looks at the most recently used files on each device. It c
 - Macro-enabled Office file formats.
 - Older Office formats, which don't indicate if there's macro content.
 
-If you need a more detailed evaluation for macros, use the **Office Readiness Toolkit** since it analyzes the code within the macro file. The results can be picked up by Configuration Manager's hardware inventory agent when you select the option for **Most recently used Office documents and installed add-ins on this computer**. The additional data can enhance the device readiness calculation. For more information, see [Use the Readiness Toolkit to assess application compatibility for Office 365 ProPlus](https://aka.ms/readinesstoolkit).
+If you need a more detailed information about macro compatibility, deploy the **Readiness Toolkit for Office** to analyze the code within the macro files. The results can be picked up by Configuration Manager's hardware inventory agent when you select the option for **Most recently used Office documents and installed add-ins on this computer**. The additional data can enhance the device readiness calculation. For more information, see [Use the Readiness Toolkit for Office to assess application compatibility for Office 365 ProPlus](https://aka.ms/readinesstoolkit).
 
 
 ## Next steps
