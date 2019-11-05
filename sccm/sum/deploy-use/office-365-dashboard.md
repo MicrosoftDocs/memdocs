@@ -158,7 +158,15 @@ If you need a more detailed information about macro compatibility, deploy the **
 <!--4488272, 4488301-->
 *(Introduced in version 1910)*
 
-Starting in version 1910, the **Office 365 ProPlus Pilot and Health Dashboard** helps you plan, pilot, and perform your Office 365 ProPlus deployment. The dashboard provides health insights for devices with Office 365 ProPlus to help identify possible issues that may affect your deployment plans. The **Office 365 ProPlus Pilot and Health Dashboard** provides a recommendation for pilot devices based on add-in inventory.
+Starting in version 1910, the **Office 365 ProPlus Pilot and Health Dashboard** helps you plan, pilot, and perform your Office 365 ProPlus deployment. The dashboard provides health insights for devices with Office 365 ProPlus to help identify possible issues that may affect your deployment plans. The **Office 365 ProPlus Pilot and Health Dashboard** provides a recommendation for pilot devices based on add-in inventory. The following tiles are in the dashboard:
+
+- Generate pilot
+- Recommended pilot devices
+- Deploy pilot
+- Devices sending health data
+- Devices not meeting health goals
+- Add-ins not meeting health goals
+- Macros not meeting health goals
 
 ### Using the Office 365 ProPlus pilot and health dashboard
 
