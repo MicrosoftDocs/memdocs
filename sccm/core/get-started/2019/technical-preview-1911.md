@@ -25,8 +25,8 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/1911/1234567.md)] -->
 
-[!INCLUDE [4960084](includes/1911/4960084.md)]
-[!INCLUDE [5032900](includes/1911/5032900.md)]
+[!INCLUDE [Microsoft Endpoint Configuration Manager](includes/1911/4960084.md)]
+[!INCLUDE [Microsoft Connected Cache support for Intune Win32 apps](includes/1911/5032900.md)]
 
 <!--
 ## General known issues
