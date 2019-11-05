@@ -87,10 +87,10 @@ CmRcViewer.exe supports the following command-line options:
 - *Site Server Name* - Specifies the name of the System Center Configuration Manager site server to which you want to send status messages that are related to the remote control session.
 - **/?** - Displays the command-line options for the remote control viewer.  
      
-**Example:CmRcViewer.exe** *<Address\>* *<\\\Site Server Name>* 
+**Example: CmRcViewer.exe** *<Address\>* *<\\\Site Server Name>* 
 
 > [!NOTE]  
-> The remote control viewer is supported on all operating systems that are supported for the Configuration Manager console. For information, see [Supported configurations for System Center Configuration Manager consoles](/sccm/core/plan-design/configs/supported-operating-systems-consoles) and [Prerequisites for remote control in System Center Configuration Manager](/sccm/core/clients/manage/remote-control/prerequisites-for-remote-control).
+> The remote control viewer is supported on all operating systems that are supported for the Configuration Manager console. For more information, see [Supported configurations for System Center Configuration Manager consoles](/sccm/core/plan-design/configs/supported-operating-systems-consoles) and [Prerequisites for remote control in System Center Configuration Manager](/sccm/core/clients/manage/remote-control/prerequisites-for-remote-control).
 
 ## Next steps
 
