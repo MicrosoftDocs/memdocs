@@ -1,7 +1,7 @@
 ---
-title: "Service Windows"
-titleSuffix: "Configuration Manager"
-description: "Use service windows to control when System Center Configuration Manager sites install updates."
+title: Service Windows
+titleSuffix: Configuration Manager
+description: Use service windows to control when Configuration Manager sites install updates.
 ms.date: 01/11/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
