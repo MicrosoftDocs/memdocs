@@ -94,14 +94,16 @@ To take full advantage of new Configuration Manager features, after you update t
 ### Custom default keyboard layout in boot image properties
 <!--4910348-->
 
-### Task sequence editor search
-<!--4621085-->
+### Improvements to the task sequence editor
+
+- **Search the task sequence editor**<!--4621085-->: If you have a large task sequence with many groups and steps, it can be difficult to find specific steps. You can now search in the task sequence editor. This action lets you more quickly locate steps in the task sequence.
+
+- **Copy and paste task sequence conditions**<!--4621098-->: If you want to reuse the conditions from one task sequence step to another, you can now copy and paste conditions in the task sequence editor.
+
+For more information, see the new article on how to [Use the task sequence editor](/sccm/osd/understand/task-sequence-editor).
 
 ### Task sequence performance improvements - power plans
 <!--3555926-->
-
-### Copy and paste task sequence conditions
-<!--4621098-->
 
 ### Task sequence download on demand over the internet
 <!--3601238-->

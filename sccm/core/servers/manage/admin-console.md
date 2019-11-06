@@ -2,7 +2,7 @@
 title: Configuration Manager Console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 08/16/2019
+ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -429,3 +429,5 @@ Starting in version 1906, you can enable some nodes under the **Security** node 
 ## Next steps
 
 [Accessibility features](/sccm/core/understand/accessibility-features)
+
+[Task sequence editor](/sccm/osd/understand/task-sequence-editor#bkmk_conditions)
