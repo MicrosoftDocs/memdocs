@@ -84,7 +84,6 @@ To include custom configuration baselines as part of compliance policy assessmen
   - If needed, verify the [prerequisites when the devices are co-managed](#bkmk_prereq-co-mgmt) using the next section.
 - Select [**Evaluate this baseline as part of compliance policy assessment**](#bkmk_eval-baseline) in a configuration baseline deployed to a device collection.
 
-
 ### <a name="bkmk_prereq-co-mgmt"></a> Prerequisites when the devices are co-managed
 
 - Make sure the [Compliance policies workload](/sccm/comanage/workloads#compliance-policies) is moved to either Pilot or Intune.
