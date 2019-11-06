@@ -154,7 +154,7 @@ If you need a more detailed information about macro compatibility, deploy the **
 
 
 
-## Office 365 ProPlus pilot and health dashboard
+## <a name="bkmk_pilot"></a> Office 365 ProPlus pilot and health dashboard
 <!--4488272, 4488301-->
 *(Introduced in version 1910)*
 
