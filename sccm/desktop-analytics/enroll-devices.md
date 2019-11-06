@@ -144,19 +144,19 @@ To change these settings, use the following procedure:
 
 Configuration Manager sets Windows policies in one or both of the following registry keys:
 
-- **IT policy**: `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
+- **GPO**: `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
-- **User** preference: `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
+- **Local Policy** preference: `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
 
 | Policy   | Path | Value  | 
 |----------|------|--------|
-| **CommercialId** | User | *Applies to Windows 7, Windows 8.1, and Windows 10*: In order for a device to show up in Desktop Analytics, configure it with your organization’s Commercial ID. | 
-| **AllowTelemetry**  | IT policy | *Applies to Windows 10*: Set `1` for **Basic**, `2` for **Enhanced**, or `3` for **Full** diagnostic data. Desktop Analytics requires at least basic diagnostic data. Microsoft recommends that you use the Enhanced (Limited) level with Desktop Analytics. For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
-| **LimitEnhancedDiagnosticDataWindowsAnalytics** | IT Policy | *Applies to Windows 10, version 1803 and later*: This setting only applies when the AllowTelemetry setting is `2`. It limits the Enhanced diagnostic data events sent to Microsoft to just those events needed by Desktop Analytics. For more information, see [Windows 10 diagnostic data events and fields collected through the limit enhanced diagnostic data policy](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields).|
-| **AllowDeviceNameInTelemetry** | IT policy | *Applies to Windows 10, version 1803 and later*: A separate opt-in is required to enable devices to continue to send the device name.<br> <br>Note: The device name isn't sent to Microsoft by default. If you don't send the device name, it appears in Desktop Analytics as "Unknown". This behavior can make it difficult to identify and assess devices. For more information, see [Device name](#device-name). | 
-| **CommercialDataOptIn** | User |*Applies to Windows 7 and Windows 8.1*: A value of `1` is required for Desktop Analytics. For more information, see [Commercial Data Opt-in in Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
-| **RequestAllAppraiserVersions** | Both |*Applies to all Windows versions*: A value of `1` is required for Desktop Analytics for data collection to work correctly. | 
-| **DisableEnterpriseAuthProxy** | IT policy |*Applies to all Windows versions*: A value of `0` is required for Desktop Analytics for data collection to work correctly. | 
+| **CommercialId** | Local Policy | *Applies to Windows 7, Windows 8.1, and Windows 10*: In order for a device to show up in Desktop Analytics, configure it with your organization’s Commercial ID. | 
+| **AllowTelemetry**  | GPO | *Applies to Windows 10*: Set `1` for **Basic**, `2` for **Enhanced**, or `3` for **Full** diagnostic data. Desktop Analytics requires at least basic diagnostic data. Microsoft recommends that you use the Enhanced (Limited) level with Desktop Analytics. For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
+| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | *Applies to Windows 10, version 1803 and later*: This setting only applies when the AllowTelemetry setting is `2`. It limits the Enhanced diagnostic data events sent to Microsoft to just those events needed by Desktop Analytics. For more information, see [Windows 10 diagnostic data events and fields collected through the limit enhanced diagnostic data policy](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields).|
+| **AllowDeviceNameInTelemetry** | GPO | *Applies to Windows 10, version 1803 and later*: A separate opt-in is required to enable devices to continue to send the device name.<br> <br>Note: The device name isn't sent to Microsoft by default. If you don't send the device name, it appears in Desktop Analytics as "Unknown". This behavior can make it difficult to identify and assess devices. For more information, see [Device name](#device-name). | 
+| **CommercialDataOptIn** | Local Policy |*Applies to Windows 7 and Windows 8.1*: A value of `1` is required for Desktop Analytics. For more information, see [Commercial Data Opt-in in Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
+| **RequestAllAppraiserVersions** | Both |*Applies to Windows 7 and Windows 8.1*: A value of `1` is required for Desktop Analytics for data collection to work correctly. | 
+| **DisableEnterpriseAuthProxy** | GPO |*Applies to all Windows versions*: A value of `0` is required for Desktop Analytics for data collection to work correctly. | 
 
 > [!Important]  
 > In most circumstances, only use Configuration Manager to configure these settings. Don't also apply these settings in domain group policy objects. For more information, see [Conflict resolution](#conflict-resolution).<!-- SCCMDocs-pr 3120 -->
