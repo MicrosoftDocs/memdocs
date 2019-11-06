@@ -171,8 +171,16 @@ For more information, see [Deploy Windows 10 in-place upgrade via CMG](/configmg
 ### View active consoles and message administrators through Console Connections
 <!--4923997-->
 
-### Client Diagnostics Actions
+### Client diagnostics actions
+
 <!--4433455-->
+
+There are new device actions for **Client Diagnostics** in the Configuration Manager console:
+
+- **Enable verbose logging**: Change the global log level for the CCM component to verbose, and enable debug logging.
+- **Disable verbose logging**: Change the global log level to default, and disable debug logging.
+
+For more information, see [Client diagnostics](/sccm/core/clients/manage/client-notification#client-diagnostics).
 
 ### Attach files to feedback
 <!--3556011-->
