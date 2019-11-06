@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 The System Center Configuration Manager Software Development Kit (SDK) ships with the following sample projects. Each sample has a readme file that explains how the sample works.  
 
 > [!IMPORTANT]
->  The complete System Center Configuration Manager SDK (documentation, samples, and supporting libraries) is available for download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=248167).  
+>  The complete System Center Configuration Manager SDK (documentation, samples, and supporting libraries) is available for download from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=29559).  
 >   
 >  Always use the MSDN library for the most up-to-date documentation.  
 
