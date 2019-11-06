@@ -186,7 +186,7 @@ You can register an SPN for the SQL Server service account of the site database 
 Use the following procedures as examples of how to manage the SPN for the SQL Server service account that uses the Setspn tool on Windows Server 2008 R2. For specific guidance about Setspn, see [Setspn Overview](https://go.microsoft.com/fwlink/p/?LinkId=226343), or similar documentation specific to your operating system.  
 
 > [!NOTE]  
-> The following procedures reference the Setspn command-line tool. The Setspn command-line tool is included when you install Windows Server 2003 Support Tools from the product CD or from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=100114). For more information about how to install Windows Support Tools from the product CD, see [Install Windows Support Tools](https://go.microsoft.com/fwlink/p/?LinkId=62270).  
+> The following procedures reference the Setspn command-line tool. The Setspn command-line tool is included when you install Windows Server 2003 Support Tools from the product CD or from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=15326). For more information about how to install Windows Support Tools from the product CD, see [Install Windows Support Tools](https://go.microsoft.com/fwlink/p/?LinkId=62270).  
 
 #### To manually create a domain user Service Principal Name (SPN) for the SQL Server service account  
 

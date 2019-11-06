@@ -80,7 +80,7 @@ For more information about Azure apps, start with the following articles:
 
 - [Authentication and authorization in Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)
 - [Web Apps overview](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)
-- [Basics of Registering an Application in Azure AD](https://docs.microsoft.com/azure/active-directory/develop/authentication-scenarios#authentication-basics-in-microsoft-identity-platform)  
+- [Basics of Registering an Application in Azure AD](/azure/active-directory/develop/authentication-scenarios)  
 - [Register your application with your Azure Active Directory tenant](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration)
 
 
@@ -269,6 +269,6 @@ The following diagram is a conceptual data flow for the interaction between Conf
 
 3. The site stores data about the user objects. For more information, see [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).  
 
-4. The Configuration Manager client requests the Azure AD user token. The client makes the claim using the application ID of the Azure AD client app, and the server app as the audience. For more information, see [Claims in Azure AD Security Tokens](https://docs.microsoft.com/azure/active-directory/develop/authentication-scenarios#claims-in-microsoft-identity-platform-security-tokens).  
+4. The Configuration Manager client requests the Azure AD user token. The client makes the claim using the application ID of the Azure AD client app, and the server app as the audience. For more information, see [Claims in Azure AD Security Tokens](/azure/active-directory/develop/authentication-scenarios#security-tokens).  
 
 5. The client authenticates with the site by presenting the Azure AD token to the cloud management gateway and on-premises HTTPS-enabled management point.  
