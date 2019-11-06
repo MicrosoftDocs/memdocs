@@ -113,7 +113,7 @@ Use the following procedure to modify an existing task sequence:
 
     - **Add a group**: Select **Add**, and then choose **New Group**. After you add a group, then add steps to it.  
 
-    - **Change the order**: Select the step or group that you want to reorder. Then use the **Move Up** or **Move Down** icons. You can move only one step or group at a time.
+    - **Change the order**: Select the step or group that you want to reorder. Then use the **Move Up** or **Move Down** icons. You can move only one step or group at a time. These actions are also available when you right-click a group or step.
 
         You can cut, copy, and paste a group or a step. Right-click the item and select the action. You can also use standard keyboard shortcuts for each action:
 
@@ -133,6 +133,8 @@ For a list of the available task sequence steps, see [Task sequence steps](/sccm
 > - Correct the reference
 > - Delete the unreferenced object from the task sequence  
 > - Temporarily disable the failed task sequence step until the broken reference is corrected or removed  
+
+You can open more than one instance of the task sequence editor at the same time. This behavior lets you compare multiple task sequences, or copy and paste steps between them. You can **Edit** one task sequence, and **View** another, but you can't do both actions on the same task sequence.
 
 ## <a name="bkmk_conditions"></a> Conditions
 
