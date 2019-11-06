@@ -81,7 +81,17 @@ To take full advantage of new Configuration Manager features, after you update t
 <!--4561024-->
 
 ### Improvements to application groups
+
 <!--4760058-->
+
+Starting in current branch version 1906, you can create a group of applications to send to a device collection as a single deployment. This release improves upon this feature:
+
+- Users can **Uninstall** the app group in Software Center.
+
+- You can deploy an app group to a **user collection**.
+
+For more general information, see [Create application groups](/configmgr/apps/deploy-use/create-app-groups).
+
 
 ## <a name="bkmk_osd"></a> OS deployment
 
@@ -100,7 +110,7 @@ To take full advantage of new Configuration Manager features, after you update t
 
 - **Copy and paste task sequence conditions**<!--4621098-->: If you want to reuse the conditions from one task sequence step to another, you can now copy and paste conditions in the task sequence editor.
 
-For more information, see the new article on how to [Use the task sequence editor](/sccm/osd/understand/task-sequence-editor).
+For more information, see the new article on how to [Use the task sequence editor](/configmgr/osd/understand/task-sequence-editor).
 
 ### Task sequence performance improvements - power plans
 <!--3555926-->
