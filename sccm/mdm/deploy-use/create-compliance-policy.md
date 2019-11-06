@@ -8,7 +8,7 @@ ms.technology: configmgr-hybrid
 ms.topic: conceptual
 ms.assetid: 0fd76043-d7ee-423d-8c5f-aa7e9ed58ce0
 author: aczechowski
-ms.author: aaroncz
+ms.author: aaroncz 
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -210,7 +210,7 @@ ms.collection: M365-identity-device-management
     - Windows 8.1  
     - iOS 6+  
     - Android 4.0+  
-    - Samsung KNOX Standard 4.0+  
+    - Samsung KNOX Standard 4.0+   
 
 - **Device must not be jailbroken or rooted**: If you enable this setting, jailbroken (iOS) or rooted (Android) devices aren't compliant. This setting is disabled by default.  
 

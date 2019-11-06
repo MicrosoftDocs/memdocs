@@ -2,7 +2,7 @@
 title: "Create configuration baselines"
 titleSuffix: "Configuration Manager"
 description: "Create configuration baselines in System Center Configuration Manager that you can deploy to a collection."
-ms.date: 07/30/2018
+ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -19,13 +19,17 @@ ms.collection: M365-identity-device-management
 
 Configuration baselines in System Center Configuration Manager contain predefined configuration items and optionally, other configuration baselines. After a configuration baseline is created, you can deploy it to a collection so that devices in that collection download the configuration baseline and assess their compliance with it.  
 
+## Configuration baselines
+
  Configuration baselines in Configuration Manager can contain specific revisions of configuration items or can be configured to always use the latest version of a configuration item. For more information about configuration item revisions, see [Management tasks for configuration data](../../compliance/deploy-use/management-tasks-for-configuration-data.md).  
 
  There are two methods that you can use to create configuration baselines:  
 
--   Import configuration data from a file. To start the **Import Configuration Data Wizard**, in the **Configuration Items** or **Configuration Baselines** node in the **Assets and Compliance** workspace, click **Import Configuration Data**.  
+- Import configuration data from a file. To start the **Import Configuration Data Wizard**, in the **Configuration Items** or **Configuration Baselines** node in the **Assets and Compliance** workspace, click **Import Configuration Data**. For more information, see [Import configuration data](/sccm/compliance/deploy-use/import-configuration-data).
 
--   Use the **Create Configuration Baseline** dialog box to create a new configuration baseline.  
+- Use the **Create Configuration Baseline** dialog box to create a new configuration baseline.  
+
+## Create a configuration baseline
 
 To create a configuration baseline by using the **Create Configuration Baseline** dialog box, use the following procedure:  
 
@@ -66,4 +70,80 @@ To create a configuration baseline by using the **Create Configuration Baseline*
 10. Click **OK** to close the **Create Configuration Baseline** dialog box and to create the configuration baseline.  
 
 >[!NOTE]
-> Modifying an existing baseline, such as setting **Always apply this baseline for co-managed clients**, will increment the baseline content version. Clients will need to evaluate the new version to update the baseline reporting. 
+> Modifying an existing baseline, such as setting **Always apply this baseline for co-managed clients**, will increment the baseline content version. Clients will need to evaluate the new version to update the baseline reporting.
+
+## <a name="bkmk_CAbaselines"></a> Include custom configuration baselines as part of compliance policy assessment
+<!--3608345-->
+*(Introduced in version 1910)*
+
+Starting in version 1910, you can add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you have an option to **Evaluate this baseline as part of compliance policy assessment**. When adding or editing a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**.
+
+To include custom configuration baselines as part of compliance policy assessment, do the following:
+
+- Create and deploy a compliance policy to a user collection with a rule to [**Include configured baselines in compliance policy assessment**](#bkmk_CA).
+  - If needed, verify the [prerequisites when the devices are co-managed](#bkmk_prereq-co-mgmt) using the next section.
+- Select [**Evaluate this baseline as part of compliance policy assessment**](#bkmk_eval-baseline) in a configuration baseline deployed to a device collection.
+
+
+### <a name="bkmk_prereq-co-mgmt"></a> Prerequisites when the devices are co-managed
+
+- Make sure the [Compliance policies workload](/sccm/comanage/workloads#compliance-policies) is moved to either Pilot or Intune.
+- From Intune's Windows 10 compliance policy, make sure that **Require** is set for [**Configuration Manager Compliance**](https://docs.microsoft.com/intune/protect/compliance-policy-create-windows#configuration-manager-compliance).
+
+### Example evaluation scenario
+
+When a user is part of a collection targeted with a compliance policy that includes the rule condition **Include configured baselines in compliance policy assessment**, any baselines with the **Evaluate this baseline as part of compliance policy assessment** option selected that are deployed to the user or the user's device are evaluated for compliance. For example:
+
+- `User1` is part of `User Collection 1`.
+- `User1` uses `Device1`, which is in `Device Collection 1` and `Device Collection 2`.
+- `Compliance Policy 1` has the **Include configured baselines in compliance policy assessment** rule condition and is deployed to `User Collection 1`.
+- `Configuration Baseline 1` has **Evaluate this baseline as part of compliance policy assessment** selected and is deployed to `Device Collection 1`.
+- `Configuration Baseline 2` has **Evaluate this baseline as part of compliance policy assessment** selected and is deployed to `Device Collection 2`.
+
+In this scenario, when `Compliance Policy 1` evaluates for `User1` using `Device1`, both `Configuration Baseline 1` and `Configuration Baseline 2` are evaluated too.
+
+- `User1` sometimes uses `Device2`.
+- `Device2`is a member of `Device Collection 2` and `Device Collection 3`.
+- `Device Collection 3` has `Configuration Baseline 3` deployed to it, but **Evaluate this baseline as part of compliance policy assessment** isn't selected.
+
+When `User1` uses `Device2`, only `Configuration Baseline 2` gets evaluated when `Compliance Policy 1` evaluates.
+
+> [!NOTE]
+><!--5582516-->
+> If the compliance policy evaluates a new baseline that has never been evaluated on the client before, it may report non-compliance. This occurs if the baseline evaluation is still running when the compliance is evaluated. To workaround this issue, click **Check compliance** in the **Software Center**.
+
+### <a name="bkmk_CA"></a> Create and deploy a compliance policy with a rule for baseline compliance policy assessment
+
+1. In the **Assets and Compliance** workspace, expand **Compliance Settings**, then select the **Compliance Polices** node.
+1. Click **Create Compliance Policy** in the ribbon to bring up the **Create Compliance Policy Wizard**. For more information, see [Create and deploy a device compliance policy](/sccm/mdm/deploy-use/create-compliance-policy).
+1. On the **General** page, select **Compliance rules for devices managed with the Configuration Manager client**.
+   - Devices must be managed with the Configuration Manager client to include custom configuration baselines as part of compliance policy assessment.
+1. Select your platforms on the **Supported Platforms** pages.
+1. On the **Rules** page, select **New**, then select the **Include configured baselines in compliance policy assessment** condition.
+![Include configured baselines in compliance policy assessment condition](./media/3608345-create-compliance-policy-rule.png)
+1. Click **OK**, then **Next** to get to the **Summary** page.
+1. Verify your selections and click **Next** then **Close**.
+1. In the **Compliance Polices** node, right-click on the policy you created, and select **Deploy**.
+1. Choose your collection, alert generation settings, and your compliance evaluation schedule for the policy.
+1. Click **OK** to deploy the compliance policy.
+
+#### <a name="bkmk_eval-baseline"></a>Select a configuration baseline and check "Evaluate this baseline as part of compliance policy assessment"
+
+1. In the **Assets and Compliance** workspace, expand **Compliance Settings**, then select the **Configuration Baselines** node.
+1. Right-click on an existing baseline that's deployed to a device collection, then select **Properties**. If needed, you can create a new baseline.
+   - The baseline must be deployed to a device collection, not a user collection.
+1. Enable the **Evaluate this baseline as part of compliance policy assessment** setting.
+1. Click **OK** to save the changes to your configuration baseline.
+
+![Configuration Baseline Properties dialog box](./media/3608345-configuration-baseline-properties.png)
+
+## Log files
+
+- ComplianceHandler.log
+- SettingsAgent.log
+- DCMAgent.log
+- CIAgent.log
+
+## Next steps
+
+[Import configuration data](/sccm/compliance/deploy-use/import-configuration-data)
