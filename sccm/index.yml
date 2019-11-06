@@ -194,7 +194,7 @@ additionalContent:
         url: https://aka.ms/cmcbsupport
       - title: System Center 2012 R2 Configuration Manager
         summary: Documentation for the previous version of Configuration Manager
-        url: https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144\(v=technet.10\)
+        url: https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144(v=technet.10)
    - title: Other content
      items:
         - title: Develop
