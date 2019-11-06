@@ -58,7 +58,7 @@ You can change the configuration of the log files, such as the verbose level, si
 - [During client installation](#bkmk_logoptions-clientprop)
 - [Using Configuration Manager Service Manager](#bkmk_logoptions-sm)
 - [Using the Windows Registry](#bkmk_logoptions-registry)
-- [In the Configuration Manager console](bkmk_logoptions-console)
+- [In the Configuration Manager console](#bkmk_logoptions-console)
 
 ### <a name="bkmk_logoptions-clientprop"></a> Configure logging options during client installation
 
