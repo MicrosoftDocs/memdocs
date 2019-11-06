@@ -106,7 +106,14 @@ For more information, see the new article on how to [Use the task sequence edito
 <!--3555926-->
 
 ### Task sequence download on demand over the internet
+
 <!--3601238-->
+
+You can use the task sequence to deploy Windows 10 in-place upgrade via cloud management gateway (CMG). However, it requires the deployment to download all content locally before starting the task sequence.
+
+Starting in this release, the task sequence engine can download packages on-demand from a content-enabled CMG or a cloud distribution point. This change provides additional flexibility with your Windows 10 in-place upgrade deployments to internet-based devices.
+
+For more information, see [Deploy Windows 10 in-place upgrade via CMG](/configmgr/osd/deploy-use/deploy-a-task-sequence#deploy-windows-10-in-place-upgrade-via-cmg).
 
 ### Set keyboard layout during OS deployment
 <!--5138936-->
