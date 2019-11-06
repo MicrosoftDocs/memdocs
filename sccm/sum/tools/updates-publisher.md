@@ -93,7 +93,7 @@ Once authoring mode is enabled, you can create detectoids for updates. Detectoid
 
 ## Release history
 
-- [2019 RTW version 6.0.394.0](placeholder). Released November, 6, 2019
+- [2019 RTW version 6.0.394.0](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/SCUP-adds-support-for-update-categories/ba-p/990111). Released November, 6, 2019
 - [Update rollup version 6.0.283.0 from KB4462765](https://support.microsoft.com/help/4462765/update-rollup-for-system-center-updates-publisher). Released September 7, 2018.
 - [2017 RTW version 6.0.276.0](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/System-Center-Updates-Publisher-adds-support-for-new-OSes/ba-p/274986). Released March 26, 2018.
 
