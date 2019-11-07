@@ -76,7 +76,7 @@ To create a configuration baseline by using the **Create Configuration Baseline*
 <!--3608345-->
 *(Introduced in version 1910)*
 
-Starting in version 1910, you can add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you have an option to **Evaluate this baseline as part of compliance policy assessment**. When adding or editing a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**.
+Starting in version 1910, you can add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you have an option to **Evaluate this baseline as part of compliance policy assessment**. When adding or editing a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**.  For co-managed devices and when Intune is configured to take ConfigMgr compliance assessment result as part of the overall compliance status, the info gets sent to Azure AD and can be used for [conditional access to your Office 365 resources](/configmgr/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm#configure-conditional-access).  
 
 To include custom configuration baselines as part of compliance policy assessment, do the following:
 
@@ -88,6 +88,8 @@ To include custom configuration baselines as part of compliance policy assessmen
 
 - Make sure the [Compliance policies workload](/sccm/comanage/workloads#compliance-policies) is moved to either Pilot or Intune.
 - From Intune's Windows 10 compliance policy, make sure that **Require** is set for [**Configuration Manager Compliance**](https://docs.microsoft.com/intune/protect/compliance-policy-create-windows#configuration-manager-compliance).
+- Hybrid Azure AD joined
+- Windows 10, version 1709 or later
 
 ### Example evaluation scenario
 
