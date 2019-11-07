@@ -24,7 +24,7 @@ manager: dougeby
 ## Understanding Logs  
  Before effective troubleshooting of MDT can begin, you must have a clear understanding of the many .log files used during an operating system deployment. When you know which log files to research for what failure condition and at what time, issues that were once mysterious and difficult to understand may become clear and understandable.  
 
- The MDT log file format is designed to be read by Trace32, which is part of the System Center Configuration Manager 2007 Toolkit V2, available for download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=9257). The logs can also be read by the Configuration Manager Trace Log Tool (CMTrace) that is available with System Center 2012 Configuration Manager and later versions. Use these tools whenever possible to read the log files, because it makes finding errors much easier.  
+ The MDT log file format is designed to be read by Trace32, which is part of the System Center Configuration Manager 2007 Toolkit V2, available for download from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=9257). The logs can also be read by the Configuration Manager Trace Log Tool (CMTrace) that is available with System Center 2012 Configuration Manager and later versions. Use these tools whenever possible to read the log files, because it makes finding errors much easier.  
 
  The rest of this section details the log files created during deployment as well as during Windows Setup. This section also provides examples of when to use the files for troubleshooting.  
 
@@ -270,8 +270,6 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
     The **NET HELPMSG** command translates the numerical error code into meaningful text. In the case of the error code provided here, it translates to “The specified network name is no longer available.”  
 
    This information indicates that a networking problem may exist on the target computer or between the target computer and the server on which the deployment share resides. These problems might include network drivers not being installed properly or a mismatch in speed and duplex settings.  
-
-   **Possible Solution 2:** Use the Microsoft Exchange Server Error Code Look-up utility. This command-line utility is valuable in assisting with error code translation. It is available for download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=985).  
 
 ### Review of Sample Logs  
  MDT creates log files that you can use to troubleshoot problems in the MDT deployment process. The following sections provide examples of how to use the MDT log files to troubleshoot the deployment process:  
