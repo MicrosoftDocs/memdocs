@@ -87,7 +87,17 @@ For more information, see [Include custom configuration baselines as part of com
 <!--4561024-->
 
 ### Improvements to application groups
+
 <!--4760058-->
+
+Starting in current branch version 1906, you can create a group of applications to send to a device collection as a single deployment. This release improves upon this feature:
+
+- Users can **Uninstall** the app group in Software Center.
+
+- You can deploy an app group to a **user collection**.
+
+For more general information, see [Create application groups](/configmgr/apps/deploy-use/create-app-groups).
+
 
 ## <a name="bkmk_osd"></a> OS deployment
 
@@ -106,13 +116,20 @@ For more information, see [Include custom configuration baselines as part of com
 
 - **Copy and paste task sequence conditions**<!--4621098-->: If you want to reuse the conditions from one task sequence step to another, you can now copy and paste conditions in the task sequence editor.
 
-For more information, see the new article on how to [Use the task sequence editor](/sccm/osd/understand/task-sequence-editor).
+For more information, see the new article on how to [Use the task sequence editor](/configmgr/osd/understand/task-sequence-editor).
 
 ### Task sequence performance improvements - power plans
 <!--3555926-->
 
 ### Task sequence download on demand over the internet
+
 <!--3601238-->
+
+You can use the task sequence to deploy Windows 10 in-place upgrade via cloud management gateway (CMG). However, it requires the deployment to download all content locally before starting the task sequence.
+
+Starting in this release, the task sequence engine can download packages on-demand from a content-enabled CMG or a cloud distribution point. This change provides additional flexibility with your Windows 10 in-place upgrade deployments to internet-based devices.
+
+For more information, see [Deploy Windows 10 in-place upgrade via CMG](/configmgr/osd/deploy-use/deploy-a-task-sequence#deploy-windows-10-in-place-upgrade-via-cmg).
 
 ### Set keyboard layout during OS deployment
 <!--5138936-->
@@ -160,8 +177,16 @@ For more information, see the new article on how to [Use the task sequence edito
 ### View active consoles and message administrators through Console Connections
 <!--4923997-->
 
-### Client Diagnostics Actions
+### Client diagnostics actions
+
 <!--4433455-->
+
+There are new device actions for **Client Diagnostics** in the Configuration Manager console:
+
+- **Enable verbose logging**: Change the global log level for the CCM component to verbose, and enable debug logging.
+- **Disable verbose logging**: Change the global log level to default, and disable debug logging.
+
+For more information, see [Client diagnostics](/sccm/core/clients/manage/client-notification#client-diagnostics).
 
 ### Attach files to feedback
 <!--3556011-->
