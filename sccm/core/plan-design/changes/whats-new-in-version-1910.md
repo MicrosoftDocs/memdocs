@@ -33,7 +33,12 @@ To take full advantage of new Configuration Manager features, after you update t
 ## <a name="bkmk_infra"></a> Site infrastructure
 
 ### Reclaim SEDO lock
+
 <!--4786915-->
+
+Starting in [current branch version 1906](/configmgr/core/plan-design/changes/whats-new-in-version-1906#reclaim-sedo-lock-for-task-sequences), you could clear your lock on a task sequence. Now you can clear your lock on any object in the Configuration Manager console.
+
+For more information, see [Using the Configuration Manager console](/configmgr/core/servers/manage/admin-console#bkmk_sedo).
 
 ### Extend and Migrate on-premises Configuration Manager environment to Microsoft Azure
 <!--3556022-->
