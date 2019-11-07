@@ -1,6 +1,6 @@
 ### YamlMime:Hub 
-title: Microsoft Endpoint Configuration Manager
-summary: Official product documentation for the Configuration Manager component of Microsoft Endpoint Manager
+title: Microsoft Endpoint Configuration Manager documentation
+summary: "Official product documentation for the following components of Microsoft Endpoint Manager: Configuration Manager, co-management, and Desktop Analytics"
 metadata:
    ms.topic: hub-page
 
