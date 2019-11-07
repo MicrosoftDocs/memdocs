@@ -138,7 +138,7 @@ When `User1` uses `Device2`, only `Configuration Baseline 2` gets evaluated when
 
 ![Configuration Baseline Properties dialog box](./media/3608345-configuration-baseline-properties.png)
 
-## Log files
+### Log files for custom configuration baselines as part of compliance policy assessment
 
 - ComplianceHandler.log
 - SettingsAgent.log
