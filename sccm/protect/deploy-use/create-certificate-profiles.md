@@ -48,11 +48,11 @@ On the **General** page of the Create Certificate Profile Wizard, specify the fo
 
 - **Description**: Provide a description that gives an overview of the certificate profile. Also include other relevant information that helps to identify it in the Configuration Manager console. You can use a maximum of 256 characters.  
 
-- **Specify the type of certificate profile that you want to create**: Choose one of the following certificate profile types:  
+- Specify the type of certificate profile that you want to create:
 
   - **Trusted CA certificate**: Select this type to deploy a trusted root certification authority (CA) or intermediate CA certificate to form a certificate chain of trust when the user or device must authenticate another device. For example, the device might be a Remote Authentication Dial-In User Service (RADIUS) server or a virtual private network (VPN) server.
   
-  Also configure a trusted CA certificate profile before you can create a SCEP certificate profile. In this case, the trusted CA certificate must be for the CA that issues the certificate to the user or device.  
+    Also configure a trusted CA certificate profile before you can create a SCEP certificate profile. In this case, the trusted CA certificate must be for the CA that issues the certificate to the user or device.  
 
   - **Simple Certificate Enrollment Protocol (SCEP) settings**: Select this type to request a certificate for a user or device with the Simple Certificate Enrollment Protocol and the Network Device Enrollment Service (NDES) role service.
 
@@ -112,14 +112,14 @@ Complete the **SCEP Enrollment** page of the Create Certificate Profile Wizard.
 
   - **Install to Windows Hello for Business otherwise fail**: This option is available for Windows 10 devices. It allows you to store the certificate in the Windows Hello for Business store, which is protected by multi-factor authentication. For more information, see [Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
-  > [!NOTE]  
-  > This option doesn't support Smart card logon for the Enhanced key usage on the Certificate Properties page.
+    > [!NOTE]  
+    > This option doesn't support Smart card logon for the Enhanced key usage on the Certificate Properties page.
 
   - **Install to Software Key Storage Provider**: Installs the key to the storage provider for the software key.  
 
-- **Devices for certificate enrollment**: If you deploy the certificate profile to a user collection, allow certificate enrollment on only the user's primary device or on all devices to which the user signs in.
+- **Devices for certificate enrollment**: If you deploy the certificate profile to a user collection, allow certificate enrollment only on the user's primary device, or on any device to which the user signs in.
 
-    If you deploy the certificate profile to a device collection, allow certificate enrollment for only the primary user of the device or for all users that sign in to the device.  
+    If you deploy the certificate profile to a device collection, allow certificate enrollment for only the primary user of the device, or for all users that sign in to the device.  
 
 ### 3. Certificate Properties
 
@@ -143,7 +143,7 @@ On the **Certificate Properties** page of the Create Certificate Profile Wizard,
 
 - **Certificate type**: Select whether you'll deploy the certificate to a device or a user.  
 
-- **Subject name format**: From the list, select how Configuration Manager automatically creates the subject name in the certificate request. If the certificate is for a user, you can also include the user's email address in the subject name.
+- **Subject name format**: Select how Configuration Manager automatically creates the subject name in the certificate request. If the certificate is for a user, you can also include the user's email address in the subject name.
 
     > [!NOTE]  
     > If you select **IMEI number** or **Serial number**, you can differentiate between different devices that are owned by the same user. For example, those devices could share a common name, but not an IMEI number or serial number. If the device doesn't report an IMEI or serial number, the certificate is issued with the common name.

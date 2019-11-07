@@ -18,7 +18,7 @@ ms.collection: M365-identity-device-management
 *Applies to: Configuration Manager (current branch)*
 
 <!--1245704-->
-Configuration Manager integrates with Windows Hello for Business. (This feature was formerly known as Microsoft Passport for Work.) Windows Hello for Business is an alternative sign-in method for Windows 10 devices. It uses Active Directory or an Azure Active Directory (Azure AD) account to replace a password, smart card, or virtual smart card. Hello for Business lets you use a **user gesture** to sign in instead of a password. A user gesture might be a PIN, biometric authentication, or an external device such as a fingerprint reader.
+Configuration Manager integrates with Windows Hello for Business. (This feature was formerly known as Microsoft Passport for Work.) Windows Hello for Business is an alternative sign-in method for Windows 10 devices. It uses Active Directory or an Azure Active Directory (Azure AD) account to replace a password, smart card, or virtual smart card. Hello for Business lets you use a *user gesture* to sign in instead of a password. A user gesture might be a PIN, biometric authentication, or an external device such as a fingerprint reader.
 
 > [!Important]  
 > Starting in version 1910, certificate-based authentication with Windows Hello for Business settings in Configuration Manager isn't supported. For more information, see [deprecated features](/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Key-based authentication is still valid.
