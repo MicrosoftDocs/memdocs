@@ -191,6 +191,9 @@ If the Configuration Manager console stops responding, you can be locked out of 
 
 Starting in version 1906, you can clear your lock on a task sequence. This action only applies to your user account that has the lock, and on the same device from which the site granted the lock. When you attempt to access a locked task sequence, you can now **Discard Changes**, and continue editing the object. These changes would be lost anyway when the lock expired.
 
+> [!TIP]
+> Starting in version 1910, you can clear your lock on any object in the Configuration Manager console. For more information, see [Using the Configuration Manager console](/configmgr/core/servers/manage/admin-console#bkmk_sedo).<!--4786915-->
+
 ## <a name="bkmk_search"></a> Search
 
 <!-- 4621085 -->
