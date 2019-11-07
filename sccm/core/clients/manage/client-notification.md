@@ -81,7 +81,7 @@ Starting in version 1810, client notification actions now require the **Notify R
 The following built-in roles have this permission by default:
 
 - Full Administrator  
-- Infrastructure Administrator  
+- Operations Administrator  
 
 Add this permission to any custom roles that need to use client notification actions.
 
