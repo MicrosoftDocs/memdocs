@@ -15,6 +15,8 @@ manager: dougeby
 
 # Metadata and Markdown Template
 
+*Applies to: Configuration Manager (current branch, technical preview branch, long-term servicing branch)*
+
 This docs.ms template contains examples of markdown syntax, as well as guidance on setting the metadata. It is available in the root directory of each EM Pilot repository (e.g. ~/Azure-RMSDocs-pr
 /template.md) and is meant to be read as a markdown file, although you can refer to [the published version](https://stage.docs.microsoft.com/en-us/rights-management/template) to see how the markdown examples rendeer.
 
