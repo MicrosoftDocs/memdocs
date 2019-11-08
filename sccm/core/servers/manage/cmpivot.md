@@ -679,6 +679,14 @@ When using CMPivot outside of the Configuration Manager console, you can query j
 
 ### <a name="bkmk_Other"></a> Other enhancements
 
+- You can do regular expression type queries using the new `like` operator. For example:<!--3056858-->
+  
+   ```kusto
+   //Find BIOS manufacture that contains any word like Micro, such as Microsoft
+   Bios
+   | where Manufacturer like ‘%Micro%’
+   ```
+
 - We've updated the **CcmLog()** and **EventLog()** entities to only look at messages in the last 24 hours by default. This behavior can be overridden by passing in an optional timespan. For example, the following query will look at events in the last 1 hour:
 
    ```kusto
