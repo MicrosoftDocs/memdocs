@@ -101,7 +101,7 @@ For UUP updates to install successfully, install both of the following updates:
 | **Windows 10, version 1709** | April 2019, [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441) | November 7, 2019, [KB4512744](https://www.catalog.update.microsoft.com/search.aspx?q=4512744) |
 
 > [!IMPORTANT]
-> If you apply the November 12, 2019 updates to the client before applying the November 7, 2019 additional catalog update, the Windows Update Agent changes needed to support UUP will be overwritten.  
+> If you apply the November 12, 2019 updates to the client before applying the November 7, 2019 additional catalog update, the Windows Update Agent changes needed to support UUP will be overwritten. To remediate clients in that scenario, apply the additional catalog update after the November 12, 2019 updates are installed.
 
 ### 4. Allow clients to download delta content when available
 
