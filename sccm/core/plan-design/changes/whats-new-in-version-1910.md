@@ -118,7 +118,12 @@ For more general information, see [Create application groups](/configmgr/apps/de
 For more information, see the new article on how to [Use the task sequence editor](/configmgr/osd/understand/task-sequence-editor).
 
 ### Task sequence performance improvements - power plans
+
 <!--3555926-->
+
+You can now run a task sequence with the high performance power plan. This option improves the overall speed of the task sequence. It configures Windows to use its built-in high performance power plan, which delivers maximum performance at the expense of higher power consumption.
+
+For more information, see [Performance improvements for power plans](/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks#bkmk_perf).
 
 ### Task sequence download on demand over the internet
 
