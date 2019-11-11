@@ -2,7 +2,7 @@
 title: UUP preview
 titleSuffix: Configuration Manager
 description: Instructions for preview of UUP integration
-ms.date: 10/25/2019
+ms.date: 11/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -95,9 +95,13 @@ For UUP updates to install successfully, install both of the following updates:
 
 | Windows 10 version | Minimum compliance level | Additional catalog update |
 | ------------------ | ------------------------ | ------------------ |
-| **Windows 10, version 1809** | August 2019, [KB4511553](https://support.microsoft.com/help/4511553/windows-10-update-kb4511553) | [KB4514987](https://www.catalog.update.microsoft.com/search.aspx?q=4514987) |
-| **Windows 10, version 1803** | April 2019, [KB4493464](https://support.microsoft.com/help/4493464/windows-10-update-kb4493464) | [KB4512745](https://www.catalog.update.microsoft.com/search.aspx?q=4512745) |
-| **Windows 10, version 1709** | April 2019, [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441) | [KB4512744](https://www.catalog.update.microsoft.com/search.aspx?q=4512744) |
+| **Windows 10, version 1903** | RTM | November 7, 2019, [KB4529943](https://www.catalog.update.microsoft.com/search.aspx?q=4529943) |
+| **Windows 10, version 1809** | August 2019, [KB4511553](https://support.microsoft.com/help/4511553/windows-10-update-kb4511553) | November 7, 2019, [KB4514987](https://www.catalog.update.microsoft.com/search.aspx?q=4514987) |
+| **Windows 10, version 1803** | April 2019, [KB4493464](https://support.microsoft.com/help/4493464/windows-10-update-kb4493464) | November 7, 2019, [KB4512745](https://www.catalog.update.microsoft.com/search.aspx?q=4512745) |
+| **Windows 10, version 1709** | April 2019, [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441) | November 7, 2019, [KB4512744](https://www.catalog.update.microsoft.com/search.aspx?q=4512744) |
+
+> [!IMPORTANT]
+> If you apply the November 12, 2019 updates to the client before applying the November 7, 2019 additional catalog update, the Windows Update Agent changes needed to support UUP will be overwritten. To remediate clients in that scenario, apply the additional catalog update after the November 12, 2019 updates are installed.
 
 ### 4. Allow clients to download delta content when available
 
