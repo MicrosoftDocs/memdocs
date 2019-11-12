@@ -143,8 +143,11 @@ For more information, see [Manage OS upgrade packages](/configmgr/osd/get-starte
 
 #### Output the results of a Run Command Line step to a variable during a task sequence
 
-<!--4977616-->
-<!-- need to check ADO - this isn't in TP 1908...? -->
+<!--user story 4977616/bug 4798352-->
+
+The **Run Command Line** step now includes an option to **Output to task sequence variable**. When you enable this option, the task sequence saves the output from the command to a custom task sequence variable that you specify.
+
+For more information, see [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine).
 
 #### <!-- download package content, boot images -->
 

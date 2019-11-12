@@ -351,11 +351,11 @@ Select this option to set the local administrator password to a randomly generat
 
 Select this option to enable the local administrator account using the specified password. Enter the password on the **Password** line and confirm the password on the **Confirm password** line.  
 
-#### Time Zone
+#### Time zone
 
 Specify the time zone to configure on the destination computer. The value that the **Capture Windows Settings** task sequence step captures can override this value.  
 
-#### <!-- Locale settings -->
+#### Language settings
 
 <!--5411057, 5138936-->
 
@@ -1540,6 +1540,15 @@ Examples:
 > [!NOTE]  
 > To run successfully, precede command-line actions with the **cmd.exe /c** command. Example of these actions include output redirection, piping, and copy commands.  
 
+#### Output to task sequence variable
+
+<!--user story 4977616/bug 4798352-->
+
+Starting in version 1910, save the command output to a custom task sequence variable.
+
+> [!Note]  
+> Configuration Manager limits this output to the last 1000 characters.
+
 #### Disable 64-bit file system redirection
 
 By default, 64-bit operating systems use the WOW64 file system redirector to run command lines. This behavior is to properly find 32-bit versions of OS executables and libraries. Select this option to disable the use of the WOW64 file system redirector. Windows runs the command using native 64-bit versions of OS executables and libraries. This option has no effect when running on a 32-bit OS.  
@@ -1680,6 +1689,9 @@ Determine which PowerShell scripts (if any) you allow to run on the computer. Ch
 
 <!-- 3556028 -->
 Starting in version 1902, save the script output to a custom task sequence variable.
+
+> [!Note]  
+> Starting in version 1910, Configuration Manager limits this output to the last 1000 characters.
 
 #### Start in
 

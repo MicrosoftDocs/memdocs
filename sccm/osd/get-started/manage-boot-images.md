@@ -191,9 +191,9 @@ On the **Customization** tab, select any of the following settings:
 
 - Set the **Windows PE Background** settings to specify whether you want to use the default WinPE background or a custom background.  
 
-- Select **Enable command support (testing only)** to open a command prompt by using the **F8** key while the boot image is deployed. This option is useful for troubleshooting while you're testing your deployment. Using this setting in a production deployment isn't advised because of security concerns.  
+- Configure the **Windows PE scratch space (MB)**, which is temporary storage (RAM drive) used by WinPE. For example, when an application is run within WinPE and needs to write temporary files, WinPE redirects the files to the scratch space in memory to simulate the presence of a hard disk. By default, this amount is 512 MB for devices with more than 1 GB of RAM, otherwise the default is 32 MB.  
 
-- Configure the Windows PE scratch space, which is temporary storage (RAM drive) used by WinPE. For example, when an application is run within WinPE and needs to write temporary files, WinPE redirects the files to the scratch space in memory to simulate the presence of a hard disk. By default, this amount is 512 MB for devices with more than 1 GB of RAM, otherwise the default is 32 MB.  
+- Select **Enable command support (testing only)** to open a command prompt by using the **F8** key while the boot image is deployed. This option is useful for troubleshooting while you're testing your deployment. Using this setting in a production deployment isn't advised because of security concerns.  
 
 - **Set default keyboard layout in WinPE**: <!--4910348-->Starting in version 1910, configure the default keyboard layout for a boot image. If you select a language other than en-us, Configuration Manager still includes en-us in the available input locales. On the device, the initial keyboard layout is the selected locale, but the user can switch the device to en-us if needed.
 
