@@ -88,14 +88,16 @@ To make sure both your Windows 10 version 1909 and Windows 10, version 1903 clie
 
 When you approve feature updates for Windows 10, version 1909, there are a few different options you'll see:
 
-- Windows 10, version 1903 is offered an enablement package, [KB4517245](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4517245), released November 11,2019.
+- Windows 10, version 1903 is offered an enablement package, [KB4517245](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4517245), released November 12, 2019.
   - The enablement package is a small, quick to install file that activates the Windows 10, version 1909 features and restarts the device.
   - Prerequisites for the enablement package include:
-    - a minimum cumulative update of [KB4517389](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4517389), released October 8, 2019.
+    - A minimum cumulative update of [KB4517389](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4517389), released October 8, 2019.
     - A minimum servicing stack update of [KB4520390](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4520390), released September 24, 2019.
 - Windows 10, version 1809 and earlier clients are upgraded with a single direct feature update.
   - This is just like all other previous installations for Feature Updates that you've done for Windows 10.
 
+> [!NOTE]
+> Both the enablement package and the traditional feature update for Windows 10, version 1909 will show as "Installed" in reporting, regardless of which path was used to install it.
 
 ### Windows 10, version 1903 and later
 
