@@ -1,5 +1,5 @@
 ---
-title: "Resource Explorer Default Inventory Classes"
+title: "Resource Explorer default inventory classes"
 titleSuffix: Configuration Manager
 description: "Shows the classes that appear in Resource Explorer"
 ms.date: 11/12/2019
@@ -12,7 +12,13 @@ author: adamgrosstx
 ms.author: aaroncz
 manager: dougeby
 ---
-# Resource Explorer Default Inventory Classes
+# Resource Explorer default inventory classes
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
+This article describes the default inventory classes in Resource Explorer.
+
+## Default inventory classes
 
 ### 1394 Controller
 
