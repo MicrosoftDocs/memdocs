@@ -5,7 +5,7 @@ description: Follow these steps to configure software update classifications and
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/12/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -74,7 +74,7 @@ You can select the **Include Microsoft Surface drivers and firmware updates** ch
 
 ### Windows 10, version 1909
 
-Windows 10, version 1909 shares a common core operating system with Windows 10, version 1903. Both of these versions are serviced with the same cumulative updates. For more information about Windows 10, version 1909, see the [Windows 10, version 1909 delivery options](#PLACEHOLDER) blog post.
+Windows 10, version 1909 shares a common core operating system with Windows 10, version 1903. Both of these versions are serviced with the same cumulative updates. <!-- For more information about Windows 10, version 1909, see the [Windows 10, version 1909 delivery options](#PLACEHOLDER) blog post.-->
 
 To make sure both your Windows 10 version 1909 and Windows 10, version 1903 clients install updates from Configuration Manager:
 
@@ -88,11 +88,11 @@ To make sure both your Windows 10 version 1909 and Windows 10, version 1903 clie
 
 When you approve feature updates for Windows 10, version 1909, there are a few different options you'll see:
 
-- Windows 10, version 1903 is offered an enablement package, [KB4517245](#PLACEHOLDER).
+- Windows 10, version 1903 is offered an enablement package, [KB4517245](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4517245), released November 11,2019.
   - The enablement package is a small, quick to install file that activates the Windows 10, version 1909 features and restarts the device.
   - Prerequisites for the enablement package include:
-    - a minimum cumulative update of [KB#PLACEHOLDER](##PLACEHOLDER), released October 8, 2019.
-    - A minimum servicing stack update of [KB#PLACEHOLDER](#PLACEHOLDER), released September 24, 2019.
+    - a minimum cumulative update of [KB4517389](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4517389), released October 8, 2019.
+    - A minimum servicing stack update of [KB4520390](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4520390), released September 24, 2019.
 - Windows 10, version 1809 and earlier clients are upgraded with a single direct feature update.
   - This is just like all other previous installations for Feature Updates that you've done for Windows 10.
 
