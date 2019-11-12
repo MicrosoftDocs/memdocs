@@ -74,7 +74,7 @@ You can select the **Include Microsoft Surface drivers and firmware updates** ch
 
 ### Windows 10, version 1909
 
-Windows 10, version 1909 shares a common core operating system with Windows 10, version 1903. Both of these versions are serviced with the same cumulative updates. For more information about Windows 10, version 1909, see the [Windows 10, version 1909 delivery options](https://aka.ms/1909mechanics blog post.
+Windows 10, version 1909 shares a common core operating system with Windows 10, version 1903. Both of these versions are serviced with the same cumulative updates. For more information about Windows 10, version 1909, see the [Windows 10, version 1909 delivery options](https://aka.ms/1909mechanics) blog post.
 
 To make sure both your Windows 10 version 1909 and Windows 10, version 1903 clients install updates from Configuration Manager:
 
