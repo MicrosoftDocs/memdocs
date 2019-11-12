@@ -100,15 +100,6 @@ For more general information, see [Create application groups](/configmgr/apps/de
 
 ## <a name="bkmk_osd"></a> OS deployment
 
-### Output the results of a Run Command Line step to a variable during a task sequence
-<!--4977616-->
-
-### Import a single index of an OS upgrade package
-<!--4931110-->
-
-### Custom default keyboard layout in boot image properties
-<!--4910348-->
-
 ### Improvements to the task sequence editor
 
 - **Search the task sequence editor**<!--4621085-->: If you have a large task sequence with many groups and steps, it can be difficult to find specific steps. You can now search in the task sequence editor. This action lets you more quickly locate steps in the task sequence.
@@ -130,17 +121,74 @@ Starting in this release, the task sequence engine can download packages on-dema
 
 For more information, see [Deploy Windows 10 in-place upgrade via CMG](/configmgr/osd/deploy-use/deploy-a-task-sequence#deploy-windows-10-in-place-upgrade-via-cmg).
 
-### Set keyboard layout during OS deployment
-<!--5138936-->
+### Improvements to OS deployment
 
-### Improvements to task sequence debugger
-<!-- 5012536, 5012509 -->
+This release includes the following improvements to OS deployment:
 
-### Improved language support in task sequence
-<!--5411057-->
+#### Boot image keyboard layout
 
-### New variable for Windows 10 in-place upgrade
+<!--4910348-->
+
+Configure the default keyboard layout for a boot image. On the **Customization** tab of a boot image, use the new option to **Set default keyboard layout in WinPE**. If you select a language other than en-us, Configuration Manager still includes en-us in the available input locales. On the device, the initial keyboard layout is the selected locale, but the user can switch the device to en-us if needed.
+
+For more information, see [Manage boot images](/configmgr/osd/get-started/manage-boot-images#customization).
+
+#### Import a single index of an OS upgrade package
+
+<!--4931110-->
+
+When importing an OS upgrade package, you can **Extract a specific image index from install.wim file of selected upgrade package**. This behavior is similar as with [OS images](/configmgr/osd/get-started/manage-operating-system-images#BKMK_AddOSImages), except it overwrites the existing install.wim in the OS upgrade package. It extracts the image index to a temporary location, and then moves it into the original source directory.
+
+For more information, see [Manage OS upgrade packages](/configmgr/osd/get-started/manage-operating-system-upgrade-packages#BKMK_AddOSUpgradePkgs).
+
+#### Output the results of a Run Command Line step to a variable during a task sequence
+
+<!--4977616-->
+<!-- need to check ADO - this isn't in TP 1908...? -->
+
+#### <!-- download package content, boot images -->
+
+<!-- SCCMDocs-pr #4202 -->
+
+#### <!-- runas variables -->
+
+<!-- SCCMDocs-pr #4624 -->
+
+For more information, see []().
+
+#### Improvements to task sequence debugger
+
+This release includes the following improvements to the task sequence debugger:
+
+- Use the new task sequence variable **TSDebugOnError** to automatically start the debugger when the task sequence returns an error.<!-- 5012536 -->
+
+- If you create a breakpoint in the debugger, and then the task sequence restarts the computer, the debugger keeps the breakpoints after restart.<!-- 5012509 -->
+
+For more information, see [Task sequence debugger](/configmgr/osd/deploy-use/debug-task-sequence) and [Task sequence variables - TSDebugOnError](/configmgr/osd/understand/task-sequence-variables#TSDebugOnError).
+
+#### Improved language support in task sequence
+
+<!--5411057, 5138936-->
+
+This release adds control over language configuration during OS deployment. If you're already applying these language settings, this change can help you simplify your OS deployment task sequence. Instead of using multiple steps per language or separate scripts, use one instance per language of the built-in **Apply Windows Settings** step with a condition for that language.
+
+Use the **Apply Windows Settings** task sequence step to configure the following new settings:
+
+- Input locale (default keyboard layout)
+- System locale
+- UI language
+- UI language fallback
+- User locale
+
+For more information, see [Apply Windows Settings](/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyWindowsSettings).
+
+#### New variable for Windows 10 in-place upgrade
+
 <!--4680263-->
+
+To address timing issues with the Window 10 in-place upgrade task sequence on high performance devices when Windows setup is complete, you can now set a new task sequence variable **SetupCompletePause**. When you assign a value in seconds to this variable, the Windows setup process delays that amount of time before it starts the task sequence. This timeout provides the Configuration Manager client additional time to initialize.
+
+For more information, see []().
 
 ## <a name="bkmk_userxp"></a> Software Center
 
