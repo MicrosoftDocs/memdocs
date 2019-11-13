@@ -34,7 +34,7 @@ The basic functionality of Desktop Analytics works at the **Basic** [diagnostic 
 Microsoft recommends that you enable the **Enhanced (Limited)** diagnostic data level with Desktop Analytics to maximize the benefits you get from it. 
 
 > [!Tip]
-> The **Enhanced (Limited)** setting in Configuration Manager is the same setting as **Limit Enhanced diagnostic data to the minimum required by Windows Analytics** policy avaliable on devices running Windows 10, version 1709 and later. 
+> The **Enhanced (Limited)** setting in Configuration Manager is the same setting as **Limit Enhanced diagnostic data to the minimum required by Windows Analytics** policy available on devices running Windows 10, version 1709 and later. 
 >
 > Devices running Windows 10, version 1703 and earlier, Windows 8.1, or Windows 7 don't have this policy setting. When you configure the **Enhanced (Limited)** setting in Configuration Manager, these devices fall back to the **Basic** level.
 >
