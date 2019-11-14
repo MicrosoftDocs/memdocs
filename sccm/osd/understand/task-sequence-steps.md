@@ -926,7 +926,7 @@ When this step runs, the application checks the applicability of the requirement
 > [!NOTE]  
 > To install an application that supersedes another application, the content files for the superseded application must be available. Otherwise this task sequence step fails. For example, Microsoft Visio 2010 is installed on a client or in a captured image. When the **Install Application** step installs Microsoft Visio 2013, the content files for Microsoft Visio 2010 (the superseded application) must be available on a distribution point. If Microsoft Visio isn't installed at all on a client or captured image, the task sequence installs Microsoft Visio 2013 without checking for the Microsoft Visio 2010 content files.  
 >
-> If you retire a superceded app, and the new app is referenced in a task sequence, the task sequence fails to start.
+> If you retire a superseded app, and the new app is referenced in a task sequence, the task sequence fails to start.
 This behavior is by design: the task sequence requires all app references.<!-- SCCMDocs 1711 -->  
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
