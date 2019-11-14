@@ -144,17 +144,17 @@ manager: dougeby
 
     -   E:\Source$\Windows_8-1  
 
-    -   E:Source$MDT_2013  
+    -   E:\Source$\MDT_2013  
 
-    -   E:Source$SQL2008R2  
+    -   E:\Source$\SQL2008R2  
 
-    -   E:Source$SQL2008R2SP1  
+    -   E:\Source$\SQL2008R2SP1  
 
-    -   E:Source$SQL2008R2CU6  
+    -   E:\Source$\SQL2008R2CU6  
 
-    -   E:Source$ConfigMgr  
+    -   E:\Source$\ConfigMgr  
 
-    -   E:Packages$Drivers  
+    -   E:\Packages$\Drivers  
 
 3. Copy the device drivers for the reference computer (WDG-REF-01) and the target computer (WDG-CLI-01) to E:\Source$\Drivers.  
 
