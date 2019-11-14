@@ -5,7 +5,7 @@ description: Follow these steps to configure software update classifications and
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 11/14/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -88,11 +88,18 @@ To make sure both your Windows 10 version 1909 and Windows 10, version 1903 clie
 
 When you approve feature updates for Windows 10, version 1909, there are a few different options you'll see:
 
-- Windows 10, version 1903 is offered an enablement package, [KB4517245](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4517245), released November 12, 2019.
+- Windows 10, version 1903 is offered an [Enablement Package](https://support.microsoft.com/en-us/help/4517245/feature-update-via-windows-10-version-1909-enablement-package), released November 12, 2019.
   - The enablement package is a small, quick to install file that activates the Windows 10, version 1909 features and restarts the device.
   - Prerequisites for the enablement package include:
     - A minimum cumulative update of [KB4517389](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4517389), released October 8, 2019.
     - A minimum servicing stack update of [KB4520390](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4520390), released September 24, 2019.
+  - This update, like any other Feature Update, isn't available for import from `https:\\catalog.update.microsoft.com`.
+  - The update will automatically synchronize with WSUS if you have the **Windows 10, version 1903 and later** product and **Upgrades** classification selected for synchronization.
+  - In the Configuration Manager console, go to the **Software Library** workspace, expand **Windows 10 Servicing**, and select the **All Windows 10 Updates** node. Search for the terms "enablement" or "4517245".
+
+    > [!TIP]
+    > Since these are feature updates, they aren't in the **All Software Updates** node.
+
 - Windows 10, version 1809 and earlier clients are upgraded with a single direct feature update.
   - This is just like all other previous installations for Feature Updates that you've done for Windows 10.
 
