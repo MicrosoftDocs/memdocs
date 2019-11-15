@@ -103,6 +103,7 @@ For UUP updates to install successfully, install both of the following updates:
 > [!IMPORTANT]
 > - If you apply the November 12, 2019 updates to the client before applying the November 7, 2019 additional catalog update, the Windows Update Agent changes needed to support UUP will be overwritten. To remediate clients in that scenario, apply the additional catalog update after the November 12, 2019 updates are installed.
 > - If you apply a feature update to the client, you will need to reinstall the additional catalog update after the upgrade is complete.
+> - Consider importing the updates into Configuration Manager to ease the testing of feature updates, see [Import updates from the Microsoft Update Catalog](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog). The additional catalog update will show as **required** after the feature update is complete, which should allow for an automatic deployment to the up-level operating system.
 
 ### 4. Allow clients to download delta content when available
 
