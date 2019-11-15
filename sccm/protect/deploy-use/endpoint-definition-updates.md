@@ -45,7 +45,7 @@ ms.collection: M365-identity-device-management
 
 3.  Open the properties page of the **Default Antimalware Policy** or create a new antimalware policy. For more information about how to create antimalware policies, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
 
-4.  In the **Definition updates** section of the antimalware properties dialog box, click **Set Source**.
+4.  In the **Security Intelligence updates** section of the antimalware properties dialog box, click **Set Source**.
 
 5.  In the **Configure Definition Update Sources** dialog box, select the sources to use for definition updates. You can click **Up** or **Down** to modify the order in which these sources are used.
 
