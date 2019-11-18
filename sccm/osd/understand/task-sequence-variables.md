@@ -1566,6 +1566,48 @@ Indicates that a restart is requested after the current task sequence step is co
 
 Requests a retry after the current task sequence step is completed. If this task sequence variable is set, also set the [SMSTSRebootRequested](#SMSTSRebootRequested) variable to `true`. After the computer is restarted, the task sequence manager reruns the same task sequence step.
 
+### <a name="SMSTSRunCommandLineUserName"></a> SMSTSRunCommandLineUserName
+
+*Applies to the [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step.*
+
+(input)
+
+Specifies the account by which the command line is run. The value is a string of the form username or domain\username. Specify the account password with the [SMSTSRunCommandLineUserPassword](#SMSTSRunCommandLineUserPassword) variable.
+
+> [!NOTE]
+> To use these variables, configure the **Run Command Line** step with the setting to **Run this step as the following account**. When you enable this option, if you're setting the user name and password with variables, specify any value for the account.
+
+For more information on the task sequence run-as account, see [Accounts](/configmgr/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
+
+### <a name="SMSTSRunCommandLineUserPassword"></a> SMSTSRunCommandLineUserPassword
+
+*Applies to the [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step.*
+
+(input)
+
+Specifies the password for the account specified by the [SMSTSRunCommandLineUserName](#SMSTSRunCommandLineUserName) variable.
+
+### <a name="SMSTSRunPowerShellUserName"></a> SMSTSRunPowerShellUserName
+
+*Applies to the [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) step.*
+
+(input)
+
+Specifies the account by which the PowerShell script is run. The value is a string of the form username or domain\username. Specify the account password with the [SMSTSRunPowerShellUserPassword](#SMSTSRunPowerShellUserPassword) variable.
+
+> [!NOTE]
+> To use these variables, configure the **Run PowerShell Script** step with the setting to **Run this step as the following account**. When you enable this option, if you're setting the user name and password with variables, specify any value for the account.
+
+For more information on the task sequence run-as account, see [Accounts](/configmgr/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
+
+### <a name="SMSTSRunPowerShellUserPassword"></a> SMSTSRunPowerShellUserPassword
+
+*Applies to the [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) step.*
+
+(input)
+
+Specifies the password for the account specified by the [SMSTSRunPowerShellUserName](#SMSTSRunPowerShellUserName) variable.
+
 ### <a name="SMSTSSoftwareUpdateScanTimeout"></a> SMSTSSoftwareUpdateScanTimeout
 
 *Applies to the [Install Software Updates](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) step.*

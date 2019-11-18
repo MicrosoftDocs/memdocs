@@ -1509,6 +1509,8 @@ Use the following task sequence variables with this step:
 
 - [OSDDoNotLogCommand](/configmgr/osd/understand/task-sequence-variables#OSDDoNotLogCommand) (starting in version 1902)<!--3654172-->  
 - [SMSTSDisableWow64Redirection](/configmgr/osd/understand/task-sequence-variables#SMSTSDisableWow64Redirection)  
+- [SMSTSRunCommandLineUserName](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName)  
+- [SMSTSRunCommandLineUserPassword](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserPassword)  
 - [WorkingDirectory](/configmgr/osd/understand/task-sequence-variables#WorkingDirectory)  
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Run Command Line**.
@@ -1612,6 +1614,8 @@ This step can be run in the full OS or Windows PE. To run this step in Windows P
 Use the following task sequence variables with this step:  
 
 - [OSDLogPowerShellParameters](/configmgr/osd/understand/task-sequence-variables#OSDLogPowerShellParameters) (starting in version 1902)<!--3556028-->  
+- [SMSTSRunPowerShellUserName](/sccm/osd/understand/task-sequence-variables#SMSTSRunPowerShellUserName)  
+- [SMSTSRunPowerShellUserPassword](/sccm/osd/understand/task-sequence-variables#SMSTSRunPowerShellUserPassword)  
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Run PowerShell Script**.
 

@@ -149,16 +149,6 @@ The **Run Command Line** step now includes an option to **Output to task sequenc
 
 For more information, see [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine).
 
-#### <!-- download package content, boot images -->
-
-<!-- SCCMDocs-pr #4202 -->
-
-#### <!-- runas variables -->
-
-<!-- SCCMDocs-pr #4624 -->
-
-For more information, see []().
-
 #### Improvements to task sequence debugger
 
 This release includes the following improvements to the task sequence debugger:
