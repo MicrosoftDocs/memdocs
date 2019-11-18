@@ -90,6 +90,7 @@ To include custom configuration baselines as part of compliance policy assessmen
 - From Intune's Windows 10 compliance policy, make sure that **Require** is set for [**Configuration Manager Compliance**](https://docs.microsoft.com/intune/protect/compliance-policy-create-windows#configuration-manager-compliance).
 - Hybrid Azure AD joined
 - Windows 10, version 1709 or later
+- Ensure the **Always apply this baseline even for co-managed clients** option is selected in the baseline when enabling the **Evaluate this baseline as part of compliance policy assessment** option.
 
 ### Example evaluation scenario
 
@@ -134,6 +135,7 @@ When `User1` uses `Device2`, only `Configuration Baseline 2` gets evaluated when
 1. Right-click on an existing baseline that's deployed to a device collection, then select **Properties**. If needed, you can create a new baseline.
    - The baseline must be deployed to a device collection, not a user collection.
 1. Enable the **Evaluate this baseline as part of compliance policy assessment** setting.
+   - For co-managed devices, ensure you also select the **Always apply this baseline even for co-managed clients** option.
 1. Click **OK** to save the changes to your configuration baseline.
 
 ![Configuration Baseline Properties dialog box](./media/3608345-configuration-baseline-properties.png)
