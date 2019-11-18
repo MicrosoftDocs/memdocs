@@ -721,7 +721,7 @@ After installation, you can change the port. You don't have to use the same port
   - Add non-clustered indexes to the WSUS database to improve WSUS cleanup performance
   - Remove obsolete updates from the WSUS database
   
-  If the default SQL port is changed to an alternate port, ensure the site server can connect to SQL using the port you defined.
+  If the default SQL Server port is changed to an alternate port with SQL Server Configuration Manager, ensure the site server can connect using the defined port. Configuration Manager doesn't support dynamic ports. By default, SQL Server named instances use dynamic ports for connections to the database engine. When you use a named instance, manually configure the static port.
 
 #### <a name="bkmk_note4"></a> Note 4: Trivial FTP (TFTP) Daemon
 The Trivial FTP (TFTP) Daemon system service doesn't require a user name or password and is an integral part of Windows Deployment Services (WDS). The Trivial FTP Daemon service implements support for the TFTP protocol that's defined by the following RFCs:  
