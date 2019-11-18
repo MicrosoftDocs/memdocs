@@ -129,7 +129,7 @@ When `User1` uses `Device2`, only `Configuration Baseline 2` gets evaluated when
 1. Choose your collection, alert generation settings, and your compliance evaluation schedule for the policy.
 1. Click **OK** to deploy the compliance policy.
 
-#### <a name="bkmk_eval-baseline"></a>Select a configuration baseline and check "Evaluate this baseline as part of compliance policy assessment"
+### <a name="bkmk_eval-baseline"></a>Select a configuration baseline and check "Evaluate this baseline as part of compliance policy assessment"
 
 1. In the **Assets and Compliance** workspace, expand **Compliance Settings**, then select the **Configuration Baselines** node.
 1. Right-click on an existing baseline that's deployed to a device collection, then select **Properties**. If needed, you can create a new baseline.
