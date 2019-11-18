@@ -2,7 +2,7 @@
 title: UUP preview
 titleSuffix: Configuration Manager
 description: Instructions for preview of UUP integration
-ms.date: 11/08/2019
+ms.date: 11/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -103,6 +103,7 @@ For UUP updates to install successfully, install both of the following updates:
 > [!IMPORTANT]
 > - If you apply the November 12, 2019 updates to the client before applying the November 7, 2019 additional catalog update, the Windows Update Agent changes needed to support UUP will be overwritten. To remediate clients in that scenario, apply the additional catalog update after the November 12, 2019 updates are installed.
 > - If you apply a feature update to the client, you will need to reinstall the additional catalog update after the upgrade is complete.
+> - To make it easier to test feature updates, import the updates into Configuration Manager. For more information, see [Import updates from the Microsoft Update Catalog](/configmgr/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog). After the feature update is complete, the additional catalog update shows as **required**, which allows for automatic deployment to the up-level OS version.
 
 ### 4. Allow clients to download delta content when available
 
