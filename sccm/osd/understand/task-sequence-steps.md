@@ -745,7 +745,7 @@ Use this step to download any of the following package types:
 - OS upgrade packages  
 - Driver packages  
 - Packages  
-- Boot images (in version 1810 and earlier)  
+- Boot images <sup>[Note 1](#bkmk_note1)</sup>  
 
 This step works well in a task sequence to upgrade an OS in the following scenarios:  
 
@@ -791,7 +791,21 @@ Configuration Manager adds a numerical suffix to the variable name. For example,
 
 If the task sequence fails to download a package, it starts to download the next package in the list.  
 
+### <a name="bkmk_note1"></a> Note 1: Use of boot images in the Download Package Content step
 
+*Applies to version 1910 and later*<!-- SCCMDocs-pr #4202 -->
+
+If you configure the [task sequence properties](/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks#bkmk_prop-advanced) to **Use a boot image**, then adding a boot image to this step is redundant and it won't pre-cache. Only add a boot image to this step for [pre-caching](/configmgr/osd/deploy-use/configure-precache-content), and if it's not specified on the properties of the task sequence. For example:
+
+- Download task sequence:
+  - No associated boot image
+  - Uses Download Package Content step with pre-caching to download in the full OS the content for the specific language and architecture
+  - Only one instance of this task sequence, with all of the possible package options
+
+- OS deployment task sequences:
+  - A normal OS deployment task sequence
+  - Boot image reference in the properties
+  - Multiple instances of this task sequence, with different boot images as needed by architecture and language
 
 ## <a name="BKMK_EnableBitLocker"></a> Enable BitLocker  
 

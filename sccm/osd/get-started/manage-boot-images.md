@@ -240,6 +240,8 @@ On the **Data Source** tab, update any of the following settings:
 
 - If you use the boot image in a PXE-enabled deployment, select **Deploy this boot image from the PXE-enabled distribution point**. For more information, see [Use PXE to deploy Windows over the network](/configmgr/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network).  
 
+- Starting in version 1910, if you want to pre-cache content on a client, specify the **Architecture** and **Language** of the boot image. For more information, see [Use of boot images in the Download Package Content step](/configmgr/osd/understand/task-sequence-steps#bkmk_note1) and [Configure pre-cache content](/configmgr/osd/deploy-use/configure-precache-content).<!--SCCMDocs-pr #4202-->  
+
 #### Data Access
 
 On the **Data Access** tab, you can configure package share settings. If needed in your environment, set the option to **Copy the content in this package to a package share on distribution points**. You then have the additional option to **Use a custom name for the package share** and specify the custom **Share name**. Additional disk space is required on distribution points when you enable this option. It applies to all distribution points that receive this boot image.
