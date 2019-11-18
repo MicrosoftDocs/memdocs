@@ -1288,6 +1288,33 @@ Specifies the name of the workgroup that the destination computer joins.
 
 Specify either this variable or the [OSDDomainName](#OSDDomainName) variable. The workgroup name can be a maximum of 32 characters.
 
+### <a name="SetupCompletePause"></a> SetupCompletePause
+
+*Applies to the [Upgrade Operating System](/configmgr/osd/understand/task-sequence-steps#BKMK_UpgradeOS) step.*
+
+<!-- 4680263 -->
+
+Starting in version 1910, use this variable to address timing issues with the Window 10 in-place upgrade task sequence on high performance devices when Windows setup is complete. When you assign a value in seconds to this variable, the Windows setup process delays that amount of time before it starts the task sequence. This timeout provides the Configuration Manager client additional time to initialize.
+
+The following log entries are common examples of this issue that you can remediate with this variable:
+
+- The TSManager component records entries similar to the following errors in the **smsts.log**:
+
+    ``` log
+    Failed to initate policy evaluation for namespace 'root\ccm\policy\machine', hr=0x80041010
+    Error compiling client config policies. code 80041010
+    Task Sequence Manager could not initialize Task Sequence Environment. code 80041010
+    ```
+
+- Windows setup records entries similar to the following errors in the **setupcomplete.log**:
+
+    ``` log
+    Running C:\windows\CCM\\TSMBootstrap.exe to resume task sequence
+    ERRORLEVEL = -1073741701
+    TSMBootstrap did not request reboot, resetting registry
+    Exiting setupcomplete.cmd
+    ```
+
 ### <a name="SMSClientInstallProperties"></a> SMSClientInstallProperties
 
 *Applies to the [Setup Windows and ConfigMgr](task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step.*

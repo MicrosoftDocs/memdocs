@@ -181,7 +181,7 @@ For more information, see [Apply Windows Settings](/configmgr/osd/understand/tas
 
 To address timing issues with the Window 10 in-place upgrade task sequence on high performance devices when Windows setup is complete, you can now set a new task sequence variable **SetupCompletePause**. When you assign a value in seconds to this variable, the Windows setup process delays that amount of time before it starts the task sequence. This timeout provides the Configuration Manager client additional time to initialize.
 
-For more information, see []().
+For more information, see [Task sequence variables - SetupCompletePause](/configmgr/osd/understand/task-sequence-variables#SetupCompletePause).
 
 ## <a name="bkmk_userxp"></a> Software Center
 

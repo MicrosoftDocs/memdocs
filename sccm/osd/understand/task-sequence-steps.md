@@ -1999,6 +1999,7 @@ This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 Use the following task sequence variables with this step:  
 
 - [_SMSTSOSUpgradeActionReturnCode](/configmgr/osd/understand/task-sequence-variables#SMSTSOSUpgradeActionReturnCode)  
+- [SetupCompletePause](/configmgr/osd/understand/task-sequence-variables#SetupCompletePause)
 - [OSDSetupAdditionalUpgradeOptions](/configmgr/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions)  
 
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Upgrade Operating System**.
