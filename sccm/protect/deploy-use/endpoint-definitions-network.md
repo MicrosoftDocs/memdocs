@@ -2,7 +2,7 @@
 title: Download definitions from a network share
 titleSuffix: Configuration Manager
 description: Learn how to manually download the latest definition updates from Microsoft and then configure clients to download these definitions.
-ms.date: 02/14/2017
+ms.date: 11/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -32,7 +32,8 @@ ms.collection: M365-identity-device-management
 
 3.  Open the properties page of the **Default Antimalware Policy** or create a new antimalware policy. For more information about how to create antimalware policies, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
 
-4.  In the **Definition updates** section of the antimalware properties dialog box, click **Set Source**.
+4.  In the **Security Intelligence updates** section of the antimalware properties dialog box, click **Set Source**.
+    - The **Definition updates** section was renamed to **Security Intelligence updates** starting in Configuration Manager version 1902.
 
 5.  In the **Configure Definition Update Sources** dialog box, select **Updates from UNC file shares**.
 
