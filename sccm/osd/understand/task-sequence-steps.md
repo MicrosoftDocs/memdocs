@@ -306,12 +306,11 @@ Use the following task sequence variables with this step:
 - [OSDServerLicenseConnectionLimit](/configmgr/osd/understand/task-sequence-variables#OSDServerLicenseConnectionLimit)  
 - [OSDServerLicenseMode](/configmgr/osd/understand/task-sequence-variables#OSDServerLicenseMode)  
 - [OSDTimeZone](/configmgr/osd/understand/task-sequence-variables#OSDTimeZone-input)  
-- OSDWindowsSettingsInputLocaleOverride
-- OSDWindowsSettingsSystemLocaleOverride
-- OSDWindowsSettingsUserLocaleOverride
-- OSDWindowsSettingsUILanguageOverride
-- OSDWindowsSettingsUILanguageFallbackOverride
-- OSDTimeZoneOverride
+- [OSDWindowsSettingsInputLocale](/configmgr/osd/understand/task-sequence-variables#OSDWindowsSettingsInputLocale)
+- [OSDWindowsSettingsSystemLocale](/configmgr/osd/understand/task-sequence-variables#OSDWindowsSettingsSystemLocale)
+- [OSDWindowsSettingsUILanguage](/configmgr/osd/understand/task-sequence-variables#OSDWindowsSettingsUILanguage)
+- [OSDWindowsSettingsUILanguageFallback](/configmgr/osd/understand/task-sequence-variables#OSDWindowsSettingsUILanguageFallback)
+- [OSDWindowsSettingsUserLocale](/configmgr/osd/understand/task-sequence-variables#OSDWindowsSettingsUserLocale)
 
 To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Apply Windows Settings**.
 

@@ -1217,11 +1217,53 @@ Specifies the path to the Windows directory of the installed OS on the reference
 
 Specifies the default time zone setting that's used in the new OS.
 
+Set the value of this variable to the language invariant name of time zone. For example, use the string in the `Std` value for a time zone under the following registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`.
+
 ### <a name="OSDTimeZone-output"></a> OSDTimeZone (output)
 
 *Applies to the [Capture Windows Settings](task-sequence-steps.md#BKMK_CaptureWindowsSettings) step.*
 
 Set to the time zone of the computer. The value is set only if the [OSDMigrateTimeZone](#OSDMigrateTimeZone) variable is set to `true`.
+
+### <a name="OSDWindowsSettingsInputLocale"></a> OSDWindowsSettingsInputLocale
+
+*Applies to the [Apply Windows Settings](task-sequence-steps.md#BKMK_ApplyWindowsSettings) step.*
+
+Specifies the default input locale setting that's used in the new OS.
+
+For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - InputLocale](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-inputlocale).
+
+### <a name="OSDWindowsSettingsSystemLocale"></a> OSDWindowsSettingsSystemLocale
+
+*Applies to the [Apply Windows Settings](task-sequence-steps.md#BKMK_ApplyWindowsSettings) step.*
+
+Specifies the default system locale setting that's used in the new OS.
+
+For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - SystemLocale](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-systemlocale).
+
+### <a name="OSDWindowsSettingsUILanguage"></a> OSDWindowsSettingsUILanguage
+
+*Applies to the [Apply Windows Settings](task-sequence-steps.md#BKMK_ApplyWindowsSettings) step.*
+
+Specifies the default user interface language setting that's used in the new OS.
+
+For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - UILanguage](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-uilanguage).
+
+### <a name="OSDWindowsSettingsUILanguageFallback"></a> OSDWindowsSettingsUILanguageFallback
+
+*Applies to the [Apply Windows Settings](task-sequence-steps.md#BKMK_ApplyWindowsSettings) step.*
+
+Specifies the fallback user interface language setting that's used in the new OS.
+
+For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - UILanguageFallback](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-uilanguagefallback).
+
+### <a name="OSDWindowsSettingsUserLocale"></a> OSDWindowsSettingsUserLocale
+
+*Applies to the [Apply Windows Settings](task-sequence-steps.md#BKMK_ApplyWindowsSettings) step.*
+
+Specifies the default user locale setting that's used in the new OS.
+
+For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - UserLocale](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-userlocale).
 
 ### <a name="OSDWipeDestinationPartition"></a> OSDWipeDestinationPartition
 
