@@ -81,7 +81,6 @@ Starting in version 1910, you can add evaluation of custom configuration baselin
 To include custom configuration baselines as part of compliance policy assessment, do the following:
 
 - Create and deploy a compliance policy to a user collection with a rule to [**Include configured baselines in compliance policy assessment**](#bkmk_CA).
-  - If needed, verify the [prerequisites when the devices are co-managed](#bkmk_prereq-co-mgmt) using the next section.
 - Select [**Evaluate this baseline as part of compliance policy assessment**](#bkmk_eval-baseline) in a configuration baseline deployed to a device collection.
 
 > [!IMPORTANT]
