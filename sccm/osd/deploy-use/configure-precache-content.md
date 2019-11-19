@@ -36,8 +36,6 @@ Starting in version 1906,<!--4224642--> you can use pre-caching to reduce bandwi
 - Driver packages
 - Packages
 
-Starting in version 1910,<!--SCCMDocs-pr #4202--> you can pre-cache boot images in a specific scenario. For more information, see [Use of boot images in the Download Package Content step](/configmgr/osd/understand/task-sequence-steps#bkmk_note1).
-
 ## Configure pre-caching
 
 There are three steps to configure the pre-cache feature:

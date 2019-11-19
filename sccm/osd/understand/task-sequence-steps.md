@@ -795,17 +795,20 @@ If the task sequence fails to download a package, it starts to download the next
 
 *Applies to version 1910 and later*<!-- SCCMDocs-pr #4202 -->
 
-If you configure the [task sequence properties](/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks#bkmk_prop-advanced) to **Use a boot image**, then adding a boot image to this step is redundant and it won't pre-cache. Only add a boot image to this step for [pre-caching](/configmgr/osd/deploy-use/configure-precache-content), and if it's not specified on the properties of the task sequence. For example:
+If you configure the [task sequence properties](/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks#bkmk_prop-advanced) to **Use a boot image**, then adding a boot image to this step is redundant. Only add a boot image to this step if it's not specified on the properties of the task sequence.
 
-- Download task sequence:
-  - No associated boot image
-  - Uses Download Package Content step with pre-caching to download in the full OS the content for the specific language and architecture
-  - Only one instance of this task sequence, with all of the possible package options
+#### Example use case
 
-- OS deployment task sequences:
-  - A normal OS deployment task sequence
-  - Boot image reference in the properties
-  - Multiple instances of this task sequence, with different boot images as needed by architecture and language
+- A single task sequence to pre-download content:
+  - No associated boot image.
+  - Runs only in the full OS, likely without user interaction.
+  - Uses multiple **Download Package Content** steps with conditions. Depending upon the specific language and architecture, it downloads content to the client cache to prepare for the OS deployment task sequence.
+  - There's only one instance of this task sequence, with all of the possible content options.
+
+- Multiple OS deployment task sequences:
+  - A normal OS deployment task sequence.
+  - Has a boot image referenced in its properties.
+  - There are multiple instances of this task sequence, with different boot images as needed by architecture and language
 
 ## <a name="BKMK_EnableBitLocker"></a> Enable BitLocker  
 
