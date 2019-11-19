@@ -39,6 +39,8 @@ Take the following actions for the additional recommended devices list:
 - **Replace** any specific devices from the pilot
 - **Recalculate** when you're done making changes
 
+## Global Pilot
+
 You can also make system-wide decisions about which Configuration Manager collections to include or exclude from pilots. In the main Desktop Analytics menu, in the Global Settings group, select **Global pilot**.
 
 ### Example
