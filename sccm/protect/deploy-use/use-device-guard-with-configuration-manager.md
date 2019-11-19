@@ -1,8 +1,8 @@
 ---
-title: How to manage Windows Device Guard
+title: How to manage Windows Defender Application Control
 titleSuffix: Configuration Manager
-description: Learn how to use Configuration Manager to manage Windows Device Guard.
-ms.date: 07/26/2019
+description: Learn how to use Configuration Manager to manage Windows Defender Application Control.
+ms.date: 11/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -13,23 +13,24 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Device Guard management with Configuration Manager
+# Windows Defender Application Control management with Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 ## Introduction
-Device Guard is a group of Windows 10 features that are designed to protect PCs against malware and other untrusted software. It prevents malicious code from running by ensuring that only approved code, that you know, can be run.
+Windows Defender Application Control is a group of Windows 10 features that are designed to protect PCs against malware and other untrusted software. It prevents malicious code from running by ensuring that only approved code, that you know, can be run.
 
-Device Guard encompasses both software and hardware-based security functionality. Windows Defender Application Control is a software-based security layer that enforces an explicit list of software that is allowed to run on a PC. On its own, Application Control does not have any hardware or firmware prerequisites. Application Control policies deployed with Configuration Manager enable a policy on PCs in targeted collections that meet the minimum Windows version and SKU requirements outlined in this article. Optionally, hypervisor-based protection of Application Control policies deployed through Configuration Manager can be enabled through Group Policy on capable hardware.
+Windows Defender Application Control encompasses both software and hardware-based security functionality. Windows Defender Application Control is a software-based security layer that enforces an explicit list of software that is allowed to run on a PC. On its own, Application Control does not have any hardware or firmware prerequisites. Application Control policies deployed with Configuration Manager enable a policy on PCs in targeted collections that meet the minimum Windows version and SKU requirements outlined in this article. Optionally, hypervisor-based protection of Application Control policies deployed through Configuration Manager can be enabled through Group Policy on capable hardware.
 
-To learn more about Device Guard, read the [Device Guard deployment guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide).
+To learn more about Windows Defender Application Control, read the [Windows Defender Application Control deployment guide](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
 
    > [!NOTE]
-   > Beginning with Windows 10, version 1709, configurable code integrity policies are known as Windows Defender Application Control.
+   > - Beginning with Windows 10, version 1709, configurable code integrity policies are known as Windows Defender Application Control.
+   > - Beginning in Configuration Manager version 1710, Device Guard policies have been renamed to Windows Defender Application Control policies.
 
-## Using Device Guard with Configuration Manager
+## Using Windows Defender Application Control with Configuration Manager
 
-You can use Configuration Manager to deploy a Windows Defender Application Control policy. This policy lets you configure the mode in which Device Guard runs on PCs in a collection. 
+You can use Configuration Manager to deploy a Windows Defender Application Control policy. This policy lets you configure the mode in which Windows Defender Application Control runs on PCs in a collection. 
 
 You can configure one of the following modes:
 
@@ -41,7 +42,7 @@ You can configure one of the following modes:
 
 ## What can run when you deploy a Windows Defender Application Control policy?
 
-Windows Device Guard lets you strongly control what can run on PCs you manage. This feature can be useful for PCs in high-security departments, where it's vital that unwanted software cannot run.
+Windows Defender Application Control lets you strongly control what can run on PCs you manage. This feature can be useful for PCs in high-security departments, where it's vital that unwanted software cannot run.
 
 When you deploy a policy, typically, the following executables can run:
 
@@ -64,10 +65,9 @@ When you deploy a policy, typically, the following executables can run:
 
 Before you configure or deploy Windows Defender Application Control policies, read the following information:
 
-- Device Guard management is a pre-release feature for Configuration Manager, and is subject to change.
-- To use Device Guard with Configuration Manager, PCs you manage must be running the Windows 10 Enterprise version 1703, or later.
+- Windows Defender Application Control management is a pre-release feature for Configuration Manager, and is subject to change.
+- To use Windows Defender Application Control with Configuration Manager, PCs you manage must be running the Windows 10 Enterprise version 1703, or later.
 - Once a policy is successfully processed on a client PC, Configuration Manager is configured as a Managed Installer on that client. Software deployed through it, after the policy processes, is automatically trusted. Software installed by Configuration Manager before the Windows Defender Application Control policy processes is not automatically trusted.
-- Client PCs must have connectivity to their Domain Controller in order for a Windows Defender Application Control policy to be processed successfully.
 - The default compliance evaluation schedule for Application Control policies, configurable during deployment, is every one day. If issues in policy processing are observed, it may be beneficial to configure the compliance evaluation schedule to be shorter, for example every hour. This schedule dictates how often clients reattempt to process a Windows Defender Application Control policy if a failure occurs.
 - Regardless of the enforcement mode you select, when you deploy a Windows Defender Application Control policy, client PCs cannot run HTML applications with the extension .hta.
 
@@ -81,7 +81,7 @@ Before you configure or deploy Windows Defender Application Control policies, re
     - **Enforce a restart of devices so that this policy can be enforced for all processes** - After the policy is processed on a client PC, a restart is scheduled on the client according to the **Client Settings** for **Computer Restart**.
         - Devices running Windows 10 version 1703 or earlier will always be automatically restarted.
         - Starting with Windows 10 version 1709, applications currently running on the device will not have the new Application Control policy applied to them until after a restart. However, applications launched after the policy applies will honor the new Application Control policy. 
-    - **Enforcement Mode** - Choose one of the following enforcement methods for Device Guard on the client PC.
+    - **Enforcement Mode** - Choose one of the following enforcement methods for Windows Defender Application Control on the client PC.
         - **Enforcement Enabled** - Only allow trusted executables are allowed to run.
         - **Audit Only** - Allow all executables to run, but log untrusted executables that run in the local client event log.
 5. On the **Inclusions** tab of the **Create Application Control policy Wizard**, choose if you want to **Authorize software that is trusted by the Intelligent Security Graph**.
@@ -135,7 +135,7 @@ You can let locked-down devices run software with a good reputation as determine
 -->
 
 
-## Security and privacy information for Device Guard
+## Security and privacy information for Windows Defender Application Control
 
 - In this pre-release version, do not deploy Windows Defender Application Control policies with the enforcement mode **Audit Only** in a production environment. This mode is intended to help you test the capability in a lab setting only.
 - Devices that have a policy deployed to them in **Audit Only** or **Enforcement Enabled** mode that have not been restarted to enforce the policy, are vulnerable to untrusted software being installed.
@@ -146,6 +146,9 @@ In this situation, the software might continue to be allowed to run even if the 
 - The only way to prevent users with local administrator rights from disabling Application Control is to deploy a signed binary policy. This deployment is possible through Group Policy but not currently supported in Configuration Manager.
 - Setting up Configuration Manager as a Managed Installer on client PCs uses AppLocker policy. AppLocker is only used to identify Managed Installers and all enforcement happens with Windows Defender Application Control. 
 
+## Next steps
+
+ [Manage antimalware policies and firewall settings](/configmgr/protect/deploy-use/endpoint-antimalware-firewall)
 
 
 

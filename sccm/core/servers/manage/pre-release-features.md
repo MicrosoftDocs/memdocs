@@ -87,7 +87,7 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 | [Windows Defender Exploit Guard](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468--> | Version 1710 | Version 1802 |
 | [Device health attestation assessment for conditional access compliance policies](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616--> | Version 1710 | Version 1802 |
 | [Create and run Windows PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459--> | Version 1706 | Version 1802 |
-| [Device Guard management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--3600958 (fka 1355092 & 1319346)--> | Version 1702 | Version 1906 |
+| [Windows Defender Application Control management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--3600958 (fka 1355092 & 1319346)--> | Version 1702 | Version 1906 |
 | [Cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) <!--1101764--> | Version 1610 | Version 1802 |
 | [Azure Log Analytics connector](/sccm/core/clients/manage/sync-data-log-analytics) <!--1236739--> | Version 1606 | Version 1802 |
 | [Servicing a cluster-aware collection (Server groups)](/sccm/sum/deploy-use/service-a-server-group) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697--> | Version 1602 | ![Not yet](media/red_x.png) |
