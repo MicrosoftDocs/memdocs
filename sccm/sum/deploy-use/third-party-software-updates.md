@@ -2,7 +2,7 @@
 title: Enable third party updates
 titleSuffix: Configuration Manager
 description: Enable third party updates in Configuration Manager
-ms.date: 07/30/2018
+ms.date: 11/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum 
 ms.topic: conceptual
@@ -15,10 +15,12 @@ ms.collection: M365-identity-device-management
 
 # Enable third-party updates 
 
-*Applies to: System Center Configuration Manager version 1806*
+*Applies to: System Center Configuration Manager*
 
 Beginning with version 1806, the **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point (SUP), and then deploy them to clients.  <!--1357605, 1352101, 1358714-->
 
+> [!Note]  
+> Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Enable third party update support on clients**. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
 
 
 ## Prerequisites 
@@ -29,6 +31,7 @@ Beginning with version 1806, the **Third-Party Software Update Catalogs** node i
     - For the partner catalogs list, download.microsoft.com over HTTPS port 443 is needed. 
     -  Internet access to any third-party catalogs and update content files. Additional ports other than 443 may be needed.
     - Third-party updates use the same proxy settings as the SUP.
+
 
 ## Additional requirements when the SUP is remote from the top-level site server 
 
