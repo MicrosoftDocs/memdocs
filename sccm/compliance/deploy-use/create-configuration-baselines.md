@@ -63,7 +63,7 @@ To create a configuration baseline by using the **Create Configuration Baseline*
 
 7. To remove a configuration item from the configuration baseline, select a configuration item, and then click **Remove**.  
 
-8. Starting in version 1806, select if you want to **Always apply this baseline for co-managed clients**. When checked, this baseline will apply even on clients that are managed by Intune.  This exception might be used to configure settings that are required by your organization but not yet available in Intune. 
+8. Starting in version 1806, select if you want to **Always apply this baseline for co-managed clients**. When checked, this baseline will apply even on clients that are managed by Intune.  This exception might be used to configure settings that are required by your organization but not yet available in Intune.
 
 9. Optionally, click on **Categories** to assign categories to the baseline for searching and filtering. 
 
@@ -84,13 +84,8 @@ To include custom configuration baselines as part of compliance policy assessmen
   - If needed, verify the [prerequisites when the devices are co-managed](#bkmk_prereq-co-mgmt) using the next section.
 - Select [**Evaluate this baseline as part of compliance policy assessment**](#bkmk_eval-baseline) in a configuration baseline deployed to a device collection.
 
-### <a name="bkmk_prereq-co-mgmt"></a> Prerequisites when the devices are co-managed
-
-- Make sure the [Compliance policies workload](/sccm/comanage/workloads#compliance-policies) is moved to either Pilot or Intune.
-- From Intune's Windows 10 compliance policy, make sure that **Require** is set for [**Configuration Manager Compliance**](https://docs.microsoft.com/intune/protect/compliance-policy-create-windows#configuration-manager-compliance).
-- Hybrid Azure AD joined
-- Windows 10, version 1709 or later
-- Ensure the **Always apply this baseline even for co-managed clients** option is selected in the baseline when enabling the **Evaluate this baseline as part of compliance policy assessment** option.
+> [!IMPORTANT]
+> When targeting devices that are co-managed, ensure you meet the [co-management prerequisites](/configmgr/comanage/overview#prerequisites).
 
 ### Example evaluation scenario
 
@@ -135,7 +130,7 @@ When `User1` uses `Device2`, only `Configuration Baseline 2` gets evaluated when
 1. Right-click on an existing baseline that's deployed to a device collection, then select **Properties**. If needed, you can create a new baseline.
    - The baseline must be deployed to a device collection, not a user collection.
 1. Enable the **Evaluate this baseline as part of compliance policy assessment** setting.
-   - For co-managed devices, ensure you also select the **Always apply this baseline even for co-managed clients** option.
+   - For co-managed devices that have Intune as the **Device configuration** authority, ensure **Always apply this baseline even for co-managed clients** is also selected.
 1. Click **OK** to save the changes to your configuration baseline.
 
 ![Configuration Baseline Properties dialog box](./media/3608345-configuration-baseline-properties.png)
