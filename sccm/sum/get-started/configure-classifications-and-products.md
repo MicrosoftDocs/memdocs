@@ -5,7 +5,7 @@ description: Follow these steps to configure software update classifications and
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/14/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -88,7 +88,7 @@ To make sure both your Windows 10 version 1909 and Windows 10, version 1903 clie
 
 When you approve feature updates for Windows 10, version 1909, there are a few different options you'll see:
 
-- Windows 10, version 1903 is offered an [Enablement Package](https://support.microsoft.com/en-us/help/4517245/feature-update-via-windows-10-version-1909-enablement-package), released November 12, 2019.
+- Windows 10, version 1903 clients are offered an [Enablement Package](https://support.microsoft.com/en-us/help/4517245/feature-update-via-windows-10-version-1909-enablement-package), released November 12, 2019.
   - The enablement package is a small, quick to install file that activates the Windows 10, version 1909 features and restarts the device.
   - Prerequisites for the enablement package include:
     - A minimum cumulative update of [KB4517389](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4517389), released October 8, 2019.
@@ -110,10 +110,17 @@ When you approve feature updates for Windows 10, version 1909, there are a few d
 
 **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10**  product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product in Configuration Manager version 1906. <!--4682946-->
 
+#### Windows 10, version 1903 and later with Configuration Manager version 1906
 When you update to Configuration Manager version 1906 and have the **Windows 10** product selected for synchronization, the following actions occur automatically:
 - The **Windows 10, version 1903 and later** product is added for synchronization.
 - [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
 - [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow) are updated to include the **Windows 10, version 1903 and later** product.
+
+#### Windows 10, version 1903 and later with Configuration Manager version 1902
+If you are using Configuration Manager 1902 with Windows 10,version 1903 clients, you'll need to:
+- Select the **Windows 10, version 1903 and later** product for synchronization.
+- Update any [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) for Windows 10, version 1903 clients.
+- Update [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow) for Windows 10, version 1903 clients.
 
 ## <a name="bkmk_WIfB"></a> Windows Insider Program
 <!--3556023-->
