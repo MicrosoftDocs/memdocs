@@ -38,7 +38,11 @@ Starting in version 1906, create a group of applications that you can send to a 
 
 Deploy the app group using the same process as for an application. For more information, see [Deploy applications](/configmgr/apps/deploy-use/deploy-applications). Starting in version 1910, you can deploy an app group to device or user collections.
 
-If you add a new app to the group after you deploy the group, you have to separately distribute the new app content to distribution points.
+After you deploy the group:
+
+- If you add a new app to the group, you have to separately distribute the new app content to distribution points.
+
+- If you modify an app in the app group, redistribute the content.
 
 To troubleshoot an app group deployment, use the following log files on the client:
 
@@ -51,7 +55,8 @@ To troubleshoot an app group deployment, use the following log files on the clie
 
 ### Known issues
 
-- Apps in the group can only contain **Windows Installer** or **Script** deployment types. Set the deployment type installation behavior to **Install for system**.
+- Apps in the group can only contain **Windows Installer** or **Script** deployment types.
+  - *Version 1906*: Set the deployment type installation behavior to **Install for system**.
 - The following deployment options may not work: alerts, approval, phased deployment, repair.
 - You can't export or import app groups.
 - *Version 1906*: You can't deploy the app group to a user collection.
