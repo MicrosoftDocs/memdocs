@@ -110,13 +110,13 @@
       href: deploy-use/bitlocker/deploy-bitlocker.md
     - name: Encrypt recovery data
       href: deploy-use/bitlocker/encrypt-recovery-data.md
-		- name: Set up BitLocker reports and portals
+    - name: Set up BitLocker reports and portals
       href: deploy-use/bitlocker/setup-bitlocker-admin.md
-		- name: View BitLocker reports
+    - name: View BitLocker reports
       href: deploy-use/bitlocker/view-bitlocker-reports.md
-		- name: BitLocker administration portal
+    - name: BitLocker administration portal
       href: deploy-use/bitlocker/bitlocker-admin-portal.md
-		- name: BitLocker self-service portal
+    - name: BitLocker self-service portal
       href: deploy-use/bitlocker/bitlocker-self-service-portal.md
   - name: Windows Hello for Business settings
     href: deploy-use/windows-hello-for-business-settings.md
