@@ -536,7 +536,7 @@ Set this option to **Yes** to show a high-visibility session connection bar on c
 
 Set this option to use sound to indicate when a remote control session is active on a client computer. Select one of the following options:
 - **No sound**
-- **Beginning and send of session** (default)
+- **Beginning and end of session** (default)
 - **Repeatedly during session**  
 
 ### Manage unsolicited Remote Assistance settings
