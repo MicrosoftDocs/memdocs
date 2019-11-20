@@ -668,7 +668,8 @@ EPStatus
 When using CMPivot outside of the Configuration Manager console, you can query just the local device without the need for the Configuration Manager infrastructure. You can now leverage the CMPivot Azure Log Analytics queries to quickly view WMI information on the local device. This also enables validation and refinement of CMPivot queries, before running them in a larger environment. CMPivot standalone is a [pre-release feature](/sccm/core/servers/manage/pre-release-features#bkmk_table) and is only available in English. For more information about installing CMPivot standalone, see [Install CMPivot standalone](#install-cmpivot-standalone).
 
 > [!NOTE]
-> If you query non-WMI entities on **This PC**, you'll see an **Invalid namespace** or an ambiguous exception. For example, the following query would return an exception in the CMPivot:
+> - If you query on **This PC** for a WMI entity that you don't have access to, such as a locked down WMI class, you may see a crash in CMPivot. Run CMPivot using an account with elevated privileges to query those entites. <!--5753242-->
+> - If you query non-WMI entities on **This PC**, you'll see an **Invalid namespace** or an ambiguous exception. For example, the following query would return an exception in the CMPivot:
 >
 > ```kusto
 > CCMRecentlyUsedApplications
