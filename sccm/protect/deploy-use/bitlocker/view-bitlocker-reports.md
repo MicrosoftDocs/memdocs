@@ -1,7 +1,7 @@
 ---
 title: View BitLocker reports
 titleSuffix: Configuration Manager
-description: 
+description: Learn about the BitLocker management reports in Configuration Manager
 ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -18,3 +18,163 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 <!--3601034-->
+
+After you [install the reports](/configmgr/protect/deploy-use/setup-bitlocker-admin) on the reporting services point, you can view the reports. The reports show BitLocker compliance for the enterprise and for individual devices. They provide tabular information and charts, and have filters that let you view data from different perspectives.
+
+In the Configuration Manager console, go to the **Monitoring** workspace, expand **Reporting**, and select the **Reports** node. The following reports are in the **BitLocker Management** category:
+
+- [BitLocker Computer Compliance](#bkmk-compliancereport)
+
+- [BitLocker Enterprise Compliance Dashboard](#bkmk-dashboard)
+
+- [BitLocker Enterprise Compliance Details](#bkmk-compliancedetails)
+
+- [BitLocker Enterprise Compliance Summary](#bkmk-compliancesummary)
+
+You can also access these reports directly from the reporting services point website.
+
+> [!NOTE]
+> Clients need to send hardware inventory for these reports to display complete data.
+
+An additional report, **Recovery Audit Report**, is available from the [BitLocker administration and monitoring website](/configmgr/protect/deploy-use/bitlocker/bitlocker-admin-portal).
+
+## <a name="bkmk-compliancereport"></a> BitLocker computer compliance report
+
+Use this report to collect information that's specific to a computer. It provides detailed encryption information about the OS drive and any fixed data drives. To view the details of each drive, expand the Computer Name entry. It also indicates the policy that's applied to each drive type on the computer.
+
+> [!NOTE]
+> This report doesn't show the Removable Data Volume encryption status.
+
+### Computer details fields
+
+|Column name|Description|
+|--- |--- |
+|Computer name|User-specified DNS computer name.|
+|Domain name|Fully qualified domain name for the computer.|
+|Computer Type|Type of computer, valid types are **Non-Portable** and **Portable**.|
+|Operating system|OS type of the computer.|
+|Overall compliance|Overall BitLocker compliance status of the computer. Valid states are **Compliant** and **Non-compliant**. The [compliance status per drive](#bkmk_volume) may indicate different compliance states. However, this field represents that compliance state from the specified policy.|
+|Operating system compliance|Compliance status of the OS on the computer. Valid states are **Compliant** and **Non-compliant**.|
+|Fixed data drive compliance|Compliance status of a fixed data drive on the computer. Valid states are **Compliant** and **Non-compliant**.|
+|Last update date|Date and time that the computer last contacted the server to report compliance status.|
+|Exemption|Indicates whether the user is exempt or non-exempt from the BitLocker policy.|
+|Exempted user|The user who's exempt from the BitLocker policy.|
+|Exemption date|Date on which the exemption was granted.|
+|Compliance status details|Error and status messages about the compliance state of the computer from the specified policy.|
+|Policy cipher strength|Cipher strength that you selected in the BitLocker management policy.|
+|Policy: Operating system drive|Indicates if encryption is required for the OS drive and the appropriate protector type.|
+|Policy: Fixed data drive|Indicates if encryption is required for the fixed data drive.|
+|Manufacturer|Computer manufacturer name as it appears in the computer BIOS.|
+|Model|Computer manufacturer model name as it appears in the computer BIOS.|
+|Device users|Known users on the computer.|
+
+### <a name="bkmk_volume"></a> Computer volume fields
+
+|Column name|Description|
+|--- |--- |
+|Drive letter|The drive letter on the computer.|
+|Drive type|Type of drive. Valid values are **Operating System Drive** and **Fixed Data Drive**. These entries are physical drives rather than logical volumes.|
+|Cipher strength|Cipher strength that you selected during in the BitLocker management policy.|
+|Protector types|Type of protector that you selected in the policy to encrypt the drive. The valid protector types for an OS drive are **TPM** or **TPM+PIN**. The valid protector type for a fixed data drive is **Password**.|
+|Protector state|Indicates that the computer enabled the protector type specified in the policy. The valid states are **ON** or **OFF**.|
+|Encryption state|Encryption state of the drive. Valid states are **Encrypted**, **Not Encrypted**, or **Encrypting**.|
+
+## <a name="bkmk-dashboard"></a> BitLocker enterprise compliance dashboard
+
+This report provides the following graphs, which show BitLocker compliance status across your organization:
+
+- Compliance status distribution
+
+- Non-compliant errors distribution
+
+- Compliance status distribution by drive type
+
+### Compliance status distribution
+
+This pie chart shows compliance status for computers in the organization. It also shows the percentage of computers with that compliance status, compared to the total number of computers in the selected collection. The actual number of computers with each status is also shown.
+
+The pie chart shows the following compliance statuses:
+
+- Compliant
+
+- Non-compliant
+
+- User exempt
+
+- Temporary user exempt
+
+- Policy not enforced
+
+- Unknown. These computers reported a status error, or they're part of the collection but have never reported their compliance status. The lack of a compliance status could occur if the computer is disconnected from the organization.
+
+### Non-compliant errors distribution
+
+This pie chart shows the categories of computers in your organization that aren't compliant with the BitLocker Drive Encryption policy. It also shows the number of computers in each category. The report calculates each percentage from the total number of non-compliant computers in the collection.
+
+- User postponed encryption
+
+- Unable to find compatible TPM
+
+- System partition not available or large enough
+
+- Policy conflict
+
+- Waiting for TPM auto provisioning
+
+- An unknown error has occurred
+
+- No information. These computers don't have the BitLocker management agent installed, or it's installed but not activated. For example, the service isn't working.
+
+### Compliance status distribution by drive type
+
+This bar chart shows the current BitLocker compliance status by drive type. The statuses are **Compliant** and **Non-compliant**. Bars are shown for fixed data drives and OS drives. The report includes computers without a fixed data drive, and only shows a value in the **Operating System Drive** bar. The chart doesn't include users who have been granted an exemption from the BitLocker Drive Encryption policy or the No Policy category.
+
+## <a name="bkmk-compliancedetails"></a> BitLocker enterprise compliance details
+
+This report shows information about the overall BitLocker compliance across your organization for the collection of computers to which you deployed the BitLocker management policy.
+
+|Column name|Description|
+|--- |--- |
+|Managed computers|Number of computers to which you deployed a BitLocker management policy.|
+|% Compliant|Percentage of compliant computers in the organization.|
+|% Non-compliant|Percentage of non-compliant computers in the organization.|
+|% Unknown compliance|Percentage of computers with a compliance state that's not known.|
+|% Exempt|Percentage of computers exempt from the BitLocker encryption requirement.|
+|% Non-exempt|Percentage of computers not exempt from the BitLocker encryption requirement.|
+|Compliant|Count of compliant computers in the organization.|
+|Non-Compliant|Count of non-compliant computers in the organization.|
+|Unknown Compliance|Count of computers with a compliance state that's not known.|
+|Exempt|Count of computers that are exempt from the BitLocker encryption requirement.|
+|Non-exempt|Count of computers that aren't exempt from the BitLocker encryption requirement.|
+
+## <a name="bkmk-compliancesummary"></a> BitLocker enterprise compliance summary
+
+Use this report to show the overall BitLocker compliance across your organization. It also shows the compliance for individual computers to which you deployed the BitLocker management policy.
+
+### Fields
+
+|Column name|Description|
+|--- |--- |
+|Managed computers|Number of computers that you manage with BitLocker policy.|
+|% Compliant|Percentage of compliant computers in your organization.|
+|% Non-compliant|Percentage of non-compliant computers in your organization.|
+|% Unknown compliance|Percentage of computers with a compliance state that's not known.|
+|% Exempt|Percentage of computers exempt from the BitLocker encryption requirement.|
+|% Non-exempt|Percentage of computers not exempt from the BitLocker encryption requirement.|
+|Compliant|Count of compliant computers in your organization.|
+|Non-compliant|Count of non-compliant computers in your organization.|
+|Unknown compliance|Count of computers with a compliance state that's not known.|
+|Exempt|Count of computers that are exempt from the BitLocker encryption requirement.|
+|Non-exempt|Count of computers that aren't exempt from the BitLocker encryption requirement.|
+
+### Computer details
+
+|Column name|Description|
+|--- |--- |
+|Computer name|DNS computer name of the managed device.|
+|Domain name|Fully qualified domain name for the computer.|
+|Compliance status|Overall compliance status of the computer. Valid states are **Compliant** and **Non-compliant**.|
+|Exemption|Indicates whether the user is exempt or non-exempt from the BitLocker policy.|
+|Device users|Users of the device.|
+|Compliance status details|Error and status messages about the compliance state of the computer from the specified policy.|
+|Last contact|Date and time that the computer last contacted the server to report compliance status.|
