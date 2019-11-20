@@ -67,6 +67,14 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 - To integrate the BitLocker recovery service in Configuration Manager requires a HTTPS-enabled management point.
 
+- To use the BitLocker management reports, install the reporting services point site system role. For more information, see [Configure reporting](/configmgr/core/servers/manage/configuring-reporting).
+
+- To use the self-service portal or the administration and monitoring website, you need a Windows server running IIS. You can reuse a Configuration Manager site system, or use a standalone web server that has connectivity to the site database server. Use a [supported OS version for site system servers](/configmgr/core/plan-design/configs/supported-operating-systems-for-site-system-servers)
+
+- On the web server that will host the self-service portal, install [ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4).
+
+- The user account that runs the portal installer script needs SQL **sysadmin** rights on the site database server. During the setup process, the script sets login, user, and SQL role rights for the web server machine account. You can remove this user account from the sysadmin role after you complete setup of the self-service portal and the administration and monitoring website.
+
 ## Next step
 
 [Deploy BitLocker management client](/configmgr/protect/deploy-use/bitlocker/deploy-bitlocker)
