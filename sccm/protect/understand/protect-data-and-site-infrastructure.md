@@ -29,7 +29,7 @@ You want your users to securely access your organization's resources. Protect bo
   - Microsoft Defender Application Control
 
   > [!TIP]
-  > To manage encryption on co-managed Windows 10 devices using the Microsoft Endpoint Manager cloud service, switch the [**Endpoint Protection** workload](/configmgr/comanage/workloads#endpoint-protection) to Intune. For more information on using Intune, see [Endpoint protection for Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
+  > To manage endpoint protection on co-managed Windows 10 devices using the Microsoft Endpoint Manager cloud service, switch the [**Endpoint Protection** workload](/configmgr/comanage/workloads#endpoint-protection) to Intune. For more information, see [Endpoint protection for Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
 
 - Protect data stored on on-premises Windows clients with BitLocker Drive Encryption (BDE). Configuration Manager provides full BitLocker lifecycle management that can replace the use of Microsoft BitLocker Administration and Monitoring (MBAM). For more information, see [Plan for BitLocker management](/configmgr/protect/plan-design/plan-for-bitlocker).
 

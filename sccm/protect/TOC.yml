@@ -124,7 +124,7 @@
     href: ../mdm/deploy-use/terms-and-conditions.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
   - name: Monitor protection
     items:
-    - name: Monitor Wi-Fi, email and VPN profiles
+    - name: Monitor Wi-Fi, email, and VPN profiles
       href: deploy-use/monitor-wifi-email-vpn-profiles.md
     - name: Monitor certificate profiles
       href: deploy-use/monitor-certificate-profiles.md
