@@ -567,7 +567,7 @@ You can share the power of CMPivot with other personas, such as helpdesk or secu
    ![Browse to the collection you want to run your query against](./media/3555890-cmpivot-standalone-browse-collection.png)
 
 > [!NOTE]
-> Right-click actions, such as **Run Scripts**, **Resource Explorer**, and web search aren't available in CMPivot standalone. CMPivot standalone's primary use is querying independently from the Configuration Manager infrastructure. To help security administrators, CMpivot standalone does include the ability to connect to Microsoft Defender Security Center. 
+> Right-click actions, such as **Run Scripts**, **Resource Explorer**, and web search aren't available in CMPivot standalone. CMPivot standalone's primary use is querying independently from the Configuration Manager infrastructure. To help security administrators, CMpivot standalone does include the ability to connect to Microsoft Defender Security Center. <!--5605358-->
 
 ## <a name="bkmk_cmpivot1910"></a> CMPivot starting in version 1910
 <!--5410930, 3197353-->
