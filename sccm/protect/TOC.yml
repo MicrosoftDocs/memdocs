@@ -24,36 +24,14 @@
       href: plan-design/prerequisites-for-wifi-vpn-profiles.md
   - name: Security and privacy
     items:
-    - name: Security and privacy for Wi-Fi and VPN profiles
+    - name: Wi-Fi and VPN profiles
       href: plan-design/security-and-privacy-for-wifi-vpn-profiles.md
-    - name: Security and privacy for email profiles
+    - name: Email profiles
       href: plan-design/security-and-privacy-for-email-profiles.md
-    - name: Security and privacy for certificate profiles
+    - name: Certificate profiles
       href: plan-design/security-and-privacy-for-certificate-profiles.md
 - name: Deploy and use
   items:
-  - name: VPN profiles
-    items:
-    - name: VPN profiles in Configuration Manager
-      href: deploy-use/vpn-profiles.md
-    - name: Create VPN profiles
-      href: deploy-use/create-vpn-profiles.md
-    - name: Find a package family name (PFN) for per-app VPN
-      href: deploy-use/find-a-pfn-for-per-app-vpn.md
-  - name: Wi-Fi Profiles
-    items:
-    - name: Create Wi-Fi profiles
-      href: deploy-use/create-wifi-profiles.md
-  - name: Certificate profiles
-    items:
-    - name: Introduction to certificate profiles
-      href: deploy-use/introduction-to-certificate-profiles.md
-    - name: Create certificate profiles
-      href: deploy-use/create-certificate-profiles.md
-    - name: Configuring certificate infrastructure
-      href: deploy-use/certificate-infrastructure.md
-  - name: Deploy Wi-Fi, VPN, email, and certificate profiles
-    href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
   - name: Endpoint Protection
     items:
     - name: Endpoint Protection overview
@@ -120,7 +98,29 @@
       href: deploy-use/bitlocker/bitlocker-self-service-portal.md
   - name: Windows Hello for Business settings
     href: deploy-use/windows-hello-for-business-settings.md
-  - name: Terms and Conditions settings
+  - name: Certificate profiles
+    items:
+    - name: Introduction to certificate profiles
+      href: deploy-use/introduction-to-certificate-profiles.md
+    - name: Create certificate profiles
+      href: deploy-use/create-certificate-profiles.md
+    - name: Configuring certificate infrastructure
+      href: deploy-use/certificate-infrastructure.md
+  - name: Wi-Fi profiles
+    items:
+    - name: Create Wi-Fi profiles
+      href: deploy-use/create-wifi-profiles.md
+  - name: VPN profiles
+    items:
+    - name: VPN profiles
+      href: deploy-use/vpn-profiles.md
+    - name: Create VPN profiles
+      href: deploy-use/create-vpn-profiles.md
+    - name: Find a package family name (PFN) for per-app VPN
+      href: deploy-use/find-a-pfn-for-per-app-vpn.md
+  - name: Deploy Wi-Fi, VPN, email, and certificate profiles
+    href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
+  - name: Terms and conditions settings
     href: ../mdm/deploy-use/terms-and-conditions.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
   - name: Monitor protection
     items:
