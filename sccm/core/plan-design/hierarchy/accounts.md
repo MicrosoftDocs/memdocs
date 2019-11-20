@@ -647,7 +647,7 @@ Asset Intelligence Volume Licenses import. ConfigMgr grants this permission to u
 
 ### smsdbrole_AIUS
 
-Asset Intelligence Update Synchronization. ConfigMgr grants the computer account that host the Asset Intelligence Synchronization Point account access to get Access Intelligence proxy data and to view pending AI data for upload.
+Asset Intelligence Update Synchronization. ConfigMgr grants the computer account that host the Asset Intelligence Synchronization Point account access to get Asset Intelligence proxy data and to view pending AI data for upload.
 
 ### smsdbrole_AMTSP
 

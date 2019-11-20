@@ -2,7 +2,7 @@
 title: Manage clients
 titleSuffix: Configuration Manager
 description: Learn how to manage clients in Configuration Manager.
-ms.date: 09/05/2019
+ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # How to manage clients in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When the Configuration Manager client installs on a device and successfully assigns to a site, you see the device in the **Assets and Compliance** workspace in the **Devices** node, and in one or more collections in the **Device Collections** node. Select the device or a collection, and then run management operations. However, there are other ways to manage the client, which might involve other workspaces in the console, or tasks outside of the console.  
 
@@ -24,7 +24,7 @@ When the Configuration Manager client installs on a device and successfully assi
 >
 > A device can also display in the console when the Configuration Manager client isn't installed. This behavior happens if the site discovers a device but the client isn't installed and assigned.
 >
-> Mobile devices managed with the [Exchange Server connector](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync) or [on-premises MDM](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure) don't install the Configuration Manager client.  
+> Mobile devices managed with the [Exchange Server connector](/configmgr/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync) or [on-premises MDM](/configmgr/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure) don't install the Configuration Manager client.  
 >
 > To manage a device from the console, use the **Client** column in the **Devices** node to determine whether the client is installed.  
 
@@ -40,7 +40,7 @@ Depending on the device type, some of these options might not be available.
 
 Configure the associations between users and devices, so you can efficiently deploy software to users.  
 
-For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
+For more information, see [Link users and devices with user device affinity](/configmgr/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
 
 ### Import computer information
 
@@ -54,28 +54,28 @@ Provides the following options:
 
 - **Add selected items to new device collection**: Opens the **Create Device Collection Wizard** where you can create a new collection. The selected collection is included in this collection by using a **Direct** membership rule.  
 
-For more information, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).
+For more information, see [How to create collections](/configmgr/core/clients/manage/collections/create-collections).
 
 ### Install client
 
 Opens the **Install Client Wizard**. This wizard uses client push installation to install or reinstall the Configuration Manager client on the selected device.
 
 > [!TIP]  
-> There are many different ways to install the Configuration Manager client. Although the Client Push wizard offers a convenient client installation method from the console, this method has many dependencies and isn't suitable for all environments. For more information about the dependencies, see [Prerequisites for deploying clients to Windows computers](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#client-push-installation). For more information about the other client installation methods, see [Client installation methods](/sccm/core/clients/deploy/plan/client-installation-methods).
+> There are many different ways to install the Configuration Manager client. Although the Client Push wizard offers a convenient client installation method from the console, this method has many dependencies and isn't suitable for all environments. For more information about the dependencies, see [Prerequisites for deploying clients to Windows computers](/configmgr/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#client-push-installation). For more information about the other client installation methods, see [Client installation methods](/configmgr/core/clients/deploy/plan/client-installation-methods).
 
-For more information, see [How to install Configuration Manager clients by using client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
+For more information, see [How to install Configuration Manager clients by using client push](/configmgr/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
 
 ### Run script
 
 Opens the **Run Script** wizard to run a PowerShell script on the selected device.
 
-For more information, see [Create and run PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts).
+For more information, see [Create and run PowerShell scripts](/configmgr/apps/deploy-use/create-deploy-scripts).
 
 ### Install application
 
 Install an application to a device in real time. This feature can help reduce the need for separate collections for every application.
 
-For more information, see [Install applications for a device](/sccm/apps/deploy-use/install-app-for-device).
+For more information, see [Install applications for a device](/configmgr/apps/deploy-use/install-app-for-device).
 
 ### Reassign site
 
@@ -85,17 +85,17 @@ Reassign one or more clients, including managed mobile devices, to another prima
 
 When you deploy multiple client settings to the same device, the prioritization and combination of settings is complex. Use this option to view the resultant set of client settings deployed to this device.
 
-For more information, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
+For more information, see [How to configure client settings](/configmgr/core/clients/deploy/configure-client-settings).
 
 ### Start
 
 - Run **Resource Explorer** to see the hardware and software inventory information from a Windows client. For more information, see the following articles:
 
-  - [How to use Resource Explorer to view hardware inventory](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory)
+  - [How to use Resource Explorer to view hardware inventory](/configmgr/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory)
 
-  - [How to use Resource Explorer to view software inventory](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory)
+  - [How to use Resource Explorer to view software inventory](/configmgr/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory)
 
-- Remotely administer the device by using **Remote Control**, **Remote Assistance**, or **Remote Desktop Client**. For more information, see [How to remotely administer a Windows client computer](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer).
+- Remotely administer the device by using **Remote Control**, **Remote Assistance**, or **Remote Desktop Client**. For more information, see [How to remotely administer a Windows client computer](/configmgr/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer).
 
 ### Approve
 
@@ -115,7 +115,7 @@ Block a client that you no longer trust. Blocking prevents the client from recei
 
 You can also unblock a client that is blocked.
 
-For more information, ee [Determine whether to block clients](/sccm/core/clients/deploy/plan/determine-whether-to-block-clients).
+For more information, ee [Determine whether to block clients](/configmgr/core/clients/deploy/plan/determine-whether-to-block-clients).
 
 <!-- Change Category is a hybrid action -->
 
@@ -123,21 +123,21 @@ For more information, ee [Determine whether to block clients](/sccm/core/clients
 
 You can redeploy a required PXE deployment by clearing the status of the last PXE deployment assigned to a Configuration Manager collection or a computer. This action resets the status of that deployment and reinstalls the most recent required deployments.
 
-For more information, see [Use PXE to deploy Windows over the network](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network).
+For more information, see [Use PXE to deploy Windows over the network](/configmgr/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network).
 
 ### Client notification
 
-For more information, see [Client notifications](/sccm/core/clients/manage/client-notification#client-notification).
+For more information, see [Client notifications](/configmgr/core/clients/manage/client-notification#client-notification).
 
 ### Endpoint Protection
 
-For more information, see [Client notifications](/sccm/core/clients/manage/client-notification#endpoint-protection).
+For more information, see [Client notifications](/configmgr/core/clients/manage/client-notification#endpoint-protection).
 
 ### Edit primary users
 
 View users of this device in the last 90 days, or specify the primary users of this device.
 
-For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
+For more information, see [Link users and devices with user device affinity](/configmgr/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
 
 ### Wipe a mobile device
 
@@ -158,7 +158,7 @@ To monitor when the device receives the wipe command, use the **Wipe Status** co
 
 The **Retire** option is supported only by mobile devices enrolled by on-premises MDM.  
 
-For more information, see [Help protect your data with remote wipe, remote lock, or passcode reset](/sccm/mdm/deploy-use/wipe-lock-reset-devices).
+For more information, see [Help protect your data with remote wipe, remote lock, or passcode reset](/configmgr/mdm/deploy-use/wipe-lock-reset-devices).
 
 ### Change ownership
 
@@ -168,7 +168,7 @@ You can use this value in application requirements to control deployments, and t
 
 You may need to add the **Device Owner** column to the view by right-clicking any column heading and choosing it.
 
-For more information, see [Hybrid MDM with Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management).
+For more information, see [Hybrid MDM with Configuration Manager and Microsoft Intune](/configmgr/mdm/understand/hybrid-mobile-device-management).
 
 ### Delete
 
@@ -183,9 +183,9 @@ The **Delete** action manually removes the client record from the Configuration 
 
 To uninstall the client, see [Uninstall the Configuration Manager client](#BKMK_UninstalClient).  
 
-To assign the client to a new primary site, see [How to assign clients to a site](/sccm/core/clients/deploy/assign-clients-to-a-site).
+To assign the client to a new primary site, see [How to assign clients to a site](/configmgr/core/clients/deploy/assign-clients-to-a-site).
 
-To remove the client from a collection, reconfigure the collection properties. For more information, see [How to manage collections](/sccm/core/clients/manage/collections/manage-collections).
+To remove the client from a collection, reconfigure the collection properties. For more information, see [How to manage collections](/configmgr/core/clients/manage/collections/manage-collections).
 
 ### Refresh
 
@@ -195,7 +195,7 @@ Refresh the console view with the latest data in the database. For example, if a
 
 View the discovery data and deployments targeted for the client.
 
-You can also configure variables that task sequences use to deploy an OS to the device. For more information, se [Create task sequence variables for computers and collections](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_CreateTSVariables).
+You can also configure variables that task sequences use to deploy an OS to the device. For more information, se [Create task sequence variables for devices and collections](/configmgr/osd/understand/using-task-sequence-variables#bkmk_set-coll-var).
 
 
 ## <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Manage clients from the **Device Collections** node
@@ -208,7 +208,7 @@ Consider the following questions before you run collection-level tasks. Once sta
 - Are the devices connected by low-bandwidth network connections?
 - How much time does this task need to complete for all the devices?
 
-For more information, see [How to manage collections](/sccm/core/clients/manage/collections/manage-collections).
+For more information, see [How to manage collections](/configmgr/core/clients/manage/collections/manage-collections).
 
 
 ## Restart clients
@@ -216,7 +216,7 @@ For more information, see [How to manage collections](/sccm/core/clients/manage/
 Use the Configuration Manager console to identify clients that require a restart. Then use a client notification action to restart them.
 
 > [!Tip]
-> Enable automatic client upgrade to keep your clients up-to-date with less effort. For more information, see [About automatic client upgrade](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate).
+> Enable automatic client upgrade to keep your clients up-to-date with less effort. For more information, see [About automatic client upgrade](/configmgr/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate).
 
 To identify devices that are pending a restart, go to the **Assets and Compliance** workspace in the Configuration Manager console and select the **Devices** node. Then view the status for each device in the details pane in a new column named **Pending Restart**. Each device has one or more of the following values:
 
@@ -231,14 +231,14 @@ To identify devices that are pending a restart, go to the **Assets and Complianc
 1. Select the device you want to restart within a collection in the **Device Collections** node of the console.
 2. In the ribbon, select **Client Notification**, and then select **Restart**. An information window opens about the restart. Select **OK** to confirm the restart request.
 
-When the notification is received by a client, a **Software Center** notification window opens to inform the user about the restart. By default, the restart occurs after 90 minutes. You can modify the restart time by configuring [client settings](/sccm/core/clients/deploy/configure-client-settings). Settings for the restart behavior are found on the [Computer restart](/sccm/core/clients/deploy/about-client-settings#computer-restart) tab of the default settings.
+When the notification is received by a client, a **Software Center** notification window opens to inform the user about the restart. By default, the restart occurs after 90 minutes. You can modify the restart time by configuring [client settings](/configmgr/core/clients/deploy/configure-client-settings). Settings for the restart behavior are found on the [Computer restart](/configmgr/core/clients/deploy/about-client-settings#computer-restart) tab of the default settings.
 
 
 ## <a name="BKMK_ClientCache"></a> Configure the client cache
 
 The client cache stores temporary files for when clients install applications and programs. Software updates also use the client cache, but always attempt to download to the cache regardless of the size setting. Configure the cache settings, such as size and location, when you manually install the client, when you use client push installation, or after installation.
 
-You can specify the cache folder size using client settings in the Configuration Manager console. For more information, see [Client cache settings](/sccm/core/clients/deploy/about-client-settings#client-cache-settings).
+You can specify the cache folder size using client settings in the Configuration Manager console. For more information, see [Client cache settings](/configmgr/core/clients/deploy/about-client-settings#client-cache-settings).
 
 The default location for the Configuration Manager client cache is `%windir%\ccmcache` and the default disk space is 5120 MB.  
 
@@ -279,9 +279,9 @@ Run the CCMSetup.exe command from the install source location and specify the fo
   - SMSCACHESIZE  
 
     > [!NOTE]
-    > Use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information, see [Client cache settings](/sccm/core/clients/deploy/about-client-settings#client-cache-settings).
+    > Use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information, see [Client cache settings](/configmgr/core/clients/deploy/about-client-settings#client-cache-settings).
 
-For more information about how to use these command-line properties for CCMSetup.exe, see [About client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).
+For more information about how to use these command-line properties for CCMSetup.exe, see [About client installation properties](/configmgr/core/clients/deploy/about-client-installation-properties).
 
 ### Configure the cache during client push installation  
 
@@ -300,9 +300,9 @@ For more information about how to use these command-line properties for CCMSetup
    - SMSCACHESIZE  
 
      > [!NOTE]
-     > Use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information, see [Client cache settings](/sccm/core/clients/deploy/about-client-settings#client-cache-settings).
+     > Use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information, see [Client cache settings](/configmgr/core/clients/deploy/about-client-settings#client-cache-settings).
 
-     For more information about how to use these command-line properties for CCMSetup.exe, see [About client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).  
+     For more information about how to use these command-line properties for CCMSetup.exe, see [About client installation properties](/configmgr/core/clients/deploy/about-client-installation-properties).  
 
 ### Configure the cache on the client computer  
 
@@ -314,7 +314,7 @@ For more information about how to use these command-line properties for CCMSetup
 
 ### Configure client cache size in Client Settings
 
-Adjust the size of the client cache without having to reinstall the client. Use the cache size settings available in **Client Settings** in the Configuration Manager console. For more information, see [Client cache settings](/sccm/core/clients/deploy/about-client-settings#client-cache-settings).
+Adjust the size of the client cache without having to reinstall the client. Use the cache size settings available in **Client Settings** in the Configuration Manager console. For more information, see [Client cache settings](/configmgr/core/clients/deploy/about-client-settings#client-cache-settings).
 
 
 ## <a name="BKMK_UninstalClient"></a> Uninstall the client
@@ -382,6 +382,14 @@ Use the following process to add hardware identifiers for Configuration Manager 
 
 3. Switch to the **Client Approval and Conflicting Records** tab. To add new hardware identifiers, choose **Add** in the **Duplicate hardware identifiers** section.
 
+> [!TIP]
+> Starting in version 1910, use the following PowerShell cmdlets to automate the management of duplicate hardware identifiers:<!-- 4852819 -->
+>
+> - New-CMDuplicateHardwareIdGuid
+> - Remove-CMDuplicateHardwareIdGuid
+> - New-CMDuplicateHardwareIdMacAddress
+> - Remove-CMDuplicateHardwareIdMacAddress
+
 
 ## <a name="BKMK_PolicyRetrieval"></a> Start policy retrieval
 
@@ -413,7 +421,7 @@ A Configuration Manager client downloads its client policy on a schedule that yo
 
 ### <a name="bkmk_policy-support"></a> Start client policy retrieval with Support Center
 
-Use Support Center to request and view client policy. For more information, see [Support Center reference](/sccm/core/support/support-center-ui-reference#bkmk_support-policy).
+Use Support Center to request and view client policy. For more information, see [Support Center reference](/configmgr/core/support/support-center-ui-reference#bkmk_support-policy).
 
 ### <a name="bkmk_policy-script"></a> Start client policy retrieval by script  
 
@@ -427,7 +435,7 @@ Use Support Center to request and view client policy. For more information, see 
     ```  
 
     > [!TIP]
-    > For more information about the schedule IDs, see [Message IDs](/sccm/core/support/send-schedule-tool#bkmk_sendschedule-guids).
+    > For more information about the schedule IDs, see [Message IDs](/configmgr/core/support/send-schedule-tool#bkmk_sendschedule-guids).
 
 3. Save the file with a .ps1 extension.  
 
