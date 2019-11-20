@@ -1,0 +1,72 @@
+---
+title: Plan for BitLocker management
+titleSuffix: Configuration Manager
+description: Plan for managing BitLocker Drive Encryption with Configuration Manager
+ms.date: 11/25/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-protect
+ms.topic: conceptual
+ms.collection: M365-identity-device-management
+ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+---
+
+# Plan for BitLocker management
+
+*Applies to: Configuration Manager (current branch)*
+
+<!-- 3601034 -->
+
+Starting in version 1910, use Configuration Manager to manage BitLocker Drive Encryption (BDE) for on-premises Windows clients. It provides full BitLocker lifecycle management that can replace the use of Microsoft BitLocker Administration and Monitoring (MBAM).
+
+> [!TIP]
+> To manage encryption on co-managed Windows 10 devices using the Microsoft Endpoint Manager cloud service, switch the [**Endpoint Protection** workload](/configmgr/comanage/workloads#endpoint-protection) to Intune. For more information on using Intune, see [Windows Encryption](/intune/protect/endpoint-protection-windows-10#windows-encryption).
+
+For more information on Windows information protection, see [BitLocker overview](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview).
+
+## Features
+
+Configuration Manager provides the following management capabilities for BitLocker Drive Encryption:
+
+### Client deployment
+
+Deploy the BitLocker client to managed Windows devices running Windows 10, Windows 8.1, or Windows 7
+
+### Manage encryption policies
+
+- For example: choose drive encryption and cipher strength, configure user exemption policy, fixed data drive encryption settings.
+
+- Determine the algorithms with which to encrypt the device, and the disks that you target for encryption.
+
+- Force users to get compliant with new security policies before using the device.
+
+- Customize your organization's security profile on a per device basis.
+
+- When a user unlocks the OS drive, specify whether to unlock only an OS drive or all attached drives.
+
+### Compliance reports
+
+Built-in reports for:
+
+- Encryption status per volume or per device
+- The primary user of the device
+- Compliance status
+- Reasons for non-compliance
+
+### Administration and monitoring website
+
+Allow other personas in your organization outside of the Configuration Manager console to help with key recovery, including key rotation and other BitLocker-related support. For example, help desk administrators can help users with key recovery.
+
+### User self-service portal
+
+Let users help themselves with a single-use key for unlocking a BitLocker encrypted device. Once this key is used, it generates a new key for the device.
+
+## Prerequisites
+
+- To integrate the BitLocker recovery service in Configuration Manager requires a HTTPS-enabled management point.
+
+## Next step
+
+[Deploy BitLocker management client](/configmgr/protect/deploy-use/bitlocker/deploy-bitlocker)

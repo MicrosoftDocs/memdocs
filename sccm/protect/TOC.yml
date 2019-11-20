@@ -8,6 +8,8 @@
   items:
   - name: Plan for Endpoint Protection
     href: plan-design/planning-for-endpoint-protection.md
+  - name: Plan for BitLocker management
+    href: plan-design/plan-for-bitlocker.md
   - name: Plan for certificate profiles
     items:
     - name: Certificate profile prerequisites
@@ -102,6 +104,20 @@
       href: deploy-use/endpoint-protection-client-faq.md
     - name: Device Guard settings
       href: deploy-use/use-device-guard-with-configuration-manager.md
+  - name: BitLocker management
+    items:
+    - name: Deploy BitLocker management
+      href: deploy-use/bitlocker/deploy-bitlocker.md
+    - name: Encrypt recovery data
+      href: deploy-use/bitlocker/encrypt-recovery-data.md
+		- name: Set up BitLocker reports and portals
+      href: deploy-use/bitlocker/setup-bitlocker-admin.md
+		- name: View BitLocker reports
+      href: deploy-use/bitlocker/view-bitlocker-reports.md
+		- name: BitLocker administration portal
+      href: deploy-use/bitlocker/bitlocker-admin-portal.md
+		- name: BitLocker self-service portal
+      href: deploy-use/bitlocker/bitlocker-self-service-portal.md
   - name: Windows Hello for Business settings
     href: deploy-use/windows-hello-for-business-settings.md
   - name: Terms and Conditions settings
