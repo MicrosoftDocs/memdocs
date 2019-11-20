@@ -42,6 +42,8 @@ An additional report, **Recovery Audit Report**, is available from the [BitLocke
 
 Use this report to collect information that's specific to a computer. It provides detailed encryption information about the OS drive and any fixed data drives. To view the details of each drive, expand the Computer Name entry. It also indicates the policy that's applied to each drive type on the computer.
 
+You can also use this report to determine the last known BitLocker encryption status of lost or stolen computers. Configuration Manager determines compliance of the device based on the BitLocker policies that you deploy. Before you try to determine the BitLocker encryption state of a device, verify the policies that you've deployed to it.
+
 > [!NOTE]
 > This report doesn't show the Removable Data Volume encryption status.
 

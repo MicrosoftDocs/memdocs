@@ -44,11 +44,11 @@ This process uses a PowerShell script, MBAMWebSiteInstaller.ps1, to install thes
 
 - `-ReportWebServiceUrl <ReportWebServiceUrl>`: The web service URL of the reporting service point. It's the **Web Service URL** value in **Reporting Services Configuration Manager**.
 
-- `-HelpdeskUsersGroupName <DomainUserGroup>`: For example, `contoso\mbamusers`. A domain user group whose members have access to the **Manage TPM** and **Drive Recovery** areas of the administration and monitoring website. When using these options, this role needs to fill in all fields, including the user's domain and account name.
+- `-HelpdeskUsersGroupName <DomainUserGroup>`: For example, `contoso\BitLocker help desk users`. A domain user group whose members have access to the **Manage TPM** and **Drive Recovery** areas of the administration and monitoring website. When using these options, this role needs to fill in all fields, including the user's domain and account name.
 
-- `-HelpdeskAdminsGroupName <DomainUserGroup>`: For example, `contoso\mbamadmin`. A domain user group whose members have access to all recovery areas of the administration and monitoring website. When helping users recover their drives, this role only has to enter the recovery key.
+- `-HelpdeskAdminsGroupName <DomainUserGroup>`: For example, `contoso\BitLocker help desk admins`. A domain user group whose members have access to all recovery areas of the administration and monitoring website. When helping users recover their drives, this role only has to enter the recovery key.
 
-- `-MbamReportUsersGroupName <DomainUserGroup>`: For example, `contoso\mbamreports`. A domain user group whose members have read-only access to the **Reports** area of the administration and monitoring website.
+- `-MbamReportUsersGroupName <DomainUserGroup>`: For example, `contoso\BitLocker report users`. A domain user group whose members have read-only access to the **Reports** area of the administration and monitoring website.
 
 - `-SiteInstall Both`: Specify which of the components to install. Valid options include:
   - `Both`: Install both components
