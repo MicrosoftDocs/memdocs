@@ -111,13 +111,12 @@ Starting in version 1902, you can view the most recent connections for the Confi
 ### <a name="bkmk_connections-prereq"></a> Prerequisites to view connected consoles
 
 - Your account needs the **Read** permission on the **SMS_Site** object
-- The [Administration Service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service) must be enabled for the **Last Console Heartbeat** to function.
 - Install IIS on the SMS Provider server <!---SCCMDocs-pr issue 1326-->
 - Enable the SMS Provider to use a certificate.<!--SCCMDocs-pr issue 3135--> Use one of the following options:  
 
     - Enable [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http) (recommended)
     - Manually bind a PKI-based certificate to port 443 in IIS on the server that hosts the SMS Provider role  
-
+- The [Administration Service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service) must be enabled for the **Last Console Heartbeat** to function (introduced in version 1910).
 ### View connected consoles
 
 1. In the Configuration Manager console, go to the **Administration** workspace.  
@@ -134,10 +133,12 @@ Starting in version 1902, you can view the most recent connections for the Confi
     - Starting in version 1910, the **Last Console Heartbeat** column has replaced the **Last Connected Time** column. <!--4923997-->
        - The [Administration Service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service) must be enabled for the **Last Console Heartbeat** to function.
        - An open console in the foreground sends a heartbeat every 10 minutes.
-![View Configuration Manager console connections](media/console-connections.png) 
 
+![View Configuration Manager console connections](media/console-connections.png) 
 ## <a name="bkmk_message"></a> Message administrators from Console Connections
 <!--4923997-->
+*(Introduced in version 1910)*
+
 Starting in version 1910, you can message other Configuration Manager administrators from the **Console Connections** node. When you choose to message an administrator, Microsoft Teams is launched and a chat is opened with the user.
 
 ### Prerequisites for messaging administrators
