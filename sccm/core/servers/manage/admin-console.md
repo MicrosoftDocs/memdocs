@@ -38,7 +38,6 @@ To connect to a different site server, use the following steps:
 
 Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth). <!--1357013-->  
 
-
 ## Navigation
 
 Some areas of the console may not be visible depending on your assigned security role. For more information about roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
@@ -131,9 +130,36 @@ Starting in version 1902, you can view the most recent connections for the Confi
     - Connected site code
     - Console version
     - Last connected time: When the user last *opened* the console
-
+    - Starting in version 1910, the **Last Console Heartbeat** column has replaced the **Last Connected Time** column. <!--4923997-->
+       - The [Administration Service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service) must be enabled for the **Last Console Heartbeat** to function.
+       - An open console in the foreground sends a heartbeat every 10 minutes.
 ![View Configuration Manager console connections](media/console-connections.png) 
 
+## <a name="bkmk_message"></a> Message administrators from Console Connections
+<!--4923997-->
+Starting in version 1910, you can message other Configuration Manager administrators from the **Console Connections** node. When you choose to message an administrator, Microsoft Teams is launched and a chat is opened with the user.
+
+### Prerequisites for messaging administrators
+
+- For messaging administrators, the account you want to message needs to have been discovered with [Azure AD or AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
+- Microsoft Teams installed on the device from which you run the console.
+note
+
+### Message administrators
+
+1. Go to **Administration** > **Security** > **Console Connections**.
+1. Right-click on a user's console connection and select **Message Administrator**.
+    - If the User Principal Name isn't found for the selected administrator,  **Message Administrator** is grayed out.
+    - An error message, including a download link, appears if Microsoft Teams isn't installed on the device from which you run the console.
+    - If Microsoft Teams is installed on the device from which you run the console, it will open a chat with the user.
+
+![Message administrators with Microsoft Teams screenshot](media/4923997-message-administrator.png)
+
+### Known issues
+
+The error message notifying you that Microsoft Teams isn't installed won't be displayed if the following Registry key doesn't exist:
+
+Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
 
 ## <a name="bkmk_notify"></a> Configuration Manager console notifications
 
