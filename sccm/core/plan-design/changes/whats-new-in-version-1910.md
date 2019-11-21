@@ -201,7 +201,9 @@ For more information, see [Task sequence variables - SetupCompletePause](/config
 
 ### Additional software update filter for ADRs
 <!--4852033-->
+You can now use **Deployed** as an update filter for your automatic deployment rules. This filter helps identify new updates that may need to be deployed to your pilot or test collections.
 
+For more information see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process)
 
 ## <a name="bkmk_o365"></a> Office management
 
