@@ -92,9 +92,9 @@
       href: deploy-use/bitlocker/setup-bitlocker-admin.md
     - name: View BitLocker reports
       href: deploy-use/bitlocker/view-bitlocker-reports.md
-    - name: BitLocker administration portal
+    - name: Administration and monitoring website
       href: deploy-use/bitlocker/bitlocker-admin-portal.md
-    - name: BitLocker self-service portal
+    - name: Self-service portal
       href: deploy-use/bitlocker/bitlocker-self-service-portal.md
   - name: Windows Hello for Business settings
     href: deploy-use/windows-hello-for-business-settings.md
@@ -130,3 +130,15 @@
       href: deploy-use/monitor-certificate-profiles.md
     - name: Monitor Endpoint Protection
       href: deploy-use/monitor-endpoint-protection.md
+- name: Technical reference
+  items:
+  - name: BitLocker management
+    items:
+    - name: BitLocker event logs
+      href: tech-ref/bitlocker/about-event-logs.md
+    - name: Client event logs
+      href: tech-ref/bitlocker/client-event-logs.md
+    - name: Server event logs
+      href: tech-ref/bitlocker/server-event-logs.md
+    - name: Non-compliance codes
+      href: tech-ref/bitlocker/non-compliance-codes.md
