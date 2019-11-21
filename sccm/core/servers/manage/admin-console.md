@@ -108,9 +108,10 @@ At the bottom of the column context menu, you can sort or group by a column. Add
 <!--3699367-->
 Starting in version 1902, you can view the most recent connections for the Configuration Manager console. The view includes active connections and those connections that recently connected. You'll always see your current console connection in the list and you only see connections from the Configuration Manager console. You won't see PowerShell or other SDK-based connections to the SMS Provider. The site removes instances from the list that are older than 30 days.
 
-### Prerequisites to view connected consoles
+### <a name="bkmk_connections-prereq"></a> Prerequisites to view connected consoles
 
 - Your account needs the **Read** permission on the **SMS_Site** object
+- The [Administration Service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service) must be enabled for the **Last Console Heartbeat** to function.
 - Install IIS on the SMS Provider server <!---SCCMDocs-pr issue 1326-->
 - Enable the SMS Provider to use a certificate.<!--SCCMDocs-pr issue 3135--> Use one of the following options:  
 
@@ -144,6 +145,7 @@ Starting in version 1910, you can message other Configuration Manager administra
 - For messaging administrators, the account you want to message needs to have been discovered with [Azure AD or AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
 - Microsoft Teams installed on the device from which you run the console.
 note
+- All [Prerequisites to view connected consoles](#bkmk_connections-prereq)
 
 ### Message administrators
 
@@ -160,6 +162,8 @@ note
 The error message notifying you that Microsoft Teams isn't installed won't be displayed if the following Registry key doesn't exist:
 
 Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+
+To work around the issue, manually create the Registry key.
 
 ## <a name="bkmk_notify"></a> Configuration Manager console notifications
 
