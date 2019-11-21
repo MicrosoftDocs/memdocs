@@ -34,7 +34,10 @@ In the Configuration Manager console, go to the **Monitoring** workspace, expand
 You can also access these reports directly from the reporting services point website.
 
 > [!NOTE]
-> Clients need to send hardware inventory for these reports to display complete data.
+> For these reports to display complete data:
+>
+> - Create and deploy a BitLocker management policy to a device collection
+> - Clients in the target collection need to send hardware inventory
 
 An additional report, **Recovery Audit Report**, is available from the [BitLocker administration and monitoring website](/configmgr/protect/deploy-use/bitlocker/bitlocker-admin-portal).
 

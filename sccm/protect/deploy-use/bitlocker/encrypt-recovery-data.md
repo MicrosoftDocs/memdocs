@@ -65,10 +65,12 @@ This sample script does the following actions:
 
 Before you use this script in a production environment, change the following values:
 
+- Site database name (`CM_ABC`)
 - Password to create the master key (`MyMasterKeyPassword`)
 - Certificate expiry date (`20391022`)
 
 ``` SQL
+USE CM_ABC
 IF NOT EXISTS (SELECT name FROM sys.symmetric_keys WHERE name = '##MS_DatabaseMasterKey##')
 BEGIN
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = MyMasterKeyPassword
@@ -91,10 +93,12 @@ This sample script backs up a certificate. When you save the certificate to a fi
 
 Before you use this script in a production environment, change the following values:
 
+- Site database name (`CM_ABC`)
 - File path and name (`C:\BitLockerManagement_CERT_KEY`)
 - Master key password (`MyMasterKeyPassword`)
 
 ``` SQL
+USE CM_ABC
 BACKUP CERTIFICATE BitLockerManagement_CERT TO FILE = 'C:\BitLockerManagement_CERT'
     WITH PRIVATE KEY ( FILE = 'C:\BitLockerManagement_CERT_KEY',
         ENCRYPTION BY PASSWORD = MyMasterKeyPassword)
@@ -109,10 +113,12 @@ This sample script restores a certificate from a file. Use this process to deplo
 
 Before you use this script in a production environment, change the following values:
 
+- Site database name (`CM_ABC`)
 - Master key password (`MyMasterKeyPassword`)
 - File path and name (`C:\BitLockerManagement_CERT_KEY`)
 
 ``` SQL
+USE CM_ABC
 IF NOT EXISTS (SELECT name FROM sys.symmetric_keys WHERE name = '##MS_DatabaseMasterKey##')
 BEGIN
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = MyMasterKeyPassword
@@ -135,6 +141,7 @@ GRANT CONTROL ON CERTIFICATE ::BitLockerManagement_CERT TO RecoveryAndHardwareWr
 Use this SQL script to verify that SQL successfully created the certificate with the required permissions.
 
 ``` SQL
+USE CM_ABC
 declare @count int
 select @count = count(distinct u.name) from sys.database_principals u
 join sys.database_permissions p on p.grantee_principal_id = u.principal_id or p.grantor_principal_id = u.principal_id

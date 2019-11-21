@@ -36,7 +36,7 @@ Before you start, confirm the [prerequisites](/configmgr/protect/plan-design/pla
 
 This process uses a PowerShell script, MBAMWebSiteInstaller.ps1, to install these components on the web server. It accepts the following parameters:
 
-- `-SqlServerName <ServerName>` (required): The name of the primary site database server.
+- `-SqlServerName <ServerName>` (required): The fully qualified domain name of the primary site database server.
 
 - `-SqlInstanceName <InstanceName>`: The SQL Server instance name for the primary site database. This parameter is optional if SQL uses the default instance.
 
