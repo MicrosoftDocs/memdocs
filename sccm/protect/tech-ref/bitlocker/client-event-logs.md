@@ -21,6 +21,8 @@ manager: dougeby
 
 On a Configuration Manager client to which you deploy a BitLocker management policy, use the Windows Event Viewer to view BitLocker client event logs. Go to **Applications and Services Logs**, **Microsoft**, **Windows**, **MBAM** for both [Admin](#admin) and [Operational](#operational) event logs.
 
+For more information on using these logs, see [BitLocker event logs](/configmgr/protect/tech-ref/bitlocker/about-event-logs).
+
 ## Admin
 
 |Event ID|Task category|Message|

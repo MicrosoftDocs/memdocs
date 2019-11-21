@@ -19,7 +19,9 @@ manager: dougeby
 
 <!--3601034-->
 
-When you install the BitLocker self-service portal or the administration and monitoring website, use the Windows Event Viewer to view server event logs. Go to **Applications and Services Logs**, **Microsoft**, **Windows**. During initial setup, use [MBAM-Server](#bkmk-server). When the service is running, use [MBAM-Web](#bkmk_web).
+When you install the BitLocker self-service portal or the administration and monitoring website, use the Windows Event Viewer to view server event logs. Go to **Applications and Services Logs**, **Microsoft**, **Windows**. During initial setup, use [MBAM-Server](#bkmk_server). When the service is running, use [MBAM-Web](#bkmk_web).
+
+For more information on using these logs, see [BitLocker event logs](/configmgr/protect/tech-ref/bitlocker/about-event-logs).
 
 For more information on installing these websites, see [Set up BitLocker reports and portals](/configmgr/protect/deploy-use/bitlocker/setup-bitlocker-admin).
 
