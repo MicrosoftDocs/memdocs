@@ -31,6 +31,9 @@ Before you create and deploy BitLocker management policies, make sure to review 
 
 When you create and deploy this policy, the Configuration Manager client enables the BitLocker management agent on the device.
 
+> [!NOTE]
+> In version 1910, to create a BitLocker management policy, you need the **Full Administrator** role in Configuration Manager.
+
 1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **Endpoint Protection**, and select the **BitLocker Management** node.
 
 1. In the ribbon, select **Create BitLocker Management Control Policy**.

@@ -65,11 +65,13 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 ## Prerequisites
 
+- In version 1910, to create a BitLocker management policy, you need the **Full Administrator** role in Configuration Manager.
+
 - To integrate the BitLocker recovery service in Configuration Manager requires a HTTPS-enabled management point.
 
 - To use the BitLocker management reports, install the reporting services point site system role. For more information, see [Configure reporting](/configmgr/core/servers/manage/configuring-reporting).
 
-- To use the self-service portal or the administration and monitoring website, you need a Windows server running IIS. You can reuse a Configuration Manager site system, or use a standalone web server that has connectivity to the site database server. Use a [supported OS version for site system servers](/configmgr/core/plan-design/configs/supported-operating-systems-for-site-system-servers)
+- To use the self-service portal or the administration and monitoring website, you need a Windows server running IIS. You can reuse a Configuration Manager site system, or use a standalone web server that has connectivity to the site database server. Use a [supported OS version for site system servers](/configmgr/core/plan-design/configs/supported-operating-systems-for-site-system-servers).
 
 - On the web server that will host the self-service portal, install [ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4).
 
