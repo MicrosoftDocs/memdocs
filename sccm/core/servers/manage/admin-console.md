@@ -146,7 +146,7 @@ Starting in version 1910, you can message other Configuration Manager administra
 - For messaging administrators, the account you want to message needs to have been discovered with [Azure AD or AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
 - Microsoft Teams installed on the device from which you run the console.
 note
-- All [Prerequisites to view connected consoles](#bkmk_connections-prereq)
+- All [prerequisites to view connected consoles](#bkmk_connections-prereq)
 
 ### Message administrators
 
