@@ -72,6 +72,12 @@ For more information, see [Using the Configuration Manager console](/configmgr/c
 ### Include custom configuration baselines as part of compliance policy assessment
 <!--3608345-->
 
+You can now add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you have an option to **Evaluate this baseline as part of compliance policy assessment**. When adding or editing a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**.
+
+ For a co-managed device and when Intune is configured to take ConfigMgr compliance assessment result as part of the overall compliance status that gets sent to Azure Active Directory and be used for conditional access to customers' Office 365 resources.
+
+For more information, see [Include custom configuration baselines as part of compliance policy assessment](/sccm/compliance/deploy-use/create-configuration-baselines#bkmk_CAbaselines).
+
 ### Enable user policy for Windows 10 Enterprise multi-session
 <!--4737447-->
 
