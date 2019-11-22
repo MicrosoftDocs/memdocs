@@ -46,3 +46,12 @@ You can enable more detailed logs for troubleshooting purposes. In Event Viewer,
 >
 > - **Maximum log size (KB)**: `1028` (1 MB)
 > - **Do not overwrite events (Clear logs manually)**
+
+## Export logs to text
+
+Especially with the analytic and debug logs, you may find it easier to review the logs entries in a single text file. Use the following PowerShell commands to export the event log entries to text files:
+
+``` PowerShell
+Get-WinEvent -LogName Microsoft-Windows-MBAM/Analytic -Oldest | Out-File -Width 300 C:\Temp\MBAM_Analytic.txt
+Get-WinEvent -LogName Microsoft-Windows-MBAM/Debug -Oldest | Out-File -Width 300 C:\Temp\MBAM_Debug.txt
+```
