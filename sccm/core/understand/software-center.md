@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Software Center user guide
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Microsoft Endpoint Configuration Manager (Current Branch)*
 
 Your organization's IT admin uses Software Center to install applications, software updates, and upgrade Windows. This user guide explains the functionality of Software Center for users of the computer.
 
@@ -32,7 +32,7 @@ General notes about Software Center functionality:
 
 For the simplest method to start Software Center on a Windows 10 computer, press **Start** and type `Software Center`.
 
-If you navigate the Start menu, look under the **Microsoft System Center** group for the **Software Center** icon.
+If you navigate the Start menu, look under the **Microsoft Endpoint Manager** group for the **Software Center** icon.
 
 
 ## Applications
