@@ -2,7 +2,7 @@
 title: Enable third party updates
 titleSuffix: Configuration Manager
 description: Enable third party updates in Configuration Manager
-ms.date: 11/19/2019
+ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum 
 ms.topic: conceptual
@@ -151,6 +151,73 @@ Once the third-party updates are in the **All Updates** node, you can choose whi
 7. On the **Download Locations** page of the **Deploy Software Updates Wizard**, select the default option to **Download software updates from the internet**. In this scenario, the content is already published to the software update point, which is used to download the content for the deployment package.
 8. Clients will need to run a scan and evaluate updates before you can see compliance results.  You can manually trigger this cycle from the Configuration Manager control panel on a client by running the **Software Updates Scan Cycle** action.
 
+
+## <a name="bkmk_1910"></a> Improvements for third-party updates starting in 1910
+<!--4469002-->
+You now have more granular controls over synchronization of third party updates catalogs. Starting in Configuration Manager version 1910, you can configure the synchronization schedule for each catalog independently. When using catalogs that include categorized updates, you can configure synchronization to include only specific categories of updates to avoid synchronizing the entire catalog. With categorized catalogs, when you're confident you'll deploy a category, you can configure it to automatically download and publish to WSUS.
+
+### Set the schedule for a catalog in a new catalog subscription
+
+1. Go to the **Software Library** workspace, expand **Software Updates**, then select the **Third-Party Software Update Catalogs** node.
+1. Select the catalog to subscribe and click **Subscribe to Catalog** in the ribbon.
+1. Choose your options on the **Schedule** page if you want to override the default synchronization schedule:
+   - **Simple schedule**:  Chose the hour, day or month interval.
+   - **Custom schedule**: Set a complex schedule.
+
+### Update the schedule per catalog
+
+1. Go to the **Software Library** workspace, expand **Software Updates**, then select the **Third-Party Software Update Catalogs** node.
+1. Right-click on the catalog and select **Properties**.
+1. Choose your options on the Schedule tab: 
+   - **Simple schedule**:  Chose the hour, day or month interval.
+   - **Custom schedule**: Set a complex schedule.
+
+### New subscription to a third-party v3 catalog
+
+> [!IMPORTANT]
+> This option is only available for v3 third-party update catalogs, which support categories for updates. These options are disabled for catalogs that aren't published in the new v3 format.
+
+
+1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Software Updates** and select the **Third-Party Software Update Catalogs** node.
+1. Select the catalog to subscribe and click **Subscribe to Catalog** in the ribbon.
+1. Choose your options on the **Select Categories** page:
+
+   - **Synchronize all update categories** (default)
+       - Synchronizes all updates in the third-party update catalog into Configuration Manager.
+   -  **Select categories for synchronization**
+       - Choose which categories and child categories to synchronize into Configuration Manager.
+
+      ![Select update categories to synchronize into Configuration Manager](./media/4469002-select-categories-for-sync.png)
+1. Choose if you want to **Stage update content** for the catalog. When you stage the content, all updates in the selected categories are automatically downloaded to your top-level software update point meaning you don't need to ensure they're already downloaded before deploying. You should only automatically stage content for updates you are likely to deploy them to avoid excessive bandwidth and storage requirements.
+
+   - **Do not stage content, synchronize for scanning only (recommended)**
+     - Don't download any content for updates in the third-party catalog
+   - **Stage the content for selected categories automatically**
+     - Choose the update categories that will automatically download content.
+     - The content for updates in selected categories will be downloaded to the top-level software update point's WSUS content directory.
+      ![Select update categories to stage content](./media/4469002-stage-content.png)
+1. Set your **Schedule** for catalog synchronization, then complete the wizard.
+
+ 
+
+### Edit an existing subscription
+
+> [!IMPORTANT]
+> This option is only available for v3 third-party update catalogs, which support categories for updates. These options are disabled for catalogs that aren't published in the new v3 format.
+
+1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Software Updates** and select the **Third-Party Software Update Catalogs** node.
+1. Right-click on the catalog and select **Properties**.
+1. Choose your options on the **Select Categories** tab.
+   - **Synchronize all update categories** (default)
+       - Synchronizes all updates in the third-party update catalog into Configuration Manager.
+   -  **Select categories for synchronization**
+       - Choose which categories and child categories to synchronize into Configuration Manager.
+1. Choose your options for the **Stage update content** tab.
+   - **Do not stage content, synchronize for scanning only (recommended)**
+     - Don't download any content for updates in the third-party catalog
+   - **Stage the content for selected categories automatically**
+     - Choose the update categories that will automatically download content.
+     - The content for updates in selected categories will be downloaded to the top-level software update point's WSUS content directory. 
 
 ## Monitoring progress of third-party software updates 
 
