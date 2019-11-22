@@ -55,7 +55,7 @@ For the best results, you may need to set the Delivery Optimization [download mo
 
 Manually configuring these Group IDs is challenging when clients roam across different networks. Configuration Manager version 1802 added a new feature to simplify management of this process by [integrating boundary groups with Delivery Optimization](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization). When a client wakes up, it talks to its management point to get policies, and provides its network and boundary group information. Configuration Manager creates a unique ID for every boundary group. The site uses the client's location information to automatically configure the client's Delivery Optimization Group ID with the Configuration Manager boundary ID. When the client roams to another boundary group, it talks to its management point, and is automatically reconfigured with a new boundary group ID. With this integration, Delivery Optimization can utilize the Configuration Manager boundary group information to find a peer from which to download updates.
 
-## <a name="bkmk_DO-1910"></a> Delivery Optimization starting in version 1910
+### <a name="bkmk_DO-1910"></a> Delivery Optimization starting in version 1910
 <!--4699118-->
 Starting with Configuration Manager version 1910, you can use Delivery Optimization for the distribution of all Windows update content for clients running Windows 10 version 1709 or later, not just express installation files.
 
