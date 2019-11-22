@@ -49,9 +49,21 @@ You can enable more detailed logs for troubleshooting purposes. In Event Viewer,
 
 ## Export logs to text
 
-Especially with the analytic and debug logs, you may find it easier to review the logs entries in a single text file. Use the following PowerShell commands to export the event log entries to text files:
+Especially with the [analytic and debug logs](#bkmk_debug), you may find it easier to review the logs entries in a single text file. Use the following PowerShell commands to export the event log entries to text files:
 
 ``` PowerShell
-Get-WinEvent -LogName Microsoft-Windows-MBAM/Analytic -Oldest | Out-File -Width 300 C:\Temp\MBAM_Analytic.txt
-Get-WinEvent -LogName Microsoft-Windows-MBAM/Debug -Oldest | Out-File -Width 300 C:\Temp\MBAM_Debug.txt
+# Out-String with a larger -Width does a better job compared to using Out-File with -Width. -Oldest is only required with debug/analytic logs.
+
+# Debug log
+Get-WinEvent -LogName Microsoft-Windows-MBAM/Debug -Oldest | Format-Table -AutoSize | Out-String -Width 4096 | Out-File C:\Temp\MBAM_Log_Debug.txt
+
+# Analytic log
+Get-WinEvent -LogName Microsoft-Windows-MBAM/Analytic -Oldest | Format-Table -AutoSize | Out-String -Width 4096 | Out-File C:\Temp\MBAM_Log_Analytic.txt
+
+# Admin log
+# The above command truncates the output from the admin log, this sample reformats the strings
+Get-WinEvent -LogName Microsoft-Windows-MBAM/Admin |
+    Select TimeCreated, LevelDisplayName, TaskDisplayName, @{n='Message';e={$_.Message.trim()}} |
+    Format-Table -AutoSize -Wrap | Out-String -Width 4096 |
+    Out-File -FilePath C:\Temp\MBAM_Log_Admin.txt
 ```
