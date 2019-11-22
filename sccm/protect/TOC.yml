@@ -90,6 +90,8 @@
       href: deploy-use/bitlocker/encrypt-recovery-data.md
     - name: Set up BitLocker reports and portals
       href: deploy-use/bitlocker/setup-bitlocker-admin.md
+    - name: Customize the self-service portal
+      href: deploy-use/bitlocker/customize-self-service-portal.md
     - name: View BitLocker reports
       href: deploy-use/bitlocker/view-bitlocker-reports.md
     - name: Administration and monitoring website
