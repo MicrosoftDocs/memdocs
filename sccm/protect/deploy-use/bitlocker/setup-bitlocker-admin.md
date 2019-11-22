@@ -77,8 +77,8 @@ On the target web server, do the following actions:
 
 After installation, access the portals via the following URLs:
 
-- Self-service portal: `https://webserver/SelfService`
-- Administration and monitoring website: `https://webserver/HelpDesk`
+- Self-service portal: `https://webserver.contoso.com/SelfService`
+- Administration and monitoring website: `https://webserver.contoso.com/HelpDesk`
 
 > [!NOTE]
 > Microsoft recommends but doesn't require the use of HTTPS. For more information, see [How to set up SSL on IIS](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).

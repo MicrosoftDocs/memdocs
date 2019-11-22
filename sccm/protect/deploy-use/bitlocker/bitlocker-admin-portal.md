@@ -21,9 +21,11 @@ manager: dougeby
 
 The BitLocker administration and monitoring website is an administrative interface for BitLocker Drive Encryption. It's also referred to as the help desk portal. Use this website to review reports, recover users' drives, and manage device TPMs.
 
+[![Screenshot of default BitLocker administration and monitoring website](media/bitlocker-helpdesk-website.png)](media/bitlocker-helpdesk-website.png#lightbox)
+
 Before you can use it, install this component on a web server. For more information, see [Set up BitLocker reports and portals](/configmgr/protect/deploy-use/bitlocker/setup-bitlocker-admin).
 
-Access the administration and monitoring website via the following URL: `https://webserver/HelpDesk`
+Access the administration and monitoring website via the following URL: `https://webserver.contoso.com/HelpDesk`
 
 > [!NOTE]
 > You can view the **Recovery Audit Report** in the administration and monitoring website. You add other BitLocker management reports to the reporting services point. For more information, see [View BitLocker reports](/configmgr/protect/deploy-use/bitlocker/view-bitlocker-reports).
@@ -40,28 +42,33 @@ To access specific areas of the administration and monitoring website, your user
 
 ## Manage TPM
 
-### Reset a TPM lockout
-
-If a user enters the incorrect PIN too many times, they can lockout the TPM. The number of times that a user can enter an incorrect PIN before the TPM locks varies from manufacturer to manufacturer.
-
-From the **Manage TPM** area of the administration and monitoring website, access the centralized **Key Recovery** data system. Supply a computer ID and associated user ID and receive the TPM owner password file.
+If a user enters the incorrect PIN too many times, they can lockout the TPM. The number of times that a user can enter an incorrect PIN before the TPM locks varies from manufacturer to manufacturer. From the **Manage TPM** area of the administration and monitoring website, access the centralized key recovery data system.
 
 For more information about TPM ownership, see [Configure MBAM to escrow the TPM and store OwnerAuth passwords](https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm).
 
 > [!NOTE]
 > Starting with Windows 10, version 1607, Windows doesn't keep the TPM owner password when provisioning the TPM.
 
-1. Go to the administration and monitoring website in the web browser, for example `https://webserver/HelpDesk`.
+1. Go to the administration and monitoring website in the web browser, for example `https://webserver.contoso.com/HelpDesk`.
 
 1. In the left pane, select the **Manage TPM** area.
+
+    ![BitLocker administration and monitoring website Manage TPM page](media/bitlocker-admin-manage-tpm.png)
 
 1. Enter the fully qualified domain name for the computer and the computer name.
 
 1. If necessary, enter the user's domain and user name to retrieve the TPM owner password file.
 
-1. Choose an option for the **Reason for requesting TPM owner password file**, and then select **Submit**.
+1. Choose one of the following options for the **Reason for requesting TPM owner password file**:
 
-    The website returns one of the following responses:
+    - Reset PIN lockout
+    - Turn on TPM
+    - Turn off TPM
+    - Change TPM password
+    - Clear TPM
+    - Other
+
+    After you **Submit** the form, the website returns one of the following responses:
 
     - If it can't find a matching TPM owner password file, it returns an error message.
 
@@ -92,17 +99,29 @@ To get a recovery password, use the **Drive recovery** area of the administratio
 > [!IMPORTANT]
 > Recovery passwords expire after a single use. On OS drives and fixed data drives, the single-use rule automatically applies. On removable drives, it applies when you remove and reinsert the drive.
 
-1. Go to the administration and monitoring website in the web browser, for example `https://webserver/HelpDesk`.
+1. Go to the administration and monitoring website in the web browser, for example `https://webserver.contoso.com/HelpDesk`.
 
 1. In the left pane, select the **Drive Recovery** area.
+
+    ![BitLocker administration and monitoring website Driver Recovery page](media/bitlocker-admin-drive-recovery.png)
 
 1. If necessary, enter the user's domain and user name to view recovery information.
 
 1. To see a list of possible matching recovery keys, enter the first eight digits of the recovery key ID. To get the exact recovery key, enter the entire recovery key ID.
 
-1. Choose an option for the **Reason for Drive Unlock**, and then select **Submit**.
+1. Choose one of the following options as the **Reason for Drive Unlock**:
 
-    The website returns one of the following responses:
+    - Operating system boot order changed
+    - BIOS changed
+    - Operating system files modified
+    - Lost startup key
+    - Lost PIN
+    - TPM reset
+    - Lost passphrase
+    - Lost smartcard
+    - Other
+
+    After you **Submit** the form, the website returns one of the following responses:
 
     - If the user has multiple matching recovery passwords, it returns multiple possible matches.
 
@@ -167,7 +186,7 @@ For more information about this command, see [Repair-bde](https://docs.microsoft
 
 The administration and monitoring website includes the **Recovery Audit Report**. Other reports are available from the Configuration Manager reporting services point. For more information, see [View BitLocker reports](/configmgr/protect/deploy-use/bitlocker/view-bitlocker-reports).
 
-1. Go to the administration and monitoring website in the web browser, for example `https://webserver/HelpDesk`.
+1. Go to the administration and monitoring website in the web browser, for example `https://webserver.contoso.com/HelpDesk`.
 
 1. In the left pane, select the **Reports** area.
 
@@ -191,7 +210,7 @@ Use this report to audit users who have requested access to BitLocker recovery k
 |End user|Name of the user who requested key retrieval.|
 |Computer|Name of the computer that was recovered.|
 |Key type|Type of key that the user requested. The three types of keys are:<br/><br/>- **Recovery key password**: used to recover a computer in recovery mode<br/>- **Recovery key ID**: used to recover a computer in recovery mode for another user<br/>- **TPM password hash**: used to recover a computer with a locked TPM|
-|Reason description|Why the user requested the specified key type. The valid entries are user-entered text or one of the following reason codes:<br/><br/>- Operating System Boot Order changed<br/>-BIOS Changed<br/>-Operating System files changed<br/>-Lost Startup key<br/>-Lost PIN<br/>-TPM Reset<br/>-Lost Passphrase<br/>-Lost Smartcard<br/>-Reset PIN lockout<br/>-Turn on TPM<br/>-Turn off TPM<br/>-Change TPM password<br/>-Clear TPM|
+|Reason description|Why the user requested the specified key type. The valid entries are user-entered text or one of the following reason codes:<br/><br/>- Operating system boot order changed<br/>- BIOS changed<br/>- Operating system files changed<br/>- Lost startup key<br/>- Lost PIN<br/>- TPM reset<br/>- Lost passphrase<br/>- Lost smartcard<br/>- Reset PIN lockout<br/>- Turn on TPM<br/>- Turn off TPM<br/>- Change TPM password<br/>- Clear TPM|
 
 > [!TIP]
 > To save report results, select **Export** on the **Reports** menu bar.

@@ -112,9 +112,17 @@ When you create more than one policy, you can configure their relative priority.
 
 1. Select **OK** to deploy the policy.
 
-You can create multiple deployments of the same policy. To view additional information about each deployment, select the policy in the **BitLocker Management** node, and then in the details pane switch to the **Deployments** tab.
+You can create multiple deployments of the same policy. To view additional information about each deployment, select the policy in the **BitLocker Management** node, and then in the details pane, switch to the **Deployments** tab.
 
 ## Monitor
+
+View basic compliance statistics about the policy deployment in the details pane of the **BitLocker Management** node:
+
+- Compliance count
+- Failure count
+- Non-compliance count
+
+Switch to the **Deployments** tab to see compliance percentage and recommended action. Select the deployment, then in the ribbon, select **View Status**. This action switches the view to the **Monitoring** workspace, **Deployments** node. Similar to the deployment of other configuration policy deployments, you can see more detailed compliance status in this view.
 
 Use the following logs to monitor and troubleshoot:
 

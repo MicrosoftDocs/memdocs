@@ -41,16 +41,18 @@ You can also access these reports directly from the reporting services point web
 
 An additional report, **Recovery Audit Report**, is available from the [BitLocker administration and monitoring website](/configmgr/protect/deploy-use/bitlocker/bitlocker-admin-portal).
 
-## <a name="bkmk-compliancereport"></a> BitLocker computer compliance report
+## <a name="bkmk-compliancereport"></a> BitLocker computer compliance
 
 Use this report to collect information that's specific to a computer. It provides detailed encryption information about the OS drive and any fixed data drives. To view the details of each drive, expand the Computer Name entry. It also indicates the policy that's applied to each drive type on the computer.
+
+[![Example screenshot of BitLocker computer compliance report](media/bitlocker-computer-compliance.png)](media/bitlocker-computer-compliance.png#lightbox)
 
 You can also use this report to determine the last known BitLocker encryption status of lost or stolen computers. Configuration Manager determines compliance of the device based on the BitLocker policies that you deploy. Before you try to determine the BitLocker encryption state of a device, verify the policies that you've deployed to it.
 
 > [!NOTE]
 > This report doesn't show the Removable Data Volume encryption status.
 
-### Computer details fields
+### Computer details
 
 |Column name|Description|
 |--- |--- |
@@ -73,7 +75,7 @@ You can also use this report to determine the last known BitLocker encryption st
 |Model|Computer manufacturer model name as it appears in the computer BIOS.|
 |Device users|Known users on the computer.|
 
-### <a name="bkmk_volume"></a> Computer volume fields
+### <a name="bkmk_volume"></a> Computer volume
 
 |Column name|Description|
 |--- |--- |
@@ -90,9 +92,11 @@ This report provides the following graphs, which show BitLocker compliance statu
 
 - Compliance status distribution
 
-- Non-compliant errors distribution
+- Non-compliant - Errors distribution
 
 - Compliance status distribution by drive type
+
+[![Example screenshot of BitLocker enterprise compliance dashboard](media/bitlocker-enterprise-compliance-dashboard.png)](media/bitlocker-enterprise-compliance-dashboard.png#lightbox)
 
 ### Compliance status distribution
 
@@ -112,7 +116,7 @@ The pie chart shows the following compliance statuses:
 
 - Unknown. These computers reported a status error, or they're part of the collection but have never reported their compliance status. The lack of a compliance status could occur if the computer is disconnected from the organization.
 
-### Non-compliant errors distribution
+### Non-compliant - Errors distribution
 
 This pie chart shows the categories of computers in your organization that aren't compliant with the BitLocker Drive Encryption policy. It also shows the number of computers in each category. The report calculates each percentage from the total number of non-compliant computers in the collection.
 
@@ -121,6 +125,8 @@ This pie chart shows the categories of computers in your organization that aren'
 - Unable to find compatible TPM
 
 - System partition not available or large enough
+
+- TPM visible but not initialized
 
 - Policy conflict
 
@@ -138,6 +144,8 @@ This bar chart shows the current BitLocker compliance status by drive type. The 
 
 This report shows information about the overall BitLocker compliance across your organization for the collection of computers to which you deployed the BitLocker management policy.
 
+[![Example screenshot of BitLocker enterprise compliance details](media/bitlocker-enterprise-compliance-details.png)](media/bitlocker-enterprise-compliance-details.png#lightbox)
+
 |Column name|Description|
 |--- |--- |
 |Managed computers|Number of computers to which you deployed a BitLocker management policy.|
@@ -152,11 +160,23 @@ This report shows information about the overall BitLocker compliance across your
 |Exempt|Count of computers that are exempt from the BitLocker encryption requirement.|
 |Non-exempt|Count of computers that aren't exempt from the BitLocker encryption requirement.|
 
+### Computer details
+
+|Column name|Description|
+|--- |--- |
+|Computer name|DNS computer name of the managed device.|
+|Domain name|Fully qualified domain name for the computer.|
+|Compliance status|Overall compliance status of the computer. Valid states are **Compliant** and **Non-compliant**.|
+|Exemption|Indicates whether the user is exempt or non-exempt from the BitLocker policy.|
+|Device users|Users of the device.|
+|Compliance status details|Error and status messages about the compliance state of the computer from the specified policy.|
+|Last contact|Date and time that the computer last contacted the server to report compliance status.|
+
 ## <a name="bkmk-compliancesummary"></a> BitLocker enterprise compliance summary
 
 Use this report to show the overall BitLocker compliance across your organization. It also shows the compliance for individual computers to which you deployed the BitLocker management policy.
 
-### Fields
+[![Example screenshot of BitLocker enterprise compliance summary](media/bitlocker-enterprise-compliance-summary.png)](media/bitlocker-enterprise-compliance-summary.png#lightbox)
 
 |Column name|Description|
 |--- |--- |
@@ -171,15 +191,3 @@ Use this report to show the overall BitLocker compliance across your organizatio
 |Unknown compliance|Count of computers with a compliance state that's not known.|
 |Exempt|Count of computers that are exempt from the BitLocker encryption requirement.|
 |Non-exempt|Count of computers that aren't exempt from the BitLocker encryption requirement.|
-
-### Computer details
-
-|Column name|Description|
-|--- |--- |
-|Computer name|DNS computer name of the managed device.|
-|Domain name|Fully qualified domain name for the computer.|
-|Compliance status|Overall compliance status of the computer. Valid states are **Compliant** and **Non-compliant**.|
-|Exemption|Indicates whether the user is exempt or non-exempt from the BitLocker policy.|
-|Device users|Users of the device.|
-|Compliance status details|Error and status messages about the compliance state of the computer from the specified policy.|
-|Last contact|Date and time that the computer last contacted the server to report compliance status.|
