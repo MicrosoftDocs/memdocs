@@ -134,6 +134,8 @@
   items:
   - name: BitLocker management
     items:
+    - name: Troubleshoot BitLocker
+      href: tech-ref/bitlocker/troubleshoot-bitlocker.md
     - name: BitLocker event logs
       href: tech-ref/bitlocker/about-event-logs.md
     - name: Client event logs
