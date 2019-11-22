@@ -207,6 +207,9 @@ For more information, see [Enable third-party updates](/sccm/sum/deploy-use/thir
 
 ### Use Delivery Optimization for all Windows updates
 <!--4699118-->
+Previously, Delivery Optimization could be leveraged only for express updates. With Configuration Manager version 1910, it’s now possible to use Delivery Optimization for the distribution of all Windows Update content for clients running Windows 10 version 1709 or later.
+
+For more information, see [Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#bkmk_DO-1910) and [Client settings for software updates](/sccm/core/clients/deploy/about-client-settings#software-updates).
 
 ### Additional software update filter for ADRs
 <!--4852033-->

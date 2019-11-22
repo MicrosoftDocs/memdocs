@@ -2,7 +2,7 @@
 title: Optimize Windows 10 update delivery
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to manage update content to stay current with Windows 10.  
-ms.date: 07/09/2019
+ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -32,7 +32,6 @@ Configuration Manager added support for [express installation files](/sccm/sum/d
 > The express version content is considerably larger than the full-file version. An express installation file contains all of the possible variations for each file it's meant to update. As a result, the required amount of disk space increases for updates in the update package source and on distribution points when you enable express support in Configuration Manager. Even though the disk space requirement on the distribution points increases, the content size that clients download from these distribution points decreases. Clients only download the bits they require (deltas) but not the whole update.
 
 
-
 ## Peer-to-peer content distribution
 
 Even though clients download only the parts of the content that they require, expedite Windows updates in your environment by utilizing peer-to-peer content distribution. Leveraging peers as a download source for quality updates can be beneficial for environments where local distribution points aren't present in remote offices. This behavior prevents the need for all clients to download content from a remote distribution point across a slow WAN link. Using peers can also be beneficial when clients fallback to the Windows Update service. Only one peer is needed to download update content from the cloud before making it available to other devices.
@@ -56,6 +55,17 @@ For the best results, you may need to set the Delivery Optimization [download mo
 
 Manually configuring these Group IDs is challenging when clients roam across different networks. Configuration Manager version 1802 added a new feature to simplify management of this process by [integrating boundary groups with Delivery Optimization](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization). When a client wakes up, it talks to its management point to get policies, and provides its network and boundary group information. Configuration Manager creates a unique ID for every boundary group. The site uses the client's location information to automatically configure the client's Delivery Optimization Group ID with the Configuration Manager boundary ID. When the client roams to another boundary group, it talks to its management point, and is automatically reconfigured with a new boundary group ID. With this integration, Delivery Optimization can utilize the Configuration Manager boundary group information to find a peer from which to download updates.
 
+## <a name="bkmk_DO-1910"></a> Delivery Optimization starting in version 1910
+<!--4699118-->
+Starting with Configuration Manager version 1910, you can use Delivery Optimization for the distribution of all Windows update content for clients running Windows 10 version 1709 or later, not just express installation files.
+
+To use Delivery Optimization for all Windows update installation files, enable the following [software updates client settings](/sccm/core/clients/deploy/about-client-settings#software-updates):
+
+- **Allow clients to download delta content when available** set to **Yes**.
+- **Port that clients use to receive requests for delta content** set to 8005 (default) or a custom port number.
+
+> [!IMPORTANT]
+> Delivery Optimization must be enabled (default) and not bypassed. For more information, see [Windows Delivery Optimization](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#windows-delivery-optimization).
 
 ### Configuration Manager peer cache
 
@@ -87,7 +97,7 @@ Selecting the right peer caching technology for express installation files depen
 | Peer discovery | Via Delivery Optimization cloud service (requires internet access) | Via management point (based on client boundary groups) | Multicast |
 | Reporting | Yes (using Windows Analytics) | ConfigMgr client data sources dashboard | ConfigMgr client data sources dashboard |
 | WAN usage control | Yes (native, can be controlled via group policy settings) | Boundary groups | Subnet support only |
-| Supported content types | **Through ConfigMgr:** </br> Express updates </br> </br> **Through Microsoft cloud:**</br> Windows and security updates</br> Drivers</br> Windows Store apps</br> Windows Store for Business apps | All ConfigMgr content types, including images downloaded in [Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic) | All ConfigMgr content types, except images |
+| Supported content types | **Through ConfigMgr:** </br> Express updates </br> All Windows updates (starting version 1910)</br> </br> **Through Microsoft cloud:**</br> Windows and security updates</br> Drivers</br> Windows Store apps</br> Windows Store for Business apps | All ConfigMgr content types, including images downloaded in [Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic) | All ConfigMgr content types, except images |
 | Management through ConfigMgr | Partial (client agent setting) | Yes (client agent setting) | Yes (client agent setting) |
 
 
@@ -151,3 +161,14 @@ Windows 10, version 1703 (and later) includes two new PowerShell cmdlets, **Get-
 #### How do clients communicate with Delivery Optimization over the network?
 For more information about the network ports, proxy requirements, and hostnames for firewalls, see [FAQs for Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
 
+## Log files
+
+Use the following log files to monitor delta downloads:
+
+- WUAHandler.log
+- DeltaDownload.log
+
+## Next steps
+
+- [Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates)
+- [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates)
