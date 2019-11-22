@@ -116,7 +116,9 @@ When `User1` uses `Device2`, only `Configuration Baseline 2` gets evaluated when
    - Devices must be managed with the Configuration Manager client to include custom configuration baselines as part of compliance policy assessment.
 1. Select your platforms on the **Supported Platforms** pages.
 1. On the **Rules** page, select **New**, then select the **Include configured baselines in compliance policy assessment** condition.
-![Include configured baselines in compliance policy assessment condition](./media/3608345-create-compliance-policy-rule.png)
+
+   ![Include configured baselines in compliance policy assessment condition](./media/3608345-create-compliance-policy-rule.png)
+
 1. Click **OK**, then **Next** to get to the **Summary** page.
 1. Verify your selections and click **Next** then **Close**.
 1. In the **Compliance Polices** node, right-click on the policy you created, and select **Deploy**.
@@ -132,7 +134,7 @@ When `User1` uses `Device2`, only `Configuration Baseline 2` gets evaluated when
    - For co-managed devices that have Intune as the **Device configuration** authority, ensure **Always apply this baseline even for co-managed clients** is also selected.
 1. Click **OK** to save the changes to your configuration baseline.
 
-![Configuration Baseline Properties dialog box](./media/3608345-configuration-baseline-properties.png)
+   ![Configuration Baseline Properties dialog box](./media/3608345-configuration-baseline-properties.png)
 
 ### Log files for custom configuration baselines as part of compliance policy assessment
 
