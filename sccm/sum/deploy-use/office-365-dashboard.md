@@ -212,6 +212,10 @@ This tile summarizes devices that have issues with add-ins, macros, or both.
 - Compile errors: The macro didn't compile correctly so it won't attempt to run.
 - Multiple issues: The macro has more than one of the above issues.
 
+### Known issues
+
+There is a known issue with the **Deploy Pilot**  tile. At this time it can't be used to deploy to a pilot. The workaround is the existing workflow for deploying an application using the Phased Deployment Wizard. <!--5525871-->
+
 ## Next steps
 
 [Manage Office 365 ProPlus with Configuration Manager](/sccm/sum/deploy-use/manage-office-365-proplus-updates)
