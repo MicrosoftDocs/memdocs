@@ -38,7 +38,7 @@ Configuration Manager integrates with Windows Hello for Business in the followin
 
 - Store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles](/configmgr/protect/deploy-use/introduction-to-certificate-profiles).  
 
-- Create and deploy a Windows Hello for Business profile to control its settings on domain-joined Windows 10 devices the run the Configuration Manager client. Starting in version 1910, you can't use certificate-based authentication. When using key-based authentication, you don't need to deploy a certificate profile.
+- Create and deploy a Windows Hello for Business profile to control its settings on domain-joined Windows 10 devices that run the Configuration Manager client. Starting in version 1910, you can't use certificate-based authentication. When using key-based authentication, you don't need to deploy a certificate profile.
 
 ## Configure a profile  
 
