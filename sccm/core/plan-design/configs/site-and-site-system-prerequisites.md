@@ -81,6 +81,8 @@ See the main sections of this article for the specific prerequisites for site sy
 
 - Remote Differential Compression  
 
+- When you use a software update point on a server other than the site server, install the WSUS Administration Console on the site server.
+
 ### .NET Framework
 
 Enable the Windows feature for .NET Framework 3.5.

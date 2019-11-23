@@ -2,7 +2,7 @@
 title: Manage access to Office 365 services
 titleSuffix: Configuration Manager
 description: Learn how to configure conditional access to Office 365 services for PCs that are managed by System Center Configuration Manager.
-ms.date: 07/03/2019
+ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -69,7 +69,7 @@ For information on configuring conditional access for devices enrolled and manag
 
   -   For Windows 8.1 and Windows 10 PCs, you can use an Active Directory Group Policy to configure your devices to register automatically with Azure AD.  
 
-  -   o   For Windows 7 PCs, you must deploy the device registration software package to your Windows 7 PC through System Center Configuration Manager. The [Automatic device registration with Azure Active Directory for Windows Domain-Joined Devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) article has more details.  
+  -    For Windows 7 PCs, you must deploy the device registration software package to your Windows 7 PC through System Center Configuration Manager. The [Automatic device registration with Azure Active Directory for Windows Domain-Joined Devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) article has more details.  
 
 - Must use Office 2013 or Office 2016 with modern authentication [enabled](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a).  
 
@@ -94,10 +94,11 @@ For information on configuring conditional access for devices enrolled and manag
     - **Require Early Launch Anti-Malware to be enabled on the device**  
 
     > [!Important]  
-    > The conditional access criteria for device health attestation is deprecated and will be removed in a future release. For more information, see [removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).<!--1235616-->  
+    > - The conditional access criteria for device health attestation is deprecated and will be removed in a future release. For more information, see [removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).<!--1235616-->  
+    >
+    > - Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
-    > [!Note]  
-    > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+- **Include configured baselines in compliance policy assessment**: Starting in Configuration Manager version 1910, this condition evaluates configuration baselines with the **Evaluate this baseline as part of compliance policy assessment** option selected. For more information, see [Include custom configuration baselines as part of compliance policy assessment](/configmgr/compliance/deploy-use/create-configuration-baselines#bkmk_CAbaselines).
 
 ### Step 2. Evaluate the effect of conditional access  
  Run the **Conditional Access Compliance Report**. It can be found in **Monitoring** workspace under **Reports** > **Compliance and Settings Management**. This report displays the compliance status for all devices. Devices reporting as not compliant are blocked from accessing Exchange Online and SharePoint Online.  
