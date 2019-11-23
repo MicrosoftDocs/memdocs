@@ -219,11 +219,11 @@ For more information see [Automatically deploy software updates](/sccm/sum/deplo
 
 ## <a name="bkmk_o365"></a> Office management
 
-### Office 365 ProPlus Health Dashboard
-<!--4488301-->
 
 ### Office 365 ProPlus Pilot and Health Dashboard
-<!--4488272-->
+<!--4488272, 4488301-->
+
+The **Office 365 ProPlus Pilot and Health Dashboard** helps you plan, pilot, and perform your Office 365 ProPlus deployment. The dashboard provides health insights for devices with Office 365 ProPlus to help identify possible issues that may affect your deployment plans. The **Office 365 ProPlus Pilot and Health Dashboard** provides a recommendation for pilot devices based on add-in inventory. For more information, see [Office 365 ProPlus pilot and health dashboard](/sccm/sum/deploy-use/office-365-dashboard#bkmk_pilot).
 
 ## <a name="bkmk_protect"></a> Protection
 
@@ -235,6 +235,13 @@ For more information see [Automatically deploy software updates](/sccm/sum/deplo
 
 ### View active consoles and message administrators through Console Connections
 <!--4923997-->
+We've made the following improvements to **Console Connections**:
+
+- The ability to message other Configuration Manager administrators through Microsoft Teams.
+- The **Last Console Heartbeat** column has replaced the **Last Connected Time** column.
+  - An open console in the foreground sends a heartbeat every 10 minutes to help determine which console connections are currently active.
+
+For more information, see [View recently connected consoles](/sccm/core/servers/manage/admin-console#bkmk_viewconnected) and [Message administrators](/sccm/core/servers/manage/admin-console#bkmk_message).
 
 ### Client diagnostics actions
 
@@ -291,7 +298,7 @@ The following additional hotfixes are available to address specific issues:
 
 ## Next steps
 
-At this time, version 1910 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](/sccm/core/servers/manage/checklist-for-installing-update-1910#early-update-ring). 
+At this time, version 1910 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](/sccm/core/servers/manage/checklist-for-installing-update-1910#early-update-ring).
 <!--As of August 16, 2019, version 1906 is globally available for all customers to install.-->
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates) and [Checklist for installing update 1910](/sccm/core/servers/manage/checklist-for-installing-update-1910).
