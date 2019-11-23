@@ -611,7 +611,7 @@ Version 1906 deprecates support for the following products:
 As of this version, the following features are no longer pre-release:
 
 - [SMS Provider administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)
-- [Device Guard management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)
+- [Windows Defender Application Control management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4514258).
 
