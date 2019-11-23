@@ -25,6 +25,11 @@ Admins can pick the Beta or Dev channel, along with a version of the Microsoft E
 
 ### Prerequisites for deploying
 
+For clients targeted with a Microsoft Edge, version 77 and later deployment:
+
+- PowerShell [Execution Policy](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) can't be set to Restricted.
+  - PowerShell is executed to perform the installation.
+  
 The device running the Configuration Manager console needs access to the following endpoints:
 
 |Location|Use|
@@ -32,10 +37,7 @@ The device running the Configuration Manager console needs access to the followi
 |`https://edgeupdates.azurewebsites.net/api/products?view=enterprise`|Information about releases of Microsoft Edge version 77 and later|
 |`http://dl.delivery.mp.microsoft.com`|Content for Microsoft Edge releases, version 77 and later|
 
-For clients targeted with a Microsoft Edge, version 77 and later deployment:
 
-- PowerShell [Execution Policy](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) can't be set to Restricted.
-  - PowerShell is executed to perform the installation.
 
 
 ### Create a deployment
