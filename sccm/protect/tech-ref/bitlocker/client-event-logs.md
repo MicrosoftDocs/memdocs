@@ -21,8 +21,6 @@ manager: dougeby
 
 On a Configuration Manager client to which you deploy a BitLocker management policy, use the Windows Event Viewer to view BitLocker client event logs. Go to **Applications and Services Logs**, **Microsoft**, **Windows**, **MBAM** for both [Admin](#admin) and [Operational](#operational) event logs.
 
-For more information on using these logs, see [BitLocker event logs](/configmgr/protect/tech-ref/bitlocker/about-event-logs).
-
 ## Admin
 
 ### 2: VolumeEnactmentFailed
@@ -188,3 +186,9 @@ Locked volume state prevented BitLocker management policies from being applied s
 ### 43: TransferStatusDataFailedEndpointUnreachable
 
 Failure to connect to the MBAM Compliance and Status service prevented the transfer of encryption status data.
+
+## See also
+
+For more information on using these logs, see [BitLocker event logs](/configmgr/protect/tech-ref/bitlocker/about-event-logs).
+
+For more troubleshooting information, see [Troubleshoot BitLocker](/configmgr/protect/tech-ref/bitlocker/troubleshoot-bitlocker).

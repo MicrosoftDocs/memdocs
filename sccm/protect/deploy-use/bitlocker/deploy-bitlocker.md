@@ -124,18 +124,23 @@ View basic compliance statistics about the policy deployment in the details pane
 
 Switch to the **Deployments** tab to see compliance percentage and recommended action. Select the deployment, then in the ribbon, select **View Status**. This action switches the view to the **Monitoring** workspace, **Deployments** node. Similar to the deployment of other configuration policy deployments, you can see more detailed compliance status in this view.
 
+To understand why clients are reporting not compliant with the BitLocker management policy, see [Non-compliance codes](/configmgr/protect/tech-ref/bitlocker/non-compliance-codes).
+
+For more troubleshooting information, see [Troubleshoot BitLocker](/configmgr/protect/tech-ref/bitlocker/troubleshoot-bitlocker).
+
 Use the following logs to monitor and troubleshoot:
 
 ### Client logs
 
-- MBAM event log: in the Windows Event Viewer, browse to Applications and Services > Microsoft > Windows > MBAM
+- MBAM event log: in the Windows Event Viewer, browse to Applications and Services > Microsoft > Windows > MBAM.  For more information, see [About BitLocker event logs](/configmgr/protect/technical/bitlocker/about-event-logs) and [Client event logs](/configmgr/protect/technical/bitlocker/client-event-logs).
+
 - **BitlockerMangementHandler.log** in client logs path, `%WINDIR%\CCM\Logs` by default
 
-### Management point logs
+### Management point logs (recovery service)
 
-- MBAM Recovery Service event log: in the Windows Event Viewer, browse to Applications and Services > Microsoft > Windows > MBAM-Web
+- Recovery service event log: in the Windows Event Viewer, browse to Applications and Services > Microsoft > Windows > MBAM-Web. For more information, see [About BitLocker event logs](/configmgr/protect/technical/bitlocker/about-event-logs) and [Server event logs](/configmgr/protect/technical/bitlocker/server-event-logs).
 
-- MBAM Recovery Service trace logs: `<Default IIS Web Root>\Microsoft BitLocker Management Solution\Logs\Recovery And Hardware Service\trace*.etl`
+- Recovery service trace logs: `<Default IIS Web Root>\Microsoft BitLocker Management Solution\Logs\Recovery And Hardware Service\trace*.etl`
 
 ## Recovery service
 

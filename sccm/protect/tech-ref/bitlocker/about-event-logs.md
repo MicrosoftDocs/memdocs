@@ -20,8 +20,10 @@ manager: dougeby
 The BitLocker management agent and web services use Windows event logs to record messages. In the Event Viewer, go to **Applications and Services Logs**, **Microsoft**, **Windows**. The log channel (node) varies depending upon the computer and the component:
 
 - **MBAM**: BitLocker management agent on a client computer
-- **MBAM-Server**: BitLocker administration and monitoring website
-- **MBAM-Web**: BitLocker self-service portal
+- **MBAM-Web**:
+  - Recovery service on the management point
+  - Self-service portal
+  - Administration and monitoring website
 
 For more information about specific messages in these logs, see the following articles:
 
