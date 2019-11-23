@@ -90,6 +90,9 @@ For more information, see [Include custom configuration baselines as part of com
 
 ### Deploy Microsoft Edge, version 77 and later
 <!--4561024-->
+The all-new Microsoft Edge is ready for business. You can now deploy Microsoft Edge, version 77 and later to your users. Admins can pick the Beta or Dev channel, along with a version of the Microsoft Edge client to deploy.
+
+For more information, see [Deploy Microsoft Edge, version 77 and later](/sccm/apps/deploy-use/deploy-edge)
 
 ### Improvements to application groups
 
