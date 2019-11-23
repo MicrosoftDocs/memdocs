@@ -21,7 +21,7 @@ Use the information in this article to help you troubleshoot issues with BitLock
 
 ## Server error in self-service
 
-When trying to open the self-service portal (https://webserver.contoso.com/SelfService) for the first time, you see the following error message:
+When trying to open the self-service portal (`https://webserver.contoso.com/SelfService`) for the first time, you see the following error message:
 
 ``` error
 Configuration Error - Server Error in '/SelfService' Application

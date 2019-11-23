@@ -87,7 +87,7 @@ After installation, access the portals via the following URLs:
 
 Monitor and troubleshoot using the following logs:
 
-- Windows Event logs under **Microsoft-Windows-MBAM-Web**. For more information, see [About BitLocker event logs](/configmgr/protect/technical/bitlocker/about-event-logs) and [Server event logs](/configmgr/protect/technical/bitlocker/server-event-logs).
+- Windows Event logs under **Microsoft-Windows-MBAM-Web**. For more information, see [About BitLocker event logs](/configmgr/protect/tech-ref/bitlocker/about-event-logs) and [Server event logs](/configmgr/protect/tech-ref/bitlocker/server-event-logs).
 
 - Trace logs for each component are in the following default locations:
 
@@ -99,7 +99,7 @@ For more troubleshooting information, see [Troubleshoot BitLocker](/configmgr/pr
 
 ## Next steps
 
-[Customize the self-service portal](/configmgr/protect/deploy-use/customize-self-service-portal)
+[Customize the self-service portal](/configmgr/protect/deploy-use/bitlocker/customize-self-service-portal)
 
 For more information on using the components that you installed, see the following articles:
 

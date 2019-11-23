@@ -19,7 +19,7 @@ manager: dougeby
 
 <!--3601034-->
 
-After you [install the reports](/configmgr/protect/deploy-use/setup-bitlocker-admin) on the reporting services point, you can view the reports. The reports show BitLocker compliance for the enterprise and for individual devices. They provide tabular information and charts, and have filters that let you view data from different perspectives.
+After you [install the reports](/configmgr/protect/deploy-use/bitlocker/setup-bitlocker-admin) on the reporting services point, you can view the reports. The reports show BitLocker compliance for the enterprise and for individual devices. They provide tabular information and charts, and have filters that let you view data from different perspectives.
 
 In the Configuration Manager console, go to the **Monitoring** workspace, expand **Reporting**, and select the **Reports** node. The following reports are in the **BitLocker Management** category:
 
@@ -39,7 +39,7 @@ You can also access these reports directly from the reporting services point web
 > - Create and deploy a BitLocker management policy to a device collection
 > - Clients in the target collection need to send hardware inventory
 
-An additional report, **Recovery Audit Report**, is available from the [BitLocker administration and monitoring website](/configmgr/protect/deploy-use/bitlocker/bitlocker-admin-portal).
+An additional report, **Recovery Audit Report**, is available from the [BitLocker administration and monitoring website](/configmgr/protect/deploy-use/bitlocker/bitlocker-admin-portal#reports).
 
 ## <a name="bkmk-compliancereport"></a> BitLocker computer compliance
 
@@ -54,8 +54,8 @@ You can also use this report to determine the last known BitLocker encryption st
 
 ### Computer details
 
-|Column name|Description|
-|--- |--- |
+|Column&nbsp;name|Description|
+|----------------|----|
 |Computer name|User-specified DNS computer name.|
 |Domain name|Fully qualified domain name for the computer.|
 |Computer Type|Type of computer, valid types are **Non-Portable** and **Portable**.|
@@ -77,8 +77,8 @@ You can also use this report to determine the last known BitLocker encryption st
 
 ### <a name="bkmk_volume"></a> Computer volume
 
-|Column name|Description|
-|--- |--- |
+|Column&nbsp;name|Description|
+|----------------|----|
 |Drive letter|The drive letter on the computer.|
 |Drive type|Type of drive. Valid values are **Operating System Drive** and **Fixed Data Drive**. These entries are physical drives rather than logical volumes.|
 |Cipher strength|Cipher strength that you selected during in the BitLocker management policy.|

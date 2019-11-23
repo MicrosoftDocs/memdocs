@@ -201,8 +201,8 @@ Use this report to audit users who have requested access to BitLocker recovery k
 - The specific type of key requested
 - A date range during which the retrieval occurred
 
-|Column name|Description|
-|--- |--- |
+|Column&nbsp;name|Description|
+|----------------|----|
 |Request date and time|Date and time that an end user or help desk user requested a key.|
 |Audit request source|The site from where the request came. Valid values are **Self-Service Portal** or **Helpdesk**.|
 |Request status|Status of the request. Valid values are **Successful** or **Failed**.|

@@ -42,7 +42,7 @@ The changes take effect immediately.
 
 For the values that you can set, see the following table:
 
-|Name|Description|Default value|
+|Name|Description|Default&nbsp;value|
 |--- |--- |--- |
 |CompanyName|The organization name that the self-service portal displays as a header at the top of every page.|`Contoso IT`|
 |DisplayNotice|Display an initial notice that the user has to acknowledge.|`true`|
@@ -54,6 +54,8 @@ For the values that you can set, see the following table:
 |ClientValidationEnabled||`true`|
 |UnobtrusiveJavaScriptEnabled||`true`|
 -->
+
+For a screenshot of the default self-service portal, see [BitLocker self-service portal](/configmgr/protect/deploy-use/bitlocker/bitlocker-self-service-portal).
 
 > [!TIP]
 > If necessary, you can localize some of these strings to display in different languages. For more information, see [Localization](#localization).
