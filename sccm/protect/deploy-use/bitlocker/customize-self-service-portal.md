@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Add custom organization-specific information to the BitLocker management self-service portal
 ms.date: 11/25/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-protect sum
+ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: 6bc26e36-9914-4606-ae8d-f7b23218942f
@@ -60,7 +60,7 @@ For the values that you can set, see the following table:
 For a screenshot of the default self-service portal, see [BitLocker self-service portal](/configmgr/protect/deploy-use/bitlocker/bitlocker-self-service-portal).
 
 > [!TIP]
-> If necessary, you can localize some of these strings to display in different languages. For more information, see [Localization](#localization).
+> If necessary, you can localize some of these strings to display in different languages. For more information, see [Localization](#bkmk_localize).
 
 ## Session time-out
 
@@ -76,7 +76,7 @@ To make the user's session expire after a specified period of inactivity, you ca
 
 1. In the **Actions** pane, select **Apply**.
 
-## Localize helpdesk text and URL
+## <a name="bkmk_localize"></a> Localize helpdesk text and URL
 
 You can configure localized versions of the self-service portal `HelpdeskText` statement and `HelpdeskUrl` link. This string informs users how to get additional help when they use the portal. If you configure localized text, the portal displays the localized version for web browsers in that language. If it doesn't find a localized version, it displays the default value in the `HelpdeskText` and `HelpdeskUrl` settings.
 
