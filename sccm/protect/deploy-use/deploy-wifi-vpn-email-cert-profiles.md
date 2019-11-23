@@ -51,7 +51,7 @@ If you want to delete a deployment, select it from the list. In the details pane
 > [!IMPORTANT]
 > When you remove a VPN profile deployment, Configuration Manager doesn't remove the VPN profile from Windows. If you want to remove the profile from devices, manually remove it.
 
-### Next steps
+## Next steps
 
 [Monitor Wi-Fi, VPN, and email profiles](/configmgr/protect/deploy-use/monitor-wifi-email-vpn-profiles)
 

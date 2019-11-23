@@ -112,6 +112,6 @@ To revoke the certificates, the site server sends a revocation command to the is
 
 ## Next steps
 
-- [Create certificate profiles](/protect/deploy-use/create-certificate-profiles)
+- [Create certificate profiles](/configmgr/protect/deploy-use/create-certificate-profiles)
 
 - [Configure certificate infrastructure](/configmgr/protect/deploy-use/certificate-infrastructure)
