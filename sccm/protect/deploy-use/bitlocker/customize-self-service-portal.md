@@ -31,6 +31,8 @@ Brand the self-service portal with your organization's name, help desk URL, and 
 
 1. Expand **Sites**, expand **Default Web Site**, and select the **SelfService** node. In the details pane, **ASP.NET** group, open **Application Settings**.
 
+    [![Example screenshot of SelfService application settings in IIS Manager](media/bitlocker-self-service-iis-app-settings.png)](media/bitlocker-self-service-iis-app-settings.png#lightbox)
+
 1. Select the item that you want to change, and in the **Actions** pane, select **Edit**. Change the **Value** to the new name that you want to use.
 
     > [!CAUTION]
