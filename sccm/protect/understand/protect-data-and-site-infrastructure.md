@@ -1,8 +1,8 @@
 ---
 title: Protect data and site infrastructure
 titleSuffix: Configuration Manager
-description: Learn how protect your organization's resources from exposure or malicious attack with Configuration Manager.
-ms.date: 12/21/2018
+description: Learn how to protect your organization's resources from exposure or malicious attack with Configuration Manager.
+ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -13,21 +13,32 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Protect data and site infrastructure with Configuration Manager
+# Protect data and site infrastructure
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-You want your users to be able to securely access your organization's resources, so that both your infrastructure and your data are protected from exposure or malicious attack. The information in these articles describes how to use Configuration Manager to enable that access and how to help protect your organization's resources.  
+You want your users to securely access your organization's resources. Protect both your infrastructure and your data from exposure or malicious attack. Use Configuration Manager to enable access and help protect your organization's resources.  
 
-- Minimize your users' efforts to connect to corporate resources by enabling VPN connectivity using VPN profiles. For more information, see [VPN profiles](/sccm/protect/deploy-use/vpn-profiles).  
+- [Endpoint Protection](/configmgr/protect/deploy-use/endpoint-protection) lets you manage the following Microsoft Defender policies for client computers:
 
-- Wi-fi profiles provide a set of tools and resources to help you create, deploy, and monitor wireless network settings to devices in your organization. By deploying these settings, you minimize the effort that end users require to connect to corporate wireless networks. For more information, see [Wi-fi profiles](/sccm/protect/deploy-use/create-wifi-profiles).  
+  - Microsoft Defender Antimalware
+  - Microsoft Defender Firewall
+  - Microsoft Defender Advanced Threat Protection
+  - Microsoft Defender Exploit Guard
+  - Microsoft Defender Application Guard
+  - Microsoft Defender Application Control
 
-- [Certificate profiles](/sccm/protect/deploy-use/introduction-to-certificate-profiles) describes how to provision your users' devices with the certificates they need to connect to company resources.  
+  > [!TIP]
+  > To manage endpoint protection on co-managed Windows 10 devices using the Microsoft Endpoint Manager cloud service, switch the [**Endpoint Protection** workload](/configmgr/comanage/workloads#endpoint-protection) to Intune. For more information, see [Endpoint protection for Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
 
-- [System Center Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection) lets you manage antimalware policies and Windows Firewall security for client computers.  
+- Protect data stored on on-premises Windows clients with BitLocker Drive Encryption (BDE). Configuration Manager provides full BitLocker lifecycle management that can replace the use of Microsoft BitLocker Administration and Monitoring (MBAM). For more information, see [Plan for BitLocker management](/configmgr/protect/plan-design/bitlocker-management).
 
-- Use conditional access to help secure email and other services on devices that are enrolled with Microsoft Intune. For more information, see [Manage access to services](/sccm/protect/deploy-use/manage-access-to-services).  
+- Instead of traditional passwords, enable alternative sign-in methods on Windows 10 devices using Windows Hello for Business. For more information, see [Windows Hello for Business settings](/configmgr/protect/deploy-use/windows-hello-for-business-settings).
 
-- Email profiles provide a set of tools and resources to help you create, deploy, and monitor email settings on devices. This feature enables users to access corporate email on their personal devices without any required setup on their part. For more information, see [Email profiles](/sccm/protect/deploy-use/introduction-to-email-profiles).  
+- Minimize your users' efforts to connect to resources by enabling VPN connectivity using VPN profiles. For more information, see [VPN profiles](/configmgr/protect/deploy-use/vpn-profiles).  
 
+- Wi-fi profiles provide a set of tools and resources to help you manage wireless network settings on devices in your organization. By deploying these settings, you minimize the effort that end users require to connect to wireless networks. For more information, see [Wi-fi profiles](/configmgr/protect/deploy-use/create-wifi-profiles).  
+
+- Provision devices with the certificates that users need to connect to resources. For more information, see [Certificate profiles](/configmgr/protect/deploy-use/introduction-to-certificate-profiles).  
+
+- Email profiles provide a set of tools and resources to help you create, deploy, and monitor email settings on devices. Enable users to access email on their personal devices without any required setup. For more information, see [Email profiles](/configmgr/protect/deploy-use/introduction-to-email-profiles).  

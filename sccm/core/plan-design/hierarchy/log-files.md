@@ -15,11 +15,11 @@ ms.collection: M365-identity-device-management
 
 # Log file reference
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 In Configuration Manager, client and site server components record process information in individual log files. You can use the information in these log files to help you troubleshoot issues that might occur. By default, Configuration Manager enables logging for client and server components.
 
-For more general information about log files in Configuration Manager, see [About log files](/sccm/core/plan-design/hierarchy/about-log-files). That article includes information on the tools to use, how to configure the logs, and where to find them.
+For more general information about log files in Configuration Manager, see [About log files](/configmgr/core/plan-design/hierarchy/about-log-files). That article includes information on the tools to use, how to configure the logs, and where to find them.
 
 The following sections provide details about the different log files available to you. Monitor Configuration Manager client and server logs for operation details, and view error information to troubleshoot problems.  
 
@@ -118,6 +118,7 @@ The following table lists the log files located on the Configuration Manager cli
 
 |Log name|Description|  
 |--------------|-----------------|  
+|BitLockerManagementHandler.log|Records information about BitLocker management policies.|
 |CAS.log|The Content Access service. Maintains the local package cache on the client.|  
 |Ccm32BitLauncher.log|Records actions for starting applications on the client marked *run as 32 bit*.|  
 |CcmEval.log|Records Configuration Manager client status evaluation activities and details for components that are required by the Configuration Manager client.|  
@@ -906,10 +907,10 @@ These log files are located in the `%ProgramFiles%\Update Services\LogFiles` fol
 
 ## See also
 
-- [About log files](/sccm/core/plan-design/hierarchy/about-log-files)
+- [About log files](/configmgr/core/plan-design/hierarchy/about-log-files)
 
-- [Support Center OneTrace](/sccm/core/support/support-center-onetrace)
+- [Support Center OneTrace](/configmgr/core/support/support-center-onetrace)
 
-- [Support Center log file viewer](/sccm/core/support/support-center#support-center-log-file-viewer)
+- [Support Center log file viewer](/configmgr/core/support/support-center#support-center-log-file-viewer)
 
-- [CMTrace](/sccm/core/support/cmtrace)
+- [CMTrace](/configmgr/core/support/cmtrace)

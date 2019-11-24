@@ -224,9 +224,19 @@ The **Office 365 ProPlus Pilot and Health Dashboard** helps you plan, pilot, and
 
 ## <a name="bkmk_protect"></a> Protection
 
-### BitLocker Management (MBAM)
+### BitLocker management
+
 <!--3601034-->
 
+Configuration Manager now provides the following management capabilities for BitLocker Drive Encryption:
+
+- Deploy the BitLocker client to managed Windows devices
+- Manage device encryption polices
+- Compliance reports
+- Administration and monitoring website for key recovery
+- A user self-service portal
+
+For more information, see [Plan for BitLocker management](/configmgr/protect/plan-design/bitlocker-management).
 
 ## <a name="bkmk_admin"></a> Configuration Manager console
 
