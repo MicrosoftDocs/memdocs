@@ -30,7 +30,7 @@ You can install the portals on an existing site server with IIS, or use a standa
 > [!NOTE]
 > In version 1910, only install the self-service portal and the administration and monitoring website with a primary site database.
 
-Before you start, confirm the [prerequisites](/configmgr/protect/plan-design/plan-for-bitlocker#prerequisites) for these components.
+Before you start, confirm the [prerequisites](/configmgr/protect/plan-design/bitlocker-management#prerequisites) for these components.
 
 ## Script usage
 
@@ -73,7 +73,15 @@ On the target web server, do the following actions:
 
 1. Run PowerShell as an administrator, and then run the script similar to the following command line:
 
-  `.\MBAMWebSiteInstaller.ps1 -SqlServerName <ServerName> -SqlInstanceName <InstanceName> -SqlDatabaseName <DatabaseName> -ReportWebServiceUrl <ReportWebServiceUrl> -HelpdeskUsersGroupName <DomainUserGroup> -HelpdeskAdminsGroupName <DomainUserGroup> -MbamReportUsersGroupName <DomainUserGroup> -SiteInstall Both`
+    ``` PowerShell
+    .\MBAMWebSiteInstaller.ps1 -SqlServerName <ServerName> -SqlInstanceName <InstanceName> -SqlDatabaseName <DatabaseName> -ReportWebServiceUrl <ReportWebServiceUrl> -HelpdeskUsersGroupName <DomainUserGroup> -HelpdeskAdminsGroupName <DomainUserGroup> -MbamReportUsersGroupName <DomainUserGroup> -SiteInstall Both
+    ```
+
+    For example,
+
+    ``` PowerShell
+    .\MBAMWebSiteInstaller.ps1 -SqlServerName sql.contoso.com -SqlInstanceName instance1 -SqlDatabaseName CM_ABC -ReportWebServiceUrl https://rsp.contoso.com/ReportServer -HelpdeskUsersGroupName "contoso\BitLocker help desk users" -HelpdeskAdminsGroupName "contoso\BitLocker help desk admins" -MbamReportUsersGroupName "contoso\BitLocker report users" -SiteInstall Both
+    ```
 
 After installation, access the portals via the following URLs:
 
@@ -95,7 +103,7 @@ Monitor and troubleshoot using the following logs:
 
   - Administration and monitoring website: `C:\inetpub\Microsoft BitLocker Management Solution\Logs\Help Desk Website`
 
-For more troubleshooting information, see [Troubleshoot BitLocker](/configmgr/protect/tech-ref/bitlocker/troubleshoot-bitlocker).
+For more troubleshooting information, see [Troubleshoot BitLocker](/configmgr/protect/tech-ref/bitlocker/troubleshoot).
 
 ## Next steps
 
@@ -103,6 +111,6 @@ For more troubleshooting information, see [Troubleshoot BitLocker](/configmgr/pr
 
 For more information on using the components that you installed, see the following articles:
 
-- [View BitLocker reports](/configmgr/protect/deploy-use/view-bitlocker-reports)
-- [BitLocker administration and monitoring website](/configmgr/protect/deploy-use/bitlocker-admin-portal)
-- [BitLocker self-service portal](/configmgr/protect/deploy-use/bitlocker-self-service-portal)
+- [View BitLocker reports](/configmgr/protect/deploy-use/bitlocker/view-reports)
+- [BitLocker administration and monitoring website](/configmgr/protect/deploy-use/bitlocker/helpdesk-portal)
+- [BitLocker self-service portal](/configmgr/protect/deploy-use/bitlocker/self-service-portal)

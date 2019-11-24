@@ -25,7 +25,7 @@ BitLocker management in Configuration Manager includes the following components:
 
 - **Recovery service**: The server component that receives BitLocker recovery data from clients. For more information, see [Recovery service](#recovery-service).
 
-Before you create and deploy BitLocker management policies, make sure to review the [prerequisites](/configmgr/protect/plan-design/plan-for-bitlocker#prerequisites).
+Before you create and deploy BitLocker management policies, make sure to review the [prerequisites](/configmgr/protect/plan-design/bitlocker-management#prerequisites).
 
 ## Create a policy
 
@@ -126,7 +126,7 @@ Switch to the **Deployments** tab to see compliance percentage and recommended a
 
 To understand why clients are reporting not compliant with the BitLocker management policy, see [Non-compliance codes](/configmgr/protect/tech-ref/bitlocker/non-compliance-codes).
 
-For more troubleshooting information, see [Troubleshoot BitLocker](/configmgr/protect/tech-ref/bitlocker/troubleshoot-bitlocker).
+For more troubleshooting information, see [Troubleshoot BitLocker](/configmgr/protect/tech-ref/bitlocker/troubleshoot).
 
 Use the following logs to monitor and troubleshoot:
 
@@ -179,4 +179,4 @@ To work around this behavior, first disable BitLocker on the device. Then deploy
 
 [Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data)
 
-[Set up BitLocker reports and portals](/configmgr/protect/deploy-use/bitlocker/setup-bitlocker-admin)
+[Set up BitLocker reports and portals](/configmgr/protect/deploy-use/bitlocker/setup-websites)

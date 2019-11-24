@@ -236,7 +236,7 @@ Configuration Manager now provides the following management capabilities for Bit
 - Administration and monitoring website for key recovery
 - A user self-service portal
 
-For more information, see [Plan for BitLocker management](/configmgr/protect/plan-design/plan-for-bitlocker).
+For more information, see [Plan for BitLocker management](/configmgr/protect/plan-design/bitlocker-management).
 
 ## <a name="bkmk_admin"></a> Configuration Manager console
 

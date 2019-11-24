@@ -79,4 +79,4 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 ## Next step
 
-[Deploy BitLocker management client](/configmgr/protect/deploy-use/bitlocker/deploy-bitlocker)
+[Deploy BitLocker management client](/configmgr/protect/deploy-use/bitlocker/deploy-management-agent)

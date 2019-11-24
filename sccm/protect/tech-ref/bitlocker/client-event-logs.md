@@ -191,4 +191,4 @@ Failure to connect to the MBAM Compliance and Status service prevented the trans
 
 For more information on using these logs, see [BitLocker event logs](/configmgr/protect/tech-ref/bitlocker/about-event-logs).
 
-For more troubleshooting information, see [Troubleshoot BitLocker](/configmgr/protect/tech-ref/bitlocker/troubleshoot-bitlocker).
+For more troubleshooting information, see [Troubleshoot BitLocker](/configmgr/protect/tech-ref/bitlocker/troubleshoot).

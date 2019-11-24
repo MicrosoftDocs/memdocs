@@ -31,7 +31,7 @@ Description: An error occurred during the processing of a configuration file req
 Parser Error Message: Could not load file or assembly 'System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system cannot find the file specified.
 ```
 
-To fix this issue, make sure you installed the [prerequisite](/configmgr/protect/plan-design/plan-for-bitlocker#prerequisites) for **Microsoft ASP.NET MVC 4.0** on the web server.
+To fix this issue, make sure you installed the [prerequisite](/configmgr/protect/plan-design/bitlocker-management#prerequisites) for **Microsoft ASP.NET MVC 4.0** on the web server.
 
 ## See also
 

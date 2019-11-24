@@ -9,7 +9,7 @@
   - name: Plan for Endpoint Protection
     href: plan-design/planning-for-endpoint-protection.md
   - name: Plan for BitLocker management
-    href: plan-design/plan-for-bitlocker.md
+    href: plan-design/bitlocker-management.md
   - name: Plan for certificate profiles
     items:
     - name: Certificate profile prerequisites
@@ -85,19 +85,19 @@
   - name: BitLocker management
     items:
     - name: Deploy BitLocker management
-      href: deploy-use/bitlocker/deploy-bitlocker.md
+      href: deploy-use/bitlocker/deploy-management-agent.md
     - name: Encrypt recovery data
       href: deploy-use/bitlocker/encrypt-recovery-data.md
     - name: Set up BitLocker reports and portals
-      href: deploy-use/bitlocker/setup-bitlocker-admin.md
+      href: deploy-use/bitlocker/setup-websites.md
     - name: Customize the self-service portal
       href: deploy-use/bitlocker/customize-self-service-portal.md
     - name: View BitLocker reports
-      href: deploy-use/bitlocker/view-bitlocker-reports.md
+      href: deploy-use/bitlocker/view-reports.md
     - name: Administration and monitoring website
-      href: deploy-use/bitlocker/bitlocker-admin-portal.md
+      href: deploy-use/bitlocker/helpdesk-portal.md
     - name: Self-service portal
-      href: deploy-use/bitlocker/bitlocker-self-service-portal.md
+      href: deploy-use/bitlocker/self-service-portal.md
   - name: Windows Hello for Business settings
     href: deploy-use/windows-hello-for-business-settings.md
   - name: Certificate profiles
@@ -137,7 +137,7 @@
   - name: BitLocker management
     items:
     - name: Troubleshoot BitLocker
-      href: tech-ref/bitlocker/troubleshoot-bitlocker.md
+      href: tech-ref/bitlocker/troubleshoot.md
     - name: BitLocker event logs
       href: tech-ref/bitlocker/about-event-logs.md
     - name: Client event logs

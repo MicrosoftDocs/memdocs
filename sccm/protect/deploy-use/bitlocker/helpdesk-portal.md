@@ -23,16 +23,16 @@ The BitLocker administration and monitoring website is an administrative interfa
 
 [![Screenshot of default BitLocker administration and monitoring website](media/bitlocker-helpdesk-website.png)](media/bitlocker-helpdesk-website.png#lightbox)
 
-Before you can use it, install this component on a web server. For more information, see [Set up BitLocker reports and portals](/configmgr/protect/deploy-use/bitlocker/setup-bitlocker-admin).
+Before you can use it, install this component on a web server. For more information, see [Set up BitLocker reports and portals](/configmgr/protect/deploy-use/bitlocker/setup-websites).
 
 Access the administration and monitoring website via the following URL: `https://webserver.contoso.com/HelpDesk`
 
 > [!NOTE]
-> You can view the **Recovery Audit Report** in the administration and monitoring website. You add other BitLocker management reports to the reporting services point. For more information, see [View BitLocker reports](/configmgr/protect/deploy-use/bitlocker/view-bitlocker-reports).
+> You can view the **Recovery Audit Report** in the administration and monitoring website. You add other BitLocker management reports to the reporting services point. For more information, see [View BitLocker reports](/configmgr/protect/deploy-use/bitlocker/view-reports).
 
 ## Groups
 
-To access specific areas of the administration and monitoring website, your user account needs to be in one of the following groups. Create these groups in Active Directory using any name you want. When you install this website, you specify these group names. For more information, see [Set up BitLocker reports and portals](/configmgr/protect/deploy-use/bitlocker/setup-bitlocker-admin).
+To access specific areas of the administration and monitoring website, your user account needs to be in one of the following groups. Create these groups in Active Directory using any name you want. When you install this website, you specify these group names. For more information, see [Set up BitLocker reports and portals](/configmgr/protect/deploy-use/bitlocker/setup-websites).
 
 |Group|Description|
 |--- |--- |
@@ -184,7 +184,7 @@ For more information about this command, see [Repair-bde](https://docs.microsoft
 
 ## Reports
 
-The administration and monitoring website includes the **Recovery Audit Report**. Other reports are available from the Configuration Manager reporting services point. For more information, see [View BitLocker reports](/configmgr/protect/deploy-use/bitlocker/view-bitlocker-reports).
+The administration and monitoring website includes the **Recovery Audit Report**. Other reports are available from the Configuration Manager reporting services point. For more information, see [View BitLocker reports](/configmgr/protect/deploy-use/bitlocker/view-reports).
 
 1. Go to the administration and monitoring website in the web browser, for example `https://webserver.contoso.com/HelpDesk`.
 

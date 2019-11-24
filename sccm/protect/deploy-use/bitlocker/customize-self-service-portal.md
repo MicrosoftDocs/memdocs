@@ -19,7 +19,7 @@ manager: dougeby
 
 <!--3601034-->
 
-After you [install the BitLocker self-service portal](/configmgr/protect/deploy-use/bitlocker/setup-bitlocker-admin), you can customize it for your organization. Add a custom notice, your organization name, and other organization-specific information.
+After you [install the BitLocker self-service portal](/configmgr/protect/deploy-use/bitlocker/setup-websites), you can customize it for your organization. Add a custom notice, your organization name, and other organization-specific information.
 
 ## Branding
 
@@ -57,7 +57,7 @@ For the values that you can set, see the following table:
 |UnobtrusiveJavaScriptEnabled||`true`|
 -->
 
-For a screenshot of the default self-service portal, see [BitLocker self-service portal](/configmgr/protect/deploy-use/bitlocker/bitlocker-self-service-portal).
+For a screenshot of the default self-service portal, see [BitLocker self-service portal](/configmgr/protect/deploy-use/bitlocker/self-service-portal).
 
 > [!TIP]
 > If necessary, you can localize some of these strings to display in different languages. For more information, see [Localization](#bkmk_localize).
@@ -135,4 +135,4 @@ Repeat this process to a localized notice file for all languages that you suppor
 
 ## Next steps
 
-Now that you've installed and customized the self-service portal, try it out! For more information, see [BitLocker self-service portal](/configmgr/protect/deploy-use/bitlocker/bitlocker-self-service-portal).
+Now that you've installed and customized the self-service portal, try it out! For more information, see [BitLocker self-service portal](/configmgr/protect/deploy-use/bitlocker/self-service-portal).
