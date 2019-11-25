@@ -51,6 +51,8 @@
       href: deploy-use/share-applications.md
     - name: Simulate application deployments
       href: deploy-use/simulate-application-deployments.md
+    - name: Deploy Microsoft Edge, version 77 and later
+      href: deploy-use/deploy-edge.md
     - name: Deploy App-V virtual applications
       href: get-started/deploying-app-v-virtual-applications.md
     - name: Troubleshoot application deployments
