@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # About client settings in Configuration Manager
 
-*Applies to: System Center Configuration Manager (current branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Manage all client settings in the Configuration Manager console from the **Client Settings** node in the **Administration** workspace. Configuration Manager comes with a set of default settings. When you change the default client settings, these settings are applied to all clients in the hierarchy. You can also configure custom client settings, which override the default client settings when you assign them to collections. For more information, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
 
@@ -120,7 +120,6 @@ This setting applies to users when their computer is on either the intranet or t
 >
 > If you're still using the application catalog, it receives the list of available software for users from the site server. Thus, this setting doesn't have to be **Yes** for users to see and request applications from the application catalog. If this setting is **No**, users can't install the applications that they see in the application catalog.  
 
-
 ### Enable user policy requests from internet clients
 
 Set this option to **Yes** for users to receive the user policy on internet-based computers. The following requirements also apply:  
@@ -138,6 +137,17 @@ If you set this option to **No**, or any of the previous requirements aren't met
 > [!NOTE]  
 > For internet-based client management, application approval requests from users don't require user policies or user authentication. The cloud management gateway doesn't support application approval requests.  
 
+### Enable user policy for multiple user sessions
+
+<!--4737447-->
+
+*Applies to version 1910*
+
+By default, this setting is disabled. Even if you enable user policies, starting in version 1906 the client disables them by default on any device that allows multiple concurrent active user sessions. For example, terminal servers or Windows 10 Enterprise multi-session in [Windows Virtual Desktop](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-virtual-desktop).
+
+The client only disables user policy when it detects this type of device during a new installation. For an existing client of this type that you update to version 1906 or later, the previous behavior persists. On an existing device, it configures the user policy setting even if it detects that the device allows multiple user sessions.
+
+If you require user policy in this scenario, and accept any potential performance impact, enable this client setting.
 
 
 ## Cloud services
@@ -865,9 +875,8 @@ Use this setting to specify the period of time for the previous setting. You can
 
 Set this option to **Yes** to allow clients to use delta content files. This setting allows the Windows Update Agent on the device to determine what content is needed and selectively download it.
 
-> [!NOTE]
-> This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
-
+ - This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
+ - Starting in Configuration Manager version 1910, when this option is set, delta download is used for all Windows update installation files, not just express installation files.
 
 ### Port that clients use to receive requests for delta content
 

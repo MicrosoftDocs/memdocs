@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
-manager: dougeby
+manager: dougeby 
 ms.collection: M365-identity-device-management
 ---
 
@@ -94,15 +94,21 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 
 ## <a name="bkmk_real"></a> Real-time management
 
-### Optimizations to the CMPivot engine that pushes more of the processing to the ConfigMgr client
+### Optimizations to the CMPivot engine
 <!--3197353-->
-
-
-### Enable ATP and CMPivot to link to each other
-<!--4775821--?-->
+We've added some significant optimizations to the CMPivot engine that allows us to push more of the processing to the ConfigMgr client. The optimizations drastically reduce the network and server CPU load needed to run CMPivot queries. With these optimizations, we can now sift through gigabytes of client data in real time. For more information, see [Optimizations to the CMPivot engine](/sccm/core/servers/manage/cmpivot#bkmk_optimization).
 
 ### Additional CMPivot Entities and Enhancements
-<!--5410930-->
+<!--5410930-->'
+We've added a number of new CMPivot entities and entity enhancements to aid in troubleshooting and hunting. We've included the following entities to query:
+
+- Windows event logs ([WinEvent](/sccm/core/servers/manage/cmpivot#bkmk_WinEvent))
+- File content ([FileContent](/sccm/core/servers/manage/cmpivot#bkmk_File))
+- Dlls loaded by processes ([ProcessModule](/sccm/core/servers/manage/cmpivot#bkmk_ProcessModule))
+- Azure Active Directory information ([AADStatus](/sccm/core/servers/manage/cmpivot#bkmk_AadStatus))
+- Endpoint protection status ([EPStatus](/sccm/core/servers/manage/cmpivot#bkmk_EPStatus))
+
+This release also includes several [other enhancements](/sccm/core/servers/manage/cmpivot#bkmk_Other) to CMPivot. For more information, see [CMPivot starting in version 1910](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1910).
 
 ## <a name="bkmk_content"></a> Content management
 
@@ -129,14 +135,26 @@ You can now add evaluation of custom configuration baselines as a compliance pol
 For more information, see [Include custom configuration baselines as part of compliance policy assessment](/sccm/compliance/deploy-use/create-configuration-baselines#bkmk_CAbaselines).
 
 ### Enable user policy for Windows 10 Enterprise multi-session
+
 <!--4737447-->
 
+Configuration Manager current branch version 1906 introduced support for [Windows Virtual Desktop](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-virtual-desktop). This Microsoft Azure environment supports several OS versions, some of which allow multiple concurrent active user sessions. For example, Windows 10 Enterprise multi-session.
+
+If you require user policy on these multi-session devices, and accept any potential performance impact, you can now configure a client setting to enable user policy. In the **Client Policy** group, configure the following setting: **Enable user policy for multiple user sessions**.
+
+For more information, see [How to configure client settings](/configmgr/core/clients/deploy/configure-client-settings).
+
+
 <!-- ## <a name="bkmk_comgmt"></a> Co-management -->
+
 
 ## <a name="bkmk_app"></a> Application management
 
 ### Deploy Microsoft Edge, version 77 and later
 <!--4561024-->
+The all-new Microsoft Edge is ready for business. You can now deploy Microsoft Edge, version 77 and later to your users. Admins can pick the Beta or Dev channel, along with a version of the Microsoft Edge client to deploy.
+
+For more information, see [Deploy Microsoft Edge, version 77 and later](/sccm/apps/deploy-use/deploy-edge).
 
 ### Improvements to application groups
 
@@ -253,6 +271,9 @@ For more information, see [Enable third-party updates](/sccm/sum/deploy-use/thir
 
 ### Use Delivery Optimization for all Windows updates
 <!--4699118-->
+Previously, Delivery Optimization could be leveraged only for express updates. With Configuration Manager version 1910, it’s now possible to use Delivery Optimization for the distribution of all Windows Update content for clients running Windows 10 version 1709 or later.
+
+For more information, see [Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#bkmk_DO-1910) and [Client settings for software updates](/sccm/core/clients/deploy/about-client-settings#software-updates).
 
 ### Additional software update filter for ADRs
 <!--4852033-->
