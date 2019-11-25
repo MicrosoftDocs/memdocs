@@ -23,12 +23,51 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
+> [!Note]  
+> This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.
+
 > [!Tip]  
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1910+-+Configuration+Manager%22&locale=en-us`
 
+## <a name="bkmk_mem"></a> Microsoft Endpoint Configuration Manager
 
-## Requirement changes
+<!--4960084-->
+
+Configuration Manager is now part of Microsoft Endpoint Manager.
+
+![Microsoft Endpoint Configuration Manager](media/4960084-endpoint-manager-logo.png)
+
+Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune, without a complex migration, and with simplified licensing. Continue to leverage your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace.
+
+The following Microsoft management solutions are all now part of the **Microsoft Endpoint Manager** brand:
+
+- [Configuration Manager](https://docs.microsoft.com/configmgr)
+- [Intune](https://docs.microsoft.com/intune)
+- [Desktop Analytics](/configmgr/desktop-analytics/overview)
+- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- Other features in the [Device Management Admin Console](https://go.microsoft.com/fwlink/?linkid=2109094)
+
+For more information, see the following posts from Brad Anderson, Microsoft corporate vice president for Microsoft 365:
+
+- [Announcement blog post](https://aka.ms/cmannounce)
+- [Vision paper](https://aka.ms/MEMVisionPaper)
+- [Announcement summary video](https://youtu.be/GS7oNPInFuw)
+
+### What things change in Configuration Manager with Microsoft Endpoint Manager?
+
+In version 1910, aside from several string changes, Configuration Manager still functions the same. A few of the string changes may impact your use of the following components:
+
+- **Configuration Manager console**: Find shortcuts to the console and the **Remote Control Viewer** under the Windows Start menu in the **Microsoft Endpoint** folder.
+
+- **Software Center**: Find the Software Center shortcut under the Windows Start menu in the **Microsoft Endpoint Manager** folder.
+
+![Microsoft Endpoint start menu icons](media/microsoft-endpoint-start-menu.png)
+
+Make sure to update any internal documentation that you maintain to include these new locations.
+
+> [!TIP]
+> In Windows 10, when you open the Start menu, just start typing the name to find the icon. For example, `config` for the Configuration Manager console, and `software` for Software Center.
 
 ## <a name="bkmk_infra"></a> Site infrastructure
 
@@ -40,16 +79,18 @@ Starting in [current branch version 1906](/configmgr/core/plan-design/changes/wh
 
 For more information, see [Using the Configuration Manager console](/configmgr/core/servers/manage/admin-console#bkmk_sedo).
 
-### Extend and Migrate on-premises Configuration Manager environment to Microsoft Azure
+### Extend and migrate on-premises site to Microsoft Azure
 <!--3556022-->
 
-## <a name="bkmk_cloud"></a> Cloud-attached management
+This new tool helps you to programmatically create Azure virtual machines (VMs) for Configuration Manager. It can install with default settings site roles like a passive site server, management points, and distribution points. Once you validate the new roles, use them as additional site systems for high availability. You can also remove the on-premises site system role and only keep the Azure VM role.
 
+For more information, see [Extend and migrate on-premises site to Microsoft Azure](/sccm/core/support/azure-migration-tool).
 
+<!-- ## <a name="bkmk_cloud"></a> Cloud-attached management -->
 
 ## <a name="bkmk_da"></a> Desktop Analytics
 
-
+For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](/configmgr/desktop-analytics/whats-new).
 
 ## <a name="bkmk_real"></a> Real-time management
 
@@ -58,7 +99,7 @@ For more information, see [Using the Configuration Manager console](/configmgr/c
 We've added some significant optimizations to the CMPivot engine that allows us to push more of the processing to the ConfigMgr client. The optimizations drastically reduce the network and server CPU load needed to run CMPivot queries. With these optimizations, we can now sift through gigabytes of client data in real time. For more information, see [Optimizations to the CMPivot engine](/sccm/core/servers/manage/cmpivot#bkmk_optimization).
 
 ### Additional CMPivot Entities and Enhancements
-<!--5410930-->'
+<!--5410930-->
 We've added a number of new CMPivot entities and entity enhancements to aid in troubleshooting and hunting. We've included the following entities to query:
 
 - Windows event logs ([WinEvent](/sccm/core/servers/manage/cmpivot#bkmk_WinEvent))
@@ -69,9 +110,18 @@ We've added a number of new CMPivot entities and entity enhancements to aid in t
 
 This release also includes several [other enhancements](/sccm/core/servers/manage/cmpivot#bkmk_Other) to CMPivot. For more information, see [CMPivot starting in version 1910](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1910).
 
-
 ## <a name="bkmk_content"></a> Content management
 
+### Microsoft Connected Cache support for Intune Win32 apps
+
+<!--5032900-->
+
+When you enable Microsoft Connected Cache on your Configuration Manager distribution points, they can now serve Microsoft Intune Win32 apps to co-managed clients.
+
+> [!NOTE]
+> Configuration Manager current branch version 1906 included [Delivery Optimization In-Network Cache](/configmgr/core/plan-design/hierarchy/delivery-optimization-in-network-cache), an application installed on Windows Server that's still in development. Starting in current branch version 1910, this feature is now called **Microsoft Connected Cache**.
+>
+> When you install Connected Cache on a Configuration Manager distribution point, it offloads Delivery Optimization service traffic to local sources. Connected Cache does this behavior by efficiently caching content at the byte range level.
 
 ## <a name="bkmk_client"></a> Client management
 
@@ -94,9 +144,8 @@ If you require user policy on these multi-session devices, and accept any potent
 
 For more information, see [How to configure client settings](/configmgr/core/clients/deploy/configure-client-settings).
 
-## <a name="bkmk_comgmt"></a> Co-management
 
-
+<!-- ## <a name="bkmk_comgmt"></a> Co-management -->
 
 
 ## <a name="bkmk_app"></a> Application management
@@ -210,8 +259,7 @@ To address timing issues with the Window 10 in-place upgrade task sequence on hi
 
 For more information, see [Task sequence variables - SetupCompletePause](/configmgr/osd/understand/task-sequence-variables#SetupCompletePause).
 
-## <a name="bkmk_userxp"></a> Software Center
-
+<!-- ## <a name="bkmk_userxp"></a> Software Center -->
 
 ## <a name="bkmk_sum"></a> Software updates
 
@@ -280,29 +328,25 @@ There are new device actions for **Client Diagnostics** in the Configuration Man
 
 For more information, see [Client diagnostics](/sccm/core/clients/manage/client-notification#client-diagnostics).
 
-### Attach files to feedback
-<!--3556011-->
-
-## Other updates
-
-### Extend and migrate on-premises site to Microsoft Azure
-<!--3556022-->
-
-This new tool helps you to programmatically create Azure virtual machines (VMs) for Configuration Manager. It can install with default settings site roles like a passive site server, management points, and distribution points. Once you validate the new roles, use them as additional site systems for high availability. You can also remove the on-premises site system role and only keep the Azure VM role. For more information, see [Extend and migrate on-premises site to Microsoft Azure](/sccm/core/support/azure-migration-tool).
-
 ### Improvements to console search
 <!--4640570-->
 
+This release includes the following improvements to search in the Configuration Manager console:
+
+- You can now use the **All Subfolders** search option from the **Driver Packages** and **Queries** nodes.<!--2841181,5424892-->
+
+- When a search returns more than 1,000 results, now select the **OK** button on the notice bar to view more results.<!--4640570-->
+
 ## Other updates
 
-As of this version, the following features are no longer pre-release:
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1910 release notes](https://docs.microsoft.com/powershell/sccm/1910-release-notes?view=sccm-ps).
+
 <!--
+As of this version, the following features are no longer pre-release:
 - [SMS Provider administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)
 - [Device Guard management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4514258).
-
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1906 release notes](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps).
 
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 
@@ -320,7 +364,6 @@ The following additional hotfixes are available to address specific issues:
 > [!Note]  
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](/sccm/core/servers/manage/updates#bkmk_supersede).
 -->
-
 
 ## Next steps
 
