@@ -113,6 +113,9 @@ conceptualContent:
         - text: Plan for Software Center
           url: ./apps/plan-design/plan-for-software-center.md
           itemType: architecture
+        - text: Microsoft Edge management
+          url: ./apps/deploy-use/deploy-edge.md
+          itemType: how-to-guide
       footerLink:
         text: See more
         url: ./apps/understand/introduction-to-application-management.md
@@ -168,6 +171,9 @@ conceptualContent:
           itemType: overview
         - text: WDATP
           url: ./protect/deploy-use/windows-defender-advanced-threat-protection.md
+          itemType: how-to-guide
+        - text: BitLocker management
+          url: ./protect/plan-design/bitlocker-management.md
           itemType: overview
       footerLink:
         text: See more
@@ -180,8 +186,8 @@ additionalContent:
       - title: Configuration Manager blog
         summary: News and announcements
         url: https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog
-      - title: "#ConfigMgr on Twitter"
-        summary: Keep current with the active Twitter community
+      - title: "Twitter: #ConfigMgr"
+        summary: Keep current with our active community on Twitter
         url: https://twitter.com/hashtag/configmgr
       - title: Configuration Manager forums
         summary: Ask technical questions in the product forums
