@@ -1759,7 +1759,7 @@ Starting in version 1902, include other exit codes from the script that the step
 ## <a name="child-task-sequence"></a> Run Task Sequence
 
 > [!Note]  
-> Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](/configmgr/core/servers/manage/install-in-console-updates#bkmk_options).
+> In version 1910, Configuration Manager enables this feature by default. In version 1906 or earlier, Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](/configmgr/core/servers/manage/install-in-console-updates#bkmk_options).
 
 This step runs another task sequence. It creates a parent-child relationship between the task sequences. With child task sequences, you can create more modular, reusable task sequences.
 
