@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Checklist for installing update 1910 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you use the current branch of Configuration Manager, you can install the in-console update for version 1910 to update your hierarchy from a previous version. <!-- baseline only statement:(Because version 1902 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)-->
 
@@ -67,7 +67,7 @@ The first time you use a Configuration Manager console after the update has fini
 
 <!--As of August 16, 2019, version 1906 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
 
-At this time, version 1910 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 1910: 
+At this time, version 1910 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 1910:
 
 [Version 1910 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
@@ -90,7 +90,7 @@ To opt-in to the early update ring:
 The version 1910 update should now be available in the console.
 
 > [!Important]  
-> This script only adds your site to the early update ring for version 1910. It's not a permanent change. 
+> This script only adds your site to the early update ring for version 1910. It's not a permanent change.
 
 
 ## Checklist
@@ -219,6 +219,11 @@ To define a period during which updates to a site server can be installed, use s
 
 <!--SCCMdocs#587-->
 If you extend Configuration Manager with other products from Microsoft or Microsoft partners, confirm that those products support version 1910. Check with the product vendor for this information. For example, see the Microsoft Deployment Toolkit [release notes](/sccm/mdt/release-notes).
+
+### Remove Intune subscription (hybrid MDM)
+
+<!-- SCCMDocs-pr#4253 -->
+The hybrid MDM service offering is retired as of September 1, 2019. If your Configuration Manager site had a Microsoft Intune Subscription, you need to remove it. For more information, see [Remove hybrid MDM](/configmgr/mdm/understand/hybrid-mobile-device-management#remove-hybrid-mdm).
 
 ### Run the setup prerequisite checker
 
