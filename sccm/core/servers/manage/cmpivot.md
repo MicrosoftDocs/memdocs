@@ -667,16 +667,11 @@ EPStatus
 <!--3197353-->
 When using CMPivot outside of the Configuration Manager console, you can query just the local device without the need for the Configuration Manager infrastructure. You can now leverage the CMPivot Azure Log Analytics queries to quickly view WMI information on the local device. This also enables validation and refinement of CMPivot queries, before running them in a larger environment. CMPivot standalone is a [pre-release feature](/sccm/core/servers/manage/pre-release-features#bkmk_table) and is only available in English. For more information about installing CMPivot standalone, see [Install CMPivot standalone](#install-cmpivot-standalone).
 
-> [!NOTE]
-> - If you query on **This PC** for a WMI entity that you don't have access to, such as a locked down WMI class, you may see a crash in CMPivot. Run CMPivot using an account with elevated privileges to query those entites. <!--5753242-->
-> - If you query non-WMI entities on **This PC**, you'll see an **Invalid namespace** or an ambiguous exception. For example, the following query would return an exception in the CMPivot:
->
-> ```kusto
-> CCMRecentlyUsedApplications
-> | summarize dcount( device ) by ProductName
-> | top 20 by dcount_
-> | render columnchart
-> ```
+#### Known issues for local device query evaluation
+
+ - If you query on **This PC** for a WMI entity that you don't have access to, such as a locked down WMI class, you may see a crash in CMPivot. Run CMPivot using an account with elevated privileges to query those entites. <!--5753242-->
+- If you query non-WMI entities on **This PC**, you'll see an **Invalid namespace** or an ambiguous exception.
+- Run CMPivot standalone from the start menu shortcut, not directly from the path of the executable file. <!--5787962-->
 
 ### <a name="bkmk_Other"></a> Other enhancements
 
@@ -725,6 +720,12 @@ When using CMPivot outside of the Configuration Manager console, you can query j
 
 - In query results, if the device is enrolled in Microsoft Defender Advanced Threat Protection (ATP), right-click the device to launch the **Microsoft Defender Security Center** online portal.
 
+### Known issues for CMPivot in version 1910
+
+- The maximum results banner may not be displayed when the limit is reached. <!--5431427-->
+  - Each client is limited to 128 KB worth of data per query.
+  - Results may be truncated if the results of the query exceed 128 KB.
+ 
 ## Inside CMPivot
 
 CMPivot sends queries to clients using the Configuration Manager "fast channel". This communication channel from server to client is also used by other features such as client notification actions, client status, and Endpoint Protection. Clients return results via the similarly quick state message system. State messages are temporarily stored in the database. For more information about the ports used for client notification, see the [Ports](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-MP) article.

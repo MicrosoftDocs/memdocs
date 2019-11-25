@@ -67,7 +67,7 @@ We've added a number of new CMPivot entities and entity enhancements to aid in t
 - Azure Active Directory information ([AADStatus](/sccm/core/servers/manage/cmpivot#bkmk_AadStatus))
 - Endpoint protection status ([EPStatus](/sccm/core/servers/manage/cmpivot#bkmk_EPStatus))
 
-This release also includes several [other enhancements](/sccm/core/servers/manage/cmpivot#bkmk_Other) to CMPivot. For more information, see [CMPivot starting in version 1910](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1910)
+This release also includes several [other enhancements](/sccm/core/servers/manage/cmpivot#bkmk_Other) to CMPivot. For more information, see [CMPivot starting in version 1910](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1910).
 
 
 ## <a name="bkmk_content"></a> Content management
