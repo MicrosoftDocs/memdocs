@@ -99,7 +99,7 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 We've added some significant optimizations to the CMPivot engine that allows us to push more of the processing to the ConfigMgr client. The optimizations drastically reduce the network and server CPU load needed to run CMPivot queries. With these optimizations, we can now sift through gigabytes of client data in real time. For more information, see [Optimizations to the CMPivot engine](/sccm/core/servers/manage/cmpivot#bkmk_optimization).
 
 ### Additional CMPivot Entities and Enhancements
-<!--5410930-->'
+<!--5410930-->
 We've added a number of new CMPivot entities and entity enhancements to aid in troubleshooting and hunting. We've included the following entities to query:
 
 - Windows event logs ([WinEvent](/sccm/core/servers/manage/cmpivot#bkmk_WinEvent))
