@@ -173,7 +173,7 @@ conceptualContent:
           url: ./protect/deploy-use/windows-defender-advanced-threat-protection.md
           itemType: how-to-guide
         - text: BitLocker management
-          url: ./protect/plan-design/plan-for-bitlocker.md
+          url: ./protect/plan-design/bitlocker-management.md
           itemType: overview
       footerLink:
         text: See more
