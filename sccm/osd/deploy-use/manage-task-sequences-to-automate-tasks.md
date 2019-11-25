@@ -157,9 +157,13 @@ The following notification message displays when the end user opens the installa
 
 <!--3555926-->
 
-Starting in version 1910, you can now run a task sequence with the high performance power plan. This option improves the overall speed of the task sequence. It configures Windows to use its built-in high performance power plan, which delivers maximum performance at the expense of higher power consumption.
+Starting in version 1910, you can now run a task sequence with the high performance power plan. This option improves the overall speed of the task sequence. It configures Windows to use its built-in high performance power plan, which delivers maximum performance at the expense of higher power consumption. This option is on by default for new task sequences.
 
-When the task sequence starts, it records the currently enabled power plan. It then switches the active power plan to the Windows default **High Performance** plan. If the task sequence restarts the computer, it repeats this process. At the end of the task sequence, it resets the power plan to the stored value. This functionality works in both Windows and Windows PE, but has no impact on virtual machines.
+When the task sequence starts, in most scenarios it records the currently enabled power plan. It then switches the active power plan to the Windows default **High Performance** plan. If the task sequence restarts the computer, it repeats this process. At the end of the task sequence, it resets the power plan to the stored value. This functionality works in both Windows and Windows PE, but has no impact on virtual machines.
+
+- If the task sequence starts in Windows PE, the task sequence doesn't record the currently enabled power plan for later reuse.
+
+- An OS deployment task sequence that reimages the computer (wipe and load) doesn't preserve the power plan setting of the old OS. At the end of the task sequence, it restores the default **Balanced** power plan.
 
 > [!Important]
 > To take advantage of this new Configuration Manager feature, after you update the site, update clients to the latest version. Also update boot images to include the latest client components. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
@@ -174,6 +178,12 @@ When the task sequence starts, it records the currently enabled power plan. It t
 
 > [!Warning]
 > Be cautious with this setting on low performance hardware. Running intense system operations for an extended period of time can strain low-end hardware. Check with your hardware manufacturer for specific guidance.
+
+### Known issue
+
+<!-- 5554928 -->
+
+You deploy a task sequence that you configure for high performance. The deployed task sequence always runs as high performance, even if you disable the high performance option. To change this setting, create a new deployment for the task sequence.
 
 ## <a name="BKMK_DistributeTS"></a> Distribute referenced content  
 
