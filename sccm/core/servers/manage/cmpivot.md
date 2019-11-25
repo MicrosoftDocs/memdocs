@@ -669,7 +669,7 @@ When using CMPivot outside of the Configuration Manager console, you can query j
 
 #### Known issues for local device query evaluation
 
- - If you query on **This PC** for a WMI entity that you don't have access to, such as a locked down WMI class, you may see a crash in CMPivot. Run CMPivot using an account with elevated privileges to query those entites. <!--5753242-->
+ - If you query on **This PC** for a WMI entity that you don't have access to, such as a locked down WMI class, you may see a crash in CMPivot. Run CMPivot using an account with elevated privileges to query those entities. <!--5753242-->
 - If you query non-WMI entities on **This PC**, you'll see an **Invalid namespace** or an ambiguous exception.
 - Run CMPivot standalone from the start menu shortcut, not directly from the path of the executable file. <!--5787962-->
 
