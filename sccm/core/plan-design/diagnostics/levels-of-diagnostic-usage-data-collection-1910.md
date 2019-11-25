@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Levels of diagnostic usage data collection for version 1910
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager version 1910 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail about data collected at each level.
 
@@ -24,11 +24,9 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
 > [!IMPORTANT]
 > Configuration Manager doesn't collect site codes, sites names, IP addresses, user names, computer names, physical addresses, or email addresses on the Basic or Enhanced levels. Any collection of this information on the Full level is not purposeful. It is potentially included in advanced diagnostic information like log files or memory snapshots. Microsoft doesn't use this information to identify you, contact you, or develop advertising.
 
-
 ## <a name="bkmk_change"></a> How to change the level
 
 To change the data collection level, you need **Modify** permissions on the **Site** object class. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node. Select **Hierarchy Settings** in the ribbon, and then choose the data level in the Diagnostics and Usage Data settings.  
-
 
 ## <a name="bkmk_level1"></a> Level 1 - Basic
 
@@ -74,17 +72,17 @@ For Configuration Manager version 1910, this level includes the following data:
 
 - Setup Information:  
 
-    - Build, install type, language packs, features that you enabled
+  - Build, install type, language packs, features that you enabled
 
-    - Pre-release use, setup media type, branch type  
+  - Pre-release use, setup media type, branch type  
 
-    - Software Assurance expiration date  
+  - Software Assurance expiration date  
 
-    - Update pack deployment status and errors, download progress, and prerequisite errors
+  - Update pack deployment status and errors, download progress, and prerequisite errors
 
-    - Use of update fast ring  
+  - Use of update fast ring  
 
-    - Version of post-upgrade script  
+  - Version of post-upgrade script  
 
 - SQL version, service pack level, edition, collation ID, and character set  
 
@@ -128,6 +126,7 @@ For Configuration Manager version 1910, this level includes the following data:
 
 - Hash of key site attributes (site ID, SQL broker ID, and site exchange key)
 
+- ***[New]*** Count of Microsoft Edge installations
 
 ## <a name="bkmk_level2"></a> Level 2 - Enhanced
 
@@ -216,6 +215,10 @@ For Configuration Manager version 1910, this level includes the following data:
 - Aggregated statistics on the use of application groups
 
 - Aggregated statistics on Office add-ins, usage of the Office Readiness Toolkit, and counts of clients with Office 365 ProPlus
+
+- ***[New]*** Aggregated statistics on Office add-in health
+
+- ***[New]*** Count and size of Office Pro Plus pilot collections
 
 ### Client  
 
@@ -548,6 +551,10 @@ For Configuration Manager version 1910, this level includes the following data:
 - Aggregated statistics on the use of Desktop Analytics
 
 - SQL maintenance task configuration and status
+
+- ***[New]*** Count of folders
+
+- ***[New]*** Usage of the Azure migration tool
 
 ## <a name="bkmk_level3"></a> Level 3 - Full
 
