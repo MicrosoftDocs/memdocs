@@ -1,8 +1,8 @@
 ---
-title: Troubleshoot DOINC
+title: Troubleshoot Connected Cache
 titleSuffix: Configuration Manager
-description: Technical details for Delivery Optimization In-Network Cache to help you troubleshoot issues.
-ms.date: 09/06/2019
+description: Technical details for Microsoft Connected Cache to help you troubleshoot issues.
+ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -13,9 +13,12 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Troubleshoot Delivery Optimization In-Network Cache in Configuration Manager
+# Troubleshoot Microsoft Connected Cache in Configuration Manager
 
-This article provides technical details about Delivery Optimization In-Network Cache (DOINC) in Configuration Manager. It's to help you troubleshoot issues that you may have in your environment. For more information on how it works and how to use it, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache).
+This article provides technical details about Microsoft Connected Cache in Configuration Manager. Use it to help troubleshoot issues that you may have in your environment. For more information on how it works and how to use it, see [Microsoft Connected Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/microsoft-connected-cache).
+
+> [!NOTE]
+> Starting in version 1910, this feature is now called **Microsoft Connected Cache**. It was previously known as Delivery Optimization In-Network Cache (DOINC).
 
 ## Verify
 
@@ -25,7 +28,7 @@ Verify this behavior [on a client](#bkmk_verify-client) or [on the server](#bkmk
 
 ### <a name="bkmk_verify-client"></a> Verify on a client
 
-1. On client running Windows 10, version 1809 or later, download cloud-managed content. For more information on the types of content that DOINC supports, see [Verify DOINC](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache#verify).
+1. On client running Windows 10, version 1809 or later, download cloud-managed content. For more information on the types of content that Connected Cache supports, see [Verify Connected Cache](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache#verify).
 
 2. Open PowerShell and run the following command: `Get-DeliveryOptimizationStatus`
 
@@ -120,20 +123,20 @@ The following attributes indicate success:
 
 ## Setup error codes
 
-When Configuration Manager installs the DOINC component on the distribution point, the following table lists the possible error codes that might occur:
+When Configuration Manager installs the Connected Cache component on the distribution point, the following table lists the possible error codes that might occur:
 
 | Error code | Error description |
 |------------|-------------------|
 | 0x00000000 | Success |
 | 0x00000BC2 | Success, reboot required |
 | 0x00000643 | Generic install failure |
-| 0x00D00001 | DOINC setup can only be run if Internet Information Services (IIS) has been installed |
-| 0x00D00002 | DOINC setup can only be run if a 'Default Web Site' exists on the server |
-| 0x00D00003 | You can't install DOINC if Application Request Routing (ARR) is already installed |
-| 0x00D00004 | DOINC setup can only be run if Application Request Routing (ARR) was installed by the Install.ps1 script |
-| 0x00D00005 | DOINC setup requires a PowerShell session running as Administrator |
-| 0x00D00006 | DOINC setup can only be run from a 64-bit PowerShell environment |
-| 0x00D00007 | DOINC setup can only be run on a Windows Server |
+| 0x00D00001 | Connected Cache setup can only be run if Internet Information Services (IIS) has been installed |
+| 0x00D00002 | Connected Cache setup can only be run if a 'Default Web Site' exists on the server |
+| 0x00D00003 | You can't install Connected Cache if Application Request Routing (ARR) is already installed |
+| 0x00D00004 | Connected Cache setup can only be run if Application Request Routing (ARR) was installed by the Install.ps1 script |
+| 0x00D00005 | Connected Cache setup requires a PowerShell session running as Administrator |
+| 0x00D00006 | Connected Cache setup can only be run from a 64-bit PowerShell environment |
+| 0x00D00007 | Connected Cache setup can only be run on a Windows Server |
 | 0x00D00008 | Failure: The number of cache drives specified must match the number of cache drive size percentages specified |
 | 0x00D00009 | Failure: A valid cache node ID must be supplied |
 | 0x00D0000A | Failure: A valid cache drive set must be supplied |
@@ -156,7 +159,7 @@ When Configuration Manager installs the DOINC component on the distribution poin
 | 0x00D0001B | Failure: An exception occurred in VerifyIISSItesStarted.ps1 |
 | 0x00D0001C | Failure: An exception occurred in SetDrivesToHealthy.ps1 |
 | 0x00D0001D | Failure: An exception occurred in VerifyCacheNodeSetup.ps1 |
-| 0x00D0001E | You can't install DOINC if the Default Web Site isn't on port 80 |
+| 0x00D0001E | You can't install Connected Cache if the Default Web Site isn't on port 80 |
 | 0x00D0001F | Failure: The cache drive allocation in percentage can't exceed 100 |
 | 0x00D00020 | Failure: The cache drive allocation in GB cannot exceed the drive's free space |
 | 0x00D00021 | Failure: The cache drive allocation in percentage must be greater than 0 |
@@ -165,7 +168,7 @@ When Configuration Manager installs the DOINC component on the distribution poin
 | 0x00D00024 | Failure: An exception occurred in RegisterScheduledTask_Maintenance |
 | 0x00D00025 | Failure: An exception occurred setting up the rewrite rules for HTTPS farm: $FarmName |
 | 0x00D00026 | Failure: An exception occurred setting up the rewrite rules for HTTP farm: $FarmName |
-| 0x00D00027 | You can't install DOINC because dependent software "Application Request Routing (ARR)" failed to install. See the log file located at %temp%\arr_setup.log |
+| 0x00D00027 | You can't install Connected Cache because dependent software "Application Request Routing (ARR)" failed to install. See the log file located at %temp%\arr_setup.log |
 
 ## IIS configurations
 
@@ -225,4 +228,4 @@ If the IIS and ARR log files take up too much space on the server, there are sev
 
 ## See also
 
-[Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache)
+[Microsoft Connected Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/microsoft-connected-cache)
