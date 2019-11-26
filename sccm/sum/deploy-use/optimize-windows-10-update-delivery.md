@@ -65,7 +65,9 @@ To use Delivery Optimization for all Windows update installation files, enable t
 - **Port that clients use to receive requests for delta content** set to 8005 (default) or a custom port number.
 
 > [!IMPORTANT]
-> Delivery Optimization must be enabled (default) and not bypassed. For more information, see [Windows Delivery Optimization](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#windows-delivery-optimization).
+> - Delivery Optimization must be enabled (default) and not bypassed. For more information, see [Windows Delivery Optimization](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#windows-delivery-optimization).
+
+
 
 ### Configuration Manager peer cache
 
@@ -76,7 +78,7 @@ To use Delivery Optimization for all Windows update installation files, enable t
 
 
 ### Windows BranchCache
-[BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) is a bandwidth optimization technology in Windows. Each client has a cache, and acts as an alternate source for content. Devices on the same network can request this content. [Configuration Manager can use BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache) to allow peers to source content from each other versus always having to contact a distribution point. Using BranchCache, files are cached on each individual client, and other clients can retrieve them as needed. This approach distributes the cache rather than having a single point of retrieval. This behavior saves a significant amount of bandwidth, while reducing the time for clients to receive the requested content. 
+[BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) is a bandwidth optimization technology in Windows. Each client has a cache, and acts as an alternate source for content. Devices on the same network can request this content. [Configuration Manager can use BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache) to allow peers to source content from each other versus always having to contact a distribution point. Using BranchCache, files are cached on each individual client, and other clients can retrieve them as needed. This approach distributes the cache rather than having a single point of retrieval. This behavior saves a significant amount of bandwidth, while reducing the time for clients to receive the requested content.
 
 
 
@@ -91,13 +93,13 @@ Selecting the right peer caching technology for express installation files depen
 |---------|---------|---------|---------|
 | Supported across subnets | Yes | Yes | No |
 | Bandwidth throttling | Yes (Native) | Yes (via BITS) | Yes (via BITS) |
-| Partial content support | Yes | Only for Office 365 and Express Updates | Yes |
+| Partial content support | Yes, for all supported content types listed in this column's next row. | Only for Office 365 and Express Updates | Yes, for all supported content types listed in this column's next row. |
+| Supported content types | **Through ConfigMgr:** </br> - Express updates </br> - All Windows updates (starting version 1910). This doesn't include Office updates.</br> </br> **Through Microsoft cloud:**</br> - Windows and security updates</br> - Drivers</br> - Windows Store apps</br> - Windows Store for Business apps | All ConfigMgr content types, including images downloaded in [Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic) | All ConfigMgr content types, except images |
 | Cache size on disk control | Yes | Yes | Yes |
 | Discovery of a peer source | Automatic | Manual (client agent setting) | Automatic |
 | Peer discovery | Via Delivery Optimization cloud service (requires internet access) | Via management point (based on client boundary groups) | Multicast |
 | Reporting | Yes (using Windows Analytics) | ConfigMgr client data sources dashboard | ConfigMgr client data sources dashboard |
 | WAN usage control | Yes (native, can be controlled via group policy settings) | Boundary groups | Subnet support only |
-| Supported content types | **Through ConfigMgr:** </br> Express updates </br> All Windows updates (starting version 1910)</br> </br> **Through Microsoft cloud:**</br> Windows and security updates</br> Drivers</br> Windows Store apps</br> Windows Store for Business apps | All ConfigMgr content types, including images downloaded in [Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic) | All ConfigMgr content types, except images |
 | Management through ConfigMgr | Partial (client agent setting) | Yes (client agent setting) | Yes (client agent setting) |
 
 
