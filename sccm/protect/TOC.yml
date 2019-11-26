@@ -88,7 +88,7 @@
       href: deploy-use/bitlocker/deploy-management-agent.md
     - name: Encrypt recovery data
       href: deploy-use/bitlocker/encrypt-recovery-data.md
-    - name: Set up BitLocker reports and portals
+    - name: Set up BitLocker portals
       href: deploy-use/bitlocker/setup-websites.md
     - name: Customize the self-service portal
       href: deploy-use/bitlocker/customize-self-service-portal.md

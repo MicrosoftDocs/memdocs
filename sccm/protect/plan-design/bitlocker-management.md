@@ -70,15 +70,27 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 - In version 1910, to create a BitLocker management policy, you need the **Full Administrator** role in Configuration Manager.
 
-- To integrate the BitLocker recovery service in Configuration Manager requires a HTTPS-enabled management point.
+- To integrate the BitLocker recovery service in Configuration Manager requires a HTTPS-enabled management point. On the properties of the management point, the **Client connections** setting must be **HTTPS**.
+
+    > [!NOTE]
+    > In version 1910, it doesn't support Enhanced HTTP.
 
 - To use the BitLocker management reports, install the reporting services point site system role. For more information, see [Configure reporting](/configmgr/core/servers/manage/configuring-reporting).
 
+    > [!NOTE]
+    > In version 1910, for the **Recovery Audit Report** to work from the administration and monitoring website, only use a reporting services point at the primary site.
+
 - To use the self-service portal or the administration and monitoring website, you need a Windows server running IIS. You can reuse a Configuration Manager site system, or use a standalone web server that has connectivity to the site database server. Use a [supported OS version for site system servers](/configmgr/core/plan-design/configs/supported-operating-systems-for-site-system-servers).
+
+    > [!NOTE]
+    > In version 1910, only install the self-service portal and the administration and monitoring website with a primary site database. In a hierarchy, install these websites for each primary site.
 
 - On the web server that will host the self-service portal, install [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4).
 
 - The user account that runs the portal installer script needs SQL **sysadmin** rights on the site database server. During the setup process, the script sets login, user, and SQL role rights for the web server machine account. You can remove this user account from the sysadmin role after you complete setup of the self-service portal and the administration and monitoring website.
+
+> [!TIP]
+> By default, the **Enable BitLocker** task sequence step only encrypts *used space* on the drive. BitLocker management uses *full disk* encryption. Configure this task sequence step to enable the option to **Use full disk encryption**. For more information, see [Task sequence steps - Enable BitLocker](/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker).
 
 ## Next step
 

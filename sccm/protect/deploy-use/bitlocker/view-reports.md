@@ -31,15 +31,15 @@ In the Configuration Manager console, go to the **Monitoring** workspace, expand
 
 - [BitLocker Enterprise Compliance Summary](#bkmk-compliancesummary)
 
-You can also access these reports directly from the reporting services point website.
+- [Recovery Audit Report](#bkmk-audit)
+
+You can access all of these reports directly from the reporting services point website.
 
 > [!NOTE]
 > For these reports to display complete data:
 >
 > - Create and deploy a BitLocker management policy to a device collection
 > - Clients in the target collection need to send hardware inventory
-
-An additional report, **Recovery Audit Report**, is available from the [BitLocker administration and monitoring website](/configmgr/protect/deploy-use/bitlocker/helpdesk-portal#reports).
 
 ## <a name="bkmk-compliancereport"></a> BitLocker computer compliance
 
@@ -191,3 +191,30 @@ Use this report to show the overall BitLocker compliance across your organizatio
 |Unknown compliance|Count of computers with a compliance state that's not known.|
 |Exempt|Count of computers that are exempt from the BitLocker encryption requirement.|
 |Non-exempt|Count of computers that aren't exempt from the BitLocker encryption requirement.|
+
+## <a name="bkmk-audit"></a> Recovery audit report
+
+> [!NOTE]
+> This report is also available from the [BitLocker administration and monitoring website](/configmgr/protect/deploy-use/bitlocker/helpdesk-portal#reports).
+>
+> To view this report in the Configuration Manager console, go to the **Monitoring** workspace. In the navigation pane, expand the **Reporting** node, expand **Reports**, and then expand the **BitLocker Management** folder. Select the subfolder for the localized version of the report, for example, **en-us**.
+
+Use this report to audit users who have requested access to BitLocker recovery keys. You can filter on the following criteria:
+
+- A specific type of user, for example, a help desk user or an end user
+- If the request failed or was successful
+- The specific type of key requested: Recovery Key Password, Recovery Key ID, or TPM Password Hash
+- A date range during which the retrieval occurred
+
+[![Example screenshot of BitLocker Recovery audit report](media/bitlocker-recovery-audit-report.png)](media/bitlocker-recovery-audit-report.png#lightbox)
+
+|Column&nbsp;name|Description|
+|----------------|----|
+|Request date and time|Date and time that an end user or help desk user requested a key.|
+|Audit request source|The site from where the request came. Valid values are **Self-Service Portal** or **Helpdesk**.|
+|Request result|Status of the request. Valid values are **Successful** or **Failed**.|
+|Helpdesk user|The administrative user who requested the key. If a helpdesk admin recovers the key without specifying the user name, the **End User** field is blank. A standard helpdesk user must specify the user name, which appears in this field. For recovery via the self-service portal, this field and the **End User** field display the name of the user making the request.|
+|End user|Name of the user who requested key retrieval.|
+|Computer|Name of the computer that was recovered.|
+|Key type|Type of key that the user requested. The three types of keys are:<br/><br/>- **Recovery key password**: used to recover a computer in recovery mode<br/>- **Recovery key ID**: used to recover a computer in recovery mode for another user<br/>- **TPM password hash**: used to recover a computer with a locked TPM|
+|Reason description|Why the user requested the specified key type, based upon the option they selected in the form.|

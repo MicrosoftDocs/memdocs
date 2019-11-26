@@ -870,6 +870,9 @@ To encrypt a specific, non-OS data drive, select **Specific drive**. Then select
 <!--SCCMDocs-pr issue 2671-->
 By default, this step only encrypts used space on the drive. This default behavior is recommended, as it's faster and more efficient. If your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives.
 
+> [!TIP]
+> Starting in version 1910, you can create and deploy BitLocker management policies, which use *full disk* encryption. To manage BitLocker on devices after the task sequence deploys the OS, enable this option. For more information, see [Plan for BitLocker management](/configmgr/protect/plan-design/bitlocker-management).
+
 #### Choose where to create the recovery key
 
 To specify for BitLocker to create the recovery password and escrow it in Active Directory, select **In Active Directory**. This option requires that you extend Active Directory for BitLocker key escrow. BitLocker can then save the associated recovery information in Active Directory. Select **Do not create recovery key** to not create a password. Creating a password is the recommended option.  
