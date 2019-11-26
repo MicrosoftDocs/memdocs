@@ -95,13 +95,13 @@ Before you use this script in a production environment, change the following val
 
 - Site database name (`CM_ABC`)
 - File path and name (`C:\BitLockerManagement_CERT_KEY`)
-- Master key password (`MyMasterKeyPassword`)
+- Export key password (`MyExportKeyPassword`)
 
 ``` SQL
 USE CM_ABC
 BACKUP CERTIFICATE BitLockerManagement_CERT TO FILE = 'C:\BitLockerManagement_CERT'
     WITH PRIVATE KEY ( FILE = 'C:\BitLockerManagement_CERT_KEY',
-        ENCRYPTION BY PASSWORD = MyMasterKeyPassword)
+        ENCRYPTION BY PASSWORD = MyExportKeyPassword)
 ```
 
 > [!IMPORTANT]
@@ -116,6 +116,7 @@ Before you use this script in a production environment, change the following val
 - Site database name (`CM_ABC`)
 - Master key password (`MyMasterKeyPassword`)
 - File path and name (`C:\BitLockerManagement_CERT_KEY`)
+- Export key password (`MyExportKeyPassword`)
 
 ``` SQL
 USE CM_ABC
@@ -130,7 +131,7 @@ BEGIN
 CREATE CERTIFICATE BitLockerManagement_CERT AUTHORIZATION RecoveryAndHardwareCore
 FROM FILE  = 'C:\BitLockerManagement_CERT'
     WITH PRIVATE KEY ( FILE = 'C:\BitLockerManagement_CERT_KEY',
-        DECRYPTION BY PASSWORD = MyMasterKeyPassword)
+        DECRYPTION BY PASSWORD = MyExportKeyPassword)
 
 GRANT CONTROL ON CERTIFICATE ::BitLockerManagement_CERT TO RecoveryAndHardwareRead
 GRANT CONTROL ON CERTIFICATE ::BitLockerManagement_CERT TO RecoveryAndHardwareWrite

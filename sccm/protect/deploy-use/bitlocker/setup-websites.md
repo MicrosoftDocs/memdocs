@@ -1,7 +1,7 @@
 ---
-title: Set up BitLocker reports and portals
+title: Set up BitLocker portals
 titleSuffix: Configuration Manager
-description: Install the components for the BitLocker management reports, self-service portal, and the administration and monitoring website
+description: Install the BitLocker management components for the self-service portal, and the administration and monitoring website
 ms.date: 11/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -13,7 +13,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Set up BitLocker reports and portals
+# Set up BitLocker portals
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -21,14 +21,13 @@ manager: dougeby
 
 To use the following BitLocker management components in Configuration Manager, you first need to install them:
 
-- BitLocker management reports
 - User self-service portal
 - Administration and monitoring website (helpdesk portal)
 
-You can install the portals on an existing site server with IIS, or use a standalone web server to host them. Install the reports on the reporting services point for the site.
+You can install the portals on an existing site server with IIS, or use a standalone web server to host them.
 
 > [!NOTE]
-> In version 1910, only install the self-service portal and the administration and monitoring website with a primary site database.
+> In version 1910, only install the self-service portal and the administration and monitoring website with a primary site database. In a hierarchy, install these websites for each primary site.
 
 Before you start, confirm the [prerequisites](/configmgr/protect/plan-design/bitlocker-management#prerequisites) for these components.
 
@@ -42,7 +41,10 @@ This process uses a PowerShell script, MBAMWebSiteInstaller.ps1, to install thes
 
 - `-SqlDatabaseName <DatabaseName>` (required): The name of the primary site database, for example `CM_ABC`.
 
-- `-ReportWebServiceUrl <ReportWebServiceUrl>`: The web service URL of the reporting service point. It's the **Web Service URL** value in **Reporting Services Configuration Manager**.
+- `-ReportWebServiceUrl <ReportWebServiceUrl>`: The web service URL of the primary site's reporting service point. It's the **Web Service URL** value in **Reporting Services Configuration Manager**.
+
+    > [!NOTE]
+    > This parameter is to install the **Recovery Audit Report** that's linked from the administration and monitoring website. By default Configuration Manager includes the other BitLocker management reports.
 
 - `-HelpdeskUsersGroupName <DomainUserGroup>`: For example, `contoso\BitLocker help desk users`. A domain user group whose members have access to the **Manage TPM** and **Drive Recovery** areas of the administration and monitoring website. When using these options, this role needs to fill in all fields, including the user's domain and account name.
 
@@ -64,7 +66,7 @@ This process uses a PowerShell script, MBAMWebSiteInstaller.ps1, to install thes
 On the target web server, do the following actions:
 
 > [!NOTE]
-> Depending upon your site design, you may need to run the script multiple times. For example, run the script on the reporting services point to install the reports. Then run it again on a standalone web server to install the self-service portal and the administration and monitoring webiste.
+> Depending upon your site design, you may need to run the script multiple times. For example, run the script on the management point to install the administration and monitoring website. Then run it again on a standalone web server to install the self-service portal.
 
 1. Copy the following files from `SMSSETUP\BIN\X64` in the Configuration Manager installation folder on the site server to a local folder on the target server:
 
@@ -111,6 +113,5 @@ For more troubleshooting information, see [Troubleshoot BitLocker](/configmgr/pr
 
 For more information on using the components that you installed, see the following articles:
 
-- [View BitLocker reports](/configmgr/protect/deploy-use/bitlocker/view-reports)
 - [BitLocker administration and monitoring website](/configmgr/protect/deploy-use/bitlocker/helpdesk-portal)
 - [BitLocker self-service portal](/configmgr/protect/deploy-use/bitlocker/self-service-portal)

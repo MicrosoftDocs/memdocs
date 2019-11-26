@@ -192,25 +192,7 @@ The administration and monitoring website includes the **Recovery Audit Report**
 
 1. From the top menu bar, select the **Recovery Audit Report**.
 
-### <a name="bkmk-recovery-audit"></a> Recovery audit report
-
-Use this report to audit users who have requested access to BitLocker recovery keys. You can filter on the following criteria:
-
-- A specific type of user, for example, a help desk user or an end user
-- If the request failed or was successful
-- The specific type of key requested
-- A date range during which the retrieval occurred
-
-|Column&nbsp;name|Description|
-|----------------|----|
-|Request date and time|Date and time that an end user or help desk user requested a key.|
-|Audit request source|The site from where the request came. Valid values are **Self-Service Portal** or **Helpdesk**.|
-|Request status|Status of the request. Valid values are **Successful** or **Failed**.|
-|Helpdesk user|The administrative user who requested the key. If a helpdesk admin recovers the key without specifying the user name, the **End User** field is blank. A standard helpdesk user must specify the user name, which appears in this field. For recovery via the self-service portal, this field and the **End User** field display the name of the user making the request.|
-|End user|Name of the user who requested key retrieval.|
-|Computer|Name of the computer that was recovered.|
-|Key type|Type of key that the user requested. The three types of keys are:<br/><br/>- **Recovery key password**: used to recover a computer in recovery mode<br/>- **Recovery key ID**: used to recover a computer in recovery mode for another user<br/>- **TPM password hash**: used to recover a computer with a locked TPM|
-|Reason description|Why the user requested the specified key type. The valid entries are user-entered text or one of the following reason codes:<br/><br/>- Operating system boot order changed<br/>- BIOS changed<br/>- Operating system files changed<br/>- Lost startup key<br/>- Lost PIN<br/>- TPM reset<br/>- Lost passphrase<br/>- Lost smartcard<br/>- Reset PIN lockout<br/>- Turn on TPM<br/>- Turn off TPM<br/>- Change TPM password<br/>- Clear TPM|
+For more information on this report, see [Recovery Audit Report](/configmgr/protect/deploy-use/bitlocker/view-reports#bkmk-audit)
 
 > [!TIP]
 > To save report results, select **Export** on the **Reports** menu bar.
