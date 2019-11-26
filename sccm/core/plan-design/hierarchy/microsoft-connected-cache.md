@@ -35,7 +35,7 @@ This cache is separate from Configuration Manager's distribution point content. 
 
 When you configure clients to use the Connected Cache server, they no longer request Microsoft cloud-managed content from the internet. Clients request this content from the cache server installed on the distribution point. The on-premises server caches this content using the IIS feature for Application Request Routing (ARR). Then the cache server can quickly respond to any future requests for the same content. If the Connected Cache server is unavailable, or the content isn't yet cached, clients download the content from the internet. Clients also use Delivery Optimization, so download portions of the content from peers in their network.
 
-![Diagram of how Connected Cache works](media/3555764-delivery-optimization-in-network-cache.png)
+![Diagram of how Connected Cache works](media/3555764-microsoft-connected-cache.png)
 
 1. Client checks for updates and gets the address for the content delivery network (CDN).
 
@@ -119,6 +119,55 @@ On Windows 10 version 1809 or later, verify this behavior with the **Get-Deliver
 If the cache server returns any HTTP failure, the Delivery Optimization client falls back to the original cloud source.
 
 For more detailed information, see [Troubleshoot Microsoft Connected Cache in Configuration Manager](/sccm/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache).
+
+## <a name="bkmk_intune"></a> Support for Intune Win32 apps
+
+<!--5032900-->
+
+Starting in version 1910, when you enable Connected Cache on your Configuration Manager distribution points, they can serve Microsoft Intune Win32 apps to co-managed clients.
+
+### Prerequisites
+
+#### Client
+
+- Update the client to the latest version.
+
+- The client device needs to have at least 4 GB of memory.
+
+    > [!TIP]
+    > Use the following group policy setting: Computer Configuration > Administrative Templates > Windows Components > Delivery Optimization > **Minimum RAM capacity (inclusive) required to enable use of Peer Caching (in GB)**.
+
+#### Site
+
+- Enable Connected Cache on a distribution point. For more information, see [Microsoft Connected Cache](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache).
+
+- The client and the Connected Cache-enabled distribution point need to be in the same boundary group.
+
+- Enable the following client settings in the [**Delivery Optimization**](/configmgr/core/clients/deploy/about-client-settings#delivery-optimization) group:
+
+  - **Use Configuration Manager Boundary Groups for Delivery Optimization Group ID**
+  - **Enable devices managed by Configuration Manger to use Microsoft Connected Cache servers for content download**
+
+- Enable the pre-release feature **Client apps for co-managed devices**. For more information, see [Pre-release features](/configmgr/core/servers/manage/pre-release-features).
+
+- Enable co-management, and switch the **Client apps** workload to **Pilot Intune** or **Intune**. For more information, see the following articles:
+
+  - [Workloads - Client apps](/configmgr/comanage/workloads#client-apps)
+  - [How to enable co-management](/configmgr/comanage/how-to-enable)
+  - [Switch workloads to Intune](/configmgr/comanage/how-to-switch-workloads)
+
+    If in pilot, add the client to the pilot collection for Client Apps.
+
+#### Intune
+
+- This feature only supports the Intune Win32 app type.
+
+  - Create and assign (deploy) a new app in Intune for this purpose. (Apps created before Intune version 1811 don't work.) For more information, see [Intune Win32 app management](https://docs.microsoft.com/intune/apps/apps-win32-app-management).
+
+  - The app needs to be at least 100 MB in size.
+  
+    > [!TIP]
+    > Use the following group policy setting: Computer Configuration > Administrative Templates > Windows Components > Delivery Optimization > **Minimum Peer Caching Content File Size (in MB)**.
 
 ## See also
 
