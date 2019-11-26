@@ -118,8 +118,10 @@ This release also includes several [other enhancements](/sccm/core/servers/manag
 
 When you enable Microsoft Connected Cache on your Configuration Manager distribution points, they can now serve Microsoft Intune Win32 apps to co-managed clients.
 
+For more information, see [Microsoft Connected Cache in Configuration Manager](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
+
 > [!NOTE]
-> Configuration Manager current branch version 1906 included [Delivery Optimization In-Network Cache](/configmgr/core/plan-design/hierarchy/delivery-optimization-in-network-cache), an application installed on Windows Server that's still in development. Starting in current branch version 1910, this feature is now called **Microsoft Connected Cache**.
+> Configuration Manager current branch version 1906 included [Delivery Optimization In-Network Cache](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache) (DOINC), an application installed on Windows Server that's still in development. Starting in current branch version 1910, this feature is now called **Microsoft Connected Cache**.
 >
 > When you install Connected Cache on a Configuration Manager distribution point, it offloads Delivery Optimization service traffic to local sources. Connected Cache does this behavior by efficiently caching content at the byte range level.
 

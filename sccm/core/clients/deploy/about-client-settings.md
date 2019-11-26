@@ -353,10 +353,10 @@ You use Configuration Manager boundary groups to define and regulate content dis
 
 Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content.
 
-### Enable devices managed by Configuration Manager to use Delivery Optimization In-Network Cache servers (Beta) for content download
+### Enable devices managed by Configuration Manager to use Microsoft Connected Cache servers for content download
 
 <!--3555764-->
-Choose **Yes** to allow clients to download content from an on-premises distribution point that you enable as a Delivery Optimization In-Network Cache (DOINC) server. For more information, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache).
+Choose **Yes** to allow clients to download content from an on-premises distribution point that you enable as a Microsoft Connected Cache server. For more information, see [Microsoft Connected Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/microsoft-connected-cache).
 
 
 ## Endpoint Protection
