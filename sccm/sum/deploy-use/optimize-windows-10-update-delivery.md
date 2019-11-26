@@ -66,8 +66,7 @@ To use Delivery Optimization for all Windows update installation files, enable t
 
 > [!IMPORTANT]
 > - Delivery Optimization must be enabled (default) and not bypassed. For more information, see [Windows Delivery Optimization](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#windows-delivery-optimization).
-> - If you previously had Delivery Optimization set for express updates but don't want to use it now, you'll need to use Group Policy to set the Delivery Optimization policy.
->   - You'll find the Delivery Optimization settings in Group Policy under **Configuration\Policies\Administrative Templates\Windows Components\Delivery**. For more information about these settings, see [Delivery Optimization reference](https://docs.microsoft.com//windows/deployment/update/waas-delivery-optimization-reference). 
+
 
 
 ### Configuration Manager peer cache
