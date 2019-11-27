@@ -25,6 +25,8 @@ See the following articles to learn about fundamental concepts for Configuration
 
 - [Fundamentals of sites and hierarchies](/configmgr/core/understand/fundamentals-of-sites-and-hierarchies)  
 
+- [About upgrade, update, and install](/configmgr/core/understand/upgrade-update-install)
+
 - [Fundamentals of managing devices](/configmgr/core/understand/fundamentals-of-managing-devices)  
 
 - [Fundamentals of client management tasks](/configmgr/core/understand/fundamentals-of-client-management-tasks)  

@@ -24,20 +24,18 @@
     items: 
     - name: Configuration Manager fundamentals
       href: understand/fundamentals.md
-    - name: Fundamentals of sites and hierarchies
-      items:
-      - name: Sites and hierarchies fundamentals
-        href: understand/fundamentals-of-sites-and-hierarchies.md
-      - name: About upgrade, update, and install
-        href: understand/upgrade-update-install.md
-      - name: Fundamentals of managing devices
-        href: understand/fundamentals-of-managing-devices.md
-      - name: Fundamentals of client management
-        href: understand/fundamentals-of-client-management-tasks.md
-      - name: Fundamentals of security
-        href: understand/fundamentals-of-security.md
-      - name: Fundamentals of role-based administration
-        href: understand/fundamentals-of-role-based-administration.md
+    - name: Sites and hierarchies
+      href: understand/fundamentals-of-sites-and-hierarchies.md
+    - name: About upgrade, update, and install
+      href: understand/upgrade-update-install.md
+    - name: Manage devices
+      href: understand/fundamentals-of-managing-devices.md
+    - name: Client management
+      href: understand/fundamentals-of-client-management-tasks.md
+    - name: Security
+      href: understand/fundamentals-of-security.md
+    - name: Role-based administration
+      href: understand/fundamentals-of-role-based-administration.md
   - name: Configuration Manager and Windows as a Service
     href: understand/configuration-manager-and-windows-as-service.md
   - name: Use cloud services
