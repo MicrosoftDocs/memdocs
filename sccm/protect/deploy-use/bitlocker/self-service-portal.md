@@ -2,7 +2,7 @@
 title: BitLocker self-service portal
 titleSuffix: Configuration Manager
 description: How to use the user self-service portal in Configuration Manager for BitLocker recovery
-ms.date: 11/25/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual

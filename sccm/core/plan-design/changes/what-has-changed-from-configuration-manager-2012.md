@@ -2,7 +2,7 @@
 title: Changes from version 2012 
 titleSuffix: Configuration Manager
 description: Identify the changes and new capabilities in Configuration Manger versus System Center 2012 Configuration Manager.
-ms.date: 11/25/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

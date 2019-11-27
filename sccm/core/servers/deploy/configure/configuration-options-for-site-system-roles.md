@@ -2,7 +2,7 @@
 title: Site system role options
 titleSuffix: Configuration Manager
 description: Consult this article for details about Configuration Manager site system roles that are not necessarily self-explanatory.
-ms.date: 11/25/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

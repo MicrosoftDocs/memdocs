@@ -2,7 +2,7 @@
 title: Create a custom task sequence
 titleSuffix: Configuration Manager
 description: Edit a custom task sequence in Configuration Manager to add steps to the task sequence.
-ms.date: 11/25/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual

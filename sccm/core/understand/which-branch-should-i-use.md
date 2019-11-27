@@ -2,7 +2,7 @@
 title: Which branch should I use
 titleSuffix: Configuration Manager
 description: Learn the differences between available branches of Configuration Manager.
-ms.date: 11/25/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

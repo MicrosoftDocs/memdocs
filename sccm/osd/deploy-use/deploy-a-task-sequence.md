@@ -2,7 +2,7 @@
 title: Deploy a task sequence
 titleSuffix: Configuration Manager
 description: Use this information to deploy a task sequence to the computers in a collection.  
-ms.date: 11/25/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual

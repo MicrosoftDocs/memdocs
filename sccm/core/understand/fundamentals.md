@@ -2,7 +2,7 @@
 title: Fundamentals
 titleSuffix: Configuration Manager
 description: Learn about basic concepts for Configuration Manager.
-ms.date: 11/25/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

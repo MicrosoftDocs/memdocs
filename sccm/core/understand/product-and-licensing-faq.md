@@ -2,7 +2,7 @@
 title: Product and licensing FAQ
 titleSuffix: Configuration Manager
 description: Find answers for common product and license questions for Configuration Manager.
-ms.date: 11/25/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
