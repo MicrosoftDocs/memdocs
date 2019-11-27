@@ -2,7 +2,7 @@
 title: Introduction to app management
 titleSuffix: Configuration Manager
 description: Discover the basic information you'll need to manage and deploy applications in Configuration Manager.
-ms.date: 11/25/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual

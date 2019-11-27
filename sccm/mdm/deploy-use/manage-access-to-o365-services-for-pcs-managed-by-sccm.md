@@ -2,7 +2,7 @@
 title: Manage access to Office 365 services
 titleSuffix: Configuration Manager
 description: Learn how to configure conditional access to Office 365 services for PCs that are managed by System Center Configuration Manager.
-ms.date: 11/25/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual

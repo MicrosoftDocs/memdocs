@@ -2,7 +2,7 @@
 title: Diagnostic and usage data for 1910
 titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data collected in version 1910.
-ms.date: 11/25/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

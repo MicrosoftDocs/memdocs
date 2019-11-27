@@ -2,7 +2,7 @@
 title: Protect data and site infrastructure
 titleSuffix: Configuration Manager
 description: Learn how to protect your organization's resources from exposure or malicious attack with Configuration Manager.
-ms.date: 11/25/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual

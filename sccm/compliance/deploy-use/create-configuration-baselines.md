@@ -2,7 +2,7 @@
 title: "Create configuration baselines"
 titleSuffix: "Configuration Manager"
 description: "Create configuration baselines in System Center Configuration Manager that you can deploy to a collection."
-ms.date: 11/25/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual

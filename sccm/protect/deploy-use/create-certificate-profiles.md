@@ -2,7 +2,7 @@
 title: Create SCEP certificate profiles
 titleSuffix: Configuration Manager
 description: Learn how to use certificate profiles to provision managed devices with the certificates they need
-ms.date: 11/25/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual

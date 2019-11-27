@@ -2,7 +2,7 @@
 title: BitLocker event logs
 titleSuffix: Configuration Manager
 description: Learn about how to work with BitLocker information in the Windows Event Log to troubleshoot problems
-ms.date: 11/25/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
