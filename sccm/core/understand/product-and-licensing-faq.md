@@ -64,9 +64,11 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 > [!IMPORTANT]
 > Configuration Manager isn't included in the [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business) plan.
 
-### <a name="bkmk_mem"></a> What changed with the Ignite 2019 announcement for Microsoft Endpoint Manager?
+### <a name="bkmk_mem"></a> Does anything change with the rebrand to Microsoft Endpoint Manager?
 
-If you're already licensed for Configuration Manager, then you're also automatically licensed for Intune for enrolling Windows PCs in [co-management](/configmgr/comanage/overview). There are no more licensing barriers to managing Windows devices with Microsoft Endpoint Manager.
+Yes. If you're already licensed for Configuration Manager, then you're also automatically licensed for Intune for enrolling Windows PCs in [co-management](/configmgr/comanage/overview). This change makes it easier for you to manage Windows devices with Microsoft Endpoint Manager.
+
+The licensing that you previously had for System Center Configuration Manager still applies to Microsoft Endpoint Configuration Manager. If installing a new site, use existing product keys.
 
 If you want to use Intune for managing iOS, Android, or macOS devices, then you do need the appropriate Intune subscription through standalone Intune license, Enterprise Mobility +
 Security (EMS), or Microsoft 365.

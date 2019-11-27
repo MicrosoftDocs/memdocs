@@ -29,7 +29,7 @@ Start by watching the following two-minute video from Brad Anderson, Microsoft c
 
 ### What is Microsoft Endpoint Manager?
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune, without a complex migration, and with simplified licensing. Continue to leverage your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace.
+Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune with simplified licensing. Continue to leverage your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace.
 
 The following Microsoft management solutions are all now part of the **Microsoft Endpoint Manager** brand:
 
@@ -46,7 +46,7 @@ For more information, see the following posts from Brad Anderson, Microsoft corp
 
 ### What things change in Configuration Manager with Microsoft Endpoint Manager?
 
-In version 1910, aside from several string changes, Configuration Manager still functions the same.
+In version 1910, aside from the name change, Configuration Manager still functions the same.
 
 Most notably, the Start menu folder names changed for common components, such as the [Configuration Manager console](/configmgr/core/servers/manage/admin-console#bkmk_open) and [Software Center](/configmgr/core/understand/software-center#bkmk_open).
 
