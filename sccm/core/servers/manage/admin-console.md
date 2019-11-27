@@ -1,5 +1,5 @@
 ---
-title: Configuration Manager Console
+title: Configuration Manager console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
 ms.date: 11/25/2019
@@ -13,15 +13,28 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Using the Configuration Manager console
+# How to use the Configuration Manager console
 
 *Applies to: Configuration Manager (current branch)*
 
 Administrators use the Configuration Manager console to manage the Configuration Manager environment. This article covers the fundamentals of navigating the console.  
 
+## <a name="bkmk_open"></a> Open the console
+
+The Configuration Manager console is always installed on every site server. You can also install it on other computers. For more information, see [Install the Configuration Manager console](/configmgr/core/servers/deploy/install/install-consoles).
+
+The simplest method to open the console on a Windows 10 computer, press **Start** and start typing `Configuration Manager console`. You may not need to type the entire string for Windows to find the best match.
+
+If you browse the Start menu, look for the **Configuration Manager console** icon in the **Microsoft Endpoint** group.
+
+![Microsoft Endpoint start menu icons](media/microsoft-endpoint-start-menu.png)
+
+> [!NOTE]
+> The Start menu path changed in version 1910. In version 1906 and earlier, the folder name is **System Center**. When you update Configuration Manager to version 1910 or later, make sure to update any internal documentation that you maintain to include this new location.
+
 ## Connect to a site server
 
-The console connects to your central administration site server or to your primary site servers. You can't connect a Configuration Manager console to a secondary site. You can [install the Configuration Manager console](/configmgr/core/servers/deploy/install/install-consoles). During installation, you specified the fully qualified domain name (FQDN) of the site server to which the console connects.
+The console connects to your central administration site server or to your primary site servers. You can't connect a Configuration Manager console to a secondary site. During installation, you specified the fully qualified domain name (FQDN) of the site server to which the console connects.
 
 To connect to a different site server, use the following steps:
 

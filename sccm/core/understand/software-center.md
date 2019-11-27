@@ -5,7 +5,7 @@ description: Learn about the features and functionality of Software Center
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 11/25/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Software Center user guide
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Your organization's IT admin uses Software Center to install applications, software updates, and upgrade Windows. This user guide explains the functionality of Software Center for users of the computer.
 
@@ -27,13 +27,16 @@ General notes about Software Center functionality:
 
 <!-- - Your IT admin may change the color of Software Center, and add your organization's logo. The images in this article show the default experience. -->
 
+## <a name="bkmk_open"></a> How to open Software Center
 
-## How to open Software Center
+For the simplest method to start Software Center on a Windows 10 computer, press **Start** and type `Software Center`. You may not need to type the entire string for Windows to find the best match.
 
-For the simplest method to start Software Center on a Windows 10 computer, press **Start** and type `Software Center`.
+If you browse the Start menu, look for the **Software Center** icon in the **Microsoft Endpoint Manager** group.
 
-If you navigate the Start menu, look under the **Microsoft System Center** group for the **Software Center** icon.
+![Microsoft Endpoint start menu icons](media/microsoft-endpoint-start-menu.png)
 
+> [!NOTE]
+> The Start menu path changed in version 1910. In version 1906 and earlier, the folder name is **Microsoft System Center**. When you update Configuration Manager to version 1910 or later, make sure to update any internal documentation that you maintain to include this new location.
 
 ## Applications
 

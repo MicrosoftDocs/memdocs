@@ -35,7 +35,7 @@ Configuration Manager is now part of Microsoft Endpoint Manager.
 
 ![Microsoft Endpoint Configuration Manager](media/4960084-endpoint-manager-logo.png)
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune, without a complex migration, and with simplified licensing. Continue to leverage your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace.
+Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune with simplified licensing. Continue to leverage your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace.
 
 The following Microsoft management solutions are all now part of the **Microsoft Endpoint Manager** brand:
 
@@ -53,7 +53,7 @@ For more information, see the following posts from Brad Anderson, Microsoft corp
 
 ### What things change in Configuration Manager with Microsoft Endpoint Manager?
 
-In version 1910, aside from several string changes, Configuration Manager still functions the same. A few of the string changes may impact your use of the following components:
+In version 1910, aside from the name change, Configuration Manager still functions the same. Some of the name changes may impact your use of the following components:
 
 - **Configuration Manager console**: Find shortcuts to the console and the **Remote Control Viewer** under the Windows Start menu in the **Microsoft Endpoint** folder.
 
