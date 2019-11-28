@@ -100,13 +100,11 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 ## New and updated support articles
 
-Support articles that are new or updated between between August 13 and October 24, 2019.
+Support articles that are new or updated between between October 25 and November 27, 2019.
 
-- [KB 4517137: Computer hangs at "Just a moment" in a debug deployment for a Configuration Manager task sequence](https://support.microsoft.com/help/4517137)
-- [KB 4517138: Debug deployment for a task sequence is not displayed in Configuration Manager](https://support.microsoft.com/help/4517138)
-- [KB 4517870: Scheduled Updates fails if the Configuration Manager SMS provider server is on Windows Server 2012 R2 or Windows Server 2012](https://support.microsoft.com/help/4517870)
-- [KB 4458143: Hash mismatch error when clients download Contentinfo.tar from cloud DPs that are assigned to multiple primary sites](https://support.microsoft.com/help/4458143)
-- [KB 4517482: August 2019 .NET 4.7.2 updates fail to synchronize in Configuration Manager](https://support.microsoft.com/help/4517482)
-- [KB 4517869: Update Rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869)
+- [KB 4528414: Configuration Manager console displays out-of-date Endpoint Protection Definition version and last update time](https://support.microsoft.com/help/4528414/)
+- [KB 4529905: Delays in content distribution in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4529905)
+- [KB 4529827: Configuration Manager clients incorrectly detect co-management state](https://support.microsoft.com/help/4529827)
+
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.  
