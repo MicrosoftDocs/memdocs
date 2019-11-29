@@ -2,7 +2,7 @@
 title: Introduction to app management
 titleSuffix: Configuration Manager
 description: Discover the basic information you'll need to manage and deploy applications in Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -21,7 +21,6 @@ In this article, you'll learn the basics before you start working with Configura
 
 > [!TIP]  
 > If you're already familiar with how to manage applications in Configuration Manager, skip this article. Move on to creating a sample application: [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application).  
-
 
 ## What is an application?
 
@@ -124,7 +123,6 @@ Starting in version 1906, create a group of applications that you can send to a 
 
 For more information, see [Create application groups](/sccm/apps/deploy-use/create-app-groups).
 
-
 ## What application types can you deploy?
 
 Configuration Manager lets you deploy the following app types:  
@@ -134,7 +132,7 @@ Configuration Manager lets you deploy the following app types:
 - Windows app package (appx or appxbundle)  
 
     > [!Note]  
-    > Starting in version 1806, this type includes the new Windows 10 app package (msix) and app bundle (msixbundle) formats.<!--1357427-->  
+    > This type includes the new Windows 10 app package (msix) and app bundle (msixbundle) formats.<!--1357427-->  
 
 - Windows app package in the Microsoft Store  
 
@@ -160,7 +158,6 @@ Additionally, when you manage devices through Microsoft Intune or Configuration 
 
 - Web application
 
-
 ## State-based applications  
 
 Configuration Manager applications use state-based monitoring. You can track the last application deployment state for users and devices. The state messages display information about individual devices. For example, if you deploy an application to a collection of users, you can view the compliance state of the deployment and the deployment purpose in the Configuration Manager console. Monitor the deployment of all software from the **Monitoring** workspace in the Configuration Manager console. For more information, see [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
@@ -173,13 +170,11 @@ The Configuration Manager client regularly reevaluates application deployments. 
 
 You can set the re-evaluation interval for application deployments. Use the **Schedule re-evaluation for deployments** client setting in the **Software Deployment** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-deployment).  
 
-
 ## Get started creating an application  
 
 If you want to jump right in and create an application, you'll find a walkthrough in the [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application) article.  
 
 If you're familiar with the basics and looking for more detailed reference information about all the available options, start to [Create applications](/sccm/apps/deploy-use/create-applications).  
-
 
 ## Software Center  
 
@@ -198,15 +193,13 @@ For more information, see the following articles:
 - [Software Center user guide](/sccm/core/understand/software-center)
 
 > [!Note]  
-> The application catalog is deprecated. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat).  
-
+> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat).  
 
 ## Packages and programs  
 
 Configuration Manager continues to support packages and programs that were used in previous versions of the product.
 
 For more information, see [Packages and programs](/sccm/apps/deploy-use/packages-and-programs).  
-
 
 ## Next steps
 

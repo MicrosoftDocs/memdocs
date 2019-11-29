@@ -2,7 +2,7 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 08/30/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -15,11 +15,11 @@ ms.collection: M365-identity-device-management
 
 # Log file reference
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 In Configuration Manager, client and site server components record process information in individual log files. You can use the information in these log files to help you troubleshoot issues that might occur. By default, Configuration Manager enables logging for client and server components.
 
-For more general information about log files in Configuration Manager, see [About log files](/sccm/core/plan-design/hierarchy/about-log-files). That article includes information on the tools to use, how to configure the logs, and where to find them.
+For more general information about log files in Configuration Manager, see [About log files](/configmgr/core/plan-design/hierarchy/about-log-files). That article includes information on the tools to use, how to configure the logs, and where to find them.
 
 The following sections provide details about the different log files available to you. Monitor Configuration Manager client and server logs for operation details, and view error information to troubleshoot problems.  
 
@@ -118,6 +118,7 @@ The following table lists the log files located on the Configuration Manager cli
 
 |Log name|Description|  
 |--------------|-----------------|  
+|BitLockerManagementHandler.log|Records information about BitLocker management policies.|
 |CAS.log|The Content Access service. Maintains the local package cache on the client.|  
 |Ccm32BitLauncher.log|Records actions for starting applications on the client marked *run as 32 bit*.|  
 |CcmEval.log|Records Configuration Manager client status evaluation activities and details for components that are required by the Configuration Manager client.|  
@@ -140,6 +141,7 @@ The following table lists the log files located on the Configuration Manager cli
 |ContentTransferManager.log|Schedules the Background Intelligent Transfer Service (BITS) or Server Message Block (SMB) to download or access packages.|  
 |DataTransferService.log|Records all BITS communication for policy or package access.|  
 |DeltaDownload.log|Records information about the download of express updates and updates downloaded using Delivery Optimization.|  
+|Diagnostics.log|Records the status of client diagnostic actions.|
 |EndpointProtectionAgent|Records information about the installation of the System Center Endpoint Protection client and the application of antimalware policy to that client.|  
 |execmgr.log|Records details about packages and task sequences that run on the client.|  
 |ExpressionSolver.log|Records details about enhanced detection methods that are used when verbose or debug logging is turned on.|  
@@ -320,7 +322,7 @@ The following table lists the log files that are on the Configuration Manager si
 |sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|
 |SMS_AZUREAD_DISCOVERY_AGENT.log| Log file for synchronization of collection membership results to Azure Active directory. This was first introduced as a pre-release feature starting in Configuration Manager version 1906.| Site server|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
-|SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates starting in Configuration Manager version 1806.| Top-level software update point in the Configuration Manager hierarchy.|
+|SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.|
 |SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy|   
 |SmsAdminUI.log|Records Configuration Manager console activity.|Computer that runs the Configuration Manager console|  
 |SMSAWEBSVCSetup.log|Records the installation activities of the Application Catalog web service.|Site system server|  
@@ -431,8 +433,8 @@ The following table lists the log files that contain information related to the 
 |--------------|-----------------|----------------------------|  
 |objreplmgr.log|Records details about the replication of software updates notification files from a parent site to child sites.|Site server|  
 |PatchDownloader.log|Records details about the process of downloading software updates from the update source to the download destination on the site server.|When you manually download updates, this file is in your `%temp%` directory on the computer where you use the console. For automatic deployment rules, if the Configuration Manager client is installed on the site server, this file is on the site server in `%windir%\CCM\Logs`.|  
-|ruleengine.log|Records details about automatic deployment rules for the identification, content download, and software update group and deployment creation.|Site server| 
-|SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates starting in Configuration Manager version 1806.| Top-level software update point in the Configuration Manager hierarchy.| 
+|ruleengine.log|Records details about automatic deployment rules for the identification, content download, and software update group and deployment creation.|Site server|
+|SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.|
 |SUPSetup.log|Records details about the software update point installation. When the software update point installation completes, **Installation was successful** is written to this log file.|Site system server|  
 |WCM.log|Records details about the software update point configuration and connections to the WSUS server for subscribed update categories, classifications, and languages.|Site server that connects to the WSUS server|  
 |WSUSCtrl.log|Records details about the configuration, database connectivity, and health of the WSUS server for the site.|Site system server|  
@@ -491,7 +493,7 @@ The following table lists the log files that contain information related to Asse
 |--------------|-----------------|----------------------------|  
 |AssetAdvisor.log|Records the activities of Asset Intelligence inventory actions.|Client|  
 |aikbmgr.log|Records details about the processing of XML files from the inbox for updating the Asset Intelligence catalog.|Site server|  
-|AIUpdateSvc.log|Records the interaction of the Asset Intelligence sync point with System Center Online (SCO), the online web service.|Site system server|  
+|AIUpdateSvc.log|Records the interaction of the Asset Intelligence sync point with the cloud service.|Site system server|  
 |AIUSMSI.log|Records details about the installation of the Asset Intelligence sync point site system role.|Site system server|  
 |AIUSSetup.log|Records details about the installation of the Asset Intelligence sync point site system role.|Site system server|  
 |ManagedProvider.log|Records details about discovering software with an associated software identification tag. Also records activities related to hardware inventory.|Site system server|  
@@ -557,7 +559,7 @@ The following table lists the log files that contain information related to the 
 |CMGHttpHandler.log<sup>[Note 1](#bkmk_note1)</sup>|Records details about the cloud management gateway http handler binding with Internet Information Services in Azure<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.<br>Starting in version 1806, this log doesn't exist. The component functionality is merged into the CMG service component. See the CMGService.log instead.<!--SCCMDocs-pr issue #2822-->|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
 |CMGService.log<sup>[Note 1](#bkmk_note1)</sup>|Records details about the cloud management gateway service core component in Azure<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
 |SMS_Cloud_<br>ProxyConnector.log|Records details about setting up connections between the cloud management gateway service and the cloud management gateway connection point.|Site system server|
-|CMGContentService.log<sup>[Note 1](#bkmk_note1)</sup>|<!--SCCMDocs-pr issue #2822-->Starting in version 1806, when you enable a CMG to also serve content from Azure storage, this log records the details of that service.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
+|CMGContentService.log<sup>[Note 1](#bkmk_note1)</sup>|<!--SCCMDocs-pr issue #2822-->When you enable a CMG to also serve content from Azure storage, this log records the details of that service.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
 
 - For troubleshooting deployments, use **CloudMgr.log** and **CMGSetup.log**
 - For troubleshooting service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**.
@@ -844,7 +846,7 @@ The following table lists the log files that contain information related to soft
 |ScanAgent.log|Records details about scan requests for software updates, the WSUS location, and related actions.|Client|  
 |SdmAgent.log|Records details about the tracking of remediation and compliance. However, the software updates log file, Updateshandler.log, provides more informative details about installing the software updates that are required for compliance.<br /><br /> This log file is shared with compliance settings.|Client|  
 |ServiceWindowManager.log|Records details about the evaluation of maintenance windows.|Client|
-|SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates starting in Configuration Manager version 1806.| Top-level software update point in the Configuration Manager hierarchy.|  
+|SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.|  
 |SmsWusHandler.log|Records details about the scan process for the Inventory Tool for Microsoft Updates.|Client|  
 |StateMessage.log|Records details about software update state messages that are created and sent to the management point.|Client|  
 |SUPSetup.log|Records details about the software update point installation. When the software update point installation completes, **Installation was successful** is written to this log file.|Site system server|  
@@ -905,10 +907,10 @@ These log files are located in the `%ProgramFiles%\Update Services\LogFiles` fol
 
 ## See also
 
-- [About log files](/sccm/core/plan-design/hierarchy/about-log-files)
+- [About log files](/configmgr/core/plan-design/hierarchy/about-log-files)
 
-- [Support Center OneTrace](/sccm/core/support/support-center-onetrace)
+- [Support Center OneTrace](/configmgr/core/support/support-center-onetrace)
 
-- [Support Center log file viewer](/sccm/core/support/support-center#support-center-log-file-viewer)
+- [Support Center log file viewer](/configmgr/core/support/support-center#support-center-log-file-viewer)
 
-- [CMTrace](/sccm/core/support/cmtrace)
+- [CMTrace](/configmgr/core/support/cmtrace)

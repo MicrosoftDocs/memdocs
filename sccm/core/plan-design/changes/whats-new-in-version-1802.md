@@ -11,6 +11,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
+ROBOTS: NOINDEX
 ---
 # What's new in version 1802 of System Center Configuration Manager
 

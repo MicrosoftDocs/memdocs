@@ -2,7 +2,7 @@
 title: Manage task sequences
 titleSuffix: Configuration Manager
 description: Create, edit, deploy, import, and export task sequences to manage them and automate tasks in your environment.
-ms.date: 07/26/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -15,62 +15,29 @@ ms.collection: M365-identity-device-management
 
 # Manage task sequences to automate tasks
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Use task sequences to automate steps in your Configuration Manager environment. These steps can deploy an OS image to a destination computer, build and capture an OS image from a set of OS installation files, and capture and restore user state information. Task sequences are located in the Configuration Manager console. In the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**. The **Task Sequences** node, including subfolders that you create, is replicated throughout the Configuration Manager hierarchy. For planning information, see [Planning considerations for automating tasks](/sccm/osd/plan-design/planning-considerations-for-automating-tasks).  
+Use task sequences to automate steps in your Configuration Manager environment. These steps can deploy an OS image to a destination computer, build and capture an OS image from a set of OS installation files, and capture and restore user state information. Task sequences are located in the Configuration Manager console. In the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**. The **Task Sequences** node, including subfolders that you create, is replicated throughout the Configuration Manager hierarchy. For planning information, see [Planning considerations for automating tasks](/configmgr/osd/plan-design/planning-considerations-for-automating-tasks).  
 
-
-
-## <a name="BKMK_CreateTaskSequence"></a> Create task sequences  
+## <a name="BKMK_CreateTaskSequence"></a> Create
 
 Create task sequences by using the Create Task Sequence Wizard. This wizard can create the following types of task sequences:  
 
-|Task sequence type|More information|  
-|------------------------|----------------------|  
-|[Task sequence to install an OS](create-a-task-sequence-to-install-an-operating-system.md)|This task sequence type creates the steps to install an OS. It also includes options to migrate user data, include software updates, and install applications.|  
-|[Task sequence to upgrade an OS](create-a-task-sequence-to-upgrade-an-operating-system.md)|This task sequence type creates the steps to upgrade an OS. It also includes options to include software updates and install applications.|  
-|[Task sequence to capture an OS](create-a-task-sequence-to-capture-an-operating-system.md)|This task sequence type creates the steps to build and capture an OS from a reference computer. You can include software updates and install applications on the reference computer before capturing the image.|  
-|[Task sequence to capture and restore user state](create-a-task-sequence-to-capture-and-restore-user-state.md)|This task sequence provides the steps to add to an existing task sequence to capture and restore user state data.|  
-|[Custom task sequence](create-a-custom-task-sequence.md)|This task sequence type doesn't add any steps to the task sequence. After you create this task sequence, edit it, and add steps.|  
+- [Task sequence to install an OS](/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system): Create the steps to install an OS. It also includes options to migrate user data, include software updates, and install applications.
 
+- [Task sequence to upgrade an OS](/configmgr/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system): Create the steps to upgrade an OS. It also includes options to include software updates and install applications.
 
+- [Task sequence to capture an OS](/configmgr/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system): Create the steps to build and capture an OS from a reference computer. You can include software updates and install applications on the reference computer before capturing the image.
+
+- [Task sequence to capture and restore user state](/configmgr/osd/deploy-use/create-a-task-sequence-to-capture-and-restore-user-state): Add steps to an existing task sequence to capture and restore user state data.
+
+- [Custom task sequence](/configmgr/osd/deploy-use/create-a-custom-task-sequence): This type doesn't add any steps to the task sequence. After you create this task sequence, edit it, and add steps.
 
 ## <a name="BKMK_ModifyTaskSequence"></a> Edit  
 
-Modify a task sequence by adding or removing steps, adding or removing groups, or by changing the order of the steps. Use the following procedure to modify an existing task sequence:  
+Modify a task sequence by adding or removing steps, adding or removing groups, or by changing the order of the steps. For more information, see [Use the task sequence editor](/configmgr/osd/understand/task-sequence-editor).
 
-> [!IMPORTANT]  
-> When you edit a task sequence that was created by using the Create Task Sequence Wizard, the name of the step can be the action or type of the step. For example, you might see a step that has the name "Partition disk 0", which is the action for a step of type [Format and Partition Disk](/sccm/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk). All task sequence steps are documented by their type, not necessarily by the name of the step that the editor displays.  
-
-### Process to edit a task sequence  
-
-1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Task Sequences** node.  
-
-2. In the **Task Sequence** list, select the task sequence that you want to edit.  
-
-3. On the **Home** tab of the ribbon, in the **Task Sequence** group, select **Edit**. Then perform any of the following operations:  
-
-    - To add a task sequence step, select **Add**, select the type of the step, and then select the step to add. For example, to add the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step, select **Add**, choose **General**, and then select **Run Command Line**.  
-
-    - To add a group to the task sequence, select **Add**, and then choose **New Group**. After you add a group, you can then add steps to the group.  
-
-    - To change the order of the steps and groups in the task sequence, select the step or group that you want to reorder, and then use the **Move Item Up** or **Move Item Down** icons. You can move only one step or group at a time.  
-
-    - To remove a step or group, select the step or group, and choose **Remove**.  
-
-4. Select **OK** to save the changes and close the window. Select **Apply** to save the changes and keep the task sequence editor open.  
-
-For a list of the available task sequence steps, see [Task sequence steps](/sccm/osd/understand/task-sequence-steps).  
-
-### <a name="bkmk_sedo"></a> Reclaim lock for editing task sequences
-
-<!--3699337-->
-If the Configuration Manager console stops responding, you can be locked out of making further changes until the lock expires after 30 minutes. This lock is part of the Configuration Manager SEDO (Serialized Editing of Distributed Objects) system. For more information, see [Configuration Manager SEDO](/sccm/develop/core/understand/sedo).
-
-Starting in version 1906, you can clear your lock on a task sequence. This action only applies to your user account that has the lock, and on the same device from which the site granted the lock. When you attempt to access a locked task sequence, you can now **Discard Changes**, and continue editing the object. These changes would be lost anyway when the lock expired.
-
-
-## <a name="bkmk_prop-general"></a> Configure Software Center properties
+## <a name="bkmk_prop-general"></a> Software Center properties
 
 Use the following procedure to configure the details for the task sequence displayed in Software Center. These details are for information only.  
 
@@ -86,9 +53,7 @@ Use the following procedure to configure the details for the task sequence displ
 
     - **Estimated run time (minutes)**: Specifies the estimated run time in minutes that's displayed in Software Center for the task sequence.  
 
-
-
-## <a name="bkmk_prop-advanced"></a> Configure advanced task sequence settings
+## <a name="bkmk_prop-advanced"></a> Advanced settings
 
 Use the following procedure to configure the behavior of the task sequence on the Configuration Manager client.  
 
@@ -117,7 +82,7 @@ Use the following procedure to configure the behavior of the task sequence on th
     - **Maximum allowed run time**: Specifies the maximum time in minutes that you expect the task sequence to run on the destination computer. Use a whole number equal to or greater than zero. By default, this value is 120 minutes.  
 
         > [!IMPORTANT]  
-        > If you're using maintenance windows for the collection to which you deploy this task sequence, a conflict might occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. If you set the maximum run time to **0**, the task sequence starts during the maintenance window. It continues to run until it completes or fails after the maintenance window is closed. As a result, task sequences with a maximum run time set to **0** might run past the end of their maintenance windows. If you set the maximum run time to a specific period (non-zero) that exceeds the length of any available maintenance window, then that task sequence doesn't run. For more information, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).  
+        > If you're using maintenance windows for the collection to which you deploy this task sequence, a conflict might occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. If you set the maximum run time to **0**, the task sequence starts during the maintenance window. It continues to run until it completes or fails after the maintenance window is closed. As a result, task sequences with a maximum run time set to **0** might run past the end of their maintenance windows. If you set the maximum run time to a specific period (non-zero) that exceeds the length of any available maintenance window, then that task sequence doesn't run. For more information, see [How to use maintenance windows](/configmgr/core/clients/manage/collections/use-maintenance-windows).  
 
         If you set the value as **0**, Configuration Manager evaluates the maximum allowed run time as **12** hours (720 minutes) for monitoring progress. However, the task sequence starts as long as the countdown duration doesn't exceed the maintenance window value.  
 
@@ -133,26 +98,22 @@ Use the following procedure to configure the behavior of the task sequence on th
         > [!NOTE]  
         > When you run a task sequence from boot media or PXE, Configuration Manager ignores this option. The task sequence runs as though the option **This program can run on any platform** is selected.  
 
-
-
-## Configure high-impact task sequence settings
+## High-impact settings
 
 Configure a task sequence as high-impact and customize the messages that users receive when they run the task sequence.
-
 
 ### Set a task sequence as a high-impact task sequence
 
 Use the following procedure to set a task sequence as high-impact.
 
 > [!NOTE]  
-> Any task sequence that meets certain conditions is automatically defined as high-impact. For more information, see [Manage high-risk deployments](/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+> Any task sequence that meets certain conditions is automatically defined as high-impact. For more information, see [Manage high-risk deployments](/configmgr/protect/understand/settings-to-manage-high-risk-deployments).
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.  
 
 2. Select the task sequence to edit, and select **Properties**.  
 
 3. On the **User Notification** tab, select **This is a high-impact task sequence**.  
-
 
 ### Create a custom notification for high-risk deployments
 
@@ -192,7 +153,37 @@ The following notification message displays when the end user opens the installa
 
 ![Customized task sequence notification to the end user from Software Center](../media/user-notification-enduser.png)
 
+## <a name="bkmk_perf"></a> Performance improvements for power plans
 
+<!--3555926-->
+
+Starting in version 1910, you can now run a task sequence with the high performance power plan. This option improves the overall speed of the task sequence. It configures Windows to use its built-in high performance power plan, which delivers maximum performance at the expense of higher power consumption. This option is on by default for new task sequences.
+
+When the task sequence starts, in most scenarios it records the currently enabled power plan. It then switches the active power plan to the Windows default **High Performance** plan. If the task sequence restarts the computer, it repeats this process. At the end of the task sequence, it resets the power plan to the stored value. This functionality works in both Windows and Windows PE, but has no impact on virtual machines.
+
+- If the task sequence starts in Windows PE, the task sequence doesn't record the currently enabled power plan for later reuse.
+
+- An OS deployment task sequence that reimages the computer (wipe and load) doesn't preserve the power plan setting of the old OS. At the end of the task sequence, it restores the default **Balanced** power plan.
+
+> [!Important]
+> To take advantage of this new Configuration Manager feature, after you update the site, update clients to the latest version. Also update boot images to include the latest client components. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
+
+1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Operating Systems**, and select the **Task Sequences** node.
+
+1. Create or choose an existing task sequence, and then select **Properties**.
+
+1. Switch to the **Performance** tab.
+
+1. Enable the option to **Run as high performance power plan**.
+
+> [!Warning]
+> Be cautious with this setting on low performance hardware. Running intense system operations for an extended period of time can strain low-end hardware. Check with your hardware manufacturer for specific guidance.
+
+### Known issue
+
+<!-- 5554928 -->
+
+You deploy a task sequence that you configure for high performance. The deployed task sequence always runs as high performance, even if you disable the high performance option. To change this setting, create a new deployment for the task sequence.
 
 ## <a name="BKMK_DistributeTS"></a> Distribute referenced content  
 
@@ -217,13 +208,11 @@ Before clients run a task sequence that references content, distribute that cont
 
 7. Complete the wizard.  
 
-You can also prestage the content referenced in the task sequence. Configuration Manager creates a compressed, prestaged content file that contains the files, associated dependencies, and associated metadata for the content that you select. Then you manually import the content at a site server, secondary site, or distribution point. For more information about how to prestage content files, see [Prestage content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_prestage).  
-
-
+You can also prestage the content referenced in the task sequence. Configuration Manager creates a compressed, prestaged content file that contains the files, associated dependencies, and associated metadata for the content that you select. Then you manually import the content at a site server, secondary site, or distribution point. For more information about how to prestage content files, see [Prestage content](/configmgr/core/servers/deploy/configure/deploy-and-manage-content#bkmk_prestage).  
 
 ## <a name="BKMK_DeployTS"></a> Deploy  
 
-For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).
+For more information, see [Deploy a task sequence](/configmgr/osd/deploy-use/deploy-a-task-sequence).
 
 ## <a name="BKMK_ExportImport"></a> Export and import  
 
@@ -239,14 +228,13 @@ Consider the following points when you export and import task sequences:
 
 - Configuration Manager doesn't export passwords in the task sequence. If you export and import a task sequence that contains passwords, edit the imported task sequence to reenter any passwords. Review the following steps that may include a password:  
 
-    - [Join Domain or Workgroup](/sccm/osd/understand/task-sequence-steps#BKMK_JoinDomainorWorkgroup)  
-    - [Connect To Network Folder](/sccm/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder)  
-    - [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)  
+  - [Join Domain or Workgroup](/configmgr/osd/understand/task-sequence-steps#BKMK_JoinDomainorWorkgroup)  
+  - [Connect To Network Folder](/configmgr/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder)  
+  - [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine)  
 
 - When you export a task sequence with the **Set Dynamic Variables** step, Configuration Manager doesn't export values for variables that you configure with the **Secret value** setting. Reenter the values for these variables after you import the task sequence.  
 
 - When you have multiple primary sites, import task sequences at the central administration site.  
-
 
 ### Process to export task sequences  
 
@@ -276,7 +264,6 @@ The wizard creates the following output files:
 
 If you include content when you export a task sequence, make sure that you copy the .zip file and the *export*_files folder, or the import fails.  
 
-
 ### Process to import task sequences  
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Task Sequences** node.  
@@ -299,136 +286,95 @@ If you include content when you export a task sequence, make sure that you copy 
 
 After you import the task sequence, edit the task sequence to specify any passwords that were in the original task sequence. For security reasons, passwords aren't exported.  
 
+## Return to previous page on failure
 
-
-## Return to previous page when a task sequence fails
-
-You can return to a previous page when you run a task sequence and there's a failure. In prior versions of Configuration Manager, you had to restart the task sequence when there was a failure. Use the **Previous** button in the following scenarios:
+When you run a task sequence, and there's a failure, you can return to a previous page of the task sequence wizard. In prior versions of Configuration Manager, you had to restart the task sequence when there was a failure. Use the **Previous** button in the following scenarios:
 
 - When a computer starts in Windows PE, the task sequence bootstrap dialog might display before the task sequence is available. When you select Next in this scenario, the final page of the task sequence displays with a message that there are no task sequences available. Now, you can select **Previous** to search again for available task sequences. You can repeat this process until the task sequence is available.  
 
 - When you run a task sequence, but dependent content packages aren't available yet on distribution points, the task sequence fails. If the missing content wasn’t distributed yet, distribute it now. Or wait for the content to be available on distribution points. Then select **Previous** to have the task sequence search again for the content.
 
+## <a name="BKMK_CreateTSVariables"></a> Collection and device variables
 
+You can define custom task sequence variables for computers and collections. Variables that you define for a computer are referred to as per-computer task sequence variables. Variables defined for a collection are referred to as per-collection task sequence variables. For more information, see [Collection and device variables](/configmgr/osd/understand/using-task-sequence-variables#bkmk_set-coll-var).
 
-## <a name="BKMK_CreateTSVariables"></a> Create task sequence variables for computers and collections  
-
-You can define custom task sequence variables for computers and collections. Variables that you define for a computer are referred to as per-computer task sequence variables. Variables defined for a collection are referred to as per-collection task sequence variables. If there's a conflict, per-computer variables take precedence over per-collection variables. This behavior means that task sequence variables that are assigned to a specific computer automatically have a higher priority than variables that are assigned to the collection that contains the computer.  
-
-For example, computer XYZ is a member of collection ABC. You assign MyVariable to collection ABC with a value of 1. You also assign MyVariable to computer XYZ with a value of 2. The variable that's assigned to computer XYZ has higher priority than the variable that's assigned to collection ABC. When a task sequence with this variable runs on computer XYZ, MyVariable has a value of 2.
-
-You can hide per-computer and per-collection variables so that they aren't visible in the Configuration Manager console. When you use the option **Do not display this value in the Configuration Manager console**, the value of the variable isn't displayed in the console. The variable can still be used by the task sequence when it runs. If you no longer want these variables to be hidden, delete them first. Then redefine the variables without selecting the option to hide them.  
-
-> [!WARNING]  
-> The setting to **Do not display this value in the Configuration Manager console** only applies to the Configuration Manager console. The values for the variables are still displayed in the task sequence log file (SMSTS.LOG).
-
-You can manage per-computer variables at a primary site or at a central administration site. Configuration Manager doesn't support more than 1,000 assigned variables for a computer.  
-
-> [!IMPORTANT]  
-> When you use per-collection variables for task sequences, consider the following behaviors:  
->
-> - Changes to collections are always replicated throughout the hierarchy. Any changes that you make to collection variables apply not just to members of the current site, but to all members of the collection throughout the hierarchy.  
->  
-> - When you delete a collection, this action also deletes the task sequence variables that you configured for the collection.  
-
-
-### Process to create task sequence variables for a computer  
-
-1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Devices** node.  
-
-2. Select the target computer and select **Properties**.  
-
-3. In the **Properties** dialog box, switch to the **Variables** tab.  
-
-4. For each variable that you want to create, select the **New** icon. Specify the **Name** and **Value** of the task sequence variable. If you want to hide the variable so that it's not visible in the Configuration Manager console, select the option **Do not display this value in the Configuration Manager console**.  
-
-5. After you've added all the variables to the computer properties, select **OK**.  
-
-
-### Process to create task sequence variables for a collection  
-
-1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Device Collections** node. Select the target collection and choose **Properties**.  
-
-2. In the **Properties** dialog box, switch to the **Collection Variables** tab.  
-
-3. For each variable that you want to create, select the **New** icon. Specify the **Name** and **Value** of the task sequence variable. If you want to hide the variable so that it's not visible in the Configuration Manager console, select the option **Do not display this value in the Configuration Manager console**.  
-
-4. Optionally, specify the priority for Configuration Manager to use when the task sequence variables are evaluated.  
-
-5. After you've added all the variables to the collection properties, select **OK**.  
-
-
-
-## <a name="BKMK_AdditionalActionsTS"></a> Additional actions to manage task sequences  
+## <a name="BKMK_AdditionalActionsTS"></a> Additional actions  
 
 You can manage task sequences by using additional actions when you select a task sequence.  
 
-### Available options
+### Edit
 
-#### Edit
+For more information, see [Use the task sequence editor](/configmgr/osd/understand/task-sequence-editor#bkmk_edit).
 
-For more information, see [Edit a task sequence](#BKMK_ModifyTaskSequence).
-
-#### Enable
+### Enable
 
 Enables the task sequence so that clients can run it. You don't need to redeploy a task sequence after it's enabled.  
 
-#### Disable
+### Disable
 
 Disables the task sequence so that it can't run on computers. You can deploy a disabled task sequence, but computers don't run the task sequence until you enable it.  
 
-#### Export
+### Export
 
 For more information, see [Export and import task sequences](#BKMK_ExportImport).
 
-#### Copy
+### Copy
 
 Makes a copy of the selected task sequence. This action is useful to create a new task sequence that's based on an existing task sequence.
 
 When you make a copy of a task sequence in a folder, the copy is listed in that folder until you refresh the task sequence node. After the refresh, the copy appears in the root folder.  
 
-#### Refresh
+### Refresh
 
 Refreshes the details for the selected task sequence.
 
-#### Delete
+### Delete
 
 Deletes the selected task sequence.
 
-#### Create Phased Deployment
+### Create Phased Deployment
 
-For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).
+For more information, see [Create phased deployments](/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
 
-#### Deploy
+### Deploy
 
-For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).
+For more information, see [Deploy a task sequence](/configmgr/osd/deploy-use/deploy-a-task-sequence).
 
-#### Distribute Content
+### Distribute Content
 
 Starts the Distribute Content Wizard to send the referenced content to distribution points.
 
-#### Create Prestaged Content File
+### Create Prestaged Content File
 
-Starts the Create Prestaged Content File Wizard to prestage the task sequence content. For information about how to create a prestaged content file, see [Prestage content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_prestage).
+Starts the Create Prestaged Content File Wizard to prestage the task sequence content. For information about how to create a prestaged content file, see [Prestage content](/configmgr/core/servers/deploy/configure/deploy-and-manage-content#bkmk_prestage).
 
-#### Move
+### Move
 
 Moves the selected task sequence to another folder in the **Task Sequences** node.
 
-#### Set Security Scopes
+### Set Security Scopes
 
-Select the security scopes for the selected task sequence. For more information, see [Security scopes](/sccm/core/understand/fundamentals-of-role-based-administration#bkmk_PlanScope).
+Select the security scopes for the selected task sequence. For more information, see [Security scopes](/configmgr/core/understand/fundamentals-of-role-based-administration#bkmk_PlanScope).
 
-#### Properties
+### Properties
 
 For more information, see [Configure Software Center properties](#bkmk_prop-general) and [Configure advanced task sequence settings](#bkmk_prop-advanced).
 
-#### View
+### View
 
 <!--3633146-->
-Starting in version 1902, the **View** action on task sequences is the default. This action lets you see the steps of the task sequence without locking it for editing.  
-
+Starting in version 1902, the **View** action on task sequences is the default. This action lets you see the steps of the task sequence without locking it for editing. For more information, see [Use the task sequence editor](/configmgr/osd/understand/task-sequence-editor#bkmk_view).
 
 ## See also
 
-[Scenarios to deploy enterprise operating systems](scenarios-to-deploy-enterprise-operating-systems.md)
+- [Scenarios to deploy enterprise operating systems](/configmgr/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems)
+
+- [Use the task sequence editor](/configmgr/osd/understand/task-sequence-editor)
+
+- [Deploy a task sequence](/configmgr/osd/deploy-use/deploy-a-task-sequence)
+
+- [Task sequence steps](/configmgr/osd/understand/task-sequence-steps)
+
+- [Collection and device variables](/configmgr/osd/understand/using-task-sequence-variables#bkmk_set-coll-var)
+
+- [Create phased deployments](/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)

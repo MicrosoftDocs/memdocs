@@ -2,7 +2,7 @@
 title: High availability
 titleSuffix: Configuration Manager
 description: Learn how to deploy Configuration Manager by using options that maintain a high level of available service.
-ms.date: 07/26/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -21,7 +21,7 @@ This article describes how to deploy Configuration Manager using options that ma
 
 The following Configuration Manager options support high availability:
 
-- Starting in version 1806, configure any standalone primary site with an additional site server in passive mode.  
+- Configure any standalone primary site with an additional site server in passive mode.  
 
 - Configure a SQL Server Always On availability group for the site database at primary sites and the central administration site.
 
@@ -43,9 +43,9 @@ Configuration Manager includes several features that provide near real-time serv
 
 - State-based messages for monitoring features such as software updates and endpoint protection.
 
-- [Scripts](/sccm/apps/deploy-use/create-deploy-scripts), starting in version 1706  
+- [Scripts](/sccm/apps/deploy-use/create-deploy-scripts)
 
-- [CMPivot](/sccm/core/servers/manage/cmpivot), starting in version 1806  
+- [CMPivot](/sccm/core/servers/manage/cmpivot)
 
 Other features of Configuration Manager don't provide real-time service. These features include, but aren't limited to, client settings, hardware and software inventory, software deployments, and compliance settings. Expect them to operate with some data latency. It's unusual for most scenarios that involve a temporary interruption of service to become a critical problem. To minimize downtime, maintain autonomy of operations, and provide a high level of service, configure your sites and hierarchies with high availability in mind.  
 
@@ -64,11 +64,11 @@ For example, Configuration Manager clients typically operate autonomously by usi
 
 ### Use a site server in passive mode
 
-Starting with version 1806, install an additional site server in *passive* mode for a standalone primary site. The site server in passive mode is in addition to your existing site server in *active* mode. A site server in passive mode is available for immediate use, when needed. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).  
+Install an additional site server in *passive* mode for a standalone primary site. The site server in passive mode is in addition to your existing site server in *active* mode. A site server in passive mode is available for immediate use, when needed. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).  
 
 ### Use a remote content library
 
-Starting with version 1806, move the site's content library to a remote location that provides highly available storage. This feature is a requirement for site server high availability. For more information, see [The content library](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).
+Move the site's content library to a remote location that provides highly available storage. This feature is a requirement for site server high availability. For more information, see [The content library](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).
 
 ### Centralize content sources
 
@@ -163,7 +163,7 @@ Install multiple distribution points, and deploy content to multiple distributio
 ### Application catalog web service point and application catalog website point
 
 > [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -227,25 +227,6 @@ The site database, rather than the individual client, retains important informat
 ## <a name="bkmk_nonHAoptions"></a> Options for sites and site system roles that aren't highly available
 
 Several site systems don't support multiple instances at a site or in the hierarchy. This information can help you prepare for these site systems going offline.  
-
-### Site server (site)
-
-> [!Note]  
-> This section only applies to Configuration Manager versions 1802 and earlier. Starting with version 1806, Configuration Manager provides a high availability option for the site server. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).  
-
-Configuration Manager doesn't support the installation of the site server for each site on a Windows Server cluster or NLB cluster.  
-
-Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode. <!--3607761, fka 1359132-->  
-
-The following information can help you prepare for when a site server fails or isn't operational:  
-
-- Use the built-in backup task to regularly create a backup of the site. In a test environment, regularly practice restoring sites from a backup.  
-
-- Deploy multiple Configuration Manager primary sites in a hierarchy with a central administration site to create redundancy. If you experience a site failure, consider using Windows group policy or logon scripts to reassign clients to a functional site.  
-
-- If you have a hierarchy with a central administration site, you can recover the central administration site or a child primary site by using the option to recover a site database from another site in your hierarchy.  
-
-- Secondary sites can't be restored, and must be reinstalled.  
 
 ### Asset intelligence synchronization point (hierarchy)
 

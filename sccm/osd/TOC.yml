@@ -1,6 +1,6 @@
 - name: OS deployment
   href: understand/introduction-to-operating-system-deployment.md
-- name: Understand and explore
+- name: Understand
   items:
   - name: Introduction to OS deployment
     href: understand/introduction-to-operating-system-deployment.md
@@ -130,6 +130,8 @@
       href: deploy-use/create-capture-media.md
 - name: Technical references
   items:
+  - name: Use the task sequence editor
+    href: understand/task-sequence-editor.md
   - name: Task sequence steps
     items:
     - name: About task sequence steps

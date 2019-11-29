@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Install and configure distribution points in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Install Configuration Manager distribution points to host the content files that you deploy to devices and users. Create distribution point groups to simplify how you manage distribution points, and how you distribute content to distribution points.  
 
@@ -305,7 +305,7 @@ The following settings are on the **Distribution point** page of the Create Site
 
 - **Enable this distribution point for prestaged content**: This setting enables you to add content to the server before you distribute software. Because the content files are already in the content library, they don't transfer over the network when you distribute the software. For more information, see [Prestaged content](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).  
 
-- **Enable this distribution point to be used as Delivery Optimization In-Network Cache server**: Starting in version 1906, you can install a Delivery Optimization In-Network Cache (DOINC) server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links. For more information, including description of the additional settings, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache).
+- **Enable this distribution point to be used as Microsoft Connected Cache server**: Starting in version 1906, you can install a Microsoft Connected Cache server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links. For more information, including description of the additional settings, see [Microsoft Connected Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/microsoft-connected-cache).
 
 
 ### <a name="bkmk_config-comm"></a> Communication
