@@ -2,7 +2,7 @@
 title: How to use task sequence variables
 titleSuffix: Configuration Manager
 description: Learn about how to use the variables in a Configuration Manager task sequence.
-ms.date: 07/26/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -25,7 +25,6 @@ ms.collection: M365-identity-device-management
 
 For a reference of all available task sequence variables, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).
 
-
 ## <a name="bkmk_types"></a> Types of variables
 
 There are several types of variables:  
@@ -40,17 +39,17 @@ There are several types of variables:
 
 Built-in variables provide information about the environment where the task sequence runs. Their values are available throughout the whole task sequence. Typically, the task sequence engine initializes built-in variables before it runs any steps.
 
-For example, **\_SMSTSLogPath** is an environment variable that specifies the path to which Configuration Manager components write log files. Any task sequence step can access this environment variable.
+For example, `_SMSTSLogPath` is an environment variable that specifies the path to which Configuration Manager components write log files. Any task sequence step can access this environment variable.
 
-The task sequence evaluates some variables before each step. For example, **\_SMSTSCurrentActionName** lists the name of the current step.
+The task sequence evaluates some variables before each step. For example, `_SMSTSCurrentActionName` lists the name of the current step.
 
 ### <a name="bkmk_action"></a> Action variables
 
 Task sequence action variables specify configuration settings that a single task sequence step uses. By default, the step initializes its settings before it runs. These settings are available only while the associated task sequence step runs. The task sequence adds the action variable value to the environment before it runs the step. It then removes the value from the environment after the step runs.
 
-For example, you add the **Run Command Line** step to a task sequence. This step includes a **Start In** property. The task sequence stores a default value for this property as the **WorkingDirectory** variable. The task sequence initializes this value before it runs the **Run Command Line** step. While this step is running, access the **Start In** property value from the **WorkingDirectory** value. After the step completes, the task sequence removes the value of the **WorkingDirectory** variable from the environment. If the task sequence includes another **Run Command Line** step, it initializes a new **WorkingDirectory** variable. At that time, the task sequence sets the variable to the starting value for the current step. For more information, see [WorkingDirectory](/sccm/osd/understand/task-sequence-variables#WorkingDirectory).  
+For example, you add the **Run Command Line** step to a task sequence. This step includes a **Start In** property. The task sequence stores a default value for this property as the `WorkingDirectory` variable. The task sequence initializes this value before it runs the **Run Command Line** step. While this step is running, access the **Start In** property value from the `WorkingDirectory` value. After the step completes, the task sequence removes the value of the `WorkingDirectory` variable from the environment. If the task sequence includes another **Run Command Line** step, it initializes a new `WorkingDirectory` variable. At that time, the task sequence sets the variable to the starting value for the current step. For more information, see [WorkingDirectory](/sccm/osd/understand/task-sequence-variables#WorkingDirectory).  
 
-The *default* value for an action variable is present when the step runs. If you set a *new* value, it's available to multiple steps in the task sequence. If you override a default value, the new value stays in the environment. This new value overrides the default value for other steps in the task sequence. For example, you add a **Set Task Sequence Variable** step as the first step of the task sequence. This step sets the **WorkingDirectory** variable to `C:\`. Any **Run Command Line** step in the task sequence uses the new starting directory value.  
+The *default* value for an action variable is present when the step runs. If you set a *new* value, it's available to multiple steps in the task sequence. If you override a default value, the new value stays in the environment. This new value overrides the default value for other steps in the task sequence. For example, you add a **Set Task Sequence Variable** step as the first step of the task sequence. This step sets the `WorkingDirectory` variable to `C:\`. Any **Run Command Line** step in the task sequence uses the new starting directory value.  
 
 Some task sequence steps mark certain action variables as *output*. Steps later in the task sequence read these output variables.
 
@@ -81,7 +80,7 @@ There's no set limit to how many task sequence variables you can create. However
 
 You can't change the value of some variables, which are read-only. Usually the name begins with an underscore character (`_`). The task sequence uses them for its operations. Read-only variables are visible in the task sequence environment.
 
-These variables are useful in scripts or command-lines. For example, running a command line and piping the output to a log file in **\_SMSTSLogPath** with the other log files.
+These variables are useful in scripts or command-lines. For example, running a command line and piping the output to a log file in `_SMSTSLogPath` with the other log files.
 
 > [!NOTE]  
 > Read-only task sequence variables can be read by steps in a task sequence but they can't be set. For example, use a read-only variable as part of the command line for a **Run Command Line** step. You can't set a read-only variable by using the **Set Task Sequence Variable** step.  
@@ -93,7 +92,6 @@ The task sequence stores some variables as an array. Each element in the array r
 - [Apply Network Settings](task-sequence-steps.md#BKMK_ApplyNetworkSettings)  
 
 - [Format and Partition Disk](task-sequence-steps.md#BKMK_FormatandPartitionDisk)  
-
 
 ## <a name="bkmk_set"></a> How to set variables
 
@@ -141,9 +139,47 @@ For more information, see [Set Dynamic Variables](/sccm/osd/understand/task-sequ
 
 ### <a name="bkmk_set-coll-var"></a> Collection and device variables
 
-Set variables on the properties of a collection or a specific device.
+You can define custom task sequence variables for devices and collections. Variables that you define for a device are referred to as per-device task sequence variables. Variables defined for a collection are referred to as per-collection task sequence variables. If there's a conflict, per-device variables take precedence over per-collection variables. This behavior means that task sequence variables that are assigned to a specific device automatically have a higher priority than variables that are assigned to the collection that contains the device.  
 
-For more information, see [Create task sequence variables for computers and collections](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_CreateTSVariables).
+For example, device XYZ is a member of collection ABC. You assign MyVariable to collection ABC with a value of 1. You also assign MyVariable to device XYZ with a value of 2. The variable that's assigned to XYZ has higher priority than the variable that's assigned to collection ABC. When a task sequence with this variable runs on XYZ, MyVariable has a value of 2.
+
+You can hide per-device and per-collection variables so that they aren't visible in the Configuration Manager console. When you use the option **Do not display this value in the Configuration Manager console**, the value of the variable isn't displayed in the console. The variable can still be used by the task sequence when it runs. If you no longer want these variables to be hidden, delete them first. Then redefine the variables without selecting the option to hide them.  
+
+> [!WARNING]  
+> The setting to **Do not display this value in the Configuration Manager console** only applies to the Configuration Manager console. The values for the variables are still displayed in the task sequence log file (**smsts.log**).
+
+You can manage per-device variables at a primary site or at a central administration site. Configuration Manager doesn't support more than 1,000 assigned variables for a device.  
+
+> [!IMPORTANT]  
+> When you use per-collection variables for task sequences, consider the following behaviors:  
+>
+> - Changes to collections are always replicated throughout the hierarchy. Any changes that you make to collection variables apply not just to members of the current site, but to all members of the collection throughout the hierarchy.  
+>  
+> - When you delete a collection, this action also deletes the task sequence variables that you configured for the collection.  
+
+#### Create task sequence variables for a *device*
+
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Devices** node.  
+
+2. Select the target device and select **Properties**.  
+
+3. In the **Properties** dialog box, switch to the **Variables** tab.  
+
+4. For each variable that you want to create, select the **New** icon. Specify the **Name** and **Value** of the task sequence variable. If you want to hide the variable so that it's not visible in the Configuration Manager console, select the option **Do not display this value in the Configuration Manager console**.  
+
+5. After you've added all the variables to the device properties, select **OK**.  
+
+#### Create task sequence variables for a *collection*
+
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Device Collections** node. Select the target collection and choose **Properties**.  
+
+2. In the **Properties** dialog box, switch to the **Collection Variables** tab.  
+
+3. For each variable that you want to create, select the **New** icon. Specify the **Name** and **Value** of the task sequence variable. If you want to hide the variable so that it's not visible in the Configuration Manager console, select the option **Do not display this value in the Configuration Manager console**.  
+
+4. Optionally, specify the priority for Configuration Manager to use when the task sequence variables are evaluated.  
+
+5. After you've added all the variables to the collection properties, select **OK**.  
 
 ### <a name="bkmk_set-com"></a> TSEnvironment COM object
 
@@ -176,7 +212,6 @@ Use the media variables in place of per-collection or per-computer variables. If
 > The task sequence writes the package ID and prestart command line to the **CreateTSMedia.log** file on the computer that runs the Configuration Manager console. This log file includes the value for any task sequence variables. Review this log file to verify the value for the task sequence variables.  
 
 For more information, see [Create task sequence media](/sccm/osd/deploy-use/create-task-sequence-media).
-
 
 ## <a name="bkmk_access"></a> How to access variables
 
@@ -221,6 +256,8 @@ The three examples above form a common condition to test whether the task sequen
 
 See this condition on the **Capture Files and Settings** group of the default task sequence template to install an existing OS image.
 
+For more information about conditions, see [Task sequence editor - Conditions](/sccm/osd/understand/task-sequence-editor#bkmk_conditions).
+
 ### <a name="bkmk_access-script"></a> Custom script
 
 Read and write variables by using the **Microsoft.SMS.TSEnvironment** COM object while the task sequence is running.
@@ -251,9 +288,12 @@ The Windows setup answer file that you supply can have embedded task sequence va
 
 For more information, see [Setup Windows and ConfigMgr](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr).
 
-
 ## See also
 
 - [Task sequence steps](/sccm/osd/understand/task-sequence-steps)
+
 - [Task sequence variables](/sccm/osd/understand/task-sequence-variables)
+
 - [Planning considerations for automating tasks](/sccm/osd/plan-design/planning-considerations-for-automating-tasks)
+
+- [Task sequence editor](/sccm/osd/understand/task-sequence-editor)

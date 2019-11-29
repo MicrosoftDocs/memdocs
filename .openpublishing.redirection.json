@@ -339,6 +339,16 @@
             "source_path": "sccm/core/clients/manage/sync-data-log-analytics.md",
             "redirect_url": "https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=sccm/core/context/core-context",
             "redirect_document_id": false
-        }        
+        },
+        {
+            "source_path": "sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache.md",
+            "redirect_url": "/sccm/core/plan-design/hierarchy/microsoft-connected-cache",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/servers/deploy/configure/troubleshoot-delivery-optimization-in-network-cache.md",
+            "redirect_url": "/sccm/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache",
+            "redirect_document_id": false
+        }
     ]
 }

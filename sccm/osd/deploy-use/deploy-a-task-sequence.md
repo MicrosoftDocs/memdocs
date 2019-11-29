@@ -2,7 +2,7 @@
 title: Deploy a task sequence
 titleSuffix: Configuration Manager
 description: Use this information to deploy a task sequence to the computers in a collection.  
-ms.date: 05/03/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -15,11 +15,12 @@ manager: dougeby
 
 # Deploy a task sequence
 
+*Applies to: Configuration Manager (current branch)*
+
 After you create a task sequence, and distribute the referenced content, deploy it to a device collection. This action allows the task sequence to run on a device. A deployed task sequence can run automatically, or when installed by a user of the device.
 
 > [!WARNING]  
-> You can manage the behavior for high-risk task sequence deployments. A high-risk deployment is a deployment that is automatically installed and has the potential to cause unwanted results. For example, a task sequence that has a purpose of **Required** that deploys an OS is considered a high-risk deployment. For more information, see [Settings to manage high-risk deployments](/sccm/core/servers/manage/settings-to-manage-high-risk-deployments).  
-
+> You can manage the behavior for high-risk task sequence deployments. A high-risk deployment is a deployment that is automatically installed and has the potential to cause unwanted results. For example, a task sequence that has a purpose of **Required** that deploys an OS is considered a high-risk deployment. For more information, see [Settings to manage high-risk deployments](/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments).  
 
 ## Process
 
@@ -51,12 +52,12 @@ Use the following procedure to deploy a task sequence to the computers in a coll
 
     - **Automatically distribute content for dependencies**: If any referenced content has dependencies, then the site also sends dependent content to distribution points.  
 
-    - **Pre-download content for this task sequence**: For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).  
+    - **Pre-download content for this task sequence**: For more information, see [Configure pre-cache content](/configmgr/osd/deploy-use/configure-precache-content).  
 
-    - **Select Deployment Template**: Starting in Configuration Manager version 1802,<!--1357391--> you can save and specify a deployment template for a task sequence.  
+    - **Select Deployment Template**: Save and specify a deployment template for a task sequence.<!--1357391-->  
 
         > [!IMPORTANT]  
-        > In Configuration Manager version 1802, some items aren't saved in the template.  <!--510610--> Make sure you apply the following items when you run the deployment wizard:  
+        > Some items aren't saved in the template.<!--510610--> Make sure you apply the following items when you run the deployment wizard:  
         >
         > - Software Installation
         > - Scheduling
@@ -83,9 +84,9 @@ Use the following procedure to deploy a task sequence to the computers in a coll
         - Only media and PXE (hidden)  
 
         > [!IMPORTANT]  
-        > Use the **Only media and PXE (hidden)** setting for automated task sequence deployments. To have the computer automatically boot to the deployment with no user interaction, select **Allow unattended operating system deployment** and set the **SMSTSPreferredAdvertID** variable as part of the media. For more information about task sequence variables, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSPreferredAdvertID).  
+        > Use the **Only media and PXE (hidden)** setting for automated task sequence deployments. To have the computer automatically boot to the deployment with no user interaction, select **Allow unattended operating system deployment** and set the **SMSTSPreferredAdvertID** variable as part of the media. For more information about task sequence variables, see [Task sequence variables](/configmgr/osd/understand/task-sequence-variables#SMSTSPreferredAdvertID).  
 
-    - **Send wake-up packets**: If the deployment is **Required** and you select this option, the site sends a wake-up packet to computers before the client runs the deployment. This packet wakes the computer from sleep at the installation deadline time. Before using this option, computers and networks must be configured for Wake On LAN. For more information, see [Plan how to wake up clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).  
+    - **Send wake-up packets**: If the deployment is **Required** and you select this option, the site sends a wake-up packet to computers before the client runs the deployment. This packet wakes the computer from sleep at the installation deadline time. Before using this option, computers and networks must be configured for Wake On LAN. For more information, see [Plan how to wake up clients](/configmgr/core/clients/deploy/plan/plan-wake-up-clients).  
 
     - **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs**: This option is only available for **Required** deployments. When you have a custom task sequence that installs an application but doesn't deploy an OS, you can specify whether to allow clients to download content after an installation deadline when they use metered internet connections. Internet providers sometimes charge by the amount of data that you use when you're on a metered internet connection.  
 
@@ -143,7 +144,7 @@ Use the following procedure to deploy a task sequence to the computers in a coll
 
     - **Allow task sequence to run for client on the Internet**: Specify whether the task sequence is allowed to run on an internet-based client. Operations that require a boot media, such as the installation of an OS, aren't supported with this setting. Use this option only for generic software installations or script-based task sequences that perform operations in the standard OS.  
 
-        - Starting in version 1802, this setting is supported for deployments of a Windows 10 in-place upgrade task sequence to internet-based clients through the cloud management gateway. For more information, see [Deploy Windows 10 in-place upgrade via CMG](#deploy-windows-10-in-place-upgrade-via-cmg).  
+        - This setting is supported for deployments of a Windows 10 in-place upgrade task sequence to internet-based clients through the cloud management gateway. For more information, see [Deploy Windows 10 in-place upgrade via CMG](#deploy-windows-10-in-place-upgrade-via-cmg).  
 
 8. On the **Alerts** page, specify the alert settings that you want for this task sequence deployment.  
 
@@ -168,32 +169,37 @@ Use the following procedure to deploy a task sequence to the computers in a coll
     - **Allow clients to use distribution points from the default site boundary group**: Specify if clients should download content from a distribution point in the site default boundary group, when it isn't available from a distribution point in the current or neighbor boundary groups.  
 
         > [!Note]  
-        > Starting in version 1810, when a device runs a task sequence and needs to acquire content, it uses boundary group behaviors similar to the Configuration Manager client. For more information, see [Task sequence support for boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgr-osd).<!--1359025-->  
+        > Starting in version 1810, when a device runs a task sequence and needs to acquire content, it uses boundary group behaviors similar to the Configuration Manager client. For more information, see [Task sequence support for boundary groups](/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_bgr-osd).<!--1359025-->  
 
-10. Beginning in Configuration Manager 1802, on the **Summary** tab, select **Save As Template** to save settings to use again. Supply a name for the template and select the settings to save.  
+10. To save these settings to use again, on the **Summary** tab select **Save As Template**. Supply a name for the template and select the settings to save.  
 
 11. Complete the wizard.  
-
 
 ## Deploy Windows 10 in-place upgrade via CMG
 
 <!-- 1357149 -->
-Starting in version 1802, the Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) (CMG). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet.
+The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](/configmgr/core/clients/manage/plan-cloud-management-gateway) (CMG). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet.
 
-Make sure all of the content referenced by the in-place upgrade task sequence is distributed to a [cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point). Otherwise devices can't run the task sequence.
+Make sure all of the content referenced by the in-place upgrade task sequence is distributed to a content-enabled CMG. (Enable the [CMG setting](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#settings): **Allow CMG to function as a cloud distribution point and serve content from Azure storage**.) You can also use a [cloud distribution point](/configmgr/core/plan-design/hierarchy/use-a-cloud-based-distribution-point). Otherwise devices can't run the task sequence.
 
 When you deploy an upgrade task sequence, use the following settings:
 
 - **Allow task sequence to run for client on the Internet**, on the User Experience tab of the deployment.  
 
-- **Download all content locally before starting task sequence**, on the Distribution Points tab of the deployment. Other options such as **Download content locally when needed by the running task sequence** don't work in this scenario. The task sequence engine is currently unable to obtain content from a cloud distribution point. The Configuration Manager client must download the content from the cloud distribution point before starting the task sequence.  
+- Choose one of the following options on the Distribution Points tab of the deployment:
 
-- (*Optional*) **Pre-download content for this task sequence**, on the General tab of the deployment. For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).  
+  - **Download content locally when needed by the running task sequence**. Starting in version 1910, the task sequence engine can download packages on-demand from a content-enabled CMG or a cloud distribution point. This change provides additional flexibility with your Windows 10 in-place upgrade deployments to internet-based devices.<!--3601238-->
 
+  - **Download all content locally before starting task sequence**. In Configuration Manager version 1906 and earlier, other options such as **Download content locally when needed by the running task sequence** don't work in this scenario. The task sequence engine can't download content from a cloud source. The Configuration Manager client must download the content from the cloud source before starting the task sequence. You can still use this option in version 1910 if needed to meet your requirements.
+
+- (*Optional*) **Pre-download content for this task sequence**, on the General tab of the deployment. For more information, see [Configure pre-cache content](/configmgr/osd/deploy-use/configure-precache-content).  
+
+> [!NOTE]
+> Start the task sequence from Software Center. This scenario doesn't support Windows PE, PXE, or task sequence media.
 
 ## <a name="bkmk_high-risk"></a> High-risk deployments
 
-When you deploy a high-risk deployment, such as an OS, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties. High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you can't select a built-in collection such as **All Systems**. To see all custom collections that contain fewer clients than the configured maximum size, disable the option to **Hide collections with a member count greater than the site's minimum size configuration**. For more information, see [Settings to manage high-risk deployments](/sccm/core/servers/manage/settings-to-manage-high-risk-deployments).  
+When you deploy a high-risk deployment, such as an OS, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties. High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you can't select a built-in collection such as **All Systems**. To see all custom collections that contain fewer clients than the configured maximum size, disable the option to **Hide collections with a member count greater than the site's minimum size configuration**. For more information, see [Settings to manage high-risk deployments](/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments).  
 
 The deployment verification settings are based on the current membership of the collection. After you deploy the task sequence, Configuration Manager doesn't reevaluate the collection membership for the high-risk deployment settings.  
 
@@ -205,13 +211,12 @@ When you select a collection that contains a site role, the following behavior a
 
 - If one of the following criteria applies, then the Deploy Software Wizard displays a high-risk warning. To continue, you need to agree to create a high-risk deployment. The site generates an audit status message.  
 
-    - If the collection contains a site system server, and you configured the deployment verification settings to warn on collections with site system servers  
+  - If the collection contains a site system server, and you configured the deployment verification settings to warn on collections with site system servers  
 
-    - If the collection exceeds the default size value
+  - If the collection exceeds the default size value
 
-    - If the collection contains a server  
-
+  - If the collection contains a server  
 
 ## See also
 
-[Manage task sequences to automate tasks](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks)
+[Manage task sequences to automate tasks](/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks)
