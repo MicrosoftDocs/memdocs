@@ -101,12 +101,8 @@ You can drill through compliance statistics to see which devices require a speci
   When an upgrade meets the criteria, the servicing plan adds the upgrade to the deployment package, distributes the package to distribution points, and deploys the upgrade to the collection based on the settings that you configure in the servicing plan. You can monitor the deployments in the Service Plan Monitoring tile on the Windows 10 Servicing Dashboard. For more information, see [Monitor software updates](../../sum/deploy-use/monitor-software-updates.md).  
 
 > [!NOTE]  
-> **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10**  product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product in Configuration Manager version 1906. <!--4682946-->
->
-> When you update to Configuration Manager version 1906 and have the **Windows 10** product selected for synchronization, the following actions occur automatically:
-> - Servicing plans are updated to include the **Windows 10, version 1903 and later** product.
-> - The **Windows 10, version 1903 and later** product is added for synchronization. For more information, see [Configure classifications and products](/sccm/sum/get-started/configure-classifications-and-products)
-> - [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
+> **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10**  product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product in Configuration Manager version 1906. For more information, see [Configuring products for versions of Windows 10](/configmgr/sum/get-started/configure-classifications-and-products#windows-10-version-1903-and-later)<!--4682946-->
+
 
 
 ##  <a name="BKMK_ServicingPlan"></a> Windows 10 servicing plan  
