@@ -19,6 +19,7 @@ ms.collection: M365-identity-device-management
 
 
 This tool, introduced in version 1910, helps you to programmatically create Azure virtual machines (VMs) for Configuration Manager. <!--3556022--> It can install with default settings site roles like a passive site server, management points, and distribution points. Once you validate the new roles, use them as additional site systems for high availability. You can also remove the on-premises site system role and only keep the Azure VM role.
+
 ## Prerequisites
 
 - An Azure subscription
@@ -30,6 +31,42 @@ This tool, introduced in version 1910, helps you to programmatically create Azur
 - Your user account needs to be a Configuration Manager **Full Administrator** and have administrator rights on the primary site server.
 
 - To add a passive server, the primary site must meet the [site server high availability requirements](/sccm/core/servers/deploy/configure/site-server-high-availability#prerequisites). For example, it requires a [remote content library](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).
+
+### Required Azure permissions
+
+You'll need the following permissions in Azure when you run the tool: 
+<!--5789222-->
+Microsoft.Resources/subscriptions/resourceGroups/read <br>
+Microsoft.Resources/subscriptions/resourceGroups/write <br>
+Microsoft.Resources/deployments/read <br>
+Microsoft.Resources/deployments/write <br>
+Microsoft.Resources/deployments/validate/action <br>
+Microsoft.Authorization/roleAssignments/read <br>
+Microsoft.Authorization/roleAssignments/write <br>
+Microsoft.Compute/virtualMachines/extensions/read <br>
+Microsoft.Compute/virtualMachines/extensions/write <br>
+Microsoft.Compute/virtualMachines/read <br>
+Microsoft.Compute/virtualMachines/write <br>
+Microsoft.Network/virtualNetworks/read <br>
+Microsoft.Network/virtualNetworks/subnets/read <br>
+Microsoft.Network/virtualNetworks/subnets/join/action <br>
+Microsoft.Network/networkInterfaces/read <br>
+Microsoft.Network/networkInterfaces/write <br>
+Microsoft.Network/networkInterfaces/join/action <br>
+Microsoft.Network/networkSecurityGroups/write <br>
+Microsoft.Network/networkSecurityGroups/read <br>
+Microsoft.Network/networkSecurityGroups/join/action <br>
+Microsoft.Storage/storageAccounts/write <br>
+Microsoft.Storage/storageAccounts/read <br>
+Microsoft.Storage/storageAccounts/listkeys/action <br>
+Microsoft.Storage/storageAccounts/listServiceSas/action <br>
+Microsoft.Storage/storageAccounts/blobServices/containers/write <br>
+Microsoft.Storage/storageAccounts/blobServices/containers/read <br>
+Microsoft.KeyVault/vaults/deploy/action <br>
+Microsoft.KeyVault/vaults/read <br>
+
+
+For more information about permissions and assigning roles, see [Manage access to Azure resources using RBAC](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal).
 
 ## Run the tool
 
