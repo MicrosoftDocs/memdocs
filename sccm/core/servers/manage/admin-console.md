@@ -1,8 +1,8 @@
 ---
-title: Configuration Manager Console
+title: Configuration Manager console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 08/16/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -13,16 +13,28 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Using the Configuration Manager console
+# How to use the Configuration Manager console
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Administrators use the Configuration Manager console to manage the Configuration Manager environment. This article covers the fundamentals of navigating the console.  
 
+## <a name="bkmk_open"></a> Open the console
+
+The Configuration Manager console is always installed on every site server. You can also install it on other computers. For more information, see [Install the Configuration Manager console](/configmgr/core/servers/deploy/install/install-consoles).
+
+The simplest method to open the console on a Windows 10 computer, press **Start** and start typing `Configuration Manager console`. You may not need to type the entire string for Windows to find the best match.
+
+If you browse the Start menu, look for the **Configuration Manager console** icon in the **Microsoft Endpoint** group.
+
+![Microsoft Endpoint start menu icons](media/microsoft-endpoint-start-menu.png)
+
+> [!NOTE]
+> The Start menu path changed in version 1910. In version 1906 and earlier, the folder name is **System Center**. When you update Configuration Manager to version 1910 or later, make sure to update any internal documentation that you maintain to include this new location.
 
 ## Connect to a site server
 
-The console connects to your central administration site server or to your primary site servers. You can't connect a Configuration Manager console to a secondary site. You can [install the Configuration Manager console](/sccm/core/servers/deploy/install/install-consoles). During installation, you specified the fully qualified domain name (FQDN) of the site server to which the console connects.
+The console connects to your central administration site server or to your primary site servers. You can't connect a Configuration Manager console to a secondary site. During installation, you specified the fully qualified domain name (FQDN) of the site server to which the console connects.
 
 To connect to a different site server, use the following steps:
 
@@ -36,12 +48,11 @@ To connect to a different site server, use the following steps:
 
 3. Select **Connect**.  
 
-Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth). <!--1357013-->  
-
+Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. For more information, see [Plan for the SMS Provider](/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth). <!--1357013-->  
 
 ## Navigation
 
-Some areas of the console may not be visible depending on your assigned security role. For more information about roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
+Some areas of the console may not be visible depending on your assigned security role. For more information about roles, see [Fundamentals of role-based administration](/configmgr/core/understand/fundamentals-of-role-based-administration).
 
 ### Workspaces
 
@@ -103,21 +114,30 @@ At the bottom of the column context menu, you can sort or group by a column. Add
 
 ![Configuration Manager group by column](media/column-group-by.png)  
 
+## <a name="bkmk_sedo"></a> Reclaim lock for editing objects
+
+<!--4786915-->
+
+If the Configuration Manager console stops responding, you can be locked out of making further changes until the lock expires after 30 minutes. This lock is part of the Configuration Manager SEDO (Serialized Editing of Distributed Objects) system. For more information, see [Configuration Manager SEDO](/configmgr/develop/core/understand/sedo).
+
+Starting in [current branch version 1906](/configmgr/core/plan-design/changes/whats-new-in-version-1906#reclaim-sedo-lock-for-task-sequences), you could clear your lock on a task sequence. Starting in version 1910, you can clear your lock on any object in the Configuration Manager console.
+
+This action only applies to your user account that has the lock, and on the same device from which the site granted the lock. When you attempt to access a locked object, you can now **Discard Changes**, and continue editing the object. These changes would be lost anyway when the lock expired.
 
 ## <a name="bkmk_viewconnected"></a> View recently connected consoles
 
 <!--3699367-->
 Starting in version 1902, you can view the most recent connections for the Configuration Manager console. The view includes active connections and those connections that recently connected. You'll always see your current console connection in the list and you only see connections from the Configuration Manager console. You won't see PowerShell or other SDK-based connections to the SMS Provider. The site removes instances from the list that are older than 30 days.
 
-### Prerequisites to view connected consoles
+### <a name="bkmk_connections-prereq"></a> Prerequisites to view connected consoles
 
 - Your account needs the **Read** permission on the **SMS_Site** object
 - Install IIS on the SMS Provider server <!---SCCMDocs-pr issue 1326-->
 - Enable the SMS Provider to use a certificate.<!--SCCMDocs-pr issue 3135--> Use one of the following options:  
 
-    - Enable [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http) (recommended)
+    - Enable [Enhanced HTTP](/configmgr/core/plan-design/hierarchy/enhanced-http) (recommended)
     - Manually bind a PKI-based certificate to port 443 in IIS on the server that hosts the SMS Provider role  
-
+- The [Administration Service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service) must be enabled for the **Last Console Heartbeat** to function (introduced in version 1910).
 ### View connected consoles
 
 1. In the Configuration Manager console, go to the **Administration** workspace.  
@@ -131,9 +151,41 @@ Starting in version 1902, you can view the most recent connections for the Confi
     - Connected site code
     - Console version
     - Last connected time: When the user last *opened* the console
+    - Starting in version 1910, the **Last Console Heartbeat** column has replaced the **Last Connected Time** column. <!--4923997-->
+       - The [Administration Service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service) must be enabled for the **Last Console Heartbeat** to function.
+       - An open console in the foreground sends a heartbeat every 10 minutes.
 
 ![View Configuration Manager console connections](media/console-connections.png) 
+## <a name="bkmk_message"></a> Message administrators from Console Connections
+<!--4923997-->
+*(Introduced in version 1910)*
 
+Starting in version 1910, you can message other Configuration Manager administrators from the **Console Connections** node. When you choose to message an administrator, Microsoft Teams is launched and a chat is opened with the user.
+
+### Prerequisites for messaging administrators
+
+- For messaging administrators, the account you want to message needs to have been discovered with [Azure AD or AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
+- Microsoft Teams installed on the device from which you run the console.
+note
+- All [prerequisites to view connected consoles](#bkmk_connections-prereq)
+
+### Message administrators
+
+1. Go to **Administration** > **Security** > **Console Connections**.
+1. Right-click on a user's console connection and select **Message Administrator**.
+    - If the User Principal Name isn't found for the selected administrator,  **Message Administrator** is grayed out.
+    - An error message, including a download link, appears if Microsoft Teams isn't installed on the device from which you run the console.
+    - If Microsoft Teams is installed on the device from which you run the console, it will open a chat with the user.
+
+![Message administrators with Microsoft Teams screenshot](media/4923997-message-administrator.png)
+
+### Known issues
+
+The error message notifying you that Microsoft Teams isn't installed won't be displayed if the following Registry key doesn't exist:
+
+Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+
+To work around the issue, manually create the Registry key.
 
 ## <a name="bkmk_notify"></a> Configuration Manager console notifications
 
@@ -258,7 +310,7 @@ Submit product feedback from the console.
 
 - **Send a suggestion**: Takes you to UserVoice to share your idea  
 
-For more information, see [Product Feedback](/sccm/core/understand/find-help#BKMK_1806Feedback).
+For more information, see [Product Feedback](/configmgr/core/understand/find-help#BKMK_1806Feedback).
 
 
 ### Assets and Compliance workspace
@@ -312,7 +364,7 @@ Starting in version 1806, the following columns are available in the **Devices**
 - **Currently logged on user** <!--1358202-->  
 
     > [!NOTE]  
-    > Viewing the currently logged on user requires [user discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adud) and [user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
+    > Viewing the currently logged on user requires [user discovery](/configmgr/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adud) and [user device affinity](/configmgr/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
 
 For more information on how to show a non-default column, see [Columns](#columns).
 
@@ -335,7 +387,7 @@ This behavior significantly improves the time it takes to search by name, especi
 <!--4616810-->
 *(Introduced in version 1906)*
 
-In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. Edit a task sequence, and select or add the [Install Package](/sccm/osd/understand/task-sequence-steps#BKMK_InstallPackage) step. If a package has more than one program, the drop-down list now sorts the programs alphabetically.
+In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. Edit a task sequence, and select or add the [Install Package](/configmgr/osd/understand/task-sequence-steps#BKMK_InstallPackage) step. If a package has more than one program, the drop-down list now sorts the programs alphabetically.
 
 #### Task sequences tab in applications node
 <!--4616810-->
@@ -423,9 +475,11 @@ Copy information from the **Asset Details** pane for the following monitoring no
 ### Administration workspace
 
 <!--4223683-->
-Starting in version 1906, you can enable some nodes under the **Security** node to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI. For more information, see [Administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service).
+Starting in version 1906, you can enable some nodes under the **Security** node to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI. For more information, see [Administration service](/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service).
 
 
 ## Next steps
 
-[Accessibility features](/sccm/core/understand/accessibility-features)
+[Accessibility features](/configmgr/core/understand/accessibility-features)
+
+[Task sequence editor](/configmgr/osd/understand/task-sequence-editor#bkmk_conditions)

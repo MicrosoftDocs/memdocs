@@ -2,7 +2,7 @@
 title: Product and licensing FAQ
 titleSuffix: Configuration Manager
 description: Find answers for common product and license questions for Configuration Manager.
-ms.date: 10/22/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Frequently asked questions for Configuration Manager branches and licensing
 
-*Applies to: System Center Configuration Manager (Current Branch), System Center Configuration Manager (Long-Term Servicing Branch)*
+*Applies to: Configuration Manager (current branch) & System Center Configuration Manager (long-term servicing branch)*
 
 This FAQ addresses common licensing questions about Configuration Manager current branch and the long-term servicing branch (LTSB) versions, available through Microsoft Volume Licensing programs. This article is for informational purposes. It doesn't supersede or replace any documentation covering Configuration Manager licensing. For more information, see the [Product Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). The Product Terms describe the use terms for all Microsoft products in Volume Licensing.
 
@@ -63,6 +63,15 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 
 > [!IMPORTANT]
 > Configuration Manager isn't included in the [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business) plan.
+
+### <a name="bkmk_mem"></a> Does anything change with the rebrand to Microsoft Endpoint Manager?
+
+Yes. If you're already licensed for Configuration Manager, then you're also automatically licensed for Intune for enrolling Windows PCs in [co-management](/configmgr/comanage/overview). This change makes it easier for you to manage Windows devices with Microsoft Endpoint Manager.
+
+The licensing that you previously had for System Center Configuration Manager still applies to Microsoft Endpoint Configuration Manager. If installing a new site, use existing product keys.
+
+If you want to use Intune for managing iOS, Android, or macOS devices, then you do need the appropriate Intune subscription through standalone Intune license, Enterprise Mobility +
+Security (EMS), or Microsoft 365.
 
 ### <a name="bkmk_ems-expires"></a> I have Enterprise Mobility + Security and it expired, what must I do now?  
 
@@ -112,7 +121,7 @@ If *SA* or your subscription is active, you have use rights for Configuration Ma
 
 ### <a name="bkmk_sql"></a> What are the use rights associated with the SQL technology provided with Configuration Manager?
 
-All of the System Center products include SQL Server technology. Microsoft's licensing terms for these products allow customer use of SQL Server technology only to support System Center components. SQL Server client access licenses are not required for that use.
+Configuration Manager includes SQL Server technology. Microsoft's licensing terms for this product allows your use of SQL Server technology only to support Configuration Manager components. SQL Server client access licenses are not required for that use.
 
 Approved use rights for the SQL capabilities with Configuration Manager include:
 

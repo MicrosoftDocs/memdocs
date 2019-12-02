@@ -2,7 +2,7 @@
 title: Site system role options
 titleSuffix: Configuration Manager
 description: Consult this article for details about Configuration Manager site system roles that are not necessarily self-explanatory.
-ms.date: 07/26/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -23,7 +23,7 @@ Most configuration options for Configuration Manager site system roles are self-
 ## <a name="BKMK_ApplicationCatalog_Website"></a> Application catalog website point  
 
 > [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -36,7 +36,7 @@ For more information about how to set up the application catalog website point, 
 ## <a name="BKMK_ApplicationCatalog_WebService"></a> Application catalog web service point  
 
 > [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >

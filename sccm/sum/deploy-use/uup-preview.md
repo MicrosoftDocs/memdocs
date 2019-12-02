@@ -197,11 +197,12 @@ When you look at the total content that's downloaded and distributed over a 12-m
 For the preview, test your typical real-world scenarios. UUP supports all content channels, including:
 
 - Windows Delivery Optimization (DO)
+  - When using DO, ensure it's configured properly. For more information, see [Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery).
 - Configuration Manager peer cache
 - Windows BranchCache
 - Use the **No deployment package** option, and clients download straight from Microsoft Update. Use this option with delivery optimization.
 - Third-party alternate content providers
 
-For more information, see [Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery).
+For more information about content channels, see [Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery).
 
 <!-- TODO: Addlink to WSUS Perf documentation-->

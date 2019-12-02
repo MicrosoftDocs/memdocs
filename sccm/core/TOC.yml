@@ -2,70 +2,72 @@
   href: understand/introduction.md
 - name: Understand and explore
   items:
-  - name: Introduction to Configuration Manager
+  - name: What is Configuration Manager?
+    href: understand/introduction.md
+  - name: Microsoft Endpoint Configuration Manager FAQ
+    href: understand/microsoft-endpoint-manager-faq.md
+  - name: What happened to SCCM?
+    href: understand/what-happened-to-sccm.md
+  - name: Introduction
     items:
-    - name: Configuration Manager overview
-      href: understand/introduction.md
     - name: Find help for Configuration Manager
       href: understand/find-help.md
     - name: How to use the docs
       href: understand/use-docs.md
-    - name: Using the console
+    - name: How to use the console
       href: servers/manage/admin-console.md
     - name: Accessibility features
       href: understand/accessibility-features.md
     - name: Software Center user guide
       href: understand/software-center.md
-  - name: Fundamentals of Configuration Manager
+  - name: Fundamentals
     items: 
     - name: Configuration Manager fundamentals
       href: understand/fundamentals.md
-    - name: Fundamentals of sites and hierarchies
-      items:
-      - name: Sites and hierarchies fundamentals
-        href: understand/fundamentals-of-sites-and-hierarchies.md
-      - name: About upgrade, update, and install for site and hierarchy infrastructure
-        href: understand/upgrade-update-install.md
-      - name: Fundamentals of managing devices
-        href: understand/fundamentals-of-managing-devices.md
-      - name: Fundamentals of client management
-        href: understand/fundamentals-of-client-management-tasks.md
-      - name: Fundamentals of security
-        href: understand/fundamentals-of-security.md
-      - name: Fundamentals of role-based administration
-        href: understand/fundamentals-of-role-based-administration.md
-  - name: Introduction to the Long-Term Servicing Branch
-    items:
-    - name: Long-Term Servicing Branch overview
-      href: understand/introduction-to-the-ltsb.md
-    - name: Supported Configurations for the Long-Term Servicing Branch
-      href: understand/supported-configurations-for-ltsb.md
-    - name: Install the Long-Term Service Branch
-      href: understand/install-the-ltsb.md
-    - name: Manage the Long-Term Servicing Branch
-      href: understand/manage-the-ltsb.md
-    - name: Upgrade the Long-Term Servicing Branch to the Current Branch
-      href: understand/convert-to-current-branch.md
-  - name: Which branch of Configuration Manager should I use
-    href: understand/which-branch-should-i-use.md
+    - name: Sites and hierarchies
+      href: understand/fundamentals-of-sites-and-hierarchies.md
+    - name: About upgrade, update, and install
+      href: understand/upgrade-update-install.md
+    - name: Manage devices
+      href: understand/fundamentals-of-managing-devices.md
+    - name: Client management
+      href: understand/fundamentals-of-client-management-tasks.md
+    - name: Security
+      href: understand/fundamentals-of-security.md
+    - name: Role-based administration
+      href: understand/fundamentals-of-role-based-administration.md
   - name: Configuration Manager and Windows as a Service
     href: understand/configuration-manager-and-windows-as-service.md
-  - name: Extended interoperability client
-    href: understand/interoperability-client.md
-  - name: Licensing and branches
-    href: understand/learn-more-editions.md
   - name: Use cloud services
     items:
     - name: Cloud services overview
       href: understand/use-cloud-services.md
     - name: Configuration Manager on Azure
       href: understand/configuration-manager-on-azure.md
-  - name: FAQ for product and licensing
-    href: understand/product-and-licensing-faq.md
   - name: FAQ for site sizing and performance
     href: understand/site-size-performance-faq.md
   - name: FAQ for diagnostics and usage data
     href: understand/frequently-asked-questions-about-diagnostics-and-usage-data.md
+  - name: FAQ for product and licensing
+    href: understand/product-and-licensing-faq.md
+  - name: Which branch of Configuration Manager should I use?
+    href: understand/which-branch-should-i-use.md
+  - name: Licensing and branches
+    href: understand/learn-more-editions.md
+  - name: Extended interoperability client
+    href: understand/interoperability-client.md
+  - name: Long-term servicing branch
+    items:
+    - name: Long-term servicing branch overview
+      href: understand/introduction-to-the-ltsb.md
+    - name: Supported configurations for the LTSB
+      href: understand/supported-configurations-for-ltsb.md
+    - name: Install the LTSB
+      href: understand/install-the-ltsb.md
+    - name: Manage the LTSB
+      href: understand/manage-the-ltsb.md
+    - name: Upgrade the LTSB to the current branch
+      href: understand/convert-to-current-branch.md
 - name: Plan and design
   items:
   - name: Get ready for Configuration Manager
@@ -78,6 +80,8 @@
       href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: What’s new in incremental versions
       href: plan-design/changes/whats-new-incremental-versions.md
+    - name: What's new in version 1910
+      href: plan-design/changes/whats-new-in-version-1910.md      
     - name: What's new in version 1906
       href: plan-design/changes/whats-new-in-version-1906.md
     - name: What's new in version 1902
@@ -86,8 +90,6 @@
       href: plan-design/changes/whats-new-in-version-1810.md
     - name: What's new in version 1806
       href: plan-design/changes/whats-new-in-version-1806.md
-    - name: What's new in version 1802
-      href: plan-design/changes/whats-new-in-version-1802.md
     - name: Removed and deprecated
       items:
       - name: Removed and deprecated overview
@@ -124,7 +126,7 @@
       href: plan-design/configs/support-for-active-directory-domains.md
     - name: Support for Windows features and networks
       href: plan-design/configs/support-for-windows-features-and-networks.md
-    - name: Support for Virtualization Environments
+    - name: Support for virtualization environments
       href: plan-design/configs/support-for-virtualization-environments.md
   - name: Choose a device management solution
     href: plan-design/choose-a-device-management-solution.md
@@ -204,6 +206,8 @@
       href: plan-design/diagnostics/diagnostics-and-usage-data.md
     - name: How diagnostics and usage data is used
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
+    - name: Diagnostic data for 1910
+      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1910.md
     - name: Diagnostic data for 1906
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
     - name: Diagnostic data for 1902
@@ -212,8 +216,6 @@
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
     - name: Diagnostic data for 1806
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md
-    - name: Diagnostic data for 1802
-      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802.md
     - name: How diagnostics and usage data is collected
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md
     - name: How to view diagnostics and usage data
@@ -304,11 +306,11 @@
     items:
     - name: Get installation media
       href: servers/deploy/install/get-install-media.md
-    - name: Before you run Setup
+    - name: Before you run setup
       items:
       - name: Setup reference
         href: servers/deploy/install/setup-reference.md
-      - name: Setup Downloader
+      - name: Setup downloader
         href: servers/deploy/install/setup-downloader.md
       - name: Prerequisite checker
         href: servers/deploy/install/prerequisite-checker.md
@@ -322,7 +324,7 @@
         href: servers/deploy/install/prepare-to-install-sites.md
       - name: Prerequisites for installing sites
         href: servers/deploy/install/prerequisites-for-installing-sites.md
-      - name: Use the Setup Wizard
+      - name: Use the setup wizard
         href: servers/deploy/install/use-the-setup-wizard-to-install-sites.md
       - name: Use a command-line
         items:
@@ -332,9 +334,9 @@
           href: servers/deploy/install/command-line-options-for-setup.md
       - name: Install consoles
         href: servers/deploy/install/install-consoles.md
-      - name: Upgrade an Evaluation install
+      - name: Upgrade an evaluation install
         href: servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md
-      - name: Upgrade to System Center Configuration Manager
+      - name: Upgrade to Configuration Manager
         href: servers/deploy/install/upgrade-to-configuration-manager.md
       - name: Scenarios to streamline your installation
         href: servers/deploy/install/scenarios-to-streamline-your-installation.md
@@ -372,10 +374,10 @@
         href: servers/deploy/configure/deploy-and-manage-content.md
       - name: Monitor content
         href: servers/deploy/configure/monitor-content-you-have-distributed.md
-      - name: Delivery Optimization In-Network Cache
-        href: plan-design/hierarchy/delivery-optimization-in-network-cache.md
-      - name: Troubleshoot Delivery Optimization In-Network Cache
-        href: servers/deploy/configure/troubleshoot-delivery-optimization-in-network-cache.md
+      - name: Microsoft Connected Cache
+        href: plan-design/hierarchy/microsoft-connected-cache.md
+      - name: Troubleshoot Microsoft Connected Cache
+        href: servers/deploy/configure/troubleshoot-microsoft-connected-cache.md
     - name: Run discovery
       items:
       - name: Discovery methods overview
@@ -442,7 +444,7 @@
       href: plan-design/hierarchy/log-files.md
     - name: Release notes
       href: servers/deploy/install/release-notes.md
-    - name: State Messages in Configuration Manager
+    - name: State messages
       href: plan-design/hierarchy/state-messaging-system-center-configuration-manager.md   
     - name: Unicode and ASCII support
       href: plan-design/hierarchy/unicode-and-ascii-support.md
@@ -490,12 +492,14 @@
       href: servers/manage/pre-release-features.md
     - name: Service windows for site servers
       href: servers/manage/service-windows.md
-    - name: Use the Service Connection Tool
+    - name: Use the service connection tool
       href: servers/manage/use-the-service-connection-tool.md
-    - name: Use the Update Registration Tool
+    - name: Use the update registration tool
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
-    - name: Use the Hotfix Installer
+    - name: Use the hotfix installer
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Checklist for installing update 1910
+      href: servers/manage/checklist-for-installing-update-1910.md
     - name: Checklist for installing update 1906
       href: servers/manage/checklist-for-installing-update-1906.md
     - name: Checklist for installing update 1902
@@ -504,8 +508,6 @@
       href: servers/manage/checklist-for-installing-update-1810.md
     - name: Checklist for installing update 1806
       href: servers/manage/checklist-for-installing-update-1806.md
-    - name: Checklist for installing update 1802
-      href: servers/manage/checklist-for-installing-update-1802.md
     - name: Support for current branch versions
       href: servers/manage/current-branch-versions-supported.md
   - name: Backup and recovery
@@ -623,6 +625,8 @@
       href: support/content-library-transfer.md
     - name: Content Ownership Tool
       href: support/content-ownership-tool.md
+    - name: Extend and migrate to Microsoft Azure
+      href: support/azure-migration-tool.md
     - name: Role-based Administration and Auditing Tool
       href: support/rbaviewer.md
     - name: Run Meter Summarization Tool
@@ -749,7 +753,7 @@
         href: clients/manage/cmg/setup-cloud-management-gateway.md
       - name: Monitor clients on cloud management gateway
         href: clients/manage/cmg/monitor-clients-cloud-management-gateway.md
-    - name: Plan for internet-based Client Management
+    - name: Plan for internet-based client management
       href: clients/manage/plan-internet-based-client-management.md
     - name: Azure AD authentication workflow
       href: clients/manage/azure-ccmsetup.md

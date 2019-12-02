@@ -2,7 +2,7 @@
 title: Plan for application management
 titleSuffix: Configuration Manager
 description: Implement and configure the necessary dependencies for deploying applications in Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -34,7 +34,7 @@ IIS is required on the servers that run the following site system roles:
 For more information, see [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).  
 
 > [!Note]  
-> The application catalog also requires IIS. However, its Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog also requires IIS. However, its Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -78,7 +78,7 @@ In version 1902 and earlier, clients use the management point to connect to the 
 > [!Note]  
 > Starting in version 1806, application catalog roles are no longer required to display user-available applications in Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).<!--1358309-->  
 >
-> Starting in version 1906, you can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> Starting in version 1906, you can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
   
 
 ### Distribution point
@@ -132,7 +132,7 @@ Before you deploy virtual applications, also update the App-V client with the ho
 ### Application catalog
 
 > [!Important]  
-> The application catalog is deprecated. For more information, see [Remove the application catalog](#bkmk_remove-appcat).  
+> Support ends for the application catalog roles with version 1910.. For more information, see [Remove the application catalog](#bkmk_remove-appcat).  
 
 #### Application catalog web service point
 
@@ -161,13 +161,13 @@ For more information on configuring and branding Software Center, see [Plan for 
 
 <!-- SCCMDocs-pr issue 3051 -->
 
-The application catalog is deprecated. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). The following list summarizes the changes:
+Support ends for the application catalog roles with version 1910. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). The following list summarizes the changes:
 
 - Starting in version 1806, the **Silverlight user experience** for the application catalog website point is no longer supported.<!--1358309--> The application catalog web service point role is no longer *required*, but still *supported*.
 
 - Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles.
 
-- In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+- Support ends for the application catalog roles with version 1910.  
 
 These iterative improvements to Software Center and the management point are to simplify your infrastructure and remove the need for the application catalog for user-available deployments. Software Center can deliver all app deployments without the application catalog. Also, if you enable TLS 1.2 and use HTTP with the application catalog, users can't see user-targeted, available deployments. Update Configuration Manager to version 1906 or later to benefit from these improvements.
 
@@ -189,7 +189,7 @@ After you remove the application catalog roles, Software Center starts using the
 ## <a name="bkmk_appcat"></a> Install and configure the application catalog  
 
 > [!Important]  
-> The application catalog is deprecated. For more information, see [Remove the application catalog](#bkmk_remove-appcat).  
+> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](#bkmk_remove-appcat).  
 
 ### Step 1: Web server certificate for HTTPS
 

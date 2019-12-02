@@ -2,7 +2,7 @@
 title: Site prerequisites
 titleSuffix: Configuration Manager
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
-ms.date: 07/31/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -189,7 +189,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 ## <a name="bkmk_2012acwspreq"></a> Application catalog website point  
 
 > [!Important]  
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -243,7 +243,7 @@ For more information about .NET Framework versions, see the following articles:
 ## <a name="bkmk_2012ACwsitepreq"></a> Application catalog web service point  
 
 > [!Important]  
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -390,12 +390,12 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ### To support PXE or multicast  
 
+- Enable a PXE responder on a distribution point without Windows Deployment Service.  
+
 - Install and configure the Windows Deployment Services (WDS) Windows Server role.  
 
     > [!NOTE]  
     > WDS installs and configures automatically when you configure a distribution point to support PXE or multicast on a server that runs Windows Server 2012 or later.  
-
-- Starting in version 1806, enable a PXE responder on a distribution point without Windows Deployment Service.  
 
 - For a multicast-enabled distribution point, make sure the SQL Server Native Client is installed and up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
 
@@ -760,12 +760,12 @@ When you use a custom IIS configuration, you can remove options that aren't requ
 
 ### To support PXE or multicast  
 
+- Enable a PXE responder on a distribution point without Windows Deployment Service.  
+
 - Install and configure the Windows Deployment Services (WDS) Windows Server role.  
 
     > [!NOTE]  
     > WDS installs and configures automatically when you configure a distribution point to support PXE or multicast on a server that runs Windows Server 2012 or later.  
-
-- Starting in version 1806, enable a PXE responder on a distribution point without Windows Deployment Service.  
 
 For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
 
