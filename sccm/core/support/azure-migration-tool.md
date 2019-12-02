@@ -34,36 +34,37 @@ This tool, introduced in version 1910, helps you to programmatically create Azur
 
 ### Required Azure permissions
 
-You'll need the following permissions in Azure when you run the tool:
+You'll need the following permissions in Azure when you run the tool: 
+<!--5789222-->
+Microsoft.Resources/subscriptions/resourceGroups/read <br>
+Microsoft.Resources/subscriptions/resourceGroups/write <br>
+Microsoft.Resources/deployments/read <br>
+Microsoft.Resources/deployments/write <br>
+Microsoft.Resources/deployments/validate/action <br>
+Microsoft.Authorization/roleAssignments/read <br>
+Microsoft.Authorization/roleAssignments/write <br>
+Microsoft.Compute/virtualMachines/extensions/read <br>
+Microsoft.Compute/virtualMachines/extensions/write <br>
+Microsoft.Compute/virtualMachines/read <br>
+Microsoft.Compute/virtualMachines/write <br>
+Microsoft.Network/virtualNetworks/read <br>
+Microsoft.Network/virtualNetworks/subnets/read <br>
+Microsoft.Network/virtualNetworks/subnets/join/action <br>
+Microsoft.Network/networkInterfaces/read <br>
+Microsoft.Network/networkInterfaces/write <br>
+Microsoft.Network/networkInterfaces/join/action <br>
+Microsoft.Network/networkSecurityGroups/write <br>
+Microsoft.Network/networkSecurityGroups/read <br>
+Microsoft.Network/networkSecurityGroups/join/action <br>
+Microsoft.Storage/storageAccounts/write <br>
+Microsoft.Storage/storageAccounts/read <br>
+Microsoft.Storage/storageAccounts/listkeys/action <br>
+Microsoft.Storage/storageAccounts/listServiceSas/action <br>
+Microsoft.Storage/storageAccounts/blobServices/containers/write <br>
+Microsoft.Storage/storageAccounts/blobServices/containers/read <br>
+Microsoft.KeyVault/vaults/deploy/action <br>
+Microsoft.KeyVault/vaults/read <br>
 
-Microsoft.Resources/subscriptions/resourceGroups/read
-Microsoft.Resources/subscriptions/resourceGroups/write
-Microsoft.Resources/deployments/read
-Microsoft.Resources/deployments/write
-Microsoft.Resources/deployments/validate/action
-Microsoft.Authorization/roleAssignments/read
-Microsoft.Authorization/roleAssignments/write
-Microsoft.Compute/virtualMachines/extensions/read
-Microsoft.Compute/virtualMachines/extensions/write
-Microsoft.Compute/virtualMachines/read
-Microsoft.Compute/virtualMachines/write
-Microsoft.Network/virtualNetworks/read
-Microsoft.Network/virtualNetworks/subnets/read
-Microsoft.Network/virtualNetworks/subnets/join/action
-Microsoft.Network/networkInterfaces/read
-Microsoft.Network/networkInterfaces/write
-Microsoft.Network/networkInterfaces/join/action
-Microsoft.Network/networkSecurityGroups/write
-Microsoft.Network/networkSecurityGroups/read
-Microsoft.Network/networkSecurityGroups/join/action
-Microsoft.Storage/storageAccounts/write
-Microsoft.Storage/storageAccounts/read
-Microsoft.Storage/storageAccounts/listkeys/action
-Microsoft.Storage/storageAccounts/listServiceSas/action
-Microsoft.Storage/storageAccounts/blobServices/containers/write
-Microsoft.Storage/storageAccounts/blobServices/containers/read
-Microsoft.KeyVault/vaults/deploy/action
-Microsoft.KeyVault/vaults/read
 
 For more information about permissions and assigning roles, see [Manage access to Azure resources using RBAC](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal).
 
