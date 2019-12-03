@@ -18,9 +18,9 @@ manager: dougeby
 
 This article describes the default inventory classes in Resource Explorer.
 
-## Default inventory classes
+These are the default inventory classes:
 
-### 1394 Controller
+## 1394 Controller
 
 Namespace: root\cimv2
 
@@ -71,7 +71,7 @@ class Win32_1394Controller
 
 
 
-### Account SID
+## Account SID
 
 Namespace: root\cimv2
 
@@ -83,7 +83,7 @@ class Win32_AccountSID
 
 
 
-### ActiveSync Service
+## ActiveSync Service
 
 Namespace: root\SmsDm
 
@@ -98,7 +98,7 @@ class SMS_ActiveSyncService
 
 
 
-### AMT Agent
+## AMT Agent
 
 Namespace: root\cimv2\sms
 
@@ -139,7 +139,7 @@ class SMS_AMTObject
 
 
 
-### AppV Client Application
+## AppV Client Application
 
 Namespace: root\AppV
 
@@ -164,7 +164,7 @@ class AppvClientApplication
 
 
 
-### AppV Client Package
+## AppV Client Package
 
 Namespace: root\AppV
 
@@ -203,7 +203,7 @@ class AppvClientPackage
 
 
 
-### AutoStart Software
+## AutoStart Software
 
 Namespace: root\cimv2\sms
 
@@ -238,7 +238,7 @@ class SMS_AutoStartSoftware
 
 
 
-### BaseBoard
+## BaseBoard
 
 Namespace: root\cimv2
 
@@ -295,7 +295,7 @@ class Win32_BaseBoard
 
 
 
-### Battery
+## Battery
 
 Namespace: root\cimv2
 
@@ -362,7 +362,7 @@ class Win32_Battery
 
 
 
-### BitLocker
+## BitLocker
 
 Namespace: root\cimv2\security\MicrosoftVolumeEncryption
 
@@ -379,7 +379,7 @@ class Win32_EncryptableVolume
 
 
 
-### BitLocker Encryption Details
+## BitLocker Encryption Details
 
 Namespace: root\cimv2
 
@@ -416,7 +416,7 @@ class Win32_BitLockerEncryptionDetails
 
 
 
-### BitLocker Policy
+## BitLocker Policy
 
 Namespace: root\cimv2
 
@@ -449,7 +449,7 @@ class Win32Reg_MBAMPolicy
 
 
 
-### Boot Configuration
+## Boot Configuration
 
 Namespace: root\cimv2
 
@@ -474,7 +474,7 @@ class Win32_BootConfiguration
 
 
 
-### Browser Helper Object
+## Browser Helper Object
 
 Namespace: root\cimv2\sms
 
@@ -507,7 +507,7 @@ class SMS_BrowserHelperObject
 
 
 
-### CCM_RAX
+## CCM_RAX
 
 Namespace: root\ccm\cimodels
 
@@ -522,7 +522,7 @@ class CCM_RAXInfo
 
 
 
-### CD-ROM
+## CD-ROM
 
 Namespace: root\cimv2
 
@@ -619,7 +619,7 @@ class Win32_CDROMDrive
 
 
 
-### Client Events
+## Client Events
 
 Namespace: root\ccm\invagt
 
@@ -632,7 +632,7 @@ class ClientEvents
 
 
 
-### Computer System
+## Computer System
 
 Namespace: root\cimv2
 
@@ -741,7 +741,7 @@ class Win32_ComputerSystem
 
 
 
-### Computer System Ex
+## Computer System Ex
 
 Namespace: root\cimv2
 
@@ -754,7 +754,7 @@ class CCM_ComputerSystemExtended
 
 
 
-### Computer System Product
+## Computer System Product
 
 Namespace: root\cimv2
 
@@ -779,7 +779,7 @@ class Win32_ComputerSystemProduct
 
 
 
-### SMS Advanced Client Ports
+## SMS Advanced Client Ports
 
 Namespace: root\cimv2
 
@@ -794,7 +794,7 @@ class Win32Reg_SMSAdvancedClientPorts
 
 
 
-### SMS Advanced Client SSL Configurations
+## SMS Advanced Client SSL Configurations
 
 Namespace: root\cimv2
 
@@ -817,7 +817,7 @@ class Win32Reg_SMSAdvancedClientSSLConfiguration
 
 
 
-### SMS Advanced Client State
+## SMS Advanced Client State
 
 Namespace: root\ccm
 
@@ -832,7 +832,7 @@ class CCM_InstalledComponent
 
 
 
-### Connected Device
+## Connected Device
 
 Namespace: root\SmsDm
 
@@ -869,7 +869,7 @@ class SMS_ActiveSyncConnectedDevice
 
 
 
-### SMS_DefaultBrowser
+## SMS_DefaultBrowser
 
 Namespace: root\cimv2\sms
 
@@ -880,7 +880,7 @@ class SMS_DefaultBrowser
 
 
 
-### Desktop
+## Desktop
 
 Namespace: root\cimv2
 
@@ -931,7 +931,7 @@ class Win32_Desktop
 
 
 
-### Desktop Monitor
+## Desktop Monitor
 
 Namespace: root\cimv2
 
@@ -992,7 +992,7 @@ class Win32_DesktopMonitor
 
 
 
-### Device Info
+## Device Info
 
 Namespace: Reserved
 
@@ -1011,7 +1011,7 @@ class Device_Info
 
 
 
-### MDM DevDetail
+## MDM DevDetail
 
 Namespace: root\cimv2\mdm\dmmap
 
@@ -1028,7 +1028,7 @@ class MDM_DevDetail_Ext01
 
 
 
-### Disk
+## Disk
 
 Namespace: root\cimv2
 
@@ -1129,7 +1129,7 @@ class Win32_DiskDrive
 
 
 
-### Partition
+## Partition
 
 Namespace: root\cimv2
 
@@ -1202,7 +1202,7 @@ class Win32_DiskPartition
 
 
 
-### DMA
+## DMA
 
 Namespace: root\cimv2
 
@@ -1226,7 +1226,7 @@ class Win32_DeviceMemoryAddress
 
 
 
-### DMA Channel
+## DMA Channel
 
 Namespace: root\cimv2
 
@@ -1267,7 +1267,7 @@ class Win32_DMAChannel
 
 
 
-### Driver - VxD
+## Driver - VxD
 
 Namespace: root\cimv2
 
@@ -1318,7 +1318,7 @@ class Win32_DriverVXD
 
 
 
-### Embedded Device Information
+## Embedded Device Information
 
 Namespace: root\cimv2\sms
 
@@ -1333,7 +1333,7 @@ class CCM_EmbeddedDeviceInformation
 
 
 
-### Environment
+## Environment
 
 Namespace: root\cimv2
 
@@ -1358,7 +1358,7 @@ class Win32_Environment
 
 
 
-### Firmware
+## Firmware
 
 Namespace: root\cimv2\sms
 
@@ -1371,7 +1371,7 @@ class SMS_Firmware
 
 
 
-### USM Folder Redirection Health
+## USM Folder Redirection Health
 
 Namespace: root\cimv2\sms
 
@@ -1398,7 +1398,7 @@ class SMS_FolderRedirectionHealth
 
 
 
-### IDE Controller
+## IDE Controller
 
 Namespace: root\cimv2
 
@@ -1449,7 +1449,7 @@ class Win32_IDEController
 
 
 
-### Add Remove Programs (64)
+## Add Remove Programs (64)
 
 Namespace: root\cimv2
 
@@ -1468,7 +1468,7 @@ class Win32Reg_AddRemovePrograms64
 
 
 
-### Add Remove Programs
+## Add Remove Programs
 
 Namespace: root\cimv2
 
@@ -1487,7 +1487,7 @@ class Win32Reg_AddRemovePrograms
 
 
 
-### Installed Executable
+## Installed Executable
 
 Namespace: root\cimv2\sms
 
@@ -1530,7 +1530,7 @@ class SMS_InstalledExecutable
 
 
 
-### Installed Software
+## Installed Software
 
 Namespace: root\cimv2\sms
 
@@ -1595,7 +1595,7 @@ class SMS_InstalledSoftware
 
 
 
-### IRQ Table
+## IRQ Table
 
 Namespace: root\cimv2
 
@@ -1628,7 +1628,7 @@ class Win32_IRQResource
 
 
 
-### Keyboard
+## Keyboard
 
 Namespace: root\cimv2
 
@@ -1679,7 +1679,7 @@ class Win32_Keyboard
 
 
 
-### Load Order Group
+## Load Order Group
 
 Namespace: root\cimv2
 
@@ -1702,7 +1702,7 @@ class Win32_LoadOrderGroup
 
 
 
-### Logical Disk
+## Logical Disk
 
 Namespace: root\cimv2\sms
 
@@ -1777,7 +1777,7 @@ class SMS_LogicalDisk
 
 
 
-### Memory
+## Memory
 
 Namespace: root\cimv2
 
@@ -1796,7 +1796,7 @@ class CCM_LogicalMemoryConfiguration
 
 
 
-### Device Bluetooth
+## Device Bluetooth
 
 Namespace: Reserved
 
@@ -1807,7 +1807,7 @@ class Device_Bluetooth
 
 
 
-### Device Camera
+## Device Camera
 
 Namespace: Reserved
 
@@ -1818,7 +1818,7 @@ class Device_Camera
 
 
 
-### Device Certificates
+## Device Certificates
 
 Namespace: Reserved
 
@@ -1839,7 +1839,7 @@ class Device_Certificates
 
 
 
-### Device Client
+## Device Client
 
 Namespace: Reserved
 
@@ -1852,7 +1852,7 @@ class Device_Client
 
 
 
-### Device Client Agent version
+## Device Client Agent version
 
 Namespace: Reserved
 
@@ -1863,7 +1863,7 @@ class Device_ClientAgentVersion
 
 
 
-### Device Computer System
+## Device Computer System
 
 Namespace: Reserved
 
@@ -1918,7 +1918,7 @@ class Device_ComputerSystem
 
 
 
-### Device Display
+## Device Display
 
 Namespace: Reserved
 
@@ -1933,7 +1933,7 @@ class Device_Display
 
 
 
-### Device Email
+## Device Email
 
 Namespace: Reserved
 
@@ -1952,7 +1952,7 @@ class Device_Email
 
 
 
-### Device Encryption
+## Device Encryption
 
 Namespace: Reserved
 
@@ -1977,7 +1977,7 @@ class Device_Encryption
 
 
 
-### Device Exchange
+## Device Exchange
 
 Namespace: Reserved
 
@@ -2022,7 +2022,7 @@ class Device_Exchange
 
 
 
-### Device Installed Applications
+## Device Installed Applications
 
 Namespace: Reserved
 
@@ -2035,7 +2035,7 @@ class Device_InstalledApplications
 
 
 
-### Device IrDA
+## Device IrDA
 
 Namespace: Reserved
 
@@ -2046,7 +2046,7 @@ class Device_IrDA
 
 
 
-### Mobile Device Location
+## Mobile Device Location
 
 Namespace: Reserved
 
@@ -2059,7 +2059,7 @@ class MDM_RemoteFind
 
 
 
-### Device Memory
+## Device Memory
 
 Namespace: Reserved
 
@@ -2080,7 +2080,7 @@ class Device_Memory
 
 
 
-### Device OS Information
+## Device OS Information
 
 Namespace: Reserved
 
@@ -2095,7 +2095,7 @@ class Device_OSInformation
 
 
 
-### Device Password
+## Device Password
 
 Namespace: Reserved
 
@@ -2124,7 +2124,7 @@ class Device_Password
 
 
 
-### Device Policy
+## Device Policy
 
 Namespace: Reserved
 
@@ -2137,7 +2137,7 @@ class Device_Policy
 
 
 
-### Device Power
+## Device Power
 
 Namespace: Reserved
 
@@ -2154,7 +2154,7 @@ class Device_Power
 
 
 
-### Mobile Device Security Status
+## Mobile Device Security Status
 
 Namespace: Reserved
 
@@ -2173,7 +2173,7 @@ class MDM_SecurityStatus
 
 
 
-### Device Windows Security Policy
+## Device Windows Security Policy
 
 Namespace: Reserved
 
@@ -2188,7 +2188,7 @@ class Device_WindowsSecurityPolicy
 
 
 
-### Device WLAN
+## Device WLAN
 
 Namespace: Reserved
 
@@ -2203,7 +2203,7 @@ class Device_WLAN
 
 
 
-### Modem
+## Modem
 
 Namespace: root\cimv2
 
@@ -2366,7 +2366,7 @@ class Win32_POTSModem
 
 
 
-### Motherboard
+## Motherboard
 
 Namespace: root\cimv2
 
@@ -2414,8 +2414,7 @@ class Win32_MotherboardDevice
 - (String) SystemName
 
 
-
-### NAP Client
+## NAP Client
 
 Namespace: root\Nap
 
@@ -2438,7 +2437,7 @@ class NAP_Client
 
 
 
-### NAP System Health Agent
+## NAP System Health Agent
 
 Namespace: root\Nap
 
@@ -2467,7 +2466,7 @@ class NAP_SystemHealthAgent
 
 
 
-### Network Adapter
+## Network Adapter
 
 Namespace: root\cimv2
 
@@ -2538,7 +2537,7 @@ class Win32_NetworkAdapter
 
 
 
-### Network Adapter Configuration
+## Network Adapter Configuration
 
 Namespace: root\cimv2
 
@@ -2667,7 +2666,7 @@ class Win32_NetworkAdapterConfiguration
 
 
 
-### Network Client
+## Network Client
 
 Namespace: root\cimv2
 
@@ -2688,7 +2687,7 @@ class Win32_NetworkClient
 
 
 
-### Network Login Profile
+## Network Login Profile
 
 Namespace: root\cimv2
 
@@ -2761,7 +2760,7 @@ class Win32_NetworkLoginProfile
 
 
 
-### NT Eventlog File
+## NT Eventlog File
 
 Namespace: root\cimv2
 
@@ -2840,7 +2839,7 @@ class Win32_NTEventlogFile
 
 
 
-### Office365ProPlusConfigurations
+## Office365ProPlusConfigurations
 
 Namespace: root\cimv2
 
@@ -2889,7 +2888,7 @@ class Office365ProPlusConfigurations
 
 
 
-### Office Addin
+## Office Addin
 
 Namespace: root\ccm\InvAgt
 
@@ -2942,7 +2941,7 @@ class CCM_OfficeAddin
 
 
 
-### Office Client Metric
+## Office Client Metric
 
 Namespace: root\ccm\InvAgt
 
@@ -2963,7 +2962,7 @@ class CCM_OfficeClientMetric
 
 
 
-### Office Device Summary
+## Office Device Summary
 
 Namespace: root\ccm\InvAgt
 
@@ -2976,7 +2975,7 @@ class CCM_OfficeDeviceSummary
 
 
 
-### Office Document Metric
+## Office Document Metric
 
 Namespace: root\ccm\InvAgt
 
@@ -2999,7 +2998,7 @@ class CCM_OfficeDocumentMetric
 
 
 
-### Office Document Solution
+## Office Document Solution
 
 Namespace: root\ccm\InvAgt
 
@@ -3028,7 +3027,7 @@ class CCM_OfficeDocumentSolution
 
 
 
-### Office Macro Error
+## Office Macro Error
 
 Namespace: root\ccm\InvAgt
 
@@ -3047,7 +3046,7 @@ class CCM_OfficeMacroError
 
 
 
-### Office Product Info
+## Office Product Info
 
 Namespace: root\ccm\InvAgt
 
@@ -3070,7 +3069,7 @@ class CCM_OfficeProductInfo
 
 
 
-### Office Vba Rule Violation
+## Office Vba Rule Violation
 
 Namespace: root\ccm\InvAgt
 
@@ -3085,7 +3084,7 @@ class CCM_OfficeVbaRuleViolation
 
 
 
-### Office VbaSummary
+## Office VbaSummary
 
 Namespace: root\ccm\InvAgt
 
@@ -3138,7 +3137,7 @@ class CCM_OfficeVbaScanResultsSummary
 
 
 
-### Operating System
+## Operating System
 
 Namespace: root\cimv2
 
@@ -3249,7 +3248,7 @@ class Win32_OperatingSystem
 
 
 
-### Operating System Ex
+## Operating System Ex
 
 Namespace: root\cimv2
 
@@ -3262,7 +3261,7 @@ class CCM_OperatingSystemExtended
 
 
 
-### Operating System Recovery Configuration
+## Operating System Recovery Configuration
 
 Namespace: root\cimv2
 
@@ -3293,7 +3292,7 @@ class Win32_OSRecoveryConfiguration
 
 
 
-### Optional Feature
+## Optional Feature
 
 Namespace: root\cimv2
 
@@ -3314,7 +3313,7 @@ class Win32_OptionalFeature
 
 
 
-### Page File Setting
+## Page File Setting
 
 Namespace: root\cimv2
 
@@ -3335,7 +3334,7 @@ class Win32_PageFileSetting
 
 
 
-### Parallel Port
+## Parallel Port
 
 Namespace: root\cimv2
 
@@ -3392,7 +3391,7 @@ class Win32_ParallelPort
 
 
 
-### BIOS
+## BIOS
 
 Namespace: root\cimv2
 
@@ -3455,7 +3454,7 @@ class Win32_BIOS
 
 
 
-### PCMCIA Controller
+## PCMCIA Controller
 
 Namespace: root\cimv2
 
@@ -3506,7 +3505,7 @@ class Win32_PCMCIAController
 
 
 
-### Physical Memory
+## Physical Memory
 
 Namespace: root\cimv2
 
@@ -3575,7 +3574,7 @@ class Win32_PhysicalMemory
 
 
 
-### PhysicalDisk
+## PhysicalDisk
 
 Namespace: root\microsoft\windows\storage
 
@@ -3644,7 +3643,7 @@ class MSFT_PhysicalDisk
 
 
 
-### PNP DEVICE DRIVER
+## PNP DEVICE DRIVER
 
 Namespace: root\cimv2
 
@@ -3697,7 +3696,7 @@ class Win32_PnpEntity
 
 
 
-### Pointing Device
+## Pointing Device
 
 Namespace: root\cimv2
 
@@ -3768,7 +3767,7 @@ class Win32_PointingDevice
 
 
 
-### Portable Battery
+## Portable Battery
 
 Namespace: root\cimv2
 
@@ -3845,7 +3844,7 @@ class Win32_PortableBattery
 
 
 
-### Ports
+## Ports
 
 Namespace: root\cimv2
 
@@ -3869,7 +3868,7 @@ class Win32_PortResource
 
 
 
-### Power Capabilities
+## Power Capabilities
 
 Namespace: root\CCM\powermanagementagent
 
@@ -3910,7 +3909,7 @@ class CCM_PwrMgmtSystemPowerCapabilities
 
 
 
-### Power Configurations
+## Power Configurations
 
 Namespace: root\CCM\policy\machine\actualconfig
 
@@ -3935,7 +3934,7 @@ class CCM_PowerConfig
 
 
 
-### Power Management Insomnia Reasons
+## Power Management Insomnia Reasons
 
 Namespace: root\CCM\powermanagementagent
 
@@ -3960,7 +3959,7 @@ class CCM_PwrMgmtLastSuspendError
 
 
 
-### Power Management Daily
+## Power Management Daily
 
 Namespace: root\CCM\powermanagementagent
 
@@ -4023,7 +4022,7 @@ class CCM_PwrMgmtActualDay
 
 
 
-### Power Client Opt Out Settings
+## Power Client Opt Out Settings
 
 Namespace: root\ccm\ClientSDK
 
@@ -4038,7 +4037,7 @@ class CCM_PowerManagementClientOptoutSetting
 
 
 
-### Power Management Monthly
+## Power Management Monthly
 
 Namespace: root\CCM\powermanagementagent
 
@@ -4063,7 +4062,7 @@ class CCM_PwrMgmtMonth
 
 
 
-### Power Settings
+## Power Settings
 
 Namespace: root\cimv2\sms
 
@@ -4086,7 +4085,7 @@ class SMS_PowerSettings
 
 
 
-### Print Jobs
+## Print Jobs
 
 Namespace: root\cimv2
 
@@ -4143,7 +4142,7 @@ class Win32_PrintJob
 
 
 
-### Printer Configuration
+## Printer Configuration
 
 Namespace: root\cimv2
 
@@ -4218,7 +4217,7 @@ class Win32_PrinterConfiguration
 
 
 
-### Printer Device
+## Printer Device
 
 Namespace: root\cimv2
 
@@ -4313,7 +4312,7 @@ class Win32_Printer
 
 
 
-### Process
+## Process
 
 Namespace: root\cimv2
 
@@ -4402,7 +4401,7 @@ class Win32_Process
 
 
 
-### Processor
+## Processor
 
 Namespace: root\cimv2\sms
 
@@ -4529,7 +4528,7 @@ class SMS_Processor
 
 
 
-### Protected Volume Information
+## Protected Volume Information
 
 Namespace: root\cimv2\sms
 
@@ -4544,7 +4543,7 @@ class CCM_ProtectedVolumeInfo
 
 
 
-### Protocol
+## Protocol
 
 Namespace: root\cimv2
 
@@ -4599,7 +4598,7 @@ class Win32_NetworkProtocol
 
 
 
-### Quick Fix Engineering
+## Quick Fix Engineering
 
 Namespace: root\cimv2
 
@@ -4628,7 +4627,7 @@ class Win32_QuickFixEngineering
 
 
 
-### CCM Recently Used Applications
+## CCM Recently Used Applications
 
 Namespace: root\cimv2\sms
 
@@ -4677,7 +4676,7 @@ class CCM_RecentlyUsedApps
 
 
 
-### Registry
+## Registry
 
 Namespace: root\cimv2
 
@@ -4702,7 +4701,7 @@ class Win32_Registry
 
 
 
-### SCSI Controller
+## SCSI Controller
 
 Namespace: root\cimv2
 
@@ -4769,7 +4768,7 @@ class Win32_SCSIController
 
 
 
-### Serial Port Configuration
+## Serial Port Configuration
 
 Namespace: root\cimv2
 
@@ -4836,7 +4835,7 @@ class Win32_SerialPortConfiguration
 
 
 
-### Serial Ports
+## Serial Ports
 
 Namespace: root\cimv2
 
@@ -4935,7 +4934,7 @@ class Win32_SerialPort
 
 
 
-### Server Feature
+## Server Feature
 
 Namespace: root\cimv2
 
@@ -4950,7 +4949,7 @@ class Win32_ServerFeature
 
 
 
-### Services
+## Services
 
 Namespace: root\cimv2
 
@@ -5005,7 +5004,7 @@ class Win32_Service
 
 
 
-### Shares
+## Shares
 
 Namespace: root\cimv2
 
@@ -5034,7 +5033,7 @@ class Win32_Share
 
 
 
-### SW Licensing Product
+## SW Licensing Product
 
 Namespace: root\cimv2
 
@@ -5071,7 +5070,7 @@ class SoftwareLicensingProduct
 
 
 
-### SW Licensing Service
+## SW Licensing Service
 
 Namespace: root\cimv2
 
@@ -5100,7 +5099,7 @@ class SoftwareLicensingService
 
 
 
-### Software Shortcut
+## Software Shortcut
 
 Namespace: root\cimv2\sms
 
@@ -5143,7 +5142,7 @@ class SMS_SoftwareShortcut
 
 
 
-### SMS_SoftwareTag
+## SMS_SoftwareTag
 
 Namespace: root\cimv2\sms
 
@@ -5176,7 +5175,7 @@ class SMS_SoftwareTag
 
 
 
-### Sound Devices
+## Sound Devices
 
 Namespace: root\cimv2
 
@@ -5227,7 +5226,7 @@ class Win32_SoundDevice
 
 
 
-### System Account
+## System Account
 
 Namespace: root\cimv2
 
@@ -5252,7 +5251,7 @@ class Win32_SystemAccount
 
 
 
-### System Boot Data
+## System Boot Data
 
 Namespace: root\CCM
 
@@ -5277,7 +5276,7 @@ class CCM_SystemBootData
 
 
 
-### System Boot Summary
+## System Boot Summary
 
 Namespace: root\CCM
 
@@ -5324,7 +5323,7 @@ class CCM_SystemBootSummary
 
 
 
-### System Console Usage
+## System Console Usage
 
 Namespace: root\cimv2\sms
 
@@ -5343,7 +5342,7 @@ class SMS_SystemConsoleUsage
 
 
 
-### System Console User
+## System Console User
 
 Namespace: root\cimv2\sms
 
@@ -5360,7 +5359,7 @@ class SMS_SystemConsoleUser
 
 
 
-### System Devices
+## System Devices
 
 Namespace: root\cimv2\sms
 
@@ -5379,7 +5378,7 @@ class CCM_SystemDevices
 
 
 
-### System Drivers
+## System Drivers
 
 Namespace: root\cimv2
 
@@ -5428,7 +5427,7 @@ class Win32_SystemDriver
 
 
 
-### System Enclosure
+## System Enclosure
 
 Namespace: root\cimv2
 
@@ -5501,7 +5500,7 @@ class Win32_SystemEnclosure
 
 
 
-### Tape Drive
+## Tape Drive
 
 Namespace: root\cimv2
 
@@ -5586,7 +5585,7 @@ class Win32_TapeDrive
 
 
 
-### Time Zone
+## Time Zone
 
 Namespace: root\cimv2
 
@@ -5643,7 +5642,7 @@ class Win32_TimeZone
 
 
 
-### TPM
+## TPM
 
 Namespace: root\CIMv2\Security\MicrosoftTpm
 
@@ -5668,7 +5667,7 @@ class Win32_Tpm
 
 
 
-### TPM Status
+## TPM Status
 
 Namespace: root\cimv2\sms
 
@@ -5683,7 +5682,7 @@ class SMS_TPM
 
 
 
-### TS Issued License
+## TS Issued License
 
 Namespace: root\cimv2
 
@@ -5708,7 +5707,7 @@ class Win32_TSIssuedLicense
 
 
 
-### TS License Key Pack
+## TS License Key Pack
 
 Namespace: root\cimv2
 
@@ -5733,7 +5732,7 @@ class Win32_TSLicenseKeyPack
 
 
 
-### Uninterruptible Power Supply
+## Uninterruptible Power Supply
 
 Namespace: root\cimv2
 
@@ -5824,7 +5823,7 @@ class Win32_UninterruptiblePowerSupply
 
 
 
-### USB Controller
+## USB Controller
 
 Namespace: root\cimv2
 
@@ -5875,7 +5874,7 @@ class Win32_USBController
 
 
 
-### USB Device
+## USB Device
 
 Namespace: root\cimv2
 
@@ -5912,7 +5911,7 @@ class Win32_USBDevice
 
 
 
-### USM User Profile
+## USM User Profile
 
 Namespace: root\cimv2
 
@@ -5953,7 +5952,7 @@ class Win32_UserProfile
 
 
 
-### Video Controller
+## Video Controller
 
 Namespace: root\cimv2
 
@@ -6076,7 +6075,7 @@ class Win32_VideoController
 
 
 
-### Virtual Application Packages
+## Virtual Application Packages
 
 Namespace: root\Microsoft\appvirt\client
 
@@ -6105,7 +6104,7 @@ class Package
 
 
 
-### Virtual Applications
+## Virtual Applications
 
 Namespace: root\Microsoft\appvirt\client
 
@@ -6130,7 +6129,7 @@ class Application
 
 
 
-### Virtual Machine (64)
+## Virtual Machine (64)
 
 Namespace: root\cimv2
 
@@ -6145,7 +6144,7 @@ class Win32Reg_SMSGuestVirtualMachine64
 
 
 
-### Virtual Machine
+## Virtual Machine
 
 Namespace: root\cimv2
 
@@ -6160,7 +6159,7 @@ class Win32Reg_SMSGuestVirtualMachine
 
 
 
-### Virtual Machine Details
+## Virtual Machine Details
 
 Namespace: root\vm\VirtualServer
 
@@ -6195,7 +6194,7 @@ class VirtualMachine
 
 
 
-### Volume
+## Volume
 
 Namespace: root\cimv2
 
@@ -6286,7 +6285,7 @@ class Win32_Volume
 
 
 
-### CCM_WebAppInstallInfo
+## CCM_WebAppInstallInfo
 
 Namespace: root\ccm\cimodels
 
@@ -6307,7 +6306,7 @@ class CCM_WebAppInstallInfo
 
 
 
-### SMS_Windows8Application
+## SMS_Windows8Application
 
 Namespace: root\cimv2\sms
 
@@ -6338,7 +6337,7 @@ class SMS_Windows8Application
 
 
 
-### SMS_Windows8ApplicationUserInfo
+## SMS_Windows8ApplicationUserInfo
 
 Namespace: root\cimv2\sms
 
@@ -6355,7 +6354,7 @@ class SMS_Windows8ApplicationUserInfo
 
 
 
-### Windows Update
+## Windows Update
 
 Namespace: root\cimv2
 
@@ -6372,7 +6371,7 @@ class Win32Reg_SMSWindowsUpdate
 
 
 
-### Windows Update Agent Version
+## Windows Update Agent Version
 
 Namespace: root\cimv2\sms
 
@@ -6383,7 +6382,7 @@ class Win32_WindowsUpdateAgentVersion
 
 
 
-### Write Filter State
+## Write Filter State
 
 Namespace: root\cimv2\sms
 
