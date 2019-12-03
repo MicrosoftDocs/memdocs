@@ -1,0 +1,44 @@
+---
+title: Technical preview 1912
+titleSuffix: Configuration Manager
+description: Learn about new features available in the Configuration Manager technical preview branch version 1912.
+ms.date: 12/11/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+ms.assetid: ef972b5f-61f6-49a9-91a9-f70bf5c325b0
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.collection: M365-identity-device-management
+---
+
+# Features in Configuration Manager technical preview version 1912
+
+*Applies to: Configuration Manager (technical preview branch)*
+
+This article introduces the features that are available in the technical preview for Configuration Manager, version 1912. Install this version to update and add new features to your technical preview site.
+
+Review the [technical preview](/sccm/core/get-started/technical-preview) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.
+
+The following sections describe the new features to try out in this version:
+
+<!-- [!INCLUDE [Example feature name](includes/1912/1234567.md)] -->
+
+[!INCLUDE [4831871](includes/1912/4831871.md)]
+[!INCLUDE [5229962](includes/1912/5229962.md)]
+[!INCLUDE [5526972](includes/1912/5526972.md)]
+[!INCLUDE [3607758](includes/1912/3607758.md)]
+[!INCLUDE [4226618](includes/1912/4226618.md)]
+
+<!--
+## General known issues
+
+[!INCLUDE [Hardware inventory reports](includes/1912/known-issue-osd.md)]
+-->
+
+## Next steps
+
+For more information about installing or updating the technical preview branch, see [Technical preview](/sccm/core/get-started/technical-preview).
+
+For more information about the different branches of Configuration Manager, see [Which branch of Configuration Manager should I use?](/sccm/core/understand/which-branch-should-i-use)
