@@ -207,6 +207,9 @@ You can specify when the task sequence can run by defining a maintenance window 
 > [!IMPORTANT]  
 > When you configure a maintenance window to run a task sequence, once the task sequences starts it continues to run even if the maintenance window closes.  
 
+If a device has more than one maintenance window applied, the client may ignore an **All deployments** maintenance window. Starting in version 1810, use the following client setting to control this behavior: **Enable installation of software updates in "All deployments" maintenance window when "Software Update" maintenance window is available**. For more information, see [About client settings](/configmgr/core/clients/deploy/about-client-settings#bkmk_SUMMaint)<!-- SCCMDocs-pr #4596 -->
+
+
 ## <a name="BKMK_TSNetworkAccessAccount"></a> Task sequences and the network access account  
 
 > [!Important]  
