@@ -563,7 +563,7 @@ class Win32_CDROMDrive
 
 - (UInt32) FileSystemFlagsEx
 
-- (String) Id
+- (String) ID
 
 - (DateTime) InstallDate
 
@@ -2445,7 +2445,7 @@ Namespace: root\Nap
 class NAP_SystemHealthAgent
 
 
-- (UInt32) id
+- (UInt32) ID
 
 - (String) description
 
@@ -2898,7 +2898,7 @@ class CCM_OfficeAddin
 
 - (String) Architecture
 
-- (String) Id
+- (String) ID
 
 - (String) OfficeApp
 
@@ -5544,7 +5544,7 @@ class Win32_TapeDrive
 
 - (UInt32) FeaturesLow
 
-- (String) Id
+- (String) ID
 
 - (DateTime) InstallDate
 
