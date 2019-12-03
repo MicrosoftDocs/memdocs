@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 11/29/2019
+ms.date: 12/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Release notes for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a Microsoft Support knowledge base article.  
 
@@ -36,6 +36,16 @@ For information about the new features introduced with different versions, see t
 
 
 ## Set up and upgrade  
+
+### Site server in passive mode doesn't update configuration.mof
+
+<!-- 5787848 -->
+
+*Applies to version 1910*
+
+If your site includes a [site server in passive mode](/configmgr/core/servers/deploy/configure/site-server-high-availability), you may lose inventory customizations when you update the site. The site doesn't currently synchronize the configuration.mof when you fail over the site servers.
+
+To workaround this issue, manually back up and restore the site's configuration.mof.
 
 ### Setup prerequisite warning on domain functional level on Server 2019
 
