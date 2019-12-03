@@ -1,8 +1,8 @@
 ﻿---
 title: Troubleshoot MSfB integration
 titleSuffix: Configuration Manager
-description: Provides suggestions and resolutions to troubleshoot some of the most common problems with Microsoft Store for Business integration.
-ms.date: 08/30/2019
+description: Provides suggestions and resolutions to troubleshoot some of the most common problems with Microsoft Store for Business and Education integration.
+ms.date: 12/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -13,11 +13,11 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Troubleshoot the Microsoft Store for Business integration with Configuration Manager
+# Troubleshoot the Microsoft Store for Business and Education integration with Configuration Manager
 
-This article provides key troubleshooting tips and fixes for some of the top issues that you may have with the Microsoft Store for Business (MSfB) integration with Configuration Manager.
+This article provides key troubleshooting tips and fixes for some of the top issues that you may have with the Microsoft Store for Business and Education (MSfB) integration with Configuration Manager.
 
-For more information about using the Microsoft Store for Business with Configuration Manager, see [Manage apps from the Microsoft Store for Business with Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+For more information about using the Microsoft Store for Business and Education with Configuration Manager, see [Manage apps from the Microsoft Store for Business and Education with Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
 ## Monitor
 
@@ -85,11 +85,11 @@ Then look at one of the following sections for common issues:
 
 #### Cause
 
-This issue can occur if the configured Azure Active Directory (Azure AD) application doesn't have permissions to manage the Microsoft Store for Business for this tenant.
+This issue can occur if the configured Azure Active Directory (Azure AD) application doesn't have permissions to manage the Microsoft Store for Business and Education for this tenant.
 
 #### Workaround
 
-1. Open the [Microsoft Store for Business portal](https://www.microsoft.com/business-store), and sign in as an administrator.
+1. Sign in as an administrator to the Microsoft Store for Business or Education portal.
 1. Go to **Settings**, and select **Management tools**.
 1. If the application isn't listed, select **Add a management tool**. Then search by name and select the Azure AD application associated with the same ClientID as Configuration Manager.
 1. If the status doesn't show **Active**, then select **Activate** in the **Action** section.
@@ -99,14 +99,14 @@ This issue can occur if the configured Azure Active Directory (Azure AD) applica
 > To find the ClientID in Configuration Manager:
 >
 > 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Active Directory Tennts** node.
-> 1. Select the tenant that you use for the Microsoft Store for Business integration.
+> 1. Select the tenant that you use for the Microsoft Store for Business and Education integration.
 > 1. In the results pane, find the matching application, and look at the **Client ID** column.
 
 ### <a name="bkmk_fail-symptom2"></a> The secret key is invalid
 
 #### Cause
 
-This issue can occur if the secret key has expired on the Azure AD app for the Microsoft Store for Business configuration.
+This issue can occur if the secret key has expired on the Azure AD app for the Microsoft Store for Business and Education configuration.
 
 #### Resolution
 
@@ -120,7 +120,7 @@ This issue can occur if the connected app no longer exists in Azure AD.
 
 #### Resolution
 
-Delete and recreate the connection to the Microsoft Store for Business.
+Delete and recreate the connection to the Microsoft Store for Business and Education.
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Microsoft Store for Business** node.
 1. Select the existing connection.
@@ -129,13 +129,13 @@ Delete and recreate the connection to the Microsoft Store for Business.
 Then recreate the connection. For more information, see the following articles:
 
 - [Configure Azure Services](/sccm/core/servers/deploy/configure/azure-services-wizard)
-- [Set up Microsoft Store for Business synchronization](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_setup)
+- [Set up Microsoft Store for Business and Education synchronization](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_setup)
 
 ### <a name="bkmk_fail-symptom4"></a> Content location does not exist
 
 #### Cause
 
-When you set up the Microsoft Store for Business connection, you specify a network share for storing synchronized content. This issue can occur if this share doesn't exist or has incorrect permissions.
+When you set up the Microsoft Store for Business and Education connection, you specify a network share for storing synchronized content. This issue can occur if this share doesn't exist or has incorrect permissions.
 
 To see the location that you configured:
 
@@ -143,7 +143,7 @@ To see the location that you configured:
 
 1. Select the account and open its **Properties**.
 
-1. Switch to the **Configuration** tab. The **Location** setting shows the network path to store application content downloaded from the Microsoft Store for Business.
+1. Switch to the **Configuration** tab. The **Location** setting shows the network path to store application content downloaded from the Microsoft Store for Business and Education.
 
 #### Workaround
 
@@ -188,7 +188,7 @@ You can't automatically sync these apps, but you can download the content, and m
 
     `Error(s) syncing or downloading application <ApplicationID> from the Microsoft Store for Business.`
 
-1. Go to the [Microsoft Store for Business portal](https://www.microsoft.com/business-store), and sign in as a store administrator. Find the page for this application.
+1. Sign in as an administrator to the Microsoft Store for Business or Education portal. Find the page for this application.
 
     > [!Tip]
     > The URL for the page is similar to: `https://businessstore.microsoft.com/en-us/store/p/app/ApplicationID`
@@ -300,7 +300,7 @@ To resolve this problem, restart the **SMS_Executive** service.
 
 #### Cause
 
-This issue can occur if the Microsoft Store for Business application's license information doesn't contain localized data for the specified language.
+This issue can occur if the Microsoft Store for Business and Education application's license information doesn't contain localized data for the specified language.
 
 #### Workaround
 
@@ -328,7 +328,7 @@ Start a new sync. When the sync completes, it should verify and download any inc
 
 #### Cause
 
-This issue can occur if you deploy the application to a client running a version of Windows 10 earlier than version 1511. Offline licensed apps from the Microsoft Store for Business are only supported on Windows 10 version 1511 and later.
+This issue can occur if you deploy the application to a client running a version of Windows 10 earlier than version 1511. Offline licensed apps from the Microsoft Store for Business and Education are only supported on Windows 10 version 1511 and later.
 
 #### Resolution
 
@@ -338,10 +338,3 @@ Install the latest version of Windows 10.
 ## Next steps
 
 To find additional help, see [Find help for using Configuration Manager](/sccm/core/understand/find-help).
-
-<!-- these videos are old...1604/1605, is there still benefit in linking to them?
-- Here are also some videos to learn more about it:
-
-  - [How to set up the required prerequisites in AAD and the Microsoft Store for Business portal](https://www.youtube.com/watch?v=fC1AQY42flQ)
-  - [Choose languages to sync and create apps from app metadata for each Microsoft Store for Business, and how to create apps from app metadata](https://www.youtube.com/watch?v=VJs-475rfaI)
- -->
