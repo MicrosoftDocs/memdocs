@@ -2,7 +2,7 @@
 title: Windows client deployment prerequisites
 titleSuffix: Configuration Manager
 description: Learn about the prerequisites for deploying the Configuration Manager client to Windows computers.
-ms.date: 07/26/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -81,14 +81,14 @@ If the client requires these dependencies to complete the installation, it autom
 |Microsoft SQL Server Compact 4.0 SP1 components|Required to store information related to client operations.|  
 
 > [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
 > - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
 > - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
 >
-> If you're still using the application catalog website user experience, the client requires Microsoft Silverlight 5.1.41212.0. Starting in Configuration Manager 1802, the client doesn't automatically install Silverlight. The primary functionality of the application catalog is now included in Software Center.<!--1356195-->
+> If you're still using the application catalog website user experience, the client requires Microsoft Silverlight 5.1.41212.0. The client doesn't automatically install Silverlight. The primary functionality of the application catalog is now included in Software Center.<!--1356195-->
 
 #### <a name="dotNet"></a> Additional details about Microsoft .NET Framework version 4.5.2  
 
@@ -134,7 +134,7 @@ The following prerequisites are specific to the various methods of client instal
 
 - The client computer needs to communicate with a distribution point or a management point to download the source files.  
 
-- Starting in version 1806, when you require Kerberos mutual authentication, clients must be in a trusted Active Directory forest. Kerberos in Windows relies upon Active Directory for mutual authentication.<!--1358204-->  
+- When you require Kerberos mutual authentication, clients must be in a trusted Active Directory forest. Kerberos in Windows relies upon Active Directory for mutual authentication.<!--1358204-->  
 
 To use client push, you need the following security permissions:  
 

@@ -2,7 +2,7 @@
 title: How to enable TLS 1.2
 titleSuffix: Configuration Manager
 description: Information about how to enable TLS 1.2 for Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -227,7 +227,7 @@ To resolve this issue, follow these steps:
 ### Application catalog doesn't initialize
 
 > [!Important]  
-> The application catalog is deprecated. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
+> Support ends for the application catalog roles with version 1910. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
 
 If the application catalog doesn't initialize, check the **ServicePortalWebSite.svclog** file for the following error entry:
 
@@ -261,7 +261,7 @@ To resolve this issue, follow these steps:
 ### Software Center or browser doesn't communicate with the application catalog
 
 > [!Important]  
-> The application catalog is deprecated. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
+> Support ends for the application catalog roles with version 1910. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
 
 The best method to make Software Center work with for user-available apps in a TLS 1.2-enabled site, remove the application catalog role. Then let Software Center communicate directly with a management point. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat).
 
@@ -287,7 +287,7 @@ When you try to create applications in Azure Active Directory (Azure AD), if the
 
 ### Configuration Manager cloud services and TLS 1.2
 
-Starting in version 1802, the Azure virtual machines used by the cloud management gateway and cloud distribution points support TLS 1.2. Supported clients on version 1802 or later automatically use TLS 1.2.
+The Azure virtual machines used by the cloud management gateway and cloud distribution points support TLS 1.2. Supported client versions automatically use TLS 1.2.
 
 The **SMSAdminui.log** may contain an error similar to the following example:
 

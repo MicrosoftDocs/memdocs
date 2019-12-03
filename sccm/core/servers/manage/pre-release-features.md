@@ -1,8 +1,8 @@
 ---
 title: Pre-release features
 titleSuffix: Configuration Manager
-description: Pre-release features are features that are in the Current Branch for early testing in a production environment.
-ms.date: 07/26/2019
+description: Pre-release features are features that are in the current branch for early testing in a production environment.
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -15,11 +15,9 @@ ms.collection: M365-identity-device-management
 
 # Pre-release features in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Pre-release features are features that are in the current branch for early testing in a production environment. These features are fully supported, but still in active development. They might receive changes until they move out of the pre-release category.
-
-
 
 ## Give consent  
 
@@ -31,37 +29,33 @@ Before using pre-release features, give consent to use pre-release features. Giv
 
 3. On the **General** tab of Hierarchy Settings Properties, enable the option to **Consent to use pre-release features**. Click **OK**.  
 
-
-
-## Enabling pre-release features
+## Enable pre-release features
 
 When you install an update that includes pre-release features, those features are visible in the Updates and Servicing Wizard with the regular features included in the update.
 
-#### If you have given consent
-In the Updates and Servicing Wizard, enable pre-release features. Select the pre-release features as you would any other feature.     
+### If you have given consent
+
+In the Updates and Servicing Wizard, enable pre-release features. Select the pre-release features as you would any other feature.
 
 Optionally, wait to enable pre-release features later from the **Features** node under **Updates and Servicing** in the **Administration** workspace. Select a feature, and then click **Turn on** in the ribbon. Until you give consent, this option isn't available for use.
 
-#### If you haven't given consent
+### If you haven't given consent
+
 In the Updates and Servicing Wizard, pre-release features are visible but you can't enable them. After the update is installed, these features are visible in the **Features** node. However, you can't enable them until you give consent.
 
-
-> [!Important]  
+> [!IMPORTANT]  
 > In a multi-site hierarchy, you can only enable optional or pre-release features from the central administration site. This behavior ensures there are no conflicts across the hierarchy. <!--507197-->  
-> 
+>
 > If you gave consent at a stand-alone primary site, and then expand the hierarchy by installing a new central administration site, you must give consent again at the central administration site.  
 
 When you enable a pre-release feature, the Configuration Manager hierarchy manager (HMAN) must process the change before that feature becomes available. Processing of the change is often immediate. Depending on the HMAN processing cycle, it can take up to 30 minutes to complete. After the change is processed, restart the console before using the feature.
 
-
-
-## <a name="bkmk_table"></a>Pre-release features
+## <a name="bkmk_table"></a> List of pre-release features
 
 <!--Note/tip for target article
 
 > [!Note]  
 > In this version of Configuration Manager, <feature name> is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).  
-
 
 > [!Tip]  
 > This feature was first introduced in version 1702 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1906, it's no longer a pre-release feature.  
@@ -81,20 +75,13 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 | [Client apps for co-managed devices](/sccm/comanage/workloads#client-apps) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C--> | Version 1806 | ![Not yet](media/red_x.png) |
 | [SCAP extensions](/sccm/compliance/plan-design/scap/about-scap) <!--3607889--> | Version 1806 | ![Not yet](media/red_x.png) |
 | [Package conversion manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | Version 1806 | Version 1810 |
-| [Support for Cisco AnyConnect 4.0.07x and later for iOS](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | Version 1802 | Version 1802 <br>with update 4163547 |
 | [Phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | Version 1802 | Version 1806 |
-| [Run task sequence step](/sccm/osd/understand/task-sequence-steps#child-task-sequence) <!--1261338--> |  Version 1710 | Version 1802 |
-| [Windows Defender Exploit Guard](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468--> | Version 1710 | Version 1802 |
-| [Device health attestation assessment for conditional access compliance policies](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616--> | Version 1710 | Version 1802 |
-| [Create and run Windows PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459--> | Version 1706 | Version 1802 |
-| [Device Guard management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--3600958 (fka 1355092 & 1319346)--> | Version 1702 | Version 1906 |
-| [Cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) <!--1101764--> | Version 1610 | Version 1802 |
-| [Azure Log Analytics connector](/sccm/core/clients/manage/sync-data-log-analytics) <!--1236739--> | Version 1606 | Version 1802 |
+| [Windows Defender Application Control management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--3600958 (fka 1355092 & 1319346)--> | Version 1702 | Version 1906 |
 | [Servicing a cluster-aware collection (Server groups)](/sccm/sum/deploy-use/service-a-server-group) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697--> | Version 1602 | ![Not yet](media/red_x.png) |
 
 <!--Image used = ![Not yet](media/red_x.png) -->
 
-> [!Tip]  
+> [!TIP]  
 > For more information on non-pre-release features that you must enable first, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).  
-> 
+>
 > For more information on features that are only available in the technical preview branch, see [Technical Preview](/sccm/core/get-started/technical-preview).  

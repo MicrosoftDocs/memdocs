@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 08/23/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # About client settings in Configuration Manager
 
-*Applies to: System Center Configuration Manager (current branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Manage all client settings in the Configuration Manager console from the **Client Settings** node in the **Administration** workspace. Configuration Manager comes with a set of default settings. When you change the default client settings, these settings are applied to all clients in the hierarchy. You can also configure custom client settings, which override the default client settings when you assign them to collections. For more information, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
 
@@ -120,7 +120,6 @@ This setting applies to users when their computer is on either the intranet or t
 >
 > If you're still using the application catalog, it receives the list of available software for users from the site server. Thus, this setting doesn't have to be **Yes** for users to see and request applications from the application catalog. If this setting is **No**, users can't install the applications that they see in the application catalog.  
 
-
 ### Enable user policy requests from internet clients
 
 Set this option to **Yes** for users to receive the user policy on internet-based computers. The following requirements also apply:  
@@ -138,6 +137,17 @@ If you set this option to **No**, or any of the previous requirements aren't met
 > [!NOTE]  
 > For internet-based client management, application approval requests from users don't require user policies or user authentication. The cloud management gateway doesn't support application approval requests.  
 
+### Enable user policy for multiple user sessions
+
+<!--4737447-->
+
+*Applies to version 1910*
+
+By default, this setting is disabled. Even if you enable user policies, starting in version 1906 the client disables them by default on any device that allows multiple concurrent active user sessions. For example, terminal servers or Windows 10 Enterprise multi-session in [Windows Virtual Desktop](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-virtual-desktop).
+
+The client only disables user policy when it detects this type of device during a new installation. For an existing client of this type that you update to version 1906 or later, the previous behavior persists. On an existing device, it configures the user policy setting even if it detects that the device allows multiple user sessions.
+
+If you require user policy in this scenario, and accept any potential performance impact, enable this client setting.
 
 
 ## Cloud services
@@ -185,7 +195,7 @@ For more information about the following three settings, see [User notifications
 ### Default Application Catalog website point
 
 > [!Important]  
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -197,7 +207,7 @@ Configuration Manager uses this setting to connect users to the application cata
 ### Add default Application Catalog website to Internet Explorer trusted sites zone
 
 > [!Important]  
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -343,10 +353,10 @@ You use Configuration Manager boundary groups to define and regulate content dis
 
 Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content.
 
-### Enable devices managed by Configuration Manager to use Delivery Optimization In-Network Cache servers (Beta) for content download
+### Enable devices managed by Configuration Manager to use Microsoft Connected Cache servers for content download
 
 <!--3555764-->
-Choose **Yes** to allow clients to download content from an on-premises distribution point that you enable as a Delivery Optimization In-Network Cache (DOINC) server. For more information, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache).
+Choose **Yes** to allow clients to download content from an on-premises distribution point that you enable as a Microsoft Connected Cache server. For more information, see [Microsoft Connected Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/microsoft-connected-cache).
 
 
 ## Endpoint Protection
@@ -651,8 +661,10 @@ When you enable this option, applications that are already installed no longer s
 
 ### <a name="bkmk_HideAppCat"></a> Hide Application Catalog link in Software Center
 
-Starting in Configuration Manager version 1806, you can specify the visibility of the application catalog web site link in Software Center. When this option is set, users won't see the application catalog web site link in the Installation status node of Software Center. <!--1358214-->
+Specify the visibility of the application catalog web site link in Software Center. When this option is set, users won't see the application catalog web site link in the Installation status node of Software Center. <!--1358214-->
 
+> [!Important]  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 
 ### Software Center tab visibility
 
@@ -686,7 +698,7 @@ Configure the additional settings in this group to **Yes** to make the following
 - **Installation Status**
 - **Device Compliance**
 - **Options**
-- **Specify a custom tab for Software Center** (starting in version 1806) <!--1358132-->
+- **Specify a custom tab for Software Center** <!--1358132-->
     - **Tab name**
     - **Content URL**
 
@@ -861,10 +873,11 @@ Use this setting to specify the period of time for the previous setting. You can
 
 *(Introduced in version 1902)*
 
-Set this option to **Yes** to allow clients to use delta content files. This setting allows the Windows Update Agent on the device to determine what content is needed and selectively download it.
+Set this option to **Yes** to allow clients to use delta content files. This setting allows the Windows Update Agent on the device to determine what content is needed and selectively download it. 
 
-> [!NOTE]
-> This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
+- Before enabling this client setting, ensure Delivery Optimization is configured appropriately for your environment. For more information, see [Windows Delivery Optimization](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#windows-delivery-optimization).
+ - This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
+ - Starting in Configuration Manager version 1910, when this option is set, delta download is used for all Windows update installation files, not just express installation files.
 
 
 ### Port that clients use to receive requests for delta content

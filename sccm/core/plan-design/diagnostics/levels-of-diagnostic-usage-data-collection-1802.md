@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
+ROBOTS: NOINDEX
 ---
 # Levels of diagnostic usage data collection for version 1802 of System Center Configuration Manager
 
