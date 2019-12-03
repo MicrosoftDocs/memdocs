@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 10/14/2019
+ms.date: 12/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -109,6 +109,10 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 ### Licensing and costs
 
 Devices enrolled in Desktop Analytics may only be used by licensed users of:
+
+- Configuration Manager. For more information, see [Configuration Manager licensing](/configmgr/core/understand/product-and-licensing-faq)
+
+and 
 
 - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F1, E3, or E5)
 
