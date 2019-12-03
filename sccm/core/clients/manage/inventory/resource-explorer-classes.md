@@ -8,7 +8,7 @@ ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: 1d333f4c-0f85-4278-b421-064cf01529a5
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
