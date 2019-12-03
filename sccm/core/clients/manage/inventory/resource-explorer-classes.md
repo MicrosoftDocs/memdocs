@@ -4,11 +4,11 @@ titleSuffix: Configuration Manager
 description: "Shows the classes that appear in Resource Explorer"
 ms.date: 11/12/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: 1d333f4c-0f85-4278-b421-064cf01529a5
-author: adamgrosstx
+author: aaroncz
 ms.author: aaroncz
 manager: dougeby
 ---
