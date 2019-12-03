@@ -30,6 +30,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [5526972](includes/1912/5526972.md)]
 [!INCLUDE [3607758](includes/1912/3607758.md)]
 [!INCLUDE [4226618](includes/1912/4226618.md)]
+[!INCLUDE [5842295](includes/1912/5842295.md)]
 
 <!--
 ## General known issues
