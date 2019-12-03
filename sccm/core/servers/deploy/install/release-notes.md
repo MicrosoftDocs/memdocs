@@ -85,6 +85,21 @@ Move the service connection point role to another server.
 <!-- ## Backup and recovery  -->
 
 <!--## Client deployment and upgrade-->
+## Application management
+
+### Unable to get certificate for Powershell error when deploying Microsoft Edge, version 77 and later
+<!--5769384-->
+*Applies to: Configuration Manager version 1910*
+
+If you are running the Configuration Manager console on an OS where the language is Swedish, Hungarian, or Japanese, you'll receive the following error when deploying Microsoft Edge, version 77 and later:
+
+- Unable to get certificate for Powershell
+
+This error occurs because a `scripts` folder doesn't exist under the `AdminConsole\bin` directory for Swedish, Hungarian, or Japanese languages. The scripts folder is localized in these OS languages.
+
+#### Workaround
+
+Create a folder called `scripts` in the `AdminConsole\bin` directory. Copy the files from your localized folder to the newly created `scripts` folder. Deploy Microsoft Edge, version 77 and later once the files have been copied.
 
 
 ## OS deployment

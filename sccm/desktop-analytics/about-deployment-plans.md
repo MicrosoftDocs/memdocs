@@ -79,6 +79,8 @@ The Windows upgrade decision to **Replace device** can be because of one of the 
 - There's a wireless component that uses an XP-emulated driver
 - A network component with an active connection will lose its driver. In other words, after upgrade it could lose network connectivity.
 
+The Windows upgrade decision to **Re-install** indicates the upgrade will require a reinstall as opposed to an in-place upgrade. 
+
 ### Apps
 
 Set the **Upgrade decision** and the **Importance** for this app in this deployment plan. For more information, see [How to create deployment plans](/sccm/desktop-analytics/create-deployment-plans).

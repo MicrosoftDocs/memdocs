@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 11/29/2019
+ms.date: 12/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -370,6 +370,8 @@ Configure the following settings:
 
 For more information on these Windows setup answer file values, see [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
+> [!NOTE]
+> If you create a custom Windows setup answer file (unattend.xml), this step overwrites any existing values. To automate a dynamic process for these settings, use the related task sequence variables. For example, [OSDWindowsSettingsInputLocale](/configmgr/osd/understand/task-sequence-variables#OSDWindowsSettingsInputLocale). 
 
 ## <a name="BKMK_AutoApplyDrivers"></a> Auto Apply Drivers  
 

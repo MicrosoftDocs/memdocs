@@ -31,7 +31,7 @@ General notes about Software Center functionality:
 
 For the simplest method to start Software Center on a Windows 10 computer, press **Start** and type `Software Center`. You may not need to type the entire string for Windows to find the best match.
 
-If you browse the Start menu, look for the **Software Center** icon in the **Microsoft Endpoint Manager** group.
+If you navigate the Start menu, look under the **Microsoft Endpoint Manager** group for the **Software Center** icon.
 
 ![Microsoft Endpoint start menu icons](media/microsoft-endpoint-start-menu.png)
 
