@@ -31,7 +31,7 @@ For information about the new features introduced with different versions, see t
 - [What's new in version 1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)
 
 > [!Tip]  
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: 
+> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
 
 
@@ -45,7 +45,7 @@ For information about the new features introduced with different versions, see t
 
 If your site includes a [site server in passive mode](/configmgr/core/servers/deploy/configure/site-server-high-availability), you may lose inventory customizations when you update the site. The site doesn't currently synchronize the configuration.mof when you fail over the site servers.
 
-To workaround this issue, manually back up and restore the site's configuration.mof.
+To work around this issue, manually back up and restore the site's configuration.mof.
 
 ### Setup prerequisite warning on domain functional level on Server 2019
 
@@ -189,3 +189,31 @@ When you remove a collection, select **OK** to close the properties window. Then
 When you use the Configuration Manager console to monitor your pilot deployment status, pilot devices that are up-to-date on the target version of Windows for that deployment plan show as **undefined** in the Pilot status tile.  
 
 These **undefined** devices are **up-to-date** with the target version of the OS for that deployment plan. No further action is necessary.
+
+## Cloud services
+
+### Can't download content from a cloud management gateway enabled for TLS 1.2
+
+<!-- 5771680 -->
+
+*Applies to version 1906, 1910*
+
+If you enable a cloud management gateway (CMG) to **function as a cloud distribution point and serve content from Azure storage** and **Enforce TLS 1.2**, you may see content downloads fail.
+
+The following errors show in the DataTransferService.log on the client:
+
+``` log
+Request to https://cmg1.contoso.com:443/downloadrestservice.svc/getcontentxmlsecure?pid=CMG00013&cid=CMG00013&tid=GUID:3fb5cf5d-28a5-4460-ab39-9184ca214369&iss=CMDP.IAAS2.CONTOSO.COM&alg=1.2.840.113549.1.1.11&st=2019-11-19T01:44:04&et=2019-11-19T09:44:04 failed with 400
+Successfully queued event on HTTP/HTTPS failure for server 'cmg1.contoso.com'.
+Error sending DAV request. HTTP code 400, status 'Bad Request'
+GetDirectoryList_HTTP('https://cmg1.contoso.com:443/downloadrestservice.svc/getcontentxmlsecure?pid=CMG00013&cid=CMG00013&tid=GUID:3fb5cf5d-28a5-4460-ab39-9184ca214369&iss=CMDP.IAAS2.CONTOSO.COM&alg=1.2.840.113549.1.1.11&st=2019-11-19T01:44:04&et=2019-11-19T09:44:04') failed with code 0x87d0027e.​
+Error retrieving manifest (0x87d0027e).
+```
+
+The following errors show in the CMGContentService.log on the server:
+
+``` log
+ERROR: Exception processing request. Microsoft.WindowsAzure.Storage.StorageException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.ComponentModel.Win32Exception: The client and server cannot communicate, because they do not possess a common algorithm...
+```
+
+To work around this issue, use a traditional [cloud distribution point](/configmgr/core/plan-design/hierarchy/use-a-cloud-based-distribution-point). That role doesn't enforce TLS 1.2, but is compatible with clients that require TLS 1.2.
