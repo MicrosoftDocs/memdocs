@@ -5,7 +5,7 @@ description: "Review Office 365 client information from the Office 365 Client Ma
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -38,6 +38,14 @@ The Office 365 Client Management dashboard starts displaying data as hardware in
 *(Introduced in version 1906 as a prerequisite)*
 
 Starting in version 1906, devices that have Office installed need internet connectivity to populate add-in information for the [Office 365 ProPlus upgrade readiness dashboard](#bkmk_readiness-dash). Devices download an add-in readiness file from the [Office Content Delivery Network](https://docs.microsoft.com/office365/enterprise/content-delivery-networks#the-office-365-cdn). This file contains the full list of add-ins that are known to Microsoft and details of their expected performance on Office 365 ProPlus. Each device uses the information from the file to determine add-in compatibility. If a device can't download the file, it will have an add-in readiness status of **Needs Review**.
+
+### Connectivity for top level site server
+
+*(Introduced in version 1906 as a prerequisite)*
+
+Your top level site server needs access to the following endpoint to download the readiness file:
+
+`https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab` 
 
 ### Enable data collection for Office 365 ProPlus
 

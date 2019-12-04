@@ -898,6 +898,19 @@ When you set this option to **Yes**, it enables the configuration of Office 365 
 
 When you set this option to **Yes** and the client has at least one "Software Update" maintenance window defined, software updates will install during an "All deployments" maintenance window. By default, this setting is set to **No**. This client setting was added in Configuration Manager version 1810. <!--2839307-->
 
+> [!NOTE]
+> This setting also applies to maintenance windows that you configure to apply to **Task sequences**.<!-- SCCMDocs-pr #4596 -->
+
+#### Maintenance window example
+
+For example, you configure the following maintenance windows:
+
+- **All deployment**: 02:00 - 04:00
+- **Software updates**: 04:00 - 06:00
+
+By default, the client only installs software updates during the second maintenance window. It ignores the maintenance window for all deployments in this scenario. When you change this setting to **Yes**, the client installs software updates between 02:00 - 06:00.
+
+
 ### <a name="bkmk_thread-priority"></a> Specify thread priority for feature updates
 
 <!--3734525-->
