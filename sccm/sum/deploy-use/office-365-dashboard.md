@@ -45,7 +45,7 @@ Starting in version 1906, devices that have Office installed need internet conne
 
 Your top level site server needs access to the following endpoint to download the readiness file:
 
-- https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab 
+`https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab` 
 
 ### Enable data collection for Office 365 ProPlus
 
