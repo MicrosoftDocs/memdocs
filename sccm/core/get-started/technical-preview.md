@@ -130,6 +130,7 @@ The following features are available with the most recent Configuration Manager 
 - [3607758](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--3607758-->
 - [4226618](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--4226618-->
 - [5842295](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--5842295-->
+- [5573175](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--5573175,5690481-->
 
 > [!NOTE]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
