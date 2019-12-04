@@ -2,7 +2,7 @@
 title: What's new in version 1910
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1906 of Configuration Manager current branch.
-ms.date: 11/29/2019
+ms.date: 12/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -55,11 +55,11 @@ For more information, see the following posts from Brad Anderson, Microsoft corp
 
 In version 1910, aside from the name change, Configuration Manager still functions the same. Some of the name changes may impact your use of the following components:
 
-- **Configuration Manager console**: Find shortcuts to the console and the **Remote Control Viewer** under the Windows Start menu in the **Microsoft Endpoint** folder.
+- **Configuration Manager console**: Find shortcuts to the console and the **Remote Control Viewer** under the Windows Start menu in the **Microsoft Endpoint Manager** folder.
 
 - **Software Center**: Find the Software Center shortcut under the Windows Start menu in the **Microsoft Endpoint Manager** folder.
 
-![Microsoft Endpoint start menu icons](media/microsoft-endpoint-start-menu.png)
+![Microsoft Endpoint Manager start menu icons](media/microsoft-endpoint-manager-start-menu.png)
 
 Make sure to update any internal documentation that you maintain to include these new locations.
 
