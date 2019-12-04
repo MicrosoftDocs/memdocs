@@ -112,8 +112,8 @@ For more information about permissions and assigning roles, see [Manage access t
     
 1. To start provisioning the Azure VM, select **Start**. To monitor the deployment status, switch to the **Deployments in Azure** tab in the tool. To get the latest status, select **Refresh deployment status**.
 
-        > [!TIP]
-        > You can also use the [Azure portal](https://portal.azure.com) to check the status, find errors, and determine potential fixes.
+    > [!TIP]
+    > You can also use the [Azure portal](https://portal.azure.com) to check the status, find errors, and determine potential fixes.
 
 1. When the deployment finishes, go to your SQL servers, and grant permissions for the new Azure VM. For more information, see [Site server high availability - Prerequisites](/sccm/core/servers/deploy/configure/site-server-high-availability#prerequisites).
 
