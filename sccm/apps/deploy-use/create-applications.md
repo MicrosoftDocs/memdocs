@@ -2,7 +2,7 @@
 title: Create applications
 titleSuffix: Configuration Manager
 description: Create applications with deployment types, detection methods, and requirements to install software.
-ms.date: 07/26/2019
+ms.date: 12/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -706,6 +706,9 @@ Configuration Manager supports the following deployment types for applications:
 To deploy the app as a link to the Windows Store, configure the group policy **Turn off the Store application**. Set this policy to **Disabled** or **Not configured**. If you enable this setting, clients can't connect to the Windows Store to download and install applications.
 
 Windows clients always evaluate deployment types that use a link to a store before other deployment types. Then the client evaluates deployment types by priority.
+
+> [!TIP]
+> Some store links may cause the following error in the Create Application Wizard: "Invalid Application link". For example, some store *Featured Apps* may cause this error. You can still select **Next** on the **General** page of the wizard. Configuration Manager successfully creates the app, and you can successfully deploy it.<!-- SCCMDocs-pr #4716 -->
 
 ### <a name="bkmk_note2"></a> Note 2: Web Application
 

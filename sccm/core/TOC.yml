@@ -783,6 +783,8 @@
       href: clients/manage/inventory/configure-hardware-inventory.md
     - name: How to use Resource Explorer to view hardware inventory
       href: clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md
+    - name: Resource Explorer default classes
+      href: clients/manage/inventory/resource-explorer-classes.md
     - name: Hardware inventory for Linux and UNIX
       href: clients/manage/inventory/hardware-inventory-for-linux-and-unix.md
     - name: Security and privacy for hardware inventory
