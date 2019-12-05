@@ -2,7 +2,7 @@
 title: What's new in version 1910
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1906 of Configuration Manager current branch.
-ms.date: 11/29/2019
+ms.date: 12/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -55,11 +55,11 @@ For more information, see the following posts from Brad Anderson, Microsoft corp
 
 In version 1910, aside from the name change, Configuration Manager still functions the same. Some of the name changes may impact your use of the following components:
 
-- **Configuration Manager console**: Find shortcuts to the console and the **Remote Control Viewer** under the Windows Start menu in the **Microsoft Endpoint** folder.
+- **Configuration Manager console**: Find shortcuts to the console and the **Remote Control Viewer** under the Windows Start menu in the **Microsoft Endpoint Manager** folder.
 
 - **Software Center**: Find the Software Center shortcut under the Windows Start menu in the **Microsoft Endpoint Manager** folder.
 
-![Microsoft Endpoint start menu icons](media/microsoft-endpoint-start-menu.png)
+![Microsoft Endpoint Manager start menu icons](media/microsoft-endpoint-manager-start-menu.png)
 
 Make sure to update any internal documentation that you maintain to include these new locations.
 
@@ -129,7 +129,7 @@ For more information, see [Microsoft Connected Cache in Configuration Manager](/
 
 You can now add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you have an option to **Evaluate this baseline as part of compliance policy assessment**. When adding or editing a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**.
 
- For a co-managed device and when Intune is configured to take ConfigMgr compliance assessment result as part of the overall compliance status that gets sent to Azure Active Directory and be used for conditional access to customers' Office 365 resources.
+For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Azure Active Directory. You can then use it for conditional access to your Office 365 resources.  
 
 For more information, see [Include custom configuration baselines as part of compliance policy assessment](/sccm/compliance/deploy-use/create-configuration-baselines#bkmk_CAbaselines).
 
@@ -182,7 +182,7 @@ For more information, see the new article on how to [Use the task sequence edito
 
 <!--3555926-->
 
-You can now run a task sequence with the high performance power plan. This option improves the overall speed of the task sequence. It configures Windows to use its built-in high performance power plan, which delivers maximum performance at the expense of higher power consumption.
+You can now run a task sequence with the high-performance power plan. This option improves the overall speed of the task sequence. It configures Windows to use its built-in high-performance power plan, which delivers maximum performance at the expense of higher power consumption.
 
 For more information, see [Performance improvements for power plans](/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks#bkmk_perf).
 
@@ -254,7 +254,7 @@ For more information, see [Apply Windows Settings](/configmgr/osd/understand/tas
 
 <!--4680263-->
 
-To address timing issues with the Window 10 in-place upgrade task sequence on high performance devices when Windows setup is complete, you can now set a new task sequence variable **SetupCompletePause**. When you assign a value in seconds to this variable, the Windows setup process delays that amount of time before it starts the task sequence. This timeout provides the Configuration Manager client additional time to initialize.
+To address timing issues with the Window 10 in-place upgrade task sequence on high-performance devices when Windows setup is complete, you can now set a new task sequence variable **SetupCompletePause**. When you assign a value in seconds to this variable, the Windows setup process delays that amount of time before it starts the task sequence. This timeout provides the Configuration Manager client additional time to initialize.
 
 For more information, see [Task sequence variables - SetupCompletePause](/configmgr/osd/understand/task-sequence-variables#SetupCompletePause).
 
@@ -264,13 +264,13 @@ For more information, see [Task sequence variables - SetupCompletePause](/config
 
 ### Additional options for third-party update catalogs
 <!--4469002-->
-You now have more granular controls over synchronization of third party updates catalogs. Starting in Configuration Manager version 1910, you can configure the synchronization schedule for each catalog independently. When using catalogs that include categorized updates, you can configure synchronization to include only specific categories of updates to avoid synchronizing the entire catalog. With categorized catalogs, when you're confident you'll deploy a category, you can configure it to automatically download and publish to WSUS.
+You now have more granular controls over synchronization of third-party updates catalogs. Starting in Configuration Manager version 1910, you can configure the synchronization schedule for each catalog independently. When using catalogs that include categorized updates, you can configure synchronization to include only specific categories of updates to avoid synchronizing the entire catalog. With categorized catalogs, when you're confident you'll deploy a category, you can configure it to automatically download and publish to WSUS.
 
 For more information, see [Enable third-party updates](/sccm/sum/deploy-use/third-party-software-updates#bkmk_1910).
 
 ### Use Delivery Optimization for all Windows updates
 <!--4699118-->
-Previously, Delivery Optimization could be leveraged only for express updates. With Configuration Manager version 1910, it’s now possible to use Delivery Optimization for the distribution of all Windows Update content for clients running Windows 10 version 1709 or later.
+Previously, you could only use Delivery Optimization for express updates. With Configuration Manager version 1910, it’s now possible to use Delivery Optimization for the distribution of all Windows Update content for clients running Windows 10 version 1709 or later.
 
 For more information, see [Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#bkmk_DO-1910) and [Client settings for software updates](/sccm/core/clients/deploy/about-client-settings#software-updates).
 
@@ -278,7 +278,7 @@ For more information, see [Optimize Windows 10 update delivery](/sccm/sum/deploy
 <!--4852033-->
 You can now use **Deployed** as an update filter for your automatic deployment rules. This filter helps identify new updates that may need to be deployed to your pilot or test collections.
 
-For more information see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process)
+For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process)
 
 ## <a name="bkmk_o365"></a> Office management
 
@@ -286,7 +286,7 @@ For more information see [Automatically deploy software updates](/sccm/sum/deplo
 ### Office 365 ProPlus Pilot and Health Dashboard
 <!--4488272, 4488301-->
 
-The **Office 365 ProPlus Pilot and Health Dashboard** helps you plan, pilot, and perform your Office 365 ProPlus deployment. The dashboard provides health insights for devices with Office 365 ProPlus to help identify possible issues that may affect your deployment plans. The **Office 365 ProPlus Pilot and Health Dashboard** provides a recommendation for pilot devices based on add-in inventory. For more information, see [Office 365 ProPlus pilot and health dashboard](/sccm/sum/deploy-use/office-365-dashboard#bkmk_pilot).
+The **Office 365 ProPlus Pilot and Health Dashboard** helps you plan, pilot, and deploy Office 365 ProPlus. The dashboard provides health insights for devices with Office 365 ProPlus to help identify possible issues that may affect your deployment plans. The **Office 365 ProPlus Pilot and Health Dashboard** provides a recommendation for pilot devices based on add-in inventory. For more information, see [Office 365 ProPlus pilot and health dashboard](/sccm/sum/deploy-use/office-365-dashboard#bkmk_pilot).
 
 ## <a name="bkmk_protect"></a> Protection
 
@@ -297,7 +297,7 @@ The **Office 365 ProPlus Pilot and Health Dashboard** helps you plan, pilot, and
 Configuration Manager now provides the following management capabilities for BitLocker Drive Encryption:
 
 - Deploy the BitLocker client to managed Windows devices
-- Manage device encryption polices
+- Manage device encryption policies
 - Compliance reports
 - Administration and monitoring website for key recovery
 - A user self-service portal
