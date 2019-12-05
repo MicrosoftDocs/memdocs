@@ -135,6 +135,7 @@ FROM FILE  = 'C:\BitLockerManagement_CERT'
 
 GRANT CONTROL ON CERTIFICATE ::BitLockerManagement_CERT TO RecoveryAndHardwareRead
 GRANT CONTROL ON CERTIFICATE ::BitLockerManagement_CERT TO RecoveryAndHardwareWrite
+END
 ```
 
 ### Verify certificate
