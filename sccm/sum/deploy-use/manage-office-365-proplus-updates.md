@@ -224,4 +224,4 @@ After deploying Office 365 ProPlus, you can change the update channel with Group
 
 ## Next steps
 
-Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For more information, see [Office 365 Client Management dashboard](/sccm/sum/deploy-use/office-365-dashboard). --->
+Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For more information, see [Office 365 Client Management dashboard](/sccm/sum/deploy-use/office-365-dashboard).
