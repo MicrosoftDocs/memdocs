@@ -217,7 +217,7 @@ To ensure that the update channel is set so that deployed updates will be proper
     Example: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
 5. Click **OK**. 
 
-## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
+## <a name="bkmk_channel"></a> Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
 
 After deploying Office 365 ProPlus, you can change the update channel with Group Policy or the Office Deployment Tool (ODT). For example, you can move a device from Semi-Annual Channel to Semi-Annual Channel (Targeted). When changing the channel, Office is updated automatically without having to reinstall or download the full version. For more information, see [Change the Office 365 ProPlus update channel for devices in your organization](https://docs.microsoft.com//deployoffice/change-update-channels).
 
