@@ -66,8 +66,7 @@ To use Delivery Optimization for all Windows update installation files, enable t
 
 > [!IMPORTANT]
 > - Delivery Optimization must be enabled (default) and not bypassed. For more information, see [Windows Delivery Optimization](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#windows-delivery-optimization).
-
-
+> - Delivery Optimization will not be used for Office 365 Client updates if Office COM is enabled.  If you enabled OfficeMgmtCom for SCCM integration, this action must be reversed in order to use Delivery Optimization (DO). The Microsoft Office Click-to-Run Service is responsible for registering and unregistering Office COM (OfficeC2Rcom) application during service startup.  Changing domain policy or SCCM client settings for Office 365 Client Management from ‘Enabled’ to ‘Not configured’ is not enough.  Domain Policy or SCCM Client settings require explicit ‘Disable’ selection for OfficeC2RCom to be successfully deregistered and restore default configuration.
 
 ### Configuration Manager peer cache
 
