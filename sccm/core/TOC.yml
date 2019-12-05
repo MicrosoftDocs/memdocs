@@ -246,6 +246,8 @@
         href: plan-design/security/enable-tls-1-2-client.md
       - name: Enable TLS 1.2 on site servers
         href: plan-design/security/enable-tls-1-2-server.md
+      - name: Common issues when enabling TLS 1.2
+        href: plan-design/security/enable-tls-1-2-troubleshoot.md
 - name: Get started
   items:
   - name: Evaluate Configuration Manager in a lab
