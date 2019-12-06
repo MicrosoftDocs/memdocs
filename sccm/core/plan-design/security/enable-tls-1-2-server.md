@@ -19,10 +19,13 @@ manager: dougeby
 
 
 
+## Enable TLS 1.2 protocol as a security provider
 
 [!INCLUDE [Enable TLS 1.2 protocol as a security provider](includes/enable-tls-1-2-protocol-as-a-security-provider.md)]
 
-[!INCLUDE [Update .Net framework to support TLS 1.2](includes/update-net-framework-to-support-tls-1-2.md)]
+## Update .NET Framework to support TLS 1.2
+
+[!INCLUDE [Update .NET framework to support TLS 1.2](includes/update-net-framework-to-support-tls-1-2.md)]
 
 
 ## Update SQL Server and client components

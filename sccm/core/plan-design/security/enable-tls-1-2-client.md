@@ -42,10 +42,13 @@ If you change this value, restart the computer.
 >
 > If you want to completely disable SSL 3.0 and TLS 1.0, use the SChannel disabled protocols setting in Windows. For more information, see [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/help/245030/how-to-restrict-the-use-of-certain-cryptographic-algorithms-and-protoc).
 
+## Enable TLS 1.2 protocol as a security provider
 
 [!INCLUDE [Enable TLS 1.2 protocol as a security provider](includes/enable-tls-1-2-protocol-as-a-security-provider.md)]
 
-[!INCLUDE [Update .Net framework to support TLS 1.2](includes/update-net-framework-to-support-tls-1-2.md)]
+## Update .NET Framework to support TLS 1.2
+
+[!INCLUDE [Update .NET framework to support TLS 1.2](includes/update-net-framework-to-support-tls-1-2.md)]
 
 
 
