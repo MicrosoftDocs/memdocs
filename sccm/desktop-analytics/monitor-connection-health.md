@@ -51,7 +51,7 @@ This tile displays the following basic information about the connection from Con
 
 This tile shows when Configuration Manager syncs with the Desktop Analytics cloud service, and how many devices it syncs.
 
-- **Devices synced**: The number of unique devices that Configuration Manager sent to Desktop Analytics. The service includes these devices in the currently visible snapshot.
+- **Devices synced**: The number of eligible devices that Configuration Manager sent to Desktop Analytics. The service includes these devices in the currently visible snapshot.
 
 - **Last service sync**: The same as the **Last updated** time in the Desktop Analytics portal.
 
