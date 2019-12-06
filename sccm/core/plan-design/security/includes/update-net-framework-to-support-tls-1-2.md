@@ -27,9 +27,9 @@ Some versions of .NET Framework might require updates to enable strong cryptogra
 
 Configure .NET Framework to support strong cryptography. Set the `SchUseStrongCrypto` registry setting to `DWORD:00000001`. This value disables the RC4 stream cipher and requires a restart. For more information about this setting, see [Microsoft Security Advisory 296038](https://docs.microsoft.com/security-updates/SecurityAdvisories/2015/2960358).
 
-Make sure to set the following registry keys on any computer that communicates across the network with a TLS 1.2-enabled system. For example, Configuration Manager clients, or any remote site system role that's not installed on the site server.
+Make sure to set the following registry keys on any computer that communicates across the network with a TLS 1.2-enabled system. For example, Configuration Manager clients, remote site system roles not installed on the site server, and the site server itself.
 
-For 32-bit applications that are running on 32-bit systems or 64-bit applications that are running on 64-bit systems, update the following subkey value:
+For 32-bit applications that are running on 32-bit OSs and for 64-bit applications that are running on 64-bit OSs, update the following subkey values:
 
 ``` Registry
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v2.0.50727]
@@ -40,7 +40,7 @@ For 32-bit applications that are running on 32-bit systems or 64-bit application
       "SchUseStrongCrypto" = dword:00000001
 ```
 
-For 32-bit applications that are running on 64-bit systems, update the following subkey value:
+For 32-bit applications that are running on 64-bit OSs, update the following subkey values:
 
 ``` Registry
 [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727]
