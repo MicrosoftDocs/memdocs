@@ -28,27 +28,37 @@ Start this process with the clients, especially previous versions of Windows. Be
 
 To enable TLS 1.2 for components that Configuration Manager depends on for secure communication, you must:
 
-- [Enable TLS 1.2 protocol as a security provider](#enable-tls-12-protocol-as-a-security-provider)
-- [Update .NET Framework to support TLS 1.2](#update-net-framework-to-support-tls-12)
-- [Update SQL Server and client components](#update-sql-server-and-client-components)
-- [Update Windows and WinHTTP on Windows 8.0, Windows Server 2012 R2 and earlier](#update-windows-and-winhttp)
-- [Update Windows Server Update Services (WSUS)](#update-windows-server-update-services-wsus)
+### For Configuration Manager clients
+
+- [Update Windows and WinHTTP on Windows 8.0, Windows Server 2012 R2 and earlier](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_winhttp)
+- [Enable TLS 1.2 protocol as a security provider](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_protocol)
+- [Update .NET Framework to support TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_net)
+
+
+### For Configuration Manager site servers
+
+- [Enable TLS 1.2 protocol as a security provider](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_protocol)
+- [Update .NET Framework to support TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_net)
+- [Update SQL Server and client components](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_sql)
+- [Update Windows Server Update Services (WSUS)](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_wsus)
+
+
 
 This section describes the dependencies for specific Configuration Manager features and scenarios. To determine the next steps, locate the items that apply to your environment.
 
 |Feature or scenario|Update tasks|
 |--- |--- |
-|Site servers (central, primary, or secondary)| - [Update .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Verify strong cryptography settings|
-|Site database server|[Update SQL Server and its client components](#update-sql-server-and-client-components)|
-|Secondary site servers|[Update SQL Server and its client components](#update-sql-server-and-client-components) to a compliant version of SQL Express|
-|Site system roles| - [Update .NET Framework](#update-net-framework-to-support-tls-12) and verify strong cryptography settings <br/> - [Update SQL Server and its client components](#update-sql-server-and-client-components) on roles that require it, including the [SQL Server Native Client](#sql-server-native-client)|
-|Reporting services point|- [Update .NET Framework](#update-net-framework-to-support-tls-12) on the site server, the SQL Reporting Services servers, and any computer with the console<br/> - Restart the SMS_Executive service as necessary|
-|Software update point|[Update WSUS](#update-windows-server-update-services-wsus)|
+|Site servers (central, primary, or secondary)| - [Update .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-server##bkmk_net)<br/> - Verify strong cryptography settings|
+|Site database server|[Update SQL Server and its client components](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_sql)|
+|Secondary site servers|[Update SQL Server and its client components](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_sql) to a compliant version of SQL Express|
+|Site system roles| - [Update .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_net) and verify strong cryptography settings <br/> - [Update SQL Server and its client components](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_sql) on roles that require it, including the [SQL Server Native Client](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_sql-client)|
+|Reporting services point|- [Update .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_net) on the site server, the SQL Reporting Services servers, and any computer with the console<br/> - Restart the SMS_Executive service as necessary|
+|Software update point|[Update WSUS](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_wsus)|
 |Cloud management gateway|[Enforce TLS 1.2](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_tls)|
-|Configuration Manager console| - [Update .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Verify strong cryptography settings|
-|Configuration Manager client with HTTPS site system roles|[Update Windows to support TLS 1.2 for client-server communications by using WinHTTP](#update-windows-and-winhttp)|
-|Software Center| - [Update .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Verify strong cryptography settings|
-|Windows 7 clients| *Before* you enable TLS 1.2 on any server components, [update Windows to support TLS 1.2 for client-server communications by using WinHTTP](#update-windows-and-winhttp). If you enable TLS 1.2 on server components first, you can orphan earlier versions of clients.|
+|Configuration Manager console| - [Update .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_net)<br/> - Verify strong cryptography settings|
+|Configuration Manager client with HTTPS site system roles|[Update Windows to support TLS 1.2 for client-server communications by using WinHTTP](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_winhttp)|
+|Software Center| - [Update .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_net)<br/> - Verify strong cryptography settings|
+|Windows 7 clients| *Before* you enable TLS 1.2 on any server components, [update Windows to support TLS 1.2 for client-server communications by using WinHTTP](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_winhttp). If you enable TLS 1.2 on server components first, you can orphan earlier versions of clients.|
 
 
 
@@ -65,5 +75,5 @@ This section describes the dependencies for specific Configuration Manager featu
 
 ## Next steps
 
-- [Enable TLS 1.2 on clients](./enable-tls-1-2-client)
-- [Enable TLS 1.2 on the site servers](./enable-tls-1-2-server)
+- [Enable TLS 1.2 on clients](/sccm/core/plan-design/security/enable-tls-1-2-client)
+- [Enable TLS 1.2 on the site servers](/sccm/core/plan-design/security/enable-tls-1-2-server)

@@ -17,7 +17,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (Current Branch)*
 
-## Update Windows and WinHTTP
+## <a name="bkmk_winhttp"></a> Update Windows and WinHTTP
 
 Windows 8.1, Windows Server 2012 R2, Windows 10, Windows Server 2016, and later versions of Windows natively support TLS 1.2 for client-server communications over WinHTTP.
 
@@ -42,11 +42,11 @@ If you change this value, restart the computer.
 >
 > If you want to completely disable SSL 3.0 and TLS 1.0, use the SChannel disabled protocols setting in Windows. For more information, see [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/help/245030/how-to-restrict-the-use-of-certain-cryptographic-algorithms-and-protoc).
 
-## Enable TLS 1.2 protocol as a security provider
+## <a name="bkmk_protocol"></a> Enable TLS 1.2 protocol as a security provider
 
 [!INCLUDE [Enable TLS 1.2 protocol as a security provider](includes/enable-tls-1-2-protocol-as-a-security-provider.md)]
 
-## Update .NET Framework to support TLS 1.2
+## <a name="bkmk_net"></a> Update .NET Framework to support TLS 1.2
 
 [!INCLUDE [Update .NET framework to support TLS 1.2](includes/update-net-framework-to-support-tls-1-2.md)]
 
@@ -56,6 +56,6 @@ If you change this value, restart the computer.
 
 ## Next steps
 
-- [Enable TLS 1.2 on the site servers](./enable-tls-1-2-server)
-- [Common issues when enabling TLS 1.2](./enable-tls-1-2-troubleshoot)
+- [Enable TLS 1.2 on the site servers](/sccm/core/plan-design/security/enable-tls-1-2-server)
+- [Common issues when enabling TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2-troubleshoot)
 

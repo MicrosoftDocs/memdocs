@@ -28,7 +28,7 @@ The following client platforms are supported by Configuration Manager but aren't
 
 ## Reports don't show in the console
 
-If reports don't show in the Configuration Manager console, make sure to update the computer on which you're running the console. You need to [update the .NET Framework](./enable-tls-1-2-client#update-net-framework-to-support-tls-1-2), and enable strong cryptography.
+If reports don't show in the Configuration Manager console, make sure to update the computer on which you're running the console. You need to [update the .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_net), and enable strong cryptography.
 
 ## FIPS security policy enabled
 
@@ -40,13 +40,13 @@ To investigate, enable Secure Channel event logging, and then review Schannel ev
 
 If SQL Server communication fails and returns an **SslSecurityError** error, verify the following settings:
 
-- [Update .NET Framework](./enable-tls-1-2-server#update-net-framework-to-support-tls-1-2), and enable strong cryptography on each machine
-- [Update SQL Server](./enable-tls-1-2-server#update-sql-server-and-client-components) on the host server
-- [Update SQL client components](./enable-tls-1-2-server#update-sql-server-and-client-components) on all systems that communicate with SQL. For example, the site servers, SMS provider, and site role servers.
+- [Update .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_net), and enable strong cryptography on each machine
+- [Update SQL Server](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_sql) on the host server
+- [Update SQL client components](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_sql-client) on all systems that communicate with SQL. For example, the site servers, SMS provider, and site role servers.
 
 ## Configuration Manager client communication failures
 
-If the Configuration Manager client doesn't communicate with site roles, verify that you [updated Windows](./enable-tls-1-2-client#update-windows-and-winhttp) to support TLS 1.2 for client-server communication by using WinHTTP. Common site roles include distribution points, management points, and state migration points.
+If the Configuration Manager client doesn't communicate with site roles, verify that you [updated Windows](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_winhttp) to support TLS 1.2 for client-server communication by using WinHTTP. Common site roles include distribution points, management points, and state migration points.
 
 ## Reporting services point fails and returns an expected error
 
@@ -57,7 +57,7 @@ If the reporting services point doesn't configure reports, check the **SRSRP.log
 
 To resolve this issue, follow these steps:
 
-1. [Update .NET Framework](./enable-tls-1-2-client#update-net-framework-to-support-tls-1-2), and enable strong cryptography on all relevant computers.
+1. [Update .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_net), and enable strong cryptography on all relevant computers.
 
 1. After you install any updates, restart the SMS_Executive service.
 
@@ -72,7 +72,7 @@ If the application catalog doesn't initialize, check the **ServicePortalWebSite.
 
 To resolve this issue, follow these steps:
 
-1. [Update .NET Framework](./enable-tls-1-2-client#update-net-framework-to-support-tls-1-2), and enable strong cryptography on all relevant computers.
+1. [Update .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_net), and enable strong cryptography on all relevant computers.
 
 1. In the `%WinDir%\System32\InetSrv` folder of the application catalog server, create a **W2SP.exe.config** file with the following contents:
 
@@ -104,7 +104,7 @@ The best method to make Software Center work with for user-available apps in a T
 
 If you need to resolve communication failures between the application catalog and Software Center, verify the following conditions:
 
-- [Update .NET Framework](./enable-tls-1-2-client#update-net-framework-to-support-tls-1-2), and enable strong cryptography on each computer.
+- [Update .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_net), and enable strong cryptography on each computer.
 
 - After you make the changes, restart all affected computers.
 
@@ -112,15 +112,15 @@ If you need to resolve communication failures between the application catalog an
 
 ## Service connection point upload failures
 
-If the service connection point doesn't upload data to SCCMConnectedService, [update the .NET Framework](./enable-tls-1-2-client#update-net-framework-to-support-tls-1-2), and enable strong cryptography on each computer. After you make the changes, remember to restart the computers.
+If the service connection point doesn't upload data to SCCMConnectedService, [update the .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_net), and enable strong cryptography on each computer. After you make the changes, remember to restart the computers.
 
 ## Configuration Manager console displays Intune onboarding dialog box
 
-If the Intune onboarding dialog box appears when the console tries to connect to the Intune portal, [update the .NET Framework](./enable-tls-1-2-client#update-net-framework-to-support-tls-1-2), and enable strong cryptography on each computer. After you make the changes, remember to restart the computers.
+If the Intune onboarding dialog box appears when the console tries to connect to the Intune portal, [update the .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_net), and enable strong cryptography on each computer. After you make the changes, remember to restart the computers.
 
 ## Configuration Manager console displays failure to sign in to Azure
 
-When you try to create applications in Azure Active Directory (Azure AD), if the Azure Services onboarding dialog box immediately fails after you select **Sign in**, [update the .NET Framework](./enable-tls-1-2-client#update-net-framework-to-support-tls-1-2), and enable strong cryptography. After you make the changes, remember to restart the computers.
+When you try to create applications in Azure Active Directory (Azure AD), if the Azure Services onboarding dialog box immediately fails after you select **Sign in**, [update the .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_net), and enable strong cryptography. After you make the changes, remember to restart the computers.
 
 ## Configuration Manager cloud services and TLS 1.2
 
@@ -153,6 +153,6 @@ In the System EventLog, SChannel EventID 36874 may be logged with the following 
 
 ## Next steps
 
-- [Enable TLS 1.2 on clients](./enable-tls-1-2-client)
-- [Enable TLS 1.2 on the site servers](./enable-tls-1-2-server)
+- [Enable TLS 1.2 on clients](/sccm/core/plan-design/security/enable-tls-1-2-client)
+- [Enable TLS 1.2 on the site servers](/sccm/core/plan-design/security/enable-tls-1-2-server)
 

@@ -19,22 +19,22 @@ manager: dougeby
 
 
 
-## Enable TLS 1.2 protocol as a security provider
+## <a name="bkmk_protocol"></a> Enable TLS 1.2 protocol as a security provider
 
 [!INCLUDE [Enable TLS 1.2 protocol as a security provider](includes/enable-tls-1-2-protocol-as-a-security-provider.md)]
 
-## Update .NET Framework to support TLS 1.2
+## <a name="bkmk_net"></a> Update .NET Framework to support TLS 1.2
 
 [!INCLUDE [Update .NET framework to support TLS 1.2](includes/update-net-framework-to-support-tls-1-2.md)]
 
 
-## Update SQL Server and client components
+## <a name="bkmk_sql"></a> Update SQL Server and client components
 
 Microsoft SQL Server 2016 and later support TLS 1.1 and TLS 1.2. Earlier versions and dependent libraries might require updates. For more information, see [KB 3135244: TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server).
 
 Secondary site servers need to use at least SQL Server 2016 Express with Service Pack 2 (13.2.50.26) or later.
 
-### SQL Server Native Client
+### <a name="bkmk_sql-client"></a> SQL Server Native Client
 
 > [!NOTE]
 > [KB 3135244](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server) also describes requirements for SQL Server client components.
@@ -61,7 +61,7 @@ Configuration Manager uses SQL Server Native Client on the following site system
 - Data warehouse service point
 
 
-## Update Windows Server Update Services (WSUS)
+## <a name="bkmk_wsus"></a> Update Windows Server Update Services (WSUS)
 
 To support TLS 1.2 for client-server communications in WSUS on Windows Server 2012 and Windows Server 2012 R2, install the following update on the WSUS server:
 
@@ -71,4 +71,4 @@ To support TLS 1.2 for client-server communications in WSUS on Windows Server 20
 
 ## Next steps
 
-- [Common issues when enabling TLS 1.2](./enable-tls-1-2-troubleshoot)
+- [Common issues when enabling TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2-troubleshoot)
