@@ -27,7 +27,7 @@ Configuration Manager relies on many different components for secure communicati
 > Start this process with the clients, especially previous versions of Windows. Before enabling TLS 1.2 on the Configuration Manager servers, make sure that all clients support TLS 1.2. Otherwise, the clients can't communicate with the servers and can be orphaned.
 
 
-## Tasks for Configuration Manager clients and site servers and remote site systems
+## Tasks for Configuration Manager clients, site servers, and remote site systems
 
 To enable TLS 1.2 for components that Configuration Manager depends on for secure communication, you'll need to do multiple tasks on both the clients and the site servers.
 
