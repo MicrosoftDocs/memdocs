@@ -1,5 +1,5 @@
 ---
-title: How to enable TLS 1.2 on site servers 
+title: Enable Transport Layer Security (TLS) 1.2 on the site servers 
 titleSuffix: Configuration Manager
 description: Information about how to enable TLS 1.2 for Configuration Manager site servers.
 ms.date: 12/13/2019
@@ -28,7 +28,7 @@ The following client platforms are supported by Configuration Manager but aren't
 
 ## Reports don't show in the console
 
-If reports don't show in the Configuration Manager console, make sure to update the computer on which you're running the console. You need to [update the .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_net), and enable strong cryptography.
+If reports don't show in the Configuration Manager console, make sure to update the computer on which you're running the console. [Update the .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_net), and enable strong cryptography.
 
 ## FIPS security policy enabled
 

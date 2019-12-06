@@ -1,5 +1,5 @@
 ---
-title: How to enable TLS 1.2 on site servers 
+title: Enable Transport Layer Security (TLS) 1.2 on the site servers 
 titleSuffix: Configuration Manager
 description: Information about how to enable TLS 1.2 for Configuration Manager site servers.
 ms.date: 12/13/2019
@@ -13,11 +13,18 @@ ms.author: mstewart
 manager: dougeby
 ---
 
-# How to enable TLS 1.2 on site servers
+# How to enable TLS 1.2 on the site servers
 
 *Applies to: Configuration Manager (Current Branch)*
 
+When enabling TLS 1.2 for your Configuration Manager environment, start with [enabling TLS 1.2 for the clients](/sccm/core/plan-design/security/enable-tls-1-2-client) first. Then, enable TLS 1.2 on the site servers second. The following tasks are needed for enabling TLS 1.2 on the site servers:
 
+- Enable TLS 1.2 protocol as a security provider
+- Update .NET Framework to support TLS 1.2
+- Update SQL Server and client components
+- Update Windows Server Update Services (WSUS)
+
+For more information about dependencies for specific Configuration Manager features and scenarios, see [About enabling TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2).
 
 ## <a name="bkmk_protocol"></a> Enable TLS 1.2 protocol as a security provider
 
@@ -63,11 +70,12 @@ Configuration Manager uses SQL Server Native Client on the following site system
 
 ## <a name="bkmk_wsus"></a> Update Windows Server Update Services (WSUS)
 
-To support TLS 1.2 for client-server communications in WSUS on Windows Server 2012 and Windows Server 2012 R2, install the following update on the WSUS server:
+To support TLS 1.2 for client-server communications in WSUS, install the following update on the WSUS server:
 
-- For WSUS server that's running Windows Server 2012, install [update 4022721](https://support.microsoft.com/help/4022721) or a later update.
-- For WSUS server that's running Windows Server 2012 R2, install [update 4022720](https://support.microsoft.com/help/4022720) or a later update.
+- For WSUS server that's running Windows Server 2012, install [update 4022721](https://support.microsoft.com/help/4022721) or a later rollup update.
+- For WSUS server that's running Windows Server 2012 R2, install [update 4022720](https://support.microsoft.com/help/4022720) or a later rollup update.
 
+TLS 1.2 updates are only needed on Windows Server 2012 and Windows Server 2012 R2 WSUS servers. Starting in Windows Server 2016, TLS 1.2 is supported by default for WSUS.
 
 ## Next steps
 

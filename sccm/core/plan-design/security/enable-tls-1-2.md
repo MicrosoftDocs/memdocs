@@ -1,5 +1,5 @@
 ---
-title: Enable TLS 1.2 overview
+title: Enable Transport Layer Security (TLS) 1.2 overview
 titleSuffix: Configuration Manager
 description: Overview of how to enable TLS 1.2 for Configuration Manager.
 ms.date: 12/13/2019
@@ -15,27 +15,29 @@ manager: dougeby
 
 # How to enable TLS 1.2
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (Current Branch)*
 
-These articles describe how to enable TLS 1.2 for Configuration Manager, including for individual components. Update requirements for commonly used features, and troubleshooting of some common problems are also described in these articles.
+Transport Layer Security (TLS), like Secure Sockets Layer (SSL), is an encryption protocol intended to keep data secure when being transferred over a network. These articles describe how to enable TLS 1.2 for Configuration Manager, including enabling for individual components. These articles also describe update requirements for commonly used features and troubleshooting common problems.
+
+## Enabling TLS 1.2
 
 Configuration Manager relies on many different components for secure communication. The protocol that's used for a given connection depends on the capabilities of all the required components. If one component is out-of-date, the communication might use an older, less secure protocol. To correctly enable Configuration Manager to support TLS 1.2, first enable TLS 1.2 for all required components. The required components depend on your environment and the Configuration Manager features that you use.
 
-Start this process with the clients, especially previous versions of Windows. Before enabling TLS 1.2 on the Configuration Manager servers, make sure that all clients support TLS 1.2. Otherwise, the clients won't be able to communicate with the servers and can be orphaned.
+Start this process with the clients, especially previous versions of Windows. Before enabling TLS 1.2 on the Configuration Manager servers, make sure that all clients support TLS 1.2. Otherwise, the clients can't communicate with the servers and can be orphaned.
 
 
-## Tasks for features and scenarios
+## Tasks for Configuration Manager clients and site servers
 
-To enable TLS 1.2 for components that Configuration Manager depends on for secure communication, you must:
+To enable TLS 1.2 for components that Configuration Manager depends on for secure communication, you'll need to do multiple tasks on both the clients and the site servers.
 
-### For Configuration Manager clients
+### Enable TLS 1.2 for Configuration Manager clients
 
 - [Update Windows and WinHTTP on Windows 8.0, Windows Server 2012 R2 and earlier](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_winhttp)
 - [Enable TLS 1.2 protocol as a security provider](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_protocol)
 - [Update .NET Framework to support TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_net)
 
 
-### For Configuration Manager site servers
+### Enable TLS 1.2 for Configuration Manager site servers
 
 - [Enable TLS 1.2 protocol as a security provider](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_protocol)
 - [Update .NET Framework to support TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_net)
@@ -43,6 +45,7 @@ To enable TLS 1.2 for components that Configuration Manager depends on for secur
 - [Update Windows Server Update Services (WSUS)](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_wsus)
 
 
+## Features and scenario dependencies
 
 This section describes the dependencies for specific Configuration Manager features and scenarios. To determine the next steps, locate the items that apply to your environment.
 
@@ -60,11 +63,38 @@ This section describes the dependencies for specific Configuration Manager featu
 |Software Center| - [Update .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_net)<br/> - Verify strong cryptography settings|
 |Windows 7 clients| *Before* you enable TLS 1.2 on any server components, [update Windows to support TLS 1.2 for client-server communications by using WinHTTP](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_winhttp). If you enable TLS 1.2 on server components first, you can orphan earlier versions of clients.|
 
+## Frequently asked questions
 
+### Why use TLS 1.2 with Configuration Manager?
 
+TLS 1.2 is more secure than the previous cryptographic protocols such as SSL 2.0, SSL 3.0, TLS 1.0, and TLS 1.1. Essentially, TLS 1.2 keeps data being transferred across the network more secure.
 
+### Where does Configuration Manager use encryption protocols like TLS 1.2?
 
+There are basically four areas that Configuration Manager uses encryption protocols like TLS 1.2:
 
+- Client communications to IIS-based site server roles when the role is configured to use HTTPS. 
+  - Examples of these roles include distribution points, software update points, and management points.
+- Management point, SMS Executive, and SMS Provider communications with SQL.
+  - Configuration Manager always encrypts SQL communications.
+- The Configuration Manager console to SQL Reporting Services (SSRS) if SSRS is configured to use HTTPS.
+- Any connections to internet-based services.
+  - Examples include the cloud management gateway (CMG), the service connection point sync, and sync of update metadata from Microsoft Update.
+
+### What determines which encryption protocol is used?
+
+HTTPS will always negotiate the highest protocol version that is supported by both the client and server in an encrypted conversation. On establishing a connection, the client sends a message to the server with its highest available protocol. If the server supports the same version, it sends a message using that version. This negotiated version is the one that is used for the connection. If the server doesn't support the version presented by the client, the server message will specify the highest version it can use.
+
+### What determines which protocol version the client and server can use?
+
+Generally, the following items can determine which protocol version is used:
+
+- The application can dictate a specific protocol version to use.
+  - Best practice is to avoid dictating a specific protocol.
+  - Configuration Manager follows this best practice.
+- The default behavior of applications using the .NET Framework is dependent on the Framework version they were compiled upon.  
+  - .NET versions before 4.6.3, by default, didn't include TLS 1.1 and 1.2 in the connection negotiation.
+- Applications that use WinHTTP for HTTPS communications.
 
 
 ## Additional resources

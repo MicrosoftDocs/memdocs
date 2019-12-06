@@ -1,5 +1,5 @@
 ---
-title: How to enable TLS 1.2 on clients 
+title: How to enable Transport Layer Security (TLS) 1.2 on clients 
 titleSuffix: Configuration Manager
 description: Information about how to enable TLS 1.2 for Configuration Manager clients.
 ms.date: 12/13/2019
@@ -17,9 +17,17 @@ manager: dougeby
 
 *Applies to: Configuration Manager (Current Branch)*
 
+When enabling TLS 1.2 for your Configuration Manager environment, start by enabling it for the clients first before enabling it on the site servers. There are three tasks for enabling TLS 1.2 on clients:
+
+- Update Windows and WinHTTP
+- Enable TLS 1.2 protocol as a security provider
+- Update .NET Framework to support TLS 1.2
+
+For more information about dependencies for specific Configuration Manager features and scenarios, see [About enabling TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2).
+
 ## <a name="bkmk_winhttp"></a> Update Windows and WinHTTP
 
-Windows 8.1, Windows Server 2012 R2, Windows 10, Windows Server 2016, and later versions of Windows natively support TLS 1.2 for client-server communications over WinHTTP.
+Windows 8.1, Windows Server 2012 R2, Windows 10, Windows Server 2016, and later versions of Windows natively support TLS 1.2 for client-server communications over WinHTTP. 
 
 Earlier versions of Windows, such as Windows 7 or Windows Server 2012, don't enable TLS 1.1 or 1.2 by default for client-server communications through HTTPS. For these earlier versions of Windows, install [Update 3140245](https://support.microsoft.com/help/3140245) to enable TLS 1.1 and TLS 1.2 as the default secure protocols for WinHTTP in Windows. Then set the following registry values:
 
