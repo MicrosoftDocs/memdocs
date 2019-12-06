@@ -74,17 +74,14 @@ TLS 1.2 is more secure than the previous cryptographic protocols such as SSL 2.0
 
 There are basically four areas that Configuration Manager uses encryption protocols like TLS 1.2:
 
-- Client communications to IIS-based site server roles when the role is configured to use HTTPS. 
-  - Examples of these roles include distribution points, software update points, and management points.
-- Management point, SMS Executive, and SMS Provider communications with SQL.
-  - Configuration Manager always encrypts SQL communications.
-- The Configuration Manager console to SQL Reporting Services (SSRS) if SSRS is configured to use HTTPS.
-- Any connections to internet-based services.
-  - Examples include the cloud management gateway (CMG), the service connection point sync, and sync of update metadata from Microsoft Update.
+1. Client communications to IIS-based site server roles when the role is configured to use HTTPS. Examples of these roles include distribution points, software update points, and management points.
+2. Management point, SMS Executive, and SMS Provider communications with SQL. Configuration Manager always encrypts SQL communications.
+3. The Configuration Manager console to SQL Reporting Services (SSRS) if SSRS is configured to use HTTPS.
+4. Any connections to internet-based services. Examples include the cloud management gateway (CMG), the service connection point sync, and sync of update metadata from Microsoft Update.
 
 ### What determines which encryption protocol is used?
 
-HTTPS will always negotiate the highest protocol version that is supported by both the client and server in an encrypted conversation. On establishing a connection, the client sends a message to the server with its highest available protocol. If the server supports the same version, it sends a message using that version. This negotiated version is the one that is used for the connection. If the server doesn't support the version presented by the client, the server message will specify the highest version it can use.
+HTTPS will always negotiate the highest protocol version that is supported by both the client and server in an encrypted conversation. On establishing a connection, the client sends a message to the server with its highest available protocol. If the server supports the same version, it sends a message using that version. This negotiated version is the one that is used for the connection. If the server doesn't support the version presented by the client, the server message will specify the highest version it can use. For more information about the TLS Handshake protocol, see [Establishing a Secure Session by using TLS](https://docs.microsoft.com/windows/win32/secauthn/tls-handshake-protocol#establishing-a-secure-session-by-using-tls).
 
 ### What determines which protocol version the client and server can use?
 
@@ -100,9 +97,9 @@ Generally, the following items can determine which protocol version is used:
 
 ## Additional resources
 
+- [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md)
 - [Transport layer security (TLS) best practices with the .NET Framework](https://docs.microsoft.com/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
 - [KB 3135244: TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)
-- [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md)
 
 ## Next steps
 
