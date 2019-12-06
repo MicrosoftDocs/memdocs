@@ -1,7 +1,7 @@
 ---
-title: Enable Transport Layer Security (TLS) 1.2 on the site servers 
+title: Common issues when enabling Transport Layer Security (TLS) 1.2
 titleSuffix: Configuration Manager
-description: Information about how to enable TLS 1.2 for Configuration Manager site servers.
+description: Describes common issues when enabling Transport Layer Security (TLS) 1.2
 ms.date: 12/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -154,5 +154,5 @@ In the System EventLog, SChannel EventID 36874 may be logged with the following 
 ## Next steps
 
 - [Enable TLS 1.2 on clients](/sccm/core/plan-design/security/enable-tls-1-2-client)
-- [Enable TLS 1.2 on the site servers](/sccm/core/plan-design/security/enable-tls-1-2-server)
+- [Enable TLS 1.2 on the site servers and remote site systems](/sccm/core/plan-design/security/enable-tls-1-2-server)
 

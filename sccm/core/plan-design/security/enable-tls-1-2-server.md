@@ -1,5 +1,5 @@
 ---
-title: Enable Transport Layer Security (TLS) 1.2 on the site servers 
+title: Enable Transport Layer Security (TLS) 1.2 on the site servers and remote site systems
 titleSuffix: Configuration Manager
 description: Information about how to enable TLS 1.2 for Configuration Manager site servers.
 ms.date: 12/13/2019
@@ -13,18 +13,18 @@ ms.author: mstewart
 manager: dougeby
 ---
 
-# How to enable TLS 1.2 on the site servers
+# How to enable TLS 1.2 on the site servers and remote site systems
 
 *Applies to: Configuration Manager (Current Branch)*
 
-When enabling TLS 1.2 for your Configuration Manager environment, start with [enabling TLS 1.2 for the clients](/sccm/core/plan-design/security/enable-tls-1-2-client) first. Then, enable TLS 1.2 on the site servers second. The following tasks are needed for enabling TLS 1.2 on the site servers:
+When enabling TLS 1.2 for your Configuration Manager environment, start with [enabling TLS 1.2 for the clients](/sccm/core/plan-design/security/enable-tls-1-2-client) first. Then, enable TLS 1.2 on the site servers and remote site systems second. For Configuration Manager clients with HTTPS site system roles, see [Update Windows and WinHTTP](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_winhttp). The following tasks are needed for enabling TLS 1.2 on the site servers and remote site systems:
 
 - Enable TLS 1.2 protocol as a security provider
 - Update .NET Framework to support TLS 1.2
 - Update SQL Server and client components
 - Update Windows Server Update Services (WSUS)
 
-For more information about dependencies for specific Configuration Manager features and scenarios, see [About enabling TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2).
+For more information about dependencies for specific Configuration Manager features and scenarios, see [About enabling TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2). 
 
 ## <a name="bkmk_protocol"></a> Enable TLS 1.2 protocol as a security provider
 

@@ -17,7 +17,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (Current Branch)*
 
-When enabling TLS 1.2 for your Configuration Manager environment, start by enabling it for the clients first before enabling it on the site servers. There are three tasks for enabling TLS 1.2 on clients:
+When enabling TLS 1.2 for your Configuration Manager environment, start by enabling it for the clients first before enabling it on the site servers and remote site systems. There are three tasks for enabling TLS 1.2 on clients:
 
 - Update Windows and WinHTTP
 - Enable TLS 1.2 protocol as a security provider
@@ -59,11 +59,8 @@ If you change this value, restart the computer.
 [!INCLUDE [Update .NET framework to support TLS 1.2](includes/update-net-framework-to-support-tls-1-2.md)]
 
 
-
-
-
 ## Next steps
 
-- [Enable TLS 1.2 on the site servers](/sccm/core/plan-design/security/enable-tls-1-2-server)
+- [Enable TLS 1.2 on the site servers and remote site systems](/sccm/core/plan-design/security/enable-tls-1-2-server)
 - [Common issues when enabling TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2-troubleshoot)
 

@@ -23,10 +23,11 @@ Transport Layer Security (TLS), like Secure Sockets Layer (SSL), is an encryptio
 
 Configuration Manager relies on many different components for secure communication. The protocol that's used for a given connection depends on the capabilities of all the required components. If one component is out-of-date, the communication might use an older, less secure protocol. To correctly enable Configuration Manager to support TLS 1.2, first enable TLS 1.2 for all required components. The required components depend on your environment and the Configuration Manager features that you use.
 
-Start this process with the clients, especially previous versions of Windows. Before enabling TLS 1.2 on the Configuration Manager servers, make sure that all clients support TLS 1.2. Otherwise, the clients can't communicate with the servers and can be orphaned.
+> [!IMPORTANT]
+> Start this process with the clients, especially previous versions of Windows. Before enabling TLS 1.2 on the Configuration Manager servers, make sure that all clients support TLS 1.2. Otherwise, the clients can't communicate with the servers and can be orphaned.
 
 
-## Tasks for Configuration Manager clients and site servers
+## Tasks for Configuration Manager clients and site servers and remote site systems
 
 To enable TLS 1.2 for components that Configuration Manager depends on for secure communication, you'll need to do multiple tasks on both the clients and the site servers.
 
@@ -37,7 +38,7 @@ To enable TLS 1.2 for components that Configuration Manager depends on for secur
 - [Update .NET Framework to support TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_net)
 
 
-### Enable TLS 1.2 for Configuration Manager site servers
+### Enable TLS 1.2 for Configuration Manager site servers and remote site systems
 
 - [Enable TLS 1.2 protocol as a security provider](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_protocol)
 - [Update .NET Framework to support TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2-server#bkmk_net)
