@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 12/11/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -118,12 +118,19 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 -->
 
-<!-- (commented out for 1910 CB since there's nothing to show, 1911tp section is an example for next TP)
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 1911 -->
+### Technical preview version 1912
 
-<!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
+<!-- - [title](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--ID-->
+
+- [4831871](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--4831871-->
+- [5229962](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--5229962-->
+- [5526972](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--5526972-->
+- [3607758](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--3607758-->
+- [4226618](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--4226618-->
+- [5842295](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--5842295-->
+- [5573175](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--5573175,5690481-->
 
 > [!NOTE]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
