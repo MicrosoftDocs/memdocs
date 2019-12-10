@@ -27,7 +27,7 @@ In System Center Configuration Manager, Windows PowerShell allows you to manage 
 ## More Resources  
  **PowerShell and Cmdlet Help:** Although PowerShell help is available from the PowerShell command-line, the same information is available online. A few example sites are listed below.  
 
-- [TechNet: Using Windows PowerShell](https://msdn.microsoft.com/powershell/scripting/getting-started/fundamental/using-windows-powershell)  
+- [TechNet: Using Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell)  
 
 - [TechNet: Cmdlets in System Center Configuration Manager](https://technet.microsoft.com/library/jj849987.aspx)  
 

@@ -509,7 +509,7 @@ For more information, see [Monitor software updates](/sccm/sum/deploy-use/monito
 
 To help you determine which devices are ready to upgrade to Office 365 ProPlus, there's a new readiness dashboard. It includes the **Office 365 ProPlus upgrade readiness** tile that released in Configuration Manager current branch version 1902. In the Configuration Manager console, go to the **Software Library** workspace, expand **Office 365 Client Management**, and select the **Office 365 ProPlus Upgrade Readiness** node.
 
-For more information on the dashboard, prerequisites, and using this data, see [Integration for Office 365 ProPlus readiness](/sccm/sum/deploy-use/office-365-dashboard#office-365-proplus-upgrade-readiness-dashboard).
+For more information on the dashboard, prerequisites, and using this data, see [Integration for Office 365 ProPlus readiness](/configmgr/sum/deploy-use/office-365-dashboard#bkmk_readiness-dash).
 
 
 ## <a name="bkmk_protect"></a> Protection

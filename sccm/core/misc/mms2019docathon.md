@@ -109,7 +109,7 @@ The contest runs all week, 6 - 9 May. Any registered MMS 2019 attendee can parti
 
 The grand prize winner receives the following prizes:
 
-- A registration pass for [MMS Jazz Edition](https://mmsmoa.com/registration/mms-jazz-edition.html), courtesy of the MMS steering committee, a $1799 value!
+- A registration pass for [MMS Jazz Edition](https://mmsmoa.com/sessions/jazz-edition.html), courtesy of the MMS steering committee, a $1799 value!
 - A branded Yeti Rambler 30oz tumbler
 - A branded Popsocket car vent mount + grip
 
@@ -215,7 +215,7 @@ OFFICIAL RULES
     The following prizes will be awarded:
 
     - One (1) Grand Prize. A Prize Package consisting of the following items:
-        - A registration pass for [MMS Jazz Edition](https://mmsmoa.com/registration/mms-jazz-edition.html) (provided by the MMS steering committee). Approximate Retail Value (ARV) $1799.
+        - A registration pass for [MMS Jazz Edition](https://mmsmoa.com/sessions/jazz-edition.html) (provided by the MMS steering committee). Approximate Retail Value (ARV) $1799.
         - A Yeti Rambler 30oz tumbler. Approximate Retail Value (ARV) $35.00.
         - A Popsocket car vent mount + grip. Approximate Retail Value (ARV) $15.00.
 
