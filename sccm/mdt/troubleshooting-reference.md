@@ -19,12 +19,12 @@ manager: dougeby
 >  In this document, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor–based versions of Windows. Similarly, *MDT* refers to MDT 2013 unless otherwise stated.  
 
 > [!NOTE]
->  The Microsoft Diagnostics and Recovery Toolset (DaRT) contains powerful tools for recovering and troubleshooting client computers that do not start or have become unstable. You can use DaRT to determine the cause of a crash, restore lost files, and so on. You can also use DaRT as a troubleshooting tool when developing and deploying a Windows operating system. For example, if a built image fails to start correctly, you can start the client computer containing the image by using ERD Commander—a diagnostic environment. Then, you can explore the client computer’s hard disk, view the event log, remove updates, change operating system settings, and so on. DaRT is part of the Microsoft Desktop Optimization Pack for Software Assurance. To learn more about DaRT, see [https://www.microsoft.com/windows/enterprise/products-and-technologies/mdop/dart.aspx](https://www.microsoft.com/windows/enterprise/products-and-technologies/mdop/dart.aspx).  
+>  The Microsoft Diagnostics and Recovery Toolset (DaRT) contains powerful tools for recovering and troubleshooting client computers that do not start or have become unstable. You can use DaRT to determine the cause of a crash, restore lost files, and so on. You can also use DaRT as a troubleshooting tool when developing and deploying a Windows operating system. For example, if a built image fails to start correctly, you can start the client computer containing the image by using ERD Commander—a diagnostic environment. Then, you can explore the client computer’s hard disk, view the event log, remove updates, change operating system settings, and so on. DaRT is part of the Microsoft Desktop Optimization Pack for Software Assurance. For more information, see [Diagnostics and Recovery Toolset 10](https://docs.microsoft.com/microsoft-desktop-optimization-pack/dart-v10/).  
 
 ## Understanding Logs  
  Before effective troubleshooting of MDT can begin, you must have a clear understanding of the many .log files used during an operating system deployment. When you know which log files to research for what failure condition and at what time, issues that were once mysterious and difficult to understand may become clear and understandable.  
 
- The MDT log file format is designed to be read by Trace32, which is part of the System Center Configuration Manager 2007 Toolkit V2, available for download from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=9257). The logs can also be read by the Configuration Manager Trace Log Tool (CMTrace) that is available with System Center 2012 Configuration Manager and later versions. Use these tools whenever possible to read the log files, because it makes finding errors much easier.  
+ The MDT log file format is designed to be read by [CMTrace](/configmgr/core/support/cmtrace). Use this tool whenever possible to read the log files, because it makes finding errors much easier.  
 
  The rest of this section details the log files created during deployment as well as during Windows Setup. This section also provides examples of when to use the files for troubleshooting.  
 
@@ -292,7 +292,7 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
     ```  
 
 > [!NOTE]
->  For clarity, the log file contents above have been represented as they appear while being viewed using the Trace32 program.  
+>  For clarity, the log file contents above have been represented as they appear while being viewed using CMTrace.  
 
  **Possible Solution:** The issue, as pointed out on the first line of the log file sample, is that permission to access the database was denied. Therefore, the script cannot establish a secure connection to the database, possibly because a user ID and password were not available. As a result, database access was attempted using the computer account. The easiest way to work around this issue is to grant everyone Read access to the database.  
 
