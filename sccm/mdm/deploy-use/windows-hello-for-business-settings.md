@@ -29,7 +29,7 @@ Configuration Manager integrates with Windows Hello for Business in two ways:
 
 - You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles](create-pfx-certificate-profiles.md).  
 
-- You can deploy Windows Hello for Business policies to domain-joined Windows 10 devices that run the Configuration Manager client. This configuration is described in [Configure Windows Hello for Business on domain-joined Windows 10 devices](/sccm/protect/deploy-use/windows-hello-for-business-settings#configure-windows-hello-for-business-on-domain-joined-windows-10-devices). When you are using Configuration Manager with Intune (hybrid), you can configure these settings on Windows 10, and Windows 10 Mobile devices, but not on domain-joined devices that run the Configuration Manager client.   
+- You can deploy Windows Hello for Business policies to domain-joined Windows 10 devices that run the Configuration Manager client. This configuration is described in [Configure Windows Hello for Business on domain-joined Windows 10 devices](/sccm/protect/deploy-use/windows-hello-for-business-settings#configure-permissions). When you are using Configuration Manager with Intune (hybrid), you can configure these settings on Windows 10, and Windows 10 Mobile devices, but not on domain-joined devices that run the Configuration Manager client.   
 
 For general information about configuring Windows Hello for Business settings, see [Windows Hello for Business settings in Configuration Manager](/sccm/protect/deploy-use/windows-hello-for-business-settings).
 
