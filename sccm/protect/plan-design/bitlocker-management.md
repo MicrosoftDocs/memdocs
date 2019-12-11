@@ -94,4 +94,6 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 ## Next step
 
+[Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data) (an optional prerequisite before deploying policy for the first time)
+
 [Deploy BitLocker management client](/configmgr/protect/deploy-use/bitlocker/deploy-management-agent)

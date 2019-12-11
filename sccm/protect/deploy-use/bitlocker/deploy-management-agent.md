@@ -25,7 +25,11 @@ BitLocker management in Configuration Manager includes the following components:
 
 - **Recovery service**: The server component that receives BitLocker recovery data from clients. For more information, see [Recovery service](#recovery-service).
 
-Before you create and deploy BitLocker management policies, make sure to review the [prerequisites](/configmgr/protect/plan-design/bitlocker-management#prerequisites).
+Before you create and deploy BitLocker management policies:
+
+- Review the [prerequisites](/configmgr/protect/plan-design/bitlocker-management#prerequisites)
+
+- If necessary, [encrypt recovery keys](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data) in the site database
 
 ## Create a policy
 
@@ -176,7 +180,5 @@ For example, you used MBAM to encrypt the drive without PIN protection, but the 
 To work around this behavior, first disable BitLocker on the device. Then deploy a new policy with the new settings.
 
 ## Next steps
-
-[Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data)
 
 [Set up BitLocker reports and portals](/configmgr/protect/deploy-use/bitlocker/setup-websites)
