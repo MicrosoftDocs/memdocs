@@ -179,7 +179,7 @@ You can now transition the Office 365 workload from Configuration Manager to Mic
 There is also a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Office 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application, thus don't install Office 365 deployed via Configuration Manager.
 
 ### Known issue
-- This workload transition currently only applies to Office 365 deployments. Configuration Manager continues to manage Office 365 updates.<!--510876--> For more information including a possible workaround, see the Configuration Manager version 1802 release note [Changing Office 365 client setting doesn’t apply](/sccm/core/servers/deploy/install/release-notes#changing-office-365-client-setting-doesnt-apply).
+- This workload transition currently only applies to Office 365 deployments. Configuration Manager continues to manage Office 365 updates.<!--510876--> For more information including a possible workaround, see the Configuration Manager version 1802 release note [Changing Office 365 client setting doesn’t apply](/sccm/core/servers/deploy/install/release-notes).
 
 
 

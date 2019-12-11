@@ -8,7 +8,6 @@ ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 64f9d931-33f1-456f-a4e4-0ec077465bd0
 author: mestew
-ms.author: mstewart
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
