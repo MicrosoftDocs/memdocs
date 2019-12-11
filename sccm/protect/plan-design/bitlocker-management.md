@@ -92,6 +92,8 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 > [!TIP]
 > By default, the **Enable BitLocker** task sequence step only encrypts *used space* on the drive. BitLocker management uses *full disk* encryption. Configure this task sequence step to enable the option to **Use full disk encryption**. For more information, see [Task sequence steps - Enable BitLocker](/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker).
 
-## Next step
+## Next steps
+
+[Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data) (an optional prerequisite before deploying policy for the first time)
 
 [Deploy BitLocker management client](/configmgr/protect/deploy-use/bitlocker/deploy-management-agent)
