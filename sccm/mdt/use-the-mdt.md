@@ -7570,7 +7570,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 -   Applying security and compliance configuration settings using Group Policy Object Packs as described in [Applying Group Policy Object Packs](#ApplyingGroupPolicyObjectPacks)  
 
--   Enabling participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/privacystatement)(CEIP) and [Windows Error Reporting](https://docs.microsoft.com/windows-hardware/drivers/dashboard/windows-error-reporting-getting-started) (WER) as described in [Enabling Participation in CEIP and WER](#EnablingParticipationinCEIPandWER)  
+-   Enabling participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/privacystatement)(CEIP) and [Windows Error Reporting](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting) (WER) as described in [Enabling Participation in CEIP and WER](#EnablingParticipationinCEIPandWER)  
 
 -   Configuring the task sequence steps that configure Windows roles and features on the target computer as described in [Configuring Roles and Features Task Sequence Steps](#ConfiguringRolesandFeaturesTaskSequenceSteps)  
 
@@ -9048,7 +9048,7 @@ DriverSelectionProfile =%MAKE%-%MODEL%-Win8-%ARCHITECTURE%
 >  The appropriate GPO pack is selected based on the operating system being deployed. If no matching GPO pack can be found, then no GPO pack will be applied.  
 
 ###  <a name="EnablingParticipationinCEIPandWER"></a> Enabling Participation in CEIP and WER  
- MDT includes a new task sequence step that automates the configuration of participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/privacystatement) (CEIP) and [Windows Error Reporting](https://docs.microsoft.com/windows-hardware/drivers/dashboard/windows-error-reporting-getting-started) (WER). The **Opt In to CEIP and WER** task sequence step is used to automate this participation.  
+ MDT includes a new task sequence step that automates the configuration of participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/privacystatement) (CEIP) and [Windows Error Reporting](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting) (WER). The **Opt In to CEIP and WER** task sequence step is used to automate this participation.  
 
 > [!NOTE]
 >  Although you can use MDT task sequences to enable CEIP and WER for Windows operating systems (only when the corresponding task sequence step is enabled), this is separate from the CEIP information gathered when you opt in to the MDT CEIP program. For more information about what information MDT sends when CEIP is enabled, see the [Microsoft Deployment Toolkit Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=314082).  
