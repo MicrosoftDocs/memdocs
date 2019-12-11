@@ -28,7 +28,7 @@ Microsoft Defender ATP is a service in the [Windows Defender Security Center](ht
 
 ## How to create an onboarding configuration file  
 
- 1. Go to the [Microsoft Defender Security Center](https://securitycenter.windows.com/) and sign in.
+ 1. Go to the [Microsoft Defender ATP online service](https://securitycenter.windows.com/) and sign in.
 
  2.  Click on the **Machine Management** item under **Settings**, then select **Onboarding**. 
 
