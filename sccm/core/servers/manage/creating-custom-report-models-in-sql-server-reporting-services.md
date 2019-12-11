@@ -143,11 +143,11 @@ Sample report models are included in System Center Configuration Manager, but yo
 
 4. In the file _&lt;Model Name\>_**.dsv**, locate the first line of the file, which reads as follows:  
 
-    **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
+    `<DataSourceView xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`
 
     Edit this line to read as follows:  
 
-    **&lt;DataSourceView xmlns="<http://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView"\>**  
+    `<DataSourceView xmlns="<https://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView">`  
 
 5. Copy the entire contents of the file to the Windows Clipboard.  
 
@@ -386,11 +386,11 @@ Sample report models are included in System Center Configuration Manager, but yo
 
 4. In the file _&lt;Model Name\>_**.dsv**, locate the first line of the file, which reads as follows:  
 
-    **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
+    `<DataSourceView xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`
 
     Edit this line to read as follows:  
 
-    **&lt;DataSourceView xmlns="<http://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView"\>**  
+    `<DataSourceView xmlns="<https://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView">`
 
 5. Copy the entire contents of the file to the Windows Clipboard.  
 
