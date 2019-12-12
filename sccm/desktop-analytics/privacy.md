@@ -27,9 +27,9 @@ Desktop Analytics is fully committed to customer data privacy, centering on thes
 
 For more information, see [Windows services where Microsoft is the processor under the GDPR](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr).<!-- 5353168 -->
 
-## Diagnostic data flow
+## Data flow
 
-The following illustration shows how diagnostic data flows from individual devices through the Diagnostic Data Service, Azure Log Analytics storage, and to your Log Analytics workspace:
+The following illustration shows how diagnostic data flows from individual devices through the Diagnostic Data Service, transient storage, and to your Log Analytics workspace:
 
 ![Diagram illustrating flow of diagnostic data from devices](media/da-data-flow.png)
 
@@ -39,7 +39,12 @@ The following illustration shows how diagnostic data flows from individual devic
 
     1. You configure the Desktop Analytics cloud service in Configuration Manager with the Azure AD app details.  
 
-    2. Within 15 minutes, Configuration Manager synchronizes device collections and deployments plans with Desktop Analytics. It repeats this process every hour.  
+    2. Within 15 minutes, Configuration Manager synchronizes with Desktop Analytics using your tenant Id. It repeats this process every hour. 
+    
+        - Information about Device collections necessary to [create deployment plans](/configmgr/desktop-analytics/create-deployment-plans): collection Id, hierarchy Id, collection Name and device count. 
+        - Information required to [enroll devices](/configmgr/desktop-analytics/enroll-devices) like collection Id, SMS Unique Identifier, OS build version, Device name and serial number
+        - Information from [Monitor connection health](/configmgr/desktop-analytics/monitor-connection-health) like the count of devices per Health state and device properties
+        - Information about Deployment plans, like the collection Id, deployment Id, deployment type (pilot or production), and count of devices per Upgrade decision
 
     3. Configuration Manager sets the commercial ID, diagnostic data level, and other settings for the devices in the target collection. This configuration specifies the devices to appear in your Desktop Analytics workspace.  
 
