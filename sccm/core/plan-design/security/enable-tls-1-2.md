@@ -24,7 +24,7 @@ Transport Layer Security (TLS), like Secure Sockets Layer (SSL), is an encryptio
 Configuration Manager relies on a number of different components for secure communication. The protocol that's used for a given connection depends on the capabilities of  the relevant components on both the client and server side. If any component is out-of-date or not properly configured, the communication might use an older, less secure protocol. To correctly enable Configuration Manager to support TLS 1.2 for all secure communications, you must enable TLS 1.2 for all required components. The required components depend on your environment and the Configuration Manager features that you use.
 
 > [!IMPORTANT]
-> Start this process with the clients, especially previous versions of Windows. Before enabling TLS 1.2 on the Configuration Manager servers, make sure that all clients support TLS 1.2. Otherwise, the clients can't communicate with the servers and can be orphaned.
+> Start this process with the clients, especially previous versions of Windows. Before enabling TLS 1.2 and disabling the older protocols on the Configuration Manager servers, make sure that all clients support TLS 1.2. Otherwise, the clients can't communicate with the servers and can be orphaned.
 
 
 ## Tasks for Configuration Manager clients, site servers, and remote site systems
