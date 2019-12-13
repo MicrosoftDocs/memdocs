@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
+ROBOTS: NOINDEX
 ---
 
 # Features in Configuration Manager technical preview version 1908.2
