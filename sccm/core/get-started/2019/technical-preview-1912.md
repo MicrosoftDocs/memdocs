@@ -26,7 +26,7 @@ The following sections describe the new features to try out in this version:
 <!-- [!INCLUDE [Example feature name](includes/1912/1234567.md)] -->
 
 [!INCLUDE [Bootstrap a task sequence immediately after client registration](includes/1912/5526972.md)]
-[!INCLUDE [Expand Microsoft Defender Advanced Threat Protection (ATP) on-boarding](includes/1912/5229962.md)]
+[!INCLUDE [Expand Microsoft Defender Advanced Threat Protection (ATP) onboarding](includes/1912/5229962.md)]
 [!INCLUDE [New management insight rules from Microsoft Services](includes/1912/3607758.md)]
 [!INCLUDE [Client log collection](includes/1912/4226618.md)]
 [!INCLUDE [Improvements to CMPivot](includes/1912/5870934.md)]

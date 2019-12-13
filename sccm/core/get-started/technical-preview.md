@@ -125,7 +125,7 @@ The following features are available with the most recent Configuration Manager 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--ID-->
 
 - [Bootstrap a task sequence immediately after client registration](/sccm/core/get-started/2019/technical-preview-1912#bkmk_provisionts) <!--5526972-->
-- [Expand Microsoft Defender Advanced Threat Protection (ATP) on-boarding](/sccm/core/get-started/2019/technical-preview-1912#expand-microsoft-defender-advanced-threat-protection-atp-on-boarding) <!--5229962-->
+- [Expand Microsoft Defender Advanced Threat Protection (ATP) onboarding](/sccm/core/get-started/2019/technical-preview-1912#bkmk_atp) <!--5229962-->
 - [New management insight rules from Microsoft Services](/sccm/core/get-started/2019/technical-preview-1912#bkmk_rules) <!--3607758-->
 - [Client log collection](/sccm/core/get-started/2019/technical-preview-1912#client-log-collection) <!--4226618-->
 - [Improvements to CMPivot](/sccm/core/get-started/2019/technical-preview-1912#improvements-to-cmpivot) <!--5870934-->
