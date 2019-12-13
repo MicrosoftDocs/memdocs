@@ -17,20 +17,20 @@ manager: dougeby
 
 *Applies to: Configuration Manager (Current Branch)*
 
-When enabling TLS 1.2 for your Configuration Manager environment, start with [enabling TLS 1.2 for the clients](/sccm/core/plan-design/security/enable-tls-1-2-client) first. Then, enable TLS 1.2 on the site servers and remote site systems second. For Configuration Manager clients with HTTPS site system roles, see [Update Windows and WinHTTP](/sccm/core/plan-design/security/enable-tls-1-2-client#bkmk_winhttp). The following tasks are needed for enabling TLS 1.2 on the site servers and remote site systems:
+When enabling TLS 1.2 for your Configuration Manager environment, start with [enabling TLS 1.2 for the clients](/sccm/core/plan-design/security/enable-tls-1-2-client) first. Then, enable TLS 1.2 on the site servers and remote site systems second. Finally, test client to site system communications before potentially disabling the older protocols on the server side. The following tasks are needed for enabling TLS 1.2 on the site servers and remote site systems:
 
-- Enable TLS 1.2 protocol as a security provider
-- Update .NET Framework to support TLS 1.2
+- Ensure that TLS 1.2 is enabled as a protocol for SChannel at the Operating System level
+- Update and configure the .NET Framework to support TLS 1.2
 - Update SQL Server and client components
 - Update Windows Server Update Services (WSUS)
 
 For more information about dependencies for specific Configuration Manager features and scenarios, see [About enabling TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2). 
 
-## <a name="bkmk_protocol"></a> Enable TLS 1.2 protocol as a security provider
+## <a name="bkmk_protocol"></a> Ensure that TLS 1.2 is enabled as a protocol for SChannel at the Operating System level
 
 [!INCLUDE [Enable TLS 1.2 protocol as a security provider](includes/enable-tls-1-2-protocol-as-a-security-provider.md)]
 
-## <a name="bkmk_net"></a> Update .NET Framework to support TLS 1.2
+## <a name="bkmk_net"></a> Update and configure the .NET Framework to support TLS 1.2
 
 [!INCLUDE [Update .NET framework to support TLS 1.2](includes/update-net-framework-to-support-tls-1-2.md)]
 
@@ -70,12 +70,12 @@ Configuration Manager uses SQL Server Native Client on the following site system
 
 ## <a name="bkmk_wsus"></a> Update Windows Server Update Services (WSUS)
 
-To support TLS 1.2 for client-server communications in WSUS, install the following update on the WSUS server:
+To support TLS 1.2 in earlier versions of WSUS, install the following update on the WSUS server:
 
 - For WSUS server that's running Windows Server 2012, install [update 4022721](https://support.microsoft.com/help/4022721) or a later rollup update.
 - For WSUS server that's running Windows Server 2012 R2, install [update 4022720](https://support.microsoft.com/help/4022720) or a later rollup update.
 
-TLS 1.2 updates are only needed on Windows Server 2012 and Windows Server 2012 R2 WSUS servers. Starting in Windows Server 2016, TLS 1.2 is supported by default for WSUS.
+Starting in Windows Server 2016, TLS 1.2 is supported by default for WSUS.  TLS 1.2 updates are only needed on Windows Server 2012 and Windows Server 2012 R2 WSUS servers.
 
 ## Next steps
 
