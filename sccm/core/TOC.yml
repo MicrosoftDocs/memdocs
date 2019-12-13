@@ -239,7 +239,15 @@
     - name: Cryptographic controls technical reference
       href: plan-design/security/cryptographic-controls-technical-reference.md
     - name: Enable TLS 1.2
-      href: plan-design/security/enable-tls-1-2.md
+      items:
+      - name: About enabling TLS 1.2 
+        href: plan-design/security/enable-tls-1-2.md
+      - name: Enable TLS 1.2 on clients
+        href: plan-design/security/enable-tls-1-2-client.md
+      - name: Enable TLS 1.2 on site servers and remote site systems
+        href: plan-design/security/enable-tls-1-2-server.md
+      - name: Common issues when enabling TLS 1.2
+        href: plan-design/security/enable-tls-1-2-troubleshoot.md
 - name: Get started
   items:
   - name: Evaluate Configuration Manager in a lab
