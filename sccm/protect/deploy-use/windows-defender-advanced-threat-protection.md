@@ -2,7 +2,7 @@
 title: "Microsoft Defender Advanced Threat Protection"
 titleSuffix: "Configuration Manager"
 description: "Learn how to manage and monitor Microsoft Defender Advanced Threat Protection, a new service that helps enterprises respond to advanced attacks."
-ms.date: 05/13/2019
+ms.date: 12/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -28,9 +28,9 @@ Microsoft Defender ATP is a service in the [Windows Defender Security Center](ht
 
 ## How to create an onboarding configuration file  
 
- 1.  Logon to the [Microsoft Defender ATP online service](https://securitycenter.windows.com/)   
+ 1. Go to the [Microsoft Defender ATP online service](https://securitycenter.windows.com/) and sign in.
 
- 2.  Click on the **Endpoint Management** menu item.  
+ 2.  Click on the **Machine Management** item under **Settings**, then select **Onboarding**. 
 
  3.  Select **System Center Configuration Manager (current branch) version 1606** and click **Download package**.  
 
@@ -82,7 +82,7 @@ Microsoft Defender ATP is a service in the [Windows Defender Security Center](ht
 
 1.  Logon to the [Microsoft Defender ATP online service](https://securitycenter.windows.com/)   
 
-2.  Click on the **Endpoint Management** menu item.  
+2.  Click on the **Machine Management** item under **Settings**, then select **Onboarding**.  
 
 3.  Select **System Center Configuration Manager (current branch) version 1606** and click **Endpoint offboarding**.  
 

@@ -102,6 +102,7 @@ USE CM_ABC
 BACKUP CERTIFICATE BitLockerManagement_CERT TO FILE = 'C:\BitLockerManagement_CERT'
     WITH PRIVATE KEY ( FILE = 'C:\BitLockerManagement_CERT_KEY',
         ENCRYPTION BY PASSWORD = MyExportKeyPassword)
+END
 ```
 
 > [!IMPORTANT]
@@ -135,6 +136,7 @@ FROM FILE  = 'C:\BitLockerManagement_CERT'
 
 GRANT CONTROL ON CERTIFICATE ::BitLockerManagement_CERT TO RecoveryAndHardwareRead
 GRANT CONTROL ON CERTIFICATE ::BitLockerManagement_CERT TO RecoveryAndHardwareWrite
+END
 ```
 
 ### Verify certificate

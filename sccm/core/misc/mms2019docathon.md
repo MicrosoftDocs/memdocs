@@ -16,7 +16,7 @@ ROBOTS: NOINDEX
 
 During the Midwest Management Summit (MMS) 2019, the Microsoft content team for System Center Configuration Manager and Microsoft Intune are running a docathon. If you're attending the [Docs.microsoft.com hands-on lab](https://sched.co/N6fd) session on Monday, 6 May, that time is to work on contributions with support from the Microsoft writers. The docathon runs the entirety of the conference, and any registered MMS 2019 attendee can participate.
 
-Why should you participate? Docs.microsoft.com is an open source platform for Microsoft product documentation, powered by GitHub. Microsoft encourages everyone to contribute to the docs! When you contribute, the platform recognizes you in the list of contributors on every article. The following contributions are some of the types that the community can provide:
+Why should you participate? Docs.microsoft.com is an open-source platform for Microsoft product documentation, powered by GitHub. Microsoft encourages everyone to contribute to the docs! When you contribute, the platform recognizes you in the list of contributors on every article. The following contributions are some of the types that the community can provide:
 
 - Typos
 - Clarifications
@@ -38,7 +38,7 @@ Create a [GitHub account](https://github.com/join)
 
 #### Additional considerations
 
-- Check your company's policy regarding open source contributions  
+- Check your company's policy regarding open-source contributions  
 
     > [!Note]  
     > Larger contributions will require that you accept the Microsoft open source [Contributor License Agreement (CLA)](https://cla.opensource.microsoft.com/). Review this agreement in advance.  
@@ -84,7 +84,7 @@ Start thinking about and planning your goal for this event. What do you want to 
 
     - Avoid grammar or style changes, unless you talk with Aaron/Erik in advance.  
 
-    - Your favorite article has a date older than 90 days, before 02/06/2019. You can review it, and then your edit is to the **ms.date** metadata property. That contribution means: "I reviewed this article, and it's still technically accurate, so refresh the date." File an issue to claim it.  
+    - Your favorite article has a date older than 90 days, before February 6, 2019. You can review it, and then your edit is to the **ms.date** metadata property. That contribution means: "I reviewed this article, and it's still technically accurate, so refresh the date." File an issue to claim it.  
 
     - Check the article feedback first to make sure there isn't an open issue for someone that's already claimed it. This action isn't technically required. If you don't do it, and someone else submits first, we'll only take the first contribution.  
 
@@ -109,13 +109,13 @@ The contest runs all week, 6 - 9 May. Any registered MMS 2019 attendee can parti
 
 The grand prize winner receives the following prizes:
 
-- A registration pass for [MMS Jazz Edition](https://mmsmoa.com/registration/mms-jazz-edition.html), courtesy of the MMS steering committee, a $1799 value!
-- A branded Yeti Rambler 30oz tumbler
+- A registration pass for [MMS Jazz Edition](https://mmsmoa.com/sessions/jazz-edition.html), courtesy of the MMS steering committee, a $1799 value!
+- A branded Yeti Rambler 30 oz tumbler
 - A branded Popsocket car vent mount + grip
 
 #### First place prizes
 
-The following awards are calculated by the number of legitimate contributions to the in-scope repositories. They don't have to be merged or published, just submitted as a pull request by the end of the conference. We reserve the right to disqualify anyone who appears to be gaming the system. The winner in each category receives a branded Yeti Rambler 30oz tumbler and branded Popsocket car vent mount + grip. One winner per category.
+The following awards are calculated by the number of legitimate contributions to the in-scope repositories. They don't have to be merged or published, just submitted as a pull request by the end of the conference. We reserve the right to disqualify anyone who appears to be gaming the system. The winner in each category receives a branded Yeti Rambler 30 oz tumbler and branded Popsocket car vent mount + grip. One winner per category.
 
 - **Most commits submitted**
 
@@ -149,7 +149,7 @@ OFFICIAL RULES
 
 2. DEFINITIONS
 
-    In these Rules, "Microsoft", "we", "our", and "us", refer to Sponsor. "You" and "yourself" refers to a contest participant. "Event" refers to the MMS 2019 Docathon event held in Minneapolis, MN. By entering you agree to be bound by these Rules.
+    In these Rules, "Microsoft", "we", "our", and "us", refer to Sponsor. "You" and "yourself" refers to a contest participant. "Event" refers to the MMS 2019 Docathon event held in Minneapolis, MN. By entering, you agree to be bound by these Rules.
 
 3. ENTRY PERIOD
 
@@ -157,9 +157,9 @@ OFFICIAL RULES
 
 4. ELIGIBILITY
 
-    Open to any registered Event attendee 18 years of age or older who is a legal resident of the 50 United States (including the District of Columbia). Employees and directors of Microsoft Corporation and its subsidiaries, persons involved in the execution or administration of this promotion, and the family members of each (dependents, immediate family members, and individuals residing in the same household) are not eligible. Void where prohibited.
+    Open to any registered Event attendee 18 years of age or older who is a legal resident of the 50 United States (including the District of Columbia). Employees and directors of Microsoft Corporation and its subsidiaries, persons involved in the execution or administration of this promotion, and the family members of each (dependents, immediate family members, and individuals living in the same household) aren't eligible. Void where prohibited.
 
-    For business/tradeshow events: If you are attending the Event in your capacity as an employee, it is your sole responsibility to comply with your employer's gift policies. Microsoft will not be party to any disputes or actions related to this matter. GOVERNMENT EMPLOYEES INCLUDING EDUCATORS: Microsoft is committed to complying with government gift and ethics rules and therefore government and public sector employees are not eligible for this promotion.
+    For business/tradeshow events: If you're attending the Event in your capacity as an employee, it is your sole responsibility to follow your employer's gift policies. Microsoft won't be party to any disputes or actions related to this matter. GOVERNMENT EMPLOYEES INCLUDING EDUCATORS: Microsoft is committed to following government gift and ethics rules and therefore government and public sector employees aren't eligible for this promotion.
 
 5. HOW TO ENTER
 
@@ -167,27 +167,27 @@ OFFICIAL RULES
 
     To submit an entry, submit a pull request on GitHub.
 
-    You can submit an unlimited number of entries. We will only award one prize per category per person.
+    You can submit an unlimited number of entries. We'll only award one prize per category per person.
 
-    We are not responsible for excess, lost, late, damaged, or incomplete entries. If disputed, entries will be deemed submitted by the authorized account holder of the GitHub account.
+    We aren't responsible for excess, lost, late, damaged, or incomplete entries. If disputed, entries will be deemed submitted by the authorized account holder of the GitHub account.
 
 6. ELIGIBLE ENTRY
 
     To be eligible, an entry must meet the following content/technical requirements:
 
     - Your entry must be your own original work; and
-    - Your entry cannot have been selected as a winner in any other contest; and
+    - Your entry musn't have been selected as a winner in any other contest; and
     - You must have obtained any and all consents, approvals, or licenses required for you to submit your entry; and
-    - To the extent that entry requires the submission of user-generated contest such as software, photos, videos, music, artwork, essays, etc., entrants warrant that their entry is their original work, has not been copied from others without permission or apparent rights, and does not violate the privacy, intellectual property rights, or other rights of any other person or entity. You may include Microsoft trademarks, logos, and designs, for which Microsoft grants you a limited license to use for the sole purposes of submitting an entry into this Contest; and
-    - Your entry may NOT contain, as determined by us in our sole and absolute discretion, any content that is obscene or offensive, violent, defamatory, disparaging or illegal, or that promotes alcohol, illegal drugs, tobacco or a particular political agenda, or that communicates messages that may reflect negatively on the goodwill of Microsoft.
+    - To the extent that entry requires the submission of user-generated contest such as software, photos, videos, music, artwork, essays, and so on, entrants warrant that their entry is their original work, hasn't been copied from others without permission or apparent rights, and doesn't violate the privacy, intellectual property rights, or other rights of any other person or entity. You may include Microsoft trademarks, logos, and designs, for which Microsoft grants you a limited license to use for the sole purposes of submitting an entry into this Contest; and
+    - Your entry may NOT contain, as determined by us in our sole and absolute discretion, any content that is obscene or offensive, violent, defamatory, disparaging, or illegal, or that promotes alcohol, illegal drugs, tobacco, or a particular political agenda, or that communicates messages that may reflect negatively on the goodwill of Microsoft.
 
 7. USE OF ENTRIES
 
-    We are not claiming ownership rights to your Submission. However, by submitting an entry, you grant us an irrevocable, royalty-free, worldwide right and license to use, review, assess, test and otherwise analyze your entry and all its content in connection with this Contest and use your entry in any media whatsoever now known or later invented for any non-commercial or commercial purpose, including, but not limited to, the marketing, sale or promotion of Microsoft products or services, without further permission from you. You will not receive any compensation or credit for use of your entry, other than what is described in these Official Rules.
+    We aren't claiming ownership rights to your Submission. However, by submitting an entry, you grant us an irrevocable, royalty-free, worldwide right and license to use, review, assess, test and otherwise analyze your entry and all its content in connection with this Contest and use your entry in any media whatsoever now known or later invented for any non-commercial or commercial purpose, including, but not limited to, the marketing, sale, or promotion of Microsoft products or services, without further permission from you. You won't receive any compensation or credit for use of your entry, other than what is described in these Official Rules.
 
-    By entering you acknowledge that the we may have developed or commissioned materials similar or identical to your entry and you waive any claims resulting from any similarities to your entry. Further you understand that we will not restrict work assignments of representatives who have had access to your entry and you agree that use of information in our representatives' unaided memories in the development or deployment of our products or services does not create liability for us under this agreement or copyright or trade secret law.
+    By entering, you acknowledge that we may have developed or commissioned materials similar or identical to your entry and you waive any claims resulting from any similarities to your entry. Further you understand that we won't restrict work assignments of representatives who have had access to your entry and you agree that use of information in our representatives' unaided memories in the development or deployment of our products or services don't create liability for us under this agreement or copyright or trade secret law.
 
-    Your entry may be posted on a public website. We are not responsible for any unauthorized use of your entry by visitors to this website. We are not obligated to use your entry for any purpose, even if it has been selected as a winning entry.
+    Your entry may be posted on a public website. We aren't responsible for any unauthorized use of your entry by visitors to this website. We aren't obligated to use your entry for any purpose, even if it has been selected as a winning entry.
 
 8. WINNER SELECTION AND NOTIFICATION
 
@@ -206,30 +206,30 @@ OFFICIAL RULES
 
     Winners will be notified at the Event, and must claim the prize before the close of the Event.
 
-    In the event of a tie between any eligible entries, an additional judge will break the tie based on the judging criteria described above. The decisions of the judges are final and binding. If we do not receive a sufficient number of entries meeting the entry requirements, we may, at our discretion, select fewer winners than the number of Contest Prizes described below.
+    If there's a tie between any eligible entries, an additional judge will break the tie based on the judging criteria described above. The decisions of the judges are final and binding. If we do not receive a sufficient number of entries meeting the entry requirements, we may, at our discretion, select fewer winners than the number of Contest Prizes described below.
 
-    Winners will be notified via the contact information provided during entry and may be required to complete a prize claim and tax form ("Forms"). If a selected winner cannot be contacted, is ineligible, fails to claim a prize or fails to return any Forms, the selected winner will forfeit their prize and an alternate winner will be selected time allowing. Only three alternate winners will be selected, after which unclaimed prizes will remain unawarded.  
+    Winners will be notified via the contact information provided during entry and may be required to complete a prize claim and tax form ("Forms"). If a selected winner can't be contacted, is ineligible, fails to claim a prize, or fails to return any Forms, the selected winner will forfeit their prize, and an alternate winner will be selected time allowing. Only three alternate winners will be selected, after which unclaimed prizes will remain unawarded.  
 
 9. PRIZES
 
     The following prizes will be awarded:
 
     - One (1) Grand Prize. A Prize Package consisting of the following items:
-        - A registration pass for [MMS Jazz Edition](https://mmsmoa.com/registration/mms-jazz-edition.html) (provided by the MMS steering committee). Approximate Retail Value (ARV) $1799.
-        - A Yeti Rambler 30oz tumbler. Approximate Retail Value (ARV) $35.00.
+        - A registration pass for [MMS Jazz Edition](https://mmsmoa.com/sessions/jazz-edition.html) (provided by the MMS steering committee). Approximate Retail Value (ARV) $1799.
+        - A Yeti Rambler 30 oz tumbler. Approximate Retail Value (ARV) $35.00.
         - A Popsocket car vent mount + grip. Approximate Retail Value (ARV) $15.00.
 
         The total Approximate Retail Value (ARV) of this Package is $1849.
 
     - Three (3) First Prize (s). A Prize Package consisting of the following items:
-        - A Yeti Rambler 30oz tumbler. Approximate Retail Value (ARV) $35.00.
+        - A Yeti Rambler 30 oz tumbler. Approximate Retail Value (ARV) $35.00.
         - A Popsocket car vent mount + grip. Approximate Retail Value (ARV) $15.00.
 
         The total Approximate Retail Value (ARV) of this Package is $50.
 
     The total Approximate Retail Value (ARV) of all prizes: $1999
 
-    We will only award one (1) prize(s) per person. No more than the stated number of prizes will be awarded. No substitution, transfer, or assignment of prize permitted, except that Microsoft reserves the right to substitute a prize of equal or greater value in the event the offered prize is unavailable. Prizes are awarded "AS IS" with no warranty of any kind, either express or implied, including but not limited to, the implied warranties or merchantability, fitness for a particular purpose, or non-infringement. Prize winners may be required to complete and return prize claim and / or tax forms ("Forms") within the deadline stated in the winner notification. Taxes on the prize, if any, are the sole responsibility of the winner, who is advised to seek independent counsel regarding the tax implications of accepting a prize. By accepting a prize, you agree that Microsoft may use your entry, name, image and hometown online and in print, or in any other media, in connection with this Contest without payment or compensation to you, except where prohibited by law.
+    We will only award one (1) prize(s) per person. No more than the stated number of prizes will be awarded. No substitution, transfer, or assignment of prize permitted, except that Microsoft reserves the right to substitute a prize of equal or greater value in the event the offered prize is unavailable. Prizes are awarded "AS IS" with no warranty of any kind, either express or implied, including but not limited to, the implied warranties or merchantability, fitness for a particular purpose, or non-infringement. Prize winners may be required to complete and return prize claim and / or tax forms ("Forms") within the deadline stated in the winner notification. Taxes on the prize, if any, are the sole responsibility of the winner, who is advised to seek independent counsel regarding the tax implications of accepting a prize. By accepting a prize, you agree that Microsoft may use your entry, name, image, and hometown online and in print, or in any other media, in connection with this Contest without payment or compensation to you, except where prohibited by law.
 
 10. ODDS
 
@@ -237,11 +237,11 @@ OFFICIAL RULES
 
 11. GENERAL CONDITIONS AND RELEASE OF LIABILITY
 
-    To the extent allowed by law, by entering you agree to release and hold harmless Microsoft and its respective parents, partners, subsidiaries, affiliates, employees and agents from any and all liability or any injury, loss or damage of any kind arising in connection with this Contest or any prize won.
+    To the extent allowed by law, by entering you agree to release and hold harmless Microsoft and its respective parents, partners, subsidiaries, affiliates, employees, and agents from any and all liability or any injury, loss, or damage of any kind arising in connection with this Contest or any prize won.
 
     All local laws apply. The decisions of Microsoft are final and binding.
 
-    We reserve the right to cancel, change or suspend this Contest for any reason, including cheating, technology failure, catastrophe, war or any other unforeseen or unexpected event that affects the integrity of this Contest, whether human or mechanical. If the integrity of the Contest cannot be restored, we may select winners from among all eligible entries received before we had to cancel, change or suspend the Contest. Rules violators will be prosecuted to the full extent of the law and may be banned from participation in Microsoft Contests.
+    We reserve the right to cancel, change, or suspend this Contest for any reason, including cheating, technology failure, catastrophe, war or any other unforeseen or unexpected event that affects the integrity of this Contest, whether human or mechanical. If the integrity of the Contest can't be restored, we may select winners from among all eligible entries received before we had to cancel, change, or suspend the Contest. Rules violators will be prosecuted to the full extent of the law and may be banned from participation in Microsoft Contests.
 
 12. WINNERS LIST
 
@@ -249,6 +249,6 @@ OFFICIAL RULES
 
 13. PRIVACY
 
-    At Microsoft, we are committed to protecting your privacy. Microsoft uses the information you provide on this form to notify you of important information about our products, upgrades and enhancements, and to send you information about other Microsoft products and services. Microsoft will not share the information you provide with third parties without your permission except where necessary to complete the services or transactions you have requested, or as required by law. Microsoft is committed to protecting the security of your personal information. We use a variety of security technologies and procedures to help protect your personal information from unauthorized access, use, or disclosure. Your personal information is never shared outside the company without your permission, except under conditions explained above.
+    At Microsoft, we are committed to protecting your privacy. Microsoft uses the information you provide on this form to notify you of important information about our products, upgrades and enhancements, and to send you information about other Microsoft products and services. Microsoft won't share the information you provide with third parties without your permission except where necessary to complete the services or transactions you have requested, or as required by law. Microsoft is committed to protecting the security of your personal information. We use a variety of security technologies and procedures to help protect your personal information from unauthorized access, use, or disclosure. Your personal information is never shared outside the company without your permission, except under conditions explained above.
 
     If you believe that Microsoft has not adhered to this statement, please contact Microsoft by sending an email to privrc@microsoft.com or postal mail to Microsoft Privacy Response Center, Microsoft Corporation, One Microsoft Way, Redmond, WA 98052.
