@@ -52,11 +52,11 @@ The following illustration shows how diagnostic data flows from individual devic
 
 3. Devices send diagnostic data to the Microsoft Diagnostic Data Management service for Windows. This service is hosted in the United States.  
 
-4. Each day, Microsoft produces a snapshot of IT-focused insights. This snapshot combines the diagnostic data from Windows with your input for the enrolled devices. This process happens in transient storage, which is only used by Desktop Analytics. The transient storage is hosted in Microsoft data centers in the United States. The snapshots are segregated by commercial ID.  
+4. Each day, Microsoft produces a snapshot of IT-focused insights. This snapshot combines the diagnostic data from Windows with your input for the enrolled devices. This process happens in transient storage, which is only used by Desktop Analytics. The transient storage is hosted in Microsoft data centers in the United States. All data is sent over an SSL (HTTPS) encrypted channel. The snapshots are segregated by commercial ID.  
 
-5. The snapshots are then copied to the appropriate Azure Log Analytics workspace.  
+5. The snapshots are then copied to your Azure Log Analytics workspace. This data transfer happens over HTTPS through the webhook ingestion protocol, which is a feature of Log Analytics. Desktop Analytics doesn't have any read or write permissions to your Log Analytics storage. Desktop Analytics calls the webhook API with a shared access signature (SAS) URI. Then Log Analytics gets the data from the storage tables over HTTPS.
 
-6. Desktop Analytics stores your input in Azure Log Analytics storage. These configurations include deployment plans, and asset decisions for upgrade and importance.  
+6. Desktop Analytics stores your input in Log Analytics storage. These configurations include deployment plans, and asset decisions for upgrade and importance.  
 
 ## Other resources
 
@@ -77,6 +77,8 @@ For more information about related privacy aspects, see the following articles:
 - [Diagnostic Data Viewer Overview](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
 
 - [Licensing terms and documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
+
+- [Log Analytics data security](https://docs.microsoft.com/azure/azure-monitor/platform/data-security)
 
 - [Security and privacy at Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)  
 
