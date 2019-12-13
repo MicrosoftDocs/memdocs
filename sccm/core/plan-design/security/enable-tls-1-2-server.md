@@ -28,7 +28,7 @@ For more information about dependencies for specific Configuration Manager featu
 
 ## <a name="bkmk_protocol"></a> Ensure that TLS 1.2 is enabled as a protocol for SChannel at the operating system level
 
-[!INCLUDE [Enable TLS 1.2 protocol as a security provider](includes/enable-tls-1-2-protocol-as-a-security-provider.md)]
+[!INCLUDE [Enable TLS 1.2 protocol as a security provider](includes/enable-tls-1-2-protocol-security-provider.md)]
 
 ## <a name="bkmk_net"></a> Update and configure the .NET Framework to support TLS 1.2
 

@@ -74,11 +74,11 @@ TLS 1.2 is more secure than the previous cryptographic protocols such as SSL 2.0
 
 There are basically five areas that Configuration Manager uses encryption protocols like TLS 1.2:
 
-1. Client communications to IIS-based site server roles when the role is configured to use HTTPS. Examples of these roles include distribution points, software update points, and management points.
-2. Management point, SMS Executive, and SMS Provider communications with SQL. Configuration Manager always encrypts SQL communications.
-3. Site Server to WSUS communications if WSUS is configured to use HTTPS.
-4. The Configuration Manager console to SQL Reporting Services (SSRS) if SSRS is configured to use HTTPS.
-5. Any connections to internet-based services. Examples include the cloud management gateway (CMG), the service connection point sync, and sync of update metadata from Microsoft Update.
+- Client communications to IIS-based site server roles when the role is configured to use HTTPS. Examples of these roles include distribution points, software update points, and management points.
+- Management point, SMS Executive, and SMS Provider communications with SQL. Configuration Manager always encrypts SQL communications.
+- Site Server to WSUS communications if WSUS is configured to use HTTPS.
+- The Configuration Manager console to SQL Reporting Services (SSRS) if SSRS is configured to use HTTPS.
+- Any connections to internet-based services. Examples include the cloud management gateway (CMG), the service connection point sync, and sync of update metadata from Microsoft Update.
 
 ### What determines which encryption protocol is used?
 
