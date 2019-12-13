@@ -20,7 +20,7 @@ manager: dougeby
 When enabling TLS 1.2 for your Configuration Manager environment, start by ensuring the clients are capable and properly configured to use TLS 1.2 before enabling TLS 1.2 and disabling the older protocols on the site servers and remote site systems. There are three tasks for enabling TLS 1.2 on clients:
 
 - Update Windows and WinHTTP
-- Ensure that TLS 1.2 is enabled as a protocol for SChannel at the Operating System level
+- Ensure that TLS 1.2 is enabled as a protocol for SChannel at the operating system level
 - Update and configure the .NET Framework to support TLS 1.2
 
 For more information about dependencies for specific Configuration Manager features and scenarios, see [About enabling TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2).
@@ -29,7 +29,7 @@ For more information about dependencies for specific Configuration Manager featu
 
 Windows 8.1, Windows Server 2012 R2, Windows 10, Windows Server 2016, and later versions of Windows natively support TLS 1.2 for client-server communications over WinHTTP. 
 
-Earlier versions of Windows, such as Windows 7 or Windows Server 2012, do not enable TLS 1.1 or TLS 1.2 by default for secure communications using WinHTTP. For these earlier versions of Windows, install [Update 3140245](https://support.microsoft.com/help/3140245) to enable the registry value below, which can be set to add TLS 1.1 and TLS 1.2 to the default secure protocols list for WinHTTP. With the patch installed, create the following registry values:
+Earlier versions of Windows, such as Windows 7 or Windows Server 2012, don't enable TLS 1.1 or TLS 1.2 by default for secure communications using WinHTTP. For these earlier versions of Windows, install [Update 3140245](https://support.microsoft.com/help/3140245) to enable the registry value below, which can be set to add TLS 1.1 and TLS 1.2 to the default secure protocols list for WinHTTP. With the patch installed, create the following registry values:
 
 > [!IMPORTANT]
 > Enable these settings on all clients running earlier versions of Windows *before* enabling TLS 1.2 and disabling the older protocols on the Configuration Manager servers. Otherwise, you can inadvertently orphan them.
@@ -49,13 +49,13 @@ The example above shows the value of `0xAA0` for the WinHTTP `DefaultSecureProto
 
  If you want to completely disable SSL 3.0 and TLS 1.0, use the SChannel disabled protocols setting in Windows. For more information, see [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/help/245030/how-to-restrict-the-use-of-certain-cryptographic-algorithms-and-protoc).
 
-## <a name="bkmk_protocol"></a> Ensure that TLS 1.2 is enabled as a protocol for SChannel at the Operating System level
+## <a name="bkmk_protocol"></a> Ensure that TLS 1.2 is enabled as a protocol for SChannel at the operating system level
 
 [!INCLUDE [Enable TLS 1.2 protocol as a security provider](includes/enable-tls-1-2-protocol-as-a-security-provider.md)]
 
 ## <a name="bkmk_net"></a> Update and configure the .NET Framework to support TLS 1.2
 
-[!INCLUDE [Update .NET framework to support TLS 1.2](includes/update-net-framework-to-support-tls-1-2.md)]
+[!INCLUDE [Update and configure the .NET framework to support TLS 1.2](includes/update-net-framework-to-support-tls-1-2.md)]
 
 
 ## Next steps

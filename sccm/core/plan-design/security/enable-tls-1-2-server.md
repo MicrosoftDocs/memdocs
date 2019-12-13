@@ -19,20 +19,20 @@ manager: dougeby
 
 When enabling TLS 1.2 for your Configuration Manager environment, start with [enabling TLS 1.2 for the clients](/sccm/core/plan-design/security/enable-tls-1-2-client) first. Then, enable TLS 1.2 on the site servers and remote site systems second. Finally, test client to site system communications before potentially disabling the older protocols on the server side. The following tasks are needed for enabling TLS 1.2 on the site servers and remote site systems:
 
-- Ensure that TLS 1.2 is enabled as a protocol for SChannel at the Operating System level
+- Ensure that TLS 1.2 is enabled as a protocol for SChannel at the operating system level
 - Update and configure the .NET Framework to support TLS 1.2
 - Update SQL Server and client components
 - Update Windows Server Update Services (WSUS)
 
 For more information about dependencies for specific Configuration Manager features and scenarios, see [About enabling TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2). 
 
-## <a name="bkmk_protocol"></a> Ensure that TLS 1.2 is enabled as a protocol for SChannel at the Operating System level
+## <a name="bkmk_protocol"></a> Ensure that TLS 1.2 is enabled as a protocol for SChannel at the operating system level
 
 [!INCLUDE [Enable TLS 1.2 protocol as a security provider](includes/enable-tls-1-2-protocol-as-a-security-provider.md)]
 
 ## <a name="bkmk_net"></a> Update and configure the .NET Framework to support TLS 1.2
 
-[!INCLUDE [Update .NET framework to support TLS 1.2](includes/update-net-framework-to-support-tls-1-2.md)]
+[!INCLUDE [Update and configure the .NET framework to support TLS 1.2](includes/update-net-framework-to-support-tls-1-2.md)]
 
 
 ## <a name="bkmk_sql"></a> Update SQL Server and client components
