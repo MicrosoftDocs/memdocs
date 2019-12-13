@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 12/11/2019
+ms.date: 12/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -124,13 +124,12 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--ID-->
 
-- [4831871](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--4831871-->
-- [5229962](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--5229962-->
-- [5526972](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--5526972-->
-- [3607758](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--3607758-->
-- [4226618](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--4226618-->
-- [5842295](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--5842295-->
-- [5573175](/sccm/core/get-started/2019/technical-preview-1912#bkmk_anchor) <!--5573175,5690481-->
+- [Bootstrap a task sequence immediately after client registration](/sccm/core/get-started/2019/technical-preview-1912#bkmk_provisionts) <!--5526972-->
+- [Expand Microsoft Defender Advanced Threat Protection (ATP) on-boarding](/sccm/core/get-started/2019/technical-preview-1912#expand-microsoft-defender-advanced-threat-protection-atp-on-boarding) <!--5229962-->
+- [New management insight rules from Microsoft Services](/sccm/core/get-started/2019/technical-preview-1912#bkmk_rules) <!--3607758-->
+- [Client log collection](/sccm/core/get-started/2019/technical-preview-1912#client-log-collection) <!--4226618-->
+- [Improvements to CMPivot](/sccm/core/get-started/2019/technical-preview-1912#improvements-to-cmpivot) <!--5870934-->
+- [Improvements to OS deployment](/sccm/core/get-started/2019/technical-preview-1912#bkmk_osd) <!--5842295,5573175,5690481-->
 
 > [!NOTE]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  

@@ -2,7 +2,7 @@
 title: Technical preview 1912
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1912.
-ms.date: 12/11/2019
+ms.date: 12/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -25,16 +25,14 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/1912/1234567.md)] -->
 
-[!INCLUDE [4831871](includes/1912/4831871.md)]
-[!INCLUDE [5229962](includes/1912/5229962.md)]
-[!INCLUDE [5526972](includes/1912/5526972.md)]
-[!INCLUDE [3607758](includes/1912/3607758.md)]
-[!INCLUDE [4226618](includes/1912/4226618.md)]
-[!INCLUDE [5842295](includes/1912/5842295.md)]
+[!INCLUDE [Bootstrap a task sequence immediately after client registration](includes/1912/5526972.md)]
+[!INCLUDE [Expand Microsoft Defender Advanced Threat Protection (ATP) on-boarding](includes/1912/5229962.md)]
+[!INCLUDE [New management insight rules from Microsoft Services](includes/1912/3607758.md)]
+[!INCLUDE [Client log collection](includes/1912/4226618.md)]
+[!INCLUDE [Improvements to CMPivot](includes/1912/5870934.md)]
 
-[!INCLUDE [5573175](includes/1912/5573175.md)]
-[!INCLUDE [5870934](includes/1912/5870934.md)]
-<!--5573175,5690481-->
+[!INCLUDE [Improvements to OS deployment](includes/1912/5842295.md)]
+<!--5842295,5573175,5690481-->
 
 <!--
 ## General known issues
