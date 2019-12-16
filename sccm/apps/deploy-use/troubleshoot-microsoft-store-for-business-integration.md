@@ -39,7 +39,7 @@ In the Configuration Manager console, go to the **Software Library** workspace, 
 
 ## Log files
 
-### MSfBSyncWorker.log
+### WSfBSyncWorker.log
 
 This log file is located on the service connection point, under `\Logs` in the Configuration Manager installation directory. It records information about the communication with the cloud service. This information includes metadata, icons, packages, and license file retrieval.
 
@@ -47,7 +47,7 @@ To change the log level, change the `LoggingLevel` value to `0` in the `HKLM\SOF
 
 ### SMS_CLOUDCONNECTION.log
 
-This log file is located on the service connection point, under `\Logs` in the Configuration Manager installation directory. If the MSfBSyncWorker service isn't started, or repeatedly starts and stops, review the entries in this log file.
+This log file is located on the service connection point, under `\Logs` in the Configuration Manager installation directory. If the WSfBSyncWorker service isn't started, or repeatedly starts and stops, review the entries in this log file.
 
 > [!NOTE]
 > This log file is shared with other features.
@@ -69,7 +69,7 @@ This log file is located on the site server for the top-level site in the hierar
 
 When the last sync status is *failed*, start by reviewing the following [log files](#log-files) to identify the symptom:
 
-- MSfBSyncWorker.log
+- WSfBSyncWorker.log
 - SMS_CLOUDCONNECTION.log
 
 Then look at one of the following sections for common issues:
