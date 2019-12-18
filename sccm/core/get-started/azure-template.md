@@ -75,7 +75,10 @@ This process requires an Azure subscription in which you can create the followin
 
 4. Read the terms and conditions. If you agree, select **I agree to the terms and conditions stated above**. Then select **Purchase** to continue. 
 
-Azure validates the settings, and then begins the deployment. Check the status of the deployment in the Azure portal. The process can take 2-4 hours. Even when the Azure portal shows successful deployment, configuration scripts continue to run. Don't restart the VMs during the process.
+Azure validates the settings, and then begins the deployment. Check the status of the deployment in the Azure portal. 
+
+> [!NOTE]
+> The process can take 2-4 hours. Even when the Azure portal shows successful deployment, configuration scripts continue to run. Don't restart the VMs during the process.
 
 To see the status of the configuration scripts, connect to the `<prefix>PS1` server, and view the following file: `%windir%\TEMP\ProvisionScript\PS1.json`. If it shows all steps as complete, the process is done.
 
