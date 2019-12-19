@@ -3,7 +3,7 @@ title: Software updates maintenance
 titleSuffix: "Configuration Manager"
 description: "To maintain updates in Configuration Manager, you can schedule the WSUS cleanup task, or you can run it manually."
 author: mestew
-ms.date: 10/17/2019
+ms.date: 12/17/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -138,6 +138,16 @@ When the WSUS database is on a remote SQL server, the site server's computer acc
 
 - The `db_datareader` and `db_datawriter` fixed database roles. For more information, see [Database-Level Roles](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles).
 - The `CONNECT SQL` server permission must be granted to the site server's computer account. For more information, see [GRANT Server Permissions (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+
+#### WSUS cleanup wizard
+
+Starting in version 1906, the following **WSUS Server Cleanup Wizard** options aren't run on the CAS, primary, and secondary sites:
+
+- Computers not contacting the server
+- Unneeded update files
+
+  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/) blog post.
+
 
 ### Known issues for version 1906
 
