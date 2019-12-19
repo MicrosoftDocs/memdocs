@@ -2,7 +2,7 @@
 title: Optimize Windows 10 update delivery
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to manage update content to stay current with Windows 10.  
-ms.date: 12/05/2019
+ms.date: 12/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -43,13 +43,12 @@ Configuration Manager supports many peer-to-peer technologies, including the fol
 
 The next sections provide further information on these technologies.
 
-
 ### Windows Delivery Optimization
 
 [Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is the main download technology and peer-to-peer distribution method built into Windows 10. Windows 10 clients can get content from other devices on their local network that download the same updates. Using the [Windows options available for Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delivery-optimization-options), you can configure clients into groups. This grouping allows your organization to identify devices that are possibly the best candidates to fulfill peer-to-peer requests. Delivery Optimization significantly reduces the overall bandwidth that's used to keep devices up-to-date while speeding up the download time.
 
 > [!NOTE]  
-> Delivery Optimization is a cloud-managed solution. Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality.  
+> Delivery Optimization is a cloud-managed solution. Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). 
 
 For the best results, you may need to set the Delivery Optimization [download mode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#download-mode) to **Group (2)** and define *Group IDs*. In group mode, peering can cross internal subnets between devices that belong to the same group including devices in remote offices. Use the [Group ID option](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids) to create your own custom group independently of domains and AD DS sites. Group download mode is the recommended option for most organizations looking to achieve the best bandwidth optimization with Delivery Optimization.
 
@@ -65,7 +64,8 @@ To use Delivery Optimization for all Windows update installation files, enable t
 - **Port that clients use to receive requests for delta content** set to 8005 (default) or a custom port number.
 
 > [!IMPORTANT]
-> - Delivery Optimization must be enabled (default) and not bypassed. For more information, see [Windows Delivery Optimization](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#windows-delivery-optimization).
+> - Delivery Optimization must be enabled (default) and not bypassed. For more information, see [Windows Delivery Optimization reference](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference).
+> - Verify your [Delivery Optimization client settings](/sccm/core/clients/deploy/about-client-settings#delivery-optimization) when changing your [software updates client settings](/sccm/core/clients/deploy/about-client-settings#software-updates) for delta content.
 
 
 
