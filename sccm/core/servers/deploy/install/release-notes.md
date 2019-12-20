@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 12/03/2019
+ms.date: 12/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -196,7 +196,7 @@ These **undefined** devices are **up-to-date** with the target version of the OS
 
 <!-- 5771680 -->
 
-*Applies to version 1906, 1910*
+*Applies to version 1906, 1910 early update ring*
 
 If you enable a cloud management gateway (CMG) to **function as a cloud distribution point and serve content from Azure storage** and **Enforce TLS 1.2**, you may see content downloads fail.
 
@@ -216,4 +216,8 @@ The following errors show in the CMGContentService.log on the server:
 ERROR: Exception processing request. Microsoft.WindowsAzure.Storage.StorageException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.ComponentModel.Win32Exception: The client and server cannot communicate, because they do not possess a common algorithm...
 ```
 
-To work around this issue, use a traditional [cloud distribution point](/configmgr/core/plan-design/hierarchy/use-a-cloud-based-distribution-point). That role doesn't enforce TLS 1.2, but is compatible with clients that require TLS 1.2.
+To work around this issue:
+
+- Update the site to the globally available version of 1910, released on December 20, 2019. (If you previously updated to the 1910 early update ring, you need to update to this build when it's available.)
+
+- Alternatively, use a traditional [cloud distribution point](/configmgr/core/plan-design/hierarchy/use-a-cloud-based-distribution-point). That role doesn't enforce TLS 1.2, but is compatible with clients that require TLS 1.2.

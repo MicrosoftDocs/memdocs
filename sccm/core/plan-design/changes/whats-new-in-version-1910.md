@@ -2,7 +2,7 @@
 title: What's new in version 1910
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1906 of Configuration Manager current branch.
-ms.date: 12/04/2019
+ms.date: 12/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -369,8 +369,8 @@ The following additional hotfixes are available to address specific issues:
 
 ## Next steps
 
-At this time, version 1910 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](/sccm/core/servers/manage/checklist-for-installing-update-1910#early-update-ring).
-<!--As of August 16, 2019, version 1906 is globally available for all customers to install.-->
+<!-- At this time, version 1910 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](/sccm/core/servers/manage/checklist-for-installing-update-1910#early-update-ring). -->
+As of December 20, 2019, version 1910 is globally available for all customers to install.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates) and [Checklist for installing update 1910](/sccm/core/servers/manage/checklist-for-installing-update-1910).
 
