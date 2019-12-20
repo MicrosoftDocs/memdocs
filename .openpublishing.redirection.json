@@ -349,6 +349,26 @@
             "source_path": "sccm/core/servers/deploy/configure/troubleshoot-delivery-optimization-in-network-cache.md",
             "redirect_url": "/sccm/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/misc/eula/microsoft-system-center-configuration-manager-evaluation.md",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/microsoft-system-center-configuration-manager-evaluation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/misc/eula/microsoft-system-center-configuration-manager-technical-preview.md",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/microsoft-system-center-configuration-manager-technical-preview",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/misc/eula/microsoft-system-center-endpoint-protection-evaluation.md",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/microsoft-system-center-endpoint-protection-evaluation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/misc/eula/microsoft-sql-server-2016-express.md",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/microsoft-sql-server-2016-express",
+            "redirect_document_id": false
         }
     ]
 }
