@@ -2,7 +2,7 @@
 title: What's new in version 1910
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1906 of Configuration Manager current branch.
-ms.date: 12/04/2019
+ms.date: 12/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -343,12 +343,12 @@ This release includes the following improvements to search in the Configuration 
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1910 release notes](https://docs.microsoft.com/powershell/sccm/1910-release-notes?view=sccm-ps).
 
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4535776).
+
 <!--
 As of this version, the following features are no longer pre-release:
 - [SMS Provider administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)
 - [Device Guard management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)
-
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4514258).
 
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 
@@ -369,8 +369,8 @@ The following additional hotfixes are available to address specific issues:
 
 ## Next steps
 
-At this time, version 1910 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](/sccm/core/servers/manage/checklist-for-installing-update-1910#early-update-ring).
-<!--As of August 16, 2019, version 1906 is globally available for all customers to install.-->
+<!-- At this time, version 1910 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](/sccm/core/servers/manage/checklist-for-installing-update-1910#early-update-ring). -->
+As of December 20, 2019, version 1910 is globally available for all customers to install.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates) and [Checklist for installing update 1910](/sccm/core/servers/manage/checklist-for-installing-update-1910).
 
