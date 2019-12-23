@@ -102,11 +102,14 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 ## New and updated support articles
 
-Support articles that are new or updated between between October 25 and November 27, 2019.
+Support articles that are new or updated between between October 25 and December 23, 2019.
 
 - [KB 4528414: Configuration Manager console displays out-of-date Endpoint Protection Definition version and last update time](https://support.microsoft.com/help/4528414/)
 - [KB 4529905: Delays in content distribution in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4529905)
 - [KB 4529827: Configuration Manager clients incorrectly detect co-management state](https://support.microsoft.com/help/4529827)
+- [KB 4529824: Message Processing Engine update for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4529824)
+- [KB 4535819: Update for Microsoft Endpoint Configuration Manager version 1910, early update ring](https://support.microsoft.com/help/4535819)
+- [KB 4535776: Summary of changes in Microsoft Endpoint Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4535776)
 
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.  
