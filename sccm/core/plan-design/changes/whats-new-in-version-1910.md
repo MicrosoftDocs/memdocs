@@ -59,9 +59,9 @@ In version 1910, aside from the name change, Configuration Manager still functio
 
 - **Software Center**: Find the Software Center shortcut under the Windows Start menu in the **Microsoft Endpoint Manager** folder.
 
-![Microsoft Endpoint Manager Start menu icons](media/microsoft-endpoint-manager-start-menu.png)
+   ![Microsoft Endpoint Manager Start menu icons](media/microsoft-endpoint-manager-start-menu.png)
 
-Make sure to update any internal documentation that you maintain to include these new locations.
+    Make sure to update any internal documentation that you maintain to include these new locations.
 
 > [!TIP]
 > In Windows 10, when you open the Start menu, type the name to find the icon. For example, enter *config* for the Configuration Manager console and *software* for Software Center.
@@ -172,6 +172,8 @@ For more general information, see [Create application groups](/configmgr/apps/de
 ## <a name="bkmk_osd"></a> OS deployment
 
 ### Improvements to the task sequence editor
+
+Improvements to the task sequence editor include the following:
 
 - **Search the task sequence editor:**<!--4621085--> If you have a large task sequence with many groups and steps, it can be difficult to find specific steps. You can now search in the task sequence editor. This action lets you more quickly locate steps in the task sequence.
 - **Copy and paste task sequence conditions:**<!--4621098--> If you want to reuse the conditions from one task sequence step to another, you can now copy and paste conditions in the task sequence editor.
