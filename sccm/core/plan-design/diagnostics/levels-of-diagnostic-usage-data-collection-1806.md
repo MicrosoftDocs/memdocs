@@ -1,7 +1,7 @@
 ---
 title: Diagnostic and usage data for 1806
 titleSuffix: Configuration Manager
-description: Learn about the levels of diagnostics and usage data collected in version 1806.
+description: Learn about the specific data that Configuration Manager collects at each level in version 1806.
 ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,29 +12,19 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Levels of diagnostic usage data collection for version 1806
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# Diagnostic and usage data for 1806
 
-Configuration Manager version 1806 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail about data collected at each level.
+*Applies to: System Center Configuration Manager (current branch)*
+
+The following sections provide additional detail about data collected at each level. For more information on the levels and how to change them, see [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview).
 
 Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[Removed]***, or ***[Moved]***.
 
-
 > [!IMPORTANT]
->  Configuration Manager doesn't collect site codes, sites names, IP addresses, user names, computer names, physical addresses, or email addresses on the Basic or Enhanced levels. Any collection of this information on the Full level is not purposeful. It is potentially included in advanced diagnostic information like log files or memory snapshots. Microsoft doesn't use this information to identify you, contact you, or develop advertising.
+> Configuration Manager doesn't collect site codes, sites names, IP addresses, user names, computer names, physical addresses, or email addresses on the Basic or Enhanced levels. Any collection of this information on the Full level is not purposeful. It is potentially included in advanced diagnostic information like log files or memory snapshots. Microsoft doesn't use this information to identify you, contact you, or develop advertising.
 
-
-
-##  <a name="bkmk_change"></a> How to change the level
- Administrators who have a role-based administrative scope that includes **Modify** permissions on the **Site** object class can change the level of data collected in the Diagnostics and Usage Data settings in the Configuration Manager console.
-
-You change the data collection level from within the console by navigating to **Administration** > **Overview** > **Site Configuration** > **Sites**. Open **Hierarchy Settings**, and then select the data level you want to use.  
-
-
-
-##  <a name="bkmk_level1"></a> Level 1 - Basic
-The Basic level includes data about your hierarchy, data that's required to help improve your installation or upgrade experience, and data that helps determine the Configuration Manager updates that are applicable for your hierarchy.
+## <a name="bkmk_level1"></a> Level 1 - Basic
 
 For Configuration Manager version 1806, this level includes the following data:
 
@@ -119,10 +109,7 @@ For Configuration Manager version 1806, this level includes the following data:
 
 
 
-##  <a name="bkmk_level2"></a> Level 2 - Enhanced
-The Enhanced level is the default after setup finishes. This level includes data that's collected in the Basic level and feature-specific data (frequency and duration of use), Configuration Manager client settings (component name, state, and certain settings like polling intervals), and basic information about software updates.
-
-This level is recommended because it provides Microsoft with the minimum data that's required to make useful improvements in future versions of products and services. This level doesn't collect object names (sites, users, computer, or objects), details of security-related objects, or vulnerabilities like counts of systems that require software updates.
+## <a name="bkmk_level2"></a> Level 2 - Enhanced
 
 For Configuration Manager version 1806, this level includes the following data:
 
@@ -499,7 +486,6 @@ For Configuration Manager version 1806, this level includes the following data:
 
 
 ##  <a name="bkmk_level3"></a> Level 3 - Full
-The Full level includes all data in the Basic and Enhanced levels. It also includes additional information about Endpoint Protection, update compliance percentages, and software update information. This level can also include advanced diagnostic information like system files and memory snapshots, which might include personal information that existed in memory or log files at the time of capture.
 
 For Configuration Manager version 1806, this level includes the following data:
 

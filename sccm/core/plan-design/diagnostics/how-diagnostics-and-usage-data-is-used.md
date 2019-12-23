@@ -1,8 +1,8 @@
 ---
-title: "Use of diagnostics data"
-titleSuffix: "Configuration Manager"
-description: "Learn about how Microsoft uses the diagnostics and usage data that System Center Configuration Manager collects."
-ms.date: 12/29/2016
+title: Use of diagnostics data
+titleSuffix: Configuration Manager
+description: Learn about how Microsoft uses the diagnostics and usage data that Configuration Manager collects.
+ms.date: 12/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,35 +12,34 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How diagnostics and usage data is used for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# How Microsoft uses Configuration Manager diagnostics and usage data
 
-Diagnostic and usage data that System Center Configuration Manager collects provides Microsoft nearly immediate feedback about how the product is working and is used to adjust future updates. We are also able to see configuration data that helps us engineer and test the configurations that are in production. For example:  
+*Applies to: Configuration Manager (current branch)*
 
--   The Windows server versions that are used by site servers  
+Diagnostic and usage data that Configuration Manager collects provides Microsoft nearly immediate feedback about how the product is working and is used to adjust future updates. Microsoft can also see configuration data that helps them engineer and test the configurations that you use in production. For example:
 
--   The installed language packs  
+- The Windows server versions used on site servers
 
--   The delta of the SQL schema against the product default  
+- Installed language packs
 
-This data helps the engineering team plan future tests to ensure the best experience for the most common configurations. As updates to Configuration Manager are released on a faster cadence (to better support quickly moving technologies such as Windows 10 and Microsoft Intune), this data is crucial to quickly adjust and adapt.  
+- The delta of the SQL schema against the product default
 
-Equally important is how the diagnostics and usage data is not used. Microsoft does not use this data for:  
+This data helps the engineering team plan future tests to make sure you have the best experience with the most common configurations. This data is crucial to quickly adjust and adapt with a frequent release cycle.
 
--   Licensing audits, such as comparing customer usage against license agreements  
+Equally important is how the diagnostics and usage data isn't used. Microsoft doesn't use this data for:
 
--   Auditing of products that are out of support  
+- Licensing audits, such as comparing customer usage against license agreements
 
--   Advertising based on available data such as feature usage or geolocation (time zone)  
+- Auditing of products that are out of support
 
-##  <a name="bkmk_improve"></a> Examples of how diagnostics and usage data improves the product  
-Microsoft uses available data to improve to the product. Following are a few examples:  
+- Advertising based on available data such as feature usage or geolocation (time zone)
 
--   **Revised support for older server operating systems:**  
+Microsoft uses available data to improve the product. For example:
 
-     The initial support offered by the current branch of System Center Configuration Manager limited the support timeline for Windows Server 2008 R2. After examining the usage data from customers who had upgraded to the Configuration Manager current branch, we identified the need to revise and extend this timeline to support customers who still use this server operating system to host site servers and site system roles.  
+- The initial support offered by the current branch of Configuration Manager limited the support timeline for Windows Server 2008 R2. Microsoft examined the usage data from customers who had upgraded to the Configuration Manager current branch. They then identified the need to revise and extend this timeline to support customers who still use this OS.
 
--   **Improved prerequisite checks:**  
+- Microsoft improved the prerequisite checks for installing an update. They removed obsolete rules, accounted for additional cases, and automatically remediated some issues.  
 
-     Based on the usage data, we have improved the prerequisite checks for installing an update to remove obsolete rules, account for additional cases, and, in some cases, to auto-remediate some issues.  
+> [!div class="nextstepaction"]
+> [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview)

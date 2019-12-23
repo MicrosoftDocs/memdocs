@@ -1,8 +1,8 @@
 ---
-title: "Diagnostics data collection"
-titleSuffix: "Configuration Manager"
-description: "Learn about how System Center Configuration Manager collects diagnostics and usage data about itself."
-ms.date: 12/29/2016
+title: Diagnostics data collection
+titleSuffix: Configuration Manager
+description: Learn about how Configuration Manager collects diagnostics and usage data about itself.
+ms.date: 12/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,16 +12,20 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How diagnostics and usage data is collected by System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# How Configuration Manager collects diagnostics and usage data
 
-To collect diagnostics and usage data for System Center Configuration Manager, each primary site runs SQL Server queries on a weekly basis. In a multi-site hierarchy, the data is replicated to the central administration site.  
+*Applies to: Configuration Manager (current branch)*
 
-At the top-level site of a hierarchy, the service connection point site system role submits this information when it checks for updates. The mode of the service connection point detemines how the data is transferred:  
+To collect diagnostics and usage data for Configuration Manager, each primary site runs SQL Server queries on a weekly basis. In a multi-site hierarchy, the data is replicated to the central administration site.  
 
--   **In online mode:** Diagnostics and usage data is automatically sent once a week from the service connection point to the cloud service.  
+At the top-level site of a hierarchy, the service connection point submits this information when it checks for updates. The mode of the service connection point determines how the data is transferred:
 
--   **In offline mode:** Diagnostics and usage data is transferred manually by using the service connection tool. For more information, see [Use the Service Connection Tool for System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md).  
+- **Online**: Once a week, the service connection point automatically sends diagnostics and usage data to the cloud service.
 
-For more information, see [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md).  
+- **Offline**: You manually transfer diagnostics and usage data with the [service connection tool](/configmgr/core/servers/manage/use-the-service-connection-tool).
+
+For more information, see [About the service connection point](/configmgr/core/servers/deploy/configure/about-the-service-connection-point).
+
+> [!div class="nextstepaction"]
+> [How to view diagnostics and usage data](/configmgr/core/plan-design/diagnostics/view-diagnostics-and-usage-data)

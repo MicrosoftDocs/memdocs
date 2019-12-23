@@ -394,6 +394,11 @@
             "source_path": "sccm/core/misc/eula/microsoft-system-center-configuration-manager-sdk-redistributables.md",
             "redirect_url": "https://docs.microsoft.com/legal/configmgr/sdk-redistributables",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/understand/frequently-asked-questions-about-diagnostics-and-usage-data.md",
+            "redirect_url": "/configmgr/core/plan-design/diagnostics/frequently-asked-questions",
+            "redirect_document_id": false
         }
     ]
 }
