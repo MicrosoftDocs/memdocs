@@ -197,12 +197,12 @@
         },
         {  
             "source_path": "sccm/core/misc/eula/microsoft-system-center-configuration-manager-mp-interface.md",
-            "redirect_url": "/sccm/core/misc/eula/microsoft-system-center-configuration-manager-sdk-redistributables",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/sdk-redistributables",
             "redirect_document_id": false
         },
         {  
             "source_path": "sccm/core/misc/eula/microsoft-system-center-configuration-manager-client-messaging.md",
-            "redirect_url": "/sccm/core/misc/eula/microsoft-system-center-configuration-manager-sdk-redistributables",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/sdk-redistributables",
             "redirect_document_id": false
         },
         {  
@@ -368,6 +368,31 @@
         {
             "source_path": "sccm/core/misc/eula/microsoft-sql-server-2016-express.md",
             "redirect_url": "https://docs.microsoft.com/legal/configmgr/microsoft-sql-server-2016-express",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/misc/eula/third-party-notices.md",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/third-party-notices",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/misc/eula/microsoft-sql-server-2012-native-client.md",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/microsoft-sql-server-2012-native-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/misc/eula/microsoft-sql-server-2014-express.md",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/microsoft-sql-server-2014-express",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/misc/eula/sql-server-branded-components-included.md",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/sql-server-branded-components-included",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/misc/eula/microsoft-system-center-configuration-manager-sdk-redistributables.md",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/sdk-redistributables",
             "redirect_document_id": false
         }
     ]
