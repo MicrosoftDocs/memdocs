@@ -200,29 +200,29 @@
       href: plan-design/network/example-deployment-of-pki-certificates.md
   - name: Diagnostics and usage data
     items:
-    - name: Diagnostics and usage data overview
+    - name: Overview of diagnostics and usage data
       href: plan-design/diagnostics/diagnostics-and-usage-data.md
+    - name: How Microsoft uses diagnostics and usage data
+      href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
     - name: How Configuration Manager collects data
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md
     - name: How to view diagnostics and usage data
       href: plan-design/diagnostics/view-diagnostics-and-usage-data.md
-    - name: How Microsoft uses diagnostics and usage data
-      href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
-    - name: Levels of diagnostic usage data
+    - name: Levels of diagnostics and usage data
       items:
         - name: Overview of levels
           href: plan-design/diagnostics/levels-overview.md
-        - name: Diagnostic data for 1910
+        - name: Data for version 1910
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1910.md
-        - name: Diagnostic data for 1906
+        - name: Data for version 1906
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
-        - name: Diagnostic data for 1902
+        - name: Data for version 1902
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
-        - name: Diagnostic data for 1810
+        - name: Data for version 1810
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
-        - name: Diagnostic data for 1806
+        - name: Data for version 1806
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md
-    - name: Frequently asked questions
+    - name: Frequently asked questions (FAQ)
       href: plan-design/diagnostics/frequently-asked-questions.md
     - name: Customer Experience Improvement Program (CEIP)
       href: plan-design/diagnostics/customer-experience-improvement-program-ceip.md

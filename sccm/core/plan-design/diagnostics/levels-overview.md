@@ -64,7 +64,7 @@ The following articles detail the specific data that Configuration Manager colle
 - [Diagnostic and usage data for 1810](/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810)
 - [Diagnostic and usage data for 1806](/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806)
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Frequently asked questions](/configmgr/core/plan-design/diagnostics/frequently-asked-questions)
