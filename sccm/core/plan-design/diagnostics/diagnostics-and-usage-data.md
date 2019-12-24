@@ -27,4 +27,4 @@ Each Configuration Manager hierarchy enables diagnostics and usage data. It cons
 For more information, see the [Microsoft privacy statement](https://go.microsoft.com/fwlink/?LinkID=626527).  
 
 > [!div class="nextstepaction"]
-> [How Configuration Manager collects data](/configmgr/core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected)
+> [How Microsoft uses diagnostics and usage data](/configmgr/core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used)

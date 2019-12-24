@@ -78,4 +78,4 @@ When you view the raw data, a common hashed value appears in each row of data. T
 ## Next step
 
 > [!div class="nextstepaction"]
-> [How Microsoft uses diagnostics and usage data](/configmgr/core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used)
+> [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview)
