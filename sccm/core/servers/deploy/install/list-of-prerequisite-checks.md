@@ -827,7 +827,7 @@ For more information, see [Prepare Active Directory for site publishing](/sccm/c
 
 WinRM 1.1 is installed on the primary site server or the Configuration Manager console computer to run the out-of-band management console.
 
-For more information about how to download WinRM 1.1, see [Support article 936059](https://support.microsoft.com/help/936059).
+WinRM is automatically installed with all currently-supported versions of Windows. For more information, see [Installation and configuration for Windows Remote Management](https://docs.microsoft.com/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
 
 ### WSUS on site server
 
