@@ -59,12 +59,12 @@ In version 1910, aside from the name change, Configuration Manager still functio
 
 - **Software Center**: Find the Software Center shortcut under the Windows Start menu in the **Microsoft Endpoint Manager** folder.
 
-   ![Microsoft Endpoint Manager Start menu icons](media/microsoft-endpoint-manager-start-menu.png)
+![Microsoft Endpoint Manager Start menu icons](media/microsoft-endpoint-manager-start-menu.png)
 
-    Make sure to update any internal documentation that you maintain to include these new locations.
+Make sure to update any internal documentation that you maintain to include these new locations.
 
 > [!TIP]
-> In Windows 10, when you open the Start menu, type the name to find the icon. For example, enter *config* for the Configuration Manager console and *software* for Software Center.
+> In Windows 10, when you open the Start menu, type the name to find the icon. For example, enter `Configuration Manager` or `Software Center`.
 
 ## <a name="bkmk_infra"></a> Site infrastructure
 
@@ -139,7 +139,7 @@ For more information, see [Include custom configuration baselines as part of com
 
 <!--4737447-->
 
-Configuration Manager current branch version 1906 introduced support for [Windows Virtual Desktop](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-virtual-desktop). This Microsoft Azure environment supports several OS versions, some of which allow multiple concurrent active user sessions. For example, Windows 10 Enterprise multi-session is allowed.
+Configuration Manager current branch version 1906 introduced support for [Windows Virtual Desktop](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-virtual-desktop). This Microsoft Azure environment supports several OS versions, some of which allow multiple concurrent active user sessions. For example, Windows 10 Enterprise multi-session is one of these OS versions.
 
 If you require user policy on these multi-session devices and accept any potential performance impact, you can now configure a client setting to enable user policy. In the **Client Policy** group, configure the **Enable user policy for multiple user sessions** setting.
 
@@ -173,7 +173,7 @@ For more general information, see [Create application groups](/configmgr/apps/de
 
 ### Improvements to the task sequence editor
 
-Improvements to the task sequence editor include the following:
+ The task sequence editor includes the following improvements:
 
 - **Search the task sequence editor:**<!--4621085--> If you have a large task sequence with many groups and steps, it can be difficult to find specific steps. You can now search in the task sequence editor. This action lets you more quickly locate steps in the task sequence.
 - **Copy and paste task sequence conditions:**<!--4621098--> If you want to reuse the conditions from one task sequence step to another, you can now copy and paste conditions in the task sequence editor.
@@ -249,7 +249,7 @@ Use the **Apply Windows Settings** task sequence step to configure the following
 - UI language fallback
 - User locale
 
-For more information, see [Apply Windows settings](/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyWindowsSettings).
+For more information, see [Apply Windows Settings](/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyWindowsSettings).
 
 #### New variable for Windows 10 in-place upgrade
 
@@ -265,7 +265,7 @@ For more information, see [Task sequence variables - SetupCompletePause](/config
 
 ### Additional options for third-party update catalogs
 <!--4469002-->
-You now have more granular controls over synchronization of third-party updates catalogs. Starting in Configuration Manager version 1910, you can configure the synchronization schedule for each catalog independently. When you use catalogs that include categorized updates, you can configure synchronization to include only specific categories of updates to avoid synchronizing the entire catalog. With categorized catalogs, when you're confident you'll deploy a category, you can configure it to automatically download and publish to Windows Server Update Services.
+You now have more granular controls over synchronization of third-party updates catalogs. Starting in Configuration Manager version 1910, you can configure the synchronization schedule for each catalog independently. When you use catalogs that include categorized updates, you can configure synchronization to include only specific categories of updates to avoid synchronizing the entire catalog. With categorized catalogs, when you're confident you'll deploy a category, you can configure it to automatically download and publish to Windows Server Update Services (WSUS).
 
 For more information, see [Enable third-party updates](/sccm/sum/deploy-use/third-party-software-updates#bkmk_1910).
 
