@@ -13,7 +13,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ROBOTS: NOINDEX
 ---
-# Levels of diagnostic usage data collection for version 1802 of System Center Configuration Manager
+# Levels of diagnostic usage data collection for version 1802 of Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -465,7 +465,7 @@ For Configuration Manager version 1802, this level includes the following data:
 
 - Compliance Settings: SCEP, VPN, Wi-Fi, and compliance policy template configuration details
 
-- DCM config pack for System Center Configuration Manager usage
+- DCM config pack for Configuration Manager usage
 
 - Detailed client deployment installation errors
 

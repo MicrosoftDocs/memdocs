@@ -91,6 +91,6 @@ Start Component
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+ [Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [About Configuration Manager Inventory](../../../../develop/core/clients/inventory/about-configuration-manager-inventory.md)   
  [How to Configure Hardware Inventory Settings](../../../../develop/core/clients/inventory/how-to-configure-hardware-inventory-settings.md)

@@ -12,12 +12,12 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Add a Boot Image from a WIM File in Configuration Manager
-You add a boot image from a Windows Image (WIM) file to System Center Configuration Manager by creating an instance of [SMS_BootImagePackage](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md). The property ImagePath must be set to the Universal Naming Convention (UNC) path to the WIM file. The property ImageIndex is the index to the required image within the WIM file.  
+You add a boot image from a Windows Image (WIM) file to Configuration Manager by creating an instance of [SMS_BootImagePackage](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md). The property ImagePath must be set to the Universal Naming Convention (UNC) path to the WIM file. The property ImageIndex is the index to the required image within the WIM file.  
 
  If the boot image requires Windows drivers, you specify them in the `ReferencedDrivers` property, which is an array of [SMS_Driver_Details](../../develop/reference/osd/sms_driver_details-server-wmi-class.md).  
 
 > [!NOTE]
->  When the boot image is updated, for example, when a System Center Configuration Manager binary or boot image property is changed, the boot image must be updated by calling the [SMS_BootImagePackage](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) class [RefreshPkgSource](../../develop/reference/osd/refreshpkgsource-method-in-class-sms_bootimagepackage.md) method.  
+>  When the boot image is updated, for example, when a Configuration Manager binary or boot image property is changed, the boot image must be updated by calling the [SMS_BootImagePackage](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) class [RefreshPkgSource](../../develop/reference/osd/refreshpkgsource-method-in-class-sms_bootimagepackage.md) method.  
 
 ### To add a boot image from a WIM file  
 

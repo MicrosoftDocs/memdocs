@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: Configuration Manager (current branch)*
 
-Each System Center Configuration Manager site requires a supported SQL Server version and configuration to host the site database.  
+Each Configuration Manager site requires a supported SQL Server version and configuration to host the site database.  
 
 ##  <a name="bkmk_Instances"></a> SQL Server instances and locations  
  

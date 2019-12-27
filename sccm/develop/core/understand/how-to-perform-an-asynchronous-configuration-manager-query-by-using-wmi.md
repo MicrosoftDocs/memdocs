@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Perform an Asynchronous Configuration Manager Query by Using WMI
-In System Center Configuration Manager, you perform an synchronous query for Configuration Manager objects by calling the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [ExecQueryAsync](https://msdn.microsoft.com/library/aa392108.aspx) method and by implementing a sink method to handle query results.  
+In Configuration Manager, you perform an synchronous query for Configuration Manager objects by calling the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [ExecQueryAsync](https://msdn.microsoft.com/library/aa392108.aspx) method and by implementing a sink method to handle query results.  
 
  To handle each returned object, create an [objWbemSink.OnObjectReady](https://msdn.microsoft.com/library/aa393881.aspx) event subroutine. To be notified when the query is completed, create a [objWbemSink.OnCompleted](https://msdn.microsoft.com/library/aa393879.aspx) event subroutine.  
 
@@ -27,7 +27,7 @@ In System Center Configuration Manager, you perform an synchronous query for Con
 
 3.  Create an [OnCompleted](https://msdn.microsoft.com/library/aa393879.aspx) subroutine to handle query completion.  
 
-4.  Using the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object you obtain from step one, use [ExecQueryAsync](https://msdn.microsoft.com/library/aa392108.aspx) object to query System Center Configuration Manager objects asynchronously.  
+4.  Using the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object you obtain from step one, use [ExecQueryAsync](https://msdn.microsoft.com/library/aa392108.aspx) object to query Configuration Manager objects asynchronously.  
 
 ## Example  
  The following VBScript code example asynchronously queries for all [SMS_Collection](../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) objects.  

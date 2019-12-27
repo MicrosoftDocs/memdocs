@@ -12,11 +12,11 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Monitor compliance settings in System Center Configuration Manager
+# Monitor compliance settings in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-After you have deployed System Center Configuration Manager configuration baselines to devices in your hierarchy, you can use one or more of the procedures in this topic to display the compliance status of the configuration baseline:
+After you have deployed Configuration Manager configuration baselines to devices in your hierarchy, you can use one or more of the procedures in this topic to display the compliance status of the configuration baseline:
 
 > [!NOTE]  
 >  The validation criteria fields in compliance settings reports (the equivalent on the client-side report is **Constraints**) display the underlying Service Modeling Language (SML). This can make it difficult for administrators who have authored the configuration item in the Configuration Manager console to understand what the validation criteria is if they do not have knowledge of SML. In this case, use the **Monitoring** workspace in the Configuration Manager console to view the properties of the configuration item and its validation criteria.  
@@ -53,7 +53,7 @@ After you have deployed System Center Configuration Manager configuration baseli
 > [!IMPORTANT]  
 >  You must use a wildcard (**%**) character when you use the parameters **Device filter** and User filter in the compliance settings reports.  
 
- For more information about how to configure Reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md)  
+ For more information about how to configure Reporting in Configuration Manager, see [Reporting](../../core/servers/manage/reporting.md)  
 
 ##  View compliance results on a Configuration Manager Windows client computer
 

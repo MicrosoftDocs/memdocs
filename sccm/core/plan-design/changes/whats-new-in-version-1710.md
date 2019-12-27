@@ -1,7 +1,7 @@
 ---
 title: "New version 1710 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1710 of System Center Configuration Manager."
+description: "Get details about changes and new capabilities introduced in version 1710 of Configuration Manager."
 ms.date: 01/08/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -13,17 +13,17 @@ manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
-# What&#39;s new in version 1710 of System Center Configuration Manager
+# What&#39;s new in version 1710 of Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 1710 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1610, 1702, or 1706.
+Update 1710 for Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1610, 1702, or 1706.
 
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in System Center Configuration Manager current branch, version 1710](https://support.microsoft.com/help/4056470/summary-of-changes-in-system-center-configuration-manager-current-bran).
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1710](https://support.microsoft.com/help/4056470/summary-of-changes-in-system-center-configuration-manager-current-bran).
 
 The following additional updates to this release are also now available:
-- [Update rollup for System Center Configuration Manager current branch, version 1710](https://support.microsoft.com/help/4057517/update-rollup-for-system-center-configuration-manager-current-branch-v)
-- [Update rollup 2 for System Center Configuration Manager current branch, version 1710](https://support.microsoft.com/en-us/help/4086143/update-rollup-2-for-system-center-configuration-manager-current-branch)
+- [Update rollup for Configuration Manager current branch, version 1710](https://support.microsoft.com/help/4057517/update-rollup-for-system-center-configuration-manager-current-branch-v)
+- [Update rollup 2 for Configuration Manager current branch, version 1710](https://support.microsoft.com/en-us/help/4086143/update-rollup-2-for-system-center-configuration-manager-current-branch)
 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
@@ -67,7 +67,7 @@ In the previous Windows 10 updates, you can already join a Windows 10 device to 
 ### Restart computers from the Configuration Manager console  <!-- 1356283 -->
 Beginning with this release, you can use the Configuration Manager console to identify client devices that require a restart, and then use a client notification action to restart them.
 
-See [How to manage clients in System Center Configuration Manager](/sccm/core/clients/manage/manage-clients#restart-clients)
+See [How to manage clients](/sccm/core/clients/manage/manage-clients#restart-clients)
 
 
 <!-- ## Compliance settings -->
@@ -113,7 +113,7 @@ To learn more about the child task sequence, see [Child task sequence](/sccm/osd
 <!-- 1351224 -->
 You can add enterprise branding elements and specify the visibility of tabs on Software Center. You can add your Software Center specific company name, set a Software Center configuration color theme, set a company logo, and set the visible tabs for client devices.
 
-For more information, see [Plan for and configure application management in System Center Configuration Manager](/sccm/apps/plan-design/plan-for-and-configure-application-management).
+For more information, see [Plan for and configure application management](/sccm/apps/plan-design/plan-for-and-configure-application-management).
 
 ## Software updates
 
@@ -128,7 +128,7 @@ Beginning with this release, managing Surface driver updates is no longer a pre-
 
 You can now set the Windows 10 telemetry data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** telemetry level with Windows 10 version 1709 or later.
 
-For more information, see [How to configure client settings in System Center Configuration Manager](/sccm/core/clients/deploy/configure-client-settings).
+For more information, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
 
 <!-- ## Inventory  -->
 
@@ -178,7 +178,7 @@ These changes apply to new VPN profiles.
 
 To minimize compatibility risk, existing VPN profiles are unchanged.  When you edit an existing profile, the settings appear as they did when the profile was created.  
 
-For more information, see [VPN Profiles on mobile devices in System Center Configuration Manager](../../../mdm/deploy-use/create-vpn-profiles.md).
+For more information, see [VPN Profiles on mobile devices](../../../mdm/deploy-use/create-vpn-profiles.md).
 
 ### Limited support for Cryptography: Next Generation (CNG) certificates <!-- 1356191 -->
 

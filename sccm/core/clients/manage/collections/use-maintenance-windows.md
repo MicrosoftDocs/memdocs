@@ -1,7 +1,7 @@
 ---
 title: "Use maintenance windows"
 titleSuffix: "Configuration Manager"
-description: "Use collections and maintenance windows to effectively manage clients in System Center Configuration Manager."
+description: "Use collections and maintenance windows to effectively manage clients in Configuration Manager."
 ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to use maintenance windows in System Center Configuration Manager
+# How to use maintenance windows in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 

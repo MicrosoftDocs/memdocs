@@ -12,7 +12,7 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Define network locations as boundaries for System Center Configuration Manager
+# Define network locations as boundaries for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 

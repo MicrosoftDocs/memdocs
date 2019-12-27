@@ -50,7 +50,7 @@ An Azure subscription is required to use Azure virtual machines. You incur charg
 Additionally, Configuration Manager sites and clients that run in Azure virtual machines are subject to the same license requirements as on-premises installations.  
 
 ### Azure services (for cloud-based distribution points)  
- You can use an Azure service to host a Configuration Manager distribution point, which is called a called cloud-based distribution point. You can [use a cloud-based distribution point with System Center Configuration Manager](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md) alongside on-premises distribution points, and distribution points deployed in Azure virtual machines.  
+ You can use an Azure service to host a Configuration Manager distribution point, which is called a called cloud-based distribution point. You can [use a cloud-based distribution point with Configuration Manager](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md) alongside on-premises distribution points, and distribution points deployed in Azure virtual machines.  
 
  This is different than using an Azure virtual machine, on which you deploy a site system role. Cloud-based distribution points:  
 

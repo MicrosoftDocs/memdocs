@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: Configuration Manager (current branch)*
 
- With Endpoint Protection in System Center Configuration Manager, you can use any of several available methods to keep antimalware definitions up to date on client computers in your hierarchy. The information in this topic can help you to select and configure these methods.
+ With Endpoint Protection in Configuration Manager, you can use any of several available methods to keep antimalware definitions up to date on client computers in your hierarchy. The information in this topic can help you to select and configure these methods.
 
  To update antimalware definitions, you can use one or more of the following methods:
 
@@ -43,7 +43,7 @@ ms.collection: M365-identity-device-management
 
 2.  In the **Assets and Compliance** workspace, expand **Endpoint Protection**, and then click **Antimalware Policies**.
 
-3.  Open the properties page of the **Default Antimalware Policy** or create a new antimalware policy. For more information about how to create antimalware policies, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
+3.  Open the properties page of the **Default Antimalware Policy** or create a new antimalware policy. For more information about how to create antimalware policies, see [How to create and deploy antimalware policies for Endpoint Protection](endpoint-antimalware-policies.md).
 
 4.  In the **Security Intelligence updates** section of the antimalware properties dialog box, click **Set Source**.
     - The **Definition updates** section was renamed to **Security Intelligence updates** starting in Configuration Manager version 1902.

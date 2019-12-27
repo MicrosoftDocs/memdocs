@@ -12,7 +12,7 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# About discovery methods for System Center Configuration Manager
+# About discovery methods for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 

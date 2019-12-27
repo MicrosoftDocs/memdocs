@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Set the Response Delay for a PXE Service Point
-In System Center Configuration Manager, you set the operating system deployment PXE service point response delay by updating the *ResponseDelay* embedded property. *ResponseDelay* specifies how long the delay should be for this PXE service point before it responds to computer requests when multiple PXE service points are used. By default, the System Center Configuration Manager PXE service point will respond immediately to the network PXE requests.  
+In Configuration Manager, you set the operating system deployment PXE service point response delay by updating the *ResponseDelay* embedded property. *ResponseDelay* specifies how long the delay should be for this PXE service point before it responds to computer requests when multiple PXE service points are used. By default, the Configuration Manager PXE service point will respond immediately to the network PXE requests.  
 
  The delay is provided by the PXE client, and it shows the time that has passed since the client started the PXE boot process (seconds elapsed since client began address acquisition or renewal process). A client sends requests to the server at intervals of 0 (default), 4, 8, 16, or 32 seconds.  
 

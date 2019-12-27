@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Introduction to operating system deployment in System Center Configuration Manager
+# Introduction to operating system deployment in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -49,7 +49,7 @@ You can use Configuration Manager to deploy operating systems in a number of dif
 ##  <a name="BKMK_OSDMethods"></a> Methods to deploy operating systems  
  There are several methods that you can use to deploy operating systems to Configuration Manager client computers.  
 
-- **PXE initiated deployments**: PXE-initiated deployments let client computers request a deployment over the network. In this method of deployment, the operating system image and a Windows PE boot image are sent to a distribution point that is configured to accept PXE boot requests. For more information, see [Use PXE to deploy Windows over the network with System Center Configuration Manager](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
+- **PXE initiated deployments**: PXE-initiated deployments let client computers request a deployment over the network. In this method of deployment, the operating system image and a Windows PE boot image are sent to a distribution point that is configured to accept PXE boot requests. For more information, see [Use PXE to deploy Windows over the network with Configuration Manager](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
 - **Make operating systems available in Software Center**: You can deploy an operating system and make it available in the Software Center. Configuration Manager clients can initiate the operating system installation from Software Center. For more information, see [Replace an existing computer and transfer settings](../deploy-use/replace-an-existing-computer-and-transfer-settings.md).  
 

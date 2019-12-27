@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # CCM_Service_IISConfiguration Client WMI Class
-In System Center Configuration Manager, the `CCM_Service_IISConfiguration` class is a client Windows Management Instrumentation (WMI) class that supports Internet Information Services (IIS)-related settings used by CCMEXEC for staging and receiving message payloads on a Management Point.  
+In Configuration Manager, the `CCM_Service_IISConfiguration` class is a client Windows Management Instrumentation (WMI) class that supports Internet Information Services (IIS)-related settings used by CCMEXEC for staging and receiving message payloads on a Management Point.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

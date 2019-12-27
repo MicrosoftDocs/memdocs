@@ -11,7 +11,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About Configuration Manager Status Messages
-In System Center Configuration Manager, status messages are the universal means for components to communicate information about their health to the System Center Configuration Manager administrator. Status messages are similar to Windows NT Events; they have a severity, ID, description, and so on.  
+In Configuration Manager, status messages are the universal means for components to communicate information about their health to the Configuration Manager administrator. Status messages are similar to Windows NT Events; they have a severity, ID, description, and so on.  
 
  The Configuration Manager Status System is a fully-distributed, enterprise-wide aggregation and summarization system for status messages. Status messages flow from components to the Configuration Manager site servers and up the Configuration Manager site hierarchy.  
 
@@ -44,7 +44,7 @@ In System Center Configuration Manager, status messages are the universal means 
  [SMSEvent Class](../../../../develop/reference/core/servers/manage/smsevent-class.md) is a COM automation class that you use to raise user-defined status messages on a client. As a COM Automation object, it can readily be used by VBScript. For more information, see [SMSEvent Class](../../../../develop/reference/core/servers/manage/smsevent-class.md).  
 
 ### SMSCSTAT.DLL  
- SMSCSTAT.DLL is a Win32 dynamic link library that is available on clients. It has been installed on System Center Configuration Manager clients since SMS 2.0 Service Pack 1. It cannot be easily be used by VBScript. For more information, see [About Using SMSCSTAT.DLL to Create Status Messages](../../../../develop/core/servers/manage/about-using-smscstat.dll-to-create-status-messages.md).  
+ SMSCSTAT.DLL is a Win32 dynamic link library that is available on clients. It has been installed on Configuration Manager clients since SMS 2.0 Service Pack 1. It cannot be easily be used by VBScript. For more information, see [About Using SMSCSTAT.DLL to Create Status Messages](../../../../develop/core/servers/manage/about-using-smscstat.dll-to-create-status-messages.md).  
 
 ### Management Point Interface  
  Using the management point interfaces, you can raise status messages that are defined by XML from client computers. The management point interfaces cannot be used by VBScript. Using the management point interface is recommended for raising status messages on client computers that are not running a Windows operating system.  

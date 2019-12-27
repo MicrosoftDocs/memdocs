@@ -26,10 +26,10 @@ When you extend the Active Directory schema for Configuration Manager, and the s
 -   Because this information is automatically generated, the risk of human error associated with manually entering installation properties is eliminated.  
 
 > [!NOTE]  
->  For more information about how to extend the Active Directory schema for Configuration Manager, and how to publish a site, see [Schema extensions for System Center Configuration Manager](../../plan-design/network/schema-extensions.md).  
+>  For more information about how to extend the Active Directory schema for Configuration Manager, and how to publish a site, see [Schema extensions for Configuration Manager](../../plan-design/network/schema-extensions.md).  
 
 ## Client installation properties published to Active Directory Domain Services  
-The following is a list of client installation properties. For more information about each item listed below, see [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
+The following is a list of client installation properties. For more information about each item listed below, see [About client installation properties](../../../core/clients/deploy/about-client-installation-properties.md).  
 
 - The Configuration Manager site code.  
 

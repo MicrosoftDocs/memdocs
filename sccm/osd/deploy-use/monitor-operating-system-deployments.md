@@ -13,7 +13,7 @@ manager: dougeby
 
 ms.collection: M365-identity-device-management
 ---
-# Monitor operating system deployments in System Center Configuration Manager
+# Monitor operating system deployments in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 

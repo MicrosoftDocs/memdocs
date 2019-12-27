@@ -41,7 +41,7 @@ When you manage Linux and UNIX servers with Configuration Manager, you can confi
 
   By default, Linux and UNIX servers are members of the **All Systems** collection. We recommend that you build custom collections that include only Linux and UNIX servers, or a subset of them. Custom collections enable you to manage operations such as deploying software or assigning client settings to groups of like computers, so that you can accurately measure the success of a deployment.   
 
-  When you build a custom collection for Linux and UNIX servers, include membership rule queries that include the Caption attribute for the Operating System attribute. For information about creating collections, see [How to create collections in System Center Configuration Manager](../../../core/clients/manage/collections/create-collections.md).  
+  When you build a custom collection for Linux and UNIX servers, include membership rule queries that include the Caption attribute for the Operating System attribute. For information about creating collections, see [How to create collections](../../../core/clients/manage/collections/create-collections.md).  
 
 ##  <a name="BKMK_MaintenanceWindowsforLnU"></a> Maintenance windows for Linux and UNIX servers  
  The Configuration Manager client for Linux and UNIX servers supports the use of [maintenance windows](../../../core/clients/manage/collections/use-maintenance-windows.md). This support is unchanged from Windows-based clients.  

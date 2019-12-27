@@ -1,7 +1,7 @@
 ---
 title: "Create and apply power plans"
 titleSuffix: "Configuration Manager"
-description: "Create and apply power plans in System Center Configuration Manager."
+description: "Create and apply power plans in Configuration Manager."
 ms.date: 04/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,11 +12,11 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# How to create and apply power plans in System Center Configuration Manager
+# How to create and apply power plans in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Power management in System Center Configuration Manager enables you to apply power plans that are supplied with Configuration Manager to collections of computers in your hierarchy, or to create your own custom power plans. Use the procedure in this topic to apply a built-in or custom power plan to computers.  
+Power management in Configuration Manager enables you to apply power plans that are supplied with Configuration Manager to collections of computers in your hierarchy, or to create your own custom power plans. Use the procedure in this topic to apply a built-in or custom power plan to computers.  
 
 > [!IMPORTANT]  
 >  You can only apply Configuration Manager power plans to device collections.  
@@ -27,7 +27,7 @@ Power management in System Center Configuration Manager enables you to apply pow
 
 - Wakeup time: If multiple wakeup times are applied to a desktop computer, the time closest to midnight is used.  
 
-  Use the **Computers with Multiple Power Plans** report to display all computers that have multiple power plans applied to them. This can help you discover computers that have power conflicts. For more information about power management reports, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
+  Use the **Computers with Multiple Power Plans** report to display all computers that have multiple power plans applied to them. This can help you discover computers that have power conflicts. For more information about power management reports, see [How to monitor and plan for power management](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
 
 > [!IMPORTANT]  
 >  Power settings configured by using Windows Group Policy will override settings configured by Configuration Manager power management.  
@@ -57,7 +57,7 @@ Power management in System Center Configuration Manager enables you to apply pow
 7. If you want to configure a custom power plan for peak (or business) hours, select **Customized Peak (ConfigMgr)** from the **Peak plan** drop-down list, and then click **Edit**. If you want to configure a power plan for non-peak (or nonbusiness) hours, select **Customized Non-Peak (ConfigMgr)** from the **Non-peak plan** drop-down list, and then click **Edit**.  
 
    > [!NOTE]  
-   >  You can use the **Computer Activity** report to help you decide the schedules to use for peak and non-peak hours when you apply power plans to collections of computers. For more information, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
+   >  You can use the **Computer Activity** report to help you decide the schedules to use for peak and non-peak hours when you apply power plans to collections of computers. For more information, see [How to monitor and plan for power management](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
 
     You can also select from the built-in power plans, **Balanced (ConfigMgr)**, **High Performance (ConfigMgr)** and **Power Saver (ConfigMgr)**, and then click **View** to display the properties of each power plan.  
 

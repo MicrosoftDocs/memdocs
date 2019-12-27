@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Client installation methods in System Center Configuration Manager
+# Client installation methods in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 

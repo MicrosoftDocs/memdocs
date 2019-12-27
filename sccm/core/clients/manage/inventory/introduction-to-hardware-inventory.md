@@ -1,7 +1,7 @@
 ---
 title: "Hardware inventory "
 titleSuffix: "Configuration Manager"
-description: "Get an introduction to hardware inventory in System Center Configuration Manager."
+description: "Get an introduction to hardware inventory in Configuration Manager."
 ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,11 +12,11 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Introduction to hardware inventory in System Center Configuration Manager
+# Introduction to hardware inventory in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Use hardware inventory in System Center Configuration Manager to collect information about the hardware configuration of client devices in your organization. To collect hardware inventory, you must select the **Enable hardware inventory on clients** setting in client settings.  
+Use hardware inventory in Configuration Manager to collect information about the hardware configuration of client devices in your organization. To collect hardware inventory, you must select the **Enable hardware inventory on clients** setting in client settings.  
 
  After hardware inventory is enabled and the client runs a hardware inventory cycle, the client sends the information to a management point in the client's site. The management point then forwards the inventory information to the Configuration Manager site server, which stores the inventory information in the site database. Hardware inventory runs on clients according to the schedule that you specify in client settings.  
 ## View hardware inventory 
@@ -36,7 +36,7 @@ When hardware inventory runs on a client device, the first inventory data that t
  Configuration Manager provides limited support for dual-boot computers. Configuration Manager can discover dual-boot computers but returns inventory information only from the operating system that's active when the inventory cycle runs.  
 
 > [!NOTE]  
->  For information about how to use hardware inventory with clients that run Linux and UNIX, see [Hardware inventory for Linux and UNIX in System Center Configuration Manager](../../../../core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md).  
+>  For information about how to use hardware inventory with clients that run Linux and UNIX, see [Hardware inventory for Linux and UNIX](../../../../core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md).  
 
 ## Extending Configuration Manager hardware inventory  
  In addition to the built-in hardware inventory in Configuration Manager, you can also use one of these methods to extend hardware inventory to collect more information:  
@@ -47,4 +47,4 @@ When hardware inventory runs on a client device, the first inventory data that t
 
 
 ## Next steps
-For more information about using these methods to extend Configuration Manager hardware inventory, see [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
+For more information about using these methods to extend Configuration Manager hardware inventory, see [How to configure hardware inventory](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  

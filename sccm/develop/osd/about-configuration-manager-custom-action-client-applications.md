@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About Configuration Manager Custom Action Client Applications
-The task sequence application, in System Center Configuration Manager, performs the custom action operation during the client deployment. The application can be a process, a script, or other commands. The requirements for the application, such as the operating environment, command-line arguments, properties, and return codes are defined in a Managed Object Format (MOF) file. They are added to the task sequence environment when the action is processed.  
+The task sequence application, in Configuration Manager, performs the custom action operation during the client deployment. The application can be a process, a script, or other commands. The requirements for the application, such as the operating environment, command-line arguments, properties, and return codes are defined in a Managed Object Format (MOF) file. They are added to the task sequence environment when the action is processed.  
 
 ## Custom Action MOF File  
  The MOF file for a custom action is similar to the following:  
@@ -77,7 +77,7 @@ CommandLine("smsswd.exe /run:PackageID abc.exe [any abc.exe command line args]"
  If a reboot is required after the application finishes, the `SMSTSRebootRequested` environment variable should be set. For more information, see [https://go.microsoft.com/fwlink/?LinkId=110499](https://go.microsoft.com/fwlink/?LinkId=110498). For information about setting environment variables, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  
 
 ## Deployment  
- To be used by System Center Configuration Manager, the custom action application must be available from a Configuration Manager package. The administrator can create the package by using either the Configuration Manager console or by using a programming language. For more information, see [How to Create a Package](../../develop/core/servers/configure/how-to-create-a-package.md).  
+ To be used by Configuration Manager, the custom action application must be available from a Configuration Manager package. The administrator can create the package by using either the Configuration Manager console or by using a programming language. For more information, see [How to Create a Package](../../develop/core/servers/configure/how-to-create-a-package.md).  
 
  The package identifier must be available for the deployment to work. Typically the MOF file declares a property to hold it, as in the following example:  
 
@@ -107,7 +107,7 @@ string          PackageIDForAbcExe;
 > [!NOTE]
 >  Adding files to the boot image file can increase the minimum RAM requirements and can, due to low memory conditions, cause task sequences to fail in unexpected ways.  
 
- You will then need to import the image into System Center Configuration Manager as a custom image. For more information, see How to Add a Boot Image to Configuration Manager ([https://go.microsoft.com/fwlink/?LinkId=111706](https://go.microsoft.com/fwlink/?LinkId=111706)).  
+ You will then need to import the image into Configuration Manager as a custom image. For more information, see How to Add a Boot Image to Configuration Manager ([https://go.microsoft.com/fwlink/?LinkId=111706](https://go.microsoft.com/fwlink/?LinkId=111706)).  
 
  The application, any supporting files, and the custom SMSTS.INI should be placed in the Windows folder.  
 

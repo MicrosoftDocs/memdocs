@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Client Resource Conditions
-In System Center Configuration Manager SP1, the Configuration Manager client has added the ability to be aware of system resources state and act accordingly. The resources being monitored are power, network, and user idleness. This addition makes the Configuration Manager client a better citizen in terms of optimizing power utilization and not disturbing the end user experience as much as possible.  
+In Configuration Manager SP1, the Configuration Manager client has added the ability to be aware of system resources state and act accordingly. The resources being monitored are power, network, and user idleness. This addition makes the Configuration Manager client a better citizen in terms of optimizing power utilization and not disturbing the end user experience as much as possible.  
 
 ## LaunchConditions  
  A new property called `LaunchConditions` has been added to the `CCM_Scheduler_ScheduledMessage` class. The property can be a combination of the below values.  

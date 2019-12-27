@@ -12,12 +12,12 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Read and Write to the Configuration Manager Site Control File by Using Managed Code
-To write to the System Center Configuration Manager site control file by using the managed SMS Provider, you get the site definition file by querying for the required resource or component. You then update the embedded property, embedded property list, or multi-string list as required.  
+To write to the Configuration Manager site control file by using the managed SMS Provider, you get the site definition file by querying for the required resource or component. You then update the embedded property, embedded property list, or multi-string list as required.  
 
 > [!NOTE]
 >  You can also use connection manager [GetInstance](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.connectionmanagerbase.getinstance.aspx) to get the required resource or component.  
 
- The managed System Center Configuration Manager manages the connection session to the site control file automatically for you. Therefore you treat the [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) objects returned from the query in the same way as you treat [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) objects retrieved from the SMS Provider.  
+ The managed Configuration Manager manages the connection session to the site control file automatically for you. Therefore you treat the [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) objects returned from the query in the same way as you treat [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) objects retrieved from the SMS Provider.  
 
 ### To read and write to the site control file  
 

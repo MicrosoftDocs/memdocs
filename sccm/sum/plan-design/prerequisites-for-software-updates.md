@@ -1,7 +1,7 @@
 ---
 title: Prerequisites for software updates
 titleSuffix: "Configuration Manager"
-description: "Learn about prerequisites for software updates in System Center Configuration Manager."
+description: "Learn about prerequisites for software updates in Configuration Manager."
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -13,11 +13,11 @@ ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
 ms.collection: M365-identity-device-management
 ---
 
-# Prerequisites for software updates in System Center Configuration Manager
+# Prerequisites for software updates in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-This article lists the prerequisites for software updates in System Center Configuration Manager. For each of the prerequisites, the external dependencies and internal dependencies are listed in separate tables.  
+This article lists the prerequisites for software updates in Configuration Manager. For each of the prerequisites, the external dependencies and internal dependencies are listed in separate tables.  
 
 ## Software update dependencies that are external to Configuration Manager  
  The following sections list the external dependencies for software updates.  

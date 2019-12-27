@@ -1,7 +1,7 @@
 ---
 title: "Verify MDM configuration"
 titleSuffix: "Configuration Manager"
-description: "Verify MDM configuration using System Center Configuration Manager."
+description: "Verify MDM configuration using Configuration Manager."
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Verify MDM configuration with System Center Configuration Manager
+# Verify MDM configuration with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -22,7 +22,7 @@ You can verify certain device management components by checking the following lo
 
 -   Check the Sitecomp.log to verify that the service connection point was created successfully.
 
-You can review [Log files in System Center Configuration Manager](../../core/plan-design/hierarchy/log-files.md) for more information about these specific log files and how to view them. 
+You can review [Log files](../../core/plan-design/hierarchy/log-files.md) for more information about these specific log files and how to view them. 
 
 > [!div class="button"]
 > [< Previous step](set-up-additional-management.md)

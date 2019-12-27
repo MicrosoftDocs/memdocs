@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_G_System_CollectedFile Server WMI Class
-The `SMS_G_System_CollectedFile` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that contains information about a file copied from the client computer to the site server.  
+The `SMS_G_System_CollectedFile` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains information about a file copied from the client computer to the site server.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -135,7 +135,7 @@ Class SMS_G_System_CollectedFile : SMS_G_System
 
 1.  Queries the site control [SMS_SCI_ClientComp Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sci_clientcomp-server-wmi-class.md) objects for items having the value "Software Inventory Agent" for the `ClientComponentName` property.  
 
-2.  Loops through the embedded property list. When the value for `PropertyName` is "Collectable Files", the agent updates the comma-delimited list of file names (including extensions) in the `Value2` property. When the value for `PropertyName` is "Max Collected File Size", the agent sets a maximum size, in megabytes, for the files that System Center Configuration Manager collects from the client, for that query, during each software inventory cycle.  
+2.  Loops through the embedded property list. When the value for `PropertyName` is "Collectable Files", the agent updates the comma-delimited list of file names (including extensions) in the `Value2` property. When the value for `PropertyName` is "Max Collected File Size", the agent sets a maximum size, in megabytes, for the files that Configuration Manager collects from the client, for that query, during each software inventory cycle.  
 
 3.  For any new collectable file added, adds an entry to each of the embedded property lists Collectable File Path, Collectable File Subdirectories, Collectable File Exclude, and Collectable File Max Size.  
 
@@ -144,7 +144,7 @@ Class SMS_G_System_CollectedFile : SMS_G_System
 > [!NOTE]
 >  Collecting files from clients can generate a large volume of network traffic and require extensive storage space. For this reason, you should test any changes you make in a test environment before implementing them in a production environment.  
 
- Collected files are deleted on a schedule if the Delete Aged Collected Files database maintenance task is set to `true` in the System Center Configuration Manager console. You can also enable this task and set the schedule by updating the site control file. The site control item is an instance of [SMS_SCI_SQLTask Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sci_sqltask-server-wmi-class.md) and the `TaskName` value is "Delete Aged Collected Files".  
+ Collected files are deleted on a schedule if the Delete Aged Collected Files database maintenance task is set to `true` in the Configuration Manager console. You can also enable this task and set the schedule by updating the site control file. The site control item is an instance of [SMS_SCI_SQLTask Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sci_sqltask-server-wmi-class.md) and the `TaskName` value is "Delete Aged Collected Files".  
 
 ## Requirements  
 

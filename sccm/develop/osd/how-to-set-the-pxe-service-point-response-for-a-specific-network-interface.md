@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Set the PXE Service Point Response for a Specific Network Interface
-In System Center Configuration Manager, you set the operating system deployment to respond to a specific set of network addresses by adding the required media access control (MAC) addresses to the `BindExcept` embedded property list. You must also set the `BindPolicy` embedded property to 1. This specifies that PXE requests are accepted on specified network address only. For more information about setting `BindPolicy`, see [How to Set the PXE Service Point Response to All Network Interfaces](../../develop/osd/how-to-set-the-pxe-service-point-response-to-all-network-interfaces.md).  
+In Configuration Manager, you set the operating system deployment to respond to a specific set of network addresses by adding the required media access control (MAC) addresses to the `BindExcept` embedded property list. You must also set the `BindPolicy` embedded property to 1. This specifies that PXE requests are accepted on specified network address only. For more information about setting `BindPolicy`, see [How to Set the PXE Service Point Response to All Network Interfaces](../../develop/osd/how-to-set-the-pxe-service-point-response-to-all-network-interfaces.md).  
 
 ### To set the response for a specific network interface  
 

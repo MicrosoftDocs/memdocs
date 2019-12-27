@@ -1,7 +1,7 @@
 ---
 title: "Management tasks for applications"
 titleSuffix: "Configuration Manager"
-description: "Manage System Center Configuration Manager applications and deployment types."
+description: "Manage Configuration Manager applications and deployment types."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-app
@@ -12,11 +12,11 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Management tasks for System Center Configuration Manager applications
+# Management tasks for Configuration Manager applications
 
 *Applies to: Configuration Manager (current branch)*
 
-Use the information in this article to help you manage System Center Configuration Manager applications and deployment types.  
+Use the information in this article to help you manage Configuration Manager applications and deployment types.  
 
 For help creating applications and deployment types, see [Create applications](../../apps/deploy-use/create-applications.md).  
 
@@ -32,7 +32,7 @@ For help creating applications and deployment types, see [Create applications](.
 |**Create Prestage Content File**|Opens the **Create Prestaged Content File Wizard** that helps you to manage the distribution of content to remote distribution points. When the scheduling and throttling does not provide a valid solution for the remote distribution point, you can prestage the content on the distribution point<br /><br /> See [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
 |**Revision History**|Opens the **Application Revision History** dialog box that lets you view the properties of revisions that were made to this application, delete old application revisions, and restore old versions of this application.<br /><br /> See [How to revise and supersede applications](../../apps/deploy-use/revise-and-supersede-applications.md).|  
 |**Create Deployment Type**|Opens the **Create Deployment Type Wizard** that lets you add a new deployment type to the selected application.<br /><br /> See [Create applications](../../apps/deploy-use/create-applications.md).|  
-|**Update Statistics**|Updates the information that is displayed in the **Deployments** node of the **Monitoring** workspace about the deployments of this application.<br /><br /> See [Monitor applications from the System Center Configuration Manager console](../../apps/deploy-use/monitor-applications-from-the-console.md).|  
+|**Update Statistics**|Updates the information that is displayed in the **Deployments** node of the **Monitoring** workspace about the deployments of this application.<br /><br /> See [Monitor applications from the Configuration Manager console](../../apps/deploy-use/monitor-applications-from-the-console.md).|  
 |**Reinstate**|Reinstates an application that was retired by using the **Retire** management task.|  
 |**Retire**|When you retire an application, it is no longer available for deployment, but the application and deployments of the application are not deleted. Existing copies of this application that were installed on client computers will not be removed. Any revisions to the application will be deleted from Configuration Manager after 60 days. But, installed copies of the application are not removed.<br /><br /> To delete an application, you must first retire the application, delete all deployments, remove references to the application by other deployments, and then delete all of the application's revisions.<br /><br /> See [Revise and supersede applications](../../apps/deploy-use/revise-and-supersede-applications.md).|  
 |**Export**|Opens the **Export Application Wizard** that lets you export the selected applications to a .zip file that you can then archive or install on another site. If you choose to export application content, a folder that has the content will be created.<br /><br /> You can also export application dependencies, supersedence relationships and conditions, and content for the application and its dependencies.<br /><br /> The Windows PowerShell cmdlet, **Export-CMApplication**, does the same function. For more information, see [Export-CMApplication](https://go.microsoft.com/fwlink/p/?LinkID=258880) in the Microsoft System Center 2012 Configuration Manager SP1 cmdlet reference documentation.|  

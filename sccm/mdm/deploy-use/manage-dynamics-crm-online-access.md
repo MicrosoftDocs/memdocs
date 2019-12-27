@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Manage Dynamics CRM Online access in System Center Configuration Manager
+# Manage Dynamics CRM Online access in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 

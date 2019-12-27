@@ -106,7 +106,7 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
 
       1. In the Configuration Manager console, click **Administration** > **Overview** > **Client Settings**.  
 
-      2. Open the appropriate device settings to enable the client agent. For more information about default and custom client settings, see [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
+      2. Open the appropriate device settings to enable the client agent. For more information about default and custom client settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).  
 
       3. Click **Software Updates** and select **Yes** for the **Enable management of the Office 365 Client Agent** setting.  
 

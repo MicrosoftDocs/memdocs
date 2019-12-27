@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Delete a Package
-The following example shows how to delete a package in System Center Configuration Manager by using the `SMS_Package` class.  
+The following example shows how to delete a package in Configuration Manager by using the `SMS_Package` class.  
 
 > [!NOTE]
 >  Any reference to this package, such as an advertisement or task sequence, should be cleaned up before deleting the package  

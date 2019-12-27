@@ -162,7 +162,7 @@ The following links provide information about support options and community reso
 
 -   [Microsoft support](https://aka.ms/cmcbsupport)  
 
--   [Configuration Manager Community: System Center Configuration Manager (Current Branch) Survival Guide](https://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx )  
+-   [Configuration Manager Community: Configuration Manager (Current Branch) Survival Guide](https://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx )  
 
 -   [Configuration Manager forums page](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)  
     <!-- NOTE: the above URL requires "en-US" for the category to work -->

@@ -1,7 +1,7 @@
 ---
 title: "Site installation resources"
 titleSuffix: "Configuration Manager"
-description: "Review a list of topics that help you install System Center Configuration Manager or add sites to your hierarchy."
+description: "Review a list of topics that help you install Configuration Manager or add sites to your hierarchy."
 ms.date: 01/3/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,11 +12,11 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Resources for installing System Center Configuration Manager sites
+# Resources for installing Configuration Manager sites
 
 *Applies to: Configuration Manager (current branch)*
 
-The following topics can help you install System Center Configuration Manager or add sites to your existing Configuration Manager hierarchy.
+The following topics can help you install Configuration Manager or add sites to your existing Configuration Manager hierarchy.
 
 - [Prepare to install sites](prepare-to-install-sites.md)
 

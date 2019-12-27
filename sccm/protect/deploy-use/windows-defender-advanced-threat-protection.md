@@ -32,7 +32,7 @@ Microsoft Defender ATP is a service in the [Windows Defender Security Center](ht
 
  2.  Click on the **Machine Management** item under **Settings**, then select **Onboarding**. 
 
- 3.  Select **System Center Configuration Manager (current branch) version 1606** and click **Download package**.  
+ 3.  Select **Configuration Manager (current branch) version 1606** and click **Download package**.  
 
  4.  Download the compressed archive (.zip) file and extract the contents.
 
@@ -84,7 +84,7 @@ Microsoft Defender ATP is a service in the [Windows Defender Security Center](ht
 
 2.  Click on the **Machine Management** item under **Settings**, then select **Onboarding**.  
 
-3.  Select **System Center Configuration Manager (current branch) version 1606** and click **Endpoint offboarding**.  
+3.  Select **Configuration Manager (current branch) version 1606** and click **Endpoint offboarding**.  
 
 4.  Download the compressed archive (.zip) file and extract the contents. Offboarding files are valid for 30 days.
 

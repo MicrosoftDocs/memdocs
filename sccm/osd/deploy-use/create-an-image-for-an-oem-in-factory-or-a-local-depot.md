@@ -13,11 +13,11 @@ manager: dougeby
 
 ms.collection: M365-identity-device-management
 ---
-# Create an image for an OEM in factory or a local depot with System Center Configuration Manager
+# Create an image for an OEM in factory or a local depot with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Prestaged media deployments in System Center Configuration Manager let you deploy an operating system to a computer that is not fully provisioned. The prestaged media is a Windows Imaging Format (WIM) file that can be installed on a bare-metal computer by the manufacturer (OEM) or at an enterprise staging center that is not connected to the Configuration Manager environment. Later in the Configuration Manager environment, the computer starts by using the boot image provided by the media, a hash check is run on the prestaged media to make sure it is valid, and then the computer connects to the site management point for available task sequences that complete the download process.
+Prestaged media deployments in Configuration Manager let you deploy an operating system to a computer that is not fully provisioned. The prestaged media is a Windows Imaging Format (WIM) file that can be installed on a bare-metal computer by the manufacturer (OEM) or at an enterprise staging center that is not connected to the Configuration Manager environment. Later in the Configuration Manager environment, the computer starts by using the boot image provided by the media, a hash check is run on the prestaged media to make sure it is valid, and then the computer connects to the site management point for available task sequences that complete the download process.
 
 
 This method of deployment can reduce network traffic because the boot image and operating system image are already on the destination computer. You can specify applications, packages, and driver packages to include in the pre-staged media. After the operating system is installed on the computer, the local task sequence cache is checked for applications, packages, or driver packages first, and if the content cannot be found or has been revised, the content is downloaded from a distribution point configured in the prestaged media and then installed.  
@@ -40,7 +40,7 @@ This method of deployment can reduce network traffic because the boot image and 
 -   **Only media and PXE (hidden)**  
 
 ## Create the prestaged media  
- Create the prestaged media file to send to the OEM or your local depot. For more information, see [Create prestaged media with System Center Configuration Manager](create-prestaged-media.md).  
+ Create the prestaged media file to send to the OEM or your local depot. For more information, see [Create prestaged media with Configuration Manager](create-prestaged-media.md).  
 
 ## Send the prestaged media file to the OEM or local depot  
  Send the media to the OEM or your local depot to prestage the computers. The prestaged media file is applied to a formatted hard disk on the computer.  

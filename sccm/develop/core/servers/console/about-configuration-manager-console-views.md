@@ -11,7 +11,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About Configuration Manager Console Views
-System Center Configuration Manager console views are displayed in the results pane of the Configuration Manager console. You can create your own views and make them available anywhere in the tree view hierarchy.  
+Configuration Manager console views are displayed in the results pane of the Configuration Manager console. You can create your own views and make them available anywhere in the tree view hierarchy.  
 
 ## Creating the View Assembly  
  To create a view, you must define a class within that implements the **IConsoleView2** interface.  

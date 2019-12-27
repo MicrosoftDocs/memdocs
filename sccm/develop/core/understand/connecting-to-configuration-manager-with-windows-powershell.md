@@ -169,7 +169,7 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
         Get-CMSite -SiteCode <string>  [<CommonParameters>]  
 
     DESCRIPTION  
-        The Get-CMSite cmdlet gets one or more Microsoft System Center Configuration Manager sites. A SystemCenter  
+        The Get-CMSite cmdlet gets one or more Microsoft Configuration Manager sites. A SystemCenter  
         Configuration Manager site is a server that has clients assigned to it and that processes client-generated data.  
         You can get a Configuration Manager site by using either a site name or a site code.  
 

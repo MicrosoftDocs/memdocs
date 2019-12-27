@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # DeleteStatistics Method in Class SMS_ComponentSummarizer
-The `DeleteStatistics` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, deletes status message counts for Configuration Manager components.  
+The `DeleteStatistics` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes status message counts for Configuration Manager components.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

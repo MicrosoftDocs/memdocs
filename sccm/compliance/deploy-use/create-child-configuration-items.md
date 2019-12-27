@@ -1,7 +1,7 @@
 ---
 title: "Create child configuration items"
 titleSuffix: "Configuration Manager"
-description: "Create child configuration items in System Center Configuration Manager."
+description: "Create child configuration items in Configuration Manager."
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -12,11 +12,11 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# How to create child configuration items in System Center Configuration Manager
+# How to create child configuration items in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Child configuration items in System Center Configuration Manager are copies of configuration items that retain a relationship to the original configuration item in that they inherit the original configuration from the parent configuration item.  
+Child configuration items in Configuration Manager are copies of configuration items that retain a relationship to the original configuration item in that they inherit the original configuration from the parent configuration item.  
 
 When you view the properties of a child configuration item in the Configuration Manager console, you cannot edit the inherited objects and settings with their validation criteria. However, you can add and then edit additional validation criteria to the child configuration item, and you can also add new objects and settings to the child configuration item.
 An example for creating and editing a child configuration item is to refine the original configuration item to meet your business requirements.  

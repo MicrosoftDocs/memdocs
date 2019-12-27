@@ -13,7 +13,7 @@ manager: dougeby
 
 ms.collection: M365-identity-device-management
 ---
-# Manage Windows as a service using System Center Configuration Manager
+# Manage Windows as a service using Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 

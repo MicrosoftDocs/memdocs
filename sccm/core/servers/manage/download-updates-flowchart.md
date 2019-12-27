@@ -12,7 +12,7 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Flowchart - Download updates for System Center Configuration Manager
+# Flowchart - Download updates for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 

@@ -1,7 +1,7 @@
 ---
 title: "Wi-Fi and VPN profile security and privacy"
 titleSuffix: "Configuration Manager"
-description: "Learn about the security best practices for managing Wi-Fi and VPN profiles for devices in System Center Configuration Manager."
+description: "Learn about the security best practices for managing Wi-Fi and VPN profiles for devices in Configuration Manager."
 ms.date: 12/28/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -12,7 +12,7 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Security and privacy for Wi-Fi and VPN profiles in System Center Configuration Manager
+# Security and privacy for Wi-Fi and VPN profiles in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 

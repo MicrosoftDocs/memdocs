@@ -1,7 +1,7 @@
 ---
 title: "How to Create VPN profiles "
 titleSuffix: "Configuration Manager"
-description: "Learn how to create VPN profiles in System Center Configuration Manager."
+description: "Learn how to create VPN profiles in Configuration Manager."
 ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -12,13 +12,13 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to Create VPN profiles in System Center Configuration Manager
+# How to Create VPN profiles in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-The connection types available for the different device platforms are described in [VPN profiles in System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md).  
+The connection types available for the different device platforms are described in [VPN profiles](../../protect/deploy-use/vpn-profiles.md).  
 
-For third-party VPN connections, distribute the VPN app before deploying the VPN profile. If you don't deploy the app, users will be prompted to do so when they try to connect to the VPN. To learn how to deploy apps, see [Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md).
+For third-party VPN connections, distribute the VPN app before deploying the VPN profile. If you don't deploy the app, users will be prompted to do so when they try to connect to the VPN. To learn how to deploy apps, see [Deploy applications with Configuration Manager](../../apps/deploy-use/deploy-applications.md).
 
 ### Create a VPN profile   
 
@@ -67,6 +67,6 @@ Complete the wizard. The new VPN profile is displayed in the **VPN Profiles** no
 
 ### Next steps
 
-- For third-party VPN connections, distribute the VPN app before deploying the VPN profile. If you don't deploy the app, users will be prompted to do so when they try to connect to the VPN. To learn how to deploy apps, see [Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md).
+- For third-party VPN connections, distribute the VPN app before deploying the VPN profile. If you don't deploy the app, users will be prompted to do so when they try to connect to the VPN. To learn how to deploy apps, see [Deploy applications with Configuration Manager](../../apps/deploy-use/deploy-applications.md).
 
-- Deploy the VPN profile as described in [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md).  
+- Deploy the VPN profile as described in [How to deploy profiles](deploy-wifi-vpn-email-cert-profiles.md).  

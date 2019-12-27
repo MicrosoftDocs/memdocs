@@ -1,7 +1,7 @@
 ---
 title: "Remote control security privacy"
 titleSuffix: "Configuration Manager"
-description: "Get security and privacy information for remote control in System Center Configuration Manager."
+description: "Get security and privacy information for remote control in Configuration Manager."
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,11 +12,11 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Security and privacy for remote control in System Center Configuration Manager
+# Security and privacy for remote control in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-This topic contains security and privacy information for remote control in System Center Configuration Manager.  
+This topic contains security and privacy information for remote control in Configuration Manager.  
 
 ##  <a name="BKMK_Security_HardwareInventory"></a> Security best practices for remote control  
  Use the following security best practices when you manage client computers by using remote control.  

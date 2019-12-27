@@ -12,11 +12,11 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Simulate application deployments with System Center Configuration Manager
+# Simulate application deployments with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-You can use simulated deployments to test an application deployment without installing or uninstalling the application. A simulated deployment evaluates the detection method, requirements, and dependencies for a deployment type. It reports the results in the **Deployments** node of the **Monitoring** workspace. Use the procedure in this topic to simulate an application deployment in System Center Configuration Manager (Configuration Manager).  
+You can use simulated deployments to test an application deployment without installing or uninstalling the application. A simulated deployment evaluates the detection method, requirements, and dependencies for a deployment type. It reports the results in the **Deployments** node of the **Monitoring** workspace. Use the procedure in this topic to simulate an application deployment in Configuration Manager.  
 
 > [!NOTE]  
 > You cannot use simulated deployments for collections of mobile devices.  
@@ -44,4 +44,4 @@ You can use simulated deployments to test an application deployment without inst
 
 4.  Click **Next**, review the information on the **Summary** page, and then finish the wizard to create the simulated application deployment.  
 
-5.  Simulated applications appear in the **Deployments** node of the **Monitoring** workspace, with a purpose of **Simulate**. For more information about how to monitor application deployments, see [Monitor applications from the System Center Configuration Manager console](../../apps/deploy-use/monitor-applications-from-the-console.md).  
+5.  Simulated applications appear in the **Deployments** node of the **Monitoring** workspace, with a purpose of **Simulate**. For more information about how to monitor application deployments, see [Monitor applications from the Configuration Manager console](../../apps/deploy-use/monitor-applications-from-the-console.md).  

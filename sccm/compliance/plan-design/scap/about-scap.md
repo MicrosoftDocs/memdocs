@@ -23,7 +23,7 @@ The SCAP extensions for Configuration Manager help you analyze and assess your n
 > This version of the tool is a pre-release feature that's only available in version 1806. This version isn't certified by NIST. <!--SCCMDocs-pr issue 3323-->
 > 
 > If you require a certified tool, or are using another version of Configuration Manager current branch, use the following version of the SCAP extensions:
-> - [Download SCAP Extensions for System Center Configuration Manager](https://www.microsoft.com/download/details.aspx?id=48741)
+> - [Download SCAP Extensions for Configuration Manager](https://www.microsoft.com/download/details.aspx?id=48741)
 > - [Documentation for SCAP Extensions Version 3.0](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/mt228311\(v%3dtechnet.10\))
 
 The SCAP extensions for Configuration Manager use the compliance settings feature to first scan the computers in your environment. It then documents their level of compliance with the United States Government Configuration Baseline (USGCB).

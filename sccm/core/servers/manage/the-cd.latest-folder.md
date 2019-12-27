@@ -66,9 +66,8 @@ For more information, see [Install a secondary site](/sccm/core/servers/deploy/i
 ## Unsupported scenarios
 
 The updated CD.Latest source files aren't supported for:  
-   
+
 - Installing a new site for a new hierarchy  
-- Upgrading a Microsoft System Center 2012 Configuration Manager site to System Center Configuration Manager, current branch
+- Upgrading a Microsoft System Center 2012 Configuration Manager site to Configuration Manager current branch
 - Installing Configuration Manager clients
 - Installing Configuration Manager consoles
-

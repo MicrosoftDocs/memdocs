@@ -1,7 +1,7 @@
 ---
 title: "Enable platform enrollment"
 titleSuffix: "Configuration Manager"
-description: "Enable platform enrollment using System Center Configuration Manager and Microsoft Intune."
+description: "Enable platform enrollment using Configuration Manager and Microsoft Intune."
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Enable platform enrollment with System Center Configuration Manager and Microsoft Intune
+# Enable platform enrollment with Configuration Manager and Microsoft Intune
 
 *Applies to: Configuration Manager (current branch)*
 

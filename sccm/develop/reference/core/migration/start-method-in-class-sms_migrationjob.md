@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Start Method in Class SMS_MigrationJob
-The `Start` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, starts the migration job.  
+The `Start` Windows Management Instrumentation (WMI) class method, in Configuration Manager, starts the migration job.  
 
 > [!IMPORTANT]
 >  This requires the Manage Migration Job right.  

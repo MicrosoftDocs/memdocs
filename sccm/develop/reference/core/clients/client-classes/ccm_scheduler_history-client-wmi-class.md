@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # CCM_Scheduler_History Client WMI Class
-In System Center Configuration Manager, the `CCM_Scheduler_History` class is a client Windows Management Instrumentation (WMI) class that represents the history for a schedule.  
+In Configuration Manager, the `CCM_Scheduler_History` class is a client Windows Management Instrumentation (WMI) class that represents the history for a schedule.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

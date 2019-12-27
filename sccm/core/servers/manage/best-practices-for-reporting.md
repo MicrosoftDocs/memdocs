@@ -1,7 +1,7 @@
 ---
 title: "Reporting best practices"
 titleSuffix: "Configuration Manager"
-description: "Read some helpful tips about using the reporting capability of System Center Configuration Manager."
+description: "Read some helpful tips about using the reporting capability of Configuration Manager."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,11 +11,11 @@ author: mestew
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Best practices for reporting in System Center Configuration Manager
+# Best practices for reporting in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Use the following best practices for reporting in System Center Configuration Manager:  
+Use the following best practices for reporting in Configuration Manager:  
 
 ## For best performance, install the reporting services point on a remote site system server  
 Although you can install the reporting services point on the site server or a remote site system, performance is increased when you install the reporting services point on a remote site system server.  

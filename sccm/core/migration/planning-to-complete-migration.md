@@ -1,7 +1,7 @@
 ---
 title: "Complete migration"
 titleSuffix: "Configuration Manager"
-description: "Learn how to finish migration to a System Center Configuration Manager destination hierarchy after a source hierarchy no longer has data."
+description: "Learn how to finish migration to a Configuration Manager current branch destination hierarchy after a source hierarchy no longer has data."
 ms.date: 01/12/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Plan to complete migration in System Center Configuration Manager
+# Plan to complete migration in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-With System Center Configuration Manager, you can complete the process of migration when a source hierarchy no longer has data that you want to migrate to your destination hierarchy. Completing migration includes the following general steps:  
+With Configuration Manager, you can complete the process of migration when a source hierarchy no longer has data that you want to migrate to your destination hierarchy. Completing migration includes the following general steps:  
 
 -   Ensure that data you require has migrated. Before you complete migration from a source hierarchy, make sure that you have successfully migrated all of the resources from the source hierarchy that you require in the destination hierarchy. This can include data and clients.  
 
@@ -39,11 +39,11 @@ Use the following sections to help you plan to complete migration from a source 
 
 -   In the destination hierarchy, distribute the content to at least one distribution point.  
 
--   Before you stop gathering data from a source site, upgrade or reassign shared distribution points that have the required content. For more about upgrading or reassigning shared distribution points, see the applicable sections in [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md).  
+-   Before you stop gathering data from a source site, upgrade or reassign shared distribution points that have the required content. For more about upgrading or reassigning shared distribution points, see the applicable sections in [Planning a content deployment migration strategy](../../core/migration/planning-a-content-deployment-migration-strategy.md).  
 
 After you stop gathering data from each source site in the source hierarchy, you can clean up migration data. Until you clean up migration data, each migration job that has run or that is scheduled to run remains accessible in the Configuration Manager console.  
 
-For more about source sites and data gathering, see [Planning a source hierarchy strategy in System Center Configuration Manager](../../core/migration/planning-a-source-hierarchy-strategy.md).  
+For more about source sites and data gathering, see [Planning a source hierarchy strategy](../../core/migration/planning-a-source-hierarchy-strategy.md).  
 
 ##  <a name="Plan_to_clean_up"></a> Plan to clean up migration data  
  The last step required to finish migration is to clean up migration data. You can use the **Clean Up Migration Data** command after you have stopped gathering data for each source site in the source hierarchy. This optional action removes data about the current source hierarchy from the database of the destination hierarchy.  

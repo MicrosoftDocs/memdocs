@@ -1,7 +1,7 @@
 ---
 title: Site system roles for clients
 titleSuffix: Configuration Manager
-description: Determine site system roles for clients in System Center Configuration Manager.
+description: Determine site system roles for clients in Configuration Manager.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client

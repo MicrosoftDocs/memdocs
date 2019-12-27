@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# VPN Profiles on mobile devices in System Center Configuration Manager
+# VPN Profiles on mobile devices in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 

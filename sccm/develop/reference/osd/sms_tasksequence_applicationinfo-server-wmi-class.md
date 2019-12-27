@@ -38,7 +38,7 @@ Class SMS_TaskSequence_ApplicationInfo :
 
  Qualifiers: none  
 
- Description for System Center Configuration Manager application.  
+ Description for Configuration Manager application.  
 
  `DisplayName`  
  Data type: `String`  
@@ -47,7 +47,7 @@ Class SMS_TaskSequence_ApplicationInfo :
 
  Qualifiers: none  
 
- Display name for System Center Configuration Manager application.  
+ Display name for Configuration Manager application.  
 
  `Name`  
  Data type: `String`  
@@ -56,7 +56,7 @@ Class SMS_TaskSequence_ApplicationInfo :
 
  Qualifiers: none  
 
- Name for System Center Configuration Manager application.  
+ Name for Configuration Manager application.  
 
 ## Remarks  
 

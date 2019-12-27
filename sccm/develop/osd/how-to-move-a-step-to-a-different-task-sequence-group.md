@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Move a Step to a Different Operating System Deployment Task Sequence Group
-You move a step (an action or a group) from one operating system deployment task sequence group to another, in System Center Configuration Manager, by adding the step to the target group and then by deleting the step from the source group.  
+You move a step (an action or a group) from one operating system deployment task sequence group to another, in Configuration Manager, by adding the step to the target group and then by deleting the step from the source group.  
 
 ### To move a step from one group to another  
 

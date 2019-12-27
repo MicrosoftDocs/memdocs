@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About Updating an Existing Resource Instance
-When the Data Discovery Manager (DDM), in System Center Configuration Manager, finds an existing resource that matches the data discovery record (DDR), the resource instance is updated; otherwise, a new instance is created. The DDM uses the following approach to find a resource match.  
+When the Data Discovery Manager (DDM), in Configuration Manager, finds an existing resource that matches the data discovery record (DDR), the resource instance is updated; otherwise, a new instance is created. The DDM uses the following approach to find a resource match.  
 
 ## Unique Identifier Specified by DDR  
  If the DDR specifies the unique identifier property for the resource, it is used to find a matching resource instance.  

@@ -12,11 +12,11 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Hierarchy Maintenance Tool (Preinst.exe) for System Center Configuration Manager
+# Hierarchy Maintenance Tool (Preinst.exe) for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-The Hierarchy Maintenance tool (Preinst.exe) passes commands to the System Center Configuration Manager Hierarchy Manager while the Hierarchy Manager service is running. The Hierarchy Maintenance tool is automatically installed when you install a Configuration Manager site. You can find Preinst.exe in the \\&lt;*SiteServerName*>\SMS_&lt;*SiteCode*\bin\X64\00000409 shared folder on the site server.  
+The Hierarchy Maintenance tool (Preinst.exe) passes commands to the Configuration Manager Hierarchy Manager while the Hierarchy Manager service is running. The Hierarchy Maintenance tool is automatically installed when you install a Configuration Manager site. You can find Preinst.exe in the \\&lt;*SiteServerName*>\SMS_&lt;*SiteCode*\bin\X64\00000409 shared folder on the site server.  
 
  You might use the Hierarchy Maintenance tool in the following scenarios:  
 

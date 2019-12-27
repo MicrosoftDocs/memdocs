@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # CIDetectInfo Structure
-In System Center Configuration Manager, the `CIDetectInfo` structure contains identity information for baseline configuration item detection.  
+In Configuration Manager, the `CIDetectInfo` structure contains identity information for baseline configuration item detection.  
 
 ## Syntax  
 

@@ -1,7 +1,7 @@
 ---
 title: "Enroll devices with device enrollment manager "
 titleSuffix: "Configuration Manager"
-description: "Enroll corporate-owned devices with the device enrollment manager account with System Center Configuration Manager."
+description: "Enroll corporate-owned devices with the device enrollment manager account with Configuration Manager."
 ms.date: 09/08/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid

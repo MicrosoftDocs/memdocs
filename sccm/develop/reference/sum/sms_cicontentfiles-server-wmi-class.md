@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_CIContentFiles Server WMI Class
-The `SMS_CIContentFiles` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that lists all files associated with the content of a specific [SMS_SoftwareUpdate Server WMI Class](../../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md) object.  
+The `SMS_CIContentFiles` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists all files associated with the content of a specific [SMS_SoftwareUpdate Server WMI Class](../../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md) object.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

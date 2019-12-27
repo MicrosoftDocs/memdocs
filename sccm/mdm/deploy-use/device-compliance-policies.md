@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Device compliance policies in System Center Configuration Manager
+# Device compliance policies in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 

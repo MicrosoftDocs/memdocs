@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # GetStatus Method in Class SMS_AIMLSParser
-The `GetStatus` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, which is used to monitor the status of a previous call to the `Import` method.  
+The `GetStatus` Windows Management Instrumentation (WMI) class method, in Configuration Manager, which is used to monitor the status of a previous call to the `Import` method.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

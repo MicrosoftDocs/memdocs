@@ -1,7 +1,7 @@
 ---
 title: "Manage SharePoint Online access"
 titleSuffix: "Configuration Manager"
-description: "Learn how to use the System Center Configuration Manager SharePoint Online conditional access policy to manage access to OneDrive."
+description: "Learn how to use the Configuration Manager SharePoint Online conditional access policy to manage access to OneDrive."
 ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Manage SharePoint Online access in System Center Configuration Manager
+# Manage SharePoint Online access in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -116,7 +116,7 @@ You can block access to SharePoint Online from the following apps:
 > [!NOTE]   
 >  While compliance policies are deployed to Intune groups, or Configuration Manager collections, conditional access policies are targeted to Azure AD security groups.  
 
- For details about how to configure the compliance policy, see [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/device-compliance-policies.md).  
+ For details about how to configure the compliance policy, see [Manage device compliance policies](../../protect/deploy-use/device-compliance-policies.md).  
 
 > [!IMPORTANT]  
 >  If you haven't deployed a compliance policy, and then enable the SharePoint Online policy, all targeted devices are allowed access.  
@@ -192,4 +192,4 @@ You can block access to SharePoint Online from the following apps:
 
 ### See also  
 
- [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md)
+ [Manage access to services](../../protect/deploy-use/manage-access-to-services.md)

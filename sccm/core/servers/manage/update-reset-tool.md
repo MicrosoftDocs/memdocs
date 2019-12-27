@@ -1,7 +1,7 @@
 ---
 title: "Update reset tool"
 titleSuffix: "Configuration Manager"
-description: "Use the update reset tool for in-console updates for System Center Configuration Manager."
+description: "Use the update reset tool for in-console updates for Configuration Manager."
 ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other

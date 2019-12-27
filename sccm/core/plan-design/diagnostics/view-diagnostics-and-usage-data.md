@@ -1,7 +1,7 @@
 ---
 title: View diagnostics data
 titleSuffix: Configuration Manager
-description: View diagnostic and usage data to confirm that your System Center Configuration Manager hierarchy contains no sensitive information.
+description: View diagnostic and usage data to confirm that your Configuration Manager hierarchy contains no sensitive information.
 ms.date: 09/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other

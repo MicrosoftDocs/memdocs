@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Determine Advertisement Status
-To determine advertisement status in System Center Configuration Manager, you can use the queries described in this section.  
+To determine advertisement status in Configuration Manager, you can use the queries described in this section.  
 
 > [!NOTE]
 >  These queries query the status messages directly and might take some time to complete because there can be many status messages.  

@@ -1,7 +1,7 @@
 ---
 title: "Set up iOS and Mac hybrid device management with Microsoft Intune"
 titleSuffix: "Configuration Manager"
-description: "Set up iOS device management with System Center Configuration Manager and Microsoft Intune."
+description: "Set up iOS device management with Configuration Manager and Microsoft Intune."
 ms.date: 08/11/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Set up iOS hybrid device management with System Center Configuration Manager and Microsoft Intune
+# Set up iOS hybrid device management with Configuration Manager and Microsoft Intune
 
 *Applies to: Configuration Manager (current branch)*
 

@@ -11,13 +11,13 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About Configuration Manager WMI Programming
-Programming the System Center Configuration Manager client Windows Management Instrumentation (WMI) provider differs according to the programming language you use.  
+Programming the Configuration Manager client Windows Management Instrumentation (WMI) provider differs according to the programming language you use.  
 
 ## C#  
  If you are using C#, you should use the System.Management namespace, which provides access to a rich set of management information and management events about the system, devices, and applications that are instrumented to the WMI infrastructure.  
 
 > [!NOTE]
->  The managed System Center Configuration Manager library is for use with a System Center Configuration Manager site server and cannot be used to access client WMI namespaces.  
+>  The managed Configuration Manager library is for use with a Configuration Manager site server and cannot be used to access client WMI namespaces.  
 
  For more information about connecting to the Configuration Manager client WMI namespace by using the System.Management namespace, see [How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management](../../../../develop/core/clients/programming/how-to-connect-to-the-client-wmi-namespace.md).  
 

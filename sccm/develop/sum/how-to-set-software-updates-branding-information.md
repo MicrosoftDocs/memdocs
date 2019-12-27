@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Set Software Updates Branding Information
-You set the Software Updates client branding information, in System Center Configuration Manager, by modifying the necessary site control file settings.  
+You set the Software Updates client branding information, in Configuration Manager, by modifying the necessary site control file settings.  
 
 ### To set software updates client branding information  
 

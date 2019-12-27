@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Add Updates to a Deployment Package
-You add updates to a software updates deployment package, in System Center Configuration Manager, by obtaining an instance of the [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md) class and by using the [AddUpdateContent](../../develop/reference/sum/addupdatecontent-method-in-class-sms_softwareupdatespackage.md) method.  
+You add updates to a software updates deployment package, in Configuration Manager, by obtaining an instance of the [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md) class and by using the [AddUpdateContent](../../develop/reference/sum/addupdatecontent-method-in-class-sms_softwareupdatespackage.md) method.  
 
 ### To create a software updates deployment package  
 

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Association Classes
-In System Center Configuration Manager, an association allows you to logically relate the instances of two classes. Typically, an association consists of two key properties (which are paths, or pointers, that uniquely identify the location of the other class instances), but an association can also contain additional properties. The provider uses the key properties to retrieve the requested data.  
+In Configuration Manager, an association allows you to logically relate the instances of two classes. Typically, an association consists of two key properties (which are paths, or pointers, that uniquely identify the location of the other class instances), but an association can also contain additional properties. The provider uses the key properties to retrieve the requested data.  
 
  Although association classes provide a convenient means to collect related information, they are inherently slow. If performance is an issue, you should consider collecting the related information yourself.  
 

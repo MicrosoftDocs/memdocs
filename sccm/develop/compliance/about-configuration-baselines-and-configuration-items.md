@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About Configuration Baselines and Configuration Items
-In System Center Configuration Manager, baselines are used to define the configuration of a product or system that is established at a specific point in time. Configuration baselines in System Center Configuration Manager contain a defined set of desired configurations that are evaluated for compliance as a group.  
+In Configuration Manager, baselines are used to define the configuration of a product or system that is established at a specific point in time. Configuration baselines in Configuration Manager contain a defined set of desired configurations that are evaluated for compliance as a group.  
 
 ## Configuration Baselines  
  Configuration baselines contain one or more configuration items with associated rules, and they are assigned to computers through collections, together with a compliance evaluation schedule.  
@@ -81,7 +81,7 @@ In System Center Configuration Manager, baselines are used to define the configu
 
  Configuration items are the building blocks for configuration baselines, and consequently the same configuration item can be used in multiple configuration baselines.  
 
- System Center Configuration Manager supports the following configuration item types:  
+ Configuration Manager supports the following configuration item types:  
 
  **Operating system configuration item**  
  A configuration item to determine compliance for settings relating to the operating system version and configuration.  

@@ -1,7 +1,7 @@
 ---
 title: "Security and privacy for power management"
 titleSuffix: "Configuration Manager"
-description: "Get security and privacy information for power management in System Center Configuration Manager."
+description: "Get security and privacy information for power management in Configuration Manager."
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,11 +12,11 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Security and privacy for power management in System Center Configuration Manager
+# Security and privacy for power management in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-This section contains security and privacy information for power management in System Center Configuration Manager.  
+This section contains security and privacy information for power management in Configuration Manager.  
 
 ## Security best practices for power management  
  There are no security-related best practices for power management.  

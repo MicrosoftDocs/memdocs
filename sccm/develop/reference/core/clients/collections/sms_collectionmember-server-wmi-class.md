@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_CollectionMember Server WMI Class
-The `SMS_CollectionMember` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that serves as the abstract base class for the member classes for each collection. [SMS_CM_RES_COLL_CollectionID Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_cm_res_coll_collectionid-server-wmi-class.md) derives from `SMS_CollectionMember` class.  
+The `SMS_CollectionMember` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the abstract base class for the member classes for each collection. [SMS_CM_RES_COLL_CollectionID Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_cm_res_coll_collectionid-server-wmi-class.md) derives from `SMS_CollectionMember` class.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

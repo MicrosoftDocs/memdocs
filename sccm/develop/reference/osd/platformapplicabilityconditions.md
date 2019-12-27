@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # PlatformApplicabilityConditions
-`PlatformApplicabilityConditions` contains a list of supported platforms for an operating system deployment driver in System Center Configuration Manager.  
+`PlatformApplicabilityConditions` contains a list of supported platforms for an operating system deployment driver in Configuration Manager.  
 
 > [!NOTE]
 >  If `PlatformApplicabilityConditions` has no child nodes, it is assumed that the driver supports all platforms.  

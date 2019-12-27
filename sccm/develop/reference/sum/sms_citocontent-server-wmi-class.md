@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_CIToContent Server WMI Class
-The `SMS_CIToContent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that exposes the configuration item to content relationship for a software update. It lists all the contents in the configuration item.  
+The `SMS_CIToContent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that exposes the configuration item to content relationship for a software update. It lists all the contents in the configuration item.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

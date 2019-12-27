@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# About client installation parameters and properties in System Center Configuration Manager
+# About client installation parameters and properties in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 

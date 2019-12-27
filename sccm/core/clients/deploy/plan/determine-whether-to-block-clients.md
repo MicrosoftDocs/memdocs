@@ -1,7 +1,7 @@
 ---
 title: "Blocking clients"
 titleSuffix: "Configuration Manager"
-description: "Block client access for system security by using System Center Configuration Manager."
+description: "Block client access for system security by using Configuration Manager."
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Determine whether to block clients in System Center Configuration Manager
+# Determine whether to block clients in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -23,7 +23,7 @@ If a client computer or client mobile device is no longer trusted, you can block
 > [!IMPORTANT]  
 >  Although blocking in Configuration Manager can help to secure the Configuration Manager site, do not rely on this feature to protect the site from untrusted computers or mobile devices if you allow clients to communicate with site systems by using HTTP, because a blocked client could rejoin the site with a new self-signed certificate and hardware ID. Instead, use the blocking feature to block lost or compromised boot media that you use to deploy operating systems, and when site systems accept HTTPS client connections.  
 
- Clients that access the site by using the ISV Proxy certificate cannot be blocked. For more information about the ISV Proxy certificate, see the System Center Configuration Manager Software Development Kit (SDK).  
+ Clients that access the site by using the ISV Proxy certificate cannot be blocked. For more information about the ISV Proxy certificate, see the Configuration Manager Software Development Kit (SDK).  
 
  If your site systems accept HTTPS client connections and your public key infrastructure (PKI) supports a certificate revocation list (CRL), always consider certificate revocation to be the primary line of defense against potentially compromised certificates. Blocking clients in Configuration Manager offers a second line of defense to protect your hierarchy.  
 

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_DriverPackage Server WMI Class
-The `SMS_DriverPackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents the package that is the unit of distribution of program binaries with which one or more device drivers are associated.  
+The `SMS_DriverPackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the package that is the unit of distribution of program binaries with which one or more device drivers are associated.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

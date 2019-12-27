@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_AppDeploymentAssetDetails Server WMI Class
-The `SMS_AppDeploymentAssetDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents asset-level details about the deployment.  
+The `SMS_AppDeploymentAssetDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents asset-level details about the deployment.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

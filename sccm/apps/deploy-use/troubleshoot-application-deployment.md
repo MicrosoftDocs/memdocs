@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot tips for app deployments
 titleSuffix: Configuration Manager
-description: Tips for troubleshooting application deployment problems in System Center Configuration Manager
+description: Tips for troubleshooting application deployment problems in Configuration Manager
 ms.date: 05/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app

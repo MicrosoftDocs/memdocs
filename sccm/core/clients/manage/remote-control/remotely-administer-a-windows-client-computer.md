@@ -1,7 +1,7 @@
 ---
 title: "Remotely administer Windows computer"
 titleSuffix: "Configuration Manager"
-description: "Administer a remote Windows client computer by using System Center Configuration Manager."
+description: "Administer a remote Windows client computer by using Configuration Manager."
 ms.date: 11/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,14 +12,14 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to remotely administer a Windows client computer by using System Center Configuration Manager
+# How to remotely administer a Windows client computer by using Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 Configuration Manager allows you to connect to client computers using **Configuration Manager Remote Control**. Before you begin to use remote control, ensure that you review the information in the following articles:  
 
--   [Prerequisites for remote control in System Center Configuration Manager](/sccm/core/clients/manage/remote-control/prerequisites-for-remote-control)  
+-   [Prerequisites for remote control](/sccm/core/clients/manage/remote-control/prerequisites-for-remote-control)  
 
--   [Configuring remote control in System Center Configuration Manager](/sccm/core/clients/manage/remote-control/configuring-remote-control)  
+-   [Configuring remote control](/sccm/core/clients/manage/remote-control/configuring-remote-control)  
 
 Here are three ways to start the remote control viewer:  
 
@@ -36,7 +36,7 @@ Here are three ways to start the remote control viewer:
 3.  Select the computer that you want to remotely administer and then, in the **Home** tab, in the **Device** group, choose **Start** > **Remote Control**.  
 
     > [!IMPORTANT]  
-    >  If the client setting **Prompt user for Remote Control** permission is set to **True**, the connection does not initiate until the user at the remote computer agrees to the remote control prompt. For more information, see [Configuring remote control in System Center Configuration Manager](/sccm/core/clients/manage/remote-control/configuring-remote-control).  
+    >  If the client setting **Prompt user for Remote Control** permission is set to **True**, the connection does not initiate until the user at the remote computer agrees to the remote control prompt. For more information, see [Configuring remote control](/sccm/core/clients/manage/remote-control/configuring-remote-control).  
 
 4.  After the **Configuration Manager Remote Control** window opens, you can remotely administer the client computer. Use the following options to configure the connection.  
 
@@ -84,13 +84,13 @@ Here are three ways to start the remote control viewer:
 CmRcViewer.exe supports the following command-line options:  
 
 - *Address* - Specifies the NetBIOS name, the fully qualified domain name (FQDN), or the IP address of the client computer that you want to connect to.
-- *Site Server Name* - Specifies the name of the System Center Configuration Manager site server to which you want to send status messages that are related to the remote control session.
+- *Site Server Name* - Specifies the name of the Configuration Manager site server to which you want to send status messages that are related to the remote control session.
 - **/?** - Displays the command-line options for the remote control viewer.  
      
 **Example: CmRcViewer.exe** *<Address\>* *<\\\Site Server Name>* 
 
 > [!NOTE]  
-> The remote control viewer is supported on all operating systems that are supported for the Configuration Manager console. For more information, see [Supported configurations for System Center Configuration Manager consoles](/sccm/core/plan-design/configs/supported-operating-systems-consoles) and [Prerequisites for remote control in System Center Configuration Manager](/sccm/core/clients/manage/remote-control/prerequisites-for-remote-control).
+> The remote control viewer is supported on all operating systems that are supported for the Configuration Manager console. For more information, see [Supported configurations for Configuration Manager consoles](/sccm/core/plan-design/configs/supported-operating-systems-consoles) and [Prerequisites for remote control](/sccm/core/clients/manage/remote-control/prerequisites-for-remote-control).
 
 ## Next steps
 

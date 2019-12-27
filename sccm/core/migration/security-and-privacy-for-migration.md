@@ -1,7 +1,7 @@
 ---
 title: "Migration security and privacy"
 titleSuffix: "Configuration Manager"
-description: "Get security best practices and privacy information for migration to your System Center Configuration Manager environment."
+description: "Get security best practices and privacy information for migration to your Configuration Manager current branch environment."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Security and privacy for migration to System Center Configuration Manager
+# Security and privacy for migration to Configuration Manager current branch
 
 *Applies to: Configuration Manager (current branch)*
 
-This topic contains security best practices and privacy information for migration to your System Center Configuration Manager environment.  
+This topic contains security best practices and privacy information for migration to your Configuration Manager current branch environment.  
 
 ## Security Best Practices for Migration  
  Use the following security best practice for migration.  
@@ -39,7 +39,7 @@ Migration has the following security issues:
 When you migrate data from a source site to a destination site, you lose any auditing information from the source hierarchy.  
 
 ## Privacy Information for Migration  
- Migration discovers information from the site databases that you identify in a source infrastructure and stores this data to the database in the destination hierarchy. The information that System Center Configuration Manager can discover from a source site or hierarchy depends upon the features that were enabled in the source environment, as well as the management operations that were performed in that source environment.  
+ Migration discovers information from the site databases that you identify in a source infrastructure and stores this data to the database in the destination hierarchy. The information that Configuration Manager can discover from a source site or hierarchy depends upon the features that were enabled in the source environment, as well as the management operations that were performed in that source environment.  
 
  For more information about security and privacy information, see one of the following topics:  
 
@@ -47,7 +47,7 @@ When you migrate data from a source site to a destination site, you lose any aud
 
 -   For more information about the privacy information for System Center 2012 Configuration Manager, see  [Security and Privacy for System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682033.aspx) in the System Center 2012 Configuration Manager documentation library.  
 
--   For more information about the privacy information for System Center Configuration Manager, see [Security and privacy for System Center Configuration Manager](../../core/plan-design/security/security-and-privacy.md).  
+-   For more information about the privacy information for Configuration Manager, see [Security and privacy for Configuration Manager](../../core/plan-design/security/security-and-privacy.md).  
 
 You can migrate some or all of the supported data from a source site to a destination hierarchy.  
 

@@ -92,7 +92,7 @@ To prevent such problems, we recommend that you add the following real-time prot
 
 ### Process exclusions
 
-Process exclusions are necessary only if aggressive antivirus programs consider System Center Configuration Manager program files (.exe files) to be high-risk processes.
+Process exclusions are necessary only if aggressive antivirus programs consider Configuration Manager program files (.exe files) to be high-risk processes.
 
 - *ConfigMgr Installation Folder*\bin\64\Smsexec.exe
 - Either of the following processes:

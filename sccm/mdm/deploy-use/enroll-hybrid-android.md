@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Set up Android hybrid device management with System Center Configuration Manager and Microsoft Intune
+# Set up Android hybrid device management with Configuration Manager and Microsoft Intune
 
 *Applies to: Configuration Manager (current branch)*
 

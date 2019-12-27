@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # AddSource Method in Class SMS_UserMachineRelationship
-The `AddSource` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, adds a source for the relationship between the user and the device.  
+The `AddSource` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a source for the relationship between the user and the device.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

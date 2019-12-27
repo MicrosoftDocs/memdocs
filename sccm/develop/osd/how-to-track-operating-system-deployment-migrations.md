@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Track Operating System Deployment Migrations in Configuration Manager
-You track System Center Configuration Manager operating system migrations by inspecting the [SMS_StateMigration](../../develop/reference/osd/sms_statemigration-server-wmi-class.md) class.  
+You track Configuration Manager operating system migrations by inspecting the [SMS_StateMigration](../../develop/reference/osd/sms_statemigration-server-wmi-class.md) class.  
 
  The `StoreCreationDate`, `StoreDeletionDate`, and `StoreReleaseDate` properties can be used to identify the current state of the migration.  
 

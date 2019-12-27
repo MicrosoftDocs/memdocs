@@ -47,7 +47,7 @@ Class SMS_NetworkAccessAccountConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- This property is no longer used in System Center Configuration Manager.  
+ This property is no longer used in Configuration Manager.  
 
  `Username`  
  Data type: `String`  

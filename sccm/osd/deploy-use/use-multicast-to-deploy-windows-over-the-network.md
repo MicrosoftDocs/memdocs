@@ -1,7 +1,7 @@
 ---
 title: Use multicast to deploy Windows over the network
 titleSuffix: Configuration Manager
-description: Use multicast in your System Center Configuration Manager environment so that multiple computers can simultaneously download the operating system image.
+description: Use multicast in your Configuration Manager environment so that multiple computers can simultaneously download the operating system image.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
@@ -13,11 +13,11 @@ manager: dougeby
 
 ms.collection: M365-identity-device-management
 ---
-# Use multicast to deploy Windows over the network with System Center Configuration Manager
+# Use multicast to deploy Windows over the network with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Multicast is a network optimization method that you can use in your System Center Configuration Manager environment where multiple clients are likely to download the same operating system image at the same time. When multicast is used, multiple computers simultaneously download the operating system image as it is multicast by the distribution point, rather than having the distribution point send a copy of the data to each client over a separate connection.  
+Multicast is a network optimization method that you can use in your Configuration Manager environment where multiple clients are likely to download the same operating system image at the same time. When multicast is used, multiple computers simultaneously download the operating system image as it is multicast by the distribution point, rather than having the distribution point send a copy of the data to each client over a separate connection.  
 
  You can deploy operating systems over the network by using multicast in the following operating system deployment scenarios:  
 

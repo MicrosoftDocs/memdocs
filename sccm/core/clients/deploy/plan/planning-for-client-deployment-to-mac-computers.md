@@ -1,7 +1,7 @@
 ---
 title: "Planning client deployment to Mac computers"
 titleSuffix: "Configuration Manager"
-description: "Plan for client deployment to Mac computers in System Center Configuration Manager."
+description: "Plan for client deployment to Mac computers in Configuration Manager."
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Planning for client deployment to Mac computers in System Center Configuration Manager
+# Planning for client deployment to Mac computers in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -20,7 +20,7 @@ You can install the Configuration Manager client on Mac computers that run the M
 
 - **Hardware inventory**  
 
-   You can use Configuration Manager hardware inventory to collect information about the hardware and installed applications on Mac computers. This information can then be viewed in Resource Explorer in the Configuration Manager console and used to create collections, queries and reports. For more information, see [How to use Resource Explorer to view hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md).  
+   You can use Configuration Manager hardware inventory to collect information about the hardware and installed applications on Mac computers. This information can then be viewed in Resource Explorer in the Configuration Manager console and used to create collections, queries and reports. For more information, see [How to use Resource Explorer to view hardware inventory](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md).  
 
    Configuration Manager collects the following hardware information from Mac computers:  
 
@@ -98,4 +98,4 @@ You can install the Configuration Manager client on Mac computers that run the M
 
 - Client status client check and remediation  
 
-  For more information about how to install and configure the Configuration Manager Mac client, see [How to deploy clients to Macs in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-macs.md).
+  For more information about how to install and configure the Configuration Manager Mac client, see [How to deploy clients to Macs](../../../../core/clients/deploy/deploy-clients-to-macs.md).

@@ -100,4 +100,4 @@ Use conditional access policy for Skype for Business Online to manage access to 
 
 ### See also  
 
- [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/device-compliance-policies.md)
+ [Manage device compliance policies](../../protect/deploy-use/device-compliance-policies.md)

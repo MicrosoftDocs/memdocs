@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_SUMDeploymentStatus Server WMI Class
-The `SMS_SUMDeploymentStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents per-deployment-state summary for SUM deployments in-console monitoring.  
+The `SMS_SUMDeploymentStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents per-deployment-state summary for SUM deployments in-console monitoring.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

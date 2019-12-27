@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # ReassignClientsToSite Method in Class SMS_Collection
-The `ReassignClientsToSite` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, reassigns the Configuration Manager site for clients in the list.  
+The `ReassignClientsToSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, reassigns the Configuration Manager site for clients in the list.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

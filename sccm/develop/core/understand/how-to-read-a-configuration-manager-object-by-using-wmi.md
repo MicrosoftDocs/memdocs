@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Read a Configuration Manager Object by Using WMI
-In System Center Configuration Manager, you read a Configuration Manager object by using the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [Get](https://msdn.microsoft.com/library/aa393868.aspx) method to return an object instance that is identified by a key value.  
+In Configuration Manager, you read a Configuration Manager object by using the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [Get](https://msdn.microsoft.com/library/aa393868.aspx) method to return an object instance that is identified by a key value.  
 
 > [!NOTE]
 >  To query for multiple objects, use either a synchronous or asynchronous query. For more information, see [How to Perform a Synchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md)  

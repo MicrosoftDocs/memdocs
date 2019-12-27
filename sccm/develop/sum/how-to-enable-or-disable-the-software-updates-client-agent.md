@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Enable or Disable the Software Updates Client Agent
-You enable or disable the Software Updates Client Agent, in System Center Configuration Manager, by modifying the site control file settings.  
+You enable or disable the Software Updates Client Agent, in Configuration Manager, by modifying the site control file settings.  
 
 ### To enable or disable the Software Updates Client Agent  
 

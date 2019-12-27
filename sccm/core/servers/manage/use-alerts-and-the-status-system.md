@@ -12,11 +12,11 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Use alerts and the status system for System Center Configuration Manager
+# Use alerts and the status system for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Configure Alerts, and use the built-in Status System to remain informed about the state of your System Center Configuration Manager deployment.  
+Configure Alerts, and use the built-in Status System to remain informed about the state of your Configuration Manager deployment.  
 
 
 ##  <a name="bkmk_Status"></a> Status system  
@@ -189,8 +189,8 @@ Because the status system maintains separate configurations for each site you mu
 
 |Action|More Information|  
 |------------|----------------------|  
-|Configure Endpoint Protection alerts for a collection|See **How to Configure Alerts for Endpoint Protection in Configuration Manager** in [Configuring Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/configure-endpoint-protection.md)|  
-|Configure client status alerts for a collection|See  [How to configure client status in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).|  
+|Configure Endpoint Protection alerts for a collection|See **How to Configure Alerts for Endpoint Protection in Configuration Manager** in [Configuring Endpoint Protection](../../../protect/deploy-use/configure-endpoint-protection.md)|  
+|Configure client status alerts for a collection|See  [How to configure client status](../../../core/clients/deploy/configure-client-status.md).|  
 |Manage Configuration Manager alerts|See the section [Management tasks for alerts](#BKMK_Manage) in this topic.|  
 |Configure email subscriptions to alerts|See the section [Management tasks for alerts](#BKMK_Manage) in this topic..|  
 |Monitor alerts|See the section [Monitor alerts](#BKMK_MonitorAlerts)|  

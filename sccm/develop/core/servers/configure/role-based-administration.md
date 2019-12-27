@@ -12,10 +12,10 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Role-Based Administration
-This section provides topics about programmatically managing role-based administration in System Center Configuration Manager.  
+This section provides topics about programmatically managing role-based administration in Configuration Manager.  
 
 > [!NOTE]
->  General information about Role-Based Administration can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Fundamentals of role-based administration for System Center Configuration Manager](https://technet.microsoft.com/library/mt592917.aspx).  
+>  General information about Role-Based Administration can be found in the [Documentation for Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Fundamentals of role-based administration for Configuration Manager](https://technet.microsoft.com/library/mt592917.aspx).  
 
 ## About role-based administration  
  Role-based administration security rights are applied to a domain user or a security group. In Configuration Manager security rights are replicated to all sites in the hierarchy. You can use any single site to change the security rights of a user or security group and it will be automatically replicated to all other sites in that same hierarchy.  

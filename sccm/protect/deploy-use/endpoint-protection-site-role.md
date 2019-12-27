@@ -45,7 +45,7 @@ Use one of the following procedures depending on whether you want to install a n
 7.  On the **Cloud Protection Service** page, select the level of information that you want to send to Microsoft to help develop new definitions, and then click **Next**.
 
     > [!NOTE]
-    >  This option configures the Cloud Protection Service (formerly known as Microsoft Active Protection Service or MAPS) settings that are used by default. You can then configure custom settings for each antimalware policy you create. Join Cloud Protection Service, to help to keep your computers more secure by supplying Microsoft with malware samples that can help Microsoft to keep antimalware definitions more up-to-date. Additionally, when you join Cloud Protection Service, the Endpoint Protection client can use the dynamic signature service to download new definitions before they are published to Windows Update. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
+    >  This option configures the Cloud Protection Service (formerly known as Microsoft Active Protection Service or MAPS) settings that are used by default. You can then configure custom settings for each antimalware policy you create. Join Cloud Protection Service, to help to keep your computers more secure by supplying Microsoft with malware samples that can help Microsoft to keep antimalware definitions more up-to-date. Additionally, when you join Cloud Protection Service, the Endpoint Protection client can use the dynamic signature service to download new definitions before they are published to Windows Update. For more information, see [How to create and deploy antimalware policies for Endpoint Protection](endpoint-antimalware-policies.md).
 
 8.  Complete the wizard.
 
@@ -70,6 +70,6 @@ Use one of the following procedures depending on whether you want to install a n
 7.  On the **Cloud Protection Service** page, select the level of information that you want to send to Microsoft to help develop new definitions, and then click **Next**.
 
     > [!NOTE]
-    >  This option configures the Cloud Protection Service settings (formerly known as MAPS) that are used by default. You can configure custom settings for each antimalware policy you configure. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
+    >  This option configures the Cloud Protection Service settings (formerly known as MAPS) that are used by default. You can configure custom settings for each antimalware policy you configure. For more information, see [How to create and deploy antimalware policies for Endpoint Protection](endpoint-antimalware-policies.md).
 
 8.  Complete the wizard.

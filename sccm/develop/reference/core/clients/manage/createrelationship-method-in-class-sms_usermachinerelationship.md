@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # CreateRelationship Method in Class SMS_UserMachineRelationship
-The `CreateRelationship` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, creates a relationship between a user and a device.  
+The `CreateRelationship` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates a relationship between a user and a device.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

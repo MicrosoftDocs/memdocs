@@ -1,7 +1,7 @@
 ---
 title: "Migration job planning"
 titleSuffix: "Configuration Manager"
-description: "Use migration jobs to configure data that you want to migrate to your System Center Configuration Manager environment."
+description: "Use migration jobs to configure data that you want to migrate to your Configuration Manager current branch environment."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Plan a migration job strategy in System Center Configuration Manager
+# Plan a migration job strategy in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Use migration jobs to configure the specific data that you want to migrate to your System Center Configuration Manager environment. Migration jobs identify the objects that you plan to migrate, and they run at the top-level site in your destination hierarchy. You can set up one or more migration jobs per source site. This lets you migrate all objects at one time or limited subsets of data with each job.  
+Use migration jobs to configure the specific data that you want to migrate to your Configuration Manager current branch environment. Migration jobs identify the objects that you plan to migrate, and they run at the top-level site in your destination hierarchy. You can set up one or more migration jobs per source site. This lets you migrate all objects at one time or limited subsets of data with each job.  
 
  You can create migration jobs after Configuration Manager has successfully gathered data from one or more sites from the source hierarchy. You can migrate data in any sequence from the source sites that have gathered data. With a Configuration Manager 2007 source site, you can migrate data only from the site where an object was created. With source sites that run System Center 2012 Configuration Manager or later, all data that you can migrate is available at the top-level site of the source hierarchy.  
 
@@ -209,16 +209,16 @@ Use migration jobs to configure the specific data that you want to migrate to yo
 ### Site ownership for migrated content  
  When you migrate content for deployments, you must assign the content object to a site in the destination hierarchy. This site then becomes the owner for that content in the destination hierarchy. Although the top-level site of your destination hierarchy is the site that actually migrates the metadata for content, it is the assigned site that accesses the original source files for the content across the network.  
 
- To minimize the network bandwidth that is used during migration, consider transferring ownership of content to the closest available site. Because information about the content is shared globally in System Center Configuration Manager, it will be available at every site.  
+ To minimize the network bandwidth that is used during migration, consider transferring ownership of content to the closest available site. Because information about the content is shared globally in Configuration Manager, it will be available at every site.  
 
  Information about content is shared to all sites in the destination hierarchy by using database replication. However, any content that you assign to a primary site and then deploy to distribution points at other primary sites transfers by using file-based replication. This transfer is routed through the central administration site and then to each additional primary site. By centralizing packages that you plan to distribute to multiple primary sites before or during migration when you assign a site as the content owner, you can reduce data transfers across low-bandwidth networks.  
 
 ### Role-based administration security scopes for migrated data  
  When you migrate data to a destination hierarchy, you must assign one or more role-based administration security scopes to the objects whose data is migrated. This ensures that only the appropriate administrative users have access to this data after it is migrated. The security scopes that you specify are defined by the migration job and are applied to each object that is migrated by that job. If you require different security scopes to be applied to different sets of objects and you want to assign those scopes during migration, you must migrate the different sets of objects by using different migration jobs.  
 
- Before you set up a migration job, review how role-based administration works in System Center Configuration Manager. If necessary, set up one or more security scopes for the data that you migrate to control who will have access to the migrated objects in the destination hierarchy.  
+ Before you set up a migration job, review how role-based administration works in Configuration Manager. If necessary, set up one or more security scopes for the data that you migrate to control who will have access to the migrated objects in the destination hierarchy.  
 
- For more about security scopes and role-based administration, see [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
+ For more about security scopes and role-based administration, see [Fundamentals of role-based administration for Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
 ### Review migration actions  
  When you set up a migration job, the Create Migration Job wizard shows a list of actions that you must take to ensure a successful migration and a list of actions that Configuration Manager takes during the migration of the selected data. Review this information carefully to check the expected outcome.  
@@ -238,7 +238,7 @@ Use migration jobs to configure the specific data that you want to migrate to yo
 ##  <a name="About_Collection_Migration"></a> Plan for collection migration jobs  
  Collection migration jobs are available only when you migrate data from a source hierarchy that runs a supported version of Configuration Manager 2007. You must specify one or more collections to migrate when you migrate by collection. For each collection that you specify, the migration job automatically selects all related objects for migration. For example, if you select a specific collection of users, the collection members are then identified, and you can migrate the deployments associated with that collection. Optionally, you can select other deployment objects to migrate that are associated with those members. All these selected items are added to the list of objects that can be migrated.  
 
- When you migrate a collection, System Center Configuration Manager also migrates collection settings, including maintenance windows and collection variables, but it cannot migrate collection settings for AMT client provisioning.  
+ When you migrate a collection, Configuration Manager also migrates collection settings, including maintenance windows and collection variables, but it cannot migrate collection settings for AMT client provisioning.  
 
  Use the information in the following sections to learn about additional configurations that can apply to collection-based migration jobs.  
 
@@ -270,9 +270,9 @@ Use migration jobs to configure the specific data that you want to migrate to yo
  For example: You select a collection for devices that run Windows 7 and is named **Win_7**. This collection is limited to a collection that has all your client operating systems and is named **All_Clients**. The collection **All_Clients** will be automatically selected for migration.  
 
 ### Collection limiting  
- With System Center Configuration Manager, collections are global data and are evaluated at each site in the hierarchy. Therefore, plan how to limit the scope of a collection after it is migrated. During migration, you can identify a collection from the destination hierarchy to use to limit the scope of the collection that you are migrating so that the migrated collection does not include unanticipated members.  
+ With Configuration Manager current branch, collections are global data and are evaluated at each site in the hierarchy. Therefore, plan how to limit the scope of a collection after it is migrated. During migration, you can identify a collection from the destination hierarchy to use to limit the scope of the collection that you are migrating so that the migrated collection does not include unanticipated members.  
 
- For example, in Configuration Manager 2007, collections are evaluated at the site that creates them and at child sites. An advertisement might be deployed to only a child site, and this would limit the scope for that advertisement to that child site. In comparison, with System Center Configuration Manager, collections are evaluated at each site and associated advertisements are then evaluated for each site. Collection limiting lets you refine the collection members based on another collection to avoid the addition of unexpected collection members.  
+ For example, in Configuration Manager 2007, collections are evaluated at the site that creates them and at child sites. An advertisement might be deployed to only a child site, and this would limit the scope for that advertisement to that child site. In comparison, with Configuration Manager current branch, collections are evaluated at each site and associated advertisements are then evaluated for each site. Collection limiting lets you refine the collection members based on another collection to avoid the addition of unexpected collection members.  
 
 ### Site code replacement  
  When you migrate a collection that has criteria that identifies a Configuration Manager 2007 site, you must specify a specific site in the destination hierarchy. This ensures that the migrated collection remains functional in your destination hierarchy and does not increase in scope.  
@@ -286,7 +286,7 @@ Use migration jobs to configure the specific data that you want to migrate to yo
  To enable a program after migration, clear **Disable this program on computers where it is advertised** on the **Advanced** tab of the program properties.  
 
 ##  <a name="About_Object_Migration"></a> Plan for object migration jobs  
- Unlike collection migration, you must select each object and object instance that you want to migrate. You can select the individual objects (like advertisements from a Configuration Manager 2007 hierarchy or a publication from a System Center 2012 Configuration Manager or System Center Configuration Manager hierarchy) to add to the list of objects to migrate for a specific migration job. Any objects that you do not add to the migration list are not migrated to the destination site by the object migration job.  
+ Unlike collection migration, you must select each object and object instance that you want to migrate. You can select the individual objects (like advertisements from a Configuration Manager 2007 hierarchy or a publication from a System Center 2012 Configuration Manager or Configuration Manager current branch hierarchy) to add to the list of objects to migrate for a specific migration job. Any objects that you do not add to the migration list are not migrated to the destination site by the object migration job.  
 
  Object-based migration jobs do not have any additional configurations to plan for beyond those applicable to all migration jobs.  
 

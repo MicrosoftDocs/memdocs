@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # ITSEnvClass Interface
-The `ITSEnvClass` automation interface, in System Center Configuration Manager, represents the operating system deployment task sequencing environment. This interface inherits from `IDispatch`.  
+The `ITSEnvClass` automation interface, in Configuration Manager, represents the operating system deployment task sequencing environment. This interface inherits from `IDispatch`.  
 
 ## In This Section  
 

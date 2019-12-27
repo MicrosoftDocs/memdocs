@@ -12,17 +12,17 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Use the Update Registration Tool to import hotfixes to System Center Configuration Manager
+# Use the Update Registration Tool to import hotfixes to Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
 Some updates for Configuration Manager are not available from the Microsoft cloud service and are only obtained out-of-band. An example is a limited release hotfix to address a specific issue.   
 When you must install an out-of-band release, and the update or hotfix file name ends with the extension **update.exe**, you use the **update registration tool** to manually import the update to the Configuration Manager console. The tool enables you to extract and transfer the update package to the site server, and register the update with the Configuration Manager console.  
 
- If the hotfix file has the **.exe** file extension (not **update.exe**), see [Use the Hotfix Installer to install updates for System Center Configuration Manager](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
+ If the hotfix file has the **.exe** file extension (not **update.exe**), see [Use the Hotfix Installer to install updates for Configuration Manager](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
 
 > [!NOTE]  
->  This topic provides general guidance about how to install hotfixes that update System Center Configuration Manager. For details about a specific hotfix or update, refer to its corresponding Knowledge Base (KB) article at Microsoft Support.  
+>  This topic provides general guidance about how to install hotfixes that update Configuration Manager. For details about a specific hotfix or update, refer to its corresponding Knowledge Base (KB) article at Microsoft Support.  
 
  **Prerequisites for using the update registration tool:**  
 
@@ -60,4 +60,4 @@ When you must install an out-of-band release, and the update or hotfix file name
 
 3. Open the Configuration Manager console and navigate to **Administration** > **Updates and Servicing**. Hotfixes that were imported are now available to install. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.)
 
-   For information about installing updates, see [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)  
+   For information about installing updates, see [Install in-console updates for Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)  

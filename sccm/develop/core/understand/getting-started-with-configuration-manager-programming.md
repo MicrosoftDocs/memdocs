@@ -11,7 +11,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Getting Started with Configuration Manager Programming
-To get started with programming for System Center Configuration Manager, it’s beneficial to have a basic functional and architectural understanding of Configuration Manager. In addition, there are a number of key tools and resources that critical to validating and troubleshooting solutions. Below are tips and resources for someone new to programming for Configuration Manager.  
+To get started with programming for Configuration Manager, it’s beneficial to have a basic functional and architectural understanding of Configuration Manager. In addition, there are a number of key tools and resources that critical to validating and troubleshooting solutions. Below are tips and resources for someone new to programming for Configuration Manager.  
 
 > [!IMPORTANT]
 >  You should recognize that Configuration Manager, previously Systems Management Server (SMS), has quite a long history as a product. In reviewing namespaces, classes, methods, properties and log files you’ll find many references containing "SMS" – in fact, most WMI classes start with "SMS_" and the primary Configuration Manager WMI namespace is "SMS". Over the course of years, numerous legacy classes, methods and properties have accumulated – not apparent to an administrative user, but when programming the history/legacy can be confusing.  
@@ -19,9 +19,9 @@ To get started with programming for System Center Configuration Manager, it’s 
 ## Functional Understanding  
  To successfully automate or extend Configuration Manager, it is incredibly important to gain a functional understanding of the product. Configuration Manager is multi-tiered, distributed management system, most often spread over numerous servers and numerous locations. See the below resources, for functional information on Configuration Manager.  
 
--   [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx)  
+-   [Documentation for Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx)  
 
--   [Fundamentals of System Center Configuration Manager](https://technet.microsoft.com/library/mt622643.aspx)  
+-   [Fundamentals of Configuration Manager](https://technet.microsoft.com/library/mt622643.aspx)  
 
 -   [TechNet Virtual Labs](https://go.microsoft.com/fwlink/?LinkId=329809) (See: Virtual Lab: Introduction to Configuration Manager 2012 SP1)  
 
@@ -38,7 +38,7 @@ To get started with programming for System Center Configuration Manager, it’s 
 
 - [Channel 9: Microsoft System Center 2012 Configuration Manager Overview](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2012/MGT309)  
 
-- [YouTube: Technical Deep Dive: System Center Configuration Manager 2012 Technical Overview](https://www.youtube.com/watch?v=qLACm3910_A)  
+- [YouTube: Technical Deep Dive: Configuration Manager 2012 Technical Overview](https://www.youtube.com/watch?v=qLACm3910_A)  
 
   **Forums:** There are numerous forums available for Configuration Manager. A few example forums are listed below.  
 

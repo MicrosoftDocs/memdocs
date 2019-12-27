@@ -1,7 +1,7 @@
 ---
 title: "Software inventory"
 titleSuffix: "Configuration Manager"
-description: "Get an introduction to software inventory in System Center Configuration Manager."
+description: "Get an introduction to software inventory in Configuration Manager."
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,7 +12,7 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Introduction to software inventory in System Center Configuration Manager
+# Introduction to software inventory in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 

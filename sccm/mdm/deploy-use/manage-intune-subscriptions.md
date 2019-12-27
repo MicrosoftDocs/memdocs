@@ -1,7 +1,7 @@
 ---
 title: "Manage an Intune subscription"
 titleSuffix: "Configuration Manager"
-description: "Manage an Intune subscription associated with System Center Configuration Manager."
+description: "Manage an Intune subscription associated with Configuration Manager."
 ms.date: 06/02/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Manage an Intune subscription associated with System Center Configuration Manager
+# Manage an Intune subscription associated with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 

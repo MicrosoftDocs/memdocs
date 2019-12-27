@@ -1,7 +1,7 @@
 ---
 title: Waking up clients
 titleSuffix: Configuration Manager
-description: Plan how to wake up clients in System Center Configuration Manager using Wake On LAN (WOL).
+description: Plan how to wake up clients in Configuration Manager using Wake On LAN (WOL).
 ms.date: 04/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,7 +12,7 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Plan how to wake up clients in System Center Configuration Manager
+# Plan how to wake up clients in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -21,7 +21,7 @@ ms.collection: M365-identity-device-management
 > [!NOTE]
 > This article describes how an older version of Wake on LAN functions. This functionality still exists in Configuration Manager version 1810, which also includes a newer version of Wake on LAN too. Both versions of Wake on LAN can, and in many cases will, be enabled simultaneously. For more information about how the new version of Wake on LAN functions starting in 1810 and enabling either or both versions, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).  
 
-## How to wake up clients in System Center Configuration Manager
+## How to wake up clients in Configuration Manager
 
  Configuration Manager supports traditional wake-up packets to wake up computers in sleep mode when you want to install required software, such as software updates and applications.  
 

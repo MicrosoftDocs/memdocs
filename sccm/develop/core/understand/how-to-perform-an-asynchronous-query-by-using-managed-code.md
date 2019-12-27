@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Perform an Asynchronous Configuration Manager Query by Using Managed Code
-In System Center Configuration Manager, to perform an asynchronous query by using the managed SMS Provider, you use the [ProcessQuery](https://msdn.microsoft.com/library/cc146295.aspx) method.  
+In Configuration Manager, to perform an asynchronous query by using the managed SMS Provider, you use the [ProcessQuery](https://msdn.microsoft.com/library/cc146295.aspx) method.  
 
  The first parameter of the [ProcessQuery](https://msdn.microsoft.com/library/cc146295.aspx) method is an instance of the [SmsBackgroundWorker](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.aspx) class that provides two event handlers:  
 
@@ -31,7 +31,7 @@ In System Center Configuration Manager, to perform an asynchronous query by usin
 3.  From the **WqlConnectionManager** object you obtain in step one, call the **QueryProcessor** object [ProcessQuery](https://msdn.microsoft.com/library/cc146295.aspx) method to start the asynchronous query.  
 
 ## Example  
- The following example queries for all available SMS_Collection objects, and in the event handler, the example writes several of the collection properties to the System Center Configuration Manager console.  
+ The following example queries for all available SMS_Collection objects, and in the event handler, the example writes several of the collection properties to the Configuration Manager console.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 

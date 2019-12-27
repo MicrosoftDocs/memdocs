@@ -1,7 +1,7 @@
 ---
 title: "New version 1706"
 titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1706 of System Center Configuration Manager."
+description: "Get details about changes and new capabilities introduced in version 1706 of Configuration Manager."
 ms.date: 08/11/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -13,11 +13,11 @@ manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
-# What&#39;s new in version 1706 of System Center Configuration Manager
+# What&#39;s new in version 1706 of Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 1706 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1606, 1610, or 1702.
+Update 1706 for Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1606, 1610, or 1702.
 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
@@ -137,7 +137,7 @@ In this release, we've added new configuration item settings for Windows 10 devi
   - OpenSearch XML URL
   - Homepages (desktop only)
 
-For details of all Windows 10 settings, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
+For details of all Windows 10 settings, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
 
 ### New device compliance policy rules
 

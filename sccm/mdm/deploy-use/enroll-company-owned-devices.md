@@ -31,7 +31,7 @@ Organization or corporate-owned devices (COD) can be brought into management in 
  When configuring profiles for corporate-owned devices, the administrator can specify whether the managed devices support *user affinity* which identifies a specific user with the device. Devices configured with **user affinity** can install and run the Company Portal app to download apps and manage devices. See [User affinity for hybrid managed devices in Configuration Manager](../../mdm/deploy-use/user-affinity-for-hybrid-managed-devices.md).  
 
 ## Manage devices with Activation Lock  
- Microsoft Intune can help you manage iOS Activation Lock, a feature of the Find My iPhone app for iOS 7.1 and later devices. Activation Lock is enabled automatically when the Find My iPhone app is used on a device. See [Manage iOS Activation Lock with System Center Configuration Manager](../../mdm/deploy-use/manage-ios-activation-lock.md).
+ Microsoft Intune can help you manage iOS Activation Lock, a feature of the Find My iPhone app for iOS 7.1 and later devices. Activation Lock is enabled automatically when the Find My iPhone app is used on a device. See [Manage iOS Activation Lock with Configuration Manager](../../mdm/deploy-use/manage-ios-activation-lock.md).
 
  ## Predeclare devices with IMEI or iOS serial numbers
 

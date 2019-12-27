@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Delete an Operating System Deployment Task Sequence Action
-You delete an operating system deployment task sequence action, in System Center Configuration Manager, by removing the action from the task sequence steps.  
+You delete an operating system deployment task sequence action, in Configuration Manager, by removing the action from the task sequence steps.  
 
 ### To delete a task sequence action  
 

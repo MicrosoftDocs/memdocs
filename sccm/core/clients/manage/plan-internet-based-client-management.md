@@ -1,7 +1,7 @@
 ---
 title: "Internet-based client management"
 titleSuffix: "Configuration Manager"
-description: "Create a plan to manage internet-based clients in System Center Configuration Manager."
+description: "Create a plan to manage internet-based clients in Configuration Manager."
 ms.date: 05/16/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Plan for internet-based client management in System Center Configuration Manager
+# Plan for internet-based client management in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Internet-based client management (sometimes referred to as IBCM) lets you manage System Center Configuration Manager clients when they are not connected to your company network but have a standard internet connection. This arrangement has several advantages that include the reduced costs of not having to run virtual private networks (VPNs) and being able to deploy software updates in a timelier manner.  
+Internet-based client management (sometimes referred to as IBCM) lets you manage Configuration Manager clients when they are not connected to your company network but have a standard internet connection. This arrangement has several advantages that include the reduced costs of not having to run virtual private networks (VPNs) and being able to deploy software updates in a timelier manner.  
 
  Because of the higher security requirements of managing client computers on a public network, internet-based client management requires that clients and the site system servers that the clients connect to use PKI certificates. This ensures that connections are authenticated by an independent authority, and that data to and from these site systems are encrypted by using Secure Sockets Layer (SSL).  
 
@@ -134,7 +134,7 @@ Internet-based client management (sometimes referred to as IBCM) lets you manage
 
 - You must have a supporting public key infrastructure (PKI) that can deploy and manage the certificates that the clients require and that are managed on the internet and the internet-based site system servers.  
 
-   For more information about the PKI certificates, see [PKI certificate requirements for System Center Configuration Manager](/sccm/core/plan-design/network/pki-certificate-requirements).  
+   For more information about the PKI certificates, see [PKI certificate requirements for Configuration Manager](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
 - The internet fully qualified domain name (FQDN) of site systems that support internet-based client management must be registered as host entries on public DNS servers.  
 

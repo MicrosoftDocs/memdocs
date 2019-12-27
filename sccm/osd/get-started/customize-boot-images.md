@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Customize boot images with System Center Configuration Manager
+# Customize boot images with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 

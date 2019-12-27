@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About Configuration Manager Custom Actions
-You can create custom actions that can be used with existing System Center Configuration Manager actions.  
+You can create custom actions that can be used with existing Configuration Manager actions.  
 
  Custom actions are command-line actions that calls an application. The application can be a process, a script or other commands that you specify in a Managed Object Format (MOF) file description.  
 
@@ -32,7 +32,7 @@ You can create custom actions that can be used with existing System Center Confi
  For more information about creating a custom control in Visual Studio, see [How to Create a Configuration Manager Custom Action Control](../../develop/osd/how-to-create-a-configuration-manager-custom-action-control.md).  
 
 > [!NOTE]
->  The System Center Configuration Manager SDK sample CustomTasksequenceAction shows how to create a custom task sequence action control and MOF.  
+>  The Configuration Manager SDK sample CustomTasksequenceAction shows how to create a custom task sequence action control and MOF.  
 
 ### Supporting Help  
  You cannot integrate your control's Help with the Configuration Manager console F1 key Help support. If a user presses F1 in your control, the control does nothing. However, you can implement Help in your control by using a mechanism of your choice to open the Help .chm file. For example, you can add a Help button that opens your Help .chm file.  

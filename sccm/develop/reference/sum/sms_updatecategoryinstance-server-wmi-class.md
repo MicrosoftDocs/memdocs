@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_UpdateCategoryInstance Server WMI Class
-The `SMS_UpdateCategoryInstance` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a software-update-specific `SMS_CategoryInstance Server WMI Class` object available on the site.  
+The `SMS_UpdateCategoryInstance` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a software-update-specific `SMS_CategoryInstance Server WMI Class` object available on the site.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -38,7 +38,7 @@ Class SMS_UpdateCategoryInstance : SMS_CategoryInstanceBase
  The `SMS_UpdateCategoryInstance` class does not define any methods.  
 
 > [!WARNING]
->  The `ResendObjectToAllSites Method in Class SMS_UpdateCategoryInstance` has been deprecated in System Center Configuration Manager.  
+>  The `ResendObjectToAllSites Method in Class SMS_UpdateCategoryInstance` has been deprecated in Configuration Manager.  
 
 ## Properties  
  `AllowSubscription`  

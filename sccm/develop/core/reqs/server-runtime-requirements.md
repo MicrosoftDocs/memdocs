@@ -12,11 +12,11 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Server Runtime Requirements
-Microsoft System Center Configuration Manager server applications that are developed by using the Configuration Manager SDK, have the following runtime requirements.  
+Microsoft Configuration Manager server applications that are developed by using the Configuration Manager SDK, have the following runtime requirements.  
 
 ## Managed Code  
 
--   A supported version of Windows Server as defined in [Supported operating systems for System Center Configuration Manager site system servers](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers). For more information, see [General Requirements](#general-requirements).
+-   A supported version of Windows Server as defined in [Supported operating systems for Configuration Manager site system servers](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers). For more information, see [General Requirements](#general-requirements).
 
 -   Installed Configuration Manager site server  
 
@@ -25,7 +25,7 @@ Microsoft System Center Configuration Manager server applications that are devel
 -   Microsoft .NET Framework version 4  
 
 ## Configuration Manager Console User Interface Extension  
- Programming System Center Configuration Manager console extensions has the following requirements:  
+ Programming Configuration Manager console extensions has the following requirements:  
 
 - Installed Configuration Manager site server  
 
@@ -47,7 +47,7 @@ Microsoft System Center Configuration Manager server applications that are devel
 ## General Requirements  
 
 > [!IMPORTANT]
->  For more information about general System Center Configuration Manager requirements, see [Supported configurations for System Center Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-configurations).  
+>  For more information about general Configuration Manager requirements, see [Supported configurations for Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-configurations).  
 
 ## See Also  
 [About console extensions](/sccm/develop/core/servers/console/about-configuration-manager-console-extension)

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_MeteredUser Server WMI Class
-The `SMS_MeteredUser` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that lists users that have used metered applications.  
+The `SMS_MeteredUser` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists users that have used metered applications.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

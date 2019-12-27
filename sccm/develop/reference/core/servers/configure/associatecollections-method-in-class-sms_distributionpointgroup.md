@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # AssociateCollections Method in Class SMS_DistributionPointGroup
-The `AssociateCollections` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager,  associates a set of collections to this distribution point group.  
+The `AssociateCollections` Windows Management Instrumentation (WMI) class method, in Configuration Manager,  associates a set of collections to this distribution point group.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

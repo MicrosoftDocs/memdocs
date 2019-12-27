@@ -1,7 +1,7 @@
 ---
 title: "Deploy content"
 titleSuffix: "Configuration Manager"
-description: "After you install distribution points for System Center Configuration Manager, here's how you can begin to deploy content to them."
+description: "After you install distribution points for Configuration Manager, here's how you can begin to deploy content to them."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Deploy and manage content for System Center Configuration Manager
+# Deploy and manage content for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-After you install distribution points for System Center Configuration Manager, you can begin to deploy content to them. Typically, content transfers to distribution points across the network, but other options to get content to the distribution points exists. After content transfers to a distribution point, you can update, redistribute, remove, and validate that content on distribution points.  
+After you install distribution points for Configuration Manager, you can begin to deploy content to them. Typically, content transfers to distribution points across the network, but other options to get content to the distribution points exists. After content transfers to a distribution point, you can update, redistribute, remove, and validate that content on distribution points.  
 
 ##  <a name="bkmk_distribute"></a> Distribute content  
 Typically, you distribute content to distribution points so that it is available to client computers. (The exception to this is when you use on-demand content distribution for a specific deployment.)  When you distribute content,   Configuration Manager stores content files in a package, and then distributes the package to the distribution point. Types of content that you can distribute, include:  
@@ -83,7 +83,7 @@ Use the following procedure to distribute content to distribution points.
     - **Collections**: Select **User Collections** or **Device Collections**, click the collection associated with one or more distribution point groups, and then click **OK**.  
 
         > [!NOTE]  
-        > Only the collections that are associated with a distribution point group are displayed. For more information about associating collections with distribution point groups, see [Manage distribution point groups](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage) in the [Install and configure distribution points for System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) topic.  
+        > Only the collections that are associated with a distribution point group are displayed. For more information about associating collections with distribution point groups, see [Manage distribution point groups](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage) in the [Install and configure distribution points for Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) topic.  
 
     - **Distribution Point**: Select an existing distribution point, and then click **OK**. Distribution points that have previously received the content are not displayed.  
 
@@ -95,7 +95,7 @@ Use the following procedure to distribute content to distribution points.
 
 8.  The **Progress** page displays the progress of the distribution.  
 
-9. The **Confirmation** page displays whether the content was successfully assigned to the points. To monitor the content distribution, see  [Monitor content you have distributed with System Center Configuration Manager](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md).  
+9. The **Confirmation** page displays whether the content was successfully assigned to the points. To monitor the content distribution, see  [Monitor content you have distributed with Configuration Manager](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md).  
 
 ##  <a name="bkmk_prestage"></a> Use Prestaged content  
 You can prestage content files for applications and package types:  
@@ -216,7 +216,7 @@ You can create a compressed, prestaged content file that contains the files and 
     - **Collections**: Select **User Collections** or **Device Collections**, click the collection associated with one or more distribution point groups, and then click **OK**.  
 
       > [!NOTE]  
-      > Only the collections that are associated with a distribution point group are displayed.  For more information, see [Manage distribution point groups](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage) in the [Install and configure distribution points for System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) topic.  
+      > Only the collections that are associated with a distribution point group are displayed.  For more information, see [Manage distribution point groups](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage) in the [Install and configure distribution points for Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) topic.  
 
     - **Distribution Point**: Select an existing distribution point, and then click **OK**. Distribution points that have previously received the content are not displayed.  
 
@@ -228,7 +228,7 @@ You can create a compressed, prestaged content file that contains the files and 
 
 8.  The **Progress** page displays the progress of the distribution.  
 
-9. The **Confirmation** page displays whether or not the content was successfully assigned to the distribution points. To monitor the content distribution, see [Monitor content you have distributed with System Center Configuration Manager](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md).  
+9. The **Confirmation** page displays whether or not the content was successfully assigned to the distribution points. To monitor the content distribution, see [Monitor content you have distributed with Configuration Manager](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md).  
 
 ###  <a name="BKMK_ExportContentFromPrestagedContentFile"></a> Step 3: Extract the Content from the Prestaged Content File  
 After you create the prestaged content file and assign the content to distribution points, you can extract the content files to the content library on a site server or distribution point. Typically, you have copied the prestaged content file to a portable drive like a USB drive, or have burned content to media like a DVD, and have it available at the location of the site server or distribution point that requires the content.  
@@ -465,7 +465,7 @@ The content validation process verifies the integrity of content files on distri
 
 When the content validation process starts, Configuration Manager verifies the content files on distribution points, and if the file hash is unexpected for the files on the distribution point, Configuration Manager creates a status message that you can review in the **Monitoring** workspace.  
 
-For more information about configuring the content validation schedule, see [Distribution point configurations](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs) in the [Install and configure distribution points for System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) topic.  
+For more information about configuring the content validation schedule, see [Distribution point configurations](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs) in the [Install and configure distribution points for Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) topic.  
 
 
 #### To initiate content validation for all content on a distribution point  
@@ -478,7 +478,7 @@ For more information about configuring the content validation schedule, see [Dis
 
 4.  On the **Content** tab, select the package in which you want to validate the content, click **Validate**, click **OK**, and then click **OK**. The content validation process initiates for the package on the distribution point.  
 
-5.  To view the results of the content validation process, in the **Monitoring** workspace, expand **Distribution Status**, and click the **Content Status** node. The content for each package type (for example, Application, Software Update Package, and Boot Image) is displayed. For more information about monitoring content status, see [Monitor content you have distributed with System Center Configuration Manager](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md).  
+5.  To view the results of the content validation process, in the **Monitoring** workspace, expand **Distribution Status**, and click the **Content Status** node. The content for each package type (for example, Application, Software Update Package, and Boot Image) is displayed. For more information about monitoring content status, see [Monitor content you have distributed with Configuration Manager](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md).  
 
 #### To initiate content validation for a package  
 
@@ -504,4 +504,4 @@ For more information about configuring the content validation schedule, see [Dis
 
 4.  On the **Content Locations** tab, select the distribution point or distribution point group in which to validate the content, click **Validate**, click **OK**, and then click **OK**. The content validation process starts for the content on the selected distribution point or distribution point group.  
 
-5.  To view the results of the content validation process, in the **Monitoring** workspace, expand **Distribution Status**, and click the **Content Status** node. The content for each package type (for example, Application, Software Update Package, and Boot Image) is displayed. For more information about monitoring the content status, see [Monitor content you have distributed with System Center Configuration Manager](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md).  
+5.  To view the results of the content validation process, in the **Monitoring** workspace, expand **Distribution Status**, and click the **Content Status** node. The content for each package type (for example, Application, Software Update Package, and Boot Image) is displayed. For more information about monitoring the content status, see [Monitor content you have distributed with Configuration Manager](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md).  

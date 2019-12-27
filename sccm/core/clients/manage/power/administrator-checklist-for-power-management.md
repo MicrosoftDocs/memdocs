@@ -1,7 +1,7 @@
 ---
 title: "Administrator checklist for power management"
 titleSuffix: "Configuration Manager"
-description: "Use the administrator checklist to help you plan for and implement power management in System Center Configuration Manager."
+description: "Use the administrator checklist to help you plan for and implement power management in Configuration Manager."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,11 +12,11 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Administrator checklist for power management in System Center Configuration Manager
+# Administrator checklist for power management in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-This administrator checklist provides the recommended steps for using System Center Configuration Manager power management in your organization.  
+This administrator checklist provides the recommended steps for using Configuration Manager power management in your organization.  
 
 ## Configuring power management  
  Use these steps to help you configure your hierarchy to collect power management information from client computers.  

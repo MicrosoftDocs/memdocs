@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to List Distribution Points for a Site
-The following example shows how to assign a distribution point to a package by using the [SMS_DistributionPoint Server WMI Class](../../../../develop/reference/core/servers/configure/sms_distributionpoint-server-wmi-class.md) class and class properties in System Center Configuration Manager.  
+The following example shows how to assign a distribution point to a package by using the [SMS_DistributionPoint Server WMI Class](../../../../develop/reference/core/servers/configure/sms_distributionpoint-server-wmi-class.md) class and class properties in Configuration Manager.  
 
  You only need to assign a distribution point to a package if the package contains source files. The package is not advertised until the program source files have been propagated to a distribution point share. You can use the default distribution point share, or you can specify a share to use. You can also specify more than one distribution point to use to distribute your package source files, although the following example does not demonstrate that.  
 

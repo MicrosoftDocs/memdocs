@@ -1,7 +1,7 @@
 ---
 title: "New version 1702"
 titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1702 of System Center Configuration Manager."
+description: "Get details about changes and new capabilities introduced in version 1702 of Configuration Manager."
 ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -13,11 +13,11 @@ manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
-# What&#39;s new in version 1702 of System Center Configuration Manager
+# What&#39;s new in version 1702 of Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 1702 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1602, 1606, or 1610. It is also available as a baseline version you can use when installing a new deployment.
+Update 1702 for Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1602, 1606, or 1610. It is also available as a baseline version you can use when installing a new deployment.
 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  

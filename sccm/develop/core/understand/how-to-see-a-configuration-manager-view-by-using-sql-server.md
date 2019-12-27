@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to See a Configuration Manager View by Using SQL Server
-The following examples demonstrate various Microsoft System Center Configuration Manager SQL view queries.  
+The following examples demonstrate various Microsoft Configuration Manager SQL view queries.  
 
 ## Examples  
 

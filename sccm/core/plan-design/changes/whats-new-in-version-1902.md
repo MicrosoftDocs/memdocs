@@ -348,7 +348,7 @@ Use Configuration Manager to move Windows known folders to OneDrive for Business
 
 For more information on this feature of OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders).
 
-First, [find your Office 365 tenant ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Then deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using System Center Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+First, [find your Office 365 tenant ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Then deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
 
 To create and deploy a OneDrive for Business profile, in the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings**, and select the **OneDrive for Business Profiles** node.  
 

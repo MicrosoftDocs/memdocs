@@ -513,7 +513,7 @@ For Configuration Manager version 1806, this level includes the following data:
 
 - Compliance Settings: SCEP, VPN, Wi-Fi, and compliance policy template configuration details
 
-- DCM config pack for System Center Configuration Manager usage
+- DCM config pack for Configuration Manager usage
 
 - Detailed client deployment installation errors
 

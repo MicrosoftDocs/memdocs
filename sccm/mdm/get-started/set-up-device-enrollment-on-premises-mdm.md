@@ -1,7 +1,7 @@
 ---
 title: "Set up device enrollment "
 titleSuffix: "Configuration Manager"
-description: "Grant users permission to enroll their devices for On-premises Mobile Device Management in System Center Configuration Manager."
+description: "Grant users permission to enroll their devices for On-premises Mobile Device Management in Configuration Manager."
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager
+# Set up device enrollment for On-premises Mobile Device Management in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Enabling users to enroll their devices for System Center Configuration Manager On\-premises Mobile Device Management requires you to grant them permission to do so. To grant users permission to enroll devices, follow the tasks below.
+Enabling users to enroll their devices for Configuration Manager On\-premises Mobile Device Management requires you to grant them permission to do so. To grant users permission to enroll devices, follow the tasks below.
 
 -   [Create an enrollment profile that allows users to enroll modern devices](#bkmk_createProf)  
 
@@ -40,24 +40,24 @@ Enabling users to enroll their devices for System Center Configuration Manager O
 5.  In Create Enrollment Profile, type a name for the enrollment profile, and choose the management site code you want users with the enrollment profile to use. Click **OK** several times to exit the Default Settings page.  
 
 > [!NOTE]  
->  If you want to deploy the enrollment profile to a subset of discovered users, you can use a user collection, and create custom client settings to deploy to that collection. For information on creating custom client settings, see [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md)  
+>  If you want to deploy the enrollment profile to a subset of discovered users, you can use a user collection, and create custom client settings to deploy to that collection. For information on creating custom client settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md)  
 
 ##  <a name="bkmk_addClient"></a> Set up additional client settings for enrolled devices  
- In addition to setting up the enrollment profile fo modern devices, you can set up additional client settings for configuring devices when they're enrolled.  For  information on setting up client settings, see [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
+ In addition to setting up the enrollment profile fo modern devices, you can set up additional client settings for configuring devices when they're enrolled.  For  information on setting up client settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).  
 
  Not all client settings are available for On\-premises Mobile Device Management. The current branch of Configuration Manager supports the following client settings for On\-premises Mobile Device Management:  
 
 -   Enrollment - these settings specify  the enrollment profile for managed devices. For more information on how to set up an enrollment profile, see [Create an enrollment profile that allows users to enroll modern devices](#bkmk_createProf).  
 
--   Client policy - theses settings specify the frequency for downloading client policy to the device. You can also enable settings for  targeting users with policy polling. For more information on client policy settings, see the Client Policy section in [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md).  
+-   Client policy - theses settings specify the frequency for downloading client policy to the device. You can also enable settings for  targeting users with policy polling. For more information on client policy settings, see the Client Policy section in [About client settings](../../core/clients/deploy/about-client-settings.md).  
 
--   Software deployment - this setting sets the interval for evaluating client devices for software deployments. For more information of software deployment settings, see the Software Deployment section in [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md)  
+-   Software deployment - this setting sets the interval for evaluating client devices for software deployments. For more information of software deployment settings, see the Software Deployment section in [About client settings](../../core/clients/deploy/about-client-settings.md)  
 
     > [!NOTE]  
     >  For On\-premises Mobile Device Management, software deployment settings can only be used as default client settings. Software deployment settings cannot be used with custom client settings in the current branch of Configuration Manager.  
 
 ##  <a name="bkmk_enableUsers"></a> Enable users to receive the modern device enrollment profile  
- For users to receive the modified client settings with the enrollment profile for On\-premises Mobile Device Management, they must be discovered     through the Active Directory discovery method. To make sure everyone that needs the enrollment profile gets it, run discovery for Active Directory users. For instructions on how to discover users, see [Run discovery for System Center Configuration Manager](../../core/servers/deploy/configure/run-discovery.md).  
+ For users to receive the modified client settings with the enrollment profile for On\-premises Mobile Device Management, they must be discovered     through the Active Directory discovery method. To make sure everyone that needs the enrollment profile gets it, run discovery for Active Directory users. For instructions on how to discover users, see [Run discovery for Configuration Manager](../../core/servers/deploy/configure/run-discovery.md).  
 
 ##  <a name="bkmk_storeCert"></a> Store the root certificate on devices to be enrolled  
  Users with domain-joined devices will likely already have the required root certificate for trusted communication with the servers hosting the site system roles because the root was issued as part of the domain-joining process with Active Directory. Non-domain joined computers and mobile devices will need the root certificate manually installed on the device to allow for enrollment to take place. These devices will not automatically have the required root certificate.  

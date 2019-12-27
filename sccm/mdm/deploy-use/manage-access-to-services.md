@@ -1,7 +1,7 @@
 ---
 title: "Conditional access"
 titleSuffix: "Configuration Manager"
-description: "Learn how to use conditional access in System Center Configuration Manager to help secure email and other services."
+description: "Learn how to use conditional access in Configuration Manager to help secure email and other services."
 ms.date: 03/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -13,7 +13,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Manage access to services in System Center Configuration Manager
+# Manage access to services in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -25,7 +25,7 @@ Use conditional access to specify conditions to help secure email and other serv
 > If you use conditional access on devices managed with the Configuration Manager client, to make sure they are still protected, first enable conditional access in Intune for those devices before you migrate. Enable co-management in Configuration Manager, move the compliance policy workload to Intune, and then complete your migration from Intune hybrid to Intune standalone. For more information, see [Conditional access with co-management](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
 
 
- For information about conditional access on devices that are managed with the Configuration Manager client, see [Manage access to Office 365 services for PCs managed by System Center Configuration Manager](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
+ For information about conditional access on devices that are managed with the Configuration Manager client, see [Manage access to Office 365 services for PCs managed by Configuration Manager](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 
  A typical flow for conditional access might look as follows:  
@@ -85,7 +85,7 @@ Conditional access to Exchange Online supports devices that run:
   The **Conditional access for PCs** section in this article describes all the requirements for enabling conditional access for a PC.<br />     
   AAD DRS activates automatically for Microsoft Intune and Office 365 customers. Customers who have already deployed the ADFS Device Registration Service do not see registered devices in their on-premises Active Directory.
 - Use an Office 365 subscription that includes Exchange Online (such as E3). Users must be licensed for Exchange Online.
-- The Exchange Server connector is optional and connects Configuration Manager to Microsoft Exchange Online. This connector helps you monitor device information through the Configuration Manager console. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
+- The Exchange Server connector is optional and connects Configuration Manager to Microsoft Exchange Online. This connector helps you monitor device information through the Configuration Manager console. For more information, see [Manage mobile devices with Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
   You do not need the connector to use compliance policies or conditional access policies. Running reports on the impact of conditional access requires the connector.
 
 ## Requirements for Exchange Online Dedicated
@@ -99,9 +99,9 @@ Conditional access to Exchange Online Dedicated supports devices that run:
 - Android 4 and later.
 - For tenants in the legacy Exchange Online Dedicated environment:    
 
-  Use the Exchange Server connector, which connects Configuration Manager to Microsoft Exchange on-premises. The connector lets you manage mobile devices and enables conditional access. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
+  Use the Exchange Server connector, which connects Configuration Manager to Microsoft Exchange on-premises. The connector lets you manage mobile devices and enables conditional access. For more information, see [Manage mobile devices with Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
 - For tenants in the new Exchange Online Dedicated environment:     
-  The Exchange Server connector is optional, which connects Configuration Manager to Microsoft Exchange Online and helps you manage device information. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md). You do not need the connector to use compliance policies or conditional access policies. Running reports on the impact of conditional access requires the connector.  
+  The Exchange Server connector is optional, which connects Configuration Manager to Microsoft Exchange Online and helps you manage device information. For more information, see [Manage mobile devices with Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md). You do not need the connector to use compliance policies or conditional access policies. Running reports on the impact of conditional access requires the connector.  
 
 ## Requirements for Exchange on-premises
 Conditional access to Exchange on-premises supports:
@@ -118,8 +118,8 @@ Conditional access to Exchange on-premises supports:
 
 > [!TIP]
 > If your Exchange environment is in a CAS server configuration, then you must configure the on-premises Exchange connector to point to one of the CAS servers.
-> - Use the Exchange Server connector, which connects Configuration Manager to Microsoft Exchange on-premises. The connector lets you manage mobile devices and enables conditional access. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
->   - Make sure that you are using the latest version of the on-premises Exchange connector. Configure the on-premises Exchange connector through the Configuration Manager console. For a detailed walkthrough, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
+> - Use the Exchange Server connector, which connects Configuration Manager to Microsoft Exchange on-premises. The connector lets you manage mobile devices and enables conditional access. For more information, see [Manage mobile devices with Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
+>   - Make sure that you are using the latest version of the on-premises Exchange connector. Configure the on-premises Exchange connector through the Configuration Manager console. For a detailed walkthrough, see [Manage mobile devices with Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
 >   - Only configure the connector on the Configuration Manager primary site
 
 - Exchange ActiveSync can be configured with certificate-based authentication, or user credential entry
@@ -166,14 +166,14 @@ Conditional access to SharePoint Online supports devices that run:
 ## Next Steps  
  Read the following topics to learn how to configure compliance policies and conditional access policies for your required scenario:  
 
-- [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/device-compliance-policies.md)  
+- [Manage device compliance policies](../../protect/deploy-use/device-compliance-policies.md)  
 
-- [Manage email access in System Center Configuration Manager](../../protect/deploy-use/manage-email-access.md)  
+- [Manage email access](../../protect/deploy-use/manage-email-access.md)  
 
-- [Manage SharePoint Online access in System Center Configuration Manager](../../protect/deploy-use/manage-sharepoint-online-access.md)  
+- [Manage SharePoint Online access](../../protect/deploy-use/manage-sharepoint-online-access.md)  
 
 - [Manage Skype for Business Online access](../../protect/deploy-use/manage-skype-for-business-online-access.md)  
 
 ### See also  
 
- [Get started with compliance settings in System Center Configuration Manager](../../compliance/get-started/get-started-with-compliance-settings.md)
+ [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md)

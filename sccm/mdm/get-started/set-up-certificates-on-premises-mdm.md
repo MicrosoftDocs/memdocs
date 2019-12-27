@@ -1,7 +1,7 @@
 ---
 title: "Set up certificates "
 titleSuffix: "Configuration Manager"
-description: "Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager."
+description: "Set up certificates for trusted communications for On-premises Mobile Device Management in Configuration Manager."
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager
+# Set up certificates for trusted communications for On-premises Mobile Device Management in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-System Center Configuration Manager On\-premises Mobile Device Management requires the enrollment point, enrollment proxy point, distribution point, and device management point  site system roles to be set up for trusted communications with managed devices. Any site system server hosting one or more of those roles must have a unique PKI certificate bound to the web server on that system. A certificate with the same  root as the certificate on the servers most also be stored on managed devices to establish trusted communication with them.  
+Configuration Manager On\-premises Mobile Device Management requires the enrollment point, enrollment proxy point, distribution point, and device management point  site system roles to be set up for trusted communications with managed devices. Any site system server hosting one or more of those roles must have a unique PKI certificate bound to the web server on that system. A certificate with the same  root as the certificate on the servers most also be stored on managed devices to establish trusted communication with them.  
 
  For domain-joined devices, Active Directory Certificate Services installs the needed certificate with the trusted root on all devices automatically. For non-domain-joined devices, you must obtain a valid certificate with a trusted root by some other means. If you use the site CA as your trusted root (which is the same one Active Directory uses for domain-joined devices), the site system servers for the enrollment point and enrollment proxy point must have a certificate issued by that CA bound to them.  
 

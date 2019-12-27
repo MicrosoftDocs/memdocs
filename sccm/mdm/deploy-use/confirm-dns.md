@@ -1,7 +1,7 @@
 ---
 title: "Confirm domain name requirements"
 titleSuffix: "Configuration Manager"
-description: "Confirm domain name requirements using System Center Configuration Manager."
+description: "Confirm domain name requirements using Configuration Manager."
 ms.date: 03/21/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Confirm domain name requirements with System Center Configuration Manager and Microsoft Intune
+# Confirm domain name requirements with Configuration Manager and Microsoft Intune
 
 *Applies to: Configuration Manager (current branch)*
 

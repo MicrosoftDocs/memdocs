@@ -215,7 +215,7 @@ Before you can manage a Linux or UNIX server with Configuration Manager, you mus
 
  After you install the client, you can't change its request port configuration. Instead, to change the port configuration you must reinstall the client and specify the new port configuration. When you reinstall the client to change the request port numbers, run the **install** command similar to the new client install, but use the additional command-line property of **-keepdb**. This switch instructs the installation to keep the client database and files including the clients GUID and certificate store.  
 
- For more information about client communication port numbers, see [How to configure client communication ports in System Center Configuration Manager](../../../core/clients/deploy/configure-client-communication-ports.md).  
+ For more information about client communication port numbers, see [How to configure client communication ports](../../../core/clients/deploy/configure-client-communication-ports.md).  
 
 ##  <a name="BKMK_ConfigClientMP"></a> Configure the Client for Linux and UNIX to Locate Management Points  
  When you install the Configuration Manager client for Linux and UNIX, you must specify a management point to use as an initial point of contact.  

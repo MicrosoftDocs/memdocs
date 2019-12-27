@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Application Configuration Item Example 2
-In System Center Configuration Manager, the following Application Configuration Item Instance example determines whether Notepad.exe is installed.  
+In Configuration Manager, the following Application Configuration Item Instance example determines whether Notepad.exe is installed.  
 
 ## Application Configuration Item Example  
 

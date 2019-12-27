@@ -592,7 +592,7 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Name of the policy that gets applied, such as ‘Antimalware Policy’.  
 
- This method/property has been removed or deprecated in System Center Configuration Manager SP1.  
+ This method/property has been removed or deprecated in Configuration Manager SP1.  
 
  `EPProductStatus`  
  Data type: `UInt32`  

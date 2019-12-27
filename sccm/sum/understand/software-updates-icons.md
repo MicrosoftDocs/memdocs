@@ -12,7 +12,7 @@ author: mestew
 ms.author: mstewart
 ms.collection: M365-identity-device-management
 ---
-# Icons used for software updates in System Center Configuration Manager
+# Icons used for software updates in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 

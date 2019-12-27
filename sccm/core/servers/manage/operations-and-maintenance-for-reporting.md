@@ -1,7 +1,7 @@
 ---
 title: "Operations and maintenance for reporting "
 titleSuffix: "Configuration Manager"
-description: "Learn the details of managing reports and report subscriptions in System Center Configuration Manager."
+description: "Learn the details of managing reports and report subscriptions in Configuration Manager."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,11 +12,11 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Operations and maintenance for reporting in System Center Configuration Manager
+# Operations and maintenance for reporting in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-After the infrastructure is in place for reporting in System Center Configuration Manager, there are a number of operations that you typically perform to manage reports and report subscriptions.  
+After the infrastructure is in place for reporting in Configuration Manager, there are a number of operations that you typically perform to manage reports and report subscriptions.  
 
 ##  <a name="BKMK_ManageReports"></a> Manage Configuration Manager reports  
  Configuration Manager provides over 400 predefined reports that help you gather, organize, and present information about users, hardware and software inventory, software updates, applications, site status, and other Configuration Manager operations in your organization. You can use the predefined reports as they are, or you can modify a report to meet your requirements. You can also create custom model\-based and SQL\-based reports to meet your requirements. Use the following sections to help you manage Configuration Manager reports.  
@@ -110,7 +110,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 4.  In Report Builder, modify the appropriate report settings, and then click **Save** to save the report to the report server.  
 
 ###  <a name="BKMK_CreateModelBasedReport"></a> Create a model\-based report  
- A model\-based report lets you interactively select the items you want to include in your report. For more information about creating custom report models, see [Creating custom report models for System Center Configuration Manager in SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).  
+ A model\-based report lets you interactively select the items you want to include in your report. For more information about creating custom report models, see [Creating custom report models for Configuration Manager in SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).  
 
 > [!IMPORTANT]  
 >  The user account must have **Site Modify** permission to create a new report. The user can only create a report in folders for which the user has **Modify Report** permissions.  

@@ -1,7 +1,7 @@
 ---
 title: "Managing compliance on devices managed with Intune"
 titleSuffix: "Configuration Manager"
-description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
+description: "Learn about Configuration Manager compliance settings by working through some common scenarios."
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -16,7 +16,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: Configuration Manager (current branch)*
 
-These scenarios give you an introduction to using System Center Configuration Manager compliance settings by working through some common scenarios you might encounter.  
+These scenarios give you an introduction to using Configuration Manager compliance settings by working through some common scenarios you might encounter.  
 
  If you are already familiar with compliance settings, detailed documentation about all the features you use can be found in the [Configuration items for devices managed with Intune](#configuration-items-for-devices-managed-with-intune) section.  
 
@@ -69,7 +69,7 @@ These scenarios give you an introduction to using System Center Configuration Ma
 
 6. Complete the wizard to create the configuration item.  
 
-   You can now use the information in the [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
+   You can now use the information in the [Common tasks for creating and deploying configuration baselines with Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
 
 ## Scenarios for iOS and Mac OS X devices managed with Intune  
 
@@ -88,7 +88,7 @@ These scenarios give you an introduction to using System Center Configuration Ma
 
 6. Complete the wizard to create the configuration item.  
 
-   You can now use the information in the [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
+   You can now use the information in the [Common tasks for creating and deploying configuration baselines with Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
 
 ## Scenarios for Android and Samsung KNOX Standard devices managed with Intune  
 
@@ -115,7 +115,7 @@ These scenarios give you an introduction to using System Center Configuration Ma
 
 ## Configuration items for devices managed with Intune
 
-The following System Center Configuration Manager configuration item types are available for devices that are not managed by the Configuration Manager client, for example, devices that are enrolled with Microsoft Intune.  
+The following Configuration Manager configuration item types are available for devices that are not managed by the Configuration Manager client, for example, devices that are enrolled with Microsoft Intune.  
 
 -   [How to create configuration items for Windows 8.1 and Windows 10 devices managed with Intune](create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)  
 

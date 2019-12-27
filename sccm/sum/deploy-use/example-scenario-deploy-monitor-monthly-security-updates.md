@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: Configuration Manager (current branch)*
 
-This topic provides an example scenario of how you can use software updates in System Center Configuration Manager to deploy and monitor the security software updates that Microsoft releases monthly.  
+This topic provides an example scenario of how you can use software updates in Configuration Manager to deploy and monitor the security software updates that Microsoft releases monthly.  
 
  In this scenario, we follow the actions of the Configuration Manager administrator at Woodgrove Bank. The administrator needs to create a software update deployment strategy with the following conditions and requirements:  
 
@@ -42,7 +42,7 @@ This topic provides an example scenario of how you can use software updates in S
 
 |Process|Reference|  
 |-------------|---------------|  
-|From the **All Software Updates** node in the Configuration Manager console, the System Center Configuration Manager administrator adds criteria to display only security software updates that are released or revised in year 2015 that meet the following criteria:<br /><br /><ul><li>**Criteria**: Date Released or Revised</li><li>**Condition**: is greater than or equal to specific date<br />**Value**: 1/1/2015</li><li>**Criteria**: Update Classification<br />**Value**: Security Updates</li><li>**Criteria**: Expired <br />**Value**: No</li></ul>|No additional information|
+|From the **All Software Updates** node in the Configuration Manager console, the Configuration Manager administrator adds criteria to display only security software updates that are released or revised in year 2015 that meet the following criteria:<br /><br /><ul><li>**Criteria**: Date Released or Revised</li><li>**Condition**: is greater than or equal to specific date<br />**Value**: 1/1/2015</li><li>**Criteria**: Update Classification<br />**Value**: Security Updates</li><li>**Criteria**: Expired <br />**Value**: No</li></ul>|No additional information|
 |ConfigMgr Administrator adds all of the filtered software updates to a new software update group with the following requirements:<br /><br /><ul><li>**Name**: Compliance Group - Microsoft Security Updates 2015</li><li>**Description**: Software updates|[Add software updates to an update group](add-software-updates-to-an-update-group.md)|  
 
 ##  <a name="BKMK_Step2"></a> Step 2: Create an automatic deployment rule for the current month  
@@ -73,7 +73,7 @@ This topic provides an example scenario of how you can use software updates in S
 
 |Process|Reference|  
 |-------------|---------------|  
-|The ConfigMgr Admin monitors the software updates deployment status in the Configuration Manager console and checks the software update deployment reports available from the console.|[Monitor software updates in System Center Configuration Manager](../../sum/deploy-use/monitor-software-updates.md)|  
+|The ConfigMgr Admin monitors the software updates deployment status in the Configuration Manager console and checks the software update deployment reports available from the console.|[Monitor software updates](../../sum/deploy-use/monitor-software-updates.md)|  
 
 ##  <a name="BKMK_Step6"></a> Step 6: Add monthly software updates to the yearly update group  
  The ConfigMgr Admin adds the software updates from the monthly software update group to the yearly software update group. The admin performs the step in the following table.  

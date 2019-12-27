@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # DeleteAllMembers Method in Class SMS_Collection
-The `DeleteAllMembers` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, deletes all members, that is, resources and discovery data, for the collection.  
+The `DeleteAllMembers` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes all members, that is, resources and discovery data, for the collection.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

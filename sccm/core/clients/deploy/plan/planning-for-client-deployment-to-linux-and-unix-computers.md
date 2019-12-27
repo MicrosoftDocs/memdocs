@@ -38,7 +38,7 @@ You can install the Configuration Manager client on computers that run Linux or 
 >   -   Client status client check and remediation  
 >   -   Internet-based client management  
 
- For information about the supported Linux and UNIX distributions and the hardware required to support the client for Linux and UNIX, see [Recommended hardware for System Center Configuration Manager](../../../../core/plan-design/configs/recommended-hardware.md).  
+ For information about the supported Linux and UNIX distributions and the hardware required to support the client for Linux and UNIX, see [Recommended hardware for Configuration Manager](../../../../core/plan-design/configs/recommended-hardware.md).  
 
  Use the information in this article to help you plan to deploy the Configuration Manager client for Linux and UNIX.  
 
@@ -179,7 +179,7 @@ You can install the Configuration Manager client on computers that run Linux or 
 |SysMgmtMin.openssl|OpenSSL Libraries; Secure Network Communications Protocol|A.00.09.08d.002|  
 |PAM|Pluggable Authentication Modules|On HP-UX, PAM is part of the core operating system components. There are no other dependencies.|  
 
- **Configuration Manager Dependencies:** The following table lists site system roles that support Linux and UNIX clients. For more information about these site system roles, see [Determine the site system roles for System Center Configuration Manager clients](../../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md).  
+ **Configuration Manager Dependencies:** The following table lists site system roles that support Linux and UNIX clients. For more information about these site system roles, see [Determine the site system roles for Configuration Manager clients](../../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md).  
 
 |Configuration Manager site system|More information|  
 |---------------------------------------|----------------------|  

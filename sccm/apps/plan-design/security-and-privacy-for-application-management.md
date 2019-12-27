@@ -191,7 +191,7 @@ Application management lets you run any application, program, or script on any c
 
 Configuration Manager maintains status information about the software deployment process. Software deployment status information isn't encrypted during transmission unless the client communicates by using HTTPS. The status information isn't stored in encrypted form in the database.  
 
-The use of Configuration Manager application installation to remotely, interactively, or silently install software on clients might be subject to software license terms for that software. This use is separate from the Software License Terms for System Center Configuration Manager. Always review and agree to the Software Licensing Terms before you deploy software by using Configuration Manager.  
+The use of Configuration Manager application installation to remotely, interactively, or silently install software on clients might be subject to software license terms for that software. This use is separate from the Software License Terms for Configuration Manager. Always review and agree to the Software Licensing Terms before you deploy software by using Configuration Manager.  
 
 Configuration Manager collects diagnostics and usage data about applications, which is used by Microsoft to improve future releases. For more information, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).
 

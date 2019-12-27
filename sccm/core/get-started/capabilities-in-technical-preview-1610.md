@@ -1,7 +1,7 @@
 ---
 title: "Capabilities in Technical Preview 1610"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1610."
+description: "Learn about features available in the Technical Preview for Configuration Manager, version 1610."
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -13,13 +13,13 @@ manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
-# Capabilities in Technical Preview 1610 for System Center Configuration Manager
+# Capabilities in Technical Preview 1610 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
 
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1610. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1610. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
 
 
 **The following are new features you can try out with this version.**  
@@ -82,7 +82,7 @@ So long as a collection is configured to be excluded, members of that collection
 
   If you attempt to manually upgrade a client that is a member of the excluded collection and do not use this switch, the client will not install the new client software. For more information see [How to install Configuration Manager Clients Manually](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual).
 
-For more information on client installation methods, see [How to deploy clients to Windows computers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
+For more information on client installation methods, see [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
 
 ## Windows Defender configuration settings
 
@@ -157,4 +157,4 @@ Read-only access to these areas of the Configuration Manager console is still gr
 You can now require Windows 10 devices enrolled in Azure Active Directory to be compliant in order to have VPN access through Windows 10 VPN profiles created in the Configuration Manager console. This is possible through the new **Enable conditional access for this VPN connection** checkbox on the **Authentication Method** page in the VPN profile wizard and VPN profile properties for Windows 10 VPN profiles. You can also specify a separate certificate for single sign-on authentication if you enable conditional access for the profile.
 
 ## See Also
-[Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md)
+[Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md)

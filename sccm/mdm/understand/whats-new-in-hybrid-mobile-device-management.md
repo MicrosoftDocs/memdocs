@@ -22,7 +22,7 @@ ms.collection: M365-identity-device-management
 >
 > Important information regarding hybrid mobile device management (MDM) will continue to be added to the [Office 365 Message Center](https://go.microsoft.com/fwlink/?linkid=2070717) and the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess) until the service is retired on September 1, 2019. <!--Intune feature 2683117-->  
 
-This article provides details on the new mobile device management (MDM) features available for hybrid deployments with System Center Configuration Manager and Microsoft Intune. 
+This article provides details on the new mobile device management (MDM) features available for hybrid deployments with Configuration Manager and Microsoft Intune. 
 
 > [!Note]  
 > Intune on Azure is Microsoft's recommended MDM solution.
@@ -594,7 +594,7 @@ Using Azure Active Directory (Azure AD), you can now restrict access to web site
 ### New in Microsoft Intune
 
 - **Available application deployments now supported for Android Enterprise**    
-  You can now deploy Android Enterprise (formerly Android for Work) apps as **Available**, in addition to **Required**. For details, see [Create Android applications with System Center Configuration Manager](/sccm/mdm/deploy-use/creating-android-applications).
+  You can now deploy Android Enterprise (formerly Android for Work) apps as **Available**, in addition to **Required**. For details, see [Create Android applications with Configuration Manager](/sccm/mdm/deploy-use/creating-android-applications).
 
 
 

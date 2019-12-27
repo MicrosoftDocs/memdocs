@@ -1,7 +1,7 @@
 ---
 title: "Manage user state "
 titleSuffix: "Configuration Manager"
-description: "System Center Configuration Manager uses the User State Migration Tool to capture and restore user state data in operating system deployment scenarios."
+description: "Configuration Manager uses the User State Migration Tool to capture and restore user state data in operating system deployment scenarios."
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Manage user state in System Center Configuration Manager
+# Manage user state in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-You can use System Center Configuration Manager task sequences to capture and restore the user state data in operating system deployment scenarios where you want to retain the user state of the current operating system. For example:  
+You can use Configuration Manager task sequences to capture and restore the user state data in operating system deployment scenarios where you want to retain the user state of the current operating system. For example:  
 
 - Deployments where you want to capture the user state from one computer to restore it on another computer.  
 
@@ -51,7 +51,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 
 2.  [Create a computer association](#BKMK_ComputerAssociation) between the source computer and the destination computer. You must create this association before you capture the user state on the source computer.  
 
-3.  [Create a task sequence to capture and restore user state in System Center Configuration Manager](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md). Specifically, you must add the following task sequence steps to capture user data from a computer, store the user date on a state migration point, and restore the user data to a computer:  
+3.  [Create a task sequence to capture and restore user state](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md). Specifically, you must add the following task sequence steps to capture user data from a computer, store the user date on a state migration point, and restore the user data to a computer:  
 
     -   [Request State Store](../understand/task-sequence-steps.md#BKMK_RequestStateStore) to request access to a state migration point when capturing state from a computer or restoring state to a computer.  
 

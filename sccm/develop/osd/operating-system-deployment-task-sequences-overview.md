@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Operating System Deployment Task Sequences Overview
-In System Center Configuration Manager, a task sequence is a series of one or more task steps that can be advertised to Configuration Manager clients to run user-specified actions. Task sequences are used with operating system deployment to build source computers, capture an operating system image, migrate user and computer settings, and deploy an image to a collection of target computers. Task sequences can also be used to run other Configuration Manager actions, such as deploying Configuration Manager software packages or running custom command lines.  
+In Configuration Manager, a task sequence is a series of one or more task steps that can be advertised to Configuration Manager clients to run user-specified actions. Task sequences are used with operating system deployment to build source computers, capture an operating system image, migrate user and computer settings, and deploy an image to a collection of target computers. Task sequences can also be used to run other Configuration Manager actions, such as deploying Configuration Manager software packages or running custom command lines.  
 
  Configuration Manager provides a rich Windows Management Instrumentation (WMI) object model for creating and editing task sequences. For more information, see [Operating System Deployment Task Sequence Object Model](../../develop/osd/operating-system-deployment-task-sequence-object-model.md).  
 
@@ -28,7 +28,7 @@ In System Center Configuration Manager, a task sequence is a series of one or mo
  There is also a command-line action that the administrator can use for running scripts or executable files on the Configuration Manager client computer.  
 
 ### Custom Actions  
- An action that you create yourself is a custom action. You can create custom actions that call a process or script that you define in a Managed Object Format (MOF) file. You can also create a control that integrates the custom action you create into the task sequence editor. This allows the administrator to change custom action properties in the same way that the System Center Configuration Manager supplied actions are changed. Typically, you create these custom actions when the built-in actions do not satisfy your requirements for an action. For more information about creating custom actions, see [About Configuration Manager Custom Actions](../../develop/osd/about-configuration-manager-custom-actions.md).  
+ An action that you create yourself is a custom action. You can create custom actions that call a process or script that you define in a Managed Object Format (MOF) file. You can also create a control that integrates the custom action you create into the task sequence editor. This allows the administrator to change custom action properties in the same way that the Configuration Manager supplied actions are changed. Typically, you create these custom actions when the built-in actions do not satisfy your requirements for an action. For more information about creating custom actions, see [About Configuration Manager Custom Actions](../../develop/osd/about-configuration-manager-custom-actions.md).  
 
 ## Running Task Sequences  
  To run a task sequence, you must perform the following:  
