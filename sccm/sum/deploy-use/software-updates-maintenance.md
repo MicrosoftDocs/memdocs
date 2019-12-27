@@ -29,7 +29,7 @@ Schedule the WSUS cleanup job by running the following steps:
 
 4. Review the **Supersedence behavior**. Modify the behavior if needed.
 
-   ![supersedence behavior screenshot](media/sccm-supersedence-behavior.PNG)
+   ![supersedence behavior screenshot](media/supersedence-behavior.png)
 
 5. Click the **Supersedence Rules** tab, select **Run WSUS cleanup wizard**. In version 1806, the option is renamed to **Run WSUS cleanup after synchronization**.
 
