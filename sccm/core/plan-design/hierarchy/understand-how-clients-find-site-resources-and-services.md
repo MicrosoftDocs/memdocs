@@ -1,7 +1,7 @@
 ---
 title: "Find site resources"
 titleSuffix: "Configuration Manager"
-description: "Learn how and when System Center Configuration Manager clients use service location to find site resources."
+description: "Learn how and when Configuration Manager clients use service location to find site resources."
 ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Learn how clients find site resources and services for System Center Configuration Manager
+# Learn how clients find site resources and services for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-System Center Configuration Manager clients use a process called *service location* to locate site system servers that they can communicate with, and that  provide  services that clients are directed to use. Understanding how and when clients use service location to find site resources can help you configure your sites to successfully support client tasks. These configurations can require the site to interact with domain and network configurations like Active Directory Domain Services (AD DS) and DNS. Or they can require you to configure more complex alternatives.  
+Configuration Manager clients use a process called *service location* to locate site system servers that they can communicate with, and that  provide  services that clients are directed to use. Understanding how and when clients use service location to find site resources can help you configure your sites to successfully support client tasks. These configurations can require the site to interact with domain and network configurations like Active Directory Domain Services (AD DS) and DNS. Or they can require you to configure more complex alternatives.  
 
 Examples of site system roles that provide services include:
 
@@ -43,9 +43,9 @@ Examples of site system roles that provide services include:
 
 **When a client is attempting to find servers that host site system roles**, it uses service location to find a site system role that supports the client's protocol (HTTP or HTTPS). By default, clients use the most secure method available to them. Consider the following:  
 
-- To use HTTPS, you must have a public key infrastructure (PKI) and install PKI certificates on clients and servers. For information about how to use certificates, see [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
+- To use HTTPS, you must have a public key infrastructure (PKI) and install PKI certificates on clients and servers. For information about how to use certificates, see [PKI certificate requirements for Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
 
-- When you deploy a site system role that uses Internet Information Services (IIS) and supports communication from clients, you must specify whether clients connect to the site system by using HTTP or HTTPS. If you use HTTP, you must also consider signing and encryption choices. For more information, see  [Planning for Signing and Encryption](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) in the [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
+- When you deploy a site system role that uses Internet Information Services (IIS) and supports communication from clients, you must specify whether clients connect to the site system by using HTTP or HTTPS. If you use HTTP, you must also consider signing and encryption choices. For more information, see  [Planning for Signing and Encryption](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) in the [Plan for security](../../../core/plan-design/security/plan-for-security.md).  
 
 ##  <a name="BKMK_Plan_Service_Location"></a> Service location and how clients determine their assigned management point  
 When a client is first assigned to a primary site, it selects a default management point for that site. Primary sites support multiple management points, and each client independently identifies a management point as its default management point. This default management point then becomes that client's assigned management point. (You can also use client installation commands to set the assigned management point for a client when it's installed.)  
@@ -152,7 +152,7 @@ When a site publishes service location records for management points to DNS:
 
 By default, domain-joined clients search DNS for management point records from the client's local domain. You can configure a client property that specifies a domain suffix for a domain that has management point information published to DNS.  
 
-For more information about how to configure the DNS suffix client property, see [How to configure client computers to find management points by using DNS publishing in System Center Configuration Manager](../../../core/clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md).  
+For more information about how to configure the DNS suffix client property, see [How to configure client computers to find management points by using DNS publishing](../../../core/clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md).  
 
 If a client cannot find a management point to use for service location from DNS, it attempts to use WINS.  
 
@@ -165,7 +165,7 @@ To publish management points to DNS, the following two conditions must be true:
 > [!IMPORTANT]  
 > Configuration Manager DNS publishing does not support a disjoint namespace. If you have a disjoint namespace, you can manually publish management points to DNS or use one of the other service location methods that are documented in this section.  
 
-**When your DNS servers support automatic updates**, you can configure Configuration Manager to automatically publish management points on the intranet to DNS, or you can manually publish these records to DNS. When management points are published to DNS, their intranet FQDN and port number are published in the service location (SRV) record. You configure DNS publishing at a site in the site's Management Point Component Properties. For more information, see  [Site components for System Center Configuration Manager](../../../core/servers/deploy/configure/site-components.md).  
+**When your DNS servers support automatic updates**, you can configure Configuration Manager to automatically publish management points on the intranet to DNS, or you can manually publish these records to DNS. When management points are published to DNS, their intranet FQDN and port number are published in the service location (SRV) record. You configure DNS publishing at a site in the site's Management Point Component Properties. For more information, see  [Site components for Configuration Manager](../../../core/servers/deploy/configure/site-components.md).  
 
 **When your DNS zone is set to “Secure only” for dynamic updates**, only the first management point to publish to DNS can do so successfully with default permissions.
 

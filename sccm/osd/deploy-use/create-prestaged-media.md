@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Create prestaged media
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Prestaged media in Configuration Manager is a Windows Image (WIM) file. It can be installed on a bare-metal computer by the manufacturer or at your staging center that's not connected to the production Configuration Manager environment. Prestaged media contains the boot image used to start the destination computer and the OS image that's applied to the destination computer. You can also specify applications, packages, and driver packages to include as part of the prestaged media. The task sequence that deploys the OS isn't included in the media. Prestaged media is applied to the hard drive of a new computer before the computer is sent to the end user.
 

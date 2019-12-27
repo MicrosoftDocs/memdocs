@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Read a WMI Object by Using System.Management
-To read a Configuration Manager client Windows Management Instrumentation (WMI) object, in System Center Configuration Manager, you use a `ManagementObject` object to read the WMI object.  
+To read a Configuration Manager client Windows Management Instrumentation (WMI) object, in Configuration Manager, you use a `ManagementObject` object to read the WMI object.  
 
 ### To read a WMI object  
 

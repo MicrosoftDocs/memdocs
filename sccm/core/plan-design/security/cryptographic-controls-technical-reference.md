@@ -1,7 +1,7 @@
 ---
 title: "Cryptographic controls technical reference"
 titleSuffix: "Configuration Manager"
-description: "Learn how signing and encryption can help protect attacks from reading data in System Center Configuration Manager."
+description: "Learn how signing and encryption can help protect attacks from reading data in Configuration Manager."
 ms.date: 12/08/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -13,10 +13,10 @@ ms.collection: M365-identity-device-management
 ---
 # Cryptographic controls technical reference
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
-System Center Configuration Manager uses signing and encryption to help protect the management of the devices in the Configuration Manager hierarchy. With signing, if data has been altered in transit, it's discarded. Encryption helps prevent an attacker from reading the data by using a network protocol analyzer.  
+Configuration Manager uses signing and encryption to help protect the management of the devices in the Configuration Manager hierarchy. With signing, if data has been altered in transit, it's discarded. Encryption helps prevent an attacker from reading the data by using a network protocol analyzer.  
 
  The primary hashing algorithm that Configuration Manager uses for signing is SHA-256. When two Configuration Manager sites communicate with each other, they sign their communications with SHA-256. The primary encryption algorithm implemented in Configuration Manager is 3DES. This is used for storing data in the Configuration Manager database and for client HTTP communication. When you use client communication over HTTPS, you can configure your public key infrastructure (PKI) to use RSA certificates with the maximum hashing algorithms and key lengths that are documented in [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
 

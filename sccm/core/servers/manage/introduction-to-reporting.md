@@ -12,11 +12,11 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Introduction to reporting in System Center Configuration Manager
+# Introduction to reporting in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Reporting in System Center Configuration Manager provides a set of tools and resources that help you use the advanced reporting capabilities of SQL Server Reporting Services (SSRS) and the rich authoring experience that Reporting Services Report Builder provides. Reporting helps you gather, organize, and present information about users, hardware and software inventory, software updates, applications, site status, and other Configuration Manager operations in your organization. Reporting provides you with a number of predefined reports that you can use without changes, or that you can modify to meet your requirements, and you can create custom reports. Use the following sections to help you manage reporting in Configuration Manager.  
+Reporting in Configuration Manager provides a set of tools and resources that help you use the advanced reporting capabilities of SQL Server Reporting Services (SSRS) and the rich authoring experience that Reporting Services Report Builder provides. Reporting helps you gather, organize, and present information about users, hardware and software inventory, software updates, applications, site status, and other Configuration Manager operations in your organization. Reporting provides you with a number of predefined reports that you can use without changes, or that you can modify to meet your requirements, and you can create custom reports. Use the following sections to help you manage reporting in Configuration Manager.  
 
 ##  <a name="BKMK_SQLServerReportingServices"></a> SQL Server Reporting Services  
  SQL Server Reporting Services provides a full range of ready-to-use tools and services to help you create, deploy, and manage reports for your organization and programming features that enable you to extend and customize your reporting functionality. Reporting Services is a server-based reporting platform that provides comprehensive reporting functionality for a variety of data sources.  
@@ -38,15 +38,15 @@ Reporting in System Center Configuration Manager provides a set of tools and res
 ##  <a name="BKMK_ReportingServicesPoint"></a> Reporting Services Point  
  The reporting services point is a site system role that is installed on a server that is running Microsoft SQL Server Reporting Services. The reporting services point copies the Configuration Manager report definitions to Reporting Services, creates report folders based on report categories, and sets security policy on the report folders and reports based on the role-based permissions for Configuration Manager administrative users. In a 10-minute interval, the reporting services point connects to Reporting Services to reapply the security policy if it has been changed, for example, by using Report Manager. For more information about how to plan for and install a reporting services point, see the following documentation:  
 
--   [Planning for reporting in System Center Configuration Manager](planning-for-reporting.md)  
+-   [Planning for reporting](planning-for-reporting.md)  
 
--   [Configuring reporting in System Center Configuration Manager](configuring-reporting.md)  
+-   [Configuring reporting](configuring-reporting.md)  
 
 ##  <a name="BKMK_ConfigurationManagerReports"></a> Configuration Manager reports  
  Configuration Manager provides report definitions for over 400 reports in over 50 report folders, which are copied to the root report folder in SQL Server Reporting Services during the reporting services point installation process. The reports are displayed in the Configuration Manager console and organized in subfolders based on the report category. Reports are not propagated up or down the Configuration Manager hierarchy; they run only against the database of the site in which they are created. However, because Configuration Manager replicates global data throughout the hierarchy, you have access to hierarchy-wide information. When a report retrieves data from a site database, it has access to site data for the current site and child sites, and global data for every site in the hierarchy. Like other Configuration Manager objects, an administrative user must have the appropriate permissions to run or modify reports. To run a report, an administrative user must have the **Run Report** permission for the object. To create or modify a report, an administrative user must have the **Modify Report** permission for the object.  
 
 ###  <a name="BKMK_CreatingReports"></a> Creating and modifying reports  
- Configuration Manager uses Microsoft SQL Server Report Builder as the exclusive authoring and editing tool for model-based and SQL-based reports. When you create or edit a report in the Configuration Manager console, Report Builder opens. For more information about managing reports, see the [Operations and maintenance for reporting in System Center Configuration Manager](operations-and-maintenance-for-reporting.md).  
+ Configuration Manager uses Microsoft SQL Server Report Builder as the exclusive authoring and editing tool for model-based and SQL-based reports. When you create or edit a report in the Configuration Manager console, Report Builder opens. For more information about managing reports, see the [Operations and maintenance for reporting](operations-and-maintenance-for-reporting.md).  
 
 ###  <a name="BKMK_RunningReports"></a> Running reports  
  When you run a report in the Configuration Manager console, Report Viewer opens and connects to Reporting Services. After you specify any required report parameters, Reporting Services then retrieves the data and displays the results in the viewer. You can also connect to the SQL Services Reporting Services, connect to the data source for the site, and run reports.  
@@ -63,12 +63,12 @@ Reporting in System Center Configuration Manager provides a set of tools and res
 >  If you move a destination report to a different report folder, the location for the destination report changes. The report link in the source report is not automatically updated with the new location, and the report link will not work in the source report.  
 
 ##  <a name="BKMK_ReportFolders"></a> Report folders  
- Report folders in System Center Configuration Manager provide a method to sort and filter reports that are stored in Reporting Services. Report folders are particularly useful when you have many reports to manage. When you install a reporting services point, reports are copied to Reporting Services and organized into more than 50 report folders. The report folders are read-only. You cannot modify them in the Configuration Manager console.  
+ Report folders in Configuration Manager provide a method to sort and filter reports that are stored in Reporting Services. Report folders are particularly useful when you have many reports to manage. When you install a reporting services point, reports are copied to Reporting Services and organized into more than 50 report folders. The report folders are read-only. You cannot modify them in the Configuration Manager console.  
 
 ##  <a name="BKMK_ReportSubscriptions"></a> Report subscriptions  
  A report subscription in Reporting Services is a recurring request to deliver a report at a specific time or in response to an event, and in an application file format that you specify in the subscription. Subscriptions provide an alternative to running a report on demand. On-demand reporting requires that you actively select the report each time you want to view the report. In contrast, subscriptions can be used to schedule and then automate the delivery of a report.  
 
- You can manage report subscriptions in the Configuration Manager console. They are processed on the report server. The subscriptions are distributed by using delivery extensions that are deployed on the server. By default, you can create subscriptions that send reports to a shared folder or to an email address. For more information about managing report subscriptions, see [Operations and maintenance for reporting in System Center Configuration Manager](operations-and-maintenance-for-reporting.md).  
+ You can manage report subscriptions in the Configuration Manager console. They are processed on the report server. The subscriptions are distributed by using delivery extensions that are deployed on the server. By default, you can create subscriptions that send reports to a shared folder or to an email address. For more information about managing report subscriptions, see [Operations and maintenance for reporting](operations-and-maintenance-for-reporting.md).  
 
 ##  <a name="BKMK_ReportBuilder"></a> Report Builder  
  Configuration Manager uses Microsoft SQL Server Reporting Services Report Builder as the exclusive authoring and editing tool for both model-based and SQL-based reports. When you initiate the action to create or edit a report in the Configuration Manager console, Report Builder opens. When you create or modify a report for the first time, Report Builder is installed automatically. The version of Report Builder associated with the installed version of SQL Server opens when you run or edit reports.  
@@ -98,7 +98,7 @@ Reporting in System Center Configuration Manager provides a set of tools and res
 
 - You can secure model elements so that administrative users can see only the data that they have permission to see.  
 
-  Although Configuration Manager provides sample report models, you can also define report models to meet your own business requirements. For more information about how to create report models, see [Creating custom report models for System Center Configuration Manager in SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).  
+  Although Configuration Manager provides sample report models, you can also define report models to meet your own business requirements. For more information about how to create report models, see [Creating custom report models for Configuration Manager in SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).  
 
 ## Next steps
 [Planning for reporting](planning-for-reporting.md)

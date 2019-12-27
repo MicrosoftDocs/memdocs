@@ -11,9 +11,9 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client
+# How to create configuration items for Windows Phone devices managed without the Configuration Manager client
 
-Use the System Center Configuration Manager**Windows Phone** configuration item to manage settings  for Windows Phone devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
+Use the Configuration Manager**Windows Phone** configuration item to manage settings  for Windows Phone devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
   
 ## Create a Windows Phone configuration item  
   
@@ -295,4 +295,4 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
 |**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
   
 ## See Also  
- [Configuration items for devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)
+ [Configuration items for devices managed without the Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

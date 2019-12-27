@@ -265,7 +265,7 @@ Class SMS_ConfigurationPolicyAssignment : SMS_CIAssignmentBaseClass
 
  Qualifiers: [not_null, obsoleted]  
 
- This method/property has been removed or deprecated in System Center Configuration Manager SP1.  
+ This method/property has been removed or deprecated in Configuration Manager SP1.  
 
  `LocaleID`  
  Data type: `UInt32`  

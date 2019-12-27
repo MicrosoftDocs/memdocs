@@ -1,7 +1,7 @@
 ---
 title: "Test client upgrades pre-production collection"
 titleSuffix: "Configuration Manager"
-description: "Test client upgrades in a pre-production collection in System Center Configuration Manager."
+description: "Test client upgrades in a pre-production collection in Configuration Manager."
 ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,9 +12,9 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to test client upgrades in a pre-production collection in System Center Configuration Manager
+# How to test client upgrades in a pre-production collection in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can test a new Configuration Manager client version in a pre-production collection before upgrading the rest of the site with it.  When you do this, only devices that are part of the test collection are upgraded. Once you've had a chance to test the client you can promote the client, which makes the new version of the client software available to the rest of the site.
 
@@ -53,13 +53,13 @@ You can test a new Configuration Manager client version in a pre-production coll
 
 1.  In the Configuration Manager console,  open **Administration** > **Updates and Servicing**, select an **Available** update, and then choose **Install Update Pack**. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.)
 
-     For more information on installing updates, see [Updates for System Center Configuration Manager](../../../../core/servers/manage/updates.md)  
+     For more information on installing updates, see [Updates for Configuration Manager](../../../../core/servers/manage/updates.md)  
 
 2.  During installation of the update, on the **Client Options** page of the wizard, select **Test in pre-production collection**.  
 
 3.  Complete the rest of the wizard and install the update pack.  
 
-     After the wizard complete, clients in the pre-production collection will begin to deploy the updated client. You can monitor the deployment of upgraded clients by going to **Monitoring** > **Client Status** > **Pre-production Client Deployment**. For more information, see [How to monitor client deployment status in System Center Configuration Manager](../../../../core/clients/deploy/monitor-client-deployment-status.md).
+     After the wizard complete, clients in the pre-production collection will begin to deploy the updated client. You can monitor the deployment of upgraded clients by going to **Monitoring** > **Client Status** > **Pre-production Client Deployment**. For more information, see [How to monitor client deployment status](../../../../core/clients/deploy/monitor-client-deployment-status.md).
 
     > [!NOTE]
     > The deployment status on computers hosting site system roles in a pre-production collection may be reported as **Not compliant** even when the client was successfully deployed. When you promote the client to production, the deployment status is reported correctly.
@@ -73,7 +73,7 @@ You can test a new Configuration Manager client version in a pre-production coll
 
 2.  Review the client versions in production and pre-production, make sure the correct the pre-production collection is specified, and then  click **Promote**, then **Yes**.  
 
-3.  After the dialog box closes, the updated client version will replace the client version in use in your hierarchy. You can then upgrade the clients for your whole site. See [How to upgrade clients for Windows computers in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md) for more information.  
+3.  After the dialog box closes, the updated client version will replace the client version in use in your hierarchy. You can then upgrade the clients for your whole site. See [How to upgrade clients for Windows computers](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md) for more information.  
 
 >[!NOTE]
 >To enable the pre-production client, or to promote a pre-production client to a production client, your account must be a member of a security role that has **Read** and **Modify** permissions for the **Update Packages** object.

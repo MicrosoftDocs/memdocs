@@ -1,7 +1,7 @@
 ---
 title: "Configure hardware inventory for mobile devices"
 titleSuffix: "Configuration Manager"
-description: "Configure hardware inventory for mobile devices enrolled by Microsoft Intune and System Center Configuration Manager."
+description: "Configure hardware inventory for mobile devices enrolled by Microsoft Intune and Configuration Manager."
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to configure hardware inventory for mobile devices enrolled by Microsoft Intune and System Center Configuration Manager
+# How to configure hardware inventory for mobile devices enrolled by Microsoft Intune and Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-In Configuration Manager, you can collect the hardware inventory on iOS, Android, and Windows devices by using the Microsoft Intune connector. For information about how to configure hardware inventory, see [How to extend hardware inventory in System Center Configuration Manager](../../core/clients/manage/inventory/extend-hardware-inventory.md).  
+In Configuration Manager, you can collect the hardware inventory on iOS, Android, and Windows devices by using the Microsoft Intune connector. For information about how to configure hardware inventory, see [How to extend hardware inventory](../../core/clients/manage/inventory/extend-hardware-inventory.md).  
 
  For information about how to enroll devices in Microsoft Intune, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/library/dn646962.aspx).  
 

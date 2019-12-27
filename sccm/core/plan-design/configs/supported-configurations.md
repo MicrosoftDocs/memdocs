@@ -1,7 +1,7 @@
 ---
 title: "Supported configurations"
 titleSuffix: "Configuration Manager"
-description: "Identify key configurations and requirements so you can plan, deploy, and maintain a functional System Center Configuration Manager deployment."
+description: "Identify key configurations and requirements so you can plan, deploy, and maintain a functional Configuration Manager deployment."
 ms.date: 10/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,11 +12,11 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Supported configurations for System Center Configuration Manager
+# Supported configurations for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-As an on-premises solution, System Center Configuration Manager makes use of your servers, clients, network configurations, and additional products like Microsoft Intune, SQL Server, and Azure.
+As an on-premises solution, Configuration Manager makes use of your servers, clients, network configurations, and additional products like Microsoft Intune, SQL Server, and Azure.
 
 The information in this and the following topics is essential for helping you identify key configurations, requirements, and limitations, so that you can plan, deploy, and maintain a functional Configuration Manager deployment.  This information is specific to the infrastructure for Configuration Manager sites, hierarchies, and managed devices.
 
@@ -27,7 +27,7 @@ When a Configuration Manager feature or capability requires more specific config
 > [!NOTE]  
 >  For information about Microsoft support lifecycle policy, go to the Microsoft Support Lifecycle Support Policy FAQ website at [Microsoft Support Lifecycle Policy FAQ](https://go.microsoft.com/fwlink/p/?LinkId=31976).  
 
- Additionally, products and product versions that are not listed in the following topics are not supported with System Center Configuration Manager unless they have been announced on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/).  At times, the content on this blog precedes an update to this body of documentation.
+ Additionally, products and product versions that are not listed in the following topics are not supported with Configuration Manager unless they have been announced on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/).  At times, the content on this blog precedes an update to this body of documentation.
 
 
 -  [Size and scale numbers](../../../core/plan-design/configs/size-and-scale-numbers.md)  

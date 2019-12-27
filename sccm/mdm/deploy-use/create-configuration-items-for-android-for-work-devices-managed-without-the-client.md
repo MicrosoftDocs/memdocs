@@ -12,7 +12,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to create configuration items for Android for Work devices managed with Intune
 
- Use the System Center Configuration Manager **Android for Work** configuration item to manage settings for Android for Work devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
+ Use the Configuration Manager **Android for Work** configuration item to manage settings for Android for Work devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
 
 ## Create an Android for Work configuration item  
 
@@ -92,4 +92,4 @@ None of the **Allow data sharing between work and personal profiles** options pr
 Setting DisallowCrossProfileCopyPaste to true prevents copy-paste behavior between Android for Work personal and work profiles.
 
 ## See Also  
- [Configuration items for devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)
+ [Configuration items for devices managed without the Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

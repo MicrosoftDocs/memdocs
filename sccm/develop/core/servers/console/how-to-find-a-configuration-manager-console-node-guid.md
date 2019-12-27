@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Find a Configuration Manager Console Node GUID
-Globally Unique Identifiers (GUIDs) are used, in Adminconsole.xml, to identify parts of the System Center Configuration Manager console. For example, the action you create in [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md) is placed on the **Site Configuration** node in the console tree view by using the GUID 9770fc1b-0885-40e7-8a83-5dfc5eaaa8c2.  
+Globally Unique Identifiers (GUIDs) are used, in Adminconsole.xml, to identify parts of the Configuration Manager console. For example, the action you create in [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md) is placed on the **Site Configuration** node in the console tree view by using the GUID 9770fc1b-0885-40e7-8a83-5dfc5eaaa8c2.  
 
  Elements that contain the `namespaceGuid` attribute are part of the console. For example, the following element declares the software updates node:  
 

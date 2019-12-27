@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Change the Maximum Run Time for a Program
-The following example shows how to modify a program, in System Center Configuration Manager, by using the `SMS_Package` and `SMS_Program` classes and properties.  
+The following example shows how to modify a program, in Configuration Manager, by using the `SMS_Package` and `SMS_Program` classes and properties.  
 
 > [!IMPORTANT]
 >  Any advertised program fails to run when the maintenance windows defined on the client computer are set for a period that is less than that program's `Maximum allowed run time setting`. See the topic "Program Run Scenario Using Maintenance Windows" in the Configuration Manager documentation for more information.  

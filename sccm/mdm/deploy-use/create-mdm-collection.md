@@ -1,7 +1,7 @@
 ---
 title: "Create an MDM collection"
 titleSuffix: "Configuration Manager"
-description: "Create an MDM collection using System Center Configuration Manager."
+description: "Create an MDM collection using Configuration Manager."
 ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,9 +12,9 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Create an MDM collection with System Center Configuration Manager and Microsoft Intune
+# Create an MDM collection with Configuration Manager and Microsoft Intune
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 A Configuration Manager user collection is required to specify the users who can enroll devices into management. You can only use user collections (instead of device collections) because Intune licenses are assigned by user.
 

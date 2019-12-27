@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Set the PXE Service Point Response to PXE Requests
-In System Center Configuration Manager, you set the distribution point response to incoming PXE requests by setting the **IsActive** embedded property.  
+In Configuration Manager, you set the distribution point response to incoming PXE requests by setting the **IsActive** embedded property.  
 
  **IsActive** has the following possible values.  
 

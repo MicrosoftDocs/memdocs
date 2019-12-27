@@ -13,7 +13,7 @@ ms.collection: M365-identity-device-management
 ---
 # SMS_InstalledSoftwareMS Client WMI Class
 > [!IMPORTANT]
->  This class is no longer used in System Center Configuration Manager.  
+>  This class is no longer used in Configuration Manager.  
 
  The `SMS_InstalledSoftwareMS` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that merges Microsoft-specific installed software information from multiple sources to provide categorization and Microsoft Licensing information.  
 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Set up a Microsoft Intune subscription for on-premises MDM in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager on-premises mobile device management (MDM) requires a Microsoft Intune subscription to track licensing. The Intune service isn't used to manage the devices or to store management information. For on-premises MDM, all device management is handled by the Configuration Manager infrastructure.  
 

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot tips for app deployments
 titleSuffix: Configuration Manager
-description: Tips for troubleshooting application deployment problems in System Center Configuration Manager
+description: Tips for troubleshooting application deployment problems in Configuration Manager
 ms.date: 05/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Troubleshooting tips for application deployments
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Typical problems with application deployments fall into one of the following categories:
 

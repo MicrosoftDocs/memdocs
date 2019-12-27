@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Inventory Agent Client WMI Classes
-In System Center Configuration Manager, the inventory client agent classes can be broken into three categories:  
+In Configuration Manager, the inventory client agent classes can be broken into three categories:  
 
 - Inventory client agent settings  
 

@@ -26,7 +26,7 @@ The December 2015 release (version 1511) of Configuration Manager was the initia
 
 Configuration Manager current branch:  
 
-- Doesn't use a year or product identifier in the product name, unlike past versions such as System Center Configuration Manager 2007 or System Center 2012 Configuration Manager.  
+- Doesn't use a year or product identifier in the product name, unlike past versions such as Configuration Manager 2007 or System Center 2012 Configuration Manager.  
 
 - Supports incremental, in-product updates, also called update versions. The initial release was version 1511. Later versions are released several times a year as in-console updates, like version 1910.  
 

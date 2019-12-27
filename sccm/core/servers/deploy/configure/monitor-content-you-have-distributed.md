@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Monitor content you distribute with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the Configuration Manager console to monitor distributed content, including:  
 

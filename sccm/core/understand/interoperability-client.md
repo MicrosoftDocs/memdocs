@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Use the Configuration Manager client software for extended interoperability with future versions of a Current Branch site
 
-*Applies to: System Center Configuration Manager (Current Branch)*  
+*Applies to: Configuration Manager (current branch)*  
 
 Business requirements might not allow you to regularly update the Configuration Manager client on some devices. For example, you need to follow change management policies, or the device is mission-critical. Accommodate these needs by installing a new client for long-term use, called the extended interoperability client (EIC). Only use the EIC for specific devices that can't be frequently updated, like kiosk or point-of-sale devices. Continue to use [automatic client upgrade](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate) for most of your clients.
 

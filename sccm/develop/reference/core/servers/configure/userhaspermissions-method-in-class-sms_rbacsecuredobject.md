@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # UserHasPermissions Method in Class SMS_RbacSecuredObject
-The `UserHasPermissions` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, determines whether the current user has the requested permissions for the specified object.  
+The `UserHasPermissions` Windows Management Instrumentation (WMI) class method, in Configuration Manager, determines whether the current user has the requested permissions for the specified object.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and is intended to show the definition of the method.  
 

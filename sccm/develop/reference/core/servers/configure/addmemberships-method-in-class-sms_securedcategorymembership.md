@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # AddMemberships Method in Class SMS_SecuredCategoryMembership
-The `AddMemberships` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, is a batch operation to assign objects to security categories.  
+The `AddMemberships` Windows Management Instrumentation (WMI) class method, in Configuration Manager, is a batch operation to assign objects to security categories.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

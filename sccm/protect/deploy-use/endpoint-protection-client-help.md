@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Endpoint Protection Client Help
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 This version of Windows Defender or Endpoint Protection includes the following features to help protect your computer from threats:  

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Hybrid MDM with Configuration Manager and Microsoft Intune
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 > [!WARNING]
 > The hybrid MDM service offering is retired as of September 1, 2019. Any remaining hybrid MDM devices won't receive policy, apps, or security updates.

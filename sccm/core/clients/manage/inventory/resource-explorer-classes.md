@@ -14,7 +14,7 @@ manager: dougeby
 ---
 # Resource Explorer default inventory classes
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article describes the default inventory classes in Resource Explorer.
 

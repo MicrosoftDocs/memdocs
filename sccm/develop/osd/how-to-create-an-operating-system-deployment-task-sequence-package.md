@@ -12,13 +12,13 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Create an Operating System Deployment Task Sequence Package
-You create an operating system deployment task sequence, in System Center Configuration Manager, by creating an instance of the [SMS_TaskSequencePackage](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) class. This class derives from the [SMS_Package](../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) class and holds the task sequence. It is advertised to clients who can then run the task sequence. The task sequence is associated with the task sequence package by using the `SMS_TaskSequencePackage` class [SetSequence](../../develop/reference/osd/setsequence-method-in-class-sms_tasksequencepackage.md) method.  
+You create an operating system deployment task sequence, in Configuration Manager, by creating an instance of the [SMS_TaskSequencePackage](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) class. This class derives from the [SMS_Package](../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) class and holds the task sequence. It is advertised to clients who can then run the task sequence. The task sequence is associated with the task sequence package by using the `SMS_TaskSequencePackage` class [SetSequence](../../develop/reference/osd/setsequence-method-in-class-sms_tasksequencepackage.md) method.  
 
  You can organize task sequence packages into categories by assigning a category to them with the [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) class *Category* property.  
 
  For more information about creating task sequences, see [How to Create a Task Sequence](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence.md). For more information about task sequence packages, see the [Task Sequencing Object Model](../../develop/osd/operating-system-deployment-task-sequence-object-model.md).  
 
- You advertise a task sequence package in the same way that you advertise a System Center Configuration Manager package `SMS_Package`. For more information, see [How to Create an Advertisement](../../develop/core/servers/configure/how-to-create-an-advertisement.md).  
+ You advertise a task sequence package in the same way that you advertise a Configuration Manager package `SMS_Package`. For more information, see [How to Create an Advertisement](../../develop/core/servers/configure/how-to-create-an-advertisement.md).  
 
 ### To create a task sequence package  
 

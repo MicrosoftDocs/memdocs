@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Enable Software Inventory
-You enable or disable the Software Inventory Client Agent, in System Center Configuration Manager, by modifying the site control file settings.  
+You enable or disable the Software Inventory Client Agent, in Configuration Manager, by modifying the site control file settings.  
 
 ### To enable or disable the Software Inventory Updates Client Agent  
 
@@ -146,7 +146,7 @@ public void EnableDisableSoftwareInventoryClientAgent(WqlConnectionManager conne
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+ [Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [About Configuration Manager Inventory](../../../../develop/core/clients/inventory/about-configuration-manager-inventory.md)   
  [About the Configuration Manager Site Control File](../../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   

@@ -16,7 +16,7 @@ ms.collection: M365-identity-device-management
 
 # Install and configure a software update point  
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 > [!IMPORTANT]  
@@ -71,7 +71,7 @@ ms.collection: M365-identity-device-management
 ### WSUS Server Connection Account  
  You can configure an account to be used by the site server when it connects to WSUS that runs on the software update point. When you don't configure this account, the Configuration Manager uses the computer account for the site server to connect to WSUS. Configure the WSUS Server Connection Account on the **Proxy and Account Settings** page of the wizard, or on the **Proxy and Account Settings** tab in Software update point Properties.  You can configure the account in different places of the wizard depending on the version of Configuration Manager that you use.  
 
- For more information about Configuration Manager accounts, see [Accounts used in System Center Configuration Manager](../../core/plan-design/hierarchy/accounts.md).  
+ For more information about Configuration Manager accounts, see [Accounts used](../../core/plan-design/hierarchy/accounts.md).  
 
 ## Synchronization source  
  You can configure the upstream synchronization source for software updates synchronization on the **Synchronization Source** page of the wizard, or on the **Sync Settings** tab in Software Update Point Component Properties. Your options for the synchronization source vary depending on the site.  

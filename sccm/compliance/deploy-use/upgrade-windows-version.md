@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Upgrade Windows devices to a new edition with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The **Edition Upgrade Policy** lets you automatically upgrade Windows 10 devices to a different edition.
 

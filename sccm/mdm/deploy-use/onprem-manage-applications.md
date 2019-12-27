@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Manage applications for On-premises Mobile Device Management
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you manage devices through On-premises Mobile Device Management (MDM) in Configuration Manager, you can manage certain additional application types. Managing applications in on-premises MDM is the same as managing apps in a hybrid MDM environment.
 

@@ -12,10 +12,10 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Add an Operating System Deployment Task Sequence Action
-An operating system deployment task sequence action is added to a task sequence, in System Center Configuration Manager, by creating an instance of an [SMS_TaskSequence_Action](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) derived class and then adding it to the steps of the task sequence.  
+An operating system deployment task sequence action is added to a task sequence, in Configuration Manager, by creating an instance of an [SMS_TaskSequence_Action](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) derived class and then adding it to the steps of the task sequence.  
 
 > [!NOTE]
->  System Center Configuration Manager has a number of built-in actions that you can use. For example the command-line action class is [SMS_TaskSequence_RunCommandLineAction](../../develop/reference/osd/sms_tasksequence_runcommandlineaction-server-wmi-class.md). These classes derive from the [SMS_TaskSequence_Action](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) class.  
+>  Configuration Manager has a number of built-in actions that you can use. For example the command-line action class is [SMS_TaskSequence_RunCommandLineAction](../../develop/reference/osd/sms_tasksequence_runcommandlineaction-server-wmi-class.md). These classes derive from the [SMS_TaskSequence_Action](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) class.  
 
  [SMS_TaskSequenceAction](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) derives from the  [SMS_TaskSequence_Step](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md) class, which is the base class for both actions and groups. The task sequence stores its steps in an array of [SMS_TaskSequence_Step](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md), thus allowing actions and groups to be stored together.  
 

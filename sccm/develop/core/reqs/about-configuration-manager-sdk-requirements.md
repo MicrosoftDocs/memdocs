@@ -11,7 +11,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About Configuration Manager SDK Requirements
-Developing applications and scripts for Microsoft System Center Configuration Manager can be done using a number of development languages and tools. Which one you use depends on the type of application you are writing. Large applications will likely be written in C# using the managed Configuration Manager SDK libraries. VBScript is a good choice for scripting Configuration Manager.  
+Developing applications and scripts for Microsoft Configuration Manager can be done using a number of development languages and tools. Which one you use depends on the type of application you are writing. Large applications will likely be written in C# using the managed Configuration Manager SDK libraries. VBScript is a good choice for scripting Configuration Manager.  
 
  This documentation provides examples in C#, VBScript and, where appropriate, C++.  
 
@@ -28,7 +28,7 @@ Developing applications and scripts for Microsoft System Center Configuration Ma
  For information about runtime requirements, see [Configuration Manager Client Runtime Requirements](../../../develop/core/reqs/client-runtime-requirements.md) and [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 > [!IMPORTANT]
->  For more information about general System Center Configuration Manager requirements, see [Supported Configurations for Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=248211).  
+>  For more information about general Configuration Manager requirements, see [Supported Configurations for Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=248211).  
 
 ## See Also
 

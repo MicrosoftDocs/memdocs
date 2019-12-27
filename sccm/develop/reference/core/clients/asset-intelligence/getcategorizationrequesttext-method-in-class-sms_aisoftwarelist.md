@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # GetCategorizationRequestText Method in Class SMS_AISoftwareList
-The `GetCategorizationRequestText` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, retrieves the XML that is sent to System Center Online for categorization.  
+The `GetCategorizationRequestText` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the XML that is sent to System Center Online for categorization.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

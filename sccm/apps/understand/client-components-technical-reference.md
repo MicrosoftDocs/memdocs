@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Understanding Application Deployment Client Components
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Application deployment evaluation and enforcement operations are handled by the DCM Agent and CI Agent components on the client. This article explains how a typical DCM and CI Agent job operates.
 

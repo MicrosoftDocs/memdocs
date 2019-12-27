@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # How to use Resource Explorer to view hardware inventory in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use Resource Explorer in Configuration Manager to view information about hardware inventory. The site collects this information from clients in your hierarchy.  
 

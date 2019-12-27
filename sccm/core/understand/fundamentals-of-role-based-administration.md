@@ -12,11 +12,11 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Fundamentals of role-based administration for System Center Configuration Manager
+# Fundamentals of role-based administration for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-With System Center Configuration Manager, you use role-based administration to secure the access that is needed to administer Configuration Manager. You also secure access to the objects that you manage, like collections, deployments, and sites. After you understand the concepts introduced in this article, you can [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
+With Configuration Manager, you use role-based administration to secure the access that is needed to administer Configuration Manager. You also secure access to the objects that you manage, like collections, deployments, and sites. After you understand the concepts introduced in this article, you can [Configure role-based administration for Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
 
  The role-based administration model centrally defines and manages hierarchy-wide security access settings for all sites and site settings by using the following items:  
 
@@ -48,7 +48,7 @@ When you  design and implement administrative security for Configuration Manager
  The administrative scope controls the objects that an administrative user views in the Configuration Manager console, and it controls the permissions that a user has on those objects. Role-based administration configurations replicate to each site in the hierarchy as global data, and then are applied to all administrative connections.  
 
 > [!IMPORTANT]  
-> Intersite replication delays can prevent a site from receiving changes for role-based administration. For information about how to monitor intersite database replication, see the [Data transfers between sites in System Center Configuration Manager](../../core/servers/manage/data-transfers-between-sites.md) topic.  
+> Intersite replication delays can prevent a site from receiving changes for role-based administration. For information about how to monitor intersite database replication, see the [Data transfers between sites](../../core/servers/manage/data-transfers-between-sites.md) topic.  
 
 ##  <a name="bkmk_Planroles"></a> Security roles
 
@@ -81,13 +81,13 @@ When you  design and implement administrative security for Configuration Manager
 
 4. If the tasks that you identified don't map to the built-in security roles, create and test new security roles.  
 
-For information about how to create and configure security roles for role-based administration, see  [Create custom security roles](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole) and [Configure security roles](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecRole) in the [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md) article.  
+For information about how to create and configure security roles for role-based administration, see  [Create custom security roles](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole) and [Configure security roles](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecRole) in the [Configure role-based administration for Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md) article.  
 
 ##  <a name="bkmk_planCol"></a> Collections
 
  Collections specify the user and computer resources that an administrative user can view or manage. For example, for administrative users to deploy applications or to run remote control, they must be assigned to a security role that grants access to a collection that contains these resources. You can select collections of users or devices.  
 
- For more information about collections, see [Introduction to collections in System Center Configuration Manager](../../core/clients/manage/collections/introduction-to-collections.md).  
+ For more information about collections, see [Introduction to collections](../../core/clients/manage/collections/introduction-to-collections.md).  
 
  Before you configure role-based administration, check whether you have to create new collections for any of the following reasons:  
 
@@ -96,7 +96,7 @@ For information about how to create and configure security roles for role-based 
 - Security requirements and business processes. For example, separate collections for production and test computers.  
 - Organization alignment. For example, separate collections for each business unit.  
 
-For information about how to configure collections for role-based administration, see  [Configure collections to manage security](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl) in the [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md) article.  
+For information about how to configure collections for role-based administration, see  [Configure collections to manage security](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl) in the [Configure role-based administration for Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md) article.  
 
 ## <a name="bkmk_PlanScope"></a> Security scopes
 
@@ -161,8 +161,8 @@ Create security scopes when you have to limit access to separate instances of ob
 
 - Different administrative users require different access for some instances of an object type. For example, one group of administrative users requires Read permission to specific software update groups, and another group of administrative users requires Modify and Delete permissions for other software update groups. Create different security scopes for these software update groups.  
 
-For information about how to configure security scopes for role-based administration, see the [Configure security scopes for an object](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope) in the [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md) article.  
+For information about how to configure security scopes for role-based administration, see the [Configure security scopes for an object](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope) in the [Configure role-based administration for Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md) article.  
 
 ## Next steps
 
-[Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md)
+[Configure role-based administration for Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md)

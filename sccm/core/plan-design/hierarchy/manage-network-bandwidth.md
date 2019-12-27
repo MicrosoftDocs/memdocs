@@ -1,7 +1,7 @@
 ---
 title: "Manage network bandwidth for content"
 titleSuffix: "Configuration Manager"
-description: "Configure scheduling, throttling, and prestaged content for System Center Configuration Manager."
+description: "Configure scheduling, throttling, and prestaged content for Configuration Manager."
 ms.date: 02/6/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 
 # Manage network bandwidth for content
-To help you manage network bandwidth that is used for the content management process of System Center Configuration Manager, you can use built-in controls for scheduling and throttling. You can also use prestaged content. The following sections describe these options in more detail.
+To help you manage network bandwidth that is used for the content management process of Configuration Manager, you can use built-in controls for scheduling and throttling. You can also use prestaged content. The following sections describe these options in more detail.
 
 ##  <a name="BKMK_PlanningForThrottling"></a>Scheduling and throttling  
 
@@ -29,7 +29,7 @@ To help you manage network bandwidth that is used for the content management pro
 > [!IMPORTANT]  
 >  The **Rate Limits** and **Schedule** tabs are displayed only in the properties for distribution points that are not installed on a site server.  
 
-For more information, see [Install and configure distribution points for System Center Configuration Manager](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points).  
+For more information, see [Install and configure distribution points for Configuration Manager](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points).  
 
 ##  <a name="BKMK_PrestagingContent"></a>Prestaged content  
  You can prestage content to add the content files to the content library on a site server or distribution point, before you distribute the content. Because the content files are already in the content library, they do not transfer over the network when you distribute the content. You can prestage content files for applications and packages.  
@@ -64,4 +64,4 @@ You can optionally configure the distribution point as **prestaged** to help man
     > [!IMPORTANT]  
     >  The preceding options are applicable on a per-package basis, and are only used when a distribution point is identified as prestaged. Distribution points that have not been identified as prestaged ignore these settings. In this case, content always is distributed over the network from the site server to the distribution points.  
 
--   **To restore the content library on a site server.** When a site server fails, information about packages and applications that is contained in the content library is restored to the site database as part of the restore process, but the content library files are not restored as part of the process. If you do not have a file system backup to restore the content library, you can create a prestaged content file from another site that contains the packages and applications that you have to have. You can then extract the prestaged content file on the recovered site server. For more information about site server backup and recovery, see [Backup and recovery for System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery).  
+-   **To restore the content library on a site server.** When a site server fails, information about packages and applications that is contained in the content library is restored to the site database as part of the restore process, but the content library files are not restored as part of the process. If you do not have a file system backup to restore the content library, you can create a prestaged content file from another site that contains the packages and applications that you have to have. You can then extract the prestaged content file on the recovered site server. For more information about site server backup and recovery, see [Backup and recovery for Configuration Manager](/sccm/protect/understand/backup-and-recovery).  

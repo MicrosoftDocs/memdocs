@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 **MICROSOFT SOFTWARE LICENSE TERMS**  
 

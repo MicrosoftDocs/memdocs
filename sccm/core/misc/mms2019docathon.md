@@ -14,7 +14,7 @@ ROBOTS: NOINDEX
 
 # MMS 2019 Docathon
 
-During the Midwest Management Summit (MMS) 2019, the Microsoft content team for System Center Configuration Manager and Microsoft Intune are running a docathon. If you're attending the [Docs.microsoft.com hands-on lab](https://sched.co/N6fd) session on Monday, 6 May, that time is to work on contributions with support from the Microsoft writers. The docathon runs the entirety of the conference, and any registered MMS 2019 attendee can participate.
+During the Midwest Management Summit (MMS) 2019, the Microsoft content team for Configuration Manager and Microsoft Intune are running a docathon. If you're attending the [Docs.microsoft.com hands-on lab](https://sched.co/N6fd) session on Monday, 6 May, that time is to work on contributions with support from the Microsoft writers. The docathon runs the entirety of the conference, and any registered MMS 2019 attendee can participate.
 
 Why should you participate? Docs.microsoft.com is an open-source platform for Microsoft product documentation, powered by GitHub. Microsoft encourages everyone to contribute to the docs! When you contribute, the platform recognizes you in the list of contributors on every article. The following contributions are some of the types that the community can provide:
 

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # GetNumResults Method in Class SMS_Collection
-The `GetNumResults` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, gets a count of all members in a collection, not including subcollections.  
+The `GetNumResults` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets a count of all members in a collection, not including subcollections.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

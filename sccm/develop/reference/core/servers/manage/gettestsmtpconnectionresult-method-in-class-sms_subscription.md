@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # GetTestSmtpConnectionResult Method in Class SMS_Subscription
-The `GetTestSmtpConnectionResult` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, gets the test SMTP connection result.  
+The `GetTestSmtpConnectionResult` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the test SMTP connection result.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Create and deploy a device compliance policy
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 ## Create a compliance policy

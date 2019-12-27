@@ -1,7 +1,7 @@
 ---
 title: "Manage Applications"
 titleSuffix: "Configuration Manager"
-description: "Manage Applications in System Center Configuration Manager."
+description: "Manage Applications in Configuration Manager."
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,9 +12,9 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Manage Applications in System Center Configuration Manager
+# Manage Applications in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you manage devices through Microsoft Intune or Configuration Manager on-premises device management, you can manage these additional application types:
 - Windows Phone app package (*.xap file)
@@ -27,14 +27,14 @@ When you manage devices through Microsoft Intune or Configuration Manager on-pre
 
 This section provides detailed information about creating and managing applications using hybrid MDM or on-premises MDM.
 
-[Management tasks for System Center Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md) provides more general information about managing System Center Configuration Manager applications and deployment types.
+[Management tasks for Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md) provides more general information about managing Configuration Manager applications and deployment types.
 
 ## Deploying and monitoring apps
 
-Deploying and monitoring applications in System Center Configuration Manager are the same processes for mobile devices as they are for onsite devices, such as laptops and desktops. You can read through the following topics for general information about deploying and monitoring applications:
+Deploying and monitoring applications in Configuration Manager are the same processes for mobile devices as they are for onsite devices, such as laptops and desktops. You can read through the following topics for general information about deploying and monitoring applications:
 
-- [Deploy applications in System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md)
-- [Monitor applications in System Center Configuration Manager](../../apps/deploy-use/monitor-applications-from-the-console.md)
+- [Deploy applications](../../apps/deploy-use/deploy-applications.md)
+- [Monitor applications](../../apps/deploy-use/monitor-applications-from-the-console.md)
 
 Here are some considerations to keep in mind when deploying and monitoring applications, specific to mobile device management.
 
@@ -46,4 +46,4 @@ Here are some considerations to keep in mind when deploying and monitoring appli
 
 ### Next Steps
 
-You might eventually want to make changes to an application, uninstall an application, or replace an already deployed application with a new application. Read through [Update and retire applications with System Center Configuration Manager](../../apps/deploy-use/update-and-retire-applications.md) to understand these capabilities.
+You might eventually want to make changes to an application, uninstall an application, or replace an already deployed application with a new application. Read through [Update and retire applications with Configuration Manager](../../apps/deploy-use/update-and-retire-applications.md) to understand these capabilities.

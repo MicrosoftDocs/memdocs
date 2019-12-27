@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_MonthlyUsageSummary Server WMI Class
-The `SMS_MonthlyUsageSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a monthly usage summary for a particular file.  
+The `SMS_MonthlyUsageSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a monthly usage summary for a particular file.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

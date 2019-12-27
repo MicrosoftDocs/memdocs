@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # List of prerequisite checks for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article details the prerequisite checks that run when you install or update Configuration Manager. For more information, see [Prerequisite checker](/sccm/core/servers/deploy/install/prerequisite-checker).  
 

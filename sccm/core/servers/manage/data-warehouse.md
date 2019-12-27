@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 #  The data warehouse service point for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 <!--1277922-->
 Use the data warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.

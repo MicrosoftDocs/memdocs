@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Support Center user interface reference
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article is a reference describing the user interfaces (UI) of the Support Center tools:
 - Support Center

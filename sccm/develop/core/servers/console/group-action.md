@@ -11,7 +11,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Group Action
-In System Center Configuration Manager, the Group action creates a menu group, also known as a submenu, for related actions.  
+In Configuration Manager, the Group action creates a menu group, also known as a submenu, for related actions.  
 
  The following attributes and elements are specific to an action that creates a group of context menu items:  
 

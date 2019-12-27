@@ -1,7 +1,7 @@
 ---
 title: "Monitor and plan for power management"
 titleSuffix: "Configuration Manager"
-description: "Learn how to monitor and plan for power management in System Center Configuration Manager."
+description: "Learn how to monitor and plan for power management in Configuration Manager."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,16 +12,16 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# How to monitor and plan for power management in System Center Configuration Manager
+# How to monitor and plan for power management in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Use the following information to help you monitor and plan for power management in System Center Configuration Manager.  
+Use the following information to help you monitor and plan for power management in Configuration Manager.  
 
 ##  <a name="BKMK_How_to_use_reports"></a> How to use reports for power management  
  Power management in Configuration Manager includes several reports to help you analyze power consumption and computer power settings in your organization. The reports can also be used to help you troubleshoot problems.  
 
- Before you can use the power management reports, you must configure reporting for your hierarchy. For more information about reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../../../core/servers/manage/reporting.md).  
+ Before you can use the power management reports, you must configure reporting for your hierarchy. For more information about reporting in Configuration Manager, see [Reporting](../../../../core/servers/manage/reporting.md).  
 
 > [!NOTE]  
 >  Power management information used by daily reports is retained in the Configuration Manager site database for 31 days.  
@@ -597,7 +597,7 @@ Use the following information to help you monitor and plan for power management 
 |Parameter Name|Description|  
 |--------------------|-----------------|  
 |**Collection**|From the drop-down list, select a collection to use for this report.|  
-|**Power Setting GUID**|From the drop-down list, select the power setting GUID on which you want to report. For a list of all power settings and their uses, see [Available power management plan settings](../../../../core/clients/manage/power/create-and-apply-power-plans.md#BKMK_Plans) in the topic [How to create and apply power plans in System Center Configuration Manager](../../../../core/clients/manage/power/create-and-apply-power-plans.md).|  
+|**Power Setting GUID**|From the drop-down list, select the power setting GUID on which you want to report. For a list of all power settings and their uses, see [Available power management plan settings](../../../../core/clients/manage/power/create-and-apply-power-plans.md#BKMK_Plans) in the topic [How to create and apply power plans](../../../../core/clients/manage/power/create-and-apply-power-plans.md).|  
 |**Power Mode**|From the drop down list, select the type of power settings you want to display in the report results. Select **Plugged In** to view the power settings configured for when the computer is plugged in and **On Battery** to view the power settings configured for when the computer is running on battery power.|  
 |**Setting Index**|From the drop-down list, select the value for the selected power setting name on which you want to report. For example, if you want to display all computers with the **turn off hard disk after** setting set to **10** minutes, select **turn off hard disk after** for **Power Setting Name** and **10** for **Setting Index**.|  
 

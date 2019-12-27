@@ -1,7 +1,7 @@
 ---
 title: "Migration operations"
 titleSuffix: "Configuration Manager"
-description: "Create and run jobs to migrate data and clients to System Center Configuration Manager."
+description: "Create and run jobs to migrate data and clients to Configuration Manager current branch."
 ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Operations for migrating to System Center Configuration Manager
+# Operations for migrating to Configuration Manager current branch
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-For migration in System Center Configuration Manager, you can migrate data and clients after you successfully gather data from a source site in a supported source hierarchy. Use the information in the following sections to create and run migration jobs to migrate data and clients, and then finish the migration process.  
+For migration in Configuration Manager, you can migrate data and clients after you successfully gather data from a source site in a supported source hierarchy. Use the information in the following sections to create and run migration jobs to migrate data and clients, and then finish the migration process.  
 
 -   [Create and edit migration jobs](#Create_Edit_migration_Jobs)  
 
@@ -34,7 +34,7 @@ For migration in System Center Configuration Manager, you can migrate data and c
  Use the following procedures to create data migration jobs, edit the exclusion list for collection-based migration jobs, set up shared distribution points, and edit migration job schedules.  
 
 > [!NOTE]  
->  The following procedure for creating a migrating job that migrates by collections applies only to source hierarchies that run a supported version of Configuration Manager 2007. The collection-based migration job type is not available when you migrate from a System Center 2012 Configuration Manager or System Center Configuration Manager source hierarchy.  
+>  The following procedure for creating a migrating job that migrates by collections applies only to source hierarchies that run a supported version of Configuration Manager 2007. The collection-based migration job type is not available when you migrate from a System Center 2012 Configuration Manager or Configuration Manager current branch source hierarchy.  
 
 #### Create a migration job to migrate by collections  
 
@@ -120,7 +120,7 @@ For migration in System Center Configuration Manager, you can migrate data and c
 
 8.  On the **Review Information** page, choose **Save To File** to save the displayed information for later viewing. When you are ready to continue, choose **Next**.  
 
-9. On the **Settings** page, set up when the migration job will run and choose any additional settings that you require for this migration job. Unlike the other migration job types, this migration job must overwrite the previously migrated objects in the System Center Configuration Manager database. Choose **Next**.  
+9. On the **Settings** page, set up when the migration job will run and choose any additional settings that you require for this migration job. Unlike the other migration job types, this migration job must overwrite the previously migrated objects in the Configuration Manager database. Choose **Next**.  
 
 10. Confirm the settings and then finish the wizard.  
 
@@ -171,7 +171,7 @@ For migration in System Center Configuration Manager, you can migrate data and c
 4.  Choose **Yes** to start the migration job.  
 
 ##  <a name="BKMK_ProcUpgrdSS"></a> Upgrade or reassign a shared distribution point  
- You can upgrade a supported distribution point that is shared from a Configuration Manager 2007 source site (or reassign a supported distribution point that is shared from a System Center Configuration Manager source site) to be a distribution point in the destination hierarchy.  
+ You can upgrade a supported distribution point that is shared from a Configuration Manager 2007 source site (or reassign a supported distribution point that is shared from a Configuration Manager source site) to be a distribution point in the destination hierarchy.  
 
 > [!IMPORTANT]  
 >  Before you upgrade a Configuration Manager 2007 branch distribution point, you must uninstall the Configuration Manager 2007 client software from the branch distribution point computer. If the Configuration Manager 2007 client software is installed when you attempt to upgrade the distribution point, the upgrade fails and content that was previously deployed to the branch distribution point is removed from the computer.  
@@ -207,7 +207,7 @@ For migration in System Center Configuration Manager, you can migrate data and c
 4.  View details and status about the selected migration job on the tabs for **Summary** and **Objects in Job**.  
 
 ##  <a name="BKMK_MigrateClients"></a> Migrate clients  
- After you migrate data for clients between hierarchies but before you finish migration, plan to migrate clients to the destination hierarchy. The migration of clients between hierarchies involves uninstalling the Configuration Manager client software from computers that are assigned to the source hierarchy, and then installing the Configuration Manager client software from the destination hierarchy. When you install the client from the destination hierarchy you also assign the client to a primary site in that hierarchy. For more about migrating clients, see [Planning a client migration strategy in System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md).  
+ After you migrate data for clients between hierarchies but before you finish migration, plan to migrate clients to the destination hierarchy. The migration of clients between hierarchies involves uninstalling the Configuration Manager client software from computers that are assigned to the source hierarchy, and then installing the Configuration Manager client software from the destination hierarchy. When you install the client from the destination hierarchy you also assign the client to a primary site in that hierarchy. For more about migrating clients, see [Planning a client migration strategy](../../core/migration/planning-a-client-migration-strategy.md).  
 
 ##  <a name="Complete_Migration"></a> Finish migration  
  Use this procedure to finish migration from the source hierarchy.  
@@ -216,13 +216,13 @@ For migration in System Center Configuration Manager, you can migrate data and c
 
 2.  In the **Administration** workspace, expand **Migration**, and then choose **Source Hierarchy**.  
 
-3.  For a Configuration Manager 2007 source hierarchy, select a source site that is at the bottom level of the source hierarchy. For a System Center 2012 Configuration Manager or System Center Configuration Manager source hierarchy, select the available source site.  
+3.  For a Configuration Manager 2007 source hierarchy, select a source site that is at the bottom level of the source hierarchy. For a System Center 2012 Configuration Manager or Configuration Manager current branch source hierarchy, select the available source site.  
 
 4.  On the **Home** tab, in the **Clean Up** group, choose **Stop Gathering Data**.  
 
 5.  Choose **Yes** to confirm the action.  
 
-6.  For a Configuration Manager 2007 source hierarchy, before you continue to the next step, repeat steps 3, 4, and 5. Go through these steps at each site in the hierarchy, from the bottom of the hierarchy to the top. For a System Center 2012 Configuration Manager or System Center Configuration Manager source hierarchy, continue to the next step.  
+6.  For a Configuration Manager 2007 source hierarchy, before you continue to the next step, repeat steps 3, 4, and 5. Go through these steps at each site in the hierarchy, from the bottom of the hierarchy to the top. For a System Center 2012 Configuration Manager or Configuration Manager current branch source hierarchy, continue to the next step.  
 
 7.  On the **Home** tab, in the **Clean Up** group, choose **Clean Up Migration Data**.  
 

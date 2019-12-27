@@ -1,7 +1,7 @@
 ---
 title: "Create a service connection point"
 titleSuffix: "Configuration Manager"
-description: "Create a service connection point using System Center Configuration Manager."
+description: "Create a service connection point using Configuration Manager."
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,9 +12,9 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Create a service connection point with System Center Configuration Manager and Microsoft Intune
+# Create a service connection point with Configuration Manager and Microsoft Intune
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you have created your subscription, you can then install the service connection point site system role that lets you connect to the Intune service. This site system role will push settings and applications to the Intune service.
 

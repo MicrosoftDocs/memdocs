@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # RequestCatalogUpdate Method in Class SMS_AIProxy
-The `RequestCatalogUpdate` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, synchronizes the Asset Intelligence catalog with the System Center Online service.  
+The `RequestCatalogUpdate` Windows Management Instrumentation (WMI) class method, in Configuration Manager, synchronizes the Asset Intelligence catalog with the System Center Online service.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

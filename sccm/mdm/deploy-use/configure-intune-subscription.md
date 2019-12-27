@@ -1,7 +1,7 @@
 ---
 title: "Configure your Intune subscription"
 titleSuffix: "Configuration Manager"
-description: "Configure your Intune subscription using System Center Configuration Manager."
+description: "Configure your Intune subscription using Configuration Manager."
 ms.date: 06/02/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,9 +12,9 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Configure your Intune subscription with System Center Configuration Manager and Microsoft Intune
+# Configure your Intune subscription with Configuration Manager and Microsoft Intune
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The Intune subscription lets you manage devices over the internet. This includes specifying which user collection can enroll devices and defining information presented to users. While creating the Intune subscription, you can also add company branding to the Intune company portal with your company logo and custom color schemes.
 
@@ -25,7 +25,7 @@ The Intune subscription does the following:
 -   Defines and configures the mobile platforms that you want to support
 
 > [!IMPORTANT]
->  Creating a subscription for Microsoft Intune in Configuration Manager will put your site's service connection point in "online mode." See [About the service connection point in System Center Configuration Manager](../../core/servers/deploy/configure/about-the-service-connection-point.md).
+>  Creating a subscription for Microsoft Intune in Configuration Manager will put your site's service connection point in "online mode." See [About the service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md).
 
 ## To create the Microsoft Intune subscription
 

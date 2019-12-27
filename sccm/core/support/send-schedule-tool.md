@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Send Schedule Tool
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The Send Schedule Tool is one of the [Configuration Manager tools](/sccm/core/support/tools). Use it to trigger a schedule on a client or trigger the evaluation of a specified configuration baseline. It works for the local computer or targeting a remote client.  
 

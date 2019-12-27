@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Call a Configuration Manager Object Class Method by Using WMI
-To call a SMS Provider class method, in System Center Configuration Manager, you use the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [ExecMethod](https://msdn.microsoft.com/library/aa393862.aspx) method to call methods that are defined by the class.  
+To call a SMS Provider class method, in Configuration Manager, you use the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [ExecMethod](https://msdn.microsoft.com/library/aa393862.aspx) method to call methods that are defined by the class.  
 
 > [!NOTE]
 >  To call a method on an object instance, call the method from the object directly. For example,  `ObjectInstance.MethodName parameters`.  

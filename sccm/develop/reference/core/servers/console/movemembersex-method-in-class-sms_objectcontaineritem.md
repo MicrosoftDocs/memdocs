@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # MoveMembersEx Method in Class SMS_ObjectContainerItem
-The `MoveMembersEx` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, moves folder items to another folder.  
+The `MoveMembersEx` Windows Management Instrumentation (WMI) class method, in Configuration Manager, moves folder items to another folder.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

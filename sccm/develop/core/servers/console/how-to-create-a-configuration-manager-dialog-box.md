@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Create a Configuration Manager Dialog Box
-These procedures show you how to create a modeless dialog box assembly, in System Center Configuration Manager, by using Visual Studio.  
+These procedures show you how to create a modeless dialog box assembly, in Configuration Manager, by using Visual Studio.  
 
  Creating the dialog box is very similar to creating a property sheet. You create a class derived from SmsPageControl and an XML file to describe the dialog.  
 

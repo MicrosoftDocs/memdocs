@@ -12,11 +12,11 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Planning for reporting in System Center Configuration Manager
+# Planning for reporting in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Reporting in System Center Configuration Manager provides a set of tools and resources that help you use the advanced reporting capabilities of SQL Server Reporting Services. Use the following sections to help you plan for reporting in Configuration Manager.  
+Reporting in Configuration Manager provides a set of tools and resources that help you use the advanced reporting capabilities of SQL Server Reporting Services. Use the following sections to help you plan for reporting in Configuration Manager.  
 
 ##  <a name="BKMK_InstallReportingServicesPoint"></a> Determine where to install the Reporting Services Point  
  When you run Configuration Manager reports at a site, the reports have access to the information in the site database in which it connects. Use the following sections to help you determine where to install the reporting services point and what data source to use.  
@@ -56,5 +56,5 @@ Reporting in System Center Configuration Manager provides a set of tools and res
 ## Next steps  
  Use the following additional topics to help you plan for reporting in Configuration Manager:  
 
--   [Prerequisites for reporting in System Center Configuration Manager](../../../core/servers/manage/prerequisites-for-reporting.md)  
--   [Best practices for reporting in System Center Configuration Manager](../../../core/servers/manage/best-practices-for-reporting.md)  
+-   [Prerequisites for reporting](../../../core/servers/manage/prerequisites-for-reporting.md)  
+-   [Best practices for reporting](../../../core/servers/manage/best-practices-for-reporting.md)  

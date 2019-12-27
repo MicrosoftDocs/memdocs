@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Create an Association Between Two Computers in Configuration Manager
-You create an association between a reference and destination computer, in System Center Configuration Manager, by calling the [AddAssociation Method in Class SMS_StateMigration](../../develop/reference/osd/addassociation-method-in-class-sms_statemigration.md).  
+You create an association between a reference and destination computer, in Configuration Manager, by calling the [AddAssociation Method in Class SMS_StateMigration](../../develop/reference/osd/addassociation-method-in-class-sms_statemigration.md).  
 
 > [!NOTE]
 >  You call the [DeleteAssociation Method in Class SMS_StateMigration](../../develop/reference/osd/deleteassociation-method-in-class-sms_statemigration.md) to delete an association.  

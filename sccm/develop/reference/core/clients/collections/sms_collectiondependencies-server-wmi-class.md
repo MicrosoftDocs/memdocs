@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_CollectionDependencies Server WMI Class
-The `SMS_CollectionDependencies` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, is used to query dependency relationships between collections, specifically the composable collection rules (inclusion, exclusion) and the limiting collection.  
+The `SMS_CollectionDependencies` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, is used to query dependency relationships between collections, specifically the composable collection rules (inclusion, exclusion) and the limiting collection.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

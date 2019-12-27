@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Customize Support Center
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The [Support Center](/sccm/core/support/support-center) tool includes a configuration file that you can customize. By default, when you install Support Center, this file is in the following path: `C:\Program Files (x86)\Configuration Manager Support Center\ConfigMgrSupportCenter.exe.config`. The configuration file changes the behavior of the program:
 

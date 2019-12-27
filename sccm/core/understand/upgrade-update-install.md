@@ -15,21 +15,22 @@ ms.collection: M365-identity-device-management
 
 # About upgrade, update, and install for site and hierarchy infrastructure
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-
-When managing System Center Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts.
+When managing Configuration Manager sites and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts.
 
 ## Upgrade
-*Upgrade* or *in-place upgrade*, is used when converting your Configuration Manager 2012 site or hierarchy to one that runs System Center Configuration Manager.
-When you upgrade System Center 2012 Configuration Manager to System Center Configuration Manager, you continue to use the same servers to host your sites and site servers, and you retain your existing data and configurations for Configuration Manager.  This is different from [Migration](/sccm/core/migration/migrate-data-between-hierarchies) which is a way to retain your configurations and data about managed devices while using new System Center Configuration Manager sites installed to new hardware.
 
-For more details, see [Upgrade to System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).
+*Upgrade* or *in-place upgrade*, is used when converting your Configuration Manager 2012 site or hierarchy to one that runs Configuration Manager current branch.
+
+When you upgrade System Center 2012 Configuration Manager to Configuration Manager current branch, you continue to use the same servers to host your sites and site servers, and you retain your existing data and configurations for Configuration Manager.  This is different from [Migration](/sccm/core/migration/migrate-data-between-hierarchies) which is a way to retain your configurations and data about managed devices while using new Configuration Manager current branch sites installed to new hardware.
+
+For more details, see [Upgrade to Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).
 
 
 
 ## Update
-*Update* is used for installing in-console updates for System Center Configuration Manager, and for out-of-band updates which are updates that cannot be delivered from within the Configuration Manager console. In-console updates can modify the version of your Current Branch site (or Technical Preview site) so that it runs a higher version. For example, if your site runs version 1806, you can install an update for version 1810. Updates can also install fixes for a known issue, without modifying the site version.      
+*Update* is used for installing in-console updates for Configuration Manager, and for out-of-band updates which are updates that cannot be delivered from within the Configuration Manager console. In-console updates can modify the version of your Current Branch site (or Technical Preview site) so that it runs a higher version. For example, if your site runs version 1806, you can install an update for version 1810. Updates can also install fixes for a known issue, without modifying the site version.      
 
 Typically, updates add security fixes, quality improvements, and new features to your existing deployment. If you use the Technical Preview branch, an update can install a newer version of the Technical Preview.
 - You choose when to install the in-console update, starting at the top-tier site of your hierarchy.
@@ -37,7 +38,7 @@ Typically, updates add security fixes, quality improvements, and new features to
 - After a new update completes installation at your top-tier site, child primary sites automatically start the process to update. However, you can set [Service Windows](/sccm/core/servers/manage/service-windows) to control the timing of updates.
 - Secondary sites do not automatically install updates. Instead, you manually start the update from within the Configuration Manager console.
 
-For more, see [Updates for System Center Configuration Manager](/sccm/core/servers/manage/updates), and [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).
+For more, see [Updates for Configuration Manager](/sccm/core/servers/manage/updates), and [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).
 
 
 

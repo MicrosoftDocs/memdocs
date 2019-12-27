@@ -1,7 +1,7 @@
 ---
 title: "Create remote connection profiles"
 titleSuffix: "Configuration Manager"
-description: "Use System Center Configuration Manager remote connection profiles to enable your users to remotely connect to work computers."
+description: "Use Configuration Manager remote connection profiles to enable your users to remotely connect to work computers."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -13,11 +13,11 @@ ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
 
-# Remote connection profiles in System Center Configuration Manager
+# Remote connection profiles in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Use System Center Configuration Manager remote connection profiles to allow your users to remotely connect to work computers when they are not connected to the domain or if their personal computers are connected over the Internet.  
+Use Configuration Manager remote connection profiles to allow your users to remotely connect to work computers when they are not connected to the domain or if their personal computers are connected over the Internet.  
 
  Users can connect to their work PC from the following device types:  
 
@@ -172,4 +172,4 @@ Deploy a remote connection profile
 > [!IMPORTANT]  
 >  You must use a wildcard (%) character when you use the parameters **Device filter** and **User filter** in the reports for compliance settings.  
 
- For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](/sccm/core/servers/manage/reporting).  
+ For more information about how to configure reporting in Configuration Manager, see [Reporting](/sccm/core/servers/manage/reporting).  

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Application Deployment for Device Collections
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When an application is deployed to a Device collection, the policy is targeted to all the devices in the collection regardless of the deployment purpose. This article explains the policy download and deployment processing on the client.
 

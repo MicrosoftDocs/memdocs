@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # How to monitor co-management in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After you enable co-management, monitor co-management devices using the following methods:
 

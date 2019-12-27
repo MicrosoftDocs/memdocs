@@ -1,7 +1,7 @@
 ---
 title: "Fundamentals of sites and hierarchies"
 titleSuffix: "Configuration Manager"
-description: "Get basic information about System Center Configuration Manager sites and hierarchies."
+description: "Get basic information about Configuration Manager sites and hierarchies."
 ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,14 +12,14 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Fundamentals of sites and hierarchies for System Center Configuration Manager
+# Fundamentals of sites and hierarchies for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-A System Center Configuration Manager deployment must be installed in an Active Directory domain. The foundation of this deployment includes one or more Configuration Manager sites that form a hierarchy of sites. From a single site to a multi-site hierarchy, the type and location of sites you install provide the ability to scale up (expand) your deployment when necessary, and deliver key services to managed users and devices.
+A Configuration Manager deployment must be installed in an Active Directory domain. The foundation of this deployment includes one or more Configuration Manager sites that form a hierarchy of sites. From a single site to a multi-site hierarchy, the type and location of sites you install provide the ability to scale up (expand) your deployment when necessary, and deliver key services to managed users and devices.
 
 ## Hierarchies of sites
-When you install System Center Configuration Manager for the first time, the first Configuration Manager site that you install determines the scope of your hierarchy. The first Configuration Manager site is the foundation from which you will manage devices and users in your enterprise. This first site must be either a central administration site or a stand-alone primary site.  
+When you install Configuration Manager for the first time, the first Configuration Manager site that you install determines the scope of your hierarchy. The first Configuration Manager site is the foundation from which you will manage devices and users in your enterprise. This first site must be either a central administration site or a stand-alone primary site.  
 
  A *central administration site* is suitable for large-scale deployments, provides a central point of administration, and provides the flexibility to support devices that are distributed across a global network infrastructure. After you install a  central administration site, you will need to install one or more primary sites as child sites. This configuration is necessary because a central administration site does not directly support management of devices, which is the function of a primary site. A central administration site supports multiple child-primary sites. The child-primary sites are used to directly manage devices, and to control network bandwidth when your managed devices are in different geographical locations.  
 
@@ -38,11 +38,11 @@ When you install System Center Configuration Manager for the first time, the fir
 
  For more information, see the following topics:  
 
--   [Introduction to System Center Configuration Manager](../../core/understand/introduction.md)  
+-   [Introduction to Configuration Manager](../../core/understand/introduction.md)  
 
--   [Design a hierarchy of sites for System Center Configuration Manager](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)  
+-   [Design a hierarchy of sites for Configuration Manager](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)  
 
--   [Install System Center Configuration Manager sites](/sccm/core/servers/deploy/install/installing-sites)  
+-   [Install Configuration Manager sites](/sccm/core/servers/deploy/install/installing-sites)  
 
 ## Site system servers and site system roles  
  Each Configuration Manager site installs *site system roles* that support management operations. The following roles are installed by default when you install a site:
@@ -55,7 +55,7 @@ Other site system roles are optional, and are only used when you want to use the
 
  For a smaller deployment of Configuration Manager, you might initially run all of your site system roles directly on the site server computer. Then, as your managed environment and needs grow, you can install additional site system servers to host additional site system roles to improve the site's efficiency in providing services to more devices.  
 
- For information about the different site system roles, see [Site system roles](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md#bkmk_planroles) in [Plan for site system servers and site system roles for System Center Configuration Manager](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).
+ For information about the different site system roles, see [Site system roles](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md#bkmk_planroles) in [Plan for site system servers and site system roles for Configuration Manager](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).
 
 ## Publishing site information to Active Directory Domain Services  
  To simplify management of Configuration Manager, you can extend the Active Directory schema to support details that are used by Configuration Manager,  and then have sites publish their key information to Active Directory Domain Services (AD DS). Then the computers that you want to manage can securely retrieve site-related information from the trusted source of AD DS. The information clients can retrieve identifies available sites, site system servers, and the services that those site system servers provide.  

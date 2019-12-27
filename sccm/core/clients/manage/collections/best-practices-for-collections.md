@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Best practices for collections in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the following best practices for collections in Configuration Manager.  
 

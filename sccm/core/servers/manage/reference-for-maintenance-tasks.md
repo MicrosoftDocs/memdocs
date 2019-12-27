@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Reference for maintenance tasks in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article lists the details for each of the Configuration Manager site maintenance tasks. Each entry specifies the site types where the task is available, and whether it's enabled by default.
 

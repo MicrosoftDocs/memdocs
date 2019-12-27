@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Command-line options for Configuration Manager setup
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the following information to configure scripts or to install Configuration Manager from a command line.  
 

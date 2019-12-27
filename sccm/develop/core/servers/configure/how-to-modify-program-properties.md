@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Modify Program Properties
-The following example shows how to modify a program, in System Center Configuration Manager, by using the `SMS_Package` and `SMS_Program` classes and properties.  
+The following example shows how to modify a program, in Configuration Manager, by using the `SMS_Package` and `SMS_Program` classes and properties.  
 
 ### To modify program properties  
 

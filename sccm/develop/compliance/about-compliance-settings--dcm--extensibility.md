@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About Compliance Settings (DCM) Extensibility
-The content in this section provides information about extending the functionality of desired configuration management configuration items in System Center Configuration Manager.  
+The content in this section provides information about extending the functionality of desired configuration management configuration items in Configuration Manager.  
 
  In application configuration items, it is possible to detect applications or settings by using a script.  
 

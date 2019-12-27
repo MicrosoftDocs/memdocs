@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_ProviderLocation Server WMI Class
-The `SMS_ProviderLocation` Windows Management Instrumentation (WMI) class, in System Center Configuration Manager, identifies the location of the SMS Provider for a site.  
+The `SMS_ProviderLocation` Windows Management Instrumentation (WMI) class, in Configuration Manager, identifies the location of the SMS Provider for a site.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

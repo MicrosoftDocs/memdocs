@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to List Configuration Assignments
-The following code examples show how to list the current configuration baseline assignments and a specific set of properties for each assignment in System Center Configuration Manager.  
+The following code examples show how to list the current configuration baseline assignments and a specific set of properties for each assignment in Configuration Manager.  
 
 ### To list Configuration Assignments  
 
@@ -23,7 +23,7 @@ The following code examples show how to list the current configuration baseline 
 3.  Loop through the array of available configuration baseline assignments, listing each configuration baseline assignment and specific properties.  
 
 ## Example  
- The following example method shows how to list the current configuration baseline assignments and a specific set of properties for each assignment in System Center Configuration Manager.  
+ The following example method shows how to list the current configuration baseline assignments and a specific set of properties for each assignment in Configuration Manager.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 

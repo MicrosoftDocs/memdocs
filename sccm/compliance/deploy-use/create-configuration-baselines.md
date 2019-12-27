@@ -1,7 +1,7 @@
 ---
 title: "Create configuration baselines"
 titleSuffix: "Configuration Manager"
-description: "Create configuration baselines in System Center Configuration Manager that you can deploy to a collection."
+description: "Create configuration baselines in Configuration Manager that you can deploy to a collection."
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -12,12 +12,12 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Create configuration baselines in System Center Configuration Manager
+# Create configuration baselines in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
-Configuration baselines in System Center Configuration Manager contain predefined configuration items and optionally, other configuration baselines. After a configuration baseline is created, you can deploy it to a collection so that devices in that collection download the configuration baseline and assess their compliance with it.  
+Configuration baselines in Configuration Manager contain predefined configuration items and optionally, other configuration baselines. After a configuration baseline is created, you can deploy it to a collection so that devices in that collection download the configuration baseline and assess their compliance with it.  
 
 ## Configuration baselines
 

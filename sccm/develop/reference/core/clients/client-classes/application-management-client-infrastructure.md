@@ -19,5 +19,5 @@ This section provides reference information for the Configuration Manager applic
  Describes interfaces in Configuration Manager used for managing application management functionality on the client.  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+ [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

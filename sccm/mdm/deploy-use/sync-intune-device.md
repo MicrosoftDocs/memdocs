@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Remotely synchronize policy on Intune-enrolled devices from the Configuration Manager console
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 You can request a policy sync for a device that is enrolled with Intune from the Configuration Manager console instead of having to request a sync from the Company Portal app on the device itself. 

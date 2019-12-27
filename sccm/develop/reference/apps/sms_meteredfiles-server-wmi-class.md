@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_MeteredFiles Server WMI Class
-The `SMS_MeteredFiles` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents metered files and implements the matching between the meter rule and the file information.  
+The `SMS_MeteredFiles` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents metered files and implements the matching between the meter rule and the file information.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

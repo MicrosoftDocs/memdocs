@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About Operating System Configuration Item Examples
-In System Center Configuration Manager, operating system configuration items include all of the functionality of general configuration items, but they are tightly coupled with a specific version of the Windows operating system.  
+In Configuration Manager, operating system configuration items include all of the functionality of general configuration items, but they are tightly coupled with a specific version of the Windows operating system.  
 
 ## See Also  
 [About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)

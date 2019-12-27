@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # CheckDecommissionState Method in Class SMS_MigrationSiteMapping
-The `CheckDecommissionState` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, checks to see if site mapping can be decommissioned.  
+The `CheckDecommissionState` Windows Management Instrumentation (WMI) class method, in Configuration Manager, checks to see if site mapping can be decommissioned.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

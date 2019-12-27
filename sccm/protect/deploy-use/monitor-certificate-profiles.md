@@ -1,7 +1,7 @@
 ---
 title: "Monitor certificate profiles"
 titleSuffix: "Configuration Manager"
-description: "Learn how to monitor the compliance status of System Center Configuration Manager certificate profiles."
+description: "Learn how to monitor the compliance status of Configuration Manager certificate profiles."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -12,9 +12,9 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to monitor certificate profiles in System Center Configuration Manager
+# How to monitor certificate profiles in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 ##  View Compliance Results in the Configuration Manager Console  
@@ -57,7 +57,7 @@ To monitor SCEP certificate compliance  do not use the console, rather, use [rep
 
 ##  View Compliance Results by Using Reports
 
-Compliance settings in System Center Configuration Manager include built-in reports that you can use to monitor information about certificate profiles. These reports have the report category of **Compliance and Settings Management**.  
+Compliance settings in Configuration Manager include built-in reports that you can use to monitor information about certificate profiles. These reports have the report category of **Compliance and Settings Management**.  
 
 > [!IMPORTANT]  
 >  You must use a wildcard (%) character when you use the parameters **Device filter** and **User filter** in the reports for compliance settings.  
@@ -70,4 +70,4 @@ To monitor SCEP certificate compliance  use these  certificate reports under the
 
 
 
- For more information about how to configure reporting in System Center Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+ For more information about how to configure reporting in Configuration Manager, see [Reporting](../../core/servers/manage/reporting.md).  

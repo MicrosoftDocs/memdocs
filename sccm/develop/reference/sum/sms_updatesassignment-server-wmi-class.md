@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_UpdatesAssignment Server WMI Class
-The `SMS_UpdatesAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a deployment.  
+The `SMS_UpdatesAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a deployment.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -258,7 +258,7 @@ Class SMS_UpdatesAssignment : SMS_CIAssignmentBaseClass
 
  `LimitStateMessageVerbosity` is deprecated in SP1. However, the value must still remain synchronized with `StateMessageVerbosity`. For `StateMessageVerbosity` values < 10, `LimitStateMessageVerbosity` must be set to `true`, otherwise `LimitStateMessageVerbosity` must be set to `false`.  
 
- This method/property has been removed or deprecated in System Center Configuration Manager SP1.  
+ This method/property has been removed or deprecated in Configuration Manager SP1.  
 
  `LocaleID`  
  Data type: `UInt32`  
@@ -447,7 +447,7 @@ Class SMS_UpdatesAssignment : SMS_CIAssignmentBaseClass
 
   For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
-  After preparing the software updates to deploy, your application can use this class as described in How to Configure and Deploy Updates. After the application creates the deployment, System Center Configuration Manager creates the corresponding policy in the database. The client polls the management point for new and changed properties and the download occurs when a request is detected.  
+  After preparing the software updates to deploy, your application can use this class as described in How to Configure and Deploy Updates. After the application creates the deployment, Configuration Manager creates the corresponding policy in the database. The client polls the management point for new and changed properties and the download occurs when a request is detected.  
 
 ## Requirements  
 

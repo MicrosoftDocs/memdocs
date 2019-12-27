@@ -1,7 +1,7 @@
 ---
 title: "Introduction to queries"
 titleSuffix: "Configuration Manager"
-description: "Create and run queries to locate objects in a System Center Configuration Manager hierarchy that match your query criteria."
+description: "Create and run queries to locate objects in a Configuration Manager hierarchy that match your query criteria."
 ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,11 +12,11 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Introduction to queries in System Center Configuration Manager
+# Introduction to queries in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-You can create and run queries to locate objects in a System Center Configuration Manager hierarchy that match your query criteria. These objects include items like specific types of computers or user groups. Queries can return most types of Configuration Manager objects, which include sites, collections, applications, and inventory data.  
+You can create and run queries to locate objects in a Configuration Manager hierarchy that match your query criteria. These objects include items like specific types of computers or user groups. Queries can return most types of Configuration Manager objects, which include sites, collections, applications, and inventory data.  
 
 ## Query creation overview
 
@@ -26,8 +26,8 @@ You can create and run queries to locate objects in a System Center Configuratio
 
  When you create a query, it's stored by Configuration Manager and displayed in the **Queries** node in the **Monitoring** workspace. From this location, you can create new queries and run, update, and manage existing queries.  
 
- You can also import a query into a query rule in a Configuration Manager collection. For more information, see [How to create collections in System Center Configuration Manager](../../../core/clients/manage/collections/create-collections.md).  
+ You can also import a query into a query rule in a Configuration Manager collection. For more information, see [How to create collections](../../../core/clients/manage/collections/create-collections.md).  
 
 ## Next steps
 
- [How to create queries in System Center Configuration Manager](../../../core/servers/manage/create-queries.md)
+ [How to create queries](../../../core/servers/manage/create-queries.md)

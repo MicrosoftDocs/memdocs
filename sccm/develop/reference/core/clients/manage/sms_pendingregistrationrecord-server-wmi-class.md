@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_PendingRegistrationRecord Server WMI Class
-The `SMS_PendingRegistrationRecord` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that describes hardware conflicts between two computers.  
+The `SMS_PendingRegistrationRecord` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes hardware conflicts between two computers.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -84,7 +84,7 @@ Class SMS_PendingRegistrationRecord
 
  Qualifiers: None  
 
- The System Center Configuration Manager unique identifier of a client that registered on the current site with the same `HardwareID`  
+ The Configuration Manager unique identifier of a client that registered on the current site with the same `HardwareID`  
 
  `FQDN`  
  Data type: `String`  
@@ -179,7 +179,7 @@ Class SMS_PendingRegistrationRecord
 
  Qualifiers: None  
 
- The System Center Configuration Manager site this client belongs to.  
+ The Configuration Manager site this client belongs to.  
 
  `SMSID`  
  Data type: `String`  

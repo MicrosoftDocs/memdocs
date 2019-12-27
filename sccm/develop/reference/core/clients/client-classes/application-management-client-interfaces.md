@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Application Management Client Interfaces
-In System Center Configuration Manager, the application management interfaces are used by client applications to manage application management functionality on the client.  
+In Configuration Manager, the application management interfaces are used by client applications to manage application management functionality on the client.  
 
 ## In This Section  
 
@@ -27,5 +27,5 @@ In System Center Configuration Manager, the application management interfaces ar
 |[IAppManagementTypes Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementtypes-interface.md)|The `IAppManagementTypes` interface is a container for Application Management related type definitions.|  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+ [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

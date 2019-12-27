@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Define site boundaries and boundary groups
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 *Boundaries* in Configuration Manager define network locations on your intranet. These locations include devices that you want to manage. *Boundary groups* are logical groups of boundaries that you configure.
 

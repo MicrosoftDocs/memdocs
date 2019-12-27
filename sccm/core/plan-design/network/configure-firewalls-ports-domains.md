@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Network infrastructure considerations for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 To prepare your network to support Configuration Manager, you may need to configure some infrastructure components. For example, open firewall ports to pass the communications used by Configuration Manager.  
 

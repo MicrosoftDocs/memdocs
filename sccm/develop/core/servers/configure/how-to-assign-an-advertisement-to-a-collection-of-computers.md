@@ -12,10 +12,10 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Assign an Advertisement to a Collection of Computers
-You can assign an advertisement to a collection by using the `SMS_Advertisement` class in System Center Configuration Manager. Advertisements are closely tied to packages, programs and collections. For more information, see [Software Distribution Overview](../../../../develop/core/servers/configure/software-distribution-overview.md).  
+You can assign an advertisement to a collection by using the `SMS_Advertisement` class in Configuration Manager. Advertisements are closely tied to packages, programs and collections. For more information, see [Software Distribution Overview](../../../../develop/core/servers/configure/software-distribution-overview.md).  
 
 > [!NOTE]
->  Detailed information about the `SMS_Advertisement` class and class properties is in the reference section of the System Center Configuration Manager Software Development Kit (SDK).  
+>  Detailed information about the `SMS_Advertisement` class and class properties is in the reference section of the Configuration Manager Software Development Kit (SDK).  
 
 ### To assign an advertisement to a collection  
 

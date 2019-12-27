@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Read the Tally Intervals for a Configuration Manager Site
-In System Center Configuration Manager, you can read the available tally intervals for a site by inspecting the site control file `SMS_COMPONENT_STATUS_SUMMARIZER` object `Summary_Intervals` embedded property list.  
+In Configuration Manager, you can read the available tally intervals for a site by inspecting the site control file `SMS_COMPONENT_STATUS_SUMMARIZER` object `Summary_Intervals` embedded property list.  
 
  You use tally intervals for querying component (`SMS_ComponentSummarizer`) and site detail (`SMS_SiteDetailSummarizer`) summarizer classes. For more information, see [About Configuration Manager Status Summarizers](../../../../develop/core/servers/manage/about-configuration-manager-status-summarizers.md).  
 
@@ -103,7 +103,7 @@ public void ShowSiteTallyIntervals(WqlConnectionManager connection, string siteC
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
 |`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).|  
-|`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|A valid System Center Configuration Manager site code.|  
+|`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|A valid Configuration Manager site code.|  
 
 ## Compiling the Code  
  This C# example requires:  

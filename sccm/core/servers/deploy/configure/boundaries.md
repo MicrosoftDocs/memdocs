@@ -12,9 +12,9 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Define network locations as boundaries for System Center Configuration Manager
+# Define network locations as boundaries for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager boundaries are locations on your network that contain devices that you want to manage. The boundary a device is on is equivalent to the Active Directory site, or network IP address that is identified by the Configuration Manager client that is installed on the device.
 - You can manually create individual boundaries. However, Configuration Manager does not support the direct entry of a supernet as a boundary. Instead, use the IP address range boundary type.
