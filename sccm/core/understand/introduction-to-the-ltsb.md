@@ -62,7 +62,7 @@ When you reference current branch documentation for the LTSB, details that apply
 
 ## Licensing overview for the LTSB   
 
-Customers with active Software Assurance (SA) on System Center Configuration Manager licenses, or with equivalent subscription rights as of October 1, 2016, have rights to use the October 2016 version 1606 release of System Center Configuration Manager. Customers with rights to System Center Configuration Manager on or after October 1, 2016, will find two licensed options upon installation: Current Branch and Long-Term Servicing Branch (LTSB).
+Customers with active Software Assurance (SA) on Configuration Manager licenses, or with equivalent subscription rights as of October 1, 2016, have rights to use the October 2016 version 1606 release of Configuration Manager. Customers with rights to Configuration Manager on or after October 1, 2016, will find two licensed options upon installation: current branch and long-term servicing branch (LTSB).
 
 Customers that have perpetual rights to System Center Configuration Manager, or that allow SA or subscription to lapse after October 1, can install the version of System Center Configuration Manager LTSB that is current at the time of lapse.
 

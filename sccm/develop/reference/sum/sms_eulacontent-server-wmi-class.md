@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_EULAContent Server WMI Class
-The `SMS_EULAContent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that provides information about optional configuration item content associated with Microsoft Software License Terms.  
+The `SMS_EULAContent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides information about optional configuration item content associated with Microsoft Software License Terms.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

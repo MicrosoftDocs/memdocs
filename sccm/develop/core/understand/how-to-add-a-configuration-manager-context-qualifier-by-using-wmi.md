@@ -12,9 +12,9 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Add a Configuration Manager Context Qualifier by Using WMI
-In System Center Configuration Manager, you add context qualifiers to a connection ([SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)) or object ([SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)) by creating a [SWbemNamedValueSet](https://msdn.microsoft.com/library/aa393732.aspx) value set to hold the context qualifiers. You then provide the [SWbemNamedValueSet](https://msdn.microsoft.com/library/aa393732.aspx) value set as a parameter to connection and object methods.  
+In Configuration Manager, you add context qualifiers to a connection ([SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)) or object ([SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)) by creating a [SWbemNamedValueSet](https://msdn.microsoft.com/library/aa393732.aspx) value set to hold the context qualifiers. You then provide the [SWbemNamedValueSet](https://msdn.microsoft.com/library/aa393732.aspx) value set as a parameter to connection and object methods.  
 
- In System Center Configuration Manager, you can provide your application name (ApplicationName), computer name (MachineName) and locale identifier (LocaleID).  
+ in Configuration Manager, you can provide your application name (ApplicationName), computer name (MachineName) and locale identifier (LocaleID).  
 
  In most cases, context qualifiers are not required. The main exception is accessing the site control file where they are needed to set up session information. For more information, see [About the Configuration Manager Site Control File](../../../develop/core/understand/about-the-configuration-manager-site-control-file.md).  
 

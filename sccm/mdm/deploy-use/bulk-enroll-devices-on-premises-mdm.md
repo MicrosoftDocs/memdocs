@@ -1,7 +1,7 @@
 ---
 title: "Bulk-enroll devices for On-premises MDM"
 titleSuffix: "Configuration Manager"
-description: "Bulk-enroll devices in an automated way with On-premises Mobile Device Management in System Center Configuration Manager."
+description: "Bulk-enroll devices in an automated way with On-premises Mobile Device Management in Configuration Manager."
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to bulk-enroll devices with On-premises Mobile Device Management in System Center Configuration Manager
+# How to bulk-enroll devices with On-premises Mobile Device Management in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
-Bulk enrollment in System Center Configuration Manager On-premises Mobile Device Management is a more automated means for  enrolling devices, as compared to user enrollment, which requires users to enter their credentials to enroll the device.  Bulk enrollment uses an enrollment package to authenticate the device during enrollment. The package (a .ppkg file) contains a certificate profile and optionally a Wi-Fi profile if the device needs intranet connectivity to support enrollment.  
+Bulk enrollment in Configuration Manager On-premises Mobile Device Management is a more automated means for  enrolling devices, as compared to user enrollment, which requires users to enter their credentials to enroll the device.  Bulk enrollment uses an enrollment package to authenticate the device during enrollment. The package (a .ppkg file) contains a certificate profile and optionally a Wi-Fi profile if the device needs intranet connectivity to support enrollment.  
 
 > [!NOTE]  
 >  The current branch of Configuration Manager supports enrollment in On-premises Mobile Device Management for devices running the following operating systems:  
@@ -48,12 +48,12 @@ The following tasks explain how to bulk-enroll computers and devices for On\-pre
 
  As part of preparing the system for On\-premises Mobile Device Management, you export a root certificate that you can use in the enrollment package's certificate profile. For instructions on how to get the trusted root certificate, see [Export the certificate with the same root as the web server certificate](../../mdm/get-started/set-up-certificates-on-premises-mdm.md#bkmk_exportCert).  
 
- Use the exported root certificate to create a certificate profile. For instructions, see [How to create certificate profiles in System Center Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).  
+ Use the exported root certificate to create a certificate profile. For instructions, see [How to create certificate profiles](../../protect/deploy-use/create-certificate-profiles.md).  
 
 ##  <a name="CreateWifi"></a> Create a Wi-Fi profile  
  The other component of the package used for bulk enrollment is a Wi-Fi profile. Some devices might not have the network connectivity needed to support enrollment until a network settings are provisioned. Including a Wi-Fi profile in the enrollment package provides a means for  establishing network connectivity for the device.  
 
- To create a Wi-Fi profile in Configuration Manager, follow the instructions in [How to create Wi-Fi profiles in System Center Configuration Manager](../../protect/deploy-use/create-wifi-profiles.md).  
+ To create a Wi-Fi profile in Configuration Manager, follow the instructions in [How to create Wi-Fi profiles](../../protect/deploy-use/create-wifi-profiles.md).  
 
 > [!IMPORTANT]  
 >Keep the following two issues in mind when creating a Wi-Fi profile for bulk enrollment:

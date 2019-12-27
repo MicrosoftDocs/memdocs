@@ -69,4 +69,4 @@ This section lists the changes that have been made since Configuration Manager 2
 ## See also
 
 - [Technical Publications for Configuration Manager](/sccm/index)
-- [Exploring your System Center Configuration Manager and Microsoft Intune (Hybrid) data on Power BI Dashboard](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/Exploring-your-System-Center-Configuration-Manager-and-Microsoft/ba-p/273970)
+- [Exploring your Configuration Manager and Microsoft Intune (Hybrid) data on Power BI Dashboard](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/Exploring-your-System-Center-Configuration-Manager-and-Microsoft/ba-p/273970)

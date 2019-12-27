@@ -1,7 +1,7 @@
 ---
 title: Introduction to software updates
 titleSuffix: "Configuration Manager"
-description: "Learn the basics of software updates in System Center Configuration Manager."
+description: "Learn the basics of software updates in Configuration Manager."
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -12,11 +12,11 @@ ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
 ms.collection: M365-identity-device-management
 ---
-# Introduction to software updates in System Center Configuration Manager
+# Introduction to software updates in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Software updates in System Center Configuration Manager provides a set of tools and resources that can help manage the complex task of tracking and applying software updates to client computers in the enterprise. An effective software update management process is necessary to maintain operational efficiency, overcome security issues, and maintain the stability of the network infrastructure. However, because of the changing nature of technology and the continual appearance of new security threats, effective software update management requires consistent and continual attention.  
+Software updates in Configuration Manager provides a set of tools and resources that can help manage the complex task of tracking and applying software updates to client computers in the enterprise. An effective software update management process is necessary to maintain operational efficiency, overcome security issues, and maintain the stability of the network infrastructure. However, because of the changing nature of technology and the continual appearance of new security threats, effective software update management requires consistent and continual attention.  
 
 For an example scenario that shows how you might deploy software updates in your environment, see [Example scenario to deploy security software updates](../deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md).  
 

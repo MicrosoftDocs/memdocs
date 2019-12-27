@@ -12,9 +12,9 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Flowchart - Download updates for System Center Configuration Manager
+# Flowchart - Download updates for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This data flow displays the process by which a site with an on-line  service connection point downloads in-console updates.  
 

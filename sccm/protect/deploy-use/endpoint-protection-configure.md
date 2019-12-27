@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Configure Endpoint Protection
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Before you can use Endpoint Protection to manage security and malware on Configuration Manager client computers, you must perform the configuration steps detailed in this article.  
 

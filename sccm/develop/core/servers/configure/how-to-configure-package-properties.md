@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Configure Package Properties
-The following example shows how to configure the properties of an existing package, in System Center Configuration Manager, by using the `SMS_Package` class.  
+The following example shows how to configure the properties of an existing package, in Configuration Manager, by using the `SMS_Package` class.  
 
 ### To configure an existing package  
 

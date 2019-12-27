@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Introduction to application management in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 In this article, you'll learn the basics before you start working with Configuration Manager applications.  
 

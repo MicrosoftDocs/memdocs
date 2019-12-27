@@ -138,4 +138,4 @@ Configuration Manager Windows Information Protection configuration items manage 
 For information about how to configure WIP with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
   
 ## See also  
-[Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md)
+[Configuration items for devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md)

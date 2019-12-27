@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMSFormatMessageCtl Class
-The `SMSFormatMessageCtl` class supports message formatting for the System Center Configuration Manager status system.  
+The `SMSFormatMessageCtl` class supports message formatting for the Configuration Manager status system.  
 
 ## Methods  
  The following table lists the methods in `SMSFormatMessageCtl`.  

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_ST_RecurWeekly Server WMI Class
-The `SMS_ST_RecurWeekly` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a schedule token for events that occur at weekly intervals, for example, every third week on Wednesday.  
+The `SMS_ST_RecurWeekly` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a schedule token for events that occur at weekly intervals, for example, every third week on Wednesday.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

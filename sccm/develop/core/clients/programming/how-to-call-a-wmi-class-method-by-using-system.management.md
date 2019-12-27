@@ -12,11 +12,11 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Call a WMI Class Method by Using System.Management
-To call a client Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, you call the `InvokeMethod` of the WMI class's `ManagementClass`.  
+To call a client Windows Management Instrumentation (WMI) class method, in Configuration Manager, you call the `InvokeMethod` of the WMI class's `ManagementClass`.  
 
 ### To call a WMI class method  
 
-1.  Set up a connection to the System Center Configuration Manager client WMI namespace. For more information, see [How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management](../../../../develop/core/clients/programming/how-to-connect-to-the-client-wmi-namespace.md).  
+1.  Set up a connection to the Configuration Manager client WMI namespace. For more information, see [How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management](../../../../develop/core/clients/programming/how-to-connect-to-the-client-wmi-namespace.md).  
 
 2.  Create a `ManagementClass` by using the `ManagementScope` path you obtain in step one, and also the name of the class you want to call a method on.  
 

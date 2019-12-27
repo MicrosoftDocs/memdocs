@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Console Extension Architecture
-The System Center Configuration Manager console architecture is built on the following four distinct layers.  
+The Configuration Manager console architecture is built on the following four distinct layers.  
 
 -   SMS Provider  
 

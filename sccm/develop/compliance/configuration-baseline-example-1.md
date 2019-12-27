@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Baseline Example 1
-The following Baseline Configuration Item Instance example references an application configuration item that checks whether the System Center Configuration Manager client and Notepad.exe are installed on systems that are running Windows XP SP2.  
+The following Baseline Configuration Item Instance example references an application configuration item that checks whether the Configuration Manager client and Notepad.exe are installed on systems that are running Windows XP SP2.  
 
 ## Configuration Baseline Example  
 

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # CIPackageInfo Structure
-In System Center Configuration Manager, the `CIPackageInfo` structure contains package information for a configuration item.  
+In Configuration Manager, the `CIPackageInfo` structure contains package information for a configuration item.  
 
 ## Syntax  
 

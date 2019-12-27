@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # How to configure boundary groups for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article includes procedures on how to configure boundary groups. Before you begin, make sure you understand boundary group concepts. For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).
 

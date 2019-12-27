@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_R_User Server WMI Class
-The `SMS_R_User` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that is generated dynamically at SMS Provider run time and contains data discovery for users within a System Center Configuration Manager site hierarchy.  
+The `SMS_R_User` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is generated dynamically at SMS Provider run time and contains data discovery for users within a Configuration Manager site hierarchy.  
 
  The following syntax is not defined in Managed Object Format (MOF) code.  
 
@@ -119,7 +119,7 @@ Class SMS_R_User : SMS_Resource
 
  Qualifiers: None  
 
- User name displayed in the System Center Configuration Manager console. Its format is UniqueUserName (FullUserName), where FullUserName is included only if it contains a value.  
+ User name displayed in the Configuration Manager console. Its format is UniqueUserName (FullUserName), where FullUserName is included only if it contains a value.  
 
  `NetworkOperatingSystem`  
  Data type: **String**  

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Operating System Deployment Driver Supported Platforms Schema
-The following reference section documents the XML schema that is used to specify the platforms that are supported by an operating system deployment driver in Microsoft System Center Configuration Manager.  
+The following reference section documents the XML schema that is used to specify the platforms that are supported by an operating system deployment driver in Microsoft Configuration Manager.  
 
  The schema is used in the `SMS_Driver` class `SDMPackageXML` property.  
 

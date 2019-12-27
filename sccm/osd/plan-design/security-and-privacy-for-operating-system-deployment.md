@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Security and privacy for OS deployment in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article contains security and privacy information for the OS deployment feature in Configuration Manager.  
 

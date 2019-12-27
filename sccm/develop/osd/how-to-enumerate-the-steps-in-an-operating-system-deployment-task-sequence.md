@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Enumerate the Steps in an Operating System Deployment Task Sequence
-You enumerate an operating system deployment task sequence, in System Center Configuration Manager, by using a recursive method to scan through the task sequence steps and groups.  
+You enumerate an operating system deployment task sequence, in Configuration Manager, by using a recursive method to scan through the task sequence steps and groups.  
 
 ### To enumerate the steps in a task sequence  
 

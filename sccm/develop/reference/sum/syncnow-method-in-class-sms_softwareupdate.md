@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SyncNow Method in Class SMS_SoftwareUpdate
-The `SyncNow` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, performs a manual synchronization of the Software Update Point.  
+The `SyncNow` Windows Management Instrumentation (WMI) class method, in Configuration Manager, performs a manual synchronization of the Software Update Point.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

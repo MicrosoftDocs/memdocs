@@ -12,11 +12,11 @@ author: mestew
 ms.author: mstewart
 ms.collection: M365-identity-device-management
 ---
-# Security and privacy for software updates in System Center Configuration Manager
+# Security and privacy for software updates in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-This topic contains security and privacy information for software updates in System Center Configuration Manager.  
+This topic contains security and privacy information for software updates in Configuration Manager.  
 
 ##  <a name="BKMK_Security_HardwareInventory"></a> Security best practices for software updates  
  Use the following security best practices when you deploy software updates to clients:  
@@ -46,7 +46,7 @@ This topic contains security and privacy information for software updates in Sys
 
      By default, Configuration Manager does not check the certificate revocation list (CRL) to verify the signature on software updates before they are deployed to computers. Checking the CRL each time a certificate is used offers more security against using a certificate that has been revoked, but it introduces a connection delay and incurs additional processing on the computer performing the CRL check.  
 
-     For more information about how to enable CRL checking for software updates, see [How to enable CRL checking for software updates in System Center Configuration Manager](../get-started/manage-settings-for-software-updates.md#crl-checking-for-software-updates).  
+     For more information about how to enable CRL checking for software updates, see [How to enable CRL checking for software updates](../get-started/manage-settings-for-software-updates.md#crl-checking-for-software-updates).  
 
 -   Configure WSUS to use a custom website.  
 
@@ -59,7 +59,7 @@ This topic contains security and privacy information for software updates in Sys
 
  Configuration Manager maintains state information about the software deployment process. State information is not encrypted during transmission or storage. State information is stored in the Configuration Manager database and it is deleted by the database maintenance tasks. No state information is sent to Microsoft.  
 
- The use of Configuration Manager software updates to install software updates on client computers might be subject to software license terms for those updates, which is separate from the Software License Terms for System Center Configuration Manager. Always review and agree to the Software Licensing Terms prior to installing the software updates by using Configuration Manager.  
+ The use of Configuration Manager software updates to install software updates on client computers might be subject to software license terms for those updates, which is separate from the Software License Terms for Configuration Manager. Always review and agree to the Software Licensing Terms prior to installing the software updates by using Configuration Manager.  
 
  Configuration Manager does not implement software updates by default and requires several configuration steps before information is collected.  
 

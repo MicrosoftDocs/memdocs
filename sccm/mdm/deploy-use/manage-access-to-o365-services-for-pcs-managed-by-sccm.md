@@ -1,7 +1,7 @@
 ---
 title: Manage access to Office 365 services
 titleSuffix: Configuration Manager
-description: Learn how to configure conditional access to Office 365 services for PCs that are managed by System Center Configuration Manager.
+description: Learn how to configure conditional access to Office 365 services for PCs that are managed by Configuration Manager.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,9 +12,9 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Manage access to Office 365 services for PCs managed by System Center Configuration Manager
+# Manage access to Office 365 services for PCs managed by Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 <!--1191496-->
 Configure conditional access to Office 365 services for PCs managed by Configuration Manager.  
@@ -25,7 +25,7 @@ Configure conditional access to Office 365 services for PCs managed by Configura
 > If you use conditional access on devices managed with the Configuration Manager client, to make sure they are still protected, first enable conditional access in Intune for those devices before you migrate. Enable co-management in Configuration Manager, move the compliance policy workload to Intune, and then complete your migration from Intune hybrid to Intune standalone. For more information, see [Conditional access with co-management](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
 
 
-For information on configuring conditional access for devices enrolled and managed by Microsoft Intune, see [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md). That article also covers devices that are domain joined and not evaluated for compliance.
+For information on configuring conditional access for devices enrolled and managed by Microsoft Intune, see [Manage access to services](../../protect/deploy-use/manage-access-to-services.md). That article also covers devices that are domain joined and not evaluated for compliance.
 
 > [!Note]  
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
@@ -69,7 +69,7 @@ For information on configuring conditional access for devices enrolled and manag
 
   -   For Windows 8.1 and Windows 10 PCs, you can use an Active Directory Group Policy to configure your devices to register automatically with Azure AD.  
 
-  -    For Windows 7 PCs, you must deploy the device registration software package to your Windows 7 PC through System Center Configuration Manager. The [Automatic device registration with Azure Active Directory for Windows Domain-Joined Devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) article has more details.  
+  -    For Windows 7 PCs, you must deploy the device registration software package to your Windows 7 PC through Configuration Manager. The [Automatic device registration with Azure Active Directory for Windows Domain-Joined Devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) article has more details.  
 
 - Must use Office 2013 or Office 2016 with modern authentication [enabled](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a).  
 
@@ -151,5 +151,5 @@ Users view compliance information in Software Center. When blocked due to noncom
 
 ## See also
 
-- [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
+- [Protect data and site infrastructure with Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
 - [Conditional access troubleshooting flow-chart for Configuration Manager](https://gallery.technet.microsoft.com/Conditional-access-fd747c1a?redir=0)

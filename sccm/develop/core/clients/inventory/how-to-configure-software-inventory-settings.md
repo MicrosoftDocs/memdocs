@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Configure Software Inventory Settings
-You set the Software Inventory Client Agent settings, in System Center Configuration Manager, by modifying the necessary site control file settings.  
+You set the Software Inventory Client Agent settings, in Configuration Manager, by modifying the necessary site control file settings.  
 
 ### To modify the Software Inventory Client Agent settings  
 

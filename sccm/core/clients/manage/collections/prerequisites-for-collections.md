@@ -1,7 +1,7 @@
 ---
 title: "Collections prerequisites"
 titleSuffix: "Configuration Manager"
-description: "Get prerequisites for using collections in System Center Configuration Manager."
+description: "Get prerequisites for using collections in Configuration Manager."
 ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,15 +12,15 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Prerequisites for collections in System Center Configuration Manager
+# Prerequisites for collections in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Collections in System Center Configuration Manager contain only dependencies within the product.  
+Collections in Configuration Manager contain only dependencies within the product.  
 
 ## Configuration Manager dependencies  
 
 |Dependency|More information|  
 |----------------|----------------------|  
-|Reporting services point|The reporting services point site system role must be installed before you can run reports for collections. For more information, see [Reporting in System Center Configuration Manager](../../../../core/servers/manage/reporting.md).|  
+|Reporting services point|The reporting services point site system role must be installed before you can run reports for collections. For more information, see [Reporting](../../../../core/servers/manage/reporting.md).|  
 |Specific security permissions must have been granted to manage collections|You must have the following security permissions to manage compliance settings:<br /><br /> - To create and manage collections: **Create**, **Delete**, **Modify**, **Modify Folder**, **Move Object**, **Read** and **Read Resource** for the **Collection** Object.<br /><br /> - To manage collection settings: **Modify Collection Setting** for the **Collection** Object.<br /><br /> The **Modify Folder** permission is required for all collection folders, including the root folder.|  

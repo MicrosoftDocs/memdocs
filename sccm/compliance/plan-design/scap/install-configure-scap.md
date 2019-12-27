@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Install and configure the SCAP extensions for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After [preparing the infrastructure](/sccm/compliance/plan-design/scap/about-scap#bkmk_prepare), you're ready to install and configure the SCAP extensions for Configuration Manager on the computer from which you want to run this process.
 

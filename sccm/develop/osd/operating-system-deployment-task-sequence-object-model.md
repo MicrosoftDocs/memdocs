@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Operating System Deployment Task Sequence Object Model
-In System Center Configuration Manager, operating system deployment task sequences are created and edited by using a Windows Management Instrumentation (WMI) class-based object model.  
+In Configuration Manager, operating system deployment task sequences are created and edited by using a Windows Management Instrumentation (WMI) class-based object model.  
 
 > [!CAUTION]
 >  Changing task sequences by updating the task sequence XML is not supported. You will only need the XML when exporting the task sequence to different site. The XML is stored in the [SMS_TaskSequencePackage Server WMI Class](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md)`Sequence` property.  

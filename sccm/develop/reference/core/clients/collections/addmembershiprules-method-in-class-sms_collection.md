@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # AddMembershipRules Method in Class SMS_Collection
-The `AddMembershipRules` (WMI) class method, in System Center Configuration Manager, adds multiple new rules to the `CollectionRules` property of the [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object.  
+The `AddMembershipRules` (WMI) class method, in Configuration Manager, adds multiple new rules to the `CollectionRules` property of the [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -38,7 +38,7 @@ SInt32 AddMembershipRules(
 
  Qualifiers: [out]  
 
- IDs corresponding to the rules. These are System Center Configuration Manager-generated query IDs for query rules. The IDs for direct rules are set to 0. Use `QueryID` to modify or delete a query membership rule.  
+ IDs corresponding to the rules. These are Configuration Manager-generated query IDs for query rules. The IDs for direct rules are set to 0. Use `QueryID` to modify or delete a query membership rule.  
 
 ## Return Values  
  An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  

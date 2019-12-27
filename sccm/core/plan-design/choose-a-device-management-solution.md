@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Choose a device management solution for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager offers different solutions for managing PCs, servers, and devices. Choose the solution that's right for your organization. Base your decision on the device platforms you need to manage and the management functionality you need.  
 
@@ -86,7 +86,7 @@ For more information, see [Manage mobile devices with Configuration Manager and 
 |Windows Embedded|Yes| | |  
 |Windows Mobile| | |Yes|  
 
-For a complete list of supported platforms, see [Supported operating systems for clients and devices for System Center Configuration Manager](configs/supported-operating-systems-for-clients-and-devices.md).
+For a complete list of supported platforms, see [Supported operating systems for clients and devices for Configuration Manager](configs/supported-operating-systems-for-clients-and-devices.md).
 
 Microsoft recommends using Intune to manage Android, iOS, and Windows 10 mobile devices. For more information, see [What is Microsoft Intune?](https://docs.microsoft.com/intune/what-is-intune)
 

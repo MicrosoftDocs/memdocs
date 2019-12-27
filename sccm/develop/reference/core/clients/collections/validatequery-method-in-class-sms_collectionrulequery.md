@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # ValidateQuery Method in Class SMS_CollectionRuleQuery
-The `ValidateQuery` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, verifies that the query collection rule is a valid WQL or Extended WQL statement.  
+The `ValidateQuery` Windows Management Instrumentation (WMI) class method, in Configuration Manager, verifies that the query collection rule is a valid WQL or Extended WQL statement.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

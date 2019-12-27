@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Manage Skype for Business Online access
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 Use conditional access policy for Skype for Business Online to manage access to Skype for Business Online, based on conditions you specify.  
@@ -100,4 +100,4 @@ Use conditional access policy for Skype for Business Online to manage access to 
 
 ### See also  
 
- [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/device-compliance-policies.md)
+ [Manage device compliance policies](../../protect/deploy-use/device-compliance-policies.md)

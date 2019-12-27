@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_CIRelation Server WMI Class
-The `SMS_CIRelation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that defines the relationship between two configuration items, for example, the superseding of one item by another.  
+The `SMS_CIRelation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines the relationship between two configuration items, for example, the superseding of one item by another.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

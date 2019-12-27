@@ -59,7 +59,7 @@ sections:
       title: Deploy with user-driven installation 
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-    - href: sccm-guide.md
+    - href: configmgr-guide.md
       title: Deploy to a new computer
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg

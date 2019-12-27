@@ -1,7 +1,7 @@
 ---
 title: "Publishing and the Active Directory schema"
 titleSuffix: "Configuration Manager"
-description: "Extend the Active Directory schema for System Center Configuration Manager to simplify the process of deploying and configuring clients."
+description: "Extend the Active Directory schema for Configuration Manager to simplify the process of deploying and configuring clients."
 ms.date: 09/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,15 +14,15 @@ ms.collection: M365-identity-device-management
 ---
 # Prepare Active Directory for site publishing
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-When you extend the Active Directory schema for System Center Configuration Manager, you introduce new structures to Active Directory that are used by Configuration Manager sites to publish key information in a secure location where clients can easily access it.  
+When you extend the Active Directory schema for Configuration Manager, you introduce new structures to Active Directory that are used by Configuration Manager sites to publish key information in a secure location where clients can easily access it.  
 
 It's a good idea to use Configuration Manager with an extended Active Directory schema when you manage on-premises clients. An extended schema can simplify the process of deploying and setting up clients. An extended schema also lets clients efficiently locate resources like content servers and additional services that the different Configuration Manager site system roles provide.  
 
--   If you're not familiar with what extended schema provides for a Configuration Manager deployment, you can read about [Schema extensions for System Center Configuration Manager](../../../core/plan-design/network/schema-extensions.md) to help you make this decision.  
+-   If you're not familiar with what extended schema provides for a Configuration Manager deployment, you can read about [Schema extensions for Configuration Manager](../../../core/plan-design/network/schema-extensions.md) to help you make this decision.  
 
--   When you don't use an extended schema, you can set up other methods like DNS and WINS to locate services and site system servers. These methods of service location require additional configurations and are not the preferred method for service location by clients. To learn more, read [Understand how clients find site resources and services for System Center Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md),  
+-   When you don't use an extended schema, you can set up other methods like DNS and WINS to locate services and site system servers. These methods of service location require additional configurations and are not the preferred method for service location by clients. To learn more, read [Understand how clients find site resources and services for Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md),  
 
 -   If your Active Directory schema was extended for Configuration Manager 2007 or System Center 2012 Configuration Manager, then you don't need to do more. The schema extensions are unchanged and will already be in place.  
 
@@ -99,4 +99,4 @@ To extend the schema for Configuration Manager:
 ## Step 3. Set up sites to publish to Active Directory Domain Services  
  After the container is set up, permissions are granted, and you have installed a Configuration Manager primary site, you can set up that site to publish data to Active Directory.  
 
- For more about publishing, see [Publish site data for System Center Configuration Manager](../../../core/servers/deploy/configure/publish-site-data.md).  
+ For more about publishing, see [Publish site data for Configuration Manager](../../../core/servers/deploy/configure/publish-site-data.md).  

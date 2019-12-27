@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Supported OS versions for Configuration Manager consoles
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 To support the Configuration Manager console, the following OS versions require a minimum .NET Framework version of 4.5.2. The exception is Windows 10, which requires a minimum of .NET Framework 4.6.  

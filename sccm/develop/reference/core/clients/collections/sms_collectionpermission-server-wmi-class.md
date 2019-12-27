@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_CollectionPermission Server WMI Class
-The `SMS_CollectionPermission` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, is used to query and define which collection scopes are associated to an RBAC role.  
+The `SMS_CollectionPermission` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, is used to query and define which collection scopes are associated to an RBAC role.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

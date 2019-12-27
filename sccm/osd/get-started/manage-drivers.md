@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Manage drivers in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager provides a driver catalog that you can use to manage the Windows device drivers in your Configuration Manager environment. Use the driver catalog to import device drivers into Configuration Manager, to group them in packages, and to distribute those packages to distribution points. Device drivers can be used when you install the full OS on the destination computer and when you use Windows PE in a boot image. Windows device drivers consist of a setup information (INF) file and any additional files that are required to support the device. When you deploy an OS, Configuration Manager obtains the hardware and platform information for the device from its INF file. 
 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Plan for site system servers and site system roles in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Each Configuration Manager site you install includes a site server that's a **site system server**. The site can also include additional site system servers on computers that are remote from the site server. Site system servers (the site server or a remote site system server) support **site system roles**.  
 

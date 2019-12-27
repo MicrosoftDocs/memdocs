@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1)
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 **MICROSOFT SOFTWARE LICENSE TERMS**  
 

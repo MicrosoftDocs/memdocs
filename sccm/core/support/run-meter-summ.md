@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Run Meter Summarization Tool
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The Run Meter Summarization Tool is one of the [Configuration Manager tools](/sccm/core/support/tools). Use it to immediately trigger the maintenance tasks for software metering summarization on primary sites. By default, these tasks run as scheduled in **Site Maintenance** tasks, which start after 12:00 AM every day. 
 

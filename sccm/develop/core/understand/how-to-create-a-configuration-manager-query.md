@@ -12,10 +12,10 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Create a Configuration Manager Query
-In System Center Configuration Manager, you create an `SMS_Query`-based query by creating an instance of `SMS_Query`. The `SMS_Query` class `Expression` object defines a WQL query. If you want to limit the query results to a specific collection, specify the collection identifier in the `LimitToCollectionID` property.  
+In Configuration Manager, you create an `SMS_Query`-based query by creating an instance of `SMS_Query`. The `SMS_Query` class `Expression` object defines a WQL query. If you want to limit the query results to a specific collection, specify the collection identifier in the `LimitToCollectionID` property.  
 
 > [!NOTE]
->  When you create a query, it is displayed in the System Center Configuration Manager console under **Queries**.  
+>  When you create a query, it is displayed in the Configuration Manager console under **Queries**.  
 
 ### To create a query  
 

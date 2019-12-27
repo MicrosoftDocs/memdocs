@@ -12,23 +12,23 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Install site system roles for System Center Configuration Manager
+# Install site system roles for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-The  System Center Configuration Manager console has two wizards you can use to install site system roles:  
+The  Configuration Manager console has two wizards you can use to install site system roles:  
 
 -   **Add Site System Roles Wizard**: Use this wizard to add site system roles to an existing site system server in the site.  
 
 -   **Create Site System Server Wizard**: Use this wizard to specify a new server as a site system server, and then install one or more site system roles on the server. This wizard is the same as the **Add Site System Roles Wizard**, except that on the first page, you must specify the name of the server to use and the site in which you want to install it.  
 
-When you install a site system role on a remote computer (including an instance of the SMS Provider), the computer account of the remote computer is added to a local group on the site server. When the site is installed on a domain controller, the group on the site server is a domain group instead of a local group. In this case, the remote site system role is not operational until either the site system role computer restarts, or the Kerberos ticket for the remote computer's account is refreshed. For more information, see [Accounts used in System Center Configuration Manager](../../../../core/plan-design/hierarchy/accounts.md).  
+When you install a site system role on a remote computer (including an instance of the SMS Provider), the computer account of the remote computer is added to a local group on the site server. When the site is installed on a domain controller, the group on the site server is a domain group instead of a local group. In this case, the remote site system role is not operational until either the site system role computer restarts, or the Kerberos ticket for the remote computer's account is refreshed. For more information, see [Accounts used](../../../../core/plan-design/hierarchy/accounts.md).  
 
 Just prior to installing the site system role, Configuration Manager checks the destination computer to ensure it meets the prerequisites for the site system roles you have selected. Understand the following about installing site system roles:  
 
 -   By default, when Configuration Manager installs a site system role, the installation files are installed on the first available NTFS formatted disk drive that has the most available free disk space. To prevent Configuration Manager from installing on specific drives, create an empty file named **no_sms_on_drive.sms**. Copy it to the root folder of the drive before you install the site system server.  
 
--   Configuration Manager uses the **Site System Installation Account** to install site system roles. You specify this account when you run the applicable wizard to create a new site system server or add site system roles to an existing site system server. By default, this account is the local system account of the site server computer, but you can specify a domain user account for use as the Site System Installation Account. For more information, see [Accounts used in System Center Configuration Manager](../../../../core/plan-design/hierarchy/accounts.md).  
+-   Configuration Manager uses the **Site System Installation Account** to install site system roles. You specify this account when you run the applicable wizard to create a new site system server or add site system roles to an existing site system server. By default, this account is the local system account of the site server computer, but you can specify a domain user account for use as the Site System Installation Account. For more information, see [Accounts used](../../../../core/plan-design/hierarchy/accounts.md).  
 
 ##  <a name="bkmk_Install"></a> To install site system roles on an existing site system server  
 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Frequently asked questions about the cloud management gateway
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article answers your frequently asked questions about the cloud management gateway. For more information, see [plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
 

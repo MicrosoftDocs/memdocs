@@ -12,11 +12,11 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Prerequisite Checker for System Center Configuration Manager
+# Prerequisite Checker for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
- Before you run Setup to install or upgrade a System Center Configuration Manager site, or before you install a site system role on a new server, you can use this stand-alone application (**Prereqchk.exe**) from the version of Configuration Manager that you want use to verify server readiness. Use Prerequisite Checker to identify and fix problems that would block a site or site system role installation.  
+ Before you run Setup to install or upgrade a Configuration Manager site, or before you install a site system role on a new server, you can use this stand-alone application (**Prereqchk.exe**) from the version of Configuration Manager that you want use to verify server readiness. Use Prerequisite Checker to identify and fix problems that would block a site or site system role installation.  
 
 > [!NOTE]  
 >  Prerequisite Checker always runs as part of Setup.  
@@ -34,7 +34,7 @@ When you run Prerequisite Checker at a command prompt and specify specific comma
 -   Prerequisite Checker performs only the checks that are associated with the site server or site systems that you specify in the command line.  
 -   To check a remote computer, your user account must have Administrator rights to the remote computer.  
 
-For more information about the checks that Prerequisite Checker performs, see [List of prerequisite checks for System Center Configuration Manager](../../../../core/servers/deploy/install/list-of-prerequisite-checks.md).  
+For more information about the checks that Prerequisite Checker performs, see [List of prerequisite checks for Configuration Manager](../../../../core/servers/deploy/install/list-of-prerequisite-checks.md).  
 
 ## Copy Prerequisite Checker files to another computer  
 

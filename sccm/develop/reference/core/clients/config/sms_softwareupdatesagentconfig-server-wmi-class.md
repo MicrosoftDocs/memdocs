@@ -88,7 +88,7 @@ Class SMS_SoftwareUpdatesAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- This property is deprecated in System Center Configuration Manager.  
+ This property is deprecated in Configuration Manager.  
 
  `BrandingTitle`  
  Data type: `String`  
@@ -97,7 +97,7 @@ Class SMS_SoftwareUpdatesAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- This property is deprecated in System Center Configuration Manager.  
+ This property is deprecated in Configuration Manager.  
 
  `ContentDownloadTimeout`  
  Data type: `UInt32`  
@@ -232,7 +232,7 @@ Class SMS_SoftwareUpdatesAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- This property is deprecated in System Center Configuration Manager.  
+ This property is deprecated in Configuration Manager.  
 
  `UserJobPerDPInactivityTimeout`  
  Data type: `UInt32`  

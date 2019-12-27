@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Change your MDM authority to Intune standalone
 
-*Applies to: System Center Configuration Manager (Current Branch)*    
+*Applies to: Configuration Manager (current branch)*    
 
 You can change an existing Microsoft Intune tenant configured from the Configuration Manager console (hybrid MDM) to Intune standalone. Changing the tenant-level MDM authority to Intune is the final phase in the process to [migrate hybrid MDM users and devices to Intune standalone](migrate-hybridmdm-to-intunesa.md) in the cloud-only configuration.    
 

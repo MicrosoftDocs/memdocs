@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Enroll user-owned devices for hybrid deployments with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 User-owned devices can be brought into management by enrolling them, a process often called "bring your own devices" or simply "BYOD." Users do this by installing the Company Portal app and signing in on the device (iOS, macOS, and Android) or by adding a Work or School account to the device and joining a domain (Windows). This process enrolls the device with Intune, giving the user access to resources managed by Intune and letting Intune manage certain device settings, such as requiring a PIN.
 

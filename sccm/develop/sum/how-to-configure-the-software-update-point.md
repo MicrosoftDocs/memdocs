@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Configure the Software Update Point
-You configure the software update point, in System Center Configuration Manager, by modifying the site control file settings.  
+You configure the software update point, in Configuration Manager, by modifying the site control file settings.  
 
 ### To configure a software update point  
 

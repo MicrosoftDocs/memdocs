@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Delete a Security Scope
-The following example shows how to delete a security scope in System Center Configuration Manager by using the `SMS_SecuredCategory` class.  
+The following example shows how to delete a security scope in Configuration Manager by using the `SMS_SecuredCategory` class.  
 
 ### To delete a security scope  
 

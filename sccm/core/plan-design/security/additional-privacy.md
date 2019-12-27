@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Additional information about privacy for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 ## Updates and servicing
@@ -76,7 +76,7 @@ Asset Intelligence isn't enabled by default in Configuration Manager. Uploading 
 
 Microsoft Cloud Protection Service was formerly known as Microsoft Active Protection Service or MAPS.
 
-The applicable products are System Center Endpoint Protection and the Endpoint Protection feature of System Center Configuration Manager (to manage System Center Endpoint Protection and Windows Defender for Windows 10). This feature isn't implemented for System Center Endpoint Protection for Linux or System Center Endpoint Protection for Mac.
+The applicable products are System Center Endpoint Protection and the Endpoint Protection feature of Configuration Manager (to manage System Center Endpoint Protection and Windows Defender for Windows 10). This feature isn't implemented for System Center Endpoint Protection for Linux or System Center Endpoint Protection for Mac.
 
 The Microsoft Cloud Protection Service antimalware community is a voluntary worldwide online community that includes System Center Endpoint Protection users. When you join Microsoft Cloud Protection Service, System Center Endpoint Protection automatically sends information to Microsoft. Microsoft uses the information to determine software to investigate for potential threats and to help improve the effectiveness of System Center Endpoint Protection. This community helps stop the spread of new malicious software infections. If a Microsoft Cloud Protection Service report includes details about malware or potentially unwanted software that the Endpoint Protection client may be able to remove, Microsoft Cloud Protection Service downloads the latest signature to address it. Microsoft Cloud Protection Service can also find "false positives" and fix them. (False positives are where something originally identified as malware turns out not to be.) 
 

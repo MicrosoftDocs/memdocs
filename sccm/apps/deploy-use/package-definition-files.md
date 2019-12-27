@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Package definition files
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Package definition files are scripts to help you automate the creation of [Packages and programs](/sccm/apps/deploy-use/packages-and-programs) in Configuration Manager. They provide all of the information that Configuration Manager needs to create a package and program, except for the location of package source files.
 

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Use Objects Passed to a Configuration Manager Form
-In System Center Configuration Manager, you use the [SmsPageControl.PropertyManager](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.smspagecontrol.propertymanager.aspx) object to access objects that are selected in the Configuration Manager console.  
+In Configuration Manager, you use the [SmsPageControl.PropertyManager](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.smspagecontrol.propertymanager.aspx) object to access objects that are selected in the Configuration Manager console.  
 
 > [!NOTE]
 >  If no object is selected in the Configuration Manager console, an empty PropertyManager object is created and passed to the form. This can be used for creating new objects.  

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Import a Windows Driver Described by an INF File into Configuration Manager
-You can import a Windows driver that is described by an information (.inf) file, in System Center Configuration Manager, by using the [CreateFromINF Method in Class SMS_Driver](../../develop/reference/osd/createfrominf-method-in-class-sms_driver.md).  
+You can import a Windows driver that is described by an information (.inf) file, in Configuration Manager, by using the [CreateFromINF Method in Class SMS_Driver](../../develop/reference/osd/createfrominf-method-in-class-sms_driver.md).  
 
 ### To import a Windows driver  
 

@@ -277,7 +277,7 @@ Class SMS_CollectionMember_a : SMS_BaseAssociation
 
  Qualifiers: None  
 
- System Center Configuration Manager unique ID of the member resource.  
+ Configuration Manager unique ID of the member resource.  
 
 ## Remarks  
  Class qualifiers for this class include:  

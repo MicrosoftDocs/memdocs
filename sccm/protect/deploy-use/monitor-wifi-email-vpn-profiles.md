@@ -1,7 +1,7 @@
 ---
 title: "Monitor Email, Wi-Fi and VPN profiles"
 titleSuffix: "Configuration Manager"
-description: "Learn how to monitor the compliance status of email, Wi-Fi, and VPN profiles in System Center Configuration Manager."
+description: "Learn how to monitor the compliance status of email, Wi-Fi, and VPN profiles in Configuration Manager."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -13,22 +13,22 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Monitor Email, Wi-Fi and VPN profiles in System Center Configuration Manager
+# Monitor Email, Wi-Fi and VPN profiles in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-After you have deployed System Center Configuration Manager Email, Wi-Fi or VPN profiles to users in your hierarchy, you can use the following procedures to monitor the compliance status of the profile:  
+After you have deployed Configuration Manager Email, Wi-Fi or VPN profiles to users in your hierarchy, you can use the following procedures to monitor the compliance status of the profile:  
 
 -   [How to View Compliance Results in the Configuration Manager Console](#BKMK_console)  
 
 -   [How to View Compliance Results by Using Reports](#BKMK_Reports)  
 
 ##  <a name="BKMK_console"></a> How to View Compliance Results in the Configuration Manager Console  
- Use this procedure to view details about the compliance of deployed profiles in the System Center Configuration Manager console.  
+ Use this procedure to view details about the compliance of deployed profiles in the Configuration Manager console.  
 
 #### To view compliance results in the Configuration Manager console  
 
-1.  In the System Center Configuration Manager console, click **Monitoring**.  
+1.  In the Configuration Manager console, click **Monitoring**.  
 
 2.  In the **Monitoring** workspace, click **Deployments**.  
 
@@ -52,9 +52,9 @@ After you have deployed System Center Configuration Manager Email, Wi-Fi or VPN 
 5.  On the **Deployment Status** page, you can review detailed information about the compliance of the deployed profile. A temporary node is created under the **Deployments** node that helps you find this information again quickly.  
 
 ##  <a name="BKMK_Reports"></a> How to View Compliance Results by Using Reports  
- Compliance settings, which include profiles in System Center Configuration Manager, also includes a number of built-in reports that let you monitor information about profiles. These reports have the report category of **Compliance and Settings Management**.  
+ Compliance settings, which include profiles in Configuration Manager, also includes a number of built-in reports that let you monitor information about profiles. These reports have the report category of **Compliance and Settings Management**.  
 
 > [!IMPORTANT]  
 >  You must use a wildcard (%) character when you use the parameters **Device filter** and **User filter** in the compliance settings reports.  
 
- For more information about how to configure reporting in System Center Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+ For more information about how to configure reporting in Configuration Manager, see [Reporting](../../core/servers/manage/reporting.md).  

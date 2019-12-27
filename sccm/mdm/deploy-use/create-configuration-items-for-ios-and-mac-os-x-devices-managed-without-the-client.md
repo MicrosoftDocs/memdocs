@@ -1,7 +1,7 @@
 ---
 title: "Create configuration items for iOS and macOS devices managed with Intune"
 titleSuffix: "Configuration Manager"
-description: "Use the System Center Configuration Manager iOS and macOS configuration item to manage settings for iOS and macOS devices."
+description: "Use the Configuration Manager iOS and macOS configuration item to manage settings for iOS and macOS devices."
 ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to create configuration items for iOS and macOS devices managed with Intune
 
-Use the System Center Configuration Manager **iOS and macOS** configuration item to manage settings  for iOS and macOS devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
+Use the Configuration Manager **iOS and macOS** configuration item to manage settings  for iOS and macOS devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
   
 ## Create an iOS and macOS configuration item  
   
@@ -193,7 +193,7 @@ Use the System Center Configuration Manager **iOS and macOS** configuration item
 |Setting name|Details|  
 |------------------|-------------|  
 |**User to accept untrusted TLS certificates**|If **Allowed**, lets the user accept these certificates. If **Prohibited**, automatically rejects untrusted certificates.|
-|**Allow Activation Lock (supervised mode only)**|Use this setting to enable iOS Activation Lock on **supervised** iOS devices that you manage. For more information about Activation Lock, see [Manage iOS Activation Lock with System Center Configuration Manager](../../mdm/deploy-use/manage-ios-activation-lock.md).
+|**Allow Activation Lock (supervised mode only)**|Use this setting to enable iOS Activation Lock on **supervised** iOS devices that you manage. For more information about Activation Lock, see [Manage iOS Activation Lock with Configuration Manager](../../mdm/deploy-use/manage-ios-activation-lock.md).
 |**Lock screen control center**|Controls whether the control center app can be accessed when the device is locked.|  
 |**Lock screen notification view**|Controls whether notifications can be viewed when the device is locked.|  
 |**Lock screen today view**|Controls whether the Today view can be seen when the device is locked.|  
@@ -250,7 +250,7 @@ Use the System Center Configuration Manager **iOS and macOS** configuration item
   
 - **Summary of Users who have Noncompliant Apps** - Displays information about users that have apps installed that are not compliant with a policy you specified.  
   
-  For information about how to use reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+  For information about how to use reports, see [Reporting](../../core/servers/manage/reporting.md).  
   
 ###  Compliant and noncompliant apps (macOS)  
  Let’s you specify a list of macOS apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
@@ -291,7 +291,7 @@ Use the System Center Configuration Manager **iOS and macOS** configuration item
   
 - **Summary of Users who have Noncompliant Apps** - Displays information about users that have apps installed that are not compliant with a policy you specified.  
   
-  For information about how to use reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+  For information about how to use reports, see [Reporting](../../core/servers/manage/reporting.md).  
   
 ### iOS and macOS custom profile settings  
  Use **iOS and macOS Custom Profiles** to deploy settings that you created using the [Apple Configurator tool](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) to iOS and macOS devices. This tool lets you create many settings that control the operation of these devices and export them to a configuration profile. You can then import this configuration profile into an iOS and macOS custom profile and deploy the settings to users and devices in your organization.  
@@ -403,4 +403,4 @@ Use the System Center Configuration Manager **iOS and macOS** configuration item
      -   **Critical with event** Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
   
 ## See Also  
- [Configuration items for devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)
+ [Configuration items for devices managed without the Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

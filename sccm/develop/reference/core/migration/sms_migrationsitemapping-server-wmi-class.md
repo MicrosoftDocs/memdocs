@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_MigrationSiteMapping Server WMI Class
-The `SMS_MigrationSiteMapping` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a mapping between the Configuration Manager source site and the System Center Configuration Manager top site.  
+The `SMS_MigrationSiteMapping` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a mapping between the Configuration Manager source site and the Configuration Manager top site.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

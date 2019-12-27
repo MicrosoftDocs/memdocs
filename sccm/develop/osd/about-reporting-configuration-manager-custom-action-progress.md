@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About Reporting Configuration Manager Custom Action Progress
-While a custom action is running on a System Center Configuration Manager client, it can report progress information that is used to display a progress indicator.  
+While a custom action is running on a Configuration Manager client, it can report progress information that is used to display a progress indicator.  
 
  You use the COM automation interface, [IProgressUI::ShowActionProgress](../../develop/reference/core/clients/client-classes/iprogressui--showactionprogress-method.md), to report progress information to the task sequence environment and to show a progress indicator.  
 

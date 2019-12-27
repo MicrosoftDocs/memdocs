@@ -12,9 +12,9 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Manage volume-purchased iOS apps with System Center Configuration Manager
+# Manage volume-purchased iOS apps with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 
@@ -117,7 +117,7 @@ You can fully sync the data held by Apple with Configuration Manager at any time
 
  This report shows the name of each application together with the total number of licenses that you bought, the number of licenses available, and more.  
 
- For help with running Configuration Manager reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+ For help with running Configuration Manager reports, see [Reporting](../../core/servers/manage/reporting.md).  
 
 
 

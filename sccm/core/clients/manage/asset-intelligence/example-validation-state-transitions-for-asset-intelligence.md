@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Example validation state transitions for Asset Intelligence
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Asset Intelligence validation states in Configuration Manager are not static and can change from administrative actions that you take to affect the data that are stored in the Asset Intelligence catalog. This topic provides examples for possible validation state transitions.
 

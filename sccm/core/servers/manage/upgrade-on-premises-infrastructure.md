@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Upgrade on-premises infrastructure that supports Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the information in this article to help you upgrade the server infrastructure that runs Configuration Manager.  
 

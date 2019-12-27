@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Read User-Defined Status Messages
-In System Center Configuration Manager, you can read user-defined status messages, on the site server, by querying the SMS Provider.  
+In Configuration Manager, you can read user-defined status messages, on the site server, by querying the SMS Provider.  
 
 ### To read a user-defined status messages  
 

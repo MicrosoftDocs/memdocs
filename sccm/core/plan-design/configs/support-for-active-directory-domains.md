@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Support for Active Directory domains in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 All Configuration Manager site systems must be members of a supported Active Directory domain. Configuration Manager client computers can be domain members or workgroup members.  
 

@@ -11,7 +11,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Report Action
-The report action displays a System Center Configuration Manager report in the Configuration Manager console.  
+The report action displays a Configuration Manager report in the Configuration Manager console.  
 
  The following attributes and elements are specific to an action that opens a report box:  
 

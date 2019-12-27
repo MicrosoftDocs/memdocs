@@ -1,7 +1,7 @@
 ---
 title: "Create configuration items for Android and Samsung KNOX Standard devices managed with Intune"
 titleSuffix: "Configuration Manager"
-description: "Use the System Center Configuration Manager Android and Samsung KNOX Standard configuration item to manage settings for devices."
+description: "Use the Configuration Manager Android and Samsung KNOX Standard configuration item to manage settings for devices."
 ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,9 +12,9 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client
+# How to create configuration items for Android and Samsung KNOX devices managed without the Configuration Manager client
 
-Use the System Center Configuration Manager **Android and Samsung KNOX** configuration item to manage settings for Android and Samsung KNOX devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
+Use the Configuration Manager **Android and Samsung KNOX** configuration item to manage settings for Android and Samsung KNOX devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
 
 ## Create an Android and Samsung KNOX configuration item  
 
@@ -202,7 +202,7 @@ You can use one of the following reports to monitor compliant and noncompliant a
 
 - **Summary of Users who have Noncompliant Apps**. Shows information about users who have apps installed that are not compliant with a policy you specified.  
 
-For information about how to use reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+For information about how to use reports, see [Reporting](../../core/servers/manage/reporting.md).  
 
 ## See also  
-[Configuration items for devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)
+[Configuration items for devices managed without the Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_Group Server WMI Class
-The `SMS_Group` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a resource group and serves as the abstract base class for [SMS_G_System Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system-server-wmi-class.md).  
+The `SMS_Group` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a resource group and serves as the abstract base class for [SMS_G_System Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system-server-wmi-class.md).  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -36,7 +36,7 @@ Class SMS_Group : SMS_BaseClass
 
  Qualifiers: None  
 
- System Center Configuration Manager-supplied ID that uniquely identifies a client resource. The default value is 0. This ID is unique only for the site.  
+ Configuration Manager-supplied ID that uniquely identifies a client resource. The default value is 0. This ID is unique only for the site.  
 
  Inventory items with the same `ResourceID` property are all found on the same client.  
 

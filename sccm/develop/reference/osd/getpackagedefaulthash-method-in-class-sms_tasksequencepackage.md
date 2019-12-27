@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # GetPackageDefaultHash Method in Class SMS_TaskSequencePackage
-The `GetPackageDefaultHash` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the hash of a System Center Configuration Manager package.  
+The `GetPackageDefaultHash` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the hash of a Configuration Manager package.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

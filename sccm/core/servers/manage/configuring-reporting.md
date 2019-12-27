@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Configure reporting in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Before you can create, modify, and run reports in the Configuration Manager console, there are several configuration tasks to complete. Use this article to help you configure reporting in your Configuration Manager hierarchy.  
 

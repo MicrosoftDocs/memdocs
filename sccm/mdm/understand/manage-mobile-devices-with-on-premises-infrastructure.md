@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # On-premises MDM in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager on-premises mobile device management (MDM) is a device management solution that relies on the built-in management capabilities of device OS. This feature is based on the Open Mobile Alliance (OMA) Device Management (DM) standard. It uses your organization's Configuration Manager infrastructure to manage and maintain the devices. On-premises MDM requires Microsoft Intune to set up the management capability, but it's only needed for the subscription. Intune is used at times to help notify devices to check in for policy changes, but it's not used to manage devices or store data about them.  
 

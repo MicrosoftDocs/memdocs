@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Microsoft Defender Advanced Threat Protection
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Starting with version 1606 of Configuration Manager (current branch), Endpoint Protection can help manage and monitor [Microsoft Defender Advanced Threat Protection (ATP)](https://aka.ms/technet-wdatp) (formerly known as Windows Defender ATP). Microsoft Defender ATP helps enterprises detect, investigate, and respond to advanced attacks on their networks.  Configuration Manager or Microsoft Intune policies can help you onboard and monitor managed Windows 10, version 1607 (build 14328) or later.
 
@@ -32,7 +32,7 @@ Microsoft Defender ATP is a service in the [Windows Defender Security Center](ht
 
  2.  Click on the **Machine Management** item under **Settings**, then select **Onboarding**. 
 
- 3.  Select **System Center Configuration Manager (current branch) version 1606** and click **Download package**.  
+ 3.  Select **Configuration Manager (current branch) version 1606** and click **Download package**.  
 
  4.  Download the compressed archive (.zip) file and extract the contents.
 
@@ -84,7 +84,7 @@ Microsoft Defender ATP is a service in the [Windows Defender Security Center](ht
 
 2.  Click on the **Machine Management** item under **Settings**, then select **Onboarding**.  
 
-3.  Select **System Center Configuration Manager (current branch) version 1606** and click **Endpoint offboarding**.  
+3.  Select **Configuration Manager (current branch) version 1606** and click **Endpoint offboarding**.  
 
 4.  Download the compressed archive (.zip) file and extract the contents. Offboarding files are valid for 30 days.
 

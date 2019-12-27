@@ -16,7 +16,7 @@ ms.collection: M365-identity-device-management
 
 # Troubleshoot the SCAP extensions for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The SCAP extensions for Configuration Manager are designed to work with the SCAP data streams intended for the SCAP validated tool with ACS capability to support USGCB. Typically, you won't experience problems with these USGCB SCAP data streams that are downloaded from the NIST website.
 

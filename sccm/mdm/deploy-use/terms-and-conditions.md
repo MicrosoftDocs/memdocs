@@ -1,7 +1,7 @@
 ---
 title: "Terms and Conditions"
 titleSuffix: "Configuration Manager"
-description: "Deploy terms and conditions to user groups in System Center Configuration Manager."
+description: "Deploy terms and conditions to user groups in Configuration Manager."
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,13 +12,13 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Add Terms and Conditions with System Center Configuration Manager
+# Add Terms and Conditions with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-You can deploy System Center Configuration Manager terms and conditions to user groups to explain how device enrollment, access to work resources, and using the Company Portal affect devices and users. Users must accept the terms and conditions before they can use the Company Portal to enroll and access their work.  
+You can deploy Configuration Manager terms and conditions to user groups to explain how device enrollment, access to work resources, and using the Company Portal affect devices and users. Users must accept the terms and conditions before they can use the Company Portal to enroll and access their work.  
 
- ## Working with terms and conditions policies in System Center Configuration Manager  
+ ## Working with terms and conditions policies in Configuration Manager  
  You can create and deploy multiple set of terms and conditions. You can also produce versions of the same terms and conditions in different languages and then deploy these to their appropriate groups.  
 
 ## To create a terms and conditions  

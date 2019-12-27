@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Support for Windows 10 in Configuration Manager  
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Learn about the Windows 10 versions that Configuration Manager supports, including:
 

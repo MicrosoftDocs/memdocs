@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Protect data with remote wipe, lock, or passcode reset by using Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager provides selective wipe, full wipe, remote lock, and passcode reset capabilities. Mobile devices can store sensitive corporate data and provide access to many corporate resources. To help protect devices, you can issue:  
 

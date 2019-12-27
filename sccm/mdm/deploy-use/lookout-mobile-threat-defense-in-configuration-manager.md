@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Manage access to company resource based on device, network, and application risk
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Control access from mobile devices to corporate resources based on risk assessment conducted by Lookout. Lookout is a device threat protection solution integrated with Microsoft Intune. The risk is based on data collected by the Lookout service. It gathers data from devices for OS vulnerabilities, installed malicious apps, and malicious network profiles. 
 

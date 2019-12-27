@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Application Configuration Item Example 1
-The following Application Configuration Item Instance example determines whether the System Center Configuration Manager client is installed on the system by using Microsoft Windows Installer-based detection.  
+The following Application Configuration Item Instance example determines whether the Configuration Manager client is installed on the system by using Microsoft Windows Installer-based detection.  
 
 ## Application Configuration Item Example  
 

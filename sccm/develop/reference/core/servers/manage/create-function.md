@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Create Function
-The `Create` function creates a status MIF file that System Center Configuration Manager uses to correlate the install status for an advertisement.  
+The `Create` function creates a status MIF file that Configuration Manager uses to correlate the install status for an advertisement.  
 
 ## Syntax  
 

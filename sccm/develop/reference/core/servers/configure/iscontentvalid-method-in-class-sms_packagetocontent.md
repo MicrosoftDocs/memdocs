@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # IsContentValid Method in Class SMS_PackageToContent
-The `IsContentValid` Windows Management (WMI) class method, in System Center Configuration Manager, determines if the package content is valid.  
+The `IsContentValid` Windows Management (WMI) class method, in Configuration Manager, determines if the package content is valid.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

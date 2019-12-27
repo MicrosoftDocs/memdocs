@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # How to use the Configuration Manager docs
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article provides the following sections with multiple resources and tips for using the Configuration Manager documentation library:  
 

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Unlock Method in Class SMS_TaskSequencePackage
-The `Unlock` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, sets the source site to the current site, unlocking the task sequence package.  
+The `Unlock` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site to the current site, unlocking the task sequence package.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

@@ -43,7 +43,7 @@ class CCM_SoftwareUpdatesManager();
  The `CCM_SoftwareUpdatesManager` class does not define any properties.  
 
 ## Remarks  
- This class is equivalent to the `ICCMUpdatesDeployment` class in System Center Configuration Manager 2007 COM SDK.  
+ This class is equivalent to the `ICCMUpdatesDeployment` class in Configuration Manager 2007 COM SDK.  
 
 ## Requirements  
 

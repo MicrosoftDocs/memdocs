@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # RunAuthListStatusSummarization Method in Class SMS_AuthorizationList
-The `RunAuthListStatusSummarization` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, updates summarized results for a particular update group.  
+The `RunAuthListStatusSummarization` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates summarized results for a particular update group.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

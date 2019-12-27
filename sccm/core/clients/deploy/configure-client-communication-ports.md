@@ -1,7 +1,7 @@
 ---
 title: "Configure client communication ports"
 titleSuffix: "Configuration Manager"
-description: "Set client communication ports in System Center Configuration Manager."
+description: "Set client communication ports in Configuration Manager."
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to configure client communication ports in System Center Configuration Manager
+# How to configure client communication ports in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-You can change the request port numbers that System Center Configuration Manager clients use to communicate with site systems that use HTTP and HTTPS for communication. Although HTTP or HTTPS is more likely to be already configured for firewalls, client notification that uses HTTP or HTTPS requires more CPU usage and memory on the management point computer than if you use a custom port number. You can also specify the site port number to use if you wake up clients by using traditional wake-up packets.  
+You can change the request port numbers that Configuration Manager clients use to communicate with site systems that use HTTP and HTTPS for communication. Although HTTP or HTTPS is more likely to be already configured for firewalls, client notification that uses HTTP or HTTPS requires more CPU usage and memory on the management point computer than if you use a custom port number. You can also specify the site port number to use if you wake up clients by using traditional wake-up packets.  
 
  When you specify HTTP and HTTPS request ports, you can specify both a default port number and an alternative port number. Clients automatically try the alternative port after communication fails with the default port. You can specify settings for HTTP and HTTPS data communication.  
 
@@ -37,9 +37,9 @@ You can change the request port numbers that System Center Configuration Manager
 
 - Reinstall the clients by using the Client Push Installation Wizard. Client push installation automatically configures clients with the current site port configuration. For more information about how to use the Client Push Installation Wizard, see [How to Install Configuration Manager Clients by Using Client Push](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).  
 
-- Reinstall the clients by using CCMSetup.exe and the client.msi installation properties of CCMHTTPPORT and CCMHTTPSPORT. For more information about these properties, see  [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
+- Reinstall the clients by using CCMSetup.exe and the client.msi installation properties of CCMHTTPPORT and CCMHTTPSPORT. For more information about these properties, see  [About client installation properties](../../../core/clients/deploy/about-client-installation-properties.md).  
 
-- Reinstall the clients by using a method that searches Active Directory Domain Services for Configuration Manager client installation properties. For more information, see [About client installation properties published to Active Directory Domain Services in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md).  
+- Reinstall the clients by using a method that searches Active Directory Domain Services for Configuration Manager client installation properties. For more information, see [About client installation properties published to Active Directory Domain Services](../../../core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md).  
 
   To reconfigure the port numbers for existing clients, you can also use the script PORTSWITCH.VBS that is provided with the installation media in the SMSSETUP\Tools\PortConfiguration folder.  
 

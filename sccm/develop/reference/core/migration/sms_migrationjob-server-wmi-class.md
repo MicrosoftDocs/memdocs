@@ -400,7 +400,7 @@ Class SMS_MigrationJob : SMS_BaseClass
 ## Remarks  
  Migration jobs are the object used by the server components to perform a migration task. There are three types of migration jobs: 1) collection migration job, 2) object migration job and 3) distribution point upgrade job. Job types are defined using the `Type` property.  
 
- Collection migration jobs include the collections and collection related information such as the limiting collection, the source site code and the destination site code. Object migration jobs can include objects such as packages, but cannot include the collections and the targeting objects such as advertisements. Distribution point upgrade jobs can upgrade a shared distribution point to a System Center Configuration Manager regular distribution point.  
+ Collection migration jobs include the collections and collection related information such as the limiting collection, the source site code and the destination site code. Object migration jobs can include objects such as packages, but cannot include the collections and the targeting objects such as advertisements. Distribution point upgrade jobs can upgrade a shared distribution point to a Configuration Manager regular distribution point.  
 
  For collection migration jobs and object migration jobs, the included objects’ entity ID is stored as an array of properties on the job, SourceCollectionIDs and SourceObjectIDs. For distribution point upgrade jobs, the settings for the new site system and distribution point are stored as XML in the property `AdditionalConfiguration`. All job types are scheduled by using the `ScheduleToken` property.  
 

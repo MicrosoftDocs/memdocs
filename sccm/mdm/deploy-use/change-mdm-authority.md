@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Change your MDM authority
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can change your MDM authority without having to contact Microsoft Support and without having to unenroll and reenroll your existing managed devices. This article provides the steps to change an existing Microsoft Intune tenant configured from the Configuration Manager console (hybrid) to Intune standalone. When you complete the steps in this article, devices are managed by Microsoft Intune in the [Azure portal](https://portal.azure.com). 
 

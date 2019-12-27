@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Content Library Transfer tool
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The Content Library Transfer tool is one of the [Configuration Manager tools](/sccm/core/support/tools). It transfers content from one disk drive to another. The tool is designed to run on distribution point site systems. It supports distribution points colocated with a site or remote site systems.  
 

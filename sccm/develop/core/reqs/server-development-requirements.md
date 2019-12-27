@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Server Development Requirements
-In System Center Configuration Manager, the SMS Provider and associated technologies can be programmed by using the following programming languages.  
+In Configuration Manager, the SMS Provider and associated technologies can be programmed by using the following programming languages.  
 
 ## Managed Code  
  The Configuration Manager SDK provides Microsoft .NET Framework libraries for accessing the SMS Provider and also for extending the Configuration Manager console.  
@@ -48,7 +48,7 @@ In System Center Configuration Manager, the SMS Provider and associated technolo
 
   For more information, see [About console extensions](/sccm/develop/core/servers/console/about-configuration-manager-console-extension).  
 
-  For specific information about deploying System Center Configuration Manager console extensions, see [Configuration Manager Console Extension Deployment](../../../develop/core/servers/console/console-extension-deployment.md)  
+  For specific information about deploying Configuration Manager console extensions, see [Configuration Manager Console Extension Deployment](../../../develop/core/servers/console/console-extension-deployment.md)  
 
 ## VBScript  
  You can use Windows Management Instrumentation (WMI) to access the SMS Provider.  
@@ -70,7 +70,7 @@ In System Center Configuration Manager, the SMS Provider and associated technolo
  For languages that are not based on the .NET Framework, use the VBScript samples as a starting point for accessing Configuration Manager through WMI.  
 
 > [!IMPORTANT]
->  For more information about general System Center Configuration Manager requirements, see [Supported Configurations for Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=276781).  
+>  For more information about general Configuration Manager requirements, see [Supported Configurations for Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=276781).  
 
 ## See Also  
  [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client-development-requirements.md)   

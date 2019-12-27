@@ -1,7 +1,7 @@
 ---
 title: Prepare for software updates management
 titleSuffix: "Configuration Manager"
-description: "To prepare to manage updates, complete these tasks to display compliance assessment data in the System Center Configuration Manager console."
+description: "To prepare to manage updates, complete these tasks to display compliance assessment data in the Configuration Manager console."
 ms.date: 10/06/2016
 ms.topic: conceptual
 ms.prod: configuration-manager
@@ -15,9 +15,9 @@ ms.collection: M365-identity-device-management
 
 # Prepare for software updates management
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Before the compliance assessment data of the software update displays in the System Center Configuration Manager console and before you can deploy software updates to client computers, you must complete the steps in the following sections.
+Before the compliance assessment data of the software update displays in the Configuration Manager console and before you can deploy software updates to client computers, you must complete the steps in the following sections.
 
 ## Step 1: Install a software update point  
 The software update point is required on the central administration site, or stand-alone primary site, and on primary sites to enable the software updates compliance assessment and to deploy software updates to clients. The software update point is optional on secondary sites. For details, see [Install a software update point](install-a-software-update-point.md)  

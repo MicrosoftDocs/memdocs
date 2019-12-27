@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_AIHardwareRequirements Server WMI Class
-The `SMS_AIHardwareRequirements` Windows Management Instrumentation (WMI) class, in System Center Configuration Manager, associates a software title with hardware requirements.  
+The `SMS_AIHardwareRequirements` Windows Management Instrumentation (WMI) class, in Configuration Manager, associates a software title with hardware requirements.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
