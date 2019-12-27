@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Plan a migration job strategy in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use migration jobs to configure the specific data that you want to migrate to your System Center Configuration Manager environment. Migration jobs identify the objects that you plan to migrate, and they run at the top-level site in your destination hierarchy. You can set up one or more migration jobs per source site. This lets you migrate all objects at one time or limited subsets of data with each job.  
 

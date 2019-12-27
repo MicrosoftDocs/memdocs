@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # How to upgrade clients on Mac computers in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Follow the high-level steps in this article to upgrade the client for Mac computers by using a Configuration Manager application. You can also download the Mac client installation file, copy it to a shared network location or a local folder on the Mac computer, and then instruct users to manually run the installation.  
 

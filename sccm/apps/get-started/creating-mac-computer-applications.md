@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Create Mac computer applications with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Keep the following considerations in mind when you create and deploy applications for Mac computers.  
 

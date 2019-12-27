@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Plan for and configure application management in Configuration Manager
 
-*Applies to: System Center Configuration Manager (current branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the information in this article to help you implement the necessary dependencies to deploy applications in Configuration Manager.  
 

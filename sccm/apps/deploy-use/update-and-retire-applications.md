@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Update and retire applications with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 It's likely that eventually you'll want to make changes to an application, uninstall an application, or replace an already deployed application with a new application. System Center Configuration Manager gives you these capabilities, to help you update and retire applications:  

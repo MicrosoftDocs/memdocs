@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Microsoft Store for Business in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager supports managing Microsoft Store for Business apps on Windows 10 devices that are enrolled with Microsoft Intune (hybrid configuration) in addition to Windows 10 devices running the Configuration Manager client.
 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Configure Microsoft Edge settings in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 <!-- 1357310 -->
 Starting in version 1802, for customers who use the [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) web browser on Windows 10 clients, create a Configuration Manager compliance settings policy to configure several Microsoft Edge settings. 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Enable third-party updates 
 
-*Applies to: System Center Configuration Manager*
+*Applies to: Configuration Manager (current branch)*
 
 Beginning with version 1806, the **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point (SUP), and then deploy them to clients.  <!--1357605, 1352101, 1358714-->
 

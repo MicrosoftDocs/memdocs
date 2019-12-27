@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Evaluate System Center Configuration Manager by building your own lab environment
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
  Learn how to create a lab environment to evaluate System Center Configuration Manager for use in your organization.  
 

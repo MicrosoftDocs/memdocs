@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Manage access to services in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use conditional access to specify conditions to help secure email and other services on devices enrolled with Microsoft Intune.  
 

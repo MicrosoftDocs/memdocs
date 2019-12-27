@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Additional information about privacy for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 ## Updates and servicing

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 ---
 # Use bootable media to deploy Windows over the network with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You may deploy the operating system when the destination computer starts using a bootable media deployment. The media contains a pointer to the task sequence, the operating system image, and other required content from the network. When the destination computer starts, the computer retrieves the items referenced in the pointer. With the bootable media free of content, you can update the target without having to replace it on the media.
 

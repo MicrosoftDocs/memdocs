@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Enable platform enrollment with System Center Configuration Manager and Microsoft Intune
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Different device platforms require additional configuration to enable device enrollment.
 - [iOS and Mac enrollment setup](enroll-hybrid-ios-mac.md): Get an Apple MDM Push certificate

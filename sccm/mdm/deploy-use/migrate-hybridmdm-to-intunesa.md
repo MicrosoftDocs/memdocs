@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Migrate hybrid MDM users and devices to Intune standalone
 
-*Applies to: System Center Configuration Manager (Current Branch)*    
+*Applies to: Configuration Manager (current branch)*    
 
 This article is to migrate from hybrid MDM to a cloud-only experience using Intune on Azure. 
 

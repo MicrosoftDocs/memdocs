@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Endpoint Protection
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Endpoint Protection manages antimalware policies and Windows Firewall security for client computers in your Configuration Manager hierarchy.  
 

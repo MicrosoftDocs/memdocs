@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Prerequisites for Asset Intelligence in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Asset Intelligence in System Center Configuration Manager has external dependencies and dependencies within the product.  
 

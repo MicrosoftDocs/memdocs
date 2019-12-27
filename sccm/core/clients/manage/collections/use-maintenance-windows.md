@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to use maintenance windows in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Maintenance windows enable you to define a time when Configuration Manager operations can be carried out on a device collection. You use maintenance windows to help ensure that client configuration changes occur during periods that don't affect productivity. Starting in Configuration Manager version 1806, your users can see when their next maintenance window is from the **Installation status** tab in the **Software Center**. <!--1358131-->
 

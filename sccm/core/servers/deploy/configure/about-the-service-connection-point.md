@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # About the service connection point in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The service connection point is a site system role that serves several important functions for the hierarchy. Before you set up the service connection point, understand and plan for its range of uses. Planning for usage might affect how you set up this site system role:  
 

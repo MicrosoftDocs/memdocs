@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Deploy and monitor SCAP compliance in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After you have [converted and imported](/sccm/compliance/plan-design/scap/install-configure-scap#bkmk_convert-and-import) the SCAP data stream files, see the following next steps:  
 

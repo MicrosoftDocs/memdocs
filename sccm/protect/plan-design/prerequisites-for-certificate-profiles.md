@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Prerequisites for certificate profiles in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 Certificate profiles in System Center Configuration Manager have external dependencies and dependencies in the product.  

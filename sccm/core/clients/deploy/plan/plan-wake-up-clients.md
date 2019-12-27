@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Plan how to wake up clients in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
  Configuration Manager supports traditional wake-up packets to wake up computers in sleep mode when you want to install required software, such as software updates and applications.
 

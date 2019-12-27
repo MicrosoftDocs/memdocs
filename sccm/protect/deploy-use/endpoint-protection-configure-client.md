@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Configure custom client settings for Endpoint Protection
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This procedure configures custom client settings for Endpoint Protection, which you can deploy to collections of devices in your hierarchy.
 

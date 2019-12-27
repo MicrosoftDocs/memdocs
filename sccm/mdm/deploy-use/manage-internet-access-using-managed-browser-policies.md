@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Manage Internet access using managed browser policies with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 In System Center Configuration Manager, you can deploy the Intune Managed Browser (a web browsing application) and associate the application with a managed browser policy. The managed browser policy sets up an allow list or a block list that restricts the websites that users of the managed browser can go to.  
 

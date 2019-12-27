@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How diagnostics and usage data is used for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Diagnostic and usage data that System Center Configuration Manager collects provides Microsoft nearly immediate feedback about how the product is working and is used to adjust future updates. We are also able to see configuration data that helps us engineer and test the configurations that are in production. For example:  
 

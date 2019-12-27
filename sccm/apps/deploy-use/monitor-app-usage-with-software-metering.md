@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Software metering in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This topic contains a reference for all of the operations you might perform when using System Center Configuration Manager software metering.
 

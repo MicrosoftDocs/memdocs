@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Enroll company-owned devices for hybrid deployments with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Organization or corporate-owned devices (COD) can be brought into management in a variety of ways depending upon the device and how it was purchased.  
 

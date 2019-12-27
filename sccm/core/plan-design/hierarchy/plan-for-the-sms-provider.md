@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Plan for the SMS Provider
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 To manage Configuration Manager, you use a Configuration Manager console that connects to an instance of the **SMS Provider**. By default, an SMS Provider installs on the site server when you install a central administration site or primary site.
 

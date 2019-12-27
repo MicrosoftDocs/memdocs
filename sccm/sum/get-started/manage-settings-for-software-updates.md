@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 #  <a name="BKMK_ManageSUSettings"></a> Manage settings for software updates  
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After you synchronize software updates in Configuration Manager, configure and verify the settings in the following sections.
 

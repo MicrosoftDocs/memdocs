@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to remotely administer a Windows client computer by using System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 Configuration Manager allows you to connect to client computers using **Configuration Manager Remote Control**. Before you begin to use remote control, ensure that you review the information in the following articles:  
 
 -   [Prerequisites for remote control in System Center Configuration Manager](/sccm/core/clients/manage/remote-control/prerequisites-for-remote-control)  

@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Uninstall applications with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 Take the following actions to uninstall an application you previously deployed.

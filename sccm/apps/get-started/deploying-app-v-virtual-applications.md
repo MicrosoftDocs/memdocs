@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Deploy App-V virtual applications with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (current branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you use Configuration Manager to manage virtual applications, you gain the following benefits:  
 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Enhanced HTTP
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 <!--1356889,1358460-->
 

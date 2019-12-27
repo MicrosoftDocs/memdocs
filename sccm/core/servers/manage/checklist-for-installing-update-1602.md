@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 ---
 # Checklist for installing update 1602 for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Before updating from System Center Configuration Manager version 1511 to version 1602, review the following information and checklist for actions to take before starting the update.  
 

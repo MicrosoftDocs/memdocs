@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Software updates maintenance
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can schedule and run WSUS cleanup tasks from the Configuration Manager console from the Software Update Point Component properties. When you first select to run the WSUS cleanup task, it will run after the next software updates synchronization.  
 

@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Removed and deprecated items for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article describes how to use the information about features, products, and operating systems that are removed from support for System Center Configuration Manager, or will be removed in a future update (deprecated). This article provides early notice about future changes that might affect your use of Configuration Manager.  
 

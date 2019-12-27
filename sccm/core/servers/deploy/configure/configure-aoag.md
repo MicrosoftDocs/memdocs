@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Configure SQL Server Always On availability groups for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the information in this article to configure and manage the availability groups you use with Configuration Manager.
 

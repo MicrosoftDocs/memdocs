@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Example scenario to deploy and monitor monthly software updates
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This topic provides an example scenario of how you can use software updates in System Center Configuration Manager to deploy and monitor the security software updates that Microsoft releases monthly.  
 

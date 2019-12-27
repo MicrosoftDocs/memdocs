@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Planning for reporting in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Reporting in System Center Configuration Manager provides a set of tools and resources that help you use the advanced reporting capabilities of SQL Server Reporting Services. Use the following sections to help you plan for reporting in Configuration Manager.  
 

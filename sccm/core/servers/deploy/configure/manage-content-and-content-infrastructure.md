@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Manage content and content infrastructure for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you are ready to set up and then manage your content management infrastructure for System Center Configuration Manager, use the information in the following topics:  
 

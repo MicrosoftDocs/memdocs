@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Exchange ActiveSync email profiles in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 By using Microsoft Intune and Exchange ActiveSync, you can set up devices with email profiles and restrictions. This lets your users access corporate email on their devices with minimal setup required on their part.  
 

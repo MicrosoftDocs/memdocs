@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Operations for migrating to System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 For migration in System Center Configuration Manager, you can migrate data and clients after you successfully gather data from a source site in a supported source hierarchy. Use the information in the following sections to create and run migration jobs to migrate data and clients, and then finish the migration process.  
 

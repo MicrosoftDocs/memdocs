@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Learn more about available updates for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 If you use a release version of System Center Configuration Manager, see [What's new in System Center Configuration Manager](https://technet.microsoft.com/library/mt622084.aspx)  
 

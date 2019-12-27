@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Modify your System Center Configuration Manager infrastructure
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After you install one or more sites, you might have need to modify configurations or take actions that affect the infrastructure you have deployed.  
 

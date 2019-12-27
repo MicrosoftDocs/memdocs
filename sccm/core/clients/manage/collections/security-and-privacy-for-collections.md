@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Security and privacy for collections in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This topic contains security best practices and privacy information for collections in System Center Configuration Manager.  
 

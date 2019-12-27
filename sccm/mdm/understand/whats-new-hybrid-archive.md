@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 ---
 # Past hybrid features with System Center Configuration Manager and Microsoft Intune
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article provides details on the past mobile device management (MDM) features available for hybrid deployments with System Center Configuration Manager and Microsoft Intune.  
 

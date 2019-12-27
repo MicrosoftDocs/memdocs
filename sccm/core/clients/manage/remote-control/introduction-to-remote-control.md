@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Introduction to remote control in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use remote control to remotely administer, provide assistance, or view any client computer in the hierarchy. You can use remote control to troubleshoot hardware and software configuration problems on client computers and to provide support. Configuration Manager supports the remote control of all workgroup computers and domain-joined computers that run supported operating systems for the Configuration Manager client. For more information, see [Supported operating systems for clients and devices for System Center Configuration Manager](../../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)
 

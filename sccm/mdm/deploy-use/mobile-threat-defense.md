@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Manage access to company resource based on device, network, and application risk
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Mobile Threat Defense connectors allow you to leverage your chosen Mobile Threat Defense vendor as a source of information for your compliance policies and conditional access rules. This allows you to add a layer of protection to your organizational resources such as Exchange and Sharepoint, specifically from compromised mobile devices.
 

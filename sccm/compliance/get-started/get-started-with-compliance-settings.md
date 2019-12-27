@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Get started with compliance settings in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Before creating Configuration Manager compliance settings, first learn about core concepts and understand how they work.  
 

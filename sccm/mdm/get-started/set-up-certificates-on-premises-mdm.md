@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 System Center Configuration Manager On\-premises Mobile Device Management requires the enrollment point, enrollment proxy point, distribution point, and device management point  site system roles to be set up for trusted communications with managed devices. Any site system server hosting one or more of those roles must have a unique PKI certificate bound to the web server on that system. A certificate with the same  root as the certificate on the servers most also be stored on managed devices to establish trusted communication with them.  
 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Troubleshooting tips for application deployments
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Typical problems with application deployments fall into one of the following categories:
 

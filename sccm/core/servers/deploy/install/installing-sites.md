@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Resources for installing System Center Configuration Manager sites
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The following topics can help you install System Center Configuration Manager or add sites to your existing Configuration Manager hierarchy.
 

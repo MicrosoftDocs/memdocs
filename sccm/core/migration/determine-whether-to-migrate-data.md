@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Determine whether to migrate data to System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 In System Center Configuration Manager, migration provides a process for transferring data and configurations that you've created from supported versions of Configuration Manager to your new hierarchy.  You can use this to:  
 

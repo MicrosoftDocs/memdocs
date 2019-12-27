@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 ---
 # Content source location scenarios in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Prior to version 1610, System Center Configuration Manager supported several settings that combined to define how and where clients find content when they are on a slow network. The possible combinations affect the content location clients use, and whether they can successfully use a fallback location when a preferred source for content is not available.  
 

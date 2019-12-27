@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Operations and maintenance for reporting in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After the infrastructure is in place for reporting in System Center Configuration Manager, there are a number of operations that you typically perform to manage reports and report subscriptions.  
 

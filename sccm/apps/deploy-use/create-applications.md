@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Create applications in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 A Configuration Manager application defines the metadata about application. An application has one or more deployment types. These deployment types include the installation files and information that are required to install software on devices. A deployment type also has rules, such as detection methods, and requirements. These rules specify when and how the client installs the software.  
 

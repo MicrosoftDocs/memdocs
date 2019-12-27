@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Protect apps using mobile application management policies in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 System Center Configuration Manager application management policies let you modify the functionality of apps that you deploy to help bring them in line with your company compliance and security policies. For example, you can restrict cut, copy, and paste operations within a restricted app, or configure an app to open all URLs inside a managed browser. App management policies support:  
 

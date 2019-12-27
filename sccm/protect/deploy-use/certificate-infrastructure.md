@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Configure certificate infrastructure
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Learn to configure certificate infrastructure in System Center Configuration Manager. Before you start, check for any prerequisites that are listed in [Prerequisites for certificate profiles in System Center Configuration Manager](../../protect/plan-design/prerequisites-for-certificate-profiles.md).  
 

@@ -13,7 +13,7 @@ ms.collection: M365-identity-device-management
 ---
 # Enable Lookout MTD connection in the Intune admin console
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article shows you how to enable the Lookout mobile threat defense (MTD) connection in Microsoft Intune. You should have already configured the Intune Connector in the Lookout console before doing this step. If you haven't already done so, do the steps described in [Set up your subscription with Lookout mobile threat defense](set-up-your-subscription-with-lookout.md).
 

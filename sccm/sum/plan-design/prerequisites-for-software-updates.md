@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Prerequisites for software updates in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article lists the prerequisites for software updates in System Center Configuration Manager. For each of the prerequisites, the external dependencies and internal dependencies are listed in separate tables.  
 

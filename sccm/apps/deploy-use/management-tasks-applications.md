@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Management tasks for System Center Configuration Manager applications
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the information in this article to help you manage System Center Configuration Manager applications and deployment types.  
 

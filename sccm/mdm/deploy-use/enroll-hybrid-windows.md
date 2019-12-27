@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This topic tells IT admins how they can enable their users to bring Windows PCs and mobile devices into management using Configuration Manager and Microsoft Intune.
 

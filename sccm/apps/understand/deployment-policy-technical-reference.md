@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Application Deployment Policy
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 ## Policy Creation
 

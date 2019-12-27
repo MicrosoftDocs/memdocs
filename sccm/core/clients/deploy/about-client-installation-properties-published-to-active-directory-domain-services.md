@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # About client installation properties published to Active Directory Domain Services
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you extend the Active Directory schema for Configuration Manager, and the site is published to Active Directory Domain Services, many client installation properties are published to Active Directory Domain Services. If a computer can locate these client installation properties, it can use them during Configuration Manager client deployment.  
 

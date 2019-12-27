@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Back up a Configuration Manager site
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Prepare backup and recovery approaches to avoid data loss. For Configuration Manager sites, a backup and recovery approach can help you to recover sites and hierarchies more quickly, and with the least data loss.  
 

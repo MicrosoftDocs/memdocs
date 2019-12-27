@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Schema extensions for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can extend the Active Directory schema to support Configuration Manager. This edits a forest's Active Directory schema to add a new container and several attributes that Configuration Manager sites use to publish key information in Active Directory where clients can securely use it. This information can simplify the deployment and configuration of clients and helps clients locate site resources like servers with deployed content or that provide different services to clients.  
 

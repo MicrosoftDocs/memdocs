@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Configure sites and hierarchies for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After you install your first Configuration Manager site or add additional sites to your hierarchy, use this checklist to ensure that you consider the most common configurations that affect both sites and hierarchies.  
 

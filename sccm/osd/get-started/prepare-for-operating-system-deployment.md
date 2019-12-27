@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Prepare for OS deployment in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 There are several things you must do in Configuration Manager before you can deploy operating systems. Use the following articles to prepare for OS deployment:  
 

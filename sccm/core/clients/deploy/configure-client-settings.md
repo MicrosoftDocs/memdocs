@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to configure client settings in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You manage all client settings in System Center Configuration Manager from  **Administration** > **Client Settings**. Modify the default settings when you want to configure settings for all users and devices in the hierarchy that do not have any custom settings applied. If you want to apply different settings to just some users or devices, create custom settings and deploy to collections.  
 

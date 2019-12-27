@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Enable Endpoint Protection malware definitions to download from a network share
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
  You can manually download the latest definition updates from Microsoft and then configure clients to download these definitions from a shared folder on the network. Users can also initiate definition updates when you use this update source.
 

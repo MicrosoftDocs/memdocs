@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Use cloud services with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager supports several cloud-based options. These can supplement your on-premises infrastructure, and can help solve business problems like:  
 

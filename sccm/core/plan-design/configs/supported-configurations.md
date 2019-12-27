@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Supported configurations for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 As an on-premises solution, System Center Configuration Manager makes use of your servers, clients, network configurations, and additional products like Microsoft Intune, SQL Server, and Azure.
 

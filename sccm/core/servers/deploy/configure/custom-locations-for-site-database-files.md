@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Custom locations for System Center Configuration Manager site database files
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
  System Center Configuration Manager supports custom locations for SQL Server database files.  
 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 ---
 # Install a new version of Windows on a new computer (bare metal) with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This topic provides the general steps in System Center Configuration Manager to install an operating system on a new  computer. For this scenario, you can choose from many different deployment methods, such as PXE, OEM, or stand-alone media. If you are unsure that this is the right operating system deployment scenario for you, see [Scenarios to deploy enterprise operating systems](scenarios-to-deploy-enterprise-operating-systems.md).  
 

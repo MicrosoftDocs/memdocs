@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Example Asset Intelligence general license import file in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The example information in this topic can be used to create a sample general software license file to import software licenses into the Asset Intelligence catalog by using the Import Software License Wizard. You can copy and paste the following table into a new Microsoft Excel spreadsheet and save it with a .csv file name extension to be used as an example general software license import file for testing purposes. When creating the license import file, all header fields are required while only Name, Publisher, Version, and EffectiveQuantity data values are required in the spreadsheet. For more information about importing software licenses to the Asset Intelligence catalog, see [Configuring Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md).  
 

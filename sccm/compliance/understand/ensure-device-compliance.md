@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Ensure device compliance with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Compliance settings in System Center Configuration Manager gives you the tools and resources you need to manage the configuration and compliance of devices in your organization. This helps you support the following business requirements:  
 

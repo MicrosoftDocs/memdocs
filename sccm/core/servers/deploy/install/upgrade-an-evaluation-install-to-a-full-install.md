@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Upgrade an evaluation installation of System Center Configuration Manager to a full installation
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 If you installed System Center Configuration Manager as an evaluation version, after 180 days, the Configuration Manager console becomes read-only until you activate the product from the **Site Maintenance** page in Setup. At any time before or after the 180-day period, you have the option to upgrade an evaluation installation to a full installation.  
 

@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Set up your subscription for Lookout mobile threat defense
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The following steps are required to set up Lookout mobile threat defense subscription:
 

@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Introduction to queries in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can create and run queries to locate objects in a System Center Configuration Manager hierarchy that match your query criteria. These objects include items like specific types of computers or user groups. Queries can return most types of Configuration Manager objects, which include sites, collections, applications, and inventory data.  
 

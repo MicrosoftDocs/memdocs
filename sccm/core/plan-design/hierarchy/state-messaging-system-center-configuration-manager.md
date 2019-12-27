@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # State messages in Configuration Manager 
 
-*Applies To: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 State messages contain concise information about conditions on the Configuration Manager client. The state messaging system is used by specific components of Configuration Manager, such as software updates and configuration settings.
 

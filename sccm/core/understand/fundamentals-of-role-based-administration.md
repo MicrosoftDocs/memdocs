@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Fundamentals of role-based administration for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 With System Center Configuration Manager, you use role-based administration to secure the access that is needed to administer Configuration Manager. You also secure access to the objects that you manage, like collections, deployments, and sites. After you understand the concepts introduced in this article, you can [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
 

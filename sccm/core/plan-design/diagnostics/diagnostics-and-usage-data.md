@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Diagnostics and usage data for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager collects diagnostics and usage data about itself, which is used by Microsoft to improve the installation experience, quality, and security of future releases.  
 

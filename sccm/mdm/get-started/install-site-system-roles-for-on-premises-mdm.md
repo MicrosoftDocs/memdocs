@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 System Center Configuration Manager On\-premises Mobile Device Management requires the following site system roles in your Configuration Manager site infrastructure:  
 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Upgrade clients in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can use different methods to upgrade the System Center Configuration Manager client software on Windows computers, UNIX and Linux servers, and Mac computers. Here are the advantages and disadvantages of each method.  
 

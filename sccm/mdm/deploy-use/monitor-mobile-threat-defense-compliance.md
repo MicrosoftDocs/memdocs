@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # **Monitor Mobile Threat Defense compliance**
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 ## To monitor the overall compliance status
 

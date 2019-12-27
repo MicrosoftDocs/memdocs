@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Customer Experience Improvement Program (CEIP) for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 > [!Note]  
 > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.

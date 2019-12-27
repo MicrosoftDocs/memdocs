@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Create an Endpoint Protection point site system role
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The Endpoint Protection point site system role must be installed before you can use Endpoint Protection. It must be installed on one site system server only, and it must be installed at the top of the hierarchy on a central administration site or a stand-alone primary site.
 

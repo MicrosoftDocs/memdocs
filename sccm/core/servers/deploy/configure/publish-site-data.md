@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Publish site data for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After you extend the Active Directory schema for System Center Configuration Manager, you can publish Configuration Manager sites to Active Directory Domain Services (AD DS). This lets Active Directory computers securely retrieve site information from a trusted source. Although publishing site information to AD DS is not required for basic Configuration Manager functionality, it can reduce administrative overhead to do so.  
 

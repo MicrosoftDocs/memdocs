@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 ---
 # Use multicast to deploy Windows over the network with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Multicast is a network optimization method that you can use in your System Center Configuration Manager environment where multiple clients are likely to download the same operating system image at the same time. When multicast is used, multiple computers simultaneously download the operating system image as it is multicast by the distribution point, rather than having the distribution point send a copy of the data to each client over a separate connection.  
 

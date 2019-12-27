@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Plan for migration to System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Before you migrate data to a System Center Configuration Manager destination hierarchy, make sure that you are familiar with sites and hierarchies in Configuration Manager. For more about sites and hierarchies, see [Fundamentals of System Center Configuration Manager](../../core/understand/fundamentals.md).  
 

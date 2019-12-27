@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Accessibility features in Support Center
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Support Center has many helpful accessibility features that make it easier for everyone to use. 
 

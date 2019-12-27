@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Confirm domain name requirements with System Center Configuration Manager and Microsoft Intune
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 If necessary, take the following steps to satisfy any dependencies external to Configuration Manager:
 

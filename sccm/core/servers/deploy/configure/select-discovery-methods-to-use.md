@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Select discovery methods to use for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 To successfully and efficiently use discovery for System Center Configuration Manager, you must consider which methods to use and at which sites to run them.  
 

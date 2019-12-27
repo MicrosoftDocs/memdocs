@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Install site system roles for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The  System Center Configuration Manager console has two wizards you can use to install site system roles:  
 

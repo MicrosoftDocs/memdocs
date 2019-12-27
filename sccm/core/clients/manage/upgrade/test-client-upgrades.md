@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to test client upgrades in a pre-production collection in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can test a new Configuration Manager client version in a pre-production collection before upgrading the rest of the site with it.  When you do this, only devices that are part of the test collection are upgraded. Once you've had a chance to test the client you can promote the client, which makes the new version of the client software available to the rest of the site.
 

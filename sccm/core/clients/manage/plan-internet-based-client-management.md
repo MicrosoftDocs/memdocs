@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Plan for internet-based client management in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Internet-based client management (sometimes referred to as IBCM) lets you manage System Center Configuration Manager clients when they are not connected to your company network but have a standard internet connection. This arrangement has several advantages that include the reduced costs of not having to run virtual private networks (VPNs) and being able to deploy software updates in a timelier manner.  
 

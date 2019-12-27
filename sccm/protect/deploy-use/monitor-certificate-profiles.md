@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to monitor certificate profiles in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 ##  View Compliance Results in the Configuration Manager Console  

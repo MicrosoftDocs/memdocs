@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Managing compliance on devices managed with Intune
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 These scenarios give you an introduction to using System Center Configuration Manager compliance settings by working through some common scenarios you might encounter.  
 

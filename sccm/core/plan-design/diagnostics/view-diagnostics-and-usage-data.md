@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # How to view diagnostics and usage data for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can view diagnostic and usage data from your Configuration Manager hierarchy to confirm that it includes no sensitive or identifiable information. The site summarizes and stores its diagnostic data in the **TEL_TelemetryResults** table of the site database. It formats the data to be programmatically usable and efficient.
 

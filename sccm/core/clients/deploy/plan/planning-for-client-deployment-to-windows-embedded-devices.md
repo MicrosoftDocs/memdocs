@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Planning for client deployment to Windows Embedded devices in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 <a name="BKMK_DeployClientEmbedded"></a> If your Windows Embedded device does not include the System Center Configuration Manager client, you can use any of the client installation methods if the device meets the required dependencies. If the embedded device supports write filters, you must disable these filters before you install the client, and then re-enable the filters again after the client is installed and assigned to a site.  
 

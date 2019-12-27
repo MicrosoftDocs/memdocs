@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Prepare Intune for user migration 
 
-*Applies to: System Center Configuration Manager (Current Branch)*    
+*Applies to: Configuration Manager (current branch)*    
 Before you migrate users from hybrid MDM to Intune standalone, take steps to prepare Intune. These steps help to make sure that your migrated users and their devices continue to be managed. When you complete these steps and start the migration to Intune, there's no signifcant impact to your users.  
 
 ## Fix issues found during data collection and import

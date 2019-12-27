@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # VPN Profiles on mobile devices in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use VPN profiles in Configuration Manager to deploy VPN settings to mobile device users in your organization. When you deploy these settings, you minimize the end-user effort that's required to connect to resources on the company network.  
 

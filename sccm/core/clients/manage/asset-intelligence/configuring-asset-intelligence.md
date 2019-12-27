@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Configure Asset Intelligence in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Asset Intelligence inventories and manages software license usage.   
 

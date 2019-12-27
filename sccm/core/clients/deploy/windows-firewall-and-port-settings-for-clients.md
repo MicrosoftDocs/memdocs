@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Windows Firewall and port settings for clients in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Client computers in System Center Configuration Manager that run Windows Firewall often require you to configure exceptions to allow communication with their site. The exceptions that you must configure depend on the management features that you use with the Configuration Manager client.  
 

@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This scenario demonstrates how you can manage write-filter-enabled Windows Embedded devices with Configuration Manager.If your embedded devices do not support write filters, they behave as standard Configuration Manager clients and these procedures don't apply.  
 

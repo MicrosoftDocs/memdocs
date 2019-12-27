@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to monitor and plan for power management in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the following information to help you monitor and plan for power management in System Center Configuration Manager.  
 

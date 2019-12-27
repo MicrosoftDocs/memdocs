@@ -13,7 +13,7 @@ ms.collection: M365-identity-device-management
 ---
 # Get ready for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the information in the following topics when you're ready to start planning your System Center Configuration Manager deployment:  
 

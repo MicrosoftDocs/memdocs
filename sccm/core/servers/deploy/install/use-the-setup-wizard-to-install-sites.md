@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 
 # Use the Setup Wizard to install Configuration Manager sites
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 To install a new Configuration Manager site by using a guided user interface, use the Configuration Manager Setup Wizard (setup.exe). The wizard supports installing a primary site or central administration site. You also use the wizard to [upgrade an evaluation installation](/sccm/core/servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install) of Configuration Manager to a fully licensed installation. When you don't want to use the wizard, you can instead use an [installation script](/sccm/core/servers/deploy/install/use-a-command-line-to-install-sites) and run an unattended command-line installation.
 

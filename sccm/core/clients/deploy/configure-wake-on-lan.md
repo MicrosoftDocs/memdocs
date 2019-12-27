@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to configure Wake on LAN in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Specify Wake on LAN settings for System Center Configuration Manager when you want to bring computers out of a sleep state.
 

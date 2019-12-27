@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Scenarios to streamline your installation of System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 With the release of update versions for System Center Configuration Manager current branch, there are new scenarios to streamline the install of a new hierarchy to an update version (like update 1610), and to upgrade from Microsoft System Center 2012 Configuration Manager.
 

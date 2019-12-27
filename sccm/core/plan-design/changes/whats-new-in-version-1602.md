@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 ---
 # What&#39;s new in version 1602 of System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 Update 1602 for System Center Configuration Manager is only available as an in-console update for previously installed sites that run version 1511. Version 1511 is the initial, baseline version you use to install new Configuration Manager sites.  

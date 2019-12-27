@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Security and privacy for certificate profiles in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 ##  Security Best Practices for Certificate Profiles  

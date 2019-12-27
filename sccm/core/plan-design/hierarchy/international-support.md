@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # International support in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The following sections provide technical details to help you make System Center Configuration Manager compliant with specific international requirements.  
 

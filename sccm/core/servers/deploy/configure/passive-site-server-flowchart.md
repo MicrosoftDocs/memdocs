@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Flowchart - Set up a site server in passive mode
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This flowchart diagram shows the process by which the site sets up a site server in passive mode. For more information, see the following articles:  
 - [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability)

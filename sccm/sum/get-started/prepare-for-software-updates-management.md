@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Prepare for software updates management
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Before the compliance assessment data of the software update displays in the System Center Configuration Manager console and before you can deploy software updates to client computers, you must complete the steps in the following sections.
 

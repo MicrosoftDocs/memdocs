@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Device compliance policies in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Compliance policies in Configuration Manager define the rules and settings that a device must comply with in order to be considered compliant by conditional access policies. You can also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access.  
 

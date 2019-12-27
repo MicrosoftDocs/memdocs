@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Security best practices and privacy information for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the following information to find security best practices and privacy information for System Center Configuration Manager.  
 

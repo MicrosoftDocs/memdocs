@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Monitor software updates in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 System Center Configuration Manager provides many ways to help you to monitor software updates objects, processes, and compliance information. Use the following sections to monitor software updates.
 

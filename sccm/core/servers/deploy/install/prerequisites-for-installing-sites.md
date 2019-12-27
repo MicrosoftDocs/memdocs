@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Prerequisites for installing Configuration Manager sites
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Before you begin a site installation, learn about the prerequisites for installing the different types of Configuration Manager sites.
 

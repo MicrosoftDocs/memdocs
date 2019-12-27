@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to use Resource Explorer to view software inventory in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use Resource Explorer in System Center Configuration Manager to view information about software inventory that has been collected from computers in your hierarchy.  
 

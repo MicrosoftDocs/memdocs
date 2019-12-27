@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 ---
 # Deploy Windows To Go with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This topic provides the steps to provision Windows To Go in System Center Configuration Manager. Windows To Go is an enterprise feature of Windows 8 that enables the creation of a Windows To Go workspace that can be booted from a USB-connected external drive on computers that meet the Windows 7 or Windows 8 certification requirements, regardless of the operating system running on the computer. Windows To Go workspaces can use the same image enterprises use for their desktops and laptops and can be managed the same way.  
 

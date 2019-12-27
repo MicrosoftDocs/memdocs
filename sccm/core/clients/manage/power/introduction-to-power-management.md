@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Introduction to power management in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Power Management in System Center Configuration Manager addresses the need that many organizations have to monitor and reduce the power consumption of their computers. The feature takes advantage of the power management features built into Windows to apply relevant and consistent settings to computers in the organization. You can apply different power settings to computers during business hours and nonbusiness hours. For example, you might want to apply a more restrictive power plan to computers during nonbusiness hours. In cases where computers must always remain turned on, you can prevent power management settings from being applied.  
 

@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Best practices for client deployment in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 ## Use software update-based client installation for Active Directory computers  

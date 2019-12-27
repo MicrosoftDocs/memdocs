@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Prepare Active Directory for site publishing
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you extend the Active Directory schema for System Center Configuration Manager, you introduce new structures to Active Directory that are used by Configuration Manager sites to publish key information in a secure location where clients can easily access it.  
 

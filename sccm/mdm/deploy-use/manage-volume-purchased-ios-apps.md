@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Manage volume-purchased iOS apps with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 

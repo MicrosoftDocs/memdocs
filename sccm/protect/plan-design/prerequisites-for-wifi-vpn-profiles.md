@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Prerequisites for Wi-Fi and VPN Profiles in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Wi-Fi and VPN profiles in System Center Configuration Manager have dependencies only within the product.  
 

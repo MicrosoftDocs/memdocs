@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Manage Applications in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you manage devices through Microsoft Intune or Configuration Manager on-premises device management, you can manage these additional application types:
 - Windows Phone app package (*.xap file)

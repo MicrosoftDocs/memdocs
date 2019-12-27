@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Manage user state in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can use System Center Configuration Manager task sequences to capture and restore the user state data in operating system deployment scenarios where you want to retain the user state of the current operating system. For example:  
 

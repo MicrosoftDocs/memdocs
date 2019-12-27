@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # How to manage collections in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the overview information in this article to help you perform management tasks for collections in Configuration Manager.  
 

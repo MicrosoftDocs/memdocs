@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Update reset tool
 
-*Applies to: System Center Configuration Manager (Current Branch)*  
+*Applies to: Configuration Manager (current branch)*  
 
 
 Beginning with version 1706, Configuration Manager primary sites, and central administration sites include the Configuration Manager Update Reset Tool, **CMUpdateReset.exe**. Use the tool to fix issues when in-console updates have problems downloading or replicating. The tool is found in the ***\cd.latest\SMSSETUP\TOOLS*** folder of the site server.

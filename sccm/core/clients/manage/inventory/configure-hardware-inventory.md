@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to configure hardware inventory in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This procedure configures the default client settings for hardware inventory and will apply to all the clients in your hierarchy. If you want these settings to apply to only some clients, create a custom device client setting and assign it to a collection that contains the devices that you want to use hardware inventory. See [How to configure client settings in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md).  
 

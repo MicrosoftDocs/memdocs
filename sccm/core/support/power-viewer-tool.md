@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Power Viewer Tool
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The Power Viewer tool is one of the [Configuration Manager tools](/sccm/core/support/tools). Use it to view the status of the power management feature on a Configuration Manager client.
 

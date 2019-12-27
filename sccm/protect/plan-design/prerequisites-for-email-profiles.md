@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Email profile prerequisites
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Email profiles in System Center Configuration Manager have dependencies both externally, and within the product.  
 

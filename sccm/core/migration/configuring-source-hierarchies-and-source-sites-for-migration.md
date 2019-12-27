@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Configure source hierarchies and source sites for migration to System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 To enable migration of data to your System Center Configuration Manager environment, you must configure a supported Configuration Manager source hierarchy and one or more source sites in that hierarchy that contain data that you want to migrate.  
 

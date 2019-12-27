@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # How to monitor clients in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Once you install the Configuration Manager client on the Windows devices in your site, monitor their health and activity in the Configuration Manager console.  
 

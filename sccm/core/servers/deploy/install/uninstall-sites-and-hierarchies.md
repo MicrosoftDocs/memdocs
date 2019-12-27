@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Uninstall sites and hierarchies in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the following details as a guide if you need to uninstall a System Center Configuration Manager site.  
 

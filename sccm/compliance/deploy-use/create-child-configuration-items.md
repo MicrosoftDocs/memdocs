@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to create child configuration items in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Child configuration items in System Center Configuration Manager are copies of configuration items that retain a relationship to the original configuration item in that they inherit the original configuration from the parent configuration item.  
 

@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Manage SharePoint Online access in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 The Configuration Manager conditional access policy for **SharePoint Online** manages access to OneDrive for Business files, which are stored on SharePoint Online. Access is based on conditions you specify.

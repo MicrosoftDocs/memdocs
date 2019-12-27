@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Where to get installation media for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 If you have System Center Configuration Manager volume licenses with Software Assurance, or if you have purchased licenses for System Center Configuration Manager volume licenses, you can download baseline source media to install System Center Configuration Manager from the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).   
 

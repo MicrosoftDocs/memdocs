@@ -16,7 +16,7 @@ ms.collection: M365-identity-device-management
 
 # Service a server group
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 >[!IMPORTANT]
 >Pre-release features are features that are in the Current Branch for early testing in a production environment. These features are fully supported but are still in active development and might receive changes until they move out of the pre-release category. You must turn on this feature for it to be available. For more information, see [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).

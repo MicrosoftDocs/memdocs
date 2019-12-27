@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Use a command-line to install System Center Configuration Manager sites
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
  You can run System Center Configuration Manager Setup at a command prompt to install a variety of site types.
 

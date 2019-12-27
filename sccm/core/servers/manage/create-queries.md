@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Create queries in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article describes how to create and import queries in System Center Configuration Manager.  
 

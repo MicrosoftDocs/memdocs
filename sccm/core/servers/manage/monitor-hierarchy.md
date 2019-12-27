@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Monitor the hierarchy
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 To monitor your hierarchy in Configuration Manager, use the **Monitoring** workspace in the Configuration Manager console.  
 

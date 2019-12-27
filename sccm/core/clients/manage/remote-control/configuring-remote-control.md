@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Configuring remote control in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
  This procedure describes configuring the default client settings for remote control. These settings apply to all computers in your hierarchy. If you want these settings to apply to only some computers, assign a custom device client setting to a collection that contains those computers. For more information a see [How to configure client settings in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md). 
 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 ---
 # Checklist for installing update 1710 for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you use the current branch of System Center Configuration Manager, you can install the in-console update for version 1710 to update your hierarchy from a previous version.
 

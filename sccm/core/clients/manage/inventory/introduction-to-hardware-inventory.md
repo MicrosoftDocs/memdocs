@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Introduction to hardware inventory in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use hardware inventory in System Center Configuration Manager to collect information about the hardware configuration of client devices in your organization. To collect hardware inventory, you must select the **Enable hardware inventory on clients** setting in client settings.  
 

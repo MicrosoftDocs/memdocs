@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Use alerts and the status system for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configure Alerts, and use the built-in Status System to remain informed about the state of your System Center Configuration Manager deployment.  
 

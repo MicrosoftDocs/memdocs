@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 To manage computers and devices with System Center Configuration Manager On-premises Mobile Device Management, the devices need to be enrolled so that Configuration Manager can communicate with the devices for management tasks. Configuration Manager provides two methods for enrolling devices:  
 

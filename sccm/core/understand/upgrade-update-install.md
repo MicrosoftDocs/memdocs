@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # About upgrade, update, and install for site and hierarchy infrastructure
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 When managing System Center Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts.

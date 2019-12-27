@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Common tasks for creating and deploying configuration baselines with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This topic contains common scenarios to help you learn about how to create and deploy System Center Configuration Manager configuration baselines.  
 

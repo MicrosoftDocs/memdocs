@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # How to deploy clients to Windows computers in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article provides details on how to deploy the Configuration Manager client to Windows computers. For more information on planning and preparing for client deployment, see these articles:
 

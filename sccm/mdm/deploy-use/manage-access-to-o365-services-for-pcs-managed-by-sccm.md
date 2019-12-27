@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Manage access to Office 365 services for PCs managed by System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 <!--1191496-->
 Configure conditional access to Office 365 services for PCs managed by Configuration Manager.  

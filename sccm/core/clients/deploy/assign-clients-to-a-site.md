@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to assign clients to a site in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After a System Center Configuration Manager client is installed, it must join a Configuration Manager primary site before you can manage it. The site that a client joins is called its *assigned site*. Clients cannot be assigned to a central administration site or to a secondary site.  
 

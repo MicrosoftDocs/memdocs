@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Planning for certificate template permissions for certificate profiles in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 The following information can help you plan for how to configure permissions for the certificate templates that System Center Configuration Manager uses when you deploy certificate profiles.  

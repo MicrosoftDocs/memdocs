@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to monitor Endpoint Protection status
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can monitor Endpoint Protection in your Microsoft System Center Configuration Manager hierarchy by using the **Endpoint Protection Status** node under **Security** in the **Monitoring** workspace, the **Endpoint Protection** node in the **Assets and Compliance** workspace, and by using reports.  
 

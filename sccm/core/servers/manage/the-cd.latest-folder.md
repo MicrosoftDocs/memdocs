@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # The CD.Latest folder for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager has a process to deliver updates to the product from within the Configuration Manager console. To support this new method of updating Configuration Manager, a new folder is created named **CD.Latest**. This folder contains a copy of the Configuration Manager installation files for the updated version of your site.  
 

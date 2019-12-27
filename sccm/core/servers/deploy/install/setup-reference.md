@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Reference for System Center Configuration Manager Setup
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 System Center Configuration Manager Setup provides links to several topics that are detailed in the following sections. The information presented here can help you prepare  to install a Configuration Manager site or hierarchy, and help prepare you for some of the decisions you must make during the installation.  
 

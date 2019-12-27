@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Configuration Manager and Windows as a Service
 
-*Applies To: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 System Center Configuration Manager provides comprehensive control over feature updates for Windows 10. To fully adopt the Windows as a service model, you also must adopt the Configuration Manager current branch model. To stay current with Windows 10, requires that you stay current with Configuration Manager for the best experience. New versions of Configuration Manager are required to take full advantage of the exciting new enterprise features for Windows 10. This article is intended to be a landing page for the key articles required to adopt Configuration Manager current branch. Configuration Manager current branch gets you on your way to Windows as a service.
 

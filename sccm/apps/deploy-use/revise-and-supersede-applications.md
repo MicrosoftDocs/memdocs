@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Revise and supersede applications in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 In this topic, you'll learn how to work with System Center Configuration Manager application versions and how to supersede applications with a new version.  
 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # What's new in hybrid mobile device management with Configuration Manager and Microsoft Intune
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 > [!Important]  
 > This document is no longer being updated. Since August 14, 2018, hybrid mobile device management has been a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). You should migrate your environment to Intune standalone as soon as possible. For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).

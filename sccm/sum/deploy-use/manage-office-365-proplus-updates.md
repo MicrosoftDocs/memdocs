@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Manage Office 365 ProPlus with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager lets you manage Office 365 ProPlus apps in the following ways:
 

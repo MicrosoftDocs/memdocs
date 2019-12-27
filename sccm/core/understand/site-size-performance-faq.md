@@ -11,7 +11,7 @@ ms.date: 04/19/2019
 
 # System Center Configuration Manager site sizing and performance FAQ
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This document addresses frequently asked questions about Configuration Manager site sizing guidance and common performance issues.
 

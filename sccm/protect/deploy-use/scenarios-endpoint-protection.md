@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Example scenario: Use Endpoint Protection to protect computers from malware
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article provides an example scenario for how you can implement Endpoint Protection in Configuration Manager to protect computers in your organization from malware attacks.  
 

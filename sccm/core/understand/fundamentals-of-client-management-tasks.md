@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Fundamentals of client management tasks for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After you install the System Center Configuration Manager clients, there are several tasks that you run to manage the clients.  Some of the tasks are run from the Configuration Manager console. Other tasks are run from the Configuration Manager client application. The Configuration Manager client application is installed with the Configuration Manager client software.
 

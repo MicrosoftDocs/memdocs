@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # About the Security Content Automation Protocol (SCAP) extensions
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The SCAP extensions for Configuration Manager help you analyze and assess your network environment for compliance with the Security Content Automation Protocol (SCAP). SCAP is defined and maintained by the National Institute of Standards and Technology (NIST). For more information, see the [SCAP Project Overview](https://csrc.nist.gov/projects/security-content-automation-protocol).
 

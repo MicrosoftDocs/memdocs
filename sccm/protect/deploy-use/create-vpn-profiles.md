@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to Create VPN profiles in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The connection types available for the different device platforms are described in [VPN profiles in System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md).  
 

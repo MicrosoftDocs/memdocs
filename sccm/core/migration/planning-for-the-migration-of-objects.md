@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Plan for the migration of Configuration Manager objects to System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 With System Center Configuration Manager, you can migrate many of the different objects that are associated with different features found at a source site. Use the following sections to help you plan for the migration of objects between hierarchies.  
 

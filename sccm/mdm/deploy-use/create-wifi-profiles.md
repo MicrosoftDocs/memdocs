@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to create Wi-Fi profiles for mobile devices in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless network settings to mobile device users in your organization. By deploying these settings, you make it easier for your users to connect to Wi-Fi.  
 

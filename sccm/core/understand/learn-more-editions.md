@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Licensing and branches for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch), (Long-Term Servicing Branch)*
+*Applies to: Configuration Manager (current branch), & System Center Configuration Manager (long-term servicing branch)*
 
 Use this article to learn about the licensing requirements for the installation options available with System Center Configuration Manager. These installation options include the following branches:
 

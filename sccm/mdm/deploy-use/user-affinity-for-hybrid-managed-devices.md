@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # User affinity for hybrid managed devices in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When configuring profiles for corporate-owned devices, the administrator can specify whether the managed devices can have *user affinity* which identifies a specific user with the device.  
 

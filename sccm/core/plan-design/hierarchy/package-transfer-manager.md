@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Package Transfer Manager in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 In a System Center Configuration Manager site, the Package Transfer Manager is a  component of the SMS_Executive service that manages the transfer of content from a site server computer to remote distribution points in a site. (A remote distribution point is one that is not located on the site server computer.) The Package Transfer Manager does not support configurations by the admin, but understanding how it operates can help you plan your content management infrastructure. It can also help you resolve problems with content distribution.
 

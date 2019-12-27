@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Administrator checklists for migration planning in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the following administrator checklists to help you plan your migration strategy to System Center Configuration Manager.
 

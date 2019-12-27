@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Introduction to operating system deployment in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can use Configuration Manager to deploy operating systems in a number of different ways. Use the information in this section to understand how to deploy operating systems and automate tasks. 
 

@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Create Windows Embedded applications with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy applications for Windows Embedded devices.  
 

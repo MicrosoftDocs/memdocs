@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 ---
 # Checklist for installing update 1606 for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Version 1606 for System Center Configuration Manager current branch is an update that you can use to update from version 1511 or 1602.
 

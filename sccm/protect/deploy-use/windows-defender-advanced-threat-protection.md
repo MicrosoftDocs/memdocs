@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Microsoft Defender Advanced Threat Protection
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Starting with version 1606 of Configuration Manager (current branch), Endpoint Protection can help manage and monitor [Microsoft Defender Advanced Threat Protection (ATP)](https://aka.ms/technet-wdatp) (formerly known as Windows Defender ATP). Microsoft Defender ATP helps enterprises detect, investigate, and respond to advanced attacks on their networks.  Configuration Manager or Microsoft Intune policies can help you onboard and monitor managed Windows 10, version 1607 (build 14328) or later.
 

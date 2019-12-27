@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Remote connection profiles in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use System Center Configuration Manager remote connection profiles to allow your users to remotely connect to work computers when they are not connected to the domain or if their personal computers are connected over the Internet.  
 

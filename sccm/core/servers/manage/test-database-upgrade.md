@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Test the database upgrade when installing an update
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The information in this topic can help you run a test database upgrade before you install an in-console update for the current branch of Configuration Manager. However, the test upgrade is no longer a required or recommend step unless your database is suspect, or is modified by customizations not explicitly supported by Configuration Manager.
 

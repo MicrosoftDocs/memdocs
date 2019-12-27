@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 ---
 # What&#39;s new in version 1706 of System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Update 1706 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1606, 1610, or 1702.
 

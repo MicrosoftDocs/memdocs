@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 ---
 # Use Software Center to deploy Windows over the network with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You may make the task sequence that installs an operating system in System Center Configuration Manager available in  Software Center. You may deploy an  operating system to Software Center with the following operating system deployment scenarios:
 

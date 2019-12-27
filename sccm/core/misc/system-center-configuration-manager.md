@@ -13,7 +13,7 @@ ms.collection: M365-identity-device-management
 ---
 # System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Welcome to Microsoft System Center Configuration Manager. Use Configuration Manager to provide more effective IT services by enabling secure and scalable software deployment, compliance settings management, and comprehensive asset management of servers, desktops, and mobile devices.  
 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # How to upgrade clients for Windows computers in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Upgrade the Configuration Manager client on Windows computers using client installation methods or the automatic client upgrade feature. The following client installation methods are valid ways to upgrade client software on Windows computers:  
 

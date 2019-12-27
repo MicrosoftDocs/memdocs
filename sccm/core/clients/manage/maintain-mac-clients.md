@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 
 # Maintain Mac clients
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Here are procedures for uninstalling Mac clients and for renewing their certificates.
 

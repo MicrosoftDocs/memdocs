@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Configure your Intune subscription with System Center Configuration Manager and Microsoft Intune
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The Intune subscription lets you manage devices over the internet. This includes specifying which user collection can enroll devices and defining information presented to users. While creating the Intune subscription, you can also add company branding to the Intune company portal with your company logo and custom color schemes.
 

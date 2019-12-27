@@ -15,7 +15,7 @@ ROBOTS: NOINDEX
 ---
 # What's new in version 1802 of System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Update 1802 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1702, 1706, or 1710. <!-- baseline only statement: -->When installing a new site, it's also available as a baseline version.
 

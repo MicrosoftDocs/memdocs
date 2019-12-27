@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # iOS hybrid enrollment using Apple Configurator with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Companies that buy iOS devices to be used by employees can manage them using Microsoft Intune. To prepare corporate-owned iOS devices for enrollment, you configure an enrollment profile in the Configuration Manager console and then export the profile URL for use by Apple Configurator. You prepare the iOS device for enrollment by connecting it to a Mac computer with a USB cable and using Apple Configurator to set it up. Apple Configurator factory resets the device and adds the enrollment profile so that the device can be enrolled when the user first powers it up and goes through the Setup Assistant process.
 

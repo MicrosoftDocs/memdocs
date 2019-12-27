@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Database replicas for management points for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 System Center Configuration Manager primary sites can use a database replica to reduce the CPU load placed on the site database  server by management points as they service requests from clients.  
 

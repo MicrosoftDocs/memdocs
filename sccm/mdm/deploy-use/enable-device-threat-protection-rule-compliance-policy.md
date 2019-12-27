@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Enable device threat protection rule in the compliance policy
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Intune with Lookout mobile threat protection gives you the ability to detect mobile threats and make a risk assessment on the device. You can create an compliance policy rule in Configuration Manager  to include the risk assessment to determine if the device is compliant. You can then use the conditional access policy to allow or block access to Exchange, SharePoint, and other services based on device compliance.
 

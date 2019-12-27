@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 ---
 # Replace an existing computer and transfer settings with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This topic provides the general steps in System Center Configuration Manager to replace an existing computer with a new computer. For this scenario, you can choose from many different deployment methods, such as bootable media, multicast, or Software Center. You can also  choose to install a state migration point to store settings and then restore them to the new operating system after it is installed. If you are unsure that this is the right operating system deployment scenario for you, see [Scenarios to deploy enterprise operating systems](scenarios-to-deploy-enterprise-operating-systems.md).  
 

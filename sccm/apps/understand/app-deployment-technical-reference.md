@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Technical Reference for Application Deployment in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 In this article, you'll learn how application deployments work.
 

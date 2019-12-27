@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Learn how clients find site resources and services for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 System Center Configuration Manager clients use a process called *service location* to locate site system servers that they can communicate with, and that  provide  services that clients are directed to use. Understanding how and when clients use service location to find site resources can help you configure your sites to successfully support client tasks. These configurations can require the site to interact with domain and network configurations like Active Directory Domain Services (AD DS) and DNS. Or they can require you to configure more complex alternatives.  
 

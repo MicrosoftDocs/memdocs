@@ -13,7 +13,7 @@ ms.collection: M365-identity-device-management
 ---
 # Cryptographic controls technical reference
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 System Center Configuration Manager uses signing and encryption to help protect the management of the devices in the Configuration Manager hierarchy. With signing, if data has been altered in transit, it's discarded. Encryption helps prevent an attacker from reading the data by using a network protocol analyzer.  

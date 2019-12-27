@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Scenarios to deploy enterprise operating systems with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The following OS deployment scenarios are available in Configuration Manager:  
 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Monitor Email, Wi-Fi and VPN profiles in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After you have deployed System Center Configuration Manager Email, Wi-Fi or VPN profiles to users in your hierarchy, you can use the following procedures to monitor the compliance status of the profile:  
 

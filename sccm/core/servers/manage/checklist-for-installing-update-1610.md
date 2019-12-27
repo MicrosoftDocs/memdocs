@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 ---
 # Checklist for installing update 1610 for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you use the current branch of System Center Configuration Manager, you can install the in-console update for version 1610 to update your hierarchy from version 1606. If your hierarchy runs version 1511, 1602, or 1606, you can update to version 1610.
 

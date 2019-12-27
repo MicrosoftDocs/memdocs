@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Plan for OS deployment interoperability
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When different System Center Configuration Manager sites in a single hierarchy use different versions, some Configuration Manager functionality isn't available. Typically, functionality from the newer version of Configuration Manager isn't accessible at sites or by clients that run a lower version. For more information, see [Interoperability between different versions of System Center Configuration Manager](/sccm/core/plan-design/hierarchy/interoperability-between-different-versions).  
 

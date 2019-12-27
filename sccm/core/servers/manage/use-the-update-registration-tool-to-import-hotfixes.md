@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Use the Update Registration Tool to import hotfixes to System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Some updates for Configuration Manager are not available from the Microsoft cloud service and are only obtained out-of-band. An example is a limited release hotfix to address a specific issue.   
 When you must install an out-of-band release, and the update or hotfix file name ends with the extension **update.exe**, you use the **update registration tool** to manually import the update to the Configuration Manager console. The tool enables you to extract and transfer the update package to the site server, and register the update with the Configuration Manager console.  

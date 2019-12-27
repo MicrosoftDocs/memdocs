@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Prerequisites for migration in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 To migrate from a supported source hierarchy, you must have access to each applicable Configuration Manager source site, and permissions within the System Center Configuration Manager destination site to configure and run migration operations.  
 

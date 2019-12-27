@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Boundary groups for System Center Configuration Manager version 1511, 1602, and 1606
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 <!-- This topic drops from TOC with the release of version 1706 -->
 
 The information in this topic is specific to using boundary groups with versions 1511, 1602, and 1606 of System Center Configuration Manager.

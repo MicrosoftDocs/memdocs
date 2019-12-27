@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Apply settings to iOS apps with app configuration policies in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 You can use app configuration policies in System Center Configuration Manager (Configuration Manager) to distribute settings that might be required when a user runs an app. For example, an app might require a user to specify these details:

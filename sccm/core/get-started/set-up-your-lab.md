@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Set up a Configuration Manager lab
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Following the guidance in this topic will enable you to set up a lab for evaluating Configuration Manager with simulated real-life activities.  
 

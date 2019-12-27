@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Prepare to install System Center Configuration Manager sites
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 To prepare for a successful deployment of one or more System Center Configuration Manager sites, become familiar with the details in this article. These steps can save you time during installation of multiple sites and help prevent missteps that might result in the need to reinstall one or more sites.
 

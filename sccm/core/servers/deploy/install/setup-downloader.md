@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Setup Downloader for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Before you run Setup to install or upgrade a System Center Configuration Manager site, you can use the Setup Downloader standalone application from the version of Configuration Manager that you want to install to download updated Setup files.  
 

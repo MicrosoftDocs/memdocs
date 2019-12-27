@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to deploy configuration baselines in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration baselines in System Center Configuration Manager must be deployed to one or more collections of users or devices before client devices in those collections can assess their compliance with the configuration baseline.  
 

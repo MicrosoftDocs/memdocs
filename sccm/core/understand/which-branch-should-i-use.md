@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Which branch of Configuration Manager should I use?
 
-*Applies to: System Center Configuration Manager (Current Branch, Long-Term Servicing Branch, and Technical Preview)*
+*Applies to: Configuration Manager (current branch & technical preview branch) & System Center Configuration Manager (long-term servicing branch)*
 
 There are three branches of Configuration Manager available:
 

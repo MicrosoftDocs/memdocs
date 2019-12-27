@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Plan to complete migration in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 With System Center Configuration Manager, you can complete the process of migration when a source hierarchy no longer has data that you want to migrate to your destination hierarchy. Completing migration includes the following general steps:  
 

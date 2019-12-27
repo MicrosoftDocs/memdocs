@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Set up Android hybrid device management with System Center Configuration Manager and Microsoft Intune
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article helps you enable hybrid enrollment of Android and Android for Work devices. You can then use Configuration Manger to manage the devices through a configured Microsoft Intune subscription. From Google Play, users can download the Android company portal app that lets them enroll Android (including Samsung KNOX Standard) and Android for Work devices.
 

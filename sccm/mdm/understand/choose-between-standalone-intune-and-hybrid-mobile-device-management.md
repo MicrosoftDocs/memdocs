@@ -16,7 +16,7 @@ ms.collection: M365-identity-device-management
 
 # Choose between Microsoft Intune standalone and hybrid MDM with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 As of August 14, 2018, hybrid mobile device management (MDM) is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Intune on Azure is Microsoft's recommended MDM solution.  

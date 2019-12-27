@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Configuration Manager cmdlet library privacy statement
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This privacy statement covers the features for the System Center Configuration Manager Cmdlet Library.  
 

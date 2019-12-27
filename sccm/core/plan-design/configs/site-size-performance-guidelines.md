@@ -11,7 +11,7 @@ ms.date: 04/23/2019
 
 # System Center Configuration Manager site size and performance guidelines
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 System Center Configuration Manager leads the industry in scalability and performance. Other documentation covers [maximum supported scalability limits](size-and-scale-numbers.md) and [hardware guidelines](recommended-hardware.md) for running sites at the largest environment sizes. This article gives supplemental performance guidance for environments of all sizes. This guidance can help you more accurately estimate the hardware you need to deploy Configuration Manager.
 

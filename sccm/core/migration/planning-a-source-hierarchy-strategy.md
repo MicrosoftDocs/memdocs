@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Plan a source hierarchy strategy in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Before you set up a migration job in your System Center Configuration Manager environment, you must configure a source hierarchy and gather data from at least one source site in that hierarchy. Use the following sections to help you plan for configuring source hierarchies, configuring source sites, and determining how Configuration Manager gathers information from the source sites in the source hierarchy. 
 

@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to monitor client deployment status in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Deploying clients across your site takes time and some installations are not successful the first time. The System Center Configuration Manager console provides a way to keep an eye on client deployments within a collection by reporting client deployment status in real time.  
 

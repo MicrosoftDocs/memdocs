@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Verify MDM configuration with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can verify certain device management components by checking the following log files:
 

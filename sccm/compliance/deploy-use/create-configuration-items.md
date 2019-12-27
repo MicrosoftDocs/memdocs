@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Create configuration items in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Compliance settings in System Center Configuration Manager let you create and deploy configurations to both devices that are managed by Configuration Manager, and devices that are enrolled with Microsoft Intune.
 

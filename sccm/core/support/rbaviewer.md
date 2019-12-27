@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Role-based Administration and Auditing Tool
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The Role-based Administration and Auditing Tool is one of the [Configuration Manager tools](/sccm/core/support/tools). Use this tool for the following tasks:
 

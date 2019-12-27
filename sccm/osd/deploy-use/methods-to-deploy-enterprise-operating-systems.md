@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 ---
 # Methods to deploy enterprise operating systems using System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 There are different methods that you can use to deploy an operating system in your System Center Configuration Manager environment.
 

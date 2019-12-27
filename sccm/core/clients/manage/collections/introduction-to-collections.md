@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Introduction to collections in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Collections help you organize resources into manageable units. You can create collections to match your client management needs, and to perform operations on multiple resources at one time. 
 

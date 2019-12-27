@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Create user data and profiles configuration items in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 User data and profiles configuration items in System Center Configuration Manager contain settings that can manage folder redirection, offline files and roaming profiles on computers that run Windows 8 and later for users in your hierarchy. For example, you can:  
 

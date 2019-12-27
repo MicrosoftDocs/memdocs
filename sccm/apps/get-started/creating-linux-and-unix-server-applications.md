@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Create Linux and UNIX server applications with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 > [!Important]  
 > Starting in version 1902, Configuration Manager doesn't support Linux or UNIX clients. 

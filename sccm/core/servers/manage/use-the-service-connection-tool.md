@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Use the Service Connection Tool for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the **service connection tool** when your service connection point is in offline mode, or when your Configuration Manager site system servers are not connected to the Internet. The tool can help you keep your site up-to-date with the latest updates to Configuration Manager.  
 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # How to use task sequence variables in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
  The task sequence engine in the OS deployment feature of Configuration Manager uses many variables to control its behaviors. Use these variables to:
 

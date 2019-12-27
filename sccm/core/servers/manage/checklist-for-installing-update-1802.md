@@ -15,7 +15,7 @@ ROBOTS: NOINDEX
 ---
 # Checklist for installing update 1802 for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you use the current branch of System Center Configuration Manager, you can install the in-console update for version 1802 to update your hierarchy from a previous version. <!-- baseline only statement: -->(Because version 1802 is also available as [baseline media](/sccm/core/servers/manage/updates#bkmk_Baselines), you can use the installation media to install the first site of a new hierarchy.)
 

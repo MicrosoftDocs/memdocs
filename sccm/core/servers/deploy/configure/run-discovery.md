@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Run discovery for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You use one or more discovery methods in System Center Configuration Manager to find device and user resources that you can manage. You can also use discovery to identify network infrastructure in your environment. There are several different methods you can use to discover different things, and each method has its own configurations and limitations.  
 

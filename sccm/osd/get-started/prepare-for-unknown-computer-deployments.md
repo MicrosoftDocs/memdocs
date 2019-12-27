@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Prepare for unknown computer deployments in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the information in this topic to deploy operating systems to unknown computers in your System Center Configuration Manager environment. An unknown computer is a computer that is not managed by Configuration Manager. This means that there is no record of these computers in the Configuration Manager database. Unknown computers include the following:  
 

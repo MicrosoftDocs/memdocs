@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Import configuration data with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 In addition to creating configuration baselines and configuration items in the System Center Configuration Manager console, you can import configuration data if it is contained in a cabinet (.cab) file format and adheres to the supported Service Modeling Language (SML) schema. You can import configuration data from:  
 

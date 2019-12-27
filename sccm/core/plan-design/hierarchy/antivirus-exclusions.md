@@ -16,7 +16,7 @@ ROBOTS: NOINDEX
 
 # Recommended antivirus exclusions for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article contains recommendations that may help an administrator determine the cause of potential instability on a computer that is running a supported version of Configuration Manager site servers, site systems, and clients when it's used together with antivirus software.
 

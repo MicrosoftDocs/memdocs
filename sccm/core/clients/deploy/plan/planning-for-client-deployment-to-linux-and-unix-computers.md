@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Planning for client deployment to Linux and UNIX computers in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 > [!Important]  
 > Starting in version 1902, Configuration Manager doesn't support Linux or UNIX clients. 

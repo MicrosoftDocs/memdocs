@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Choose a device management solution for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager offers different solutions for managing PCs, servers, and devices. Choose the solution that's right for your organization. Base your decision on the device platforms you need to manage and the management functionality you need.  
 

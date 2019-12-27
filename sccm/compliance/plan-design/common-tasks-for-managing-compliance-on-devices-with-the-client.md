@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Common tasks for managing compliance on devices with the Configuration Manager client
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article gives you an introduction to using System Center Configuration Manager compliance settings by guiding you through some common scenarios that you might come across.  
 

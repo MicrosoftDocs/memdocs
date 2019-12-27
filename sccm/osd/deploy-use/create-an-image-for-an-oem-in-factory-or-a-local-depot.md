@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 ---
 # Create an image for an OEM in factory or a local depot with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Prestaged media deployments in System Center Configuration Manager let you deploy an operating system to a computer that is not fully provisioned. The prestaged media is a Windows Imaging Format (WIM) file that can be installed on a bare-metal computer by the manufacturer (OEM) or at an enterprise staging center that is not connected to the Configuration Manager environment. Later in the Configuration Manager environment, the computer starts by using the boot image provided by the media, a hash check is run on the prestaged media to make sure it is valid, and then the computer connects to the site management point for available task sequences that complete the download process.
 

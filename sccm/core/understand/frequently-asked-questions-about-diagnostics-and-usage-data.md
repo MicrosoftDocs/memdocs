@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Frequently asked questions about diagnostics and usage data for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article provides answers to frequently asked questions about diagnostic and usage data in Configuration Manager.
 

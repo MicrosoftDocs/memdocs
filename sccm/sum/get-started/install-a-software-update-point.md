@@ -16,7 +16,7 @@ ms.collection: M365-identity-device-management
 
 # Install and configure a software update point  
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 > [!IMPORTANT]  

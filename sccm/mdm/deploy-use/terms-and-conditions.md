@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Add Terms and Conditions with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can deploy System Center Configuration Manager terms and conditions to user groups to explain how device enrollment, access to work resources, and using the Company Portal affect devices and users. Users must accept the terms and conditions before they can use the Company Portal to enroll and access their work.  
 

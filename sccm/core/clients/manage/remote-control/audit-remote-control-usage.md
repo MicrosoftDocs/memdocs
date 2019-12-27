@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # How to audit remote control usage in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can use System Center Configuration Manager reports to view audit information for remote control.  
 
