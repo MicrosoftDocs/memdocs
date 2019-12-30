@@ -32,7 +32,7 @@ UInt32 GetCollectionsWithResourcePermissions(
 
  Qualifiers: [in]  
 
- Unique ID, supplied by System Center Configuration Manager, for the resource.  
+ Unique ID, supplied by Configuration Manager, for the resource.  
 
  `Permissions`  
  Data type: `UInt32`  

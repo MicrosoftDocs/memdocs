@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Accounts used in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the following information to identify the Windows groups, accounts, and SQL objects that are used in Configuration Manager, how they are used, and any requirements.  
 

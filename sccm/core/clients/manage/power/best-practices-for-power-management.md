@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Recommendations for power management in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the following recommendations for power management in Configuration Manager.  
 

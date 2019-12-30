@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Configure the Default Compliance Evaluation Schedule
-In System Center Configuration Manager, the site control file maintains configuration for the configuration of the site. These code samples query for the specific site control file item Configuration Management Agent, and change the EvaluationSchedule value to set the client agent evaluation schedule.  
+In Configuration Manager, the site control file maintains configuration for the configuration of the site. These code samples query for the specific site control file item Configuration Management Agent, and change the EvaluationSchedule value to set the client agent evaluation schedule.  
 
 ### To configure the Default Compliance Evaluation Schedule  
 

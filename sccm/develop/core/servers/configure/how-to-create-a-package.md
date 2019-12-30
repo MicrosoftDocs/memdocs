@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Create a Package
-The following example shows how to create a package in System Center Configuration Manager by using the `SMS_Package` class and class properties.  
+The following example shows how to create a package in Configuration Manager by using the `SMS_Package` class and class properties.  
 
 ### To create a package  
 

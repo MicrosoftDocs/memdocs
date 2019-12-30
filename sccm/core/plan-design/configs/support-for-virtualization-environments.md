@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Support for virtualization environments with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager supports installing the client and site system roles on supported operating systems that run as a virtual machine in the virtualization environments in this article. This support exists even when the virtual machine host (virtualization environment) isn't supported as a client or site server.  
 

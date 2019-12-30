@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_SUPSyncStatus Server WMI Class
-The `SMS_SUPSyncStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that lists sync and replication status for SUM data for participating site/SUP.  
+The `SMS_SUPSyncStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists sync and replication status for SUM data for participating site/SUP.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

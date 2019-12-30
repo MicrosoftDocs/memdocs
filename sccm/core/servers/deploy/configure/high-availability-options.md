@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # High availability options for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article describes how to deploy Configuration Manager using options that maintain a high level of available service.
 

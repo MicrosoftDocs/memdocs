@@ -1,7 +1,7 @@
 ---
 title: "Security and privacy for compliance settings"
 titleSuffix: "Configuration Manager"
-description: "Learn about the security best practices for compliance settings in System Center Configuration Manager."
+description: "Learn about the security best practices for compliance settings in Configuration Manager."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -12,9 +12,9 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Security and privacy for compliance settings in System Center Configuration Manager
+# Security and privacy for compliance settings in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 ## Security best practices for compliance settings  

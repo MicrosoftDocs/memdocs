@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Preparation steps for on-premises MDM in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 To manage devices with Configuration Manager on-premises mobile device management (MDM), first set up the necessary infrastructure. The required site system roles need to communicate across a trusted channel with the mobile devices. These roles include the enrollment proxy point, enrollment point, device management point, and distribution point.
 

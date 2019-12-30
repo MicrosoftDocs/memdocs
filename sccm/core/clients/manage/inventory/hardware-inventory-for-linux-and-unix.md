@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Hardware inventory for Linux and UNIX in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 > [!Important]  
 > Starting in version 1902, Configuration Manager doesn't support Linux or UNIX clients. 
@@ -120,4 +120,4 @@ Actions for hardware inventory are entered into the client log file, **scxcm.log
 ###  <a name="BKMK_AddLinuxProvidertoCM"></a> Enable the new inventory class in Configuration Manager:  
  Before Configuration Manager can report on inventory that's reported by the new provider on Linux and UNIX computers, you must import the Managed Object Format (MOF) file that defines the schema of your custom provider.  
 
- To import a custom MOF file into Configuration Manager, see [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
+ To import a custom MOF file into Configuration Manager, see [How to configure hardware inventory](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  

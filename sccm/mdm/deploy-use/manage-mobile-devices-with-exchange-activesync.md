@@ -1,7 +1,7 @@
 ---
 title: "Manage mobile devices "
 titleSuffix: "Configuration Manager"
-description: "Manage mobile devices by using the Exchange Server connector in System Center Configuration Manager."
+description: "Manage mobile devices by using the Exchange Server connector in Configuration Manager."
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,18 +12,18 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Manage mobile devices with System Center Configuration Manager and Exchange
+# Manage mobile devices with Configuration Manager and Exchange
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Use the Exchange Server connector in System Center Configuration Manager when you want to manage mobile devices that connect to Exchange Server (on-premises or online) by using the Microsoft Exchange ActiveSync protocol, and you cannot enroll them by using Configuration Manager. You can configure Exchange mobile device management features, such as remote device wipe and settings control for multiple Exchange servers, from the Configuration Manager console.  
+Use the Exchange Server connector in Configuration Manager when you want to manage mobile devices that connect to Exchange Server (on-premises or online) by using the Microsoft Exchange ActiveSync protocol, and you cannot enroll them by using Configuration Manager. You can configure Exchange mobile device management features, such as remote device wipe and settings control for multiple Exchange servers, from the Configuration Manager console.  
 
  ![configmgr&#45;with&#45;exchange](../../mdm/deploy-use/media/configmgr-with-exchange.png "configmgr-with-exchange")  
 
- When you manage mobile devices by using the Exchange Server connector, this does not install the Configuration Manager client on the mobile devices. Some management functions are therefore limited. For example, you cannot install software on these devices or use configuration items to configure these devices. For more information about the various management capabilities that you can use with Configuration Manager for mobile devices, see [Choose a device management solution for System Center Configuration Manager](../../core/plan-design/choose-a-device-management-solution.md).  
+ When you manage mobile devices by using the Exchange Server connector, this does not install the Configuration Manager client on the mobile devices. Some management functions are therefore limited. For example, you cannot install software on these devices or use configuration items to configure these devices. For more information about the various management capabilities that you can use with Configuration Manager for mobile devices, see [Choose a device management solution for Configuration Manager](../../core/plan-design/choose-a-device-management-solution.md).  
 
 > [!IMPORTANT]  
->  Before you install the Exchange Server connector, confirm that Configuration Manager supports the version of Microsoft Exchange that you are using. For more information, see "Exchange Server connector" in [Supported operating systems for sites and clients for System Center Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).  
+>  Before you install the Exchange Server connector, confirm that Configuration Manager supports the version of Microsoft Exchange that you are using. For more information, see "Exchange Server connector" in [Supported operating systems for sites and clients for Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).  
 
  When you use the Exchange Server connector, the mobile devices can be managed by the settings that you configure in Configuration Manager instead of being managed by the default Exchange ActiveSync mailbox policies. Define the settings that you want to use in the following group settings: **General**, **Password**, **Email Management**, **Security**, and **Application**. For example, in the **Password** group setting, you can configure whether mobile devices require a password, the minimum password length, password complexity, and whether password recovery is allowed.  
 
@@ -31,7 +31,7 @@ Use the Exchange Server connector in System Center Configuration Manager when yo
 
  You can also configure the Exchange Server connector to manage the Exchange access rules and allow, block, or quarantine mobile devices. You can remotely wipe mobile devices by using the Configuration Manager console, and users can remotely wipe their mobile devices by using the Application Catalog.  
 
- A user's mobile device appears in the Application Catalog automatically when the Exchange Server connector manages it and the Exchange Server is on-premises. When you configure the Exchange Server connector for Microsoft Exchange Online, you must manually configure user device affinity for the user's mobile device to appear in the Application Catalog. For more information about how to manually configure user device affinity, see [Link users and devices with user device affinity in System Center Configuration Manager](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).  
+ A user's mobile device appears in the Application Catalog automatically when the Exchange Server connector manages it and the Exchange Server is on-premises. When you configure the Exchange Server connector for Microsoft Exchange Online, you must manually configure user device affinity for the user's mobile device to appear in the Application Catalog. For more information about how to manually configure user device affinity, see [Link users and devices with user device affinity](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).  
 
 > [!TIP]  
 >  If you manage a mobile device by using the Exchange Server connector and the mobile device is transferred to another user, delete the mobile device from the Configuration Manager console before the new owner of the mobile device configures their Exchange account on this transferred mobile device.  
@@ -55,7 +55,7 @@ Use the Exchange Server connector in System Center Configuration Manager when yo
 
   The **Operations Administrator** security role includes the required permissions to manage mobile devices by using the Exchange Server connector.  
 
-  For more information about how to configure security permissions, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
+  For more information about how to configure security permissions, see [Configure role-based administration for Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
 
 ## Installing and Configuring an Exchange Server Connector  
  Use the following procedure to install and configure an Exchange Server connector to manage mobile devices. Configuration Manager supports only one connector in an Exchange organization. After you complete these steps, you can monitor the mobile devices that are found and managed by the connector when you view the collections that display mobile devices, and by using the reports for mobile devices.  
@@ -127,7 +127,7 @@ Use the Exchange Server connector in System Center Configuration Manager when yo
 
     -   On the **Account** page of the wizard, you can configure the account used to send email notifications to clients that are blocked by Configuration Manager conditional access. The account you specify must have a valid mailbox on the Exchange server.  
 
-         For more information, see [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md).  
+         For more information, see [Manage access to services](../../protect/deploy-use/manage-access-to-services.md).  
 
 6.  You can verify the installation of the Exchange Server connector by using status messages and by reviewing the log files:  
 

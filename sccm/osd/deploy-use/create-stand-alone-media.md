@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Create stand-alone media
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Stand-alone media in Configuration Manager contains everything required to deploy the OS on a computer without a network connection.
 

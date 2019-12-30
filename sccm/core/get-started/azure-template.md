@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Create a Configuration Manager lab in Azure
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
 <!--3556017-->
 

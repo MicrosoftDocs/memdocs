@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Protect data and devices in On-premises Mobile Device Management
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You want your users to be able to securely access your organization's resources, so that both your infrastructure and your data are protected from exposure or malicious attack.
 

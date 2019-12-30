@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 > [!IMPORTANT]
 >  This class supports the Configuration Manager 2007 infrastructure; any access to this class or class properties should be read-only.  
 
- In System Center Configuration Manager, the `CCM_Service_EndpointConfiguration` class is a client Windows Management Instrumentation (WMI) class that supports endpoint configuration for the CCMEXEC service. There is an instance of this class for each endpoint on the computer.  
+ in Configuration Manager, the `CCM_Service_EndpointConfiguration` class is a client Windows Management Instrumentation (WMI) class that supports endpoint configuration for the CCMEXEC service. There is an instance of this class for each endpoint on the computer.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Create a Deployment Package
-You create a software updates deployment package, in System Center Configuration Manager, by creating an instance of the `SMS_SoftwareUpdatesPackage` class and populating the properties.  
+You create a software updates deployment package, in Configuration Manager, by creating an instance of the `SMS_SoftwareUpdatesPackage` class and populating the properties.  
 
 ### To create a software updates deployment package  
 

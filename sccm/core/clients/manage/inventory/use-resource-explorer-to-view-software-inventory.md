@@ -1,7 +1,7 @@
 ---
 title: "View software inventory with Resource Explorer"
 titleSuffix: "Configuration Manager"
-description: "Use Resource Explorer to view software inventory in System Center Configuration Manager."
+description: "Use Resource Explorer to view software inventory in Configuration Manager."
 ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,11 +12,11 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to use Resource Explorer to view software inventory in System Center Configuration Manager
+# How to use Resource Explorer to view software inventory in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Use Resource Explorer in System Center Configuration Manager to view information about software inventory that has been collected from computers in your hierarchy.  
+Use Resource Explorer in Configuration Manager to view information about software inventory that has been collected from computers in your hierarchy.  
 
 > [!NOTE]  
 >  Resource Explorer will not display any inventory data until a software inventory cycle has run on the client.  

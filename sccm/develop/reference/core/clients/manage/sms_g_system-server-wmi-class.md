@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_G_System Server WMI Class
-The `SMS_G_System` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that serves as the abstract base class for all hardware and software system classes, for example, [SMS_G_System_CI_ComplianceState Server WMI Class](../../../../../develop/reference/compliance/sms_g_system_ci_compliancestate-server-wmi-class.md).  
+The `SMS_G_System` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the abstract base class for all hardware and software system classes, for example, [SMS_G_System_CI_ComplianceState Server WMI Class](../../../../../develop/reference/compliance/sms_g_system_ci_compliancestate-server-wmi-class.md).  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

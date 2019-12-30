@@ -1,7 +1,7 @@
 ---
 title: Site size and performance FAQ
 titleSuffix: Configuration Manager
-description: Answers to common System Center Configuration Manager questions about site sizing and performance.
+description: Answers to common Configuration Manager questions about site sizing and performance.
 author: aczechowski
 ms.author: aaroncz
 ms.prod: configuration-manager
@@ -9,9 +9,9 @@ ms.topic: conceptual
 ms.date: 04/19/2019
 ---
 
-# System Center Configuration Manager site sizing and performance FAQ
+# Configuration Manager site sizing and performance FAQ
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This document addresses frequently asked questions about Configuration Manager site sizing guidance and common performance issues.
 

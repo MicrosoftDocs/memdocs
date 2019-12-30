@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Configure Azure services for use with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the **Azure Services Wizard** to simplify the process of configuring the Azure cloud services you use with Configuration Manager. This wizard provides a common configuration experience by using Azure Active Directory (Azure AD) web app registrations. These apps provide subscription and configuration details, and authenticate communications with Azure AD. The app replaces entering this same information each time you set up a new Configuration Manager component or service with Azure.
 

@@ -1,7 +1,7 @@
 ---
 title: "Audit remote control usage"
 titleSuffix: "Configuration Manager"
-description: "Audit remote control use in System Center Configuration Manager."
+description: "Audit remote control use in Configuration Manager."
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,13 +12,13 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to audit remote control usage in System Center Configuration Manager
+# How to audit remote control usage in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-You can use System Center Configuration Manager reports to view audit information for remote control.  
+You can use Configuration Manager reports to view audit information for remote control.  
 
- For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../../../core/servers/manage/reporting.md).  
+ For more information about how to configure reporting in Configuration Manager, see [Reporting](../../../../core/servers/manage/reporting.md).  
 
  The following two reports are available with the category **Status Messages - Audit**:  
 

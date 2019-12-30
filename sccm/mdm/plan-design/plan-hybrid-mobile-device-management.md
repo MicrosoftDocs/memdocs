@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Plan for hybrid MDM with Configuration Manager and Microsoft Intune
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 > [!Important]  

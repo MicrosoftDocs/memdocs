@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Operating System Configuration Item Example 1
-In System Center Configuration Manager, the following Operating System Configuration Item Schema example checks for Windows XP SP2.  
+In Configuration Manager, the following Operating System Configuration Item Schema example checks for Windows XP SP2.  
 
 ## Operating System Configuration Item Example  
 

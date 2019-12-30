@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Checklist for installing update 1902 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you use the current branch of Configuration Manager, you can install the in-console update for version 1902 to update your hierarchy from a previous version. <!-- baseline only statement:-->(Because version 1902 is also available as [baseline media](/sccm/core/servers/manage/updates#bkmk_Baselines), you can use the installation media to install the first site of a new hierarchy.)
 

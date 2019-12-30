@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Proxy server support in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Some Configuration Manager site system servers require connections to the internet. If your environment requires internet traffic to use a proxy server, configure these site system roles to use the proxy.  
 

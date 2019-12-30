@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Plan for security in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article describes the concepts for you to consider when planning for security with your Configuration Manager implementation. It includes the following sections:  
 

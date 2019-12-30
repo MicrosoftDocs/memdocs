@@ -12,12 +12,12 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Security and privacy for reporting in System Center Configuration Manager
+# Security and privacy for reporting in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-This topic contains security best practices and privacy information for reporting in System Center Configuration Manager.  
+This topic contains security best practices and privacy information for reporting in Configuration Manager.  
 
  Configuration Manager reports display information that is collected during standard Configuration Manager management operations. For example, you can display a report of information that has been collected from discovery or inventory. Reports can also contain the current status information for client management operations, such as deploying software, and checking for compliance.  
 
- For more information about any security best practices and privacy information for Configuration Manager operations that might generate data that can be displayed in reports, see [Security best practices and privacy information for System Center Configuration Manager](../../plan-design/security/security-best-practices-and-privacy-information.md).  
+ For more information about any security best practices and privacy information for Configuration Manager operations that might generate data that can be displayed in reports, see [Security best practices and privacy information for Configuration Manager](../../plan-design/security/security-best-practices-and-privacy-information.md).  

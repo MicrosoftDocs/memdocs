@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SetSummarizationSettings Method in Class SMS_SummarizationSettings
-In System Center Configuration Manager, the `SetSummarizationSettings` Windows Management Instrumentation (WMI) class method sets the summarization schedule.  
+In Configuration Manager, the `SetSummarizationSettings` Windows Management Instrumentation (WMI) class method sets the summarization schedule.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and is intended to show the definition of the method.  
 

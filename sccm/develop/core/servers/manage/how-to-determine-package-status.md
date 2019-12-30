@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Determine Package Status
-In System Center Configuration Manager, the software distribution process can take from several minutes to several hours, depending on the site settings, network topography, whether the package includes source files, and the number of distribution points that have been specified for the package. Creating the package, distribution points, programs, and advertisement instances initiates the software distribution process that is managed by the System Center Configuration Manager Distribution Manager.  
+In Configuration Manager, the software distribution process can take from several minutes to several hours, depending on the site settings, network topography, whether the package includes source files, and the number of distribution points that have been specified for the package. Creating the package, distribution points, programs, and advertisement instances initiates the software distribution process that is managed by the Configuration Manager Distribution Manager.  
 
  The Distribution Manager must first distribute the package's source files, which is the time-consuming aspect of the software distribution process. Only after the source files are distributed can the advertisements be offered on a site. You can use the package summarizer classes to determine whether a package has been distributed and is ready to be advertised.  
 
@@ -35,7 +35,7 @@ In System Center Configuration Manager, the software distribution process can ta
 
 ### To determine package status  
 
-1.  Set up a connection to the System Center Configuration Manager provider namespace.  
+1.  Set up a connection to the Configuration Manager provider namespace.  
 
 2.  Create an event handler to watch for the creation or modification of the [SMS_PackageStatusRootSummarizer Server WMI Class](../../../../develop/reference/core/servers/configure/sms_packagestatusrootsummarizer-server-wmi-class.md).  
 

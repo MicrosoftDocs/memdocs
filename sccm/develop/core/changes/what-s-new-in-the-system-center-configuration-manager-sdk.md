@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# What's new in the System Center Configuration Manager SDK
+# What's new in the Configuration Manager SDK
 This article lists any recent additions or changes to the Configuration Manager software development kit (SDK).  
 
 

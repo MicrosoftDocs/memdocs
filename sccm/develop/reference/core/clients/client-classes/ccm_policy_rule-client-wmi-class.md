@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # CCM_Policy_Rule Client WMI Class
-In System Center Configuration Manager, the `CCM_Policy_Rule` class is a client Windows Management Instrumentation (WMI) class that defines a policy object rule. Objects of this class are only used in the `PolicyRules` property in [CCM_Policy_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy_policy-client-wmi-class.md).  
+In Configuration Manager, the `CCM_Policy_Rule` class is a client Windows Management Instrumentation (WMI) class that defines a policy object rule. Objects of this class are only used in the `PolicyRules` property in [CCM_Policy_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy_policy-client-wmi-class.md).  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

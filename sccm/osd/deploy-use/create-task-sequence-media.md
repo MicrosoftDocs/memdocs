@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Create task sequence media
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can use media to capture an OS image from a reference computer or to deploy an OS to a destination computer in your Configuration Manager environment. The media that you create can be a CD, DVD set, or a USB flash drive.  
 

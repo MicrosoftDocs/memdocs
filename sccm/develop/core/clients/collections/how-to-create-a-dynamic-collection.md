@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Create a Dynamic Collection
-In System Center Configuration Manager, your application uses the [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) to define the attributes of a collection, such as the membership rules and the refresh schedule. The `MemberClassName` property contains the system-generated class name that contains the members of the collection.  
+In Configuration Manager, your application uses the [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) to define the attributes of a collection, such as the membership rules and the refresh schedule. The `MemberClassName` property contains the system-generated class name that contains the members of the collection.  
 
  Members of a collection are specified by using direct rules, query rules, or both. Direct rules define an explicit resource, whereas query rules define a dynamic collection that is regularly evaluated based on the current state of the site.  
 

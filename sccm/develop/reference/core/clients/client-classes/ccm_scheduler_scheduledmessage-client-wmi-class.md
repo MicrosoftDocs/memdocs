@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # CCM_Scheduler_ScheduledMessage Client WMI Class
-In System Center Configuration Manager, the `CCM_Scheduler_ScheduledMessage` class is a client Windows Management Instrumentation (WMI) class that represents the configuration for a scheduled message. There is an instance of this class for each scheduled message.  
+In Configuration Manager, the `CCM_Scheduler_ScheduledMessage` class is a client Windows Management Instrumentation (WMI) class that represents the configuration for a scheduled message. There is an instance of this class for each scheduled message.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

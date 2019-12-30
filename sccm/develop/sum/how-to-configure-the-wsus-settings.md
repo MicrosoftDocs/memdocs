@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Configure the WSUS Settings
-You configure the Windows Server Update Services (WSUS) component settings, in System Center Configuration Manager, by modifying the site control file. For more information, see [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).  
+You configure the Windows Server Update Services (WSUS) component settings, in Configuration Manager, by modifying the site control file. For more information, see [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).  
 
 ### To configure WSUS settings  
 
@@ -28,7 +28,7 @@ You configure the Windows Server Update Services (WSUS) component settings, in S
  The following example method configures various Windows Server Update Services (WSUS) component settings by using the [SMS_SCI_Component](../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md) class to connect to the site control file and change properties.  
 
 > [!NOTE]
->  For configuration related information and values, see the Configuring Software Updates section of the System Center Configuration Manager documentation at [https://go.microsoft.com/fwlink/?LinkId=111682](https://go.microsoft.com/fwlink/?LinkId=111682).  
+>  For configuration related information and values, see the Configuring Software Updates section of the Configuration Manager documentation at [https://go.microsoft.com/fwlink/?LinkId=111682](https://go.microsoft.com/fwlink/?LinkId=111682).  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 

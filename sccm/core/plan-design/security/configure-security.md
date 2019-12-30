@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Configure security in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the information in this article to help you set up security-related options for Configuration Manager. It covers the following security options:
 - [Client computer communication](#BKMK_ConfigureClientPKI) for client PKI certificates  

@@ -12,9 +12,9 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Objects Overview
-The System Center Configuration Manager objects are instances of Configuration Manager-specific Windows Management Instrumentation (WMI) classes that are managed by the SMS Provider. The Configuration Manager object class categories are described in the following table.  
+The Configuration Manager objects are instances of Configuration Manager-specific Windows Management Instrumentation (WMI) classes that are managed by the SMS Provider. The Configuration Manager object class categories are described in the following table.  
 
-|System Center Configuration Manager Object Class Category|Description|  
+|Configuration Manager Object Class Category|Description|  
 |----------------------------------------------------------------------------------------|-----------------|  
 |Software distribution|Objects associated with the software distribution feature of Configuration Manager, such as advertisement, collection, package, and program objects.|  
 |Scheduling|Organizes scheduled Configuration Manager events, such as inventory updates.|  
@@ -28,7 +28,7 @@ The System Center Configuration Manager objects are instances of Configuration M
 |Collected files|Contains information about files collected from clients.|  
 
 ## DebugView  
- To show SMS Provider object property values in the System Center Configuration Manager console results pane, start the console with the following command line:  
+ To show SMS Provider object property values in the Configuration Manager console results pane, start the console with the following command line:  
 
  \<InstallationDirectory>\Microsoft.ConfigurationManagement.exe /SMS:DebugView=1  
 

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # FindMachineSite Method in Class SMS_Collection
-The `FindMachineSite` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, gets site code information for a specific resource.  
+The `FindMachineSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets site code information for a specific resource.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

@@ -1,7 +1,7 @@
 ---
 title: "Set up additional management"
 titleSuffix: "Configuration Manager"
-description: "Set up additional management using System Center Configuration Manager."
+description: "Set up additional management using Configuration Manager."
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,9 +12,9 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Set up additional management with System Center Configuration Manager
+# Set up additional management with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 (Optional) You can set up additional management before devices are enrolled. These management solutions can be created and deployed after devices are enrolled, although many organizations prefer to deploy them as devices are brought into management.
 

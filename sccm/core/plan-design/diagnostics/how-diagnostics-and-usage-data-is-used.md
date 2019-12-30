@@ -1,7 +1,7 @@
 ---
 title: "Use of diagnostics data"
 titleSuffix: "Configuration Manager"
-description: "Learn about how Microsoft uses the diagnostics and usage data that System Center Configuration Manager collects."
+description: "Learn about how Microsoft uses the diagnostics and usage data that Configuration Manager collects."
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How diagnostics and usage data is used for System Center Configuration Manager
+# How diagnostics and usage data is used for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Diagnostic and usage data that System Center Configuration Manager collects provides Microsoft nearly immediate feedback about how the product is working and is used to adjust future updates. We are also able to see configuration data that helps us engineer and test the configurations that are in production. For example:  
+Diagnostic and usage data that Configuration Manager collects provides Microsoft nearly immediate feedback about how the product is working and is used to adjust future updates. We are also able to see configuration data that helps us engineer and test the configurations that are in production. For example:  
 
 -   The Windows server versions that are used by site servers  
 
@@ -39,7 +39,7 @@ Microsoft uses available data to improve to the product. Following are a few exa
 
 -   **Revised support for older server operating systems:**  
 
-     The initial support offered by the current branch of System Center Configuration Manager limited the support timeline for Windows Server 2008 R2. After examining the usage data from customers who had upgraded to the Configuration Manager current branch, we identified the need to revise and extend this timeline to support customers who still use this server operating system to host site servers and site system roles.  
+     The initial support offered by the current branch of Configuration Manager limited the support timeline for Windows Server 2008 R2. After examining the usage data from customers who had upgraded to the Configuration Manager current branch, we identified the need to revise and extend this timeline to support customers who still use this server operating system to host site servers and site system roles.  
 
 -   **Improved prerequisite checks:**  
 

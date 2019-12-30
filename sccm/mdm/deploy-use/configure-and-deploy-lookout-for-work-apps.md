@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Configure and deploy Lookout for Work apps
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article explains how to configure and deploy the Lookout for Work app for Android and iOS devices.
 

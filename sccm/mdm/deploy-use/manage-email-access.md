@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Manage email access in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use Configuration Manager conditional access to manage access to Exchange email based on conditions you specify.  
 

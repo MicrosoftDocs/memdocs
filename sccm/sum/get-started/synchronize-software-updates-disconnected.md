@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Synchronize software updates from a disconnected software update point  
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
  When the software update point at the top-level site is disconnected from the Internet, you must use the export and import functions of the WSUSUtil tool to synchronize software updates metadata. You can choose an existing WSUS server not in your Configuration Manager hierarchy as the synchronization source. This topic provides information about how to use the export and import functions of the WSUSUtil tool.  
 

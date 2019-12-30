@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # AddSoftwareHashData Method in Class SMS_AISoftwareList
-The `AddSoftwareHashData` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, adds the `SoftwarePropertiesHash` from `SoftwareCode` and `Title`.  
+The `AddSoftwareHashData` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the `SoftwarePropertiesHash` from `SoftwareCode` and `Title`.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

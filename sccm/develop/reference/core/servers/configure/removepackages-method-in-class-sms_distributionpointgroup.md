@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # RemovePackages Method in Class SMS_DistributionPointGroup
-The `RemovePackages` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, removes a set of packages from this distribution point group.  
+The `RemovePackages` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes a set of packages from this distribution point group.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

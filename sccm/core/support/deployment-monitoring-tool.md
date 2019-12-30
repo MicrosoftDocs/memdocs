@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Deployment Monitoring Tool
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The Deployment Monitoring Tool is one of the [Configuration Manager tools](/sccm/core/support/tools). It's a graphical user interface designed to assist in troubleshooting application, software update, and configuration baseline deployments on a Configuration Manager client. The tool is read-only as it doesn't change any state on the client. You can safely use it to diagnose common deployment scenarios.
 

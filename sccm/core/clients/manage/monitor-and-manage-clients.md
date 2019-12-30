@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Monitor and manage clients in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After you install the client on devices in your organization, Configuration Manager provides several ways to monitor and manage it. You can monitor clients to check their status, and Configuration Manager can automatically fix some problems it detects. Use the Configuration Manager console to manage clients for individual devices or device collections.  
 

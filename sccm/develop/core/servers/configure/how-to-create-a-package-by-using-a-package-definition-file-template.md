@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Create a Package by Using a Package Definition File Template
-The following example shows how to create a package and program by using a package definition file template in System Center Configuration Manager. The package definition file template contains the default values that are used to create `SMS_Package` and `SMS_Program` objects. The following example uses the `SMS_PDF_Package` class and the `GetPDFData` method to load the package definition file template information and to create a package and the related programs.  
+The following example shows how to create a package and program by using a package definition file template in Configuration Manager. The package definition file template contains the default values that are used to create `SMS_Package` and `SMS_Program` objects. The following example uses the `SMS_PDF_Package` class and the `GetPDFData` method to load the package definition file template information and to create a package and the related programs.  
 
 ### To create a package by using a package definition file template  
 

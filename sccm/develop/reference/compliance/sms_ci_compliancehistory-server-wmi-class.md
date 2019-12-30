@@ -165,7 +165,7 @@ Class SMS_CI_ComplianceHistory : SMS_BaseClass
 
  Qualifiers: None  
 
- This property is deprecated. In System Center Configuration Manageronly the Configuration Item version is used.  
+ This property is deprecated. in Configuration Manageronly the Configuration Item version is used.  
 
  `UserName`  
  Data type: `String`  

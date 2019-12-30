@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Software inventory for mobile devices enrolled with Microsoft Intune
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
  You can collect inventory for apps installed on mobile devices. The apps that are inventoried will depend on whether the device is company-owned or personal-owned. For personal devices, the only apps that are inventoried are apps that are managed by Microsoft Intune.  
 

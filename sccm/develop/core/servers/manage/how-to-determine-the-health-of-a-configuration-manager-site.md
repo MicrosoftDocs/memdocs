@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Determine the Health of a Configuration Manager Site
-You can determine the overall health or status of a site, in System Center Configuration Manager, by inspecting the `SMS_SummarizerSiteStatus` object `Status` property. The `Status` property has three possible values:  
+You can determine the overall health or status of a site, in Configuration Manager, by inspecting the `SMS_SummarizerSiteStatus` object `Status` property. The `Status` property has three possible values:  
 
 |Value|Description|  
 |-----------|-----------------|  
@@ -104,7 +104,7 @@ public void ShowSiteHealth(WqlConnectionManager connection, string siteCode)
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
 |`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).|  
-|`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|A valid task System Center Configuration Manager site code|  
+|`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|A valid task Configuration Manager site code|  
 
 ## Compiling the Code  
  This C# example requires:  

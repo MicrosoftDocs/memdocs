@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_Collection Server WMI Class
-The `SMS_Collection` Windows Management Instrumentation (WMI) class is an SMS Provider server class in System Center Configuration Manager. It represents a collection of resources related logically by rules along with collection information.  
+The `SMS_Collection` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager. It represents a collection of resources related logically by rules along with collection information.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -80,7 +80,7 @@ Class SMS_Collection : SMS_BaseClass
 |[GenerateCCRByName Method in Class SMS_Collecton](../../../../../develop/reference/core/clients/collections/generateccrbyname-method-in-class-sms_collecton.md)|Generates a client configuration request by computer name.|  
 |[GetTotalNumResults Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/gettotalnumresults-method-in-class-sms_collection.md)|Gets a count of all members in a collection, including subcollections.|  
 |[ReassignClientsToSite Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/reassignclientstosite-method-in-class-sms_collection.md)|Reassigns the site for the clients in the list.|  
-|[RequestRefresh Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/requestrefresh-method-in-class-sms_collection.md)|Triggers a re-evaluation of collection membership by the System Center Configuration Manager collection evaluator component.|  
+|[RequestRefresh Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/requestrefresh-method-in-class-sms_collection.md)|Triggers a re-evaluation of collection membership by the Configuration Manager collection evaluator component.|  
 |[SetDeviceCategory Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/setdevicecategory-method-in-class-sms_collection.md)|Assigns a category to a set of devices.|  
 |[SetMemberOrder Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/setmemberorder-method-in-class-sms_collection.md)|Sets the order of the members of a collection.|  
 |[UpdateVisibilityInEPDashBoard in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/updatevisibilityinepdashboard-in-class-sms_collection.md)|Show this collection in the EndPoint Protection dashboard.|  
@@ -314,7 +314,7 @@ Class SMS_Collection : SMS_BaseClass
 
  Qualifiers: [Not_null]  
 
- The name of the collection. This value represents the collection in the System Center Configuration Manager console and should be unique. The default value is "New Collection".  
+ The name of the collection. This value represents the collection in the Configuration Manager console and should be unique. The default value is "New Collection".  
 
  `OwnedByThisSite`  
  Data type: `Boolean`  

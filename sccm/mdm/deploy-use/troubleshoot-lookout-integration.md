@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 # Troubleshoot Lookout Integration with Intune
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 ## Troubleshoot login errors
 ### 403 errors

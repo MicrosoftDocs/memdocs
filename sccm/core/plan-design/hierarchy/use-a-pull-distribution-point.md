@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Use a pull-distribution point with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 When you distribute content to a standard distribution point in the Configuration Manager console, the site server pushes the content to the distribution point. A pull-distribution point gets content by downloading it from a source location like a client.  

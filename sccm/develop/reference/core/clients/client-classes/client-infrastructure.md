@@ -12,19 +12,19 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Client Infrastructure
-This section provides reference information for the System Center Configuration Manager client infrastructure, including Control Panel, client framework and data transfer, and policy functionality.  
+This section provides reference information for the Configuration Manager client infrastructure, including Control Panel, client framework and data transfer, and policy functionality.  
 
 ## In This Section  
  Client Control Panel COM Automation  
  > [!IMPORTANT]
->  The Client Control Panel COM Automation interface has been removed or deprecated in System Center Configuration Manager SP1. Use the feature-related client WMI class instead.
+>  The Client Control Panel COM Automation interface has been removed or deprecated in Configuration Manager SP1. Use the feature-related client WMI class instead.
 
-[Client Framework and Data Transfer Client WMI Classes](#client-framework-and-data-transfer-client-wmi-classes) describes the Client Configuration Manager (CCM) framework and data transfer classes in System Center Configuration Manager for the client.
+[Client Framework and Data Transfer Client WMI Classes](#client-framework-and-data-transfer-client-wmi-classes) describes the Client Configuration Manager (CCM) framework and data transfer classes in Configuration Manager for the client.
 
 [Policy Agent Client WMI Classes](#policy-agent-client-wmi-classes) describes the classes used to manage policy on client computers and devices.
 
 ## Client Framework and Data Transfer Client WMI Classes  
-The following framework and data transfer classes are used in System Center Configuration Manager for the client.
+The following framework and data transfer classes are used in Configuration Manager for the client.
 
 [CCM_Messaging_Configuration Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_messaging_configuration-client-wmi-class.md)  
 Supports messaging-related settings that are exposed to administrators.  

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Import a MOF File to Extend Inventory
-You import a MOF file to extend inventory, in System Center Configuration Manager, by using the `ImportInventoryReport` method.  
+You import a MOF file to extend inventory, in Configuration Manager, by using the `ImportInventoryReport` method.  
 
 ### To import MOF file to extend hardware inventory  
 
@@ -59,5 +59,5 @@ An example MOF file.================================[ SMS_Report (TRUE),  SMS_Gr
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+ [Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [About Configuration Manager Inventory](../../../../develop/core/clients/inventory/about-configuration-manager-inventory.md)

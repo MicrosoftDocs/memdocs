@@ -16,10 +16,10 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Updates Publisher*
 
-The information in these articles can help you download, install, and set up Updates Publisher for use with your System Center Configuration Manager environment.
+The information in these articles can help you download, install, and set up Updates Publisher for use with your Configuration Manager environment.
 
 ## Prerequisites and limitations
-System Center Updates Publisher can only be used with System Center Configuration Manager. It isn't intended for use with stand-alone WSUS hierarchies.
+System Center Updates Publisher can only be used with Configuration Manager. It isn't intended for use with stand-alone WSUS hierarchies.
 
 The following sections detail requirements to install and use Updates Publisher, and limitations or known issues for its use.  
 

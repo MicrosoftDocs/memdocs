@@ -15,7 +15,7 @@ manager: dougeby
 
 # Azure AD authentication workflow
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article is a technical reference for the Configuration Manager client installation process on a Windows 10 device that's joined to Azure Active Directory (Azure AD). It details the workflow process for the device authentication and client installation.  
  

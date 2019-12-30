@@ -11,7 +11,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About Configuration Manager Console Nodes
-System Center Configuration Manager uses XML to define the nodes and their content, that you see in the Configuration Manager console. New nodes can be added anywhere in the existing node hierarchy.  
+Configuration Manager uses XML to define the nodes and their content, that you see in the Configuration Manager console. New nodes can be added anywhere in the existing node hierarchy.  
 
  The XML for a node describes the navigation pane, results pane, and action pane, and the resources that are needed by each pane to display the node.  
 

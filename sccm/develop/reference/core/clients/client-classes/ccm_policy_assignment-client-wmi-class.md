@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # CCM_Policy_Assignment Client WMI Class
-In System Center Configuration Manager, the `CCM_Policy_Assignment` class is a client Windows Management Instrumentation (WMI) class that represents a policy assignment.  
+In Configuration Manager, the `CCM_Policy_Assignment` class is a client Windows Management Instrumentation (WMI) class that represents a policy assignment.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

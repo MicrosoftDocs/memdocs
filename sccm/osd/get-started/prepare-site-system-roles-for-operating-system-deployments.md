@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Prepare site system roles for OS deployments with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 To deploy operating systems in Configuration Manager, first prepare the following site system roles that require specific configurations and considerations.
 

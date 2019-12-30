@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # What's new in version 1810 of Configuration Manager current branch
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Update 1810 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1710, 1802, or 1806. <!-- baseline only statement: When installing a new site, it's also available as a baseline version.--> This article summarizes the changes and new features in Configuration Manager, version 1810.  
 

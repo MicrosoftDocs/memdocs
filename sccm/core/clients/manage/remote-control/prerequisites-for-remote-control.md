@@ -1,7 +1,7 @@
 ---
 title: "Remote control prerequisites"
 titleSuffix: "Configuration Manager"
-description: "Get the prerequisites for remote control in System Center Configuration Manager."
+description: "Get the prerequisites for remote control in Configuration Manager."
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,11 +12,11 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Prerequisites for remote control in System Center Configuration Manager
+# Prerequisites for remote control in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Remote control in System Center Configuration Manager has external dependencies and dependencies in the product.  
+Remote control in Configuration Manager has external dependencies and dependencies in the product.  
 
 ## Dependencies external to Configuration Manager  
 
@@ -32,12 +32,12 @@ Remote control in System Center Configuration Manager has external dependencies 
 >  No Windows services are required as an external dependency for remote control.  
 
 ### Supported operating systems for the remote control viewer  
-The remote control viewer is supported on all operating systems that are supported for the Configuration Manager console. For information, see [Supported configurations for System Center Configuration Manager consoles](../../../../core/plan-design/configs/supported-operating-systems-consoles.md).   
+The remote control viewer is supported on all operating systems that are supported for the Configuration Manager console. For information, see [Supported configurations for Configuration Manager consoles](../../../../core/plan-design/configs/supported-operating-systems-consoles.md).   
 
 ## Configuration Manager dependencies  
 
 |Dependency|More information|  
 |----------------|----------------------|  
-|Remote control must be enabled for clients|By default, remote control is not enabled when you install Configuration Manager. For information about how to enable and configure remote control, see [Configuring remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/configuring-remote-control.md).|  
-|Reporting services point|The reporting services point site system role must be installed before you can run reports for remote control. For more information, see [Reporting in System Center Configuration Manager](../../../../core/servers/manage/reporting.md).|  
-|Security permissions to manage remote control|To access collection resources and to initiate a remote control session from the Configuration Manager console: **Read**, **Read Resource**, and **Remote Control** permission for the **Collection** object.<br /><br /> The **Remote Tools Operator** security role includes these permissions that are required to manage remote control in Configuration Manager.<br /><br /> For more information, see [Configure role-based administration for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-role-based-administration.md).<br /><br /> Additionally, permitted viewers must be given permission to use remote control by adding these users to the **Permitted viewers of Remote Control and Remote Assistance** list in the **Remote Tools** client settings.
+|Remote control must be enabled for clients|By default, remote control is not enabled when you install Configuration Manager. For information about how to enable and configure remote control, see [Configuring remote control](../../../../core/clients/manage/remote-control/configuring-remote-control.md).|  
+|Reporting services point|The reporting services point site system role must be installed before you can run reports for remote control. For more information, see [Reporting](../../../../core/servers/manage/reporting.md).|  
+|Security permissions to manage remote control|To access collection resources and to initiate a remote control session from the Configuration Manager console: **Read**, **Read Resource**, and **Remote Control** permission for the **Collection** object.<br /><br /> The **Remote Tools Operator** security role includes these permissions that are required to manage remote control in Configuration Manager.<br /><br /> For more information, see [Configure role-based administration for Configuration Manager](../../../../core/servers/deploy/configure/configure-role-based-administration.md).<br /><br /> Additionally, permitted viewers must be given permission to use remote control by adding these users to the **Permitted viewers of Remote Control and Remote Assistance** list in the **Remote Tools** client settings.

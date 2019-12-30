@@ -16,7 +16,7 @@ ROBOTS: NOINDEX
 
 # Features in Configuration Manager technical preview version 1906
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
 This article introduces the features that are available in the technical preview for Configuration Manager, version 1906. Install this version to update and add new features to your technical preview site.
 

@@ -21,7 +21,7 @@ Occasionally, you might need to troubleshoot CMPivot. For example, if a state me
 
 ## <a name="bkmk_CMPivot-1902"></a> Troubleshoot CMPivot in version 1902 and later
 
-In System Center Configuration Manager versions 1902 and later, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client.
+In Configuration Manager versions 1902 and later, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client.
 
 When you run CMPivot from CAS, it uses the high-speed message subscription channel to communicate with the primary site. CMPivot doesn't use standard SQL replication between sites. If your SQL Server instance or your SQL provider is remote, or if you use SQL Server Always On, you'll have a "double hop scenario" for CMPivot. For information on how to define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902).
 

@@ -15,13 +15,13 @@ ms.collection: M365-identity-device-management
 
 # Configuration Manager on Azure - Frequently Asked Questions
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The following questions and answers can help you understand when to use and how to configure Configuration Manager on Microsoft Azure.
 
 ## General Questions
 ### My company is trying to move as many physical servers as possible to Microsoft Azure, can I move Configuration Manager servers to Azure?
-Certainly, this is a supported scenario.  See [Support for Virtualization Environments for System Center Configuration Manager](/sccm/core/plan-design/configs/support-for-virtualization-environments).
+Certainly, this is a supported scenario.  See [Support for Virtualization Environments for Configuration Manager](/sccm/core/plan-design/configs/support-for-virtualization-environments).
 
 ### Great! My environment requires multiple sites. Should all child primary sites be in Azure with the central administration site or on-premises? What about secondary sites?
 Site-to-site communications (file-based and database replication) benefits from the proximity of being hosted in Azure. However, all client related traffic would be remote from site servers and site systems. If you use a fast and reliable network connection between Azure and your intranet with an unlimited data plan, hosting all your infrastructure in Azure is an option.
@@ -83,7 +83,7 @@ While Configuration Manager is not tested with Azure load balancers, if the func
 [Azure VM size and type](https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs), Azure VM disks (premium storage is recommended, especially for SQL Server), networking latency, and speed are the most important areas.
 
 ### So, tell me more about Azure virtual machines; what size VMs should I use?
-In general, your compute power (CPU and Memory) need to meet the [recommended hardware for System Center Configuration Manager](/sccm/core/plan-design/configs/recommended-hardware). But there are some differences between regular computer hardware and Azure VMs, especially when it comes to the disks these VMs use.  What size VMs you use depends on the size of your environment but here are some recommendations:
+In general, your compute power (CPU and Memory) need to meet the [recommended hardware for Configuration Manager](/sccm/core/plan-design/configs/recommended-hardware). But there are some differences between regular computer hardware and Azure VMs, especially when it comes to the disks these VMs use.  What size VMs you use depends on the size of your environment but here are some recommendations:
 - For production deployments of any significant size we recommend “**S**” class Azure VMs. This is because they can leverage Premium Storage disks.  Non “S” class VMs use blob storage and in general will not meet the performance requirements necessary for an acceptable production experience.
 - Multiple Premium Storage disks should be used for higher scale, and striped in the Windows Disk Management console for maximum IOPS.  
 - We recommend using better or multiple premium disks during your initial site deployment (like P30 instead of P20, and 2xP30 in a striped volume instead of 1xP30). Then, if your site later needs to ramp up in VM size due to additional load, you can take advantage of the additional CPU and memory that a larger VM size provides. You will also have disks already in place that can take advantage of the additional IOPS throughput that the larger VM size allows.

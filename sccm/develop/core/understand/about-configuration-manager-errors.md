@@ -11,7 +11,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About Configuration Manager Errors
-In System Center Configuration Manager, when a Configuration Manager error occurs it is either a Windows Management Instrumentation (WMI) or a SMS Provider error.  
+In Configuration Manager, when a Configuration Manager error occurs it is either a Windows Management Instrumentation (WMI) or a SMS Provider error.  
 
  A WMI error is reported in an instance of __ExtendedStatus. An SMS Provider error is reported in an instance of `SMS_ExtendedStatus`.  
 

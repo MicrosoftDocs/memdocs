@@ -15,12 +15,12 @@ ms.collection: M365-identity-device-management
 
 # Monitor the hierarchy
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 To monitor your hierarchy in Configuration Manager, use the **Monitoring** workspace in the Configuration Manager console.  
 
 > [!NOTE]  
-> The exception to this location is when migrating sites. Monitored this process in the **Migration** node of the **Administration** workspace. For more information, see [Operations for migrating to System Center Configuration Manager](/sccm/core/migration/operations-for-migration).  
+> The exception to this location is when migrating sites. Monitored this process in the **Migration** node of the **Administration** workspace. For more information, see [Operations for migrating to Configuration Manager current branch](/sccm/core/migration/operations-for-migration).  
 
 Along with using the Configuration Manager console for monitoring, use the following features:
 

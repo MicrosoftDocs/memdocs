@@ -1,7 +1,7 @@
 ---
 title: "Configure client settings"
 titleSuffix: "Configuration Manager"
-description: "Select client settings in System Center Configuration Manager."
+description: "Select client settings in Configuration Manager."
 ms.date: 12/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,16 +12,16 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to configure client settings in System Center Configuration Manager
+# How to configure client settings in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-You manage all client settings in System Center Configuration Manager from  **Administration** > **Client Settings**. Modify the default settings when you want to configure settings for all users and devices in the hierarchy that do not have any custom settings applied. If you want to apply different settings to just some users or devices, create custom settings and deploy to collections.  
+You manage all client settings in Configuration Manager from  **Administration** > **Client Settings**. Modify the default settings when you want to configure settings for all users and devices in the hierarchy that do not have any custom settings applied. If you want to apply different settings to just some users or devices, create custom settings and deploy to collections.  
 
-For information about each client setting, see [About client settings in System Center Configuration Manager](../../../core/clients/deploy/about-client-settings.md).
+For information about each client setting, see [About client settings](../../../core/clients/deploy/about-client-settings.md).
 
 > [!NOTE]  
->  You can also use configuration items to manage clients to assess, track, and remediate the configuration compliance of devices. For more information, see [Ensure device compliance with System Center Configuration Manager](../../../compliance/understand/ensure-device-compliance.md).  
+>  You can also use configuration items to manage clients to assess, track, and remediate the configuration compliance of devices. For more information, see [Ensure device compliance with Configuration Manager](../../../compliance/understand/ensure-device-compliance.md).  
 
 ##  Configure the default client settings    
 
@@ -31,7 +31,7 @@ For information about each client setting, see [About client settings in System 
 
 3. View and configure the client settings for each group of settings in the navigation pane.  
 
-   Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [Initiate Policy Retrieval for a Configuration Manager Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) in [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
+   Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [Initiate Policy Retrieval for a Configuration Manager Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) in [How to manage clients](../../../core/clients/manage/manage-clients.md).  
 
 ##  Create and deploy custom client settings  
 When you deploy these custom settings, they override the default client settings. Before you begin this procedure, ensure that you have a collection that contains the users or devices that require these custom client settings.  
@@ -56,7 +56,7 @@ When you deploy these custom settings, they override the default client settings
 
 8. View the order of the custom client setting that you created. When you have multiple custom client settings, they are applied according to their order number. If there are any conflicts, the setting that has the lowest order number overrides the other settings. To change the order number, on the **Home** tab, in the **Client Settings** group, choose **Move Item Up** or **Move Item Down**.  
 
-   Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [Initiate Policy Retrieval for a Configuration Manager Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) in [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
+   Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [Initiate Policy Retrieval for a Configuration Manager Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) in [How to manage clients](../../../core/clients/manage/manage-clients.md).  
 
 
 

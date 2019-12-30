@@ -1,7 +1,7 @@
 ---
 title: "Windows client firewall and port settings"
 titleSuffix: "Configuration Manager"
-description: "Select Windows Firewall and port settings for clients in System Center Configuration Manager."
+description: "Select Windows Firewall and port settings for clients in Configuration Manager."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Windows Firewall and port settings for clients in System Center Configuration Manager
+# Windows Firewall and port settings for clients in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Client computers in System Center Configuration Manager that run Windows Firewall often require you to configure exceptions to allow communication with their site. The exceptions that you must configure depend on the management features that you use with the Configuration Manager client.  
+Client computers in Configuration Manager that run Windows Firewall often require you to configure exceptions to allow communication with their site. The exceptions that you must configure depend on the management features that you use with the Configuration Manager client.  
 
  Use the following sections to identify these management features and for more information about how to configure Windows Firewall for these exceptions.  
 
@@ -55,7 +55,7 @@ Client computers in System Center Configuration Manager that run Windows Firewal
  Outbound: TCP Port **443** (for HTTPS communication)  
 
 > [!IMPORTANT]  
->  These are default port numbers that can be changed in Configuration Manager. For more information, see How to [How to configure client communication ports in System Center Configuration Manager](../../../core/clients/deploy/configure-client-communication-ports.md). If these ports have been changed from the default values, you must also configure matching exceptions on the Windows Firewall.  
+>  These are default port numbers that can be changed in Configuration Manager. For more information, see How to [How to configure client communication ports](../../../core/clients/deploy/configure-client-communication-ports.md). If these ports have been changed from the default values, you must also configure matching exceptions on the Windows Firewall.  
 
 ### Client Notification  
  For the management point to notify client computers about an action that it must take when an administrative user selects a client action in the Configuration Manager console, such as download computer policy or initiate a malware scan, add the following as an exception to the Windows Firewall:  
@@ -69,7 +69,7 @@ Client computers in System Center Configuration Manager that run Windows Firewal
  Outbound: TCP Port **443** (for HTTPS communication)  
 
 > [!IMPORTANT]  
->  These are default port numbers that can be changed in Configuration Manager. For more information, see [How to configure client communication ports in System Center Configuration Manager](../../../core/clients/deploy/configure-client-communication-ports.md). If these ports have been changed from the default values, you must also configure matching exceptions on the Windows Firewall.  
+>  These are default port numbers that can be changed in Configuration Manager. For more information, see [How to configure client communication ports](../../../core/clients/deploy/configure-client-communication-ports.md). If these ports have been changed from the default values, you must also configure matching exceptions on the Windows Firewall.  
 
 ### Remote Control  
  To use Configuration Manager remote control, allow the following port:  
@@ -90,7 +90,7 @@ Client computers in System Center Configuration Manager that run Windows Firewal
 
  In addition to these ports, wake-up proxy also uses Internet Control Message Protocol (ICMP) echo request messages from one client computer to another client computer. This communication is used to confirm whether the other client computer is awake on the network. ICMP is sometimes referred to as TCP/IP ping commands.  
 
- For more information about wake-up proxy, see [Plan how to wake up clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-wake-up-clients.md).  
+ For more information about wake-up proxy, see [Plan how to wake up clients](../../../core/clients/deploy/plan/plan-wake-up-clients.md).  
 
 ### Windows Event Viewer, Windows Performance Monitor, and Windows Diagnostics  
  To access Windows Event Viewer, Windows Performance Monitor, and Windows Diagnostics from the Configuration Manager console, enable **File and Printer Sharing** as an exception on the Windows Firewall.  

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Calling Configuration Manager Code Snippets
-The following code samples show how to set up the calling code for the code examples that are used throughout the System Center Configuration Manager Software Development Kit (SDK).  
+The following code samples show how to set up the calling code for the code examples that are used throughout the Configuration Manager Software Development Kit (SDK).  
 
  Replace the SNIPPETMETHOD snippet with the snippet that you want to run. In most cases you will need to make changes, such as adding parameters, to make the code work.   
 

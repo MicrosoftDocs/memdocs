@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # ICIINFO Interface
-The `ICIINFO` interface, in System Center Configuration Manager, can represent the properties of a configuration item which has been downloaded and stored by the Desired Configuration Management client or the properties of a baseline configuration item in a Desired Configuration Management Agent job in the client data store. In both cases, the configuration item is either a (top level/root) baseline or a Software Updates configuration item.  
+The `ICIINFO` interface, in Configuration Manager, can represent the properties of a configuration item which has been downloaded and stored by the Desired Configuration Management client or the properties of a baseline configuration item in a Desired Configuration Management Agent job in the client data store. In both cases, the configuration item is either a (top level/root) baseline or a Software Updates configuration item.  
 
  The interface inherits from `IUnknown`.  
 

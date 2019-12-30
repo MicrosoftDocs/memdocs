@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Change the MDM authority for specific users (mixed MDM authority)
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can configure a mixed MDM authority in the same tenant. Manage some users in Microsoft Intune and others with hybrid MDM. This article provides information about how to start moving users to Intune standalone. It assumes that you've completed the following steps:  
 

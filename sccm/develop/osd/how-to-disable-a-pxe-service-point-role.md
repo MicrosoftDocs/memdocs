@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Disable a PXE Service Point Role
-You disable the PXE Service Point role, in System Center Configuration Manager, by getting an instance of a specific distribution point and setting the `IsPXE` value to `0`.  
+You disable the PXE Service Point role, in Configuration Manager, by getting an instance of a specific distribution point and setting the `IsPXE` value to `0`.  
 
 ### To disable a PXE service point role  
 

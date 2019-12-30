@@ -11,7 +11,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About Configuration Manager Console Forms
-You can extend the System Center Configuration Manager console with new Windows forms. Specifically, you can add form-based dialog boxes and property sheets. A user accesses these forms from Configuration Manager actions that you define.  
+You can extend the Configuration Manager console with new Windows forms. Specifically, you can add form-based dialog boxes and property sheets. A user accesses these forms from Configuration Manager actions that you define.  
 
 > [!NOTE]
 >  Wizards are another Windows form that is used by the Configuration Manager console, but you cannot extend or add wizards by using the Configuration Manager console framework. You can, however, run your own wizard solution by using Configuration Manager actions.  

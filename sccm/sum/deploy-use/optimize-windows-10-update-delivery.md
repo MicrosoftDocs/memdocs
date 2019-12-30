@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Optimize Windows 10 update delivery with Configuration Manager
 
-*Applies to: System Center Configuration Manager (current branch)*
+*Applies to: Configuration Manager (current branch)*
 
 For many customers, a successful path to getting and staying current with Windows 10 monthly updates starts with a good content distribution strategy using Configuration Manager. The size of the monthly quality updates can be a cause of concern for large organizations. There are a few technologies available that are intended to help reduce bandwidth and network load to optimize update delivery. This article explains these technologies, compares them, and provides recommendations to help you make decisions on which one to use.  
  

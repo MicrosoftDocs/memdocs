@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # AddDistributionPoints Method in Class SMS_DistributionPointGroup
-The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, adds distribution points to the distribution point group.  
+The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds distribution points to the distribution point group.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

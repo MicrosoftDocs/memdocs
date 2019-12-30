@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Manager SDK Libraries and Header Files
-In System Center Configuration Manager, when you write unmanaged applications, you might have to include one or more of the following libraries, which are included with the Configuration Manager SDK. Use COM Interoperability to access COM objects from .NET Framework applications.  
+In Configuration Manager, when you write unmanaged applications, you might have to include one or more of the following libraries, which are included with the Configuration Manager SDK. Use COM Interoperability to access COM objects from .NET Framework applications.  
 
 |Library|Description|  
 |-------------|-----------------|  
@@ -39,7 +39,7 @@ In System Center Configuration Manager, when you write unmanaged applications, y
 >  The header files can be found in the % Program Files %\Microsoft System Center 2012 Configuration Manager SDK\Samples\Includes folder.  
 
 > [!IMPORTANT]
->  For more information about general System Center Configuration Manager requirements, see [Supported Configurations for Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=248211).  
+>  For more information about general Configuration Manager requirements, see [Supported Configurations for Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=248211).  
 
 ## See Also  
  [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md)   

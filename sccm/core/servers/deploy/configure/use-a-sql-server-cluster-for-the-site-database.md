@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Use a SQL Server cluster for the site database
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can use a SQL Server Failover cluster to host the Configuration Manager site database. A cluster provides failover support and improves the reliability of the site database. However, it doesn't provide additional processing or load-balancing benefits. Additionally, a SQL Server Failover cluster uses shared storage and introduces a single point of failure. Degradation in performance can occur, because the site server must find the active node of the SQL Server cluster before it connects to the site database.  
 

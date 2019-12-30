@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # List of reports in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager supplies many built-in reports covering many of the reporting tasks that you might want to do. You can also use the SQL statements in these reports to help you to write your own reports.   
 

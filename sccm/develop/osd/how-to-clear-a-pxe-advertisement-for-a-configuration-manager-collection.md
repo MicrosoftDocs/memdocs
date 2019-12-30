@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Clear a PXE Advertisement For a Configuration Manager Collection
-To clear a PXE advertisement for a System Center Configuration Manager collection, you call the [ClearLastNBSAdvForCollection Method in Class SMS_Collection](../../develop/reference/core/clients/collections/clearlastnbsadvforcollection-method-in-class-sms_collection.md) method.  
+To clear a PXE advertisement for a Configuration Manager collection, you call the [ClearLastNBSAdvForCollection Method in Class SMS_Collection](../../develop/reference/core/clients/collections/clearlastnbsadvforcollection-method-in-class-sms_collection.md) method.  
 
  Clearing a PXE advertisement forces the PXE server to re-evaluate the mandatory advertisement that a PXE device must execute on the next PXE boot. It is most often used when the last advertisement that was executed failed or when the advertisement must be re-run. For information about clearing the PXE advertisement for a resource, see [How to Clear a PXE Advertisement for a Configuration Manager Resource](../../develop/osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-resource.md).  
 

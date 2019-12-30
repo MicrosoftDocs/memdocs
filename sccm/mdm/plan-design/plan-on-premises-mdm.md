@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Plan for on-premises MDM in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 On-premises mobile device management (MDM) allows you to manage mobile devices using the management capabilities built into the device OS. The management capability is based on the Open Mobile Alliance (OMA) Device Management (DM) standard, and many device platforms use this standard to allow the devices to be managed. These devices are called *modern devices* in the documentation and the Configuration Manager console. This term distinguishes them from other devices that require the Configuration Manager client to manage them.  
 

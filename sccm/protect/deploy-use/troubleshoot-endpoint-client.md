@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Troubleshoot Windows Defender or Endpoint Protection client
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 If you come across problems with Windows Defender or Endpoint Protection, use this article to troubleshoot the following problems:  
 

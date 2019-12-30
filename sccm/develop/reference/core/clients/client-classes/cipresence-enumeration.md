@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # CIPresence Enumeration
-In System Center Configuration Manager, the `CIPresence` enumeration defines configuration item presence types used in the discovery process.  
+In Configuration Manager, the `CIPresence` enumeration defines configuration item presence types used in the discovery process.  
 
 ## Syntax  
 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Configure power management in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article explains how to set up power management in Configuration Manager.
 

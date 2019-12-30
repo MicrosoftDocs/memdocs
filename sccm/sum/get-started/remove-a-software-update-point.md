@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 ---
 #  <a name="BKMK_RemoveSUP"></a> Remove the software update point site system role  
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can remove the software update point site system role at a site from the Configuration Manager console. The client policy is updated to remove the software update point from the list. When you remove the last software update point at the site, the software update point list will contain no software update points, and software updates is essentially disabled at the site. When you have more than one software update point at a primary site and you remove the software update point that is configured as the synchronization source, you must choose another software update point at the site to be the new synchronization source.  
 

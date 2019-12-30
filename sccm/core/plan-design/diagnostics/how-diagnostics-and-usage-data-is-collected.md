@@ -1,7 +1,7 @@
 ---
 title: "Diagnostics data collection"
 titleSuffix: "Configuration Manager"
-description: "Learn about how System Center Configuration Manager collects diagnostics and usage data about itself."
+description: "Learn about how Configuration Manager collects diagnostics and usage data about itself."
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,16 +12,16 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How diagnostics and usage data is collected by System Center Configuration Manager
+# How diagnostics and usage data is collected by Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-To collect diagnostics and usage data for System Center Configuration Manager, each primary site runs SQL Server queries on a weekly basis. In a multi-site hierarchy, the data is replicated to the central administration site.  
+To collect diagnostics and usage data for Configuration Manager, each primary site runs SQL Server queries on a weekly basis. In a multi-site hierarchy, the data is replicated to the central administration site.  
 
 At the top-level site of a hierarchy, the service connection point site system role submits this information when it checks for updates. The mode of the service connection point detemines how the data is transferred:  
 
 -   **In online mode:** Diagnostics and usage data is automatically sent once a week from the service connection point to the cloud service.  
 
--   **In offline mode:** Diagnostics and usage data is transferred manually by using the service connection tool. For more information, see [Use the Service Connection Tool for System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md).  
+-   **In offline mode:** Diagnostics and usage data is transferred manually by using the service connection tool. For more information, see [Use the Service Connection Tool for Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md).  
 
-For more information, see [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md).  
+For more information, see [About the service connection point](../../../core/servers/deploy/configure/about-the-service-connection-point.md).  

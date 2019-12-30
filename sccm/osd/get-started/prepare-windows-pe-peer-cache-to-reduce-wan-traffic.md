@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Prepare Windows PE peer cache to reduce WAN traffic in System Center Configuration Manager
+# Prepare Windows PE peer cache to reduce WAN traffic in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-When you deploy a new operating system in System Center Configuration Manager, computers that run the task sequence can use Windows PE Peer Cache to obtain content from a local peer (a peer cache source) instead of downloading content from a distribution point. This helps minimize wide area network (WAN) traffic in branch office scenarios where there is no local distribution point.  
+When you deploy a new operating system in Configuration Manager, computers that run the task sequence can use Windows PE Peer Cache to obtain content from a local peer (a peer cache source) instead of downloading content from a distribution point. This helps minimize wide area network (WAN) traffic in branch office scenarios where there is no local distribution point.  
 
  Windows PE Peer Cache is similar to [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache), but functions in the Windows Preinstallation Environment (Windows PE). The following terms are used to describe the clients that use Windows PE Peer Cache:  
 

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Use PXE to deploy Windows over the network with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Preboot execution environment (PXE)-initiated OS deployments in Configuration Manager let clients request and deploy operating systems over the network. In this deployment scenario, you send the OS image and the boot images to a PXE-enabled distribution point.
 

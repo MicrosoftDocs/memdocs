@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # CCM_Policy_Operator Client WMI Class
-In System Center Configuration Manager, the `CCM_Policy_Operator` class is a client Windows Management Instrumentation (WMI) class that stores a compound expression that evaluates to either `true` or `false`.  
+In Configuration Manager, the `CCM_Policy_Operator` class is a client Windows Management Instrumentation (WMI) class that stores a compound expression that evaluates to either `true` or `false`.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

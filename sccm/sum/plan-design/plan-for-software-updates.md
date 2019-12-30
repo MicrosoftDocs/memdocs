@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Plan for software updates in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Before you use software updates in a Configuration Manager production environment, it's important that you go through the planning process. Having a good plan for the software update point infrastructure is key to a successful software updates implementation. For information about capacity planning for software updates, see [Size and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers#software-update-point).
 

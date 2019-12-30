@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Prepare to use SQL Server Always On availability groups with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use this article to prepare Configuration Manager to use SQL Server Always On availability groups. This feature provides a high availability and disaster recovery solution for the site database.  
 

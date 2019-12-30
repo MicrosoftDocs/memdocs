@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_CollectionRule Server WMI Class
-The `SMS_CollectionRule` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a collection rule in a collection and serves as an abstract base class for [SMS_CollectionRuleDirect Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collectionruledirect-server-wmi-class.md) and [SMS_CollectionRuleQuery Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collectionrulequery-server-wmi-class.md).  
+The `SMS_CollectionRule` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a collection rule in a collection and serves as an abstract base class for [SMS_CollectionRuleDirect Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collectionruledirect-server-wmi-class.md) and [SMS_CollectionRuleQuery Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collectionrulequery-server-wmi-class.md).  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

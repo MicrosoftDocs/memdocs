@@ -1,7 +1,7 @@
 ---
 title: "Technical Preview 1710 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview version 1710 for System Center Configuration Manager."
+description: "Learn about features available in the Technical Preview version 1710 for Configuration Manager."
 ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -13,11 +13,11 @@ manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
-# Capabilities in Technical Preview 1710 for System Center Configuration Manager
+# Capabilities in Technical Preview 1710 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1710. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1710. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
 
 
 <!--  Known Issues Template   
@@ -48,7 +48,7 @@ This article introduces the features that are available in the Technical Preview
 
 ## Improvements for deploying PowerShell Scripts from Configuration Manager
 With this release, PowerShell scripts you deploy now support use of the following improvements: 
-- **Security Scopes**.  Scripts now use security scopes to control scripts authoring and execution. This is done through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
+- **Security Scopes**.  Scripts now use security scopes to control scripts authoring and execution. This is done through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 - **Real-time monitoring**. When you monitor the run of a script, it is now in real-time as the script runs.
 - **Parameter validation**. Each parameter in your script has a **Script Parameter Properties** dialog for you to add validation for that parameter. After adding validation, you should get errors if you are entering a value for a parameter that does not meet its validation.
 
@@ -217,4 +217,4 @@ To create a policy, and to browse the available settings:
 To read more about Windows Defender Application Guard, see [this blog post](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97). Additionally, to learn more about Windows Defender Application Guard Standalone mode, see [this blog post](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903).
 
 ## Next Steps
-For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    

@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Communications between endpoints in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article describes how Configuration Manager site systems and clients communicate across your network. It includes the following sections:  
 

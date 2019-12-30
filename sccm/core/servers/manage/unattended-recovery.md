@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Unattended site recovery for Configuration Manager   
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
  To perform an [unattended recovery](/sccm/protect/understand/recover-sites#site-recovery-procedures) of a Configuration Manager central administration site or primary site, you can create an unattended installation script and then use setup with the **/script** command option. The script provides the same type of information that the setup wizard prompts for, except that there are no default settings. All values must be specified for the setup keys that apply to the type of recovery you are using.
 

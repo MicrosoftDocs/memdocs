@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Associate users with a destination computer in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you use Configuration Manager to deploy operating systems, you can associate users with the destination computer. This option works whether a single user or multiple users are the primary users of the destination computer.  
 

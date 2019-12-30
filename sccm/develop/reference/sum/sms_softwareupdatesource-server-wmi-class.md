@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_SoftwareUpdateSource Server WMI Class
-The `SMS_SoftwareUpdateSource` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that lists all software update sources available on the site, for use in synchronizing metadata during a deployment.  
+The `SMS_SoftwareUpdateSource` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists all software update sources available on the site, for use in synchronizing metadata during a deployment.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -45,7 +45,7 @@ Class SMS_SoftwareUpdateSource : SMS_BaseClass
  The `SMS_SoftwareUpdateSource` class does not define any methods.  
 
 > [!NOTE]
->  The `ResendObjectToAllSites Method in Class SMS_SoftwareUpdateSource` has been deprecated in System Center Configuration Manager.  
+>  The `ResendObjectToAllSites Method in Class SMS_SoftwareUpdateSource` has been deprecated in Configuration Manager.  
 
 ## Properties  
  `ApplicabilityCondition`  

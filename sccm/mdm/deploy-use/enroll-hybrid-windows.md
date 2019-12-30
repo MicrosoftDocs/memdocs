@@ -1,7 +1,7 @@
 ---
 title: "Set up Windows hybrid device management with Microsoft Intune"
 titleSuffix: "Configuration Manager"
-description: "Set up Windows device management with System Center Configuration Manager and Microsoft Intune."
+description: "Set up Windows device management with Configuration Manager and Microsoft Intune."
 ms.date: 03/17/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,9 +12,9 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune
+# Set up Windows hybrid device management with Configuration Manager and Microsoft Intune
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This topic tells IT admins how they can enable their users to bring Windows PCs and mobile devices into management using Configuration Manager and Microsoft Intune.
 

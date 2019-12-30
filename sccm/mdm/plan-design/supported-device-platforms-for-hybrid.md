@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Supported device platforms for hybrid MDM
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Mobile device management with Configuration Manager using Microsoft Intune supports the following mobile device platforms:
 

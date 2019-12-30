@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Monitor database replication
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Monitor details for database replication with the **Database Replication** node in the **Monitoring** workspace of the Configuration Manager console. You can monitor the status of replication links between sites. It also shows initialization and replication of replication groups for the site to which you connect.  
 

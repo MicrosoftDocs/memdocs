@@ -11,7 +11,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Result Sets
-In System Center Configuration Manager, the result set of a query contains one or more instances that match the specified criteria of the`SELECT` statement. The result instances are either `Generic` class instances or instances of the class that is specified in the FROM clause.  
+In Configuration Manager, the result set of a query contains one or more instances that match the specified criteria of the`SELECT` statement. The result instances are either `Generic` class instances or instances of the class that is specified in the FROM clause.  
 
 ## __Generic Class Results  
  The results of a `JOIN` operation are returned in either an instance of a class specified in the query or an instance of the __`Generic` class. If a single class is implied by the property list in the SELECT statement, the results are returned as instances of that class. If there are multiple classes, the results are returned as instances of the **\__Generic** class.  

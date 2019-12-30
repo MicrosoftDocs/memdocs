@@ -1,7 +1,7 @@
 ---
-title: "Migration Source hierarchies"
+title: "Migration source hierarchies"
 titleSuffix: "Configuration Manager"
-description: "Configure a source hierarchy and source sites so you can migrate data to your System Center Configuration Manager environment."
+description: "Configure a source hierarchy and source sites so you can migrate data to your Configuration Manager current branch environment."
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Configure source hierarchies and source sites for migration to System Center Configuration Manager
+# Configure source hierarchies and source sites for migration to Configuration Manager current branch
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-To enable migration of data to your System Center Configuration Manager environment, you must configure a supported Configuration Manager source hierarchy and one or more source sites in that hierarchy that contain data that you want to migrate.  
+To enable migration of data to your Configuration Manager current branch environment, you must configure a supported Configuration Manager source hierarchy and one or more source sites in that hierarchy that contain data that you want to migrate.  
 
 > [!NOTE]  
 >  Operations for migration are run at the top-level site in the destination hierarchy. If you configure migration when you use a Configuration Manager console that is connected to a primary child site, you must allow time for the configuration to replicate to the central administration site, start, and then replicate status back to the primary site to which you are connected.  
@@ -28,7 +28,7 @@ To enable migration of data to your System Center Configuration Manager environm
 -   [Identify additional source sites of the source hierarchy](#BKBM_ConfigSrcSites)  
 
 ##  <a name="BKBM_ConfigSrcHierarchy"></a> Specify a source hierarchy for migration  
- To migrate data to your destination hierarchy, you must specify a supported source hierarchy that has the data that you want to migrate. By default, the top-level site of that hierarchy becomes a source site of the source hierarchy. If you migrate from a Configuration Manager 2007 hierarchy, you can then set up additional source sites for migration after data is gathered from the initial source site. If you migrate from a System Center 2012 Configuration Manager or System Center Configuration Manager hierarchy, you do not have to set up additional source sites to migrate data from the source hierarchy. This is because these versions of Configuration Manager use a shared database that is available at the top-level site of the source hierarchy. The shared database has all the information that you can migrate.  
+ To migrate data to your destination hierarchy, you must specify a supported source hierarchy that has the data that you want to migrate. By default, the top-level site of that hierarchy becomes a source site of the source hierarchy. If you migrate from a Configuration Manager 2007 hierarchy, you can then set up additional source sites for migration after data is gathered from the initial source site. If you migrate from a System Center 2012 Configuration Manager or Configuration Manager current branch hierarchy, you do not have to set up additional source sites to migrate data from the source hierarchy. This is because these versions of Configuration Manager use a shared database that is available at the top-level site of the source hierarchy. The shared database has all the information that you can migrate.  
 
  Use the following procedures to specify a source hierarchy for migration and to identify additional source sites in a Configuration Manager 2007 hierarchy.  
 
@@ -65,7 +65,7 @@ To enable migration of data to your System Center Configuration Manager environm
 
 -   For a Configuration Manager 2007 source hierarchy, you can begin migration from that initial source site or set up additional source sites from the source hierarchy after the data gathering finishes for the initial source site. To migrate data that is only available from a child site, set up additional source sites for a Configuration Manager 2007 hierarchy. For example, you might configure additional source sites to gather data about content that you want to migrate when it's created at a child site in the source hierarchy and is not available at the top site of the source hierarchy.  
 
--   For a System Center 2012 Configuration Manager or System Center Configuration Manager source hierarchy, you do not need to configure additional source sites. This is because these versions of Configuration Manager use a shared database that is available at the top-level site of the source hierarchy. The shared database has all the information that you can migrate from all of the sites in that source hierarchy. This makes the data that you can migrate available from the top-level site of the source hierarchy.  
+-   For a System Center 2012 Configuration Manager or Configuration Manager current branch source hierarchy, you do not need to configure additional source sites. This is because these versions of Configuration Manager use a shared database that is available at the top-level site of the source hierarchy. The shared database has all the information that you can migrate from all of the sites in that source hierarchy. This makes the data that you can migrate available from the top-level site of the source hierarchy.  
 
 When you configure additional source sites for a Configuration Manager 2007 source hierarchy, you must configure the additional source sites from the top of the source hierarchy to the bottom. You must configure a parent site as a source site before you configure any of its child sites as source sites.  
 

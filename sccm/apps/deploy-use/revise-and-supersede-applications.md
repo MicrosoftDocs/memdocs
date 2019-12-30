@@ -1,7 +1,7 @@
 ---
 title: "Revise and supersede applications"
 titleSuffix: "Configuration Manager"
-description: "Learn how to work with System Center Configuration Manager application versions and supersede applications."
+description: "Learn how to work with Configuration Manager application versions and supersede applications."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-app
@@ -12,11 +12,11 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Revise and supersede applications in System Center Configuration Manager
+# Revise and supersede applications in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-In this topic, you'll learn how to work with System Center Configuration Manager application versions and how to supersede applications with a new version.  
+In this topic, you'll learn how to work with Configuration Manager application versions and how to supersede applications with a new version.  
 
 ##  Application revisions  
  When you make revisions to an application or to a deployment type that is contained in an application, Configuration Manager creates a new revision of the application. You can display the history of each application revision. You can also view its properties, restore a previous revision of an application, or delete an old revision.  

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Policy Agent Client WMI Classes
-This section describes the classes used, in System Center Configuration Manager, to manage policy on client computers and devices.  
+This section describes the classes used, in Configuration Manager, to manage policy on client computers and devices.  
 
 ## In This Section  
  [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md)  

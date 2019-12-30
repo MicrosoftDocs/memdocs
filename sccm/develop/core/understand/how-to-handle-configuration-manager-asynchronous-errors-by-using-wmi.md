@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Handle Configuration Manager Asynchronous Errors by Using WMI
-In System Center Configuration Manager, when an error occurs in an asynchronous call, the error object is passed as the second parameter to the `OnCompleted` method. Inside your `OnCompleted` implementation, you check the error object the same as you would for a synchronous call.  
+In Configuration Manager, when an error occurs in an asynchronous call, the error object is passed as the second parameter to the `OnCompleted` method. Inside your `OnCompleted` implementation, you check the error object the same as you would for a synchronous call.  
 
  You determine if there is an error by checking the `HResult` parameter of the `OnCompleted` method.  
 

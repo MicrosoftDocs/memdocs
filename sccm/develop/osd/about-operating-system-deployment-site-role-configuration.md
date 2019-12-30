@@ -12,10 +12,10 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About Operating System Deployment Site Role Configuration
-The following two site roles are of particular importance to Operating System Deployment in System Center Configuration Manager.  
+The following two site roles are of particular importance to Operating System Deployment in Configuration Manager.  
 
 ## State Migration Point Site Role  
- The state migration point (SMP) is a System Center Configuration Manager site role that provides a secure location to store user state information before an operating system deployment. You can store the user state on the SMP while the operating system deployment proceeds and then restore the user state to the new computer from the SMP. Each SMP site role can only be a member of one System Center Configuration Manager site.  
+ The state migration point (SMP) is a Configuration Manager site role that provides a secure location to store user state information before an operating system deployment. You can store the user state on the SMP while the operating system deployment proceeds and then restore the user state to the new computer from the SMP. Each SMP site role can only be a member of one Configuration Manager site.  
 
 ## PXE Service Point Site Role  
  You use the PXE protocol to initiate operating system deployments to Configuration Manager clients. Configuration Manager uses the PXE service point site role to initiate the operating system deployment process. The PXE service point must be configured to respond to PXE boot requests made by Configuration Manager clients on the network and then interact with Configuration Manager infrastructure to determine the appropriate installation actions to take.  

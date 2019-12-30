@@ -25,7 +25,7 @@ The following query lists all software files for the Configuration Manager produ
     SELECT DISTINCT SF.FileName, SF.FileDescription, SF.FileVersion 
     FROM v_GS_SoftwareProduct SP INNER JOIN v_GS_SoftwareFile SF 
       ON SP.ProductID = SF.ProductId 
-    WHERE SP.ProductName = 'System Center Configuration Manager' 
+    WHERE SP.ProductName = 'Configuration Manager' 
     ORDER BY SF.FileName 
 ```
 

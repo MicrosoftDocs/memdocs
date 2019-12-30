@@ -1,7 +1,7 @@
 ---
 title: "Manage an Intune subscription"
 titleSuffix: "Configuration Manager"
-description: "Manage an Intune subscription associated with System Center Configuration Manager."
+description: "Manage an Intune subscription associated with Configuration Manager."
 ms.date: 06/02/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,9 +12,9 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Manage an Intune subscription associated with System Center Configuration Manager
+# Manage an Intune subscription associated with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 If you add a Microsoft Intune (either a trial subscription or paid subscription) to Configuration Manager, and then need to switch to a different Intune subscription, you must delete both the  **Microsoft Intune Subscription** and the **Service connection point** from the Configuration Manager console before you can add a new subscription.
 

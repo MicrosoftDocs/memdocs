@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # CMTrace
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 CMTrace is one of the [Configuration Manager tools](/sccm/core/support/tools). It allows you to view and monitor log files, including the following types:  
 

@@ -12,9 +12,9 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Device Management Server WMI Classes
-Device management server Windows Management Instrumentation (WMI) classes in System Center Configuration Manager assist in assessment of computer compliance considering a number of mobile device configurations.  
+Device management server Windows Management Instrumentation (WMI) classes in Configuration Manager assist in assessment of computer compliance considering a number of mobile device configurations.  
 
- The System Center Configuration Manager server class schema is a set of WMI classes that represent the objects found on a server that is running Configuration Manager. Each Configuration Manager class is a template for a managed object and all instances of the object use the template. Classes can contain properties and methods. The properties describe the class data and the methods typically perform data management. For more information about developing applications using these classes, see [About Configuration Manager SDK Requirements](../../../develop/core/reqs/about-configuration-manager-sdk-requirements.md).  
+ The Configuration Manager server class schema is a set of WMI classes that represent the objects found on a server that is running Configuration Manager. Each Configuration Manager class is a template for a managed object and all instances of the object use the template. Classes can contain properties and methods. The properties describe the class data and the methods typically perform data management. For more information about developing applications using these classes, see [About Configuration Manager SDK Requirements](../../../develop/core/reqs/about-configuration-manager-sdk-requirements.md).  
 
 ## Mobile Device Management Classes  
 

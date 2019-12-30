@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # How to deploy clients to Macs
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article describes how to deploy and maintain the Configuration Manager client on Mac computers. To learn about what you have to configure before deploying clients to Mac computers, see [Prepare to deploy client software to Macs](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients).
 

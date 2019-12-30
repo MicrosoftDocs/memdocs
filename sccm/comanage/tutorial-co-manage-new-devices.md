@@ -51,7 +51,7 @@ Use this tutorial when:
 
 ### On-premises infrastructure
 
-- System Center Configuration Manager current branch, version 1810 or later.
+- Configuration Manager current branch, version 1810 or later.
   
   Version 1810 introduces [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http), which is used in this tutorial to avoid more complex PKI requirements. Through use of Enhanced HTTP, the primary site that you use to manage clients must be configured to use Configuration Manager-generated certificates for HTTP site systems.  
 

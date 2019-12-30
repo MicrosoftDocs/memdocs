@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # CCM_Policy_Action Client WMI Class
-In System Center Configuration Manager, the `CCM_Policy_Action` class is a client Windows Management Instrumentation (WMI) class that represents settings for a policy action.  
+In Configuration Manager, the `CCM_Policy_Action` class is a client Windows Management Instrumentation (WMI) class that represents settings for a policy action.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

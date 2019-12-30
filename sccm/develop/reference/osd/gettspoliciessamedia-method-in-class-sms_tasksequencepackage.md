@@ -47,7 +47,7 @@ SInt32 GetTsPoliciesSaMedia (
 
  Qualifiers: [in]  
 
- The ID for the task sequence package, if the method is to obtain policy for a task sequence stored in the System Center Configuration Manager database. Either `PackageID` or `TaskSequence` can be non-null, but not both parameters.  
+ The ID for the task sequence package, if the method is to obtain policy for a task sequence stored in the Configuration Manager database. Either `PackageID` or `TaskSequence` can be non-null, but not both parameters.  
 
  `TaskSequence`  
  Data type: `SMS_TaskSequence`  

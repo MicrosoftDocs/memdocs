@@ -12,11 +12,11 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to configure software inventory in System Center Configuration Manager
+# How to configure software inventory in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-This procedure configures the default client settings for software inventory and applies to all the computers in your hierarchy. If you want to apply these settings to only some computers, create a custom device client setting and assign it to a collection. For more information about how to create custom device settings, see [How to configure client settings in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md).   
+This procedure configures the default client settings for software inventory and applies to all the computers in your hierarchy. If you want to apply these settings to only some computers, create a custom device client setting and assign it to a collection. For more information about how to create custom device settings, see [How to configure client settings](../../../../core/clients/deploy/configure-client-settings.md).   
 
 ## To configure software inventory  
 
@@ -32,9 +32,9 @@ This procedure configures the default client settings for software inventory and
 
    -   **Schedule software inventory and file collection schedule** - Configures the interval at which clients collect software inventory and files.   
 
-5. Configure the client settings that you require. The [Software inventory](../../../../core/clients/deploy/about-client-settings.md#software-inventory) section of the [About client settings in System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md) article has a list of the client settings.  
+5. Configure the client settings that you require. The [Software inventory](../../../../core/clients/deploy/about-client-settings.md#software-inventory) section of the [About client settings](../../../../core/clients/deploy/about-client-settings.md) article has a list of the client settings.  
 
-   Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
+   Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [How to manage clients](../../../../core/clients/manage/manage-clients.md).  
 
    > [!TIP]
    >   Error code 80041006 in inventoryprovider.log means the WMI provider is out of memory. That is, the memory quota limit for a provider has been hit and inventory provider cannot continue.

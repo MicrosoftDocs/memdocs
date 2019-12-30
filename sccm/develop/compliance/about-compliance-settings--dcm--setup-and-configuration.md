@@ -12,11 +12,11 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About Compliance Settings (DCM) Setup and Configuration
-To use desired configuration management on your System Center Configuration Manager site, the following needs to be in place:  
+To use desired configuration management on your Configuration Manager site, the following needs to be in place:  
 
--   The site must be running System Center Configuration Manager.  
+-   The site must be running Configuration Manager.  
 
--   Clients must be running the System Center Configuration Manager client.  
+-   Clients must be running the Configuration Manager client.  
 
 -   The desired configuration management client agent must be enabled.  
 

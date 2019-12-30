@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_Package Server WMI Class
-The `SMS_Package` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that contains information about Configuration Manager packages.  
+The `SMS_Package` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains information about Configuration Manager packages.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

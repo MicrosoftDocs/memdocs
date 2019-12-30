@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Conditional Actions
-System Center Configuration Manager actions can be displayed according to specified conditions. The conditions are defined by the following:  
+Configuration Manager actions can be displayed according to specified conditions. The conditions are defined by the following:  
 
 -   Regular expressions  
 

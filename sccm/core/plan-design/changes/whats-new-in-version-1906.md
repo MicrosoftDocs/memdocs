@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # What's new in version 1906 of Configuration Manager current branch
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Update 1906 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1802 or later. <!-- baseline only statement:When installing a new site, it's also available as a baseline version.--> This article summarizes the changes and new features in Configuration Manager, version 1906.  
 

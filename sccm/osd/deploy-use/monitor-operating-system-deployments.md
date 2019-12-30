@@ -13,9 +13,9 @@ manager: dougeby
 
 ms.collection: M365-identity-device-management
 ---
-# Monitor operating system deployments in System Center Configuration Manager
+# Monitor operating system deployments in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The Configuration Manager console provides the following ways to help you monitor operating system deployment objects.  
 

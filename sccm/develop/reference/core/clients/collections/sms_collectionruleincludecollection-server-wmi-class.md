@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_CollectionRuleIncludeCollection Server WMI Class
-The `SMS_CollectionRuleIncludeCollection` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, represents an inclusion rule that is added as a rule to the `SMS_Collection` instance. Any members of a collection defined by this rule will be included in the collection.  
+The `SMS_CollectionRuleIncludeCollection` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, represents an inclusion rule that is added as a rule to the `SMS_Collection` instance. Any members of a collection defined by this rule will be included in the collection.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Create a Configuration Manager Property Sheet
-To create a System Center Configuration Manager console property sheet, in Configuration Manager, you create a .NET Framework assembly that inherits from the following class:  
+To create a Configuration Manager console property sheet, in Configuration Manager, you create a .NET Framework assembly that inherits from the following class:  
 
 |Class|Description|  
 |-----------|-----------------|  

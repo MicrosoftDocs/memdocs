@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Console Extension Deployment
-The deployment of a typical System Center Configuration Manager extension has to account for actions, forms, views, management classes and node extensions.  
+The deployment of a typical Configuration Manager extension has to account for actions, forms, views, management classes and node extensions.  
 
  When you deploy a Configuration Manager extension, you install the files in the following directories:  
 
