@@ -23,8 +23,6 @@ In this topic, you'll jump right in and create an application with Configuration
  For specific details that are relevant to each platform, see one of the following topics:  
 
 - [Create Windows applications](../../apps/get-started/creating-windows-applications.md)  
-- [Create iOS applications](../../apps/get-started/creating-ios-applications.md)  
-- [Create Android applications](../../apps/get-started/creating-android-applications.md)  
 - [Create Windows Phone applications](../../apps/get-started/creating-windows-phone-applications.md)  
 - [Create Mac computer applications](../../apps/get-started/creating-mac-computer-applications.md)  
 - [Create Linux and UNIX server applications](../../apps/get-started/creating-linux-and-unix-server-applications.md)

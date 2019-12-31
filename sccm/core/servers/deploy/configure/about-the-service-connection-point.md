@@ -19,9 +19,7 @@ ms.collection: M365-identity-device-management
 
 The service connection point is a site system role that serves several important functions for the hierarchy. Before you set up the service connection point, understand and plan for its range of uses. Planning for usage might affect how you set up this site system role:  
 
-- **Manage mobile devices with Microsoft Intune**: This role replaces the Windows Intune connector that previous versions of Configuration Manager used and can be configured with your Intune subscription details. For more information, see [Hybrid mobile device management (MDM)](/sccm/mdm/understand/hybrid-mobile-device-management).  
-
-- **Manage mobile devices with on-premises MDM**: This role provides support for on-premises devices that you manage and that don't connect to the internet. For more information, see [Manage mobile devices with on-premises infrastructure](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure).  
+- **Download updates that apply to your Configuration Manager infrastructure**: Only relevant updates for your infrastructure are made available based on usage data you upload.  
 
 - **Upload usage data from your Configuration Manager infrastructure**: You can control the level or amount of detail that you upload. Uploaded data helps:  
 
@@ -34,8 +32,6 @@ The service connection point is a site system role that serves several important
     For more information about data that each level collects and how to change the collection level after the role installs, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data). Then follow the link for the version of Configuration Manager that you use.  
 
     For more information, see [Usage data levels and settings](/sccm/core/servers/deploy/install/setup-reference#bkmk_usage).  
-
-- **Download updates that apply to your Configuration Manager infrastructure**: Only relevant updates for your infrastructure are made available based on usage data you upload.  
 
 - **Each hierarchy supports a single instance of this role**:  
 

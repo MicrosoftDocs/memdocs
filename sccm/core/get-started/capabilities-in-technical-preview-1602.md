@@ -34,8 +34,6 @@ This article introduces the features that are available in the Technical Preview
 
   Configuration Manager can request the Activation Lock status of both supervised and unsupervised devices that run iOS 7.1 and later. For supervised devices, Intune can retrieve the Activation Lock bypass code and directly issue it to the device.  
 
-  For details, see [Help protect iOS devices with Activation Lock bypass for Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock)  
-
 ##  <a name="BKMK_SC1601"></a> Improvements to Software Center in version 1602  
 
 ### Refresh PC machine and user policy from Software Center  

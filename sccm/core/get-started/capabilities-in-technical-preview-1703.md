@@ -38,7 +38,6 @@ You can now deploy licensed apps to devices as well as users. Depending on the a
 |1702 and later|Yes|Device|Device license|
 |1702 and later|No|Device|User license|
 
-For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
 ## Direct links to applications in Software Center
 

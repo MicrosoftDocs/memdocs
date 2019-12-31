@@ -57,16 +57,6 @@ For more information on this function, see [Updates and servicing for Configurat
 
 - `configmgrbits.azureedge.net`  
 
-### Microsoft Intune
-
-For more information on this function, see [Hybrid MDM with Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management).
-
-- `*manage.microsoft.com`  
-
-- `https://bspmts.mp.microsoft.com/V`  
-
-- `https://login.microsoftonline.com/{TenantID}`  
-
 ### Windows 10 servicing
 
 For more information on this function, see [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service).

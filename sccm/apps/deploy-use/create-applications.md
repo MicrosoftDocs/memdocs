@@ -698,7 +698,7 @@ Configuration Manager supports the following deployment types for applications:
 | **App Package for Android (\*.apk file)** | An Android app package file. |  
 | **App Package for Android on Google Play** | Specify a link to the app in the Google Play store. |  
 | **Mac OS X** | For macOS computers running the Configuration Manager client. Create a .cmmac file with the **CMAppUtil** tool. |  
-| **Web Application** | Specify a link to a web application. This deployment type installs a shortcut to the web application on the user's device.<sup>[Note 2](#bkmk_note2)</sup> |  
+| **Web Application** | Specify a link to a web application. This deployment type installs a shortcut to the web application on the user's device. |  
 | **Windows Installer through MDM (\*.msi)** | Create and deploy Windows Installer-based apps to Windows 10 devices. For more information, see [Deploy Windows Installer apps to MDM-enrolled Windows 10 devices](/sccm/apps/get-started/creating-windows-applications#bkmk_mdm-msi). |  
 
 ### <a name="bkmk_note1"></a> Note 1: Windows app package (in the Windows Store)
@@ -709,18 +709,6 @@ Windows clients always evaluate deployment types that use a link to a store befo
 
 > [!TIP]
 > Some store links may cause the following error in the Create Application Wizard: "Invalid Application link". For example, some store *Featured Apps* may cause this error. You can still select **Next** on the **General** page of the wizard. Configuration Manager successfully creates the app, and you can successfully deploy it.<!-- SCCMDocs-pr #4716 -->
-
-### <a name="bkmk_note2"></a> Note 2: Web Application
-
-If you installed the Microsoft Intune managed browser on iOS or Android devices, make sure that users can only use the managed browser to open the app. In the website address, replace **http** with **http-intunemam**, or **https** with **https-intunemam**. For example:
-
-- `http-intunemam://<path to web app>`
-- `https-intunemam://<path to web app>`
-
-Use Configuration Manager [application requirements](#bkmk_dt-require) to make sure that web apps using the managed browser are only installed to iOS and Android devices.
-
-For more information about the Intune managed browser, see [Manage internet access using managed browser policies](/sccm/apps/deploy-use/manage-internet-access-using-managed-browser-policies).
-
 
 ## Next steps
 

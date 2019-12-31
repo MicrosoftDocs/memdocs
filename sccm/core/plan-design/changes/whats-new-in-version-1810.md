@@ -38,7 +38,7 @@ To take advantage of new Configuration Manager features, first update clients to
 
 Learn about support changes before they're implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
 
-Starting on August 14, 2018, the hybrid mobile device management feature is deprecated. For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+Starting on August 14, 2018, the hybrid mobile device management feature is deprecated. For more information, see [What happened to hybrid MDM](/sccm/mdm/understand/what-happened-to-hybrid).<!--Intune feature 2683117-->  
 
 Support for System Center Endpoint Protection (SCEP) for Mac and Linux (all versions) ends on December 31, 2018. Availability of new virus definitions for SCEP for Mac and SCEP for Linux may be discontinued after the end of support. For more information, see [End of support blog post](https://go.microsoft.com/fwlink/?linkid=870182).
 
