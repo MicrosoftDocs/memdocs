@@ -47,7 +47,6 @@ You can also simulate an application deployment. This simulation tests the appli
 > - [Scheduling](#bkmk_deploy-sched)
 > - [User Experience](#bkmk_deploy-ux)
 > - [Alerts](#bkmk_deploy-alerts)
-> - [iOS: App Configuration Policies](#bkmk_deploy-ios)
 
 
 ### <a name="bkmk_deploy-general"></a> Deployment **General** information
