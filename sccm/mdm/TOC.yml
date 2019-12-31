@@ -61,8 +61,12 @@
       href: deploy-use/create-exchange-activesync-profiles.md
     - name: Windows Hello for Business settings 
       href: deploy-use/windows-hello-for-business-settings.md
-- name: Device management with Exchange
-  href: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+- name: Exchange Server connector
+  items:
+    - name: Device management with Exchange
+      href: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+    - name: Install the Exchange connector
+      href: deploy-use/install-configure-exchange-connector.md
 - name: What happened to hybrid MDM?
   href: understand/what-happened-to-hybrid.md
   
