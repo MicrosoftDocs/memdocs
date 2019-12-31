@@ -182,12 +182,6 @@ On the **User Experience** page, specify information about how users can interac
 On the **Alerts** page, configure how Configuration Manager generates alerts for this deployment. If you're also using System Center Operations Manager, configure its alerts as well. You can only configure some alerts for required deployments. 
 
 
-### <a name="bkmk_deploy-ios"></a> iOS: **App Configuration Policies**
-
-When deploying an iOS deployment type, you'll also see the **App Configuration Policies** page. If you've already created an iOS app configuration policy, click **New** to associate this deployment with the policy. For more information about this type of policy, see [Configure iOS apps with app configuration policies](/sccm/apps/deploy-use/configure-ios-apps-with-app-configuration-policies).
-
-
-
 ## <a name="bkmk_phased"></a> Create a phased deployment
 
 <!--1358147-->

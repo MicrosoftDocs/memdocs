@@ -226,7 +226,7 @@ If you extend Configuration Manager with other products from Microsoft or Micros
 ### Remove Intune subscription (hybrid MDM)
 
 <!-- SCCMDocs-pr#4253 -->
-The hybrid MDM service offering is retired as of September 1, 2019. If your Configuration Manager site had a Microsoft Intune Subscription, you need to remove it. For more information, see [Remove hybrid MDM](/configmgr/mdm/understand/hybrid-mobile-device-management#remove-hybrid-mdm).
+The hybrid MDM service offering is retired as of September 1, 2019. If your Configuration Manager site had a Microsoft Intune subscription, you need to remove it. For more information, see [Remove hybrid MDM](/configmgr/mdm/understand/what-happened-to-hybrid#remove-hybrid-mdm).
 
 ### Run the setup prerequisite checker
 

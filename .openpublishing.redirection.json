@@ -12,7 +12,7 @@
         },
         {
             "source_path": "sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md",
-            "redirect_url": "/sccm/mdm/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
@@ -27,12 +27,12 @@
         },
         {
             "source_path": "sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md",
-            "redirect_url": "/sccm/mdm/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps.md",
-            "redirect_url": "/sccm/mdm/deploy-use/configure-and-deploy-lookout-for-work-apps",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
@@ -47,7 +47,7 @@
         },
         {
             "source_path": "sccm/protect/deploy-use/create-compliance-policy.md",
-            "redirect_url": "/sccm/mdm/deploy-use/create-compliance-policy",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
@@ -57,17 +57,17 @@
         },
         {
             "source_path": "sccm/protect/deploy-use/device-compliance-policies.md",
-            "redirect_url": "/sccm/mdm/deploy-use/device-compliance-policies",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/protect/deploy-use/enable-device-threat-protection-rule-compliance-policy.md",
-            "redirect_url": "/sccm/mdm/deploy-use/enable-device-threat-protection-rule-compliance-policy",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/protect/deploy-use/enable-lookout-connection-in-intune.md",
-            "redirect_url": "/sccm/mdm/deploy-use/enable-lookout-connection-in-intune",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
@@ -77,77 +77,77 @@
         },
         {
             "source_path": "sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk.md",
-            "redirect_url": "/sccm/mdm/deploy-use/manage-access-based-on-device-network-app-risk",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/protect/deploy-use/manage-access-to-services.md",
-            "redirect_url": "/sccm/mdm/deploy-use/manage-access-to-services",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md",
-            "redirect_url": "/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/protect/deploy-use/manage-dynamics-crm-online-access.md",
-            "redirect_url": "/sccm/mdm/deploy-use/manage-dynamics-crm-online-access",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/protect/deploy-use/manage-sharepoint-online-access.md",
-            "redirect_url": "/sccm/mdm/deploy-use/manage-sharepoint-online-access",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/protect/deploy-use/manage-email-access.md",
-            "redirect_url": "/sccm/mdm/deploy-use/manage-email-access",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/protect/deploy-use/manage-skype-for-business-online-access.md",
-            "redirect_url": "/sccm/mdm/deploy-use/manage-skype-for-business-online-access",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/protect/deploy-use/set-up-your-subscription-with-lookout.md",
-            "redirect_url": "/sccm/mdm/deploy-use/set-up-your-subscription-with-lookout",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/protect/deploy-use/troubleshoot-lookout-integration.md",
-            "redirect_url": "/sccm/mdm/deploy-use/troubleshoot-lookout-integration",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md",
-            "redirect_url": "/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/apps/deploy-use/manage-internet-access-using-managed-browser-policies.md",
-            "redirect_url": "/sccm/mdm/deploy-use/manage-internet-access-using-managed-browser-policies",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/apps/deploy-use/manage-volume-purchased-ios-apps.md",
-            "redirect_url": "/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/apps/deploy-use/protect-apps-using-mam-policies.md",
-            "redirect_url": "/sccm/mdm/deploy-use/protect-apps-using-mam-policies",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/apps/get-started/creating-android-applications.md",
-            "redirect_url": "/sccm/mdm/deploy-use/creating-android-applications",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/apps/get-started/creating-ios-applications.md",
-            "redirect_url": "/sccm/mdm/deploy-use/creating-ios-applications",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
@@ -157,7 +157,7 @@
         },
         {
             "source_path": "sccm/mdm/deploy-use/create-applications.md",
-            "redirect_url": "/sccm/mdm/deploy-use/creating-ios-applications",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
@@ -172,7 +172,7 @@
         },
         {
             "source_path": "sccm/core/clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md",
-            "redirect_url": "/sccm/mdm/deploy-use/mobile-device-hardware-inventory-hybrid",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {  
@@ -242,7 +242,7 @@
         },
         {
             "source_path": "sccm/protect/deploy-use/configuration-manager-mobile-threat-defense.md",
-            "redirect_url": "/sccm/mdm/deploy-use/mobile-threat-defense",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
@@ -398,6 +398,336 @@
         {
             "source_path": "sccm/mdt/sccm-guide.md",
             "redirect_url": "/configmgr/mdt/configmgr-guide",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/understand/hybrid-mobile-device-management.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/understand/whats-new-hybrid-archive.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/plan-design/plan-hybrid-mobile-device-management.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/plan-design/supported-device-platforms-for-hybrid.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/plan-design/device-enrollment-methods.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/setup-hybrid-mdm.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/create-mdm-collection.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/confirm-dns.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/configure-intune-subscription.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/terms-and-conditions.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/create-service-connection-point.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/enable-platform-enrollment.md", 
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/enroll-hybrid-ios-mac.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/enroll-hybrid-windows.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/enroll-hybrid-android.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/set-up-additional-management.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/verify-mdm-configuration.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/enroll-user-owned-devices.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/enroll-company-owned-devices.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/ios-device-enrollment-program-for-hybrid.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/ios-hybrid-enrollment-using-apple-configurator.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/enroll-devices-with-device-enrollment-manager.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/predeclare-devices-with-hardware-id.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/manage-ios-activation-lock.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/mobile-device-hardware-inventory-hybrid.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/software-inventory-mobile-devices.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/sync-intune-device.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/creating-ios-applications.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/manage-volume-purchased-ios-apps.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/creating-android-applications.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/configure-android-apps-with-app-configuration-policies.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/protect-apps-using-mam-policies.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/manage-internet-access-using-managed-browser-policies.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/manage-intune-subscriptions.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/change-mdm-authority.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/migrate-import-data.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/migrate-prepare-intune.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/migrate-mixed-authority.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/migrate-change-mdm-authority.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/manage-access-to-services.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/device-compliance-policies.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/actions-for-noncompliance.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/create-compliance-policy.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/manage-email-access.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/manage-sharepoint-online-access.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/manage-skype-for-business-online-access.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/manage-dynamics-crm-online-access.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/mobile-threat-defense.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/set-up-your-subscription-with-lookout.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/enable-lookout-connection-in-intune.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/configure-and-deploy-lookout-for-work-apps.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/enable-device-threat-protection-rule-compliance-policy.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/troubleshoot-lookout-integration.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/get-started/set-up-intune-subscription-on-premises-mdm.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/comanage/quickstart-migrate-hybrid-mdm.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         }
     ]

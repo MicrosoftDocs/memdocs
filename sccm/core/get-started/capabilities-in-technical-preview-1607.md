@@ -52,7 +52,7 @@ Custom branding for the Software Center is applied according to the following ru
 
 2. If the Application Catalog website point site server role is installed, then Software Center will display the organization name and color specified in the Application Catalog website point site server role properties. For more information, see [Configuration options for Application Catalog website point](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website).
 
-3. If a Microsoft Intune subscription is configured and connected to the Configuration Manager environment, then Software Center will display the organization name, color and company logo specified in the Intune subscription properties. For more information, see [Configure the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription).
+3. If a Microsoft Intune subscription is configured and connected to the Configuration Manager environment, then Software Center will display the organization name, color and company logo specified in the Intune subscription properties.
 
 ## Use the same network adapter for multiple PXE initiated deployments
 In Technical Preview version 1607, when you use an ethernet adapter to image multiple devices (such as a USB ethernet adapter that you use on multiple devices), you can enable a new setting that allows you to enter hardware identifiers for the ethernet adapters. Configuration Manager ignores the hardware identifiers in the list when performing a PXE installation and for client registration.

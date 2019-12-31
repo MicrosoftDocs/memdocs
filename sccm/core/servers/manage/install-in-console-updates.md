@@ -42,8 +42,6 @@ Before you configure the service connection point, understand and plan for its a
 
 - The site uses the service connection point to upload usage information about your site. This information helps the Microsoft cloud service identify the updates that are available for the current version of your infrastructure. For more information, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).  
 
-- The site uses the service connection point to manage devices with Microsoft Intune, and using Configuration Manager on-premises mobile device management. For more information, see [Hybrid mobile device management (MDM)](/sccm/mdm/understand/hybrid-mobile-device-management).  
-
 To better understand what happens when updates are downloaded, see the following flowcharts:  
 
 - [Flowchart - Download updates](/sccm/core/servers/manage/download-updates-flowchart)  

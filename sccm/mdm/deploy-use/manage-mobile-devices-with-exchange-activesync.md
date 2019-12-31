@@ -125,9 +125,7 @@ Use the Exchange Server connector in Configuration Manager when you want to mana
 
     -   If you also enroll mobile devices by using Configuration Manager, enable the option **External mobile device management** to ensure that these mobile devices continue to receive email from Exchange after Configuration Manager enrolls them.  
 
-    -   On the **Account** page of the wizard, you can configure the account used to send email notifications to clients that are blocked by Configuration Manager conditional access. The account you specify must have a valid mailbox on the Exchange server.  
-
-         For more information, see [Manage access to services](../../protect/deploy-use/manage-access-to-services.md).  
+    -   On the **Account** page of the wizard, you can configure the account used to send email notifications to clients. The account you specify must have a valid mailbox on the Exchange server.  
 
 6.  You can verify the installation of the Exchange Server connector by using status messages and by reviewing the log files:  
 

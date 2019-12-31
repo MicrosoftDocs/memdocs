@@ -108,7 +108,6 @@ For details, see [Manage apps from the Windows Store for Business with Configura
 
 The workflow for managing volume-purchased iOS apps, and deploying these with Configuration Manager, has been improved.
 
-For details, see [Manage volume-purchased iOS apps with Configuration Manager](../../../apps/deploy-use/manage-volume-purchased-ios-apps.md).
 
 ### Software Center user interface
 
@@ -164,7 +163,6 @@ A new setting, **Allow Smart Lock and other trust agents**, has been added to th
 
 This setting lets you control the Smart Lock feature on compatible Android devices. This phone capability, sometimes known as "trust agents," lets you disable or bypass the device lock screen password if the device is in a trusted location. For example, a trusted location could be when it is connected to a specific Bluetooth device, or when it is near to an NFC tag. You can use this setting to prevent users from configuring Smart Lock.
 
-For details, see [How to create configuration items for Android and Samsung KNOX Standard devices managed without the Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).
 
 ## Device configuration and protection
 
@@ -190,8 +188,6 @@ Configuration Manager can help you manage Activation Lock in two ways:
 - Enable Activation Lock on supervised devices.
 - Bypass Activation Lock on supervised devices.
 
-For details, see [Manage iOS Activation Lock with Configuration Manager](../../../mdm/deploy-use/manage-ios-activation-lock.md).
-
 
 ### Microsoft Defender Advanced Threat Protection
 
@@ -207,8 +203,6 @@ For details, see [How to automatically categorize devices into collections with 
 ### Predeclare devices with IMEI or iOS serial numbers
 
 You can identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers or iOS serial numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers, or you can manually enter device information. Imported information sets the ownership of the devices that enroll as “Corporate” in lists of devices. An Intune license is still required for each user who accesses the service.
-
-For more details, see [Predeclare devices with IMEI or iOS serial numbers](../../../mdm/deploy-use/predeclare-devices-with-hardware-id.md).
 
 ### On-premises Health Attestation service communication
 

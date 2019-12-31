@@ -350,10 +350,6 @@ After a site server recovery, reenter Windows sideloading keys specified for the
 
 For example, before the site failure the **Total activations** count shows as **100**. The number of keys that devices have used, or **Activations used**, is **90**. After the site recovery, the **Total activations** value still displays **100**, but the **Activations used** column incorrectly displays **0**. After 10 new devices use a sideloading key, there are no more sideloading keys, and the 11th device fails to apply a sideloading key.
 
-### Recreate the Microsoft Intune subscription
-
-If you recover a Configuration Manager site server after the site server is reimaged, the Microsoft Intune subscription isn't restored. Reconnect your subscription after you recover the site. Don't create a new APN request. Instead upload the current valid PEM file. Use the same file that you uploaded the last time you configured or renewed iOS management. For more information, see [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription).
-
 ### Recreate Azure services
 
 <!-- SCCMDocs#1022 -->

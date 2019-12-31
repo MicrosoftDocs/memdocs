@@ -166,7 +166,6 @@ For details of all Windows 10 settings, see [How to create configuration items f
   * Android 4.2 through 4.4
   * Samsung KNOX Standard 4.0+
 
-See [create and deploy a device compliance policy](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy) to try the new device compliance rules
 
 ## Application Management
 
@@ -188,8 +187,6 @@ For more information, see [Create and run PowerShell scripts from the Configurat
 Beginning with this release, you can use three new mobile application management (MAM) policy settings:
 
 - **Block screen capture (Android devices only):** Specifies that the screen capture capabilities of the device are blocked when using this app.
-
-See [protect apps using app protection policies in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
 
 
 ## Operating system deployment
@@ -249,13 +246,10 @@ For more information, see [Use Windows Analytics with Configuration Manager](/sc
 <!-- 1338403 -->
 With this release, the values for the **Allow data sharing between work and personal profile** setting in the **Work Profile** setting group have been updated. We’ve also added a custom setting to block copy-paste between work and personal profiles.
 
-For more information, see [Configuration items for Android for Work devices](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client).
 
 ### Android and iOS enrollment restrictions
 <!-- 1290826 -->
 With this release, you can now specify that users cannot enroll personal Android or iOS devices. New device restriction settings let you limit Android device enrollment to predeclared devices. For iOS devices, you can block enrollment of all devices except those enrolled with Apple's Device Enrollment Program, Apple Configurator, or the Intune device enrollment manager account.
-- For more information about Android enrollment restrictions, see [Set up Android device management](/sccm/mdm/deploy-use/enroll-hybrid-android).
-- For more information about iOS enrollment restrictions, see [Configure iOS enrollment restrictions](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac#configure-enrollment-restrictions).
 
 ## Protect devices
 
