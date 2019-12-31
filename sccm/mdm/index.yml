@@ -36,12 +36,12 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: About the Exchange connector
+          - text: Device management with Exchange
             url: deploy-use/manage-mobile-devices-with-exchange-activesync.md
       - linkListType: how-to-guide
         links:
-          - text: Install and configure
-            url: deploy-use/install-and-configure-exchange-connector.md
+          - text: Install the Exchange connector
+            url: deploy-use/install-configure-exchange-connector.md
 
   - title: Use cloud-based Intune
     linkLists:
