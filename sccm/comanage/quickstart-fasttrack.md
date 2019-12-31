@@ -36,7 +36,7 @@ The FastTrack for Microsoft 365 site also includes expert-created documentation,
 
 3. Enter the number of **EMS Licenses** in your organization.  
 
-4. Complete the form by adding your contact information, business scenarios, and the products you're trying to troubleshoot. For example, if you need assistance migrating from Intune hybrid to Intune standalone, select **Microsoft Intune** on the form.  
+4. Complete the form by adding your contact information, business scenarios, and the products you're trying to troubleshoot.
 
 5. Submit the request. 
 

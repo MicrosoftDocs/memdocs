@@ -30,9 +30,7 @@ The current branch of Configuration Manager supports the following functionality
 
 - In-console updates that add new features and improvements.
 - Support for newly released operating systems to use as site servers and clients.
-- Use of a Microsoft Intune subscription to support:
-  - Intune in a hybrid mobile device management (MDM) configuration
-  - On-premises MDM
+- On-premises MDM
 - The Windows 10 servicing dashboard and servicing plans, including support for recent Windows 10 versions.  
 - Support for future releases of Windows Server and Windows 10 LTSB
 - Asset Intelligence

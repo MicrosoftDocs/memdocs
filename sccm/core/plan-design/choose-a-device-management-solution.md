@@ -19,13 +19,6 @@ ms.collection: M365-identity-device-management
 
 Configuration Manager offers different solutions for managing PCs, servers, and devices. Choose the solution that's right for your organization. Base your decision on the device platforms you need to manage and the management functionality you need.  
 
-
-> [!IMPORTANT]  
-> As of August 14, 2018, hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). <!--Intune feature 2683117-->  
-<!-- SCCMDocs issue 1197 -->
-
-
-
 ## Overview
 
 This article covers the following four device management solutions: 
