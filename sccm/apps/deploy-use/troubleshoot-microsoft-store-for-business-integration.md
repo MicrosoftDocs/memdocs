@@ -69,7 +69,7 @@ This log file is located on the site server for the top-level site in the hierar
 
 When the last sync status is *failed*, start by reviewing the following [log files](#log-files) to identify the symptom:
 
-- WSfBSyncWorker.log
+- WSfbSyncWorker.log
 - SMS_CLOUDCONNECTION.log
 
 Then look at one of the following sections for common issues:
@@ -184,7 +184,7 @@ This issue can occur if the application's package is larger than 500 MB. Configu
 
 You can't automatically sync these apps, but you can download the content, and manually create the application:
 
-1. Get the failing application ID from the following line in **MSfBSynWorker.log**:
+1. Get the failing application ID from the following line in **WSfbSynWorker.log**:
 
     `Error(s) syncing or downloading application <ApplicationID> from the Microsoft Store for Business.`
 
@@ -230,7 +230,7 @@ Start by reviewing the following [log files](#log-files) to identify the symptom
 
 - BusinessAppProcessWorker.log
 - SMS_BUSINESS_APP_PROCESS_MANAGER.log
-- MSfBSyncWorker.log
+- WsfbSyncWorker.log
 - SMS_CLOUDCONNECTION.log
 
 Then look at one of the following sections for common issues:
@@ -252,7 +252,7 @@ Wait for at least 10 minutes before starting another sync.
 
 #### Cause
 
-This issue can occur if the SMS_BUSINESS_APP_PROCESS_MANAGER component stops the MSfBSyncWorker thread. The error may specify either `2` or `4` workers.
+This issue can occur if the SMS_BUSINESS_APP_PROCESS_MANAGER component stops the WsfbSyncWorker thread. The error may specify either `2` or `4` workers.
 
 #### Workaround
 
