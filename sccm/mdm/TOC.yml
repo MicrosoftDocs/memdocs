@@ -1,4 +1,5 @@
 - name: Mobile device management (MDM)
+  href: index.yml
 - name: On-premises MDM
   items:
   - name: What is on-premises MDM
