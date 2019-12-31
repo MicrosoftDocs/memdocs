@@ -158,18 +158,24 @@ Use one of these values for &lt;Device ID\>:
 |Mac computer|5|  
 |Windows CE|6|  
 |Windows Embedded|7|  
+|Intel system on a chip|12|  
+|Unix and Linux servers|13|  
+|Microsoft HoloLens (MDM)|15|
+|Microsoft Surface Hub (MDM)|16|
+
+> [!NOTE]
+> Values that aren't listed in this table are associated with devices that are no longer supported.
+
+<!-- removed with hybrid EOL
 |iOS|8|  
 |iPad|9|  
 |iPod touch|10|  
 |Android|11|  
-|Intel system on a chip|12|  
-|Unix and Linux servers|13|  
 |Apple macOS (MDM)|14|
-|Microsoft HoloLens (MDM)|15|
-|Microsoft Surface Hub (MDM)|16|
 |Android for Work|17|
+ -->
 
- For example, if you want to return only Mac computers, use this query:  
+For example, if you want to return only Mac computers, use this query:  
 
 ``` WQL
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = 5  
