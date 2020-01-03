@@ -67,7 +67,7 @@ Devices are running a feature update that's within 90 days of reaching end of se
 
 #### End of service
 
-Devices are running a feature update that's past the end of service date. For details about end of service dates, see [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+Devices are running a feature update that's past the end of service date. These dates are specific to Enterprise and Education windows editions and not Home, Pro, Pro Education or Pro for Workstations editions. For details about end of service dates, see [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
 #### Not measured
 
