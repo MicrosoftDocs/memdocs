@@ -350,6 +350,7 @@ Windows Information Protection (WIP) helps to protect against this potential dat
 For information about how to configure enterprise data protection with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 
+
 ### Microsoft Edge  
 These settings are for devices running Windows 10 and later.  
 

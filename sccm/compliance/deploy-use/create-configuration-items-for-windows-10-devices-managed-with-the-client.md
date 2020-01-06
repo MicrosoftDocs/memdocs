@@ -135,7 +135,10 @@ Configuration Manager Windows Information Protection configuration items manage 
 - Encryption settings
   
 
-For information about how to configure WIP with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
-  
+For information about how to configure WIP with Configuration Manager, see:
+- [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Create and deploy a Windows Information Protection (WIP) policy using System Center Configuration Manager](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-sccm#related-topics)
+- [Limitations while using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/limitations-with-wip)
+
 ## See also  
 [Configuration items for devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md)
