@@ -2,7 +2,7 @@
 title: Create configuration items for Windows 10
 titleSuffix: Configuration Manager
 description: Use the Windows 10 configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client.
-ms.date: 05/08/2019
+ms.date: 01/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual

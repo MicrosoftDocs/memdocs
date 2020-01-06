@@ -2,7 +2,7 @@
 title: "Create configuration items for Windows 8.1 and Windows 10 devices managed with Intune"
 titleSuffix: "Configuration Manager"
 description: "Use the Configuration Manager Windows 10 configuration item to manage settings for Windows 10 computers."
-ms.date: 07/31/2017
+ms.date: 01/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -347,7 +347,7 @@ Windows Information Protection (WIP) helps to protect against this potential dat
 
  Configuration Manager WIP configuration item settings manage the list of apps protected by EDP, enterprise network locations, protection level, and encryption settings.
 
-For information about how to configure enterprise data protection with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
+For information about how to configure enterprise data protection with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 
 ### Microsoft Edge  
