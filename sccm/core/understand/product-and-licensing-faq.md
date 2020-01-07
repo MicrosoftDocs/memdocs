@@ -74,8 +74,7 @@ A new license is now available that lets Configuration Manager customers with So
 
 - Windows 10 devices enrolled into Intune by using other means require full Intune licenses.
 
-- If you want to use Intune for managing iOS, Android, or macOS devices, then you do need the appropriate Intune subscription through standalone Intune license, Enterprise Mobility +
-Security (EMS), or Microsoft 365.
+- If you want to use Intune for managing iOS, Android, or macOS devices, then you do need the appropriate Intune subscription through standalone Intune license, Enterprise Mobility + Security (EMS), or Microsoft 365.
 
 - The licensing that you previously had for System Center Configuration Manager still applies to Microsoft Endpoint Configuration Manager. If installing a new site, use existing product keys.
 

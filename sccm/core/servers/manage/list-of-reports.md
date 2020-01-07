@@ -650,7 +650,6 @@ The following 10 reports are listed under the **Software Distribution - Applicat
 |**Application infrastructure errors**|Displays application infrastructure errors. These errors include internal infrastructure issues, or errors resulting from invalid requirement rules.|  
 |**Application Usage Detailed Status**|Displays usage details for installed applications.|  
 |**Application Usage Summary Status**|Displays a usage summary for installed applications.|  
-|**iOS apps with failed deployments (app already installed)**|Displays compliance information for the selected iOS app. You deployed this app as an 'App package for iOS from App Store', which you also associated with a mobile application management policy. This report is used to display users and devices for which the app failed to install because it had already been manually installed by the user.|  
 |**Task sequence deployments containing application**|Displays task sequence deployments that install a specified application.|  
 |**User Requests for Android Application**|Displays users that requested to install an Android application.|  
 
@@ -997,16 +996,6 @@ The following seven reports are listed under the **Virtual Applications** catego
 |**Computers with a specific virtual application package**|Displays a summary of computers that have the specified App-V application package.|  
 |**Count of all instances of virtual application packages**|Display a count of detected App-V application packages.|  
 |**Count of all instances of virtual applications**|Display a count of detected App-V applications.|  
-
-
-
-## Volume purchase programs - Apple
-
-The following report is listed under the **Volume Purchase Programs - Apple** category.
-
-|Report name|Description|  
-|-----------------|-----------------|  
-|**Apple Volume Purchase Program apps for iOS with license counts**|Displays all iPhone, iPad, and iPod Touch applications licensed through Apple's Volume Purchase Program. This report also includes the total licenses purchased, and licenses consumed per application.|  
 
 
 

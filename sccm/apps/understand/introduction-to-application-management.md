@@ -140,19 +140,11 @@ Configuration Manager lets you deploy the following app types:
 
 - macOS  
 
-Additionally, when you manage devices through Microsoft Intune or Configuration Manager on-premises device management, manage these further app types:  
+Additionally, when you manage devices through Configuration Manager [on-premises device management](/configmgr/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure), manage these further app types:  
 
 - Windows Phone app package (xap)  
 
 - Windows Phone app package in the Microsoft Store  
-
-- App package for iOS (ipa)  
-
-- App Package for iOS from App Store  
-
-- App package for Android (apk)  
-
-- App package for Android on Google Play  
 
 - Windows Installer through MDM (msi)  
 
