@@ -25,8 +25,8 @@ The sections in this article can help you back up your sites. To recover a site,
 >[!WARNING]
 > The two backup methods supported for Configuration Manager site recovery are:
 >
-> - A successful backup from the [**Backup Site Server** maintenance task](#backup-maintenance-task)
-> - A [manually recovered site database](#considerations-before-creating-a-backup)
+> - A successful backup from the **Backup Site Server** maintenance task
+> - A manually recovered site database backup
 
 
 ## Considerations before creating a backup  
