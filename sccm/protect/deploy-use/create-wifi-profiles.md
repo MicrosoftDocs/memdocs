@@ -93,5 +93,5 @@ When you create a Wi-Fi profile, you can include a wide range of security settin
 
 15. On the **Supported Platforms** page, select the operating systems where you want to install the Wi-Fi profile. Alternatively, click **Select all** to install the Wi-Fi profile to all available operating systems.  
 
-### Next steps
+## Next steps
  For information about how to deploy the Wi-Fi profile, see [How to deploy Wi-Fi profiles](deploy-wifi-vpn-email-cert-profiles.md).  
