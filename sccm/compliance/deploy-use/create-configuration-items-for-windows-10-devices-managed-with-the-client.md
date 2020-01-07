@@ -2,7 +2,7 @@
 title: Create configuration items for Windows 10
 titleSuffix: Configuration Manager
 description: Use the Windows 10 configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client.
-ms.date: 05/08/2019
+ms.date: 01/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -135,7 +135,10 @@ Configuration Manager Windows Information Protection configuration items manage 
 - Encryption settings
   
 
-For information about how to configure WIP with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
-  
+For information about how to configure WIP with Configuration Manager, see:
+- [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Create and deploy a Windows Information Protection (WIP) policy using System Center Configuration Manager](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-sccm#related-topics)
+- [Limitations while using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/limitations-with-wip)
+
 ## See also  
 [Configuration items for devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md)
