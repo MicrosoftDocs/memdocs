@@ -146,8 +146,6 @@ To add more deployment types or configure other settings, see [Create deployment
 
     - **Icon**: Select **Browse** to select an icon for this application. If you don't specify an icon, Configuration Manager uses a default icon. Icons can have pixel dimensions of up to 512x512.  
 
-    - **Display this as a featured app and highlight it in the company portal**: This option prominently displays the app in the company portal on mobile devices.  
-
 4. On the **Deployment Types** page of the Create Application wizard, choose **Add** to create a new deployment type. For more information, see [Create deployment types for the application](#bkmk_create-dt).  
 
 5. Choose **Next**, review the application information on the **Summary** page, and then finish the Create Application wizard.  
