@@ -66,14 +66,13 @@ When you create a Wi-Fi profile, you can include a wide range of security settin
 7. Choose the other appropriate connectivity options, including.   **Connect when the network is not broadcasting its name (SSID)**, if there is a possibility that the SSID is hidden  
 
 8. On the **Security Configuration** page, select the security protocol that the wireless network uses, or select **No authentication (Open)** if the network is unsecured.
-   > [!IMPORTANT]
-   >  If you're creating a Wi-Fi profile for On\-premises Mobile Device Management, the current branch of Configuration Manager only supports the following Wi-Fi security configurations:  
-   > 
-   >  Security types: **WPA2 Enterprise** or **WPA2 Personal**  
-   > Encryption types: **AES** or **TKIP**  
-   > EAP types: **Smart Card or other certificate** or **PEAP**  
-   > 
-   > For Android devices, the security types **WPA Personal**, **WPA2 Personal** and **WEP** are not supported.  
+
+    > [!IMPORTANT]
+    > If you're creating a Wi-Fi profile for [on-premises mobile device management](/configmgr/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure), the current branch of Configuration Manager only supports the following Wi-Fi security configurations:  
+    >
+    > - Security types: **WPA2 Enterprise** or **WPA2 Personal**  
+    > - Encryption types: **AES** or **TKIP**  
+    > - EAP types: **Smart Card or other certificate** or **PEAP**  
 
 9. Select the encryption method that the wireless network uses.  
 

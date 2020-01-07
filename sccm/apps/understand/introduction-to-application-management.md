@@ -38,7 +38,7 @@ For example, your company has a line-of-business application called Astoria. The
 
 - Windows Installer package for full functionality on Windows 10 devices
 - An App-V package for use in the terminal server farm
-- An Android app package for mobile users  
+- An web app for mobile users  
 
 You create a single application for Astoria in Configuration Manager. The application defines the high-level metadata about the app that's common across all installation methods and platforms. You then create three deployment types for the available installation methods, and deploy the application to all users. Based on the requirements and other configurations on the deployment types, Configuration Manager determines the right method in each use case.
 

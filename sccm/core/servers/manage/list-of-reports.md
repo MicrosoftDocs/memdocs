@@ -651,8 +651,6 @@ The following 10 reports are listed under the **Software Distribution - Applicat
 |**Application Usage Detailed Status**|Displays usage details for installed applications.|  
 |**Application Usage Summary Status**|Displays a usage summary for installed applications.|  
 |**Task sequence deployments containing application**|Displays task sequence deployments that install a specified application.|  
-|**User Requests for Android Application**|Displays users that requested to install an Android application.|  
-
 
 
 ## Software distribution - Collections  
