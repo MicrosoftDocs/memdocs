@@ -177,13 +177,9 @@ A central administration site supports a total number of devices that includes u
 
 - 25,000 devices that run Mac and Windows CE 7.0  
 
-- One of the following, depending on how your deployment supports mobile device management (MDM):  
+- 100,000 devices that you manage by using on-premises mobile device management (MDM)
 
-    - 100,000 devices that you manage by using on-premises MDM  
-
-    - 300,000 cloud-based devices  
-
-For example, in a hierarchy you can support 700,000 desktops, up to 25,000 Mac and Windows CE 7.0 devices, and up to 300,000 cloud-based devices when you integrate Microsoft Intune. This hierarchy supports a total of 1,025,000 devices. If you support devices that are managed by on-premises MDM, the total for this hierarchy is 825,000 devices.  
+For example, in a hierarchy you can support 700,000 desktops, up to 25,000 Mac and Windows CE 7.0 devices, and up to 100,000 devices managed by on-premises MDM. This hierarchy supports a total of 825,000 devices.
 
 > [!IMPORTANT]  
 > In a hierarchy where the central administration site uses a Standard edition of SQL Server, the hierarchy supports a maximum of 50,000 desktops and devices. To support more than 50,000 desktops and devices, you must use an Enterprise edition of SQL Server. This requirement applies only to a central administration site. It doesn't apply to a stand-alone primary site or a child primary site. The edition of SQL Server you use for a primary site doesn't limit its capacity to support the stated number of clients.
@@ -208,13 +204,9 @@ A stand-alone primary site supports the following number of devices:
 
     - 25,000 devices that run Mac and Windows CE 7.0
 
-    - One of the following, depending on how your deployment supports mobile device management:  
+    - 50,000 devices that you manage by using on-premises MDM  
 
-        - 50,000 devices that you manage by using on-premises MDM  
-
-        - 150,000 cloud-based devices  
-
-For example, a stand-alone primary site that supports 150,000 desktops and 10,000 Mac or Windows CE 7.0 can support only an additional 15,000 devices. Those devices can be either cloud-based or managed by using on-premises MDM.  
+For example, a stand-alone primary site that supports 150,000 desktops and 10,000 Macs can only support an additional 15,000 mobile devices managed by on-premises MDM.
 
 ### <a name="embedded"></a> Primary sites and Windows Embedded devices
 

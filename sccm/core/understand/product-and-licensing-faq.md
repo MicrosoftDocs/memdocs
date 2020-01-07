@@ -74,8 +74,7 @@ A new license is now available that lets Configuration Manager customers with So
 
 - Windows 10 devices enrolled into Intune by using other means require full Intune licenses.
 
-- If you want to use Intune for managing iOS, Android, or macOS devices, then you do need the appropriate Intune subscription through standalone Intune license, Enterprise Mobility +
-Security (EMS), or Microsoft 365.
+- If you want to use Intune for managing iOS, Android, or macOS devices, then you do need the appropriate Intune subscription through standalone Intune license, Enterprise Mobility + Security (EMS), or Microsoft 365.
 
 - The licensing that you previously had for System Center Configuration Manager still applies to Microsoft Endpoint Configuration Manager. If installing a new site, use existing product keys.
 
@@ -146,4 +145,4 @@ The SQL Server license that's included with Configuration Manager supports each 
 
 In versions 1806 and earlier, to start using on-premises MDM, you need a Microsoft Intune subscription. The subscription is only required to track licensing of the devices and isn't used to manage or store management information for the devices. All management data is stored in your organization using the on-premises Configuration Manager infrastructure.  
 
-Starting in version 1810, an Intune connection is no longer required for new on-premises MDM deployments.<!--3607730, fka 1359124--> Your organization still requires Intune licenses to use this feature. You can't currently remove the Intune connection from existing on-premises MDM deployments. For more information, see the [Intune support blog post](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
+Starting in version 1810, an Intune connection is no longer required for new on-premises MDM deployments.<!--3607730, fka 1359124--> Your organization still requires Intune licenses to use this feature. For more information, see the [Intune support blog post](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).

@@ -146,8 +146,6 @@ To add more deployment types or configure other settings, see [Create deployment
 
     - **Icon**: Select **Browse** to select an icon for this application. If you don't specify an icon, Configuration Manager uses a default icon. Icons can have pixel dimensions of up to 512x512.  
 
-    - **Display this as a featured app and highlight it in the company portal**: This option prominently displays the app in the company portal on mobile devices.  
-
 4. On the **Deployment Types** page of the Create Application wizard, choose **Add** to create a new deployment type. For more information, see [Create deployment types for the application](#bkmk_create-dt).  
 
 5. Choose **Next**, review the application information on the **Summary** page, and then finish the Create Application wizard.  
@@ -693,13 +691,12 @@ Configuration Manager supports the following deployment types for applications:
 | **Microsoft Application Virtualization 5** | A Microsoft App-V v5 package file. |  
 | **Windows Phone app package (\*.xap file)** | A Windows Phone app package file. |  
 | **Windows Phone app package (in the Windows Phone Store)** | Specify a link to the app in the Windows Store. |  
-| **App Package for iOS (\*.ipa file)** | An Apple iOS app package file. |  
-| **App Package for iOS from App Store** | Specify a link to the iOS app in the Apple Store. |  
-| **App Package for Android (\*.apk file)** | An Android app package file. |  
-| **App Package for Android on Google Play** | Specify a link to the app in the Google Play store. |  
 | **Mac OS X** | For macOS computers running the Configuration Manager client. Create a .cmmac file with the **CMAppUtil** tool. |  
 | **Web Application** | Specify a link to a web application. This deployment type installs a shortcut to the web application on the user's device. |  
 | **Windows Installer through MDM (\*.msi)** | Create and deploy Windows Installer-based apps to Windows 10 devices. For more information, see [Deploy Windows Installer apps to MDM-enrolled Windows 10 devices](/sccm/apps/get-started/creating-windows-applications#bkmk_mdm-msi). |  
+
+> [!NOTE]
+> The Configuration Manager console may display other deployment types, but they are for platforms that are no longer supported. For more information, see [What happened to hybrid?](/configmgr/mdm/understand/what-happened-to-hybrid).
 
 ### <a name="bkmk_note1"></a> Note 1: Windows app package (in the Windows Store)
 
@@ -719,7 +716,6 @@ Starting in version 1906, create a group of applications that you can send to a 
 For more information about creating applications on different OS platforms, see the following articles:  
 
 - [Create Windows applications](/sccm/apps/get-started/creating-windows-applications)
-- [Create applications for mobile devices](/sccm/mdm/deploy-use/create-applications) (iOS, Windows Mobile, and Android)  
 - [Create Mac applications](/sccm/apps/get-started/creating-mac-computer-applications)
 - [Create Linux and UNIX server applications](/sccm/apps/get-started/creating-linux-and-unix-server-applications)
 - [Create Windows Embedded applications](/sccm/apps/get-started/creating-windows-embedded-applications)

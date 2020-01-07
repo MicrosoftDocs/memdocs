@@ -42,9 +42,6 @@ For third-party VPN connections, distribute the VPN app before deploying the VPN
 
    - **Server list**: Add a new server to use for the VPN connection. Depending on the connection type, you can add one or more VPN servers and specify the default server.  
 
-     > [!NOTE]  
-     >  Devices that run iOS do not support using multiple VPN servers. If you configure multiple VPN servers and then deploy the VPN profile to an iOS device, only the default server is used.  
-
      This table provides options for connection types. See your VPN server documentation for more information.
 
 | &nbsp;&nbsp;Option&nbsp;&nbsp; | More information | &nbsp;&nbsp;Connection&nbsp;type&nbsp;&nbsp; |  
@@ -57,7 +54,7 @@ For third-party VPN connections, distribute the VPN app before deploying the VPN
 |**Connection specific DNS suffix** |The connection-specific Domain Name System (DNS) suffix for the connection.|- Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - PPTP<br /><br /> - L2TP|  
 |**Bypass VPN when connected to company Wi-Fi network**  |The VPN connection will not be used when the device is connected to the company Wi-Fi network.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN<br /><br /> - Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - L2TP|  
 |**Bypass VPN when connected to home Wi-Fi network**  |The VPN connection will not be used when the device is connected to a home Wi-Fi network.|All|  
-|**Per App VPN (iOS 7 and later, Mac OS X 10.9 and later )** |Associate this VPN connection with an iOS app so that the connection will be opened when the app is run. You can associate the VPN profile with an app when you deploy it.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
+|**Per App VPN (Mac OS X 10.9 and later )** |Associate this VPN connection with an macOS app so that the connection will be opened when the app is run. You can associate the VPN profile with an app when you deploy it.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
 |**Custom XML (optional)** |Specify custom XML commands that configure the VPN connection.<br /><br /> Examples:<br /><br /> For **Pulse Secure**:<br /><br /> **&lt;pulse-schema><br /> &nbsp; &lt;isSingleSignOnCredential>true&lt;/isSingleSignOnCredential\><br />&lt;/pulse-schema>**<br /><br /> For **CheckPoint Mobile VPN**:<br /><br /> **&lt;CheckPointVPN <br /> &nbsp; port="443" name="CheckPointSelfhost" <br /> &nbsp; sso="true" <br /> &nbsp; debug="3"<br />/>**<br /><br /> For **Dell SonicWALL Mobile Connect**:<br /><br /> **&lt;MobileConnect\><br />&nbsp; &nbsp; &lt;Compression\>false&lt;/Compression\><br />&nbsp; &nbsp; &lt;debugLogging\>True&lt;/debugLogging\><br />&nbsp; &nbsp; &lt;packetCapture\>False&lt;/packetCapture\><br />&lt;/MobileConnect\>**<br /><br /> For **F5 Edge Client**:<br /><br /> **&lt;f5-vpn-conf>&lt;single-sign-on-credential>&lt;/f5-vpn-conf>**<br /><br /> Refer to each manufacturers VPN documentation for more information about how to write custom XML commands.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
 
 > [!NOTE]  

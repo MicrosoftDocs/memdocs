@@ -163,10 +163,6 @@ If you configure a web application deployment type, use HTTPS to secure the conn
 
      When an App-V application is published on a computer, all users who sign in to that computer can install the application. You can't restrict the users who can install the application after it's published.  
 
-- You can't restrict install permissions for the company portal on mobile devices.  
-
-     Although you can configure a client setting to restrict installation permissions, this setting doesn't work for the company portal. This issue could result in an elevation of privileges. Users could install an app that they shouldn't be allowed to install.  
-
 
 ## <a name="BKMK_CertificatesSilverlight5"></a> Certificates for Microsoft Silverlight 5 and elevated trust mode required for the application catalog  
 

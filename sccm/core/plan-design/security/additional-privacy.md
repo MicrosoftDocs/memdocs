@@ -103,15 +103,3 @@ In the Configuration Manager console, go to the **Monitoring** workspace, select
 Microsoft uses the information to operate and improve Microsoft Bing Maps and other Microsoft sites and services. For more information, see the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=823548).
 
 You can choose not to use the Geographical View for the Site Hierarchy. The default Hierarchy Diagram view lets you see the hierarchy and doesn't use the Bing Maps service.
-
-
-
-## Microsoft Intune subscription
-
-Customers who bought a subscription to Microsoft Intune can use Configuration Manager to manage their mobile devices that are connected through Microsoft Intune. [Microsoft Online Services Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=262214) applies to the Microsoft online services, which includes Microsoft Intune. If customers also have a Microsoft Intune subscription, the [Microsoft Online Services Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=262214) should be read in conjunction with this privacy statement.
-
-All communications with Microsoft Intune use HTTPS. To configure the Microsoft Intune subscription and to download the Certificate Signing Request (CSR) that's needed to configure iOS support, an admin must sign in to Microsoft Intune by using work account and password. These credentials aren't stored within Configuration Manager. All other communications with Microsoft Intune are authenticated by using PKI certificates that Microsoft Intune automatically generates.
-
-To manage devices that are connected to Microsoft Intune, some information is sent to and received from Microsoft Intune. This information includes the User Principal Name (UPN) of all users who are assigned to the service and device inventory information for those devices that are managed by Microsoft Intune. Metadata, like application name, publisher, and version, for content that is assigned to Manage.Microsoft.com distribution points is sent to Microsoft Intune. The actual binary content that's assigned to a Manage.Microsoft.com distribution point is encrypted before it is uploaded to Microsoft Intune.
-
-This feature isn't configured by default. Admins control the content that is transferred to the Manage.Microsoft.com distribution point and the users who are assigned to the service. The feature can be removed at any time.

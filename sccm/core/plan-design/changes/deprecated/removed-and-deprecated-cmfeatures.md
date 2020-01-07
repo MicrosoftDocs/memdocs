@@ -41,7 +41,7 @@ The following features are no longer supported. In some cases, they're no longer
 
 |Feature|Deprecation first announced|Support&nbsp;removed|  
 |-----------|---|--------------|  
-| Device health attestation assessment for conditional access compliance policies <!--1235616 aka 3608202--> For more information, see [Manage access to Office 365 services for PCs managed by Configuration Manager](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm#step-1-configure-compliance-policy).| July 3, 2019 | Version 1910 |
+| Device health attestation assessment for conditional access compliance policies <!--1235616 aka 3608202--> For more information, see [What happened to hybrid MDM](/sccm/mdm/understand/what-happened-to-hybrid).| July 3, 2019 | Version 1910 |
 | The Configuration Manager Company Portal app | May 21, 2019 | Version 1910 |
 | The application catalog, including both site system roles: the application catalog website point and web service point. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat). | May 21, 2019 | Version 1910 |
 |Certificate-based authentication with Windows Hello for Business settings in Configuration Manager<br>For more information, see [Windows Hello for Business settings](/sccm/protect/deploy-use/windows-hello-for-business-settings).|December 2017|Version 1910|
