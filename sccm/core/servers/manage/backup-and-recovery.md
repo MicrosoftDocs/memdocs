@@ -21,9 +21,9 @@ Prepare backup and recovery approaches to avoid data loss. For Configuration Man
 
 The sections in this article can help you back up your sites. To recover a site, see [Recovery for Configuration Manager](/sccm/core/servers/manage/recover-sites).  
 
-> [!WARNING] <!--/SCCMdocs/issues/2108-->
+>[!WARNING] <!--/SCCMdocs/issues/2108-->
 > The two backup methods supported for Configuration Manager site recovery are:
-> 
+>
 > - A successful backup from the [**Backup Site Server** maintenance task](#backup-maintenance-task)
 > - A [manually recovered site database](#considerations-before-creating-a-backup)
 
