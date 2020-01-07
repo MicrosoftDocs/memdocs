@@ -21,58 +21,48 @@ landingContent:
       - linkListType: overview
         links:
           - text: Introduction to software updates
-            url: ./understand/software-updates-introduction.md
+            url: understand/software-updates-introduction.md
+          - text: Deploy and monitor monthly software updates example
+            url: deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md
       - linkListType: architecture
         links:
           - text: Plan for software updates
-            url: ./plan-design/plan-for-software-updates.md
+            url: plan-design/plan-for-software-updates.md
           - text: Best practices for software updates
-            url: ./plan-design/software-updates-best-practices.md
+            url: plan-design/software-updates-best-practices.md
 
-  # Card (optional)
+  # Card 
   - title: Get started
     linkLists:
-      - linkListType: get-started
+      - linkListType: deploy
         links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
-      - linkListType: linkListType
+          - text: Install a software update point
+            url: get-started/install-a-software-update-point.md
+          - text: Configure classifications and products
+            url: get-started/configure-classifications-and-products.md
+          - text: Synchronize software updates
+            url: get-started/synchronize-software-updates
+      - linkListType: how-to-guide
         links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
+          - text: Automatically deploy software updates
+            url: deploy-use/automatically-deploy-software-updates.md
+          - text: Monitor software updates
+            url: deploy-use/monitor-software-updates.md
 
   # Card
-  - title: cardtitle3
+  - title: Top tasks
     linkLists:
-      - linkListType: linkListType
+      - linkListType: how-to-guide
         links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
-      - linkListType: linkListType
+          - text: Manage Office 365 ProPlus updates
+            url: deploy-use/manage-office-365-proplus-updates.md
+          - text: Enable third-party updates
+            url: deploy-use/third-party-software-updates.md
+          - text: Manage settings for software updates
+            url: get-started/manage-settings-for-software-updates.md
+      - linkListType: concept
         links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
-
-  # Card
-  - title: cardtitle4
-    linkLists:
-      - linkListType: linkListType
-        links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
-      - linkListType: linkListType
-        links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
+          - text: Optimize Windows 10 update delivery
+            url: deploy-use/optimize-windows-10-update-delivery.md
+          - text: Software updates maintenance
+            url: deploy-use/software-updates-maintenance.md

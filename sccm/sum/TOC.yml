@@ -1,5 +1,5 @@
 - name: Software update management documentation
-  href: ./
+  href: index.yml
 - name: Understand and explore
   items:
   - name: Introduction to software updates
