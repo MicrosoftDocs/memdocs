@@ -1,0 +1,78 @@
+### YamlMime:Landing
+
+title: Software update management documentation
+summary: Software updates in Configuration Manager helps you manage the complex task of tracking and applying software updates to client computers in the enterprise. 
+
+metadata:
+  title: Software update management documentation
+  description: Software updates in Configuration Manager helps you manage the complex task of tracking and applying software updates to client computers in the enterprise.
+  ms.product: configuration-manager
+  ms.technology: configmgr-sum
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  - title: About software update management
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Introduction to software updates
+            url: ./understand/software-updates-introduction.md
+      - linkListType: architecture
+        links:
+          - text: Plan for software updates
+            url: ./plan-design/plan-for-software-updates.md
+          - text: Best practices for software updates
+            url: ./plan-design/software-updates-best-practices.md
+
+  # Card (optional)
+  - title: Get started
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
+
+  # Card
+  - title: cardtitle3
+    linkLists:
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
+
+  # Card
+  - title: cardtitle4
+    linkLists:
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
