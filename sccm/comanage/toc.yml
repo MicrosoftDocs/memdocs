@@ -1,5 +1,5 @@
-- name: Co-management
-  href: overview.md
+- name: Co-management documentation
+  href: index.yml
 - name: Overview
   items:
   - name: What is co-management?
