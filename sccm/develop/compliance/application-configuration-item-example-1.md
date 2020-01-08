@@ -9,7 +9,8 @@ ms.assetid: adc63f00-8fcf-4212-910a-26ae9154d574
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Application Configuration Item Example 1
 The following Application Configuration Item Instance example determines whether the Configuration Manager client is installed on the system by using Microsoft Windows Installer-based detection.  

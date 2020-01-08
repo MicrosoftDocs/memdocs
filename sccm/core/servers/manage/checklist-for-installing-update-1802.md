@@ -10,7 +10,8 @@ ms.assetid: 6af92de2-b2c7-4d5c-affd-6cce81979fb5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ROBOTS: NOINDEX
 ---
 # Checklist for installing update 1802 for Configuration Manager

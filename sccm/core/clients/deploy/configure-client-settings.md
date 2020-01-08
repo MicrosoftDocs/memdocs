@@ -10,7 +10,8 @@ ms.assetid: 95e9858a-bad4-4651-9e61-2e31dc5050fa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to configure client settings in Configuration Manager
 

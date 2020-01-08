@@ -9,7 +9,8 @@ ms.assetid: efed0902-d5cc-40e1-82aa-d6ff893ee44e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ST_RecurMonthlyByWeekday Server WMI Class
 The `SMS_ST_RecurMonthlyByWeekday` WMI class is an SMS Provider server class, in Configuration Manager, that represents a schedule token for events that occur for a specific day of the week, on a given week of the month, at a given monthly interval, for example, the second Saturday of every month.  

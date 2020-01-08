@@ -9,7 +9,8 @@ ms.assetid: 602346d5-3d06-4d2e-9fc7-103dd2c81c0c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_G_System_CollectedFile Server WMI Class
 The `SMS_G_System_CollectedFile` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains information about a file copied from the client computer to the site server.  

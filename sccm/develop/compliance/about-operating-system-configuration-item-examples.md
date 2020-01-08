@@ -9,7 +9,8 @@ ms.assetid: 4ae63925-e6a8-43a9-b3bc-91d640568a44
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Operating System Configuration Item Examples
 In Configuration Manager, operating system configuration items include all of the functionality of general configuration items, but they are tightly coupled with a specific version of the Windows operating system.  

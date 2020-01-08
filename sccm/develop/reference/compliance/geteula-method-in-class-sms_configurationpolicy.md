@@ -9,7 +9,8 @@ ms.assetid: 67749427-9cbb-4e53-b391-a872fca6fc16
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetEULA Method in Class SMS_ConfigurationPolicy
 The `GetEULA` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the localized Microsoft Software License Terms text of the configuration item.  

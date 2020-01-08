@@ -9,7 +9,8 @@ ms.assetid: 8666e465-c05e-435b-a3f8-f57d12a57701
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # FormatModuleString Method
 The `FormatModuleString` method, in Configuration Manager, loads string resources from the resource DLL.  

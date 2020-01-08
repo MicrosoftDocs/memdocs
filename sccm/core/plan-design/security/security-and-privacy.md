@@ -10,7 +10,8 @@ ms.assetid: e18be4d1-9f6e-477c-a79d-c46014b4a03a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Security and privacy for Configuration Manager
 

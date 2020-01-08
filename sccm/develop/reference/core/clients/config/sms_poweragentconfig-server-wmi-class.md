@@ -9,7 +9,8 @@ ms.assetid: 2b1e09df-f8f1-4384-acd6-2108ad9a1f6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_PowerAgentConfig Server WMI Class
 The `SMS_PowerAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies power management settings on client computers.  

@@ -8,7 +8,8 @@ ms.assetid: affca54f-bebb-44f8-9c94-58598670770e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a Configuration Manager Action
 To create a Configuration Manager console action, in Configuration Manager, you create an XML file that populates an [ActionDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actiondescription.aspx) XML element for the action. You must then copy the XML file to the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Actions\GUID folder.  

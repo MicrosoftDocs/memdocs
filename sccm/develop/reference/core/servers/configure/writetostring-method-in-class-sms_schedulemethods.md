@@ -9,7 +9,8 @@ ms.assetid: 365617e1-9caf-4e90-99be-f486bcbb23ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # WriteToString Method in Class SMS_ScheduleMethods
 The `WriteToString` Windows Management Instrumentation (WMI) class method, in Configuration Manager, writes an interval string from [SMS_ScheduleToken Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_scheduletoken-server-wmi-class.md) objects.  

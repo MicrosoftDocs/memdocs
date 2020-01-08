@@ -9,7 +9,8 @@ ms.assetid: a7c12a4e-85a0-4293-9888-095cc60640f5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # InitializeData Method in Class SMS_ReplicationGroup
 The `InitializeData` Windows Management Instrumentation (WMI) class method, in Configuration Manager, reinitializes a specific replication group between two specified sites.  

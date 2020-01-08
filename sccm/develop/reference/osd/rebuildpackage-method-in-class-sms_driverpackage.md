@@ -9,7 +9,8 @@ ms.assetid: ea311e8c-5ad5-4c0c-882f-eeb8e74ba0f0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # RebuildPackage Method in Class SMS_DriverPackage
 The `RebuildPackage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, restores the contents for the driver package.  

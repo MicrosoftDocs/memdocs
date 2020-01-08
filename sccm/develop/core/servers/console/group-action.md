@@ -8,7 +8,8 @@ ms.assetid: 3156b487-c303-47d5-990f-8af010326acd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Group Action
 In Configuration Manager, the Group action creates a menu group, also known as a submenu, for related actions.  

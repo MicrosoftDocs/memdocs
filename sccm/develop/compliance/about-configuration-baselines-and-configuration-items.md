@@ -9,7 +9,8 @@ ms.assetid: 56bdef4b-bcf8-46f5-bf92-d86e0dfce08d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Baselines and Configuration Items
 In Configuration Manager, baselines are used to define the configuration of a product or system that is established at a specific point in time. Configuration baselines in Configuration Manager contain a defined set of desired configurations that are evaluated for compliance as a group.  

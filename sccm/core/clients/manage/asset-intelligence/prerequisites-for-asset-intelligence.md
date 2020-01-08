@@ -10,7 +10,8 @@ ms.assetid: 23ab4f94-7bfe-436e-8a6a-029409a2730c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Prerequisites for Asset Intelligence in Configuration Manager
 

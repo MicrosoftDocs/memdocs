@@ -9,7 +9,8 @@ ms.assetid: 2c1a08fa-687a-4a62-87d3-bf1699a3a01c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_Service_EndpointConfiguration Client WMI Class
 > [!IMPORTANT]

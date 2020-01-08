@@ -9,7 +9,8 @@ ms.assetid: ba718ec2-df70-426d-a6df-997a8e98483d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_Policy_Policy Client WMI Class
 In Configuration Manager, the `CCM_Policy_Policy` class is a client Windows Management Instrumentation (WMI) class that defines a policy object for a client policy.  

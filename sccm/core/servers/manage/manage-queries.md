@@ -10,7 +10,8 @@ ms.assetid: e562e2a0-8df8-4952-952f-e8c38461c612
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to manage queries in Configuration Manager
 

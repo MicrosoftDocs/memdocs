@@ -9,7 +9,8 @@ ms.assetid: 15ddea9d-e13a-4be2-a3f6-20eba1e4a678
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Operating System Deployment Site Role Configuration
 The following two site roles are of particular importance to Operating System Deployment in Configuration Manager.  

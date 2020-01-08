@@ -10,7 +10,8 @@ ms.assetid: 4e8b46a3-3e11-475f-a4d7-6bf9ddf14145
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Troubleshooting tips for application deployments

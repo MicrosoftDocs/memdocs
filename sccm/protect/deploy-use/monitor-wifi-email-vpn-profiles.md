@@ -10,7 +10,8 @@ ms.assetid: e2315b8b-98bc-40e1-8ef9-bfb5e69ab109
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Monitor Email, Wi-Fi and VPN profiles in Configuration Manager

@@ -9,7 +9,8 @@ ms.assetid: 4dbfce7f-1b58-4998-9b38-f5f3c3ba77c6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # About compliance settings server WMI classes

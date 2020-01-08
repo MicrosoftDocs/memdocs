@@ -10,7 +10,8 @@ ms.assetid: 8da2887a-fd8e-438c-b926-849c121f7fdf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Manage the Long Term Servicing Branch of Configuration Manager
 

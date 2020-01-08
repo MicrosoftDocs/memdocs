@@ -10,7 +10,8 @@ ms.assetid: 5b243aac-8a1a-4f14-ba3f-5446bb483e92
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Client health with co-management

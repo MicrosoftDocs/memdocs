@@ -9,7 +9,8 @@ ms.assetid: 77b0c79e-0291-4988-8be5-01113494460c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SettableSecuredCategory Server WMI Class
 The `SMS_SettableSecuredCategory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the list of secured categories which the current user can assign to certain types of objects.  

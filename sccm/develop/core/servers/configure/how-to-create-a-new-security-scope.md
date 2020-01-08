@@ -9,7 +9,8 @@ ms.assetid: ccf65b5f-d1bc-4deb-babd-93dc48a9517b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a New Security Scope
 Creating a security scope in Configuration Manager is simple. All security scopes are defined by the `SMS_SecuredCategory` Windows Management Instrumentation (WMI) class. Only two properties are required when you are creating a new security scope, the name and description.  

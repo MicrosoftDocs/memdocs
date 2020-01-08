@@ -9,7 +9,8 @@ ms.assetid: c996a3dc-fff5-4c15-a2ce-a9590969d75e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Operating System Deployment Image Management
 There are several package types that Configuration Manager uses to manage reference computer operating system images.  

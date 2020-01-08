@@ -9,7 +9,8 @@ ms.assetid: c44ae9b7-6518-41e0-8c8f-3b2802eae34d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ST_NonRecurring Server WMI Class
 The `SMS_ST_NonRecurring` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a schedule token for non-recurring events.  

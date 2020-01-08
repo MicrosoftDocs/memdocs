@@ -9,7 +9,8 @@ ms.assetid: 859ba1cf-2cc7-499a-ac79-6d4a1095d97f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AppAction Enumeration
 In Configuration Manager, the `AppAction` enumeration defines action types. This enumeration is used by the [IAppManagmentTypes Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementtypes-interface.md).  

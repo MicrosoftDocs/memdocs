@@ -10,7 +10,8 @@ ms.assetid: 828c31d1-3d70-4412-b1a8-c92e7e504d39
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Unattended site recovery for Configuration Manager   

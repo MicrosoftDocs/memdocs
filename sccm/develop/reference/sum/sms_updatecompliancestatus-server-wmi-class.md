@@ -9,7 +9,8 @@ ms.assetid: f7789fb5-fa96-4e88-8737-9adcb0498c4f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_UpdateComplianceStatus Server WMI Class
 The `SMS_UpdateComplianceStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the client computer compliance status for software updates.  

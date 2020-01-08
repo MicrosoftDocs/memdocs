@@ -9,7 +9,8 @@ ms.assetid: d77b13b0-d410-4353-826c-58474e35c0a2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetBusinessHours Method in Class CCM_ClientUXSettings
 The `GetBusinessHours` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets the values for business hours.   

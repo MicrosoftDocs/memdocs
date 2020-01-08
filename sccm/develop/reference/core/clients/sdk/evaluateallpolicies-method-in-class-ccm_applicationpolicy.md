@@ -9,7 +9,8 @@ ms.assetid: 1d2b4471-ed93-42d5-b1d7-bf3990b69f84
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # EvaluateAllPolicies Method in Class CCM_ApplicationPolicy
 The `EvaluateAllPolicies` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that evaluated all policies.   

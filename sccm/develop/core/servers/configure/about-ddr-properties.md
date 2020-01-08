@@ -9,7 +9,8 @@ ms.assetid: ec596c8c-868b-4228-8a3c-5e82d20e6c48
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About DDR Properties
 In Configuration Manager, the architecture for a resource is defined in both the database and the data discovery record (DDR). If the architecture is not defined in the database, the definition is created from the setting in the DDR.  

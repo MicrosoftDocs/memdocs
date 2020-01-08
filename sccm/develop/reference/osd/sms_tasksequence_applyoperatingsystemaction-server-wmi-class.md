@@ -9,7 +9,8 @@ ms.assetid: b6adb15c-6ec0-4558-80b4-b7a831cba086
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequence_ApplyOperatingSystemAction Server WMI Class
 The `SMS_TaskSequence_ApplyOperatingSystemAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that installs a specified operating system image on a target computer.  

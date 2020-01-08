@@ -9,7 +9,8 @@ ms.assetid: b171d930-dd3f-4587-ad24-058448fcfa30
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Apply Custom Client Settings
 In Configuration Manager, you apply custom client settings by creating an instance of a Client Configuration class, and then deploying the custom client settings by creating an instance of the `SMS_ClientSettingsAssignment` class and associating the instance of the Client Configuration class and a target collection.  

@@ -10,7 +10,8 @@ ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Deploy resource access profiles in Configuration Manager

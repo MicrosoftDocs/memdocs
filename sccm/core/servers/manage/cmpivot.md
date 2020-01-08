@@ -10,7 +10,8 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart 
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # CMPivot for real-time data in Configuration Manager

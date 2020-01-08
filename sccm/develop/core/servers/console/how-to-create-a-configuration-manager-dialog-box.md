@@ -9,7 +9,8 @@ ms.assetid: 7f82876f-dfd0-42b5-a2cb-52d39572c8d6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a Configuration Manager Dialog Box
 These procedures show you how to create a modeless dialog box assembly, in Configuration Manager, by using Visual Studio.  

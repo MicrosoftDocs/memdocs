@@ -9,7 +9,8 @@ ms.assetid: 509e390b-cd50-44ae-8ed4-dacf59c512ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_Policy_Operator Client WMI Class
 In Configuration Manager, the `CCM_Policy_Operator` class is a client Windows Management Instrumentation (WMI) class that stores a compound expression that evaluates to either `true` or `false`.  

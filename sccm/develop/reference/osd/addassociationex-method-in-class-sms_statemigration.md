@@ -9,7 +9,8 @@ ms.assetid: 82a3558b-f2ef-4dfa-85e9-ccc720862fa0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddAssociationEx Method in Class SMS_StateMigration
 The `AddAssociationEx` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the computer association between two system resources used in state migration.  

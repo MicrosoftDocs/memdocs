@@ -9,7 +9,8 @@ ms.assetid: a7f16c46-de10-4d93-b67b-409c7e3c2991
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # FormatModuleMessage Method
 The `FormatModuleMessage` method, in Configuration Manager, resolves Configuration Manager status messages in Srvmsgs.dll, Provmsgs.dll, and Climmsgs.dll.  

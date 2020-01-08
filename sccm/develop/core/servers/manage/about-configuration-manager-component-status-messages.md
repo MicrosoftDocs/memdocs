@@ -9,7 +9,8 @@ ms.assetid: fb0d7f0c-a341-4c41-a84f-16c027433e2d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager Component Status Messages
 The message text for both the Configuration Manager components and the raw user-defined messages is contained in message DLLs. The [SMS_StatMsgInsStrings Server WMI Class](../../../../develop/reference/core/servers/manage/sms_statmsginsstrings-server-wmi-class.md) class contains the insertion strings for those messages that use insertion strings. To read the SMS component and raw user-defined messages, you must know the message DLL that contains the message text.  

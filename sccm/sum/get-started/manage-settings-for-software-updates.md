@@ -10,7 +10,8 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.collection: M365-identity-device-management
+
+
 ---
 
 #  <a name="BKMK_ManageSUSettings"></a> Manage settings for software updates  

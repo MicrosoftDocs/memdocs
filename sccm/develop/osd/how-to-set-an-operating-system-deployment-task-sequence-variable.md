@@ -9,7 +9,8 @@ ms.assetid: 47653e95-da5f-40c8-b4a7-11a90ad71452
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Set an Operating System Deployment Task Sequence Variable
 In Configuration Manager, you create an operating system deployment task sequence variable by creating an instance of the [SMS_TaskSequence_SetVariableAction](../../develop/reference/osd/sms_tasksequence_setvariableaction-server-wmi-class.md) class, adding to a task sequence. You can also create task sequence variables while the task sequence is running on the client. For more information, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  

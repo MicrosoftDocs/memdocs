@@ -9,7 +9,8 @@ ms.assetid: f1cc53f3-3478-4bee-a48a-81d53ffdb3b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # RemoveDriverContent Method in Class SMS_DriverPackage
 The `RemoveDriverContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes the specified driver from the driver package.  

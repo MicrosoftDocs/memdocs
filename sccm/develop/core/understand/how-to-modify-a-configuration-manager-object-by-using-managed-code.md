@@ -9,7 +9,8 @@ ms.assetid: ebb14714-c951-479e-9fad-dd2d7a32e739
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Modify a Configuration Manager Object by Using Managed Code
 To modify a Configuration Manager object instance by using the managed SMS Provider, use the object's [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) interface to make modifications. You then call the [IResultObject.Put](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.put.aspx) method to submit the changes.  

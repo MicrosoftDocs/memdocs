@@ -8,7 +8,8 @@ ms.assetid: fd4859e5-3443-47b0-9b07-b41063c8b2aa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager SEDO
 Configuration Manager SEDO (Serialized Editing of Distributed Objects) in the Configuration Manager SDK provides a mechanism for assigning and unassigning locks to globally replicated SDK provider objects in the context of a site, computer and user. SEDO-enabled objects are globally replicated SDK provider objects that require the user to obtain a lock if that user wishes to edit and save that object. When the user obtains that lock, the lock will be assigned to that user, the user’s computer and the site in which the computer resides. While that lock is assigned, no other user or computer will be able to edit that object until the user releases the lock.  

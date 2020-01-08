@@ -9,7 +9,8 @@ ms.assetid: 04ca780f-dd83-43de-b967-bb9f8a05eb3a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # WMI Configuration Manager Provider Fundamentals
 Windows Script Host-based applications and scripts work in Windows Management Instrumentation (WMI) through the WMI Object Model, which defines the programming interface to WMI. A number of WMI object types are used when manipulating Configuration Manager objects. For more information about the WMI Object Model, see [Windows Management Instrumentation](https://go.microsoft.com/fwlink/?LinkId=276770).  

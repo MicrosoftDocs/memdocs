@@ -9,7 +9,8 @@ ms.assetid: 4137849f-7cd8-4c97-bba8-747b59795af3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure Remote Tools Settings
 In Configuration Manager, you set the Remote Tools Client Agent settings by modifying the necessary site control file settings.  

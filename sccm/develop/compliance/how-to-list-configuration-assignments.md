@@ -9,7 +9,8 @@ ms.assetid: cd79bf83-591d-47b1-afdb-a23fbae90e58
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to List Configuration Assignments
 The following code examples show how to list the current configuration baseline assignments and a specific set of properties for each assignment in Configuration Manager.  

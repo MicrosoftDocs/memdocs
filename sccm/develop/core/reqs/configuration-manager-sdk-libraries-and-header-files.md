@@ -9,7 +9,8 @@ ms.assetid: c3dbe6c9-31ba-48bb-b055-18a0a536e3ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager SDK Libraries and Header Files
 In Configuration Manager, when you write unmanaged applications, you might have to include one or more of the following libraries, which are included with the Configuration Manager SDK. Use COM Interoperability to access COM objects from .NET Framework applications.  

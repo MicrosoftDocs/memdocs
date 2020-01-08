@@ -10,7 +10,8 @@ ms.assetid: ef3ab519-9cf7-47fc-8831-d400e0e96df8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Security and privacy for Wi-Fi and VPN profiles in Configuration Manager
 

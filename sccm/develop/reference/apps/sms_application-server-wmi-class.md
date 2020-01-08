@@ -9,7 +9,8 @@ ms.assetid: acf26163-06c6-4108-8916-f8c37be34cea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_Application Server WMI Class
 The `SMS_Application` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application.  

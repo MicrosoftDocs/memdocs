@@ -9,7 +9,8 @@ ms.assetid: d00d2f8e-5c03-4f71-8c0f-79445be73374
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_AISoftwareList Server WMI Class
 The `SMS_AISoftwareList` Windows Management Instrumentation (WMI) class, in Configuration Manager, contains all the known software titles in the Asset Intelligence catalog.  

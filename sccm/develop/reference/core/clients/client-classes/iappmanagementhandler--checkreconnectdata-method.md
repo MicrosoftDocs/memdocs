@@ -9,7 +9,8 @@ ms.assetid: ca2e0cca-4858-437e-bfb1-45e97f3733f7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # IAppManagementHandler::CheckReconnectData Method
 The `IAppManagementHandler::CheckReconnectData` method, in Configuration Manager, checks whether the reconnection data is valid.  

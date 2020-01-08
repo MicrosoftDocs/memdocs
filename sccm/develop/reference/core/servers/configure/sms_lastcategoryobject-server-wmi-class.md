@@ -9,7 +9,8 @@ ms.assetid: 7d777ba2-006e-4b23-9f14-cfdd05ba16d5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_LastCategoryObject Server WMI Class
 The `SMS_LastCategoryObject` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the object that has this assignment as the last category assignment.  

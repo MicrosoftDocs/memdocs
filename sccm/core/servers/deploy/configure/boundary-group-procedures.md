@@ -10,7 +10,8 @@ ms.assetid: a1fe22d0-4695-4de0-8bf0-e3475b03cf0e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to configure boundary groups for Configuration Manager
