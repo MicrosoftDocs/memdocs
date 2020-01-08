@@ -9,7 +9,8 @@ ms.assetid: 9ef702dc-1d13-4c4a-99d8-a5503628fde1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Set the PXE Service Point Response to All Network Interfaces
 In Configuration Manager, you set the operating system deployment PXE service point response to network interfaces by setting the `BindPolicy` embedded property.  

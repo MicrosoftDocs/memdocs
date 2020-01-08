@@ -9,7 +9,8 @@ ms.assetid: 229fd29c-8651-4920-8482-194d52469e05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddSiteSystem Method in Class SMS_DefaultBoundaryGroup
  The `AddSiteSystem` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds one or more site system servers to a default boundary group.  

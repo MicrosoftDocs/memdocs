@@ -9,7 +9,8 @@ ms.assetid: bc7ee810-933e-403f-af2d-da75f4c17c1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Enable and Disable Remote Tools
 You enable or disable the Remote Tools Client Agent, in Configuration Manager, by modifying the site control file settings.  

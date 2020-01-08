@@ -10,7 +10,8 @@ ms.assetid: a4eb09c8-e570-4369-9adb-ded9c8ad3400
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Technical Reference for Application Deployment in Configuration Manager

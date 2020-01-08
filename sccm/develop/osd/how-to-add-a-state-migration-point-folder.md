@@ -9,7 +9,8 @@ ms.assetid: 95b399e5-47fd-4519-a30e-c220ebdb5c95
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Add a State Migration Point Folder
 In Configuration Manager, you add an operating system deployment state migration point folder by adding the folder description to the `Directories` embedded property list.  

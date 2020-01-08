@@ -9,7 +9,8 @@ ms.assetid: 564b89ee-b9bb-459d-a8cc-1babb6220757
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetProperty Method in Class CCM_Application
 The `GetProperty` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets an application property value.   

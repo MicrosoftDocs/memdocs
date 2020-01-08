@@ -9,7 +9,8 @@ ms.assetid: d5234925-8951-45ab-89d4-e5b9f582e800
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_Windows10Dashboard Server WMI Class
 For internal use only.  

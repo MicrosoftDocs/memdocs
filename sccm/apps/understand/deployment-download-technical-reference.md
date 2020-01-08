@@ -10,7 +10,8 @@ ms.assetid: 41c29a07-9bf6-4ec4-b3f2-1c05e001eff7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Application Download in Configuration Manager

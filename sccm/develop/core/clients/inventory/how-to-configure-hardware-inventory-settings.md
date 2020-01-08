@@ -9,7 +9,8 @@ ms.assetid: 3ecabdc0-04e5-42ff-9578-97f9874698ad
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure Hardware Inventory Settings
 You set the Hardware Inventory Client Agent settings, in Configuration Manager, by modifying the necessary site control file settings.  

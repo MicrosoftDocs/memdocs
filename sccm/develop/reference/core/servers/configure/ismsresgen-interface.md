@@ -9,7 +9,8 @@ ms.assetid: 56a4b6d7-c9d1-4919-9954-5bc28618d862
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ISMSResGen Interface
 The `ISMSResGen` automation interface, in Configuration Manager, enables the creation of Data Discovery Records (DDR). This interface inherits from `IDispatch`.  

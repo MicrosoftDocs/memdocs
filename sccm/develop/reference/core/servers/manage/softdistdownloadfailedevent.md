@@ -9,7 +9,8 @@ ms.assetid: 8ab548ad-ebec-48cc-b0dc-5541b17044f9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SoftDistDownloadFailedEvent
 In Configuration Manager, the `SoftDistDownloadFailedEvent` message is raised when a download for a package fails. It appears in **Package Status** in the Configuration Manager console.  

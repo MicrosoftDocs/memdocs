@@ -9,7 +9,8 @@ ms.assetid: 6719d008-cc4d-43b2-ad11-08cb707a0631
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # UpdateStats Method in Class SMS_ApplicationLatest
 The `UpdateStats` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the statistics for this application.  

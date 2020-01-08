@@ -9,7 +9,8 @@ ms.assetid: 8227372d-303d-4c6e-bee5-da20bd443437
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequence_PrepareOSAction Server WMI Class
 The `SMS_TaskSequence_PrepareOSAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that specifies the Sysprep options to use when capturing Windows settings from the reference computer.  

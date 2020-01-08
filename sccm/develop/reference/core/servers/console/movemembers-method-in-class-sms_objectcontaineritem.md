@@ -9,7 +9,8 @@ ms.assetid: 55a605ba-93f2-4b63-b34e-a36d41659665
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # MoveMembers Method in Class SMS_ObjectContainerItem
 The `MoveMembers` Windows Management Instrumentation (WMI) class method, in Configuration Manager, moves folder items to another folder.  

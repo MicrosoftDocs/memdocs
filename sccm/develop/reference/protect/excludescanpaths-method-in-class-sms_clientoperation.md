@@ -9,7 +9,8 @@ ms.assetid: e45972d2-c41a-4532-ad84-b09c9aa17945
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ExcludeScanPaths Method in Class SMS_ClientOperation
 The `ExcludeScanPaths` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that excludes scan paths from all members in specified collection.   

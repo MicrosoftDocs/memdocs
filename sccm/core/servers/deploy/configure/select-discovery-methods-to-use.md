@@ -10,7 +10,8 @@ ms.assetid: 127ce713-d085-430f-ac7b-2701637fe126
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Select discovery methods to use for Configuration Manager
 

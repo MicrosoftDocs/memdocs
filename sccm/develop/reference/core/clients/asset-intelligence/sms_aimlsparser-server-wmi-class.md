@@ -9,7 +9,8 @@ ms.assetid: e16df2cd-86c2-450c-998f-a2eaa7325ffb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_AIMLSParser Server WMI Class
 The `SMS_AIMLSParser` Windows Management Instrumentation (WMI) class in Configuration Manager imports license data.  

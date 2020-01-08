@@ -9,7 +9,8 @@ ms.assetid: b2c6fb90-fe4d-472b-b200-133e8d336d31
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddChangeNotification Method in Class SMS_BootImagePackage
 The `AddChangeNotification` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a boot image package change notification.  

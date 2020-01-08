@@ -10,7 +10,8 @@ ms.assetid: 321b19b2-a093-4b8f-995f-41f74b886eb5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Create Wi-Fi profiles
 

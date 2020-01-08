@@ -9,7 +9,8 @@ ms.assetid: 5702affd-7815-4836-aa74-2b45212899a9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Set Software Updates Branding Information
 You set the Software Updates client branding information, in Configuration Manager, by modifying the necessary site control file settings.  

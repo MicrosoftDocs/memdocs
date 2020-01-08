@@ -9,7 +9,8 @@ ms.assetid: ab2245c3-f676-47cc-82ea-f1787abf9b79
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ProcessInBox Method in Class SMS_PDF_Package
 The `ProcessInBox` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports package definition files from the package definition file inbox.  

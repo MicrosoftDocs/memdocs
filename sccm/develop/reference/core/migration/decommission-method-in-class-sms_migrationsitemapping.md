@@ -9,7 +9,8 @@ ms.assetid: 8e73c1aa-591b-49f1-8619-0fa2ea8aabc6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Decommission Method in Class SMS_MigrationSiteMapping
 The `Decommission` Windows Management Instrumentation (WMI) class method, in Configuration Manager, decommissions site mapping.  

@@ -9,7 +9,8 @@ ms.assetid: bab2b232-fde6-4127-9e13-5f496e385447
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SummarizationInterval Server WMI Class
 The `SMS_SummarizationInterval` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the months that have been summarized by a monthly usage summary.  

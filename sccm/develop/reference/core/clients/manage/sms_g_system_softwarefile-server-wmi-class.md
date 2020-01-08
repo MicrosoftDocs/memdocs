@@ -9,7 +9,8 @@ ms.assetid: 2b64ccf4-9ab2-498a-a4be-dbcecadb1886
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_G_System_SoftwareFile Server WMI Class
 The `SMS_G_System_SoftwareFile` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains information about all software files that were inventoried on the client computer.  

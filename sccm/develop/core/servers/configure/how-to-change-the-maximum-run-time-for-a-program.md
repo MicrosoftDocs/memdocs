@@ -9,7 +9,8 @@ ms.assetid: af806aee-a8da-499b-9d46-86d888c6ddc4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Change the Maximum Run Time for a Program
 The following example shows how to modify a program, in Configuration Manager, by using the `SMS_Package` and `SMS_Program` classes and properties.  

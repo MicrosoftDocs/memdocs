@@ -9,7 +9,8 @@ ms.assetid: dd3b2d67-edcb-44fb-9efc-72afef3896c9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a State Migration Point Role
 You create the state migration point role, in Configuration Manager, by creating an instance of [SMS_SCI_SysResUse Server WMI Class](../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md) and providing the property values in the following table.  

@@ -10,7 +10,8 @@ ms.assetid: ccc9f652-2953-4c38-8a90-c799484105ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Prestart commands for task sequence media in Configuration Manager
 

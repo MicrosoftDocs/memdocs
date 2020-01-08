@@ -9,7 +9,8 @@ ms.assetid: 6890fa15-c9c0-4c35-aee0-dc5d373e63e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SUMDeploymentAssetDetails Server WMI Class
 The `SMS_SUMDeploymentAssetDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents per-asset details for SUM deployments in-console monitoring.  

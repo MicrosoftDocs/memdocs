@@ -10,7 +10,8 @@ ms.assetid: 0e45290e-f8f7-4335-801e-570225d12c2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to configure hardware inventory in Configuration Manager
 

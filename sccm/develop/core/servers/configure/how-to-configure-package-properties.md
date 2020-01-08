@@ -9,7 +9,8 @@ ms.assetid: 60d90c19-2810-4f10-860f-aa3087f35b03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure Package Properties
 The following example shows how to configure the properties of an existing package, in Configuration Manager, by using the `SMS_Package` class.  

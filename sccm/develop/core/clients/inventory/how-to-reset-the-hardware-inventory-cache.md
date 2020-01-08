@@ -9,7 +9,8 @@ ms.assetid: 5dbda4e2-ce2b-4fa4-9573-aad2087d4477
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Reset the Hardware Inventory Cache
 In Configuration Manager, you reset the hardware inventory cache by connecting to the inventory agent namespace and deleting the inventory action status instance for hardware inventory.  

@@ -10,7 +10,8 @@ ms.assetid: 4b72922a-d11e-4aef-b309-19f5f0716f32
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # DP Job Queue Manager

@@ -9,7 +9,8 @@ ms.assetid: 182335e6-3505-49a9-84a1-e16221a42ea3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Add a Property Page to an Existing Configuration Manager Property Sheet
 To add a property page to an existing property sheet, in Configuration Manager, you add the property page XML to the property sheet's XML file. For existing Configuration Manager property sheets, you copy the existing property XML file to the XmlStorage\Extensions\Forms folder from XmlStorage\Forms. When the Configuration Manager console loads, it will use the XML it finds in the XmlStorage\Extensions\Forms folder in preference to existing forms in XmlStorage\Forms.  

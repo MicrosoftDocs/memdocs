@@ -9,7 +9,8 @@ ms.assetid: f9dd9d35-1162-46c2-b198-5278e706012f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_InstalledSoftware Client WMI Class
 The `SMS_InstalledSoftware` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that merges installed software information from multiple sources to provide categorization and Microsoft Licensing information.  

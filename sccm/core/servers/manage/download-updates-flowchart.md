@@ -10,7 +10,8 @@ ms.assetid: 5d50a8d7-90d2-42da-b9fd-2edc190fa22e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Flowchart - Download updates for Configuration Manager
 

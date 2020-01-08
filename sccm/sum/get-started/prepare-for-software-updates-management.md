@@ -10,7 +10,8 @@ ms.assetid: 01907900-e28b-4cd7-9479-42906416707b
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Prepare for software updates management

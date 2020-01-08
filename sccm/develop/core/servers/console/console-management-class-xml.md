@@ -9,7 +9,8 @@ ms.assetid: 32b5eea0-903b-4b54-92e8-d540973c6321
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Console Management Class XML
 The management classes XML for the Configuration Manager console are located %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\ConsoleRoot\ManagementClassDescriptions.xml file. Your extension management class XML files, however, must be placed in the AdminConsole\XmlStorage\Extensions\ManagementClasses\ folder.  

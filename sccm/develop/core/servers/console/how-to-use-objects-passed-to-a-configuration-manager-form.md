@@ -9,7 +9,8 @@ ms.assetid: 673544cd-2f4c-4425-94a4-0269bfb7c329
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Use Objects Passed to a Configuration Manager Form
 In Configuration Manager, you use the [SmsPageControl.PropertyManager](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.smspagecontrol.propertymanager.aspx) object to access objects that are selected in the Configuration Manager console.  

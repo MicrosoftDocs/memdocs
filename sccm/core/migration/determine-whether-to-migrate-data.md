@@ -10,7 +10,8 @@ ms.assetid: 99222dc8-0e1e-4513-8302-7a1acf671e9b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Determine whether to migrate data to Configuration Manager current branch
 

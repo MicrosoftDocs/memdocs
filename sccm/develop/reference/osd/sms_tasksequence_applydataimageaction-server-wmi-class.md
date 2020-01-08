@@ -9,7 +9,8 @@ ms.assetid: e790f092-2a4d-44ab-89a2-3ffb9102f7fb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequence_ApplyDataImageAction Server WMI Class
 The `SMS_TaskSequence_ApplyDataImageAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that applies an existing data image to a target computer.  

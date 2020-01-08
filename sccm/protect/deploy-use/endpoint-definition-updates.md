@@ -10,7 +10,8 @@ ms.assetid: 537dd2a7-4e44-4877-b8dd-5e1499407f8d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Configure definition updates for Endpoint Protection  

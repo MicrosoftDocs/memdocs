@@ -10,7 +10,8 @@ ms.assetid: 4db1e15f-e832-4cf9-be33-d3971e635a55
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Fundamentals of sites and hierarchies for Configuration Manager
 

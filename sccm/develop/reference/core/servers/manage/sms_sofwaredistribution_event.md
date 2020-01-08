@@ -9,7 +9,8 @@ ms.assetid: e382ccd4-fd11-4036-ad2a-a40397b86239
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SofwareDistribution_Event
 The `SMS_SofwareDistribution_Event` class is the base class for all software-distribution advertisement status-message classes, in Configuration Manager. All advertisement status messages have the insertion strings of this class. Also, each derived class must set the properties of its base `SMS_SofwareDistribution_Event` class.  

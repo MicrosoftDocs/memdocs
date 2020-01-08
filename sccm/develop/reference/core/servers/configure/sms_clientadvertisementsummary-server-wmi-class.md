@@ -9,7 +9,8 @@ ms.assetid: bc249ca7-68d9-4e6a-965b-9428b68f9646
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ClientAdvertisementSummary Server WMI Class
 The `SMS_ClientAdvertisementSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a summary for an advertisement.  

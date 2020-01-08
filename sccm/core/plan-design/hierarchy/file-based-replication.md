@@ -10,7 +10,8 @@ ms.assetid: 65fcc1a8-214e-4dd9-8093-de4cd4a00442
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # File-based replication

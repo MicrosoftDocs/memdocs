@@ -9,7 +9,8 @@ ms.assetid: 15511027-14d3-48a9-b3f7-5a2e2fafd298
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SIIB_SysResRole Server WMI Class
 The `SMS_SIIB_SysResRole` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a system role associated with a Configuration Manager console property page resource.  

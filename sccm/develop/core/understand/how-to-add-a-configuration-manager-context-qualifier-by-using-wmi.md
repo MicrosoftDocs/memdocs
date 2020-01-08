@@ -9,7 +9,8 @@ ms.assetid: 7e6d8d4e-2454-40a3-9df7-649681f47dfe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Add a Configuration Manager Context Qualifier by Using WMI
 In Configuration Manager, you add context qualifiers to a connection ([SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)) or object ([SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)) by creating a [SWbemNamedValueSet](https://msdn.microsoft.com/library/aa393732.aspx) value set to hold the context qualifiers. You then provide the [SWbemNamedValueSet](https://msdn.microsoft.com/library/aa393732.aspx) value set as a parameter to connection and object methods.  

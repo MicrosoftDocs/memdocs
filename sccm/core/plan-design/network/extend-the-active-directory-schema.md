@@ -10,7 +10,8 @@ ms.assetid: bc15ee7e-4d0a-4463-ae2c-f72d8d45d65d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Prepare Active Directory for site publishing
 

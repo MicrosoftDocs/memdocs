@@ -10,7 +10,8 @@ ms.assetid: ff920c84-d5c8-458c-b67f-bc7219b05690
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # Planning for reporting in Configuration Manager
 

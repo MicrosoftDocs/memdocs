@@ -9,7 +9,8 @@ ms.assetid: 19a052b3-ace5-439a-9480-d54e3e030829
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure an Advertisement to Override a Maintenance Window
 The following example shows how to configure an advertisement to override service windows using the `SMS_Advertisement` class and the `AdvertFlags` class property in Configuration Manager.  

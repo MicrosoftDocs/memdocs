@@ -10,7 +10,8 @@ ms.assetid: 28b240a4-d358-40ce-8006-c697b1622ece
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # Simulate application deployments with Configuration Manager
 

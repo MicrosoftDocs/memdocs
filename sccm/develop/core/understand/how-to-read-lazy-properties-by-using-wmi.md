@@ -9,7 +9,8 @@ ms.assetid: 1fa2d52e-b5e6-4362-81cf-e175ff45435a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Read Lazy Properties by Using WMI
 To read a lazy property from a Configuration Manager object returned in a query, you get the object instance, which in turn retrieves any lazy object properties from the SMS Provider.  

@@ -11,7 +11,8 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 
-ms.collection: M365-identity-device-management
+
+
 ---
 # Task sequence steps to manage BIOS to UEFI conversion
 Windows 10 provides many new security features that require UEFI-enabled devices. You might have modern Windows PCs that support UEFI, but are using legacy BIOS. Converting a device to UEFI has required you to go to each PC, repartition the hard disk, and reconfigure the firmware. By using task sequences in Configuration Manager, you can prepare a hard drive for BIOS to UEFI conversion, convert from BIOS to UEFI as part of the in-place upgrade process, and collect UEFI information as part of hardware inventory.

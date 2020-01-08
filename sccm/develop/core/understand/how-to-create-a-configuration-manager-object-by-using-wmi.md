@@ -9,7 +9,8 @@ ms.assetid: c52cf79a-45d7-45c8-b8f2-5610d06b38e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a Configuration Manager Object by Using WMI
 You create a Configuration Manager object, in Configuration Manager, by calling the [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) object [SpawnInstance_](https://msdn.microsoft.com/library/aa393789.aspx) method.  

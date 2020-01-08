@@ -10,7 +10,8 @@ ms.assetid: b90de2d9-494e-43ad-b269-c8ed589f37d3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Add site system roles for Configuration Manager
 

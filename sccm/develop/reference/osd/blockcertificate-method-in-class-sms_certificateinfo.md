@@ -9,7 +9,8 @@ ms.assetid: f477e086-3a1b-46fb-b957-1e63e9d6602b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # BlockCertificate Method in Class SMS_CertificateInfo
 The `BlockCertificate` Windows Management Instrumentation (WMI) class method, in Configuration Manager, blocks or unblocks the specified certificate.  

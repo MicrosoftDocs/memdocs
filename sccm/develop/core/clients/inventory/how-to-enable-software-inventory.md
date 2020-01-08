@@ -9,7 +9,8 @@ ms.assetid: 6e1dad3e-34a0-4cb1-93e9-80cbb5150a8f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Enable Software Inventory
 You enable or disable the Software Inventory Client Agent, in Configuration Manager, by modifying the site control file settings.  

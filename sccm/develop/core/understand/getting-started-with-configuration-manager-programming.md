@@ -8,7 +8,8 @@ ms.assetid: 7dc6cb76-469e-4e4f-b79b-bb391fd4e758
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Get started with Configuration Manager programming
 To get started with programming for Configuration Manager, it’s beneficial to have a basic functional and architectural understanding of Configuration Manager. In addition, there are a number of key tools and resources that critical to validating and troubleshooting solutions. Below are tips and resources for someone new to programming for Configuration Manager.  

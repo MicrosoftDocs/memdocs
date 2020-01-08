@@ -9,7 +9,8 @@ ms.assetid: 972bf59c-9d64-49ff-bd5d-77c7fed7eb36
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_OSDeploymentKitWinPEOptionalComponent Server WMI Class
 The `SMS_OSDeploymentKitWinPEOptionalComponent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that Maps Assessment and Deployment Kit (ADK) versions to supported optional components.  

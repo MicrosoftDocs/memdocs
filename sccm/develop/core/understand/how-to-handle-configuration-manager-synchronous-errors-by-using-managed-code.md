@@ -9,7 +9,8 @@ ms.assetid: 70b565ae-76c1-472c-8988-be24dd3e3644
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Handle Configuration Manager Synchronous Errors by Using Managed Code
 To handle a Configuration Manager error that is raised in a synchronous query, you catch the [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx) exception. Because this exception is also caught by SMS_Exception], you can catch it and the [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) exception in the same catch block.  

@@ -10,7 +10,8 @@ ms.assetid: bec00fb4-1ac0-4e49-b330-0871b3722459
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 --- 
 
 # Configuration Manager cmdlet library privacy statement

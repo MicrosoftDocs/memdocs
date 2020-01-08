@@ -9,7 +9,8 @@ ms.assetid: ca7131e5-528e-4a93-9cb6-b02229252231
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddSource Method in Class SMS_UserMachineRelationship
 The `AddSource` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a source for the relationship between the user and the device.  

@@ -10,7 +10,8 @@ ms.assetid: b1fdaee2-2816-4447-94cd-609f6948f215
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Software metering in Configuration Manager

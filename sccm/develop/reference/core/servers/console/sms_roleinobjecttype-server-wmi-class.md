@@ -9,7 +9,8 @@ ms.assetid: 849fb64d-23d4-4642-b5bc-92168a35b2c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_RoleInObjectType Server WMI Class
 The `SMS_RoleInObjectType` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that maps a role and its associated object types.  

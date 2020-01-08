@@ -9,7 +9,8 @@ ms.assetid: c4cfe110-e048-4393-92e3-cedc663fab0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SetEnforcement Method in Class SMS_SoftwareUpdate
 The `SetEnforcement` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets policy enforcement for the software update.  

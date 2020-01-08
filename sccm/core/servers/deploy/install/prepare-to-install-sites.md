@@ -10,7 +10,8 @@ ms.assetid: 9089e1b5-cba4-42bd-a2de-126ef882a3af
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Prepare to install Configuration Manager sites
 

@@ -9,7 +9,8 @@ ms.assetid: e9582b73-ef71-4cf6-963b-31ecf8dced26
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_IntuneAccountInfo Server WMI Class
 The `SMS_IntuneAccountInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Microsoft Intune account information.  
