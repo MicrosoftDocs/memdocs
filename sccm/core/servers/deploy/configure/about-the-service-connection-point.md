@@ -23,7 +23,15 @@ The service connection point is a site system role that provides several importa
 
 - Upload usage data from your Configuration Manager infrastructure. You can control the level or amount of detail that you upload. For more information, see [Usage data levels and settings](/configmgr/core/servers/deploy/install/setup-reference#bkmk_usage).
 
-- Each hierarchy supports a single instance of this role. It can only be installed at the top-tier site of your hierarchy, which is a central administration site (CAS) or stand-alone primary site. If you expand a stand-alone primary site to a larger hierarchy, uninstall this role from the primary site, and then install it at the CAS.
+- Deploy a [cloud management gateway](/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) in Azure
+
+- Synchronize apps from the [Microsoft Store for Business and Education](/configmgr/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+
+- Discover users and groups in [Azure Active Directory (Azure AD)](/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc)
+
+- Use [Desktop Analytics](/configmgr/desktop-analytics/overview) to gain insights on Windows 10 update and app readiness
+
+Each hierarchy supports a single instance of this role. It can only be installed at the top-tier site of your hierarchy, which is a central administration site (CAS) or stand-alone primary site. If you expand a stand-alone primary site to a larger hierarchy, uninstall this role from the primary site, and then install it at the CAS.
 
 ## <a name="bkmk_modes"></a> Modes of operation
 
