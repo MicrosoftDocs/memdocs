@@ -1,8 +1,8 @@
 ---
-title: "Prerequisite Checker"
-titleSuffix: "Configuration Manager"
-description: "Learn how to use Prerequisite Checker to identify and fix problems that might block a site or site system role installation."
-ms.date: 03/1/2017
+title: Prerequisite checker
+titleSuffix: Configuration Manager
+description: Learn how to use prerequisite checker to identify and fix problems that might block a site or site system role installation.
+ms.date: 01/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -45,11 +45,12 @@ For more information about the checks that Prerequisite Checker performs, see [L
 
 2.  Copy the following files to the destination folder on the other computer:  
 
-    -   Prereqchk.exe  
-    -   Prereqcore.dll  
-    -   Basesql.dll  
-    -   Basesvr.dll  
-    -   Baseutil.dll  
+    - prereqchk.exe
+    - prereqcore.dll
+    - prereqchkres.dll
+    - basesql.dll
+    - basesvr.dll
+    - baseutil.dll
 
 ##  Run Prerequisite Checker with default checks  
 
