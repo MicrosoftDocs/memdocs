@@ -9,7 +9,8 @@ ms.assetid: b4026ec4-a938-4866-a3d0-e001582a7504
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_Boundary Server WMI Class
 The `SMS_Boundary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a boundary defined within the hierarchy.  

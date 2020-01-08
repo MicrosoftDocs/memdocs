@@ -10,7 +10,8 @@ ms.assetid: 408190da-bea6-4122-9dd6-f90155040e88
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # **Monitor Mobile Threat Defense compliance**

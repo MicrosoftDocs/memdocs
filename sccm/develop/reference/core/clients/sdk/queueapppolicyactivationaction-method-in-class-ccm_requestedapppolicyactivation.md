@@ -9,7 +9,8 @@ ms.assetid: 5c07606b-0f9f-4f1a-ae0f-2dfc2eaaab43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # QueueAppPolicyActivationAction Method in Class CCM_RequestedAppPolicyActivation
 The `QueueAppPolicyActivationAction` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that queues an application policy activation action.   

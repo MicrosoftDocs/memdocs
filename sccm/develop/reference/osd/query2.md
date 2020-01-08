@@ -9,7 +9,8 @@ ms.assetid: 25845005-f0e3-44b3-a3d8-acb08bca4c40
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Query2
 `Query2` specifies a query, in Configuration Manager, that is used to identify the platform that a client computer is running.  

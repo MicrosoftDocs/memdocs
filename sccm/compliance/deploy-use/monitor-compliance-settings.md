@@ -10,7 +10,8 @@ ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # Monitor compliance settings in Configuration Manager
 

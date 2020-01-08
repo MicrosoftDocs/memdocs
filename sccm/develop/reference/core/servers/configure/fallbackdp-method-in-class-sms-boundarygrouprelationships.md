@@ -9,7 +9,8 @@ ms.assetid: 8debe455-119d-4ef0-a786-f4e76bd61273
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # FallbackDP Method in Class SMS_BoundaryGroupRelationships
  The `FallbackDP` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the fallback time, in minutes, for a distribution point (DP). The default value is 120.

@@ -9,7 +9,8 @@ ms.assetid: 4c3288fd-a973-4300-b9c5-475867c26fc5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CreateCCRs Method in Class SMS_Collection
 The `CreateCCRs` WMI class method, in Configuration Manager, generates client configuration requests (CCRs) for the computers in the collection.  

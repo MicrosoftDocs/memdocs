@@ -5,7 +5,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: include
 ms.date: 10/17/2019
-ms.collection: M365-identity-device-management
+
+
 ---
 
 ### <a name="ki_osd"></a> Task sequences aren't available to PXE or media

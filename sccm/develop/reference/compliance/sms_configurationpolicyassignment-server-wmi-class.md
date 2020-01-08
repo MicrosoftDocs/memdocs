@@ -9,7 +9,8 @@ ms.assetid: eb3f5212-bc83-403a-b684-aa3339364729
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ConfigurationPolicyAssignment Server WMI Class
 The `SMS_ConfigurationPolicyAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the deployment of an instance of `SMS_ConfigurationPolicy`. It is similar to `SMS_BaselineAssignment`, except that `SMS_ConfigurationPolicy` is deployed directly, instead of being collected into a baseline first.  

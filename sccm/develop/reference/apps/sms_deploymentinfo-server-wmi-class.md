@@ -9,7 +9,8 @@ ms.assetid: 0fd6b2bb-50f6-440e-a603-937d0b37dd97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_DeploymentInfo Server WMI Class
 The `SMS_DeploymentInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents information for all types of deployment.  

@@ -10,7 +10,8 @@ ms.assetid: 09929057-ecf2-4d49-aee0-709916932b14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Troubleshoot the Microsoft Store for Business and Education integration with Configuration Manager

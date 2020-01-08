@@ -10,7 +10,8 @@ ms.assetid: d39c201f-d364-4e7b-bde4-faa76d747f33
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Install the Configuration Manager console

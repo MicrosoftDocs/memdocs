@@ -9,7 +9,8 @@ ms.assetid: 90490d60-3bd4-44bf-a536-a7947d66ed32
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetNumResults Method in Class SMS_Collection
 The `GetNumResults` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets a count of all members in a collection, not including subcollections.  

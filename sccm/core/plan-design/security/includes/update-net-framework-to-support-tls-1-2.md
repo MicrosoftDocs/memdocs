@@ -4,7 +4,8 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 12/13/2019
-ms.collection: M365-identity-device-management
+
+
 ---
 
 <!-- ## Update and configure the .NET Framework to support TLS 1.2 Note: the heading in in the 2 articles (enable-tls-1-2-client & enable-tls-1-2-server) to better facilitate linking. -->

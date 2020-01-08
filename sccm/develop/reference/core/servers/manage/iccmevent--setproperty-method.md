@@ -9,7 +9,8 @@ ms.assetid: 44f3a746-4a3c-489d-bbfb-78cf0ed31fed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ICCMEvent::SetProperty Method
 In Configuration Manager, the `ICcmEvent::SetProperty` method sets an event property.  

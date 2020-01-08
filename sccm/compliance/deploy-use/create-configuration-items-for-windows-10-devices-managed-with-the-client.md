@@ -10,7 +10,8 @@ ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create configuration items for Windows 10 devices

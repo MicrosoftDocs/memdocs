@@ -10,7 +10,8 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Change your MDM authority to Intune standalone

@@ -9,7 +9,8 @@ ms.assetid: e5448fd5-9eff-49e3-88d0-2b3299561a37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # RefreshDPGroup Method in Class SMS_DistributionPointGroup
 The `RefreshDPGroup` Windows Management Instrumentation (WMI) class method, in Configuration Manager, refreshes all of the member distribution points with the latest version of the targeted packages.  

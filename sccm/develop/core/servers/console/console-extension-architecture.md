@@ -9,7 +9,8 @@ ms.assetid: 4248fae0-66fa-44a9-b5bb-0fa23426194a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Console Extension Architecture
 The Configuration Manager console architecture is built on the following four distinct layers.  

@@ -10,7 +10,8 @@ ms.assetid: 594eb284-0d93-4c5d-9ae6-f0f71203682a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to view diagnostics and usage data for Configuration Manager

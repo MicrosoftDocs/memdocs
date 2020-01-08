@@ -9,7 +9,8 @@ ms.assetid: 56d60eea-d506-4611-a489-0e719961d17a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure the Default Compliance Evaluation Schedule
 In Configuration Manager, the site control file maintains configuration for the configuration of the site. These code samples query for the specific site control file item Configuration Management Agent, and change the EvaluationSchedule value to set the client agent evaluation schedule.  

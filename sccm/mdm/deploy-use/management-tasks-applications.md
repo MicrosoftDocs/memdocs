@@ -10,7 +10,8 @@ ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Manage Applications in Configuration Manager
 

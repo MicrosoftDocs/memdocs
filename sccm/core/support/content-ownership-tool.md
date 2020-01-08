@@ -10,7 +10,8 @@ ms.assetid: 753d2681-ea72-4f47-94d1-ac10188d9d5b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Content Ownership Tool

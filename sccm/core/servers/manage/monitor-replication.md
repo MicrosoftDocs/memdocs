@@ -10,7 +10,8 @@ ms.assetid: 69550b35-bcdb-4b47-bbec-b3c8bc92bb7b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Monitor database replication

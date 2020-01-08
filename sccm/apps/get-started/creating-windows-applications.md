@@ -10,7 +10,8 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create Windows applications in Configuration Manager

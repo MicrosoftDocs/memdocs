@@ -9,7 +9,8 @@ ms.assetid: c6fcffc5-4695-4de5-9ec3-90595239049b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Enable or Disable the Software Distribution Advertised Programs Client Agent
 In Configuration Manager, the site control file maintains configuration for the site. This topic shows how to enable or disable the Software Distribution Advertised Programs Client Agent setting in the site control file. For more information about reading from and writing to the site control file, see [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file).  

@@ -10,7 +10,8 @@ ms.assetid: c72612d4-0b3d-4e71-b3c9-35782701b78a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to create Wi-Fi profiles for mobile devices in Configuration Manager
 

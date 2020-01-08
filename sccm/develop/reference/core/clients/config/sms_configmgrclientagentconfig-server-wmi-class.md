@@ -9,7 +9,8 @@ ms.assetid: 8f42cb66-ac17-444c-a93c-bd8af273437d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ConfigMgrClientAgentConfig Server WMI Class
 The `SMS_ConfigMgrClientAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies the general settings for communication between server and client.  

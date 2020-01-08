@@ -9,7 +9,8 @@ ms.assetid: 0ec16fc6-0775-4c7b-92db-a28f079c3404
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Compliance Settings (DCM) Setup and Configuration
 To use desired configuration management on your Configuration Manager site, the following needs to be in place:  

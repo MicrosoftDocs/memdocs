@@ -10,7 +10,8 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Microsoft Defender Advanced Threat Protection
 

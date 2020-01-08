@@ -10,7 +10,8 @@ ms.assetid: 2bdaa8a7-6a64-4b0e-b617-309dcd912c45
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Enroll user-owned devices for hybrid deployments with Configuration Manager
 

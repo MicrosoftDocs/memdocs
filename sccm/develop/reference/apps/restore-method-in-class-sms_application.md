@@ -9,7 +9,8 @@ ms.assetid: c25cbbc4-8dd7-46a5-bf53-61ffc53a23cb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Restore Method in Class SMS_Application
 The `Restore` Windows Management Instrumentation (WMI) class method, in Configuration Manager, restores this application and related deployment type as a current active application.  

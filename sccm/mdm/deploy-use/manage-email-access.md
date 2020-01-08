@@ -10,7 +10,8 @@ ms.assetid: fa648e73-5fb8-4818-ab57-7466ffaf888e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Manage email access in Configuration Manager

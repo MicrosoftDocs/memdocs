@@ -9,7 +9,8 @@ ms.assetid: 753d2469-bb46-4bcd-bb3b-7078f4739531
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequencePackage Server WMI Class
 The `SMS_TaskSequencePackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence package that defines the steps to run for the task sequence.  

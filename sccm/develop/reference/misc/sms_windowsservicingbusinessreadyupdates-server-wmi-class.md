@@ -9,7 +9,8 @@ ms.assetid: 94ec78e1-bef9-4a49-b6e8-0b615589de5b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_WindowsServicingBusinessReadyUpdates Server WMI Class
 For internal use only.  

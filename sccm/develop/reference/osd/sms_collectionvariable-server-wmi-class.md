@@ -9,7 +9,8 @@ ms.assetid: 8950faec-bcc1-48a5-93f0-93f7a3d363fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CollectionVariable Server WMI Class
 The `SMS_CollectionVariable` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a collection variable that is accessible at the time of task execution.  

@@ -9,7 +9,8 @@ ms.assetid: 7b950db4-135b-4107-b949-2d9615de4518
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetAvailableLanguages Method in Class SMS_Subscription
 The `GetAvailableLanguages` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the available languages.  

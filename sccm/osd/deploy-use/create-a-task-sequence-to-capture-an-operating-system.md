@@ -10,7 +10,8 @@ ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create a task sequence to capture an OS

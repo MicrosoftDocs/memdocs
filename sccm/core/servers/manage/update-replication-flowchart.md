@@ -10,7 +10,8 @@ ms.assetid: d38ea401-4695-4b4c-bd8d-95bdc2c67f5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Flowchart - Update replication for Configuration Manager
 

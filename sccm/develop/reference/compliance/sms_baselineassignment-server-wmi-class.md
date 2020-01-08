@@ -9,7 +9,8 @@ ms.assetid: cf049dab-e45a-419e-bd26-1b92bbc77094
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_BaselineAssignment Server WMI Class
 The `SMS_BaselineAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains information about how a baseline is targeted.  

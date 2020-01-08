@@ -8,7 +8,8 @@ ms.assetid: e5163571-37f5-4dfd-aac6-5bba3ea4c9ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS Provider Field Length Restrictions in Configuration Manager
 The SMS Provider, in Configuration Manager, places restrictions on the width of character fields for schema classes. If you write a program that writes to these classes, you should take these field widths into account. Where they are used in the user interface, the Configuration Manager online Help provides the maximum character widths. You can also determine the width by dividing the corresponding schema class table column width by two to give the field width in characters.  

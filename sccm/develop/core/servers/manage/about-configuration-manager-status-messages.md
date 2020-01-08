@@ -8,7 +8,8 @@ ms.assetid: f3011860-6a66-407d-b3fc-93e4f6f892e1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager Status Messages
 In Configuration Manager, status messages are the universal means for components to communicate information about their health to the Configuration Manager administrator. Status messages are similar to Windows NT Events; they have a severity, ID, description, and so on.  

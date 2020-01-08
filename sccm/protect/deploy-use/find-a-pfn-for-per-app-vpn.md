@@ -10,7 +10,8 @@ ms.assetid: 47118499-3d26-4c25-bfde-b129de7eaa59
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Find a package family name (PFN) for per-app VPN
 

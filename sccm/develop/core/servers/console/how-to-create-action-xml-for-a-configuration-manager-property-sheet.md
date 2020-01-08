@@ -9,7 +9,8 @@ ms.assetid: ab60b75e-b64a-44c0-ad63-d96d289f39ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create Action XML for a Configuration Manager Property Sheet
 In Configuration Manager, to display a property sheet or dialog box in the Configuration Manager console, you create a `ShowDialog` action. Like other actions, the `ShowDialog` action defines a context menu and action pane action that the user selects to show the dialog box. To define the `ShowDialog` action, you create an XML file that describes a [ActionDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actiondescription.aspx) element.  

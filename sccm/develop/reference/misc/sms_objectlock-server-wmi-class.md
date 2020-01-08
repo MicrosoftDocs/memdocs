@@ -9,7 +9,8 @@ ms.assetid: 65797a0a-cf39-4081-8963-c084c81531ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ObjectLock Server WMI Class
 The `SMS_ObjectLock` abstract Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents methods for locking and unlocking global objects.  

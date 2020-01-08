@@ -10,7 +10,8 @@ ms.assetid: 90498b4b-6a9b-43cd-b465-1d6c9a52df1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create task sequence media

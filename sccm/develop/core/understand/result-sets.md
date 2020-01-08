@@ -8,7 +8,8 @@ ms.assetid: e27f8d92-e7b1-4bde-a75c-8c88f1275829
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Result Sets
 In Configuration Manager, the result set of a query contains one or more instances that match the specified criteria of the`SELECT` statement. The result instances are either `Generic` class instances or instances of the class that is specified in the FROM clause.  

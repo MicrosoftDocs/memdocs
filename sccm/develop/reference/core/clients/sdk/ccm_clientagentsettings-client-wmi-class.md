@@ -9,7 +9,8 @@ ms.assetid: 6388838c-8832-4e84-ba1a-bb66af8f79ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_ClientAgentSettings Client WMI Class
 The `CCM_ClientAgentSettings` WMI class is a client class, in Configuration Manager, that contains common client agent settings.  

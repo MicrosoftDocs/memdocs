@@ -9,7 +9,8 @@ ms.assetid: c9c0923f-9ec6-463c-905b-59fb515b1dfb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_UpdateDeploymentSummary Server WMI Class
 The `SMS_UpdateDeploymentSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a summary for a given software update in given software updates deployment.  

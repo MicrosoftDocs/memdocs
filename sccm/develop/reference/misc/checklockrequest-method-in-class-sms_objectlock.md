@@ -9,7 +9,8 @@ ms.assetid: 54032c44-cfa7-48cf-92bb-7f8bc482f822
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CheckLockRequest Method in Class SMS_ObjectLock
 The `CheckLockRequest` Windows Management Instrumentation (WMI) class method, in Configuration Manager, checks a lock request.  

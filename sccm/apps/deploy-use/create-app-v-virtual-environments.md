@@ -10,7 +10,8 @@ ms.assetid: b6b86078-fcc4-46cf-87d6-4b52b914b712
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Create App-V virtual environments in Configuration Manager
 

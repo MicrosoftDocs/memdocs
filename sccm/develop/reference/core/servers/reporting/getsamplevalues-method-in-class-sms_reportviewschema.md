@@ -9,7 +9,8 @@ ms.assetid: f15a4fd3-839e-4903-bd47-c67d38772f28
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetSampleValues Method in Class SMS_ReportViewSchema
 The `GetSampleValues` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets sample values for a report view schema.  

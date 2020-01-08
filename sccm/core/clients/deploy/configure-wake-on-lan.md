@@ -10,7 +10,8 @@ ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to configure Wake on LAN in Configuration Manager
 

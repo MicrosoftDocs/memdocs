@@ -9,7 +9,8 @@ ms.assetid: 8001f57e-f565-4993-a3a0-5bc816910081
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddDistributionPoints Method in Class SMS_OperatingSystemInstallPackage
 The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the distribution points for the operating system install package.  

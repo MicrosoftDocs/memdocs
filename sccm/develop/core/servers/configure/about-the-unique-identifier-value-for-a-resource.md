@@ -9,7 +9,8 @@ ms.assetid: 1fe1e9f1-daed-4df8-bf32-df7258d9a3fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About the Unique Identifier Value for a Resource
 In Configuration Manager, the Configuration Manager unique identifier property for a new resource class is optional. If you report inventory data for the resource, you must include this property. The Configuration Manager unique identifier value must be unique — it relates your resource discovery data to your inventory data (SMS_G_xxx). Typically, hardware resources use a GUID to uniquely identify individual resources.  

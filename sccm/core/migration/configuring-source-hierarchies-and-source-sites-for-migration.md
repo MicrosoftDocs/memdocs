@@ -10,7 +10,8 @@ ms.assetid: ccce7cb5-e18f-4337-8adf-2018edca3c00
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configure source hierarchies and source sites for migration to Configuration Manager current branch
 

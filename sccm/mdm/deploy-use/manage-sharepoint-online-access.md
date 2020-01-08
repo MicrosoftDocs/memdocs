@@ -10,7 +10,8 @@ ms.assetid: 49cec466-1676-4fe2-a2fe-5004f01d735e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Manage SharePoint Online access in Configuration Manager
 

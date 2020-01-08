@@ -10,7 +10,8 @@ ms.assetid: e327ce38-6c07-4a27-b6eb-7e5bf74ed04b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Plan for OS deployment interoperability

@@ -10,7 +10,8 @@ ms.assetid: b2bf493e-1e10-496f-a139-2646522703ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Plan for migration to Configuration Manager current branch
 

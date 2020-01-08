@@ -9,7 +9,8 @@ ms.assetid: 0f3ed538-ef76-4549-96da-3b5182908e7c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ICcmContentTransferManager4 Interface
 The **ICcmContentTransferManager4** interface is used by clients to invoke the Content Transfer Manager.  

@@ -10,7 +10,8 @@ ms.assetid: eb4ab74b-b605-41dd-930c-ac18d2f40319
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Use the Microsoft Malware Protection Center to download definitions

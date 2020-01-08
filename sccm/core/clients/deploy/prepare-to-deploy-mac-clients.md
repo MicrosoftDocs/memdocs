@@ -10,7 +10,8 @@ ms.assetid: 2285a953-6a86-4ed5-97dd-cd57b02bc1ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Prepare to deploy client software to Macs

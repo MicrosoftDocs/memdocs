@@ -10,7 +10,8 @@ ms.assetid: 30844519-ce14-456f-bfb8-4318b578e9f6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Run discovery for Configuration Manager
 

@@ -9,7 +9,8 @@ ms.assetid: d6d3f17e-75fc-48c6-b6ed-b7b0d6169f41
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ExportXml Method in Class SMS_TaskSequence
 The `ExportXml` Windows Management Instrumentation(WMI) class method, in Configuration Manager, exports task sequence XML in a format that is suitable to use on another site.  

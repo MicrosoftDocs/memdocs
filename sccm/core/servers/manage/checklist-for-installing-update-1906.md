@@ -10,7 +10,8 @@ ms.assetid: e6837956-1f1e-4104-a348-ac2266199f60
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Checklist for installing update 1906 for Configuration Manager

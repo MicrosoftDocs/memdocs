@@ -9,7 +9,8 @@ ms.assetid: 1a627513-494d-4e82-92e4-b3689c9ecf50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Introduction to WBEMTEST
 If you spend much time around Configuration Manager you become aware that much of it runs through WMI.  WMI is "Windows Management Instrumentation" and is Microsoft’s implementation of an Internet standard called Web Based Enterprise Management (WBEM).  

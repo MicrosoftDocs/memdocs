@@ -10,7 +10,8 @@ ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Reference for Configuration Manager Setup
 

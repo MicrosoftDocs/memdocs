@@ -9,7 +9,8 @@ ms.assetid: 1310f54d-03a1-4c14-a017-09625250c6fa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_Identification Server WMI Class
 The `SMS_Identification` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides basic information about the installed [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md) object, for example, its language version, site code, and provider. This class should return only one instance.  

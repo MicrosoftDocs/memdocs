@@ -10,7 +10,8 @@ ms.assetid: 272ee86b-d3d9-4fd9-b5c4-73e490e1a1e4
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Security and privacy for remote control in Configuration Manager
 

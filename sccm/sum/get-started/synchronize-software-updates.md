@@ -10,7 +10,8 @@ ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.collection: M365-identity-device-management
+
+
 ---
 
 #  <a name="BKMK_SUMSync"></a> Synchronize software updates

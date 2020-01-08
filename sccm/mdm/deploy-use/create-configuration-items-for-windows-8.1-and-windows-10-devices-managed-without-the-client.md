@@ -10,7 +10,8 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client
 

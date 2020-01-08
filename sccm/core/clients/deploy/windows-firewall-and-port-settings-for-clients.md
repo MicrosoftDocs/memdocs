@@ -10,7 +10,8 @@ ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Windows Firewall and port settings for clients in Configuration Manager
 

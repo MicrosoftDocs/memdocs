@@ -10,7 +10,8 @@ ms.assetid: 2de963d7-ffb9-43c3-9e1d-fc992b67bebd
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Package definition files

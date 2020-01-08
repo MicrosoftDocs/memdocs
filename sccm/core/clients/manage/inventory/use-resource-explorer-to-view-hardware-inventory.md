@@ -10,7 +10,8 @@ ms.assetid: 375912f5-436d-4315-bdbe-d77afee6c9f3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to use Resource Explorer to view hardware inventory in Configuration Manager

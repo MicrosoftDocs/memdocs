@@ -9,7 +9,8 @@ ms.assetid: 12f67c04-b89e-4f12-b560-f08908a8d68c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetPackageHash Method in Class SMS_TaskSequencePackage
 The `GetPackageHash` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the hash of a Configuration Manager package.  

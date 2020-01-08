@@ -9,7 +9,8 @@ ms.assetid: 233501a5-2b33-4394-8732-e77e46331871
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # VerifyNoCircularDependencies Method in Class SMS_Collection
 In Configuration Manager, the `VerifyNoCircularDependencies` Windows Management Instrumentation (WMI) class method takes two collections as arguments and verifies that no circular dependencies would be formed if one collection were the parent of another.  

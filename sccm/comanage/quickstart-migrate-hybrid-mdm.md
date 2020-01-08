@@ -10,7 +10,8 @@ ms.assetid: 456f32d5-8590-499f-a54d-d00618bc61f0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Migrate from hybrid MDM for co-management

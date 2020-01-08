@@ -10,7 +10,8 @@ ms.assetid: aba688d9-fd5b-4c42-8cb4-f7e1b161ef50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Manage mobile devices with Configuration Manager and Exchange
 

@@ -10,7 +10,8 @@ ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Common tasks for managing compliance on devices with the Configuration Manager client

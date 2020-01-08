@@ -10,7 +10,8 @@ ms.assetid: 4e620080-5400-45bb-87c2-fbdbc8aeacac
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configure options for Updates Publisher
 

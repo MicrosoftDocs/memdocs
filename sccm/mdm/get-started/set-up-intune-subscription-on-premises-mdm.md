@@ -10,7 +10,8 @@ ms.assetid: 1e42b1c1-3d58-481f-8647-5c7ae640c5f5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Set up a Microsoft Intune subscription for on-premises MDM in Configuration Manager

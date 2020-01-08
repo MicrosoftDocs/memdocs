@@ -10,7 +10,8 @@ ms.assetid: 9c062f13-3c1f-4621-9cae-de0e322aa03f
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # Prerequisites for power management in Configuration Manager
 

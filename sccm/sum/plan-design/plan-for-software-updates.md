@@ -10,7 +10,8 @@ ms.topic: conceptual
 ms.prod: configuration-manager 
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Plan for software updates in Configuration Manager

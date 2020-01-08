@@ -9,7 +9,8 @@ ms.assetid: fa65a143-b6f7-4951-9e0b-2ff874509483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddAssociation Method in Class SMS_StateMigration
 The `AddAssociation` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the computer association between two system resources used in state migration.  

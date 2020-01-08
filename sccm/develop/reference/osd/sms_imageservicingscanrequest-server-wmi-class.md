@@ -9,7 +9,8 @@ ms.assetid: 56060aed-2ae2-49c9-9446-a9016b4ea964
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ImageServicingScanRequest Server WMI Class
 The `SMS_ImageServicingScanRequest` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents scan request for offline servicing image.  
