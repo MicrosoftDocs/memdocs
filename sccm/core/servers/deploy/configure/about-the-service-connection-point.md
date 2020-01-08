@@ -72,6 +72,17 @@ When you run **Setup** to install the top-tier site of a hierarchy, you can inst
 
 After setup runs, or if you're reinstalling the role, use the **Add Site System Roles** wizard or the **Create Site System Server** wizard. (Only install the service connection point on the top-tier site of your hierarchy.) For more information, see [Install site system roles](/configmgr/core/servers/deploy/configure/install-site-system-roles).
 
+## Move the role
+
+<!-- SCCMDocs#922 -->
+There are several scenarios in which you may need to move the service connection point to another server:
+
+- [Recovery](/configmgr/core/servers/manage/recover-sites)
+- [Site server high availability](/configmgr/core/servers/deploy/configure/site-server-high-availability)
+- [Site expansion](/configmgr/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_expand)
+
+After you move the service connection point, check all site functions. For example, you may need to renew the secret key for any connections to Azure Active Directory (Azure AD) tenants. For more information, see [Renew secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
+
 ## Log files
 
 To view information about uploads to Microsoft, view the **Dmpuploader.log** on the server that runs the service connection point. For download progress of updates, view the **Dmpdownloader.log**. For the complete list of logs related to the service connection point, see [Log files - Service connection point](/configmgr/core/plan-design/hierarchy/log-files#BKMK_WITLog).
