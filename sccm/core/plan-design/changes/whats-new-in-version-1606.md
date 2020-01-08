@@ -11,7 +11,8 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
 # What&#39;s new in version 1606 of Configuration Manager
 

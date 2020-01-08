@@ -9,7 +9,8 @@ ms.assetid: 371c8d22-2384-4c28-8255-50e94e6fdf49
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # IsContentValid Method in Class SMS_PackageToContent
 The `IsContentValid` Windows Management (WMI) class method, in Configuration Manager, determines if the package content is valid.  

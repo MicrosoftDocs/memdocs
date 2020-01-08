@@ -9,7 +9,8 @@ ms.assetid: 3fd7c3a1-bab9-4970-93a4-0b6e978fd3eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_BigGreenButtonConfig Server WMI Class
 The `SMS_BigGreenButtonConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that can stop clients from connecting to the client notification server (a hidden role, co-located with management point).  

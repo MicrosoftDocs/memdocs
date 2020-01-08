@@ -9,7 +9,8 @@ ms.assetid: 2637f1c4-037b-4f91-b0d3-ce61e9eeb63b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Close Method in Class SMS_EPAlert
 The `Close` Windows Management Instrumentation (WMI) class method, in Configuration Manager, postpones the alert.  

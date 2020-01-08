@@ -10,7 +10,8 @@ ms.assetid: 8b495b02-c966-4eb3-92b9-52ebbf5c38ae
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Database replication

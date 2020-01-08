@@ -10,7 +10,8 @@ ms.assetid: 61a19d95-83ff-4ad8-9a67-f304d2ba54f2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # iOS hybrid enrollment using Apple Configurator with Configuration Manager
 

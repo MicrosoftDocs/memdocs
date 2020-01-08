@@ -9,7 +9,8 @@ ms.assetid: 948b18b4-8925-4a63-9b7c-a2c8606fb4ce
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetDeploymentTypeForUser Method in Class CCM_AppDeploymentType
 The `GetDeploymentTypeForUser` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that retrieves the application deployment type property for a user.   

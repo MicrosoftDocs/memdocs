@@ -9,7 +9,8 @@ ms.assetid: f1517eea-0a50-40b3-b83a-a20120fd09af
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Approve Method in Class SMS_UserApplicationRequest
 The `Approve` Windows Management Instrumentation (WMI) class method, in Configuration Manager, approves user application requests.  

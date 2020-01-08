@@ -9,7 +9,8 @@ ms.assetid: 43d47e35-4093-4aa8-9d8e-5c02fd209373
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequence_JoinDomainWorkgroupAction Server WMI Class
 The `SMS_TaskSequence_JoinDomainWorkgroupAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that joins a Windows domain or a Windows workgroup.  

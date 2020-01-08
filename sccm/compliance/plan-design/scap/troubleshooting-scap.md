@@ -10,7 +10,8 @@ ms.assetid: 27261853-1641-4826-98c6-afbb73a1209d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 

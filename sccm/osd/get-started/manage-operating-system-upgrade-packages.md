@@ -10,7 +10,8 @@ ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Manage OS upgrade packages with Configuration Manager

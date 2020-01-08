@@ -10,7 +10,8 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Device restart notifications in Configuration Manager

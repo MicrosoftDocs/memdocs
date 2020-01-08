@@ -9,7 +9,8 @@ ms.assetid: 125f04db-bfe4-4d5d-8d8c-d754eda35065
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetTargetedUsers Method in Class CCM_AppDeploymentType
 The `GetTargetedUsers` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that retrieves the targeted users of an application deployment type.   

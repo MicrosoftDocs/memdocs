@@ -9,7 +9,8 @@ ms.assetid: b375eea9-ff01-4b23-913a-4d023715dbe6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager Custom Action Client Applications
 The task sequence application, in Configuration Manager, performs the custom action operation during the client deployment. The application can be a process, a script, or other commands. The requirements for the application, such as the operating environment, command-line arguments, properties, and return codes are defined in a Managed Object Format (MOF) file. They are added to the task sequence environment when the action is processed.  

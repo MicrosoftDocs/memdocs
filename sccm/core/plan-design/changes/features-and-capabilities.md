@@ -10,7 +10,8 @@ ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Features and capabilities of Configuration Manager

@@ -10,7 +10,8 @@ ms.assetid: 601e3a8d-e9e7-456f-a844-f19c3dae12a9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Security and privacy for email profiles in Configuration Manager
 

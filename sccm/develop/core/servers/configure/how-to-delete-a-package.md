@@ -9,7 +9,8 @@ ms.assetid: 0ca0c411-c33e-444b-a96c-4279042fcda4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Delete a Package
 The following example shows how to delete a package in Configuration Manager by using the `SMS_Package` class.  

@@ -10,7 +10,8 @@ ms.assetid: 78a0aecc-f775-451e-aa05-56377ec91b1f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to configure hardware inventory for mobile devices enrolled by Microsoft Intune and Configuration Manager
 

@@ -9,7 +9,8 @@ ms.assetid: 1d9da14b-2239-4e8e-a4f4-1761014f6740
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Client Infrastructure
 This section provides reference information for the Configuration Manager client infrastructure, including Control Panel, client framework and data transfer, and policy functionality.  

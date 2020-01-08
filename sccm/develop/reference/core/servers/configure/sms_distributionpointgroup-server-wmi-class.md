@@ -9,7 +9,8 @@ ms.assetid: 01cb6452-86e2-4af2-a851-7aa550ab7d7a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_DistributionPointGroup Server WMI Class
 The `SMS_DistributionPointGroup` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a group of distribution points rendered in the Configuration Manager console.  

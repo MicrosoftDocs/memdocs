@@ -10,7 +10,8 @@ ms.assetid: d6993bba-f6bd-4639-adbf-efc1c638b2f3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Network infrastructure considerations for Configuration Manager

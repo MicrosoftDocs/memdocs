@@ -10,7 +10,8 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create and deploy Windows Defender Application Guard policy

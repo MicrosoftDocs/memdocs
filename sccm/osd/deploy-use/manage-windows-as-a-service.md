@@ -11,7 +11,8 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 
-ms.collection: M365-identity-device-management
+
+
 ---
 # Manage Windows as a service using Configuration Manager
 

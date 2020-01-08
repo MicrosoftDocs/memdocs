@@ -10,7 +10,8 @@ ms.assetid: fdcee455-22e3-451d-bcf3-e7b62792f04a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Endpoint Protection Client Help
 

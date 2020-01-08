@@ -9,7 +9,8 @@ ms.assetid: edd9c38e-004b-4bf9-9d9b-d8e6b7d4d179
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # UpdateImage Method in Class SMS_BootImagePackage
 The `UpdateImage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates a copy of the current boot image source .wim file and updates the copy with the most current operating system deployment binaries.  

@@ -10,7 +10,8 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to use task sequence variables in Configuration Manager

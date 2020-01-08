@@ -10,7 +10,8 @@ ms.assetid: CF35CE87-3BA8-4A84-9BC8-ABCEA4666212
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Use Windows Analytics with Configuration Manager

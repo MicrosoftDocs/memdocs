@@ -9,7 +9,8 @@ ms.assetid: 340ab144-d2e3-475b-9a1b-e3346c2be551
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Enable a PXE Service Point Role
 You enable the PXE Service Point role, in Configuration Manager, by getting an instance of a specific distribution point and setting the `IsPXE` value to `1`.  

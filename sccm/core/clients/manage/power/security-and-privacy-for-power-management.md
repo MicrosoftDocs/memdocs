@@ -10,7 +10,8 @@ ms.assetid: 469ff35f-59a1-484d-902b-107dd6070baf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # Security and privacy for power management in Configuration Manager
 

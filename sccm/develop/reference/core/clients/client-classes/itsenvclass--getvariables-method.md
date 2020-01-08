@@ -9,7 +9,8 @@ ms.assetid: 858509d5-771f-4bd3-9b5e-59545c11f8e6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ITSEnvClass::GetVariables Method
 In Configuration Manager, the `GetVariables` method gets the variables for the operating system deployment task sequence environment.  

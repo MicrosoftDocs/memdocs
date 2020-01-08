@@ -10,7 +10,8 @@ ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Plan for the site database for Configuration Manager
 

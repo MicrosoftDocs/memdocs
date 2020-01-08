@@ -9,7 +9,8 @@ ms.assetid: 879be718-4ce0-46bc-a2e3-161b97f836a5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Software Distribution Deployments
 In Configuration Manager, after a software distribution package has been created, with programs to tell client computers what to do with the package, you need to advertise the program that you want the clients to run. Advertising the program makes a program available to a specified collection of clients.  

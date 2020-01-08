@@ -10,7 +10,8 @@ ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ROBOTS: NOINDEX
 ---
 # What's new in version 1802 of Configuration Manager

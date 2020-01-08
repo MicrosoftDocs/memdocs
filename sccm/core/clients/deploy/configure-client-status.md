@@ -10,7 +10,8 @@ ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to configure client status in Configuration Manager
 

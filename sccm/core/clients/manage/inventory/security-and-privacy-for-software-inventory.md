@@ -10,7 +10,8 @@ ms.assetid: 8e68e1fb-a8ec-4543-bb8a-cbbaf184a418
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Security and privacy for software inventory in Configuration Manager
 

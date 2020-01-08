@@ -10,7 +10,8 @@ ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Checklist for installing update 1902 for Configuration Manager

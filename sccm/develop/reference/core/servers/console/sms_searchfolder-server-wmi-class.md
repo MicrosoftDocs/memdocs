@@ -9,7 +9,8 @@ ms.assetid: 8b9bfaff-c183-4453-a6a0-f1ede8e3552f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SearchFolder Server WMI Class
 The `SMS_SearchFolder` WMI class is an SMS Provider server class, in Configuration Manager, that behaves the same as `SMS_ObjectContainerNode`, but is only used for search operations.  

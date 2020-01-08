@@ -10,7 +10,8 @@ ms.assetid: 9083c571-f4fc-4a78-adc5-8aec84dabcbd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Manage access to company resource based on device, network, and application risk

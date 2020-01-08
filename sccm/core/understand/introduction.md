@@ -10,7 +10,8 @@ ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # What is Configuration Manager?

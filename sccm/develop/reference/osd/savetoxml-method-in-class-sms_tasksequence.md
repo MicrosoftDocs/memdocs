@@ -9,7 +9,8 @@ ms.assetid: b6ee24cd-893b-4342-ae0e-36ef4640a98c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SaveToXml Method in Class SMS_TaskSequence
 The `SaveToXml` Windows Management Instrumentation (WMI) class method, in Configuration Manager serializes a task sequence from WMI objects to XML.  

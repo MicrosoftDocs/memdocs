@@ -9,7 +9,8 @@ ms.assetid: 7a2f05e8-f5f8-4362-8e67-759624e80371
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ICIINFO::GetEvalState Method
 The `ICIINFO::GetEvalState` method, in Configuration Manager, gets the current evaluation state of the configuration item.  

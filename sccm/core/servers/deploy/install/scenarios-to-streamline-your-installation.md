@@ -10,7 +10,8 @@ ms.assetid: 35586a85-4af9-4c8b-925a-0e32dc8b7346
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Scenarios to streamline your installation of Configuration Manager
 

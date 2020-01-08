@@ -9,7 +9,8 @@ ms.assetid: 598f0a6c-d67a-4559-b863-616d4044b9c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_Permission Server WMI Class
 The `SMS_Permission` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents RBAC Security User Permissions.  

@@ -9,7 +9,8 @@ ms.assetid: 870fb139-d723-4d65-b4e8-a1ff15fd19b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ConfigurationItemRules Server WMI Class
 The `SMS_ConfigurationItemRules` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents configuration item rules.  

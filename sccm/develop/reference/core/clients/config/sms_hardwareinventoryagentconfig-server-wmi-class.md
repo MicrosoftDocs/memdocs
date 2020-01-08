@@ -9,7 +9,8 @@ ms.assetid: df1b1aa3-66c8-45d4-bf8e-e6382ebb25b4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_HardwareInventoryAgentConfig Server WMI Class
 The `SMS_HardwareInventoryAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies hardware inventory settings for client computers.  

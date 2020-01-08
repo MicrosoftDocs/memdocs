@@ -10,7 +10,8 @@ ms.assetid: d2dacb2d-ab3b-42a2-8dc8-94da31f993c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Prerequisites for Wi-Fi and VPN Profiles in Configuration Manager
 

@@ -9,7 +9,8 @@ ms.assetid: e00ad156-746e-42da-97e1-e4ad0cdaca21
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_AlertEvent Server WMI Class
 The `SMS_AlertEvent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the event data for an alert.  

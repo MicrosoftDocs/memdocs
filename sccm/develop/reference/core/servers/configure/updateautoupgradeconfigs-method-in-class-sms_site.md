@@ -9,7 +9,8 @@ ms.assetid: 4214f7a0-03e3-4e3a-bb31-5b958e45c5d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # UpdateAutoUpgradeConfigs Method in Class SMS_Site
 The `UpdateAutoUpgradeConfigs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates configurations for auto-upgrade settings.  

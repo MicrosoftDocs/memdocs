@@ -10,7 +10,8 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create stand-alone media

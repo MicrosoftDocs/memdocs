@@ -10,7 +10,8 @@ ms.assetid: fc497a8a-3c54-4529-8403-6f6171a21c64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Plan for automating tasks in Configuration Manager

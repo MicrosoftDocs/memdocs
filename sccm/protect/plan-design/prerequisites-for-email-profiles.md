@@ -10,7 +10,8 @@ ms.assetid: dccf0b73-43bd-4545-8914-114168ebad36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Email profile prerequisites
 

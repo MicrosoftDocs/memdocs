@@ -9,7 +9,8 @@ ms.assetid: f18ca88b-a1e2-46d0-8740-00d36dc09e0e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Define the Installer
 To define the application management deployment technology installer, use an instance of the `Microsoft.ConfigurationManagement.ApplicationManagement.Installer` class. The new class instance will define the properties and methods used on the client to actually install the application.  

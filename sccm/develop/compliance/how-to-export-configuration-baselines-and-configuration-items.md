@@ -9,7 +9,8 @@ ms.assetid: 0599e22f-3de3-4182-bcc2-3175d91b5b58
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Export Configuration Baselines and Configuration Items
 In Configuration Manager, to export a configuration baseline or configuration item using the Configuration Manager SDK, read the relevant `SMS_ConfigurationItem` instance and write the `SDMPackageXML` property (string) to a file.  

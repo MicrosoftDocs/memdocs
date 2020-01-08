@@ -9,7 +9,8 @@ ms.assetid: 32bab1a1-8484-4936-bcb1-c928bc5f2136
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # EvaluateAutoDeployment Method in Class SMS_AutoDeployment
 The `EvaluateAutoDeployment` Windows Management Instrumentation (WMI) class method, in Configuration Manager, evaluates an automatic deployment.  

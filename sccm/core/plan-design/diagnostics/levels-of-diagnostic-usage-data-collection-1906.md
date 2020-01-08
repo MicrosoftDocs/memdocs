@@ -10,7 +10,8 @@ ms.assetid: 370fc61f-2d8a-45b4-adc7-7b5d5ede2bf4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Levels of diagnostic usage data collection for version 1906

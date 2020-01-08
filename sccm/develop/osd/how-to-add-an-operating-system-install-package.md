@@ -9,7 +9,8 @@ ms.assetid: 3410a7c8-03b1-4c9e-874a-05324fcb569e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Add an Operating System Install Package in Configuration Manager
 You add an operating system install package to Configuration Manager by creating and populating an instance of [SMS_OperatingSystemInstallPackage](../../develop/reference/osd/sms_operatingsysteminstallpackage-server-wmi-class.md).  

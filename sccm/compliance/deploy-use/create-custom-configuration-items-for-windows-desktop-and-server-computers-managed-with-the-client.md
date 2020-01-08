@@ -10,7 +10,8 @@ ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create custom configuration items for Windows desktop and server computers managed with the Configuration Manager client

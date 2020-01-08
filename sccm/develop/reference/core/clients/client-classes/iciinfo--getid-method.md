@@ -9,7 +9,8 @@ ms.assetid: 03754f1a-0146-4ff3-8d18-bee4fed9a932
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ICIINFO::GetId Method
 The `ICIINFO::GetId` method, in Configuration Manager, gets the ID of the configuration item.  

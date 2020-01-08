@@ -9,7 +9,8 @@ ms.assetid: 8f5ee4ee-11bf-4ff3-95c9-4ec046308902
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Connect to an SMS Provider in Configuration Manager by Using WMI
 Before connecting to the SMS Provider for a local or remote Configuration Manager site server, you first need to locate the SMS Provider for the site server. The SMS Provider can be either local or remote to the Configuration Manager site server you are using. The Windows Management Instrumentation (WMI) class `SMS_ProviderLocation` is present on all Configuration Manager site servers, and one instance will contain the location for the Configuration Manager site server you are using.  

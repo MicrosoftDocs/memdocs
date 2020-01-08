@@ -9,7 +9,8 @@ ms.assetid: 246d0ad5-582b-4c6d-9611-0e200c47f354
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # DeleteCertificate Method in Class SMS_CertificateData
 The `DeleteCertificate` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that deletes the certificate from the database.  

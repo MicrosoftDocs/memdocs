@@ -10,7 +10,8 @@ ms.assetid: 6e7d2850-b0af-497e-bbc1-bfc2a7420a7a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to close your account

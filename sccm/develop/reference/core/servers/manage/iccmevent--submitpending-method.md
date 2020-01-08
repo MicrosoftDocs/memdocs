@@ -9,7 +9,8 @@ ms.assetid: 870c9736-ce62-4396-821c-6eedd8c00d6f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ICCMEvent::SubmitPending Method
 In Configuration Manager, the `ICcmEvent::SubmitPending` method submits an event that is stored by Windows Management Instrumentation (WMI).  

@@ -9,7 +9,8 @@ ms.assetid: 2286886d-040d-49e6-9739-d2950606b9e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetSuppressComputerActivityInPresentationMode Method in Class CCM_ClientUXSettings
 The `GetSuppressComputerActivityInPresentationMode` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets the value for `SuppressComputerActivityInPresentationMode`  

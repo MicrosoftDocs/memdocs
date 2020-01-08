@@ -10,7 +10,8 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Customize operating system images with Configuration Manager
 

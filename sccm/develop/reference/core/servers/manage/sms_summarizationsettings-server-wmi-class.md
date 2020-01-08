@@ -9,7 +9,8 @@ ms.assetid: d826df70-49be-4272-a777-b9fa5f720c96
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SummarizationSettings Server WMI Class
 The `SMS_SummarizationSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the site summarization settings for a site.  

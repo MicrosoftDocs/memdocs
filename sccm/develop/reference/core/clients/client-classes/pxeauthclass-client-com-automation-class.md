@@ -9,7 +9,8 @@ ms.assetid: c95a5ec0-0ec9-4c60-ad5f-4f3e93aabb5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # PxeAuthClass Client COM Automation Class
 `PxeAuthClass` is a COM automation class, in Configuration Manager, that supports PXE service point authorization in operating system deployment. The class implements the `IPxeAuthClass` interface.  

@@ -9,7 +9,8 @@ ms.assetid: f8196309-a790-430c-88fb-d9f23be24a2d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_ServiceWindowManager Client WMI Class
 The `CCM_ServiceWindowManager` WMI class is a client class, in Configuration Manager, manages service windows on the client computer.  

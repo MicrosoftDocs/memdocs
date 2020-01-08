@@ -10,7 +10,8 @@ ms.assetid: b5d520a7-e9e5-40ee-91f9-f2684214beb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # User affinity for hybrid managed devices in Configuration Manager
 

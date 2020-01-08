@@ -10,7 +10,8 @@ ms.assetid: b48c693c-d2b0-4707-a5dd-fe92172c49fe
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # Manage configuration data in Configuration Manager
 

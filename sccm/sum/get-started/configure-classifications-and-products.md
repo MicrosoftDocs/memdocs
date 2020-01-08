@@ -10,7 +10,8 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configure classifications and products to synchronize  
 

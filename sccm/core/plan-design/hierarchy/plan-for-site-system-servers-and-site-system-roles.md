@@ -10,7 +10,8 @@ ms.assetid: 0a7415ba-2c53-4433-983e-780e92aa662f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Plan for site system servers and site system roles in Configuration Manager

@@ -10,7 +10,8 @@ ms.assetid: 76c220b6-1824-4e2e-8c61-a719f0b056f1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Where to get installation media for Configuration Manager
 

@@ -10,7 +10,8 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7304730b-b517-4c76-aadd-4cbd157dc971
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Security and privacy for the cloud management gateway

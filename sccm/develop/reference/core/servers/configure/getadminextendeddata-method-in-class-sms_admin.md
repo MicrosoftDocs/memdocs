@@ -9,7 +9,8 @@ ms.assetid: 25bb4ce9-df34-436b-a74a-6768963b0bd1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetAdminExtendedData Method in Class SMS_Admin
 The `GetAdminExtendedData` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the extended data that the current user and its groups have for a given type.  

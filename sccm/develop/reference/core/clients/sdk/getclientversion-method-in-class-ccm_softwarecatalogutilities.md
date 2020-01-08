@@ -9,7 +9,8 @@ ms.assetid: 7a5f103c-2967-45fa-9228-d73e1a6391ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetClientVersion Method in Class CCM_SoftwareCatalogUtilities
 The `GetClientVersion` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that returns the client version.   

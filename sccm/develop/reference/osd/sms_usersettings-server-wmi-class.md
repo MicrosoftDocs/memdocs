@@ -9,7 +9,8 @@ ms.assetid: faa33a29-a719-4288-ac1f-5fb35f2b5f1b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_UserSettings Server WMI Class
 The `SMS_UserSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes attributes that are specific to a single user that is managed by Configuration Manager.  

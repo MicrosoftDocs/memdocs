@@ -8,7 +8,8 @@ ms.assetid: fc75e803-b86e-4baa-a2a0-c47d4aedbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager Console Forms
 You can extend the Configuration Manager console with new Windows forms. Specifically, you can add form-based dialog boxes and property sheets. A user accesses these forms from Configuration Manager actions that you define.  

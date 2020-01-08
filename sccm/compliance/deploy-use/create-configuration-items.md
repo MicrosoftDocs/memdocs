@@ -10,7 +10,8 @@ ms.assetid: 6271259d-e0ea-432b-90ec-5a452fba4264
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # Create configuration items in Configuration Manager
 

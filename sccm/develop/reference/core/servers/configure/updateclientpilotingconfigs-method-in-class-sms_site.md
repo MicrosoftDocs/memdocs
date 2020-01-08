@@ -9,7 +9,8 @@ ms.assetid: 970cb1ba-ee11-459c-9c59-cf2c992cbbab
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # UpdateClientPilotingConfigs Method in Class SMS_Site
 The `UpdateClientPilotingConfigs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the  configurations for client piloting settings.  

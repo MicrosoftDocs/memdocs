@@ -9,7 +9,8 @@ ms.assetid: 214c1768-0200-4ecf-b871-cbdc61f8348c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CheckDuplicateSourceName Method in Class SMS_Package
 The `CheckDuplicateSourceName` Windows Management Instrumentation (WMI) class method, in Configuration Manager, determines if the specified source name is used by another package.  

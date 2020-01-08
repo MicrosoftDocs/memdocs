@@ -9,7 +9,8 @@ ms.assetid: 552c2251-8c97-4596-bcc0-71558ce8c532
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a Deployment Template
 You create a software updates deployment template, in Configuration Manager, by creating an instance of the `SMS_Template` class and populating the properties.  

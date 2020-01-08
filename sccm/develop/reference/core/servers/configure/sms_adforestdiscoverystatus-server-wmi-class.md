@@ -9,7 +9,8 @@ ms.assetid: ef766ce5-3137-43b7-8029-26e0606391d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ADForestDiscoveryStatus Server WMI Class
 The `SMS_ADForestDiscoveryStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the status of Configuration Manager Active Directory Forest Discovery.  

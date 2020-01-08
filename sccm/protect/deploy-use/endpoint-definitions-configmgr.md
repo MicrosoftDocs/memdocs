@@ -10,7 +10,8 @@ ms.assetid: 3b9c4027-a98b-406b-935c-ccabcfe713df
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 #  Using Configuration Manager Software Updates to Deliver Definition Updates

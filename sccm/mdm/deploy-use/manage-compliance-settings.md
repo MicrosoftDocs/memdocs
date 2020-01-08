@@ -10,7 +10,8 @@ ms.assetid: 9e83007f-e81c-4b7e-b47e-b01d7b19cfbc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Managing compliance on devices managed with Intune
 

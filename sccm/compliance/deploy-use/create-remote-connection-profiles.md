@@ -10,7 +10,8 @@ ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Remote connection profiles in Configuration Manager

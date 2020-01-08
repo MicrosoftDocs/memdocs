@@ -9,7 +9,8 @@ ms.assetid: 9936a9b1-243b-4bc7-a48c-ee6942b795d1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # LoadIconForPDF Method in Class SMS_PDF_Package
 The `LoadIconForPDF` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports a required icon for a package definition file.  

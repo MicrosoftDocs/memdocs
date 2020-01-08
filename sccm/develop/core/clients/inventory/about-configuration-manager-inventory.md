@@ -8,7 +8,8 @@ ms.assetid: cba720a8-679c-4b19-9c3b-431680994626
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager Inventory
 You can use Configuration Manager to collect hardware and software inventory from Configuration Manager clients by enabling the client agents on a site-by-site basis.  

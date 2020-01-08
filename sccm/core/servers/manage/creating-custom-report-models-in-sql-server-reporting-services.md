@@ -10,7 +10,8 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # Creating custom report models for Configuration Manager in SQL Server Reporting Services
 

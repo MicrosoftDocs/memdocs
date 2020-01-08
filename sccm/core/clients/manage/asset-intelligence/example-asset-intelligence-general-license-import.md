@@ -10,7 +10,8 @@ ms.assetid: e6258333-a783-440b-b1af-f8023b782fbc
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Example Asset Intelligence general license import file in Configuration Manager
 

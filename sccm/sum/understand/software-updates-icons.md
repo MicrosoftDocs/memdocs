@@ -10,7 +10,8 @@ ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
-ms.collection: M365-identity-device-management
+
+
 ---
 # Icons used for software updates in Configuration Manager
 

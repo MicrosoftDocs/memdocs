@@ -9,7 +9,8 @@ ms.assetid: b090c545-39e8-4e74-8b5b-d95a9a12ef29
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetRemCtrlSettings Method in Class CCM_RemoteControlManager
 The `GetRemCtrlSettings` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets the remote control settings on a client computer.    

@@ -9,7 +9,8 @@ ms.assetid: eee2fd3a-3840-4201-8bf9-5b775234aa07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # UpdatePrereqAndStateFlags Method in Class SMS_CM_UpdatePackages
 The `UpdatePrereqAndStateFlags` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the installation state of update packages.  

@@ -9,7 +9,8 @@ ms.assetid: 325e64e8-86d4-4f92-83f9-ace4630d0a4c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_DistributionPointDriveInfo Server WMI Class
 The `SMS_DistributionPointDriveInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the basic information about the drives on a distribution point site system role.  
