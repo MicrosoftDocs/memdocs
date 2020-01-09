@@ -9,7 +9,8 @@ ms.assetid: c1e1b321-2d60-490e-a9ae-83f370f5cc88
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_PendingRegistrationRecord Server WMI Class
 The `SMS_PendingRegistrationRecord` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes hardware conflicts between two computers.  

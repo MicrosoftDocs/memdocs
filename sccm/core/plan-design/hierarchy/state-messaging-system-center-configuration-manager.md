@@ -10,7 +10,8 @@ ms.assetid: f04c0a71-57bc-4443-a47c-592373050d04
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # State messages in Configuration Manager 

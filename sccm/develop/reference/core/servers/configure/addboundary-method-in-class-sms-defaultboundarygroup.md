@@ -9,7 +9,8 @@ ms.assetid: aae63f60-858e-4467-9c70-f6d94ce53d57
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddBoundary Method in Class SMS_DefaultBoundaryGroup
  The `AddBoundary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds one or more boundaries to a default boundary group.  

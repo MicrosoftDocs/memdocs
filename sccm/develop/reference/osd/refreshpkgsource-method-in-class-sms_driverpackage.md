@@ -9,7 +9,8 @@ ms.assetid: 96826b76-5ac5-45c8-9328-f04536667bb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # RefreshPkgSource Method in Class SMS_DriverPackage
 The `RefreshPkgSource` Windows Management Instrumentation (WMI) class method, in Configuration Manager, refreshes the package source at all distribution points.  

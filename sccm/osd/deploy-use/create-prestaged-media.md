@@ -10,7 +10,8 @@ ms.assetid: ff6e7267-302a-4563-815e-cdc0d1a4b60f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create prestaged media

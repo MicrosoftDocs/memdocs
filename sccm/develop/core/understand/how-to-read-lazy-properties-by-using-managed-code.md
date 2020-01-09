@@ -9,7 +9,8 @@ ms.assetid: 8a958d91-c654-4f11-a9e4-387dc998c2ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Read Lazy Properties by Using Managed Code
 To read a lazy property from a Configuration Manager object returned in a query, you get the object instance, which retrieves any lazy object properties from the SMS Provider.  

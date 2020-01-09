@@ -9,7 +9,8 @@ ms.assetid: 015c0e0a-3ef1-4c12-8796-7dc184ea584c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Perform a Synchronous Query by Using System.Management
 To synchronously query the Configuration Manager client Windows Management Instrumentation (WMI), you use a `ManagementObjectSearcher` object.  

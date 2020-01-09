@@ -9,7 +9,8 @@ ms.assetid: 9cf5d7ff-d13d-4e1d-9df9-3c644e709be4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_WhatsNewFeature Server WMI Class
 For internal use only.  

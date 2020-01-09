@@ -9,7 +9,8 @@ ms.assetid: 4e8a8dbb-bf0a-4331-846c-0f121bb396ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_MigrationCollectionInfo Server WMI Class
 The `SMS_MigrationCollectionInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the collections created on the current active Configuration Manager 2007 hierarchy.  

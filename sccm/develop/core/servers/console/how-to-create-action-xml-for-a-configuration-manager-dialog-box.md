@@ -9,7 +9,8 @@ ms.assetid: b946a1cb-d54a-48d3-a3f1-5db70c426513
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create Action XML for a Configuration Manager Dialog Box
 In Configuration Manager, to display a dialog box in the Configuration Manager console, you create a [Configuration Manager ShowDialog Action](../../../../develop/core/servers/console/showdialog-action.md) action. To define the `ShowDialog` action, you create an XML file that describes a [ActionDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actiondescription.aspx) element.  

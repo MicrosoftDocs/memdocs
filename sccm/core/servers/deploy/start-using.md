@@ -9,7 +9,8 @@ ms.assetid: 32609a30-465c-4406-b227-aca5c276e015
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Deploy servers and roles

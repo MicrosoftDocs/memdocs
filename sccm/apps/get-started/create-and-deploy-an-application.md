@@ -10,7 +10,8 @@ ms.assetid: 3bd1e487-ea18-43c1-b7c3-acbd9b86d429
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # Create and deploy an application with Configuration Manager
 

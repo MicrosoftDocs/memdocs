@@ -9,7 +9,8 @@ ms.assetid: 933bdb86-7a0e-457d-826e-80c349744ab6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetTestSmtpConnectionResult Method in Class SMS_Subscription
 The `GetTestSmtpConnectionResult` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the test SMTP connection result.  

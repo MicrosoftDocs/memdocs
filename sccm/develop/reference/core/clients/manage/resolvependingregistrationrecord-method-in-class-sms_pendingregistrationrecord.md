@@ -9,7 +9,8 @@ ms.assetid: ec646177-2beb-4b90-a6ff-00384dd40859
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ResolvePendingRegistrationRecord Method in Class SMS_PendingRegistrationRecord
 The `ResolvePendingRegistrationRecord` Windows Management Instrumentation (WMI) class method, in Configuration Manager, resolves any conflicts for the pending registration records.  

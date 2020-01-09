@@ -9,7 +9,8 @@ ms.assetid: 6e3884b5-1598-4c54-b22a-da4518dea323
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Cancel Method in Class CCM_Application
 The `Cancel` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that cancels an application deployment.   

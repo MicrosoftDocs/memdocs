@@ -10,7 +10,8 @@ ms.assetid: 1c409244-6778-4970-a99c-d2508c9cf62b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # Security and privacy for compliance settings in Configuration Manager
 

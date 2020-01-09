@@ -9,7 +9,8 @@ ms.assetid: 7e4ada34-63bf-4b9f-8246-31816aa44196
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Enable Lookout MTD connection in the Intune admin console
 

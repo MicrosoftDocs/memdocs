@@ -10,7 +10,8 @@ ms.assetid: a1cbd1f6-90c5-499d-814e-6d1ac36e8e2f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ROBOTS: NOINDEX
 ---
 

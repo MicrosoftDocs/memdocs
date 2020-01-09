@@ -10,7 +10,8 @@ ms.assetid: e2745bac-e1b4-4dac-8ac7-32f1c820bc9c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Manage iOS Activation Lock with Configuration Manager
 

@@ -9,7 +9,8 @@ ms.assetid: 0a910d9f-9064-4295-b286-01a6d809702b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager AssemblyType Action
 The `AssemblyType` action defines the type and assembly for a method that is called by the Configuration Manager console.  

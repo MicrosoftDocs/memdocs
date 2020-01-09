@@ -10,7 +10,8 @@ ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Add Terms and Conditions with Configuration Manager
 

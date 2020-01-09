@@ -9,7 +9,8 @@ ms.assetid: 6f8ad726-3bb7-4d01-98b9-f3b08459edef
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ClientDeploymentStateDetailsView Server WMI Class
 The `SMS_ClientDeploymentStateDetailsView` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a client deployment state details view.  

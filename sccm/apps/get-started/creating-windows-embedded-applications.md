@@ -10,7 +10,8 @@ ms.assetid: 16acfd63-0c40-424c-82f4-8c63f7f1c30b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # Create Windows Embedded applications with Configuration Manager
 

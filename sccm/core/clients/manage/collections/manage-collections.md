@@ -10,7 +10,8 @@ ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to manage collections in Configuration Manager

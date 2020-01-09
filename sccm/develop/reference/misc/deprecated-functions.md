@@ -9,7 +9,8 @@ ms.assetid: e77a6a9a-c133-4484-901a-222983d39b88
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Configuration Manager deprecated functions

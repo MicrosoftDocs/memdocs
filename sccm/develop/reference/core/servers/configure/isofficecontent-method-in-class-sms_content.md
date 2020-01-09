@@ -9,7 +9,8 @@ ms.assetid: 037e759f-b8ea-4f6b-b33d-b59056efc02f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # IsOfficeContent Method in Class SMS_Content
 The `IsOfficeContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, specifies whether content is Microsoft Office 365 content.  

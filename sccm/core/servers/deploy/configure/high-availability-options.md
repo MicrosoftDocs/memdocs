@@ -10,7 +10,8 @@ ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # High availability options for Configuration Manager

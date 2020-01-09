@@ -10,7 +10,8 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Configure Microsoft Edge settings in Configuration Manager

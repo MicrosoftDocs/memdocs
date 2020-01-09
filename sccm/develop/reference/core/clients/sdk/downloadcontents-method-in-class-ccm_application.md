@@ -9,7 +9,8 @@ ms.assetid: 3f054d62-d84c-4c08-80b2-4d8869a05c09
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # DownloadContents Method in Class CCM_Application
 The `DownloadContents` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that downloads the content for an application.   

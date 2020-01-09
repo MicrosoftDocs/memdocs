@@ -9,7 +9,8 @@ ms.assetid: a00af5d1-dc44-4361-a927-b3c0a3479f27
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ClientAction Server WMI Class
 The `SMS_ClientAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the client action.  

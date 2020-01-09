@@ -9,7 +9,8 @@ ms.assetid: ea1053c7-f7e8-4641-8328-2e4c4d6bb93c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_Operation Server WMI Class
 The `SMS_Operation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is embedded by `SMS_RbacSecuredObject` and describes the various operations.  

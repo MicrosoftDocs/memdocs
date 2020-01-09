@@ -9,7 +9,8 @@ ms.assetid: 153b47c9-14fc-4b09-a2d7-99e0de5b6759
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Add a Condition to an Operating System Deployment Task Sequence Step
 Conditions can be added to an operating system deployment step (action and group), in Configuration Manager, by creating a [SMS_TaskSequence_Condition](../../develop/reference/osd/sms_tasksequence_condition-server-wmi-class.md) class instance and then associating it with the step. If the condition operands are all met, then the step is processed; otherwise it is not. The condition can have one or more operands that are instances of SMS_TaskSequence_Condition derived classes. You specify operators for the operands with instances of [SMS_TaskSequence_ConditionOperator](../../develop/reference/osd/sms_tasksequence_conditionoperator-server-wmi-class.md).  

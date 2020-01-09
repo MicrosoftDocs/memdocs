@@ -9,7 +9,8 @@ ms.assetid: e9e44ed6-c85e-44b6-9446-3e859c3bfcc4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Deploy a Site System Role (Example:  Fallback Status Point)
 The features and capabilities of a site are determined by the site roles applied to it. A site can contain one or more site roles. Some roles depend on other roles. For more information about specific site roles see [Configure sites and hierarchies for Configuration Manager](https://technet.microsoft.com/library/mt621987.aspx).  

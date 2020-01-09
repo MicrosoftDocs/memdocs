@@ -9,7 +9,8 @@ ms.assetid: 68b138f8-d6ba-4e71-a82a-cb2bb224e972
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About General Configuration Items
 In Configuration Manager, general configuration items are models of settings and objects, which together represent a meaningful unit of configuration management whose identity is defined by enumeration of its settings and objects.  

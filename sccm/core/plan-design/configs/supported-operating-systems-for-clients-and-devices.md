@@ -10,7 +10,8 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Supported OS versions for clients and devices for Configuration Manager

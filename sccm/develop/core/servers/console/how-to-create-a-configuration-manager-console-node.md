@@ -9,7 +9,8 @@ ms.assetid: df3f9be7-c724-40f9-8d1e-368de8018bbd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a Configuration Manager Console Node
 In Configuration Manager, to create a Configuration Manager console node, you create an XML description of the node and add it to the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\Extensions\Nodes\\<GUID\> folder. GUID is the GUID namespace for the parent node.  

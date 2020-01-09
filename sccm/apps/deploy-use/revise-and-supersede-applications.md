@@ -10,7 +10,8 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # Revise and supersede applications in Configuration Manager
 

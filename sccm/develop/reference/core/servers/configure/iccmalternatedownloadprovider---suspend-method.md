@@ -9,7 +9,8 @@ ms.assetid: 5d6ef823-08b2-4e17-8e59-6dfc085f5064
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ICcmAlternateDownloadProvider : Suspend Method
 The **ICcmAlternateDownloadProvider::Suspend** method, in Configuration Manager, instructs the provider to suspend a given job.  

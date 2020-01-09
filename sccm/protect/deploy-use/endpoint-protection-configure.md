@@ -10,7 +10,8 @@ ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Configure Endpoint Protection

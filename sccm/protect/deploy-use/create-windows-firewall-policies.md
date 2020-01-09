@@ -10,7 +10,8 @@ ms.assetid: 6ecdfad1-6305-45a8-ae75-3f33b967cb8f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Create and deploy Windows Firewall policies for Endpoint Protection in Configuration Manager
 

@@ -8,7 +8,8 @@ ms.assetid: 792581fa-e652-4009-a702-91c2aad49904
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager Tally Intervals
 Configuration Manager is configured with 16 default tally intervals. The intervals for a site are maintained in the site control file. The values are stored in the order that is shown in the following table. For information about accessing these values in the site control file, see the example at the end of this topic.  

@@ -9,7 +9,8 @@ ms.assetid: feda268d-16d9-43a0-8bef-d26070e5deca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_InstanceChangeNotification Server WMI Class
 The `SMS_InstanceChangeNotification` WMI class is an SMS Provider server class, in Configuration Manager, that notifies the administrator console that an alert has changed its status.  

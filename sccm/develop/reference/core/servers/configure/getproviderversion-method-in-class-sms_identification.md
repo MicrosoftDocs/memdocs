@@ -9,7 +9,8 @@ ms.assetid: ceaf0a5e-83fa-4c59-a6fd-c041e73a030b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetProviderVersion Method in Class SMS_Identification
 The `GetProviderVersion` Windows Management Instrumentation (WMI) class method, in Configuration Manager,  gets the product version string from the version resources of the SMS Provider DLL.  

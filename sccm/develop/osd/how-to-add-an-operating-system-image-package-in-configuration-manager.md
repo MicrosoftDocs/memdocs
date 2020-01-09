@@ -9,7 +9,8 @@ ms.assetid: faa80d51-ac31-4802-b778-c26bc003ddb3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Add an Operating System Image Package in Configuration Manager
 In Configuration Manager, you add an operating system image package by creating an instance of [SMS_ImagePackage](../../develop/reference/osd/sms_imagepackage-server-wmi-class.md) class. The path to the Windows Image (WIM) file is specified in the **PkgSourcePath** property as a Universal Naming Convention (UNC) path.  

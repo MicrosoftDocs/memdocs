@@ -9,7 +9,8 @@ ms.assetid: 22eb79c4-c169-4a91-a478-78ce2cd7ba27
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_AppFailedVEsData Server WMI Class
 The `SMS_AppFailedVEsData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents ….  

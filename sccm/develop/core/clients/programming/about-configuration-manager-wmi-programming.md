@@ -8,7 +8,8 @@ ms.assetid: a7d16ad6-fc1f-4eb5-a190-1d9fc06c3678
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager WMI Programming
 Programming the Configuration Manager client Windows Management Instrumentation (WMI) provider differs according to the programming language you use.  

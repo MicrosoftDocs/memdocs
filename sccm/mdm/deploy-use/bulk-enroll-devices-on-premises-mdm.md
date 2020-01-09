@@ -10,7 +10,8 @@ ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to bulk-enroll devices with On-premises Mobile Device Management in Configuration Manager
 

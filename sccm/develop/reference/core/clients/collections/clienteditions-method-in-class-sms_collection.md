@@ -9,7 +9,8 @@ ms.assetid: 030dee48-575c-40fe-b402-920426271329
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ClientEditions Method in Class SMS_Collection
 The `ClientEditions` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves a list of client editions and whether the `DeviceOwner` property may be edited.  

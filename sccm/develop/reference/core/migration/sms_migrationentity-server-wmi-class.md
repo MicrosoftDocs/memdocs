@@ -9,7 +9,8 @@ ms.assetid: f1d73341-0463-4939-942f-c26ed9c50324
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_MigrationEntity Server WMI Class
 The `SMS_MigrationEntity` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the gathered object entities from the Configuration Manager 2007 hierarchy.  

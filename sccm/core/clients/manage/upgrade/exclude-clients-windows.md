@@ -10,7 +10,8 @@ ms.assetid: 4cd6031f-8844-4d0b-8166-b24d6528a94e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to exclude clients from upgrade in Configuration Manager

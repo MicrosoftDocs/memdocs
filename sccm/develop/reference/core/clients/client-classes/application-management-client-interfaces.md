@@ -9,7 +9,8 @@ ms.assetid: 7156f07b-12cd-40b6-ba57-1ed482218c10
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Application Management Client Interfaces
 In Configuration Manager, the application management interfaces are used by client applications to manage application management functionality on the client.  

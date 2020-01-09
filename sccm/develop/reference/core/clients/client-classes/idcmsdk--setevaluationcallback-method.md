@@ -9,7 +9,8 @@ ms.assetid: f7d77efb-c9ed-4d3b-80c9-ba792c72d6a8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # IDCMSDK::SetEvaluationCallback Method
 The `IDCMSDK::SetEvaluationCallback` method, in Configuration Manager, associates a callback object with an existing evaluation job, specified by job ID.  

@@ -10,7 +10,8 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Import Configuration Manager data to Microsoft Intune 

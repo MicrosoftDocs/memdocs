@@ -9,7 +9,8 @@ ms.assetid: 07a12352-3271-43a8-8ebd-fd31ceaf5ce4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ICIINFO::GetJobState Method
 The `ICIINFO::GetJobState` method, in Configuration Manager, gets the current operational state of the configuration item that is part of a job or task.  

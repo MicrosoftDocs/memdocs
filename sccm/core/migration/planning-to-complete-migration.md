@@ -10,7 +10,8 @@ ms.assetid: f4854b50-2e8c-414c-a872-9579554dca98
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Plan to complete migration in Configuration Manager
 

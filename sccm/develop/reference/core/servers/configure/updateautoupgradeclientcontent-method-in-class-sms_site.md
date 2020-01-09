@@ -9,7 +9,8 @@ ms.assetid: 5d5ec525-bed2-424b-bfb2-23ea8931fe6a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # UpdateAutoUpgradeClientContent Method in Class SMS_Site
 The `UpdateAutoUpgradeClientContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates auto-upgrade client content to all distribution points.  

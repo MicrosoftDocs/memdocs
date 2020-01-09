@@ -10,7 +10,8 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # Introduction to reporting in Configuration Manager
 

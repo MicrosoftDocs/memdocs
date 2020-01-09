@@ -9,7 +9,8 @@ ms.assetid: bc7520bd-ec54-40db-bbee-03df22ebc593
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddDistributionPoints Method in Class SMS_DriverPackage
 The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the distribution points for the driver package.  

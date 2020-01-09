@@ -9,7 +9,8 @@ ms.assetid: 99994d2a-dbc5-4ae0-b77c-4cbfdbd8bcd6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Enable the Partner Notification API
 The Partner Notification API allows third-party partners to use the Wake on LAN feature of Configuration Manager to receive a list of computers that need to be woken up based on advertisements for software distribution.  

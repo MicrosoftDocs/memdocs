@@ -9,7 +9,8 @@ ms.assetid: 274296fd-0eb5-4b6b-b349-9839c70555af
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ICIINFO::GetSdmTypeName Method
 The `ICIINFO::GetSdmTypeName` method, in Configuration Manager, gets the fully qualified name of a configuration item.  

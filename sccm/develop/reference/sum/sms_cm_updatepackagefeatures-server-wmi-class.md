@@ -9,7 +9,8 @@ ms.assetid: 1f1b0614-be4e-4e4a-a2a5-6df5a2d97c1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CM_UpdatePackageFeatures Server WMI Class
 The  `SMS_CM_UpdatePackageFeatures` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents update feature extensions.  

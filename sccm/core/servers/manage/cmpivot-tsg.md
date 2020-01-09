@@ -10,7 +10,8 @@ ms.assetid: 36385bea-f05e-4300-947f-cb3927b3bac5
 author: mestew
 ms.author: mstewart 
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Troubleshoot CMPivot

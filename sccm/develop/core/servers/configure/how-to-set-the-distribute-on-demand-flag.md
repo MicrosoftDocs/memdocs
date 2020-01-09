@@ -9,7 +9,8 @@ ms.assetid: 0b87554c-cfd2-4f26-822d-b5b42d3d5bd0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Set the Distribute on Demand Flag
 The following example shows how to set the distribute on demand flag property of an existing package by using the [SMS_Package Server WMI Class](../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) class in Configuration Manager.  

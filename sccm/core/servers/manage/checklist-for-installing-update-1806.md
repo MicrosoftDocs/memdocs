@@ -10,7 +10,8 @@ ms.assetid: bb0a87a6-fd65-440b-90a5-2fef35622c9d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Checklist for installing update 1806 for Configuration Manager

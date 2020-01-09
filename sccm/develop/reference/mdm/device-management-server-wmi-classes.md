@@ -9,7 +9,8 @@ ms.assetid: cf75f787-c13e-49cf-9adb-e59cbb57bf7c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Device Management Server WMI Classes
 Device management server Windows Management Instrumentation (WMI) classes in Configuration Manager assist in assessment of computer compliance considering a number of mobile device configurations.  

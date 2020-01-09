@@ -9,7 +9,8 @@ ms.assetid: 5a387a79-8915-4f09-a354-96da17798a89
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ServicePlan Server WMI Class
 The `SMS_ServicePlan` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a service plan.  

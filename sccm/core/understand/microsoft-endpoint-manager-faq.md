@@ -6,7 +6,8 @@ ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: be276b34-e283-4386-8b45-5629e431c50d
 author: aczechowski
 ms.author: aaroncz

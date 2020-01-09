@@ -9,7 +9,8 @@ ms.assetid: 45bc90d3-77a5-4c99-bdc4-beffbd5c1929
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequenceAppReferenceDps Server WMI Class
 The `SMS_TaskSequenceAppReferenceDps` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a distribution point to which a Configuration Manager application in the task sequence is distributed.  

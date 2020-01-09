@@ -9,7 +9,8 @@ ms.assetid: c2f7999b-533d-493f-b2b4-079b25c36f2d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure a Advertisement to Allow Reboots Outside of a Maintenance Window
 The following example shows how to configure an advertisement to allow reboots outside of a maintenance window by using the `SMS_Advertisement` class and the `AdvertFlags` class property in Configuration Manager.  

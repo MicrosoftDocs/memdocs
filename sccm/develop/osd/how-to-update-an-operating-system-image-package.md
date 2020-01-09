@@ -9,7 +9,8 @@ ms.assetid: c24fa670-0424-4ba1-9ca0-53e005f0d50a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Update an Operating System Image Package in Configuration Manager
 In Configuration Manager, you update the Windows Image (WIM) file that is associated with the operating system package by calling the image package's [SMS_ImagePackage](../../develop/reference/osd/sms_imagepackage-server-wmi-class.md) class instance [ReloadImageProperties](../../develop/reference/osd/reloadimageproperties-method-in-class-sms_imagepackage.md) method. The image is updated based on the location defined in the `pkgSourcePath` property.  

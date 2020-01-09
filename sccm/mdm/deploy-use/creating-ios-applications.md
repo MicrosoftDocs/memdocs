@@ -10,7 +10,8 @@ ms.assetid: ff633013-5313-4cd3-949c-56d45e777280
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create iOS applications in Configuration Manager

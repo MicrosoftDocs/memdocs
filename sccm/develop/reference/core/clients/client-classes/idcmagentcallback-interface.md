@@ -9,7 +9,8 @@ ms.assetid: 65f4a6ba-e72e-4449-abe2-39a67d3f915e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # IDCMAgentCallback Interface
 The `IDCMAgentCallback` interface, in Configuration Manager, represents the callback for the Desired Configuration Management Agent. This interface inherits from `IUnknown`.  

@@ -9,7 +9,8 @@ ms.assetid: de5971eb-2e4a-400e-b6f7-273015cae137
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetSummarizationSettings Method in Class SMS_SummarizationSettings
 The `GetSummarizationSettings` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the summarization schedule.  

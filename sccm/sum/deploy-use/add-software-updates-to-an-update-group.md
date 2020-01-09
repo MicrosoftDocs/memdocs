@@ -10,7 +10,8 @@ ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Add software updates to an update group  

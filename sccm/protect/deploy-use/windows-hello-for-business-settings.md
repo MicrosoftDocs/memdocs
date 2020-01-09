@@ -10,7 +10,8 @@ ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Windows Hello for Business settings in Configuration Manager

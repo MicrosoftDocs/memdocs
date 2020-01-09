@@ -9,7 +9,8 @@ ms.assetid: b9e16ee5-11c1-4d82-9ff4-73612137e243
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_NAL_Methods Server WMI Class
 The `SMS_NAL_Methods` Windows Management Instrumentation (WMI) class, in Configuration Manager, defines and manipulates a network abstraction layer (NAL) path.  

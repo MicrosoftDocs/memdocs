@@ -9,7 +9,8 @@ ms.assetid: 86eb187a-3aee-4f1d-a94e-e346f1d75031
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddChangeNotification Method in Class SMS_DriverPackage
 The `AddChangeNotification` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a driver package change notification.  

@@ -6,7 +6,6 @@ ms.date: mm/dd/yyyy
 ms.prod: configuration-manager
 ms.technology: configmgr-other #app client compliance hybrid osd protect sum
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
 ms.assetid: [PowerShell New-Guid cmdlet]
 author: aczechowski
 ms.author: aaroncz

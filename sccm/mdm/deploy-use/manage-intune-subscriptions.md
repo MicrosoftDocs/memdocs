@@ -10,7 +10,8 @@ ms.assetid: 9b494767-68c1-47b1-9a86-591bff0ad491
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Manage an Intune subscription associated with Configuration Manager
 

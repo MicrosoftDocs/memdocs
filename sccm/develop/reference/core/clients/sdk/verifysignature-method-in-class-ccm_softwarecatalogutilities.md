@@ -9,7 +9,8 @@ ms.assetid: a9e9ab89-6b46-4e90-ac0f-c038bd5c9fec
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # VerifySignature Method in Class CCM_SoftwareCatalogUtilities
 The `VerifySignature` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that verifies the data signature.   

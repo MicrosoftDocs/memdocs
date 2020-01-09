@@ -10,7 +10,8 @@ ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Modify your Configuration Manager infrastructure
 

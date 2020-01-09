@@ -10,7 +10,8 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Supported Configurations for the Long-Term Servicing Branch of System Center Configuration Manager
 

@@ -10,7 +10,8 @@ ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Client installation methods in Configuration Manager
 

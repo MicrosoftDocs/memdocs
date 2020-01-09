@@ -9,7 +9,8 @@ ms.assetid: 70a288b1-8a61-4820-935c-a9fd89370b26
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # DeleteByID Method in Class SMS_StatusMessage
 The `DeleteByID` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes a group of up to 256 status messages.  

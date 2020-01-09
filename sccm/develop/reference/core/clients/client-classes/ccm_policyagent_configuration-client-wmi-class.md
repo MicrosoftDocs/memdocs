@@ -9,7 +9,8 @@ ms.assetid: 72e377e9-0494-4ec6-a7b6-4361df7112e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_PolicyAgent_Configuration Client WMI Class
 In Configuration Manager, the `CCM_PolicyAgent_Configuration` class is a client Windows Management Instrumentation (WMI) class that represents the Policy Agent configuration for a given authority.  

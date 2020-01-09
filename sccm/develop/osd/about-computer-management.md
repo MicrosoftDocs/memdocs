@@ -9,7 +9,8 @@ ms.assetid: 57146de9-c8ca-480d-9f6f-41c88525b326
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Computer Management
 Computer management in Configuration Manager operating system deployment covers the following areas.  

@@ -9,7 +9,8 @@ ms.assetid: 778a6935-63c4-4101-983a-28222492373c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SIIB_Generic_Configuration Server WMI Class
 The `SMS_SIIB_Generic_Configuration` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents generic configuration for Configuration Manager components.  

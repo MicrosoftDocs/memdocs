@@ -9,7 +9,8 @@ ms.assetid: 05cbc962-ac74-4b55-b58f-f2ccd4a9fe75
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_R_IPNetwork Server WMI Class
 The `SMS_R_IPNetwork` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is generated dynamically at SMS Provider run time and contains discovery data for resources discovered by the Network Discovery Agent.  

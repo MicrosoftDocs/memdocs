@@ -10,7 +10,8 @@ ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Set up certificates for trusted communications for On-premises Mobile Device Management in Configuration Manager
 

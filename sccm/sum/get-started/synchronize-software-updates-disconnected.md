@@ -10,7 +10,8 @@ ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Synchronize software updates from a disconnected software update point  

@@ -10,7 +10,8 @@ ms.assetid: 2d5f871a-19dc-4bd3-a3ad-4230c7a69f1b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to create global conditions in Configuration Manager
 

@@ -11,7 +11,8 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 
-ms.collection: M365-identity-device-management
+
+
 ---
 # Install a new version of Windows on a new computer (bare metal) with Configuration Manager
 

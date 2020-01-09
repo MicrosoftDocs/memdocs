@@ -9,7 +9,8 @@ ms.assetid: 30c0e8cd-bcf7-456f-9d1a-00358d7a75ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_SoftwareCatalogUtilities Client WMI Class
 The `CCM_SoftwareCatalogUtilities` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides a set of utility methods to assist in processing software updates.  

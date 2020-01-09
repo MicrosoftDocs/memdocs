@@ -9,7 +9,8 @@ ms.assetid: 48fec821-d482-465c-b88e-d7f4852f1777
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ADForest Server WMI Class
 The `SMS_ADForest` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains Active Directory forests discovered by Configuration Manager Forest Discovery.  

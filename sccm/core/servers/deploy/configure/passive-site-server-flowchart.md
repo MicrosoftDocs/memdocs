@@ -10,7 +10,8 @@ ms.assetid: b0fcb30e-147c-4910-ba88-5e5b60996e60
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Flowchart - Set up a site server in passive mode

@@ -10,7 +10,8 @@ ms.assetid: d827cf91-b18f-4ee7-b538-24ba6f003ab9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to monitor clients for Linux and UNIX servers in Configuration Manager

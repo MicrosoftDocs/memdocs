@@ -10,7 +10,8 @@ ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Data transfers between sites

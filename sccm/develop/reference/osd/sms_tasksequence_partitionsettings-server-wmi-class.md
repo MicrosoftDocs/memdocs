@@ -9,7 +9,8 @@ ms.assetid: 0eb0d627-d1c6-4cee-a426-7753dd2f5d74
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequence_PartitionSettings Server WMI Class
 The `SMS_TaskSequence_PartitionSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies the settings to use when creating and formatting a partition on a hard disk drive.  
