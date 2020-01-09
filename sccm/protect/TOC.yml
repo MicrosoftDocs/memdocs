@@ -1,5 +1,5 @@
-- name: Protect data and infrastructure
-  href: understand\protect-data-and-site-infrastructure.md
+- name: Protect data and infrastructure documentation
+  href: index.yml
 - name: Understand and explore
   items:
   - name: Overview
