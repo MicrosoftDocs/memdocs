@@ -9,7 +9,8 @@ ms.assetid: 3e797ee7-ebc6-4d4d-b5d7-8a3b901d8d51
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Delete a Configuration Manager Object by Using Managed Code
 To delete a Configuration Manager object by using the managed SMS Provider, use the [IResultObject.Delete](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.delete.aspx) method. You can get a [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object for a Configuration Manager object in numerous ways. For more information, see [How to Read a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md)  

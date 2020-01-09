@@ -9,7 +9,8 @@ ms.assetid: c8e1830a-2963-4a56-abdc-ab09cf63e3a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SiteControlDaySchedule Server WMI Class
 The `SMS_SiteControlDaySchedule` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents usage information for each hour of the day.  

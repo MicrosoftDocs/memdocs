@@ -10,7 +10,8 @@ ms.assetid: bd5b34c9-7304-4743-81c3-96f1e0c80702
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Customer Experience Improvement Program (CEIP) for Configuration Manager
 

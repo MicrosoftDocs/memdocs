@@ -10,7 +10,8 @@ ms.assetid: e217699a-28b2-471a-b421-8fbd1d1fd638
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # OneDrive for Business Profiles

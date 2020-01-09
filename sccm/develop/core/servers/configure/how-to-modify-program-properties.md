@@ -9,7 +9,8 @@ ms.assetid: 7e4018e2-f4df-426a-b3f1-b6837aee7fa8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Modify Program Properties
 The following example shows how to modify a program, in Configuration Manager, by using the `SMS_Package` and `SMS_Program` classes and properties.  

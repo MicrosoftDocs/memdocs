@@ -8,7 +8,8 @@ ms.assetid: cf102999-d4b1-46c9-a7cb-2af86423f140
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager Console Views
 Configuration Manager console views are displayed in the results pane of the Configuration Manager console. You can create your own views and make them available anywhere in the tree view hierarchy.  

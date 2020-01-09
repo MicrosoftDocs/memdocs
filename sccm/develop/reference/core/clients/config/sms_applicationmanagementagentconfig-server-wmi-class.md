@@ -9,7 +9,8 @@ ms.assetid: b84aafbf-df61-4324-a39f-3b50c4eb14ce
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ApplicationManagementAgentConfig Server WMI Class
 The `SMS_ApplicationManagementAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains the configuration of Application Management client agent settings.  

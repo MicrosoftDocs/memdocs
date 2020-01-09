@@ -10,7 +10,8 @@ ms.assetid: 9126d188-7780-45a4-b21d-7fcf4fad7da2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Apply settings to Android for Work apps with app configuration policies in Configuration Manager
 

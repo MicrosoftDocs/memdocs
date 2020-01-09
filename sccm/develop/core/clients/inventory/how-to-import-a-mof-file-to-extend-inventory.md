@@ -9,7 +9,8 @@ ms.assetid: 4b57f922-9029-4617-8c21-6c75ccebbb5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Import a MOF File to Extend Inventory
 You import a MOF file to extend inventory, in Configuration Manager, by using the `ImportInventoryReport` method.  

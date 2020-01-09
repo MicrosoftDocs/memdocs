@@ -10,7 +10,8 @@ ms.assetid: 79eb49da-cd2b-4ffc-b355-b595aeba3aea
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Introduction to software inventory in Configuration Manager
 

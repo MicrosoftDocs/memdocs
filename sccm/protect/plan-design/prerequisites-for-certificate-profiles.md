@@ -10,7 +10,8 @@ ms.assetid: 0317fd02-3721-4634-b18b-7c976a4e92bf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Prerequisites for certificate profiles in Configuration Manager
 

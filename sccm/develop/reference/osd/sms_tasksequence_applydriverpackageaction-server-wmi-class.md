@@ -9,7 +9,8 @@ ms.assetid: a84ea8fa-ba47-4e73-a946-9eb579feadd6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequence_ApplyDriverPackageAction Server WMI Class
 The `SMS_TaskSequence_ApplyDriverPackageAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an action used in a task sequence to make all device drivers in a driver package available for use by Windows setup.  

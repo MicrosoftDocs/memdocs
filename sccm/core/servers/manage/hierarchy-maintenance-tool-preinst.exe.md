@@ -10,7 +10,8 @@ ms.assetid: cead6825-6113-4ba5-a381-ac3598dfee86
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Hierarchy Maintenance Tool (Preinst.exe) for Configuration Manager
 

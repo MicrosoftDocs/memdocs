@@ -10,7 +10,8 @@ ms.assetid: b9800a66-7541-47ca-8276-da8ef6cb6d1b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create a custom task sequence with Configuration Manager

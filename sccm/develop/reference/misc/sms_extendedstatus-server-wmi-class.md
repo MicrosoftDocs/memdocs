@@ -9,7 +9,8 @@ ms.assetid: ab4e741a-2a0a-4b08-aa47-42bfb9dd94ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ExtendedStatus Server WMI Class
 The `SMS_ExtendedStatus` Windows Management Instrumentation (WMI) class, in Configuration Manager, supports an error object that supplies the cause and nature of the current error.  

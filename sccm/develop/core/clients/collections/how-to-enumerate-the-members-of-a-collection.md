@@ -9,7 +9,8 @@ ms.assetid: b6405754-0475-4a07-a6ff-1adc76de3815
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Enumerate the Members of a Collection
 In Configuration Manager, the preferred method to enumerate through a collection is to use `SMS_FullCollectionMembership Server WMI Class`.  

@@ -10,7 +10,8 @@ ms.assetid: f0a78038-ea22-4826-9c07-1771b7dd2e8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Apply settings to iOS apps with app configuration policies in Configuration Manager
 

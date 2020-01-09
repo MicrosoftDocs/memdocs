@@ -9,7 +9,8 @@ ms.assetid: c719e7cf-481b-44ee-92db-60de1b4e5581
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CIDetectInfo Structure
 In Configuration Manager, the `CIDetectInfo` structure contains identity information for baseline configuration item detection.  

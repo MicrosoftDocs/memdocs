@@ -9,7 +9,8 @@ ms.assetid: f60558cd-a2c9-401d-bca0-191cdf117bbe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ProgressUI Client COM Automation Class
 `ProgressUI` is a COM automation class, in Configuration Manager, that represents a user interface that custom actions use to report progress to the Configuration Manager operating system deployment task sequencing environment. The class implements the `IProgressUI` interface, which has a method `ShowActionProgress` that is used to display custom action progress information in a dialog box while the custom action is running. You should not call any other method implemented in `ProgressUI`.  

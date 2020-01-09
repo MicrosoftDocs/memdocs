@@ -10,7 +10,8 @@ ms.assetid: 9a32f5a3-9917-434f-9811-106170f404be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Upgrade an evaluation installation of Configuration Manager to a full installation
 

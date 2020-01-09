@@ -9,7 +9,8 @@ ms.assetid: 0b96f338-dd8a-449d-a4c0-8177ebbb0bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # DeleteByQuery Method in Class SMS_StatusMessage
 The `DeleteByQuery` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes status messages specified by a WQL query.  

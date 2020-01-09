@@ -9,7 +9,8 @@ ms.assetid: a3bfa9cf-2aa0-4fcc-be1e-50983a1fb432
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_R_System Server WMI Class
 The `SMS_R_System` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is generated dynamically at SMS Provider run time and contains discovery data for all discovered system resources.  

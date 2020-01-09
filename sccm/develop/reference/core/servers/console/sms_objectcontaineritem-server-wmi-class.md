@@ -9,7 +9,8 @@ ms.assetid: bfa25626-733e-4023-98b2-e1ff3ee18255
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ObjectContainerItem Server WMI Class
 The `SMS_ObjectContainerItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains information about a Configuration Manager console folder item.  

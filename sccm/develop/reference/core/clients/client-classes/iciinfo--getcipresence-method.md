@@ -9,7 +9,8 @@ ms.assetid: 943e216f-5ac5-4962-a053-072f1acbc6c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ICIINFO::GetCIPresence Method
 The `ICIINFO::GetCIPresence` method, in Configuration Manager, gets the current presence for the configuration item. The presence data includes the compliance state for the configuration item.  

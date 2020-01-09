@@ -9,7 +9,8 @@ ms.assetid: 789d981f-d0c5-447b-9d93-24d2e0eef5f0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Operating System Deployment Driver Management
 In Configuration Manager, the driver catalog helps manage the cost and complexity of deploying an operating system in an environment that contains different types of computers and devices. By storing device drivers in the driver catalog and not with each individual operating system image, the number of operating system images that is needed is greatly reduced. For more information about the driver catalog, see [https://go.microsoft.com/fwlink/?LinkId=110504](https://go.microsoft.com/fwlink/?LinkId=110504).  

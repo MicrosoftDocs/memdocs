@@ -10,7 +10,8 @@ ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to monitor Endpoint Protection status
 

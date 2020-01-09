@@ -10,7 +10,8 @@ ms.assetid: 507bf676-2679-4e4d-8831-3ffc9cf8557e
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to monitor and plan for power management in Configuration Manager
 

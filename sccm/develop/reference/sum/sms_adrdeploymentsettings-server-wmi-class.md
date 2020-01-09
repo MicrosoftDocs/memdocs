@@ -9,7 +9,8 @@ ms.assetid: 9069bd1c-693c-4235-866c-b9376af2929c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ADRDeploymentSettings Server WMI Class
 The `SMS_ADRDeploymentSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Automatic Deployment Rule (ADR) deployment settings.  

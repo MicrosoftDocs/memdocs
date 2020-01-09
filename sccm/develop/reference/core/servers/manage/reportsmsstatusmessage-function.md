@@ -9,7 +9,8 @@ ms.assetid: 3fbdfb51-67dc-4409-9e4a-d943e1e0382f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ReportSMSStatusMessage Function
 The `ReportSMSStatusMessage` function, in Configuration Manager, submits a status message object to the Configuration Manager status system and then deallocates the object.  

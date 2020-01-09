@@ -9,7 +9,8 @@ ms.assetid: 200abc40-4ff2-44ba-8e8f-d49225637bf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # RaiseErrorStatusMsg Method in Class SMS_StatusMessage
 The `RaiseErrorStatusMsg` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates an error status message.  

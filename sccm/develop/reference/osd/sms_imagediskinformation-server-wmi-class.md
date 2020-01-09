@@ -9,7 +9,8 @@ ms.assetid: 8e189e99-5a5f-41c9-91ee-14a69cc5fe58
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ImageDiskInformation Server WMI Class
 The `SMS_ImageDiskInformation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all disks and partition information in an operating system image and operating system installer.  

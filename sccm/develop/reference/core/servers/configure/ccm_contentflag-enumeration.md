@@ -9,7 +9,8 @@ ms.assetid: 759cd7fa-2980-4b1a-905a-1bb1a21402af
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_CONTENTFLAG Enumeration
 The **CCM_CONTENTFLAG** enumeration contains options for transferring content.  

@@ -9,7 +9,8 @@ ms.assetid: b2abf865-b98f-4e16-a836-1fc42ae2c348
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # FallbackSMP Method in Class SMS_BoundaryGroupRelationships
  The `FallbackSMP` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the fallback time, in minutes, for a state migration point (SMP). The default value is 120.  

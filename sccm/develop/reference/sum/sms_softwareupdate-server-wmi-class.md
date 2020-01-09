@@ -9,7 +9,8 @@ ms.assetid: e5fb6013-75f0-41fe-972d-3d7a242f6e5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SoftwareUpdate Server WMI Class
 The `SMS_SoftwareUpdate` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that exposes software update information available on a site and serves as the core class for software updates.  

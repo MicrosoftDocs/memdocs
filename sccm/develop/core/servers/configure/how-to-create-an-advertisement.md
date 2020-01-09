@@ -9,7 +9,8 @@ ms.assetid: 97f583d0-701b-41e5-8897-4e64bec0b85b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create an Advertisement
 The following example shows how to create an advertisement by using the [SMS_Advertisement](/sccm/develop/reference/core/servers/configure/sms_advertisement-server-wmi-class) class and class properties in Configuration Manager.  

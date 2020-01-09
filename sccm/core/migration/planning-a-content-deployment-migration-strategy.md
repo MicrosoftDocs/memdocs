@@ -10,7 +10,8 @@ ms.assetid: 66f7759c-6272-4116-aad7-0d05db1d46cd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Plan a content deployment migration strategy in Configuration Manager
 

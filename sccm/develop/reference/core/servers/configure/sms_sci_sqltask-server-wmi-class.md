@@ -9,7 +9,8 @@ ms.assetid: 92b5c389-ae47-4a77-8dbc-181926f23ba8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SCI_SQLTask Server WMI Class
 The `SMS_SCI_SQLTask` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines a SQL task to be run periodically.  

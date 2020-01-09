@@ -9,7 +9,8 @@ ms.assetid: 54a9b910-2ed2-480c-adc8-aa61201ae39e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Assign Configuration Baselines
 In Configuration Manager, to assign a configuration baseline to a collection, an assignment instance is created, populated with a minimum set of required values, and saved.  

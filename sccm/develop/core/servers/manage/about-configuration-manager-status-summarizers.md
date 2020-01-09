@@ -8,7 +8,8 @@ ms.assetid: 99ab10c8-3095-4a73-966e-9c14091341d2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager Status Summarizers
 Summarizers are summary classes that help you determine the health, or status, of different aspects of your Configuration Manager site. The summaries, which are produced from status messages, states, and counts, give you a real-time view of the health of Configuration Manager sites, components, packages, and advertisements.  

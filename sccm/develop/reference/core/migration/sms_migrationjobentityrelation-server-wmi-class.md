@@ -9,7 +9,8 @@ ms.assetid: 3ab60b66-864e-4851-8c8b-68a35f6302d8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_MigrationJobEntityRelation Server WMI Class
 The `SMS_MigrationJobEntityRelation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the relationship of between each migration job and the objects that it contains.  

@@ -10,7 +10,8 @@ ms.assetid: b8e9dbfe-a046-4e06-8dec-cf0bc41ba095
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Application Deployment Policy for Users

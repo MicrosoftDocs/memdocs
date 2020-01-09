@@ -10,7 +10,8 @@ ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 #  Configure Alerts for Endpoint Protection in Configuration Manager

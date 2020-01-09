@@ -10,7 +10,8 @@ ms.assetid: b81d06dc-3844-4117-9937-16732a227994
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Overview of device enrollment methods
 

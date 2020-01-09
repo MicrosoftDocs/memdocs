@@ -9,7 +9,8 @@ ms.assetid: 134d40db-3d25-4ff4-904f-3282c301d9c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CI_ComplianceSummary Server WMI Class
 The `SMS_CI_ComplianceSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a compliance summary for a baseline configuration item.  

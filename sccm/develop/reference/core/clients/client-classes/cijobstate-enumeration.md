@@ -9,7 +9,8 @@ ms.assetid: 3bdac2a9-16af-4dbb-bea2-3075837acd0e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CIJobState Enumeration
 In Configuration Manager, the `CIJobState` enumeration defines configuration item agent job states. This enumeration is used by the [ICIINFO Interface](../../../../../develop/reference/core/clients/client-classes/iciinfo-interface.md).  

@@ -11,7 +11,8 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 
-ms.collection: M365-identity-device-management
+
+
 ---
 # Deploy Windows To Go with Configuration Manager
 

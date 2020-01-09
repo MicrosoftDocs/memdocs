@@ -10,7 +10,8 @@ ms.assetid: 14ae894c-26fb-4fe3-b51d-e80700122df4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Updates in Desktop Analytics

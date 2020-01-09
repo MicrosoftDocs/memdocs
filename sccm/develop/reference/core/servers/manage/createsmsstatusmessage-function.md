@@ -9,7 +9,8 @@ ms.assetid: b7c7accc-d687-4cfa-ac67-611f3d5d23c4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CreateSMSStatusMessage Function
 In Configuration Manager, the `CreateSMSStatusMessage` function allocates a status message object, initializes it, and retrieves a handle to it.  

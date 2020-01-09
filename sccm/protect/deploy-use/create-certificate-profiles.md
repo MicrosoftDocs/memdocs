@@ -10,7 +10,8 @@ ms.assetid: 634d612c-92d7-4c03-873a-b2e730c9a72d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create certificate profiles

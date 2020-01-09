@@ -8,7 +8,8 @@ ms.assetid: ebfd3530-07f9-4d58-9e0a-f362c0e6dcd7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager Console Extension
 The Configuration Manager console has an XML-based architecture that can be easily extended. The Configuration Manager console supports the following extensions:  

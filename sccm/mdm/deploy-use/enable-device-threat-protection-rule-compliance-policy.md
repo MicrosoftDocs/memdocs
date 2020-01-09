@@ -10,7 +10,8 @@ ms.assetid: 99a5b715-f172-46e1-ac27-ad55bde66d0d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Enable device threat protection rule in the compliance policy
 

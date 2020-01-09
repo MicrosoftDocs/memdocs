@@ -9,7 +9,8 @@ ms.assetid: 9d02ec2c-fd0f-4531-a27c-c1d6824b99c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddChangeNotification Method in Class SMS_Package
 The `AddChangeNotification` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a package change notification.  

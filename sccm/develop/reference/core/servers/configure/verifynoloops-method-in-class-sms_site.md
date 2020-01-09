@@ -9,7 +9,8 @@ ms.assetid: 1abbb982-f594-4ccb-87c4-906154245644
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # VerifyNoLoops Method in Class SMS_Site
 The `VerifyNoLoops` Windows Management Instrumentation (WMI) class method, in Configuration Manager, determines if the insertion of a site in the Configuration Manager hierarchy at a specific point will result in a recursive loop of the sites.  

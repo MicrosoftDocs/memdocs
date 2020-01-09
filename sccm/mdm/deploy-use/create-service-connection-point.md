@@ -10,7 +10,8 @@ ms.assetid: 617abb22-d22f-41fb-a76b-1c4259e419d2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Create a service connection point with Configuration Manager and Microsoft Intune
 

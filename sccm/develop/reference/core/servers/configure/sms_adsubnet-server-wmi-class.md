@@ -9,7 +9,8 @@ ms.assetid: d07d5b73-8504-4ea1-9860-959f7dbd33cc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ADSubnet Server WMI Class
 The `SMS_ADSubnet` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains Active Directory subnets discovered by Configuration Manager Forest Discovery.  

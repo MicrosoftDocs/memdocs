@@ -9,7 +9,8 @@ ms.assetid: 17514bfd-e80e-483d-98fd-12d39c2718eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SiteInstallMap Server WMI Class
 The `SMS_SiteInstallMap` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the site install map, which describes the layout of all installed features.  

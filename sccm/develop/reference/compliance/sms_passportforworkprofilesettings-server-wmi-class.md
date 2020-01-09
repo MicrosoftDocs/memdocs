@@ -9,7 +9,8 @@ ms.assetid: a372b459-a72d-40dd-bf22-6a7480d6fe58
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_PassportForWorkProfileSettings Server WMI Class
 The  `SMS_PassportForWorkProfileSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Windows Hello for Business profile settings.  

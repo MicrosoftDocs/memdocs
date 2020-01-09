@@ -9,7 +9,8 @@ ms.assetid: a5a94aba-ab32-4971-86aa-4e0266c37028
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ReleaseLock Method in Class SMS_ObjectLock
 The `ReleaseLock` Windows Management Instrumentation (WMI) class method, in Configuration Manager, releases a lock to a global object.  

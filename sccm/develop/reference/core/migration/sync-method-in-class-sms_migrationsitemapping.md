@@ -9,7 +9,8 @@ ms.assetid: 372a0ba8-4a3c-4dbc-ac41-9c87ce96c0ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Sync Method in Class SMS_MigrationSiteMapping
 The `Sync` Windows Management Instrumentation (WMI) class method, in Configuration Manager, synchronizes the entities on the source site.  

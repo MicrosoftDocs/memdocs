@@ -9,7 +9,8 @@ ms.assetid: c2d7d78a-bf14-43dc-bad7-8eeba0bab91a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # IAppManagementTypes Interface
 The `IAppManagementTypes` interface, in Configuration Manager, is a container for Application Management related type definitions.  

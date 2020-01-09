@@ -9,7 +9,8 @@ ms.assetid: 37d49bb2-4753-4eb8-baad-627151098437
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_G_System_SoftwareProduct Server WMI Class
 The `SMS_G_System_SoftwareProduct` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides software product information for software files that contain resource strings.  

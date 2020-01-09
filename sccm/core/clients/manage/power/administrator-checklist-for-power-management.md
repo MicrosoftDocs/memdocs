@@ -10,7 +10,8 @@ ms.assetid: 94e42cbe-9df8-4228-a04e-0ad7626180ca
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # Administrator checklist for power management in Configuration Manager
 

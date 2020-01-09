@@ -9,7 +9,8 @@ ms.assetid: 8f0098c3-161c-41fd-a109-c7d2018c2c17
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequence_CaptureWindowsSettingsAction Server WMI Class
 The `SMS_TaskSequence_CaptureWindowsSettingsAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that identifies the settings of the Windows operating system to capture from the target computer.  

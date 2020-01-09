@@ -9,7 +9,8 @@ ms.assetid: 0ec680b1-981e-4da4-81f0-7eab784ef2dc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # InitiateClientOperation Method in Class SMS_ClientOperation
 The `InitiateClientOperation` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that initiates a client operation.   

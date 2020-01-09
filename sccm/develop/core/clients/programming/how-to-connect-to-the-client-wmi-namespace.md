@@ -9,7 +9,8 @@ ms.assetid: dc9ff31d-249a-40e6-83d3-db2e7bd1d6db
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management
 To connect to the Configuration Manager client Windows Management Instrumentation (WMI) provider, you create a `ManagementScope` object in the \\\Client\root\ccm namespace.  

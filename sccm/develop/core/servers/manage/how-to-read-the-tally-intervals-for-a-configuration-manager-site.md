@@ -9,7 +9,8 @@ ms.assetid: 856f0bb5-25cd-4c54-b452-6a0d6acc7500
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Read the Tally Intervals for a Configuration Manager Site
 In Configuration Manager, you can read the available tally intervals for a site by inspecting the site control file `SMS_COMPONENT_STATUS_SUMMARIZER` object `Summary_Intervals` embedded property list.  

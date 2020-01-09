@@ -10,7 +10,8 @@ ms.assetid: 701a3456-9dd6-4aaa-9c5a-37c1e1773216
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Understanding Application Deployment Client Components

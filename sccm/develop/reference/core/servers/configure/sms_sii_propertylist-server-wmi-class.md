@@ -9,7 +9,8 @@ ms.assetid: d1853cde-6768-40f4-aa39-2e42b79d5ad8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SII_PropertyList Server WMI Class
 The `SMS_SII_PropertyList` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a general-purpose storage object defining property lists for a site install item.  

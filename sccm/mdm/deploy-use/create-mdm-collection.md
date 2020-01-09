@@ -10,7 +10,8 @@ ms.assetid: d1b4337f-85e8-45e6-8bbe-9f18b49041c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Create an MDM collection with Configuration Manager and Microsoft Intune
 

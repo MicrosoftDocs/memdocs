@@ -9,7 +9,8 @@ ms.assetid: 8966724d-f663-42a9-98a5-d10cfa9a6a5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # IPxeAuthClass::CreateIdentity Method
 In Configuration Manager, the `CreateIdentity` method creates a PXE certificate identity that is used in the client configuration file. This method is used to create a new self-signed certificate.  

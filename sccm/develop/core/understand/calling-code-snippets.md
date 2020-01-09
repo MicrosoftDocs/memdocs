@@ -9,7 +9,8 @@ ms.assetid: 8d5d026f-18da-43c4-8427-575716351925
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Calling Configuration Manager Code Snippets
 The following code samples show how to set up the calling code for the code examples that are used throughout the Configuration Manager Software Development Kit (SDK).  

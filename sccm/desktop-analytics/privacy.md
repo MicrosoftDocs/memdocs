@@ -10,7 +10,8 @@ ms.assetid: b5606f15-f589-485c-a599-cdabf1a9e7ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Desktop Analytics data privacy

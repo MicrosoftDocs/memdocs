@@ -9,7 +9,8 @@ ms.assetid: 6827bb41-2697-432a-bf41-0d5fd61f8565
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_ServiceWindow Client WMI Class
 The `CCM_ServiceWindow` Client WMI class is a client class, in Configuration Manager, that lists instances of service windows.  

@@ -10,7 +10,8 @@ ms.assetid: ab7626ae-d4bf-4ca6-ab25-c61f96800a02
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Enable Endpoint Protection malware definitions to download from Microsoft Updates

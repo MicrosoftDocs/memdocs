@@ -9,7 +9,8 @@ ms.assetid: 6a7f9c94-ccbd-43ef-9adb-ed620ba3fe5f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_Policy_Condition Client WMI Class
 In Configuration Manager, the `CCM_Policy_Condition` class is a client Windows Management Instrumentation (WMI) class that represents a policy condition.  

@@ -9,7 +9,8 @@ ms.assetid: 43a057a5-3370-4c54-821a-5029e7c4bd8c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Console ResourceAssembly Element
 In Configuration Manager, the `ResourceAssembly` element defines the resources that are used by the node. The following XML defines the assembly, `AdminUI.CollectionProperty.dll`, and the type of the resource within the assembly.  
