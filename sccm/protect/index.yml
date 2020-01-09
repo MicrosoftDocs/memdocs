@@ -65,6 +65,28 @@ landingContent:
           - text: Monitor Endpoint Protection status
             url: deploy-use/monitor-endpoint-protection.md
 
+  # Card 
+  - title: Certificate profiles
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Introduction to certificate profiles
+            url: deploy-use/introduction-to-certificate-profiles.md
+      - linkListType: get-started
+        links:
+          - text: Planning for certificate template permissions for certificate profiles
+            url: plan-design/planning-for-certificate-template-permissions.md
+          - text: Prerequisites for certificate profiles
+            url: plan-design/prerequisites-for-certificate-profiles.md
+      - linkListType: deploy
+        links:
+          - text: Configure certificate infrastructure
+            url: deploy-use/certificate-infrastructure.md
+          - text: Create certificate profiles
+            url: deploy-use/endpoint-configure-alerts.md
+          - text: Deploy resource access profiles
+            url: deploy-use/endpoint-definition-updates.md
+
   # Card
   - title: Top tasks
     linkLists:
@@ -75,5 +97,11 @@ landingContent:
           - text: Troubleshoot Windows Defender or Endpoint Protection client
             url: deploy-use/troubleshoot-endpoint-client.md
           - text: Manage antimalware policies and firewall settings
-            url: deploy-use/endpoint-antimalware-firewall.md                          
+            url: deploy-use/endpoint-antimalware-firewall.md
+          - text: Windows Defender Application Control management
+            url: deploy-use/use-device-guard-with-configuration-manager.md
+          - text: Create and deploy Windows Defender Application Guard
+            url: deploy-use/create-deploy-application-guard-policy.md
+          - text: Windows Hello for Business settings
+            url: deploy-use/windows-hello-for-business-settings.md  
 
