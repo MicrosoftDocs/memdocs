@@ -81,7 +81,7 @@ When you run **Setup** to install the top-tier site of a hierarchy, you can inst
 
 After setup runs, or if you're reinstalling the role, use the **Add Site System Roles** wizard or the **Create Site System Server** wizard. (Only install the service connection point on the top-tier site of your hierarchy.) For more information, see [Install site system roles](/configmgr/core/servers/deploy/configure/install-site-system-roles).
 
-## Move the role
+## <a name="bkmk_move"></a> Move the role
 
 <!-- SCCMDocs#922 -->
 There are several scenarios in which you may need to move the service connection point to another server:

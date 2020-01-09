@@ -44,6 +44,9 @@ Use the **Connection Health** dashboard in Configuration Manager to drill down i
 
 For more information, see [Monitor connection health](/sccm/desktop-analytics/monitor-connection-health).
 
+> [!NOTE]
+> The Configuration Manager connection to Desktop Analytics relies upon the service connection point. Any changes to this site system role may impact synchronization with the cloud service. For more information, see [About the service connection point](/configmgr/core/servers/deploy/configure/about-the-service-connection-point#bkmk_move).
+
 
 ## Log files
 

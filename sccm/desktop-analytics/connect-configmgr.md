@@ -125,11 +125,12 @@ Configuration Manager creates a settings policy to configure devices in the Targ
 
 Monitor the configuration of your devices for Desktop Analytics. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Desktop Analytics Servicing** node, and select the **Connection Health** dashboard.  
 
-For more information, see [Monitor connection health](/sccm/desktop-analytics/troubleshooting#monitor-connection-health).
+For more information, see [Monitor connection health](/sccm/desktop-analytics/monitor-connection-health).
 
 Configuration Manager synchronizes your collections within 60 minutes of creating the connection. In the Desktop Analytics portal, go to  **Global Pilot**, and see your Configuration Manager device collections.
 
-
+> [!NOTE]
+> The Configuration Manager connection to Desktop Analytics relies upon the service connection point. Any changes to this site system role may impact synchronization with the cloud service. For more information, see [About the service connection point](/configmgr/core/servers/deploy/configure/about-the-service-connection-point#bkmk_move).
 
 ## Next steps
 
