@@ -1,0 +1,79 @@
+### YamlMime:Landing
+
+title: Protect data and infrastructure documentation
+summary: Protect both your infrastructure and your data from exposure or malicious attack using Configuration Manager.
+ 
+
+metadata:
+  title: Protect data and infrastructure documentation
+  titleSuffix: Configuration Manager
+  description: Protect both your infrastructure and your data from exposure or malicious attack using Configuration Manager.
+  ms.product: configuration-manager
+  ms.technology: configmgr-protect
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  - title: Manage BitLocker Drive Encryption (BDE)
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Plan for BitLocker management
+            url: plan-design/bitlocker-management.md
+      - linkListType: deploy
+        links:
+          - text: Deploy BitLocker management
+            url: deploy-use/bitlocker/deploy-management-agent.md
+          - text: Set up BitLocker portals
+            url: deploy-use/bitlocker/setup-websites.md
+      - linkListType: how-to-guide
+        links:
+          - text: View BitLocker reports
+            url: deploy-use/bitlocker/view-reports.md
+          - text: Use the BitLocker administration and monitoring website
+            url: deploy-use/bitlocker/helpdesk-portal.md
+
+  # Card 
+  - title: Endpoint Protection
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Endpoint Protection overview
+            url: deploy-use/endpoint-protection.md
+      - linkListType: get-started
+        links:
+          - text: Plan for Endpoint Protection
+            url: plan-design/planning-for-endpoint-protection.md
+      - linkListType: deploy
+        links:
+          - text: Create an Endpoint Protection point site system role
+            url: deploy-use/endpoint-protection-site-role.md
+          - text: Configure alerts for Endpoint Protection
+            url: deploy-use/endpoint-configure-alerts.md
+          - text: Configure definition updates for Endpoint Protection
+            url: deploy-use/endpoint-definition-updates.md
+      - linkListType: how-to-guide
+        links:
+          - text: Create and deploy antimalware policies for Endpoint Protection 
+            url: deploy-use/endpoint-antimalware-policies.md
+          - text: Configure custom client settings for Endpoint Protection
+            url: deploy-use/endpoint-protection-configure-client.md
+          - text: Monitor Endpoint Protection status
+            url: deploy-use/monitor-endpoint-protection.md
+
+  # Card
+  - title: Top tasks
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Microsoft Defender Advanced Threat Protection onboarding
+            url: deploy-use/windows-defender-advanced-threat-protection.md
+          - text: Troubleshoot Windows Defender or Endpoint Protection client
+            url: deploy-use/troubleshoot-endpoint-client.md
+          - text: Manage antimalware policies and firewall settings
+            url: deploy-use/endpoint-antimalware-firewall.md                          
+
