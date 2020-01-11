@@ -8,8 +8,6 @@
     href: plan-design/plan-on-premises-mdm.md
   - name: Setup
     items:
-    - name: Setup steps
-      href: get-started/preparation-steps-for-on-premises-mdm.md
     - name: Install on-prem roles
       href: get-started/install-site-system-roles-for-on-premises-mdm.md
     - name: Set up certificates

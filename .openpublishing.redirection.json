@@ -724,6 +724,11 @@
             "source_path": "sccm/comanage/quickstart-migrate-hybrid-mdm.md",
             "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/get-started/preparation-steps-for-on-premises-mdm.md",
+            "redirect_url": "/configmgr/mdm/plan-design/plan-on-premises-mdm",
+            "redirect_document_id": false
         }
     ]
 }
