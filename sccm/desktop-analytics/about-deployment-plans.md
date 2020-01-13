@@ -84,7 +84,7 @@ A **Blocked** Windows upgrade decision can be caused by the following reasons:
 
 - You set the upgrade decision of one or more assets to **Unable**.
 
-- The inventory data for that device is incomplete and Desktop Analytics can't perform a full compatibility assestment.
+- The inventory data for that device is incomplete and Desktop Analytics can't do a full compatibility assessment.
 
 ### Apps
 
