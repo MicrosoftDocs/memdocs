@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-When the Configuration Manager client installs on a device and successfully assigns to a site, you sf the device in the **Assets and Compliance** workspace in the **Devices** node, and in one or more collections in the **Device Collections** node. Select the device or a collection, and then run management operations. However, there are other ways to manage the client, which might involve other workspaces in the console, or tasks outside of the console.  
+When the Configuration Manager client installs on a device and successfully assigns to a site, you see the device in the **Assets and Compliance** workspace in the **Devices** node, and in one or more collections in the **Device Collections** node. Select the device or a collection, and then run management operations. However, there are other ways to manage the client, which might involve other workspaces in the console, or tasks outside of the console.  
 
 > [!NOTE]  
 > If you install the Configuration Manager client, but it hasn't yet successfully assigned to a site, it might not display in the console. After the client assigns to a site, update collection membership, and then refresh the console view.  
