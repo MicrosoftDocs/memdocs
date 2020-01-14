@@ -116,7 +116,7 @@ Block a client that you no longer trust. Blocking prevents the client from recei
 
 You can also unblock a client that is blocked.
 
-For more information, ee [Determine whether to block clients](/configmgr/core/clients/deploy/plan/determine-whether-to-block-clients).
+For more information, see [Determine whether to block clients](/configmgr/core/clients/deploy/plan/determine-whether-to-block-clients).
 
 <!-- Change Category is a hybrid action -->
 
