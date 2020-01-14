@@ -25,13 +25,7 @@
   - name: Manage devices and protect data
     href: deploy-use/wipe-lock-reset-devices.md
   - name: Manage applications
-    items:
-    - name: Manage applications overview
-      href: deploy-use/management-tasks-applications.md
-    - name: Create Windows Phone applications
-      href: deploy-use/creating-windows-phone-applications.md
-    - name: Microsoft Store for Business apps
-      href: deploy-use/windows-store-for-business.md
+    href: deploy-use/management-tasks-applications.md
   - name: Manage compliance settings
     items:
     - name: Compliance scenarios

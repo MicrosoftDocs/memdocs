@@ -152,7 +152,7 @@
         },
         {
             "source_path": "sccm/apps/get-started/creating-windows-phone-applications.md",
-            "redirect_url": "/sccm/mdm/deploy-use/creating-windows-phone-applications",
+            "redirect_url": "/sccm/mdm/deploy-use/management-tasks-applications#bkmk_winphone",
             "redirect_document_id": false
         },
         {
@@ -738,6 +738,16 @@
         {
             "source_path": "sccm/mdm/deploy-use/onprem-manage-applications.md",
             "redirect_url": "/configmgr/mdm/deploy-use/management-tasks-applications",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/creating-windows-phone-applications.md",
+            "redirect_url": "/configmgr/mdm/deploy-use/management-tasks-applications#bkmk_winphone",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/windows-store-for-business.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         }
     ]
