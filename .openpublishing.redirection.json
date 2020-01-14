@@ -2,12 +2,12 @@
     "redirections": [
         {
             "source_path": "sccm/compliance/plan-design/common-tasks-for-managing-compliance-on-devices-not-running-the-client.md",
-            "redirect_url": "/sccm/mdm/deploy-use/manage-compliance-settings",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
             "source_path": "sccm/compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md",
-            "redirect_url": "/sccm/mdm/deploy-use/manage-compliance-settings",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
@@ -747,6 +747,11 @@
         },
         {
             "source_path": "sccm/mdm/deploy-use/windows-store-for-business.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/manage-compliance-settings.md",
             "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         }

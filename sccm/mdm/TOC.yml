@@ -26,10 +26,8 @@
     href: deploy-use/wipe-lock-reset-devices.md
   - name: Manage applications
     href: deploy-use/management-tasks-applications.md
-  - name: Manage compliance settings
+  - name: Manage configuration settings
     items:
-    - name: Compliance scenarios
-      href: deploy-use/manage-compliance-settings.md
     - name: Windows 8.1 and Windows 10
       href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
     - name: Windows Phone
