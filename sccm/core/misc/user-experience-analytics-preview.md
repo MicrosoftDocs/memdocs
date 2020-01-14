@@ -148,12 +148,39 @@ Proactive remediations are script packages that can detect and fix common suppor
 
 Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you'll be able to deploy these script packages and see reports on their effectiveness. We're actively developing new scripts and would like to know your experiences using these scripts. Reach out to your user experience analytics preview contact if you have any feedback on the script packages.
 
-### Downloading Microsoft’s scripts
-<!-->
-1. Download the [cab file containing the PowerShell scripts](placeholder).
-    - The sc
+### <a name="bkmk_uea_prs_ps1"></a> Downloading Microsoft’s scripts
 
-2. -->
+1. Download the [cab file containing the PowerShell scripts](https://download.microsoft.com).
+    - Script files whose names start with `det` are detection scripts. Remediation scripts start with `rem`.
+    - For a description of the scripts, see the [Script descriptions](#bkmk_uea_scripts).
+
+#### Is this actually needed? Seems like a duplicate of deploying scripts
+
+1. Go to the **Proactive remediations** node in the console.
+1. Click **Create** and when prompted, insert a detection script. Copy the text from a script file you downloaded. When prompted, copy the text of the corresponding remediation script. You need the detection and remediation script to be in the same package. For example the `DetGPLastUpd.ps1` detection script corresponds with the `RemGPLastUpd.ps11` remediation script.
+1. Continue with the creation process choosing the scope, tags, and assignments that make sense for your organization.
+1. Once the creation process is complete, you can deploy the scripts.
+
+### <a name="bkmk_uea_prs_deploy"></a> Deploying and monitoring scripts
+
+1. Go to the **Proactive remediations** node in the console.
+1. Click the **Create** button to create a script package.
+1. In the **Basics** step, give the script package a **Name** and optionally, a **description**. The **Publisher** field can be edited, but defaults to your tenant name. **Version** can't be edited. 
+1. On the **Settings** step, copy the text from the scripts you downloaded into the **Detection script** and **Remediation script** fields. 
+   - You need the corresponding detection and remediation script to be in the same package. For example the `DetGPLastUpd.ps1` detection script corresponds with the `RemGPLastUpd.ps11` remediation script.
+1. Finish the options on the **Settings** page with the following recommended configurations:
+   - **Run this script using the logged-on credentials**: This is dependant on the script. For more information, see the [Script descriptions](#bkmk_uea_scripts).
+   - **Enforce script signature check**: No
+   - **Run script in 64-bit PoswerShell**: No
+1. Click **Next** then assign any **Scope tags** you need.
+1. In the **Assignments** step, select the device groups to which you want to deploy the script package.
+1. Complete the **Review + Create** step for your deployment.
+1. Under **Reporting** > **User experience analytics - Proactive remediations**, you can see an overview of your detection and remediation status.
+1. Click on **Device status** to get status details for each device in your deployment.
 
 
-
+### <a name="bkmk_uea_scripts"></a> Script descriptions
+|Script name|Description|
+|---|---|
+|**Update stale Group Policies** </br>`DetGPLastUpd.ps1` </br> `RemGPLastUpd.ps1`| Detect if last Group Policy refresh is greater than `7 days` ago.  </br>Customize the 7 day threshold by changing the value for `$numDays` in the detection script. </br>Remediate by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`  </br> </br>Can help reduce network connectivity related support calls when certificates and configurations are delivered via Group Policy. </br> </br> **Run the script using the logged-on credentials**: Yes|
+|**Restart Office Click-to-Run service** </br> `DetectClickToRunServicecState.ps1` </br> `RemediateClickToRunServiceState.ps1`
