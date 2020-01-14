@@ -90,6 +90,22 @@ Class SMS_CIRelation : SMS_BaseClass
 |4|Optional|  
 |5|Derived|  
 |6|Superseded|  
+|7|Self|  
+|8|Reference|  
+|9|AppToDTReference|  
+|10|AppDependence|  
+|11|Intention|  
+|12|Platform|  
+|13|GlobalConditionReference|  
+|15|ApplicationSuperSeded||  
+|16|ApplicationType|  
+|17|ApplicationHost|  
+|18|ApplicationInstaller|  
+|19|SupersedOrDependent|  
+|20|VirtualEnvironmentReference|  
+|21|AppDCMReference|  
+|22|DeploymentTypeToPolicyTemplateReference|  
+|23|CIInheritanceRelation|  
 
  `ToCIID`  
  Data type: `UInt32`  
