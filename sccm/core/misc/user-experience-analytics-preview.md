@@ -37,7 +37,7 @@ This initial release, focuses on three things:
 
 This release is just the beginning. We’ll be rapidly rolling out new insights for other key user-experiences soon after initial release.
 
-## Getting started
+## <a name="bkmk_uea_prereq"></a> Getting started
 
 This current private preview requires:
 - Intune enrolled devices running Windows 10
@@ -109,6 +109,51 @@ The built-in baseline of **Commercial median** doesn't currently have metrics fo
 
 ## <a name="bkmk_uea_bp"></a> Startup performance
 
+The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays. The **Startup score** is a number between 0 and 100. This score is a weighted average of **Boot score** and the **Sign-in** score, which are computed as follows:
+
+- **Boot score**: Based on the time from power-on to sign in. We look at the last boot time from each device, excluding the update phase, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
+- **Sign-in score**: Based on the time from when credentials have been entered until the user can access the desktop. We look at the last sign-in time to each device, excluding first sign-ins or sign-ins immediately after a feature update, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
+
+![User experience analytics startup performance page](media/uea-startup-performance.png)
+
+The **Startup performance** page also provides a prioritized list of **Insights and recommendations**, described in the following sections:
+
+### <a name="bkmk_uea_hdd"></a> Hard disk drives
+
+Startup performance provides an insight on the number of devices on which the boot drive is a hard disk. Hard disk drives typically result in boot times three to four times longer than solid-state drives. We also report the expected improvement to start up performance you would gain by moving to solid-state drives.
+
+Click though to see the list of devices that have hard disk drives. The recommended action is to upgrade these devices to solid-state drives.
+
+### <a name="bkmk_uea_gp"></a> Group Policy
+
+Startup performance provides an insight on the number of devices that have delays to boot and sign-in times caused by Group Policy. Clicking through takes you to the devices view, sorted by Group Policy time, so you can see affected devices for further troubleshooting.
+
+If you click through to a particular device, you can see its boot and sign-in history. The history helps you determine if the issue is a regression and, if so, when it might have occurred.
+
+While there are many articles on how to optimize Group Policies performance, you may choose to migrate to cloud-management instead. Migrating to cloud-management allows you to use [Intune security baselines](https://docs.microsoft.com/intune/protect/security-baselines) and the soon-to-be-released Policy Analytics tool.
+
+### <a name="bkmk_uea_sb"></a> Slow boot and sign-in times
+
+Startup performance provides an insight on the number of devices with slow boot or sign-in times (a boot score or sign-in score of “0”). Clicking through takes you to the devices view. The devices are sorted by core boot time or core sign-in time respectively, so you can see affected devices for further troubleshooting.
+
+If you click through to a particular device, you can see its boot and sign-in history. The history helps you determine if the issue was a regression and, if so, when it might have occurred.
+
+### More startup performance insights are on the way
+
+We're working on more startup performance insights, which will be available in future previews.
+
+## <a name="bkmk_uea_prs"></a> Proactive remediations
+
+Proactive remediations are script packages that can detect and fix common support issues on a user's device before they even realize there's a problem. These remediations can help reduce support calls. You can create your own script package, or deploy one of the scripts we've written and used in our environment for reducing support tickets.
+
+Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you'll be able to deploy these script packages and see reports on their effectiveness. We're actively developing new scripts and would like to know your experiences using these scripts. Reach out to your user experience analytics preview contact if you have any feedback on the script packages.
+
+### Downloading Microsoft’s scripts
+<!-->
+1. Download the [cab file containing the PowerShell scripts](placeholder).
+    - The sc
+
+2. -->
 
 
 
