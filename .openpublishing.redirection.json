@@ -734,6 +734,11 @@
             "source_path": "sccm/mdm/deploy-use/onprem-manage-devices.md",
             "redirect_url": "/configmgr/mdm/deploy-use/wipe-lock-reset-devices",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/onprem-manage-applications.md",
+            "redirect_url": "/configmgr/mdm/deploy-use/management-tasks-applications",
+            "redirect_document_id": false
         }
     ]
 }

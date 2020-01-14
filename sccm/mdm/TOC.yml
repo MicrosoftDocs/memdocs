@@ -8,13 +8,13 @@
     href: plan-design/plan-on-premises-mdm.md
   - name: Setup
     items:
-    - name: Install on-prem roles
+    - name: Install on-premises roles
       href: get-started/install-site-system-roles-for-on-premises-mdm.md
     - name: Set up certificates
       href: get-started/set-up-certificates-on-premises-mdm.md
     - name: Set up for enrollment
       href: get-started/set-up-device-enrollment-on-premises-mdm.md
-  - name: Enroll devices for on-premises MDM
+  - name: Enroll devices
     items:
     - name: Enrollment overview
       href: deploy-use/enroll-devices-on-premises-mdm.md
@@ -25,7 +25,6 @@
   - name: Manage devices and protect data
     href: deploy-use/wipe-lock-reset-devices.md
   - name: Manage applications
-    href: deploy-use/onprem-manage-applications.md
     items:
     - name: Manage applications overview
       href: deploy-use/management-tasks-applications.md
