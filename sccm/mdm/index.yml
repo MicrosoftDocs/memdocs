@@ -30,7 +30,7 @@ landingContent:
           - text: Enroll devices
             url: deploy-use/enroll-devices-on-premises-mdm.md
           - text: Manage devices
-            url: deploy-use/onprem-manage-devices.md
+            url: deploy-use/wipe-lock-reset-devices.md
 
   - title: Connect ConfigMgr and Exchange
     linkLists:

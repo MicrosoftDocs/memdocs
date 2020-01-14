@@ -729,6 +729,11 @@
             "source_path": "sccm/mdm/get-started/preparation-steps-for-on-premises-mdm.md",
             "redirect_url": "/configmgr/mdm/plan-design/plan-on-premises-mdm",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/onprem-manage-devices.md",
+            "redirect_url": "/configmgr/mdm/deploy-use/wipe-lock-reset-devices",
+            "redirect_document_id": false
         }
     ]
 }

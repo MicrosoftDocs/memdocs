@@ -22,8 +22,6 @@
       href: deploy-use/user-enroll-devices-on-premises-mdm.md
     - name: Bulk enrollment
       href: deploy-use/bulk-enroll-devices-on-premises-mdm.md
-  - name: Manage devices
-    href: deploy-use/onprem-manage-devices.md
   - name: Retire/wipe, lock, reset devices
     href: deploy-use/wipe-lock-reset-devices.md
   - name: Manage applications
