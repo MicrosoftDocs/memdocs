@@ -180,17 +180,20 @@ Each script package consists of a detection script, a remediation script, and me
 
 ### <a name="bkmk_uea_scripts"></a> Script descriptions
 
-This table shows the script names, descriptions, detections, remediations, and configurable items.
+This table shows the script names, descriptions, detections, remediations, and configurable items. Script files whose names start with `det` are detection scripts. Remediation scripts start with `rem`.
 
 |Script name|Description|
 |---|---|
 |**Update stale Group Policies** </br>`DetGPLastUpd.ps1` </br> `RemGPLastUpd.ps1`| Detects if last Group Policy refresh is greater than `7 days` ago.  </br>Customize the 7 day threshold by changing the value for `$numDays` in the detection script. </br></br>Remediates by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`  </br> </br>Can help reduce network connectivity related support calls when certificates and configurations are delivered via Group Policy. </br> </br> **Run the script using the logged-on credentials**: Yes|
-|**Restart Office Click-to-Run service** </br> `DetectClickToRunServicecState.ps1` </br> `RemediateClickToRunServiceState.ps1`| Detects if the Click-to-Run service is set to automatically start and if the service is stopped. </br></br> Remediates by setting the service to start automatically and starting the service if it's stopped. </br></br> Helps fix issues where Win32 Office 365 ProPlus won't launch because the Click-to-Run service is stopped. </br></br> **Run the script using the logged-on credentials**: No|
-|**Check network certificates** </br>`DetExpIssuerCerts.ps1` </br>`RemExpIssuerCerts.ps1`|Detects expired certificates issued by your CA in either the Machine or User certificate store. </br> Specify your CA by changing the value for the `$strMatch` variable in the detection script. </br></br>Remediates by raising a toast notification to the user. </br> Specify the `$Title` and `$msgText` values with the message title and text you want your users. </br></br> 
+|**Restart Office Click-to-Run service** </br> `DetectClickToRunServicecState.ps1` </br> `RemediateClickToRunServiceState.ps1`| Detects if the Click-to-Run service is set to automatically start and if the service is stopped. </br> </br> Remediates by setting the service to start automatically and starting the service if it's stopped. </br></br> Helps fix issues where Win32 Office 365 ProPlus won't launch because the Click-to-Run service is stopped. </br> </br> **Run the script using the logged-on credentials**: No|
+|**Check network certificates** </br>`DetExpIssuerCerts.ps1` </br>`RemExpIssuerCerts.ps1`|Detects certificates issued by a CA in either the Machine's or User's personal store that are expired, or near expiry. </br> Specify the CA by changing the value for `$strMatch` in the detection script. Specify 0 for `$expiringDays` to find expired certificates, or specify another number of days to find certificates near expiry.  </br></br>Remediates by raising a toast notification to the user. </br> Specify the `$Title` and `$msgText` values with the message title and text you want users to see. </br> </br> Notifies users of expired certificates which might need to be renewed. </br> </br> **Run the script using the logged-on credentials**: No|
+|**Clear stale certificates** </br>`DetExpUserCerts.ps1` </br> `RemExpUserCerts.ps1`| Detects expired certificates issued by a CA in the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the detection script. </br> </br> Remediates by deleting expired certificates issued by a CA from the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the remediation script. </br> </br> Finds and deletes expired certificates issued by a CA from the current user's personal store. </br> </br> **Run the script using the logged-on credentials**: Yes|
 
-## <a name="bkmk_uea_set"></a> Settings
+## <a name="bkmk_uea_set"></a> User experience analytics settings
 
 ### <a name="bkmk_uea_gen"></a> General
+
+The **General** page in **Settings** allows you to see if Intune startup performance data collection has been enabled. It's automatically enabled for all your devices by default when you click **Start** to enable user-experience analytics. You have the option to go to the Intune data collection policy node to change the set of devices on which boot and sign-in records are collected.
 
 ### <a name="bkmk_uea_baselines"></a> Baseline management
 
