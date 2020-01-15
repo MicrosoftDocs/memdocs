@@ -10,8 +10,6 @@ ms.assetid: d240a836-c49b-49ab-a920-784c062d6748
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Create PFX certificate profiles using a certificate authority
@@ -23,6 +21,10 @@ Learn how to create a certificate profile that uses a certification authority fo
 Configuration Manager allows you to create a PFX certificate profile using credentials issued by a certificate authority. You can choose Microsoft or Entrust as your certificate authority. When deployed to user devices, PFX files generate user-specific certificates to support encrypted data exchange.
 
 To import certificate credentials from existing certificate files, see [Import PFX certificate profiles](/configmgr/mdm/deploy-use/import-pfx-certificate-profiles).
+
+## Prerequisites
+
+Before you start creating a certificate profile, make sure the necessary prerequisites are ready. For more information, see [Prerequisites for certificate profiles](/configmgr/protect/plan-design/prerequisites-for-certificate-profiles). For example, for PFX certificate profiles, you need a [certificate registration point](/configmgr/protect/deploy-use/certificate-infrastructure#step-2---install-and-configure-the-certificate-registration-point) site system role.
 
 ## Create a profile  
 

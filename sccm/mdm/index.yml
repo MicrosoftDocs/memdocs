@@ -25,12 +25,12 @@ landingContent:
             url: plan-design/plan-on-premises-mdm.md
       - linkListType: how-to-guide
         links:
-          - text: Set up
-            url: get-started/preparation-steps-for-on-premises-mdm.md
+          - text: Install roles
+            url: get-started/install-site-system-roles-for-on-premises-mdm.md
           - text: Enroll devices
             url: deploy-use/enroll-devices-on-premises-mdm.md
           - text: Manage devices
-            url: deploy-use/onprem-manage-devices.md
+            url: deploy-use/wipe-lock-reset-devices.md
 
   - title: Connect ConfigMgr and Exchange
     linkLists:
