@@ -191,12 +191,34 @@ This table shows the script names, descriptions, detections, remediations, and c
 
 ## <a name="bkmk_uea_set"></a> User experience analytics settings
 
+From the settings page, you can select **General**, **Baseline**, or **Filters**.
+
 ### <a name="bkmk_uea_gen"></a> General
 
 The **General** page in **Settings** allows you to see if Intune startup performance data collection has been enabled. It's automatically enabled for all your devices by default when you click **Start** to enable user-experience analytics. You have the option to go to the Intune data collection policy node to change the set of devices on which boot and sign-in records are collected.
 
+> [NOTE!]
+> There is a placeholder for instructions for configuring the Configuration Manager data connector. However, this functionality has not been implemented in this initial private preview.
+
 ### <a name="bkmk_uea_baselines"></a> Baseline management
+
+You can compare your current scores and sub-scores to others by setting a baseline.
+
+1. There's a built-in baseline for **Commercial median**, which allows you to compare your scores to a typical enterprise.
+1. You can create new baselines based on your current metrics to track progress or view regressions over time. Click the **Create new** button and give your new baseline a name. We recommend a name that includes the date, so it’s easier to select from the drop-down in the reports pages.
+1. There's a limit of 100 baselines per tenant. You can delete old baselines that are no longer needed.
+1. Your current metrics will be flagged red and show as regressed if they fall below the current baseline in your reports. Because it's perfectly normal for metrics to fluctuate from day to day, you can set a regression threshold, which defaults to 10%. With this threshold, metrics are only flagged as regressed if they have regressed by more than 10%.
 
 ### <a name="bkmk_uea_filter"></a> Filter management
 
+This functionality has not been implemented in this initial private preview. Filters will allow you to view your user experience score on a subset of devices or users.
+
 ## <a name="bkmk_uea_faq"></a> Frequently asked questions
+
+### Why are the scripts exiting with a code of 1?
+
+The scripts exit with a code of 1 to signal to Intune that remediation should occur. Many script packages that run solely in CM may show compliant, but exit with a code of 1. For these scripts, exiting with a code of 1 isn't something alarming.
+
+### Why did the Update Stale Group Policies script return with error 0x87D00321?
+
+0x87D00321 is a script execution time out error. This error typically occurs with machines that are connected remotely. A potential mitigation might be to only deploy to a dynamic collection of machines that have internal network connectivity.
