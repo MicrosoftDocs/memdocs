@@ -78,8 +78,6 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
 - On the main page of the **Devices** node (not all columns might be visible by default).  
 
-  For more information about iOS Activation Lock bypass, see [Help protect iOS devices with Activation Lock bypass for Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock), in particular, the **Current known issues with Activation Lock bypass in the Configuration Manager Technical Preview** section.  
-
 ##  <a name="BKMK_WSFB"></a> Windows Store for Business apps  
  The [Windows Store for Business](https://www.microsoft.com/business-store) is where you can find and purchase apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can manage volume-purchased apps from the Configuration Manager console, for example:  
 

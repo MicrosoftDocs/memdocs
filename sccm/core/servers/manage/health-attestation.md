@@ -72,5 +72,3 @@ Configuration Manager Device Health Attestation displays the following:
 -   **Devices Reporting Health Attestation** - Shows the percentage of devices reporting Health Attestation status  
 -   **Noncompliant Devices by Client Type** - Shows share of mobile devices and computers that are noncompliant  
 -   **Top Missing Health Attestation Settings** - Shows the number of devices missing the health attestation setting, listed per setting
-
-Client Device Health Attestation status can be used to define rules for conditional access in compliance policies for devices managed by Configuration Manager with Microsoft Intune. For details, see [Manage device compliance policies](/sccm/protect/deploy-use/device-compliance-policies).  

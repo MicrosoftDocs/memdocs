@@ -34,5 +34,3 @@ After you enable software inventory and the clients run a software inventory cyc
  When software inventory runs on a client device, the first report is a full inventory. Subsequent reports contain only delta inventory information. The site server processes delta information in the order received. If delta information for a client is missing, the site server rejects further delta information and directs the client to run a full inventory.  
 
  Configuration Manager can discover dual-boot computers but only returns inventory information from the operating system that's active at the time of inventory.  
-
-**Mobile devices:** See [Software inventory for mobile devices enrolled with Microsoft Intune](../../../../mdm/deploy-use/software-inventory-mobile-devices.md)  for information about collecting inventory for apps installed on mobile devices.

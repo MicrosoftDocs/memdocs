@@ -54,12 +54,6 @@ Configuration Manager uses signing and encryption to help protect the management
 
 -   Windows RT client, though these clients verify the signature of an application that is signed by a trusted source and also use package full name (PFN) validation.  
 
--   iOS, though these devices verify the signature of an application that is signed by any developer certificate from a trusted source.  
-
--   Nokia client, though, these clients verify the signature of an application that uses a self-signed certificate. Or, the signature of a certificate from a trusted source and the certificate can sign Nokia Symbian Installation Source (SIS) applications.  
-
--   Android. In addition, these devices do not use signature validation for application installation.  
-
 -   Clients that run on versions of Linux and UNIX that do not support SHA-256. For more information, see [Planning for client deployment to Linux and UNIX computers](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers).  
 
 ### Inventory signing and encryption  

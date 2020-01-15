@@ -343,10 +343,6 @@ The following versions are supported by using the indicated .tar file.
 
 Configuration Manager has built-in capabilities for managing mobile devices that are on-premises without installing client software. For more information, see [Manage mobile devices with on-premises infrastructure](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure).  
 
-### Requirements and limitations
-
-- Configure the **Service connection point** at the top-tier site of your hierarchy.  
-
 ### Supported operating systems
 
 - **Windows 10 Pro** (x86, x64)  

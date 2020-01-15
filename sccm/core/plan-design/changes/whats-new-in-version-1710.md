@@ -138,29 +138,12 @@ For more information, see [How to configure client settings](/sccm/core/clients/
 
 ### Actions for non-compliance 
 <!--1321366 -->    
-You can now configure a time-ordered sequence of actions that are applied to devices that fall out of compliance. For example, you can notify users of non-compliant devices via e-mail or mark those devices non-compliant. For details, see [Set up actions for non-compliance](/sccm/mdm/deploy-use/actions-for-noncompliance).
+You can now configure a time-ordered sequence of actions that are applied to devices that fall out of compliance. For example, you can notify users of non-compliant devices via e-mail or mark those devices non-compliant.
 
 ### Windows 10 ARM64 device support
 <!-- 1355000 -->
 
 Hybrid mobile device management (MDM) scenarios will be supported on ARM64 devices running Windows 10 when these devices are available.
-
-These scenarios include:
-
-- [Enroll devices](../../../mdm/deploy-use/enroll-hybrid-windows.md)
-- [Perform remote full and selective wipe actions](../../../mdm/deploy-use/wipe-lock-reset-devices.md)
-- [Manage settings through configuration items and baselines](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)
-- [Manage compliance policy](../../../mdm/deploy-use/device-compliance-policies.md) and [conditional access](../../../protect/deploy-use/manage-access-to-services.md)
-- Manage access to company resources through:
-   - [Certificate profiles](../../../mdm/deploy-use/create-pfx-certificate-profiles.md)
-   - [VPN profiles](../../../mdm/deploy-use/create-vpn-profiles.md)
-   - [Wi-Fi profiles](../../../mdm/deploy-use/create-wifi-profiles.md)
-   - [Email profiles](../../../mdm/deploy-use/create-exchange-activesync-profiles.md)
-- [Configure Windows Hello for Business policy](../../../mdm/deploy-use/windows-hello-for-business-settings.md)
-- [Manage applications](../../../mdm/deploy-use/management-tasks-applications.md)
-
-> [!NOTE]
-> Deploying .appxbundle applications built for multiple architectures may not work on these devices, and this scenario is not supported at this time.
 
 ### Improved VPN Profile Experience in Configuration Manager Console 
 <!-- 1318232 -->

@@ -169,8 +169,6 @@ You can use this value in application requirements to control deployments, and t
 
 You may need to add the **Device Owner** column to the view by right-clicking any column heading and choosing it.
 
-For more information, see [Hybrid MDM with Configuration Manager and Microsoft Intune](/configmgr/mdm/understand/hybrid-mobile-device-management).
-
 ### Delete
 
 > [!WARNING]  

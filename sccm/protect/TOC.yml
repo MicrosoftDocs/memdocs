@@ -16,18 +16,12 @@
       href: plan-design/prerequisites-for-certificate-profiles.md
     - name: Certificate template permissions for certificate profiles
       href: plan-design/planning-for-certificate-template-permissions.md
-  - name: Plan for email, Wi-Fi, and VPN profiles
-    items:
-    - name: Email profile prerequisites
-      href: plan-design/prerequisites-for-email-profiles.md
-    - name: Wi-Fi and VPN profile prerequisites
-      href: plan-design/prerequisites-for-wifi-vpn-profiles.md
+  - name: Wi-Fi and VPN profile prerequisites
+    href: plan-design/prerequisites-for-wifi-vpn-profiles.md
   - name: Security and privacy
     items:
     - name: Wi-Fi and VPN profiles
       href: plan-design/security-and-privacy-for-wifi-vpn-profiles.md
-    - name: Email profiles
-      href: plan-design/security-and-privacy-for-email-profiles.md
     - name: Certificate profiles
       href: plan-design/security-and-privacy-for-certificate-profiles.md
 - name: Deploy and use
