@@ -759,6 +759,11 @@
             "source_path": "sccm/mdm/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client.md",
             "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/onprem-protect-data-devices.md",
+            "redirect_url": "/configmgr/mdm/deploy-use/create-wifi-profiles",
+            "redirect_document_id": false
         }
     ]
 }
