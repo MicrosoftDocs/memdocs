@@ -38,8 +38,6 @@
       href: deploy-use/import-pfx-certificate-profiles.md
     - name: VPN profiles
       href: deploy-use/create-vpn-profiles.md
-    - name: Create email profiles
-      href: deploy-use/create-exchange-activesync-profiles.md
     - name: Windows Hello for Business settings 
       href: deploy-use/windows-hello-for-business-settings.md
 - name: Exchange Server connector

@@ -42,7 +42,7 @@
         },
         {
             "source_path": "sccm/protect/deploy-use/create-exchange-activesync-profiles.md",
-            "redirect_url": "/sccm/mdm/deploy-use/create-exchange-activesync-profiles",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
@@ -72,7 +72,7 @@
         },
         {
             "source_path": "sccm/protect/deploy-use/introduction-to-email-profiles.md",
-            "redirect_url": "/sccm/mdm/deploy-use/create-exchange-activesync-profiles",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
@@ -763,6 +763,21 @@
         {
             "source_path": "sccm/mdm/deploy-use/onprem-protect-data-devices.md",
             "redirect_url": "/configmgr/mdm/deploy-use/create-wifi-profiles",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/create-exchange-activesync-profiles.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/plan-design/prerequisites-for-email-profiles.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/plan-design/security-and-privacy-for-email-profiles.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         }
     ]
