@@ -345,7 +345,7 @@ For more information, see [Install site system roles for on-premises MDM](/sccm/
 
 ### Exchange Server connection account  
 
-The site server uses the **Exchange Server connection account** to connect to the specified Exchange Server. It uses this connection to find and manage mobile devices that connect to Exchange Server. This account requires Exchange PowerShell cmdlets that provide the required permissions to the Exchange Server computer. For more information about the cmdlets, see [Manage mobile devices with Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
+The site server uses the **Exchange Server connection account** to connect to the specified Exchange Server. It uses this connection to find and manage mobile devices that connect to Exchange Server. This account requires Exchange PowerShell cmdlets that provide the required permissions to the Exchange Server computer. For more information about the cmdlets, see [Install and configure the Exchange connector](/configmgr/mdm/deploy-use/install-configure-exchange-connector).  
 
 
 ### Management point connection account  

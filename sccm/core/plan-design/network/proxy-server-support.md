@@ -56,7 +56,7 @@ This site system role connects to an Exchange Server. It uses a proxy server con
 
 
 #### Service connection point
-This site system role connects to the Configuration Manager cloud service to download version updates for Configuration Manager, and connects to Microsoft Intune in a hybrid configuration. It uses a proxy server that's configured on the computer that hosts the service connection point.  
+This site system role connects to the Configuration Manager cloud service to download version updates for Configuration Manager. It uses a proxy server that's configured on the computer that hosts the service connection point.  
 
 
 #### Software update point

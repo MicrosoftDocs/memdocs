@@ -39,7 +39,7 @@ For example, your company has a line-of-business application called Astoria. The
 
 - Windows Installer package for full functionality on Windows 10 devices
 - An App-V package for use in the terminal server farm
-- An Android app package for mobile users  
+- An web app for mobile users  
 
 You create a single application for Astoria in Configuration Manager. The application defines the high-level metadata about the app that's common across all installation methods and platforms. You then create three deployment types for the available installation methods, and deploy the application to all users. Based on the requirements and other configurations on the deployment types, Configuration Manager determines the right method in each use case.
 
@@ -141,19 +141,11 @@ Configuration Manager lets you deploy the following app types:
 
 - macOS  
 
-Additionally, when you manage devices through Microsoft Intune or Configuration Manager on-premises device management, manage these further app types:  
+Additionally, when you manage devices through Configuration Manager [on-premises device management](/configmgr/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure), manage these further app types:  
 
 - Windows Phone app package (xap)  
 
 - Windows Phone app package in the Microsoft Store  
-
-- App package for iOS (ipa)  
-
-- App Package for iOS from App Store  
-
-- App package for Android (apk)  
-
-- App package for Android on Google Play  
 
 - Windows Installer through MDM (msi)  
 

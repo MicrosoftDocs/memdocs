@@ -57,7 +57,7 @@ Use this tutorial when:
 
   Version 1810 also introduces a simpler command line for internet-based installation of the Configuration Manager client.
 
-- The [MDM Authority](https://docs.microsoft.com/sccm/mdm/deploy-use/change-mdm-authority) must be set to Intune  
+- The MDM authority must be set to Intune  
 
 ### External certificates
 
