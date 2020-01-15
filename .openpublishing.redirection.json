@@ -789,6 +789,11 @@
             "source_path": "sccm/mdm/deploy-use/create-wifi-profiles.md",
             "redirect_url": "/configmgr/protect/deploy-use/create-wifi-profiles",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/create-vpn-profiles.md",
+            "redirect_url": "/configmgr/protect/deploy-use/vpn-profiles",
+            "redirect_document_id": false
         }
     ]
 }
