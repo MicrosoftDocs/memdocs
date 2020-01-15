@@ -182,5 +182,16 @@ Each script package consists of a detection script, a remediation script, and me
 ### <a name="bkmk_uea_scripts"></a> Script descriptions
 |Script name|Description|
 |---|---|
-|**Update stale Group Policies** </br>`DetGPLastUpd.ps1` </br> `RemGPLastUpd.ps1`| Detect if last Group Policy refresh is greater than `7 days` ago.  </br>Customize the 7 day threshold by changing the value for `$numDays` in the detection script. </br>Remediate by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`  </br> </br>Can help reduce network connectivity related support calls when certificates and configurations are delivered via Group Policy. </br> </br> **Run the script using the logged-on credentials**: Yes|
-|**Restart Office Click-to-Run service** </br> `DetectClickToRunServicecState.ps1` </br> `RemediateClickToRunServiceState.ps1`
+|**Update stale Group Policies** </br>`DetGPLastUpd.ps1` </br> `RemGPLastUpd.ps1`| Detects if last Group Policy refresh is greater than `7 days` ago.  </br>Customize the 7 day threshold by changing the value for `$numDays` in the detection script. </br></br>Remediates by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`  </br> </br>Can help reduce network connectivity related support calls when certificates and configurations are delivered via Group Policy. </br> </br> **Run the script using the logged-on credentials**: Yes|
+|**Restart Office Click-to-Run service** </br> `DetectClickToRunServicecState.ps1` </br> `RemediateClickToRunServiceState.ps1`| Detects if the Click-to-Run service is set to automatically start and if the service is stopped. </br></br> Remediates by setting the service to start automatically and starting the service if it's stopped. </br></br> Helps fix issues where Win32 Office 365 ProPlus won't launch because the Click-to-Run service is stopped. </br></br> **Run the script using the logged-on credentials**: No|
+|**Check network certificates** </br>`DetExpIssuerCerts.ps1` </br>`RemExpIssuerCerts.ps1`|Detects expired certificates issued by your CA in either the Machine or User certificate store. </br> Specify your CA by changing the value for the `$strMatch` variable in the detection script. </br></br>Remediates by raising a toast notification to the user. </br> Specify the `$Title` and `$msgText` values with the message title and text you want your users. </br></br> 
+
+## <a name="bkmk_uea_set"></a> Settings
+
+### <a name="bkmk_uea_gen"></a> General
+
+### <a name="bkmk_uea_baseline"></a> Baseline management
+
+### <a name="bkmk_uea_filter"></a> Filter management
+
+## <a name="bkmk_uea_faq"></a> Frequently asked questions
