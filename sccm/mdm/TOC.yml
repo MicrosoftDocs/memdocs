@@ -30,12 +30,12 @@
     href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
   - name: Manage resource access
     items:
-    - name: Create Wi-Fi profiles
-      href: deploy-use/create-wifi-profiles.md
     - name: Create PFX certificate profiles
       href: deploy-use/create-pfx-certificate-profiles.md
     - name: Import PFX certificate profiles
       href: deploy-use/import-pfx-certificate-profiles.md
+    - name: Wi-Fi profiles
+      href: ../protect/deploy-use/create-wifi-profiles.md
     - name: VPN profiles
       href: deploy-use/create-vpn-profiles.md
 - name: Exchange Server connector
