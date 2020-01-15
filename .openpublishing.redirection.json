@@ -779,6 +779,11 @@
             "source_path": "sccm/protect/plan-design/security-and-privacy-for-email-profiles.md",
             "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/windows-hello-for-business-settings.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
         }
     ]
 }

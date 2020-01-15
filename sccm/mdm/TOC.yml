@@ -38,8 +38,6 @@
       href: deploy-use/import-pfx-certificate-profiles.md
     - name: VPN profiles
       href: deploy-use/create-vpn-profiles.md
-    - name: Windows Hello for Business settings 
-      href: deploy-use/windows-hello-for-business-settings.md
 - name: Exchange Server connector
   items:
     - name: Device management with Exchange
