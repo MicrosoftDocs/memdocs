@@ -22,10 +22,7 @@ Configuration Manager can manage two broad categories of devices:
 
 - *Clients* are devices like workstations, laptops, servers, and mobile devices where you install the Configuration Manager client software. Some management functions, like hardware inventory, require this client software.  
 
-- *Managed devices* can include *clients*, but typically it's a mobile device where the Configuration Manager client software isn't installed. On this kind of device, you manage by using Intune, or the built-in on-premises mobile device management in Configuration Manager.
-
-    > [!Important]  
-    > Hybrid mobile device management is a [deprecated feature](/sccm/mdm/understand/hybrid-mobile-device-management).
+- *Managed devices* can include *clients*, but typically it's a mobile device where the Configuration Manager client software isn't installed. On this kind of device, you manage by using the built-in on-premises mobile device management in Configuration Manager.
 
 You can also group and identify devices based on the user, not just the client type.
 

@@ -525,7 +525,6 @@ For more information about compliance settings, see [Ensure device compliance](/
   * Android 4.2 through 4.4
   * Samsung KNOX Standard 4.0+
 
-See [create and deploy a device compliance policy](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy) to try the new device compliance rules.
 
 ## New mobile application management policy settings
 Beginning with this release, you can use three new mobile application management (MAM) policy settings:
@@ -535,8 +534,6 @@ Beginning with this release, you can use three new mobile application management
 - **Disable contact sync:** Prevents the app from saving data to the native Contacts app on the device.
 
 - **Disable printing:** Prevents the app from printing work or school data.
-
-See [protect apps using app protection policies in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
 
 ## Android and iOS enrollment restrictions
 <!-- 1290826 -->

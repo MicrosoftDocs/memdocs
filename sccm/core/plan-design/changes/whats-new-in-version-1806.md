@@ -35,7 +35,7 @@ The following sections provide details about the changes and new features in ver
 
 Learn about support changes before they are implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
 
-As of August 14, 2018, the hybrid mobile device management feature is deprecated. For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+As of August 14, 2018, the hybrid mobile device management feature is deprecated. For more information, see [What happened to hybrid MDM](/sccm/mdm/understand/what-happened-to-hybrid).<!--Intune feature 2683117-->  
 
 <!--
 Version 1806 drops support for the following products:

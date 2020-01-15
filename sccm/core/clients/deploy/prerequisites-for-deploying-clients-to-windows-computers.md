@@ -171,9 +171,6 @@ To download the source files, the client computer needs to communicate with a di
 
 #### Microsoft Intune MDM installation
 
-> [!Important]
-> Hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
-
 - Requires a Microsoft Intune subscription and appropriate licenses.  
 
 - Requires the device has internet access, even if it isn't internet-based.  

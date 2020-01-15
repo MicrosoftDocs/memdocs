@@ -54,7 +54,7 @@ If not already present in your environment, during this tutorial you'll:
 ### On-premises infrastructure
 
 - A [supported version](https://docs.microsoft.com/sccm/core/servers/manage/updates#supported-versions) of Configuration Manager current branch
-- The [Mobile Device Management (MDM) Authority](https://docs.microsoft.com/sccm/mdm/deploy-use/change-mdm-authority) must be set to Intune.  
+- The mobile device management (MDM) authority must be set to Intune.  
 
 ### Permissions
 

@@ -312,7 +312,7 @@ Use this task to delete from the site database information about client notifica
 
 ### Delete Aged Passcode Records
 
-Use this task at the top-level site of your hierarchy to delete aged Passcode Reset data for Android and Windows Phone devices. Passcode Reset data is encrypted, but does include the PIN for devices. By default, this task is enabled, and deletes data that is older than one day.  
+Use this task at the top-level site of your hierarchy to delete aged Passcode Reset data for Windows Phone devices. Passcode Reset data is encrypted, but does include the PIN for devices. By default, this task is enabled, and deletes data that is older than one day.  
 
 |||
 |---------|---------|

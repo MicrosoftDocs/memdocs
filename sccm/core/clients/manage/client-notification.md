@@ -122,10 +122,6 @@ Trigger clients to switch to the next available software update point. For more 
 
 Trigger Windows 10 clients to check and send their latest device health state. For more information, see [Health attestation](/sccm/core/servers/manage/health-attestation).  
 
-### Check conditional access compliance
-
-Trigger clients to check their compliance with conditional access. For more information, see [Manage access to Office 365 services for PCs](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
-
 ### Wake Up
 
 Starting in version 1810, trigger devices configured to support Wake-on-LAN to wake up using other devices on the same subnet to send the Wake-on-LAN package. For more information, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).

@@ -381,7 +381,7 @@ For Configuration Manager version 1910, this level includes the following data:
 
 - Count of mobile device policies  
 
-- Count of mobile devices Configuration Manager and Microsoft Intune manages, and how you enrolled them (bulk, user-based)  
+- Count of mobile devices Configuration Manager manages, and how you enrolled them (bulk, user-based)  
 
 - Count of users who have multiple enrolled mobile devices  
 
