@@ -29,11 +29,10 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [5559993](includes/2001/5559993.md)]
 [!INCLUDE [5891852](includes/2001/5891852.md)]
 [!INCLUDE [6030715](includes/2001/6030715.md)]
-[!INCLUDE [6031906](includes/2001/6031906.md)]
 [!INCLUDE [6005561](includes/2001/6005561.md)]
 [!INCLUDE [5580997](includes/2001/5580997.md)]
 [!INCLUDE [5728365](includes/2001/5728365.md)]
-[!INCLUDE [3555953](includes/2001/3555953.md)]
+[!INCLUDE [2356386](includes/2001/2356386.md)]
 [!INCLUDE [3721603](includes/2001/3721603.md)]
 
 <!--
