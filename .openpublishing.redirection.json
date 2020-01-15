@@ -22,7 +22,7 @@
         },
         {
             "source_path": "sccm/compliance/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client.md",
-            "redirect_url": "/sccm/mdm/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         },
         {
@@ -752,6 +752,11 @@
         },
         {
             "source_path": "sccm/mdm/deploy-use/manage-compliance-settings.md",
+            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client.md",
             "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         }
