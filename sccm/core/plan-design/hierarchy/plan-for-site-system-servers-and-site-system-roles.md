@@ -159,7 +159,7 @@ A site system role that integrates with SQL Server Reporting Services to create 
 
 ### Service connection point
 
-A site system role that uploads usage data from your site, and is required to make updates for Configuration Manager available in the console. This role also helps to manage mobile devices with Microsoft Intune and on-premises MDM. A hierarchy only supports a single instance of this role, and that must be at the top-tier site of your hierarchy. If you expand a standalone primary site into a larger hierarchy, uninstall this role from the primary site, and then install it at the central administration site. For more information, see [About the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point).  
+A site system role that uploads usage data from your site, and is required to make updates for Configuration Manager available in the console. A hierarchy only supports a single instance of this role, and that must be at the top-tier site of your hierarchy. If you expand a standalone primary site into a larger hierarchy, uninstall this role from the primary site, and then install it at the central administration site. For more information, see [About the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point).  
 
 ### Software update point
 

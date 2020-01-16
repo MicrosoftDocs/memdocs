@@ -1,7 +1,7 @@
 ---
 title: Deploy resource access profiles
 titleSuffix: Configuration Manager
-description: Learn how to deploy Wi-Fi, VPN, email, and certificate profiles in Configuration Manager.
+description: Learn how to deploy Wi-Fi, VPN, and certificate profiles in Configuration Manager.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -10,8 +10,6 @@ ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Deploy resource access profiles in Configuration Manager
@@ -22,7 +20,6 @@ After you create one of the following resource access profiles, deploy it to one
 
 - [Wi-Fi](/configmgr/protect/deploy-use/create-wifi-profiles)
 - [VPN](/configmgr/protect/deploy-use/create-vpn-profiles)
-- [Email](/configmgr/mdm/deploy-use/create-exchange-activesync-profiles)
 - [Certificate](/configmgr/protect/deploy-use/create-certificate-profiles)
 
 When you deploy these profiles, you specify the target collection, and specify how often the client evaluates the profile for compliance.  
@@ -54,6 +51,6 @@ If you want to delete a deployment, select it from the list. In the details pane
 
 ## Next steps
 
-[Monitor Wi-Fi, VPN, and email profiles](/configmgr/protect/deploy-use/monitor-wifi-email-vpn-profiles)
+[Monitor Wi-Fi and VPN profiles](/configmgr/protect/deploy-use/monitor-wifi-email-vpn-profiles)
 
 [Monitor certificate profiles](/configmgr/protect/deploy-use/monitor-certificate-profiles)

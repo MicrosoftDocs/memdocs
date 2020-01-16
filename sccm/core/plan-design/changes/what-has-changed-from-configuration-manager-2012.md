@@ -139,7 +139,7 @@ Be aware of the following changes to compliance settings:
 
     For more information, see [How to create configuration items](/sccm/compliance/deploy-use/create-configuration-items).  
 
-- Support for managing settings on Mac OS X computers that are managed with the Configuration Manager client. See [How to create configuration items for Mac OS X devices managed without the Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client).  
+- Support for managing settings on Mac OS X computers that are managed without the Configuration Manager client.
 
 ### On-premises mobile device management  
 

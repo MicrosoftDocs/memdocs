@@ -66,8 +66,6 @@ The following sections provide details about the different log files available t
 
     - [Compliance settings and company resource access](#BKMK_CompSettingsLog)  
 
-    - [Conditional access](#BKMK_CA)
-
     - [Configuration Manager console](#BKMK_ConsoleLog)  
 
     - [Content management](#BKMK_ContentLog)  
@@ -581,20 +579,6 @@ The following table lists the log files that contain information related to comp
 |DCMAgent.log|Records high-level information about the evaluation, conflict reporting, and remediation of configuration items and applications.|Client|  
 |DCMReporting.log|Records information about reporting policy platform results into state messages for configuration items.|Client|  
 |DcmWmiProvider.log|Records information about reading configuration item synclets from WMI.|Client|  
-
-### <a name="BKMK_CA"></a> Conditional access
-
-The following table lists the log files that contain information related to conditional access.  
-
-|Log name|Description|Computer with log file|  
-|--------------|-----------------|----------------------------|  
-|ADALOperationProvider.log|Records details about acquisition of AAD token.|Client|  
-|cloudusersync.log|Records license enablement for users.|Computer with the service connection point|  
-|ComplRelayAgent.log|Receives overall compliance state from DCM, acquires MP token, acquires AAD token, and reports compliance back to Intune (the CA relay service).|Client|  
-|DcmWmiProvider.log|Records information about reading configuration item synclets from WMI.|Client|  
-|dmpdownloader.log|Records details about downloads from Microsoft Intune.|Computer with the service connection point|
-|dmpuploader.log|Records detail related to uploading database changes to Microsoft Intune.|Computer with the service connection point|
-|MP_Token.log|Records token requests from clients.|Site system server|  
 
 ### <a name="BKMK_ConsoleLog"></a> Configuration Manager console
 

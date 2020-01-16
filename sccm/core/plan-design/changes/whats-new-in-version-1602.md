@@ -67,12 +67,11 @@ Update 1602 for Configuration Manager is only available as an in-console update 
 ### iOS app configuration policies  
  Use Configuration Manager app configuration policies to supply settings that might be required when the user runs an iOS app. For example, an app might require the user to specify a custom port number, language, security settings, or branding settings (such as a company logo). If these settings are incorrectly entered, this can increase the burden on your help desk, and also slow the adoption of new apps.  
 
- App configuration policies can help you eliminate these problems by letting you deploy these settings to users in a policy, before they run the app. The settings are then supplied automatically, and the user doesn't need to take any action. For details, see [Configure iOS apps with app configuration policies](../../../apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md).  
+ App configuration policies can help you eliminate these problems by letting you deploy these settings to users in a policy, before they run the app. The settings are then supplied automatically, and the user doesn't need to take any action.
 
 ### Manage volume-purchased iOS apps  
  Configuration Manager can help you deploy and manage apps you purchased in volume from the Apple Volume-Purchase Program (VPP). Configuration Manager imports the license information from the app store, and tracks how many of the licenses you have used.  
 
- For details, see [Manage volume-purchased iOS apps with Configuration Manager](../../../apps/deploy-use/manage-volume-purchased-ios-apps.md).  
 
 ### Automatic creation of Office mobile apps  
  When you update to version 1602 from 1511, Configuration Manager automatically creates the following Microsoft Office mobile apps for Android and iOS:  
@@ -108,14 +107,12 @@ You will find these apps in the **Applications** node of the Configuration Manag
 ### Kiosk mode settings for Android Samsung KNOX Standard devices  
  Kiosk mode allows you to lock a device so that only certain features work. For example, you can allow a device to run only one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point-of-sale device. In Configuration Manager, you can now specify kiosk mode settings for Samsung KNOX Standard devices.  
 
- For details, see [How to create configuration items for Android and Samsung KNOX Standard devices managed without the Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).  
 
 ## Conditional access  
 
 ### Conditional access for PCs managed by Configuration Manager  
  Previous to this release, to set up conditional access for a PC, the PC either had to be enrolled in Intune or had to be a domain-joined PC. Beginning with the 1602 update, conditional access for PCs managed by Configuration Manager is supported. For your PCs that are managed by Configuration Manager, you can restrict access to Exchange Online and SharePoint Online only to devices that are compliant with the compliance policies you set.  
 
- For details, see [Manage access to Office 365 services for PCs managed by Configuration Manager](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 ### Restricting access based on the health of devices  
  You can now restrict access to email and Office 365 services based on the health of the devices, as reported by the Health Attestation Service. Additionally, devices managed by Intune are included in the device health reports.  
@@ -125,7 +122,6 @@ You will find these apps in the **Applications** node of the Configuration Manag
 ### New compliance policy rules  
  New compliance policy rules, like automatic updates and requiring a password to unlock devices, have been added to support better security requirements.
 
- For more details, see [Device compliance policies](../../../protect/deploy-use/device-compliance-policies.md).  
 
 ### Make sure enrolled and compliant devices always have access to Exchange on-premises  
  When you check the following option, devices that are enrolled in Intune, and compliant with the compliance policies, are allowed to access Exchange on-premises: **Default rule override - Always allow Intune enrolled and compliant devices to access Exchange on-premises:**. This rule is available on the  **General page** of the **Configure Conditional Access Policy Wizard** for Exchange on-premises.
@@ -197,8 +193,6 @@ For details, see [How to create and deploy antimalware policies for Endpoint Pro
 -   Reactivate the device.  
 
 Configuration Manager can request the Activation Lock status of both supervised and unsupervised devices that run iOS 7.1 and later. For supervised devices, Configuration Manager can retrieve the Activation Lock bypass code and directly issue it to the device.  
-
- For details, see [Help protect iOS devices with Activation Lock bypass](/sccm/mdm/deploy-use/manage-ios-activation-lock).  
 
 ### Monitor terms and conditions deployments  
  You can monitor terms and conditions deployments in the Configuration Manager console.  

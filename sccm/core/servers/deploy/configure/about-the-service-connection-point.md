@@ -2,7 +2,7 @@
 title: Service connection point
 titleSuffix: Configuration Manager
 description: Learn about this Configuration Manager site system role, and understand and plan for its range of uses.
-ms.date: 06/19/2019
+ms.date: 01/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -18,81 +18,88 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-The service connection point is a site system role that serves several important functions for the hierarchy. Before you set up the service connection point, understand and plan for its range of uses. Planning for usage might affect how you set up this site system role:  
+The service connection point is a site system role that provides several important functions for the hierarchy. Before you set up the service connection point, understand and plan for its range of uses. Planning for usage might affect how you set up this site system role:
 
-- **Manage mobile devices with Microsoft Intune**: This role replaces the Windows Intune connector that previous versions of Configuration Manager used and can be configured with your Intune subscription details. For more information, see [Hybrid mobile device management (MDM)](/sccm/mdm/understand/hybrid-mobile-device-management).  
+- Download updates that apply to your Configuration Manager infrastructure. Only relevant updates for your infrastructure are made available based on usage data you upload.
 
-- **Manage mobile devices with on-premises MDM**: This role provides support for on-premises devices that you manage and that don't connect to the internet. For more information, see [Manage mobile devices with on-premises infrastructure](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure).  
+- Upload usage data from your Configuration Manager infrastructure. You can control the level or amount of detail that you upload. For more information, see [Usage data levels and settings](/configmgr/core/servers/deploy/install/setup-reference#bkmk_usage).
 
-- **Upload usage data from your Configuration Manager infrastructure**: You can control the level or amount of detail that you upload. Uploaded data helps:  
+- Deploy a [cloud management gateway](/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) in Azure
 
-    - Proactively identify and troubleshoot problems  
+- Synchronize apps from the [Microsoft Store for Business and Education](/configmgr/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
 
-    - Improve our products and service  
+- Discover users and groups in [Azure Active Directory (Azure AD)](/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc)
 
-    - Identify updates for Configuration Manager that apply to the version of Configuration Manager that you use  
+- Use [Desktop Analytics](/configmgr/desktop-analytics/overview) to gain insights on Windows 10 update and app readiness
 
-    For more information about data that each level collects and how to change the collection level after the role installs, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data). Then follow the link for the version of Configuration Manager that you use.  
+Each hierarchy supports a single instance of this role. It can only be installed at the top-tier site of your hierarchy, which is a central administration site (CAS) or stand-alone primary site. If you expand a stand-alone primary site to a larger hierarchy, uninstall this role from the primary site, and then install it at the CAS.
 
-    For more information, see [Usage data levels and settings](/sccm/core/servers/deploy/install/setup-reference#bkmk_usage).  
+## <a name="bkmk_modes"></a> Modes of operation
 
-- **Download updates that apply to your Configuration Manager infrastructure**: Only relevant updates for your infrastructure are made available based on usage data you upload.  
+The service connection point supports two modes of operation:
 
-- **Each hierarchy supports a single instance of this role**:  
+- **Online**: The service connection point automatically checks every 24 hours for updates. It downloads new updates that are available for your current infrastructure and product version to make them available in the Configuration Manager console.
 
-    - The site system role can only be installed at the top-tier site of your hierarchy, which is a central administration site or stand-alone primary site.  
+- **Offline**: The service connection point doesn't connect to the Microsoft cloud service. To manually import available updates, use the [service connection tool](/configmgr/core/servers/manage/use-the-service-connection-tool).
 
-    - If you expand a stand-alone primary site to a larger hierarchy, you must uninstall this role from the primary site and can then install it at the central administration site.  
+### Change mode
 
+If you change between online or offline modes after you install the service connection point, restart the **SMS_DMP_DOWNLOADER** thread of the SMS_Executive service. Restarting this thread makes the change become effective. To restart this thread, use the Configuration Manager Service Manager.
 
-##  <a name="bkmk_modes"></a> Modes of operation  
-The service connection point supports two modes of operation:  
+> [!TIP]
+> You can also restart the SMS_Executive service for Configuration Manager, which restarts most site components. Alternatively, wait for a scheduled task like a site backup, which stops and restarts the SMS_Executive service for you.
 
-- In **online mode**, the service connection point automatically checks every 24 hours for updates. It downloads new updates that are available for your current infrastructure and product version to make them available in the Configuration Manager console.  
+To use the Configuration Manager Service Manager to restart the SMS_DMP_DOWNLOADER thread:
 
-- In **offline mode**, the service connection point doesn't connect to the Microsoft cloud service. To manually import available updates, use the [service connection tool](/sccm/core/servers/manage/use-the-service-connection-tool).  
+1. In the Configuration Manager console go to the **Monitoring** workspace, expand **System Status**, and select the **Component Status** node. In the ribbon, choose **Start**, and then select **Configuration Manager Service Manager**.
 
-If you change between online or offline modes after you install the service connection point, you must restart the SMS_DMP_DOWNLOADER thread of the Configuration Manager SMS_Executive service before the change becomes effective. You can use the Configuration Manager Service Manager to restart only the SMS_DMP_DOWNLOADER thread of the SMS_Executive service. You can also restart the SMS_Executive service for Configuration Manager, which restarts most site components. Alternatively, you can wait for a scheduled task like a site backup, which stops and then later restarts the SMS_Executive service for you.  
+1. In the service manager navigation pane, expand the site, expand **Components**, and then choose the component that you want to restart: **SMS_DMP_DOWNLOADER**.
 
-To use the Configuration Manager Service Manager, in the console go to **Monitoring** > **System Status** > **Component Status**, choose **Start**, and then choose **Configuration Manager Service Manager**. In the service manager:  
+1. Go to the **Component** menu, and choose **Query**.
 
-- In the navigation pane, expand the site, expand **Components**, and then choose the component that you want to restart.  
+1. Confirm the current status of the component. Then go to the **Component** menu, and choose **Stop**.  
 
-- In the details pane, right-click the component, and then choose **Query**.  
+1. **Query** the component again to confirm that it stopped. Then choose the **Start** component action to restart it.
 
-- After the status of the component is confirmed, right-click the component again, and then choose **Stop**.  
+## Remote site system requirements
 
-- **Query** the component again to confirm that it is stopped. Right-click the component one more time, and then choose **Start**.  
+When you install the service connection point on a site system server that's remote from the site server, configure the following requirements:
 
-> [!IMPORTANT]  
-> The process that adds a Microsoft Intune subscription to the service connection point automatically sets the site system role to be online. The service connection point doesn't support offline mode when it's set up with an Intune subscription.  
+- The computer account of the site server must be a local admin on the computer that hosts a remote service connection point.
 
-**When the role installs on a computer that is remote from the site server:**  
+- Set up the site system server that hosts this role with a [site system installation account](/configmgr/core/plan-design/hierarchy/accounts#site-system-installation-account). The distribution manager on the site server uses the site system installation account to transfer updates from the service connection point.
 
-- The computer account of the site server must be a local admin on the computer that hosts a remote service connection.
-
-- You must set up the site system server that hosts the role with a site system installation account.  
-
-- The distribution manager on the site server uses the site system installation account to transfer updates from the service connection point.
-
-
-## <a name="bkmk_urls"></a> Internet access requirements  
+## <a name="bkmk_urls"></a> Internet access requirements
 
 If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the service connection point to access internet endpoints.
 
-For more information, see [Internet access requirements](/sccm/core/plan-design/network/internet-endpoints#bkmk_scp).
+For more information, see [Internet access requirements](/configmgr/core/plan-design/network/internet-endpoints#bkmk_scp).
 
+## Install
 
-## Install the service connection point
-When you run **Setup** to install the top-tier site of a hierarchy, you have the option to install the service connection point.
+When you run **Setup** to install the top-tier site of a hierarchy, you can install the service connection point.
 
-After setup runs, or if you are reinstalling the site system role, use the **Add Site System Roles** wizard or the **Create Site System Server** wizard to install the site system on a server at the top-tier site of your hierarchy, that is, the central administration site or a stand-alone primary site. Both wizards are on the **Home** tab in the console at **Administration** > **Site Configuration** > **Servers and Site System Roles**.
+After setup runs, or if you're reinstalling the role, use the **Add Site System Roles** wizard or the **Create Site System Server** wizard. (Only install the service connection point on the top-tier site of your hierarchy.) For more information, see [Install site system roles](/configmgr/core/servers/deploy/configure/install-site-system-roles).
 
+## <a name="bkmk_move"></a> Move the role
 
+<!-- SCCMDocs#922 -->
+There are several scenarios in which you may need to move the service connection point to another server:
 
-## Log files used by the service connection point
-To view information about uploads to Microsoft, view the **Dmpuploader.log** on the computer that runs the service connection point.  For downloads, including download progress of updates, view **Dmpdownloader.log**. For the complete list of logs related to the service connection point, see [Service connection point](/sccm/core/plan-design/hierarchy/log-files#BKMK_WITLog) in the Configuration Manager log files article.
+- [Recovery](/configmgr/core/servers/manage/recover-sites)
+- [Site server high availability](/configmgr/core/servers/deploy/configure/site-server-high-availability)
+- [Site expansion](/configmgr/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_expand)
 
-You can also use the following flowcharts to understand the process flow and key log entries for update downloads and replication of updates to other sites:
-- [Flowchart - Download updates](/sccm/core/servers/manage/download-updates-flowchart)
-- [Flowchart - Update replication](/sccm/core/servers/manage/update-replication-flowchart)
+After you move the service connection point, check all site functions. For example, you may need to renew the secret key for any connections to Azure Active Directory (Azure AD) tenants. For more information, see [Renew secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
+
+## Log files
+
+To view information about uploads to Microsoft, view the **Dmpuploader.log** on the server that runs the service connection point. For download progress of updates, view the **Dmpdownloader.log**. For the complete list of logs related to the service connection point, see [Log files - Service connection point](/configmgr/core/plan-design/hierarchy/log-files#BKMK_WITLog).
+
+## Next steps
+
+Use the following flowcharts to understand the process flow and key log entries. This process includes update downloads and replication of updates to other sites.
+
+- [Flowchart - Download updates](/configmgr/core/servers/manage/download-updates-flowchart)
+
+- [Flowchart - Update replication](/configmgr/core/servers/manage/update-replication-flowchart)

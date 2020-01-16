@@ -1,8 +1,8 @@
 ---
-title: "How to Create VPN profiles "
-titleSuffix: "Configuration Manager"
-description: "Learn how to create VPN profiles in Configuration Manager."
-ms.date: 11/20/2017
+title: How to create VPN profiles
+titleSuffix: Configuration Manager
+description: Learn how to create VPN profiles in Configuration Manager.
+ms.date: 01/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,64 +10,167 @@ ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
-# How to Create VPN profiles in Configuration Manager
+
+# How to create VPN profiles in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-The connection types available for the different device platforms are described in [VPN profiles](../../protect/deploy-use/vpn-profiles.md).  
+Configuration Manager supports multiple VPN connection types. For more information on the connection types available for the different device platforms, see [VPN profiles](/configmgr/protect/deploy-use/vpn-profiles).
 
-For third-party VPN connections, distribute the VPN app before deploying the VPN profile. If you don't deploy the app, users will be prompted to do so when they try to connect to the VPN. To learn how to deploy apps, see [Deploy applications with Configuration Manager](../../apps/deploy-use/deploy-applications.md).
+For third-party VPN connections, distribute the VPN app before you deploy the VPN profile. If you don't deploy the app, users will be prompted to do so when they try to connect to the VPN. For more information, see [Deploy applications](/configmgr/apps/deploy-use/deploy-applications).
 
-### Create a VPN profile   
+## Create a VPN profile
 
-1. In the Configuration Manager console, choose **Assets and Compliance** > **Compliance Settings** > **Company Resource Access** > **VPN Profiles**.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **Compliance Settings**, expand **Company Resource Access**, and select the **VPN Profiles** node.
 
-2. On the **Home** tab, in the **Create** group, choose **Create VPN Profile**.  
+1. On the **Home** tab of the ribbon, in the **Create** group, choose **Create VPN Profile**.
 
+1. On the **General** page of the Create VPN Profile Wizard, specify the following information:
 
-3. Complete the **General** page. Note the following:  
+    - **Name**: Enter a unique name to identify the VPN profile in the console.
 
-   - Select the appropriate **Platform**.
+        > [!NOTE]
+        > Don't use the following characters in the VPN profile name: `\/:*?<>|; `. The Windows VPN profile doesn't support these special characters.
 
-      - If you select the Windows 8.1 platform, you have the option to select **Import an existing VPN profile item from a file** to import VPN profile information that was exported to an XML file.
+    - **Description**: Optionally enter a description to provide further information about the VPN profile.
 
-   - Do not use the characters \\/:*?&lt;>&#124;, or the space character in the VPN profile name. These characters are not supported by the Windows Server VPN profile.  
+    - **VPN profile type**: Select the appropriate platform.
 
+        If you select the **Windows 8.1** platform, you can also **Import from file**. This action imports VPN profile information from an XML file. If you select this option, the rest of the wizard simplifies to the following pages: **Supported Platforms** and **Import VPN Profile**.
 
-4. On the **Connection** page, specify:  
+1. On the **Supported Platforms** page, select the OS versions that this VPN profile supports.
 
-   - **Connection type**: Choose the VPN connection type. You can choose from the connection types in the following table.  
+1. On the **Connection** page, specify the following information:
 
-   - **Server list**: Add a new server to use for the VPN connection. Depending on the connection type, you can add one or more VPN servers and specify the default server.  
+    - **Connection type**: Choose the VPN connection type. For more information on the supported types, see [VPN profiles](/configmgr/protect/deploy-use/vpn-profiles).
 
-     > [!NOTE]  
-     >  Devices that run iOS do not support using multiple VPN servers. If you configure multiple VPN servers and then deploy the VPN profile to an iOS device, only the default server is used.  
+    - **Server list**: Add a new server to use for the VPN connection. Depending on the connection type, you can add one or more VPN servers and specify which server is the default.
 
-     This table provides options for connection types. See your VPN server documentation for more information.
+    - **Bypass VPN when connected to company network**: Configure clients to not use the VPN when they're on your internal network. If necessary, specify a connection-specific DNS name.
 
-| &nbsp;&nbsp;Option&nbsp;&nbsp; | More information | &nbsp;&nbsp;Connection&nbsp;type&nbsp;&nbsp; |  
-|----------------|----------------------|---------------------|  
-|**Realm**     |The authentication realm that you want to use. An authentication realm is a grouping of authentication resources that is used by the Pulse Secure connection type.|Pulse Secure|    
-|**Role**        |The user role that has access to this connection. |Pulse Secure|  
-|**Login group or domain** |The name of the login group or domain that you want to connect to.|Dell SonicWALL Mobile Connect|  
-|**Fingerprint**  |A string, for example "Contoso Fingerprint Code" that will be used to verify that the VPN server can be trusted.<br /><br /> A fingerprint can be:<br /><br /> - Sent to the client so it knows to trust any server presenting that same fingerprint when connecting.<br /><br /> - If the device doesn't already have the fingerprint it will prompt the user to trust the VPN server they are connecting to while showing the fingerprint (the user manually verifies the fingerprint and chooses **trust** to connect).|Check Point Mobile VPN|  
-|**Send all network traffic through the VPN connection** |If this option is not selected, you can specify additional routes for the connection (for **Microsoft SSL (SSTP)**, **Microsoft Automatic**, **IKEv2**, **PPTP** and **L2TP** connection types), which is known as split or VPN tunneling.<br /><br /> Only connections to the company network are sent over a VPN tunnel. VPN tunneling is not used when you connect to resources on the Internet. |All|  
-|**Connection specific DNS suffix** |The connection-specific Domain Name System (DNS) suffix for the connection.|- Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - PPTP<br /><br /> - L2TP|  
-|**Bypass VPN when connected to company Wi-Fi network**  |The VPN connection will not be used when the device is connected to the company Wi-Fi network.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN<br /><br /> - Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - L2TP|  
-|**Bypass VPN when connected to home Wi-Fi network**  |The VPN connection will not be used when the device is connected to a home Wi-Fi network.|All|  
-|**Per App VPN (iOS 7 and later, Mac OS X 10.9 and later )** |Associate this VPN connection with an iOS app so that the connection will be opened when the app is run. You can associate the VPN profile with an app when you deploy it.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
-|**Custom XML (optional)** |Specify custom XML commands that configure the VPN connection.<br /><br /> Examples:<br /><br /> For **Pulse Secure**:<br /><br /> **&lt;pulse-schema><br /> &nbsp; &lt;isSingleSignOnCredential>true&lt;/isSingleSignOnCredential\><br />&lt;/pulse-schema>**<br /><br /> For **CheckPoint Mobile VPN**:<br /><br /> **&lt;CheckPointVPN <br /> &nbsp; port="443" name="CheckPointSelfhost" <br /> &nbsp; sso="true" <br /> &nbsp; debug="3"<br />/>**<br /><br /> For **Dell SonicWALL Mobile Connect**:<br /><br /> **&lt;MobileConnect\><br />&nbsp; &nbsp; &lt;Compression\>false&lt;/Compression\><br />&nbsp; &nbsp; &lt;debugLogging\>True&lt;/debugLogging\><br />&nbsp; &nbsp; &lt;packetCapture\>False&lt;/packetCapture\><br />&lt;/MobileConnect\>**<br /><br /> For **F5 Edge Client**:<br /><br /> **&lt;f5-vpn-conf>&lt;single-sign-on-credential>&lt;/f5-vpn-conf>**<br /><br /> Refer to each manufacturers VPN documentation for more information about how to write custom XML commands.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
+1. On the **Authentication Method** page of the wizard, choose a method that's supported by the connection type. The settings and available options on this page vary depending on the selected connection type. For more information, see [Authentication method reference](#bkmk_auth).
 
-> [!NOTE]  
->  For information specific to creating VPN profiles for mobile devices, see [Create VPN Profiles](../../mdm/deploy-use/create-vpn-profiles.md)  
+1. On the **Proxy Settings** page, if your VPN uses a proxy server, select one of the options as appropriate for your environment. Then provide the configuration information for the proxy.
 
-Complete the wizard. The new VPN profile is displayed in the **VPN Profiles** node in the **Assets and Compliance** workspace.
+1. The **Applications** page only applies to Windows 10 profiles. Add desktop and universal apps that automatically connect to this VPN. The type of app determines the app identifier:
 
-### Next steps
+    - For a *desktop app*, provide the file path of the app.
 
-- For third-party VPN connections, distribute the VPN app before deploying the VPN profile. If you don't deploy the app, users will be prompted to do so when they try to connect to the VPN. To learn how to deploy apps, see [Deploy applications with Configuration Manager](../../apps/deploy-use/deploy-applications.md).
+    - For a *universal app*, provide the package family name (PFN). To learn how to find the PFN for an app, see [Find a package family name for per-app VPN](/configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn).
 
-- Deploy the VPN profile as described in [How to deploy profiles](deploy-wifi-vpn-email-cert-profiles.md).  
+    You can also configure an option so that **Only the listed apps can use this VPN**.
+
+    > [!IMPORTANT]
+    > Secure all lists of associated apps that you compile for configuring a per-app VPN. If an unauthorized user changes your list, and you import it to the per-app VPN app list, you potentially authorize VPN access to apps that shouldn't have access.
+
+1. The **Boundaries** page only applies to Windows 10 profiles to configure VPN boundaries. You can add the following options:
+
+    - **Network traffic rules**: Set the protocols, local port, remote port, and address ranges to enable for the VPN connection.  
+
+        > [!Note]
+        > If you don't create a network traffic rule, all protocols, ports, and address ranges are enabled. After you create a rule, only the protocols, ports, and address ranges that you specify in that rule or in additional rules are used by the VPN connection.
+
+    - **DNS names and servers**: DNS servers that are used by the VPN connection after the device establishes the connection.
+
+    - **Routes**: Network routes that use the VPN connection. Creation of more than 60 routes may cause the policy to fail.
+
+1. Complete the wizard.
+
+The new VPN profile is displayed in the **VPN Profiles** node in the **Assets and Compliance** workspace.
+
+## <a name="bkmk_auth"></a> Authentication method reference
+
+Available VPN authentication methods depend on the connection type:
+
+### Certificates
+
+If the client certificate authenticates to a RADIUS server, like a Network Policy Server, set the Subject Alternative Name in the certificate to the User Principal Name.
+
+Supported connection types:
+
+- Pulse Secure
+- F5 Edge Client
+- Dell SonicWALL Mobile Connect
+- Check Point Mobile VPN
+
+### Username and Password
+
+Supported connection types:
+
+- Pulse Secure
+- F5 Edge Client
+- Dell SonicWALL Mobile Connect
+- Check Point Mobile VPN
+
+### Microsoft EAP-TTLS
+
+Supported connection types:
+
+- Microsoft SSL (SSTP)
+- Microsoft Automatic
+- PPTP
+- IKEv2
+- L2TP
+
+### Microsoft protected EAP (PEAP
+
+Supported connection types:
+
+- Microsoft SSL (SSTP)
+- Microsoft Automatic
+- IKEv2
+- PPTP
+- L2TP
+
+### Microsoft secured password (EAP-MSCHAP v2)
+
+Supported connection types:
+
+- Microsoft SSL (SSTP)
+- Microsoft Automatic
+- IKEv2
+- PPTP
+- L2TP
+
+### Smart Card or other certificate
+
+Supported connection types:
+
+- Microsoft SSL (SSTP)
+- Microsoft Automatic
+- IKEv2
+- PPTP
+- L2TP
+
+### MSCHAP v2
+
+Supported connection types:
+
+- Microsoft SSL (SSTP)
+- Microsoft Automatic
+- IKEv2
+- PPTP
+- L2TP
+
+### Use machine certificates
+
+Supported connection types:
+
+- IKEv2
+
+### Additional authentication options
+
+When the Windows client version supports it, the option to **Configure** the authentication method is available. This option opens the Windows properties window to configure the authentication method.
+
+Depending on the selected options, you might be asked to specify more information, for example:
+
+- **Remember the user credentials at each logon**: User credentials are remembered so that users don't have to enter them each time they connect.  
+
+- **Select a client certificate for client authentication**: Select a previously created client SCEP certificate profile to authenticate the VPN connection. For more information, see [Create PFX certificate profiles](/configmgr/protect/deploy-use/create-pfx-certificate-profiles).
+
+## Next steps
+
+- For third-party VPN connections, distribute the VPN app before you deploy the VPN profile. If you don't deploy the app, users will be prompted to do so when they try to connect to the VPN. For more information, see [Deploy applications](/configmgr/apps/deploy-use/deploy-applications).
+
+- Deploy the VPN profile. For more information, see [How to deploy profiles](/configmgr/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles).

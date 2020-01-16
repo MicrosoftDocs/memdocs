@@ -77,7 +77,7 @@ To create a configuration baseline by using the **Create Configuration Baseline*
 <!--3608345-->
 *(Introduced in version 1910)*
 
-Starting in version 1910, you can add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you have an option to **Evaluate this baseline as part of compliance policy assessment**. When adding or editing a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**. For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Azure AD. You can then use it for [conditional access to your Office 365 resources](/configmgr/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm#configure-conditional-access).  
+Starting in version 1910, you can add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you have an option to **Evaluate this baseline as part of compliance policy assessment**. When adding or editing a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**. For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Azure AD. You can then use it for conditional access to your Office 365 resources. For more information, see [Conditional access with co-management](/configmgr/comanage/quickstart-conditional-access).
 
 To include custom configuration baselines as part of compliance policy assessment, do the following:
 
@@ -112,7 +112,7 @@ When `User1` uses `Device2`, only `Configuration Baseline 2` gets evaluated when
 ### <a name="bkmk_CA"></a> Create and deploy a compliance policy with a rule for baseline compliance policy assessment
 
 1. In the **Assets and Compliance** workspace, expand **Compliance Settings**, then select the **Compliance Polices** node.
-1. Click **Create Compliance Policy** in the ribbon to bring up the **Create Compliance Policy Wizard**. For more information, see [Create and deploy a device compliance policy](/sccm/mdm/deploy-use/create-compliance-policy).
+1. Click **Create Compliance Policy** in the ribbon to bring up the **Create Compliance Policy Wizard**. <!-- For more information, see [Create and deploy a device compliance policy](/sccm/mdm/deploy-use/create-compliance-policy). -->
 1. On the **General** page, select **Compliance rules for devices managed with the Configuration Manager client**.
    - Devices must be managed with the Configuration Manager client to include custom configuration baselines as part of compliance policy assessment.
 1. Select your platforms on the **Supported Platforms** pages.

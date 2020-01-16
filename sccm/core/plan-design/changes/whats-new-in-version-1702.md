@@ -129,7 +129,6 @@ Beginning with version 1702, clients use boundary groups to find a new software 
 ### New compliance settings for iOS
 
 We've added many new settings for iOS devices to match those available with Microsoft Intune.
-For a list of all available settings, see [Create configuration items for iOS and Mac OS X devices managed with Intune](/sccm/mdm/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client).
 
 
 ## Application Management
@@ -263,15 +262,7 @@ To prevent issues when upgrading from prior versions of Configuration Manager, m
 > - **All iOS 10 and higher iPad devices**
 
 ### Android for Work support
-Starting with 1702, Hybrid mobile device management with Microsoft Intune now supports Android for Work device enrollment and management. Managed Android for Work device guidance:
-
-- [Enroll Android for Work devices](/sccm/mdm/deploy-use/enroll-hybrid-android#enable-android-enrollment)
-- [Approve and deploy Android for Work apps](/sccm/mdm/deploy-use/creating-android-applications#approve-and-deploy-android-for-work-apps)
-- [Create configuration items for Android for Work](/sccm/mdm/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-for-work-configuration-items)
-- [Selective wipe on Android for Work devices](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe)
-- [Email profiles for Android for Work](/sccm/mdm/deploy-use/create-exchange-activesync-profiles)
-- [Compliance policies for Android for Work](/sccm/mdm/deploy-use/create-compliance-policy)
-
+Starting with 1702, Hybrid mobile device management with Microsoft Intune now supports Android for Work device enrollment and management.
 
 ### Deploy volume-purchased iOS apps to device collections
 
@@ -289,17 +280,13 @@ You can now deploy licensed apps to devices as well as users. Depending on the a
 |1702 and later|Yes|Device|Device license|
 |1702 and later|No|Device|User license|
 
-For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
-
 ### Support for iOS Volume Purchase Program for Education
 
 You can now also deploy and track apps you purchased from the iOS Volume Purchase Program for Education.
-For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
 ### Support for multiple volume-purchase program tokens
 
 You can now associate multiple Apple volume-purchase program tokens with Configuration Manager.
-For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
 ### Support for line of business apps in Windows Store for Business
 
@@ -311,14 +298,11 @@ A new device compliance policy rule is available to help you block access to cor
 
 Additionally, this helps organizations to mitigate data leakage through unsecured apps, and prevent excessive data consumption through certain apps.
 
-- Learn more [how device compliance policies work](/sccm/mdm/deploy-use/device-compliance-policies).
-- Learn more [how to create device compliance policies](/sccm/mdm/deploy-use/create-compliance-policy).
 
 ### New Mobile Threat Defense monitoring tools
 
 Beginning in version 1702, you have new ways to monitor the compliance status with your Mobile Threat Defense service provider.
 
-- Learn more [how to monitor Mobile Threat Defense compliance](https://docs.microsoft.com/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance).
 
 ## Protect devices
 
