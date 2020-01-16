@@ -71,10 +71,28 @@ Create a Microsoft Edge, version 77 and later application using the built-in app
 ## Update Microsoft Edge, version 77 and later
 <!--4831871-->
 
-Starting in Configuration Manager version 1910, you may notice that there is a node called **All Microsoft Edge updates** under **Microsoft Edge Management**. While you won't see updates in this node quite yet, we wanted you to know that Configuration Manager is ready for them.
+Starting in Configuration Manager version 1910, you'll see a node called **All Microsoft Edge updates** under **Microsoft Edge Management**. This node helps you manage updates for all Microsoft Edge channels.<!--initial edge updates released Jan 15,2020-->
+
+1. To get updates for Microsoft Edge, ensure you have the **Updates** classification and the **Microsoft Edge** product [selected for synchronization](/configmgr/sum/get-started/configure-classifications-and-products).
+
+   ![Select Microsoft Edge as product in software update point properties](./media/4831871-microsoft-edge-product-sup.png)
+
+1. In the **Software Library** workspace, expand **Microsoft Edge Management** and click on the **All Microsoft Edge Updates** node.
+
+1. If needed, click **Synchronize Software Updates** in the ribbon to start a synchronization. For more information, see [Synchronize software updates](/configmgr/sum/get-started/synchronize-software-updates).
 
    ![All Microsoft Edge updates node](./media/4831871-all-microsoft-edge-updates.png)
+
+1. Manage and deploy Microsoft Edge updates like any other update, such as adding them to your [automatic deployment rule](/configmgr/sum/deploy-use/automatically-deploy-software-updates). Some of the common updates tasks you can do from the **All Microsoft Edge Updates** node include:
+
+   - [Create a phased deployment](/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)
+   - [Manually deploy software updates](/configmgr/sum/deploy-use/manually-deploy-software-updates)
+   - [Download software updates](/configmgr/sum/deploy-use/download-software-updates)
 
 ## Next steps
 
 [Monitor applications](/configmgr/apps/deploy-use/monitor-applications-from-the-console)
+
+[Monitor software updates](/configmgr/sum/deploy-use/monitor-software-updates)
+
+[Manage and monitor phased deployments](/configmgr/osd/deploy-use/manage-monitor-phased-deployments)
