@@ -747,7 +747,7 @@
         },
         {
             "source_path": "sccm/mdm/deploy-use/windows-store-for-business.md",
-            "redirect_url": "/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_url": "/configmgr/apps/deploy-use/manage-apps-from-the-windows-store-for-business",
             "redirect_document_id": false
         },
         {
