@@ -73,7 +73,7 @@ Starting in Configuration Manager version 1910, you'll see a node called **All M
 
 1. To get updates for Microsoft Edge, ensure you have the **Updates** classification and the **Microsoft Edge** product [selected for synchronization](/configmgr/sum/get-started/configure-classifications-and-products).
 
-   ![Select Microsoft Edge as product in software update point properties](./media/4831871-microsoft-edge-product-sup.png)
+   [![Select Microsoft Edge as product in software update point properties](./media/4831871-microsoft-edge-product-sup.png)](./media/4831871-microsoft-edge-product-sup.png#lightbox)
 
 1. In the **Software Library** workspace, expand **Microsoft Edge Management** and click on the **All Microsoft Edge Updates** node.
 
