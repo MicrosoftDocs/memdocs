@@ -103,7 +103,6 @@ USE CM_ABC
 BACKUP CERTIFICATE BitLockerManagement_CERT TO FILE = 'C:\BitLockerManagement_CERT'
     WITH PRIVATE KEY ( FILE = 'C:\BitLockerManagement_CERT_KEY',
         ENCRYPTION BY PASSWORD = MyExportKeyPassword)
-END
 ```
 
 > [!IMPORTANT]
