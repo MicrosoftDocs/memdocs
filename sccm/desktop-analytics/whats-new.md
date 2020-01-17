@@ -16,13 +16,19 @@ manager: dougeby
 
 Learn what's new each month in Desktop Analytics.
 
-> [!Tip]
+> [!TIP]
 > Each monthly update may take up to three days to rollout. Some features may roll out over several weeks and might not be available to all customers in the first week.
 
 To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
 
 ## January 2020
+
+### Additional app usage detail
+
+<!-- 5533890 -->
+
+When you select an app to see more information, the details pane now includes additional usage information. You can use this data to help understand the breadth of install for an app, as well as devices on which users regularly use the app. For more information, see [About assets - App usage](/configmgr/desktop-analytics/about-assets#usage).
 
 ### Provide feedback on Desktop Analytics
 
@@ -58,7 +64,6 @@ During onboarding, you can now migrate inputs from an existing Windows Analytics
 
 If you set up Desktop Analytics in your environment, but want to stop using the service, you can now close your account. If you change your mind in 90 days, you can reactivate the account. For more information, see [How to close your account](/sccm/desktop-analytics/account-close).
 
-
 ## August 2019
 
 ### Reset your account
@@ -78,7 +83,6 @@ To help reduce your efforts in annotating noteworthy apps, certain types of apps
 - Apps managed and updated from the Microsoft Store
 
 For more information, see [Automatic upgrade decision of system and store apps](/sccm/desktop-analytics/about-assets#bkmk_plan-autoapp).
-
 
 ## What's new in Configuration Manager
 

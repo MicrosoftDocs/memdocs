@@ -2,7 +2,7 @@
 title: Assets in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about devices, drivers, and apps in Desktop Analytics.
-ms.date: 08/14/2019
+ms.date: 01/16/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: d07198cf-49bb-4712-8c63-063b4302cc11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Assets in Desktop Analytics
@@ -22,7 +20,6 @@ After devices report data to Desktop Analytics, it provides an inventory of the 
 - Installed apps  
 
 In the service portal, select **Assets** in the Desktop Analytics menu.
-
 
 ## Devices
 
@@ -43,10 +40,9 @@ Configure the **Importance** of apps by setting one of the following categories:
 
 - Critical
 - Important
-- Ignore 
+- Ignore
 - Not reviewed
 - Not important<!-- 3587232 -->
-
 
 Select the app from the list, and select **Edit**. This action displays details for the app. Select the **Importance** drop-down menu and set a value. You can also assign an **Owner**. If you make any changes, select **Save**.
 
@@ -59,8 +55,8 @@ Identifying **Importance** and **Upgrade Decision** is critical for all notewort
 
 - Apps managed and updated from the Microsoft Store
 
-> [!Tip]
-> Manage inputs for any app at a global level or per deployment plan. 
+> [!TIP]
+> Manage inputs for any app at a global level or per deployment plan.
 >
 > 1. In the Desktop Analytics portal, in the **Manage** menu, select **Assets**. Then select **Apps**.
 >
@@ -69,12 +65,17 @@ Identifying **Importance** and **Upgrade Decision** is critical for all notewort
 >    - For store apps, filter **Type** as **Modern**
 >    - For system apps, filter **Category** as **Background process** or **Windows component**
 
-
-
 In a deployment plan, you can also set the **Upgrade decision**. For more information, see [Plan assets](/sccm/desktop-analytics/about-deployment-plans#plan-assets)
 
+### Usage
 
+<!-- 5533890 -->
 
+- **Total install**: This value is the number of installs of the selected app on all Desktop Analytics-enrolled devices.
+
+- **Install percentage**: This value is the install percentage of the selected app against total Desktop Analytics-enrolled devices.
+
+- **Monthly active devices**: This value is the count of devices where a user launched or used the selected app. It only includes devices that reported usage in the past 30 days. This count is across all your devices enrolled with Desktop Analytics running on any version of Windows 10. It's possible that this count can vary for a deployment plan.
 
 ## Next steps
 
