@@ -71,11 +71,11 @@ In a deployment plan, you can also set the **Upgrade decision**. For more inform
 
 <!-- 5533890 -->
 
-- **Total install**: This value is the number of installs of the selected app on all Desktop Analytics-enrolled devices.
+- **Total installs**: This value is the number of installs of the selected app on all Desktop Analytics-enrolled devices.
 
 - **Install percentage**: This value is the install percentage of the selected app against total Desktop Analytics-enrolled devices.
 
-- **Monthly active devices**: This value is the count of devices where a user launched or used the selected app. It only includes devices that reported usage in the past 30 days. This count is across all your devices enrolled with Desktop Analytics running on any version of Windows 10. It's possible that this count can vary for a deployment plan.
+- **Devices launched this app in the last 30 days**: This value is the count of devices where a user launched the selected app. It only includes devices that reported usage in the past 30 days. This count is across all your devices enrolled with Desktop Analytics running on any version of Windows 10. It's possible that this count can vary for a deployment plan.
 
 ## Next steps
 

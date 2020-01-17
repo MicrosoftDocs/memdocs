@@ -27,6 +27,8 @@ To view more information about a specific app, select it in the list.
 
 ## Apps
 
+### Health status factors
+
 ![Health status factors for an app in Desktop Analytics](media/monitor-health-status-factors.png)
 
 Desktop Analytics monitors the following health status factors for apps:
@@ -42,6 +44,16 @@ Desktop Analytics monitors the following health status factors for apps:
 - **% Sessions with crashes**: Similar to the preceding, but counts the percentage of sessions with crashes in the last two weeks.  
 
 To determine the health status of an app, Desktop Analytics requires data from at least 20 devices. Otherwise it reports **Insufficient data** for the app. The service calculates the health status based on the *session crash rate* from these devices. The device crash rate is provided for information only. It isn't used in the health status calculation.
+
+### Usage
+
+<!-- 5533890 -->
+
+- **Active devices**: This value is the count of devices where a user launched the selected app within the last two weeks. It's based on devices in the selected deployment plan running the targeted version of Windows 10.
+
+- **Sessions**: This value is the total number of times that a user launched the selected app on the targeted version of Windows.
+
+### Additional tabs
 
 At the bottom of the app details page, the following three tabs can help you troubleshoot:
 
