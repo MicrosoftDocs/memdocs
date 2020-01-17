@@ -23,7 +23,7 @@ The `AddMemberships` Windows Management Instrumentation (WMI) class method, in C
 SInt32 AddMemberships(  
      String ObjectIDs[],  
      UInt32 ObjectTypeIDs[],  
-     String CategoryIDs,  
+     String CategoryIDs[],  
 );  
 ```  
 
