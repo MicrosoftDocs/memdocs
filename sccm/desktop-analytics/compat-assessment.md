@@ -66,8 +66,8 @@ In both the cases, after you upgrade Windows the user can't use the app or the h
 To see this recommendation in the Desktop Analytics portal:
 
 1. In a deployment plan, select **Prepare pilot**.
-1. Select an asset from the list.
-1. View the compatibility risk factors and recommendations in the side pane.
+1. Select apps tab.
+1. For any selection, view the compatibility risk factors and recommendations in the side pane.
 
 ![Screenshot of asset recommendation in Desktop Analytics portal](media/3594545-app-removed.png)
 
