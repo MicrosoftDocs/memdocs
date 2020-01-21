@@ -42,7 +42,7 @@ Take the following actions for the additional recommended devices list:
 
 As you add devices from the **recommended**  to the **included** pilot list, the coverage and redundancy for your critical and  important assets in the pilot increases. A higher redundancy means the assets covered have a statistically significant number of devices included in your pilot. 
 
-## Global Pilot
+## <a name="bkmk_GlobalPilot"></a>Global Pilot
 
 You can also make system-wide decisions about which Configuration Manager collections to include or exclude from pilots. In the main Desktop Analytics menu, in the Global Settings group, select **Global pilot**.
 
