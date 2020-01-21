@@ -39,11 +39,11 @@ This release is just the beginning. We’ll be rapidly rolling out new insights 
 
 ## <a name="bkmk_uea_prereq"></a> Getting started
 
-This current private preview requires:
+This current preview requires:
 - Intune enrolled devices running Windows 10
 - Startup performance insights are only available for devices running version 1903 or later of Windows 10.
 
-Configuration Manager devices and Intune enrolled devices on prior versions of Windows 10 aren't currently supported for this private preview.
+Configuration Manager devices and Intune enrolled devices on prior versions of Windows 10 aren't currently supported for this preview.
 
 ### Start gathering data
 
@@ -70,6 +70,8 @@ Once your data is ready, you'll notice some information on the **Overview** page
 ## <a name="bkmk_uea_rs"></a> Recommended software
 
 Certain software is known to improve the end-user experience, independent of lower-level health metrics. For example, Windows 10 has a much higher Net Promoter score than Windows 7. The **Software adoption** score is a number between 0 and 100 that represents a weighted average of the percent of devices that have deployed various recommended software. The current weighting is higher for Office 365 and Windows than for the other metrics since users interact with them more often. The metrics are described below: 
+
+![User experience analytics Recommended software page](media/uea-recommended-software.png)
 
 ### <a name="bkmk_uea_win10"></a> Windows 10
 
@@ -126,17 +128,17 @@ Click though to see the list of devices that have hard disk drives. The recommen
 
 ### <a name="bkmk_uea_gp"></a> Group Policy
 
-Startup performance provides an insight on the number of devices that have delays to boot and sign-in times caused by Group Policy. Clicking through takes you to the devices view, sorted by Group Policy time, so you can see affected devices for further troubleshooting.
+Startup performance provides an insight on the number of devices that have delays to boot and sign-in times caused by Group Policy. Clicking through takes you to the devices view. The view is sorted by Group Policy time, so you can see affected devices for further troubleshooting.
 
-If you click through to a particular device, you can see its boot and sign-in history. The history helps you determine if the issue is a regression and, if so, when it might have occurred.
+If you click through to a particular device, you can see its boot and sign-in history. The history helps you determine if the issue is a regression and when it might have occurred.
 
 While there are many articles on how to optimize Group Policies performance, you may choose to migrate to cloud-management instead. Migrating to cloud-management allows you to use [Intune security baselines](https://docs.microsoft.com/intune/protect/security-baselines) and the soon-to-be-released Policy Analytics tool.
 
 ### <a name="bkmk_uea_sb"></a> Slow boot and sign-in times
 
-Startup performance provides an insight on the number of devices with slow boot or sign-in times (a boot score or sign-in score of “0”). Clicking through takes you to the devices view. The devices are sorted by core boot time or core sign-in time respectively, so you can see affected devices for further troubleshooting.
+Startup performance provides an insight on the number of devices with slow boot or sign-in times. A boot score or sign-in score of “0” means it's slow. Clicking through takes you to the devices view. The devices are sorted by core boot time or core sign-in time respectively, so you can see affected devices for further troubleshooting.
 
-If you click through to a particular device, you can see its boot and sign-in history. The history helps you determine if the issue was a regression and, if so, when it might have occurred.
+If you click through to a particular device, you can see its boot and sign-in history. The history helps you determine if the issue was a regression and when it might have occurred.
 
 ### More startup performance insights are on the way
 
@@ -154,29 +156,27 @@ Each script package consists of a detection script, a remediation script, and me
     - Script files whose names start with `det` are detection scripts. Remediation scripts start with `rem`.
     - For a description of the scripts, see the [Script descriptions](#bkmk_uea_scripts).
 
-#### Is this actually needed? Seems like a duplicate of deploying scripts
-
-1. Go to the **Proactive remediations** node in the console.
-1. Click **Create** and when prompted, insert a detection script. Copy the text from a script file you downloaded. When prompted, copy the text of the corresponding remediation script. You need the detection and remediation script to be in the same package. For example the `DetGPLastUpd.ps1` detection script corresponds with the `RemGPLastUpd.ps11` remediation script.
-1. Continue with the creation process choosing the scope, tags, and assignments that make sense for your organization.
-1. Once the creation process is complete, you can deploy the scripts.
 
 ### <a name="bkmk_uea_prs_deploy"></a> Deploying and monitoring scripts
 
 1. Go to the **Proactive remediations** node in the console.
 1. Click the **Create** button to create a script package.
+    ![User experience analytics Proactive remediations page. Select the create link.](media/uea-proactive-remediations-create.png)
 1. In the **Basics** step, give the script package a **Name** and optionally, a **description**. The **Publisher** field can be edited, but defaults to your tenant name. **Version** can't be edited. 
 1. On the **Settings** step, copy the text from the scripts you downloaded into the **Detection script** and **Remediation script** fields. 
-   - You need the corresponding detection and remediation script to be in the same package. For example the `DetGPLastUpd.ps1` detection script corresponds with the `RemGPLastUpd.ps11` remediation script.
+   - You need the corresponding detection and remediation script to be in the same package. For example, the `DetGPLastUpd.ps1` detection script corresponds with the `RemGPLastUpd.ps11` remediation script.
+       ![User experience analytics Proactive remediations script settings page.](media/uea-proactive-remediations-script-settings.png)
 1. Finish the options on the **Settings** page with the following recommended configurations:
-   - **Run this script using the logged-on credentials**: This is dependant on the script. For more information, see the [Script descriptions](#bkmk_uea_scripts).
+   - **Run this script using the logged-on credentials**: This is dependent on the script. For more information, see the [Script descriptions](#bkmk_uea_scripts).
    - **Enforce script signature check**: No
-   - **Run script in 64-bit PoswerShell**: No
+   - **Run script in 64-bit PowerShell**: No
 1. Click **Next** then assign any **Scope tags** you need.
 1. In the **Assignments** step, select the device groups to which you want to deploy the script package.
 1. Complete the **Review + Create** step for your deployment.
 1. Under **Reporting** > **User experience analytics - Proactive remediations**, you can see an overview of your detection and remediation status.
+       ![User experience analytics Proactive remediations report, overview page.](media/uea-proactive-remediations-report-overview.png)
 1. Click on **Device status** to get status details for each device in your deployment.
+       ![User experience analytics Proactive remediations device status.](media/uea-proactive-remediations-device-status.png)
 
 ### <a name="bkmk_uea_scripts"></a> Script descriptions
 
@@ -184,14 +184,14 @@ This table shows the script names, descriptions, detections, remediations, and c
 
 |Script name|Description|
 |---|---|
-|**Update stale Group Policies** </br>`DetGPLastUpd.ps1` </br> `RemGPLastUpd.ps1`| Detects if last Group Policy refresh is greater than `7 days` ago.  </br>Customize the 7 day threshold by changing the value for `$numDays` in the detection script. </br></br>Remediates by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`  </br> </br>Can help reduce network connectivity related support calls when certificates and configurations are delivered via Group Policy. </br> </br> **Run the script using the logged-on credentials**: Yes|
+|**Update stale Group Policies** </br>`DetGPLastUpd.ps1` </br> `RemGPLastUpd.ps1`| Detects if last Group Policy refresh is greater than `7 days` ago.  </br>Customize the 7-day threshold by changing the value for `$numDays` in the detection script. </br></br>Remediates by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`  </br> </br>Can help reduce network connectivity-related support calls when certificates and configurations are delivered via Group Policy. </br> </br> **Run the script using the logged-on credentials**: Yes|
 |**Restart Office Click-to-Run service** </br> `DetectClickToRunServicecState.ps1` </br> `RemediateClickToRunServiceState.ps1`| Detects if the Click-to-Run service is set to automatically start and if the service is stopped. </br> </br> Remediates by setting the service to start automatically and starting the service if it's stopped. </br></br> Helps fix issues where Win32 Office 365 ProPlus won't launch because the Click-to-Run service is stopped. </br> </br> **Run the script using the logged-on credentials**: No|
-|**Check network certificates** </br>`DetExpIssuerCerts.ps1` </br>`RemExpIssuerCerts.ps1`|Detects certificates issued by a CA in either the Machine's or User's personal store that are expired, or near expiry. </br> Specify the CA by changing the value for `$strMatch` in the detection script. Specify 0 for `$expiringDays` to find expired certificates, or specify another number of days to find certificates near expiry.  </br></br>Remediates by raising a toast notification to the user. </br> Specify the `$Title` and `$msgText` values with the message title and text you want users to see. </br> </br> Notifies users of expired certificates which might need to be renewed. </br> </br> **Run the script using the logged-on credentials**: No|
+|**Check network certificates** </br>`DetExpIssuerCerts.ps1` </br>`RemExpIssuerCerts.ps1`|Detects certificates issued by a CA in either the Machine's or User's personal store that are expired, or near expiry. </br> Specify the CA by changing the value for `$strMatch` in the detection script. Specify 0 for `$expiringDays` to find expired certificates, or specify another number of days to find certificates near expiry.  </br></br>Remediates by raising a toast notification to the user. </br> Specify the `$Title` and `$msgText` values with the message title and text you want users to see. </br> </br> Notifies users of expired certificates that might need to be renewed. </br> </br> **Run the script using the logged-on credentials**: No|
 |**Clear stale certificates** </br>`DetExpUserCerts.ps1` </br> `RemExpUserCerts.ps1`| Detects expired certificates issued by a CA in the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the detection script. </br> </br> Remediates by deleting expired certificates issued by a CA from the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the remediation script. </br> </br> Finds and deletes expired certificates issued by a CA from the current user's personal store. </br> </br> **Run the script using the logged-on credentials**: Yes|
 
 ## <a name="bkmk_uea_set"></a> User experience analytics settings
 
-From the settings page, you can select **General**, **Baseline**, or **Filters**.
+From the settings page, you can select **General**, **Baseline**, or **Filters**. The **Filters** functionality has not been implemented in this initial private preview.
 
 ### <a name="bkmk_uea_gen"></a> General
 
@@ -200,24 +200,28 @@ The **General** page in **Settings** allows you to see if Intune startup perform
 > [NOTE!]
 > There is a placeholder for instructions for configuring the Configuration Manager data connector. However, this functionality has not been implemented in this initial private preview.
 
+  ![User experience analytics general settings page](media/uea-settings-general.png)
+
 ### <a name="bkmk_uea_baselines"></a> Baseline management
 
-You can compare your current scores and sub-scores to others by setting a baseline.
+You can compare your current scores and subscores to others by setting a baseline.
 
 1. There's a built-in baseline for **Commercial median**, which allows you to compare your scores to a typical enterprise.
 1. You can create new baselines based on your current metrics to track progress or view regressions over time. Click the **Create new** button and give your new baseline a name. We recommend a name that includes the date, so it’s easier to select from the drop-down in the reports pages.
 1. There's a limit of 100 baselines per tenant. You can delete old baselines that are no longer needed.
-1. Your current metrics will be flagged red and show as regressed if they fall below the current baseline in your reports. Because it's perfectly normal for metrics to fluctuate from day to day, you can set a regression threshold, which defaults to 10%. With this threshold, metrics are only flagged as regressed if they have regressed by more than 10%.
+1. Your current metrics will be flagged red and show as regressed if they fall below the current baseline in your reports. Because it's perfectly normal for metrics to fluctuate from day to day, you can set a regression threshold, which defaults to 10%. With this threshold, metrics are only flagged as regressed if they've regressed by more than 10%.
+
+   ![User experience analytics baseline settings page](media/uea-settings-baseline.png)
 
 ### <a name="bkmk_uea_filter"></a> Filter management
 
-This functionality has not been implemented in this initial private preview. Filters will allow you to view your user experience score on a subset of devices or users.
+This functionality hasn't been implemented in this initial private preview. Filters will allow you to view your user experience score on a subset of devices or users.
 
 ## <a name="bkmk_uea_faq"></a> Frequently asked questions
 
 ### Why are the scripts exiting with a code of 1?
 
-The scripts exit with a code of 1 to signal to Intune that remediation should occur. Many script packages that run solely in CM may show compliant, but exit with a code of 1. For these scripts, exiting with a code of 1 isn't something alarming.
+The scripts exit with a code of 1 to signal to Intune that remediation should occur. In this case, exiting a detection script with 1 means it's true that remediation is needed. Many script packages that run solely in CM may show compliant, but exit with a code of 1. For these scripts, exiting with a code of 1 isn't something alarming but you may want to verify the device remediates properly.
 
 ### Why did the Update Stale Group Policies script return with error 0x87D00321?
 
