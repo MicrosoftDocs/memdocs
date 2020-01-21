@@ -24,16 +24,15 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2001/1234567.md)] -->
 
-[!INCLUDE [3098816](includes/2001/3098816.md)]
-[!INCLUDE [3871913](includes/2001/3871913.md)]
-[!INCLUDE [5559993](includes/2001/5559993.md)]
-[!INCLUDE [5891852](includes/2001/5891852.md)]
-[!INCLUDE [6030715](includes/2001/6030715.md)]
-[!INCLUDE [6005561](includes/2001/6005561.md)]
-[!INCLUDE [5580997](includes/2001/5580997.md)]
-[!INCLUDE [5728365](includes/2001/5728365.md)]
-[!INCLUDE [2356386](includes/2001/2356386.md)]
-[!INCLUDE [3721603](includes/2001/3721603.md)]
+[!INCLUDE [Microsoft Edge management dashboard](includes/2001/3871913.md)]
+[!INCLUDE [Improvements to orchestration groups](includes/2001/3098816.md)]
+[!INCLUDE [Improvements to Check Readiness task sequence step](includes/2001/6005561.md)]
+[!INCLUDE [Integrate Power BI Report Server](includes/2001/3721603.md)]
+[!INCLUDE [OneTrace log groups](includes/2001/5559993.md)]
+[!INCLUDE [Improvements to administration service](includes/2001/5728365.md)]
+[!INCLUDE [Wake up a device from the central administration site](includes/2001/6030715.md)]
+[!INCLUDE [Improvements to task sequence progress](includes/2001/2356386.md)]
+
 
 <!--
 ## General known issues
