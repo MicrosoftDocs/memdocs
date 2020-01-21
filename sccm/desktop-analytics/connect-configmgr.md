@@ -91,6 +91,8 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     ![Example Available Functionality page in the Azure Services Wizard](media/available-functionality.png)
 
+<a name="bkmk_Collections"></a> 
+
 8. On the **Collections** page, configure the following settings:  
 
     - **Display name**: The Desktop Analytics portal displays this Configuration Manager connection using this name. Use it to differentiate between different hierarchies. For example, *test lab* or *production*.  
@@ -110,9 +112,11 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
         >     - CollectionB: limited by CollectionA
         >         - CollectionC: limited by CollectionB
         > - CollectionD: limited by **All Systems** collection
-
+        >
+        > To manage the collections available in the Desktop Analytics portal for grouping with deployment plans, in the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Select the entry associated with **Desktop Analytics** Azure Service and update your settings in the **Desktop Analytics Collection** page.
+        
         > [!Important]  
-        > These collections continue to sync as their membership changes. For example, your deployment plan uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and deployment plan.  
+        > These collections continue to sync as their membership changes. For example, your Target collection uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and Desktop Analytics.  
 
 
 9. Complete the wizard.  
