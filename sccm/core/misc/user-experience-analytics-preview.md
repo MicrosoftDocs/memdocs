@@ -17,7 +17,7 @@ manager: dougeby
 > [!Note]  
 > This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
-## Overview
+## User experience analytics overview
 
 It's not uncommon for end users to experience long boot times or other disruptions. These disruptions can be due to a combination of:
 
@@ -39,6 +39,10 @@ This release is just the beginning. We’ll be rapidly rolling out new insights 
 
 ## <a name="bkmk_uea_prereq"></a> Getting started
 
+To start using User experience analytics, verify the prerequisites, then start gathering data. 
+
+### Prerequisites
+
 This current preview requires:
 - Intune enrolled devices running Windows 10
 - Startup performance insights are only available for devices running version 1903 or later of Windows 10.
@@ -50,7 +54,7 @@ Configuration Manager devices and Intune enrolled devices on prior versions of W
 1. Go to `https://devicemanagement.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
 1. Click **Start**. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices.
 
-### Overview page
+## Overview page
 
 Once your data is ready, you'll notice some information on the **Overview** page, explained in more detail below:
 
