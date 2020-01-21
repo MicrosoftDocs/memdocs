@@ -69,13 +69,13 @@ Once your data is ready, you'll notice some information on the **Overview** page
 
 - **Insights and recommendations** is a prioritized list to improve your score. This list is filtered to the subnode's context when you navigate to **Best practices** or **Recommended software**.
 
-![User experience analytics overview page](media/uea-overview-page.png)
+[![User experience analytics overview page](media/uea-overview-page.png)](media/uea-overview-page.png#lightbox)
 
 ## <a name="bkmk_uea_rs"></a> Recommended software
 
 Certain software is known to improve the end-user experience, independent of lower-level health metrics. For example, Windows 10 has a much higher Net Promoter score than Windows 7. The **Software adoption** score is a number between 0 and 100 that represents a weighted average of the percent of devices that have deployed various recommended software. The current weighting is higher for Office 365 and Windows than for the other metrics since users interact with them more often. The metrics are described below: 
 
-![User experience analytics Recommended software page](media/uea-recommended-software.png)
+[![User experience analytics Recommended software page](media/uea-recommended-software.png)](media/uea-recommended-software.png#lightbox)
 
 ### <a name="bkmk_uea_win10"></a> Windows 10
 
@@ -120,7 +120,7 @@ The startup performance score helps IT get users from power-on to productivity q
 - **Boot score**: Based on the time from power-on to sign in. We look at the last boot time from each device, excluding the update phase, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
 - **Sign-in score**: Based on the time from when credentials have been entered until the user can access the desktop. We look at the last sign-in time to each device, excluding first sign-ins or sign-ins immediately after a feature update, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
 
-![User experience analytics startup performance page](media/uea-startup-performance.png)
+[![User experience analytics startup performance page](media/uea-startup-performance.png)](media/uea-startup-performance.png#lightbox)
 
 The **Startup performance** page also provides a prioritized list of **Insights and recommendations**, described in the following sections:
 
@@ -165,11 +165,11 @@ Each script package consists of a detection script, a remediation script, and me
 
 1. Go to the **Proactive remediations** node in the console.
 1. Click the **Create** button to create a script package.
-    ![User experience analytics Proactive remediations page. Select the create link.](media/uea-proactive-remediations-create.png)
+     [![User experience analytics Proactive remediations page. Select the create link.](media/uea-proactive-remediations-create.png)](media/uea-proactive-remediations-create.png#lightbox)
 1. In the **Basics** step, give the script package a **Name** and optionally, a **description**. The **Publisher** field can be edited, but defaults to your tenant name. **Version** can't be edited. 
 1. On the **Settings** step, copy the text from the scripts you downloaded into the **Detection script** and **Remediation script** fields. 
    - You need the corresponding detection and remediation script to be in the same package. For example, the `DetGPLastUpd.ps1` detection script corresponds with the `RemGPLastUpd.ps11` remediation script.
-       ![User experience analytics Proactive remediations script settings page.](media/uea-proactive-remediations-script-settings.png)
+       [![User experience analytics Proactive remediations script settings page.](media/uea-proactive-remediations-script-settings.png)](media/uea-proactive-remediations-script-settings.png#lightbox)
 1. Finish the options on the **Settings** page with the following recommended configurations:
    - **Run this script using the logged-on credentials**: This is dependent on the script. For more information, see the [Script descriptions](#bkmk_uea_scripts).
    - **Enforce script signature check**: No
@@ -178,9 +178,9 @@ Each script package consists of a detection script, a remediation script, and me
 1. In the **Assignments** step, select the device groups to which you want to deploy the script package.
 1. Complete the **Review + Create** step for your deployment.
 1. Under **Reporting** > **User experience analytics - Proactive remediations**, you can see an overview of your detection and remediation status.
-       ![User experience analytics Proactive remediations report, overview page.](media/uea-proactive-remediations-report-overview.png)
+       [![User experience analytics Proactive remediations report, overview page.](media/uea-proactive-remediations-report-overview.png)](media/uea-proactive-remediations-report-overview.png#lightbox)
 1. Click on **Device status** to get status details for each device in your deployment.
-       ![User experience analytics Proactive remediations device status.](media/uea-proactive-remediations-device-status.png)
+       [![User experience analytics Proactive remediations device status.](media/uea-proactive-remediations-device-status.png)](media/uea-proactive-remediations-device-status.png#lightbox)
 
 ### <a name="bkmk_uea_scripts"></a> Script descriptions
 
@@ -204,7 +204,7 @@ The **General** page in **Settings** allows you to see if Intune startup perform
 > [NOTE!]
 > There is a placeholder for instructions for configuring the Configuration Manager data connector. However, this functionality has not been implemented in this initial private preview.
 
-  ![User experience analytics general settings page](media/uea-settings-general.png)
+  [![User experience analytics general settings page](media/uea-settings-general.png)](media/uea-settings-general.png#lightbox)
 
 ### <a name="bkmk_uea_baselines"></a> Baseline management
 
@@ -215,7 +215,7 @@ You can compare your current scores and subscores to others by setting a baselin
 1. There's a limit of 100 baselines per tenant. You can delete old baselines that are no longer needed.
 1. Your current metrics will be flagged red and show as regressed if they fall below the current baseline in your reports. Because it's perfectly normal for metrics to fluctuate from day to day, you can set a regression threshold, which defaults to 10%. With this threshold, metrics are only flagged as regressed if they've regressed by more than 10%.
 
-   ![User experience analytics baseline settings page](media/uea-settings-baseline.png)
+   [![User experience analytics baseline settings page](media/uea-settings-baseline.png)](media/uea-settings-baseline.png#lightbox)
 
 ### <a name="bkmk_uea_filter"></a> Filter management
 
