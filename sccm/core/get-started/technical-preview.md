@@ -124,7 +124,7 @@ The following features are available with the most recent Configuration Manager 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-2001#bkmk_anchor) <!--ID-->
 
 - [Microsoft Edge management dashboard](/sccm/core/get-started/2019/technical-preview-2001#bkmk_edge-dash) <!--3871913-->
-- [Improvements to orchestration groups](/sccm/core/get-started/2019/technical-preview-2001#bkmk_anchor) <!--3098816-->
+- [Improvements to orchestration groups](/sccm/core/get-started/2019/technical-preview-2001#bkmk_orch) <!--3098816-->
 - [Improvements to Check Readiness task sequence step](/sccm/core/get-started/2019/technical-preview-2001#bkmk_tsready) <!--6005561-->
 - [Integrate Power BI Report Server](/sccm/core/get-started/2019/technical-preview-2001#bkmk_powerbi) <!--3721603-->
 - [OneTrace log groups](/sccm/core/get-started/2019/technical-preview-2001#bkmk_onetrace) <!--5559993-->
