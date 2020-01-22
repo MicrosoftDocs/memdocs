@@ -2,7 +2,7 @@
 title: "Setup Downloader"
 titleSuffix: "Configuration Manager"
 description: "Read about this standalone application designed to ensure your site installation uses current versions of key installation files."
-ms.date: 03/1/2017
+ms.date: 01/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -34,7 +34,7 @@ You have two options for running Setup Downloader:
 - For command-line options, run the application at a command prompt
 
 
-## Run Setup Downloader with the user interface  
+## <a name="bkmk_ui"></a> Run Setup Downloader with the user interface  
 
 1.  On a computer that has Internet access, open Windows Explorer, and go to **&lt;ConfigMgrInstallationMedia\>\SMSSETUP\BIN\X64**.  
 
@@ -44,7 +44,7 @@ You have two options for running Setup Downloader:
 
 4.  To review the download results, open the **ConfigMgrSetup.log** file in the root directory of drive C.  .  
 
-## Run Setup Downloader from a command prompt  
+## <a name="bkmk_cmd"></a> Run Setup Downloader from a command prompt  
 
 1.  In a Command Prompt window, go to **&lt;*Configuration Manager installation media*\>\SMSSETUP\BIN\X64**.   
 
@@ -86,15 +86,21 @@ You have two options for running Setup Downloader:
 
 3.  To review the download results, open the **ConfigMgrSetup.log** file in the root directory of drive C.
 
-## Copy Setup Downloader files to another computer
-1. In Windows Explorer, go to one of the following locations:
+## <a name="bkmk_cp-files"></a> Copy Setup Downloader files to another computer
 
-    **<Configuration Manager installation media>\SMSSETUP\BIN\X64**
-    **<Configuration Manager installation path>\BIN\X64**
+1. In Windows Explorer, go to either one of the following locations:
+
+    - **&lt;Configuration Manager installation media>\SMSSETUP\BIN\X64**
+    - **&lt;Configuration Manager installation path>\BIN\X64**
     
-2. Copy the following files to the same destination folder on the other computer:
-    setupdl.exe
-    .\00000409\setupdlres.dll
+1. Copy the following files to the same destination folder on the other computer:
     
-3. Use one of the above methods to launch the Setup Downloader.
-    
+    - **setupdl.exe**
+    - **.\\&lt;language>\\setupdlres.dll**
+      - This file is in the subfolder for the install language. For instance, English is in the `00000409` subfolder.
+
+    As an example, the destination folders on your device should look like this:
+    - C:\ConfigManInstall\setupdl.exe
+    - C:\ConfigManInstall\00000409\setupdlres.dll
+
+1. Launch the Setup Downloader from the computer by using either the [user interface](#bkmk_ui) or the [command prompt](#bkmk_cmd), described in the sections above.
