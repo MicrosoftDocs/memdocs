@@ -143,7 +143,7 @@ Desktop Analytics can also detect issues using the following additional insights
 
 ### Adopted version available
 
-There's another version of this app that's highly adopted by other customers. This signal uses data from Ready for Windows. If there are any upgrade blockers with your current version, consider deploying the alternative version instead.
+There is another version of this app that's highly adopted by other customers. This signal uses adoption data from windows ecosystem. If there are any upgrade blockers with your current version, consider deploying the alternative version instead. You can refer to application health under "Prepare Production" to find alternate application adopted versions.
 
 ### Driver dependency
 
