@@ -2,7 +2,7 @@
 title: What's new in version 1910
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1910 of Configuration Manager current branch.
-ms.date: 12/20/2019
+ms.date: 01/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -154,7 +154,7 @@ For more information, see [How to configure client settings](/configmgr/core/cli
 
 ### Deploy Microsoft Edge, version 77 and later
 <!--4561024-->
-The all-new Microsoft Edge is ready for business. You can now deploy Microsoft Edge, version 77 and later, to your users. Admins can pick the Beta or Dev channel, along with a version of the Microsoft Edge client to deploy.
+The all-new Microsoft Edge is ready for business. You can now deploy Microsoft Edge, version 77 and later, to your users. Admins can pick the Beta, Dev, or Stable channel, along with a version of the Microsoft Edge client to deploy.
 
 For more information, see [Deploy Microsoft Edge, version 77 and later](/sccm/apps/deploy-use/deploy-edge).
 
