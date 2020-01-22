@@ -10,9 +10,6 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
-
-
 ---
 
 # Compatibility assessment in Desktop Analytics
@@ -143,7 +140,7 @@ Desktop Analytics can also detect issues using the following additional insights
 
 ### Adopted version available
 
-There is another version of this app that's highly adopted by other customers. This signal uses adoption data from windows ecosystem. If there are any upgrade blockers with your current version, consider deploying the alternative version instead. You can refer to application health under "Prepare Production" to find alternate application adopted versions.
+There's another version of this app that's highly adopted by other customers. This signal uses adoption data from the Windows ecosystem. If there are any upgrade blockers with your current version, consider deploying the alternative version instead. To find alternate application adopted versions, see application health under "Prepare Production".
 
 ### Driver dependency
 
