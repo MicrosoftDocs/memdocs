@@ -219,7 +219,7 @@ This certificate deployment has the following procedures:
 
 9. Select the **Enroll** permission for this group, and do not clear the **Read** permission.  
 
-10. Choose the **Cryptography** tab and ensure that **Minimum key size** has been set to **2048**
+10. Choose the **Cryptography** tab and ensure that **Minimum key size** has been set to **2048**.
 
 11. Choose **OK**, and then close **Certificate Templates Console**.  
 
