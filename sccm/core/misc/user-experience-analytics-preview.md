@@ -2,7 +2,7 @@
 title: User experience analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for User experience analytics preview.
-ms.date: 12/12/2019
+ms.date: 01/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
