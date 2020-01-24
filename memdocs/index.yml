@@ -16,7 +16,7 @@ highlightedContent:
     - title: What is Microsoft Endpoint Manager?
       itemType: overview
       url: ./fundamentals/what-is-intune.md
-    - title: What's new in Intune
+    - title: What's new in Microsoft Endpoint Manager?
       itemType: overview
       url: ./fundamentals/whats-new.md
     - title: Features in development
