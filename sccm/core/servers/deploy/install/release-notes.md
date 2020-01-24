@@ -230,3 +230,15 @@ To work around this issue:
 - Update the site to the globally available version of 1910, released on December 20, 2019. (If you previously updated to the 1910 early update ring, you need to update to this build when it's available.)
 
 - Alternatively, use a traditional [cloud distribution point](/configmgr/core/plan-design/hierarchy/use-a-cloud-based-distribution-point). That role doesn't enforce TLS 1.2, but is compatible with clients that require TLS 1.2.
+
+## Protection
+
+### BitLocker management appears in version 1906
+
+*Applies to version 1906*
+
+<!-- 5984688 -->
+
+After November 21, 2019, if you update to version 1906 from version 1902 or earlier, the BitLocker management feature will be turned on and available. This feature is an optional feature starting in version 1910. It's unsupported in version 1906. If you try to use it in version 1906, you may experience unexpected results. If you don't use the feature, there's no impact.
+
+To use the [BitLocker management feature](/configmgr/protect/plan-design/bitlocker-management), update to version 1910.
