@@ -9,10 +9,11 @@ ms.assetid: 536e192b-2a77-4542-950f-e05b04074e41
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Customize Advertisement Branding Information in Configuration Manager
-You set the software distribution branding information for the System Center Configuration Manager client by changing the `SWDBrandingSubTitle` property of the client agent component section in the site control file.  
+You set the software distribution branding information for the Configuration Manager client by changing the `SWDBrandingSubTitle` property of the client agent component section in the site control file.  
 
 ### To customize advertisement branding information  
 
@@ -109,7 +110,7 @@ public void SetAdvertBranding(WqlConnectionManager connection, string siteCode, 
 |---------------|----------|-----------------|  
 |`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`swbemContext`|-   VBScript: `SWbemContext`|A valid context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).|  
-|`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code for the System Center Configuration Manager site.|  
+|`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code for the Configuration Manager site.|  
 |`brandingText`|-   Managed: `String`<br />-   VBScript: `String`|The text used to update the branding text.|  
 
 ## Compiling the Code  

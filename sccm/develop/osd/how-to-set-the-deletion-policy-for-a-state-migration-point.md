@@ -9,10 +9,11 @@ ms.assetid: ffe6aa50-dd9c-4920-a694-fa05309f5863
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Set the Deletion Policy for a State Migration Point
-In System Center Configuration Manager, you configure the state migration point deletion policy by updating the **SMPStoreDeletionDelayTimeInMinutes** and **SMPStoreDeletionCycleTimeInMinutes** embedded properties. The deletion policy defines when the state migration point should remove data marked for deletion.  
+In Configuration Manager, you configure the state migration point deletion policy by updating the **SMPStoreDeletionDelayTimeInMinutes** and **SMPStoreDeletionCycleTimeInMinutes** embedded properties. The deletion policy defines when the state migration point should remove data marked for deletion.  
 
 > [!NOTE]
 >  The Configuration Manager console displays the deletion delay time in days, whereas SMPStoreDeletionDelayTimeInMinutes and SMPStoreDeletionCycleTimeInMinutes are stored in minutes.  

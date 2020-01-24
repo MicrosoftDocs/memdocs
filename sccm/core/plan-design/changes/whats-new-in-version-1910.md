@@ -1,8 +1,8 @@
 ---
 title: What's new in version 1910
 titleSuffix: Configuration Manager
-description: Get details about changes and new capabilities introduced in version 1906 of Configuration Manager current branch.
-ms.date: 12/20/2019
+description: Get details about changes and new capabilities introduced in version 1910 of Configuration Manager current branch.
+ms.date: 01/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,20 +10,21 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby 
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # What's new in version 1910 of Configuration Manager current branch
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 1910 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1806 or later. <!-- baseline only statement:When installing a new site, it's also available as a baseline version.--> This article summarizes the changes and new features in Configuration Manager, version 1910.  
+Update 1910 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1806 or later. <!-- baseline only statement:When installing a new site, it's also available as a baseline version.--> This article summarizes the changes and new features in Configuration Manager, version 1910.
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1910](/sccm/core/servers/manage/checklist-for-installing-update-1910). After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1910#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-> [!Tip]  
+> [!TIP]
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1910+-+Configuration+Manager%22&locale=en-us`
 
@@ -35,9 +36,9 @@ Configuration Manager is now part of Microsoft Endpoint Manager.
 
 ![Microsoft Endpoint Configuration Manager](media/4960084-endpoint-manager-logo.png)
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune with simplified licensing. Continue to leverage your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace.
+Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune with simplified licensing. Continue to make use of your existing Configuration Manager investments while you take advantage of the power of the Microsoft cloud at your own pace.
 
-The following Microsoft management solutions are all now part of the **Microsoft Endpoint Manager** brand:
+The following Microsoft management solutions are all now part of the Microsoft Endpoint Manager brand:
 
 - [Configuration Manager](https://docs.microsoft.com/configmgr)
 - [Intune](https://docs.microsoft.com/intune)
@@ -53,18 +54,18 @@ For more information, see the following posts from Brad Anderson, Microsoft corp
 
 ### What things change in Configuration Manager with Microsoft Endpoint Manager?
 
-In version 1910, aside from the name change, Configuration Manager still functions the same. Some of the name changes may impact your use of the following components:
+In version 1910, aside from the name change, Configuration Manager still functions the same. Some of the name changes might impact your use of the following components:
 
 - **Configuration Manager console**: Find shortcuts to the console and the **Remote Control Viewer** under the Windows Start menu in the **Microsoft Endpoint Manager** folder.
 
 - **Software Center**: Find the Software Center shortcut under the Windows Start menu in the **Microsoft Endpoint Manager** folder.
 
-![Microsoft Endpoint Manager start menu icons](media/microsoft-endpoint-manager-start-menu.png)
+![Microsoft Endpoint Manager Start menu icons](media/microsoft-endpoint-manager-start-menu.png)
 
 Make sure to update any internal documentation that you maintain to include these new locations.
 
 > [!TIP]
-> In Windows 10, when you open the Start menu, just start typing the name to find the icon. For example, `config` for the Configuration Manager console, and `software` for Software Center.
+> In Windows 10, when you open the Start menu, type the name to find the icon. For example, enter `Configuration Manager` or `Software Center`.
 
 ## <a name="bkmk_infra"></a> Site infrastructure
 
@@ -79,7 +80,7 @@ For more information, see [Using the Configuration Manager console](/configmgr/c
 ### Extend and migrate on-premises site to Microsoft Azure
 <!--3556022-->
 
-This new tool helps you to programmatically create Azure virtual machines (VMs) for Configuration Manager. It can install with default settings site roles like a passive site server, management points, and distribution points. Once you validate the new roles, use them as additional site systems for high availability. You can also remove the on-premises site system role and only keep the Azure VM role.
+This new tool helps you to programmatically create Azure virtual machines (VMs) for Configuration Manager. It can install with default settings site roles like a passive site server, management points, and distribution points. After you validate the new roles, use them as additional site systems for high availability. You can also remove the on-premises site system role and only keep the Azure VM role.
 
 For more information, see [Extend and migrate on-premises site to Microsoft Azure](/sccm/core/support/azure-migration-tool).
 
@@ -93,15 +94,17 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 
 ### Optimizations to the CMPivot engine
 <!--3197353-->
-We've added some significant optimizations to the CMPivot engine that allows us to push more of the processing to the ConfigMgr client. The optimizations drastically reduce the network and server CPU load needed to run CMPivot queries. With these optimizations, we can now sift through gigabytes of client data in real time. For more information, see [Optimizations to the CMPivot engine](/sccm/core/servers/manage/cmpivot#bkmk_optimization).
+We've added some significant optimizations to the CMPivot engine. Now you can push more of the processing to the ConfigMgr client. The optimizations drastically reduce the network and server CPU load needed to run CMPivot queries. With these optimizations, you can now sift through gigabytes of client data in real time. 
 
-### Additional CMPivot Entities and Enhancements
+For more information, see [Optimizations to the CMPivot engine](/sccm/core/servers/manage/cmpivot#bkmk_optimization).
+
+### Additional CMPivot entities and enhancements
 <!--5410930-->
 We've added a number of new CMPivot entities and entity enhancements to aid in troubleshooting and hunting. We've included the following entities to query:
 
 - Windows event logs ([WinEvent](/sccm/core/servers/manage/cmpivot#bkmk_WinEvent))
 - File content ([FileContent](/sccm/core/servers/manage/cmpivot#bkmk_File))
-- Dlls loaded by processes ([ProcessModule](/sccm/core/servers/manage/cmpivot#bkmk_ProcessModule))
+- DLLs loaded by processes ([ProcessModule](/sccm/core/servers/manage/cmpivot#bkmk_ProcessModule))
 - Azure Active Directory information ([AADStatus](/sccm/core/servers/manage/cmpivot#bkmk_AadStatus))
 - Endpoint protection status ([EPStatus](/sccm/core/servers/manage/cmpivot#bkmk_EPStatus))
 
@@ -118,18 +121,18 @@ When you enable Microsoft Connected Cache on your Configuration Manager distribu
 For more information, see [Microsoft Connected Cache in Configuration Manager](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
 
 > [!NOTE]
-> Configuration Manager current branch version 1906 included [Delivery Optimization In-Network Cache](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache) (DOINC), an application installed on Windows Server that's still in development. Starting in current branch version 1910, this feature is now called **Microsoft Connected Cache**.
+> Configuration Manager current branch version 1906 included [Delivery Optimization In-Network Cache](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache) (DOINC), an application installed on Windows Server that's still in development. Starting in current branch version 1910, this feature is now called Microsoft Connected Cache.
 >
-> When you install Connected Cache on a Configuration Manager distribution point, it offloads Delivery Optimization service traffic to local sources. Connected Cache does this behavior by efficiently caching content at the byte range level.
+> When you install Connected Cache on a Configuration Manager distribution point, it offloads Delivery Optimization service traffic to local sources. Connected Cache does this behavior by efficiently caching content at the byte-range level.
 
 ## <a name="bkmk_client"></a> Client management
 
 ### Include custom configuration baselines as part of compliance policy assessment
 <!--3608345-->
 
-You can now add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you have an option to **Evaluate this baseline as part of compliance policy assessment**. When adding or editing a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**.
+You can now add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you can now use the **Evaluate this baseline as part of compliance policy assessment** option. When you add or edit a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**.
 
-For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Azure Active Directory. You can then use it for conditional access to your Office 365 resources.  
+For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Azure Active Directory. You can then use it for conditional access to your Office 365 resources.
 
 For more information, see [Include custom configuration baselines as part of compliance policy assessment](/sccm/compliance/deploy-use/create-configuration-baselines#bkmk_CAbaselines).
 
@@ -137,9 +140,9 @@ For more information, see [Include custom configuration baselines as part of com
 
 <!--4737447-->
 
-Configuration Manager current branch version 1906 introduced support for [Windows Virtual Desktop](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-virtual-desktop). This Microsoft Azure environment supports several OS versions, some of which allow multiple concurrent active user sessions. For example, Windows 10 Enterprise multi-session.
+Configuration Manager current branch version 1906 introduced support for [Windows Virtual Desktop](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-virtual-desktop). This Microsoft Azure environment supports several OS versions, some of which allow multiple concurrent active user sessions. For example, Windows 10 Enterprise multi-session is one of these OS versions.
 
-If you require user policy on these multi-session devices, and accept any potential performance impact, you can now configure a client setting to enable user policy. In the **Client Policy** group, configure the following setting: **Enable user policy for multiple user sessions**.
+If you require user policy on these multi-session devices and accept any potential performance impact, you can now configure a client setting to enable user policy. In the **Client Policy** group, configure the **Enable user policy for multiple user sessions** setting.
 
 For more information, see [How to configure client settings](/configmgr/core/clients/deploy/configure-client-settings).
 
@@ -151,7 +154,7 @@ For more information, see [How to configure client settings](/configmgr/core/cli
 
 ### Deploy Microsoft Edge, version 77 and later
 <!--4561024-->
-The all-new Microsoft Edge is ready for business. You can now deploy Microsoft Edge, version 77 and later to your users. Admins can pick the Beta or Dev channel, along with a version of the Microsoft Edge client to deploy.
+The all-new Microsoft Edge is ready for business. You can now deploy Microsoft Edge, version 77 and later, to your users. Admins can pick the Beta, Dev, or Stable channel, along with a version of the Microsoft Edge client to deploy.
 
 For more information, see [Deploy Microsoft Edge, version 77 and later](/sccm/apps/deploy-use/deploy-edge).
 
@@ -161,8 +164,7 @@ For more information, see [Deploy Microsoft Edge, version 77 and later](/sccm/ap
 
 Starting in current branch version 1906, you can create a group of applications to send to a device collection as a single deployment. This release improves upon this feature:
 
-- Users can **Uninstall** the app group in Software Center.
-
+- Users can select **Uninstall** for the app group in Software Center.
 - You can deploy an app group to a **user collection**.
 
 For more general information, see [Create application groups](/configmgr/apps/deploy-use/create-app-groups).
@@ -172,13 +174,14 @@ For more general information, see [Create application groups](/configmgr/apps/de
 
 ### Improvements to the task sequence editor
 
-- **Search the task sequence editor**<!--4621085-->: If you have a large task sequence with many groups and steps, it can be difficult to find specific steps. You can now search in the task sequence editor. This action lets you more quickly locate steps in the task sequence.
+ The task sequence editor includes the following improvements:
 
-- **Copy and paste task sequence conditions**<!--4621098-->: If you want to reuse the conditions from one task sequence step to another, you can now copy and paste conditions in the task sequence editor.
+- **Search the task sequence editor:**<!--4621085--> If you have a large task sequence with many groups and steps, it can be difficult to find specific steps. You can now search in the task sequence editor. This action lets you more quickly locate steps in the task sequence.
+- **Copy and paste task sequence conditions:**<!--4621098--> If you want to reuse the conditions from one task sequence step to another, you can now copy and paste conditions in the task sequence editor.
 
-For more information, see the new article on how to [Use the task sequence editor](/configmgr/osd/understand/task-sequence-editor).
+For more information, see the new article on how to [use the task sequence editor](/configmgr/osd/understand/task-sequence-editor).
 
-### Task sequence performance improvements - power plans
+### Task sequence performance improvements: Power plans
 
 <!--3555926-->
 
@@ -190,7 +193,7 @@ For more information, see [Performance improvements for power plans](/configmgr/
 
 <!--3601238-->
 
-You can use the task sequence to deploy Windows 10 in-place upgrade via cloud management gateway (CMG). However, it requires the deployment to download all content locally before starting the task sequence.
+You can use the task sequence to deploy a Windows 10 in-place upgrade via the cloud management gateway (CMG). However, it requires the deployment to download all content locally before starting the task sequence.
 
 Starting in this release, the task sequence engine can download packages on-demand from a content-enabled CMG or a cloud distribution point. This change provides additional flexibility with your Windows 10 in-place upgrade deployments to internet-based devices.
 
@@ -198,13 +201,13 @@ For more information, see [Deploy Windows 10 in-place upgrade via CMG](/configmg
 
 ### Improvements to OS deployment
 
-This release includes the following improvements to OS deployment:
+This release includes the following improvements to OS deployment.
 
 #### Boot image keyboard layout
 
 <!--4910348-->
 
-Configure the default keyboard layout for a boot image. On the **Customization** tab of a boot image, use the new option to **Set default keyboard layout in WinPE**. If you select a language other than en-us, Configuration Manager still includes en-us in the available input locales. On the device, the initial keyboard layout is the selected locale, but the user can switch the device to en-us if needed.
+Configure the default keyboard layout for a boot image. On the **Customization** tab of a boot image, use the new **Set default keyboard layout in WinPE** option. If you select a language other than en-us, Configuration Manager still includes en-us in the available input locales. On the device, the initial keyboard layout is the selected locale, but the user can switch the device to en-us if needed.
 
 For more information, see [Manage boot images](/configmgr/osd/get-started/manage-boot-images#customization).
 
@@ -212,7 +215,7 @@ For more information, see [Manage boot images](/configmgr/osd/get-started/manage
 
 <!--4931110-->
 
-When importing an OS upgrade package, you can **Extract a specific image index from install.wim file of selected upgrade package**. This behavior is similar as with [OS images](/configmgr/osd/get-started/manage-operating-system-images#BKMK_AddOSImages), except it overwrites the existing install.wim in the OS upgrade package. It extracts the image index to a temporary location, and then moves it into the original source directory.
+When you import an OS upgrade package, you can use the **Extract a specific image index from install.wim file of selected upgrade package** option. This behavior is similar as with [OS images](/configmgr/osd/get-started/manage-operating-system-images#BKMK_AddOSImages), except that it overwrites the existing install.wim in the OS upgrade package. It extracts the image index to a temporary location and then moves it into the original source directory.
 
 For more information, see [Manage OS upgrade packages](/configmgr/osd/get-started/manage-operating-system-upgrade-packages#BKMK_AddOSUpgradePkgs).
 
@@ -220,7 +223,7 @@ For more information, see [Manage OS upgrade packages](/configmgr/osd/get-starte
 
 <!--user story 4977616/bug 4798352-->
 
-The **Run Command Line** step now includes an option to **Output to task sequence variable**. When you enable this option, the task sequence saves the output from the command to a custom task sequence variable that you specify.
+The **Run Command Line** step now includes an **Output to task sequence variable** option. When you enable this option, the task sequence saves the output from the command to a custom task sequence variable that you specify.
 
 For more information, see [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine).
 
@@ -229,8 +232,7 @@ For more information, see [Run Command Line](/configmgr/osd/understand/task-sequ
 This release includes the following improvements to the task sequence debugger:
 
 - Use the new task sequence variable **TSDebugOnError** to automatically start the debugger when the task sequence returns an error.<!-- 5012536 -->
-
-- If you create a breakpoint in the debugger, and then the task sequence restarts the computer, the debugger keeps the breakpoints after restart.<!-- 5012509 -->
+- If you create a breakpoint in the debugger and then the task sequence restarts the computer, the debugger keeps the breakpoints after restart.<!-- 5012509 -->
 
 For more information, see [Task sequence debugger](/configmgr/osd/deploy-use/debug-task-sequence) and [Task sequence variables - TSDebugOnError](/configmgr/osd/understand/task-sequence-variables#TSDebugOnError).
 
@@ -254,7 +256,7 @@ For more information, see [Apply Windows Settings](/configmgr/osd/understand/tas
 
 <!--4680263-->
 
-To address timing issues with the Window 10 in-place upgrade task sequence on high-performance devices when Windows setup is complete, you can now set a new task sequence variable **SetupCompletePause**. When you assign a value in seconds to this variable, the Windows setup process delays that amount of time before it starts the task sequence. This timeout provides the Configuration Manager client additional time to initialize.
+To address timing issues with the Window 10 in-place upgrade task sequence on high-performance devices when Windows setup is complete, you can now set a new task sequence variable, **SetupCompletePause**. When you assign a value in seconds to this variable, the Windows setup process delays that amount of time before it starts the task sequence. This timeout provides the Configuration Manager client additional time to initialize.
 
 For more information, see [Task sequence variables - SetupCompletePause](/configmgr/osd/understand/task-sequence-variables#SetupCompletePause).
 
@@ -264,13 +266,13 @@ For more information, see [Task sequence variables - SetupCompletePause](/config
 
 ### Additional options for third-party update catalogs
 <!--4469002-->
-You now have more granular controls over synchronization of third-party updates catalogs. Starting in Configuration Manager version 1910, you can configure the synchronization schedule for each catalog independently. When using catalogs that include categorized updates, you can configure synchronization to include only specific categories of updates to avoid synchronizing the entire catalog. With categorized catalogs, when you're confident you'll deploy a category, you can configure it to automatically download and publish to WSUS.
+You now have more granular controls over synchronization of third-party updates catalogs. Starting in Configuration Manager version 1910, you can configure the synchronization schedule for each catalog independently. When you use catalogs that include categorized updates, you can configure synchronization to include only specific categories of updates to avoid synchronizing the entire catalog. With categorized catalogs, when you're confident you'll deploy a category, you can configure it to automatically download and publish to Windows Server Update Services (WSUS).
 
 For more information, see [Enable third-party updates](/sccm/sum/deploy-use/third-party-software-updates#bkmk_1910).
 
 ### Use Delivery Optimization for all Windows updates
 <!--4699118-->
-Previously, you could only use Delivery Optimization for express updates. With Configuration Manager version 1910, it’s now possible to use Delivery Optimization for the distribution of all Windows Update content for clients running Windows 10 version 1709 or later.
+Previously, you could use Delivery Optimization only for express updates. With Configuration Manager version 1910, it's now possible to use Delivery Optimization for the distribution of all Windows Update content for clients running Windows 10 version 1709 or later.
 
 For more information, see:
 - [Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#bkmk_DO-1910)
@@ -279,9 +281,9 @@ For more information, see:
 
 ### Additional software update filter for ADRs
 <!--4852033-->
-You can now use **Deployed** as an update filter for your automatic deployment rules. This filter helps identify new updates that may need to be deployed to your pilot or test collections.
+You can now use **Deployed** as an update filter for your automatic deployment rules (ADRs). This filter helps identify new updates that might need to be deployed to your pilot or test collections.
 
-For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process)
+For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process).
 
 ## <a name="bkmk_o365"></a> Office management
 
@@ -289,7 +291,9 @@ For more information, see [Automatically deploy software updates](/sccm/sum/depl
 ### Office 365 ProPlus Pilot and Health Dashboard
 <!--4488272, 4488301-->
 
-The **Office 365 ProPlus Pilot and Health Dashboard** helps you plan, pilot, and deploy Office 365 ProPlus. The dashboard provides health insights for devices with Office 365 ProPlus to help identify possible issues that may affect your deployment plans. The **Office 365 ProPlus Pilot and Health Dashboard** provides a recommendation for pilot devices based on add-in inventory. For more information, see [Office 365 ProPlus pilot and health dashboard](/sccm/sum/deploy-use/office-365-dashboard#bkmk_pilot).
+The Office 365 ProPlus Pilot and Health Dashboard helps you plan, pilot, and deploy Office 365 ProPlus. The dashboard provides health insights for devices with Office 365 ProPlus to help identify possible issues that might affect your deployment plans. The Office 365 ProPlus Pilot and Health Dashboard provides a recommendation for pilot devices based on add-in inventory.
+
+For more information, see [Office 365 ProPlus pilot and health dashboard](/sccm/sum/deploy-use/office-365-dashboard#bkmk_pilot).
 
 ## <a name="bkmk_protect"></a> Protection
 
@@ -299,11 +303,11 @@ The **Office 365 ProPlus Pilot and Health Dashboard** helps you plan, pilot, and
 
 Configuration Manager now provides the following management capabilities for BitLocker Drive Encryption:
 
-- Deploy the BitLocker client to managed Windows devices
-- Manage device encryption policies
-- Compliance reports
-- Administration and monitoring website for key recovery
-- A user self-service portal
+- Deploy the BitLocker client to managed Windows devices.
+- Manage device encryption policies.
+- Generate compliance reports.
+- Use an administration and monitoring website for key recovery.
+- Access a user self-service portal.
 
 For more information, see [Plan for BitLocker management](/configmgr/protect/plan-design/bitlocker-management).
 
@@ -325,8 +329,8 @@ For more information, see [View recently connected consoles](/sccm/core/servers/
 
 There are new device actions for **Client Diagnostics** in the Configuration Manager console:
 
-- **Enable verbose logging**: Change the global log level for the CCM component to verbose, and enable debug logging.
-- **Disable verbose logging**: Change the global log level to default, and disable debug logging.
+- **Enable verbose logging:** Change the global log level for the CCM component to *verbose*, and enable debug logging.
+- **Disable verbose logging:** Change the global log level to *default*, and disable debug logging.
 
 For more information, see [Client diagnostics](/sccm/core/clients/manage/client-notification#client-diagnostics).
 
@@ -336,8 +340,7 @@ For more information, see [Client diagnostics](/sccm/core/clients/manage/client-
 This release includes the following improvements to search in the Configuration Manager console:
 
 - You can now use the **All Subfolders** search option from the **Driver Packages** and **Queries** nodes.<!--2841181,5424892-->
-
-- When a search returns more than 1,000 results, now select the **OK** button on the notice bar to view more results.<!--4640570-->
+- When a search returns more than 1,000 results, select **OK** on the notice bar to view more results.<!--4640570-->
 
 ## Other updates
 
@@ -363,7 +366,7 @@ The following additional hotfixes are available to address specific issues:
 |---------|---------|---------|---------|
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
 
-> [!Note]  
+> [!NOTE]  
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](/sccm/core/servers/manage/updates#bkmk_supersede).
 -->
 
@@ -374,14 +377,14 @@ As of December 20, 2019, version 1910 is globally available for all customers to
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates) and [Checklist for installing update 1910](/sccm/core/servers/manage/checklist-for-installing-update-1910).
 
-> [!TIP]  
-> To install a new site, use a baseline version of Configuration Manager.  
+> [!TIP]
+> To install a new site, use a baseline version of Configuration Manager.
 >
 > Learn more about:
 >
-> - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
-> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)  
+> - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites) 
+> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines) 
 
-For known, significant issues, see the [Release notes](/sccm/core/servers/deploy/install/release-notes).
+For known significant issues, see the [Release notes](/sccm/core/servers/deploy/install/release-notes).
 
 After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1910#post-update-checklist).

@@ -9,10 +9,11 @@ ms.assetid: 9afb280d-716b-40ae-90bb-0c543b4ac9c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CIRelation Server WMI Class
-The `SMS_CIRelation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that defines the relationship between two configuration items, for example, the superseding of one item by another.  
+The `SMS_CIRelation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines the relationship between two configuration items, for example, the superseding of one item by another.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -89,6 +90,22 @@ Class SMS_CIRelation : SMS_BaseClass
 |4|Optional|  
 |5|Derived|  
 |6|Superseded|  
+|7|Self|  
+|8|Reference|  
+|9|AppToDTReference|  
+|10|AppDependence|  
+|11|Intention|  
+|12|Platform|  
+|13|GlobalConditionReference|  
+|15|ApplicationSuperSeded||  
+|16|ApplicationType|  
+|17|ApplicationHost|  
+|18|ApplicationInstaller|  
+|19|SupersedOrDependent|  
+|20|VirtualEnvironmentReference|  
+|21|AppDCMReference|  
+|22|DeploymentTypeToPolicyTemplateReference|  
+|23|CIInheritanceRelation|  
 
  `ToCIID`  
  Data type: `UInt32`  

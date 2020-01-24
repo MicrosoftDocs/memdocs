@@ -10,36 +10,28 @@ ms.assetid: 9b0a7859-747f-4495-a2f4-13fd5991f897
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
-# Interoperability between different versions of System Center Configuration Manager
+# Interoperability between different versions of Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-You can install and operate multiple, independent hierarchies of System Center Configuration Manager on the same network. However, because different hierarchies of Configuration Manager don't interoperate outside of the migration process, each hierarchy requires configurations to prevent conflicts between them. Additionally, you can create certain configurations to help resources that you manage interact with the site systems from the correct hierarchy.  
+You can install and operate multiple, independent hierarchies of Configuration Manager on the same network. However, because different hierarchies of Configuration Manager don't interoperate outside of the migration process, each hierarchy requires configurations to prevent conflicts between them. Additionally, you can create certain configurations to help resources that you manage interact with the site systems from the correct hierarchy.  
 
-The following sections provide information about using different versions of Configuration Manager on the same network:  
-
-- [Interoperability between System Center Configuration Manager and earlier product versions](#BKMK_SupConfigInterop)  
-
-- [Interoperability for the Configuration Manager Console](#BKMK_ConsoleInterop)  
-
-- [Configuration Manager limitations in a mixed-version hierarchy](#bkmk_mixed)  
-
-
-## <a name="BKMK_SupConfigInterop"></a> Interoperability between System Center Configuration Manager and earlier product versions  
+## <a name="BKMK_SupConfigInterop"></a> Interoperability between current branch and earlier versions  
 
 Sites of different versions can't coexist in the same Configuration Manager hierarchy. The only exceptions are during the process of the following upgrade scenarios:
 
-- From System Center 2012 Configuration Manager to System Center Configuration Manager
-- From one System Center Configuration Manager version to a newer version using in-console updates
+- From System Center 2012 Configuration Manager to Configuration Manager current branch
+- From one Configuration Manager current branch version to a newer version using in-console updates
 
-You can deploy a System Center Configuration Manager site and hierarchy side by side with an existing System Center 2012 Configuration Manager site or hierarchy. Plan to prevent clients from either version from trying to join a site from the other version.
+You can deploy a Configuration Manager current branch site and hierarchy side by side with an existing System Center 2012 Configuration Manager site or hierarchy. Plan to prevent clients from either version from trying to join a site from the other version.
 
 For example, if two or more Configuration Manager hierarchies have [overlapping boundaries](/sccm/core/servers/deploy/configure/boundary-groups#overlapping-boundaries) that include the same network locations, assign each new client to a specific site instead of using automatic site assignment. For more information, see [How to assign clients to a site](/sccm/core/clients/deploy/assign-clients-to-a-site).  
 
-Additionally, you can't install a client from System Center 2012 Configuration Manager on a computer that hosts a site system role from System Center Configuration Manager. You also can't you install a System Center Configuration Manager client on a computer that hosts a site system role from System Center 2012 Configuration Manager.  
+Additionally, you can't install a client from System Center 2012 Configuration Manager on a computer that hosts a site system role from Configuration Manager current branch. You also can't you install a Configuration Manager current branch client on a computer that hosts a site system role from System Center 2012 Configuration Manager.  
 
 The following clients and connections aren't supported:  
 
@@ -61,31 +53,31 @@ Configuration Manager clients can be assigned to only a single primary site. You
 
 If boundaries overlap across multiple Configuration Manager sites and hierarchies, clients might not be assigned to the site you expect, or might not get assigned to a site at all.  
 
-System Center Configuration Manager clients check the version of the site before they complete site assignment. If site boundaries overlap, you can't assign clients to a site with a previous version. However, earlier System Center 2012 Configuration Manager clients might incorrectly be assigned to a later System Center Configuration Manager site.  
+Configuration Manager current branch clients check the version of the site before they complete site assignment. If site boundaries overlap, you can't assign clients to a site with a previous version. However, earlier System Center 2012 Configuration Manager clients might incorrectly be assigned to a later Configuration Manager current branch site.  
 
 To prevent clients from unintentionally being assigned to the wrong site when two hierarchies have overlapping boundaries, configure client installation parameters to assign clients to a specific site.  
 
 ## <a name="bkmk_mixed"></a> Configuration Manager limitations in a mixed-version hierarchy  
 
-When you upgrade a System Center Configuration Manager hierarchy, there are times when different sites will have different versions. For example, first you upgrade the central administration site. Because of site maintenance windows, you don't upgrade the primary sites until a later time and date.  
+When you upgrade a Configuration Manager current branch hierarchy, there are times when different sites will have different versions. For example, first you upgrade the central administration site. Because of site maintenance windows, you don't upgrade the primary sites until a later time and date.  
 
 When different sites in a single hierarchy run different versions, some functionality isn't available. This behavior can affect how you manage Configuration Manager objects in the Configuration Manager console, and which functionality is available to clients. Typically, functionality from the newer version of Configuration Manager isn't accessible at sites or to clients that run a lower service pack version.  
 
 ### Network access account
 
-You upgrade the central administration site to System Center Configuration Manager. You view the network access account details from a Configuration Manager console that's connected to this updated site. It doesn't display account details from sites that still run System Center 2012 Configuration Manager.
+You upgrade the central administration site to Configuration Manager current branch. You view the network access account details from a Configuration Manager console that's connected to this updated site. It doesn't display account details from sites that still run System Center 2012 Configuration Manager.
 
 After you upgrade the primary site to the same version as the central administration site, the account details are visible in the console.
 
-The same behavior applies when you update between versions of System Center Configuration Manager.
+The same behavior applies when you update between versions of Configuration Manager.
 
 ### Boot images for OS deployment
 
-#### When upgrading from System Center 2012 Configuration Manager to System Center Configuration Manager
+#### When upgrading from System Center 2012 Configuration Manager to Configuration Manager current branch
 
-When the top-level site of a hierarchy upgrades to System Center Configuration Manager, it automatically updates the default boot images to use the Windows Assessment and Deployment Kit (ADK) version 10. Use these boot images only for deployments to clients at System Center Configuration Manager sites. For more information, see [Planning for OS deployment interoperability](/sccm/osd/plan-design/planning-for-operating-system-deployment-interoperability).
+When the top-level site of a hierarchy upgrades to Configuration Manager current branch, it automatically updates the default boot images to use the Windows Assessment and Deployment Kit (ADK) version 10. Use these boot images only for deployments to clients at Configuration Manager current branch sites. For more information, see [Planning for OS deployment interoperability](/sccm/osd/plan-design/planning-for-operating-system-deployment-interoperability).
 
-#### When upgrading between System Center Configuration Manager versions
+#### When upgrading between Configuration Manager current branch versions
 
 As long as new versions of Configuration Manager don't update the version of Windows ADK that's in use, there's no effect on boot images.
 
@@ -99,7 +91,7 @@ When you create a task sequence with a step introduced in one version of Configu
 
 ### Client to down-level management point communications
 
-A Configuration Manager client that communicates with a management point from a site that runs a lower version than the client can only use functionality that the down-level version of Configuration Manager supports. For example, if you deploy content from a System Center Configuration Manager site that was recently upgraded to a client that communicates with a management point that hasn't yet upgraded to that version, that client can't use new functionality from the latest version.
+A Configuration Manager client that communicates with a management point from a site that runs a lower version than the client can only use functionality that the down-level version of Configuration Manager supports. For example, if you deploy content from a Configuration Manager current branch site that was recently upgraded to a client that communicates with a management point that hasn't yet upgraded to that version, that client can't use new functionality from the latest version.
 
 ### Package and task sequence deployments to legacy clients
 
@@ -112,15 +104,15 @@ Starting in version 1902, you can't deploy a package or task sequence to a clien
 
 This section contains information about the use of the Configuration Manager console in an environment that has a mix of Configuration Manager versions.  
 
-### An environment with both System Center 2012 Configuration Manager and System Center Configuration Manager
+### An environment with both System Center 2012 Configuration Manager and Configuration Manager current branch
 
-To manage a Configuration Manager site, both the console and the site the console connects to must run the same version of Configuration Manager. For example, you can't use a System Center 2012 Configuration Manager console to manage a System Center Configuration Manager site, or the other way around.
+To manage a Configuration Manager site, both the console and the site the console connects to must run the same version of Configuration Manager. For example, you can't use a System Center 2012 Configuration Manager console to manage a Configuration Manager current branch site, or the other way around.
 
-It's not supported to install both the System Center 2012 Configuration Manager console and the System Center Configuration Manager console on the same computer.
+It's not supported to install both the System Center 2012 Configuration Manager console and the Configuration Manager current branch console on the same computer.
 
-### An environment with multiple versions of System Center Configuration Manager
+### An environment with multiple versions of Configuration Manager
 
-System Center Configuration Manager doesn't support installing more than a single Configuration Manager console on a computer. To use multiple consoles that are specific to different versions of System Center Configuration Manager, install the different consoles on separate computers.
+Configuration Manager current branch doesn't support installing more than a single Configuration Manager console on a computer. To use multiple consoles that are specific to different versions of Configuration Manager, install the different consoles on separate computers.
 
 During the process of updating sites in a hierarchy to a new version, you can connect a console to a site that runs a newer version and view information about other sites in that hierarchy. However, this configuration isn't recommended. It's possible that differences between the console version and Configuration Manager site version can result in data issues. Some features that are available in the latest product version won't be available in the console.
 

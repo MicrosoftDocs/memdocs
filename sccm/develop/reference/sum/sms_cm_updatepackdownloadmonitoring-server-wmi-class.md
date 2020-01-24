@@ -9,7 +9,8 @@ ms.assetid: ab04d08b-25e3-444b-91c6-372d083bd8b0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CM_UpdatePackDownloadMonitoring Server WMI Class
 The  `SMS_CM_UpdatePackDownloadMonitoring` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is used to get the update package download status per site.  

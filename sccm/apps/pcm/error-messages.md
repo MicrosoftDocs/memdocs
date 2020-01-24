@@ -10,12 +10,13 @@ ms.assetid: 0d3cf6e1-b295-4b05-821d-e9f57c74ca14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Technical reference for Package Conversion Manager error messages
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 <!--1357861-->
 

@@ -10,19 +10,20 @@ ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ROBOTS: NOINDEX
 ---
-# What's new in version 1802 of System Center Configuration Manager
+# What's new in version 1802 of Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Update 1802 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1702, 1706, or 1710. <!-- baseline only statement: -->When installing a new site, it's also available as a baseline version.
 
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in System Center Configuration Manager current branch, version 1802](https://support.microsoft.com/help/4101375).
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1802](https://support.microsoft.com/help/4101375).
 
 The following additional updates to this release are also now available:
-- [Update rollup for System Center Configuration Manager current branch, version 1802](https://support.microsoft.com/help/4163547)
+- [Update rollup for Configuration Manager current branch, version 1802](https://support.microsoft.com/help/4163547)
 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
@@ -81,7 +82,7 @@ With cloud distribution point site affinity, an internet-based client receives a
 
 ## Management insights
 <!-- 1353967 -->
-Management insights in System Center Configuration Manager provide information about the current state of your environment. The information is based on analysis of data from the site database. Insights help you to better understand your environment and take action based on the insight. For details see, [Management Insights](/sccm/core/servers/manage/management-insights)
+Management insights in Configuration Manager provide information about the current state of your environment. The information is based on analysis of data from the site database. Insights help you to better understand your environment and take action based on the insight. For details see, [Management Insights](/sccm/core/servers/manage/management-insights)
 
 In Configuration Manager 1802, the following insights are available:
 - Applications:
@@ -134,7 +135,7 @@ You can configure the length of strings to be greater than 255 characters for ha
 
  ### Deprecation announcement for Linux and Unix client support
  <!--510139-->
-Microsoft intends to deprecate the Linux and UNIX client support in System Center Configuration Manager roughly one year from now, such that the clients will not be included in version 1902 in early calendar 2019. The Configuration Manager 1810 release, in late calendar 2018, will be the last release to include the Linux and UNIX clients, and they will be supported for the full lifecycle of Configuration Manager 1810. After Configuration Manager 1810, customers should consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
+Microsoft intends to deprecate the Linux and UNIX client support in Configuration Manager roughly one year from now, such that the clients will not be included in version 1902 in early calendar 2019. The Configuration Manager 1810 release, in late calendar 2018, will be the last release to include the Linux and UNIX clients, and they will be supported for the full lifecycle of Configuration Manager 1810. After Configuration Manager 1810, customers should consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
 
 ### Surface device dashboard
 <!--1355788-->
@@ -155,7 +156,7 @@ Starting in this release, Silverlight is no longer installed on client devices a
 <!-- 1357365 -->
  The Endpoint Protection workload can be transitioned to Intune after enabling co-management. To transition the Endpoint Protection workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For details about the workloads, see [Co-management workloads](/sccm/comanage/workloads). For more information about co-management, see [Co-management for Windows 10 devices](/sccm/comanage/overview).
  
-### Co-management dashboard in System Center Configuration Manager
+### Co-management dashboard in Configuration Manager
 <!--1356648-->
 Beginning in this release, you can view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention. For details, see the [Co-management dashboard](/sccm/comanage/how-to-monitor#co-management-dashboard) article. 
 

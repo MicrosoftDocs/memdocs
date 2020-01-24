@@ -1,7 +1,7 @@
 ---
 title: "Technical Preview 1706"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview version 1706 for System Center Configuration Manager."
+description: "Learn about features available in the Technical Preview version 1706 for Configuration Manager."
 ms.date: 09/15/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,13 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Capabilities in Technical Preview 1706 for System Center Configuration Manager
+# Capabilities in Technical Preview 1706 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1706. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1706. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
 
 
 <!--  Known Issues Template   
@@ -524,7 +525,6 @@ For more information about compliance settings, see [Ensure device compliance](/
   * Android 4.2 through 4.4
   * Samsung KNOX Standard 4.0+
 
-See [create and deploy a device compliance policy](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy) to try the new device compliance rules.
 
 ## New mobile application management policy settings
 Beginning with this release, you can use three new mobile application management (MAM) policy settings:
@@ -534,8 +534,6 @@ Beginning with this release, you can use three new mobile application management
 - **Disable contact sync:** Prevents the app from saving data to the native Contacts app on the device.
 
 - **Disable printing:** Prevents the app from printing work or school data.
-
-See [protect apps using app protection policies in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
 
 ## Android and iOS enrollment restrictions
 <!-- 1290826 -->

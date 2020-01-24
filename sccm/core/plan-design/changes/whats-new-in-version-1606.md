@@ -1,7 +1,7 @@
 ---
 title: "New in version 1606"
 titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1606 of System Center Configuration Manager."
+description: "Get details about changes and new capabilities introduced in version 1606 of Configuration Manager."
 ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,13 +11,14 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# What&#39;s new in version 1606 of System Center Configuration Manager
+# What&#39;s new in version 1606 of Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Update 1606 for System Center Configuration Manager is available as an in-console update for previously installed sites that run version 1511 or 1602. Version 1511 is the initial baseline version you use to install new Configuration Manager sites.
+Update 1606 for Configuration Manager is available as an in-console update for previously installed sites that run version 1511 or 1602. Version 1511 is the initial baseline version you use to install new Configuration Manager sites.
 > [!TIP]  
 > Learn more about:  
 >   
@@ -65,7 +66,7 @@ The following are changes to the Updates and Servicing node in the Configuration
 
 
 ###  Pre-release features
-Beginning with 1606, you must give consent to use pre-release features in System Center Configuration Manager before you can select and enable their use. For more information, see [Use pre-release features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
+Beginning with 1606, you must give consent to use pre-release features in Configuration Manager before you can select and enable their use. For more information, see [Use pre-release features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
 
 ### New distribution point update behavior
 Update 1606 introduces changes that improve the availability of distribution points when you install future updates.
@@ -75,13 +76,13 @@ After update 1606 is installed, when you next install an update at that site tha
 
 
 ## <a name="accessibility"></a> Accessibility
-To navigate between the different nodes of a workspace, you can now enter the first letter of the name of a node. Each key press moves the cursor to the next node that begins with that letter. For users who have a screen reader, the reader reads out the name of that node. For more information about Accessibility options, see [Accessibility features in System Center Configuration Manager](../../../core/understand/accessibility-features.md).
+To navigate between the different nodes of a workspace, you can now enter the first letter of the name of a node. Each key press moves the cursor to the next node that begins with that letter. For users who have a screen reader, the reader reads out the name of that node. For more information about Accessibility options, see [Accessibility features](../../../core/understand/accessibility-features.md).
 
 ## <a name="administration"></a>Administration
 The following are changes to Administration in the Configuration Manager console:
 ### OMS Connector
 
-You can now connect Configuration Manager as collections from System Center Configuration Manager to the [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/). This makes data such as collections from your Configuration Manager deployment visible in OMS. Find more information, see [syncing data from Configuration Manager to the Microsoft Operations Management Suite here](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md).
+You can now connect Configuration Manager as collections from Configuration Manager to the [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/). This makes data such as collections from your Configuration Manager deployment visible in OMS. Find more information, see [syncing data from Configuration Manager to the Microsoft Operations Management Suite here](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md).
 
 The OMS Connector is a pre-release feature. To enable it, see [Use pre-release features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
 
@@ -102,13 +103,12 @@ On-premises mobile device management (MDM) now supports a new capability in Wind
 
 The [Windows Store for Business](https://www.microsoft.com/business-store) is where you can find and purchase Windows apps for your organization, either individually or in volume. By connecting the store to Configuration Manager, you can synchronize the list of apps you've purchased with Configuration Manager, view these in the Configuration Manager console, and deploy them like you would any other app.
 
-For details, see [Manage apps from the Windows Store for Business with System Center Configuration Manager](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
+For details, see [Manage apps from the Windows Store for Business with Configuration Manager](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
 ### Manage iOS volume-purchased apps
 
 The workflow for managing volume-purchased iOS apps, and deploying these with Configuration Manager, has been improved.
 
-For details, see [Manage volume-purchased iOS apps with System Center Configuration Manager](../../../apps/deploy-use/manage-volume-purchased-ios-apps.md).
 
 ### Software Center user interface
 
@@ -135,7 +135,7 @@ For details, see [Plan for software updates in Configuration Manager](../../../s
 ### Restart options for Windows 10 clients after software update installation
 When a software update that requires a restart is deployed by using Configuration Manager and is installed on a computer, a pending restart is scheduled. A restart dialog box is also displayed. Beginning in Configuration Manager version 1606, the options **Update and Restart** and **Update and Shutdown** are available whenever there is a pending restart for a Configuration Manager software update. These are available in the Windows power options of Windows 10 computers. After using one of these options, the restart dialog box will not display after the computer restarts.
 
-For details, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md#BKMK_RestartOptions).
+For details, see [Plan for software updates](../../../sum/plan-design/plan-for-software-updates.md#BKMK_RestartOptions).
 
 ### Run software updates compliance scan immediately after a client installs software updates and restarts
 You can now run a compliance scan immediately after a client installs software updates and restarts. To set this up for a deployment, on the **User Experience** page of the Deploy Software Updates Wizard, select **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**. This enables the client to check for additional software updates that become applicable after the client restarts, and then to install them (and become compliant) during the same maintenance window. For details, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates) or [Manually deploy software updates](/sccm/sum/deploy-use/manually-deploy-software-updates).
@@ -143,19 +143,19 @@ You can now run a compliance scan immediately after a client installs software u
 ## Operating system deployment
 
 ### Improvements to the task sequence step: Install Software Updates
-A new setting, **Evaluate software updates from cached scan results**, gives you the option to do a full scan for software updates, instead of using the cached scan results. For details, see [Task sequence steps in System Center Configuration Manager](../../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates).
+A new setting, **Evaluate software updates from cached scan results**, gives you the option to do a full scan for software updates, instead of using the cached scan results. For details, see [Task sequence steps](../../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates).
 
-Also, a new task sequence variable, **SMSTSSoftwareUpdateScanTimeout**, is available. This variable lets you control the timeout for the software updates scan during the Install Software Updates task sequence step. The default value is 30 minutes. For details, see [Task sequence built-in variables in System Center Configuration Manager](../../../osd/understand/task-sequence-built-in-variables.md).
+Also, a new task sequence variable, **SMSTSSoftwareUpdateScanTimeout**, is available. This variable lets you control the timeout for the software updates scan during the Install Software Updates task sequence step. The default value is 30 minutes. For details, see [Task sequence built-in variables](../../../osd/understand/task-sequence-built-in-variables.md).
 
 ### OSDPreserveDriveLetter task sequence variable has been deprecated
 The OSDPreserveDriveLetter task sequence variable has been deprecated. Starting in Configuration Manager version 1606, Windows Setup determines the best drive letter to use (typically C:) during an operating system deployment, by default.
 
-For details, see [Task sequence built-in variables in System Center Configuration Manager](../../../osd/understand/task-sequence-built-in-variables.md).
+For details, see [Task sequence built-in variables](../../../osd/understand/task-sequence-built-in-variables.md).
 
 ### Customize the RamDisk TFTP window size for PXE-enabled distribution points
 You can now customize the RamDisk window size for PXE-enabled distribution points. If you have customized your network, it could cause the boot image download to fail with a time-out error, because the window size is too large. The RamDisk Trivial File Transfer Protocol (TFTP) window size customization lets you optimize TFTP traffic when you are using PXE to meet your specific network requirements.
 
-For details, see [Prepare site system roles for operating system deployments with System Center Configuration Manager](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP).
+For details, see [Prepare site system roles for operating system deployments with Configuration Manager](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP).
 
 ## Compliance settings
 
@@ -164,7 +164,6 @@ A new setting, **Allow Smart Lock and other trust agents**, has been added to th
 
 This setting lets you control the Smart Lock feature on compatible Android devices. This phone capability, sometimes known as "trust agents," lets you disable or bypass the device lock screen password if the device is in a trusted location. For example, a trusted location could be when it is connected to a specific Bluetooth device, or when it is near to an NFC tag. You can use this setting to prevent users from configuring Smart Lock.
 
-For details, see [How to create configuration items for Android and Samsung KNOX Standard devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).
 
 ## Device configuration and protection
 
@@ -190,8 +189,6 @@ Configuration Manager can help you manage Activation Lock in two ways:
 - Enable Activation Lock on supervised devices.
 - Bypass Activation Lock on supervised devices.
 
-For details, see [Manage iOS Activation Lock with System Center Configuration Manager](../../../mdm/deploy-use/manage-ios-activation-lock.md).
-
 
 ### Microsoft Defender Advanced Threat Protection
 
@@ -202,19 +199,17 @@ For details, see [Microsoft Defender Advanced Threat Protection](../../../protec
 ### Device categories
 You can create device categories, which can be used to place devices in device collections automatically when you are using Configuration Manager with Microsoft Intune. Users are then required to choose a device category when they enroll a device in Intune. Additionally, you can change the category of a device from the Configuration Manager console.
 
-For details, see [How to automatically categorize devices into collections with System Center Configuration Manager](../../../core/clients/manage/collections/automatically-categorize-devices-into-collections.md).
+For details, see [How to automatically categorize devices into collections with Configuration Manager](../../../core/clients/manage/collections/automatically-categorize-devices-into-collections.md).
 
 ### Predeclare devices with IMEI or iOS serial numbers
 
 You can identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers or iOS serial numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers, or you can manually enter device information. Imported information sets the ownership of the devices that enroll as “Corporate” in lists of devices. An Intune license is still required for each user who accesses the service.
 
-For more details, see [Predeclare devices with IMEI or iOS serial numbers](../../../mdm/deploy-use/predeclare-devices-with-hardware-id.md).
-
 ### On-premises Health Attestation service communication
 
 You can now enable Health Attestation services monitoring for Windows 10 PCs by using only on-premises infrastructure, so that computers without Internet access can report Device Health Attestation (DHA).
 
-For details, see [Health attestation for System Center Configuration Manager](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers).  
+For details, see [Health attestation for Configuration Manager](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers).  
 
 ## Remote Control
 Allow your users the opportunity to accept or deny file transfers before transferring content from the shared clipboard in a remote control session. Users only need to grant permission once per session, and the viewer does not have the ability to give themselves permission to proceed with the file transfer. You can find this new setting in the **Administration** workspace. Go to **Client Settings**, and then in **Default Settings**, open the **Remote Tools** panel.

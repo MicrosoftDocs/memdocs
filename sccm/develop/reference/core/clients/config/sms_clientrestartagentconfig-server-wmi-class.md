@@ -9,7 +9,8 @@ ms.assetid: aef07b1f-8fde-4c19-9fbc-b121a2df68e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ClientRestartAgentConfig Server WMI Class
 The `SMS_ClientRestartAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the settings and properties used by the client restart agent.  

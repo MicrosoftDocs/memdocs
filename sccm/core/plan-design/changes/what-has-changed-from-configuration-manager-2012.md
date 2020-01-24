@@ -10,7 +10,8 @@ ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # What's changed from System Center 2012 Configuration Manager
@@ -26,7 +27,7 @@ The December 2015 release (version 1511) of Configuration Manager was the initia
 
 Configuration Manager current branch:  
 
-- Doesn't use a year or product identifier in the product name, unlike past versions such as System Center Configuration Manager 2007 or System Center 2012 Configuration Manager.  
+- Doesn't use a year or product identifier in the product name, unlike past versions such as Configuration Manager 2007 or System Center 2012 Configuration Manager.  
 
 - Supports incremental, in-product updates, also called update versions. The initial release was version 1511. Later versions are released several times a year as in-console updates, like version 1910.  
 
@@ -138,7 +139,7 @@ Be aware of the following changes to compliance settings:
 
     For more information, see [How to create configuration items](/sccm/compliance/deploy-use/create-configuration-items).  
 
-- Support for managing settings on Mac OS X computers that are managed with the Configuration Manager client. See [How to create configuration items for Mac OS X devices managed without the Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client).  
+- Support for managing settings on Mac OS X computers that are managed without the Configuration Manager client.
 
 ### On-premises mobile device management  
 

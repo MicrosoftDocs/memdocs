@@ -9,10 +9,11 @@ ms.assetid: bcb099cd-4433-4223-bb2e-23fdfd32fb41
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Enable or Disable the Compliance Settings (DCM) Agent
-In System Center Configuration Manager, you enable or disable the Desired Configuration Management Client Agent by modifying the site control file settings.  
+In Configuration Manager, you enable or disable the Desired Configuration Management Client Agent by modifying the site control file settings.  
 
 ### To enable or disable the Desired Configuration Management Client Agent  
 

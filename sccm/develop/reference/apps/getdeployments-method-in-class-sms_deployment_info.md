@@ -9,7 +9,8 @@ ms.assetid: 6545ae78-95b6-48b6-b8ba-c09046b6cc31
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetDeployments Method in Class SMS_Deployment_Info
 The `GetDeployments` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets advertisement identifier or Assignment identifier and related type for a deployment that is deployed to the specified resource.  

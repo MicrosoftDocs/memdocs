@@ -9,10 +9,11 @@ ms.assetid: 8a958d91-c654-4f11-a9e4-387dc998c2ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Read Lazy Properties by Using Managed Code
-To read a lazy property from a System Center Configuration Manager object returned in a query, you get the object instance, which retrieves any lazy object properties from the SMS Provider.  
+To read a lazy property from a Configuration Manager object returned in a query, you get the object instance, which retrieves any lazy object properties from the SMS Provider.  
 
 > [!NOTE]
 >  If you know the full path to the WMI object, a call to the [GetInstance](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.connectionmanagerbase.getinstance.aspx) method returns the WMI object along with any lazy properties. For more information, see [How to Read a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md).  
@@ -23,7 +24,7 @@ To read a lazy property from a System Center Configuration Manager object return
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md).  
 
-2.  Use **QueryProcessor** object to query System Center Configuration Manager objects.  
+2.  Use **QueryProcessor** object to query Configuration Manager objects.  
 
 3.  Iterate through the query results.  
 

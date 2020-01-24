@@ -1,7 +1,7 @@
 ---
 title: "Deprecated items"
 titleSuffix: "Configuration Manager"
-description: "Learn about the features, products, and operating systems that System Center Configuration Manager no longer supports."
+description: "Learn about the features, products, and operating systems that Configuration Manager no longer supports."
 ms.date: 01/25/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,13 +10,14 @@ ms.assetid: b0adf873-2ff4-4a7b-b5e7-6047f146511f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Removed and deprecated items for System Center Configuration Manager
+# Removed and deprecated items for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-This article describes how to use the information about features, products, and operating systems that are removed from support for System Center Configuration Manager, or will be removed in a future update (deprecated). This article provides early notice about future changes that might affect your use of Configuration Manager.  
+This article describes how to use the information about features, products, and operating systems that are removed from support for Configuration Manager, or will be removed in a future update (deprecated). This article provides early notice about future changes that might affect your use of Configuration Manager.  
 
 This information is subject to change with future releases, and might not include each deprecated feature, product, or operating system.  
 

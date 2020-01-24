@@ -1,7 +1,7 @@
 ---
 title: "Monitor app usage with software metering"
 titleSuffix: "Configuration Manager"
-description: "Learn about operations that are available in System Center Configuration Manager software metering."
+description: "Learn about operations that are available in Configuration Manager software metering."
 ms.date: 09/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-app
@@ -10,14 +10,15 @@ ms.assetid: b1fdaee2-2816-4447-94cd-609f6948f215
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
-# Software metering in System Center Configuration Manager
+# Software metering in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-This topic contains a reference for all of the operations you might perform when using System Center Configuration Manager software metering.
+This topic contains a reference for all of the operations you might perform when using Configuration Manager software metering.
 
 > [!IMPORTANT]
 >  Software metering is used to monitor Windows PC desktop apps with a filename ending in **.exe**. Software metering does not monitor modern Windows apps (such as those used by Windows 8).
@@ -28,7 +29,7 @@ Software metering has no external dependencies, only dependencies within the pro
 |Dependency|More information|
 |----------------|----------------------|
 |Client settings for software metering.|To use software metering, the client setting **Enable software metering on clients** must be enabled and deployed to computers. You can deploy software metering settings to all computers in the hierarchy, or you can deploy custom settings to groups of computers. See **Configure software metering** in this topic.|
-|The reporting services point.|You must configure a reporting services point before you can view software metering reports. For more information, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).|
+|The reporting services point.|You must configure a reporting services point before you can view software metering reports. For more information, see [Reporting](../../core/servers/manage/reporting.md).|
 
 ##  Configure software metering
  This procedure configures the default client settings for software metering and applies to all computers in your hierarchy. If you want these settings to apply to only some computers, create a custom device client setting and deploy it to a collection that contains the computers on which you want to use software metering. For more information about how to create custom device settings, see [Configure client settings](../../core/clients/deploy/configure-client-settings.md).
@@ -123,7 +124,7 @@ Software metering has no external dependencies, only dependencies within the pro
 ##  Monitor software metering
  Software metering in Configuration Manager includes a number of built-in reports which allow you to monitor information about software metering operations. These reports have the report category of **Software Metering**.
 
- For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).
+ For more information about how to configure reporting in Configuration Manager, see [Reporting](../../core/servers/manage/reporting.md).
 
  Additionally, you can create queries and collections based on the data stored in the Configuration Manager database by software metering.
 

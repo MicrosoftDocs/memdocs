@@ -11,11 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 
-ms.collection: M365-identity-device-management
----
-# Manage Windows as a service using System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Manage Windows as a service using Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 
  In Configuration Manager, you can view the state of Windows as a Service (WaaS) in your environment. Create servicing plans to form deployment rings, and ensure that Windows 10 systems are kept up-to-date when new builds are released. You can also view alerts when Windows 10 clients are near end of support for their Semi-Annual Channel build.  

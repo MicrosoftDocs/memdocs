@@ -10,12 +10,13 @@ ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Link users and devices with user device affinity in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 User device affinity in Configuration Manager associates a user with one or more devices. This behavior can eliminate the need to know the names of a user's devices to deploy an application to the user. Instead of deploying the application to each of the user's devices, you deploy the application to the user. Then, user device affinity automatically makes sure that the application installs on all devices that are associated with that user.  
 

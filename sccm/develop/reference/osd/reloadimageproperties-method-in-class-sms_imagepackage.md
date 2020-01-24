@@ -9,7 +9,8 @@ ms.assetid: fa846d7c-31b8-4253-9c08-d852875fb252
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ReloadImageProperties Method in Class SMS_ImagePackage
 The `ReloadImageProperties` Windows Management Instrumentation (WMI) class method, in Configuration Manager, reloads image metadata from an image source .wim file and synchronizes the metadata with the database.  

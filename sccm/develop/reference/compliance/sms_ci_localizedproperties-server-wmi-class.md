@@ -9,7 +9,8 @@ ms.assetid: b74eec73-00a3-40ad-a496-fa42d80f0c27
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CI_LocalizedProperties Server WMI Class
 The `SMS_CI_LocalizedProperties` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains the localized properties for a configuration item.  

@@ -1,8 +1,8 @@
 ---
-title: "Bulk-enroll devices for On-premises MDM"
-titleSuffix: "Configuration Manager"
-description: "Bulk-enroll devices in an automated way with On-premises Mobile Device Management in System Center Configuration Manager."
-ms.date: 03/05/2017
+title: How to bulk-enroll devices
+titleSuffix: Configuration Manager
+description: Bulk-enroll devices in an automated way with on-premises mobile device management (MDM) in Configuration Manager.
+ms.date: 01/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,148 +10,145 @@ ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
-# How to bulk-enroll devices with On-premises Mobile Device Management in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# How to bulk-enroll devices with on-premises MDM in Configuration Manager
 
+*Applies to: Configuration Manager (current branch)*
 
-Bulk enrollment in System Center Configuration Manager On-premises Mobile Device Management is a more automated means for  enrolling devices, as compared to user enrollment, which requires users to enter their credentials to enroll the device.  Bulk enrollment uses an enrollment package to authenticate the device during enrollment. The package (a .ppkg file) contains a certificate profile and optionally a Wi-Fi profile if the device needs intranet connectivity to support enrollment.  
+Bulk enrollment in Configuration Manager on-premises mobile device management (MDM) is an automated method to enroll devices. The other method is user enrollment, which requires users to enter their credentials to enroll the device. Bulk enrollment uses an enrollment package to authenticate the device during enrollment. The package is a .ppkg file, which can also contain certificate and Wi-Fi profiles to support enrollment.
 
-> [!NOTE]  
->  The current branch of Configuration Manager supports enrollment in On-premises Mobile Device Management for devices running the following operating systems:  
->   
-> -  Windows 10 Enterprise  
-> -   Windows 10 Pro  
-> -   Windows 10 Team  
-> -   Windows 10 Mobile  
-> -   Windows 10 Mobile Enterprise
-> -   Windows 10 IoT Enterprise   
+## <a name="bkmk_createCert"></a> Create a certificate profile
 
-The following tasks explain how to bulk-enroll computers and devices for On\-premises Mobile Device Management:  
+Include a certificate profile to automatically install a trusted root certificate on the device. This root certificate is required for trusted communication between the devices and the site system roles needed for on-premises MDM.
 
--   [Create a certificate profile](#bkmk_createCert)  
+When you prepare the site for on-premises MDM, you export the trusted root certificate. Use this certificate in the enrollment package's certificate profile. For more information on how to get the trusted root certificate, see [Export the trusted root certificate](/configmgr/mdm/get-started/set-up-certificates-on-premises-mdm#bkmk_exportCert).
 
--   [Create a Wi-Fi profile](#CreateWifi)  
+Use the exported certificate to create a certificate profile. For more information, see [How to create certificate profiles](/configmgr/protect/deploy-use/create-certificate-profiles).
 
--   [Create an enrollment profile](#bkmk_createEnroll)  
+## <a name="CreateWifi"></a> Create a Wi-Fi profile
 
--   [Create an enrollment package (ppkg) file](#bkmk_createPpkg)  
+Another component of the bulk enrollment package is a Wi-Fi profile. This profile can make sure that the device has the network connectivity to support enrollment.
 
--   [Use the package to bulk-enroll a device](#bkmk_getPpkg)  
+For more information on how to create a Wi-Fi profile in Configuration Manager, see [How to create Wi-Fi profiles](/configmgr/protect/deploy-use/create-wifi-profiles).
 
--   [Verify enrollment of device](#bkmk_verifyEnroll)  
+### Wi-Fi profile limitations
 
-##  <a name="bkmk_createCert"></a> Create a certificate profile  
- The main component of the enrollment package is a certificate profile, which is used to automatically provision a trusted root certificate to the device being enrolled.  This root certificate is required for trusted communication between the devices and the site system roles needed for On\-premises Mobile Device Management. Without the root certificate, the device would not be trusted in HTTPS connections between it and the servers hosting the enrollment point, enrollment proxy point, distribution point, and device management point site system roles.  
+When you create a Wi-Fi profile for on-premises MDM bulk enrollment, review the following limitations.
 
- As part of preparing the system for On\-premises Mobile Device Management, you export a root certificate that you can use in the enrollment package's certificate profile. For instructions on how to get the trusted root certificate, see [Export the certificate with the same root as the web server certificate](../../mdm/get-started/set-up-certificates-on-premises-mdm.md#bkmk_exportCert).  
+#### Wi-Fi security configurations for on-premises MDM
 
- Use the exported root certificate to create a certificate profile. For instructions, see [How to create certificate profiles in System Center Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).  
+The current branch of Configuration Manager only supports the following Wi-Fi security configurations for on-premises MDM:
 
-##  <a name="CreateWifi"></a> Create a Wi-Fi profile  
- The other component of the package used for bulk enrollment is a Wi-Fi profile. Some devices might not have the network connectivity needed to support enrollment until a network settings are provisioned. Including a Wi-Fi profile in the enrollment package provides a means for  establishing network connectivity for the device.  
+- Security types: **WPA2 Enterprise** or **WPA2 Personal**
 
- To create a Wi-Fi profile in Configuration Manager, follow the instructions in [How to create Wi-Fi profiles in System Center Configuration Manager](../../protect/deploy-use/create-wifi-profiles.md).  
+- Encryption types: **AES** or **TKIP**
 
-> [!IMPORTANT]  
->Keep the following two issues in mind when creating a Wi-Fi profile for bulk enrollment:
->
-> - The current branch of Configuration Manager only supports the following Wi-Fi security configurations for On\-premises Mobile Device Management:  
->   
->   - Security types: **WPA2 Enterprise** or **WPA2 Personal**  
->   - Encryption types: **AES** or **TKIP**  
->   - EAP types: **Smart Card or other certificate** or **PEAP**  
->
->
-> - Although Configuration Manager has a setting for proxy server information in the Wi-Fi profile, it does not configure the proxy when the device is enrolled. If you need to set up a proxy server with your enrolled devices, you can deploy the settings using configuration items once devices are enrolled or create the second package using the Windows Image and Configuration Designer (ICD) to deploy along side the bulk enrollment package.
+- EAP types: **Smart Card or other certificate** or **PEAP**
 
-##  <a name="bkmk_createEnroll"></a> Create an enrollment profile  
- The enrollment profile allows you to specify settings required for device enrollment, including a certificate profile that will dynamically provision a trusted root certificate to the device and a Wi-Fi profile that will provision network settings if required.  
+#### Proxy server
 
- Before creating an enrollment profile, make sure you have a certificate profile and Wi-Fi profile (if needed) created. For more information, see [Create a certificate profile](#bkmk_createCert) and [Create a Wi-Fi profile](#CreateWifi).  
+Although Configuration Manager has a setting for proxy server information in the Wi-Fi profile, it doesn't configure the proxy when the device enrolls. If you need to set up a proxy server on bulk-enrolled devices:
 
-#### To create an enrollment profile:  
+- Deploy the settings using configuration items once devices enroll.
 
-1.  In the Configuration Manager console, click **Assets and Compliance** >**Overview** >**All Corporate-owned Device** >**Windows** >**Enrollment Profiles**.  
+- Create a second package using the Windows Image and Configuration Designer (ICD), then deploy it along with the bulk enrollment package.
 
-2.  Right click **Enrollment Profile** and then click **Create Profile**.  
+## <a name="bkmk_createEnroll"></a> Create an enrollment profile
 
-3.  In the Create Enrollment Profile wizard, enter a  name for the profile,  make sure **On-Premises** is selected for **Management Authority**, and then click **Next**.  
+The enrollment profile allows you to specify settings required for device enrollment. These settings include a [certificate profile](#bkmk_createCert) and a [Wi-Fi profile](#CreateWifi).
 
-4.  Select site code, and click **Next**.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **All Corporate-owned Devices**, expand **Windows**, and select the **Enrollment Profiles** node.
 
-5.  Select **Intranet Only**, select enrollment proxy points the device will use initiate the enrollment process, and then click **Next**.  
+1. In the ribbon, select **Create Enrollment Profile**.
 
-6.  Select the certificate profile containing the trusted root certificate (this is the profile you created in [Create a certificate profile](#bkmk_createCert)), click **Next**.  
+1. On the **General** page of the Create Enrollment Profile wizard, specify the following information:
 
-7.  Select the W-Fi profile containing the necessary network settings for devices to connect to the intranet (this is the profile you created in [Create a Wi-Fi profile](#CreateWifi)) and click **Next**.  
+    - **Name**: A unique name to identify the profile
 
-    > [!NOTE]  
-    >  If you are not using a Wi-Fi profile for you enrollment package, skip this step.  
+    - **Description**: An optional field to further describe the profile
 
-8.  Confirm the settings for the enrollment profile, and    click **Next**. Click **Close** to exit the wizard.  
+    - **Management Authority**: Only select **On-Premises**
 
-##  <a name="bkmk_createPpkg"></a> Create an enrollment package (ppkg) file  
- The enrollment package is the file you use to bulk-enroll devices for On\-premises Mobile Device Management.  This file must be created with Configuration Manager. You can create similar types of packages with Windows Image and Configuration Designer (ICD), but only packages you create in Configuration Manager can be used to enroll devices for On\-premises Mobile Device Management from start to finish. Packages created with Windows ICD can only provide the user principal name (UPN) needed for enrollment, but not execute the actual enrollment process.  
+1. On the **Site assignment** page, select the **Management site code** with a device management point.
 
- The process to create the enrollment package requires the Windows Assessment and Deployment Toolkit (ADK) for Windows 10.  On the server running the Configuration Manager console, make sure you have version 1511 of the Windows ADK  installed. For more information, see the ADK section of [Download kits and tools for Windows 10](https://msdn.microsoft.com/windows/hardware/dn913721.aspx)  
+1. On the **Select Enrollment Proxy Point** page, select **Intranet Only**, and then select one or more enrollment proxy points. Device will use these servers to start the enrollment process.
 
-> [!TIP]  
->  If you remove an enrollment package from the Configuration Manager console, it cannot be used to enroll devices. You can use package removal as a way to manage packages that you no longer want used for bulk-enrolling devices.  
+1. On the **Select Trusted Root Certificate** page, select the certificate profile that contains the trusted root certificate.
 
-#### To create an enrollment package (ppkg) file:  
+1. On the **Wi-Fi profiles** page, select the Wi-Fi profile that contains the necessary network settings for devices to connect.
 
-1.  Right-click on the profile just created (in [Create an enrollment profile](#bkmk_createEnroll), and click **Export**.  
+    > [!TIP]
+    > If you aren't using a Wi-Fi profile for your enrollment package, skip this step.
 
-2.  Click **Browse**, find a location you want to save the .ppkg file to, enter a name for the package, and then click **Save**.  
+1. Complete the wizard.
 
-3.  If you want to password-protect the package, click the check box next to **Encrypt Package**, then click **Export** and wait for about 10 seconds for export to complete.  
+## <a name="bkmk_createPpkg"></a> Create an enrollment package
 
-    > [!NOTE]  
-    >  If you encrypted the package, Configuration Manager provides a message with the decrypted password in it. Make sure you save the password information because you will need it to provision the package on devices.  
+The enrollment package (ppkg) is the file that you use to bulk-enroll devices for on-premises MDM. Create this file with Configuration Manager. While you can create similar types of packages with Windows ICD, only packages that you create in Configuration Manager can be used to enroll devices for on-premises MDM. A package that you create with Windows ICD can only provide the user principal name (UPN) needed for enrollment, it can't start the actual enrollment process.
 
-4.  Click **OK**.  
+The process to create the enrollment package requires the Windows Assessment and Deployment Toolkit (ADK) for Windows 10. On the computer running the Configuration Manager console, install the latest version of the Windows ADK. Select the **Imaging and Configuration Designer (ICD)** feature and any dependencies. (This version doesn't need to match the version used for OS deployment by the Configuration Manager site.) For more information, see [Download the Windows ADK for Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install).
 
-##  <a name="bkmk_getPpkg"></a> Use the package to bulk-enroll a device  
- You can use package to enroll devices before or after the device has been provisioned through the out-of-box experience (OOBE) process.   The enrollment package can also be included as part of an original equipment manufacturer's (OEM's) provisioning package.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **All Corporate-owned Devices**, expand **Windows**, and select the **Enrollment Profiles** node.
 
- The package has to be physically delivered to the device to use it for bulk enrollment. You can deliver the enrollment package to the device in various ways depending on your needs, including:  
+1. Select an existing enrollment profile. In the ribbon, select **Export**.
 
--   Copy from file system  
+1. In the Export Enrollment Package window, specify the following information:
 
--   Attach to email  
+    - **Validity Period (days)**: By default, Configuration Manager sets the enrollment package to expire in two weeks (14 days). You can't use the package for device enrollment after the validity period expires. Enter an integer between 1 and 30.
 
--   Copy across near field communication (NFC) connection  
+    - **Package File**: Specify a local or network file path and name for the .ppkg file.
 
--   Copy from memory card  
+    - **Encrypt Package**: Enable this option to password-protect the package. After you export the package, Configuration Manager displays the generated password. Copy and save the password in a secure location. You can't use the exported enrollment package without the password.
 
--   Scan barcode  
+        > [!IMPORTANT]
+        > Configuration Manager doesn't save the password, and you can't customize or change it. Once you close the window that displays the password, there's no way to retrieve the password.
 
--   Copy from a tethered device  
+1. Select **Export**. Configuration Manager uses the Windows ADK to create the enrollment package.
 
--   Include in OEM provisioning package  
+Configuration Manager keeps track of valid enrollment packages. In the console, expand the **Enrollment Profile** node and select **Exported Packages**.
 
-#### To bulk-enroll a device:  
+> [!TIP]
+> If you remove an enrollment package from the Configuration Manager console, you can't use it to enroll devices. Use this method to manage enrollment packages that you don't want others to use for bulk enrollment.
 
-1.  On device to be enrolled, find the enrollment package (using file explorer) and double-click the .ppkg file.  
+## <a name="bkmk_getPpkg"></a> Bulk-enroll a device
 
-2.  Click **Yes** in the User Account Control message.  
+You can use a package to enroll devices before or after the device's out-of-box experience (OOBE) process. The enrollment package can also be included as part of an original equipment manufacturer (OEM) provisioning package.
 
-3.  In the dialog asking you if the package is from a source you trust,     click **Yes, add it**.  
+To use the package for bulk enrollment, you need to physically deliver it to the device. There are various methods depending on your needs, for example:
 
-     The enrollment process  starts and takes about 5 minutes.  
+- Copy from the file system
 
-4.  Open **Settings**.  
+- Attach to an email
 
-5.  Click  **Accounts** > **Work access**. When enrollment is successful, you see an account under **CompanyApps**  
+- Copy across a near field communication (NFC) connection
 
-6.  Click the account, and then click **Sync**, which starts management with Configuration Manager.  
+- Copy from a memory card
 
-##  <a name="bkmk_verifyEnroll"></a> Verify enrollment of device  
- You can verify that devices have been successfully enrolled in the Configuration Manager console.  
+- Scan a barcode
 
--   Start the Configuration Manager console.  
+- Copy from a tethered device
 
--   Click **Assets and Compliance** > **Overview** > **Devices**. The enrolled device appears in the list.  
+- Include in an OEM provisioning package
+
+### Enroll a device with bulk enrollment package
+
+1. On a device, open the .ppkg file. Run as administrator if necessary.
+
+1. Windows asks if the package is from a trusted source, select **Yes**.
+
+The enrollment process starts.
+
+## <a name="bkmk_verifyEnroll"></a> Verify enrollment
+
+### Verify bulk enrollment on the device
+
+1. On the device, open **Settings**.
+
+1. Select **Accounts**, and select **Access work or school**. When enrollment is successful, you see an account under **CompanyApps**.
+
+1. Select the account, and then select **Sync**. This action starts management with Configuration Manager.
+
+### Verify enrollment in the console
+
+Use the Configuration Manager console to verify that devices are enrolled successfully. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select **Devices**. Browse or search for the enrolled device in the list of devices.

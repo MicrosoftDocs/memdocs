@@ -9,7 +9,8 @@ ms.assetid: a24f8c3e-21cf-4d92-9561-a08398d92c2f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SetSourceSite Method in Class SMS_BootImagePackage
 The `SetSourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the code of the source site for the boot image package.  

@@ -9,7 +9,8 @@ ms.assetid: 2cc63027-0dbd-4842-933d-171ee66d7c0d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Hardware inventory server WMI classes
@@ -18,7 +19,7 @@ The Configuration Manager hardware inventory server WMI classes are generated dy
 
 During the Configuration Manager hardware inventory process, the name for a class is transformed from "Win32_hardware" to "SMS_G_System_hardware". For example, "Win32_DiskDrive" translates to "SMS_G_System_DISK".  
 
-In addition to the class name change, the following differences are found between the Win32 classes and the System Center Configuration Manager hardware inventory server classes:  
+In addition to the class name change, the following differences are found between the Win32 classes and the Configuration Manager hardware inventory server classes:  
 
 - Each Configuration Manager class inherits four properties from [SMS_G_System_Current Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system_current-server-wmi-class.md).  
 

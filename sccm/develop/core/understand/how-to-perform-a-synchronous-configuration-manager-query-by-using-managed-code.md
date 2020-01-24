@@ -9,7 +9,8 @@ ms.assetid: 0ec43754-0e84-472a-af93-e7d11ab32654
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Perform a Synchronous Configuration Manager Query by Using Managed Code
 To perform a synchronous query by using the managed SMS Provider, you use *WqlConnectionManager.QueryProcessor.ExecuteQuery* method.  

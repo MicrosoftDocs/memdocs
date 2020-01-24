@@ -9,10 +9,11 @@ ms.assetid: 8334dc55-78fe-4305-bd01-ce595c1a924a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to List All Programs and Their Maximum Run Time Value
-In System Center Configuration Manager, you can list all programs with their maximum run time values by using the `SMS_Package` and `SMS_Program` classes and class properties.  
+In Configuration Manager, you can list all programs with their maximum run time values by using the `SMS_Package` and `SMS_Program` classes and class properties.  
 
 ### To list all programs and their maximum run times  
 

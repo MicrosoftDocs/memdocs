@@ -9,7 +9,8 @@ ms.assetid: f330dd6f-9453-4fe2-b285-a7287c0853d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequence_AutoApplyAction Server WMI Class
 The `SMS_TaskSequence_AutoApplyAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that matches and installs device drivers as part of an operating system deployment.  

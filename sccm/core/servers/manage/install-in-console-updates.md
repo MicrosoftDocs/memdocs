@@ -10,7 +10,8 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Install in-console updates for Configuration Manager
@@ -41,8 +42,6 @@ After updates synchronize, view them in the Configuration Manager console. Go to
 Before you configure the service connection point, understand and plan for its additional uses. The following uses might affect how you configure this site system role:  
 
 - The site uses the service connection point to upload usage information about your site. This information helps the Microsoft cloud service identify the updates that are available for the current version of your infrastructure. For more information, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).  
-
-- The site uses the service connection point to manage devices with Microsoft Intune, and using Configuration Manager on-premises mobile device management. For more information, see [Hybrid mobile device management (MDM)](/sccm/mdm/understand/hybrid-mobile-device-management).  
 
 To better understand what happens when updates are downloaded, see the following flowcharts:  
 
@@ -402,10 +401,9 @@ The following features are optional in the latest version of Configuration Manag
 - [Application groups](/sccm/apps/deploy-use/create-app-groups) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D-->
 - [Task sequence debugger](/sccm/osd/deploy-use/debug-task-sequence) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71-->
 - [Package conversion manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861,4E0C09AF-7FC1-4412-A8BB-166D9BCD0093-->
-- [Client apps for co-managed devices](/sccm/comanage/workloads#client-apps) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
+- [Client apps for co-managed devices](/sccm/comanage/workloads#client-apps) (previously known as *Mobile apps for co-managed devices*) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
 - [Third-party software updates](/sccm/sum/deploy-use/third-party-software-updates)<!--1357605,1352101,1358714;B5E192AE-C81F-4348-9EF9-07A3C0FBE597-->
 - [Approve application requests for users per device](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
-- [Device health attestation assessment for compliance policies for conditional access](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616,0E986DC1-D20A-4386-9EB5-108D9D5118EB-->
 - [Create and run scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
 - [Surface driver updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490,82AD973A-7CDF-4B67-A665-72875D6E099A-->
 - [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
@@ -415,7 +413,6 @@ The following features are optional in the latest version of Configuration Manag
 - [VPN for Windows 10](/sccm/protect/deploy-use/vpn-profiles) <!--1283610,EDBEBA3D-3A4D-4465-84D9-D71EB811E7F6-->
 - [Servicing a cluster-aware collection (Server groups)](/sccm/sum/deploy-use/service-a-server-group) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
 - [Windows Hello for Business](/sccm/protect/deploy-use/windows-hello-for-business-settings) (previously known as *Passport for Work*) <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
-- [Conditional access for managed PCs](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)  <!--1191496,1CD5B9FC-022E-4A78-89F5-DEA58B6F5050-->
 
 > [!Tip]  
 > For more information on features that require consent to enable, see [pre-release features](/sccm/core/servers/manage/pre-release-features).  

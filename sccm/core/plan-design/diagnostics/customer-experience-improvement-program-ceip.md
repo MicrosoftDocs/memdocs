@@ -10,18 +10,19 @@ ms.assetid: bd5b34c9-7304-4743-81c3-96f1e0c80702
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Customer Experience Improvement Program (CEIP) for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Customer Experience Improvement Program (CEIP) for Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 > [!Note]  
 > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
 
 During installation of the Configuration Manager console, you can choose to participate in the **Customer Experience Improvement Program** (CEIP). CEIP is turned off by default. If it was previously enabled, it remains enabled.  
 
--   CEIP is separate from [Diagnostics and usage data for System Center Configuration Manager](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
+-   CEIP is separate from [Diagnostics and usage data for Configuration Manager](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
 -   CEIP is per console. It collects data such as the number of times that each element is selected in the user interface.  
 

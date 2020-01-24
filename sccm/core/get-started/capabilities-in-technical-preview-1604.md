@@ -1,7 +1,7 @@
 ---
 title: "Capabilities in Technical Preview 1604"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1604."
+description: "Learn about features available in the Technical Preview for Configuration Manager, version 1604."
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,13 +11,14 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
-# Capabilities in Technical Preview 1604 for System Center Configuration Manager
+# Capabilities in Technical Preview 1604 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1604. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1604. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
 
  The following are new features you can try out with this version.  
 
@@ -140,7 +141,7 @@ To help you understand the use of client Peer Cache, you can view the **Client D
     >  To complete this task with the technical preview and a single distribution point, configure the distribution point to be slow for the network location of all your clients. Then,  distribute the content to a single client.  After that client gets the content, you can distribute the content to additional clients that should find local peers to use as a content source before using the distribution point that is considered to be slow from the client's location.  
 
 ##  <a name="bkmk_passport"></a> Support for Passport for Work as a KSP  
- System Center Configuration Manager lets you integrate with Microsoft Passport for Work which is an alternative sign-in method that uses Active Directory, or an Azure Active Directory account to replace a password, smart card, or virtual smart card.  
+ Configuration Manager lets you integrate with Microsoft Passport for Work which is an alternative sign-in method that uses Active Directory, or an Azure Active Directory account to replace a password, smart card, or virtual smart card.  
 Passport lets you use a user gesture to login, instead of a password. A user gesture might be a simple PIN, biometric authentication such as Windows Hello, or an external device such as a fingerprint reader.  
 
 -   You can use Configuration Manager to control which gestures users can and cannot use to login, and to configure PIN complexity requirements.  

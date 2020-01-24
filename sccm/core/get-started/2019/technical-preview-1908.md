@@ -10,13 +10,14 @@ ms.assetid: d9c6163f-b365-4417-86b2-cd63c0602ec8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ROBOTS: NOINDEX
 ---
 
 # Features in Configuration Manager technical preview version 1908
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
 This article introduces the features that are available in the technical preview for Configuration Manager, version 1908. Install this version to update and add new features to your technical preview site.
 

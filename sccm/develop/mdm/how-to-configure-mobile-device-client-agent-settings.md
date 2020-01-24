@@ -9,10 +9,11 @@ ms.assetid: bb2e1e0a-095f-4b7d-92ba-29a89c8d8f69
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure Mobile Device Client Agent Settings
-You configure the Mobile Device Client Agent settings, in System Center Configuration Manager, by modifying the site control file.  
+You configure the Mobile Device Client Agent settings, in Configuration Manager, by modifying the site control file.  
 
 > [!IMPORTANT]
 >  This topic only applies to the Mobile Device Legacy Client. For addition information on the Mobile Device Legacy Client platforms, see the Mobile Device Legacy Client section of the [Supported Configurations for Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=272885).  

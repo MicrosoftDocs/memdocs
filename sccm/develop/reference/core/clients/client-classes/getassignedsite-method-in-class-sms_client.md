@@ -9,7 +9,8 @@ ms.assetid: 62374585-a938-4b1f-8f59-1e7509b39727
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetAssignedSite Method in Class SMS_Client
 In Configuration Manager, the `GetAssignedSite` method gets the current assigned site of the client.  

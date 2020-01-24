@@ -10,12 +10,13 @@ ms.assetid: b8e9dbfe-a046-4e06-8dec-cf0bc41ba095
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Application Deployment Policy for Users
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When an application is deployed to a User collection, the policy for the deployment is created for Required deployments only. For Available deployments, the policy is created when the user attempts to install the application from the Software Center. This article will explain the deployment process for Required as well as Available deployments.
 

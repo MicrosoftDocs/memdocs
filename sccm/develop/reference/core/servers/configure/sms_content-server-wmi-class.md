@@ -9,7 +9,8 @@ ms.assetid: 8973d915-1d74-46cd-a20d-a19de59a677a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_Content Server WMI Class
 The `SMS_Content` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides additional information about a `CI_Content` instance.  

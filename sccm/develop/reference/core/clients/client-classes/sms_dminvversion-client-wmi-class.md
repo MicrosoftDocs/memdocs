@@ -9,7 +9,8 @@ ms.assetid: 08db3d36-8ac8-4904-9466-eb2933023269
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_DmInvVersion Client WMI Class
 The `SMS_DmInvVersion` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents the device management inventory version.  

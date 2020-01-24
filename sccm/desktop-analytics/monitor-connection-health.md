@@ -10,7 +10,8 @@ ms.assetid: 1f4e26f7-42f2-40c8-80cf-efd405349c6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Monitor connection health
@@ -141,7 +142,7 @@ To see a specific list of devices by status, start with the **Connection Health*
 
 These columns correspond to the key [prerequisites](/sccm/desktop-analytics/overview#prerequisites) for devices to communicate with Desktop Analytics.
 
-![Screenshot of Properly Enrolled device list](media/sccm-device-list-properly-enrolled.png)
+![Screenshot of Properly Enrolled device list](media/device-list-properly-enrolled.png)
 
 Select a device to see the full list of available properties in the detail pane. You can also add any of these properties as columns to the device list.
 

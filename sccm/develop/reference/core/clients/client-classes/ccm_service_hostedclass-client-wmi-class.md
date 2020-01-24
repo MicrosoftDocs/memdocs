@@ -9,13 +9,14 @@ ms.assetid: 42a42ed1-56cd-4c21-a105-cf8c42197136
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_Service_HostedClass Client WMI Class
 > [!IMPORTANT]
 >  This class supports the Configuration Manager 2007 infrastructure and is not intended to be used directly from your code.  
 
- In System Center Configuration Manager, the `CCM_Service_HostedClass` class is a client Windows Management Instrumentation (WMI) class that configures a COM class to be hosted in the CCMEXEC service.  
+ in Configuration Manager, the `CCM_Service_HostedClass` class is a client Windows Management Instrumentation (WMI) class that configures a COM class to be hosted in the CCMEXEC service.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

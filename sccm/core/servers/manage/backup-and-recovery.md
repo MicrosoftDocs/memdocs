@@ -2,7 +2,7 @@
 title: Backup sites
 titleSuffix: Configuration Manager
 description: Learn to back up your sites before the event of failure or data loss in Configuration Manager.
-ms.date: 08/24/2018
+ms.date: 01/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,17 +10,24 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Back up a Configuration Manager site
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Prepare backup and recovery approaches to avoid data loss. For Configuration Manager sites, a backup and recovery approach can help you to recover sites and hierarchies more quickly, and with the least data loss.  
 
 The sections in this article can help you back up your sites. To recover a site, see [Recovery for Configuration Manager](/sccm/core/servers/manage/recover-sites).  
 
+<!--/SCCMdocs/issues/2108-->
+>[!WARNING]
+> The two backup methods supported for Configuration Manager site recovery are:
+>
+> - A successful backup from the **Backup Site Server** maintenance task
+> - A manually recovered site database backup
 
 
 ## Considerations before creating a backup  

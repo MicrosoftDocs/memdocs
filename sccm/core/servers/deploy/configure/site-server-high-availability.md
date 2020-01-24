@@ -10,16 +10,17 @@ ms.assetid: 6dcef836-c0d1-40af-ad30-cd8d864b09a9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Site server high availability in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 <!--1128774-->
 
-Historically, you could add redundancy to most of the roles in Configuration Manager by having multiple instances of these roles in your environment. Except for the site server itself. Starting in Configuration Manager version 1806, high availability for the site server role is a Configuration Manager-based solution to install an additional site server in *passive* mode. Version 1810 adds hierarchy support, so central administration sites and child primary sites can also have an additional site server in passive mode. The site server in passive mode can be on-premises or cloud-based in Azure.
+Historically, you could add redundancy to most of the roles in Configuration Manager by having multiple instances of these roles in your environment. Except for the site server itself. Starting in Configuration Manager version 1806, high availability for the site server role is a Configuration Manager-based solution to install an additional site server in *passive* mode. Version 1810 adds hierarchy support, so central administration sites and child primary sites can also have an additional site server in passive mode. The site server in passive mode can be on-premises or cloud-based in Azure.
 
 This feature brings the following benefits 
 - Redundancy and high availability to the site server role  

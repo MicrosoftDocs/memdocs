@@ -10,11 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# About client installation parameters and properties in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# About client installation parameters and properties in Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Use the CCMSetup.exe command to install the Configuration Manager client. If you provide client installation parameters on the command line, they modify the installation behavior. If you provide client installation properties on the command-line, they modify the initial configuration of the installed client agent.
 

@@ -9,10 +9,11 @@ ms.assetid: c6fcffc5-4695-4de5-9ec3-90595239049b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Enable or Disable the Software Distribution Advertised Programs Client Agent
-In System Center Configuration Manager, the site control file maintains configuration for the site. This topic shows how to enable or disable the Software Distribution Advertised Programs Client Agent setting in the site control file. For more information about reading from and writing to the site control file, see [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file).  
+In Configuration Manager, the site control file maintains configuration for the site. This topic shows how to enable or disable the Software Distribution Advertised Programs Client Agent setting in the site control file. For more information about reading from and writing to the site control file, see [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file).  
 
 > [!CAUTION]
 >  You should be experienced in managing a site's configuration before using the SMS Provider classes to modify the site configuration. You should use caution or avoid using the `SMS_SCI_FileDefinition` and `SMS_SCI_SiteDefinition` classes altogether. These classes manage the site control file itself. You can cause significant damage to a site by changing some configurable items.  

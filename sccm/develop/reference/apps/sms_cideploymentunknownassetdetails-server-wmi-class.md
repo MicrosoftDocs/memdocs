@@ -9,7 +9,8 @@ ms.assetid: dd6a4d72-bee2-47ed-b30c-dffb0933b510
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CIDeploymentUnknownAssetDetails Server WMI Class
 The `SMS_CIDeploymentUnknownAssetDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the asset-level status of a configuration item deployment for unknown status.  

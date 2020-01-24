@@ -1,7 +1,7 @@
 ---
 title: "Create queries"
 titleSuffix: "Configuration Manager"
-description: "Discover how to create and import queries in System Center Configuration Manager. Includes example queries and tips."
+description: "Discover how to create and import queries in Configuration Manager. Includes example queries and tips."
 ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,13 +10,14 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Create queries in System Center Configuration Manager
+# Create queries in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-This article describes how to create and import queries in System Center Configuration Manager.  
+This article describes how to create and import queries in Configuration Manager.  
 
 ##  <a name="BKMK_Create"></a> Create a query  
  Use this procedure to create a query in Configuration Manager.  
@@ -71,7 +72,7 @@ This article describes how to create and import queries in System Center Configu
 12. Complete the wizard to create the query. The new query appears in the **Queries** node in the **Monitoring** workspace.  
 
 ##  <a name="BKMK_Import"></a> Import a query  
- Use this procedure to import a query into Configuration Manager. For information about how to export queries, see [How to manage queries in System Center Configuration Manager](../../../core/servers/manage/manage-queries.md).  
+ Use this procedure to import a query into Configuration Manager. For information about how to export queries, see [How to manage queries](../../../core/servers/manage/manage-queries.md).  
 
 1.  In the Configuration Manager console, select **Monitoring**.  
 
@@ -158,18 +159,24 @@ Use one of these values for &lt;Device ID\>:
 |Mac computer|5|  
 |Windows CE|6|  
 |Windows Embedded|7|  
+|Intel system on a chip|12|  
+|Unix and Linux servers|13|  
+|Microsoft HoloLens (MDM)|15|
+|Microsoft Surface Hub (MDM)|16|
+
+> [!NOTE]
+> Values that aren't listed in this table are associated with devices that are no longer supported.
+
+<!-- removed with hybrid EOL
 |iOS|8|  
 |iPad|9|  
 |iPod touch|10|  
 |Android|11|  
-|Intel system on a chip|12|  
-|Unix and Linux servers|13|  
 |Apple macOS (MDM)|14|
-|Microsoft HoloLens (MDM)|15|
-|Microsoft Surface Hub (MDM)|16|
 |Android for Work|17|
+ -->
 
- For example, if you want to return only Mac computers, use this query:  
+For example, if you want to return only Mac computers, use this query:  
 
 ``` WQL
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = 5  

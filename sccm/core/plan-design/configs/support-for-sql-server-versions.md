@@ -10,14 +10,15 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Supported SQL Server versions for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Each System Center Configuration Manager site requires a supported SQL Server version and configuration to host the site database.  
+Each Configuration Manager site requires a supported SQL Server version and configuration to host the site database.  
 
 ##  <a name="bkmk_Instances"></a> SQL Server instances and locations  
  

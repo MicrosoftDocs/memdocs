@@ -10,12 +10,13 @@ ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Security and privacy for application management in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 ## Security guidance for application management  
 
@@ -163,10 +164,6 @@ If you configure a web application deployment type, use HTTPS to secure the conn
 
      When an App-V application is published on a computer, all users who sign in to that computer can install the application. You can't restrict the users who can install the application after it's published.  
 
-- You can't restrict install permissions for the company portal on mobile devices.  
-
-     Although you can configure a client setting to restrict installation permissions, this setting doesn't work for the company portal. This issue could result in an elevation of privileges. Users could install an app that they shouldn't be allowed to install.  
-
 
 ## <a name="BKMK_CertificatesSilverlight5"></a> Certificates for Microsoft Silverlight 5 and elevated trust mode required for the application catalog  
 
@@ -191,7 +188,7 @@ Application management lets you run any application, program, or script on any c
 
 Configuration Manager maintains status information about the software deployment process. Software deployment status information isn't encrypted during transmission unless the client communicates by using HTTPS. The status information isn't stored in encrypted form in the database.  
 
-The use of Configuration Manager application installation to remotely, interactively, or silently install software on clients might be subject to software license terms for that software. This use is separate from the Software License Terms for System Center Configuration Manager. Always review and agree to the Software Licensing Terms before you deploy software by using Configuration Manager.  
+The use of Configuration Manager application installation to remotely, interactively, or silently install software on clients might be subject to software license terms for that software. This use is separate from the Software License Terms for Configuration Manager. Always review and agree to the Software Licensing Terms before you deploy software by using Configuration Manager.  
 
 Configuration Manager collects diagnostics and usage data about applications, which is used by Microsoft to improve future releases. For more information, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).
 

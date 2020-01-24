@@ -9,7 +9,8 @@ ms.assetid: 4d92732b-9f97-42fe-a441-559a87f05588
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ApplicationCondition Server WMI Class
 The `SMS_ApplicationCondition` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents relationships between global conditions and applications.  

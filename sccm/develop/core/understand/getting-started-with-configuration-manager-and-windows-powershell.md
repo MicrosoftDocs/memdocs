@@ -8,12 +8,13 @@ ms.assetid: 5c861c07-d6e9-42d0-9d90-6a8f69c8591b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Getting Started with Configuration Manager and Windows PowerShell
-In System Center Configuration Manager, Windows PowerShell allows you to manage a Configuration Manager hierarchy by using Windows PowerShell scripts, Windows PowerShell cmdlets, and the Windows PowerShell Drive Provider.  
+In Configuration Manager, Windows PowerShell allows you to manage a Configuration Manager hierarchy by using Windows PowerShell scripts, Windows PowerShell cmdlets, and the Windows PowerShell Drive Provider.  
 
- Windows PowerShell is the next generation automation interface for Microsoft Windows and System Center products. Windows PowerShell integration in the Configuration Manager console provides an easily accessible automation interface for orchestrating Configuration Manager. System Center Configuration Manager provides a rich set of Windows PowerShell cmdlets to facilitate Configuration Manager automation.  
+ Windows PowerShell is the next generation automation interface for Microsoft Windows and System Center products. Windows PowerShell integration in the Configuration Manager console provides an easily accessible automation interface for orchestrating Configuration Manager. Configuration Manager provides a rich set of Windows PowerShell cmdlets to facilitate Configuration Manager automation.  
 
  As in previous releases of Configuration Manager, the basic method of accessing Configuration Manager functionality is through the SMS Provider (WMI). Building PowerShell scripts to automate or extend Configuration Manager is similar to earlier documented approaches using VBScript and C#.  
 
@@ -29,7 +30,7 @@ In System Center Configuration Manager, Windows PowerShell allows you to manage 
 
 - [TechNet: Using Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell)  
 
-- [TechNet: Cmdlets in System Center Configuration Manager](https://technet.microsoft.com/library/jj849987.aspx)  
+- [TechNet: Cmdlets](https://technet.microsoft.com/library/jj849987.aspx)  
 
   **Books:** There are numerous books available for PowerShell. A few example books are listed below.  
 

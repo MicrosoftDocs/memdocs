@@ -9,10 +9,11 @@ ms.assetid: 6d32daa3-13ce-4aef-a3da-820c6fbe21e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddMembershipRule Method in Class SMS_Collection
-The `AddMembershipRule` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, adds a new rule to the `CollectionRules` property of the [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md).  
+The `AddMembershipRule` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a new rule to the `CollectionRules` property of the [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md).  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

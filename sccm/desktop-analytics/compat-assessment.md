@@ -10,8 +10,6 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
 ---
 
 # Compatibility assessment in Desktop Analytics
@@ -60,13 +58,13 @@ Windows can partially or fully remove these assets:
 - Full removal: Windows setup completely removes the app or driver from the device during upgrade.
 - Partial removal: Windows setup partially removes the app or driver from the device. You need to manually uninstall it after you upgrade Windows.
 
-In both the cases, after you upgrade Windows the user can't use the app or the hardware associated with the driver.
+In both the cases, after you upgrade Windows, the user can't use the app or the hardware associated with the driver.
 
 To see this recommendation in the Desktop Analytics portal:
 
 1. In a deployment plan, select **Prepare pilot**.
-1. Select an asset from the list.
-1. View the compatibility risk factors and recommendations in the side pane.
+1. Select the **Apps** tab.
+1. Select an app, and then view the compatibility risk factors and recommendations in the side pane.
 
 ![Screenshot of asset recommendation in Desktop Analytics portal](media/3594545-app-removed.png)
 
@@ -142,7 +140,7 @@ Desktop Analytics can also detect issues using the following additional insights
 
 ### Adopted version available
 
-There's another version of this app that's highly adopted by other customers. This signal uses data from Ready for Windows. If there are any upgrade blockers with your current version, consider deploying the alternative version instead.
+There's another version of this app that's highly adopted by other customers. This signal uses adoption data from the Windows ecosystem. If there are any upgrade blockers with your current version, consider deploying the alternative version instead. To find alternate application adopted versions, see application health under "Prepare Production".
 
 ### Driver dependency
 

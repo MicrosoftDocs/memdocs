@@ -10,12 +10,13 @@ ms.assetid: 8db92d67-5d9c-4e9c-80d0-ae6fa0dd4817
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # The CD.Latest folder for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager has a process to deliver updates to the product from within the Configuration Manager console. To support this new method of updating Configuration Manager, a new folder is created named **CD.Latest**. This folder contains a copy of the Configuration Manager installation files for the updated version of your site.  
 
@@ -66,9 +67,8 @@ For more information, see [Install a secondary site](/sccm/core/servers/deploy/i
 ## Unsupported scenarios
 
 The updated CD.Latest source files aren't supported for:  
-   
+
 - Installing a new site for a new hierarchy  
-- Upgrading a Microsoft System Center 2012 Configuration Manager site to System Center Configuration Manager, current branch
+- Upgrading a Microsoft System Center 2012 Configuration Manager site to Configuration Manager current branch
 - Installing Configuration Manager clients
 - Installing Configuration Manager consoles
-

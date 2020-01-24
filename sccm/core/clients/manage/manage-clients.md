@@ -10,7 +10,8 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to manage clients in Configuration Manager
@@ -115,7 +116,7 @@ Block a client that you no longer trust. Blocking prevents the client from recei
 
 You can also unblock a client that is blocked.
 
-For more information, ee [Determine whether to block clients](/configmgr/core/clients/deploy/plan/determine-whether-to-block-clients).
+For more information, see [Determine whether to block clients](/configmgr/core/clients/deploy/plan/determine-whether-to-block-clients).
 
 <!-- Change Category is a hybrid action -->
 
@@ -167,8 +168,6 @@ If a device isn't domain-joined and doesn't have the Configuration Manager clien
 You can use this value in application requirements to control deployments, and to control how much inventory is collected from users' devices.  
 
 You may need to add the **Device Owner** column to the view by right-clicking any column heading and choosing it.
-
-For more information, see [Hybrid MDM with Configuration Manager and Microsoft Intune](/configmgr/mdm/understand/hybrid-mobile-device-management).
 
 ### Delete
 

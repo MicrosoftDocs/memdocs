@@ -10,11 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.collection: M365-identity-device-management
----
-# Surface device dashboard in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Surface device dashboard in Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Beginning in version 1802, the Surface device dashboard gives you information about Surface devices found in your environment at a single glance. <!--1355788-->
 

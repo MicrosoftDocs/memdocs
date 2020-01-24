@@ -9,10 +9,11 @@ ms.assetid: a3bfa9cf-2aa0-4fcc-be1e-50983a1fb432
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_R_System Server WMI Class
-The `SMS_R_System` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that is generated dynamically at SMS Provider run time and contains discovery data for all discovered system resources.  
+The `SMS_R_System` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is generated dynamically at SMS Provider run time and contains discovery data for all discovered system resources.  
 
  The following syntax is not defined in Managed Object Format (MOF) code.  
 
@@ -145,7 +146,7 @@ Class SMS_R_System : SMS_Resource
 
  Qualifiers: None  
 
- Value that indicates whether a computer has System Center Configuration Manager client software installed. Possible values are:  
+ Value that indicates whether a computer has Configuration Manager client software installed. Possible values are:  
 
 |Value|Description|  
 |-----------|-----------------|  
@@ -228,7 +229,7 @@ Class SMS_R_System : SMS_Resource
 
  Qualifiers: None  
 
- An ID that uniquely describes the hardware on which the client is installed. This ID remains unchanged through re-imaging or through successive installations of the operating system or client. This differs from the System Center Configuration Manager unique ID, which might change under these circumstances.  
+ An ID that uniquely describes the hardware on which the client is installed. This ID remains unchanged through re-imaging or through successive installations of the operating system or client. This differs from the Configuration Manager unique ID, which might change under these circumstances.  
 
  `InternetEnabled`  
  Data type: `UInt32`  

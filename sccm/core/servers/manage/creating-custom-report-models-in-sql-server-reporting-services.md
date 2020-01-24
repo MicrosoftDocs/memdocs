@@ -10,13 +10,14 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
-# Creating custom report models for System Center Configuration Manager in SQL Server Reporting Services
+# Creating custom report models for Configuration Manager in SQL Server Reporting Services
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Sample report models are included in System Center Configuration Manager, but you can also define report models to meet your own business requirements, and then deploy the report model to Configuration Manager to use when you create new model-based reports. The following table provides the steps to create and deploy a basic report model.  
+Sample report models are included in Configuration Manager, but you can also define report models to meet your own business requirements, and then deploy the report model to Configuration Manager to use when you create new model-based reports. The following table provides the steps to create and deploy a basic report model.  
 
 > [!NOTE]  
 >  For the steps to create a more advanced report model, see the [Steps for Creating an Advanced Report Model in SQL Server Reporting Services](#AdvancedReportModel) section in this topic.  

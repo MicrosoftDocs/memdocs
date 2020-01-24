@@ -9,7 +9,8 @@ ms.assetid: 519ea4d0-94ed-4fff-beec-edb99e6089e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Windows PowerShell Basics
 System Center 2012 Configuration Manager SP1 introduced native PowerShell support. Windows PowerShell is Microsoft's approach to automation and is being implemented across all System Center products. This topic will introduce you to some of the basics of using Windows PowerShell with Configuration Manager.  

@@ -9,7 +9,8 @@ ms.assetid: 04077212-ba47-4e6b-8e98-80f99051c1d8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # UpdateFeatureState Method in Class SMS_Site
 The `UpdateFeatureState` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the enabled/disabled state of a feature.  

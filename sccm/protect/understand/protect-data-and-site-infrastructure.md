@@ -10,7 +10,8 @@ ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Protect data and site infrastructure
@@ -40,5 +41,3 @@ You want your users to securely access your organization's resources. Protect bo
 - Wi-fi profiles provide a set of tools and resources to help you manage wireless network settings on devices in your organization. By deploying these settings, you minimize the effort that end users require to connect to wireless networks. For more information, see [Wi-fi profiles](/configmgr/protect/deploy-use/create-wifi-profiles).  
 
 - Provision devices with the certificates that users need to connect to resources. For more information, see [Certificate profiles](/configmgr/protect/deploy-use/introduction-to-certificate-profiles).  
-
-- Email profiles provide a set of tools and resources to help you create, deploy, and monitor email settings on devices. Enable users to access email on their personal devices without any required setup. For more information, see [Email profiles](/configmgr/protect/deploy-use/introduction-to-email-profiles).  

@@ -9,7 +9,8 @@ ms.assetid: bf1d205a-d474-457b-b451-9c8f5afb7c23
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ClientDeploymentCollectionBucket Server WMI Class
 The  `SMS_ClientDeploymentCollectionBucket` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a client deployment collection bucket that is used to display the localized name in the client deployment detail view.  

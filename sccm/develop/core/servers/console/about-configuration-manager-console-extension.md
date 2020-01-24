@@ -8,10 +8,11 @@ ms.assetid: ebfd3530-07f9-4d58-9e0a-f362c0e6dcd7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager Console Extension
-The System Center Configuration Manager console has an XML-based architecture that can be easily extended. The Configuration Manager console supports the following extensions:  
+The Configuration Manager console has an XML-based architecture that can be easily extended. The Configuration Manager console supports the following extensions:  
 
 ## Actions  
  An action is a task or command accessed through either a context menu or the ribbon. A number of standard actions are available, and you can extend them to add new functionality, such as displaying a dialog box or launching an application.  

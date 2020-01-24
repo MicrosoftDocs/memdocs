@@ -9,7 +9,8 @@ ms.assetid: 07f6c724-edef-4518-a975-81cc009ca23b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_DefaultBoundaryGroup Server WMI Class
 

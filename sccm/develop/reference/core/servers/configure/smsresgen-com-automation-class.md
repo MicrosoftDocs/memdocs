@@ -10,7 +10,8 @@ ms.assetid: 98b96b3e-3689-4cec-8617-597c2c850f19
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMSResGen COM Automation Class
 The `SMSResGen` COM class in Configuration Manager is used to create data discovery records (DDRs).  

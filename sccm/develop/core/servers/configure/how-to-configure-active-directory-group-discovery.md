@@ -9,10 +9,11 @@ ms.assetid: 789485ee-5f76-40da-8d06-8417eb6794a9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure Active Directory Group Discovery
-You configure the Active Directory Group Discovery settings, in System Center Configuration Manager, by modifying the necessary site control file settings.  
+You configure the Active Directory Group Discovery settings, in Configuration Manager, by modifying the necessary site control file settings.  
 
 ### To configure Active Directory Group Discovery  
 

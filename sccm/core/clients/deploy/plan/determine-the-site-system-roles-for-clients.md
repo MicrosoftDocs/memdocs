@@ -1,7 +1,7 @@
 ---
 title: Site system roles for clients
 titleSuffix: Configuration Manager
-description: Determine site system roles for clients in System Center Configuration Manager.
+description: Determine site system roles for clients in Configuration Manager.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,12 +10,13 @@ ms.assetid: 984e8d92-7327-4b08-9228-0c955e6ac778
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Determine the site system roles for Configuration Manager clients
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article can help you determine the site system roles that you need to deploy Configuration Manager clients.
 

@@ -10,12 +10,13 @@ ms.assetid: f3df18c2-99eb-4606-a3ef-db31374af602
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Flowchart - Promote site server (unplanned)
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This flowchart diagram shows the process by which a site server in passive mode is promoted to the site server in active mode when the current site server in active mode is offline. In this example, the current site server in active mode isn't fully operational, for example it is disconnected from the network or powered off. For more information, see the following articles:  
 - [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability)  

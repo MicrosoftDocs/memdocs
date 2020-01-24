@@ -10,7 +10,8 @@ ms.assetid: 7ed389c3-a9ab-48ce-a5eb-27d52ee4fb94
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to connect Configuration Manager with Desktop Analytics
@@ -90,6 +91,8 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     ![Example Available Functionality page in the Azure Services Wizard](media/available-functionality.png)
 
+<a name="bkmk_Collections"></a> 
+
 8. On the **Collections** page, configure the following settings:  
 
     - **Display name**: The Desktop Analytics portal displays this Configuration Manager connection using this name. Use it to differentiate between different hierarchies. For example, *test lab* or *production*.  
@@ -109,9 +112,11 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
         >     - CollectionB: limited by CollectionA
         >         - CollectionC: limited by CollectionB
         > - CollectionD: limited by **All Systems** collection
-
+        >
+        > To manage the collections available in the Desktop Analytics portal for grouping with deployment plans, in the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Select the entry associated with **Desktop Analytics** Azure Service and update your settings in the **Desktop Analytics Collection** page.
+        
         > [!Important]  
-        > These collections continue to sync as their membership changes. For example, your deployment plan uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and deployment plan.  
+        > These collections continue to sync as their membership changes. For example, your Target collection uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and Desktop Analytics.  
 
 
 9. Complete the wizard.  
@@ -124,11 +129,12 @@ Configuration Manager creates a settings policy to configure devices in the Targ
 
 Monitor the configuration of your devices for Desktop Analytics. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Desktop Analytics Servicing** node, and select the **Connection Health** dashboard.  
 
-For more information, see [Monitor connection health](/sccm/desktop-analytics/troubleshooting#monitor-connection-health).
+For more information, see [Monitor connection health](/sccm/desktop-analytics/monitor-connection-health).
 
 Configuration Manager synchronizes your collections within 60 minutes of creating the connection. In the Desktop Analytics portal, go to  **Global Pilot**, and see your Configuration Manager device collections.
 
-
+> [!NOTE]
+> The Configuration Manager connection to Desktop Analytics relies upon the service connection point. Any changes to this site system role may impact synchronization with the cloud service. For more information, see [About the service connection point](/configmgr/core/servers/deploy/configure/about-the-service-connection-point#bkmk_move).
 
 ## Next steps
 

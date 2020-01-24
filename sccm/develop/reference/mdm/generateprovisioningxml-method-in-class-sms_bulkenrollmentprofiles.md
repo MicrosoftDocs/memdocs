@@ -9,7 +9,8 @@ ms.assetid: 6f9999f1-92bd-4929-b88b-b35aa4f849e6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GenerateProvisioningXML Method in Class SMS_BulkEnrollmentProfiles
 The `ImportForProfile` Windows Management Instrumentation (WMI) class method, in Configuration Manager, generates provisioning data in XML format.  

@@ -9,7 +9,8 @@ ms.assetid: 3c646042-3102-4444-8672-ab8c9a095882
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_DPGroupPackages Server WMI Class
 The `SMS_DPGroupPackages` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents distribution point packages.  

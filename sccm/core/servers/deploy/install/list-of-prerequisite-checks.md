@@ -10,12 +10,13 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # List of prerequisite checks for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article details the prerequisite checks that run when you install or update Configuration Manager. For more information, see [Prerequisite checker](/sccm/core/servers/deploy/install/prerequisite-checker).  
 
@@ -827,7 +828,7 @@ For more information, see [Prepare Active Directory for site publishing](/sccm/c
 
 WinRM 1.1 is installed on the primary site server or the Configuration Manager console computer to run the out-of-band management console.
 
-For more information about how to download WinRM 1.1, see [Support article 936059](https://support.microsoft.com/help/936059).
+WinRM is automatically installed with all currently-supported versions of Windows. For more information, see [Installation and configuration for Windows Remote Management](https://docs.microsoft.com/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
 
 ### WSUS on site server
 

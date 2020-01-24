@@ -1,7 +1,7 @@
 ---
 title: "Choose what to migrate"
 titleSuffix: "Configuration Manager"
-description: "Learn which data you can migrate and which data you can't migrate to System Center Configuration Manager."
+description: "Learn which data you can migrate and which data you can't migrate to Configuration Manager current branch."
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,19 +10,20 @@ ms.assetid: 99222dc8-0e1e-4513-8302-7a1acf671e9b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Determine whether to migrate data to System Center Configuration Manager
+# Determine whether to migrate data to Configuration Manager current branch
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-In System Center Configuration Manager, migration provides a process for transferring data and configurations that you've created from supported versions of Configuration Manager to your new hierarchy.  You can use this to:  
+In Configuration Manager current branch, migration provides a process for transferring data and configurations that you've created from supported versions of Configuration Manager to your new hierarchy.  You can use this to:  
 
 -   Combine multiple hierarchies into one.  
 
 -   Move data and configurations from a lab deployment into your production deployment.
 
--   Move data and configuration from a prior version of Configuration Manager, like Configuration Manager 2007, which has no upgrade path to System Center Configuration Manager, or from System Center 2012 Configuration Manager (which does support an upgrade path to System Center Configuration Manager).  
+-   Move data and configuration from a prior version of Configuration Manager, like Configuration Manager 2007, which has no upgrade path to Configuration Manager current branch, or from System Center 2012 Configuration Manager (which does support an upgrade path to Configuration Manager current branch).  
 
 With the exception of the distribution point site system role and the computers that host distribution points, no infrastructure (which includes sites, site system roles, or computers that host a site system role), migrates, transfers, or can be shared between hierarchies.  
 
@@ -30,24 +31,19 @@ With the exception of the distribution point site system role and the computers 
 
 After you install a client to the new hierarchy and the client submits its data, its unique Configuration Manager ID helps Configuration Manager associate the data that you previously migrated with each client computer.  
 
- The functionality that's provided by migration helps you maintain investments that you have made in configurations and deployments while letting you take full advantage of core changes in the product first (which was first introduced in System Center 2012 Configuration Manager and then continued in System Center Configuration Manager). These changes include a simplified Configuration Manager hierarchy that uses fewer sites and resources, and the improved processing that comes from using native 64-bit code that runs on 64-bit hardware.  
+ The functionality that's provided by migration helps you maintain investments that you have made in configurations and deployments while letting you take full advantage of core changes in the product first (which was first introduced in System Center 2012 Configuration Manager and then continued in Configuration Manager). These changes include a simplified Configuration Manager hierarchy that uses fewer sites and resources, and the improved processing that comes from using native 64-bit code that runs on 64-bit hardware.  
 
- For information about the versions of Configuration Manager that migration supports, see [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
+ For information about the versions of Configuration Manager that migration supports, see [Prerequisites for migration](../../core/migration/prerequisites-for-migration.md).  
 
- The following sections help you plan for data that you can or can't migrate:  
+## <a name="Can_Migrate"></a> Data that you can migrate to Configuration Manager current branch
 
--   [Data that you can migrate to System Center Configuration Manager](#Can_Migrate)  
+Migration can migrate most objects between supported Configuration Manager hierarchies. The migrated instances of some objects from a supported version of Configuration Manager 2007 must be modified to conform to the System Center 2012 Configuration Manager schema and object format.
 
--   [Data that you can't migrate to System Center Configuration Manager](#Cannot_migrate)  
+These modifications don't affect the data in the source site database. Objects that are migrated from a supported version of System Center 2012 Configuration Manager or Configuration Manager current branch don't require modification.  
 
-##  <a name="Can_Migrate"></a> Data that you can migrate to System Center Configuration Manager  
- Migration can migrate most objects between supported Configuration Manager hierarchies. The migrated instances of some objects from a supported version of Configuration Manager 2007 must be modified to conform to the System Center 2012 Configuration Manager schema and object format.
+The following are objects that can migrate based on the version of Configuration Manager in the source hierarchy. Some objects, like queries, do not migrate. If you want to continue to use these objects that do not migrate you must recreate them in the new hierarchy. Other objects, including some client data, are automatically recreated in the new hierarchy when you manage clients in that hierarchy.  
 
-These modifications don't affect the data in the source site database. Objects that are migrated from a supported version of System Center 2012 Configuration Manager or System Center Configuration Manager do not require modification.  
-
- The following are objects that can migrate based on the version of Configuration Manager in the source hierarchy. Some objects, like queries, do not migrate. If you want to continue to use these objects that do not migrate you must recreate them in the new hierarchy. Other objects, including some client data, are automatically recreated in the new hierarchy when you manage clients in that hierarchy.  
-
-### Objects that you can migrate from System Center 2012 Configuration Manager or System Center Configuration Manager current branch
+### Objects that you can migrate from System Center 2012 Configuration Manager or Configuration Manager current branch
 
 -   Applications for System Center 2012 Configuration Manager and later versions  
 
@@ -57,7 +53,7 @@ These modifications don't affect the data in the source site database. Objects t
 
 -   Boundaries  
 
--   Collections: To migrate collections from a supported version of System Center 2012 Configuration Manager or System Center Configuration Manager, you use an object migration job.  
+-   Collections: To migrate collections from a supported version of System Center 2012 Configuration Manager or Configuration Manager current branch, you use an object migration job.  
 
 -   Compliance settings:  
 
@@ -151,8 +147,9 @@ These modifications don't affect the data in the source site database. Objects t
 
 -   Virtual application packages  
 
-##  <a name="Cannot_migrate"></a> Data that you cannot migrate to System Center Configuration Manager  
- You cannot migrate the following types of objects:  
+## <a name="Cannot_migrate"></a> Data that you can't migrate to Configuration Manager current branch
+
+You cannot migrate the following types of objects:  
 
 -   AMT client provisioning information  
 
@@ -170,9 +167,9 @@ These modifications don't affect the data in the source site database. Objects t
 
 -   Configuration Manager 2007 web reports  
 
--   System Center 2012 Configuration Manager and System Center Configuration Manager reports  
+-   System Center 2012 Configuration Manager and Configuration Manager current branch reports  
 
--   System Center 2012 Configuration Manager and System Center Configuration Manager role-based administration:  
+-   System Center 2012 Configuration Manager and Configuration Manager current branch role-based administration:  
 
     -   Security roles  
 

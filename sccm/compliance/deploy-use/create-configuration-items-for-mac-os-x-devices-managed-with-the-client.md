@@ -1,7 +1,7 @@
 ---
 title: "Create configuration items for client-managed Macs "
 titleSuffix: "Configuration Manager"
-description: "Use the System Center Configuration Manager Mac OS X configuration item to manage settings for Mac OS X devices."
+description: "Use the Configuration Manager Mac OS X configuration item to manage settings for Mac OS X devices."
 ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -10,10 +10,11 @@ ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 # Create configuration items for Mac OS X devices
-Use the System Center Configuration Manager **Mac OS X (custom)** configuration item to manage settings for Mac OS X devices that are managed by the Configuration Manager client.  
+Use the Configuration Manager **Mac OS X (custom)** configuration item to manage settings for Mac OS X devices that are managed by the Configuration Manager client.  
   
 The Mac OS X operating system uses property list (.plist) files to store application settings. Use compliance settings to evaluate and remediate settings in a property list file. You can also manage Mac OS X settings by writing a shell script that returns a value that you can evaluate and remediate for compliance.  
   
@@ -160,8 +161,8 @@ The Mac OS X operating system uses property list (.plist) files to store applica
   
 See the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
   
-If you now want to add this configuration item to a configuration baseline, see [How to create configuration baselines in System Center Configuration Manager](../../compliance/deploy-use/create-configuration-baselines.md).  
+If you now want to add this configuration item to a configuration baseline, see [How to create configuration baselines](../../compliance/deploy-use/create-configuration-baselines.md).  
   
 ## Next steps
 
- [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md)
+ [Configuration items for devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md)

@@ -10,14 +10,15 @@ ms.assetid: c8534a1e-57b8-4688-b6e6-299d82cfcec9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Configuration Manager and Windows as a Service
 
-*Applies To: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-System Center Configuration Manager provides comprehensive control over feature updates for Windows 10. To fully adopt the Windows as a service model, you also must adopt the Configuration Manager current branch model. To stay current with Windows 10, requires that you stay current with Configuration Manager for the best experience. New versions of Configuration Manager are required to take full advantage of the exciting new enterprise features for Windows 10. This article is intended to be a landing page for the key articles required to adopt Configuration Manager current branch. Configuration Manager current branch gets you on your way to Windows as a service.
+Configuration Manager provides comprehensive control over feature updates for Windows 10. To fully adopt the Windows as a service model, you also must adopt the Configuration Manager current branch model. To stay current with Windows 10, requires that you stay current with Configuration Manager for the best experience. New versions of Configuration Manager are required to take full advantage of the exciting new enterprise features for Windows 10. This article is intended to be a landing page for the key articles required to adopt Configuration Manager current branch. Configuration Manager current branch gets you on your way to Windows as a service.
 
 ## Key articles about adopting Configuration Manager current branch
 
@@ -49,5 +50,5 @@ System Center Configuration Manager provides comprehensive control over feature 
 
 ## Related articles
 
-- [In-place upgrade to System Center Configuration Manager (Current Branch) from ConfigMgr 2012](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
-- [Plan for migration to System Center Configuration Manager (Current Branch) from ConfigMgr 2007](/sccm/core/migration/planning-for-migration)
+- [In-place upgrade to Configuration Manager current branch from System Center 2012 Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
+- [Plan for migration to Configuration Manager current branch](/sccm/core/migration/planning-for-migration)

@@ -10,12 +10,11 @@ ms.assetid: a0287beb-70a9-4b57-a627-e7bfba27fd3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
 # Diagnostic and usage data for 1806
 
-*Applies to: System Center Configuration Manager (current branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The following sections provide additional detail about data collected at each level. For more information on the levels and how to change them, see [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview).
 
@@ -499,7 +498,7 @@ For Configuration Manager version 1806, this level includes the following data:
 
 - Compliance Settings: SCEP, VPN, Wi-Fi, and compliance policy template configuration details
 
-- DCM config pack for System Center Configuration Manager usage
+- DCM config pack for Configuration Manager usage
 
 - Detailed client deployment installation errors
 

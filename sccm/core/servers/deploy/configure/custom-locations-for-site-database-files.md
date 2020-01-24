@@ -10,13 +10,14 @@ ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Custom locations for System Center Configuration Manager site database files
+# Custom locations for Configuration Manager site database files
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
- System Center Configuration Manager supports custom locations for SQL Server database files.  
+ Configuration Manager supports custom locations for SQL Server database files.  
 
 > [!NOTE]  
 >  The option to specify non-default file locations is not available when you use a SQL Server cluster.  

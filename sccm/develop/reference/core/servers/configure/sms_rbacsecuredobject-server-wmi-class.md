@@ -9,7 +9,8 @@ ms.assetid: 5e6e53ef-623c-479d-91d3-35b5710a0541
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_RbacSecuredObject Server WMI Class
 The `SMS_RbacSecuredObject` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the RBAC Security Object.  

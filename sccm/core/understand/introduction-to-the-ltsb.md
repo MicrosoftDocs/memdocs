@@ -10,7 +10,8 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Introduction to the long-term servicing branch of Configuration Manager
@@ -30,9 +31,7 @@ The current branch of Configuration Manager supports the following functionality
 
 - In-console updates that add new features and improvements.
 - Support for newly released operating systems to use as site servers and clients.
-- Use of a Microsoft Intune subscription to support:
-  - Intune in a hybrid mobile device management (MDM) configuration
-  - On-premises MDM
+- On-premises MDM
 - The Windows 10 servicing dashboard and servicing plans, including support for recent Windows 10 versions.  
 - Support for future releases of Windows Server and Windows 10 LTSB
 - Asset Intelligence
@@ -62,7 +61,7 @@ When you reference current branch documentation for the LTSB, details that apply
 
 ## Licensing overview for the LTSB   
 
-Customers with active Software Assurance (SA) on System Center Configuration Manager licenses, or with equivalent subscription rights as of October 1, 2016, have rights to use the October 2016 version 1606 release of System Center Configuration Manager. Customers with rights to System Center Configuration Manager on or after October 1, 2016, will find two licensed options upon installation: Current Branch and Long-Term Servicing Branch (LTSB).
+Customers with active Software Assurance (SA) on Configuration Manager licenses, or with equivalent subscription rights as of October 1, 2016, have rights to use the October 2016 version 1606 release of Configuration Manager. Customers with rights to Configuration Manager on or after October 1, 2016, will find two licensed options upon installation: current branch and long-term servicing branch (LTSB).
 
 Customers that have perpetual rights to System Center Configuration Manager, or that allow SA or subscription to lapse after October 1, can install the version of System Center Configuration Manager LTSB that is current at the time of lapse.
 

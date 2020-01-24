@@ -6,7 +6,8 @@ ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: c6826794-aa19-469d-ae47-1a0db68a1ff1
 author: aczechowski
 ms.author: aaroncz
@@ -15,7 +16,7 @@ manager: dougeby
 
 # Plan for Software Center
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Users change settings, browse for applications, and install applications from Software Center. When you install the Configuration Manager client on a Windows device, it automatically installs Software Center as well.
 
@@ -159,14 +160,9 @@ If you're using the application catalog, branding follows these priorities:
 
 1. **Software Center** client settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center).  
 
-2. If you connect a Microsoft Intune subscription to Configuration Manager, then Software Center displays the *organization name*, *color*, and *company logo* that you specify in the Intune subscription properties. For more information, see [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription).  
+2. The *organization name* and *color* that you specify in the application catalog website point properties. For more information, see [Configuration options for application catalog website point](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).  
 
-    > [!Important]
-    > Hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
-
-3. The *organization name* and *color* that you specify in the application catalog website point properties. For more information, see [Configuration options for application catalog website point](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).  
-
-4. **Organization name** client setting in **Computer Agent** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
+3. **Organization name** client setting in **Computer Agent** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
 
 
 ## See also

@@ -9,10 +9,11 @@ ms.assetid: 69475541-e5e3-45c4-8989-142cf986d94c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Delete a State Migration Point Role
-You delete the state migration point role, in System Center Configuration Manager, by deleting the role's [SMS_SCI_SysResUse Server WMI Class](../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md) object.  
+You delete the state migration point role, in Configuration Manager, by deleting the role's [SMS_SCI_SysResUse Server WMI Class](../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md) object.  
 
 ### To delete a state migration point role  
 

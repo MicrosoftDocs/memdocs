@@ -9,7 +9,8 @@ ms.assetid: 36e102e8-7a1f-49c1-9ea8-89e5fc81ef97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # RemoveContent Method in Class SMS_SoftwareUpdatesPackage
 The `RemoveContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes old or unnecessary content from the software updates package.  

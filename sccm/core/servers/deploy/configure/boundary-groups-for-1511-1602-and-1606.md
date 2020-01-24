@@ -10,14 +10,15 @@ ms.assetid: dec1e0d7-5864-43a8-9f56-413923b3914e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Boundary groups for System Center Configuration Manager version 1511, 1602, and 1606
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Boundary groups for Configuration Manager version 1511, 1602, and 1606
+
+*Applies to: Configuration Manager (current branch)*
 <!-- This topic drops from TOC with the release of version 1706 -->
 
-The information in this topic is specific to using boundary groups with versions 1511, 1602, and 1606 of System Center Configuration Manager.
+The information in this topic is specific to using boundary groups with versions 1511, 1602, and 1606 of Configuration Manager.
 If you use version 1610 or later, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) for information about how to use the redesigned boundary groups.  
 
 
@@ -127,7 +128,7 @@ When you set up boundary groups, you add one or more boundaries to the boundary 
 
 -   Changes to a boundary group's assigned site apply only to new site assignment actions. Clients that were previously assigned to a site do not evaluate their site assignment again based on changes to the configuration of a boundary group (or to their own network location).  
 
-For more about client site assignment, see [Using Automatic Site Assignment for Computers](../../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_AutomaticAssignment) in [How to assign clients to a site in System Center Configuration Manager](../../../../core/clients/deploy/assign-clients-to-a-site.md).  
+For more about client site assignment, see [Using Automatic Site Assignment for Computers](../../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_AutomaticAssignment) in [How to assign clients to a site](../../../../core/clients/deploy/assign-clients-to-a-site.md).  
 
 ###  <a name="BKMK_BoundaryContentLocation"></a> About content location  
  You can set up each boundary group with one or more distribution points and state migration points, and you can associate the same distribution points and state migration points with multiple boundary groups.  
@@ -148,7 +149,7 @@ This behavior lets the client select the nearest server from which to transfer t
 -   When preferred management points are set up and a client organizes its list of management points, the client places the preferred management points at the top of its list of assigned management points, which includes all management points from the client's assigned site.  
 
 > [!NOTE]  
->  When a client roams, like when a laptop travels to a remote office location and changes its network location, it might use a management point (or proxy management point) from the local site at its new location before it tries to use a management point from its assigned site (which includes the preferred management points).  See [Understand how clients find site resources and services for System Center Configuration Manager](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md) for more information.  
+>  When a client roams, like when a laptop travels to a remote office location and changes its network location, it might use a management point (or proxy management point) from the local site at its new location before it tries to use a management point from its assigned site (which includes the preferred management points).  See [Understand how clients find site resources and services for Configuration Manager](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md) for more information.  
 
 ###  <a name="BKMK_BoundaryOverlap"></a> About overlapping boundaries  
  Configuration Manager supports overlapping boundary configurations for content location:  

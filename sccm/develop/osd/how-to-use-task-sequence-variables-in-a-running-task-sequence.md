@@ -9,15 +9,16 @@ ms.assetid: 2ed7e134-02da-4492-bb81-ce4a1f484955
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence
-In System Center Configuration Manager, you can create, get, and set task sequence variables in a running task sequence by using the task sequence environment COM automation object (`Microsoft.SMS.TSEnvironment`).  
+In Configuration Manager, you can create, get, and set task sequence variables in a running task sequence by using the task sequence environment COM automation object (`Microsoft.SMS.TSEnvironment`).  
 
  Typically, you use a command-line action that runs a script to access the task sequence variables. But you can also access them, within a running a task sequence, by using any programming environment that can use COM automation objects.  
 
 > [!NOTE]
->  When you set a task variable on the System Center Configuration Manager client, it becomes available to subsequent steps in the task sequence.  
+>  When you set a task variable on the Configuration Manager client, it becomes available to subsequent steps in the task sequence.  
 
  To create a custom task sequence variable, you set a `Microsoft.SMS.TSEnvironment` property by using the name of the new variable that you want to create. If the variable does not already exist, it is created. If the variable already exists, its value is updated. You can subsequently get the custom variable value from `Microsoft.SMS.TSEnvironment`.  
 

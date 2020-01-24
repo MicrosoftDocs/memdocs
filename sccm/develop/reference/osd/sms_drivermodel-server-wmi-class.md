@@ -9,7 +9,8 @@ ms.assetid: 8cba1658-0445-4e9e-a51b-b1c8eba30801
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_DriverModel Server WMI Class
 The `SMS_DriverModel` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents driver model information for the specified driver.  

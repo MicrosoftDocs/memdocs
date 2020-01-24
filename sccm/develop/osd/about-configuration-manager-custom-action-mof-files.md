@@ -9,10 +9,11 @@ ms.assetid: aa2b3692-f373-4c66-b22b-d14bfa0c58dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager Custom Action MOF Files
-In System Center Configuration Manager, operating system deployment actions are defined in the Managed Object Format (MOF) file, %*ProgramFiles*%\Microsoft Configuration Manager\bin\i386\\_tasksequenceprovider.mof.  
+In Configuration Manager, operating system deployment actions are defined in the Managed Object Format (MOF) file, %*ProgramFiles*%\Microsoft Configuration Manager\bin\i386\\_tasksequenceprovider.mof.  
 
  When you create a custom action, you must create a MOF file that declares your custom action. You then use Mofcomp.exe to add your changes to the SMS Provider. For more information, see [How to Create a MOF File for a Configuration Manager Custom Action](../../develop/osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md).  
 

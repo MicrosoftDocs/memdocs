@@ -9,7 +9,8 @@ ms.assetid: 8238a001-395e-4732-9042-bc9f33bcfe46
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # IsUsedCert Method in Class SMS_Site
 The `IsUsedCert` Windows Management Instrumentation (WMI) class method, in Configuration Manager, verifies whether the specified certificate is used.  

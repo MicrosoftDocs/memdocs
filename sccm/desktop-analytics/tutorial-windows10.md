@@ -11,7 +11,8 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 #Customer intent: As an IT Pro, I want to use Desktop Analytics to intelligently pilot Windows 10 so that I can understand the best devices to start with getting current with Windows.
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Tutorial: Deploy Windows 10 to pilot

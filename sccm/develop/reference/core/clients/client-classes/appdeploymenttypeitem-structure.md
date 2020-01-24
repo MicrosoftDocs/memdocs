@@ -9,7 +9,8 @@ ms.assetid: f5c6cf80-8c02-4a8e-aa33-de91ebef8053
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AppDeploymentTypeItem Structure
 In Configuration Manager, the `AppDeploymentTypeItem` structure contains detection results for an individual deployment type.  
@@ -40,5 +41,5 @@ typedef struct tagAppDeploymentTypeItem
  Error code.   
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+ [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

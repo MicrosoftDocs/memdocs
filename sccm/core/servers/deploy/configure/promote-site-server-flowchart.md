@@ -10,12 +10,13 @@ ms.assetid: 75748377-1a45-4538-9c7c-d81852d5d3a7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Flowchart - Promote site server (planned)
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This flowchart diagram shows the process by which a site server in passive mode is promoted to the site server in active mode. In this example, the administrator plans for the promotion process. Both servers are online and fully functional. For more information, see the following articles:  
 - [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability)  

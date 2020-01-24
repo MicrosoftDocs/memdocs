@@ -1,7 +1,7 @@
 ---
 title: "Software inventory"
 titleSuffix: "Configuration Manager"
-description: "Get an introduction to software inventory in System Center Configuration Manager."
+description: "Get an introduction to software inventory in Configuration Manager."
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,11 +10,12 @@ ms.assetid: 79eb49da-cd2b-4ffc-b355-b595aeba3aea
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Introduction to software inventory in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Introduction to software inventory in Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Use software inventory to collect information about files on client devices. Software inventory can also collect files from client devices and store them on the site server. Software inventory is collected when you select the **Enable software inventory on clients** setting in client settings. You can also schedule the operation in client settings.  
 
@@ -33,5 +34,3 @@ After you enable software inventory and the clients run a software inventory cyc
  When software inventory runs on a client device, the first report is a full inventory. Subsequent reports contain only delta inventory information. The site server processes delta information in the order received. If delta information for a client is missing, the site server rejects further delta information and directs the client to run a full inventory.  
 
  Configuration Manager can discover dual-boot computers but only returns inventory information from the operating system that's active at the time of inventory.  
-
-**Mobile devices:** See [Software inventory for mobile devices enrolled with Microsoft Intune](../../../../mdm/deploy-use/software-inventory-mobile-devices.md)  for information about collecting inventory for apps installed on mobile devices.

@@ -9,7 +9,8 @@ ms.assetid: 35cbac5e-9acf-45fb-a4a4-392196df8776
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # IPxeAuthClass::ReadIdentity Method
 In Configuration Manager, the `ReadIdentity` method reads a PXE certificate identity from the client configuration (PFX) file. The method is used in serializing a certificate from the file.  

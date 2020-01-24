@@ -9,7 +9,8 @@ ms.assetid: aa3fabb4-c0b4-4a99-a8c3-0889e8c99491
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # SMS_DistributionPointInfo server WMI class

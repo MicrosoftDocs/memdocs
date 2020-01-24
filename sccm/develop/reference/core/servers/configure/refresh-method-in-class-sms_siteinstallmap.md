@@ -9,7 +9,8 @@ ms.assetid: 13db1af5-84b4-4242-b1f3-98bd282766a3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Refresh Method in Class SMS_SiteInstallMap
 The `Refresh` Windows Management Instrumentation (WMI) class method, in Configuration Manager, reloads the install map from the database, which repopulates the classes.  

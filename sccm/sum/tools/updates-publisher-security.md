@@ -10,11 +10,12 @@ ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Manage certificates and security for Updates Publisher
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The following procedures can help you to configure the certificate store on the update server, configure a self-signing certificate on the client computer, and to configure the Group Policy to allow the Windows Update Agent on computers to scan for published updates.
 

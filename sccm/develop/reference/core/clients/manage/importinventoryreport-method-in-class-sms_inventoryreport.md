@@ -9,10 +9,11 @@ ms.assetid: 79ae21e0-8d58-4ec0-8cc1-9322031cb582
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ImportInventoryReport Method in Class SMS_InventoryReport
-The `ImportInventoryReport` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, imports an inventory class from the MOF file content.  
+The `ImportInventoryReport` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports an inventory class from the MOF file content.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

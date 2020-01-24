@@ -10,12 +10,13 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.prod: configuration-manager
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # MICROSOFT SYSTEM CLR TYPES FOR MICROSOFT SQL SERVER 2014
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 **MICROSOFT SOFTWARE LICENSE TERMS**  
 

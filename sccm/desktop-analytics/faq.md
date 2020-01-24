@@ -10,7 +10,8 @@ ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Desktop Analytics FAQ
@@ -59,7 +60,7 @@ Yes. For more information, see [Convert from BIOS to UEFI during an in-place upg
 
 ### Can I use Desktop Analytics with Windows 10 LTSC?
 
-While you can use Desktop Analytics to assist with updating devices from Windows 10 Long-Term Servicing Channel (LTSC) to Windows 10 Semi-Annual Channel, Desktop Analytics doesn't support updates to Windows 10 LTSC. This channel of Windows 10 isn't intended for broad use, and doesn't receive feature updates, so it's not a supported target with Desktop Analytics. For more information, see [Windows as a service overview](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+Desktop Analytics doesn't support Windows 10 Long-Term Servicing Channel (LTSC) devices. For more information, see [Windows as a service overview](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
 
 ### Can I reduce the amount of time it takes for data to refresh in my Desktop Analytics portal?
 

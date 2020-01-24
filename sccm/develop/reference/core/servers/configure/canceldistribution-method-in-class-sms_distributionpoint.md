@@ -9,7 +9,8 @@ ms.assetid: bfc44693-3266-461f-988a-886333ac9aaf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CancelDistribution Method in Class SMS_DistributionPoint
 The `CancelDistribution` Windows Management Instrumentation (WMI) class method, in Configuration Manager, cancels a package distribution. If there is a distribution in-progress for the specified package to the specified distribution point, then calling this method will cancel the ongoing distribution and the status of the package distribution will be set to failed for this distribution point.  

@@ -10,7 +10,8 @@ ms.assetid: 38b2bed2-20dd-4ce1-abc0-219343d2c4b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # What is Desktop Analytics?
@@ -61,7 +62,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Technical
 
-- An active Azure subscription, with [Global Admin](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) permissions. [Microsoft Accounts](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) aren't supported.  
+- An active global Azure subscription, with [Global Admin](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) permissions. [Microsoft Accounts](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) aren't supported.  
 
     > [!Important]  
     > Desktop Analytics currently requires that you deploy an Office 365 service in your Azure AD tenant. This won't be a requirement in the future.
@@ -120,14 +121,7 @@ and
 
 - Windows Virtual Desktop Access E3 or E5  
 
-Beyond the cost of license subscriptions, there's no additional cost for using Desktop Analytics. Within Azure Log Analytics, Desktop Analytics is "zero-rated." This rating means it's excluded from data limits and costs, regardless of the Azure Log Analytics pricing tier you chose. For more information on Azure Log Analytics pricing tiers, see [Pricing - Log Analytics](https://azure.microsoft.com/pricing/details/monitor/).
-
-- If you use the free tier, which has a cap on the amount of data collected per day, the Desktop Analytics data doesn't count towards this cap. You can collect all the Desktop Analytics data from your devices and still have the full cap available for collecting additional data from other sources.
-
-- If you use a paid tier that charges per GB of data collected, you're not charged for the Desktop Analytics data. You can collect all the Desktop Analytics data from your devices and not incur any costs.
-
-> [!Note]  
-> Different Azure Log Analytics plans have different data retention periods. Desktop Analytics inherits the workspace's data retention policy. If your workspace is on the free plan, then Desktop Analytics retains the last 30 days of "daily snapshots" that are collected in the workspace.
+Beyond the cost of these license subscriptions, there is no additional cost for using Desktop Analytics within Azure Log Analytics. The data types ingested by Desktop Analytics are free from any Log Analytics data ingestion and retention charges. As non-billable data types, this data is also not subject to any Log Analytics daily data ingestion cap. Learn more about [Log Analytics Usage and Costs](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
 
 
 ## Next steps

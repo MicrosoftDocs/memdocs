@@ -10,12 +10,13 @@ ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Security and privacy for Configuration Manager clients
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article describes security and privacy information for Configuration Manager clients. It also includes information for mobile devices that are managed by the [Exchange Server connector](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
 

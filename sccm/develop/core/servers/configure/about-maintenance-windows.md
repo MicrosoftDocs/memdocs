@@ -9,7 +9,8 @@ ms.assetid: efbb6dc8-cb1c-4513-95a4-eb3a8c3936b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Maintenance Windows
 For detailed information about Configuration Manager maintenance windows, see the Configuration Manager documentation on TechNet. The following links are particularly useful in understanding how maintenance windows work.  

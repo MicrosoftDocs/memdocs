@@ -9,7 +9,8 @@ ms.assetid: 5a836c27-75a0-4394-8632-e3c591f97326
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_DeviceEnrollmentProfile Server WMI Class
 The `SMS_DeviceEnrollmentProfile` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a device enrollment profile in the database.  

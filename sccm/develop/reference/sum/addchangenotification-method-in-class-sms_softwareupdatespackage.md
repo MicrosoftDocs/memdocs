@@ -9,10 +9,11 @@ ms.assetid: 4b9442b1-d1c0-4d46-9bd8-f1a169a21360
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddChangeNotification Method in Class SMS_SoftwareUpdatesPackage
-The `AddChangeNotification` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, adds a software updates package change notification.  
+The `AddChangeNotification` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a software updates package change notification.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

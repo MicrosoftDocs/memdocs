@@ -10,12 +10,13 @@ ms.assetid: 691896d9-ec0f-461f-a3f2-40378ebd3121
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Content Library Explorer
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Content Library Explorer is one of the [Configuration Manager tools](/sccm/core/support/tools). Use the tool for the following activities:  
 

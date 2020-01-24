@@ -9,7 +9,8 @@ ms.assetid: d346eaee-b7eb-4072-9b74-06916e15d18c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_G_System_AppClientState Server WMI Class
 The `SMS_G_System_AppClientState` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application state.  

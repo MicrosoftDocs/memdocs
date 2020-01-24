@@ -9,10 +9,11 @@ ms.assetid: 01100026-63ae-4455-8462-218445b0df11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_G_System_SoftwareUsageData Server WMI Class
-The `SMS_G_System_SoftwareUsageData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that provides a view of raw metering data that combines file and user information with the raw data.  
+The `SMS_G_System_SoftwareUsageData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides a view of raw metering data that combines file and user information with the raw data.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

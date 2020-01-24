@@ -6,7 +6,8 @@ ms.date: 11/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 1d333f4c-0f85-4278-b421-064cf01529a5
 author: aczechowski
 ms.author: aaroncz
@@ -14,7 +15,7 @@ manager: dougeby
 ---
 # Resource Explorer default inventory classes
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article describes the default inventory classes in Resource Explorer.
 

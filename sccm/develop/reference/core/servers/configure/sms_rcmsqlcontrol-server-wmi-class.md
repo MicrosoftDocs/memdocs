@@ -9,7 +9,8 @@ ms.assetid: 10c827dc-7be9-443d-9e79-60a603a38b85
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_RcmSqlControl Server WMI Class
 The `SMS_RcmSqlControl` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents ….  

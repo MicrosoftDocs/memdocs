@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Certificates for the cloud management gateway
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Depending upon the scenario you use to manage clients on the internet with the cloud management gateway (CMG), you need one or more of the following digital certificates:  
 

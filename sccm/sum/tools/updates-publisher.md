@@ -10,7 +10,8 @@ ms.assetid: 2200b02b-e76b-4aa7-a77a-6dc5e70f1333
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # System Center Updates Publisher
 
@@ -25,7 +26,7 @@ Using Updates Publisher, you can:
 -   Export updates to external catalogs.
 -   Publish updates to an update server.
 
-After you publish updates to an update server, you can then use System Center Configuration Manager to detect and deploy those updates to your managed devices.
+After you publish updates to an update server, you can then use Configuration Manager to detect and deploy those updates to your managed devices.
 
 ## Workspaces
 When you open Updates Publisher, it defaults to the Overview node of the *Updates Workspace.*

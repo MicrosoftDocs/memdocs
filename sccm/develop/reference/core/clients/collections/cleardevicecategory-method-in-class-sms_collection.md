@@ -9,7 +9,8 @@ ms.assetid: 6d300ac7-0565-45ac-8b31-f6567bf9cc42
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ClearDeviceCategory Method in Class SMS_Collection
 The `ClearDeviceCatetory` Windows Management Instrumentation (WMI) class method, in Configuration Manager, clears a category from a set of devices.  

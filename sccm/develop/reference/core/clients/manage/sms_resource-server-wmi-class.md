@@ -9,10 +9,11 @@ ms.assetid: d123b9ea-bfde-4b95-9678-7f7820de7635
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_Resource Server WMI Class
-The `SMS_Resource` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that serves as an abstract base class for all discovery resource classes, for example, [SMS_R_IPNetwork Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_r_ipnetwork-server-wmi-class.md).  
+The `SMS_Resource` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as an abstract base class for all discovery resource classes, for example, [SMS_R_IPNetwork Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_r_ipnetwork-server-wmi-class.md).  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -36,7 +37,7 @@ Class SMS_Resource : SMS_BaseClass
 
  Qualifiers: [key]  
 
- System Center Configuration Manager-supplied ID that uniquely identifies a System Center Configuration Manager client resource. This ID is not unique across sites. The default value is ''".  
+ Configuration Manager-supplied ID that uniquely identifies a Configuration Manager client resource. This ID is not unique across sites. The default value is ''".  
 
 ## Remarks  
  Class qualifiers for this class include:  

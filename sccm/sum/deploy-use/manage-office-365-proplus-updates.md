@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Manage Office 365 ProPlus with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager lets you manage Office 365 ProPlus apps in the following ways:
 
@@ -106,7 +107,7 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
 
       1. In the Configuration Manager console, click **Administration** > **Overview** > **Client Settings**.  
 
-      2. Open the appropriate device settings to enable the client agent. For more information about default and custom client settings, see [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
+      2. Open the appropriate device settings to enable the client agent. For more information about default and custom client settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).  
 
       3. Click **Software Updates** and select **Yes** for the **Enable management of the Office 365 Client Agent** setting.  
 

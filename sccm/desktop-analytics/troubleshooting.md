@@ -10,7 +10,8 @@ ms.assetid: 63e08f3f-9558-4ed7-9bf3-3a185ddaac5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Troubleshoot Desktop Analytics
@@ -42,6 +43,9 @@ Many common issues are caused by missing prerequisites. First confirm the follow
 Use the **Connection Health** dashboard in Configuration Manager to drill down into categories by device health. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Desktop Analytics Servicing** node, and select the **Connection Health** dashboard.  
 
 For more information, see [Monitor connection health](/sccm/desktop-analytics/monitor-connection-health).
+
+> [!NOTE]
+> The Configuration Manager connection to Desktop Analytics relies upon the service connection point. Any changes to this site system role may impact synchronization with the cloud service. For more information, see [About the service connection point](/configmgr/core/servers/deploy/configure/about-the-service-connection-point#bkmk_move).
 
 
 ## Log files
