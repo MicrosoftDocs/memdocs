@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 01/14/2020
+ms.date: 01/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -44,7 +44,7 @@ For information about the new features introduced with different versions, see t
 
 If your site uses [automatic client upgrade](/configmgr/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade), when you update the site to version 1910, all clients immediately upgrade after the site updates successfully. The only randomization is when clients receive the policy, which by default is every hour. For a large site with many clients, this behavior can consume a significant amount of network traffic and stress distribution points.
 
-To work around this issue, temporarily disable automatic client upgrade. Use other [client upgrade methods](/configmgr/core/clients/manage/upgrade/upgrade-clients). Microsoft will soon release a hotfix for this issue to allow you to continue to use automatic client upgrade.
+For more information on affected versions, see [Client update for Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4538166).
 
 ### Site server in passive mode doesn't update configuration.mof
 
