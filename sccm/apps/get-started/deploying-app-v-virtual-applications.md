@@ -10,11 +10,12 @@ ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Deploy App-V virtual applications with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (current branch)*
+
+---
+# Deploy App-V virtual applications with Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 When you use Configuration Manager to manage virtual applications, you gain the following benefits:  
 
@@ -28,7 +29,7 @@ When you use Configuration Manager to manage virtual applications, you gain the 
 
 For more information about how to create and sequence applications with Microsoft Application Virtualization (App-V), see [Application Virtualization](https://technet.microsoft.com/library/cc843848.aspx) in the TechNet Library.  
 
-In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must take the following considerations into account when you create and deploy virtual applications:
+In addition to the other Configuration Manager requirements and procedures for creating an application, you must take the following considerations into account when you create and deploy virtual applications:
 
 -   To deploy virtual applications to computers, you must have the Configuration Manager client and App-V Client installed on your computers. Client devices can include desktop and portable computers, and Virtual Desktop Infrastructure (VDI) clients. The Configuration Manager and App-V Client software work together to deliver, locate, and launch virtual application packages. The Configuration Manager client manages the delivery of virtual application packages to the App-V Client. The App-V Client runs the virtual application on the client.  
 
@@ -53,7 +54,7 @@ In addition to the other System Center Configuration Manager requirements and pr
 
 -   **App-V 4.6**: To use virtual applications in Configuration Manager, client computers must have the App-V 4.6 SP1, App-V 4.6 SP2, or App-V 4.6 SP3 client installed.  
 
-     Before you can successfully deploy virtual applications, you must also update the App-V 4.6 SP1 client with the hotfix that is described in the Knowledge Base article [2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322).  
+     Before you can successfully deploy virtual applications, you must also update the App-V 4.6 SP1 client with the hotfix that is described in the Knowledge Base article [2645225](https://go.microsoft.com/fwlink/p/?LinkId=237322).  
 
 -   **App-V 5, App-V 5.0 SP1, App-V 5.0 SP2, App-V 5.0 SP3, and App-V 5.1**: For App-V 5.0 SP2, you must install [Hotfix Package 5](https://support.microsoft.com/en-us/kb/2963211) or use App-V 5.0 SP3.  
 -   **App-V 5.2**: This is built into Windows 10 Education (1607 and later), Windows 10 Enterprise (1607 and later), and Windows Server 2016.
@@ -115,7 +116,7 @@ Use the following table to help you plan a migration from an existing App-V infr
 |Configuration Manager begins to manage virtual applications on a client after the first deployment of a virtual application. After this, Configuration Manager must manage all App-V applications on the computer.|No additional information.|  
 |Distribute the content to the appropriate distribution points to enable local delivery of applications.|See [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
 |Deploy the application to Configuration Manager clients.<br /><br /> If the App-V application was created with an earlier version of the sequencer that does not create a manifest XML file, you can open it and save it in a newer version of the sequencer to create the file. This file is required to deploy virtual applications with Configuration Manager.<br /><br /> App-V supports the virtual application packages that are created with the SoftGrid 4.1 SP1 or 4.2 versions of the sequencer.<br /><br /> If the applications were previously installed locally, you must uninstall them before you deploy a virtual version of the application.|See [Deploy applications](../../apps/deploy-use/deploy-applications.md).|  
-|System Center Configuration Manager no longer supports using packages and programs that contain virtual applications. When you migrate from Configuration Manager 2007 to System Center Configuration Manager, Configuration Manager converts these packages into applications.<br /><br /> Configuration Manager 2007 advertisements are converted into the following deployment types:<br /><br /> - Migrating App-V packages with no advertisement:  One deployment type that uses the default deployment type settings.<br /><br /> - Migrating App-V packages with one advertisement: One deployment type that uses the same settings as the <br />                Configuration Manager 2007 advertisement.<br /><br /> - Migrating App-V packages with multiple advertisements: A deployment type, for each <br />                Configuration Manager 2007 advertisement, that uses the settings for that advertisement.|See [Planning for the migration of Configuration Manager objects to System Center Configuration Manager](../../core/migration/planning-for-the-migration-of-objects.md).|  
+|Configuration Manager no longer supports using packages and programs that contain virtual applications. When you migrate from Configuration Manager 2007 to Configuration Manager current branch, Configuration Manager converts these packages into applications.<br /><br /> Configuration Manager 2007 advertisements are converted into the following deployment types:<br /><br /> - Migrating App-V packages with no advertisement:  One deployment type that uses the default deployment type settings.<br /><br /> - Migrating App-V packages with one advertisement: One deployment type that uses the same settings as the <br />                Configuration Manager 2007 advertisement.<br /><br /> - Migrating App-V packages with multiple advertisements: A deployment type, for each <br />                Configuration Manager 2007 advertisement, that uses the settings for that advertisement.|See [Planning for the migration of objects to Configuration Manager current branch](../../core/migration/planning-for-the-migration-of-objects.md).|  
 
 ##  Migrating App-V 5 connection groups to Configuration Manager virtual environments  
 App-V virtual environments in Configuration Manager allow virtual applications that you have deployed to share the same file system and registry on client computers. This means that unlike standard virtual applications, these applications can share data with each other. Virtual environments are created or changed on client computers when the application is installed or when clients next evaluate their installed applications. Virtual environments are similar to connection groups in standalone App-V 5.  
@@ -199,6 +200,6 @@ You can use the following reports to monitor App-V in your Configuration Manager
 |Count all instances of virtual applications|Shows a count of all detected App-V applications (App-V 4.6 only).|  
 
 ### Log files  
-Configuration Manager records information about virtual application deployments in log files. For information about the log files that virtual applications and Configuration Manager application management use, see [Log files in System Center Configuration Manager](../../core/plan-design/hierarchy/log-files.md).  
+Configuration Manager records information about virtual application deployments in log files. For information about the log files that virtual applications and Configuration Manager application management use, see [Log files](../../core/plan-design/hierarchy/log-files.md).  
 
 For Windows Vista, Windows 7, and Windows 8, you can find logs for the App-V client in C:\ProgramData\Microsoft\Application Virtualization Client.  

@@ -9,10 +9,11 @@ ms.assetid: a2a3025d-3ac2-4253-9537-4743e8fc3d61
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SoftwareDistributionPackageEvent
-In System Center Configuration Manager, the `SoftwareDistributionPackageEvent` class is the base class for all software distribution-package-related status messages. Every status message has its own class that is derived from `SoftwareDistributionPackageEvent`; and therefore, all package status messages have the insertion strings of this class. Each status message that is derived from this class must set the base class `SoftwareDistributionPackageEvent` properties.  
+In Configuration Manager, the `SoftwareDistributionPackageEvent` class is the base class for all software distribution-package-related status messages. Every status message has its own class that is derived from `SoftwareDistributionPackageEvent`; and therefore, all package status messages have the insertion strings of this class. Each status message that is derived from this class must set the base class `SoftwareDistributionPackageEvent` properties.  
 
 ## Properties  
  `ClientID`  
@@ -34,6 +35,3 @@ In System Center Configuration Manager, the `SoftwareDistributionPackageEvent` c
  Data type: `String`  
 
  The package version. It is the value that appears in the status message text. It is not the value that is specified in the Configuration Manager console. It maps to `PKG_SourceVersion` field in the software distribution policy. This is insertion string number 2.  
-
-## See Also  
- [Status Message Types](../../../../../develop/reference/core/servers/manage/status-message-types.md)

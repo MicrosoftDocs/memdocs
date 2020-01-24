@@ -9,7 +9,8 @@ ms.assetid: 1d466a0b-bb4a-4648-8f16-9b6c897934f5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Connecting to Configuration Manager with Windows PowerShell
 In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/understand/windows-powershell-basics.md) topic, you tried a few basic Windows PowerShell cmdlets. This topic helps you connect to Configuration Manager from your Windows PowerShell environment.  
@@ -169,12 +170,12 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
         Get-CMSite -SiteCode <string>  [<CommonParameters>]  
 
     DESCRIPTION  
-        The Get-CMSite cmdlet gets one or more Microsoft System Center Configuration Manager sites. A SystemCenter  
+        The Get-CMSite cmdlet gets one or more Microsoft Configuration Manager sites. A SystemCenter  
         Configuration Manager site is a server that has clients assigned to it and that processes client-generated data.  
         You can get a Configuration Manager site by using either a site name or a site code.  
 
     RELATED LINKS  
-        Online Version: http://go.microsoft.com/fwlink/?LinkID=263855  
+        Online Version: https://go.microsoft.com/fwlink/?LinkID=263855  
         Set-CMSite  
 
     REMARKS  

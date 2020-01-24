@@ -9,10 +9,11 @@ ms.assetid: e0f59acd-8dbc-42b4-aaef-8261c4860577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_UpdateGroupAssignment Server WMI Class
-The `SMS_UpdateGroupAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a deployment of an update group.  
+The `SMS_UpdateGroupAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a deployment of an update group.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -257,7 +258,7 @@ Class SMS_UpdateGroupAssignment : SMS_CIAssignmentBaseClass
 
  `LimitStateMessageVerbosity` is deprecated in SP1. However, the value must still remain synchronized with `StateMessageVerbosity`. For `StateMessageVerbosity` values < 10, `LimitStateMessageVerbosity` must be set to `true`, otherwise `LimitStateMessageVerbosity` must be set to `false`.  
 
- This method/property has been removed or deprecated in System Center Configuration Manager SP1.  
+ This method/property has been removed or deprecated in Configuration Manager SP1.  
 
  `LocaleID`  
  Data type: `UInt32`  

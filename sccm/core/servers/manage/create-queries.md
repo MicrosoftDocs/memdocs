@@ -1,7 +1,7 @@
 ---
 title: "Create queries"
 titleSuffix: "Configuration Manager"
-description: "Discover how to create and import queries in System Center Configuration Manager. Includes example queries and tips."
+description: "Discover how to create and import queries in Configuration Manager. Includes example queries and tips."
 ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,13 +10,14 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Create queries in System Center Configuration Manager
+# Create queries in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-This article describes how to create and import queries in System Center Configuration Manager.  
+This article describes how to create and import queries in Configuration Manager.  
 
 ##  <a name="BKMK_Create"></a> Create a query  
  Use this procedure to create a query in Configuration Manager.  
@@ -44,9 +45,9 @@ This article describes how to create and import queries in System Center Configu
     > [!TIP]  
     > You can use the following reference documentation to help you construct your own WQL queries:  
     >   
-    > -   [WQL (SQL for WMI)](http://go.microsoft.com/fwlink/p/?LinkId=256653)  
-    > -   [WHERE Clause](http://go.microsoft.com/fwlink/p/?LinkId=256654)  
-    > -   [WQL Operators](http://go.microsoft.com/fwlink/p/?LinkId=256655)  
+    > -   [WQL (SQL for WMI)](https://go.microsoft.com/fwlink/p/?LinkId=256653)  
+    > -   [WHERE Clause](https://go.microsoft.com/fwlink/p/?LinkId=256654)  
+    > -   [WQL Operators](https://go.microsoft.com/fwlink/p/?LinkId=256655)  
 
 8.  On the **Criteria** tab of the &lt;Query Name\> **Statement Properties** dialog box, specify criteria that are used to refine the results of the query. For example, you could return only resources that have a site code of **XYZ**. You can configure multiple criteria for a query.  
 
@@ -71,7 +72,7 @@ This article describes how to create and import queries in System Center Configu
 12. Complete the wizard to create the query. The new query appears in the **Queries** node in the **Monitoring** workspace.  
 
 ##  <a name="BKMK_Import"></a> Import a query  
- Use this procedure to import a query into Configuration Manager. For information about how to export queries, see [How to manage queries in System Center Configuration Manager](../../../core/servers/manage/manage-queries.md).  
+ Use this procedure to import a query into Configuration Manager. For information about how to export queries, see [How to manage queries](../../../core/servers/manage/manage-queries.md).  
 
 1.  In the Configuration Manager console, select **Monitoring**.  
 
@@ -95,10 +96,10 @@ Use the following query to return the NetBIOS name and operating system version 
 > [!TIP]  
 > To return computers that run Windows Server 2008 R2, change `%Workstation 6.1%` to `%Server 6.1%`.  
 
-```  
+``` WQL
 select SMS_R_System.NetbiosName,  
-SMS_R_System.OperatingSystemNameandVersion from    
-SMS_R_System where   
+SMS_R_System.OperatingSystemNameandVersion from
+SMS_R_System where
 SMS_R_System.OperatingSystemNameandVersion like "%Workstation 6.1%"  
 ```  
 
@@ -109,12 +110,12 @@ Use the following query to return the NetBIOS name and software package name of 
 > [!TIP]  
 > This query searches for the software package by using the names that are displayed in the programs list in Windows Control Panel.  
 
-```  
-select SMS_R_System.NetbiosName,   
-SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName from    
-SMS_R_System inner join SMS_G_System_ADD_REMOVE_PROGRAMS on   
-SMS_G_System_ADD_REMOVE_PROGRAMS.ResourceId =   
-SMS_R_System.ResourceId where   
+``` WQL
+select SMS_R_System.NetbiosName,
+SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName from
+SMS_R_System inner join SMS_G_System_ADD_REMOVE_PROGRAMS on
+SMS_G_System_ADD_REMOVE_PROGRAMS.ResourceId =
+SMS_R_System.ResourceId where
 SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "Microsoft%Visio%"  
 ```  
 
@@ -122,10 +123,10 @@ SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "Microsoft%Visio%"
 
 Use the following query to return the NetBIOS name and organizational unit (OU) name of all computers in a specified OU. Replace the text `OU Name` with the name of the OU that you want to query for.  
 
-```  
-select SMS_R_System.NetbiosName,   
-SMS_R_System.SystemOUName from    
-SMS_R_System where   
+``` WQL
+select SMS_R_System.NetbiosName,
+SMS_R_System.SystemOUName from
+SMS_R_System where
 SMS_R_System.SystemOUName = "OU Name"  
 ```  
 
@@ -133,8 +134,8 @@ SMS_R_System.SystemOUName = "OU Name"
 
 Use the following query to return the NetBIOS name of all computers that begin with a specific string of characters. In this example, the query returns all computers with a NetBIOS name that begins with `ABC`.  
 
-```  
-select SMS_R_System.NetbiosName from    
+``` WQL
+select SMS_R_System.NetbiosName from
 SMS_R_System where SMS_R_System.NetbiosName like "ABC%"  
 ```  
 
@@ -142,7 +143,7 @@ SMS_R_System where SMS_R_System.NetbiosName like "ABC%"
 
 Device types are stored in the Configuration Manager database under the resource class **sms_r_system** and the attribute name **AgentEdition**. Use this query to retrieve only the devices that match the agent edition of the device type that you specify:  
 
-```  
+``` WQL
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = <Device ID>  
 ```  
 
@@ -158,20 +159,26 @@ Use one of these values for &lt;Device ID\>:
 |Mac computer|5|  
 |Windows CE|6|  
 |Windows Embedded|7|  
+|Intel system on a chip|12|  
+|Unix and Linux servers|13|  
+|Microsoft HoloLens (MDM)|15|
+|Microsoft Surface Hub (MDM)|16|
+
+> [!NOTE]
+> Values that aren't listed in this table are associated with devices that are no longer supported.
+
+<!-- removed with hybrid EOL
 |iOS|8|  
 |iPad|9|  
 |iPod touch|10|  
 |Android|11|  
-|Intel system on a chip|12|  
-|Unix and Linux servers|13|  
 |Apple macOS (MDM)|14|
-|Microsoft HoloLens (MDM)|15|
-|Microsoft Surface Hub (MDM)|16|
 |Android for Work|17|
+ -->
 
- For example, if you want to return only Mac computers, use this query:  
+For example, if you want to return only Mac computers, use this query:  
 
-```  
+``` WQL
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = 5  
 ```  
 

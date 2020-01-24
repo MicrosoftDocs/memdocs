@@ -9,10 +9,11 @@ ms.assetid: ec646177-2beb-4b90-a6ff-00384dd40859
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ResolvePendingRegistrationRecord Method in Class SMS_PendingRegistrationRecord
-The `ResolvePendingRegistrationRecord` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, resolves any conflicts for the pending registration records.  
+The `ResolvePendingRegistrationRecord` Windows Management Instrumentation (WMI) class method, in Configuration Manager, resolves any conflicts for the pending registration records.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -44,7 +45,7 @@ sint32 ResolvePendingRegistrationRecord(
 |-----------|-----------------|  
 |1|Merge: Allows the record to take over the existing conflicting record.|  
 |2|New: Creates a new record for the `SMSID` resource. This resource is then issued a new `SMSID` value.|  
-|3|Reject: Creates a new record for the `SMSID` resource. This resource is then issued a new `SMSID` value, but is restricted from communicating with the System Center Configuration Manager site.|  
+|3|Reject: Creates a new record for the `SMSID` resource. This resource is then issued a new `SMSID` value, but is restricted from communicating with the Configuration Manager site.|  
 
 ## Return Values  
  An `SInt32`data type that is 0 to indicate success or non-zero to indicate failure.  

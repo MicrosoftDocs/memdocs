@@ -9,10 +9,11 @@ ms.assetid: 879be718-4ce0-46bc-a2e3-161b97f836a5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Software Distribution Deployments
-In System Center Configuration Manager, after a software distribution package has been created, with programs to tell client computers what to do with the package, you need to advertise the program that you want the clients to run. Advertising the program makes a program available to a specified collection of clients.  
+In Configuration Manager, after a software distribution package has been created, with programs to tell client computers what to do with the package, you need to advertise the program that you want the clients to run. Advertising the program makes a program available to a specified collection of clients.  
 
  Advertisements are evaluated by Configuration Manager to determine which clients will receive a specific program to run on their computers. An advertisement specifies the following information:  
 
@@ -25,8 +26,5 @@ In System Center Configuration Manager, after a software distribution package ha
   The site's clients cannot receive advertised programs until you enable the software distribution advertised programs client agent on the site's clients. The **Advertised Programs Client Agent** performs the necessary software distribution-related tasks on these clients, primarily allowing the clients to receive and run the programs that you advertise.  
 
 ## See Also  
- [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)   
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
- [Configuration Manager Collections](../../../../develop/core/clients/collections/collections.md)   
- [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
- [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)
+ [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)

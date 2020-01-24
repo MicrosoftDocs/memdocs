@@ -2,7 +2,7 @@
 title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud
-ms.date: 07/26/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,15 +10,15 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Install in-console updates for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager synchronizes with the Microsoft cloud service to get updates. Then install these updates from within the Configuration Manager console.
-
 
 ## Get available updates
 
@@ -42,8 +42,6 @@ After updates synchronize, view them in the Configuration Manager console. Go to
 Before you configure the service connection point, understand and plan for its additional uses. The following uses might affect how you configure this site system role:  
 
 - The site uses the service connection point to upload usage information about your site. This information helps the Microsoft cloud service identify the updates that are available for the current version of your infrastructure. For more information, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).  
-
-- The site uses the service connection point to manage devices with Microsoft Intune, and using Configuration Manager on-premises mobile device management. For more information, see [Hybrid mobile device management (MDM)](/sccm/mdm/understand/hybrid-mobile-device-management).  
 
 To better understand what happens when updates are downloaded, see the following flowcharts:  
 
@@ -97,13 +95,13 @@ Review the following steps before you install an update from within the Configur
 
 Review the applicable update checklist for actions to take before you start the update:
 
+- [Checklist for installing update 1910](/sccm/core/servers/manage/checklist-for-installing-update-1910)  
+
 - [Checklist for installing update 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906)  
 
 - [Checklist for installing update 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902)
 
 - [Checklist for installing update 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810)  
-
-- [Checklist for installing update 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806)  
 
 ### <a name="bkmk_step2"></a> Step 2: Run the prerequisite checker before installing an update  
 
@@ -175,7 +173,7 @@ As part of the update installation, Configuration Manager does the following act
 
 - Reinstalls any affected components, like site system roles or the Configuration Manager console.  
 
-- Manages updates to clients based on the selections that you made for client piloting, and for [automatic client upgrades](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade).  
+- Manages updates to clients based on the selections that you made for client piloting, and for [automatic client upgrades](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate).  
 
 - Site system servers generally don't need to restart as part of the update. If a role uses .NET, and the package updates that prerequisite component, then the site system may restart.  
 
@@ -205,11 +203,12 @@ Use the following steps to monitor progress:
 - View the **CMUpdate.log** file in `<ConfigMgr_Installation_Directory>\Logs` on the site server.  
 
 >[!NOTE]
-> - Starting in version 1906, you can see the state of the **Upgrade ConfigMgr database** task during the **Installation** phase.
->   - If the database upgrade is blocked, then you'll be given the warning **In progress, needs attention**.
->     - The cmupdate.log will log the program name and sessionid from SQL that is blocking the database upgrade.
->   - When the database upgrade is no longer blocked, the status will be reset to **In progress** or **Complete**.
->     - When the database upgrade is blocked, a check is done every 5 minutes to see if it's still blocked.
+> Starting in version 1906, you can see the state of the **Upgrade ConfigMgr database** task during the **Installation** phase.
+>
+> - If the database upgrade is blocked, then you'll be given the warning **In progress, needs attention**.
+>   - The cmupdate.log will log the program name and sessionid from SQL that is blocking the database upgrade.
+> - When the database upgrade is no longer blocked, the status will be reset to **In progress** or **Complete**.
+>   - When the database upgrade is blocked, a check is done every 5 minutes to see if it's still blocked.
 
 #### 4. When the update installation completes
 
@@ -231,7 +230,7 @@ After a central administration site or primary site updates, each Configuration 
 
 Update the console right away after the site updates.  
 
-After the console update completes, verify the console and site versions are correct. Go to **About System Center Configuration Manager** at the top-left corner of the console.  
+After the console update completes, verify the console and site versions are correct. Go to **About Configuration Manager** at the top-left corner of the console.  
 
 > [!Note]  
 > The console version is slightly different from the site version. The minor version of the console corresponds to the Configuration Manager release version. For example, in Configuration Manager version 1802 the initial site version is 5.0.8634.1000, and the initial console version is 5.**1802**.1082.1700. The build (1082) and revision (1700) numbers may change with future hotfixes.
@@ -275,6 +274,9 @@ The post installation tasks include:
     - Critical site component that runs on the site server.
     - Responsible for reinstalling roles on site system servers. Status for individual site system role reinstallation doesn't display.
     - Reinstallation of this service should complete quickly.
+
+    > [!Note]
+    > Some Configuration Manager site roles share the client framework. For example, the management point and pull distribution point. When these roles update, the client version on these servers updates at the same time. For more information, see [How to upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers).
 
 - **Installing SMS_REPLICATION_CONFIGURATION_MONITOR component**
 
@@ -357,19 +359,17 @@ Go to the **Monitoring** workspace, and select the **Site Servicing Status** nod
 
 - **Ignore prerequisite warnings**: If the update install stops because of a warning, you can then select **Ignore prerequisite warnings**. This action allows the installation of the update to continue after a few minutes, and uses the option to ignore prerequisite warnings.  
 
-
 ## <a name="bkmk_after"></a> After a site installs an update  
 
 After the site updates, review the post-update checklist for the applicable version:  
+
+- [Post-update checklist for version 1910](/sccm/core/servers/manage/checklist-for-installing-update-1910#post-update-checklist)  
 
 - [Post-update checklist for version 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906#post-update-checklist)  
 
 - [Post-update checklist for version 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist)  
 
 - [Post-update checklist for version 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist)  
-
-- [Post-update checklist for version 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)  
-
 
 ## <a name="bkmk_options"></a> Enable optional features from updates  
 
@@ -395,30 +395,24 @@ The following features are optional in the latest version of Configuration Manag
 
 -->
 
+- [BitLocker management](/configmgr/protect/plan-design/bitlocker-management) <!-- 3601034,6DD56E46-C3EC-4E38-A16F-E98644BB6434 -->
 - [Synchronize collection membership results to Azure Active Directory](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->
 - [Azure Active Directory user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->
 - [Application groups](/sccm/apps/deploy-use/create-app-groups) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D-->
 - [Task sequence debugger](/sccm/osd/deploy-use/debug-task-sequence) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71-->
 - [Package conversion manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861,4E0C09AF-7FC1-4412-A8BB-166D9BCD0093-->
-- [Client apps for co-managed devices](/sccm/comanage/workloads#client-apps) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
+- [Client apps for co-managed devices](/sccm/comanage/workloads#client-apps) (previously known as *Mobile apps for co-managed devices*) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
 - [Third-party software updates](/sccm/sum/deploy-use/third-party-software-updates)<!--1357605,1352101,1358714;B5E192AE-C81F-4348-9EF9-07A3C0FBE597-->
 - [Approve application requests for users per device](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
-- [Support for Cisco AnyConnect 4.0.07x and later for iOS](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393,A421682F-C1A5-4933-A329-3EF35737E52A-->
-- [Device health attestation assessment for compliance policies for conditional access](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616,0E986DC1-D20A-4386-9EB5-108D9D5118EB-->
 - [Create and run scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
-- [Run task sequence step](/sccm/osd/understand/task-sequence-steps#child-task-sequence) <!--1261338,3CFFE6AC-D46F-47F0-AD25-19F6EEF21F28-->
-- [Task sequence content pre-caching](/sccm/osd/deploy-use/configure-precache-content) <!--1021244,1C6BD2E9-C8DB-4DEE-A937-AA84B38957A7-->
 - [Surface driver updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490,82AD973A-7CDF-4B67-A665-72875D6E099A-->
 - [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
-- [Data warehouse service point](/sccm/core/servers/manage/data-warehouse) <!--1277922,0EAC8088-6895-440F-B871-11E3C305CFCD-->
-- [Client peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436,4C5F2976-7999-4E0C-BAF2-DEB793AD540E-->
 - [PFX create](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368,CED76B79-929C-4C45-981F-B9BCA6D38A17-->
 - [Azure Log Analytics connector](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
 - [Windows Defender Exploit Guard policy](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468,8491D4C8-8484-46B8-BCD6-17DC2CADBAEB-->
 - [VPN for Windows 10](/sccm/protect/deploy-use/vpn-profiles) <!--1283610,EDBEBA3D-3A4D-4465-84D9-D71EB811E7F6-->
 - [Servicing a cluster-aware collection (Server groups)](/sccm/sum/deploy-use/service-a-server-group) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
 - [Windows Hello for Business](/sccm/protect/deploy-use/windows-hello-for-business-settings) (previously known as *Passport for Work*) <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
-- [Conditional access for managed PCs](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)  <!--1191496,1CD5B9FC-022E-4A78-89F5-DEA58B6F5050-->
 
 > [!Tip]  
 > For more information on features that require consent to enable, see [pre-release features](/sccm/core/servers/manage/pre-release-features).  

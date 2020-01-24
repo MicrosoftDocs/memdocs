@@ -2,7 +2,7 @@
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
 description: Learn how to use CMPivot in Configuration Manager to query clients in real time.
-ms.date: 07/30/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,15 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart 
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # CMPivot for real-time data in Configuration Manager
 
 <!--1358456-->
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager has always provided a large centralized store of device data, which customers use for reporting purposes. The site typically collects this data on a weekly basis. Starting in version 1806, CMPivot is a new in-console utility that now provides access to real-time state of devices in your environment. It immediately runs a query on all currently connected devices in the target collection and returns the results. Then filter and group this data in the tool. By providing real-time data from online clients, you can more quickly answer business questions, troubleshoot issues, and respond to security incidents.
 
@@ -33,12 +34,6 @@ The following components are required to use CMPivot:
 
 - Upgrade the target devices to the latest version of the Configuration Manager client.  
 
-- Permissions for CMPivot:
-  - **Read** permission on the **SMS Scripts** object
-  - **Run Scripts** permission on the **Collection**
-  - **Read** permission on **Inventory Reports**
-  - The default scope. 
-
 - Target clients require a minimum of PowerShell version 4.
 
 - To gather data for the following entities, target clients require PowerShell version 5.0:  
@@ -47,6 +42,16 @@ The following components are required to use CMPivot:
   - IPConfig
   - SMBConfig
 
+
+- Permissions for CMPivot:
+  - **Read** permission on the **SMS Scripts** object
+  - **Run Scripts** permission on the **Collection**
+    - Alternatively, starting in version 1906, you can use **Run CMPivot** on **Collection**.
+  - **Read** permission on **Inventory Reports**
+  - The default scope.
+
+>[!NOTE]
+> **Run Scripts** is a super set of the **Run CMPivot** permission.
  
 ## Limitations
 
@@ -158,7 +163,7 @@ The CMPivot window contains the following elements:
 
      - **Show devices without**: Query for devices without this value for this property. For example, from the results of the `OS` query, select this option on a cell in the Version row: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
 
-     - **Bing it**: Launch the default web browser to www.bing.com with this value as the query string.  
+     - **Bing it**: Launch the default web browser to https://www.bing.com with this value as the query string.  
 
    - Click any hyperlinked text to pivot the view on that specific information.  
 
@@ -253,6 +258,15 @@ CMPivot includes the following improvements starting in Configuration Manager ve
   - If the script or query output is greater than 80 KB, the client sends the data via a state message.
   - If the client isn't updated to the 1810 client version, it continues to use state messages.
 
+- You may see the following error when you start CMPivot:
+   **You can't use CMPivot right now due to an incompatible script version. This issue may be because the hierarchy is in the process of upgrading a site. Wait until the upgrade is complete and then try again.**
+
+  - If you see this message, it could mean:
+    - The security scope isn't set up properly.
+    - There are issues with Upgrade in the process.
+    - The underlying CMPivot script is incompatible.
+
+
 ### <a name="bkmk_cmpivot-functions"></a> Scalar functions
 CMPivot supports the following scalar functions:
 - **ago()**: Subtracts the given timespan from the current UTC clock time  
@@ -280,33 +294,36 @@ CMPivot now includes basic support for the KQL [render operator](https://docs.mi
 #### Example: bar chart
 The following query renders the most recently used applications as a bar chart:
 
-```
+``` Kusto
 CCMRecentlyUsedApplications
 | summarize dcount( Device ) by ProductName
 | top 10 by dcount_
 | render barchart
 ```
+
 ![Example of CMPivot bar chart visualization](media/1359068-cmpivot-barchart.png)
 
 #### Example: time chart
 To render time charts, use the new **bin()** operator to group events in time. The following query shows when devices have started in the last seven days:
 
-``` 
-OperatingSystem 
+``` Kusto
+OperatingSystem
 | where LastBootUpTime <= ago(7d)
 | summarize count() by bin(LastBootUpTime,1d)
 | render timechart
 ```
+
 ![Example of CMPivot time chart visualization](media/1359068-cmpivot-timechart.png)
 
 #### Example: pie chart
 The following query displays all OS versions in a pie chart:
 
-```
-OperatingSystem 
+``` Kusto
+OperatingSystem
 | summarize count() by Caption
 | render piechart
 ```
+
 ![Example of CMPivot pie chart visualization](media/1359068-cmpivot-piechart.png)
 
 
@@ -316,12 +333,14 @@ Use CMPivot to query any hardware inventory class. These classes include any cus
 The color saturation of the data in the results table or chart indicates if the data is live or cached. For example, dark blue is real-time data from an online client. Light blue is cached data.
 
 #### Example
-```
+
+``` Kusto
 LogicalDisk
 | summarize sum( FreeSpace ) by Device
 | order by sum_ desc
 | render columnchart
 ```
+
 ![Example of CMPivot inventory query with column chart visualization](media/1359068-cmpivot-inventory.png)
 
 #### Limitations
@@ -371,7 +390,7 @@ MessageId 40805: User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Sc
 
 - 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 is the Script-Guid for CMPivot.
 - The Script-Hash can be seen in the client's scripts.log file.
-- You can also see the hash stored in the client's script score. The filename on the client is &lt;Script-Guid>_&lt;Script-Hash>.
+- You can also see the hash stored in the client's script store. The filename on the client is &lt;Script-Guid>_&lt;Script-Hash>.
     - Example file name: C:\Windows\CCM\ScriptStore\7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14_abc1d23e45678901fabc123d456ce789fa1b2cd3e456789123fab4c56789d0123.ps
    
 
@@ -383,7 +402,7 @@ Starting in Configuration Manager version 1902, you can run CMPivot from the cen
 
 Running CMPivot on the CAS will require additional permissions when SQL or the provider aren't on the same machine or in the case of SQL Always On configuration. With these remote configurations, you have a “double hop scenario” for CMPivot.
 
-To get CMPivot to work on the CAS in such a “double hop scenario”, you can define constrained delegation. To understand the security implications of this configuration, read the [Kerberos constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. If you have more than one remote configuration such as SQL or SCCM Provider being colocated with the CAS or not, you may require a combination of permission settings. Below are the steps that you need to take:
+To get CMPivot to work on the CAS in such a “double hop scenario”, you can define constrained delegation. To understand the security implications of this configuration, read the [Kerberos constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. If you have more than one remote configuration such as SQL or SMS Provider being colocated with the CAS or not, you may require a combination of permission settings. Below are the steps that you need to take:
 
 ### CAS has a remote SQL server
 
@@ -500,7 +519,7 @@ The render operator already exists in CMPivot. Support for multiple series and t
 
 - Show device, manufacturer, model, and OSVersion:
 
-   ```Kusto
+   ``` Kusto
    ComputerSystem
    | project Device, Manufacturer, Model
    | join (OperatingSystem | project Device, OSVersion=Caption)
@@ -508,7 +527,7 @@ The render operator already exists in CMPivot. Support for multiple series and t
 
 - Show graph of boot times for a device:
 
-   ```Kusto
+   ``` Kusto
    SystemBootData
    | where Device == 'MyDevice'
    | project SystemStartTime, BootDuration, OSStart=EventLogStart, GPDuration, UpdateDuration
@@ -522,9 +541,14 @@ The render operator already exists in CMPivot. Support for multiple series and t
 <!--4683130-->
 
 Starting in version 1906, the following permissions have been added to Configuration Manager's built-in **Security Administrator** role:
- - Read on SMS Script
- - Run CMPivot on Collection
- - Read on Inventory Report
+
+ - **Read** on SMS Script
+ - **Run CMPivot** on Collection
+ - **Read** on Inventory Report
+
+>[!NOTE]
+> **Run Scripts** is a super set of the **Run CMPivot** permission.
+ 
 
 ### <a name="bkmk_standalone"></a> CMPivot standalone
 <!--3555890, 4619340, 4683130 -->
@@ -544,8 +568,165 @@ You can share the power of CMPivot with other personas, such as helpdesk or secu
    ![Browse to the collection you want to run your query against](./media/3555890-cmpivot-standalone-browse-collection.png)
 
 > [!NOTE]
-> Right-click actions, such as **Run Scripts** and **Resource Explorer**, aren't avilable in CMPivot standalone.
+> Right-click actions, such as **Run Scripts**, **Resource Explorer**, and web search aren't available in CMPivot standalone. CMPivot standalone's primary use is querying independently from the Configuration Manager infrastructure. To help security administrators, CMpivot standalone does include the ability to connect to Microsoft Defender Security Center. <!--5605358-->
 
+## <a name="bkmk_cmpivot1910"></a> CMPivot starting in version 1910
+<!--5410930, 3197353-->
+Starting in version 1910, CMPivot was significantly optimized to reduce network traffic and load on your servers. Additionally, a number of entities and entity enhancements were added to aid in troubleshooting and hunting. The following changes were introduced for CMPivot in version 1910:
+
+- [Optimizations to the CMPivot engine](#bkmk_optimization)
+- Additional entities and entity enhancements:
+  - Windows event logs ([WinEvent](#bkmk_WinEvent))
+  - File content ([FileContent](#bkmk_File))
+  - Dlls loaded by processes ([ProcessModule](#bkmk_ProcessModule))
+  - Azure Active Directory information ([AADStatus](#bkmk_AadStatus))
+  - Endpoint protection status ([EPStatus](#bkmk_EPStatus))
+- [Local device query evaluation using CMPivot standalone](#bkmk_local-eval)
+- [Other enhancements to CMPivot](#bkmk_Other)
+
+
+### <a name="bkmk_optimization"></a> Optimizations to the CMPivot engine
+<!--3197353-->
+To reduce network traffic and load on your servers, CMPivot was optimized in 1910. Many query operations are now performed directly on the client rather than on the servers. This change also means that some CMPivot operations return minimal data from the first query. If you decide to drill into the data for more information, a new query might run to fetch the additional data from the client. For instance, previously a large data set was returned to the server when you ran a "summarized count" query.  While returning a large data set offered immediate drill-down, many times only the summarized count was needed. In 1910 when you choose to drill into a specific client, another collection of the data occurs to return the additional data you've requested. This change brings better performance and scalability to queries against a large number of clients. <!--3197353, 5458337-->
+
+#### Examples
+
+The CMPivot optimizations drastically reduce the network and server CPU load needed to run CMPivot queries. With these optimizations, we can now sift through gigabytes of client data in real time. The following queries illustrate these optimizations:
+
+- Search all event logs on all clients in your enterprise for authentication failures.
+
+   ``` Kusto
+   EventLog('Security')
+   | where  EventID == 4673
+   | summarize count() by Device
+   | order by count_ desc
+   ```
+
+- Search for a file by hash.
+
+   ``` Kusto
+   Device
+   | join kind=leftouter ( File('%windir%\\system32\\*.exe')
+   | where SHA256Hash == 'A92056D772260B39A876D01552496B2F8B4610A0B1E084952FE1176784E2CE77')
+   | project Device, MalwareFound = iif( isnull(FileName), 'No', 'Yes')
+   ```
+
+### <a name="bkmk_WinEvent"></a> WinEvent(\<logname>,[\<timespan>])
+
+This entity is used to get events from event logs and event tracing log files. The entity gets data from event logs that are generated by the Windows Event Log technology. The entity also gets events in log files generated by Event Tracing for Windows (ETW). WinEvent looks at events that have occurred within the last 24 hours by default. However, the 24-hour default can be overridden by including a timespan.
+
+``` Kusto
+WinEvent('Microsoft-Windows-HelloForBusiness/Operational', 1d)
+| where LevelDisplayName =='Error'
+| summarize count() by Device
+```
+
+### <a name="bkmk_File"></a> FileContent(\<filename>)
+
+FileContent is used to get the contents of a text file.
+
+``` Kusto
+FileContent('c:\\windows\\SMSCFG.ini')
+| where Content startswith  'SMS Unique Identifier='
+| project Device, SMSId= substring(Content,22)
+```
+
+### <a name="bkmk_ProcessModule"></a> ProcessModule(\<processname>)  
+
+This entity is used to enumerate the modules (dlls) loaded by a given process. ProcessModule is useful when hunting for malware that hides in legitimate processes.  
+
+``` Kusto
+ProcessModule('powershell')
+| summarize count() by ModuleName
+| order by count_ desc
+```
+
+### <a name="bkmk_AadStatus"></a> AadStatus
+
+This entity can be used to get the current Azure Active Directory identity information from a device.
+
+``` Kusto
+AadStatus
+| project Device, IsAADJoined=iif( isnull(DeviceId),'No','Yes')
+| summarize DeviceCount=count() by IsAADJoined
+| render piechart
+```
+
+### <a name="bkmk_EPStatus"></a> EPStatus
+
+EPStatus is used to get the status of antimalware software installed on the computer.
+
+``` Kusto
+EPStatus
+| project Device, QuickScanAge=datetime_diff('day',now(),QuickScanEndTime)
+| summarize DeviceCount=count() by QuickScanAge
+| order by QuickScanAge
+| render barchart
+```
+
+### <a name="bkmk_local-eval"></a> Local device query evaluation using CMPivot standalone
+<!--3197353-->
+When using CMPivot outside of the Configuration Manager console, you can query just the local device without the need for the Configuration Manager infrastructure. You can now leverage the CMPivot Azure Log Analytics queries to quickly view WMI information on the local device. This also enables validation and refinement of CMPivot queries, before running them in a larger environment. CMPivot standalone is a [pre-release feature](/sccm/core/servers/manage/pre-release-features#bkmk_table) and is only available in English. For more information about installing CMPivot standalone, see [Install CMPivot standalone](#install-cmpivot-standalone).
+
+#### Known issues for local device query evaluation
+
+ - If you query on **This PC** for a WMI entity that you don't have access to, such as a locked down WMI class, you may see a crash in CMPivot. Run CMPivot using an account with elevated privileges to query those entities. <!--5753242-->
+- If you query non-WMI entities on **This PC**, you'll see an **Invalid namespace** or an ambiguous exception.
+- Run CMPivot standalone from the start menu shortcut, not directly from the path of the executable file. <!--5787962-->
+
+### <a name="bkmk_Other"></a> Other enhancements
+
+- You can do regular expression type queries using the new `like` operator. For example:<!--3056858-->
+  
+   ```kusto
+   //Find BIOS manufacture that contains any word like Micro, such as Microsoft
+   Bios
+   | where Manufacturer like ‘%Micro%’
+   ```
+
+- We've updated the **CcmLog()** and **EventLog()** entities to only look at messages in the last 24 hours by default. This behavior can be overridden by passing in an optional timespan. For example, the following query will look at events in the last 1 hour:
+
+   ```kusto
+   CcmLog('Scripts',1h)
+   ```
+
+- The **File()** entity has been updated to collect information about Hidden and System files, and include the MD5 hash. While an MD5 hash isn't as accurate as the SHA256 hash, it tends to be the commonly reported hash in most malware bulletins.  
+
+- You can add comments in queries.<!-- 5431463 --> This behavior is useful when sharing queries. For example:
+
+    ``` Kusto
+    //Get the top ten devices sorted by user
+    Device
+    | top 10 by UserName
+    ```
+
+- CMPivot automatically connects to the last site.<!-- 5420395 --> After you start CMPivot, you can connect to a new site if necessary.
+
+- From the **Export** menu, select the new option to **Query link to clipboard**.<!-- 5431577 --> This action copies a link to the clipboard that you can share with others. For example:
+
+    `cmpivot:Ly8gU2FtcGxlIHF1ZXJ5DQpPcGVyYXRpbmdTeXN0ZW0NCnwgc3VtbWFyaXplIGNvdW50KCkgYnkgQ2FwdGlvbg0KfCBvcmRlciBieSBjb3VudF8gYXNjDQp8IHJlbmRlciBiYXJjaGFydA==`
+
+    This link opens CMPivot standalone with the following query:
+
+    ``` Kusto
+    // Sample query
+    OperatingSystem
+    | summarize count() by Caption
+    | order by count_ asc
+    | render barchart
+    ```
+
+    > [!TIP]
+    > For this link to work, [install CMPivot standalone](#install-cmpivot-standalone).
+
+- In query results, if the device is enrolled in Microsoft Defender Advanced Threat Protection (ATP), right-click the device to launch the **Microsoft Defender Security Center** online portal.
+
+### Known issues for CMPivot in version 1910
+
+- The maximum results banner may not be displayed when the limit is reached. <!--5431427-->
+  - Each client is limited to 128 KB worth of data per query.
+  - Results may be truncated if the results of the query exceed 128 KB.
+ 
 ## Inside CMPivot
 
 CMPivot sends queries to clients using the Configuration Manager "fast channel". This communication channel from server to client is also used by other features such as client notification actions, client status, and Endpoint Protection. Clients return results via the similarly quick state message system. State messages are temporarily stored in the database. For more information about the ports used for client notification, see the [Ports](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-MP) article.

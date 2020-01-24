@@ -9,7 +9,8 @@ ms.assetid: cff72c0f-e94e-4047-aa6d-f92c5e9cdcac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # IAppContentExt::GetExcludedFileList
 The `IAppContentExt::GetExcludedFileList` method, in Configuration Manager, gets the excluded file list for application content. This is used to support selective file download.  
@@ -63,6 +64,5 @@ HRESULT GetExcludedFileList(
 
 ## See Also  
  [Microsoft.ConfigurationManagement.ApplicationManagement](https://msdn.microsoft.com/library/microsoft.configurationmanagement.applicationmanagement.aspx)]
- [System Center Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Scenario: Extending Application Management](../../../../../develop/apps/scenario--extending-application-management.md)   
+ [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

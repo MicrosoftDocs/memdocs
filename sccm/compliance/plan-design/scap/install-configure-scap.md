@@ -10,12 +10,13 @@ ms.assetid: f53b484b-5123-48f0-be2f-4e30318f3d39
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Install and configure the SCAP extensions for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After [preparing the infrastructure](/sccm/compliance/plan-design/scap/about-scap#bkmk_prepare), you're ready to install and configure the SCAP extensions for Configuration Manager on the computer from which you want to run this process.
 
@@ -46,10 +47,10 @@ Depending on your environment, you may not need all the SCAP data stream files l
 
 ### Install the SCAP data streams
 
-1. Visit the [NVD Web site](http://nvd.nist.gov/) to identify the SCAP data streams that are required by your organization.
+1. Visit the [NVD Web site](https://nvd.nist.gov/) to identify the SCAP data streams that are required by your organization.
 The SCAP data streams published by NIST are organized into multiple bundles, which are also called _checklists_.  
 
-2. Download the SCAP data streams from the [NVD Web site](http://nvd.nist.gov/home.cfm), which are stored in compressed files with a .zip file name extension or marked as DataStream XML file.  
+2. Download the SCAP data streams from the [NVD Web site](https://nvd.nist.gov/home.cfm), which are stored in compressed files with a .zip file name extension or marked as DataStream XML file.  
 
     > [!IMPORTANT]  
     > There are many SCAP data stream files with the .xml extension that you can download from the NVD. However, only .xml files that include XCCDF (SCAP1.0 and 1.1)/DataStream (SCAP1.2) content are appropriate for use with the SCAP extensions.  
@@ -166,7 +167,7 @@ At the command prompt, go to **AdminConsole\Bin** folder, and run **Microsoft.Sc
 
 #### Sample output from Microsoft.Sces.ScapToDcm.exe
 
-```
+``` Output
   Compliance Settings compliant cab file created:
 
   Validate the schema of SCAP data stream file C:\24SCAP\BVT_Test_Data_Stream.xml

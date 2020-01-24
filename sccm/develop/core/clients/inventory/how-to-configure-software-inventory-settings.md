@@ -9,10 +9,11 @@ ms.assetid: ddbee23e-5495-4864-a0e0-49555ad18f12
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure Software Inventory Settings
-You set the Software Inventory Client Agent settings, in System Center Configuration Manager, by modifying the necessary site control file settings.  
+You set the Software Inventory Client Agent settings, in Configuration Manager, by modifying the necessary site control file settings.  
 
 ### To modify the Software Inventory Client Agent settings  
 
@@ -182,12 +183,10 @@ public void ConfigureSoftwareInventoryClientAgentSettings(WqlConnectionManager c
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Inventory](../../../../develop/core/clients/inventory/inventory.md)   
  [About Configuration Manager Inventory](../../../../develop/core/clients/inventory/about-configuration-manager-inventory.md)   
  [About the Configuration Manager Site Control File](../../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)   
  [SMS_SCI_Component Server WMI Class](../../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md)   
- [Configuration Manager Schedules](../../../../develop/core/understand/schedules.md)   
+ [About schedules](/sccm/develop/core/understand/about-configuration-manager-schedules)
  [How to Create a Schedule Token](../../../../develop/core/understand/how-to-create-a-schedule-token.md)

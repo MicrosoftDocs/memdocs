@@ -10,12 +10,13 @@ ms.assetid: f1137ef8-5cf9-4c66-a635-4ac26380414c
 author: aczechowski
 ms.author: aaroncz
 manager: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Flowchart - Manage content library
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This flowchart diagram shows the process by which the site moves the content library to a remote location. For more information, see the following articles:  
 - [The content library](/sccm/core/plan-design/hierarchy/the-content-library)  

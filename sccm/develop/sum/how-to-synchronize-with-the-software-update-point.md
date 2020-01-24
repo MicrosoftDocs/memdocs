@@ -9,10 +9,11 @@ ms.assetid: bbc5fb02-8502-4003-8f4d-d69508674ce0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Synchronize with the Software Update Point
-You synchronize the software update point, in System Center Configuration Manager SP1, by calling the `SyncNow` method.  
+You synchronize the software update point, in Configuration Manager SP1, by calling the `SyncNow` method.  
 
 ## To synchronize the software update point  
 
@@ -90,6 +91,6 @@ public void SynchronizeSoftwareUpdatePoint(WqlConnectionManager connection)
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
+ [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
  [SMS_SoftwareUpdate Server WMI Class](../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md)   
  [SyncNow Method in Class SMS_SoftwareUpdate](../../develop/reference/sum/syncnow-method-in-class-sms_softwareupdate.md)

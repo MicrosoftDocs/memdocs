@@ -6,7 +6,8 @@ ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms:assetid: c424bd2b-f6ea-466c-91ca-c9550d94d9db
 author: aczechowski
 ms.author: aaroncz
@@ -15,7 +16,7 @@ manager: dougeby
 
 # Application management views in Configuration Manager
 
-The Configuration Manager application management views can be used to query for information about applications, packages and programs, deployments, distribution points, and more. These views will most often be joined to other views by using the **AdvertisementID**, **PackageID**, or **CollectionID** columns. Many of the status views also provide information about the status for applications and deployments. For more information about Configuration Manager applications, see [Application Management in Configuration Manager](/sccm/develop/apps/application-management).
+The Configuration Manager application management views can be used to query for information about applications, packages and programs, deployments, distribution points, and more. These views will most often be joined to other views by using the **AdvertisementID**, **PackageID**, or **CollectionID** columns. Many of the status views also provide information about the status for applications and deployments.
 
 The following sections provide detailed information about application management views and application management status views.
 

@@ -1,7 +1,7 @@
 ---
 title: "Uninstall sites"
 titleSuffix: "Configuration Manager"
-description: "Use these details as a guide to uninstall a System Center Configuration Manager site."
+description: "Use these details as a guide to uninstall a Configuration Manager site."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,13 +10,14 @@ ms.assetid: d466edd2-97f0-44c1-a73e-d71abbdbf4a8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Uninstall sites and hierarchies in System Center Configuration Manager
+# Uninstall sites and hierarchies in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Use the following details as a guide if you need to uninstall a System Center Configuration Manager site.  
+Use the following details as a guide if you need to uninstall a Configuration Manager site.  
 
 To decommission a hierarchy with multiple sites, the sequence of removal is important. Start by uninstalling the sites  at the bottom of the hierarchy and then move upward:  
 
@@ -38,7 +39,7 @@ You cannot move a secondary site or reassign a secondary site to a new parent pr
     This option deletes all information about the site and its resources from the Configuration Manager hierarchy, but leaves Configuration Manager installed on the secondary site server.  
 
     > [!NOTE]  
-    >  You also can use the Hierarchy Maintenance Tool and the **/DELSITE** option to delete a secondary site. For more information, see [Hierarchy Maintenance Tool (Preinst.exe) for System Center Configuration Manager](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md).  
+    >  You also can use the Hierarchy Maintenance Tool and the **/DELSITE** option to delete a secondary site. For more information, see [Hierarchy Maintenance Tool (Preinst.exe) for Configuration Manager](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md).  
 
 #### To uninstall or delete a secondary site  
 
@@ -61,7 +62,7 @@ You cannot move a secondary site or reassign a secondary site to a new parent pr
 You can run Configuration Manager Setup to uninstall a primary site that does not have an associated secondary site. Before you uninstall a primary site, consider the following:  
 
 -   When Configuration Manager clients are within the boundaries configured at the site, and the primary site is part of a Configuration Manager hierarchy, consider adding the boundaries to a different primary site in the hierarchy before you uninstall the primary site.  
--   When the primary site server is no longer available, you must use the Hierarchy Maintenance Tool at the central administration site to delete the primary site from the site database. For more information, see [Hierarchy Maintenance Tool (Preinst.exe) for System Center Configuration Manager](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md).  
+-   When the primary site server is no longer available, you must use the Hierarchy Maintenance Tool at the central administration site to delete the primary site from the site database. For more information, see [Hierarchy Maintenance Tool (Preinst.exe) for Configuration Manager](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md).  
 
 Use the following procedure to uninstall a primary site.  
 

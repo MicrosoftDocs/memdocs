@@ -2,11 +2,12 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 06/19/2019
+ms.date: 08/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
@@ -27,12 +28,17 @@ The service connection point supports using a web proxy (with or without authent
 
 For more information on the service connection point, see [About the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point).
 
+Other Configuration Manager features may require additional endpoints from the service connection point. For more information, see the other sections in this article.
+
 > [!TIP]  
 > The service connection point uses the Microsoft Intune service when it connects to `go.microsoft.com` or `manage.microsoft.com`. There's a known issue in which the Intune connector experiences connectivity issues if the Baltimore CyberTrust Root Certificate isn't installed, is expired, or is corrupted on the service connection point. For more information, see [KB 3187516: Service connection point doesn't download updates](https://support.microsoft.com/help/3187516).  
 
-### Updates and servicing
+### <a name="bkmk_scp-updates"/> Updates and servicing
 
 For more information on this function, see [Updates and servicing for Configuration Manager](/sccm/core/servers/manage/updates).
+
+> [!Tip]  
+> Enable these endpoints for the [management insight](/sccm/core/servers/manage/management-insights) rule, **Connect the site to the Microsoft cloud for Configuration Manager updates**.
 
 - `*.akamaiedge.net`  
 
@@ -51,16 +57,6 @@ For more information on this function, see [Updates and servicing for Configurat
 - `sccmconnected-a01.cloudapp.net`  
 
 - `configmgrbits.azureedge.net`  
-
-### Microsoft Intune
-
-For more information on this function, see [Hybrid MDM with Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management).
-
-- `*manage.microsoft.com`  
-
-- `https://bspmts.mp.microsoft.com/V`  
-
-- `https://login.microsoftonline.com/{TenantID}`  
 
 ### Windows 10 servicing
 
@@ -82,6 +78,11 @@ For more information on this function, see [Configure Azure services for use wit
 ## Co-management
 
 If you enroll Windows 10 devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](https://docs.microsoft.com/intune/intune-endpoints).
+
+
+## Microsoft Store for Business
+
+If you integrate Configuration Manager with the [Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business), make sure the service connection point and targeted devices can access the cloud service. For more information, see [Microsoft Store for Business proxy configuration](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 
 
 ## <a name="bkmk_cloud"></a> Cloud services

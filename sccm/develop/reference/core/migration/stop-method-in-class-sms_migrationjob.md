@@ -9,10 +9,11 @@ ms.assetid: 24a6f364-95bd-4f92-9c68-9edf45f97bc7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Stop Method in Class SMS_MigrationJob
-The `Stop` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, stops the migration job.  
+The `Stop` Windows Management Instrumentation (WMI) class method, in Configuration Manager, stops the migration job.  
 
 > [!IMPORTANT]
 >  This requires the Manage Migration Job right.  

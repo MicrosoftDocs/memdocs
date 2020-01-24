@@ -1,12 +1,13 @@
 ﻿---
 title: Software updates views
 titleSuffix: Configuration Manager
-description: Information about the software updates metadata, update lists, and software update bundles.
+description: Information about the software updates metadata, software update groups, and software update bundles.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 1e6741d2-7737-4446-b65f-e6e330c09458
 author: aczechowski
 ms.author: aaroncz
@@ -15,7 +16,7 @@ manager: dougeby
 
 # Software updates views in Configuration Manager
 
-The Configuration Manager software updates views contain information about the software updates metadata, update lists, software update bundles, and so on. Many of the status and status summarizer views provide information about software updates compliance, software update deployment evaluation and enforcement state, scan states, compliance status summarization, deployment status summarization, and so on. The compliance state for clients using an inventory scan tool, such as the Inventory Tool for Microsoft Updates, are picked up during the hardware inventory cycle and stored in the inventory views.
+The Configuration Manager software updates views contain information about the software updates metadata, software update groups, software update bundles, and so on. Many of the status and status summarizer views provide information about software updates compliance, software update deployment evaluation and enforcement state, scan states, compliance status summarization, deployment status summarization, and so on. The compliance state for clients using an inventory scan tool, such as the Inventory Tool for Microsoft Updates, are picked up during the hardware inventory cycle and stored in the inventory views.
 
 The following sections provide detailed information about software updates views, software updates status views, software updates status summarizer views, and software updates hardware inventory views.
 
@@ -25,7 +26,7 @@ The software updates views contain information about software updates. When crea
 
 ### v_AuthListInfo
 
-Lists the update lists, by CI_ID, for the Configuration Manager hierarchy, including when the update list was created, when it was last modified, who last modified the update list, source site, title, description, and so on. This view contains a subset of information from the **v_ConfigurationItems** view, joins the **v_LocalizedCIProperties** view to retrieve update list title and description information, and filters the information by **CIType**=9, which indicates an update list configuration item.
+Lists the software update groups, by CI_ID, for the Configuration Manager hierarchy, including when the software update group was created, when it was last modified, who last modified the software update group, source site, title, description, and so on. This view contains a subset of information from the **v_ConfigurationItems** view, joins the **v_LocalizedCIProperties** view to retrieve software update group title and description information, and filters the information by **CIType**=9, which indicates an software update group configuration item.
 The view can be joined to other views by using the **CI_ID**, **CI_UniqueID**, and **SDMPackage_ID** columns.
 
 ### v_EULAContent
@@ -55,7 +56,7 @@ The view can be joined to other views by using the **CI_ID** and **Content_ID** 
 
 ### v_UpdateInfo
 
-Lists stand-alone software updates or software update bundles, by **CI_ID**, and information about the update or bundle, such as configuration item type, configuration item version, data created, date last modified, whether the update or bundle has been deployed, associated bulletin ID, article ID, severity, and so on. Unlike the Configuration Manager console when it displays software updates, this view does not list the updates that are part of an update bundle.
+Lists stand-alone software updates (CIType_ID = 1) or software update groups (CIType_ID = 8), by **CI_ID**, and information about the update or bundle, such as configuration item type, configuration item version, data created, date last modified, whether the update or bundle has been deployed, associated bulletin ID, article ID, severity, and so on. Unlike the Configuration Manager console when it displays software updates, this view does not list the updates that are part of an update bundle.
 The view can be joined to other views by using the **CI_ID**, **CI_UniqueID**, and **SDMPackage_ID** columns.
 
 ## Software updates status views

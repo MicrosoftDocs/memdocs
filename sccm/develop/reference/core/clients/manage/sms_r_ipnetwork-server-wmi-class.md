@@ -9,10 +9,11 @@ ms.assetid: 05cbc962-ac74-4b55-b58f-f2ccd4a9fe75
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_R_IPNetwork Server WMI Class
-The `SMS_R_IPNetwork` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that is generated dynamically at SMS Provider run time and contains discovery data for resources discovered by the Network Discovery Agent.  
+The `SMS_R_IPNetwork` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is generated dynamically at SMS Provider run time and contains discovery data for resources discovered by the Network Discovery Agent.  
 
  The following syntax is not defined in the Managed Object Format (MOF) code.  
 
@@ -139,7 +140,7 @@ Class SMS_R_IPNetwork : SMS_Resource
  Topology of the subnet.  
 
 ## Remarks  
- This class is not available on sites where the agent is not enabled. The Network Discovery Agent is not enabled at the time System Center Configuration Manager is installed. You must enable the agent by using the System Center Configuration Manager console or by updating the site control file.  
+ This class is not available on sites where the agent is not enabled. The Network Discovery Agent is not enabled at the time Configuration Manager is installed. You must enable the agent by using the Configuration Manager console or by updating the site control file.  
 
  Although you can specify an IP network resource type for a collection, you cannot distribute software to its resources.  
 
@@ -147,13 +148,12 @@ Class SMS_R_IPNetwork : SMS_Resource
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Configuration Manager Resource Management Server WMI Classes](../../../../../develop/reference/core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md)   
  [SMS_Resource Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_resource-server-wmi-class.md)   
- [Configuration Manager Site Control File](../../../../../develop/core/understand/site-control-file.md)
+ [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file)

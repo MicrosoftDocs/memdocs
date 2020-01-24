@@ -9,7 +9,8 @@ ms.assetid: 0707d893-72e6-4fe5-8da2-2954e558ea13
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CM_UpdatePackDetailedMonitoring Server WMI Class
 The `SMS_CM_UpdatePackDetailedMonitoring` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is used get the detailed update package installation status per site.  
@@ -180,11 +181,8 @@ Class SMS_CM_UpdatePackDetailedMonitoring: SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Software Updates Server WMI Classes](../../../develop/reference/sum/software-updates-server-wmi-classes.md)

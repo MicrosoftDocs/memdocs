@@ -9,7 +9,8 @@ ms.assetid: 71fb1c06-d7fc-45d4-be40-356f829ea566
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SoftDistProgramCompletedSuccessfullyEvent
 The `SoftDistProgramCompletedSuccessfullyEvent` message, in Configuration Manager,  is sent when a program is completed successfully with an exit code (not MIFsuccess). It appears in the **Advertisement Status** in the Configuration Manager console.  
@@ -66,6 +67,3 @@ The `SoftDistProgramCompletedSuccessfullyEvent` message, in Configuration Manage
  Data type: `String`  
 
  This property does not have to be set.  
-
-## See Also  
- [Status Message Types](../../../../../develop/reference/core/servers/manage/status-message-types.md)

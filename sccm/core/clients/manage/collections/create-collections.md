@@ -10,12 +10,13 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to create collections in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Collections are groupings of users or devices. Use collections for tasks like managing applications, deploying compliance settings, or installing software updates. You can also use collections to manage groups of client settings or use them with role-based administration to specify the resources that an administrative user can access. Configuration Manager contains several built-in collections. For more information, see [Introduction to collections](/sccm/core/clients/manage/collections/introduction-to-collections).  
 
@@ -232,7 +233,8 @@ The Azure AD synchronization happens every five minutes. It's a one-way process,
 
 1. Go to [https://portal.azure.com](https://portal.azure.com).
 1. Navigate to **Azure Active Directory** > **Groups** > **All groups**.
-1. Click **New group** and type in a **Group name** and **Group description**.
+1. Click **New group** and type in a **Group name** and optionally **Group description**.
+1. Make sure that **Membership type** is **Assigned**.
 1. Select **Owners**, then add the identity that will create the synchronization relationship in Configuration Manager.
 1. Click **Create** to finish creating the Azure AD group.
 

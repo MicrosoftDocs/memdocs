@@ -9,7 +9,8 @@ ms.assetid: 62494ccd-da4c-430d-bad5-ed18c3067240
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequence_ApplyWindowsSettingsAction Server WMI Class
 The `SMS_TaskSequence_ApplyWindowsSettingsAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that applies Windows settings configuration information for the target computer.  
@@ -53,7 +54,7 @@ Class SMS_TaskSequence_ApplyWindowsSettingsAction : SMS_TaskSequence_Action
 
  Local administrator password. The name can be between 0 and 255 characters in length. This property must be set, but it is ignored if the `RandomAdminPassword` property is set to `true`.  
 
- The task sequence variable associated with this property is OSDLocalAdminPassword. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDLocalAdminPassword. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `ComputerName`  
  Data type: `String`  
@@ -207,11 +208,8 @@ Class SMS_TaskSequence_ApplyWindowsSettingsAction : SMS_TaskSequence_Action
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)

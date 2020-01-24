@@ -9,7 +9,8 @@ ms.assetid: 220576b6-489f-4d84-b4ad-3663ac77e67c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # EvaluateAllAutoDeployment Method in Class SMS_AutoDeployment
 The `EvaluateAllAutoDeployment` Windows Management Instrumentation (WMI) class method, in Configuration Manager, evaluates all automatic deployments.  
@@ -33,12 +34,11 @@ SInt32 EvaluateAllAutoDeployment();
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
  [SMS_AutoDeployment Server WMI Class](../../../develop/reference/sum/sms_autodeployment-server-wmi-class.md)   
- [Configuration Manager Software Updates Server WMI Classes](../../../develop/reference/sum/software-updates-server-wmi-classes.md)

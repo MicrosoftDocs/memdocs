@@ -9,13 +9,14 @@ ms.assetid: 9d86a6af-6735-4e6a-bb51-21985323fa1a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_Policy_ActionHandlerRegistration Client WMI Class
 > [!IMPORTANT]
 >  This class supports the Configuration Manager 2007 infrastructure and is not intended to be used directly from your code.  
 
- In System Center Configuration Manager, the `CCM_Policy_ActionHandlerRegistration` class is a client Windows Management Instrumentation (WMI) class that represents an action handler registration for a policy. An action handler is a COM object that applies a particular type of policy.  
+ in Configuration Manager, the `CCM_Policy_ActionHandlerRegistration` class is a client Windows Management Instrumentation (WMI) class that represents an action handler registration for a policy. An action handler is a COM object that applies a particular type of policy.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

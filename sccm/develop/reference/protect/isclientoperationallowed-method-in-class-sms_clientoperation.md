@@ -9,7 +9,8 @@ ms.assetid: ec0c0fe9-f5ab-4ab4-8ce1-5bb3592c60c4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # IsClientOperationAllowed Method in Class SMS_ClientOperation
 The `IsClientOperationAllowed` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks whether a user has permission to execute an operation.   

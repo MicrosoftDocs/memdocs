@@ -9,7 +9,8 @@ ms.assetid: ac2025cc-b5e0-47bc-81ed-d276b5058679
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # RaiseInformationalStatusMsg Method in Class SMS_StatusMessage
 The `RaiseInformationalStatusMsg` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates an informational status message.  

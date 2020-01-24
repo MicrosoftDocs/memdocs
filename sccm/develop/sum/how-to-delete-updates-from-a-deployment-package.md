@@ -9,10 +9,11 @@ ms.assetid: b8a24372-4e7a-4565-8dda-96e912fd2fd4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Delete Updates from a Deployment Package
-You remove updates from a software updates deployment package, in System Center Configuration Manager, by obtaining an instance of the [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md) class and using the [RemoveContent](../../develop/reference/sum/removecontent-method-in-class-sms_softwareupdatespackage.md) method.  
+You remove updates from a software updates deployment package, in Configuration Manager, by obtaining an instance of the [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md) class and using the [RemoveContent](../../develop/reference/sum/removecontent-method-in-class-sms_softwareupdatespackage.md) method.  
 
 ### To delete updates from a software updates deployment package  
 
@@ -113,9 +114,7 @@ public void RemoveUpdatesfromSUMDeploymentPackage(WqlConnectionManager connectio
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
- [Software Updates Scheduled Deployment](../../develop/sum/software-updates-deployments.md)   
+ [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
  [How to Assign a Package to a Distribution Point](../../develop/core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md)   
  [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md)   
  [RemoveContent Method in Class SMS_SoftwareUpdatesPackage](../../develop/reference/sum/removecontent-method-in-class-sms_softwareupdatespackage.md)

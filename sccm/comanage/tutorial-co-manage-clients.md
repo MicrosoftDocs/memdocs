@@ -1,5 +1,5 @@
 ---
-title: Tutorial&#58; Enable co-management of existing Configuration Manager clients
+title: Tutorial&#58; Enable co-management for existing clients
 titleSuffix: Configuration Manager
 description: Configure co-management with Microsoft Intune when you already manage Windows 10 devices with Configuration Manager.
 ms.date: 07/26/2019
@@ -10,7 +10,8 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Tutorial: Enable co-management for existing Configuration Manager clients
@@ -52,8 +53,8 @@ If not already present in your environment, during this tutorial you'll:
 
 ### On-premises infrastructure
 
-- A [supported version](https://docs.microsoft.com/sccm/core/servers/manage/updates#supported-versions) of System Center Configuration Manager current branch
-- The [Mobile Device Management (MDM) Authority](https://docs.microsoft.com/sccm/mdm/deploy-use/change-mdm-authority) must be set to Intune.  
+- A [supported version](https://docs.microsoft.com/sccm/core/servers/manage/updates#supported-versions) of Configuration Manager current branch
+- The mobile device management (MDM) authority must be set to Intune.  
 
 ### Permissions
 

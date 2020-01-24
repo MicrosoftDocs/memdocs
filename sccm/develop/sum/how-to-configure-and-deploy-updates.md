@@ -9,10 +9,11 @@ ms.assetid: bd5be2ec-0db9-4bdb-adc6-452c2103b5b4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure and Deploy Updates
-You create a software updates deployment, in System Center Configuration Manager, by creating an instance of the [SMS_UpdatesAssignment Server WMI Class](../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md) and populating the properties.  
+You create a software updates deployment, in Configuration Manager, by creating an instance of the [SMS_UpdatesAssignment Server WMI Class](../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md) and populating the properties.  
 
 ### To configure and deploy updates  
 
@@ -194,9 +195,8 @@ public void ConfigureAndDeploySUMUpdates(WqlConnectionManager connection,
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
-## See Also  
- [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
- [Software Updates Deployments](../../develop/sum/software-updates-deployments.md)   
- [About Software Updates Deployments](../../develop/sum/about-software-updates-deployments.md)   
- [SMS_UpdatesAssignment](../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md)
+## See also
+
+[About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
+
+[SMS_UpdatesAssignment](/sccm/develop/reference/sum/sms_updatesassignment-server-wmi-class)

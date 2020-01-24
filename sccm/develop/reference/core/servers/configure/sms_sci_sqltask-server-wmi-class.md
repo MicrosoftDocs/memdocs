@@ -9,7 +9,8 @@ ms.assetid: 92b5c389-ae47-4a77-8dbc-181926f23ba8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SCI_SQLTask Server WMI Class
 The `SMS_SCI_SQLTask` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines a SQL task to be run periodically.  
@@ -187,7 +188,6 @@ Class SMS_SCI_SQLTask : SMS_SiteControlItem
 |Delete Obsolete Alerts|  
 |Delete Obsolete Client Discovery Data|  
 |Delete Obsolete Forest Discovery Sites And Subnets|  
-|Evaluate Provisioned AMT Computer Certificates|  
 |Monitor Keys|  
 |Rebuild Indexes|  
 |Summarize File Usage Metering Data|  
@@ -223,4 +223,3 @@ Class SMS_SCI_SQLTask : SMS_SiteControlItem
 ## See Also  
  [Configuration Manager Site Configuration Server WMI Classes](../../../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md)   
  [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md)   
- [SMS_SCI_SQLCmd Server WMI Class](../../../../../develop/reference/misc/sms_sci_sqlcmd-server-wmi-class.md)

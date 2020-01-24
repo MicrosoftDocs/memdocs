@@ -9,10 +9,11 @@ ms.assetid: 92214631-1cd5-45ac-a7d9-f49c32530be0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_Query Server WMI Class
-The `SMS_Query` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that serves as a container for predefined queries.  
+The `SMS_Query` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as a container for predefined queries.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -134,19 +135,18 @@ Class SMS_Query : SMS_BaseClass
 
   For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
-  You can use `SMS_Query` to persist valid queries that can be used later in an application or that can be run from the System Center Configuration Manager console.  
+  You can use `SMS_Query` to persist valid queries that can be used later in an application or that can be run from the Configuration Manager console.  
 
-  Instances of this class with the `TargetClassName` property set to an [SMS_StatusMessage Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_statusmessage-server-wmi-class.md) object appear in the System Status node in the System Center Configuration Manager console. All other instances appear in the Queries node.  
+  Instances of this class with the `TargetClassName` property set to an [SMS_StatusMessage Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_statusmessage-server-wmi-class.md) object appear in the System Status node in the Configuration Manager console. All other instances appear in the Queries node.  
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Resource Management Server WMI Classes](../../../../../develop/reference/core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md)   
  [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)   
  [SMS_StatusMessage Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_statusmessage-server-wmi-class.md)

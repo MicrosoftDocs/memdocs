@@ -9,7 +9,8 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
 # MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER
 
@@ -26,4 +27,4 @@ ms.collection: M365-identity-device-management
 
 You may not use this software if you have not validly acquired a license for the software or online service from Microsoft or its licensed distributors.
 
-Third Party Programs. The software may include third party programs that Microsoft, not the third party, licenses to you under this agreement. Notices, if any, for the third party programs are included for your information only at http://go.microsoft.com/fwlink/?LinkID=789409.<!--511997-->
+Third Party Programs. The software may include third party programs that Microsoft, not the third party, licenses to you under this agreement. Notices, if any, for the third party programs are included for your information only at https://go.microsoft.com/fwlink/?LinkID=789409.<!--511997-->

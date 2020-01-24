@@ -9,7 +9,8 @@ ms.assetid: f3c70bc6-229c-4c03-b1a1-ad11ee8e5d62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # UpdateClassicDeployment Method in Class SMS_DeploymentSummary
 The `UpdateClassicDeployment` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the summarized results for a specific Classic Deployment.  
@@ -47,4 +48,3 @@ sint32 UpdateClassicDeployment (
 
 ## See Also  
  [SMS_DeploymentSummary Server WMI Class](../../../develop/reference/apps/sms_deploymentsummary-server-wmi-class.md)   
- [Application Model Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

@@ -9,10 +9,11 @@ ms.assetid: 97f583d0-701b-41e5-8897-4e64bec0b85b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create an Advertisement
-The following example shows how to create an advertisement by using the [SMS_Advertisement](/sccm/develop/reference/core/servers/configure/sms_advertisement-server-wmi-class) class and class properties in System Center Configuration Manager.  
+The following example shows how to create an advertisement by using the [SMS_Advertisement](/sccm/develop/reference/core/servers/configure/sms_advertisement-server-wmi-class) class and class properties in Configuration Manager.  
 
 > [!IMPORTANT]
 >  To create an advertisement that targets a collection, you must have "Deploy Packages" permissions for the collection and "Read" permissions for the package.  
@@ -125,6 +126,7 @@ public void CreateSWDAdvertisement(WqlConnectionManager connection, string exist
 ## Robust Programming  
  For more information about error handling, see [About Configuration Manager Errors](/sccm/develop/core/understand/about-configuration-manager-errors).  
 
-## See Also  
- [Configuration Manager Software Distribution](/sccm/develop/core/servers/configure/software-distribution)   
- [Software Distribution Advertisements](/sccm/develop/core/servers/configure/software-distribution-advertisements)
+## See also
+
+- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+- [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)

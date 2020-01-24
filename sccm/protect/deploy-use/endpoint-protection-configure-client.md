@@ -1,5 +1,5 @@
 ---
-title: Configure Endpoint Protection
+title: Endpoint Protection client settings
 titleSuffix: Configuration Manager
 description: Learn how to configure custom client settings for Endpoint Protection.
 ms.date: 07/30/2018
@@ -10,12 +10,13 @@ ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Configure custom client settings for Endpoint Protection
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This procedure configures custom client settings for Endpoint Protection, which you can deploy to collections of devices in your hierarchy.
 

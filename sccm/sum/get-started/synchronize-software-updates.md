@@ -10,12 +10,13 @@ ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.collection: M365-identity-device-management
+
+
 ---
 
 #  <a name="BKMK_SUMSync"></a> Synchronize software updates
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
  Software update synchronization in Configuration Manager is the process of retrieving the software update metadata that meets the criteria that you configure. This includes specific products, classifications, and languages. Typically, the software update point on the central administration site, or on a stand-alone primary site, retrieves the metadata from Microsoft Update. Then, the top-level site will send a synchronization request to other sites. When a site receives the synchronization request from the parent site, the software update point for the site retrieves software updates metadata from its upstream [synchronization source](../plan-design/plan-for-software-updates.md#BKMK_SyncSource). For more information about software update synchronization process, see [Software updates synchronization](../understand/software-updates-introduction.md#BKMK_Synchronization).
 
@@ -74,7 +75,7 @@ The top-level Software Update Point uses WSUS to get information about software 
 
 ### To import an update from the Microsoft Update Catalog
 
-1. Open the WSUS administration console and connect it to the top-level WSUS server in your SCCM hierarchy. 
+1. Open the WSUS administration console and connect it to the top-level WSUS server in your hierarchy.
    - If Internet Explorer isn't the computer's default web browser, temporarily set it as the default.
 2. Click on **Updates** or click your WSUS server's name. 
 3. In the **Actions** pane, select **Import Updates...** which will open a browser window to the [Microsoft Update Catalog](https://catalog.update.microsoft.com).

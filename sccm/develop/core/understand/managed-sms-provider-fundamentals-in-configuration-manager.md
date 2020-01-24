@@ -9,14 +9,15 @@ ms.assetid: 18924a3e-0cc3-4aa8-98bc-b6beca182d4e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Managed SMS Provider Fundamentals in Configuration Manager
-The managed SMS Provider library is a .NET Framework library that wraps the System.Management classes and provides a System Center Configuration Manager-centric object model. It also provides a wrapper for accessing the Configuration Manager site control file.  
+The managed SMS Provider library is a .NET Framework library that wraps the System.Management classes and provides a Configuration Manager-centric object model. It also provides a wrapper for accessing the Configuration Manager site control file.  
 
  The library can be used outside of any code relating to the Configuration Manager console .NET Framework library, but is built on the same underlying architecture.  
 
- For information about using managed code with the System Center Configuration Manager client, see [About Configuration Manager WMI Programming](../../../develop/core/clients/programming/about-configuration-manager-wmi-programming.md).  
+ For information about using managed code with the Configuration Manager client, see [About Configuration Manager WMI Programming](../../../develop/core/clients/programming/about-configuration-manager-wmi-programming.md).  
 
 ## Configuration Manager Classes and Interfaces  
  The primary classes and interfaces for use with the managed SMS Provider are the following:  
@@ -24,9 +25,9 @@ The managed SMS Provider library is a .NET Framework library that wraps the Syst
 ### WqlConnectionManager  
  The class `WqlConnectionManager` provides access to the Configuration Manager Windows Management Instrumentation (WMI) provider.  
 
- It is an implementation of the abstract base class [ConnectionManagerBase](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.connectionmanagerbase.aspx) that defines connections throughout the managed System Center Configuration Manager libraries.  
+ It is an implementation of the abstract base class [ConnectionManagerBase](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.connectionmanagerbase.aspx) that defines connections throughout the managed Configuration Manager libraries.  
 
- It is used to connect to the SMS Provider and query, or create, System Center Configuration Manager object instances. The following tasks demonstrate the basic usage of WqlConnectionManager.  
+ It is used to connect to the SMS Provider and query, or create, Configuration Manager object instances. The following tasks demonstrate the basic usage of WqlConnectionManager.  
 
  [How to Connect to a Configuration Manager Provider using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md).  
 
@@ -68,6 +69,7 @@ The managed SMS Provider library is a .NET Framework library that wraps the Syst
 
  The WMI implementation of the managed Configuration Manager libraries is provided by adminui.wqlqueryengine.  
 
-## See Also  
- [Configuration Manager Provider](../../../develop/core/understand/sms-provider-in-configuration-manager.md)   
- [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects-overview.md)
+## See also
+
+ [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)
+ [Configuration Manager objects](/sccm/develop/core/understand/configuration-manager-objects-overview)

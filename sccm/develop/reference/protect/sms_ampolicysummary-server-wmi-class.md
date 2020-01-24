@@ -9,7 +9,8 @@ ms.assetid: adfce640-adc5-48d7-a723-5be5c9f40206
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_AmPolicySummary Server WMI Class
 The `SMS_AmPolicySummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the endpoint protection client antimalware policy status.  
@@ -141,15 +142,10 @@ Class SMS_AmPolicySummary : SMS_BaseClass
 
  Number of unknown clients.  
 
-## Remarks  
-
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Endpoint Protection Server WMI Classes](../../../develop/reference/protect/endpoint-protection-server-wmi-classes.md)

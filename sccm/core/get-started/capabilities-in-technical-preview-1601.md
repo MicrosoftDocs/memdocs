@@ -1,7 +1,7 @@
 ---
 title: "Capabilities in Technical Preview 1601"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1601."
+description: "Learn about features available in the Technical Preview for Configuration Manager, version 1601."
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,13 +11,14 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
-# Capabilities in Technical Preview 1601 for System Center Configuration Manager
+# Capabilities in Technical Preview 1601 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1601. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1601. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
 
  **Known Issues for this Technical Preview:**  
 
@@ -29,7 +30,7 @@ This article introduces the features that are available in the Technical Preview
 
     -   Run the following SQL script on the primary site's database:  
 
-        ```  
+        ``` SQL
         DECLARE @PilotingPkgID NVARCHAR(8)  
 
         SELECT @PilotingPkgID = PilotingPackageID FROM ClientDeploymentSettings  
@@ -57,9 +58,9 @@ In the 1601 Technical Preview, we have added support for the following features:
 
 ### Improvements to Conditional Access  
 
--   **Conditional access support for PCs that are managed by System Center Configuration Manager**  
+-   **Conditional access support for PCs that are managed by Configuration Manager**  
 
-     You can now set conditional access policies for PCs managed by System Center Configuration Manager, which will require that the PCs be compliant with the compliance policy in order to access Exchange Online and SharePoint Online services.  With this new functionality, you can also register PCs with Azure AD through the  compliance policy, and to monitor and report on Azure AD registration.  
+     You can now set conditional access policies for PCs managed by Configuration Manager, which will require that the PCs be compliant with the compliance policy in order to access Exchange Online and SharePoint Online services.  With this new functionality, you can also register PCs with Azure AD through the  compliance policy, and to monitor and report on Azure AD registration.  
 
     > [!NOTE]  
     >  Conditional Access is not yet supported on Windows 10.  
@@ -72,7 +73,7 @@ In the 1601 Technical Preview, we have added support for the following features:
 
     -   [Prerequisites for Azure AD auto-registration](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
 
-    To use the option, you must create a compliance policy in Configuration Manager with specific rules described below, and set a conditional access policy in the Intune console.  Also, to make sure only compliant PCs are allowed access, you must set the Windows PC requirement to **Devices must be compliant** option. Following are the compliant policy rules that are applicable to PCs managed by System Center Configuration manager.  
+    To use the option, you must create a compliance policy in Configuration Manager with specific rules described below, and set a conditional access policy in the Intune console.  Also, to make sure only compliant PCs are allowed access, you must set the Windows PC requirement to **Devices must be compliant** option. Following are the compliant policy rules that are applicable to PCs managed by Configuration Manager.  
 
     -   **Require registration in Azure ActiveDirectory:** This rule checks if the user’s device is  work place joined to Azure AD, and if not, the device is automatically registered in Azure AD. Automatic registration is only supported on Windows 8.1. For Windows 7 PCs, deploy an MSI to perform the auto registration. For more information, see [here](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
 
@@ -83,7 +84,7 @@ In the 1601 Technical Preview, we have added support for the following features:
     -   **Require Antimalware:** This is a check to see if the antimalware software (System Center Endpoint Protection or Windows Defender only) is enabled and running.  
          If it is not enabled, access to email and SharePoint services is blocked.  
 
-    End-users who are blocked due to non compliance will view compliance information in the SCCM Software Center and will initiate a new policy evaluation when compliance issues are remediated.  
+    End-users who are blocked due to non compliance will view compliance information in the Software Center and will initiate a new policy evaluation when compliance issues are remediated.  
 
 -   **Conditional access with Health Attestation Service** You can now restrict access to email and 0365 services based on the health of the devices as reported by the Health Attestation Service.  Additionally, devices that are managed by Intune are included in the device health reports.  
 
@@ -195,18 +196,18 @@ A client is online if it is currently connected to a Configuration Manager manag
 
  To see the new settings, choose **Microsoft Edge** from the configuration item **Device Settings** page of the **Create Configuration Item** wizard.  
 
- For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
+ For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
 
 ### Compliance settings for Windows 10 Team devices  
  Use these new compliance settings to configure devices that run Windows 10 team, such as Surface Hub Devices.  
 
  To see the new settings, choose **Windows 10 Team** from the configuration item **Device Settings** page of the **Create Configuration Item** wizard.  
 
- For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
+ For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
 
 ### Android - Kiosk Mode for Samsung KNOX Standard<br />Hybrid  
  Kiosk mode lets you lock a device to only allow certain features to work. For example, you can allow a device to only run one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point of sale device. These settings are not available for Samsung KNOX Standard devices in the **Windows 8.1 and Windows 10** configuration item (settings apply to Windows 10 devices only).  
 
  To see the new settings, choose **Kiosk Mode - Samsung KNOX** from the configuration item **Device Settings** page of the **Create Configuration Item** wizard.  
 
- For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
+ For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  

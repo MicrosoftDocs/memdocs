@@ -9,7 +9,8 @@ ms.assetid: 37b7da5f-7aa3-407b-a703-079818b8c536
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_DistributionJob Server WMI Class
 The `SMS_DistributionJob` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a distribution point job.   

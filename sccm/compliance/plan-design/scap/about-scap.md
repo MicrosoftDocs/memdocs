@@ -10,12 +10,13 @@ ms.assetid: a315489d-5e12-46d6-903e-3a35235b72c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # About the Security Content Automation Protocol (SCAP) extensions
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The SCAP extensions for Configuration Manager help you analyze and assess your network environment for compliance with the Security Content Automation Protocol (SCAP). SCAP is defined and maintained by the National Institute of Standards and Technology (NIST). For more information, see the [SCAP Project Overview](https://csrc.nist.gov/projects/security-content-automation-protocol).
 
@@ -23,7 +24,7 @@ The SCAP extensions for Configuration Manager help you analyze and assess your n
 > This version of the tool is a pre-release feature that's only available in version 1806. This version isn't certified by NIST. <!--SCCMDocs-pr issue 3323-->
 > 
 > If you require a certified tool, or are using another version of Configuration Manager current branch, use the following version of the SCAP extensions:
-> - [Download SCAP Extensions for System Center Configuration Manager](https://www.microsoft.com/download/details.aspx?id=48741)
+> - [Download SCAP Extensions for Configuration Manager](https://www.microsoft.com/download/details.aspx?id=48741)
 > - [Documentation for SCAP Extensions Version 3.0](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/mt228311\(v%3dtechnet.10\))
 
 The SCAP extensions for Configuration Manager use the compliance settings feature to first scan the computers in your environment. It then documents their level of compliance with the United States Government Configuration Baseline (USGCB).
@@ -148,11 +149,11 @@ The SCAP extensions for Configuration Manager include Windows command-line tools
 
 - The command-line parameters `-help` and `-?` for each tool print the usage to the screen. These usage details are then available to screen readers and other assistive technology.  
 
-- For more information, see [Windows Accessibility](http://windows.microsoft.com/windows/help/accessibility).
+- For more information, see [Windows Accessibility](https://windows.microsoft.com/windows/help/accessibility).
 
 The SCAP extensions also make use of accessibility features in Configuration Manager. For more information, see [Accessibility features in Configuration Manager](/sccm/core/understand/accessibility-features).
 
-For more information about Microsoft accessibility products and services, see the [Microsoft Accessibility website](http://go.microsoft.com/fwlink/p/?LinkId=9212).
+For more information about Microsoft accessibility products and services, see the [Microsoft Accessibility website](https://go.microsoft.com/fwlink/p/?LinkId=9212).
 
 
 

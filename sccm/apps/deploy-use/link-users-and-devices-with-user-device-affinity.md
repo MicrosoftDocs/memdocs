@@ -10,12 +10,13 @@ ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Link users and devices with user device affinity in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 User device affinity in Configuration Manager associates a user with one or more devices. This behavior can eliminate the need to know the names of a user's devices to deploy an application to the user. Instead of deploying the application to each of the user's devices, you deploy the application to the user. Then, user device affinity automatically makes sure that the application installs on all devices that are associated with that user.  
 
@@ -129,7 +130,7 @@ Starting in version 1902, use Software Center to set affinity.
 ### Set up a user device affinity in the application catalog
 
 > [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >

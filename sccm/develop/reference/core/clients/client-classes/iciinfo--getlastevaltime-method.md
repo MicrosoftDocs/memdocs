@@ -9,7 +9,8 @@ ms.assetid: ab774cae-788d-4504-ad35-c34972275afc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ICIINFO::GetLastEvalTime Method
 The `ICIINFO::GetLastEvalTime` method, in Configuration Manager, gets the last evaluation time for the configuration item.  

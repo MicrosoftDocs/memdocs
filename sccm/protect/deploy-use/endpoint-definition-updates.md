@@ -1,8 +1,8 @@
 ---
-title: "Configure Endpoint Protection"
-titleSuffix: "Configuration Manager"
-description: "Learn how to select and configure methods with Endpoint Protection in System Center Configuration Manager to keep antimalware definitions up to date on client computers."
-ms.date: 02/14/2017
+title: Configure definition updates
+titleSuffix: Configuration Manager
+description: Learn how to select and configure methods with Endpoint Protection in Configuration Manager to keep antimalware definitions up to date on client computers.
+ms.date: 11/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,14 +10,15 @@ ms.assetid: 537dd2a7-4e44-4877-b8dd-5e1499407f8d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
-#  Configure Definition Updates for Endpoint Protection  
+# Configure definition updates for Endpoint Protection  
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
- With Endpoint Protection in System Center Configuration Manager, you can use any of several available methods to keep antimalware definitions up to date on client computers in your hierarchy. The information in this topic can help you to select and configure these methods.
+ With Endpoint Protection in Configuration Manager, you can use any of several available methods to keep antimalware definitions up to date on client computers in your hierarchy. The information in this topic can help you to select and configure these methods.
 
  To update antimalware definitions, you can use one or more of the following methods:
 
@@ -43,9 +44,10 @@ ms.collection: M365-identity-device-management
 
 2.  In the **Assets and Compliance** workspace, expand **Endpoint Protection**, and then click **Antimalware Policies**.
 
-3.  Open the properties page of the **Default Antimalware Policy** or create a new antimalware policy. For more information about how to create antimalware policies, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
+3.  Open the properties page of the **Default Antimalware Policy** or create a new antimalware policy. For more information about how to create antimalware policies, see [How to create and deploy antimalware policies for Endpoint Protection](endpoint-antimalware-policies.md).
 
-4.  In the **Definition updates** section of the antimalware properties dialog box, click **Set Source**.
+4.  In the **Security Intelligence updates** section of the antimalware properties dialog box, click **Set Source**.
+    - The **Definition updates** section was renamed to **Security Intelligence updates** starting in Configuration Manager version 1902.
 
 5.  In the **Configure Definition Update Sources** dialog box, select the sources to use for definition updates. You can click **Up** or **Down** to modify the order in which these sources are used.
 

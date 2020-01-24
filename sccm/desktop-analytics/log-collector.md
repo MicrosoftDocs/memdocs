@@ -6,7 +6,8 @@ ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 349b2a69-af46-481f-afb2-24d98774e852
 author: aczechowski
 ms.author: aaroncz
@@ -27,15 +28,16 @@ Starting in Configuration Manager version 1906, use the **DesktopAnalyticsLogsCo
     > [!Tip]
     > You can use the Configuration Manager **Scripts** feature with this tool. For more information, see [Example 5: Deploy script via Configuration Manager **Scripts**](#bkmk_ex5).
 
-- PowerShell version 4.0 or later
-    - .NET framework version 4.6 or later
-    - Windows Management Framework version 4.0 or later
+- For Windows 7 with Service Pack 1, PowerShell version 4.0 or later
+    - [.NET framework version 4.6 or later](https://dotnet.microsoft.com/download/dotnet-framework)
+
+    - Windows Management Framework [version 4.0](https://support.microsoft.com/help/2819745) (aka.ms/wmf4download) or [version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) (aka.ms/wmf5download)
 
 ## Usage
 
 Get the script from the Configuration Manager installation content: `SMSSETUP\TOOLS\DesktopAnalyticsLogsCollector\DesktopAnalyticsLogsCollector.ps1`
 
-```
+``` Syntax
 DesktopAnalyticsLogsCollector.ps1
     [-LogPath] <String>
     [-LogMode] <Int16>
@@ -159,12 +161,12 @@ DesktopAnalyticsLogsCollector.ps1 is digitally signed by Microsoft. You may need
 
 1. Open the properties of the script in Windows Explorer. Switch to the **Digital Signatures** tab and select **Details**.
 
-1. On the **General** tab, select **View Certificate**.
+2. On the **General** tab, select **View Certificate**.
 
     > [!Note]
     > To distribute the certificate via other mechanisms, first export the certificate to a file. Go to the **Details** tab, and select **Copy to File**.
 
-1. Select **Install Certificate**. Import the certificate, placing it in the **Trusted Publishers** store.
+3. Select **Install Certificate**. Import the certificate, placing it in the **Trusted Publishers** store.
 
 
 ## See also

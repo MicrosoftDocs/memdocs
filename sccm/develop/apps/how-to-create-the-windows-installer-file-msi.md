@@ -9,7 +9,8 @@ ms.assetid: cd6cf0d2-ff17-4d58-a7d5-244c88307b17
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create the Windows Installer File (*.msi)
 After the Deployment Type Extension file (*.cmdtx) is created, you are expected to generate a Windows Installer file (\*.msi) which contains the \*.cmdtx file and the UX files. The Windows Installer needs to copy the files into the correct locations and register the custom extension with the site server.  
@@ -106,5 +107,4 @@ After the Deployment Type Extension file (*.cmdtx) is created, you are expected 
  Microsoft.ConfigurationManagement.ManagementProvider.dll  
 
 ## See Also  
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

@@ -9,10 +9,11 @@ ms.assetid: d3ce62b0-287a-496f-ad82-3c3ce420aa04
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create Node XML for a Configuration Manager Console Grid View
-To create the node XML for the System Center Configuration Manager console default grid view you create an XML file describing a [RootNodeDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.rootnodedescription.aspx) element.  
+To create the node XML for the Configuration Manager console default grid view you create an XML file describing a [RootNodeDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.rootnodedescription.aspx) element.  
 
  The XML in this procedure is used with the assembly you create in [How to Create a Configuration Manager Administrator Console View](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-console-custom-view.md).  When the user clicks on the “My Node�? node, it displays a list of `SMS_SCI_SysResUse` classes in the Configuration Manager in the view pane.  
 

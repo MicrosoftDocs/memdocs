@@ -9,7 +9,8 @@ ms.assetid: eae48844-c1fe-4dd1-9c76-21d7f53217b6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AppContentInfo Structure
 In Configuration Manager, the `AppContentInfo` structure contains information about the application content.  
@@ -36,6 +37,5 @@ struct AppContentInfo
  The local path.  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Scenario: Extending Application Management](../../../../../develop/apps/scenario--extending-application-management.md)   
+ [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

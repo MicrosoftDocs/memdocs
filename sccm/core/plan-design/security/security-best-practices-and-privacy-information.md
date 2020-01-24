@@ -1,8 +1,8 @@
 ---
 title: "Security best practices and privacy information"
 titleSuffix: "Configuration Manager"
-description: "Find resources that provide security best practices and privacy information for System Center Configuration Manager."
-ms.date: 1/3/2017
+description: "Find resources that provide security best practices and privacy information for Configuration Manager."
+ms.date: 01/3/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,52 +10,53 @@ ms.assetid: b7bff8a0-fe76-4d3b-aac6-065290888bea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Security best practices and privacy information for System Center Configuration Manager
+# Security best practices and privacy information for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Use the following information to find security best practices and privacy information for System Center Configuration Manager.  
+Use the following information to find security best practices and privacy information for Configuration Manager.  
 
 ## Security and privacy content:  
 
--   [Security and privacy for site administration in System Center Configuration Manager](../../../core/plan-design/hierarchy/security-and-privacy-for-site-administration.md)  
+-   [Security and privacy for site administration](../../../core/plan-design/hierarchy/security-and-privacy-for-site-administration.md)  
 
--   [Security and privacy for reporting in System Center Configuration Manager](../../../core/servers/manage/security-and-privacy-for-reporting.md)  
+-   [Security and privacy for reporting](../../../core/servers/manage/security-and-privacy-for-reporting.md)  
 
--   [Security and privacy for migration to System Center Configuration Manager](../../../core/migration/security-and-privacy-for-migration.md)  
+-   [Security and privacy for migration to Configuration Manager current branch](../../../core/migration/security-and-privacy-for-migration.md)  
 
--   [Security and privacy for clients in System Center Configuration Manager](../../../core/clients/deploy/plan/security-and-privacy-for-clients.md)  
+-   [Security and privacy for clients](../../../core/clients/deploy/plan/security-and-privacy-for-clients.md)  
 
--   [Security and privacy for content management for System Center Configuration Manager](../../../core/plan-design/hierarchy/security-and-privacy-for-content-management.md)  
+-   [Security and privacy for content management for Configuration Manager](../../../core/plan-design/hierarchy/security-and-privacy-for-content-management.md)  
 
--   [Security and privacy for application management in System Center Configuration Manager](../../../apps/plan-design/security-and-privacy-for-application-management.md)  
+-   [Security and privacy for application management](../../../apps/plan-design/security-and-privacy-for-application-management.md)  
 
--   [Security and privacy for software updates in System Center Configuration Manager](../../../sum/plan-design/security-and-privacy-for-software-updates.md)  
+-   [Security and privacy for software updates](../../../sum/plan-design/security-and-privacy-for-software-updates.md)  
 
--   [Security and privacy for operating system deployment in System Center Configuration Manager](../../../osd/plan-design/security-and-privacy-for-operating-system-deployment.md)  
+-   [Security and privacy for operating system deployment](../../../osd/plan-design/security-and-privacy-for-operating-system-deployment.md)  
 
--   [Security and privacy for collections in System Center Configuration Manager](../../../core/clients/manage/collections/security-and-privacy-for-collections.md)  
+-   [Security and privacy for collections](../../../core/clients/manage/collections/security-and-privacy-for-collections.md)  
 
--   [Security and privacy for queries in System Center Configuration Manager](../../../core/servers/manage/security-and-privacy-for-queries.md)  
+-   [Security and privacy for queries](../../../core/servers/manage/security-and-privacy-for-queries.md)  
 
--   [Security and privacy for hardware inventory in System Center Configuration Manager](../../../core/clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)  
+-   [Security and privacy for hardware inventory](../../../core/clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)  
 
--   [Security and privacy for software inventory in System Center Configuration Manager](../../../core/clients/manage/inventory/security-and-privacy-for-software-inventory.md)  
+-   [Security and privacy for software inventory](../../../core/clients/manage/inventory/security-and-privacy-for-software-inventory.md)  
 
--   [Security and privacy for Asset Intelligence in System Center Configuration Manager](../../../core/clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md)  
+-   [Security and privacy for Asset Intelligence](../../../core/clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md)  
 
--   [Security and privacy for power management in System Center Configuration Manager](../../../core/clients/manage/power/security-and-privacy-for-power-management.md)  
+-   [Security and privacy for power management](../../../core/clients/manage/power/security-and-privacy-for-power-management.md)  
 
--   [Security and privacy for remote control in System Center Configuration Manager](../../../core/clients/manage/remote-control/security-and-privacy-for-remote-control.md)  
+-   [Security and privacy for remote control](../../../core/clients/manage/remote-control/security-and-privacy-for-remote-control.md)  
 
--   [Security and privacy for software inventory in System Center Configuration Manager](../../../core/clients/manage/inventory/security-and-privacy-for-software-inventory.md)  
+-   [Security and privacy for software inventory](../../../core/clients/manage/inventory/security-and-privacy-for-software-inventory.md)  
 
--   [Security and privacy for compliance settings in System Center Configuration Manager](../../../compliance/plan-design/security-and-privacy-for-compliance-settings.md)  
+-   [Security and privacy for compliance settings](../../../compliance/plan-design/security-and-privacy-for-compliance-settings.md)  
 
--   See the *Security and privacy considerations for remote connection profiles* section in [Remote connection profiles in System Center Configuration Manager](/sccm/compliance/deploy-use/create-remote-connection-profiles)  
+-   See the *Security and privacy considerations for remote connection profiles* section in [Remote connection profiles](/sccm/compliance/deploy-use/create-remote-connection-profiles)  
 
--   [Security and privacy for certificate profiles in System Center Configuration Manager](../../../protect/plan-design/security-and-privacy-for-certificate-profiles.md)  
+-   [Security and privacy for certificate profiles](../../../protect/plan-design/security-and-privacy-for-certificate-profiles.md)  
 
--   [Wi-Fi and VPN profile security and privacy in System Center Configuration Manager](../../../protect/plan-design/security-and-privacy-for-wifi-vpn-profiles.md)  
+-   [Wi-Fi and VPN profile security and privacy](../../../protect/plan-design/security-and-privacy-for-wifi-vpn-profiles.md)  

@@ -10,11 +10,12 @@ ms.assetid: fdcee455-22e3-451d-bcf3-e7b62792f04a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Endpoint Protection Client Help
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 This version of Windows Defender or Endpoint Protection includes the following features to help protect your computer from threats:  

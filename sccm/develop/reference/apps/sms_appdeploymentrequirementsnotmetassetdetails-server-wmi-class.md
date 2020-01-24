@@ -9,7 +9,8 @@ ms.assetid: 9104a3c0-fd9c-4642-8c49-7945f522c496
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_AppDeploymentRequirementsNotMetAssetDetails Server WMI Class
 The `SMS_AppDeploymentRequirementsNotMetAssetDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents asset-level details of application deployments where requirements are not met.  
@@ -415,6 +416,3 @@ Class SMS_AppDeploymentRequirementsNotMetAssetDetails : SMS_BaseClass
 
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Application Management Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

@@ -9,10 +9,11 @@ ms.assetid: d931362e-25f6-4316-ab95-32b5771f670c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Change the Deployment Package Source
-You change the deployment package source for a software updates deployment package, in System Center Configuration Manager, by obtaining an instance of the [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md) class and by using the [ValidateNewPackageSource](../../develop/reference/sum/validatenewpackagesource-method-in-class-sms_softwareupdatespackage.md) method.  
+You change the deployment package source for a software updates deployment package, in Configuration Manager, by obtaining an instance of the [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md) class and by using the [ValidateNewPackageSource](../../develop/reference/sum/validatenewpackagesource-method-in-class-sms_softwareupdatespackage.md) method.  
 
 > [!NOTE]
 >  The package source for most other types of packages can be changed in the console. However, this option is not available for software updates packages.  
@@ -185,8 +186,6 @@ public void ChangeDeploymentPackageSource(WqlConnectionManager connection,
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
- [Software Updates Scheduled Deployment](../../develop/sum/software-updates-deployments.md)   
+ [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
  [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md)   
  [ValidateNewPackageSource Method in Class SMS_SoftwareUpdatesPackage](../../develop/reference/sum/validatenewpackagesource-method-in-class-sms_softwareupdatespackage.md)

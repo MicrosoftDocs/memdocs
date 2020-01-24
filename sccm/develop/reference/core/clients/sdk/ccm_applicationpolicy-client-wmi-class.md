@@ -9,7 +9,8 @@ ms.assetid: b068007e-ee61-47ce-841d-d1f534b5aaff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_ApplicationPolicy Client WMI Class
 The `CCM_ApplicationPolicy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application policy.  
@@ -331,6 +332,3 @@ Class CCM_ApplicationPolicy : CCM_SoftwareBase
 
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Client SDK WMI Classes](../../../../../develop/reference/core/clients/sdk/client-sdk-wmi-classes.md)

@@ -2,7 +2,7 @@
 title: "Install Updates Publisher"
 titleSuffix: "Configuration Manager"
 description: "Install System Center Updates Publisher in your environment"
-ms.date: 02/19/2019
+ms.date: 08/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,16 +10,17 @@ ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Install Updates Publisher
 
 *Applies to: System Center Updates Publisher*
 
-The information in these articles can help you download, install, and set up Updates Publisher for use with your System Center Configuration Manager environment.
+The information in these articles can help you download, install, and set up Updates Publisher for use with your Configuration Manager environment.
 
 ## Prerequisites and limitations
-System Center Updates Publisher can only be used with System Center Configuration Manager. It isn't intended for use with stand-alone WSUS hierarchies.
+System Center Updates Publisher can only be used with Configuration Manager. It isn't intended for use with stand-alone WSUS hierarchies.
 
 The following sections detail requirements to install and use Updates Publisher, and limitations or known issues for its use.  
 
@@ -35,7 +36,7 @@ Install and run Updates Publisher on a 64-bit editions of the following operatin
 The following are required on the computer that runs Updates Publisher.
 
 -   **64-bit operating system**: The computer where you install Updates Publisher must run a 64-bit operating system.
--   **WSUS 4.0 or later**:
+-   **WSUS 6.2 or later**:
     -   On Windows Server, install the default Administration Console to meet this requirement.
     -   For Windows 10 and Windows 8.1, install the [Remote Server Administration Tools (RSAT) for Windows operating systems](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems). This installs the necessary support to use Updates Publisher (*API and PowerShell cmdlets*, and *User Interface Management Console*).
 -   **Permissions**:

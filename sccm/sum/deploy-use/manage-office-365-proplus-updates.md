@@ -5,17 +5,18 @@ description: "Configuration Manager synchronizes Office 365 client updates from 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Manage Office 365 ProPlus with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager lets you manage Office 365 ProPlus apps in the following ways:
 
@@ -25,7 +26,7 @@ Configuration Manager lets you manage Office 365 ProPlus apps in the following w
 
 - [Add languages for Office 365 update downloads](#bkmk_o365_lang): You can add support for Configuration Manager to download updates for any languages supported by Office 365. Meaning Configuration Manager doesn't have to support the language as long as Office 365 does. Prior to Configuration Manager version 1610 you must download and deploy updates in the same languages configured on Office 365 clients.
 
-- [Change the update channel](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager): You can use group policy to distribute a registry key value change to Office 365 clients to change the update channel.
+- [Change the update channel](#bkmk_channel): You can use group policy to distribute a registry key value change to Office 365 clients to change the update channel.
 
 To review Office 365 client information and start some of these Office 365 management actions, use the [Office 365 Client Management dashboard](/sccm/sum/deploy-use/office-365-dashboard).
 
@@ -42,8 +43,8 @@ For previous Configuration Manager versions, you must take the following steps t
 - The computer that runs the Office 365 Installer must have Internet access.  
 - The user that runs the Office 365 Installer must have **Read** and **Write** access to the content location share provided in the wizard.
 - If you receive a 404 download error, copy the following files to the user %temp% folder:
-  - [releasehistory.xml](http://officecdn.microsoft.com/pr/wsus/releasehistory.cab)
-  - [o365client_32bit.xml](http://officecdn.microsoft.com/pr/wsus/ofl.cab)  
+  - [releasehistory.xml](https://officecdn.microsoft.com/pr/wsus/releasehistory.cab)
+  - [o365client_32bit.xml](https://officecdn.microsoft.com/pr/wsus/ofl.cab)  
 
 ### Deploy Office 365 apps using Configuration Manager version 1806 or higher: 
 Starting in Configuration Manager 1806, the Office Customization Tool is integrated with the Office 365 Installer in the Configuration Manager console. When creating a deployment for Office 365, you can dynamically configure the latest Office manageability settings. <!--1358149-->
@@ -106,7 +107,7 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
 
       1. In the Configuration Manager console, click **Administration** > **Overview** > **Client Settings**.  
 
-      2. Open the appropriate device settings to enable the client agent. For more information about default and custom client settings, see [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
+      2. Open the appropriate device settings to enable the client agent. For more information about default and custom client settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).  
 
       3. Click **Software Updates** and select **Yes** for the **Enable management of the Office 365 Client Agent** setting.  
 
@@ -217,37 +218,11 @@ To ensure that the update channel is set so that deployed updates will be proper
     Example: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
 5. Click **OK**. 
 
-## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
-To change the update channel after you enable Office 365 clients to receive updates from Configuration Manager, use group policy to distribute a registry key value change to Office 365 clients. Change the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** registry key to use one of the following values:
+## <a name="bkmk_channel"></a> Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
 
-- Monthly Channel <br/>
-<i>(formerly Current Channel)</i>:  
-  **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60
+After deploying Office 365 ProPlus, you can change the update channel with Group Policy or the Office Deployment Tool (ODT). For example, you can move a device from Semi-Annual Channel to Semi-Annual Channel (Targeted). When changing the channel, Office is updated automatically without having to reinstall or download the full version. For more information, see [Change the Office 365 ProPlus update channel for devices in your organization](https://docs.microsoft.com//deployoffice/change-update-channels).
 
-- Semi-Annual Channel <br/>
-<i>(formerly Deferred Channel)</i>:  
-  **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114
-
-- Monthly Channel (Targeted)<Br/>
- <i>(formerly First Release for Current Channel)</i>:  
-  **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/64256afe-f5d9-4f86-8936-8840a6a4f5be
-
-- Semi-Annual Channel (Targeted) <br/>
-<i>(formerly First Release for Deferred Channel)</i>:  
-  **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf
-<!--the channel names changed in Sept 2017- https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus?ui=en-US&rs=en-US&ad=US-->
-
-
-<!--- You can create an Office 365 app without using the Office 365 Installation Wizard. To do this, you use the Office 2016 Deployment Tool (ODT) to download Office installation source files to a network share, generate Configure.xml that specifies the correct Office version and channel, and so on. Then, create an app for the files using the normal app management process.
-> [!Note]
-> The Office 365 Installation Wizard was introduced in Configuration Manager version 1702 and provides an easy way to create Office 365 apps.
-
-- [Download the Office 2016 Deployment Tool](http://aka.ms/ODT2016) from the Microsoft Download Center.  
-- Review the [configuration options for the Office Deployment Tool](https://technet.microsoft.com/library/jj219426.aspx).
-
-You can create an application just as you would with any other application in Configuration Manager from **Software Library** > **Overview** > **Application Management** > **Applications**. For details, see [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application).
---->
 
 ## Next steps
 
-Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For more information, see [Office 365 Client Management dashboard](/sccm/sum/deploy-use/office-365-dashboard). --->
+Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For more information, see [Office 365 Client Management dashboard](/sccm/sum/deploy-use/office-365-dashboard).

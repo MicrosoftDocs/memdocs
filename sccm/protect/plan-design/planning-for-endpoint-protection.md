@@ -9,14 +9,15 @@ ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Planning for Endpoint Protection in System Center Configuration Manager
+# Planning for Endpoint Protection in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
-Endpoint Protection in System Center Configuration Manager lets you to manage antimalware policies and Windows Firewall security for client computers in your Configuration Manager hierarchy.  
+Endpoint Protection in Configuration Manager lets you to manage antimalware policies and Windows Firewall security for client computers in your Configuration Manager hierarchy.  
 
 > [!IMPORTANT]  
 >  You must be licensed to use Endpoint Protection to manage clients in your Configuration Manager hierarchy.  
@@ -46,7 +47,7 @@ Windows 10 computers don't require any additional client for endpoint protection
 
   In addition, Endpoint Protection in Configuration Manager lets you to manage Windows Firewall settings in the Configuration Manager console.  
 
- [Example scenario: Using System Center Endpoint Protection to protect computers from malware in System Center Configuration Manager](../deploy-use/scenarios-endpoint-protection.md) shows how you might configure and manage Endpoint Protection and the Windows Firewall.  
+ [Example scenario: Using System Center Endpoint Protection to protect computers from malware](../deploy-use/scenarios-endpoint-protection.md) shows how you might configure and manage Endpoint Protection and the Windows Firewall.  
 
 ## Managing Malware with Endpoint Protection  
 
@@ -54,11 +55,11 @@ Endpoint Protection in Configuration Manager allows you to create antimalware po
 
  Additional information:  
 
--   [Create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](../deploy-use/endpoint-antimalware-policies.md) - Create, deploy, and monitor antimalware policies with a list of the settings that you can configure  
+-   [Create and deploy antimalware policies for Endpoint Protection](../deploy-use/endpoint-antimalware-policies.md) - Create, deploy, and monitor antimalware policies with a list of the settings that you can configure  
 
--   [Monitor Endpoint Protection in System Center Configuration Manager](../deploy-use/monitor-endpoint-protection.md) - Monitoring activity reports, infected client computers, and more.   
+-   [Monitor Endpoint Protection](../deploy-use/monitor-endpoint-protection.md) - Monitoring activity reports, infected client computers, and more.   
 
--   [Manage antimalware policies and firewall settings for Endpoint Protection in System Center Configuration Manager](../deploy-use/endpoint-antimalware-firewall.md) - You can change policy priority for [antimalware](../deploy-use/endpoint-antimalware-firewall.md#manage-antimalware-policies) or [firewall](../deploy-use/endpoint-antimalware-firewall.md#manage-windows-firewall-policies), [remediate malware found on client computers](../deploy-use/endpoint-antimalware-firewall.md#remediate-detected-malware), and other tasks
+-   [Manage antimalware policies and firewall settings for Endpoint Protection](../deploy-use/endpoint-antimalware-firewall.md) - You can change policy priority for [antimalware](../deploy-use/endpoint-antimalware-firewall.md#manage-antimalware-policies) or [firewall](../deploy-use/endpoint-antimalware-firewall.md#manage-windows-firewall-policies), [remediate malware found on client computers](../deploy-use/endpoint-antimalware-firewall.md#remediate-detected-malware), and other tasks
 
 ## Managing Windows Firewall with Endpoint Protection  
  Endpoint Protection in Configuration Manager provides basic management of the Windows Firewall on client computers. For each network profile, you can configure the following settings:  
@@ -72,7 +73,7 @@ Endpoint Protection in Configuration Manager allows you to create antimalware po
 > [!NOTE]  
 >  Endpoint Protection supports managing the Windows Firewall only.  
 
-  For more information about how to create and deploy Windows Firewall policies for Endpoint Protection, see [How to create and deploy Windows Firewall policies for Endpoint Protection in System Center Configuration Manager](../deploy-use/create-windows-firewall-policies.md).  
+  For more information about how to create and deploy Windows Firewall policies for Endpoint Protection, see [How to create and deploy Windows Firewall policies for Endpoint Protection](../deploy-use/create-windows-firewall-policies.md).  
 
 ## Microsoft Defender Advanced Threat Protection
 

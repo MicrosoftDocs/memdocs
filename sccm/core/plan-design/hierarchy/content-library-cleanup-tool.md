@@ -10,12 +10,13 @@ ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Content library cleanup tool
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the content library cleanup command-line tool to remove content that's no longer associated with any package or application on a distribution point. This type of content is called *orphaned content*. This tool replaces older versions of similar tools released for past Configuration Manager products.  
 

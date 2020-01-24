@@ -9,7 +9,8 @@ ms.assetid: 89d3dda9-be5d-43fc-a20d-9267531a4ddd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # IDCMSDK::GetAssignedBaselines Method
 The `IDCMSDK::GetAssignedBaselines` method, in Configuration Manager, enumerates assigned baseline configuration items.  

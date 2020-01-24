@@ -9,16 +9,15 @@ ms.assetid: f421edfe-d1c6-4fec-a5d1-d1399d4a3a82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # About Software Updates Deployments
-Software updates are delivered to client computers in System Center Configuration Manager by creating software update deployments. It is a multistep process to create software update deployments by using the Configuration Manager SDK interfaces. A basic approach to deploying software updates, by using the Configuration Manager SDK interfaces, is outlined below.  
+Software updates are delivered to client computers in Configuration Manager by creating software update deployments. It is a multistep process to create software update deployments by using the Configuration Manager SDK interfaces. A basic approach to deploying software updates, by using the Configuration Manager SDK interfaces, is outlined below.  
 
 > [!NOTE]
->  General information about Software Updates can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Deploy and manage software updates in System Center Configuration Manager](https://technet.microsoft.com/library/mt634340.aspx).  
-
- Coding examples (in C# and VBScript) for individual steps of the deployment process are included in the [Software Updates Deployments](../../develop/sum/software-updates-deployments.md) section of the Configuration Manager SDK.  
+>  General information about Software Updates can be found in the [Documentation for Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Deploy and manage software updates](https://technet.microsoft.com/library/mt634340.aspx).  
 
 > [!NOTE]
 >  Deleting updates or update bundles is not supported by the Configuration Manager SDK.  
@@ -48,8 +47,6 @@ Software updates are delivered to client computers in System Center Configuratio
  Distribute software updates by creating a software updates deployment. For information about the process for creating a software updates deployment, see [How to Configure and Deploy Updates](../../develop/sum/how-to-configure-and-deploy-updates.md).  
 
 ## See Also  
- [Configuration Manager SDK](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
  [How to Enumerate Updates Matching a Specific Criteria](../../develop/sum/how-to-enumerate-updates-matching-a-specific-criteria.md)   
  [How to Create an Update List](../../develop/sum/how-to-create-an-update-list.md)   
  [How to Create a Deployment Package](../../develop/sum/how-to-create-a-deployment-package.md)   

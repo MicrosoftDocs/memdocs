@@ -9,10 +9,11 @@ ms.assetid: e1fe4037-cd2a-416d-afe4-8a2de2ba4f33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Reporting Configuration Manager Custom Action Progress
-While a custom action is running on a System Center Configuration Manager client, it can report progress information that is used to display a progress indicator.  
+While a custom action is running on a Configuration Manager client, it can report progress information that is used to display a progress indicator.  
 
  You use the COM automation interface, [IProgressUI::ShowActionProgress](../../develop/reference/core/clients/client-classes/iprogressui--showactionprogress-method.md), to report progress information to the task sequence environment and to show a progress indicator.  
 
@@ -53,7 +54,7 @@ While a custom action is running on a System Center Configuration Manager client
 ### Calling IProgressUI::ShowActionProgress  
  Call `IProgressUI::ShowActionProgress` to show the progress indicator by using the information that is retrieved from the environment variables. To pass the current percentage progress, you use the parameters `uActionExecStep` and `uActionExecMaxStep`. For example, if you pass the value 2 in `uActionExecStep` and pass the value 10 in `uActionExecMaxStep`, then the percentage completion of the action is 20 percent.  
 
-## See Also  
- [Extending Operating System Deployment](../../develop/osd/extending-operating-system-deployment.md)   
- [IProgressUI::ShowActionProgress](../../develop/reference/core/clients/client-classes/iprogressui--showactionprogress-method.md)   
+## See also
+
+ [IProgressUI::ShowActionProgress](../../develop/reference/core/clients/client-classes/iprogressui--showactionprogress-method.md)
  [ProgressUI](../../develop/reference/core/clients/client-classes/progressui-client-com-automation-class.md)

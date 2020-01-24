@@ -6,7 +6,8 @@ ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 80e86983-2e3b-4a10-9755-5f0d98688462
 author: aczechowski
 ms.author: aaroncz
@@ -83,7 +84,7 @@ This view can be joined to other views by using the **DPNalPath** column.
 
 ### v_Content
 
-Lists, by package ID, each content package at the site, including the content ID, version, size of the source files, and more.
+Lists, by package ID, each content package at the site, including the content ID, version, size of the source files in bytes, and more.
 This view can be joined to other views by using the **PkgID** column.
 
 ### v_ContDistStatSummary

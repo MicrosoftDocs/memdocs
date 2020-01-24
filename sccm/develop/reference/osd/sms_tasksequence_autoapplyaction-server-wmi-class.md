@@ -9,7 +9,8 @@ ms.assetid: f330dd6f-9453-4fe2-b285-a7287c0853d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequence_AutoApplyAction Server WMI Class
 The `SMS_TaskSequence_AutoApplyAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that matches and installs device drivers as part of an operating system deployment.  
@@ -135,7 +136,7 @@ Class SMS_TaskSequence_AutoApplyAction : SMS_TaskSequence_Action
 
  `true` to configure the Windows operating system to allow unsigned device drivers to be installed. The default value is `false`.  
 
- The task sequence variable associated with this property is OSDAllowUnsignedDriver. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDAllowUnsignedDriver. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
 > [!NOTE]
 >  This property is required by the task sequence action. Unattended installation of unsigned drivers is done on versions of Windows where this is allowed.  
@@ -153,12 +154,12 @@ Class SMS_TaskSequence_AutoApplyAction : SMS_TaskSequence_Action
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)   
- [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md)
+## See also
+
+[SMS_TaskSequence_Action server WMI class](/sccm/develop/reference/osd/sms_tasksequence_action-server-wmi-class)

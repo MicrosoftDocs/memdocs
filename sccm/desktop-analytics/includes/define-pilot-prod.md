@@ -4,7 +4,8 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 12/30/2018
-ms.collection: M365-identity-device-management
+
+
 ---
 
 Use the following definitions to differentiate between pilot and production:  

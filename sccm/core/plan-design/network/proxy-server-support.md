@@ -10,12 +10,13 @@ ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Proxy server support in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Some Configuration Manager site system servers require connections to the internet. If your environment requires internet traffic to use a proxy server, configure these site system roles to use the proxy.  
 
@@ -55,7 +56,7 @@ This site system role connects to an Exchange Server. It uses a proxy server con
 
 
 #### Service connection point
-This site system role connects to the Configuration Manager cloud service to download version updates for Configuration Manager, and connects to Microsoft Intune in a hybrid configuration. It uses a proxy server that's configured on the computer that hosts the service connection point.  
+This site system role connects to the Configuration Manager cloud service to download version updates for Configuration Manager. It uses a proxy server that's configured on the computer that hosts the service connection point.  
 
 
 #### Software update point

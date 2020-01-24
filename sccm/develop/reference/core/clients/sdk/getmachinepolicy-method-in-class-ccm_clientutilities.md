@@ -9,7 +9,8 @@ ms.assetid: 3b5b6f45-d435-4096-8e7f-13290d4019c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetMachinePolicy Method in Class CCM_ClientUtilities
 The `GetMachinePolicy` Windows Management Instrumentation (WMI) class method gets and evaluates the machine policy for a client device.  
@@ -24,20 +25,17 @@ uint32 GetMachinePolicy();
 
 ```  
 
-## Parameters  
- None.  
-
-## Remarks  
- None.  
 
 ## Requirements  
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime requirements
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## See Also  
+### Development requirements
+
+For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+
+## See also
+
  [CCM_ClientUtilities Client WMI Class](../../../../../develop/reference/core/clients/sdk/ccm_clientutilities-client-wmi-class.md)   
- [Configuration Manager Client SDK WMI Classes](../../../../../develop/reference/core/clients/sdk/client-sdk-wmi-classes.md)

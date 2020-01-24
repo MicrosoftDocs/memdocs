@@ -10,11 +10,12 @@ ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Client installation methods in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Client installation methods in Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 You can use different methods to install the Configuration Manager client software. Use one method, or a combination of methods. This article describes each method, so you can learn which one works best for your organization.  
 

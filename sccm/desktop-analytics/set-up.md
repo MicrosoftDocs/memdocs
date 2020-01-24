@@ -2,7 +2,7 @@
 title: Set up Desktop Analytics
 titleSuffix: Configuration Manager
 description: A how-to guide for setting up and onboarding to Desktop Analytics.
-ms.date: 06/14/2019
+ms.date: 09/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,13 +10,11 @@ ms.assetid: 7ff8d453-f24d-4230-a116-585190a663fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to set up Desktop Analytics
-
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
 Use this procedure to sign in to Desktop Analytics and configure it in your subscription. This procedure is a one-time process to set up Desktop Analytics for your organization.  
 
@@ -49,13 +47,15 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
     - To use an existing workspace for Desktop Analytics, select it, and continue with the next step.  
 
         > [!Note]  
-        > If you're already using Windows Analytics, select that same workspace. You need to reenroll devices to Desktop Analytics that you previously enrolled in Windows Analytics.
-        >
         > You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.  
+
+        If you're already using Windows Analytics, select that same workspace. You need to reenroll devices to Desktop Analytics that you previously enrolled in Windows Analytics.
+
+        To migrate inputs from the selected Windows Analytics workspace, set **Do you want to see inputs from Windows Analytics?** to **Yes**. If you don't want to migrate, switch this setting to **No**. For more information, see the FAQ for [Existing Windows Analytics customers](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
 
     - To create a workspace for Desktop Analytics, select **Add workspace**.  
 
-        1. Enter a **Workspace name**.<!--do we have any guidance for this name?-->  
+        1. Enter a globally unique **Workspace name**.<!--do we have any guidance for this name?-->  
 
         2. Select the drop-down list to **Select the Azure subscription name for this workspace**, and choose the Azure subscription for this workspace.  
 

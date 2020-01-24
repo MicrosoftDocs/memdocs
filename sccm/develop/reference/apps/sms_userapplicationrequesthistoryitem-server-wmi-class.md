@@ -9,7 +9,8 @@ ms.assetid: 4d140550-c95a-4367-8d24-b0704de33c0a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_UserApplicationRequestHistoryItem Server WMI Class
 The `SMS_UserApplicationRequestHistoryItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an update to an instance of `SMS_UserApplicationRequest`.  

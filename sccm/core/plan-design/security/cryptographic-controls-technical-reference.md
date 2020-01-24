@@ -1,22 +1,23 @@
 ---
 title: "Cryptographic controls technical reference"
 titleSuffix: "Configuration Manager"
-description: "Learn how signing and encryption can help protect attacks from reading data in System Center Configuration Manager."
-ms.date: 12/8/2017
+description: "Learn how signing and encryption can help protect attacks from reading data in Configuration Manager."
+ms.date: 12/08/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Cryptographic controls technical reference
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
-System Center Configuration Manager uses signing and encryption to help protect the management of the devices in the Configuration Manager hierarchy. With signing, if data has been altered in transit, it's discarded. Encryption helps prevent an attacker from reading the data by using a network protocol analyzer.  
+Configuration Manager uses signing and encryption to help protect the management of the devices in the Configuration Manager hierarchy. With signing, if data has been altered in transit, it's discarded. Encryption helps prevent an attacker from reading the data by using a network protocol analyzer.  
 
  The primary hashing algorithm that Configuration Manager uses for signing is SHA-256. When two Configuration Manager sites communicate with each other, they sign their communications with SHA-256. The primary encryption algorithm implemented in Configuration Manager is 3DES. This is used for storing data in the Configuration Manager database and for client HTTP communication. When you use client communication over HTTPS, you can configure your public key infrastructure (PKI) to use RSA certificates with the maximum hashing algorithms and key lengths that are documented in [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
@@ -52,12 +53,6 @@ System Center Configuration Manager uses signing and encryption to help protect 
 -   Windows Phone clients, though these clients verify the signature of an application that is signed by a trusted source.  
 
 -   Windows RT client, though these clients verify the signature of an application that is signed by a trusted source and also use package full name (PFN) validation.  
-
--   iOS, though these devices verify the signature of an application that is signed by any developer certificate from a trusted source.  
-
--   Nokia client, though, these clients verify the signature of an application that uses a self-signed certificate. Or, the signature of a certificate from a trusted source and the certificate can sign Nokia Symbian Installation Source (SIS) applications.  
-
--   Android. In addition, these devices do not use signature validation for application installation.  
 
 -   Clients that run on versions of Linux and UNIX that do not support SHA-256. For more information, see [Planning for client deployment to Linux and UNIX computers](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers).  
 
@@ -191,21 +186,17 @@ System Center Configuration Manager uses signing and encryption to help protect 
 
 - Multicast-enabled distribution point  
 
-- Out of band service point  
-
 - Reporting services point  
 
 - Software update point  
 
 - State migration point  
 
-- System Health Validator point  
-
 - Microsoft Intune connector  
 
-  These certificates are managed automatically by Configuration Manager, and where necessary, automatically generated.  
+These certificates are managed automatically by Configuration Manager, and where necessary, automatically generated.  
 
-  Configuration Manager also uses a client authentication certificate to send status messages from the distribution point to the management point. When the management point is configured for HTTPS client connections only, you must use a PKI certificate. If the management point accepts HTTP connections, you can use a PKI certificate or select the option to use a self-signed certificate that has client authentication capability, uses SHA-256, and has a key length of 2048 bits.  
+Configuration Manager also uses a client authentication certificate to send status messages from the distribution point to the management point. When the management point is configured for HTTPS client connections only, you must use a PKI certificate. If the management point accepts HTTP connections, you can use a PKI certificate or select the option to use a self-signed certificate that has client authentication capability, uses SHA-256, and has a key length of 2048 bits.  
 
 ### Server communication between sites  
  Configuration Manager transfers data between sites by using database replication and file-based replication. For more information, see [Communications between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints).  

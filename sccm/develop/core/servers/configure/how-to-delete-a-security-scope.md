@@ -9,10 +9,11 @@ ms.assetid: 87238a9a-7f58-4d27-92a2-569c37387dec
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Delete a Security Scope
-The following example shows how to delete a security scope in System Center Configuration Manager by using the `SMS_SecuredCategory` class.  
+The following example shows how to delete a security scope in Configuration Manager by using the `SMS_SecuredCategory` class.  
 
 ### To delete a security scope  
 
@@ -79,7 +80,6 @@ public void DeleteSecurityScope(WqlConnectionManager connection, string scopeId)
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Security Scope Management](../../../../develop/core/servers/configure/security-scope-management.md)   
  [How to Create a New Security Scope](../../../../develop/core/servers/configure/how-to-create-a-new-security-scope.md)   
  [How to Associate an Object with a Security Scope](../../../../develop/core/servers/configure/how-to-associate-an-object-with-a-security-scope.md)   
  [How to Remove an Object Association with a Security Scope](../../../../develop/core/servers/configure/how-to-remove-an-object-association-with-a-security-scope.md)   

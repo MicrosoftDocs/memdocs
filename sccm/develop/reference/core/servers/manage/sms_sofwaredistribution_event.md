@@ -9,7 +9,8 @@ ms.assetid: e382ccd4-fd11-4036-ad2a-a40397b86239
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SofwareDistribution_Event
 The `SMS_SofwareDistribution_Event` class is the base class for all software-distribution advertisement status-message classes, in Configuration Manager. All advertisement status messages have the insertion strings of this class. Also, each derived class must set the properties of its base `SMS_SofwareDistribution_Event` class.  
@@ -37,6 +38,3 @@ The `SMS_SofwareDistribution_Event` class is the base class for all software-dis
  Data type: `String`  
 
  The Program Name that appears in the status message text. It maps to the `PRG_ProgramName` field in the software distribution policy and is the program name that was chosen when the program was created. This is insertion string number 5.  
-
-## See Also  
- [Status Message Types](../../../../../develop/reference/core/servers/manage/status-message-types.md)

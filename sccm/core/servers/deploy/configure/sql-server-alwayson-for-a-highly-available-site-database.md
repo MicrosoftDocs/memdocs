@@ -10,12 +10,13 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Prepare to use SQL Server Always On availability groups with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use this article to prepare Configuration Manager to use SQL Server Always On availability groups. This feature provides a high availability and disaster recovery solution for the site database.  
 
@@ -89,7 +90,7 @@ Configure the database of each replica with the following settings:
 
 - Enable **CLR Integration**:
 
-    ```sql
+    ``` SQL
     sp_configure 'show advanced options', 1;  
     GO  
     RECONFIGURE;  
@@ -104,7 +105,7 @@ Configure the database of each replica with the following settings:
 
 - Set **Max text repl size** to `2147483647`:  
 
-    ```sql
+    ``` SQL
     EXECUTE sp_configure 'max text repl size (B)', 2147483647
     ```
 
@@ -112,7 +113,7 @@ Configure the database of each replica with the following settings:
 
 - Turn **ON** the **TRUSTWORTHY** setting:
 
-    ```sql
+    ``` SQL
     ALTER DATABASE [CM_xxx] SET TRUSTWORTHY ON;
     ```
 
@@ -120,7 +121,7 @@ Configure the database of each replica with the following settings:
 
 - Enable the **Service Broker**:  
 
-    ```sql
+    ``` SQL
     ALTER DATABASE [CM_xxx] SET ENABLE_BROKER
     ```
 
@@ -129,7 +130,7 @@ Configure the database of each replica with the following settings:
 
 - Configure the Service Broker priority:
 
-    ```sql
+    ``` SQL
     ALTER DATABASE [CM_xxx] SET HONOR_BROKER_PRIORITY ON;
     ALTER DATABASE [CM_xxx] SET ENABLE_BROKER WITH ROLLBACK IMMEDIATE
 
@@ -141,7 +142,7 @@ Only make these configurations on a primary replica. To configure a secondary re
 
 Run the following SQL script to verify database configurations for both primary and secondary replicas. Before you can fix an issue on a secondary replica, change that secondary replica to be the primary replica.
 
-```SQL
+``` SQL
     SET NOCOUNT ON
 
     DECLARE @dbname NVARCHAR(128)
@@ -291,7 +292,7 @@ For example, consider the following scenario:
 <!-- SCCMDocs-pr#3734 -->
 Starting in version 1906, you can enable the [MultiSubnetFailover connection string keyword](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually add the following value to the Windows Registry on the site server:
 
-```
+``` Registry
 HKLM:\SOFTWARE\Microsoft\SMS\Identification
 
 MSF Enabled : 1 (DWORD)

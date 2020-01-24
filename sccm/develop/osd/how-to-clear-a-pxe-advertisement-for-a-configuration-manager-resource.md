@@ -9,10 +9,11 @@ ms.assetid: 29ad0de3-fd1a-4a22-b5ac-61a762a8c1a6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Clear a PXE Advertisement for a Configuration Manager Resource
-To clear a PXE advertisement for a System Center Configuration Manager resource, you call the [SMS_Collection](../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object [ClearLastNBSAdvForMachines](../../develop/reference/core/clients/collections/clearlastnbsadvformachines-method-in-class-sms_collection.md) method.  
+To clear a PXE advertisement for a Configuration Manager resource, you call the [SMS_Collection](../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object [ClearLastNBSAdvForMachines](../../develop/reference/core/clients/collections/clearlastnbsadvformachines-method-in-class-sms_collection.md) method.  
 
  Clearing PXE advertisement is used to re-advertise a mandatory advertisement that is enabled for a PXE device or assigned to a collection. For information about clearing the PXE advertisement for a collection, see [How to Clear a PXE Advertisement For a Configuration Manager Collection](../../develop/osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-collection.md).  
 
@@ -20,7 +21,7 @@ To clear a PXE advertisement for a System Center Configuration Manager resource,
 
 ### To clear a PXE advertisement for a resource  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Create the `ClearLastNBSAdvForMachines` method resource identifier array for the method parameters.  
 
@@ -119,4 +120,4 @@ public void ClearPxeAdvertisementResource(WqlConnectionManager connection, int r
 
 ## See Also  
  [How to Clear a PXE Advertisement For a Configuration Manager Collection](../../develop/osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-collection.md)   
- [Operating System Deployment Image Management](../../develop/osd/operating-system-deployment-image-management.md)
+ [About image management](/sccm/develop/osd/about-operating-system-deployment-image-management)

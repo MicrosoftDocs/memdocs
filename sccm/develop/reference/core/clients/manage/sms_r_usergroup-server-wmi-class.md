@@ -9,10 +9,11 @@ ms.assetid: 1d72e0a2-b590-4bc6-b5d4-6546a3290227
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_R_UserGroup Server WMI Class
-The `SMS_R_UserGroup` Windows Management (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that is generated dynamically at SMS Provider run time and contains discovery data for user group objects.  
+The `SMS_R_UserGroup` Windows Management (WMI) class is an SMS Provider server class, in Configuration Manager, that is generated dynamically at SMS Provider run time and contains discovery data for user group objects.  
 
  The following syntax is not defined in Managed Object Format (MOF) code.  
 
@@ -124,7 +125,7 @@ Class SMS_R_UserGroup : SMS_Resource
 
  Qualifiers: None  
 
- Group name displayed in the System Center Configuration Manager console.  
+ Group name displayed in the Configuration Manager console.  
 
  `NetworkOperatingSystem`  
  Data type: **String**  
@@ -203,12 +204,11 @@ Class SMS_R_UserGroup : SMS_Resource
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Resource Management Server WMI Classes](../../../../../develop/reference/core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md)   
  [SMS_Resource Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_resource-server-wmi-class.md)

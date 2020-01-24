@@ -9,10 +9,11 @@ ms.assetid: adc63f00-8fcf-4212-910a-26ae9154d574
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Application Configuration Item Example 1
-The following Application Configuration Item Instance example determines whether the System Center Configuration Manager client is installed on the system by using Microsoft Windows Installer-based detection.  
+The following Application Configuration Item Instance example determines whether the Configuration Manager client is installed on the system by using Microsoft Windows Installer-based detection.  
 
 ## Application Configuration Item Example  
 
@@ -88,4 +89,4 @@ This application is discovered via Windows Installer-based discovery. If it does
 ```  
 
 ## See Also  
- [Authoring Compliance Settings Configuration Baselines and Configuration Items](../../develop/compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md)
+[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)

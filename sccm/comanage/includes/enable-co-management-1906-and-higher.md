@@ -3,8 +3,9 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 07/26/2019
-ms.collection: M365-identity-device-management
+ms.date: 08/23/2019
+
+
 ---
 <!--3555750 FKA 1357954 --Don't apply H2/H3 in this include file since they are context driven by article-->
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node. Click **Configure co-management** in the ribbon to open the **Co-management Configuration Wizard**.
@@ -17,7 +18,7 @@ ms.collection: M365-identity-device-management
 
 3. On the **Enablement** page, choose the following settings:
 
-   - **Automatic enrollment into Intune** - Enables automatic client enrollment in Intune for existing Configuration Manager clients. This option allows you to enable co-management on a subset of clients to initially test co-management, and rollout co-management using a phased approach.
+   - **Automatic enrollment into Intune** - Enables automatic client enrollment in Intune for existing Configuration Manager clients. This option allows you to enable co-management on a subset of clients to initially test co-management, and rollout co-management using a phased approach. If a device is  unenrolled by the user, on the next evaluation of the policy, it will re-enroll. <!--3330596-->
 
       - **Pilot** - Only the Configuration Manager clients that are members of the **Intune Auto Enrollment** collection are automatically enrolled to Intune.
       - **All** - Enable automatic enrollment for all Windows 10, version 1709 or later, clients.

@@ -1,8 +1,8 @@
 ---
 title: "Update reset tool"
 titleSuffix: "Configuration Manager"
-description: "Use the update reset tool for in-console updates for System Center Configuration Manager."
-ms.date: 7/31/2017
+description: "Use the update reset tool for in-console updates for Configuration Manager."
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 25fa89d6-7e47-45a6-8f4e-70b77560fba6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Update reset tool
 
-*Applies to: System Center Configuration Manager (Current Branch)*  
+*Applies to: Configuration Manager (current branch)*  
 
 
 Beginning with version 1706, Configuration Manager primary sites, and central administration sites include the Configuration Manager Update Reset Tool, **CMUpdateReset.exe**. Use the tool to fix issues when in-console updates have problems downloading or replicating. The tool is found in the ***\cd.latest\SMSSETUP\TOOLS*** folder of the site server.

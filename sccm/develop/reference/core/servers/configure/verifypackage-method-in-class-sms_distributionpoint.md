@@ -9,7 +9,8 @@ ms.assetid: 143aeb29-3c4d-400b-910f-0783b9ca0c5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # VerifyPackage Method in Class SMS_DistributionPoint
 The `VerifyPackage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, verifies the integrity of all the files in the package by calculating the hash of each file.  
@@ -55,4 +56,3 @@ sint32 VerifyPackage(
 
 ## See Also  
  [SMS_Application Server WMI Class](../../../../../develop/reference/apps/sms_application-server-wmi-class.md)   
- [Application Model Server WMI Classes](../../../../../develop/reference/apps/application-management-server-wmi-classes.md)

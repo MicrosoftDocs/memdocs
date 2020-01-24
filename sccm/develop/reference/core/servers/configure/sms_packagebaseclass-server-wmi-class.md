@@ -9,7 +9,8 @@ ms.assetid: 0e172800-3d43-4164-a89f-34489f957c42
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_PackageBaseclass Server WMI Class
 The `SMS_PackageBaseclass` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the abstract base class for all packages, for example, [SMS_BootImagePackage Server WMI Class](../../../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md), [SMS_DriverPackage Server WMI Class](../../../../../develop/reference/osd/sms_driverpackage-server-wmi-class.md), and [SMS_SoftwareUpdatesPackage Server WMI Class](../../../../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md).  
@@ -322,17 +323,16 @@ The type of the package. Possible values are:
 
 |Value|Description|  
 |-----------|-----------------|  
-|0|Regular software distribution package.|  
-|3|Driver package.|  
-|4|Task sequence package.|  
-|5|Software update package.|  
-|6|Device setting package.|  
-|7|Virtual application package.| 
-|8|Application package.| 
-|257|Image package.|  
-|258|Boot image package.|  
-|259|Operating system install package.|
-|260|VHD package.|   
+|0|Regular software distribution package|  
+|3|Driver package|  
+|4|Task sequence package|  
+|5|Software update package|  
+|6|Device setting package|  
+|7|Virtual application package|
+|8|Application package|
+|257|Image package|  
+|258|Boot image package|  
+|259|OS upgrade package|
 
 ### PkgFlags  
 Data type: `UInt32`  
@@ -542,6 +542,5 @@ For more information, see [Configuration Manager Server Runtime Requirements](..
 For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
-[Software Distribution Server WMI Classes](../../../../../develop/reference/core/servers/configure/software-distribution-server-wmi-classes.md)   
 [How to Create a Package](../../../../../develop/core/servers/configure/how-to-create-a-package.md)   
-[PowerShell Cmdlet: New-CMPackage](http://go.microsoft.com/fwlink/?LinkId=309284)
+[PowerShell Cmdlet: New-CMPackage](https://go.microsoft.com/fwlink/?LinkId=309284)

@@ -9,7 +9,8 @@ ms.assetid: b0f7d2c6-ca63-4f73-82d9-1f7f3efbca25
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequence_RunCommandLineAction Server WMI Class
 The `SMS_TaskSequence_RunCommandLineAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that runs a user-specified command line.  
@@ -88,7 +89,7 @@ Class SMS_TaskSequence_RunCommandLineAction : SMS_TaskSequence_Action
 
  `true` if the execution engine disables Wow64 file redirection and 64-bit registry redirection when the task sequence is evaluating file, folder, and registry conditions on a 64-bit operating system. The default value is `false`.  
 
- The task sequence variable associated with this property is SMSTSDisableWow64Redirection. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is SMSTSDisableWow64Redirection. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Enabled`  
  Data type: `Boolean`  
@@ -193,11 +194,8 @@ Class SMS_TaskSequence_RunCommandLineAction : SMS_TaskSequence_Action
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)

@@ -9,7 +9,8 @@ ms.assetid: 94f37a42-380b-4b79-9f07-acd2b8ddfe0e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # RemoveContent Method in Class SMS_ContentPackage
 The `RemoveContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes the content for the given content ID from the package.  
@@ -55,4 +56,3 @@ sint32 RemoveContent(
 
 ## See Also  
  [SMS_Application Server WMI Class](../../../../../develop/reference/apps/sms_application-server-wmi-class.md)   
- [Application Model Server WMI Classes](../../../../../develop/reference/apps/application-management-server-wmi-classes.md)

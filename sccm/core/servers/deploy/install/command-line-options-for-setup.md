@@ -1,8 +1,8 @@
 ---
 title: Setup command-line options
 titleSuffix: Configuration Manager
-description: Create automation scripts to install System Center Configuration Manager from a command line.
-ms.date: 03/22/2018
+description: Create automation scripts to install Configuration Manager from a command line.
+ms.date: 08/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,1272 +10,1408 @@ ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Command-line options for setup in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# Command-line options for Configuration Manager setup
 
+*Applies to: Configuration Manager (current branch)*
 
- Use the following information to configure scripts or to install System Center Configuration Manager from a command line.  
+Use the following information to configure scripts or to install Configuration Manager from a command line.  
 
-##  <a name="bkmk_setup"></a> Command-line options for setup  
- **/DEINSTALL**  
- Uninstalls the site. Run setup from the site server computer.  
+## <a name="bkmk_setup"></a> Command-line options for setup
 
- **/DONTSTARTSITECOMP**  
- Installs a site, but prevents the Site Component Manager service from starting. Until the Site Component Manager service starts, the site is not active. The Site Component Manager is responsible for installing and starting the SMS_Executive service, and for additional processes at the site. After the site install is finished, when you start the Site Component Manager service, it installs the SMS_Executive service and additional processes that are necessary for the site to operate.  
+Run setup from the `\BIN\X64` directory of the Configuration Manager installation path on the site server.
 
- **/HIDDEN**  
- Hides the user interface during setup. Use this option only in conjunction with the **/SCRIPT** option. The unattended script file must provide all required options or setup fails.  
+### `/DEINSTALL`
 
- **/NOUSERINPUT**  
- Disables user input during setup, but displays the setup wizard. Use this option only in conjunction with the **/SCRIPT** option. The unattended script file must provide all required options or setup fails.  
+Uninstall the site. Run setup from the site server computer.  
 
- **/RESETSITE**  
- Performs a site reset that resets the database and service accounts for the site. Run setup from **<*Configuration Manager installation path*>\BIN\X64** on the site server. For more information about the site reset, see the [Run a site reset](../../../../core/servers/manage/modify-your-infrastructure.md#bkmk_reset) section in [Modify your System Center Configuration Manager infrastructure](../../../../core/servers/manage/modify-your-infrastructure.md).  
+### `/DONTSTARTSITECOMP`
 
- **/TESTDBUPGRADE <*Instance name*>\\<*Database name*>**  
- Performs a test on a backup of the site database to ensure that the database is capable of an upgrade. Provide the instance name and database name for the site database. If you specify only the database name, setup uses the default instance name.  
+Install a site, but prevents the Site Component Manager service from starting. Until the Site Component Manager service starts, the site isn't active. The Site Component Manager is responsible for installing and starting the SMS_Executive service, and for additional processes at the site. After the site install is finished, when you start the Site Component Manager service, it installs the SMS_Executive service and additional processes that are necessary for the site to operate.  
+
+### `/HIDDEN`
+
+Hide the user interface during setup. Use this option only in conjunction with the **/SCRIPT** option. The unattended script file must provide all required options or setup fails.  
+
+### `/NOUSERINPUT`
+
+Disable user input during setup, but displays the setup wizard. Use this option only in conjunction with the **/SCRIPT** option. The unattended script file must provide all required options or setup fails.  
+
+### `/RESETSITE`
+
+Run a site reset that resets the database and service accounts for the site.
+
+For more information, see [Run a site reset](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_reset).  
+
+### `/TESTDBUPGRADE`
+
+Run a test on a backup of the site database to make sure that the database can upgrade.
 
 > [!IMPORTANT]  
->  Do not run this command-line option on your production site database. Running this command-line option on your production site database upgrades the site database and could render your site inoperable.  
+> Don't run this command-line option on your production site database. Running this command-line option on your production site database upgrades the site database and could render your site inoperable.
 
- **/UPGRADE**  
- Runs an unattended upgrade of a site. When you use **/UPGRADE**, you must specify the product key, including the dashes (-). Also, you must specify the path to the previously downloaded setup prerequisite files.  
+#### Usage
 
- Example: `setupwpf.exe /UPGRADE xxxxx-xxxxx-xxxxx-xxxxx-xxxxx <path to external component files>`  
+Provide the instance name and database name for the site database. If you specify only the database name, setup uses the default instance name.  
 
- For more information about setup prerequisite files, see [Setup Downloader](setup-downloader.md).  
+`/TESTDBUPGRADE <Instance name>\<Database name>`
 
- **/SCRIPT <*setup script path*>**  
- Performs unattended installations. A setup initialization file is required when you use the **/SCRIPT** option. For more information about how to run setup unattended, see [Install sites using a command line](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).  
+`/TESTDBUPGRADE CM_ABC`
 
- **/SDKINST <*SMS Provider FQDN*>**  
- Installs the SMS Provider on the specified computer. Provide the fully qualified domain name (FQDN) for the SMS Provider computer. For more information about the SMS Provider, see [Plan for the SMS Provider](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
+`/TESTDBUPGRADE Named\CM_ABC`
 
- **/SDKDEINST <*SMS Provider FQDN*>**  
- Uninstalls the SMS Provider on the specified computer. Provide the FQDN for the SMS Provider computer.  
+### `/UPGRADE`
 
- **/MANAGELANGS <*Language script path*>**  
- Manages the languages that are installed at a previously installed site. To use this option, run setup from **<*Configuration Manager installation path*>\BIN\X64** on the site server. Provide the location for the language script file that contains the language settings. For more information about the language options available in the language setup script file, see the [Command-line options to manage languages](#bkmk_Lang) section.  
+Run an unattended upgrade of a site. Specify the product key including the dashes (`-`). Also specify the path to the previously downloaded setup prerequisite files.  
 
-##  <a name="bkmk_Lang"></a> Command-line options to manage languages  
- **Identification**  
+For more information about setup prerequisite files, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader).  
 
--   **Key Name:** Action  
+#### Usage
 
-    -   **Required:** Yes  
+`setupwpf.exe /UPGRADE xxxxx-xxxxx-xxxxx-xxxxx-xxxxx <path to external component files>`  
 
-    -   **Values:** ManageLanguages  
+### `/SCRIPT`
 
-    -   **Details:** Manages the server, client, and mobile client language support at a site.  
+Run an unattended installation. Use a setup initialization file with this option. For more information about how to run setup unattended, see [Install sites using a command line](/sccm/core/servers/deploy/install/use-a-command-line-to-install-sites).  
 
-**Options**  
+#### Usage
 
--   **Key Name:** AddServerLanguages  
+`/SCRIPT <setup script path>`
 
-    -   **Required:** No  
+### `/SDKINST`
 
-    -   **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
+Install the SMS Provider on the specified computer. Provide the fully qualified domain name (FQDN) for the SMS Provider computer. For more information about the SMS Provider, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).  
 
-    -   **Details:** Specifies the server languages that will be available for the Configuration Manager console, reports, and Configuration Manager objects. English is available by default.  
+#### Usage
 
--   **Key Name:** AddClientLanguages  
+`/SDKINST <SMS Provider FQDN>`
 
-    -   **Required:** No  
+### `/SDKDEINST`
 
-    -   **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
+Uninstall the SMS Provider on the specified computer. Provide the FQDN for the SMS Provider computer.  
 
-    -   **Details:** Specifies the languages that will be available to client computers. English is available by default.  
+#### Usage
 
--   **Key Name:** DeleteServerLanguages  
+`/SDKDEINST <SMS Provider FQDN>`
 
-    -   **Required:** No  
+### `/MANAGELANGS`
 
-    -   **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
+Manage the languages that are installed at a previously installed site. Provide the location for the language script file that contains the language settings. For more information, see the [Command-line options to manage languages](#bkmk_Lang) section.  
 
-    -   **Details:** Specifies the languages to remove, and which will no longer be available for the Configuration Manager console, reports, and Configuration Manager objects. English is available by default and cannot be removed.  
+#### Usage
 
--   **Key Name:** DeleteClientLanguages  
+`/MANAGELANGS <Language script path>`
 
-    -   **Required:** No  
 
-    -   **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
+## <a name="bkmk_Lang"></a> Command-line options to manage languages
 
-    -   **Details:** Specifies the languages to remove, and which will no longer be available to client computers. English is available by default and cannot be removed.  
+### Identification
 
--   **Key Name:** MobileDeviceLanguage  
+- **Key name:** Action  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** 0 or 1  
+    - **Values:** `ManageLanguages`  
 
-         0 = Do not install  
+    - **Details:** Manages the server, client, and mobile client language support at a site.  
 
-         1 = Install  
+### Options
 
-    -   **Details:** Specifies whether the mobile device client languages are installed.  
+- **Key name:** AddServerLanguages  
 
--   **Key Name:** PrerequisiteComp  
+    - **Required:** No  
 
-    -   **Required:** Yes  
+    - **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
 
-    -   **Values:** 0 or 1  
+    - **Details:** Specifies the server languages that will be available for the Configuration Manager console, reports, and Configuration Manager objects. English is available by default.  
 
-         0 = Download  
+- **Key name:** AddClientLanguages  
 
-         1 = Already downloaded  
+    - **Required:** No  
 
-    -   **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of **0**, setup downloads the files.  
+    - **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
 
--   **Key Name:** PrerequisitePath  
+    - **Details:** Specifies the languages that will be available to client computers. English is available by default.  
 
-    -   **Required:** Yes  
+- **Key name:** DeleteServerLanguages  
 
-    -   **Values:** <*Path to setup prerequisite files*>  
+    - **Required:** No  
 
-    -   **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.  
+    - **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
 
-##  <a name="bkmk_Unattended"></a> Unattended setup script file keys  
- Use the following sections to help you create your script for unattended setup. The lists show the available setup script keys, their corresponding values, whether they are required, which type of installation they are used for, and a short description of the key.  
+    - **Details:** Specifies the languages to remove, and which will no longer be available for the Configuration Manager console, reports, and Configuration Manager objects. English is available by default, you can't remove it.  
 
-### Unattended install for a central administration site  
- Use the following details to install a central administration site by using an unattended setup script file.  
+- **Key name:** DeleteClientLanguages  
 
-**Identification**  
+    - **Required:** No  
 
--   **Key Name:** Action  
+    - **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
 
-    -   **Required:** Yes  
+    - **Details:** Specifies the languages to remove, and which will no longer be available to client computers. English is available by default, you can't remove it.  
 
-    -   **Values:** InstallCAS  
+- **Key name:** MobileDeviceLanguage  
 
-    -   **Details:** Installs a central administration site.  
+    - **Required:** Yes  
 
--   **Key Name:** CDLatest  
+    - **Values:**
 
-    -   **Required:** Yes – Only when using media from the CD.Latest folder.    
+        - `0` = Don't install  
 
-    -   **Values:** 1
-        Any value other than 1 is considered to not be using CD.Latest.
+        - `1` = Install  
 
-    -   **Details:** Your script must include this key and value when you run setup from media in a CD.Latest folder for the purpose of installing a primary or central administration site, or recovering a primary or central administration site. This value informs setup that media form CD.Latest is being used.
+    - **Details:** Specifies whether the mobile device client languages are installed.  
 
-**Options**  
+- **Key name:** PrerequisiteComp  
 
--   **Key Name:** ProductID  
+    - **Required:** Yes  
 
-    -   **Required:** Yes  
+    - **Values:**
 
-    -   **Values:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *or* Eval  
+        - `0` = Download  
 
-    -   **Details:** Specifies the Configuration Manager installation product key, including the dashes. Enter **Eval** to install the evaluation version of Configuration Manager.  
+        - `1` = Already downloaded  
 
--   **Key Name:** SiteCode  
+    - **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of `0`, setup downloads the files.  
 
-    -   **Required:** Yes  
+- **Key name:** PrerequisitePath  
 
-    -   **Values:** <*Site code*>  
+    - **Required:** Yes  
 
-    -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy.  
+    - **Values:** <*Path to setup prerequisite files*>  
 
--   **Key Name:** Site name  
+    - **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.  
 
-    -   **Required:** Yes  
 
-    -   **Values:** <*Site name*>  
+## <a name="bkmk_Unattended"></a> Unattended setup script file keys
 
-    -   **Details:** Specifies the name for this site.  
+Use the following sections to help you create your script for unattended setup. The lists show:
 
--   **Key Name:** SMSInstallDir  
+- The available setup script keys and their corresponding values
+- If they're required
+- Which type of installation they're used for
+- A short description of the key
 
-    -   **Required:** Yes  
+### Unattended install for a central administration site (CAS)
 
-    -   **Values:** <*Configuration Manager installation path*>  
+Use the following details to install a CAS by using an unattended setup script file.  
 
-    -   **Details:** Specifies the installation folder for the Configuration Manager program files.  
+#### Identification
 
--   **Key Name:** SDKServer  
+- **Key name:** Action  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** <*SMS Provider FQDN*>  
+    - **Values:** `InstallCAS`  
 
-    -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You can configure additional SMS Providers for the site after the initial installation.  
+    - **Details:** Installs a CAS.  
 
--   **Key Name:** PrerequisiteComp  
+- **Key name:** CDLatest  
 
-    -   **Required:** Yes  
+    - **Required:** Yes, only when using media from the CD.Latest folder.
 
-    -   **Values:** 0 or 1  
+    - **Values:**
 
-         0 = Download  
+        - `1` = you're using media from CD.Latest
 
-         1 = Already downloaded  
+        - Any value other than 1 = you're not using CD.Latest media
 
-    -   **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of **0**, setup downloads the files.  
+    - **Details:** When you install or recover a primary site or CAS, and you run setup from the CD.Latest folder, include this key and value. This value informs setup that you're using media from CD.Latest.
 
--   **Key Name:** PrerequisitePath  
+#### Options
 
-    -   **Required:** Yes  
+- **Key name:** ProductID  
 
-    -   **Values:** <*Path to setup prerequisite files*>  
+    - **Required:** Yes  
 
-    -   **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.  
+    - **Values:**
 
--   **Key Name:** AdminConsole  
+        - `<xxxxx-xxxxx-xxxxx-xxxxx-xxxxx>` = a valid product key with dashes
 
-    -   **Required:** Yes  
+        - `Eval` = install the evaluation version of Configuration Manager
 
-    -   **Values:** 0 or 1  
+    - **Details:** Specifies the Configuration Manager installation product key, including the dashes.
 
-         0 = Do not install  
+- **Key name:** SiteCode  
 
-         1 = Install  
+    - **Required:** Yes  
 
-    -   **Details:** Specifies whether to install the Configuration Manager console.  
+    - **Values:** <*Site code*>, for example, `ABC`
 
--   **Key Name:** JoinCEIP  
+    - **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy.  
+
+- **Key name:** Site name  
+
+    - **Required:** Yes  
+
+    - **Values:** <*Site name*>  
+
+    - **Details:** Specifies the name for this site.  
+
+- **Key name:** SMSInstallDir  
+
+    - **Required:** Yes  
+
+    - **Values:** <*Configuration Manager installation path*>  
+
+    - **Details:** Specifies the installation folder for the Configuration Manager program files.  
+
+- **Key name:** SDKServer  
+
+    - **Required:** Yes  
+
+    - **Values:** <*SMS Provider FQDN*>  
+
+    - **Details:** Specifies the FQDN for the server that will host the SMS Provider. You can configure additional SMS Providers for the site after the initial installation.  
+
+- **Key name:** PrerequisiteComp  
+
+    - **Required:** Yes  
+
+    - **Values:**
+
+        - `0` = Download  
+
+        - `1` = Already downloaded  
+
+    - **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of `0`, setup downloads the files.  
+
+- **Key name:** PrerequisitePath  
+
+    - **Required:** Yes  
+
+    - **Values:** <*Path to setup prerequisite files*>  
+
+    - **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.  
+
+- **Key name:** AdminConsole  
+
+    - **Required:** Yes  
+
+    - **Values:**
+
+        - `0` = Don't install  
+
+        - `1` = Install  
+
+    - **Details:** Specifies whether to install the Configuration Manager console.  
+
+- **Key name:** JoinCEIP  
+
     > [!Note]  
     > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** 0 or 1  
+    - **Values:**
 
-         0 = Do not join  
+        - `0` = Don't join  
 
-         1 = Join  
+        - `1` = Join  
 
-    -   **Details:** Specifies whether to join the Customer Experience Improvement Program (CEIP).  
+    - **Details:** Specifies whether to join the Customer Experience Improvement Program (CEIP).  
 
--   **Key Name:** AddServerLanguages  
+- **Key name:** AddServerLanguages  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
+    - **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
 
-    -   **Details:** Specifies the server languages that will be available for the Configuration Manager console, reports, and Configuration Manager objects. English is available by default.  
+    - **Details:** Specifies the server languages that will be available for the Configuration Manager console, reports, and Configuration Manager objects. English is available by default.  
 
--   **Key Name:** AddClientLanguages  
+- **Key name:** AddClientLanguages  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
+    - **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
 
-    -   **Details:** Specifies the languages that will be available to client computers. English is available by default.  
+    - **Details:** Specifies the languages that will be available to client computers. English is available by default.  
 
--   **Key Name:** DeleteServerLanguages  
+- **Key name:** DeleteServerLanguages  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
+    - **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
 
-    -   **Details:** Modifies a site after it is installed. Specifies the languages to remove, and which will no longer be available for the Configuration Manager console, reports, and Configuration Manager objects. English is available by default and cannot be removed.  
+    - **Details:** Modifies a site after it's installed. Specifies the languages to remove, and which will no longer be available for the Configuration Manager console, reports, and Configuration Manager objects. English is available by default, you can't remove it.  
 
--   **Key Name:** DeleteClientLanguages  
+- **Key name:** DeleteClientLanguages  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
+    - **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
 
-    -   **Details:** Modifies a site after it is installed. Specifies the languages to remove, and which will no longer be available to client computers. English is available by default and cannot be removed.  
+    - **Details:** Modifies a site after it's installed. Specifies the languages to remove, and which will no longer be available to client computers. English is available by default, you can't remove it.  
 
--   **Key Name:** MobileDeviceLanguage  
+- **Key name:** MobileDeviceLanguage  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** 0 or 1  
+    - **Values:**
 
-         0 = Do not install  
+        - `0` = Don't install  
 
-         1 = Install  
+        - `1` = Install  
 
-    -   **Details:** Specifies whether the mobile device client languages are installed.  
+    - **Details:** Specifies whether the mobile device client languages are installed.  
 
-**SQLConfigOptions**  
+#### SQLConfigOptions
 
--   **Key Name:** SQLServerName  
+- **Key name:** SQLServerName  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** <*SQL server name*>  
+    - **Values:** <*SQL server name*>  
 
-    -   **Details:** Specifies the name of the server or clustered instance that is running SQL Server, and which will host the site database.  
+    - **Details:** Specifies the name of the server or clustered instance that's running SQL Server to host the site database.  
 
--   **Key Name:** DatabaseName  
+- **Key name:** DatabaseName  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** <*Site database name*> or <*Instance name*>\\<*Site database name*>  
+    - **Values:** <*Site database name*> or <*Instance name*>\\<*Site database name*>  
 
-    -   **Details:** Specifies the name of the SQL Server database to create, or the SQL Server database to use, when setup installs the central administration site database.  
+    - **Details:** Specifies the name of the SQL Server database to create, or the SQL Server database to use, when setup installs the CAS database.  
 
         > [!IMPORTANT]  
-        >  If you do not use the default instance, you must specify the instance name and site database name.  
+        > If you don't use the default instance, specify the instance name and site database name.  
 
--   **Key Name:** SQLSSBPort  
+- **Key name:** SQLSSBPort  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*SSB port number*>  
+    - **Values:** <*SSB port number*>  
 
-    -   **Details:** Specifies the SQL Server Service Broker (SSB) port that SQL Server uses. SSB typically is configured to use TCP port 4022, but you can use a different port.  
+    - **Details:** Specifies the SQL Server Service Broker (SSB) port that SQL Server uses. By default, SSB uses TCP port 4022, but you can use a different port.  
 
--   **Key Name:** SQLDataFilePath  
+- **Key name:** SQLDataFilePath  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*Path to database .mdb file*>  
+    - **Values:** <*Path to database .mdb file*>  
 
-    -   **Details:** Specifies an alternate location to create the database .mdb file.  
+    - **Details:** Specifies an alternate location to create the database .mdb file.  
 
--   **Key Name:** SQLLogFilePath  
+- **Key name:** SQLLogFilePath  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*Path to database .ldf file*>  
+    - **Values:** <*Path to database .ldf file*>  
 
-    -   **Details:** Specifies an alternate location to create the database .ldf file.  
+    - **Details:** Specifies an alternate location to create the database .ldf file.  
 
-**CloudConnectorOptions**  
+#### CloudConnectorOptions
 
--   **Key Name:** CloudConnector  
+- **Key name:** CloudConnector  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** 0 or 1  
+    - **Values:**
 
-         0 = Do not install  
+        - `0` = Don't install  
 
-         1 = Install  
+        - `1` = Install  
 
-    -   **Details:** Specifies whether to install a service connection point at this site. Because the service connection point can only be installed at the top-tier site of a hierarchy, this value must be **0** for a child primary site.  
+    - **Details:** Specifies whether to install a service connection point at this site. Because you can only install the service connection point at the top-tier site of a hierarchy, set this value to `1` for a child primary site.  
 
--   **Key Name:** CloudConnectorServer  
+- **Key name:** CloudConnectorServer  
 
-    -   **Required:** Required when **CloudConnector** equals 1  
+    - **Required:** Required when **CloudConnector** equals 1  
 
-    -   **Values:** <*Service connection point server FQDN*>  
+    - **Values:** <*Service connection point server FQDN*>  
 
-    -   **Details:** Specifies the FQDN of the server that will host the service connection point site system role.  
+    - **Details:** Specifies the FQDN of the server that will host the service connection point site system role.  
 
--   **Key Name:** UseProxy  
+- **Key name:** UseProxy  
 
-    -   **Required:** Required when **CloudConnector** equals 1  
+    - **Required:** Required when **CloudConnector** equals 1  
 
-    -   **Values:** 0 or 1  
+    - **Values:**
 
-         0 = Do not install  
+        - `0` = Don't install  
 
-         1 = Install  
+        - `1` = Install  
 
-    -   **Details:** Specifies whether the service connection point uses a proxy server.  
+    - **Details:** Specifies whether the service connection point uses a proxy server.  
 
--   **Key Name:** ProxyName  
+- **Key name:** ProxyName  
 
-    -   **Required:** Required when **UseProxy** equals 1  
+    - **Required:** Required when **UseProxy** equals 1  
 
-    -   **Values:** <*Proxy server FQDN*>  
+    - **Values:** <*Proxy server FQDN*>  
 
-    -   **Details:** Specifies the FQDN of the proxy server that the service connection point uses.  
+    - **Details:** Specifies the FQDN of the proxy server that the service connection point uses.  
 
--   **Key Name:** ProxyPort  
+- **Key name:** ProxyPort  
 
-    -   **Required:** Required when **UseProxy** equals 1  
+    - **Required:** Required when **UseProxy** equals 1  
 
-    -   **Values:** <*Port number*>  
+    - **Values:** <*Port number*>  
 
-    -   **Details:** Specifies the port number to use for the proxy port.  
+    - **Details:** Specifies the port number to use for the proxy port.  
 
-### Unattended install for a primary site  
+#### SABranchOptions
+
+<!-- SCCMDocs#390 -->
+
+- **Key name:** SAActive
+
+    - **Required:** No
+
+    - **Values:**
+
+        - `0` = You don't have Software Assurance
+
+        - `1` = Software Assurance is active
+
+    - **Details:** Specify if you have active Software Assurance. For more information, see [Product and licensing FAQ](/sccm/core/understand/product-and-licensing-faq).
+
+- **Key name:** CurrentBranch
+
+    - **Required:** No
+
+    - **Values:**
+
+        - `0` = Install the LTSB
+
+        - `1` = Install current branch
+
+    - **Details:** Specify whether to use Configuration Manager current branch or long-term servicing branch (LTSB). For more information, see [Which branch of Configuration Manager should I use?](/sccm/core/understand/which-branch-should-i-use).
+
+### Unattended install for a primary site
+
 Use the following details to install a primary site by using an unattended setup script file.  
 
-**Identification**  
+#### Identification
 
--   **Key Name:** Action  
+- **Key name:** Action  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** InstallPrimarySite  
+    - **Values:** `InstallPrimarySite`  
 
-    -   **Details:** Installs a primary site.  
+    - **Details:** Installs a primary site.  
 
--   **Key Name:** CDLatest  
+- **Key name:** CDLatest  
 
-    -   **Required:** Yes – Only when using media from the CD.Latest folder.    
+    - **Required:** Yes, only when using media from the CD.Latest folder.
 
-    -   **Values:** 1
-        Any value other than 1 is considered to not be using CD.Latest.
+    - **Values:**
 
-    -   **Details:** Your script must include this key and value when you run setup from media in a CD.Latest folder for the purpose of installing a primary or central administration site, or recovering a primary or central administration site. This value informs setup that media form CD.Latest is being used.
+        - `1` = you're using media from CD.Latest
 
-**Options**  
+        - Any value other than 1 = you're not using CD.Latest media
 
--   **Key Name:** ProductID  
+    - **Details:** When you install or recover a primary site or CAS, and you run setup from the CD.Latest folder, include this key and value. This value informs setup that you're using media from CD.Latest.
 
-    -   **Required:** Yes  
+#### Options
 
-    -   **Values:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *or* Eval  
+- **Key name:** ProductID  
 
-    -   **Details:** Specifies the Configuration Manager installation product key, including the dashes. Enter **Eval** to install the evaluation version of Configuration Manager.  
+    - **Required:** Yes  
 
--   **Key Name:** SiteCode  
+    - **Values:**
 
-    -   **Required:** Yes  
+        - `<xxxxx-xxxxx-xxxxx-xxxxx-xxxxx>` = a valid product key with dashes
 
-    -   **Values:** <*Site code*>  
+        - `Eval` = install the evaluation version of Configuration Manager
 
-    -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy.  
+    - **Details:** Specifies the Configuration Manager installation product key, including the dashes.
 
--   **Key Name:** SiteName  
+- **Key name:** SiteCode  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** <*Site name*>  
+    - **Values:** <*Site code*>  
 
-    -   **Details:** Specifies the name for this site.  
+    - **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy.  
 
--   **Key Name:** SMSInstallDir  
+- **Key name:** SiteName  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** <*Configuration Manager installation path*>
+    - **Values:** <*Site name*>  
 
-    -   **Details:** Specifies the installation folder for the Configuration Manager program files.  
+    - **Details:** Specifies the name for this site.  
 
--   **Key Name:** SDKServer  
+- **Key name:** SMSInstallDir  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** <*SMS Provider FQDN*>  
+    - **Values:** <*Configuration Manager installation path*>
 
-    -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You can configure additional SMS Providers for the site after the initial installation.  
+    - **Details:** Specifies the installation folder for the Configuration Manager program files.  
 
--   **Key Name:** PrerequisiteComp  
+- **Key name:** SDKServer  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** 0 or 1  
+    - **Values:** <*SMS Provider FQDN*>  
 
-         0 = Download  
+    - **Details:** Specifies the FQDN for the server that will host the SMS Provider. You can configure additional SMS Providers for the site after the initial installation.  
 
-         1 = Already downloaded  
+- **Key name:** PrerequisiteComp  
 
-    -   **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of **0**, setup downloads the files.  
+    - **Required:** Yes  
 
--   **Key Name:** PrerequisitePath  
+    - **Values:**
 
-    -   **Required:** Yes  
+        - `0` = Download  
 
-    -   **Values:** <*Path to setup prerequisite files*>  
+        - `1` = Already downloaded  
 
-    -   **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.  
+    - **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of `0`, setup downloads the files.  
 
--   **Key Name:** AdminConsole  
+- **Key name:** PrerequisitePath  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** 0 or 1  
+    - **Values:** <*Path to setup prerequisite files*>  
 
-         0 = Do not install  
+    - **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.  
 
-         1 = Install  
+- **Key name:** AdminConsole  
 
-    -   **Details:** Specifies whether to install the Configuration Manager console.  
+    - **Required:** Yes  
 
--   **Key Name:** JoinCEIP  
+    - **Values:**
+
+        - `0` = Don't install  
+
+        - `1` = Install  
+
+    - **Details:** Specifies whether to install the Configuration Manager console.  
+
+- **Key name:** JoinCEIP  
+
     > [!Note]  
     > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** 0 or 1  
+    - **Values:**
 
-         0 = Do not join  
+        - `0` = Don't join  
 
-         1 = Join  
+        - `1` = Join  
 
-    -   **Details:** Specifies whether to join the CEIP.  
+    - **Details:** Specifies whether to join the CEIP.  
 
--   **Key Name:** ManagementPoint  
+- **Key name:** ManagementPoint  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*Management point site server FQDN*>  
+    - **Values:** <*Management point site server FQDN*>  
 
-    -   **Details:** Specifies the FQDN of the server that will host the management point site system role.  
+    - **Details:** Specifies the FQDN of the server that will host the management point site system role.  
 
--   **Key Name:** ManagementPointProtocol  
+- **Key name:** ManagementPointProtocol  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** HTTPS *or* HTTP  
+    - **Values:** `HTTPS` or `HTTP`  
 
-    -   **Details:** Specifies the protocol to use for the management point.  
+    - **Details:** Specifies the protocol to use for the management point.  
 
--   **Key Name:** DistributionPoint  
+- **Key name:** DistributionPoint  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*Distribution point site server FQDN*>  
+    - **Values:** <*Distribution point site server FQDN*>  
 
-    -   **Details:** Specifies the protocol to use for the distribution point.  
+    - **Details:** Specifies the FQDN of the server that will host the distribution point site system role.  
 
--   **Key Name:** DistributionPointProtocol  
+- **Key name:** DistributionPointProtocol  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** HTTPS *or* HTTP  
+    - **Values:** `HTTPS` or `HTTP`  
 
-    -   **Details:** Specifies the protocol to use for the distribution point.  
+    - **Details:** Specifies the protocol to use for the distribution point.  
 
--   **Key Name:** RoleCommunicationProtocol  
+- **Key name:** RoleCommunicationProtocol  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** EnforceHTTPS *or* HTTPorHTTPS  
+    - **Values:** `EnforceHTTPS` or `HTTPorHTTPS`  
 
-    -   **Details:** Specifies whether to configure all site systems to accept only HTTPS communication from clients, or for the communication method to be configured for each site system role. When you select to **EnforceHTTPS**, client computer must have a valid public key infrastructure (PKI) certificate for client authentication.  
+    - **Details:** Specifies whether to configure all site systems to accept only HTTPS communication from clients, or to configure the communication method for each site system role. When you select `EnforceHTTPS`, clients must have a valid public key infrastructure (PKI) certificate for client authentication.  
 
--   **Key Name:** ClientsUsePKICertificate  
+- **Key name:** ClientsUsePKICertificate  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** 0 or 1  
+    - **Values:**
 
-         0 = Do not use  
+        - `0` = Don't use  
 
-         1 = Use  
+        - `1` = Use  
 
-    -   **Details:** Specifies whether clients will use a client PKI certificate to communicate with site system roles.  
+    - **Details:** Specifies whether clients will use a client PKI certificate to communicate with site system roles.  
 
--   **Key Name:** AddServerLanguages  
+- **Key name:** AddServerLanguages  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
+    - **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
 
-    -   **Details:** Specifies the server languages that will be available for the Configuration Manager console, reports, and Configuration Manager objects. English is available by default.  
+    - **Details:** Specifies the server languages that will be available for the Configuration Manager console, reports, and Configuration Manager objects. English is available by default.  
 
--   **Key Name:** AddClientLanguages  
+- **Key name:** AddClientLanguages  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
+    - **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
 
-    -   **Details:** Specifies the languages that will be available to client computers. English is available by default.  
+    - **Details:** Specifies the languages that will be available to client computers. English is available by default.  
 
--   **Key Name:** DeleteServerLanguages  
+- **Key name:** DeleteServerLanguages  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
+    - **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
 
-    -   **Details:** Modifies a site after it is installed. Specifies the languages to remove, and which will no longer be available for the Configuration Manager console, reports, and Configuration Manager objects. English is available by default and cannot be removed.  
+    - **Details:** Modifies a site after it's installed. Specifies the languages to remove, and which will no longer be available for the Configuration Manager console, reports, and Configuration Manager objects. English is available by default, you can't remove it.  
 
--   **Key Name:** DeleteClientLanguages  
+- **Key name:** DeleteClientLanguages  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
+    - **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
 
-    -   **Details:** Modifies a site after it is installed. Specifies the languages to remove, and which will no longer be available to client computers. English is available by default and cannot be removed.  
+    - **Details:** Modifies a site after it's installed. Specifies the languages to remove, and which will no longer be available to client computers. English is available by default, you can't remove it.  
 
--   **Key Name:** MobileDeviceLanguage  
+- **Key name:** MobileDeviceLanguage  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** 0 or 1  
+    - **Values:**
 
-         0 = Do not install  
+        - `0` = Don't install  
 
-         1 = Install  
+        - `1` = Install  
 
-    -   **Details:** Specifies whether the mobile device client languages are installed.  
+    - **Details:** Specifies whether the mobile device client languages are installed.  
 
-**SQLConfigOptions**  
+#### SQLConfigOptions
 
--   **Key Name:** SQLServerName  
+- **Key name:** SQLServerName  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** <*SQL server name*>  
+    - **Values:** <*SQL server name*>  
 
-    -   **Details:** Specifies the name of the server or clustered instance that is running SQL Server, and which will host the site database.  
+    - **Details:** Specifies the name of the server or clustered instance that runs SQL Server to host the site database.  
 
--   **Key Name:** DatabaseName  
+- **Key name:** DatabaseName  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** <*Site database name*> or <*Instance name*>\\<*Site database name*>  
+    - **Values:** <*Site database name*> or <*Instance name*>\\<*Site database name*>  
 
-    -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use when installing the primary site database.  
+    - **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use when installing the primary site database.  
 
         > [!IMPORTANT]  
-        >  If you do not use the default instance, you must specify the instance name and site database name.  
+        > If you don't use the default instance, specify the instance name and site database name.  
 
--   **Key Name:** SQLSSBPort  
+- **Key name:** SQLSSBPort  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*SSB port number*>  
+    - **Values:** <*SSB port number*>  
 
-    -   **Details:** Specifies the SSB port that SQL Server uses. SSB typically is configured to use TCP port 4022, but you can use a different port.  
+    - **Details:** Specifies the SSB port that SQL Server uses. By default, SSB uses TCP port 4022, but you can use a different port.  
 
--   **Key Name:** SQLDataFilePath  
+- **Key name:** SQLDataFilePath  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*Path to database .mdb file*>  
+    - **Values:** <*Path to database .mdb file*>  
 
-    -   **Details:** Specifies an alternate location to create the database .mdb file.  
+    - **Details:** Specifies an alternate location to create the database .mdb file.  
 
--   **Key Name:** SQLLogFilePath  
+- **Key name:** SQLLogFilePath  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*Path to database .ldf file*>  
+    - **Values:** <*Path to database .ldf file*>  
 
-    -   **Details:** Specifies an alternate location to create the database .ldf file.  
+    - **Details:** Specifies an alternate location to create the database .ldf file.  
 
-**HierarchyExpansionOption**  
+#### HierarchyExpansionOption
 
--   **Key Name:** CCARSiteServer  
+- **Key name:** CCARSiteServer  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*Central administration site FQDN*>  
+    - **Values:** <*Central administration site FQDN*>  
 
-    -   **Details:** Specifies the central administration site that a primary site attaches to when it joins the Configuration Manager hierarchy. Specify the central administration site during setup.  
+    - **Details:** Specifies the CAS that a primary site attaches to when it joins the Configuration Manager hierarchy. Specify the CAS during setup.  
 
--   **Key Name:** CASRetryInterval  
+- **Key name:** CASRetryInterval  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*Interval*>  
+    - **Values:** <*Interval in minutes*>  
 
-    -   **Details:** Specifies the retry interval (in minutes) to attempt a connection to the central administration site after the connection fails. For example, if the connection to the central administration site fails, the primary site waits the number of minutes that you specify for the **CASRetryInterval** value, and then reattempts the connection.  
+    - **Details:** Specifies the retry interval in minutes to attempt a connection to the CAS after the connection fails. For example, if the connection to the CAS fails, the primary site waits the number of minutes that you specify for the **CASRetryInterval** value, and then reattempts the connection.  
 
--   **Key Name:** WaitForCASTimeout  
+- **Key name:** WaitForCASTimeout  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*Timeout*>  
+    - **Values:** <*Timeout in minutes from 0 to 100*>  
 
-         A value of **0** to **100**  
+    - **Details:** Specifies the maximum timeout value in minutes for a primary site to connect to the CAS. For example, if a primary site fails to connect to a CAS, the primary site retries the connection to the CAS based on the **CASRetryInterval** value until the **WaitForCASTimeout** period is reached. You can specify a value from `0` to `100`.  
 
-    -   **Details:** Specifies the maximum timeout value (in minutes) for a primary site to connect to the central administration site. For example, if a primary site fails to connect to a central administration site, the primary site retries the connection to the central administration site based on the **CASRetryInterval** value until the **WaitForCASTimeout** period is reached. You can specify a value of **0** to **100**.  
+#### CloudConnectorOptions
 
-**CloudConnectorOptions**  
+- **Key name:** CloudConnector  
 
--   **Key Name:** CloudConnector  
+    - **Required:** Yes  
 
-    -   **Required:** Yes  
+    - **Values:**
 
-    -   **Values:** 0 or 1  
+        - `0` = Don't install  
 
-         0 = Do not install  
+        - `1` = Install  
 
-         1 = Install  
+    - **Details:** Specifies whether to install a service connection point at this site. Because you can only install the service connection point at the top-tier site of a hierarchy, set this value to `0` for a child primary site.  
 
-    -   **Details:** Specifies whether to install a service connection point at this site. Because the service connection point can only be installed at the top-tier site of a hierarchy, this value must be **0** for a child primary site.  
+- **Key name:** CloudConnectorServer  
 
--   **Key Name:** CloudConnectorServer  
+    - **Required:** Required when **CloudConnector** equals 1  
 
-    -   **Required:** Required when **CloudConnector** equals 1  
+    - **Values:** <*Service connection point server FQDN*\>  
 
-    -   **Values:** <*Service connection point server FQDN*\>  
+    - **Details:** Specifies the FQDN of the server that will host the service connection point site system role.  
 
-    -   **Details:** Specifies the FQDN of the server that will host the service connection point site system role.  
+- **Key name:** UseProxy  
 
--   **Key Name:** UseProxy  
+    - **Required:** Required when **CloudConnector** equals 1  
 
-    -   **Required:** Required when **CloudConnector** equals 1  
+    - **Values:**
 
-    -   **Values:** 0 or 1  
+        - `0` = Don't install  
 
-         0 = Do not install  
+        - `1` = Install  
 
-         1 = Install  
+    - **Details:** Specifies whether the service connection point uses a proxy server.  
 
-    -   **Details:** Specifies whether the service connection point uses a proxy server.  
+- **Key name:** ProxyName  
 
--   **Key Name:** ProxyName  
+    - **Required:** Required when **UseProxy** equals 1  
 
-    -   **Required:** Required when **UseProxy** equals 1  
+    - **Values:** <*Proxy server FQDN*>  
 
-    -   **Values:** <*Proxy server FQDN*>  
+    - **Details:** Specifies the FQDN of the proxy server that the service connection point uses.  
 
-    -   **Details:** Specifies the FQDN of the proxy server that the service connection point uses.  
+- **Key name:** ProxyPort  
 
--   **Key Name:** ProxyPort  
+    - **Required:** Required when **UseProxy** equals 1  
 
-    -   **Required:** Required when **UseProxy** equals 1  
+    - **Values:** <*Port number*>  
 
-    -   **Values:** <*Port number*>  
+    - **Details:** Specifies the port number to use for the proxy port.  
 
-    -   **Details:** Specifies the port number to use for the proxy port.  
+#### SABranchOptions
 
-### Unattended recovery for a central administration site  
- Use the following details to recover a central administration site by using an unattended setup script file.  
+<!-- SCCMDocs#390 -->
 
-**Identification**  
+- **Key name:** SAActive
 
--   **Key Name:** Action  
+    - **Required:** No
 
-    -   **Required:** Yes  
+    - **Values:**
 
-    -   **Values:** RecoverCCAR  
+        - `0` = You don't have Software Assurance
 
-    -   **Details:** Recovers a central administration site.  
+        - `1` = Software Assurance is active
 
--   **Key Name:** CDLatest  
+    - **Details:** Specify if you have active Software Assurance. For more information, see [Product and licensing FAQ](/sccm/core/understand/product-and-licensing-faq).
 
-    -   **Required:** Yes – Only when using media from the CD.Latest folder.    
+- **Key name:** CurrentBranch
 
-    -   **Values:** 1
-        Any value other than 1 is considered to not be using CD.Latest.
+    - **Required:** No
 
-    -   **Details:** Your script must include this key and value when you run setup from media in a CD.Latest folder for the purpose of installing a primary or central administration site, or recovering a primary or central administration site. This value informs setup that media form CD.Latest is being used.
+    - **Values:**
 
-**RecoveryOptions**  
+        - `0` = Install the LTSB
 
--   **Key Name:** ServerRecoveryOptions  
+        - `1` = Install current branch
 
-    -   **Required:** Yes  
+    - **Details:** Specify whether to use Configuration Manager current branch or long-term servicing branch (LTSB). For more information, see [Which branch of Configuration Manager should I use?](/sccm/core/understand/which-branch-should-i-use).
 
-    -   **Values:** 1, 2, or 4  
+### Unattended recovery for a CAS
 
-         1 = Recover site server and SQL Server.  
+Use the following details to recover a CAS by using an unattended setup script file.  
 
-         2 = Recover site server only.  
+#### Identification
 
-         4 = Recover SQL Server only.  
+- **Key name:** Action  
 
-    -   **Details:** Specifies whether setup recovers the site server, SQL Server, or both. The associated keys are required when you set the following value for the **ServerRecoveryOptions** setting:  
+    - **Required:** Yes  
 
-        -   Value = 1: You have the option to specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you do not specify a value, the site is reinstalled without restoring it from a backup set.  
+    - **Values:** `RecoverCCAR`  
 
-        -   Value = 2: You have the option to specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you do not specify a value, the site is reinstalled without restoring it from a backup set.  
+    - **Details:** Recovers a CAS.  
 
-        -   Value = 4: The **BackupLocation** key is required when you configure a value of **10** for the **DatabaseRecoveryOptions** key, which is to restore the site database from backup.  
+- **Key name:** CDLatest  
 
--   **Key Name:** DatabaseRecoveryOptions  
+    - **Required:** Yes, only when using media from the CD.Latest folder.
 
-    -   **Required:** This key is required when the **ServerRecoveryOptions** setting has a value of **1** or **4**.  
+    - **Values:**
 
-    -   **Values:** 10, 20, 40, or 80  
+        - `1` = you're using media from CD.Latest
 
-         10 = Restore the site database from backup.  
+        - Any value other than 1 = you're not using CD.Latest media
 
-         20 = Use a site database that has been manually recovered by using another method.  
+    - **Details:** When you install or recover a primary site or CAS, and you run setup from the CD.Latest folder, include this key and value. This value informs setup that you're using media from CD.Latest.
 
-         40 = Create a new database for the site. Use this option when there is no site database backup available. Global and site data is recovered through replication from other sites.  
+#### RecoveryOptions
 
-         80 = Skip database recovery.  
+- **Key name:** ServerRecoveryOptions  
 
-    -   **Details:** Specifies how setup recovers the site database in SQL Server.  
+    - **Required:** Yes  
 
--   **Key Name:** ReferenceSite  
+    - **Values:**
 
-    -   **Required:** This key is required when the **DatabaseRecoveryOptions** setting has a value of **40**.  
+        - `1` = Recover site server and SQL Server
 
-    -   **Values:** <*Reference site FQDN*>  
+        - `2` = Recover site server only
 
-    -   **Details:** Specifies the reference primary site that the central administration site uses to recover global data if the database backup is older than the change-tracking retention period or when you recover the site without a backup.  
+        - `4` = Recover SQL Server only  
 
-         When you do not specify a reference site and the backup is older than the change-tracking retention period, all primary sites are reinitialized with the restored data from the central administration site.  
+    - **Details:** Specifies whether setup recovers the site server, SQL Server, or both. The following options are also required based on the specified value:  
 
-         When you do not specify a reference site and the backup is within the change-tracking retention period, only changes that are made after the backup are replicated from primary sites. When there are conflicting changes from different primary sites, the central administration site uses the first one that it receives.  
+        - **1** or **2**: To recover the site by using a site backup, specify a value for **SiteServerBackupLocation**. If you don't specify a value, setup reinstalls the site without restoring it from a backup set.  
 
--   **Key Name:** SiteServerBackupLocation  
+        - **4**: The **BackupLocation** key is required when you configure a value of **10** for the **DatabaseRecoveryOptions** key, which is to restore the site database from backup.  
 
-    -   **Required:** No  
+- **Key name:** DatabaseRecoveryOptions  
 
-    -   **Values:** <*Path to site server backup set*>  
+    - **Required:** This key is required when the **ServerRecoveryOptions** setting has a value of **1** or **4**.  
 
-    -   **Details:** Specifies the path to the site server backup set. This key is optional when the **ServerRecoveryOptions** setting has a value of **1** or **2**. Specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you do not specify a value, the site is reinstalled without restoring it from a backup set.  
+    - **Values:**
 
--   **Key Name:** BackupLocation  
+        - `10` = Restore the site database from backup.  
 
-    -   **Required:** This key is required when you configure a value of **1** or **4** for the **ServerRecoveryOptions** key, and you configure a value of **10** for the **DatabaseRecoveryOptions** key.  
+        - `20` = Use a site database that you manually recovered with another method.  
 
-    -   **Values:** <*Path to site database backup set*>  
+        - `40` = Create a new database for the site. Use this option when there's no site database backup available. The site recovers global and site data through replication from other sites.  
 
-    -   **Details:** Specifies the path to the site database backup set.  
+        - `80` = Skip database recovery.  
 
-**Options**  
+    - **Details:** Specifies how setup recovers the site database in SQL Server.  
 
--   **Key Name:** ProductID  
+- **Key name:** ReferenceSite  
 
-    -   **Required:** Yes  
+    - **Required:** This key is required when the **DatabaseRecoveryOptions** setting has a value of **40**.  
 
-    -   **Values:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *or* Eval  
+    - **Values:** <*Reference site FQDN*>  
 
-    -   **Details:** Specifies the Configuration Manager installation product key, including the dashes. Enter **Eval** to install the evaluation version of Configuration Manager.  
+    - **Details:** If the database backup is older than the change-tracking retention period, or when you recover the site without a backup, specify the reference primary site that the CAS uses to recover global data.  
 
--   **Key Name:** SiteCode  
+        When you don't specify a reference site, and the backup is older than the change-tracking retention period, all primary sites are reinitialized with the restored data from the CAS.  
 
-    -   **Required:** Yes  
+        When you don't specify a reference site, and the backup is within the change-tracking retention period, only changes that are made after the backup are replicated from primary sites. When there are conflicting changes from different primary sites, the CAS uses the first one that it receives.  
 
-    -   **Values:** <*Site code*>  
+- **Key name:** SiteServerBackupLocation  
 
-    -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. Specify the site code that the site used before the failure.
+    - **Required:** No  
 
--   **Key Name:** SiteName  
+    - **Values:** <*Path to site server backup set*>  
 
-    -   **Required:** No  
+    - **Details:** Specifies the path to the site server backup set. This key is optional when the **ServerRecoveryOptions** setting has a value of **1** or **2**. Specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you don't specify a value, setup reinstalls the site without restoring it from a backup set.  
 
-    -   **Values:** <*Site name*>  
+- **Key name:** BackupLocation  
 
-    -   **Details:** Specifies the name for this site.  
+    - **Required:** This key is required when you configure a value of **1** or **4** for the **ServerRecoveryOptions** key, and you configure a value of **10** for the **DatabaseRecoveryOptions** key.  
 
--   **Key Name:** SMSInstallDir  
+    - **Values:** <*Path to site database backup set*>  
 
-    -   **Required:** Yes  
+    - **Details:** Specifies the path to the site database backup set.  
 
-    -   **Values:** <*Configuration Manager installation path*>  
+#### Options
 
-    -   **Details:** Specifies the installation folder for the Configuration Manager program files.  
+- **Key name:** ProductID  
 
--   **Key Name:** SDKServer  
+    - **Required:** Yes  
 
-    -   **Required:** Yes  
+    - **Values:**
 
-    -   **Values:** <*SMS Provider FQDN*>  
+        - `<xxxxx-xxxxx-xxxxx-xxxxx-xxxxx>` = a valid product key with dashes
 
-    -   **Details:** Specifies the FQDN for the server that hosts the SMS Provider. Specify the server that hosted the SMS Provider before the failure.  
+        - `Eval` = install the evaluation version of Configuration Manager
 
-         You can configure additional SMS Providers for the site after the initial installation. For more information about the SMS Provider, see [Plan for the SMS Provider for System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
+    - **Details:** Specifies the Configuration Manager installation product key, including the dashes.
 
--   **Key Name:** PrerequisiteComp  
+- **Key name:** SiteCode  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** 0 or 1  
+    - **Values:** <*Site code*>  
 
-         0 = Download  
+    - **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. Specify the site code that the site used before the failure.
 
-         1 = Already downloaded  
+- **Key name:** SiteName  
 
-    -   **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of **0**, setup downloads the files.  
+    - **Required:** No  
 
--   **Key Name:** PrerequisitePath  
+    - **Values:** <*Site name*>  
 
-    -   **Required:** Yes  
+    - **Details:** Specifies the name for this site.  
 
-    -   **Values:** <*Path to setup prerequisite files*>  
+- **Key name:** SMSInstallDir  
 
-    -   **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.  
+    - **Required:** Yes  
 
--   **Key Name:** AdminConsole  
+    - **Values:** <*Configuration Manager installation path*>  
 
-    -   **Required:** This key is required except when the **ServerRecoveryOptions** setting has a value of **4**.  
+    - **Details:** Specifies the installation folder for the Configuration Manager program files.  
 
-    -   **Values:** 0 or 1  
+- **Key name:** SDKServer  
 
-         0 = Do not install  
+    - **Required:** Yes  
 
-         1 = Install  
+    - **Values:** <*SMS Provider FQDN*>  
 
-    -   **Details:** Specifies whether to install the Configuration Manager console.  
+    - **Details:** Specifies the FQDN for the server that hosts the SMS Provider. Specify the server that hosted the SMS Provider before the failure.  
 
--   **Key Name:** JoinCEIP  
+        After the initial installation, you can configure additional SMS Providers for the site. For more information about the SMS Provider, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).  
+
+- **Key name:** PrerequisiteComp  
+
+    - **Required:** Yes  
+
+    - **Values:**
+
+        - `0` = Download  
+
+        - `1` = Already downloaded  
+
+    - **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of **0**, setup downloads the files.  
+
+- **Key name:** PrerequisitePath  
+
+    - **Required:** Yes  
+
+    - **Values:** <*Path to setup prerequisite files*>  
+
+    - **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.  
+
+- **Key name:** AdminConsole  
+
+    - **Required:** This key is required except when the **ServerRecoveryOptions** setting has a value of **4**.  
+
+    - **Values:**
+
+        - `0` = Don't install  
+
+        - `1` = Install  
+
+    - **Details:** Specifies whether to install the Configuration Manager console.  
+
+- **Key name:** JoinCEIP  
+
     > [!Note]  
     > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** 0 or 1  
+    - **Values:**
 
-         0 = Do not join  
+        - `0` = Don't join  
 
-         1 = Join  
+        - `1` = Join  
 
-    -   **Details:** Specifies whether to join the CEIP.  
+    - **Details:** Specifies whether to join the CEIP.  
 
-**SQLConfigOptions**  
+#### SQLConfigOptions
 
--   **Key Name:** SQLServerName  
+- **Key name:** SQLServerName  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** <*SQL server name*>  
+    - **Values:** <*SQL server name*>  
 
-    -   **Details:** Specifies the name of the server or clustered instance that is running SQL Server, and which hosts the site database. Specify the same server that hosted the site database before the failure.  
+    - **Details:** Specifies the name of the server or clustered instance that is running SQL Server, and which hosts the site database. Specify the same server that hosted the site database before the failure.  
 
--   **Key Name:** DatabaseName  
+- **Key name:** DatabaseName  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** <*Site database name*> or <*Instance name*>\\<*Site database name*>  
+    - **Values:** <*Site database name*> or <*Instance name*>\\<*Site database name*>  
 
-    -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use when installing the central administration site database. Specify the same database name that was used before the failure.  
+    - **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use when installing the CAS database. Specify the same database name that was used before the failure.  
 
         > [!IMPORTANT]  
-        >  If you do not use the default instance, you must specify the instance name and site database name.  
+        > If you don't use the default instance, specify the instance name and site database name.  
 
--   **Key Name:** SQLSSBPort  
+- **Key name:** SQLSSBPort  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** <*SSB port number*>  
+    - **Values:** <*SSB port number*>  
 
-    -   **Details:** Specifies the SSB port that SQL Server uses. SSB typically is configured to use TCP port 4022. Specify the same SSB port that was used before the failure.  
+    - **Details:** Specifies the SSB port that SQL Server uses. By default, SSB uses TCP port 4022. Specify the same SSB port that was used before the failure.  
 
--   **Key Name:** SQLDataFilePath  
+- **Key name:** SQLDataFilePath  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*Path to database .mdb file*>  
+    - **Values:** <*Path to database .mdb file*>  
 
-    -   **Details:** Specifies an alternate location to create the database .mdb file.  
+    - **Details:** Specifies an alternate location to create the database .mdb file.  
 
--   **Key Name:** SQLLogFilePath  
+- **Key name:** SQLLogFilePath  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*Path to database .ldf file*>  
+    - **Values:** <*Path to database .ldf file*>  
 
-    -   **Details:** Specifies an alternate location to create the database .ldf file.  
+    - **Details:** Specifies an alternate location to create the database .ldf file.  
 
-**CloudConnectorOptions**  
+#### CloudConnectorOptions
 
--   **Key Name:** CloudConnector  
+- **Key name:** CloudConnector  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** 0 or 1  
+    - **Values:**
 
-         0 = Do not install  
+        - `0` = Don't install  
 
-         1 = Install  
+        - `1` = Install  
 
-    -   **Details:** Specifies whether to install a service connection point at this site. Because the service connection point can only be installed at the top-tier site of a hierarchy, this value must be **0** for a child primary site.  
+    - **Details:** Specifies whether to install a service connection point at this site. Because you can only install the service connection point at the top-tier site of a hierarchy, this value must be **0** for a child primary site.  
 
--   **Key Name:** CloudConnectorServer  
+- **Key name:** CloudConnectorServer  
 
-    -   **Required:** Required when **CloudConnector** equals 1  
+    - **Required:** Required when **CloudConnector** equals 1  
 
-    -   **Values:** <*Service connection point server FQDN*>  
+    - **Values:** <*Service connection point server FQDN*>  
 
-    -   **Details:** Specifies the FQDN of the server that will host the service connection point site system role.  
+    - **Details:** Specifies the FQDN of the server that will host the service connection point site system role.  
 
--   **Key Name:** UseProxy  
+- **Key name:** UseProxy  
 
-    -   **Required:** Required when **CloudConnector** equals 1  
+    - **Required:** Required when **CloudConnector** equals 1  
 
-    -   **Values:** 0 or 1  
+    - **Values:**
 
-         0 = Do not install  
+        - `0` = Don't install  
 
-         1 = Install  
+        - `1` = Install  
 
-    -   **Details:** Specifies whether the service connection point uses a proxy server.  
+    - **Details:** Specifies whether the service connection point uses a proxy server.  
 
--   **Key Name:** ProxyName  
+- **Key name:** ProxyName  
 
-    -   **Required:** Required when **CloudConnector** equals 1  
+    - **Required:** Required when **CloudConnector** equals 1  
 
-    -   **Values:** <*Proxy server FQDN*>  
+    - **Values:** <*Proxy server FQDN*>  
 
-    -   **Details:** Specifies the FQDN of the proxy server that the service connection point uses.  
+    - **Details:** Specifies the FQDN of the proxy server that the service connection point uses.  
 
--   **Key Name:** ProxyPort  
+- **Key name:** ProxyPort  
 
-    -   **Required:** Required when **CloudConnector** equals 1  
+    - **Required:** Required when **CloudConnector** equals 1  
 
-    -   **Values:** <*Port number*>  
+    - **Values:** <*Port number*>  
 
-    -   **Details:** Specifies the port number to use for the proxy port.  
+    - **Details:** Specifies the port number to use for the proxy port.  
 
-### Unattended recovery for a primary site  
- Use the following details to recover a primary site by using an unattended setup script file.  
+### Unattended recovery for a primary site
 
-**Identification**  
+Use the following details to recover a primary site by using an unattended setup script file.  
 
--   **Key Name:** Action  
+#### Identification
 
-    -   **Required:** Yes  
+- **Key name:** Action  
 
-    -   **Values:** <*RecoverPrimarySite*>  
+    - **Required:** Yes  
 
-    -   **Details:** Recovers a primary site.  
+    - **Values:** `RecoverPrimarySite`  
 
--   **Key Name:** CDLatest  
+    - **Details:** Recovers a primary site.  
 
-    -   **Required:** Yes – Only when using media from the CD.Latest folder.    
+- **Key name:** CDLatest  
 
-    -   **Values:** 1
-        Any value other than 1 is considered to not be using CD.Latest.
+    - **Required:** Yes, only when using media from the CD.Latest folder.
 
-    -   **Details:** Your script must include this key and value when you run setup from media in a CD.Latest folder for the purpose of installing a primary or central administration site, or recovering a primary or central administration site. This value informs setup that media form CD.Latest is being used.    
+    - **Values:**
 
-**RecoveryOptions**  
+        - `1` = you're using media from CD.Latest
 
--   **Key Name:** ServerRecoveryOptions  
+        - Any value other than 1 = you're not using CD.Latest media
 
-    -   **Required:** Yes  
+    - **Details:** When you install or recover a primary site or CAS, and you run setup from the CD.Latest folder, include this key and value. This value informs setup that you're using media from CD.Latest.
 
-    -   **Values:** 1, 2, or 4  
+#### RecoveryOptions
 
-         1 = Recover site server and SQL Server.  
+- **Key name:** ServerRecoveryOptions  
 
-         2 = Recover site server only.  
+    - **Required:** Yes  
 
-         4 = Recover SQL Server only.  
+    - **Values:**
 
-    -   **Details:** Specifies whether setup recovers the site server, SQL Server, or both. The associated keys are required when you set the following value for the **ServerRecoveryOptions** setting:  
+        - `1` = Recover site server and SQL Server
 
-        -   Value = 1: You have the option to specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you do not specify a value, the site is reinstalled without restoring it from a backup set.  
+        - `2` = Recover site server only
 
-        -   Value = 2: You have the option to specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you do not specify a value, the site is reinstalled without restoring it from a backup set.  
+        - `4` = Recover SQL Server only  
 
-        -   Value = 4: The **BackupLocation** key is required when you configure a value of **10** for the **DatabaseRecoveryOptions** key, which is to restore the site database from backup.  
+    - **Details:** Specifies whether setup recovers the site server, SQL Server, or both. The following options are also required based on the specified value:  
 
--   **Key Name:** DatabaseRecoveryOptions  
+        - **1** or **2**: To recover the site by using a site backup, specify a value for **SiteServerBackupLocation**. If you don't specify a value, setup reinstalls the site without restoring it from a backup set.  
 
-    -   **Required:** This key is required when the **ServerRecoveryOptions** setting has a value of **1** or **4**.  
+        - **4**: The **BackupLocation** key is required when you configure a value of **10** for the **DatabaseRecoveryOptions** key, which is to restore the site database from backup.  
 
-    -   **Values:** 10, 20, 40, or 80  
+- **Key name:** DatabaseRecoveryOptions  
 
-         10 = Restore the site database from backup.  
+    - **Required:** This key is required when the **ServerRecoveryOptions** setting has a value of **1** or **4**.  
 
-         20 = Use a site database that has been manually recovered by using another method.  
+    - **Values:**
 
-         40 = Create a new database for the site. Use this option when there is no site database backup available. Global and site data is recovered through replication from other sites.  
+        - `10` = Restore the site database from backup.  
 
-         80 = Skip database recovery.  
+        - `20` = Use a site database that you manually recovered with another method.  
 
-    -   **Details:** Specifies how setup recovers the site database in SQL Server.  
+        - `40` = Create a new database for the site. Use this option when there's no site database backup available. The site recovers global and site data through replication from other sites.  
 
--   **Key Name:** SiteServerBackupLocation  
+        - `80` = Skip database recovery.  
 
-    -   **Required:** No  
+    - **Details:** Specifies how setup recovers the site database in SQL Server.  
 
-    -   **Values:** <*Path to site server backup set*>  
+- **Key name:** SiteServerBackupLocation  
 
-    -   **Details:**  
+    - **Required:** No  
 
-         Specifies the path to the site server backup set. This key is optional when the **ServerRecoveryOptions** setting has a value of **1** or **2**. Specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you do not specify a value, the site is reinstalled without restoring it from a backup set.  
+    - **Values:** <*Path to site server backup set*>  
 
--   **Key Name:** BackupLocation  
+    - **Details:** Specifies the path to the site server backup set. This key is optional when the **ServerRecoveryOptions** setting has a value of **1** or **2**. Specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you don't specify a value, setup reinstalls the site without restoring it from a backup set.  
 
-    -   **Required:** This key is required when you configure a value of **1** or **4** for the **ServerRecoveryOptions** key, and configure a value of **10** for the **DatabaseRecoveryOptions** key.  
+- **Key name:** BackupLocation  
 
-    -   **Values:** <*Path to site database backup set*>  
+    - **Required:** This key is required when you configure a value of **1** or **4** for the **ServerRecoveryOptions** key, and configure a value of **10** for the **DatabaseRecoveryOptions** key.  
 
-    -   **Details:** Specifies the path to the site database backup set.  
+    - **Values:** <*Path to site database backup set*>  
 
-**Options**  
+    - **Details:** Specifies the path to the site database backup set.  
 
--   **Key Name:** ProductID  
+#### Options
 
-    -   **Required:** Yes  
+- **Key name:** ProductID  
 
-    -   **Values:** *xxxxx-xxxxx-xxxxx-xxxxx-xxxxx* or *Eval*  
+    - **Required:** Yes  
 
-    -   **Details:** Specifies the Configuration Manager installation product key, including the dashes. Enter **Eval** to install the evaluation version of Configuration Manager.  
+    - **Values:**
 
--   **Key Name:** SiteCode  
+        - `<xxxxx-xxxxx-xxxxx-xxxxx-xxxxx>` = a valid product key with dashes
 
-    -   **Required:** Yes  
+        - `Eval` = install the evaluation version of Configuration Manager
 
-    -   **Values:** <*Site code*>  
+    - **Details:** Specifies the Configuration Manager installation product key, including the dashes.
 
-    -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. Specify the site code that the site used before the failure.
+- **Key name:** SiteCode  
 
--   **Key Name:** SiteName  
+    - **Required:** Yes  
 
-    -   **Required:** No  
+    - **Values:** <*Site code*>  
 
-    -   **Values:** <*Site name*>  
+    - **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. Specify the site code that the site used before the failure.
 
-    -   **Details:** Specifies the name for this site.  
+- **Key name:** SiteName  
 
--   **Key Name:** SMSInstallDir  
+    - **Required:** No  
 
-    -   **Required:** Yes  
+    - **Values:** <*Site name*>  
 
-    -   **Values:** <*Configuration Manager installation path*>  
+    - **Details:** Specifies the name for this site.  
 
-    -   **Details:** Specifies the installation folder for the Configuration Manager program files.  
+- **Key name:** SMSInstallDir  
 
--   **Key Name:** SDKServer  
+    - **Required:** Yes  
 
-    -   **Required:** Yes  
+    - **Values:** <*Configuration Manager installation path*>  
 
-    -   **Values:** <*SMS Provider FQDN*>  
+    - **Details:** Specifies the installation folder for the Configuration Manager program files.  
 
-    -   **Details:** Specifies the FQDN for the server that hosts the SMS Provider. Specify the server that hosted the SMS Provider before the failure. Configure additional SMS Providers for the site after the initial installation. For more information about the SMS Provider, see [Plan for the SMS Provider](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
+- **Key name:** SDKServer  
 
--   **Key Name:** PrerequisiteComp  
+    - **Required:** Yes  
 
-    -   **Required:** Yes  
+    - **Values:** <*SMS Provider FQDN*>  
 
-    -   **Values:** 0 or 1  
+    - **Details:** Specifies the FQDN for the server that hosts the SMS Provider. Specify the server that hosted the SMS Provider before the failure. After the initial installation, you can configure additional SMS Providers for the site. For more information about the SMS Provider, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).  
 
-         0 = Download  
+- **Key name:** PrerequisiteComp  
 
-         1 = Already downloaded  
+    - **Required:** Yes  
 
-    -   **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of **0**, setup downloads the files.  
+    - **Values:**
 
--   **Key Name:** PrerequisitePath  
+        - `0` = Download  
 
-    -   **Required:** Yes  
+        - `1` = Already downloaded  
 
-    -   **Values:** <*Path to setup prerequisite files*>  
+    - **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of **0**, setup downloads the files.  
 
-    -   **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.  
+- **Key name:** PrerequisitePath  
 
--   **Key Name:** AdminConsole  
+    - **Required:** Yes  
 
-    -   **Required:** This key is required except when the **ServerRecoveryOptions** setting has a value of **4**.  
+    - **Values:** <*Path to setup prerequisite files*>  
 
-    -   **Values:** 0 or 1  
+    - **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.  
 
-         0 = Do not install  
+- **Key name:** AdminConsole  
 
-         1 = Install  
+    - **Required:** This key is required except when the **ServerRecoveryOptions** setting has a value of **4**.  
 
-    -   **Details:** Specifies whether to install the Configuration Manager console.  
+    - **Values:**
 
--   **Key Name:** JoinCEIP  
+        - `0` = Don't install  
+
+        - `1` = Install  
+
+    - **Details:** Specifies whether to install the Configuration Manager console.  
+
+- **Key name:** JoinCEIP  
+
     > [!Note]  
     > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** 0 or 1  
+    - **Values:**
 
-         0 = Do not join  
+        - `0` = Don't join  
 
-         1 = Join  
+        - `1` = Join  
 
-    -   **Details:** Specifies whether to join the CEIP.  
+    - **Details:** Specifies whether to join the CEIP.  
 
-**SQLConfigOptions**  
+#### SQLConfigOptions
 
--   **Key Name:** SQLServerName  
+- **Key name:** SQLServerName  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** <*SQL server name*>  
+    - **Values:** <*SQL server name*>  
 
-    -   **Details:** Specifies the name of the server or clustered instance that is running SQL Server, and which hosts the site database. Specify the same server that hosted the site database before the failure.  
+    - **Details:** Specifies the name of the server or clustered instance that runs SQL Server to host the site database. Specify the same server that hosted the site database before the failure.  
 
--   **Key Name:** DatabaseName  
+- **Key name:** DatabaseName  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** <*Site database name*> or <*Instance name*>\\<*Site database name*>
+    - **Values:** <*Site database name*> or <*Instance name*>\\<*Site database name*>
 
-    -   **Details:**  
-
-         Specifies the name of the SQL Server database to create or the SQL Server database to use when installing the central administration site database. Specify the same database name that was used before the failure.  
+    - **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use when installing the CAS database. Specify the same database name that was used before the failure.  
 
         > [!IMPORTANT]  
-        >  If you do not use the default instance, you must specify the instance name and site database name.  
+        > If you don't use the default instance, specify the instance name and site database name.  
 
--   **Key Name:** SQLSSBPort  
+- **Key name:** SQLSSBPort  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** <*SSB port number*>  
+    - **Values:** <*SSB port number*>  
 
-    -   **Details:** Specifies the SSB port that SQL Server uses. Typically, SSB is configured to use TCP port 4022. Specify the same SSB port that was used before the failure.  
+    - **Details:** Specifies the SSB port that SQL Server uses. By default, SSB uses TCP port 4022. Specify the same SSB port that was used before the failure.  
 
--   **Key Name:** SQLDataFilePath  
+- **Key name:** SQLDataFilePath  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*Path to database .mdb file*>  
+    - **Values:** <*Path to database .mdb file*>  
 
-    -   **Details:** Specifies an alternate location to create the database .mdb file.  
+    - **Details:** Specifies an alternate location to create the database .mdb file.  
 
--   **Key Name:** SQLLogFilePath  
+- **Key name:** SQLLogFilePath  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*Path to database .ldf file*>  
+    - **Values:** <*Path to database .ldf file*>  
 
-    -   **Details:** Specifies an alternate location to create the database .ldf file.  
+    - **Details:** Specifies an alternate location to create the database .ldf file.  
 
-**HierarchyExpansionOptions**  
+#### HierarchyExpansionOptions
 
--   **Key Name:** CCARSiteServer  
+- **Key name:** CCARSiteServer  
 
-    -   **Required:** See details.  
+    - **Required:** See details.  
 
-    -   **Values:** <*Site code for central administration site*>  
+    - **Values:** <*Site code for CAS*>  
 
-    -   **Details:** Specifies the central administration site to which a primary site attaches when it joins the Configuration Manager hierarchy. This setting is required if the primary site was attached to a central administration site before the failure. Specify the site code that was used for the central administration site before the failure.  
+    - **Details:** Specifies the CAS to which a primary site attaches when it joins the Configuration Manager hierarchy. This setting is required if the primary site was attached to a CAS before the failure. Specify the site code that was used for the CAS before the failure.  
 
--   **Key Name:** CASRetryInterval  
+- **Key name:** CASRetryInterval  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*Interval*>  
+    - **Values:** <*Interval in minutes*>  
 
-    -   **Details:** Specifies the retry interval (in minutes) to attempt a connection to the central administration site after the connection fails. For example, if the connection to the central administration site fails, the primary site waits the number of minutes that you specify for the **CASRetryInterval** value, and then attempts the connection again.  
+    - **Details:** Specifies the retry interval in minutes to attempt a connection to the CAS after the connection fails. For example, if the connection to the CAS fails, the primary site waits the number of minutes that you specify for the **CASRetryInterval** value, and then attempts the connection again.  
 
--   **Key Name:** WaitForCASTimeout  
+- **Key name:** WaitForCASTimeout  
 
-    -   **Required:** No  
+    - **Required:** No  
 
-    -   **Values:** <*Timeout*>  
+    - **Values:** <*Timeout in minutes*>  
 
-    -   **Details:** Specifies the maximum timeout value (in minutes) for a primary site to connect to the central administration site. For example, if a primary site fails to connect to a central administration site, the primary site retries the connection to the central administration site based on the **CASRetryInterval** value until the **WaitForCASTimeout** period is reached. You can specify a value of **0** to **100**.  
+    - **Details:** Specifies the maximum timeout value in minutes for a primary site to connect to the CAS. For example, if a primary site fails to connect to a CAS, the primary site retries the connection to the CAS based on the **CASRetryInterval** value until the **WaitForCASTimeout** period is reached. You can specify a value of `0` to `100`.  
 
-**CloudConnectorOptions**  
+#### CloudConnectorOptions
 
--   **Key Name:** CloudConnector  
+- **Key name:** CloudConnector  
 
-    -   **Required:** Yes  
+    - **Required:** Yes  
 
-    -   **Values:** 0 or 1  
+    - **Values:**
 
-         0 = Do not install  
+        - `0` = Don't install  
 
-         1 = Install  
+        - `1` = Install  
 
-    -   **Details:** Specifies whether to install a service connection point at this site. Because the service connection point can only be installed at the top-tier site of a hierarchy, this value must be **0** for a child primary site.  
+    - **Details:** Specifies whether to install a service connection point at this site. Because you can only install the service connection point at the top-tier site of a hierarchy, this value must be `0` for a child primary site.  
 
--   **Key Name:** CloudConnectorServer  
+- **Key name:** CloudConnectorServer  
 
-    -   **Required:** Required when **CloudConnector** equals 1  
+    - **Required:** Required when **CloudConnector** equals 1  
 
-    -   **Values:** <*Service connection point server FQDN*>  
+    - **Values:** <*Service connection point server FQDN*>  
 
-    -   **Details:** Specifies the FQDN of the server that will host the service connection point site system role.  
+    - **Details:** Specifies the FQDN of the server that will host the service connection point site system role.  
 
--   **Key Name:** UseProxy  
+- **Key name:** UseProxy  
 
-    -   **Required:** Required when **CloudConnector** equals 1  
+    - **Required:** Required when **CloudConnector** equals 1  
 
-    -   **Values:** 0 or 1  
+    - **Values:**
 
-         0 = Do not install  
+        - `0` = Don't install  
 
-         1 = Install  
+        - `1` = Install  
 
-    -   **Details:** Specifies whether the service connection point uses a proxy server.  
+    - **Details:** Specifies whether the service connection point uses a proxy server.  
 
--   **Key Name:** ProxyName  
+- **Key name:** ProxyName  
 
-    -   **Required:** Required when **CloudConnector** equals 1  
+    - **Required:** Required when **CloudConnector** equals 1  
 
-    -   **Values:** <*Proxy server FQDN*>  
+    - **Values:** <*Proxy server FQDN*>  
 
-    -   **Details:** Specifies the FQDN of the proxy server that the service connection point uses.  
+    - **Details:** Specifies the FQDN of the proxy server that the service connection point uses.  
 
--   **Key Name:** ProxyPort  
+- **Key name:** ProxyPort  
 
-    -   **Required:** Required when **CloudConnector** equals 1  
+    - **Required:** Required when **CloudConnector** equals 1  
 
-    -   **Values:** <*Port number*>  
+    - **Values:** <*Port number*>  
 
-    -   **Details:** Specifies the port number to use for the proxy port.  
+    - **Details:** Specifies the port number to use for the proxy port.  

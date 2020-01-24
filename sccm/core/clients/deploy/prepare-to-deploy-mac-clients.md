@@ -10,12 +10,13 @@ ms.assetid: 2285a953-6a86-4ed5-97dd-cd57b02bc1ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Prepare to deploy client software to Macs
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Follow these steps to make sure that you're ready to [deploy the Configuration Manager client to Mac computers](/sccm/core/clients/deploy/deploy-clients-to-macs).
 
@@ -23,7 +24,7 @@ Follow these steps to make sure that you're ready to [deploy the Configuration M
 
 ## Mac prerequisites
 
-The Mac client installation package isn't supplied with the Configuration Manager media. Download the **Clients for additional operating systems** from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184).  
+The Mac client installation package isn't supplied with the Configuration Manager media. Download the **Clients for additional operating systems** from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184).  
 
 For the list of supported versions, see [Supported operating systems for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#mac-computers).
 

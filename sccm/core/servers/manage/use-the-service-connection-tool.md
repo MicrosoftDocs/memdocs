@@ -10,11 +10,12 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Use the Service Connection Tool for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Use the Service Connection Tool for Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Use the **service connection tool** when your service connection point is in offline mode, or when your Configuration Manager site system servers are not connected to the Internet. The tool can help you keep your site up-to-date with the latest updates to Configuration Manager.  
 
@@ -33,7 +34,7 @@ The following are prerequisites, and known issues.
 
   - Both the **Visual C++ Redistributable** x86 and x64 files.   By default, Configuration Manager installs the x64 version on the computer that hosts the service connection point.  
 
-    To download a copy of the Visual C++ files, visit [Visual C++ Redistributable Packages for Visual Studio 2013](http://www.microsoft.com/download/details.aspx?id=40784) at the Microsoft Download Center.  
+    To download a copy of the Visual C++ files, visit [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784) at the Microsoft Download Center.  
 
   - .NET Framework 4.5.2 or later.  
 
@@ -66,7 +67,7 @@ On the computer that hosts the service connection point:
 
   By default, you can  find this tool in the Configuration Manager installation media in **%path%\smssetup\tools\ServiceConnectionTool** folder. All of the files in this folder must be in the same folder for the service connection tool to work.  
 
-When you run the following command, the tool prepares a .cab file that contains usage information and to copies it  to a location you specify. The data in the .cab file is based on the level of diagnostic usage data your site is configured to collect. (see [Diagnostics and usage data for System Center Configuration Manager](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)).  Run the following command to create the .cab file:  
+When you run the following command, the tool prepares a .cab file that contains usage information and to copies it  to a location you specify. The data in the .cab file is based on the level of diagnostic usage data your site is configured to collect. (see [Diagnostics and usage data for Configuration Manager](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)).  Run the following command to create the .cab file:  
 
 - **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
 
@@ -160,7 +161,7 @@ Example command line that uses *-downloadsiteversion*:
 
 9. Open  the Configuration Manager console and navigate to **Administration** > **Updates and Servicing**. Updates that were imported are now available to install. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.)
 
-   For information about installing updates, see  [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md).  
+   For information about installing updates, see  [Install in-console updates for Configuration Manager](../../../core/servers/manage/install-in-console-updates.md).  
 
 ## <a name="bkmk_cmd"></a> Log Files
 

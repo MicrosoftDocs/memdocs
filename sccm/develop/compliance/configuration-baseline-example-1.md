@@ -9,10 +9,11 @@ ms.assetid: 488ff3c1-2bc0-49a0-b925-ab6f41c9561f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Baseline Example 1
-The following Baseline Configuration Item Instance example references an application configuration item that checks whether the System Center Configuration Manager client and Notepad.exe are installed on systems that are running Windows XP SP2.  
+The following Baseline Configuration Item Instance example references an application configuration item that checks whether the Configuration Manager client and Notepad.exe are installed on systems that are running Windows XP SP2.  
 
 ## Configuration Baseline Example  
 
@@ -105,7 +106,4 @@ Only references to content defined as System Definition Model language (SDM) can
 ```  
 
 ## See Also  
- [Authoring Compliance Settings Configuration Baselines and Configuration Items](../../develop/compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md)   
- [Configuration Baseline Examples](../../develop/compliance/configuration-baseline-examples.md)   
- [Application Configuration Item Examples](../../develop/compliance/application-configuration-item-examples.md)   
- [Operating System Configuration Item Examples](../../develop/compliance/operating-system-configuration-item-examples.md)
+[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)

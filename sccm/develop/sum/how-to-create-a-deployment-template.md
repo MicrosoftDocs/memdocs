@@ -9,10 +9,11 @@ ms.assetid: 552c2251-8c97-4596-bcc0-71558ce8c532
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a Deployment Template
-You create a software updates deployment template, in System Center Configuration Manager, by creating an instance of the `SMS_Template` class and populating the properties.  
+You create a software updates deployment template, in Configuration Manager, by creating an instance of the `SMS_Template` class and populating the properties.  
 
 ### To create a deployment template  
 
@@ -162,8 +163,6 @@ public void CreateSUMDeploymentTemplate(WqlConnectionManager connection,
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
- [Software Updates Scheduled Deployment](../../develop/sum/software-updates-deployments.md)   
+ [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
  [How to Assign a Package to a Distribution Point](../../develop/core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md)   
  [SMS_Template](../../develop/reference/sum/sms_template-server-wmi-class.md)

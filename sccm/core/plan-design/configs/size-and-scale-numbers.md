@@ -2,7 +2,7 @@
 title: Size and scale
 titleSuffix: Configuration Manager
 description: Determine the number of site system roles and sites that you'll need to support the devices in your environment.
-ms.date: 07/26/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Size and scale numbers for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Each Configuration Manager deployment has a maximum number of sites, site system roles, and devices that it can support. These numbers vary depending on your hierarchy structure, what types and numbers of sites you use, and the site system roles that you deploy. The information in this article can help you determine the number of site system roles and sites that you need to support the devices you expect to manage.
 
@@ -53,7 +54,7 @@ These support numbers are based on using the recommended hardware for Configurat
 ### Application catalog web service point  
 
 > [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -65,7 +66,7 @@ These support numbers are based on using the recommended hardware for Configurat
 ### Application catalog website point  
 
 > [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -133,10 +134,37 @@ For information about the number of clients and devices that a management point 
 
 ### Software update point  
 
-- A software update point that is installed on the site server can support up to 25,000 clients.
+Use the following recommendations as a baseline. This baseline helps you determine the information for the software updates capacity planning that is appropriate to your organization. The actual capacity requirements might vary from the recommendations listed in this article depending on the following criteria: 
+- Your specific networking environment
+- The hardware that you use to host the software update point site system
+- The number of managed clients
+- The other site system roles installed on the server  
 
-- A software update point that is remote from the site server can support up to 150,000 clients when the remote computer meets the Windows Server Update Services (WSUS) requirements to support this number of clients.  
+#### <a name="BKMK_SUMCapacity"></a> Capacity planning for the software update point  
 
+The number of supported clients depends on the version of Windows Server Update Services (WSUS) that runs on the software update point. It also depends on whether the software update point site system role coexists with another site system role:  
+
+- The software update point can support up to 25,000 clients when WSUS runs on the software update point server, and the software update point coexists with another site system role.  
+
+- The software update point can support up to 150,000 clients when a remote server meets WSUS requirements, WSUS is used with Configuration Manager, and you configure the following settings:
+
+    IIS Application Pools:
+    - Increase the WsusPool Queue Length to 2000
+    - Increase the WsusPool Private Memory limit x4 times, or set to 0 (unlimited). For example, if the default limit is 1,843,200 KB, increase it to 7,372,800. For more information, see this [Configuration Manager support team blog post](https://blogs.technet.microsoft.com/configurationmgr/2015/03/23/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors/).  
+
+    For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](/sccm/core/plan-design/configs/recommended-hardware#bkmk_ScaleSieSystems).  
+
+
+#### <a name="bkmk_sum-capacity-obj"></a> Capacity planning for software updates objects  
+
+Use the following capacity information to plan for software updates objects:  
+
+- **Limit of 1000 software updates in a deployment** -Limit the number of software updates to 1000 for each software update deployment. When you create an automatic deployment rule (ADR), specify criteria that limits the number of software updates. The ADR fails when the specified criteria returns more than 1000 software updates. Check the status of the ADR from the **Automatic Deployment Rules** node in the Configuration Manager console. When you manually deploy software updates, don't select more than 1000 updates to deploy.  
+
+  Also limit the number of software updates to 1000 in a configuration baseline. For more information, see [Create configuration baselines](/sccm/compliance/deploy-use/create-configuration-baselines).
+
+- **Limit of 580 security scopes for automatic deployment rules** -<!--ado 4962928-->
+Limit the number of security scopes on automatic deployment rules (ADRs) to less than 580. When you create an ADR, the security scopes that have access to it are automatically added. If there are more than 580 security scopes set, the ADR will fail to run and an error is logged in ruleengine.log.
 
 ## <a name="bkmk_clientnumbers"></a> Client numbers for sites and hierarchies
 
@@ -150,13 +178,9 @@ A central administration site supports a total number of devices that includes u
 
 - 25,000 devices that run Mac and Windows CE 7.0  
 
-- One of the following, depending on how your deployment supports mobile device management (MDM):  
+- 100,000 devices that you manage by using on-premises mobile device management (MDM)
 
-    - 100,000 devices that you manage by using on-premises MDM  
-
-    - 300,000 cloud-based devices  
-
-For example, in a hierarchy you can support 700,000 desktops, up to 25,000 Mac and Windows CE 7.0 devices, and up to 300,000 cloud-based devices when you integrate Microsoft Intune. This hierarchy supports a total of 1,025,000 devices. If you support devices that are managed by on-premises MDM, the total for this hierarchy is 825,000 devices.  
+For example, in a hierarchy you can support 700,000 desktops, up to 25,000 Mac and Windows CE 7.0 devices, and up to 100,000 devices managed by on-premises MDM. This hierarchy supports a total of 825,000 devices.
 
 > [!IMPORTANT]  
 > In a hierarchy where the central administration site uses a Standard edition of SQL Server, the hierarchy supports a maximum of 50,000 desktops and devices. To support more than 50,000 desktops and devices, you must use an Enterprise edition of SQL Server. This requirement applies only to a central administration site. It doesn't apply to a stand-alone primary site or a child primary site. The edition of SQL Server you use for a primary site doesn't limit its capacity to support the stated number of clients.
@@ -181,13 +205,9 @@ A stand-alone primary site supports the following number of devices:
 
     - 25,000 devices that run Mac and Windows CE 7.0
 
-    - One of the following, depending on how your deployment supports mobile device management:  
+    - 50,000 devices that you manage by using on-premises MDM  
 
-        - 50,000 devices that you manage by using on-premises MDM  
-
-        - 150,000 cloud-based devices  
-
-For example, a stand-alone primary site that supports 150,000 desktops and 10,000 Mac or Windows CE 7.0 can support only an additional 15,000 devices. Those devices can be either cloud-based or managed by using on-premises MDM.  
+For example, a stand-alone primary site that supports 150,000 desktops and 10,000 Macs can only support an additional 15,000 mobile devices managed by on-premises MDM.
 
 ### <a name="embedded"></a> Primary sites and Windows Embedded devices
 

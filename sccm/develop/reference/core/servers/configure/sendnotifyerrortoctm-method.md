@@ -9,7 +9,8 @@ ms.assetid: 8bd9b7b3-ef44-429c-b82c-4958ff826206
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SendNotifyErrorToCTM Method
 The **SendNotifyErrorToCTM** method, in Configuration Manager, notifies Content Transfer Manager of errors.  
@@ -76,6 +77,3 @@ HRESULT stdcall SendNotifyErrorToCTM(
 
 ## Development Requirements  
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Alternate Content Provider](../../../../../develop/reference/core/servers/configure/alternate-content-provider-classes.md)

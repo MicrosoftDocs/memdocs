@@ -9,10 +9,11 @@ ms.assetid: 0ccb114a-9666-40f5-a02c-894822f3d359
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Updating an Existing Resource Instance
-When the Data Discovery Manager (DDM), in System Center Configuration Manager, finds an existing resource that matches the data discovery record (DDR), the resource instance is updated; otherwise, a new instance is created. The DDM uses the following approach to find a resource match.  
+When the Data Discovery Manager (DDM), in Configuration Manager, finds an existing resource that matches the data discovery record (DDR), the resource instance is updated; otherwise, a new instance is created. The DDM uses the following approach to find a resource match.  
 
 ## Unique Identifier Specified by DDR  
  If the DDR specifies the unique identifier property for the resource, it is used to find a matching resource instance.  
@@ -46,8 +47,6 @@ SELECT * FROM DiscPropertyDefs WHERE (Flags & 0x8) = 0x8
  A Heartbeat DDR is processed if it comes with a time stamp that is earlier than any other DDR (except a Heartbeat DDR). A DDR with a time stamp that is later than the client's current site database time stamp for that discovery method is rejected. The only exception is a Heartbeat DDR, which will be processed.  
 
 ## See Also  
- [Configuration Manager SDK](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Discovery](../../../../develop/core/servers/configure/discovery.md)   
- [Extending Resource Discovery](../../../../develop/core/servers/configure/extending-resource-discovery.md)   
+
  [How to Get the Unique Identifier Value for a Client](../../../../develop/core/servers/configure/how-to-get-the-unique-identifier-value-for-a-client.md)   
  [How to Add New Properties to an Existing Resource Type](../../../../develop/core/servers/configure/how-to-add-new-properties-to-an-existing-resource-type.md)

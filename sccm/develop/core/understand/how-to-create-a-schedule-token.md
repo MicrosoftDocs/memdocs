@@ -9,10 +9,11 @@ ms.assetid: 27028a26-7ec2-4f0c-842f-1c7a6255066b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a Schedule Token
-You create a schedule token, in System Center Configuration Manager, by creating and populating an instance of the appropriate `SMS_ST_` schedule token class. `SMS_ST` schedule classes are child classes of the `SMS_ScheduleToken` class and handle the scheduling of events with differing frequencies such as daily, weekly and monthly.  
+You create a schedule token, in Configuration Manager, by creating and populating an instance of the appropriate `SMS_ST_` schedule token class. `SMS_ST` schedule classes are child classes of the `SMS_ScheduleToken` class and handle the scheduling of events with differing frequencies such as daily, weekly and monthly.  
 
  The [SMS_ScheduleMethods](../../../develop/reference/core/servers/configure/sms_schedulemethods-server-wmi-class.md) Windows Management Instrumentation (WMI) class, and the corresponding [ReadFromString](../../../develop/reference/core/servers/configure/readfromstring-method-in-class-sms_schedulemethods.md) and [WriteToString](../../../develop/reference/core/servers/configure/writetostring-method-in-class-sms_schedulemethods.md) methods are used to decode and encode schedule tokens into and from an interval string. The interval strings can then be used to set schedule properties when defining or modifying objects. An example of this can be seen in the [How to Create a Maintenance Window for a Collection](../../../develop/core/servers/configure/how-to-create-a-maintenance-window-for-a-collection.md) topic where the `ServiceWindowSchedules` property is configured.  
 
@@ -154,8 +155,7 @@ public void CreateDailyRecurringScheduleToken(WqlConnectionManager connection,
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Scheduling Server WMI Classes](../../../develop/reference/core/servers/configure/scheduling-server-wmi-classes.md)   
+ [Configuration Manager Software Development Kit](../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [SMS_ST_NonRecurring Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_nonrecurring-server-wmi-class.md)   
  [SMS_ST_RecurInterval Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_recurinterval-server-wmi-class.md)   
  [SMS_ST_RecurMonthlyByDate Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_recurmonthlybydate-server-wmi-class.md)   

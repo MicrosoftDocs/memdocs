@@ -9,10 +9,11 @@ ms.assetid: 11ec1d68-c5ee-4822-a519-b92011909d1d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create an Application with the Script Deployment Type
-Applications are new to System Center Configuration Manager.  Prior to System Center Configuration Manager, a package was the basic object that was used to install software.  Now, a more flexible and complete model exists for applications in Configuration Manager.  Software based on this new model are referred to as Applications.  Packages still exist in System Center Configuration Manager, but they are defined and behave in much the same manner as packages did in Configuration Manager.  
+Applications are new to Configuration Manager.  Prior to Configuration Manager, a package was the basic object that was used to install software.  Now, a more flexible and complete model exists for applications in Configuration Manager.  Software based on this new model are referred to as Applications.  Packages still exist in Configuration Manager, but they are defined and behave in much the same manner as packages did in Configuration Manager.  
 
  The application model defines a standard set of properties and metadata that is used by the system to manage the lifecycle of the application. As applications are modeled, the application itself can be a building block used to help define other applications in the system. For example, .NET Framework can be defined as an application, and then it can be referenced by a parent application as a dependency that must be present or installed before the parent application is installed.  
 
@@ -26,11 +27,11 @@ Applications are new to System Center Configuration Manager.  Prior to System Ce
 
 -   **Saving the World One Line of Code at a Time**  
 
-     [How to Create a Basic App using the Configuration Manager 2012 Beta 2 SDK](http://blogs.msdn.com/b/one_line_of_code_at_a_time/archive/2011/06/14/how-to-create-a-basic-app-using-the-configuration-manager-2012-beta-2-sdk.aspx)  
+     [How to Create a Basic App using the Configuration Manager 2012 Beta 2 SDK](https://blogs.msdn.com/b/one_line_of_code_at_a_time/archive/2011/06/14/how-to-create-a-basic-app-using-the-configuration-manager-2012-beta-2-sdk.aspx)  
 
 -   **Adam Meltzer's Configuration Manager Blog**  
 
-     [SDK: How to create a basic application and add a deployment type](http://blogs.msdn.com/b/ameltzer/archive/2012/04/25/sdk-how-to-create-a-basic-application-and-add-a-deployment-type.aspx)  
+     [SDK: How to create a basic application and add a deployment type](https://blogs.msdn.com/b/ameltzer/archive/2012/04/25/sdk-how-to-create-a-basic-application-and-add-a-deployment-type.aspx)  
 
 -   **SDK Sample: AppSupersedence**  
 
@@ -272,5 +273,4 @@ namespace ApplicationCreator
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Application Management](../../develop/apps/application-management.md)   
  [SMS_Collection Server WMI Class](../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)

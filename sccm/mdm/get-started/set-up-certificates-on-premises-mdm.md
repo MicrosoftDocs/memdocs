@@ -1,8 +1,8 @@
 ---
-title: "Set up certificates "
-titleSuffix: "Configuration Manager"
-description: "Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager."
-ms.date: 03/05/2017
+title: Certificates for on-premises MDM
+titleSuffix: Configuration Manager
+description: Set up certificates for trusted communications with on-premises mobile device management (MDM) in Configuration Manager.
+ms.date: 01/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,154 +10,154 @@ ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
-# Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# Set up certificates for trusted communications with on-premises MDM
 
-System Center Configuration Manager On\-premises Mobile Device Management requires the enrollment point, enrollment proxy point, distribution point, and device management point  site system roles to be set up for trusted communications with managed devices. Any site system server hosting one or more of those roles must have a unique PKI certificate bound to the web server on that system. A certificate with the same  root as the certificate on the servers most also be stored on managed devices to establish trusted communication with them.  
+*Applies to: Configuration Manager (current branch)*
 
- For domain-joined devices, Active Directory Certificate Services installs the needed certificate with the trusted root on all devices automatically. For non-domain-joined devices, you must obtain a valid certificate with a trusted root by some other means. If you use the site CA as your trusted root (which is the same one Active Directory uses for domain-joined devices), the site system servers for the enrollment point and enrollment proxy point must have a certificate issued by that CA bound to them.  
+Configuration Manager on-premises mobile device management (MDM) requires that you configure the site system roles for trusted communications with managed devices. You need two types of certificates:
 
- Each device to be managed will also need to have a certificate with the same root installed on them to support trusted communications with the site system roles. For bulk-enrolled devices, you can include the certificate in the enrollment package that is added to the device for enrolling it when the device is started for the first time by a user. For user-enrolled devices, you need to add the certificate through email, web download, or some other method.  
+- A **web server certificate** in IIS on the servers hosting the required site system roles. If one server hosts multiple site system roles, then you only need one certificate for that server. If each role is on a separate server, each server needs a separate certificate.
 
- As an alternative for non-domain joined devices, you can use the root of a well-known public CA (like Verisign or GoDaddy) to issue the server certificate, which avoids having to manually install a certificate on the device, because most devices natively trust connections to servers using the same root of the public CA. This is a useful alternative for user-enrolled devices in which it is not feasible to install the certificates trusted through the site CA on each device.  
+- The **trusted root certificate** of the certificate authority (CA) that issues the web server certificates. Install this root certificate on all devices that need to connect to the site system roles.
+
+For domain-joined devices, if you use Active Directory Certificate Services, it can automatically install these certificates on all devices. For non-domain-joined devices, install the trusted root certificate by some other means.
+
+For bulk-enrolled devices, you can include the certificate in the enrollment package. For user-enrolled devices, you need to add the certificate through email, web download, or some other method.
+
+If you use a well-known public CA like Verisign or GoDaddy to issue the server certificates, you can avoid having to manually install the trusted root certificate on each device. Most devices natively trust these public authorities. This method is a useful alternative for user-enrolled devices, instead of installing the certificate through other means.
 
 > [!IMPORTANT]  
->  There are many ways to set up the certificates for trusted communications between devices and the site system servers for On\-premises Mobile Device Management. The information provided in this article is given as an example of one way to do it. This method requires you to be running a server in your site with Active Directory Certificate Services role and the Certification Authority and Certification Authority Web Enrollment role services installed. See [Active Directory Certificate Services](http://go.microsoft.com/fwlink/p/?LinkId=115018) for more information and guidance on this Windows Server role.  
+> There are many ways to set up the certificates for trusted communications between devices and the site system servers for on-premises MDM. The information in this article is an example of one way to do it. This method requires Active Directory Certificate Services, with a certification authority and the certification authority web enrollment role. For more information, see [Active Directory Certificate Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740\(v=ws.11\)).
 
- To set up the Configuration Manager site for the SSL communications required for On\-premises Mobile Device Management, follow these high-level steps:  
+## <a name="bkmk_configCa"></a> Publish the CRL
 
--   [Configure the certification authority (CA) for CRL publishing](#bkmk_configCa)  
+By default, the Active Directory certification authority (CA) uses LDAP-based certificate revocation lists (CRLs). It allows connections to the CRL for domain-joined devices. To allow non-domain-joined devices to trust certificates issued from the CA, add an HTTP-based CRL.
 
--   [Create the web server certificate template on the CA](#bkmk_certTempl)  
+1. On the server running the certification authority for your site, go to the **Start** menu, select **Administrative Tools**, and choose **Certification Authority**.
 
--   [Request the web server certificate for each site system role](#bkmk_requestCert)  
+1. In the Certification Authority console, right-click **CertificateAuthority**, and then select **Properties**.
 
--   [Bind the certificate to the web server](#bkmk_bindCert)  
+1. In CertificateAuthority properties, switch to the **Extensions** tab. Make sure that **Select extension** is set to **CRL Distribution Point (CDP)**.
 
--   [Export the certificate with the same root as the web server certificate](#bkmk_exportCert)  
+1. Select `http://<ServerDNSName>/CertEnroll/<CAName><CRLNameSuffix><DeltaCRLAllowed>.crl`. Then select the following options:
 
-##  <a name="bkmk_configCa"></a> Configure the certification authority (CA) for CRL publishing  
- By default, the certification authority (CA) uses LDAP-based certificate revocation lists (CRLs) that allows connections for domain-joined devices. You must add HTTP-based CRLs to the CA to make it possible for non-domain-joined devices to be trusted with certificates issues from the CA. These certificates are required for SSL communications between the servers hosting the Configuration Manager site system roles and the devices enrolled for On\-premises Mobile Device Management.  
+    - **Include in CRLs. Clients use this to find Delta CRL locations.**
 
- Follow the steps below to configure the CA to autopublish CRL information for issuing certificates that allow trusted connections for domain-joined and non-domain-joined devices:  
+    - **Include in CDP extension of issued certificates.**
 
-1.  On the server running the certification authority for your site, click **Start** > **Administrative Tools** > **Certification Authority**.  
+    - **Include in the IDP extension of issued CRLs**
 
-2.  In the Certification Authority console, right-click **CertificateAuthority**, and then click **Properties**.  
+1. Switch to the **Exit Module** tab. Select **Properties**, then select **Allow certificates to be published to the file system**. You'll see a notice to restart Active Directory Certificate Services.
 
-3.  In CertificateAuthority properties, click the **Extensions** tab, make sure that **Select extension** is set to **CRL Distribution Point (CDP)**  
+1. Right-click **Revoked Certificates**, select **All Tasks**, and then choose **Publish**.
 
-4.  Select **http://<ServerDNSName\>/CertEnroll/<CAName\><CRLNameSuffix\><DeltaCRLAllowed\>.crl**. And the three options below:  
+1. In the Publish CRL window, select **Delta CRL only**, and then select **OK** to close the window.
 
-    -   **Include in CRLs. Clients use this to find Delta CRL locations.**  
+## <a name="bkmk_certTempl"></a> Create the certificate template
 
-    -   **Include in CDP extension of issued certificates.**  
+The CA uses the web server certificate template to issue certificates for the servers hosting the site system roles. These servers will be SSL endpoints for trusted communications between the site system roles and enrolled devices.
 
-    -   **Include in the IDP extension of issued CRLs**  
+1. Create a domain security group named **ConfigMgr MDM servers**. Add to the group the computer accounts of the site system servers.
 
-5.  Click the **Exit Module** tab, click **Properties...**, then select **Allow certificates to be published to the file system**.  
+1. In the Certification Authority console, right-click **Certificate Templates**, and choose **Manage**. This action loads the Certificate Templates console.
 
-6.  Click **OK** when notified that Active Directory Certificate Services must restarted.  
+1. In the results pane, right-click the entry that displays **Web Server** in the **Template Display Name** column, and then select **Duplicate Template**.
 
-7.  Right-click **Revoked Certificates**, click **All Tasks**, and then click **Publish**.  
+1. In the **Duplicate Template** window, select **Windows 2003 Server, Enterprise Edition** or **Windows 2008 Server, Enterprise Edition**, and then select **OK**.
 
-8.  In Publish CRL dialog, select **Delta CRL only**, and then click **OK**.  
+    > [!TIP]
+    > Configuration Manager supports Windows 2008 Server certificate templates, also known as V3 or Cryptography: Next Generation (CNG) certificates. For more information, see [CNG certificates overview](/configmgr/core/plan-design/network/cng-certificates-overview).
 
-##  <a name="bkmk_certTempl"></a> Create the web server certificate template on the CA  
- After publishing the new CRL on the CA, the next step is to create a web server certificate template. This template is required for issuing certificates for the servers hosting the enrollment point, enrollment proxy point, distribution point, and  device management point site system roles. These servers will be SSL endpoints for trusted communications between the site system roles and  enrolled devices.    Follow the steps below to create the certificate template:  
+    If your CA runs on Windows Server 2012 or later, this window doesn't show the option for certificate template version. After you duplicate the template, select the version on the **Compatibility** tab of the template properties.
 
-1.  Create a security group named **ConfigMgr MDM Servers** that contains the servers running the site systems that require trusted communications with enrolled devices.  
+1. In the **Properties of New Template** window, on the **General** tab, enter a template name. The CA uses this name to generate the web certificates that will be used on Configuration Manager site systems. For example, type **ConfigMgr MDM web server**.
 
-2.  In the Certification Authority console, right-click **Certificate Templates** and click **Manage** to load the Certificate Templates console.  
+1. Switch to the **Subject Name** tab, and select **Build from Active Directory information**. For the subject name format, specify **DNS name**. If **User Principal Name (UPN)** is selected, disable the option for alternate subject name.
 
-3.  In the results pane, right-click the entry that displays **Web Server** in the column **Template Display Name**, and then click **Duplicate Template**.  
+1. Switch to the **Security** tab.
 
-4.  In the **Duplicate Template** dialog box, ensure that **Windows 2003 Server, Enterprise Edition** is selected, and then click **OK**.  
+    1. Remove the **Enroll** permission from the **Domain Admins** and **Enterprise Admins** security groups.
 
-    > [!IMPORTANT]  
-    >  Do not select **Windows 2008 Server, Enterprise Edition**. Configuration Manager does not support Windows Server 2008 certificate templates for trusted communications using HTTPS.  
+    1. Select **Add**, and enter the name of your security group. For example, **ConfigMgr MDM servers**. Select **OK** to close the window.
 
-    > [!NOTE]  
-    >  If the CA you are using is on Windows Server 2012, you are not prompted for the certificate template version when you click **Duplicate Template**. Instead, specify this on the **Compatibility** tab of the template properties, as follows:  
-    >   
-    >  **Certification Authority**: **Windows Server 2003**  
-    >   
-    >  **Certificate recipient**: **Windows XP / Server 2003**  
+    1. Select the **Enroll** permission for this group. Don't remove the **Read** permission.
 
-5.  In the **Properties of New Template** dialog box, on the **General** tab, enter a template name to generate the web certificates that will be used on Configuration Manager site systems, such as **ConfigMgr MDM Web Server**.  
+1. Select **OK** to save your changes, and close the Certificate Templates console.
 
-6.  Click the **Subject Name** tab, select **Build from Active Directory information**, and for subject name format, specify **DNS name**. Clear the check box from alternate subject name, if **User Principal Name (UPN)** is selected.  
+1. In the Certification Authority console, right-click **Certificate Templates**, select **New**, and then choose **Certificate Template to Issue**.
 
-7.  Click the **Security** tab, and remove the **Enroll** permission from the security groups **Domain Admins** and **Enterprise Admins**.  
+1. In the **Enable Certificate Templates** window, select the new template. For example, **ConfigMgr MDM web server**. Then select **OK** to save and close the window.
 
-8.  Click **Add**, enter **ConfigMgr MDM Servers** in the text box, and then click **OK**.  
+## <a name="bkmk_requestCert"></a> Request the certificate
 
-9. Select the **Enroll** permission for this group, and do not clear the **Read** permission.  
+This process describes how to request the web server certificate for IIS. Do this process for each site system server that hosts one of the roles for on-premises MDM.
 
-10. Click **OK**, and close the Certificate Templates  console.  
+1. On the site system server that hosts one of the roles, open a command prompt as an administrator. Enter `mmc` to open an empty Microsoft Management Console.
 
-11. In the Certification Authority console, right-click **Certificate Templates**, click **New**, and then click **Certificate Template to Issue**.  
+1. In the console window, go to the **File** menu, and select **Add/Remove Snap-in**.
 
-12. In the **Enable Certificate Templates** dialog box, select the new template that you have just created, **ConfigMgr MDM Web Server**, and then click **OK**.  
+    1. Choose **Certificates** from the list of available snap-ins and select **Add**.
 
-##  <a name="bkmk_requestCert"></a> Request the web server certificate for each site system role  
- Devices enrolled for On\-premises Mobile Device Management must trust SSL endpoints hosting the enrollment point, enrollment proxy point, distribution point, and  device management point.  The steps below describe how to request the web server certificate for IIS. You must do this for each server (SSL endpoint) hosting one of the required site system roles for On\-premises Mobile Device Management.  
+    1. In the Certificates snap-in window, choose **Computer account**. Select **Next**, and then select **Finish** to manage the local computer.
 
-1. On the primary site server, open command prompt with administrator permission, type **MMC** and press **Enter**.  
+    1. Select **OK** to exit the Add or Remove Snap-in window.
 
-2. In the MMC, click **File** > **Add/Remove Snap-in**.  
+1. Expand **Certificates (Local Computer)**, and select the **Personal** store. Go to the **Action** menu, select **All Tasks**, and choose **Request New Certificate**. This action communicates with Active Directory Certificate Services to create a new certificate using the template you previously created.
 
-3. In the Certificates snap-in, select **Certificates**, click **Add**, select **Computer account**, click **Next**, click **Finish**, and then click **OK** to exit the Add or Remove Snap-in window.  
+    1. In the Certificate Enrollment wizard, on the Before You Begin page, select **Next**.
 
-4. Right-click **Personal**, and then click **All Tasks** > **Request New Certificate**.  
+    1. On the Select Certificate Enrollment Policy page, select **Active Directory Enrollment Policy**, and then select **Next**.
 
-5. In the Certificate Enrollment wizard, click **Next**, select **Active Directory Enrollment Policy** and click **Next**.  
+    1. Select your web server certificate template (**ConfigMgr MDM Web Server**), and then select **Enroll**.
 
-6. Select the checkbox next to the web server certificate (**ConfigMgr MDM Web Server**), and then click **Enroll**.  
+    1. After it requests the certificate, select **Finish**.
 
-7. Once certificate is enrolled, click **Finish**.  
+Each server needs a unique web server certificate. Repeat this process for every server that hosts one of the required site system roles. If one server hosts all the site system roles, you just need to request one web server certificate.
 
-   Because each server will need a unique web server certificate, you need to repeat this process for every server hosting one of the required site system roles for On\-premises Mobile Device Management.  If one server hosts all the site system roles, you just need to request one web server certificate.  
+## <a name="bkmk_bindCert"></a> Bind the certificate
 
-##  <a name="bkmk_bindCert"></a> Bind the certificate to the web server  
- The new certificate now needs to be bound to the web server of each site system server hosting the required site system roles for On\-premises Mobile Device Management. Follow the steps below for each server hosting the enrollment point and enrollment proxy point site system roles. If one server hosts all the site system roles, you only need to follow these steps once. You do not have to do this task for the distribution point and device management point site system roles since they automatically receive the required certificate during enrollment.  
+The next step is to bind the new certificate to the web server. Follow this process for each server that hosts the *enrollment point* and *enrollment proxy point* site system roles. If one server hosts all the site system roles, you only need to do this process once.
 
-1.  On the server hosting the enrollment point, enrollment proxy point, distribution point, or device management point, click **Start** > **Administrative Tools** > **IIS Manager**.  
+> [!NOTE]
+> You don't have to do this process for the distribution point and device management point site system roles. They automatically receive the required certificate during enrollment.
 
-2.  Under Connections, navigate to and right-click **Default Web Site**, and then  click **Edit Bindings...**  
+1. On the server hosting the enrollment point or enrollment proxy point, go to the **Start** menu, select **Administrative Tools**, and choose **IIS Manager**.
 
-3.  In Site Bindings dialog, click **https**, and then click **Edit...**  
+1. In the list of Connections, select the **Default Web Site**, and then select **Edit Bindings**.
 
-4.  In the Edit Site Binding dialog, select the certificate you just enrolled for the **SSL certificate**, click **OK**, and then click **Close**.  
+    1. In Site Bindings window, select **https**, and then select **Edit**.
 
-5.  In IIS Manager console, under Connections, select the web server, and then in the right Actions panel, click **Restart**.  
+    1. In the Edit Site Binding window, select the newly enrolled certificate for the **SSL certificate**. Select **OK** to save, and then select **Close**.
 
-##  <a name="bkmk_exportCert"></a> Export the certificate with the same root as the web server certificate  
- Active Directory Certificate Services typically installs the required certificate from the CA on all domain-joined devices. But non-domain-joined devices will not be able to communicate with the site system roles without certificate from the root CA. To get the certificate required for devices to communicate with the site system roles, you can export it   from the certificate bound to the web server.  
+1. In the IIS Manager console, in the list of Connections, select the web server. In the Action panel on the right side, select **Restart**. This action restarts the web server service.
 
- Follow these steps to export the root certificate of the web server's certificate.  
+## <a name="bkmk_exportCert"></a> Export the trusted root certificate
 
-1.  In IIS Manager, click **Default Web Site**, and then in the right Action panel, click **Bindings...**  
+Active Directory Certificate Services automatically installs the required certificate from the CA on all domain-joined devices. To get the certificate that's required for non-domain-joined devices to communicate with the site system roles, export it from the certificate bound to the web server.
 
-2.  In the Site Bindings dialog, click **https**, and then click **Edit...**  
+1. In IIS Manager, select the **Default Web Site**. In the Action panel on the right side, select **Bindings**.
 
-3.  Make sure the web server certificate is selected, and click **View...**  
+1. In the Site Bindings window, select **https**, and then select **Edit**.
 
-4.  In properties of the web server certificate, click **Certification Path**, click the root at the top of the certification path, and click **View Certificate**.  
+1. Select the web server certificate, and select **View**.
 
-5.  In the properties of the root certificate, click **Details**, and then click **Copy to File...**  
+1. In properties of the web server certificate, switch to the **Certification Path** tab. Select the root of the certification path, and select **View Certificate**.
 
-6.  In the Certificate Export Wizard, click **Next**.  
+1. In the properties of the root certificate, switch to the **Details** tab, and then select **Copy to File**.
 
-7.  Make sure **DER encoded binary X.509 (.CER)** is selected for format, and click **Next**.  
+1. In the Certificate Export Wizard, on the Welcome page, select **Next**.
 
-8.  For the file name, click **Browse...**, choose a location to save the certificate file, name the file, and click **Save**.  
+1. Select **DER encoded binary X.509 (.CER)** as the format, and select **Next**.
 
-     Devices to be enrolled will need access to this file to import the root certificate, so you choose a common location that most computers and devices can access, or you can save it to a convenient location now (like the C drive) and move it to common location later.  
+1. Enter a path and file name to identify this trusted root certificate. For the file name, click **Browse...**, choose a location to save the certificate file, name the file, and select **Next**.
 
-     Click **Next**.  
+1. Review the settings, and select **Finish** to export the certificate to file.
 
-9. Review the settings, and click **Finish** .  
+Depending upon your certificate authority design, you may need to export additional subordinate CA root certificates. Repeat this process to export the other certificates in the web server certificate's certification path.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Set up device enrollment](/configmgr/mdm/get-started/set-up-device-enrollment-on-premises-mdm)

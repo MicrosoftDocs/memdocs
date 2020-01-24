@@ -9,13 +9,14 @@ ms.assetid: 41fc3f3c-7f32-471e-9005-d697eed4983f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_Policy_ExpressionHandlerRegistration Client WMI Class
 > [!IMPORTANT]
 >  This class supports the Configuration Manager 2007 infrastructure and is not intended to be used directly from your code.  
 
- In System Center Configuration Manager, the `CCM_Policy_ExpressionHandlerRegistration` class is a client Windows Management Instrumentation (WMI) class that describes a registered expression handler for a policy. An expression handler is a COM object that implements the `ICcmPolicyExpressionHandler` interface.  
+ in Configuration Manager, the `CCM_Policy_ExpressionHandlerRegistration` class is a client Windows Management Instrumentation (WMI) class that describes a registered expression handler for a policy. An expression handler is a COM object that implements the `ICcmPolicyExpressionHandler` interface.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

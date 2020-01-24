@@ -9,7 +9,8 @@ ms.assetid: 457311dc-674c-4198-bec8-ee985199024c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_DCMDeploymentErrorStatus Server WMI Class
 The `SMS_DCMDeploymentErrorStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents error status for a deployment.  

@@ -10,12 +10,13 @@ ms.assetid: e46ad501-5d73-44ac-92de-0de14ef72b83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to deploy clients to Macs
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article describes how to deploy and maintain the Configuration Manager client on Mac computers. To learn about what you have to configure before deploying clients to Mac computers, see [Prepare to deploy client software to Macs](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients).
 
@@ -229,7 +230,7 @@ This procedure removes the SMSID. The Configuration Manager client for Mac requi
 
 7. In the **Edit Discovery Script** window, enter the following shell script:  
 
-    ```  
+    ``` Shell
     defaults read com.microsoft.ccmclient SMSID  
     ```  
 
@@ -239,7 +240,7 @@ This procedure removes the SMSID. The Configuration Manager client for Mac requi
 
 10. In the **Create Remediation Script** window, enter the following shell script:  
 
-    ```  
+    ``` Shell
     defaults delete com.microsoft.ccmclient SMSID  
     ```  
 
@@ -263,7 +264,7 @@ This procedure removes the SMSID. The Configuration Manager client for Mac requi
 
 15. After you install a new certificate on Mac computers that have the SMSID removed, run the following command to configure the client to use the new certificate:  
 
-    ```  
+    ``` Shell
     sudo defaults write com.microsoft.ccmclient SubjectName -string <subject_name_of_new_certificate>  
     ```  
 

@@ -2,7 +2,7 @@
 title: "Create updates"
 titleSuffix: "Configuration Manager"
 description: "Create and bundle software updates with System Center Updates Publisher"
-ms.date: 4/29/2017
+ms.date: 04/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,7 +10,8 @@ ms.assetid: 46a1a8ac-126c-4ee6-ae09-32dfbdb83368
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Create  software updates and update bundles with Updates Publisher
 

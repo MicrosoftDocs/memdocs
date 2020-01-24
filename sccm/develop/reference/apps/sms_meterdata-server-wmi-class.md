@@ -9,10 +9,11 @@ ms.assetid: 5e7733bb-3c1f-4b84-a7ff-9c100411b7cb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_MeterData Server WMI Class
-The `SMS_MeterData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents captured software metering data.  
+The `SMS_MeterData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents captured software metering data.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -185,11 +186,8 @@ Class SMS_MeterData : SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Software Metering Server WMI Classes](../../../develop/reference/apps/software-metering-server-wmi-classes.md)

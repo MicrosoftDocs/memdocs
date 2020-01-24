@@ -2,7 +2,7 @@
 title: Introduction to app management
 titleSuffix: Configuration Manager
 description: Discover the basic information you'll need to manage and deploy applications in Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Introduction to application management in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 In this article, you'll learn the basics before you start working with Configuration Manager applications.  
 
 > [!TIP]  
 > If you're already familiar with how to manage applications in Configuration Manager, skip this article. Move on to creating a sample application: [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application).  
-
 
 ## What is an application?
 
@@ -39,7 +39,7 @@ For example, your company has a line-of-business application called Astoria. The
 
 - Windows Installer package for full functionality on Windows 10 devices
 - An App-V package for use in the terminal server farm
-- An Android app package for mobile users  
+- An web app for mobile users  
 
 You create a single application for Astoria in Configuration Manager. The application defines the high-level metadata about the app that's common across all installation methods and platforms. You then create three deployment types for the available installation methods, and deploy the application to all users. Based on the requirements and other configurations on the deployment types, Configuration Manager determines the right method in each use case.
 
@@ -124,7 +124,6 @@ Starting in version 1906, create a group of applications that you can send to a 
 
 For more information, see [Create application groups](/sccm/apps/deploy-use/create-app-groups).
 
-
 ## What application types can you deploy?
 
 Configuration Manager lets you deploy the following app types:  
@@ -134,7 +133,7 @@ Configuration Manager lets you deploy the following app types:
 - Windows app package (appx or appxbundle)  
 
     > [!Note]  
-    > Starting in version 1806, this type includes the new Windows 10 app package (msix) and app bundle (msixbundle) formats.<!--1357427-->  
+    > This type includes the new Windows 10 app package (msix) and app bundle (msixbundle) formats.<!--1357427-->  
 
 - Windows app package in the Microsoft Store  
 
@@ -142,24 +141,15 @@ Configuration Manager lets you deploy the following app types:
 
 - macOS  
 
-Additionally, when you manage devices through Microsoft Intune or Configuration Manager on-premises device management, manage these further app types:  
+Additionally, when you manage devices through Configuration Manager [on-premises device management](/configmgr/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure), manage these further app types:  
 
 - Windows Phone app package (xap)  
 
 - Windows Phone app package in the Microsoft Store  
 
-- App package for iOS (ipa)  
-
-- App Package for iOS from App Store  
-
-- App package for Android (apk)  
-
-- App package for Android on Google Play  
-
 - Windows Installer through MDM (msi)  
 
 - Web application
-
 
 ## State-based applications  
 
@@ -173,13 +163,11 @@ The Configuration Manager client regularly reevaluates application deployments. 
 
 You can set the re-evaluation interval for application deployments. Use the **Schedule re-evaluation for deployments** client setting in the **Software Deployment** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-deployment).  
 
-
 ## Get started creating an application  
 
 If you want to jump right in and create an application, you'll find a walkthrough in the [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application) article.  
 
 If you're familiar with the basics and looking for more detailed reference information about all the available options, start to [Create applications](/sccm/apps/deploy-use/create-applications).  
-
 
 ## Software Center  
 
@@ -198,15 +186,13 @@ For more information, see the following articles:
 - [Software Center user guide](/sccm/core/understand/software-center)
 
 > [!Note]  
-> The application catalog is deprecated. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat).  
-
+> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat).  
 
 ## Packages and programs  
 
 Configuration Manager continues to support packages and programs that were used in previous versions of the product.
 
 For more information, see [Packages and programs](/sccm/apps/deploy-use/packages-and-programs).  
-
 
 ## Next steps
 

@@ -9,7 +9,8 @@ ms.assetid: 249a6d47-c45f-491d-a846-8082665c6185
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Define the Create Deployment Type Wizard XML File
 To define the custom create deployment type wizard XML file, create an XML file based on the `http://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework` schema. The XML file for the Create Application Wizard should be named CreateDeploymentWizard_\<*TechnologyID*>.xml.  
@@ -32,5 +33,4 @@ To define the custom create deployment type wizard XML file, create an XML file 
     ```  
 
 ## See Also  
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

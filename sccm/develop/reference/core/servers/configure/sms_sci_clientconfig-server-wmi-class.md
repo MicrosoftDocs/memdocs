@@ -9,7 +9,8 @@ ms.assetid: cad6e82b-ba60-4252-8336-f83d595b69bc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SCI_ClientConfig Server WMI Class
 The `SMS_SCI_ClientConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents general configuration information that can be used by more than one client component.  

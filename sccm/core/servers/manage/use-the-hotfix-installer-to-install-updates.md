@@ -10,19 +10,20 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Use the Hotfix Installer to install updates for System Center Configuration Manager
+# Use the Hotfix Installer to install updates for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Some updates for System Center Configuration Manager are not available from the Microsoft cloud service and are only obtained out-of-band. An example is a limited release hotfix to address a specific issue.   
+Some updates for Configuration Manager are not available from the Microsoft cloud service and are only obtained out-of-band. An example is a limited release hotfix to address a specific issue.   
 When you must install an update (or hotfix) that you receive from Microsoft, and that update has a file name that ends with the extension **.exe** (not **update.exe**), you use the hotfix installer that is included with that hotfix download to install the update directly to the Configuration Manager site server.  
 
-If the hotfix file has the **.update.exe** file extension, see [Use the Update Registration Tool to import hotfixes to System Center Configuration Manager](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md).  
+If the hotfix file has the **.update.exe** file extension, see [Use the Update Registration Tool to import hotfixes to Configuration Manager](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md).  
 
 > [!NOTE]  
-> This topic provides general guidance about how to install hotfixes that update System Center Configuration Manager. For details about a specific update, refer to its corresponding Knowledge Base (KB) article at Microsoft Support.  
+> This topic provides general guidance about how to install hotfixes that update Configuration Manager. For details about a specific update, refer to its corresponding Knowledge Base (KB) article at Microsoft Support.  
 
 ##  <a name="bkmk_Overview"></a> Overview of hotfixes for Configuration Manager  
 Hotfixes for  Configuration Manager are similar to those for other Microsoft products, such as SQL Server, contain either one individual fix or a bundle (a rollup of fixes), and are described in a Microsoft Knowledge Base article.  
@@ -79,7 +80,7 @@ By default, the update bundle logs its actions to a .log file on the site server
 
 When you run the update bundle, it extracts a file with the same name as the update bundle to a temporary folder on the computer, and then runs Updatesetup.exe. Updatesetup.exe starts the Software Update for Configuration Manager &lt;product version\> &lt;KB Number\> Wizard.  
 
-As applicable to the scope of the update, the wizard creates a series of folders under the System Center Configuration Manager installation folder on the site server. The folder structure resembles the following:   
+As applicable to the scope of the update, the wizard creates a series of folders under the Configuration Manager installation folder on the site server. The folder structure resembles the following:   
 **\\\\&lt;Server Name\>\SMS_&lt;Site Code\>\Hotfix\\&lt;KB Number\>\\&lt;Update Type\>\\&lt;Platform\>**.  
 
 The following table provides details about the folders in the folder structure:  
@@ -137,7 +138,7 @@ When you install the update bundle on a site server, you can choose to automatic
 > When you choose to automatically update the site database, the process updates a database regardless whether the database is located on the site server or on a remote computer.  
 
 > [!IMPORTANT]  
-> Before you update the site database, create a backup of the site database. You cannot uninstall an update to the site database. For information about how to create a backup for Configuration Manager, see [Backup and recovery for System Center Configuration Manager](../../../protect/understand/backup-and-recovery.md).  
+> Before you update the site database, create a backup of the site database. You cannot uninstall an update to the site database. For information about how to create a backup for Configuration Manager, see [Backup and recovery for Configuration Manager](../../../protect/understand/backup-and-recovery.md).  
 
 **Manual Update of the Site Database**  
 
@@ -202,7 +203,7 @@ The catalog for Updates Publisher is named **SCUPCatalog.cab** and can be found 
 > [!IMPORTANT]  
 > Because the SCUPCatalog.cab file is created by using paths that are specific to the site server where the update bundle is installed, it cannot be used on other site servers.  
 
-After the wizard is finished, you can import the catalog to Updates Publisher, and then use Configuration Manager software updates to deploy the updates. For information about Updates Publisher, see [Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkID=83449) in the TechNet library for System Center 2012.  
+After the wizard is finished, you can import the catalog to Updates Publisher, and then use Configuration Manager software updates to deploy the updates. For information about Updates Publisher, see [Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkID=83449) in the TechNet library for System Center 2012.  
 
 Use the following procedure to import the SCUPCatalog.cab file to Updates Publisher and publish the updates.  
 
@@ -238,7 +239,7 @@ Next, on the **Configure Software Update Deployment Method** page of the wizard,
 
 After the wizard is finished, you can view the packages that it creates in the Configuration Manager console in the **Packages** node in the **Software Library** workspace. You can then use your standard process to deploy software packages to Configuration Manager clients. When a package runs on a client, it installs the updates to the applicable components of Configuration Manager on the client computer.  
 
-For information about how to deploy packages to Configuration Manager clients, see [Packages and programs in System Center Configuration Manager](../../../apps/deploy-use/packages-and-programs.md).  
+For information about how to deploy packages to Configuration Manager clients, see [Packages and programs](../../../apps/deploy-use/packages-and-programs.md).  
 
 ###  <a name="BKMK_DeployCollections"></a> Create collections for deploying updates to Configuration Manager  
 You can deploy specific updates to applicable clients. The following information can help you to create device collections for the different components for Configuration Manager.  
@@ -256,4 +257,4 @@ You can deploy specific updates to applicable clients. The following information
 > [!NOTE]  
 > To update a site database, deploy the update to the site server for that site.  
 
-For information about how to create collections, see [How to create collections in System Center Configuration Manager](../../../core/clients/manage/collections/create-collections.md).  
+For information about how to create collections, see [How to create collections](../../../core/clients/manage/collections/create-collections.md).  

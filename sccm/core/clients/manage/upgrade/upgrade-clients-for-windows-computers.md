@@ -1,8 +1,8 @@
 ---
-title: "Upgrade clients"
-titleSuffix: "Configuration Manager"
-description: "Upgrade clients on Windows computers in System Center Configuration Manager."
-ms.date: 05/04/2017
+title: Upgrade clients on Windows
+titleSuffix: Configuration Manager
+description: Upgrade clients on Windows computers in Configuration Manager.
+ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,13 +10,15 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# How to upgrade clients for Windows computers in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# How to upgrade clients for Windows computers in Configuration Manager
 
-You can upgrade the client on Windows computers using client installation methods or the automatic client upgrade features in Configuration Manager. The following client installation methods are valid ways to upgrade client software on Windows computers:  
+*Applies to: Configuration Manager (current branch)*
+
+Upgrade the Configuration Manager client on Windows computers using client installation methods or the automatic client upgrade feature. The following client installation methods are valid ways to upgrade client software on Windows computers:  
 
 - Group policy installation  
 
@@ -26,68 +28,76 @@ You can upgrade the client on Windows computers using client installation method
 
 - Upgrade installation  
 
-  If you are interested in upgrading the client using a client installation methods, learn more about using those methods in [How to deploy clients to Windows computers in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).
+For more information, see [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
 
-  You can exclude clients from being upgraded by specifying an exclusion group. For more information, see [How to exclude upgrading clients for Windows computers](exclude-clients-windows.md). Excluded clients still download and run CCMSETUP, but won't upgrade.
-
+Exclude clients from upgrade by specifying an exclusion collection. For more information, see [How to exclude clients from upgrade](/sccm/core/clients/manage/upgrade/exclude-clients-windows). Excluded clients still download and run CCMSETUP, but won't upgrade.
 
 > [!TIP]  
->  If you are upgrading your server infrastructure from a previous version of Configuration Manager \(such as Configuration Manager 2007 or System Center 2012 Configuration Manager\), we recommend that you complete the server upgrades including installing all current branch updates, before upgrading the Configuration Manager clients.   The latest current branch update contains the latest version of the client, so it's best to do client upgrades after you have installed all of the Configuration Manager updates you want to use.
+> If upgrade your server infrastructure from a previous version of Configuration Manager, complete the server upgrades before upgrading the Configuration Manager clients. This process includes installing all current branch updates. The latest current branch update contains the latest version of the client. Upgrade clients after you have installed all of the Configuration Manager updates.
 
 > [!NOTE]
-> If you plan to reassign the site for the clients during upgrade, you can specify the new site using the SMSSITECODE client.msi property. If you use AUTO for the SMSSITECODE, you must also specify SITEREASSIGN=TRUE to allow automatic site reassignment to occur during upgrade. For more information, see [SMSSITECODE](../../deploy/about-client-installation-properties.md#smssitecode).
+> If you plan to reassign the site for the clients during upgrade, specify the new site using the `SMSSITECODE` client.msi property. If you use the value of `AUTO` for the `SMSSITECODE`, also specify `SITEREASSIGN=TRUE`. This property allows for automatic site reassignment during upgrade. For more information, see [Client installation properties - SMSSITECODE](/sccm/core/clients/deploy/about-client-installation-properties#smssitecode).
 
-## Use automatic client upgrade  
- You can also configure Configuration Manager to automatically upgrade the client software to the latest Configuration Manager client version when Configuration Manager identifies that a client that is assigned to the Configuration Manager hierarchy is lower than the version used in the hierarchy. This scenario includes upgrading the client to the latest version when it attempts to assign to a Configuration Manager site.  
+## <a name="bkmk_autoupdate"></a> About automatic client upgrade
 
- A client can be automatically upgraded in the following scenarios:  
+Configure the site to automatically upgrade clients to the latest Configuration Manager version. When Configuration Manager identifies an assigned client's version is earlier than the hierarchy version, it automatically upgrades the client. This scenario includes upgrading the client to the latest version when it attempts to assign to a Configuration Manager site.  
 
--   The client version is lower than the version being used in the hierarchy.  
+A client can automatically upgrade in the following scenarios:  
 
--   The client on the central administration site has a language pack installed and the existing client does not.  
+- The client version is earlier than the version used in the hierarchy.  
 
--   A client prerequisite in the hierarchy is a different version than the one installed on the client.  
+- The client on the central administration site (CAS) has a language pack installed and the existing client doesn't.  
 
--   One or more of the client installation files are a different version.  
+- A client prerequisite in the hierarchy is a different version than the one installed on the client.  
 
-> [!NOTE]  
->  You can run the report **Count of Configuration Manager clients by client versions** in the report folder **Site - Client Information** to identify the different versions of the Configuration Manager client in your hierarchy.  
-
- Configuration Manager creates an upgrade package by default that is automatically sent to all distribution points in the hierarchy. If you make changes to the client package on the central administration site, for example, add a client language pack, Configuration Manager automatically updates the package, and distributes it to all distribution points in the hierarchy. If automatic client upgrade is enabled, every client will install the new client language package automatically.  
+- One or more of the client installation files are a different version.  
 
 > [!NOTE]  
->  Configuration Manager does not automatically send the client upgrade package to Configuration Manager cloud-based distribution points.  
+> To identify the different versions of the Configuration Manager client in your hierarchy, use the report **Count of Configuration Manager clients by client versions** in the report folder **Site - Client Information**.  
 
- We recommend that you enable automatic client upgrades across your hierarchy. This will keep your clients updated with minimal administrative overhead.  
+Configuration Manager creates an upgrade package by default. It automatically sends the package to all distribution points in the hierarchy. If you make changes to the client package on the CAS, Configuration Manager automatically updates the package, and redistributes it. An example change is when you add a client language pack. If you enable automatic client upgrade, every client automatically installs the new client language package.
 
- Use the following procedure to configure automatic client upgrade. Automatic client upgrade must be configured at a central administration site and this configuration applies to all clients in your hierarchy.  
+> [!NOTE]  
+> Configuration Manager doesn't automatically send the client upgrade package to Configuration Manager cloud-based distribution points.  
 
-### To configure automatic client upgrades  
+Enable automatic client upgrade across your hierarchy. This configuration keeps your clients up-to-date with less effort.  
 
-1.  In the Configuration Manager console, click **Administration**.  
+If you also manage your Configuration Manager site systems as clients, determine whether to include them as part of the automatic upgrade process. You can exclude all servers, or a specific collection from client upgrade. Some Configuration Manager site roles share the client framework. For example, the management point and pull distribution point. These roles upgrade when you update the site, so the client version on these servers updates at the same time.
 
-2.  In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.  
+## <a name="bkmk_configure"></a> Configure automatic client upgrade
 
-3.  On the **Home** tab, in the **Sites** group, click **Hierarchy Settings**.  
+Use the following procedure to configure automatic client upgrade at the CAS. This configuration applies to all clients in your hierarchy.  
 
-4.  In the **Client Upgrade** tab of the **Hierarchy Settings Properties** dialog box, review the version and date of the production client, and make sure it's the version you want to use for upgrading Windows computers.  If it's not the client version you were expecting to see, you may need to promote the pre-production client to production. For more information, see [How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md).  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and then select the **Sites** node.  
 
-5.  Click **Upgrade all clients in the hierarchy using the production client** and click **OK** in the confirmation dialog box.  
+1. On the **Home** tab of the ribbon, in the **Sites** group, select **Hierarchy Settings**.  
 
-6.  If you don't want client upgrades to apply to servers, click **Do not upgrade servers**.  
+1. Switch to the **Client Upgrade** tab. Review the version and date of the production client. Make sure it's the version you want to use to upgrade your clients. If it's not the client version you expect, you may need to promote the pre-production client to production. For more information, see [How to test client upgrades in a pre-production collection](/sccm/core/clients/manage/upgrade/test-client-upgrades).  
 
-7.  Specify the number of days in which computers must upgrade the client after they receive client policy. The client will be upgraded at a random interval within this number of days. This prevents scenarios where a large number of client computers are upgraded simultaneously.
+1. Select **Upgrade all clients in the hierarchy using the production client**. Select **OK** to confirm.  
+
+1. If you don't want client upgrades to apply to servers, select **Do not upgrade servers**.  
+
+1. Specify the number of days in which devices must upgrade the client. After the device receives policy, it upgrades the client at a random interval within this number of days. This behavior prevents a large number of clients simultaneously upgrading.
 
     > [!NOTE]
-    > A computer must be running to upgrade the client. If a computer isn't running when it's scheduled to receive the upgrade, the upgrade does not occur. Instead, when the computer is restarted, another upgrade is scheduled for a random time within the number of days allowed. If this occurs after the number of days to upgrade has expired, the upgrade will be scheduled to occur at a random time within 24 hours after the computer has been restarted.
-    >     
-    > Because of this behavior, computers that are routinely shut down at the end of the workday may take a longer to upgrade than expected if the randomly scheduled upgrade time isn't within the normal working hours.
+    > A computer must be running to upgrade the client. If a computer isn't running when it's scheduled to receive the upgrade, the upgrade doesn't occur. When the computer turns on, and it receives policy, it schedules the upgrade for a random time within the allowed number of days. If this occurs after the number of days to upgrade has expired, it schedules the upgrade at a random time within 24 hours after the computer was turned on.
+    >
+    > Because of this behavior, computers that are routinely shut down may take longer to upgrade than expected if the randomly scheduled upgrade time isn't within the normal working hours.
 
-7. Beginning in version 1610, if you want to exclude clients from being upgraded, click **Exclude specified clients from upgrade** and specify the collection to exclude.
+1. To exclude clients from upgrade, select **Exclude specified clients from upgrade**, and specify the collection to exclude. For more information, see [Exclude clients from upgrade](/sccm/core/clients/manage/upgrade/exclude-clients-windows).
 
-8.  If you want the client installation package to be copied to distribution points that have been enabled for prestaged content, click **Automatically distribute client installation package to distribution points that are enabled for prestaged content**.  
+1. If you want the site to copy the client installation package to distribution points that you've enabled for [prestaged content](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent), select the option to **Automatically distribute client installation package to distribution points that are enabled for prestaged content**.  
 
-9. Click **OK** to save the settings and close the **Hierarchy Settings Properties** dialog box. Clients receive these settings when they next download policy.
+1. Select **OK** to save the settings and close Hierarchy Settings Properties.
 
->[!NOTE]
->Client upgrades honor any Configuration Manager maintenance windows you have configured.
+Clients receive these settings when they next download policy.
+
+> [!NOTE]
+> Client upgrades honor any Configuration Manager maintenance windows you've configured.
+
+## Next steps
+
+For alternative methods to upgrade clients, see [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
+
+Exclude specific clients from automatic upgrade. For more information, see [How to exclude clients from upgrade](/sccm/core/clients/manage/upgrade/exclude-clients-windows).

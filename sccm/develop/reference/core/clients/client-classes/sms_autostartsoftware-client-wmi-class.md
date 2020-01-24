@@ -9,7 +9,8 @@ ms.assetid: 0de5b1e8-b3e0-4c00-80d3-f9e35ffcb40f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_AutoStartSoftware Client WMI Class
 The `SMS_AutoStartSoftware` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that enumerates software that starts automatically with, or immediately after, the operating system.  

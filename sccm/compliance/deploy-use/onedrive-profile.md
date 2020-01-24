@@ -10,7 +10,8 @@ ms.assetid: e217699a-28b2-471a-b421-8fbd1d1fd638
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # OneDrive for Business Profiles
@@ -21,7 +22,7 @@ Starting in Configuration Manager version 1902, you can create OneDrive for Busi
 
 - [Find your Office 365 tenant ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
 
-- Deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using System Center Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+- Deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
 
 ## <a name="bkmk_odfb"></a> Move Windows known folders to OneDrive
 <!--3556021-->

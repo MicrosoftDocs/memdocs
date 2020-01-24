@@ -9,10 +9,11 @@ ms.assetid: 7b4ff9a8-096d-4830-a4fa-c76237419e8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure Automatic Software Metering Rule Generation
-You configure Automatic Software Metering Rule Generation settings, in System Center Configuration Manager, by modifying the site control file.  
+You configure Automatic Software Metering Rule Generation settings, in Configuration Manager, by modifying the site control file.  
 
 > [!IMPORTANT]
 >  This setting is shared across the whole hierarchy, and only can be configured on the CAS or a standalone primary site.  
@@ -217,8 +218,7 @@ public void ConfigureAutomaticSWMRuleGeneration(WqlConnectionManager connection,
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Metering](../../develop/apps/software-metering.md)   
+ [Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)   

@@ -6,7 +6,8 @@ ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: b5d4f1de-1137-425c-a196-303c3233b6c7
 author: aczechowski
 ms.author: aaroncz
@@ -387,26 +388,6 @@ The following reports are listed under the **Network** category.
 |**IP – Information for a specific IP address**|Displays summary information about a specified IP address.|
 |**MAC – Computers for a specific MAC address**|Displays the computer name and IP address of computers that have the specified MAC address.|
 
-## Network Access Protection
-
-The following reports are listed under the **Network Access Protection** category.
-
-|Report name|Description|
-|--- |--- |
-|**Comparison of software updates installed by software update deployments and NAP remediation.**|Displays a comparison summary of software updates installed by software update deployments and NAP remediation.|
-|**Frequency a computer has been in remediation within a specified period**|This report displays how often a computer has been remediated within a specified period.|
-|**List of computers that installed a specific software update through remediation during a specified period**|Displays the computers that installed a specified software update through remediation during a specified time period (days).|
-|**List of computers that would be non-compliant based on selected software updates**|Displays each computer that would be non-compliant based on the selected software updates.|
-|**List of computers where NAP service could not be detected**|Displays a list of computers where NAP service could not be detected.|
-|**List of NAP-eligible computers**|Displays a list of computers where the NAP service is not running or its state is unknown.|
-|**List of Network Access Protection policies**|Displays Network Access Protection policies with their effective dates.|
-|**List of non-compliant computers in remediation from last polling interval**|Displays the list of non-compliant computers in remediation with their last known evaluation times.|
-|**List of non-compliant computers in remediation within a specified period**|Displays the list of non-compliant computers in remediation within a specified time period.|
-|**List of remediation failures for specified time period**|Displays a list of remediation failures for a specified number of days.|
-|**List of software updates installed through remediation**|Displays the software updates installed through remediation for a specified period.|
-|**Summary of non-compliant computers in remediation from last polling interval**|Displays a summary of non-compliant computers in remediation from last polling interval.|
-|**Summary of non-compliant computers in remediation within a specified period**|Displays a summary of noncompliant computers in remediation within a specified time period.|
-
 ## Operating System
 
 The following reports are listed under the **Operating System** category.
@@ -422,16 +403,6 @@ The following reports are listed under the **Operating System** category.
 |**Services - Computers running Remote Access Server**|Displays a list of computers running Remote Access Server.|
 |**Services - Services information for a specific computer**|Displays summary information about the services on a specified computer.|
 |**Windows Server computers**|Displays a list of computers that run Windows Server operating systems.|
-
-## Out of Band Management
-
-The following reports are listed under the **Out of Band Management** category.
-
-|Report name|Description|
-|--- |--- |
-|**Computers with out of band management controllers**|Displays a list of computers that have out of band management controllers.|
-|**Out of band management console activity**|Displays a list of status messages identifying out of band management console activity.|
-|**Status of client out of band management provisioning**|Displays a list of computers that have been provisioned for out of band management.|
 
 ## Power Management
 
@@ -583,7 +554,6 @@ The following reports are listed under the **Software Distribution – Applicati
 |**Application Usage Detailed Status**|Displays usage details for installed applications.|
 |**Application Usage Summary Status**|Displays a usage summary for installed applications.|
 |**Task sequence deployments containing application**|Displays task sequence deployments that install a specified application.|
-|**User Requests for Android Application**|Displays users that requested to install an Android application.|
 
 ## Software Distribution - Collections
 

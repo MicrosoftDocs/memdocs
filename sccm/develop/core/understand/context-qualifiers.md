@@ -9,10 +9,11 @@ ms.assetid: 0b4faf3c-edff-4874-b998-3fc34810cf34
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Context Qualifiers
-Context objects are used, in System Center Configuration Manager, to provide additional information to the SMS Provider. Typically, you use context qualifiers to give the SMS Provider contextual information, such as your application's name. You can use context qualifiers when you connect to the SMS Provider and with individual SMS Provider objects.  
+Context objects are used, in Configuration Manager, to provide additional information to the SMS Provider. Typically, you use context qualifiers to give the SMS Provider contextual information, such as your application's name. You can use context qualifiers when you connect to the SMS Provider and with individual SMS Provider objects.  
 
 ## Managed Code  
  When using the managed SMS Provider libraries, you use the [ConnectionManagerBase.Context](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.connectionmanagerbase.context.aspx) property to specify context qualifiers. For more information, see [How to Add a Configuration Manager Context Qualifier by Using Managed Code](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md).  
@@ -87,4 +88,4 @@ The `InstanceCount` context qualifier is an integer value that is used to limit 
 ## See Also  
  [How to Add a Configuration Manager Context Qualifier Using Managed Code](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md)   
  [How to Add a Configuration Manager Context Qualifier Using WMI](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md)   
- [Configuration Manager Provider](../../../develop/core/understand/sms-provider-in-configuration-manager.md)
+ [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)

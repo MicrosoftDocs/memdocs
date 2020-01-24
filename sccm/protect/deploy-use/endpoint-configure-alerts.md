@@ -1,7 +1,7 @@
 ---
 title: "Configure Endpoint Protection alerts"
 titleSuffix: "Configuration Manager"
-description: "Learn how to configure Endpoint Protection alerts in System Center Configuration Manager."
+description: "Learn how to configure Endpoint Protection alerts in Configuration Manager."
 ms.date: 03/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -10,14 +10,15 @@ ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 #  Configure Alerts for Endpoint Protection in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
- You can configure Endpoint Protection alerts in Microsoft System Center Configuration Manager to notify administrative users when specific events, such as a malware infection, occur in your hierarchy. Notifications display in the Endpoint Protection dashboard in the Configuration Manager console in the **Alerts** node of the **Monitoring** workspace, or can be emailed to specified users.
+ You can configure Endpoint Protection alerts in Microsoft Configuration Manager to notify administrative users when specific events, such as a malware infection, occur in your hierarchy. Notifications display in the Endpoint Protection dashboard in the Configuration Manager console in the **Alerts** node of the **Monitoring** workspace, or can be emailed to specified users.
 
  Use the following steps and the supplemental procedures in this topic to configure alerts for Endpoint Protection in Configuration Manager.
 

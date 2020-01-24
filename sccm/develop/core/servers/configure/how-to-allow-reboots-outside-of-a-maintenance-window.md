@@ -9,10 +9,11 @@ ms.assetid: c2f7999b-533d-493f-b2b4-079b25c36f2d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure a Advertisement to Allow Reboots Outside of a Maintenance Window
-The following example shows how to configure an advertisement to allow reboots outside of a maintenance window by using the `SMS_Advertisement` class and the `AdvertFlags` class property in System Center Configuration Manager.  
+The following example shows how to configure an advertisement to allow reboots outside of a maintenance window by using the `SMS_Advertisement` class and the `AdvertFlags` class property in Configuration Manager.  
 
 ### To configure an advertisement to allow reboots outside of a maintenance window  
 
@@ -139,5 +140,5 @@ public void ModifySWDAdvertisementToRebootOutsideOfMaintenanceWindows(WqlConnect
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
- [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+ [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)

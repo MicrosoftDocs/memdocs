@@ -2,7 +2,7 @@
 title: "Manage publications"
 titleSuffix: "Configuration Manager"
 description: "Manage groups of software updates as a publication with System Center Updates Publisher"
-ms.date: 4/29/2017
+ms.date: 04/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,7 +10,8 @@ ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Manage publications in Updates Publisher
 

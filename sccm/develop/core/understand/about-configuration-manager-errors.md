@@ -8,10 +8,11 @@ ms.assetid: a8e24656-4cad-4494-9c01-99ec904b7025
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager Errors
-In System Center Configuration Manager, when a Configuration Manager error occurs it is either a Windows Management Instrumentation (WMI) or a SMS Provider error.  
+In Configuration Manager, when a Configuration Manager error occurs it is either a Windows Management Instrumentation (WMI) or a SMS Provider error.  
 
  A WMI error is reported in an instance of __ExtendedStatus. An SMS Provider error is reported in an instance of `SMS_ExtendedStatus`.  
 
@@ -45,7 +46,7 @@ In System Center Configuration Manager, when a Configuration Manager error occur
  For more information about handling asynchronous exceptions, see [How to Handle Configuration Manager Asynchronous Errors by Using Managed Code](../../../develop/core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md).  
 
 ## See Also  
- [Configuration Manager Errors](../../../develop/core/understand/configuration-manager-errors.md)   
+ [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)
  [How to Handle Configuration Manager Synchronous Errors by Using WMI](../../../develop/core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-wmi.md)   
  [How to Handle Configuration Manager Asynchronous Errors by Using WMI](../../../develop/core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-wmi.md)   
  [Configuration Manager Asynchronous Errors by Using Managed Code](../../../develop/core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md)   

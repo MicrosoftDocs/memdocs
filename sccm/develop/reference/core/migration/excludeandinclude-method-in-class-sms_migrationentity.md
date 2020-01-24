@@ -9,7 +9,8 @@ ms.assetid: dc89e1e1-be01-4118-8590-0013ecff5c28
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ExcludeAndInclude Method in Class SMS_MigrationEntity
 The `ExcludeAndInclude` Windows Management Instrumentation (WMI) class method, in Configuration Manager, marks the entities as excluded or included.  
@@ -47,12 +48,12 @@ SInt32 ExcludeAndInclude(
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [SMS_MigrationEntity Server WMI Class](../../../../develop/reference/core/migration/sms_migrationentity-server-wmi-class.md)   
- [Migration Server WMI Classes](../../../../develop/reference/core/migration/migration-server-wmi-classes.md)
+## See also
+
+ [SMS_MigrationEntity Server WMI Class](../../../../develop/reference/core/migration/sms_migrationentity-server-wmi-class.md)

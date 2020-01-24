@@ -9,7 +9,8 @@ ms.assetid: 2c84a3bd-f8d8-46a4-9591-07186ca5fe65
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # IProgressUI interface
@@ -39,5 +40,3 @@ The GUID for `IProgressUI` is B64D758A-01C2-4bf0-9F17-621EFB9CF697.
 - [ProgressUI Class](/sccm/develop/reference/core/clients/client-classes/progressui-client-com-automation-class)  
 
 - [About reporting Configuration Manager custom action progress](/sccm/develop/osd/about-reporting-configuration-manager-custom-action-progress)  
-
-- [Extending OS deployment](/sccm/develop/osd/extending-operating-system-deployment)  

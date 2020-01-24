@@ -9,13 +9,14 @@ ms.assetid: bb2e1e0a-095f-4b7d-92ba-29a89c8d8f69
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure Mobile Device Client Agent Settings
-You configure the Mobile Device Client Agent settings, in System Center Configuration Manager, by modifying the site control file.  
+You configure the Mobile Device Client Agent settings, in Configuration Manager, by modifying the site control file.  
 
 > [!IMPORTANT]
->  This topic only applies to the Mobile Device Legacy Client. For addition information on the Mobile Device Legacy Client platforms, see the Mobile Device Legacy Client section of the [Supported Configurations for Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=272885).  
+>  This topic only applies to the Mobile Device Legacy Client. For addition information on the Mobile Device Legacy Client platforms, see the Mobile Device Legacy Client section of the [Supported Configurations for Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=272885).  
 
 ### To configure the Mobile Device Client Agent settings  
 
@@ -271,8 +272,6 @@ public void ConfigureMobileDeviceClientAgentSettings(WqlConnectionManager connec
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Configuration Manager SDK](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Mobile Device Management](../../develop/mdm/mobile-device-management.md)   
  [About Software Updates Setup and Configuration](../../develop/sum/about-software-updates-setup-and-configuration.md)   
  [About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   

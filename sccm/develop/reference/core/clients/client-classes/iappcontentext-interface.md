@@ -9,7 +9,8 @@ ms.assetid: 478124a0-ee88-46e5-bb5e-27753c01970c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # IAppContentExt Interface
 The `IAppContentExt` interface, in Configuration Manager, defines functions to retrieve the application content information.  
@@ -31,6 +32,5 @@ The `IAppContentExt` interface, in Configuration Manager, defines functions to r
 
 ## See Also  
  [Application Management Client Interfaces](../../../../../develop/reference/core/clients/client-classes/application-management-client-interfaces.md)   
- [System Center Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Scenario: Extending Application Management](../../../../../develop/apps/scenario--extending-application-management.md)   
+ [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

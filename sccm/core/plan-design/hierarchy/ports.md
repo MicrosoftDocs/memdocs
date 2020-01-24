@@ -2,7 +2,7 @@
 title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
-ms.date: 04/11/2019
+ms.date: 11/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Ports used in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article lists the network ports that Configuration Manager uses. Some connections use ports that aren't configurable, and some support custom ports that you specify. If you use any port filtering technology, verify that the required ports are available. These port filtering technologies include firewalls, routers, proxy servers, or IPsec.   
 
@@ -40,6 +41,8 @@ Configuration Manager enables you to configure the ports for the following types
 - Software update point to WSUS server  
 
 - Site server to site database server  
+
+- Site server to WSUS database server
 
 - Reporting services points  
 
@@ -154,7 +157,7 @@ For more information, see [Ports and data flow](/sccm/core/plan-design/hierarchy
 For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#ports-and-data-flow).
 
 
-###  <a name="BKMK_PortsClient-DP"></a> Client -- > Distribution point  
+###  <a name="BKMK_PortsClient-DP"></a> Client -- > Distribution point, both standard and pull  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -162,14 +165,14 @@ For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cm
 |HTTPS|--|443 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|  
 
 
-###  <a name="BKMK_PortsClient-DP2"></a> Client -- > Distribution point configured for multicast  
+###  <a name="BKMK_PortsClient-DP2"></a> Client -- > Distribution point configured for multicast, both standard and pull  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |Server Message Block (SMB)|--|445|  
 |Multicast protocol|63000-64000|--|  
 
-###  <a name="BKMK_PortsClient-DP3"></a> Client -- > Distribution point configured for PXE  
+###  <a name="BKMK_PortsClient-DP3"></a> Client -- > Distribution point configured for PXE, both standard and pull  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -324,7 +327,7 @@ The Configuration Manager console uses internet access for the following actions
 |SQL over TCP|--|1433 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|  
 
 
-###  <a name="BKMK_PortsDist_MP"></a> Distribution point -- > Management point  
+###  <a name="BKMK_PortsDist_MP"></a> Distribution point, both standard and pull -- > Management point  
 A distribution point communicates to the management point in the following scenarios:  
 
 - To report the status of prestaged content  
@@ -333,7 +336,7 @@ A distribution point communicates to the management point in the following scena
 
 - To report content validation  
 
-- To report the status of package downloads (pull-distribution point)
+- To report the status of package downloads (pull-distribution point only)
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -499,7 +502,7 @@ For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cm
 For more information, see [Ports and data flow](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_dataflow).
 
 
-###  <a name="BKMK_PortsSite-DP"></a> Site server -- > Distribution point  
+###  <a name="BKMK_PortsSite-DP"></a> Site server -- > Distribution point, both standard and pull  
  <sup>[Note 5](#bkmk_note5)</sup>  
 
 |Description|UDP|TCP|  
@@ -620,6 +623,11 @@ Starting in version 1806 you can relocate the Content Library to another storage
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|  
 
+###  <a name="BKMK_PortsSite-SQL-WSUS"></a> Site server -- > SQL Server for WSUS  
+
+|Description|UDP|TCP|  
+|-----------------|---------|---------|  
+|SQL over TCP|--|1433 <sup>[Note 3](#bkmk_note3) Alternate port available</sup>|  
 
 ###  <a name="BKMK_PortsSite-Provider"></a> Site server -- > SMS Provider  
 
@@ -708,7 +716,13 @@ After installation, you can change the port. You don't have to use the same port
 - If the HTTP port is anything else, the HTTPS port must be 1 or higher, for example, 8530 and 8531.   
 
     > [!NOTE]  
-    >  When you configure the software update point to use HTTPS, the HTTP port must also be open. Unencrypted data, such as the EULA for specific updates, uses the HTTP port.  
+    >  When you configure the software update point to use HTTPS, the HTTP port must also be open. Unencrypted data, such as the EULA for specific updates, uses the HTTP port. 
+
+- The site server makes a connection to the SQL server hosting the SUSDB when you enable the following options for WSUS cleanup:
+  - Add non-clustered indexes to the WSUS database to improve WSUS cleanup performance
+  - Remove obsolete updates from the WSUS database
+  
+  If the default SQL Server port is changed to an alternate port with SQL Server Configuration Manager, ensure the site server can connect using the defined port. Configuration Manager doesn't support dynamic ports. By default, SQL Server named instances use dynamic ports for connections to the database engine. When you use a named instance, manually configure the static port.
 
 #### <a name="bkmk_note4"></a> Note 4: Trivial FTP (TFTP) Daemon
 The Trivial FTP (TFTP) Daemon system service doesn't require a user name or password and is an integral part of Windows Deployment Services (WDS). The Trivial FTP Daemon service implements support for the TFTP protocol that's defined by the following RFCs:  
@@ -867,7 +881,7 @@ Application and package installations on distribution points require the followi
 Use IPsec to help secure the traffic between the site server and site systems. If you must restrict the dynamic ports that are used with RPC, you can use the Microsoft RPC configuration tool (rpccfg.exe) to configure a limited range of ports for these RPC packets. For more information about the RPC configuration tool, see [How to configure RPC to use certain ports and how to help secure those ports by using IPsec](https://support.microsoft.com/help/908472/how-to-configure-rpc-to-use-certain-ports-and-how-to-help-secure-those).  
 
 > [!IMPORTANT]  
->  Before you install these site systems, ensure that the remote registry service is running on the site system server and that you have specified a site system installation account if the site system is in a different Active Directory forest without a trust relationship.  
+>  Before you install these site systems, ensure that the remote registry service is running on the site system server and that you have specified a site system installation account if the site system is in a different Active Directory forest without a trust relationship. For example, the remote registry service is used on servers running site systems such as distribution points (both pull and standard), remote SQL servers, and the Application Catalog.
 
 
 ###  <a name="BKMK_PortsClientInstall"></a> Ports used by Configuration Manager client installation  

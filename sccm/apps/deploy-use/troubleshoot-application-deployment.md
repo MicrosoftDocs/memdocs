@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot app deployments
+title: Troubleshoot tips for app deployments
 titleSuffix: Configuration Manager
-description: Tips for troubleshooting application deployment problems in System Center Configuration Manager
+description: Tips for troubleshooting application deployment problems in Configuration Manager
 ms.date: 05/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
@@ -10,12 +10,13 @@ ms.assetid: 4e8b46a3-3e11-475f-a4d7-6bf9ddf14145
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
-# Troubleshoot application deployments
+# Troubleshooting tips for application deployments
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Typical problems with application deployments fall into one of the following categories:
 
@@ -23,7 +24,7 @@ Typical problems with application deployments fall into one of the following cat
 
 - Application deployment compliance stuck at 0%
 
-If you experience either of these issues, this article provides some steps you can use to troubleshoot.
+If you experience either of these issues, this article provides some steps you can use to troubleshoot. For more in-depth troubleshooting, see [Troubleshooting application deployment technical reference](/sccm/apps/understand/app-deployment-technical-reference).
 
 
 ## Download failures
@@ -67,3 +68,4 @@ If these actions don't resolve the issue, check the client status. There may be 
 - [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console)
 - [Deploy applications](/sccm/apps/deploy-use/deploy-applications)
 - [Management tasks for applications](/sccm/apps/deploy-use/management-tasks-applications)
+- [Troubleshooting application deployment technical reference](/sccm/apps/understand/app-deployment-technical-reference)

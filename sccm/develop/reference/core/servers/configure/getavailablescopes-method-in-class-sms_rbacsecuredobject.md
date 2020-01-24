@@ -9,7 +9,8 @@ ms.assetid: 0deba515-ebef-44c8-8059-8480d536f9b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetAvailableScopes Method in Class SMS_RbacSecuredObject
 The `GetAvailableScopes` Windows Management Instrumentation (WMI) class method, in Configuration Manager, returns the secured scopes, which current user has the permission to grant to other accounts.  

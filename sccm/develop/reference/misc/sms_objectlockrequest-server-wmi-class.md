@@ -9,7 +9,8 @@ ms.assetid: 56f7e96e-36a7-48b8-aae8-a7a75fa5c415
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ObjectLockRequest Server WMI Class
 The `SMS_ObjectLockRequest` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents object lock request information.  
@@ -145,16 +146,10 @@ Class SMS_ObjectLockRequest :
 |52|ErrorRequestNotFound|  
 |53|ErrorRequestTimedOut|  
 
-## Remarks  
-
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [SEDO Server WMI Classes](../../../develop/reference/misc/sedo-server-wmi-classes.md)   
- [Configuration Manager Reference](../../../develop/reference/configuration-manager-reference.md)

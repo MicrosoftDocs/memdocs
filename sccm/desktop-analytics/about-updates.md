@@ -2,7 +2,7 @@
 title: Updates in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about security and feature updates in Desktop Analytics.
-ms.date: 04/22/2019
+ms.date: 08/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,13 @@ ms.assetid: 14ae894c-26fb-4fe3-b51d-e80700122df4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Updates in Desktop Analytics
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 In the Desktop Analytics portal, view the status of security and feature updates. Select these nodes in the Monitor group of the Desktop Analytics main menu. These nodes give you insights into the status of these updates in your environment.
-
 
 
 ## Security updates
@@ -46,6 +43,7 @@ Devices are running a security update older than Latest-1.
 
 Desktop Analytics hasn't assessed the device. This state includes devices running Windows 7, Windows 8.1, or Windows 10 devices registered for the Windows Insider Program.  
 
+If a Windows 10 device is *not authenticated* with a Microsoft account, Windows doesn't report this data. This authentication is typically completed as part of the Windows Setup out-of-box-experience (OOBE).<!-- 5148153 -->
 
 
 ## Feature updates
@@ -70,12 +68,13 @@ Devices are running a feature update that's within 90 days of reaching end of se
 
 #### End of service
 
-Devices are running a feature update that's past the end of service date. For details about end of service dates, see [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+Devices are running a feature update that's past the end of service date. These dates are specific to Enterprise and Education editions of Windows. They don't apply to Home, Pro, Pro Education, or Pro for Workstations editions. For more information, see [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
 #### Not measured
 
 Desktop Analytics hasn't assessed the device. This state includes devices running Windows 7, Windows 8.1, or Windows 10 devices registered for the Windows Insider Program.
 
+If a Windows 10 device is *not authenticated* with a Microsoft account, Windows doesn't report this data. This authentication is typically completed as part of the Windows Setup out-of-box-experience (OOBE).<!-- 5148153 -->
 
 
 ## Next steps

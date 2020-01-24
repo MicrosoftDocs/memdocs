@@ -10,25 +10,24 @@ ms.assetid: 3bd1e487-ea18-43c1-b7c3-acbd9b86d429
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
-# Create and deploy an application with System Center Configuration Manager
+# Create and deploy an application with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-In this topic, you'll jump right in and create an application with System Center Configuration Manager. In this example, you'll create and deploy an application that contains a line-of-business app for Windows PCs called **Contoso.msi**, which must be installed on all PCs that are running Windows 10 in your company. Along the way, you'll learn about many of the things you can do to manage applications effectively.  
+In this topic, you'll jump right in and create an application with Configuration Manager. In this example, you'll create and deploy an application that contains a line-of-business app for Windows PCs called **Contoso.msi**, which must be installed on all PCs that are running Windows 10 in your company. Along the way, you'll learn about many of the things you can do to manage applications effectively.  
 
  This procedure is designed to give you an overview of how to create and deploy Configuration Manager applications. However, it does not cover all the configuration options, or how to create and deploy applications for other platforms.  
 
  For specific details that are relevant to each platform, see one of the following topics:  
 
-- [Create Windows applications](../../apps/get-started/creating-windows-applications.md)  
-- [Create iOS applications](../../apps/get-started/creating-ios-applications.md)  
-- [Create Android applications](../../apps/get-started/creating-android-applications.md)  
-- [Create Windows Phone applications](../../apps/get-started/creating-windows-phone-applications.md)  
-- [Create Mac computer applications](../../apps/get-started/creating-mac-computer-applications.md)  
-- [Create Linux and UNIX server applications](../../apps/get-started/creating-linux-and-unix-server-applications.md)
-- [Create Windows Embedded applications](../../apps/get-started/creating-windows-embedded-applications.md)
+- [Create Windows applications](/configmgr/apps/get-started/creating-windows-applications)
+- [Create Windows Phone applications](/configmgr/mdm/deploy-use/management-tasks-applications#bkmk_winphone)
+- [Create Mac computer applications](/configmgr/apps/get-started/creating-mac-computer-applications)
+- [Create Linux and UNIX server applications](/configmgr/apps/get-started/creating-linux-and-unix-server-applications)
+- [Create Windows Embedded applications](/configmgr/apps/get-started/creating-windows-embedded-applications)
 
 
 If you are already familiar with Configuration Manager applications, you can skip this topic. However, you might want to review [Create applications](../../apps/deploy-use/create-applications.md) to learn about all the options that are available when you create and deploy applications.  

@@ -9,7 +9,8 @@ ms.assetid: efb91a02-0377-479d-ae95-a135ff57e901
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SoftwareUpdatesAgentConfig Server WMI Class
 The `SMS_SoftwareUpdatesAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the settings and properties used by the software updates client agent.  
@@ -88,7 +89,7 @@ Class SMS_SoftwareUpdatesAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- This property is deprecated in System Center Configuration Manager.  
+ This property is deprecated in Configuration Manager.  
 
  `BrandingTitle`  
  Data type: `String`  
@@ -97,7 +98,7 @@ Class SMS_SoftwareUpdatesAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- This property is deprecated in System Center Configuration Manager.  
+ This property is deprecated in Configuration Manager.  
 
  `ContentDownloadTimeout`  
  Data type: `UInt32`  
@@ -232,7 +233,7 @@ Class SMS_SoftwareUpdatesAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- This property is deprecated in System Center Configuration Manager.  
+ This property is deprecated in Configuration Manager.  
 
  `UserJobPerDPInactivityTimeout`  
  Data type: `UInt32`  

@@ -9,10 +9,11 @@ ms.assetid: d15d00a9-a77a-4916-88c6-0ac04234fc1e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Console Extension Deployment
-The deployment of a typical System Center Configuration Manager extension has to account for actions, forms, views, management classes and node extensions.  
+The deployment of a typical Configuration Manager extension has to account for actions, forms, views, management classes and node extensions.  
 
  When you deploy a Configuration Manager extension, you install the files in the following directories:  
 
@@ -83,15 +84,15 @@ The deployment of a typical System Center Configuration Manager extension has to
 ## Nodes  
 
 ### Installing a Node  
- To install a node, create a folder %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Nodes\\<GUID\> , where \<GUID> is the GUID identifier of the Configuration Manager console parent node. Copy the node XML file to the GUID folder. For more information, see [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console-nodes.md).  
+ To install a node, create a folder %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Nodes\\<GUID\> , where \<GUID> is the GUID identifier of the Configuration Manager console parent node. Copy the node XML file to the GUID folder. For more information, see [About console nodes](/sccm/develop/core/servers/console/about-configuration-manager-console-nodes).  
 
 ### Removing a Node  
  To remove a node, delete the node XML file from the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Nodes\\<GUID\> folder.  
 
 ## See Also  
  [About Configuration Manager Console Extension](../../../../develop/core/servers/console/about-configuration-manager-console-extension.md)   
- [Configuration Manager Console Actions](../../../../develop/core/servers/console/console-actions.md)   
- [Configuration Manager Console Forms](../../../../develop/core/servers/console/console-forms.md)   
- [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console-management-classes.md)   
- [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console-nodes.md)   
- [Configuration Manager Console Views](../../../../develop/core/servers/console/console-views.md)
+ [About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions)
+ [About console forms](/sccm/develop/core/servers/console/about-configuration-manager-console-forms)
+[About console management classes](/sccm/develop/core/servers/console/about-configuration-manager-console-management-classes)
+ [About console nodes](/sccm/develop/core/servers/console/about-configuration-manager-console-nodes)
+ [About console views](/sccm/develop/core/servers/console/about-configuration-manager-console-views)

@@ -10,14 +10,15 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
-# Licensing and branches for System Center Configuration Manager
+# Licensing and branches for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch), (Long-Term Servicing Branch)*
+*Applies to: Configuration Manager (current branch), & System Center Configuration Manager (long-term servicing branch)*
 
-Use this article to learn about the licensing requirements for the installation options available with System Center Configuration Manager. These installation options include the following branches:
+Use this article to learn about the licensing requirements for the installation options available with Configuration Manager. These installation options include the following branches:
 
 - Current branch
 - Long-term servicing branch (LTSB)
@@ -26,7 +27,7 @@ Use this article to learn about the licensing requirements for the installation 
 
 ## Licensing overview
 
-Customers with active Software Assurance (SA) on System Center Configuration Manager licenses or with equivalent subscription rights as of October 1, 2016 have rights to use the October 2016 version 1606 release of System Center Configuration Manager. Customers with rights to System Center Configuration Manager on or after October 1, 2016 will find two licensed options upon installation: Current Branch and Long-Term Servicing Branch (LTSB).
+Customers with active Software Assurance (SA) on Configuration Manager licenses or with equivalent subscription rights as of October 1, 2016 have rights to use the October 2016 version 1606 release of Configuration Manager. Customers with rights to Configuration Manager on or after October 1, 2016 will find two licensed options upon installation: current branch and long-term servicing branch (LTSB).
 
 For the complete terms and conditions for the products you purchase through Microsoft Volume Licensing programs, see [Licensing Terms and Documentation](https://go.microsoft.com/fwlink/?LinkId=800052).
 
@@ -41,7 +42,7 @@ The current branch requires an active Software Assurance agreement or equivalent
 
 This branch is supported for use in production environments that want to receive regular quality and feature updates from Microsoft. It provides access to use all features and improvements.
 
-Beginning with the 1710 release, each update version remains in support for 18 months from its general availability release date. For more information, see [Support for System Center Configuration Manager current branch versions](/sccm/core/servers/manage/current-branch-versions-supported).
+Beginning with the 1710 release, each update version remains in support for 18 months from its general availability release date. For more information, see [Support for Configuration Manager current branch versions](/sccm/core/servers/manage/current-branch-versions-supported).
 
 ### Long-term servicing branch (LTSB)
 
@@ -64,7 +65,7 @@ The [technical preview branch](https://www.microsoft.com/evalcenter/evaluate-sys
 
 ## Software Assurance agreements
 
-The status of Software Assurance on your System Center Configuration Manager licenses, or equivalent subscription rights, on or after October 1, 2016, determines the branch you can install and use.
+The status of Software Assurance on your Configuration Manager licenses, or equivalent subscription rights, on or after October 1, 2016, determines the branch you can install and use.
 
 ### Software Assurance and the current branch
 
@@ -72,18 +73,18 @@ Rights to use Configuration Manager current branch can be provided by:
 
 - **System Center:** Customers with active SA on System Center Standard or Datacenter licenses can install and use the current branch option of Configuration Manager.
 
-- **System Center Configuration Manager:** Customers with active SA on System Center Configuration Manager licenses, or with equivalent subscription rights, can install and use the current branch option of Configuration Manager.
+- **System Center Configuration Manager:** Customers with active SA on Configuration Manager licenses, or with equivalent subscription rights, can install and use the current branch option of Configuration Manager.
 
-If you have active SA on System Center Configuration Manager licenses or equivalent subscription rights on or after October 1, 2016:
+If you have active SA on Configuration Manager licenses or equivalent subscription rights on or after October 1, 2016:
 
 - You can install and use the current branch.
 - If you allow SA or subscription to lapse, you must uninstall the current branch.
 
 ### Software Assurance and the LTSB
 
-If you have an active SA on System Center Configuration Manager licenses or equivalent subscription rights on or after October 1, 2016:
+If you have an active SA on Configuration Manager licenses or equivalent subscription rights on or after October 1, 2016:
 
-- You can install and use the LTSB. Customers who have perpetual rights to System Center Configuration Manager, or who allow their SA or subscription to lapse, can install the version of Configuration Manager LTSB that's current at the time of lapse.
+- You can install and use the LTSB. Customers who have perpetual rights to Configuration Manager, or who allow their SA or subscription to lapse, can install the version of Configuration Manager LTSB that's current at the time of lapse.
 
 LTSB is based on current branch version 1606, and has the following limitations:
 

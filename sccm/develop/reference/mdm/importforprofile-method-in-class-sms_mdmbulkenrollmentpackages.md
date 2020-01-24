@@ -9,7 +9,8 @@ ms.assetid: fdbb743a-c476-474e-a129-e789180c1bf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ImportForProfile Method in Class SMS_MDMBulkEnrollmentPackages
 The `ImportForProfile` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports an On-Premises Mobile Device Management (MDM)  bulk enrollment package for a profile.  
@@ -70,4 +71,3 @@ sint32 ImportForProfile(
 
 ## See Also  
  [SMS_MDMBulkEnrollmentPackages Server WMI Class](../../../develop/reference/mdm/sms_mdmbulkenrollmentpackages-server-wmi-class.md)   
- [Mobile Device Management Server WMI Classes](../../../develop/reference/mdm/mobile-device-management-server-wmi-classes.md)

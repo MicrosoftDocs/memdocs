@@ -9,7 +9,8 @@ ms.assetid: 1c44e69e-4a53-4f63-bd6a-441f15a0d97b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetClientsCountByCollections Method in Class SMS_MigrationCollectionInfo
 The `GetClientsCountByCollections` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the number of clients in the specified collections.  
@@ -50,12 +51,12 @@ SInt32 GetClientsCountByCollections(
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [SMS_MigrationCollectionInfo Server WMI Class](../../../../develop/reference/core/migration/sms_migrationcollectioninfo-server-wmi-class.md)   
- [Migration Server WMI Classes](../../../../develop/reference/core/migration/migration-server-wmi-classes.md)
+## See also
+
+[SMS_MigrationCollectionInfo Server WMI Class](../../../../develop/reference/core/migration/sms_migrationcollectioninfo-server-wmi-class.md)

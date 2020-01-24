@@ -9,10 +9,11 @@ ms.assetid: b6ebe9e7-0e31-4b88-a157-dd1b2fa3da1b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ApproveClients Method in Class SMS_Collection
-The `ApproveClients` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, approves specified client computers to join the site.  
+The `ApproveClients` Windows Management Instrumentation (WMI) class method, in Configuration Manager, approves specified client computers to join the site.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

@@ -6,7 +6,8 @@ ms.date: 06/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 8726c91b-de9d-4df0-9eb8-f9f62e109152
 author: aczechowski
 ms.author: aaroncz
@@ -283,10 +284,6 @@ The view can be joined with other views by using the **ResourceID** column.
 Lists information about the motherboard found on Configuration Manager clients.
 The view can be joined with other views by using the **ResourceID** column.
 
-### v_GS_NAPCLIENT
-
-Lists information about the Configuration Manager clients with the Network Access Protection (NAP) client installed, including whether the client is NAP enabled, the NAP protocol version, system isolation state, and so on. The view can be joined with other views by using the **ResourceID** column.
-
 ### v_GS_NETWORK_ADAPTER
 
 Lists information about the network adapters found on Configuration Manager clients, including adapter type, description, MAC address, manufacturer, service name, and so on.
@@ -535,7 +532,7 @@ Lists summary information about the computer boot times. This includes Latest, M
 
 The view can be joined with other views by using the **ResourceID** column.
 
-#### Sampple Query
+#### Sample Query
 Select 
     RV.Netbios_Name0 as 'Computer',
     SBS.LatestBiosDuration0 as 'Latest BIOS Duration',

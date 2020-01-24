@@ -9,10 +9,11 @@ ms.assetid: daea40b0-c6cf-40fa-b759-6b3038889512
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Asset Intelligence Client WMI Classes
-In System Center Configuration Manager, the Asset Intelligence client Windows Management Instrumentation (WMI) classes query client computers for usage, software, and licensing data. These classes are in the root/cimv2/sms namespace.  
+In Configuration Manager, the Asset Intelligence client Windows Management Instrumentation (WMI) classes query client computers for usage, software, and licensing data. These classes are in the root/cimv2/sms namespace.  
 
 ## In This Section  
 
@@ -32,11 +33,11 @@ In System Center Configuration Manager, the Asset Intelligence client Windows Ma
 ## Remarks  
  Classes related to the asset intelligence client WMI classes are:  
 
--   `SoftwareLicensingProduct` class. Specific to Windows Vista. For more information, see the Microsoft TechNet article, [Windows Vista Volume Activation 2.0 Technical Attributes](http://go.microsoft.com/fwlink/?LinkId=99938).  
+-   `SoftwareLicensingProduct` class. Specific to Windows Vista. For more information, see the Microsoft TechNet article, [Windows Vista Volume Activation 2.0 Technical Attributes](https://go.microsoft.com/fwlink/?LinkId=99938).  
 
--   `SoftwareLicensingService` class. Specific to Windows Vista. For more information, see the Microsoft TechNet article, [Windows Vista Volume Activation 2.0 Technical Attributes](http://go.microsoft.com/fwlink/?LinkId=99938).  
+-   `SoftwareLicensingService` class. Specific to Windows Vista. For more information, see the Microsoft TechNet article, [Windows Vista Volume Activation 2.0 Technical Attributes](https://go.microsoft.com/fwlink/?LinkId=99938).  
 
 -   `Win32_USBDevice` class. Tracks devices connected to USB ports.  
 
 ## See Also  
- [Configuration Manager Asset Intelligence](../../../../../develop/core/clients/asset-intelligence/asset-intelligence.md)
+[Initiate Asset Intelligence synchronization](/sccm/develop/core/clients/asset-intelligence/how-to-initiate-a-synchronization)

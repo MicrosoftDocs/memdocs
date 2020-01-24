@@ -2,7 +2,7 @@
 title: "Updates Publisher"
 titleSuffix: "Configuration Manager"
 description: "Use System Center Updates Publisher to manage custom updates"
-ms.date: 6/17/2019
+ms.date: 11/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,7 +10,8 @@ ms.assetid: 2200b02b-e76b-4aa7-a77a-6dc5e70f1333
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # System Center Updates Publisher
 
@@ -25,15 +26,12 @@ Using Updates Publisher, you can:
 -   Export updates to external catalogs.
 -   Publish updates to an update server.
 
-After you publish updates to an update server, you can then use System Center Configuration Manager to detect and deploy those updates to your managed devices.
-
-> [!TIP]  
-> The previous version, [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/?LinkId=848111), remains in support. This updated version retains the same functionality, but supports additional operating systems, new features to simplify some tasks, and has an updated user interface.
+After you publish updates to an update server, you can then use Configuration Manager to detect and deploy those updates to your managed devices.
 
 ## Workspaces
 When you open Updates Publisher, it defaults to the Overview node of the *Updates Workspace.*
 
-![Updates Publisher console](media/console1.png)   
+![Updates Publisher console](media/console1.png)
 
 
 Updates Publisher has four workspaces to help organize it.
@@ -52,14 +50,14 @@ Managing publications includes publishing updates to a server so your clients ca
 
 **Catalogs Workspace:** Use this workspace to add and [manage software update catalogs](/sccm/sum/tools/updates-publisher-catalogs). This workspace includes the import of software updates from those catalogs to the Updates Publisher repository.
 
-## What's new in the System Center Updates Publisher preview
+## What's new in System Center Updates Publisher
 
 >[!NOTE] 
->The information in this section applies only to the preview version of System Center Updates publisher. To install the preview, download it from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=58390).
+> The latest version of System Center Updates Publisher was released on November 6, 2019. For more information, see the [Release history](#release-history) section.
 
-There's a new authoring mode in the preview for System Center Updates Publisher to help you author your updates. When you enable authoring mode, a **Categories Workspace** is added to the start screen. A new **Detectoid** button is also added to the **Updates Workspace** when authoring mode is enabled. 
+There's a new authoring mode System Center Updates Publisher to help you author your updates. When you enable authoring mode, a **Categories Workspace** is added to the start screen. A new **Detectoid** button is also added to the **Updates Workspace** when authoring mode is enabled.
 
-### To enable authoring mode in the preview
+### To enable authoring mode
 
 1. In upper left corner of the console, click on the **Updates Publisher** **Properties** tab, and then choose **Options**.
 1. Go to the **Authoring** options.
@@ -79,7 +77,6 @@ Once you've authored your update, you can assign it to a category by selecting t
 
 ![Screenshot of categorizing an update](media/scup-categorize-update.png)
 
-
 ### About detectoids
 
 Once authoring mode is enabled, you can create detectoids for updates. Detectoids are useful when you have multiple updates that use the same rule (or a set of rules) to determine applicability. In those instances, you would create a detectoid and assign it as a prerequisite for an update. You can assign multiple detectoids to an authored update.
@@ -94,6 +91,12 @@ Once authoring mode is enabled, you can create detectoids for updates. Detectoid
 
 
 ![Update prerequisites using a detectoid](media/scup-detectoid-as-prerequisite.png)
+
+## Release history
+
+- [2019 RTW version 6.0.394.0](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/SCUP-adds-support-for-update-categories/ba-p/990111). Released November, 6, 2019
+- [Update rollup version 6.0.283.0 from KB4462765](https://support.microsoft.com/help/4462765/update-rollup-for-system-center-updates-publisher). Released September 7, 2018.
+- [2017 RTW version 6.0.276.0](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/System-Center-Updates-Publisher-adds-support-for-new-OSes/ba-p/274986). Released March 26, 2018.
 
 
 ## Next steps

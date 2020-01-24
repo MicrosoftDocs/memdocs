@@ -2,7 +2,7 @@
 title: Monitor connection health
 titleSuffix: Configuration Manager
 description: Details on how to monitor the connection health and device states for Desktop Analytics in Configuration Manager.
-ms.date: 06/11/2019
+ms.date: 10/31/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,7 +10,8 @@ ms.assetid: 1f4e26f7-42f2-40c8-80cf-efd405349c6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Monitor connection health
@@ -51,14 +52,15 @@ This tile displays the following basic information about the connection from Con
 
 This tile shows when Configuration Manager syncs with the Desktop Analytics cloud service, and how many devices it syncs.
 
-- **Devices synced**: The number of unique devices that Configuration Manager sent to Desktop Analytics. The service includes these devices in the currently visible snapshot.
+- **Devices synced**: The number of eligible devices that Configuration Manager sent to Desktop Analytics. The service includes these devices in the currently visible snapshot.
 
 - **Last service sync**: The same as the **Last updated** time in the Desktop Analytics portal.
 
 - **Next service sync**: When you can expect the next daily snapshot in Desktop Analytics.
 
 > [!Note]  
-> None of these values automatically update when you request an on-demand snapshot. For more information, see [Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).
+> When you first enroll devices into Desktop Analytics, it can take several days for data to upload and process. During this time, the **Last sync details** tile may appear blank. 
+> Additionally, none of the values in this tile automatically update when you request an on-demand snapshot. For more information, see [Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).
 
 If you think some devices aren't showing in Desktop Analytics, make sure the devices are supported by Desktop Analytics. For more information, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).
 
@@ -140,7 +142,7 @@ To see a specific list of devices by status, start with the **Connection Health*
 
 These columns correspond to the key [prerequisites](/sccm/desktop-analytics/overview#prerequisites) for devices to communicate with Desktop Analytics.
 
-![Screenshot of Properly Enrolled device list](media/sccm-device-list-properly-enrolled.png)
+![Screenshot of Properly Enrolled device list](media/device-list-properly-enrolled.png)
 
 Select a device to see the full list of available properties in the detail pane. You can also add any of these properties as columns to the device list.
 
@@ -224,7 +226,8 @@ For more information, review M365AHandler.log on the client.
 Check for the following file: `%windir%\System32\CompatTelRunner.exe`. If it doesn't exist, reinstall the required [compatibility updates](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser). Make sure no other system component is removing this file, such as group policy or an antimalware service.
 
 If the M365AHandler.log file on the client includes one of the following errors:
-```
+
+``` Log
 RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x800703F1
 RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x80070005
 RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x80080005
@@ -288,8 +291,8 @@ Devices verify connectivity with a GET request to the following endpoint based o
 
 | OS version | Endpoint |
 |------------|----------|
-| Windows 10, version 1803 or later with the latest cumulative update | `https://v10c.events.data.microsoft.com/health/keepalive` |
-| Windows 10, version 1803 or later without the 2018-09 or later cumulative update | `https://v10.events.data.microsoft.com/health/keepalive` |
+| - Windows 10, version 1809 or later<br/>- Windows 10, version 1803 with the 2018-09 cumulative update or later | `https://v10c.events.data.microsoft.com/health/keepalive` |
+| Windows 10, version 1803 *without* the 2018-09 or later cumulative update | `https://v10.events.data.microsoft.com/health/keepalive` |
 | Windows 10, version 1709 or earlier | `https://v10.vortex-win.data.microsoft.com/health/keepalive` |
 | Windows 7 or Windows 8.1 | `https://vortex-win.data.microsoft.com/health/keepalive` |
 

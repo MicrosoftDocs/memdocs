@@ -10,11 +10,12 @@ ms.assetid: 8d37b983-a964-402c-819d-2512ed2d463b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Settings to manage high-risk deployments for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 With Configuration Manager, you can configure deployment verification site settings. These settings warn administrators if they create a high-risk task sequence deployment. A high-risk deployment is:  

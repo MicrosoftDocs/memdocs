@@ -9,10 +9,11 @@ ms.assetid: 8b9bfaff-c183-4453-a6a0-f1ede8e3552f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SearchFolder Server WMI Class
-The `SMS_SearchFolder` WMI class is an SMS Provider server class, in System Center Configuration Manager, that behaves the same as `SMS_ObjectContainerNode`, but is only used for search operations.  
+The `SMS_SearchFolder` WMI class is an SMS Provider server class, in Configuration Manager, that behaves the same as `SMS_ObjectContainerNode`, but is only used for search operations.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -99,18 +100,18 @@ Class SMS_SearchFolder : SMS_BaseClass
  The sidecode of the site that the folder originated from.  
 
 ## Remarks  
- In Configuration Manager, the search folder and folders were one class.  Now, in System Center Configuration Manager, they are separate classes.  `SMS_SearchFolders` folders appear in the "Manage Searches" class of menus in the console.  The `SMS_SearchFolders` folders have no dedicated node and are used for node searches only.  `SMS_SearchFolders` folders cannot be used for global searches.  
+ In Configuration Manager, the search folder and folders were one class.  Now, in Configuration Manager, they are separate classes.  `SMS_SearchFolders` folders appear in the "Manage Searches" class of menus in the console.  The `SMS_SearchFolders` folders have no dedicated node and are used for node searches only.  `SMS_SearchFolders` folders cannot be used for global searches.  
 
  There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers that are included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [Configuration Manager Console Folder Server WMI Classes](../../../../../develop/reference/core/servers/console/console-folder-server-wmi-classes.md)   
- [SMS_ObjectContainerItem Server WMI Class](../../../../../develop/reference/core/servers/console/sms_objectcontaineritem-server-wmi-class.md)
+## See also
+
+[SMS_ObjectContainerItem Server WMI Class](../../../../../develop/reference/core/servers/console/sms_objectcontaineritem-server-wmi-class.md)

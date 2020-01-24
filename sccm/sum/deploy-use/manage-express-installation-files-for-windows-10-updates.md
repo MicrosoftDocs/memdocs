@@ -5,12 +5,13 @@ description: Configuration Manager supports express installation files for Windo
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 06/15/2018
+ms.date: 11/02/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Manage express installation files for Windows 10 updates
@@ -21,10 +22,10 @@ To learn how to use Configuration Manager to manage update content to stay curre
 
 
 > [!IMPORTANT]  
-> The OS client support is available in Windows 10, version 1607, with an update to the Windows Update Agent. This update is included with the updates released on April 11, 2017. For more information about these updates, see [support article 4015217](http://support.microsoft.com/kb/4015217). Future updates leverage express for smaller downloads. Prior versions of Windows 10, and Windows 10 version 1607 without this update don't support express installation files.  
+> The OS client support is available in Windows 10, version 1607, with an update to the Windows Update Agent. This update is included with the updates released on April 11, 2017. For more information about these updates, see [support article 4015217](https://support.microsoft.com/kb/4015217). Future updates leverage express for smaller downloads. Prior versions of Windows 10, and Windows 10 version 1607 without this update don't support express installation files.  
 
 
-### Enable the site to download express installation files for Windows 10 updates
+## Enable the site to download express installation files for Windows 10 updates
 To start synchronizing the metadata for Windows 10 express installation files, enable it in the properties of the software update point.  
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.  
@@ -40,7 +41,7 @@ To start synchronizing the metadata for Windows 10 express installation files, e
 > To determine the actual space being used on disk by the file, check the **Size on disk** property of the file. The Size on disk property should be considerably smaller than the Size value. For more information, see [FAQs to optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#bkmk_faq).  
 
 
-### Enable clients to download and install express installation files
+## Enable clients to download and install express installation files
 To enable express installation files support on clients, enable express installation files in the **Software Updates** group of client settings. This setting creates a new HTTP listener that listens for requests to download express installation files on the port that you specify.
 
 > [!NOTE]    
@@ -55,3 +56,8 @@ Once you deploy client settings to enable this functionality on the client, it a
 3. Select the appropriate client settings, and click **Properties** on the ribbon.  
 
 4. Select the **Software Updates** group. Configure to **Yes** the setting to **Enable installation of Express Updates on clients**. Configure the **Port used to download content for Express Updates** with the port used by the HTTP listener on the client.
+    - In version 1902, **Port used to download content for Express Updates** was changed to **Port that clients use to receive requests for delta content**.
+
+## Next steps
+
+[Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates)

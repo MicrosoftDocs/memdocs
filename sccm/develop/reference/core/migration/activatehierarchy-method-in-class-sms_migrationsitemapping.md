@@ -9,7 +9,8 @@ ms.assetid: 51a21352-8184-4f0f-9fe0-365608ab1433
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ActivateHierarchy Method in Class SMS_MigrationSiteMapping
 The `ActivateHierarchy` Windows Management Instrumentation (WMI) class method, in Configuration Manager, activates the hierarchy.  
@@ -71,12 +72,12 @@ SInt32 ActivateHierarchy (
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [SMS_MigrationEntity Server WMI Class](../../../../develop/reference/core/migration/sms_migrationentity-server-wmi-class.md)   
- [Migration Server WMI Classes](../../../../develop/reference/core/migration/migration-server-wmi-classes.md)
+## See also
+
+[SMS_MigrationEntity Server WMI Class](../../../../develop/reference/core/migration/sms_migrationentity-server-wmi-class.md)

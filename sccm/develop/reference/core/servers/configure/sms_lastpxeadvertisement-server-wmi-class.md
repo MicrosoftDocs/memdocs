@@ -9,7 +9,8 @@ ms.assetid: 9522d5d9-b5f4-443d-a51a-518793d4c62b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_LastPXEAdvertisement Server WMI Class
 The `SMS_LastPXEAdvertisement` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the last PXE advertisement.  

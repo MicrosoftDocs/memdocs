@@ -9,10 +9,11 @@ ms.assetid: 4176f9e2-aa68-44e0-bf47-d3cac73ca737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Operating System Deployment Task Sequence Object Model
-In System Center Configuration Manager, operating system deployment task sequences are created and edited by using a Windows Management Instrumentation (WMI) class-based object model.  
+In Configuration Manager, operating system deployment task sequences are created and edited by using a Windows Management Instrumentation (WMI) class-based object model.  
 
 > [!CAUTION]
 >  Changing task sequences by updating the task sequence XML is not supported. You will only need the XML when exporting the task sequence to different site. The XML is stored in the [SMS_TaskSequencePackage Server WMI Class](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md)`Sequence` property.  
@@ -21,7 +22,7 @@ In System Center Configuration Manager, operating system deployment task sequenc
  A task sequence is packaged in an instance of the [SMS_TaskSequencePackage Server WMI Class](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) class and there is a single package for each task sequence. The package is advertised to client computers by using an instance of the [SMS_Advertisement Server WMI Class](../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md) class. To associate the task sequence package with the advertisement, you set the [SMS_Advertisement Server WMI Class](../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md) PackageID property to the [SMS_TaskSequencePackage Server WMI Class](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) PackageID property.  
 
 > [!NOTE]
->  [SMS_TaskSequencePackage Server WMI Class](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) derives from [SMS_Package Server WMI Class](../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) and can be used in the same way that packages are used. For more information, see [Software Distribution Packages](../../develop/core/servers/configure/software-distribution-packages.md).  
+>  [SMS_TaskSequencePackage Server WMI Class](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) derives from [SMS_Package Server WMI Class](../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) and can be used in the same way that packages are used. For more information, see [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview).  
 
  For more information about creating a task sequence package, see [How to Create an Operating System Deployment Task Sequence Package](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence-package.md).  
 
@@ -60,7 +61,7 @@ In System Center Configuration Manager, operating system deployment task sequenc
  Configuration Manager defines a number of built-in actions that are defined in classes derived from the [SMS_TaskSequence_Action](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) class. For example, the action that allows you to specify a command line is the [SMS_TaskSequence_RunCommandLineAction](../../develop/reference/osd/sms_tasksequence_runcommandlineaction-server-wmi-class.md) class.  
 
 > [!NOTE]
->  The built-in actions are named SMS_TaskSequence_`ActionName`Action where `ActionName` is the name of the built-in action. They are documented in [Operating System Deployment Server WMI Classes](../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md).  
+> The built-in actions are named SMS_TaskSequence_`ActionName`Action where `ActionName` is the name of the built-in action. For more information, see [SMS_TaskSequence_Action server WMI class](/sccm/develop/reference/osd/sms_tasksequence_action-server-wmi-class).  
 
  In addition to the properties that are inherited from [SMS_TaskSequenceStep](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md), a derived action inherits the following properties from the [SMS_TaskSequence_Action](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) class that you can set:  
 

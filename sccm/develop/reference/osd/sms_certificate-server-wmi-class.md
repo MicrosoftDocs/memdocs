@@ -9,7 +9,8 @@ ms.assetid: 1e35b0f1-e436-4358-b7e3-b970452ffb25
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_Certificate Server WMI Class
 The `SMS_Certificate` Windows Management Instrumentation (WMI) class is an SMS Provider server class that contains all of the certificates that are registered to the server.  
@@ -168,15 +169,13 @@ Class SMS_Certificate : SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)   
  [BlockCertificate Method in Class SMS_CertificateInfo](../../../develop/reference/osd/blockcertificate-method-in-class-sms_certificateinfo.md)   
  [SMS_PXECertificateInfo Server WMI Class](../../../develop/reference/osd/sms_pxecertificateinfo-server-wmi-class.md)   
- [Configuration Manager Operating System Deployment](../../../develop/osd/operating-system-deployment.md)   
- [About Operating System Deployment Task Sequences](../../../develop/osd/about-operating-system-deployment-task-sequences.md)
+ [Task sequence overview](/sccm/develop/osd/operating-system-deployment-task-sequences-overview)

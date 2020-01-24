@@ -9,7 +9,8 @@ ms.assetid: ff58c3a0-203e-476b-b803-e449444f4fb1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetClientBaselineStatusSummary Method in Class SMS_ClientBaselineStatus
 The `GetClientBaselineStatusSummary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets baseline status summary information by `BaselineType` and `CollectionID`.  
@@ -99,4 +100,3 @@ sint32 GetClientBaselineStatusSummary(
 
 ## See Also  
  [SMS_ClientBaselineStatus Server WMI Class](../../../../../develop/reference/core/clients/deploy/sms_clientbaselinestatus-server-wmi-class.md)   
- [Configuration Manager Client Deployment Server WMI Classes](../../../../../develop/reference/core/clients/deploy/client-deployment-server-wmi-classes.md)

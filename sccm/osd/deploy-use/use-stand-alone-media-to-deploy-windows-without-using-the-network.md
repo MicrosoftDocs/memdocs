@@ -1,7 +1,7 @@
 ---
-title: Use stand-alone media to deploy Windows without using the network
+title: Use stand-alone media to deploy Windows
 titleSuffix: Configuration Manager
-description: Use stand-alone media in Configuration Manager to deploy operating systems where bandwidth is limited or as an option to refresh, install, or upgrade computers.
+description: Use stand-alone media in Configuration Manager to deploy Windows where bandwidth is limited as an option to refresh, install, or upgrade computers.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
@@ -11,13 +11,13 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 
-ms.collection: M365-identity-device-management
+
 ---
-# Use stand-alone media to deploy Windows without using the network in System Center Configuration Manager
+# Use stand-alone media to deploy Windows without using the network
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Stand-alone media in System Center Configuration Manager contains everything that is required to deploy an  operating system on a computer. This includes the boot image, operating system image, and task sequence to install the operating system, including applications, drivers, and so on. Stand-alone media deployments let you deploy operating systems in the following conditions:  
+Stand-alone media in Configuration Manager contains everything that is required to deploy an  operating system on a computer. This includes the boot image, operating system image, and task sequence to install the operating system, including applications, drivers, and so on. Stand-alone media deployments let you deploy operating systems in the following conditions:  
 
 -   In environments where it is not practical to copy an operating system image or other large packages over the network.  
 

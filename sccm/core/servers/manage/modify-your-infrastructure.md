@@ -10,11 +10,12 @@ ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Modify your System Center Configuration Manager infrastructure
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Modify your Configuration Manager infrastructure
+
+*Applies to: Configuration Manager (current branch)*
 
 After you install one or more sites, you might have need to modify configurations or take actions that affect the infrastructure you have deployed.  
 
@@ -30,7 +31,7 @@ At each Configuration Manager site, you can re-run Setup to:
 
 You can monitor the installation or removal of the SMS Provider by viewing the **ConfigMgrSetup.log** in the root folder of the site server on which you run Setup.  
 
-Before modifying the SMS Provider at a site, be familiar with the information in [Plan for the SMS Provider for System Center Configuration Manager](../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
+Before modifying the SMS Provider at a site, be familiar with the information in [Plan for the SMS Provider for Configuration Manager](../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
 #### To manage the SMS Provider configuration for a site  
 
@@ -60,7 +61,7 @@ Before modifying the SMS Provider at a site, be familiar with the information in
 
 - **Modify the language that displays in the Configuration Manager console** - To modify the installed languages   see [Manage Configuration Manager console language](#BKMK_ManageConsoleLanguages) in this topic.  
 
-- **Install additional consoles** - To install additional consoles, see  [Install System Center Configuration Manager consoles](/sccm/core/servers/deploy/install/install-consoles).  
+- **Install additional consoles** - To install additional consoles, see  [Install Configuration Manager consoles](/sccm/core/servers/deploy/install/install-consoles).  
 
 - **Configure DCOM** - To configure DCOM permission to enable consoles that are remote from the site server to connect, see  [Configure DCOM permissions for remote Configuration Manager consoles](#BKMK_ConfigDCOMforRemoteConsole) in this topic.  
 
@@ -166,7 +167,7 @@ For more information about the limits of support, see [Support policy for manual
 
 
 > [!IMPORTANT]  
-> Before you move a database that has one or more database replicas for management points, you must first remove the database replicas. After you complete the database move, you can reconfigure database replicas. For more information see [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
+> Before you move a database that has one or more database replicas for management points, you must first remove the database replicas. After you complete the database move, you can reconfigure database replicas. For more information see [Database replicas for management points for Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
 
 ##  <a name="bkmk_SPN"></a> Manage the SPN for the site database server  
 You can choose the account that runs  SQL Services for the site database:  
@@ -183,10 +184,10 @@ SQL Server documentation can help you [manually register the SPN](https://techne
 
 You can register an SPN for the SQL Server service account of the site database server by using the **Setspn** tool. You must run the Setspn tool on a computer that resides in the domain of SQL Server, and it must use Domain Administrator credentials to run.  
 
-Use the following procedures as examples of how to manage the SPN for the SQL Server service account that uses the Setspn tool on Windows Server 2008 R2. For specific guidance about Setspn, see [Setspn Overview](http://go.microsoft.com/fwlink/p/?LinkId=226343), or similar documentation specific to your operating system.  
+Use the following procedures as examples of how to manage the SPN for the SQL Server service account that uses the Setspn tool on Windows Server 2008 R2. For specific guidance about Setspn, see [Setspn Overview](https://go.microsoft.com/fwlink/p/?LinkId=226343), or similar documentation specific to your operating system.  
 
 > [!NOTE]  
-> The following procedures reference the Setspn command-line tool. The Setspn command-line tool is included when you install Windows Server 2003 Support Tools from the product CD or from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=100114). For more information about how to install Windows Support Tools from the product CD, see [Install Windows Support Tools](http://go.microsoft.com/fwlink/p/?LinkId=62270).  
+> The following procedures reference the Setspn command-line tool. The Setspn command-line tool is included when you install Windows Server 2003 Support Tools from the product CD or from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=15326). For more information about how to install Windows Support Tools from the product CD, see [Install Windows Support Tools](https://go.microsoft.com/fwlink/p/?LinkId=62270).  
 
 #### To manually create a domain user Service Principal Name (SPN) for the SQL Server service account  
 
@@ -323,7 +324,7 @@ After a site installs,  you can change the server and client language packs that
 
   After you update the client language packs at a site, you must install each client that will use the language packs by using source files that include the client language packs.  
 
-For information about the client and server languages that are supported by Configuration Manager, see [Language Packs in System Center Configuration Manager](../../../core/servers/deploy/install/language-packs.md)  
+For information about the client and server languages that are supported by Configuration Manager, see [Language Packs](../../../core/servers/deploy/install/language-packs.md)  
 
 #### To modify the language packs that are supported at a site  
 

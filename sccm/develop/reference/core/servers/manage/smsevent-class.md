@@ -9,10 +9,11 @@ ms.assetid: 255fe69c-c404-4d21-820a-df11b1eb3048
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMSEvent Class
-The `SmsEvent` class represents a System Center Configuration Manager event on the client. The class implements the `ICcmEvent` interface.  
+The `SmsEvent` class represents a Configuration Manager event on the client. The class implements the `ICcmEvent` interface.  
 
 ## Methods and Properties  
 
@@ -35,6 +36,3 @@ The `SmsEvent` class represents a System Center Configuration Manager event on t
 
 ### Development Requirements  
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
-
-## See Also  
- [Status and State Client APIs](../../../../../develop/reference/core/servers/manage/status-client-apis.md)

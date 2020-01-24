@@ -9,10 +9,11 @@ ms.assetid: 343783ae-0951-47cc-896e-bf74420fcb22
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Modify Advertisement Properties
-The following example shows how to modify an existing advertisement, in System Center Configuration Manager, by using the `SMS_Advertisement` class and class properties.  
+The following example shows how to modify an existing advertisement, in Configuration Manager, by using the `SMS_Advertisement` class and class properties.  
 
 ### To modify advertisement properties  
 
@@ -124,5 +125,5 @@ public void ModifySWDAdvertisement(WqlConnectionManager connection, string exist
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
- [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+ [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)

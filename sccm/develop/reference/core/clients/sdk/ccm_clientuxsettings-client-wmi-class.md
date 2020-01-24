@@ -9,7 +9,8 @@ ms.assetid: 84cd8c38-f7d2-4c99-94d4-3d4c17ab7645
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_ClientUXSettings Client WMI Class
 The `CCM_ClientUXSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a set of client UX utility methods. .  
@@ -39,17 +40,9 @@ Class CCM_ClientUXSettings :
 
 -   [SetSuppressComputerActivityInPresentationMode Method in Class CCM_ClientUXSettings](../../../../../develop/reference/core/clients/sdk/setsuppresscomputeractivityinpresentationmode-method.md)  
 
-## Properties  
-
-## Remarks  
-
-## Requirements  
 
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Client SDK WMI Classes](../../../../../develop/reference/core/clients/sdk/client-sdk-wmi-classes.md)

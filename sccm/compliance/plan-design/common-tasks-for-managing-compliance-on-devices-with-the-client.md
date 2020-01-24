@@ -1,7 +1,7 @@
 ---
-title: "Common compliance management tasks for client-managed devices "
-titleSuffix: "Configuration Manager"
-description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
+title: Common compliance management tasks
+titleSuffix: Configuration Manager
+description: Learn about Configuration Manager compliance settings by working through some common scenarios.
 ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -10,15 +10,17 @@ ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
-# Common tasks for managing compliance on devices with the System Center Configuration Manager client
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# Common tasks for managing compliance on devices with the Configuration Manager client
 
-This article gives you an introduction to using System Center Configuration Manager compliance settings by guiding you through some common scenarios that you might come across.  
+*Applies to: Configuration Manager (current branch)*
 
- If you're already familiar with compliance settings, you can find detailed information about all the features you use in [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md).  
+This article gives you an introduction to using Configuration Manager compliance settings by guiding you through some common scenarios that you might come across.  
+
+ If you're already familiar with compliance settings, you can find detailed information about all the features you use in [Configuration items for devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md).  
 
  Before you start, read [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md) to learn some basics about compliance settings. Read [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) for information about necessary prerequisites.  
 
@@ -49,7 +51,7 @@ This article gives you an introduction to using System Center Configuration Mana
 
 6. Complete the wizard to create the configuration item.  
 
- You can now use the information in the [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) article to help you deploy the configuration you've created to devices.  
+ You can now use the information in the [Common tasks for creating and deploying configuration baselines with Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) article to help you deploy the configuration you've created to devices.  
 
 ## Scenario: Remediate an incorrect registry value on Windows desktop computers
 
@@ -58,7 +60,7 @@ This article gives you an introduction to using System Center Configuration Mana
 > - Evaluate a Mac OS X preferences (plist) file.
 > - Use a custom script and evaluate the results returned by the script.  
 >
->For more information, see [How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md).  
+>For more information, see [How to create configuration items for Mac OS X devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md).  
 
  In this scenario, you discover that an important line-of-business app doesn't run correctly on some Windows 8.1 computers that you manage. You determine that this is because a registry key named **HKEY_LOCAL_MACHINE\SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1** is set to a value of **0** on some computers. For the line-of-business app to run successfully, this value needs to be set to **1**.  
 

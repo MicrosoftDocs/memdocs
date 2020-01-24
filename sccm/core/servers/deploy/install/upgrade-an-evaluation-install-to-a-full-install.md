@@ -1,8 +1,8 @@
 ---
 title: "Upgrade evaluation installs"
 titleSuffix: "Configuration Manager"
-description: "Learn how to upgrade an evaluation installation to a full installation of System Center Configuration Manager."
-ms.date: 2/7/2017
+description: "Learn how to upgrade an evaluation installation to a full installation of Configuration Manager."
+ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,13 +10,14 @@ ms.assetid: 9a32f5a3-9917-434f-9811-106170f404be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Upgrade an evaluation installation of System Center Configuration Manager to a full installation
+# Upgrade an evaluation installation of Configuration Manager to a full installation
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-If you installed System Center Configuration Manager as an evaluation version, after 180 days, the Configuration Manager console becomes read-only until you activate the product from the **Site Maintenance** page in Setup. At any time before or after the 180-day period, you have the option to upgrade an evaluation installation to a full installation.  
+If you installed Configuration Manager as an evaluation version, after 180 days, the Configuration Manager console becomes read-only until you activate the product from the **Site Maintenance** page in Setup. At any time before or after the 180-day period, you have the option to upgrade an evaluation installation to a full installation.  
 
 > [!NOTE]  
 >  When you connect a Configuration Manager console to an evaluation installation of Configuration Manager, the console title bar displays the number of days that remain until the evaluation installation expires. The number of days does not automatically refresh and it only updates when you make a new connection to a site.  

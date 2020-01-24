@@ -9,10 +9,11 @@ ms.assetid: 5a37eb14-bc75-4ecd-a48f-9dde3b901a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Enumerate Updates Matching a Specific Criteria
-This topic explains how to enumerate software updates that match specific criteria in System Center Configuration Manager by building a query and then using the `ExecuteQuery` method of the `QueryProcessor` class to run the query.  
+This topic explains how to enumerate software updates that match specific criteria in Configuration Manager by building a query and then using the `ExecuteQuery` method of the `QueryProcessor` class to run the query.  
 
 ### To enumerate updates matching a specific criteria  
 
@@ -256,8 +257,8 @@ public void EnumerateUpdatesMatchingCriteria(WqlConnectionManager connection)
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
-## See Also  
- [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
- [Software Updates Scheduled Deployment](../../develop/sum/software-updates-deployments.md)   
- [SMS_SoftwareUpdate](../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md)
+## See also
+
+[About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
+
+[SMS_SoftwareUpdate](/sccm/develop/reference/sum/sms_softwareupdate-server-wmi-class)

@@ -1,8 +1,8 @@
 ---
-title: "Manage Applications"
-titleSuffix: "Configuration Manager"
-description: "Manage Applications in System Center Configuration Manager."
-ms.date: 03/05/2017
+title: Manage apps for on-premises MDM
+titleSuffix: Configuration Manager
+description: Manage applications for on-premises mobile device management (MDM) in Configuration Manager.
+ms.date: 01/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,40 +10,50 @@ ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
-# Manage Applications in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# Manage apps for on-premises MDM in Configuration Manager
 
-When you manage devices through Microsoft Intune or Configuration Manager on-premises device management, you can manage these additional application types:
+*Applies to: Configuration Manager (current branch)*
+
+When you manage devices with Configuration Manager on-premises mobile device management (MDM), you can manage the following application types:
+
 - Windows Phone app package (*.xap file)
-- App Package for iOS (*.ipa file)
-- App Package for Android (*.apk file)
-- App Package for Android on Google Play
 - Windows Phone app package (in the Windows Phone Store)
 - Windows Installer through MDM
 - Web Application
 
-This section provides detailed information about creating and managing applications using hybrid MDM or on-premises MDM.
+For more general information about managing Configuration Manager applications and deployment types, see [Management tasks for Configuration Manager applications](/configmgr/apps/deploy-use/management-tasks-applications).
 
-[Management tasks for System Center Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md) provides more general information about managing System Center Configuration Manager applications and deployment types.
+## <a name="bkmk_winphone"></a> Create Windows Phone application
 
-## Deploying and monitoring apps
+A Configuration Manager application has one or more deployment types. The deployment type includes the installation files and information that's required to deploy software to a device. A deployment type also has rules that specify when and how the software is deployed.
 
-Deploying and monitoring applications in System Center Configuration Manager are the same processes for mobile devices as they are for onsite devices, such as laptops and desktops. You can read through the following topics for general information about deploying and monitoring applications:
+For the general steps to create an app and deployment types, see [create an application](/configmgr/apps/deploy-use/create-applications#bkmk_create).
 
-- [Deploy applications in System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md)
-- [Monitor applications in System Center Configuration Manager](../../apps/deploy-use/monitor-applications-from-the-console.md)
+Configuration Manager supports the following app file types For Windows mobile devices:
 
-Here are some considerations to keep in mind when deploying and monitoring applications, specific to mobile device management.
+|Device type|Supported file types|
+|-----------------|---------------------|
+|Windows Phone 8|xap|
+|Windows Phone 8.1|xap, appx, appxbundle|
+|Windows 10 Mobile|xap, appx, appxbundle|
 
-- MDM-enrolled devices do not support simulated deployments, user experience, or scheduling settings.
+Deploy Windows Phone apps as **Available** or **Required**. Also use deployments to uninstall apps.
 
-- Don't add more than 100 locales to a single app. Adding more than 100 locales prevents the app from syncing with Intune. This action also prevents the app from being installed or being available to install on the device.
+## Deploy and monitor apps
 
-- You can associate the deployment with an iOS app configuration policy if you have already congured one. See [Configure iOS apps with app configuration policies](configure-ios-apps-with-app-configuration-policies.md).
+Deploy and monitor applications for mobile devices in Configuration Manager the same as you do for other devices, such as desktops and servers. For more information, see the following articles:
 
-### Next Steps
+- [Deploy applications](/configmgr/apps/deploy-use/deploy-applications)
+- [Monitor applications](/configmgr/apps/deploy-use/monitor-applications-from-the-console)
 
-You might eventually want to make changes to an application, uninstall an application, or replace an already deployed application with a new application. Read through [Update and retire applications with System Center Configuration Manager](../../apps/deploy-use/update-and-retire-applications.md) to understand these capabilities.
+Review the following limitations specific to mobile devices:
+
+- MDM-enrolled devices don't support simulated deployments, user experience, or scheduling settings.
+
+- Don't add more than 100 locales to a single app. This action prevents the app from installing on the device.
+
+## Next step
+
+To make changes, uninstall, or replace a deployed application with a new application, manage it the same as any app in Configuration Manager. For more information, see [Update and retire applications](/configmgr/apps/deploy-use/update-and-retire-applications).

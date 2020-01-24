@@ -9,7 +9,8 @@ ms.assetid: c31f0f2e-09f6-41e6-ac20-622080053b73
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ConfigurationItemLatestBaseClass Server WMI Class
 The `SMS_ConfigurationItemLatestBaseClass` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the latest version of Configuration Items in the system.  
@@ -43,7 +44,6 @@ Class SMS_ConfigurationItemLatestBaseClass : SMS_BaseClass
     Boolean IsExpired;  
     Boolean IsHidden;  
     Boolean IsLatest;  
-    Boolean IsQuarantined;  
     Boolean IsSuperseded;  
     Boolean IsUserDefined;  
     String LastModifiedBy;  
@@ -125,16 +125,22 @@ Class SMS_ConfigurationItemLatestBaseClass : SMS_BaseClass
 |6|Driver|  
 |7|OtherConfigurationItem|  
 |8|SoftwareUpdateBundle|  
-|9|SoftwareUpdateAuthorizationList|  
+|9|AuthorizationList (SoftwareUpdateAuthorizationList)|  
 |10|AppModel|  
 |11|GlobalSettings|  
 |13|GlobalExpression|  
 |14|Platform|  
 |21|DeploymentType|  
+|24|Install Policy Type|  
 |25|DeploymentTechnology|  
 |26|HostingTechnology|  
 |27|InstallerTechnology|  
-|28|AbstractConfigurationItem|  
+|28|PublishingItem|  
+|29|ApplicationGroup|  
+|40|SettingsDefinition|  
+|50|ConfigurationPolicy|  
+|60|VirtualEnvironment|  
+|70|AbstractConfigurationItem|  
 
  `CIVersion`  
  Data type: `UInt32`  
@@ -188,7 +194,7 @@ Class SMS_ConfigurationItemLatestBaseClass : SMS_BaseClass
 
  Qualifiers: [read]  
 
- Date and time when the Network Access Protection (NAP) compliance policy for the configuration item becomes effective.  
+ Date and time when the <!-- Network Access Protection (NAP)  -->compliance policy for the configuration item becomes effective.  
 
  `EULAAccepted`  
  Data type: `UInt32`  
@@ -301,15 +307,6 @@ Class SMS_ConfigurationItemLatestBaseClass : SMS_BaseClass
  Qualifiers: [read]  
 
  `true` if the configuration item is the latest.  
-
- `IsQuarantined`  
- Data type: `Boolean`  
-
- Access type: Read-only  
-
- Qualifiers: [read]  
-
- `true` if the configuration item is used in NAP policy. The default value is `false`. This property only applies to software update configuration items. See [SMS_SoftwareUpdate Server WMI Class](../../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md).  
 
  `IsSuperseded`  
  Data type: `Boolean`  

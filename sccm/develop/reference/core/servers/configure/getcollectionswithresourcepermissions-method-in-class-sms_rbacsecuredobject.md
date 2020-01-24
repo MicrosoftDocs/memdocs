@@ -9,7 +9,8 @@ ms.assetid: 815a36d8-7681-4a33-921f-69268b0663af
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetCollectionsWithResourcePermissions Method in Class SMS_RbacSecuredObject
 The `GetCollectionsWithResourcePermissions` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the list of collection identifiers for which the user has the specified permissions. The collection must contain the specified resource.  
@@ -32,7 +33,7 @@ UInt32 GetCollectionsWithResourcePermissions(
 
  Qualifiers: [in]  
 
- Unique ID, supplied by System Center Configuration Manager, for the resource.  
+ Unique ID, supplied by Configuration Manager, for the resource.  
 
  `Permissions`  
  Data type: `UInt32`  

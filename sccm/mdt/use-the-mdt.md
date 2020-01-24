@@ -7570,7 +7570,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 -   Applying security and compliance configuration settings using Group Policy Object Packs as described in [Applying Group Policy Object Packs](#ApplyingGroupPolicyObjectPacks)  
 
--   Enabling participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/privacystatement)(CEIP) and [Windows Error Reporting](https://docs.microsoft.com/windows-hardware/drivers/dashboard/windows-error-reporting-getting-started) (WER) as described in [Enabling Participation in CEIP and WER](#EnablingParticipationinCEIPandWER)  
+-   Enabling participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/privacystatement)(CEIP) and [Windows Error Reporting](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting) (WER) as described in [Enabling Participation in CEIP and WER](#EnablingParticipationinCEIPandWER)  
 
 -   Configuring the task sequence steps that configure Windows roles and features on the target computer as described in [Configuring Roles and Features Task Sequence Steps](#ConfiguringRolesandFeaturesTaskSequenceSteps)  
 
@@ -7967,7 +7967,7 @@ Table 154 explains the properties and corresponding values used in Listing 9.
 |Line in CustomSettings.ini|Purpose|  
 |--------------------------------|-------------|  
 |`[Settings] [Settings]`|Indicates the start of the `[Settings]` section.|  
-|`Priority=Default, MACAddress`|Establishes the sequence in which the process parses subsections to locate values for the variables. In this example, the `[Default]` section is parsed first, and then the section that corresponds to the MAC address of the target computer (`MACAddress`) is parsed. he sections for the target computers (`[00:0F:20:35:DE:AC]`and `[00:03:FF:FE:FF:FF]`) contain computer-specific settings. Establishes the sequence in which the process parses subsections to locate values for the variables. In this example, the `[Default]` section is parsed first, and then the section that corresponds to the MAC address of the target computer (`MACAddress`) is parsed. The sections for the target computers (`[00:0F:20:35:DE:AC]`and `[00:03:FF:FE:FF:FF]`) contain computer-specific settings.|  
+|`Priority=Default, MACAddress`|Establishes the sequence in which the process parses subsections to locate values for the variables. In this example, the `[Default]` section is parsed first, and then the section that corresponds to the MAC address of the target computer (`MACAddress`) is parsed. The sections for the target computers (`[00:0F:20:35:DE:AC]`and `[00:03:FF:FE:FF:FF]`) contain computer-specific settings. Establishes the sequence in which the process parses subsections to locate values for the variables. In this example, the `[Default]` section is parsed first, and then the section that corresponds to the MAC address of the target computer (`MACAddress`) is parsed. The sections for the target computers (`[00:0F:20:35:DE:AC]`and `[00:03:FF:FE:FF:FF]`) contain computer-specific settings.|  
 |`Properties=MyCustomProperty`|Indicates any additional properties to locate. The properties listed here are in addition to the properties listed in ZTIGather.xml. ZTIGather.wsf parses ZTIGather.xml to obtain a list of the properties.|  
 |`[Default]`|Indicates the start of the `[Default]` section.|  
 |`OSInstall=Y`|Indicates whether the target computer is authorized to have the operating system installed.|  
@@ -9048,7 +9048,7 @@ DriverSelectionProfile =%MAKE%-%MODEL%-Win8-%ARCHITECTURE%
 >  The appropriate GPO pack is selected based on the operating system being deployed. If no matching GPO pack can be found, then no GPO pack will be applied.  
 
 ###  <a name="EnablingParticipationinCEIPandWER"></a> Enabling Participation in CEIP and WER  
- MDT includes a new task sequence step that automates the configuration of participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/privacystatement) (CEIP) and [Windows Error Reporting](https://docs.microsoft.com/windows-hardware/drivers/dashboard/windows-error-reporting-getting-started) (WER). The **Opt In to CEIP and WER** task sequence step is used to automate this participation.  
+ MDT includes a new task sequence step that automates the configuration of participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/privacystatement) (CEIP) and [Windows Error Reporting](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting) (WER). The **Opt In to CEIP and WER** task sequence step is used to automate this participation.  
 
 > [!NOTE]
 >  Although you can use MDT task sequences to enable CEIP and WER for Windows operating systems (only when the corresponding task sequence step is enabled), this is separate from the CEIP information gathered when you opt in to the MDT CEIP program. For more information about what information MDT sends when CEIP is enabled, see the [Microsoft Deployment Toolkit Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=314082).  

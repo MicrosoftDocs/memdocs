@@ -9,7 +9,8 @@ ms.assetid: 937843fd-293c-446a-a6df-7c177e059a11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_G_USER_DCMDeploymentErrorAssetDetails Server WMI Class
 The `SMS_G_USER_DCMDeploymentErrorAssetDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the asset details for deployment error.  
@@ -117,6 +118,3 @@ Class SMS_G_USER_DCMDeploymentErrorAssetDetails : SMS_G_User
 
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Application Management Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

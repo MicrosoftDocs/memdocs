@@ -3,18 +3,19 @@ title: Software updates maintenance
 titleSuffix: "Configuration Manager"
 description: "To maintain updates in Configuration Manager, you can schedule the WSUS cleanup task, or you can run it manually."
 author: mestew
-ms.date: 07/30/2019
+ms.date: 12/17/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
-ms.collection: M365-identity-device-management
+
+
 ---
 # Software updates maintenance
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can schedule and run WSUS cleanup tasks from the Configuration Manager console from the Software Update Point Component properties. When you first select to run the WSUS cleanup task, it will run after the next software updates synchronization.  
 
@@ -29,7 +30,7 @@ Schedule the WSUS cleanup job by running the following steps:
 
 4. Review the **Supersedence behavior**. Modify the behavior if needed.
 
-   ![supersedence behavior screenshot](media/sccm-supersedence-behavior.PNG)
+   ![supersedence behavior screenshot](media/supersedence-behavior.png)
 
 5. Click the **Supersedence Rules** tab, select **Run WSUS cleanup wizard**. In version 1806, the option is renamed to **Run WSUS cleanup after synchronization**.
 
@@ -114,10 +115,10 @@ The addition of non-clustered indexes improves the WSUS cleanup performance that
 
 #### SQL permissions for creating indexes
 
-When the WSUS database is on a remote SQL server, the site server's computer account needs the following SQL permissions:
+When the WSUS database is on a remote SQL server, you might need to add permissions in SQL to create indexes. The account used to connect to the WSUS database and create the indexes can vary. If you specify a [WSUS Server Connection Account in the software update point properties](/sccm/sum/get-started/install-a-software-update-point#wsus-server-connection-account), then ensure the connection account has the SQL permissions. If you don't specify a WSUS Server Connection Account, then the site server's computer account needs the SQL permissions.
 
-- Creating an index requires `ALTER` permission on the table or view. The site server's computer account must be a member of the `sysadmin` fixed server role or the `db_ddladmin` and `db_owner` fixed database roles. For more information about creating and index and permissions, see [CREATE INDEX (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions).
-- The `CONNECT SQL` server permission must be granted to the site server's computer account. For more information, see [GRANT Server Permissions (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017). 
+- Creating an index requires `ALTER` permission on the table or view. The account must be a member of the `sysadmin` fixed server role or the `db_ddladmin` and `db_owner` fixed database roles. For more information about creating and index and permissions, see [CREATE INDEX (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions).
+- The `CONNECT SQL` server permission must be granted to the account. For more information, see [GRANT Server Permissions (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
 
 > [!NOTE]  
 >  If the WSUS database is on a remote SQL server using a non-default port, then indexes might not be added. You can create a [server alias using SQL Server Configuration Manager](https://docs.microsoft.com/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017) for this scenario. Once the alias is added and Configuration Manager can make a connection to the WSUS database, indexes will be added.
@@ -138,6 +139,37 @@ When the WSUS database is on a remote SQL server, the site server's computer acc
 
 - The `db_datareader` and `db_datawriter` fixed database roles. For more information, see [Database-Level Roles](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles).
 - The `CONNECT SQL` server permission must be granted to the site server's computer account. For more information, see [GRANT Server Permissions (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+
+#### WSUS cleanup wizard
+
+Starting in version 1906, the following **WSUS Server Cleanup Wizard** options aren't run on the CAS, primary, and secondary sites:
+
+- Computers not contacting the server
+- Unneeded update files
+
+  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/) blog post.
+
+
+### Known issues for version 1906
+
+Consider the following scenario:
+<!--5418148-->
+- You are using Configuration Manager version 1906
+- You have remote software update points using a Windows Internal Database
+- In the **Software Update Point Component Properties**, you have any of the following selected options under the **WSUS Maintenance** tab:
+   - Add non-clustered indexes to the WSUS database
+   - Remove obsolete updates from the WSUS database
+
+In this scenario, Configuration Manager is unable to perform the above WSUS Maintenance tasks for the remote Software Updates Points using a Windows Internal Database. This issue occurs because Windows Internal Database doesn't allow remote connections. You'll see the following errors in the `WSyncMgr.log` on the site server:
+
+```text
+Indexing Failed. Could not connect to SUSDB.
+SqlException thrown while connect to SUSDB in Server: <SUP.CONTOSO.COM>. Error Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+...
+Could not Delete Obselete Updates because ConfigManager could not connect to SUSDB: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) UpdateServer: <SUP.CONTOSO.COM>
+```
+
+To work around the issue, you can automate the WSUS maintenance for the remote software update points using a Windows Internal Database. For more information and detailed steps, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint).
 
 ## Updates cleanup log entries
 

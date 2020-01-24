@@ -1,7 +1,7 @@
 ---
 title: "Technical Preview 1802 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview version 1802 for System Center Configuration Manager."
+description: "Learn about features available in the Technical Preview version 1802 for Configuration Manager."
 ms.date: 02/09/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,15 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Capabilities in Technical Preview 1802 for System Center Configuration Manager
+# Capabilities in Technical Preview 1802 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1802. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. 
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1802. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. 
 
-Review [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview) before installing this version of the technical preview. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
+Review [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview) before installing this version of the technical preview. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
 
 
 <!--  Known Issues Template   
@@ -312,7 +313,7 @@ Windows AutoPilot is a solution for onboarding and configuring new Windows 10 de
 
 ## Improvements to Configuration Manager Policies for Windows Defender Exploit Guard
 <!-- 1356220 -->
-Additional policy settings for the Attack Surface Reduction and Controlled folder access components have been added in Configuration Manager for [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
+Additional policy settings for the Attack Surface Reduction and Controlled folder access components have been added in Configuration Manager for [Windows Defender Exploit Guard](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection).
 
 **New settings for Controlled folder access**<br/>
 There are two additional options when you configure Controlled folder access: **Block disk sectors only** and **Audit disk sectors only**. These two settings allow Controlled folder access to be enabled for boot sectors only and does not enable the protection of specific folders or the default protected folders. 
@@ -419,4 +420,4 @@ Phased deployments automate a coordinated, sequenced rollout of software across 
 
 
 ## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    

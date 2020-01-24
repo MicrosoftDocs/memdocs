@@ -9,7 +9,8 @@ ms.assetid: f5817089-7c5d-48bb-a0a7-415e7ccc4450
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ReplicationLinkSummary Server WMI Class
 The `SMS_ReplicationLinkSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the summary of database replication link status.  

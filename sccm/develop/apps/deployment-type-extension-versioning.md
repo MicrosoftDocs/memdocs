@@ -9,7 +9,8 @@ ms.assetid: 33b69e99-dc7c-45dc-8291-362af08956b6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Deployment Type Extension Versioning
 Configuration Manager supports in-place versioning for minor upgrades and out-of-place versioning for major upgrades.  
@@ -23,5 +24,4 @@ Configuration Manager supports in-place versioning for minor upgrades and out-of
  Configuration Manager supports out-of-place versioning for major upgrades that are not backwards compatible. For out-of-place versioning, it is necessary to create a new extension and technology id.  
 
 ## See Also  
- [Configuration Manager Application Management Extension](../../develop/apps/application-management-extension.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

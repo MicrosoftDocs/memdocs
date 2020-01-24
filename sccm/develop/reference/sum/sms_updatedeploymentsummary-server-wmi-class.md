@@ -9,10 +9,11 @@ ms.assetid: c9c0923f-9ec6-463c-905b-59fb515b1dfb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_UpdateDeploymentSummary Server WMI Class
-The `SMS_UpdateDeploymentSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a summary for a given software update in given software updates deployment.  
+The `SMS_UpdateDeploymentSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a summary for a given software update in given software updates deployment.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -114,7 +115,7 @@ Class SMS_UpdateDeploymentSummary : SMS_BaseClass
 
  Qualifiers: [read, not_null]  
 
- This property is deprecated in System Center Configuration Manager.  
+ This property is deprecated in Configuration Manager.  
 
  `NumFailed`  
  Data type: `UInt32`  
@@ -199,12 +200,11 @@ Class SMS_UpdateDeploymentSummary : SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Updates Server WMI Classes](../../../develop/reference/sum/software-updates-server-wmi-classes.md)   
- [Configuration Manager Software Updates](../../../develop/sum/software-updates.md)
+ [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)

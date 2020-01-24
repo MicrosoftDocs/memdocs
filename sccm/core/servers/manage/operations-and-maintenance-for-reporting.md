@@ -1,7 +1,7 @@
 ---
 title: "Operations and maintenance for reporting "
 titleSuffix: "Configuration Manager"
-description: "Learn the details of managing reports and report subscriptions in System Center Configuration Manager."
+description: "Learn the details of managing reports and report subscriptions in Configuration Manager."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,13 +10,14 @@ ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
-# Operations and maintenance for reporting in System Center Configuration Manager
+# Operations and maintenance for reporting in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-After the infrastructure is in place for reporting in System Center Configuration Manager, there are a number of operations that you typically perform to manage reports and report subscriptions.  
+After the infrastructure is in place for reporting in Configuration Manager, there are a number of operations that you typically perform to manage reports and report subscriptions.  
 
 ##  <a name="BKMK_ManageReports"></a> Manage Configuration Manager reports  
  Configuration Manager provides over 400 predefined reports that help you gather, organize, and present information about users, hardware and software inventory, software updates, applications, site status, and other Configuration Manager operations in your organization. You can use the predefined reports as they are, or you can modify a report to meet your requirements. You can also create custom model\-based and SQL\-based reports to meet your requirements. Use the following sections to help you manage Configuration Manager reports.  
@@ -34,7 +35,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 > There must be a two-way trust established for users from a different domain than that of the Reporting Servicies Point Account to successfully run reports.
 
 > [!NOTE]  
->  Report Manager is a web\-based report access and management tool that you use to administer a single report server instance on a remote location over an HTTP connection. You can use Report Manager for operational tasks, for example, to view reports, modify report properties, and manage associated report subscriptions. This topic provides the steps to view a report and modify report properties in Report Manager, but for more information about the other options that Report Manager provides, see [Report Manager](http://go.microsoft.com/fwlink/p/?LinkId=224916) in SQL Server 2008 Books Online.  
+>  Report Manager is a web\-based report access and management tool that you use to administer a single report server instance on a remote location over an HTTP connection. You can use Report Manager for operational tasks, for example, to view reports, modify report properties, and manage associated report subscriptions. This topic provides the steps to view a report and modify report properties in Report Manager, but for more information about the other options that Report Manager provides, see [Report Manager](https://go.microsoft.com/fwlink/p/?LinkId=224916) in SQL Server 2008 Books Online.  
 
  Use the following procedures to run a Configuration Manager report.  
 
@@ -110,7 +111,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 4.  In Report Builder, modify the appropriate report settings, and then click **Save** to save the report to the report server.  
 
 ###  <a name="BKMK_CreateModelBasedReport"></a> Create a model\-based report  
- A model\-based report lets you interactively select the items you want to include in your report. For more information about creating custom report models, see [Creating custom report models for System Center Configuration Manager in SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).  
+ A model\-based report lets you interactively select the items you want to include in your report. For more information about creating custom report models, see [Creating custom report models for Configuration Manager in SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).  
 
 > [!IMPORTANT]  
 >  The user account must have **Site Modify** permission to create a new report. The user can only create a report in folders for which the user has **Modify Report** permissions.  
@@ -286,7 +287,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 -   Send an embedded or attached report. The rendering format and browser determine whether the report is embedded or attached. If your browser supports HTML 4.0 and MHTML, and you select the MHTML \(web archive\) rendering format, the report is embedded as part of the message. All other rendering formats \(CSV, PDF, Word, and so on\) deliver reports as attachments. Reporting Services does not check the size of the attachment or message before sending the report. If the attachment or message exceeds the maximum limit allowed by your mail server, the report is not delivered.  
 
 > [!IMPORTANT]  
->  You must configure the email settings in Reporting Services for the **Email** delivery option to be available. For more information about configuring the email settings in Reporting Services, see [Configuring a Report Server for Email Delivery](http://go.microsoft.com/fwlink/p/?LinkId=226668) in the SQL Server Books Online.  
+>  You must configure the email settings in Reporting Services for the **Email** delivery option to be available. For more information about configuring the email settings in Reporting Services, see [Configuring a Report Server for Email Delivery](https://go.microsoft.com/fwlink/p/?LinkId=226668) in the SQL Server Books Online.  
 
  Use the following procedure to create a report subscription to deliver a report by using email.  
 

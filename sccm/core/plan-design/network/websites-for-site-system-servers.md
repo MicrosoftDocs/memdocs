@@ -1,8 +1,8 @@
 ---
 title: "Websites for site systems"
 titleSuffix: "Configuration Manager"
-description: "Learn about default and custom websites for site system servers in System Center Configuration Manager."
-ms.date: 2/8/2017
+description: "Learn about default and custom websites for site system servers in Configuration Manager."
+ms.date: 02/8/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Websites for site system servers in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Websites for site system servers in Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Several Configuration Manager site system roles require the use of Microsoft Internet Information Services (IIS) and use the default IIS website to host site system services. When you must run other web applications on the same server and settings are not compatible with Configuration Manager, consider using a custom website for Configuration Manager.  
 
@@ -42,7 +43,7 @@ Several Configuration Manager site system roles require the use of Microsoft Int
 
 -   Set up the custom website to respond to the same port that you set up for Configuration Manager client communication (client request port).  
 
--   For each custom or default website that uses a custom folder, place a copy of the default document type that you use in the root folder that hosts the website. For example, on a Windows Server 2008 R2 computer that has default configurations, **iisstart.htm** is one of several default document types that are available. You can find this file in the root of the default website and then place a copy of this file (or a copy of the default document type that you use) in the root folder that hosts the SMSWEB custom website. For more about default document types, see [Default Document &lt;defaultDocument\> for IIS](http://www.iis.net/configreference/system.webserver/defaultdocument).  
+-   For each custom or default website that uses a custom folder, place a copy of the default document type that you use in the root folder that hosts the website. For example, on a Windows Server 2008 R2 computer that has default configurations, **iisstart.htm** is one of several default document types that are available. You can find this file in the root of the default website and then place a copy of this file (or a copy of the default document type that you use) in the root folder that hosts the SMSWEB custom website. For more about default document types, see [Default Document &lt;defaultDocument\> for IIS](https://www.iis.net/configreference/system.webserver/defaultdocument).  
 
 **About IIS requirements:**
 **The following site system roles require IIS and a website to host the site system services:**  
@@ -106,7 +107,7 @@ Additionally:
 
 -   When you change from the default website to use a custom website, Configuration Manager does not remove the old virtual directories. If you want to remove the files that Configuration Manager used, you must manually delete the virtual directories that were created under the default website.  
 
--   If you change the site to use custom websites, clients that are already assigned to the site must then be reconfigured to use the new client request ports for the custom websites. See [How to configure client communication ports in System Center Configuration Manager](../../../core/clients/deploy/configure-client-communication-ports.md).  
+-   If you change the site to use custom websites, clients that are already assigned to the site must then be reconfigured to use the new client request ports for the custom websites. See [How to configure client communication ports](../../../core/clients/deploy/configure-client-communication-ports.md).  
 
 ## Set up custom websites  
 Because the steps to create a custom website vary for different operating system versions, refer to documentation for your operating system version for exact steps, but use the following information when applicable:  

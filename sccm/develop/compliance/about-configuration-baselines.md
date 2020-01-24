@@ -9,10 +9,11 @@ ms.assetid: 23847c17-73c3-44b8-a163-e1f62576d4bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Baselines
-In System Center Configuration Manager, baselines are used to define the configuration of a product or a system that is established at a specific point in time, capturing both structure and details. Configuration baselines in System Center Configuration Manager contain a defined set of desired configurations that are evaluated for compliance as a group.  
+In Configuration Manager, baselines are used to define the configuration of a product or a system that is established at a specific point in time, capturing both structure and details. Configuration baselines in Configuration Manager contain a defined set of desired configurations that are evaluated for compliance as a group.  
 
  Configuration baselines contain one or more configuration items with associated rules, and they are assigned to computers through collections, together with a compliance evaluation schedule.  
 
@@ -78,5 +79,6 @@ In System Center Configuration Manager, baselines are used to define the configu
 
 -   References to content defined as raw Service Modeling Language (SML).  
 
-## See Also  
- [Authoring Desired Configuration Management Configuration Baselines and Configuration Items](../../develop/compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md)
+## See Also
+
+[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)

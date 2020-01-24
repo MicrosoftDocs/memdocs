@@ -9,7 +9,8 @@ ms.assetid: 1563c3a6-5850-404f-9638-090c7bd3c4e5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # UpdateOptionalComponents Method in Class SMS_BootImagePackage
 The `UpdateOptionalComponents` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates all specified optional components to the boot image package.  

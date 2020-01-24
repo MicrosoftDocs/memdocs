@@ -2,7 +2,7 @@
 title: Site prerequisites
 titleSuffix: Configuration Manager
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
-ms.date: 07/26/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Site and site system prerequisites for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Windows-based computers require specific configurations to support their use as Configuration Manager site system servers.
 
@@ -23,8 +24,7 @@ This article primarily focuses on [Windows Server 2012 and later](#bkmk_2012Prer
 
 For some products, like Windows Server Update Services (WSUS) for the software update point, you need to refer to the product documentation to identify additional prerequisites and limitations for use. Only configurations that directly apply for use with Configuration Manager are included here.
 
-> [!NOTE]  
-> In January 2016, support expired for the .NET Framework 4.0, 4.5, and 4.5.1. For more information, see [Microsoft .NET Framework Support Lifecycle Policy FAQ](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update).  
+For more information on .NET Framework, see [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework).
 
 
 ## <a name="bkmk_generalprerewq"></a> General requirements and limitations
@@ -78,13 +78,22 @@ See the main sections of this article for the specific prerequisites for site sy
 
 ### Windows Server roles and features
 
-- .NET Framework 3.5 SP1 (or later)  
-
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2  
-
-    - For more information about .NET Framework versions, see [.NET Framework Versions and Dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).
+- .NET Framework 3.5
 
 - Remote Differential Compression  
+
+- When you use a software update point on a server other than the site server, install the WSUS Administration Console on the site server.
+
+### .NET Framework
+
+Enable the Windows feature for .NET Framework 3.5.
+
+Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### Windows ADK  
 
@@ -98,18 +107,29 @@ See the main sections of this article for the specific prerequisites for site sy
 
 - Central administration sites and primary sites require both the x86 and x64 versions of the applicable redistributable file.  
 
+### SQL Server Native Client
+
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+
 
 ## <a name="bkmk_2012secpreq"></a> Secondary site server
 
 ### Windows Server roles and features
 
-- .NET Framework 3.5 SP1 (or later)  
-
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2  
-
-    - For more information about .NET Framework versions, see [.NET Framework Versions and Dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).  
+- .NET Framework 3.5
 
 - Remote Differential Compression  
+
+### .NET Framework
+
+Enable the Windows feature for .NET Framework 3.5.
+
+Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### Visual C++ Redistributable
 
@@ -117,11 +137,15 @@ See the main sections of this article for the specific prerequisites for site sy
 
 - Secondary sites require only the x64 version.  
 
-#### Default site system roles  
+### Default site system roles  
 
 - By default, a secondary site installs a **management point** and a **distribution point**.  
 
 - Ensure that the secondary site server meets the prerequisites for these site system roles.  
+
+### SQL Server Native Client
+
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
 
 
 ## <a name="bkmk_2012dbpreq"></a> Database server  
@@ -138,6 +162,10 @@ See the main sections of this article for the specific prerequisites for site sy
 
 - If you choose to have Configuration Manager install SQL Server Express as part of the secondary site installation, ensure that the computer meets the requirements to run SQL Server Express.  
 
+### SQL Server Native Client
+
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+
 
 ## <a name="bkmk_2012smsprovpreq"></a> SMS Provider server  
 
@@ -150,13 +178,19 @@ See the main sections of this article for the specific prerequisites for site sy
 ### Windows Server roles and features
 
 - If you're using the [administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service), the server that hosts the SMS Provider role requires .NET 4.5.2 or later  <!-- SCCMDocs issue #1203 -->
+    - Starting in version 1902, this prerequisite is version .NET 4.5 or later.
 
 - Web Server (IIS): Every provider attempts to install the [administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service). This service has a dependency on IIS to bind a certificate to HTTPS port 443. Configuration Manager uses IIS APIs to check this certificate configuration. If you configure the site for [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http), Configuration Manager uses IIS APIs to bind the SCCM-generated certificate.
+
+### SQL Server Native Client
+
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+
 
 ## <a name="bkmk_2012acwspreq"></a> Application catalog website point  
 
 > [!Important]  
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -165,15 +199,22 @@ See the main sections of this article for the specific prerequisites for site sy
 
 ### Windows Server roles and features
 
-- .NET Framework 3.5 SP1 (or later)  
+- .NET Framework 3.5
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2  
+- ASP.NET 4.5  
 
-    - ASP.NET 4.5  
+### .NET Framework
 
-    - For more information about .NET Framework versions, see [.NET Framework Versions and Dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).  
+Enable the Windows feature for .NET Framework 3.5.
 
-#### IIS configuration  
+Also install a supported version of the .NET Framework version 4.5 or later.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+
+### IIS configuration  
 
 - Common HTTP Features:  
 
@@ -203,7 +244,7 @@ See the main sections of this article for the specific prerequisites for site sy
 ## <a name="bkmk_2012ACwsitepreq"></a> Application catalog web service point  
 
 > [!Important]  
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -212,15 +253,24 @@ See the main sections of this article for the specific prerequisites for site sy
 
 ### Windows Server roles and features
 
-- .NET Framework 3.5 SP1 (or later)  
+- .NET Framework 3.5
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2:  
+- ASP.NET 4.5:  
 
-    - ASP.NET 4.5:  
+    - HTTP Activation (and automatically selected options)  
 
-        - HTTP Activation (and automatically selected options)  
+### .NET Framework
 
-#### IIS configuration
+Enable the Windows feature for .NET Framework 3.5.
+
+Also install a supported version of the .NET Framework version 4.5 or later.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+
+### IIS configuration
 
 - Common HTTP Features:  
 
@@ -246,23 +296,45 @@ See the main sections of this article for the specific prerequisites for site sy
 
 - When this site system role is colocated with another site system role that has this same requirement, this memory requirement for the computer doesn't increase, but remains at a minimum of 5%.  
 
+### SQL Server Native Client
+
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+
 
 ## <a name="bkmk_2012AIpreq"></a> Asset Intelligence synchronization point  
 
-### Windows Server roles and features
+### .NET Framework
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2
+Install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+
+### SQL Server Native Client
+
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
 
 
 ## <a name="bkmk_2012crppreq"></a> Certificate registration point  
 
 ### Windows Server roles and features
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2:  
+- .NET Framework
 
     - HTTP Activation  
 
-#### IIS configuration
+### .NET Framework
+
+Install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+
+### IIS configuration
 
 - Application Development:  
 
@@ -275,6 +347,10 @@ See the main sections of this article for the specific prerequisites for site sy
     - IIS 6 Metabase Compatibility  
 
     - IIS 6 WMI Compatibility  
+
+### SQL Server Native Client
+
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
 
 
 ## <a name="bkmk_2012dppreq"></a> Distribution point  
@@ -315,12 +391,14 @@ See the main sections of this article for the specific prerequisites for site sy
 
 ### To support PXE or multicast  
 
+- Enable a PXE responder on a distribution point without Windows Deployment Service.  
+
 - Install and configure the Windows Deployment Services (WDS) Windows Server role.  
 
     > [!NOTE]  
     > WDS installs and configures automatically when you configure a distribution point to support PXE or multicast on a server that runs Windows Server 2012 or later.  
 
-- Starting in version 1806, enable a PXE responder on a distribution point without Windows Deployment Service.  
+- For a multicast-enabled distribution point, make sure the SQL Server Native Client is installed and up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
 
 For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
 
@@ -333,20 +411,20 @@ For more information, see [Install and configure distribution points](/sccm/core
 
 ### Windows Server roles and features  
 
-- .NET Framework 3.5 SP1 (or later)  
+- .NET Framework 3.5
 
 - Windows Defender features (Windows Server 2016 or later)  
+
+### SQL Server Native Client
+
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
 
 
 ## <a name="bkmk_2012Enrollpreq"></a> Enrollment point  
 
 ### Windows Server roles and features
 
-- .NET Framework 3.5 (or later)  
-
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2:  
-
-    When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+- .NET Framework 3.5
 
     - HTTP Activation (and automatically selected options)  
 
@@ -354,7 +432,21 @@ For more information, see [Install and configure distribution points](/sccm/core
 
     - Windows Communication Foundation (WCF) Services<!-- SCCMDocs issue #1168 -->  
 
-#### IIS configuration
+### .NET Framework
+
+Enable the Windows feature for .NET Framework 3.5.
+
+Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+> [!Note]
+> When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+
+### IIS configuration
 
 - Common HTTP Features:  
 
@@ -380,18 +472,32 @@ For more information, see [Install and configure distribution points](/sccm/core
 
 - When this site system role is colocated with another site system role that has this same requirement, this memory requirement for the computer doesn't increase, but remains at a minimum of 5%.  
 
+### SQL Server Native Client
+
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+
 
 ## <a name="bkmk_2012EnrollProxpreq"></a> Enrollment proxy point  
 
 ### Windows Server roles and features
 
-- .NET Framework 3.5 (or later)  
+- .NET Framework 3.5
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2
+### .NET Framework
 
-    When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation completes.  
+Enable the Windows feature for .NET Framework 3.5.
 
-#### IIS configuration
+Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+> [!Note]
+> When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+
+### IIS configuration
 
 - Common HTTP Features:  
 
@@ -443,11 +549,18 @@ The default IIS configuration is required with the following additions:
 
 ### Windows Server roles and features
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2
-
 - BITS Server Extensions (and automatically selected options) or Background Intelligent Transfer Services (BITS) (and automatically selected options)  
 
-#### IIS configuration
+### .NET Framework
+
+Install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+
+### IIS configuration
 
 - Application Development:  
 
@@ -463,12 +576,21 @@ The default IIS configuration is required with the following additions:
 
     - IIS 6 WMI Compatibility  
 
+### SQL Server Native Client
+
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+
 
 ## <a name="bkmk_2012RSpoint"></a> Reporting services point  
 
-### Windows Server roles and features
+### .NET Framework
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2
+Install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### SQL Server Reporting Services  
 
@@ -478,14 +600,26 @@ The default IIS configuration is required with the following additions:
 
 - Additionally, the instance that you use can be shared with other System Center products, as long as the other System Center products don't have restrictions for sharing the instance of SQL Server.  
 
+### SQL Server Native Client
+
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+
 
 ## <a name="bkmk_SCPpreq"></a> Service connection point  
 
-### Windows Server roles and features
+### .NET Framework
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2
+Enable the Windows feature for .NET Framework 3.5.
 
-    When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+> [!Note]
+> When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### Visual C++ Redistributable
 
@@ -493,16 +627,29 @@ The default IIS configuration is required with the following additions:
 
 - The site system role requires the x64 version.  
 
+### SQL Server Native Client
+
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+
 
 ## <a name="bkmk_2012SUPpreq"></a> Software update point  
 
 ### Windows Server roles and features
 
-- .NET Framework 3.5 SP1 (or later)  
-
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2
+- .NET Framework 3.5
 
 The default IIS configuration is required.
+
+### .NET Framework
+
+Enable the Windows feature for .NET Framework 3.5.
+
+Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### Windows Server Update Services  
 
@@ -513,23 +660,37 @@ The default IIS configuration is required.
 > [!NOTE]  
 > When you use a Software Update Point on a server other than the site server, you must install the WSUS Administration Console on the site server.
 
+### SQL Server Native Client
+
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+
 
 ## <a name="bkmk_2012SMPpreq"></a> State migration point
 
 <!--SCCMDocs issue 645-->
 ### Windows Server roles and features
 
-- .NET Framework 3.5 (or later)  
-
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2:  
-
-    When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+- .NET Framework 3.5
 
     - HTTP Activation (and automatically selected options)  
 
     - ASP.NET 4.5  
 
-#### IIS configuration
+### .NET Framework
+
+Enable the Windows feature for .NET Framework 3.5.
+
+Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+> [!Note]
+> When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+
+### IIS configuration
 
 - Common HTTP Features:  
 
@@ -548,6 +709,10 @@ The default IIS configuration is required.
 - IIS 6 Management Compatibility:  
 
     - IIS 6 Metabase Compatibility  
+
+### SQL Server Native Client
+
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
 
 
 ## <a name="bkmk_2008"></a> Prerequisites for Windows Server 2008 R2 and Windows Server 2008  
@@ -596,12 +761,12 @@ When you use a custom IIS configuration, you can remove options that aren't requ
 
 ### To support PXE or multicast  
 
+- Enable a PXE responder on a distribution point without Windows Deployment Service.  
+
 - Install and configure the Windows Deployment Services (WDS) Windows Server role.  
 
     > [!NOTE]  
     > WDS installs and configures automatically when you configure a distribution point to support PXE or multicast on a server that runs Windows Server 2012 or later.  
-
-- Starting in version 1806, enable a PXE responder on a distribution point without Windows Deployment Service.  
 
 For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
 

@@ -9,10 +9,11 @@ ms.assetid: ff6b4c0d-9482-4169-9035-2af757c50450
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # TestSmtpConnection Method in Class SMS_Subscription
-The `TestSmtpConnection` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, tests the SMTP connection.  
+The `TestSmtpConnection` Windows Management Instrumentation (WMI) class method, in Configuration Manager, tests the SMTP connection.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -109,5 +110,4 @@ sint32 TestSmtpConnection(
 
 ## See Also  
  [SMS_Subscription Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_subscription-server-wmi-class.md)   
- [Alert System WMI Server Classes](../../../../../develop/reference/core/servers/manage/alert-system-server-wmi-classes.md)   
  [SMS_Subscription Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_subscription-server-wmi-class.md)

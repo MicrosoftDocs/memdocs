@@ -2,7 +2,7 @@
 title: Windows client deployment prerequisites
 titleSuffix: Configuration Manager
 description: Learn about the prerequisites for deploying the Configuration Manager client to Windows computers.
-ms.date: 07/26/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Prerequisites for deploying clients to Windows computers in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Deploying Configuration Manager clients in your environment has the following external dependencies and dependencies within the product. Additionally, each client deployment method has its own dependencies that must be met for client installations to be successful.  
 
@@ -54,7 +55,7 @@ If you don't update these OS versions, you can't install the Configuration Manag
 If you need to manage a client on a version of Windows that's not updated, or older than the versions listed above, use the Configuration Manager extended interoperability client (EIC) version 1902. For more information, see [Extended interoperability client](/sccm/core/understand/interoperability-client).
 
 > [!Tip]  
-> If you don't use [automatic client update](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade), and update clients with another mechanism, make sure to update the version of ccmsetup. An older version of ccmsetup may not properly validate the new SHA-2 code signing certificate on the version 1906 client binaries. For example, if you copy ccmsetup.exe to a file share, or use ccmsetup.msi with group policy.<!-- 4963362 -->
+> If you don't use [automatic client update](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate), and update clients with another mechanism, make sure to update the version of ccmsetup. An older version of ccmsetup may not properly validate the new SHA-2 code signing certificate on the version 1906 client binaries. For example, if you copy ccmsetup.exe to a file share, or use ccmsetup.msi with group policy.<!-- 4963362 -->
 >
 > The following client update mechanisms shouldn't be affected:
 >
@@ -81,14 +82,14 @@ If the client requires these dependencies to complete the installation, it autom
 |Microsoft SQL Server Compact 4.0 SP1 components|Required to store information related to client operations.|  
 
 > [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
 > - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
 > - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
 >
-> If you're still using the application catalog website user experience, the client requires Microsoft Silverlight 5.1.41212.0. Starting in Configuration Manager 1802, the client doesn't automatically install Silverlight. The primary functionality of the application catalog is now included in Software Center.<!--1356195-->
+> If you're still using the application catalog website user experience, the client requires Microsoft Silverlight 5.1.41212.0. The client doesn't automatically install Silverlight. The primary functionality of the application catalog is now included in Software Center.<!--1356195-->
 
 #### <a name="dotNet"></a> Additional details about Microsoft .NET Framework version 4.5.2  
 
@@ -134,7 +135,7 @@ The following prerequisites are specific to the various methods of client instal
 
 - The client computer needs to communicate with a distribution point or a management point to download the source files.  
 
-- Starting in version 1806, when you require Kerberos mutual authentication, clients must be in a trusted Active Directory forest. Kerberos in Windows relies upon Active Directory for mutual authentication.<!--1358204-->  
+- When you require Kerberos mutual authentication, clients must be in a trusted Active Directory forest. Kerberos in Windows relies upon Active Directory for mutual authentication.<!--1358204-->  
 
 To use client push, you need the following security permissions:  
 
@@ -169,9 +170,6 @@ To download the source files, the client computer needs to communicate with a di
 To download the source files, the client computer needs to communicate with a distribution point or a management point. Unless you specified CCMSetup.exe with the following command-line parameter: `ccmsetup /source`  
 
 #### Microsoft Intune MDM installation
-
-> [!Important]
-> Hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
 
 - Requires a Microsoft Intune subscription and appropriate licenses.  
 

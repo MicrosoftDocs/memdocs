@@ -9,10 +9,11 @@ ms.assetid: 6101f903-172b-4e59-8801-4a9c5975e3c9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Modify a Configuration Manager Object by Using WMI
-You modify a Configuration Manager object, in System Center Configuration Manager, by using the object's [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) object to change its properties.  
+You modify a Configuration Manager object, in Configuration Manager, by using the object's [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) object to change its properties.  
 
 ### To modify a Configuration Manager object  
 
@@ -67,8 +68,8 @@ End Sub
 |`Description`|`String`|A new description for the object.|  
 
 ## See Also  
- [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950)   
- [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects-overview.md)   
+ [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page)   
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [How to Call a Configuration Manager Object Class Method by Using WMI](../../../develop/core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-wmi.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [How to Create a Configuration Manager Object by Using WMI](../../../develop/core/understand/how-to-create-a-configuration-manager-object-by-using-wmi.md)   
@@ -77,4 +78,3 @@ End Sub
  [How to Perform a Synchronous Configuration Manager Query by Using WMI](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md)   
  [How to Read a Configuration Manager Object by Using WMI](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-wmi.md)   
  [How to Read Lazy Properties by Using WMI](../../../develop/core/understand/how-to-read-lazy-properties-by-using-wmi.md)   
- [How to Use Configuration Manager Objects With WMI](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md)

@@ -9,7 +9,8 @@ ms.assetid: 671f44e2-a86d-494f-a81e-235400f6db8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Progress Types
 Progress states for a download.  
@@ -47,6 +48,3 @@ static const WCHAR S_DTS_PROGRESS_DOWNLOADING_DATA[]        = L"DownloadingData"
 
 ## Development Requirements  
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Alternate Content Provider](../../../../../develop/reference/core/servers/configure/alternate-content-provider-classes.md)

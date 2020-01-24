@@ -9,10 +9,11 @@ ms.assetid: 7e4018e2-f4df-426a-b3f1-b6837aee7fa8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Modify Program Properties
-The following example shows how to modify a program, in System Center Configuration Manager, by using the `SMS_Package` and `SMS_Program` classes and properties.  
+The following example shows how to modify a program, in Configuration Manager, by using the `SMS_Package` and `SMS_Program` classes and properties.  
 
 ### To modify program properties  
 
@@ -109,6 +110,4 @@ public void ModifyProgram(WqlConnectionManager connection, string existingPackag
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
- [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
- [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)

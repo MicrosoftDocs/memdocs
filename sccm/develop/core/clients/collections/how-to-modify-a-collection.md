@@ -9,7 +9,8 @@ ms.assetid: 21815cfc-bd5d-4c1e-b2e6-f6662d1cc408
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Modify a Collection
 ### To Modify a Collection  
@@ -65,5 +66,4 @@ public void RenameCollection(WqlConnectionManager connection, string collectionI
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Collections](../../../../develop/core/clients/collections/collections.md)   
  [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)

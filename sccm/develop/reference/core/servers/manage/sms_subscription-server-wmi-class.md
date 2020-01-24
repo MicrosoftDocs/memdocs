@@ -9,7 +9,8 @@ ms.assetid: fea685d0-28f0-43e1-81e0-f51d4aaf67ab
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_Subscription Server WMI Class
 The `SMS_Subscription` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents email subscriptions.  

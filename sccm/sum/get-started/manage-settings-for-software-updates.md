@@ -10,12 +10,13 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.collection: M365-identity-device-management
+
+
 ---
 
 #  <a name="BKMK_ManageSUSettings"></a> Manage settings for software updates  
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After you synchronize software updates in Configuration Manager, configure and verify the settings in the following sections.
 
@@ -36,7 +37,7 @@ There are specific group policy settings that are used by Windows Update Agent (
 When the software update point is created for a site, clients receive a machine policy that provides the software update point server name and configures the **Specify intranet Microsoft update service location** local policy on the computer. The WUA retrieves the server name that is specified in the **Set the intranet update service for detecting updates** setting, and then it connects to this server when it scans for software updates compliance. When a domain policy is created for the **Specify intranet Microsoft update service location** setting, it overrides the local policy, and the WUA might connect to a server other than the software update point. If this happens, the client might scan for software update compliance based on different products, classifications, and languages. Therefore, you should not configure the Active Directory policy for client computers.  
 
 ### Allow Signed Content from Intranet Microsoft Update Service Location group policy  
-You must enable the **Allow signed content from intranet Microsoft update service location** Group Policy setting before the WUA on computers will scan for software updates that were created and published with System Center Updates Publisher. When the policy setting is enabled, WUA will accept software updates that are received through an intranet location if the software updates are signed in the **Trusted Publishers** certificate store on the local computer. For more information about the Group Policy settings that are required for Updates Publisher, see [Updates Publisher 2011 Documentation Library](http://go.microsoft.com/fwlink/p/?LinkId=232476).  
+You must enable the **Allow signed content from intranet Microsoft update service location** Group Policy setting before the WUA on computers will scan for software updates that were created and published with System Center Updates Publisher. When the policy setting is enabled, WUA will accept software updates that are received through an intranet location if the software updates are signed in the **Trusted Publishers** certificate store on the local computer. For more information about the Group Policy settings that are required for Updates Publisher, see [Updates Publisher 2011 Documentation Library](https://go.microsoft.com/fwlink/p/?LinkId=232476).  
 
 ### Automatic updates configuration  
 Automatic Updates allows security updates and other important downloads to be received on client computers. Automatic Updates is configured through the **Configure Automatic Updates** Group Policy setting or through the Control Panel on the local computer. When Automatic Updates is enabled, client computers will receive update notifications and, depending on the configured settings, the client computers will download and install the required updates. When Automatic Updates coexists with software updates, each client computer might display notification icons and popup display notifications for the same update. Also, when a restart is required, each client computer might display a restart dialog box for the same update.  
@@ -111,7 +112,7 @@ In the properties, you can configure software update settings for one or more so
 ####  <a name="BKMK_SetMaxRunTime"></a> Set maximum run time  
 In the **Maximum Run Time** tab, set the maximum amount of time a software update is allotted to complete on client computers. If the update takes longer than the maximum run-time value, Configuration Manager creates a status message and stops monitoring the deployment for the software updates installation. You can configure this setting only on the central administration site or a stand-alone primary site.  
 
-Configuration Manager also uses this setting to determine whether to initiate the software update installation within a configured maintenance window. If the maximum run-time value is greater than the available remaining time in the maintenance window, the software updates installation is postponed until the start of the next maintenance window. When there are multiple software updates to be installed on a client computer with a configured maintenance window (timeframe), the software update with the lowest maximum run time installs first, then the software update with the next lowest maximum run time installs next, and so on. Before it installs each software update, the client verifies that the available maintenance window will provide enough time to install the software update. After a software update starts installing, it will continue to install even if the installation goes beyond the end of the maintenance window. For more information about maintenance windows, see the [How to use maintenance windows in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md).  
+Configuration Manager also uses this setting to determine whether to initiate the software update installation within a configured maintenance window. If the maximum run-time value is greater than the available remaining time in the maintenance window, the software updates installation is postponed until the start of the next maintenance window. When there are multiple software updates to be installed on a client computer with a configured maintenance window (timeframe), the software update with the lowest maximum run time installs first, then the software update with the next lowest maximum run time installs next, and so on. Before it installs each software update, the client verifies that the available maintenance window will provide enough time to install the software update. After a software update starts installing, it will continue to install even if the installation goes beyond the end of the maintenance window. For more information about maintenance windows, see the [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 On the **Maximum Run Time** tab, you can view and configure the following settings:  
 
@@ -128,7 +129,7 @@ You can configure the following settings on the **Custom Severity** tab.
 - **Custom severity**: Sets a custom severity value for the software updates. Select **Critical**, **Important**, **Moderate**, or **Low** from the list. By default, the custom severity value is empty.
 
 ## CRL checking for software updates
-By default, the certificate revocation list (CRL) is not checked when verifying the signature on System Center Configuration Manager software updates. Checking the CRL each time a certificate is used offers more security against using a certificate that has been revoked, but it introduces a connection delay and incurs additional processing on the computer performing the CRL check.  
+By default, the certificate revocation list (CRL) is not checked when verifying the signature on Configuration Manager software updates. Checking the CRL each time a certificate is used offers more security against using a certificate that has been revoked, but it introduces a connection delay and incurs additional processing on the computer performing the CRL check.  
 
 If used, CRL checking must be enabled on the Configuration Manager consoles that process software updates.  
 

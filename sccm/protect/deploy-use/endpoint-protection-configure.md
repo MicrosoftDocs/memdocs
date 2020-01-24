@@ -1,7 +1,7 @@
 ---
-title: "Configure Endpoint Protection"
-titleSuffix: "Configuration Manager"
-description: "Learn how to set up Configuration Manager to update and distribute malware definitions for Windows Defender."
+title: Configure Endpoint Protection
+titleSuffix: Configuration Manager
+description: Learn how to set up Configuration Manager to update and distribute malware definitions for Windows Defender.
 ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -10,12 +10,13 @@ ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Configure Endpoint Protection
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Before you can use Endpoint Protection to manage security and malware on Configuration Manager client computers, you must perform the configuration steps detailed in this article.  
 

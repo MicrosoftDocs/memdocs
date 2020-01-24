@@ -10,12 +10,13 @@ ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to deploy clients to UNIX and Linux servers in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 > [!Important]  
 > Starting in version 1902, Configuration Manager doesn't support Linux or UNIX clients. 
@@ -32,7 +33,7 @@ Before you can manage a Linux or UNIX server with Configuration Manager, you mus
  After you install the client, you specify Client Settings in the Configuration Manager console to configure the client agent in the same way you would Windows-based clients. For more information, see  [Client settings for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU).  
 
 ##  <a name="BKMK_AboutInstallPackages"></a> About client installation packages and the universal agent  
- To install the client for Linux and UNIX on a specific platform, you must use the applicable client installation package for the computer where you install the client. Applicable client installation packages are included as part of each client download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the **install** script that manages the installation of the client on each computer.  
+ To install the client for Linux and UNIX on a specific platform, you must use the applicable client installation package for the computer where you install the client. Applicable client installation packages are included as part of each client download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the **install** script that manages the installation of the client on each computer.  
 
  When you install a client, you can use the same process and command-line properties regardless of the client installation package you use.  
 
@@ -104,7 +105,7 @@ Before you can manage a Linux or UNIX server with Configuration Manager, you mus
 
 -   `-fsp <server_FQDN>`  
 
-     Optional. Specifies by FQDN, the fallback status point server that the client uses to submit state messages. For more information, see [Determine whether you require a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point).  
+     Optional. Specifies by FQDN, the fallback status point server that the client uses to submit state messages. For more information, see [Determine whether you require a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#fallback-status-point).  
 
 -   `-dir <directory>`  
 
@@ -215,7 +216,7 @@ Before you can manage a Linux or UNIX server with Configuration Manager, you mus
 
  After you install the client, you can't change its request port configuration. Instead, to change the port configuration you must reinstall the client and specify the new port configuration. When you reinstall the client to change the request port numbers, run the **install** command similar to the new client install, but use the additional command-line property of **-keepdb**. This switch instructs the installation to keep the client database and files including the clients GUID and certificate store.  
 
- For more information about client communication port numbers, see [How to configure client communication ports in System Center Configuration Manager](../../../core/clients/deploy/configure-client-communication-ports.md).  
+ For more information about client communication port numbers, see [How to configure client communication ports](../../../core/clients/deploy/configure-client-communication-ports.md).  
 
 ##  <a name="BKMK_ConfigClientMP"></a> Configure the Client for Linux and UNIX to Locate Management Points  
  When you install the Configuration Manager client for Linux and UNIX, you must specify a management point to use as an initial point of contact.  

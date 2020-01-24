@@ -1,7 +1,7 @@
 ---
-title: "Create and deploy a Windows Defender Application Guard policy"
+title: Manage Application Guard policies
 titleSuffix: Configuration Manager
-description: "Create and deploy Windows Defender Application Guard policy."
+description: Learn how to create and deploy Windows Defender Application Guard policies
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -10,12 +10,13 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create and deploy Windows Defender Application Guard policy
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 <!-- 1351960 -->  
 You can create and deploy [Windows Defender Application Guard (Application Guard)](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) policies by using the Configuration Manager endpoint protection. These policies help protect your users by opening untrusted web sites in a secure isolated container that isn't accessible by other parts of the operating system.
 
@@ -76,7 +77,7 @@ Configures application behavior inside the Application Guard session. Before Con
 <!--3555858-->
 Starting in Configuration Manager version 1906, There's a policy setting that enables users to trust files that normally open in Application Guard. Upon successful completion, the files will open on the host device instead of in Application Guard. For more information about the Application Guard policies, see [Configure Windows Defender Application Guard policy settings](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard).
 
-- **Allow users to trust files that open in Windows Defender Application Guard** - Enable the user to mark files as trusted. When a file is trusted, it opens on the host rather than in Application Guard. Applies to Windows 10 version 1810 or higher clients.
+- **Allow users to trust files that open in Windows Defender Application Guard** - Enable the user to mark files as trusted. When a file is trusted, it opens on the host rather than in Application Guard. Applies to Windows 10 version 1809 or higher clients.
   - **Prohibited:** Don't allow users to mark files as trusted (default).
   - **File checked by antivirus:** Allow users to mark files as trusted after an antivirus check.
   - **All files:** Allow users to mark any file as trusted.

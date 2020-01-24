@@ -1,6 +1,6 @@
 ---
 title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER SUPPLIMENTAL HOTFIX"
-ms.date: 1/20/2017
+ms.date: 01/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -9,7 +9,8 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Configuration Manager Hotfix

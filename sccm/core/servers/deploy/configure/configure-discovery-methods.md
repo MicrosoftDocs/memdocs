@@ -2,7 +2,7 @@
 title: Configure discovery
 titleSuffix: Configuration Manager
 description: Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory.
-ms.date: 07/26/2019
+ms.date: 07/31/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,13 +10,13 @@ ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Configure discovery methods for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
-
+*Applies to: Configuration Manager (current branch)*
 
 Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory (Azure AD). First enable and then configure each method that you want to use to search your environment. You can also disable a method by using the same procedure that you use to enable it. The only exceptions to this process are Heartbeat Discovery and Server Discovery:  
 
@@ -24,23 +24,8 @@ Configure discovery methods to find resources to manage from your network, Activ
 
 - **Server Discovery** is an automatic discovery method. It finds computers that you use as site systems. You can't configure or disable it.  
 
-### Enable a configurable discovery method  
-> [!NOTE]  
-> The following information doesn't apply to Azure AD User Discovery. Instead, see [Configure Azure AD User Discovery](#azureaadisc) later in this article.
 
-1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Hierarchy Configuration**, and then select **Discovery Methods**.  
-
-2.  Select the discovery method for the site where you want to enable discovery.  
-
-3.  On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**. Then on the **General** tab, select the option to **Enable &lt;discovery method\>**.  
-
-    If this option is already enabled, you can disable the discovery method by deselecting the checkbox.  
-
-4.  Select **OK** to save the configuration.  
-
-
-
-##  <a name="BKMK_ConfigADForestDisc"></a> Configure Active Directory Forest Discovery  
+## <a name="BKMK_ConfigADForestDisc"></a> Active Directory Forest Discovery  
 
 To finish the configuration of Active Directory Forest Discovery, configure settings in the following locations of the Configuration Manager console:  
 
@@ -64,57 +49,56 @@ To finish the configuration of Active Directory Forest Discovery, configure sett
 
 Use the following procedures to enable Active Directory Forest Discovery, and to configure individual forests for use with Active Directory Forest Discovery.  
 
+### Configure Active Directory Forest Discovery  
 
-### Enable Active Directory Forest Discovery  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Hierarchy Configuration**, and select the **Discovery Methods** node.  
 
-1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Hierarchy Configuration**, and select the **Discovery Methods** node.  
+2. Select the Active Directory Forest Discovery method for the site where you want to configure discovery.  
 
-2.  Select the Active Directory Forest Discovery method for the site where you want to configure discovery.  
+3. On the **Home** tab of the ribbon, select **Properties**.  
 
-3.  On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.  
+4. On the **General** tab of the properties, configure the following settings:  
 
-4.  On the **General** tab, select the checkbox to enable discovery. Or you can configure discovery now, and then return to enable discovery later.  
+    - Enable the discovery method.
 
-5.  Specify options to create site boundaries for discovered locations.  
+    - Specify options to create site boundaries for discovered locations.  
 
-6.  Specify a schedule for when discovery runs.  
+    - Specify a schedule for when discovery runs.  
 
-7.  Select **OK** to save the configuration.  
-
+5. Select **OK** to save the configuration.  
 
 ### Configure a forest for Active Directory Forest Discovery  
 
-1.  In the **Administration** workspace, expand **Hierarchy Configuration**, and select the **Active Directory Forests** node. If Active Directory Forest Discovery has previously run, you see each discovered forest in the results pane. The local forest and any trusted forests are discovered when Active Directory Forest Discovery runs. You only need to manually add untrusted forests.  
+1. In the **Administration** workspace, expand **Hierarchy Configuration**, and select the **Active Directory Forests** node. If Active Directory Forest Discovery has previously run, you see each discovered forest in the results pane. When this discovery method runs, it discovers the local forest and any trusted forests. Manually add untrusted forests.  
 
-    - To configure a previously discovered forest, select the forest in the results pane. Then on the **Home** tab of the ribbon, in the **Properties** group, select **Properties** to open the forest properties. Continue with step 3.  
+    - To configure a previously discovered forest, select the forest in the results pane. In the ribbon, select **Properties** to open the forest properties.
 
-    - To configure a new forest that isn't listed, on the **Home** tab of the ribbon, in the **Create** group, select **Add Forest**. This action opens the **Add Forests** dialog box. Continue with step 3.  
+    - To configure a new forest that isn't listed, on the **Home** tab of the ribbon, in the **Create** group, select **Add Forest**. This action opens the **Add Forests** dialog box.
 
-2.  On the **General** tab, finish configurations for the forest that you want to discover, and specify the **Active Directory Forest Account**. For more information on this account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#active-directory-forest-account).  
+2. On the **General** tab, finish configurations for the forest that you want to discover, and specify the **Active Directory Forest Account**. For more information on this account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#active-directory-forest-account).  
 
     > [!NOTE]  
-    > Active Directory Forest Discovery requires a global account to discover and publish to untrusted forests. If you don't use the computer account of the site server, you can select only a global account.  
+    > Active Directory Forest Discovery requires a global account to discover and publish to untrusted forests. If you don't use the computer account of the site server, you can only select a global account.  
 
-3.  If you plan to let sites publish site data to this forest, on the **Publishing** tab, finish configurations for publishing to this forest.  
+3. If you plan to let sites publish site data to this forest, on the **Publishing** tab, finish configurations for publishing to this forest.  
 
     > [!NOTE]  
     > If you let sites publish to a forest, extend the Active Directory schema of that forest for Configuration Manager. The Active Directory Forest Account must have Full Control permissions to the System container in that forest.  
 
-4.  Select **OK** to save the configuration.  
+4. Select **OK** to save the configuration.  
 
 
-
-##  <a name="BKMK_ConfigADDiscGeneral"></a> Configure Active Directory discovery for computers, users, or groups  
+## <a name="BKMK_ConfigADDiscGeneral"></a> Active Directory discovery for computers, users, or groups  
 
 To configure discovery of computers, users, or groups, start with these common steps:
 
-1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Hierarchy Configuration**, and select the **Discovery Methods** node.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Hierarchy Configuration**, and select the **Discovery Methods** node.  
 
-2.  Select the method for the site where you want to configure discovery.  
+2. Select the method for the site where you want to configure discovery.  
 
-3.  On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.  
+3. On the **Home** tab of the ribbon, select **Properties**.  
 
-4.  On the **General** tab, select the checkbox to enable discovery. Or you can configure discovery now, and then return to enable discovery later.  
+4. On the **General** tab of the properties, select the checkbox to enable discovery. Or you can configure discovery now, and then return to enable discovery later.  
 
 Then use the information in the following sections to configure the specific discovery methods:  
 
@@ -127,47 +111,45 @@ Then use the information in the following sections to configure the specific dis
 > [!NOTE]  
 > The information in this section doesn't apply to Active Directory Forest Discovery.  
 
- Although each of these discovery methods is independent of the others, they share similar options. For more information about these configuration options, see [Shared options for group, system, and user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_shared).  
+Although each of these discovery methods is independent of the others, they share similar options. For more information about these configuration options, see [Shared options for group, system, and user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_shared).  
 
 > [!WARNING]  
 > The Active Directory polling by each of these discovery methods can generate significant network traffic. Consider scheduling each discovery method to run at a time when this network traffic doesn't adversely affect business uses of your network.  
-
 
 ### <a name="bkmk_config-adgd"></a> Configure Active Directory Group Discovery  
 
 1. On the **General** tab of the Active Directory Group Discovery Properties window, select **Add** to configure a discovery scope. Select either **Groups** or **Location**. Then finish the following configurations in the **Add Groups** or **Add Active Directory Location** dialog box:  
 
-    1.  Specify a **Name** for this discovery scope.  
+    1. Specify a **Name** for this discovery scope.  
 
-    2.  Specify an **Active Directory Domain** or **Location** to search:  
+    2. Specify an **Active Directory Domain** or **Location** to search:  
 
         - If you chose **Groups**, specify one or more Active Directory groups to discover.  
 
         - If you chose **Location**, specify an Active Directory container as a location to discover. You can also enable a recursive search of Active Directory child containers for this location.  
 
-    3.  Specify the **Active Directory Group Discovery Account** that the site uses to search this discovery scope. For more information, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#active-directory-group-discovery-account).  
+    3. Specify the **Active Directory Group Discovery Account** that the site uses to search this discovery scope. For more information, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#active-directory-group-discovery-account).  
 
-    4.  Select **OK** to save the discovery scope configuration.  
+    4. Select **OK** to save the discovery scope configuration.  
 
-2.  Repeat the previous steps for each additional discovery scope that you want to define.  
+2. Repeat the previous steps for each additional discovery scope that you want to define.  
 
-3.  On the **Polling Schedule** tab, configure both the full discovery polling schedule and delta discovery.  
+3. On the **Polling Schedule** tab, configure both the full discovery polling schedule and delta discovery.
 
-4.  On the **Options** tab, configure settings to filter out or exclude stale computer records from discovery. Also configure the discovery of the membership of distribution groups.  
+4. On the **Options** tab, configure settings to filter out or exclude stale computer records from discovery. Also configure the discovery of the membership of distribution groups.  
 
     > [!NOTE]  
     > By default, Active Directory Group Discovery discovers only the membership of security groups.  
 
 5. Select **OK** to save the configuration.  
 
-
 ### <a name="bkmk_config-adsd"></a> Configure Active Directory System Discovery  
 
 1. On the **General** tab of the Active Directory System Discovery Properties window, select the **New** icon ![New icon](media/Disc_new_Icon.gif) to specify a new Active Directory container. In the **Active Directory Container** dialog box, finish the following configurations:  
 
-    1.  Type or browse to a location for the **Path**. This value is a valid LDAP path to a container or organizational unit (OU). The site queries this path for resources. For example, `LDAP://CN=Computers,DC=contoso,DC=com`  
+    1. Type or browse to a location for the **Path**. This value is a valid LDAP path to a container or organizational unit (OU). The site queries this path for resources. For example, `LDAP://CN=Computers,DC=contoso,DC=com`  
 
-    2.  Specify options that change the search behavior:  
+    2. Specify options that change the search behavior:  
 
         - **Discover objects within Active Directory groups**: The site also looks at the membership of groups in this path.  
 
@@ -178,77 +160,100 @@ Then use the information in the following sections to configure the specific dis
           > [!Tip]  
           > The list of Active Directory containers in the Active Directory System Discovery Properties window includes a column **Has Exclusions**. When you select containers to exclude, this value is **Yes**.  
 
-    3.  For each location, specify the account to use as the **Active Directory Discovery Account**. For more information, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#active-directory-system-discovery-account).  
+    3. For each location, specify the account to use as the **Active Directory Discovery Account**. For more information, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#active-directory-system-discovery-account).  
 
         > [!TIP]  
         > For each specified location, you can configure a set of discovery options and a unique Active Directory Discovery Account.  
 
-    4.  Select **OK** to save the Active Directory container configuration.  
+    4. Select **OK** to save the Active Directory container configuration.  
 
-2.  On the **Polling Schedule** tab, configure both the full discovery polling schedule and delta discovery.  
+2. On the **Polling Schedule** tab, configure both the full discovery polling schedule and delta discovery.  
 
-3.  On the **Active Directory Attributes** tab, configure additional Active Directory attributes for computers that you want to discover. This tab lists the default object attributes.  
+3. On the **Active Directory Attributes** tab, configure additional Active Directory attributes for computers that you want to discover. This tab lists the default object attributes.  
 
-     > [!Tip]  
-     > For example, your organization uses the **Description** attribute on the computer account in Active Directory. Select **Custom**, and add `Description` as a custom attribute. After this discovery method runs, this attribute shows on the device Properties tab in the Configuration Manager console.<!--513948-->  
+    > [!Tip]  
+    > For example, your organization uses the **Description** attribute on the computer account in Active Directory. Select **Custom**, and add `Description` as a custom attribute. After this discovery method runs, this attribute shows on the device Properties tab in the Configuration Manager console.<!--513948-->  
 
-4.  On the **Options** tab, configure settings to filter out or exclude stale computer records from discovery.  
+4. On the **Options** tab, configure settings to filter out or exclude stale computer records from discovery.  
 
 5. Select **OK** to save the configuration.  
 
-
 ### <a name="bkmk_config-adud"></a> Configure Active Directory User Discovery  
 
-1.  On the **General** tab of the Active Directory User Discovery Properties window, select the **New** icon ![New icon](media/Disc_new_Icon.gif) to specify a new Active Directory container. In the **Active Directory Container** dialog box, finish the following configurations:  
+1. On the **General** tab of the Active Directory User Discovery Properties window, select the **New** icon ![New icon](media/Disc_new_Icon.gif) to specify a new Active Directory container. In the **Active Directory Container** dialog box, finish the following configurations:  
 
-    1.  Specify one or more locations to search.  
+    1. Specify one or more locations to search.  
 
-    2.  For each location, specify options that change the search behavior.  
+    2. For each location, specify options that change the search behavior.  
 
-    3.  For each location, specify the account to use as the **Active Directory Discovery Account**. For more information, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#active-directory-user-discovery-account).  
+    3. For each location, specify the account to use as the **Active Directory Discovery Account**. For more information, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#active-directory-user-discovery-account).  
 
         > [!NOTE]  
         > For each specified location, you can configure a unique set of discovery options and a unique Active Directory Discovery Account.  
 
-    4.  Select **OK** to save the Active Directory container configuration.  
+    4. Select **OK** to save the Active Directory container configuration.  
 
-6.  On the **Polling Schedule** tab, configure both the full discovery polling schedule and delta discovery.  
+2. On the **Polling Schedule** tab, configure both the full discovery polling schedule and delta discovery.  
 
-7.  On the **Active Directory Attributes** tab, configure additional Active Directory attributes for computers that you want to discover. This tab lists the default object attributes.  
+3. On the **Active Directory Attributes** tab, configure additional Active Directory attributes for computers that you want to discover. This tab lists the default object attributes.  
 
-8.  Select **OK** to save the configuration.  
+4. Select **OK** to save the configuration.  
 
 
+## <a name="azureaadisc"></a> Azure AD User Discovery
 
-## <a name="azureaadisc"></a> Configure Azure AD User Discovery
-
-Azure AD User Discovery isn't enabled or configured the same as other discovery methods. Configure it when you onboard the Configuration Manager site to Azure AD. When you [Configure Azure Services](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**, you can also enable and configure this discovery method. 
-
-When configuring the **Cloud Management** Azure service: 
-- On the **Discovery** page of the wizard, select the option to **Enable Azure Active Directory User Discovery**. 
-- Select **Settings**. 
-- In the Azure AD User Discovery Settings dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery, which only checks for new or changed accounts in Azure AD. 
+Azure AD User Discovery isn't enabled or configured the same as other discovery methods. Configure it when you onboard the Configuration Manager site to Azure AD.
 
 For more information, see [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
 
-> [!Important]  
-> Before you *import* the Azure AD app into Configuration Manager, you need to grant the server application permission to read directory data from Azure AD. 
-> - In the [Azure portal](https://portal.azure.com), go to the **Azure Active Directory** blade. 
-> - Select **App registrations**, and switch to **All apps** if necessary. 
-> - Select the server app of type *Web app / API*, and then select **Settings**. 
-> - Select **Required permissions**, and then select **Grant permissions**.
->  
-> If you *create* the server app from Configuration Manager, Azure AD automatically creates the permissions with the application. You still need to give consent to the application in the Azure portal.
+### Prerequisites
+
+To enable and configure this discovery method, [Configure Azure Services](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**.
+
+If you use Configuration Manager to *create* the Azure app, it configures the app with the necessary permissions.
+
+If you create the app in Azure first, and then *import* it into Configuration Manager, you need to manually configure the app. This configuration includes granting the server app permission to read directory data.
+
+1. Open the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Azure Active Directory**, and select **App registrations**. Switch to **All applications** if necessary.
+
+1. Select the target application.
+
+1. In the **Manage** menu, select **API permissions**.  
+
+    1. On the **API permissions** panel, select **Add a permission**.  
+
+    2. In the **Request API permissions** panel, switch to **APIs my organization uses**.  
+
+    3. Search for and select the **Microsoft Graph** API.  
+
+        > [!Tip]
+        > In version 1810 and earlier, use the **Azure Active Directory Graph** API.
+
+    4. Select the **Application permissions** group. Expand **Directory**, and select **Directory.Read.All**.  
+
+    5. Select **Add permissions**.  
+
+1. On the **API permissions** panel, in the **Grant consent** section, select **Grant admin consent...**. Select **Yes**.  
+
+### Configure Azure AD User Discovery
+
+When configuring the **Cloud Management** Azure service:
+
+- On the **Discovery** page of the wizard, select the option to **Enable Azure Active Directory User Discovery**.
+- Select **Settings**.
+- In the Azure AD User Discovery Settings dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery, which only checks for new or changed accounts in Azure AD.
 
 > [!Note]  
 > If the user is a federated or synchronized identity, you must use Configuration Manager [Active Directory user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser) as well as Azure AD user discovery. For more information about hybrid identities, see [Define a hybrid identity adoption strategy](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
 
 
-## <a name="bkmk_azuregroupdisco"></a> Configure Azure Active Directory user group discovery
-<!--3611956-->
-*(Introduced as a [pre-release feature](/sccm/core/servers/manage/pre-release-features) in version 1906)*
+## <a name="bkmk_azuregroupdisco"></a> Azure AD User Group Discovery
 
-You can  discover user groups and members of those groups from Azure Active directory (Azure AD). Users found in Azure AD groups that haven't been previously discovered will be added as user resources in Configuration Manager. A user group resource record is created when the group is a security group.
+<!--3611956-->
+> [!Note]  
+> In this version of Configuration Manager, Azure AD User Group Discovery is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).  
+
+You can discover user groups and members of those groups from Azure AD. When the site finds users in Azure AD groups that it hasn't previously discovered, it adds them as new user resources in Configuration Manager. A user group resource record is created when the group is a security group.
 
 ### Prerequisites
 
@@ -257,57 +262,56 @@ You can  discover user groups and members of those groups from Azure Active dire
 
 ### Limitations
 
-Delta discovery for Azure Active Directory user group discovery is currently disabled.
+Delta discovery for Azure AD user group discovery is currently disabled.
 
 ### Log files
 
-Use the SMS_AZUREAD_DISCOVERY_AGENT.log for troubleshooting. This log is also shared with Azure AD user discovery. For more information, see the [Log files](/sccm/core/plan-design/hierarchy/log-files#BKMK_ServerLogs) article.
+Use the SMS_AZUREAD_DISCOVERY_AGENT.log for troubleshooting. This log is also shared with Azure AD user discovery. For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files#BKMK_ServerLogs).
 
-### Enable Azure Active Directory user group discovery
+### Enable Azure AD user group discovery
 
 To enable discovery on an existing **Cloud Management** Azure service:
 
-1. Go to the **Administration** workspace, expand **Cloud Services**, then click on the **Azure Services** node.
-1. Select one of your Azure services, then click **Properties** in the ribbon.
-1. In the **Discovery** tab, check the box for **Enable Azure Active Directory Group Discovery**, then click **Settings**.
-1. Click **Add** under the **Discovery Scopes** tab.
+1. Go to the **Administration** workspace, expand **Cloud Services**, then select the **Azure Services** node.
+1. Select one of your Azure services, then select **Properties** in the ribbon.
+1. In the **Discovery** tab, check the box to **Enable Azure Active Directory Group Discovery**, then select **Settings**.
+1. Select **Add** under the **Discovery Scopes** tab.
     - You can modify the **Polling Schedule** in the other tab.
 1. Select one or more user groups. You can **Search** by name and choose if you want to see **Security groups only**.
-    - You'll be prompted to sign in to Azure when you click **Search** the first time.
-1. Click **OK** when you're finished selecting groups.
+    - You'll be prompted to sign in to Azure when you select **Search** the first time.
+1. Select **OK** when you finish selecting groups.
 1. Once discovery finishes running, you can browse your Azure AD user groups in the **Users** node.
 
 To enable discovery when configuring a new **Cloud Management** Azure service:
 
 - On the **Discovery** page of the wizard, select the option to **Enable Azure Active Directory Group Discovery**.
-- Select **Settings**. 
+- Select **Settings**.
 - In the Azure AD Group Discovery Settings dialog box, configure your discovery scope and a schedule for when discovery occurs.
 
-##  <a name="BKMK_ConfigHBDisc"></a> Configure Heartbeat Discovery  
+
+## <a name="BKMK_ConfigHBDisc"></a> Heartbeat Discovery
 
 Configuration Manager enables the Heartbeat Discovery method when you install a primary site. If you want to use the default schedule of every seven days, there's nothing else to configure. Otherwise, you only have to configure the schedule for how often clients send the Heartbeat Discovery data record to a management point.  
 
 > [!NOTE]  
 > If you enable both client push installation and the site maintenance task for **Clear Install Flag** at the same site, set the schedule of Heartbeat Discovery to be less than the **Client Rediscovery period** of the **Clear Install Flag** site maintenance task. For more information about site maintenance tasks, see [Maintenance tasks](/sccm/core/servers/manage/maintenance-tasks).  
 
-
 ### Configure the Heartbeat Discovery schedule  
 
-1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Hierarchy Configuration**, and select the **Discovery Methods** node.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Hierarchy Configuration**, and select the **Discovery Methods** node.  
 
-2.  Select the **Heartbeat Discovery** method for the site where you want to configure Heartbeat Discovery.  
+2. Select the **Heartbeat Discovery** method for the site where you want to configure Heartbeat Discovery.  
 
-3.  On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.  
+3. On the **Home** tab of the ribbon, select **Properties**.  
 
-4.  Configure the frequency with which clients submit a Heartbeat discovery data record. Then select **OK** to save the configuration.  
-
+4. Configure the frequency with which clients submit a Heartbeat discovery data record. Then select **OK** to save the configuration.  
 
 
 <a name="BKMK_AboutConfigNetworkDisc"></a>
 
-##  <a name="BKMK_ConfigNetworkDisc"></a> Configure Network Discovery  
+## <a name="BKMK_ConfigNetworkDisc"></a> Network Discovery  
 
- Before you configure Network Discovery, understand the following topics:  
+Before you configure Network Discovery, understand the following topics:  
 
 - Available levels of Network Discovery  
 
@@ -321,8 +325,7 @@ The following sections provide information about common configurations for Netwo
 
 For example, you discover all Simple Network Management Protocol (SNMP) devices that use a specific SNMP community name. For the same discovery run, you disable discovery on a specific subnet. When discovery runs, Network Discovery doesn't discover the SNMP devices with the specified community name on the subnet that you've disabled.  
 
-
-###  <a name="BKMK_DetermineNetTopology"></a> Determine your network topology  
+### <a name="BKMK_DetermineNetTopology"></a> Determine your network topology  
 
 You can use a topology-only discovery to map your network. This kind of discovery doesn't discover potential clients. The topology-only Network Discovery relies on SNMP.  
 
@@ -332,16 +335,16 @@ After you understand your network topology, configure additional properties for 
 
 For more information, see [How to determine your network topology](#bkmk_proc-top)
 
-
 ### Network Discovery search options
 
 Configuration Manager supports the following methods to search the network:
+
 - [Limit searches by using subnets](#BKMK_LimitBySubnet)
 - [Search a specific domain](#BKMK_SearchByDomain)
 - [Limit searches by using SNMP community names](#BKMK_LimitBySNMPname)
 - [Search a specific DHCP server](#BKMK_SearchByDHCP)
 
-####  <a name="BKMK_LimitBySubnet"></a> Limit searches by using subnets  
+#### <a name="BKMK_LimitBySubnet"></a> Limit searches by using subnets  
 
 You can configure Network Discovery to search specific subnets during a discovery run. By default, Network Discovery searches the subnet of the server that runs discovery. Any additional subnets that you configure and enable apply only to SNMP and DHCP search options. When Network Discovery searches domains, it isn't limited by configurations for subnets.  
 
@@ -355,8 +358,7 @@ When you disable a subnet, the site excludes it from discovery, and the followin
 
 - Domain-based queries can discover resources that are located on the subnet.  
 
-
-####  <a name="BKMK_SearchByDomain"></a> Search a specific domain  
+#### <a name="BKMK_SearchByDomain"></a> Search a specific domain  
 
 You can configure Network Discovery to search a specific domain or set of domains during a discovery run. By default, Network Discovery searches the local domain of the server that runs discovery.  
 
@@ -369,7 +371,6 @@ When you disable a domain, the site excludes it from discovery, and the followin
 - SNMP-based queries can still run on subnets in the domain.  
 
 - DHCP servers can still reply with a list of resources located in the domain.  
-
 
 #### <a name="BKMK_LimitBySNMPname"></a> Limit searches by using SNMP community names  
 
@@ -385,8 +386,7 @@ If you include more than one SNMP community on the **SNMP** tab in the **Network
 > [!NOTE]  
 > Along with using the SNMP community name, you can specify the IP address or resolvable name of a specific SNMP device. You do this action on the **SNMP Devices** tab in the **Network Discovery Properties** dialog box.  
 
-
-####  <a name="BKMK_SearchByDHCP"></a> Search a specific DHCP server  
+#### <a name="BKMK_SearchByDHCP"></a> Search a specific DHCP server  
 
 You can configure Network Discovery to use a specific DHCP server or multiple servers to discover DHCP clients during a discovery run.  
 
@@ -395,18 +395,17 @@ Network Discovery searches each DHCP server that you specify on the **DHCP** tab
 > [!NOTE]  
 > To successfully configure a DHCP server in Network Discovery, your environment must support IPv4. You can't configure Network Discovery to use a DHCP server in a native IPv6 environment.  
 
-
-###  <a name="BKMK_HowToConfigNetDisc"></a> How to configure Network Discovery  
+### <a name="BKMK_HowToConfigNetDisc"></a> How to configure Network Discovery  
 
 Use the following procedures to first discover only your network topology, and then to configure Network Discovery to discover potential clients by using one or more of the available Network Discovery options.  
 
 #### <a name="bkmk_proc-top"></a> How to determine your network topology  
 
-1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Hierarchy Configuration**, and select the **Discovery Methods** node.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Hierarchy Configuration**, and select the **Discovery Methods** node.  
 
-2.  Select the **Network Discovery** method for the site where you want to discover network resources.  
+2. Select the **Network Discovery** method for the site where you want to discover network resources.  
 
-3.  On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.  
+3. On the **Home** tab of the ribbon, select **Properties**.  
 
     - On the **General** tab, select the option to **Enable network discovery**. Then select **Topology** from the **Type of discovery** options.  
 
@@ -422,49 +421,48 @@ Use the following procedures to first discover only your network topology, and t
       > [!TIP]  
       > When you first map your network topology, configure just a few router hops to minimize the use of network bandwidth.  
 
-4.  On the **Schedule** tab, select the **New** icon ![New icon](media/Disc_new_Icon.gif), and set a schedule for running discovery.  
+4. On the **Schedule** tab, select the **New** icon ![New icon](media/Disc_new_Icon.gif), and set a schedule for running discovery.  
 
     > [!NOTE]  
     > You can't assign a different discovery configuration to separate Network Discovery schedules. Each time Network Discovery runs, it uses the current discovery configuration.  
 
-5.  Select **OK** to accept the configurations. Network Discovery runs at the scheduled time.  
-
+5. Select **OK** to accept the configurations. Network Discovery runs at the scheduled time.  
 
 #### <a name="bkmk_proc-config"></a> How to configure Network Discovery  
 
-1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Hierarchy Configuration**, and select the **Discovery Methods** node.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Hierarchy Configuration**, and select the **Discovery Methods** node.  
 
-2.  Select the **Network Discovery** method for the site where you want to discover network resources.  
+2. Select the **Network Discovery** method for the site where you want to discover network resources.  
 
-3.  On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.  
+3. On the **Home** tab of the ribbon, select **Properties**.  
 
-4.  On the **General** tab, select the option to **Enable network discovery**.  
+4. On the **General** tab, select the option to **Enable network discovery**.  
 
     - Select from the **Type of discovery** options the type of discovery that you want to run.  
 
     - Enable the **Slow network** option for Configuration Manager to make automatic adjustments for low-bandwidth networks.  
 
-5.  To configure discovery to search subnets, switch to the **Subnets** tab. Then configure one or more of the following options:  
+5. To configure discovery to search subnets, switch to the **Subnets** tab. Then configure one or more of the following options:  
 
     - To run discovery on subnets that are local to the computer that runs discovery, enable the option to **Search local subnets**.  
 
     - To search a specific subnet, make sure that the subnet is listed in **Subnets to search** and has a **Search** value of **Enabled**:  
 
-      1.  If the subnet isn't listed, select the **New** icon ![New icon](media/Disc_new_Icon.gif). In the **New Subnet Assignment** dialog box, enter the **Subnet** and **Mask** information, and then select **OK**. By default, a new subnet is enabled for search.  
+      1. If the subnet isn't listed, select the **New** icon ![New icon](media/Disc_new_Icon.gif). In the **New Subnet Assignment** dialog box, enter the **Subnet** and **Mask** information, and then select **OK**. By default, a new subnet is enabled for search.  
 
-      2.  To change the **Search** value for a listed subnet, select it in the list. Then select the **Toggle** icon to switch the value between **Disabled** and **Enabled**.  
+      2. To change the **Search** value for a listed subnet, select it in the list. Then select the **Toggle** icon to switch the value between **Disabled** and **Enabled**.  
 
-6.  To configure discovery to search domains, switch to the **Domains** tab. Then configure one or more of the following options:  
+6. To configure discovery to search domains, switch to the **Domains** tab. Then configure one or more of the following options:  
 
     - To run discovery on the domain of the computer that runs discovery, enable the option to **Search local domain**.  
 
     - To search a specific domain, make sure that the domain is listed in **Domains** and has a **Search** value of **Enabled**:  
 
-      1.  If the domain isn't listed, select the **New** icon ![New icon](media/Disc_new_Icon.gif). In the **Domain Properties** dialog box, enter the **Domain** information, and then select **OK**. By default, a new domain is enabled for search.  
+      1. If the domain isn't listed, select the **New** icon ![New icon](media/Disc_new_Icon.gif). In the **Domain Properties** dialog box, enter the **Domain** information, and then select **OK**. By default, a new domain is enabled for search.  
 
-      2.  To change the **Search** value for a listed domain, select it in the list. Then select the **Toggle** icon to switch the value between **Disabled** and **Enabled**.  
+      2. To change the **Search** value for a listed domain, select it in the list. Then select the **Toggle** icon to switch the value between **Disabled** and **Enabled**.  
 
-7.  To configure discovery to search specific SNMP community names for SNMP devices, switch to the **SNMP** tab. Then configure one or more of the following options:  
+7. To configure discovery to search specific SNMP community names for SNMP devices, switch to the **SNMP** tab. Then configure one or more of the following options:  
 
     - To add an SNMP community name to the list of **SNMP Community names**, select the **New** icon ![New icon](media/Disc_new_Icon.gif). In the **New SNMP Community Name** dialog box, specify the **Name** of the SNMP community, and then select **OK**.  
 
@@ -498,10 +496,9 @@ Use the following procedures to first discover only your network topology, and t
 
 11. Select **OK** to save your configurations.  
 
+### <a name="BKMK_HowToVerifyNetDisc"></a> How to verify that Network Discovery has finished  
 
-###  <a name="BKMK_HowToVerifyNetDisc"></a> How to verify that Network Discovery has finished  
-
- The time that Network Discovery requires to finish can vary depending on one or more of the following factors:  
+The time that Network Discovery requires to finish can vary depending on one or more of the following factors:  
 
 - The size of your network  
 
@@ -513,18 +510,18 @@ Use the following procedures to first discover only your network topology, and t
 
 Network Discovery doesn't create messages to alert you when it's finished. Use the following procedure to verify when discovery has finished:  
 
-1.  In the Configuration Manager console, go to the **Monitoring** workspace. Expand **System Status**, and then select the **Status Message Queries** node.  
+1. In the Configuration Manager console, go to the **Monitoring** workspace. Expand **System Status**, and then select the **Status Message Queries** node.  
 
-2.  Select the **All Status Messages** query.  
+2. Select the **All Status Messages** query.  
 
-3.  On the **Home** tab of the ribbon, in the **Status Message Queries** group, select **Show Messages**.  
+3. On the **Home** tab of the ribbon, in the **Status Message Queries** group, select **Show Messages**.  
 
-4.  In the All Status Messages window, select a value from the **Select date and time** drop-down list that includes how long ago the discovery started. Then select **OK** to open the **Configuration Manager Status Message Viewer**.  
+4. In the All Status Messages window, select a value from the **Select date and time** drop-down list that includes how long ago the discovery started. Then select **OK** to open the **Configuration Manager Status Message Viewer**.  
 
     > [!TIP]  
     > You can also use the **Specify date and time** option to select a given date and time that you ran discovery. This option is useful when you ran Network Discovery on a given date and want to retrieve messages from only that date.  
 
-5.  To validate that Network Discovery has finished, search for a status message that has the following details:  
+5. To validate that Network Discovery has finished, search for a status message that has the following details:  
 
     - Message ID: **502**  
 
@@ -534,7 +531,7 @@ Network Discovery doesn't create messages to alert you when it's finished. Use t
 
     If this status message isn't present, Network Discovery hasn't finished.  
 
-7.  To validate when Network Discovery started, search for a status message that has the following details:  
+6. To validate when Network Discovery started, search for a status message that has the following details:  
 
     - Message ID: **500**  
 

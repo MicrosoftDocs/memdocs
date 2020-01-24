@@ -9,10 +9,11 @@ ms.assetid: 165a6ab8-8c67-432d-a378-cf73558e6757
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CombinedResources Server WMI Class
-The `SMS_CombinedResources` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, represents all the device and user resources in the system.  
+The `SMS_CombinedResources` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, represents all the device and user resources in the system.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -58,7 +59,7 @@ Class SMS_ CombinedResources: SMS_BaseClass
 
  Qualifiers: [key]  
 
- Unique System Center Configuration Manager supplied ID for the resource. This ID is not unique across sites.  
+ Unique Configuration Manager supplied ID for the resource. This ID is not unique across sites.  
 
  `ResourceType`  
  Data type: `UInt32`  
@@ -89,11 +90,8 @@ Class SMS_ CombinedResources: SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Collections Server WMI Classes](../../../../../develop/reference/core/clients/collections/collections-server-wmi-classes.md)

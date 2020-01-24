@@ -9,7 +9,8 @@ ms.assetid: 6521620d-03b4-4a3b-9579-4fe211b3b718
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ImportForUser Method in Class SMS_ClientPfxCertificate
 The `ImportForUser` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports a certificate for a user, encrypted by using a password.  
@@ -70,4 +71,3 @@ sint32 ImportForUser(
 
 ## See Also  
  [SMS_ClientPfxCertificate Server WMI Class](../../../../../develop/reference/core/clients/deploy/sms_clientpfxcertificate-server-wmi-class.md)   
- [Configuration Manager Client Deployment Server WMI Classes](../../../../../develop/reference/core/clients/deploy/client-deployment-server-wmi-classes.md)

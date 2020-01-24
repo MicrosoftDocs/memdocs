@@ -9,10 +9,11 @@ ms.assetid: de2289de-d10e-4454-be69-47209bf59113
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a Program
-The following example shows how to create a program, in System Center Configuration Manager, by using the `SMS_Program` class and class properties.  
+The following example shows how to create a program, in Configuration Manager, by using the `SMS_Program` class and class properties.  
 
 > [!IMPORTANT]
 >  Any advertised program will fail to run when the maintenance windows that are defined on the client computer are set for a period that is less than that program's **Maximum allowed run time setting**. For more information, see Program Run Scenario Using Maintenance Windows in the Configuration Manager documentation.  
@@ -137,6 +138,4 @@ public void CreateProgram(WqlConnectionManager connection,
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
- [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
- [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)

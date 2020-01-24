@@ -2,20 +2,21 @@
 title: Manage Windows as a Service
 titleSuffix: Configuration Manager
 description: View the state of Windows as a Service (WaaS) using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows 10 clients are near end of support.
-ms.date: 07/26/2019
+ms.date: 11/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
-ms.assetid: da1e687b-28f6-43c4-b14a-ff2b76e60d24
+ms.assetid: da1e687b-28f6-43c4-b14a-ff2b76e60d24 
 author: mestew
 ms.author: mstewart
 manager: dougeby
 
-ms.collection: M365-identity-device-management
----
-# Manage Windows as a service using System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Manage Windows as a service using Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 
  In Configuration Manager, you can view the state of Windows as a Service (WaaS) in your environment. Create servicing plans to form deployment rings, and ensure that Windows 10 systems are kept up-to-date when new builds are released. You can also view alerts when Windows 10 clients are near end of support for their Semi-Annual Channel build.  
@@ -29,17 +30,19 @@ ms.collection: M365-identity-device-management
 ##  <a name="BKMK_Prerequisites"></a> Prerequisites  
  To see data in the Windows 10 servicing dashboard, you must do the following actions:  
 
--   Windows 10 computers must use Configuration Manager software updates with  Windows Server Update Services (WSUS) for software update management. When computers use Windows Update for Business (or Windows Insiders) for software update management, the computer is not evaluated in Windows 10 servicing plans. For more information, see [Integration with Windows Update for Business in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
+-   Windows 10 computers must use Configuration Manager software updates with  Windows Server Update Services (WSUS) for software update management. When computers use Windows Update for Business (or Windows Insiders) for software update management, the computer isn't evaluated in Windows 10 servicing plans. For more information, see [Integration with Windows Update for Business in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
 
--   WSUS 4.0 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) must be installed on your software update points and site servers. This hotfix adds the **Upgrades** software update classification. For more information, see [Prerequisites for software updates](../../sum/plan-design/prerequisites-for-software-updates.md).  
-
--   WSUS 4.0 with the [hotfix 3159706](https://support.microsoft.com/kb/3159706) must be installed on your software update points and site servers to upgrade computers to the Windows 10 Anniversary Update, as well as for subsequence versions. There are manual steps described in the support article that you must take to install this hotfix. For more information, see the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/05/update-your-configmgr-1606-sup-servers-to-deploy-the-windows-10-anniversary-update/).
+- Use a supported WSUS version: 
+  - WSUS 10.0.14393 (role in Windows Server 2016)
+  - WSUS 10.0.17763 (role in Windows Server 2019) (Requires Configuration Manager 1810 or later)
+  - WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2)
+    - [KB 3095113 and KB 3159706 (or an equivalent update) must be installed](/sccm/sum/plan-design/prerequisites-for-software-updates#BKMK_wsus2012) on WSUS 6.2 and 6.3.
 
 -   Enable Heartbeat Discovery. The data displayed in the Windows 10 servicing dashboard is found by using discovery. For more information, see [Configure Heartbeat Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#BKMK_ConfigHBDisc).  
 
      The following Windows 10 channel and build information is discovered and stored in the following attributes:  
 
-    -   **Operating System Readiness Branch**: Specifies the operating system channel. For example, **0** = Semi-Annual Channel - Targeted (do not defer updates), **1** = Semi-Annual Channel (defer updates), **2** = Long-Term Servicing Channel (LTSC)
+    -   **Operating System Readiness Branch**: Specifies the operating system channel. For example, **0** = Semi-Annual Channel - Targeted (don't defer updates), **1** = Semi-Annual Channel (defer updates), **2** = Long-Term Servicing Channel (LTSC)
 
     -   **Operating System Build**: Specified the operating system build. For example, **10.0.10240** (RTM) or **10.0.10586** (version 1511)  
 
@@ -56,7 +59,7 @@ ms.collection: M365-identity-device-management
 ##  <a name="BKMK_ServicingDashboard"></a> Windows 10 servicing dashboard  
  The Windows 10 servicing dashboard provides you with information about Windows 10 computers in your environment, active servicing plans, compliance information, and so on. The data in the Windows 10 servicing dashboard is dependent on having the Service Connection Point installed. The dashboard has the following tiles:  
 
--   **Windows 10 Usage tile**: Provides a breakdown of public builds of Windows 10. Windows Insiders builds are listed as **other** as well as any builds that are not yet known to your site. The service connection point downloads metadata that informs it about the Windows builds, and then this data is compared against discovery data.  
+-   **Windows 10 Usage tile**: Provides a breakdown of public builds of Windows 10. Windows Insiders builds are listed as **other** as well as any builds that aren't yet known to your site. The service connection point downloads metadata that informs it about the Windows builds, and then this data is compared against discovery data.  
 
 -   **Windows 10 Rings tile**: Provides a breakdown of Windows 10 by channel and readiness state. The LTSC segment includes all LTSC versions. The first tile breaks down the specific versions, for example, Windows 10 LTSC 2015.   
 
@@ -68,7 +71,7 @@ ms.collection: M365-identity-device-management
 
 -   **Alerts tile**: Displays active alerts.  
 
--   **Service Plan Monitoring tile**: Display servicing plans that you have created and a chart of the compliance for each. This tile gives you a quick overview of the current state of the servicing plan deployments. If an earlier deployment ring meets your expectations for compliance, then you can select a later servicing plan (deploying ring) and click **Deploy Now** instead of waiting for the servicing plan rules to be triggered automatically.  
+-   **Service Plan Monitoring tile**: Display servicing plans that you've created and a chart of the compliance for each. This tile gives you a quick overview of the current state of the servicing plan deployments. If an earlier deployment ring meets your expectations for compliance, then you can select a later servicing plan (deploying ring) and click **Deploy Now** instead of waiting for the servicing plan rules to be triggered automatically.  
 
 -   The **Windows 10 Builds tile**: Display is a fixed image time line that provides you an overview of the Windows 10 builds that are currently released and gives you a general idea of when builds transition into different states. This tile was removed starting in Configuration Manager version 1902 since more detailed information is offered in the [Product Lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard). <!--3446861-->
 
@@ -79,7 +82,7 @@ ms.collection: M365-identity-device-management
 <!--4224414-->
 *(Introduced in version 1906)*
 
-You can drill through compliance statistics to see which devices require a specific Office 365 software update. To view the device list, you need permission to view updates and the collections the devices belong to. To drill down into the device list:
+You can drill through compliance statistics to see which devices require a specific Windows 10 feature update. To view the device list, you need permission to view updates and the collections the devices belong to. To drill down into the device list:
 
 1. Go to **Software Library** > **Windows 10 Servicing** > **All Windows 10 Updates**.
 1. Select any update that is required by at least one device.
@@ -99,12 +102,8 @@ You can drill through compliance statistics to see which devices require a speci
   When an upgrade meets the criteria, the servicing plan adds the upgrade to the deployment package, distributes the package to distribution points, and deploys the upgrade to the collection based on the settings that you configure in the servicing plan. You can monitor the deployments in the Service Plan Monitoring tile on the Windows 10 Servicing Dashboard. For more information, see [Monitor software updates](../../sum/deploy-use/monitor-software-updates.md).  
 
 > [!NOTE]  
-> **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10**  product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product in Configuration Manager version 1906. <!--4682946-->
->
-> When you update to Configuration Manager version 1906 and have the **Windows 10** product selected for synchronization, the following actions occur automatically:
-> - Servicing plans are updated to include the **Windows 10, version 1903 and later** product.
-> - The **Windows 10, version 1903 and later** product is added for synchronization. For more information, see [Configure classifications and products](/sccm/sum/get-started/configure-classifications-and-products)
-> - [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
+> **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10**  product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product in Configuration Manager version 1906. For more information, see [Configuring products for versions of Windows 10](/configmgr/sum/get-started/configure-classifications-and-products#windows-10-version-1903-and-later)<!--4682946-->
+
 
 
 ##  <a name="BKMK_ServicingPlan"></a> Windows 10 servicing plan  
@@ -136,12 +135,12 @@ You can drill through compliance statistics to see which devices require a speci
 
     - When you deploy a high-risk deployment, such as servicing plan, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties.
 
-    - High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you cannot select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the site's minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
+    - High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you can't select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the site's minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
 
-    - The deployment verification settings are based on the current membership of the collection. After you deploy the servicing plan, the collection membership is not reevaluated for the high-risk deployment settings.  
+    - The deployment verification settings are based on the current membership of the collection. After you deploy the servicing plan, the collection membership isn't reevaluated for the high-risk deployment settings.  
 
-        - For example, let's say you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high risk deployment, the **Select Collection** window will only display collections that contain less than 100 clients. If you clear the **Hide collections with a member count greater than the site's minimum size configuration** setting, the window will display collections that contain less than 1000 clients. When you select a collection that contains a site role, the following criteria applies:
-          - If the collection contains a site system server and in the deployment verification settings you configure to block collections with site system servers, then an error occurs and you cannot continue.
+        - For example, let's say you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high risk deployment, the **Select Collection** window will only display collections that contain fewer than 100 clients. If you clear the **Hide collections with a member count greater than the site's minimum size configuration** setting, the window will display collections that contain less than 1000 clients. When you select a collection that contains a site role, the following criteria applies:
+          - If the collection contains a site system server and in the deployment verification settings you configure to block collections with site system servers, then an error occurs and you can't continue.
           - If the collection contains a site system server and in the deployment verification settings you configure to warn you if collections that have site system servers, if the collection exceeds the default size value, or if the collection contains a server, then the Deploy Software Wizard will display a high risk warning. You must agree to create a high risk deployment and an audit status message is created.  
 
 6. On the Deployment Ring page, configure the following settings:  
@@ -179,9 +178,9 @@ You can drill through compliance statistics to see which devices require a speci
 
    -   **Software available time**: Select one of the following settings to specify when the software updates are available to clients:  
 
-       -   **As soon as possible**: Select this setting to make the software updates that are included in the deployment available to the client computers as soon as possible. When you create the deployment with this setting selected, Configuration Manager updates the client policy. Then, at the next client policy polling cycle, clients become  aware of the deployment and can obtain the updates that are available for installation.  
+       - **As soon as possible**: Select this setting to make the software updates that are included in the deployment available to the client computers as soon as possible. When you create the deployment with this setting selected, Configuration Manager updates the client policy. Then, at the next client policy polling cycle, clients become  aware of the deployment and can obtain the updates that are available for installation.  
 
-       -   **Specific time**: Select this setting to make the software updates that are included in the deployment available to the client computers at a specific date and time. When you create the deployment with this setting enabled, Configuration Manager updates the client policy. Then, at the next client policy polling cycle, clients become aware of the deployment. However, the software updates in the deployment are not available for installation until after the configured date and time.  
+       -   **Specific time**: Select this setting to make the software updates that are included in the deployment available to the client computers at a specific date and time. When you create the deployment with this setting enabled, Configuration Manager updates the client policy. Then, at the next client policy polling cycle, clients become aware of the deployment. However, the software updates in the deployment aren't available for installation until after the configured date and time.  
 
    -   **Installation deadline**: Select one of the following settings to specify the installation deadline for the software updates in the deployment:  
 
@@ -194,6 +193,8 @@ You can drill through compliance statistics to see which devices require a speci
            >   
            >  You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
+       -   **Delay enforcement of this deployment according to user preferences, up to the grace period defined on the client**: Select this option to honor the [**Grace period for enforcement after deployment deadline (hours)** client setting](/sccm/core/clients/deploy/about-client-settings#grace-period-for-enforcement-after-deployment-deadline-hours).
+
 9. On the User Experience page, configure the following settings:  
 
     -   **User notifications**: Specify whether to display notification of the updates in Software Center on the client computer at the configured **Software available time** and whether to display user notifications on the client computers.  
@@ -204,19 +205,20 @@ You can drill through compliance statistics to see which devices require a speci
 
     -   **Write filter handling for Windows Embedded devices**: When you deploy updates to Windows Embedded devices that are write filter enabled, you can specify to install the update on the temporary overlay and either commit changes later or commit the changes at the installation deadline or during a maintenance window. When you commit changes at the installation deadline or during a maintenance window, a restart is required and the changes persist on the device.  
         - When you deploy an update to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window.  
+    -   **Software updates deployment re-evaluation behavior upon restart**: To force another update deployment evaluation cycle after restart, select the option **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**. 
 
-10. On the Deployment Package page, select an existing deployment package or configure the following settings to create a new deployment package:  
+10. On the Deployment Package page, select an existing deployment package, no deployment package, or configure the following settings to create a new deployment package:  
 
-    1.  **Name**: Specify the name of the deployment package. This name must be unique and describes the package content. It is limited to 50 characters.  
+    1. **Name**: Specify the name of the deployment package. This name must be unique and describes the package content. It's limited to 50 characters.  
 
-    2.  **Description**: Specify a description that provides information about the deployment package. The description is limited to 127 characters.  
+    1. **Description**: Specify a description that provides information about the deployment package. The description is limited to 127 characters.  
 
-    3.  **Package source**: Specifies the location of the software update source files. Type a network path for the source location, for example, **\\\server\sharename\path**, or click **Browse** to find the network location. Create the shared folder for the deployment package source files before you proceed to the next page.  
+    1. **Package source**: Specifies the location of the software update source files. Type a network path for the source location, for example, **\\\server\sharename\path**, or click **Browse** to find the network location. Create the shared folder for the deployment package source files before you continue to the next page.  
         - The deployment package source location that you specify cannot be used by another software deployment package.  
-        - The SMS Provider computer account and the user that is running the wizard to download the software updates must both have **Write** NTFS permissions on the download location. You should carefully restrict access to the download location in order to reduce the risk of attackers tampering with the software update source files.  
+        - The SMS Provider computer account and the user that is running the wizard to download the software updates must both have **Write** NTFS permissions on the download location. You should carefully restrict access to the download location to reduce the risk of attackers tampering with the software update source files.  
         - You can change the package source location in the deployment package properties after Configuration Manager creates the deployment package. But if you do so, you must first copy the content from the original package source to the new package source location.  
-
-    4.  **Sending priority**: Specify the sending priority for the deployment package. Configuration Manager uses the sending priority for the deployment package when it sends the package to distribution points. Deployment packages are sent in priority order: High, Medium, or Low. Packages with identical priorities are sent in the order in which they were created. If there is no backlog, the package processes immediately regardless of its priority.  
+    1. **Sending priority**: Specify the sending priority for the deployment package. Configuration Manager uses the sending priority for the deployment package when it sends the package to distribution points. Deployment packages are sent in priority order: High, Medium, or Low. Packages with identical priorities are sent in the order in which they were created. If there's no backlog, the package processes immediately regardless of its priority.
+    1. **Enable binary differential replication**: Enable this option if you want to use binary differential replication.  
 
 11. On the Distribution Points page, specify the distribution points or distribution point groups that host the update files. For more information about distribution points, see [Configure a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs).
 
@@ -227,13 +229,13 @@ You can drill through compliance statistics to see which devices require a speci
 
     -   **Download software updates from the Internet**: Select this setting to download the updates from a specified location on the Internet. This setting is enabled by default.  
 
-    -   **Download software updates from a location on the local network**: Select this setting to download the updates from a local directory or shared folder. This setting is useful when the computer that runs the wizard does not have Internet access. Any computer with Internet access can preliminarily download the updates and store them in a location on the local network that is accessible from the computer that runs the wizard.  
+    -   **Download software updates from a location on the local network**: Select this setting to download the updates from a local directory or shared folder. This setting is useful when the computer that runs the wizard doesn't have Internet access. Any computer with Internet access can preliminarily download the updates and store them in a location on the local network that is accessible from the computer that runs the wizard.  
 
-13. On the Language Selection page, select the languages for which the selected updates are downloaded. The updates are downloaded only if they are available in the selected languages. Updates that are not language-specific are always downloaded. By default, the wizard selects the languages that you have configured in the software update point properties. At least one language must be selected before proceeding to the next page. When you select only languages that are not supported by an update, the download fails for the update.  
+13. On the Language Selection page, select the languages for which the selected updates are downloaded. The updates are downloaded only if they're available in the selected languages. Updates that aren't language-specific are always downloaded. By default, the wizard selects the languages that you've configured in the software update point properties. At least one language must be selected before proceeding to the next page. When you select only languages that are not supported by an update, the download fails for the update.  
 
 14. On the Summary page, review the settings and click **Next** to create the servicing plan.  
 
-    After you have completed the wizard, the servicing plan will run. It adds the updates that meet the specified criteria to a software update group, download the updates to the content library on the site server, distribute the updates to the configured distribution points, and then deploy the software update group to clients in the target collection.  
+    After you've completed the wizard, the servicing plan will run. It adds the updates that meet the specified criteria to a software update group, download the updates to the content library on the site server, distribute the updates to the configured distribution points, and then deploy the software update group to clients in the target collection.  
 
 ##  <a name="BKMK_ModifyServicingPlan"></a> Modify a servicing plan  
 After you create a basic servicing plan from the Windows 10 servicing dashboard or you need to change the settings for an existing servicing plan, you can go to properties for the servicing plan.
@@ -251,17 +253,11 @@ Use the following procedure to modify the properties of a servicing plan.
 
 3.  On the **Home** tab, click **Properties** to open properties for the selected servicing plan.
 
-    The following settings are available in the servicing plan properties that were not configured in the wizard:
+    The following settings are available in the servicing plan properties that weren't configured in the wizard:
 
     **Deployment Settings**: On the Deployment Settings tab, configure the following settings:  
 
-    -   **Type of deployment**: Specify the deployment type for the software update deployment. Select **Required** to create a mandatory software update deployment in which the software updates are automatically installed on clients before a configured installation deadline. Select **Available** to create an optional software update deployment that is available for users to install from Software Center.  
-
-        > [!IMPORTANT]  
-        > - After you create the software update deployment, you cannot later change the type of deployment.  
-        > - A software update group deployed as **Required** is downloaded in the background and honors BITS settings, if configured. However, software update groups deployed as **Available** are downloaded in the foreground and ignore BITS settings.  
-
-    -   **Use Wake-on-LAN to wake up clients for required deployments**: Specify whether to enable Wake On LAN at the deadline to send wake-up packets to computers that require one or more software updates in the deployment. Any computers that are in sleep mode at the installation deadline time are awakened so the software update installation can initiate. Clients that are in sleep mode that do not require any software updates in the deployment are not started. By default, this setting is not enabled and is available only when **Type of deployment** is set to **Required**.  
+    -   **Use Wake-on-LAN to wake up clients for required deployments**: Specify whether to enable Wake On LAN at the deadline to send wake-up packets to computers that require one or more software updates in the deployment. Any computers that are in sleep mode at the installation deadline time are awakened so the software update installation can initiate. Clients that are in sleep mode that don't require any software updates in the deployment aren't started. By default, this setting isn't enabled.  
 
         > [!WARNING]  
         >  Before you can use this option, computers and networks must be configured for Wake On LAN.  
@@ -272,17 +268,17 @@ Use the following procedure to modify the properties of a servicing plan.
 
     - Specify whether the client downloads and installs the software updates when a client is connected to a slow network or is using a fallback content location.  
 
-    - Specify whether to have the client download and install the software updates from a fallback distribution point when the content for the software updates is not available on a preferred distribution point.  
+    - Specify whether to have the client download and install the software updates from a fallback distribution point when the content for the software updates isn't available on a preferred distribution point.  
 
     -   **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information about BranchCache, see  [Fundamental concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
 
-    -   Specify whether to have clients download software updates from Microsoft Update if software updates are not available on distribution points.
+    -   Specify whether to have clients download software updates from Microsoft Update if software updates aren't available on distribution points.
         > [!IMPORTANT]
         > Do not use this setting for Windows 10 Servicing updates. Configuration Manager (at least through version 1610) fails to download the Windows 10 Servicing updates from Microsoft Update.
 
     -   Specify whether to allow clients to download after an installation deadline when they use metered Internet connections. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered Internet connection.   
 
-    **Alerts**: On the Alerts tab, configure how Configuration Manager and System Center Operations Manager generate alerts for this deployment. You can configure alerts only when **Type of deployment** is set to **Required** on the Deployment Settings page.  
+    **Alerts**: On the Alerts tab, configure how Configuration Manager and System Center Operations Manager generate alerts for this deployment. 
     - You can review recent software updates alerts from the **Software Updates** node in the **Software Library** workspace.  
 
 ## Next steps

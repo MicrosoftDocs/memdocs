@@ -2,7 +2,7 @@
 title: Install cloud distribution points
 titleSuffix: Configuration Manager
 description: Use these steps to set up a cloud distribution point in Configuration Manager.
-ms.date: 06/17/2019
+ms.date: 09/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Install a cloud distribution point for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 > [!Important]  
 > The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway by enabling the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. For more information, see [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).
@@ -81,6 +82,18 @@ Use the following checklist to make sure you have the necessary information and 
 
     - An Azure **management certificate**, exported as both .CER and .PFX files. An Azure subscription administrator needs to add the .CER management certificate to the subscription in the [Azure portal](https://portal.azure.com).  
 
+### BranchCache
+
+To enable a cloud distribution point to use Windows BranchCache, install the BranchCache feature on the site server.<!-- SCCMDocs-pr#4054 -->
+
+- If the site server has an on-premises distribution point site system role, configure the option in that role's properties to **Enable and configure BranchCache**. For more information, see [Configure a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-general).
+
+- If the site server doesn't have a distribution point role, install the BranchCache feature in Windows. For more information, see [Install the BranchCache feature](https://docs.microsoft.com/windows-server/networking/branchcache/deploy/install-the-branchcache-feature).
+
+If you've already distributed content to a cloud distribution point, and then decide to enable BranchCache, first install the feature. Then redistribute the content to the cloud distribution point.
+
+> [!NOTE]  
+> In Configuration Manager version 1810 and earlier, if you have more than one cloud distribution point, you need to manually set the BranchCache key passphrase. For more information, see [Microsoft Support KB 4458143](https://support.microsoft.com/help/4458143).
 
 ## <a name="bkmk_setup"></a> Set up  
 

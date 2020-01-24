@@ -1,8 +1,8 @@
 ---
-title: "Unicode and ASCII Support"
-titleSuffix: "Configuration Manager"
-description: "Learn about support for Unicode and ASCII characters in System Center Configuration Manager objects."
-ms.date: 3/1/2017
+title: Unicode and ASCII support
+titleSuffix: Configuration Manager
+description: Learn about support for Unicode and ASCII characters in Configuration Manager objects.
+ms.date: 08/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,127 +10,100 @@ ms.assetid: 2bdec799-905f-48bc-aed5-2d92134739e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Unicode and ASCII support in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# Unicode and ASCII support in Configuration Manager
 
-System Center Configuration Manager creates most objects by using Unicode characters. However, several objects support ASCII characters only or they have other limitations.  
+*Applies to: Configuration Manager (current branch)*
 
- The following sections list the objects that must use characters from the ASCII character set only, or that have additional limitations.  
+Configuration Manager creates most objects by using Unicode characters. However, several objects only support ASCII characters, or they have other limitations.  
 
--   [Objects that use ASCII characters](#BKMK_ASCIIchar)  
+## <a name="BKMK_ASCIIchar"></a> Objects that use ASCII characters
 
--   [Additional limitations](#BKMK_OtherCharLimitations)  
+When you create the following objects, Configuration Manager only supports the ASCII character set:  
 
--   [Configuration Manager objects that are not localized](#BKMK_LangNonLocalize)  
+- Site code  
 
-##  <a name="BKMK_ASCIIchar"></a> Objects that use ASCII characters  
- Configuration Manager supports the ASCII character set only when you create the following objects:  
+- All site system server computer names  
 
--   Site code  
-
--   All site system server computer names  
-
--   The following Configuration Manager accounts:  
+- The following Configuration Manager accounts:  
 
     > [!NOTE]  
-    >  These accounts support ASCII characters and RUS characters on a site that runs in Russian.  
+    > These accounts support ASCII characters, and RUS characters on a site that runs in Russian.  
 
-    -   Client push installation account  
+    - Client push installation account  
 
-    -   Health state reference publishing account  
+    - Management point database connect account  
 
-    -   Health state reference querying account  
+    - Network access account  
 
-    -   Management point database connect account  
+    - Package access account  
 
-    -   Network access account  
+    - Standard sender account  
 
-    -   Package access account  
+    - Site system installation account  
 
-    -   Standard sender account  
+    - Software update point connection account  
 
-    -   Site system installation account  
-
-    -   Software update point connection account  
-
-    -   Software update point proxy server account  
+    - Software update point proxy server account  
 
     > [!NOTE]  
-    >  The accounts that you specify for role-based administration support Unicode.  
-    >   
-    >  The Reporting Services point account supports Unicode, with the exception of RUS characters.  
+    > The accounts that you specify for role-based administration support Unicode.  
+    >
+    > The reporting services point account supports Unicode, with the exception of RUS characters.  
 
--   Fully-qualified domain name (FQDN) for site servers and site systems  
+- Fully qualified domain name (FQDN) for site servers and site systems  
 
--   Installation path for Configuration Manager  
+- Installation path for Configuration Manager  
 
--   SQL Server instance names  
+- SQL Server instance names  
 
--   The path for the following site system roles:  
+- The path for the following site system roles:  
 
-    -   Application Catalog web service point  
+    - Enrollment point  
 
-    -   Application Catalog website point  
+    - Enrollment proxy point  
 
-    -   Enrollment point  
+    - Reporting services point  
 
-    -   Enrollment proxy point  
+    - State migration point  
 
-    -   Reporting services point  
+- The path for the following folders:  
 
-    -   State migration point  
+    - The folder that stores client state migration data  
 
--   The path for the following folders:  
+    - The folder that contains the Configuration Manager reports  
 
-    -   The folder that stores client state migration data  
+    - The folder that stores the Configuration Manager backup  
 
-    -   The folder that contains the Configuration Manager reports  
+    - The folder that stores the installation source files for site setup  
 
-    -   The folder that stores the Configuration Manager backup  
+    - The folder that stores the prerequisite downloads for use by setup  
 
-    -   The folder that stores the installation source files for site setup  
+- The path for the following objects:  
 
-    -   The folder that stores the prerequisite downloads for use by setup  
+    - IIS website  
 
--   The path for the following objects:  
+    - Virtual application installation path  
 
-    -   IIS website  
+    - Virtual application name  
 
-    -   Virtual application installation path  
+- Boot media ISO file names  
 
-    -   Virtual application name  
 
--   The following objects for AMT and out-of-band management:  
+## <a name="BKMK_OtherCharLimitations"></a> Additional limitations
 
-    -   The FQDN of the AMT-based computer  
+The following are additional limitations for supported character sets and language versions:  
 
-    -   The computer name of the AMT-based computer  
+- Configuration Manager doesn't support changing the locale of the site server computer.  
 
-    -   The domain NetBIOS name  
+- An enterprise certificate authority (CA) doesn't support client computer names that use double-byte character sets (DBCS). The client computer names that you can use are restricted by the PKI limitation of the IA5 character set. Configuration Manager doesn't support CA names or subject name values that use DBCS.  
 
-    -   The wireless profile name and SSID  
 
-    -   The trusted root certification authority name  
+## <a name="BKMK_LangNonLocalize"></a> Objects that aren't localized
 
-    -   The name of the certification authority (CA) and template names  
+The Configuration Manager database supports Unicode for most objects that it stores. When possible, it displays this information in the OS language that matches the locale of a computer. For the client interface or Configuration Manager console to display information in the computer's OS language, the computer's locale must match a client or server language that you install at a site.  
 
-    -   The file name and path for the IDE redirection image file  
-
-    -   The contents of the AMT data storage  
-
--   Boot media ISO file names  
-
-##  <a name="BKMK_OtherCharLimitations"></a> Additional limitations  
- The following are additional limitations for supported character sets and language versions:  
-
--   Configuration Manager does not support changing the locale of the site server computer.  
-
--   An enterprise certification authority (CA) does not support client computer names that use double-byte character sets (DBCS). The client computer names that you can use are restricted by the PKI limitation of the IA5 character set. In addition, Configuration Manager does not support CA names or subject name values that use DBCS.  
-
-##  <a name="BKMK_LangNonLocalize"></a> Configuration Manager objects that are not localized  
- The Configuration Manager database supports Unicode for most objects that it stores, and when possible, it displays this information in the operating system language that matches the locale of a computer. For the client interface or Configuration Manager console to display information in the computer's operating system language, the computer's locale must match a client or server language that you install at a site.  
-
- However, several Configuration Manager objects do not support Unicode, and they are stored in the database by using ASCII, or they have additional language limitations. This information is always displayed by using the ASCII character set or in the language that was in use when the object was created.  
+Several Configuration Manager objects don't support Unicode. They're stored in the database by using ASCII, or they have additional language limitations. This information is always displayed by using the ASCII character set, or in the language that was in use when you created the object.  

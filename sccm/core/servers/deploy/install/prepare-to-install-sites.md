@@ -2,7 +2,7 @@
 title: "Prepare to install sites"
 titleSuffix: "Configuration Manager"
 description: "If you're planning to install multiple Configuration Manager sites, read this information to help you save time, and to prevent errors."
-ms.date: 3/1/2017
+ms.date: 09/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,17 @@ ms.assetid: 9089e1b5-cba4-42bd-a2de-126ef882a3af
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Prepare to install System Center Configuration Manager sites
+# Prepare to install Configuration Manager sites
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-To prepare for a successful deployment of one or more System Center Configuration Manager sites, become familiar with the details in this article. These steps can save you time during installation of multiple sites and help prevent missteps that might result in the need to reinstall one or more sites.
+To prepare for a successful deployment of one or more Configuration Manager sites, become familiar with the details in this article. These steps can save you time during installation of multiple sites and help prevent missteps that might result in the need to reinstall one or more sites.
 
 > [!TIP]
-> When managing System Center Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts. To learn how each term is used, see [About upgrade, update, and install](/sccm/core/understand/upgrade-update-install).
+> When managing Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts. To learn how each term is used, see [About upgrade, update, and install](/sccm/core/understand/upgrade-update-install).
 
 ## <a name="bkmk_options"></a> Options for installing different types of sites
 When you install a new Configuration Manager site, the version of the source files that you can use depends on the version of sites that are already in the hierarchy (if any). The installation methods that you can use depend on the type of site you want to install.  
@@ -59,13 +60,13 @@ A secondary site must be installed from the Configuration Manager console. This 
 
 ## <a name="bkmk_tasks"></a>  Common tasks to complete before starting an installation
 - **Understand the hierarchy topology you will use for your deployment**    
-For more information, see [Design a hierarchy of sites for System Center Configuration Manager](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md).  
+For more information, see [Design a hierarchy of sites for Configuration Manager](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md).  
 
 - **Prepare and configure individual servers to meet prerequisites and supported configurations for use with Configuration Manager**         
 For more information, see [Site and site system prerequisites](../../../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
 - **Install and configure SQL Server to host the site database**     
-For more information, see [Support for SQL Server versions for System Center Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md).  
+For more information, see [Support for SQL Server versions for Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md).  
 
 - **Prepare your network environment to support Configuration Manager**      
 For more information, see [Configure firewalls, ports, and domains to prepare for Configuration Manager](../../../../core/plan-design/network/configure-firewalls-ports-domains.md).  
@@ -85,6 +86,7 @@ When you run Configuration Manager Setup, you are prompted for a site code and s
 - NUL
 - PRN
 - SMS
+- ENV <!--SCCMDocs-1871 and 5399453-->
 
 > [!NOTE]
 > Configuration Manager Setup does not verify that a site code is not already in use.
@@ -129,4 +131,4 @@ You can identify optional ports for site systems and clients to use. Here's addi
 - By default, site systems and clients use predefined ports to communicate.
 - During Setup, you can configure alternate ports.
 
-For more information, see [Ports used in System Center Configuration Manager](../../../../core/plan-design/hierarchy/ports.md).
+For more information, see [Ports used](../../../../core/plan-design/hierarchy/ports.md).

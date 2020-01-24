@@ -10,11 +10,12 @@ ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configure sites and hierarchies for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After you install your first Configuration Manager site or add additional sites to your hierarchy, use this checklist to ensure that you consider the most common configurations that affect both sites and hierarchies.  
 
@@ -41,5 +42,5 @@ The following configuration notes apply to most deployments:
 | Configure settings to manage high-risk deployments | Configure settings at a site to warn administrators when they create a high-risk deployment. For more information, see [Settings to manage high-risk deployments](/sccm/core/servers/manage/settings-to-manage-high-risk-deployments). |  
 | Configure database replicas for management points | Configure a database replica to reduce the processor load that's placed on the site database server by management points as they service requests from clients. For more information, see [Database replicas for management points](/sccm/core/servers/deploy/configure/database-replicas-for-management-points). |  
 | Configure a SQL Server Always On availability group | Configure availability groups as high-availability and disaster-recovery solutions for hosting the site database at primary sites and the central administration site. For more information, see [SQL Server AlwaysOn for a highly available site database](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database). |  
-| Modify replication between sites | See [Data transfers between sites](/sccm/core/servers/manage/data-transfers-between-sites) to learn about the following subjects:<br /><br /> Configure [file-based replication](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_fileroute) between secondary sites<br /><br /> Configure [database replication links](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_Dblinks)<br /><br /> Configure [distributed views](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews) |  
+| Modify replication between sites | See [Data transfers between sites](/sccm/core/plan-design/hierarchy/data-transfers-between-sites) to learn about the following subjects:<br /><br /> Configure [file-based replication](/sccm/core/plan-design/hierarchy/file-based-replication) between secondary sites<br /><br /> Configure [database replication links](/sccm/core/plan-design/hierarchy/database-replication)<br /><br /> Configure [distributed views](/sccm/core/plan-design/hierarchy/database-replication#bkmk_distviews) |  
 | Configure site servers in passive mode | Starting in version 1806, configure a site server in passive mode for each primary site and the central administration site. This feature provides a highly available site server. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability). |  

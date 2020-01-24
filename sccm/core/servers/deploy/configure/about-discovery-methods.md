@@ -10,11 +10,12 @@ ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# About discovery methods for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# About discovery methods for Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager discovery methods find different devices on your network, devices and users from Active Directory, or users from Azure Active Directory (Azure AD). To efficiently use a discovery method, you should understand its available configurations and limitations.  
 
@@ -224,7 +225,7 @@ You can discover user groups and members of those groups from Azure Active direc
 - onPremisesSecurityIdentifier
 - AAD tenantID
 
-Actions for Azure AD user group discovery are recorded in the **SMS_AZUREAD_DISCOVERY_AGENT.log** file on the top-tier site server of the hierarchy. For information about how to configure this discovery method, see [Configure Azure AD user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azuregroupdisco).
+Actions for Azure AD user group discovery are recorded in the **SMS_AZUREAD_DISCOVERY_AGENT.log** file on the top-tier site server of the hierarchy. For information about how to configure this discovery method, see [Configure Azure AD user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco).
 
 ##  <a name="bkmk_aboutHeartbeat"></a> Heartbeat Discovery  
 **Configurable:** Yes  

@@ -9,10 +9,11 @@ ms.assetid: 5887b585-618e-42ed-a707-d374d0da4b0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Add a Windows Driver to a Configuration Manager Boot Image Package
-In System Center Configuration Manager, you add a Windows driver to an operating system deployment boot image package by adding a reference to the required driver in the [SMS_BootImagePackage Server WMI Class](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) `ReferencedDrivers` array property.  
+In Configuration Manager, you add a Windows driver to an operating system deployment boot image package by adding a reference to the required driver in the [SMS_BootImagePackage Server WMI Class](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) `ReferencedDrivers` array property.  
 
 > [!NOTE]
 >  The `ReferencedDrivers` property is an array of an embedded [SMS_Driver_Details](../../develop/reference/osd/sms_driver_details-server-wmi-class.md) object, and you can add more than one driver to the package. The objects in the array are added to the boot image package each time it is updated on the distribution point.  
@@ -27,7 +28,7 @@ In System Center Configuration Manager, you add a Windows driver to an operating
 
 ### To add a Windows driver to a boot image package  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Get the [SMS_BootImagePackage](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) object for the boot image package that you want to add the driver to.  
 
@@ -150,4 +151,3 @@ public void AddDriverToBootImagePackage(
 ## See Also  
  [About Operating System Deployment Driver Management](../../develop/osd/about-operating-system-deployment-driver-management.md)   
  [How to Remove a Windows Driver from a Boot Image Package](../../develop/osd/how-to-remove-a-windows-driver-from-a-boot-image-package.md)   
- [Operating System Deployment Driver Management](../../develop/osd/operating-system-deployment-driver-management.md)

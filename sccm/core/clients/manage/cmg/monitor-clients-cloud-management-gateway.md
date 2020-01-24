@@ -10,12 +10,13 @@ ms.assetid: 15f72f80-9850-40ce-9c3a-443ba04b6a03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Monitor cloud management gateway
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After the cloud management gateway (CMG) is running and clients are connecting through it, you can monitor clients and network traffic to make sure you know how the service is performing.
 

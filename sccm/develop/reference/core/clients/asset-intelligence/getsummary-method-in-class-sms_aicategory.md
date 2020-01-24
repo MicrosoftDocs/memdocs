@@ -9,10 +9,11 @@ ms.assetid: c912603e-0480-4518-a1df-fd4a9664ea3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetSummary Method in Class SMS_AICategory
-The `GetSummary` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, provides a summary count of all the categories, families, and tags used by Asset Intelligence.  
+The `GetSummary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, provides a summary count of all the categories, families, and tags used by Asset Intelligence.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

@@ -10,13 +10,11 @@ ms.assetid: 8e0e8496-136b-461f-8239-cc19c6b78c3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to create deployment plans in Desktop Analytics
-
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
 This article provides the steps for creating a deployment plan in Desktop Analytics. Before you start, first [learn about deployment plans](/sccm/desktop-analytics/about-deployment-plans).
 
@@ -36,7 +34,7 @@ Follow the steps in this section to use Desktop Analytics to create a plan for d
 
     - **Products and versions**: Choose which Windows 10 version to deploy. Microsoft recommends creating deployment plans that use the most recent version.  
 
-    - **Device groups**: Select one or more groups, and then select **Set as Target Groups**. Groups with **SCCM** as the source are collections synchronized from Configuration Manager.  
+    - **Device groups**: Select one or more groups from the same hierarchy. These groups are [device collections](/configmgr/desktop-analytics/connect-configmgr#bkmk_Collections) synchronized from Configuration Manager.  
 
     - **Readiness rules**: These rules help to determine which devices qualify for upgrade. For more information, see [Readiness rules](#readiness-rules).  
 

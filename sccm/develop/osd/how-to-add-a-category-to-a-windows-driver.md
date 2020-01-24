@@ -9,10 +9,11 @@ ms.assetid: ed70a6c3-137b-41f9-b428-675737fb6a86
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Add a Category to a Windows Driver
-In System Center Configuration Manager, you add a category to a Windows driver by adding the unique identifier for the category to the [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md)`CategoryInstance_UniqueIDs` array property. The array contains one or more string identifiers that match the [SMS_CategoryInstance Server WMI Class](../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md)`CategoryInstance_UniqueID` property value. There is an instance of [SMS_CategoryInstance Server WMI Class](../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md) object for each category in the system.  
+In Configuration Manager, you add a category to a Windows driver by adding the unique identifier for the category to the [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md)`CategoryInstance_UniqueIDs` array property. The array contains one or more string identifiers that match the [SMS_CategoryInstance Server WMI Class](../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md)`CategoryInstance_UniqueID` property value. There is an instance of [SMS_CategoryInstance Server WMI Class](../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md) object for each category in the system.  
 
 > [!NOTE]
 >  The unique identifier for a driver category is prepended with the text "DriverCategories". Other category types have different text.  
@@ -21,7 +22,7 @@ In System Center Configuration Manager, you add a category to a Windows driver b
 
 ### To add a category to a Windows driver  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Get the [SMS_Driver](../../develop/reference/osd/sms_driver-server-wmi-class.md) object for the driver you want to add a category to.  
 
@@ -158,5 +159,4 @@ public void AddDriverCategory(
 
 ## See Also  
  [About Operating System Deployment Driver Management](../../develop/osd/about-operating-system-deployment-driver-management.md)   
- [Operating System Deployment Driver Management](../../develop/osd/operating-system-deployment-driver-management.md)   
  [How to Remove a Category from a Windows Driver](../../develop/osd/how-to-remove-a-category-from-a-windows-driver.md)

@@ -2,7 +2,6 @@
 documentType: LandingData
 title: Microsoft Deployment Toolkit documentation
 metadata:
-  document_id: bfb05467-f6ec-4cb2-b108-254972de2d06
   title: Microsoft Deployment Toolkit documentation
   description: Microsoft Deployment Toolkit provides a unified collection of tools, processes, and guidance for automating desktop and server deployments.
   keywords: freeware, tool, process, workflow, automation, deployment, automated, distribution
@@ -60,7 +59,7 @@ sections:
       title: Deploy with user-driven installation 
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-    - href: sccm-guide.md
+    - href: configmgr-guide.md
       title: Deploy to a new computer
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
@@ -69,7 +68,6 @@ sections:
   items:
   - type: paragraph
     text: 'Read our how-to and reference information.'
-  items:
   - type: list
     style: cards
     className: cardsM

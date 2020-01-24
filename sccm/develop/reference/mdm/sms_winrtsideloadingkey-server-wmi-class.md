@@ -9,7 +9,8 @@ ms.assetid: c91c3fbc-b267-428d-99fe-1782873c6aef
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_WinRTSideLoadingKey Server WMI Class
 The `SMS_WinRTSideLoadingKey` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, to create, modify and delete sideloading keys. These keys enable sideloaded Windows 8 applications on WinRT devices managed by Hybrid Mobile Device Management.  
@@ -97,6 +98,3 @@ Class SMS_WinRTSideLoadingKey : SMS_BaseClass
 
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Server Hybrid WMI Classes](../../../develop/reference/mdm/hybrid-server-wmi-classes.md)

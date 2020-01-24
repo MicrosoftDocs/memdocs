@@ -2,7 +2,7 @@
 title: "Setup Downloader"
 titleSuffix: "Configuration Manager"
 description: "Read about this standalone application designed to ensure your site installation uses current versions of key installation files."
-ms.date: 3/1/2017
+ms.date: 03/1/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,13 +10,14 @@ ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Setup Downloader for System Center Configuration Manager
+# Setup Downloader for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Before you run Setup to install or upgrade a System Center Configuration Manager site, you can use the Setup Downloader standalone application from the version of Configuration Manager that you want to install to download updated Setup files.  
+Before you run Setup to install or upgrade a Configuration Manager site, you can use the Setup Downloader standalone application from the version of Configuration Manager that you want to install to download updated Setup files.  
 
 Using updated Setup files ensures that your site installation uses current versions of key installation files. In oveview:   
 -   When you use Setup Downloader to download files prior to starting setup, you specify a folder to contain the files.  

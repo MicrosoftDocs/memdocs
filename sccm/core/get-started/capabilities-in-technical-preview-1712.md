@@ -1,7 +1,7 @@
 ---
 title: "Technical Preview 1712 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview version 1712 for System Center Configuration Manager."
+description: "Learn about features available in the Technical Preview version 1712 for Configuration Manager."
 ms.date: 12/15/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,15 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Capabilities in Technical Preview 1712 for System Center Configuration Manager
+# Capabilities in Technical Preview 1712 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1712. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. 
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1712. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. 
 
-Review [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview) before installing this version of the technical preview. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
+Review [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview) before installing this version of the technical preview. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
 
 
 <!--  Known Issues Template   
@@ -145,10 +146,10 @@ We love feedback so much that we're now enabling feedback through the [Feedback 
 - Configuration Manager OS Deployment
 - Configuration Manager Server
 
-Continue to use our [user voice page](http://configurationmanager.uservoice.com/) to vote on new feature ideas in Configuration Manager.
+Continue to use our [user voice page](https://configurationmanager.uservoice.com/) to vote on new feature ideas in Configuration Manager.
 
 
 <!-- When we have another H2 in this topic, Add this Next Steps section back in.  -->
 
 ## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    

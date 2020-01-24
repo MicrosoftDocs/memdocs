@@ -9,10 +9,11 @@ ms.assetid: bc248af9-a09e-42cc-aceb-2a465e20d3f0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # MoveFolders Method in Class SMS_ObjectContainerNode
-The `MoveFolders` Windows Management (WMI) class method, in System Center Configuration Manager, moves folders to another folder location.  
+The `MoveFolders` Windows Management (WMI) class method, in Configuration Manager, moves folders to another folder location.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -47,12 +48,11 @@ SInt32 MoveFolders(
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
  [SMS_ObjectContainerNode Server WMI Class](../../../../../develop/reference/core/servers/console/sms_objectcontainernode-server-wmi-class.md)   
- [Configuration Manager Console Folder Server WMI Classes](../../../../../develop/reference/core/servers/console/console-folder-server-wmi-classes.md)

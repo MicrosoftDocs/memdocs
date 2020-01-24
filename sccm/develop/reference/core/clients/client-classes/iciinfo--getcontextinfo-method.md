@@ -9,7 +9,8 @@ ms.assetid: 46bfc017-20b2-44e3-8256-d40ba3f46de6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ICIINFO::GetContextInfo Method
 The `ICIINFO::GetContextInfo` method, in Configuration Manager, gets the context information by name from the configuration item.  

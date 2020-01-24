@@ -9,10 +9,11 @@ ms.assetid: 7f08b462-c04a-4fdd-bf3b-89461f7f32ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SoftwareUpdateSource Server WMI Class
-The `SMS_SoftwareUpdateSource` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that lists all software update sources available on the site, for use in synchronizing metadata during a deployment.  
+The `SMS_SoftwareUpdateSource` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists all software update sources available on the site, for use in synchronizing metadata during a deployment.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -45,7 +46,7 @@ Class SMS_SoftwareUpdateSource : SMS_BaseClass
  The `SMS_SoftwareUpdateSource` class does not define any methods.  
 
 > [!NOTE]
->  The `ResendObjectToAllSites Method in Class SMS_SoftwareUpdateSource` has been deprecated in System Center Configuration Manager.  
+>  The `ResendObjectToAllSites Method in Class SMS_SoftwareUpdateSource` has been deprecated in Configuration Manager.  
 
 ## Properties  
  `ApplicabilityCondition`  
@@ -214,12 +215,11 @@ Class SMS_SoftwareUpdateSource : SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Updates Server WMI Classes](../../../develop/reference/sum/software-updates-server-wmi-classes.md)   
- [Configuration Manager Software Updates](../../../develop/sum/software-updates.md)
+ [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)

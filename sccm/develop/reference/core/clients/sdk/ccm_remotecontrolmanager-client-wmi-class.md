@@ -9,7 +9,8 @@ ms.assetid: 8e7d9711-68d6-4f35-96e0-a916913028d2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_RemoteControlManager Client WMI Class
 The `CCM_RemoteControlManager` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains several methods to help manage client remote control settings.    
@@ -31,17 +32,11 @@ Class CCM_RemoteControlManager :
 
 -   [SetRemCtrlSettings Method in Class CCM_RemoteControlManager](../../../../../develop/reference/core/clients/sdk/setremctrlsettings-method-in-class-ccm_remotecontrolmanager.md)  
 
-## Properties  
-
-## Remarks  
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Client SDK WMI Classes](../../../../../develop/reference/core/clients/sdk/client-sdk-wmi-classes.md)

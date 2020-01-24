@@ -1,8 +1,8 @@
 ---
-title: "Create configuration items for client-managed Windows 10 "
-titleSuffix: "Configuration Manager"
-description: "Use the System Center Configuration Manager Windows 10 configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client."
-ms.date: 05/08/2019
+title: Create configuration items for Windows 10
+titleSuffix: Configuration Manager
+description: Use the Windows 10 configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client.
+ms.date: 01/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -10,10 +10,13 @@ ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
+
 # Create configuration items for Windows 10 devices
-Use the System Center Configuration Manager **Windows 10** configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client.  
+
+Use the Configuration Manager **Windows 10** configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client.  
   
 > [!IMPORTANT]  
 >  In this release, if you created a **Password** setting as part of a configuration item of the type **Windows 10** (for a device managed with the Configuration Manager client), be aware of the following problem. If the setting doesn't already exist, or hasn't been configured on the Windows 10 device, it will incorrectly evaluate as compliant.  
@@ -133,7 +136,10 @@ Configuration Manager Windows Information Protection configuration items manage 
 - Encryption settings
   
 
-For information about how to configure WIP with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
-  
+For information about how to configure WIP with Configuration Manager, see:
+- [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Create and deploy a Windows Information Protection (WIP) policy using System Center Configuration Manager](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-sccm#related-topics)
+- [Limitations while using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/limitations-with-wip)
+
 ## See also  
-[Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md)
+[Configuration items for devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md)

@@ -9,10 +9,11 @@ ms.assetid: 939d7728-0e5c-4d98-8a70-0ffcfe41f479
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Client Framework and Data Transfer Client WMI Classes
-This section describes the Client Configuration Manager (CCM) framework and data transfer classes in System Center Configuration Manager for the client.  
+This section describes the Client Configuration Manager (CCM) framework and data transfer classes in Configuration Manager for the client.  
 
 ## In This Section  
  [CCM_Messaging_Configuration Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_messaging_configuration-client-wmi-class.md)  
@@ -52,5 +53,4 @@ This section describes the Client Configuration Manager (CCM) framework and data
  Represents a pending re-registration at the time of site reassignment.  
 
 ## See Also  
- [Configuration Manager Client Programming](../../../../../develop/core/clients/programming/client-programming.md)   
  [Configuration Manager Client Infrastructure](../../../../../develop/reference/core/clients/client-classes/client-infrastructure.md)

@@ -1,4 +1,5 @@
 - name: Device compliance
+  href: understand/ensure-device-compliance.md
 - name: Understand and explore
   items:
   - name: Ensure device compliance

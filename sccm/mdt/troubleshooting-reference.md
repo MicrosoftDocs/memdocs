@@ -19,12 +19,12 @@ manager: dougeby
 >  In this document, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor–based versions of Windows. Similarly, *MDT* refers to MDT 2013 unless otherwise stated.  
 
 > [!NOTE]
->  The Microsoft Diagnostics and Recovery Toolset (DaRT) contains powerful tools for recovering and troubleshooting client computers that do not start or have become unstable. You can use DaRT to determine the cause of a crash, restore lost files, and so on. You can also use DaRT as a troubleshooting tool when developing and deploying a Windows operating system. For example, if a built image fails to start correctly, you can start the client computer containing the image by using ERD Commander—a diagnostic environment. Then, you can explore the client computer’s hard disk, view the event log, remove updates, change operating system settings, and so on. DaRT is part of the Microsoft Desktop Optimization Pack for Software Assurance. To learn more about DaRT, see [http://www.microsoft.com/windows/enterprise/products-and-technologies/mdop/dart.aspx](http://www.microsoft.com/windows/enterprise/products-and-technologies/mdop/dart.aspx).  
+>  The Microsoft Diagnostics and Recovery Toolset (DaRT) contains powerful tools for recovering and troubleshooting client computers that do not start or have become unstable. You can use DaRT to determine the cause of a crash, restore lost files, and so on. You can also use DaRT as a troubleshooting tool when developing and deploying a Windows operating system. For example, if a built image fails to start correctly, you can start the client computer containing the image by using ERD Commander—a diagnostic environment. Then, you can explore the client computer’s hard disk, view the event log, remove updates, change operating system settings, and so on. DaRT is part of the Microsoft Desktop Optimization Pack for Software Assurance. For more information, see [Diagnostics and Recovery Toolset 10](https://docs.microsoft.com/microsoft-desktop-optimization-pack/dart-v10/).  
 
 ## Understanding Logs  
  Before effective troubleshooting of MDT can begin, you must have a clear understanding of the many .log files used during an operating system deployment. When you know which log files to research for what failure condition and at what time, issues that were once mysterious and difficult to understand may become clear and understandable.  
 
- The MDT log file format is designed to be read by Trace32, which is part of the System Center Configuration Manager 2007 Toolkit V2, available for download from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=9257). The logs can also be read by the Configuration Manager Trace Log Tool (CMTrace) that is available with System Center 2012 Configuration Manager and later versions. Use these tools whenever possible to read the log files, because it makes finding errors much easier.  
+ The MDT log file format is designed to be read by [CMTrace](/configmgr/core/support/cmtrace). Use this tool whenever possible to read the log files, because it makes finding errors much easier.  
 
  The rest of this section details the log files created during deployment as well as during Windows Setup. This section also provides examples of when to use the files for troubleshooting.  
 
@@ -271,8 +271,6 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 
    This information indicates that a networking problem may exist on the target computer or between the target computer and the server on which the deployment share resides. These problems might include network drivers not being installed properly or a mismatch in speed and duplex settings.  
 
-   **Possible Solution 2:** Use the Microsoft Exchange Server Error Code Look-up utility. This command-line utility is valuable in assisting with error code translation. It is available for download from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=985).  
-
 ### Review of Sample Logs  
  MDT creates log files that you can use to troubleshoot problems in the MDT deployment process. The following sections provide examples of how to use the MDT log files to troubleshoot the deployment process:  
 
@@ -294,7 +292,7 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
     ```  
 
 > [!NOTE]
->  For clarity, the log file contents above have been represented as they appear while being viewed using the Trace32 program.  
+>  For clarity, the log file contents above have been represented as they appear while being viewed using CMTrace.  
 
  **Possible Solution:** The issue, as pointed out on the first line of the log file sample, is that permission to access the database was denied. Therefore, the script cannot establish a secure connection to the database, possibly because a user ID and password were not available. As a result, database access was attempted using the computer account. The easiest way to work around this issue is to grant everyone Read access to the database.  
 
@@ -313,7 +311,7 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   Installation error 30029 while installing the 2007 Microsoft Office system or related files as described in [The 2007 Microsoft Office System](#MicrosoftOfficeSystem)  
 
 ####  <a name="BlockedExecutables"></a> Blocked Executables  
- **Problem:** If installation source files are downloaded from the Internet, it is likely that they will be marked with one or more NTFS file system data streams. For more information about NTFS data streams, see [File Streams](http://msdn2.microsoft.com/library/aa364404\(VS.85\).aspx). The existence of NTFS file system data streams might cause an **Open File – Security Warning** prompt to be displayed. The installation will not proceed until you click **Run** at the prompt.  
+ **Problem:** If installation source files are downloaded from the Internet, it is likely that they will be marked with one or more NTFS file system data streams. For more information about NTFS data streams, see [File Streams](/windows/win32/fileio/file-streams). The existence of NTFS file system data streams might cause an **Open File – Security Warning** prompt to be displayed. The installation will not proceed until you click **Run** at the prompt.  
 
  Figure 2 shows, you can view NTFS file system data streams using the **More** command and the [Streams utility](https://technet.microsoft.com/sysinternals/bb897440.aspx).  
 
@@ -387,7 +385,7 @@ Figure 2. NTFS data streams
 ####  <a name="BlockedSQLServerBrowserRequests"></a> Blocked SQL Server Browser Requests  
  **Problem:** During the MDT deployment process, information can be retrieved from Microsoft SQL Server® databases. However, errors might be generated that relate to an improperly configured firewall on the database server.  
 
- **Possible Solution:** The Windows Firewall in Windows Server helps prevent unauthorized access to computer resources. However, if the firewall is configured incorrectly, attempts to connect to a SQL Server instance may be blocked. To access an instance of SQL Server that is behind the firewall, configure the firewall on the computer that is running SQL Server. For more information on configuring firewall ports for SQL Server, see the Microsoft Support article [How do I open the firewall port for SQL Server on Windows Server 2008?](http://support.microsoft.com/kb/968872)  
+ **Possible Solution:** The Windows Firewall in Windows Server helps prevent unauthorized access to computer resources. However, if the firewall is configured incorrectly, attempts to connect to a SQL Server instance may be blocked. To access an instance of SQL Server that is behind the firewall, configure the firewall on the computer that is running SQL Server. For more information on configuring firewall ports for SQL Server, see the Microsoft Support article [How do I open the firewall port for SQL Server on Windows Server 2008?](https://support.microsoft.com/kb/968872)  
 
 ####  <a name="NamedPipeConnections"></a> Named Pipe Connections  
  **Problem:** During the MDT deployment process, information can be retrieved from SQL Server databases. However, errors might be generated that relate to broken SQL Server connections. These can be caused by not enabling named pipe connections in Microsoft SQL Server.  
@@ -435,7 +433,7 @@ Figure 2. NTFS data streams
 
 13. Close the SQL Server Configuration Manager console.  
 
-    For additional information, [How to enable remote connections in SQL Server 2008](http://blogs.msdn.com/b/walzenbach/archive/2010/04/14/how-to-enable-remote-connections-in-sql-server-2008.aspx).  
+    For additional information, [How to enable remote connections in SQL Server 2008](https://blogs.msdn.com/b/walzenbach/archive/2010/04/14/how-to-enable-remote-connections-in-sql-server-2008.aspx).  
 
 #####  <a name="EnableNamedPipeConnectionsinSQL"></a> Enable Named Pipe Connections in SQL Server 2005  
  To enable named pipe connections in SQL Server 2005, perform the following steps:  
@@ -462,7 +460,7 @@ Figure 2. NTFS data streams
 
 9. Close SQL Server 2005 Surface Area Configuration.  
 
-   For additional information, see the Microsoft Support article [How to configure SQL Server 2005 to allow remote connections](http://support.microsoft.com/kb/914277)  
+   For additional information, see the Microsoft Support article [How to configure SQL Server 2005 to allow remote connections](https://support.microsoft.com/kb/914277)  
 
 ### Deployment Scripts  
  Review MDT\-related problems and solutions:  
@@ -599,7 +597,7 @@ Figure 2. NTFS data streams
 
  The second phase of this protocol takes place between the client computer and a boot server and uses the DHCP message format as a convenient format for communication. This second phase is otherwise unrelated to the standard DHCP services. The next few pages outline the step\-by\-step process during PXE client computer initialization.  
 
- For more information on troubleshooting PXE boot\-related issues in Windows Deployment Services running in Legacy or Mixed mode, see the Microsoft Support article [Description of PXE Interaction Among PXE Client, DHCP, and RIS Server](http://support.microsoft.com/kb/244036).  
+ For more information on troubleshooting PXE boot\-related issues in Windows Deployment Services running in Legacy or Mixed mode, see the Microsoft Support article [Description of PXE Interaction Among PXE Client, DHCP, and RIS Server](https://support.microsoft.com/kb/244036).  
 
  Review the following solutions for PXE boot issues:  
 
@@ -955,7 +953,7 @@ ERROR - Unable to create ADODB.Connection object, impossible to query SQL Server
 ###  <a name="MicrosoftSupport"></a> Microsoft Support  
  Microsoft provides Premier and Professional level support for Microsoft Deployment Toolkit.  
 
- Professional level support: [http://support.microsoft.com/](http://support.microsoft.com/)  
+ Professional level support: [https://support.microsoft.com/](https://support.microsoft.com/)  
 
  Premier level support: [https://premier.microsoft.com/](https://premier.microsoft.com/)  
 
@@ -967,22 +965,22 @@ ERROR - Unable to create ADODB.Connection object, impossible to query SQL Server
 
 -   Microsoft-hosted blogs  
 
-    -   [MDT Team blog](http://blogs.technet.com/b/msdeployment/)  
+    -   [MDT Team blog](https://blogs.technet.com/b/msdeployment/)  
 
-    -   [Configuration Manager Team blog](http://blogs.technet.com/b/configmgrteam/)  
+    -   [Configuration Manager Team blog](https://blogs.technet.com/b/configmgrteam/)  
 
-    -   [Michael Niehaus’ blog](http://blogs.technet.com/b/mniehaus/) (Michael Niehaus writes on Windows and Microsoft Office deployment.)  
+    -   [Michael Niehaus’ blog](https://blogs.technet.com/b/mniehaus/) (Michael Niehaus writes on Windows and Microsoft Office deployment.)  
 
 -   Microsoft-hosted newsgroups and forums:  
 
      The following newsgroups and forums are available with support from Microsoft employees, industry peers, and Microsoft Valued Professionals:  
 
-    -   [Configuration Manager - Operating System Deployment](http://social.technet.microsoft.com/Forums/home?forum=configmanagerosd)  
+    -   [Configuration Manager - Operating System Deployment](https://social.technet.microsoft.com/Forums/home?forum=configmanagerosd)  
 
-    -   [Windows 8 Installation, Setup, and Deployment](http://social.technet.microsoft.com/Forums/windows/home?forum=w8itproinstall)  
+    -   [Windows 8 Installation, Setup, and Deployment](https://social.technet.microsoft.com/Forums/windows/home?forum=w8itproinstall)  
 
 -   Deployment-related information sources from outside Microsoft:  
 
     -   [DeployVista.com](http://www.deployvista.com/)  
 
-    -   [myITforum.com](http://www.myitforum.com/)
+    -   [myITforum.com](https://www.myitforum.com/)

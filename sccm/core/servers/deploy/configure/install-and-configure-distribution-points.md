@@ -2,7 +2,7 @@
 title: Manage distribution points
 titleSuffix: Configuration Manager
 description: Use distribution points to host the content that you deploy to devices and users.
-ms.date: 07/26/2019
+ms.date: 12/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Install and configure distribution points in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Install Configuration Manager distribution points to host the content files that you deploy to devices and users. Create distribution point groups to simplify how you manage distribution points, and how you distribute content to distribution points.  
 
@@ -225,6 +226,14 @@ While the distribution point is in maintenance mode, it has the following behavi
 
 Be careful about enabling maintenance mode on more than one distribution point. This action may cause a performance impact to your other distribution points. Depending upon your boundary group configurations, clients may have increased download times or be unable to download content.
 
+Maintenance mode shouldn't be a long-term state for any distribution point. For any actions with a long duration, consider first removing the distribution point role.
+
+> [!NOTE]
+> While a distribution point is in maintenance mode, don't do the following actions:<!-- SCCMDocs-pr #4699 -->
+>
+> - Remove role
+> - Reassign distribution point
+
 ### Enable maintenance mode
 
 To put a distribution point in maintenance mode, your user account requires the **Modify** permission on the **Site** class. For example, the **Infrastructure Administrator** and **Full Administrator** built-in roles have this permission.<!-- SCCMDocs-pr issue #3407 -->
@@ -305,7 +314,7 @@ The following settings are on the **Distribution point** page of the Create Site
 
 - **Enable this distribution point for prestaged content**: This setting enables you to add content to the server before you distribute software. Because the content files are already in the content library, they don't transfer over the network when you distribute the software. For more information, see [Prestaged content](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).  
 
-- **Enable this distribution point to be used as Delivery Optimization In-Network Cache server**: Starting in version 1906, you can install a Delivery Optimization In-Network Cache (DOINC) server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links. For more information, including description of the additional settings, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache).
+- **Enable this distribution point to be used as Microsoft Connected Cache server**: Starting in version 1906, you can install a Microsoft Connected Cache server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links. For more information, including description of the additional settings, see [Microsoft Connected Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/microsoft-connected-cache).
 
 
 ### <a name="bkmk_config-comm"></a> Communication

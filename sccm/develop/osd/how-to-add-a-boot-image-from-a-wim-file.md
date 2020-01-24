@@ -9,19 +9,20 @@ ms.assetid: c995b2e6-c364-4d59-8bc7-d8ef3596a0fd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Add a Boot Image from a WIM File in Configuration Manager
-You add a boot image from a Windows Image (WIM) file to System Center Configuration Manager by creating an instance of [SMS_BootImagePackage](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md). The property ImagePath must be set to the Universal Naming Convention (UNC) path to the WIM file. The property ImageIndex is the index to the required image within the WIM file.  
+You add a boot image from a Windows Image (WIM) file to Configuration Manager by creating an instance of [SMS_BootImagePackage](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md). The property ImagePath must be set to the Universal Naming Convention (UNC) path to the WIM file. The property ImageIndex is the index to the required image within the WIM file.  
 
  If the boot image requires Windows drivers, you specify them in the `ReferencedDrivers` property, which is an array of [SMS_Driver_Details](../../develop/reference/osd/sms_driver_details-server-wmi-class.md).  
 
 > [!NOTE]
->  When the boot image is updated, for example, when a System Center Configuration Manager binary or boot image property is changed, the boot image must be updated by calling the [SMS_BootImagePackage](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) class [RefreshPkgSource](../../develop/reference/osd/refreshpkgsource-method-in-class-sms_bootimagepackage.md) method.  
+>  When the boot image is updated, for example, when a Configuration Manager binary or boot image property is changed, the boot image must be updated by calling the [SMS_BootImagePackage](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) class [RefreshPkgSource](../../develop/reference/osd/refreshpkgsource-method-in-class-sms_bootimagepackage.md) method.  
 
 ### To add a boot image from a WIM file  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Create an instance of SMS_BootImagePackage.  
 
@@ -121,4 +122,4 @@ public void AddBootImage(
  [How to Assign a Package to a Distribution Point](../../develop/core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md)   
  [How to add a Windows Driver to a Configuration Manager Boot Image Package](../../develop/osd/how-to-add-a-windows-driver-to-a-configuration-manager-boot-image-package.md)   
  [How to Assign a Package to a Distribution Point](../../develop/core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md)   
- [Operating System Deployment Image Management](../../develop/osd/operating-system-deployment-image-management.md)
+ [About image management](/sccm/develop/osd/about-operating-system-deployment-image-management)

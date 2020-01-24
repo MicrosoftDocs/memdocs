@@ -1,8 +1,8 @@
 ---
 title: "Source hierarchy strategy"
 titleSuffix: "Configuration Manager"
-description: "Configure a source hierarchy and gather data from a source site before you configure a System Center Configuration Manager migration job."
-ms.date: 1/3/2017
+description: "Configure a source hierarchy and gather data from a source site before you configure a Configuration Manager migration job."
+ms.date: 01/3/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,13 +10,14 @@ ms.assetid: 4800a800-66c8-4c35-aebe-e413a23790c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Plan a source hierarchy strategy in System Center Configuration Manager
+# Plan a source hierarchy strategy in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Before you set up a migration job in your System Center Configuration Manager environment, you must configure a source hierarchy and gather data from at least one source site in that hierarchy. Use the following sections to help you plan for configuring source hierarchies, configuring source sites, and determining how Configuration Manager gathers information from the source sites in the source hierarchy. 
+Before you set up a migration job in your Configuration Manager environment, you must configure a source hierarchy and gather data from at least one source site in that hierarchy. Use the following sections to help you plan for configuring source hierarchies, configuring source sites, and determining how Configuration Manager gathers information from the source sites in the source hierarchy. 
 
 ##  <a name="BKMK_Source_Hierarchies"></a> Source hierarchies  
 A source hierarchy is a Configuration Manager hierarchy that has data that you want to migrate. When you set up migration and specify a source hierarchy, you specify the top-level site of the source hierarchy. This site is also called a source site. Additional sites that you can migrate data from in the source hierarchy are also called source sites.  
@@ -51,7 +52,7 @@ If you restore an inactive source hierarchy and have not previously used **Clean
 >  If you migrate data from more than a single source hierarchy, each additional source hierarchy must contain a unique set of site codes.  
 > Source and destination hierarchies also requires different set of site codes.
 
-For more about configuring a source hierarchy, see [Configuring source hierarchies and source sites for migration to System Center Configuration Manager](../../core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md)  
+For more about configuring a source hierarchy, see [Configuring source hierarchies and source sites for migration to Configuration Manager current branch](../../core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md)  
 
 ##  <a name="BKMK_Source_Sites"></a> Source sites  
  Source sites are the sites in the source hierarchy that have the data that you want to migrate. The top-level site of the source hierarchy is always the first source site. When migration collects data from the first source site of a new source hierarchy, it discovers information about additional sites in that hierarchy.  
@@ -59,9 +60,9 @@ For more about configuring a source hierarchy, see [Configuring source hierarchi
  After data gathering completes for the initial source site, the actions you take next depend on the product version of the source hierarchy.  
 
 ### Source sites that run Configuration Manager 2007 SP2  
- After data is gathered from the initial source site of the Configuration Manager 2007 SP2 hierarchy, you do not have to set up additional source sites before you create migration jobs. However, before you can migrate data from additional sites, you must set up additional sites as source sites, and System Center Configuration Manager must successfully gather data from those sites.  
+ After data is gathered from the initial source site of the Configuration Manager 2007 SP2 hierarchy, you do not have to set up additional source sites before you create migration jobs. However, before you can migrate data from additional sites, you must set up additional sites as source sites, and Configuration Manager must successfully gather data from those sites.  
 
- To gather data from additional sites, you individually set up each site as a source site. This requires you to specify the credentials for System Center Configuration Manager to connect to the SMS Provider and site database of each source site. After you set up the credentials for a source site, the data gathering process for that site begins.  
+ To gather data from additional sites, you individually set up each site as a source site. This requires you to specify the credentials for Configuration Manager to connect to the SMS Provider and site database of each source site. After you set up the credentials for a source site, the data gathering process for that site begins.  
 
  When you set up additional source sites in a Configuration Manager 2007 SP2 source hierarchy, you must set up source sites from the top down, which means you set up the bottom-tier sites last. You can configure source sites in a branch of the hierarchy at any time, but you must set up a site as a source site before you set up any of its child sites as source sites.  
 
@@ -78,7 +79,7 @@ For more about configuring a source hierarchy, see [Configuring source hierarchi
 
  The data gathering process then repeats itself on a simple schedule to maintain synchronization with any changes to data in the source site. By default, the process repeats every four hours. You can change the schedule for this cycle by editing the **Properties** of the source site. The initial data gathering process must review all objects in the Configuration Manager database and can take a long time to finish. Subsequent data gathering processes identify only changes to the data and require less time to finish.  
 
- To gather data, the top-level site in the destination hierarchy connects to the SMS Provider and the site database of the source site to retrieve a list of objects and distribution points. These connections use the source site access accounts. For information about required configurations for gathering data, see [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
+ To gather data, the top-level site in the destination hierarchy connects to the SMS Provider and the site database of the source site to retrieve a list of objects and distribution points. These connections use the source site access accounts. For information about required configurations for gathering data, see [Prerequisites for migration](../../core/migration/prerequisites-for-migration.md).  
 
  You can start and stop the data gathering process by using **Gather Data Now** and **Stop Gathering Data** in the Configuration Manager console.  
 

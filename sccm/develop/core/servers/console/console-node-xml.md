@@ -9,10 +9,11 @@ ms.assetid: ae7c2e8f-06e9-487d-ba09-4b30cce7574c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Console Node XML
-The node XML for the System Center Configuration Manager console is in workspace XML files located in the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\ConsoleRoot\ folder. Your extension node XML files, however, are placed in the folder AdminConsole\XmlStorage\Extensions\Nodes\\<GUID\>, where \<GUID> is the namespace GUID identifier for the parent node.  
+The node XML for the Configuration Manager console is in workspace XML files located in the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\ConsoleRoot\ folder. Your extension node XML files, however, are placed in the folder AdminConsole\XmlStorage\Extensions\Nodes\\<GUID\>, where \<GUID> is the namespace GUID identifier for the parent node.  
 
  The following XML defines an extension node called “MyNode��?. The “MyNode��? node is defined as a child of the **Site Configuration** node (d61498cb-7b3f-4748-ae3e-026674fb0cbd) in the Administration workspace of the Configuration Manager console. “MyNode��? is associated with a **Microsoft.ConfigurationManagement.AdminConsole.ConsoleView.ViewDescription** type which is a grid view that ships with Configuration Manager. When the node is selected, it will cause a grid view to appear in the view panel. The grid view displays two properties (**RoleName** and **SiteCode**) of each `MyClass` custom management class instance that is returned by the WQL query.  
 
@@ -43,7 +44,7 @@ The node XML for the System Center Configuration Manager console is in workspace
                …               </ChildNodes>    </RootNodeDescription>  </ChildNodes></RootNodeDescription>  
 ```  
 
-## See Also  
- [About Configuration Manager Console Nodes](../../../../develop/core/servers/console/about-configuration-manager-console-nodes.md)   
- [How to Create a Configuration Manager Console Node](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-console-node.md)   
- [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console-nodes.md)
+## See also
+
+ [How to Create a Configuration Manager Console Node](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-console-node.md)
+ [About console nodes](/sccm/develop/core/servers/console/about-configuration-manager-console-nodes)

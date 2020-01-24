@@ -1,7 +1,7 @@
 ---
-title: Protect data with remote wipe, lock, or passcode reset
+title: Manage devices with on-premises MDM
 titleSuffix: Configuration Manager
-description: Protect device data with full wipe, selective wipe, remote lock, or passcode reset by using Configuration Manager.
+description: Protect device data with full wipe, selective wipe, remote lock, or passcode reset by using Configuration Manager on-premises mobile device management (MDM).
 ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -10,100 +10,60 @@ ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
-# Protect data with remote wipe, lock, or passcode reset by using Configuration Manager
+# Manage devices and protect data with on-premises MDM in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Configuration Manager provides selective wipe, full wipe, remote lock, and passcode reset capabilities. Mobile devices can store sensitive corporate data and provide access to many corporate resources. To help protect devices, you can issue:  
+Mobile devices can store sensitive data and provide easy access to many organizational resources. To help protect devices and data, use Configuration Manager for the following device management actions:
 
-- A full wipe to restore the device to its factory settings  
+- **Full wipe**: Restore the device to its factory settings
 
-- A selective wipe to remove only company data  
+- **Selective wipe**: Remove only organizational data
 
-- A remote lock to help secure a device that might be lost  
+- **Passcode reset**: Remove or reset the passcode when a user forgets it
 
-- A reset of the device passcode  
-
-> [!Important]  
-> As of August 14, 2018, hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
-
-
+- **Remote lock**: Help secure a device that might be lost
 
 ## Full wipe  
 
-You might issue a wipe command to a device when you need to secure a lost device or when you retire a device from active use.  
+When you need to secure a lost device or when you retire a device from active use, you can start a full wipe on it. This action restores the device to its factory defaults. It removes all organizational and user data and settings.
 
-Issue a **full wipe** to a device to restore the device to its factory defaults. This removes all company and user data and settings. You can do a full wipe on Windows Phone, iOS, Android, and Windows 10 devices.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and choose the **Devices** node. You can also choose **Device Collections** and select a collection of which the device is a member.
 
-> [!NOTE]
-> You can only perform a full wipe on company-owned devices.
+1. Select the device that you want to wipe.
 
-> [!NOTE]
-> Wiping Windows 10 devices on versions earlier than version 1511 with less than 4 GB of RAM might leave the device unresponsive. [Learn more](https://technet.microsoft.com/library/mt592024.aspx#full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram).
+1. On the ribbon, in the Device group, select **Remote Device Actions**, and then choose **Retire/Wipe**.
 
-#### To initiate a remote wipe from the Configuration Manager console  
+1. In the **Retire from Configuration Manager** window, select the option to **Wipe the mobile device and retire it from Configuration Manager**.
 
-1. In the Configuration Manager console, choose **Assets and Compliance** and choose **Devices**. Alternatively, you can choose **Device Collections** and select a collection.  
+## Selective wipe
 
-2. Select the device that you want to retire/wipe.  
+To remove only organizational data from a device, start a selective wipe.
 
-3. Choose **Remote Device Actions** in **Device Group**, and then choose **Retire/Wipe**.  
+### Behaviors by OS version
 
+The following tables describe what data is removed and the effect on data that remains on the device after a selective wipe.
 
+#### Windows 10, Windows 8.1, Windows RT 8.1, and Windows RT
 
-## Selective wipe  
+|Content|Selective wipe behavior|  
+|-------|--------|
+|Apps and associated data installed by Configuration Manager|It uninstalls the apps, and removes any sideloading keys. It revokes the encryption key for apps that use Windows Selective Wipe, and the data is no longer accessible.|
+|VPN and Wi-Fi profiles|Removes the profiles|
+|Certificates|Removes and revokes the certificates|
+|Settings|Removes requirements|
+|Email profiles|Removes email that's EFS-enabled, which includes the Mail app for Windows email and attachments.|
 
-Issue a **selective wipe** to a device to remove only company data. The following table describes, by platform, what data is removed and the effect on data that remains on the device after a selective wipe.  
+#### Windows 10 Mobile, Windows Phone 8.0, and Windows Phone 8.1
 
-**iOS**  
-
-|Content removed when you're retiring a device|iOS|  
-|--------------------------------------------|---------|  
-|Company apps and associated data installed by using Configuration Manager and Intune|Apps are uninstalled. Company app data is removed.|  
-|VPN and Wi-Fi profiles|Removed.|  
-|Certificates|Removed and revoked.|  
-|Settings|Removed, except for: **Allow voice roaming**, **Allow data roaming**, and **Allow automatic synchronization while roaming**.|  
-|Management agent|Management profile is removed.|  
-|Email profiles|For email profiles set up by Intune, the email account and email are removed.|  
-
-**Android and Android Samsung KNOX Standard**  
-
-|Content removed when you're retiring a device|Android|Samsung KNOX Standard|  
-|--------------------------------------------|-------------|------------------|  
-|Company apps and associated data installed by using Configuration Manager and Intune|Apps and data remain installed.|Apps are uninstalled.|  
-|VPN and Wi-Fi profiles|Removed.|Removed.|  
-|Certificates|Revoked.|Revoked.|  
-|Settings|Requirements are removed.|Requirements are removed.|  
-|Management agent|Device Administrator privilege is revoked.|Device Administrator privilege is revoked.|  
-|Email profiles|Not applicable.|For email profiles set up by Intune, the email account and email are removed.|  
-
-**Android for Work**
-
-Doing a selective wipe on an Android for Work device removes the work profile along with all data, apps, and settings in the work profile on that device. This retires the device from management with Configuration Manager and Intune. Full wipe is not supported for Android for Work.
-
- **Windows 10, Windows 8.1, Windows RT 8.1, and Windows RT**  
-
-|Content removed when you're retiring a device|Windows 10, Windows 8.1 and Windows RT 8.1|  
-|---------------------------------|-------------|
-|Company apps and associated data installed by using Configuration Manager and Intune|Apps are uninstalled and sideloading keys are removed. Apps that use Windows Selective Wipe will have the encryption key revoked, and data will no longer be accessible.|  
-|VPN and Wi-Fi profiles|Removed.|  
-|Certificates|Removed and revoked.|  
-|Settings|Requirements are removed.|
-|Management agent|Not applicable. Management agent is built in.|  
-|Email profiles|Email that is EFS-enabled is removed, which includes the Mail app for Windows email and attachments.|  
-
- **Windows 10 Mobile, Windows Phone 8.0, and Windows Phone 8.1**
-
-|Content removed when you're retiring a device|Windows 10 Mobile, Windows Phone 8 and Windows Phone 8.1|  
-|-|-|
-|Company apps and associated data installed by using Configuration Manager and Intune|Apps are uninstalled. Company app data is removed.|  
-|VPN and Wi-Fi profiles|Removed for Windows 10 Mobile and Windows Phone 8.1.|  
-|Certificates|Removed for Windows Phone 8.1.|  
-|Management agent|Not applicable. Management agent is built in.|  
-|Email profiles|Removed (except Windows Phone 8.0).|  
+|Content|Selective wipe behavior|  
+|-------|--------|
+|Company apps and associated data installed by Configuration Manager|It uninstalls the apps and removes organizational app data.|
+|VPN and Wi-Fi profiles|Removes the profiles for Windows 10 Mobile and Windows Phone 8.1|
+|Certificates|Removes the certificates for Windows Phone 8.1|
+|Email profiles|Removes the profiles (except Windows Phone 8.0)|
 
 The following settings are also removed from Windows 10 Mobile and Windows Phone 8.1 devices:  
 
@@ -133,118 +93,79 @@ The following settings are also removed from Windows 10 Mobile and Windows Phone
 - **Allow NFC**
 - **Allow Wi-Fi**
 
-#### To initiate a remote wipe from the Configuration Manager console  
+### Start a selective wipe
 
-1. In the Configuration Manager console, choose **Assets and Compliance** and choose **Devices**. Alternatively, you can choose **Device Collections** and select a collection.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and choose the **Devices** node. You can also choose **Device Collections** and select a collection of which the device is a member.
 
-2. Select the device that you want to retire/wipe.  
+1. Select the device that you want to wipe.
 
-3. Choose **Remote Device Actions** in **Device Group**, and then choose **Retire/Wipe**.  
+1. On the ribbon, in the Device group, select **Remote Device Actions**, and then choose **Retire/Wipe**.
 
+1. In the **Retire from Configuration Manager** window, select the following option: **Wipe company content and retire the mobile device from Configuration Manager**.
 
+### Recommendations for selective wipe
 
-## Wiping EFS-enabled content  
+- For a successful wipe of email, set up email profiles to Windows Phone 8.1 devices.
 
-Windows 8.1 and Windows RT 8.1 support selective wipe of Encrypting File System (EFS)-encrypted content. The following apply to a selective wipe of EFS-enabled content:  
+- For a successful wipe of apps, make sure the apps are distributed through mobile device app management.
 
-- Only apps and data that are protected by EFS through the same Internet domain as the Intune account are selectively wiped. For more information, see [Windows Selective Wipe for Device Data Management](https://technet.microsoft.com/library/dn486874.aspx).  
+## Passcode reset
 
-- If any changes are made to the domain associated with EFS, the changes can take up to 48 hours before apps and data that use the new domain can be selectively wiped.  
+If a user forgets their passcode, use this action to force a new temporary passcode on the device. You can also remove the passcode entirely. The following table lists how passcode reset works on different mobile platforms.
 
-- Each domain that is registered with Intune is the domain that will be wiped.  
+| OS version | Passcode reset |
+|------------|----------------|
+| Windows 10 | Not supported |
+| Windows 10 mobile | Supported, excluding Azure Active Directory-joined devices |
+| Windows Phone 8 and Windows Phone 8.1 | Supported |
+| Windows RT 8.1 | Not supported |
+| Windows 8.1 | Not supported |
 
-The data and apps that EFS selective wipe currently supports are:  
+> [!Note]
+> Start the passcode reset action from the top-level site. For example, if you use a central administration site, you can only do the action on that site. If you're using a standalone primary site, you can only do the action from that site.
 
-- Mail app for Windows.  
+### Remotely reset the passcode on a mobile device
 
-- Work folders.
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and choose the **Devices** node. You can also choose **Device Collections** and select a collection of which the device is a member.
 
-- Files and folders encrypted by EFS. For more information, see [Best practices for the Encrypting File System](http://support.microsoft.com/kb/223316).  
+1. Select the device or devices on which to reset the passcode.
 
+1. On the ribbon, in the Device group, select **Remote Device Actions**, and then choose **Passcode Reset**.  
 
-### Best practices for selective wipe  
+### Show the state of the passcode reset  
 
-- For a successful wipe of email, set up email profiles to iOS and Windows Phone 8.1 devices.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and choose the **Devices** node. You can also choose **Device Collections** and select a collection of which the device is a member.
 
-- For a successful wipe of apps, make sure the apps are distributed through mobile device app management.  
+1. Select the device or devices on which to show the state of the passcode reset.
 
-- For iOS, configure the setting **Allow backup to iCloud** to **Disallow** so that users can’t restore content by using iCloud.  
+1. On the ribbon, in the Device group, select **Remote Device Actions**, and then choose **Show Passcode State**.  
 
-- If an account has been deactivated, then after one year, Intune will retire the account and a selective wipe will be done.  
-
-
-
-##  Passcode reset  
-
-If a user forgets their passcode, you can help them by removing the passcode from a device or by forcing a new temporary passcode on a device. The following table lists how passcode reset works on different mobile platforms.  
-
-| Platform                              | Passcode reset                                                                               |
-|---------------------------------------|----------------------------------------------------------------------------------------------|
-| iOS                                   | Supported for clearing the passcode from a device. Does not create a new temporary passcode. |
-| macOS                                 | Not supported.                                                                               |
-| Android                               | Supported on versions earlier than Android 7.0. Creates a temporary passcode.                |
-| Android for Work                      | Not supported.                                                                               |
-| Windows 10 PCs                        | Not supported.                                                                               |
-| Windows 10 mobile                     | Supported, excluding Azure AD joined devices.  |
-| Windows Phone 8 and Windows Phone 8.1 | Supported.                                                                                   |
-| Windows RT 8.1                        | Not supported.                                                                               |
-| Windows 8.1 PCs                       | Not supported.                                                                               |
-
-> [!Note]    
-> You must perform the passcode reset action from the top-level site in your environment. For example, if you use a central administration site, you can only perform the action on that site. If you’re using a standalone primary site, you can only perform the action on that site.
-
-#### To reset the passcode on a mobile device remotely in Configuration Manager  
-
-1. In the Configuration Manager console, choose **Assets and Compliance** and choose **Devices**. Alternatively, you can choose **Device Collections** and select a collection.  
-
-2. Select the device or devices on which to reset the passcode.  
-
-3. Choose **Remote Device Actions** in **Device Group**, and then choose **Passcode Reset**.  
-
-#### To show the state of the passcode reset  
-
-1. In the Configuration Manager console, choose **Assets and Compliance** and choose **Devices**. Alternatively, you can choose **Device Collections** and select a collection.  
-
-2. Select the device or devices on which to show the state of the passcode reset.  
-
-3. Choose **Remote Device Actions** in **Device Group**, and then choose **Show Passcode State**.  
-
-
-
-## Remote lock  
+## Remote lock
 
 If a user loses their device, you can lock the device remotely. The following table lists how remote lock works on different mobile platforms.  
 
-|Platform|Remote lock|  
-|--------------|-----------------|  
-|iOS|Supported.|  
-|Android|Supported.|  
-|Windows 10|Not supported at this time.|  
-|Windows Phone 8 and Windows Phone 8.1|Supported.|  
-|Windows RT 8.1 |Supported if the current user of the device is the same user who enrolled the device.|  
-|Windows 8.1|Supported if the current user of the device is the same user who enrolled the device.|  
+|OS version|Remote lock|
+|----------|-----------|
+|Windows 10|Not supported|
+|Windows Phone 8 and Windows Phone 8.1|Supported|
+|Windows RT 8.1|Supported, if the current user of the device is the same user who enrolled the device.|
+|Windows 8.1|Supported, if the current user of the device is the same user who enrolled the device.|
 
-> [!Note]    
-> You must perform the remote lock action from the top-level site in your environment. For example, if you use a central administration site, you can only perform the action on that site. If you’re using a standalone primary site, you can only perform the action on that site.
+> [!Note]
+> Start the remote lock action from the top-level site. For example, if you use a central administration site, you can only do the action on that site. If you're using a standalone primary site, do the action from that site.
 
-#### To lock a mobile device remotely through the Configuration Manager console  
+### Remotely lock a mobile device
 
-1. In the Configuration Manager console, choose **Assets and Compliance** and choose **Devices**. Alternatively, you can choose **Device Collections** and select a collection.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and choose the **Devices** node. You can also choose **Device Collections** and select a collection of which the device is a member.
 
-2. Select the device or devices to lock.  
+1. Select the device or devices to lock.
 
-3. Choose **Remote Device Actions** in **Device Group**, and then choose **Remote Lock**.  
+1. On the ribbon, in the Device group, select **Remote Device Actions**, and then choose **Remote Lock**. Confirm the action.
 
-#### To show the state of the remote lock  
+### Show the state of the remote lock
 
-1. In the Configuration Manager console, choose **Assets and Compliance** and choose **Devices**. Alternatively, you can choose **Device Collections** and select a collection.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and choose the **Devices** node. You can also choose **Device Collections** and select a collection of which the device is a member.
 
-2. Select the device on which to show the state of the remote lock.  
+1. Select the device on which to show the state of the remote lock.
 
-3. Choose **Remote Device Actions** in **Device Group**, and then choose **Show Remote Lock State**.  
-
-
-
-## See also  
-
-[Windows Selective Wipe for Device Data Management](https://technet.microsoft.com/library/dn486874.aspx)   
+1. On the ribbon, in the Device group, select **Remote Device Actions**, and then choose **Show Remote Lock State**.

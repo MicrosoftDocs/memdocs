@@ -9,7 +9,8 @@ ms.assetid: ac9193e8-f6c8-4acf-ba1f-95e95d54d4ad
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Define the AppSynclet MOF File
 To define a custom synclet MOF file, create an instance of the CCM_AppHandlers class. The new class instance will identify the custom client-side handler.  Also, create instances of the CCM_HandlerSynclet class to store detect, install and uninstall property values.  
@@ -119,5 +120,4 @@ To define a custom synclet MOF file, create an instance of the CCM_AppHandlers c
     ```  
 
 ## See Also  
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

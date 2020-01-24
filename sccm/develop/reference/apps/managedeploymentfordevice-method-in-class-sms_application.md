@@ -9,7 +9,8 @@ ms.assetid: 08f1bef3-64b5-483a-8db9-95965e79b8ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ManageDeploymentForDevice Method in Class SMS_Application
 > [!WARNING]
@@ -70,4 +71,3 @@ SInt32 ManageDeploymentForDevice (
 
 ## See Also  
  [SMS_Application Server WMI Class](../../../develop/reference/apps/sms_application-server-wmi-class.md)   
- [Configuration Manager Application Management Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

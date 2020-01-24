@@ -5,60 +5,20 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.prod: configuration-manager 
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Plan for software updates in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Before you use software updates in a Configuration Manager production environment, it's important that you go through the planning process. Having a good plan for the software update point infrastructure is key to a successful software updates implementation.
-
-
-
-## Capacity planning recommendations for software updates  
-
-This section includes the following subtopics:  
-- [Capacity planning for the software update point](#BKMK_SUMCapacity)
-- [Capacity planning for software updates objects](#bkmk_sum-capacity-obj)  
-
-
-Use the following recommendations as a baseline. This baseline helps you determine the information for the software updates capacity planning that is appropriate to your organization. The actual capacity requirements might vary from the recommendations listed in this article depending on the following criteria: 
-- Your specific networking environment
-- The hardware that you use to host the software update point site system
-- The number of managed clients
-- The other site system roles installed on the server  
-
-
-###  <a name="BKMK_SUMCapacity"></a> Capacity planning for the software update point  
-
-The number of supported clients depends on the version of Windows Server Update Services (WSUS) that runs on the software update point. It also depends on whether the software update point site system role co-exists with another site system role:  
-
--   The software update point can support up to 25,000 clients when WSUS runs on the software update point server, and the software update point co-exists with another site system role.  
-
--   The software update point can support up to 150,000 clients when a remote server meets WSUS requirements, WSUS is used with Configuration Manager, and you configure the following settings:
-
-    IIS Application Pools:
-    - Increase the WsusPool Queue Length to 2000
-    - Increase the WsusPool Private Memory limit x4 times, or set to 0 (unlimited). For example, if the default limit is 1,843,200 KB, increase it to 7,372,800. For more information, see this [Configuration Manager support team blog post](https://blogs.technet.microsoft.com/configurationmgr/2015/03/23/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors/).  
-
-    For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](/sccm/core/plan-design/configs/recommended-hardware#bkmk_ScaleSieSystems).  
-
-
-### <a name="bkmk_sum-capacity-obj"></a> Capacity planning for software updates objects  
-
-Use the following capacity information to plan for software updates objects:  
-
-#### Limit of 1000 software updates in a deployment  
-Limit the number of software updates to 1000 for each software update deployment. When you create an automatic deployment rule (ADR), specify criteria that limits the number of software updates. The ADR fails when the specified criteria returns more than 1000 software updates. Check the status of the ADR from the **Automatic Deployment Rules** node in the Configuration Manager console. When you manually deploy software updates, don't select more than 1000 updates to deploy.  
-
-Also limit the number of software updates to 1000 in a configuration baseline. For more information, see [Create configuration baselines](/sccm/compliance/deploy-use/create-configuration-baselines).
-
+Before you use software updates in a Configuration Manager production environment, it's important that you go through the planning process. Having a good plan for the software update point infrastructure is key to a successful software updates implementation. For information about capacity planning for software updates, see [Size and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers#software-update-point).
 
 
 ##  <a name="BKMK_SUPInfrastructure"></a> Determine the software update point infrastructure  
@@ -87,7 +47,7 @@ Add multiple software update points at a Configuration Manager primary site to p
 
 The first software update point that you install on a primary site is the synchronization source for all additional software update points that you add at the primary site. After you add software update points and start synchronization, view the status of the software update points and the synchronization source from the **Software Update Point Synchronization Status** node in the **Monitoring** workspace.  
 
-When there is a failure of the software update point configured as the synchronization source for the site, manually remove the failed role. Then select a new software update point to use as the synchronization source. For more information, see [Remove the software update point site system role](../get-started/remove-a-software-update-point.md).  
+When there's a failure of the software update point configured as the synchronization source for the site, manually remove the failed role. Then select a new software update point to use as the synchronization source. For more information, see [Remove the software update point site system role](../get-started/remove-a-software-update-point.md).  
 
 
 ###  <a name="BKMK_SUPList"></a> Software update point list  
@@ -276,6 +236,9 @@ For more information about how to install WSUS on Windows Server, see [Install t
 
 When you install more than one software update point at a primary site, use the same WSUS database for each software update point in the same Active Directory forest. Sharing the same database improves performance when clients switch to a new software update point. For more information, see [Use a shared WSUS database for software update points](/sccm/sum/plan-design/software-updates-best-practices#bkmk_shared-susdb).  
 
+#### Configuring the WSUS content directory path
+
+When you install WSUS, you'll need to provide a content directory path. The WSUS content directory is primarily used for storing the Microsoft Software License Terms files needed by clients during scanning. The Configuration Manager  The WSUS content directory should not overlap with your content source directory for Configuration Manager software deployment packages. Overlapping the WSUS content directory and the Configuration Manager package source will result in incorrect files being removed from the WSUS content directory.
 
 ####  <a name="BKMK_CustomWebSite"></a> Configure WSUS to use a custom website  
 When you install WSUS, you have the option to use the existing IIS Default website, or to create a custom WSUS website. Create a custom website for WSUS so that IIS hosts the WSUS services in a dedicated virtual website. Otherwise it shares the same website that's used by the other Configuration Manager site systems or applications. This configuration is especially necessary when you install the software update point role on the site server. When you run WSUS in Windows Server 2012 or later, WSUS is configured by default to use port 8530 for HTTP and port 8531 for HTTPS. Specify these ports when you create the software update point at a site.  
@@ -491,7 +454,7 @@ For more information about maintenance windows, see [How to use maintenance wind
 
 When a software update that requires a restart is deployed and installed using Configuration Manager, the client schedules a pending restart and displays a restart dialog box.
 
-When there's a pending restart for a Configuration Manager software update, the option to **Update and Restart** and **Update and Shutdown** is available on Windows 10 computers in the Windows power options. After using one of these options, the restart dialog doesn't display after the computer restarts.
+When there's a pending restart for a Configuration Manager software update, the option to **Update and Restart** and **Update and Shutdown** is available on Windows 10 computers in the Windows power options. After using one of these options, the restart dialog doesn't display after the computer restarts. In certain circumstances, the operating system may remove the pending restart options. This can happen if the Fast Startup feature in Windows 10 is enabled. For more information, see [Updates may not be installed with Fast Startup in Windows 10](https://support.microsoft.com/help/4011287/windows-updates-not-install-with-fast-startup).
 
 
 

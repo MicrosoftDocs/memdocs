@@ -9,7 +9,8 @@ ms.assetid: d7565da8-1444-4610-906a-ab6395b452a3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_ClientEvents Client WMI Class
 The `CCM_ClientEvents` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client events.  
@@ -40,6 +41,3 @@ Class CCM_ClientEvents
 
 ### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Client SDK WMI Classes](../../../../../develop/reference/core/clients/sdk/client-sdk-wmi-classes.md)
