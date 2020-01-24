@@ -1,8 +1,8 @@
 ---
 title: Choose a device management solution
 titleSuffix: Configuration Manager
-description: Learn about the solutions that Configuration Manager offers for managing PCs, servers, and devices.
-ms.date: 07/30/2019
+description: Learn about the solutions that Microsoft offers for managing PCs, servers, and devices.
+ms.date: 01/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,19 +10,46 @@ ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
-# Choose a device management solution for Configuration Manager
+# Choose a device management solution
 
-*Applies to: Configuration Manager (current branch)*
-
-Configuration Manager offers different solutions for managing PCs, servers, and devices. Choose the solution that's right for your organization. Base your decision on the device platforms you need to manage and the management functionality you need.  
+Microsoft offers different solutions for managing PCs, servers, and devices. These solutions are available on-premises, cloud-based, or a combination of both. Choose the solution that's right for the business requirements of your organization. Base your decision on the device platforms you need to manage and the management functionality you need.
 
 ## Overview
 
-This article primarily covers the following four device management solutions:
+There are several Microsoft solutions that might work best for you in different scenarios. You don't need to choose just one.
+
+- For a small organization, a tool like the Windows administration center may be a great fit.
+- Approximately 75% of IT organizations use Configuration Manager to manage their devices.
+- Microsoft Azure provides various solutions from the cloud or on-premises with Azure Stack that primarily target server management.
+- Microsoft Intune provides cloud management of clients.
+- You can combine Configuration Manager and Intune with co-management.
+
+Use the following table to help compare these management technologies:
+
+|  | Cloud-only | Cloud-attached | On-premises | Disconnected |
+|---------|---------|---------|---------|---------|
+| **Hyper-V host** | Not applicable | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager |
+| **Windows Server** | - Azure management<br/> - Configuration Manager | - Azure management<br/> - Configuration Manager | - Azure management<br/> - Configuration Manager | Configuration Manager |
+| **Linux Server** | Azure management | Azure management | Azure management |  |
+| **Windows 10** | - Intune<br/> - Configuration Manager | - Intune<br/> - Configuration Manager | - Intune<br/> - Configuration Manager | Configuration Manager |
+| **Windows 7 or 8.1** | Configuration Manager | Configuration Manager | Configuration Manager | Configuration Manager |
+| **Windows Virtual Desktop** | Configuration Manager | Not applicable | Not applicable | Not applicable |
+
+For more information, see the following articles:
+
+- [What is Azure Stack?](https://docs.microsoft.com/azure-stack/operator/azure-stack-overview)
+- [What is Windows Admin Center?](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/what-is)
+- [What is Virtual Machine Manager?](https://docs.microsoft.com/system-center/vmm/overview)
+- [Azure management products](https://docs.microsoft.com/azure/#pivot=products&panel=mgmt)
+- [What is Windows Virtual Desktop?](https://docs.microsoft.com/azure/virtual-desktop/overview)
+
+For more information on the Configuration Manager and Intune solutions, continue to the next section.
+
+## Client management
+
+This section compares the following four client management solutions:
 
 - [Configuration Manager client](#bkmk_sccm)
 - [On-premises mobile device management (MDM) with Configuration Manager](#bkmk_opmdm)
@@ -31,7 +58,7 @@ This article primarily covers the following four device management solutions:
 
 You can use these solutions by themselves or in combination with each other. For example, use the client-based management approach to manage the computers and servers in your organization, and also use co-management to manage internet-based laptops. By combining approaches this way, you can cover all of your device management needs.  
 
-The article also includes two tables that compare the management solutions by the following factors:
+There are also two tables that compare the management solutions by the following factors:
 
 - [Compare by supported platforms](#bkmk_comp1)
 - [Compare by management functionality](#bkmk_comp2)
@@ -60,8 +87,7 @@ This option uses the Exchange Server connector to connect multiple Exchange serv
 
 For more information, see [Manage mobile devices with Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
 
-
-## <a name="bkmk_comp1"></a> Compare solutions by supported platforms  
+### <a name="bkmk_comp1"></a> Compare solutions by supported platforms  
 
 |Platform|Configuration Manager client|On-premises MDM|Configuration Manager with Exchange| Intune |
 |--------|----------------------------|---------------|-----------------------------------|--------|
@@ -81,45 +107,20 @@ For a complete list of supported platforms, see the following articles:
 
 Microsoft recommends using Intune to manage Android, iOS, and Windows 10 mobile devices. For more information, see [What is Microsoft Intune?](https://docs.microsoft.com/intune/what-is-intune).
 
-
-## <a name="bkmk_comp2"></a> Compare solutions by management functionality  
+### <a name="bkmk_comp2"></a> Compare solutions by management functionality  
 
 |Management functionality|Configuration Manager client|On-premises MDM|Configuration Manager with Exchange|  
 |--------|----------------------------|---------------|-----------------------------------|  
-|Public key infrastructure (PKI) security between the mobile device and Configuration Manager (uses mutual authentication and SSL to encrypt data transfers)|Yes|Yes| |  
-|Client installation|Yes| | |  
-|Support over the internet|Yes| | |  
-|Discovery|Yes| |Yes|  
-|Hardware inventory|Yes|Yes|Yes|  
-|Software inventory|Yes| |Yes|  
-|Settings|Yes|Yes|Yes|  
-|Software deployment|Yes|Yes| |  
-|Monitor with fallback status point|Yes| | |  
-|Connections to management points|Yes|Yes| |  
-|Connections to distribution points|Yes|Yes| |  
-|Block from Configuration Manager|Yes|Yes| |  
-|Quarantine and block from Exchange Server (and Configuration Manager)| | |Yes|  
-|Remote wipe| |Yes|Yes|  
-
-
-## <a name="bkmk_other"></a> Other Microsoft solutions
-
-There are other Microsoft solutions that might work better for you in different scenarios. Use the following table to help compare these additional management technologies:
-
-|  | Cloud-only | Cloud-attached | On-premises | Disconnected |
-|---------|---------|---------|---------|---------|
-| **Hyper-V host** | Not applicable | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager |
-| **Windows Server** | - Azure management<br/> - Configuration Manager | - Azure management<br/> - Configuration Manager | - Azure management<br/> - Configuration Manager | Configuration Manager |
-| **Linux Server** | Azure management | Azure management | Azure management |  |
-| **Windows 10** | - Intune<br/> - Configuration Manager | - Intune<br/> - Configuration Manager | - Intune<br/> - Configuration Manager | Configuration Manager |
-| **Windows 7 or 8.1** | Configuration Manager | Configuration Manager | Configuration Manager | Configuration Manager |
-| **Windows Virtual Desktop** | Configuration Manager | Not applicable | Not applicable | Not applicable |
-
-For more information on these technologies, see the following articles:
-
-- [What is Azure Stack?](https://docs.microsoft.com/azure-stack/operator/azure-stack-overview)
-- [What is Windows Admin Center?](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/what-is)
-- [What is Virtual Machine Manager?](https://docs.microsoft.com/system-center/vmm/overview)
-- [Azure management products](https://docs.microsoft.com/azure/#pivot=products&panel=mgmt)
-- [Configuration Manager on Azure](/sccm/core/understand/configuration-manager-on-azure)
-- [What is Windows Virtual Desktop?](https://docs.microsoft.com/azure/virtual-desktop/overview)
+|Certificate-based mutual authentication|Yes|Yes| |
+|Client installation|Yes| | |
+|Support over the internet|Yes| | |
+|Discovery|Yes| |Yes|
+|Hardware inventory|Yes|Yes|Yes|
+|Software inventory|Yes| |Yes|
+|Settings|Yes|Yes|Yes|
+|Software deployment|Yes|Yes| |
+|Software update management|Yes| | |
+|OS deployment|Yes| | |
+|Block from Configuration Manager|Yes|Yes| |
+|Quarantine and block from Exchange Server (and Configuration Manager)| | |Yes|
+|Remote wipe| |Yes|Yes|
