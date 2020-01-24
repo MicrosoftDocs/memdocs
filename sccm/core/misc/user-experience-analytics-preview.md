@@ -1,8 +1,8 @@
 ---
 title: User experience analytics preview
 titleSuffix: Configuration Manager
-description: Learn about new features available in the Configuration Manager technical preview branch version 1912.
-ms.date: 12/12/2019
+description: Instructions for User experience analytics preview.
+ms.date: 01/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
