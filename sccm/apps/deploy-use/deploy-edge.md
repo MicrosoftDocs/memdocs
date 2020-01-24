@@ -49,6 +49,7 @@ Create a Microsoft Edge application using the built-in application experience, w
    ![Microsoft Edge Management node right-click action](./media/4561024-create-microsoft-edge-application.png)
 
 1. On the **Application Settings** page of the wizard, specify a name, description, and location for the content for the app.
+    - Location for the content must be empty!
 1. On the **Microsoft Edge Settings** page, you select a channel and version to deploy. The Learn More link takes you to the [Microsoft Edge Insiders page](https://www.microsoftedgeinsider.com/).
 
    ![Microsoft Edge Settings page in the deployment wizard](./media/4561024-edge-settings-wizard.png)
