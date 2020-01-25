@@ -9,10 +9,11 @@ ms.assetid: b28b0e20-24d3-4d0c-88fa-c870a927dbc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetClientConfigPolicies Method in Class SMS_TaskSequencePackage
-The `GetClientConfigPolicies` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, gets all site-wide client configuration policies and their corresponding policy assignments.  
+The `GetClientConfigPolicies` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets all site-wide client configuration policies and their corresponding policy assignments.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

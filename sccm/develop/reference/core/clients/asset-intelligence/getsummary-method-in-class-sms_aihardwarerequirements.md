@@ -9,10 +9,11 @@ ms.assetid: 609e3a2c-d852-48b1-9a7b-9648e3a04780
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetSummary Method in Class SMS_AIHardwareRequirements
-The `GetSummary` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, provides a summary count of validated and user-defined state items in the `SMS_AIHardwareRequirements` class.  
+The `GetSummary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, provides a summary count of validated and user-defined state items in the `SMS_AIHardwareRequirements` class.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

@@ -9,7 +9,8 @@ ms.assetid: 11409ed9-d32c-4d0f-abc8-1fee24641377
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ADDomain Server WMI Class
 The `SMS_ADDomain` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains Active Directory domains discovered by Configuration Manager Forest Discovery.  

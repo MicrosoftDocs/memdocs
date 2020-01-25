@@ -9,7 +9,8 @@ ms.assetid: b2da1509-c11f-405d-9606-8ac9784b68b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetAllUpdatesUserExperience Method in Class CCM_SoftwareUpdatesManager
 The `GetAllUpdatesUserExperience` WMI class method, in Configuration Manager, gets the user experience mode that determines how software updates are displayed on a target computer.  

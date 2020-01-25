@@ -10,7 +10,8 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to use the Configuration Manager console
@@ -25,9 +26,9 @@ The Configuration Manager console is always installed on every site server. You 
 
 The simplest method to open the console on a Windows 10 computer, press **Start** and start typing `Configuration Manager console`. You may not need to type the entire string for Windows to find the best match.
 
-If you browse the Start menu, look for the **Configuration Manager console** icon in the **Microsoft Endpoint** group.
+If you browse the Start menu, look for the **Configuration Manager console** icon in the **Microsoft Endpoint Manager** group.
 
-![Microsoft Endpoint start menu icons](media/microsoft-endpoint-start-menu.png)
+![Microsoft Endpoint Manager start menu icons](media/microsoft-endpoint-manager-start-menu.png)
 
 > [!NOTE]
 > The Start menu path changed in version 1910. In version 1906 and earlier, the folder name is **System Center**. When you update Configuration Manager to version 1910 or later, make sure to update any internal documentation that you maintain to include this new location.

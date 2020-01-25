@@ -1,7 +1,7 @@
 ---
 title: "Capabilities in Technical Preview 1605"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1605."
+description: "Learn about features available in the Technical Preview for Configuration Manager, version 1605."
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,13 +11,14 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Capabilities in Technical Preview 1605 for System Center Configuration Manager
+# Capabilities in Technical Preview 1605 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1605. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1605. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
 
  **Known Issues in this Technical Preview:**  
 
@@ -76,8 +77,6 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 - On the **Properties** page for a device.  
 
 - On the main page of the **Devices** node (not all columns might be visible by default).  
-
-  For more information about iOS Activation Lock bypass, see [Help protect iOS devices with Activation Lock bypass for Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock), in particular, the **Current known issues with Activation Lock bypass in the Configuration Manager Technical Preview** section.  
 
 ##  <a name="BKMK_WSFB"></a> Windows Store for Business apps  
  The [Windows Store for Business](https://www.microsoft.com/business-store) is where you can find and purchase apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can manage volume-purchased apps from the Configuration Manager console, for example:  
@@ -167,10 +166,10 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
 -   [Protect your enterprise data using enterprise data protection (EDP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-edp)  
 
--   [Create and deploy an enterprise data protection (EDP) policy using System Center Configuration Manager](https://technet.microsoft.com/itpro/windows/keep-secure/create-edp-policy-using-sccm)  
+-   [Create and deploy an enterprise data protection (EDP) policy using Configuration Manager](https://technet.microsoft.com/itpro/windows/keep-secure/create-edp-policy-using-sccm)  
 
 ##  <a name="BKMK_End"></a> End users can install apps from the Company Portal  
- On-premises MDM was introduced in the System Center Configuration Manager version 1511. In previous versions, you could deploy applications to MDM-managed Windows 10 devices with a deployment purpose of **Required** install for on-premises MDM managed devices.  
+ On-premises MDM was introduced in the Configuration Manager version 1511. In previous versions, you could deploy applications to MDM-managed Windows 10 devices with a deployment purpose of **Required** install for on-premises MDM managed devices.  
 
  In this release, you can now deploy apps with a deployment purpose of **Available** to users of on-premises MDM managed Windows 10 computers, and users can now install these apps themselves from the Company Portal.
 In this technical preview, if the Company Portal is open for more than 15 minutes, the end user will see an error message. To work around the issue, restart the Company Portal.  
@@ -258,7 +257,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 2.  Users can then browse for, and install apps from the Company Portal.  
 
-     After you open Company Portal, you will see an authentication dialog box named **System Center Configuration Manager** Specify the user’s Active Directory credentials (either in the form of user@domain or domain\user) to log in.  
+     After you open Company Portal, you will see an authentication dialog box named **Configuration Manager** Specify the user’s Active Directory credentials (either in the form of user@domain or domain\user) to log in.  
 
 ##  <a name="BKMK_SW1"></a> New tabs for Updates and Operating Systems in Software Center  
  In this release, the following changes have been made to improve the layout of the Software Center application:  
@@ -266,9 +265,9 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 -   The **Applications** tab has been split into three separate tabs for **Updates**, **Operating systems** (which were both previously found in the **Filters** list), and **Applications**.  
 
 ##  <a name="BKMK_ServerGroups"></a> Service a  server group  
- Technical Preview for System Center Configuration Manager, version 1511, included the ability to create a collection where all devices in the collection make up a server group. Then, you could configure the server group settings to use when you deploy software updates to the server group, control the percentage of computers that are updated at any given time, and configure pre-deployment and post-deployment PowerShell scripts to run custom actions.  
+ Technical Preview for Configuration Manager, version 1511, included the ability to create a collection where all devices in the collection make up a server group. Then, you could configure the server group settings to use when you deploy software updates to the server group, control the percentage of computers that are updated at any given time, and configure pre-deployment and post-deployment PowerShell scripts to run custom actions.  
 
- Technical Preview for System Center Configuration Manager, version 1605, adds the ability to update the computers in the server group in a specified order that you define, adds enhanced monitoring to view the status for the computers in the server group, and provides the ability to clear the deployment locks that is useful when clients have failed to install the software updates and are preventing other clients from installing their software updates.  
+ Technical Preview for Configuration Manager, version 1605, adds the ability to update the computers in the server group in a specified order that you define, adds enhanced monitoring to view the status for the computers in the server group, and provides the ability to clear the deployment locks that is useful when clients have failed to install the software updates and are preventing other clients from installing their software updates.  
 
 ### Try it out!  
  Try to complete the following tasks and then let us know how it worked by using our feedback form on the [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) page on the Microsoft Connect site:  
@@ -356,7 +355,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
   2.  Click on the **Client On-boarding** menu item  
 
-  3.  Select **System Center Configuration Manager** and click **Download package**.  
+  3.  Select **Configuration Manager** and click **Download package**.  
 
   4.  Download the compressed archive (.zip) file and extract the contents.  
 

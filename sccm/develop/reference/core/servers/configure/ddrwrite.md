@@ -9,7 +9,8 @@ ms.assetid: 818ce2a2-5f8d-44c4-80f8-9683074c2508
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # DDRWrite
 The `DDRWrite` function, in Configuration Manager, writes the data discovery records (DDRs) to a file.  

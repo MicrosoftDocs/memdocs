@@ -9,12 +9,13 @@ ms.assetid: 32609a30-465c-4406-b227-aca5c276e015
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Deploy servers and roles
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 After you plan out your Configuration Manager site and hierarchy topology and are ready to get sites installed or upgraded, use the information in the following articles:  
 

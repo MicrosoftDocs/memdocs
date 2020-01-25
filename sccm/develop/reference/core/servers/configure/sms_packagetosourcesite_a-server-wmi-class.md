@@ -9,7 +9,8 @@ ms.assetid: 44bfdfde-3c1f-4a86-b4e9-1ec81cfede1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_PackageToSourceSite_a Server WMI Class
 The `SMS_PackageToSourceSite_a` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that uses the `SiteCode` property to relate an [SMS_Package Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) object to the [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md) object for the site that created the package.  

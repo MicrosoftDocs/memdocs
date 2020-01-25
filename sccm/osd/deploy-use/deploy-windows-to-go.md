@@ -1,7 +1,7 @@
 ---
 title: Deploy Windows To Go
 titleSuffix: Configuration Manager
-description: Learn how to provision Windows To Go in System Center Configuration Manager to create a Windows To Go workspace that boots from an external drive.
+description: Learn how to provision Windows To Go in Configuration Manager to create a Windows To Go workspace that boots from an external drive.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
@@ -11,13 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 
-ms.collection: M365-identity-device-management
+
+
 ---
-# Deploy Windows To Go with System Center Configuration Manager
+# Deploy Windows To Go with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-This topic provides the steps to provision Windows To Go in System Center Configuration Manager. Windows To Go is an enterprise feature of Windows 8 that enables the creation of a Windows To Go workspace that can be booted from a USB-connected external drive on computers that meet the Windows 7 or Windows 8 certification requirements, regardless of the operating system running on the computer. Windows To Go workspaces can use the same image enterprises use for their desktops and laptops and can be managed the same way.  
+This topic provides the steps to provision Windows To Go in Configuration Manager. Windows To Go is an enterprise feature of Windows 8 that enables the creation of a Windows To Go workspace that can be booted from a USB-connected external drive on computers that meet the Windows 7 or Windows 8 certification requirements, regardless of the operating system running on the computer. Windows To Go workspaces can use the same image enterprises use for their desktops and laptops and can be managed the same way.  
 
  For more information about Windows To Go, see [Windows To Go feature overview](https://go.microsoft.com/fwlink/p/?LinkId=263433).  
 
@@ -226,7 +227,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
 
 7. On the **Home** tab, in the **Create** group, click **Create Package**.  
 
-8. On the **Package** page, specify the name and description of the package. For example, enter **Windows To Go** for the package name and specify **Package to configure a Windows To Go drive using System Center Configuration Manager** for the package description.  
+8. On the **Package** page, specify the name and description of the package. For example, enter **Windows To Go** for the package name and specify **Package to configure a Windows To Go drive using Configuration Manager** for the package description.  
 
 9. Select **This package contains source files**, specify the path to the package source folder that you created in step 1, and then click **Next**.  
 

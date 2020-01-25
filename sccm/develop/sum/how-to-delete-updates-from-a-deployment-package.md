@@ -9,10 +9,11 @@ ms.assetid: b8a24372-4e7a-4565-8dda-96e912fd2fd4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Delete Updates from a Deployment Package
-You remove updates from a software updates deployment package, in System Center Configuration Manager, by obtaining an instance of the [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md) class and using the [RemoveContent](../../develop/reference/sum/removecontent-method-in-class-sms_softwareupdatespackage.md) method.  
+You remove updates from a software updates deployment package, in Configuration Manager, by obtaining an instance of the [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md) class and using the [RemoveContent](../../develop/reference/sum/removecontent-method-in-class-sms_softwareupdatespackage.md) method.  
 
 ### To delete updates from a software updates deployment package  
 

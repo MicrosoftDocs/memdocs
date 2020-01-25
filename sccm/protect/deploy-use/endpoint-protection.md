@@ -10,12 +10,13 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Endpoint Protection
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Endpoint Protection manages antimalware policies and Windows Firewall security for client computers in your Configuration Manager hierarchy.  
 
@@ -41,7 +42,7 @@ Beginning with Windows 10 and Windows Server 2016 computers, Windows Defender is
 
  In addition, you manage Windows Firewall settings with Endpoint Protection in the Configuration Manager console.  
 
- [Example scenario: Using System Center Endpoint Protection to protect computers from malware in System Center Configuration Manager](scenarios-endpoint-protection.md) Endpoint Protection and the Windows Firewall.  
+ [Example scenario: Using System Center Endpoint Protection to protect computers from malware](scenarios-endpoint-protection.md) Endpoint Protection and the Windows Firewall.  
 
 
 ## Managing Malware with Endpoint Protection  
@@ -49,11 +50,11 @@ Beginning with Windows 10 and Windows Server 2016 computers, Windows Defender is
 
  Additional information:  
 
--   [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md) - Create, deploy, and monitor antimalware policies with a list of the settings that you can configure  
+-   [How to create and deploy antimalware policies for Endpoint Protection](endpoint-antimalware-policies.md) - Create, deploy, and monitor antimalware policies with a list of the settings that you can configure  
 
--   [How to monitor Endpoint Protection in System Center Configuration Manager](monitor-endpoint-protection.md) - Monitoring activity reports, infected client computers, and more.  
+-   [How to monitor Endpoint Protection](monitor-endpoint-protection.md) - Monitoring activity reports, infected client computers, and more.  
 
--   [How to manage antimalware policies and firewall settings for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-firewall.md) - Remediate malware found on client computers  
+-   [How to manage antimalware policies and firewall settings for Endpoint Protection](endpoint-antimalware-firewall.md) - Remediate malware found on client computers  
 
 
 ## Managing Windows Firewall with Endpoint Protection  

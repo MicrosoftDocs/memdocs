@@ -10,12 +10,13 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create Windows applications in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 In addition to the other Configuration Manager requirements and procedures for [creating an application](/sccm/apps/deploy-use/create-applications), also take the following considerations into account when you create and deploy applications for Windows devices.  
 

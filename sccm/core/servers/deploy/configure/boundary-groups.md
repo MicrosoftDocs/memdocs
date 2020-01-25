@@ -10,12 +10,13 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Configure boundary groups for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use boundary groups in Configuration Manager to logically organize related network locations ([boundaries](/sccm/core/servers/deploy/configure/boundaries)) to make it easier to manage your infrastructure. Assign boundaries to boundary groups before using the boundary group.
 

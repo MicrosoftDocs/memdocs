@@ -10,12 +10,13 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Infrastructure requirements for OS deployment in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 OS deployment in Configuration Manager has external dependencies as well as dependencies within the product. Use this article to help you prepare the infrastructure for OS deployment.  
 

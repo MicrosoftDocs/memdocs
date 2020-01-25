@@ -10,11 +10,12 @@ ms.assetid: ca4886d4-7173-46be-8dcd-1657d5b0deb9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 #  Service windows for site servers
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can configure service windows at central administration sites and primary sites to control when in-console updates can install.  You can configure multiple windows, with the window allowed for installing updates being determined by a combination of all service windows for that site server.
 

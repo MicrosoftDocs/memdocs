@@ -9,10 +9,11 @@ ms.assetid: 590d8888-608d-491e-a754-4831138fca2a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Software Distribution Programs
-Programs are commands that are associated with a System Center Configuration Manager package that tell a client what should occur on the client computer when the package is received. You can associate almost any activity with a program. For example, a program can be used to install new software on clients, distribute data files, run virus-detection software, or update client configuration.  
+Programs are commands that are associated with a Configuration Manager package that tell a client what should occur on the client computer when the package is received. You can associate almost any activity with a program. For example, a program can be used to install new software on clients, distribute data files, run virus-detection software, or update client configuration.  
 
  Every deployable package must contain at least one program, but you can specify more than one, if needed. A package can often have several programs associated with it, allowing the package to be run in different ways on different clients. This is often the case when you are installing a new application on a client computer and want to create programs to perform either a typical, minimum, or custom installation.  
 

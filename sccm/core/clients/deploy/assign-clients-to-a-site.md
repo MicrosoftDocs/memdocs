@@ -1,7 +1,7 @@
 ---
 title: "Assign clients to a site"
 titleSuffix: "Configuration Manager"
-description: "Assign clients to a site in System Center Configuration Manager."
+description: "Assign clients to a site in Configuration Manager."
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,13 +10,14 @@ ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# How to assign clients to a site in System Center Configuration Manager
+# How to assign clients to a site in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-After a System Center Configuration Manager client is installed, it must join a Configuration Manager primary site before you can manage it. The site that a client joins is called its *assigned site*. Clients cannot be assigned to a central administration site or to a secondary site.  
+After a Configuration Manager client is installed, it must join a Configuration Manager primary site before you can manage it. The site that a client joins is called its *assigned site*. Clients cannot be assigned to a central administration site or to a secondary site.  
 
 The assignment process happens after the client is successfully installed and determines which site manages the client computer. You can either directly assign the client to a site, or you can use automatic site assignment where the client automatically finds an appropriate site based on its current network location or a fallback site that has been configured for the hierarchy.
 
@@ -63,7 +64,7 @@ If client assignment fails, the client software remains installed, but will be u
 > [!NOTE]  
 >  If a Configuration Manager client has multiple network adapters and therefore has multiple IP addresses, the IP address used to evaluate client site assignment is assigned randomly.  
 
- For information about how to configure boundary groups for site assignment and how to configure a fallback site for automatic site assignment, see [Define site boundaries and boundary groups for System Center Configuration Manager](../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md).  
+ For information about how to configure boundary groups for site assignment and how to configure a fallback site for automatic site assignment, see [Define site boundaries and boundary groups for Configuration Manager](../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md).  
 
  Configuration Manager clients that use automatic site assignment attempt to find site boundary groups that are published to Active Directory Domain Services. If this fails (for example, the Active Directory schema is not extended for Configuration Manager, or clients are workgroup computers), clients can get boundary group information from a management point.  
 
@@ -85,7 +86,7 @@ If client assignment fails, the client software remains installed, but will be u
  Site assignment fails if you assign a client that runs Windows 2000 to a Configuration Manager site. When you assign a Configuration Manager 2007 client or a System Center 2012 Configuration Manager client  to a Configuration Manager (current branch) site, site assignment succeeds to support automatic client upgrade. However, until the older generation clients are upgraded to a Configuration Manager (current branch)  client, Configuration Manager cannot manage this client by using client settings, applications, or software updates.  
 
 > [!NOTE]  
->  To support the site assignment of a Configuration Manager 2007 or a System Center 2012 Configuration Manager client to a Configuration Manager (current branch) site, you must configure automatic client upgrade for the hierarchy. For more information, see the [How to upgrade clients for Windows computers in System Center Configuration Manager](../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
+>  To support the site assignment of a Configuration Manager 2007 or a System Center 2012 Configuration Manager client to a Configuration Manager (current branch) site, you must configure automatic client upgrade for the hierarchy. For more information, see the [How to upgrade clients for Windows computers](../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
 Configuration Manager also checks that you have assigned the Configuration Manager (current branch) client to a site that supports it. The following scenarios might occur during migration from previous versions of Configuration Manager.  
 
@@ -130,7 +131,7 @@ When the client has downloaded client policy from a management point in the site
 ##  Downloading Site Settings  
  After site assignment succeeds, and the client has found a management point, a client computer that uses Active Directory Domain Services for its site compatibility check downloads client-related site settings for its assigned site. These settings include the client certificate selection criteria, whether to use a certificate revocation list, and the client request port numbers. The client continues to check these settings on a periodic basis.  
 
- When client computers cannot obtain site settings from Active Directory Domain Services, they download them from their management point. Client computers can also obtain the site settings when they are installed by using client push, or you can specify them manually by using CCMSetup.exe and client installation properties. For more information about the client installation properties, see [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
+ When client computers cannot obtain site settings from Active Directory Domain Services, they download them from their management point. Client computers can also obtain the site settings when they are installed by using client push, or you can specify them manually by using CCMSetup.exe and client installation properties. For more information about the client installation properties, see [About client installation properties](../../../core/clients/deploy/about-client-installation-properties.md).  
 
 ##  Downloading Client Settings  
  All clients download the default client settings policy and any applicable custom client settings policy. Software Center relies on these client configuration policies for Windows computers and will notify users that Software Center cannot run successfully until this configuration information is downloaded. Depending on the client settings that are configured, the initial download of client settings might take a while, and some client management tasks might not run until this process is complete.  

@@ -10,7 +10,8 @@ ms.assetid: 09929057-ecf2-4d49-aee0-709916932b14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Troubleshoot the Microsoft Store for Business and Education integration with Configuration Manager
@@ -39,7 +40,7 @@ In the Configuration Manager console, go to the **Software Library** workspace, 
 
 ## Log files
 
-### MSfBSyncWorker.log
+### WSfBSyncWorker.log
 
 This log file is located on the service connection point, under `\Logs` in the Configuration Manager installation directory. It records information about the communication with the cloud service. This information includes metadata, icons, packages, and license file retrieval.
 
@@ -47,7 +48,7 @@ To change the log level, change the `LoggingLevel` value to `0` in the `HKLM\SOF
 
 ### SMS_CLOUDCONNECTION.log
 
-This log file is located on the service connection point, under `\Logs` in the Configuration Manager installation directory. If the MSfBSyncWorker service isn't started, or repeatedly starts and stops, review the entries in this log file.
+This log file is located on the service connection point, under `\Logs` in the Configuration Manager installation directory. If the WSfBSyncWorker service isn't started, or repeatedly starts and stops, review the entries in this log file.
 
 > [!NOTE]
 > This log file is shared with other features.
@@ -69,7 +70,7 @@ This log file is located on the site server for the top-level site in the hierar
 
 When the last sync status is *failed*, start by reviewing the following [log files](#log-files) to identify the symptom:
 
-- MSfBSyncWorker.log
+- WSfbSyncWorker.log
 - SMS_CLOUDCONNECTION.log
 
 Then look at one of the following sections for common issues:
@@ -184,7 +185,7 @@ This issue can occur if the application's package is larger than 500 MB. Configu
 
 You can't automatically sync these apps, but you can download the content, and manually create the application:
 
-1. Get the failing application ID from the following line in **MSfBSynWorker.log**:
+1. Get the failing application ID from the following line in **WSfbSynWorker.log**:
 
     `Error(s) syncing or downloading application <ApplicationID> from the Microsoft Store for Business.`
 
@@ -230,7 +231,7 @@ Start by reviewing the following [log files](#log-files) to identify the symptom
 
 - BusinessAppProcessWorker.log
 - SMS_BUSINESS_APP_PROCESS_MANAGER.log
-- MSfBSyncWorker.log
+- WsfbSyncWorker.log
 - SMS_CLOUDCONNECTION.log
 
 Then look at one of the following sections for common issues:
@@ -252,7 +253,7 @@ Wait for at least 10 minutes before starting another sync.
 
 #### Cause
 
-This issue can occur if the SMS_BUSINESS_APP_PROCESS_MANAGER component stops the MSfBSyncWorker thread. The error may specify either `2` or `4` workers.
+This issue can occur if the SMS_BUSINESS_APP_PROCESS_MANAGER component stops the WsfbSyncWorker thread. The error may specify either `2` or `4` workers.
 
 #### Workaround
 

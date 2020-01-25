@@ -10,12 +10,13 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Manage OS images with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 OS images in Configuration Manager are stored in the Windows image (WIM) file format. These images are a compressed collection of reference files and folders use to install and configure a new OS on a computer. Many OS deployment scenarios require an OS image.
 

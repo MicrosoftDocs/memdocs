@@ -9,10 +9,11 @@ ms.assetid: 2463205f-886c-45ab-8151-bfbe122f3625
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure Active Directory System Discovery
-You configure the Active Directory System Discovery settings, in System Center Configuration Manager, by modifying the necessary site control file settings.  
+You configure the Active Directory System Discovery settings, in Configuration Manager, by modifying the necessary site control file settings.  
 
 ### To configure Active Directory System Discovery  
 

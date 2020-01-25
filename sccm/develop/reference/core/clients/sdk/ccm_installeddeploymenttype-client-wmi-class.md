@@ -9,7 +9,8 @@ ms.assetid: cae7f7bf-0160-400d-86d8-d3a32933ebbb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_InstalledDeploymentType Client WMI Class
 The `CCM_InstalledDeploymentType` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an installed deployment type.   

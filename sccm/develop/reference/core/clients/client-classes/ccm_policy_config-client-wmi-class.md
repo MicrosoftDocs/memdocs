@@ -9,10 +9,11 @@ ms.assetid: 46196816-b705-429d-b646-fd8d1a0688e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_Policy_Config Client WMI Class
-In System Center Configuration Manager, the `CCM_Policy_Config` class is a client Windows Management Instrumentation (WMI) class that represents a policy configuration used by the Policy Agent that needs to be replicated. `CCM_Policy_Config` is an abstract class.  
+In Configuration Manager, the `CCM_Policy_Config` class is a client Windows Management Instrumentation (WMI) class that represents a policy configuration used by the Policy Agent that needs to be replicated. `CCM_Policy_Config` is an abstract class.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

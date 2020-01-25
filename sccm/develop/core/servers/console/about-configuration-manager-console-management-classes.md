@@ -8,10 +8,11 @@ ms.assetid: 571b9272-01b5-412b-8adb-ccad96dabff4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager Console Management Classes
-System Center Configuration Manager uses XML to define management classes whose instances contain data that can be viewed from within the Configuration Manager console. Custom management classes can be created and added within the console architecture.  
+Configuration Manager uses XML to define management classes whose instances contain data that can be viewed from within the Configuration Manager console. Custom management classes can be created and added within the console architecture.  
 
  The XML for a management class defines the name and the properties of the class.  
 

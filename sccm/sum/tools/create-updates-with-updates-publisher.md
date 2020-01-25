@@ -10,7 +10,8 @@ ms.assetid: 46a1a8ac-126c-4ee6-ae09-32dfbdb83368
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Create  software updates and update bundles with Updates Publisher
 

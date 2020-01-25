@@ -2,7 +2,7 @@
 title: Optimize Windows 10 update delivery
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to manage update content to stay current with Windows 10.  
-ms.date: 11/29/2019
+ms.date: 01/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Optimize Windows 10 update delivery with Configuration Manager
 
-*Applies to: System Center Configuration Manager (current branch)*
+*Applies to: Configuration Manager (current branch)*
 
 For many customers, a successful path to getting and staying current with Windows 10 monthly updates starts with a good content distribution strategy using Configuration Manager. The size of the monthly quality updates can be a cause of concern for large organizations. There are a few technologies available that are intended to help reduce bandwidth and network load to optimize update delivery. This article explains these technologies, compares them, and provides recommendations to help you make decisions on which one to use.  
  
@@ -43,13 +44,12 @@ Configuration Manager supports many peer-to-peer technologies, including the fol
 
 The next sections provide further information on these technologies.
 
-
 ### Windows Delivery Optimization
 
 [Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is the main download technology and peer-to-peer distribution method built into Windows 10. Windows 10 clients can get content from other devices on their local network that download the same updates. Using the [Windows options available for Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delivery-optimization-options), you can configure clients into groups. This grouping allows your organization to identify devices that are possibly the best candidates to fulfill peer-to-peer requests. Delivery Optimization significantly reduces the overall bandwidth that's used to keep devices up-to-date while speeding up the download time.
 
 > [!NOTE]  
-> Delivery Optimization is a cloud-managed solution. Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality.  
+> Delivery Optimization is a cloud-managed solution. Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). 
 
 For the best results, you may need to set the Delivery Optimization [download mode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#download-mode) to **Group (2)** and define *Group IDs*. In group mode, peering can cross internal subnets between devices that belong to the same group including devices in remote offices. Use the [Group ID option](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids) to create your own custom group independently of domains and AD DS sites. Group download mode is the recommended option for most organizations looking to achieve the best bandwidth optimization with Delivery Optimization.
 
@@ -66,7 +66,10 @@ To use Delivery Optimization for all Windows update installation files, enable t
 
 > [!IMPORTANT]
 > - Delivery Optimization must be enabled (default) and not bypassed. For more information, see [Windows Delivery Optimization](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#windows-delivery-optimization).
-> - Delivery Optimization will not be used for Office 365 Client updates if Office COM is enabled.  If you enabled OfficeMgmtCom for SCCM integration, this action must be reversed in order to use Delivery Optimization (DO). The Microsoft Office Click-to-Run Service is responsible for registering and unregistering Office COM (OfficeC2Rcom) application during service startup.  Changing domain policy or SCCM client settings for Office 365 Client Management from ‘Enabled’ to ‘Not configured’ is not enough.  Domain Policy or SCCM Client settings require explicit ‘Disable’ selection for OfficeC2RCom to be successfully deregistered and restore default configuration.
+> - Delivery Optimization must be enabled (default) and not bypassed. For more information, see [Windows Delivery Optimization reference](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference).
+> - Verify your [Delivery Optimization client settings](/sccm/core/clients/deploy/about-client-settings#delivery-optimization) when changing your [software updates client settings](/sccm/core/clients/deploy/about-client-settings#software-updates) for delta content.
+> - Delivery Optimization can't be used for Office 365 client updates if Office COM is enabled. Office COM is used by Configuration Manager to manage updates for Office 365 clients. You can deregister Office COM to enable the use of Delivery Optimization for Office 365 updates. However, you'll lose the management and reporting capabilities in Configuration Manager for Office 365 updates. For information on how to deregister Office COM, see [Enable Office 365 clients to receive updates from the Office CDN instead of Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
+
 
 ### Configuration Manager peer cache
 
@@ -107,7 +110,7 @@ Selecting the right peer caching technology for express installation files depen
 
 Microsoft recommends that you optimize Windows 10 quality update delivery using Configuration Manager with express installation files and a peer caching technology, as needed. This approach should alleviate the challenges associated with Windows 10 devices downloading large content for installing quality updates. Keeping Windows 10 devices current by deploying quality updates each month is also recommended. This practice reduces the delta of quality update content needed by devices each month. Reducing this content delta causes smaller size downloads from distribution points or peer sources. 
 
-Due to the nature of express installation files, their content size is considerably larger than traditional full-file content. This size results in longer update download times from the Windows Update service to the Configuration Manager site server. The amount of disk space required for both the site server and distribution points also increases. The total time required to download and distribute quality updates could be longer. However, the device-side benefits should be noticeable during the download and installation of quality updates by the Windows 10 devices.
+Due to the nature of express installation files, their content size is considerably larger than traditional self-contained files. This size results in longer update download times from the Windows Update service to the Configuration Manager site server. The amount of disk space required for both the site server and distribution points also increases. The total time required to download and distribute quality updates could be longer. However, the device-side benefits should be noticeable during the download and installation of quality updates by the Windows 10 devices. For more information, see [Using Express Installation Files](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc708456(v=ws.10)?#using-express-installation-files).
 
 If the server-side tradeoffs of larger-size updates are blockers for the adoption of express support, but the device-side benefits are critical to your business and environment, Microsoft recommends that you use [Windows Update for Business](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10) with Configuration Manager. Windows Update for Business provides all of the benefits of express without the need to download, store, and distribute express installation files throughout your environment. Clients download content directly from the Windows Update service, thus can still use Delivery Optimization.
 

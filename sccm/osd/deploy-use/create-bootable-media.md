@@ -10,12 +10,13 @@ ms.assetid: ead79e64-1b63-4d0d-8bd5-addff8919820
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create bootable media
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Bootable media in Configuration Manager contains the boot image, optional prestart commands and associated files, and Configuration Manager files. Use prestaged media for the following OS deployment scenarios:  
 

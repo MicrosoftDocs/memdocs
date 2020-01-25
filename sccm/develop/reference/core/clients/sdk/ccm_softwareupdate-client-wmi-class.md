@@ -9,7 +9,8 @@ ms.assetid: dd1a5ba5-b611-4b28-888f-7918fcd1d869
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_SoftwareUpdate Client WMI Class
 The `CCM_SoftwareUpdate` WMI class is a client class, in Configuration Manager, that represents a software update.  

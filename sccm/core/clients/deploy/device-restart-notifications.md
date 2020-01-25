@@ -10,12 +10,13 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Device restart notifications in Configuration Manager
 
-*Applies to: System Center Configuration Manager (current branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The notifications a user receives for a pending device restart can vary depending on [Computer restart client settings](/sccm/core/clients/deploy/about-client-settings#computer-restart) and which version of Configuration Manager is being used. This article helps admins determine what the user experience is for pending device restart notifications.
 

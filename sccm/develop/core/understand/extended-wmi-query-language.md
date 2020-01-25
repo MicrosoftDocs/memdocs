@@ -9,10 +9,11 @@ ms.assetid: ea9ebb36-8bd7-49ed-a0d5-8dc6dba104d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Extended WMI Query Language
-System Center Configuration Manager supports a superset of the Windows Management Instrumentation (WMI) Query Language (WQL) known as Extended WQL. Both WQL and Extended WQL are retrieval-only languages that are used to create queries. Neither language can be used to create, modify, or delete classes or instances.  
+Configuration Manager supports a superset of the Windows Management Instrumentation (WMI) Query Language (WQL) known as Extended WQL. Both WQL and Extended WQL are retrieval-only languages that are used to create queries. Neither language can be used to create, modify, or delete classes or instances.  
 
  WQL and Extended WQL are based on the American National Standards Institute (ANSI) Structured Query Language (SQL) standard. However, they differ from standard SQL in that they retrieve from classes rather than tables and return instances rather than rows.  
 
@@ -46,7 +47,7 @@ System Center Configuration Manager supports a superset of the Windows Managemen
 
  The use of `COUNT` and `DISTINCT` keywords together in a statement is not supported.  
 
- In System Center Configuration Manager the `WHERE` clause supports `GetDate()`, `DateDiff()`, `and DateAdd()`.  
+ in Configuration Manager the `WHERE` clause supports `GetDate()`, `DateDiff()`, `and DateAdd()`.  
 
  The `ORDER BY` clause does not work with the collection-limiting context qualifier.  
 

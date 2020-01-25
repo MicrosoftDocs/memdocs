@@ -9,7 +9,8 @@ ms.assetid: d4022814-fd1f-4c85-b6e2-787aa3f94953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ApplicationAssignment Server WMI Class
 The `SMS_ApplicationAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the assignment of an application to a collection.  

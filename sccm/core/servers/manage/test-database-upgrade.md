@@ -10,21 +10,22 @@ ms.assetid: abb696f3-a816-4f12-a9f1-0503a81e1976
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Test the database upgrade when installing an update
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The information in this topic can help you run a test database upgrade before you install an in-console update for the current branch of Configuration Manager. However, the test upgrade is no longer a required or recommend step unless your database is suspect, or is modified by customizations not explicitly supported by Configuration Manager.
 
 ## Do I need to run a test upgrade?
-The deprecation of this upgrade test is made possible due to changes that are introduced with System Center Configuration Manager. These changes simplify the process and speed by which a production environment can be updated to newer versions. This redesign was done to help customers stay current with less risk, and less operational overhead when installing each new update.
+The deprecation of this upgrade test is made possible due to changes that are introduced with Configuration Manager current branch. These changes simplify the process and speed by which a production environment can be updated to newer versions. This redesign was done to help customers stay current with less risk, and less operational overhead when installing each new update.
 
 The changes are to how updates install, including logic that automatically rolls back a failed update without the need to run a site recovery. These changes enable the use of the console to manage update installations, and include an option to [retry installation of a failed update](/sccm/core/servers/manage/install-in-console-updates#bkmk_retry).
 
 > [!TIP]
-> When you upgrade to System Center Configuration Manager from an older product, like System Center 2012 Configuration Manager, [test database upgrades remain a recommended step](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#bkmk_test).
+> When you upgrade to Configuration Manager current branch from an older product, like System Center 2012 Configuration Manager, [test database upgrades remain a recommended step](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#bkmk_test).
 
 If you still plan to test the upgrade of a site database when you install an in-console update, the following information supplements the [guidance on installing an in-console update](/sccm/core/servers/manage/install-in-console-updates#bkmk_install).
 
@@ -50,7 +51,7 @@ If an update install fails, you should not need to recover the site. Instead, yo
 
    For example, you have a site database with the database name *SMS_ABC*. You restore a copy of this site database to a supported instance of SQL Server with the instance name *DBTest*. To test an upgrade of this copy of the site database, use the following command line: **Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**.  
 
-   You can find Setup.exe in the following location on the source media for System Center Configuration Manager: **SMSSETUP\BIN\X64**.  
+   You can find Setup.exe in the following location on the source media for Configuration Manager: **SMSSETUP\BIN\X64**.  
 
 5. On the instance of SQL Server where you run the upgrade test, monitor the *ConfigMgrSetup.log* in the root of the system drive for progress and success.  
 

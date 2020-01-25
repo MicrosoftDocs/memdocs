@@ -1,7 +1,7 @@
 ---
 title: "Technical Preview 1709"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview version 1709 for System Center Configuration Manager."
+description: "Learn about features available in the Technical Preview version 1709 for Configuration Manager."
 ms.date: 09/28/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,13 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Capabilities in Technical Preview 1709 for System Center Configuration Manager
+# Capabilities in Technical Preview 1709 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1709. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1709. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
 
 
 <!--  Known Issues Template   
@@ -91,7 +92,7 @@ The following are general prerequisites for you to enable co-management:
 - Intune subscription &#40;MDM authority in Intune set to **Intune**&#41;
 
    > [!Note]  
-   > If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you cannot enable co-management. If you are interested in migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
+   > If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you cannot enable co-management.
 
 #### Additional prerequisites for existing Configuration Manager clients
 - Windows 10, version 1709 (Fall Creators Update) and later
@@ -105,7 +106,7 @@ The following are general prerequisites for you to enable co-management:
 After you enable co-management, Configuration Manager continues to manage all workloads. When you decide that you are ready, you can have Intune start managing available workloads. In this release, you can have Intune manage the following workloads.   
 
 #### Compliance policies
-Compliance policies define the rules and settings that a device must comply with to be considered compliant by conditional access polices. You can also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access. For details, see [Device compliance policies](https://docs.microsoft.com/sccm/mdm/deploy-use/device-compliance-policies).  
+Compliance policies define the rules and settings that a device must comply with to be considered compliant by conditional access polices. You can also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access.
 
 #### Windows Update for Business policies
 Windows Update for Business policies let you configure deferral policies for Windows 10 feature updates or quality updates for Windows 10 devices managed directly by Windows Update for Business. For details, see [Configure Windows Update for Business deferral policies](https://docs.microsoft.com/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
@@ -214,4 +215,4 @@ Select the co-management object, and then on the Home tab, click **Properties**.
 After you have enabled co-management, you can monitor which devices are managed by Configuration Manager and which are managed by Intune. You can also see which Configuration Manager workloads are managed by which product.-->
 
 ## See also
-For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview). 
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview). 

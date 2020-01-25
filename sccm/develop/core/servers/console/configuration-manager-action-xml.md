@@ -8,10 +8,11 @@ ms.assetid: 8a871fbf-ec8b-4c6f-8807-e5350ca2ffd7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Action XML
-Every System Center Configuration Manager action is defined by an `ActionDescription` XML element that defines the action type and other information that is used by the Configuration Manager console to display the action. An `ActionDescription` element has a variety of child elements that provide information specific to the action type and also conditional tests made before the action is displayed.  
+Every Configuration Manager action is defined by an `ActionDescription` XML element that defines the action type and other information that is used by the Configuration Manager console to display the action. An `ActionDescription` element has a variety of child elements that provide information specific to the action type and also conditional tests made before the action is displayed.  
 
  The following XML example describes an action that runs a command prompt, creates .txt file and opens that .txt file in notepad. The `ActionDescription` element `Class` attribute denotes an executable action and the `Executable` element provides both the  path of the executable and the parameters to pass to that executableThe `ShowOn` element tells the console to make this action available both on the context menu and the default home tab of the ribbon menu.  
 

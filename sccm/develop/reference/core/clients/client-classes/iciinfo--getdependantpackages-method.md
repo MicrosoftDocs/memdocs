@@ -9,7 +9,8 @@ ms.assetid: 71274da9-00db-4854-b3e5-83a73da1c7e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ICIINFO::GetDependantPackages Method
 The `ICIINFO::GetDependantPackages` method, in Configuration Manager, gets the dependent package information for the configuration item.  

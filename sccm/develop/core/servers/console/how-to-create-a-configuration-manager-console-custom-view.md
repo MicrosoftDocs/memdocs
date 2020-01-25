@@ -9,10 +9,11 @@ ms.assetid: 4bd77dc3-97d1-475b-a860-bff0157054be
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a Configuration Manager Console Custom View
-In System Center Configuration Manager, to create a custom console view, you must create two .NET Framework classes. If you do not wish to create your own custom view control, see [How to Create Node XML for a Configuration Manager Console View](../../../../develop/core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md) for more information.  
+In Configuration Manager, to create a custom console view, you must create two .NET Framework classes. If you do not wish to create your own custom view control, see [How to Create Node XML for a Configuration Manager Console View](../../../../develop/core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md) for more information.  
 
  The following procedure creates a view that displays a custom control. In this case, the view displays the string content of a label control.  
 

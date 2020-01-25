@@ -9,7 +9,8 @@ ms.assetid: 98d0c5c4-9f8e-41e6-b536-55d9e3f9541d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ICIINFO::GetVersion Method
 The `ICIINFO::GetVersion` method, in Configuration Manager, gets the version of the configuration item.  

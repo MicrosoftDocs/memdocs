@@ -10,12 +10,13 @@ ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Fundamentals of security for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article summarizes the following fundamental security components of any Configuration Manager environment:
 - [Security layers](#bkmk_layers)

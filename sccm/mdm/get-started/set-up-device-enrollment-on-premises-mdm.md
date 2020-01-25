@@ -1,8 +1,8 @@
 ---
-title: "Set up device enrollment "
-titleSuffix: "Configuration Manager"
-description: "Grant users permission to enroll their devices for On-premises Mobile Device Management in System Center Configuration Manager."
-ms.date: 03/05/2017
+title: Set up enrollment for on-premises MDM
+titleSuffix: Configuration Manager
+description: Grant users permission to enroll their devices for on-premises mobile device management (MDM) in Configuration Manager.
+ms.date: 01/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,72 +10,100 @@ ms.assetid: 9ffaea91-1379-4b86-9953-b25e152f56a9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
-# Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# Set up device enrollment for on-premises MDM in Configuration Manager
 
-Enabling users to enroll their devices for System Center Configuration Manager On\-premises Mobile Device Management requires you to grant them permission to do so. To grant users permission to enroll devices, follow the tasks below.
+*Applies to: Configuration Manager (current branch)*
 
--   [Create an enrollment profile that allows users to enroll modern devices](#bkmk_createProf)  
+The final step to set up on-premises mobile device management (MDM) is to enable users to enroll their devices. Use Configuration Manager client settings to grant users permission to enroll devices in on-premises MDM.
 
--   [Set up additional client settings for enrolled devices](#bkmk_addClient)  
+## <a name="bkmk_createProf"></a> Create an enrollment profile
 
--   [Enable users to receive the modern device enrollment profile](#bkmk_enableUsers)  
+To push the settings required to allow users to enroll mobile devices, add a new enrollment profile to the default client settings. This profile then applies to all users in the Configuration Manager site.
 
--   [Store the root certificate on devices to be enrolled](#bkmk_storeCert)  
+> [!NOTE]
+> This process uses the **Default Client Settings**, which will automatically apply to all devices and users. Alternatively, you can create custom client settings, and then deploy to collections of your choice. This alternative method requires at least two custom client settings, one for *device* settings and one for *user* settings. For more information, see [How to configure client settings](/configmgr/core/clients/deploy/configure-client-settings).
 
-##  <a name="bkmk_createProf"></a> Create an enrollment profile that allows users to enroll modern devices  
- To push the settings required to allow users to enroll modern devices, you can add a new enrollment profile to the default client settings, which gets applied to all discovered users in the Configuration Manager site.  
+1. In the Configuration Manager console, go to the **Administration** workspace, and select the **Client Settings** node. Open **Default Client Settings** and select the **Enrollment** group.
 
-1.  In the Configuration Manager console, click **Administration** > **Overview** > **Client Settings**, open **Default Client Settings** and select **Enrollment**.  
+1. Under Device Settings, specify the **Polling interval for modern devices (minutes)**. By default this interval is 60 minutes.
 
-2.  Under Device Settings, specify the polling interval for modern devices.  
+1. Under User Settings, enable the option to **Allow users to enroll modern devices**.
 
-3.  Under User Settings, select **Yes** for **Allow users to enroll modern devices**.  
+1. For the **Modern device enrollment profile**, select **Set Profile**. In the Enrollment Profile window, select **Create**.
 
-4.  Next to **Modern device enrollment profile**, click **Set Profile...** and then click **Create...**  
+1. In the Create Enrollment Profile window, specify the following information:
 
-5.  In Create Enrollment Profile, type a name for the enrollment profile, and choose the management site code you want users with the enrollment profile to use. Click **OK** several times to exit the Default Settings page.  
+    - A unique and descriptive **Name** for the enrollment profile.
 
-> [!NOTE]  
->  If you want to deploy the enrollment profile to a subset of discovered users, you can use a user collection, and create custom client settings to deploy to that collection. For information on creating custom client settings, see [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md)  
+    - An optional **Description** to provide additional information about the profile.
 
-##  <a name="bkmk_addClient"></a> Set up additional client settings for enrolled devices  
- In addition to setting up the enrollment profile fo modern devices, you can set up additional client settings for configuring devices when they're enrolled.  For  information on setting up client settings, see [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
+    - Choose the **Management site code** that contains the device management point. Select **OK** to save and close.
 
- Not all client settings are available for On\-premises Mobile Device Management. The current branch of Configuration Manager supports the following client settings for On\-premises Mobile Device Management:  
+## <a name="bkmk_addClient"></a> Configure additional client settings
 
--   Enrollment - these settings specify  the enrollment profile for managed devices. For more information on how to set up an enrollment profile, see [Create an enrollment profile that allows users to enroll modern devices](#bkmk_createProf).  
+There are additional client settings to configure devices after they've enrolled. For more general information, see [How to configure client settings](/configmgr/core/clients/deploy/configure-client-settings).
 
--   Client policy - theses settings specify the frequency for downloading client policy to the device. You can also enable settings for  targeting users with policy polling. For more information on client policy settings, see the Client Policy section in [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md).  
+Configuration Manager supports the following client settings for on-premises MDM:
 
--   Software deployment - this setting sets the interval for evaluating client devices for software deployments. For more information of software deployment settings, see the Software Deployment section in [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md)  
+- **Client policy**: These settings specify the frequency for downloading client policy to the device. You can also enable settings for user policy. For more information, see [About client settings - Client Policy](/configmgr/core/clients/deploy/about-client-settings#client-policy).
 
-    > [!NOTE]  
-    >  For On\-premises Mobile Device Management, software deployment settings can only be used as default client settings. Software deployment settings cannot be used with custom client settings in the current branch of Configuration Manager.  
+- **Software deployment**: Set the interval for evaluating software deployments. For more information, see [About client settings - Software Deployment](/configmgr/core/clients/deploy/about-client-settings#software-deployment).
 
-##  <a name="bkmk_enableUsers"></a> Enable users to receive the modern device enrollment profile  
- For users to receive the modified client settings with the enrollment profile for On\-premises Mobile Device Management, they must be discovered     through the Active Directory discovery method. To make sure everyone that needs the enrollment profile gets it, run discovery for Active Directory users. For instructions on how to discover users, see [Run discovery for System Center Configuration Manager](../../core/servers/deploy/configure/run-discovery.md).  
+    > [!NOTE]
+    > For on-premises MDM, software deployment settings can only be used as default client settings.
 
-##  <a name="bkmk_storeCert"></a> Store the root certificate on devices to be enrolled  
- Users with domain-joined devices will likely already have the required root certificate for trusted communication with the servers hosting the site system roles because the root was issued as part of the domain-joining process with Active Directory. Non-domain joined computers and mobile devices will need the root certificate manually installed on the device to allow for enrollment to take place. These devices will not automatically have the required root certificate.  
+## <a name="bkmk_enableUsers"></a> Discover users
 
- The exported certificate file must be provided to the device for manual installation. This can be done using email, OneDrive, SD card, USB thumbdrive, or whatever method works best for your needs.  
+For users to receive the client settings with the enrollment profile for on-premises MDM, the site discovers their user account in Active Directory. To make sure everyone that needs the enrollment profile gets it, run discovery for Active Directory users. For more information, see [Active Directory User Discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
 
- The root certificate you want to use on the devices is the one you exported in [Export the certificate with the same root as the web server certificate](../../mdm/get-started/set-up-certificates-on-premises-mdm.md#bkmk_exportCert).  
+## <a name="bkmk_storeCert"></a> Install the trusted root certificate
 
-1.  On the device to be enrolled, locate the root certificate file and double-click it.  
+Domain-joined devices get the trust root certificate for trusted communication with the servers hosting the site system roles. Active Directory Certificate Services automatically distributes the trusted root certificate. Non-domain joined computers and mobile devices need this certificate installed via other means to allow enrollment.
 
-2.  In Certificate window, click **Install Certificate...**  
+> [!NOTE]
+> If the web server certificates are issued by a public certificate authority, most devices already trusted these CAs. If your design includes use of one of these public CAs, you don't need to do this step.
 
-3.  In the Certificate Import Wizard, select **Local Machine**, and click **Next**.  
+After you [export the trusted root certificate](/configmgr/mdm/get-started/set-up-certificates-on-premises-mdm#bkmk_exportCert), you need to install it on devices that will need it to enroll. For example, devices that aren't joined to the domain and can't get it automatically from Active Directory. The process that you use will depend upon the following factors:
 
-4.  In the User Account Control window, click **Yes**.  
+- Specific device types and technical capabilities
+- OS version
+- Your business, security, and user experience requirements
 
-5.  Select **Place all certificates in the following store**, and click **Browse**.  
+The following list includes some example methods to deliver and install the trusted root certificate on devices:
 
-6.  Click **Trusted Root Certification Authorities**, click **OK**, and then click **Next**.  
+- File share
 
-7.  Click **Finish**.  
+- Email attachment
+
+- Memory card
+
+- Tethered device
+
+- Cloud storage (such as OneDrive)
+
+- Near field communication (NFC) connection
+
+- Barcode scanner
+
+- Out of box experience (OOBE) provisioning package
+
+### Manually install the trusted root certificate in Windows
+
+1. On the device to be enrolled, browse in File Explorer to the trusted root certificate file (.cer), and **Open** it.
+
+1. In the Certificate window, select **Install Certificate**.
+
+1. In the Certificate Import Wizard, select **Local Machine**, and then select **Next** to continue as administrator.
+
+1. On the Certificate Store page, select **Place all certificates in the following store**, and then select **Browse**.
+
+1. In the Select Certificate Store window, select **Trusted Root Certification Authorities**, and select **OK**.
+
+1. Complete and wizard.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Enroll devices](/configmgr/mdm/deploy-use/enroll-devices-on-premises-mdm)

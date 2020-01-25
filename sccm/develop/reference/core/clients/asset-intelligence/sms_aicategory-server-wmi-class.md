@@ -9,10 +9,11 @@ ms.assetid: 9c90f84f-e111-4195-9063-a09eacd83c50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_AICategory Server WMI Class
-The `SMS_AICategory` Windows Management Instrumentation (WMI) class, in System Center Configuration Manager, categorizes the software entries in the `SMS_AISoftwareList` Server WMI class.  
+The `SMS_AICategory` Windows Management Instrumentation (WMI) class, in Configuration Manager, categorizes the software entries in the `SMS_AISoftwareList` Server WMI class.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

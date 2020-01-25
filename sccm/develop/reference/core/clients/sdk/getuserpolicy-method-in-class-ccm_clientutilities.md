@@ -9,7 +9,8 @@ ms.assetid: 8845a1f5-b53d-464b-8652-50a9f0dea44b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetUserPolicy Method in Class CCM_ClientUtilities
 The `GetUserPolicy` Windows Management Instrumentation (WMI) class method gets and evaluates the user policy for a client device.  

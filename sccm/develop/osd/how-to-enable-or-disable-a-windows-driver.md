@@ -9,10 +9,11 @@ ms.assetid: c13462bf-4652-46c4-9f26-818951bb7fe0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Enable or Disable a Windows Driver in Configuration Manager
-You enable or disable a Windows driver in the operating system deployment driver catalog, in System Center Configuration Manager, by setting the `IsEnabled` property of the [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) object. A driver can be disabled to prevent it from being installed by the Auto Apply Driver action in a task sequence.  
+You enable or disable a Windows driver in the operating system deployment driver catalog, in Configuration Manager, by setting the `IsEnabled` property of the [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) object. A driver can be disabled to prevent it from being installed by the Auto Apply Driver action in a task sequence.  
 
 ### To enable or disable a Windows driver  
 

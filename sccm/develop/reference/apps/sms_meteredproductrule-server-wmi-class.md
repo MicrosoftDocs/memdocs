@@ -9,10 +9,11 @@ ms.assetid: ad9f4135-37ee-4677-aa12-b0c7d393cb16
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_MeteredProductRule Server WMI Class
-The `SMS_MeteredProductRule` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents the rules that describe which files to meter.  
+The `SMS_MeteredProductRule` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the rules that describe which files to meter.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

@@ -9,10 +9,11 @@ ms.assetid: eef96176-cbf5-4163-bb81-047c22443527
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Add a Configuration Manager Context Qualifier by Using Managed Code
-In System Center Configuration Manager, to add a context qualifier by using the managed SMS Provider, use the [Context](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.connectionmanagerbase.context.aspx) property which is a `Dictionary` object that holds context qualifiers.  
+In Configuration Manager, to add a context qualifier by using the managed SMS Provider, use the [Context](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.connectionmanagerbase.context.aspx) property which is a `Dictionary` object that holds context qualifiers.  
 
  Typically you will add your application name to the ApplicationName context qualifier, along with the computer name (MachineName) and Locale identifier (LocaleID).  
 

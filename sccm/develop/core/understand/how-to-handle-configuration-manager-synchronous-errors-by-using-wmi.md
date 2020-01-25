@@ -9,10 +9,11 @@ ms.assetid: d11bbdc3-f47e-4088-bed8-7e38d119e278
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Handle Configuration Manager Synchronous Errors by Using WMI
-You handle synchronous errors, in System Center Configuration Manager, by inspecting the `SWbemLastError` object when an error occurs. An error has occurred when the error object `Number` property is non-zero.  
+You handle synchronous errors, in Configuration Manager, by inspecting the `SWbemLastError` object when an error occurs. An error has occurred when the error object `Number` property is non-zero.  
 
 > [!NOTE]
 >  In VBScript you should declare that you want to resume running the script if an error occurs. Otherwise, the script will end when an error condition occurs. To do this, use the `On Error Resume Next` declaration in your script.  

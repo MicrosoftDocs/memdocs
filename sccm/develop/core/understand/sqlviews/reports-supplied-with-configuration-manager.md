@@ -6,7 +6,8 @@ ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: b5d4f1de-1137-425c-a196-303c3233b6c7
 author: aczechowski
 ms.author: aaroncz
@@ -553,7 +554,6 @@ The following reports are listed under the **Software Distribution – Applicati
 |**Application Usage Detailed Status**|Displays usage details for installed applications.|
 |**Application Usage Summary Status**|Displays a usage summary for installed applications.|
 |**Task sequence deployments containing application**|Displays task sequence deployments that install a specified application.|
-|**User Requests for Android Application**|Displays users that requested to install an Android application.|
 
 ## Software Distribution - Collections
 

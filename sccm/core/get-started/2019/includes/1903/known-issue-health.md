@@ -4,7 +4,8 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 04/03/2019
-ms.collection: M365-identity-device-management
+
+
 ---
 
 ### <a name="ki_health"></a> Client health dashboard

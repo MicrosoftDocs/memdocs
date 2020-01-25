@@ -10,13 +10,14 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Database replicas for management points for System Center Configuration Manager
+# Database replicas for management points for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-System Center Configuration Manager primary sites can use a database replica to reduce the CPU load placed on the site database  server by management points as they service requests from clients.  
+Configuration Manager primary sites can use a database replica to reduce the CPU load placed on the site database  server by management points as they service requests from clients.  
 
 -   When a management point uses a database replica, that management point requests data from the SQL Server computer that hosts the database replica instead of from the site database server.  
 
@@ -44,7 +45,7 @@ System Center Configuration Manager primary sites can use a database replica to 
 
 -   **SQL Server requirements:**  
 
-    -   The SQL Server that hosts the database replica must meet the same requirements as the site database server. However, the replica server does not need to run the same version or edition of SQL Server as the site database server, as long as it runs a supported version and edition of SQL Server. For information see [Support for SQL Server versions for System Center Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md)  
+    -   The SQL Server that hosts the database replica must meet the same requirements as the site database server. However, the replica server does not need to run the same version or edition of SQL Server as the site database server, as long as it runs a supported version and edition of SQL Server. For information see [Support for SQL Server versions for Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md)  
 
     -   The SQL Server Service on the computer that hosts the replica database must run as the **System** account.  
 
@@ -74,7 +75,7 @@ System Center Configuration Manager primary sites can use a database replica to 
 
     -   [Move a site server database that publishes a database replica](#BKMK_DBReplicaOps_Move)  
 
--   **Upgrades to System Center Configuration Manager**: Before you upgrade a site, either from System Center 2012 Configuration Manager to System Center Configuration Manager Current Branch or updating Configuration Manager Current Branch to the latest release, you must disable database replicas for management points.  After your site upgrades, you can reconfigure the database replicas for management points.  
+-   **Upgrades to Configuration Manager current branch**: Before you upgrade a site, either from System Center 2012 Configuration Manager to Configuration Manager current branch or updating Configuration Manager current branch to the latest release, you must disable database replicas for management points.  After your site upgrades, you can reconfigure the database replicas for management points.  
 
 -   **Multiple replicas on a single SQL Server:**  If you configure  a database replica server to host multiple database replicas for management points (each replica must be on a separate instance) you must use a modified configuration script (from Step 4 of the following section)  to prevent overwriting the self-signed certificate in use by previously configured database replicas on that server.  
 
@@ -126,7 +127,7 @@ When the stored procedure completes, the site database server is configured to p
 ###  <a name="BKMK_DBReplica_ConfigSrv"></a> Step 2 - Configuring the database replica server  
 The database replica server is a computer that runs SQL Server and that hosts a replica of the site database for management points to use. On a fixed schedule, the database replica server synchronizes its copy of the database with the database replica that is published by the site database server.  
 
-The database replica server must meet the same requirements as the site database server. However, the database replica server can run a different edition or version of SQL Server than the site database server uses. For information about the supported versions of SQL Server, see the [Support for SQL Server versions for System Center Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md) topic.  
+The database replica server must meet the same requirements as the site database server. However, the database replica server can run a different edition or version of SQL Server than the site database server uses. For information about the supported versions of SQL Server, see the [Support for SQL Server versions for Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md) topic.  
 
 > [!IMPORTANT]  
 >  The SQL Server Service on the computer that hosts the replica database must run as the System account.  
@@ -496,7 +497,7 @@ To support client notification with a database replica for a management point, y
 
 2.  Use **SQL Server Management Studio** to delete the subscription for the database replica from each database replica server for this site.  
 
-3.  Move the database to the new SQL Server computer. For more information, see the [Modify the site database configuration](../../../../core/servers/manage/modify-your-infrastructure.md#bkmk_dbconfig) section in the [Modify your System Center Configuration Manager infrastructure](../../../../core/servers/manage/modify-your-infrastructure.md) topic.  
+3.  Move the database to the new SQL Server computer. For more information, see the [Modify the site database configuration](../../../../core/servers/manage/modify-your-infrastructure.md#bkmk_dbconfig) section in the [Modify your Configuration Manager infrastructure](../../../../core/servers/manage/modify-your-infrastructure.md) topic.  
 
 4.  Recreate the publication for the database replica on the site database server. For more information, see [Step 1 - Configure the site database server to Publish the database replica](#BKMK_DBReplica_ConfigSiteDB) in this topic.  
 

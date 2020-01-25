@@ -1,7 +1,7 @@
 ---
 title: "New version 1610"
 titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1610 of System Center Configuration Manager."
+description: "Get details about changes and new capabilities introduced in version 1610 of Configuration Manager."
 ms.date: 11/23/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,13 +11,14 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# What&#39;s new in version 1610 of System Center Configuration Manager
+# What&#39;s new in version 1610 of Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Update 1610 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1511, 1602, or 1606.
+Update 1610 for Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1511, 1602, or 1606.
 
 
 > [!TIP]  
@@ -89,17 +90,16 @@ Changes in this release:
 - You can now modify the client secret key that you obtained from Azure Active Directory.
 - You can delete a subscription to the store.
 
-For details, see [Manage apps from the Windows Store for Business with System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+For details, see [Manage apps from the Windows Store for Business with Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
 
 ## Policy sync for Intune-enrolled devices
 You can now request a policy sync for an Intune-enrolled device from the Configuration Manager console, instead of needing to request a sync from the Company Portal app on the device itself. Sync request state information is available as a new column in device views, called **Remote Sync State**. The information is also available in the discovery data section of the **Properties** dialog for each device.
-For details, see [Remotely synchronize policy on Intune-enrolled devices from the Configuration Manager console](/sccm/mdm/deploy-use/sync-intune-device).
 
 
 ## Use compliance settings to configure Windows Defender settings
 You can now configure Windows Defender client settings on Intune-enrolled Windows 10 computers by using configuration items in the Configuration Manager console.
-For details, see the **Windows Defender** section in [Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
+For details, see the **Windows Defender** section in [Create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
 
 
 
@@ -109,7 +109,6 @@ For details, see the **Windows Defender** section in [Create configuration items
 
 ## New columns in device collection views
 You can now display columns for **IMEI** and **Serial Number** (for iOS devices) in device collection views.
-For more details, see [Predeclare devices with IMEI or iOS serial numbers](https://docs.microsoft.com/sccm/mdm/deploy-use/predeclare-devices-with-hardware-id).
 
 ## Customizable branding for Software Center dialogs
 Custom branding for the Software Center was introduced in Configuration Manager version 1602. In version 1610, that branding is now extended to all associated dialog boxes to provide a more consistent experience to Software Center users.
@@ -120,7 +119,7 @@ Custom branding for the Software Center is applied according to the following ru
 
 - If the Application Catalog website point site server role is installed, then Software Center displays the organization name and color specified in the Application Catalog website point site server role properties. For more information, see [Configuration options for Application Catalog website point](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).
 
-- If a Microsoft Intune subscription is configured and connected to the Configuration Manager environment, then Software Center displays the organization name, color, and company logo specified in the Intune subscription properties. For more information, see [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription).
+- If a Microsoft Intune subscription is configured and connected to the Configuration Manager environment, then Software Center displays the organization name, color, and company logo specified in the Intune subscription properties.
 
 
 ## Enforcement grace period for required application and software update deployments
@@ -197,15 +196,14 @@ You can now get a quick view of overall compliance for devices, and the top reas
 
 
 ## Lookout integration for hybrid implementations to protect iOS and Android devices
-Microsoft is integrating with Lookout’s mobile threat protection solution to protect iOS and Android mobile devices by detecting malware, risky apps, and more, on devices. Lookout’s solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in System Center Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using conditional access policies, you can allow or block access to company resources based on the device compliance status. To learn about the integration and how it works, see [Manage access based on device, network, and application risk](/sccm/mdm/deploy-use/mobile-threat-defense).
+Microsoft is integrating with Lookout’s mobile threat protection solution to protect iOS and Android mobile devices by detecting malware, risky apps, and more, on devices. Lookout’s solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using conditional access policies, you can allow or block access to company resources based on the device compliance status.
 
-Users of noncompliant iOS devices will be prompted to enroll. They'll be required to install the Lookout for Work app on their devices, activate the app, and remediate threats reported in the Lookout for Work application to gain access to company data. Learn how to [Configure and deploy Lookout for Work apps](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps).
-
+Users of noncompliant iOS devices will be prompted to enroll. They'll be required to install the Lookout for Work app on their devices, activate the app, and remediate threats reported in the Lookout for Work application to gain access to company data.
 
 
 ## New compliance settings for configuration items
 There are many new settings you can use in your configuration items for various device platforms. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager.
-For details, see [Configuration items for devices managed without the System Center Configuration Manager client](/sccm/compliance/deploy-use/configuration-items-for-devices-managed-without-the-client).
+For details, see [Configuration items for devices managed without the Configuration Manager client](/sccm/compliance/deploy-use/configuration-items-for-devices-managed-without-the-client).
 
 ### New settings for Android devices
 #### Password settings

@@ -1,7 +1,7 @@
 ---
 title: View diagnostics data
 titleSuffix: Configuration Manager
-description: View diagnostic and usage data to confirm that your System Center Configuration Manager hierarchy contains no sensitive information.
+description: View diagnostic and usage data to confirm that your Configuration Manager hierarchy contains no sensitive information.
 ms.date: 09/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,12 +10,13 @@ ms.assetid: 594eb284-0d93-4c5d-9ae6-f0f71203682a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to view diagnostics and usage data for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can view diagnostic and usage data from your Configuration Manager hierarchy to confirm that it includes no sensitive or identifiable information. The site summarizes and stores its diagnostic data in the **TEL_TelemetryResults** table of the site database. It formats the data to be programmatically usable and efficient.
 

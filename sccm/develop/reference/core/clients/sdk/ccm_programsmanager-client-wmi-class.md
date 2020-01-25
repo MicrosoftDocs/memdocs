@@ -9,7 +9,8 @@ ms.assetid: e31c3acb-6d31-43c9-a760-06d59c49e5b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_ProgramsManager Client WMI Class
 The `CCM_ProgamsManager` WMI class is a public client class, in Configuration Manager, that manages a specified software distribution program.  

@@ -10,12 +10,13 @@ ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Upgrade to Configuration Manager current branch
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Do an in-place upgrade to Configuration Manager current branch from a site and hierarchy that runs System Center 2012 Configuration Manager. Before upgrading from System Center 2012 Configuration Manager, you must prepare the sites. This preparation requires you to remove specific configurations that can prevent a successful upgrade. Then follow the upgrade sequence when more than a single site is involved.  
 

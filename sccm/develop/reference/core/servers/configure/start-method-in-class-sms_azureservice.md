@@ -9,7 +9,8 @@ ms.assetid: f32f2b00-117d-498d-9d9b-5f3f47b1b865
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Start method in class SMS_AzureService

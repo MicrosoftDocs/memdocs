@@ -6,7 +6,8 @@ ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
@@ -37,7 +38,7 @@ This process uses a PowerShell script, MBAMWebSiteInstaller.ps1, to install thes
 
 - `-SqlServerName <ServerName>` (required): The fully qualified domain name of the primary site database server.
 
-- `-SqlInstanceName <InstanceName>`: The SQL Server instance name for the primary site database. This parameter is optional if SQL uses the default instance.
+- `-SqlInstanceName <InstanceName>`: The SQL Server instance name for the primary site database. If SQL uses the default instance, don't include this parameter.
 
 - `-SqlDatabaseName <DatabaseName>` (required): The name of the primary site database, for example `CM_ABC`.
 
@@ -84,6 +85,9 @@ On the target web server, do the following actions:
     ``` PowerShell
     .\MBAMWebSiteInstaller.ps1 -SqlServerName sql.contoso.com -SqlInstanceName instance1 -SqlDatabaseName CM_ABC -ReportWebServiceUrl https://rsp.contoso.com/ReportServer -HelpdeskUsersGroupName "contoso\BitLocker help desk users" -HelpdeskAdminsGroupName "contoso\BitLocker help desk admins" -MbamReportUsersGroupName "contoso\BitLocker report users" -SiteInstall Both
     ```
+
+    > [!IMPORTANT]
+    > This example command line uses all of the possible parameters to show their usage. Adjust your use according to your requirements in your environment.
 
 After installation, access the portals via the following URLs:
 

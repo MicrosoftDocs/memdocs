@@ -1,7 +1,7 @@
 ---
 title: "Migrate content"
 titleSuffix: "Configuration Manager"
-description: "Use distribution points to manage content while you migrate data to a System Center Configuration Manager destination hierarchy."
+description: "Use distribution points to manage content while you migrate data to a Configuration Manager current branch destination hierarchy."
 ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,13 +10,14 @@ ms.assetid: 66f7759c-6272-4116-aad7-0d05db1d46cd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Plan a content deployment migration strategy in System Center Configuration Manager
+# Plan a content deployment migration strategy in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-While you actively migrate data to a System Center Configuration Manager destination hierarchy, Configuration Manager clients in both the source and destination hierarchies can maintain access to content that you deployed in the source hierarchy. You can also use migration to upgrade or reassign distribution points from the source hierarchy to become distribution points in the destination hierarchy. When you share and upgrade or reassign distribution points, this strategy can help you avoid having to redeploy content to new servers in the destination hierarchy for the clients that you migrate.  
+While you actively migrate data to a Configuration Manager current branch destination hierarchy, Configuration Manager clients in both the source and destination hierarchies can maintain access to content that you deployed in the source hierarchy. You can also use migration to upgrade or reassign distribution points from the source hierarchy to become distribution points in the destination hierarchy. When you share and upgrade or reassign distribution points, this strategy can help you avoid having to redeploy content to new servers in the destination hierarchy for the clients that you migrate.  
 
 Although you can recreate and distribute content in the destination hierarchy, you can also use the following options to manage this content:  
 
@@ -24,28 +25,12 @@ Although you can recreate and distribute content in the destination hierarchy, y
 
 -   Upgrade standalone Configuration Manager 2007 distribution points or Configuration Manager 2007 secondary sites in the source hierarchy to become distribution points in the destination hierarchy.  
 
--   Reassign distribution points from a System Center Configuration Manager source hierarchy to a site in the destination hierarchy.  
-
-Use the following sections to help you plan for content deployment during migration:  
-
--   [Share distribution points between source and destination hierarchies](#About_Shared_DPs_in_Migration)  
-
--   [Plan to upgrade Configuration Manager 2007 shared distribution points](#Planning_to_Upgrade_DPs)  
-
-    -   [Distribution point upgrade process](#BKIMK_UpgradeProcess)  
-
-    -   [Plan to upgrade Configuration Manager 2007 secondary sites](#BKMK_UpgradeSS)  
-
--   [Plan to reassign System Center Configuration Manager distribution points](#BKMK_ReassignDistPoint)  
-
-    -   [Distribution point reassignment process](#BKMK_ReassignProcess)  
-
--   [Content ownership when migrating content](#About_Migrating_Content)  
+-   Reassign distribution points from a Configuration Manager source hierarchy to a site in the destination hierarchy.  
 
 ##  <a name="About_Shared_DPs_in_Migration"></a> Share distribution points between source and destination hierarchies  
 During migration, you can share distribution points from a source hierarchy with the destination hierarchy. You can use shared distribution points to make content that you have migrated from a source hierarchy immediately available to clients in the destination hierarchy without having to recreate that content, and then distribute it to new distribution points in the destination hierarchy. When clients in the destination hierarchy request content that is deployed to distribution points that you have shared, the shared distribution points can be offered to the clients as valid content locations.  
 
- In addition to being a valid content location for clients in the destination hierarchy while migration from the source hierarchy remains active, it is possible to upgrade or reassign a distribution point to the destination hierarchy. You can upgrade Configuration Manager 2007 shared distribution points and reassign System Center 2012 Configuration Manager shared distribution points. When you upgrade or reassign a shared distribution point, the distribution point is removed from the source hierarchy and becomes a distribution point in the destination hierarchy. After you upgrade or reassign a shared distribution point, you can continue to use the distribution point in the destination hierarchy after migration from the source hierarchy is finished. For more about how to upgrade a shared distribution point, see [Plan to upgrade Configuration Manager 2007 shared distribution points](#Planning_to_Upgrade_DPs). For more about how to reassign a shared distribution point, see [Plan to Reassign System Center Configuration Manager Distribution Points](#BKMK_ReassignDistPoint).  
+ In addition to being a valid content location for clients in the destination hierarchy while migration from the source hierarchy remains active, it is possible to upgrade or reassign a distribution point to the destination hierarchy. You can upgrade Configuration Manager 2007 shared distribution points and reassign System Center 2012 Configuration Manager shared distribution points. When you upgrade or reassign a shared distribution point, the distribution point is removed from the source hierarchy and becomes a distribution point in the destination hierarchy. After you upgrade or reassign a shared distribution point, you can continue to use the distribution point in the destination hierarchy after migration from the source hierarchy is finished. For more about how to upgrade a shared distribution point, see [Plan to upgrade Configuration Manager 2007 shared distribution points](#Planning_to_Upgrade_DPs). For more about how to reassign a shared distribution point, see [Plan to reassign Configuration Manager distribution points](#BKMK_ReassignDistPoint).  
 
  You can choose to share distribution points from any source site in your source hierarchy. When you share distribution points for a source site, child secondary sites are shared at each qualifying distribution point at that primary site and at each of the primary sites. To qualify to be a shared distribution point, the site system server that hosts the distribution point must be set up with a fully qualified domain name (FQDN). Any distribution points that are set up with a NetBIOS name are disregarded.  
 
@@ -54,7 +39,7 @@ During migration, you can share distribution points from a source hierarchy with
 
 Use the following information to help you plan for shared distribution points:  
 
--   Distribution points that you share must meet the prerequisites for shared distribution points. For more about these prerequisites, see [Required configurations for migration](../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations) in [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
+-   Distribution points that you share must meet the prerequisites for shared distribution points. For more about these prerequisites, see [Required configurations for migration](../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations) in [Prerequisites for migration](../../core/migration/prerequisites-for-migration.md).  
 
 -   The share distribution point action is a site-wide setting that shares all qualifying distribution points at a source site and at any direct child secondary sites. You cannot select individual distribution points to share when you enable distribution point sharing.  
 
@@ -70,26 +55,26 @@ Use the following information to help you plan for shared distribution points:
 
 -   You can view shared distribution points and their properties in the **Source Hierarchy** node of the **Administration** workspace in the Configuration Manager console that connects to the destination hierarchy.  
 
--   You cannot use a shared distribution point from a Configuration Manager 2007 source hierarchy to host packages for Microsoft Application Virtualization (App-V). App-V packages must migrate and be converted for use by clients in the destination hierarchy. However, you can use a shared distribution point from a System Center 2012 Configuration Manager or System Center Configuration Manager source hierarchy to host App-V packages for clients in a destination hierarchy.  
+-   You cannot use a shared distribution point from a Configuration Manager 2007 source hierarchy to host packages for Microsoft Application Virtualization (App-V). App-V packages must migrate and be converted for use by clients in the destination hierarchy. However, you can use a shared distribution point from a System Center 2012 Configuration Manager or Configuration Manager current branch source hierarchy to host App-V packages for clients in a destination hierarchy.  
 
 -   When you share a protected distribution point from a Configuration Manager 2007 source hierarchy, the destination hierarchy creates a boundary group that includes the protected network locations of that distribution point. You cannot change this boundary group in the destination hierarchy. However, if you change the protected boundary information for the distribution point in the Configuration Manager 2007 source hierarchy, that change is reflected in the destination hierarchy after the next data gathering cycle finishes.  
 
     > [!NOTE]  
-    >  System Center 2012 Configuration Manager and System Center Configuration Manager sites use the concept of preferred distribution points instead of protected distribution points. This condition only applies to distribution points that are shared from Configuration Manager 2007 source sites.  
+    >  System Center 2012 Configuration Manager and Configuration Manager current branch sites use the concept of preferred distribution points instead of protected distribution points. This condition only applies to distribution points that are shared from Configuration Manager 2007 source sites.  
 
 The eligible distribution points are not visible in the Configuration Manager console before you share distribution points from a source site. After you share distribution points, only the distribution points that are successfully shared are listed.  
 
 After you have shared distribution points, you can change the configuration of any shared distribution point in the source hierarchy. Changes that you make to the configuration of a distribution point are reflected in the destination hierarchy after the next data gathering cycle. Distribution points that you updated to qualify for sharing are shared automatically, while those that no longer qualify stop sharing distribution points. For example, you might have a distribution point that is not set up with an intranet FQDN and was not initially shared with the destination hierarchy. After you set up the FQDN for that distribution point, the next data gathering cycle identifies this configuration, and the distribution point is then shared with the destination hierarchy.  
 
 ##  <a name="Planning_to_Upgrade_DPs"></a> Plan to upgrade Configuration Manager 2007 shared distribution points  
-When you migrate from a Configuration Manager 2007 source hierarchy, you can upgrade a shared distribution point to make it a System Center Configuration Manager distribution point. You can upgrade distribution points at primary sites and secondary sites. The upgrade process removes the distribution point from the Configuration Manager 2007 hierarchy and makes it a site system server in the destination hierarchy. This process also copies the existing content that is on the distribution point to a new location on the distribution point computer. The upgrade process then modifies the copy of the content to create the single instance store for use with content deployment in the destination hierarchy. Therefore, when you upgrade a distribution point, you do not have to redistribute migrated content that was hosted on the Configuration Manager 2007 distribution point.  
+When you migrate from a Configuration Manager 2007 source hierarchy, you can upgrade a shared distribution point to make it a Configuration Manager current branch distribution point. You can upgrade distribution points at primary sites and secondary sites. The upgrade process removes the distribution point from the Configuration Manager 2007 hierarchy and makes it a site system server in the destination hierarchy. This process also copies the existing content that is on the distribution point to a new location on the distribution point computer. The upgrade process then modifies the copy of the content to create the single instance store for use with content deployment in the destination hierarchy. Therefore, when you upgrade a distribution point, you do not have to redistribute migrated content that was hosted on the Configuration Manager 2007 distribution point.  
 
 After Configuration Manager converts the content to the single instance store, Configuration Manager deletes the original source content on the distribution point computer to free up disk space. Configuration Manager does not use the original source content location.  
 
-Not all Configuration Manager 2007 distribution points that you can share are eligible for upgrade to System Center Configuration Manager. To be eligible for upgrade, a Configuration Manager 2007 distribution point must meet the conditions for upgrade. These conditions include the site system server on which the distribution point is installed and the type of Configuration Manager 2007 distribution point that is installed. For example, you cannot upgrade any type of distribution point that is installed on the site server computer at a primary site, but you can upgrade a standard distribution point that is installed on the site server computer at a secondary site.  
+Not all Configuration Manager 2007 distribution points that you can share are eligible for upgrade to Configuration Manager current branch. To be eligible for upgrade, a Configuration Manager 2007 distribution point must meet the conditions for upgrade. These conditions include the site system server on which the distribution point is installed and the type of Configuration Manager 2007 distribution point that is installed. For example, you cannot upgrade any type of distribution point that is installed on the site server computer at a primary site, but you can upgrade a standard distribution point that is installed on the site server computer at a secondary site.  
 
 > [!NOTE]  
->  You can upgrade only those Configuration Manager 2007 shared distribution points that are on a computer that runs an operating system version that is supported for distribution points in the destination hierarchy. For example, although you can share a Configuration Manager 2007 distribution point that is on a computer that runs Windows Vista, you cannot upgrade this shared distribution point because the operating system is not supported by System Center Configuration Manager for use as a distribution point.  
+>  You can upgrade only those Configuration Manager 2007 shared distribution points that are on a computer that runs an operating system version that is supported for distribution points in the destination hierarchy. For example, although you can share a Configuration Manager 2007 distribution point that is on a computer that runs Windows Vista, you cannot upgrade this shared distribution point because the operating system is not supported by Configuration Manager current branch for use as a distribution point.  
 
 The following table lists the supported locations for each type of Configuration Manager 2007 distribution point that you can upgrade.  
 
@@ -99,7 +84,7 @@ The following table lists the supported locations for each type of Configuration
 |Distribution point on server shares<sup>1</sup>|Yes|No|No|  
 |Branch distribution point|Yes|No|No|  
 
- <sup>1</sup> System Center Configuration Manager does not support server shares for site systems, but it does support the upgrade of a Configuration Manager 2007 distribution point that is on a server share. When you upgrade a Configuration Manager 2007 distribution point that is on a server share, the distribution point type is automatically converted to a server, and you must select the drive on the distribution point computer that will store the single instance content store.  
+ <sup>1</sup> Configuration Manager current branch does not support server shares for site systems, but it does support the upgrade of a Configuration Manager 2007 distribution point that is on a server share. When you upgrade a Configuration Manager 2007 distribution point that is on a server share, the distribution point type is automatically converted to a server, and you must select the drive on the distribution point computer that will store the single instance content store.  
 
 > [!WARNING]  
 >  Before you upgrade a branch distribution point, uninstall the Configuration Manager 2007 client software. When you upgrade a branch distribution point that has the Configuration Manager 2007 client software installed, the content that was previously deployed to the computer is removed from the computer, and the upgrade of the distribution point fails.  
@@ -143,7 +128,7 @@ You can monitor the progress of a distribution point upgrade in the Configuratio
 If you decide not to upgrade a shared distribution point, you can still install a distribution point from the destination hierarchy on a former Configuration Manager 2007 distribution point. Before you can install the new distribution point, you must first uninstall all Configuration Manager 2007 site system roles from the distribution point computer. This includes the Configuration Manager 2007 site if it is the site server computer. When you uninstall a Configuration Manager 2007 distribution point, content that was deployed to the distribution point is not deleted from the computer.  
 
 ###  <a name="BKMK_UpgradeSS"></a> Plan to upgrade Configuration Manager 2007 secondary sites  
- When you use migration to upgrade a shared distribution point that is hosted on a Configuration Manager 2007 secondary site server, Configuration Manager upgrades the distribution point site system role to be a distribution point in the destination hierarchy. It also uninstalls the secondary site from the source hierarchy. The result is a System Center Configuration Manager distribution point, but no secondary site.  
+ When you use migration to upgrade a shared distribution point that is hosted on a Configuration Manager 2007 secondary site server, Configuration Manager upgrades the distribution point site system role to be a distribution point in the destination hierarchy. It also uninstalls the secondary site from the source hierarchy. The result is a Configuration Manager current branch distribution point, but no secondary site.  
 
  For a distribution point on the site server computer to be eligible for upgrade, Configuration Manager must be able to uninstall the secondary site and each of the site system roles on that computer. Typically, a shared distribution point on a Configuration Manager 2007 server share is eligible for upgrade. However, when a server share exists on the secondary site server, the secondary site and any shared distribution points on that computer are not eligible for upgrade. This is because the server share is treated as an additional site system object when the process attempts to uninstall the secondary site, and this process cannot uninstall this object. In this scenario, you can enable a standard distribution point on the secondary site server and then redistribute the content to that standard distribution point. This process does not use network bandwidth, and when finished, you can uninstall the distribution point on the server share, remove the server share, and then upgrade the distribution point and secondary site.  
 
@@ -152,7 +137,7 @@ If you decide not to upgrade a shared distribution point, you can still install 
 > [!WARNING]  
 >  When you view shared distribution points in the Configuration Manager console, there is no visible indication that a shared distribution point is on a remote site system server or on the secondary site server.  
 
- When you have a secondary site in a remote network location that is used primarily to control the deployment of content to that remote location, consider upgrading secondary sites that have a shared distribution point. Because you can set up bandwidth control for when you distribute content to a System Center Configuration Manager distribution point, you can often upgrade a secondary site to a distribution point, set up the distribution point for bandwidth controls, and avoid installing a secondary site in that network location in the destination hierarchy.  
+ When you have a secondary site in a remote network location that is used primarily to control the deployment of content to that remote location, consider upgrading secondary sites that have a shared distribution point. Because you can set up bandwidth control for when you distribute content to a Configuration Manager current branch distribution point, you can often upgrade a secondary site to a distribution point, set up the distribution point for bandwidth controls, and avoid installing a secondary site in that network location in the destination hierarchy.  
 
  The process to upgrade a shared distribution point on a secondary site server is the same as any other shared distribution point upgrade. Content is copied and converted to the single instance store in use by the destination hierarchy. However, when you upgrade a shared distribution point that is on a secondary site server, the upgrade process also uninstalls the management point (if present) and then uninstalls the secondary site from the server. The result is that the secondary site is removed from the Configuration Manager 2007 hierarchy. To uninstall the secondary site, Configuration Manager uses the account that is set up to gather data from the source site.  
 
@@ -160,7 +145,7 @@ If you decide not to upgrade a shared distribution point, you can still install 
 
  For more about how to upgrade a shared distribution point, see [Plan to upgrade Configuration Manager 2007 shared distribution points](#Planning_to_Upgrade_DPs).  
 
-##  <a name="BKMK_ReassignDistPoint"></a> Plan to reassign System Center Configuration Manager distribution points  
+##  <a name="BKMK_ReassignDistPoint"></a> Plan to reassign Configuration Manager distribution points  
  When you migrate from a supported version of System Center 2012 Configuration Manager to a hierarchy of the same version, you can reassign a shared distribution point from the source hierarchy to a site in the destination hierarchy. This is like the concept of upgrading a Configuration Manager 2007 distribution point to become a distribution point in the destination hierarchy. You can reassign distribution points from primary sites and secondary sites. The action to reassign a distribution point removes the distribution point from the source hierarchy and makes the computer and its distribution point a site system server of the site that you select in the destination hierarchy.  
 
  When you reassign a distribution point, you do not have to redistribute migrated content that was hosted on the source site distribution point. Additionally, unlike the upgrade of a Configuration Manager 2007 distribution point, reassignment of a distribution point does not require additional disk space on the distribution point computer. This is because beginning with System Center 2012 Configuration Manager, distribution points use the single instance store format for content. The content on the distribution point computer does not need to be converted when the distribution point is reassigned between hierarchies.  
@@ -176,14 +161,14 @@ To identify distribution points that are eligible for reassignment in the Config
 ###  <a name="BKMK_ReassignProcess"></a> Distribution point reassignment process  
  You can use the Configuration Manager console to reassign distribution points that you have shared from an active source hierarchy. When you reassign a shared distribution point, the distribution point is uninstalled from its source site and then installed as a distribution point that is attached to a primary or secondary site that you specify in the destination hierarchy.  
 
- To reassign the distribution point, the destination hierarchy uses the Source Site Access Account that is set up to gather data from the SMS Provider of the source site. For information about required permissions and additional prerequisites, see [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
+ To reassign the distribution point, the destination hierarchy uses the Source Site Access Account that is set up to gather data from the SMS Provider of the source site. For information about required permissions and additional prerequisites, see [Prerequisites for migration](../../core/migration/prerequisites-for-migration.md).  
 
 ## Migrate multiple shared distribution points at the same time
 Beginning with version 1610, you can use **Reassign Distribution point** to have Configuration Manager process in parallel the reassignment of up to 50 shared distribution points at the same time. This includes shared distribution points from supported source sites that run:  
 - Configuration Manager 2007
 - System Center 2012 Configuration Manager
 - System Center 2012 R2 Configuration Manager
-- System Center Configuration Manager (Current Branch)
+- Configuration Manager (current branch)
 
 When you reassign distribution points, each distribution point must qualify to be either upgraded or reassigned. The name of the action and process involved (upgrade or reassign) depends on which version of Configuration Manager the source site runs. The end results for both actions are the same: the distribution point is assigned to one of your Current Branch sites with its content in place.
 

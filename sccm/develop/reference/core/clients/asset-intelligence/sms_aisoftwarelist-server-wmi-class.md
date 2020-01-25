@@ -9,10 +9,11 @@ ms.assetid: d00d2f8e-5c03-4f71-8c0f-79445be73374
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_AISoftwareList Server WMI Class
-The `SMS_AISoftwareList` Windows Management Instrumentation (WMI) class, in System Center Configuration Manager, contains all the known software titles in the Asset Intelligence catalog.  
+The `SMS_AISoftwareList` Windows Management Instrumentation (WMI) class, in Configuration Manager, contains all the known software titles in the Asset Intelligence catalog.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -110,7 +111,7 @@ Class SMS_AISoftwareList : SMS_BaseClass
 
  Qualifiers: None  
 
- This method/property has been removed or deprecated in System Center Configuration Manager SP1. Use `SoftwareCount` instead.  
+ This method/property has been removed or deprecated in Configuration Manager SP1. Use `SoftwareCount` instead.  
 
  This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
 
@@ -179,7 +180,7 @@ Class SMS_AISoftwareList : SMS_BaseClass
 
  A Microsoft generated GUID identifying this software title.  
 
- This method/property has been removed or deprecated in System Center Configuration Manager SP1.  
+ This method/property has been removed or deprecated in Configuration Manager SP1.  
 
  `SoftwareKey`  
  Data type: `String`  
@@ -201,7 +202,7 @@ Class SMS_AISoftwareList : SMS_BaseClass
 
  An automatically generated hash composed of the Name, Publisher, and Version of the software title.  
 
- This method/property has been removed or deprecated in System Center Configuration Manager SP1.  
+ This method/property has been removed or deprecated in Configuration Manager SP1.  
 
  `State`  
  Data type: `UInt32`  

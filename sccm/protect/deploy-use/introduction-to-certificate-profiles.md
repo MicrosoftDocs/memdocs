@@ -10,7 +10,8 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Introduction to certificate profiles in Configuration Manager

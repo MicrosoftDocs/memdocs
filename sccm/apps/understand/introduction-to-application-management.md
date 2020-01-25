@@ -10,12 +10,13 @@ ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Introduction to application management in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 In this article, you'll learn the basics before you start working with Configuration Manager applications.  
 
@@ -38,7 +39,7 @@ For example, your company has a line-of-business application called Astoria. The
 
 - Windows Installer package for full functionality on Windows 10 devices
 - An App-V package for use in the terminal server farm
-- An Android app package for mobile users  
+- An web app for mobile users  
 
 You create a single application for Astoria in Configuration Manager. The application defines the high-level metadata about the app that's common across all installation methods and platforms. You then create three deployment types for the available installation methods, and deploy the application to all users. Based on the requirements and other configurations on the deployment types, Configuration Manager determines the right method in each use case.
 
@@ -140,19 +141,11 @@ Configuration Manager lets you deploy the following app types:
 
 - macOS  
 
-Additionally, when you manage devices through Microsoft Intune or Configuration Manager on-premises device management, manage these further app types:  
+Additionally, when you manage devices through Configuration Manager [on-premises device management](/configmgr/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure), manage these further app types:  
 
 - Windows Phone app package (xap)  
 
 - Windows Phone app package in the Microsoft Store  
-
-- App package for iOS (ipa)  
-
-- App Package for iOS from App Store  
-
-- App package for Android (apk)  
-
-- App package for Android on Google Play  
 
 - Windows Installer through MDM (msi)  
 

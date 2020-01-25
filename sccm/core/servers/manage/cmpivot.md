@@ -10,14 +10,15 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart 
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # CMPivot for real-time data in Configuration Manager
 
 <!--1358456-->
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager has always provided a large centralized store of device data, which customers use for reporting purposes. The site typically collects this data on a weekly basis. Starting in version 1806, CMPivot is a new in-console utility that now provides access to real-time state of devices in your environment. It immediately runs a query on all currently connected devices in the target collection and returns the results. Then filter and group this data in the tool. By providing real-time data from online clients, you can more quickly answer business questions, troubleshoot issues, and respond to security incidents.
 

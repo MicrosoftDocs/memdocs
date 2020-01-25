@@ -10,13 +10,14 @@ ms.assetid: deb470e3-6f6b-4ccf-b3d8-1598d79d3490
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ROBOTS: NOINDEX
 ---
 
 # Recommended antivirus exclusions for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article contains recommendations that may help an administrator determine the cause of potential instability on a computer that is running a supported version of Configuration Manager site servers, site systems, and clients when it's used together with antivirus software.
 
@@ -92,7 +93,7 @@ To prevent such problems, we recommend that you add the following real-time prot
 
 ### Process exclusions
 
-Process exclusions are necessary only if aggressive antivirus programs consider System Center Configuration Manager program files (.exe files) to be high-risk processes.
+Process exclusions are necessary only if aggressive antivirus programs consider Configuration Manager program files (.exe files) to be high-risk processes.
 
 - *ConfigMgr Installation Folder*\bin\64\Smsexec.exe
 - Either of the following processes:

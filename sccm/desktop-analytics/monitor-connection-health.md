@@ -10,7 +10,8 @@ ms.assetid: 1f4e26f7-42f2-40c8-80cf-efd405349c6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Monitor connection health
@@ -51,7 +52,7 @@ This tile displays the following basic information about the connection from Con
 
 This tile shows when Configuration Manager syncs with the Desktop Analytics cloud service, and how many devices it syncs.
 
-- **Devices synced**: The number of unique devices that Configuration Manager sent to Desktop Analytics. The service includes these devices in the currently visible snapshot.
+- **Devices synced**: The number of eligible devices that Configuration Manager sent to Desktop Analytics. The service includes these devices in the currently visible snapshot.
 
 - **Last service sync**: The same as the **Last updated** time in the Desktop Analytics portal.
 
@@ -141,7 +142,7 @@ To see a specific list of devices by status, start with the **Connection Health*
 
 These columns correspond to the key [prerequisites](/sccm/desktop-analytics/overview#prerequisites) for devices to communicate with Desktop Analytics.
 
-![Screenshot of Properly Enrolled device list](media/sccm-device-list-properly-enrolled.png)
+![Screenshot of Properly Enrolled device list](media/device-list-properly-enrolled.png)
 
 Select a device to see the full list of available properties in the detail pane. You can also add any of these properties as columns to the device list.
 

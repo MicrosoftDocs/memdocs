@@ -10,12 +10,13 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Accounts used in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the following information to identify the Windows groups, accounts, and SQL objects that are used in Configuration Manager, how they are used, and any requirements.  
 
@@ -344,7 +345,7 @@ For more information, see [Install site system roles for on-premises MDM](/sccm/
 
 ### Exchange Server connection account  
 
-The site server uses the **Exchange Server connection account** to connect to the specified Exchange Server. It uses this connection to find and manage mobile devices that connect to Exchange Server. This account requires Exchange PowerShell cmdlets that provide the required permissions to the Exchange Server computer. For more information about the cmdlets, see [Manage mobile devices with Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
+The site server uses the **Exchange Server connection account** to connect to the specified Exchange Server. It uses this connection to find and manage mobile devices that connect to Exchange Server. This account requires Exchange PowerShell cmdlets that provide the required permissions to the Exchange Server computer. For more information about the cmdlets, see [Install and configure the Exchange connector](/configmgr/mdm/deploy-use/install-configure-exchange-connector).  
 
 
 ### Management point connection account  

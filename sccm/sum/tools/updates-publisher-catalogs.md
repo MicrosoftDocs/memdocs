@@ -10,7 +10,8 @@ ms.assetid: 887f8029-1a3a-423c-a9c1-31dc0d693386
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Manage software update catalogs in Updates Publisher
 

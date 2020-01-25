@@ -9,7 +9,8 @@ ms.assetid: 67b81f44-b468-492c-bd79-f4f396861577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SetPowerManagementSettings Method in Class CCM_PowerManagementSettings
 The `SetPowerManagementSettings` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that sets power management settings on a client.   

@@ -9,7 +9,8 @@ ms.assetid: e35c4bae-d916-4e11-82a2-09643dd239f3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddUpdateContent Method in Class SMS_SoftwareUpdatesPackage
 The `AddUpdateContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, downloads content to a software update package and replicates the content to distribution points.  

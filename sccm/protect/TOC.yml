@@ -1,5 +1,5 @@
-- name: Protect data and infrastructure
-  href: understand\protect-data-and-site-infrastructure.md
+- name: Protect data and infrastructure documentation
+  href: index.yml
 - name: Understand and explore
   items:
   - name: Overview
@@ -16,18 +16,12 @@
       href: plan-design/prerequisites-for-certificate-profiles.md
     - name: Certificate template permissions for certificate profiles
       href: plan-design/planning-for-certificate-template-permissions.md
-  - name: Plan for email, Wi-Fi, and VPN profiles
-    items:
-    - name: Email profile prerequisites
-      href: plan-design/prerequisites-for-email-profiles.md
-    - name: Wi-Fi and VPN profile prerequisites
-      href: plan-design/prerequisites-for-wifi-vpn-profiles.md
+  - name: Wi-Fi and VPN profile prerequisites
+    href: plan-design/prerequisites-for-wifi-vpn-profiles.md
   - name: Security and privacy
     items:
     - name: Wi-Fi and VPN profiles
       href: plan-design/security-and-privacy-for-wifi-vpn-profiles.md
-    - name: Email profiles
-      href: plan-design/security-and-privacy-for-email-profiles.md
     - name: Certificate profiles
       href: plan-design/security-and-privacy-for-certificate-profiles.md
 - name: Deploy and use
@@ -84,10 +78,10 @@
       href: deploy-use/endpoint-protection-client-faq.md
   - name: BitLocker management
     items:
-    - name: Deploy BitLocker management
-      href: deploy-use/bitlocker/deploy-management-agent.md
     - name: Encrypt recovery data
       href: deploy-use/bitlocker/encrypt-recovery-data.md
+    - name: Deploy BitLocker management
+      href: deploy-use/bitlocker/deploy-management-agent.md
     - name: Set up BitLocker portals
       href: deploy-use/bitlocker/setup-websites.md
     - name: Customize the self-service portal

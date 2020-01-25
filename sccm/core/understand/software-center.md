@@ -10,7 +10,8 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Software Center user guide
@@ -33,7 +34,7 @@ For the simplest method to start Software Center on a Windows 10 computer, press
 
 If you navigate the Start menu, look under the **Microsoft Endpoint Manager** group for the **Software Center** icon.
 
-![Microsoft Endpoint start menu icons](media/microsoft-endpoint-start-menu.png)
+![Microsoft Endpoint Manager start menu icons](media/microsoft-endpoint-manager-start-menu.png)
 
 > [!NOTE]
 > The Start menu path changed in version 1910. In version 1906 and earlier, the folder name is **Microsoft System Center**. When you update Configuration Manager to version 1910 or later, make sure to update any internal documentation that you maintain to include this new location.

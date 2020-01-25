@@ -10,12 +10,13 @@ ms.assetid: bf24fb83-521f-4a41-ab8e-df70a6c10e78
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Application Deployment Policy
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 ## Policy Creation
 

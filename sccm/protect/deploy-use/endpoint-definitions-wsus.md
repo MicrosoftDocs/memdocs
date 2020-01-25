@@ -10,12 +10,13 @@ author: mestew
 ms.author: mstewart
 description: Learn how to configure Windows Server Updates Services to auto-approve definition updates.
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Enable Endpoint Protection malware definitions to download from Windows Server Update Services (WSUS) for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
  If you use WSUS to keep your antimalware definitions up to date, you can configure it to auto-approve definition updates. Although using Configuration Manager software updates is the recommended method to keep definitions up to date, you can also configure WSUS as a method to allow users to manually initiate definition updated. Use the following procedures to configure WSUS as a definition update source.
 

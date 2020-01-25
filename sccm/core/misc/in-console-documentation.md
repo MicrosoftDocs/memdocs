@@ -2,7 +2,7 @@
 title: In-console documentation
 titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
-ms.date: 11/07/2019
+ms.date: 01/13/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,7 +11,6 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
 ---
 
 <!-- 
@@ -23,7 +22,7 @@ ms.collection: M365-identity-device-management
 
 # Microsoft Endpoint Configuration Manager documentation
 
-*Last update: November 7, 2019*
+*Last update: January 13, 2020*
 
 This content can assist you in learning and supporting Configuration Manager.
 
@@ -38,36 +37,35 @@ For more information, see the following articles:
 
 A curated list of important articles.
 
+- [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview)
 - [Co-management for Windows 10 devices](https://docs.microsoft.com/configmgr/comanage/overview)  
 - [CMPivot](https://docs.microsoft.com/configmgr/core/servers/manage/cmpivot)  
-- [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview)
-- [Create and run PowerShell scripts](https://docs.microsoft.com/configmgr/apps/deploy-use/create-deploy-scripts)  
-- [Phased deployments](https://docs.microsoft.com/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)  
+- [Plan for BitLocker management](https://docs.microsoft.com/configmgr/protect/plan-design/bitlocker-management)  
+- [Microsoft Edge management](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge)  
 - [Manage Office 365 ProPlus updates](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates)  
 - [Fundamentals of Configuration Manager current branch and Windows as a service](https://docs.microsoft.com/configmgr/core/understand/configuration-manager-and-windows-as-service)
 - [Optimize Windows 10 update delivery with Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/optimize-windows-10-update-delivery)
 - [Technical preview releases](https://docs.microsoft.com/configmgr/core/get-started/technical-preview)
 - [Use cloud services to supplement on-premises infrastructure](https://docs.microsoft.com/configmgr/core/understand/use-cloud-services)
-- [Plan for the cloud management gateway](https://docs.microsoft.com/configmgr/core/clients/manage/plan-cloud-management-gateway)
 
 ## Trending
 
-The most popular articles between October 1 and October 31, 2019.
+The most popular articles between December 1 and December 31, 2019.
 
 | Page views | Title |
 |------------|-------|
-| 22102 | [How to enable TLS 1.2](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 20810 | [Log file reference](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
-| 15005 | [What's new in version 1906](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1906) |
-| 14654 | [Ports used for connections](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
-| 13433 | [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
-| 13241 | [Deploy clients to Windows](https://docs.microsoft.com/configmgr/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 9883 | [Software Center user guide](https://docs.microsoft.com/configmgr/core/understand/software-center) |
-| 9763 | [Updates and servicing](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
-| 9613 | [Client settings](https://docs.microsoft.com/configmgr/core/clients/deploy/about-client-settings) |
-| 9535 | [Support for Windows 10](https://docs.microsoft.com/configmgr/core/plan-design/configs/support-for-windows-10) |
+| 20311 | [What's new in version 1910](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1910) |
+| 14109 | [Log file reference](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
+| 12971 | [How to enable TLS 1.2](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 11896 | [Updates and servicing](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
+| 11848 | [Ports used for connections](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
+| 10420 | [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
+| 10044 | [Deploy clients to Windows](https://docs.microsoft.com/configmgr/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 8726 | [Support for Windows 10](https://docs.microsoft.com/configmgr/core/plan-design/configs/support-for-windows-10) |
+| 8282 | [Co-management for Windows 10 devices](https://docs.microsoft.com/configmgr/comanage/overview) |
+| 8081 | [Software Center user guide](https://docs.microsoft.com/configmgr/core/understand/software-center) |
 
-The [Configuration Manager hub page](https://docs.microsoft.com/configmgr/) received 46,344 page views in this time period.
+The [Configuration Manager hub page](https://docs.microsoft.com/configmgr/) received 23,792 page views in this time period.
 
 ## Recently updated
 
@@ -75,36 +73,41 @@ Articles with a recent and significant update.
 
 | Last reviewed | Title |
 |---------------|-------|
-| 10/30/2019 | [Enroll devices in Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/enroll-devices) |
-| 10/28/2019 | [Enable data sharing](https://docs.microsoft.com/configmgr/desktop-analytics/enable-data-sharing) |
-| 10/23/2019 | [What's new in Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/whats-new) |
-| 10/23/2019 | [Compatibility assessment](https://docs.microsoft.com/configmgr/desktop-analytics/compat-assessment) |
-| 10/22/2019 | [Product and licensing FAQ](https://docs.microsoft.com/configmgr/core/understand/product-and-licensing-faq) |
-| 10/18/2019 | [Technical preview 1910](https://docs.microsoft.com/configmgr/core/get-started/2019/technical-preview-1910) |
-| 10/18/2019 | [Support for Windows 10](https://docs.microsoft.com/configmgr/core/plan-design/configs/support-for-windows-10) |
-| 10/17/2019 | [Software updates maintenance](https://docs.microsoft.com/configmgr/sum/deploy-use/software-updates-maintenance) |
-| 10/14/2019 | [Deprecated features](https://docs.microsoft.com/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) |
-| 10/14/2019 | [Get support for Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/get-support) |
+| 12/20/2019 | [Release notes](https://docs.microsoft.com/configmgr/core/servers/deploy/install/release-notes) |
+| 12/20/2019 | [Checklist for 1910](https://docs.microsoft.com/configmgr/core/servers/manage/checklist-for-installing-update-1910) |
+| 12/17/2019 | [Optimize Windows 10 update delivery](https://docs.microsoft.com/configmgr/sum/deploy-use/optimize-windows-10-update-delivery) |
+| 12/13/2019 | [How to enable Transport Layer Security (TLS) 1.2 on clients](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 12/13/2019 | [Enable Transport Layer Security (TLS) 1.2 on the site servers and remote site systems](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2-server) |
+| 12/13/2019 | [Common issues when enabling Transport Layer Security (TLS) 1.2](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2-troubleshoot) |
+| 12/13/2019 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 12/12/2019 | [Desktop Analytics data privacy](https://docs.microsoft.com/configmgr/desktop-analytics/privacy) |
+| 12/12/2019 | [Technical preview 1912](https://docs.microsoft.com/configmgr/core/get-started/2019/technical-preview-1912) |
+| 12/6/2019 | [Manage Office 365 ProPlus updates](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates) |
 
 ## Troubleshooting articles
 
 Guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
 
+- [Troubleshoot application deployments](https://docs.microsoft.com/configmgr/apps/understand/app-deployment-technical-reference)
 - [Troubleshooting PXE boot issues](https://support.microsoft.com/help/4468612)
 - [Understand and troubleshoot Updates and Servicing in Configuration Manager](https://support.microsoft.com/help/4490424)
 - [Troubleshooting software update synchronization issues](https://support.microsoft.com/help/10059)
 - [Understanding and troubleshooting content distribution](https://support.microsoft.com/help/4482728)
-- [Understanding and troubleshooting the Microsoft Store for Business integration](https://support.microsoft.com/help/4010214)
+- [Understanding and troubleshooting the Microsoft Store for Business integration](https://docs.microsoft.com/configmgr/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration)
 - [Software update management troubleshooting](https://support.microsoft.com/help/10680)
 - [Troubleshooting the Install Application task sequence step](https://support.microsoft.com/help/18408/)
+- [Troubleshoot Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/troubleshooting)
+- [Troubleshoot Microsoft Connected Cache](https://docs.microsoft.com/configmgr/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache)
 
 ## New and updated support articles
 
-Support articles that are new or updated between between October 25 and November 27, 2019.
+Support articles that are new or updated between between October 25 and December 23, 2019.
 
 - [KB 4528414: Configuration Manager console displays out-of-date Endpoint Protection Definition version and last update time](https://support.microsoft.com/help/4528414/)
 - [KB 4529905: Delays in content distribution in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4529905)
 - [KB 4529827: Configuration Manager clients incorrectly detect co-management state](https://support.microsoft.com/help/4529827)
-
+- [KB 4529824: Message Processing Engine update for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4529824)
+- [KB 4535819: Update for Microsoft Endpoint Configuration Manager version 1910, early update ring](https://support.microsoft.com/help/4535819)
+- [KB 4535776: Summary of changes in Microsoft Endpoint Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4535776)
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.  

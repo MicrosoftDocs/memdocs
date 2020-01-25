@@ -10,12 +10,13 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Deploy applications with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Create or simulate a deployment of an application to a device or user collection in Configuration Manager. This deployment gives instructions to the Configuration Manager client on how and when to install the software.
 
@@ -47,7 +48,6 @@ You can also simulate an application deployment. This simulation tests the appli
 > - [Scheduling](#bkmk_deploy-sched)
 > - [User Experience](#bkmk_deploy-ux)
 > - [Alerts](#bkmk_deploy-alerts)
-> - [iOS: App Configuration Policies](#bkmk_deploy-ios)
 
 
 ### <a name="bkmk_deploy-general"></a> Deployment **General** information
@@ -180,12 +180,6 @@ On the **User Experience** page, specify information about how users can interac
 ### <a name="bkmk_deploy-alerts"></a> Deployment **Alerts**
 
 On the **Alerts** page, configure how Configuration Manager generates alerts for this deployment. If you're also using System Center Operations Manager, configure its alerts as well. You can only configure some alerts for required deployments. 
-
-
-### <a name="bkmk_deploy-ios"></a> iOS: **App Configuration Policies**
-
-When deploying an iOS deployment type, you'll also see the **App Configuration Policies** page. If you've already created an iOS app configuration policy, click **New** to associate this deployment with the policy. For more information about this type of policy, see [Configure iOS apps with app configuration policies](/sccm/apps/deploy-use/configure-ios-apps-with-app-configuration-policies).
-
 
 
 ## <a name="bkmk_phased"></a> Create a phased deployment

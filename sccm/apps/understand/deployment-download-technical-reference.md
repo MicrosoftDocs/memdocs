@@ -10,12 +10,13 @@ ms.assetid: 41c29a07-9bf6-4ec4-b3f2-1c05e001eff7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Application Download in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Before you continue, please review [Application deployment client components](/sccm/apps/understand/client-components-technical-reference) to understand DCM and CI Agent job processing.
 

@@ -10,12 +10,13 @@ ms.assetid: ddef4d2a-f481-4020-9ddd-9cca5f9795cb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Enable Endpoint Protection malware definitions to download from a network share
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
  You can manually download the latest definition updates from Microsoft and then configure clients to download these definitions from a shared folder on the network. Users can also initiate definition updates when you use this update source.
 
@@ -30,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 2.  In the **Assets and Compliance** workspace, expand **Endpoint Protection**, and then click **Antimalware Policies**.
 
-3.  Open the properties page of the **Default Antimalware Policy** or create a new antimalware policy. For more information about how to create antimalware policies, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
+3.  Open the properties page of the **Default Antimalware Policy** or create a new antimalware policy. For more information about how to create antimalware policies, see [How to create and deploy antimalware policies for Endpoint Protection](endpoint-antimalware-policies.md).
 
 4.  In the **Security Intelligence updates** section of the antimalware properties dialog box, click **Set Source**.
     - The **Definition updates** section was renamed to **Security Intelligence updates** starting in Configuration Manager version 1902.

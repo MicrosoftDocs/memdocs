@@ -9,10 +9,11 @@ ms.assetid: 3becb7a9-cf6b-432b-85e7-a0087df0dbb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create Software Distribution Packages, Programs, and Advertisements for Mobile Devices
-System Center Configuration Manager device management enables mobile device software distribution to mobile devices. Packages, programs, and advertisements for mobile devices are much the same as those for computer clients. For detailed information about creating packages, programs and advertisements, see the following topics:  
+Configuration Manager device management enables mobile device software distribution to mobile devices. Packages, programs, and advertisements for mobile devices are much the same as those for computer clients. For detailed information about creating packages, programs and advertisements, see the following topics:  
 
 -   [How to Create a Package](../../develop/core/servers/configure/how-to-create-a-package.md)  
 
@@ -24,7 +25,7 @@ System Center Configuration Manager device management enables mobile device soft
 >  This topic only applies to the Mobile Device Legacy Client. For addition information on the Mobile Device Legacy Client platforms, see the Mobile Device Legacy Client section of the [Supported Configurations for Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=272885).  
 
 ## Packages  
- Packages for mobile devices in System Center Configuration Manager generally represent a software application to be installed on a mobile device, but they might also contain individual files, updates, or even an individual command.  
+ Packages for mobile devices in Configuration Manager generally represent a software application to be installed on a mobile device, but they might also contain individual files, updates, or even an individual command.  
 
 ### Configuration Packages  
  Configuration packages are packages specifically for mobile devices. These packages contain one or more configuration items. Configuration items are collections of settings for one or more mobile device platforms.  

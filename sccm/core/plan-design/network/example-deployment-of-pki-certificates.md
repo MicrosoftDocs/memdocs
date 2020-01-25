@@ -10,12 +10,13 @@ ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Step-by-step example deployment of the PKI certificates for Configuration Manager: Windows Server 2008 certification authority
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This step-by-step example deployment, which uses a Windows Server 2008 certification authority (CA), has procedures that show you how to create and deploy the public key infrastructure (PKI) certificates that Configuration Manager uses. These procedures use an enterprise certification authority (CA) and certificate templates. The steps are appropriate for a test network only, as a proof of concept.  
 
@@ -219,16 +220,15 @@ This certificate deployment has the following procedures:
 
 9. Select the **Enroll** permission for this group, and do not clear the **Read** permission.  
 
-    > [!NOTE]
-    > Ensure that **Minimum key size** on the **Cryptography** tab has been set to **2048**
+10. Choose the **Cryptography** tab and ensure that **Minimum key size** has been set to **2048**.
 
-10. Choose **OK**, and then close **Certificate Templates Console**.  
+11. Choose **OK**, and then close **Certificate Templates Console**.  
 
-11. In the Certification Authority console, right-click **Certificate Templates**, choose **New**, and then choose **Certificate Template to Issue**.  
+12. In the Certification Authority console, right-click **Certificate Templates**, choose **New**, and then choose **Certificate Template to Issue**.  
 
-12. In the **Enable Certificate Templates** dialog box, choose the new template that you just created, **ConfigMgr Cloud-Based Distribution Point Certificate**, and then choose **OK**.  
+13. In the **Enable Certificate Templates** dialog box, choose the new template that you just created, **ConfigMgr Cloud-Based Distribution Point Certificate**, and then choose **OK**.  
 
-13. If you do not have to create and issue more certificates, close **Certification Authority**.  
+14. If you do not have to create and issue more certificates, close **Certification Authority**.  
 
 ###  <a name="BKMK_clouddprequesting2008"></a> Request the custom web server certificate  
  This procedure requests and then installs the custom web server certificate on the member server that will run the site server.  

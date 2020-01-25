@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Integrate with Windows Update for Business
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Windows Update for Business (WUfB) allows you to keep Windows 10-based devices in your organization always up-to-date with the latest security defenses and Windows features when these devices connect directly to the Windows Update (WU) service. Configuration Manager can differentiate between Windows 10 computers that use WUfB and WSUS for getting software updates.  
 
@@ -31,9 +32,7 @@ Windows Update for Business (WUfB) allows you to keep Windows 10-based devices i
 
     -   Troubleshooting overall compliance status is difficult  because **unknown** status was only for the clients that hadn't reported scan status back from WSUS. Now it also includes Configuration Manager clients that receive updates from WU.  
 
-    -   Conditional access (for corporate resources) based on update compliance status won't work as expected for clients that receive updates from WU because they would never meet compliance from Configuration Manager.  
-
-    -   Definition Updates compliance is part of overall update compliance reporting and won't work as expected either.  Definition update compliance is also part of conditional access evaluation  
+    -   Definition Updates compliance is part of overall update compliance reporting and won't work as expected either.
 
 -   Overall Endpoint Protection reporting for Defender based on update compliance status won't return accurate results because of the missing scan data.  
 

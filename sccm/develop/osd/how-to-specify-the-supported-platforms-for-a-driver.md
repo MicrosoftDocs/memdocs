@@ -9,10 +9,11 @@ ms.assetid: 1d0c07a0-dbab-4279-9fa1-114a3d992a24
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Specify the Supported Platforms for a Driver
-In System Center Configuration Manager, you specify the supported platforms of a driver in the `SDMPackageXML` property XML of the driver's [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) object. The XML contains a node `PlatformApplicabilityConditions` to which you add `PlatformApplicabilityCondition` elements for each platform the driver supports.  
+In Configuration Manager, you specify the supported platforms of a driver in the `SDMPackageXML` property XML of the driver's [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) object. The XML contains a node `PlatformApplicabilityConditions` to which you add `PlatformApplicabilityCondition` elements for each platform the driver supports.  
 
 > [!NOTE]
 >  You should add only platforms that are listed in a [SMS_SupportedPlatforms Server WMI Class](../../develop/reference/core/servers/configure/sms_supportedplatforms-server-wmi-class.md) object. Drivers can only be conditioned for major operating system releases, that is, it is not possible to target drivers at service packs.  
@@ -221,7 +222,7 @@ public void AddSupportedPlatform(
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
 |`driver`<br /><br /> `objDriver`|-   Managed: `IResultObject`<br />-   VBScript:  [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|-   A valid [SMS_Driver](../../develop/reference/osd/sms_driver-server-wmi-class.md) object. For more information, see [How to Import a Windows Driver Described by an INF File into Configuration Manager](../../develop/osd/how-to-import-a-windows-driver-described-by-an-inf-file.md).|  
-|`displayName`<br /><br /> `sDisplayName`|-   Managed: `String`<br />-   VBScript: `String`|The display name for the condition shown in the System Center Configuration Manager console.|  
+|`displayName`<br /><br /> `sDisplayName`|-   Managed: `String`<br />-   VBScript: `String`|The display name for the condition shown in the Configuration Manager console.|  
 |`maxVersion`<br /><br /> `sMaxVersion`|-   Managed: `String`<br />-   VBScript: `String`|The maximum supported version.|  
 |`minVersion`<br /><br /> `sMinVersion`|-   Managed: `String`<br />-   VBScript: `String`|The minimum supported version.|  
 |`name`<br /><br /> `sName`|-   Managed: `String`<br />-   VBScript: `String`|The operating system name.|  

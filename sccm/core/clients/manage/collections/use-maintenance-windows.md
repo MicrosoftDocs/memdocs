@@ -1,7 +1,7 @@
 ---
 title: "Use maintenance windows"
 titleSuffix: "Configuration Manager"
-description: "Use collections and maintenance windows to effectively manage clients in System Center Configuration Manager."
+description: "Use collections and maintenance windows to effectively manage clients in Configuration Manager."
 ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,11 +10,12 @@ ms.assetid: 4564ebcb-41a8-4eb0-afdb-2e1f0795cfa2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# How to use maintenance windows in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# How to use maintenance windows in Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Maintenance windows enable you to define a time when Configuration Manager operations can be carried out on a device collection. You use maintenance windows to help ensure that client configuration changes occur during periods that don't affect productivity. Starting in Configuration Manager version 1806, your users can see when their next maintenance window is from the **Installation status** tab in the **Software Center**. <!--1358131-->
 

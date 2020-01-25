@@ -9,7 +9,8 @@ ms.assetid: 574ffb2f-b576-473e-b60f-8caf7f635f96
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SendNotifySuccessToCTM Method
 The **SendNotifySuccessToCTM** method notifies Content Transfer Manager of the success of a job.  

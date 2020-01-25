@@ -10,12 +10,13 @@ ms.assetid: 753d2681-ea72-4f47-94d1-ac10188d9d5b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Content Ownership Tool
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Content Ownership Tool is one of the [Configuration Manager tools](/sccm/core/support/tools). It changes ownership of orphaned packages in Configuration Manager. Orphaned packages don't have an owning site server. Packages can become orphaned by removing the site server while they're still owned by this site server.
 

@@ -9,10 +9,11 @@ ms.assetid: 3c397b79-1209-4fe3-8c48-b3a4970faba7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Date and Time Formats
-Actions, in System Center Configuration Manager, that include date and time values are common, such as get current date and time, 50 days from today is what date?, or find out what day of the week falls on a certain date. When you write queries or compose reports from information that is stored in the Configuration Manager site database, you can express the date and time in any valid SQL format. An example is any expression that has a SQL Server `datetime` data type or that can be converted implicitly, such as an appropriately formatted character string (for example, “1998.10.31��?).  
+Actions, in Configuration Manager, that include date and time values are common, such as get current date and time, 50 days from today is what date?, or find out what day of the week falls on a certain date. When you write queries or compose reports from information that is stored in the Configuration Manager site database, you can express the date and time in any valid SQL format. An example is any expression that has a SQL Server `datetime` data type or that can be converted implicitly, such as an appropriately formatted character string (for example, “1998.10.31��?).  
 
  The times that are stored in the Configuration Manager site database can be local or in Coordinated Universal Time (UTC). Status Message Viewer can convert to local time, but queries and reports cannot. What you see might be seven hours later than expected, if local time is Pacific Daylight time. Therefore, the user must be aware of the following:  
 
@@ -60,7 +61,7 @@ Actions, in System Center Configuration Manager, that include date and time valu
 |–|13 or 113|–|dd mon yyyy<br /><br /> hh:mi:ss:mmm (24 h)|  
 |14|114|–|hh:mi:ss:mmm (24 h)|  
 
- Besides full `datetime` formats, you can also use `datepart` formats, which are also valid for Query Builder or for writing reports from the System Center Configuration Manager site database. `Datepart` formats provide only part of the full `datetime` format (for example, the year or just the day of the month). The following table lists valid `datepart` formats.  
+ Besides full `datetime` formats, you can also use `datepart` formats, which are also valid for Query Builder or for writing reports from the Configuration Manager site database. `Datepart` formats provide only part of the full `datetime` format (for example, the year or just the day of the month). The following table lists valid `datepart` formats.  
 
 |Datepart value|Abbreviations|Limits|  
 |--------------------|-------------------|------------|  

@@ -9,10 +9,11 @@ ms.assetid: 5887b585-618e-42ed-a707-d374d0da4b0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Add a Windows Driver to a Configuration Manager Boot Image Package
-In System Center Configuration Manager, you add a Windows driver to an operating system deployment boot image package by adding a reference to the required driver in the [SMS_BootImagePackage Server WMI Class](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) `ReferencedDrivers` array property.  
+In Configuration Manager, you add a Windows driver to an operating system deployment boot image package by adding a reference to the required driver in the [SMS_BootImagePackage Server WMI Class](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) `ReferencedDrivers` array property.  
 
 > [!NOTE]
 >  The `ReferencedDrivers` property is an array of an embedded [SMS_Driver_Details](../../develop/reference/osd/sms_driver_details-server-wmi-class.md) object, and you can add more than one driver to the package. The objects in the array are added to the boot image package each time it is updated on the distribution point.  

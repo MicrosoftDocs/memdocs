@@ -9,10 +9,11 @@ ms.assetid: b58c5608-7db3-407f-a981-d0e411d06964
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ResolveConflict Method in Class SMS_AISoftwareList
-The `ResolveConflict` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, is used to resolve conflicts that result by creating or editing software entries, and the same software entry being created by Microsoft through the online synchronization.  
+The `ResolveConflict` Windows Management Instrumentation (WMI) class method, in Configuration Manager, is used to resolve conflicts that result by creating or editing software entries, and the same software entry being created by Microsoft through the online synchronization.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

@@ -10,12 +10,13 @@ ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Troubleshoot Windows Defender or Endpoint Protection client
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 If you come across problems with Windows Defender or Endpoint Protection, use this article to troubleshoot the following problems:  
 

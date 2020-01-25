@@ -10,7 +10,8 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Task sequence steps
@@ -1777,7 +1778,7 @@ Starting in version 1906, manage this step with the following PowerShell cmdlets
 - **Remove-CMTSStepRunTaskSequence**
 - **Set-CMTSStepRunTaskSequence**
 
-For more information, see [1906 release notes - New cmdlets](https://docs.microsoft.com/powershell/configmgr/1906-release-notes?view=sccm-ps#new-cmdlets).
+For more information, see [1906 release notes - New cmdlets](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps#new-cmdlets).
 
 ### Specifications and limitations
 

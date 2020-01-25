@@ -10,15 +10,16 @@ ms.assetid: 625bb787-6d16-47a0-8b0f-b129cd909ca3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Maintenance tasks for System Center Configuration Manager
+# Maintenance tasks for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-System Center Configuration Manager sites and hierarchies require regular maintenance and monitoring to provide services effectively and continuously. Regular maintenance ensures that the hardware, software, and Configuration Manager database continue to function correctly and efficiently. Optimal performance greatly reduces the risk of failure.  
+Configuration Manager sites and hierarchies require regular maintenance and monitoring to provide services effectively and continuously. Regular maintenance ensures that the hardware, software, and Configuration Manager database continue to function correctly and efficiently. Optimal performance greatly reduces the risk of failure.  
 
- To set up Alerts and use the Status System to monitor the health of Configuration Manager, see [Use alerts and the status system for System Center Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md).  
+ To set up Alerts and use the Status System to monitor the health of Configuration Manager, see [Use alerts and the status system for Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md).  
 
 ## <a name="bkmk_MTs"></a> Maintenance tasks
 
@@ -106,7 +107,7 @@ After you install a Configuration Manager site, review the available maintenance
 
  Each Configuration Manager site supports maintenance tasks that help maintain the operational efficiency of the site database. By default, several maintenance tasks are enabled in each site, and all tasks support independent schedules. Maintenance tasks are set up individually for each site and apply to the database at that site. However, some tasks, like **Delete Aged Discovery Data**, affect information that is available in all sites in a hierarchy.  
 
- Only the maintenance tasks that you can set up at a site are displayed in the Configuration Manager console. For a complete list of maintenance tasks by site type, see [Reference for maintenance tasks for System Center Configuration Manager](../../../core/servers/manage/reference-for-maintenance-tasks.md).  
+ Only the maintenance tasks that you can set up at a site are displayed in the Configuration Manager console. For a complete list of maintenance tasks by site type, see [Reference for maintenance tasks for Configuration Manager](../../../core/servers/manage/reference-for-maintenance-tasks.md).  
 
  Use the following procedure to help you set up the common settings of maintenance tasks.  
 

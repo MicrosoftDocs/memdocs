@@ -6,7 +6,8 @@ ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: e67c691e-62ef-4f43-9cfb-0e957d1e7a5f
 author: aczechowski
 ms.author: aaroncz
@@ -59,5 +60,6 @@ To troubleshoot an app group deployment, use the following log files on the clie
   - *Version 1906*: Set the deployment type installation behavior to **Install for system**.
 - The following deployment options may not work: alerts, approval, phased deployment, repair.
 - You can't export or import app groups.
+- Don't include in the group any apps that require restart, or the group deployment may fail.
 - *Version 1906*: You can't deploy the app group to a user collection.
 - *Version 1906*: Users can't **Uninstall** the app group in Software Center.

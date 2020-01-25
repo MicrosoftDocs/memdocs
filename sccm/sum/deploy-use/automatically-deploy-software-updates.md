@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.collection: M365-identity-device-management
+
+
 ---
 
 #  Automatically deploy software updates  
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use an automatic deployment rule (ADR) rather than adding new updates to an existing software update group. Typically, you use ADRs to deploy monthly software updates (also known as "Patch Tuesday" updates) and for managing Endpoint Protection definition updates. If you need help to determine which deployment method is right for you, see [Deploy software updates](deploy-software-updates.md).
 

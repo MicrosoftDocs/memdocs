@@ -1,7 +1,7 @@
 ---
 title: "Software inventory security privacy"
 titleSuffix: "Configuration Manager"
-description: "Get security and privacy information for software inventory in System Center Configuration Manager."
+description: "Get security and privacy information for software inventory in Configuration Manager."
 ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,13 +10,14 @@ ms.assetid: 8e68e1fb-a8ec-4543-bb8a-cbbaf184a418
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Security and privacy for software inventory in System Center Configuration Manager
+# Security and privacy for software inventory in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-This topic contains security and privacy information for software inventory in System Center Configuration Manager.  
+This topic contains security and privacy information for software inventory in Configuration Manager.  
 
 ##  <a name="BKMK_Security_HardwareInventory"></a> Security best practices for software inventory  
  Use the following security best practices for when you collect software inventory data from clients:  

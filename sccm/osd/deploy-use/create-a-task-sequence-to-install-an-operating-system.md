@@ -10,12 +10,13 @@ ms.assetid: 217c8a0e-5112-420e-a325-2a6d75326290
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create a task sequence to install an OS
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use task sequences in Configuration Manager to automatically install an OS image on a destination computer. You create a task sequence that references a boot image used to start the destination computer, the OS image that you want to install on the destination computer, and any other additional content, such as other applications or software updates, that you want to install. Then you deploy the task sequence to a collection that contains the destination computer.  
 

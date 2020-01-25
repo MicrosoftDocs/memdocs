@@ -9,10 +9,11 @@ ms.assetid: 4149481d-d78d-422a-b342-cf7ddcf2962c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Using SMSCSTAT.DLL to Create Status Messages
-Smscstat.dll is a library of 32-bit C APIs for reporting System Center Configuration Manager status messages from an application that is running on either client computer. Smscstat.dll is only present and only functions properly on Windows 95, Windows 98, Windows NT, Windows 2000, Windows Server 2003, Windows XP, and Windows Vista computers that have the client software installed on them.  
+Smscstat.dll is a library of 32-bit C APIs for reporting Configuration Manager status messages from an application that is running on either client computer. Smscstat.dll is only present and only functions properly on Windows 95, Windows 98, Windows NT, Windows 2000, Windows Server 2003, Windows XP, and Windows Vista computers that have the client software installed on them.  
 
 ## Loading Smscstat.dll  
  Applications need to explicitly load Smscstat.dll by using the Win32 **LoadLibrary()** API. **LoadLibrary** requires the full path to Smscstat.dll.  
@@ -20,13 +21,13 @@ Smscstat.dll is a library of 32-bit C APIs for reporting System Center Configura
 |||  
 |-|-|  
 |SMS 2003 Advanced Client|%*windir*%\system32\ccm|  
-|System Center Configuration Manager client|%*windir*%\system32\ccm|  
+|Configuration Manager client|%*windir*%\system32\ccm|  
 
  The logic for finding the path on a given client is as follows:  
 
 1.  Read the registry value Local SMS Path in key HKEY_LOCAL_MACHINE\Software\Microsoft\SMS\Client\Configuration\ClientProperties.  
 
-2.  If last three characters of this path are **ccm**, then this is the Advanced Client or System Center Configuration Manager client and Smscstat.dll resides in the path retrieved.  
+2.  If last three characters of this path are **ccm**, then this is the Advanced Client or Configuration Manager client and Smscstat.dll resides in the path retrieved.  
 
 ## Accessing the Functions in Smscstat.dll  
  When Smscstat.dll has been loaded, call the Win32 API `GetProcAddress()` to retrieve function pointers to the status message functions. The three status message functions are:  

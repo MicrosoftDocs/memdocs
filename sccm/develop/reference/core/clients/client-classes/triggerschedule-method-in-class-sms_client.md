@@ -9,7 +9,8 @@ ms.assetid: a4e13dea-899a-4d9e-8e5b-60b7f81c0c45
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # TriggerSchedule Method in Class SMS_Client
 The `TriggerSchedule` method, in Configuration Manager, triggers the client to run the specified schedule.  

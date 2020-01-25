@@ -10,11 +10,12 @@ ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# About discovery methods for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# About discovery methods for Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager discovery methods find different devices on your network, devices and users from Active Directory, or users from Azure Active Directory (Azure AD). To efficiently use a discovery method, you should understand its available configurations and limitations.  
 

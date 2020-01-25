@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 12/03/2019
+ms.date: 01/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,7 +10,6 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
 # Release notes for Configuration Manager
@@ -36,6 +35,16 @@ For information about the new features introduced with different versions, see t
 
 
 ## Set up and upgrade  
+
+### Client automatic upgrade happens immediately for all clients
+
+<!-- 6040412 -->
+
+*Applies to version 1910*
+
+If your site uses [automatic client upgrade](/configmgr/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade), when you update the site to version 1910, all clients immediately upgrade after the site updates successfully. The only randomization is when clients receive the policy, which by default is every hour. For a large site with many clients, this behavior can consume a significant amount of network traffic and stress distribution points.
+
+To work around this issue, temporarily disable automatic client upgrade. Use other [client upgrade methods](/configmgr/core/clients/manage/upgrade/upgrade-clients). Microsoft will soon release a hotfix for this issue to allow you to continue to use automatic client upgrade.
 
 ### Site server in passive mode doesn't update configuration.mof
 
@@ -196,7 +205,7 @@ These **undefined** devices are **up-to-date** with the target version of the OS
 
 <!-- 5771680 -->
 
-*Applies to version 1906, 1910*
+*Applies to version 1906, 1910 early update ring*
 
 If you enable a cloud management gateway (CMG) to **function as a cloud distribution point and serve content from Azure storage** and **Enforce TLS 1.2**, you may see content downloads fail.
 
@@ -216,4 +225,8 @@ The following errors show in the CMGContentService.log on the server:
 ERROR: Exception processing request. Microsoft.WindowsAzure.Storage.StorageException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.ComponentModel.Win32Exception: The client and server cannot communicate, because they do not possess a common algorithm...
 ```
 
-To work around this issue, use a traditional [cloud distribution point](/configmgr/core/plan-design/hierarchy/use-a-cloud-based-distribution-point). That role doesn't enforce TLS 1.2, but is compatible with clients that require TLS 1.2.
+To work around this issue:
+
+- Update the site to the globally available version of 1910, released on December 20, 2019. (If you previously updated to the 1910 early update ring, you need to update to this build when it's available.)
+
+- Alternatively, use a traditional [cloud distribution point](/configmgr/core/plan-design/hierarchy/use-a-cloud-based-distribution-point). That role doesn't enforce TLS 1.2, but is compatible with clients that require TLS 1.2.

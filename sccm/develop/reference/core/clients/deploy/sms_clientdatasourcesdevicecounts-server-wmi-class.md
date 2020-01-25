@@ -9,7 +9,8 @@ ms.assetid: d3f03e5b-9327-4586-87c0-c14a332bde87
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ClientDataSourcesDeviceCounts Server WMI Class
 The `SMS_ClientDataSourcesContentStats` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents device counts for client data sources.  

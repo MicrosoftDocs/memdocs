@@ -6,7 +6,8 @@ ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 2e96f847-5b5a-4da9-8e8f-6aa488838508
 author: aczechowski
 ms.author: aaroncz
@@ -16,7 +17,7 @@ manager: dougeby
 # Windows Autopilot for existing devices
 <!--3607717, fka 1358333-->
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot) provides a way for organizations to ship fresh, untouched Windows 10 devices directly to the end user and define the provisioning flow the user goes through to get a secure, productive Windows 10 device. The device is registered with the Windows Autopilot service, so you can assign the necessary Windows Autopilot profile. This profile defines the out-of-box experience (OOBE) for that device. 
 

@@ -10,11 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# About client installation parameters and properties in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# About client installation parameters and properties in Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Use the CCMSetup.exe command to install the Configuration Manager client. If you provide client installation parameters on the command line, they modify the installation behavior. If you provide client installation properties on the command-line, they modify the initial configuration of the installed client agent.
 
@@ -34,7 +35,7 @@ Use the CCMSetup.exe command to install the Configuration Manager client. If you
 > [!NOTE]  
 >  In Configuration Manager, you can't run the Client.msi file directly.  
 
- CCMSetup.exe provides [command-line parameters](#ccmsetupexe-command-line-parameters) to customize the installation -- parameters are prefixed with a backslash and by convention are lower case. You specify the value of a parameter when necessary using a colon immediately followed by the desired value. You can also supply properties to modify the behavior of client.msi at the CCMSetup.exe command line -- properties by convention are in all upper case. You specify a value for a property using an equal sign immediately followed by the desired value.  
+ CCMSetup.exe provides [command-line parameters](#ccmsetupexe-command-line-parameters) to customize the installation -- parameters are prefixed with a slash and by convention are lower case. You specify the value of a parameter when necessary using a colon immediately followed by the desired value. You can also supply properties to modify the behavior of client.msi at the CCMSetup.exe command line -- properties by convention are in all upper case. You specify a value for a property using an equal sign immediately followed by the desired value.  
 
 > [!IMPORTANT]  
 >  Specify CCMSetup parameters before you specify properties for client.msi.  

@@ -1,7 +1,7 @@
 ---
 title: "Asset Intelligence security privacy"
 titleSuffix: "Configuration Manager"
-description: "Get security and privacy information for Asset Intelligence in System Center Configuration Manager."
+description: "Get security and privacy information for Asset Intelligence in Configuration Manager."
 ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,13 +10,14 @@ ms.assetid: d0c6f7a0-dcae-4e6d-aa28-35d464d97ff7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Security and privacy for Asset Intelligence in System Center Configuration Manager
+# Security and privacy for Asset Intelligence in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-This topic contains security and privacy information for Asset Intelligence in System Center Configuration Manager.  
+This topic contains security and privacy information for Asset Intelligence in Configuration Manager.  
 
 ##  <a name="BKMK_Security_AI"></a> Security best practices for Asset Intelligence  
  Use the following security best practices for when you use Asset Intelligence.  
@@ -27,7 +28,7 @@ This topic contains security and privacy information for Asset Intelligence in S
 |Use the principle of least permissions to import the license files.|Use role-based administration to grant the Manage Asset Intelligence permission to the administrative user who imports license files. The built-in role of Asset Manager includes this permission.|  
 
 ##  <a name="BKMK_Privacy_HardwareInventory"></a> Privacy information for Asset Intelligence  
- Asset Intelligence extends the inventory capabilities of Configuration Manager to provide a higher level of asset visibility in the enterprise. Asset Intelligence information collection is not automatically enabled. You can modify the type of information collected by enabling hardware inventory reporting classes. For more information, see [Configuring Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md).  
+ Asset Intelligence extends the inventory capabilities of Configuration Manager to provide a higher level of asset visibility in the enterprise. Asset Intelligence information collection is not automatically enabled. You can modify the type of information collected by enabling hardware inventory reporting classes. For more information, see [Configuring Asset Intelligence](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md).  
 
  Asset Intelligence information is stored in the Configuration Manager database in the same manner as inventory information. When clients connect to management points by using HTTPS, the data is always encrypted during transfer to the management point. When clients connect by using HTTP, you can configure the inventory data transfer to be signed and encrypted. Inventory data is not stored in encrypted format in the database. Information is retained in the database, until the site maintenance task **Delete Aged Inventory History** deletes it in intervals of every 90 days. You can configure the deletion interval.  
 

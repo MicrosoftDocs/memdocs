@@ -9,10 +9,11 @@ ms.assetid: 1a37a005-07cd-476e-a744-fa345f3232c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Handle Configuration Manager Asynchronous Errors by Using Managed Code
-To handle a System Center Configuration Manager error that is raised during an asynchronous query, you test the `RunWorkerCompletedEventArgs` parameter [Error](https://msdn.microsoft.com/library/t1yswz5k.aspx) Exception property that is passed to the [SmsBackgroundWorker.QueryProcessorCompleted](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.queryprocessorcompleted.aspx) event handler. If [Error](https://msdn.microsoft.com/library/t1yswz5k.aspx) is not `null`, an exception has occurred and you use [Error](https://msdn.microsoft.com/library/t1yswz5k.aspx) to discover the cause.  
+To handle a Configuration Manager error that is raised during an asynchronous query, you test the `RunWorkerCompletedEventArgs` parameter [Error](https://msdn.microsoft.com/library/t1yswz5k.aspx) Exception property that is passed to the [SmsBackgroundWorker.QueryProcessorCompleted](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.queryprocessorcompleted.aspx) event handler. If [Error](https://msdn.microsoft.com/library/t1yswz5k.aspx) is not `null`, an exception has occurred and you use [Error](https://msdn.microsoft.com/library/t1yswz5k.aspx) to discover the cause.  
 
  If [Error](https://msdn.microsoft.com/library/t1yswz5k.aspx) is an [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx), you can use it to get to the underlying `__ExtendedException` or `SMS_ExtendedException`. Because the managed SMS Provider library does not wrap these exceptions you will need to use the System.Management namespace [ManagementException](https://msdn.microsoft.com/library/system.management.managementexception.aspx) object to access them.  
 

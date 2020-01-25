@@ -9,7 +9,8 @@ ms.assetid: 50f9834c-2f20-48ca-80a2-676b388abe63
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequence_FileConditionExpression Server WMI Class
 The `SMS_TaskSequence_FileConditionExpression` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a condition expression to check for the existence of a file and its creation time.  

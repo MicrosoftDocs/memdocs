@@ -9,10 +9,11 @@ ms.assetid: 54863fd1-b98b-4491-9c30-bd0236495bad
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SetSourceSite Method in Class SMS_TaskSequencePackage
-The `SetSourceSite` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, sets the code of the source site for the task sequence package.  
+The `SetSourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the code of the source site for the task sequence package.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

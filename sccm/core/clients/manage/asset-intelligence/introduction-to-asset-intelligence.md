@@ -10,12 +10,13 @@ ms.assetid: 0bdfdef5-390f-4099-8bde-de51d9a89175
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Introduction to asset intelligence in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Inventory and manage software license usage throughout your enterprise by using the asset intelligence catalog. Asset intelligence adds hardware inventory classes to improve the breadth of information that Configuration Manager collects. This information includes the hardware and software titles used in your environment. Over 60 reports present this information in an easy-to-use format. Many of these reports link to more specific reports. Query for general information and drill down to more detailed information. 
 

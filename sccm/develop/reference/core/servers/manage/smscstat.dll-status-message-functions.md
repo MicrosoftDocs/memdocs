@@ -9,10 +9,11 @@ ms.assetid: 1e9d5ad0-558c-4814-8d0a-90fab3b80a06
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Smscstat.dll Status Message Functions
-In System Center Configuration Manager, the functions that are defined by the Smscstat.dll dynamic-link library, report status messages that can be called by using a C interface.  
+In Configuration Manager, the functions that are defined by the Smscstat.dll dynamic-link library, report status messages that can be called by using a C interface.  
 
 ## Functions  
  Smscstat.dll exports the following functions.  

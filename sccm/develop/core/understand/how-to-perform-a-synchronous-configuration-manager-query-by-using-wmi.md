@@ -9,10 +9,11 @@ ms.assetid: d08b5e24-7026-4328-b67d-3ba2c87aea63
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Perform a Synchronous Configuration Manager Query by Using WMI
-In System Center Configuration Manager, you perform a synchronous query for System Center Configuration Manager objects by calling the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [ExecQuery](https://msdn.microsoft.com/library/aa393866.aspx) method and passing a WQL query.  
+In Configuration Manager, you perform a synchronous query for Configuration Manager objects by calling the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [ExecQuery](https://msdn.microsoft.com/library/aa393866.aspx) method and passing a WQL query.  
 
  A synchronous query is a query that maintains control over the process of your application for the duration of the query. A synchronous query has the potential of locking up your application for large queries or for queries over a network. Alternatively, you can run an asynchronous query that returns control to the application while the query is run. For more information, see [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md)  
 

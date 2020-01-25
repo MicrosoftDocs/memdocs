@@ -9,7 +9,8 @@ ms.assetid: 21f63cf9-a39d-4e05-913b-65fca65b9e62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_SoftwareUpdatesManager Client WMI Class
 The `CCM_SoftwareUpdatesManager` WMI class is a client class, in Configuration Manager, that exposes methods to install, schedule and other actions on set of software updates.  
@@ -43,7 +44,7 @@ class CCM_SoftwareUpdatesManager();
  The `CCM_SoftwareUpdatesManager` class does not define any properties.  
 
 ## Remarks  
- This class is equivalent to the `ICCMUpdatesDeployment` class in System Center Configuration Manager 2007 COM SDK.  
+ This class is equivalent to the `ICCMUpdatesDeployment` class in Configuration Manager 2007 COM SDK.  
 
 ## Requirements  
 

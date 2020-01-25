@@ -10,7 +10,8 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to prepare internet-based devices for co-management

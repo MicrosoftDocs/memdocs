@@ -10,12 +10,13 @@ ms.assetid: b189a346-8c0d-4870-a876-0719fbb0ab04
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Refresh an existing computer with a new version of Windows
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use Configuration Manager to partition and format an existing computer and then install a new OS. This process is sometimes called *reimaging* or *wipe and load*. For this scenario, choose from many different deployment methods, such as PXE, bootable media, or Software Center. You can also use a state migration point to store settings, and then restore them to the new OS.
 

@@ -9,7 +9,8 @@ ms.assetid: c6f4411d-b917-4767-8f8b-3e165edbb9eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ResetPolicy Method in Class SMS_Client
 In Configuration Manager, the `ResetPolicy` method, resets the policy on a client. As a result, the next policy request will receive a full policy instead of merely the change in policy since the last policy request.  

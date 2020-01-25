@@ -9,7 +9,8 @@ ms.assetid: 7f338a23-33c5-44c0-adc2-a8d44ceaa179
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_Processor Client WMI Class
 The `SMS_Processor` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents a device that can interpret a sequence of instructions on a computer that is running a Windows operating system. On a multiprocessor computer, one `SMS_Processor` object exists for each processor.  

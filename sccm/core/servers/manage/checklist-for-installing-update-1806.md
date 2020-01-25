@@ -10,12 +10,13 @@ ms.assetid: bb0a87a6-fd65-440b-90a5-2fef35622c9d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Checklist for installing update 1806 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you use the current branch of Configuration Manager, you can install the in-console update for version 1806 to update your hierarchy from a previous version. <!-- baseline only statement: (Because version 1802 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)-->
 
@@ -27,7 +28,7 @@ To get the update for version 1806, you must use a service connection point at t
 
     -   The dmpdownloader.log may indicate that the dmpdownloader process is waiting for an interval before checking for updates. To restart the download of the update's redistribution files, restart the **SMS_Executive** service on the site server.
 
-    -   Another common download issue occurs when proxy server settings prevent downloads from http://silverlight.dlservice.microsoft.com and http://download.microsoft.com/.
+    -   Another common download issue occurs when proxy server settings prevent downloads from `silverlight.dlservice.microsoft.com` and `download.microsoft.com`.
 
 For more information about installing updates, see [In-console updates and servicing](/sccm/core/servers/manage/updates#bkmk_inconsole).
 

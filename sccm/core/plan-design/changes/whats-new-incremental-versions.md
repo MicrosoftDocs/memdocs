@@ -10,12 +10,13 @@ ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # What's new in Configuration Manager incremental versions
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager uses an in-console [updates and servicing](/sccm/core/servers/manage/updates) process. This update process makes it easy to discover and install Configuration Manager updates. There are no more service packs or cumulative update versions to track and install. You don't have to search for the download of the most recent release or updates.
 

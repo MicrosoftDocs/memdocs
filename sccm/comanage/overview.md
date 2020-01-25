@@ -11,7 +11,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
 #Customer intent: As an IT Pro, I want to enable co-management so that Configuration Manager is cloud-attached to Microsoft Intune.
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # What is co-management?
@@ -113,11 +114,6 @@ Enabling co-management itself doesn't require that you onboard your site with Az
 - [Set up Intune](https://docs.microsoft.com/intune/setup-steps)  
 
 - [Enable Windows 10 automatic enrollment](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
-
-> [!Note]  
-> If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you can't enable co-management. However, you can start migrating users to Intune standalone and then enable their associated Windows 10 devices for co-management. For more information about migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).  
->
-> If you're using [mixed authority](/sccm/mdm/deploy-use/migrate-mixed-authority), first complete the migration to Intune standalone. Then, set the MDM authority to Intune before setting up co-management.<!--SCCMDocs issue #797-->
 
 
 ### Windows 10

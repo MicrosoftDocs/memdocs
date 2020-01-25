@@ -2,7 +2,7 @@
 title: Content management fundamentals
 titleSuffix: Configuration Manager
 description: Use tools and options in Configuration Manager to manage the content that you deploy.
-ms.date: 08/27/2019
+ms.date: 12/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,7 +10,8 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Fundamental concepts for content management in Configuration Manager
@@ -138,13 +139,12 @@ For example, you have a distribution point that runs Windows Server 2012 or late
 
 For more information, see [Support for Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache).
 
-
 ## Delivery Optimization
 
 <!-- 1324696 -->
 You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers. Client settings apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the content. For more information, see [delivery optimization](/sccm/core/clients/deploy/about-client-settings#delivery-optimization) client settings.
 
-Delivery Optimization is the recommended technology to [optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery) of express installation files for Windows 10 quality updates.
+Delivery Optimization is the recommended technology to optimize Windows 10 update delivery of express installation files for Windows 10 quality updates. Starting in Configuration Manager version 1910, DeliveryInternet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). Optimization can be used for all Windows updates. For more information, see [optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery).
 
 
 ## Microsoft Connected Cache

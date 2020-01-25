@@ -9,17 +9,18 @@ ms.assetid: c996a3dc-fff5-4c15-a2ce-a9590969d75e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Operating System Deployment Image Management
-There are several package types that System Center Configuration Manager uses to manage reference computer operating system images.  
+There are several package types that Configuration Manager uses to manage reference computer operating system images.  
 
- For more information about operating system deployment image management, see [Manage operating system images with System Center Configuration Manager](https://docs.microsoft.com/sccm/osd/get-started/manage-operating-system-images).  
+ For more information about operating system deployment image management, see [Manage operating system images with Configuration Manager](https://docs.microsoft.com/sccm/osd/get-started/manage-operating-system-images).  
 
 ## Reference Computer  
 
 ### Operating System Installation  
- The operating system installation package contains all the files necessary to install the desired Windows operating system on a reference computer. In System Center Configuration Manager, they are managed by [SMS_OperatingSystemInstallPackage](../../develop/reference/osd/sms_operatingsysteminstallpackage-server-wmi-class.md). This package does not require a program. The task sequence references the source files as needed.  
+ The operating system installation package contains all the files necessary to install the desired Windows operating system on a reference computer. in Configuration Manager, they are managed by [SMS_OperatingSystemInstallPackage](../../develop/reference/osd/sms_operatingsysteminstallpackage-server-wmi-class.md). This package does not require a program. The task sequence references the source files as needed.  
 
 ### Boot Image  
  An operating system deployment boot image is a Windows Pre-Installation Environment (PE) 2.0 image that is used during the operating system deployment process. In Configuration Manager, boot images are managed by [SMS_BootImagePackage](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md). For more information, see [How to Add a Boot Image from a WIM File in Configuration Manager](../../develop/osd/how-to-add-a-boot-image-from-a-wim-file.md).  

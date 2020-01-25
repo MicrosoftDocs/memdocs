@@ -10,12 +10,13 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # What's new in version 1902 of Configuration Manager current branch
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Update 1902 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1802, 1806, or 1810. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 1902.  
 
@@ -348,7 +349,7 @@ Use Configuration Manager to move Windows known folders to OneDrive for Business
 
 For more information on this feature of OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders).
 
-First, [find your Office 365 tenant ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Then deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using System Center Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+First, [find your Office 365 tenant ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Then deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
 
 To create and deploy a OneDrive for Business profile, in the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings**, and select the **OneDrive for Business Profiles** node.  
 

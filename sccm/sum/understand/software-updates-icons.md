@@ -10,11 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
-ms.collection: M365-identity-device-management
----
-# Icons used for software updates in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Icons used for software updates in Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Synchronized software updates are displayed in the Configuration Manager console, and the first column for each software update contains an icon that indicates a specific state. Software update groups are also represented with an icon that provides information about the state of the software updates contained in the group. This section provides information about the software update icons and what each icon represents.  
 

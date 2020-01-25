@@ -9,7 +9,8 @@ ms.assetid: 68576571-adfc-4c34-b8c8-6eefaf9cb3cf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SetSourceSite Method in Class SMS_OperatingSystemInstallPackage
 The `SetSourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the code of the source site for the operating system install package.  

@@ -9,7 +9,8 @@ ms.assetid: 616805c9-841d-44d4-b517-dcd4d57a13da
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequence_RestoreUserStateAction Server WMI Class
 The `SMS_TaskSequence_RestoreUserStateAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that initiates the User State Migration Tool (USMT) to restore user state and settings to a target computer.  

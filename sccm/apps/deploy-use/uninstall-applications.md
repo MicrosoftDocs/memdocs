@@ -1,7 +1,7 @@
 ---
 title: "Uninstall applications"
 titleSuffix: "Configuration Manager"
-description: "Uninstall an application by using System Center Configuration Manager"
+description: "Uninstall an application by using Configuration Manager"
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-app
@@ -10,11 +10,12 @@ ms.assetid: 0ea3edaa-27c6-4391-9896-cd97d9c5d06d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Uninstall applications with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Uninstall applications with Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 
 Take the following actions to uninstall an application you previously deployed.
@@ -28,7 +29,7 @@ Take the following actions to uninstall an application you previously deployed.
 
  This list gives you more information about how application uninstall works:  
 
--   When you uninstall a System Center Configuration Manager (Configuration Manager) application, any dependent applications are not automatically uninstalled.  
+-   When you uninstall a Configuration Manager (Configuration Manager) application, any dependent applications are not automatically uninstalled.  
 
 -   If you deploy an application that uses an action of **Uninstall** to a user, and the application was installed for all users of the computer, the uninstall might fail if the user’s account does not have permissions to uninstall the application.  
 

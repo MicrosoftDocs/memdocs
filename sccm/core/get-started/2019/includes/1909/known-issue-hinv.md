@@ -5,7 +5,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: include
 ms.date: 10/04/2019
-ms.collection: M365-identity-device-management
+
+
 ---
 
 ### <a name="ki_hinv"></a> Hardware inventory reports

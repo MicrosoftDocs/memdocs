@@ -10,12 +10,13 @@ ms.assetid: a7035223-d7bd-47b4-896f-08de3416a4eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Application Deployment Evaluation
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Before you continue, please review [Application deployment client components](/sccm/apps/understand/client-components-technical-reference) to understand DCM and CI Agent job processing.
 

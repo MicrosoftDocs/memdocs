@@ -9,10 +9,11 @@ ms.assetid: 0d66813b-8579-48e7-a155-f90d4d7c4e10
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to View the Properties for an Operating System Image
-In System Center Configuration Manager, you view the image properties for the Windows Image (WIM) file that is contained in an operating system package by calling the [SMS_ImagePackage](../../develop/reference/osd/sms_imagepackage-server-wmi-class.md) class instance [GetImageProperties](../../develop/reference/osd/getimageproperties-method-in-class-sms_imagepackage.md) method.  
+In Configuration Manager, you view the image properties for the Windows Image (WIM) file that is contained in an operating system package by calling the [SMS_ImagePackage](../../develop/reference/osd/sms_imagepackage-server-wmi-class.md) class instance [GetImageProperties](../../develop/reference/osd/getimageproperties-method-in-class-sms_imagepackage.md) method.  
 
  The image properties are available in XML format.  
 

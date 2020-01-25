@@ -10,7 +10,8 @@ ms.assetid: b3ce6b9a-7d54-4374-9b7a-f017f872bd6f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Levels of diagnostic usage data collection for version 1910
@@ -380,7 +381,7 @@ For Configuration Manager version 1910, this level includes the following data:
 
 - Count of mobile device policies  
 
-- Count of mobile devices Configuration Manager and Microsoft Intune manages, and how you enrolled them (bulk, user-based)  
+- Count of mobile devices Configuration Manager manages, and how you enrolled them (bulk, user-based)  
 
 - Count of users who have multiple enrolled mobile devices  
 

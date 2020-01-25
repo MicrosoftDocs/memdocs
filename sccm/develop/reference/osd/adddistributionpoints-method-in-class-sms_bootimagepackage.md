@@ -9,7 +9,8 @@ ms.assetid: 46fc8e66-a1ab-4260-a5db-e12f6fd553e5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddDistributionPoints Method in Class SMS_BootImagePackage
 The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the distribution points for the boot image package.  

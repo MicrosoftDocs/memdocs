@@ -9,7 +9,8 @@ ms.assetid: 11e5ed2e-12eb-415d-b98a-a9c1a1306e3f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Enable Method in Class SMS_SupportedPlatforms
 The `Enable` Windows Management Instrumentation (WMI) class method, in Configuration Manager, enables or disables the platforms.  

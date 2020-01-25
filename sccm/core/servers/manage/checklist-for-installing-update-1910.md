@@ -2,7 +2,7 @@
 title: Checklist for 1910
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1910.
-ms.date: 11/29/2019
+ms.date: 12/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,7 +10,8 @@ ms.assetid: 9afb4452-9e58-40eb-bfd8-cbf9042a2790
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Checklist for installing update 1910 for Configuration Manager
@@ -65,12 +66,15 @@ The first time you use a Configuration Manager console after the update has fini
 
 <!-- SCCMDocs#1397 -->
 
-<!--As of August 16, 2019, version 1906 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
+As of December 20, 2019, version 1910 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
+
+<!--
 
 At this time, version 1910 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 1910:
 
 [Version 1910 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
+<!--
 Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!Note]  
@@ -91,7 +95,7 @@ The version 1910 update should now be available in the console.
 
 > [!Important]  
 > This script only adds your site to the early update ring for version 1910. It's not a permanent change.
-
+-->
 
 ## Checklist
 
@@ -223,7 +227,7 @@ If you extend Configuration Manager with other products from Microsoft or Micros
 ### Remove Intune subscription (hybrid MDM)
 
 <!-- SCCMDocs-pr#4253 -->
-The hybrid MDM service offering is retired as of September 1, 2019. If your Configuration Manager site had a Microsoft Intune Subscription, you need to remove it. For more information, see [Remove hybrid MDM](/configmgr/mdm/understand/hybrid-mobile-device-management#remove-hybrid-mdm).
+The hybrid MDM service offering is retired as of September 1, 2019. If your Configuration Manager site had a Microsoft Intune subscription, you need to remove it. For more information, see [Remove hybrid MDM](/configmgr/mdm/understand/what-happened-to-hybrid#remove-hybrid-mdm).
 
 ### Run the setup prerequisite checker
 

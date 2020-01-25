@@ -10,7 +10,8 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Supported OS versions for clients and devices for Configuration Manager
@@ -341,10 +342,6 @@ The following versions are supported by using the indicated .tar file.
 ## <a name="bkmk_OnpremOS"></a> On-premises MDM
 
 Configuration Manager has built-in capabilities for managing mobile devices that are on-premises without installing client software. For more information, see [Manage mobile devices with on-premises infrastructure](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure).  
-
-### Requirements and limitations
-
-- Configure the **Service connection point** at the top-tier site of your hierarchy.  
 
 ### Supported operating systems
 

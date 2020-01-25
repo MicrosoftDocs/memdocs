@@ -9,7 +9,8 @@ ms.assetid: 80b464c3-8174-448c-bd0b-eaaa0554fa54
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetTallyIntervals Method in Class SMS_SummarizerRootStatus
 The `GetTallyIntervals` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets an array of tally intervals and the default interval.  

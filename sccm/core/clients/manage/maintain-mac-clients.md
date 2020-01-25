@@ -10,11 +10,12 @@ ms.assetid: cf6337a2-700c-47f3-b6f8-5814f9b81e59
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Maintain Mac clients
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Here are procedures for uninstalling Mac clients and for renewing their certificates.
 
@@ -126,7 +127,7 @@ Here are procedures for uninstalling Mac clients and for renewing their certific
 
 14. Create a configuration baseline that contains the configuration item that you have just created and deploy it to the device collection that you created in step 1.  
 
-     For more information about how to create and deploy configuration baselines, see [How to create configuration baselines in System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-baselines.md) and [How to deploy configuration baselines in System Center Configuration Manager](../../../compliance/deploy-use/deploy-configuration-baselines.md).  
+     For more information about how to create and deploy configuration baselines, see [How to create configuration baselines](../../../compliance/deploy-use/create-configuration-baselines.md) and [How to deploy configuration baselines](../../../compliance/deploy-use/deploy-configuration-baselines.md).  
 
 15. On Mac computers that have the SMSID removed, run the following command to install a new certificate:  
 

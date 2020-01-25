@@ -9,10 +9,11 @@ ms.assetid: bbc5fb02-8502-4003-8f4d-d69508674ce0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Synchronize with the Software Update Point
-You synchronize the software update point, in System Center Configuration Manager SP1, by calling the `SyncNow` method.  
+You synchronize the software update point, in Configuration Manager SP1, by calling the `SyncNow` method.  
 
 ## To synchronize the software update point  
 

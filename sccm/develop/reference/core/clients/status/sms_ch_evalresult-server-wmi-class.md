@@ -9,7 +9,8 @@ ms.assetid: 92dead34-4152-4c81-9a41-678087880c07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CH_EvalResult Server WMI Class
 The `SMS_CH_EvalResult` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client evaluation results.  

@@ -9,10 +9,11 @@ ms.assetid: c264dab1-07c2-4cc6-95e2-6283b850fb54
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # PlatformApplicabilityCondition
-`PlatformApplicabilityCondition` specifies one supported platform for an operating system deployment driver in System Center Configuration Manager.  
+`PlatformApplicabilityCondition` specifies one supported platform for an operating system deployment driver in Configuration Manager.  
 
 > [!NOTE]
 >  It is only valid to populate this information with values from `SMS_SupportedPlatforms Server WMI Class` objects. Drivers can be targeted only at major releases, for example, all Windows.  
@@ -25,7 +26,7 @@ ms.collection: M365-identity-device-management
 
 |Attribute|Description|  
 |---------------|-----------------|  
-|DisplayName|The platform name displayed in the System Center Configuration Manager console.|  
+|DisplayName|The platform name displayed in the Configuration Manager console.|  
 |MaxVersion|The maximum supported version. For example, "5.20.9999.9999".|  
 |MinVersion|The minimum supported version. For example, "5.20.3790.0".|  
 |Name|The operating system name. For example, "Windows NT".|  

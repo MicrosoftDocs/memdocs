@@ -9,10 +9,11 @@ ms.assetid: 74397fd4-f479-44d9-9400-b45ab32f07c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Delete a Driver Package in Configuration Manager
-You delete an operating system deployment driver package, in System Center Configuration Manager, by deleting its [SMS_DriverPackage](../../develop/reference/osd/sms_driverpackage-server-wmi-class.md) object.  
+You delete an operating system deployment driver package, in Configuration Manager, by deleting its [SMS_DriverPackage](../../develop/reference/osd/sms_driverpackage-server-wmi-class.md) object.  
 
 > [!NOTE]
 >  Windows drivers that are referenced by the driver package are not deleted.  
