@@ -32,13 +32,6 @@ Use Desktop Analytics with Configuration Manager to:
 
 ![Screenshot of the Desktop Analytics home page in the Azure portal](media/portal-home.png)
 
-> [!Note]  
-> Desktop Analytics is a successor of Windows Analytics. The *Windows Analytics* service includes Upgrade Readiness, Update Compliance, and Device Health.
->
-> All of these capabilities are combined in the *Desktop Analytics* service. Desktop Analytics also is more tightly integrated with Configuration Manager.
-
-
-
 ## Benefits
 
 Many customers have challenges with getting and staying current with Windows 10. The primary challenge is testing applications. This process is typically manual. It's time-consuming for IT administrators and application owners to continually analyze existing applications. Then remediate any issues that arise.

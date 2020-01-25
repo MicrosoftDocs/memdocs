@@ -258,7 +258,7 @@ Beginning with the 1705 technical preview release, you use the **Azure Services 
 
 -   The wizard is used to configure cloud services for Configuration Manager, like OMS, Windows Store for Business (WSfB), and Azure Active Directory (Azure AD).  
 
--   Configuration Manager connects to OMS for features like [Log Analytics](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), or [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics).
+-   Configuration Manager connects to OMS for features like Log Analytics or Upgrade Readiness.
 
 ### Prerequisites for the OMS Connector
 Prerequisites to configure a connection to OMS are unchanged from those [documented for the Current Branch version 1702](/sccm/core/clients/manage/sync-data-log-analytics). That information is repeated here:  

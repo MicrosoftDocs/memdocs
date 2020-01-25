@@ -248,18 +248,18 @@ This preview introduces several improvements to the [accessibility features](/sc
 
 ## Changes to the Azure Services Wizard to support Upgrade Readiness
 <!-- 1353331 -->
-Beginning with this release, use the Azure Services Wizard to configure a connection from Configuration Manager to [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics). The use of the wizard simplifies configuration of the connector by using a common wizard for related Azure services.   
+Beginning with this release, use the Azure Services Wizard to configure a connection from Configuration Manager to Upgrade Readiness. The use of the wizard simplifies configuration of the connector by using a common wizard for related Azure services.   
 
 Although the method to configure the connection has changed, prerequisites for the connection and how you use Upgrade Readiness remain unchanged.   
 
 ### Prerequisites for Upgrade Readiness
-The prerequisites for a [connection to Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness#connect-configuration-manager-to-upgrade-readiness) are unchanged from those detailed for the Current Branch of Configuration Manager. They are repeated here for convenience:  
+The prerequisites for a connection to Upgrade Readiness are unchanged from those detailed for the Current Branch of Configuration Manager. They are repeated here for convenience:  
 
 **Prerequisites**
 - In order to add the connection, your Configuration Manager environment must first configure a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) in an [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
 - Register Configuration Manager as a “Web Application and/or Web API” management tool, and get the [client ID from this registration](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
 - Create a client key for the registered management tool in Azure Active Directory.
-- In the Azure Management Portal, provide the registered web app with permission to access OMS, as described in [Provide Configuration Manager with permissions to OMS](https://azure.microsoft.com/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms).
+- In the Azure Management Portal, provide the registered web app with permission to access OMS.
 
 > [!IMPORTANT]       
 > When configuring permission to access OMS, be sure to choose the **Contributor** role, and assign it permissions to the resource group of the registered app.

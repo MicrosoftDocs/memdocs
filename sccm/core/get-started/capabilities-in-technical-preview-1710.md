@@ -62,15 +62,12 @@ To try out using the Run Scripts feature, see [Create and run scripts](../../app
 
 
 
-## Limit Windows 10 Enhanced telemetry to only send data relevant to Windows Analytics Device Health
+## Limit Windows 10 Enhanced data to only send data relevant to Windows Analytics Device Health
 <!-- 1356148 -->
 
-With this release, you can now set the Windows 10 telemetry data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** telemetry level with Windows 10 version 1709 or later.
+With this release, you can now set the Windows 10 diagnostic data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** level with Windows 10 version 1709 or later.
 
-The Enhanced (Limited) telemetry level includes metrics from the basic level, as well as a subset of data collected from the **Enhanced** level relevant to Windows Analytics. For more information on telemetry levels, see [Telemetry levels](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#use-group-policy-to-set-the-diagnostic-data-level).
-
-### Try it out!
-To configure Windows 10 telemetry collection on clients, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings). Open the **Cloud Services** window, and set Windows 10 telemetry to **Enhanced**.
+The Enhanced (Limited) level includes metrics from the basic level, as well as a subset of data collected from the **Enhanced** level relevant to Windows Analytics.
 
 
 ## Software Center no longer distorts icons larger than 250x250  

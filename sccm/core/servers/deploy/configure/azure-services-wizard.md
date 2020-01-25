@@ -1,7 +1,7 @@
 ---
 title: Configure Azure services
 titleSuffix: Configuration Manager
-description: Connect your Configuration Manager environment with Azure services for cloud management, Upgrade Readiness, Microsoft Store for Business, and Log Analytics.
+description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
 ms.date: 07/31/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,8 +10,6 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Configure Azure services for use with Configuration Manager
@@ -42,8 +40,6 @@ Configure the following Azure services using this wizard:
     > [!Note]  
     > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](https://docs.microsoft.com/azure/azure-monitor/terminology#log-analytics).  
 
-- **Upgrade Readiness Connector**: Connect to Windows Analytics [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics). View client upgrade compatibility data.  
-
 - **Microsoft Store for Business**: Connect to the [Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business). Get store apps for your organization that you can deploy with Configuration Manager.  
 
 ### Service details
@@ -64,7 +60,6 @@ The following table lists details about each of the services.
 |---------|---------|---------|---------|---------|---------|
 |Cloud management with<br>Azure AD discovery | Multiple | Public, Private | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | Import, Create |
 |Log Analytics Connector | One | Public, Private | ![Supported](media/green_check.png) | ![Not supported](media/Red_X.png) | Import |
-|Upgrade Readiness | One | Public | ![Supported](media/green_check.png) | ![Not supported](media/Red_X.png) | Import |
 |Microsoft Store for<br>Business | One | Public | ![Supported](media/green_check.png) | ![Not supported](media/Red_X.png) | Import, Create |
 
 ### About Azure AD apps
@@ -95,7 +90,7 @@ After you decide the service to which you want to connect, refer to the table in
 
 Some services require the Azure AD apps to have specific permissions. Review the information for each service to determine any required permissions. For example, before you can import a web app, an Azure administrator must first create it in the [Azure portal](https://portal.azure.com).
 
-When configuring Upgrade Readiness or the Log Analytics Connector, give your newly registered web app *contributor* permission on the resource group that contains the relevant workspace. This permission allows Configuration Manager to access that workspace. When assigning the permission, search for the name of the app registration in the **Add users** area of the Azure portal. This process is the same as when [providing Configuration Manager with permissions to Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). An Azure administrator must assign these permissions before you import the app into Configuration Manager.
+When configuring the Log Analytics Connector, give your newly registered web app *contributor* permission on the resource group that contains the relevant workspace. This permission allows Configuration Manager to access that workspace. When assigning the permission, search for the name of the app registration in the **Add users** area of the Azure portal. This process is the same as when [providing Configuration Manager with permissions to Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). An Azure administrator must assign these permissions before you import the app into Configuration Manager.
 
 
 ## Start the Azure Services wizard
@@ -222,8 +217,6 @@ After specifying the web and native apps on the Apps page, the Azure Services Wi
 - **Cloud Management** service, **Discovery** page: [Configure Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
 
 - **Log Analytics Connector** service, **Configuration** page: [Configure the connection to Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics#grant-configuration-manager-with-permissions-to-log-analytics)  
-
-- **Upgrade Readiness Connector** service, **Configuration** page: [Use the Azure Wizard to create the connection](/sccm/core/clients/manage/upgrade/upgrade-analytics#use-the-azure-wizard-to-create-the-connection)  
 
 - **Microsoft Store for Business** service, **Configurations** page: [Configure Microsoft Store for Business synchronization](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_config)  
 

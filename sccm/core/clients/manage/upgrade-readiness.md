@@ -5,13 +5,11 @@ description: Integrate Upgrade Readiness with Configuration Manager to access Wi
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 10/14/2019
+ms.date: 01/31/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
-
-
 ---
 
 # Integrate Upgrade Readiness with Configuration Manager
@@ -19,12 +17,13 @@ ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 *Applies to: Configuration Manager (current branch)*
 
 > [!Important]  
-> As of October 2019, Upgrade Readiness integration in Configuration Manager is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). The Windows Analytics service will retire on January 31, 2020.
+> The Windows Analytics service is retired as of January 31, 2020.
 >
 > [Desktop Analytics](/sccm/desktop-analytics/overview) is the evolution of Windows Analytics. Existing Windows Analytics customers can [migrate data to Desktop Analytics](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
 >
 > For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 
+<!--
 Upgrade Readiness is a part of [Windows Analytics](https://docs.microsoft.com/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness). It allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10. Integrate Upgrade Readiness with Configuration Manager to access client upgrade compatibility data in the Configuration Manager console. Then use this data to create collections, and target devices for upgrade or remediation.
 
 
@@ -98,7 +97,7 @@ After you've integrated Upgrade Readiness with Configuration Manager, you can vi
 4. View the devices in a particular readiness state, and then create a dynamic collection for those devices. Then use that collection to upgrade those devices, or take action to remediate devices that are in a blocked state.  
 
 > [!Note]  
-> The site synchronizes data with Upgrade Readiness once a week.<!--SCCMDocs issue 732--> To manually trigger synchronization:
+> The site synchronizes data with Upgrade Readiness once a week. To manually trigger synchronization:
 > 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node.  
 > 2. Select the Upgrade Readiness connection from the list.  
 > 3. In the ribbon, select the option to synchronize.  
