@@ -2,7 +2,7 @@
 title: Diagnostic and usage data FAQ
 titleSuffix: Configuration Manager
 description: Frequently asked questions about diagnostic and usage data for Configuration Manager
-ms.date: 12/23/2019
+ms.date: 01/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -21,8 +21,6 @@ This article provides answers to frequently asked questions about diagnostic and
 
 ## <a name="bkmk_off"></a> Can I turn off diagnostic and usage data?
 
-No, it can't be turned off. You can choose the level of data that Configuration Manager collects. For more information, see [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview).
-
 To help manage when the site sends data, use the service connection point in offline mode. Then use the service connection tool to manually send data. For more information, see the following articles:
 
 - [About the service connection point](/configmgr/core/servers/deploy/configure/about-the-service-connection-point)
@@ -31,6 +29,8 @@ To help manage when the site sends data, use the service connection point in off
 To support new versions of Windows 10 and cloud services like Microsoft Intune, you need to update the current branch of Configuration Manager on a regular basis. Microsoft requires at least the basic level of diagnostic and usage data. This data is used to keep the product up to date, improve the update experience, and improve the quality and security of the product.
 
 No data is sent to the service when the service connection point is in offline mode. When you switch to online mode or use the service connection tool, it sends data to the service to check for updates.
+
+You can also choose the level of data that Configuration Manager collects. For more information, see [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview).
 
 ## <a name="bkmk_retention"></a> What is the data retention period?
 
@@ -50,7 +50,9 @@ The SQL stored procedures run every seven days from the date you installed the s
 
 ## <a name="bkmk_network"></a> Can the data be used to form a network map?
 
-No. Site details include time zone information from each site. This information can provide insight into the broad geolocation and global dispersion of sites in a hierarchy. This data doesn't include any network details, such as IP addresses or more detailed geographic information. For more information, see [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview#bkmk_versions), and find more detail for the version you're using.
+No. This data doesn't include any network details, such as IP addresses or detailed geographic information. For more information, see [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview#bkmk_versions), and find more detail for the version you're using.
+
+The data does include time zone information from each site. This information can provide insight into the broad geolocation and global dispersion of sites in a hierarchy.
 
 ## <a name="bkmk_tables"></a> Can you see data in custom SQL tables?
 
@@ -70,8 +72,8 @@ For example, the following cloud services are a part of Microsoft Endpoint Manag
 - [Privacy and personal data in Intune](https://docs.microsoft.com/intune/protect/privacy-personal-data)
 - [Windows Autopilot requirements](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
 
-## <a name="bkmk_gdpr"></a> Is Configuration Manager subject to GDPR?
+## <a name="bkmk_personal"></a> Does Configuration Manager collect any personal data?
 
-No. Configuration Manager isn't subject to General Data Protection Regulation (GDPR) oversight. It's an on-premises product that you directly deploy, manage, and operate. The diagnostics and usage data that Microsoft collects improves the installation experience, quality, and security of future releases. This diagnostics and usage data is subject to GDPR oversight. However, no personal data, customer data, or customer-authored data is collected and transmitted to Microsoft.
+No. Configuration doesn't collect or transmit any personal data, customer data, or customer-authored data. It's an on-premises product that you directly deploy, manage, and operate. The diagnostics and usage data that Microsoft collects improves the installation experience, quality, and security of future releases.
 
-For more information about GDPR, see the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted). For more information about Configuration Manager data, see [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview).
+For more information about Configuration Manager data, see [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview).
