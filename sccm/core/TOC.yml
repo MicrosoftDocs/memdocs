@@ -224,8 +224,6 @@
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md
     - name: Frequently asked questions (FAQ)
       href: plan-design/diagnostics/frequently-asked-questions.md
-    - name: Customer Experience Improvement Program (CEIP)
-      href: plan-design/diagnostics/customer-experience-improvement-program-ceip.md
   - name: Security and privacy for Configuration Manager
     items:
     - name: Security and privacy overview

@@ -799,6 +799,11 @@
             "source_path": "sccm/mdm/deploy-use/create-vpn-profiles.md",
             "redirect_url": "/configmgr/protect/deploy-use/vpn-profiles",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/plan-design/diagnostics/customer-experience-improvement-program-ceip.md",
+            "redirect_url": "/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data",
+            "redirect_document_id": false
         }
     ]
 }
