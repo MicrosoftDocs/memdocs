@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 01/24/2020
+ms.date: 01/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -200,6 +200,20 @@ When you use the Configuration Manager console to monitor your pilot deployment 
 These **undefined** devices are **up-to-date** with the target version of the OS for that deployment plan. No further action is necessary.
 
 ## Cloud services
+
+### Azure service for US Government cloud shows as public cloud
+
+<!-- 6036748 -->
+
+*Applies to version 1910*
+
+If you create a connection to an Azure service, and set the **Azure environment** to the government cloud, the properties of the connection show the environment as the Azure public cloud. This issue is only a display problem in the console, the service is in the government cloud. To confirm the configuration, run the following SQL query on the site database:
+
+```SQL
+Select Environment, Name, TenantID From AAD_Tenant_Ex
+```
+
+For the government cloud, the result of this query is `2` for the specific tenant.
 
 ### Can't download content from a cloud management gateway enabled for TLS 1.2
 
