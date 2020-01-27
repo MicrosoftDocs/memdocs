@@ -2,7 +2,7 @@
 title: Optimize Windows 10 update delivery
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to manage update content to stay current with Windows 10.  
-ms.date: 01/25/2019
+ms.date: 01/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -67,7 +67,7 @@ To use Delivery Optimization for all Windows update installation files, enable t
 > [!IMPORTANT]
 > - Delivery Optimization must be enabled (default) and not bypassed. For more information, see [Windows Delivery Optimization reference](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference).
 > - Verify your [Delivery Optimization client settings](/sccm/core/clients/deploy/about-client-settings#delivery-optimization) when changing your [software updates client settings](/sccm/core/clients/deploy/about-client-settings#software-updates) for delta content.
-> - Delivery Optimization can't be used for Office 365 client updates if Office COM is enabled. Office COM is used by Configuration Manager to manage updates for Office 365 clients. You can deregister Office COM to allow the use of Delivery Optimization for Office 365 updates. However, you'll lose the management and reporting capabilities in Configuration Manager for Office 365 updates if you deregister Office COM. For information on how to deregister Office COM, see [Enable Office 365 clients to receive updates from the Office CDN instead of Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
+> - Delivery Optimization can't be used for Office 365 client updates if Office COM is enabled. Office COM is used by Configuration Manager to manage updates for Office 365 clients. You can deregister Office COM to allow the use of Delivery Optimization for Office 365 updates. However, you'll lose the management and reporting capabilities in Configuration Manager for Office 365 updates if you deregister Office COM. For information about how to deregister Office COM, see [Enable Office 365 clients to receive updates from the Office CDN instead of Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
 
 
 ### Configuration Manager peer cache
