@@ -23,6 +23,8 @@ manager: dougeby
 >
 > For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 
+If your Configuration Manager site had a connection to Upgrade Readiness, you need to remove it and reconfigure clients. For more information, see [Remove Upgrade Readiness connection](/configmgr/core/clients/manage/upgrade-readiness#bkmk_remove).
+
 <!--
 [Windows Analytics](https://docs.microsoft.com/windows/deployment/update/windows-analytics-overview) is a set of solutions that allow you to gain insight into the current state of your environment. Windows devices in your environment report data to Microsoft, which you can access and analyze through these solutions. For example, connect [Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness) to Configuration Manager to directly access the data in the **Monitoring** workspace of the Configuration Manager console.
 

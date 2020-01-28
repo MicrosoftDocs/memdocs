@@ -23,6 +23,42 @@ ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 >
 > For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 
+If your Configuration Manager site had a connection to Upgrade Readiness, you need to remove it and reconfigure clients.
+
+## <a name="bkmk_remove"></a> Remove Upgrade Readiness connection
+
+1. Open the Configuration Manager console as a user with the **Full administrator** role.
+
+1. Go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node.
+
+1. Delete the Windows Analytics service.
+
+## Reconfigure clients
+
+### Unenroll devices
+
+On enrolled devices, remove the CommercialID value from the following Windows Registry keys:
+
+- `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
+- `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
+
+### Windows diagnostic data configuration
+
+If you don't want your devices to continue sending diagnostic data:
+
+- Windows 10: set the diagnostic data level to **Security**
+- Windows 7 SP1 or 8.1: disable the **Commercial Data Opt-in Key**
+
+Set these values using one of the following methods:
+
+- Group policy, in **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Data Collection and Preview Builds**
+- Mobile device management (MDM), such as [Microsoft Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry)
+
+For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
+
+> [!NOTE]  
+> When you apply these changes, devices immediately stop sending diagnostic data. It may take 24-48 hours for Microsoft to stop processing insights for your workspace. Microsoft deletes this data from its cloud services within 30 days or less.
+
 <!--
 Upgrade Readiness is a part of [Windows Analytics](https://docs.microsoft.com/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness). It allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10. Integrate Upgrade Readiness with Configuration Manager to access client upgrade compatibility data in the Configuration Manager console. Then use this data to create collections, and target devices for upgrade or remediation.
 
