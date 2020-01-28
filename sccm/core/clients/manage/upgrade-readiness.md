@@ -37,6 +37,11 @@ If your Configuration Manager site had a connection to Upgrade Readiness, you ne
 
 ### Unenroll devices
 
+First, review the site's default or any custom client device settings in the **Windows Analytics** group. For example, disable the following setting: **Manage Windows telemetry settings with Configuration Manager**.
+
+> [!IMPORTANT]
+> If you plan to use Desktop Analytics, it configures Windows diagnostic data settings on clients. Don't use the Configuration Manager client settings to configure these settings for use with Desktop Analytics. For more information, see [How to connect Configuration Manager with Desktop Analytics](/configmgr/desktop-analytics/connect-configmgr).
+
 On enrolled devices, remove the CommercialID value from the following Windows Registry keys:
 
 - `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
