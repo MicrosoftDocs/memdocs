@@ -553,3 +553,37 @@ catch{
     exit 1
 }
 ```
+
+## <a name="bkmk_uea_privacy"></a> User Experience Analytics data privacy
+
+### Data flow
+
+The following illustration shows how required fucntional data flows from individual devices through our Data Services, transient storage, and to your tenant. Data flows through our existing enterprise pipelines without reliance on Windows diagnostic data.
+
+
+<!-- Need data flow chart -->
+
+1. Configure 'Intune data collection' policy for enrolled devices
+
+2. Devices send required functional data
+
+	1. For Intune devices, data is sent from the Intune management extension
+
+	2. For ConfigMgr managed devices, data can also flow to Microsoft Endpoint Management through the SCCM Connector. SCCM connector is “cloud attached” (just requires connection to an Intune tenant, not turning on co-management)
+
+3. Data flows to Admin console via MS Graph
+
+### Resources
+
+For more information about related privacy aspects, see the following articles:
+
+- [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement)
+
+- [Licensing terms and documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
+
+- [Security and privacy at Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)  
+
+- [Confidence in the trusted cloud](https://azure.microsoft.com/overview/trusted-cloud/)  
+
+- [Trust Center](https://www.microsoft.com/trustcenter)  
+
