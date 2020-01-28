@@ -134,7 +134,7 @@ The following features are available with the most recent Configuration Manager 
 - [4963383](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--4963383-->
 - [5913817](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--5913817-->
 - [5891852](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--5891852-->
-- [2356386](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--2356386-->
+- [5932692](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--5932692, fka 2356386-->
 
 > [!NOTE]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
@@ -158,7 +158,7 @@ The following features were released with previous versions of the Configuration
 - [OneTrace log groups](/sccm/core/get-started/2020/technical-preview-2001#bkmk_onetrace) <!--5559993-->
 - [Improvements to administration service](/sccm/core/get-started/2020/technical-preview-2001#bkmk_rest) <!--5728365-->
 - [Wake up a device from the central administration site](/sccm/core/get-started/2020/technical-preview-2001#bkmk_wake) <!--6030715-->
-- [Improvements to task sequence progress](/sccm/core/get-started/2020/technical-preview-2001#bkmk_tsprogress) <!--2356386-->
+- [Improvements to task sequence progress](/sccm/core/get-started/2020/technical-preview-2001#bkmk_tsprogress) <!--5932692, fka 2356386-->
 
 ### Technical preview version 1912
 
