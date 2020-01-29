@@ -1,4 +1,4 @@
-- name: OS deployment
+- name: OS deployment documentation
   href: index.yml
 - name: Understand
   items:
