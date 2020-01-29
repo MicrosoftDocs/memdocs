@@ -16,7 +16,7 @@ metadata:
 landingContent:
   - title: Get MDT
     linkLists:
-      - linkListType: Download
+      - linkListType: download
         links:
           - text: Download MDT
             url: https://aka.ms/mdtdownload
@@ -46,7 +46,7 @@ landingContent:
         links:
           - text: Toolkit reference
             url: toolkit-reference.md
-          - text: Troubleshoot
+          - text: Troubleshoot MDT
             url: troubleshooting-reference.md
-          - text: linktext1
-            url: file1.md
+          - text: UDI developer's guide
+            url: user-driven-installation-developers-guide.md
