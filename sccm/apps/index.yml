@@ -5,6 +5,7 @@ summary: Use Configuration Manager to manage and deploy applications, scripts, a
 
 metadata:
   title: App management documentation
+  titleSuffix: Configuration Manager
   description: Use Configuration Manager to manage and deploy applications, scripts, and packages. Automate the deployments, or let users install apps from Software Center.
   ms.prod: configuration-manager
   ms.technology: configmgr-app
