@@ -198,7 +198,7 @@ Client management features not related to Windows software update management or 
 
 Manage Apple Mac computers with the Configuration Manager client for macOS.  
 
-The macOS client installation package isn't supplied with the Configuration Manager media. Download the **Clients for Additional Operating Systems** from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719).  
+The macOS client installation package isn't supplied with the Configuration Manager media. Download it from the Microsoft Download Center, [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850).  
 
 For more information, see [How to deploy clients to Macs](/sccm/core/clients/deploy/deploy-clients-to-macs).  
 
