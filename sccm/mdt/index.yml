@@ -1,87 +1,52 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
+
 title: Microsoft Deployment Toolkit documentation
+summary: Microsoft Deployment Toolkit (MDT) provides a unified collection of tools, processes, and guidance for automating desktop and server deployments.
+
 metadata:
   title: Microsoft Deployment Toolkit documentation
-  description: Microsoft Deployment Toolkit provides a unified collection of tools, processes, and guidance for automating desktop and server deployments.
-  keywords: freeware, tool, process, workflow, automation, deployment, automated, distribution
+  description: Microsoft Deployment Toolkit (MDT) provides a unified collection of tools, processes, and guidance for automating desktop and server deployments.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-osd
+  ms.topic: landing-page
   author: aczechowski
   ms.author: aaroncz
-  manager: dougeby
-  ms.date: 06/04/2018
-  ms.topic: landing-page
-  ms.devlang: na
-  ms.prod: configuration-manager
-sections:
-- items:
-  - type: markdown
-    text: Microsoft Deployment Toolkit provides a unified collection of tools, processes, and guidance for automating desktop and server deployments. 
+  ms.date: 01/28/2020
 
-- items:
-  - type: list
-    style: cards
-    className: cardsM
-    columns: 2
-    items:
-    - href: https://aka.ms/mdtdownload
-      html: <p>Download the latest MDT.</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_download-generic.svg
-      title: Download MDT
-    - href: release-notes.md
-      html: <p>Details about fixes and bugs included in this release.</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_whats-new.svg
-      title: Release notes
-    - href: samples-guide.md
-      html: <p>Sample configuration settings for specific deployment scenarios.</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_code-samples.svg
-      title: Samples guide
-    - href: use-the-mdt.md
-      html: <p>Perform Windows deployments by using lite-touch (LTI), zero-touch (ZTI), or user-driven (UDI) installations.</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_api-reference.svg
-      title: How to use the Microsoft Deployment Toolkit 
+landingContent:
+  - title: Get MDT
+    linkLists:
+      - linkListType: download
+        links:
+          - text: Download MDT
+            url: https://aka.ms/mdtdownload
+          - text: Release notes
+            url: release-notes.md
+      - linkListType: how-to-guide
+        links:
+          - text: How to use MDT
+            url: use-the-mdt.md
+          - text: Samples guide
+            url: samples-guide.md
 
-- title: Quickstarts
-  items:
-  - type: list
-    style: cards
-    className: cardsM
-    columns: 3
-    items: 
-    - href: lite-touch-installation-guide.md
-      title: Install using bootable media
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-    - href: user-driven-installation-guide.md
-      title: Deploy with user-driven installation 
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-    - href: configmgr-guide.md
-      title: Deploy to a new computer
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-        
-- title: Additional resources
-  items:
-  - type: paragraph
-    text: 'Read our how-to and reference information.'
-  - type: list
-    style: cards
-    className: cardsM
-    columns: 3
-    items: 
-    - href: toolkit-reference.md
-      title: Configuration settings that aid with deployments.
-      image:
-        src: https://docs.microsoft.com/media/common/i_download-install.svg
-    - href: troubleshooting-reference.md
-      title: Log files, error codes, and other troubleshooting details.
-      image:
-        src: https://docs.microsoft.com/media/common/i_support.svg
-    - href: user-driven-installation-developers-guide.md
-      title: Customize user-driven installation for your organization.
-      image:
-        src: https://docs.microsoft.com/media/common/i_architecture.svg
+  - title: Scenario guides
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Lite-touch (LTI)
+            url: lite-touch-installation-guide.md
+          - text: Zero-touch (ZTI)
+            url: configmgr-guide.md
+          - text: User-driven (UDI)
+            url: user-driven-installation-guide.md
+
+  - title: References
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Toolkit reference
+            url: toolkit-reference.md
+          - text: Troubleshoot MDT
+            url: troubleshooting-reference.md
+          - text: UDI developer's guide
+            url: user-driven-installation-developers-guide.md
