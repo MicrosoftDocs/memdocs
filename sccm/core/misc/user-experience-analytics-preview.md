@@ -210,7 +210,7 @@ You can compare your current scores and subscores to others by setting a baselin
 
    [![User experience analytics baseline settings page](media/uea-settings-baseline.png)](media/uea-settings-baseline.png#lightbox)
 
-## Troubleshooting
+## <a name="bkmk_uea_tshoot"></a> Troubleshooting
 
 To enroll devices to User Experience Analytics, they need to send required functional data to Microsoft. If your environment uses a proxy server, use this information to help configure the proxy.
 
@@ -232,11 +232,11 @@ To enable functional data sharing, configure your proxy server to allow the foll
 
 Make sure that a proxy doesn't block the data because of authentication. If your organization uses proxy server authentication for outbound traffic, use one or more of the following approaches:
 
-### Bypass (recommended)
+#### Bypass (recommended)
 
 Configure your proxy servers to not require proxy authentication for traffic to the data sharing endpoints. This option is the most comprehensive solution. It works for all versions of Windows 10.  
 
-### User proxy authentication
+#### User proxy authentication
 
 Configure devices to use the signed-in user's context for proxy authentication. This method requires the following configurations:
 
@@ -247,17 +247,17 @@ Configure devices to use the signed-in user's context for proxy authentication. 
 > [!IMPORTANT]
 > The user proxy authentication approach is incompatible with the use of Microsoft Defender Advanced Threat Protection. This behavior is because this authentication relies on the **DisableEnterpriseAuthProxy** registry key set to `0`, while Microsoft Defender ATP requires it to be set to `1`. For more information, see [Configure machine proxy and Internet connectivity settings](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
-### Device proxy authentication
+#### Device proxy authentication
 
 This approach is the most complex because it requires the following configurations:
 
 - Make sure devices can reach the proxy server through WinHTTP in local system context. Use one of the following options to configure this behavior:
-  - The command line 'netsh winhttp set proxy'
+  - The command line `netsh winhttp set proxy`
   - Web Proxy Auto-discovery Protocol (WPAD)
   - Transparent proxy
   - Routed connection, or that uses network address translation (NAT)
 
-- Configure proxy servers to allow the computer accounts in Active Directory to access the diagnostic data endpoints. This configuration requires proxy servers to support Windows Integrated Authentication.  
+- Configure proxy servers to allow the computer accounts in Active Directory to access the diagnostic data endpoints. This configuration requires proxy servers to support Windows-Integrated Authentication.  
 
 ## <a name="bkmk_uea_faq"></a> Frequently asked questions
 
