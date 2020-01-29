@@ -2,7 +2,7 @@
 title: User experience analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for User experience analytics preview.
-ms.date: 01/25/2020
+ms.date: 01/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -553,3 +553,33 @@ catch{
     exit 1
 }
 ```
+
+## <a name="bkmk_uea_privacy"></a> User Experience Analytics data privacy
+
+### Data flow
+
+The following illustration shows how required functional data flows from individual devices through our data services, transient storage, and to your tenant. Data flows through our existing enterprise pipelines without reliance on Windows diagnostic data.
+
+
+[![User experience data flow diagram](media/uea-dataflow.png)](media/uea-dataflow.png#lightbox)
+
+1. Configure the **Intune data collection** policy for enrolled devices.
+
+2. Devices send required functional data.
+
+	- For Intune devices, data is sent from the Intune management extension.
+	- For Configuration Manager managed devices, data can also flow to Microsoft Endpoint Management through the ConfigMgr connector. The ConfigMgr connector is cloud attached. It only requires connection to an Intune tenant, not turning on co-management.
+
+3. Data flows to the admin console via Microsoft Graph.
+
+### Resources
+
+For more information about related privacy aspects, see the following articles:
+
+- [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement)
+- [Windows 10 and privacy compliance](https://docs.microsoft.com/windows/privacy/windows-10-and-privacy-compliance)
+- [Licensing terms and documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
+- [Security and privacy at Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)  
+- [Confidence in the trusted cloud](https://azure.microsoft.com/overview/trusted-cloud/)  
+- [Trust Center](https://www.microsoft.com/trustcenter)  
+
