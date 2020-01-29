@@ -30,7 +30,9 @@ Install a secondary site from within the Configuration Manager console. Secondar
 > - **Download required prerequisite files**: `smssetup\bin\x64\setupdl.exe`. For more information, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader).
 > - **Install Configuration Manager console**: `smssetup\bin\i386\consolesetup.exe`. For more information, see [Install consoles](/sccm/core/servers/deploy/install/install-consoles).
 > - [**Download System Center Updates Publisher**](/sccm/sum/tools/updates-publisher) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626548 -->
-> - [**Download clients for additional operating systems**](https://www.microsoft.com/download/details.aspx?id=47719) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626550 -->
+> - **Download clients for additional operating systems**: <!-- https://go.microsoft.com/fwlink/p/?LinkId=626550 -->
+>   - [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850)
+>   - [Clients for UNIX and Linux](https://www.microsoft.com/download/details.aspx?id=47719)
 > - [**Release notes**](/sccm/core/servers/deploy/install/release-notes) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
 > - [**Read documentation**](https://docs.microsoft.com/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
 > - **Obtain installation assistance**: [TechNet Forums: Configuration Manager (Current Branch) – Site and Client Deployment](https://social.technet.microsoft.com/Forums/en-us/home?forum=ConfigMgrDeployment) <!--NOTE: this link requires en-us locale to work-->   <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
