@@ -13,59 +13,62 @@ metadata:
 
 highlightedContent:
   items:
-    - title: What is Microsoft Endpoint Manager?
+    - title: Overview of Microsoft Endpoint Manager
       itemType: overview
-      url: ./fundamentals/what-is-intune.md
-    - title: What's new in Microsoft Endpoint Manager?
-      itemType: overview
-      url: ./fundamentals/whats-new.md
-    - title: Features in development
-      itemType: overview
-      url: ./fundamentals/in-development.md    
-    - title: Try Intune for free
-      itemType: get-started
-      url: ./fundamentals/free-trial-sign-up.md
-    - title: Set up automatic enrollment for Windows 10 devices
+      url: what-is-endpoint-mgr.md
+    - title: Enable management on devices
       itemType: get-started
       url: ./enrollment/quickstart-setup-auto-enrollment.md
-    - title: Intune reports
-      itemType: overview
-      url: ./fundamentals/reports.md
+    - title: Deploy Windows 10
+      itemType: get-started
+      url: mem-architecture.md
+    - title: Deploy Office 365
+      itemType: get-started
+      url: ./fundamentals/in-development.md    
+    - title: Protect Office 365
+      itemType: get-started
+      url: ./fundamentals/free-trial-sign-up.md
+    - title: Secure Windows devices
+      itemType: get-started
+      url: ./protect/security-baselines.md
 
 conceptualContent:
   items:
-    - title: Plan for Intune adoption
+    - title: Intune
       links:
-        - url: ./fundamentals/planning-guide.md
+        - url: /intune/fundamentals/what-is-intune.md
+          itemType: overview
+          text: Overview of Intune
+        - url: /intune/fundamentals/high-level-architecture
+          itemType: overview
+          text: Intune high-level architecture          
+        - url: /intune/fundamentals/common-scenarios
           itemType: concept
-          text: Intune planning guide 
-        - url: ./fundamentals/migration-guide.md
+          text: Common ways to use Intune 
+        - url: /intune/fundamentals/migration-guide
           itemType: concept
           text: Intune migration guide
-        - url: ./fundamentals/migration-guide-communication-plan.md
-          itemType: concept
-          text: Communication plan for your users
       footerLink:
         text: See more
-        url: ./fundamentals/index.yml          
-    - title: Set up Intune
+        url: /intune/
+    - title: Configuration Manager
       links:
-        - url: ./fundamentals/setup-steps.md
-          itemType: how-to-guide
-          text: Steps to set up Intune
-        - url: ./fundamentals/supported-devices-browsers.md
-          itemType: reference
-          text: Supported operating systems and browsers
-        - url: ./fundamentals/role-based-access-control.md
-          itemType: reference
-          text: Role-based access control
-        - url: ./fundamentals/licenses.md
+        - url: /configmgr/core/understand/introduction
+          itemType: overview
+          text: Introduction to Configuration Manager
+        - url: /configmgr/core/understand/fundamentals
           itemType: concept
-          text: Intune licensing
+          text: Fundamentals of Configuration Manager
+        - url: /configmgr/core/plan-design/choose-a-device-management-solution
+          itemType: concept
+          text: Choose a device management solution
+        - url: /configmgr/core/plan-design/hierarchy/design-a-hierarchy-of-sites
+          itemType: concept
+          text: Design a hierarch of sites
       footerLink:
         text: See more
-        url: ./fundamentals/index.yml        
-    - title: Enroll devices
+        url: /configmgr/
+    - title: Desktop analytics
       links:
         - url: ./enrollment/device-enrollment.md
           itemType: concept
@@ -88,7 +91,7 @@ conceptualContent:
       footerLink:
         text: See more
         url: ./enrollment/index.yml
-    - title: Remotely manage devices
+    - title: Autopilot
       links:
         - url: ./remote-actions/device-management.md
           itemType: concept
@@ -103,122 +106,7 @@ conceptualContent:
       footerLink:
         text: See more
         url: ./remote-actions/index.yml           
-    - title: Create compliance rules for users and devices
-      links:
-        - url: ./protect/device-compliance-get-started.md
-          itemType: concept
-          text: Compliance overview
-        - url: ./protect/use-network-locations.md
-          itemType: how-to-guide
-          text: "Network fencing + compliance on Android"
-        - url: ./protect/actions-for-noncompliance.md
-          itemType: how-to-guide
-          text: Actions for non-compliant devices
-      footerLink:
-        text: See more
-        url: ./protect/index.yml            
-    - title: Control device features and settings
-      links:
-        - url: ./configuration/device-profiles.md
-          itemType: concept
-          text: Device configuration overview
-        - url: ./configuration/device-restrictions-configure.md
-          itemType: how-to-guide
-          text: Restrict settings and features
-        - url: ./configuration/vpn-settings-configure.md
-          itemType: how-to-guide
-          text: Add a VPN to devices
-        - url: ./configuration/administrative-templates-windows.md
-          itemType: how-to-guide
-          text: Configure group policy ADMX settings
-      footerLink:
-        text: See more
-        url: ./configuration/index.yml            
-    - title: Protect devices and data
-      links:
-        - url: ./protect/device-protect.md
-          itemType: concept
-          text: Device protection overview
-        - url: ./protect/conditional-access.md
-          itemType: concept
-          text: Conditional access with Intune
-        - url: ./protect/mobile-threat-defense.md
-          itemType: concept
-          text: Mobile Threat Defense integration with Intune
-      footerLink:
-        text: See more
-        url: ./protect/index.yml
-    - title: Manage apps
-      links:
-        - url: ./apps/app-management.md
-          itemType: concept
-          text: App management overview
-        - url: ./apps/apps-add.md
-          itemType: how-to-guide
-          text: Add apps to Intune
-        - url: ./apps/apps-deploy.md
-          itemType: how-to-guide
-          text: Assign apps to groups
-        - url: ./apps/app-configuration-policies-overview.md
-          itemType: overview
-          text: App configuration policies
-      footerLink:
-        text: See more
-        url: ./apps/index.yml          
-    - title: App protection policies
-      links:
-        - url: ./apps/app-protection-policy.md
-          itemType: concept
-          text: App protection policies overview
-        - url: ./apps/app-protection-policies.md
-          itemType: overview
-          text: Create app protection policies
-        - url: ./apps/app-protection-policies-validate.md
-          itemType: how-to-guide
-          text: Validate app protection policies
-        - url: ./apps/app-protection-policies-monitor.md
-          itemType: how-to-guide
-          text: Monitor app protection policies
-      footerLink:
-        text: See more
-        url: ./apps/index.yml            
-    - title: Help and support
-      links:
-        - url: ./fundamentals/get-support.md
-          itemType: concept
-          text: How to get support for Microsoft Intune?
-        - url: ./fundamentals/help-desk-operators.md
-          itemType: concept
-          text: Help users troubleshoot problems
-        - url: ./fundamentals/monitor-audit-logs.md
-          itemType: concept
-          text: Use audit logs to track and monitor events
-        - url: ./apps/troubleshoot-app-install.md
-          itemType: concept
-          text: Troubleshoot app installation issues
-        - url: ./configuration/troubleshoot-policies-in-microsoft-intune.md
-          itemType: concept
-          text: Troubleshoot policies and profiles in Intune
-    - title: Developer
-      links:
-        - url: ./developer/intune-graph-apis.md
-          itemType: concept
-          text: Access the Intune APIs in Microsoft Graph
-        - url: https://github.com/Microsoft/Intune-PowerShell-SDK/
-          itemType: concept
-          text: Use PowerShell cmdlets to automate actions
-        - url: ./developer/reports-nav-create-intune-reports.md
-          itemType: concept
-          text: Use the Microsoft Intune Data Warehouse
-        - url: ./developer/app-sdk.md
-          itemType: overview
-          text: Microsoft Intune App SDK overview
-        - url: ./developer/reports-nav-create-intune-reports.md
-          itemType: concept
-          text: Use the Microsoft Intune Data Warehouse
-      footerLink:
-        text: See more
-        url: ./developer/index.yml          
+
 additionalContent:
   sections:
     - title: Additional resources to manage devices
@@ -281,3 +169,4 @@ additionalContent:
           url: https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess
 
   footer: "Have feedback or want to contribute to docs? [See this resource](use-docs.md)!"
+  
