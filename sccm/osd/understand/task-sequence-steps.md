@@ -249,7 +249,7 @@ Installs an OS using an OS upgrade package, which is also an original installati
 > [!NOTE]  
 > **Operating System Upgrade Packages** are primarily meant for use with in-place upgrades and not for new installations of Windows. When deploying new installations of Windows, use the **Apply operating system from a captured image** option and **install.wim** from the installation source files.
 >
-> Deploying new installations of Windows via **Operating System Upgrade Packages** is still supported, but it's dependant on drivers being compatible with this method. When installing Windows from an OS upgrade package, drivers are installed while still in Windows PE versus simply being injected while in Windows PE. Some drivers aren't compatible with being installed while in Windows PE.
+> Deploying new installations of Windows via **Operating System Upgrade Packages** is still supported, but it's dependent on drivers being compatible with this method. When installing Windows from an OS upgrade package, drivers are installed while still in Windows PE versus simply being injected while in Windows PE. Some drivers aren't compatible with being installed while in Windows PE.
 >
 > If drivers aren't compatible with being installed while in Windows PE, then create an **Operating System Image** with the **install.wim** from the original installation source files. Then deploy via the **Apply operating system from a captured image** option instead.
 
