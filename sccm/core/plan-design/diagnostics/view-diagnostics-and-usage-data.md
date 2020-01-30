@@ -74,7 +74,7 @@ When you view the raw data, a common hashed value appears in each row of data. T
 
 3. Compare the script output against the GUID in the raw data. This process shows how the data is obscured.
 
-## Next step
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview)
