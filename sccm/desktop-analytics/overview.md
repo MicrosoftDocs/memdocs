@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 12/03/2019
+ms.date: 01/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -10,8 +10,6 @@ ms.assetid: 38b2bed2-20dd-4ce1-abc0-219343d2c4b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # What is Desktop Analytics?
@@ -31,6 +29,11 @@ Use Desktop Analytics with Configuration Manager to:
 - Deploy Windows 10 to pilot and production-managed devices  
 
 ![Screenshot of the Desktop Analytics home page in the Azure portal](media/portal-home.png)
+
+> [!Note]  
+> Desktop Analytics is a successor of Windows Analytics, which retired on January 31, 2020.
+>
+> The capabilities of Windows Analytics are combined in the Desktop Analytics service. Desktop Analytics is also more tightly integrated with Configuration Manager. For more information, see the [FAQ for Windows Analytics customers](/configmgr/desktop-analytics/faq#existing-windows-analytics-customers).
 
 ## Benefits
 
