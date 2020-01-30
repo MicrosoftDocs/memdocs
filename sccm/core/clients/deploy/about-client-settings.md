@@ -310,7 +310,7 @@ Choose **Yes** to display a notification for deployments available for less than
 
 After the deployment deadline, this setting determines whether the client uses an activation delay of up to two hours to install required software updates. By default, the activation delay is disabled.  
 
-For virtual desktop infrastructure (VDI) scenarios, this delay helps distribute the CPU processing and data transfer for a host machine with multiple virtual machines. Even if you don't use VDI, having many clients installing the same updates at the same time can negatively increase CPU usage on the site server. This behavior can also slow down distribution points, and significantly reduce the available network bandwidth.  
+For virtual desktop infrastructure (VDI) scenarios, this delay helps distribute the CPU processing and data transfer for a host machine with multiple virtual machines. Even if you don't use VDI, having many clients installing the same updates at the same time can negatively increase CPU usage on the site server. This behavior can also slow down distribution points, and significannotly reduce the available network bandwidth.  
 
 If clients must install required software updates at the deployment deadline without delay, then configure this setting to **Yes**.
 
@@ -333,7 +333,7 @@ For more information about maintenance windows, see [How to use maintenance wind
 
 - **Specify the snooze duration for computer restart countdown notifications (minutes)** (Starting in version 1906)<!--3976435-->
   - The default value is 240 minutes.
-  - Your snooze duration value should be less than the temporary notification value minus the value for the notification the user cant dismiss.
+  - Your snooze duration value should be less than the temporary notification value minus the value for the notification the user cannot dismiss.
   - For more information, see [Device restart notifications](/sccm/core/clients/deploy/device-restart-notifications).
 
 **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**<!--3555947-->: Starting in version 1902, configuring this setting to **Yes** changes the user experience to be more intrusive. This setting applies to all deployments of applications, task sequences, and software updates. For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact).
