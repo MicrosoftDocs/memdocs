@@ -25,11 +25,11 @@ Follow the high-level steps in this article to upgrade the client for Mac comput
 
 ## Download the latest Mac client
 
-The Mac client for Configuration Manager isn't supplied on the Configuration Manager installation media. Download it from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719). The Mac client installation files are contained in a Windows Installer file named **ConfigmgrMacClient.msi**.  
+The Mac client for Configuration Manager isn't supplied on the Configuration Manager installation media. Download it from the Microsoft Download Center, [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850). The Mac client installation files are contained in a Windows Installer file named **ConfigmgrMacClient.msi**.  
 
 ## Create the Mac client installation file
 
-On a computer that runs Windows, run **ConfigmgrMacClient.msi**. This installer unpacks the Mac client installation file, named **Macclient.dmg**. By default, you can find this file in the following folder: **C:\Program Files (x86)\Microsoft\System Center 2012 Configuration Manager Mac Client**.  
+On a computer that runs Windows, run **ConfigmgrMacClient.msi**. This installer unpacks the Mac client installation file, named **Macclient.dmg**. By default, you can find this file in the following folder: **C:\Program Files\Microsoft\System Center Configuration Manager for Mac client**.  
 
 ## Extract the client installation files
 
