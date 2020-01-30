@@ -46,8 +46,6 @@
       href: understand/configuration-manager-on-azure.md
   - name: FAQ for site sizing and performance
     href: understand/site-size-performance-faq.md
-  - name: FAQ for diagnostics and usage data
-    href: understand/frequently-asked-questions-about-diagnostics-and-usage-data.md
   - name: FAQ for product and licensing
     href: understand/product-and-licensing-faq.md
   - name: Which branch of Configuration Manager should I use?
@@ -202,26 +200,30 @@
       href: plan-design/network/example-deployment-of-pki-certificates.md
   - name: Diagnostics and usage data
     items:
-    - name: Diagnostics and usage data overview
+    - name: Overview of diagnostics and usage data
       href: plan-design/diagnostics/diagnostics-and-usage-data.md
-    - name: How diagnostics and usage data is used
+    - name: How Microsoft uses diagnostics and usage data
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
-    - name: Diagnostic data for 1910
-      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1910.md
-    - name: Diagnostic data for 1906
-      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
-    - name: Diagnostic data for 1902
-      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
-    - name: Diagnostic data for 1810
-      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
-    - name: Diagnostic data for 1806
-      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md
-    - name: How diagnostics and usage data is collected
+    - name: How Configuration Manager collects data
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md
     - name: How to view diagnostics and usage data
       href: plan-design/diagnostics/view-diagnostics-and-usage-data.md
-    - name: Customer Experience Improvement Program (CEIP)
-      href: plan-design/diagnostics/customer-experience-improvement-program-ceip.md
+    - name: Levels of diagnostics and usage data
+      items:
+        - name: Overview of levels
+          href: plan-design/diagnostics/levels-overview.md
+        - name: Data for version 1910
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1910.md
+        - name: Data for version 1906
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
+        - name: Data for version 1902
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
+        - name: Data for version 1810
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
+        - name: Data for version 1806
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md
+    - name: Frequently asked questions (FAQ)
+      href: plan-design/diagnostics/frequently-asked-questions.md
   - name: Security and privacy for Configuration Manager
     items:
     - name: Security and privacy overview
