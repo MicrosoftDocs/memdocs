@@ -1,0 +1,60 @@
+### YamlMime:Landing
+
+title: OS deployment documentation
+summary: Use Configuration Manager to deploy Windows via different methods and automate tasks.
+
+metadata:
+  title: OS deployment documentation
+  description: Use Configuration Manager to deploy Windows via different methods and automate tasks.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-osd
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+
+landingContent:
+  - title: About OS deployment
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Introduction to OS deployment
+            url: understand/introduction-to-operating-system-deployment.md
+          - text: Infrastructure requirements
+            url: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+      - linkListType: concept
+        links:
+          - text: Prepare for OS deployment
+            url: get-started/prepare-for-operating-system-deployment.md
+          - text: OS deployment scenarios
+            url: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+          - text: OS deployment methods
+            url: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+
+  - title: Get started
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Manage task sequences
+            url: deploy-use/manage-task-sequences-to-automate-tasks.md
+          - text: Create an OS upgrade task sequence
+            url: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+          - text: Create a phased deployment
+            url: deploy-use/create-phased-deployment-for-task-sequence.md
+          - text: Deploy a task sequence
+            url: deploy-use/deploy-a-task-sequence.md
+          - text: Debug a task sequence
+            url: deploy-use/debug-task-sequence.md
+
+  - title: Technical reference
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Use the task sequence editor
+            url: understand/task-sequence-editor.md
+          - text: About task sequence steps
+            url: understand/task-sequence-steps.md
+          - text: How to use task sequence variables
+            url: understand/using-task-sequence-variables.md
+          - text: Task sequence variable reference
+            url: understand/task-sequence-variables.md

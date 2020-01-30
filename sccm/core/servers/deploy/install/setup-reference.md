@@ -36,13 +36,15 @@ Before you begin the installation of a new site, make sure that the site server 
 ##  <a name="bkmk_Addclients"></a> Clients for additional operating systems  
 You can download client software for Configuration Manager from the Microsoft Download Center for the following operating systems:  
 
--   Mac   (Apple)  
--   UNIX  
--   Linux  
+- macOS (Apple)
+- UNIX
+- Linux
 
 Use the following links to download clients for the version of Configuration Manager you use:  
 
--   See [Microsoft Configuration Manager - Clients for Additional Operating Systems](https://www.microsoft.com/download/details.aspx?id=47719)  
+- [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850)
+
+- [Microsoft Configuration Manager clients for additional operating systems](https://www.microsoft.com/download/details.aspx?id=47719)
 
 ##  <a name="bkmk_usage"></a> Usage data levels and settings  
 When you install your first Configuration Manager site, Configuration Manager automatically installs and configures a new site system role, the **service connection point**,  on the site server. The service connection point has these default settings:  
