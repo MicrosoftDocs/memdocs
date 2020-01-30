@@ -212,7 +212,7 @@ This is an example of `in-line code`.
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/R6_eWWfNB54" frameborder="0" allowfullscreen></iframe>
 
-## docs.ms extentions
+## docs.ms extensions
 
 ### Button
 
