@@ -39,7 +39,7 @@ Yes, use the following process:
 
 - In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Open the properties for the entry associated with your Desktop Analytics service.
 
-- On the **Desktop Analtyics Connection** tab, change the **Target Collection** or manage the additional collections.
+- On the **Desktop Analytics Connection** tab, change the **Target Collection** or manage the additional collections.
 
 > [!IMPORTANT]  
 > Configuration Manager uses a settings policy to configure devices in the target collection. This policy includes the diagnostic data settings to enable devices to send data to Microsoft. Changing the target collection doesn't undo the settings policy on devices no longer in the target collection. If you don't want your devices to continue sending diagnostic data, [reconfigure the devices](/sccm/desktop-analytics/account-close#reconfigure-clients).
