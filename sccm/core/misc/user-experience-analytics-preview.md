@@ -45,7 +45,9 @@ To start using User experience analytics, verify the prerequisites, then start g
 ### Prerequisites
 
 This current preview requires:
-- Intune enrolled devices running Windows 10
+- Devices must be either:
+   - Intune enrolled devices running Windows  
+   - [Co-managed](/configmgr/comanage/overview) devices
 - Startup performance insights are only available for devices running version 1903 or later of Windows 10.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](#bkmk_uea_endpoints).
 
