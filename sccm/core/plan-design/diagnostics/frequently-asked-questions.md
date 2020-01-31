@@ -2,7 +2,7 @@
 title: Diagnostic and usage data FAQ
 titleSuffix: Configuration Manager
 description: Frequently asked questions about diagnostic and usage data for Configuration Manager
-ms.date: 01/23/2020
+ms.date: 01/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -74,6 +74,6 @@ For example, the following cloud services are a part of Microsoft Endpoint Manag
 
 ## <a name="bkmk_personal"></a> Does Configuration Manager collect any personal data?
 
-No. Configuration doesn't collect or transmit any personal data, customer data, or customer-authored data. It's an on-premises product that you directly deploy, manage, and operate. The diagnostics and usage data that Microsoft collects improves the installation experience, quality, and security of future releases.
+No. Configuration doesn't collect or transmit any personal data or customer data. It's an on-premises product that you directly deploy, manage, and operate. The diagnostics and usage data that Microsoft collects improves the installation experience, quality, and security of future releases.
 
 For more information about Configuration Manager data, see [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview).
