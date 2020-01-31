@@ -45,9 +45,7 @@ To start using User experience analytics, verify the prerequisites, then start g
 ### Prerequisites
 
 This current preview requires:
-- Devices must be either:
-   - Intune enrolled devices running Windows  
-   - [Co-managed](/configmgr/comanage/overview) devices
+- Intune enrolled devices running Windows 10
 - Startup performance insights are only available for devices running version 1903 or later of Windows 10.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](#bkmk_uea_endpoints).
 
@@ -226,7 +224,7 @@ To enable functional data sharing, configure your proxy server to allow the foll
 
 | Endpoint  | Function  |
 |-----------|-----------|
-| `https://v10c.events.data.microsoft.com` | Connected user experience and diagnostic component endpoint. |
+| `https://*.events.data.microsoft.com` | Used to send [required functional data](#bkmk_uea_datacollection) to the Intune data collection endpoint. |
 | `https://graph.windows.net` | Used to automatically retrieve settings  when attaching your hierarchy to User Experience Analytics (on Configuration Manager Server role). For more information, see [Configure the proxy for a site system server](/sccm/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server). |
 | `https://*.manage.microsoft.com` | Used to synch device collection and devices with User Experience Analytics (on Configuration Manager Server role only). For more information, see [Configure the proxy for a site system server](/sccm/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server). |
 
@@ -627,7 +625,7 @@ The following illustration shows how required functional data flows from individ
 
 The average latency end to end is about 12 hours and is gated by the time it takes to do the daily processing. All other parts of the data flow are near-real-time.
 
-### Data collection
+### <a name="bkmk_uea_datacollection"></a>Data collection
 
 Currently, the basic functionality of User experience analytics collects information associated with your boot performance records. As we add additional functionality over time, the data collected will vary as needed. The main datapoints currently being collected:
 
