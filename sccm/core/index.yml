@@ -5,7 +5,7 @@ summary: Fundamental information about the Configuration Manager product, includ
 
 metadata:
   title: Core infrastructure documentation
-  titleSuffix: Configuration Manager
+  titleSuffix: Configuration Manager
   description: Fundamental information about the Configuration Manager product, including site servers and clients.
   ms.prod: configuration-manager
   ms.technology: configmgr-other
