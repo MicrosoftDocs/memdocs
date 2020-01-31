@@ -105,11 +105,11 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Licensing and costs
 
-Devices enrolled in Desktop Analytics may only be used by licensed users of:
+Devices enrolled in Desktop Analytics must have a valid license of:
 
 - Configuration Manager. For more information, see [Configuration Manager licensing](/configmgr/core/understand/product-and-licensing-faq)
 
-and 
+and users of the device must be licensed with:
 
 - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F1, E3, or E5)
 
