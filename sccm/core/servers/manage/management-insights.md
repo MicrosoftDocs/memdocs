@@ -203,9 +203,7 @@ Insights for managing Software Center.
 
 Insights related to the deployment and servicing of Windows 10. The Windows 10 management insight group is only available when more than half of clients are running Windows 7, Windows 8, or Windows 8.1.
 
-- **Configure Windows telemetry and commercial ID key**: To use data from Upgrade Readiness, configure devices with a Commercial ID key and enable collection of diagnostic data. Set Windows 10 devices to **Enhanced (Limited)** level or higher. For more information, see [Configure clients to report data to Windows Analytics](/sccm/core/clients/manage/monitor-windows-analytics#configure-clients-to-report-data-to-windows-analytics).  
-
-- **Connect Configuration Manager to Upgrade Readiness**: Use Upgrade Readiness for your Windows 10 deployments before Windows 7 goes out of support. For more information, see [Integrate Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics).  
+- **Configure Windows diagnostic data and commercial ID key**: To use data from Desktop Analytics, configure devices with a Commercial ID key and enable collection of diagnostic data. Set Windows 10 devices to **Enhanced (Limited)** level or higher. For more information, see [Enable data sharing for Desktop Analytics](/configmgr/desktop-analytics/enable-data-sharing).
 
 #### Windows 10 management insights rules
 

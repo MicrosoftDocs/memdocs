@@ -391,6 +391,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "sccm/core/understand/frequently-asked-questions-about-diagnostics-and-usage-data.md",
+            "redirect_url": "/configmgr/core/plan-design/diagnostics/frequently-asked-questions",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "sccm/mdt/sccm-guide.md",
             "redirect_url": "/configmgr/mdt/configmgr-guide",
             "redirect_document_id": false
@@ -793,6 +798,41 @@
         {
             "source_path": "sccm/mdm/deploy-use/create-vpn-profiles.md",
             "redirect_url": "/configmgr/protect/deploy-use/vpn-profiles",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/plan-design/diagnostics/customer-experience-improvement-program-ceip.md",
+            "redirect_url": "/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/misc/eula/microsoft-sql-server-2014-shared-management-objects.md",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/microsoft-sql-server-2014-shared-management-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/misc/eula/microsoft-sql-server-compact-4.0-service-pack-1-sp1.md",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/microsoft-sql-server-compact-4.0-service-pack-1-sp1",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/misc/eula/microsoft-system-center-configuration-manager-supplemental-hotfix.md",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/supplemental-hotfix",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/misc/eula/microsoft-system-center-configuration-manager.md",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/microsoft-system-center-configuration-manager",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/misc/eula/microsoft-system-center-endpoint-protection.md",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/microsoft-system-center-endpoint-protection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/misc/eula/microsoft-system-clr-types-for-microsoft-sql-server-2014.md",
+            "redirect_url": "https://docs.microsoft.com/legal/configmgr/microsoft-system-clr-types-for-microsoft-sql-server-2014",
             "redirect_document_id": false
         }
     ]

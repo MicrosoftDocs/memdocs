@@ -40,19 +40,6 @@ For more information about usage data levels and settings, see [Diagnostics and 
 
 
 
-## Customer Experience Improvement Program
-
-> [!Note]  
-> Starting in Configuration Manager version 1802, the CEIP feature is removed from the product.
-
-The Customer Experience Improvement Program (CEIP) collects basic information from the Configuration Manager console about your hardware configuration and how you use our software and services to identify trends and usage patterns. CEIP also collects the type and number of errors that you encounter, software and hardware performance, and the speed of services. We don't collect your name, address, or other contact information. No CEIP data is collected from client computers.
-
-We use this information to improve the quality, reliability, and performance of Microsoft software and services.
-
-For more about the information that's collected, processed, or transmitted by CEIP, see the [CEIP privacy statement](https://go.microsoft.com/fwlink/?LinkID=525211).
-
-
-
 ## Log Analytics Connector
 
 The Log Analytics Connector syncs data, such as collections, from Configuration Manager to the Azure cloud service. The Azure subscription ID and secret key are stored in the Configuration Manager database when an admin configures the feature. Both the Azure Active Directory client secret and the Azure workspace shared key are stored in the on-premises Configuration Manager database. All communications between Configuration Manager and Azure use HTTPS. No additional information about the collections is provided to Microsoft outside of randomized diagnostics and usage data. 
