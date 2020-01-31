@@ -49,7 +49,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
         > [!Note]  
         > You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.  
 
-        If you're already using Windows Analytics, select that same workspace. You need to reenroll devices to Desktop Analytics that you previously enrolled in Windows Analytics.
+        If you previously used Windows Analytics, select that same workspace. You need to reenroll devices to Desktop Analytics that you previously enrolled in Windows Analytics.
 
         To migrate inputs from the selected Windows Analytics workspace, set **Do you want to see inputs from Windows Analytics?** to **Yes**. If you don't want to migrate, switch this setting to **No**. For more information, see the FAQ for [Existing Windows Analytics customers](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
 

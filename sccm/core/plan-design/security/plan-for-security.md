@@ -394,9 +394,7 @@ Configuration Manager integrates with Azure Active Directory (Azure AD) to enabl
 
 **Server**  
 
-- [Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness)  
-
-- [Windows Analytics](/sccm/core/clients/manage/monitor-windows-analytics)  
+- [Desktop Analytics](/sccm/desktop-analytics/overview)  
 
 - [Azure Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics)  
 

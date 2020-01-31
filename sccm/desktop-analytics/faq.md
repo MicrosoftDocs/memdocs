@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 11/05/2019
+ms.date: 01/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Desktop Analytics FAQ
@@ -41,7 +39,7 @@ Yes, use the following process:
 
 - In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Open the properties for the entry associated with your Desktop Analytics service.
 
-- On the **Desktop Analtyics Connection** tab, change the **Target Collection** or manage the additional collections.
+- On the **Desktop Analytics Connection** tab, change the **Target Collection** or manage the additional collections.
 
 > [!IMPORTANT]  
 > Configuration Manager uses a settings policy to configure devices in the target collection. This policy includes the diagnostic data settings to enable devices to send data to Microsoft. Changing the target collection doesn't undo the settings policy on devices no longer in the target collection. If you don't want your devices to continue sending diagnostic data, [reconfigure the devices](/sccm/desktop-analytics/account-close#reconfigure-clients).
@@ -85,6 +83,11 @@ For the Microsoft Data Management Service and Analytics Azure Storage: No, these
 Windows diagnostic data from your computers is encrypted, sent to, and processed at Microsoft-managed secure data centers located in the United States. Microsoft provides the analysis of the Desktop Analytics-related data to you through the Desktop Analytics solution in the Azure portal. Desktop Analytics is supported in most regions where [Log Analytics is available](https://azure.microsoft.com/global-infrastructure/services/?products=monitor&regions=all). If you select an international Azure region, your diagnostic data is still sent to and processed in Microsoft's secure data centers in the United States.
 
 ## Existing Windows Analytics customers
+
+> [!Important]  
+> The Windows Analytics service is retired as of January 31, 2020.
+>
+> For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 
 ### Can I migrate inputs from Windows Analytics?
 
