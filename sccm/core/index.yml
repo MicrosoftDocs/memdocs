@@ -79,7 +79,7 @@ landingContent:
             url: plan-design/hierarchy/about-log-files.md
           - text: Ports
             url: plan-design/hierarchy/ports.md
-          - text: CLient settings
+          - text: Client settings
             url: clients/deploy/about-client-settings.md
           - text: Tools
             url: support/tools.md
