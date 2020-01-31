@@ -1,5 +1,5 @@
 - name: Core infrastructure
-  href: understand/introduction.md
+  href: index.yml
 - name: Understand and explore
   items:
   - name: What is Configuration Manager?
@@ -727,10 +727,6 @@
     items:
     - name: How to monitor clients
       href: clients/manage/monitor-clients.md
-    - name: Use Windows Analytics
-      href: clients/manage/monitor-windows-analytics.md
-    - name: Upgrade Readiness
-      href: clients/manage/upgrade-readiness.md
     - name: How to monitor Linux and UNIX clients
       href: clients/manage/monitor-clients-for-linux-and-unix-servers.md
     - name: How to manage clients
