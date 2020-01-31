@@ -1,5 +1,5 @@
 - name: Core infrastructure
-  href: understand/introduction.md
+  href: index.yml
 - name: Understand and explore
   items:
   - name: What is Configuration Manager?
