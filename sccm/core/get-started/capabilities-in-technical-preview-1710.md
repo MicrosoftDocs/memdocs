@@ -62,15 +62,12 @@ To try out using the Run Scripts feature, see [Create and run scripts](../../app
 
 
 
-## Limit Windows 10 Enhanced telemetry to only send data relevant to Windows Analytics Device Health
+## Limit Windows 10 Enhanced data to only send data relevant to Windows Analytics Device Health
 <!-- 1356148 -->
 
-With this release, you can now set the Windows 10 telemetry data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** telemetry level with Windows 10 version 1709 or later.
+With this release, you can now set the Windows 10 diagnostic data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** level with Windows 10 version 1709 or later.
 
-The Enhanced (Limited) telemetry level includes metrics from the basic level, as well as a subset of data collected from the **Enhanced** level relevant to Windows Analytics. For more information on telemetry levels, see [Telemetry levels](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#use-group-policy-to-set-the-diagnostic-data-level).
-
-### Try it out!
-To configure Windows 10 telemetry collection on clients, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings). Open the **Cloud Services** window, and set Windows 10 telemetry to **Enhanced**.
+The Enhanced (Limited) level includes metrics from the basic level, as well as a subset of data collected from the **Enhanced** level relevant to Windows Analytics.
 
 
 ## Software Center no longer distorts icons larger than 250x250  
@@ -190,7 +187,7 @@ To let a device running Windows Defender SmartScreen run trusted software, follo
 
 ## Configure and deploy Windows Defender Application Guard policies <!-- 1351960 -->
 
-[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) is a new Windows feature that helps protect your users by opening untrusted web sites in a secure isolated container that is not accessible by other parts of the operating system. In this technical preview, we’ve added support to configure this feature using Configuration Manager compliance settings which you configure, and then deploy to a collection. This feature will be released in preview for the 64-bit version of the Windows 10 Creator’s Update (codename: RS2). To test this feature now, you must be using a preview version of this update.
+[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) is a new Windows feature that helps protect your users by opening untrusted web sites in a secure isolated container that is not accessible by other parts of the operating system. In this technical preview, we’ve added support to configure this feature using Configuration Manager compliance settings which you configure, and then deploy to a collection. This feature will be released in preview for the 64-bit version of the Windows 10 Creator’s Update. To test this feature now, you must be using a preview version of this update.
 
 ### Before you start
 To create and deploy Windows Defender Application Guard policies, the Windows 10 devices to which you deploy the policy must be configured with a network isolation policy. For more information, see the blog post referenced later. This capability works only with current Windows 10 Insider builds. To test it, your clients must be running a recent Windows 10 Insider Build.

@@ -236,8 +236,6 @@ Improvements have been made to leverage the Office Click-to-Run user experience 
 <!-- 1318608 -->
 Windows Analytics is a set of solutions that allow you to form insight into the current state of your environment. Devices in your environment report Windows telemetry data. The data can be accessed through the Azure portal. In the case of Upgrade Readiness the data is directly available in the monitoring node of the Configuration Manager console.
 
-For more information, see [Use Windows Analytics with Configuration Manager](/sccm/core/clients/manage/monitor-windows-analytics).
-
 
 <!-- ## Inventory  -->
 

@@ -2,7 +2,7 @@
 title: Monitor clients with Windows Analytics
 titleSuffix: Configuration Manager
 description: Windows Analytics is a set of solutions that allow you do draw valuable insights into the current state of your environment.
-ms.date: 10/14/2019
+ms.date: 01/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: CF35CE87-3BA8-4A84-9BC8-ABCEA4666212
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Use Windows Analytics with Configuration Manager
@@ -19,12 +17,15 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 > [!Important]  
-> As of October 2019, Windows Analytics integration in Configuration Manager is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). The Windows Analytics service will retire on January 31, 2020.
+> The Windows Analytics service is retired as of January 31, 2020.
 >
 > [Desktop Analytics](/sccm/desktop-analytics/overview) is the evolution of Windows Analytics. Existing Windows Analytics customers can [migrate data to Desktop Analytics](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
 >
 > For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 
+If your Configuration Manager site had a connection to Upgrade Readiness, you need to remove it and reconfigure clients. For more information, see [Remove Upgrade Readiness connection](/configmgr/core/clients/manage/upgrade-readiness#bkmk_remove).
+
+<!--
 [Windows Analytics](https://docs.microsoft.com/windows/deployment/update/windows-analytics-overview) is a set of solutions that allow you to gain insight into the current state of your environment. Windows devices in your environment report data to Microsoft, which you can access and analyze through these solutions. For example, connect [Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness) to Configuration Manager to directly access the data in the **Monitoring** workspace of the Configuration Manager console.
 
 The data used by Windows Analytics isn't transferred directly to the Configuration Manager site server. Client computers send data to the Windows cloud service. This service then transfers the relevant data to Windows Analytics solutions hosted in one of your organization's workspaces. Configuration Manager then directs you to relevant data in the web portal with in-context links. It can also directly display data that's part of solutions that you connect to Configuration Manager.
@@ -80,3 +81,4 @@ For more information and details on how to configure and connect to Upgrade Read
 
 You can configure Windows 10 version 1703 and later devices with a [Windows Information Protection](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip) (WIP) policy. They report diagnostic data on applications that access corporate data in your environment but aren't included in the policy application rules. Users may need these applications to stay productive, but WIP blocks the users' access. This information is useful to maintain your Windows Information Protection policies in Configuration Manager. 
 
+-->
