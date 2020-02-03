@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 01/17/2020
+ms.date: 02/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -115,22 +115,22 @@ Enable this section if needed to include any broad change to the tech preview br
 
 <!-- (explanatory comment)
 This is the full list of new features in the latest TP release
--->
+
+bullet format:
+<!-- - [title](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--ID-->
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2001
+### Technical preview version 2001.2
 
-<!-- - [title](/sccm/core/get-started/2020/technical-preview-2001#bkmk_anchor) <!--ID-->
-
-- [Microsoft Edge management dashboard](/sccm/core/get-started/2020/technical-preview-2001#bkmk_edge-dash) <!--3871913-->
-- [Improvements to orchestration groups](/sccm/core/get-started/2020/technical-preview-2001#bkmk_orch) <!--3098816-->
-- [Improvements to Check Readiness task sequence step](/sccm/core/get-started/2020/technical-preview-2001#bkmk_tsready) <!--6005561-->
-- [Integrate Power BI Report Server](/sccm/core/get-started/2020/technical-preview-2001#bkmk_powerbi) <!--3721603-->
-- [OneTrace log groups](/sccm/core/get-started/2020/technical-preview-2001#bkmk_onetrace) <!--5559993-->
-- [Improvements to administration service](/sccm/core/get-started/2020/technical-preview-2001#bkmk_rest) <!--5728365-->
-- [Wake up a device from the central administration site](/sccm/core/get-started/2020/technical-preview-2001#bkmk_wake) <!--6030715-->
-- [Improvements to task sequence progress](/sccm/core/get-started/2020/technical-preview-2001#bkmk_tsprogress) <!--2356386-->
+- [Token based authentication for cloud management gateway](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_cmg) <!--5686290-->
+- [Improvements to orchestration groups](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_orch) <!--3098816-->
+- [New cmdlets for phased deployments](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_pod-psh) <!--6104290-->
+- [Exclude certain subnets for peer content download](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_subnet) <!--3555777-->
+- [Send a smile improvements](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_sendsmile) <!--5891852-->
+- [Improvements to task sequence as a deployment type](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_tsdt) <!--3555953-->
+- [Improvements to Microsoft Edge Management dashboard](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_edge) <!--3871913-->
+- [Additional improvement to task sequence progress](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_tsprogress) <!--2356386, 5932692-->
 
 > [!NOTE]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
@@ -144,6 +144,17 @@ When there's a new CB, add any features not in that CB to the table in H2 "Featu
 -->
 
 The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1910:
+
+### Technical preview version 2001
+
+- [Microsoft Edge management dashboard](/sccm/core/get-started/2020/technical-preview-2001#bkmk_edge-dash) <!--3871913-->
+- [Improvements to orchestration groups](/sccm/core/get-started/2020/technical-preview-2001#bkmk_orch) <!--3098816-->
+- [Improvements to Check Readiness task sequence step](/sccm/core/get-started/2020/technical-preview-2001#bkmk_tsready) <!--6005561-->
+- [Integrate Power BI Report Server](/sccm/core/get-started/2020/technical-preview-2001#bkmk_powerbi) <!--3721603-->
+- [OneTrace log groups](/sccm/core/get-started/2020/technical-preview-2001#bkmk_onetrace) <!--5559993-->
+- [Improvements to administration service](/sccm/core/get-started/2020/technical-preview-2001#bkmk_rest) <!--5728365-->
+- [Wake up a device from the central administration site](/sccm/core/get-started/2020/technical-preview-2001#bkmk_wake) <!--6030715-->
+- [Improvements to task sequence progress](/sccm/core/get-started/2020/technical-preview-2001#bkmk_tsprogress) <!--5932692, fka 2356386-->
 
 ### Technical preview version 1912
 

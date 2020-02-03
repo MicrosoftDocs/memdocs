@@ -31,8 +31,9 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [OneTrace log groups](includes/2001/5559993.md)]
 [!INCLUDE [Improvements to administration service](includes/2001/5728365.md)]
 [!INCLUDE [Wake up a device from the central administration site](includes/2001/6030715.md)]
-[!INCLUDE [Improvements to task sequence progress](includes/2001/2356386.md)]
 
+[!INCLUDE [Improvements to task sequence progress](includes/2001/2356386.md)]
+<!-- 5932692, fka 2356386 -->
 
 <!--
 ## General known issues
