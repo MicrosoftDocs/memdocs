@@ -36,7 +36,11 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [5913817](includes/2001-2/5913817.md)]
 [!INCLUDE [5891852](includes/2001-2/5891852.md)]
 [!INCLUDE [3871913](includes/2001-2/3871913.md)]
+[!INCLUDE [3098816](includes/2001-2/3098816.md)]
 [!INCLUDE [6104290](includes/2001-2/6104290.md)]
+
+[!INCLUDE [2356386](includes/2001-2/2356386.md)]
+<!-- 5932692, fka 2356386 -->
 
 <!--
 ## General known issues
