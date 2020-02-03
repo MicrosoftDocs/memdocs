@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 01/29/2020
+ms.date: 02/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -123,18 +123,14 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2001.2
 
-- [5686290](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--5686290-->
-- [5860415](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--5860415-->
-- [5909334](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--5909334-->
-- [3555953](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--3555953-->
-- [4261411](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--4261411-->
-- [3555777](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--3555777-->
-- [4963230](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--4963230-->
-- [5566763](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--5566763-->
-- [4963383](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--4963383-->
-- [5913817](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--5913817-->
-- [5891852](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--5891852-->
-- [5932692](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--5932692, fka 2356386-->
+- [Token based authentication for cloud management gateway](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_cmg) <!--5686290-->
+- [Improvements to orchestration groups](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_orch) <!--3098816-->
+- [New cmdlets for phased deployments](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_pod-psh) <!--6104290-->
+- [Exclude certain subnets for peer content download](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_subnet) <!--3555777-->
+- [Send a smile improvements](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_sendsmile) <!--5891852-->
+- [Improvements to task sequence as a deployment type](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_tsdt) <!--3555953-->
+- [Improvements to Microsoft Edge Management dashboard](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_edge) <!--3871913-->
+- [Additional improvement to task sequence progress](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_tsprogress) <!--2356386, 5932692-->
 
 > [!NOTE]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
