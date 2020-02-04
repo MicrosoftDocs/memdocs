@@ -146,7 +146,7 @@ The new policy displays in the **Compliance Policies** node of the **Assets and 
 4. When you are done, click **OK**.
 
 ### Monitor the compliance policy
-After you create the compliance policy, you can monitor the compliance results in the Configuration Manager console. For details, see [Monitor the compliance policy](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy).
+After you create the compliance policy, you can monitor the compliance results in the Configuration Manager console. For details, see [Monitor the compliance policy](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy).
 
 
 ## Improvements to Software Center settings and notification messages for high-impact task sequences

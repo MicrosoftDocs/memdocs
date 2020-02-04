@@ -36,8 +36,8 @@ These troubleshooting diagrams are interconnected. Use the following diagram to 
 
 For more information, see the following series of blogs from Microsoft Support:
 
-- [ConfigMgr DRS Synchronization Internals](https://blogs.technet.microsoft.com/umairkhan/2019/06/01/configmgr-drs-synchronization-internals/)
-- [ConfigMgr 2012 Data Replication Service (DRS) Unleashed](https://blogs.technet.microsoft.com/umairkhan/2014/02/17/configmgr-2012-data-replication-service-drs-unleashed/)
-- [ConfigMgr 2012 DRS – Troubleshooting FAQs](https://blogs.technet.microsoft.com/umairkhan/2014/03/24/configmgr-2012-drs-troubleshooting-faqs/)
-- [ConfigMgr 2012 DRS Initialization Internals](https://blogs.technet.microsoft.com/umairkhan/2015/01/21/configmgr-2012-drs-initialization-internals/)
-- [ConfigMgr 2012: DRS and SQL service broker certificate issues](https://blogs.technet.microsoft.com/umairkhan/2013/12/12/configmgr-2012-drs-and-sql-service-broker-certificate-issues/)
+- [ConfigMgr DRS Synchronization Internals](https://argonsys.com/microsoft-cloud/library/configmgr-drs-synchronization-internals/)
+- [ConfigMgr 2012 Data Replication Service (DRS) Unleashed](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configmgr-2012-data-replication-service-drs-unleashed/ba-p/339916)
+- [ConfigMgr 2012 DRS – Troubleshooting FAQs](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configmgr-2012-drs-troubleshooting-faqs/ba-p/339934)
+- [ConfigMgr 2012 DRS Initialization Internals](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configmgr-2012-drs-initialization-internals/ba-p/339948)
+- [ConfigMgr 2012: DRS and SQL service broker certificate issues](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configmgr-2012-drs-and-sql-service-broker-certificate-issues/ba-p/339910)

@@ -128,7 +128,7 @@ Starting in version 1906, run Configuration Manager setup to add a new synchrono
 
 Configuration Manager setup uses the SQL database move operation, and makes sure the nodes are correctly configured.
 
-For more information on how to do this process manually in version 1902 or earlier, see [ConfigMgr 1702: Adding a new node (Secondary Replica) to an existing SQL AO AG](https://blogs.technet.microsoft.com/umairkhan/2017/07/17/configmgr-1702-adding-a-new-node-secondary-replica-to-an-existing-sql-ao-ag/).
+For more information on how to do this process manually in version 1902 or earlier, see [ConfigMgr 1702: Adding a new node (Secondary Replica) to an existing SQL AO AG](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configmgr-1702-adding-a-new-node-secondary-replica-to-an/ba-p/339960).
 
 ### Remove a replica member
 
