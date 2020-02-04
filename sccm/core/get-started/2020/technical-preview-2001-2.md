@@ -31,15 +31,14 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Send a smile improvements](includes/2001-2/5891852.md)]
 [!INCLUDE [Improvements to task sequence as a deployment type](includes/2001-2/3555953.md)]
 [!INCLUDE [Improvements to Microsoft Edge Management dashboard](includes/2001-2/3871913.md)]
+[!INCLUDE [Improvements to cloud-connected services](includes/2001-2/4963230.md)]
 
 [!INCLUDE [Additional improvement to task sequence progress](includes/2001-2/2356386.md)]
 <!-- 5932692 -->
 
-<!--
 ## General known issues
 
-[!INCLUDE [Hardware inventory reports](includes/2001/known-issue-osd.md)]
--->
+[!INCLUDE [Can't create collections](includes/2001-2/known-issue-6197183.md)]
 
 ## Next steps
 
