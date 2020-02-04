@@ -130,6 +130,7 @@ The following features are available with the most recent Configuration Manager 
 - [Send a smile improvements](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_sendsmile) <!--5891852-->
 - [Improvements to task sequence as a deployment type](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_tsdt) <!--3555953-->
 - [Improvements to Microsoft Edge Management dashboard](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_edge) <!--3871913-->
+- [Improvements to cloud-connected services](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_cloud) <!--4963230, 4963383, 5566763-->
 - [Additional improvement to task sequence progress](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_tsprogress) <!--2356386, 5932692-->
 
 > [!NOTE]  
