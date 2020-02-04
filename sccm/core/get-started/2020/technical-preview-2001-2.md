@@ -38,7 +38,7 @@ The following sections describe the new features to try out in this version:
 
 ## General known issues
 
-[!INCLUDE [Can't create collections](includes/2001/known-issue-6197183.md)]
+[!INCLUDE [Can't create collections](includes/2001-2/known-issue-6197183.md)]
 
 ## Next steps
 
