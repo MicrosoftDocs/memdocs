@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 12/03/2019
+ms.date: 01/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -10,8 +10,6 @@ ms.assetid: 38b2bed2-20dd-4ce1-abc0-219343d2c4b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # What is Desktop Analytics?
@@ -33,11 +31,9 @@ Use Desktop Analytics with Configuration Manager to:
 ![Screenshot of the Desktop Analytics home page in the Azure portal](media/portal-home.png)
 
 > [!Note]  
-> Desktop Analytics is a successor of Windows Analytics. The *Windows Analytics* service includes Upgrade Readiness, Update Compliance, and Device Health.
+> Desktop Analytics is a successor of Windows Analytics, which retired on January 31, 2020.
 >
-> All of these capabilities are combined in the *Desktop Analytics* service. Desktop Analytics also is more tightly integrated with Configuration Manager.
-
-
+> The capabilities of Windows Analytics are combined in the Desktop Analytics service. Desktop Analytics is also more tightly integrated with Configuration Manager. For more information, see the [FAQ for Windows Analytics customers](/configmgr/desktop-analytics/faq#existing-windows-analytics-customers).
 
 ## Benefits
 
@@ -109,11 +105,9 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Licensing and costs
 
-Devices enrolled in Desktop Analytics may only be used by licensed users of:
+Devices enrolled in Desktop Analytics need a valid Configuration Manager license. For more information, see [Configuration Manager licensing](/configmgr/core/understand/product-and-licensing-faq).
 
-- Configuration Manager. For more information, see [Configuration Manager licensing](/configmgr/core/understand/product-and-licensing-faq)
-
-and 
+Users of the device need one of the following licenses:
 
 - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F1, E3, or E5)
 
@@ -121,7 +115,7 @@ and
 
 - Windows Virtual Desktop Access E3 or E5  
 
-Beyond the cost of these license subscriptions, there is no additional cost for using Desktop Analytics within Azure Log Analytics. The data types ingested by Desktop Analytics are free from any Log Analytics data ingestion and retention charges. As non-billable data types, this data is also not subject to any Log Analytics daily data ingestion cap. Learn more about [Log Analytics Usage and Costs](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
+Beyond the cost of these license subscriptions, there's no additional cost for using Desktop Analytics within Azure Log Analytics. The data types ingested by Desktop Analytics are free from any Log Analytics data ingestion and retention charges. As non-billable data types, this data is also not subject to any Log Analytics daily data ingestion cap. For more information, see [Log Analytics usage and costs](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
 
 
 ## Next steps

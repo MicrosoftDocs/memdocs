@@ -2,7 +2,7 @@
 title: User experience analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for User experience analytics preview.
-ms.date: 01/25/2020
+ms.date: 01/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -47,6 +47,7 @@ To start using User experience analytics, verify the prerequisites, then start g
 This current preview requires:
 - Intune enrolled devices running Windows 10
 - Startup performance insights are only available for devices running version 1903 or later of Windows 10.
+- Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](#bkmk_uea_endpoints).
 
 Configuration Manager devices and Intune enrolled devices on prior versions of Windows 10 aren't currently supported for this preview.
 
@@ -210,6 +211,54 @@ You can compare your current scores and subscores to others by setting a baselin
 
    [![User experience analytics baseline settings page](media/uea-settings-baseline.png)](media/uea-settings-baseline.png#lightbox)
 
+## <a name="bkmk_uea_tshoot"></a> Troubleshooting
+
+To enroll devices to User Experience Analytics, they need to send required functional data to Microsoft. If your environment uses a proxy server, use this information to help configure the proxy.
+
+### <a name="bkmk_uea_endpoints"></a> Endpoints
+
+To enable functional data sharing, configure your proxy server to allow the following endpoints:
+
+> [!Important]  
+> For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the required functional data sharing endpoints. SSL interception and inspection aren't possible. To use User Experience Analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
+
+| Endpoint  | Function  |
+|-----------|-----------|
+| `https://*.events.data.microsoft.com` | Used to send [required functional data](#bkmk_uea_datacollection) to the Intune data collection endpoint. |
+| `https://graph.windows.net` | Used to automatically retrieve settings  when attaching your hierarchy to User Experience Analytics (on Configuration Manager Server role). For more information, see [Configure the proxy for a site system server](/sccm/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server). |
+| `https://*.manage.microsoft.com` | Used to synch device collection and devices with User Experience Analytics (on Configuration Manager Server role only). For more information, see [Configure the proxy for a site system server](/sccm/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server). |
+
+
+### Proxy server authentication
+
+Make sure that a proxy doesn't block the data because of authentication. If your organization uses proxy server authentication for outbound traffic, use one or more of the following approaches:
+
+#### Bypass (recommended)
+
+Configure your proxy servers to not require proxy authentication for traffic to the data sharing endpoints. This option is the most comprehensive solution. It works for all versions of Windows 10.  
+
+#### User proxy authentication
+
+Configure devices to use the signed-in user's context for proxy authentication. This method requires the following configurations:
+
+- Devices have the current quality update for Windows 10
+- Configure user-level proxy (WinINET proxy) in **Proxy settings** in the Network & Internet group of Windows Settings. You can also use the legacy Internet Options control panel. 
+- Make sure that the users have proxy permission to reach the data sharing endpoints. This option requires that the devices have console users with proxy permissions, so you can't use this method with headless devices.
+
+> [!IMPORTANT]
+> The user proxy authentication approach is incompatible with the use of Microsoft Defender Advanced Threat Protection. This behavior is because this authentication relies on the **DisableEnterpriseAuthProxy** registry key set to `0`, while Microsoft Defender ATP requires it to be set to `1`. For more information, see [Configure machine proxy and Internet connectivity settings](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
+
+#### Device proxy authentication
+
+This approach is the most complex because it requires the following configurations:
+
+- Make sure devices can reach the proxy server through WinHTTP in local system context. Use one of the following options to configure this behavior:
+  - The command line `netsh winhttp set proxy`
+  - Web Proxy Auto-discovery Protocol (WPAD)
+  - Transparent proxy
+  - Routed connection, or that uses network address translation (NAT)
+
+- Configure proxy servers to allow the computer accounts in Active Directory to access the diagnostic data endpoints. This configuration requires proxy servers to support Windows-Integrated Authentication.  
 
 ## <a name="bkmk_uea_faq"></a> Frequently asked questions
 
@@ -553,3 +602,65 @@ catch{
     exit 1
 }
 ```
+
+## <a name="bkmk_uea_privacy"></a> User Experience Analytics data privacy
+
+### Data flow
+
+The following illustration shows how required functional data flows from individual devices through our data services, transient storage, and to your tenant. Data flows through our existing enterprise pipelines without reliance on Windows diagnostic data.
+
+[![User experience data flow diagram](media/uea-dataflow.png)](media/uea-dataflow.png#lightbox)
+
+1. Configure the **Intune data collection** policy for enrolled devices. By default, this policy is assigned to “All Devices” when you **Start** User experience analytics. However, you can [change the assignment](#bkmk_uea_set) at any time to a subset of devices or no devices at all.
+
+2. Devices send required functional data.
+
+	- For Intune devices with the assigned policy, data is sent from the Intune management extension. For more information, see [requirements](#bkmk_uea_prereq).
+	- For Configuration Manager managed devices, data can also flow to Microsoft Endpoint Management through the ConfigMgr connector. The ConfigMgr connector is cloud attached. It only requires connection to an Intune tenant, not turning on co-management.
+
+> [!Note]  
+> The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been correctly assigned the policy to show the startup score on the admin console.  
+
+3. The Microsoft Endpoint Management service processes data for each device and publishes the results for both individual devices and organizational aggregates in the admin console using MS Graph APIs.
+
+The average latency end to end is about 12 hours and is gated by the time it takes to do the daily processing. All other parts of the data flow are near-real-time.
+
+### <a name="bkmk_uea_datacollection"></a>Data collection
+
+Currently, the basic functionality of User experience analytics collects information associated with your boot performance records. As we add additional functionality over time, the data collected will vary as needed. The main datapoints currently being collected:
+
+- **id:** Unique device ID used by Windows Update
+- **localId:** A locally-defined unique ID for the device. This is not the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
+- **aaddeviceid:** Azure Active Directory device ID
+- **orgId:** Unique GUID representing the Microsoft O365 Tenant
+- **authIdEnt**
+- **make:** Device manufacturer
+- **model:** Device model
+- **deviceClass:** The device classification. For example, Desktop, Server, or Mobile.
+- **Country:** The device region setting
+- **logOnId**
+- **bootId:** The system boot ID
+- **coreBootTimeInMilliseconds:** Time for core boot
+- **totalBootTimeInMilliseconds:** Total boot time
+- **updateTimeInMilliseconds:** Time for OS updates to complete
+- **gpLogonDurationInMilliseconds**: Time for Group policies to process
+- **desktopShownDurationInMilliseconds:** Time for desktop (explorer.exe) to be loaded
+- **desktopUsableDurationInMilliseconds:** Time for desktop (explorer.exe) to be usable
+- **name:** Windows
+- **ver:** The version of the current OS.
+- **topProcesses:** List of processes loaded during boot with name, with cpu usage stats and app details (Name, publisher, version). For example *{\"ProcessName\":\"svchost\",\"CpuUsage\":43,\"ProcessFullPath\":\"C:\\\\Windows\\\\System32\\\\svchost.exe\",\"ProductName\":\"Microsoft® Windows® Operating System\",\"Publisher\":\"Microsoft Corporation\",\"ProductVersion\":\"10.0.18362.1\"}*
+
+> [!Important]  
+> Our data handling policies are described in the [Microsoft Intune Privacy Statement] (https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the baselines up-to-date.
+
+
+### Resources
+
+For more information about related privacy aspects, see the following articles:
+
+- [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement)
+- [Windows 10 and privacy compliance](https://docs.microsoft.com/windows/privacy/windows-10-and-privacy-compliance)
+- [Licensing terms and documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
+- [Security and privacy at Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)  
+- [Confidence in the trusted cloud](https://azure.microsoft.com/overview/trusted-cloud/)  
+- [Trust Center](https://www.microsoft.com/trustcenter)  

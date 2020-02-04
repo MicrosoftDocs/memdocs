@@ -55,7 +55,7 @@ A global administrator can reactivate the account within 90 days. To restore Des
 The Desktop Analytics data ages out based on your data retention policy for the workspace. You can continue using any other solutions in same workspace.
 
 > [!Important]  
-> If you're using the Log Analytics workspace with other solutions like Windows Analytics, don't delete the workspace.
+> If you're using the Log Analytics workspace with other solutions, don't delete the workspace.
 
 ## Remove user and app access
 
