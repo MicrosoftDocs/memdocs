@@ -192,7 +192,7 @@ The Prepare ConfigMgr Client step will now completely remove the Configuration M
 
 
 ## Intune compliance policy charts
-You can now get a quick view of overall compliance for devices, and the top reasons for non-compliance, by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill down to a list of the devices in that category. For details, see [Monitor the compliance policy](/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy).
+You can now get a quick view of overall compliance for devices, and the top reasons for non-compliance, by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill down to a list of the devices in that category. For details, see [Monitor the compliance policy](/sccm/protect/deploy-use/create-compliance-policy).
 
 
 ## Lookout integration for hybrid implementations to protect iOS and Android devices
