@@ -2,7 +2,7 @@
 title: User experience analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for User experience analytics preview.
-ms.date: 01/31/2020
+ms.date: 02/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -48,6 +48,7 @@ This current preview requires:
 - Intune enrolled devices running Windows 10
 - Startup performance insights are only available for devices running version 1903 or later of Windows 10.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](#bkmk_uea_endpoints).
+- The [Intune Service Administrator role](https://docs.microsoft.com/intune/fundamentals/role-based-access-control) to access User experience analytics
 
 Configuration Manager devices and Intune enrolled devices on prior versions of Windows 10 aren't currently supported for this preview.
 
