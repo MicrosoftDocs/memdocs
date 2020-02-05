@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 01/31/2020
+ms.date: 02/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -16,11 +16,13 @@ manager: dougeby
 
 ## Prerequisites
 
-### <a name="bkmk_intune"></a> Can I use Desktop Analytics with Intune-managed devices? 
+### <a name="bkmk_intune"></a> Can I use cloud-enabled analytics with Intune-managed devices?
 
-The vast majority of customers that can benefit from the Desktop Analytics workflow use Configuration Manager to deploy Windows. We know Intune customers love the additional insights from Analytics data, and we're working on ways to share insights with them as well.
+Not today, but see the announcement from Microsoft Ignite 2019 on [insights-driven device management](https://myignite.techcommunity.microsoft.com/sessions/81690?source=sessions). This planned solution is a successor to Device Health and Upgrade Readiness.
 
-### It's been over 72 hours and the portal is still processing data, what next? 
+The vast majority of customers that can benefit from the Desktop Analytics workflow use Configuration Manager to deploy Windows. We know Intune customers love the additional insights from analytics data, and we're working on ways to share insights with them as well.
+
+### It's been over 72 hours and the portal is still processing data, what next?
 
 When you first set up Desktop Analytics, the reports in Configuration Manager and the Desktop Analytics portal may not show complete data right away. It can take 2-3 days for the service to process the data. If it's been over 72 hours, and the portal is still processing data, follow these steps:
 
@@ -89,53 +91,6 @@ Windows diagnostic data from your computers is encrypted, sent to, and processed
 >
 > For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 
-### Can I migrate inputs from Windows Analytics?
-
-Yes, when you set an existing Windows Analytics workspace as Desktop Analytics workspace during [Initial onboarding](/sccm/desktop-analytics/set-up#initial-onboarding). If you create a new workspace, or select one that's not a Windows Analytics workspace, Desktop Analytics doesn't migrate your inputs.
-
-#### Migration scope
-
-| Input type | Will migrate? |
-|------------|---------------|
-| Importance | Yes |
-| App owner | Yes |
-| Upgrade decision | No |
-| Test plan | No |
-| Test result | No |
-
-#### Importance mapping
-
-| Windows Analytics | Desktop Analytics |
-|-------------------| ------------------|
-| Low install count | (Not applicable) <br> Note: Desktop Analytics runs its own heuristic to determine Low install count |
-| Not reviewed | Not Reviewed |
-| Review in progress | Not Reviewed |
-| Mission critical | Critical |
-| Business critical | Critical |
-| Important | Important |
-| Best effort | Important |
-| Ignore | Not Important |
-
-### Can I migrate from multiple Windows Analytics workspaces?
-
-No, you can only select one Windows Analytics workspace from which to migrate inputs. If you own multiple Windows Analytics workspaces, select one that best benefits your organization.
-
-### I've chosen to migrate, where can I find the inputs on Desktop Analytics?
-
-Once devices are enrolled, to see the migrated inputs in the Desktop Analytics portal, go to **Manage > Assets > Apps**.
-
-### When can I see my migrated inputs?
-
-The migration process is transactional. You'll see either all inputs migrated without corruption, or no migrated inputs at all. If you don't see the migrated inputs in 24 hours, contact Microsoft Support. Start tagging apps as you see the migrated inputs. If you've already tagged some apps, Desktop Analytics keeps those inputs in case they conflict with the inputs from Windows Analytics.
-
-### How long do I have to migrate my data?
-
-Windows Analytics Upgrade Readiness solution is being [retired on January 31st, 2020](https://aka.ms/waretirement). After retirement, based on the Log Analytics workspace retention policy, data will go away over time. Customers that want to keep the data need to migrate or export before that occurs.
-
-### Can I migrate after the initial onboarding?
-
-Yes.<!-- 5202803 --> As long as you set an existing Windows Analytics workspace as Desktop Analytics workspace during [Initial onboarding](/sccm/desktop-analytics/set-up#initial-onboarding), existing Windows Analytics customers can now migrate data after the initial onboarding. Go to **Connected services** in the Desktop Analytics portal, and select the option to migrate data from Windows Analytics.
-
 ### Can I use Update Compliance together with Desktop Analytics?
 
 Yes. If you use [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) in the Azure portal today, you can continue to do so now and beyond January 2020.
@@ -145,7 +100,7 @@ For more information, see [KB 4521815: Windows Analytics retirement on January 3
 ### Are there any Windows Analytics features that aren't available in Desktop Analytics?
 
 <!-- 3616924 -->
-Yes, the following Windows Analytics features will either be retired or aren't yet available in Desktop Analytics:
+Yes, the following Windows Analytics features were either retired or aren't yet available in Desktop Analytics:
 
 #### General
 
