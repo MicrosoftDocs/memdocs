@@ -2,12 +2,10 @@
 title: Troubleshoot SQL replication
 titleSuffix: Configuration Manager
 description: Use these diagrams to help understand and troubleshoot SQL replication between Configuration Manager sites
-ms.date: 08/09/2019
+ms.date: 02/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-
-
 ms.assetid: 71d7430e-c5aa-485b-8dc0-c80fd8f29f17
 author: aczechowski
 ms.author: aaroncz
@@ -36,7 +34,7 @@ These troubleshooting diagrams are interconnected. Use the following diagram to 
 
 For more information, see the following series of blogs from Microsoft Support:
 
-- [ConfigMgr DRS Synchronization Internals](https://argonsys.com/microsoft-cloud/library/configmgr-drs-synchronization-internals/)
+- [ConfigMgr DRS Synchronization Internals](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configmgr-drs-synchronization-internals/ba-p/1154317)
 - [ConfigMgr 2012 Data Replication Service (DRS) Unleashed](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configmgr-2012-data-replication-service-drs-unleashed/ba-p/339916)
 - [ConfigMgr 2012 DRS – Troubleshooting FAQs](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configmgr-2012-drs-troubleshooting-faqs/ba-p/339934)
 - [ConfigMgr 2012 DRS Initialization Internals](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configmgr-2012-drs-initialization-internals/ba-p/339948)
