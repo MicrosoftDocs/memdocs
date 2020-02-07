@@ -4,7 +4,8 @@ title: Mobile device management (MDM) documentation
 summary: Use Microsoft Endpoint Manager to manage mobile devices in your organization, either on-premises or cloud-based
 
 metadata:
-  title: Mobile device management with Configuration Manager
+  title: Mobile device management
+  titleSuffix: Configuration Manager
   description: Use Microsoft Endpoint Manager to manage mobile devices in your organization, either on-premises or cloud-based
   ms.prod: configuration-manager
   ms.technology: configmgr-hybrid
