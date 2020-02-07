@@ -5,6 +5,7 @@ summary: Use Configuration Manager to deploy Windows via different methods and a
 
 metadata:
   title: OS deployment documentation
+  titleSuffix: Configuration Manager
   description: Use Configuration Manager to deploy Windows via different methods and automate tasks.
   ms.prod: configuration-manager
   ms.technology: configmgr-osd
