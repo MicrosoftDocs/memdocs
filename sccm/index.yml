@@ -51,7 +51,7 @@ conceptualContent:
           itemType: overview
       footerLink:
         text: See more
-        url: ./comanage/overview.md
+        url: ./comanage/index.yml
     - title: Real-time management
       links:
         - text: CMPivot
@@ -76,7 +76,7 @@ conceptualContent:
           itemType: learn
       footerLink:
         text: See more
-        url: ./desktop-analytics/overview.md
+        url: ./desktop-analytics/index.yml
     - title: Infrastructure simplification
       links:
         - text: Site server high availability
@@ -101,7 +101,7 @@ conceptualContent:
           itemType: learn
       footerLink:
         text: See more
-        url: ./core/understand/introduction.md
+        url: ./core/index.yml
     - title: App management
       links:
         - text: Create apps
@@ -118,7 +118,7 @@ conceptualContent:
           itemType: how-to-guide
       footerLink:
         text: See more
-        url: ./apps/understand/introduction-to-application-management.md
+        url: ./apps/index.yml
     - title: OS deployment
       links:
         - text: Upgrade to Windows 10
@@ -132,7 +132,7 @@ conceptualContent:
           itemType: learn
       footerLink:
         text: See more
-        url: ./osd/understand/introduction-to-operating-system-deployment.md
+        url: ./osd/index.yml
     - title: Software updates
       links:
         - text: Plan for software updates
@@ -149,7 +149,7 @@ conceptualContent:
           itemType: how-to-guide
       footerLink:
         text: See more
-        url: ./sum/understand/software-updates-introduction.md
+        url: ./sum/index.yml
     - title: Device compliance
       links:
         - text: Create configuration items
@@ -163,7 +163,7 @@ conceptualContent:
           itemType: how-to-guide
       footerLink:
         text: See more
-        url: ./compliance/understand/ensure-device-compliance.md
+        url: ./compliance/index.yml
     - title: Protect
       links:
         - text: Windows Defender
@@ -177,7 +177,7 @@ conceptualContent:
           itemType: overview
       footerLink:
         text: See more
-        url: ./protect/understand/protect-data-and-site-infrastructure.md
+        url: ./protect/index.yml
 
 additionalContent:
    sections:
@@ -207,7 +207,7 @@ additionalContent:
           links:
             - url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
               text: PowerShell
-            - url: ./develop/core/misc/system-center-configuration-manager-sdk.md
+            - url: ./develop/index.yml
               text: SDK concepts
             - url: ./develop/reference/configuration-manager-reference.md
               text: SDK reference
