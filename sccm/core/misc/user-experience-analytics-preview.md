@@ -56,7 +56,7 @@ Configuration Manager devices and Intune enrolled devices on prior versions of W
 ### <a name="bkmk_uea_start"></a> Start gathering data
 
 1. Go to `https://devicemanagement.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
-1. Click **Start**. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices.
+1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](#bkmk_uea_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
 
 ## Overview page
 
@@ -196,6 +196,26 @@ From the settings page, you can select **General** or **Baseline**. Each of thes
 ### <a name="bkmk_uea_gen"></a> General
 
 The **General** page in **Settings** allows you to see if Intune startup performance data collection has been enabled. It's automatically enabled for all your devices by default when you click **Start** to enable user-experience analytics. You have the option to go to the Intune data collection policy node to change the set of devices on which boot and sign-in records are collected.
+
+#### <a name="#bkmk_uea_profile"></a> Intune data collection policy
+
+To assign this setting to a subset of devices, [Create a profile](/intune/configuration/device-profile-create#create-the-profile) with  the following information: 
+
+  - **Name**: Enter a descriptive name for the profile, like **Intune data collection policy**
+   
+  - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+    
+  - **Platform**: Select **Windows 10 and later**
+   
+  - **Profile type**: Select **Windows Health monitoring**
+   
+  - Configure the **Settings**:
+   
+   	- **Health Monitoring**: Select **Enable** to collect event information from Windows 10 devices
+	
+	- **Scope**: Select **Boot performance** 
+
+  - Use the [Scope tags](/intune/configuration/device-profile-create#scope-tags) and [Applicability rules](/intune/configuration/device-profile-create#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
 
 > [NOTE!]
 > There is a placeholder for instructions for configuring the Configuration Manager data connector. However, this functionality has not been implemented in this initial private preview.
