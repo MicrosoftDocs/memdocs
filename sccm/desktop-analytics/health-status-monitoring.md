@@ -59,7 +59,7 @@ At the bottom of the app details page, the following three tabs can help you tro
 
 - **Other versions**: A list of alternative versions of this app. For each version, it shows the relative changes to the crash rates within your organization and the commercial average. If you find a later version of the app with a lower crash rate, updating the app may help.  
 
-    It also shows if the version has a **Ready for Windows** signal. For more information, see [Compatibility assessment](compat-assessment.md#driver-risk-assessment).  
+    It also shows if the version has advanced insights. For more information, see [Compatibility assessment](/sccm/desktop-analytics/compat-assessment).  
 
 - **Top issues**: A list of the most frequent failure IDs by instance count. A failure ID identifies the stack trace associated with the crash. You can use this ID when you call the app vendor for support.  
 
