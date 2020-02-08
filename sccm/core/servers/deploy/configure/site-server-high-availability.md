@@ -196,6 +196,16 @@ Similarly as with backup and recovery, plan and practice your process to change 
     > [!NOTE]
     > If file or database replication between sites is in progress during failover, the new site server may not receive the replicated content. If this happens, redistribute the software content after the new site server is active.<!--515436--> For database replication, you may need to reinitialize a secondary site after failover.<!-- SCCMDocs issue 808 -->
 
+  - Reduce or remove other scheduled activities at the same time. For example, don't plan to promote a site server immediately after updating the site to a new version. Site update includes other tasks that can potentially conflict with the site server promotion.
+
+    > [!TIP]
+    > Here's an example of how other activities can conflict with site server promotion:
+    >
+    > - Monday: Update the site to the latest version. Enable automatic client upgrade with client piloting.
+    > - Tuesday: Promote the site server in passive mode to be the active site server.
+    >
+    > By Wednesday or Thursday, this action may cause *all* clients to upgrade, not just the pilot collection. This behavior can cause significant network usage and unexpected load on the distribution points.<!-- SCCMDocs-pr#4794 -->
+
 ### Process to promote the site server in passive mode to active mode
 
 This section describes how to change the site server in passive mode to active mode. To access the site and make this change, you need to be able to access an instance of the SMS Provider. For more information, see [Use multiple SMS Providers](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#BKMK_MultiSMSProv).  
