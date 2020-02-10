@@ -2,7 +2,7 @@
 title: User experience analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for User experience analytics preview.
-ms.date: 02/05/2020
+ms.date: 02/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -131,6 +131,9 @@ The built-in baseline of **Commercial median** doesn't currently have metrics fo
 
 ## <a name="bkmk_uea_bp"></a> Startup performance
 
+> [!NOTE]
+> The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been correctly assigned the policy to show the startup score on the admin console.  
+
 The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays. The **Startup score** is a number between 0 and 100. This score is a weighted average of **Boot score** and the **Sign-in** score, which are computed as follows:
 
 - **Boot score**: Based on the time from power-on to sign in. We look at the last boot time from each device, excluding the update phase, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
@@ -209,6 +212,7 @@ From the settings page, you can select **General** or **Baseline**. Each of thes
 
 The **General** page in **Settings** allows you to see if Intune startup performance data collection has been enabled. It's automatically enabled for all your devices by default when you click **Start** to enable user-experience analytics. You have the option to go to the Intune data collection policy node to change the set of devices on which boot and sign-in records are collected.
 
+
 #### <a name="bkmk_uea_profile"></a> Intune data collection policy
 
 To assign this setting to a subset of devices, [Create a profile](/intune/configuration/device-profile-create#create-the-profile) with  the following information: 
@@ -229,7 +233,7 @@ To assign this setting to a subset of devices, [Create a profile](/intune/config
 
   - Use the [Scope tags](/intune/configuration/device-profile-create#scope-tags) and [Applicability rules](/intune/configuration/device-profile-create#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
 
-> [NOTE!]
+> [!NOTE]
 > There is a placeholder for instructions for configuring the Configuration Manager data connector. However, this functionality has not been implemented in this initial private preview.
 
   [![User experience analytics general settings page](media/uea-settings-general.png)](media/uea-settings-general.png#lightbox)
