@@ -2,7 +2,7 @@
 title: User experience analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for User experience analytics preview.
-ms.date: 02/05/2020
+ms.date: 02/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -42,7 +42,7 @@ This release is just the beginning. We’ll be rapidly rolling out new insights 
 
 To start using User experience analytics, verify the prerequisites, then start gathering data. 
 
-### Prerequisites
+### Technical Prerequisites
 
 This current preview requires:
 - Intune enrolled devices running Windows 10
@@ -53,10 +53,22 @@ This current preview requires:
 
 Configuration Manager devices and Intune enrolled devices on prior versions of Windows 10 aren't currently supported for this preview.
 
+### Licensing Prerequisites
+
+User experience analytics is included in the following plans: 
+
+- [Enterprise Mobility + Security E3](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) or higher
+- [Microsoft 365 Enterprise E3](https://www.microsoft.com/en-us/microsoft-365/enterprise?rtc=1) or higher. 
+
+For proactive remediations, users of the device need one of the following licenses:
+- Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F1, E3, or E5)
+- Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+- Windows Virtual Desktop Access E3 or E5
+
 ### <a name="bkmk_uea_start"></a> Start gathering data
 
 1. Go to `https://devicemanagement.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
-1. Click **Start**. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices.
+1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](#bkmk_uea_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
 
 ## Overview page
 
@@ -118,6 +130,9 @@ The recommended remediation action for devices managed by Configuration Manager 
 The built-in baseline of **Commercial median** doesn't currently have metrics for the subscores listed in the sections above.
 
 ## <a name="bkmk_uea_bp"></a> Startup performance
+
+> [!NOTE]
+> The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been correctly assigned the policy to show the startup score on the admin console.  
 
 The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays. The **Startup score** is a number between 0 and 100. This score is a weighted average of **Boot score** and the **Sign-in** score, which are computed as follows:
 
@@ -197,7 +212,28 @@ From the settings page, you can select **General** or **Baseline**. Each of thes
 
 The **General** page in **Settings** allows you to see if Intune startup performance data collection has been enabled. It's automatically enabled for all your devices by default when you click **Start** to enable user-experience analytics. You have the option to go to the Intune data collection policy node to change the set of devices on which boot and sign-in records are collected.
 
-> [NOTE!]
+
+#### <a name="bkmk_uea_profile"></a> Intune data collection policy
+
+To assign this setting to a subset of devices, [Create a profile](/intune/configuration/device-profile-create#create-the-profile) with  the following information: 
+
+  - **Name**: Enter a descriptive name for the profile, like **Intune data collection policy**
+   
+  - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+    
+  - **Platform**: Select **Windows 10 and later**
+   
+  - **Profile type**: Select **Windows Health monitoring**
+   
+  - Configure the **Settings**:
+   
+   	- **Health Monitoring**: Select **Enable** to collect event information from Windows 10 devices
+	
+	- **Scope**: Select **Boot performance** 
+
+  - Use the [Scope tags](/intune/configuration/device-profile-create#scope-tags) and [Applicability rules](/intune/configuration/device-profile-create#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
+
+> [!NOTE]
 > There is a placeholder for instructions for configuring the Configuration Manager data connector. However, this functionality has not been implemented in this initial private preview.
 
   [![User experience analytics general settings page](media/uea-settings-general.png)](media/uea-settings-general.png#lightbox)

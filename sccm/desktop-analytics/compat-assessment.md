@@ -2,7 +2,7 @@
 title: Compatibility assessment
 titleSuffix: Configuration Manager
 description: Learn about compatibility assessment for Windows apps and drivers in Desktop Analytics.
-ms.date: 10/23/2019
+ms.date: 02/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -18,16 +18,15 @@ Upgrade assessments in previous solutions were generic, for example: Attention N
 
 Desktop Analytics uses the following compatibility assessment categories:
 
-- **Low**: The service found no signals to put this app at risk for a Windows upgrade. It's likely to work on the target OS as-is.  
+- **Low**: The service found no signals to put this app at risk for a Windows upgrade. It's likely to work on the target OS as-is.
 
-- **Medium**: Analytics indicates that the application may have impaired functionality, although remediation is likely possible.  
+- **Medium**: Analytics indicates that the application may have impaired functionality, although remediation is likely possible.
 
-- **High**: The application is almost certain to fail during or after upgrade. It may need a remediation.  
+- **High**: The application is almost certain to fail during or after upgrade. It may need a remediation.
 
-- **Unknown**: The app wasn't assessed. There are no other insights such as *MS Known Issues* or *Ready for Windows*.  
+- **Unknown**: The app wasn't assessed. There are no other insights such as *MS Known Issues*.
 
 In the list of app or driver assets in a deployment plan, you'll see this value for each asset in the **Compatibility Risk** column.
-
 
 ## App risk assessment
 
@@ -36,11 +35,9 @@ In the list of app or driver assets in a deployment plan, you'll see this value 
 There are several sources that Desktop Analytics uses to generate the assessment rating for applications:
 
 - [Microsoft known issues](#microsoft-known-issues)
-- [Ready for Windows catalog](#ready-for-windows)
 - [Advanced insights](#advanced-insights)
 
 You can find the assessment for each source on the app in Desktop Analytics. In the list of app assets in a deployment plan, select an individual app to open its properties flyout pane. You'll see an overall recommendation and assessment level. The **Compatibility risk factors** section shows the detail for these assessments.
-
 
 ## Microsoft known issues
 
@@ -107,32 +104,6 @@ Multiple issues affect the application. Select **Query** to see details about th
 ### Reinstall application after upgrading
 
 The application is compatible with the new OS version, but you need to reinstall it after you upgrade Windows. The upgrade process removes the application. No action is required for the upgrade to continue. Reinstall the application on the new OS version.
-
-
-## Ready for Windows
-
-The [Ready for Windows](https://www.readyforwindows.com) application catalog correlates the following data sources:
-
-- Diagnostic data from other customers who report the same apps
-- Additional checks from Microsoft like compatibility blocks on a device
-
-The possible categories are:
-
-- **Highly adopted**: At least 100,000 commercial Windows 10 devices have installed this app.  
-
-- **Adopted**: At least 10,000 commercial Windows 10 devices have installed this app.  
-
-- **Insufficient data**: Too few commercial Windows 10 devices are sharing information for this app for Microsoft to categorize its adoption.
-
-- **Contact developer**: There may be compatibility issues with this version of the app. Microsoft recommends contacting the software provider to learn more. For more information, see [Ready for Windows](https://www.readyforwindows.com/).  
-
-- **Unknown**: There's no Ready for Windows information available for this version of this application. Information may be available for other versions of the application at [Ready for Windows](https://www.readyforwindows.com/).  
-
-### Support statement
-
-If the software provider supports one or more versions of this application on Windows 10, you'll see this statement on the app properties pane. In the Compatibility risk factors section, look at the **Support statement**.
-
-
 
 ## Advanced insights
 
@@ -206,7 +177,6 @@ If you're not using accessibility features in your app, set the UI access flag i
 
 Desktop Analytics recommends the app for pilot testing to discover any regressions.
 
-
 ## Driver risk assessment
 
 Desktop Analytics also lists and groups by availability any drivers that won't migrate to the OS version.
@@ -219,7 +189,6 @@ You can find the assessment on the driver in Desktop Analytics. In the list of d
 | Import from Windows Update | Yes | The currently installed version of a driver won't migrate to the new OS version. A compatible version is available from Windows Update. | If the computer automatically receives updates from Windows Update, no action is required. Otherwise, import a new driver from Windows Update after you upgrade Windows. |
 | Available in-box and from Windows Update | Yes | The currently installed version of a driver won't migrate to the new OS version. Although a new driver is installed during upgrade, a newer version is available from Windows Update. | If the computer automatically receives updates from Windows Update, no action is required. Otherwise, import a new driver from Windows Update after you upgrade Windows. |
 | Check with vendor | Yes | The driver won't migrate to the new OS version and Desktop Analytics can't locate a compatible version. | For a solution, check with the independent hardware vendor (IHV) who manufactures the driver, or the original equipment manufacturer (OEM) who provided the device. |
-
 
 ## See also
 
