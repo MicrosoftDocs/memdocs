@@ -197,7 +197,7 @@ From the settings page, you can select **General** or **Baseline**. Each of thes
 
 The **General** page in **Settings** allows you to see if Intune startup performance data collection has been enabled. It's automatically enabled for all your devices by default when you click **Start** to enable user-experience analytics. You have the option to go to the Intune data collection policy node to change the set of devices on which boot and sign-in records are collected.
 
-#### <a name="#bkmk_uea_profile"></a> Intune data collection policy
+#### <a name="bkmk_uea_profile"></a> Intune data collection policy
 
 To assign this setting to a subset of devices, [Create a profile](/intune/configuration/device-profile-create#create-the-profile) with  the following information: 
 
