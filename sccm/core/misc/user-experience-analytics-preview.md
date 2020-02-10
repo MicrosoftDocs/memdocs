@@ -119,7 +119,7 @@ The built-in baseline of **Commercial median** doesn't currently have metrics fo
 
 ## <a name="bkmk_uea_bp"></a> Startup performance
 
-> [!Note]  
+> [!NOTE]
 > The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been correctly assigned the policy to show the startup score on the admin console.  
 
 The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays. The **Startup score** is a number between 0 and 100. This score is a weighted average of **Boot score** and the **Sign-in** score, which are computed as follows:
@@ -200,7 +200,7 @@ From the settings page, you can select **General** or **Baseline**. Each of thes
 
 The **General** page in **Settings** allows you to see if Intune startup performance data collection has been enabled. It's automatically enabled for all your devices by default when you click **Start** to enable user-experience analytics. You have the option to go to the Intune data collection policy node to change the set of devices on which boot and sign-in records are collected.
 
-> [NOTE!]
+> [!NOTE] 
 > There is a placeholder for instructions for configuring the Configuration Manager data connector. However, this functionality has not been implemented in this initial private preview.
 
   [![User experience analytics general settings page](media/uea-settings-general.png)](media/uea-settings-general.png#lightbox)
