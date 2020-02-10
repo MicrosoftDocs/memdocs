@@ -42,7 +42,7 @@ This release is just the beginning. We’ll be rapidly rolling out new insights 
 
 To start using User experience analytics, verify the prerequisites, then start gathering data. 
 
-### Prerequisites
+### Technical Prerequisites
 
 This current preview requires:
 - Intune enrolled devices running Windows 10
@@ -52,6 +52,18 @@ This current preview requires:
    - After clicking **Start** for gathering data, other read-only roles can view the data.
 
 Configuration Manager devices and Intune enrolled devices on prior versions of Windows 10 aren't currently supported for this preview.
+
+### Licensing Prerequisites
+
+User experience analytics is included in the following plans: 
+
+- [Enterprise Mobility + Security E3](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) or higher
+- [Microsoft 365 Enterprise E3](https://www.microsoft.com/en-us/microsoft-365/enterprise?rtc=1) or higher. 
+
+For proactive remediations, users of the device need one of the following licenses:
+- Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F1, E3, or E5)
+- Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+- Windows Virtual Desktop Access E3 or E5
 
 ### <a name="bkmk_uea_start"></a> Start gathering data
 
