@@ -34,11 +34,9 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [5925683](includes/2002/5925683.md)]
 [!INCLUDE [6089922](includes/2002/6089922.md)]
 
-<!--
 ## General known issues
 
-[!INCLUDE [Hardware inventory reports](includes/2002/known-issue-osd.md)]
--->
+[!INCLUDE [Can't create collections](includes/2001-2/known-issue-6197183.md)]
 
 ## Next steps
 
