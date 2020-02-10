@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 01/31/2020
+ms.date: 02/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -49,12 +49,9 @@ Desktop Analytics provides the following benefits:
 
 - **Configuration Manager integration**: The service cloud-enables your existing on-premises infrastructure. Use this data and analysis to deploy and manage Windows on your devices.  
 
-
-
 ## Prerequisites
 
 To use Desktop Analytics, make sure your environment meets the following prerequisites.
-
 
 ### Technical
 
@@ -97,7 +94,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [How to enable data sharing](/sccm/desktop-analytics/enable-data-sharing)  
 
-> [!Important]   
+> [!Important]
 > Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, Microsoft doesn't collect the following data from devices located in European countries (EEA and Switzerland):
 >
 > - Windows diagnostic data from Windows 8.1 devices
@@ -105,21 +102,27 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Licensing and costs
 
-Devices enrolled in Desktop Analytics need a valid Configuration Manager license. For more information, see [Configuration Manager licensing](/configmgr/core/understand/product-and-licensing-faq).
+- An active global Azure subscription.
 
-Users of the device need one of the following licenses:
+    > [!NOTE]
+    > Most of the equivalent subscriptions for Configuration Manager also include Azure AD. For example, see [Microsoft 365 plans](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) and [Enterprise Mobility + Security licensing](https://www.microsoft.com/licensing/product-licensing/enterprise-mobility-security).
 
-- Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F1, E3, or E5)
+- Devices enrolled in Desktop Analytics need a valid Configuration Manager license. For more information, see [Configuration Manager licensing](/configmgr/core/understand/product-and-licensing-faq).
 
-- Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+- Users of the device need one of the following licenses:
 
-- Windows Virtual Desktop Access E3 or E5  
+  - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F1, E3, or E5)
 
-Beyond the cost of these license subscriptions, there's no additional cost for using Desktop Analytics within Azure Log Analytics. The data types ingested by Desktop Analytics are free from any Log Analytics data ingestion and retention charges. As non-billable data types, this data is also not subject to any Log Analytics daily data ingestion cap. For more information, see [Log Analytics usage and costs](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
+  - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 
+  - Windows Virtual Desktop Access E3 or E5  
+
+> [!NOTE]
+> Beyond the cost of these license subscriptions, there's no additional cost for using Desktop Analytics within Azure Log Analytics. The data types ingested by Desktop Analytics are free from any Log Analytics data ingestion and retention charges. As non-billable data types, this data is also not subject to any Log Analytics daily data ingestion cap. For more information, see [Log Analytics usage and costs](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
 
 ## Next steps
 
-The following tutorial provides a step-by-step guide to getting started with Desktop Analytics and Configuration Manager:  
-
-- [Deploy Windows 10 to pilot](/sccm/desktop-analytics/tutorial-windows10)  
+The following tutorial provides a step-by-step guide to getting started with Desktop Analytics and Configuration Manager:
+  
+> [!div class="nextstepaction"]
+> [Deploy Windows 10 to pilot](/sccm/desktop-analytics/tutorial-windows10)

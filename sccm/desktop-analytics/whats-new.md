@@ -48,7 +48,7 @@ Desktop Analytics now provides additional detail when it detects that the Window
 
 <!-- 5202803 -->
 
-You can now migrate inputs from an existing Windows Analytics workspace after onboarding to Desktop Analytics. For more information, see the FAQ for [Existing Windows Analytics customers](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
+You can now migrate inputs from an existing Windows Analytics workspace after onboarding to Desktop Analytics.
 
 ## September 2019
 
@@ -56,7 +56,7 @@ You can now migrate inputs from an existing Windows Analytics workspace after on
 
 <!-- 4252663 -->
 
-During onboarding, you can now migrate inputs from an existing Windows Analytics workspace. For more information, see the FAQ for [Existing Windows Analytics customers](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
+During onboarding, you can now migrate inputs from an existing Windows Analytics workspace.
 
 ### Offboard from Desktop Analytics
 
