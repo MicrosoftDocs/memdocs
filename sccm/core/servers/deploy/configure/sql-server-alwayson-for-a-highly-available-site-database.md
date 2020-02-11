@@ -10,8 +10,6 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Prepare to use SQL Server Always On availability groups with Configuration Manager
@@ -290,10 +288,11 @@ For example, consider the following scenario:
 #### Multi-subnet failover
 
 <!-- SCCMDocs-pr#3734 -->
-Starting in version 1906, you can enable the [MultiSubnetFailover connection string keyword](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually add the following value to the Windows Registry on the site server:
+Starting in version 1906, you can enable the [MultiSubnetFailover connection string keyword](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually add the following values to the Windows Registry on the site server:
 
 ``` Registry
 HKLM:\SOFTWARE\Microsoft\SMS\Identification
+HKLM:\SOFTWARE\Microsoft\SMS\SQL Server
 
 MSF Enabled : 1 (DWORD)
 ```
