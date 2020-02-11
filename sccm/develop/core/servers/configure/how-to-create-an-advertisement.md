@@ -77,7 +77,7 @@ public void CreateSWDAdvertisement(WqlConnectionManager connection, string exist
         newAdvertisement["PresentTime"].StringValue = newAdvertisementStartOfferDateTime;  
         newAdvertisement["PresentTimeEnabled"].BooleanValue = newAdvertisementStartOfferEnabled;  
 
-        // Save the new advertisment and properties.  
+        // Save the new advertisement and properties.  
         newAdvertisement.Put();  
 
         // Output new assignment name.  

@@ -65,10 +65,10 @@ public void AssignSWDAdvertisementToCollection(WqlConnectionManager connection, 
         // Populate the collection id property of the advertisement.  
         advertisementToAssign["CollectionID"].StringValue = existingCollectionID;  
 
-        // Save the advertisment and properties.  
+        // Save the advertisement and properties.  
         advertisementToAssign.Put();  
 
-        // Output advertisment and collection information.  
+        // Output advertisement and collection information.  
         Console.WriteLine("Assigned advertisement: " + existingAdvertisementID);  
         Console.WriteLine("                        " + advertisementToAssign["AdvertisementName"].StringValue);  
         Console.WriteLine("To collection:          " + existingCollectionID);  

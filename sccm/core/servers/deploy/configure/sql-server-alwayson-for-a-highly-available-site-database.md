@@ -150,7 +150,7 @@ Run the following SQL script to verify database configurations for both primary 
     SELECT @dbname = sd.name FROM sys.sysdatabases sd WHERE sd.dbid = DB_ID()
 
     IF (@dbname = N'master' OR @dbname = N'model' OR @dbname = N'msdb' OR @dbname = N'tempdb' OR @dbname = N'distribution' ) BEGIN
-    RAISERROR(N'ERROR: Script is targetting a system database.  It should be targeting the DB you created instead.', 0, 1)
+    RAISERROR(N'ERROR: Script is targeting a system database.  It should be targeting the DB you created instead.', 0, 1)
     GOTO Branch_Exit;
     END ELSE
     PRINT N'INFO: Targeted database is ' + @dbname + N'.'
