@@ -220,16 +220,15 @@ This certificate deployment has the following procedures:
 
 9. Select the **Enroll** permission for this group, and do not clear the **Read** permission.  
 
-    > [!NOTE]
-    > Ensure that **Minimum key size** on the **Cryptography** tab has been set to **2048**
+10. Choose the **Cryptography** tab and ensure that **Minimum key size** has been set to **2048**.
 
-10. Choose **OK**, and then close **Certificate Templates Console**.  
+11. Choose **OK**, and then close **Certificate Templates Console**.  
 
-11. In the Certification Authority console, right-click **Certificate Templates**, choose **New**, and then choose **Certificate Template to Issue**.  
+12. In the Certification Authority console, right-click **Certificate Templates**, choose **New**, and then choose **Certificate Template to Issue**.  
 
-12. In the **Enable Certificate Templates** dialog box, choose the new template that you just created, **ConfigMgr Cloud-Based Distribution Point Certificate**, and then choose **OK**.  
+13. In the **Enable Certificate Templates** dialog box, choose the new template that you just created, **ConfigMgr Cloud-Based Distribution Point Certificate**, and then choose **OK**.  
 
-13. If you do not have to create and issue more certificates, close **Certification Authority**.  
+14. If you do not have to create and issue more certificates, close **Certification Authority**.  
 
 ###  <a name="BKMK_clouddprequesting2008"></a> Request the custom web server certificate  
  This procedure requests and then installs the custom web server certificate on the member server that will run the site server.  

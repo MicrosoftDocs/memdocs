@@ -137,7 +137,7 @@ To add more deployment types or configure other settings, see [Create deployment
 
     - **User documentation**: Specify the location of a file from which Software Center users can get more information about this application. This location is a website address, or a network path and file name. Make sure that users have access to this location.  
 
-    - **Link text**: Specify the text that appears in place of the URL to the application.  
+    - **Link text**: Specify the text that appears in place of "Additional information" when user documentation is specified.  
 
     - **Privacy URL**: Specify a website address to the privacy statement for the application.  
 

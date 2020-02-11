@@ -51,7 +51,7 @@ Use the following sections to refresh an existing computer with a new version of
     > [!NOTE]
     > New installations of Windows can also be performed from installation source files via OS upgrade packages, but use OS images such as **install.wim** instead.
     >
-    > Deploying new installations of Windows via OS upgrade packages is still supported, but is dependant on drivers being compatible with this method. When installing Windows from an OS upgrade package, drivers are installed while still in Windows PE versus simply being injected while in Windows PE. Some drivers are not compatible with being installed while in Windows PE. If drivers are not compatible with being installed while in Windows PE, then use an OS image instead.  
+    > Deploying new installations of Windows via OS upgrade packages is still supported, but is dependent on drivers being compatible with this method. When installing Windows from an OS upgrade package, drivers are installed while still in Windows PE versus simply being injected while in Windows PE. Some drivers are not compatible with being installed while in Windows PE. If drivers are not compatible with being installed while in Windows PE, then use an OS image instead.  
 
 3.  **Create a task sequence to deploy operating systems over the network**  
 
