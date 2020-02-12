@@ -29,6 +29,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [4639943](includes/2002/4639943.md)]
 [!INCLUDE [4065163](includes/2002/4065163.md)]
 [!INCLUDE [5954175](includes/2002/5954175.md)]
+[!INCLUDE [4561024](includes/2002/4561024.md)]
 [!INCLUDE [5229935](includes/2002/5229935.md)]
 [!INCLUDE [5913817](includes/2002/5913817.md)]
 [!INCLUDE [5925683](includes/2002/5925683.md)]
