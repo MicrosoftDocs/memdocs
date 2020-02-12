@@ -2,6 +2,7 @@
 author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
+ms.technology: configmgr-comanage
 ms.topic: include
 ms.date: 08/23/2019
 

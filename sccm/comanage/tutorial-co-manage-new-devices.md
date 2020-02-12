@@ -8,7 +8,7 @@ manager: dougeby
 ms.date: 07/26/2019
 ms.topic: tutorial
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
 ---
 

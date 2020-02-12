@@ -8,7 +8,7 @@ manager: dougeby
 ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
 
 
