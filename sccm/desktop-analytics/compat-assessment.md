@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about compatibility assessment for Windows apps and drivers in Desktop Analytics.
 ms.date: 02/07/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
 ms.date: 02/03/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski

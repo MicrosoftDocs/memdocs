@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: A reference guide for sharing diagnostics data with Desktop Analytics.
 ms.date: 10/28/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski

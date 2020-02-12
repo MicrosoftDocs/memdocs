@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Details on how to monitor the connection health and device states for Desktop Analytics in Configuration Manager.
 ms.date: 10/31/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: 1f4e26f7-42f2-40c8-80cf-efd405349c6c
 author: aczechowski

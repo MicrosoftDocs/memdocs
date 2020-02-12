@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: A how-to guide for connecting Configuration Manager with Desktop Analytics.
 ms.date: 07/08/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: 7ed389c3-a9ab-48ce-a5eb-27d52ee4fb94
 author: aczechowski

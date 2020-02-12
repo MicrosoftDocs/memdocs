@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
 ms.date: 07/26/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: 63e08f3f-9558-4ed7-9bf3-3a185ddaac5c
 author: aczechowski

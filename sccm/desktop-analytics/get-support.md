@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Get online and telephone support for Desktop Analytics paid and trial subscriptions.
 ms.date: 01/16/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: d56742bc-a060-4714-a359-48f594c3eaff
 author: aczechowski

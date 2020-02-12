@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn how to enroll devices in Desktop Analytics.
 ms.date: 10/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: 2ea18d09-c957-47f7-8e54-c6f2b3c74347
 author: aczechowski

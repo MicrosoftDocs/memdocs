@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about deployment plans in Desktop Analytics.
 ms.date: 01/14/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: 0f369f3a-f251-4f34-9302-1bdc6ea5d139
 author: aczechowski
