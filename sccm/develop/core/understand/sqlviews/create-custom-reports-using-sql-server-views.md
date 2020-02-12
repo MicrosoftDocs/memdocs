@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Information about how to create reports directly from the Configuration Manager console.
 ms.date: 06/03/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
 
 

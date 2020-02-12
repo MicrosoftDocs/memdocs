@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Information about the status of Endpoint Protection clients and malware activity in your Configuration Manager site.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
 
 

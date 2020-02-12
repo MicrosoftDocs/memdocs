@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Views that contain information about the deployment state of Configuration Manager client computers and devices.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
 
 

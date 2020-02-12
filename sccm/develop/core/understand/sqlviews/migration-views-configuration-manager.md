@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Information about the tasks involved in migrating to a Configuration Manager site.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
 
 
