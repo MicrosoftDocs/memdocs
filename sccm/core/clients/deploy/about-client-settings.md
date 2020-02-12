@@ -62,6 +62,11 @@ Set up the client computer for [Windows BranchCache](/sccm/core/plan-design/conf
 
 - **Maximum BranchCache cache size (percentage of disk)**: The percentage of the disk that you allow BranchCache to use.
 
+> [!TIP]
+> If you set **Configure BranchCache** to **No**, then Configuration Manager doesn't configure any BranchCache settings.
+>
+> To disable BranchCache, set **Configure BranchCache** to **Yes**, and then set **Enable BranchCache** to **No**.<!-- 6244852 -->
+
 ### Configure client cache size
 
 The Configuration Manager client cache on Windows computers stores temporary files used to install applications and programs. If this option is set to **No**, the default size is 5,120 MB.
