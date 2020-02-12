@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Find resources for additional information about Configuration Manager.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski

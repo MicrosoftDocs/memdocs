@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Use these details as a guide to uninstall a Configuration Manager site."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: d466edd2-97f0-44c1-a73e-d71abbdbf4a8
 author: mestew

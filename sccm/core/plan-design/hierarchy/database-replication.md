@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn how Configuration Manager database replication uses SQL Server to transfer data in the hierarchy.
 ms.date: 08/09/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 8b495b02-c966-4eb3-92b9-52ebbf5c38ae
 author: mestew

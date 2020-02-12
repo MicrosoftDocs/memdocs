@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Discover how to create and import queries in Configuration Manager. Includes example queries and tips."
 ms.date: 05/08/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski

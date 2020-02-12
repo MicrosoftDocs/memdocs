@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Use a database replica to reduce the CPU load placed on the site database server by management points."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1812.
 ms.date: 12/14/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: fa5ff88a-f97c-4b71-940a-0ef68eae69ba
 author: aczechowski

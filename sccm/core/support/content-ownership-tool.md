@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use the Content Ownership Tool to change ownership of orphaned packages in Configuration Manager.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 753d2681-ea72-4f47-94d1-ac10188d9d5b
 author: mestew

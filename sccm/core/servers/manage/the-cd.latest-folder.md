@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the process that delivers updates to the product from within the Configuration Manager console.
 ms.date: 03/07/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 8db92d67-5d9c-4e9c-80d0-ae6fa0dd4817
 author: mestew

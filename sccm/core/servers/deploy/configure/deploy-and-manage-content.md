@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "After you install distribution points for Configuration Manager, here's how you can begin to deploy content to them."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 author: aczechowski

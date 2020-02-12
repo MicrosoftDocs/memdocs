@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use this diagram to start troubleshooting SQL performance for Configuration Manager
 ms.date: 08/09/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 
 

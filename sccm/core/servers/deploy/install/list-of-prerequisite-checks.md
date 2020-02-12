@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
 ms.date: 07/26/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew

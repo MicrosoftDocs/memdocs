@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use this diagram to start troubleshooting SQL replication reinit for site data in a Configuration Manager hierarchy
 ms.date: 08/09/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 
 

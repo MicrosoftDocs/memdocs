@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn techniques for installing a new Configuration Manager hierarchy when you are updating or upgrading a site."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 35586a85-4af9-4c8b-925a-0e32dc8b7346
 author: mestew

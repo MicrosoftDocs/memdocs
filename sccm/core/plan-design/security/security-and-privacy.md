@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Find resources about security and privacy for Configuration Manager."
 ms.date: 01/3/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: e18be4d1-9f6e-477c-a79d-c46014b4a03a
 author: aczechowski

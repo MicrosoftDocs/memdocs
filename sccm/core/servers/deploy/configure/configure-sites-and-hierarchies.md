@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Consult this checklist to ensure you consider the most common configurations that affect both sites and hierarchies.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
 author: mestew

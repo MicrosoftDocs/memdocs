@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the products and operating systems that Configuration Manager no longer supports for site servers.
 ms.date: 01/15/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: d53ac075-438b-41da-ab85-42f33982da0c
 author: mestew

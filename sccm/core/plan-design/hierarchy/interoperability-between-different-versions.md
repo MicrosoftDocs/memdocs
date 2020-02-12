@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn how to avoid conflicts between multiple Configuration Manager hierarchies on the same network.
 ms.date: 05/28/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 9b0a7859-747f-4495-a2f4-13fd5991f897
 author: aczechowski

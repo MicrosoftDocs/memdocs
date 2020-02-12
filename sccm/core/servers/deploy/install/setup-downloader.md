@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Read about this standalone application designed to ensure your site installation uses current versions of key installation files."
 ms.date: 01/22/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
 author: mestew

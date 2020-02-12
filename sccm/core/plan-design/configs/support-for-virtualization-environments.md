@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: The requirements for installing Configuration Manager client and site system roles in a virtualization environment.
 ms.date: 01/09/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
 author: mestew

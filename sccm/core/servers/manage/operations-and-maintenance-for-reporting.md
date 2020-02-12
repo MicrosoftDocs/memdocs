@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn the details of managing reports and report subscriptions in Configuration Manager."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 author: aczechowski

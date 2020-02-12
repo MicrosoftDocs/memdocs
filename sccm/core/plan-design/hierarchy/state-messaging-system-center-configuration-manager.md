@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Descriptions of state messages in the supported versions of Configuration Manager.
 ms.date: 02/26/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: f04c0a71-57bc-4443-a47c-592373050d04
 author: aczechowski

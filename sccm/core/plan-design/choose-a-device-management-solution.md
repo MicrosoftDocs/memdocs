@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the solutions that Configuration Manager offers for managing PCs, servers, and devices.
 ms.date: 01/31/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 author: aczechowski

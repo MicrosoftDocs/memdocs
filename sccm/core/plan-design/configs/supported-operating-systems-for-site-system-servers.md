@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a Configuration Manager site or site system role.
 ms.date: 05/28/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 author: mestew

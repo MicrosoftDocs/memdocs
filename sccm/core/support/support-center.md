@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Troubleshoot Configuration Manager clients with the Support Center.
 ms.date: 07/26/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: mestew

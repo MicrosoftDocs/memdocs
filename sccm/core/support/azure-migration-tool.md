@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about how to use the migration tool to programmatically create Azure virtual machines for Configuration Manager.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 1c975c5e-efd1-4d47-a315-39ccb32633dc
 author: mestew

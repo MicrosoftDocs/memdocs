@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
 ms.date: 08/05/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew

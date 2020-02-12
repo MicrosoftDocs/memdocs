@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Overview of how to enable TLS 1.2 for Configuration Manager.
 ms.date: 12/13/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 
 

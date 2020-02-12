@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Ensure that a computer meets prerequisites for use as a site server or a site system server for Configuration Manager.
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew

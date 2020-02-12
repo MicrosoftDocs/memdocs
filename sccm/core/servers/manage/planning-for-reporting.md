@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "From installation details to security and network bandwidth, it's important to plan for reporting in Configuration Manager."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: ff920c84-d5c8-458c-b67f-bc7219b05690
 author: aczechowski

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Read some helpful tips about using the reporting capability of Configuration Manager."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 64f9d931-33f1-456f-a4e4-0ec077465bd0
 author: mestew

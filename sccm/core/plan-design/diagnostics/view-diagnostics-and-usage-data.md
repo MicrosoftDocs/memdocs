@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: View diagnostic and usage data to confirm that your Configuration Manager hierarchy contains no sensitive information.
 ms.date: 12/23/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 594eb284-0d93-4c5d-9ae6-f0f71203682a
 author: aczechowski

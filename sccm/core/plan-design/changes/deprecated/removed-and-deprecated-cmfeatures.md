@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the features that Configuration Manager no longer supports.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew

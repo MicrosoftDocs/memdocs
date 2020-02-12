@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Understand best practices for security and privacy when you are using the reporting functionality in Configuration Manager."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 7a555e06-e6d7-4ebb-8252-412b7c5ad1c1
 author: aczechowski

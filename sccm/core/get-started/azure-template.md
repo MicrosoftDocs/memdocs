@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Automate the creation of a Configuration Manager technical preview lab or current branch evaluation lab using Azure templates
 ms.date: 07/22/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski

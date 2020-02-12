@@ -3,7 +3,7 @@ title: "Reporting"
 titleSuffix: "Configuration Manager"
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 78c1f344-4d72-4718-aad9-3a3834b64dbd
 author: aczechowski

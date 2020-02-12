@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Manage clients by taking immediate action from the central Configuration Manager console.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski

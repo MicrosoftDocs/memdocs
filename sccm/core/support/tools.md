@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the tools to help you manage and troubleshoot your Configuration Manager infrastructure.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 395403dc-6997-4415-93fd-6b1eeb6ba31a
 author: mestew

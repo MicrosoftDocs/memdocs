@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Get basic information on adopting Configuration Manager current branch to support Windows as a service.
 ms.date: 06/15/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: c8534a1e-57b8-4688-b6e6-299d82cfcec9
 author: aczechowski

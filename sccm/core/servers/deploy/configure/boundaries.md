@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Understand how to define network locations on your intranet that can contain devices you want to manage."
 ms.date: 03/27/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
 author: mestew

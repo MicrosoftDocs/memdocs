@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn how Configuration Manager site system servers use proxy servers.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: mestew

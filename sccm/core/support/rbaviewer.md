@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use the Role-based Administration and Auditing Tool to model and audit security roles and scopes in Configuration Manager.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 6372ff17-7f56-4d7b-a21b-87fb8bdd6d3a
 author: mestew

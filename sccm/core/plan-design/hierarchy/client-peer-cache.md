@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use client peer cache for source locations when deploying content with Configuration Manager.
 ms.date: 09/19/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski

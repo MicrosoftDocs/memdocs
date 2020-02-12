@@ -8,7 +8,7 @@ metadata:
   titleSuffix: Configuration Manager
   description: Fundamental information about the Configuration Manager product, including site servers and clients.
   ms.prod: configuration-manager
-  ms.technology: configmgr-other
+  ms.technology: configmgr-core
   ms.topic: landing-page
   author: aczechowski
   ms.author: aaroncz
