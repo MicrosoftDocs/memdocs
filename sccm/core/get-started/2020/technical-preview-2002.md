@@ -28,6 +28,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [3555761](includes/2002/3555761.md)]
 [!INCLUDE [4639943](includes/2002/4639943.md)]
 [!INCLUDE [4065163](includes/2002/4065163.md)]
+[!INCLUDE [3098816](includes/2002/3098816.md)]
 [!INCLUDE [5954175](includes/2002/5954175.md)]
 [!INCLUDE [5229935](includes/2002/5229935.md)]
 [!INCLUDE [5913817](includes/2002/5913817.md)]
@@ -35,6 +36,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [6089922](includes/2002/6089922.md)]
 [!INCLUDE [5686290](includes/2002/5686290.md)]
 [!INCLUDE [5932692](includes/2002/5932692.md)]
+
 
 ## General known issues
 
