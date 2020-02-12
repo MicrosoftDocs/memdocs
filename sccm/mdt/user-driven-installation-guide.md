@@ -4,7 +4,7 @@ titleSuffix: Microsoft Deployment Toolkit
 description: A quickstart guiide for using Microsoft Deployment Toolkit (MDT) for user-driven installations (UDI)
 ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.technology: configmgr-mdt
 ms.topic: article
 ms.assetid: dcddc250-9361-4e69-af45-472da4ef5fd5
 author: aczechowski  
