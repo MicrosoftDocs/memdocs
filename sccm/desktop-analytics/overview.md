@@ -60,7 +60,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
     > [!Important]  
     > Desktop Analytics currently requires that you deploy an Office 365 service in your Azure AD tenant. This won't be a requirement in the future.
 
-    - **Workspace owner** or **contributor** permissions to **Set up your workspace**, and the following roles:  
+    - **Workspace owner** permissions to **Set up your workspace**, and the following roles:  
 
       - [**Desktop Analytics Administrator**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) role.
 

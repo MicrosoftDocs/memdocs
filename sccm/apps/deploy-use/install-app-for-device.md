@@ -6,8 +6,6 @@ ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-
-
 ms.assetid: c2a71fca-8744-4d72-abf9-9d8c5d2afb00
 author: aczechowski
 ms.author: aaroncz
@@ -39,6 +37,8 @@ Starting in version 1906, from the Configuration Manager console you can install
 
     For example, the **Application Administrator** built-in role has these permissions.
 
+> [!TIP]
+> In a hierarchy, wait for application and deployment information to replicate to the primary site to which the target client is assigned.<!-- SCCMDocs#2113 -->
 
 ## Process
 
