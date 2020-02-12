@@ -2,7 +2,7 @@
 title: In-console documentation
 titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
-ms.date: 01/13/2020
+ms.date: 02/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -22,7 +22,7 @@ ROBOTS: NOINDEX
 
 # Microsoft Endpoint Configuration Manager documentation
 
-*Last update: January 13, 2020*
+*Last update: February 10, 2020*
 
 This content can assist you in learning and supporting Configuration Manager.
 
@@ -50,22 +50,22 @@ A curated list of important articles.
 
 ## Trending
 
-The most popular articles between December 1 and December 31, 2019.
+The most popular articles between January 1 and January 31, 2020.
 
 | Page views | Title |
 |------------|-------|
-| 20311 | [What's new in version 1910](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1910) |
-| 14109 | [Log file reference](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
-| 12971 | [How to enable TLS 1.2](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 11896 | [Updates and servicing](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
-| 11848 | [Ports used for connections](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
-| 10420 | [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
-| 10044 | [Deploy clients to Windows](https://docs.microsoft.com/configmgr/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 8726 | [Support for Windows 10](https://docs.microsoft.com/configmgr/core/plan-design/configs/support-for-windows-10) |
-| 8282 | [Co-management for Windows 10 devices](https://docs.microsoft.com/configmgr/comanage/overview) |
-| 8081 | [Software Center user guide](https://docs.microsoft.com/configmgr/core/understand/software-center) |
+| 24389 | [What's new in version 1910](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1910) |
+| 18683 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 18160 | [Log file reference](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
+| 16392 | [Updates and servicing](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
+| 14575 | [Ports used for connections](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
+| 13404 | [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
+| 12933 | [Deploy and update Microsoft Edge, version 77 and later](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge) |
+| 12017 | [Deploy clients to Windows](https://docs.microsoft.com/configmgr/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 11385 | [Support for Windows 10](https://docs.microsoft.com/configmgr/core/plan-design/configs/support-for-windows-10) |
+| 10688 | [What is Configuration Manager?](https://docs.microsoft.com/configmgr/core/understand/introduction) |
 
-The [Configuration Manager hub page](https://docs.microsoft.com/configmgr/) received 23,792 page views in this time period.
+The [Configuration Manager hub page](https://docs.microsoft.com/configmgr/) received 30,626 page views in this time period.
 
 ## Recently updated
 
@@ -73,16 +73,16 @@ Articles with a recent and significant update.
 
 | Last reviewed | Title |
 |---------------|-------|
-| 12/20/2019 | [Release notes](https://docs.microsoft.com/configmgr/core/servers/deploy/install/release-notes) |
-| 12/20/2019 | [Checklist for 1910](https://docs.microsoft.com/configmgr/core/servers/manage/checklist-for-installing-update-1910) |
-| 12/17/2019 | [Optimize Windows 10 update delivery](https://docs.microsoft.com/configmgr/sum/deploy-use/optimize-windows-10-update-delivery) |
-| 12/13/2019 | [How to enable Transport Layer Security (TLS) 1.2 on clients](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2-client) |
-| 12/13/2019 | [Enable Transport Layer Security (TLS) 1.2 on the site servers and remote site systems](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2-server) |
-| 12/13/2019 | [Common issues when enabling Transport Layer Security (TLS) 1.2](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2-troubleshoot) |
-| 12/13/2019 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 12/12/2019 | [Desktop Analytics data privacy](https://docs.microsoft.com/configmgr/desktop-analytics/privacy) |
-| 12/12/2019 | [Technical preview 1912](https://docs.microsoft.com/configmgr/core/get-started/2019/technical-preview-1912) |
-| 12/6/2019 | [Manage Office 365 ProPlus updates](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates) |
+| 01/31/2020 | [Upgrade Readiness](https://docs.microsoft.com/configmgr/core/clients/manage/upgrade-readiness) |
+| 01/31/2020 | [FAQ for Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/faq) |
+| 01/30/2020 | [Diagnostic and usage data FAQ](https://docs.microsoft.com/configmgr/core/plan-design/diagnostics/frequently-asked-questions) |
+| 01/27/2020 | [Release notes](https://docs.microsoft.com/configmgr/core/servers/deploy/install/release-notes) |
+| 01/24/2020 | [Product and licensing FAQ](https://docs.microsoft.com/configmgr/core/understand/product-and-licensing-faq) |
+| 01/17/2020 | [Technical preview 2001](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2001) |
+| 01/16/2020 | [What's new in Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/whats-new) |
+| 01/16/2020 | [Deploy and update Microsoft Edge, version 77 and later](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge) |
+| 01/09/2020 | [On-premises MDM](https://docs.microsoft.com/configmgr/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure) |
+| 01/07/2020 | [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection) |
 
 ## Troubleshooting articles
 
