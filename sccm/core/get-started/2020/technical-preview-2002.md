@@ -36,9 +36,11 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [5686290](includes/2002/5686290.md)]
 [!INCLUDE [5932692](includes/2002/5932692.md)]
 
+<!--
 ## General known issues
 
 [!INCLUDE [Can't create collections](includes/2001-2/known-issue-6197183.md)]
+-->
 
 ## Next steps
 
