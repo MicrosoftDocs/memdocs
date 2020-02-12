@@ -898,10 +898,14 @@ When you set this option to **Yes**, it enables the configuration of Office 365 
 
 ### <a name="bkmk_SUMMaint"></a> Enable installation of software updates in "All deployments" maintenance window when "Software Update" maintenance window is available
 
-When you set this option to **Yes** and the client has at least one "Software Update" maintenance window defined, software updates will install during an "All deployments" maintenance window. By default, this setting is set to **No**. This client setting was added in Configuration Manager version 1810. <!--2839307-->
+Starting in version 1810, when you set this option to **Yes** and the client has at least one "Software Update" maintenance window defined, software updates will install during an "All deployments" maintenance window.
+
+By default, this setting is set to **No**. This value uses the same behavior as before: if both types exist, it ignores the window. <!--2839307-->
 
 > [!NOTE]
 > This setting also applies to maintenance windows that you configure to apply to **Task sequences**.<!-- SCCMDocs-pr #4596 -->
+>
+> If the client only has an **All deployments** window available, it still installs software updates or task sequences in that window.
 
 #### Maintenance window example
 

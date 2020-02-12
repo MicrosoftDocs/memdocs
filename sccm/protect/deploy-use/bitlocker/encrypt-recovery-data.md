@@ -6,8 +6,6 @@ ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-
-
 ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
@@ -74,7 +72,7 @@ Before you use this script in a production environment, change the following val
 USE CM_ABC
 IF NOT EXISTS (SELECT name FROM sys.symmetric_keys WHERE name = '##MS_DatabaseMasterKey##')
 BEGIN
-    CREATE MASTER KEY ENCRYPTION BY PASSWORD = MyMasterKeyPassword
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'MyMasterKeyPassword'
 END
 
 IF NOT EXISTS (SELECT name from sys.certificates WHERE name = 'BitLockerManagement_CERT')
@@ -102,7 +100,7 @@ Before you use this script in a production environment, change the following val
 USE CM_ABC
 BACKUP CERTIFICATE BitLockerManagement_CERT TO FILE = 'C:\BitLockerManagement_CERT'
     WITH PRIVATE KEY ( FILE = 'C:\BitLockerManagement_CERT_KEY',
-        ENCRYPTION BY PASSWORD = MyExportKeyPassword)
+        ENCRYPTION BY PASSWORD = 'MyExportKeyPassword')
 ```
 
 > [!IMPORTANT]
@@ -123,7 +121,7 @@ Before you use this script in a production environment, change the following val
 USE CM_ABC
 IF NOT EXISTS (SELECT name FROM sys.symmetric_keys WHERE name = '##MS_DatabaseMasterKey##')
 BEGIN
-    CREATE MASTER KEY ENCRYPTION BY PASSWORD = MyMasterKeyPassword
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'MyMasterKeyPassword'
 END
 
 IF NOT EXISTS (SELECT name from sys.certificates WHERE name = 'BitLockerManagement_CERT')
@@ -132,7 +130,7 @@ BEGIN
 CREATE CERTIFICATE BitLockerManagement_CERT AUTHORIZATION RecoveryAndHardwareCore
 FROM FILE  = 'C:\BitLockerManagement_CERT'
     WITH PRIVATE KEY ( FILE = 'C:\BitLockerManagement_CERT_KEY',
-        DECRYPTION BY PASSWORD = MyExportKeyPassword)
+        DECRYPTION BY PASSWORD = 'MyExportKeyPassword')
 
 GRANT CONTROL ON CERTIFICATE ::BitLockerManagement_CERT TO RecoveryAndHardwareRead
 GRANT CONTROL ON CERTIFICATE ::BitLockerManagement_CERT TO RecoveryAndHardwareWrite

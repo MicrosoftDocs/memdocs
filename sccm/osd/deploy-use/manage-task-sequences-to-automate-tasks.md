@@ -10,8 +10,6 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Manage task sequences to automate tasks
@@ -184,7 +182,7 @@ When the task sequence starts, in most scenarios it records the currently enable
 
 <!-- 5554928 -->
 
-You deploy a task sequence that you configure for high performance. The deployed task sequence always runs as high performance, even if you disable the high performance option. To change this setting, create a new deployment for the task sequence.
+You need to create a new task sequence deployment to enable or disable this setting for high performance. The new setting appears on existing deployments, but it doesn't apply.<!-- SCCMDocs#2107 -->
 
 ## <a name="BKMK_DistributeTS"></a> Distribute referenced content  
 

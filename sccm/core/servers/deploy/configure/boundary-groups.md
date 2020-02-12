@@ -33,11 +33,17 @@ Clients use a boundary group for:
     - Distribution points for content location  
     - Software update points  
     - State migration points  
+
+        > [!NOTE]
+        > The state migration point doesn't use fallback relationships. For more information, see [Fallback](#fallback).
+
     - Preferred management points  
+
+        > [!NOTE]  
+        > If you use preferred management points, enable this option for the hierarchy, not from within the boundary group configuration. For more information, see [Enable use of preferred management points](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_proc-prefer).  
+
     - Cloud management gateway (starting in version 1902)
 
-        > [!Note]  
-        > If you use preferred management points, enable this option for the hierarchy, not from within the boundary group configuration. For more information, see [Enable use of preferred management points](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_proc-prefer).  
 
 
 ## Boundary groups and relationships
@@ -75,6 +81,9 @@ When a client can't find an available site system, it begins to search locations
 - Clients only fall back to a boundary group that's a direct neighbor of their current boundary group.  
 
 - When a client is a member of more than one boundary group, it defines its current boundary group as a union of all its boundary groups. The client falls back to neighbors of any of those original boundary groups.  
+
+> [!NOTE]
+> The state migration point role doesn't use fallback relationships. If you add both the state migration point and distribution point roles to the same site system server, don't configure fallback on its boundary group. If you need to use boundary group fallback for the distribution point, add the state migration point role on a different site system server.<!-- 2838807 -->
 
 ### The default site boundary group
 

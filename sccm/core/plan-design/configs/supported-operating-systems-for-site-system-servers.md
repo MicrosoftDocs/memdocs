@@ -10,8 +10,6 @@ ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Supported operating systems for Configuration Manager site system servers
@@ -218,6 +216,9 @@ This OS isn't supported for site servers or site system roles, except for the di
 The following client OS versions are supported for use as a **distribution point** <sup>[Note 1](#bkmk_note1)</sup>:  
 
 - Windows 10 (x86, x64): Pro and Enterprise
+
+    For more information on supported build versions, see [Support for Windows 10](/configmgr/core/plan-design/configs/support-for-windows-10).
+
 - Windows 8.1 (x86, x64): Professional and Enterprise
 - Windows 7 with SP1 (x86, x64): Professional, Enterprise, and Ultimate
 
