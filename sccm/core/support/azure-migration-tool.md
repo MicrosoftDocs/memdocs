@@ -2,7 +2,7 @@
 title: Extend and Migrate on-premises site to Microsoft Azure
 titleSuffix: Configuration Manager
 description: Learn about how to use the migration tool to programmatically create Azure virtual machines for Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 02/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -112,7 +112,7 @@ For more information about permissions and assigning roles, see [Manage access t
     |**Type**|Read only. It shows *Passive Site Server* as the type.|
 
     > [!IMPORTANT]
-    > By default the virtual machines are set to **No** for **Use existing Windows Server license**. If you want to utilize your on-premises Windows Server licenses with Software Assurance, configure this setting in [Azure portal](https://portal.azure.com) after the virtual machines are provisioned. For more information, see [Azure Hybrid Benefit for Windows Server](https://docs.microsoft.com/windows-server/get-started/azure-hybrid-benefit).
+    > By default the virtual machines are set to **No** for **Use existing Windows Server license**. If you want to utilize your on-premises Windows Server licenses with Software Assurance, configure this setting in the [Azure portal](https://portal.azure.com) after the virtual machines are provisioned. For more information, see [Azure Hybrid Benefit for Windows Server](https://docs.microsoft.com/windows-server/get-started/azure-hybrid-benefit).
 
 1. To start provisioning the Azure VM, select **Start**. To monitor the deployment status, switch to the **Deployments in Azure** tab in the tool. To get the latest status, select **Refresh deployment status**.
 
