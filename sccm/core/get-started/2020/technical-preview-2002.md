@@ -34,11 +34,11 @@ The following sections describe the new features to try out in this version:
 <!-- include only, not listed in technical-preview.md for version 2002 -->
 [!INCLUDE [Token based authentication for cloud management gateway](includes/2002/5686290.md)]
 
-<!--
+
 ## General known issues
 
-[!INCLUDE [Can't create collections](includes/2001-2/known-issue-6197183.md)]
--->
+[!INCLUDE [Can't delete collections](includes/2002/known-issue-6215446.md)]
+
 
 ## Next steps
 
