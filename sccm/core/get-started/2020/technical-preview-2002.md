@@ -24,17 +24,14 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2002/1234567.md)] -->
 
-[!INCLUDE [3555758](includes/2002/3555758.md)]
-[!INCLUDE [3555761](includes/2002/3555761.md)]
-[!INCLUDE [4639943](includes/2002/4639943.md)]
-[!INCLUDE [4065163](includes/2002/4065163.md)]
-[!INCLUDE [5954175](includes/2002/5954175.md)]
-[!INCLUDE [5229935](includes/2002/5229935.md)]
-[!INCLUDE [5913817](includes/2002/5913817.md)]
-[!INCLUDE [5925683](includes/2002/5925683.md)]
-[!INCLUDE [6089922](includes/2002/6089922.md)]
-[!INCLUDE [5686290](includes/2002/5686290.md)]
-[!INCLUDE [5932692](includes/2002/5932692.md)]
+[!INCLUDE [Evaluate software updates after a servicing stack update](includes/2002/4639943.md)]
+[!INCLUDE [Office 365 updates for disconnected software update points](includes/2002/4065163.md)]
+[!INCLUDE [Proxy support for Azure AD discovery and group sync](includes/2002/5913817.md)]
+[!INCLUDE [Improvements to BitLocker management](includes/2002/5925683.md)]
+[!INCLUDE [Additional improvements to task sequence progress](includes/2002/5932692.md)]
+
+<!-- include only, not listed in technical-preview.md for version 2002 -->
+[!INCLUDE [Token based authentication for cloud management gateway](includes/2002/5686290.md)]
 
 <!--
 ## General known issues

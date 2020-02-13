@@ -123,16 +123,13 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2002
 
-- [3555758](/sccm/core/get-started/2020/technical-preview-2002#bkmk_anchor) <!--3555758-->
-- [3555761](/sccm/core/get-started/2020/technical-preview-2002#bkmk_anchor) <!--3555761-->
-- [4639943](/sccm/core/get-started/2020/technical-preview-2002#bkmk_anchor) <!--4639943-->
-- [4065163](/sccm/core/get-started/2020/technical-preview-2002#bkmk_anchor) <!--4065163-->
-- [5954175](/sccm/core/get-started/2020/technical-preview-2002#bkmk_anchor) <!--5954175-->
-- [5229935](/sccm/core/get-started/2020/technical-preview-2002#bkmk_anchor) <!--5229935-->
-- [5913817](/sccm/core/get-started/2020/technical-preview-2002#bkmk_anchor) <!--5913817-->
-- [5925683](/sccm/core/get-started/2020/technical-preview-2002#bkmk_anchor) <!--5925683-->
-- [6089922](/sccm/core/get-started/2020/technical-preview-2002#bkmk_anchor) <!--6089922-->
-- [5932692](/sccm/core/get-started/2020/technical-preview-2002#bkmk_anchor) <!--5932692-->
+- [Evaluate software updates after a servicing stack update](/sccm/core/get-started/2020/technical-preview-2002#bkmk_ssu) <!--4639943-->
+- [Office 365 updates for disconnected software update points](/sccm/core/get-started/2020/technical-preview-2002#bkmk_O365) <!--4065163-->
+- [Improvements to Microsoft Edge management](/sccm/core/get-started/2020/technical-preview-2002#bkmk_edge) <!--4561024-->
+- [Improvements to Orchestration Groups](/sccm/core/get-started/2020/technical-preview-2002#bkmk_orch) <!--3098816-->
+- [Proxy support for Azure Active Directory discovery and group sync](/sccm/core/get-started/2020/technical-preview-2002#bkmk_aad) <!--5913817-->
+- [Improvements to BitLocker management](/sccm/core/get-started/2020/technical-preview-2002#bkmk_bitlocker) <!--5925683-->
+- [Additional improvements to task sequence progress](/sccm/core/get-started/2020/technical-preview-2002#bkmk_tsprogress) <!--5932692-->
 
 > [!NOTE]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
