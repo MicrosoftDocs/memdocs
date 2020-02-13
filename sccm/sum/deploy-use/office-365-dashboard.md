@@ -169,7 +169,7 @@ Configuration Manager looks at the most recently used files on each device. It c
 
 This report can be used to identify which devices have recently used files which may contain macros.  The **Readiness Toolkit for Office** can then be deployed using Configuration Manager to scan any devices where more detailed information is needed, and check if there are any potential compatibility concerns. For example, if the file uses a function that changed in a more recent version of Office.
 
-See [Detailed macro readiness]("bkmk_ort") for information about how to carry out the scan.
+See [Detailed macro readiness](#bkmk_ort) for information about how to carry out the scan.
 
 ## <a name="bkmk_pilot"></a> Office 365 ProPlus pilot and health dashboard
 <!--4488272, 4488301-->
