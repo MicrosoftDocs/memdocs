@@ -116,7 +116,7 @@ Note that the Readiness Toolkit does not need to be installed on every target de
 ReadinessReportCreator.exe -mru -output c:\temp -silent
 ```
 
-For more information see [Getting readiness information for multiple users in an enterprise](https://docs.microsoft.com/en-us/deployoffice/use-the-readiness-toolkit-to-assess-application-compatibility-for-office-365-pro#getting-readiness-information-for-multiple-users-in-an-enterprise).
+For more information see [Getting readiness information for multiple users in an enterprise](/deployoffice/use-the-readiness-toolkit-to-assess-application-compatibility-for-office-365-pro#getting-readiness-information-for-multiple-users-in-an-enterprise).
 
 ## <a name="bkmk_readiness-dash"></a> Office 365 ProPlus upgrade readiness dashboard
 
