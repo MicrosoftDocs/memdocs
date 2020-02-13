@@ -5,7 +5,7 @@ description: "Review Office 365 client information from the Office 365 Client Ma
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 02/14/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -40,9 +40,10 @@ The Office 365 Client Management dashboard starts displaying data as hardware in
 
 Your top level site server needs access to the following endpoint to download the readiness file:
 
-`https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab` 
+`https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab`
 
-Note: Internet connectivity is not required for the client devices for any scenario.
+> [!NOTE]
+> Internet connectivity isn't required for the client devices for any of these scenarios.
 
 ### Enable data collection for Office 365 ProPlus
 
@@ -50,7 +51,7 @@ Note: Internet connectivity is not required for the client devices for any scena
 
 Starting in version 1910, you'll need to enable data collection for Office 365 ProPlus to populate information in the  **Office 365 ProPlus Pilot and Health Dashboard**. The data is stored in the Configuration Manager site database and not sent to Microsoft.
 
-This data is different from the diagnostic data which is described at [Diagnostic data sent from Office 365 ProPlus to Microsoft](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
+This data is different from the diagnostic data, which is described in [Diagnostic data sent from Office 365 ProPlus to Microsoft](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
 
 You can enable data collection either by using Group Policy or by editing the registry.
 
@@ -108,15 +109,15 @@ By default, the scanning agent looks at the most recently used (MRU) files list 
 - Macro-enabled Office file formats, such as Excel macro-enabled workbooks (.xlsm) or Word macro-enabled document (.docm)  
 - Older Office formats that don't indicate whether there's macro content. For example, an Excel 97-2003 workbook (.xls).
 
-If you need a more detailed information about macro compatibility, deploy the **Readiness Toolkit for Office** to analyze the code within the macro files. It checks if there are any potential compatibility concerns. For example, the file uses a function that changed in a more recent version of Office. After you run the Readiness Toolkit for Office and select the option for **Most recently used Office documents and installed add-ins on this computer**, or use the -mru flag in the command line, the results can be picked up by Configuration Manager's hardware inventory agent. This additional data enhances the device readiness calculation. For more information, see [Use the Readiness Toolkit for Office to assess application compatibility for Office 365 ProPlus](https://aka.ms/readinesstoolkit).
+If you need more detailed information about macro compatibility, deploy the **Readiness Toolkit for Office** to analyze the code within the macro files. It checks if there are any potential compatibility concerns. For example, the file uses a function that changed in a more recent version of Office. After you run the Readiness Toolkit for Office and select the option for **Most recently used Office documents and installed add-ins on this computer**, or use the `-mru` flag in the command line, the results can be picked up by Configuration Manager's hardware inventory agent. This additional data enhances the device readiness calculation. For more information, see [Use the Readiness Toolkit for Office to assess application compatibility for Office 365 ProPlus](https://aka.ms/readinesstoolkit).
 
-Note that the Readiness Toolkit does not need to be installed on every target device in order to carry out the scan.  You can use the sample command line option below to scan each desired device.  The output flag is required, but the files will not be used to generate the results in the dashboard, so any valid location can be selected.
+Note that the Readiness Toolkit does not need to be installed on every target device in order to carry out the scan. You can use the sample command line option below to scan each desired device.  The output flag is required, but the files will not be used to generate the results in the dashboard, so any valid location can be selected.
 
 ```cmd
 ReadinessReportCreator.exe -mru -output c:\temp -silent
 ```
 
-For more information see [Getting readiness information for multiple users in an enterprise](/deployoffice/use-the-readiness-toolkit-to-assess-application-compatibility-for-office-365-pro#getting-readiness-information-for-multiple-users-in-an-enterprise).
+For more information, see [Getting readiness information for multiple users in an enterprise](/deployoffice/use-the-readiness-toolkit-to-assess-application-compatibility-for-office-365-pro#getting-readiness-information-for-multiple-users-in-an-enterprise).
 
 ## <a name="bkmk_readiness-dash"></a> Office 365 ProPlus upgrade readiness dashboard
 
@@ -167,9 +168,9 @@ Configuration Manager looks at the most recently used files on each device. It c
 - Macro-enabled Office file formats.
 - Older Office formats, which don't indicate if there's macro content.
 
-This report can be used to identify which devices have recently used files which may contain macros.  The **Readiness Toolkit for Office** can then be deployed using Configuration Manager to scan any devices where more detailed information is needed, and check if there are any potential compatibility concerns. For example, if the file uses a function that changed in a more recent version of Office.
+This report can be used to identify which devices have recently used files which may contain macros. The **Readiness Toolkit for Office** can then be deployed using Configuration Manager to scan any devices where more detailed information is needed, and check if there are any potential compatibility concerns. For example, if the file uses a function that changed in a more recent version of Office.
 
-See [Detailed macro readiness](#bkmk_ort) for information about how to carry out the scan.
+For more information about how to carry out the scan, see [Detailed macro readiness](#bkmk_ort).
 
 ## <a name="bkmk_pilot"></a> Office 365 ProPlus pilot and health dashboard
 <!--4488272, 4488301-->
