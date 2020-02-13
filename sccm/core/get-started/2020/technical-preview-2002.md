@@ -26,6 +26,7 @@ The following sections describe the new features to try out in this version:
 
 [!INCLUDE [Evaluate software updates after a servicing stack update](includes/2002/4639943.md)]
 [!INCLUDE [Office 365 updates for disconnected software update points](includes/2002/4065163.md)]
+[!INCLUDE [Improvements to Orchestration Groups](includes/2002/3098816.md)]
 [!INCLUDE [Proxy support for Azure AD discovery and group sync](includes/2002/5913817.md)]
 [!INCLUDE [Improvements to BitLocker management](includes/2002/5925683.md)]
 [!INCLUDE [Additional improvements to task sequence progress](includes/2002/5932692.md)]
