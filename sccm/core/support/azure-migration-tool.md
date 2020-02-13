@@ -110,7 +110,10 @@ For more information about permissions and assigning roles, see [Manage access t
     |**Domain password**|The password of the domain user to join the domain. The tool verifies it after you select **Start**. To protect the password during Azure deployment, store the password as a secret in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview). Then, use the reference here. If needed, create a new one from the [Azure portal](https://portal.azure.com).|
     |**Domain DNS IP**|Used for joining the domain. By default, the tool uses the current DNS from your current machine.|
     |**Type**|Read only. It shows *Passive Site Server* as the type.|
-    
+
+    > [!Important]
+    > By default the virtual machines is set "Use existing Windows Server license" to No. If you want to utilize your on-premises Windows Server licenses with Software Assurance, please configure this setting in [Azure portal](https://portal.azure.com) after the virtual machine get provisioned. Check more info from [Azure Hybrid Benefit for Windows Server](https://docs.microsoft.com/windows-server/get-started/azure-hybrid-benefit). 
+
 1. To start provisioning the Azure VM, select **Start**. To monitor the deployment status, switch to the **Deployments in Azure** tab in the tool. To get the latest status, select **Refresh deployment status**.
 
     > [!TIP]
