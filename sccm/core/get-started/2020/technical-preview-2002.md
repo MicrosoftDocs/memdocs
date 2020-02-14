@@ -31,6 +31,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Proxy support for Azure AD discovery and group sync](includes/2002/5913817.md)]
 [!INCLUDE [Improvements to BitLocker management](includes/2002/5925683.md)]
 [!INCLUDE [Additional improvements to task sequence progress](includes/2002/5932692.md)]
+[!INCLUDE [Improvements to the ConfigMgr PXE Responder](includes/2002/5568051.md)]
 
 <!-- include only, not listed in technical-preview.md for version 2002 -->
 [!INCLUDE [Token based authentication for cloud management gateway](includes/2002/5686290.md)]

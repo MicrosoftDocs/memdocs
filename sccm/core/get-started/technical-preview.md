@@ -130,6 +130,7 @@ The following features are available with the most recent Configuration Manager 
 - [Proxy support for Azure Active Directory discovery and group sync](/sccm/core/get-started/2020/technical-preview-2002#bkmk_aad) <!--5913817-->
 - [Improvements to BitLocker management](/sccm/core/get-started/2020/technical-preview-2002#bkmk_bitlocker) <!--5925683-->
 - [Additional improvements to task sequence progress](/sccm/core/get-started/2020/technical-preview-2002#bkmk_tsprogress) <!--5932692-->
+- [Improvements to the ConfigMgr PXE Responder](/sccm/core/get-started/2020/technical-preview-2002#bkmk_pxe) <!--5568051 & 5528656-->
 
 > [!NOTE]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
