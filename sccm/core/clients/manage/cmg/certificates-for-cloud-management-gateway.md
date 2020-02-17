@@ -27,6 +27,8 @@ Depending upon the scenario you use to manage clients on the internet with the c
 
 - [Client authentication certificate](#bkmk_clientauth)  
     - [Client trusted root certificate to CMG](#bkmk_clientroot)  
+    
+- [Enable management point for HTTPE](#bkmk_mphttpe)
 
 - [Enable management point for HTTPS](#bkmk_mphttps)  
 
@@ -180,6 +182,16 @@ After issuing a client authentication certificate to a computer, use this proces
 
 8. Export all of the certificates in the certification path of the original client authentication certificate. Make note of which exported certificates are intermediate CAs, and which ones are trusted root CAs.  
 
+
+## <a name="bkmk_mphttpe"></a> Enable management point for HTTPE
+
+When a Site Server has been configured to "Use Configuration Manager-generated certificates for HTTP site systems.", you can Configure a HTTP Management point to allow CMG clients communnication requests.
+
+When a site system is configured as HTTP on the Site server, the Site server will generate a self signed certificate for E-HTTP, secured communications. The certificate is configured on the IIS 'Default Web site' Bindgings (443 port) as "SMS Role SSL Certifcate".
+    
+This will allow The HTTP site system to reply AAD clients requests on SSL channel, while on premisses clients can use pure HTTP mode.
+    
+    
 
 ## <a name="bkmk_mphttps"></a> Enable management point for HTTPS
 
