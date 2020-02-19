@@ -202,4 +202,4 @@ You can use the following reports to monitor App-V in your Configuration Manager
 ### Log files  
 Configuration Manager records information about virtual application deployments in log files. For information about the log files that virtual applications and Configuration Manager application management use, see [Log files](../../core/plan-design/hierarchy/log-files.md).  
 
-For Windows Vista, Windows 7, and Windows 8, you can find logs for the App-V client in C:\ProgramData\Microsoft\Application Virtualization Client.  
+For Windows 8.1, find logs for the App-V client in C:\ProgramData\Microsoft\Application Virtualization Client.  

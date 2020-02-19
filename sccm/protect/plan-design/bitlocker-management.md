@@ -36,7 +36,7 @@ Configuration Manager provides the following management capabilities for BitLock
 
 ### Client deployment
 
-Deploy the BitLocker client to managed Windows devices running Windows 10, Windows 8.1, or Windows 7
+Deploy the BitLocker client to managed Windows devices running Windows 10 or Windows 8.1
 
 ### Manage encryption policies
 
