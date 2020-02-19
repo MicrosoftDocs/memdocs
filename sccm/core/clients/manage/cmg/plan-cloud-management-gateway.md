@@ -38,7 +38,7 @@ This article provides the foundational knowledge to learn about the CMG, design 
 
 There are several scenarios for which a CMG is beneficial. The following scenarios are some of the more common:  
 
-- Manage traditional Windows clients with Active Directory domain-joined identity. These clients include Windows 7, Windows 8.1, and Windows 10. It uses PKI certificates to secure the communication channel. Management activities include:  
+- Manage traditional Windows clients with Active Directory domain-joined identity. These clients include Windows 8.1 and Windows 10. It uses PKI certificates to secure the communication channel. Management activities include:  
     - Software updates and endpoint protection
     - Inventory and client status
     - Compliance settings

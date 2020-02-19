@@ -2,7 +2,7 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 01/23/2020
+ms.date: 02/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -24,7 +24,6 @@ Review the following requirements and limitations for all clients:
 
 - Changing the startup type or **Log on as** settings for any Configuration Manager service isn't supported. This change can prevent key services from running correctly.
 
-
 ## Windows computers  
 
 To manage the following Windows OS versions, use the client that's included with Configuration Manager. For more information, see [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).  
@@ -36,8 +35,6 @@ To manage the following Windows OS versions, use the client that's included with
     For more detailed information, see [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10).  
 
 - **Windows 8.1** (x86, x64): Professional, Enterprise
-
-- **Windows 7 with SP1** (x86, x64): Professional, Enterprise, and Ultimate
 
 #### Windows Virtual Desktop
 
@@ -74,12 +71,6 @@ If you require user policy in this scenario, and accept any potential performanc
 
 - **Windows Storage Server 2012** (x64)
 
-- **Windows Server 2008 R2 with SP1** (x64): Standard, Enterprise, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
-
-- **Windows Storage Server 2008 R2** (x86, x64): Workgroup, Standard, Enterprise
-
-- **Windows Server 2008 with SP2** (x86, x64): Standard, Enterprise, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
-
 #### Server Core
 
 The following versions specifically refer to the Server Core installation of the OS. <sup>[Note 3](#bkmk_note3)</sup>  
@@ -94,10 +85,6 @@ Windows Server semi-annual channel versions are Server Core installations, such 
 
 - **Windows Server 2012** (x64) <sup>[Note 2](#bkmk_note2)</sup>
 
-- **Windows Server 2008 R2** with no service pack, or with SP1 (x64)
-
-- **Windows Server 2008 SP2** (x86, x64)
-
 #### <a name="bkmk_note1"></a> Note 1
 
 Configuration Manager tests and supports Windows Server Datacenter editions, but isn't officially certified for Windows Server. Configuration Manager hotfix support isn't offered for issues that are specific to Windows Server Datacenter Edition. For more information on the Windows Server certification program, see [Windows Server Catalog](https://www.windowsservercatalog.com/).
@@ -110,7 +97,6 @@ To support [client push installation](/sccm/core/clients/deploy/plan/client-inst
 
 The new Software Center app isn't supported on any version of Windows Server Core.<!--SCCMDocs issue 683-->
 
-
 ## Windows Embedded computers  
 
 Manage Windows Embedded devices by installing the Configuration Manager client on the device. For more information, see [Planning for client deployment to Windows Embedded devices](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices).  
@@ -121,11 +107,11 @@ Manage Windows Embedded devices by installing the Configuration Manager client o
 
 - Clients that use one of the following are supported for all features except power management:  
 
-    - Enhanced Write Filters (EWF)
+  - Enhanced Write Filters (EWF)
 
-    - RAM File-Based Write Filters (FBWF)
+  - RAM File-Based Write Filters (FBWF)
 
-    - Unified Write Filters (UWF)  
+  - Unified Write Filters (UWF)  
 
 - The application catalog isn't supported for any Windows Embedded device.  
 
@@ -145,7 +131,6 @@ Manage Windows Embedded devices by installing the Configuration Manager client o
 - **Windows Embedded POSReady 7** (x86, x64)
 
 - **Windows Embedded Standard 7 with SP1** (x86, x64)
-
 
 ## Windows CE computers
 
@@ -188,11 +173,11 @@ Manage Windows CE devices with the Configuration Manager mobile device legacy cl
 
 ## <a name="bkmk_ESU"></a> Extended Security Updates and Configuration Manager
 
-The [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) program is a last resort option for customers who need to run certain legacy Microsoft products past the end of support. It includes Critical and/or Important security updates (as defined by the [Microsoft Security Response Center (MSRC)](https://www.microsoft.com/msrc)) for a maximum of three years after the product’s End of Extended Support date.
+The [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) program is a last resort option for customers who need to run certain legacy Microsoft products past the end of support. For example, Windows 7. It includes Critical and/or Important security updates (as defined by the [Microsoft Security Response Center (MSRC)](https://www.microsoft.com/msrc)) for a maximum of three years after the product’s End of Extended Support date.
 
-Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](/sccm/core/servers/manage/updates#version-details) can be used to deploy and install Windows security updates released under the program. The latest released version can also be used to deploy supported OSes via operating system deployment (OSD).
+Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](/sccm/core/servers/manage/updates#version-details) can be used to deploy and install Windows security updates released under the program. The latest released version can also be used to deploy Windows 10 to devices running Windows 7.
 
-Client management features not related to Windows software update management or OSD will no longer be tested on the operating systems covered under the ESU program and we don't guarantee that they'll continue to function. It's highly recommended to upgrade or migrate to a current version of the operating systems as soon as possible to receive client management support.
+Client management features not related to Windows software update management or OS deployment will no longer be tested on the operating systems covered under the ESU program and we don't guarantee that they'll continue to function. It's highly recommended to upgrade or migrate to a current version of the operating systems as soon as possible to receive client management support.
 
 ## Mac computers  
 

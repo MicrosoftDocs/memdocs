@@ -2,7 +2,7 @@
 title: Site prerequisites
 titleSuffix: Configuration Manager
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
-ms.date: 11/29/2019
+ms.date: 02/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Site and site system prerequisites for Configuration Manager
@@ -19,8 +17,6 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 Windows-based computers require specific configurations to support their use as Configuration Manager site system servers.
-
-This article primarily focuses on [Windows Server 2012 and later](#bkmk_2012Prereq). [Windows Server 2008 R2 and Windows Server 2008](#bkmk_2008) are supported for the distribution point site system role. For more information, see [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).
 
 For some products, like Windows Server Update Services (WSUS) for the software update point, you need to refer to the product documentation to identify additional prerequisites and limitations for use. Only configurations that directly apply for use with Configuration Manager are included here.
 
@@ -714,62 +710,3 @@ For more information about .NET Framework versions, see the following articles:
 
 When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
 
-
-## <a name="bkmk_2008"></a> Prerequisites for Windows Server 2008 R2 and Windows Server 2008  
-
-Windows Server 2008 and Windows Server 2008 R2 are now in extended support and are no longer in mainstream support, as detailed by the [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Removed and deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os).  
-
-These OS versions aren't supported for site servers or most site system roles. They're still supported for the distribution point site system role, including pull-distribution points and for PXE and multicast.
-
-### <a name="bkmk_2008dppreq"></a> Distribution point  
-
-### IIS configuration
-
-You can use the default IIS configuration or a custom configuration. To use a custom IIS configuration, you must enable the following options for IIS:  
-
-- Application Development:  
-
-    - ISAPI Extensions  
-
-- Security:  
-
-    - Windows Authentication  
-
-- IIS 6 Management Compatibility:  
-
-    - IIS 6 Metabase Compatibility  
-
-    - IIS 6 WMI Compatibility  
-
-When you use a custom IIS configuration, you can remove options that aren't required, such as the following items:  
-
-- Common HTTP Features:  
-
-    - HTTP Redirection  
-
-- IIS Management Scripts and Tools  
-
-### Windows feature  
-
-- Remote Differential Compression  
-
-### Visual C++ Redistributable
-
-- Configuration Manager installs the Microsoft Visual C++ 2013 Redistributable Package on each computer that hosts a distribution point.  
-
-- The version that is installed depends on the computer's platform (x86 or x64).  
-
-### To support PXE or multicast  
-
-- Enable a PXE responder on a distribution point without Windows Deployment Service.  
-
-- Install and configure the Windows Deployment Services (WDS) Windows Server role.  
-
-    > [!NOTE]  
-    > WDS installs and configures automatically when you configure a distribution point to support PXE or multicast on a server that runs Windows Server 2012 or later.  
-
-For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
-
-<!--sms.503672 -Clarified BITS use-->
-> [!NOTE]  
-> When the distribution point transfers content, it transfers using the **Background Intelligent Transfer Service** (BITS) built into the Windows operating system. The distribution point role doesn't require the optional BITS IIS Server Extension feature to be installed because the client does not  upload information to it.
