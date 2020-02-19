@@ -10,8 +10,6 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Infrastructure requirements for OS deployment in Configuration Manager
@@ -19,8 +17,6 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 OS deployment in Configuration Manager has external dependencies as well as dependencies within the product. Use this article to help you prepare the infrastructure for OS deployment.  
-
-
 
 ##  <a name="BKMK_ExternalDependencies"></a> Dependencies external to Configuration Manager  
 
@@ -36,8 +32,10 @@ For more information, see the following articles:
 
 - [Download the Windows ADK for Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install)  
 
-- [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)  
+    > [!IMPORTANT]
+    > Make sure to download both the **Windows ADK for Windows 10** and the **Windows PE add-on for the ADK**.
 
+- [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)  
 
 #### Site systems
 The Windows ADK is a prerequisite for the following site systems servers:
