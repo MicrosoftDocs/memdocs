@@ -454,6 +454,9 @@ SQL Server Reporting Services uses the **Reporting services point account** to r
 > [!NOTE]  
 > The account you specify must have **Log on locally** permissions on the computer hosting the SQL Reporting Services database.
 
+> [!NOTE]  
+> The account is automatically granted all necessary rights by being added to the smsschm_users SQL Database Role on the ConfigMgr database.
+
 For more information, see [Introduction to reporting](/sccm/core/servers/manage/introduction-to-reporting).
 
 
