@@ -78,6 +78,8 @@
       href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: What’s new in incremental versions
       href: plan-design/changes/whats-new-incremental-versions.md
+    - name: What's new in version 2002
+      href: plan-design/changes/whats-new-in-version-2002.md
     - name: What's new in version 1910
       href: plan-design/changes/whats-new-in-version-1910.md      
     - name: What's new in version 1906
@@ -86,8 +88,6 @@
       href: plan-design/changes/whats-new-in-version-1902.md
     - name: What's new in version 1810
       href: plan-design/changes/whats-new-in-version-1810.md
-    - name: What's new in version 1806
-      href: plan-design/changes/whats-new-in-version-1806.md
     - name: Removed and deprecated
       items:
       - name: Removed and deprecated overview
@@ -212,6 +212,8 @@
       items:
         - name: Overview of levels
           href: plan-design/diagnostics/levels-overview.md
+        - name: Data for version 2002
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
         - name: Data for version 1910
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1910.md
         - name: Data for version 1906
@@ -220,8 +222,6 @@
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
         - name: Data for version 1810
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
-        - name: Data for version 1806
-          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md
     - name: Frequently asked questions (FAQ)
       href: plan-design/diagnostics/frequently-asked-questions.md
   - name: Security and privacy for Configuration Manager
@@ -508,6 +508,8 @@
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: Use the hotfix installer
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Checklist for installing update 2002
+      href: servers/manage/checklist-for-installing-update-2002.md
     - name: Checklist for installing update 1910
       href: servers/manage/checklist-for-installing-update-1910.md
     - name: Checklist for installing update 1906
@@ -516,8 +518,6 @@
       href: servers/manage/checklist-for-installing-update-1902.md
     - name: Checklist for installing update 1810
       href: servers/manage/checklist-for-installing-update-1810.md
-    - name: Checklist for installing update 1806
-      href: servers/manage/checklist-for-installing-update-1806.md
     - name: Support for current branch versions
       href: servers/manage/current-branch-versions-supported.md
   - name: Backup and recovery

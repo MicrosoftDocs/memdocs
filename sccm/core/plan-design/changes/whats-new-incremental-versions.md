@@ -2,7 +2,7 @@
 title: Incremental versions
 titleSuffix: Configuration Manager
 description: Learn about what's new in the latest update for Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # What's new in Configuration Manager incremental versions
@@ -28,11 +26,11 @@ Different update versions are identified by year and month. For example, version
 
 Use the following links to discover what's new with each supported version:
 
+- [What's new in version 2002](/sccm/core/plan-design/changes/whats-new-in-version-2002)  
 - [What's new in version 1910](/sccm/core/plan-design/changes/whats-new-in-version-1910)  
 - [What's new in version 1906](/sccm/core/plan-design/changes/whats-new-in-version-1906)  
 - [What's new in version 1902](/sccm/core/plan-design/changes/whats-new-in-version-1902)  
 - [What's new in version 1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)  
-- [What's new in version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 
 Each update version remains in support for 18 months from its general availability (GA) release date.  Stay current with the most recent update version. For more information, see [Support for Configuration Manager current branch versions](/sccm/core/servers/manage/current-branch-versions-supported).  
 
