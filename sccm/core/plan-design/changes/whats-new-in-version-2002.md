@@ -67,7 +67,7 @@ The site system's proxy settings, including authentication, are now used by:
 - Azure AD user group discovery
 - Synchronizing collection membership results to Azure Active Directory groups
 
-<!-- For more information, see [Proxy server support](https://docs.microsoft.com/en-us/configmgr/core/plan-design/network/proxy-server-support). -->
+<!-- For more information, see [Proxy server support](/configmgr/core/plan-design/network/proxy-server-support). -->
 
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
@@ -127,7 +127,7 @@ Boundary groups include the following option for peer downloads: During peer dow
 
 Depending on the configuration of your network, you can now exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet. By default, Configuration Manager excludes the default Teredo subnet (2001:0000:%).
 
-<!-- For more information, see [Boundary group options](https://docs.microsoft.com/en-us/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions). -->
+<!-- For more information, see [Boundary group options](/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions). -->
 
 
 ## <a name="bkmk_client"></a> Client management
@@ -146,7 +146,7 @@ You can now trigger a client device to upload its client logs to the site server
 
 From the central administration site (CAS), in the Devices or Device Collections node, you can now use the client notification action to Wake Up devices. This action was previously only available from a primary site.
 
-<!-- For more information, see [How to configure Wake on LAN](https://docs.microsoft.com/en-us/configmgr/core/clients/deploy/configure-wake-on-lan#bkmk_wol-1810). -->
+<!-- For more information, see [How to configure Wake on LAN](/configmgr/core/clients/deploy/configure-wake-on-lan#bkmk_wol-1810). -->
 
 
 <!-- ## <a name="bkmk_comgmt"></a> Co-management -->
@@ -166,7 +166,7 @@ The Microsoft Edge management dashboard provides you insights on the usage of Mi
 
 From the Software Library workspace, click Microsoft Edge Management to see the dashboard. Change the collection for the graph data by clicking Browse and choosing another collection. By default your five largest collections are in the drop-down list. When you select a collection that isn't in the list, the newly selected collection takes the bottom spot on your drop-down list.
 
-<!-- For more information, see [Microsoft Edge management](https://docs.microsoft.com/en-us/configmgr/apps/deploy-use/deploy-edge). -->
+<!-- For more information, see [Microsoft Edge management](/configmgr/apps/deploy-use/deploy-edge). -->
 
 ### Improvements to Microsoft Edge management
 
@@ -174,7 +174,7 @@ From the Software Library workspace, click Microsoft Edge Management to see the 
 
 You can now create a Microsoft Edge application that's set up to receive automatic updates rather than having automatic updates disabled. This change allows you to choose to manage updates for Microsoft Edge with Configuration Manager or allow Microsoft Edge to automatically update. When creating the application, select Allow Microsoft Edge to automatically update the version of the client on the end user's device on the Microsoft Edge Settings page.
 
-<!-- For more information, see [Microsoft Edge management](https://docs.microsoft.com/en-us/configmgr/apps/deploy-use/deploy-edge). -->
+<!-- For more information, see [Microsoft Edge management](/configmgr/apps/deploy-use/deploy-edge). -->
 
 ### Task sequence as an app model deployment type
 
@@ -215,7 +215,7 @@ You can now verify more device properties in the Check Readiness task sequence s
 - AC power plugged in
 - Network adapter is connected and not wireless
 
-<!-- For more information, see [Task sequence steps - Check Readiness](https://docs.microsoft.com/en-us/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness). -->
+<!-- For more information, see [Task sequence steps - Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness). -->
 
 ### Improvements to task sequence progress
 
@@ -273,7 +273,7 @@ Configuration Manager now detects if a servicing stack update (SSU) is part of a
 
 You can use a new tool to import Office 365 updates from an internet-connected WSUS server into a disconnected Configuration Manager environment. Previously when you exported and imported metadata for software updated in disconnected environments, you were unable to deploy Office 365 updates. Office 365 updates require additional metadata downloaded from an Office API and the Office CDN, which isn't possible for disconnected environments.
 
-<!-- For more information, see [Synchronize software updates from a disconnected software update point](https://docs.microsoft.com/en-us/configmgr/sum/get-started/synchronize-software-updates-disconnected). -->
+<!-- For more information, see [Synchronize software updates from a disconnected software update point](/configmgr/sum/get-started/synchronize-software-updates-disconnected). -->
 
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
@@ -315,7 +315,7 @@ You can now integrate Power BI Report Server with Configuration Manager reportin
 
 You can now choose to attach log and diagnostic files when you use Send a Frown in the Configuration Manager console to send feedback to Microsoft. This additional information can help us more quickly determine the cause of the problem. Files included with feedback are transmitted and stored using Microsoft Error Reporting (also known as Windows Error Reporting).
 
-<!-- For more information, see [Product feedback](https://docs.microsoft.com/en-us/sccm/core/understand/find-help#product-feedback). -->
+<!-- For more information, see [Product feedback](/configmgr/core/understand/find-help#product-feedback). -->
 
 ### Send a smile improvements
 
@@ -330,7 +330,7 @@ When you Send a smile or Send a frown, a status message is created when the feed
 
 A status message with an ID of 53900 is a successful submission and 53901 is a failed submission.
 
-<!-- For more information, see [Product feedback](https://docs.microsoft.com/en-us/configmgr/core/understand/find-help#BKMK_1806Feedback). -->
+<!-- For more information, see [Product feedback](/configmgr/core/understand/find-help#BKMK_1806Feedback). -->
 
 
 ## <a name="bkmk_tools"></a> Tools
@@ -345,14 +345,14 @@ OneTrace now supports customizable log groups, similar to the feature in Support
 - Compliance settings (also referred to as Desired Configuration Management)
 - Software updates
 
-<!-- For more information, see [Support Center OneTrace](https://docs.microsoft.com/en-us/configmgr/core/support/support-center-onetrace). -->
+<!-- For more information, see [Support Center OneTrace](/configmgr/core/support/support-center-onetrace). -->
 
 
 ## Other updates
 
 As of this version, the following features are no longer pre-release:
 
-- [Client apps for co-managed devices](https://docs.microsoft.com/en-us/sccm/comanage/workloads#client-apps) (previously known as *Mobile apps for co-managed devices*)
+- [Client apps for co-managed devices](/configmgr/comanage/workloads#client-apps) (previously known as *Mobile apps for co-managed devices*)
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2002 release notes](https://docs.microsoft.com/powershell/sccm/2002-release-notes?view=sccm-ps).
 
