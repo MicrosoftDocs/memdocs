@@ -179,8 +179,6 @@ note
     - An error message, including a download link, appears if Microsoft Teams isn't installed on the device from which you run the console.
     - If Microsoft Teams is installed on the device from which you run the console, it will open a chat with the user.
 
-![Message administrators with Microsoft Teams screenshot](media/4923997-message-administrator.png)
-
 ### Known issues
 
 The error message notifying you that Microsoft Teams isn't installed won't be displayed if the following Registry key doesn't exist:
