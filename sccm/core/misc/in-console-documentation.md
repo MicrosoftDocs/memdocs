@@ -110,6 +110,6 @@ Support articles that are new or updated between December 24, 2019 and February 
 - [KB 4537369 The Delete Aged Discovery Data task incorrectly removes active records in Configuration Manager](https://support.microsoft.com/help/4537369)
 - [KB 4542722 SQL database compatibility level changes after applying Configuration Manager updates](https://support.microsoft.com/help/4537079)
 - [KB 4095539 Configuration Manager clients do not receive policy data after you recover a primary site from a CAS](https://support.microsoft.com/help/4095539)
-- [KB 4527297 Synchronization with Microsoft Store for Business does not use proxy in Configuration Manager](http://support.microsoft.com/help/4527297)
+- [KB 4527297 Synchronization with Microsoft Store for Business does not use proxy in Configuration Manager](https://support.microsoft.com/help/4527297)
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.  
