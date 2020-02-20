@@ -38,7 +38,7 @@ Starting in version 1810, the dashboard includes information for System Center 2
 
 - The asset intelligence synchronization point must be configured and synchronized. The dashboard uses the asset intelligence catalog as metadata for product titles. The metadata is compared against inventory data in your hierarchy. For more information, see [Configure asset intelligence in Configuration Manager](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence).  
   - If you're configuring the asset intelligence service point for the first time, make sure to [enable asset intelligence hardware inventory classes](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence#BKMK_EnableAssetIntelligence). The lifecycle dashboard depends on those asset intelligence hardware inventory classes. The dashboard won't display data until clients have scanned for and returned hardware inventory.  
-  - Extended Security Updates (ESU) for Windows 7 and Windows Server 2008 R2 requires the hardware inventory class **Software Licensing Product - Asset Intelligence (SoftwareLicensingProduct)** to be enabled. For more information about enabling the class, see [Enable asset intelligence hardware inventory classes](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence#BKMK_EnableAssetIntelligence). <!--4962901-->
+  - To view information about Extended Security Updates (ESU) in this dashboard, enable the hardware inventory class **Software Licensing Product - Asset Intelligence (SoftwareLicensingProduct)**. For more information, see [Enable asset intelligence hardware inventory classes](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence#BKMK_EnableAssetIntelligence). <!--4962901-->
 
 
 

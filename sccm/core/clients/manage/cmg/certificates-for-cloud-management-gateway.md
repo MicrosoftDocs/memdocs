@@ -127,7 +127,7 @@ Create a custom SSL certificate for the CMG the same as for a cloud distribution
 
 ## <a name="bkmk_clientauth"></a> Client authentication certificate
 
-*This certificate is required for internet-based clients running Windows 7, Windows 8.1, and Windows 10 devices not joined to Azure Active Directory (Azure AD). It's also required on the CMG connection point. It isn't required for Windows 10 clients joined to Azure AD.*
+*This certificate is required for internet-based clients running Windows 8.1, and Windows 10 devices not joined to Azure Active Directory (Azure AD). It's also required on the CMG connection point. It isn't required for Windows 10 clients joined to Azure AD.*
 
 The clients use this certificate to authenticate with the CMG. Windows 10 devices that are hybrid or cloud domain-joined don't require this certificate because they use Azure AD to authenticate.
 

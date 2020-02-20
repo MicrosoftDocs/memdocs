@@ -264,6 +264,8 @@
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
+    - name: 2002 features
+      href: get-started/2020/technical-preview-2002.md
     - name: 2001.2 features
       href: get-started/2020/technical-preview-2001-2.md
     - name: 2001 features
@@ -272,8 +274,6 @@
       href: get-started/2019/technical-preview-1912.md
     - name: 1911 features
       href: get-started/2019/technical-preview-1911.md
-    - name: 1910 features
-      href: get-started/2019/technical-preview-1910.md
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview
