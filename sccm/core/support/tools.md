@@ -10,8 +10,6 @@ ms.assetid: 395403dc-6997-4415-93fd-6b1eeb6ba31a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Configuration Manager Tools
@@ -30,6 +28,8 @@ All Windows operating systems listed as supported clients in [Supported operatin
 
 ## Client tools
 
+These tools are in the `ClientTools` subfolder:
+
 - [CMTrace](/sccm/core/support/cmtrace): View, monitor, and analyze Configuration Manager log files  
 
 - [Client Spy](/sccm/core/support/clispy): Troubleshoot issues related to software distribution, inventory, and metering
@@ -43,10 +43,12 @@ All Windows operating systems listed as supported clients in [Supported operatin
 - [Send Schedule Tool](/sccm/core/support/send-schedule-tool): Trigger schedules and evaluations of configuration baselines  
 
 > [!Note]  
-> The ClientTools folder also includes the file Microsoft.Diagnostics.Tracing.EventSource.dll. Several client tools require this library. You can't directly use it.  
+> The `ClientTools` folder also includes the file Microsoft.Diagnostics.Tracing.EventSource.dll. Several client tools require this library. You can't directly use it.  
 
 
 ## Server tools
+
+These tools are in the `ServerTools` subfolder:
 
 - [DP Job Queue Manager](/sccm/core/support/dp-job-manager): Troubleshoots content distribution jobs to distribution points  
 
@@ -70,7 +72,6 @@ All Windows operating systems listed as supported clients in [Supported operatin
 > - Microsoft.Diagnostics.Tracing.EventSource.dll
 >
 > Several server tools require these libraries. You can't directly use them.  
-
 
 ## Other tools and toolkits
 
