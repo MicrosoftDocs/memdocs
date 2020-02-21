@@ -47,7 +47,7 @@ Add multiple software update points at a Configuration Manager primary site to p
 
 The first software update point that you install on a primary site is the synchronization source for all additional software update points that you add at the primary site. After you add software update points and start synchronization, view the status of the software update points and the synchronization source from the **Software Update Point Synchronization Status** node in the **Monitoring** workspace.  
 
-When there's a failure of the software update point configured as the synchronization source for the site, manually remove the failed role. Then select a new software update point to use as the synchronization source. For more information, see [Remove the software update point site system role](../get-started/remove-a-software-update-point.md).  
+When there's a failure of the software update point configured as the synchronization source for the site, manually remove the failed role. Then select a new software update point to use as the synchronization source. For more information, see [Remove a site system role](/configmgr/core/servers/deploy/install/uninstall-sites-and-hierarchies#bkmk_role).  
 
 
 ###  <a name="BKMK_SUPList"></a> Software update point list  

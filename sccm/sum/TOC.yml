@@ -30,8 +30,6 @@
     href: get-started/configure-classifications-and-products.md
   - name: Manage settings for software updates
     href: get-started/manage-settings-for-software-updates.md
-  - name: Remove a software update point
-    href: get-started/remove-a-software-update-point.md
 - name: Deploy and use
   items:
   - name: Download software updates

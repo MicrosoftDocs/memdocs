@@ -834,6 +834,11 @@
             "source_path": "sccm/core/misc/eula/microsoft-system-clr-types-for-microsoft-sql-server-2014.md",
             "redirect_url": "https://docs.microsoft.com/legal/configmgr/microsoft-system-clr-types-for-microsoft-sql-server-2014",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/sum/get-started/remove-a-software-update-point.md",
+            "redirect_url": "/configmgr/core/servers/deploy/install/uninstall-sites-and-hierarchies#bkmk_role",
+            "redirect_document_id": false
         }
     ]
 }
