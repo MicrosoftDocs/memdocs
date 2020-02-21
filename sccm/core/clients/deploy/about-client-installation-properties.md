@@ -10,9 +10,8 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # About client installation parameters and properties in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -199,7 +198,7 @@ Specifies the name of a text file that lists client installation properties.
 - If you don't specify the **/noservice** CCMSetup parameter, this file must be located in the CCMSetup folder, which is %Windir%\\Ccmsetup for 32-bit and 64-bit operating systems.
 - If you specify the **/noservice** parameter, this file must be located in the same folder from which you run CCMSetup.exe.  
 
-Example: `CCMSetup.exe /config:&lt;Configuration File Name.txt\>`  
+Example: `CCMSetup.exe /config:"Configuration File Name.txt"`
 
 To provide the correct file format, use the mobileclienttemplate.tcf file in the &lt;Configuration Manager directory\>\\bin\\&lt;platform\> folder on the site server. This file also has comments about the sections and how they're used. Specify the client installation properties in the [Client Install] section, after the following text: **Install=INSTALL=ALL**.  
 
