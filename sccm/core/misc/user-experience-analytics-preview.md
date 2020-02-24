@@ -2,7 +2,7 @@
 title: User experience analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for User experience analytics preview.
-ms.date: 02/20/2020
+ms.date: 02/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -184,6 +184,7 @@ Each script package consists of a detection script, a remediation script, and me
 
 
 ### <a name="bkmk_uea_prs_deploy"></a> Deploying and monitoring scripts
+When the **Microsoft Intune Management Extension** service starts, it gets the scripts from Intune and runs them. The scripts are rerun every 24 hours. To deploy and monitor the scripts, follow the instructions below:
 
 1. Go to the **Proactive remediations** node in the console.
 1. Click the **Create** button to create a script package.
