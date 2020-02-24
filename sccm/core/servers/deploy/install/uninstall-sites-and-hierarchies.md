@@ -128,13 +128,37 @@ You might want to uninstall a primary site from your hierarchy for the following
 
 Before you uninstall a child primary site that uses [distributed views](/configmgr/core/plan-design/hierarchy/database-replication#bkmk_distviews) for its replication link to the CAS, first turn off distributed views in your hierarchy. For more information, see [Uninstall a primary site that is configured with distributed views](#bkmk_distviews).
 
-You run Configuration Manager setup to uninstall a primary site that doesn't have an associated secondary site. Before you uninstall a primary site, consider the following <!-- rework -->:
+### <a name="bkmk_pri-plan"></a> Plan to uninstall a primary site
 
-- When Configuration Manager clients are within the boundaries configured at the site, and the primary site is part of a Configuration Manager hierarchy, consider adding the boundaries to a different primary site in the hierarchy before you uninstall the primary site.  
+Before you uninstall a primary site, review the following tasks:
 
-When the primary site server is no longer available, use the Hierarchy Maintenance Tool at the CAS to delete the primary site from the site database. For more information, see [Hierarchy Maintenance Tool (Preinst.exe)](/configmgr/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
+- Make sure all active clients are reassigned to another primary site in the hierarchy. Otherwise clients will be unmanaged after you uninstall the site. For more information, see [How to assign clients to a site](/configmgr/core/clients/deploy/assign-clients-to-a-site).
 
-### Prerequisites to uninstall a primary site
+  - Review the list of site roles to make sure the new site provides the same level of service.
+
+  - Make sure that you've properly sized the other site systems with this role in the other site. They will need to support your business requirements for performance and availability with the additional clients.
+
+  - If this site has lots of clients, reassign them in stages. Monitor database replication as clients refresh full inventory and other site-specific data. If you manage software updates, clients will assign to a new software update point. This behavior causes a full scan for update compliance.
+
+  - Client reassignment may impact reports and queries that rely on inventory data, and state-based compliance. Consider temporarily adjusting any client cycles during the transition.
+
+- Check if any actively used objects in the hierarchy have static references to the site code. For example, collection queries, task sequences, or administrative scripts.
+
+- If the hierarchy uses a [fallback site](/configmgr/core/servers/deploy/configure/boundary-group-procedures#bkmk_site-fallback) for automatic site assignment, make sure it doesn't reference this primary site.
+
+- Reconfigure any [client installation methods](/configmgr/core/clients/deploy/plan/client-installation-methods) that may reference a static site code.
+
+- If this primary site has any site-specific cloud-attached services, make sure to remove the cloud resources.
+
+- If this primary site has any [discovery methods](/configmgr/core/servers/deploy/configure/run-discovery) for the hierarchy, move them to another site.
+
+- Review boundaries, boundary groups, and fallback relationships. If you assign clients to a new site, but don't change the boundaries, they may be considered roaming. For more information, see [Define site boundaries and boundary groups](/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
+
+- Retire any site-based [OS deployment media](/configmgr/osd/deploy-use/create-task-sequence-media).
+
+- Uninstall all site system roles from the site and the site server. For more information, see [Uninstall site system roles](#bkmk_role). While this preparation step isn't required, it helps identify any additional dependencies before uninstalling the site.
+
+### <a name="bkmk_pri-prereq"></a> Prerequisites to uninstall a primary site
 
 The administrative user that runs Configuration Manager setup needs the following security rights:
 
@@ -150,9 +174,12 @@ The administrative user that runs Configuration Manager setup needs the followin
 
 - **Infrastructure Administrator** or **Full Administrator** security role on the CAS
 
-### Procedure to uninstall a primary site
+### <a name="bkmk_pri-process"></a> Procedure to uninstall a primary site
 
-Use the following procedure to uninstall a primary site:
+You run Configuration Manager setup to uninstall a primary site that doesn't have an associated secondary site. Use the following procedure to uninstall a primary site:
+
+> [!TIP]
+> If the primary site server is no longer available, use the Hierarchy Maintenance Tool at the CAS to delete the primary site from the site database. For more information, see [Hierarchy Maintenance Tool (Preinst.exe)](/configmgr/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
 
 1. Start Configuration Manager setup on the primary site server by using one of the following methods:
 
