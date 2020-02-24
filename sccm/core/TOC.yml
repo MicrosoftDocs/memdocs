@@ -350,8 +350,6 @@
         href: servers/deploy/install/upgrade-to-configuration-manager.md
       - name: Scenarios to streamline your installation
         href: servers/deploy/install/scenarios-to-streamline-your-installation.md
-      - name: Uninstalling sites and hierarchies
-        href: servers/deploy/install/uninstall-sites-and-hierarchies.md
   - name: Configure sites and hierarchies
     items:
     - name: Configure sites and hierarchies overview
@@ -432,6 +430,12 @@
       href: servers/deploy/configure/configure-role-based-administration.md
     - name: Configure Azure services
       href: servers/deploy/configure/azure-services-wizard.md
+  - name: Uninstall and remove
+    items:
+    - name: Uninstall roles, sites, and hierarchies
+      href: servers/deploy/install/uninstall-sites-and-hierarchies.md
+    - name: Remove the CAS
+      href: servers/deploy/install/remove-central-administration-site.md
   - name: Technical references
     items:
     - name: Accounts
