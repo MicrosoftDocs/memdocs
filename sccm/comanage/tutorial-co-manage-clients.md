@@ -2,7 +2,7 @@
 title: Tutorial&#58; Enable co-management for existing clients
 titleSuffix: Configuration Manager
 description: Configure co-management with Microsoft Intune when you already manage Windows 10 devices with Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 02/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: tutorial
@@ -10,8 +10,6 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Tutorial: Enable co-management for existing Configuration Manager clients
@@ -33,7 +31,6 @@ Use this tutorial when:
 > * Set up hybrid Azure AD  
 > * Configure Configuration Manager client agents to register with Azure AD  
 > * Configure Intune to auto-enroll devices  
-> * Assign Intune licenses to users  
 > * Enable co-management in Configuration Manager  
 
 ## Prerequisites  
@@ -48,8 +45,10 @@ Use this tutorial when:
 
 If not already present in your environment, during this tutorial you'll:
 
-- Assign users a license for *Intune* and for *Azure Active Directory Premium*.
 - Configure [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation) between your on-premises Active Directory and your Azure Active Directory (AD) tenant.
+
+> [!TIP]
+> You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](/configmgr/core/understand/product-and-licensing-faq#bkmk_mem).
 
 ### On-premises infrastructure
 
@@ -148,39 +147,9 @@ when set to **None**, Mobile Device Management (MDM) automatic enrollment is dis
 
 5. For MDM user scope, select **All**, and then **Save**.  
 
-## Assign Intune licenses to users
-
-A commonly overlooked but critical action is to assign an Intune license to each user who will use a device that is co-managed.  
-
-To assign licenses to groups of users, use Azure Active Directory.  
-
-1. Sign in to the [Azure portal](https://portal.azure.com/) with an Administrator account. To manage licenses, the account must be a global administrator role or user account administrator.  
-
-2. Select **All services** in the left navigation pane, and then select **Azure Active Directory**.  
-
-3. On the **Azure Active Directory** pane, select **Licenses** to open a pane where you can see and manage all licensable products in the tenant.  
-
-4. Under **All products**, select your product option that includes the Intune license, and then select **Assign** at the top of the pane.  
-
-   For example, you might select **Enterprise Mobility + Security E5** if that is how you obtain Intune.  
-
-5. On the **Assign license** pane, click **Users and groups** to open the **Users and groups** pane. Select the groups, and individual users to whom you want to assign a license.  Then, click **Select** at the bottom of the pane to confirm that selection.  
-
-6. On the **Assign license** pane, click **Assignment options** to display all service plans included in the product you selected previously. If you selected a single product like Intune, then only that product is shown.  
-   - Set **Microsoft Intune** to **On**.  
-   - Assign each user a license for **Azure Active Directory Premium**.  
-
-   When the applicable licenses are assigned, select **OK**.  
-
-7. To complete the assignment, on the **Assign license** pane, click **Assign** at the bottom of the pane.
-
-8. A notification is displayed in the upper-right corner that shows the status and outcome of the process. If the assignment to the group couldn't be completed (for example, because of pre-existing licenses in the group), click the notification to view details of the failure.
-
-For more information about assigning licenses for Intune to users, see [Assign licenses](https://docs.microsoft.com/intune/licenses-assign).
-
 ## Enable co-management in Configuration Manager
 
-With hybrid Azure AD set-up, Configuration Manager client configurations in place, and product licenses assigned to users, you're ready to flip the switch and enable co-management of your Windows 10 devices.  
+With hybrid Azure AD set-up and Configuration Manager client configurations in place, you're ready to flip the switch and enable co-management of your Windows 10 devices.  
 
 > [!TIP]
 > - When you enable co-management, you'll assign a collection as a *Pilot group*. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so.
