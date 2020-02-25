@@ -232,7 +232,7 @@
         },
         {
             "source_path": "sccm/compliance/plan-design/scap/import-scap-compliance-settings.md",
-            "redirect_url": "/sccm/compliance/plan-design/scap/deploy-monitor-export",
+            "redirect_url": "/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#unsupported-and-removed-features",
             "redirect_document_id": false
         },
         {
