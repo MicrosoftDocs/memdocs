@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: 
 ms.subservice: 
@@ -39,6 +39,12 @@ Endpoint Manager combines services device administrators may know and already be
 Endpoint Manager includes the following services:
 
 - **Microsoft Intune**: Intune is a mobile device management (MDM) and mobile application management (MAM) provider for your apps and devices. It's 100% cloud-based, and lets you control features and settings on Android, Android Enterprise, iOS/iPadOS, macOS, and Windows devices. It integrates with other services, including Azure Active Directory (AD), mobile threat defenders, ADMX templates, Win32 and custom LOB apps, and more.
+
+  If you have on-premises infrastructure, such as Exchange or an Active Directory, the Intune connectors are also available:
+
+  - The **Intune Connector for Active Directory** adds entries to your on-premises Active Directory domain for computers that enroll using Windows Autopilot. For more information, see [Deploy hybrid Azure AD-joined devices](../enrollment/windows-autopilot-hybrid.md).
+  - The **Intune Exchange connector** allows (or blocks) device access to your Exchange servers if devices are enrolled in Intune, and compliant with your policies. For more information, see [Set up the on-premises Intune Exchange connector](../protect/exchange-connector-install.md).
+  - The **Intune certificate connector** processes certificate requests from devices that use certificates for authentication and S/MIME email encryption. For more information, see [Use certificates for authentication](../protect/certificates-configure.md).
 
   As part of Endpoint Manager, use Intune to create and check for compliance, and deploy apps, features, and settings to your devices using the cloud.
 
@@ -72,7 +78,7 @@ Endpoint Manager includes the following services:
 
   For more information, see [add users](../users-add.md), [set up auto-enrollment](../enrollment/windows-enroll.md), and [about conditional access](../protect/conditional-access.md).
 
-  - **Endpoint Manager admin center**: The [admin center](https://devicemanagement.microsoft.com) is a one-stop web site to create policies and manage your devices. It plugs-in other key device management services, including groups, security, conditional access, and reporting. This admin center also shows devices managed by Configuration Manager and Intune (in preview).
+- **Endpoint Manager admin center**: The [admin center](https://devicemanagement.microsoft.com) is a one-stop web site to create policies and manage your devices. It plugs-in other key device management services, including groups, security, conditional access, and reporting. This admin center also shows devices managed by Configuration Manager and Intune (in preview).
 
 ## Choose what's right for you
 
