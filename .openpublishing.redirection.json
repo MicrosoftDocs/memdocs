@@ -834,6 +834,26 @@
             "source_path": "sccm/core/misc/eula/microsoft-system-clr-types-for-microsoft-sql-server-2014.md",
             "redirect_url": "https://docs.microsoft.com/legal/configmgr/microsoft-system-clr-types-for-microsoft-sql-server-2014",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/compliance/plan-design/scap/about-scap.md",
+            "redirect_url": "/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#unsupported-and-removed-features",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/compliance/plan-design/scap/install-configure-scap.md",
+            "redirect_url": "/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#unsupported-and-removed-features",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/compliance/plan-design/scap/deploy-monitor-export.md",
+            "redirect_url": "/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#unsupported-and-removed-features",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/compliance/plan-design/scap/troubleshooting-scap.md",
+            "redirect_url": "/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#unsupported-and-removed-features",
+            "redirect_document_id": false
         }
     ]
 }
