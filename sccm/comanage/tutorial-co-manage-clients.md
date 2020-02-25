@@ -125,25 +125,31 @@ Use Client Settings to configure Configuration Manager clients to automatically 
 
 ## Configure auto-enrollment of devices to Intune
 
-Next, we’ll set up auto-enrollment of devices with Intune. With automatic enrollment, devices you manage with Configuration Manager automatically enroll with Intune.
+Next, we'll set up auto-enrollment of devices with Intune. With automatic enrollment, devices you manage with Configuration Manager automatically enroll with Intune.
 
 Automatic enrollment also lets users enroll their Windows 10 devices to Intune. Devices enroll when a user adds their work account to their personally owned device, or when a corporate-owned device is joined to Azure Active Directory.  
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) and select **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune**.  
 
-2. Configure **MDM user scope**. Specify one of the following to configure which users’ devices are managed by Microsoft Intune and accept the defaults for the URL values.  
+2. Configure **MDM user scope**. Specify one of the following to configure which users' devices are managed by Microsoft Intune and accept the defaults for the URL values.  
 
-   - **Some** - Select the **Groups** that can automatically enroll their Windows 10 devices  
+   - **Some**: Select the **Groups** that can automatically enroll their Windows 10 devices  
 
-   - **All** - All users can automatically enroll their Windows 10 devices
-when set to **None**, Mobile Device Management (MDM) automatic enrollment is disabled
+   - **All**: All users can automatically enroll their Windows 10 devices
+
+   - **None**: Disable MDM automatic enrollment
 
    > [!IMPORTANT]  
-   > If both **MAM user scope** and automatic MDM enrollment (**MDM user scope**) are enabled for a group, only MAM is enabled. Only Mobile Application Management (MAM) is added for users in that group when they workplace join personal device. Devices are not automatically MDM  enrolled.  
+   > If both **MAM user scope** and automatic MDM enrollment (**MDM user scope**) are enabled for a group, only MAM is enabled. Only Mobile Application Management (MAM) is added for users in that group when they workplace join personal device. Devices aren't automatically MDM-enrolled.  
 
 3. Select **Save** to complete configuration of automatic enrollment.  
 
 4. Return to **Mobility (MDM and MAM)** and then select **Microsoft Intune Enrollment**.  
+
+    > [!NOTE]
+    > Some tenants may not have this options to configure.<!-- SCCMDocs#1230 -->
+    >
+    > **Microsoft Intune** is how you configure the MDM app for Azure AD. **Microsoft Intune Enrollment** is a specific Azure AD app that's created when you apply multi-factor authentication policies for iOS and Android enrollment. For more information, see [Require multi-factor authentication for Intune device enrollments](https://docs.microsoft.com/intune/enrollment/multi-factor-authentication).
 
 5. For MDM user scope, select **All**, and then **Save**.  
 
