@@ -263,7 +263,7 @@ For more information, see [Configure Microsoft Edge settings](/sccm/compliance/d
 <!--1357552-->
 Convert Security Content Automation Protocol (SCAP) content to compliance settings baselines and generate SCAP reports using a console extension. This feature also includes a new dashboard to visualize the client compliance as well as XCCDF rule compliance. 
 
-For more information, see [About the SCAP extensions](/sccm/compliance/plan-design/scap/about-scap).
+
 
 
 

@@ -93,6 +93,4 @@ These tools are in the `ServerTools` subfolder:
 
 - [System Center Updates Publisher (SCUP)](/sccm/sum/tools/updates-publisher): A stand-alone tool to manage and import custom software updates.
 
-- [Security Content Automation Protocol (SCAP) extensions](/sccm/compliance/plan-design/scap/about-scap): Analyze and assess your environment for compliance with NIST baselines.
-
 - [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager): Convert legacy packages into applications.
