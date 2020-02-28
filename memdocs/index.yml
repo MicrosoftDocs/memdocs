@@ -24,16 +24,16 @@ conceptualContent:
   items:
     - title: Microsoft Intune
       links:
-        - url: intune/index.xml
+        - url: intune
           itemType: overview
           text: Intune hub page
         - url: intune/fundamentals
           itemType: overview
           text: Get started with Intune         
-        - url: ./intune/apps
+        - url: intune/apps
           itemType: concept
           text: Manage your apps with Intune
-        - url: ./intune/protect
+        - url: intune/protect
           itemType: concept
           text: Use Intune to protect devices and data
     - title: Configuration Manager
