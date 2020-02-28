@@ -33,19 +33,19 @@ conceptualContent:
         - url: /intune/fundamentals
           itemType: overview
           text: Set up Intune
-        - url: mem/intune/enrollment
+        - url: /intune/enrollment
           itemType: overview
           text: Enroll devices   
-        - url: /mem/intune/remote-actions/
+        - url: /intune/remote-actions
           itemType: overview
           text: Remotely manage devices   
-        - url: ./intune/protect
+        - url: /intune/protect
           itemType: overview
           text: Create compliance rules for users and devices 
-        - url: ./intune/configuration
+        - url: /intune/configuration
           itemType: overview
           text: Control device features and settings   
-        - url: ./intune/apps
+        - url: /intune/apps
           itemType: concept
           text: Manage and protect apps
     - title: Configuration Manager
@@ -158,5 +158,5 @@ additionalContent:
           summary: Get help on the Intune Customer Success site  
           url: https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess
 
-  footer: "Have feedback or want to contribute to docs? [See this resource](use-docs.md)!"
+  footer: "Have feedback or want to contribute to docs? [See this resource](/intune/fundamentals/use-docs.md)!"
   
