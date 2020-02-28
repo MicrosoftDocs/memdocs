@@ -24,19 +24,19 @@ conceptualContent:
   items:
     - title: Microsoft Intune
       links:
-        - url: ./intune
+        - url: /intune
           itemType: overview
           text: Intune hub page
-        - url: ./intune/fundamentals
+        - url: ./intune/fundamentals/
           itemType: overview
           text: Plan your Intune deployment   
-        - url: ./intune/fundamentals
+        - url: ./intune/fundamentals/index.yml
           itemType: overview
           text: Set up Intune
-        - url: ./intune/enrollment
+        - url: mem/intune/enrollment
           itemType: overview
           text: Enroll devices   
-        - url: ./intune/remote-actions
+        - url: /mem/intune/remote-actions/
           itemType: overview
           text: Remotely manage devices   
         - url: ./intune/protect
