@@ -27,10 +27,10 @@ conceptualContent:
         - url: /intune
           itemType: overview
           text: Intune hub page
-        - url: ./intune/fundamentals/
+        - url: /intune/fundamentals
           itemType: overview
           text: Plan your Intune deployment   
-        - url: ./intune/fundamentals/index.yml
+        - url: /intune/fundamentals
           itemType: overview
           text: Set up Intune
         - url: mem/intune/enrollment
