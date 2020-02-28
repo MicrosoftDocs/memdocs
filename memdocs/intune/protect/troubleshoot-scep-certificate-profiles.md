@@ -48,7 +48,7 @@ Before proceeding, ensure you've meet the [prerequisites for using SCEP certific
 
 The following graphic demonstrates a basic overview of the SCEP communication process in Intune.
 
-![SCEP certificate profile flow](../protect/media/troubleshoot-scep-certificate-profiles/scep-certificate-profile-flow.png)
+![SCEP certificate profile flow](../intune/protect/media/troubleshoot-scep-certificate-profiles/scep-certificate-profile-flow.png)
 
 1. [Deploy a SCEP certificate profile](troubleshoot-scep-certificate-profile-deployment.md). Intune generates a challenge string, which requires a specific user, certificate purpose, and certificate type.
 
@@ -133,7 +133,7 @@ For devices that run iOS/iPadOS, you use debug logs and **Xcode** that runs on a
 
 2. Under **Action**, select **Include Info Messages** and **Include Debug Messages**.
 
-   ![Select log options](../protect/media/troubleshoot-scep-certificate-profiles/message-options.png)
+   ![Select log options](../intune/protect/media/troubleshoot-scep-certificate-profiles/message-options.png)
 
 3. Reproduce the problem, and then save the logs to a text file:
    1. Select **Edit** > **Select All** to select all the messages on the current screen, and then select **Edit** > **Copy** to copy the messages to the clipboard. 
@@ -148,7 +148,7 @@ For devices that run Windows, use the Windows Event logs to diagnose enrollment 
 
 On the device, open **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider**
 
-![Windows event logs](../protect/media/troubleshoot-scep-certificate-profiles/windows-event-log.png)
+![Windows event logs](../intune/protect/media/troubleshoot-scep-certificate-profiles/windows-event-log.png)
 
 ## Next steps
 

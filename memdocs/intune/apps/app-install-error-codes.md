@@ -33,7 +33,7 @@ In addition to following the provided steps to troubleshoot application errors, 
 
 ## Android app installation errors
 
-This section mentions both Device Administrator (DA) and Samsung Knox enrollment. For more information, see [Android device administrator enrollment](../enrollment/android-enroll-device-administrator.md) and [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md). 
+This section mentions both Device Administrator (DA) and Samsung Knox enrollment. For more information, see [Android device administrator enrollment](../intune/enrollment/android-enroll-device-administrator.md) and [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../intune/enrollment/android-samsung-knox-mobile-enroll.md). 
 
 | Error   code (Hex) | Error code (Dec) | Error   message/code | Description |
 |--------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -110,6 +110,6 @@ The following error messages and descriptions provide details about iOS/iPadOS i
 
 ## Next steps
 
-- For additional Intune troubleshooting information, see [Use the troubleshooting portal to help users at your company](../fundamentals/help-desk-operators.md). 
+- For additional Intune troubleshooting information, see [Use the troubleshooting portal to help users at your company](../intune/fundamentals/help-desk-operators.md). 
 - Learn about any known issues in Microsoft Intune. For more information, see [Intune Customer Success](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
-- Need extra help? See [How to get support for Microsoft Intune](../fundamentals/get-support.md).
+- Need extra help? See [How to get support for Microsoft Intune](../intune/fundamentals/get-support.md).

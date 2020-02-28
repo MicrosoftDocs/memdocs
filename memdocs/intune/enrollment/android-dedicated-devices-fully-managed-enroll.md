@@ -98,6 +98,6 @@ To use Google's Zero Touch system, the device must support it and be affiliated 
 
 
 ## Next steps
-- [Deploy Android apps](../apps/apps-deploy.md)
-- [Add Android configuration policies](../configuration/device-profiles.md)
+- [Deploy Android apps](../intune/apps/apps-deploy.md)
+- [Add Android configuration policies](../intune/configuration/device-profiles.md)
 

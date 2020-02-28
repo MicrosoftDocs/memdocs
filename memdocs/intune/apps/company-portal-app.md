@@ -139,7 +139,7 @@ Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC
 > [!NOTE]
 > The user will see instructions about derived credentials based on the link that you have specified via Intune.
 
-For more information about derived credentials for iOS/iPadOS devices, see [Use derived credentials in Microsoft Intune](~/protect/derived-credentials.md).
+For more information about derived credentials for iOS/iPadOS devices, see [Use derived credentials in Microsoft Intune](~/intune/protect/derived-credentials.md).
 
 ## Dark Mode for iOS Company Portal
 
@@ -203,7 +203,7 @@ Some platforms and configurations do not allow self-service device actions. This
 <sup>(3)</sup> All remote actions are disabled if using a Device Enrollment Manager enrollment.<br>
 <sup>(4)</sup> **Rename** only changes the device name in the Company Portal app or Web Portal, not on the device.<br>
 <sup>(5)</sup> **Wipe** is not available on User Enrolled iOS devices.<br>
-<sup>(6)</sup> **Reset Passcode** is not supported on some Android and Android Enterprise configurations. For more information, see [Reset or remove a device passcode in Intune](../remote-actions/device-passcode-reset.md).<br>
+<sup>(6)</sup> **Reset Passcode** is not supported on some Android and Android Enterprise configurations. For more information, see [Reset or remove a device passcode in Intune](../intune/remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> **Retire** and **Wipe** are not available on Android Enterprise Device Owner scenarios (COPE, COBO, COSU).<br> 
 <sup>(8)</sup> **Reset Passcode** is not supported on User Enrolled iOS devices.
 

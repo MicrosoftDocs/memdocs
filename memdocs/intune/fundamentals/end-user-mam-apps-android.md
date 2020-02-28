@@ -69,7 +69,7 @@ If you are using an Android device, you might see a blocking message with instru
 
 ## View media files with the Azure Information Protection app
 
-To view company AV, PDF, and image files on Android devices, use the [Azure Information Protection app](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer) (previously known as the Rights Management sharing app).
+To view company AV, PDF, and image files on Android devices, use the [Azure Information Protection app](https://play.google.com/store/intune/apps/details?id=com.microsoft.ipviewer) (previously known as the Rights Management sharing app).
 
 Download this app from the Google Play store.  
 

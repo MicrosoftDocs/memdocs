@@ -50,11 +50,11 @@ This feature applies to:
 
 - The device must be registered for Windows Autopilot by a [Microsoft Cloud Solution Provider (CSP) partner](https://partner.microsoft.com/cloud-solution-provider), or registered directly by the OEM. 
 
-  Devices manually registered for Autopilot, such as [imported from a csv file](../enrollment/enrollment-autopilot.md#add-devices), aren't allowed to use DFCI. By design, DFCI management requires external attestation of the device’s commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot.
+  Devices manually registered for Autopilot, such as [imported from a csv file](../intune/enrollment/enrollment-autopilot.md#add-devices), aren't allowed to use DFCI. By design, DFCI management requires external attestation of the device’s commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot.
 
   Once your device is registered, its serial number is shown in the list of Windows Autopilot devices.
 
-  For more information on Autopilot, including any requirements, see [Enroll Windows devices in Intune by using the Windows Autopilot](../enrollment/enrollment-autopilot.md).
+  For more information on Autopilot, including any requirements, see [Enroll Windows devices in Intune by using the Windows Autopilot](../intune/enrollment/enrollment-autopilot.md).
 
 ## Create your Azure AD security groups
 
@@ -63,7 +63,7 @@ Autopilot deployment profiles are assigned to Azure AD security groups. Be sure 
 - Human Resources (HR) has different Windows devices. For security reasons, you don't want anyone in this group to use the camera on the devices. In this scenario, you can create an HR security users group so the policy applies to users in the HR group, whatever the device type.
 - On the manufacturing floor, you have 10 devices. On all devices, you want to prevent booting the devices from a USB device. In this scenario, you can create a security devices group, and add these 10 devices to the group.
 
-For more information on creating groups in Intune, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
+For more information on creating groups in Intune, see [Add groups to organize users and devices](../intune/fundamentals/groups-add.md).
 
 ## Create the profiles
 
@@ -71,11 +71,11 @@ To use DFCI, create the following profiles, and assign them to your group.
 
 ### Create an Autopilot deployment profile
 
-This profile sets up and pre-configures new devices. [Autopilot deployment profile](../enrollment/enrollment-autopilot.md#create-an-autopilot-deployment-profile) lists the steps to create the profile.
+This profile sets up and pre-configures new devices. [Autopilot deployment profile](../intune/enrollment/enrollment-autopilot.md#create-an-autopilot-deployment-profile) lists the steps to create the profile.
 
 ### Create an Enrollment State Page profile
 
-This profile makes sure that devices are verified and enabled for DFCI during the Windows setup. It's highly recommended to use this profile to block device use until all apps and profiles are installed. [Enrollment State Page profile](../enrollment/windows-enrollment-status.md) lists the steps to create the profile.
+This profile makes sure that devices are verified and enabled for DFCI during the Windows setup. It's highly recommended to use this profile to block device use until all apps and profiles are installed. [Enrollment State Page profile](../intune/enrollment/windows-enrollment-status.md) lists the steps to create the profile.
 
 ### Create the DFCI profile
 
@@ -129,7 +129,7 @@ This profile includes the DFCI settings you configure.
 
 ## Assign the profiles, and reboot
 
-After the profiles are created, they're [ready to be assigned](../configuration/device-profile-assign.md). Be sure to assign the profiles to your Azure AD security groups that include your DFCI devices.
+After the profiles are created, they're [ready to be assigned](../intune/configuration/device-profile-assign.md). Be sure to assign the profiles to your Azure AD security groups that include your DFCI devices.
 
 When the device runs the Windows Autopilot, during the Enrollment Status page, DFCI may force a reboot. This first reboot enrolls UEFI to Intune. 
 
@@ -141,11 +141,11 @@ The next time the device syncs with Intune, Windows receives the DFCI settings. 
 
 If you want to change existing DFCI settings on devices that are in use, you can. In your existing DFCI profile, change the settings, and save your changes. Since the profile is already assigned, the new DFCI settings take effect when:
 
-1. The device checks in with the Intune service to review profile updates. Check-ins happen at various times. For more information, see [when devices get a policy, profile, or app updates](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+1. The device checks in with the Intune service to review profile updates. Check-ins happen at various times. For more information, see [when devices get a policy, profile, or app updates](../intune/configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
-2. To enforce the new settings, reboot the device [remotely](../remote-actions/device-restart.md) or locally.
+2. To enforce the new settings, reboot the device [remotely](../intune/remote-actions/device-restart.md) or locally.
 
-You can also [signal devices to check in](../remote-actions/device-sync.md). After a successful sync, [signal to reboot](../remote-actions/device-restart.md).
+You can also [signal devices to check in](../intune/remote-actions/device-sync.md). After a successful sync, [signal to reboot](../intune/remote-actions/device-restart.md).
 
 >[!NOTE]
 > Deleting the DFCI profile, or removing a device from the group assigned to the profile doesn't remove DFCI settings or re-enable the UEFI (BIOS) menus. If you want to stop using DFCI, then update your existing DFCI profile. For more information on the steps, see [retire the device](#retire) in this article.
@@ -154,7 +154,7 @@ You can also [signal devices to check in](../remote-actions/device-sync.md). Aft
 
 ### Reuse
 
-If you plan to reset Windows to repurpose the device, then [wipe the device](../remote-actions/devices-wipe.md). Do **not** remove the Autopilot device record.
+If you plan to reset Windows to repurpose the device, then [wipe the device](../intune/remote-actions/devices-wipe.md). Do **not** remove the Autopilot device record.
 
 After wiping the device, move the device to the group assigned the new DFCI and Autopilot profiles. Be sure to reboot the device to rerun Windows setup.
 

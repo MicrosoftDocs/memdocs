@@ -76,7 +76,7 @@ By default, devices check in with Intune about every 8 hours. If an update is av
        If you do not configure times to start or end, the configuration results in no restriction and updates can install at any time.  
 
        > [!NOTE]
-       > To delay the visibility of software updates for a specific amount of time on your supervised iOS/iPadOS devices, configure those settings in [Device Restrictions](../configuration/device-restrictions-ios.md#general). Software update policies override any device restrictions. When you set both a software update policy and restriction to delay visibility of software updates, the device forces a software update per the policy. The restriction applies so that users don't see the option to update the device themselves, and the update is pushed as defined by your iOS update policy.
+       > To delay the visibility of software updates for a specific amount of time on your supervised iOS/iPadOS devices, configure those settings in [Device Restrictions](../intune/configuration/device-restrictions-ios.md#general). Software update policies override any device restrictions. When you set both a software update policy and restriction to delay visibility of software updates, the device forces a software update per the policy. The restriction applies so that users don't see the option to update the device themselves, and the update is pushed as defined by your iOS update policy.
 
    After configuring *Update policy settings*, select **Next**.
 
@@ -119,4 +119,4 @@ You can edit an existing policy, including changing the restricted times:
 
 ## Next steps
 
-[Monitor its status](../configuration/device-profile-monitor.md).
+[Monitor its status](../intune/configuration/device-profile-monitor.md).

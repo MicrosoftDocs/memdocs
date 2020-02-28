@@ -58,7 +58,7 @@ This feature supports:
 
 ## Certificates
 
-[Certificates](../protect/certificates-configure.md) configure trusted, SCEP, and PKCS certificates that are assigned to devices. These certificates authenticate WiFi, VPN, and email profiles.
+[Certificates](../intune/protect/certificates-configure.md) configure trusted, SCEP, and PKCS certificates that are assigned to devices. These certificates authenticate WiFi, VPN, and email profiles.
 
 This feature supports: 
 
@@ -134,7 +134,7 @@ This feature supports:
 
 [Education settings - Windows 10](education-settings-configure.md) configure options for the [Windows Take a Test app](https://education.microsoft.com/gettrained/win10takeatest). When you configure these options, no other apps can run on the device until the test is complete.
 
-[Education settings - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
+[Education settings - iOS/iPadOS](../intune/fundamentals/education-settings-configure-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
 
 ## Email
 
@@ -150,7 +150,7 @@ This feature supports:
 
 ## Endpoint protection
 
-[Endpoint protection settings for Windows 10](../protect/endpoint-protection-windows-10.md) configures BitLocker and Microsoft Defender settings for Windows 10 devices.
+[Endpoint protection settings for Windows 10](../intune/protect/endpoint-protection-windows-10.md) configures BitLocker and Microsoft Defender settings for Windows 10 devices.
 
 To onboard Microsoft Defender Advanced Threat Protection (WDATP) with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
@@ -176,7 +176,7 @@ This feature supports:
 
 ## Identity protection
 
-[Identity protection](../protect/identity-protection-configure.md) controls the Windows Hello for Business experience on Windows 10 and Windows 10 Mobile devices. Configure these settings to make Windows Hello for Business available to users and devices, and to specify requirements for device PINs and gestures.  
+[Identity protection](../intune/protect/identity-protection-configure.md) controls the Windows Hello for Business experience on Windows 10 and Windows 10 Mobile devices. Configure these settings to make Windows Hello for Business available to users and devices, and to specify requirements for device PINs and gestures.  
 
 This feature supports:  
 
@@ -203,7 +203,7 @@ This feature supports:
 
 ## PowerShell scripts
 
-[PowerShell scripts on Windows 10 devices](../apps/intune-management-extension.md) uses the Intune Management Extension to upload your PowerShell scripts in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
+[PowerShell scripts on Windows 10 devices](../intune/apps/intune-management-extension.md) uses the Intune Management Extension to upload your PowerShell scripts in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
 
 
 This feature supports:
@@ -224,7 +224,7 @@ This feature supports:
 
 ## Update policies
 
-[iOS/iPadOS update policies](../protect/software-updates-ios.md) shows you how to create and assign iOS/iPadOS policies to install software updates on your iOS/iPadOS devices. You can also review the installation status.
+[iOS/iPadOS update policies](../intune/protect/software-updates-ios.md) shows you how to create and assign iOS/iPadOS policies to install software updates on your iOS/iPadOS devices. You can also review the installation status.
 
 For update policies on Windows devices, see [Delivery optimization](delivery-optimization-windows.md). 
 
@@ -263,7 +263,7 @@ This feature supports:
 
 ## Windows Information Protection profile
 
-[Windows Information Protection](../protect/windows-information-protection-configure.md) helps protect against data leakage without interfering with the employee experience. It also helps protect enterprise apps and data against accidental data leaks on enterprise-owned devices and personal devices that employees use at work. Using Windows Information Protection doesn't require changes to your environment or other apps.
+[Windows Information Protection](../intune/protect/windows-information-protection-configure.md) helps protect against data leakage without interfering with the employee experience. It also helps protect enterprise apps and data against accidental data leaks on enterprise-owned devices and personal devices that employees use at work. Using Windows Information Protection doesn't require changes to your environment or other apps.
 
 This feature supports:
 

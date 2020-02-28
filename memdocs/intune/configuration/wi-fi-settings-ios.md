@@ -41,7 +41,7 @@ This article describes these settings.
 [Create a device profile](../device-profile-create.md).
 
 > [!NOTE]
-> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
+> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../intune/enrollment/ios-enroll.md).
 
 ## Basic profiles
 
@@ -85,7 +85,7 @@ This article describes these settings.
 
     - **Client Authentication** Choose an **Authentication method**. Your options:
 
-      - **Derived credential**: Use a certificate that’s derived from a user’s smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that’s derived from a user’s smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../intune/protect/derived-credentials.md).
 
       - **Certificates**: Choose the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
@@ -98,7 +98,7 @@ This article describes these settings.
 
     - **Client Authentication** - Choose an **Authentication method**. Your options:
 
-      - **Derived credential**: Use a certificate that’s derived from a user’s smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that’s derived from a user’s smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../intune/protect/derived-credentials.md).
 
       - **Username and Password**: Prompt the user for a user name and password to authenticate the connection. Also enter:
         - **Non-EAP method (inner identity)**: Choose how you authenticate the connection. Be sure you choose the same protocol that's configured on your Wi-Fi network.
@@ -118,7 +118,7 @@ This article describes these settings.
 
     - **Client Authentication** - Choose an **Authentication method**. Your options:
 
-      - **Derived credential**: Use a certificate that’s derived from a user’s smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that’s derived from a user’s smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../intune/protect/derived-credentials.md).
 
       - **Username and Password**: Prompt the user for a user name and password to authenticate the connection. 
 

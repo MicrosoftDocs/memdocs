@@ -41,7 +41,7 @@ Audit logs provide tenant admins with a record of activities that generate a cha
 
 For security purposes Intune may maintain audit logs for user and device actions for a period of one year. These logs are automatically deleted after the one-year retention period.
 
-To review audit logs, see [Audit logs for Intune activities](../fundamentals/monitor-audit-logs.md). 
+To review audit logs, see [Audit logs for Intune activities](../intune/fundamentals/monitor-audit-logs.md). 
 
 Admins can’t delete audit logs.
 
@@ -64,7 +64,7 @@ There are three ways to remove personal data from Intune management:
 
 ### Delete a user from Intune
 
-To delete an end user’s personal data from Intune, an admin must [delete the user from Azure Active Directory (AAD)](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). When the user is deleted from AAD (hard deleted), Intune receives the delete signal from AAD and then automatically begins purging all of that user’s personal data from the Intune service. The user’s information will be deleted from Intune service within 30 days of the removal action.
+To delete an end user’s personal data from Intune, an admin must [delete the user from Azure Active Directory (AAD)](https://docs.microsoft.com/azure/active-directory/intune/fundamentals/add-users-azure-active-directory#delete-a-user). When the user is deleted from AAD (hard deleted), Intune receives the delete signal from AAD and then automatically begins purging all of that user’s personal data from the Intune service. The user’s information will be deleted from Intune service within 30 days of the removal action.
 
 ### Reset device to factory settings
 Resetting to factory settings restores all company and personal data and settings to the original factory settings. It is useful for providing a device to the next employee. User files,user installed applications, and non-default settings are removed and this data is deleted from the Intune service within 30 days of the removal action.

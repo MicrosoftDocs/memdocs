@@ -131,6 +131,6 @@ For more information, see [Gatekeeper on macOS](https://support.apple.com/HT2024
 
 ## Next steps
 
-- [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../fundamentals/scope-tags.md).
+- [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../intune/fundamentals/scope-tags.md).
 - [Monitor your compliance policies](compliance-policy-monitor.md).
 - See the [compliance policy settings for iOS](compliance-policy-create-ios.md) devices.

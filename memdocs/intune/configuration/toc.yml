@@ -144,7 +144,7 @@
         - name: Device restrictions
           href: device-restrictions-macos.md
         - name: Endpoint protection
-          href: ../protect/endpoint-protection-macos.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
+          href: ../intune/protect/endpoint-protection-macos.md?toc=/intune/intune/configuration/toc.json&bc=/intune/intune/configuration/breadcrumb/toc.json
         - name: Extensions
           href: kernel-extensions-settings-macos.md
         - name: Preference file
@@ -168,9 +168,9 @@
         - name: Email
           href: email-settings-windows-10.md
         - name: Endpoint protection
-          href: ../protect/endpoint-protection-windows-10.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
+          href: ../intune/protect/endpoint-protection-windows-10.md?toc=/intune/intune/configuration/toc.json&bc=/intune/intune/configuration/breadcrumb/toc.json
         - name: Identity protection
-          href: ../protect/identity-protection-windows-settings.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
+          href: ../intune/protect/identity-protection-windows-settings.md?toc=/intune/intune/configuration/toc.json&bc=/intune/intune/configuration/breadcrumb/toc.json
         - name: Kiosk
           href: kiosk-settings-windows.md
         - name: VPN

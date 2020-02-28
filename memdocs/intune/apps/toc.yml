@@ -16,7 +16,7 @@
 - name: Tutorials
   items:
   - name: Protect email on unmanaged devices
-    href: ../protect/tutorial-protect-email-on-unmanaged-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
+    href: ../intune/protect/tutorial-protect-email-on-unmanaged-devices.md?toc=/intune/intune/apps/toc.json&bc=/intune/intune/apps/breadcrumb/toc.json
   - name: Configure Slack to use Intune 
     href: tutorial-configure-slack-enterprise-grid.md
 - name: Concepts
@@ -190,7 +190,7 @@
     - name: Troubleshoot
       items:
       - name: Help users troubleshoot problems
-        href: ../fundamentals/help-desk-operators.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
+        href: ../intune/fundamentals/help-desk-operators.md?toc=/intune/intune/apps/toc.json&bc=/intune/intune/apps/breadcrumb/toc.json
       - name: Troubleshoot app installation problems
         href: troubleshoot-app-install.md
       - name: App installation error reference                  

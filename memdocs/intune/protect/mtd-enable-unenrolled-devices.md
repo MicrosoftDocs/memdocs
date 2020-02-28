@@ -87,4 +87,4 @@ You can decide which MTD toggle options you need to enable according to your org
 
 ## Next Steps
 
-- [Create Mobile Threat Defense (MTD) app protection policy with Intune](~/protect/mtd-app-protection-policy.md).
+- [Create Mobile Threat Defense (MTD) app protection policy with Intune](~/intune/protect/mtd-app-protection-policy.md).

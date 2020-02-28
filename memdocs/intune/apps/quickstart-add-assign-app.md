@@ -33,15 +33,15 @@ ms.collection: M365-identity-device-management
 
 In this quickstart, you will use Intune to add and assign a client app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work. 
 
-If you don’t have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+If you don’t have an Intune subscription, [sign up for a free trial account](../intune/fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
-- To complete this quickstart, you must [create a user](../fundamentals/quickstart-create-user.md), [create a group](../fundamentals/quickstart-create-group.md), and [enroll a device](../quickstart-setup-auto-enrollment.md).
+- To complete this quickstart, you must [create a user](../intune/fundamentals/quickstart-create-user.md), [create a group](../intune/fundamentals/quickstart-create-group.md), and [enroll a device](../quickstart-setup-auto-enrollment.md).
 
 ## Sign in to Intune
 
-Sign in to [Intune](https://aka.ms/intuneportal) as a [Global administrator or an Intune Service administrator](../fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to [Intune](https://aka.ms/intuneportal) as a [Global administrator or an Intune Service administrator](../intune/fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Add the client app to Intune
 
@@ -56,9 +56,9 @@ Use the following steps to add an app to Intune:
 6. Next to **Update Channel** select **Monthly** from the dropdown box.
 7. Confirm the remaining default details in the ***Configure app suite** page.
 8. Click **Next** to display the **Scope tags** page.
-9. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](~/fundamentals/scope-tags.md).
+9. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](~/intune/fundamentals/scope-tags.md).
 10. Click **Next** to display the **Assignments** page.
-11. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](~/fundamentals/groups-add.md). 
+11. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](~/intune/fundamentals/groups-add.md). 
 12. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 13. When you are done, click **Create** to add the app to Intune.
 

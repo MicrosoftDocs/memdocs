@@ -78,7 +78,7 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
   - Install the PFX Certificate Connector for Microsoft Intune on your server.  
   - To automatically receive important updates, ensure firewalls are open that allow the connector to contact **autoupdate.msappproxy.net** on port **443**.   
 
-  For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
+  For more information, see [Network endpoints for Microsoft Intune](../intune/fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../intune/fundamentals/network-bandwidth-use.md).
 
 - **Windows Server**:  
   Use a Windows Server to host:
@@ -86,7 +86,7 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
   - Microsoft Intune Certificate Connector - for authentication and S/MIME email signing scenarios
   - PFX Certificate Connector for Microsoft Intune - for S/MIME email encryption scenarios.
 
-  The connectors require access to the same ports as detailed for managed devices, as found in our [device endpoint content](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
+  The connectors require access to the same ports as detailed for managed devices, as found in our [device endpoint content](https://docs.microsoft.com/intune/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune supports install of the *PFX Certificate Connector* on the same server as the *Microsoft Intune Certificate Connector*.
   
@@ -192,7 +192,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 
 5. Select **OK** > **Create** to save your profile.
 
-6. To assign the new profile to one or more devices, see [assign Microsoft Intune device profiles](../configuration/device-profile-assign.md).
+6. To assign the new profile to one or more devices, see [assign Microsoft Intune device profiles](../intune/configuration/device-profile-assign.md).
 
 ## Create a PKCS certificate profile
 
@@ -225,7 +225,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 
 5. Select **OK** > **Create** to save your profile.
 
-6. To assign the new profile to one or more devices, see [assign Microsoft Intune device profiles](../configuration/device-profile-assign.md).
+6. To assign the new profile to one or more devices, see [assign Microsoft Intune device profiles](../intune/configuration/device-profile-assign.md).
 
    > [!NOTE]
    > On devices with an Android Enterprise profile, certificates installed using a PKCS certificate profile are not visible on the device. To confirm successful certificate deployment, check the status of the profile in the Intune console.
@@ -327,6 +327,6 @@ The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](../configuration/device-profile-assign.md) and [monitor its status](../configuration/device-profile-monitor.md).
+The profile is created, but it's not doing anything yet. Next, [assign the profile](../intune/configuration/device-profile-assign.md) and [monitor its status](../intune/configuration/device-profile-monitor.md).
 
 [Use SCEP for certificates](certificates-scep-configure.md), or [issue PKCS certificates from a Symantec PKI manager web service](certificates-digicert-configure.md).

@@ -39,11 +39,11 @@ This article shows you how to assign a profile, and includes some information on
 >
 > To change a setting to a different value, create a new profile, configure the setting to **Not configured**, and assign the profile. Once applied to the device, users should have control to change the setting to their preferred value.
 >
-> When configuring these settings, we suggest deploying to a pilot group. For more Intune rollout advice, see [create a rollout plan](../fundamentals/planning-guide-rollout-plan.md).
+> When configuring these settings, we suggest deploying to a pilot group. For more Intune rollout advice, see [create a rollout plan](../intune/fundamentals/planning-guide-rollout-plan.md).
 
 ## Before you begin
 
-Be sure you have the appropriate role to assign profiles. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+Be sure you have the appropriate role to assign profiles. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../intune/fundamentals/role-based-access-control.md).
 
 ## Assign a device profile
 
@@ -69,7 +69,7 @@ If the **Evaluate** button is grayed out, make sure the profile is assigned to o
 
 When you create or update a profile, you can also add scope tags and applicability rules to the profile.
 
-**Scope tags** are a great way to filter profiles to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md) has more information.
+**Scope tags** are a great way to filter profiles to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. [Use RBAC and scope tags for distributed IT](../intune/fundamentals/scope-tags.md) has more information.
 
 On Windows 10 devices, you can add **applicability rules** so the profile only applies to a specific OS version or a specific Windows edition. [Applicability rules](device-profile-create.md#applicability-rules) has more information.
 
@@ -109,7 +109,7 @@ To summarize, use user groups when you want your settings and rules to always go
 
 Intune device configuration profiles let you include and exclude groups from profile assignment.
 
-As a best practice, create and assign profiles specifically for your user groups. And, create and assign different profiles specifically for your device groups. For more information on groups, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
+As a best practice, create and assign profiles specifically for your user groups. And, create and assign different profiles specifically for your device groups. For more information on groups, see [Add groups to organize users and devices](../intune/fundamentals/groups-add.md).
 
 When you assign your profiles, use the following table when including and excluding groups. A checkmark means that assignment is supported:
 

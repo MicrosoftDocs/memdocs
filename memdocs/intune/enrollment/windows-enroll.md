@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-This article helps IT administrators simplify Windows enrollment for their users. Once you've [set up Intune](../fundamentals/setup-steps.md), users enroll Windows devices by [signing in](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows) with their work or school account.  
+This article helps IT administrators simplify Windows enrollment for their users. Once you've [set up Intune](../intune/fundamentals/setup-steps.md), users enroll Windows devices by [signing in](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows) with their work or school account.  
 
 As an Intune admin, you can simplify enrollment in the following ways:
 
@@ -55,7 +55,7 @@ Organizations that can use automatic enrollment can also configure [bulk enroll 
 
 ## Device enrollment prerequisites
 
-Before an administrator can enroll devices to Intune for management, licenses should have already been assigned to the administrator's account. [Read about assigning licenses for device enrollment](../fundamentals/licenses-assign.md)
+Before an administrator can enroll devices to Intune for management, licenses should have already been assigned to the administrator's account. [Read about assigning licenses for device enrollment](../intune/fundamentals/licenses-assign.md)
 
 ## Multi-user support
 
@@ -64,7 +64,7 @@ Intune supports multiple users on devices that both:
 - run the Windows 10 Creator's update
 - are Azure Active Directory domain-joined.
 
-When standard users sign in with their Azure AD credentials, they receive apps and policies assigned to their user name. Only the device’s [Primary user](../remote-actions/find-primary-user.md) can use the Company Portal for self-service scenarios like installing apps and performing device actions (Remove, Reset). For shared Windows 10 devices that do not have a primary user assigned, the Company Portal can still be used to install Available apps.
+When standard users sign in with their Azure AD credentials, they receive apps and policies assigned to their user name. Only the device’s [Primary user](../intune/remote-actions/find-primary-user.md) can use the Company Portal for self-service scenarios like installing apps and performing device actions (Remove, Reset). For shared Windows 10 devices that do not have a primary user assigned, the Company Portal can still be used to install Available apps.
 
 [!INCLUDE [AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
@@ -120,7 +120,7 @@ For end-user enrollment instructions, see [Enroll your Windows device in Intune]
 >[!IMPORTANT]
 > If you do not have Auto-MDM enrollment enabled, but you have Windows 10 devices that have been joined to Azure AD, two records will be visible in the Intune console after enrollment. You can stop this by making sure that users with Azure AD joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account. 
 
-For more information about end-user tasks, see [Resources about the end-user experience with Microsoft Intune](../fundamentals/end-user-educate.md).
+For more information about end-user tasks, see [Resources about the end-user experience with Microsoft Intune](../intune/fundamentals/end-user-educate.md).
 
 ## Registration and Enrollment CNAMEs
 Azure Active Directory has a different CNAME that it uses for device registration for iOS/iPadOS, Android, and Windows devices. Intune conditional access requires devices to be registered, also called "workplace joined". If you plan to use conditional access, you should also configure the EnterpriseRegistration CNAME for each company name you have.
@@ -146,4 +146,4 @@ Although creating CNAME DNS entries is optional, CNAME records make enrollment e
 
 ## Next steps
 
-- [Considerations when managing Windows devices using Intune on Azure](../fundamentals/intune-legacy-pc-client.md).
+- [Considerations when managing Windows devices using Intune on Azure](../intune/fundamentals/intune-legacy-pc-client.md).

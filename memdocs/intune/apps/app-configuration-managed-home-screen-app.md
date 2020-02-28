@@ -38,7 +38,7 @@ The Managed Home Screen is the application used for corporate-owned Android Ente
 Typically, if settings are available to you through Device configuration, configure the settings there. Doing so will save you time, minimize errors, and will give you a better Intune-support experience. However, some of the Managed Home Screen settings are currently only available via the **App configuration policies** pane in the Intune console. Use this document to learn how to configure the different settings either using the configuration designer or a JSON script. 
 
 > [!NOTE]
-> It is currently possible, and advisable, to set allow-listed applications and pinned web links through **Apps** and **Device configuration**. For the full list of settings available in **Device configuration** that impact Managed Home Screen,  see [Dedicated device settings](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).  
+> It is currently possible, and advisable, to set allow-listed applications and pinned web links through **Apps** and **Device configuration**. For the full list of settings available in **Device configuration** that impact Managed Home Screen,  see [Dedicated device settings](../intune/configuration/device-restrictions-android-for-work.md#dedicated-device-settings).  
 
 First, navigate to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **App configuration policies**. Add a configuration policy for **Managed devices** running **Android** and choose **Managed Home Screen** as the associated app. Click on **Configuration settings** to configure the different available Managed Home Screen settings. 
 
@@ -339,8 +339,8 @@ The following is an example JSON script with all the available configuration key
 The Managed Home Screen app now provides access to Google's Android Device Policy app. The Managed Home Screen app is a custom launcher used for devices enrolled in Intune as Android Enterprise (AE) dedicated devices using multi-app kiosk mode. You can access the Android Device Policy app, or guide users to the Android Device Policy app, for support and debug purposes. This launching capability is available at the time the device enrolls and locks into Managed Home Screen. No additional installations are needed to use this functionality.
 
 ## Managed Home Screen debug screen
-You can access the Managed Home Screen's debug screen by clicking the **back** button until the debug screen is displayed (click the **back** button 15 times or more). From this debug screen, you are able to launch the Android Device Policy application, view and upload logs, or temporarily pause kiosk mode to update the device. For more information about pausing kiosk mode, see the **Leave kiosk mode** item in the Android Enterprise [dedicated device settings](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).
+You can access the Managed Home Screen's debug screen by clicking the **back** button until the debug screen is displayed (click the **back** button 15 times or more). From this debug screen, you are able to launch the Android Device Policy application, view and upload logs, or temporarily pause kiosk mode to update the device. For more information about pausing kiosk mode, see the **Leave kiosk mode** item in the Android Enterprise [dedicated device settings](../intune/configuration/device-restrictions-android-for-work.md#dedicated-device-settings).
 
 ## Next steps
 
-- For more information about Android Enterprise dedicated devices, see [Set up Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md).
+- For more information about Android Enterprise dedicated devices, see [Set up Intune enrollment of Android Enterprise dedicated devices](../intune/enrollment/android-kiosk-enroll.md).

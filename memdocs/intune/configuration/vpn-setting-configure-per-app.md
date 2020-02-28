@@ -68,7 +68,7 @@ To prove its identity, the VPN server presents the certificate that must be acce
 
 ## Create a group for your VPN users
 
-Create or choose an existing group in Azure Active Directory (Azure AD) for the users or devices that use per-app VPN. To create a new group, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
+Create or choose an existing group in Azure Active Directory (Azure AD) for the users or devices that use per-app VPN. To create a new group, see [Add groups to organize users and devices](../intune/fundamentals/groups-add.md).
 
 ## Create a trusted certificate profile
 
@@ -92,8 +92,8 @@ The trusted root certificate profile allows the device to automatically trust th
 
 To configure and assign the client authentication certificate, see one of the following articles:
 
-- [Configure infrastructure to support SCEP with Intune](../protect/certificates-scep-configure.md)
-- [Configure and manage PKCS certificates with Intune](../protect/certficates-pfx-configure.md)
+- [Configure infrastructure to support SCEP with Intune](../intune/protect/certificates-scep-configure.md)
+- [Configure and manage PKCS certificates with Intune](../intune/protect/certficates-pfx-configure.md)
 
 Be sure to configure the certificate for client authentication. You can set this directly in SCEP certificate profiles (**Extended key usage** list > **Client authentication**). For PKCS, set client authentication in the certificate template in the certificate authority (CA).
 

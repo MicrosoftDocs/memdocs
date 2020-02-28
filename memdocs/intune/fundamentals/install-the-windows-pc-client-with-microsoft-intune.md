@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 [!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 > [!NOTE]
-> You can use Microsoft Intune to manage Windows PCs either [as mobile devices with mobile device management (MDM)](../enrollment/windows-enroll.md) or as computers with the Intune software client as described below. However, Microsoft recommends that customers [use the MDM management solution](../enrollment/windows-enroll.md) whenever possible. For more information see [Compare managing Windows PCs as computers or mobile devices](pc-management-comparison.md) 
+> You can use Microsoft Intune to manage Windows PCs either [as mobile devices with mobile device management (MDM)](../intune/enrollment/windows-enroll.md) or as computers with the Intune software client as described below. However, Microsoft recommends that customers [use the MDM management solution](../intune/enrollment/windows-enroll.md) whenever possible. For more information see [Compare managing Windows PCs as computers or mobile devices](pc-management-comparison.md) 
 
 
 Windows PCs can be enrolled by installing the Intune client software. The Intune client software can be installed by using the following methods:

@@ -40,7 +40,7 @@ If you don’t have an Intune subscription, [sign up for a free trial account](f
 
 ## Prerequisites
 
-- Microsoft Intune subscription - [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+- Microsoft Intune subscription - [sign up for a free trial account](../intune/fundamentals/free-trial-sign-up.md).
 - To complete this quickstart, you must [create a user](quickstart-create-user.md).
 
 ## Sign in to Intune in the Microsoft Endpoint Manager
@@ -71,4 +71,4 @@ In this quickstart, you used Intune to create a group based on an existing user.
 To follow this series of Intune quickstarts, continue to the next quickstart.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Set up automatic enrollment for Windows 10 devices](../enrollment/quickstart-setup-auto-enrollment.md)
+> [Quickstart: Set up automatic enrollment for Windows 10 devices](../intune/enrollment/quickstart-setup-auto-enrollment.md)

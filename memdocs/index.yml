@@ -30,13 +30,13 @@ conceptualContent:
         - url: /intune/
           itemType: overview
           text: Intune hub page
-        - url: /intune/fundamentals/
+        - url: /intune/intune/fundamentals/
           itemType: overview
           text: Intune fundamentals         
         - url: /intune/
           itemType: concept
           text: Common ways to use Intune 
-        - url: /intune/fundamentals/migration-guide
+        - url: /intune/intune/fundamentals/migration-guide
           itemType: concept
           text: Intune migration guide
     - title: Configuration Manager
@@ -58,33 +58,33 @@ conceptualContent:
           text: Design a hierarch of sites
     - title: Desktop analytics
       links:
-        - url: ./enrollment/device-enrollment.md
+        - url: ./intune/enrollment/device-enrollment.md
           itemType: concept
           text: Device enrollment overview
-        - url: ./intune/enrollment/device-management-capabilities.md
+        - url: ./intune/intune/enrollment/device-management-capabilities.md
           itemType: concept  
           text: Enrolled device management capabilities
-        - url: ./intune/enrollment/windows-enrollment-methods.md
+        - url: ./intune/intune/enrollment/windows-enrollment-methods.md
           itemType: how-to-guide
           text: Intune enrollment methods for Windows devices
-        - url: ./intune/enrollment/windows-enroll.md
+        - url: ./intune/intune/enrollment/windows-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for Windows
-        - url: ./intune/enrollment/ios-enroll.md
+        - url: ./intune/intune/enrollment/ios-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for iOS devices        
-        - url: ./intune/enrollment/android-enroll.md
+        - url: ./intune/intune/enrollment/android-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for Android devices
     - title: Autopilot
       links:
-        - url: ./intune/remote-actions/device-management.md
+        - url: ./intune/intune/remote-actions/device-management.md
           itemType: concept
           text: Device management overview
-        - url: ./intune/remote-actions/custom-notifications.md
+        - url: ./intune/intune/remote-actions/custom-notifications.md
           itemType: how-to-guide
           text: Send custom notifications
-        - url: ./intune/remote-actions/devices-wipe.md
+        - url: ./intune/intune/remote-actions/devices-wipe.md
           itemType: how-to-guide
           text: Remove devices          
 
@@ -99,13 +99,13 @@ additionalContent:
         - text: What's new in Intune for Education?
           url: https://docs.microsoft.com/intune-education/whats-new-in-edu
         - text: How is Intune for Education different from the full version?
-          url: ./fundamentals/introduction-intune-education.md
+          url: ./intune/fundamentals/introduction-intune-education.md
       - title: Intune for Government
         links: 
         - text: Enterprise Mobility + Security for US Government service description
           url: https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description
         - text: US government endpoints for Intune
-          url: ./fundamentals/intune-us-government-endpoints.md
+          url: ./intune/fundamentals/intune-us-government-endpoints.md
         - text: Azure Government site
           url: https://azure.microsoft.com/global-infrastructure/government/
       - title: Microsoft 365

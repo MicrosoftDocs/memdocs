@@ -23,13 +23,13 @@ ms.collection: M365-identity-device-management
 
 # Intune Standalone - Win32 app management
 
-[Intune standalone](../fundamentals/mdm-authority-set.md) now allows greater Win32 app management capabilities. While it is possible for cloud connected customers to use Configuration Manager for Win32 app management, Intune-only customers will have greater management capabilities for their Win32 line-of-business (LOB) apps. This topic provides an overview of the Intune Win32 app management feature and troubleshooting information.
+[Intune standalone](../intune/fundamentals/mdm-authority-set.md) now allows greater Win32 app management capabilities. While it is possible for cloud connected customers to use Configuration Manager for Win32 app management, Intune-only customers will have greater management capabilities for their Win32 line-of-business (LOB) apps. This topic provides an overview of the Intune Win32 app management feature and troubleshooting information.
 
 > [!NOTE]
 > This app management capability supports both 32-bit and 64-bit operating system architecture for Windows applications.
 
 > [!IMPORTANT]
-> When deploying Win32 apps, consider using [Intune Management Extension](../apps/intune-management-extension.md) exclusively, particularly when you have a multi-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during AutoPilot enrollment, the app installation may fail.  
+> When deploying Win32 apps, consider using [Intune Management Extension](../intune/apps/intune-management-extension.md) exclusively, particularly when you have a multi-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during AutoPilot enrollment, the app installation may fail.  
 
 ## Prerequisites
 
@@ -295,14 +295,14 @@ If you choose not to **Automatically install** a dependency, the Win32 app insta
 Each dependency will adhere to Intune Win32 app retry logic (try to install 3 times after waiting for 5 minutes) and the global re-evaluation schedule.​ Also, dependencies are only applicable at the time of installing the Win32 app on the device. Dependencies are not applicable for uninstalling a Win32 app.​ To delete a dependency, you must click on the ellipses (three dots) to the left of the dependent app located at the end of the row of the dependency list.​ 
 
 ## Step 6 - Select scope tags (optional)
-You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../intune/fundamentals/scope-tags.md).
 
 1. Click **Select scope tags** to optionally add scope tags for the app. 
 2. Click **Next** to display the **Assignments** page.
 
 ## Step 7 - Assignments
 
-You can select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](~/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
+You can select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](~/intune/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
 1. For the specific app, select an assignment type:
     - **Required**: The app is installed on devices in the selected groups.
@@ -310,7 +310,7 @@ You can select the **Required**, **Available for enrolled devices**, or **Uninst
     - **Uninstall**: The app is uninstalled from devices in the selected groups.
 2. Click **Add group** and assign the groups that will use this app.
 3. In the **Select groups** pane, select to assign based on users or devices. 
-4. After you have selected your groups, you can also set **End user notifications**, **Availability**, and **Installation deadline**. For more information, see [Set Win32 app availability and notifications](~/apps/apps-win32-app-management.md#set-win32-app-availability-and-notifications).
+4. After you have selected your groups, you can also set **End user notifications**, **Availability**, and **Installation deadline**. For more information, see [Set Win32 app availability and notifications](~/intune/apps/apps-win32-app-management.md#set-win32-app-availability-and-notifications).
 5. If you want to exclude any groups of users from being affected by this app assignment, select **Included** under the **MODE** column. The **Edit assignment** pane will be displayed. You can set the **mode** from being **Included** to being **Excluded**. Click **OK** to close the **Edit assignment** pane.
 6. Once you have completed setting the assignments for the apps, click **Next** to display the **Review + create** page.
 

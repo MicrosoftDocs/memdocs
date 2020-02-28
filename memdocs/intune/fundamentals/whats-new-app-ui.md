@@ -47,7 +47,7 @@ The **What's next?** screen has been removed from the Android work profile enrol
 ## Week of November 11, 2019  
 
 ### Web apps launched from the Windows Company Portal app <!-- 5030972 -->
-End-users can now launch web apps directly from the Windows Company Portal app. End-users can select the web app and then choose the option **Open in browser**. The published web URL is opened directly in a web browser. This functionality will be rolled out over the next week. For more information about Web apps, see [Add web apps to Microsoft Intune](~/apps/web-app.md).
+End-users can now launch web apps directly from the Windows Company Portal app. End-users can select the web app and then choose the option **Open in browser**. The published web URL is opened directly in a web browser. This functionality will be rolled out over the next week. For more information about Web apps, see [Add web apps to Microsoft Intune](~/intune/apps/web-app.md).
 
 ![Example image of a web app launched from the Windows Company Portal app](./media/whats-new-app-ui/webapp-open-in-browser.png)  
 
@@ -83,7 +83,7 @@ The Microsoft Intune app for Android has been updated with the following improve
 - Updated and improved the layout to include bottom navigation for the most important actions.
 - Added an additional page that shows the user's profile.
 - Added the display of actionable notifications in the app for the user, such as the need to update their device settings.
-- Added the display of custom push notifications, aligning the app with the support recently added in the Company Portal app for iOS and Android. For more information, see [Send custom notifications in Intune](../remote-actions/custom-notifications.md).
+- Added the display of custom push notifications, aligning the app with the support recently added in the Company Portal app for iOS and Android. For more information, see [Send custom notifications in Intune](../intune/remote-actions/custom-notifications.md).
 
     User profile example:<br>
     <img src="./media/whats-new-app-ui/intune-app-android-device-profile.png" alt="Screenshot of Microsoft Intune app for Android - User Profile" width="300">   
@@ -118,7 +118,7 @@ We’ve added new features to the Microsoft Intune app (preview) for Android. Us
 ## Week of April 15, 2019  
 
 ### New end user app (Microsoft Intune app) <!--3903244 -->  
-There's a new end-user app for Android fully managed devices called **Microsoft Intune**. This new app is light-weight and modern, and provides similar functionally as the Company Portal app, but for fully managed, corporate devices. For more information, see [Microsoft Intune app on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune).  
+There's a new end-user app for Android fully managed devices called **Microsoft Intune**. This new app is light-weight and modern, and provides similar functionally as the Company Portal app, but for fully managed, corporate devices. For more information, see [Microsoft Intune app on Google Play](https://play.google.com/store/intune/apps/details?id=com.microsoft.intune).  
 
 Example screenshot of the device details screen: 
 
@@ -161,12 +161,12 @@ A new screen called **App categories** has been added to improve the app browsin
 ## Week of November 12, 2018
 
 ### Windows Company Portal keyboard shortcuts <!-- 2771518 -->
-End users will now be able to trigger app and device actions in the Windows Company Portal [using keyboard shortcuts (accelerators)](../apps/company-portal-app.md#windows-company-portal-keyboard-shortcuts).
+End users will now be able to trigger app and device actions in the Windows Company Portal [using keyboard shortcuts (accelerators)](../intune/apps/company-portal-app.md#windows-company-portal-keyboard-shortcuts).
 
 ## Week of October 22, 2018
 
 ### Add custom brand image for Company Portal app <!-- 1916266 -->
-As the Microsoft Intune admin, you can upload a custom brand image which will be displayed as a background image on the user's profile page in the iOS Company Portal app. For more information about configuring the Company Portal app, see [How to configure the Microsoft Intune Company Portal app](../apps/company-portal-app.md).  
+As the Microsoft Intune admin, you can upload a custom brand image which will be displayed as a background image on the user's profile page in the iOS Company Portal app. For more information about configuring the Company Portal app, see [How to configure the Microsoft Intune Company Portal app](../intune/apps/company-portal-app.md).  
 
 ## Week of August 27, 2018  
 
@@ -262,7 +262,7 @@ We've updated the Company Portal app for Android to follow Android's [Material D
 
 ### New "Device Categories" step in guided setup for the Company Portal app for Windows 10 <!-- 1335292 -->
 
-If you've enabled [device group mapping](../enrollment/device-group-mapping.md), the Company Portal app for Windows 10 now walks your users through selecting a device category after enrolling their device.
+If you've enabled [device group mapping](../intune/enrollment/device-group-mapping.md), the Company Portal app for Windows 10 now walks your users through selecting a device category after enrolling their device.
 
 ![Device group mapping category](./media/whats-new-app-ui/w10_cp_category_device_setup_after_1711.png)
 

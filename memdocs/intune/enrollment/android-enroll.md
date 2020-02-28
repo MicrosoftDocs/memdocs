@@ -39,13 +39,13 @@ As an Intune administrator, you can enroll Android devices in the following ways
     - [**Android Enterprise work profile**](android-work-profile-enroll.md): For personal devices granted permission to access corporate data. Admins can manage work accounts, apps, and data. Personal data on the device is kept separate from work data and admins don't control personal settings or data. 
     - [**Android Enterprise dedicated**](android-kiosk-enroll.md): For corporate-owned, single use devices, such as digital signage, ticket printing, or inventory management. Admins lock down the usage of a device for a limited set of apps and web links. It also prevents users from adding other apps or taking other actions on the device.
     - [**Android Enterprise fully managed**](android-fully-managed-enroll.md): For corporate-owned, single user devices used exclusively for work and not personal use. Admins can manage the entire device and enforce policy controls unavailable to work profiles. 
-- [**Android device administrator**](android-enroll-device-administrator.md), including Samsung Knox Standard devices and [Zebra devices](../configuration/android-zebra-mx-overview.md). 
+- [**Android device administrator**](android-enroll-device-administrator.md), including Samsung Knox Standard devices and [Zebra devices](../intune/configuration/android-zebra-mx-overview.md). 
 
 ## Prerequisites
 
-To prepare to manage mobile devices, you must set the mobile device management (MDM) authority to **Microsoft Intune**. See [Set the MDM authority](../fundamentals/mdm-authority-set.md) for instructions. You set this item only once, when you are first setting up Intune for mobile device management.
+To prepare to manage mobile devices, you must set the mobile device management (MDM) authority to **Microsoft Intune**. See [Set the MDM authority](../intune/fundamentals/mdm-authority-set.md) for instructions. You set this item only once, when you are first setting up Intune for mobile device management.
 
-For devices manufactured by Zebra Technologies, you may need to grant the Company Portal additional permissions depending on the capabilities of the specific device. [Mobility Extensions on Zebra devices](../configuration/android-zebra-mx-overview.md) has more details.
+For devices manufactured by Zebra Technologies, you may need to grant the Company Portal additional permissions depending on the capabilities of the specific device. [Mobility Extensions on Zebra devices](../intune/configuration/android-zebra-mx-overview.md) has more details.
 
 For Samsung Knox Standard devices, there are [more prerequisites](android-samsung-knox-mobile-enroll.md).
 

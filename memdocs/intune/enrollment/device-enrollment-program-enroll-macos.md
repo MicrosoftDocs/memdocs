@@ -51,8 +51,8 @@ Neither Apple Business Manager enrollment or Apple School Manager work with the 
 
 - Devices purchased in [Apple School Manager](https://school.apple.com/) or [Apple's Device Enrollment Program](http://deploy.apple.com)
 - A list of serial numbers or a purchase order number.
-- [MDM Authority](../fundamentals/mdm-authority-set.md)
-- [Apple MDM Push certificate](../enrollment/apple-mdm-push-certificate-get.md)
+- [MDM Authority](../intune/fundamentals/mdm-authority-set.md)
+- [Apple MDM Push certificate](../intune/enrollment/apple-mdm-push-certificate-get.md)
 
 ## Get an Apple DEP token
 
@@ -217,4 +217,4 @@ You have enabled management and syncing between Apple and Intune, and assigned a
 
 ## Next steps
 
-After enrolling macOS devices, you can start [managing them](../remote-actions/device-management.md).
+After enrolling macOS devices, you can start [managing them](../intune/remote-actions/device-management.md).

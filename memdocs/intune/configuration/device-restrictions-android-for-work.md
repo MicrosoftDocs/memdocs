@@ -94,7 +94,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
   - **Select a managed app**: Select the managed Google Play app from the list.
 
-    If you don't have any apps listed, then [add some Android apps](../apps/apps-add-android-for-work.md) to the device. Be sure to [assign the app to the device group created for your dedicated devices](../apps/apps-deploy.md).
+    If you don't have any apps listed, then [add some Android apps](../intune/apps/apps-add-android-for-work.md) to the device. Be sure to [assign the app to the device group created for your dedicated devices](../intune/apps/apps-deploy.md).
 
   > [!IMPORTANT]
   > When using single-app kiosk mode, dialer/phone apps may not function properly. 
@@ -102,9 +102,9 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 - **Multi-app**: Users can access a limited set of apps on the device. When the device starts, only the apps you add start. You can also add some web links that users can open. When the policy is applied, users see icons for the allowed apps on the home screen.
 
   > [!IMPORTANT]
-  > For multi-app dedicated devices, the [Managed Home Screen app](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) from Google Play **must be**:
-  >   - [Added as a client app](../apps/apps-add-android-for-work.md) in Intune
-  >   - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices
+  > For multi-app dedicated devices, the [Managed Home Screen app](https://play.google.com/work/intune/apps/details?id=com.microsoft.launcher.enterprise) from Google Play **must be**:
+  >   - [Added as a client app](../intune/apps/apps-add-android-for-work.md) in Intune
+  >   - [Assigned to the device group](../intune/apps/apps-deploy.md) created for your dedicated devices
   >
   > The **Managed Home Screen** app isn't required to be in the configuration profile, but it is required to be added as a client app. When the **Managed Home Screen** app is added as a client app, any other apps you add in the configuration profile are shown as icons on the **Managed Home Screen** app.
   >
@@ -112,9 +112,9 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
   - **Add**: Select your apps from the list.
 
-    If the **Managed Home Screen** app isn't listed, then [add it from Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Be sure to [assign the app](../apps/apps-deploy.md) to the device group created for your dedicated devices.
+    If the **Managed Home Screen** app isn't listed, then [add it from Google Play](https://play.google.com/work/intune/apps/details?id=com.microsoft.launcher.enterprise). Be sure to [assign the app](../intune/apps/apps-deploy.md) to the device group created for your dedicated devices.
 
-    You can also add other [Android apps](../apps/apps-add-android-for-work.md) and [web apps](../apps/web-app.md) created by your organization to the device. Be sure to [assign the app to the device group created for your dedicated devices](../apps/apps-deploy.md).
+    You can also add other [Android apps](../intune/apps/apps-add-android-for-work.md) and [web apps](../intune/apps/web-app.md) created by your organization to the device. Be sure to [assign the app to the device group created for your dedicated devices](../intune/apps/apps-deploy.md).
 
   - **Virtual home button**: A soft-key button that returns users to the Managed Home Screen so users can switch between apps. Your options:
 
@@ -221,7 +221,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 ### Applications
 
 - **Allow installation from unknown sources**: Choose **Allow** so users can turn on **Unknown sources**. This setting allows apps to install from unknown sources, including sources other than the Google Play Store. **Not configured** prevents users from turning on **Unknown sources**.
-- **Allow access to all apps in Google Play store**: When set to **Allow**, users get access to all apps in Google Play store. They don't get access to the apps the administrator blocks in [Client Apps](../apps/apps-add-android-for-work.md). **Not configured** forces users to only access the apps the administrator makes available Google Play store, or apps required in [Client Apps](../apps/apps-add-android-for-work.md).
+- **Allow access to all apps in Google Play store**: When set to **Allow**, users get access to all apps in Google Play store. They don't get access to the apps the administrator blocks in [Client Apps](../intune/apps/apps-add-android-for-work.md). **Not configured** forces users to only access the apps the administrator makes available Google Play store, or apps required in [Client Apps](../intune/apps/apps-add-android-for-work.md).
 - **App auto-updates**: Choose when automatic updates are installed. Your options:
   - **Not configured**
   - **User choice**
@@ -249,7 +249,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
   > [!IMPORTANT]
   > - The VPN client you choose must be installed on the device, and it must support per-app VPN in work profiles. Otherwise, an error occurs. 
   > - You do need to approve the VPN client app in the **Managed Google Play Store**, sync the app to Intune, and deploy the app to the device. After you do this, then the app is installed in the user's work profile.
-  > - You still need to configure the VPN client with a [VPN profile](vpn-settings-android-enterprise.md), or through an [app configuration profile](../apps/app-configuration-policies-use-android.md).
+  > - You still need to configure the VPN client with a [VPN profile](vpn-settings-android-enterprise.md), or through an [app configuration profile](../intune/apps/app-configuration-policies-use-android.md).
   > - There may be known issues when using per-app VPN with F5 Access for Android 3.0.4. See [F5's release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) for more information.
 
 - **Lockdown mode**: Choose **Enable** to force all network traffic to use the VPN tunnel. If a connection to the VPN isn't established, then the device won't have network access.

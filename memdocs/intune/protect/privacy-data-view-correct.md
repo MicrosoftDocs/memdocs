@@ -39,15 +39,15 @@ Intune admins can view some personal data based on their access permissions, but
 ## View personal data
 
 Admins can see end user personal information in various blades in the Intune UI. The following articles explain what information admins do and don’t have access to:
-- [See device details](../remote-actions/device-inventory.md) in Intune explains how you can review details about an end user’s device.
-- [Monitor app information and assignments](../apps/apps-monitor.md) explains how to see details about apps installed on an end user’s device.
+- [See device details](../intune/remote-actions/device-inventory.md) in Intune explains how you can review details about an end user’s device.
+- [Monitor app information and assignments](../intune/apps/apps-monitor.md) explains how to see details about apps installed on an end user’s device.
 - The [What information can my company see when I enroll my device? article](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) gives end users a list of data that their company can and can’t see. It’s best to clearly tell your users what kind of data you’re collecting and why you’re collecting it. This article can be the first step in that transparency.
 
 ### Who can view the data?
 
 Microsoft uses strict controls to govern access to customer data, granting the lowest level of access required to complete key tasks and revoking access when it is no longer needed. 
 
-You can secure and control access to end user personal data by using role-based administration control (RBAC). For more information, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
+You can secure and control access to end user personal data by using role-based administration control (RBAC). For more information, see [RBAC with Microsoft Intune](../intune/fundamentals/role-based-access-control.md).
 
 You can learn more about Microsoft data practices by reading the Online Services Terms and [Microsoft Online Services Privacy Statement](https://go.microsoft.com/fwlink/p/?linkid=131004&clcid=0x409). 
 

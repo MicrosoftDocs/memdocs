@@ -39,7 +39,7 @@ In this tutorial, you'll learn how to:
 > * Create an Intune iOS device compliance policy to set the conditions that a device must meet to be considered compliant.
 > * Create an Azure Active Directory (Azure AD) Conditional Access policy that requires iOS devices to enroll in Intune, comply with Intune policies, and use the approved Outlook mobile app to access Exchange Online email.
 
-If you don’t have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+If you don’t have an Intune subscription, [sign up for a free trial account](../intune/fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
@@ -49,11 +49,11 @@ You'll need a test tenant with the following subscriptions for this tutorial:
 
 - Office 365 Business subscription that includes Exchange ([free trial](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
-Before you begin, create a test device profile for iOS devices by following the steps in [Quickstart: Create an email device profile for iOS](../configuration/quickstart-email-profile.md).
+Before you begin, create a test device profile for iOS devices by following the steps in [Quickstart: Create an email device profile for iOS](../intune/configuration/quickstart-email-profile.md).
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../intune/fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../intune/fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Create the iOS device compliance policy
 

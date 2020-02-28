@@ -51,7 +51,7 @@ Devices must meet these requirements to be managed as an Android Enterprise dedi
 
 To set up Android Enterprise dedicated device management, follow these steps:
 
-1. To prepare to manage mobile devices, you must [set the mobile device management (MDM) authority to **Microsoft Intune**](../fundamentals/mdm-authority-set.md) for instructions. You set this item only once, when you're first setting up Intune for mobile device management.
+1. To prepare to manage mobile devices, you must [set the mobile device management (MDM) authority to **Microsoft Intune**](../intune/fundamentals/mdm-authority-set.md) for instructions. You set this item only once, when you're first setting up Intune for mobile device management.
 2. [Connect your Intune tenant account to your Managed Google Play account](connect-intune-android-enterprise.md).
 3. [Create an enrollment profile.](#create-an-enrollment-profile)
 4. [Create a device group](#create-a-device-group).
@@ -112,7 +112,7 @@ You can now [enroll your dedicated devices](android-dedicated-devices-fully-mana
 
 ## Managing apps on Android Enterprise dedicated devices
 
-Only apps that have Assignment type [set to Required](../apps/apps-deploy.md#assign-an-app) can be installed on Android Enterprise dedicated devices. Apps are installed from the Managed Google Play store in the same manner as Android Enterprise work profile devices.
+Only apps that have Assignment type [set to Required](../intune/apps/apps-deploy.md#assign-an-app) can be installed on Android Enterprise dedicated devices. Apps are installed from the Managed Google Play store in the same manner as Android Enterprise work profile devices.
 
 Apps are automatically updated on managed devices when the app developer publishes an update to Google Play.
 
@@ -121,5 +121,5 @@ To remove an app from Android Enterprise dedicated devices, you can do either of
 - Create an uninstall deployment for the app.
 
 ## Next steps
-- [Deploy Android apps](../apps/apps-deploy.md)
-- [Add Android configuration policies](../configuration/device-profiles.md)
+- [Deploy Android apps](../intune/apps/apps-deploy.md)
+- [Add Android configuration policies](../intune/configuration/device-profiles.md)

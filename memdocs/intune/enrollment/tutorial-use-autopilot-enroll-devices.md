@@ -42,7 +42,7 @@ In this tutorial, you'll learn how to:
 > * Assign the Autopilot deployment profile to the device group
 > * Distribute Windows devices to users
 
-If you don’t have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+If you don’t have an Intune subscription, [sign up for a free trial account](../intune/fundamentals/free-trial-sign-up.md).
 
 For an overview of Autopilot benefits, scenarios, and prerequisites, see [Overview of Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
 
@@ -118,7 +118,7 @@ You can now distribute the Windows devices to your users. When they sign in for 
 
 If you don't want to use Autopilot devices anymore, you can delete them.
 
-1. If the devices are enrolled in Intune, you must first [delete them from the Azure Active Directory portal](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
+1. If the devices are enrolled in Intune, you must first [delete them from the Azure Active Directory portal](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
 2. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**).
 

@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Troubleshoot software updates in Microsoft Intune
 
-Help solve software update problems in Microsoft Intune. To see a list of the error codes and descriptions, go to [Software update agent error codes in Microsoft Intune](../protect/software-update-agent-error-codes.md).
+Help solve software update problems in Microsoft Intune. To see a list of the error codes and descriptions, go to [Software update agent error codes in Microsoft Intune](../intune/protect/software-update-agent-error-codes.md).
 
 ## Windows 7 devices with many superseded updates stop reporting to Intune
 

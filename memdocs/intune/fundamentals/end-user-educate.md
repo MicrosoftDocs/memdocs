@@ -59,7 +59,7 @@ Read the following list of tips to make your organization's Intune deployment ea
 
 * __Be resourceful.__ The Intune documentation helps users complete Intune-specific tasks, such as enrolling and troubleshooting devices. Users can click and access some articles directly from the Company Portal. These specific articles help explain the Company Portal app installation, Intune enrollment, general tasks that users can do on their devices, and troubleshooting. A list of this documentation is also found in the article, [Use managed devices to get work done](https://docs.microsoft.com/intune-user-help/use-managed-devices-to-get-work-done).
 
-* __Be accessible.__ Tell users where they can seek help for their device problems. When you [customize the Company Portal](../apps/company-portal-app.md), be sure to include your IT administrator's contact information.
+* __Be accessible.__ Tell users where they can seek help for their device problems. When you [customize the Company Portal](../intune/apps/company-portal-app.md), be sure to include your IT administrator's contact information.
 
 * __Be personal.__ Provide instructions that are specific to your organization's deployment. This action demonstrates to users that you care about their experience. Use this customizable [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit) to create your own enrollment instructions for your users.
 

@@ -78,4 +78,4 @@ For details on using the graph API to get up to one year of audit events, see [L
 
 [Send log data to storage, event hubs, or log analytics](review-logs-using-azure-monitor.md).
 
-[Review client app protection logs](../apps/app-protection-policy-settings-log.md).
+[Review client app protection logs](../intune/apps/app-protection-policy-settings-log.md).

@@ -37,7 +37,7 @@ You can set up Intune to enroll iOS/iPadOS devices purchased through Apple's [De
 To enable DEP enrollment, you use both the Intune and Apple Business Manager (ABM) or Apple School Manager (ASM) portals. A list of serial numbers or a purchase order number is required so you can assign devices to Intune for management in ABM/ASM. You create DEP enrollment profiles in Intune containing settings that are applied to devices during enrollment. Note that DEP enrollment cannot be used with a [device enrollment manager](device-enrollment-manager-enroll.md) account.
 
 > [!NOTE]
-> DEP sets device configurations that can't necessarily be removed by the end user. Therefore, before [migrating to DEP](../fundamentals/migration-guide-considerations.md), the device must be wiped to return it to an out-of-box (new) state.
+> DEP sets device configurations that can't necessarily be removed by the end user. Therefore, before [migrating to DEP](../intune/fundamentals/migration-guide-considerations.md), the device must be wiped to return it to an out-of-box (new) state.
 
 ## DEP and the Company Portal
 
@@ -45,7 +45,7 @@ DEP enrollments aren't compatible with the app store version of the Company Port
 
 To enable modern authentication during enrollment, push the app to the device using **Install Company Portal with VPP** (Volume Purchase Program) in the DEP profile. For more information, see [Automatically enroll iOS/iPadOS devices with Apple's Device Enrollment Program](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
-To enable the Company Portal to update automatically and provide the Company Portal app on devices already enrolled with DEP, deploy the Company Portal app through Intune as a required Volume Purchase Program (VPP) app with an [Application Configuration policy](../apps/app-configuration-policies-use-ios.md) applied.
+To enable the Company Portal to update automatically and provide the Company Portal app on devices already enrolled with DEP, deploy the Company Portal app through Intune as a required Volume Purchase Program (VPP) app with an [Application Configuration policy](../intune/apps/app-configuration-policies-use-ios.md) applied.
 
 ## What is supervised mode?
 
@@ -63,7 +63,7 @@ Support for unsupervised DEP devices was deprecated in iOS/iPadOS 11. In iOS/iPa
 -->
 ## Prerequisites
 - Devices purchased in [Apple's Device Enrollment Program](http://deploy.apple.com)
-- [Mobile Device Management (MDM) Authority](../fundamentals/mdm-authority-set.md)
+- [Mobile Device Management (MDM) Authority](../intune/fundamentals/mdm-authority-set.md)
 - [Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
 
 ## Get an Apple DEP token
@@ -122,7 +122,7 @@ In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink
 ### Step 4. Upload your token and choose scope tags.
 
 1. In the **Apple token** box, browse to the certificate (.pem) file, choose **Open**.
-2. If you want to apply [scope tags](../fundamentals/scope-tags.md) to this DEP token, choose **Scope (tags)**, and select the scope tags that you want. Scope tags applied to a token will be inherited by profiles and devices added to this token.
+2. If you want to apply [scope tags](../intune/fundamentals/scope-tags.md) to this DEP token, choose **Scope (tags)**, and select the scope tags that you want. Scope tags applied to a token will be inherited by profiles and devices added to this token.
 3. Choose **Create**.
 
 With the push certificate, Intune can enroll and manage iOS/iPadOS devices by pushing policy to enrolled mobile devices. Intune automatically synchronizes with Apple to see your enrollment program account.

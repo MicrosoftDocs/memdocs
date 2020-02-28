@@ -80,7 +80,7 @@ For important details about using the different issuers, review guidance for tha
 
 Plan to deploy the Intune Company Portal app to devices that will enroll for a derived credential. Device users use the Company Portal app to start the credential enrollment process.
 
-For iOS/iPadOS devices, see [Add iOS/iPadOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
+For iOS/iPadOS devices, see [Add iOS/iPadOS store apps to Microsoft Intune](../intune/apps/store-apps-ios.md).
 
 ## Plan for derived credentials
 
@@ -118,7 +118,7 @@ Review the [user workflow for DISA Purebred](https://docs.microsoft.com/intune-u
 
 - Use Intune to [deploy the DISA Purebred app](#deploy-the-disa-purebred-app) to devices that will enroll for a derived credential. This app must be deployed through Intune so that it’s managed, and can then work with the Intune Company Portal app. This app is used by device users to complete the derived credential request.
 
-- The DISA Purebred app requires a [per-app VPN](../configuration/vpn-settings-configure.md) to ensure the app can access DISA Purebred during enrollment for the derived credential.
+- The DISA Purebred app requires a [per-app VPN](../intune/configuration/vpn-settings-configure.md) to ensure the app can access DISA Purebred during enrollment for the derived credential.
 
 - Device users must work with a live agent during the enrollment process. During enrollment, time-limited one-time passcodes are provided to the user as they proceed through the enrollment process.
 
@@ -202,18 +202,18 @@ In addition to the deploying the app with Intune, configure an Intune per-app VP
 **Complete the following tasks**:
   
 1. Download the [DISA Purebred application](https://cyber.mil/pki-pke/purebred/).
-2. Deploy the DISA Purebred application in Intune.  See [Add an iOS/iPadOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
-3. [Create a per-app VPN](../configuration/vpn-settings-configure.md) for the DISA Purebred application.
+2. Deploy the DISA Purebred application in Intune.  See [Add an iOS/iPadOS line-of-business app to Microsoft Intune](../intune/apps/lob-apps-ios.md).
+3. [Create a per-app VPN](../intune/configuration/vpn-settings-configure.md) for the DISA Purebred application.
 
 ## Use derived credentials for authentication and S/MIME signing and encryption
 
 You can specify **Derived credential** for the following profile types and purposes:
 
 - [Applications](#use-derived-credentials-for-app-authentication)
-- [Email](../configuration/email-settings-ios.md)
-- [VPN](../configuration/vpn-settings-ios.md)
+- [Email](../intune/configuration/email-settings-ios.md)
+- [VPN](../intune/configuration/vpn-settings-ios.md)
 - [S/MIME signing and encryption](certificates-s-mime-encryption-sign.md)
-- [Wi-Fi](../configuration/wi-fi-settings-ios.md)
+- [Wi-Fi](../intune/configuration/wi-fi-settings-ios.md)
 
   For Wi-Fi profiles, *Authentication method* is available only when the **EAP type** is set to one of the following values:
   - EAP – TLS
@@ -274,4 +274,4 @@ After you delete an issuer and then add a new one, device users must request a n
 
 ## Next steps
 
-[Create device configuration profiles](../configuration/device-profile-create.md).
+[Create device configuration profiles](../intune/configuration/device-profile-create.md).

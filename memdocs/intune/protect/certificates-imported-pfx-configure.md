@@ -57,13 +57,13 @@ To use imported PKCS certificates with Intune, you'll need the following infrast
 
   This connector can automatically update itself when new versions become available. To use the update capability, you must ensure firewalls are open that allow the connector to contact **autoupdate.msappproxy.net** on port **443**.
 
-  For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
+  For more information, see [Network endpoints for Microsoft Intune](../intune/fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../intune/fundamentals/network-bandwidth-use.md).
 
 - **Windows Server**:
 
   You use a Windows Server to host the PFX Certificate Connector for Microsoft Intune.  The connector is used to process requests for certificates imported to Intune.
   
-  The connector requires access to the same ports as detailed for managed devices, as found in our [device endpoint content](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
+  The connector requires access to the same ports as detailed for managed devices, as found in our [device endpoint content](https://docs.microsoft.com/intune/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune supports install of the *Microsoft Intune Certificate Connector* on the same server as the *PFX Certificate Connector for Microsoft Intune*.
 
@@ -230,4 +230,4 @@ After importing the certificates to Intune, create a **PKCS imported certificate
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. [Assign](../configuration/device-profile-assign.md) the new device profile.
+The profile is created, but it's not doing anything yet. [Assign](../intune/configuration/device-profile-assign.md) the new device profile.

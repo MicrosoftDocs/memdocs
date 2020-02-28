@@ -102,4 +102,4 @@ Once the configuration files have been modified, you will need to restart the In
 
 ## Next steps
 
-[Manage your devices](../remote-actions/device-management.md)
+[Manage your devices](../intune/remote-actions/device-management.md)

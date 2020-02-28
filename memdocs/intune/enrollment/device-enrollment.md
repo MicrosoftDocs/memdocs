@@ -80,7 +80,7 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Android Device Admin**|**[DEM](#device-enrollment-manager) initiated via Company Portal**| No | No | No |[More information](device-enrollment-manager-enroll.md)|
 |**Android Device Admin**|**(Pre-declared IMEI or SN) User initiated via Company Portal**| No | Yes | No | [More information](./../corporate-identifiers-add.md)|
-|**Android Device Admin with Zebra Mobility Extensions**|**User or [DEM](#device-enrollment-manager) initiated via Company Portal**| No | Yes if user initiated, No if [DEM](#device-enrollment-manager) initiated | No | [More information](../configuration/android-zebra-mx-overview.md)|
+|**Android Device Admin with Zebra Mobility Extensions**|**User or [DEM](#device-enrollment-manager) initiated via Company Portal**| No | Yes if user initiated, No if [DEM](#device-enrollment-manager) initiated | No | [More information](../intune/configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise Dedicated**|**NFC, Token, QR code, Zero Touch**| Yes | No | Configurable via policy | [More information](android-kiosk-enroll.md)|
 |**Android Enterprise Fully Managed**|**NFC, Token, QR code, Zero Touch**| Yes | Yes | Configurable via policy | [More information](android-dedicated-devices-fully-managed-enroll.md)|
 

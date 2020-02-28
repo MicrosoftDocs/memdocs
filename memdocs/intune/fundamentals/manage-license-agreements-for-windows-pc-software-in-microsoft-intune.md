@@ -92,7 +92,7 @@ Intune Volume Licensing agreements provide license information for software that
 
         `01-07001, 01-07001, Office agreements`
 
-    - **Manually add agreement details**. Provide the following information, and then type the agreement number pairs in the **Authorization/Agreement number** and **License/Enrollment/Customer number** boxes. After you type both numbers, choose the **Add pair** icon to save your numbers, and then optionally add a new pair.
+    - **Manually add agreement details**. Provide the following information, and then type the agreement number pairs in the **Authorization/Agreement number** and **License/intune/enrollment/Customer number** boxes. After you type both numbers, choose the **Add pair** icon to save your numbers, and then optionally add a new pair.
 
         - **Agreement name** - Specify a unique name for the agreement.
 
@@ -100,7 +100,7 @@ Intune Volume Licensing agreements provide license information for software that
 
         - **Authorization/Agreement number** - Enter the authorization/agreement number of the license pair.
 
-        - **License/Enrollment/Customer number** - Enter the license/enrollment/customer number of the license pair.
+        - **License/intune/enrollment/Customer number** - Enter the license/intune/enrollment/customer number of the license pair.
 
         > [!NOTE]
         > If you add several agreement number pairs, Intune creates one agreement with the name that you specify, and all pairs that you added are a part of this agreement.

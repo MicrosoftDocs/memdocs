@@ -116,7 +116,7 @@ After you create the apps, return here to create the synchronization group and a
 
 4. Select **Create** to save the group.
 
-For more information, see [Deploy apps](../apps/apps-deploy.md)
+For more information, see [Deploy apps](../intune/apps/apps-deploy.md)
 
 ### Assign the Wandera apps to the synchronization group  
 Repeat the following procedure for the Wandera app you created for iOS/iPadOS and for Android.

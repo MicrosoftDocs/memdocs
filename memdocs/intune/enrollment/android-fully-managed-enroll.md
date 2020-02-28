@@ -54,7 +54,7 @@ There is no restriction on device manufacturer/OEM if the above requirements are
 
 To set up Android Enterprise fully managed device management, follow these steps:
 
-1. To prepare to manage mobile devices, you must [set the mobile device management (MDM) authority to **Microsoft Intune**](../fundamentals/mdm-authority-set.md). You set this item only once, when you're first setting up Intune for mobile device management.
+1. To prepare to manage mobile devices, you must [set the mobile device management (MDM) authority to **Microsoft Intune**](../intune/fundamentals/mdm-authority-set.md). You set this item only once, when you're first setting up Intune for mobile device management.
 2. [Connect your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).
 3. [Enable corporate-owned user devices](#enable-corporate-owned-user-devices)
 4. [Enroll the fully managed devices](#enroll-the-fully-managed-devices).
@@ -73,6 +73,6 @@ When this setting is set to **Yes**, it provides you with an enrollment token (a
 You can now [enroll your fully managed devices](android-dedicated-devices-fully-managed-enroll.md).
 
 ## Next steps
-- [Add Android Enterprise fully managed device configuration policies](../configuration/device-restrictions-android-for-work.md#device-owner-only)
-- [Configure app configuration policies for Android Enterprise fully managed devices](../apps/app-configuration-policies-use-android.md)
+- [Add Android Enterprise fully managed device configuration policies](../intune/configuration/device-restrictions-android-for-work.md#device-owner-only)
+- [Configure app configuration policies for Android Enterprise fully managed devices](../intune/apps/app-configuration-policies-use-android.md)
 

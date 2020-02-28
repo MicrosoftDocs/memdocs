@@ -97,7 +97,7 @@ An [Intune software client](manage-windows-pcs-with-microsoft-intune.md) can be 
 > [!Note]
 > Microsoft announced that Windows 7 support ends on January 14th 2020. On this date, Intune also retires support for devices running Windows 7.
 >
-> For more information, see [Intune plan for change: end of support for Windows 7](https://docs.microsoft.com/intune/fundamentals/whats-new#windows-7-ends-extended-support-).
+> For more information, see [Intune plan for change: end of support for Windows 7](https://docs.microsoft.com/intune/intune/fundamentals/whats-new#windows-7-ends-extended-support-).
 >
 > Microsoft Intune will retire support for the Silverlight-based Intune console on October 15, 2020. This retirement includes ending support for the Silverlight console configured PC software client (also known as the PC agent).
 >
@@ -105,7 +105,7 @@ An [Intune software client](manage-windows-pcs-with-microsoft-intune.md) can be 
 
 <!--  ### Exchange ActiveSync management
 
-You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#mobile-device-management-with-exchange-activesync-and-intune) from the Intune console. This option provides a limited set of management capabilities when compared to the other methods. See [Capabilities of built-in Mobile Device Management in Office 365](https://support.office.com/article/Capabilities-of-built-in-Mobile-Device-Management-for-Office-365-a1da44e5-7475-4992-be91-9ccec25905b0) for a list of supported devices.  -->
+You can manage [Exchange ActiveSync devices](../intune/enrollment/device-enrollment.md#mobile-device-management-with-exchange-activesync-and-intune) from the Intune console. This option provides a limited set of management capabilities when compared to the other methods. See [Capabilities of built-in Mobile Device Management in Office 365](https://support.office.com/article/Capabilities-of-built-in-Mobile-Device-Management-for-Office-365-a1da44e5-7475-4992-be91-9ccec25905b0) for a list of supported devices.  -->
 
 ## Intune supported web browsers
 

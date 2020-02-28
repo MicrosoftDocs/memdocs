@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Add Microsoft Edge for Windows 10 to Microsoft Intune
 
-Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](~/apps/apps-add.md#app-types-in-microsoft-intune) is Microsoft Edge *version 77 and later*. By selecting this app type in Intune, you can assign and install Microsoft Edge *version 77 and later* to devices you manage that run Windows 10.
+Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](~/intune/apps/apps-add.md#app-types-in-microsoft-intune) is Microsoft Edge *version 77 and later*. By selecting this app type in Intune, you can assign and install Microsoft Edge *version 77 and later* to devices you manage that run Windows 10.
 
 > [!IMPORTANT]
 > This app type is in **public preview** and offers stable, beta, and dev channels for Windows 10. The deployment is in English (EN) only, however end users can change the display language in the browser under **Settings** > **Languages**. Microsoft Edge is a Win32 app installed in system context and on like architectures (x86 app on x86 OS, and x64 app on x64 OS). Intune will detect any preexisting Microsoft Edge installations. If it is installed in user context, a system installation will overwrite it. If it is installed in system context, installion success is reported. In addition, automatic updates of Microsoft Edge are **On** by default.
@@ -38,7 +38,7 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 > [!NOTE]
 > Microsoft Edge *version 77 and later* is available for macOS as well.
 > 
-> You cannot use the built-in application deployment of Microsoft Edge for workplace join computers. Built-in application deployment requires the Intune management extension, which only exists for AAD joined devices. You can still deploy Microsoft Edge *version 77 and later* using an *.msi* uploaded to **Apps**, see [Add a Windows line-of-business app to Microsoft Intune](~/apps/lob-apps-windows.md).
+> You cannot use the built-in application deployment of Microsoft Edge for workplace join computers. Built-in application deployment requires the Intune management extension, which only exists for AAD joined devices. You can still deploy Microsoft Edge *version 77 and later* using an *.msi* uploaded to **Apps**, see [Add a Windows line-of-business app to Microsoft Intune](~/intune/apps/lob-apps-windows.md).
 
 ## Prerequisites
 - Windows 10 RS2 and above is required.
@@ -121,7 +121,7 @@ When you need to uninstall Microsoft Edge from user's devices, use the following
 
 ## Troubleshooting
 **Microsoft Edge version 77 and later for Windows 10:**<br>
-Intune uses the Intune management extension to download and deploy the Microsoft Edge installer to assigned Windows 10 devices, then communicates the deployment settings to the Microsoft Edge installer, which downloads and installs the Microsoft Edge browser directly from the CDN. Reference the [prerequisites for the Intune management extension](~/apps/intune-management-extension.md#prerequisites), and the best practices outlined in accessing Azure Update Service and the CDN to ensure that your network configuration permits Windows 10 devices to access these locations. In addition, to allow access to installation files from a CDN to install the browser, you need to allow access to Windows Update endpoints. For more information, see [Manage connection endpoints for Windows 10, version 1809 – Windows Update](https://docs.microsoft.com/windows/privacy/manage-windows-1809-endpoints#windows-update) and [Network endpoints for Microsoft Intune](~/fundamentals/intune-endpoints.md).
+Intune uses the Intune management extension to download and deploy the Microsoft Edge installer to assigned Windows 10 devices, then communicates the deployment settings to the Microsoft Edge installer, which downloads and installs the Microsoft Edge browser directly from the CDN. Reference the [prerequisites for the Intune management extension](~/intune/apps/intune-management-extension.md#prerequisites), and the best practices outlined in accessing Azure Update Service and the CDN to ensure that your network configuration permits Windows 10 devices to access these locations. In addition, to allow access to installation files from a CDN to install the browser, you need to allow access to Windows Update endpoints. For more information, see [Manage connection endpoints for Windows 10, version 1809 – Windows Update](https://docs.microsoft.com/windows/privacy/manage-windows-1809-endpoints#windows-update) and [Network endpoints for Microsoft Intune](~/intune/fundamentals/intune-endpoints.md).
 
 ## Next steps
-- [Assign apps to groups](~/apps/apps-deploy.md)
+- [Assign apps to groups](~/intune/apps/apps-deploy.md)

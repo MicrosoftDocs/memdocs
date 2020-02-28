@@ -40,7 +40,7 @@ This article describes these settings.
 [Create a device profile](device-profile-create.md).
 
 > [!NOTE]
-> These settings are available for all enrollment types. For more information on the enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
+> These settings are available for all enrollment types. For more information on the enrollment types, see [macOS enrollment](../intune/enrollment/macos-enroll.md).
 
 ## Basic profiles
 

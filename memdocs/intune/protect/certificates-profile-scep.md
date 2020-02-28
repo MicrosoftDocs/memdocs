@@ -269,7 +269,7 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 ## Assign the certificate profile
 
-Assign SCEP certificate profiles the same way you [deploy device profiles](../configuration/device-profile-assign.md) for other purposes. However, consider the following before you continue:
+Assign SCEP certificate profiles the same way you [deploy device profiles](../intune/configuration/device-profile-assign.md) for other purposes. However, consider the following before you continue:
 
 - When you assign SCEP certificate profiles to groups, the Trusted Root CA certificate file (as specified in the *trusted certificate profile*) is installed on the device. The device uses the SCEP certificate profile to create a certificate request for that Trusted Root CA certificate.
 
@@ -288,6 +288,6 @@ Assign SCEP certificate profiles the same way you [deploy device profiles](../co
 
 ## Next steps
 
-[Assign profiles](../configuration/device-profile-assign.md)
+[Assign profiles](../intune/configuration/device-profile-assign.md)
 
-[Troubleshoot deployment of SCEP certificate profiles](../protect/troubleshoot-scep-certificate-profiles.md)
+[Troubleshoot deployment of SCEP certificate profiles](../intune/protect/troubleshoot-scep-certificate-profiles.md)

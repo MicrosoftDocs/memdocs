@@ -66,5 +66,5 @@ We have created short, step-by-step videos to aid your users in easily enrolling
 Intune has additional resources you can use to promote device enrollment with your users:
 
 - [How to educate your end users about Microsoft Intune](end-user-educate.md) breaks out enrollment steps by mobile OS platform.
-- The [Intune device enrollment for IT administrators](../enrollment/device-enrollment.md) explains how to enroll Android, iOS/iPadOS, and Mac devices in Intune.
+- The [Intune device enrollment for IT administrators](../intune/enrollment/device-enrollment.md) explains how to enroll Android, iOS/iPadOS, and Mac devices in Intune.
 - Share the Company Portal app with your Android, iOS/iPadOS, and Windows users.

@@ -37,20 +37,20 @@ To support [Android Enterprise work profile](android-work-profile-enroll.md), [A
 
 To make it easier for you to configure and use Android Enterprise management, upon connecting to Google Play, Intune will automatically add four common Android Enterprise related apps to the Intune admin console. The four Android Enterprise apps are the following:
 
-- **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed scenarios.
-- **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign-in to your accounts if you use two-factor verification.
-- **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used for App Protection Policies (APP) and Android Enterprise work profile scenarios.
-- [Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise) - Used for Android Enterprise dedicated/kiosk scenarios.
+- **[Microsoft Intune](https://play.google.com/store/intune/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed scenarios.
+- **[Microsoft Authenticator](https://play.google.com/store/intune/apps/details?id=com.azure.authenticator)** - Helps you sign-in to your accounts if you use two-factor verification.
+- **[Intune Company Portal](https://play.google.com/store/intune/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used for App Protection Policies (APP) and Android Enterprise work profile scenarios.
+- [Managed Home Screen](https://play.google.com/store/intune/apps/details?id=com.microsoft.launcher.enterprise) - Used for Android Enterprise dedicated/kiosk scenarios.
 
 > [!NOTE]
 > Due to interaction between Google and Microsoft domains, this step may require that you adjust your browser settings.  Make sure that "portal.azure.com" and "play.google.com" are in the same security zone in your browser.
 
-1. If you haven’t already, prepare for mobile device management by  [setting the mobile device management authority](../fundamentals/mdm-authority-set.md) as **Microsoft Intune**.
+1. If you haven’t already, prepare for mobile device management by  [setting the mobile device management authority](../intune/fundamentals/mdm-authority-set.md) as **Microsoft Intune**.
 2. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Android** > **Android enrollment** > **Managed Google Play**.  If you are using a custom Intune admin role, access to this requires Organization Read and Update permissions.
    
    ![Android enterprise enrollment screen](./media/connect-intune-android-enterprise/android-work-bind.png)
 
-3. Choose **I agree** to grant Microsoft permission to [send user and device information to Google](../protect/data-intune-sends-to-google.md). 
+3. Choose **I agree** to grant Microsoft permission to [send user and device information to Google](../intune/protect/data-intune-sends-to-google.md). 
    
 4. Choose **Launch Google to connect now** to open the Managed Google Play website. The website opens on a new tab in your browser.
   

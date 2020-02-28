@@ -67,8 +67,8 @@ Intune can request the Activation Lock status of supervised devices that run iOS
 Before you can disable Activation Lock on devices, you must enable it by following these instructions:
 
 1. Configure an Intune device restriction profile for iOS/iPadOS using the information in [How to configure device restriction settings](/intune-azure/configure-devices/how-to-configure-device-restrictions).
-2. In the [device restriction settings for iOS](../configuration/device-restrictions-ios.md), under the **General** settings, enable the option **Activation Lock**.
-3. Save the profile, and then [assign it](../configuration/device-profile-assign.md) to the devices on which you want to manage Disable Activation Lock.
+2. In the [device restriction settings for iOS](../intune/configuration/device-restrictions-ios.md), under the **General** settings, enable the option **Activation Lock**.
+3. Save the profile, and then [assign it](../intune/configuration/device-profile-assign.md) to the devices on which you want to manage Disable Activation Lock.
 
 
 ## How to use Disable Activation Lock

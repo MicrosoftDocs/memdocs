@@ -65,7 +65,7 @@ As you dig in to this reporting, you can also see any specific compliance polici
 The **Device compliance status** chart shows the compliance states for all Intune enrolled devices. The device compliance states are kept in two different databases: Intune and Azure Active Directory.
 
 > [!IMPORTANT]
-> Intune follows the device check-in schedule for all compliance evaluations on the device. [Learn more about the device check-in schedule](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+> Intune follows the device check-in schedule for all compliance evaluations on the device. [Learn more about the device check-in schedule](../intune/configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 Descriptions of the different device compliance policy states:
 
@@ -168,7 +168,7 @@ In addition to using the charts on *Compliance status*, you can go to **Reports*
    - Windows health attestation report
    - Threat agent status
 
-For more information about reports, see [Intune reports](../fundamentals/reports.md)
+For more information about reports, see [Intune reports](../intune/fundamentals/reports.md)
 
 ## View status of device policies
 

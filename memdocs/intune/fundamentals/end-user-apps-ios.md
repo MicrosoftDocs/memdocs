@@ -53,7 +53,7 @@ Enrolled users get their apps by tapping on the following tiles on the Apps scre
 
 ![iOS Company Portal apps screen](./media/end-user-apps-ios/ios-cp-app-main-apps-screen.png)
 
-For information on how to add apps, see [How to add an app to Microsoft Intune](../apps/apps-add.md).
+For information on how to add apps, see [How to add an app to Microsoft Intune](../intune/apps/apps-add.md).
 
 ## See also
 

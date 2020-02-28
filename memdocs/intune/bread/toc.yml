@@ -17,23 +17,23 @@
           tocHref: /intune-user-help/
           topicHref: /intune-user-help/
         - name: Apps
-          tocHref: /intune/apps/
-          topicHref: /intune/apps/
+          tocHref: /intune/intune/apps/
+          topicHref: /intune/intune/apps/
         - name: Fundamentals
-          tocHref: /intune/fundamentals/
-          topicHref: /intune/fundamentals/
+          tocHref: /intune/intune/fundamentals/
+          topicHref: /intune/intune/fundamentals/
         - name: Enrollment
-          tocHref: /intune/enrollment/
-          topicHref: /intune/enrollment/
+          tocHref: /intune/intune/enrollment/
+          topicHref: /intune/intune/enrollment/
         - name: Remote actions
-          tocHref: /intune/remote-actions/
-          topicHref: /intune/remote-actions/
+          tocHref: /intune/intune/remote-actions/
+          topicHref: /intune/intune/remote-actions/
         - name: Configuration
-          tocHref: /intune/configuration/
-          topicHref: /intune/configuration/
+          tocHref: /intune/intune/configuration/
+          topicHref: /intune/intune/configuration/
         - name: Protect
-          tocHref: /intune/protect/
-          topicHref: /intune/protect/
+          tocHref: /intune/intune/protect/
+          topicHref: /intune/intune/protect/
         - name: Developer
           tocHref: /intune/developer/
           topicHref: /intune/developer/

@@ -33,7 +33,7 @@ In this quickstart, you'll create a user and then assign the user an Intune lice
 
 ## Prerequisites
 
-- A Microsoft Intune subscription. [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+- A Microsoft Intune subscription. [Sign up for a free trial account](../intune/fundamentals/free-trial-sign-up.md).
 
 ## Sign in to Intune in Microsoft Endpoint Manager
 

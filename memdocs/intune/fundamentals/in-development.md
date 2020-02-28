@@ -97,7 +97,7 @@ On iOS/iPadOS devices, you can create a VPN profile that uses an IKEv2 connectio
 
 On iOS/iPadOS, always-on VPN is limited to IKEv2 profiles.
 
-To see the current IKEv2 settings you can configure, go to [Add VPN settings on iOS/iPadOS devices in Microsoft Intune](../configuration/vpn-settings-ios.md#ikev2-settings).
+To see the current IKEv2 settings you can configure, go to [Add VPN settings on iOS/iPadOS devices in Microsoft Intune](../intune/configuration/vpn-settings-ios.md#ikev2-settings).
 
 Applies to:
 - iOS

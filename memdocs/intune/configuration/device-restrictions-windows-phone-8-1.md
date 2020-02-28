@@ -74,7 +74,7 @@ To configure the list, click **Add**, then specify a name of your choice, option
 
 To specify an app URL in the allowed and blocked apps list, use the following format:
 
-From the [Windows Phone Store](https://www.microsoft.com/store/apps/windows-phone) page, search for the app that you want to use.
+From the [Windows Phone Store](https://www.microsoft.com/store/intune/apps/windows-phone) page, search for the app that you want to use.
 
 Open the app’s page, and copy the URL to the clipboard. You can now use this as the URL in either the allowed or blocked apps list.
 

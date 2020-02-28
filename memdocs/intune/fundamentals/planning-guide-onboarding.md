@@ -94,49 +94,49 @@ Before you can begin to set up, configure, manage and enroll devices using Intun
 
 By default, most device platforms are enabled except for Apple devices (iOS/iPadOS and Mac). Before iOS/iPadOS devices can be enrolled and managed in Intune, the device platform must be enabled. To do so, you need to create an MDM Push certificate, and add it to Intune.
 
-- Learn more about [how to enable Apple devices for enrollment](../enrollment/apple-mdm-push-certificate-get.md).
+- Learn more about [how to enable Apple devices for enrollment](../intune/enrollment/apple-mdm-push-certificate-get.md).
 
 ### Task 7: Add and deploy terms and conditions policies
 
 Intune supports terms and conditions policies. Add terms and conditions policies as appropriate and deploy them to targeted groups based on your Intune deployment use cases and requirements.
 
-- Learn more about [how to add and deploy terms and condition policies](../enrollment/terms-and-conditions-create.md).
+- Learn more about [how to add and deploy terms and condition policies](../intune/enrollment/terms-and-conditions-create.md).
 
 ### Task 8: Add and deploy configuration policies
 
 Intune supports two types of configuration policies, general and custom. Add the configuration policies as appropriate and deploy them to targeted groups based on your Intune deployment use cases and requirements.
 
-- Learn more about [how to add and deploy configuration policies](../configuration/device-profiles.md).
+- Learn more about [how to add and deploy configuration policies](../intune/configuration/device-profiles.md).
 
 ### Task 9: Add and deploy resource profiles
 
 Intune supports email, Wi-Fi, and VPN profiles. Add these profiles as appropriate and deploy them to targeted groups based on your Intune deployment use cases and requirements.
 
-- Learn more about [how to enable access to company resources with Intune](../configuration/device-profiles.md).
+- Learn more about [how to enable access to company resources with Intune](../intune/configuration/device-profiles.md).
 
 ### Task 10: Add and deploy apps
 
 Intune supports the deployment of web, line-of-business, and public Store apps. You can also manage apps that have integrated the Intune SDK by associating them with app protection policies. Add apps as appropriate and deploy them to targeted groups based on your Intune deployment use cases and requirements.
 
-- Learn more about [adding and deploying apps](../apps/app-management.md).
+- Learn more about [adding and deploying apps](../intune/apps/app-management.md).
 
 ### Task 11: Add and deploy compliance policies
 
 Intune supports compliance policies. Add compliance policies as appropriate and deploy them to targeted groups based on your Intune deployment use cases and requirements.
 
-- Learn more about [compliance policies](../protect/device-compliance-get-started.md).
+- Learn more about [compliance policies](../intune/protect/device-compliance-get-started.md).
 
 ### Task 12: Enable Conditional Access policies
 
 Intune supports Conditional Access for Exchange Online, Exchange on-premises, SharePoint Online, Skype for Business Online, and Dynamics CRM Online. Enable and configure Conditional Access as appropriate based on your Intune deployment use cases and requirements.
 
-- Learn more about [Conditional Access](../protect/conditional-access.md).
+- Learn more about [Conditional Access](../intune/protect/conditional-access.md).
 
 ### Task 13: Enroll devices
 
 Intune supports iOS/iPadOS, Mac OS, Android, Windows desktop, and Windows mobile device platforms. Enroll mobile device platforms as appropriate based on your Intune deployment use cases and requirements.
 
-- Learn more about [how to enroll devices](../enrollment/device-enrollment.md).
+- Learn more about [how to enroll devices](../intune/enrollment/device-enrollment.md).
 
 
 ## Next steps

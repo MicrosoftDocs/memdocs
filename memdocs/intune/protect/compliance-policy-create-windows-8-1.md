@@ -121,6 +121,6 @@ Windows 8.1 PCs return a version of **3**. If the OS version rule is set to Wind
 
 ## Next steps
 
-- [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../fundamentals/scope-tags.md).
+- [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../intune/fundamentals/scope-tags.md).
 - [Monitor your compliance policies](compliance-policy-monitor.md).
 - See the [compliance policy settings for Windows 10 and later](compliance-policy-create-windows.md) devices.

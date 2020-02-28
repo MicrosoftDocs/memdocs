@@ -63,21 +63,21 @@ You may get a message that some features are disabled. These messages can happen
 
 **Possible solutions**: Enable these features. For guidance, see:
 
-- [Add endpoint protection settings](../protect/endpoint-protection-configure.md)
-- [Microsoft Defender Antivirus](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)
+- [Add endpoint protection settings](../intune/protect/endpoint-protection-configure.md)
+- [Microsoft Defender Antivirus](../intune/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)
 - [End users: Turn on real-time protection to access company resources](/intune-user-help/turn-on-defender-windows)
 
 ### Malware definitions out of date
 
 This status shows when the malware definitions on the device are out of date by 14 days or more. For example, the message may show if the device is disconnected from the Internet, or the malware definitions are outdated.
 
-**Possible solutions**: If malware definitions are out of date, update the definitions using [Microsoft Defender Antivirus](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).
+**Possible solutions**: If malware definitions are out of date, update the definitions using [Microsoft Defender Antivirus](../intune/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).
 
 ### Full scan overdue or Quick scan overdue
 
 A full scan or quick scan hasn't completed for 14 days. This scenario can happen if the device restarts during a full scan.
 
-**Possible solutions**: If a scan is overdue, you can run a one-time scan or schedule recurring scans. See [Microsoft Defender Antivirus](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).
+**Possible solutions**: If a scan is overdue, you can run a one-time scan or schedule recurring scans. See [Microsoft Defender Antivirus](../intune/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).
 
 ### Another endpoint protection application running
 

@@ -52,7 +52,7 @@ If your organization is already using Office 365, Intune must use the same Azure
 
 ### PKI (optional)
 
-If you're planning to use certificate-based authentication for VPN, Wi-Fi, or e-mail profiles with Intune, you’ll need to make sure that you have a supported [PKI infrastructure in place](../protect/certificates-configure.md), ready to create and deploy certificate profiles. Learn more about configuring certificates in Intune:
+If you're planning to use certificate-based authentication for VPN, Wi-Fi, or e-mail profiles with Intune, you’ll need to make sure that you have a supported [PKI infrastructure in place](../intune/protect/certificates-configure.md), ready to create and deploy certificate profiles. Learn more about configuring certificates in Intune:
 
 - [How to configure the certificate infrastructure for SCEP](/intune/certificates-scep-configure)
 

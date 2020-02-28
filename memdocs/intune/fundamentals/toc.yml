@@ -44,7 +44,7 @@
   - name: Device lifecycle
     href: device-lifecycle.md
   - name: App lifecycle
-    href: ../apps/app-lifecycle.md
+    href: ../intune/apps/app-lifecycle.md
   - name: Guided scenarios
     items: 
     - name: Guided scenarios overview
@@ -133,13 +133,13 @@
       - name: How to get Windows apps
         href: end-user-apps-windows.md
       - name: Data Intune sends to Apple
-        href: ../protect/data-intune-sends-to-apple.md
+        href: ../intune/protect/data-intune-sends-to-apple.md
       - name: Data Intune sends to Google
-        href: ../protect/data-intune-sends-to-google.md
+        href: ../intune/protect/data-intune-sends-to-google.md
       - name: Data Apple sends to Intune
-        href: ../protect/data-apple-sends-to-intune.md
+        href: ../intune/protect/data-apple-sends-to-intune.md
       - name: Data Google sends to Intune
-        href: ../protect/data-google-sends-to-intune.md      
+        href: ../intune/protect/data-google-sends-to-intune.md      
   - name: Set up Intune
     items:
     - name: Steps to set up Intune
@@ -181,19 +181,19 @@
       - name: Use scope tags
         href: scope-tags.md
   - name: Enroll devices
-    href: ../enrollment/index.yml
+    href: ../intune/enrollment/index.yml
   - name: Remotely manage devices
-    href: ../remote-actions/index.yml  
+    href: ../intune/remote-actions/index.yml  
   - name: Create compliance rules
-    href: ../protect/index.yml  
+    href: ../intune/protect/index.yml  
   - name: Control device features and settings
-    href: ../configuration/index.yml  
+    href: ../intune/configuration/index.yml  
   - name: Protect devices and data
-    href: ../protect/index.yml   
+    href: ../intune/protect/index.yml   
   - name: Manage and protect apps
-    href: ../apps/index.yml  
+    href: ../intune/apps/index.yml  
   - name: Use policy sets
-    href: ~/fundamentals/policy-sets.md      
+    href: ~/intune/fundamentals/policy-sets.md      
   - name: Developer guidance
     href: ../developer/index.yml     
 

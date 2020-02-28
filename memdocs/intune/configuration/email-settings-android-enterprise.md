@@ -39,7 +39,7 @@ To learn more about email profiles in Intune, see [configure email settings](ema
 
 ## Before you begin
 
-Create a [device configuration profile](email-settings-configure.md#create-a-device-profile) (choose the work profile), or create an [app configuration policy](../apps/app-configuration-policies-use-android.md).
+Create a [device configuration profile](email-settings-configure.md#create-a-device-profile) (choose the work profile), or create an [app configuration policy](../intune/apps/app-configuration-policies-use-android.md).
 
 ## Android Enterprise
 

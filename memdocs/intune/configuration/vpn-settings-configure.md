@@ -54,19 +54,19 @@ You can create VPN profiles using the following connection types:
 |Check Point Capsule VPN|- Android<br/>- Android Enterprise work profiles<br/>- iOS/iPadOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
 |Cisco AnyConnect|- Android<br/>- Android Enterprise work profiles<br/>- Android Enterprise device owner (fully managed)<br/>- iOS/iPadOS<br/>- macOS|
 |Cisco (IPSec)|iOS/iPadOS|
-|Citrix SSO|- Android<br/>- Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)<br/>- Android Enterprise device owner (fully managed): Use [app configuration policy](../apps/app-configuration-policies-use-android.md)<br/>- iOS/iPadOS<br/>- Windows 10|
+|Citrix SSO|- Android<br/>- Android Enterprise work profiles: Use [app configuration policy](../intune/apps/app-configuration-policies-use-android.md)<br/>- Android Enterprise device owner (fully managed): Use [app configuration policy](../intune/apps/app-configuration-policies-use-android.md)<br/>- iOS/iPadOS<br/>- Windows 10|
 |Custom VPN|- iOS/iPadOS<br/>- macOS|
 |F5 Access|- Android<br/>- Android Enterprise work profiles<br/>- Android Enterprise device owner (fully managed)<br/>- iOS/iPadOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
 |IKEv2| - iOS/iPadOS<br/>- Windows 10|
 |L2TP|Windows 10|
-|Palo Alto Networks GlobalProtect|- Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)<br/>- iOS/iPadOS<br/>- Windows 10|
+|Palo Alto Networks GlobalProtect|- Android Enterprise work profiles: Use [app configuration policy](../intune/apps/app-configuration-policies-use-android.md)<br/>- iOS/iPadOS<br/>- Windows 10|
 |PPTP|Windows 10|
 |Pulse Secure|- Android<br/>- Android Enterprise work profiles<br/>- Android Enterprise device owner (fully managed)<br/>- iOS/iPadOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
 |SonicWall Mobile Connect|- Android<br/>- Android Enterprise work profiles<br/>- iOS/iPadOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
-|Zscaler|- Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)<br/>- iOS/iPadOS|
+|Zscaler|- Android Enterprise work profiles: Use [app configuration policy](../intune/apps/app-configuration-policies-use-android.md)<br/>- iOS/iPadOS|
 
 > [!IMPORTANT]
-> Before you can use VPN profiles assigned to a device, you must install the applicable VPN app for the profile. You can use the information in the [What is app management in Microsoft Intune?](../apps/app-management.md) article to help you assign the app by using Intune.  
+> Before you can use VPN profiles assigned to a device, you must install the applicable VPN app for the profile. You can use the information in the [What is app management in Microsoft Intune?](../intune/apps/app-management.md) article to help you assign the app by using Intune.  
 
 Learn how to  create custom VPN profiles by using URI settings in [Create a profile with custom settings](custom-settings-configure.md).
 
@@ -113,7 +113,7 @@ VPN profiles can use a number of different connection types and protocols from d
 
 When you create the VPN profile, you choose a SCEP or PKCS certificate profile that you previously created in Intune. This profile is known as the identity certificate. It's used to authenticate against a trusted certificate profile (or *root certificate*) that you create to allow the user’s device to connect. The trusted certificate is assigned to the computer that authenticates the VPN connection, typically, the VPN server.
 
-For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
+For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Microsoft Intune](../intune/protect/certificates-configure.md).
 
 ### User name and password
 

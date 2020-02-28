@@ -45,7 +45,7 @@ To learn more about the Windows kiosk feature in Intune, see [configure kiosk se
   1. Create this kiosk profile to run the device in kiosk mode.
   2. Create the [device restrictions profile](device-restrictions-windows-10.md#microsoft-edge-browser), and configure specific features and settings allowed in Microsoft Edge.
 
-- Be sure that any files, scripts, and shortcuts are on the local system. For more information, including other Windows requirements, see [Customize and export Start layout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
+- Be sure that any files, scripts, and shortcuts are on the local system. For more information, including other Windows requirements, see [Customize and export Start layout](https://docs.microsoft.com/windows/intune/configuration/customize-and-export-start-layout).
 
 > [!IMPORTANT]
 > Be sure to assign this kiosk profile to the same devices as your [Microsoft Edge profile](device-restrictions-windows-10.md#microsoft-edge-browser).
@@ -65,7 +65,7 @@ Runs only one app on the device.
 
   - **Add Microsoft Edge browser**: Select **Microsoft Edge browser**, and choose the **Edge kiosk mode type**:
 
-    - **Digital/Interactive signage**: Opens a URL full screen, and only shows the content on that website. [Set up digital signs](https://docs.microsoft.com/windows/configuration/setup-digital-signage) provides more information on this feature.
+    - **Digital/Interactive signage**: Opens a URL full screen, and only shows the content on that website. [Set up digital signs](https://docs.microsoft.com/windows/intune/configuration/setup-digital-signage) provides more information on this feature.
     - **Public browsing (InPrivate)**: Runs a limited multi-tab version of Microsoft Edge. Users can browse publically or end their browsing session.
 
     For more information on these options, see [Deploy Microsoft Edge kiosk mode](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
@@ -73,7 +73,7 @@ Runs only one app on the device.
     > [!NOTE]
     > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, create a device configuration profile (**Device Configuration** > **Profiles** > **Create profile** > **Windows 10** for platform > **Device Restrictions** >  **Microsoft Edge Browser**). [Microsoft Edge browser](device-restrictions-windows-10.md#microsoft-edge-browser) lists and describes the available settings.
 
-  - **Add Kiosk browser**: Select **Kiosk browser settings**. These settings control a web browser app on the kiosk. Be sure you get the [Kiosk browser app](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) from the Store, add it to Intune as a [Client App](../apps/apps-add.md). Then, assign the app to the kiosk devices.
+  - **Add Kiosk browser**: Select **Kiosk browser settings**. These settings control a web browser app on the kiosk. Be sure you get the [Kiosk browser app](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) from the Store, add it to Intune as a [Client App](../intune/apps/apps-add.md). Then, assign the app to the kiosk devices.
 
     Enter the following settings:
 
@@ -104,7 +104,7 @@ Runs only one app on the device.
 
   - **Add Store app**: Select **Add a store app**, and choose an app from the list.
 
-    Don't have any apps listed? Add some using the steps at [Client Apps](../apps/apps-add.md).
+    Don't have any apps listed? Add some using the steps at [Client Apps](../intune/apps/apps-add.md).
     
  - **Specify Maintenance Window for App Restarts**: Default is "Not Configured," select "Require" to check for apps that require a restart to complete installation.
  
@@ -132,7 +132,7 @@ Apps in this mode are available on the start menu. These apps are the only apps 
   - **Auto logon (Windows 10 version 1803 and later)**: Use on kiosks in public-facing environments that don't require the user to sign in, similar to a guest account. This setting uses the [AssignedAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
   - **Local user account**: **Add** the local (to the device) user account. The account you enter signs in to the kiosk.
   - **Azure AD user or group (Windows 10 version 1803 and later)**: Select **Add**, and choose Azure AD users or groups from the list. You can select multiple users and groups. Choose **Select** to save your changes.
-  - **HoloLens visitor**: The visitor account is a guest account that doesn't require any user credentials or authentication, as described in [shared PC mode concepts](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
+  - **HoloLens visitor**: The visitor account is a guest account that doesn't require any user credentials or authentication, as described in [shared PC mode concepts](https://docs.microsoft.com/windows/intune/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Browser and Applications**: Add the apps to run on the kiosk device. Remember, you can add several apps.
 
@@ -148,7 +148,7 @@ Apps in this mode are available on the start menu. These apps are the only apps 
       > [!NOTE]
       > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, create a device configuration profile (**Device Configuration** > **Profiles** > **Create profile** > **Windows 10** for platform > **Device Restrictions** >  **Microsoft Edge Browser**). [Microsoft Edge browser](device-restrictions-windows-10.md#microsoft-edge-browser) lists and describes the available settings.
 
-    - **Add Kiosk browser**: These settings control a web browser app on the kiosk. Be sure you deploy a web browser app to the kiosk devices using [Client Apps](../apps/apps-add.md).
+    - **Add Kiosk browser**: These settings control a web browser app on the kiosk. Be sure you deploy a web browser app to the kiosk devices using [Client Apps](../intune/apps/apps-add.md).
 
       Enter the following settings:
 
@@ -171,7 +171,7 @@ Apps in this mode are available on the start menu. These apps are the only apps 
 
   - **Applications**
 
-    - **Add store app**: Add an app from the Microsoft Store for Business. If you don't have any apps listed, then you can get apps, and [add them to Intune](../apps/store-apps-windows.md). For example, you can add Kiosk Browser, Excel, OneNote, and more.
+    - **Add store app**: Add an app from the Microsoft Store for Business. If you don't have any apps listed, then you can get apps, and [add them to Intune](../intune/apps/store-apps-windows.md). For example, you can add Kiosk Browser, Excel, OneNote, and more.
 
     - **Add Win32 App**: A Win32 app is a traditional desktop app, such as Visual Studio Code or Google Chrome. Enter the following properties:
 
@@ -190,7 +190,7 @@ Apps in this mode are available on the start menu. These apps are the only apps 
   > [!TIP]
   > After you add all the apps, you can change the display order by clicking-and-dragging the apps in the list.  
 
-- **Use alternative Start layout**: Choose **Yes** to enter an XML file that describes how the apps appear on the start menu, including the order of the apps. Use this option if you require more customization in your start menu. [Customize and export Start layout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) provides some guidance, and sample XML.
+- **Use alternative Start layout**: Choose **Yes** to enter an XML file that describes how the apps appear on the start menu, including the order of the apps. Use this option if you require more customization in your start menu. [Customize and export Start layout](https://docs.microsoft.com/windows/intune/configuration/customize-and-export-start-layout) provides some guidance, and sample XML.
 
 - **Windows Taskbar**: Choose to **Show** or **hide** the taskbar. By default, the taskbar isn't shown. Icons, such as the Wi-Fi icon, are shown, but the settings can't be changed by end users.
 
@@ -202,4 +202,4 @@ Apps in this mode are available on the start menu. These apps are the only apps 
 
 You can also create kiosk profiles for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings), and [Windows Holographic for Business](kiosk-settings-holographic.md) devices.
 
-Also see [set up a single-app kiosk](https://docs.microsoft.com/windows/configuration/kiosk-single-app) or [set up a multi-app kiosk](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) in the Windows guidance.
+Also see [set up a single-app kiosk](https://docs.microsoft.com/windows/intune/configuration/kiosk-single-app) or [set up a multi-app kiosk](https://docs.microsoft.com/windows/intune/configuration/lock-down-windows-10-to-specific-apps) in the Windows guidance.

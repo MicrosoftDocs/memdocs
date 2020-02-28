@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Add Android Enterprise system apps to Microsoft Intune
 
-Before you assign an app to a device or a group of users, you must first add the app to Microsoft Intune. System apps are supported on Android Enterprise devices. You can enable a system app for [Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md) or [fully managed devices](../enrollment/android-fully-managed-enroll.md).
+Before you assign an app to a device or a group of users, you must first add the app to Microsoft Intune. System apps are supported on Android Enterprise devices. You can enable a system app for [Android Enterprise dedicated devices](../intune/enrollment/android-kiosk-enroll.md) or [fully managed devices](../intune/enrollment/android-fully-managed-enroll.md).
 
 ## Add the app
 
@@ -46,9 +46,9 @@ In the **App information** page, add the app details:
     - **Publisher**: Enter the name of the publisher of the app.  
     - **Package Name**: Enter a package name. Intune will validate that the package name is valid.
 5. Click **Next** to display the **Scope tags** page.
-8. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](~/fundamentals/scope-tags.md).
+8. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](~/intune/fundamentals/scope-tags.md).
 9. Click **Next** to display the **Assignments** page.
-10. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](~/fundamentals/groups-add.md). 
+10. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](~/intune/fundamentals/groups-add.md). 
 11. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 12. When you are done, click **Create** to add the app to Intune.
 

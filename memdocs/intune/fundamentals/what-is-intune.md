@@ -47,7 +47,7 @@ With Intune, you can:
 
 In Intune, you manage devices using an approach that's right for you. For organization-owned devices, you may want full control on the devices, including settings, features, and security. In this approach, devices and users of these devices "enroll" in Intune. Once enrolled, they receive your rules and settings through policies configured in Intune. For example, you can set password and PIN requirements, create a VPN connection, set up threat protection, and more.
 
-For personal devices, or bring-your-own devices (BYOD), users may not want their organization administrators to have full control. In this approach, give users options. For example, users [enroll](../enrollment/device-enrollment.md) their devices if they want full access to your organization resources. Or, if these users only want access to email or Microsoft Teams, then use app protection policies that require multi-factor authentication (MFA) to use these apps.
+For personal devices, or bring-your-own devices (BYOD), users may not want their organization administrators to have full control. In this approach, give users options. For example, users [enroll](../intune/enrollment/device-enrollment.md) their devices if they want full access to your organization resources. Or, if these users only want access to email or Microsoft Teams, then use app protection policies that require multi-factor authentication (MFA) to use these apps.
 
 When devices are enrolled and managed in Intune, administrators can:
 
@@ -59,11 +59,11 @@ When devices are enrolled and managed in Intune, administrators can:
 
 **Online resources**:
 
-- [What is device enrollment?](../enrollment/device-enrollment.md)
+- [What is device enrollment?](../intune/enrollment/device-enrollment.md)
 
-- [Apply features and settings on your devices using device profiles](../configuration/device-profiles.md)
+- [Apply features and settings on your devices using device profiles](../intune/configuration/device-profiles.md)
 
-- [Protect devices with Microsoft Intune](../protect/device-protect.md)
+- [Protect devices with Microsoft Intune](../intune/protect/device-protect.md)
 
 ## Manage apps
 
@@ -76,7 +76,7 @@ When apps are managed in Intune, administrators can:
 - See reports on which apps are used, and track their usage.
 - Do a selective wipe by removing only organization data from apps.
 
-One way that Intune provides mobile app security is through **[app protection policies](../apps/app-protection-policy.md)**. App protection policies:
+One way that Intune provides mobile app security is through **[app protection policies](../intune/apps/app-protection-policy.md)**. App protection policies:
 
 - Use Azure AD identity to isolate organization data from personal data. So personal information is isolated from organizational IT awareness. Data accessed using organization credentials are given additional security protection.
 - Help secure access on personal devices by restricting actions users can take, such as copy-and-paste, save, and view.
@@ -94,9 +94,9 @@ Intune integrates with Azure AD to enable a broad set of access control scenario
 
 **Online resources**:
 
-- [Set rules on devices to allow access to your organization resources](../protect/device-compliance-get-started.md)
+- [Set rules on devices to allow access to your organization resources](../intune/protect/device-compliance-get-started.md)
 
-- [Common ways to use Conditional Access with Intune](../protect/conditional-access-intune-common-ways-use.md)
+- [Common ways to use Conditional Access with Intune](../intune/protect/conditional-access-intune-common-ways-use.md)
 
 ## How to get Intune
 
@@ -106,11 +106,11 @@ Intune is available:
 - Included with [Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune) and [Microsoft 365 government](https://www.microsoft.com/microsoft-365/government)
 - As [Mobile Device Management in Office 365](https://support.office.com/article/choose-between-mdm-for-office-365-and-microsoft-intune-c93d9ab9-efb2-4349-9b93-30c30562ee22), which consists of some limited Intune features
 
-Intune is used in many sectors, including [government](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description), [education](https://www.microsoft.com/en-us/education/intune), [kiosk or dedicated device](../configuration/kiosk-settings.md) for manufacturing and retail, and more.
+Intune is used in many sectors, including [government](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description), [education](https://www.microsoft.com/en-us/education/intune), [kiosk or dedicated device](../intune/configuration/kiosk-settings.md) for manufacturing and retail, and more.
 
 ## Next steps
 
 - Read some of the [common business problems that Intune helps solve](https://docs.microsoft.com/intune/common-scenarios).
 - Start with a [30-day trial of Intune](free-trial-sign-up.md).
 - Plan your [migration to Intune](migration-guide.md).
-- Using your free trial or subscription, step through the [Quickstart: Create an email device profile for iOS](../configuration/quickstart-email-profile.md).
+- Using your free trial or subscription, step through the [Quickstart: Create an email device profile for iOS](../intune/configuration/quickstart-email-profile.md).

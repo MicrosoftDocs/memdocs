@@ -37,7 +37,7 @@ There are special migration considerations that may apply depending on your exis
 
 The Apple Device Enrollment Program (DEP) sets device configurations that cannot be removed by the end user. To retain the advanced management features of DEP, the device must be returned to the out-of-box (new) state by wiping it to enroll it into Intune.
 
-To continue using DEP to manage the devices in Intune, [set up iOS/iPadOS device enrollment with Device Enrollment Program](../enrollment/device-enrollment-program-enroll-ios.md).
+To continue using DEP to manage the devices in Intune, [set up iOS/iPadOS device enrollment with Device Enrollment Program](../intune/enrollment/device-enrollment-program-enroll-ios.md).
 
 
 ## Next steps

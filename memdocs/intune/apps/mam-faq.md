@@ -68,9 +68,9 @@ Any app that has been integrated with the [Intune App SDK](../developer/app-sdk.
 
 **What are the baseline requirements to use app protection policies on an Intune-managed app?**
 
-- The end user must have an Azure Active Directory (AAD) account. See [Add users and give administrative permission to Intune](../fundamentals/users-add.md) to learn how to create Intune users in Azure Active Directory.
+- The end user must have an Azure Active Directory (AAD) account. See [Add users and give administrative permission to Intune](../intune/fundamentals/users-add.md) to learn how to create Intune users in Azure Active Directory.
 
-- The end user must have a license for Microsoft Intune assigned to their Azure Active Directory account. See [Manage Intune licenses](../fundamentals/licenses-assign.md) to learn how to assign Intune licenses to end users.
+- The end user must have a license for Microsoft Intune assigned to their Azure Active Directory account. See [Manage Intune licenses](../intune/fundamentals/licenses-assign.md) to learn how to assign Intune licenses to end users.
 
 - The end user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the Intune console in the [Azure portal](https://portal.azure.com). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
 
@@ -156,13 +156,13 @@ IT administrators can deploy an app protection policy that requires app data to 
 - **What gets encrypted?**<br></br> Only data marked as "corporate" is encrypted according to the IT administrator's app protection policy. Data is considered "corporate" when it originates from a business location. For the Office apps, Intune considers the following as business locations: email (Exchange) or cloud storage (OneDrive app with a OneDrive for Business account). For line-of-business apps managed by the Intune App Wrapping Tool, all app data is considered "corporate."
 
 **How does Intune remotely wipe data?**<br></br>
-Intune can wipe app data in three different ways: full device wipe, selective wipe for MDM, and MAM selective wipe. For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../remote-actions/devices-wipe.md). For more information about selective wipe using MAM, see [the Retire action](../remote-actions/devices-wipe.md#retire) and [How to wipe only corporate data from apps](apps-selective-wipe.md).
+Intune can wipe app data in three different ways: full device wipe, selective wipe for MDM, and MAM selective wipe. For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../intune/remote-actions/devices-wipe.md). For more information about selective wipe using MAM, see [the Retire action](../intune/remote-actions/devices-wipe.md#retire) and [How to wipe only corporate data from apps](apps-selective-wipe.md).
 
-- **What is wipe?**<br></br> [Wipe](../remote-actions/devices-wipe.md) removes all user data and settings from **the device** by restoring the device to its factory default settings. The device is removed from Intune.
+- **What is wipe?**<br></br> [Wipe](../intune/remote-actions/devices-wipe.md) removes all user data and settings from **the device** by restoring the device to its factory default settings. The device is removed from Intune.
   >[!NOTE]
   > Wipe can only be achieved on devices enrolled with Intune mobile device management (MDM).
 
-- **What is selective wipe for MDM?**<br></br> See [Remove devices - retire](../remote-actions/devices-wipe.md#retire) to read about removing company data.
+- **What is selective wipe for MDM?**<br></br> See [Remove devices - retire](../intune/remote-actions/devices-wipe.md#retire) to read about removing company data.
 
 - **What is selective wipe for MAM?**<br></br> Selective wipe for MAM simply removes company app data from an app. The request is initiated using the Intune Azure portal. To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](apps-selective-wipe.md).
 
@@ -172,7 +172,7 @@ Intune can wipe app data in three different ways: full device wipe, selective wi
 Intune app protection depends on the identity of the user to be consistent between the application and the Intune App SDK. The only way to guarantee that is through modern authentication. There are scenarios in which apps may work with an on-prem configuration, but they are neither consistent nor guaranteed.
 
 **Is there a secure way to open web links from managed apps?**<br></br>
-Yes! The IT administrator can deploy and set app protection policy for the [Intune Managed Browser app](../apps/app-configuration-managed-browser.md), a web browser developed by Microsoft Intune that can be managed easily with Intune. The IT administrator can require all web links in Intune-managed apps to be opened using the Managed Browser app.
+Yes! The IT administrator can deploy and set app protection policy for the [Intune Managed Browser app](../intune/apps/app-configuration-managed-browser.md), a web browser developed by Microsoft Intune that can be managed easily with Intune. The IT administrator can require all web links in Intune-managed apps to be opened using the Managed Browser app.
 
 ## App experience on Android
 
@@ -222,11 +222,11 @@ When dealing with different types of settings, an Intune App SDK version require
 
 
 ## See also
-- [Implement your Intune plan](../fundamentals/planning-guide-onboarding.md)
-- [Intune testing and validation](../fundamentals/planning-guide-test-validation.md)
-- [Android mobile app management policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md)
-- [iOS/iPadOS mobile app management policy settings](../apps/app-protection-policy-settings-ios.md)
-- [App protection policies policy refresh](../apps/app-protection-policy-delivery.md)
-- [Validate your app protection policies](../apps/app-protection-policy-delivery.md)
-- [Add app configuration policies for managed apps without device enrollment](../apps/app-configuration-policies-managed-app.md)
-- [How to get support for Microsoft Intune](../fundamentals/get-support.md)
+- [Implement your Intune plan](../intune/fundamentals/planning-guide-onboarding.md)
+- [Intune testing and validation](../intune/fundamentals/planning-guide-test-validation.md)
+- [Android mobile app management policy settings in Microsoft Intune](../intune/apps/app-protection-policy-settings-android.md)
+- [iOS/iPadOS mobile app management policy settings](../intune/apps/app-protection-policy-settings-ios.md)
+- [App protection policies policy refresh](../intune/apps/app-protection-policy-delivery.md)
+- [Validate your app protection policies](../intune/apps/app-protection-policy-delivery.md)
+- [Add app configuration policies for managed apps without device enrollment](../intune/apps/app-configuration-policies-managed-app.md)
+- [How to get support for Microsoft Intune](../intune/fundamentals/get-support.md)

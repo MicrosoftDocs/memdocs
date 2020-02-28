@@ -38,11 +38,11 @@ An Intune device compliance policy specifies the rules and settings that devices
 > [!IMPORTANT]
 > In addition to password settings, you should also consider other system security settings to protect your workforce. For more information, see [System security settings](compliance-policy-create-android-for-work.md).
 
-If you don’t have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+If you don’t have an Intune subscription, [sign up for a free trial account](../intune/fundamentals/free-trial-sign-up.md).
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators).
+Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../intune/fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../intune/fundamentals/users-add.md#types-of-administrators).
 
 ## Create a device compliance policy
 

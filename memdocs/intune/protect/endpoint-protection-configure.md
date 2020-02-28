@@ -65,7 +65,7 @@ Before you create a profile, review the following articles that detail the endpo
 
 7. After you configure applicable settings, select **Create** on the **Create profile** page.
 
-   The profile is created and appears on the profiles list page. To assign this profile to groups, see [assign device profiles](../configuration/device-profile-assign.md).
+   The profile is created and appears on the profiles list page. To assign this profile to groups, see [assign device profiles](../intune/configuration/device-profile-assign.md).
 
 ## Add custom Firewall rules for Windows 10 devices
 
@@ -103,4 +103,4 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
 ## Next steps
 
-To assign a profile to groups, see [assign device profiles](../configuration/device-profile-assign.md).
+To assign a profile to groups, see [assign device profiles](../intune/configuration/device-profile-assign.md).

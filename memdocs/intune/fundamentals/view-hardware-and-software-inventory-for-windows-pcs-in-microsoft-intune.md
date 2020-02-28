@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 [!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 > [!NOTE]
-> The information in this topic applies only to Windows desktops that you are managing as PCs by using the Intune software client. If you want to view inventory for Windows PCs enrolled as mobile devices, see [View device details in Intune](../remote-actions/device-inventory.md).
+> The information in this topic applies only to Windows desktops that you are managing as PCs by using the Intune software client. If you want to view inventory for Windows PCs enrolled as mobile devices, see [View device details in Intune](../intune/remote-actions/device-inventory.md).
 
 Intune collects detailed information about the hardware and software for desktops you manage as PCs by using the Intune software client. Use the information in the following procedures to learn how to create:
 

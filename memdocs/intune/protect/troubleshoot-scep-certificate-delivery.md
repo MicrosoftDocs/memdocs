@@ -37,7 +37,7 @@ This article applies to the step 5 of the [SCEP communication workflow](troubles
 
 When the CA has issued the certificate, you'll see an entry similar to the following example on the CA:
 
-![Example of issued certificates](../protect/media/troubleshoot-scep-certificate-delivery/certificate-authority.png)
+![Example of issued certificates](../intune/protect/media/troubleshoot-scep-certificate-delivery/certificate-authority.png)
 
 ## Review the device
 
@@ -45,7 +45,7 @@ When the CA has issued the certificate, you'll see an entry similar to the follo
 
 For device administrator enrolled devices, you'll see a notification similar to the following image, which prompts you to install the certificate:
 
-![Android notification](../protect/media/troubleshoot-scep-certificate-delivery/android-notification.png)
+![Android notification](../intune/protect/media/troubleshoot-scep-certificate-delivery/android-notification.png)
 
 For Android Enterprise or Samsung Knox, the certificate installation is automatic, and silent.
 
@@ -81,7 +81,7 @@ You can also review the [devices OMADM log](troubleshoot-scep-certificate-profil
 
 On the iOS/iPadOS or iPadOS device, you can view the certificate under the Device Management Profile. Drill-in to see details for installed certificates.
 
-![iOS certificate](../protect/media/troubleshoot-scep-certificate-delivery/ios-certificate.png)
+![iOS certificate](../intune/protect/media/troubleshoot-scep-certificate-delivery/ios-certificate.png)
 
 You can also find entries that resemble the following in the [iOS debug log](troubleshoot-scep-certificate-profiles.md#logs-for-ios-and-ipados-devices):
 
@@ -99,7 +99,7 @@ On the Windows device, verify the certificate was delivered:
 
 - Run **eventvwr.msc** to open Event Viewer. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin** and look for **Event 39**. This Event should have a general description of: **SCEP: Certificate installed successfully.**
 
-   ![Event 39 in the Windows Application log](../protect/media/troubleshoot-scep-certificate-delivery/device-app-log.png)
+   ![Event 39 in the Windows Application log](../intune/protect/media/troubleshoot-scep-certificate-delivery/device-app-log.png)
 
 To view the certificate on the device, run **certmgr.msc** to open the Certificates MMC and verify that the root and SCEP certificates are installed correctly on the device in the personal store:
 

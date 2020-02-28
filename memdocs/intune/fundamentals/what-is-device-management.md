@@ -73,10 +73,10 @@ A key task of any device management solution is to provide security and protecti
 
 - **Windows Defender** includes many security features to help protect Windows 10 devices. For example, using Intune and Windows Defender together, you can:
 
-  - Enable [Windows Defender SmartScreen](../protect/endpoint-protection-windows-10.md) to look for suspicious activity in files and apps on mobile devices.
-  - Use [Microsoft Defender Advanced Threat Protection (ATP)](../protect/advanced-threat-protection.md) to help prevent security breaches on mobile devices. And, help limit the impact of a security breach by blocking a user from corporate resources.
+  - Enable [Windows Defender SmartScreen](../intune/protect/endpoint-protection-windows-10.md) to look for suspicious activity in files and apps on mobile devices.
+  - Use [Microsoft Defender Advanced Threat Protection (ATP)](../intune/protect/advanced-threat-protection.md) to help prevent security breaches on mobile devices. And, help limit the impact of a security breach by blocking a user from corporate resources.
 
-- **Conditional Access** is a feature of Azure Active Directory, and integrates nicely with Intune. Using [Conditional Access](../protect/conditional-access.md), make sure only compliant devices are allowed access to email, SharePoint, and other apps.
+- **Conditional Access** is a feature of Azure Active Directory, and integrates nicely with Intune. Using [Conditional Access](../intune/protect/conditional-access.md), make sure only compliant devices are allowed access to email, SharePoint, and other apps.
 
 ## Choose the device management solution that's right for you
 
@@ -94,19 +94,19 @@ The [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?l
 
 On the Device Management admin center, you can:
 
-- [Enroll devices](../enrollment/device-enrollment.md)
-- [Set device compliance](../protect/device-compliance-get-started.md)
-- [Manage devices](../remote-actions/device-management.md)
-- [Manage apps](../apps/app-management.md)  
-- [iOS eBooks](../apps/vpp-ebooks-ios.md)  
-- [Install Exchange on-premises connector](../protect/exchange-connector-install.md)  
+- [Enroll devices](../intune/enrollment/device-enrollment.md)
+- [Set device compliance](../intune/protect/device-compliance-get-started.md)
+- [Manage devices](../intune/remote-actions/device-management.md)
+- [Manage apps](../intune/apps/app-management.md)  
+- [iOS eBooks](../intune/apps/vpp-ebooks-ios.md)  
+- [Install Exchange on-premises connector](../intune/protect/exchange-connector-install.md)  
 - [Manage roles](role-based-access-control.md)  
 - Manage software updates
-  - [Manage Windows 10 updates](../protect/windows-update-for-business-configure.md)  
-  - [Manage iOS/iPadOS updates](../protect/software-updates-ios.md)  
+  - [Manage Windows 10 updates](../intune/protect/windows-update-for-business-configure.md)  
+  - [Manage iOS/iPadOS updates](../intune/protect/software-updates-ios.md)  
 - [Azure active directory](https://docs.microsoft.com/azure/active-directory)  
-- [Manage users](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
-- [Manage groups and members](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
+- [Manage users](https://docs.microsoft.com/azure/active-directory/intune/fundamentals/add-users-azure-active-directory)
+- [Manage groups and members](https://docs.microsoft.com/azure/active-directory/intune/fundamentals/active-directory-manage-groups)
 - [Troubleshoot](help-desk-operators.md)
 
 ## Next steps

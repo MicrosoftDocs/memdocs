@@ -67,7 +67,7 @@ When you try to configure the Microsoft Intune Exchange Connector, you receive t
 This problem can occur if the account that you used to sign in to Intune isn't an Intune Global Administrator account.
 
 **Resolution**:  
-Sign in to Intune with an account that is a Global Administrator, or add your account to the Global Admin group. For more information, see [Role-based administration control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+Sign in to Intune with an account that is a Global Administrator, or add your account to the Global Admin group. For more information, see [Role-based administration control (RBAC) with Microsoft Intune](../intune/fundamentals/role-based-access-control.md).
 
 ## Configuration failed and returned error code 0x0000006
 
@@ -146,5 +146,5 @@ The following article can help resolve specific errors:
 - [Resolve common problems for the Intune Exchange Connector](troubleshoot-exchange-connector-common-problems.md).git 
 
 Seek assistance from support or the Intune community.
-- See [Get Support](../fundamentals/get-support.md) to use the Intune Console to help troubleshoot the issue, or to open a support case with Microsoft. 
+- See [Get Support](../intune/fundamentals/get-support.md) to use the Intune Console to help troubleshoot the issue, or to open a support case with Microsoft. 
 - Post your issue in the [Microsoft Intune forums](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).  

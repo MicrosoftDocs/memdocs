@@ -70,7 +70,7 @@ You can view these conditions for each device in the Azure portal and in the dev
   - Restart the device.
   - See if the problem persists on different networks (for example, cellular, Wi-Fi, etc.).
 
-  If the problem remains, contact Microsoft Support as described in [get support for Microsoft Intune](../fundamentals/get-support.md).
+  If the problem remains, contact Microsoft Support as described in [get support for Microsoft Intune](../intune/fundamentals/get-support.md).
 
 - Certain Android devices might appear to be encrypted, however the Company Portal app recognizes these devices as not encrypted and marks them as noncompliant. In this scenario, the user will see a notification in the Company Portal app asking them to set a start-up passcode for the device. After tapping the notification and confirming the existing PIN or password, choose the **Require PIN to start device** option on the **Secure start-up** screen, then tap the **Check Compliance** button for the device from the Company Portal app. The device should now be detected as encrypted. 
 
@@ -118,4 +118,4 @@ If a device  isn't compliant but continues to have access, take the following ac
   - If the device is listed, use the 'Get-CASmailbox -identity:’upn’ | fl' cmdlet to get detailed information about its access state, and provide that information to Microsoft Support.
 
 ## Next steps
-If this information doesn't help you, you can also [get support for Microsoft Intune](../fundamentals/get-support.md).
+If this information doesn't help you, you can also [get support for Microsoft Intune](../intune/fundamentals/get-support.md).

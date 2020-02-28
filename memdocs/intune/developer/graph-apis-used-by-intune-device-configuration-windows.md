@@ -2784,11 +2784,11 @@ To see the Windows 10 versions the following APIs apply, use the Windows 10 [con
 
 ### WindowsDefenderAdvancedThreatProtectionConfiguration.AllowSampleSharing 
 **CSP**: ./Device/Vendor/MSFT/WindowsAdvancedThreatProtection  
-**Offset URI**: /Configuration/SampleSharing
+**Offset URI**: /intune/configuration/SampleSharing
 
 ### WindowsDefenderAdvancedThreatProtectionConfiguration.EnableExpeditedTelemetryReporting 
 **CSP**: ./Device/Vendor/MSFT/WindowsAdvancedThreatProtection  
-**Offset URI**: /Configuration/TelemetryReportingFrequency
+**Offset URI**: /intune/configuration/TelemetryReportingFrequency
 
 ### WindowsDeliveryOptimizationConfiguration.DeliveryOptimizationMode 
 **CSP**: ./Vendor/MSFT/Policy  
@@ -3005,5 +3005,5 @@ To see the Windows 10 versions the following APIs apply, use the Windows 10 [con
 
 ## Next steps
 
-- [Device configuration overview](../configuration/device-profiles.md)
+- [Device configuration overview](../intune/configuration/device-profiles.md)
 - [Configuration service provider reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (opens another Docs site)

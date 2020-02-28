@@ -219,7 +219,7 @@ To fix this issue in a stand-alone Intune environment, follow these steps:
 
    If you choose **Selected**, click **Selected**, and then click **Add Members** to add all users who can join their devices to Azure AD. Make sure that all Azure AD accounts for the provisioning package are added.
  
-For more information about how to create a provisioning package for Windows Configuration Designer, see [Create a provisioning package for Windows 10](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package).
+For more information about how to create a provisioning package for Windows Configuration Designer, see [Create a provisioning package for Windows 10](https://docs.microsoft.com/windows/intune/configuration/provisioning-packages/provisioning-create-package).
 
 For more information about the Set up School PCs app, see [Use the Set up School PCs app](https://docs.microsoft.com/education/windows/use-set-up-school-pcs-app).
 
@@ -394,5 +394,5 @@ Try either of the following:
 - [Ask a question on the Intune forum](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
 - [Check the Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Check the Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
-- [Get support for Microsoft Intune](../fundamentals/get-support.md)
+- [Get support for Microsoft Intune](../intune/fundamentals/get-support.md)
 - [Find co-management enrollment errors](https://docs.microsoft.com/configmgr/comanage/how-to-monitor#enrollment-errors)

@@ -53,7 +53,7 @@ The **Devices** workload gives you insights into the devices you manage, and let
 
      ![Screenshot of monitor device actions](./media/device-management/monitor-device-actions.png)
 
-   - **Audit logs** is a record of activities that generate a change in Intune. [Audit logs](../fundamentals/monitor-audit-logs.md) provides more details.
+   - **Audit logs** is a record of activities that generate a change in Intune. [Audit logs](../intune/fundamentals/monitor-audit-logs.md) provides more details.
    - **TeamViewer Connector** is a service that allows users of Intune-managed Android devices to get remote assistance from their IT administrator. Learn more about [TeamViewer](teamviewer-support.md).
    - **Help and Support** provides a shortcut on troubleshooting tips, requesting support, or checking the status of Intune.
 
@@ -76,7 +76,7 @@ The actions available depend on the device platform, and the configuration of th
   - [Synchronize device](device-sync.md)
   - [Rename device](device-rename.md)
   - [Send custom notification](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)
-  - [BitLocker key rotation](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (Windows only)
+  - [BitLocker key rotation](../intune/protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (Windows only)
 
 ## Next steps
 

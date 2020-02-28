@@ -40,9 +40,9 @@ You can use Intune to add and deploy Mobile Threat Defense (MTD) apps so that en
 
 Complete the following steps in Intune. Make sure you’re familiar with the process of:
 
-- [Adding an app into Intune](../apps/apps-add.md).
-- [Adding an iOS app configuration policy into Intune](../apps/app-configuration-policies-use-ios.md).
-- [Assigning an app with Intune](../apps/apps-deploy.md).
+- [Adding an app into Intune](../intune/apps/apps-add.md).
+- [Adding an iOS app configuration policy into Intune](../intune/apps/app-configuration-policies-use-ios.md).
+- [Assigning an app with Intune](../intune/apps/apps-deploy.md).
 
 > [!TIP]
 > The Intune Company Portal works as the broker on Android devices so users can have their identities checked by Azure AD.
@@ -51,7 +51,7 @@ Complete the following steps in Intune. Make sure you’re familiar with the pro
 
 For iOS devices, you need the [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) so users can have their identities checked by Azure AD. Additionally, you need an iOS app configuration policy that sets the MTD iOS app you use with Intune.
 
-See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Microsoft Authenticator app store URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) when you configure **App information**.
+See the instructions for [adding iOS store apps to Microsoft Intune](../intune/apps/store-apps-ios.md). Use this [Microsoft Authenticator app store URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) when you configure **App information**.
 
 ## Configure MTD applications
 
@@ -69,10 +69,10 @@ Choose the section that corresponds to your MTD provider:
 ### Configure Lookout for Work apps
 
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Lookout for work Google app store URL](https://play.google.com/store/apps/details?id=com.lookout.enterprise) for the **Appstore URL**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../intune/apps/store-apps-android.md). Use this [Lookout for work Google app store URL](https://play.google.com/store/intune/apps/details?id=com.lookout.enterprise) for the **Appstore URL**.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Lookout for Work iOS app store URL](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../intune/apps/store-apps-ios.md). Use this [Lookout for Work iOS app store URL](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8) for the **Appstore URL**.
 
 - **Lookout for Work app outside the Apple store**
   - You must re-sign the Lookout for Work iOS app. Lookout distributes its Lookout for Work iOS app outside of the iOS App Store. Before distributing the app, you must re-sign the app with your iOS Enterprise Developer Certificate.  
@@ -95,69 +95,69 @@ Choose the section that corresponds to your MTD provider:
 
   - **Add the Lookout for Work ipa file.**
 
-    - Upload the re-signed .ipa file as described in the [Add iOS LOB apps with Intune](../apps/lob-apps-ios.md) article. You also need to set the minimum OS version to iOS 8.0 or later.
+    - Upload the re-signed .ipa file as described in the [Add iOS LOB apps with Intune](../intune/apps/lob-apps-ios.md) article. You also need to set the minimum OS version to iOS 8.0 or later.
 
 ### Configure Symantec Endpoint Protection Mobile apps
 
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [SEP Mobile app store URL](https://play.google.com/store/apps/details?id=com.skycure.skycure) for the **Appstore URL**.  For **Minimum operating system**, select **Android 4.0 (Ice Cream Sandwich)**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../intune/apps/store-apps-android.md). Use this [SEP Mobile app store URL](https://play.google.com/store/intune/apps/details?id=com.skycure.skycure) for the **Appstore URL**.  For **Minimum operating system**, select **Android 4.0 (Ice Cream Sandwich)**.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [SEP Mobile app store URL](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../intune/apps/store-apps-ios.md). Use this [SEP Mobile app store URL](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) for the **Appstore URL**.
 
 ### Configure Check Point SandBlast Mobile apps
 
 - **Android**  
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Check Point SandBlast Mobile app store URL](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) for the **Appstore URL**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../intune/apps/store-apps-android.md). Use this [Check Point SandBlast Mobile app store URL](https://play.google.com/store/intune/apps/details?id=com.lacoon.security.fox) for the **Appstore URL**.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Check Point SandBlast Mobile app store URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) for the **Appstore URL**.  
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../intune/apps/store-apps-ios.md). Use this [Check Point SandBlast Mobile app store URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) for the **Appstore URL**.  
 
 ### Configure Zimperium apps
 
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Zimperium app store URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) for the **Appstore URL**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../intune/apps/store-apps-android.md). Use this [Zimperium app store URL](https://play.google.com/store/intune/apps/details?id=com.zimperium.zips&hl=en) for the **Appstore URL**.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Zimperium app store URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) for the **Appstore URL**.  
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../intune/apps/store-apps-ios.md). Use this [Zimperium app store URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) for the **Appstore URL**.  
  
 ### Configure Pradeo apps
 
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Pradeo app store URL](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US) for the **Appstore URL**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../intune/apps/store-apps-android.md). Use this [Pradeo app store URL](https://play.google.com/store/intune/apps/details?id=net.pradeo.service&hl=en_US) for the **Appstore URL**.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Pradeo app store URL](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../intune/apps/store-apps-ios.md). Use this [Pradeo app store URL](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) for the **Appstore URL**.
 
 ### Configure Better Mobile apps
 
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Active Shield app store URL](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) for the **Appstore URL**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../intune/apps/store-apps-android.md). Use this [Active Shield app store URL](https://play.google.com/store/intune/apps/details?id=com.better.active.shield.enterprise) for the **Appstore URL**.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield app store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../intune/apps/store-apps-ios.md). Use this [ActiveShield app store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) for the **Appstore URL**.
 
 ### Configure Sophos apps
 
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Sophos app store URL](https://play.google.com/store/apps/details?id=com.sophos.smsec) for the **Appstore URL**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../intune/apps/store-apps-android.md). Use this [Sophos app store URL](https://play.google.com/store/intune/apps/details?id=com.sophos.smsec) for the **Appstore URL**.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield app store URL](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../intune/apps/store-apps-ios.md). Use this [ActiveShield app store URL](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) for the **Appstore URL**.
 
 ### Configure Wandera apps
 
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Wandera Mobile app store URL](https://play.google.com/store/apps/details?id=com.wandera.android) for the **Appstore URL**. For **Minimum operating system**, select **Android 5.0**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../intune/apps/store-apps-android.md). Use this [Wandera Mobile app store URL](https://play.google.com/store/intune/apps/details?id=com.wandera.android) for the **Appstore URL**. For **Minimum operating system**, select **Android 5.0**.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Wandera Mobile app store URL](https://itunes.apple.com/app/wandera/id605469330) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../intune/apps/store-apps-ios.md). Use this [Wandera Mobile app store URL](https://itunes.apple.com/app/wandera/id605469330) for the **Appstore URL**.
 
 ## Configure your MTD apps with an iOS app configuration policy
 
 ### Lookout for Work app configuration policy
 
-Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article.
+Create the iOS app configuration policy as described in the [using iOS app configuration policy](../intune/apps/app-configuration-policies-use-ios.md) article.
 
 ### SEP Mobile app configuration policy
 
@@ -170,7 +170,7 @@ Use the same Azure AD account previously configured in the [Symantec Endpoint Pr
 
   - Click the **Integration setup files** link and save the generated \*.zip file. The .zip file contains the ***.plist** file that will be used to create the iOS app configuration policy in Intune.
 
-  - See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the SEP Mobile iOS app configuration policy.
+  - See the instructions for [using Microsoft Intune app configuration policies for iOS](../intune/apps/app-configuration-policies-use-ios.md) to add the SEP Mobile iOS app configuration policy.
 
     - For **Configuration settings format**, select **Enter XML data**, copy the content from the ***.plist** file, and paste its content into the configuration policy body.
 
@@ -179,7 +179,7 @@ Use the same Azure AD account previously configured in the [Symantec Endpoint Pr
 
 ### Check Point SandBlast Mobile app configuration policy
 
-See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Check Point SandBlast Mobile iOS app configuration policy.
+See the instructions for [using Microsoft Intune app configuration policies for iOS](../intune/apps/app-configuration-policies-use-ios.md) to add the Check Point SandBlast Mobile iOS app configuration policy.
 
 - For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body.
 
@@ -188,7 +188,7 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 
 ### Zimperium app configuration policy
 
-See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Zimperium iOS app configuration policy.
+See the instructions for [using Microsoft Intune app configuration policies for iOS](../intune/apps/app-configuration-policies-use-ios.md) to add the Zimperium iOS app configuration policy.
 
 - For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body.
 
@@ -211,7 +211,7 @@ Pradeo doesn't support application configuration policy on iOS.  Instead, to get
 
 ### Better Mobile app configuration policy
 
-See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Better Mobile iOS app configuration policy.
+See the instructions for [using Microsoft Intune app configuration policies for iOS](../intune/apps/app-configuration-policies-use-ios.md) to add the Better Mobile iOS app configuration policy.
 
 - For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body. Replace the `https://client.bmobi.net` URL with the appropriate console URL.
 
@@ -228,11 +228,11 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 
 ### Sophos Mobile app configuration policy
 
-Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article.
+Create the iOS app configuration policy as described in the [using iOS app configuration policy](../intune/apps/app-configuration-policies-use-ios.md) article.
 
 ### Wandera app configuration policy
 
-See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Wandera iOS app configuration policy.
+See the instructions for [using Microsoft Intune app configuration policies for iOS](../intune/apps/app-configuration-policies-use-ios.md) to add the Wandera iOS app configuration policy.
 
 - For **Configuration settings format**, select **Enter XML data**.
 
@@ -257,7 +257,7 @@ Sign in to your RADAR Wandera portal and browse to **Settings** > **EMM Integrat
 
 ## Assign apps to groups
 
-This step applies to all MTD partners. See instructions for [assigning apps to groups with Intune](../apps/apps-deploy.md).
+This step applies to all MTD partners. See instructions for [assigning apps to groups with Intune](../intune/apps/apps-deploy.md).
 
 ## Next steps
 

@@ -57,10 +57,10 @@ As the admin, you can include and exclude security groups to assign iOS/iPadOS a
 
    The **Expiration date** will be populated from a value in the Apple Mobile Configuration Profile file that you added above.<br>
 
-   <img alt="Create profile - Basics" src="~/apps/media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
+   <img alt="Create profile - Basics" src="~/intune/apps/media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
 
 4. Click **Next: Scope tags**.<br>
-   On the **Scope tags** page you can optionally configure scope tags to determine who can see iOS/iPadOS app provisioning profile in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+   On the **Scope tags** page you can optionally configure scope tags to determine who can see iOS/iPadOS app provisioning profile in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../intune/fundamentals/scope-tags.md).
 5. Click **Next: Assignments**.<br>
    The **Assignments** page allows you can assign the profile to users and devices. It is important to note that you can assign a profile to a device whether or not the device is managed by Intune.
 6. Click **Next: Review + create** to review the values you entered for the profile.

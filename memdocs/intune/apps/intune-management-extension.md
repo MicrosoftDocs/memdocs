@@ -48,7 +48,7 @@ The Intune management extension supplements the in-box Windows 10 MDM features. 
 
 The Intune management extension has the following prerequisites. Once the prerequisites are met, the Intune management extension installs automatically when a PowerShell script or Win32 app is assigned to the user or device.
 
-- Devices running Windows 10 version 1607 or later. If the device is enrolled using [bulk auto-enrollment](../enrollment/windows-bulk-enroll.md), devices must run Windows 10 version 1703 or later. The Intune management extension isn't supported on Windows 10 in S mode, as S mode doesn't allow running non-store apps. 
+- Devices running Windows 10 version 1607 or later. If the device is enrolled using [bulk auto-enrollment](../intune/enrollment/windows-bulk-enroll.md), devices must run Windows 10 version 1703 or later. The Intune management extension isn't supported on Windows 10 in S mode, as S mode doesn't allow running non-store apps. 
   
 - Devices joined to Azure Active Directory (AD), including:  
   
@@ -60,7 +60,7 @@ The Intune management extension has the following prerequisites. Once the prereq
   
   - Devices manually enrolled in Intune, which is when:
   
-    - [Auto-enrollment to Intune](../enrollment/quickstart-setup-auto-enrollment.md) is enabled in Azure AD. The end user signs in to the device using a local user account, manually joins the device to Azure AD, and then signs in to the device using their Azure AD account.
+    - [Auto-enrollment to Intune](../intune/enrollment/quickstart-setup-auto-enrollment.md) is enabled in Azure AD. The end user signs in to the device using a local user account, manually joins the device to Azure AD, and then signs in to the device using their Azure AD account.
     
     OR  
     
@@ -98,7 +98,7 @@ The Intune management extension has the following prerequisites. Once the prereq
       | No | 32-bit  | 32-bit PS host supported | Runs only in 32-bit PS host, which works on 32-bit and 64-bit architectures. |
       | Yes | 64-bit | Runs script in 64-bit PS host for 64-bit architectures. When ran on 32-bit, the script runs in a 32-bit PS host. | Runs script in 32-bit PS host. If this setting changes to 64-bit, the script opens (it doesn't run) in a 64-bit PS host, and reports the results. When ran on 32-bit, the script runs in 32-bit PS host. |
 
-5. Select **Scope tags**. Scope tags are optional. [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md) has more information.
+5. Select **Scope tags**. Scope tags are optional. [Use role-based access control (RBAC) and scope tags for distributed IT](../intune/fundamentals/scope-tags.md) has more information.
 
     To add a scope tag:
 
@@ -165,7 +165,7 @@ To see if the device is auto-enrolled, you can:
   4. Open the `MDMDiagReport` in a web browser.
   5. Search for the **MDMDeviceWithAAD** property. If the property exists, the device is auto-enrolled. If this property doesn't exist, then the device isn't auto-enrolled.
 
-[Enable Windows 10 automatic enrollment](../enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment) includes the steps to configure automatic enrollment in Intune.
+[Enable Windows 10 automatic enrollment](../intune/enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment) includes the steps to configure automatic enrollment in Intune.
 
 ### Issue: PowerShell scripts do not run
 

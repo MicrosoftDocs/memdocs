@@ -46,7 +46,7 @@ This article:
 2. Select **Devices** > **Configuration profiles**. You have the following options:
 
     - **Overview**: Lists the status of your profiles, and provides additional details on the profiles you assigned to users and devices.
-    - **Manage**: Create device profiles, upload custom [PowerShell scripts](../apps/intune-management-extension.md) to run within the profile, and add data plans to devices using [eSIM](esim-device-configuration.md).
+    - **Manage**: Create device profiles, upload custom [PowerShell scripts](../intune/apps/intune-management-extension.md) to run within the profile, and add data plans to devices using [eSIM](esim-device-configuration.md).
     - **Monitor**: Check the status of a profile for success or failure, and also view logs on your profiles.
     - **Setup**: Add a SCEP or PFX certificate authority, or enable [Telecom Expense Management](telecom-expenses-monitor.md) in the profile.
 
@@ -75,19 +75,19 @@ This article:
        - [Edition upgrade and mode switch](edition-upgrade-configure-windows-10.md)
        - [Education](education-settings-configure.md)
        - [Email](email-settings-configure.md)
-       - [Endpoint protection](../protect/endpoint-protection-configure.md)
-       - [Identity protection](../protect/identity-protection-configure.md)  
+       - [Endpoint protection](../intune/protect/endpoint-protection-configure.md)
+       - [Identity protection](../intune/protect/identity-protection-configure.md)  
        - [Kiosk](kiosk-settings.md)
-       - [PKCS certificate](../protect/certficates-pfx-configure.md)
-       - [PKCS imported certificate](../protect/certificates-imported-pfx-configure.md)
+       - [PKCS certificate](../intune/protect/certficates-pfx-configure.md)
+       - [PKCS imported certificate](../intune/protect/certificates-imported-pfx-configure.md)
        - [Preference file](preference-file-settings-macos.md)
-       - [SCEP certificate](../protect/certificates-scep-configure.md)
-       - [Trusted certificate](../protect/certificates-configure.md)
+       - [SCEP certificate](../intune/protect/certificates-scep-configure.md)
+       - [Trusted certificate](../intune/protect/certificates-configure.md)
        - [Update policies](../software-updates-ios.md)
        - [VPN](vpn-settings-configure.md)
        - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
-       - [Windows Information Protection](../protect/windows-information-protection-configure.md)
+       - [Microsoft Defender ATP](../intune/protect/advanced-threat-protection.md)
+       - [Windows Information Protection](../intune/protect/windows-information-protection-configure.md)
 
      For example, if you select **iOS/iPadOS** for the platform, your profile type options look similar to the following profile:
 
@@ -99,7 +99,7 @@ This article:
 
 After you add the settings, you can also add a scope tag to the profile. Scope tags filter profiles to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`.
 
-For more information about scope tags, and what you can do, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+For more information about scope tags, and what you can do, see [Use RBAC and scope tags for distributed IT](../intune/fundamentals/scope-tags.md).
 
 ### Add a scope tag
 
@@ -168,7 +168,7 @@ At any time, users can open the Company Portal app, and sync the device to immed
 
 When creating profiles, consider the following recommendations:
 
-- Name your policies so you know what they are, and what they do. All [compliance policies](../protect/create-compliance-policy.md) and [configuration profiles](../configuration/device-profile-create.md) have an optional **Description** property. In **Description**, be specific and include information so others know what the policy does.
+- Name your policies so you know what they are, and what they do. All [compliance policies](../intune/protect/create-compliance-policy.md) and [configuration profiles](../intune/configuration/device-profile-create.md) have an optional **Description** property. In **Description**, be specific and include information so others know what the policy does.
 
   Some configuration profile examples include:
 

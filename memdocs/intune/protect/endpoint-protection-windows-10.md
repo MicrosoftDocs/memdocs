@@ -32,7 +32,7 @@ ms.reviewer: karthig
 
 Microsoft Intune includes many settings to help protect your devices. This article describes all the settings you can enable and configure in Windows 10 and newer devices. These settings are created in an endpoint protection configuration profile in Intune to control security, including BitLocker and Microsoft Defender.  
 
-To configure Microsoft Defender Antivirus, see [Windows 10 device restrictions](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).  
+To configure Microsoft Defender Antivirus, see [Windows 10 device restrictions](../intune/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).  
 
 ## Before you begin  
 
@@ -1154,7 +1154,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 - **Tamper Protection**  
   **Default**: Not configured
 
-  Turn Tamper Protection on or off on devices. To use Tamper Protection, you must [integrate Microsoft Defender Advanced Threat Protection with Intune](advanced-threat-protection.md), and have [Enterprise Mobility + Security E5 Licenses](../fundamentals/licenses.md).  
+  Turn Tamper Protection on or off on devices. To use Tamper Protection, you must [integrate Microsoft Defender Advanced Threat Protection with Intune](advanced-threat-protection.md), and have [Enterprise Mobility + Security E5 Licenses](../intune/fundamentals/licenses.md).  
   - **Not configured** - No change is made to device settings.
   - **Enabled** - Tamper Protection is turned on and restrictions are enforced on devices.
   - **Disabled** - Tamper Protection is turned off and restrictions are not enforced.
@@ -1877,6 +1877,6 @@ Use these options to configure the local security settings on Windows 10 devices
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](../configuration/device-profile-assign.md), and [monitor its status](../configuration/device-profile-monitor.md).  
+The profile is created, but it's not doing anything yet. Next, [assign the profile](../intune/configuration/device-profile-assign.md), and [monitor its status](../intune/configuration/device-profile-monitor.md).  
 
 Configure endpoint protections settings on [macOS](endpoint-protection-macos.md) devices.  

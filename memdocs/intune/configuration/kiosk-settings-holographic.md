@@ -50,7 +50,7 @@ When you choose single app kiosk mode, enter the following settings:
 
 - **App to run in kiosk mode**: Choose **Add a store app**, and select an app from the list.
 
-    Don't have any apps listed? Add some using the steps at [Client Apps](../apps/apps-add.md).
+    Don't have any apps listed? Add some using the steps at [Client Apps](../intune/apps/apps-add.md).
 
     Select **OK** to save your changes.
 
@@ -65,11 +65,11 @@ Apps in this mode are available on the start menu. These apps are the only apps 
   - **Auto logon**: Not supported on Windows Holographic for Business.
   - **Local user accounts**: **Add** the local (to the device) user account. The account you enter is used to sign in to the kiosk.
   - **Azure AD user or group (Windows 10, version 1803 and later)**: Requires user credentials to sign in to the device. Select **Add** to choose Azure AD users or groups from the list. You can select multiple users and groups. Choose **Select** to save your changes.
-  - **HoloLens visitor**: The visitor account is a guest account that doesn't require any user credentials or authentication, as described in [shared PC mode concepts](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
+  - **HoloLens visitor**: The visitor account is a guest account that doesn't require any user credentials or authentication, as described in [shared PC mode concepts](https://docs.microsoft.com/windows/intune/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Applications**: Add the apps to run on the kiosk device. Remember, you can add several apps.
 
-  - **Add Store apps**: Select an existing app you added or deployed to Intune as [Client Apps](../apps/apps-add.md), including LOB apps. If you don't have any apps listed, Intune supports many [app types](../apps/apps-add.md) that you [add to Intune](../apps/store-apps-windows.md).
+  - **Add Store apps**: Select an existing app you added or deployed to Intune as [Client Apps](../intune/apps/apps-add.md), including LOB apps. If you don't have any apps listed, Intune supports many [app types](../intune/apps/apps-add.md) that you [add to Intune](../intune/apps/store-apps-windows.md).
   - **Add Win32 app**: Not supported on Windows Holographic for Business.
   - **Add by AUMID**: Use this option to add inbox Windows apps. Enter the following properties: 
 

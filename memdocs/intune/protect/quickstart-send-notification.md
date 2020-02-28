@@ -37,15 +37,15 @@ By default, when Intune detects a device that isn't compliant, Intune immediatel
 
 One action to take when a device doesn't meet compliance is to send email to the devices user. You can also customize an email notification before sending it. Specifically, you can customize the recipients, subject, and message body, including company logo, and contact information. Intune also includes details about the noncompliant device in the email notification.
 
-If you don’t have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+If you don’t have an Intune subscription, [sign up for a free trial account](../intune/fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
-When using device compliance policies to block devices from corporate resources, Azure AD Conditional Access must be set up. If you've completed the [Create a device compliance policy](quickstart-set-password-length-android.md) quickstart, you're using Azure Active Directory. For more information about Azure AD, see [Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) and [common ways to use Conditional Access with Intune](../protect/conditional-access-intune-common-ways-use.md).
+When using device compliance policies to block devices from corporate resources, Azure AD Conditional Access must be set up. If you've completed the [Create a device compliance policy](quickstart-set-password-length-android.md) quickstart, you're using Azure Active Directory. For more information about Azure AD, see [Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) and [common ways to use Conditional Access with Intune](../intune/protect/conditional-access-intune-common-ways-use.md).
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../intune/fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../intune/fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Create a notification message template
 
@@ -70,9 +70,9 @@ To send email to your users, create a notification message template. When a devi
 
 For details about setting your company name, company contact information, and company logo, see the following articles:
 
-- [Company information and privacy statement](../apps/company-portal-app.md#company-information-and-privacy-statement)
-- [Support information](../apps/company-portal-app.md#support-information)
-- [Company identity branding customization](../apps/company-portal-app.md#company-identity-branding-customization).
+- [Company information and privacy statement](../intune/apps/company-portal-app.md#company-information-and-privacy-statement)
+- [Support information](../intune/apps/company-portal-app.md#support-information)
+- [Company identity branding customization](../intune/apps/company-portal-app.md#company-identity-branding-customization).
 
 ## Add a noncompliance policy
 
@@ -132,4 +132,4 @@ In this quickstart, you used Intune to create and assign a compliance policy for
 To follow this series of Intune quickstarts, continue to the next quickstart.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Add and assign a client app](../apps/quickstart-add-assign-app.md)
+> [Quickstart: Add and assign a client app](../intune/apps/quickstart-add-assign-app.md)

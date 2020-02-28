@@ -43,7 +43,7 @@ Apple Configurator enrollment methods can't be used with the [device enrollment 
 ## Prerequisites
 
 - Physical access to iOS/iPadOS devices
-- [Set MDM authority](../fundamentals/mdm-authority-set.md)
+- [Set MDM authority](../intune/fundamentals/mdm-authority-set.md)
 - [An Apple MDM push certificate](apple-mdm-push-certificate-get.md)
 - Device serial numbers (Setup Assistant enrollment only)
 - USB connection cables

@@ -36,7 +36,7 @@ ms.collection: M365-identity-device-management
 > For more information, see [Plan for Change blog post](https://aka.ms/Windows7_Intune).
 
 > [!NOTE]
-> You can use Microsoft Intune to manage Windows PCs either [as mobile devices with mobile device management (MDM)](../enrollment/windows-enroll.md) or as computers with the Intune software client as described below. However, Microsoft recommends that customers [use the MDM management solution](../enrollment/windows-enroll.md) whenever possible. For more information, see [Compare managing Windows PCs as computers or mobile devices](pc-management-comparison.md) 
+> You can use Microsoft Intune to manage Windows PCs either [as mobile devices with mobile device management (MDM)](../intune/enrollment/windows-enroll.md) or as computers with the Intune software client as described below. However, Microsoft recommends that customers [use the MDM management solution](../intune/enrollment/windows-enroll.md) whenever possible. For more information, see [Compare managing Windows PCs as computers or mobile devices](pc-management-comparison.md) 
 
 Intune provides a comprehensive solution for organizations to manage mobile devices. Intune can manage Windows PCs as mobile devices using the modern device management capabilities built in to the Windows 10 operating system. To meet your organization’s management needs, Intune can also manage Windows PCs as computers with the Intune software client. This management method uses traditional computer management capabilities in the legacy Windows operating system.
 
@@ -128,4 +128,4 @@ Also note that in the Intune admin console, certain sections, such as **Updates*
 
 The Intune client software usually runs quietly in the background without the need for much user interaction or troubleshooting. If you need to resolve PC management issues, you can check the logs. The Intune client software and corresponding logs are installed under the %Program Files%\Microsoft\OnlineManagement directory.
 
-You can also review [device enrollment](../enrollment/device-enrollment.md) for more information about enrolling devices with Microsoft Intune.
+You can also review [device enrollment](../intune/enrollment/device-enrollment.md) for more information about enrolling devices with Microsoft Intune.

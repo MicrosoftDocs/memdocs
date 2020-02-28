@@ -63,7 +63,7 @@ The Intune App SDK consists of the following files:
 The SDK supports Android API 19 (Android 4.4+) through Android API 28 (Android 9.0).
 
 ### Company Portal app
-The Intune App SDK for Android relies on the presence of the [Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) app on the device to enable app protection policies. The Company Portal retrieves app protection policies from the Intune service. When the app initializes, it loads policy and code to enforce that policy from the Company Portal.
+The Intune App SDK for Android relies on the presence of the [Company Portal](https://play.google.com/store/intune/apps/details?id=com.microsoft.windowsintune.companyportal) app on the device to enable app protection policies. The Company Portal retrieves app protection policies from the Intune service. When the app initializes, it loads policy and code to enforce that policy from the Company Portal.
 
 > [!NOTE]
 > When the Company Portal app is not on the device, an Intune-managed app behaves the same as a normal app that does not support Intune app protection policies.
