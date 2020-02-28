@@ -19,9 +19,6 @@ highlightedContent:
     - title: Microsoft Endpoint Manager (product page)
       itemType: get-started
       url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
-    - title: Deploy Windows 10
-      itemType: get-started
-      url: mem-architecture.md
 
 conceptualContent:
   items:
@@ -30,13 +27,13 @@ conceptualContent:
         - url: /intune/
           itemType: overview
           text: Intune hub page
-        - url: /intune/intune/fundamentals/
+        - url: ./intune/fundamentals/
           itemType: overview
           text: Intune fundamentals         
         - url: /intune/
           itemType: concept
           text: Common ways to use Intune 
-        - url: /intune/intune/fundamentals/migration-guide
+        - url: ./intune/fundamentals/migration-guide.md
           itemType: concept
           text: Intune migration guide
     - title: Configuration Manager
@@ -61,30 +58,30 @@ conceptualContent:
         - url: ./intune/enrollment/device-enrollment.md
           itemType: concept
           text: Device enrollment overview
-        - url: ./intune/intune/enrollment/device-management-capabilities.md
+        - url: ./intune/enrollment/device-management-capabilities.md
           itemType: concept  
           text: Enrolled device management capabilities
-        - url: ./intune/intune/enrollment/windows-enrollment-methods.md
+        - url: ./intune/enrollment/windows-enrollment-methods.md
           itemType: how-to-guide
           text: Intune enrollment methods for Windows devices
-        - url: ./intune/intune/enrollment/windows-enroll.md
+        - url: ./intune/enrollment/windows-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for Windows
-        - url: ./intune/intune/enrollment/ios-enroll.md
+        - url: ./intune/enrollment/ios-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for iOS devices        
-        - url: ./intune/intune/enrollment/android-enroll.md
+        - url: ./intune/enrollment/android-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for Android devices
     - title: Autopilot
       links:
-        - url: ./intune/intune/remote-actions/device-management.md
+        - url: ./intune/remote-actions/device-management.md
           itemType: concept
           text: Device management overview
-        - url: ./intune/intune/remote-actions/custom-notifications.md
+        - url: ./intune/remote-actions/custom-notifications.md
           itemType: how-to-guide
           text: Send custom notifications
-        - url: ./intune/intune/remote-actions/devices-wipe.md
+        - url: ./intune/remote-actions/devices-wipe.md
           itemType: how-to-guide
           text: Remove devices          
 
