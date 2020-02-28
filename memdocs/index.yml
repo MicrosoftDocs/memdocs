@@ -31,7 +31,7 @@ highlightedContent:
 
 conceptualContent:
   items:
-    - title: Microsoft Intune documentation
+    - title: Microsoft Intune
       links:
         - url: /intune/fundamentals
           itemType: overview
@@ -54,7 +54,7 @@ conceptualContent:
         - url: /intune/apps
           itemType: concept
           text: Manage and protect apps
-    - title: Microsoft Endpoint Configuration Manager documentation
+    - title: Microsoft Endpoint Configuration Manager
       links:
         - url: https://docs.microsoft.com/configmgr/comanage
           itemType: concept
