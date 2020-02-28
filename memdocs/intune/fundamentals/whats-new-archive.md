@@ -43,32 +43,32 @@ ms.collection: M365-identity-device-management
 The setup checklist in the Company Portal app for Android has been updated with a lightweight design and new icons. The changes align with the recent updates made to the Company Portal app for iOS. For a side-by-side comparison of the changes, see [What's new in the app UI](whats-new-app-ui.md). For a look at the updated enrollment steps, see [Enroll with Android work profile](/intune-user-help/enroll-device-android-work-profile) and [Enroll your Android device](/intune-user-help/enroll-device-android-company-portal).  
 
 #### Win32 apps on Windows 10 S mode devices<!-- 3747604 --> 
-You can install and run Win32 apps on Windows 10 S mode managed devices. To do this, you can create one or more supplemental policies for S mode using the Windows Defender Application Control (WDAC) PowerShell tools. Sign the supplemental policies with the Device Guard Signing Portal and then upload and distribute the policies via Intune. In Intune, you will find this capability by selecting **Client apps** > **Windows 10 S supplemental policies**. For more information, see [Enable Win32 apps on S mode devices](~/intune/apps/apps-win32-s-mode.md).
+You can install and run Win32 apps on Windows 10 S mode managed devices. To do this, you can create one or more supplemental policies for S mode using the Windows Defender Application Control (WDAC) PowerShell tools. Sign the supplemental policies with the Device Guard Signing Portal and then upload and distribute the policies via Intune. In Intune, you will find this capability by selecting **Client apps** > **Windows 10 S supplemental policies**. For more information, see [Enable Win32 apps on S mode devices](~/apps/apps-win32-s-mode.md).
 
 #### Set Win32 app availability based on a date and time<!-- 3510685 -->
-As an admin, you can configure the start time and deadline time for a required Win32 app. At the start time, Intune management extension will start the app content download and cache it. The app will be installed at the deadline time. For available apps, start time will dictate when the app is visible in Company Portal. For more information, see [Intune Win32 app management](~/intune/apps/apps-win32-app-management.md#set-win32-app-availability-and-notifications).
+As an admin, you can configure the start time and deadline time for a required Win32 app. At the start time, Intune management extension will start the app content download and cache it. The app will be installed at the deadline time. For available apps, start time will dictate when the app is visible in Company Portal. For more information, see [Intune Win32 app management](~/apps/apps-win32-app-management.md#set-win32-app-availability-and-notifications).
 
 #### Require device restart based on grace period after Win32 app install<!-- 3136567 -->
-You can require that a device must restart after a Win32 app successfully installs. For more information, see [Win32 app management](~/intune/apps/apps-win32-app-management.md).
+You can require that a device must restart after a Win32 app successfully installs. For more information, see [Win32 app management](~/apps/apps-win32-app-management.md).
 
 #### Dark Mode for iOS Company Portal<!-- 4911422 -->
-Dark Mode is available for the iOS Company Portal. Users can download company apps, manage their devices, and get IT support in the color scheme of their choice based on device settings. The iOS Company Portal will automatically match the end user's device settings for dark or light mode. For more information, see [Introducing dark mode on Microsoft Intune Company Portal for iOS](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Introducing-dark-mode-on-Microsoft-Intune-Company-Portal-for-iOS/ba-p/918453). For more information about the iOS Company Portal, see [How to configure the Microsoft Intune Company Portal app](~/intune/apps/company-portal-app.md).
+Dark Mode is available for the iOS Company Portal. Users can download company apps, manage their devices, and get IT support in the color scheme of their choice based on device settings. The iOS Company Portal will automatically match the end user's device settings for dark or light mode. For more information, see [Introducing dark mode on Microsoft Intune Company Portal for iOS](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Introducing-dark-mode-on-Microsoft-Intune-Company-Portal-for-iOS/ba-p/918453). For more information about the iOS Company Portal, see [How to configure the Microsoft Intune Company Portal app](~/apps/company-portal-app.md).
 
 #### Android Company Portal enforced minimum app version<!-- 2378776 -->
 By using the **Min Company Portal version** setting of an app protection policy, you can specify a specific minimum defined version of the Company Portal that is enforced on an end user device. This conditional launch setting allows you to **Block access**, **Wipe data**, or **Warn** as possible actions when the value is not met. The possible formats for this value follows the pattern *[Major].[Minor]*, *[Major].[Minor].[Build]*, or *[Major].[Minor].[Build].[Revision]*.
 
-The **Min Company Portal version** setting, if configured, will affect any end user who gets version 5.0.4560.0 of the Company Portal and any future versions of the Company Portal. This setting will have no effect on users using a version of Company Portal that is older than the version that this feature is released with. End users using app auto-updates on their device will likely not see any dialogs from this feature, given that they will likely be on the latest Company Portal version. This setting is Android only with app protection for enrolled and unenrolled devices. For more information, see [Android app protection policy settings - Conditional launch](~/intune/apps/app-protection-policy-settings-android.md#conditional-launch).
+The **Min Company Portal version** setting, if configured, will affect any end user who gets version 5.0.4560.0 of the Company Portal and any future versions of the Company Portal. This setting will have no effect on users using a version of Company Portal that is older than the version that this feature is released with. End users using app auto-updates on their device will likely not see any dialogs from this feature, given that they will likely be on the latest Company Portal version. This setting is Android only with app protection for enrolled and unenrolled devices. For more information, see [Android app protection policy settings - Conditional launch](~/apps/app-protection-policy-settings-android.md#conditional-launch).
 
 #### Add Mobile Threat Defense apps to unenrolled devices<!-- 3005337 -->
-You can create an Intune app protection policy that may block, or selectively wipe the users corporate data based on the health of a device. The health of the device is determined using your chosen Mobile Threat Defense (MTD) solution. This capability exists today with Intune enrolled devices as a device compliance setting. With this new feature, we extend the threat detection from an Mobile Threat Defense vendor to function on unenrolled devices. On Android, this feature requires the latest Company Portal on the device. On iOS, this feature will be available for use when apps integrate the latest Intune SDK (v 12.0.15+). We'll update the What's New topic when the first app adopts the latest Intune SDK. The remaining apps will become available on a rolling basis. For more information, see [Create Mobile Threat Defense app protection policy with Intune](~/intune/protect/mtd-app-protection-policy.md).
+You can create an Intune app protection policy that may block, or selectively wipe the users corporate data based on the health of a device. The health of the device is determined using your chosen Mobile Threat Defense (MTD) solution. This capability exists today with Intune enrolled devices as a device compliance setting. With this new feature, we extend the threat detection from an Mobile Threat Defense vendor to function on unenrolled devices. On Android, this feature requires the latest Company Portal on the device. On iOS, this feature will be available for use when apps integrate the latest Intune SDK (v 12.0.15+). We'll update the What's New topic when the first app adopts the latest Intune SDK. The remaining apps will become available on a rolling basis. For more information, see [Create Mobile Threat Defense app protection policy with Intune](~/protect/mtd-app-protection-policy.md).
 
 #### Available Google Play app reporting for Android work profiles<!-- 3041956   -->
-For available app installs on Android Enterprise work profile, dedicated, and fully managed devices you can view app installation status as well as the installed version of managed Google Play apps. For more information, see [How to monitor app protection policies](~/intune/apps/app-protection-policies-monitor.md), [Manage Android work profile devices with Intune](~/intune/enrollment/android-enterprise-overview.md) and [Managed Google Play app type](~/intune/apps/apps-add-android-for-work.md#managed-google-play-app-types).
+For available app installs on Android Enterprise work profile, dedicated, and fully managed devices you can view app installation status as well as the installed version of managed Google Play apps. For more information, see [How to monitor app protection policies](~/apps/app-protection-policies-monitor.md), [Manage Android work profile devices with Intune](~/enrollment/android-enterprise-overview.md) and [Managed Google Play app type](~/apps/apps-add-android-for-work.md#managed-google-play-app-types).
 
 #### Microsoft Edge version 77 and later for Windows 10 and macOS (public preview)<!-- 3872025, 4678761  -->
 Microsoft Edge version 77 and later will be available to deploy to PCs running Windows 10 and macOS. 
 
-The public preview offers **Dev** and **Beta** channels for Windows 10 and a **Beta** channel for macOS. The deployment is in English (EN) only, however end users can change the display language in the browser under **Settings** > **Languages**. Microsoft Edge is a Win32 app installed in system context and on like architectures (x86 app on x86 OS, and x64 app on x64 OS). In addition, automatic updates of the browser is **On** by default, and Microsoft Edge cannot be uninstalled. For more information, see [Add Microsoft Edge for Windows 10 to Microsoft Intune](~/intune/apps/apps-windows-edge.md) and [Microsoft Edge documentation](https://go.microsoft.com/fwlink/?linkid=2103823).
+The public preview offers **Dev** and **Beta** channels for Windows 10 and a **Beta** channel for macOS. The deployment is in English (EN) only, however end users can change the display language in the browser under **Settings** > **Languages**. Microsoft Edge is a Win32 app installed in system context and on like architectures (x86 app on x86 OS, and x64 app on x64 OS). In addition, automatic updates of the browser is **On** by default, and Microsoft Edge cannot be uninstalled. For more information, see [Add Microsoft Edge for Windows 10 to Microsoft Intune](~/apps/apps-windows-edge.md) and [Microsoft Edge documentation](https://go.microsoft.com/fwlink/?linkid=2103823).
 
 #### Update to app protection UI and iOS app provisioning UI<!-- 4102027, 4102029   -->
 The UI to create and edit app protection policies and iOS app provisioning profiles in Intune has been updated. UI changes include:
@@ -76,18 +76,18 @@ The UI to create and edit app protection policies and iOS app provisioning profi
 - An update to the create flow to include assignments.
 - A summarized page of all things set when viewing properties, prior to creating a new policy or when editing a property. Also, when editing properties, the summary will only show a list of items from the category of properties being edited.
 
-For more information, see [How to create and assign app protection policies](~/intune/apps/app-protection-policies.md) and [Use iOS app provisioning profiles](~/intune/apps/app-provisioning-profile-ios.md).
+For more information, see [How to create and assign app protection policies](~/apps/app-protection-policies.md) and [Use iOS app provisioning profiles](~/apps/app-provisioning-profile-ios.md).
 
 #### Intune guided scenarios<!-- 4850318, 4831296, 3610611  -->
 Intune now provides guided scenarios to help you complete a specific task or set of tasks within Intune. A guided scenario is a customized series of steps (workflow) centered around one end-to-end use-case. Common scenarios are defined based on the role an admin, user, or device plays in your organization. These workflows typically require a collection of carefully orchestrated profiles, settings, applications, and security controls to provide the best user experience and security. New guided scenarios include:
-- [Deploy Microsoft Edge for Mobile](~/intune/fundamentals/guided-scenarios-edge.md)
-- [Secure Microsoft Office mobile apps](~/intune/fundamentals/guided-scenarios-office-mobile.md) 
-- [Cloud-managed Modern Desktop](~/intune/fundamentals/guided-scenarios-cloud-managed-pc.md)
+- [Deploy Microsoft Edge for Mobile](~/fundamentals/guided-scenarios-edge.md)
+- [Secure Microsoft Office mobile apps](~/fundamentals/guided-scenarios-office-mobile.md) 
+- [Cloud-managed Modern Desktop](~/fundamentals/guided-scenarios-cloud-managed-pc.md)
 
 For more information, see [Intune guided scenarios overview](guided-scenarios-overview.md).
 
 #### Additional app configuration variable available<!-- 4969237   -->
-When creating an app configuration policy, you can include the `AAD Device ID` configuration variable as part of your configuration settings. In Intune, select **Client apps** > **App configuration policies** > **Add**. Enter your configuration policy details and select **Configuration settings** to view the **Configuration settings** blade. For more information, see [App configuration policies for managed Android Enterprise devices - Use the configuration designer](~/intune/apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
+When creating an app configuration policy, you can include the `AAD Device ID` configuration variable as part of your configuration settings. In Intune, select **Client apps** > **App configuration policies** > **Add**. Enter your configuration policy details and select **Configuration settings** to view the **Configuration settings** blade. For more information, see [App configuration policies for managed Android Enterprise devices - Use the configuration designer](~/apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
 
 #### Create groups of management objects called policy sets<!-- 3762880  -->
 Policy sets allow you to create a bundle of references to already existing management entities that need to be identified, targeted, and monitored as a single conceptual unit. Policy sets do not replace existing concepts or objects. You can continue to assign individual objects in Intune and you can reference individual objects as part of a policy set. Therefore, any changes to those individual objects will be reflected in the Policy set. ​ In Intune, you will select **Policy sets** > **Create** to create a new Policy set. 
@@ -978,10 +978,10 @@ You can configure PowerShell scripts to run with the user’s admin privileges o
 #### Android Enterprise app management<!-- 4459905 -->
 To make it easier for IT admins to configure and use Android Enterprise management, Intune will automatically add four common Android Enterprise related apps to the Intune admin console. The four Android Enterprise apps are the following apps:
 
-- **[Microsoft Intune](https://play.google.com/store/intune/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed scenarios.
-- **[Microsoft Authenticator](https://play.google.com/store/intune/apps/details?id=com.azure.authenticator)** - Helps you sign in to your accounts if you use two-factor verification.
-- **[Intune Company Portal](https://play.google.com/store/intune/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used for App Protection Policies (APP) and Android Enterprise work profile scenarios.
-- [Managed Home Screen](https://play.google.com/store/intune/apps/details?id=com.microsoft.launcher.enterprise) - Used for Android Enterprise dedicated/kiosk scenarios.
+- **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed scenarios.
+- **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign in to your accounts if you use two-factor verification.
+- **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used for App Protection Policies (APP) and Android Enterprise work profile scenarios.
+- [Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise) - Used for Android Enterprise dedicated/kiosk scenarios.
 
 Previously, IT admins would need to manually find and approve these apps in the [Managed Google Play store](https://play.google.com/store/apps) as part of setup. This change removes those previously manual steps to make it easier and faster for customers to use Android Enterprise management.
 
@@ -1194,7 +1194,7 @@ Still in a public preview, we've expanded our support of Android Enterprise full
 
 - [Conditional Access](../protect/conditional-access.md) - Conditional Access policies that apply to Android also apply to Android Enterprise fully managed devices. Users can now register their fully managed device in Azure Active Directory using the **Microsoft Intune app**. Then, see and resolve any compliance issues to access organizational resources.
 
-- New end-user app (Microsoft Intune app) - There is a new end-user app for Android fully managed devices called **Microsoft Intune**. This new app is light-weight and modern, and provides similar functionally as the Company Portal app, but for fully managed devices. For more information, see [Microsoft Intune app on Google Play](https://play.google.com/store/intune/apps/details?id=com.microsoft.intune).
+- New end-user app (Microsoft Intune app) - There is a new end-user app for Android fully managed devices called **Microsoft Intune**. This new app is light-weight and modern, and provides similar functionally as the Company Portal app, but for fully managed devices. For more information, see [Microsoft Intune app on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune).
 
 To set up Android fully managed devices, go to **Device enrollment** > **Android enrollment** > **Corporate-owned, fully managed user devices**. Support for fully managed Android devices remains in preview, and some Intune features might not be fully functional.  
 
@@ -3572,7 +3572,7 @@ Kiosk mode requires:
 
 - Intune must be the MDM authority.
 - The apps must already be installed on the target device.
-- The device must be [properly provisioned](https://docs.microsoft.com/windows/intune/configuration/set-up-a-kiosk-for-windows-10-for-desktop-editions).
+- The device must be [properly provisioned](https://docs.microsoft.com/windows/configuration/set-up-a-kiosk-for-windows-10-for-desktop-editions).
 
 ### New device configuration profile for creating network boundaries<!-- 1311967 -->   
 A new device configuration profile called **Network boundary** can be found with your other device configuration profiles. Use this profile to define online resources that you want to be considered corporate and trusted. You must define a network boundary for a device *before* features such as Windows Defender Application Guard and Windows Information Protection can be used on the device. It’s important to define only one network boundary for each device.
@@ -3810,7 +3810,7 @@ When you enroll an Android for Work device with a work profile, it's the Company
 
 Unless you are using a MAM-enabled app in the personal profile, the Company Portal app for Android no longer serves any use. To improve the work profile experience, Intune will automatically hide the personal Company Portal app after a successful work profile enrollment.
 
-The Company Portal app for Android can be enabled at any time in the personal profile by browsing for [Company Portal in the Play Store](https://play.google.com/store/intune/apps/details?id=com.microsoft.windowsintune.companyportal) and tapping **Enable**.
+The Company Portal app for Android can be enabled at any time in the personal profile by browsing for [Company Portal in the Play Store](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) and tapping **Enable**.
 
 ### Company Portal for Windows 8.1 and Windows Phone 8.1 moving to sustaining mode<!--1428681-->
 

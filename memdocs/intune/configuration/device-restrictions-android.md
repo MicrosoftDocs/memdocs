@@ -99,7 +99,7 @@ Use these settings to allow or prevent specific apps on the device. This feature
 
 To add app to these lists, you can:
 
-- **Add** the Google Play Store URL of the app you want. For example, to add the Microsoft Remote Desktop app for Android, enter `https://play.google.com/store/intune/apps/details?id=com.microsoft.rdc.android`. To find the URL of an app, open the [Google Play store](https://play.google.com/store/apps), and search for the app. For example, search for `Microsoft Remote Desktop Play Store` or `Microsoft Planner`. Select the app, and copy the URL.
+- **Add** the Google Play Store URL of the app you want. For example, to add the Microsoft Remote Desktop app for Android, enter `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android`. To find the URL of an app, open the [Google Play store](https://play.google.com/store/apps), and search for the app. For example, search for `Microsoft Remote Desktop Play Store` or `Microsoft Planner`. Select the app, and copy the URL.
 - Import a CSV file with details about the app, including the URL. Use the <*app url*>, <*app name*>, <*app publisher*> format. Or, **Export** an existing list that includes the restricted apps list in the same format.
 
 > [!IMPORTANT]

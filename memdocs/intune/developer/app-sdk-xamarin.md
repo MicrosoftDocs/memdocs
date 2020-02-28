@@ -231,7 +231,7 @@ This is expected because when the Remapper modifies the inheritance of Xamarin c
 * The Intune SDK Xamarin Bindings do not support apps that are using a cross-platform framework such as MvvmCross due to conflicts between MvvmCross and Intune MAM classes. While some customers may have had success with integration after moving their apps to plain Xamarin.Forms, we do not provide explicit guidance or plugins for app developers using MvvmCross.
 
 ### Company Portal app
-The Intune SDK Xamarin Bindings rely on the presence of the [Company Portal](https://play.google.com/store/intune/apps/details?id=com.microsoft.windowsintune.companyportal) Android app on the device to enable app protection policies. The Company Portal retrieves app protection policies from the Intune service. When the app initializes, it loads policy and code to enforce that policy from the Company Portal. The user does not need to be signed in.
+The Intune SDK Xamarin Bindings rely on the presence of the [Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) Android app on the device to enable app protection policies. The Company Portal retrieves app protection policies from the Intune service. When the app initializes, it loads policy and code to enforce that policy from the Company Portal. The user does not need to be signed in.
 
 > [!NOTE]
 > When the Company Portal app is not on the **Android** device, an Intune-managed app behaves the same as a normal app that does not support Intune app protection policies.

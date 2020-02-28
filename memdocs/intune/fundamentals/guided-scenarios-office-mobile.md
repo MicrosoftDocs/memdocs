@@ -39,7 +39,7 @@ Office mobile apps, as well as Microsoft Edge for Mobile, support dual identity.
 
 ![Image of corporate data versus personal data](./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-01.png)
 
-[Intune app protection policies](~/intune/apps/app-protection-policy.md) help protect your work files on devices that are enrolled into Intune. You can also use app protection policies on employee owned devices that are not enrolled for management in Intune. In this case, even though your company doesn't manage the device, you still need to make sure that work files and resources are protected.
+[Intune app protection policies](~/apps/app-protection-policy.md) help protect your work files on devices that are enrolled into Intune. You can also use app protection policies on employee owned devices that are not enrolled for management in Intune. In this case, even though your company doesn't manage the device, you still need to make sure that work files and resources are protected.
 
 You can use App protection policies to prevent users from saving work files in unprotected locations. You can also restrict data movement to other apps that aren't protected by App protection policies. App protection policy settings include:
 - Data relocation policies like **Save copies of org data**, and **Restrict cut, copy, and paste**.
@@ -124,5 +124,5 @@ The final step allows you to review a summary of the settings you configured. On
 > Once the guided scenario is complete it will display a summary. You can modify the resources listed in the summary later, however the table displaying these resouces will not be saved.
 ## Next steps
 
-- Enhance the security of work files by assigning users an App-based conditional access policy to protect cloud services from sending work files to unprotected apps. For more information, see [Set up app-based Conditional Access policies with Intune](~/intune/protect/app-based-conditional-access-intune-create.md).
+- Enhance the security of work files by assigning users an App-based conditional access policy to protect cloud services from sending work files to unprotected apps. For more information, see [Set up app-based Conditional Access policies with Intune](~/protect/app-based-conditional-access-intune-create.md).
 

@@ -125,7 +125,7 @@ Using the shared or guest PC features available in Intune, you can configure Win
 
 ### [Device restrictions](../configuration/device-restrictions-windows-holographic.md)
 
-Device restrictions let you control different settings and features on your devices, including requiring a password, installing apps from [Microsoft Store](https://www.microsoft.com/store/intune/apps/windows?icid=CNavAppsWindowsApps), enabling Bluetooth, and more. These restrictions are created in an Intune profile. This profile can be applied to multiple devices running Windows Holographic for Business.
+Device restrictions let you control different settings and features on your devices, including requiring a password, installing apps from [Microsoft Store](https://www.microsoft.com/store/apps/windows?icid=CNavAppsWindowsApps), enabling Bluetooth, and more. These restrictions are created in an Intune profile. This profile can be applied to multiple devices running Windows Holographic for Business.
 
 ### [Configure VPN](../configuration/vpn-settings-configure.md)
 

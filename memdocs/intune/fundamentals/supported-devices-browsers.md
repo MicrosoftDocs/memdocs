@@ -97,7 +97,7 @@ An [Intune software client](manage-windows-pcs-with-microsoft-intune.md) can be 
 > [!Note]
 > Microsoft announced that Windows 7 support ends on January 14th 2020. On this date, Intune also retires support for devices running Windows 7.
 >
-> For more information, see [Intune plan for change: end of support for Windows 7](https://docs.microsoft.com/intune/intune/fundamentals/whats-new#windows-7-ends-extended-support-).
+> For more information, see [Intune plan for change: end of support for Windows 7](https://docs.microsoft.com/intune/fundamentals/whats-new#windows-7-ends-extended-support-).
 >
 > Microsoft Intune will retire support for the Silverlight-based Intune console on October 15, 2020. This retirement includes ending support for the Silverlight console configured PC software client (also known as the PC agent).
 >

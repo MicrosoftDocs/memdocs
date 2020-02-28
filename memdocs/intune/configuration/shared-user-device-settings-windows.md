@@ -72,7 +72,7 @@ These settings use the [SharedPC CSP](https://docs.microsoft.com/windows/client-
   [Authentication/EnableFastFirstSignIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-enablefastfirstsignin)
 
 > [!TIP]
-> [Set up a shared or guest PC](https://docs.microsoft.com/windows/intune/configuration/set-up-shared-or-guest-pc) (opens another docs web site) is a great resource on this Windows 10 feature, including concepts and group policies that can be set in shared mode.
+> [Set up a shared or guest PC](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (opens another docs web site) is a great resource on this Windows 10 feature, including concepts and group policies that can be set in shared mode.
 
 ## Next steps
 

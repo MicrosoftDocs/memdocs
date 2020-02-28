@@ -49,9 +49,9 @@ To add a built-in app to your available apps in Microsoft Intune, do the followi
 6. Select the built-in apps that you want to include. 
 7. Once you have selected the apps, click **Select** on the **Select Built-in apps** pane.
 8. Click **Next** to display the **Scope tags** page.
-9. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](~/intune/fundamentals/scope-tags.md).
+9. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](~/fundamentals/scope-tags.md).
 10. Click **Next** to display the **Assignments** page.
-11. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](~/intune/fundamentals/groups-add.md). 
+11. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](~/fundamentals/groups-add.md). 
 12. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 13. When you are done, click **Create** to add the app to Intune.
 

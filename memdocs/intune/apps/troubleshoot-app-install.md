@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 On Microsoft Intune MDM-managed devices, sometimes app installations can fail. When these app installs fail, it can be challenging to understand the failure reason or troubleshoot the issue. Microsoft Intune provides app installation failure details that allow help desk operators and Intune administrators to view app information to address user help requests. The troubleshooting pane within Intune provides failure details, including details about managed apps on a user's device. Details about the end-to-end lifecycle of an app are provided under each individual device in the **Managed Apps** pane. You can view installation issues, such as when the app was created, modified, targeted, and delivered to a device. 
 
 > [!NOTE]
-> For specific app installation error code information, see [Intune app installation error reference](~/intune/apps/app-install-error-codes.md).
+> For specific app installation error code information, see [Intune app installation error reference](~/apps/app-install-error-codes.md).
 
 ## App troubleshooting details
 

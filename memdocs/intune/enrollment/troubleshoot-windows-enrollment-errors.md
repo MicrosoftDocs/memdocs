@@ -219,7 +219,7 @@ To fix this issue in a stand-alone Intune environment, follow these steps:
 
    If you choose **Selected**, click **Selected**, and then click **Add Members** to add all users who can join their devices to Azure AD. Make sure that all Azure AD accounts for the provisioning package are added.
  
-For more information about how to create a provisioning package for Windows Configuration Designer, see [Create a provisioning package for Windows 10](https://docs.microsoft.com/windows/intune/configuration/provisioning-packages/provisioning-create-package).
+For more information about how to create a provisioning package for Windows Configuration Designer, see [Create a provisioning package for Windows 10](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package).
 
 For more information about the Set up School PCs app, see [Use the Set up School PCs app](https://docs.microsoft.com/education/windows/use-set-up-school-pcs-app).
 

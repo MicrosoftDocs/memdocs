@@ -28,7 +28,7 @@ Managing the modern desktop from the cloud brings the added benefit of internet-
 If you want to evaluate a cloud-managed modern desktop in your own organization, this guided scenario predefines all the necessary configurations for a basic deployment. In this guided scenario, you will create a secure environment where you can try out Intune device management capabilities. 
 
 ## Prerequisites
-- [Set the MDM authority to Intune](~/intune/fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) - The mobile device management (MDM) authority setting determines how you manage your devices. As an IT admin, you must set an MDM authority before users can enroll devices for management.
+- [Set the MDM authority to Intune](~/fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) - The mobile device management (MDM) authority setting determines how you manage your devices. As an IT admin, you must set an MDM authority before users can enroll devices for management.
 - M365 E3 minimum (or M365 E5 for best security)
 - Windows 10 1903 device (registered with Windows Autopilot for best end-user experience)
 - Intune administrator permissions required to complete this guided scenario:
@@ -41,14 +41,14 @@ If you want to evaluate a cloud-managed modern desktop in your own organization,
 
 ## Step 1 - Introduction
 
-Using this guided scenario, you'll set up a test user, enroll a device in Intune, and deploy the device with Intune-recommended settings, as well as Windows 10 and Office ProPlus. Your device will also be configured for Microsoft Defender Advanced Threat Protection, if you choose to [enable this protection in Intune](~/intune/protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune). The user you set up and the device that you enroll will be added to a new security groups and will be configured with the recommended settings for security and productivity. 
+Using this guided scenario, you'll set up a test user, enroll a device in Intune, and deploy the device with Intune-recommended settings, as well as Windows 10 and Office ProPlus. Your device will also be configured for Microsoft Defender Advanced Threat Protection, if you choose to [enable this protection in Intune](~/protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune). The user you set up and the device that you enroll will be added to a new security groups and will be configured with the recommended settings for security and productivity. 
 
 ### What you will need to continue
 
 You must supply your test device and test user in this guided scenario. Make sure you complete the following tasks:
 - Set up a test user account in Azure Active Directory.
 - Create a test device running Windows 10, version 1903 or later.
-- (Optional) [Register the test device with Windows Autopilot](~/intune/enrollment/enrollment-autopilot.md#add-devices).
+- (Optional) [Register the test device with Windows Autopilot](~/enrollment/enrollment-autopilot.md#add-devices).
 - (Optional) Enable [branding to your organization's Azure Active Directory sign-in page](https://go.microsoft.com/fwlink/?linkid=2102455).
 
 ## Step 2 - User
@@ -62,7 +62,7 @@ If you want to add more users or devices to this configuration, simply add the u
 Make sure your device is running Windows 10, version 1903 or later.  The primary user will need to set up the device when they receive it. There are two setup options available to the user. 
 
 ### Option A – Windows Autopilot
-Windows Autopilot automates the configuration of new devices so that users can set up them up out of box, without IT assistance. If your device is already registered with Windows Autopilot, select it by its serial number. For more information about using Windows Autopilot, see [Register device with Windows Auto pilot (Optional)](~/intune/fundamentals/guided-scenarios-cloud-managed-pc.md#register-device-with-windows-autopilot-optional).
+Windows Autopilot automates the configuration of new devices so that users can set up them up out of box, without IT assistance. If your device is already registered with Windows Autopilot, select it by its serial number. For more information about using Windows Autopilot, see [Register device with Windows Auto pilot (Optional)](~/fundamentals/guided-scenarios-cloud-managed-pc.md#register-device-with-windows-autopilot-optional).
 
 ### Option B – Manual device enrollment
 Users will manually set up and enroll their new devices in mobile device management. After you complete this scenario, reset the device and give the primary user the enrollment instructions for Windows devices. For more information, see [Join a Windows 10 device to Azure AD during the first-run experience](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
@@ -76,7 +76,7 @@ The final step allows you to review a summary of the settings you configured. On
 
 ### Verification
 1. Verify that the selected is assigned MDM user scope
-    - Ensure [MDM User scope](~/intune/enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment) is:
+    - Ensure [MDM User scope](~/enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment) is:
         - Set to **All** for the **Microsoft Intune** app or,
         - Set to **Some**. Also, add the user group created by this guided scenario.
 2. Verify that the selected user is able to join devices to Azure Active Directory.
@@ -88,7 +88,7 @@ The final step allows you to review a summary of the settings you configured. On
     - Without Autopilot: For more information, see [Join a Windows 10 device to Azure AD during the first-run experience](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
 
 ### What happens when I click Deploy?
-The user and device will be added to new security groups. They'll also be configured with Intune-recommended settings for security and productivity at work or school. After the user joins the device to Azure AD, additional apps and settings will be added to the device. To learn more about these additional configurations, see [Quickstart: Enroll your Windows 10 device](~/intune/enrollment/quickstart-enroll-windows-device.md).
+The user and device will be added to new security groups. They'll also be configured with Intune-recommended settings for security and productivity at work or school. After the user joins the device to Azure AD, additional apps and settings will be added to the device. To learn more about these additional configurations, see [Quickstart: Enroll your Windows 10 device](~/enrollment/quickstart-enroll-windows-device.md).
 
 ## Additional information
 
@@ -114,5 +114,5 @@ Once the user joins the device to Azure Active Directory, the following configur
 
 ## Next steps
 
-- If you are using Microsoft Defender Advanced Threat Detection, create an [Intune Compliance policy](~/intune/protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy) to require Defender threat analysis to meet compliance.
-- Create a [Device-based Conditional Access policy](~/intune/protect/advanced-threat-protection.md#create-a-conditional-access-policy) to block access if the device does not meet Intune compliance.
+- If you are using Microsoft Defender Advanced Threat Detection, create an [Intune Compliance policy](~/protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy) to require Defender threat analysis to meet compliance.
+- Create a [Device-based Conditional Access policy](~/protect/advanced-threat-protection.md#create-a-conditional-access-policy) to block access if the device does not meet Intune compliance.

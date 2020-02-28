@@ -207,4 +207,4 @@ To learn how to add apps for each platform to Intune, see:
 - [Microsoft Edge for macOS](apps-edge-macos.md)
 - [Built-in apps](apps-add-built-in.md)
 - [Android Enterprise system app](apps-ae-system.md)
-- [Win32 apps](~/intune/apps/apps-win32-app-management.md)
+- [Win32 apps](~/apps/apps-win32-app-management.md)

@@ -11,8 +11,8 @@
       topicHref: /intune/
       items:
       - name: Apps
-        tocHref: /intune/intune/fundamentals/
-        topicHref: /intune/intune/apps/
+        tocHref: /intune/fundamentals/
+        topicHref: /intune/apps/
       - name: Apps
-        tocHref: /intune/intune/protect/
-        topicHref: /intune/intune/apps/
+        tocHref: /intune/protect/
+        topicHref: /intune/apps/

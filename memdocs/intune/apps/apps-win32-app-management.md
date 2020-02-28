@@ -302,7 +302,7 @@ You can use scope tags to determine who can see client app information in Intune
 
 ## Step 7 - Assignments
 
-You can select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](~/intune/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
+You can select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](~/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
 1. For the specific app, select an assignment type:
     - **Required**: The app is installed on devices in the selected groups.
@@ -310,7 +310,7 @@ You can select the **Required**, **Available for enrolled devices**, or **Uninst
     - **Uninstall**: The app is uninstalled from devices in the selected groups.
 2. Click **Add group** and assign the groups that will use this app.
 3. In the **Select groups** pane, select to assign based on users or devices. 
-4. After you have selected your groups, you can also set **End user notifications**, **Availability**, and **Installation deadline**. For more information, see [Set Win32 app availability and notifications](~/intune/apps/apps-win32-app-management.md#set-win32-app-availability-and-notifications).
+4. After you have selected your groups, you can also set **End user notifications**, **Availability**, and **Installation deadline**. For more information, see [Set Win32 app availability and notifications](~/apps/apps-win32-app-management.md#set-win32-app-availability-and-notifications).
 5. If you want to exclude any groups of users from being affected by this app assignment, select **Included** under the **MODE** column. The **Edit assignment** pane will be displayed. You can set the **mode** from being **Included** to being **Excluded**. Click **OK** to close the **Edit assignment** pane.
 6. Once you have completed setting the assignments for the apps, click **Next** to display the **Review + create** page.
 

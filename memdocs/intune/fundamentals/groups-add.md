@@ -74,7 +74,7 @@ Use the following steps to create a new group.
 
     For more information on these membership types, and creating dynamic expressions, see:
 
-    - [Create a basic group and add members using Azure AD](https://docs.microsoft.com/azure/active-directory/intune/fundamentals/active-directory-groups-create-azure-portal)
+    - [Create a basic group and add members using Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
     - [Dynamic membership rules for groups in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership)
 
     > [!NOTE]

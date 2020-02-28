@@ -47,7 +47,7 @@ The **What's next?** screen has been removed from the Android work profile enrol
 ## Week of November 11, 2019  
 
 ### Web apps launched from the Windows Company Portal app <!-- 5030972 -->
-End-users can now launch web apps directly from the Windows Company Portal app. End-users can select the web app and then choose the option **Open in browser**. The published web URL is opened directly in a web browser. This functionality will be rolled out over the next week. For more information about Web apps, see [Add web apps to Microsoft Intune](~/intune/apps/web-app.md).
+End-users can now launch web apps directly from the Windows Company Portal app. End-users can select the web app and then choose the option **Open in browser**. The published web URL is opened directly in a web browser. This functionality will be rolled out over the next week. For more information about Web apps, see [Add web apps to Microsoft Intune](~/apps/web-app.md).
 
 ![Example image of a web app launched from the Windows Company Portal app](./media/whats-new-app-ui/webapp-open-in-browser.png)  
 
@@ -118,7 +118,7 @@ We’ve added new features to the Microsoft Intune app (preview) for Android. Us
 ## Week of April 15, 2019  
 
 ### New end user app (Microsoft Intune app) <!--3903244 -->  
-There's a new end-user app for Android fully managed devices called **Microsoft Intune**. This new app is light-weight and modern, and provides similar functionally as the Company Portal app, but for fully managed, corporate devices. For more information, see [Microsoft Intune app on Google Play](https://play.google.com/store/intune/apps/details?id=com.microsoft.intune).  
+There's a new end-user app for Android fully managed devices called **Microsoft Intune**. This new app is light-weight and modern, and provides similar functionally as the Company Portal app, but for fully managed, corporate devices. For more information, see [Microsoft Intune app on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune).  
 
 Example screenshot of the device details screen: 
 

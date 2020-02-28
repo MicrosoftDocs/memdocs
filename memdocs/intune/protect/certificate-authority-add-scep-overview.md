@@ -129,7 +129,7 @@ The following third-party certification authorities support Intune:
 - [Sectigo](https://sectigo.com/products)
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
 - [Venafi](https://www.venafi.com/platform/enterprise-mobility)
-- [SCEPman](https://azuremarketplace.microsoft.com/marketplace/intune/apps/gluckkanja.scepman)
+- [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/gluckkanja.scepman)
 
 If you're a third-party CA interested in integrating your product with Intune, review the API guidance:
 

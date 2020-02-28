@@ -63,7 +63,7 @@ To use imported PKCS certificates with Intune, you'll need the following infrast
 
   You use a Windows Server to host the PFX Certificate Connector for Microsoft Intune.  The connector is used to process requests for certificates imported to Intune.
   
-  The connector requires access to the same ports as detailed for managed devices, as found in our [device endpoint content](https://docs.microsoft.com/intune/intune/fundamentals/intune-endpoints#access-for-managed-devices).
+  The connector requires access to the same ports as detailed for managed devices, as found in our [device endpoint content](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune supports install of the *Microsoft Intune Certificate Connector* on the same server as the *PFX Certificate Connector for Microsoft Intune*.
 

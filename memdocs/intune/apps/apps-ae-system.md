@@ -46,9 +46,9 @@ In the **App information** page, add the app details:
     - **Publisher**: Enter the name of the publisher of the app.  
     - **Package Name**: Enter a package name. Intune will validate that the package name is valid.
 5. Click **Next** to display the **Scope tags** page.
-8. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](~/intune/fundamentals/scope-tags.md).
+8. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](~/fundamentals/scope-tags.md).
 9. Click **Next** to display the **Assignments** page.
-10. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](~/intune/fundamentals/groups-add.md). 
+10. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](~/fundamentals/groups-add.md). 
 11. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 12. When you are done, click **Create** to add the app to Intune.
 

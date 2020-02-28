@@ -67,7 +67,7 @@ If you are using Exchange ActiveSync Conditional Access for an Android Enterpris
 
 ## App protection policies
 
-App protection policies applied are fully supported in the work profile and in the personal profile. You can publish line-of-business apps in the Android app publishing console at https://play.google.com/intune/apps/publish. This console includes an option to make apps private to your organization. For more information, see [Add a device compliance policy for Android Enterprise work profile devices in Intune](../protect/compliance-policy-create-android-for-work.md). For general information about app protection policies, see [What are app protection policies?](../apps/app-protection-policy.md)
+App protection policies applied are fully supported in the work profile and in the personal profile. You can publish line-of-business apps in the Android app publishing console at https://play.google.com/apps/publish. This console includes an option to make apps private to your organization. For more information, see [Add a device compliance policy for Android Enterprise work profile devices in Intune](../protect/compliance-policy-create-android-for-work.md). For general information about app protection policies, see [What are app protection policies?](../apps/app-protection-policy.md)
 
 ## VPN profiles
 

@@ -105,8 +105,8 @@ On the Device Management admin center, you can:
   - [Manage Windows 10 updates](../protect/windows-update-for-business-configure.md)  
   - [Manage iOS/iPadOS updates](../protect/software-updates-ios.md)  
 - [Azure active directory](https://docs.microsoft.com/azure/active-directory)  
-- [Manage users](https://docs.microsoft.com/azure/active-directory/intune/fundamentals/add-users-azure-active-directory)
-- [Manage groups and members](https://docs.microsoft.com/azure/active-directory/intune/fundamentals/active-directory-manage-groups)
+- [Manage users](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
+- [Manage groups and members](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
 - [Troubleshoot](help-desk-operators.md)
 
 ## Next steps

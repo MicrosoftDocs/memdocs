@@ -219,7 +219,7 @@ For ease of access, you can configure bookmarks that you’d like your users to 
 
 Here are some details:
 
-- These bookmarks only appear for users when they are using the [corporate mode](https://docs.microsoft.com/intune/intune/apps/app-configuration-managed-browser#how-to-configure-bookmarks-for-a-protected-browser) of Microsoft Edge. 
+- These bookmarks only appear for users when they are using the [corporate mode](https://docs.microsoft.com/intune/apps/app-configuration-managed-browser#how-to-configure-bookmarks-for-a-protected-browser) of Microsoft Edge. 
 - These bookmarks can't be deleted or modified by users.
 - These bookmarks appear at the top of the list. Any bookmarks that users create appear below these bookmarks.
 - If you have enabled Application Proxy redirection, you can add Application Proxy web apps by using either their internal or external URL.
@@ -322,8 +322,8 @@ If your organization operates in a highly-regulated industry or uses a per-app V
 
 In addition to blocking InPrivate and MSA browsing, you can only allow use of Microsoft Edge when the user is logged in with their AAD account. This feature is only available for MDM-enrolled users. You can learn more about configuring this setting here:
 
-- [Android setting](~/intune/apps/app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
-- [iOS setting](~/intune/apps/app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+- [Android setting](~/apps/app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+- [iOS setting](~/apps/app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
 ## Use Microsoft Edge on iOS to access managed app logs 
 
@@ -340,7 +340,7 @@ To see how to view logs on Android devices, see [Send logs to your IT admin by e
 
 The following are additional security and privacy considerations for Microsoft Edge:
 
-- Microsoft Edge doesn't consume settings that users set for the native browserhttps://docs.microsoft.com/en-us/intune/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps on their devices, because Microsoft Edge can't access these settings.
+- Microsoft Edge doesn't consume settings that users set for the native browserhttps://docs.microsoft.com/en-us/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps on their devices, because Microsoft Edge can't access these settings.
 - You can configure the option **Require simple PIN for access** or **Require corporate credentials for access** in an app protection policy associated with Microsoft Edge. If a user selects the help link on the authentication page, they can browse any internet sites, regardless of whether they were added to a blocked list in the policy.
 - Microsoft Edge can block access to sites only when they are accessed directly. It doesn't block access when users use intermediate services (such as a translation service) to access the site.
 - To allow authentication, and access to Intune documentation, ***.microsoft.com** is exempt from the allow or block list settings. It's always allowed.

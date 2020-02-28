@@ -15,188 +15,188 @@ highlightedContent:
   items:
     - title: What is Intune?
       itemType: overview
-      url: ./intune/fundamentals/what-is-intune.md
+      url: ./fundamentals/what-is-intune.md
     - title: What's new in Intune
       itemType: overview
-      url: ./intune/fundamentals/whats-new.md
+      url: ./fundamentals/whats-new.md
     - title: Features in development
       itemType: overview
-      url: ./intune/fundamentals/in-development.md    
+      url: ./fundamentals/in-development.md    
     - title: Try Intune for free
       itemType: get-started
-      url: ./intune/fundamentals/free-trial-sign-up.md
+      url: ./fundamentals/free-trial-sign-up.md
     - title: Set up automatic enrollment for Windows 10 devices
       itemType: get-started
-      url: ./intune/enrollment/quickstart-setup-auto-enrollment.md
+      url: ./enrollment/quickstart-setup-auto-enrollment.md
     - title: Intune reports
       itemType: overview
-      url: ./intune/fundamentals/reports.md
+      url: ./fundamentals/reports.md
 
 conceptualContent:
   items:
     - title: Plan for Intune adoption
       links:
-        - url: ./intune/fundamentals/planning-guide.md
+        - url: ./fundamentals/planning-guide.md
           itemType: concept
           text: Intune planning guide 
-        - url: ./intune/fundamentals/migration-guide.md
+        - url: ./fundamentals/migration-guide.md
           itemType: concept
           text: Intune migration guide
-        - url: ./intune/fundamentals/migration-guide-communication-plan.md
+        - url: ./fundamentals/migration-guide-communication-plan.md
           itemType: concept
           text: Communication plan for your users
       footerLink:
         text: See more
-        url: ./intune/fundamentals/index.yml          
+        url: ./fundamentals/index.yml          
     - title: Set up Intune
       links:
-        - url: ./intune/fundamentals/setup-steps.md
+        - url: ./fundamentals/setup-steps.md
           itemType: how-to-guide
           text: Steps to set up Intune
-        - url: ./intune/fundamentals/supported-devices-browsers.md
+        - url: ./fundamentals/supported-devices-browsers.md
           itemType: reference
           text: Supported operating systems and browsers
-        - url: ./intune/fundamentals/role-based-access-control.md
+        - url: ./fundamentals/role-based-access-control.md
           itemType: reference
           text: Role-based access control
-        - url: ./intune/fundamentals/licenses.md
+        - url: ./fundamentals/licenses.md
           itemType: concept
           text: Intune licensing
       footerLink:
         text: See more
-        url: ./intune/fundamentals/index.yml        
+        url: ./fundamentals/index.yml        
     - title: Enroll devices
       links:
-        - url: ./intune/enrollment/device-enrollment.md
+        - url: ./enrollment/device-enrollment.md
           itemType: concept
           text: Device enrollment overview
-        - url: ./intune/enrollment/device-management-capabilities.md
+        - url: ./enrollment/device-management-capabilities.md
           itemType: concept  
           text: Enrolled device management capabilities
-        - url: ./intune/enrollment/windows-enrollment-methods.md
+        - url: ./enrollment/windows-enrollment-methods.md
           itemType: how-to-guide
           text: Intune enrollment methods for Windows devices
-        - url: ./intune/enrollment/windows-enroll.md
+        - url: ./enrollment/windows-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for Windows
-        - url: ./intune/enrollment/ios-enroll.md
+        - url: ./enrollment/ios-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for iOS devices        
-        - url: ./intune/enrollment/android-enroll.md
+        - url: ./enrollment/android-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for Android devices
       footerLink:
         text: See more
-        url: ./intune/enrollment/index.yml
+        url: ./enrollment/index.yml
     - title: Remotely manage devices
       links:
-        - url: ./intune/remote-actions/device-management.md
+        - url: ./remote-actions/device-management.md
           itemType: concept
           text: Device management overview
           text: Device management capabilities
-        - url: ./intune/remote-actions/custom-notifications.md
+        - url: ./remote-actions/custom-notifications.md
           itemType: how-to-guide
           text: Send custom notifications
-        - url: ./intune/remote-actions/devices-wipe.md
+        - url: ./remote-actions/devices-wipe.md
           itemType: how-to-guide
           text: Remove devices
       footerLink:
         text: See more
-        url: ./intune/remote-actions/index.yml           
+        url: ./remote-actions/index.yml           
     - title: Create compliance rules for users and devices
       links:
-        - url: ./intune/protect/device-compliance-get-started.md
+        - url: ./protect/device-compliance-get-started.md
           itemType: concept
           text: Compliance overview
-        - url: ./intune/protect/use-network-locations.md
+        - url: ./protect/use-network-locations.md
           itemType: how-to-guide
           text: "Network fencing + compliance on Android"
-        - url: ./intune/protect/actions-for-noncompliance.md
+        - url: ./protect/actions-for-noncompliance.md
           itemType: how-to-guide
           text: Actions for non-compliant devices
       footerLink:
         text: See more
-        url: ./intune/protect/index.yml            
+        url: ./protect/index.yml            
     - title: Control device features and settings
       links:
-        - url: ./intune/configuration/device-profiles.md
+        - url: ./configuration/device-profiles.md
           itemType: concept
           text: Device configuration overview
-        - url: ./intune/configuration/device-restrictions-configure.md
+        - url: ./configuration/device-restrictions-configure.md
           itemType: how-to-guide
           text: Restrict settings and features
-        - url: ./intune/configuration/vpn-settings-configure.md
+        - url: ./configuration/vpn-settings-configure.md
           itemType: how-to-guide
           text: Add a VPN to devices
-        - url: ./intune/configuration/administrative-templates-windows.md
+        - url: ./configuration/administrative-templates-windows.md
           itemType: how-to-guide
           text: Configure group policy ADMX settings
       footerLink:
         text: See more
-        url: ./intune/configuration/index.yml            
+        url: ./configuration/index.yml            
     - title: Protect devices and data
       links:
-        - url: ./intune/protect/device-protect.md
+        - url: ./protect/device-protect.md
           itemType: concept
           text: Device protection overview
-        - url: ./intune/protect/conditional-access.md
+        - url: ./protect/conditional-access.md
           itemType: concept
           text: Conditional access with Intune
-        - url: ./intune/protect/mobile-threat-defense.md
+        - url: ./protect/mobile-threat-defense.md
           itemType: concept
           text: Mobile Threat Defense integration with Intune
       footerLink:
         text: See more
-        url: ./intune/protect/index.yml
+        url: ./protect/index.yml
     - title: Manage apps
       links:
-        - url: ./intune/apps/app-management.md
+        - url: ./apps/app-management.md
           itemType: concept
           text: App management overview
-        - url: ./intune/apps/apps-add.md
+        - url: ./apps/apps-add.md
           itemType: how-to-guide
           text: Add apps to Intune
-        - url: ./intune/apps/apps-deploy.md
+        - url: ./apps/apps-deploy.md
           itemType: how-to-guide
           text: Assign apps to groups
-        - url: ./intune/apps/app-configuration-policies-overview.md
+        - url: ./apps/app-configuration-policies-overview.md
           itemType: overview
           text: App configuration policies
       footerLink:
         text: See more
-        url: ./intune/apps/index.yml          
+        url: ./apps/index.yml          
     - title: App protection policies
       links:
-        - url: ./intune/apps/app-protection-policy.md
+        - url: ./apps/app-protection-policy.md
           itemType: concept
           text: App protection policies overview
-        - url: ./intune/apps/app-protection-policies.md
+        - url: ./apps/app-protection-policies.md
           itemType: overview
           text: Create app protection policies
-        - url: ./intune/apps/app-protection-policies-validate.md
+        - url: ./apps/app-protection-policies-validate.md
           itemType: how-to-guide
           text: Validate app protection policies
-        - url: ./intune/apps/app-protection-policies-monitor.md
+        - url: ./apps/app-protection-policies-monitor.md
           itemType: how-to-guide
           text: Monitor app protection policies
       footerLink:
         text: See more
-        url: ./intune/apps/index.yml            
+        url: ./apps/index.yml            
     - title: Help and support
       links:
-        - url: ./intune/fundamentals/get-support.md
+        - url: ./fundamentals/get-support.md
           itemType: concept
           text: How to get support for Microsoft Intune?
-        - url: ./intune/fundamentals/help-desk-operators.md
+        - url: ./fundamentals/help-desk-operators.md
           itemType: concept
           text: Help users troubleshoot problems
-        - url: ./intune/fundamentals/monitor-audit-logs.md
+        - url: ./fundamentals/monitor-audit-logs.md
           itemType: concept
           text: Use audit logs to track and monitor events
-        - url: ./intune/apps/troubleshoot-app-install.md
+        - url: ./apps/troubleshoot-app-install.md
           itemType: concept
           text: Troubleshoot app installation issues
-        - url: ./intune/configuration/troubleshoot-policies-in-microsoft-intune.md
+        - url: ./configuration/troubleshoot-policies-in-microsoft-intune.md
           itemType: concept
           text: Troubleshoot policies and profiles in Intune
     - title: Developer

@@ -35,10 +35,10 @@ Managed Google Play is Google's enterprise app store and sole source of applicat
 
 To make it easier for you to configure and use Android Enterprise management, upon connecting your Intune tenant to Managed Google Play, Intune will automatically add four common Android Enterprise related apps to the Intune admin console. The four apps are the following:
 
-- **[Microsoft Intune](https://play.google.com/store/intune/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed scenarios. This app is automatically installed to fully managed devices during the device enrollment process.
-- **[Microsoft Authenticator](https://play.google.com/store/intune/apps/details?id=com.azure.authenticator)** - Helps you sign-in to your accounts if you use two-factor verification. This app is automatically installed to fully managed devices during the device enrollment process.
-- **[Intune Company Portal](https://play.google.com/store/intune/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used for App Protection Policies (APP) and Android Enterprise work profile scenarios.
-- **[Managed Home Screen](https://play.google.com/store/intune/apps/details?id=com.microsoft.launcher.enterprise)** - Used for Android Enterprise dedicated multi-app kiosk scenarios. IT admins should create an assignment to install this app on dedicated devices that are going to be used in multi-app kiosk scenarios.
+- **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed scenarios. This app is automatically installed to fully managed devices during the device enrollment process.
+- **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign-in to your accounts if you use two-factor verification. This app is automatically installed to fully managed devices during the device enrollment process.
+- **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used for App Protection Policies (APP) and Android Enterprise work profile scenarios.
+- **[Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** - Used for Android Enterprise dedicated multi-app kiosk scenarios. IT admins should create an assignment to install this app on dedicated devices that are going to be used in multi-app kiosk scenarios.
 
 >[!NOTE]
 >When an end user enrolls their Android Enterprise fully managed device, the Intune Company Portal app is automatically installed and the application icon may be visible to the end user. If the end user attempts to launch the Intune Company Portal app, the end user will be redirected to the Microsoft Intune app and the Company Portal app icon will be subsequently hidden.
@@ -115,7 +115,7 @@ If you prefer to synchronize a Managed Google Play app with Intune rather than a
 There are two ways to add LOB apps to Managed Google Play:
 
 1. Directly in the Intune console - This allows you to add LOB apps by submitting just the app APK and a title, directly within Intune. This method does not require you to have a Google developer account and does not require you to pay the fee to register with Google as a developer.  This method is simpler and has a significantly reduced number of steps, and makes LOB apps available for management in as little as ten minutes.
-1. In the Google Play Developer Console - If you have a Google developer account or want to configure advanced distribution features that are only available in the Google Play Developer Console (like adding additional app screenshots), you can use the [Google Play Developer Console](https://play.google.com/intune/apps/publish). 
+1. In the Google Play Developer Console - If you have a Google developer account or want to configure advanced distribution features that are only available in the Google Play Developer Console (like adding additional app screenshots), you can use the [Google Play Developer Console](https://play.google.com/apps/publish). 
 
 ### Managed Google Play private (LOB) app publishing directly in the Intune console
 
@@ -140,7 +140,7 @@ For more information about Managed Google Play private apps including a FAQ, see
 
 ### Managed Google Play private (LOB) app publishing using the Google Developer Console
 
-1. Sign in to the [Google Play Developer Console](https://play.google.com/intune/apps/publish) with the same account you used to configure the connection between Intune and Android Enterprise.  
+1. Sign in to the [Google Play Developer Console](https://play.google.com/apps/publish) with the same account you used to configure the connection between Intune and Android Enterprise.  
     If you are signing in for the first time, you must register and pay a fee to become a member of the Google Developer program.
 2. In the console, select **Add new application**.
 3. You upload and provide information about your app in the same way as you publish any app to the Google Play store. However, you must select **Only make this application available to my organization (<*organization name*>)**.

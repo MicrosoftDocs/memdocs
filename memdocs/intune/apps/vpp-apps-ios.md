@@ -114,7 +114,7 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
         > [!NOTE] 
         > Automatic app updates for Apple VPP apps will automatically update only apps deployed with **Required** install intent. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details.  
 
-    - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microsoft sends to Apple, see [Data Intune sends to Apple](~/intune/protect/data-intune-sends-to-apple.md).
+    - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microsoft sends to Apple, see [Data Intune sends to Apple](~/protect/data-intune-sends-to-apple.md).
 
 6. When you are done, select **Create**. The token is displayed in the list of tokens pane.
 
@@ -219,4 +219,4 @@ Yes. The Intune admin can oversubscribe an app. For example, if the admin purcha
 
 See [How to monitor apps](apps-monitor.md) for information to help you monitor app assignments.
 
-See [How to troubleshoot apps](~/intune/apps/troubleshoot-app-install.md) for information on troubleshooting app-related issues.
+See [How to troubleshoot apps](~/apps/troubleshoot-app-install.md) for information on troubleshooting app-related issues.

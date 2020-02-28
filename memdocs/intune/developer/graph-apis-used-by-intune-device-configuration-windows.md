@@ -2784,11 +2784,11 @@ To see the Windows 10 versions the following APIs apply, use the Windows 10 [con
 
 ### WindowsDefenderAdvancedThreatProtectionConfiguration.AllowSampleSharing 
 **CSP**: ./Device/Vendor/MSFT/WindowsAdvancedThreatProtection  
-**Offset URI**: /intune/configuration/SampleSharing
+**Offset URI**: /Configuration/SampleSharing
 
 ### WindowsDefenderAdvancedThreatProtectionConfiguration.EnableExpeditedTelemetryReporting 
 **CSP**: ./Device/Vendor/MSFT/WindowsAdvancedThreatProtection  
-**Offset URI**: /intune/configuration/TelemetryReportingFrequency
+**Offset URI**: /Configuration/TelemetryReportingFrequency
 
 ### WindowsDeliveryOptimizationConfiguration.DeliveryOptimizationMode 
 **CSP**: ./Vendor/MSFT/Policy  

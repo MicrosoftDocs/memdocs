@@ -11,5 +11,5 @@
       topicHref: /intune/
       items:
       - name: Configuration
-        tocHref: /intune/intune/protect/
-        topicHref: /intune/intune/configuration/
+        tocHref: /intune/protect/
+        topicHref: /intune/configuration/
