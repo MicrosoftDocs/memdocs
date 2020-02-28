@@ -185,7 +185,7 @@ You run Configuration Manager setup to uninstall a primary site that doesn't hav
 
     - On the **Start** menu, select **Configuration Manager Setup**.
 
-    - In the directory for the Configuration Manager *installation media*, open `\SMSSETUP\BIN\X64\setup.exe`.
+    - In the directory for the Configuration Manager *installation media*, open `\SMSSETUP\BIN\X64\setup.exe`. Make sure this version is the same as the site version.
 
     - In the directory where Configuration Manager is *installed*, open `\BIN\X64\setup.exe`.
 
@@ -250,7 +250,7 @@ The administrative user who runs Configuration Manager setup needs the following
 
     - On the **Start** menu, select **Configuration Manager Setup**.
 
-    - In the directory for the Configuration Manager *installation media*, open `\SMSSETUP\BIN\X64\setup.exe`.
+    - In the directory for the Configuration Manager *installation media*, open `\SMSSETUP\BIN\X64\setup.exe`. Make sure this version is the same as the site version.
 
     - In the directory where Configuration Manager is *installed*, open `\BIN\X64\setup.exe`.
 
