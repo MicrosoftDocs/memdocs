@@ -38,7 +38,7 @@ Devices managed by Intune can be administered remotely using [TeamViewer](https:
 > [!NOTE]
 > Android Dedicated and Fully Managed are not supported.
 
-- The Intune administrator within the Azure portal must have following [Intune roles](../intune/fundamentals/role-based-access-control.md):  
+- The Intune administrator within the Azure portal must have following [Intune roles](../fundamentals/role-based-access-control.md):  
 
   - **Update Remote Assistance**: Allows administrators to modify the TeamViewer connector settings
   - **Request Remote Assistance**: Allows administrators to start a new remote assistance session for any user. Users with this role are not limited by any Intune role within a scope. Also, user or device groups assigned an Intune role within a scope can also request remote assistance. 

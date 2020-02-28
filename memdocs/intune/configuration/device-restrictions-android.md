@@ -40,7 +40,7 @@ This article shows you all the Microsoft Intune device restrictions settings tha
 - **Copy and paste (Samsung Knox only)**: Choose **Block** to prevent copy-and-paste. **Not configured** allows copy and paste functions on the device.
 - **Clipboard sharing between apps (Samsung Knox only)**: Choose **Block** to prevent using the clipboard to copy-and-paste between apps. **Not configured** allows using the clipboard to copy and paste between apps.
 - **Diagnostic data submission (Samsung Knox only)**: Choose **Block** to stop the user from submitting diagnostic data from the device. **Not configured** allows the user to submit the data.
-- **Wipe (Samsung Knox only)**: Allows the user to run a [wipe](../intune/remote-actions/devices-wipe.md) action on the device.
+- **Wipe (Samsung Knox only)**: Allows the user to run a [wipe](../remote-actions/devices-wipe.md) action on the device.
 - **Geolocation (Samsung Knox only)**: Choose **Block** to disable the device from using location information. **Not configured** allows the device to use the location information.
 - **Power off (Samsung Knox only)**: Choose **Block** to prevent the user from powering off device. If this setting is disabled, the **Number of sign-in failures before wiping device** setting can't be set, and doesn't work. **Not configured** allows the user to power off the device.
 - **Screen capture (Samsung Knox only)**: Choose **Block** to prevent screenshots. **Not configured** lets the user capture the screen contents as an image.
@@ -155,7 +155,7 @@ For each setting, add a list of apps. Your options:
 
 Kiosk settings apply only to Samsung Knox Standard devices, and only to apps you manage using Intune.
 
-- Add apps you want to run when the device is in kiosk mode. In kiosk mode, only the apps you add run; apps not added don't run. Pre-installed browsers don't run as an app when the device is in kiosk mode. If a browser is required, consider using the [Managed Browser](../intune/apps/app-configuration-managed-browser.md).
+- Add apps you want to run when the device is in kiosk mode. In kiosk mode, only the apps you add run; apps not added don't run. Pre-installed browsers don't run as an app when the device is in kiosk mode. If a browser is required, consider using the [Managed Browser](../apps/app-configuration-managed-browser.md).
 
   Your app options:
 

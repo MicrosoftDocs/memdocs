@@ -53,7 +53,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   - The email profile is assigned to a different user group than the user group targeted by the compliance policy.
   - The user already set up an email account on the device that matches the Intune email profile deployed to the device. Intune can't overwrite the user-configured profile, and Intune can't manage it. To be compliant,  the end user must remove the existing email settings. Then, Intune can install the managed email profile.  
 
-For details about email profiles, see [configure access to organization email using email profiles with Intune](../intune/configuration/email-settings-configure.md).
+For details about email profiles, see [configure access to organization email using email profiles with Intune](../configuration/email-settings-configure.md).
 
 ## Device Health
 
@@ -133,6 +133,6 @@ For details about email profiles, see [configure access to organization email us
 
 ## Next steps
 
-- [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../intune/fundamentals/scope-tags.md).
+- [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../fundamentals/scope-tags.md).
 - [Monitor your compliance policies](compliance-policy-monitor.md).
 - See the [compliance policy settings for macOS](compliance-policy-create-mac-os.md) devices.

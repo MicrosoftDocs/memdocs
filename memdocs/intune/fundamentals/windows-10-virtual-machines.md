@@ -37,7 +37,7 @@ Intune supports managing virtual machines running Windows 10 Enterprise with cer
 When managing Windows 10 VMs with Intune, keep the following points in mind:
 
 ## Enrollment
-- We don't recommend managing on-demand, session-host virtual machines with Intune. Each VM must be enrolled when it's created. Also, regularly deleting VMs will leave orphaned device records in Intune until they're [cleaned up](../intune/remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules). 
+- We don't recommend managing on-demand, session-host virtual machines with Intune. Each VM must be enrolled when it's created. Also, regularly deleting VMs will leave orphaned device records in Intune until they're [cleaned up](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules). 
 - Windows Autopilot Self-deploying and White glove deployment types aren't supported because they require a physical Trusted Platform Module (TPM). 
 - Out of Box Experience (OOBE) enrollment isn't supported on VMs that can only be accessed by using RDP (such as VMs that are hosted on Azure). This restriction means:
     - Windows Autopilot and Commercial OOBE aren't supported.
@@ -45,15 +45,15 @@ When managing Windows 10 VMs with Intune, keep the following points in mind:
 
 ## Configuration
 Intune does not support any configuration that utilizes a Trusted Platform Module or hardware management, including:
-- [BitLocker settings](../intune/configuration/device-profiles.md#endpoint-protection)
-- [Device Firmware Configuration Interface settings](../intune/configuration/device-profiles.md#device-firmware-configuration-interface)
+- [BitLocker settings](../configuration/device-profiles.md#endpoint-protection)
+- [Device Firmware Configuration Interface settings](../configuration/device-profiles.md#device-firmware-configuration-interface)
 
 ## Reporting
 Intune automatically detects virtual machines and reports them as "Virtual Machine" in **Devices** > **All devices** > choose a device > **Overview** > **Model** field. 
 
-Deallocated virtual machines may contribute to noncompliant device reports because they're unable to [check in with the Intune service](../intune/configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+Deallocated virtual machines may contribute to noncompliant device reports because they're unable to [check in with the Intune service](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 ## Retirement
-If you only have RDP access, don’t use the [Wipe action](../intune/remote-actions/devices-wipe.md#wipe). The Wipe action will delete the virtual machine's RDP settings and prevent you from ever connecting again.
+If you only have RDP access, don’t use the [Wipe action](../remote-actions/devices-wipe.md#wipe). The Wipe action will delete the virtual machine's RDP settings and prevent you from ever connecting again.
 
 

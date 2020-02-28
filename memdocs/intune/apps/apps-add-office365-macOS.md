@@ -68,7 +68,7 @@ In this step, you provide information about the app suite. This information help
 2. Click **Next** to display the **Scope tags** page.
 
 ## Step 2 - Select scope tags (optional)
-You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../intune/fundamentals/scope-tags.md).
+You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
 1. Click **Select scope tags** to optionally add scope tags for the app suite. 
 2. Click **Next** to display the **Assignments** page.

@@ -161,17 +161,17 @@ We recommend that you create all groups in the on-premises Active Directory, the
 ### Public key infrastructure (PKI)
 Public key infrastructure supplies certificates to devices or users to securely authenticate to a service. Intune supports a Microsoft PKI infrastructure. Device and user certificates can be issued to a mobile device to satisfy certificate-based authentication requirements. Before you use certificates, you need to determine if you need them, if the network infrastructure can support certificate-based authentication, and if certificates are currently used in the existing environment.
 
-If you're planning to use certificates with VPN, Wi-Fi, or e-mail profiles with Intune, make sure you have a supported [PKI infrastructure in place](../intune/protect/certificates-configure.md), ready to create and deploy certificate profiles.
+If you're planning to use certificates with VPN, Wi-Fi, or e-mail profiles with Intune, make sure you have a supported [PKI infrastructure in place](../protect/certificates-configure.md), ready to create and deploy certificate profiles.
 
 In addition, if SCEP certificate profiles will be used, you need to determine which server will host the Network Device Enrollment Service (NDES) feature, and how the communication will happen.
 
 Learn more about:
 
-- [How to configure Intune certificate profiles](../intune/protect/certificates-configure.md)
+- [How to configure Intune certificate profiles](../protect/certificates-configure.md)
 
-- [How to configure the certificate infrastructure for SCEP](../intune/protect/certificates-scep-configure.md)
+- [How to configure the certificate infrastructure for SCEP](../protect/certificates-scep-configure.md)
 
-- [How to configure the certificate infrastructure for PFX](../intune/protect/certficates-pfx-configure.md)
+- [How to configure the certificate infrastructure for PFX](../protect/certficates-pfx-configure.md)
 
 
 
@@ -217,7 +217,7 @@ Refer to [Section 3: Determine use case scenario requirements](planning-guide-re
 
 ### Bulk enrollment
 
- You can enroll devices in bulk in different ways depending on the platform. If you require bulk enrollment, first [determine the bulk enrollment method](../intune/enrollment/device-enrollment.md) and incorporate it in to your design.
+ You can enroll devices in bulk in different ways depending on the platform. If you require bulk enrollment, first [determine the bulk enrollment method](../enrollment/device-enrollment.md) and incorporate it in to your design.
 
 ## Feature requirements
 
@@ -239,7 +239,7 @@ Let’s review each of these areas in more detail.
 
 ### Terms and conditions policies
 
-You can use [terms and conditions](../intune/enrollment/terms-and-conditions-create.md) to explain policies or conditions that an end user must accept before they can enroll their device. Intune supports the ability to add and deploy multiple terms and conditions policies to user groups.
+You can use [terms and conditions](../enrollment/terms-and-conditions-create.md) to explain policies or conditions that an end user must accept before they can enroll their device. Intune supports the ability to add and deploy multiple terms and conditions policies to user groups.
 
 You need to determine if terms and condition policies are needed. If so, who will be responsible for providing this information in the organization. An example of how to document the terms and conditions policy is below.
 
@@ -308,7 +308,7 @@ You can [download a template of the above table](https://gallery.technet.microso
 
 #### Wi-Fi profile
 
-Wi-Fi profiles are used to automatically connect a mobile device to a wireless network. Intune supports deploying Wi-Fi profiles to all supported platforms. Learn more about [how Intune supports Wi-Fi profiles.](../intune/configuration/wi-fi-settings-configure.md)
+Wi-Fi profiles are used to automatically connect a mobile device to a wireless network. Intune supports deploying Wi-Fi profiles to all supported platforms. Learn more about [how Intune supports Wi-Fi profiles.](../configuration/wi-fi-settings-configure.md)
 
 Below is an example of a design for a Wi-Fi profile:
 
@@ -321,7 +321,7 @@ You can [download a template of the above table](https://gallery.technet.microso
 
 #### VPN profile
 
-VPN profiles let users securely access your network from remote locations. Intune supports VPN profiles from native mobile VPN connections and third-party vendors. Learn more about [VPN profiles and vendors supported by Intune](../intune/configuration/vpn-settings-configure.md).
+VPN profiles let users securely access your network from remote locations. Intune supports VPN profiles from native mobile VPN connections and third-party vendors. Learn more about [VPN profiles and vendors supported by Intune](../configuration/vpn-settings-configure.md).
 
 Below is an example of documenting the design of a VPN profile.
 
@@ -334,7 +334,7 @@ You can [download a template of the above table](https://gallery.technet.microso
 
 #### Email profile
 
-Email profiles allow an email client to be automatically set up with connection information and email configuration. Intune supports email profiles on some devices. Learn more about [email profiles and what platforms are supported](../intune/configuration/email-settings-configure.md).
+Email profiles allow an email client to be automatically set up with connection information and email configuration. Intune supports email profiles on some devices. Learn more about [email profiles and what platforms are supported](../configuration/email-settings-configure.md).
 
 Below is an example of documenting the design of email profiles:
 
@@ -348,11 +348,11 @@ You can [download a template of the above table](https://gallery.technet.microso
 
 You can use Intune to deliver apps to the users or devices in several ways. The type of application includes software installer apps, apps from a public app store, external links, or managed iOS apps. In addition to individual app deployments, you can manage and deploy volume-purchased apps obtained through the volume-purchase programs for iOS and Windows. Learn more about:
 
-- [The types of apps you can deliver](../intune/apps/app-management.md)
+- [The types of apps you can deliver](../apps/app-management.md)
 
-- [iOS Volume Purchase Program for Business (VPP)](../intune/apps/vpp-apps-ios.md)
+- [iOS Volume Purchase Program for Business (VPP)](../apps/vpp-apps-ios.md)
 
-- [Microsoft Store for Business apps](../intune/apps/windows-store-for-business.md)
+- [Microsoft Store for Business apps](../apps/windows-store-for-business.md)
 
 #### App type requirements
 
@@ -373,7 +373,7 @@ Since apps can be deployed to users and devices, we recommend that you decide wh
 
 #### App protection policies
 
-App protection policies minimize data loss by defining how the application manages the corporate data. Intune supports app protection policies for any application built to function with mobile app management. When you design the app protection policy, you need to decide what restrictions you want to place on corporate data in a given app. We recommend that you review how [app protection policies](../intune/apps/app-protection-policy.md) work. Below is an example of how to document the existing applications and what protection is needed.
+App protection policies minimize data loss by defining how the application manages the corporate data. Intune supports app protection policies for any application built to function with mobile app management. When you design the app protection policy, you need to decide what restrictions you want to place on corporate data in a given app. We recommend that you review how [app protection policies](../apps/app-protection-policy.md) work. Below is an example of how to document the existing applications and what protection is needed.
 
 | **Application** | **Purpose** | **Platforms** | **Use case** | **App protection policy** |
 |:---:|:---:|:---:|:---:|:---:|
@@ -384,7 +384,7 @@ App protection policies minimize data loss by defining how the application manag
 You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to identify your app protection policy needs.
 #### Compliance policies
 
-Compliance policies determine whether a device conforms to certain requirements. Intune uses compliance policies to determine if a device is considered compliant or noncompliant. The compliance status can then be used to restrict or allow access to company resources. If Conditional Access is required, we recommend that you design a [device compliance policy](../intune/protect/device-compliance-get-started.md).
+Compliance policies determine whether a device conforms to certain requirements. Intune uses compliance policies to determine if a device is considered compliant or noncompliant. The compliance status can then be used to restrict or allow access to company resources. If Conditional Access is required, we recommend that you design a [device compliance policy](../protect/device-compliance-get-started.md).
 
 Refer to requirements and use cases to determine how many device compliance policies you need and which user groups are the target user groups. Additionally, you need to decide how long a device can be offline without checking in before it’s considered noncompliant.
 
@@ -398,11 +398,11 @@ Below is an example of how to design a compliance policy:
 You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to identify your compliance policy needs.
 #### Conditional Access policies
 
-Conditional Access is used to allow only compliant devices to access email and other company resources. Intune works with Enterprise Mobility + Security (EMS) to control access to company resources. Decide if you require Conditional Access, and what must be secured. Learn more about [Conditional Access](../intune/protect/conditional-access.md).
+Conditional Access is used to allow only compliant devices to access email and other company resources. Intune works with Enterprise Mobility + Security (EMS) to control access to company resources. Decide if you require Conditional Access, and what must be secured. Learn more about [Conditional Access](../protect/conditional-access.md).
 
 For online access, decide what platforms and user groups you'll target by Conditional Access policies. Also, determine whether you need to install or configure the Intune connector for Exchange on-premises: 
 
-- [Exchange on-premises](../intune/protect/exchange-connector-install.md)
+- [Exchange on-premises](../protect/exchange-connector-install.md)
 
 Here’s an example of how to document Conditional Access policies:
 

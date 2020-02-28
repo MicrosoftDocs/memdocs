@@ -168,11 +168,11 @@ If you don’t see the entries that indicate success, follow these steps:
 
 2. Open the Certification Authority MMC on the CA, and select **Failed Requests** to look for errors that help identify a problem. The following image is an example:
 
-   ![Example of a failed request](../intune/protect/media/troubleshoot-scep-certificate-ndes-policy-module/failed-requests.png)
+   ![Example of a failed request](../protect/media/troubleshoot-scep-certificate-ndes-policy-module/failed-requests.png)
 
 3. Review the application event log on the CA for errors. Usually you can see errors that match what you see in the **Failed Requests** from the previous step. The following image is an example:
 
-   ![Review the application log](../intune/protect/media/troubleshoot-scep-certificate-ndes-policy-module/application-log-errors.png)
+   ![Review the application log](../protect/media/troubleshoot-scep-certificate-ndes-policy-module/application-log-errors.png)
 
 ## Next steps
 

@@ -73,7 +73,7 @@ Identified data collected by Intune may include, but is not limited to:
 - Support information
   - Contact information (name, phone number, email address)
   - Email discussions with Microsoft support, product, and/or customer experience team members
-- Access control information (Intune uses this data to manage access to administrative roles and functions through features like [Role Based Access Control](../intune/fundamentals/role-based-access-control.md).
+- Access control information (Intune uses this data to manage access to administrative roles and functions through features like [Role Based Access Control](../fundamentals/role-based-access-control.md).
   - Static authenticators (customer’s password)
   - Privacy keys for certificates 
 - Admin and account information

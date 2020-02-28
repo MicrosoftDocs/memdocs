@@ -128,7 +128,7 @@ During BYOD enrollments, users see a notification that tells them when they've m
 
 ## Change enrollment restrictions
 
-You can change the settings for an enrollment restriction by following the steps below. These restrictions don't effect devices that have already been enrolled. Devices enrolled with [Intune PC agent](../intune/fundamentals/manage-windows-pcs-with-microsoft-intune.md) can't be blocked with this feature.
+You can change the settings for an enrollment restriction by following the steps below. These restrictions don't effect devices that have already been enrolled. Devices enrolled with [Intune PC agent](../fundamentals/manage-windows-pcs-with-microsoft-intune.md) can't be blocked with this feature.
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > choose the restriction that you want to change > **Properties**.
 2. Choose **Edit** next to the settings that you want to change.

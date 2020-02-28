@@ -74,7 +74,7 @@ Follow the steps below to better understand Intune in the Microsoft Endpoint Man
     
     Intune lets you manage your workforce’s devices and apps, including how they access your company data. To use this mobile device management (MDM) service, the devices must first be enrolled in Intune. When a device is enrolled, it is issued an MDM certificate. This certificate is used to communicate with the Intune service. 
 
-    There are several methods to enroll your workforce’s devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](mdm-authority-set.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](setup-steps.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](../intune/enrollment/device-enrollment.md)
+    There are several methods to enroll your workforce’s devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](mdm-authority-set.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](setup-steps.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](../enrollment/device-enrollment.md)
 
 3. From the navigation pane, select **Devices** to display details about the enrolled devices in your Intune tenant. 
 
@@ -103,7 +103,7 @@ Follow the steps below to better understand Intune in the Microsoft Endpoint Man
     - Devices must be enrolled in Intune
     - Devices that are enrolled to either one user or no primary user.
     
-    For more information, see [Get started with device compliance policies in Intune](../intune/protect/device-compliance-get-started.md).
+    For more information, see [Get started with device compliance policies in Intune](../protect/device-compliance-get-started.md).
 
 5. From the **Devices - Overview** pane, select **Conditional Access** to display details about access policies.
 
@@ -112,7 +112,7 @@ Follow the steps below to better understand Intune in the Microsoft Endpoint Man
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Conditional Access**.
 
-    Conditional Access refers to ways you can control the devices and apps that are allowed to connect to your email and company resources. To learn about device-based and app-based Conditional Access, and find common scenarios for using Conditional Access with Intune, see [What's Conditional Access?](../intune/protect/conditional-access.md)
+    Conditional Access refers to ways you can control the devices and apps that are allowed to connect to your email and company resources. To learn about device-based and app-based Conditional Access, and find common scenarios for using Conditional Access with Intune, see [What's Conditional Access?](../protect/conditional-access.md)
 
 6. From the navigation pane, select **Devices** > **Configuration profiles** to display details about device profiles in Intune.
 
@@ -123,7 +123,7 @@ Follow the steps below to better understand Intune in the Microsoft Endpoint Man
 
     Intune includes settings and features that you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android, macOS, and Windows. Then, you can use Intune to apply the profile to devices in your organization.   
 
-    For more information about device configuration, see [Apply features settings on your devices using device profiles in Microsoft Intune](../intune/configuration/device-profiles.md).
+    For more information about device configuration, see [Apply features settings on your devices using device profiles in Microsoft Intune](../configuration/device-profiles.md).
 
 7. From the navigation pane, select **Devices** > **All devices** to display details about your Intune tenant's enrolled devices. If you are starting with a new Intune enlistment, you will not have any enrolled devices yet.
 
@@ -150,7 +150,7 @@ Follow the steps below to better understand Intune in the Microsoft Endpoint Man
     > [!NOTE]
     > The **Apps - Overview** pane also provides tenant status and account details.
 
-    For more information about adding and assigning apps, see [Add apps to Microsoft Intune](../intune/apps/apps-add.md) and [Assign apps to groups with Microsoft Intune](../intune/apps/apps-deploy.md).
+    For more information about adding and assigning apps, see [Add apps to Microsoft Intune](../apps/apps-add.md) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
 
 9. From the **Apps - Overview** pane, select **All apps** to see a list of apps that have been added to Intune.
 

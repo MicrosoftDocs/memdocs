@@ -67,7 +67,7 @@ This feature applies to:
 
   For more information on what you get with the different Microsoft 365 licenses, see [Transform your Enterprise with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
 
-- Microsoft Intune is configured as the **Intune MDM Authority**. For more information, see [Set the mobile device management authority](../intune/fundamentals/mdm-authority-set.md).
+- Microsoft Intune is configured as the **Intune MDM Authority**. For more information, see [Set the mobile device management authority](../fundamentals/mdm-authority-set.md).
 
   > [!div class="mx-imgBorder"]
   > ![Set the MDM authority to Microsoft Intune in your tenant status](./media/tutorial-walkthrough-administrative-templates/tenant-status.png)

@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Use the Microsoft Intune App Wrapping Tool for iOS to enable Intune app protection policies for in-house iOS apps without changing the code of the app itself.
 
-The tool is a macOS command-line application that creates a wrapper around an app. Once an app is processed, you can change the app's functionality by deploying [app protection policies](../intune/apps/app-protection-policies.md) to it.
+The tool is a macOS command-line application that creates a wrapper around an app. Once an app is processed, you can change the app's functionality by deploying [app protection policies](../apps/app-protection-policies.md) to it.
 
 To download the tool, see [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) on GitHub.
 
@@ -451,5 +451,5 @@ Simply run your general app wrapping command and with the `-citrix` flag appende
 ## See also
 
 - [Decide how to prepare apps for mobile application management with Microsoft Intune](apps-prepare-mobile-application-management.md)
-- [Common questions, issues, and resolutions with device policies and profiles](../intune/configuration/device-profile-troubleshoot.md)
+- [Common questions, issues, and resolutions with device policies and profiles](../configuration/device-profile-troubleshoot.md)
 - [Use the SDK to enable apps for mobile application management](app-sdk.md)

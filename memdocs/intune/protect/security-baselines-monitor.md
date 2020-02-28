@@ -157,4 +157,4 @@ On Windows 10 devices, there's a built-in MDM diagnostic information report. Thi
 
 ## Next steps
 
-[Monitor device profiles](../intune/configuration/device-profile-monitor.md) and [see some common issues and resolutions](../intune/configuration/device-profile-troubleshoot.md).
+[Monitor device profiles](../configuration/device-profile-monitor.md) and [see some common issues and resolutions](../configuration/device-profile-troubleshoot.md).

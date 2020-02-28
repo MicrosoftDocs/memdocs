@@ -40,7 +40,7 @@ Microsoft Intune does not use any personal data collected as part of providing t
 
 ## Your company terms and conditions
 
-You can [include privacy statements in your company’s terms and conditions for end users](../intune/apps/company-portal-app.md). Such privacy statements can include information about the usage and privacy of the end user’s personal data.
+You can [include privacy statements in your company’s terms and conditions for end users](../apps/company-portal-app.md). Such privacy statements can include information about the usage and privacy of the end user’s personal data.
 
 You can display your company’s terms and conditions in the Intune Company Portal app. This way, users can review the terms and conditions, including the privacy statement, before they enroll in Intune and access company assets and data.
 

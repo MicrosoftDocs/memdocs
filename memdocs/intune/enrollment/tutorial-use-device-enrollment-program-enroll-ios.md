@@ -29,11 +29,11 @@ In this tutorial, you'll learn how to:
 > * Create an Enrollment profile
 > * Assign the Enrollment profile to devices
 
-If you don’t have an Intune subscription, [sign up for a free trial account](../intune/fundamentals/free-trial-sign-up.md).
+If you don’t have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 - Devices purchased in [Apple Business Manager](https://business.apple.com) or [Apple's Device Enrollment Program](http://deploy.apple.com)
-- Set the [mobile device management authority](../intune/fundamentals/mdm-authority-set.md)
+- Set the [mobile device management authority](../fundamentals/mdm-authority-set.md)
 - Get an [Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
 
 ## Get an Apple Device Enrollment token
@@ -139,4 +139,4 @@ You can find more information about other options available for enrolling iOS/iP
 <!--commenting out because inaccurate>
 ## Clean up resources
 <!--If you don't want to use iOS/iPadOS corporate enrolled devices anymore, you can delete them.>
-<!--- If the devices are enrolled in Intune, you must first [delete them from the Azure Active Directory portal](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).>
+<!--- If the devices are enrolled in Intune, you must first [delete them from the Azure Active Directory portal](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).>

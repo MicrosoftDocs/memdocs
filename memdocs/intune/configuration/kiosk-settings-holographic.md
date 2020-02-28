@@ -50,7 +50,7 @@ When you choose single app kiosk mode, enter the following settings:
 
 - **App to run in kiosk mode**: Choose **Add a store app**, and select an app from the list.
 
-    Don't have any apps listed? Add some using the steps at [Client Apps](../intune/apps/apps-add.md).
+    Don't have any apps listed? Add some using the steps at [Client Apps](../apps/apps-add.md).
 
     Select **OK** to save your changes.
 
@@ -69,7 +69,7 @@ Apps in this mode are available on the start menu. These apps are the only apps 
 
 - **Applications**: Add the apps to run on the kiosk device. Remember, you can add several apps.
 
-  - **Add Store apps**: Select an existing app you added or deployed to Intune as [Client Apps](../intune/apps/apps-add.md), including LOB apps. If you don't have any apps listed, Intune supports many [app types](../intune/apps/apps-add.md) that you [add to Intune](../intune/apps/store-apps-windows.md).
+  - **Add Store apps**: Select an existing app you added or deployed to Intune as [Client Apps](../apps/apps-add.md), including LOB apps. If you don't have any apps listed, Intune supports many [app types](../apps/apps-add.md) that you [add to Intune](../apps/store-apps-windows.md).
   - **Add Win32 app**: Not supported on Windows Holographic for Business.
   - **Add by AUMID**: Use this option to add inbox Windows apps. Enter the following properties: 
 

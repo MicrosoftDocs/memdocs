@@ -41,7 +41,7 @@ Audit logs provide tenant admins with a record of activities that generate a cha
 
 For security purposes Intune may maintain audit logs for user and device actions for a period of one year. These logs are automatically deleted after the one-year retention period.
 
-To review audit logs, see [Audit logs for Intune activities](../intune/fundamentals/monitor-audit-logs.md). 
+To review audit logs, see [Audit logs for Intune activities](../fundamentals/monitor-audit-logs.md). 
 
 Admins can’t delete audit logs.
 

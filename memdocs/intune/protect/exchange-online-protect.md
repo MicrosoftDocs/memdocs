@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 ---
 # Protect Office 365 Exchange Online without requiring device management
 
-If you want to give employees access to their work email without the overhead of setting up a device management system, you can. You can give access to Office 365 Exchange Online through Intune. To complete the necessary steps, confirm you have licenses for Microsoft 365, or Azure Active Directory (premium) and Intune. Employees need to have a [supported iOS/iPadOS or Android device](../intune/fundamentals/supported-devices-browsers.md). 
+If you want to give employees access to their work email without the overhead of setting up a device management system, you can. You can give access to Office 365 Exchange Online through Intune. To complete the necessary steps, confirm you have licenses for Microsoft 365, or Azure Active Directory (premium) and Intune. Employees need to have a [supported iOS/iPadOS or Android device](../fundamentals/supported-devices-browsers.md). 
 
 If you decide to set up a device management system, you can. This type of app protection works independently of device management. 
 

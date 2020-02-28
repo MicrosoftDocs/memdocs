@@ -33,15 +33,15 @@ ms.collection: M365-identity-device-management
 
 In this quickstart, you will use Intune to create and assign an app protection policy to a client app on an end user's device. Intune uses app protection policies to confirm that your apps are meeting your organization’s data protection requirements.
 
-If you don’t have an Intune subscription, [sign up for a free trial account](../intune/fundamentals/free-trial-sign-up.md).
+If you don’t have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
-- To complete this quickstart, you must [create a user](../intune/fundamentals/quickstart-create-user.md), [create a group](../intune/fundamentals/quickstart-create-group.md), [enroll a device](../quickstart-setup-auto-enrollment.md), and [add and assign an app](../quickstart-add-assign-app.md).
+- To complete this quickstart, you must [create a user](../fundamentals/quickstart-create-user.md), [create a group](../fundamentals/quickstart-create-group.md), [enroll a device](../quickstart-setup-auto-enrollment.md), and [add and assign an app](../quickstart-add-assign-app.md).
 
 ## Sign in to Intune
 
-Sign in to the [Intune](https://aka.ms/intuneportal) as a [Global administrator or an Intune Service administrator](../intune/fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Intune](https://aka.ms/intuneportal) as a [Global administrator or an Intune Service administrator](../fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Create an app protection policy
 
@@ -90,4 +90,4 @@ In this quickstart, you created and assigned an app protection policy. Users of 
 To follow this series of Intune quickstarts, continue to the next quickstart.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Create and assign a custom role](../intune/fundamentals/create-custom-role.md)
+> [Quickstart: Create and assign a custom role](../fundamentals/create-custom-role.md)

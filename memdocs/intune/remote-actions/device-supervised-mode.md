@@ -34,19 +34,19 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Apple iOS/iPadOS supervised mode gives administrators more options when managing Apple devices, making it useful for corporate-owned devices deployed at scale. For example, you can restrict AirDrop or prevent users from changing the name of the device. For a list of settings which require supervised mode, see [iOS device restriction settings in Intune](../intune/configuration/device-restrictions-ios.md).
+Apple iOS/iPadOS supervised mode gives administrators more options when managing Apple devices, making it useful for corporate-owned devices deployed at scale. For example, you can restrict AirDrop or prevent users from changing the name of the device. For a list of settings which require supervised mode, see [iOS device restriction settings in Intune](../configuration/device-restrictions-ios.md).
 
-Intune supports supervised mode as part of the Apple [Device Enrollment Program (DEP)](../intune/enrollment/device-enrollment-program-enroll-ios.md).
+Intune supports supervised mode as part of the Apple [Device Enrollment Program (DEP)](../enrollment/device-enrollment-program-enroll-ios.md).
 
 For a list of Apple controls that require supervision, see Apple’s [Payload settings reference](http://help.apple.com/configurator/mac/2.4/#/cad5370d089).
 
 ## Turn on supervised mode during enrollment
 
-In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), you can turn on supervised mode for devices when you [create an Apple enrollment profile in DEP](../intune/enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile). Under **Device Management Settings**, check the **Supervised** box.
+In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), you can turn on supervised mode for devices when you [create an Apple enrollment profile in DEP](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile). Under **Device Management Settings**, check the **Supervised** box.
 
 ## Turn on supervised mode after enrollment
 
-After enrollment, the only way to turn on supervised mode is to connect an iOS/iPadOS device to a Mac and [use the Apple Configurator](../intune/enrollment/apple-configurator-enroll-ios.md) (which will reset the device). You can’t configure a device for Supervised mode in Intune after enrollment.
+After enrollment, the only way to turn on supervised mode is to connect an iOS/iPadOS device to a Mac and [use the Apple Configurator](../enrollment/apple-configurator-enroll-ios.md) (which will reset the device). You can’t configure a device for Supervised mode in Intune after enrollment.
 
 ## Identify a supervised device
 

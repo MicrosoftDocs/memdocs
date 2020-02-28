@@ -104,7 +104,7 @@ Continue to publish the profile, and consume it with the StageNow app on the dev
 
 After completing the first two steps, the Company Portal app is installed on the device. The device is ready to be enrolled in to Intune.
 
-[Enroll Android devices](../intune/enrollment/android-enroll.md) lists the steps. If you have many Zebra devices, you may want to use a [device enrollment manager (DEM) account](../intune/enrollment/device-enrollment-manager-enroll.md). Using a DEM account also removes the option to unenroll from the Company Portal app, so that users can't unenroll the device as easily.
+[Enroll Android devices](../enrollment/android-enroll.md) lists the steps. If you have many Zebra devices, you may want to use a [device enrollment manager (DEM) account](../enrollment/device-enrollment-manager-enroll.md). Using a DEM account also removes the option to unenroll from the Company Portal app, so that users can't unenroll the device as easily.
 
 ## Step 4: Create a device management profile in StageNow
 
@@ -120,7 +120,7 @@ When you create the profile in StageNow, on the last step, select **Export to MD
 
   Or, you can use built-in features in Intune to get these changes, including:
 
-  - App management features to [add](../intune/apps/apps-add.md), [deploy](../intune/apps/apps-deploy.md), update, and [monitor](../intune/apps/apps-monitor.md) apps.
+  - App management features to [add](../apps/apps-add.md), [deploy](../apps/apps-deploy.md), update, and [monitor](../apps/apps-monitor.md) apps.
   - Manage [system and app updates](device-restrictions-android-for-work.md#device-owner-only) on devices running Android Enterprise
 
 After you test the file, the next step is to deploy the profile to devices using Intune.
@@ -154,7 +154,7 @@ In Intune, create a device configuration profile:
 
 The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-The next time the device checks for configuration updates, the MX profile is deployed to the device. Devices sync with Intune when devices enroll, and then approximately every 8 hours. You can also [force a sync in Intune](../intune/remote-actions/device-sync.md). Or, on the device, open the **Company Portal app** > **Settings** > **Sync**. 
+The next time the device checks for configuration updates, the MX profile is deployed to the device. Devices sync with Intune when devices enroll, and then approximately every 8 hours. You can also [force a sync in Intune](../remote-actions/device-sync.md). Or, on the device, open the **Company Portal app** > **Settings** > **Sync**. 
 
 ## Update a Zebra MX configuration after it's assigned
 

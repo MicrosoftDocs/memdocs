@@ -44,7 +44,7 @@
   - name: Device lifecycle
     href: device-lifecycle.md
   - name: App lifecycle
-    href: ../intune/apps/app-lifecycle.md
+    href: ../apps/app-lifecycle.md
   - name: Guided scenarios
     items: 
     - name: Guided scenarios overview
@@ -133,13 +133,13 @@
       - name: How to get Windows apps
         href: end-user-apps-windows.md
       - name: Data Intune sends to Apple
-        href: ../intune/protect/data-intune-sends-to-apple.md
+        href: ../protect/data-intune-sends-to-apple.md
       - name: Data Intune sends to Google
-        href: ../intune/protect/data-intune-sends-to-google.md
+        href: ../protect/data-intune-sends-to-google.md
       - name: Data Apple sends to Intune
-        href: ../intune/protect/data-apple-sends-to-intune.md
+        href: ../protect/data-apple-sends-to-intune.md
       - name: Data Google sends to Intune
-        href: ../intune/protect/data-google-sends-to-intune.md      
+        href: ../protect/data-google-sends-to-intune.md      
   - name: Set up Intune
     items:
     - name: Steps to set up Intune
@@ -181,17 +181,17 @@
       - name: Use scope tags
         href: scope-tags.md
   - name: Enroll devices
-    href: ../intune/enrollment/index.yml
+    href: ../enrollment/index.yml
   - name: Remotely manage devices
-    href: ../intune/remote-actions/index.yml  
+    href: ../remote-actions/index.yml  
   - name: Create compliance rules
-    href: ../intune/protect/index.yml  
+    href: ../protect/index.yml  
   - name: Control device features and settings
-    href: ../intune/configuration/index.yml  
+    href: ../configuration/index.yml  
   - name: Protect devices and data
-    href: ../intune/protect/index.yml   
+    href: ../protect/index.yml   
   - name: Manage and protect apps
-    href: ../intune/apps/index.yml  
+    href: ../apps/index.yml  
   - name: Use policy sets
     href: ~/intune/fundamentals/policy-sets.md      
   - name: Developer guidance

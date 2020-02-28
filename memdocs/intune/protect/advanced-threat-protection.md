@@ -63,7 +63,7 @@ Because you have an Intune device compliance policy to classify devices with a *
 To use Microsoft Defender ATP with Intune, be sure you have the following configured, and ready for use:
 
 - Licensed tenant for Enterprise Mobility + Security E3 and Windows E5 (or Microsoft 365 Enterprise E5)
-- Microsoft Intune environment, with [Intune managed](../intune/enrollment/windows-enroll.md) Windows 10 devices that are also Azure AD joined
+- Microsoft Intune environment, with [Intune managed](../enrollment/windows-enroll.md) Windows 10 devices that are also Azure AD joined
 - [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) and access to the Microsoft Defender Security Center (ATP portal)
 
 > [!NOTE]
@@ -135,7 +135,7 @@ When you established the connection to Microsoft Defender ATP, Intune received a
      [Onboard Windows 10 machines using Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) has more details on these Microsoft Defender ATP settings.
 
 7. Select **OK**, and **Create** to save your changes, which creates the profile.
-8. [Assign the device configuration profile](../intune/configuration/device-profile-assign.md) to devices you want to assess with Microsoft Defender ATP.
+8. [Assign the device configuration profile](../configuration/device-profile-assign.md) to devices you want to assess with Microsoft Defender ATP.
 
 ## Create and assign the compliance policy
 
@@ -201,7 +201,7 @@ You can also use the *operational* report for noncompliant devices from the same
 
 1. Select **Devices** > **Monitor** > **Noncompliant devices**.
 
-For more information about reports, see [Intune reports](../intune/fundamentals/reports.md).
+For more information about reports, see [Intune reports](../fundamentals/reports.md).
 
 ## View onboarding status
 

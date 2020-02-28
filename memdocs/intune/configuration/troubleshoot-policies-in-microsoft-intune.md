@@ -36,7 +36,7 @@ This article lists some common troubleshooting techniques, and describes some is
 
 ## Check tenant status
 
-Check the [Tenant Status](../intune/fundamentals/tenant-status.md) and confirm the subscription is Active. You can also view details for active incidents and advisories that may impact your policy or profile deployment.
+Check the [Tenant Status](../fundamentals/tenant-status.md) and confirm the subscription is Active. You can also view details for active incidents and advisories that may impact your policy or profile deployment.
 
 ## Use built-in troubleshooting
 
@@ -51,8 +51,8 @@ Check the [Tenant Status](../intune/fundamentals/tenant-status.md) and confirm t
 
     **Helpful links**:
 
-    - [Assign licenses so users can enroll devices](../intune/fundamentals/licenses-assign.md)
-    - [Add users to Intune](../intune/fundamentals/users-add.md)
+    - [Assign licenses so users can enroll devices](../fundamentals/licenses-assign.md)
+    - [Add users to Intune](../fundamentals/users-add.md)
 
 4. Under **Devices**, find the device having an issue. Review the different columns:
 
@@ -60,7 +60,7 @@ Check the [Tenant Status](../intune/fundamentals/tenant-status.md) and confirm t
 
         - If **Managed** isn't set to **MDM** or **EAS/MDM**, then the device isn't enrolled. It doesn't receive compliance or configuration policies until it's enrolled.
 
-        - App protection policies (mobile application management) don't require devices to be enrolled. For more information, see [create and assign app protection policies](../intune/apps/app-protection-policies.md).
+        - App protection policies (mobile application management) don't require devices to be enrolled. For more information, see [create and assign app protection policies](../apps/app-protection-policies.md).
 
     - **Azure AD Join Type**: Should be set to **Workplace** or **AzureAD**.
  
@@ -68,11 +68,11 @@ Check the [Tenant Status](../intune/fundamentals/tenant-status.md) and confirm t
 
     - **Intune compliant**: Should be **Yes**. If **No** is shown, there may be an issue with compliance policies, or the device isn't connecting to the Intune service. For example, the device may be turned off, or may not have a network connection. Eventually, the device becomes non-compliant, possibly after 30 days.
 
-        For more information, see [get started with device compliance policies](../intune/protect/device-compliance-get-started.md).
+        For more information, see [get started with device compliance policies](../protect/device-compliance-get-started.md).
 
     - **Azure AD compliant**: Should be **Yes**. If **No** is shown, there may be an issue with compliance policies, or the device isn't connecting to the Intune service. For example, the device may be turned off, or may not have a network connection. Eventually, the device becomes non-compliant, possibly after 30 days.
 
-        For more information, see [get started with device compliance policies](../intune/protect/device-compliance-get-started.md).
+        For more information, see [get started with device compliance policies](../protect/device-compliance-get-started.md).
 
     - **Last check in**: Should be a recent time and date. By default, Intune devices check in every 8 hours.
 
@@ -97,12 +97,12 @@ Check the [Tenant Status](../intune/fundamentals/tenant-status.md) and confirm t
         - **Not Applicable**: This policy isn't supported on this platform. For example, iOS/iPadOS policies don't work on Android. Samsung KNOX policies don't work on Windows devices.
         - **Conflict**: There's an existing setting on the device that Intune can't override. Or, you deployed two policies with the same setting using different values.
         - **Pending**: The device hasn't checked into Intune to get the policy. Or, the device received the policy but hasn't reported the status to Intune.
-        - **Errors**: Look up errors and possible resolutions at [Troubleshoot company resource access problems](../intune/fundamentals/troubleshoot-company-resource-access-problems.md).
+        - **Errors**: Look up errors and possible resolutions at [Troubleshoot company resource access problems](../fundamentals/troubleshoot-company-resource-access-problems.md).
 
         **Helpful links**: 
 
-        - [Ways to deploy device compliance policies](../intune/protect/device-compliance-get-started.md#ways-to-deploy-device-compliance-policies)
-        - [Monitor device compliance policies](../intune/protect/compliance-policy-monitor.md)
+        - [Ways to deploy device compliance policies](../protect/device-compliance-get-started.md#ways-to-deploy-device-compliance-policies)
+        - [Monitor device compliance policies](../protect/compliance-policy-monitor.md)
 
 ## You're unsure if a profile is correctly applied
 
@@ -117,7 +117,7 @@ Check the [Tenant Status](../intune/fundamentals/tenant-status.md) and confirm t
 
     - **Pending**: The profile is sent to the device, but hasn't reported the status to Intune. For example, encryption on Android requires the user to enable encryption, and might show as pending.
 
-**Helpful link**: [Monitor configuration device profiles](../intune/configuration/device-profile-monitor.md)
+**Helpful link**: [Monitor configuration device profiles](../configuration/device-profile-monitor.md)
 
 > [!NOTE]
 > When two policies with different levels of restriction apply to the same device or user, the more restrictive policy applies.
@@ -135,7 +135,7 @@ Check the [Tenant Status](../intune/fundamentals/tenant-status.md) and confirm t
 
 If you create policies in the Exchange On-Premises Policy workspace (Admin console), but are using Office 365, then the configured policy settings aren't enforced by Intune. In the alert, note the policy source. Under the Exchange On-premises Policy workspace, delete the legacy rules. The legacy rules are Global Exchange rules within Intune for on-premises Exchange, and aren't relevant to Office 365. Then, create new policy for Office 365.
 
-[Troubleshoot the Intune on-premises Exchange connector](../intune/protect/troubleshoot-exchange-connector.md) may be a good resource.
+[Troubleshoot the Intune on-premises Exchange connector](../protect/troubleshoot-exchange-connector.md) may be a good resource.
 
 ## Can't change security policies for enrolled devices
 
@@ -149,7 +149,7 @@ For example, in Windows 8.1, on the desktop, swipe in from right to open the **C
 
 Other platforms, such as Android, iOS/iPadOS, and Windows Phone 8.1, may need to be retired and re-enrolled to apply a less restrictive policy.
 
-[Troubleshoot device enrollment](../intune/enrollment/troubleshoot-device-enrollment-in-intune.md) may be a good resource.
+[Troubleshoot device enrollment](../enrollment/troubleshoot-device-enrollment-in-intune.md) may be a good resource.
 
 ## PCs using the Intune software client - classic portal
 
@@ -162,7 +162,7 @@ For Windows PCs managed with the Intune software client, policy errors in the `p
 
 #### Resolve UAC issues
 
-1. Retire the computer. See [Remove devices](../intune/remote-actions/devices-wipe.md).
+1. Retire the computer. See [Remove devices](../remote-actions/devices-wipe.md).
 
 2. Wait 20 minutes for the client software to be removed.
 
@@ -181,6 +181,6 @@ To resolve this issue, set the local system time as close as possible to Interne
 
 ## Next steps
 
-[Common issues and resolutions with email profiles](../intune/configuration/troubleshoot-email-profiles-in-microsoft-intune.md)
+[Common issues and resolutions with email profiles](../configuration/troubleshoot-email-profiles-in-microsoft-intune.md)
 
-Get [support help from Microsoft](../intune/fundamentals/get-support.md), or use the [community forums](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).
+Get [support help from Microsoft](../fundamentals/get-support.md), or use the [community forums](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).

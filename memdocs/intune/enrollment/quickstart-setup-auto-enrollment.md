@@ -30,12 +30,12 @@ ms.collection: M365-identity-device-management
 
 In this quickstart, you'll set up Microsoft Intune to automatically enroll devices when specific users sign in to Windows 10 devices.
 
-If you don’t have an Intune subscription, [sign up for a free trial account](../intune/fundamentals/free-trial-sign-up.md).
+If you don’t have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
-- Microsoft Intune subscription - [sign up for a free trial account](../intune/fundamentals/free-trial-sign-up.md).
-- To complete this quickstart, you must first [create a user](../intune/fundamentals/quickstart-create-user.md) and [create a group](../intune/fundamentals/quickstart-create-group.md).
+- Microsoft Intune subscription - [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+- To complete this quickstart, you must first [create a user](../fundamentals/quickstart-create-user.md) and [create a group](../fundamentals/quickstart-create-group.md).
 
 ## Sign in to Intune in the Microsoft Endpoint Manager
 

@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 [!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 > [!NOTE]
-> The information in this topic applies only to Windows desktops that you are managing as PCs by using the Intune software client. If you want to manage firewall settings for Windows PCs enrolled as mobile devices, see [Add endpoint protection settings in Intune](../intune/protect/endpoint-protection-configure.md).
+> The information in this topic applies only to Windows desktops that you are managing as PCs by using the Intune software client. If you want to manage firewall settings for Windows PCs enrolled as mobile devices, see [Add endpoint protection settings in Intune](../protect/endpoint-protection-configure.md).
 
 Microsoft Intune can help you to secure Windows PCs that you manage with the Intune client in a number of ways. One way in which it does this is to provide policies that enable you to configure Windows Firewall settings on PCs.
 

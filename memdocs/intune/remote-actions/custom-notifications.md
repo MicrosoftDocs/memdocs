@@ -71,7 +71,7 @@ If you have the Company Portal app open on an Android device, the notification r
 - To send notifications to a device, your account must have the following RBAC permission in Intune: *Remote tasks* > **Send custom notifications**.
 
 **Creating notifications**:  
-- To create a message, use an account that is assigned an Intune role that includes the **Update** permission for **Organization**. To assign permissions to a user, see [Role assignments](../intune/fundamentals/role-based-access-control.md#role-assignments)  
+- To create a message, use an account that is assigned an Intune role that includes the **Update** permission for **Organization**. To assign permissions to a user, see [Role assignments](../fundamentals/role-based-access-control.md#role-assignments)  
 - Custom notifications are limited to 50-character titles and 500-character messages.  
 - Intune doesn’t save sent messages. To resend a message, you must recreate that message.  
 - You can only send up to 25 messages to groups per hour. This restriction is at the tenant level. This limitation doesn't apply when sending notifications to individuals.

@@ -125,7 +125,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   - FileVault needs the user to approve their management profile in MacOS Catalina and higher.
 
-    *Consider: Beginning with MacOS version 10.15 (Catalina), user approved enrollment settings can result in the requirement that users manually approve FileVault encryption. For more information, see [User Approved enrollment](../intune/enrollment/macos-enroll.md) in the Intune documentation*.
+    *Consider: Beginning with MacOS version 10.15 (Catalina), user approved enrollment settings can result in the requirement that users manually approve FileVault encryption. For more information, see [User Approved enrollment](../enrollment/macos-enroll.md) in the Intune documentation*.
 
   - Unknown.
 

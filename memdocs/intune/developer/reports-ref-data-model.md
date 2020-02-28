@@ -47,7 +47,7 @@ These areas contain the entities that are meaningful to your Intune environment.
 - [Devices](reports-ref-devices.md)
 - [Intune Management Extension](reports-ref-intunemanagementextension.md)
 - [Policy](reports-ref-policy.md)
-- [Mobile App Management (MAM)](../intune/apps/app-management.md)
+- [Mobile App Management (MAM)](../apps/app-management.md)
 - [User](reports-ref-user.md)
 - [Current User](../reports-ref-current-user.md)
 - [User Device Associations](reports-ref-user-device.md)

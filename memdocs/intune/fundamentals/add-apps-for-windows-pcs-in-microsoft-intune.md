@@ -35,7 +35,7 @@ ms.collection: M365-identity-device-management
 Use the information in this topic to learn how to add apps to Intune before you deploy them.
 
 > [!IMPORTANT]
-> The information in this topic helps you add apps for Windows PCs that you manage by using the Intune software client. If you want to add apps for enrolled Windows PCs and other mobile devices, see [Add apps to Microsoft Intune](../intune/apps/apps-add.md).
+> The information in this topic helps you add apps for Windows PCs that you manage by using the Intune software client. If you want to add apps for enrolled Windows PCs and other mobile devices, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 To install apps to PCs, they must be capable of being installed silently, with no user interaction. If this is not the case, the installation will fail.
 
@@ -106,6 +106,6 @@ The app is displayed on the **Apps** node of the **Apps** workspace.
 
 ## Next steps
 
-After you've created an app, the next step is to deploy it. To find out more, see [Assign apps to groups with Microsoft Intune](../intune/apps/apps-deploy.md).
+After you've created an app, the next step is to deploy it. To find out more, see [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
 
 If you want to read more information about tips and tricks to deploy software to Windows PCs, see the blog post [Support Tip: Best Practices for Intune Software Distribution to PC’s](https://support.microsoft.com/en-US/help/2583929).

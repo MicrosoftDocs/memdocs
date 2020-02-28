@@ -36,7 +36,7 @@ ms.collection: M365-identity-device-management
 A line-of-business (LOB) app is one that you add from an app installation file. This kind of app is typically written in-house. The following steps provide guidance to help you add a Windows LOB app to Microsoft Intune.
 
 > [!IMPORTANT]
-> When deploying Win32 apps using an installation file with the .msi extension (packaged in an .intunewin file using the Content Prep Tool), consider using [Intune Management Extension](../intune/apps/intune-management-extension.md). If you mix the installation of Win32 apps and line-of-business apps during AutoPilot enrollment, the app installation may fail.  
+> When deploying Win32 apps using an installation file with the .msi extension (packaged in an .intunewin file using the Content Prep Tool), consider using [Intune Management Extension](../apps/intune-management-extension.md). If you mix the installation of Win32 apps and line-of-business apps during AutoPilot enrollment, the app installation may fail.  
 
 ## Select the app type
 
@@ -76,7 +76,7 @@ A line-of-business (LOB) app is one that you add from an app installation file. 
 2. Click **Next** to display the **Scope tags** page.
 
 ## Step 2 - Select scope tags (optional)
-You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../intune/fundamentals/scope-tags.md).
+You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
 1. Click **Select scope tags** to optionally add scope tags for the app. 
 2. Click **Next** to display the **Assignments** page.

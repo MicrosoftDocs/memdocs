@@ -71,7 +71,7 @@ Follow the steps below to better understand Intune in the Azure portal. Once you
     
     Intune lets you manage your workforce’s devices and apps, including how they access your company data. To use this mobile device management (MDM) service, the devices must first be enrolled in Intune. When a device is enrolled, it is issued an MDM certificate. This certificate is used to communicate with the Intune service. 
 
-    There are several methods to enroll your workforce’s devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](mdm-authority-set.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](setup-steps.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](../intune/enrollment/device-enrollment.md)
+    There are several methods to enroll your workforce’s devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](mdm-authority-set.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](setup-steps.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](../enrollment/device-enrollment.md)
 
 3. From [Intune](https://aka.ms/intuneportal), select **Device compliance** to display details about compliance for devices managed by Intune. You will see details similar to the following image.
 
@@ -83,7 +83,7 @@ Follow the steps below to better understand Intune in the Azure portal. Once you
     - Devices must be enrolled in Intune
     - Devices that are enrolled to either one user or no primary user.
     
-    For more information, see [Get started with device compliance policies in Intune](../intune/protect/device-compliance-get-started.md).
+    For more information, see [Get started with device compliance policies in Intune](../protect/device-compliance-get-started.md).
 
 4. From [Intune](https://aka.ms/intuneportal), select **Device configuration** to display details about device profiles in Intune.
 
@@ -91,7 +91,7 @@ Follow the steps below to better understand Intune in the Azure portal. Once you
     
     Intune includes settings and features that you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android, and Windows. Then, you can use Intune to apply the profile to devices in your organization.   
 
-    For more information about device configuration, see [Apply features settings on your devices using device profiles in Microsoft Intune](../intune/configuration/device-profiles.md).
+    For more information about device configuration, see [Apply features settings on your devices using device profiles in Microsoft Intune](../configuration/device-profiles.md).
 
 5. From [Intune](https://aka.ms/intuneportal), select **Devices** to display details about your Intune tenant's enrolled devices. If you are starting with a new Intune enlistment, you will not have any enrolled devices yet.
 
@@ -103,13 +103,13 @@ Follow the steps below to better understand Intune in the Azure portal. Once you
 
     ![Screenshot of the client apps pane](./media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-06.png)
 
-    As an IT admin, you can use Microsoft Intune to manage the client apps that your company's workforce uses. This functionality is in addition to managing devices and protecting data. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work. Additionally, you might want to assign and manage apps on devices that are not enrolled with Intune. Intune offers a range of capabilities to help you get the apps you need on the devices you want. For more information about adding and assigning apps, see [Add apps to Microsoft Intune](../intune/apps/apps-add.md) and [Assign apps to groups with Microsoft Intune](../intune/apps/apps-deploy.md).
+    As an IT admin, you can use Microsoft Intune to manage the client apps that your company's workforce uses. This functionality is in addition to managing devices and protecting data. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work. Additionally, you might want to assign and manage apps on devices that are not enrolled with Intune. Intune offers a range of capabilities to help you get the apps you need on the devices you want. For more information about adding and assigning apps, see [Add apps to Microsoft Intune](../apps/apps-add.md) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
 
 7. From [Intune](https://aka.ms/intuneportal), select **Conditional Access** to display details about access policies.
 
     ![Screenshot of the Conditional Access pane](./media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-07.png)
 
-    Conditional Access refers to ways you can control the devices and apps that are allowed to connect to your email and company resources. To learn about device-based and app-based Conditional Access, and find common scenarios for using Conditional Access with Intune, see [What's Conditional Access?](../intune/protect/conditional-access.md)
+    Conditional Access refers to ways you can control the devices and apps that are allowed to connect to your email and company resources. To learn about device-based and app-based Conditional Access, and find common scenarios for using Conditional Access with Intune, see [What's Conditional Access?](../protect/conditional-access.md)
 
 8. From [Intune](https://aka.ms/intuneportal), select **Users** to display details about the users that you have included in Intune. These users are your company's workforce.
 

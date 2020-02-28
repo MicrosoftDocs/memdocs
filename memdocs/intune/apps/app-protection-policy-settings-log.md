@@ -98,4 +98,4 @@ The following table lists the App protection policy setting name and supported v
 ## Next steps
 
 - To learn more about app protection policies, see [What are app protection policies?](app-protection-policy.md)
-- Intune offers a number of tools to help you troubleshoot issues in your environment. For more information, see [Use the troubleshooting portal to help users](../intune/fundamentals/help-desk-operators.md).
+- Intune offers a number of tools to help you troubleshoot issues in your environment. For more information, see [Use the troubleshooting portal to help users](../fundamentals/help-desk-operators.md).

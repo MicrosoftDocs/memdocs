@@ -80,4 +80,4 @@ In this quickstart, you created a custom security operations role and assigned i
 To follow this series of Intune quickstarts, continue to the next quickstart.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Create an email device profile for iOS](../intune/configuration/quickstart-email-profile.md)
+> [Quickstart: Create an email device profile for iOS](../configuration/quickstart-email-profile.md)

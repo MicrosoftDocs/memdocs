@@ -41,7 +41,7 @@ For example, an Intune administrator can require:
 You can also use this feature to monitor the compliance status on devices in your organization.
 
 > [!IMPORTANT]
-> Intune follows the device check-in schedule for all compliance evaluations on the device. [Policy and profile refresh cycles](../intune/configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) lists the estimated refresh times.
+> Intune follows the device check-in schedule for all compliance evaluations on the device. [Policy and profile refresh cycles](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) lists the estimated refresh times.
 
 <!---### Actions for noncompliance
 
@@ -95,7 +95,7 @@ Intune also includes a set of built-in compliance policy settings. The following
   - **Compliant** (*default*): security feature off
   - **Not compliant**: security feature on
 
-  If a device doesn't have a compliance policy assigned, then this device is considered compliant by default. If you use Conditional Access with compliance policies, we recommended you change the default setting to **Not compliant**. If an end user isn't compliant because a policy isn't assigned, then the [Company Portal app](../intune/apps/company-portal-app.md) shows `No compliance policies have been assigned`.
+  If a device doesn't have a compliance policy assigned, then this device is considered compliant by default. If you use Conditional Access with compliance policies, we recommended you change the default setting to **Not compliant**. If an end user isn't compliant because a policy isn't assigned, then the [Company Portal app](../apps/company-portal-app.md) shows `No compliance policies have been assigned`.
 
 
 > [!NOTE]
@@ -112,7 +112,7 @@ Intune also includes a set of built-in compliance policy settings. The following
 
   This setting shows as the **Is active** default compliance policy (**Devices** > **Monitor** > **Setting compliance**). The background task for this policy runs once a day.
 
-You can use these built-in policies to monitor these settings. Intune also [refreshes or checks for updates](create-compliance-policy.md#refresh-cycle-times) at different intervals, depending on the device platform. [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../intune/configuration/device-profile-troubleshoot.md) is a good resource.
+You can use these built-in policies to monitor these settings. Intune also [refreshes or checks for updates](create-compliance-policy.md#refresh-cycle-times) at different intervals, depending on the device platform. [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md) is a good resource.
 
 Compliance reports are a great way to check the status of devices. [Monitor compliance policies](compliance-policy-monitor.md) includes some guidance.
 

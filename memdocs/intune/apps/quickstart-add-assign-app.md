@@ -33,15 +33,15 @@ ms.collection: M365-identity-device-management
 
 In this quickstart, you will use Intune to add and assign a client app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work. 
 
-If you don’t have an Intune subscription, [sign up for a free trial account](../intune/fundamentals/free-trial-sign-up.md).
+If you don’t have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
-- To complete this quickstart, you must [create a user](../intune/fundamentals/quickstart-create-user.md), [create a group](../intune/fundamentals/quickstart-create-group.md), and [enroll a device](../quickstart-setup-auto-enrollment.md).
+- To complete this quickstart, you must [create a user](../fundamentals/quickstart-create-user.md), [create a group](../fundamentals/quickstart-create-group.md), and [enroll a device](../quickstart-setup-auto-enrollment.md).
 
 ## Sign in to Intune
 
-Sign in to [Intune](https://aka.ms/intuneportal) as a [Global administrator or an Intune Service administrator](../intune/fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to [Intune](https://aka.ms/intuneportal) as a [Global administrator or an Intune Service administrator](../fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Add the client app to Intune
 

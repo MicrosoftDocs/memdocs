@@ -37,10 +37,10 @@ ms.collection: M365-identity-device-management
 
 When any of the following Apple services are enabled on a device, Microsoft Intune establishes a connection with Apple and shares user and device information with Apple: 
 
-- [Apple Device Enrollment Program (DEP)](../intune/enrollment/device-enrollment-program-enroll-ios.md)
-- [Apple MDM Push certificate (APNS)](../intune/enrollment/apple-mdm-push-certificate-get.md)
+- [Apple Device Enrollment Program (DEP)](../enrollment/device-enrollment-program-enroll-ios.md)
+- [Apple MDM Push certificate (APNS)](../enrollment/apple-mdm-push-certificate-get.md)
 - [Apple School Manager (ASM)](https://docs.microsoft.com/schooldatasync/apple-school-manager-integration-with-intune-for-education-and-school-data-sync)
-- [Apple Volume Purchase Program (VPP)](../intune/apps/vpp-apps-ios.md)
+- [Apple Volume Purchase Program (VPP)](../apps/vpp-apps-ios.md)
 
 Before Microsoft Intune can establish a connection, you must create an Apple account for each of the Apple services.
 

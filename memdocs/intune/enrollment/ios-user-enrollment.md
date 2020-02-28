@@ -40,7 +40,7 @@ For more information about the options available with User Enrollment, see [User
 > Support for Apple's User Enrollment in Intune is currently in preview.
 
 ## Prerequisites
-- [Mobile Device Management (MDM) Authority](../intune/fundamentals/mdm-authority-set.md)
+- [Mobile Device Management (MDM) Authority](../fundamentals/mdm-authority-set.md)
 - [Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
 - [Managed Apple IDs](https://support.apple.com/guide/apple-business-manager/mdm1c9622977/web).
 

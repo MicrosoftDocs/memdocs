@@ -48,7 +48,7 @@ To learn more about VPN profiles in Intune, see [VPN profiles](vpn-settings-conf
 
   - **Authentication method**: Choose how devices authenticate to the VPN server. Your options:
   
-    - **Certificates**: Select an existing SCEP or PKCS certificate profile to authenticate the connection. [Configure certificates](../intune/protect/certificates-configure.md) lists the steps to create a certificate profile.
+    - **Certificates**: Select an existing SCEP or PKCS certificate profile to authenticate the connection. [Configure certificates](../protect/certificates-configure.md) lists the steps to create a certificate profile.
     - **Username and password**: When signing into the VPN server, end users are prompted to enter their user name and password.
 
 - **Connection type**: Select the VPN connection type. Your options:
@@ -64,7 +64,7 @@ To learn more about VPN profiles in Intune, see [VPN profiles](vpn-settings-conf
 
   - **Authentication method**: Choose how devices authenticate to the VPN server. Your options:
   
-    - **Certificates**: Select an existing SCEP or PKCS certificate profile to authenticate the connection. [Configure certificates](../intune/protect/certificates-configure.md) lists the steps to create a certificate profile.
+    - **Certificates**: Select an existing SCEP or PKCS certificate profile to authenticate the connection. [Configure certificates](../protect/certificates-configure.md) lists the steps to create a certificate profile.
     - **Username and password**: When signing into the VPN server, end users are prompted to enter their user name and password.
 
 - **Connection type**: Select the VPN connection type. Your options:

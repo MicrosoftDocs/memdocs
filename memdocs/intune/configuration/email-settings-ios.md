@@ -60,7 +60,7 @@ This article lists and describes all the email settings available for devices ru
 - **Authentication method**: Choose how users to authenticate to the email server. Your options:
   - **Certificate**: Select a client SCEP or PKCS certificate profile you previously created to authenticate the Exchange connection. This option provides the most secure and seamless experience for your users.
   - **Username and Password**: Users are prompted to enter their user name and password.
-  - **Derived credential**: Use a certificate that’s derived from a user’s smart card. For more information, see [Use derived credentials in Microsoft Intune](../intune/protect/derived-credentials.md).
+  - **Derived credential**: Use a certificate that’s derived from a user’s smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
   >[!NOTE]
   > Azure multi-factor authentication isn't supported.
@@ -125,7 +125,7 @@ This article lists and describes all the email settings available for devices ru
       - **Signing certificate type**: Your options:
         - **Not configured**: Intune doesn't update or change this setting.
         - **None**: As an administrator, you don't force a specific certificate. Select this option so users can choose their own certificate.
-        - **Derived credential**: Use a certificate that’s derived from a user’s smart card. For more information, see [Use derived credentials in Microsoft Intune](../intune/protect/derived-credentials.md).
+        - **Derived credential**: Use a certificate that’s derived from a user’s smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
         - **Certificates**: Select an existing PKCS or SCEP certificate profile that's used for signing email messages.
       - **Allow user to change setting**: **Enable** allows users to change the signing certificate. **Disable** (default) prevents users from changing the signing certificate, and forces users to use the certificate you configured.
 
@@ -149,7 +149,7 @@ This article lists and describes all the email settings available for devices ru
       - **Encryption certificate type**: Your options:
         - **Not configured**: Intune doesn't update or change this setting.
         - **None**: As an administrator, you don't force a specific certificate. Select this option so users can choose their own certificate.
-        - **Derived credential**: Use a certificate that’s derived from a user’s smart card. For more information, see [Use derived credentials in Microsoft Intune](../intune/protect/derived-credentials.md).
+        - **Derived credential**: Use a certificate that’s derived from a user’s smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
         - **Certificates**: Select an existing PKCS or SCEP certificate profile that's used for signing email messages.
       - **Allow user to change setting**: **Enable** allow users to change the encryption certificate. **Disable** (default) prevents users from changing the encryption certificate, and forces users to use the certificate you configured.
 

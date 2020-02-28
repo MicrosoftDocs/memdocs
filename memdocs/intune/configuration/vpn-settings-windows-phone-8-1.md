@@ -42,7 +42,7 @@ Depending on the settings you choose, not all values in the following list are c
 - **Apply all settings to Windows Phone 8.1 only**: Configure this setting in the Intune classic portal. In the Microsoft Endpoint Manager admin center, this setting can't be changed. When set to **Configured**, any settings are only applied to Windows Phone 8.1 devices. When set to **Not Configured**, these settings also apply to Windows 10 Mobile devices.
 - **Connection name**: Enter a name for this connection. Users see this name when they browse their device for the list of available VPN connections.
 - **Authentication method**: Choose how devices authenticate to the VPN server from:
-  - **Certificates**: Under **Authentication certificate**, Choose a SCEP or PKCS certificate profile you previously created to authenticate the connection. For more information about certificate profiles, see [How to configure certificates](../intune/protect/certificates-configure.md).
+  - **Certificates**: Under **Authentication certificate**, Choose a SCEP or PKCS certificate profile you previously created to authenticate the connection. For more information about certificate profiles, see [How to configure certificates](../protect/certificates-configure.md).
   - **Username and password**: End users must supply a username and password to log into the VPN server.
 - **Servers**: Add one or more VPN servers that devices connect to.
   - **Add**: Opens the **Add Row** blade where you can specify the following information:

@@ -46,7 +46,7 @@ Please note, user-approved device enrollment is required for FileVault to work o
 
 FileVault is a whole-disk encryption program that is included with macOS. You can use Intune to configure FileVault on devices that run **macOS 10.13 or later**.
 
-To configure FileVault, create a [device configuration profile](../intune/configuration/device-profile-create.md) for endpoint protection for the macOS platform. FileVault settings are one of the available settings categories for macOS endpoint protection.
+To configure FileVault, create a [device configuration profile](../configuration/device-profile-create.md) for endpoint protection for the macOS platform. FileVault settings are one of the available settings categories for macOS endpoint protection.
 
 After you create a policy to encrypt devices with FileVault, the policy is applied to devices in two stages. First, the device is prepared to enable Intune to retrieve and back up the recovery key. This is referred to as escrow. After the key is escrowed, the disk encryption can start.
 
@@ -95,7 +95,7 @@ Use Intune to configure BitLocker Drive Encryption on devices that run Windows 1
 
 BitLocker is available on devices that run **Windows 10 or later**.
 
-Configure BitLocker when you create a [device configuration profile](../intune/configuration/device-profile-create.md) for endpoint protection for the Windows 10 or later platform. BitLocker settings are in the Windows Encryption settings category for Windows 10 endpoint protection.
+Configure BitLocker when you create a [device configuration profile](../configuration/device-profile-create.md) for endpoint protection for the Windows 10 or later platform. BitLocker settings are in the Windows Encryption settings category for Windows 10 endpoint protection.
 
 ![BitLocker settings](./media/encrypt-devices/bitlocker-settings.png)
 

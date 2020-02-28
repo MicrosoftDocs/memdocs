@@ -41,12 +41,12 @@ Learn about using app protection policies with Conditional Access to protect Exc
 You'll need a test tenant with the following subscriptions for this tutorial:
 
 - Azure Active Directory Premium ([free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
-- Intune subscription ([free trial](../intune/fundamentals/free-trial-sign-up.md))
+- Intune subscription ([free trial](../fundamentals/free-trial-sign-up.md))
 - Office 365 Business subscription that includes Exchange ([free trial](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
 ## Sign in to Intune
 
-For this tutorial, when you sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as a [Global administrator](../intune/fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../intune/fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+For this tutorial, when you sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Create the app protection policy
 

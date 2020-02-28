@@ -35,14 +35,14 @@ This guide helps developers test their Intune-managed Android apps.
 ## Prerequisite test accounts
 You can create new accounts with or without pre-generated data. To create a new account:
 1. Go to the [Microsoft Demos](https://demos.microsoft.com/environments/create/tenant) site. 
-2. [Set up Intune](../intune/fundamentals/setup-steps.md) to enable mobile device management (MDM).
-3. [Create users](../intune/fundamentals/users-add.md).
-4. [Create groups](../intune/fundamentals/groups-add.md).
-5. [Assign licenses](../intune/fundamentals/licenses-assign.md) as appropriate for your testing.
+2. [Set up Intune](../fundamentals/setup-steps.md) to enable mobile device management (MDM).
+3. [Create users](../fundamentals/users-add.md).
+4. [Create groups](../fundamentals/groups-add.md).
+5. [Assign licenses](../fundamentals/licenses-assign.md) as appropriate for your testing.
 
 
 ## Azure portal policy configuration
-[Create and assign app protection policies](../intune/apps/app-protection-policies.md) in the [Azure portal's Intune blade](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview). You can also create and assign your [app configuration policy](../intune/apps/app-configuration-policies-overview.md) in the Intune blade.
+[Create and assign app protection policies](../apps/app-protection-policies.md) in the [Azure portal's Intune blade](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview). You can also create and assign your [app configuration policy](../apps/app-configuration-policies-overview.md) in the Intune blade.
 
 > [!NOTE]
 > If your app isn't listed in the Azure portal, you can target it with a policy by selecting the **more apps** option, and providing the package name in the text box.
@@ -55,7 +55,7 @@ The following test cases provide configuration and confirmation steps. Use this 
 
 You can require a PIN to access corporate resources. Also, you can enforce corporate authentication before users can use managed apps. Here's how:
 
-1. Set **Require PIN for access** and **Require corporate credentials for access** to **Yes**. For more information, see [Android app protection policy settings in Microsoft Intune](../intune/apps/app-protection-policy-settings-android.md#access-requirements).
+1. Set **Require PIN for access** and **Require corporate credentials for access** to **Yes**. For more information, see [Android app protection policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md#access-requirements).
 2. Confirm the following conditions:
     - App launch should present a prompt for PIN input, or the production user that was used during enrollment with the Company Portal.
     - Failure to present a valid sign-in prompt might be due to an incorrectly configured Android manifest, specifically the values for Azure Active Directory Authentication Library (ADAL) integration (SkipBroker, ClientID, and Authority).
@@ -105,7 +105,7 @@ You can control app backup, as follows:
 ### Unenrollment
 You can remotely wipe managed apps from containing corporate email and documents, and personal data is decrypted when it's no longer administered. Here's how:
 
-1. From the Azure portal, [issue a wipe](../intune/apps/apps-selective-wipe.md).
+1. From the Azure portal, [issue a wipe](../apps/apps-selective-wipe.md).
 2. If your app doesn't register for any wipe handlers, confirm the following conditions:
     - A full wipe of the app occurs.
 3. If your app has registered for `WIPE_USER_DATA` or `WIPE_USER_AUXILARY_DATA`, confirm the following conditions:
@@ -123,8 +123,8 @@ Minimally, confirm that:
 - The user is prompted for conditional launch when changing from an unmanaged to a managed account (first time only).
 
 ### App configuration (optional)
-You can configure behavior of managed apps. If your app consumes any app configuration settings, you should test that your app correctly handles all values that you (as the admin) can set. You can create and assign [app configuration policies](../intune/apps/app-configuration-policies-overview.md) in Intune.
+You can configure behavior of managed apps. If your app consumes any app configuration settings, you should test that your app correctly handles all values that you (as the admin) can set. You can create and assign [app configuration policies](../apps/app-configuration-policies-overview.md) in Intune.
 
 ## Next steps
 
-- [Add an Android line-of-business app to Microsoft Intune](../intune/apps/lob-apps-android.md)
+- [Add an Android line-of-business app to Microsoft Intune](../apps/lob-apps-android.md)

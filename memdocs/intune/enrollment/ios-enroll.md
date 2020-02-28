@@ -41,7 +41,7 @@ As an Intune admin, you can set up enrollment for iOS/iPadOS and iPadOS devices 
 Before you can enable iOS/iPadOS devices, complete the following steps:
 
 - [Make sure your device is eligible for Apple device enrollment](https://support.apple.com/en-us/HT204142#eligibility).
-- [Set up Intune](../intune/fundamentals/setup-steps.md) - These steps set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](../intune/fundamentals/mdm-authority-set.md).
+- [Set up Intune](../fundamentals/setup-steps.md) - These steps set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](../fundamentals/mdm-authority-set.md).
 - [Get an Apple MDM Push certificate](apple-mdm-push-certificate-get.md) - Apple requires a certificate to enable management of iOiOS/iPadOS and macOS devices.
 
 ## User-owned iOS/iPadOS and iPadOS devices (BYOD)
@@ -51,7 +51,7 @@ You can let users enroll their personal devices for Intune management, know as "
 - Device Enrollment is what you may think of as typical BYOD enrollment. It provides admins with a wide range of management options.
 - User Enrollment is a more streamlined enrollment process that provides admins with a subset of device management options. This feature is currently in preview. 
 
-After you've completed the prerequisites and assigned user licenses, users can download the Intune Company Portal app from the App Store, and follow enrollment instructions in the app. You can customize the Company Portal privacy statement on iOS/iPadOS devices as explained in [privacy statement customization](../intune/apps/company-portal-app.md#privacy-statement-customization).
+After you've completed the prerequisites and assigned user licenses, users can download the Intune Company Portal app from the App Store, and follow enrollment instructions in the app. You can customize the Company Portal privacy statement on iOS/iPadOS devices as explained in [privacy statement customization](../apps/company-portal-app.md#privacy-statement-customization).
 
 ## Company-owned iOS/iPadOS devices
 

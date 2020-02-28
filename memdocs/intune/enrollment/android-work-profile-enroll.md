@@ -52,11 +52,11 @@ If you want to enroll devices using Android Enterprise work profiles, but those 
 
 If you're enrolling Android Enterprise work profile devices by using a [Device Enrollment Manager](device-enrollment-manager-enroll.md) account, there is a limit of 10 devices that can be enrolled per account.
 
-For more information, see [Data Intune sends to Google](../intune/protect/data-intune-sends-to-google.md).
+For more information, see [Data Intune sends to Google](../protect/data-intune-sends-to-google.md).
 
 ## Next steps for Android Enterprise work profiles
-- [Deploy Android Enterprise work profile apps](../intune/apps/apps-add-android-for-work.md)
-- [Add Android Enterprise work profile configuration policies](../intune/configuration/device-profiles.md)
+- [Deploy Android Enterprise work profile apps](../apps/apps-add-android-for-work.md)
+- [Add Android Enterprise work profile configuration policies](../configuration/device-profiles.md)
 
 ## See also
 

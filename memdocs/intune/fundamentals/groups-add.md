@@ -97,7 +97,7 @@ Use the following steps to create a new group.
 
 Access to your organization’s resources are controlled by users and groups you create.
 
-When you create groups, consider how you'll apply [compliance policies](../intune/protect/device-compliance-get-started.md) and [configuration profiles](../intune/configuration/device-profiles.md). For example, you might have:
+When you create groups, consider how you'll apply [compliance policies](../protect/device-compliance-get-started.md) and [configuration profiles](../configuration/device-profiles.md). For example, you might have:
 
 - Policies that are specific to a device operating system.
 - Policies that are specific to different roles in your organization.
@@ -105,7 +105,7 @@ When you create groups, consider how you'll apply [compliance policies](../intun
 
 To create the basic compliance requirements of your organization, you can create a default policy that applies to all groups and devices. Then, create more specific policies for the broadest categories of users and devices. For example, you might create email policies for each of the device operating systems.
 
-For configuration profile recommendations and guidance, see [Assign policies to user groups or device groups](../intune/configuration/device-profile-assign.md#user-groups-vs-device-groups) and [profile recommendations](../intune/configuration/device-profile-create.md#recommendations).
+For configuration profile recommendations and guidance, see [Assign policies to user groups or device groups](../configuration/device-profile-assign.md#user-groups-vs-device-groups) and [profile recommendations](../configuration/device-profile-create.md#recommendations).
 
 ## See also
 

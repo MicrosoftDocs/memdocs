@@ -35,7 +35,7 @@ Microsoft Intune includes many VPN settings that can be deployed to your iOS/iPa
 [Create a device configuration profile](vpn-settings-configure.md).
 
 > [!NOTE]
-> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../intune/enrollment/ios-enroll.md).
+> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
 
 ## Connection type
 
@@ -69,13 +69,13 @@ The settings shown in the following list are determined by the VPN connection ty
 - **IP address or FQDN**: The IP address or fully qualified domain name (FQDN) of the VPN server that devices connect with. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Organization's cloud name** (Zscaler only): Enter the cloud name where your organization is provisioned. The URL you use to sign in to Zscaler has the name.  
 - **Authentication method**: Choose how devices authenticate to the VPN server. 
-  - **Certificates**: Under **Authentication certificate**, select an existing SCEP or PKCS certificate profile to authenticate the connection. [Configure certificates](../intune/protect/certificates-configure.md) provides some guidance about certificate profiles.
+  - **Certificates**: Under **Authentication certificate**, select an existing SCEP or PKCS certificate profile to authenticate the connection. [Configure certificates](../protect/certificates-configure.md) provides some guidance about certificate profiles.
   - **Username and password**: End users must enter a username and password to sign in to the VPN server.  
 
     > [!NOTE]
     > If username and password are used as the authentication method for Cisco IPsec VPN, they must deliver the SharedSecret through a custom Apple Configurator profile.
 
-  - **Derived credential**: Use a certificate that’s derived from a user’s smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../intune/protect/derived-credentials.md).
+  - **Derived credential**: Use a certificate that’s derived from a user’s smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
 - **Excluded URLs** (Zscaler only): When connected to the Zscaler VPN, the listed URLs are accessible outside the Zscaler cloud. 
 

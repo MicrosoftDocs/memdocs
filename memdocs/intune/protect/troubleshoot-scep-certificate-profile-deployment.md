@@ -48,7 +48,7 @@ To validate a profile was sent to the device you expect, in the [Microsoft Endpo
 
 3. Review when the device last checked in with Intune.
 
-![Validate the policy](../intune/protect/media/troubleshoot-scep-certificate-profile-deployment/validate-policy-android.png)
+![Validate the policy](../protect/media/troubleshoot-scep-certificate-profile-deployment/validate-policy-android.png)
 
 ### Validate the policy reached the Android device
 
@@ -75,7 +75,7 @@ To validate a profile was sent to the device you expect, in the [Microsoft Endpo
 
 3. Review when the device last checked in with Intune.
 
-![Validate the policy](../intune/protect/media/troubleshoot-scep-certificate-profile-deployment/validate-policy-ios.png)
+![Validate the policy](../protect/media/troubleshoot-scep-certificate-profile-deployment/validate-policy-ios.png)
 
 ### Validate the policy reached the iOS or iPadOS device
 
@@ -102,7 +102,7 @@ To validate the profile was sent to the device you expect, in the [Microsoft End
 
 3. Review when the device last checked in with Intune.
 
-![Validate the policy](../intune/protect/media/troubleshoot-scep-certificate-profile-deployment/validate-policy-windows.png)
+![Validate the policy](../protect/media/troubleshoot-scep-certificate-profile-deployment/validate-policy-windows.png)
 
 ### Validate the policy reached the Windows device
 

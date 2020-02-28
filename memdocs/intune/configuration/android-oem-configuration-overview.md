@@ -40,7 +40,7 @@ This article describes OEMConfig, lists the prerequisites, shows how to create a
 
 ## Overview
 
-OEMConfig policies are a special type of device configuration policy similar to [app configuration policy](../intune/apps/app-configuration-policies-overview.md). OEMConfig is a standard defined by Google that uses app configuration in Android to send device settings to apps written by OEMs (original equipment manufacturers). This standard allows OEMs and EMMs (enterprise mobility management) to build and support OEM-specific features in a standardized way. [Learn more about OEMConfig](https://blog.google/products/android-enterprise/oemconfig-supports-enterprise-device-features/).
+OEMConfig policies are a special type of device configuration policy similar to [app configuration policy](../apps/app-configuration-policies-overview.md). OEMConfig is a standard defined by Google that uses app configuration in Android to send device settings to apps written by OEMs (original equipment manufacturers). This standard allows OEMs and EMMs (enterprise mobility management) to build and support OEM-specific features in a standardized way. [Learn more about OEMConfig](https://blog.google/products/android-enterprise/oemconfig-supports-enterprise-device-features/).
 
 Historically, EMMs, such as Intune, manually build support for OEM-specific features after they're introduced by the OEM. This approach leads to duplicated efforts and slow adoption.
 
@@ -77,8 +77,8 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 > [!TIP] 
 > OEMConfig apps are specific to the OEM. For example, a Sony OEMConfig app installed on a Zebra Technologies device doesn't do anything.
 
-1. Get the OEMConfig app from the Managed Google Play Store. [Add Managed Google Play apps to Android enterprise devices](../intune/apps/apps-add-android-for-work.md) lists the steps.
-2. Some OEMs may ship devices with the OEMConfig app pre-installed. If the app isn't preinstalled, use Intune to [add and deploy the app to devices](../intune/apps/apps-deploy.md).
+1. Get the OEMConfig app from the Managed Google Play Store. [Add Managed Google Play apps to Android enterprise devices](../apps/apps-add-android-for-work.md) lists the steps.
+2. Some OEMs may ship devices with the OEMConfig app pre-installed. If the app isn't preinstalled, use Intune to [add and deploy the app to devices](../apps/apps-deploy.md).
 
 ## Create an OEMConfig profile
 
@@ -98,7 +98,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 
 6. In **Associated app**, select an existing OEMConfig app you previously added > **Select**. Be sure to choose the correct OEMConfig app for the devices you're assigning the policy to.
 
-    If you don't see any apps listed, then set up Managed Google Play, and get apps from the Managed Google Play store. [Add Managed Google Play apps to Android Enterprise devices](../intune/apps/apps-add-android-for-work.md) lists the steps.
+    If you don't see any apps listed, then set up Managed Google Play, and get apps from the Managed Google Play store. [Add Managed Google Play apps to Android Enterprise devices](../apps/apps-add-android-for-work.md) lists the steps.
 
     > [!IMPORTANT]
     > If you added an OEMConfig app and synced it to Google Play, but it's not listed as an **Associated app**, you may have to contact Intune to onboard the app. See [adding a new app](#supported-oemconfig-apps) (in this article).
@@ -130,7 +130,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
     Any changes made in the configuration designer are also made automatically in the JSON editor. Likewise, any changes made in the JSON editor are automatically made in the configuration designer. If your input contains invalid values, you can't switch between the configuration designer and JSON editor until you fix the issues.
 
 9. Select **Next**.
-10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../intune/fundamentals/scope-tags.md).
+10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 

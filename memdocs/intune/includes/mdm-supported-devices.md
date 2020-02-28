@@ -21,7 +21,7 @@
 - Windows 10 IoT Mobile Enterprise
 - Windows Holographic for Business
 
-  For more information about managing devices running Windows Holographic for Business, see [Window Holographic for Business support](../intune/fundamentals/windows-holographic-for-business.md).
+  For more information about managing devices running Windows Holographic for Business, see [Window Holographic for Business support](../fundamentals/windows-holographic-for-business.md).
 
 - Windows 10 Teams (Surface Hub)
 
@@ -33,5 +33,5 @@
 
 Customers with Enterprise Management + Security  (EMS) can also use [Azure Active Directory (Azure AD) to register Windows 10 devices](/intune/windows-enroll).
 
-For guidelines on using Windows 10 virtual machines with Intune, see [Using Windows 10 virtual machines](../intune/fundamentals/windows-10-virtual-machines.md).
+For guidelines on using Windows 10 virtual machines with Intune, see [Using Windows 10 virtual machines](../fundamentals/windows-10-virtual-machines.md).
 

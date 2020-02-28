@@ -196,7 +196,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 6. In the **Join to Azure AD as** box, select **Hybrid Azure AD joined**.
 7. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
 8. Select **Next**.
-9. On the **Scope tags** page, select [scope tags](../intune/fundamentals/scope-tags.md) for this this profile.
+9. On the **Scope tags** page, select [scope tags](../fundamentals/scope-tags.md) for this this profile.
 10. Select **Next**.
 11. On the **Assignments** page, select **Select groups to include** > search for and select the device group > **Select**.
 12. Select **Next** > **Create**.
@@ -237,7 +237,7 @@ It takes about 15 minutes for the device profile status to change from *Not assi
    > Don't use quotation marks around the value in **Organizational unit**.
 5. Select **OK** > **Create**.  
     The profile is created and displayed in the list.
-6. To assign the profile, follow the steps under [Assign a device profile](../intune/configuration/device-profile-assign.md#assign-a-device-profile) and assign the profile to the same group used at this step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group)
+6. To assign the profile, follow the steps under [Assign a device profile](../configuration/device-profile-assign.md#assign-a-device-profile) and assign the profile to the same group used at this step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group)
    - Deploying multiple Domain Join profiles
    
      a. Create a dynamic group that includes all your Autopilot devices with a specific Autopilot deployment profile, enter (device.enrollmentProfileName -eq "Autopilot Profile Name"). 
@@ -251,4 +251,4 @@ It takes about 15 minutes for the device profile status to change from *Not assi
 
 ## Next steps
 
-After you configure Windows Autopilot, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](../intune/remote-actions/device-management.md).
+After you configure Windows Autopilot, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](../remote-actions/device-management.md).

@@ -86,7 +86,7 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 Intune app protection policies platform support aligns with Office mobile application platform support for Android and iOS/iPadOS devices. For details, see the **Mobile apps** section of [Office System Requirements](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
 
 > [!IMPORTANT]
-> The Intune Company Portal is required on the device to receive App Protection Policies on Android. For more information, see the [Intune Company Portal access apps requirements](../intune/fundamentals/end-user-mam-apps-android.md#access-apps).
+> The Intune Company Portal is required on the device to receive App Protection Policies on Android. For more information, see the [Intune Company Portal access apps requirements](../fundamentals/end-user-mam-apps-android.md#access-apps).
 
 ## How app protection policies protect app data
 
@@ -147,9 +147,9 @@ The [Intune SDK](../developer/app-sdk.md) uses some advanced modern authenticati
 
 The following list provides the end-user requirements to use app protection policies on an Intune-managed app:
 
-- The end user must have an Azure Active Directory (AAD) account. See [Add users and give administrative permission to Intune](../intune/fundamentals/users-add.md) to learn how to create Intune users in Azure Active Directory.
+- The end user must have an Azure Active Directory (AAD) account. See [Add users and give administrative permission to Intune](../fundamentals/users-add.md) to learn how to create Intune users in Azure Active Directory.
 
-- The end user must have a license for Microsoft Intune assigned to their Azure Active Directory account. See [Manage Intune licenses](../intune/fundamentals/licenses-assign.md) to learn how to assign Intune licenses to end users.
+- The end user must have a license for Microsoft Intune assigned to their Azure Active Directory account. See [Manage Intune licenses](../fundamentals/licenses-assign.md) to learn how to assign Intune licenses to end users.
 
 - The end user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the Intune console in the [Azure portal](https://portal.azure.com). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
 
@@ -284,15 +284,15 @@ Intune can wipe app data in three different ways:
 - Selective wipe for MDM 
 - MAM selective wipe
 
-For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../intune/remote-actions/devices-wipe.md). For more information about selective wipe using MAM, see [the Retire action](../intune/remote-actions/devices-wipe.md#retire) and [How to wipe only corporate data from apps](apps-selective-wipe.md).
+For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../remote-actions/devices-wipe.md). For more information about selective wipe using MAM, see [the Retire action](../remote-actions/devices-wipe.md#retire) and [How to wipe only corporate data from apps](apps-selective-wipe.md).
 
-[Full device wipe](../intune/remote-actions/devices-wipe.md) removes all user data and settings from **the device** by restoring the device to its factory default settings. The device is removed from Intune.
+[Full device wipe](../remote-actions/devices-wipe.md) removes all user data and settings from **the device** by restoring the device to its factory default settings. The device is removed from Intune.
 
   >[!NOTE]
   > Full device wipe, and selective wipe for MDM can only be achieved on devices enrolled with Intune mobile device management (MDM).
 
 **Selective wipe for MDM**<br>
-See [Remove devices - retire](../intune/remote-actions/devices-wipe.md#retire) to read about removing company data.
+See [Remove devices - retire](../remote-actions/devices-wipe.md#retire) to read about removing company data.
 
 **Selective wipe for MAM**<br>
 Selective wipe for MAM simply removes company app data from an app. The request is initiated using the Intune Azure portal. To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](apps-selective-wipe.md).

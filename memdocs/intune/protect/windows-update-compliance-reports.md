@@ -56,7 +56,7 @@ You can monitor Windows 10 update rollouts by using [Update Compliance](https://
 
 When you use this solution, you deploy a commercial ID to any of your Intune managed Windows 10 devices for which you want to report update compliance.  
 
-In Intune, you use the OMA-URI settings of a custom policy to configure the commercial ID. See [Use custom settings for Windows 10 devices in Intune](../intune/configuration/custom-settings-windows-10.md).
+In Intune, you use the OMA-URI settings of a custom policy to configure the commercial ID. See [Use custom settings for Windows 10 devices in Intune](../configuration/custom-settings-windows-10.md).
 
 The OMA-URI (case sensitive) path for configuring the commercial ID is: *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*  
 

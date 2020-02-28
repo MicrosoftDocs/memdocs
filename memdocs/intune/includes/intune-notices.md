@@ -46,7 +46,7 @@ While we still recommend targeting the general Acrobat Reader mobile app in your
 You are receiving this message because our reporting indicates one or more policies in your organization are targeting the Adobe Acrobat Reader for Intune application and/or you may have received our previous EOL communication. 
 
 #### What do I need to do to prepare for this change?
-Let your end users and helpdesk know of this change. You can use the [Company Portal's support information functionality](../intune/apps/company-portal-app.md#support-information) to establish a channel for Intune-related questions.
+Let your end users and helpdesk know of this change. You can use the [Company Portal's support information functionality](../apps/company-portal-app.md#support-information) to establish a channel for Intune-related questions.
 
 #### Additional Information
 https://helpx.adobe.com/acrobat/kb/intune-app-end-of-life.html
@@ -70,7 +70,7 @@ To ensure a smooth transition from the Intune Managed Browser to Microsoft Edge,
 Support for web clips on iOS and Android is coming. When this support is released, you will need to retarget pre-existing web clips to ensure they open in Microsoft Edge instead of the Managed Browser. 
 
 #### Additional information
-Visit our docs on [using Microsoft Edge with app protection policies](../intune/apps/manage-microsoft-edge.md) for more info, or view our [support blog post](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
+Visit our docs on [using Microsoft Edge with app protection policies](../apps/manage-microsoft-edge.md) for more info, or view our [support blog post](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
 
 
 ### End of support for legacy PC management
@@ -80,7 +80,7 @@ Legacy PC management is going out of support on October 15, 2020. Upgrade device
 [Learn more](https://go.microsoft.com/fwlink/?linkid=2107122)
 
 ### Decreasing support for Android device administrator 
-Android device administrator (sometimes referred to "legacy" Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is now available with [Android Enterprise](../intune/enrollment/connect-intune-android-enterprise.md) (released with Android 5.0). In an effort to move to modern, richer, and more secure device management, Google is decreasing device administrator support in new Android releases.
+Android device administrator (sometimes referred to "legacy" Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is now available with [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (released with Android 5.0). In an effort to move to modern, richer, and more secure device management, Google is decreasing device administrator support in new Android releases.
 
 #### How does this affect me?
 Because of these changes by Google, Intune users will be impacted in the following ways:  

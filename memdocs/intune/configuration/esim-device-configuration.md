@@ -105,7 +105,7 @@ When working with the csv file with the activation codes, be sure you or your mo
 
 ## Step 2: Create an Azure AD device group
 
-Create a Device group that includes the eSIM capable devices. [Add groups](../intune/fundamentals/groups-add.md) lists the steps.
+Create a Device group that includes the eSIM capable devices. [Add groups](../fundamentals/groups-add.md) lists the steps.
 
 > [!NOTE]
 > - Only devices are targeted, users aren't targeted.
@@ -183,7 +183,7 @@ When you remove the device from the Azure AD group, the eSIM profile is also rem
 2. Go to the Azure AD group, and remove the device from the group.
 3. When the removed device contacts Intune, the updated policy is evaluated, and the eSIM profile removed.
 
-The eSIM profile is also removed when the device is [retired](../intune/remote-actions/devices-wipe.md#retire) or unenrolled by the user, or when the [reset device remote action](../intune/remote-actions/devices-wipe.md#wipe) runs on the device.
+The eSIM profile is also removed when the device is [retired](../remote-actions/devices-wipe.md#retire) or unenrolled by the user, or when the [reset device remote action](../remote-actions/devices-wipe.md#wipe) runs on the device.
 
 > [!NOTE]
 > Removing the profile may not stop billing. Contact your mobile operator to check the billing status for your device.

@@ -40,7 +40,7 @@ There are several types of actions:
 
     Additionally, Intune includes details about the noncompliant device in the email notification.
 
-- **Remotely lock the noncompliant device**: For devices that are noncompliant, you can issue a remote lock. The user is then prompted for a PIN or password to unlock the device. More on the [Remote Lock](../intune/remote-actions/device-remote-lock.md) feature.
+- **Remotely lock the noncompliant device**: For devices that are noncompliant, you can issue a remote lock. The user is then prompted for a PIN or password to unlock the device. More on the [Remote Lock](../remote-actions/device-remote-lock.md) feature.
 
 - **Mark device non-compliant**: Create a schedule (in number of days) after the device is marked not compliant. You can configure the action to take effect immediately, or give the user a grace period to be compliant.
 
@@ -80,7 +80,7 @@ To send email to your users, create a notification message template. When a devi
    - **Email footer – Include company name**
    - **Email footer – Include contact information**
 
-   The logo you upload as part of the Company Portal branding is used for email templates. For more information about Company Portal branding, see [Company identity branding customization](../intune/apps/company-portal-app.md#company-identity-branding-customization).
+   The logo you upload as part of the Company Portal branding is used for email templates. For more information about Company Portal branding, see [Company identity branding customization](../apps/company-portal-app.md#company-identity-branding-customization).
 
    ![Example of a compliant notification message in Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 

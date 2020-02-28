@@ -132,14 +132,14 @@ Create a separate trusted certificate profile for each device platform you want 
 
 6. When you're done, choose **OK**, go back to the **Create profile** pane, and select **Create**.
 
-The profile appears in the list of profiles on the *Devices - Configuration profiles* window, with a profile type of **Trusted certificate**. Be sure to assign this profile to devices that will use SCEP or PKCS certificates. To assign the profile to groups, see [assign device profiles](../intune/configuration/device-profile-assign.md).
+The profile appears in the list of profiles on the *Devices - Configuration profiles* window, with a profile type of **Trusted certificate**. Be sure to assign this profile to devices that will use SCEP or PKCS certificates. To assign the profile to groups, see [assign device profiles](../configuration/device-profile-assign.md).
 
 > [!NOTE]
 > Android devices might display a message that a third party has installed a trusted certificate.
 
 ## Additional resources
 
-- [Assign device profiles](../intune/configuration/device-profile-assign.md)  
+- [Assign device profiles](../configuration/device-profile-assign.md)  
 - [Use S/MIME to sign and encrypt emails](certificates-s-mime-encryption-sign.md)  
 - [Use third-party certification authority](certificate-authority-add-scep-overview.md)  
 

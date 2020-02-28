@@ -37,11 +37,11 @@ Enrolling your devices into Microsoft Intune allows your Windows 10 devices to g
 > [!TIP]
 > Find out what happens when you [enroll your device in Intune](/intune-user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows) and what that means for the [information on your device](/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune).
 
-If you don’t have an Intune subscription, [sign up for a free trial account](../intune/fundamentals/free-trial-sign-up.md).
+If you don’t have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
-- Microsoft Intune subscription - [sign up for a free trial account](../intune/fundamentals/free-trial-sign-up.md)
+- Microsoft Intune subscription - [sign up for a free trial account](../fundamentals/free-trial-sign-up.md)
 - To complete this quickstart, you must complete the steps to [setup automatic enrollment in Intune](quickstart-setup-auto-enrollment.md).
 
 ## Confirm your Windows 10 Desktop version
@@ -76,7 +76,7 @@ Before enrolling your Windows 10 Desktop, you must confirm the version of Window
 
     ![Select Access work school account](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-04.png)
 
-3. Sign in to Intune with your work or school account, and then select **Next**. If you followed the [create a user and assign a license](../intune/fundamentals/quickstart-create-user.md) quickstart, you can sign in with the user account that you created.
+3. Sign in to Intune with your work or school account, and then select **Next**. If you followed the [create a user and assign a license](../fundamentals/quickstart-create-user.md) quickstart, you can sign in with the user account that you created.
 
     > [!NOTE]
     > If you setting up an ".onmicrosoft.com", the user account will have **.onmicrosoft.com** as part of the account address. 

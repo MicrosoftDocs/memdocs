@@ -73,7 +73,7 @@ Runs only one app on the device.
     > [!NOTE]
     > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, create a device configuration profile (**Device Configuration** > **Profiles** > **Create profile** > **Windows 10** for platform > **Device Restrictions** >  **Microsoft Edge Browser**). [Microsoft Edge browser](device-restrictions-windows-10.md#microsoft-edge-browser) lists and describes the available settings.
 
-  - **Add Kiosk browser**: Select **Kiosk browser settings**. These settings control a web browser app on the kiosk. Be sure you get the [Kiosk browser app](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) from the Store, add it to Intune as a [Client App](../intune/apps/apps-add.md). Then, assign the app to the kiosk devices.
+  - **Add Kiosk browser**: Select **Kiosk browser settings**. These settings control a web browser app on the kiosk. Be sure you get the [Kiosk browser app](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) from the Store, add it to Intune as a [Client App](../apps/apps-add.md). Then, assign the app to the kiosk devices.
 
     Enter the following settings:
 
@@ -104,7 +104,7 @@ Runs only one app on the device.
 
   - **Add Store app**: Select **Add a store app**, and choose an app from the list.
 
-    Don't have any apps listed? Add some using the steps at [Client Apps](../intune/apps/apps-add.md).
+    Don't have any apps listed? Add some using the steps at [Client Apps](../apps/apps-add.md).
     
  - **Specify Maintenance Window for App Restarts**: Default is "Not Configured," select "Require" to check for apps that require a restart to complete installation.
  
@@ -148,7 +148,7 @@ Apps in this mode are available on the start menu. These apps are the only apps 
       > [!NOTE]
       > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, create a device configuration profile (**Device Configuration** > **Profiles** > **Create profile** > **Windows 10** for platform > **Device Restrictions** >  **Microsoft Edge Browser**). [Microsoft Edge browser](device-restrictions-windows-10.md#microsoft-edge-browser) lists and describes the available settings.
 
-    - **Add Kiosk browser**: These settings control a web browser app on the kiosk. Be sure you deploy a web browser app to the kiosk devices using [Client Apps](../intune/apps/apps-add.md).
+    - **Add Kiosk browser**: These settings control a web browser app on the kiosk. Be sure you deploy a web browser app to the kiosk devices using [Client Apps](../apps/apps-add.md).
 
       Enter the following settings:
 
@@ -171,7 +171,7 @@ Apps in this mode are available on the start menu. These apps are the only apps 
 
   - **Applications**
 
-    - **Add store app**: Add an app from the Microsoft Store for Business. If you don't have any apps listed, then you can get apps, and [add them to Intune](../intune/apps/store-apps-windows.md). For example, you can add Kiosk Browser, Excel, OneNote, and more.
+    - **Add store app**: Add an app from the Microsoft Store for Business. If you don't have any apps listed, then you can get apps, and [add them to Intune](../apps/store-apps-windows.md). For example, you can add Kiosk Browser, Excel, OneNote, and more.
 
     - **Add Win32 App**: A Win32 app is a traditional desktop app, such as Visual Studio Code or Google Chrome. Enter the following properties:
 

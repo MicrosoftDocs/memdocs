@@ -34,7 +34,7 @@ When using Intune on Azure to manage your organization’s Windows devices, cons
 
 ## Manage Windows 10 devices by using MDM
 
-We recommend that you use [Mobile Device Management (MDM) to manage your Windows 10 devices](../intune/configuration/device-restrictions-windows-10.md) instead of using the legacy Intune PC client. The ability to manage Windows 10 via MDM is available in the Intune on Azure portal. Windows 10 MDM provides many new management and security capabilities that are not available via the legacy Intune PC client.
+We recommend that you use [Mobile Device Management (MDM) to manage your Windows 10 devices](../configuration/device-restrictions-windows-10.md) instead of using the legacy Intune PC client. The ability to manage Windows 10 via MDM is available in the Intune on Azure portal. Windows 10 MDM provides many new management and security capabilities that are not available via the legacy Intune PC client.
 
 ## Legacy PC Client features are only available in the Silverlight console
 
@@ -67,7 +67,7 @@ To switch from managing Windows 10 devices with the Intune PC Client to managing
 
 1. In the Silverlight console, perform a **Selective wipe** to un-enroll the device from the PC Client.
   ![Warning popup with the 'Selectively wipe the device` radio button selected](./media/intune-legacy-pc-client/image02.png)
-2. Re-enroll the device by using [MDM (and/or Azure AD Join)](../intune/enrollment/windows-enroll.md).
+2. Re-enroll the device by using [MDM (and/or Azure AD Join)](../enrollment/windows-enroll.md).
 
 ## Next steps
-[Enroll Windows devices](../intune/enrollment/windows-enroll.md)
+[Enroll Windows devices](../enrollment/windows-enroll.md)

@@ -58,7 +58,7 @@ To reset the passcode on Windows devices, onboard the PIN reset service to your 
 
 ## Configure Windows devices to use PIN reset
 
-To configure the PIN reset on the Windows devices you manage, use an [Intune Windows 10 custom device policy](../intune/configuration/custom-settings-windows-10.md). Configure the policy using the following Windows policy configuration service provider (CSP):
+To configure the PIN reset on the Windows devices you manage, use an [Intune Windows 10 custom device policy](../configuration/custom-settings-windows-10.md). Configure the policy using the following Windows policy configuration service provider (CSP):
 
 **Use the device policy** - `./Device/Vendor/MSFT/PassportForWork/*tenant ID*/Policies/EnablePinRecovery`
 

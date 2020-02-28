@@ -49,7 +49,7 @@ MAM allows you to manage and protects your organization's data within an applica
 
 Intune MAM supports two configurations:
 - **Intune MDM + MAM**: IT administrators can only manage apps using MAM and app protection policies on devices that are enrolled with Intune mobile device management (MDM). To manage apps using MDM + MAM, customers should use the Intune console in the Azure portal at https://portal.azure.com.
-- **MAM without device enrollment**: MAM without device enrollment, or MAM-WE, allows IT administrators to manage apps using MAM and app protection policies on devices not enrolled with Intune MDM. This means apps can be managed by Intune on devices enrolled with third-party EMM providers. To manage apps using MAM-WE, customers should use the Intune console in the Azure portal at https://portal.azure.com. Also, apps can be managed by Intune on devices enrolled with third-party Enterprise Mobility Management (EMM) providers or not enrolled with an MDM at all. For more information about BYOD and Microsoft's EMS, see [Technology decisions for enabling BYOD with Microsoft Enterprise Mobility + Security (EMS)](../intune/fundamentals/byod-technology-decisions.md).
+- **MAM without device enrollment**: MAM without device enrollment, or MAM-WE, allows IT administrators to manage apps using MAM and app protection policies on devices not enrolled with Intune MDM. This means apps can be managed by Intune on devices enrolled with third-party EMM providers. To manage apps using MAM-WE, customers should use the Intune console in the Azure portal at https://portal.azure.com. Also, apps can be managed by Intune on devices enrolled with third-party Enterprise Mobility Management (EMM) providers or not enrolled with an MDM at all. For more information about BYOD and Microsoft's EMS, see [Technology decisions for enabling BYOD with Microsoft Enterprise Mobility + Security (EMS)](../fundamentals/byod-technology-decisions.md).
 
 ## App management capabilities by platform
 
@@ -72,10 +72,10 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 | Apps from a   store | Yes | Yes | No | Yes | Yes |
 | Update apps | Yes | Yes | No | Yes | Yes |
 
-<sup>1</sup> Consider using [Windows Information Protection](../intune/protect/windows-information-protection-configure.md) to protect apps on devices that run Windows 10.<br>
+<sup>1</sup> Consider using [Windows Information Protection](../protect/windows-information-protection-configure.md) to protect apps on devices that run Windows 10.<br>
 <sup>2</sup> Applies to devices managed by Intune only.<br>
 <sup>3</sup> Intune supports available apps from Managed Google Play store on Android Enterprise devices.<br>
-<sup>4</sup> Intune does not provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../intune/configuration/device-restrictions-android-for-work.md#dedicated-device-settings). 
+<sup>4</sup> Intune does not provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings). 
 
 
 ## Get started
@@ -135,7 +135,7 @@ For more information about this section, see [Monitor apps](apps-monitor.md).
 
 ### Help and support
 - **Help and support**: Troubleshoot, request support, or view Intune status. For more information, see:
-  - [Troubleshoot problems](../intune/fundamentals/help-desk-operators.md).
+  - [Troubleshoot problems](../fundamentals/help-desk-operators.md).
 
 ## Next steps
 

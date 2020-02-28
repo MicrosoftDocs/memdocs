@@ -43,7 +43,7 @@ This feature applies to:
 
 To use this feature, devices must be:
 
-- Enrolled in Intune using Apple's Device Enrollment Program (DEP). [Automatically enroll macOS devices](../intune/enrollment/device-enrollment-program-enroll-macos.md) has more information.
+- Enrolled in Intune using Apple's Device Enrollment Program (DEP). [Automatically enroll macOS devices](../enrollment/device-enrollment-program-enroll-macos.md) has more information.
 
   OR
 

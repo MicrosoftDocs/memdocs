@@ -93,7 +93,7 @@ Delivery Optimization lets you use Intune to reduce bandwidth consumption when y
 
 To see the full list of Windows 10 versions and content types supported by Delivery Optimization, see the [Delivery Optimization for Windows 10 updates article](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#requirements).
 
-You can [set up Delivery Optimization](../intune/configuration/delivery-optimization-settings.md) as part of your device configuration profiles.
+You can [set up Delivery Optimization](../configuration/delivery-optimization-settings.md) as part of your device configuration profiles.
 
 ### Use BranchCache on computers
 
@@ -111,7 +111,7 @@ When the Intune client is installed on computers, BranchCache and distributed ca
 If you use BranchCache, work with other administrators in your organization to manage Group Policy and Intune Firewall policy. Ensure they don't deploy policy that disables BranchCache or Firewall exceptions. For more about BranchCache, see [BranchCache Overview](https://technet.microsoft.com/library/hh831696.aspx).
 
 > [!NOTE]
-> You can use Microsoft Intune to manage Windows PCs either [as mobile devices with mobile device management (MDM)](../intune/enrollment/windows-enroll.md) or as computers with the Intune software client. Microsoft recommends that customers [use the MDM management solution](../intune/enrollment/windows-enroll.md) whenever possible. When managed this way, BranchCache is not supported. For more information, see [Compare managing Windows PCs as computers or mobile devices](../pc-management-comparison.md).
+> You can use Microsoft Intune to manage Windows PCs either [as mobile devices with mobile device management (MDM)](../enrollment/windows-enroll.md) or as computers with the Intune software client. Microsoft recommends that customers [use the MDM management solution](../enrollment/windows-enroll.md) whenever possible. When managed this way, BranchCache is not supported. For more information, see [Compare managing Windows PCs as computers or mobile devices](../pc-management-comparison.md).
 
 
 ## Next steps

@@ -60,7 +60,7 @@ This scenario uses a Nokia 6.1 device. Before the Wi-Fi profile is installed on 
     > [!TIP]
     > When using a device administrator-managed Android device, there may be multiple certificates listed. When a certificate profile is revoked or removed, the certificate stays on the device. In this scenario, select the newest certificate. It's usually the last certificate shown in the list.
     >
-    > This situation doesn’t occur on Android Enterprise and Samsung Knox devices. For more information, see [Manage Android work profile devices](../intune/enrollment/android-enterprise-overview.md) and [Remove SCEP and PKCS certificates](../intune/protect/remove-certificates.md#android-knox-devices).
+    > This situation doesn’t occur on Android Enterprise and Samsung Knox devices. For more information, see [Manage Android work profile devices](../enrollment/android-enterprise-overview.md) and [Remove SCEP and PKCS certificates](../protect/remove-certificates.md#android-knox-devices).
 
 3. Next, users receive a notification to install the Wi-Fi profile:
 
@@ -263,7 +263,7 @@ Typically, this issue is caused by something outside of Intune. The following ta
 
 ## Need more help
 
-- Use the [Intune user forums](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc) or [get support from Microsoft](../intune/fundamentals/get-support.md).
+- Use the [Intune user forums](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc) or [get support from Microsoft](../fundamentals/get-support.md).
 
 - For more information about Wi-Fi profiles in Microsoft Intune, see the following articles:
 

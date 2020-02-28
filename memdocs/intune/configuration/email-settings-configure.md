@@ -78,7 +78,7 @@ Email profiles are assigned to device groups, not user groups. There are differe
 
 - **Option 1**: Open the email profile (**Devices** > **Configuration profiles** > select your profile), and choose **Assignments**. The **Include** tab shows the groups that are assigned the profile. Right-click the group > **Remove**. Be sure to **Save** your changes.
 
-- **Option 2**: [Wipe or retire the device](../intune/remote-actions/devices-wipe.md). You can use these actions to selectively or fully remove data and settings.
+- **Option 2**: [Wipe or retire the device](../remote-actions/devices-wipe.md). You can use these actions to selectively or fully remove data and settings.
 
 ## Secure email access
 
@@ -86,7 +86,7 @@ You can help secure email profiles using the following options:
 
 - **Certificates**: When you create the email profile, you choose a certificate profile previously created in Intune. This certificate is known as the identity certificate. It authenticates against a trusted certificate profile or a root certificate to confirm a user’s device is allowed to connect. The trusted certificate is assigned to the computer that authenticates the email connection. Typically, this computer is the native mail server.
 
-  For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Intune](../intune/protect/certificates-configure.md).
+  For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Intune](../protect/certificates-configure.md).
 
 - **User name and password**: The end user authenticates to the native mail server by entering a user name and password. The password doesn't exist in the email profile. So, the end user enters the password when connecting to email.
 

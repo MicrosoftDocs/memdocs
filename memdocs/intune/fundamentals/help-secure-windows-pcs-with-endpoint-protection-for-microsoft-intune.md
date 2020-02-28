@@ -56,7 +56,7 @@ To switch from your current endpoint protection application to Microsoft Intune 
 
 3. Remove the third-party endpoint protection software by:
 
-    - Using Intune software distribution to deploy a software removal tool that's provided by the manufacturer of the third-party endpoint protection application. For more information, see [Deploy apps with Microsoft Intune](../intune/apps/apps-deploy.md).
+    - Using Intune software distribution to deploy a software removal tool that's provided by the manufacturer of the third-party endpoint protection application. For more information, see [Deploy apps with Microsoft Intune](../apps/apps-deploy.md).
 
     - Removing the third-party endpoint protection application manually.
 

@@ -106,8 +106,8 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     > These policy settings are enforced only when using apps in the work context. When end users use the app to do a personal task, they aren't affected by these policies. Note that when you create a new file it is considered a personal file. 
 
 End users can download the apps from the App store or Google Play. For more information, see:
-* [What to expect when your Android app is managed by app protection policies](../intune/fundamentals/end-user-mam-apps-android.md)
-* [What to expect when your iOS/iPadOS app is managed by app protection policies](../intune/fundamentals/end-user-mam-apps-ios.md)
+* [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md)
+* [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
 
 ## Change existing policies
 You can edit an existing policy and apply it to the targeted users. However, when you change existing policies, users who are already signed in to the apps won’t see the changes for an eight-hour period.
@@ -191,7 +191,7 @@ For iOS/iPadOS, additional app configuration settings are required to target app
 - If only the **IntuneMAMDeviceID** is configured, the Intune APP will consider the device as unmanaged.
 
 > [!NOTE]
-> For specific iOS/iPadOS support information about app protection policies based on device management state, see [MAM protection policies targeted based on management state](../intune/fundamentals/whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state).
+> For specific iOS/iPadOS support information about app protection policies based on device management state, see [MAM protection policies targeted based on management state](../fundamentals/whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state).
 
 ## Policy settings
 To see a full list of the policy settings for iOS/iPadOS and Android, select one of the following links:
@@ -203,5 +203,5 @@ To see a full list of the policy settings for iOS/iPadOS and Android, select one
 [Monitor compliance and user status](app-protection-policies-monitor.md)
 
 ## See also
-* [What to expect when your Android app is managed by app protection policies](../intune/fundamentals/end-user-mam-apps-android.md)
-* [What to expect when your iOS/iPadOS app is managed by app protection policies](../intune/fundamentals/end-user-mam-apps-ios.md)
+* [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md)
+* [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)

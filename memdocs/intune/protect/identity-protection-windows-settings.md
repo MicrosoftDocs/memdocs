@@ -144,4 +144,4 @@ To learn more about Windows Hello for Business profiles in Intune, see [configur
 
 ## Next steps
 
-[Assign the profile](../intune/configuration/device-profile-assign.md) and [monitor its status](../intune/configuration/device-profile-monitor.md).
+[Assign the profile](../configuration/device-profile-assign.md) and [monitor its status](../configuration/device-profile-monitor.md).

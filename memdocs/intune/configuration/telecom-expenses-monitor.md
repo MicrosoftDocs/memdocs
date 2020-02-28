@@ -130,15 +130,15 @@ This section lists these steps.
 
 Depending on your organizational needs, create at least two device categories, such as Corporate and Personal. Then, create dynamic device groups for each category. You can create more categories for your organization, as needed.
 
-To create device categories in Intune, see [map devices to groups](../intune/enrollment/device-group-mapping.md).
+To create device categories in Intune, see [map devices to groups](../enrollment/device-group-mapping.md).
 
-These categories are shown to users during enrollment ([enroll Android devices](../intune/enrollment/android-enroll.md)). Depending on the category users choose, the enrolled device is moved to the corresponding device group.
+These categories are shown to users during enrollment ([enroll Android devices](../enrollment/android-enroll.md)). Depending on the category users choose, the enrolled device is moved to the corresponding device group.
 
   ![Screenshot of the Add a policy pane](./media/telecom-expenses-monitor/tem-dynamic-membership-rules.png)
 
 #### Add the Datalert app to Intune
 
-The following steps add the Datalert app. As an example, iOS/iPadOS is used. [Add apps](../intune/apps/apps-add.md) and [use scope tags](../intune/fundamentals/scope-tags.md) have more specific information on these steps.
+The following steps add the Datalert app. As an example, iOS/iPadOS is used. [Add apps](../apps/apps-add.md) and [use scope tags](../fundamentals/scope-tags.md) have more specific information on these steps.
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**.
 
@@ -160,7 +160,7 @@ The following steps add the Datalert app. As an example, iOS/iPadOS is used. [Ad
 
 1. In **Apps** > **All apps**, select the Datalert app you added in the previous step.
 
-2. Select **Assignments** > **Add group**. Choose how the app is assigned. [Assign apps to groups in Intune](../intune/apps/apps-deploy.md) has more details on these settings.
+2. Select **Assignments** > **Add group**. Choose how the app is assigned. [Assign apps to groups in Intune](../apps/apps-deploy.md) has more details on these settings.
 
     In these steps, you'll choose to make the app installation required or optional for the group. The following example shows the installation as required. When required, users must install the Datalert app after enrolling their device.
 

@@ -109,7 +109,7 @@ You must download an external tool, mark the downloaded tool as an executable, a
 2. Click **Next** to display the **Scope tags** page.
 
 ## Step 2 - Select scope tags (optional)
-You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../intune/fundamentals/scope-tags.md).
+You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
 1. Click **Select scope tags** to optionally add scope tags for the app. 
 2. Click **Next** to display the **Assignments** page.
@@ -144,4 +144,4 @@ The app you have created appears in the apps list where you can assign it to the
 
 - Learn more about the ways in which you can monitor the properties and assignment of your app. For more information, see [How to monitor app information and assignments](apps-monitor.md).
 
-- Learn more about the context of your app in Intune. For more information, see [Overview of device and app lifecycles](../intune/fundamentals/device-lifecycle.md)
+- Learn more about the context of your app in Intune. For more information, see [Overview of device and app lifecycles](../fundamentals/device-lifecycle.md)

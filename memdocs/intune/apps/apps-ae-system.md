@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Add Android Enterprise system apps to Microsoft Intune
 
-Before you assign an app to a device or a group of users, you must first add the app to Microsoft Intune. System apps are supported on Android Enterprise devices. You can enable a system app for [Android Enterprise dedicated devices](../intune/enrollment/android-kiosk-enroll.md) or [fully managed devices](../intune/enrollment/android-fully-managed-enroll.md).
+Before you assign an app to a device or a group of users, you must first add the app to Microsoft Intune. System apps are supported on Android Enterprise devices. You can enable a system app for [Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md) or [fully managed devices](../enrollment/android-fully-managed-enroll.md).
 
 ## Add the app
 
