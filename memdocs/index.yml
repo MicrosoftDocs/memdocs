@@ -29,13 +29,25 @@ conceptualContent:
           text: Intune hub page
         - url: ./intune/fundamentals
           itemType: overview
-          text: Get started with Intune         
+          text: Plan your Intune deployment   
+        - url: ./intune/fundamentals
+          itemType: overview
+          text: Set up Intune
+        - url: ./intune/enrollment
+          itemType: overview
+          text: Enroll devices   
+        - url: ./intune/remote-actions
+          itemType: overview
+          text: Remotely manage devices   
+        - url: ./intune/protect
+          itemType: overview
+          text: Create compliance rules for users and devices 
+        - url: ./intune/configuration
+          itemType: overview
+          text: Control device features and settings   
         - url: ./intune/apps
           itemType: concept
-          text: Manage your apps with Intune
-        - url: ./intune/protect
-          itemType: concept
-          text: Use Intune to protect devices and data
+          text: Manage and protect apps
     - title: Configuration Manager
       links:
         - url: https://docs.microsoft.com/configmgr/
