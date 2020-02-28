@@ -19,6 +19,9 @@ highlightedContent:
     - title: Microsoft Endpoint Manager (product page)
       itemType: get-started
       url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
+    - title: "Tutorial: Walkthrough Intune in Microsoft Endpoint Manager"
+      itemType: tutorial
+      url: https://docs.microsoft.com/en-us/intune/fundamentals/tutorial-walkthrough-endpoint-manager
 
 conceptualContent:
   items:
