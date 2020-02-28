@@ -24,18 +24,18 @@ conceptualContent:
   items:
     - title: Microsoft Intune
       links:
-        - url: /intune/
+        - url: ./intune/
           itemType: overview
           text: Intune hub page
         - url: ./intune/fundamentals/
           itemType: overview
-          text: Intune fundamentals         
-        - url: /intune/
+          text: Get started with Intune         
+        - url: ./intune/apps
           itemType: concept
-          text: Common ways to use Intune 
-        - url: ./intune/fundamentals/migration-guide.md
+          text: Manage your apps with Intune
+        - url: ./intune/protect
           itemType: concept
-          text: Intune migration guide
+          text: Use Intune to protect devices and data
     - title: Configuration Manager
       links:
         - url: https://docs.microsoft.com/configmgr/
