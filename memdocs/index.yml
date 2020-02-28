@@ -15,42 +15,30 @@ highlightedContent:
   items:
     - title: Overview of Microsoft Endpoint Manager
       itemType: overview
-      url: what-is-endpoint-mgr.md
-    - title: Enable management on devices
+      url: endpoint-manager-overview.md
+    - title: Microsoft Endpoint Manager (product page)
       itemType: get-started
-      url: ./enrollment/quickstart-setup-auto-enrollment.md
+      url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
     - title: Deploy Windows 10
       itemType: get-started
       url: mem-architecture.md
-    - title: Deploy Office 365
-      itemType: get-started
-      url: ./fundamentals/in-development.md    
-    - title: Protect Office 365
-      itemType: get-started
-      url: ./fundamentals/free-trial-sign-up.md
-    - title: Secure Windows devices
-      itemType: get-started
-      url: ./protect/security-baselines.md
 
 conceptualContent:
   items:
-    - title: Intune
+    - title: Microsoft Intune
       links:
-        - url: /intune/fundamentals/what-is-intune.md
+        - url: /intune/
           itemType: overview
-          text: Overview of Intune
-        - url: /intune/fundamentals/high-level-architecture
+          text: Intune hub page
+        - url: /intune/fundamentals/
           itemType: overview
-          text: Intune high-level architecture          
-        - url: /intune/fundamentals/common-scenarios
+          text: Intune fundamentals         
+        - url: /intune/
           itemType: concept
           text: Common ways to use Intune 
         - url: /intune/fundamentals/migration-guide
           itemType: concept
           text: Intune migration guide
-      footerLink:
-        text: See more
-        url: /intune/
     - title: Configuration Manager
       links:
         - url: /configmgr/core/understand/introduction
