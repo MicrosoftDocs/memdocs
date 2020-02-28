@@ -41,54 +41,54 @@ conceptualContent:
           text: Intune migration guide
     - title: Configuration Manager
       links:
-        - url: /configmgr/core/understand/introduction
+        - url: https://docs.microsoft.com/configmgr/
+          itemType: overview
+          text: Configuration Manager hub page
+        - url: https://docs.microsoft.com/configmgr/core/understand/introduction
           itemType: overview
           text: Introduction to Configuration Manager
-        - url: /configmgr/core/understand/fundamentals
+        - url: https://docs.microsoft.com/configmgr/core/understand/fundamentals
           itemType: concept
           text: Fundamentals of Configuration Manager
-        - url: /configmgr/core/plan-design/choose-a-device-management-solution
+        - url: https://docs.microsoft.com/configmgr/core/plan-design/choose-a-device-management-solution
           itemType: concept
           text: Choose a device management solution
-        - url: /configmgr/core/plan-design/hierarchy/design-a-hierarchy-of-sites
+        - url: https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/design-a-hierarchy-of-sites
           itemType: concept
           text: Design a hierarch of sites
-      footerLink:
-        text: See more
-        url: /configmgr/
     - title: Desktop analytics
       links:
         - url: ./enrollment/device-enrollment.md
           itemType: concept
           text: Device enrollment overview
-        - url: ./enrollment/device-management-capabilities.md
+        - url: ./intune/enrollment/device-management-capabilities.md
           itemType: concept  
           text: Enrolled device management capabilities
-        - url: ./enrollment/windows-enrollment-methods.md
+        - url: ./intune/enrollment/windows-enrollment-methods.md
           itemType: how-to-guide
           text: Intune enrollment methods for Windows devices
-        - url: ./enrollment/windows-enroll.md
+        - url: ./intune/enrollment/windows-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for Windows
-        - url: ./enrollment/ios-enroll.md
+        - url: ./intune/enrollment/ios-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for iOS devices        
-        - url: ./enrollment/android-enroll.md
+        - url: ./intune/enrollment/android-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for Android devices
       footerLink:
         text: See more
-        url: ./enrollment/index.yml
+        url: ./intune/enrollment/index.yml
     - title: Autopilot
       links:
         - url: ./remote-actions/device-management.md
           itemType: concept
           text: Device management overview
           text: Device management capabilities
-        - url: ./remote-actions/custom-notifications.md
+        - url: ./intune/remote-actions/custom-notifications.md
           itemType: how-to-guide
           text: Send custom notifications
-        - url: ./remote-actions/devices-wipe.md
+        - url: ./intune/remote-actions/devices-wipe.md
           itemType: how-to-guide
           text: Remove devices
       footerLink:
@@ -106,13 +106,13 @@ additionalContent:
         - text: What's new in Intune for Education?
           url: https://docs.microsoft.com/intune-education/whats-new-in-edu
         - text: How is Intune for Education different from the full version?
-          url: introduction-intune-education.md
+          url: ./fundamentals/introduction-intune-education.md
       - title: Intune for Government
         links: 
         - text: Enterprise Mobility + Security for US Government service description
           url: https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description
         - text: US government endpoints for Intune
-          url: intune-us-government-endpoints.md
+          url: ./fundamentals/intune-us-government-endpoints.md
         - text: Azure Government site
           url: https://azure.microsoft.com/global-infrastructure/government/
       - title: Microsoft 365
