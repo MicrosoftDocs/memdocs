@@ -1,0 +1,116 @@
+- name: Enrollment in Microsoft Intune 
+  href: index.yml
+- name: Overview
+  expanded: true
+  items:
+  - name: Device enrollment overview
+    href: device-enrollment.md
+    displayName: COD; BYOD; DEM; DEP; USB-SA; USB-Direct; co-management; GPO
+  - name: Enrolled device management capabilities
+    href: device-management-capabilities.md
+  - name: Enrollment options
+    href: enrollment-options.md  
+- name: Quickstarts
+  items:
+  - name: Set up automatic enrollment
+    href: quickstart-setup-auto-enrollment.md
+  - name: Enroll your Windows 10 device
+    href: quickstart-enroll-windows-device.md
+- name: Tutorials
+  items:
+  - name: Use Autopilot to enroll Windows devices
+    href: tutorial-use-autopilot-enroll-devices.md
+  - name: Use the DEP to enroll iOS/iPadOS devices 
+    href: tutorial-use-device-enrollment-program-enroll-ios.md
+- name: Concepts
+  items:
+  - name: Terms and conditions
+    href: terms-and-conditions-create.md
+  - name: Restrictions
+    href: enrollment-restrictions-set.md
+  - name: Apple MDM push certificate
+    href: apple-mdm-push-certificate-get.md
+  - name: Corporate identifiers
+    href: corporate-identifiers-add.md
+    displayName: COD
+  - name: Multi-factor authentication
+    href: multi-factor-authentication.md
+    displayName: mfa; multifactor        
+  - name: Device enrollment manager
+    href: device-enrollment-manager-enroll.md
+  - name: Map devices to groups
+    href: device-group-mapping.md    
+- name: How-to guides
+  items:
+  - name: Set up Windows enrollment
+    items:
+    - name: Windows enrollment methods
+      href: windows-enrollment-methods.md
+    - name: Enrollment method capabilities
+      href: enrollment-method-capab.md
+    - name: Windows enrollment
+      href: windows-enroll.md
+    - name: Bulk enroll
+      href: windows-bulk-enroll.md
+    - name: Enrollment Status Page
+      href: windows-enrollment-status.md
+    - name: Windows Autopilot Deployment Program
+      href: enrollment-autopilot.md
+    - name: Hybrid Azure AD with Autopilot
+      href: windows-autopilot-hybrid.md
+    - name: Configure proxy for Intune AD Connector
+      href: autopilot-hybrid-connector-proxy.md
+  - name: Set up Android enrollment
+    items:
+    - name: Set up Android enrollment
+      href: android-enroll.md
+      displayName: wpj
+    - name: Connect Intune to Android Enterprise
+      href: connect-intune-android-enterprise.md
+    - name: Android Enterprise work profile enrollment
+      href: android-work-profile-enroll.md
+    - name: Android Enterprise dedicated device enrollment
+      href: android-kiosk-enroll.md
+      displayName: gms
+    - name: Android Enterprise fully managed enrollment
+      href: android-fully-managed-enroll.md
+      displayName: gms
+    - name: Enroll Android Enterprise dedicated devices or fully managed devices
+      href: android-dedicated-devices-fully-managed-enroll.md
+    - name: Android device administrator enrollment
+      href: android-enroll-device-administrator.md
+    - name: Manage Android Enterprise work profile devices
+      href: android-enterprise-overview.md        
+    - name: Samsung Knox Mobile Enrollment 
+      href: android-samsung-knox-mobile-enroll.md
+      displayName: kda; kme
+  - name: Set up iOS/iPadOS enrollment
+    href: ios-enroll.md
+    items:
+    - name: Device Enrollment Program
+      href: device-enrollment-program-enroll-ios.md
+    - name: Set up iOS/iPadOS and iPadOS User Enrollment
+      href: ios-user-enrollment.md
+    - name: User Enrollment supported actions and options
+      href: ios-user-enrollment-supported-actions.md
+    - name: Apple School Manager
+      href: apple-school-manager-set-up-ios.md
+    - name: Apple Configurator
+      href: apple-configurator-enroll-ios.md
+  - name: Set up macOS enrollment
+    href: macos-enroll.md
+    items:
+    - name: Automated Device Enrollment
+      href: device-enrollment-program-enroll-macos.md
+  - name: Incomplete enrollment report
+    href: enrollment-report-company-portal-abandon.md
+
+  - name: Troubleshoot enrollment
+    items:
+    - name: Troubleshoot device enrollment
+      href: troubleshoot-device-enrollment-in-intune.md
+      displayName: sso    
+    - name: Troubleshoot iOS/iPadOS device enrollment
+      href: troubleshoot-ios-enrollment-errors.md
+    - name: Troubleshoot Windows device enrollment
+      href: troubleshoot-windows-enrollment-errors.md

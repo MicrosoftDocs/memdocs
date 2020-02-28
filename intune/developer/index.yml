@@ -1,0 +1,85 @@
+### YamlMime:Landing
+
+title: Developer guidance
+summary: Learn how to use Intune developer resources, such as Intune App SDK and the App Wrapping Tool to protect LOB apps, Intune Data Warehouse reporting and API to monitor Intune success, and Microsoft Graph to access Intune functionality using Azure AD.
+metadata:
+  title: Developer guidance
+  description: Learn how to use Intune developer resources, such as Intune App SDK and the App Wrapping Tool to protect LOB apps, Intune Data Warehouse reporting and API to monitor Intune success, and Microsoft Graph to access Intune functionality using Azure AD.
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: developer
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: erikre
+  ms.author: erikre
+  ms.manager: dougeby
+  ms.date: 09/23/2019  
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: Protect apps with Intune App SDK
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Microsoft Intune App SDK overview
+            url: app-sdk.md
+      - linkListType: concept
+        links:
+          - text: Get started with the Microsoft Intune APP SDK
+            url: app-sdk-get-started.md
+          - text: Prepare line-of-business apps for app protection
+            url: apps-prepare-mobile-application-management.md
+      - linkListType: how-to-guide
+        links:
+          - text: Intune APP SDK for iOS
+            url: app-sdk-ios.md
+          - text: Prepare iOS apps for app protection policies
+            url: app-wrapper-prepare-ios.md      
+          - text: Intune App SDK for Android
+            url: app-wrapper-prepare-android.md      
+  # Card (optional)
+  - title: Use the Intune Data Warehouse
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Data warehouse overview
+            url: reports-nav-create-intune-reports.md
+          - text: Change log for the Data Warehouse API
+            url: reports-changelog.md
+          - text: Intune Data Warehouse API overview
+            url: reports-nav-intune-data-warehouse.md
+          - text: Intune Data Warehouse data model overview
+            url: reports-ref-data-model.md    
+      - linkListType: concept
+        links:
+          - text: Intune Data Warehouse Collections
+            url: intune-data-warehouse-collections.md
+      - linkListType: how-to-guide
+        links:
+          - text: Connect to the Data Warehouse with Power BI
+            url: reports-proc-get-a-link-powerbi.md
+          - text: Create an Intune report from the OData feed with Power BI
+            url: reports-proc-create-with-odata.md
+          - text: Get data from the Intune Data Warehouse API with a REST client
+            url: reports-proc-data-rest.md
+          - text: Intune Data Warehouse API endpoint
+            url: reports-api-url.md
+  # Card (optional)
+  - title: Access Intune APIs in Microsoft Graph
+    linkLists:
+      - linkListType: concept
+        links:  
+          - text: Graph APIs and matching Windows 10 CSPs used in Intune
+            url: graph-apis-used-by-intune-device-configuration-windows.md  
+      - linkListType: how-to-guide
+        links:  
+          - text: Use Azure AD to access the Intune APIs in Microsoft Graph
+            url: intune-graph-apis.md  
+      - linkListType: reference
+        links:  
+          - text: Intune Graph API reference
+            url: https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta
