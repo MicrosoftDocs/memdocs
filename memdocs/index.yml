@@ -48,23 +48,35 @@ conceptualContent:
         - url: /intune/apps
           itemType: concept
           text: Manage and protect apps
-    - title: Configuration Manager
+    - title: Microsoft Endpoint Configuration Manager
       links:
         - url: https://docs.microsoft.com/configmgr/
           itemType: overview
           text: Configuration Manager hub page
-        - url: https://docs.microsoft.com/configmgr/core/understand/introduction
+        - url: https://docs.microsoft.com/configmgr/comanage
+          itemType: concept
+          text: Manage device workloads in Configuration Manager and Intune
+        - url: https://docs.microsoft.com/configmgr/desktop-analytics
           itemType: overview
-          text: Introduction to Configuration Manager
-        - url: https://docs.microsoft.com/configmgr/core/understand/fundamentals
+          text: Use Desktop Analytics for update readiness                  
+        - url: https://docs.microsoft.com/configmgr/core
+          itemType: overview
+          text: Manage your infrastructure
+        - url: https://docs.microsoft.com/configmgr/apps
           itemType: concept
-          text: Fundamentals of Configuration Manager
-        - url: https://docs.microsoft.com/configmgr/core/plan-design/choose-a-device-management-solution
+          text: Manage apps
+        - url: https://docs.microsoft.com/configmgr/osd
           itemType: concept
-          text: Choose a device management solution
-        - url: https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/design-a-hierarchy-of-sites
+          text: Operating system deployment
+        - url: https://docs.microsoft.com/configmgr/sum
           itemType: concept
-          text: Design a hierarch of sites
+          text: Software updates
+        - url: https://docs.microsoft.com/configmgr/compliance
+          itemType: concept
+          text: Manage configuration and compliance of devices
+        - url: https://docs.microsoft.com/configmgr/protect
+          itemType: concept
+          text: Protect your infrastructure and data
     - title: Desktop analytics
       links:
         - url: ./intune/enrollment/device-enrollment.md
