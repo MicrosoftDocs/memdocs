@@ -127,6 +127,7 @@ The following features are available with the most recent Configuration Manager 
 - [6268489](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_anchor) <!--6268489-->
 - [5907383](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_anchor) <!--5907383-->
 - [5954175](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_anchor) <!--5954175-->
+- [5891241](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_anchor) <!--5891241-->
 - [3696246](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_anchor) <!--3696246-->
 - [5925660](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_anchor) <!--5925660-->
 
