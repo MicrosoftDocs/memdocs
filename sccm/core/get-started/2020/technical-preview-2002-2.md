@@ -28,8 +28,10 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [6268489](includes/2002-2/6268489.md)]
 [!INCLUDE [5907383](includes/2002-2/5907383.md)]
 [!INCLUDE [5954175](includes/2002-2/5954175.md)]
+[!INCLUDE [6307931](includes/2002-2/6307931.md)]
 [!INCLUDE [3696246](includes/2002-2/3696246.md)]
 [!INCLUDE [5834830](includes/2002-2/5834830.md)]
+[!INCLUDE [5925660](includes/2002-2/5925660.md)]
 
 <!--
 ## General known issues
