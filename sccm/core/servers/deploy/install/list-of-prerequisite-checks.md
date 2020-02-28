@@ -2,7 +2,7 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 07/26/2019
+ms.date: 02/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # List of prerequisite checks for Configuration Manager
@@ -633,6 +631,12 @@ The Windows Firewall is disabled, or a relevant Windows Firewall exception exist
 IIS website has bindings for the HTTPS communication protocol.
 
 When you install site roles that require HTTPS, configure IIS site bindings on the specified server with a valid public key infrastructure (PKI) certificate.
+
+### Invalid discovery records
+
+*Applies to: central administration site*
+
+There are discovery records that are no longer valid. These records will be marked for deletion.
 
 ### Microsoft XML Core Services 6.0 (MSXML60)
 
