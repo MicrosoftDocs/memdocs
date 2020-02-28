@@ -76,24 +76,17 @@ conceptualContent:
         - url: ./intune/enrollment/android-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for Android devices
-      footerLink:
-        text: See more
-        url: ./intune/enrollment/index.yml
     - title: Autopilot
       links:
-        - url: ./remote-actions/device-management.md
+        - url: ./intune/remote-actions/device-management.md
           itemType: concept
           text: Device management overview
-          text: Device management capabilities
         - url: ./intune/remote-actions/custom-notifications.md
           itemType: how-to-guide
           text: Send custom notifications
         - url: ./intune/remote-actions/devices-wipe.md
           itemType: how-to-guide
-          text: Remove devices
-      footerLink:
-        text: See more
-        url: ./remote-actions/index.yml           
+          text: Remove devices          
 
 additionalContent:
   sections:
