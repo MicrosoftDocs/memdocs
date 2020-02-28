@@ -77,37 +77,17 @@ conceptualContent:
         - url: https://docs.microsoft.com/configmgr/protect
           itemType: concept
           text: Protect your infrastructure and data
-    - title: Desktop analytics
+    - title: Windows Autopilot
       links:
-        - url: ./intune/enrollment/device-enrollment.md
+        - url: https://docs.microsoft.com/windows/deployment/windows-autopilot/
           itemType: concept
-          text: Device enrollment overview
-        - url: ./intune/enrollment/device-management-capabilities.md
-          itemType: concept  
-          text: Enrolled device management capabilities
-        - url: ./intune/enrollment/windows-enrollment-methods.md
+          text: Windows Autopilot
+        - url: /intune/enrollment/enrollment-autopilot.md
           itemType: how-to-guide
-          text: Intune enrollment methods for Windows devices
-        - url: ./intune/enrollment/windows-enroll.md
+          text: "Intune: Enroll Windows devices using Windows Autopilot"
+        - url: https://docs.microsoft.com/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices
           itemType: how-to-guide
-          text: Set up enrollment for Windows
-        - url: ./intune/enrollment/ios-enroll.md
-          itemType: how-to-guide
-          text: Set up enrollment for iOS devices        
-        - url: ./intune/enrollment/android-enroll.md
-          itemType: how-to-guide
-          text: Set up enrollment for Android devices
-    - title: Autopilot
-      links:
-        - url: ./intune/remote-actions/device-management.md
-          itemType: concept
-          text: Device management overview
-        - url: ./intune/remote-actions/custom-notifications.md
-          itemType: how-to-guide
-          text: Send custom notifications
-        - url: ./intune/remote-actions/devices-wipe.md
-          itemType: how-to-guide
-          text: Remove devices          
+          text: "Configuration Manager: Use Windows Autopilot for existing devices"         
 
 additionalContent:
   sections:
