@@ -31,6 +31,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [5891241](includes/2002-2/5891241.md)]
 [!INCLUDE [6307931](includes/2002-2/6307931.md)]
 [!INCLUDE [3696246](includes/2002-2/3696246.md)]
+[!INCLUDE [5834830](includes/2002-2/5834830.md)]
 [!INCLUDE [5925660](includes/2002-2/5925660.md)]
 
 <!--
