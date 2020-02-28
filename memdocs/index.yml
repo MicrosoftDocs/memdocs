@@ -9,7 +9,7 @@ metadata:
   author: dougeby
   ms.author: dougeby
   manager: mtillman
-  ms.date: 01/20/2020
+  ms.date: 02/28/2020
 
 highlightedContent:
   items:
@@ -22,14 +22,17 @@ highlightedContent:
     - title: "Tutorial: Walkthrough Intune in Microsoft Endpoint Manager"
       itemType: tutorial
       url: https://docs.microsoft.com/en-us/intune/fundamentals/tutorial-walkthrough-endpoint-manager
+    - title: Microsoft Intune documentation
+      itemType: get-started
+      url: /intune
+    - title: Microsoft Endpoint Configuration Manager documentation
+      itemType: get-started
+      url: https://docs.microsoft.com/configmgr          
 
 conceptualContent:
   items:
-    - title: Microsoft Intune
+    - title: Microsoft Intune documentation
       links:
-        - url: /intune
-          itemType: overview
-          text: Intune hub page
         - url: /intune/fundamentals
           itemType: overview
           text: Plan your Intune deployment   
@@ -51,11 +54,8 @@ conceptualContent:
         - url: /intune/apps
           itemType: concept
           text: Manage and protect apps
-    - title: Microsoft Endpoint Configuration Manager
+    - title: Microsoft Endpoint Configuration Manager documentation
       links:
-        - url: https://docs.microsoft.com/configmgr/
-          itemType: overview
-          text: Configuration Manager hub page
         - url: https://docs.microsoft.com/configmgr/comanage
           itemType: concept
           text: Manage device workloads in Configuration Manager and Intune
@@ -80,7 +80,7 @@ conceptualContent:
         - url: https://docs.microsoft.com/configmgr/protect
           itemType: concept
           text: Protect your infrastructure and data
-    - title: Windows Autopilot
+    - title: Windows Autopilot documentation
       links:
         - url: https://docs.microsoft.com/windows/deployment/windows-autopilot/
           itemType: concept
