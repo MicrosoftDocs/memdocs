@@ -24,10 +24,10 @@ conceptualContent:
   items:
     - title: Microsoft Intune
       links:
-        - url: ./intune/
+        - url: intune/index.xml
           itemType: overview
           text: Intune hub page
-        - url: ./intune/fundamentals/
+        - url: intune/fundamentals
           itemType: overview
           text: Get started with Intune         
         - url: ./intune/apps
