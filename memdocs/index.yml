@@ -1,0 +1,150 @@
+### YamlMime:Hub
+title: Microsoft Endpoint Manager documentation
+summary: Official product documentation for Microsoft Endpoint Manager
+
+metadata:
+  services: service
+  ms.service: microsoft-endpoint-manager
+  ms.topic: hub-page
+  author: dougeby
+  ms.author: dougeby
+  manager: mtillman
+  ms.date: 01/20/2020
+
+highlightedContent:
+  items:
+    - title: Overview of Microsoft Endpoint Manager
+      itemType: overview
+      url: endpoint-manager-overview.md
+    - title: Microsoft Endpoint Manager (product page)
+      itemType: get-started
+      url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
+
+conceptualContent:
+  items:
+    - title: Microsoft Intune
+      links:
+        - url: ./intune
+          itemType: overview
+          text: Intune hub page
+        - url: ./intune/fundamentals
+          itemType: overview
+          text: Get started with Intune         
+        - url: ./intune/apps
+          itemType: concept
+          text: Manage your apps with Intune
+        - url: ./intune/protect
+          itemType: concept
+          text: Use Intune to protect devices and data
+    - title: Configuration Manager
+      links:
+        - url: https://docs.microsoft.com/configmgr/
+          itemType: overview
+          text: Configuration Manager hub page
+        - url: https://docs.microsoft.com/configmgr/core/understand/introduction
+          itemType: overview
+          text: Introduction to Configuration Manager
+        - url: https://docs.microsoft.com/configmgr/core/understand/fundamentals
+          itemType: concept
+          text: Fundamentals of Configuration Manager
+        - url: https://docs.microsoft.com/configmgr/core/plan-design/choose-a-device-management-solution
+          itemType: concept
+          text: Choose a device management solution
+        - url: https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/design-a-hierarchy-of-sites
+          itemType: concept
+          text: Design a hierarch of sites
+    - title: Desktop analytics
+      links:
+        - url: ./intune/enrollment/device-enrollment.md
+          itemType: concept
+          text: Device enrollment overview
+        - url: ./intune/enrollment/device-management-capabilities.md
+          itemType: concept  
+          text: Enrolled device management capabilities
+        - url: ./intune/enrollment/windows-enrollment-methods.md
+          itemType: how-to-guide
+          text: Intune enrollment methods for Windows devices
+        - url: ./intune/enrollment/windows-enroll.md
+          itemType: how-to-guide
+          text: Set up enrollment for Windows
+        - url: ./intune/enrollment/ios-enroll.md
+          itemType: how-to-guide
+          text: Set up enrollment for iOS devices        
+        - url: ./intune/enrollment/android-enroll.md
+          itemType: how-to-guide
+          text: Set up enrollment for Android devices
+    - title: Autopilot
+      links:
+        - url: ./intune/remote-actions/device-management.md
+          itemType: concept
+          text: Device management overview
+        - url: ./intune/remote-actions/custom-notifications.md
+          itemType: how-to-guide
+          text: Send custom notifications
+        - url: ./intune/remote-actions/devices-wipe.md
+          itemType: how-to-guide
+          text: Remove devices          
+
+additionalContent:
+  sections:
+    - title: Additional resources to manage devices
+      items:
+      - title: Intune for Education
+        links: 
+        - text: What is Intune for Education?
+          url: https://docs.microsoft.com/intune-education/what-is-intune-for-education
+        - text: What's new in Intune for Education?
+          url: https://docs.microsoft.com/intune-education/whats-new-in-edu
+        - text: How is Intune for Education different from the full version?
+          url: ./intune/fundamentals/introduction-intune-education.md
+      - title: Intune for Government
+        links: 
+        - text: Enterprise Mobility + Security for US Government service description
+          url: https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description
+        - text: US government endpoints for Intune
+          url: ./intune/fundamentals/intune-us-government-endpoints.md
+        - text: Azure Government site
+          url: https://azure.microsoft.com/global-infrastructure/government/
+      - title: Microsoft 365
+        links: 
+        - text: Explore Microsoft 365, a complete solution that includes Intune
+          url: https://docs.microsoft.com/microsoft-365/
+        - text: Microsoft 365 Enterprise documentation
+          url: https://docs.microsoft.com/microsoft-365/enterprise/         
+        - text: Microsoft 365 Enterprise foundation infrastructure
+          url: https://docs.microsoft.com/microsoft-365/enterprise/deploy-foundation-infrastructure
+      - title: Azure Active Directory
+        links: 
+        - text: User management documentation
+          url: https://docs.microsoft.com/azure/active-directory/users-groups-roles/
+        - text: Authentication documentation
+          url: https://docs.microsoft.com/azure/active-directory/authentication/
+        - text: Device identity documentation
+          url: https://docs.microsoft.com/azure/active-directory/devices/
+        - text: Hybrid identity documentation
+          url: https://docs.microsoft.com/azure/active-directory/hybrid/
+    - title: Intune community resources
+      items:
+        # Card
+        - title: Intune technical forums
+          summary: Ask technical questions in the product forums
+          url: https://social.technet.microsoft.com/Forums/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc
+        # Card
+        - title: UserVoice product feedback
+          summary: Share product ideas with the engineering team
+          url: https://microsoftintune.uservoice.com/forums/291681-ideas
+        # Card
+        - title: Intune tech community conversations
+          summary: Check out active conversations from the technical community
+          url: https://techcommunity.microsoft.com/t5/Microsoft-Intune/bd-p/Microsoft-Intune
+        # Card
+        - title: "#Intune on Twitter"
+          summary: Stay current with the active Twitter community
+          url: https://twitter.com/hashtag/msintune
+        # Card
+        - title: Intune Customer Success
+          summary: Get help on the Intune Customer Success site  
+          url: https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess
+
+  footer: "Have feedback or want to contribute to docs? [See this resource](use-docs.md)!"
+  
