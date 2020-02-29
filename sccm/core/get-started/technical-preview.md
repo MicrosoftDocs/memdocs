@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 02/27/2020
+ms.date: 02/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -123,14 +123,13 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2002.2
 
-- [3555758](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_anchor) <!--3555758-->
-- [6268489](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_anchor) <!--6268489-->
-- [5907383](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_anchor) <!--5907383-->
-- [5954175](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_anchor) <!--5954175-->
-- [5891241](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_anchor) <!--5891241-->
-- [3696246](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_anchor) <!--3696246-->
-- [5834830](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_anchor) <!--5834830-->
-- [5925660](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_anchor) <!--5925660-->
+- [Management insight rules for proper HTTPS configuration](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_insight) <!--6268489-->
+- [Improvements to BitLocker management](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_bitlocker) <!--5925660-->
+- [Improvements to support for ARM64 devices](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_arm) <!--5954175-->
+- [Search all subfolders for configuration items and configuration baselines](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_search) <!--5891241-->
+- [Support for 64-bit macOS Catalina](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_mac) <!--3696246-->
+- [Improvements to extend and migrate on-premises site to Microsoft Azure](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_extend) <!--6307931-->
+- [Microsoft Endpoint Configuration Manager cloud features](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_cloud) <!--5834830-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
