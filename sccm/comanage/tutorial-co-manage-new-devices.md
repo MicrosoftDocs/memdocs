@@ -5,7 +5,7 @@ description: Learn how to configure co-management for new internet-based Windows
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 02/25/2020
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -34,7 +34,6 @@ Use this tutorial when:
 > * Configure the management point and clients to use the CMG
 > * Enable co-management in Configuration Manager
 > * Configure Intune to install the Configuration Manager client
-> * Assign license for cloud services
 
 ## Prerequisites  
 
@@ -46,8 +45,10 @@ Use this tutorial when:
   > [!TIP]  
   > An Enterprise Mobility and Security (EMS) Subscription includes both Azure Active Directory Premium and Microsoft Intune. EMS Subscription ([free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial)).  
 
-- Users must be [assigned licenses](tutorial-co-manage-clients.md#assign-intune-licenses-to-users) for *Intune* and *Azure Active Directory Premium*
 - Intune is configured to [auto-enroll devices](tutorial-co-manage-clients.md#configure-auto-enrollment-of-devices-to-intune)  
+
+> [!TIP]
+> You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](/configmgr/core/understand/product-and-licensing-faq#bkmk_mem).
 
 ### On-premises infrastructure
 
@@ -413,37 +414,9 @@ The following procedure deploys the app for installing the Configuration Manager
 3. Select **OK** and then **Save** the configuration.
 The app is now required by users and devices you assigned it to. After the app installs the Configuration Manager client on a device, it's managed by co-management.
 
-## Assign Intune licenses to users
-
-A commonly overlooked but critical action is to assign an Intune license to each user who uses a device that is co-managed.  
-
-To assign licenses to groups of users, use Azure Active Directory.  
-
-1. Sign in to the [Azure portal](https://portal.azure.com/) with an Administrator account. To manage licenses, the account must be a global administrator role or user account administrator.  
-
-2. Select **All services** in the left navigation pane, and then select **Azure Active Directory**.  
-
-3. On the **Azure Active Directory** pane, select **Licenses** to open a pane where you can see and manage all licensable products in the tenant.  
-
-4. Under **All products**, select your product option that includes the Intune license, and then select **Assign** at the top of the pane.  
-
-   For example, you might select **Enterprise Mobility + Security E5** if that is how you obtain Intune.  
-
-5. On the **Assign license** pane, click **Users and groups** to open the **Users and groups** pane. Select the groups, and individual users to whom you want to assign a license.  Then, click **Select** at the bottom of the pane to confirm that selection.  
-
-6. On the **Assign license** pane, click **Assignment options** to display all service plans included in the product you selected previously. If you selected a single product like Intune, then only that product is shown.  
-   - Set **Microsoft Intune** to **On**.  
-   - Assign each user a license for **Azure Active Directory Premium**.  
-
-   When the applicable licenses are assigned, select **OK**.  
-
-7. To complete the assignment, on the **Assign license** pane, click **Assign** at the bottom of the pane.  
-
-8. A notification is displayed in the upper-right corner that shows the status and outcome of the process. If the assignment to the group couldn't be completed (for example, because of pre-existing licenses in the group), click the notification to view details of the failure. 
-
 ## Summary
 
-After you complete the configuration steps of this tutorial, including the last action to ensure licenses are assigned, your devices can successfully be co-managed.
+After you complete the configuration steps of this tutorial, you can start co-managing your devices.
 
 ## Next steps
 
