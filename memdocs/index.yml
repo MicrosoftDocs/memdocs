@@ -77,7 +77,7 @@ conceptualContent:
         - url: https://docs.microsoft.com/configmgr/protect
           itemType: concept
           text: Protect your infrastructure and data
-    - title: Windows Autopilot documentation
+    - title: Windows Autopilot
       links:
         - url: https://docs.microsoft.com/windows/deployment/windows-autopilot/
           itemType: concept
