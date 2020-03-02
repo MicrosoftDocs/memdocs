@@ -31,6 +31,8 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Support for 64-bit macOS Catalina](includes/2002-2/3696246.md)]
 [!INCLUDE [Improvements to extend and migrate on-premises site to Microsoft Azure](includes/2002-2/6307931.md)]
 [!INCLUDE [Microsoft Endpoint Configuration Manager cloud features](includes/2002-2/5834830.md)]
+[!INCLUDE [Microsoft Endpoint Configuration Manager cloud features](includes/2002-2/5834830.md)]
+[!INCLUDE [Microsoft Endpoint Manager tenant attach: Device sync and device actions](includes/2002-2/3555758.md)]
 
 <!--
 ## General known issues
