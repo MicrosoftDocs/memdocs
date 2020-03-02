@@ -88,6 +88,3 @@ conceptualContent:
         - url: https://docs.microsoft.com/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices
           itemType: how-to-guide
           text: "Configuration Manager: Use Windows Autopilot for existing devices"         
-
-  footer: "Have feedback or want to contribute to docs? [See this resource](/intune/fundamentals/use-docs.md)!"
-  
