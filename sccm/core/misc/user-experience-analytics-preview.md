@@ -108,9 +108,7 @@ Microsoft Autopilot provides a simpler initial provisioning experience for Windo
 
 This metric measures the percent of Windows 10 devices that are registered for Autopilot.
 
-The recommended remediation action is to register existing devices in Autopilot using [Microsoft Intune](https://docs.microsoft.com/intune/enrollment-autopilot). Autopilot provides a great user experience for:
-- Reprovisioning if the device is ever reset.
-- The initial provisioning experience for new devices pre-registered in Autopilot.
+The recommended remediation action is to register existing devices in Autopilot using [Microsoft Intune](https://docs.microsoft.com/intune/enrollment-autopilot).
 
 ### <a name="bkmk_uea_aad"></a> Azure Active Directory
 
