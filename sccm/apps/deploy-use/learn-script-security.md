@@ -65,7 +65,7 @@ Best practices for preventing malicious parameters or script injection are:
 
 ## Environment Recommendations
 General recommendations for PowerShell administrators.
-1. Deploy latest version of PowerShell, such as version 5 or greater, built into Windows 10. Alternatively, you can deploy the [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616), available down to, and including Windows 7 and Windows Server 2008 R2. 
+1. Deploy latest version of PowerShell, such as version 5 or greater, built into Windows 10. Alternatively, you can deploy the [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616). 
 2. Enable, and collect PowerShell logs, optionally including Protected Event Logging. Incorporate these logs into your signatures, hunting, and incident response workflows.
 3. Implement Just Enough Administration on high-value systems to eliminate or reduce unconstrained administrative access to those systems.
 4. Deploy Windows Defender Application Control policies to allow pre-approved administrative tasks to use the full capability of the PowerShell language, while limiting interactive and unapproved use to a limited subset of the PowerShell language.

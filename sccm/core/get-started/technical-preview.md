@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 02/03/2020
+ms.date: 02/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -117,9 +117,43 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_anchor) <!--ID-->
+<!-- - [title](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_anchor) <!--ID-->
 
 The following features are available with the most recent Configuration Manager technical preview version:
+
+### Technical preview version 2002.2
+
+- [Management insight rules for proper HTTPS configuration](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_insight) <!--6268489-->
+- [Improvements to BitLocker management](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_bitlocker) <!--5925660-->
+- [Improvements to support for ARM64 devices](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_arm) <!--5954175-->
+- [Search all subfolders for configuration items and configuration baselines](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_search) <!--5891241-->
+- [Support for 64-bit macOS Catalina](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_mac) <!--3696246-->
+- [Improvements to extend and migrate on-premises site to Microsoft Azure](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_extend) <!--6307931-->
+- [Microsoft Endpoint Configuration Manager cloud features](/sccm/core/get-started/2020/technical-preview-2002-2#bkmk_cloud) <!--5834830-->
+
+> [!NOTE]
+> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
+
+## Features in recent technical previews
+
+<!-- (explanatory comment)
+This is the full list of new features in the past TP releases since the last CB release.
+Each month, add features from the list above to a new H3 section at the top of this section.
+When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
+-->
+
+The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1910:
+
+### Technical preview version 2002
+
+- [Evaluate software updates after a servicing stack update](/sccm/core/get-started/2020/technical-preview-2002#bkmk_ssu) <!--4639943-->
+- [Office 365 updates for disconnected software update points](/sccm/core/get-started/2020/technical-preview-2002#bkmk_O365) <!--4065163-->
+- [Improvements to Microsoft Edge management](/sccm/core/get-started/2020/technical-preview-2002#bkmk_edge) <!--4561024-->
+- [Improvements to Orchestration Groups](/sccm/core/get-started/2020/technical-preview-2002#bkmk_orch) <!--3098816-->
+- [Proxy support for Azure Active Directory discovery and group sync](/sccm/core/get-started/2020/technical-preview-2002#bkmk_aad) <!--5913817-->
+- [Improvements to BitLocker management](/sccm/core/get-started/2020/technical-preview-2002#bkmk_bitlocker) <!--5925683-->
+- [Additional improvements to task sequence progress](/sccm/core/get-started/2020/technical-preview-2002#bkmk_tsprogress) <!--5932692-->
+- [Improvements to the ConfigMgr PXE Responder](/sccm/core/get-started/2020/technical-preview-2002#bkmk_pxe) <!--5568051 & 5528656-->
 
 ### Technical preview version 2001.2
 
@@ -132,19 +166,6 @@ The following features are available with the most recent Configuration Manager 
 - [Improvements to Microsoft Edge Management dashboard](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_edge) <!--3871913-->
 - [Improvements to cloud-connected services](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_cloud) <!--4963230, 4963383, 5566763-->
 - [Additional improvement to task sequence progress](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_tsprogress) <!--2356386, 5932692-->
-
-> [!NOTE]  
-> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
-
-## Features in recent technical previews
-
-<!-- (explanatory comment)
-This is the full list of new features in the past TP releases since the last CB release.
-Each month, add features from the list above to a new H3 section at the top of this section.
-When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
--->
-
-The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1910:
 
 ### Technical preview version 2001
 
