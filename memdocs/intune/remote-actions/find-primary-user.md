@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/21/2019
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -38,7 +38,7 @@ An Intune device can have zero or one primary user assigned to it. When there's 
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > choose a device.
-3. On the **Overview** page, choose **See more** and you'll see the primary user listed.
+3. On the **Overview** page, you can see the primary user listed.
 
 ## What is the primary user?
 The primary user property is used to map a licensed Intune user to their devices in:

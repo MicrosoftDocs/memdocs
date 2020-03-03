@@ -410,7 +410,7 @@ The apps details page of the Company Portal app for Android will now display the
 
 ### Improved sign in experience across Company Portal apps for all platforms <!--User Story 1132123-->
 
-We are announcing a change that is coming in the next few months that will improve the sign-in experience for the Intune Company Portal apps for Android, iOS, and Windows. The new user experience will automatically appear across all platforms for the Company Portal app when Azure AD makes this change. In addition, users can now sign in to the Company Portal from another device with a generated, single-use code. This is especially useful in cases when users need to sign in without credentials.  
+We are announcing a change that is coming in the next few months that will improve the sign-in experience for the Intune Company Portal apps for Android, iOS/iPadOS, and Windows. The new user experience will automatically appear across all platforms for the Company Portal app when Azure AD makes this change. In addition, users can now sign in to the Company Portal from another device with a generated, single-use code. This is especially useful in cases when users need to sign in without credentials.  
 
 Below you can see the previous sign-in experience, the new sign-in experience with credentials, and the new sign-in experience from another device.
 

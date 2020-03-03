@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager:
-ms.date: 12/06/2018
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -67,15 +67,16 @@ When your company is successfully registered, you can create your MDM profile fo
 
 | MDM Profile Fields| Required? | Values | 
 |-------------------|-----------|-------| 
-|MDM Server URI     | No        |Leave this blank. 
-|Profile Name       | Yes       |Enter a profile name of your choice. 
-|Description        | No        |Enter text describing the Profile. 
-|MDM Agent APK      | Yes       |https://aka.ms/intune_kme_deviceowner 
-|Enable this app as a Google Device Owner | Yes | Choose this option to enroll to Android enterprise. 
-|Supported MDM      | Yes       |Microsoft Intune 
-|Leave all system apps enabled | No | Choose this option to ensure all apps are enabled and available to the profile. If this option isn't selected, only a limited set of system apps displays in the device's apps tray. Apps such as the Email app remain hidden. 
-|Custom JSON        | No        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Enter Intune enrollment token string"}. Learn [how to create an enrollment profile](android-kiosk-enroll.md). 
-| Add legal agreements | No | Leave this blank. 
+|MDM Server URI     | No        |Leave this blank.| 
+|Profile Name       | Yes       |Enter a profile name of your choice. |
+|Description        | No        |Enter text describing the Profile. |
+|MDM Agent APK      | Yes       |https://aka.ms/intune_kme_deviceowner| 
+|Custom JSON        | No        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Enter Intune enrollment token string"}. Learn [how to create an enrollment profile](android-kiosk-enroll.md). |
+|Skip Setup wizard  | No        |Choose this option to skip standard device setup prompts for the end user.|
+|Allow End User to Cancel Enrollment | No | Choose this option to allow users to cancel KME.|
+| Add legal agreements | No | Leave this blank. |
+| Support contact details | Yes | Choose Edit to update your contact details |
+|Associate a Knox license with this profile | No | Leave this option unselected. Enrolling to Intune using KME doesn't require a Knox license.|
 
 ### For Android
 
@@ -83,16 +84,17 @@ For step-by-step guidance, see the [Samsung's Create Profile](https://docs.samsu
 
 | MDM Profile Fields| Required? | Values |
 |-------------------|-----------|-------|
-|MDM Server URI     | No        |Leave this blank.
-|Profile Name       | Yes       |Enter a profile name of your choice.
-|description        | No        |Enter text describing the Profile.
-|MDM Agent APK      | Yes       |https://aka.ms/intune_kme
-|Enable this app as a Google Device Owner | No | Leave this option unselected for Android. This option only applies to Android enterprise.
-|Skip Setup wizard  | No        |Choose this option to skip standard device setup prompts for the end user.
-|Allow End User to Cancel Enrollment | No | Choose this option to allow users to cancel KME.
-|Custom JSON        | No        |Leave this blank.
-| Add legal agreements | No | Leave this blank.
-Associate a Knox license with this profile | No | Leave this option unselected. Enrolling to Intune using KME doesn't require a Knox license.
+|MDM Server URI     | No        |Leave this blank.|
+|Profile Name       | Yes       |Enter a profile name of your choice.|
+|Description        | No        |Enter text describing the Profile.|
+|Pick your MDM | Yes | Choose from one of the MDMs. |
+|MDM Agent APK      | Yes       |https://aka.ms/intune_kme|
+|Custom JSON Data        | No        |Leave this blank.|
+|Dual DAR | No | Leave this blank.|
+|QR code for enrollment | No | You can add a QR code to speed enrollment.|
+|System applications | Yes | Choose one of the listed options. |
+|Add legal agreement | No | Leave this blank.|
+|Company Name | Yes | This name will display during device enrollment. |
 
 ## Add devices
 

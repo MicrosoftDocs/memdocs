@@ -27,7 +27,7 @@ ms.collection: M365-identity-device-management
 
 # Add partner certification authority in Intune using SCEP
 
-Use third-party certification authorities (CA) with Intune. Third-party CAs can provision mobile devices with new or renewed certificates by using the Simple Certificate Enrollment Protocol (SCEP), and can support Windows, iOS, Android, and macOS devices.
+Use third-party certification authorities (CA) with Intune. Third-party CAs can provision mobile devices with new or renewed certificates by using the Simple Certificate Enrollment Protocol (SCEP), and can support Windows, iOS/iPadOS, Android, and macOS devices.
 
 There are two parts to using this feature: open-source API, and the Intune administrator tasks.
 

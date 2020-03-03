@@ -42,7 +42,7 @@ Use certificates with Intune to authenticate your users to applications and corp
 
 To deploy these certificates, you’ll create and assign certificate profiles to devices.
 
-Each individual certificate profile you create supports a single platform. For example, if you use PKCS certificates, you’ll create PKCS certificate profile for Android and a separate PKCS certificate profile for iOS. If you also use SCEP certificates for those two platforms, you’ll create a SCEP certificate profile for Android, and another for iOS.
+Each individual certificate profile you create supports a single platform. For example, if you use PKCS certificates, you’ll create PKCS certificate profile for Android and a separate PKCS certificate profile for iOS/iPadOS. If you also use SCEP certificates for those two platforms, you’ll create a SCEP certificate profile for Android, and another for iOS/iPadOS.
 
 ### General considerations when you use a Microsoft Certification Authority
 

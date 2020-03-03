@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,6 +34,9 @@ ms.collection: M365-identity-device-management
 You can control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by Check Point SandBlast Mobile, a mobile threat defense solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices running the Check Point SandBlast Mobile app.
 
 You can configure Conditional Access policies based on Check Point SandBlast Mobile risk assessment enabled through Intune device compliance policies, which you can use to allow or block noncompliant devices to access corporate resources based on detected threats.
+
+> [!NOTE]
+> This Mobile Threat Defense vendor is not supported for unenrolled devices.
 
 ## How do Intune and Check Point SandBlast Mobile help protect your company resources?
 

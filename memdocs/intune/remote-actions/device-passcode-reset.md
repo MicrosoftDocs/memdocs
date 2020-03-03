@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/18/2018
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -65,7 +65,7 @@ To create a new work profile passcode, use the Reset Passcode action. This actio
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) with any of the following roles: Azure Active Directory Global Admin, Azure Active Directory Intune Service Admin, Helpdesk Operator, or Role Administrator.
 2. Select **Devices**, and then select **All devices**.
-3. From the list of devices you manage, select a device, and choose **...More**. Then choose the **Remove passcode** device remote action.
+3. From the list of devices you manage, select a device, and choose **Remove passcode**.
 
 ## Reset Android work profile passcodes
 

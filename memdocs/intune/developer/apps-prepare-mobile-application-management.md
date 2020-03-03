@@ -107,7 +107,7 @@ This table lists the settings that are enabled if an app uses the App SDK or the
 |Block screen capture (Android only)|X|X|
 |Support for MAM without device enrollment|X|X|
 |Full Wipe of app data|X|X|
-|Selective Wipe of work and school data in Multi-Identity scenarios <br><br>**Note:** For iOS, when the management profile is removed, the app is also removed.|X||
+|Selective Wipe of work and school data in Multi-Identity scenarios <br><br>**Note:** For iOS/iPadOS, when the management profile is removed, the app is also removed.|X||
 |Prevent “Save as”|X||
 |Targeted Application Configuration (or app config through the "MAM channel")|X|X|
 |Support for Multi-Identity|X||
@@ -121,7 +121,7 @@ This table lists the settings that are enabled if an app uses the App SDK or the
 |Require minimum Intune SDK for iOS (iOS only)|X|X|
 |SafetyNet device attestation (Android only)|X|X|
 |Threat scan on apps (Android only)|X|X|
-|Require maxmimum Mobile Threat Defense vendor device risk level|X||
+|Require maximum Mobile Threat Defense vendor device risk level|X||
 |Configure app notification content for organization accounts|X|X|
 |Require use of approved keyboards (Android only)|X|X|
 |Require app protection policy (Conditional Access)|X||

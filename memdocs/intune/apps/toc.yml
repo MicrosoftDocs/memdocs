@@ -15,6 +15,8 @@
 
 - name: Tutorials
   items:
+  - name: Protect email on managed devices
+    href: ../protect/tutorial-protect-email-on-enrolled-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
   - name: Protect email on unmanaged devices
     href: ../protect/tutorial-protect-email-on-unmanaged-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
   - name: Configure Slack to use Intune 
@@ -85,8 +87,10 @@
           href: apps-win32-s-mode.md          
       - name: Add specific apps
         items:
-        - name: Company Portal app
-          href: store-apps-company-portal-app.md
+        - name: Company Portal app - Autopilot
+          href: store-apps-company-portal-autopilot.md
+        - name: Company Portal app - Download
+          href: store-apps-company-portal-app.md          
         - name: Microsoft Edge for Windows 10
           href: apps-windows-edge.md
         - name: Microsoft Edge for macOS

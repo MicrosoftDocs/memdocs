@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,6 +57,30 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 ### Role-based access control
 -->  
 
+<!-- ########################## -->
+## Week of February 24, 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### macOS Company Portal user experience improvements<!-- 5568987 -->
+We have made improvements to the macOS device enrollment experience and the Company Portal app for Mac. You will see the following:
+- A better Microsoft **AutoUpdate** experience during enrollment that will ensure your users have the latest version of the Company Portal.
+- An enhanced compliance check step during enrollment.
+- Support for copied Incident IDs, so your users can send errors from their devices to your company support team faster.
+
+For more information about enrollment and the Company Portal app for Mac, see [Enroll your macOS device using the Company Portal app](/intune-user-help/enroll-your-device-in-intune-macos-cp). 
+
+#### App protection policies for Better Mobile now supports iOS and iPadOS<!-- 6224512  -->
+
+In October of 2019, Intune app protection policy added the capability to use data from our Microsoft Threat Defense partners. With this update, you can now use an app protection policy to block, or selectively wipe the users corporate data based on the health of a device using Better Mobile on iOS and iPadOS.  For more information, see [Create Mobile Threat Defense app protection policy with Intune](../protect/mtd-app-protection-policy.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Exports from the All devices list  now in zipped CSV format<!--6343117-->
+Exports from the **Devices** > **All devices** page are now in zipped CSV format.
+
 
 <!-- ########################## -->
 ## Week of February 17, 2020 (2002 Service release)
@@ -66,12 +90,6 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 
 #### Microsoft Defender Advanced Threat Protection (ATP) app for macOS<!-- 5424618 -->
 Intune provides an easy way to deploy the Microsoft Defender Advanced Threat Protection (ATP) app for macOS to managed Mac devices. For more information, see [Add Microsoft Defender ATP to macOS devices using Microsoft Intune](~/apps/apps-advanced-threat-protection-macos.md) and [Microsoft Defender Advanced Threat Protection for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac).  
-
-
-#### Microsoft's new Office app<!-- 5859926 -->
-Microsoft's new Office app is now generally available for download and use. The Office app is a consolidated experience where your users can work across Word, Excel, and PowerPoint within a single app. You can target the app with an app protection policy to ensure the data being accessed is protected.
-
-For more information, see [How to enable Intune app protection policies with the Office mobile preview app](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-enable-intune-app-protection-policies-with/ba-p/1045493).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
@@ -160,10 +178,12 @@ Microsoft's new Office app is now generally available for download and use. The 
 
 For more information, see [How to enable Intune app protection policies with the Office mobile preview app](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-enable-intune-app-protection-policies-with/ba-p/1045493).
 
+
 <!-- ########################## -->
+
 ## Week of February 10, 2020
 
-### Windows 7 ends extended support <!--3042987-->
+### Windows 7 ends extended support<!--3042987 -->
 Windows 7 reached end of extended support on January 14, 2020. Intune deprecated support for devices running Windows 7 at the same time. Technical assistance and automatic updates that help protect your PC are no longer available. You should upgrade to Windows 10. For more information, see the [Plan for Change blog post](https://aka.ms/Windows7_Intune).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -219,7 +239,7 @@ On Android Enterprise Work Profile devices, you can create Wi-Fi profiles. When 
 
 Now when you choose the Enterprise type, you can also enter automatic proxy settings, including a proxy server URL, such as `proxy.contoso.com`.
 
-To see the current Wi-Fi settings you can configure, go to [Add Wi-Fi settings for devices running Android Enterprise and Android kiosk in Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md).
+To see the current Wi-Fi settings you can configure, go to [Add Wi-Fi settings for devices running Android Enterprise and Android kiosk in Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md#work-profile-only).
 
 Applies to:
 - Android Enterprise work profile
@@ -399,7 +419,7 @@ For more information, see  the following overview articles:
 - [Intune device compliance overview](../protect/device-compliance-get-started.md)
 
 #### Use PKCS certificate profiles to provision devices with certificates<!-- 2317124, 2317130, 2317139, 2340517, 2340528, 2340529  -->
-You can now use PKCS certificate profiles to issue certificates to *devices* that run Android for Work, iOS, and Windows, when associated with profiles like those for Wi-Fi and VPN. Previously those three platforms supported only user-based certificates, with device-based support being limited to macOS.
+You can now use PKCS certificate profiles to issue certificates to *devices* that run Android for Work, iOS/iPadOS, and Windows, when associated with profiles like those for Wi-Fi and VPN. Previously those three platforms supported only user-based certificates, with device-based support being limited to macOS.
 
 > [!NOTE]
 > PKCS certificate profiles are not supported with Wi-Fi profiles. Instead, use SCEP certificate profiles when you use an [EAP type](../configuration/wi-fi-settings-windows.md#enterprise-profile).

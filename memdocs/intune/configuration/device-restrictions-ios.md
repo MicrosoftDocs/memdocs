@@ -424,7 +424,7 @@ Applies to devices running iOS 9.3+, and iPadOS 13.0+.
 
   - **Hidden apps**: Enter a list of apps that are hidden from users. Users can't view, or open these apps.
   
-    Apple prevents hiding some native apps. For example, you can't hide the **Settings** or **Wallet** apps on the device. [Delete built-in Apple apps](https://support.apple.com/HT208094) lists the apps that can be hidden.
+    Apple prevents hiding some native apps. For example, you can't hide the **Settings** app on the device. [Delete built-in Apple apps](https://support.apple.com/HT208094) lists the apps that can be hidden.
   
   - **Visible apps**: Enter a list of apps that users can view and launch. No other apps can be viewed or launched.
 

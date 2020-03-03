@@ -47,7 +47,7 @@ The following requirements must be met for Conditional Access to work:
 
 - By default, the user must be assigned a device compliance policy. This can depend on the configuration of the setting **Mark devices with no compliance policy assigned as** which is under **Device Compliance** > **Compliance Policy Settings** in the Intune admin portal.
 
-- Exchange ActiveSync must be activated on the device if the user is using the device's native mail client rather than Outlook. This happens automatically for iOS, Windows Phone, and Android Knox devices.
+- Exchange ActiveSync must be activated on the device if the user is using the device's native mail client rather than Outlook. This happens automatically for iOS/iPadOS, Windows Phone, and Android Knox devices.
 
 - For on-premise Exchange, your Intune Exchange Connector must be properly configured. For more information, see [Troubleshooting the Exchange Connector in Microsoft Intune](troubleshoot-exchange-connector.md).
 

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/08/2019
+ms.date: 2/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -52,8 +52,6 @@ The **Wipe** action restores a device to its factory default settings. The user 
 
 The **Retain enrollment state and user account** option is only available for Windows 10 version 1709 or later.
 
-The **Perform protected wipe** option makes sure that the wipe action can't be circumvented by turning off the device. A protected wipe will keep trying to reset the device until successful. In some configurations this action may leave the device [unable to reboot](troubleshoot-device-actions.md#wipe-action).
-
 MDM policies will be reapplied the next time the device connects to Intune.
 
 A wipe is useful for resetting a device before you give the device to a new user, or when the device has been lost or stolen. Be careful about selecting **Wipe**. Data on the device cannot be recovered.
@@ -76,8 +74,8 @@ A wipe is useful for resetting a device before you give the device to a new user
     |User data outside of the user profile||
     |User autologon|| 
     
-         
-7. To confirm the wipe, select **Yes**.
+7. The **Wipe device, and continue to wipe even if device loses power.** option makes sure that the wipe action can't be circumvented by turning off the device. This option will keep trying to reset the device until successful. In some configurations this action may leave the device [unable to reboot](troubleshoot-device-actions.md#wipe-action).        
+8. To confirm the wipe, select **Yes**.
 
 If the device is on and connected, the **Wipe** action propagates across all device types in less than 15 minutes.
 
@@ -201,6 +199,9 @@ If you want to completely remove an Apple DEP device from management by Intune, 
 5. Choose **Reassign**.
 
     ![Screenshot for Apple reassign](./media/devices-wipe/apple-reassign.png)
+
+## Device states
+For a description of device states, see the [managementStates collection](https://docs.microsoft.com/intune/developer/intune-data-warehouse-collections.md#managementstates).
 
 ## Fresh Start
 

@@ -268,12 +268,16 @@ SplashDuration | Number | Minimum amount of time, in seconds, that the Intune st
 BackgroundColor| String| Specifies the background color for the Intune SDK's UI components. Accepts a hexadecimal RGB string in the form of #XXXXXX, where X can range from 0-9 or A-F. The pound sign might be omitted.   | Optional. Defaults to the system background color, which may vary across versions of iOS and according to the iOS Dark Mode setting. |
 ForegroundColor| String| Specifies the foreground color for the Intune SDK's UI components, such as text color. Accepts a hexadecimal RGB string in the form of #XXXXXX, where X can range from 0-9 or A-F. The pound sign might be omitted.  | Optional. Defaults to the system label color, which may vary across versions of iOS and according to the iOS Dark Mode setting. |
 AccentColor | String| Specifies the accent color for the Intune SDK's UI components, such as button text color and PIN box highlight color. Accepts a hexadecimal RGB string in the form of #XXXXXX, where X can range from 0-9 or A-F. The pound sign might be omitted.| Optional. Defaults to system blue. |
+SecondaryBackgroundColor| String| Specifies the secondary background color for the MTD screens. Accepts a hexadecimal RGB string in the form of #XXXXXX, where X can range from 0-9 or A-F. The pound sign might be omitted.   | Optional. Defaults to white. |
+SecondaryForegroundColor| String| Specifies the secondary foreground color for the MTD screens, like footnote color. Accepts a hexadecimal RGB string in the form of #XXXXXX, where X can range from 0-9 or A-F. The pound sign might be omitted.  | Optional. Defaults to gray. |
 SupportsDarkMode| Boolean | Specifies whether the Intune SDK’s UI color scheme should observe the system dark mode setting, if no explicit value has been set for BackgroundColor/ForegroundColor/AccentColor | Optional. Defaults to yes. |
 MAMTelemetryDisabled| Boolean| Specifies if the SDK will not send any telemetry data to its back end.| Optional. Defaults to no. |
 MAMTelemetryUsePPE | Boolean | Specifies if MAM SDK will send data to PPE telemetry backend. Use this when testing your apps with Intune policy so that test telemetry data does not mix up with customer data. | Optional. Defaults to no. |
 MaxFileProtectionLevel | String | Optional. Allows the app to specify the maximum `NSFileProtectionType` it can support. This value will override the policy sent by the service if the level is higher than what the application can support. Possible values: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
 OpenInActionExtension | Boolean | Set to YES for Open in Action extensions. See the Sharing Data via UIActivityViewController section for more information. |
 WebViewHandledURLSchemes | Array of Strings | Specifies the URL schemes that your app's WebView handles. | Required if your app uses a WebView that handles URLs via links and/or javascript. |
+DocumentBrowserFileCachePath | String | If your app uses the [`UIDocumentBrowserViewController`](https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller?language=objc) to browse through files in various file providers, you can set this path relative to the home directory in the application sandbox so the Intune SDK can drop decrypted managed files into that folder. | Optional. Defaults to the `/Documents/` directory. |
+VerboseLoggingEnabled | Boolean | If set to YES, Intune will log in verbose mode. | Optional. Defaults to NO |
 
 ## Receive app protection policy
 
@@ -469,6 +473,14 @@ IntuneMAMPolicy.h | The IntuneMAMPolicy class exposes some MAM policy settings t
 IntuneMAMFileProtectionManager.h | The IntuneMAMFileProtectionManager class exposes APIs the app can use to explicitly secure files and directories based on a supplied identity. The identity can be managed by Intune or unmanaged, and the SDK will apply the appropriate MAM policy. Using this class is optional. |
 IntuneMAMDataProtectionManager.h | The IntuneMAMDataProtectionManager class exposes APIs the app can use to secure data buffers given a supplied identity. The identity can be managed by Intune or unmanaged, and the SDK will apply encryption appropriately. |
 
+## Implement Allowed Accounts
+
+Intune lets IT admins specify which accounts can be logged into by the user. Apps can query the Intune App SDK for the specified list of allowed accounts and then ensure only allowed accounts are signed into the device.
+
+To query for allowed accounts, the App should check the `allowedAccounts` property on the `IntuneMAMEnrollmentManager`. The `allowedAccounts` property is either an array containing the allowed accounts or nil. If the property is nil then no allowed accounts have been specified.
+
+Apps can also react to changes of the `allowedAccounts` property by observing the `IntuneMAMAllowedAccountsDidChangeNotification` notification. The notification is posted whenever the `allowedAccounts` property changes in value.
+
 ## Implement save-as and open-from controls
 
 Intune lets IT admins select which storage locations a managed app can save data to or open data from. Apps can query the Intune MAM SDK for allowed save-to storage locations by using the `isSaveToAllowedForLocation` API, defined in `IntuneMAMPolicy.h`. Apps can also query the Intune MAM SDK for allowed open-from storage locations by using the `isOpenFromAllowedForLocation` API, defined in `IntuneMAMPolicy.h`.
@@ -535,21 +547,30 @@ Starting in release 8.0.2, the Intune App SDK can filter `UIActivityViewControll
 
 When sharing documents via the `UIActivityViewController` and `UIDocumentInteractionController`, iOS displays ‘Copy to’ actions for each application that supports opening the document being shared. Applications declare the document types they support through the `CFBundleDocumentTypes` setting in their Info.plist. This type of sharing will no longer be available if the policy prohibits sharing to unmanaged applications. As a replacement, user will have to add a non-UI Action extension to their application and link it to the Intune App SDK. The Action extension is merely a stub. The SDK will implement the file sharing behavior. Follow the steps below:
 
-1. Your application must have at least one schemeURL defined under its Info.plist `CFBundleURLTypes`.
+1. Your application must have at least one schemeURL defined under its Info.plist `CFBundleURLTypes` along with its `-intunemam` counterpart. For example:
+    ```objc
+    <key>CFBundleURLSchemes</key>
+	<array>
+		<string>launch-com.contoso.myapp</string>
+  		<string>launch-com.contoso.myapp-intunemam</string>
+	</array>
+    ```
 
-2. Your application and action extension must share at least one App Group, and the App Group must be listed under the `AppGroupIdentifiers` array under the app's and the extension's IntuneMAMSettings dictionaries.
+2. Both your application and action extension must share at least one App Group, and the App Group must be listed under the `AppGroupIdentifiers` array under the app's and the extension's IntuneMAMSettings dictionaries.
 
-3. Name the action extension “Open in” followed by the application name. Localize the Info.plist as needed.
+3. Both your application and action extension must have the Keychain Sharing capability and share the `com.microsoft.intune.mam` keychain group.
 
-4. Provide a template icon for the extension as described by [Apple’s developer documentation](https://developer.apple.com/ios/human-interface-guidelines/extensions/sharing-and-actions/). Alternatively, the IntuneMAMConfigurator tool can be used to generate these images from the application .app directory. To do this, run:
+4. Name the action extension “Open in” followed by the application name. Localize the Info.plist as needed.
+
+5. Provide a template icon for the extension as described by [Apple’s developer documentation](https://developer.apple.com/ios/human-interface-guidelines/extensions/sharing-and-actions/). Alternatively, the IntuneMAMConfigurator tool can be used to generate these images from the application .app directory. To do this, run:
 
     ```bash
     IntuneMAMConfigurator -generateOpenInIcons /path/to/app.app -o /path/to/output/directory
     ```
 
-5. Under IntuneMAMSettings in the extension’s Info.plist, add a Boolean setting named `OpenInActionExtension` with value YES.
+6. Under IntuneMAMSettings in the extension’s Info.plist, add a Boolean setting named `OpenInActionExtension` with value YES.
 
-6. Configure the `NSExtensionActivationRule` to support a single file and all types from the application’s `CFBundleDocumentTypes` prefixed with `com.microsoft.intune.mam`. For example, if the application supports public.text and public.image, the activation rule would be:
+7. Configure the `NSExtensionActivationRule` to support a single file and all types from the application’s `CFBundleDocumentTypes` prefixed with `com.microsoft.intune.mam`. For example, if the application supports public.text and public.image, the activation rule would be:
 
     ```objc
     SUBQUERY (
@@ -632,7 +653,7 @@ Intune administrators can target and deploy configuration data via the Intune Az
 
 For more information about the capabilities of the Graph API, see [Graph API Reference](https://developer.microsoft.com/graph/docs/concepts/overview).
 
-For more information about how to create a MAM targeted app configuration policy in iOS, see the section on MAM targeted app config in [How to use Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md).
+For more information about how to create a MAM targeted app configuration policy in iOS, see the section on MAM targeted app config in [How to use Microsoft Intune app configuration policies for iOS/iPadOS](../apps/app-configuration-policies-use-ios.md).
 
 ## Telemetry
 
@@ -724,6 +745,16 @@ By default, apps are considered single identity. The SDK sets the process identi
     When the app is selectively wiped, the SDK will call the `wipeDataForAccount` method in `IntuneMAMPolicyDelegate`. The app is responsible for removing the specified user’s account and any data associated with it. The SDK is capable of removing all files owned by the user and will do so if the app returns FALSE from the `wipeDataForAccount` call.
 
     Note that this method is called from a background thread. The app should not return a value until all data for the user has been removed (with the exception of files if the app returns FALSE).
+
+## Siri Intents
+If your app integrates with Siri Intents, please make sure to read the comments for `areSiriIntentsAllowed` in `IntuneMAMPolicy.h` for instructions on supporting this scenario. 
+    
+## Notifications
+If your app receives notifications, please make sure to read the comments for `notificationPolicy` in `IntuneMAMPolicy.h` for instructions on supporting this scenario.  It is recommended that apps register for `IntuneMAMPolicyDidChangeNotification` described in `IntuneMAMPolicyManager.h`, and communicate this value to their `UNNotificationServiceExtension` via the keychain.
+## Displaying Web Content Within Application
+If your application has the ability to display websites within a web view and the displayed web pages have the ability to navigate to arbitrary sites, the application is responisble for setting the current identity so that managed data cannot be leaked through the web view. Examples of this are 'Suggest a Feature' or 'Feedback' web pages that have either direct or indirect links to a search engine.
+Multi-identity applications should call IntuneMAMPolicyManager setUIPolicyIdentity passing in the empty string prior to displaying the web view. After the web view is dismissed, the application should call setUIPolicyIdentity passing in the current identity.
+Single identity applications should call IntuneMAMPolicyManager setCurrentThreadIdentity passing in the empty string prior to displaying the web view. After the web view is dismissed, the application should call setCurrentThreadIdentity passing in nil.
 
 ## iOS best practices
 

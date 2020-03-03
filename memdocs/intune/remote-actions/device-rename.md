@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2019
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -42,7 +42,7 @@ This feature doesn't currently support renaming hybrid Azure AD Windows devices.
 ## Rename a device
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Choose **Devices** > **All devices** > choose a device > **More** > **Rename device**.
+3. Choose **Devices** > **All devices** > choose a device > **...** > **Rename device**.
 4. In the **Rename device** blade, type the new name in the text box. You can use letters, numbers, and hyphens. The name must contain at least one letter or hyphen.
 5. If you want to restart the device after renaming it, choose **Yes** next to **Restart after rename**.
 6. Choose **Rename**.

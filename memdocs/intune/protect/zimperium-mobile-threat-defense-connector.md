@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/29/2017
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 You can control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by Zimperium, a Mobile Threat Defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices running the Zimperium app.
 
-You can configure Conditional Access policies based on Zimperium risk assessment enabled through Intune device compliance policies. Risk assessment policy can allow or block noncompliant devices from accessing corporate resources based on detected threats.
+You can configure Conditional Access policies based on Zimperium risk assessment enabled through Intune device compliance policies for enrolled devices, which you can use to allow or block noncompliant devices to access corporate resources based on detected threats. For unenrolled devices, you can use app protection policies to enforce a block or selective wipe based on detected threats.
 
 ## How do Intune and Zimperium help protect your company resources?
 
@@ -112,3 +112,5 @@ Detect threats like **Man-in-the-middle** in network, and prevent synchronizatio
 - [Create Zimperium device compliance policy](mtd-device-compliance-policy-create.md)
 
 - [Enable Zimperium MTD connector](mtd-connector-enable.md)
+
+- [Create an MTD app protection policy](../protect/mtd-app-protection-policy.md)

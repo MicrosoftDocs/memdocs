@@ -65,7 +65,7 @@ The following table lists the data that Microsoft Intune sends from a device to 
 | ASM/DEP | profile_status | The status of profile installation. Possible values: **empty**, **assigned**, **pushed**, or **removed**. |
 | ASM/DEP | profile_uuid | The unique ID of the assigned profile. |
 | ASM/DEP | device_assigned_by | The email of the person who assigned the device. |
-| ASM/DEP | os | The device’s operating system: iOS, OSX, or tvOS. This key is valid in X-Server-Protocol-Version 2 and later. |
+| ASM/DEP | os | The device’s operating system: iOS/iPadOS, OSX, or tvOS. This key is valid in X-Server-Protocol-Version 2 and later. |
 | ASM/DEP | device_family | The device’s Apple product family: iPad, iPhone, iPod, Mac, or AppleTV. This key is valid in X-Server-Protocol-Version 2 and later. |
 | ASM/DEP | profile_name | String. A human-readable name for the profile. |
 | ASM/DEP | support_phone_number | Optional. String. A support phone number for the organization. |

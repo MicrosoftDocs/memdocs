@@ -114,3 +114,5 @@
       href: troubleshoot-ios-enrollment-errors.md
     - name: Troubleshoot Windows device enrollment
       href: troubleshoot-windows-enrollment-errors.md
+    - name: Troubleshoot Android device enrollment
+      href: troubleshoot-android-enrollment.md

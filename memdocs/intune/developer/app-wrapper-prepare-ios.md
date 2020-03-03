@@ -230,7 +230,7 @@ In the IntuneMAMPackager/Contents/MacOS folder, open `Parameters.plist` (a blank
 | ADAL Reply URI |String|empty| Same as -ar|
 | Verbose Enabled |Boolean|false| Same as -v|
 | Remove Missing Entitlements |Boolean|false| Same as -c|
-| Prevent Default Build Update |Boolen|false| Equivalent to using -b without arguments|
+| Prevent Default Build Update |Boolean|false| Equivalent to using -b without arguments|
 | Build String Override |String|empty| The custom CFBundleVersion of the wrapped output app|
 | Include Citrix XenMobile App SDK (network-only variant)|Boolean|false| Same as -citrix|
 | Extension Provisioning Profile Paths |Array of Strings|empty| An array of extension provisioning profiles for the app.
@@ -259,7 +259,7 @@ The main scenarios in which you would need to rewrap your applications are as fo
 * The application itself has released a new version. The previous version of the app was wrapped and uploaded to the Intune console.
 * The Intune App Wrapping Tool for iOS has released a new version that enables key bug fixes, or new, specific Intune application protection policy features. This happens after 6-8 weeks through GitHub repo for the [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios).
 
-For iOS, while it is possible to wrap with different cert/provisioning profile than the original used to sign the app, if the entitlements specified in the app are not included in the new provisioning profile, wrapping will fail. Using the “-e” command-line option, which removes any missing entitlements from the app, to force wrapping to not fail in this scenario can cause broken functionality in the app.
+For iOS/iPadOS, while it is possible to wrap with different cert/provisioning profile than the original used to sign the app, if the entitlements specified in the app are not included in the new provisioning profile, wrapping will fail. Using the “-e” command-line option, which removes any missing entitlements from the app, to force wrapping to not fail in this scenario can cause broken functionality in the app.
 
 Some best practices for rewrapping include:
 
@@ -423,7 +423,7 @@ Use the following security and privacy best practices when you use the App Wrapp
 
 ## Intune App Wrapping Tool for iOS with Citrix MDX mVPN
 
-This feature is an integration with the Citrix MDX app wrapper for iOS. The integration is simply an additional, optional command-line flag, `-citrix` to the general Intune App Wrapping Tools.
+This feature is an integration with the Citrix MDX app wrapper for iOS/iPadOS. The integration is simply an additional, optional command-line flag, `-citrix` to the general Intune App Wrapping Tools.
 
 ### Requirements
 
