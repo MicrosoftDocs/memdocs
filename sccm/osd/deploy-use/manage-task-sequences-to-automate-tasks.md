@@ -2,7 +2,7 @@
 title: Manage task sequences
 titleSuffix: Configuration Manager
 description: Create, edit, deploy, import, and export task sequences to manage them and automate tasks in your environment.
-ms.date: 11/29/2019
+ms.date: 02/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -100,6 +100,9 @@ Use the following procedure to configure the behavior of the task sequence on th
 ## High-impact settings
 
 Configure a task sequence as high-impact and customize the messages that users receive when they run the task sequence.
+
+> [!WARNING]
+> If you use PXE deployments, and configure device hardware with the network adapter as the first boot device, these devices can automatically start an OS deployment task sequence without user interaction. Deployment verification doesn't manage this configuration. While this configuration may simplify the process and reduce user interaction, it puts the device at greater risk for accidental reimage.
 
 ### Set a task sequence as a high-impact task sequence
 
