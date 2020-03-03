@@ -94,4 +94,4 @@ For more information about consent and Azure Active Directory applications, see 
 ## Next steps
 
 - [Set up Zimperium apps for enrolled devices](mtd-apps-ios-app-configuration-policy-add-assign.md)
-- [Set up Zimperium apps for unenrolled devices](~/protect/mtd-add-apps-unenrolled-devices.md)
+- [Set up Zimperium apps for unenrolled devices](mtd-add-apps-unenrolled-devices.md)

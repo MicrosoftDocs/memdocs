@@ -40,7 +40,7 @@ App configuration policies in Microsoft Intune supply settings to Managed Google
 > Not every app supports app configuration. Check with the app developer to see if their app supports app configuration policies.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed devices**. Note that you can choose between **Managed devices** and **Managed apps**. For more information see [Apps that support app configuration](~/apps/app-configuration-policies-overview.md#apps-that-support-app-configuration).
+2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed devices**. Note that you can choose between **Managed devices** and **Managed apps**. For more information see [Apps that support app configuration](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. On the **Basics** page, set the following details:
     - **Name** - The name of the profile that appears in the Azure portal.
     - **Description** - The description of the profile that appears in the Azure portal.
@@ -51,7 +51,7 @@ App configuration policies in Microsoft Intune supply settings to Managed Google
 7. Click **Next** to display the **Settings** page.
 8. Click **Add** to display the **Add permissions** pane.
 9. Click the permissions that you want to override. Permissions granted will override the “Default app permissions” policy for the selected apps.
-10. Set the **Permission state** for each permission. You can choose from **Prompt**, **Auto grant**, or **Auto deny**. For more information about permissions, see [Android Enterprise settings to mark devices as compliant or not compliant using Intune](~/protect/compliance-policy-create-android-for-work.md).
+10. Set the **Permission state** for each permission. You can choose from **Prompt**, **Auto grant**, or **Auto deny**. For more information about permissions, see [Android Enterprise settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md).
 11. In the dropdown box, select the **Configuration settings format**. Select one of the following methods to add configuration information:
     - **Use configuration designer**
     - **Enter JSON data**<br><br>
@@ -83,7 +83,7 @@ You can use the configuration designer for Managed Google Play apps when the app
 
 1. Select **Add**. Choose the list of configuration settings that you want to enter for the app.
 
-    If you're using GMail or Nine Work for your email app, see [Android Enterprise device settings to configure email](../email-settings-android-enterprise.md) for more information on these settings.
+    If you're using GMail or Nine Work for your email app, see [Android Enterprise device settings to configure email](../configuration/email-settings-android-enterprise.md) for more information on these settings.
 
 2. For each key and value in the configuration, set:
 

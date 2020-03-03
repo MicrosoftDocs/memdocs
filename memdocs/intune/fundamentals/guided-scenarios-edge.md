@@ -21,7 +21,7 @@ ms.collection: M365-identity-device-management
 
 # Guided scenario - Deploy Microsoft Edge for Mobile 
 
-By following this [guided scenario](~/fundamentals/guided-scenarios-overview.md), you can assign the Microsoft Edge app to your users on iOS/iPadOS or Android devices at your organization. Assigning this app will allow your users to seamlessly browse content using their corporate devices. 
+By following this [guided scenario](../fundamentals/guided-scenarios-overview.md), you can assign the Microsoft Edge app to your users on iOS/iPadOS or Android devices at your organization. Assigning this app will allow your users to seamlessly browse content using their corporate devices. 
 
 Microsoft Edge lets users cut through the clutter of the web with built-in features that help them consolidate, arrange and manage work content. Users of iOS/iPadOS and Android devices who sign in with their corporate Azure AD accounts in the Microsoft Edge application will find their browser pre-loaded with workplace **Favorites** and website filters you define.
 
@@ -77,13 +77,13 @@ In this step, you can choose the user groups that you want to include to have Mi
 The final step allows you to review a summary of the settings you configured. Once you have reviewed your choices click **Create** to complete the guided scenario. 
 
 > [!NOTE]
-> Edge may take up to 12 hours to receive configuration. For more information, see [App configuration policies for Microsoft Intune](~/apps/app-configuration-policies-overview.md).
+> Edge may take up to 12 hours to receive configuration. For more information, see [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md).
 
 > [!IMPORTANT]
-> Once the guided scenario is complete it will display a summary. You can modify the resources listed in the summary later, however the table displaying these resouces will not be saved.
+> Once the guided scenario is complete it will display a summary. You can modify the resources listed in the summary later, however the table displaying these resources will not be saved.
 
 ## Next steps
 
-- Enhance the security of using Microsoft Edge by setting up Intune app protection policy integration. For more information, see [Application protection policies for Microsoft Edge](~/apps/manage-microsoft-edge.md#application-protection-policies-for-microsoft-edge).
-- If you have intranet sites to include, explore protecting access with Azure Application Proxy integration. For more information, see [Configure Application Proxy settings for Microsoft Edge](~/apps/manage-microsoft-edge.md#configure-application-proxy-settings-for-microsoft-edge).
+- Enhance the security of using Microsoft Edge by setting up Intune app protection policy integration. For more information, see [Application protection policies for Microsoft Edge](../apps/manage-microsoft-edge.md#application-protection-policies-for-microsoft-edge).
+- If you have intranet sites to include, explore protecting access with Azure Application Proxy integration. For more information, see [Configure Application Proxy settings for Microsoft Edge](../apps/manage-microsoft-edge.md#configure-application-proxy-settings-for-microsoft-edge).
 

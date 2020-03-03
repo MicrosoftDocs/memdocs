@@ -35,7 +35,7 @@ To manage devices and install apps, your users can use the Company Portal app. Y
 
 ## Prerequisites
 
-For Windows 10 Autopilot provisioned devices, it is recommended that you associate your Microsoft Store for Business account with Intune. For more information, see [How to manage volume purchased apps from the Microsoft Store for Business with Microsoft Intune](~/apps/windows-store-for-business.md).
+For Windows 10 Autopilot provisioned devices, it is recommended that you associate your Microsoft Store for Business account with Intune. For more information, see [How to manage volume purchased apps from the Microsoft Store for Business with Microsoft Intune](windows-store-for-business.md).
 
 Company Portal (Offline) is chosen to be installed by using the steps below. The Company Portal app will be installed in device context when assigned to the Autopilot group and be installed on the device before the user logs in. 
 

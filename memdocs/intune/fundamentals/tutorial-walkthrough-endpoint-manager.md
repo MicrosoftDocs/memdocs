@@ -161,7 +161,7 @@ Follow the steps below to better understand Intune in the Microsoft Endpoint Man
 
     ![Screenshot of the Microsoft Endpoint Manager admin center - All apps](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-09.png)
 
-    For more information, see [Add apps to Microsoft Intune](~/apps/apps-add.md). 
+    For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md). 
 
 10. From the navigation pane, select **Users** to display details about the users that you have included in Intune. These users are your company's workforce.
 
@@ -224,7 +224,7 @@ Follow the steps below to better understand Intune in the Microsoft Endpoint Man
 
     ![Screenshot of the Microsoft Endpoint Manager admin center - Guided scenarios](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-15.png)
 
-    For more information about guided scenarios, see [Guided scenarios overview](~/fundamentals/guided-scenarios-overview.md).
+    For more information about guided scenarios, see [Guided scenarios overview](guided-scenarios-overview.md).
 
 ## Configure the Microsoft Endpoint Manager admin center
 

@@ -124,4 +124,4 @@ However, should you wish to make the app available to end users via the Intune C
 
 ## Next steps
 
-- [Enable the Mobile Threat Defense connector in Intune for unenrolled devices](~/protect/mtd-enable-unenrolled-devices.md)
+- [Enable the Mobile Threat Defense connector in Intune for unenrolled devices](mtd-enable-unenrolled-devices.md)
