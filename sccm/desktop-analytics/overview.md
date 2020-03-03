@@ -76,6 +76,12 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
     - [**Full Administrator**](/sccm/core/understand/fundamentals-of-role-based-administration#bkmk_Planroles) role in Configuration Manager  
 
+    > [!NOTE]
+    > Desktop Analytics supports multiple Configuration Manager hierarchies reporting to a single Azure AD tenant.<!-- 4814075 --> If you have multiple hierarchies in your environment, you have the following options:
+    >
+    > - Use different Commercial IDs and Azure AD tenants.
+    > - Configure both hierarchies to use the same Commercial ID to share the Azure AD tenant and Desktop Analytics instance.
+
 - Devices running Windows 7, Windows 8.1, or Windows 10  
 
     - Install the latest updates. For more information, see [Update devices](/sccm/desktop-analytics/enroll-devices#update-devices).  
