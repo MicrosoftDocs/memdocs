@@ -21,11 +21,19 @@ manager: dougeby
 Starting in version 2002, if the hierarchy consists of the central administration site (CAS) and a single child primary site, you can remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single site.
 
 > [!IMPORTANT]
-> Configuration Manager doesn't enable this feature by default. To enable this feature, contact Microsoft Support for assistance. <!-- what do they ask for? is a paid incident? are there specific days/hours? -->
+> In this version of Configuration Manager, this feature is pre-release and not enabled by default. It's currently available for Microsoft Premier customers. In the future, this feature will be available to all customers.
+>
+> To enable this feature, contact your technical account manager for assistance:
+>
+> - Your TAM opens an advisory case, which will use your Microsoft Premier hours.
+> - You can't change the case severity.
+> - Microsoft Support will assist these advisory cases during normal, weekday business hours.
 
 ## Plan
 
-- The hierarchy needs to consist of the CAS and a single child primary site. The primary site can have secondary sites. Review the planning steps and prerequisites to [Uninstall a primary site](/configmgr/core/servers/deploy/install/uninstall-sites-and-hierarchies#bkmk_primary).
+- The hierarchy needs to consist of the CAS and a single child primary site. The primary site can have secondary sites. To remove other child primary sites from the hierarchy, review the planning steps and prerequisites to [Uninstall a primary site](/configmgr/core/servers/deploy/install/uninstall-sites-and-hierarchies#bkmk_primary).
+
+- Make sure your child primary site meets the size and scale requirements for a [stand-alone primary site](/configmgr/core/plan-design/configs/size-and-scale-numbers#bkmk_pri).
 
 - Move or retire any site roles at the CAS, except the service connection point and the software update point. Configuration Manager setup handles these two roles when you remove the CAS. The following roles are most common at the CAS that you need to retire or move to the child primary site:
 

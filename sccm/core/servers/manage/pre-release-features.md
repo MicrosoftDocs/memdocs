@@ -2,7 +2,7 @@
 title: Pre-release features
 titleSuffix: Configuration Manager
 description: Pre-release features are features that are in the current branch for early testing in a production environment.
-ms.date: 11/29/2019
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Pre-release features in Configuration Manager
@@ -66,6 +64,7 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 <!-- With each current branch release, to help purge this list a bit, remove any entries that were added as a full feature in a version that's no longer supported -->
 | Feature          | Added as pre-release | Added as a full feature |  
 |------------------|----------------------|-------------------------|
+| [Remove the central administration site](/configmgr/core/servers/deploy/install/remove-central-administration-site) <!-- 3607277 --> | Version 2002 | ![Not yet](media/red_x.png) |
 | [Task sequence debugger](/sccm/osd/deploy-use/debug-task-sequence) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71--> | Version 1906 | ![Not yet](media/red_x.png) |
 | [Application groups](/sccm/apps/deploy-use/create-app-groups) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D--> | Version 1906 | ![Not yet](media/red_x.png) |
 | [Azure Active Directory user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->| Version 1906 | ![Not yet](media/red_x.png) |
