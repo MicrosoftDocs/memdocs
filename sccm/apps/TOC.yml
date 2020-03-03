@@ -1,5 +1,5 @@
-- name: Application management
-  href: understand/introduction-to-application-management.md
+- name: App management documentation
+  href: index.yml
 - name: Understand and explore
   items:
   - name: Introduction

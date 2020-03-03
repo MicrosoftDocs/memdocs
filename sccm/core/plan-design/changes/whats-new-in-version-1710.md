@@ -124,12 +124,10 @@ Beginning with this release, managing Surface driver updates is no longer a pre-
 
 ## Reporting
 
-### Limit Windows 10 Enhanced telemetry to only send data relevant to Windows Analytics Device Health
+### Limit Windows 10 Enhanced data to only send data relevant to Windows Analytics Device Health
 <!-- 1356148 -->
 
-You can now set the Windows 10 telemetry data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** telemetry level with Windows 10 version 1709 or later.
-
-For more information, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
+You can now set the Windows 10 diagnostic data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** level with Windows 10 version 1709 or later.
 
 <!-- ## Inventory  -->
 

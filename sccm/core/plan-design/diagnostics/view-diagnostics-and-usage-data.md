@@ -2,7 +2,7 @@
 title: View diagnostics data
 titleSuffix: Configuration Manager
 description: View diagnostic and usage data to confirm that your Configuration Manager hierarchy contains no sensitive information.
-ms.date: 09/10/2019
+ms.date: 12/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 594eb284-0d93-4c5d-9ae6-f0f71203682a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # How to view diagnostics and usage data for Configuration Manager
@@ -34,7 +32,7 @@ SELECT * FROM TEL_TelemetryResults
 
 When the service connection point is in offline mode, use the service connection tool to export the current data to a comma-separated values (CSV) file. Run the service connection tool on the service connection point with the **-Export** parameter.
 
-For more information, see [Use the service connection tool](/sccm/core/servers/manage/use-the-service-connection-tool).
+For more information, see [Use the service connection tool](/configmgr/core/servers/manage/use-the-service-connection-tool).
 
 ## <a name="bkmk_hashes"></a> One-way hashes
 
@@ -75,3 +73,8 @@ When you view the raw data, a common hashed value appears in each row of data. T
     ```
 
 3. Compare the script output against the GUID in the raw data. This process shows how the data is obscured.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview)

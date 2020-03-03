@@ -2,7 +2,7 @@
 title: Deprecated features
 titleSuffix: Configuration Manager
 description: Learn about the features that Configuration Manager no longer supports.
-ms.date: 11/29/2019
+ms.date: 02/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Removed and deprecated features for Configuration Manager
@@ -28,7 +26,6 @@ The following features are deprecated. You can still use them now, but Microsoft
 
 |Feature|Deprecation first announced|Support&nbsp;removed|  
 |-----------|---|--------------|  
-| [Windows Analytics](/sccm/core/clients/manage/monitor-windows-analytics) and [Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness) integration. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement). | October 14, 2019 | January 31, 2020 |
 |The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway. You won't be able to create a traditional cloud distribution point in the future.|February 2019|TBD<sup>[Note 1](#bkmk_note1)</sup>|
 |Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).|November 2018|TBD<sup>[Note 1](#bkmk_note1)</sup>|
 
@@ -42,6 +39,7 @@ The following features are no longer supported. In some cases, they're no longer
 
 |Feature|Deprecation first announced|Support&nbsp;removed|  
 |-----------|---|--------------|  
+| Windows Analytics and Upgrade Readiness integration. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement). | October 14, 2019 | January 31, 2020 |
 | Device health attestation assessment for conditional access compliance policies <!--1235616 aka 3608202--> For more information, see [What happened to hybrid MDM](/sccm/mdm/understand/what-happened-to-hybrid).| July 3, 2019 | Version 1910 |
 | The Configuration Manager Company Portal app | May 21, 2019 | Version 1910 |
 | The application catalog, including both site system roles: the application catalog website point and web service point. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat). | May 21, 2019 | Version 1910 |
@@ -49,11 +47,12 @@ The following features are no longer supported. In some cases, they're no longer
 |System Center Endpoint Protection for Mac and Linux<br>For more information, see [End of support blog post](https://go.microsoft.com/fwlink/?linkid=870182).|October 2018|December 31, 2018|
 |On-premises conditional access<br>For more information, see [What happened to hybrid MDM](/sccm/mdm/understand/what-happened-to-hybrid).|January 30, 2019|September 1, 2019|
 |Hybrid mobile device management (MDM)<br>For more information, see [What happened to hybrid MDM](/sccm/mdm/understand/what-happened-to-hybrid).<br><br>Starting with the 1902 Intune service release, expected at the end of February 2019, new customers can't create a new hybrid connection.<!--Intune feature 2683117-->|August 14, 2018|September 1, 2019|
+|Security Content Automation Protocol (SCAP) extensions. <!--3607889--><br>The previous certified version is still available on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=48741).|September 2018|Version 1810|
 |The **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).<!--1358309-->|August 11, 2017| Version 1806|
 |The previous version of Software Center.<br><br>For more information about the new Software Center, see [Plan for and configure application management](/sccm/apps/plan-design/plan-for-and-configure-application-management##bkmk_userex).|December 13, 2016|Version 1802|
 |Management of Virtual Hard Disks (VHDs) with Configuration Manager. <br><br>This deprecation includes removal of options to create a new VHD or manage a VHD using a task sequence, and the removal of the Virtual Hard Disks node from the Configuration Manager console. <br><br>Existing VHDs are not deleted, but are no longer accessible from within the Configuration Manager console.  |January 6, 2017 |Version 1710|
 |Task sequences: <br /> - Convert Disk to Dynamic <br /> - Install Deployment Tools |November 18, 2016|Version 1710|
-|Upgrade Assessment Tool<br><br>The Upgrade Assessment Tool depends on both Configuration Manager and the Application Compatibility Toolkit (ACT) 6.x. The final version of ACT was shipped in the Windows 10 v1511 ADK. As there are no further updates to ACT, support for the Upgrade Assessment Tool is discontinued. <br><br>The Upgrade Assessment Tool is replaced by the [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) feature. Deprecation notice was added to the [download page for UAT](https://www.microsoft.com/software-download/windows10) on September 12, 2016. | September 12, 2016  | July 11, 2017 |
+|Upgrade Assessment Tool<br><br>The Upgrade Assessment Tool depends on both Configuration Manager and the Application Compatibility Toolkit (ACT) 6.x. The final version of ACT was shipped in the Windows 10 v1511 ADK. As there are no further updates to ACT, support for the Upgrade Assessment Tool is discontinued. Deprecation notice was added to the [download page for UAT](https://www.microsoft.com/software-download/windows10) on September 12, 2016. | September 12, 2016  | July 11, 2017 |
 |Software update points with a network load balancing (NLB) cluster | February 27, 2016 | Version 1702 |
 |Task sequences: <br /> - OSDPreserveDriveLetter  <br /><br /> During an operating system deployment, by default, Windows Setup now determines the best drive letter to use (typically C:). If you want to specify a different drive to use, you can change the location in the Apply Operating System task sequence step. Go to the **Select the location where you want to apply this operating system** setting. Select **Specific logical drive letter** and choose the drive that you want to use. |June 20, 2016 |Version 1606 |
 |Network Access Protection (NAP)  - as found in System Center 2012 Configuration Manager|July 10, 2015|Version 1511|  

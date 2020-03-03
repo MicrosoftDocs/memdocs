@@ -62,6 +62,11 @@ Set up the client computer for [Windows BranchCache](/sccm/core/plan-design/conf
 
 - **Maximum BranchCache cache size (percentage of disk)**: The percentage of the disk that you allow BranchCache to use.
 
+> [!TIP]
+> If you set **Configure BranchCache** to **No**, then Configuration Manager doesn't configure any BranchCache settings.
+>
+> To disable BranchCache, set **Configure BranchCache** to **Yes**, and then set **Enable BranchCache** to **No**.<!-- 6244852 -->
+
 ### Configure client cache size
 
 The Configuration Manager client cache on Windows computers stores temporary files used to install applications and programs. If this option is set to **No**, the default size is 5,120 MB.
@@ -333,7 +338,7 @@ For more information about maintenance windows, see [How to use maintenance wind
 
 - **Specify the snooze duration for computer restart countdown notifications (minutes)** (Starting in version 1906)<!--3976435-->
   - The default value is 240 minutes.
-  - Your snooze duration value should be less than the temporary notification value minus the value for the notification the user cant dismiss.
+  - Your snooze duration value should be less than the temporary notification value minus the value for the notification the user can't dismiss.
   - For more information, see [Device restart notifications](/sccm/core/clients/deploy/device-restart-notifications).
 
 **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**<!--3555947-->: Starting in version 1902, configuring this setting to **Yes** changes the user experience to be more intrusive. This setting applies to all deployments of applications, task sequences, and software updates. For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact).
@@ -898,10 +903,14 @@ When you set this option to **Yes**, it enables the configuration of Office 365 
 
 ### <a name="bkmk_SUMMaint"></a> Enable installation of software updates in "All deployments" maintenance window when "Software Update" maintenance window is available
 
-When you set this option to **Yes** and the client has at least one "Software Update" maintenance window defined, software updates will install during an "All deployments" maintenance window. By default, this setting is set to **No**. This client setting was added in Configuration Manager version 1810. <!--2839307-->
+Starting in version 1810, when you set this option to **Yes** and the client has at least one "Software Update" maintenance window defined, software updates will install during an "All deployments" maintenance window.
+
+By default, this setting is set to **No**. This value uses the same behavior as before: if both types exist, it ignores the window. <!--2839307-->
 
 > [!NOTE]
 > This setting also applies to maintenance windows that you configure to apply to **Task sequences**.<!-- SCCMDocs-pr #4596 -->
+>
+> If the client only has an **All deployments** window available, it still installs software updates or task sequences in that window.
 
 #### Maintenance window example
 
@@ -976,8 +985,9 @@ Choose **Yes** to create automatic user device affinity based on the usage infor
 <!--3485366-->
 When this setting is **Yes**, users can identify their own primary devices in Software Center. For more information, see the [Software Center user guide](/sccm/core/understand/software-center#work-information).
 
-
-
 ## Windows Analytics
 
-For more information on these settings, see [Configure Clients to report data to Windows Analytics](/sccm/core/clients/manage/monitor-windows-analytics#configure-clients-to-report-data-to-windows-analytics).
+> [!Important]  
+> The Windows Analytics service is retired as of January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+>
+> Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](/sccm/desktop-analytics/overview).

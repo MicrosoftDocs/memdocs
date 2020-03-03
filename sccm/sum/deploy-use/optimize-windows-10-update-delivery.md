@@ -2,7 +2,7 @@
 title: Optimize Windows 10 update delivery
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to manage update content to stay current with Windows 10.  
-ms.date: 12/17/2019
+ms.date: 01/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -67,7 +67,7 @@ To use Delivery Optimization for all Windows update installation files, enable t
 > [!IMPORTANT]
 > - Delivery Optimization must be enabled (default) and not bypassed. For more information, see [Windows Delivery Optimization reference](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference).
 > - Verify your [Delivery Optimization client settings](/sccm/core/clients/deploy/about-client-settings#delivery-optimization) when changing your [software updates client settings](/sccm/core/clients/deploy/about-client-settings#software-updates) for delta content.
-
+> - Delivery Optimization can't be used for Office 365 client updates if Office COM is enabled. Office COM is used by Configuration Manager to manage updates for Office 365 clients. You can deregister Office COM to allow the use of Delivery Optimization for Office 365 updates. When Office COM is disabled, software updates for Office 365 are managed by the default Office Automatic Updates 2.0 scheduled task. This means that Configuration Manager doesn’t dictate or monitor the installation process for Office 365 updates. Configuration Manager will continue to collect information from hardware inventory to populate Office 365 Client Management Dashboard in the console. For information about how to deregister Office COM, see [Enable Office 365 clients to receive updates from the Office CDN instead of Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
 
 
 ### Configuration Manager peer cache
@@ -99,7 +99,7 @@ Selecting the right peer caching technology for express installation files depen
 | Cache size on disk control | Yes | Yes | Yes |
 | Discovery of a peer source | Automatic | Manual (client agent setting) | Automatic |
 | Peer discovery | Via Delivery Optimization cloud service (requires internet access) | Via management point (based on client boundary groups) | Multicast |
-| Reporting | Yes (using Windows Analytics) | ConfigMgr client data sources dashboard | ConfigMgr client data sources dashboard |
+| Reporting | Yes (using Desktop Analytics) | ConfigMgr client data sources dashboard | ConfigMgr client data sources dashboard |
 | WAN usage control | Yes (native, can be controlled via group policy settings) | Boundary groups | Subnet support only |
 | Management through ConfigMgr | Partial (client agent setting) | Yes (client agent setting) | Yes (client agent setting) |
 

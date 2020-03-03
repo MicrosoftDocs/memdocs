@@ -2,7 +2,7 @@
 title: Product and licensing FAQ
 titleSuffix: Configuration Manager
 description: Find answers for common product and license questions for Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 02/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Frequently asked questions for Configuration Manager branches and licensing
@@ -67,9 +65,9 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 
 ### <a name="bkmk_mem"></a> Does anything change with the rebrand to Microsoft Endpoint Manager?
 
-Yes. If you're already licensed for Configuration Manager, then you're also automatically licensed for Intune for enrolling Windows PCs in [co-management](/configmgr/comanage/overview). This change makes it easier for you to manage Windows devices with Microsoft Endpoint Manager.
+Yes. Effective December 1, 2019, if you're already licensed for Configuration Manager, then you're also automatically licensed for Intune for enrolling Windows PCs in [co-management](/configmgr/comanage/overview). This change makes it easier for you to manage Windows devices with Microsoft Endpoint Manager.
 
-A new license is now available that lets Configuration Manager customers with Software Assurance get Intune PC management rights without having to purchase an additional Intune license for co-management. You no longer need to assign individual Intune or EMS licenses to your users.
+A new license is now available that lets Configuration Manager customers with Software Assurance get Intune PC management rights without having to purchase an additional Intune license for co-management. You no longer need to purchase and assign individual Intune or EMS licenses to your users.
 
 - Devices managed by Configuration Manager and enrolled into co-management have almost the same rights as an Intune standalone-managed PC. However, after resetting they can't be re-provisioned by using AutopIlot.
 
@@ -78,7 +76,6 @@ A new license is now available that lets Configuration Manager customers with So
 - If you want to use Intune for managing iOS, Android, or macOS devices, then you do need the appropriate Intune subscription through standalone Intune license, Enterprise Mobility + Security (EMS), or Microsoft 365.
 
 - The licensing that you previously had for System Center Configuration Manager still applies to Microsoft Endpoint Configuration Manager. If installing a new site, use existing product keys.
-
 
 ### <a name="bkmk_ems-expires"></a> I have Enterprise Mobility + Security and it expired, what must I do now?  
 
@@ -137,7 +134,6 @@ Approved use rights for the SQL capabilities with Configuration Manager include:
 - SQL Server Reporting Services (SSRS) for reporting point role
 - Data warehouse service point role
 - Database replicas for management point roles
-- SQL Server Always On
 
 The SQL Server license that's included with Configuration Manager supports each instance of SQL Server that you install to host a database for Configuration Manager. However, only databases for Configuration Manager in the preceding list can run on that SQL Server when you use this license. If a database for any additional Microsoft or third-party product shares the SQL Server, you must have a separate license for that SQL Server instance.
  <!-- sms500967 -->

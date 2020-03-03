@@ -1,0 +1,53 @@
+### YamlMime:Landing
+
+title: Desktop Analytics documentation
+summary: Desktop Analytics is a cloud service that integrates with Configuration Manager. It provides insights to help you update your Windows clients.
+
+metadata:
+  title: Desktop Analytics documentation
+  titleSuffix: Configuration Manager
+  description: Desktop Analytics is a cloud service that integrates with Configuration Manager. It provides insights to help you update your Windows clients.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-other
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+
+landingContent:
+  - title: About Desktop Analytics
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Desktop Analytics?
+            url: overview.md
+          - text: What's new
+            url: whats-new.md
+      - linkListType: tutorial
+        links:
+          - text: Pilot Windows 10
+            url: tutorial-windows10.md
+
+  - title: Get started
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Set up Desktop Analytics
+            url: set-up.md
+          - text: Connect Configuration Manager
+            url: connect-configmgr.md
+          - text: Enroll devices
+            url: enroll-devices.md
+
+  - title: Resources
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Desktop Analytics FAQ
+            url: faq.md
+          - text: Enable data sharing
+            url: enable-data-sharing.md
+          - text: Monitor connection health
+            url: monitor-connection-health.md
+          - text: Troubleshoot Desktop Analytics
+            url: troubleshooting.md

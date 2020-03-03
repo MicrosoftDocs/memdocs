@@ -2,7 +2,7 @@
 title: Manage task sequences
 titleSuffix: Configuration Manager
 description: Create, edit, deploy, import, and export task sequences to manage them and automate tasks in your environment.
-ms.date: 11/29/2019
+ms.date: 02/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Manage task sequences to automate tasks
@@ -103,6 +101,9 @@ Use the following procedure to configure the behavior of the task sequence on th
 
 Configure a task sequence as high-impact and customize the messages that users receive when they run the task sequence.
 
+> [!WARNING]
+> If you use PXE deployments, and configure device hardware with the network adapter as the first boot device, these devices can automatically start an OS deployment task sequence without user interaction. Deployment verification doesn't manage this configuration. While this configuration may simplify the process and reduce user interaction, it puts the device at greater risk for accidental reimage.
+
 ### Set a task sequence as a high-impact task sequence
 
 Use the following procedure to set a task sequence as high-impact.
@@ -184,7 +185,7 @@ When the task sequence starts, in most scenarios it records the currently enable
 
 <!-- 5554928 -->
 
-You deploy a task sequence that you configure for high performance. The deployed task sequence always runs as high performance, even if you disable the high performance option. To change this setting, create a new deployment for the task sequence.
+You need to create a new task sequence deployment to enable or disable this setting for high performance. The new setting appears on existing deployments, but it doesn't apply.<!-- SCCMDocs#2107 -->
 
 ## <a name="BKMK_DistributeTS"></a> Distribute referenced content  
 

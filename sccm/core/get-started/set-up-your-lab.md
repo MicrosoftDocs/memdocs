@@ -60,7 +60,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
      For additional information, review this [overview of Active Directory Domain Services](https://technet.microsoft.com/library/hh831484).  
 
--   **Hyper-V is used with a few virtual machines** to verify that the management steps taken in these exercises are functioning as expected. A minimum of three virtual machines is recommended, with Windows 7 (or later) installed.  
+-   **Hyper-V is used with a few virtual machines** to verify that the management steps taken in these exercises are functioning as expected. A minimum of three virtual machines is recommended, with Windows 10 installed.  
 
      For additional information, review this [overview of Hyper-V](https://technet.microsoft.com/library/hh831531.aspx).  
 
