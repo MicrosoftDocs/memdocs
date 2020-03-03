@@ -213,7 +213,7 @@ You run Configuration Manager setup to uninstall a primary site that doesn't hav
 
 1. After you turn off distributed views on each link, confirm that the data from the primary site finishes reinitializing at the CAS. To monitor the initialization of data, see [Monitor replication](/configmgr/core/servers/manage/monitor-replication).
 
-1. After the data successfully reinitializes with the CAS, you can [uninstall the primary site](#procedure-to-uninstall-a-primary-site).
+1. After the data successfully reinitializes with the CAS, you can [uninstall the primary site](#bkmk_pri-process).
 
 1. When the primary site is uninstalled, you can reconfigure distributed views on links from the CAS to other primary sites.
 
