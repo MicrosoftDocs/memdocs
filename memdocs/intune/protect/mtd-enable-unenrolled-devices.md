@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,7 +34,11 @@ ms.collection: M365-identity-device-management
 During Mobile Threat Defense (MTD) setup, you've configured a policy for classifying threats in your Mobile Threat Defense partner console and you've created the app protection policy in Intune. If you've already configured the Intune connector in the MTD partner console, you can now enable the MTD connection for MTD partner applications.
 
 > [!NOTE]
-> This article applies to all Mobile Threat Defense partners that support app protection policies: Better Mobile (Android), Zimperium (Android/iOS), Lookout for Work (Android/iOS).
+> This article applies to all Mobile Threat Defense partners that support app protection policies:
+>
+> - Better Mobile (Android,iOS/iPadOS)
+> - Zimperium (Android,iOS/iPadOS)
+> - Lookout for Work (Android,iOS/iPadOS)
 
 ## Classic conditional access policies for MTD apps
 
@@ -87,4 +91,4 @@ You can decide which MTD toggle options you need to enable according to your org
 
 ## Next Steps
 
-- [Create Mobile Threat Defense (MTD) app protection policy with Intune](~/protect/mtd-app-protection-policy.md).
+- [Create Mobile Threat Defense (MTD) app protection policy with Intune](mtd-app-protection-policy.md).

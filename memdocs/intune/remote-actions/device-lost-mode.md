@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/25/2018
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -36,7 +36,8 @@ The **Lost mode** device action helps you enable lost mode on lost or stolen iOS
 
 ## Supported platforms
 
-- iOS/iPadOS 9.3 and later
+- iOS 9.3 and later
+- iPadOS 13.0 or later
 
 This feature is not supported for the following: 
 - Windows

@@ -207,7 +207,7 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 
 ### Pradeo app configuration policy
 
-Pradeo doesn't support application configuration policy on iOS.  Instead, to get a configured app, work with Pradeo to implement custom IPA or APK files that are preconfigured with the settings you want.
+Pradeo doesn't support application configuration policy on iOS/iPadOS.  Instead, to get a configured app, work with Pradeo to implement custom IPA or APK files that are preconfigured with the settings you want.
 
 ### Better Mobile app configuration policy
 

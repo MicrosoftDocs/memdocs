@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/11/2019
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,7 +36,7 @@ You can control mobile device access to corporate resources based on risk assess
 - Malicious apps installed
 - Malicious network profiles
 
-You can configure Conditional Access policies based on Lookout's risk assessment enabled through Intune compliance policies. Settings let you allow or block noncompliant devices based on detected threats.
+You can configure Conditional Access policies based on Lookout's risk assessment enabled through Intune compliance policies for enrolled devices, which you can use to allow or block noncompliant devices to access corporate resources based on detected threats. For unenrolled devices, you can use app protection policies to enforce a block or selective wipe based on detected threats.
 
 ## How do Intune and Lookout Mobile Endpoint Security help protect company resources?
 Lookout’s mobile app, **Lookout for work**, is installed and run on mobile devices. This app captures file system, network stack, and device and application telemetry where available, then sends it to the Lookout cloud service to assess the device's risk for mobile threats. You can change risk level classifications for threats in the Lookout console to suit your requirements.  
@@ -103,7 +103,9 @@ Detect threats to your network such as Man-in-the-middle attacks, and prevent sy
 
 ## Next steps
 Here are the main steps you must do to implement this solution:
-1. [Set up your Lookout integration](lookout-mtd-connector-integration.md)
-2. [Enable Mobile Endpoint Security in Intune](mtd-connector-enable.md)
-3. [Add and assign the Lookout for Work app](mtd-apps-ios-app-configuration-policy-add-assign.md)
-4. [Configure Lookout device compliance policy](mtd-device-compliance-policy-create.md)
+- [Set up your Lookout integration](lookout-mtd-connector-integration.md)
+- [Enable Mobile Endpoint Security in Intune](mtd-connector-enable.md)
+- [Add and assign the Lookout for Work app](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Configure Lookout device compliance policy](mtd-device-compliance-policy-create.md)
+- [Create an MTD app protection policy](mtd-app-protection-policy.md)
+

@@ -82,14 +82,14 @@ Windows 10 update rings support [scope tags](../fundamentals/scope-tags.md). You
 
 ### Create and assign update rings
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center]( https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Windows** > **Windows 10 Update Rings** > **Create**.
 
 3. Under *Basics*, specify a name, a description (optional), and then select **Next**.
-  ![Create an update ring]( ./media/windows-update-for-business-configure/basics-tab.png)
-  
-4. Under **Update ring settings**, configure settings for your business needs. For information about the available settings, see Windows update settings. After configuring *Update and User experience* settings, select **Next**.
+  ![Create an update ring](./media/windows-update-for-business-configure/basics-tab.png)
+
+4. Under **Update ring settings**, configure settings for your business needs. For information about the available settings, see [Windows update settings](../protect/windows-update-settings.md). After configuring *Update and User experience* settings, select **Next**.
 
 5. Under **Scope tags**, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update ring. Choose one or more tags, and then click **Select** to add them to the update ring and return to the *Scope tag*s page.
 

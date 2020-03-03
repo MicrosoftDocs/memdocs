@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/10/2019
+ms.date: 02/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -25,9 +25,9 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Before you can assign, monitor, configure, or protect apps, you must add them to Microsoft Intune.
+Before you can configure, assign, protect, or monitor apps, you must add them to Microsoft Intune.
 
-The users of apps and devices at your company (your company's workforce) might have several app requirements. Before adding apps to Intune and making them available to your workforce, you must assess and understand a few app fundamentals. You must understand the various types of apps that are available for Intune. You must assess the app requirements, such as the platforms and capabilities that your workforce needs. You must determine whether to use Intune to manage the devices (including apps) or have Intune manage the apps without managing the devices. Finally, you must determine the apps and capabilities that your workforce needs, and who needs them. The information in this article helps you get started.
+The users of apps and devices at your company (your company's workforce) might have several app requirements. Before adding apps to Intune and making them available to your workforce, you may find it helpful to assess and understand a few app fundamentals. There are various types of apps that are available for Intune. You must determine app requirements that are needed by the users at your company, such as the platforms and capabilities that your workforce needs. You must determine whether to use Intune to manage the devices (including apps) or have Intune manage the apps without managing the devices. Also, you must determine the apps and capabilities that your workforce needs, and who needs them. The information in this article helps you get started.
 
 ## App types in Microsoft Intune
 
@@ -207,4 +207,4 @@ To learn how to add apps for each platform to Intune, see:
 - [Microsoft Edge for macOS](apps-edge-macos.md)
 - [Built-in apps](apps-add-built-in.md)
 - [Android Enterprise system app](apps-ae-system.md)
-- [Win32 apps](~/apps/apps-win32-app-management.md)
+- [Win32 apps](apps-win32-app-management.md)

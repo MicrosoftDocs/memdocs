@@ -49,7 +49,7 @@ You'll need a test tenant with the following subscriptions for this tutorial:
 
 - Office 365 Business subscription that includes Exchange ([free trial](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
-Before you begin, create a test device profile for iOS devices by following the steps in [Quickstart: Create an email device profile for iOS](../configuration/quickstart-email-profile.md).
+Before you begin, create a test device profile for iOS devices by following the steps in [Quickstart: Create an email device profile for iOS/iPadOS](../configuration/quickstart-email-profile.md).
 
 ## Sign in to Intune
 
@@ -156,7 +156,7 @@ Now we’ll create a Conditional Access policy that requires all device platform
 
    5. Choose **Select**.
 
-   ![Select conrols](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png)
+   ![Select controls](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png)
 
 8. Under **Enable policy**, select **On**.
 
@@ -166,7 +166,7 @@ Now we’ll create a Conditional Access policy that requires all device platform
 
 ## Try it out
 
-With the policies you’ve created, any iOS device that attempts to sign in to Office 365 email will need to enroll in Intune and use the Outlook mobile app for iOS. To test this scenario on an iOS device, try signing in to Exchange Online using credentials for a user in your test tenant. You’ll be prompted to enroll the device and install the Outlook mobile app.
+With the policies you’ve created, any iOS device that attempts to sign in to Office 365 email will need to enroll in Intune and use the Outlook mobile app for iOS/iPadOS. To test this scenario on an iOS device, try signing in to Exchange Online using credentials for a user in your test tenant. You’ll be prompted to enroll the device and install the Outlook mobile app.
 
 1. To test on an iPhone, go to **Settings** > **Passwords & Accounts** > **Add Account** > **Exchange**.
 

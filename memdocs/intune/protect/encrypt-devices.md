@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 02/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -42,17 +42,30 @@ Intune also provides a built-in [encryption report](encryption-monitor.md) that 
 
 Use Intune to configure FileVault disk encryption on devices that run macOS. Then, use the Intune encryption report to view encryption details for those devices and to manage recovery keys for FileVault encrypted devices.
 
-Please note, user-approved device enrollment is required for FileVault to work on the device. The user must manually approve of the management profile from system prefrences for enrollment to be considered user-approved. 
+User-approved device enrollment is required for FileVault to work on the device. The user must manually approve of the management profile from system preferences for enrollment to be considered user-approved.
 
 FileVault is a whole-disk encryption program that is included with macOS. You can use Intune to configure FileVault on devices that run **macOS 10.13 or later**.
 
 To configure FileVault, create a [device configuration profile](../configuration/device-profile-create.md) for endpoint protection for the macOS platform. FileVault settings are one of the available settings categories for macOS endpoint protection.
 
-After you create a policy to encrypt devices with FileVault, the policy is applied to devices in two stages. First, the device is prepared to enable Intune to retrieve and back up the recovery key. This is referred to as escrow. After the key is escrowed, the disk encryption can start.
+After you create a policy to encrypt devices with FileVault, the policy is applied to devices in two stages. First, the device is prepared to enable Intune to retrieve and back up the recovery key. This action is referred to as escrow. After the key is escrowed, the disk encryption can start.
 
 ![FileVault settings](./media/encrypt-devices/filevault-settings.png)
 
 For details about the FileVault setting you can manage with Intune, see [FileVault](endpoint-protection-macos.md#filevault) in the Intune article for macOS endpoint protection settings.
+
+### Permissions to manage FileVault
+
+To manage FileVault in Intune, your account must have the applicable Intune [role-based access control](../fundamentals/role-based-access-control.md) (RBAC) permissions.
+
+Following are the FileVault permissions, which are part of the **Remote tasks** category, and the built-in RBAC roles that grant the permission:
+ 
+- **Get FileVault key**:
+  - Help Desk Operator
+  - Endpoint security manager
+
+- **Rotate FileVault key**
+  - Help Desk Operator
 
 ### How to configure macOS FileVault
 
@@ -87,7 +100,7 @@ After Intune encrypts a macOS device with FileVault, you can view that device's 
 
 ### Retrieve personal recovery key from MEM encrypted macOS devices
 
-End users will be able to retrieve their personal recovery key (FileVault key) using the iOS Company Portal app. The device that has the personal recovery key must be enrolled with Intune and encrypted with FileVault through Intune. Using the iOS Company Portal app, the end user can open a web page that includes the FileVault personal recovery key. You can also retrieve the recovery key from Intune by selecting **Devices** > *the encrypted and enrolled macOS device* > **Get recovery key**. 
+End users retrieve their personal recovery key (FileVault key) using the iOS Company Portal app. The device that has the personal recovery key must be enrolled with Intune and encrypted with FileVault through Intune. Using the iOS Company Portal app, the end user can open a web page that includes the FileVault personal recovery key. You can also retrieve the recovery key from Intune by selecting **Devices** > *the encrypted and enrolled macOS device* > **Get recovery key**. 
 
 ## BitLocker encryption for Windows 10
 
@@ -134,7 +147,7 @@ Devices must meet the following prerequisites to support rotation of the BitLock
 
   - **Client-driven recovery password rotation**
 
-  This setting is found under *Windows Encryption* as part of a device configuration policy for Windows 10 Endpoint Protection.
+  This setting is under *Windows Encryption* as part of a device configuration policy for Windows 10 Endpoint Protection.
   
 #### To rotate the BitLocker recovery key
 

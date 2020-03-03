@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/21/2019
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -48,7 +48,7 @@ The **Sync** device action forces the selected device to immediately check in wi
 4. In the list of devices you manage, select a device to open its *Overview* pane, and then select **Sync**.
 5. To confirm, select **Yes**.
 
-To see the status of the sync action, choose **Devices** > **Device actions**.
+To see the status of the sync action, choose **Devices** > **Monitor** > **Device actions**.
 
 You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 

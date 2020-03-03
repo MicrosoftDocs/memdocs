@@ -34,7 +34,7 @@ If you allow access to company data hosted by Office 365, you can control how us
 
 App protection policies set up with Intune also work on devices managed with a non-Microsoft device management solution. The personal data on the devices is not touched; only company data is managed by the IT department. 
 
-You can set app protection policies for Office mobile apps on devices running Windows, iOS, or Android to protect company data. These policies let you set policies such as app-based PIN or company data encryption, or more advanced settings to restrict how you cut, copy, paste, and save-as features are used by users between managed and unmanaged apps. You can also remotely wipe company data without requiring users enroll devices.
+You can set app protection policies for Office mobile apps on devices running Windows, iOS/iPadOS, or Android to protect company data. These policies let you set policies such as app-based PIN or company data encryption, or more advanced settings to restrict how you cut, copy, paste, and save-as features are used by users between managed and unmanaged apps. You can also remotely wipe company data without requiring users enroll devices.
 
 Intune app protection policies are independent of device management. App protection policies let you manage Office mobile apps on both unmanaged and Intune-managed devices, as well as device managed by non-Microsoft MDM solutions.
 
@@ -45,7 +45,7 @@ The following action plan can be used when you meet the following requirements:
 * Your company is ready to transition securely to the cloud.
 * Your company uses Office 365 Exchange Online, SharePoint Online, OneDrive for Business, or Yammer.
 * Your company has licenses for Microsoft 365, Enterprise Mobility + Security (EMS), or Azure Information Protection.
-* Your company allows users to access company data from company-owned or personally-owned Windows, iOS, or Android devices.
+* Your company allows users to access company data from company-owned or personally-owned Windows, iOS/iPadOS, or Android devices.
 * Your company does not want to require enrollment of personally-owned devices in a device management service.
 
 ## Action plan

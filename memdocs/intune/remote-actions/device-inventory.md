@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -44,11 +44,16 @@ This article shows you how to view all your devices, and their properties in the
    - **Overview** shows the device name, and lists some key properties of the device, like whether it's a bring-your-own-device (BYOD) device, check in time, and more. You can do the following on the device:
       - [Retire](devices-wipe.md#retire)
       - [Wipe](devices-wipe.md#wipe)
+      - [Delete](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Remote lock](device-remote-lock.md)
-      - [Synchronize device](device-sync.md)
+      - [Synch](device-sync.md)
       - [Reset passcode](device-passcode-reset.md)
       - [Restart](device-restart.md) (Windows only)
       - [Fresh Start](device-fresh-start.md) (Windows only)
+      - [Autopilot reset]() (Windows only)
+      - [Quick scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
+      - [Full scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
+       - [Rename device](device-rename.md)
       - Start a remote assistance session
    - Use **Properties** to assign a [device category you create](../enrollment/device-group-mapping.md), and change ownership of the device to a personal device, or a corporate device.
    - **Hardware** includes many details about the device, like the device ID, operating system and version, storage space, and more details.

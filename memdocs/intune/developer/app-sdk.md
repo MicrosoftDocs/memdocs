@@ -52,7 +52,7 @@ IT administrators can require the end-user to enter a PIN before accessing corpo
 IT administrators can require users to sign in with their work or school account to access the app. The Intune App SDK uses Azure Active Directory to provide a single sign-on experience, where the credentials, once entered, are reused for subsequent logins. We also support authentication of identity management solutions federated with Azure Active Directory.
 
 ### Check device health and compliance
-IT administrators can a check the health of the device and its compliance with Intune policies before end-users access the app. On iOS, this policy checks if the device has been jailbroken. On Android, this policy checks if the device has been rooted.
+IT administrators can a check the health of the device and its compliance with Intune policies before end-users access the app. On iOS/iPadOS, this policy checks if the device has been jailbroken. On Android, this policy checks if the device has been rooted.
 
 ### Support multi-identity
 Multi-identity support is a feature of the SDK that enables coexistence of policy-managed (corporate) and unmanaged (personal) accounts in a single app.

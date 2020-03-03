@@ -117,7 +117,7 @@ The following procedure assumes you've previously created a user group in Azure 
 6. Select **Create connector** to complete configuration of the connector. Later, when you're satisfied with your results, you can extend enrollment to additional user groups.
 
 ## Configure Intune to use Lookout as a Mobile Threat Defense provider
-After you configure Lookout MES, you must set up a connection to [Lookout in Intune](~/protect/mtd-connector-enable.md).  
+After you configure Lookout MES, you must set up a connection to [Lookout in Intune](mtd-connector-enable.md).  
 
 ## Additional settings in the Lookout MES Console
 The following are additional settings you can configure in the Lookout MES Console.  
@@ -160,4 +160,4 @@ For details on how to get the *Lookout for Work* app deployed to a device, see [
 ## Next steps
 
 - [Set up Lookout apps for enrolled devices](mtd-apps-ios-app-configuration-policy-add-assign.md)
-- [Set up Lookout apps for unenrolled devices](~/protect/mtd-add-apps-unenrolled-devices.md)
+- [Set up Lookout apps for unenrolled devices](mtd-add-apps-unenrolled-devices.md)

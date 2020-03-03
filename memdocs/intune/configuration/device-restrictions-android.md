@@ -39,7 +39,7 @@ This article shows you all the Microsoft Intune device restrictions settings tha
 - **Camera**: Choose **Block** to prevent access to the camera. **Not configured** allows access to the device's camera.
 - **Copy and paste (Samsung Knox only)**: Choose **Block** to prevent copy-and-paste. **Not configured** allows copy and paste functions on the device.
 - **Clipboard sharing between apps (Samsung Knox only)**: Choose **Block** to prevent using the clipboard to copy-and-paste between apps. **Not configured** allows using the clipboard to copy and paste between apps.
-- **Diagnostic data submission (Samsung Knox only)**: Choose **Block** to stop the user from submitting diagnostic data from the device. **Not configured** allows the user to submit the data.
+- **Diagnostic data submission (Samsung Knox only)**: Choose **Block** to stop the user from submitting bug reports from the device. **Not configured** allows the user to submit the data.
 - **Wipe (Samsung Knox only)**: Allows the user to run a [wipe](../remote-actions/devices-wipe.md) action on the device.
 - **Geolocation (Samsung Knox only)**: Choose **Block** to disable the device from using location information. **Not configured** allows the device to use the location information.
 - **Power off (Samsung Knox only)**: Choose **Block** to prevent the user from powering off device. If this setting is disabled, the **Number of sign-in failures before wiping device** setting can't be set, and doesn't work. **Not configured** allows the user to power off the device.

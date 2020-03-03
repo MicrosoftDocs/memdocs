@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,13 +34,12 @@ ms.collection: M365-identity-device-management
 
 Intune with Mobile Threat Defense (MTD) helps you detect threats and assess risk on mobile devices. You can create an Intune app protection policy that assesses risk to determine if the device is allowed to access corporate data or not.
 
-
 > [!NOTE]
 > This article applies to all Mobile Threat Defense partners that support app protection policies:
 >
-> - Better Mobile (Android)
-> - Zimperium (Android, iOS)
-> - Lookout for Work (Android, iOS).
+> - Better Mobile (Android, iOS/iPadOS)
+> - Zimperium (Android, iOS/iPadOS)
+> - Lookout for Work (Android, iOS/iPadOS).
 
 ## Before you begin
 
@@ -54,7 +53,7 @@ Prerequisites for app protection policy with MTD:
 
 Use the procedure to [create an Application protection policy for either iOS/iPadOS or Android](../apps/app-protection-policies.md#app-protection-policies-for-iosipados-and-android-apps), and use the following information on the *Apps*, *Conditional launch*, and *Assignments* pages:
 
-- **Apps**: Select the apps you wish to be targeted by app protection policies. For this feature set, these apps will be blocked or selectively wiped based on device risk assessment from your chosen Mobile Threat Defense vendor. 
+- **Apps**: Select the apps you wish to be targeted by app protection policies. For this feature set, these apps are blocked or selectively wiped based on device risk assessment from your chosen Mobile Threat Defense vendor.
 - **Conditional launch**:  Below *Device conditions*, use the drop-down box to select **Max allowed device threat level**.
 
   Options for the threat level **Value**:
@@ -62,7 +61,7 @@ Use the procedure to [create an Application protection policy for either iOS/iPa
   - **Secured**: This level is the most secure. The device can't have any threats present and still access company resources. If any threats are found, the device is evaluated as noncompliant.
   - **Low**: The device is compliant if only low-level threats are present. Anything higher puts the device in a noncompliant status.
   - **Medium**: The device is compliant if the threats found on the device are low or medium level. If high-level threats are detected, the device is determined as noncompliant.
-  - **High**: This level is the least secure. This allows all threat levels and uses Mobile Threat Defense for reporting purposes only. Devices are required to have the MTD app activated with this setting.
+  - **High**: This level is the least secure and allows all threat levels, using Mobile Threat Defense for reporting purposes only. Devices are required to have the MTD app activated with this setting.
 
   Options for **Action**:
 
@@ -71,7 +70,6 @@ Use the procedure to [create an Application protection policy for either iOS/iPa
 
 - **Assignments**: Assign the policy to groups of users.  The devices used by the group’s members are evaluated for access to corporate data on targeted apps via Intune app protection.
 
+## Next steps
 
-## Next steps  
-
-- Learn more about [Mobile Threat Defense](~/protect/mobile-threat-defense.md) in Microsoft Intune.
+- Learn more about [Mobile Threat Defense](mobile-threat-defense.md) in Microsoft Intune.

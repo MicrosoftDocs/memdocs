@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,7 +29,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Create a Conditional Access policy for Exchange on-premises and legacy Exchange Online Dedicated
+# Configure Exchange on-premises access for Intune
 
 This article shows you how to configure Conditional Access for Exchange on-premises based on device compliance.
 
@@ -66,10 +66,29 @@ Before you can configure Conditional Access, verify the following configurations
 
 ### Support for mobile devices
 
-- Windows Phone 8.1 and later
-- Native email app on iOS.
-- EAS mail clients such as Gmail on Android 4 or later.
-- EAS mail clients **Android work profile devices:** Only **Gmail** and **Nine Work for Android Enterprise** in the **work profile** are supported on Android work profile devices. For Conditional Access to work with Android work profiles, you must deploy an email profile for the Gmail or Nine Work for Android Enterprise app, and also deploy those apps as a required installation.
+- **Windows Phone 8.1 and later** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
+- **Native email app on iOS/iPadOS** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
+- **EAS mail clients such as Gmail on Android 4 or later** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
+
+- **EAS mail clients on Android work profile devices** - Only *Gmail* and *Nine Work for Android Enterprise* are supported on Android work profile devices. For Conditional Access to work with Android work profiles, you must deploy an email profile for the *Gmail* or *Nine Work for Android Enterprise* app, and also deploy those apps as a required installation. After you deploy the app you can set up device-based Conditional Access.
+
+#### To set up Conditional Access for Android work profile devices
+
+  1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  
+  2. Deploy the Gmail or Nine Work app as **Required**.
+
+  3. Select **Devices** > **Configuration profiles** > **Create profile**, enter **Name** and **Description** for the profile.
+
+  4. Select **Android enterprise** in **Platform**, select **Email** in **Profile type**.
+
+  5. Configure the [email profile settings](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise).
+
+  6. When you're done, select **OK** > **Create** to save your changes.
+
+  7. After you create the email profile, [assign it to groups](https://docs.microsoft.com/intune/device-profile-assign).
+
+  8. Set up [device-based conditional access](https://docs.microsoft.com/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
 
 > [!NOTE]
 > Microsoft Outlook for Android and iOS/iPadOS is not supported via the Exchange on-premises connector. If you want to leverage Azure Active Directory Conditional Access policies and Intune App Protection Policies with Outlook for iOS/iPadOS and Android for your on-premises mailboxes, please see [Using hybrid Modern Authentication with Outlook for iOS/iPadOS and Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).

@@ -1450,7 +1450,7 @@ For a list of these settings, see:
 
 - [Windows 10 and later device settings to run as a kiosk](../configuration/kiosk-settings-windows.md)
 - [Microsoft Edge Browser device restrictions](../configuration/device-restrictions-windows-10.md#microsoft-edge-browser)
-- [Favorites and search device restrictions](../configuration/device-restrictions-windows-10.md##favorites-and-search)
+- [Favorites and search device restrictions](../configuration/device-restrictions-windows-10.md#favorites-and-search)
 
 Applies to:
 Windows 10 and later

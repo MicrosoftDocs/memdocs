@@ -62,7 +62,7 @@ You can require a PIN to access corporate resources. Also, you can enforce corpo
     - Failure to present any prompt might be due to an incorrectly integrated `MAMActivity` value. For more information about `MAMActivity`, see [Microsoft Intune App SDK for Android developer guide](app-sdk-android.md).
 
 > [!NOTE] 
-> If the preceding test isn't working, the following tests will likely also fail. Review [SDK](app-sdk-android.md##sdk-integration) and [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal) integration.
+> If the preceding test isn't working, the following tests will likely also fail. Review [SDK](app-sdk-android.md#sdk-integration) and [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal) integration.
 
 ### Restrict transferring and receiving data with other apps
 You can control data transfer between corporate managed applications, as follows:
