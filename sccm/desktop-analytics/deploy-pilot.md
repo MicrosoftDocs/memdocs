@@ -55,19 +55,19 @@ If you connect multiple Configuration Manager hierarchies to the same Desktop An
 
 - You also configure additional collections to sync with Desktop Analytics:
 
-  - All Windows 10 clients
+  - All Windows 10 clients (3,000 devices)
 
-  - All IT devices
+  - All IT devices (200 total devices, 150 of which run Windows 10)
 
-  - CEO office
+  - CEO office (20 devices)
 
-- In the **Global pilot** settings, you include the **All IT devices** collections. You exclude the **CEO office** collection.
+- In the **Global pilot** settings, you include the **All Windows 10 clients** collections. You exclude the **CEO office** collection.
 
-- You create a deployment plan, and select  **All Windows 10 clients** collection as your **Target group**.
+- You create a deployment plan, and select **All IT devices** collection as your **Target group**. You intend this deployment plan only for devices in the IT department.
 
-- The **Pilot devices included** list contains the subset of devices on your **Target group**: **All Windows 10 clients** plus the devices in the Global Pilot *inclusion* list: **All IT devices**.
+- The **Pilot devices included** list contains the subset of devices that are in both your **Target group**: **All IT devices** and the Global Pilot *inclusion* list: **All Windows 10 clients**. 150 devices are in this list, because only 150 devices in the **All IT devices** collection run Windows 10.
 
-- The **Additional Recommended Devices** lists contains a set of devices from your **Target group** that provide maximum coverage and redundancy for your important assets.  Desktop Analytics excludes from this list any devices in your global pilot *exclusion* list: **CEO office**.
+- The **Additional Recommended Devices** lists contains a set of devices from your **Target group** that provide maximum coverage and redundancy for your important assets. Desktop Analytics excludes from this list any devices in your global pilot *exclusion* list: **CEO office**.
 
 ## Address issues
 
