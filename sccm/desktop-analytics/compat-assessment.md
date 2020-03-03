@@ -2,7 +2,7 @@
 title: Compatibility assessment
 titleSuffix: Configuration Manager
 description: Learn about compatibility assessment for Windows apps and drivers in Desktop Analytics.
-ms.date: 02/07/2020
+ms.date: 03/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -176,6 +176,25 @@ Applications with UI access can bypass user interface control levels to drive in
 If you're not using accessibility features in your app, set the UI access flag in the app manifest to false. For more information, see [Create and embed an application manifest](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)).
 
 Desktop Analytics recommends the app for pilot testing to discover any regressions.
+
+## Safeguards
+
+<!-- 5746559 -->
+
+Windows compatibility data classifies some apps and drivers with a *safeguard*, which may cause the update to Windows 10 to fail or roll back. Desktop Analytics can now help you to identify these safeguards in advance, so that you can remediate the asset before you deploy the update.
+
+1. In the Desktop Analytics portal, select a deployment plan.
+
+1. Select **Plan assets** in the menu, and switch to the **Apps** tab.
+
+1. Filter the name column to show items with values that contain the word `Safeguard`. Select the result to see more information.
+
+    > [!NOTE]
+    > This entry isn't a real app that's installed on your devices. It's a placeholder to help identify apps or drivers in your environment with the safeguard compatibility tag.
+
+1. In the recommendation section, select the link to *Learn more*.<!-- need link here --> This link opens the Windows website with the current list of apps or drivers with the safeguard tag.
+
+1. Compare the current published list against the list of assets in your environment. Remediate any potentially problematic apps or drivers by updating to a compatible version.
 
 ## Driver risk assessment
 
