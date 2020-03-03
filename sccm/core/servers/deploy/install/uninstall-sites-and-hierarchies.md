@@ -132,6 +132,8 @@ Before you uninstall a child primary site that uses [distributed views](/configm
 
 Before you uninstall a primary site, review the following tasks:
 
+- Review boundaries, boundary groups, and fallback relationships. If you assign clients to a new site, but don't change the boundaries, they may be considered roaming. For more information, see [Define site boundaries and boundary groups](/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
+
 - Make sure all active clients are reassigned to another primary site in the hierarchy. Otherwise clients will be unmanaged after you uninstall the site. For more information, see [How to assign clients to a site](/configmgr/core/clients/deploy/assign-clients-to-a-site).
 
   - Review the list of site roles to make sure the new site provides the same level of service.
@@ -141,6 +143,8 @@ Before you uninstall a primary site, review the following tasks:
   - If this site has lots of clients, reassign them in stages. Monitor database replication as clients refresh full inventory and other site-specific data. If you manage software updates, clients will assign to a new software update point. This behavior causes a full scan for update compliance.
 
   - Client reassignment may impact reports and queries that rely on inventory data, and state-based compliance. Consider temporarily adjusting any client cycles during the transition.
+
+  - Review all client assignment methods to make sure that none refer to this primary site.
 
 - Check if any actively used objects in the hierarchy have static references to the site code. For example, collection queries, task sequences, or administrative scripts.
 
@@ -152,11 +156,11 @@ Before you uninstall a primary site, review the following tasks:
 
 - If this primary site has any [discovery methods](/configmgr/core/servers/deploy/configure/run-discovery) for the hierarchy, move them to another site.
 
-- Review boundaries, boundary groups, and fallback relationships. If you assign clients to a new site, but don't change the boundaries, they may be considered roaming. For more information, see [Define site boundaries and boundary groups](/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
-
 - Retire any site-based [OS deployment media](/configmgr/osd/deploy-use/create-task-sequence-media).
 
 - Uninstall all site system roles from the site and the site server. For more information, see [Uninstall site system roles](#bkmk_role). While this preparation step isn't required, it helps identify any additional dependencies before uninstalling the site.
+
+- Uninstall any secondary sites under this primary site. For more information, see the [Secondary site](#bkmk_secondary) section.
 
 ### <a name="bkmk_pri-prereq"></a> Prerequisites to uninstall a primary site
 
