@@ -101,13 +101,15 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 ## New and updated support articles
 
-Support articles that are new or updated between between October 25 and December 23, 2019.
+Support articles that are new or updated between December 24, 2019 and February 20, 2020.
 
-- [KB 4528414: Configuration Manager console displays out-of-date Endpoint Protection Definition version and last update time](https://support.microsoft.com/help/4528414/)
-- [KB 4529905: Delays in content distribution in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4529905)
-- [KB 4529827: Configuration Manager clients incorrectly detect co-management state](https://support.microsoft.com/help/4529827)
-- [KB 4529824: Message Processing Engine update for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4529824)
-- [KB 4535819: Update for Microsoft Endpoint Configuration Manager version 1910, early update ring](https://support.microsoft.com/help/4535819)
-- [KB 4535776: Summary of changes in Microsoft Endpoint Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4535776)
+- [KB 4537079 Update Rollup for Microsoft Endpoint Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4537079)
+- [KB 4535819 Update for Microsoft Endpoint Configuration Manager version 1910, early update ring](https://support.microsoft.com/help/4535819)
+- [KB 4538488 Clients immediately upgrade after updating to Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4538488)
+- [KB 4538166 Client update for Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4538166)
+- [KB 4537369 The Delete Aged Discovery Data task incorrectly removes active records in Configuration Manager](https://support.microsoft.com/help/4537369)
+- [KB 4542722 SQL database compatibility level changes after applying Configuration Manager updates](https://support.microsoft.com/help/4537079)
+- [KB 4095539 Configuration Manager clients do not receive policy data after you recover a primary site from a CAS](https://support.microsoft.com/help/4095539)
+- [KB 4527297 Synchronization with Microsoft Store for Business does not use proxy in Configuration Manager](https://support.microsoft.com/help/4527297)
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.  

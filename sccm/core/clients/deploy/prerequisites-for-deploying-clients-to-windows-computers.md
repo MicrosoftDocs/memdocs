@@ -42,13 +42,7 @@ Use the following information to determine the prerequisites for when you instal
 #### <a name="bkmk_sha2"></a> SHA-2 code signing support
 
 <!--SCCMDocs-pr#3404-->
-Due to weaknesses in the SHA-1 algorithm and to align to industry standards, Microsoft now only signs Configuration Manager binaries using the more secure SHA-2 algorithm. The following Windows OS versions require an update for SHA-2 code signing support:
-
-- Windows 7 SP1
-- Windows Server 2008 R2 SP1
-- Windows Server 2008 SP2
-
-For more information, see [2019 SHA-2 code signing support requirement for Windows and WSUS](https://support.microsoft.com/en-us/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
+Due to weaknesses in the SHA-1 algorithm and to align to industry standards, Microsoft now only signs Configuration Manager binaries using the more secure SHA-2 algorithm. Legacy Windows OS versions require an update for SHA-2 code signing support. For more information, see [2019 SHA-2 code signing support requirement for Windows and WSUS](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
 
 If you don't update these OS versions, you can't install the Configuration Manager client version 1906. This behavior applies to either a new client install or updating it from a previous version.
 
