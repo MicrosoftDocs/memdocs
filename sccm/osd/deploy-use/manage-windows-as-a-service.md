@@ -2,7 +2,7 @@
 title: Manage Windows as a Service
 titleSuffix: Configuration Manager
 description: View the state of Windows as a Service (WaaS) using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows 10 clients are near end of support.
-ms.date: 11/02/2019
+ms.date: 03/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -52,6 +52,7 @@ To see data in the Windows 10 servicing dashboard, you must do the following act
 - Starting in Configuration Manager version 1906, verify the **Enable Dynamic Update for feature updates** [client setting](/sccm/core/clients/deploy/about-client-settings#bkmk_du) to ensure it's appropriate for your environment. <!--4062619-->
 
 ## <a name="BKMK_ServicingDashboard"></a> Windows 10 servicing dashboard
+
 The Windows 10 servicing dashboard provides you with information about Windows 10 computers in your environment, active servicing plans, compliance information, and so on. The data in the Windows 10 servicing dashboard is dependent on having the Service Connection Point installed. The dashboard has the following tiles:
 
 - **Windows 10 Usage tile**: Provides a breakdown of public builds of Windows 10. Windows Insiders builds are listed as **other** as well as any builds that aren't yet known to your site. The service connection point downloads metadata that informs it about the Windows builds, and then this data is compared against discovery data.
