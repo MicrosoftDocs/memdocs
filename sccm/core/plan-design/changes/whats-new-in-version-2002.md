@@ -273,7 +273,7 @@ Configuration Manager now detects if a servicing stack update (SSU) is part of a
 
 You can use a new tool to import Office 365 updates from an internet-connected WSUS server into a disconnected Configuration Manager environment. Previously when you exported and imported metadata for software updated in disconnected environments, you were unable to deploy Office 365 updates. Office 365 updates require additional metadata downloaded from an Office API and the Office CDN, which isn't possible for disconnected environments.
 
-For more information, see [Synchronize Office 365 updates from a disconnected software update point](/configmgr/sum/get-started/synchronize-office-updates-disconnected)
+For more information, see [Synchronize Office 365 updates from a disconnected software update point](/configmgr/sum/get-started/synchronize-office-updates-disconnected).
 
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
