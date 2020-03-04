@@ -39,7 +39,7 @@ Starting in Configuration Manager version 2002, you can use a tool to import Off
 1. On your internet connected WSUS, open the WSUS console.
 1. Select **Options** then **Products and Classifications**.
 1. In the **Products** tab, select **Office 365 Client** and select **Updates** in the **Classifications** tab.
-[![Products and classifications for Office 365 updates in WSUS](./media/4065163-o365-updates-product-classification.png)](../../media/4065163-o365-updates-product-classification.png#lightbox)
+[![Products and classifications for Office 365 updates in WSUS](./media/4065163-o365-updates-product-classification.png)](./media/4065163-o365-updates-product-classification.png#lightbox)
 1. Go to **Synchronizations** and select **Synchronize Now** to get the Office 365 updates into WSUS.
 1. When the synchronization completes, decline any Office 365 updates that you don't want to deploy with Configuration Manager. You don't need to approve Office 365 updates in order for them to be downloaded.  
    - Declining unwanted Office 365 updates in WSUS doesn't stop them from being exported during a WsusUtil.exe export, but it does stop the OfflineUpdateExporter tool from downloading the content for them.
