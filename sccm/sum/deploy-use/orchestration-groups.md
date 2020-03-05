@@ -74,7 +74,7 @@ From the **Assets and Compliance** workspace, select the **Orchestration Group**
 
 To delete the orchestration group, select it then click **Delete** in the ribbon or from the right-click menu. To edit an orchestration group, select it then click **Properties** in the ribbon or from the right-click menu. Change the settings from the following tabs:
 
-   - **General** 
+   - **General**: 
       - **Name**: The name of your orchestration group
       - **Description**: Orchestration group description (optional)
       - **Orchestration Group timeout (in minutes)**: Time limit for all group members to complete update installation.
