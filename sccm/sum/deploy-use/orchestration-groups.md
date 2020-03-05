@@ -16,13 +16,7 @@ manager: dougeby
 <!--3098816-->
 *Applies to: Configuration Manager (current branch)*
 
-Starting in Configuration Manager version 2002, you can create orchestration groups. Create an orchestration group to better control the deployment of software updates to devices. Many server administrators need to carefully manage updates for specific workloads, and automate behaviors in between. For example:
-
-- As the software updates administrator, you manage all updates for your organization.
-- You have one large collection for all servers and one large collection for all clients. You deploy all updates to these collections.
-- The SQL administrators want to control all the software installed on the SQL servers. They want to patch five servers in a specific order. Their current process is to manually stop specific services before installing updates, and then restart the services afterwards.
-- You create an orchestration group and add all five SQL servers. You also add pre- and post-scripts, using the PowerShell scripts provided by the SQL administrators.
-- During the next update cycle, you create and deploy the software updates as normal to the large collection of servers. The SQL administrators run the deployment, and the orchestration group automates the order and services.
+Starting in Configuration Manager version 2002, you can create orchestration groups. Create an orchestration group to better control the deployment of software updates to devices. Many server administrators need to carefully manage updates for specific workloads, and automate behaviors in between.
 
 An orchestration group gives you the flexibility to update devices based on a percentage, a specific number, or an explicit order. You can also run a PowerShell script before and after the devices run the update deployment.
 
@@ -30,6 +24,14 @@ Members of an orchestration group can be any Configuration Manager client, not j
 
 > [!NOTE]
 > The **Orchestration Groups** feature is the evolution of the [Server Groups](/sccm/sum/deploy-use/service-a-server-group) feature. An orchestration group is an object in Configuration Manager.
+
+## Orchestration group usage example
+
+- As the software updates administrator, you manage all updates for your organization.
+- You have one large collection for all servers and one large collection for all clients. You deploy all updates to these collections.
+- The SQL administrators want to control all the software installed on the SQL servers. They want to patch five servers in a specific order. Their current process is to manually stop specific services before installing updates, and then restart the services afterwards.
+- You create an orchestration group and add all five SQL servers. You also add pre- and post-scripts, using the PowerShell scripts provided by the SQL administrators.
+- During the next update cycle, you create and deploy the software updates as normal to the large collection of servers. The SQL administrators run the deployment, and the orchestration group automates the order and services.
 
 ## Prerequisites
 
