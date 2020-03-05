@@ -265,7 +265,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
 
 Configuration Manager now detects if a servicing stack update (SSU) is part of an installation for multiple updates. When an SSU is detected, it's installed first. After install of the SSU, a software update evaluation cycle runs to install the remaining updates. This change allows a dependent cumulative update to be installed after the servicing stack update. The device doesn't need to restart between installs, and you don't need to create an additional maintenance window. SSUs are installed first only for non-user initiated installs. For instance, if a user initiates an installation for multiple updates from Software Center, the SSU might not be installed first.
 
-<!-- For more information, see [](). -->
+For more information, see [Plan for software updates](/configmgr/sum/plan-design/plan-for-software-updates#bkmk_SSU).
 
 ### Office 365 updates for disconnected software update points
 
