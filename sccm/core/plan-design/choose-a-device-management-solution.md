@@ -42,7 +42,7 @@ For more information, see the following articles:
 - [What is Azure Stack?](https://docs.microsoft.com/azure-stack/operator/azure-stack-overview)
 - [What is Windows Admin Center?](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/what-is)
 - [What is Virtual Machine Manager?](https://docs.microsoft.com/system-center/vmm/overview)
-- [Azure management products](https://docs.microsoft.com/azure/#pivot=products&panel=mgmt)
+- [Azure management products](https://docs.microsoft.com/azure/)
 - [What is Windows Virtual Desktop?](https://docs.microsoft.com/azure/virtual-desktop/overview)
 
 For more information on the Configuration Manager and Intune solutions, continue to the next section.
