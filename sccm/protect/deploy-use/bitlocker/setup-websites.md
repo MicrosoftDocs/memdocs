@@ -53,6 +53,12 @@ This process uses a PowerShell script, MBAMWebSiteInstaller.ps1, to install thes
 
 - `-MbamReportUsersGroupName <DomainUserGroup>`: For example, `contoso\BitLocker report users`. A domain user group whose members have read-only access to the **Reports** area of the administration and monitoring website.
 
+    > [!NOTE]
+    > The domain user groups specified by the -HelpdeskUsersGroupName, -HelpdeskAdminsGroupName, and -HelpdeskAdminsGroupName parameters are not created by the script. Make sure these domain user groups are already created before running the script.
+    
+    > [!NOTE]
+    > When specifing the -HelpdeskUsersGroupName, -HelpdeskAdminsGroupName, and -HelpdeskAdminsGroupName parameters, make sure to specify both the domain name and the domain user group name in the format domain\user_group. Do not leave out the domain name. If the domain name or domain user group name contain spaces or special characters, please make sure to enclose the parameter in quotes.
+
 - `-SiteInstall Both`: Specify which of the components to install. Valid options include:
   - `Both`: Install both components
   - `HelpDesk`: Install only the administration and monitoring website
