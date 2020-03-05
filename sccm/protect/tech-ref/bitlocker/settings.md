@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-## BitLocker settings reference
+# BitLocker settings reference
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -22,11 +22,14 @@ BitLocker management policies in Configuration Manager contain the following pol
 
 - Setup
 - Operating system drive
-- Client management
 - Fixed drive
 - Removable drive
+- Client management
 
-The following sections describe and suggest settings for the settings in each group.
+The following sections describe and suggest configurations for the settings in each group.
+
+> [!NOTE]
+> These settings are based on Configuration Manager version 2002. Version 1910 doesn't include all of these settings.
 
 ## Setup
 
