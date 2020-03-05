@@ -103,7 +103,7 @@ To delete the orchestration group, select it then click **Delete** in the ribbon
 - [Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates) to a collection that contains the members of the orchestration group.
    - Orchestration starts when any client in the group tries to install any software update at deadline or during a maintenance window. It starts for the entire group, and makes sure that the devices update by following the orchestration group rules.
 - You can manually start orchestration by selecting it from the **Orchestration Group** node, then choosing **Start Orchestration** from the ribbon or right-click menu.
-   [![Start Orchestration ](./media/3098816-start-orchestration.png)](../../media/3098816-start-orchestration.png#lightbox)
+   [![Start Orchestration ](./media/3098816-start-orchestration.png)](./media/3098816-start-orchestration.png#lightbox)
 
 > [!TIP]
 > - Orchestration groups only apply to software update deployments. They don't apply to other deployments.
