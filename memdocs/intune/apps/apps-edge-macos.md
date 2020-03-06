@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Add Microsoft Edge to macOS devices using Microsoft Intune
 
-Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft Edge *version 77 and later*. By selecting this app type in Intune, you can assign and install Microsoft Edge *version 77 and later* to devices you manage that run macOS. This app type makes it easy for you to assign Microsoft Edge to macOS devices without requiring you to use the macOS app wrapping tool. To help keep the apps more secure and up to date, the app comes with Microsoft AutoUpdate (MAU).
+Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](~/apps/apps-add.md#app-types-in-microsoft-intune) is Microsoft Edge *version 77 and later*. By selecting this app type in Intune, you can assign and install Microsoft Edge *version 77 and later* to devices you manage that run macOS. This app type makes it easy for you to assign Microsoft Edge to macOS devices without requiring you to use the macOS app wrapping tool. To help keep the apps more secure and up to date, the app comes with Microsoft AutoUpdate (MAU).
 
 > [!IMPORTANT]
 > This app type is in **public preview** and offers developer and beta channels for macOS. The deployment is in English (EN) only, however end users can change the display language in the browser under **Settings** > **Languages**. 
@@ -97,6 +97,6 @@ The app you've created is displayed in the apps list, where you can assign it to
 
 ## Next steps
 - To learn how to configure Microsoft Edge on macOS devices, see [Configure Microsoft Edge on macOS devices](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).
-- To learn about including and excluding app assignments from groups of users, see [Include and exclude app assignments](apps-inc-exl-assignments.md).
-- [Assign apps to groups](apps-deploy.md)
+- To learn about including and excluding app assignments from groups of users, see [Include and exclude app assignments](~/apps/apps-inc-exl-assignments.md).
+- [Assign apps to groups](~/apps/apps-deploy.md)
 

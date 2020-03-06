@@ -162,6 +162,7 @@ Top questions for troubleshooting.
       - Autopilot
       - Configuration Manager co-management
       - when any new user logs into the device that has Enrollment Status Page policy applied for the first time
+      - when the **Only show page to devices provisioned by out-of-box experience (OOBE)** setting is on and the policy is set, only the first user who signs into the device gets the Enrollment Status Page
 
 - How can I disable the Enrollment Status Page if it has been configured on the device?
   - Enrollment status page policy is set on a device at the time of enrollment. To disable the Enrollment Status Page, you must disable user and device Enrollment Status Page sections. You disable the sections by creating custom OMA-URI settings with the following configurations.

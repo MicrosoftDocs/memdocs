@@ -76,7 +76,7 @@ You can use scope tags to determine who can see client app information in Intune
 
 ## Step 3 - Assignments
 
-1. Select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
+1. Select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](~/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 2. Click **Next** to display the **Review + create** page. 
 
 ## Step 4 - Review + create

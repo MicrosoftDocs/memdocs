@@ -2,7 +2,7 @@
 title: Using the Intune docs
 titleSuffix: Microsoft Intune
 description: Learn how to search the Intune docs, provide doc feedback, and contribute to the docs.
-ms.date: 09/15/2019
+ms.date: 03/03/2020
 ms.service: microsoft-intune 
 ms.subservice: fundamentals
 ms.topic: conceptual
@@ -109,3 +109,23 @@ Follow these general guidelines when contributing to Intune docs:
 - Follow the [GitHub Flow workflow](https://guides.github.com/introduction/flow/).  
 
 - Blog and tweet (or whatever) about your contributions, frequently!  
+
+## Consolidation of documentation for Microsoft Endpoint Manager
+
+To better support combined scenarios for Intune and Configuration Manager, this documentation library is moving to [https://docs.microsoft.com/memdocs/intune](https://docs.microsoft.com/memdocs/intune). The Configuration Manager documentation library will later move to [https://docs.microsoft.com/memdocs/configmgr](https://docs.microsoft.com/memdocs/configmgr). All links will automatically redirect, so you don't need to make any changes for reading this content.
+
+If you provide feedback or contribute to articles, some changes are necessary:
+
+- Existing GitHub issues will remain in the original repository, [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues).
+
+  - These issues won't show as open or closed issues in the Feedback section of the linked article.
+
+  - We will continue to work towards resolving these issues going forward.
+
+  - In some instances, we may make the tough decision to close an issue that we don't think we'll be able to address in a timely manner.
+
+  - If you have an issue in the existing repository, and are passionate about it, file feedback on the migrated article in the memdocs repository.
+
+- We will merge and close any open pull requests before the migration.
+
+- After migration, when you file feedback or edit an article, the issue or pull request will go to the memdocs repository.

@@ -139,7 +139,7 @@ Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC
 > [!NOTE]
 > The user will see instructions about derived credentials based on the link that you have specified via Intune.
 
-For more information about derived credentials for iOS/iPadOS devices, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+For more information about derived credentials for iOS/iPadOS devices, see [Use derived credentials in Microsoft Intune](~/protect/derived-credentials.md).
 
 ## Dark Mode for iOS Company Portal
 

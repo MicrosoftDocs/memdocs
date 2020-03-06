@@ -50,7 +50,7 @@ This article shows you how to view all your devices, and their properties in the
       - [Reset passcode](device-passcode-reset.md)
       - [Restart](device-restart.md) (Windows only)
       - [Fresh Start](device-fresh-start.md) (Windows only)
-      - [Autopilot reset]() (Windows only)
+      - [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (Windows only)
       - [Quick scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
       - [Full scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
        - [Rename device](device-rename.md)

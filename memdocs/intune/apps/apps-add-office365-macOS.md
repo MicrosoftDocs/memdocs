@@ -75,7 +75,7 @@ You can use scope tags to determine who can see client app information in Intune
 
 ## Step 3 - Assignments
 
-1. Select the **Required** or **Available for enrolled devices** group assignments for the app suite. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
+1. Select the **Required** or **Available for enrolled devices** group assignments for the app suite. For more information, see [Add groups to organize users and devices](~/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
     >[!Note]
     > You cannot uninstall the Office 365 for macOS app suite through Intune.

@@ -47,7 +47,7 @@ Intune and Azure Active Directory work together to make sure only managed and co
 
 Intune provides device compliance policy capabilities that evaluate the compliance status of the devices. The compliance status is reported to Azure Active Directory that uses it to enforce the Conditional Access policy created in Azure Active Directory when the user tries to access company resources.
 
-Device-based Conditional Access policies for Exchange online and other Office 365 products are configured through the [Azure portal](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune).  
+Device-based Conditional Access policies for Exchange online and other Office 365 products are configured through the [Azure portal](../fundamentals/what-is-intune.md).
 
 - Learn more about [Require managed devices with Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices).
 
@@ -84,11 +84,11 @@ The Intune and mobile threat defense integration plays a factor in the condition
 
 ### Conditional access for Windows PCs
 
-Conditional access for PCs provides capabilities similar to those available for mobile devices. Let’s talk about the ways you can use conditional access when managing PCs with Intune.
+Conditional access for PCs provides capabilities similar to those available for mobile devices. Let's talk about the ways you can use conditional access when managing PCs with Intune.
 
 #### Corporate-owned
 
-- **On premises AD domain joined:** This option is commonly used by organizations that are reasonably comfortable with how they’re already managing their PCs through AD group policies or Configuration Manager.
+- **On premises AD domain joined:** This option is commonly used by organizations that are reasonably comfortable with how they're already managing their PCs through AD group policies or Configuration Manager.
 
 - **Azure AD domain joined and Intune management:** This scenario is for organizations that want to be cloud-first (that is, primarily use cloud services, with a goal to reduce use of an on-premises infrastructure) or cloud-only (no on-premises infrastructure). Azure AD Join works well in a hybrid environment, enabling access to both cloud and on-premises apps and resources. The device joins to the Azure AD and gets enrolled to Intune, which can be used as a conditional access criteria when accessing corporate resources.
 
@@ -147,16 +147,16 @@ If the EAS record is new and Intune isn't aware of it, Intune issues a cmdlet (p
 10. Exchange server sends the notification to EAS client so the user can access e-mail.
 
 
-#### What’s the Intune role?
+#### What's the Intune role?
 
 Intune evaluates and manages the device state.
 
-#### What’s the Exchange server role?
+#### What's the Exchange server role?
 
 Exchange server provides API and infrastructure to move devices to quarantine.
 
 > [!IMPORTANT]
-> Keep in mind that the user who’s using the device must have a compliance profile and Intune license assigned to them so the device can be evaluated for compliance. If no compliance policy is deployed to the user, the device is treated as compliant and no access restrictions are applied.
+> Keep in mind that the user who's using the device must have a compliance profile and Intune license assigned to them so the device can be evaluated for compliance. If no compliance policy is deployed to the user, the device is treated as compliant and no access restrictions are applied.
 
 ## Next steps
 

@@ -137,7 +137,7 @@ SSO requires your device to be registered by the Microsoft Authenticator app on 
 ## Create a protected browser app configuration
 
 >[!IMPORTANT]
->For app configurations to apply, the user's protected browser or another app on the device must already be managed by [Intune app protection policy](../app-protection-policy.md)
+>For app configurations to apply, the user's protected browser or another app on the device must already be managed by [Intune app protection policy]( ../app-protection-policy.md)
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App configuration policies** > **Add** > **Managed apps**.

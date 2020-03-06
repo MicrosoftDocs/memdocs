@@ -110,7 +110,7 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
   - **Not configured** (*default*) - Intune doesn't check for any of the Configuration Manager settings for compliance.
   - **Require** - Require all settings (configuration items) in Configuration Manager to be compliant.  
 
-    For example, you require all software updates to be installed on devices. In Configuration Manager, this requirement has the “Installed” state. If any programs on the device are in an unknown state, then the device is non-compliant in Intune.
+    For example, you require all software updates to be installed on devices. In Configuration Manager, this requirement has the "Installed" state. If any programs on the device are in an unknown state, then the device is non-compliant in Intune.
 
 ## System Security
 
@@ -160,7 +160,7 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
   - **Require** - Require device users to enter the password every time the device returns from an idle state.
 
   > [!IMPORTANT]
-  > When the password requirement is changed on a Windows desktop, users are impacted the next time they sign in, as that’s when the device goes from idle to active. Users with passwords that meet the requirement are still prompted to change their passwords.
+  > When the password requirement is changed on a Windows desktop, users are impacted the next time they sign in, as that's when the device goes from idle to active. Users with passwords that meet the requirement are still prompted to change their passwords.
 
 ### Encryption
 

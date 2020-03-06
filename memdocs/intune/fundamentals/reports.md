@@ -79,7 +79,7 @@ To see a generated report of device state, you can use the following steps:
     > [!NOTE]
     > This **Device compliance** report provides a time stamp of when the report was last generated. 
 
-For related information, see [Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune](../protect/advanced-threat-protection.md).
+For related information, see [Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune](~/protect/advanced-threat-protection.md).
 
 ## Reports summary 
 

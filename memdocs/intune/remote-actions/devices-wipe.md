@@ -169,7 +169,7 @@ If you want to remove devices from the Intune portal, you can delete them from t
 You can configure Intune to automatically delete devices that appear to be inactive, stale, or unresponsive. These cleanup rules continuously monitor your device inventory so that your device records stay current. Devices deleted in this way are removed from Intune management.
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **Device cleanup rules** > **Yes**.
-3. In the **Delete devices that haven’t checked in for this many days** box, enter a number between 30 and 270.
+3. In the **Delete devices that haven't checked in for this many days** box, enter a number between 30 and 270.
 4. Choose **Save**.
 
 
@@ -179,7 +179,7 @@ You can configure Intune to automatically delete devices that appear to be inact
 You might need to delete devices from Azure AD due to communication issues or missing devices. You can use the **Delete** action to remove device records from the Azure portal for devices that you know are unreachable and unlikely to communicate with Azure again. The **Delete** action doesn't remove a device from management.
 
 1. Sign in to [Azure Active Directory in the Azure portal](https://aka.ms/accessaad) by using your admin credentials. You can also sign in to the [Microsoft 365 admin center](https://admin.microsoft.com). From the menu, select **Admin centers** > **Azure AD**.
-2. Create an Azure subscription if you don’t have one. This shouldn't require a credit card or payment if you have a paid account (select the **Register your free Azure Active Directory** subscription link).
+2. Create an Azure subscription if you don't have one. This shouldn't require a credit card or payment if you have a paid account (select the **Register your free Azure Active Directory** subscription link).
 3. Select **Azure Active Directory**, and then select your organization.
 4. Select the **Users** tab.
 5. Select the user that's associated with the device that you want to delete.
@@ -201,7 +201,7 @@ If you want to completely remove an Apple DEP device from management by Intune, 
     ![Screenshot for Apple reassign](./media/devices-wipe/apple-reassign.png)
 
 ## Device states
-For a description of device states, see the [managementStates collection](https://docs.microsoft.com/intune/developer/intune-data-warehouse-collections.md#managementstates).
+For a description of device states, see the [managementStates collection](../developer/intune-data-warehouse-collections.md#managementstates).
 
 ## Fresh Start
 

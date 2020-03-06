@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager:
-ms.date: 02/27/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -61,39 +61,43 @@ To enroll into Intune using KME, you must first register your company on the Sam
 
 ## Create MDM profile
 
-When your company is successfully registered, you can create your MDM profile for Microsoft Intune in the Knox portal using the information below. You can create MDM profiles for both Android and Android enterprise in the Knox portal. 
+When your company is successfully registered, you can create your MDM profile for Microsoft Intune in the Knox portal using the information below. You can create MDM profiles for both Android and Android enterprise in the Knox portal.
+- To create an Android MDM profile, select **Device Admin** as the profile type in the Knox Portal. 
+- To create an Android Enterprise MDM profile, select **Device Owner** as the profile type in the Knox Portal.  
 
-### For Android Enterprise
+### For Android
 
 | MDM Profile Fields| Required? | Values | 
 |-------------------|-----------|-------| 
-|MDM Server URI     | No        |Leave this blank.| 
 |Profile Name       | Yes       |Enter a profile name of your choice. |
 |Description        | No        |Enter text describing the Profile. |
+|MDM Information     | Yes        |Choose **Server URI not required for my MDM**.| 
 |MDM Agent APK      | Yes       |https://aka.ms/intune_kme_deviceowner| 
-|Custom JSON        | No        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Enter Intune enrollment token string"}. Learn [how to create an enrollment profile](android-kiosk-enroll.md). |
+|Custom JSON        | Yes*        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Enter Intune enrollment token string"}. Learn how to create an enrollment token for [dedicated devices](android-kiosk-enroll.md) and [fully managed devices](android-fully-managed-enroll.md). |
 |Skip Setup wizard  | No        |Choose this option to skip standard device setup prompts for the end user.|
 |Allow End User to Cancel Enrollment | No | Choose this option to allow users to cancel KME.|
-| Add legal agreements | No | Leave this blank. |
+| Privacy Policy, EULAs and Terms of Service | No | Leave this blank. |
 | Support contact details | Yes | Choose Edit to update your contact details |
 |Associate a Knox license with this profile | No | Leave this option unselected. Enrolling to Intune using KME doesn't require a Knox license.|
 
-### For Android
+\* This field is not required to complete profile creation in the Knox portal. However, Intune does require this field to be filled in so that the profile can successfully enroll the device in Intune.
+
+### For Android Enterprise
 
 For step-by-step guidance, see the [Samsung's Create Profile](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm) instructions.
 
 | MDM Profile Fields| Required? | Values |
 |-------------------|-----------|-------|
-|MDM Server URI     | No        |Leave this blank.|
 |Profile Name       | Yes       |Enter a profile name of your choice.|
 |Description        | No        |Enter text describing the Profile.|
-|Pick your MDM | Yes | Choose from one of the MDMs. |
+|Pick your MDM | Yes | Choose Microsoft Intune. |
 |MDM Agent APK      | Yes       |https://aka.ms/intune_kme|
+|MDM Server URI     | No        |Leave this blank.|
 |Custom JSON Data        | No        |Leave this blank.|
 |Dual DAR | No | Leave this blank.|
 |QR code for enrollment | No | You can add a QR code to speed enrollment.|
-|System applications | Yes | Choose one of the listed options. |
-|Add legal agreement | No | Leave this blank.|
+|System applications | Yes | Choose the **Leave all system apps enabled** option to ensure all apps are enabled and available to the profile. If this option isn't selected, only a limited set of system apps displays in the device's apps tray. Apps such as the Email app remain hidden. |
+|Privacy Policy, EULAs and Terms of Service | No | Leave this blank.|
 |Company Name | Yes | This name will display during device enrollment. |
 
 ## Add devices

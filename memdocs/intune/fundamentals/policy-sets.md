@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 Policy sets allow you to create a bundle of references to already existing management entities that need to be identified, targeted, and monitored as a single conceptual unit. A policy set is an assignable collection of apps, policies, and other management objects you've created. Creating a policy set enables you to select many different objects at once, and assign them from a single place. As your organization changes, you can revisit a policy set to add or remove its objects and assignments. You can use a policy set to associate and assign existing objects, such as apps, policies, and VPNs in a single package. 
 
 > [!IMPORTANT]
-> For a list of known issues related to policy sets, [Policy sets known issues](../fundamentals/policy-sets.md#policy-sets-known-issues).
+> For a list of known issues related to policy sets, [Policy sets known issues](~/fundamentals/policy-sets.md#policy-sets-known-issues).
 
 Policy sets do not replace existing concepts or objects. You can continue to assign individual objects and you can also reference individual objects as part of a policy set. Therefore, any changes to those individual objects will be reflected in the policy set.​ 
 
@@ -66,14 +66,14 @@ When you create a policy set, you create a single unit of assignment, and manage
     - **Policy set name** - Provide a name for this policy set.
     - **Description** - Optionally, provide a description for the policy set.
    <p>
-   <img alt="Create policy set - Basics" src="/media/policy-sets/policy-sets-01.png">
+   <img alt="Create policy set - Basics" src="~/fundamentals/media/policy-sets/policy-sets-01.png">
 
 4. Click **Next: Application management**.<br>
-   On the **Application management** page you can optionally [add apps](../apps/apps-add.md), [app configuration policies](../apps/app-configuration-policies-overview.md), and [app protection policies](../apps/app-protection-policy.md) to your policy set. For information about app management, see [What is Microsoft Intune app management?](../apps/app-management.md). 
+   On the **Application management** page you can optionally [add apps](~/apps/apps-add.md), [app configuration policies](~/apps/app-configuration-policies-overview.md), and [app protection policies](~/apps/app-protection-policy.md) to your policy set. For information about app management, see [What is Microsoft Intune app management?](~/apps/app-management.md). 
 5. Click **Next: Device management**.<br>
-   The **Device management** page allows you to add device management objects to your policy set, such as [device configuration profiles](../configuration/device-profiles.md) and [device compliance policies](../protect/device-compliance-get-started.md). Be sure to include all associated objects, such as other policies, certificates, and security baseline profiles.
+   The **Device management** page allows you to add device management objects to your policy set, such as [device configuration profiles](~/configuration/device-profiles.md) and [device compliance policies](~/protect/device-compliance-get-started.md). Be sure to include all associated objects, such as other policies, certificates, and security baseline profiles.
 6. Click **Next: Device enrollment**.<br>
-   The **Device enrollment** page allows you to add device enrollment objects to your policy set, such as [device type restrictions](../enrollment/enrollment-restrictions-set.md), [Windows Autopilot deployment profiles](../enrollment/enrollment-autopilot.md), and [enrollment status page profiles](../enrollment/windows-enrollment-status.md).
+   The **Device enrollment** page allows you to add device enrollment objects to your policy set, such as [device type restrictions](~/enrollment/enrollment-restrictions-set.md), [Windows Autopilot deployment profiles](~/enrollment/enrollment-autopilot.md), and [enrollment status page profiles](~/enrollment/windows-enrollment-status.md).
 7. Click **Next: Assignments**.<br>
    The **Assignments** page allows you can assign the policy set to users and devices. It is important to note that you can assign a policy set to a device whether or not the device is managed by Intune.
 8. Click **Next: Review + create** to review the values you entered for the profile.
@@ -127,4 +127,4 @@ Policy sets, new to 1910, have the following known issues.
 
 ## Next steps
 
-- [Enroll devices in Microsoft Intune](../enrollment/index.yml).
+- [Enroll devices in Microsoft Intune](~/enrollment/index.yml).

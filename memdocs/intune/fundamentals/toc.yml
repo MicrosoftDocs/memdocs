@@ -195,7 +195,7 @@
   - name: Manage and protect apps
     href: ../apps/index.yml  
   - name: Use policy sets
-    href: ../fundamentals/policy-sets.md      
+    href: ~/fundamentals/policy-sets.md      
   - name: Developer guidance
     href: ../developer/index.yml     
 

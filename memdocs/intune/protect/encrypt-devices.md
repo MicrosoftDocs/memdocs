@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/25/2019
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -128,6 +128,32 @@ Configure BitLocker when you create a [device configuration profile](../configur
 5. Configure settings for BitLocker to meet your business needs, and then select **OK**.
 
 6. Complete configuration of additional settings, and then save the profile.
+
+### Silently enable BitLocker on devices
+
+You can configure a BitLocker policy that automatically and silently enables BitLocker on a device. That means that BitLocker enables successfully without presenting any UI to the end user, even when that user isn’t a local Administrator on the device.
+
+**Device Prerequisites**:
+
+A device must meet the following conditions to be eligible for silently enabling BitLocker:
+
+- The device must run Windows 10 version 1809 or later
+- The device must be Azure AD Joined  
+
+**BitLocker policy configuration**:
+
+The following two settings for [BitLocker base settings](../protect/endpoint-protection-windows-10.md#bitlocker-base-settings) must be configured in the BitLocker policy:
+
+- **Warning for other disk encryption** = *Block*.
+- **Allow standard users to enable encryption during Azure AD Join** = *Allow*
+
+The BitLocker policy **must not require** use of a startup PIN or startup key. When a TPM startup PIN or startup key is *required*, BitLocker cannot silently enable and requires interaction from the end user.  This requirement is met through the following three [BitLocker OS drive settings](../protect/endpoint-protection-windows-10.md#bitlocker-os-drive-settings) in the same policy:
+
+- **Compatible TPM startup PIN** must not be set to *Require startup PIN with TPM*
+- **Compatible TPM startup key** must not set to *Require startup key with TPM*
+- **Compatible TPM startup key and PIN** must not set to *Require startup key and PIN with TPM*
+
+
 
 ### Manage BitLocker
 

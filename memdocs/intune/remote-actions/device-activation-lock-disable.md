@@ -66,7 +66,7 @@ Intune can request the Activation Lock status of supervised devices that run iOS
 ## Before you start
 Before you can disable Activation Lock on devices, you must enable it by following these instructions:
 
-1. Configure an Intune device restriction profile for iOS/iPadOS using the information in [How to configure device restriction settings](/intune-azure/configure-devices/how-to-configure-device-restrictions).
+1. Configure an Intune device restriction profile for iOS/iPadOS using the information in [How to configure device restriction settings](../configuration/device-restrictions-configure.md).
 2. In the [device restriction settings for iOS/iPadOS](../configuration/device-restrictions-ios.md), under the **General** settings, enable the option **Activation Lock**.
 3. Save the profile, and then [assign it](../configuration/device-profile-assign.md) to the devices on which you want to manage Disable Activation Lock.
 
@@ -76,13 +76,13 @@ Before you can disable Activation Lock on devices, you must enable it by followi
 >[!IMPORTANT]
 >After you disable the Activation Lock on a device, if the Find My iPhone app is started, a new Activation Lock is automatically applied. Because of this, **you should be in physical possession of the device before you follow this procedure**.
 
-The Intune **Disable Activation Lock** remote device action removes the Activation Lock from an iOS/iPadOS device without requiring the user’s Apple ID and password. After you disable the Activation Lock, the device turns on Activation Lock again when the Find My iPhone app starts. Disable the Activation Lock only if you have physical access to the device.
+The Intune **Disable Activation Lock** remote device action removes the Activation Lock from an iOS/iPadOS device without requiring the user's Apple ID and password. After you disable the Activation Lock, the device turns on Activation Lock again when the Find My iPhone app starts. Disable the Activation Lock only if you have physical access to the device.
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. On the **Intune** blade, select **Devices**.
 4. On the **Devices** blade, select **All devices**.
 5. On the list of devices that you manage, select the **Disable Activation Lock** device remote action.
-6. Go to the device's “Hardware” section, and then copy the **Activation Lock bypass code** value under **Conditional Access**.
+6. Go to the device's "Hardware" section, and then copy the **Activation Lock bypass code** value under **Conditional Access**.
 
     >[!NOTE]
     >Copy the bypass code before you wipe the device. If you reset the device settings before you copy the code, the code is removed from Azure.

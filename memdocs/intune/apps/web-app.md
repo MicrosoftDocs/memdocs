@@ -66,9 +66,9 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
     - **Require a managed browser to open this link**: Select this option to assign to your users a link to a website or web app that they can open in the Intune managed browser. This browser must be installed on their device.
     - **Logo**: Upload an icon that will be associated with the app. This icon is displayed with the app when users browse the company portal.
 6. Click **Next** to display the **Scope tags** page.
-7. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+7. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](~/fundamentals/scope-tags.md).
 8. Click **Next** to display the **Assignments** page.
-9. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md). 
+9. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](~/fundamentals/groups-add.md). 
 10. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 11. When you are done, click **Create** to add the app to Intune.
 

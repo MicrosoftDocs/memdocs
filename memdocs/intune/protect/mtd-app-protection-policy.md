@@ -72,4 +72,4 @@ Use the procedure to [create an Application protection policy for either iOS/iPa
 
 ## Next steps
 
-- Learn more about [Mobile Threat Defense](mobile-threat-defense.md) in Microsoft Intune.
+- Learn more about [Mobile Threat Defense](~/protect/mobile-threat-defense.md) in Microsoft Intune.

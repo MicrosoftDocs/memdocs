@@ -36,7 +36,7 @@ ms.collection: M365-identity-device-management
 To manage devices and install apps, your users can install the Company Portal app themselves from the Microsoft Store. If your business needs require that you assign the Company Portal app to them, however, you can assign the Windows 10 Company Portal app directly from Intune. You can do so even if you haven’t integrated Intune with the Microsoft Store for Business.
 
  > [!IMPORTANT]
- > If you download the Company Portal app, the option described in this article requires that you assign manual updates each time an app update is released. To deploy the Company Portal app for Windows 10 Autopilot provisioned devices, see [Add Windows 10 Company Portal app Autopilot devices](store-apps-company-portal-autopilot.md).
+ > If you download the Company Portal app, the option described in this article requires that you assign manual updates each time an app update is released. To deploy the Company Portal app for Windows 10 Autopilot provisioned devices, see [Add Windows 10 Company Portal app Autopilot devices](~/apps/store-apps-company-portal-autopilot.md).
 
 ## Configure settings to show offline apps
 1. Sign in to the [Microsoft Store for Business](https://www.microsoft.com/business-store) with your admin account.
