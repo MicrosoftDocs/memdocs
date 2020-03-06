@@ -50,8 +50,8 @@ You can also make sure that the time and date on the user's device are set corre
 
 Your managed device users can collect enrollment and diagnostic logs for you to review. User instructions for collecting logs are provided in:
 
-- [Send Android enrollment errors to your IT admin](https://docs.microsoft.com/intune-user-help/send-enrollment-errors-to-your-it-admin-android)
-- [Send iOS/iPadOS errors to your IT admin](https://docs.microsoft.com/intune-user-help/send-errors-to-your-it-admin-ios)
+- [Send Android enrollment errors to your IT admin](https://docs.microsoft.com/user-help/send-enrollment-errors-to-your-it-admin-android)
+- [Send iOS/iPadOS errors to your IT admin](https://docs.microsoft.com/user-help/send-errors-to-your-it-admin-ios)
 
 
 ## General enrollment issues
@@ -213,7 +213,7 @@ If Resolution #2 doesn't work, have your users follow these steps to make Smart 
 
 **Resolution 1**:
 
-The user might be able to retrieve the missing certificate by following the instructions in [Your device is missing a required certificate](../intune-user-help/your-device-is-missing-an-IT-required-certificate-android.md). If the error persists, try Resolution 2.
+The user might be able to retrieve the missing certificate by following the instructions in [Your device is missing a required certificate](../user-help/your-device-is-missing-an-IT-required-certificate-android.md). If the error persists, try Resolution 2.
 
 **Resolution 2**:
 
@@ -255,7 +255,7 @@ The following table lists errors that end users might see while enrolling iOS/iP
 |Error message|Issue|Resolution|
 |-------------|-----|----------|
 |NoEnrollmentPolicy|No enrollment policy found|Check that all enrollment prerequisites, like the Apple Push Notification Service (APNs) certificate, have been set up and that "iOS/iPadOS as a platform" is enabled. For instructions, see [Set up iOS/iPadOS and Mac device management](ios-enroll.md).|
-|DeviceCapReached|Too many mobile devices are enrolled already.|The user must remove one of their currently enrolled mobile devices from the Company Portal before enrolling another. See the instructions for the type of device you're using: [Android](../intune-user-help/unenroll-your-device-from-intune-android.md), [iOS/iPadOS](../intune-user-help/unenroll-your-device-from-intune-ios.md), [Windows](../intune-user-help/unenroll-your-device-from-intune-windows.md).|
+|DeviceCapReached|Too many mobile devices are enrolled already.|The user must remove one of their currently enrolled mobile devices from the Company Portal before enrolling another. See the instructions for the type of device you're using: [Android](../user-help/unenroll-your-device-from-intune-android.md), [iOS/iPadOS](../user-help/unenroll-your-device-from-intune-ios.md), [Windows](../user-help/unenroll-your-device-from-intune-windows.md).|
 |APNSCertificateNotValid|There's a problem with the certificate that lets the mobile device communicate with your company's network.<br /><br />|The Apple Push Notification Service (APNs) provides a channel to contact enrolled iOS/iPadOS devices. Enrollment will fail and this message will appear if:<ul><li>The steps to get an APNs certificate weren't completed, or</li><li>The APNs certificate has expired.</li></ul>Review the information about how to set up users in [Sync Active Directory and add users to Intune](../fundamentals/users-add.md) and [organizing users and devices](../fundamentals/groups-add.md).|
 |AccountNotOnboarded|There's a problem with the certificate that lets the mobile device communicate with your company's network.<br /><br />|The Apple Push Notification Service (APNs) provides a channel to contact enrolled iOS/iPadOS devices. Enrollment will fail and this message will appear if:<ul><li>The steps to get an APNs certificate weren't completed, or</li><li>The APNs certificate has expired.</li></ul>For more information, review [Set up iOS/iPadOS and Mac management with Microsoft Intune](ios-enroll.md).|
 |DeviceTypeNotSupported|The user might have tried to enroll using a non-iOS device. The mobile device type that you're trying to enroll isn't supported.<br /><br />Confirm that device is running iOS/iPadOS version 8.0 or later.<br /><br />|Make sure that your user's device is running iOS/iPadOS version 8.0 or later.|

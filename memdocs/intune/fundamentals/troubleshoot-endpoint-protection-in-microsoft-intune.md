@@ -65,7 +65,7 @@ You may get a message that some features are disabled. These messages can happen
 
 - [Add endpoint protection settings](../protect/endpoint-protection-configure.md)
 - [Microsoft Defender Antivirus](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)
-- [End users: Turn on real-time protection to access company resources](../intune-user-help/turn-on-defender-windows.md)
+- [End users: Turn on real-time protection to access company resources](../user-help/turn-on-defender-windows.md)
 
 ### Malware definitions out of date
 

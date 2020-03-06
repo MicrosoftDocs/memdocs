@@ -45,9 +45,9 @@ To remove your device from Intune, use these steps or watch this video:
 
 2. Next to **RENAME** tap the ellipses button > **Remove Device** > **Remove**.  
 
-    |![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove. Shows "Remove Device" button, "Factory Reset" button, and "Cancel" button.](/intune-user-help/media/cp_ios_unenroll_after_1804_001.png)|
+    |![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove. Shows "Remove Device" button, "Factory Reset" button, and "Cancel" button.](/user-help/media/cp_ios_unenroll_after_1804_001.png)|
 
-    |![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove Device button. Shows red highlighted "Remove" button, and blue highlighted "Learn More" button and "Cancel" button.](/intune-user-help/media/cp_ios_unenroll_after_1804_002.png)|
+    |![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove Device button. Shows red highlighted "Remove" button, and blue highlighted "Learn More" button and "Cancel" button.](/user-help/media/cp_ios_unenroll_after_1804_002.png)|
 
 
     When you unenroll your device from Intune, here's what happens:

@@ -4,15 +4,13 @@
   expanded: true
   items:
   - name: App management overview
-    href: app-management.md  
-
+    href: app-management.md
 - name: Quickstarts
   items:
   - name: Add and assign an app
-    href: quickstart-add-assign-app.md  
+    href: quickstart-add-assign-app.md
   - name: Create and assign an app protection policy
     href: quickstart-create-assign-app-policy.md    
-
 - name: Tutorials
   items:
   - name: Protect email on managed devices
@@ -27,19 +25,18 @@
     href: app-lifecycle.md
   - name: App protection policies and work profiles (Android)
     href: android-deployment-scenarios-app-protection-work-profiles.md
-    displayName: app-we; without; without enrollment    
+    displayName: app-we; without; without enrollment
   - name: MAM FAQ
-    href: mam-faq.md    
-
+    href: mam-faq.md
 - name: How-to guides
   items:
     - name: Add apps 
       items:
       - name: Add apps overview
         href: apps-add.md
-        displayName: apk; ipa; msi; appx; appxbundle; msix; msixbundle; app    
+        displayName: apk; ipa; msi; appx; appxbundle; msix; msixbundle; app
       - name: Intune protected apps
-        href: apps-supported-intune-apps.md      
+        href: apps-supported-intune-apps.md
       - name: Store apps
         items:
         - name: Android store apps
@@ -51,7 +48,7 @@
         - name: Windows store apps
           href: store-apps-windows.md
         - name: Microsoft Store for Business apps
-          href: windows-store-for-business.md          
+          href: windows-store-for-business.md
         - name: Managed Google Play apps
           href: apps-add-android-for-work.md
       - name: Office 365 Suite
@@ -61,12 +58,12 @@
         - name: Office 365 apps for macOS
           href: apps-add-office365-macos.md
       - name: Android Enterprise system apps
-        href: apps-ae-system.md    
+        href: apps-ae-system.md
       - name: Web apps
         href: web-app.md
         displayName: web; web link; weblink; web-link
       - name: Built-in apps
-        href: apps-add-built-in.md     
+        href: apps-add-built-in.md
       - name: Build your app (LOB)
         items:
         - name: Android LOB apps
@@ -78,48 +75,48 @@
         - name: Windows LOB apps
           href: lob-apps-windows.md
         - name: Sideload Windows LOB apps
-          href: app-sideload-windows.md          
+          href: app-sideload-windows.md
         - name: macOS LOB apps
           href: lob-apps-macos.md     
         - name: Win32 app management
           href: apps-win32-app-management.md
         - name: Win32 app S mode devices
-          href: apps-win32-s-mode.md          
+          href: apps-win32-s-mode.md
       - name: Add specific apps
         items:
         - name: Company Portal app - Autopilot
           href: store-apps-company-portal-autopilot.md
         - name: Company Portal app - Download
-          href: store-apps-company-portal-app.md          
+          href: store-apps-company-portal-app.md
         - name: Microsoft Edge for Windows 10
           href: apps-windows-edge.md
         - name: Microsoft Edge for macOS
           href: apps-edge-macos.md   
         - name: Microsoft Defender ATP for macOS
-          href: apps-advanced-threat-protection-macos.md                   
+          href: apps-advanced-threat-protection-macos.md
       - name: PowerShell scripts
-        href: intune-management-extension.md  
+        href: intune-management-extension.md
     - name: Assign apps
       items:
       - name: Assign apps to groups
         href: apps-deploy.md
-        displayName: app assignment; assignment   
+        displayName: app assignment; assignment
       - name: Include and exclude apps
-        href: apps-inc-exl-assignments.md  
-        displayName: app assignment               
+        href: apps-inc-exl-assignments.md
+        displayName: app assignment
       - name: Deploy Windows 10 apps
-        href: apps-windows-10-app-deploy.md      
+        href: apps-windows-10-app-deploy.md
       - name: Deploy apps to Government environments
-        href: apps-deploy-gcc-dod.md                    
+        href: apps-deploy-gcc-dod.md
     - name: Monitor apps
       href: apps-monitor.md
     - name: Discovered apps
-      href: app-discovered-apps.md      
+      href: app-discovered-apps.md
     - name: Configure apps
       items:
       - name: App configuration policies
-        href: app-configuration-policies-overview.md  
-        displayName: App configuration policy; configuration policy            
+        href: app-configuration-policies-overview.md
+        displayName: App configuration policy; configuration policy
       - name: iOS managed devices
         href: app-configuration-policies-use-ios.md
       - name: Android managed devices
@@ -131,7 +128,7 @@
       - name: Configure specific apps
         items:
         - name: Configure the Managed Home Screen
-          href: app-configuration-managed-home-screen-app.md 
+          href: app-configuration-managed-home-screen-app.md
         - name: Configure the Company Portal
           href: company-portal-app.md
         - name: Configure the Managed Browser
@@ -139,11 +136,11 @@
         - name: Configure Microsoft Launcher
           href: configure-microsoft-launcher.md
         - name: Configure Microsoft Edge
-          href: manage-microsoft-edge.md        
+          href: manage-microsoft-edge.md
         - name: Configure Outlook
           href: app-configuration-policies-outlook.md
         - name: Configure Google Chrome for Android
-          href: apps-configure-chrome-android.md        
+          href: apps-configure-chrome-android.md
       - name: Volume-purchased apps and books
         items:
         - name: Manage VPP apps and books
@@ -184,7 +181,7 @@
         - name: App protection policy delivery
           href: app-protection-policy-delivery.md
         - name: Protecting app extensions
-          href: app-protection-policy-extensions.md                    
+          href: app-protection-policy-extensions.md
         - name: Monitor app protection user status
           href: app-protection-policies-monitor.md
         - name: Get ready for WIP app protection policies
@@ -199,10 +196,10 @@
         href: ../fundamentals/help-desk-operators.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
       - name: Troubleshoot app installation problems
         href: troubleshoot-app-install.md
-      - name: App installation error reference                  
-        href: app-install-error-codes.md         
+      - name: App installation error reference
+        href: app-install-error-codes.md
       - name: Troubleshoot mobile application management
-        href: troubleshoot-mam.md            
+        href: troubleshoot-mam.md
       - name: Review app protection logs
         href: app-protection-policy-settings-log.md
 - name: Reference
@@ -225,6 +222,6 @@
         href: ../developer/app-sdk-android.md
         items:
         - name: Intune App SDK for Android testing guide
-          href: ../developer/app-sdk-android-testing-guide.md        
+          href: ../developer/app-sdk-android-testing-guide.md
       - name: Intune App SDK Xamarin Bindings
         href: ../developer/app-sdk-xamarin.md

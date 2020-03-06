@@ -29,7 +29,7 @@
         ]
       }
     ],
-    "dest": "intune-user-help",
+    "dest": "user-help",
     "template": "docs.html",
     "globalMetadata": {
       "layout": "Conceptual",
