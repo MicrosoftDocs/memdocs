@@ -70,7 +70,7 @@ To delete an end user’s personal data from Intune, an admin must [delete the u
 Resetting to factory settings restores all company and personal data and settings to the original factory settings. It is useful for providing a device to the next employee. User files,user installed applications, and non-default settings are removed and this data is deleted from the Intune service within 30 days of the removal action.
 
 ### User self-removal from Intune management
-Users can remove their [Android, Apple, or Windows](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android) personal device from Intune management without admin assistance.   
+Users can remove their [Android, Apple, or Windows](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-android) personal device from Intune management without admin assistance.   
 
 ### Retire
 The **Retire** action removes Intune provisioned data like company applications, data about apps that Intune is managing, policy settings, and email profiles that are provisioned through Intune. This action leaves the user’s personal data on the device.

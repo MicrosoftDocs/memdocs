@@ -55,12 +55,12 @@ You can let users enroll their own personal devices into Intune management. This
 - going to the [Company Portal website](https://portal.manage.microsoft.com) or
 - downloading the Mac Company Portal app at [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac).
 
-You can also send your users a link to online enrollment steps: [Enroll your macOS device in Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
+You can also send your users a link to online enrollment steps: [Enroll your macOS device in Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-macos).
 
 For information about other end-user tasks, see these articles:
 
 - [Resources about the end-user experience with Microsoft Intune](../fundamentals/end-user-educate.md)
-- [Using your macOS device with Intune](../intune-user-help/enroll-your-device-in-intune-macos-cp.md)
+- [Using your macOS device with Intune](../user-help/enroll-your-device-in-intune-macos-cp.md)
 
 ## Company-owned macOS devices
 For organizations that purchase devices for their users, Intune supports the following macOS company-owned device enrollment methods:

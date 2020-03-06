@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 Before setting up Microsoft Intune, review the supported operating systems and browsers.
 
-For help installing Intune on your device, see [using managed devices to get work done](https://docs.microsoft.com/intune-user-help/company-portal-frequently-asked-questions) and [Intune network bandwidth usage](network-bandwidth-use.md).
+For help installing Intune on your device, see [using managed devices to get work done](https://docs.microsoft.com/user-help/company-portal-frequently-asked-questions) and [Intune network bandwidth usage](network-bandwidth-use.md).
 
 For more information on configuration service provider support, visit the [Configuration service provider reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
 

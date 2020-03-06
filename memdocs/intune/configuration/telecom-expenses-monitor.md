@@ -180,8 +180,8 @@ The Datalert service is now active. It starts monitoring data usage, and disabli
 
 For the end-user experience, the following articles may help:
 
-- [Enroll your iOS/iPadOS device in telecom expense management](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-ios)
-- [Enroll your Android device in telecom expense management](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-android)
+- [Enroll your iOS/iPadOS device in telecom expense management](https://docs.microsoft.com/user-help/enroll-your-device-with-telecom-expense-management-ios)
+- [Enroll your Android device in telecom expense management](https://docs.microsoft.com/user-help/enroll-your-device-with-telecom-expense-management-android)
 
 ## Turn off the Datalert service
 

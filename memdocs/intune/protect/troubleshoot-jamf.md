@@ -159,7 +159,7 @@ In the Company Portal app, the user might see **`Not registered`**, and an entry
 
 **Resolution**  
 To change the registration source from Intune to Jamf:
-1. [Unenroll the macOS device from Intune](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-macos). To avoid further complications for devices that aren't fully removed from Intune, see [*Cause 6*](#cause-6) in this list of causes.  
+1. [Unenroll the macOS device from Intune](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-macos). To avoid further complications for devices that aren't fully removed from Intune, see [*Cause 6*](#cause-6) in this list of causes.  
 
 2. On the device, use Jamf Self Service to open the Company Portal app, and then enroll the device with Intune. This task requires you to have [used Jamf to deploy the Company Portal app for macOS](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro), and to have [created a policy in Jamf Pro that registers the users device with Azure AD](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory).  
 
