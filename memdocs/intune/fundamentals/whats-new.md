@@ -86,7 +86,7 @@ We have made improvements to the macOS device enrollment experience and the Comp
 - An enhanced compliance check step during enrollment.
 - Support for copied Incident IDs, so your users can send errors from their devices to your company support team faster.
 
-For more information about enrollment and the Company Portal app for Mac, see [Enroll your macOS device using the Company Portal app](../intune-user-help/enroll-your-device-in-intune-macos-cp). 
+For more information about enrollment and the Company Portal app for Mac, see [Enroll your macOS device using the Company Portal app](../intune-user-help/enroll-your-device-in-intune-macos-cp.md).
 
 #### App protection policies for Better Mobile now supports iOS and iPadOS<!-- 6224512  -->
 
@@ -209,7 +209,7 @@ Windows 7 reached end of extended support on January 14, 2020. Intune deprecated
 Intune now supports uninstalling Microsoft Edge version 77 and later on Windows 10 devices. For more information, see [Add Microsoft Edge for Windows 10 to Microsoft Intune](../apps/apps-windows-edge.md).
 
 #### Screen removed from Company Portal, Android work profile enrollment<!--6103987 -->
-The **What's next?** screen has been removed from the Android work profile enrollment flow in Company Portal to streamline the user experience. Go to [Enroll with Android work profile](../intune-user-help/enroll-device-android-work-profile) to see the updated Android work profile enrollment flow.  
+The **What's next?** screen has been removed from the Android work profile enrollment flow in Company Portal to streamline the user experience. Go to [Enroll with Android work profile](../intune-user-help/enroll-device-android-work-profile.md) to see the updated Android work profile enrollment flow.  
 
 #### Company Portal app improved performance<!-- 6178652 -->
 The Company Portal app has been updated to support improved performance for devices that use ARM64 processors, such as the Surface Pro X. Previously, the Company Portal operated in an emulated ARM32 mode. Now, in version 10.4.7080.0 and above, the Company Portal app is natively compiled for ARM64. For more information about the Company Portal app, see [How to configure the Microsoft Intune Company Portal app](../apps/company-portal-app.md).
@@ -608,7 +608,7 @@ The Company Portal for macOS enrollment experience has a simpler enrollment proc
 End-users can now launch web apps directly from the Windows Company Portal app. End-users can select the web app and then choose the option **Open in browser**. The published web URL is opened directly in a web browser. This functionality will be rolled out over the next week. For more information about Web apps, see [Add web apps to Microsoft Intune](../apps/web-app.md).  
 
 #### New assignment type column in Company Portal for Windows 10 <!-- 5459950  -->
-The Company Portal > **Installed Apps** > **Assignment type** column has been renamed to **Required by your organization**.  Under that column, users will see a **Yes** or **No** value to indicate that an app is either required or made optional by their organization. These changes were made because device users were confused about the concept of available apps. Your users can find more information about installing apps from Company Portal in [Install and share apps on your device](../intune-user-help/install-apps-cpapp-windows). For more  information about configuring the Company Portal app for your users, see [How to configure the Microsoft Intune Company Portal app](../apps/company-portal-app.md).  
+The Company Portal > **Installed Apps** > **Assignment type** column has been renamed to **Required by your organization**.  Under that column, users will see a **Yes** or **No** value to indicate that an app is either required or made optional by their organization. These changes were made because device users were confused about the concept of available apps. Your users can find more information about installing apps from Company Portal in [Install and share apps on your device](../intune-user-help/install-apps-cpapp-windows.md). For more  information about configuring the Company Portal app for your users, see [How to configure the Microsoft Intune Company Portal app](../apps/company-portal-app.md).  
 
 <!-- ########################## -->
 ## Week of November 4, 2019

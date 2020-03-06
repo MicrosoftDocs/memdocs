@@ -42,11 +42,11 @@ When you access company data in a managed app, you see a message like the one be
 ## How do I get managed apps?  
 You get managed apps in a couple of different ways:
 
-- When your device is enrolled in Microsoft Intune, you either install the app from your Company Portal app or Company Portal website, or your company support might install it on your device. To learn about enrolling, see [Enroll your iOS device in Intune](enroll-your-device-in-intune-ios.md) or [Enroll your macOS device in Intune](enroll-your-device-in-intune-macos.md).
+- When your device is enrolled in Microsoft Intune, you either install the app from your Company Portal app or Company Portal website, or your company support might install it on your device. To learn about enrolling, see [Enroll your iOS device in Intune](enroll-your-device-in-intune-ios.md) or [Enroll your macOS device in Intune](enroll-your-device-in-intune-macos-cp.md).
 
 - You install an app from the App Store, and then sign in with your corporate user account that is managed by Intune.
 
-Your company support might sometimes purchase multiple licenses for an app you install. If you see a message asking you to accept the Apple Volume Purchase Program agreement, this is normal, and you can accept it. If you don’t accept it, you won’t be able to install the app.
+Your company support might sometimes purchase multiple licenses for an app you install. If you see a message asking you to accept the Apple Volume Purchase Program agreement, this is normal, and you can accept it. If you don't accept it, you won't be able to install the app.
 
 ## Available apps   
  Your organization selects apps that are appropriate and useful for you at work or school. These apps are the only ones you'll find in the Company Portal.   

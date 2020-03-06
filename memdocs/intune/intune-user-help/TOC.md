@@ -75,7 +75,7 @@
 
 ### [Use managed apps on your device](use-managed-apps-on-your-device-ios.md)
 ### [Set or change your passcode](set-or-change-your-passcode-ios.md)
-### [What happens if you reset your device using the Company Portal?](what-happens-if-you-reset-your-device-using-the-company-portal-ios.md)
+### [What happens if you reset your device using the Company Portal?](effects-of-device-reset-company-portal-ios.md)
 ### [Unenroll your device](unenroll-your-device-from-intune-ios.md)
 #### [What happens if you unenroll your device?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
 ### [Manually sync your device](sync-your-device-manually-ios.md)

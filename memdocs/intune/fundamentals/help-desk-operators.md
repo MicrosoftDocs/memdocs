@@ -34,7 +34,7 @@ The troubleshooting portal lets help desk operators and Intune administrators vi
 
 The **Troubleshoot** pane also shows user enrollment issues. Details about the issue and suggested remediation steps can help administrators and help desk operators troubleshoot problems. Certain enrollment issues aren't captured and some errors might not have remediation suggestions.
 
-For steps on adding a help desk operator role, see [Role-based administration control (RBAC) with Intune](/intune/role-based-access-control)
+For steps on adding a help desk operator role, see [Role-based administration control (RBAC) with Intune](role-based-access-control.md)
 
 When a user contacts support with a technical issue with Intune, the help desk operator enters the user's name. Intune shows useful data that can help resolve many tier-1 issues, including:
 
@@ -295,16 +295,16 @@ When you choose a failure row, more details are provided.
 ## Collect available data from mobile device
 
 Use the following resources to help collect device data when troubleshooting user's device issues:
-- [Send iOS/iPadOS enrollment errors to your IT administrator](../intune-user-help/send-errors-to-your-it-admin-ios)
-- [Help your company support fix device issues with verbose logging](../intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android)
-- [Send Android logs to your company support using a USB cable](../intune-user-help/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
-- [Send Android diagnostic data logs to your IT administrator using email](../intune-user-help/send-logs-to-your-it-admin-by-email-android)
-- [Send Android enrollment errors to your IT administrator](../intune-user-help/send-enrollment-errors-to-your-it-administrator-android)
+- [Send iOS/iPadOS enrollment errors to your IT administrator](../intune-user-help/send-errors-to-your-it-admin-ios.md)
+- [Help your company support fix device issues with verbose logging](../intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+- [Send Android logs to your company support using a USB cable](../intune-user-help/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.md)
+- [Send Android diagnostic data logs to your IT administrator using email](../intune-user-help/send-logs-to-your-it-admin-by-email-android.md)
+- [Send Android enrollment errors to your IT administrator](../intune-user-help/send-enrollment-errors-to-your-it-administrator-android.md)
 
 ## Next steps
 
-You can learn more about Role-based administration control (RBAC) to define roles in your organizational device, mobile application management, data protection tasks. For more information, see [Role-based administration control (RBAC) with Intune](/intune/role-based-access-control).
+You can learn more about Role-based administration control (RBAC) to define roles in your organizational device, mobile application management, data protection tasks. For more information, see [Role-based administration control (RBAC) with Intune](role-based-access-control.md).
 
-Learn about any known issues in Microsoft Intune. For more information, see [Known issues in Microsoft Intune](/intune/known-issues).
+Learn about any known issues in Microsoft Intune. For more information, see [Known issues in Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
 
-Learn how to create a support ticket a get help when you need it. [Get support](/intune/get-support).
+Learn how to create a support ticket a get help when you need it. [Get support](get-support.md).

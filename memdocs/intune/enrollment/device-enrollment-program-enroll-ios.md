@@ -63,7 +63,7 @@ Support for unsupervised DEP devices was deprecated in iOS/iPadOS 11. In iOS/iPa
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
 ## Prerequisites
-- Devices purchased in [Apple's Device Enrollment Program](http://deploy.apple.com)
+- Devices purchased in [Apple's Device Enrollment Program](https://deploy.apple.com)
 - [Mobile Device Management (MDM) Authority](../fundamentals/mdm-authority-set.md)
 - [Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
 
@@ -281,7 +281,7 @@ You can pick a default profile to be applied to all devices enrolling with a spe
 ## Distribute devices
 You have enabled management and syncing between Apple and Intune, and assigned a profile to  let your DEP devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license. Devices without user affinity require a device license. An activated device can't apply an enrollment profile until the device is wiped.
 
-See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program](../intune-user-help/enroll-your-device-dep-ios).
+See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program](../intune-user-help/enroll-your-device-dep-ios.md).
 
 ## Renew a DEP token  
 1. Go to deploy.apple.com.  

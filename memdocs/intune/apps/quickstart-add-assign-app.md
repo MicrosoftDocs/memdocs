@@ -31,13 +31,13 @@ ms.collection: M365-identity-device-management
 
 # Quickstart: Add and assign a client app
 
-In this quickstart, you will use Intune to add and assign a client app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work. 
+In this quickstart, you will use Intune to add and assign a client app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work.
 
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
-- To complete this quickstart, you must [create a user](../fundamentals/quickstart-create-user.md), [create a group](../fundamentals/quickstart-create-group.md), and [enroll a device](../quickstart-setup-auto-enrollment.md).
+- To complete this quickstart, you must [create a user](../fundamentals/quickstart-create-user.md), [create a group](../fundamentals/quickstart-create-group.md), and [enroll a device](../enrollment/quickstart-setup-auto-enrollment.md).
 
 ## Sign in to Intune
 
@@ -68,7 +68,7 @@ Use the following steps to add an app to Intune:
 After you've added an app to Microsoft Intune, you can assign the app to groups of users or devices.
 
 > [!NOTE]
-> This quickstart builds on previous quickstarts in this series. Please see [prerequisites](../fundamentals/quickstart-add-assign-app.md#prerequisites) in this quickstart for details.
+> This quickstart builds on previous quickstarts in this series. Please see [prerequisites](quickstart-add-assign-app.md#prerequisites) in this quickstart for details.
 
 Use the following steps to assign an app to a group:
 

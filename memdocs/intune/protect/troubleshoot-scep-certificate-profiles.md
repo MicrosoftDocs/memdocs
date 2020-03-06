@@ -119,11 +119,11 @@ The following list includes logs or consoles that are referenced in the subseque
 
 ### Logs for Android devices
 
-For devices that run Android, use the **Android Company Portal** app log file, **OMADM.log**. Before you collect and review logs, enable ensure [Verbose Logging](../intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android) is enabled, and then reproduce the issue.
+For devices that run Android, use the **Android Company Portal** app log file, **OMADM.log**. Before you collect and review logs, enable ensure [Verbose Logging](../intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md) is enabled, and then reproduce the issue.
 
-To collect the OMADM.logs from a device, see [Upload and email logs using a USB cable](../intune-user-help/send-logs-to-your-it-admin-using-cable-android).
+To collect the OMADM.logs from a device, see [Upload and email logs using a USB cable](../intune-user-help/send-logs-to-your-it-admin-using-cable-android.md).
 
-You can also [Upload and email logs](../intune-user-help/send-logs-to-your-it-admin-by-email-android#upload-and-email-logs-from-microsoft-intune-app) to support.
+You can also [Upload and email logs](../intune-user-help/send-logs-to-your-it-admin-by-email-android.md#upload-and-email-logs-from-microsoft-intune-app) to support.
 
 ### Logs for iOS and iPadOS devices
 

@@ -51,10 +51,10 @@ Intune provides the Company Portal app for users to access company data, enroll 
 
 Using the Company Portal app, you can also run the following actions:
 
-- [Remove a device from Intune](../intune-user-help/unenroll-your-device-from-intune-windows) using the Settings app or the Company Portal app
-- [Rename a device](../intune-user-help/rename-your-device-cpapp)
-- [Install apps](../intune-user-help/install-apps-cpapp-windows) on a device
-- [Sync devices manually](../intune-user-help/sync-your-device-manually-windows) from the Settings app or the Company Portal app
+- [Remove a device from Intune](../intune-user-help/unenroll-your-device-from-intune-windows.md) using the Settings app or the Company Portal app
+- [Rename a device](../intune-user-help/rename-your-device-cpapp.md)
+- [Install apps](../intune-user-help/install-apps-cpapp-windows.md) on a device
+- [Sync devices manually](../intune-user-help/sync-your-device-manually-windows.md) from the Settings app or the Company Portal app
 
 ## Compliance policy
 
@@ -97,7 +97,7 @@ When using devices running Windows Holographic for Business, the following actio
 
 - **[Retire](../remote-actions/devices-wipe.md#retire)**: The **Retire** action removes the device from Intune. It also removes managed app data, settings, and email profiles assigned by Intune. The user's personal data stays on the device.
 
-- **[Sync devices to get the latest policies and actions](../remote-actions/device-sync.md)**: The **Sync** action forces the device to immediately check in with Intune. When a device checks in, the device immediately receives any pending actions or policies that are assigned. This feature helps you validate and troubleshoot policies you’ve assigned, without waiting for the next scheduled check-in.
+- **[Sync devices to get the latest policies and actions](../remote-actions/device-sync.md)**: The **Sync** action forces the device to immediately check in with Intune. When a device checks in, the device immediately receives any pending actions or policies that are assigned. This feature helps you validate and troubleshoot policies you've assigned, without waiting for the next scheduled check-in.
 
 **[What is Microsoft Intune device management?](../remote-actions/device-management.md)** is a good resource to learn about managing devices using the Azure portal. 
 

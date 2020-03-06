@@ -42,13 +42,13 @@ When you create a work profile:
 
 - Work apps are separated from your personal apps, but they can both appear on your home screen at the same time. Below is an example of what you might see. Your screen might look slightly different.
 
-- Work app icons have a “badge” that looks like a white briefcase inside a red circle, as shown below. Personal app icons don’t show the briefcase, and will look the same as they do now.
+- Work app icons have a "badge" that looks like a white briefcase inside a red circle, as shown below. Personal app icons don't show the briefcase, and will look the same as they do now.
 
     ![Android Play Store for Work](./media/afw-google-play-store-for-work.png)
 
 - Your company or school owns your work profile, so your company support can install or remove work apps or your profile, but not your personal apps or data.
 - Your company support cannot reset or wipe your device.
 
-For the steps to create a work profile, see [Create a work profile and enroll your device](create-a-work-profile-and-enroll-your-device-in-intune-android.md).
+For the steps to create a work profile, see [Create a work profile and enroll your device](enroll-device-android-work-profile.md).
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

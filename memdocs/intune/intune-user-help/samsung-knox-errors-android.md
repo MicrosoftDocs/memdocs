@@ -55,6 +55,6 @@ The message you see might look like:
 
 |Error message|What you should try|
 |---|---|
-|**Samsung Knox activation error** - The Samsung KNOX license could not be activated. It might be because power-saving mode is turned on. Turn off power-saving mode in device settings and try again. |Your device may not have the right power settings to work with your company resources. To learn more about this setting see [power saving mode](power-saving-mode-android.md).|  
+|**Samsung Knox activation error** - The Samsung KNOX license could not be activated. It might be because power-saving mode is turned on. Turn off power-saving mode in device settings and try again. |Your device may not have the right power settings to work with your company resources. To learn more about this setting see [power saving mode](https://go.microsoft.com/fwlink/?linkid=2077422&clcid=0x409).|  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
