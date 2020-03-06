@@ -71,16 +71,16 @@ The Better Mobile app authorization process follows:
 2. Choose **Integration** > **EMM/MDM** > **ADD ACCOUNT**.
 
      ![Image of the Better Mobile admin console](./media/better-mobile-mtd-connector-integration/better_mobile_console.png)
- 
+
 3. Choose **Intune**.
-4. Next to **ACCOUNT NAME**, type a descriptor. 
+4. Next to **ACCOUNT NAME**, type a descriptor.
 5. In the **Microsoft Sign in** window, enter your Intune credentials.
 6. In the **Permissions requested** window, choose **Accept**.
 7. Search for the Azure AD Security groups that you want Better Mobile to sync devices from, and select them in the list. Then select **Continue**.
 8. Select **Done**.
-9. The **Add account** page reappears. Close the page. 
+9. The **Add account** page reappears. Close the page.
 
 ## Next steps
 
 - [Set up Better Mobile apps for enrolled devices](mtd-apps-ios-app-configuration-policy-add-assign.md)
-- [Set up Better Mobile apps for unenrolled devices](protect/mtd-add-apps-unenrolled-devices.md)
+- [Set up Better Mobile apps for unenrolled devices](mtd-add-apps-unenrolled-devices.md)

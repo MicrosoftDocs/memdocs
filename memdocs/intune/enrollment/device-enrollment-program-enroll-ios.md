@@ -25,7 +25,6 @@ ms.reviewer: tisilver
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ---
@@ -64,7 +63,7 @@ Support for unsupervised DEP devices was deprecated in iOS/iPadOS 11. In iOS/iPa
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
 ## Prerequisites
-- Devices purchased in [Apple's Device Enrollment Program](http://deploy.apple.com)
+- Devices purchased in [Apple's Device Enrollment Program](https://deploy.apple.com)
 - [Mobile Device Management (MDM) Authority](../fundamentals/mdm-authority-set.md)
 - [Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
 
@@ -151,7 +150,7 @@ Now that you've installed your token, you can create an enrollment profile for D
 5. For **User Affinity**, choose whether devices with this profile must enroll with or without an assigned user.
     - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the Company Portal for services like installing apps. If using ADFS and the enrollment profile has **Authenticate with Company Portal instead of Setup Assistant** set to **No**, [WS-Trust 1.3 Username/Mixed endpoint](https://technet.microsoft.com/library/adfs2-help-endpoints) [Learn more](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) is required.
 
-    - **Enroll without User Affinity** - Choose this option for device unaffiliated with a single user. Use this option for devices that don't access local user data. Apps like the Company Portal app don’t work.
+    - **Enroll without User Affinity** - Choose this option for device unaffiliated with a single user. Use this option for devices that don't access local user data. Apps like the Company Portal app don't work.
 
 5. If you chose **Enroll with User Affinity**, you can let users authenticate with Company Portal instead of the Apple Setup Assistant.
 
@@ -176,7 +175,7 @@ Now that you've installed your token, you can create an enrollment profile for D
 
 8. If you chose a token for **Install Company Portal with VPP**, you can lock the device in Single App Mode (specifically, the Company Portal app) right after the Setup Assistant completes. Choose **Yes** for **Run Company Portal in Single App Mode until authentication** to set this option. To use the device, the user must first authenticate by signing in using the Company Portal.
 
-    Multi-factor authentication isn't supported on a single device locked in Single App Mode. This limitation exists because the device can’t switch to a different app to complete the second factor of authentication. Therefore, if you want multifactor authentication on a Single App Mode device, the second factor must be on a different device.
+    Multi-factor authentication isn't supported on a single device locked in Single App Mode. This limitation exists because the device can't switch to a different app to complete the second factor of authentication. Therefore, if you want multifactor authentication on a Single App Mode device, the second factor must be on a different device.
 
     This feature is only supported for iOS/iPadOS 11.3.1 and later.
 
@@ -257,7 +256,7 @@ Now that Intune has permission to manage your devices, you can synchronize Intun
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens** > choose a token in the list > **Devices** > **Sync**.
    ![Screenshot of the Enrollment Program Devices node and Sync link.](./media/device-enrollment-program-enroll-ios/image06.png)
 
-   To follow Apple’s terms for acceptable enrollment program traffic, Intune imposes the following restrictions:
+   To follow Apple's terms for acceptable enrollment program traffic, Intune imposes the following restrictions:
    - A full sync can run no more than once every seven days. During a full sync, Intune fetches the complete updated list of serial numbers assigned to the Apple MDM server connected to Intune. If a DEP device is deleted from the Intune portal, it should be unassigned from the Apple MDM server in the DEP portal. If it's not unassigned, it won't be reimported to Intune until the full sync is run.   
    - A sync is run automatically every 24 hours. You can also sync by clicking the **Sync** button (no more than once every 15 minutes). All sync requests are given 15 minutes to finish. The **Sync** button is disabled until a sync is completed. This sync will refresh existing device status and import new devices assigned to the Apple MDM server.   
 
@@ -282,7 +281,7 @@ You can pick a default profile to be applied to all devices enrolling with a spe
 ## Distribute devices
 You have enabled management and syncing between Apple and Intune, and assigned a profile to  let your DEP devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license. Devices without user affinity require a device license. An activated device can't apply an enrollment profile until the device is wiped.
 
-See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program](/intune-user-help/enroll-your-device-dep-ios).
+See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program](../intune-user-help/enroll-your-device-dep-ios.md).
 
 ## Renew a DEP token  
 1. Go to deploy.apple.com.  

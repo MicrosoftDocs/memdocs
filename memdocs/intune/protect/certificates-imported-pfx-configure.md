@@ -1,11 +1,11 @@
 ---
 title: Use imported PFX certificates in Microsoft Intune - Azure | Microsoft Docs
-description: Use imported Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune, including the import of certificates, configuring the certificate template, install of the Intune Imported PFX Certificate Connector, and create an Imported PKCS Certificate profile.
+description: Use imported Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune. Import certificates, configure certificate templates, install the Intune Imported PFX Certificate Connector, and create an Imported PKCS Certificate profile.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 03/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,13 @@ ms.collection: M365-identity-device-management
 
 Microsoft Intune supports the use of imported public key pair (PKCS) certificates, commonly used for S/MIME encryption with Email profiles. Certain email profiles in Intune support an option to enable S/MIME where you can define an S/MIME signing certificate and S/MIME encryption cert.
 
-S/MIME encryption is challenging because email is encrypted with a specific certificate. You must have the private key of the certificate that encrypted the email on the device where you're reading the email so it can be decrypted. Encryption certificates are renewed regularly, which means that you might need your encryption history on all of your devices to ensure you can read older email.  Since the same certificate needs to be used across devices, it's not possible to use [SCEP](certificates-scep-configure.md) or [PKCS](certficates-pfx-configure.md) certificate profiles for this purpose as those certificate delivery mechanisms deliver unique certificates per device.
+S/MIME encryption is challenging because email is encrypted with a specific certificate:
+
+- You must have the private key of the certificate that encrypted the email on the device where you're reading the email so it can be decrypted.
+- Before a certificate on a device expires, you should import a new certificate so devices can continue to decrypt new email. Renewal of these certificates isn't supported.
+- Encryption certificates are renewed regularly, which means that you might want to keep past certificate on your devices, to ensure that older email can continue to be decrypted.  
+
+Because the same certificate needs to be used across devices, it's not possible to use [SCEP](certificates-scep-configure.md) or [PKCS](certficates-pfx-configure.md) certificate profiles for this purpose as those certificate delivery mechanisms deliver unique certificates per device.
 
 For more information about using S/MIME with Intune, [Use S/MIME to encrypt email](certificates-s-mime-encryption-sign.md).
 
@@ -77,7 +83,7 @@ To use imported PKCS certificates with Intune, you'll need the following infrast
 
 When you use Intune to deploy an **imported PFX certificate** to a user, there are two components at play in addition to the device:
 
-- **Intune Service**: Stores the PFX certificates in an encrypted state and handles the deployment of the certificate to the user device.  The passwords protecting the private keys of the certificates are encrypted before they are uploaded using either a hardware security module (HSM) or Windows Cryptography, ensuring that Intune can't access the private key at any time.
+- **Intune Service**: Stores the PFX certificates in an encrypted state and handles the deployment of the certificate to the user device.  The passwords protecting the private keys of the certificates are encrypted before they're uploaded using either a hardware security module (HSM) or Windows Cryptography, ensuring that Intune can't access the private key at any time.
 
 - **PFX Certificate Connector for Microsoft Intune**: When a device requests a PFX certificate that was imported to Intune, the encrypted password, the certificate, and the device's public key are sent to the connector.  The connector decrypts the password using the on-premises private key, and then re-encrypts the password (and any plist profiles if using iOS) with the device key before sending the certificate back to Intune.  Intune then delivers the certificate to the device and the device is able to decrypt it with the device's private key and install the certificate.
 
@@ -189,7 +195,7 @@ Select the Key Storage Provider that matches the provider you used to create the
    > [!NOTE]
    > As the authentication is run against Graph, you must provide permissions to the AppID. If it's the first time you've used this utility, a *Global administrator* is required. The PowerShell cmdlets use the same AppID as the one used with [PowerShell Intune Samples](https://github.com/microsoftgraph/powershell-intune-samples).
 
-5. Convert the password for each PFX file you are importing to a secure string by running `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force`.
+5. Convert the password for each PFX file your are importing to a secure string by running `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force`.
 
 6. To create a **UserPFXCertificate** object, run
 `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>"`
@@ -227,6 +233,15 @@ After importing the certificates to Intune, create a **PKCS imported certificate
    - **Key storage provider (KSP)**: For Windows, select where to store the keys on the device.
 
 5. Select **OK** > **Create** to save your profile.
+
+## Support for third-party partners
+
+The following partners provide supported methods or tools you can use to import PFX certificates to Intune.
+
+### DigiCert
+If you use the DigiCert PKI Platform service, you can use the DigiCert **Import Tool for Intune S/MIME Certificates** to import PFX certificates to Intune. Use of this tool replaces the need to follow the instructions in the section [Import PFX Certificates to Intune](#import-pfx-certificates-to-intune) that’s detailed earlier in this article.
+
+To learn more about the DigiCert Import tool, including how to obtain the tool, see https://knowledge.digicert.com/tutorials/microsoft-intune.html in the DigiCert knowledge base.
 
 ## Next steps
 

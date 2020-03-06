@@ -83,7 +83,9 @@ Users with devices that are flagged by the **Require threat scan on apps** condi
 You can find the same reports at the top of the **App protection status** pane. To view these reports, select **Apps** > **App protection status** > **Reports**. The **Reports** pane provides several reports based on user and app, including the following:
 
 ### User report
+
 You can search for a single user and check the compliance status for that user. The **App reporting** pane shows the following information for a selected user:
+
 - **Icon**: Displays whether the app status is up-to-date.
 - **App Name**: The name of the app.
 - **Device Name**: Devices that are associated with the user's account.
@@ -92,10 +94,10 @@ You can search for a single user and check the compliance status for that user. 
 - **Status**:
   - **Checked in**: The policy was deployed to the user, and the app was used in the work context at least once.
   - **Not checked in**: The policy was deployed to the user, but the app hasn't been used in the work context since then.
-- **Last Sync**: When the app was last synced with Intune. 
+- **Last Sync**: When the app was last synced with Intune.
 
 >[!NOTE]
-> The **Last Sync** column represents the same value in both the in-console User status report and the App Protection Policy [exportable .csv report](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities). The difference is a small delay in synchronization between the value in the two reports. 
+> The **Last Sync** column represents the same value in both the in-console User status report and the App Protection Policy [exportable .csv report](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities). The difference is a small delay in synchronization between the value in the two reports.
 >
 > The time referenced in Last Sync is when Intune last saw the app instance. When a user launches an app, it might notify the Intune App Protection service at that launch time, depending on when it last checked in. See [the retry interval times for App Protection Policy check-in](app-protection-policy-delivery.md). If a user hasn't used that particular app in the last check-in interval (which is usually 30 minutes for active usage), and they launch the app, then:
 >
@@ -103,7 +105,8 @@ You can search for a single user and check the compliance status for that user. 
 > - The User status report has the newest time instantly.
 >
 > For example, consider a targeted and licensed user who launches a protected app at 12:00 PM:
-> - If this is a sign in for the first time, that means the user was signed out before, and doesn't have an app instance registration with Intune. After the user signs in, the user gets a new app instance registration, and can be checked-in immediately (with the same time delays listed previously for future check-ins). Thus, the Last Sync time is 12:00 PM in the User status report, and 12:01 PM (or 12:30 PM at latest) in the App Protection Policy report. 
+>
+> - If this is a sign in for the first time, that means the user was signed out before, and doesn't have an app instance registration with Intune. After the user signs in, the user gets a new app instance registration, and can be checked-in immediately (with the same time delays listed previously for future check-ins). Thus, the Last Sync time is 12:00 PM in the User status report, and 12:01 PM (or 12:30 PM at latest) in the App Protection Policy report.
 > - If the user is just launching the app, the Last Sync time reported depends on when the user last checked in.
 
 To see the reporting for a user, follow these steps:

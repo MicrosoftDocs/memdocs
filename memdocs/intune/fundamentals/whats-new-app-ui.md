@@ -42,7 +42,7 @@ If you're an employee or student, be sure to check out the screenshots and links
 ## Week of February 3, 2020
 
 ### Screen removed from Company Portal, Android work profile enrollment <!--6103987 -->
-The **What's next?** screen has been removed from the Android work profile enrollment flow in Company Portal to streamline the user experience. Go to [Enroll with Android work profile](/intune-user-help/enroll-device-android-work-profile) to see the updated Android work profile enrollment flow.  
+The **What's next?** screen has been removed from the Android work profile enrollment flow in Company Portal to streamline the user experience. Go to [Enroll with Android work profile](../intune-user-help/enroll-device-android-work-profile.md) to see the updated Android work profile enrollment flow.  
 
 ## Week of November 11, 2019  
 
@@ -62,7 +62,7 @@ The Company Portal for macOS enrollment experience has a simpler enrollment proc
 ## Week of October 28, 2019  
 
 ### Improved checklist design in Company Portal app for Android <!-- 5550857 -->  
-The setup checklist in the Company Portal app for Android has been updated with a lightweight design and new icons. The changes align with the recent updates made to the Company Portal app for iOS/iPadOS. For a look at the updated enrollment steps, see [Enroll with Android work profile](/intune-user-help/enroll-device-android-work-profile) and [Enroll your Android device](/intune-user-help/enroll-device-android-company-portal).  
+The setup checklist in the Company Portal app for Android has been updated with a lightweight design and new icons. The changes align with the recent updates made to the Company Portal app for iOS/iPadOS. For a look at the updated enrollment steps, see [Enroll with Android work profile](../intune-user-help/enroll-device-android-work-profile.md) and [Enroll your Android device](../intune-user-help/enroll-device-android-company-portal.md).  
 
 The following screens show the updated checklist for Android work profile enrollment:
 
@@ -108,7 +108,7 @@ The Company Portal app for Windows now lists all managed apps (both required and
 ## Week of June 17, 2019  
 
 ### New features in Microsoft Intune app
-We’ve added new features to the Microsoft Intune app (preview) for Android. Users on fully managed Android devices can now:  
+We've added new features to the Microsoft Intune app (preview) for Android. Users on fully managed Android devices can now:  
 
 * View and manage the devices they've enrolled through the Intune Company Portal or Microsoft Intune app.    
 * Contact their organization for support.    
@@ -136,7 +136,6 @@ Example screenshot of the **Help** screen:
 
 ![Screenshot of Microsoft Intune app, Help screen.](./media/whats-new-app-ui/1904-intune-app-help.png)   
 
-
 ## Week of April 1, 2019  
 
 ### Changes to Company Portal enrollment for iOS 12 device users <!--3448635 -->  
@@ -153,10 +152,9 @@ The home page of the Company Portal app for iOS devices has been redesigned. Wit
 
 ## Week of February 19, 2019  
 ### New App categories screen in the Company Portal app for Windows 10<!-- 3834780 WNready4Review -->  
-A new screen called **App categories** has been added to improve the app browsing and selection experience in Company Portal for Windows 10. Users will now see their apps sorted under categories such as **Featured**, **Education**, and **Productivity**. This change appears in Company Portal versions 10.3.3451.0 and later. For more information about installing apps in Company Portal, see [Install and share apps on your device](/intune-user-help/install-apps-cpapp-windows).  
+A new screen called **App categories** has been added to improve the app browsing and selection experience in Company Portal for Windows 10. Users will now see their apps sorted under categories such as **Featured**, **Education**, and **Productivity**. This change appears in Company Portal versions 10.3.3451.0 and later. For more information about installing apps in Company Portal, see [Install and share apps on your device](../intune-user-help/install-apps-cpapp-windows.md).  
 
-![Screenshot of Company Portal for Windows 10, App categories screen.](./media/whats-new-app-ui/1902_CP_app_categories.png)   
-
+![Screenshot of Company Portal for Windows 10, App categories screen.](./media/whats-new-app-ui/1902_CP_app_categories.png)
 
 ## Week of November 12, 2018
 
@@ -171,7 +169,7 @@ As the Microsoft Intune admin, you can upload a custom brand image which will be
 ## Week of August 27, 2018  
 
 ### New user experience update for the Company Portal website <!--2000968 -->  
-We’ve added new features, based on feedback from customers, to the Company Portal website. You'll experience a significant improvement in existing functionality and usability from your devices. Specific areas of the site, such as device details, feedback and support, and device overview, now have a new, modern, responsive design. The [Intune Company Portal website documentation](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website) has been updated to reflect these changes.   
+We've added new features, based on feedback from customers, to the Company Portal website. You'll experience a significant improvement in existing functionality and usability from your devices. Specific areas of the site, such as device details, feedback and support, and device overview, now have a new, modern, responsive design. The [Intune Company Portal website documentation](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website) has been updated to reflect these changes.   
 
 Updates you'll see include:  
 
@@ -273,7 +271,7 @@ If you've enabled [device group mapping](../enrollment/device-group-mapping.md),
 We've improved the device setup workflow in the Company Portal app for iOS/iPadOS. The language is more user-friendly and we've combined screens where possible. We have also made the language more specific to your company by using your company name throughout the setup text.
 
 > [!NOTE]
-> We use the company name you have set in the Azure Portal in **Microsoft Intune** > **Client Apps** > **Company Portal branding** > **Company name**. If you have not set this value, we will use the tenant name set in **Azure Active Directory** > **Properties** > **Name**. If you have not set a company name in Company Portal branding and don’t want your tenant name to be displayed, we recommend that you set the company name in the Company Portal branding tab. If you don’t want this string to show in the header in Company Portal, you can deselect the checkbox to “Show company name next to logo.”
+> We use the company name you have set in the Azure Portal in **Microsoft Intune** > **Client Apps** > **Company Portal branding** > **Company name**. If you have not set this value, we will use the tenant name set in **Azure Active Directory** > **Properties** > **Name**. If you have not set a company name in Company Portal branding and don't want your tenant name to be displayed, we recommend that you set the company name in the Company Portal branding tab. If you don't want this string to show in the header in Company Portal, you can deselect the checkbox to "Show company name next to logo."
 
 |Before|After|
 |---|---|

@@ -30,13 +30,12 @@ ms.collection: M365-identity-device-management
 ---
 # Use a custom device profile to create a WiFi profile with a pre-shared key in Intune
 
-
-
 Pre-shared keys (PSK) are typically used to authenticate users in WiFi networks, or wireless LANs. With Intune, you can create a WiFi profile using a pre-shared key. To create the profile, use the **Custom device profiles** feature within Intune. This article also includes some examples of how to create an EAP-based Wi-Fi profile.
 
 This feature supports:
 
 - Android device administrator
+- Android Enterprise Work Profile
 - Windows
 - EAP-based Wi-Fi
 
@@ -74,7 +73,7 @@ This feature supports:
         > [!NOTE]
         > Be sure to include the dot character at the beginning.
 
-        SSID is the SSID for which you’re creating the policy. For example, if the Wi-Fi is named `Hotspot-1`, enter `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
+        SSID is the SSID for which you're creating the policy. For example, if the Wi-Fi is named `Hotspot-1`, enter `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
 
     4. **Data Type**: Select **String**.
 
@@ -82,7 +81,7 @@ This feature supports:
 
 5. When you're done, select **OK** > **Create** to save your changes.
 
-Your profile is shown in the profiles list. Next, [assign this profile](../device-profile-assign.md) to your user groups. This policy can only be assigned to user groups.
+Your profile is shown in the profiles list. Next, [assign this profile](device-profile-assign.md) to your user groups. This policy can only be assigned to user groups.
 
 The next time each device checks in, the policy is applied, and a Wi-Fi profile is created on the device. The device can then connect to the network automatically.
 
@@ -253,7 +252,7 @@ After you have the XML file, copy and paste the XML syntax into OMA-URI settings
 
 - When rotating keys (passwords or passphrases), expect downtime and plan your deployments. Consider pushing new Wi-Fi profiles during non-working hours. Also, warn users that connectivity may be affected.
 
-- For a smooth transition, be sure the end user’s device has an alternate connection to the Internet. For example, the end user can switch back to Guest WiFi (or some other WiFi network) or have cellular connectivity to communicate with Intune. The extra connection allows the user to receive policy updates when the corporate WiFi Profile is updated on the device.
+- For a smooth transition, be sure the end user's device has an alternate connection to the Internet. For example, the end user can switch back to Guest WiFi (or some other WiFi network) or have cellular connectivity to communicate with Intune. The extra connection allows the user to receive policy updates when the corporate WiFi Profile is updated on the device.
 
 ## Next steps
 

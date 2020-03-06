@@ -31,13 +31,13 @@ ms.collection: M365-identity-device-management
 
 # Quickstart: Add and assign a client app
 
-In this quickstart, you will use Intune to add and assign a client app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work. 
+In this quickstart, you will use Intune to add and assign a client app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work.
 
-If you don’t have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
-- To complete this quickstart, you must [create a user](../fundamentals/quickstart-create-user.md), [create a group](../fundamentals/quickstart-create-group.md), and [enroll a device](../quickstart-setup-auto-enrollment.md).
+- To complete this quickstart, you must [create a user](../fundamentals/quickstart-create-user.md), [create a group](../fundamentals/quickstart-create-group.md), and [enroll a device](../enrollment/quickstart-setup-auto-enrollment.md).
 
 ## Sign in to Intune
 
@@ -48,6 +48,7 @@ Sign in to [Intune](https://aka.ms/intuneportal) as a [Global administrator or a
 An app can be included so that Intune can manage aspects of the app. 
 
 Use the following steps to add an app to Intune:
+
 1. In [Intune](https://aka.ms/intuneportal), select **Apps** > **All apps** > **Add**. 
 2. Select **Windows 10** in the **Office 365 Suite** section of the **Select app type** pane.
 3. Click **Select**. The **Add app** steps are displayed.
@@ -58,7 +59,7 @@ Use the following steps to add an app to Intune:
 8. Click **Next** to display the **Scope tags** page.
 9. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 10. Click **Next** to display the **Assignments** page.
-11. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md). 
+11. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
 12. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 13. When you are done, click **Create** to add the app to Intune.
 
@@ -70,6 +71,7 @@ After you've added an app to Microsoft Intune, you can assign the app to groups 
 > This quickstart builds on previous quickstarts in this series. Please see [prerequisites](quickstart-add-assign-app.md#prerequisites) in this quickstart for details.
 
 Use the following steps to assign an app to a group:
+
 1. In [Intune](https://aka.ms/intuneportal), select **Apps** > **All apps**. 
 2. Select the app that you want to assign to a group.
 3. Click **Assignments** > **Add group** to display the **Add group** pane.
@@ -86,7 +88,7 @@ You must install and use the Company Portal app to install the **Contoso's To-Do
 1. Log in to your enrolled Windows 10 Desktop device.
 
     > [!IMPORTANT]
-    > The device must be [enrolled with Intune](../quickstart-enroll-windows-device.md). Also, you must sign in to the device using an account contained in the group you assigned to the app.
+    > The device must be [enrolled with Intune](../enrollment/quickstart-enroll-windows-device.md). Also, you must sign in to the device using an account contained in the group you assigned to the app.
 
 2. From the **Start** menu, open the **Microsoft Store**. Then, find the **Company Portal** app and install it.
 3. Launch the **Company Portal** app.
@@ -98,7 +100,7 @@ You must install and use the Company Portal app to install the **Contoso's To-Do
 
 5. Click **Install**.
 
-If your business needs require that you assign the Company Portal app to your workforce, you can manually assign the Windows 10 Company Portal app directly from Intune. For more information see, [Manually add the Windows 10 Company Portal app by using Microsoft Intune](../company-portal-app.md).
+If your business needs require that you assign the Company Portal app to your workforce, you can manually assign the Windows 10 Company Portal app directly from Intune. For more information see, [Manually add the Windows 10 Company Portal app by using Microsoft Intune](company-portal-app.md).
 
 ## Next steps
 

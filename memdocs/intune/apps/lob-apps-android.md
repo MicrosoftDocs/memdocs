@@ -76,13 +76,13 @@ A line-of-business (LOB) app is an app that you add to Intune from an app instal
 ## Step 2 - Select scope tags (optional)
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-1. Click **Select scope tags** to optionally add scope tags for the app. 
+1. Click **Select scope tags** to optionally add scope tags for the app.
 2. Click **Next** to display the **Assignments** page.
 
 ## Step 3 - Assignments
 
 1. Select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
-2. Click **Next** to display the **Review + create** page. 
+2. Click **Next** to display the **Review + create** page.
 
 ## Step 4 - Review + create
 

@@ -97,28 +97,28 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
 ## Upload an Apple VPP or location token
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
-4. On the list of VPP tokens pane, select **Create**.
-5. On the **Create VPP token** pane, specify the following information:
+2. Select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
+3. On the list of VPP tokens pane, select **Create**.
+4. On the **Create VPP token** pane, specify the following information:
     - **VPP token file** - If you haven't already, sign up for Apple Business Manager or Apple School Manager. After you sign up, download the Apple VPP token for your account and select it here.
     - **Apple ID** - Enter the Managed Apple ID of the account associated with the uploaded token.
     - **Take control of token from another MDM** - Setting this option to **yes** allows the token to be reassigned to Intune from another MDM solution.
-    - **Token Name** - An administrative field for setting the token name.    
+    - **Token Name** - An administrative field for setting the token name.
     - **Country/Region** - Select the VPP country/region store.  Intune synchronizes VPP apps for all locales from the specified VPP country/region store.
         > [!WARNING]  
         > Changing the country/region will update the apps metadata and App Store URL on next sync with the Apple service for apps created with this token. The app will not be updated if it does not exist in the new country/region store.
 
     - **Type of VPP account** - Choose from **Business** or **Education**.
-    - **Automatic app updates** - Choose from **On** or **Off** to enable automatic updates. When enabled, Intune detects the VPP app updates inside the app store and automatically pushes them to the device when the device checks in. 
-        
-        > [!NOTE] 
+    - **Automatic app updates** - Choose from **On** or **Off** to enable automatic updates. When enabled, Intune detects the VPP app updates inside the app store and automatically pushes them to the device when the device checks in.
+
+        > [!NOTE]
         > Automatic app updates for Apple VPP apps will automatically update only apps deployed with **Required** install intent. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details.  
 
     - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microsoft sends to Apple, see [Data Intune sends to Apple](../protect/data-intune-sends-to-apple.md).
-
-6. When you are done, select **Create**. The token is displayed in the list of tokens pane.
+5. When you are done, select **Create**. The token is displayed in the list of tokens pane.
 
 ## Synchronize a VPP token
+
 You can synchronize the app names, metadata and license information for your purchased apps in Intune by choosing **Sync** for a selected token.
 
 ## Assign a volume-purchased app
@@ -206,14 +206,16 @@ If **Assigned to external MDM** is indicated in the Intune portal, then you (the
 ## Frequently asked questions
 
 ### How many tokens can I upload?
+
 You can upload up to 3,000 tokens in Intune.
 
 ### How long does the portal take to update the license count once an app is installed or removed from the device?
+
 The license should be updated within a few hours after installing or uninstalling an app. Note that if the end user removes the app from the device, the license is still assigned to that user or device.
 
 ### Is it possible to oversubscribe an app and, if so, in what circumstance?
-Yes. The Intune admin can oversubscribe an app. For example, if the admin purchases 100 licenses for app XYZ, and then targets the app to a group with 500 members in it. The first 100 members (users or devices) will get the license assigned to them, the rest of the members will fail on license assignment.
 
+Yes. The Intune admin can oversubscribe an app. For example, if the admin purchases 100 licenses for app XYZ, and then targets the app to a group with 500 members in it. The first 100 members (users or devices) will get the license assigned to them, the rest of the members will fail on license assignment.
 
 ## Next steps
 

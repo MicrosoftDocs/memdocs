@@ -73,7 +73,7 @@ To create a Windows 10 S mode supplemental policy, use the following steps:
 6. Click **Next: Assignments**.<br>
    The **Assignments** page allows you can assign the policy to users and devices. It is important to note that you can assign a policy to a device whether or not the device is managed by Intune.
 7. Click **Next: Review + create** to review the values you entered for the profile.
-8. When you are done, click **Create** to create the S mode supplemental policy in Intune. 
+8. When you are done, click **Create** to create the S mode supplemental policy in Intune.
 
 Once the policy is created, you will see it added to the list of S mode supplemental policies in Intune. Once the policy is assigned, the policy gets deployed to the devices. Note that you must deploy the app to same security group as the supplemental policy​. You can start targeting and assigning apps to those devices. This will allow your end users to install and execute the apps on the S mode devices.
 
@@ -83,7 +83,7 @@ Currently, to remove the S mode supplemental policy from the device, you must as
 
 ## Policy Reporting​
 
-The S mode supplemental policy, which is enforced at device level, only has device level reporting.​ Device level reporting is available for sucesss and error conditions. 
+The S mode supplemental policy, which is enforced at device level, only has device level reporting.​ Device level reporting is available for success and error conditions.
 
 Reporting values that are shown in the Intune console for S mode reporting polices:
 - **Success**: The S mode supplemental policy is in effect.

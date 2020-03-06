@@ -53,7 +53,7 @@ You can use Microsoft Edge for enterprise scenarios on iOS/iPadOS and Android de
 - **Azure Application Proxy integration** - Admins can control access to SaaS apps and web apps, helping ensure browser-based apps only run in the secure Microsoft Edge browser, whether end users connect from the corporate network or connect from the Internet. 
 - **Managed Favorites and Home Page shortcuts** - For ease of access, admins can set URLs to appear under favorites when end users are in their corporate context. Admins can set a homepage shortcut, which will show as the primary shortcut when the corporate user opens a new page or a new tab in Microsoft Edge.
 
-Microsoft Intune protection policies for Microsoft Edge help to protect your organization’s data and resources. Intune-protected Microsoft Edge ensures that your company’s resources are protected not only within natively installed apps, but also when accessed through the web browser.
+Microsoft Intune protection policies for Microsoft Edge help to protect your organization's data and resources. Intune-protected Microsoft Edge ensures that your company's resources are protected not only within natively installed apps, but also when accessed through the web browser.
 
 ## Getting started
 
@@ -137,7 +137,7 @@ SSO requires your device to be registered by the Microsoft Authenticator app on 
 ## Create a protected browser app configuration
 
 >[!IMPORTANT]
->For app configurations to apply, the user's protected browser or another app on the device must already be managed by [Intune app protection policy](../app-protection-policy.md)
+>For app configurations to apply, the user's protected browser or another app on the device must already be managed by [Intune app protection policy](app-protection-policy.md)
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App configuration policies** > **Add** > **Managed apps**.

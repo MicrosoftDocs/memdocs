@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -135,16 +135,16 @@ The following steps provide guidance to help you add a Windows app to Intune.
     - **Install command**: Add the complete installation command line to install the app. 
 
         For example, if your app filename is **MyApp123**, add the following:<br>
-        `msiexec /p “MyApp123.msp”`<p>
+        `msiexec /p "MyApp123.msp"`<p>
         And, if the application is `ApplicationName.exe`, the command would be the application name followed by the command arguments (switches) supported by the package. <br>For example:<br>
         `ApplicationName.exe /quiet`<br>
         In the above command, the `ApplicationName.exe` package supports the `/quiet` command argument.<p> 
         For the specific arguments supported by the application package, contact your application vendor.
 
-    - **Uninstall command**: Add the complete uninstall command line to uninstall the app based on the app’s GUID. 
+    - **Uninstall command**: Add the complete uninstall command line to uninstall the app based on the app's GUID. 
 
         For example:
-        `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
+        `msiexec /x "{12345A67-89B0-1234-5678-000001000000}"`
 
     - **Install behavior**: Set the install behavior to either **System** or **User**.
 
@@ -290,7 +290,7 @@ The end user will see Windows Toast Notifications indicating that dependent apps
 - 1 or more dependent app requirements not met​
 - 1 or more dependent apps are pending a device reboot
 
-If you choose not to **Automatically install** a dependency, the Win32 app installation will not be attempted. Additionally, app reporting will show that the dependency was flagged as `failed` and also provide a failure reason. You can view the dependency installation failure by clicking on a failure (or warning) provided in the Win 32 app [installation details](troubleshoot-app-install.md#win32-app-installation-troubleshooting).​ 
+If you choose not to **Automatically install** a dependency, the Win32 app installation will not be attempted. Additionally, app reporting will show that the dependency was flagged as `failed` and also provide a failure reason. You can view the dependency installation failure by clicking on a failure (or warning) provided in the Win 32 app [installation details](troubleshoot-app-install.md#win32-app-installation-troubleshooting).​
 
 Each dependency will adhere to Intune Win32 app retry logic (try to install 3 times after waiting for 5 minutes) and the global re-evaluation schedule.​ Also, dependencies are only applicable at the time of installing the Win32 app on the device. Dependencies are not applicable for uninstalling a Win32 app.​ To delete a dependency, you must click on the ellipses (three dots) to the left of the dependent app located at the end of the row of the dependency list.​ 
 
@@ -309,7 +309,7 @@ You can select the **Required**, **Available for enrolled devices**, or **Uninst
     - **Available for enrolled devices**: Users install the app from the Company Portal app or Company Portal website.
     - **Uninstall**: The app is uninstalled from devices in the selected groups.
 2. Click **Add group** and assign the groups that will use this app.
-3. In the **Select groups** pane, select to assign based on users or devices. 
+3. In the **Select groups** pane, select to assign based on users or devices.
 4. After you have selected your groups, you can also set **End user notifications**, **Availability**, and **Installation deadline**. For more information, see [Set Win32 app availability and notifications](apps-win32-app-management.md#set-win32-app-availability-and-notifications).
 5. If you want to exclude any groups of users from being affected by this app assignment, select **Included** under the **MODE** column. The **Edit assignment** pane will be displayed. You can set the **mode** from being **Included** to being **Excluded**. Click **OK** to close the **Edit assignment** pane.
 6. Once you have completed setting the assignments for the apps, click **Next** to display the **Review + create** page.
@@ -339,6 +339,11 @@ The end user will see Windows Toast Notifications for the required and available
 The following image notifies the end user that app changes are being made to the device.
 
 ![Screenshot notifying the user that app changes are being made](./media/apps-win32-app-management/apps-win32-app-09.png)    
+
+Additionally, the Company Portal app shows additional app installation status messages to end users. The following conditions apply to Win32 dependency features:
+- App failed to install. Dependencies defined by the admin were not met.
+- App installed successfully but requires a restart.
+- App is in the process of installing, but requires a restart to continue.
 
 ## Set Win32 app availability and notifications
 You can configure the start time and deadline time for a Win32 app. At the start time, Intune management extension will start the app content download and cache it for required intent. The app will be installed at the deadline time. For available apps, start time will dictate when the app is visible in the Company Portal and content will be downloaded when the end user requests the app from the Company Portal. Additionally, you can enable a restart grace period. 

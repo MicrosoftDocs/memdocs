@@ -40,8 +40,8 @@ As a best practice, create and assign apps specifically for your user groups, an
 Important scenarios exist when including or excluding app assignments:
 
 - Exclusion takes precedence over inclusion in the following same group type scenarios:
-	- Including user groups and excluding user groups when assigning apps
-	- Including device groups and excluding device group when assigning apps
+  - Including user groups and excluding user groups when assigning apps
+  - Including device groups and excluding device group when assigning apps
 
     For example, if you assign a device group to the **All corporate users user** group, but exclude members in the **Senior Management Staff** user group, **All corporate users** except the **Senior Management staff** get the assignment, because both groups are user groups.
 - Intune doesn't evaluate user-to-device group relationships. If you assign apps to mixed groups, the results may not be what you want or expect.
@@ -57,12 +57,14 @@ As a result, it's not recommended to assign apps to mixed groups.
 >
 > Android enterprise supports including and excluding groups. You can leverage the built-in **All Users** and **All Devices** groups for Android enterprise app assignment. 
 
-## Include and exclude groups when assigning apps 
+## Include and exclude groups when assigning apps
+
 To assign an app to groups by using the include and exclude assignment:
+
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**. The list of added apps is shown.
-3. Select the app that you want to assign. A dashboard displays information about the app. 
-4. In the **Manage** section of the menu, select **Assignments**. 
+3. Select the app that you want to assign. A dashboard displays information about the app.
+4. In the **Manage** section of the menu, select **Assignments**.
 
     ![Include app assignments when assigning apps](./media/apps-inc-exl-assignments/apps-inc-exl-01.png)
 
@@ -80,7 +82,7 @@ To assign an app to groups by using the include and exclude assignment:
 
     ![Intune app assignments - Include groups](./media/apps-inc-exl-assignments/apps-inc-exl-03.png)
 10. Select **OK** to set the group to include.
-11. Select **Excluded Groups** to select the groups of users that you want to make this app unavailable to. 
+11. Select **Excluded Groups** to select the groups of users that you want to make this app unavailable to.
 12. Select the groups to exclude. This makes this app unavailable to those groups.
 
     ![Intune app assignments - Exclude groups](./media/apps-inc-exl-assignments/apps-inc-exl-04.png)
@@ -88,11 +90,11 @@ To assign an app to groups by using the include and exclude assignment:
 14. In the **Add group** pane, select **OK**. The app **Assignments** list appears.
 15. Click **Save** to make your group assignments active for the app.
 
-When you make group assignments, groups that have already been assigned aren't available to be modified. If you want to select a group that currently isn't available, first remove the app from the app’s assigned list. 
+When you make group assignments, groups that have already been assigned aren't available to be modified. If you want to select a group that currently isn't available, first remove the app from the app's assigned list.
 
 To edit assignments, in the app **Assignments** list, select the row that contains the specific assignment that you want to change. You can also remove an assignment by selecting the ellipse (**…**) at the end of a row, and then selecting **Remove**. To change the view of the **Assignments** list, group by **Assignment type** or by **Included/Excluded**.
 
-![Intune app assignments - Complete](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
+![Intune app assignments - Complete](/media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 
 ## Next steps
 

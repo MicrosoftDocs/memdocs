@@ -51,7 +51,7 @@ In a migration, you must remove devices from the old MDM provider and enroll the
 
 This period can leave your organization more vulnerable to device theft and corporate data loss if corporate resource access is still allowed. It may also lead to lower user productivity if corporate resource access is blocked.
 
-Intune can offer corporate data protections during the migration so you can still have security coverage for your corporate data when there’s no device-level management.
+Intune can offer corporate data protections during the migration so you can still have security coverage for your corporate data when there's no device-level management.
 
 As you disable Conditional Access in the old MDM provider, users can still be productive while you on-board them into Intune.
 

@@ -44,6 +44,8 @@ The devices to be enrolled must also:
 - Be able to ping the domain controller of the domain you are trying to join.
 - If using Proxy, WPAD Proxy settings option must be enabled and configured.
 - Undergo the out-of-box experience (OOBE).
+- Use an authorization type that Azure Active Directory supports in OOBE.
+
 
 ## Set up Windows 10 automatic enrollment
 

@@ -71,4 +71,5 @@ The app that you've created is displayed in the apps list, where you can assign 
 > Microsoft Store apps can only be assigned to groups with the assignment type **Available for enrolled devices** (users install the app from the Company Portal app or website).
 
 ## Next steps
+
 - [Assign apps to groups](apps-deploy.md)

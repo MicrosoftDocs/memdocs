@@ -48,6 +48,7 @@ For information about adding your organization's line-of-business (LOB) apps to 
 When you create an app protection policy for iOS/iPadOS and Android apps, you follow a modern Intune process flow that results in a new app protection policy.
 
 ### Create an iOS/iPadOS or Android app protection policy
+
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. In Intune portal, choose **Apps** > **App protection policies**. This selection opens the **App protection policies** details, where you create new policies and edit existing policies.
 3. Select **Create policy** and select either **iOS/iPadOS** or **Android**. The **Create policy** pane is displayed.
@@ -65,15 +66,15 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 
 5. Click **Next** to display the **Apps** page.<br>
     The **Apps** page allows you to choose how you want to apply this policy to apps on different devices. You must add at least one app.<p>
-    
+
     | Value/Option | Description |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Target to apps on all devices types | Use this option to target your policy to apps on devices of any management state. Choose **No**  to target apps on specific devices types. For information, see [Target app protection policies based on device management state](#target-app-protection-policies-based-on-device-management-state) |
     |     Device types | Use this option to specify whether this policy applies to MDM managed devices or unmanaged devices. For iOS/iPadOS APP policies, select from **Unmanaged** and **Managed** devices. For Android APP policies, select from **Unmanaged**, **Android device administrator**, and **Android Enterprise**.  |
     | Public apps | Click **Select public apps** to choose the apps to target. |
     | Custom apps | Click **Select custom apps** to select custom apps to target based on a Bundle ID. |
-    
-    The app(s) you have selected will appear in the public and custom apps list. 
+
+    The app(s) you have selected will appear in the public and custom apps list.
 6. Click **Next** to display the **Data protection** page.<br>
     This page provides settings for data loss prevention (DLP) controls, including cut, copy, paste, and save-as restrictions. These settings determine how users interact with data in the apps that this app protection policy applies.​
 
@@ -82,7 +83,7 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     - **Android data protection** - For information, see [Android app protection policy settings - Data protection](app-protection-policy-settings-android.md#data-protection).
 
 7. Click **Next** to display the **Access requirements** page.<br>
-    This page provides settings to allow you to configure the PIN and credential requirements that users must meet to access apps in a work context. 
+    This page provides settings to allow you to configure the PIN and credential requirements that users must meet to access apps in a work context.
  
     **Access requirements settings**:<br>
     - **iOS/iPadOS access requirements** - For information, see [iOS/iPadOS app protection policy settings - Access requirements](app-protection-policy-settings-ios.md#access-requirements).
@@ -100,17 +101,17 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 
 10. Click **Next: Review + create** to review the values and settings you entered for this app protection policy.
 
-11. When you are done, click **Create** to create the app protection policy in Intune. 
+11. When you are done, click **Create** to create the app protection policy in Intune.
 
     > [!TIP]
-    > These policy settings are enforced only when using apps in the work context. When end users use the app to do a personal task, they aren't affected by these policies. Note that when you create a new file it is considered a personal file. 
+    > These policy settings are enforced only when using apps in the work context. When end users use the app to do a personal task, they aren't affected by these policies. Note that when you create a new file it is considered a personal file.
 
 End users can download the apps from the App store or Google Play. For more information, see:
 * [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md)
 * [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
 
 ## Change existing policies
-You can edit an existing policy and apply it to the targeted users. However, when you change existing policies, users who are already signed in to the apps won’t see the changes for an eight-hour period.
+You can edit an existing policy and apply it to the targeted users. However, when you change existing policies, users who are already signed in to the apps won't see the changes for an eight-hour period.
 
 To see the effect of the changes immediately, the end user must sign out of the app, and then sign back in.
 
@@ -131,7 +132,7 @@ To see the effect of the changes immediately, the end user must sign out of the 
     | Public apps | Click **Select public apps** to choose the apps to target. |
     | Custom apps | Click **Select custom apps** to select custom apps to target based on a Bundle ID. |
 
-    The app(s) you have selected will appear in the public and custom apps list. 
+    The app(s) you have selected will appear in the public and custom apps list.
 
 5. Click **Review + create** to review the apps selected for this policy.
 
@@ -168,9 +169,9 @@ To see the effect of the changes immediately, the end user must sign out of the 
 4. Select the **Save** to save your changes. Repeat the process to select a settings area and modify and then save your changes, until all your changes are complete. You can then close the *Intune App Protection - Properties* pane. 
 
 ## Target app protection policies based on device management state
-In many organizations, it’s common to allow end users to use both Intune Mobile Device Management (MDM) managed devices, such as corporate owned devices, and un-managed devices protected with only Intune app protection policies. Unmanaged devices are often known as Bring Your Own Devices (BYOD).
+In many organizations, it's common to allow end users to use both Intune Mobile Device Management (MDM) managed devices, such as corporate owned devices, and un-managed devices protected with only Intune app protection policies. Unmanaged devices are often known as Bring Your Own Devices (BYOD).
 
-Because Intune app protection policies target a user’s identity, the protection settings for a user can apply to both enrolled (MDM managed) and non-enrolled devices (no MDM). Therefore, you can target an Intune app protection policy to either Intune enrolled or unenrolled iOS/iPadOS and Android devices. You can have one protection policy for unmanaged devices in which strict data loss prevention (DLP) controls are in place, and a separate protection policy for MDM managed devices, where the DLP controls may be a little more relaxed. For more information how this works on personal Android Enterprise devices, see [App protection policies and work profiles](android-deployment-scenarios-app-protection-work-profiles.md).
+Because Intune app protection policies target a user's identity, the protection settings for a user can apply to both enrolled (MDM managed) and non-enrolled devices (no MDM). Therefore, you can target an Intune app protection policy to either Intune enrolled or unenrolled iOS/iPadOS and Android devices. You can have one protection policy for unmanaged devices in which strict data loss prevention (DLP) controls are in place, and a separate protection policy for MDM managed devices, where the DLP controls may be a little more relaxed. For more information how this works on personal Android Enterprise devices, see [App protection policies and work profiles](android-deployment-scenarios-app-protection-work-profiles.md).
 
 To create these policies, browse to **Apps** > **App protection policies** in the Intune console, and then select **Create policy**. You can also edit an existing app protection policy. To have the app protection policy apply to both managed and un-managed devices, navigate to the **Apps** page and confirm that **Target to apps on all device types** is set to **Yes**, the default value. If you want to granularly assign based on management state, set **Target to apps on all device types**  to **No**. 
 

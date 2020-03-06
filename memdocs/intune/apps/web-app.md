@@ -40,7 +40,7 @@ Before you can manage and assign an app for your users, add the app to Intune.
 Intune creates a shortcut to the web app on the user's device. For iOS/iPadOS devices, a shortcut to the web app is added to the home screen. For Android Device Admin devices, a shortcut to the web app is added to the Intune company portal widget and the widget needs to be pinned manually by the user. For Windows devices, a shortcut to the web app is placed on the Start Menu.
 
 > [!Note]
-> A browser must be installed on the user’s device to launch web apps. 
+> A browser must be installed on the user's device to launch web apps. 
 
 > [!Note]
 > For Android Enterprise devices, see [Managed Google Play web links](apps-add-android-for-work.md#managed-google-play-web-links)

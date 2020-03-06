@@ -33,18 +33,20 @@ ms.collection: M365-identity-device-management
 Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft Edge *version 77 and later*. By selecting this app type in Intune, you can assign and install Microsoft Edge *version 77 and later* to devices you manage that run Windows 10.
 
 > [!IMPORTANT]
-> This app type is in **public preview** and offers stable, beta, and dev channels for Windows 10. The deployment is in English (EN) only, however end users can change the display language in the browser under **Settings** > **Languages**. Microsoft Edge is a Win32 app installed in system context and on like architectures (x86 app on x86 OS, and x64 app on x64 OS). Intune will detect any preexisting Microsoft Edge installations. If it is installed in user context, a system installation will overwrite it. If it is installed in system context, installion success is reported. In addition, automatic updates of Microsoft Edge are **On** by default.
+> This app type is in **public preview** and offers stable, beta, and dev channels for Windows 10. The deployment is in English (EN) only, however end users can change the display language in the browser under **Settings** > **Languages**. Microsoft Edge is a Win32 app installed in system context and on like architectures (x86 app on x86 OS, and x64 app on x64 OS). Intune will detect any preexisting Microsoft Edge installations. If it is installed in user context, a system installation will overwrite it. If it is installed in system context, installation success is reported. In addition, automatic updates of Microsoft Edge are **On** by default.
 
 > [!NOTE]
 > Microsoft Edge *version 77 and later* is available for macOS as well.
-> 
+>
 > You cannot use the built-in application deployment of Microsoft Edge for workplace join computers. Built-in application deployment requires the Intune management extension, which only exists for AAD joined devices. You can still deploy Microsoft Edge *version 77 and later* using an *.msi* uploaded to **Apps**, see [Add a Windows line-of-business app to Microsoft Intune](lob-apps-windows.md).
 
 ## Prerequisites
+
 - Windows 10 RS2 and above is required.
 - Any pre-installed versions of Microsoft Edge *version 77 and later* for all channels in user context will be overwritten with Edge installed in system context.
 
 ## Configure the app in Intune
+
 You can add a Microsoft Edge version 77 and later to Intune using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -52,6 +54,7 @@ You can add a Microsoft Edge version 77 and later to Intune using the following 
 3. In the **App type** list under the **Microsoft Edge, version 77 and later**, select **Windows 10**.
 
 ## Configure app information
+
 In this step, you provide information about this app deployment. This information helps you identify the app in Intune, and it helps users find the app in the company portal.
 
 1. Click **App information** to display the **App information** pane.
@@ -80,14 +83,14 @@ In this step, configure installation options for the app.
     > [!NOTE]
     > The Microsoft Edge browser logo is displayed with the app when users browse the company portal.
 
-3.	Select **OK**.
+3.    Select **OK**.
 
 ## Select scope tags (optional)
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see Use role-based access control and scope tags for distributed IT.
-1.	Select **Scope (Tags)** > **Add**.
-2.	Use the **Select** box to search for scope tags.
-3.	Select the check box next to the scope tags you want to assign to this app.
-4.	Click **Select** > **OK**.
+1.    Select **Scope (Tags)** > **Add**.
+2.    Use the **Select** box to search for scope tags.
+3.    Select the check box next to the scope tags you want to assign to this app.
+4.    Click **Select** > **OK**.
 
 ## Add the app
 When you've completed configuring the app, select **Add** from the **App app** pane. 

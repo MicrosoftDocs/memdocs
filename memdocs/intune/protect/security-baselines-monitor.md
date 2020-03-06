@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,7 @@ Intune provides several options to monitor your security baselines. You can moni
 
 This article walks you through both monitoring options.
 
-[Security baselines in Intune](../security-baselines.md) provides more details on the security baselines feature in Microsoft Intune.
+[Security baselines in Intune](security-baselines.md) provides more details on the security baselines feature in Microsoft Intune.
 
 ## Monitor the baseline and your devices
 
@@ -49,10 +49,10 @@ The **Overview** pane provides two methods to monitor status:
 Each device is represented by one of the following statuses (used in the *device* view and also the *per-category* views):
 
 - **Matches baseline** - All the settings in the baseline match the recommended settings.
-- **Does not match baseline** - At least one setting in the baseline doesn't match the recommended setting.
+- **Does not match baseline** - One or more settings in the baseline were modified from their default values in the original baseline. The default values in each security baseline are the recommended values for that baseline.
 
   > [!NOTE]
-  > When you create or edit a baseline profile, any change that is made to a default value or configuration setting causes a "Does not match baseline" status to occur. For help to determine the settings that were changed, contact Microsoft Support. 
+  > When you create or edit a baseline profile, any change that is made to a default value or configuration setting causes a *Does not match baseline* status to occur. For help to determine the settings that were changed, contact Microsoft Support. 
 
 - **Misconfigured** - At least one setting isn't correctly configured. This status means that the setting is in a conflict, error, or pending state.
 - **Not applicable** - At least one setting isn't applicable and isn't applied.

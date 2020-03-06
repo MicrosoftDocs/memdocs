@@ -57,7 +57,7 @@ For additional details about adding a Managed Google Play app to Intune, see [Ma
     - **Name** - The name of the profile that appears in the Azure portal.
     - **Description** - The description of the profile that appears in the Azure portal.
     - **Device enrollment type** - This setting is set to **Managed devices**.
-	- **Platform** - Select **Android**.
+    - **Platform** - Select **Android**.
 
     ![Add Google Chrome Configuration policy](/media/apps-configure-chrome-android/add-policy.png)
 
@@ -82,12 +82,12 @@ For additional details about adding a Managed Google Play app to Intune, see [Ma
     The above settings create bookmarks and block access to all URLs except `baidu.com`, `yahoo.com`, `chromium.org`, and `chrome://`.
 
 5. Click **OK** and **Add** to add your configuration policy to Intune.
-6. Assign this configuration policy to a user group. For more information, see [Assign apps to groups with Microsoft Intune](apps-deploy.md). 
+6. Assign this configuration policy to a user group. For more information, see [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
 ## Verify the device settings
 
 Once the Android device is enrolled with Android Enterprise, the managed Google Chrome app with the portfolio icon will be deployed automatically.
- 
+
    <img alt="Managed Google Chrome with the portfolio icon" src="/media/apps-configure-chrome-android/chrome-icon.png" width="350">
 
 Launch Google Chrome and you will find the settings applied.

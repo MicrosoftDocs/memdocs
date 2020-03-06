@@ -50,12 +50,12 @@ App configuration policies in Microsoft Intune supply settings to Managed Google
 6. On the **Associated app** pane, choose the managed app to associate with the configuration policy and click **OK**.
 7. Click **Next** to display the **Settings** page.
 8. Click **Add** to display the **Add permissions** pane.
-9. Click the permissions that you want to override. Permissions granted will override the “Default app permissions” policy for the selected apps.
+9. Click the permissions that you want to override. Permissions granted will override the "Default app permissions" policy for the selected apps.
 10. Set the **Permission state** for each permission. You can choose from **Prompt**, **Auto grant**, or **Auto deny**. For more information about permissions, see [Android Enterprise settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md).
 11. In the dropdown box, select the **Configuration settings format**. Select one of the following methods to add configuration information:
     - **Use configuration designer**
     - **Enter JSON data**<br><br>
-    For details about using the configuration designer, see [Use configuration designer](#use-the-configuration-designer). For details about entering XML data, see [Enter JSON data](#enter-json-data). 
+    For details about using the configuration designer, see [Use configuration designer](#use-the-configuration-designer). For details about entering XML data, see [Enter JSON data](#enter-json-data).
 12. Click **Next** to display the **Assignments** page.
 13. In the dropdown box next to **Assign to**, select either **Selected groups**, **All users**, **All devices**, or **All users and all devies** to assign the app configuration policy to.
 
@@ -105,7 +105,6 @@ You can choose the following options if you choose variable as the value type:
 | User ID | 3ec2c00f-b125-4519-acf0-302ac3761822 |
 | User name | John Doe |
 | User Principal Name | john@contoso.com |
-
 
 ### Allow only configured organization accounts in multi-identity apps 
 

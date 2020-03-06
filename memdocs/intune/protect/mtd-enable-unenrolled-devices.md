@@ -54,7 +54,7 @@ Classic conditional access policies for MTD apps:
 
 - Are distinct from conditional access policies you might create to help manage MTD.
 
-- By default, don’t interact with other conditional access policies you use for evaluation.
+- By default, don't interact with other conditional access policies you use for evaluation.
 
 To view classic conditional access policies, in [Azure](https://portal.azure.com/#home), go to **Azure Active Directory** > **Conditional Access** > **Classic policies**.
 

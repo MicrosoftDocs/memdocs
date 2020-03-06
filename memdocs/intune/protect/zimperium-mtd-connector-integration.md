@@ -59,7 +59,7 @@ The Zimperium app authorization process follows:
 
 - Grant the Zimperium service permissions to communicate information related to device health state back to Intune. To grant these permissions, you must use Global Administrator credentials. Granting permissions is a one-time operation. After the permissions are granted, the Global Administrator credentials aren't needed for day to day operation.
 
-- Zimperium syncs with Azure Active Directory (AD) Enrollment Group membership to populate its device’s database.
+- Zimperium syncs with Azure Active Directory (AD) Enrollment Group membership to populate its device's database.
 
 - Allow Zimperium admin console to use Azure AD Single Sign On (SSO).
 

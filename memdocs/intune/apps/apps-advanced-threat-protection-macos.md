@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Add Microsoft Defender ATP to macOS devices using Microsoft Intune
 
-Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](../apps/apps-add.md#app-types-in-microsoft-intune) is Microsoft Defender Advanced Threat Protection (ATP). By selecting this app type in Intune, you can assign and install Microsoft Defender ATP to devices you manage that run macOS. This app type makes it easy for you to assign Microsoft Defender ATP to macOS devices without requiring you to use the macOS app wrapping tool. To help keep the apps more secure and up to date, the app comes with Microsoft AutoUpdate (MAU).
+Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft Defender Advanced Threat Protection (ATP). By selecting this app type in Intune, you can assign and install Microsoft Defender ATP to devices you manage that run macOS. This app type makes it easy for you to assign Microsoft Defender ATP to macOS devices without requiring you to use the macOS app wrapping tool. To help keep the apps more secure and up to date, the app comes with Microsoft AutoUpdate (MAU).
 
 ## Prerequisites
 - The macOS device must be running macOS 10.13 or later.
@@ -66,10 +66,10 @@ In this step, you provide information about this app deployment. This informatio
 
 ## Select scope tags (optional)
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see Use role-based access control and scope tags for distributed IT.
-1.	Select **Scope (Tags)** > **Add**.
-2.	Use the **Select** box to search for scope tags.
-3.	Select the check box next to the scope tags you want to assign to this app.
-4.	Click **Select** > **OK**.
+1.    Select **Scope (Tags)** > **Add**.
+2.    Use the **Select** box to search for scope tags.
+3.    Select the check box next to the scope tags you want to assign to this app.
+4.    Click **Select** > **OK**.
 
 ## Add the app
 When you've completed configuring, select **Add** from the **App app** pane. 

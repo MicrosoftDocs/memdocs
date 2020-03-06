@@ -398,7 +398,7 @@ The **EnrollmentFailureReason** entity indicates a more detailed reason for a de
 | AuthenticationRequirementNotMet  | Intune enrollment service failed to authorize this request.                                                                                                                                            |
 | UnsupportedDeviceType            | This device does not meet minimum requirements for Intune enrollment.                                                                                                                                  |
 | EnrollmentCriteriaNotMet         | This device failed to enroll due to a configured enrollment restriction rule.                                                                                                                          |
-| BulkDeviceNotPreregistered       | This device’s international mobile equipment identifier (IMEI) or serial number wasn’t found.  Without this identifier, devices are recognized as personal-owned devices which are currently blocked.  |
+| BulkDeviceNotPreregistered       | This device's international mobile equipment identifier (IMEI) or serial number wasn't found.  Without this identifier, devices are recognized as personal-owned devices which are currently blocked.  |
 | FeatureNotSupported              | The user was attempting to access a feature that is not yet released for all customers or is not compatible with your Intune configuration.                                                            |
 | UserAbandonment                  | Enrollment was abandoned by end user. (End user started onboarding but failed to complete it in timely manner)                                                                                           |
 | APNSCertificateExpired           | Apple devices cannot be managed with an expired Apple MDM push certificate.                                                                                                                            |
@@ -665,7 +665,7 @@ A **termsAndConditions** entity represents the metadata and contents of a given 
 
 |    Property        |    Description    |    Example        |
 |----------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-|    termsAndConditionsKey    |    A key corresponding to an entry in the   ‘userTermsAndConditionsAcceptances’ collection    |    123    |
+|    termsAndConditionsKey    |    A key corresponding to an entry in the   'userTermsAndConditionsAcceptances' collection    |    123    |
 |    termsAndCondidionsId    |    The ID for this termsAndConditions entry    |    276edcb7-7440-4339-b6c5-8b6fc556fee6    |
 |    termsAndConditionsVersion    |    The version of this terms and conditions entry    |    1    |
 |    name    |    The name of this termsAndConditions entry.        |    Intune terms of use     |
@@ -709,9 +709,9 @@ A **userTermsAndConditionsAcceptance** entity represents the acceptance status o
 
 |    Property    |    Description    |    Example    |
 |-------------------------------|--------------------------------------------------------------------------------|----------------------------|
-|    dateKey    |    A key corresponding to a date values in the   ‘dates’ collection.     |    20180823    |
-|    userKey    |    A user key mapping to a user in the ‘users’   collection.     |    20000    |
-|    termsAndConditionsKey    |    A key corresponding to an entry in the   ‘termsAndConditions’ collection    |    1    |
+|    dateKey    |    A key corresponding to a date values in the   'dates' collection.     |    20180823    |
+|    userKey    |    A user key mapping to a user in the 'users'   collection.     |    20000    |
+|    termsAndConditionsKey    |    A key corresponding to an entry in the   'termsAndConditions' collection    |    1    |
 |    acceptedDateTimeUTC    |    The time that the user accepted these terms and   conditions    |    8/23/2018 4:01:34 AM    |
 |    lastModifiedDateTimeUTC    |    The last time that this entry was modified.     |    8/23/2018 4:01:34 AM    |
 
