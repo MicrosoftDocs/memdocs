@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Remove the central administration site (CAS) to simplify your Configuration Manager infrastructure to a single, standalone primary site.
 ms.date: 03/20/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
 author: aczechowski
@@ -47,6 +47,8 @@ Starting in version 2002, if the hierarchy consists of the central administratio
 - Configuration Manager automatically handles package source locations for built-in packages, like the Configuration Manager client. Review all other content source locations to make sure they aren't using a share on the CAS.
 
 - Stop any active migration jobs and remove all configurations for migration. For more information, see [Stop active migration from another hierarchy](/configmgr/core/servers/deploy/install/prerequisites-for-installing-sites#stop-active-migration-from-another-hierarchy).
+
+- If you use Configuration Manager or System Center Updates Publisher to manage [third-party software updates](/configmgr/sum/deploy-use/third-party-software-updates), export the WSUS signing certificate from the software update point on the CAS.
 
 - Review any third-party software that might have a dependency on the CAS.
 
@@ -125,3 +127,15 @@ After you remove the CAS, review the following steps as they apply to your envir
 - If you connect Configuration Manager with [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=configmgr/core/context/core-context), you need to reset the connection. The first step to resolve any issues is to [renew the secret key](/configmgr/core/servers/deploy/configure/azure-services-wizard#bkmk_renew). If that doesn't resolve the issue, recreate the connection.<!-- 5584635 -->
 
 - In version 2002, if you enable synchronization of Surface drivers, reconfigure this feature after you remove the CAS. For more information, see [Include Microsoft Surface drivers and firmware updates](/configmgr/sum/get-started/configure-classifications-and-products#bkmk_Surface).<!-- 5728727 -->
+
+- If you manage third-party software updates:
+
+  1. Export the WSUS signing certificate from the software update point on the CAS, if you haven't already.
+
+  1. Before you create any new deployments, remove the update from any existing deployments and software update packages.
+
+  1. To recover software update metadata into a usable state, resynchronize subscribed catalogs. You can also wait for Configuration Manager to automatically resynchronize.
+
+  1. Start or wait for a normal software update sync process to update Configuration Manager with the current status from WSUS. Optionally, use SCUP or WSUS PowerShell cmdlets to delete and readd updates.
+
+  1. Republish content for updates that you need to deploy.
