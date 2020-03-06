@@ -25,8 +25,7 @@ ms.reviewer: tisilver
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.custom: seodec18
+ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ---
 
@@ -48,7 +47,7 @@ For more information about the options available with User Enrollment, see [User
 
 An enrollment profile defines the settings applied to a group of devices during enrollment. 
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **ioS enrollment** > **Enrollment types (preview)** > **Create profile** > **iOS/iPadOS**. This profile is where you’ll indicate what enrollment experience your iOS/iPadOS and iPadOS end users will have on devices not enrolled through a corporate Apple method. If you'd like to make changes, you can edit this profile after you've created it.
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **ioS enrollment** > **Enrollment types (preview)** > **Create profile** > **iOS/iPadOS**. This profile is where you'll indicate what enrollment experience your iOS/iPadOS and iPadOS end users will have on devices not enrolled through a corporate Apple method. If you'd like to make changes, you can edit this profile after you've created it.
 
     ![Create Apple enrollment profile](./media/ios-user-enrollment/create-profile.png)
 

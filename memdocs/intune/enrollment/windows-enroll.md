@@ -39,7 +39,7 @@ As an Intune admin, you can simplify enrollment in the following ways:
 
 - [Enable automatic enrollment](#enable-windows-10-automatic-enrollment) (Azure AD Premium required)
 - [CNAME registration](#simplify-windows-enrollment-without-azure-ad-premium)
-- [Enable bulk enrollment](../windows-bulk-enroll.md) (Azure AD Premium and Windows Configuration Designer required)
+- [Enable bulk enrollment](windows-bulk-enroll.md) (Azure AD Premium and Windows Configuration Designer required)
 
 Two factors determine how you can simplify Windows device enrollment:
 
@@ -51,7 +51,7 @@ Two factors determine how you can simplify Windows device enrollment:
 |**Windows 10**|[Automatic enrollment](#enable-windows-10-automatic-enrollment) |User enrollment|
 |**Earlier Windows versions**|User enrollment|User enrollment|
 
-Organizations that can use automatic enrollment can also configure [bulk enroll devices](../windows-bulk-enroll.md) by using the Windows Configuration Designer app.
+Organizations that can use automatic enrollment can also configure [bulk enroll devices](windows-bulk-enroll.md) by using the Windows Configuration Designer app.
 
 ## Device enrollment prerequisites
 
@@ -64,7 +64,7 @@ Intune supports multiple users on devices that both:
 - run the Windows 10 Creator's update
 - are Azure Active Directory domain-joined.
 
-When standard users sign in with their Azure AD credentials, they receive apps and policies assigned to their user name. Only the device’s [Primary user](../remote-actions/find-primary-user.md) can use the Company Portal for self-service scenarios like installing apps and performing device actions (Remove, Reset). For shared Windows 10 devices that do not have a primary user assigned, the Company Portal can still be used to install Available apps.
+When standard users sign in with their Azure AD credentials, they receive apps and policies assigned to their user name. Only the device's [Primary user](../remote-actions/find-primary-user.md) can use the Company Portal for self-service scenarios like installing apps and performing device actions (Remove, Reset). For shared Windows 10 devices that do not have a primary user assigned, the Company Portal can still be used to install Available apps.
 
 [!INCLUDE [AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
@@ -72,7 +72,7 @@ When standard users sign in with their Azure AD credentials, they receive apps a
 To simplify enrollment, create a domain name server (DNS) alias (CNAME record type) that redirects enrollment requests to Intune servers. Otherwise, users trying to connect to Intune must enter the Intune server name during enrollment.
 
 **Step 1: Create CNAME** (optional)<br>
-Create CNAME DNS resource records for your company’s domain. For example, if your company’s website is contoso.com, you would create a CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to enterpriseenrollment-s.manage.microsoft.com.
+Create CNAME DNS resource records for your company's domain. For example, if your company's website is contoso.com, you would create a CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to enterpriseenrollment-s.manage.microsoft.com.
 
 Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, enrollment.manage.microsoft.com.
 
@@ -95,12 +95,12 @@ The Contoso DNS admin should create the following CNAMEs:
 |CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hour|
 |CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hour|
 
-`EnterpriseEnrollment-s.manage.microsoft.com` – Supports a redirect to the Intune service with domain recognition from the email’s domain name
+`EnterpriseEnrollment-s.manage.microsoft.com` – Supports a redirect to the Intune service with domain recognition from the email's domain name
 
 Changes to DNS records might take up to 72 hours to propagate. You can't verify the DNS change in Intune until the DNS record propagates.
 
 ## Additional Endpoints Are Supported but Not Recommended
-EnterpriseEnrollment-s.manage.microsoft.com is the preferred FQDN for enrollment, but there are two other endpoints that have been used by customers in the past and are supported. EnterpriseEnrollment.manage.microsoft.com (without the -s) and manage.microsoft.com both work as the target for the auto-discovery server, but the user will have to touch OK on a confirmation message. If you point to EnterpriseEnrollment-s.manage.microsoft.com, the user won’t have to do the additional confirmation step, so this is the recommended configuration
+EnterpriseEnrollment-s.manage.microsoft.com is the preferred FQDN for enrollment, but there are two other endpoints that have been used by customers in the past and are supported. EnterpriseEnrollment.manage.microsoft.com (without the -s) and manage.microsoft.com both work as the target for the auto-discovery server, but the user will have to touch OK on a confirmation message. If you point to EnterpriseEnrollment-s.manage.microsoft.com, the user won't have to do the additional confirmation step, so this is the recommended configuration
 
 ## Alternate Methods of Redirection Are Not Supported
 Using a method other than the CNAME configuration is not supported. For example, using a proxy server to redirect enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc to either enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc or manage.microsoft.com/EnrollmentServer/Discovery.svc is not supported.
