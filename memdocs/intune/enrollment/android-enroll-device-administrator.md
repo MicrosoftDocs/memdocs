@@ -62,8 +62,6 @@ For information about other user tasks, see these articles:
 To block Android device administrator devices, or to block only personally owned Android device administrator devices from enrollment, see [Set device type restrictions](enrollment-restrictions-set.md).
 
 
-
 ## Next steps
 - [Assign compliance policies](../protect/compliance-policy-create-android.md)
 - [Managing apps](../apps/app-management.md)
-'
