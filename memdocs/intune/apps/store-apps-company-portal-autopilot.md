@@ -35,11 +35,12 @@ To manage devices and install apps, your users can use the Company Portal app. Y
 
 ## Prerequisites
 
-For Windows 10 Autopilot provisioned devices, it is recommended that you associate your Microsoft Store for Business account with Intune. For more information, see [How to manage volume purchased apps from the Microsoft Store for Business with Microsoft Intune](~/apps/windows-store-for-business.md).
+For Windows 10 Autopilot provisioned devices, it is recommended that you associate your Microsoft Store for Business account with Intune. For more information, see [How to manage volume purchased apps from the Microsoft Store for Business with Microsoft Intune](windows-store-for-business.md).
 
 Company Portal (Offline) is chosen to be installed by using the steps below. The Company Portal app will be installed in device context when assigned to the Autopilot group and be installed on the device before the user logs in. 
 
-## Configure settings to show offline apps
+## Configure settings to show offline app
+
 1. Sign in to the [Microsoft Store for Business](https://www.microsoft.com/business-store) with your admin account.
 2. Select the **Manage** tab near the top of the window.
 3. In the left pane, select **Settings**.
@@ -47,15 +48,17 @@ Company Portal (Offline) is chosen to be installed by using the steps below. The
     The offline licensed apps are displayed.
 
 ## Get the offline Company Portal app
+
 1. Search for and then select the **Company Portal** app.
 2. Set the **License type** to **Offline**.
 3. Select **Get the app** to acquire and add the offline Company Portal app to your inventory.
 
 ## Assign the Company Portal app
+
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with your admin account. 
-2. Select the **Apps** tab on the right pane. 
-3. Under **By platform**, select **Windows**. 
-4. Select **Company Portal (Offline)**.   
+2. Select the **Apps** tab on the right pane.
+3. Under **By platform**, select **Windows**.
+4. Select **Company Portal (Offline)**.
 5. You must either Wait for the sync schedule to complete or do a manual sync from Microsoft Endpoint Manager admin center.
 6. Assign the Company Portal app as a required app to your selected autopilot device groups.
 

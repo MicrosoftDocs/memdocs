@@ -40,7 +40,7 @@ Before you can manage and assign an app for your users, add the app to Intune.
 Intune creates a shortcut to the web app on the user's device. For iOS/iPadOS devices, a shortcut to the web app is added to the home screen. For Android Device Admin devices, a shortcut to the web app is added to the Intune company portal widget and the widget needs to be pinned manually by the user. For Windows devices, a shortcut to the web app is placed on the Start Menu.
 
 > [!Note]
-> A browser must be installed on the user’s device to launch web apps. 
+> A browser must be installed on the user's device to launch web apps. 
 
 > [!Note]
 > For Android Enterprise devices, see [Managed Google Play web links](apps-add-android-for-work.md#managed-google-play-web-links)
@@ -66,9 +66,9 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
     - **Require a managed browser to open this link**: Select this option to assign to your users a link to a website or web app that they can open in the Intune managed browser. This browser must be installed on their device.
     - **Logo**: Upload an icon that will be associated with the app. This icon is displayed with the app when users browse the company portal.
 6. Click **Next** to display the **Scope tags** page.
-7. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](~/fundamentals/scope-tags.md).
+7. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 8. Click **Next** to display the **Assignments** page.
-9. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](~/fundamentals/groups-add.md). 
+9. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md). 
 10. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 11. When you are done, click **Create** to add the app to Intune.
 

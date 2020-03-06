@@ -46,7 +46,7 @@ Use the information in this article to help you add macOS line-of-business apps 
 You must download an external tool, mark the downloaded tool as an executable, and pre-process your *.pkg* files with the tool before you can upload your line-of-business file to Microsoft Intune. The pre-processing of your *.pkg* files must take place on a macOS device. Use the Intune App Wrapping Tool for Mac to enable Mac apps to be managed by Microsoft Intune.
 
 > [!IMPORTANT]
-> The *.pkg* file must be signed using “Developer ID Installer” certificate, obtained from an Apple Developer account. Only *.pkg* files may be used to upload macOS LOB apps to Microsoft Intune. Conversion of other formats, such as *.dmg* to *.pkg* is not supported.
+> The *.pkg* file must be signed using "Developer ID Installer" certificate, obtained from an Apple Developer account. Only *.pkg* files may be used to upload macOS LOB apps to Microsoft Intune. Conversion of other formats, such as *.dmg* to *.pkg* is not supported.
 >
 
 1. Download the [Intune App Wrapping Tool for Mac](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac).
@@ -109,6 +109,7 @@ You must download an external tool, mark the downloaded tool as an executable, a
 2. Click **Next** to display the **Scope tags** page.
 
 ## Step 2 - Select scope tags (optional)
+
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
 1. Click **Select scope tags** to optionally add scope tags for the app. 
@@ -116,7 +117,7 @@ You can use scope tags to determine who can see client app information in Intune
 
 ## Step 3 - Assignments
 
-1. Select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](~/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
+1. Select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 2. Click **Next** to display the **Review + create** page. 
 
 ## Step 4 - Review + create

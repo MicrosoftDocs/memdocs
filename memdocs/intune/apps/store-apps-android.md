@@ -49,7 +49,7 @@ You can add an Android store app to Intune from the Azure portal by doing the fo
     - **Name**: Enter the name of the app as it is to be displayed in the company portal. Make sure that any app name that you use is unique. If an app name is duplicated, only one name is displayed to users in the company portal.
     - **Description**: Enter a description for the app. This description is displayed to users in the company portal.
     - **Publisher**: Enter the name of the publisher of the app.
-    - **Appstore URL**: Enter the app store URL of the app that you want to create. Use the URL of the app page when the details of the app are displayed in the store. 
+    - **Appstore URL**: Enter the app store URL of the app that you want to create. Use the URL of the app page when the details of the app are displayed in the store.
     - **Minimum operating system**: In the list, select the earliest operating system version on which the app can be installed. If you assign the app to a device with an earlier operating system, it will not be installed.
     - **Category**: Optionally, select one or more of the built-in app categories, or a category that you created. Doing so makes it easier for users to find the app when they browse the company portal.
     - **Show this as a featured app in the Company Portal**: Select this option to display the app suite prominently on the main page of the company portal when users browse for apps. Applies to apps deployed with Available intent.
@@ -60,9 +60,9 @@ You can add an Android store app to Intune from the Azure portal by doing the fo
     - **Notes**: Optionally, enter any notes that you want to associate with this app.
     - **Logo**: Optionally, upload an icon that will be associated with the app. This icon is displayed with the app when users browse the company portal.
 7. Click **Next** to display the **Scope tags** page.
-8. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](~/fundamentals/scope-tags.md).
+8. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 9. Click **Next** to display the **Assignments** page.
-10. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](~/fundamentals/groups-add.md). 
+10. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
 11. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 12. When you are done, click **Create** to add the app to Intune.
 

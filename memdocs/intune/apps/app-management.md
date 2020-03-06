@@ -106,12 +106,12 @@ The top of the App workload navigation menu provide commonly used app details:
     - **App protection policies**: Select this option to associate settings with an app and help protect the company data it uses. For example, you might restrict the capabilities of an app to communicate with other apps, or you might require the user to enter a PIN to access a company app. For more information, see [App protection policies](app-protection-policies.md).
     - **App configuration policies**: Select this option to supply settings that might be required when a user runs an app. For more information, see [App configuration policies](app-configuration-policies-use-ios.md), [iOS app configuration policies](app-configuration-policies-use-ios.md), and [Android app configuration policies](app-configuration-policies-overview.md).
     - **iOS app provisioning profiles**: iOS apps include a provisioning profile and code that is signed by a certificate. When the certificate expires, the app can no longer be run. Intune gives you the tools to proactively assign a new provisioning profile policy to devices that have apps that are nearing expiration. For more information, see [iOS app provisioning profiles](app-provisioning-profile-ios.md).
-    - **S mode supplemental policies**: Select this option to authorize additional applications to run on your managed S mode devices. For more information, see [S mode supplemental policies](~/apps/apps-win32-s-mode.md).
-    - **Policy sets**: Select this option to create an assignable collection of apps, policies, and other management objects you've created. For more information, see [Policy sets](~/fundamentals/policy-sets.md).
+    - **S mode supplemental policies**: Select this option to authorize additional applications to run on your managed S mode devices. For more information, see [S mode supplemental policies](apps-win32-s-mode.md).
+    - **Policy sets**: Select this option to create an assignable collection of apps, policies, and other management objects you've created. For more information, see [Policy sets](../fundamentals/policy-sets.md).
 - **Other**:   
     - **App selective wipe**: Select this option to remove only corporate data from a selected user's device. For more information, see [App selective wipe](apps-selective-wipe.md).
     - **App categories**: Add, pin, and delete app category names.
-    - **E-books**: Some app stores give you the ability to purchase multiple licenses for an app or books that you want to use in your company. For more information, see [Manage volume-purchased apps and books with Microsoft Intune](~/apps/vpp-apps.md).
+    - **E-books**: Some app stores give you the ability to purchase multiple licenses for an app or books that you want to use in your company. For more information, see [Manage volume-purchased apps and books with Microsoft Intune](vpp-apps.md).
 - **Help and support**: Troubleshoot, request support, or view Intune status. For more information, see [Troubleshoot problems](../fundamentals/help-desk-operators.md).
 
 ## Additional information
@@ -121,7 +121,7 @@ The following items within the console provide app related functionality:
 - **Windows Symantec certificate**: Apply or view the status of a Symantec code-signing certificate, which is needed to distribute XAP and WP8.x appx files to Windows 10 Mobile devices.
 - **Windows side loading keys**: Add a Windows side-loading key that can be used to install an app directly to devices rather than publishing and downloading the app from the Windows store. For more information, see [Side-load a Windows app](app-sideload-windows.md).
 - **Apple VPP tokens**: Apply and view your iOS/iPadOS Volume Purchase Program (VPP) licenses. For more information, see [iOS/iPadOS volume-purchased apps](vpp-apps-ios.md).
-- **Managed Google Play**: Managed Google Play is Google's enterprise app store and sole source of applications for Android Enterprise. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](~/apps/apps-add-android-for-work.md).
+- **Managed Google Play**: Managed Google Play is Google's enterprise app store and sole source of applications for Android Enterprise. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](apps-add-android-for-work.md).
 - **Branding and customizing**: Customize the Company Portal to give it your company branding. For more information, see [Company Portal configuration](company-portal-app.md).
 
 ## Next steps

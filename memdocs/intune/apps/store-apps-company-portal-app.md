@@ -33,10 +33,10 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-To manage devices and install apps, your users can install the Company Portal app themselves from the Microsoft Store. If your business needs require that you assign the Company Portal app to them, however, you can assign the Windows 10 Company Portal app directly from Intune. You can do so even if you haven’t integrated Intune with the Microsoft Store for Business.
+To manage devices and install apps, your users can install the Company Portal app themselves from the Microsoft Store. If your business needs require that you assign the Company Portal app to them, however, you can assign the Windows 10 Company Portal app directly from Intune. You can do so even if you haven't integrated Intune with the Microsoft Store for Business.
 
  > [!IMPORTANT]
- > If you download the Company Portal app, the option described in this article requires that you assign manual updates each time an app update is released. To deploy the Company Portal app for Windows 10 Autopilot provisioned devices, see [Add Windows 10 Company Portal app Autopilot devices](~/apps/store-apps-company-portal-autopilot.md).
+ > If you download the Company Portal app, the option described in this article requires that you assign manual updates each time an app update is released. To deploy the Company Portal app for Windows 10 Autopilot provisioned devices, see [Add Windows 10 Company Portal app Autopilot devices](store-apps-company-portal-autopilot.md).
 
 ## Configure settings to show offline apps
 1. Sign in to the [Microsoft Store for Business](https://www.microsoft.com/business-store) with your admin account.
@@ -55,7 +55,7 @@ To manage devices and install apps, your users can install the Company Portal ap
 
     ![Windows 10 devices, where architecture equals X86, is selected](./media/app-sideload-windows/Win10CP-all-devices.png)
 
-7. Download all the packages under “Required Frameworks” by selecting **Download**.  
+7. Download all the packages under "Required Frameworks" by selecting **Download**.  
 
     This action must be completed for x86, x64, and ARM architectures:<br> 
     *There are 9 Required Framework Packages when selecting 1507 as the minimum OS Version, 12 packages when selecting 1511, and 15 packages when selecting 1607.*
@@ -74,7 +74,7 @@ To manage devices and install apps, your users can install the Company Portal ap
 For more information about how Intune handles dependencies for Universal apps, see [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/).  
 
 ## Frequently asked questions 
-### How do I update the Company Portal app on my users’ devices if they have already installed the older apps from the store?
+### How do I update the Company Portal app on my users' devices if they have already installed the older apps from the store?
 If your users have already installed the Windows 8.1 or Windows Phone 8.1 Company Portal apps from the Microsoft Store, their apps should be automatically updated to the latest version with no action required from you or your users. If the update does not happen, ask your users to confirm that they have enabled auto-updates for Store apps on their devices.   
 
 ### How do I upgrade my sideloaded Windows 8.1 Company Portal app to the Windows 10 Company Portal app?
@@ -91,7 +91,7 @@ Otherwise, the Windows 10 Company Portal app must be appropriately updated and s
 
 If you sign and assign the Windows 10 Company Portal app in this way, you will need to repeat this process for each new app update when it is available in the store. The app is not automatically updated when the store is updated.  
 
-Here’s how you sign and assign the app in this way:
+Here's how you sign and assign the app in this way:
 
 1. Download the [Microsoft Intune Windows 10 Company Portal App Signing Script](https://aka.ms/win10cpscript).  
     This script requires the Windows SDK for Windows 10 to be installed on the host computer. [Download the Windows SDK for Windows 10](https://go.microsoft.com/fwlink/?LinkId=619296).

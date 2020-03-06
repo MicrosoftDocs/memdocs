@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 In this quickstart, you will use Intune to add and assign a client app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work. 
 
-If you don’t have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
@@ -48,6 +48,7 @@ Sign in to [Intune](https://aka.ms/intuneportal) as a [Global administrator or a
 An app can be included so that Intune can manage aspects of the app. 
 
 Use the following steps to add an app to Intune:
+
 1. In [Intune](https://aka.ms/intuneportal), select **Apps** > **All apps** > **Add**. 
 2. Select **Windows 10** in the **Office 365 Suite** section of the **Select app type** pane.
 3. Click **Select**. The **Add app** steps are displayed.
@@ -56,9 +57,9 @@ Use the following steps to add an app to Intune:
 6. Next to **Update Channel** select **Monthly** from the dropdown box.
 7. Confirm the remaining default details in the ***Configure app suite** page.
 8. Click **Next** to display the **Scope tags** page.
-9. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](~/fundamentals/scope-tags.md).
+9. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 10. Click **Next** to display the **Assignments** page.
-11. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](~/fundamentals/groups-add.md). 
+11. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
 12. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 13. When you are done, click **Create** to add the app to Intune.
 
@@ -70,6 +71,7 @@ After you've added an app to Microsoft Intune, you can assign the app to groups 
 > This quickstart builds on previous quickstarts in this series. Please see [prerequisites](quickstart-add-assign-app.md#prerequisites) in this quickstart for details.
 
 Use the following steps to assign an app to a group:
+
 1. In [Intune](https://aka.ms/intuneportal), select **Apps** > **All apps**. 
 2. Select the app that you want to assign to a group.
 3. Click **Assignments** > **Add group** to display the **Add group** pane.

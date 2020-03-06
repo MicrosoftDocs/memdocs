@@ -50,7 +50,7 @@ Classic conditional access policies for MTD apps:
 
 - Are distinct from conditional access policies you might create to help manage MTD.
 
-- By default, don’t interact with other conditional access policies you use for evaluation.
+- By default, don't interact with other conditional access policies you use for evaluation.
 
 To view classic conditional access policies, in [Azure](https://portal.azure.com/#home), go to **Azure Active Directory** > **Conditional Access** > **Classic policies**.
 
@@ -88,7 +88,7 @@ You can decide which MTD toggle options you need to enable according to your org
 
 - **Connect iOS devices version *\<supported versions>* to *\<MTD partner name>* for app protection policy evaluation**: When you enable this option, app protection policies using the Device Threat Level rule will evaluate devices including data from this connector.
 
-To learn more about using Mobile Threat Defense connectors for Intune App Protection Policy evaluation, see [Set up Mobile Threat Defense for unenrolled devices](~/protect/mtd-enable-unenrolled-devices.md).
+To learn more about using Mobile Threat Defense connectors for Intune App Protection Policy evaluation, see [Set up Mobile Threat Defense for unenrolled devices](mtd-enable-unenrolled-devices.md).
 
 **Common Shared Settings**
 
@@ -102,4 +102,4 @@ To learn more about using Mobile Threat Defense connectors for Intune App Protec
 
 ## Next steps
 
-- [Create Mobile Threat Defense (MTD) app protection policy with Intune](~/protect/mtd-app-protection-policy.md).
+- [Create Mobile Threat Defense (MTD) app protection policy with Intune](mtd-app-protection-policy.md).

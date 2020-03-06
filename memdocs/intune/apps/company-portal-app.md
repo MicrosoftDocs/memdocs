@@ -36,7 +36,7 @@ ms.collection: M365-identity-device-management
 The Microsoft Intune company portal is where users access company data and can do common tasks like enrolling devices, installing apps, and locating information for assistance from your IT department. Additionally, the company portal app allows user to securely access company resources. The company portal app provides several different pages, such as Home, Apps, App details, Devices, and Device details. To quickly find apps within the Company Portal, you can filter the apps on the Apps page.
 
 > [!IMPORTANT]
-> To support Google’s Firebase Cloud Messaging (FCM), you must update your Android Company Portal app to the latest version.  
+> To support Google's Firebase Cloud Messaging (FCM), you must update your Android Company Portal app to the latest version.  
 
 > [!Tip]
 > When you customize the Company Portal, the configurations apply to both the Company Portal website and Company Portal apps. Note that users must have an Intune license assigned to access the Company Portal website.
@@ -85,7 +85,7 @@ Apply a theme color to the Company Portal. Select a standard color or enter a si
 |**Display**| Select whether to display the **Company logo and name**, the **Company logo only**, or the **Company name only**. |
 |**Upload your company logo**|You can upload your company logo to show in your Company Portal. Note the text color is automatically chosen to provide the highest level of contrast. For the best appearance, upload a logo with a transparent background.<p><ul><li>Max image size: 400px x 400px</li><li>Maximum file size: 750KB</li><li>File type: PNG, JPG, or JPEG</li></ul>|
 
-After you upload the logo, the preview area will show the logo with the theme color. If you chose to display your company name, it will be shown in black or white in the Company Portal, and it will be chosen automatically to provide the highest level of contrast based on your theme color. The preview area on the screen will not show your company’s name. 
+After you upload the logo, the preview area will show the logo with the theme color. If you chose to display your company name, it will be shown in black or white in the Company Portal, and it will be chosen automatically to provide the highest level of contrast based on your theme color. The preview area on the screen will not show your company's name. 
 
 ### Logo to use on white or light backgrounds
 Choose a logo that will look best on white or light backgrounds.
@@ -102,13 +102,13 @@ Display a brand image that reflects your company brand. After you save your chan
 |---|---|
 |**Upload your brand image**| This option allows you to display a brand image. On the iOS/iPadOS Company Portal, it shows as a background image on the user's profile page.<p><ul><li>Recommended image width: Greater than 1125px (required to be at least 650 px)</li><li>Max image size: 1.3 MB</li><li>File type: PNG, JPG, or JPEG</li></ul>|
 
-The right brand image can enhance the user’s trust in Company Portal by presenting a strong sense of your company’s brand. Here are some tips you may want to consider for acquiring, choosing, and optimizing the image for Company Portal. 
+The right brand image can enhance the user's trust in Company Portal by presenting a strong sense of your company's brand. Here are some tips you may want to consider for acquiring, choosing, and optimizing the image for Company Portal. 
 
 - Reach out to your marketing or art department. They may already have an approved set of brand images. They may also be able to help you optimize images as needed. 
 
 - Consider both landscape and portrait composition. The image should have sufficient background surrounding the focal point. The image may be cropped differently based on device size, orientation, and platform. 
 
-- Avoid using a generic, stock image. The image should reflect your company’s brand and feel familiar to users. If you don’t have one, it’s better to not use one than use a generic one that has no meaning to your user. 
+- Avoid using a generic, stock image. The image should reflect your company's brand and feel familiar to users. If you don't have one, it's better to not use one than use a generic one that has no meaning to your user. 
 
 - Remove unnecessary metadata. Image file can come with metadata such as camera profile, geo location, title, caption, and so on. Use an image optimization tool to strip out this information to maintain quality while meeting file size limit. 
 
@@ -131,19 +131,20 @@ You can customize the privacy statement that appears for your organization on ma
 Under **Company Portal customization** > **Device management and privacy message**, you can:
 
 - Accept the **Default** to use the list as shown, or
-- Choose **Custom** to customize the the list of items that your organization can’t see or do on managed iOS/iPadOS devices. You can use [markdown](https://daringfireball.net/projects/markdown/) to add bullets, bolding, italics, and links.
+- Choose **Custom** to customize the the list of items that your organization can't see or do on managed iOS/iPadOS devices. You can use [markdown](https://daringfireball.net/projects/markdown/) to add bullets, bolding, italics, and links.
 
 ## Company Portal derived credentials for iOS devices
+
 Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC) Derived Credentials in partnership with credential providers DISA Purebred, Entrust Datacard, and Intercede. End users will go through additional steps post-enrollment of their iOS/iPadOS device to verify their identity in the Company Portal application. Derived Credentials will be enabled for users by first setting up a credential provider for your tenant, then targeting a profile that uses Derived Credentials to users or devices.
 
 > [!NOTE]
 > The user will see instructions about derived credentials based on the link that you have specified via Intune.
 
-For more information about derived credentials for iOS/iPadOS devices, see [Use derived credentials in Microsoft Intune](~/protect/derived-credentials.md).
+For more information about derived credentials for iOS/iPadOS devices, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
 ## Dark Mode for iOS Company Portal
 
-Dark Mode is available for the iOS Company Portal. Users can download company apps, manage their devices, and get IT support in the color scheme of their choice based on device settings. The iOS Company Portal will automatically match the end user's device settings for dark or light mode. 
+Dark Mode is available for the iOS Company Portal. Users can download company apps, manage their devices, and get IT support in the color scheme of their choice based on device settings. The iOS Company Portal will automatically match the end user's device settings for dark or light mode.
 
 ## Windows Company Portal keyboard shortcuts
 
@@ -175,7 +176,7 @@ End users will also be able to see the available shortcuts in the Windows Compan
 
 ## User self-service device actions from the Company Portal
 
-Users can perform actions on their local or remote devices via the Company Portal app or Website. The actions that a user can perform varies based on device platform and configuration. In all cases, the remote device actions can only be performed by device’s Primary User.
+Users can perform actions on their local or remote devices via the Company Portal app or Website. The actions that a user can perform varies based on device platform and configuration. In all cases, the remote device actions can only be performed by device's Primary User.
 - **Retire** – Removes the device from Intune Management. In the company portal app and website, this shows as **Remove**.
 - **Wipe** – This action initiates a device reset. In the company portal website this is shown as **Reset**, or **Factory Reset** in the iOS Company Portal App.
 - **Rename** – This action changes the device name that the user can see in the Company Portal. It does not change the local device name, only the listing in the Company Portal.

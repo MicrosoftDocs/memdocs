@@ -41,7 +41,7 @@ In this tutorial, you will:
 > * Tour the Microsoft Endpoint Manager admin center
 > * Customize your view of the Microsoft Endpoint Manager admin center
 
-If you don’t have an Intune subscription, [sign up for a free trial account](free-trial-sign-up.md).
+If you don't have an Intune subscription, [sign up for a free trial account](free-trial-sign-up.md).
 
 ## Prerequisites
 Before setting up Microsoft Intune, review the following requirements:
@@ -72,9 +72,9 @@ Follow the steps below to better understand Intune in the Microsoft Endpoint Man
 
     ![Screenshot of the Microsoft Endpoint Manager admin center - Dashboard](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-02.png)
     
-    Intune lets you manage your workforce’s devices and apps, including how they access your company data. To use this mobile device management (MDM) service, the devices must first be enrolled in Intune. When a device is enrolled, it is issued an MDM certificate. This certificate is used to communicate with the Intune service. 
+    Intune lets you manage your workforce's devices and apps, including how they access your company data. To use this mobile device management (MDM) service, the devices must first be enrolled in Intune. When a device is enrolled, it is issued an MDM certificate. This certificate is used to communicate with the Intune service. 
 
-    There are several methods to enroll your workforce’s devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](mdm-authority-set.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](setup-steps.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](../enrollment/device-enrollment.md)
+    There are several methods to enroll your workforce's devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](mdm-authority-set.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](setup-steps.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](../enrollment/device-enrollment.md)
 
 3. From the navigation pane, select **Devices** to display details about the enrolled devices in your Intune tenant. 
 
@@ -161,7 +161,7 @@ Follow the steps below to better understand Intune in the Microsoft Endpoint Man
 
     ![Screenshot of the Microsoft Endpoint Manager admin center - All apps](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-09.png)
 
-    For more information, see [Add apps to Microsoft Intune](~/apps/apps-add.md). 
+    For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 10. From the navigation pane, select **Users** to display details about the users that you have included in Intune. These users are your company's workforce.
 
@@ -212,7 +212,7 @@ Follow the steps below to better understand Intune in the Microsoft Endpoint Man
 
     ![Screenshot of the Microsoft Endpoint Manager admin center - Help and support](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-14.png)
 
-    To create a support ticket, your account must be assigned as an administrator role in Azure Active Directory. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**. 
+    To create a support ticket, your account must be assigned as an administrator role in Azure Active Directory. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**.
 
     For more information, see [How to get support for Microsoft Intune](../get-support.md).
 
@@ -224,7 +224,7 @@ Follow the steps below to better understand Intune in the Microsoft Endpoint Man
 
     ![Screenshot of the Microsoft Endpoint Manager admin center - Guided scenarios](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-15.png)
 
-    For more information about guided scenarios, see [Guided scenarios overview](~/fundamentals/guided-scenarios-overview.md).
+    For more information about guided scenarios, see [Guided scenarios overview](../fundamentals/guided-scenarios-overview.md).
 
 ## Configure the Microsoft Endpoint Manager admin center
 

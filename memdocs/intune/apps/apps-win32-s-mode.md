@@ -41,8 +41,8 @@ The steps to allow Win32 apps to run on a Windows 10 device in S mode are the fo
    - You upload the signed supplemental policy to Intune by creating a Windows 10 S mode supplemental policy (see below).
 3. You allow Win32 app catalogs through Intune:
    - You create catalog files (1 for every app) and signs them using DGSS or other certificate infrastructure.
-   - You package the signed catalog into the *.intunewin* file using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730). There are no naming restrictions when creating a catalog file using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730). When generating the *.intunewin* file from the specified source folder and setup file, you can provide a separate folder containing only catalog files by using the -a cmdline option. For more information, see [Win32 app management - Prepare the Win32 app content for upload](~/apps/apps-win32-app-management.md#prepare-the-win32-app-content-for-upload).
-   - Intune applies the signed app catalog to install the Win32 app on the S mode device using the [Intune Management Extension](~/apps/intune-management-extension.md).
+   - You package the signed catalog into the *.intunewin* file using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730). There are no naming restrictions when creating a catalog file using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730). When generating the *.intunewin* file from the specified source folder and setup file, you can provide a separate folder containing only catalog files by using the -a cmdline option. For more information, see [Win32 app management - Prepare the Win32 app content for upload](apps-win32-app-management.md#prepare-the-win32-app-content-for-upload).
+   - Intune applies the signed app catalog to install the Win32 app on the S mode device using the [Intune Management Extension](intune-management-extension.md).
 
 > [!NOTE]
 > Line-of-business (LOB) `.appx` and `.appx` bundles on Windows 10 S mode will be supported via Microsoft Store for Business (MSFB) signing.
@@ -68,12 +68,12 @@ To create a Windows 10 S mode supplemental policy, use the following steps:
     | Description | [Optional] The description of this policy. |
 
 5. Click **Next: Scope tags**.<br>
-   On the **Scope tags** page you can optionally configure scope tags to determine who can see the app policy in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](~/fundamentals/scope-tags.md).
+   On the **Scope tags** page you can optionally configure scope tags to determine who can see the app policy in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
 6. Click **Next: Assignments**.<br>
    The **Assignments** page allows you can assign the policy to users and devices. It is important to note that you can assign a policy to a device whether or not the device is managed by Intune.
 7. Click **Next: Review + create** to review the values you entered for the profile.
-8. When you are done, click **Create** to create the S mode supplemental policy in Intune. 
+8. When you are done, click **Create** to create the S mode supplemental policy in Intune.
 
 Once the policy is created, you will see it added to the list of S mode supplemental policies in Intune. Once the policy is assigned, the policy gets deployed to the devices. Note that you must deploy the app to same security group as the supplemental policy​. You can start targeting and assigning apps to those devices. This will allow your end users to install and execute the apps on the S mode devices.
 
@@ -83,7 +83,7 @@ Currently, to remove the S mode supplemental policy from the device, you must as
 
 ## Policy Reporting​
 
-The S mode supplemental policy, which is enforced at device level, only has device level reporting.​ Device level reporting is available for sucesss and error conditions. 
+The S mode supplemental policy, which is enforced at device level, only has device level reporting.​ Device level reporting is available for success and error conditions.
 
 Reporting values that are shown in the Intune console for S mode reporting polices:
 - **Success**: The S mode supplemental policy is in effect.
@@ -96,4 +96,4 @@ Reporting values that are shown in the Intune console for S mode reporting polic
 
 - For more information, see [Win32 apps on s mode](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/lob-win32-apps-on-s).
 - For more information about adding apps to Intune, see [Add apps to Microsoft Intune](apps-add.md).
-- For more information about Win32 apps, see [Intune Win32 app management](~/apps/apps-win32-app-management.md).
+- For more information about Win32 apps, see [Intune Win32 app management](apps-win32-app-management.md).

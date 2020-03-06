@@ -98,7 +98,7 @@ As you're determining which apps your workforce needs, consider the various grou
 
 First, you must determine which group should have access to the app, based on the sensitivity of the data the app contains. You might need to include or exclude certain types of roles within your organization. For example, only certain LOB apps might be required for your sales group, whereas people focused on engineering, finance, HR, or legal might not need to use the LOB apps. In addition, your sales group might need additional data protection and access to internal corporate services on their mobile devices. You must determine how this group will connect to resources using the app. Will the data that the app accesses live in the cloud or on-premises? Also, how will the users connect to resources by using the app? 
 
-Intune also supports enabling access to client apps that require secure access to on-premises data, such as line-of-business app servers. You ordinarily provide this type of access by using [Intune-managed certificates](../protect/certificates-configure.md) for access control, combined with a standard VPN gateway or proxy in the perimeter, such as Azure Active Directory Application Proxy. The Intune [App Wrapping Tool and App SDK](../developer/apps-prepare-mobile-application-management.md) can help contain the accessed data within your line-of-business app, so that it can’t pass corporate data to consumer apps or services.
+Intune also supports enabling access to client apps that require secure access to on-premises data, such as line-of-business app servers. You ordinarily provide this type of access by using [Intune-managed certificates](../protect/certificates-configure.md) for access control, combined with a standard VPN gateway or proxy in the perimeter, such as Azure Active Directory Application Proxy. The Intune [App Wrapping Tool and App SDK](../developer/apps-prepare-mobile-application-management.md) can help contain the accessed data within your line-of-business app, so that it can't pass corporate data to consumer apps or services.
 
 Use the [Intune deployment planning, design and implementation guide](../fundamentals/planning-guide.md) to help determine how you identify the organizational groups that are associated with each use-case and sub-use-case app scenario. For information about assigning apps to groups, see [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
@@ -171,7 +171,7 @@ When you add an app to Intune, you are given the option to select the category y
 Previously, Intune contained a number of built-in apps that you could quickly assign. Based on Intune customer feedback, we removed this list, and the built-in apps are no longer displayed. However, if you have already assigned any built-in apps, the apps remain visible in the list of apps. You can continue to assign the apps as required.
 
 > [!NOTE]
-> For the installation of a required non-Line-of-Business app, Intune will attempt to install the app by sending an install command whenever the device checks-in, given that the app is not detected and the app’s install state is not *Install Pending*.
+> For the installation of a required non-Line-of-Business app, Intune will attempt to install the app by sending an install command whenever the device checks-in, given that the app is not detected and the app's install state is not *Install Pending*.
 
 ## Installing, updating, or removing required apps
 
@@ -207,4 +207,4 @@ To learn how to add apps for each platform to Intune, see:
 - [Microsoft Edge for macOS](apps-edge-macos.md)
 - [Built-in apps](apps-add-built-in.md)
 - [Android Enterprise system app](apps-ae-system.md)
-- [Win32 apps](~/apps/apps-win32-app-management.md)
+- [Win32 apps](apps-win32-app-management.md)

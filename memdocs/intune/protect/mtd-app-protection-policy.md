@@ -68,8 +68,8 @@ Use the procedure to [create an Application protection policy for either iOS/iPa
   - **Block access**
   - **Wipe data**
 
-- **Assignments**: Assign the policy to groups of users.  The devices used by the group’s members are evaluated for access to corporate data on targeted apps via Intune app protection.
+- **Assignments**: Assign the policy to groups of users.  The devices used by the group's members are evaluated for access to corporate data on targeted apps via Intune app protection.
 
 ## Next steps
 
-- Learn more about [Mobile Threat Defense](~/protect/mobile-threat-defense.md) in Microsoft Intune.
+- Learn more about [Mobile Threat Defense](mobile-threat-defense.md) in Microsoft Intune.

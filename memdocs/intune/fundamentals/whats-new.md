@@ -106,13 +106,13 @@ Exports from the **Devices** > **All devices** page are now in zipped CSV format
 ### App management
 
 #### Microsoft Defender Advanced Threat Protection (ATP) app for macOS<!-- 5424618 -->
-Intune provides an easy way to deploy the Microsoft Defender Advanced Threat Protection (ATP) app for macOS to managed Mac devices. For more information, see [Add Microsoft Defender ATP to macOS devices using Microsoft Intune](~/apps/apps-advanced-threat-protection-macos.md) and [Microsoft Defender Advanced Threat Protection for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac).  
+Intune provides an easy way to deploy the Microsoft Defender Advanced Threat Protection (ATP) app for macOS to managed Mac devices. For more information, see [Add Microsoft Defender ATP to macOS devices using Microsoft Intune](../apps/apps-advanced-threat-protection-macos.md) and [Microsoft Defender Advanced Threat Protection for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac).  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
 
 #### Enable network access control (NAC) with Cisco AnyConnect VPN on iOS devices<!-- 4860111  -->
-On iOS devices, you can create a VPN profile, and use different connection types, including Cisco AnyConnect (**Device configuration** > **Profiles** > **Create profile** > **iOS** for platform > **VPN** for profile type > **Cisco AnyConnect** for connection type). 
+On iOS devices, you can create a VPN profile, and use different connection types, including Cisco AnyConnect (**Device configuration** > **Profiles** > **Create profile** > **iOS** for platform > **VPN** for profile type > **Cisco AnyConnect** for connection type).
 
 You can enable network access control (NAC) with Cisco AnyConnect. To use this feature:
 
@@ -149,15 +149,16 @@ You can choose a specific iOS/iPadOS update (except for the most recent update) 
 ### Device security
 
 #### Improved Intune reporting experience<!-- 3791418   -->
-Intune now provides an improved reporting experience, including new report types, better report organization, more focused views, improved report functionality, as well as more consistent and timely data. The reporting experience will move from public preview to GA (general availability). Additionally, the GA release will provide localization support, bug fixes, design improvements, and aggregate device compliance data on tiles in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+Intune now provides an improved reporting experience, including new report types, better report organization, more focused views, improved report functionality, as well as more consistent and timely data. The reporting experience will move from public preview to GA (general availability). Additionally, the GA release will provide localization support, bug fixes, design improvements, and aggregate device compliance data on tiles in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 New report types focus on the following:
+
 - **Operational** - Provides fresh records with a negative health focus. 
 - **Organizational** - Provides an broader summary of the overall state.
 - **Historical** - Provides patterns and trends over a period of time.
 - **Specialist** - Allows you to use raw data to create your own custom reports.
 
-The first set of new reports focuses on device compliance. For more information, see [Blog - Microsoft Intune reporting framework](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553) and [Intune reports](~/fundamentals/reports.md).
+The first set of new reports focuses on device compliance. For more information, see [Blog - Microsoft Intune reporting framework](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553) and [Intune reports](reports.md).
 
 #### Consolidated the location of security baselines in the UI<!-- 6177074   -->
 We've consolidated the paths to find [security baselines](../protect/security-baselines.md) in the Microsoft Endpoint Manager admin center by removing *Security baselines* from several UI locations. To find Security baselines, you now use the following path:  **Endpoint security** > **Security baselines**.
@@ -166,6 +167,7 @@ We've consolidated the paths to find [security baselines](../protect/security-ba
 We've expanded support for using [imported PKCS certificates](../protect/certificates-imported-pfx-configure.md#supported-platforms) to support *Android Enterprise fully managed devices*. Generally, importing PFX certificates is used for S/MIME encryption scenarios, where a user's encryption certificates are required on all of their devices so that email decryption can occur.
 
 The following platforms support import of PFX certificates:
+
 - Android - Device Administrator
 - Android Enterprise - Fully Managed
 - Android Enterprise - Work profile
@@ -174,7 +176,7 @@ The following platforms support import of PFX certificates:
 - Windows 10
 
 #### View the endpoint security configuration for devices<!-- 6206460  -->
-We've updated the name of the option in the Microsoft Endpoint Manager admin center, for viewing [endpoint security configurations that apply to a specific device](../protect/security-baselines-monitor.md#view-endpoint-security-configurations-per-device). This option is renamed to **Endpoint security configuration** because it shows applicable security baselines and additional policies created outside of security baselines. Previously, this option was named *Security baselines*. 
+We've updated the name of the option in the Microsoft Endpoint Manager admin center, for viewing [endpoint security configurations that apply to a specific device](../protect/security-baselines-monitor.md#view-endpoint-security-configurations-per-device). This option is renamed to **Endpoint security configuration** because it shows applicable security baselines and additional policies created outside of security baselines. Previously, this option was named *Security baselines*.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Role-based access control
@@ -193,7 +195,6 @@ Microsoft's new Office app is now generally available for download and use. The 
 
 For more information, see [How to enable Intune app protection policies with the Office mobile preview app](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-enable-intune-app-protection-policies-with/ba-p/1045493).
 
-
 <!-- ########################## -->
 
 ## Week of February 10, 2020
@@ -205,13 +206,13 @@ Windows 7 reached end of extended support on January 14, 2020. Intune deprecated
 ### App management
 
 #### Microsoft Edge version 77 and later on Windows 10 devices<!-- 5843584 -->
-Intune now supports uninstalling Microsoft Edge version 77 and later on Windows 10 devices. For more information, see [Add Microsoft Edge for Windows 10 to Microsoft Intune](~/apps/apps-windows-edge.md).
+Intune now supports uninstalling Microsoft Edge version 77 and later on Windows 10 devices. For more information, see [Add Microsoft Edge for Windows 10 to Microsoft Intune](../apps/apps-windows-edge.md).
 
 #### Screen removed from Company Portal, Android work profile enrollment<!--6103987 -->
-The **What's next?** screen has been removed from the Android work profile enrollment flow in Company Portal to streamline the user experience. Go to [Enroll with Android work profile](/intune-user-help/enroll-device-android-work-profile) to see the updated Android work profile enrollment flow.  
+The **What's next?** screen has been removed from the Android work profile enrollment flow in Company Portal to streamline the user experience. Go to [Enroll with Android work profile](../intune-user-help/enroll-device-android-work-profile) to see the updated Android work profile enrollment flow.  
 
 #### Company Portal app improved performance<!-- 6178652 -->
-The Company Portal app has been updated to support improved performance for devices that use ARM64 processors, such as the Surface Pro X. Previously, the Company Portal operated in an emulated ARM32 mode. Now, in version 10.4.7080.0 and above, the Company Portal app is natively compiled for ARM64. For more information about the Company Portal app, see [How to configure the Microsoft Intune Company Portal app](~/apps/company-portal-app.md).
+The Company Portal app has been updated to support improved performance for devices that use ARM64 processors, such as the Surface Pro X. Previously, the Company Portal operated in an emulated ARM32 mode. Now, in version 10.4.7080.0 and above, the Company Portal app is natively compiled for ARM64. For more information about the Company Portal app, see [How to configure the Microsoft Intune Company Portal app](../apps/company-portal-app.md).
 
 <!-- ########################## -->
 ## Week of January 27, 2020
@@ -220,10 +221,10 @@ The Company Portal app has been updated to support improved performance for devi
 ### App management
 
 #### Intune support for additional Microsoft Edge version 77 deployment channel for macOS<!-- 5983950  -->
-Microsoft Intune now support the additional **Stable** deployment channel for the Microsoft Edge app for macOS. The **Stable** channel is the recommended channel for deploying Microsoft Edge broadly in Enterprise environments. It updates every six weeks, each release incorporating improvements from the **Beta** channel. In addition to the **Stable** and **Beta** channels, Intune supports a **Dev** channel. The public preview offers stable and dev channels for Microsoft Edge version 77 and later for macOS. Automatic updates of the browser is On by default. For more information, see [Add Microsoft Edge for macOS devices using Microsoft Intune](~/apps/apps-edge-macos.md).
+Microsoft Intune now support the additional **Stable** deployment channel for the Microsoft Edge app for macOS. The **Stable** channel is the recommended channel for deploying Microsoft Edge broadly in Enterprise environments. It updates every six weeks, each release incorporating improvements from the **Beta** channel. In addition to the **Stable** and **Beta** channels, Intune supports a **Dev** channel. The public preview offers stable and dev channels for Microsoft Edge version 77 and later for macOS. Automatic updates of the browser is On by default. For more information, see [Add Microsoft Edge for macOS devices using Microsoft Intune](../apps/apps-edge-macos.md).
 
 #### Retirement of Intune Managed Browser<!--5728447 -->
-The Intune Managed Browser will be retired. Use Microsoft Edge for your protected Intune browser experience. For more information, see the entry '[Take Action: Use Microsoft Edge for your Protected Intune Browser Experience](~/fundamentals/whats-new.md#take-action-use-microsoft-edge-for-your-protected-intune-browser-experience)' in the [Notices](~/fundamentals/whats-new.md#notices) section below.
+The Intune Managed Browser will be retired. Use Microsoft Edge for your protected Intune browser experience. For more information, see the entry '[Take Action: Use Microsoft Edge for your Protected Intune Browser Experience](whats-new.md#take-action-use-microsoft-edge-for-your-protected-intune-browser-experience)' in the [Notices](whats-new.md#notices) section below.
 
 <!-- ########################## -->
 ## Week of January 20, 2020 (2001 Service release)
@@ -232,22 +233,22 @@ The Intune Managed Browser will be retired. Use Microsoft Edge for your protecte
 ### App management
 
 #### User experience change when adding apps to Intune<!-- 4705829   -->
-You'll see a new user experience when adding apps to via Intune. This experience provides the same settings and details that you have used previously, however the new experience follows a wizard-like process before adding an app to Intune. This new experience also provides a review page before adding the app. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. For more information, see [Add apps to Microsoft Intune](~/apps/apps-add.md).
+You'll see a new user experience when adding apps to via Intune. This experience provides the same settings and details that you have used previously, however the new experience follows a wizard-like process before adding an app to Intune. This new experience also provides a review page before adding the app. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 #### Require Win32 apps to restart <!-- 5622282   -->
 You can require that a Win32 app must restart after a successful install. Also, you can choose the amount of time (the grace period) before the restart must occur.
 
 #### User experience change when configuring apps in Intune<!-- 4207990   -->
-You'll see a new user experience when creating app configuration policies in Intune. This experience provides the same settings and details that you have used previously, however the new experience follows a wizard-like process before adding a policy to Intune. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add**. For more information, see [App configuration policies for Microsoft Intune](~/apps/app-configuration-policies-overview.md). 
+You'll see a new user experience when creating app configuration policies in Intune. This experience provides the same settings and details that you have used previously, however the new experience follows a wizard-like process before adding a policy to Intune. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add**. For more information, see [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md). 
 
 #### Intune support for additional Microsoft Edge for Windows 10 deployment channel<!-- 5861774 -->
-Microsoft Intune now support the additional **Stable** deployment channel for the Microsoft Edge (version 77 and later) for Windows 10 app. The **Stable** channel is the recommended channel for deploying Microsoft Edge for Windows 10 broadly in Enterprise environments. This channel updates every six weeks, each release incorporating improvements from the **Beta** channel. In addition to the **Stable** and **Beta** channels, Intune supports a **Dev** channel. For more information, see [Microsoft Edge for Windows 10 - Configure app settings](~/apps/apps-windows-edge.md#configure-app-settings).
+Microsoft Intune now support the additional **Stable** deployment channel for the Microsoft Edge (version 77 and later) for Windows 10 app. The **Stable** channel is the recommended channel for deploying Microsoft Edge for Windows 10 broadly in Enterprise environments. This channel updates every six weeks, each release incorporating improvements from the **Beta** channel. In addition to the **Stable** and **Beta** channels, Intune supports a **Dev** channel. For more information, see [Microsoft Edge for Windows 10 - Configure app settings](../apps/apps-windows-edge.md#configure-app-settings).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
 
 #### Improved user interface experience when configuring Exchange ActiveSync on-premises connector UI<!-- 5695492   -->
-We've updated the experience for [configuring the Exchange ActiveSync on-premises connector](../protect/exchange-connector-install.md). The updated experience uses a single pane to configure, edit, and summarize the details of your on-premises connectors. 
+We've updated the experience for [configuring the Exchange ActiveSync on-premises connector](../protect/exchange-connector-install.md). The updated experience uses a single pane to configure, edit, and summarize the details of your on-premises connectors.
 
 #### Add automatic proxy settings to Wi-Fi profiles for Android Enterprise work profiles<!-- 4490822   -->
 On Android Enterprise Work Profile devices, you can create Wi-Fi profiles. When you choose the Wi-Fi Enterprise type, you can also enter the Extensible Authentication Protocol (EAP) type used on your Wi-Fi network.
@@ -322,10 +323,10 @@ You can now assign scope tags to administrative template profiles (ADMX). To do 
 ### App management
 
 #### Retrieve personal recovery key from MEM encrypted macOS devices<!-- 4851745 -->
-End users can retrieve their personal recovery key (FileVault key) using the iOS Company Portal app. The device that has the personal recovery key must be enrolled with Intune and encrypted with FileVault through Intune. Using the iOS Company Portal app, an end user can retrieve their personal recovery key on their encrypted macOS device by clicking **Get recovery key**. You can also retrieve the recovery key from Intune by selecting **Devices** > *the encrypted and enrolled macOS device* > **Get recovery key**. For more information about FileVault, see [FileVault encryption for macOS](~/protect/encrypt-devices.md#filevault-encryption-for-macos).
+End users can retrieve their personal recovery key (FileVault key) using the iOS Company Portal app. The device that has the personal recovery key must be enrolled with Intune and encrypted with FileVault through Intune. Using the iOS Company Portal app, an end user can retrieve their personal recovery key on their encrypted macOS device by clicking **Get recovery key**. You can also retrieve the recovery key from Intune by selecting **Devices** > *the encrypted and enrolled macOS device* > **Get recovery key**. For more information about FileVault, see [FileVault encryption for macOS](../protect/encrypt-devices.md#filevault-encryption-for-macos).
 
 #### iOS and iPadOS user-licensed VPP apps<!-- 5619268 -->
-For user enrolled iOS and iPadOS devices, end users will no longer be presented with newly created device-licensed VPP applications deployed as available. However, end users will continue to see all user-licensed VPP apps within the Company Portal. For more information about VPP apps, see [How to manage iOS and macOS apps purchased through Apple Volume Purchase Program with Microsoft Intune](~/apps/vpp-apps-ios.md).
+For user enrolled iOS and iPadOS devices, end users will no longer be presented with newly created device-licensed VPP applications deployed as available. However, end users will continue to see all user-licensed VPP apps within the Company Portal. For more information about VPP apps, see [How to manage iOS and macOS apps purchased through Apple Volume Purchase Program with Microsoft Intune](../apps/vpp-apps-ios.md).
 
 <!-- ########################## -->
 ## Week of December 23, 2019
@@ -474,7 +475,7 @@ The UI to selectively wipe app data in Intune has been updated. UI changes inclu
 - An update to the create flow to include assignments.
 - A summarized page of all things set when viewing properties, prior to creating a new policy or when editing a property. Also, when editing properties, the summary will only show a list of items from the category of properties being edited.
 
-For more information, see [How to wipe only corporate data from Intune-managed apps](~/apps/apps-selective-wipe.md).
+For more information, see [How to wipe only corporate data from Intune-managed apps](../apps/apps-selective-wipe.md).
 
 #### iOS and iPadOS third party keyboard support<!-- 4922950 -->
 In March  2019, we announced the removal of support for the iOS App protection policy setting "Third party keyboards". The feature is returning to Intune with both iOS and iPadOS support. To enable this setting, visit the **Data protection** tab of a new or existing iOS/iPadOS app protection policy and find the **Third party keyboards** setting under **Data Transfer**.
@@ -560,12 +561,13 @@ We've improved the in-console search and feedback for common issues, and the wor
 
 #### Improved Intune reporting experience (public preview) <!-- 3791418 -->
 Intune now provides an improved reporting experience, including new report types, better report organization, more focused views, improved report functionality, as well as more consistent and timely data. New report types focus on the following:
+
 - **Operational** - Provides fresh records with a negative health focus. 
 - **Organizational** - Provides an broader summary of the overall state.
 - **Historical** - Provides patterns and trends over a period of time.
 - **Specialist** - Allows you to use raw data to create your own custom reports.
 
-The first set of new reports focuses on device compliance. For more information, see [Blog - Microsoft Intune reporting framework](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553) and [Intune reports](~/fundamentals/reports.md).
+The first set of new reports focuses on device compliance. For more information, see [Blog - Microsoft Intune reporting framework](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553) and [Intune reports](reports.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Role-based access control
@@ -574,7 +576,7 @@ The first set of new reports focuses on device compliance. For more information,
 You can now copy built-in and custom roles. For more information, see [Copy a role](../fundamentals/create-custom-role.md#copy-a-role).
 
 #### New permissions for school administrator role <!-- 5621805  -->  
-Two new permissions, **Assign profile** and **Sync device**, have been added to the school administrator role > **Permissions** > **Enrollment programs**. The sync profile permission lets group admins sync Windows Autopilot devices. The assign profile permission lets them delete user-initiated Apple enrollment profiles. It also gives them permission to manage Autopilot device assignments and Autopilot deployment profile assignments. For a list of all school administrator/group admin permissions, see [Assign group admins](https://docs.microsoft.com/intune-education/group-admin-delegate). 
+Two new permissions, **Assign profile** and **Sync device**, have been added to the school administrator role > **Permissions** > **Enrollment programs**. The sync profile permission lets group admins sync Windows Autopilot devices. The assign profile permission lets them delete user-initiated Apple enrollment profiles. It also gives them permission to manage Autopilot device assignments and Autopilot deployment profile assignments. For a list of all school administrator/group admin permissions, see [Assign group admins](https://docs.microsoft.com/intune-education/group-admin-delegate).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Security
@@ -597,16 +599,16 @@ Business-to-business (B2B) collaboration allows you to securely share you compan
 #### Improved macOS enrollment experience in Company Portal <!-- 5074349  -->  
 The Company Portal for macOS enrollment experience has a simpler enrollment process that aligns more closely with the Company Portal for iOS enrollment experience. Device users now see:  
 
-* A sleeker user interface.  
-* An improved enrollment checklist.  
-* Clearer instructions about how to enroll their devices.  
-* Improved troubleshooting options.  
+- A sleeker user interface.  
+- An improved enrollment checklist.  
+- Clearer instructions about how to enroll their devices.  
+- Improved troubleshooting options.  
 
 #### Web apps launched from the Windows Company Portal app<!-- 5030972 -->
-End-users can now launch web apps directly from the Windows Company Portal app. End-users can select the web app and then choose the option **Open in browser**. The published web URL is opened directly in a web browser. This functionality will be rolled out over the next week. For more information about Web apps, see [Add web apps to Microsoft Intune](~/apps/web-app.md).  
+End-users can now launch web apps directly from the Windows Company Portal app. End-users can select the web app and then choose the option **Open in browser**. The published web URL is opened directly in a web browser. This functionality will be rolled out over the next week. For more information about Web apps, see [Add web apps to Microsoft Intune](../apps/web-app.md).  
 
 #### New assignment type column in Company Portal for Windows 10 <!-- 5459950  -->
-The Company Portal > **Installed Apps** > **Assignment type** column has been renamed to **Required by your organization**.  Under that column, users will see a **Yes** or **No** value to indicate that an app is either required or made optional by their organization. These changes were made because device users were confused about the concept of available apps. Your users can find more information about installing apps from Company Portal in [Install and share apps on your device](/intune-user-help/install-apps-cpapp-windows). For more  information about configuring the Company Portal app for your users, see [How to configure the Microsoft Intune Company Portal app](~/apps/company-portal-app.md).  
+The Company Portal > **Installed Apps** > **Assignment type** column has been renamed to **Required by your organization**.  Under that column, users will see a **Yes** or **No** value to indicate that an app is either required or made optional by their organization. These changes were made because device users were confused about the concept of available apps. Your users can find more information about installing apps from Company Portal in [Install and share apps on your device](/intune-user-help/install-apps-cpapp-windows). For more  information about configuring the Company Portal app for your users, see [How to configure the Microsoft Intune Company Portal app](../apps/company-portal-app.md).  
 
 <!-- ########################## -->
 ## Week of November 4, 2019

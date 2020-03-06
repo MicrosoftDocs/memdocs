@@ -29,24 +29,24 @@ ms.collection: M365-identity-device-management
 
 # Troubleshoot app installation issues
 
-On Microsoft Intune MDM-managed devices, sometimes app installations can fail. When these app installs fail, it can be challenging to understand the failure reason or troubleshoot the issue. Microsoft Intune provides app installation failure details that allow help desk operators and Intune administrators to view app information to address user help requests. The troubleshooting pane within Intune provides failure details, including details about managed apps on a user's device. Details about the end-to-end lifecycle of an app are provided under each individual device in the **Managed Apps** pane. You can view installation issues, such as when the app was created, modified, targeted, and delivered to a device. 
+On Microsoft Intune MDM-managed devices, sometimes app installations can fail. When these app installs fail, it can be challenging to understand the failure reason or troubleshoot the issue. Microsoft Intune provides app installation failure details that allow help desk operators and Intune administrators to view app information to address user help requests. The troubleshooting pane within Intune provides failure details, including details about managed apps on a user's device. Details about the end-to-end lifecycle of an app are provided under each individual device in the **Managed Apps** pane. You can view installation issues, such as when the app was created, modified, targeted, and delivered to a device.
 
 > [!NOTE]
-> For specific app installation error code information, see [Intune app installation error reference](~/apps/app-install-error-codes.md).
+> For specific app installation error code information, see [Intune app installation error reference](app-install-error-codes.md).
 
 ## App troubleshooting details
 
 Intune provides app troubleshooting details based on the apps installed on a specific user's device.
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Troubleshoot + support**.
-4. Click **Select user** to select a user to troubleshoot. The **Select users** pane will be displayed.
-5. Select a user by typing the name or email address. Click **Select** at the bottom of the pane. The troubleshooting information for the user is displayed in the **Troubleshoot** pane. 
-6. Select the device that you want to troubleshoot from the **Devices** list.
+2. Select **Troubleshoot + support**.
+3. Click **Select user** to select a user to troubleshoot. The **Select users** pane will be displayed.
+4. Select a user by typing the name or email address. Click **Select** at the bottom of the pane. The troubleshooting information for the user is displayed in the **Troubleshoot** pane. 
+5. Select the device that you want to troubleshoot from the **Devices** list.
     ![The Intune Troubleshooting pane.](./media/troubleshoot-app-install/troubleshoot-app-install-01.png)
-7. Select **Managed Apps** from selected device pane. A list of managed apps is displayed.
+6. Select **Managed Apps** from selected device pane. A list of managed apps is displayed.
     ![Details of a specific device managed by Intune.](./media/troubleshoot-app-install/troubleshoot-app-install-02.png)
-8. Select an app from the list where **Installation Status** indicates a failure.
+7. Select an app from the list where **Installation Status** indicates a failure.
     ![A selected app that shows installation failure details.](./media/troubleshoot-app-install/troubleshoot-app-install-03.png)
 
     > [!Note]  

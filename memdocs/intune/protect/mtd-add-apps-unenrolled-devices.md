@@ -59,7 +59,7 @@ However, should you wish to make the app available to end users via the Intune C
 
 When using Intune app protection policies with Mobile Threat Defense, Intune will guide the end user to install and sign in to the required Mobile Threat Defense client app.
 
-However, should you wish to make the app available to end users via the Intune Company Portal, you can follow the below steps in the [Azure portal](https://portal.azure.com/). Make sure you’re familiar with the process of:
+However, should you wish to make the app available to end users via the Intune Company Portal, you can follow the below steps in the [Azure portal](https://portal.azure.com/). Make sure you're familiar with the process of:
 
 - [Adding an app into Intune](../apps/apps-add.md).
 - [Assigning an app with Intune](../apps/apps-deploy.md).
@@ -124,4 +124,4 @@ However, should you wish to make the app available to end users via the Intune C
 
 ## Next steps
 
-- [Enable the Mobile Threat Defense connector in Intune for unenrolled devices](~/protect/mtd-enable-unenrolled-devices.md)
+- [Enable the Mobile Threat Defense connector in Intune for unenrolled devices](mtd-enable-unenrolled-devices.md)
