@@ -86,7 +86,7 @@ We have made improvements to the macOS device enrollment experience and the Comp
 - An enhanced compliance check step during enrollment.
 - Support for copied Incident IDs, so your users can send errors from their devices to your company support team faster.
 
-For more information about enrollment and the Company Portal app for Mac, see [Enroll your macOS device using the Company Portal app](/intune-user-help/enroll-your-device-in-intune-macos-cp). 
+For more information about enrollment and the Company Portal app for Mac, see [Enroll your macOS device using the Company Portal app](../intune-user-help/enroll-your-device-in-intune-macos-cp). 
 
 #### App protection policies for Better Mobile now supports iOS and iPadOS<!-- 6224512  -->
 
@@ -279,7 +279,7 @@ The following information is now on the **Overview** page for devices:
 - CPU architecture
 
 #### iOS Bypass Activation Lock remote action renamed to Disable Activation Lock <!--5904591  -->
-The remote action **Bypass Activation Lock** has been renamed to **Disable Activation Lock**. For more information, see [Disable iOS Activation Lock with Intune](../remote-actions/device-activation-lock-bypass.md).
+The remote action **Bypass Activation Lock** has been renamed to **Disable Activation Lock**. For more information, see [Disable iOS Activation Lock with Intune](../remote-actions/device-activation-lock-disable.md).
 
 #### Windows 10 feature update deployment support for Autopilot devices<!-- 5948137   -->
 Intune now supports targeting Autopilot registered devices using [Windows 10 feature update deployments](../protect/windows-update-for-business-configure.md#windows-10-feature-updates).
@@ -608,7 +608,7 @@ The Company Portal for macOS enrollment experience has a simpler enrollment proc
 End-users can now launch web apps directly from the Windows Company Portal app. End-users can select the web app and then choose the option **Open in browser**. The published web URL is opened directly in a web browser. This functionality will be rolled out over the next week. For more information about Web apps, see [Add web apps to Microsoft Intune](../apps/web-app.md).  
 
 #### New assignment type column in Company Portal for Windows 10 <!-- 5459950  -->
-The Company Portal > **Installed Apps** > **Assignment type** column has been renamed to **Required by your organization**.  Under that column, users will see a **Yes** or **No** value to indicate that an app is either required or made optional by their organization. These changes were made because device users were confused about the concept of available apps. Your users can find more information about installing apps from Company Portal in [Install and share apps on your device](/intune-user-help/install-apps-cpapp-windows). For more  information about configuring the Company Portal app for your users, see [How to configure the Microsoft Intune Company Portal app](../apps/company-portal-app.md).  
+The Company Portal > **Installed Apps** > **Assignment type** column has been renamed to **Required by your organization**.  Under that column, users will see a **Yes** or **No** value to indicate that an app is either required or made optional by their organization. These changes were made because device users were confused about the concept of available apps. Your users can find more information about installing apps from Company Portal in [Install and share apps on your device](../intune-user-help/install-apps-cpapp-windows). For more  information about configuring the Company Portal app for your users, see [How to configure the Microsoft Intune Company Portal app](../apps/company-portal-app.md).  
 
 <!-- ########################## -->
 ## Week of November 4, 2019

@@ -281,7 +281,7 @@ You can pick a default profile to be applied to all devices enrolling with a spe
 ## Distribute devices
 You have enabled management and syncing between Apple and Intune, and assigned a profile to  let your DEP devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license. Devices without user affinity require a device license. An activated device can't apply an enrollment profile until the device is wiped.
 
-See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program](/intune-user-help/enroll-your-device-dep-ios).
+See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program](../intune-user-help/enroll-your-device-dep-ios).
 
 ## Renew a DEP token  
 1. Go to deploy.apple.com.  

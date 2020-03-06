@@ -295,11 +295,11 @@ When you choose a failure row, more details are provided.
 ## Collect available data from mobile device
 
 Use the following resources to help collect device data when troubleshooting user's device issues:
-- [Send iOS/iPadOS enrollment errors to your IT administrator](/intune-user-help/send-errors-to-your-it-admin-ios)
-- [Help your company support fix device issues with verbose logging](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android)
-- [Send Android logs to your company support using a USB cable](/intune-user-help/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
-- [Send Android diagnostic data logs to your IT administrator using email](/intune-user-help/send-logs-to-your-it-admin-by-email-android)
-- [Send Android enrollment errors to your IT administrator](/intune-user-help/send-enrollment-errors-to-your-it-administrator-android)
+- [Send iOS/iPadOS enrollment errors to your IT administrator](../intune-user-help/send-errors-to-your-it-admin-ios)
+- [Help your company support fix device issues with verbose logging](../intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android)
+- [Send Android logs to your company support using a USB cable](../intune-user-help/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
+- [Send Android diagnostic data logs to your IT administrator using email](../intune-user-help/send-logs-to-your-it-admin-by-email-android)
+- [Send Android enrollment errors to your IT administrator](../intune-user-help/send-enrollment-errors-to-your-it-administrator-android)
 
 ## Next steps
 

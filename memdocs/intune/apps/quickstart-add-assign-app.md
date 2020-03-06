@@ -68,7 +68,7 @@ Use the following steps to add an app to Intune:
 After you've added an app to Microsoft Intune, you can assign the app to groups of users or devices.
 
 > [!NOTE]
-> This quickstart builds on previous quickstarts in this series. Please see [prerequisites](quickstart-add-assign-app.md#prerequisites) in this quickstart for details.
+> This quickstart builds on previous quickstarts in this series. Please see [prerequisites](../fundamentals/quickstart-add-assign-app.md#prerequisites) in this quickstart for details.
 
 Use the following steps to assign an app to a group:
 
@@ -88,7 +88,7 @@ You must install and use the Company Portal app to install the **Contoso's To-Do
 1. Log in to your enrolled Windows 10 Desktop device.
 
     > [!IMPORTANT]
-    > The device must be [enrolled with Intune](../quickstart-enroll-windows-device.md). Also, you must sign in to the device using an account contained in the group you assigned to the app.
+    > The device must be [enrolled with Intune](../enrollment/quickstart-enroll-windows-device.md). Also, you must sign in to the device using an account contained in the group you assigned to the app.
 
 2. From the **Start** menu, open the **Microsoft Store**. Then, find the **Company Portal** app and install it.
 3. Launch the **Company Portal** app.
@@ -100,7 +100,7 @@ You must install and use the Company Portal app to install the **Contoso's To-Do
 
 5. Click **Install**.
 
-If your business needs require that you assign the Company Portal app to your workforce, you can manually assign the Windows 10 Company Portal app directly from Intune. For more information see, [Manually add the Windows 10 Company Portal app by using Microsoft Intune](../company-portal-app.md).
+If your business needs require that you assign the Company Portal app to your workforce, you can manually assign the Windows 10 Company Portal app directly from Intune. For more information see, [Manually add the Windows 10 Company Portal app by using Microsoft Intune](company-portal-app.md).
 
 ## Next steps
 

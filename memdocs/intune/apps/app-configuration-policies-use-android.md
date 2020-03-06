@@ -83,7 +83,7 @@ You can use the configuration designer for Managed Google Play apps when the app
 
 1. Select **Add**. Choose the list of configuration settings that you want to enter for the app.
 
-    If you're using GMail or Nine Work for your email app, see [Android Enterprise device settings to configure email](../email-settings-android-enterprise.md) for more information on these settings.
+    If you're using GMail or Nine Work for your email app, see [Android Enterprise device settings to configure email](../configuration/email-settings-android-enterprise.md) for more information on these settings.
 
 2. For each key and value in the configuration, set:
 
@@ -105,7 +105,6 @@ You can choose the following options if you choose variable as the value type:
 | User ID | 3ec2c00f-b125-4519-acf0-302ac3761822 |
 | User name | John Doe |
 | User Principal Name | john@contoso.com |
-
 
 ### Allow only configured organization accounts in multi-identity apps 
 

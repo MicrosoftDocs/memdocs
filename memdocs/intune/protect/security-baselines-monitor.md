@@ -33,7 +33,7 @@ Intune provides several options to monitor your security baselines. You can moni
 
 This article walks you through both monitoring options.
 
-[Security baselines in Intune](../security-baselines.md) provides more details on the security baselines feature in Microsoft Intune.
+[Security baselines in Intune](security-baselines.md) provides more details on the security baselines feature in Microsoft Intune.
 
 ## Monitor the baseline and your devices
 

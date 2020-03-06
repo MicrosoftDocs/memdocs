@@ -42,7 +42,7 @@ If you're an employee or student, be sure to check out the screenshots and links
 ## Week of February 3, 2020
 
 ### Screen removed from Company Portal, Android work profile enrollment <!--6103987 -->
-The **What's next?** screen has been removed from the Android work profile enrollment flow in Company Portal to streamline the user experience. Go to [Enroll with Android work profile](/intune-user-help/enroll-device-android-work-profile) to see the updated Android work profile enrollment flow.  
+The **What's next?** screen has been removed from the Android work profile enrollment flow in Company Portal to streamline the user experience. Go to [Enroll with Android work profile](../intune-user-help/enroll-device-android-work-profile) to see the updated Android work profile enrollment flow.  
 
 ## Week of November 11, 2019  
 
@@ -62,7 +62,7 @@ The Company Portal for macOS enrollment experience has a simpler enrollment proc
 ## Week of October 28, 2019  
 
 ### Improved checklist design in Company Portal app for Android <!-- 5550857 -->  
-The setup checklist in the Company Portal app for Android has been updated with a lightweight design and new icons. The changes align with the recent updates made to the Company Portal app for iOS/iPadOS. For a look at the updated enrollment steps, see [Enroll with Android work profile](/intune-user-help/enroll-device-android-work-profile) and [Enroll your Android device](/intune-user-help/enroll-device-android-company-portal).  
+The setup checklist in the Company Portal app for Android has been updated with a lightweight design and new icons. The changes align with the recent updates made to the Company Portal app for iOS/iPadOS. For a look at the updated enrollment steps, see [Enroll with Android work profile](../intune-user-help/enroll-device-android-work-profile) and [Enroll your Android device](../intune-user-help/enroll-device-android-company-portal).  
 
 The following screens show the updated checklist for Android work profile enrollment:
 
@@ -153,7 +153,7 @@ The home page of the Company Portal app for iOS devices has been redesigned. Wit
 
 ## Week of February 19, 2019  
 ### New App categories screen in the Company Portal app for Windows 10<!-- 3834780 WNready4Review -->  
-A new screen called **App categories** has been added to improve the app browsing and selection experience in Company Portal for Windows 10. Users will now see their apps sorted under categories such as **Featured**, **Education**, and **Productivity**. This change appears in Company Portal versions 10.3.3451.0 and later. For more information about installing apps in Company Portal, see [Install and share apps on your device](/intune-user-help/install-apps-cpapp-windows).  
+A new screen called **App categories** has been added to improve the app browsing and selection experience in Company Portal for Windows 10. Users will now see their apps sorted under categories such as **Featured**, **Education**, and **Productivity**. This change appears in Company Portal versions 10.3.3451.0 and later. For more information about installing apps in Company Portal, see [Install and share apps on your device](../intune-user-help/install-apps-cpapp-windows).  
 
 ![Screenshot of Company Portal for Windows 10, App categories screen.](./media/whats-new-app-ui/1902_CP_app_categories.png)   
 

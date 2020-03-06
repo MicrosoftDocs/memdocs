@@ -214,7 +214,7 @@ If Resolution #2 doesn't work, have your users follow these steps to make Smart 
 
 **Resolution 1**:
 
-The user might be able to retrieve the missing certificate by following the instructions in [Your device is missing a required certificate](/intune-user-help/your-device-is-missing-a-required-certificate-android). If the error persists, try Resolution 2.
+The user might be able to retrieve the missing certificate by following the instructions in [Your device is missing a required certificate](../intune-user-help/your-device-is-missing-a-required-certificate-android). If the error persists, try Resolution 2.
 
 **Resolution 2**:
 

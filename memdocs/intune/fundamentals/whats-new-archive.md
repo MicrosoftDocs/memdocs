@@ -40,7 +40,7 @@ ms.collection: M365-identity-device-management
 ### App management
 
 #### Improved checklist design in Company Portal app for Android<!-- 5550857 -->  
-The setup checklist in the Company Portal app for Android has been updated with a lightweight design and new icons. The changes align with the recent updates made to the Company Portal app for iOS. For a side-by-side comparison of the changes, see [What's new in the app UI](whats-new-app-ui.md). For a look at the updated enrollment steps, see [Enroll with Android work profile](/intune-user-help/enroll-device-android-work-profile) and [Enroll your Android device](/intune-user-help/enroll-device-android-company-portal).  
+The setup checklist in the Company Portal app for Android has been updated with a lightweight design and new icons. The changes align with the recent updates made to the Company Portal app for iOS. For a side-by-side comparison of the changes, see [What's new in the app UI](whats-new-app-ui.md). For a look at the updated enrollment steps, see [Enroll with Android work profile](../intune-user-help/enroll-device-android-work-profile) and [Enroll your Android device](../intune-user-help/enroll-device-android-company-portal).  
 
 #### Win32 apps on Windows 10 S mode devices<!-- 3747604 --> 
 You can install and run Win32 apps on Windows 10 S mode managed devices. To do this, you can create one or more supplemental policies for S mode using the Windows Defender Application Control (WDAC) PowerShell tools. Sign the supplemental policies with the Device Guard Signing Portal and then upload and distribute the policies via Intune. In Intune, you will find this capability by selecting **Client apps** > **Windows 10 S supplemental policies**. For more information, see [Enable Win32 apps on S mode devices](../apps/apps-win32-s-mode.md).
@@ -94,7 +94,7 @@ Policy sets allow you to create a bundle of references to already existing manag
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
-
+'
 #### New device firmware configuration interface profile for Windows 10 and later devices (public preview)<!-- 2266073  -->
 On Windows 10 and later, you can create a device configuration profile to control settings and features (**Device configuration** > **Profiles** > **Create profile** > **Windows 10 and later** for platform). In this update, there's a new device firmware configuration interface profile type that allows Intune to manage UEFI (BIOS) settings.
 
@@ -105,7 +105,7 @@ Applies to:
 - Windows 10 RS5 (1809) and newer on supported firmware
 
 #### UI update for creating and editing Windows 10 Update Rings<!-- 4099089         -->
-We've updated the UI experience for [creating and editing Windows 10 Update Rings](../protect/windows-update-for-business-configure.md#create-and-assign-update-rings) for Intune. Changes to UI include:  
+We've updated the UI ex'erience for [creating and editing Windows 10 Update Rings](../protect/windows-update-for-business-configure.md#create-and-assign-update-rings) for Intune. Changes to UI include:  
 - A wizard-style format condensed into a single console blade, which does away with the blade sprawl seen previously as you configure update rings.   
 - The revised workflow includes Assignments, before completing the initial configuration of the ring.
 - A summary page you can use to review all the configurations you made, before saving and deploying a new update ring. When editing an update ring, the summary shows only the list of items set within the category of properties you edited.
@@ -227,7 +227,7 @@ For more information about the standard, see [Derived PIV Credentials](https://w
 #### Use Graph API to specify a on-premises User Principal Name as a variable for SCEP certificates<!--  5437939        -->  
 When you use the [Intune Graph API](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0), you can specify onPremisesUserPrincipalName as a variable for the Subject Alternative Name (SAN) for SCEP certificates.
 
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->'
 ### Microsoft 365 Device Management
 
 #### Improved administration experience in Microsoft 365 Device Management<!-- 5551239 -->
@@ -236,16 +236,16 @@ A refreshed and streamlined administration experience is now generally available
 - **Updated navigation**: You will find a simplified 1st level navigation that logically groups features.
 - **New platform filters**: You can select a single platform, which shows only the policies and apps for the selected platform, on the Devices and Apps pages.
 - **A new home page**: Quickly see service health, state of your tenant, news, etc. on the new home page.
-
+'
 For more information about these improvements, see the [Enterprise Mobility + Security blog post](https://go.microsoft.com/fwlink/?linkid=2109094) on the Microsoft Tech Community web site.
 
 #### Introducing Endpoint Security node in Microsoft 365 Device Management<!-- 5630102 -->
 
 **Endpoint Security** node is now generally available in Microsoft 365 Device Management specialist workspace at https://devicemanagement.microsoft.com, which groups together the capabilities to secure endpoints such as:
 
-- Security Baselines:  Pre-configured group of settings that help you apply known group of settings and default values that are recommended by Microsoft.
+- Security Baselines:  Pre'configured group of settings that help you apply known group of settings and default values that are recommended by Microsoft.
 - Security Tasks: Take advantage of Microsoft Defender ATPs Threat and Vulnerability Management (TVM) and use Intune to remediate endpoint weaknesses.
-- Microsoft Defender ATP: Integrated Microsoft Defender Advanced Threat Protection (ATP) to help prevent security breaches.
+- Microsoft Defender ATP: Integrated Microsoft Defender Advanced Threat Protection (ATP) to help prevent security breaches.""
 
 These settings will continue to be accessible from other applicable nodes such as devices, and current configured state will be the same no matter where you access and enable these capabilities.
 
@@ -257,14 +257,14 @@ For more information about these improvements, see the [Intune Customer Success 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
-#### Managed Google Play private LOB apps<!-- 1464182  -->
-Intune now allows IT admins to publish private Android LOB apps to Managed Google Play via an iframe embedded in the Intune console.  Previously, IT admins needed to publish LOB apps directly to Google's Play publishing console, which required several steps and was time consuming. This new feature allows for easy publishing of LOB apps with a minimal set of steps, without needing to leave the Intune console.  Admins will no longer need to manually register as a developer with Google, and will no longer need to pay the Google $25 registration fee.  Any of the Android Enterprise management scenarios that use Managed Google Play can take advantage of this feature (work profile, dedicated, fully managed, and non-enrolled devices). From Intune, select **Client apps** > **Apps** > **Add**. Then, select **Managed Google Play** from the **App type** list. For more information about Managed Google Play apps, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
+#### Managed Google Play private LOB apps<!-- 1464182  -->'
+Intune now allows IT admins to publish private Android LOB apps to Managed Google Play via an iframe embedded in the 'ntune console.  Previously, IT admins needed to publish LOB apps directly to Google's Play publishing console, which required several steps and was time consuming. This new feature allows for easy publishing of LOB apps with a minimal set of steps, without needing to leave the Intune console.  Admins will no longer need to manually register as a developer with Google, and will no longer need to pay the Google $25 registration fee.  Any of the Android Enterprise management scenarios that use Managed Google Play can take advantage of this feature (work profile, dedicated, fully managed, and non-enrolled devices). From Intune, select **Client apps** > **Apps** > **Add**. Then, select **Managed Google Play** from the **App type** list. For more information about Managed Google Play apps, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
 
 #### Windows Company Portal experience<!-- 1473353, 3598357 -->
 The Windows Company Portal is being updated. You will be able to use multiple filters on the Apps page within the Windows Company Portal. The Device Details page is also being updated with an improved user experience. We are in the process of rolling out these updates to all customers and expect to be completed by the end of next week.
 
 #### macOS support for web apps<!-- 3174427 -->
-Web apps, which allow you to add a shortcut to a URL on the web, can be installed to the Dock using the macOS Company Portal. End users can access the **Install** action from the app details page for a web app in the macOS Company Portal. For more information about the **Web link** app type, see [Add apps to Microsoft Intune](../apps/apps-add.md) and [Add web apps to Microsoft Intune](../apps/web-app.md).
+Web apps, which allow you to add a'shortcut to a URL on the web, can be installed to the Dock using the macOS Company Portal. End users can access the **Install** action from the app details pa'e for a web app in the macOS Company Portal. For more information about the **Web link** app type, see [Add apps to Microsoft Intune](../apps/apps-add.md) and [Add web apps to Microsoft Intune](../apps/web-app.md).
 
 #### macOS support for VPP apps<!-- 3173501  -->
 macOS apps, purchased using Apple Business Manager, are displayed in the console when Apple VPP tokens are synced in Intune. You can assign, revoke and reassign device and user-based licenses for groups using the Intune console. Microsoft Intune helps you manage VPP apps purchased for use at your company by:
@@ -295,7 +295,7 @@ The Microsoft Intune app for Android has been updated with the following improve
 - Added an additional page that shows the user's profile.
 - Added the display of actionable notifications in the app for the user, such as the need to update their device settings.
 - Added the display of custom push notifications, aligning the app with the support recently added in the Company Portal app for iOS and Android. For more information, see [Send custom notifications in Intune](../remote-actions/custom-notifications.md).
-
+""
 #### For iOS devices, customize the enrollment process privacy screen of the Company Portal<!-- 4394993 -->
 Using Markdown, you can customize the Company Portal's privacy screen that end users see during iOS enrollment. Specifically, you'll be able to customize the list of things that your organization can't see or do on the device. For more information, see [How to configure the Intune Company Portal app](../apps/company-portal-app.md#privacy-statement-customization).
 
@@ -319,10 +319,10 @@ Applies to:
 
 In Intune, you create profiles for iOS and macOS devices (**Device configuration** > **Profiles** > **Create profile** > **iOS** or **macOS** for platform > **Device features**, **Device restrictions**, or **Extensions** for profile type). 
 
-In this update, the available settings in the Intune portal are categorized by the enrollment type they apply to:
+In this 'pdate, the available settings in the Intune portal are categorized by the enrollment type they apply to:
 
 - iOS
-  - User enrollment
+  - User enrollment""
   - Device enrollment
   - Automated device enrollment (supervised)
   - All enrollment types
@@ -359,7 +359,7 @@ To see the current device features you can configure, go to [iOS device features
 
 Applies to:
 
-- iOS 13.0 and newer
+- iOS 13.' and newer
 - macOS 10.15 and newer
 
 #### Associate domains to apps on macOS 10.15+ devices<!-- 4898079   -->
@@ -371,7 +371,7 @@ Applies to:
 
 - macOS 10.15 and newer
 
-#### Use "iTunes" and "apps" in the iTunes App store URL when showing or hiding apps on iOS supervised devices<!-- 4928474   --> 
+#### Use "iTunes" and "a'ps" in the iTunes App store URL when showing or hiding apps on iOS supervised devices<!-- 4928474   --> 
 In Intune, you can create policies to show or hide apps on your supervised iOS devices (**Device configuration** > **Profiles** > **Create profile** > **iOS** for platform > **Device restrictions** for profile type > **Show or hide apps**). 
 
 You can enter the iTunes App store URL, such as `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8`. In this update, both `apps` and `itunes` can be used in the URL, such as:
@@ -485,8 +485,7 @@ The [Windows Defender custom firewall rules for endpoint protection](../protect/
 ### Monitor and troubleshoot
 
 #### Intune user interface update – Tenant Status dashboard<!-- 5273210  -->
-The user interface for the Tenant Status dashboard has been updated to align with Azure user interface styles. For more information, see  [Tenant status](../tenant-status.md).
-
+The user interface for the Tenant Status dashboard has been updated to align with Azure user interface styles. For more information, see  [Tenant status](tenant-status.md).
 
 ### Role-based access control
 
@@ -1296,12 +1295,12 @@ Applies to: Windows 10 and later
 #### Operational logs also show details on non-compliant devices<!-- 4063755  -->
 When routing Intune logs to Azure monitor features, you can also route the operational logs. In this update, the operational logs also provide information on non-compliant devices.
 
-For more information on this feature, see [Send log data to storage, event hubs, or log analytics in Intune](../review-logs-using-azure-monitor.md).
+For more information on this feature, see [Send log data to storage, event hubs, or log analytics in Intune](review-logs-using-azure-monitor.md).
 
 #### Route logs to Azure Monitor in more Intune workloads<!-- 3804627 -->
 In Intune, you can route audit and operational logs to events hubs, storage, and log analytics in Azure Monitor (**Intune** > **Monitoring** > **Diagnostics settings**). In this update, you can route these logs in more Intune workloads, including compliance, configurations, client apps, and more.
 
-To learn more about routing logs to Azure Monitor, see [send log data to storage, event hubs, or log analytics](../review-logs-using-azure-monitor.md).
+To learn more about routing logs to Azure Monitor, see [send log data to storage, event hubs, or log analytics](review-logs-using-azure-monitor.md).
 
 #### Create and use mobility extensions on Android Zebra devices in Intune<!-- 3305880   -->
 In this update, Intune supports configuring Android Zebra devices. Specifically, you can create a device configuration profile, and apply settings to Android Zebra devices using Mobility Extensions (MX) profiles generated by StageNow (**Device configuration** > **Profiles** > **Create profile** > **Android** for platform > **MX profile (Zebra only)** for profile type).
@@ -1334,7 +1333,7 @@ You can now search for an exact device name. Go to **Intune** > **Devices** > **
 ### Monitor and troubleshoot
 
 #### Support for additional connectors on the Tenant Status page<!-- 3617202  -->
-The [Tenant Status page](../tenant-status.md) now displays status information for additional connectors, including *Windows Defender Advanced Threat Protection* (ATP) and other Mobile Threat Defense connectors.
+The [Tenant Status page](tenant-status.md) now displays status information for additional connectors, including *Windows Defender Advanced Threat Protection* (ATP) and other Mobile Threat Defense connectors.
 
 #### Support for the Power BI Compliance app from the Data Warehouse blade in Microsoft Intune<!-- 4260871 -->
 Previously, the **Download Power BI file** link in the **Intune Data Warehouse** blade downloaded an Intune Data Warehouse report (.pbix file). This report has been replaced with the Power BI Compliance app. The Power BI Compliance app will not require special loading or setup. It will open directly in the Power BI online portal and display data specifically for your Intune tenant based on your credentials. In Intune, select the **Set up Intune Data Warehouse** link on the right side of the Intune blade. Then, click **Get Power BI App**. For more information, see [Connect to the Data Warehouse with Power BI](../developer/reports-proc-get-a-link-powerbi.md).
@@ -1749,7 +1748,7 @@ The new Company Portal Help & support page helps users troubleshoot and request 
 
 #### New Help and Support experience for Intune<!-- #3307080 -->
 We are rolling out the new Help and Support experience to all tenants over the next few days. This new experience is available for Intune and can be accessed when using the Intune blades in the [Azure portal](https://portal.azure.com/).
-The new experience lets you describe your problem in your own words and receive troubleshooting insight and web-based remediation content. These solutions are offered via a rule-based machine learning algorithm, driven by user inquires. 
+The new experience lets you describe your problem in your own words and receive troubleshooting insight and web-based remediation content. These solutions are offered via a rule-based machine learning algorithm, driven by user inquires.
 In addition to issue-specific guidance, you use the new case creation workflow to open a support case by email or phone. 
 This new experience replaces the previous Help and Support experience of a static set of pre-selected options that are based on the area of the console you are in when you open Help and Support.
 For more information, see [How to get support for Microsoft Intune](get-support.md).
@@ -1759,7 +1758,7 @@ Intune has built-in audit logging that tracks events as changes are made. This u
 - Operational logs (preview) that show details on users and devices that enrolled, including success and failed attempts.
 - The audit logs and operational logs can be sent to Azure Monitor, including storage accounts, event hubs, and log analytics. These services allow you to store, use analytics such as Splunk and QRadar, and get visualizations of your logging data.
 
-[Send log data to storage, event hubs, or log analytics in Intune](../review-logs-using-azure-monitor.md) provides more information on this feature.
+[Send log data to storage, event hubs, or log analytics in Intune](review-logs-using-azure-monitor.md) provides more information on this feature.
 
 #### Skip more Setup Assistant screens on an iOS DEP device<!-- 2687509  -->
 In addition to the screens you can currently skip, you can set iOS DEP devices to skip the following screens in the Setup Assistant when a user enrolls the device: Display Tone, Privacy, Android Migration, Home Button, iMessage & FaceTime, Onboarding, Watch Migration, Appearance, Screen Time, Software Update, SIM Setup.
@@ -2271,7 +2270,7 @@ You can now use Volume Purchase Program (VPP) device licenses to pre-provision t
 A confirmation is now required to delete a Volume Purchase Program (VPP) token if it is being used to pre-provision the Company Portal during DEP enrollment.
 
 #### Block Windows personal device enrollments<!-- 1849498 -->
-You can [block Windows personal devices](../enrollment/enrollment-restrictions-set.md) from enrolling with [mobile device management](../enrollment/windows-enroll.md) in Intune. Devices enrolled with [Intune PC agent](../manage-windows-pcs-with-microsoft-intune.md) can't be blocked with this feature. This feature is rolling out over the next couple weeks so you might not see it immediately in the user interface.
+You can [block Windows personal devices](../enrollment/enrollment-restrictions-set.md) from enrolling with [mobile device management](../enrollment/windows-enroll.md) in Intune. Devices enrolled with [Intune PC agent](manage-windows-pcs-with-microsoft-intune.md) can't be blocked with this feature. This feature is rolling out over the next couple weeks so you might not see it immediately in the user interface.
 
 #### Specify machine name patterns in an Autopilot profile<!--1849855-->
 You can [specify a computer name template](../enrollment/enrollment-autopilot.md#create-an-autopilot-deployment-profile) to generate and set the [computer name](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) during Autopilot enrollment. Applies to: the most recent [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) build (while in preview).
@@ -2310,7 +2309,7 @@ We've added new features, based on feedback from customers, to the Company Porta
 - Improved performance for large app catalogs
 - Increased accessibility for all users  
 
-The [Intune Company Portal website documentation](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website) has been updated to reflect these changes. To view an example of the app enhancements, see [UI updates for Intune end-user apps](../whats-new-app-ui.md).  
+The [Intune Company Portal website documentation](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website) has been updated to reflect these changes. To view an example of the app enhancements, see [UI updates for Intune end-user apps](whats-new-app-ui.md).  
 
 ### Monitor and troubleshoot
 
@@ -2344,12 +2343,12 @@ As the Microsoft Intune admin, you have greater ability to edit your Office 365 
 An updated version of the Intune App SDK for Android is available to support the Android P release. If you are an app developer and use the Intune SDK for Android, you must install the updated version of the Intune app SDK to ensure that Intune functionality within your Android apps continue to work as expected on Android P devices. This version of the Intune App SDK provides a built-in plugin that performs the SDK updates. You do not need to rewrite any existing code that's integrated. For details, see [Intune SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android). If you are using the old badging style for Intune, we recommend that you use the briefcase icon. For branding details, see [this GitHub repository](https://github.com/msintuneappsdk/intune-app-partner-badge).
 
 #### More opportunities to sync in the Company portal app for Windows  
-The Company Portal app for Windows now lets you initiate a sync directly from the Windows taskbar and Start menu. This feature is especially useful if your only task is to sync devices and get access to corporate resources. To access the new feature, right-click the Company portal icon that's pinned to your taskbar or Start menu. In the menu options (also referred to as a jump list), select **Sync this device**. The Company Portal will open to the **Settings** page and initiate your sync. For a look at the new functionality see [What's new in the UI](../whats-new-app-ui.md).   
+The Company Portal app for Windows now lets you initiate a sync directly from the Windows taskbar and Start menu. This feature is especially useful if your only task is to sync devices and get access to corporate resources. To access the new feature, right-click the Company portal icon that's pinned to your taskbar or Start menu. In the menu options (also referred to as a jump list), select **Sync this device**. The Company Portal will open to the **Settings** page and initiate your sync. For a look at the new functionality see [What's new in the UI](whats-new-app-ui.md).
 
 #### New browsing experiences in the Company portal app for Windows  
 Now when browsing or searching for apps in the Company Portal app for Windows, you can toggle between the existing **Tiles** view and the newly added **Details** view. The new view lists application details such as name, publisher, publication date and installation status.  
 
-The **Apps** page's **Installed** view lets you see details about completed and in-progress app installations. To see what the new view looks like, see [What's new in the UI](../whats-new-app-ui.md).  
+The **Apps** page's **Installed** view lets you see details about completed and in-progress app installations. To see what the new view looks like, see [What's new in the UI](whats-new-app-ui.md).  
 
 #### Improved Company Portal app experience for device enrollment managers  
 When a device enrollment manager (DEM) signs in to the Company Portal app for Windows, the app will now only list the DEM's current, running device. This improvement will reduce timeouts that previously occurred when the app tried to show all DEM-enrolled devices.  
@@ -2716,7 +2715,7 @@ We've updated the help experience in the Company Portal app for Android to align
 - Upload diagnostic logs to Microsoft.
 - Send an email that describes the problem and incident ID to a company support person.  
 
-To check out the updated help experience go to [Send logs using email](/intune-user-help/send-logs-to-your-it-admin-by-email-android) and [Send errors to Microsoft](/intune-user-help/send-logs-to-microsoft-android).
+To check out the updated help experience go to [Send logs using email](../intune-user-help/send-logs-to-your-it-admin-by-email-android) and [Send errors to Microsoft](../intune-user-help/send-logs-to-microsoft-android).
 
 
 #### New enrollment failure trend chart and failure reasons table<!-- 1471783 -->
@@ -2772,7 +2771,7 @@ You'll also see:
 - Additional progress bars to provide users with the most up-to-date status information.
 - Improvements to the way users upload logs, so if something goes wrong, it's easier to report.  
 
-To see the updated look, go to [What's new in the app UI](../whats-new-app-ui.md).
+To see the updated look, go to [What's new in the app UI](whats-new-app-ui.md).
 
 #### Protect on-premises Exchange data using Intune APP and CA<!-- 1056954 -->
 You can now use Intune App Policy Protection (APP) and Conditional Access (CA) to protect access to on-premises Exchange data with Outlook Mobile. To add or modify an app protection policy within the Azure portal, select **Microsoft Intune** > **Client apps** > **App protection policies**. Before using this feature, make sure you meet the [Outlook for iOS and Android requirements](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx).
@@ -2790,10 +2789,10 @@ The Company Portal app for macOS devices was updated to improve how users report
 - Upload diagnostic reports directly to the Microsoft developer team.
 - Email an incident ID to your company's IT support team.
 
-For more information see [Send errors for macOS](/intune-user-help/send-errors-macos).
+For more information see [Send errors for macOS](../intune-user-help/send-errors-macos).
 
 #### Intune adapts to Fluent Design System in the Company Portal app for Windows 10<!-- 1195010 -->
-The Intune Company Portal app for Windows 10 has been updated with the [Fluent Design System's navigation view](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics). Along the side of the app, you'll notice a static, vertical list of all top-level pages. Click any link to quickly view and switch between pages. This is the first of several updates you'll see as part of our ongoing effort to create a more adaptive, empathetic, and familiar experience in Intune. To see the updated look, go to [What's new in the app UI](../whats-new-app-ui.md).
+The Intune Company Portal app for Windows 10 has been updated with the [Fluent Design System's navigation view](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics). Along the side of the app, you'll notice a static, vertical list of all top-level pages. Click any link to quickly view and switch between pages. This is the first of several updates you'll see as part of our ongoing effort to create a more adaptive, empathetic, and familiar experience in Intune. To see the updated look, go to [What's new in the app UI](whats-new-app-ui.md).
 
 <!-- ########################## -->
 ## March 2018
@@ -2959,7 +2958,7 @@ Using Azure Active Directory (Azure AD), you can now restrict access to web site
 
 #### Company Portal app for Android visual updates<!--976944 -->
 
-We've updated the Company Portal app for Android to follow Android's [Material Design](https://material.io/) guidelines. You can see the images of the new icons in the [What's new in app UI](../whats-new-app-ui.md) article.
+We've updated the Company Portal app for Android to follow Android's [Material Design](https://material.io/) guidelines. You can see the images of the new icons in the [What's new in app UI](whats-new-app-ui.md) article.
 
 #### Company Portal enrollment improved<!-- 1874230 eeready-->
 Users enrolling a device by using the Company Portal on Windows 10 build 1703 and up are now able to complete the first step of enrollment without leaving the app.
@@ -2973,9 +2972,9 @@ You can create custom eBook categories and then assign VPP eBooks to those custo
 Starting April 30, 2018, the **Send Feedback** option in the Company Portal app for Windows will only work on devices running the Windows 10 Anniversary Update (1607) and later. The option to send feedback is no longer supported when using the Company Portal app for Windows with:  
 - Windows 10, 1507 release  
 - Windows 10, 1511 release  
-- Windows Phone 8.1 
+- Windows Phone 8.1
 
-If your device is running on Windows 10 RS1 or later, download the latest version of the Windows Company Portal app from the Store. If you are running an unsupported version, please continue to send feedback through the following channels: 
+If your device is running on Windows 10 RS1 or later, download the latest version of the Windows Company Portal app from the Store. If you are running an unsupported version, please continue to send feedback through the following channels:
 - The Feedback Hub app on Windows 10
 - Email WinCPfeedback@microsoft.com  
 
@@ -2996,15 +2995,15 @@ You can target MAM policies based on the management state of the device:
 For more information, see [Target app protection policies based on device management state](../apps/app-protection-policies.md).
 
 #### Improvements to the language in the Company Portal app for Windows<!-- 1683758 -->
-We've improved the language in the Company Portal for Windows 10 to be more user-friendly and specific to your company. To see some sample images of what we've done, see [what's new in app UI](../whats-new-app-ui.md).
+We've improved the language in the Company Portal for Windows 10 to be more user-friendly and specific to your company. To see some sample images of what we've done, see [what's new in app UI](whats-new-app-ui.md).
 
 #### New additions to our docs about user privacy<!-- 1440709 -->
 As part of our effort to give end users more control over their data and privacy, we've published updates to our docs that explain how to view and remove data stored locally by the Company Portal apps. You can find these updates at:
 
-- **Android**: [How to remove your Android device from Intune](/intune-user-help/unenroll-your-device-from-intune-android)
-- **Android, if the user has declined terms of use**: [Remove your device management if you declined "Terms of Use"](/intune-user-help/unenroll-your-device-from-intune-if-you-declined-terms-of-use-android)
-- **iOS**: [Remove your iOS device from Intune](/intune-user-help/unenroll-your-device-from-intune-ios)
-- **Windows**: [Remove your Windows device from Intune](/intune-user-help/unenroll-your-device-from-intune-windows)
+- **Android**: [How to remove your Android device from Intune](../intune-user-help/unenroll-your-device-from-intune-android)
+- **Android, if the user has declined terms of use**: [Remove your device management if you declined "Terms of Use"](../intune-user-help/unenroll-your-device-from-intune-if-you-declined-terms-of-use-android)
+- **iOS**: [Remove your iOS device from Intune](../intune-user-help/unenroll-your-device-from-intune-ios)
+- **Windows**: [Remove your Windows device from Intune](../intune-user-help/unenroll-your-device-from-intune-windows)
 
 <!-- ########################## -->
 ## February 2018
@@ -3199,7 +3198,7 @@ When an email is sent to report a noncompliant device, details about the noncomp
 
 #### New functionality for the "Resolve" action for Android devices<!--1583480-->
 
-The Company Portal app for Android is expanding the "Resolve" action for **Update device settings** to resolve [device encryption issues](/intune-user-help/encrypt-your-device-android).
+The Company Portal app for Android is expanding the "Resolve" action for **Update device settings** to resolve [device encryption issues](../intune-user-help/encrypt-your-device-android).
 
 #### Remote lock available in Company Portal app for Windows 10<!--676506-->
 End users can now remotely lock their devices from the Company Portal app for Windows 10. This will not be displayed for the local device they're actively using.
@@ -3615,8 +3614,7 @@ Learn how to enable the troubleshooting mode in the Managed Browser on an iOS de
 
 ### Improvements to device setup workflow in the Company Portal for iOS in version 2.9.0<!-- 1417174 -->
 
-The device setup workflow has been improved in the Company Portal app for iOS. The language is more user-friendly and we've combined screens where possible. The language is more specific to your company by using your company name throughout the setup text. You can see this updated workflow on the [what's new in app UI page](../whats-new-app-ui.md).
-
+The device setup workflow has been improved in the Company Portal app for iOS. The language is more user-friendly and we've combined screens where possible. The language is more specific to your company by using your company name throughout the setup text. You can see this updated workflow on the [what's new in app UI page](whats-new-app-ui.md).
 
 ### User entity contains latest user data in Data Warehouse data model<!-- 1544273 -->
 The first version of the Intune Data Warehouse data model only contained recent, historical Intune data. Report makers could not capture the current state of a user. In this update, the **User entity** is populated with the latest user data.
@@ -3641,7 +3639,7 @@ The full version number has two components:
 
 Learn more about version numbers and developing line-of-business apps in [Get started with the Microsoft Intune App SDK](../developer/app-sdk-get-started.md#line-of-business-app-version-numbers).
 
-### Device and app management integration<!-- 677972 -->   
+### Device and app management integration<!-- 677972 -->
 Now that Intune's mobile device management (MDM) and mobile application management (MAM) are both accessible from the Azure portal, Intune started integrating the IT admin experience around application and device management. These changes are geared to simplify your device and app management experience.
 
 Learn more about the MDM and MAM changes announced in the [Intune support team blog](https://blogs.technet.microsoft.com/intunesupport/2017/09/19/support-tip-setting-up-communication-between-mam-managed-and-mdm-managed-apps/).
@@ -3654,7 +3652,7 @@ The overview page for enrollment will show useful alerts for IT admins regarding
 You can use tokens for dynamic values in app configurations for apps on devices that are not enrolled. For more information, see [Add app configuration policies for managed apps without device enrollment](../apps/app-configuration-policies-managed-app.md).
 
 ### Updates to the Company Portal app for Windows 10<!--1299474-->
-The Settings page in the Company Portal app for Windows 10 has been updated to make the settings and intended user actions to be more consistent across all settings. It has also been updated to match the layout of other Windows apps. You can find before/after images in the [what's new in app UI](../whats-new-app-ui.md) page.
+The Settings page in the Company Portal app for Windows 10 has been updated to make the settings and intended user actions to be more consistent across all settings. It has also been updated to match the layout of other Windows apps. You can find before/after images in the [what's new in app UI](whats-new-app-ui.md) page.
 
 ### Inform end users what device information can be seen for Windows 10 devices<!--1337920-->
 We have added **Ownership Type** to the Device Details screen on the Company Portal app for Windows 10. This will allow users to find out more about privacy directly from this page from the Intune end user docs. They will also be able to locate this information on the **About** screen.
@@ -3669,11 +3667,11 @@ The Company Portal app for Android can now use geofencing to protect access to c
 
 The Company Portal app for Android has added instruction for end users to help them understand and, where possible, self-solve on new use cases.
 - End users will be guided to the [Azure Active Directory portal](https://account.activedirectory.windowsazure.com/r/#/profile) to remove a device if they have reached the maximum number of devices that they are allowed to add.
-- End users are given steps to follow to help them [fix activation errors on Samsung Knox devices](https://go.microsoft.com/fwlink/?linkid=859718) or to [turn off power-saving mode](/intune-user-help/power-saving-mode-android). If neither of those solutions resolve their issue, we will provide an explanation of how to [submit logs to Microsoft](/intune-user-help/send-logs-to-microsoft-android).
+- End users are given steps to follow to help them [fix activation errors on Samsung Knox devices](https://go.microsoft.com/fwlink/?linkid=859718) or to [turn off power-saving mode](../intune-user-help/power-saving-mode-android). If neither of those solutions resolve their issue, we will provide an explanation of how to [submit logs to Microsoft](../intune-user-help/send-logs-to-microsoft-android).
 
 ### New 'Resolve' action available for Android devices<!-- 1583480 -->
 
-The Company Portal app for Android is introducing a 'Resolve' action on the _Update device settings_ page. Selecting this option will take the end user directly to the setting that is causing their device to be noncompliant. The Company Portal app for Android currently supports this action for the [device passcode](/intune-user-help/set-your-pin-or-password-android), [USB debugging](/intune-user-help/you-need-to-turn-off-usb-debugging-android), and [Unknown Sources](/intune-user-help/you-need-to-turn-off-unknown-sources-android) settings.
+The Company Portal app for Android is introducing a 'Resolve' action on the _Update device settings_ page. Selecting this option will take the end user directly to the setting that is causing their device to be noncompliant. The Company Portal app for Android currently supports this action for the [device passcode](../intune-user-help/set-your-pin-or-password-android), [USB debugging](../intune-user-help/you-need-to-turn-off-usb-debugging-android), and [Unknown Sources](../intune-user-help/you-need-to-turn-off-unknown-sources-android) settings.
 
 ### Device setup progress indicator in Android Company Portal<!-- 1565657 -->
 The Company Portal app for Android shows a device setup progress indicator when a user is enrolling their device. The indicator shows new statuses, beginning with "Setting up your device...", then "Registering your device...", then "Finishing registering your device...", then "Finishing setting up your device...".
@@ -3826,7 +3824,7 @@ The Company Portal app only attempts to enroll supported Samsung Knox devices. T
 Managed apps and the Company Portal app for Android will require Android 4.4 and higher to access company resources. By December, all enrolled devices will be force-retired in December, resulting in loss of access to company resources. If you are using app protection policies without MDM, apps will not receive updates, and the quality of their experience will diminish over time.
 
 ### Inform end users what device information can be seen on enrolled devices<!--1165314-->
-We are adding **Ownership Type** to the Device Details screen on all Company Portal apps. This will allow users to find out more about privacy directly from the [What information can your company see?](/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) article. This will be rolling out across all Company Portal apps in the near future. We announced this for iOS in [September](#september-2017).
+We are adding **Ownership Type** to the Device Details screen on all Company Portal apps. This will allow users to find out more about privacy directly from the [What information can your company see?](../intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) article. This will be rolling out across all Company Portal apps in the near future. We announced this for iOS in [September](#september-2017).
 
 <!-- ########################## -->
 ## September 2017
@@ -3983,7 +3981,7 @@ Intune has updated the troubleshooting display and added to the information that
 - Compliance policies
 - Configuration profiles
 
-In addition, the **Devices** table now includes **Azure AD join type** and **Azure AD compliant** columns. For more information, see [help users troubleshoot problems](../help-desk-operators.md).
+In addition, the **Devices** table now includes **Azure AD join type** and **Azure AD compliant** columns. For more information, see [help users troubleshoot problems](help-desk-operators.md).
 
 
 
@@ -4064,7 +4062,7 @@ For more information about Windows 10 settings, see [Windows 10 and later device
 Based on customer feedback, we've modified the Company Portal app for Android to show an **Access Company Content** button. The intent is to prevent end users from unnecessarily going through the enrollment process when they only need to access apps that support App Protection Policies, a feature of Intune mobile application management. You can see these changes on the [what's new in app UI](whats-new-app-ui.md) page.
 
 ### New menu action to easily remove Company Portal<!--1164569-->
-Based on user feedback, the Company Portal app for Android has added a new menu action to initiate the removal of Company Portal from your device. This action removes the device from Intune management so that the app can be removed from the device by the user. You can see these changes on the [what's new in app UI](whats-new-app-ui.md) page and in the [Android end user documentation](/intune-user-help/unenroll-your-device-from-intune-android).
+Based on user feedback, the Company Portal app for Android has added a new menu action to initiate the removal of Company Portal from your device. This action removes the device from Intune management so that the app can be removed from the device by the user. You can see these changes on the [what's new in app UI](whats-new-app-ui.md) page and in the [Android end user documentation](../intune-user-help/unenroll-your-device-from-intune-android).
 
 ### Improvements to app syncing with Windows 10 Creators Update<!--676505-->
 The Company Portal app for Windows 10 will now automatically initiate a sync for app install requests for devices with Windows 10 Creators Update (version 1703). This will reduce the issue of app installs stalling during the "Pending Sync" state. In addition, users will be able to manually initiate a sync from within the app. You can see these changes on the [what's new in app UI](whats-new-app-ui.md) page.
@@ -4284,7 +4282,7 @@ Two new app settings are now available to help you with mobile application manag
   - Local storage
 
 ### Help desk troubleshooting portal<!-- 907448 -->
-The new [troubleshooting portal](../help-desk-operators.md) lets help desk operators and Intune administrators view users and their devices, and perform tasks to resolve Intune technical problems.
+The new [troubleshooting portal](help-desk-operators.md) lets help desk operators and Intune administrators view users and their devices, and perform tasks to resolve Intune technical problems.
 
 <!-- ########################## -->
 ## March 2017

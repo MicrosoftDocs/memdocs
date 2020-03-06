@@ -51,10 +51,10 @@ Intune provides the Company Portal app for users to access company data, enroll 
 
 Using the Company Portal app, you can also run the following actions:
 
-- [Remove a device from Intune](/intune-user-help/unenroll-your-device-from-intune-windows) using the Settings app or the Company Portal app
-- [Rename a device](/intune-user-help/rename-your-device-cpapp)
-- [Install apps](/intune-user-help/install-apps-cpapp-windows) on a device
-- [Sync devices manually](/intune-user-help/sync-your-device-manually-windows) from the Settings app or the Company Portal app
+- [Remove a device from Intune](../intune-user-help/unenroll-your-device-from-intune-windows) using the Settings app or the Company Portal app
+- [Rename a device](../intune-user-help/rename-your-device-cpapp)
+- [Install apps](../intune-user-help/install-apps-cpapp-windows) on a device
+- [Sync devices manually](../intune-user-help/sync-your-device-manually-windows) from the Settings app or the Company Portal app
 
 ## Compliance policy
 

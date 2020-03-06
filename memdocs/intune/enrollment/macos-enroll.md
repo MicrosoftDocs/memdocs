@@ -60,7 +60,7 @@ You can also send your users a link to online enrollment steps: [Enroll your mac
 For information about other end-user tasks, see these articles:
 
 - [Resources about the end-user experience with Microsoft Intune](../fundamentals/end-user-educate.md)
-- [Using your macOS device with Intune](/intune-user-help/using-your-macos-device-with-intune)
+- [Using your macOS device with Intune](../intune-user-help/using-your-macos-device-with-intune)
 
 ## Company-owned macOS devices
 For organizations that purchase devices for their users, Intune supports the following macOS company-owned device enrollment methods:
