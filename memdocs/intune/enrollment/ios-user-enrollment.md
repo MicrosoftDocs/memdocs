@@ -55,7 +55,6 @@ An enrollment profile defines the settings applied to a group of devices during 
 
     ![Basics page](./media/ios-user-enrollment/basics-page.png)
 
-
 3. Select **Next**.
 
 4. On the **Settings** page, select one of the following options for **Enrollment type**:
