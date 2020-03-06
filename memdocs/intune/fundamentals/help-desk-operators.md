@@ -299,7 +299,7 @@ Use the following resources to help collect device data when troubleshooting use
 - [Help your company support fix device issues with verbose logging](../intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 - [Send Android logs to your company support using a USB cable](../intune-user-help/send-logs-to-your-it-admin-using-cable-android.md)
 - [Send Android diagnostic data logs to your IT administrator using email](../intune-user-help/send-logs-to-your-it-admin-by-email-android.md)
-- [Send Android enrollment errors to your IT administrator](../intune-user-help/send-enrollment-errors-to-your-it-admin-android.md)
+- [Send Android enrollment errors to your IT administrator](../intune-user-help/send-logs-to-your-it-admin-by-email-android.md)
 
 ## Next steps
 
