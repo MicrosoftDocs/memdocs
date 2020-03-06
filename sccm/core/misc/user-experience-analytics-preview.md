@@ -2,7 +2,7 @@
 title: User experience analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for User experience analytics preview.
-ms.date: 02/20/2020
+ms.date: 03/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -90,39 +90,37 @@ Once your data is ready, you'll notice some information on the **Overview** page
 
 ## <a name="bkmk_uea_rs"></a> Recommended software
 
-Certain software is known to improve the end-user experience, independent of lower-level health metrics. For example, Windows 10 has a much higher Net Promoter score than Windows 7. The **Software adoption** score is a number between 0 and 100 that represents a weighted average of the percent of devices that have deployed various recommended software. The current weighting is higher for Office 365 and Windows than for the other metrics since users interact with them more often. The metrics are described below: 
+Certain software is known to improve the end-user experience, independent of lower-level health metrics. For example, Windows 10 has a much higher Net Promoter score than Windows 7. The **Software adoption** score is a number between 0 and 100 that represents a weighted average of the percent of devices that have deployed various recommended software. The current weighting is higher for Windows than for the other metrics since users interact with them more often. The metrics are described below: 
 
 [![User experience analytics Recommended software page](media/uea-recommended-software.png)](media/uea-recommended-software.png#lightbox)
 
 ### <a name="bkmk_uea_win10"></a> Windows 10
 
-Windows 10 provides a better user experience than older versions of Windows. This metric measures the percent of devices on Windows 10 versus an older version of Windows.
+Windows 10 provides a better user experience than older versions of Windows. See the [TEI whitepaper](https://vc2prod.blob.core.windows.net/vc-resources/TEIStudies/TEI%20of%20Windows%2010.pdf) for more information.
+
+This metric measures the percent of devices on Windows 10 versus an older version of Windows.
 
 The recommended remediation action for moving devices from older versions of Windows is to create a deployment plan using [Desktop Analytics](/sccm/desktop-analytics/overview).
 
-### <a name="bkmk_uea_opp"></a> Office 365
-
-Office 365 provides a better user experience and improved collaboration compared to older versions of Office. This metric measures the percent of devices that have Office 365 installed vs an older version.
-
-The recommended remediation action for moving devices from older versions of Office to Office 365 is upgrading it using either [Microsoft Intune](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Deploying-Office-365-ProPlus-with-Microsoft-Intune/ba-p/250292) or [Configuration Manager](https://docs.microsoft.com/deployoffice/deploy-office-365-proplus-with-configuration-manager).
-
 ### <a name="bkmk_uea_ap"></a> Autopilot
 
-Autopilot provides a great experience for users to enroll new devices for enterprise management. This metric measures the percent of devices that are registered for Autopilot.
+Microsoft Autopilot provides a simpler initial provisioning experience for Windows 10 PCs than the native experience by reducing the number of screens in the Out Of Box Experience (OOBE) and providing defaults, to ensure the employees device is correctly provisioning from the factory or on reset.
 
-The recommended remediation action is to register existing devices in Autopilot using [Microsoft Intune](https://docs.microsoft.com/intune/enrollment-autopilot). Autopilot provides a great user experience for:
-- Reprovisioning if the device is ever reset.
-- The initial provisioning experience for new devices pre-registered in Autopilot.
+This metric measures the percent of Windows 10 devices that are registered for Autopilot.
+
+The recommended remediation action is to register existing devices in Autopilot using [Microsoft Intune](https://docs.microsoft.com/intune/enrollment-autopilot).
 
 ### <a name="bkmk_uea_aad"></a> Azure Active Directory
 
-Azure Active Directory (Azure AD) provides users with single sign-on to the apps and services they need. This metric measures the percent of devices enrolled in Azure AD.
+Azure Active Directory (Azure AD) provides users with numerous productivity benefits including device-wide single sign-on to apps and services, Windows Hello sign-in, self-service bitlocker recovery, and corporate data roaming.
+
+This metric measures the percent of devices enrolled in Azure AD.
 
 Your Microsoft-Intune managed devices are already enrolled in Azure AD. The recommended remediation action for devices managed by Configuration Manager is to either [enroll them in Azure AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains) or [co-manage them](/sccm/comanage/overview). Co-managing devices also improves your cloud management score.
 
 ### <a name="bkmk_uea_intune"></a> Cloud management
 
-Microsoft Intune eliminates the need for and performance overhead of Group Policy, resulting in a better end-user experience. This metric measures the percent of PCs enrolled in Microsoft Intune.
+Microsoft Intune provides users with several productivity benefits, including enabling access to corporate resources even when they are away from the corporate network, and eliminates the need for and performance overhead of Group Policy, resulting in a better end-user experience. This metric measures the percent of PCs enrolled in Microsoft Intune. See how [Microsoft is enabling this for our employees](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune).
 
 The recommended remediation action for devices managed by Configuration Manager that aren't yet enrolled in Intune is to [co-manage them](/sccm/comanage/overview).
 
@@ -184,6 +182,7 @@ Each script package consists of a detection script, a remediation script, and me
 
 
 ### <a name="bkmk_uea_prs_deploy"></a> Deploying and monitoring scripts
+The **Microsoft Intune Management Extension** service gets the scripts from Intune and runs them. The scripts are rerun every 24 hours. To deploy and monitor the scripts, follow the instructions below:
 
 1. Go to the **Proactive remediations** node in the console.
 1. Click the **Create** button to create a script package.

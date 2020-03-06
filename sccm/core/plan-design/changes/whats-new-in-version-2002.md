@@ -263,9 +263,9 @@ Members of an orchestration group can be any Configuration Manager client, not j
 
 <!-- 4639943 -->
 
-Configuration Manager now detects if a servicing stack update (SSU) is part of an installation for multiple updates. When an SSU is detected, it’s installed first. After install of the SSU, a software update evaluation cycle runs to install the remaining updates. This change allows a dependent cumulative update to be installed after the servicing stack update. The device doesn’t need to restart between installs, and you don’t need to create an additional maintenance window. SSUs are installed first only for non-user initiated installs. For instance, if a user initiates an installation for multiple updates from Software Center, the SSU might not be installed first.
+Configuration Manager now detects if a servicing stack update (SSU) is part of an installation for multiple updates. When an SSU is detected, it's installed first. After install of the SSU, a software update evaluation cycle runs to install the remaining updates. This change allows a dependent cumulative update to be installed after the servicing stack update. The device doesn't need to restart between installs, and you don't need to create an additional maintenance window. SSUs are installed first only for non-user initiated installs. For instance, if a user initiates an installation for multiple updates from Software Center, the SSU might not be installed first.
 
-<!-- For more information, see [](). -->
+For more information, see [Plan for software updates](/configmgr/sum/plan-design/plan-for-software-updates#bkmk_SSU).
 
 ### Office 365 updates for disconnected software update points
 
@@ -273,7 +273,7 @@ Configuration Manager now detects if a servicing stack update (SSU) is part of a
 
 You can use a new tool to import Office 365 updates from an internet-connected WSUS server into a disconnected Configuration Manager environment. Previously when you exported and imported metadata for software updated in disconnected environments, you were unable to deploy Office 365 updates. Office 365 updates require additional metadata downloaded from an Office API and the Office CDN, which isn't possible for disconnected environments.
 
-<!-- For more information, see [Synchronize software updates from a disconnected software update point](/configmgr/sum/get-started/synchronize-software-updates-disconnected). -->
+For more information, see [Synchronize Office 365 updates from a disconnected software update point](/configmgr/sum/get-started/synchronize-office-updates-disconnected).
 
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
@@ -289,12 +289,11 @@ Configuration Manager now expands its support for onboarding devices to Microsof
 
 ### Improvements to BitLocker management
 
-<!-- 5925683 -->
+- The BitLocker management policy now includes additional settings, including policies for fixed and removable drives.<!-- 5925683 --> For more information, see [BitLocker settings reference](/configmgr/protect/tech-ref/bitlocker/settings).
 
-The BitLocker management policy now includes additional settings, including policies for fixed and removable drives.
+- In Configuration Manager current branch version 1910, to integrate the BitLocker recovery service you had to HTTPS-enable a management point. The HTTPS connection is necessary to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Configuring the management point and all clients for HTTPS can be challenging for many customers.
 
-<!-- For more information, see [](). -->
-
+    Starting in this version, the HTTPS requirement is for the IIS website that hosts the recovery service, not the entire management point role. This change relaxes the certificate requirements, and still encrypts the recovery keys in transit.<!-- 5925660 --> For more information, see [Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data).
 
 ## <a name="bkmk_report"></a> Reporting
 

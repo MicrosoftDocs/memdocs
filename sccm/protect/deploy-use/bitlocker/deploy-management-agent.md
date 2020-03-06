@@ -2,12 +2,10 @@
 title: Deploy BitLocker management
 titleSuffix: Configuration Manager
 description: Deploy the BitLocker management agent to Configuration Manager clients and the recovery service to management points
-ms.date: 11/29/2019
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-
-
 ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
@@ -37,7 +35,7 @@ Before you create and deploy BitLocker management policies:
 When you create and deploy this policy, the Configuration Manager client enables the BitLocker management agent on the device.
 
 > [!NOTE]
-> In version 1910, to create a BitLocker management policy, you need the **Full Administrator** role in Configuration Manager.
+> To create a BitLocker management policy, you need the **Full Administrator** role in Configuration Manager.
 
 1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **Endpoint Protection**, and select the **BitLocker Management** node.
 
@@ -45,59 +43,69 @@ When you create and deploy this policy, the Configuration Manager client enables
 
 1. On the **General** page, specify a name and optional description. Select the components to enable on clients with this policy:  
 
-    - **Client Management**: Manage the key recovery service backup of BitLocker Drive Encryption recovery information  
-
     - **Operating System Drive**: Manage whether the OS drive is encrypted
 
-1. On the **Setup** page, configure the following settings for BitLocker Drive Encryption:
+    - **Fixed Drive**: Manage encryption for additional data drives in a device
+
+    - **Removable Drive**: Manage encryption for drives that you can remove from a device, like a USB key
+
+    - **Client Management**: Manage the key recovery service backup of BitLocker Drive Encryption recovery information  
+
+1. On the **Setup** page, configure the following global settings for BitLocker Drive Encryption:
 
     > [!NOTE]
     > Configuration Manager applies these settings when you enable BitLocker. If the drive is already encrypted or is in progress, any change to these policy settings doesn't change the drive encryption on the device.
     >
     > If you disable or don't configure these settings, BitLocker uses the default encryption method (AES 128-bit).
 
-    - For Windows 8.1 or Windows 7 devices, enable the option to **Choose a drive encryption and cipher strength**. Then select the encryption method:
+    - For Windows 8.1 devices, enable the option for **Drive encryption method and cipher strength**. Then select the encryption method.
 
-        - AES 128-bit with Diffuser (Windows 7 only)
-        - AES 256-bit with Diffuser (Windows 7 only)
-        - AES 128-bit (default)
-        - AES 256-bit
+    - For Windows 10 devices, enable the option for **Drive encryption method and cipher strength (Windows 10)**. Then individually select the encryption method for OS drives, fixed data drives, and removable data drives.
 
-    - For Windows 10 devices, enable the option to **Choose a drive encryption and cipher strength (Windows 10)**. Then individually select the encryption method for OS drives, fixed data drives, and removable data drives:
-
-        - AES-CBC 128-bit
-        - AES-CBC 256-bit
-        - XTS-AES 128-bit
-        - XTS-AES 256-bit
-
-    > [!TIP]
-    > BitLocker uses Advanced Encryption Standard (AES) as its encryption algorithm with configurable key lengths of 128 or 256 bits. On Windows 10 devices, the AES encryption supports cipher block chaining (CBC) or ciphertext stealing (XTS).
-
-1. On the **Client Management** page, specify the following settings:
-
-    > [!IMPORTANT]
-    > If you don't have a HTTPS-enabled management point, don't configure this setting. For more information, see [Recovery service](#recovery-service).
-
-    - **Configure BitLocker Management Services**: If you enable this setting, Configuration Manager automatically and silently backs up key recovery information in the site database. If you disable or don't configure this setting, Configuration Manager doesn't save key recovery information.
-
-        - **Select BitLocker recovery information to store**: Configure it to use a recovery password and key package, or just a recovery password.
-
-        - **Allow recovery information to be stored in plain text**: Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data).
-
-        - **Client checking status frequency (minutes)**: By default, the Configuration Manager client updates its BitLocker recovery information every 90 minutes.
+    For more information on these and other settings on this page, see [Settings reference - Setup](/configmgr/protect/tech-ref/bitlocker/settings#setup).
 
 1. On the **Operating System Drive** page, specify the following settings:  
 
     - **Operating System Drive Encryption Settings**: If you enable this setting, the user has to protect the OS drive, and BitLocker encrypts the drive. If you disable it, the user can't protect the drive.  
 
-        > [!Note]  
-        > If the drive is already encrypted, and you disable this setting, BitLocker decrypts the drive.  
-
-    - **Allow BitLocker without a compatible TPM (requires a password)**: Allow BitLocker to encrypt the OS drive, even if the device doesn't have a [Trusted Platform Module (TPM)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-top-node). If you allow this option, Windows prompts the user to specify a BitLocker password.
+    On devices with a compatible TPM, two types of authentication methods can be used at startup to provide added protection for encrypted data. When the computer starts, it can use only the TPM for authentication, or it can also require the entry of a personal identification number (PIN). Configure the following settings:
 
     - **Select protector for operating system drive**: Configure it to use a TPM and PIN, or just the TPM.
 
     - **Configure minimum PIN length for startup**: If you require a PIN, this value is the shortest length the user can specify. The user enters this PIN when the computer boots to unlock the drive. By default, the minimum PIN length is `4`.
+
+    For more information on these and other settings on this page, see [Settings reference - OS drive](/configmgr/protect/tech-ref/bitlocker/settings#os-drive).
+
+1. On the **Fixed Drive** page, specify the following settings:
+
+    - **Fixed data drive encryption**: If you enable this setting, BitLocker requires users to put all fixed data drives under protection. It then encrypts the data drives. When you enable this policy, either enable auto-unlock or the settings for **Fixed data drive password policy**.
+
+    - **Configure auto-unlock for fixed data drive**: Allow or require BitLocker to automatically unlock any encrypted data drive. To use auto-unlock, also require BitLocker to encrypt the OS drive.
+
+    For more information on these and other settings on this page, see [Settings reference - Fixed drive](/configmgr/protect/tech-ref/bitlocker/settings#fixed-drive).
+
+1. On the **Removable Drive** page, specify the following settings:
+
+    - **Removable data drive encryption**: When you enable this setting, and allow users to apply BitLocker protection, the Configuration Manager client saves recovery information about removable drives to the recovery service on the management point. This behavior allows users to recover the drive if they forget or lose the protector (password).
+
+    - **Allow users to apply BitLocker protection on removable data drives**: Users can turn on BitLocker protection for a removable drive.
+
+    - **Removable data drive password policy**: Use these settings to set the constraints for passwords to unlock BitLocker-protected removable drives.
+
+    For more information on these and other settings on this page, see [Settings reference - Removable drive](/configmgr/protect/tech-ref/bitlocker/settings#removable-drive).
+
+1. On the **Client Management** page, specify the following settings:
+
+    > [!IMPORTANT]
+    > If you don't have a management point with an HTTPS-enabled website, don't configure this setting. For more information, see [Recovery service](#recovery-service).
+
+    - **Configure BitLocker Management Services**: When you enable this setting, Configuration Manager automatically and silently backs up key recovery information in the site database. If you disable or don't configure this setting, Configuration Manager doesn't save key recovery information.
+
+        - **Select BitLocker recovery information to store**: Configure it to use a recovery password and key package, or just a recovery password.
+
+        - **Allow recovery information to be stored in plain text**: Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data).
+
+    For more information on these and other settings on this page, see [Settings reference - Client management](/configmgr/protect/tech-ref/bitlocker/settings#client-management).
 
 1. Complete the wizard.
 
@@ -149,12 +157,11 @@ Use the following logs to monitor and troubleshoot:
 
 ## Recovery service
 
-The BitLocker recovery service is a server component that receives BitLocker recovery data from Configuration Manager clients. The site deploys the recovery service when you create a BitLocker management policy. Configuration Manager automatically installs the recovery service on each HTTPS-enabled management point.
+The BitLocker recovery service is a server component that receives BitLocker recovery data from Configuration Manager clients. The site deploys the recovery service when you create a BitLocker management policy. Configuration Manager automatically installs the recovery service on each management point with an HTTPS-enabled website.
 
-> [!IMPORTANT]
-> The recovery service requires a HTTPS-enabled management point. You can't install it on a management point that you configure for HTTP, or any other site system.
+Configuration Manager stores the recovery information in the site database. Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text.
 
-Configuration Manager stores the recovery information in the site database. Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data).
+For more information, see [Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data).
 
 ## Migration considerations
 

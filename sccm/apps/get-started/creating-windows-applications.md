@@ -80,7 +80,7 @@ Starting in version 1810, convert your existing Windows Installer (.msi) applica
 
     - Install the [MSIX Packaging Tool](https://www.microsoft.com/store/productId/9N5LW3JBCXKF) from the Microsoft Store  
 
-    - Install the [MSIX packaging tool driver](https://docs.microsoft.com/windows/msix/packaging-tool/mpt-known-issues#msix-packaging-tool-driver-considerations)<!--SCCMDocs-pr issue #3091-->  
+    - Install the [MSIX packaging tool driver](/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
 
 Don't install any other apps or services on this device. It's your reference system. 
 
