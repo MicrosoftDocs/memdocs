@@ -8,44 +8,47 @@
         ],
         "exclude": [
           "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
-          "**/docfx.json",
-          "_repo.en-us/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices.md"
+          "intune-azure/**",
+          "**/includes/**"
         ]
       }
     ],
     "resource": [
       {
         "files": [
+          "**/media/**",
           "**/*.png",
+          "**/*.gif",
           "**/*.jpg"
         ],
         "exclude": [
           "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
-          "**/docfx.json",
-          "_repo.en-us/**"
+          "intune-azure/**",
+          "**/includes/**"
         ]
       }
     ],
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/mem/breadcrumb/toc.json",
-      "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "breadcrumb_path": "/intune/bread/toc.json",
+      "product_feedback_displaytext": "Intune Feedback",
+      "product_feedback_url": "https://microsoftintune.uservoice.com/",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/memdocs",
+      "feedback_product_url": "",  
+      "brand": "Intune",
+      "searchScope": ["Intune"]
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "featureFlags": {
+        "*.md" : [
+          "show_binary_rating"
+        ]
+      }
+    },
     "template": [],
-    "dest": "memdocs",
+    "dest": "intune-azure",
     "markdownEngineName": "markdig"
   }
 }
