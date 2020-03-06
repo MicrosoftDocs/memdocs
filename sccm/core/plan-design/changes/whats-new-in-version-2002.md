@@ -289,12 +289,11 @@ Configuration Manager now expands its support for onboarding devices to Microsof
 
 ### Improvements to BitLocker management
 
-<!-- 5925683 -->
+- The BitLocker management policy now includes additional settings, including policies for fixed and removable drives.<!-- 5925683 --> For more information, see [BitLocker settings reference](/configmgr/protect/tech-ref/bitlocker/settings).
 
-The BitLocker management policy now includes additional settings, including policies for fixed and removable drives.
+- In Configuration Manager current branch version 1910, to integrate the BitLocker recovery service you had to HTTPS-enable a management point. The HTTPS connection is necessary to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Configuring the management point and all clients for HTTPS can be challenging for many customers.
 
-<!-- For more information, see [](). -->
-
+    Starting in this version, the HTTPS requirement is for the IIS website that hosts the recovery service, not the entire management point role. This change relaxes the certificate requirements, and still encrypts the recovery keys in transit.<!-- 5925660 --> For more information, see [Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data).
 
 ## <a name="bkmk_report"></a> Reporting
 
