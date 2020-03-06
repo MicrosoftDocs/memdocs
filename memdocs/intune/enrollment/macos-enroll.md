@@ -51,7 +51,7 @@ Complete the following prerequisites before setting up macOS device enrollment:
 
 ## User-owned macOS devices (BYOD)
 
-You can let users enroll their own personal devices into Intune management. This is known as “bring your own device” or BYOD. After you’ve completed the prerequisites and assigned user licenses, your users can enroll their devices by:
+You can let users enroll their own personal devices into Intune management. This is known as "bring your own device" or BYOD. After you've completed the prerequisites and assigned user licenses, your users can enroll their devices by:
 - going to the [Company Portal website](https://portal.manage.microsoft.com) or
 - downloading the Mac Company Portal app at [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac).
 
@@ -60,11 +60,11 @@ You can also send your users a link to online enrollment steps: [Enroll your mac
 For information about other end-user tasks, see these articles:
 
 - [Resources about the end-user experience with Microsoft Intune](../fundamentals/end-user-educate.md)
-- [Using your macOS device with Intune](../intune-user-help/using-your-macos-device-with-intune)
+- [Using your macOS device with Intune](../intune-user-help/enroll-your-device-in-intune-macos-cp.md)
 
 ## Company-owned macOS devices
 For organizations that purchase devices for their users, Intune supports the following macOS company-owned device enrollment methods:
-- [Apple's Device Enrollment Program (DEP)](device-enrollment-program-enroll-macos.md): Organizations can purchase macOS devices through Apple's Device Enrollment Program (DEP). DEP lets you deploy an enrollment profile “over the air” to bring devices into management.
+- [Apple's Device Enrollment Program (DEP)](device-enrollment-program-enroll-macos.md): Organizations can purchase macOS devices through Apple's Device Enrollment Program (DEP). DEP lets you deploy an enrollment profile "over the air" to bring devices into management.
 - [Device enrollment manager (DEM)](device-enrollment-manager-enroll.md): You can use a DEM account to enroll up to 1,000 devices.
 
 ## Block macOS enrollment

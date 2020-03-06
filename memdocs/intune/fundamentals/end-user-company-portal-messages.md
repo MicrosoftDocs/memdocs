@@ -67,7 +67,7 @@ If users later decide to allow access, they can go to **Settings** > **Apps** > 
 
 ### How to explain this to your users
 
-Send your users to [Enroll your Android device in Intune](../intune-user-help/enroll-device-android-company-portal) for more information.
+Send your users to [Enroll your Android device in Intune](../intune-user-help/enroll-device-android-company-portal.md) for more information.
 
 ## Allow Company Portal to access your contacts?
 
@@ -92,7 +92,7 @@ If users later decide to allow access, they can go to **Settings** > **Apps** > 
 
 ### How to explain this to your users
 
-Send your users to [Enroll your Android device in Intune](../intune-user-help/enroll-device-android-company-portal) for more information.  
+Send your users to [Enroll your Android device in Intune](../intune-user-help/enroll-device-android-company-portal.md) for more information.  
 
 ## Allow Company Portal to access photos, media, and files on your device?
 
@@ -116,7 +116,7 @@ The second time that users sign in to the Company Portal app after denying acces
 
 ### How to explain this to your users
 
-Send your users to [Send logs to your IT admin by email](../intune-user-help/send-logs-to-your-it-admin-by-email-android). 
+Send your users to [Send logs to your IT admin by email](../intune-user-help/send-logs-to-your-it-admin-by-email-android.md). 
 
 ## Your company support needs to give you access to company resources
 

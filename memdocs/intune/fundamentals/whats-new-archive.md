@@ -3667,7 +3667,7 @@ The Company Portal app for Android can now use geofencing to protect access to c
 
 The Company Portal app for Android has added instruction for end users to help them understand and, where possible, self-solve on new use cases.
 - End users will be guided to the [Azure Active Directory portal](https://account.activedirectory.windowsazure.com/r/#/profile) to remove a device if they have reached the maximum number of devices that they are allowed to add.
-- End users are given steps to follow to help them [fix activation errors on Samsung Knox devices](https://go.microsoft.com/fwlink/?linkid=859718) or to [turn off power-saving mode](../intune-user-help/power-saving-mode-android.md). If neither of those solutions resolve their issue, we will provide an explanation of how to [submit logs to Microsoft](../intune-user-help/send-logs-to-microsoft-android.md).
+- End users are given steps to follow to help them [fix activation errors on Samsung Knox devices](https://go.microsoft.com/fwlink/?linkid=859718) or to [turn off power-saving mode](https://go.microsoft.com/fwlink/?linkid=2077422&clcid=0x409). If neither of those solutions resolve their issue, we will provide an explanation of how to [submit logs to Microsoft](../intune-user-help/send-logs-to-microsoft-android.md).
 
 ### New 'Resolve' action available for Android devices<!-- 1583480 -->
 
