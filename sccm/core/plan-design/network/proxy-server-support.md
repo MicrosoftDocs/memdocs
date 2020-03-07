@@ -79,8 +79,10 @@ These settings are on the **Proxy and Account Settings** tab of the software upd
 
 ## <a name="bkmk_other"></a> Other features that use the proxy for a site system server
 
-Starting in Configuration Manager version 2002, the site system's proxy settings, including authentication, are now used by:
-<!--5913817-->
+*(Introduced in version 2002)*
+
+Starting in Configuration Manager version 2002, the following features use the proxy of the site system that hosts the [service connection point](#service-connection-point) role: <!--5913817-->
+
 - [Azure Active Directory (Azure AD) user discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc)
 - [Azure AD user group discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_azuregroupdisco)
 - [Synchronizing collection membership results to Azure Active Directory groups](/configmgr/core/clients/manage/collections/create-collections#bkmk_aadcollsync)
