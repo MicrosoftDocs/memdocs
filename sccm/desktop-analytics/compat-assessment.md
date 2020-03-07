@@ -105,6 +105,27 @@ Multiple issues affect the application. Select **Query** to see details about th
 
 The application is compatible with the new OS version, but you need to reinstall it after you upgrade Windows. The upgrade process removes the application. No action is required for the upgrade to continue. Reinstall the application on the new OS version.
 
+### Safeguards
+
+<!-- 5746559 -->
+
+Windows compatibility data classifies some apps and drivers with a *safeguard*, which may cause the update to Windows 10 to fail or roll back. Windows may also upgrade, but it removes the app or driver. Desktop Analytics can now help you to identify these safeguards in advance, so that you can remediate the asset before you deploy the update.
+
+1. In the Desktop Analytics portal, select a deployment plan.
+
+1. Select **Plan assets** in the menu, and switch to the **Apps** tab.
+
+1. Filter the name column to show items with values that contain the word `Safeguard`. Select the result to see more information.
+
+    > [!NOTE]
+    > This entry isn't a real app that's installed on your devices. It's a placeholder to help identify apps or drivers in your environment with the safeguard compatibility tag.
+
+1. In the recommendation section, select the link to *Learn more*.<!-- need link here --> This link opens the Windows website with the current list of apps or drivers with the safeguard tag.
+
+1. Compare the current published list against the list of assets in your environment. Remediate any potentially problematic apps or drivers by updating to a compatible version.
+
+[![Screenshot of the Safeguard app in Desktop Analytics](media/5746559-safeguards.png)](media/5746559-safeguards.png#lightbox)
+
 ## Advanced insights
 
 Desktop Analytics can also detect issues using the following additional insights:
@@ -176,25 +197,6 @@ Applications with UI access can bypass user interface control levels to drive in
 If you're not using accessibility features in your app, set the UI access flag in the app manifest to false. For more information, see [Create and embed an application manifest](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)).
 
 Desktop Analytics recommends the app for pilot testing to discover any regressions.
-
-## Safeguards
-
-<!-- 5746559 -->
-
-Windows compatibility data classifies some apps and drivers with a *safeguard*, which may cause the update to Windows 10 to fail or roll back. Desktop Analytics can now help you to identify these safeguards in advance, so that you can remediate the asset before you deploy the update.
-
-1. In the Desktop Analytics portal, select a deployment plan.
-
-1. Select **Plan assets** in the menu, and switch to the **Apps** tab.
-
-1. Filter the name column to show items with values that contain the word `Safeguard`. Select the result to see more information.
-
-    > [!NOTE]
-    > This entry isn't a real app that's installed on your devices. It's a placeholder to help identify apps or drivers in your environment with the safeguard compatibility tag.
-
-1. In the recommendation section, select the link to *Learn more*.<!-- need link here --> This link opens the Windows website with the current list of apps or drivers with the safeguard tag.
-
-1. Compare the current published list against the list of assets in your environment. Remediate any potentially problematic apps or drivers by updating to a compatible version.
 
 ## Driver risk assessment
 
