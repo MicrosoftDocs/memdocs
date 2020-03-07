@@ -108,9 +108,11 @@ Review the following logs during the setup process:
 
 - **hman.log** in the Configuration Manager logs directory on the primary site server
 
-Use the **Site Hierarchy** node in the **Monitoring** workspace to visualize the changes to the hierarchy.
+Use the **Site Hierarchy** node in the **Monitoring** workspace to visualize the changes to the hierarchy. For example, the following graphic shows the before and after comparison of the **SHY** CAS, **HAW** primary site, and **VWT** secondary site:
 
-<!-- add image examples -->
+| Before  | After   |
+|---------|---------|
+|![Example site hierarchy view of a CAS, primary site, and secondary site](media/3607277-cas-primary-secondary.png)|![Example site hierarchy view of a primary site, and secondary site](media/3607277-primary-secondary.png)|
 
 ## Post-setup tasks
 
