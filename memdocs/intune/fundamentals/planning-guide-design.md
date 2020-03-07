@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Create a design
 
-Your Intune design is based on the information you collect and decisions you make when completing other [sections of this guide](../planning-guide.md). It helps you bring together:
+Your Intune design is based on the information you collect and decisions you make when completing other [sections of this guide](planning-guide.md). It helps you bring together:
 
 - The current environment
 
@@ -43,12 +43,12 @@ Your Intune design is based on the information you collect and decisions you mak
 
 - Requirements to be delivered  
 
-Although there’s minimal on-premises infrastructure requirements, a design plan is still helpful to make sure you have the right mobile device management solution that meets your goals, objectives, and requirements.
+Although there's minimal on-premises infrastructure requirements, a design plan is still helpful to make sure you have the right mobile device management solution that meets your goals, objectives, and requirements.
 
-Let’s review each of these areas in more detail. 
+Let's review each of these areas in more detail. 
 
 ## Record your current environment
-Additionally, it’s common to have design changes during the implementation and testing phases. Use your design plan to document these changes and the rationale behind them as they occur.
+Additionally, it's common to have design changes during the implementation and testing phases. Use your design plan to document these changes and the rationale behind them as they occur.
 
 Your current environment can influence design decisions and should be documented and referenced when you make other Intune design decisions. Below are few examples of how to record the current environment:
 
@@ -122,11 +122,11 @@ If your organization has global presence, make sure to plan where your tenant re
 - Asia and Pacific
 
 >[!IMPORTANT]
-> It’s not possible to change the country/region and tenant location later.
+> It's not possible to change the country/region and tenant location later.
 
 ## External dependencies
 
-External dependencies are services and products that are separate from Intune, but are either a requirement of Intune, or might integrate with Intune. It’s important to identify requirements for any external dependencies and how to configure them. Some examples of common external dependencies are:
+External dependencies are services and products that are separate from Intune, but are either a requirement of Intune, or might integrate with Intune. It's important to identify requirements for any external dependencies and how to configure them. Some examples of common external dependencies are:
 
 - Identity
 
@@ -138,7 +138,7 @@ In the following, we explore these common external dependencies in more detail.
 
 ### Identity
 
-Identity is how we identify the users who belong to your organization and are enrolling a device. Intune requires Azure Active Directory (Azure AD) as the user identity provider. If you already use this service, you can use your existing identity already in the cloud. In addition, Azure AD Connect is the recommended tool to synchronize your on-premises user identities with Microsoft cloud services. If your organization is already using Office 365, it’s important for Intune to use the same Azure AD environment.
+Identity is how we identify the users who belong to your organization and are enrolling a device. Intune requires Azure Active Directory (Azure AD) as the user identity provider. If you already use this service, you can use your existing identity already in the cloud. In addition, Azure AD Connect is the recommended tool to synchronize your on-premises user identities with Microsoft cloud services. If your organization is already using Office 365, it's important for Intune to use the same Azure AD environment.
 
 Learn more about the following Intune identity requirements:
 
@@ -188,7 +188,7 @@ Take a closer look at the following aspects of your devices to understand how to
 
 - Bulk enrollment
 
-Let’s review these areas in more detail.
+Let's review these areas in more detail.
 
 ### Determine supported device platforms
 
@@ -198,7 +198,7 @@ You need to know what devices will be in the environment and verify whether they
 
 ### Devices
 
-Intune manages mobile devices to secure corporate data and allow end users to work from more locations. Intune supports many device platforms, so we recommend that you document the devices and the OS platforms and the versions that will be supported in your organization’s design. For example:
+Intune manages mobile devices to secure corporate data and allow end users to work from more locations. Intune supports many device platforms, so we recommend that you document the devices and the OS platforms and the versions that will be supported in your organization's design. For example:
 
 | **Device platform** | **OS Versions** |
 |:---:|:---:|
@@ -235,7 +235,7 @@ In these sections, we review the following features and capabilities that are al
 
 - Conditional Access
 
-Let’s review each of these areas in more detail.
+Let's review each of these areas in more detail.
 
 ### Terms and conditions policies
 
@@ -279,7 +279,7 @@ Use profiles to help the end user connect to company data. Intune supports many 
 
 - Email profile
 
-Let’s review each type of profile in more detail.
+Let's review each type of profile in more detail.
 
 #### Certificate profiles
 
@@ -296,7 +296,7 @@ We recommend that you document which user group needs a certificate, how many ce
 >[!NOTE]
 > Remember that the trusted root certificate is required for the SCEP certificate profile, so make sure all users targeted for the SCEP certificate profile also receive a trusted root certificate. If you need SCEP certificates, design and document what SCEP certificate templates you need.
 
-Here’s an example how you can document the certificates during the design:
+Here's an example how you can document the certificates during the design:
 
 | **Type** | **Profile name** | **Device platform** | **Use cases** |   
 |:---:|:---:|:---:|:---:|
@@ -366,7 +366,7 @@ Since apps can be deployed to users and devices, we recommend that you decide wh
 
 - Does your company need to provide access to Software-as-a-service (SaaS) apps data for their partners?
 
-- Do the apps require internet access from user’s devices?
+- Do the apps require internet access from user's devices?
 
 - Are the apps publicly available in an app store, or are they custom line-of-business (LOB) apps?
 
@@ -386,7 +386,7 @@ You can [download a template of the above table](https://gallery.technet.microso
 
 Compliance policies determine whether a device conforms to certain requirements. Intune uses compliance policies to determine if a device is considered compliant or noncompliant. The compliance status can then be used to restrict or allow access to company resources. If Conditional Access is required, we recommend that you design a [device compliance policy](../protect/device-compliance-get-started.md).
 
-Refer to requirements and use cases to determine how many device compliance policies you need and which user groups are the target user groups. Additionally, you need to decide how long a device can be offline without checking in before it’s considered noncompliant.
+Refer to requirements and use cases to determine how many device compliance policies you need and which user groups are the target user groups. Additionally, you need to decide how long a device can be offline without checking in before it's considered noncompliant.
 
 Below is an example of how to design a compliance policy:
 
@@ -404,7 +404,7 @@ For online access, decide what platforms and user groups you'll target by Condit
 
 - [Exchange on-premises](../protect/exchange-connector-install.md)
 
-Here’s an example of how to document Conditional Access policies:
+Here's an example of how to document Conditional Access policies:
 
 | **Service** | **Platforms for Modern Authentication** | **Basic Authentication** | **Use cases** |
 |:---:|:---:|:---:|:---:|

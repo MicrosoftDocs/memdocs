@@ -25,8 +25,7 @@ ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.custom: seodec18
+ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ---
 
@@ -73,7 +72,7 @@ After you configure device groups, and users enroll their device, they are prese
 
 2. In the list of devices, examine the **Device category** column.
 
-If the **Device category** column isn’t shown, select **Columns** > **Category** > **Apply**.
+If the **Device category** column isn't shown, select **Columns** > **Category** > **Apply**.
 
 ### Change the category of a device
 

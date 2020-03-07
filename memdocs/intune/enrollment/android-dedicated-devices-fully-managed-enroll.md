@@ -25,8 +25,7 @@ ms.reviewer: chmaguir
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.custom: seodec18
+ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ---
 
@@ -74,11 +73,11 @@ On Android 7 and later devices, you can scan the QR code from the enrollment pro
 
 ## Enroll by using Google Zero Touch
 
-To use Google's Zero Touch system, the device must support it and be affiliated with a supplier that is part of the service.  For more information, see [Google’s Zero Touch program website](https://www.android.com/enterprise/management/zero-touch/).
+To use Google's Zero Touch system, the device must support it and be affiliated with a supplier that is part of the service.  For more information, see [Google's Zero Touch program website](https://www.android.com/enterprise/management/zero-touch/).
 
 1. Create a new Configuration in the Zero Touch console.
 2. Choose **Microsoft Intune** from the EMM DPC dropdown.
-3. In Google’s Zero Touch console, copy/paste the following JSON into the DPC extras field. Replace the *YourEnrollmentToken* string with the enrollment token you created as part of your enrollment profile. Be sure to surround the enrollment token with double quotes.
+3. In Google's Zero Touch console, copy/paste the following JSON into the DPC extras field. Replace the *YourEnrollmentToken* string with the enrollment token you created as part of your enrollment profile. Be sure to surround the enrollment token with double quotes.
 
     ```json
     {

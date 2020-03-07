@@ -20,7 +20,6 @@ ms.assetid: f5617074-2384-4812-b913-dc94f64c0818
 
 #ROBOTS:
 #audience:
-
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
@@ -38,7 +37,7 @@ The Apple Volume Purchase Program (VPP) lets you purchase multiple licenses for 
 
 Microsoft Intune helps you synchronize, manage, and assign books that you purchased through this program. You can import license information from the store and track how many of the licenses you have used.
 
-The procedures to manage books are similar to [managing VPP apps](../vpp-apps-ios.md).
+The procedures to manage books are similar to [managing VPP apps](vpp-apps-ios.md).
 
 ## Manage volume-purchased books for iOS devices
 You buy multiple licenses for iOS/iPadOS books through the [Apple Volume Purchase Program for Business](https://www.apple.com/business/vpp/) or the [Apple Volume Purchase Program for Education](https://volume.itunes.apple.com/us/store). This process involves setting up an Apple VPP account from the Apple website and uploading the Apple VPP token to Intune.  You can then synchronize your volume purchase information with Intune and track your volume-purchased book use.

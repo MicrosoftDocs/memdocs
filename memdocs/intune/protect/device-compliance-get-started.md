@@ -97,7 +97,7 @@ Intune also includes a set of built-in compliance policy settings. The following
 
   If a device doesn't have a compliance policy assigned, then this device is considered compliant by default. If you use Conditional Access with compliance policies, we recommended you change the default setting to **Not compliant**. If an end user isn't compliant because a policy isn't assigned, then the [Company Portal app](../apps/company-portal-app.md) shows `No compliance policies have been assigned`.
 
-- **Enhanced jailbreak detection**: When enabled, this setting causes jailbroken device status to happen more frequently on iOS/iPadOS devices. This setting only affects devices that are targeted with a compliance policy that blocks jailbroken devices. Enabling this property uses the device’s location services and may impact battery usage. The user location data isn't stored by Intune and is only used to trigger jailbreak detection more frequently in the background. 
+- **Enhanced jailbreak detection**: When enabled, this setting causes jailbroken device status to happen more frequently on iOS/iPadOS devices. This setting only affects devices that are targeted with a compliance policy that blocks jailbroken devices. Enabling this property uses the device's location services and may impact battery usage. The user location data isn't stored by Intune and is only used to trigger jailbreak detection more frequently in the background. 
 
   Enabling this setting requires devices to:
   - Enable location services at the OS level.
@@ -152,4 +152,4 @@ The following table describes how noncompliant settings are managed when a compl
   - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
   - [Windows 10 and later](compliance-policy-create-windows.md)
 
-- [Reference for policy entities](../reports-ref-policy.md) has information about the Intune Data Warehouse policy entities.
+- [Reference for policy entities](../developer/reports-ref-policy.md) has information about the Intune Data Warehouse policy entities.

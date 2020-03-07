@@ -75,4 +75,4 @@ The next time each targeted device checks in, the app settings are applied.
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](../device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).

@@ -18,7 +18,6 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -75,6 +74,6 @@ On a Windows computer that already has the required WiFi profile installed, use 
 
 ## Next steps
 
-The profile is created, but it's not doing anything. Next, [assign the profile](../device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+The profile is created, but it's not doing anything. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 See the [Wi-Fi settings overview](wi-fi-settings-configure.md), including other available platforms.

@@ -83,7 +83,7 @@ iOS, Android |**Restart Required**: Your organization is now protecting its data
 iOS, Android |**Action Not Allowed**: Your organization only allows you to open work or school data in this app. | The IT administrator has set the **Allow app to receive data from other apps** to **Managed apps only**. Therefore, the end-user can only transfer data into this app from other apps that have an app protection policy.
 iOS, Android |**Action Not Allowed**: Your organization only allows you to transfer its data to other managed apps. | The IT administrator has set the **Allow app to transfer data to other apps** to **Managed apps only**. Therefore, the end-user can only transfer data out of this app to other apps that have an app protection policy.
 iOS, Android |**Wipe Alert**: Your organization has removed its data associated with this app. To continue, restart the app. | The IT administrator has initiated an app wipe using Intune app protection.
-Android | **Company Portal required**: To use your work or school account with this app, you must install the Intune Company Portal app. Click “Go to store” to continue. | On Android, much of app protection functionality is built into the Company Portal app. **Device enrollment is not required even though the Company Portal app is always required**. For app protection without enrollment, the end-user just needs to have the Company Portal app installed on the device.
+Android | **Company Portal required**: To use your work or school account with this app, you must install the Intune Company Portal app. Click "Go to store" to continue. | On Android, much of app protection functionality is built into the Company Portal app. **Device enrollment is not required even though the Company Portal app is always required**. For app protection without enrollment, the end-user just needs to have the Company Portal app installed on the device.
 
 ### Error messages and dialogs on iOS
 
@@ -119,5 +119,5 @@ Dialog/Error message | Cause | Remediation |
 - [Validating your mobile application management setup](app-protection-policies-validate.md)
 - Learn how to use log files to troubleshoot Intune App Protection policy, see [https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372)
 - For additional Intune troubleshooting information, see [Use the troubleshooting portal to help users at your company](../fundamentals/help-desk-operators.md). 
-- Learn about any known issues in Microsoft Intune. For more information, see [Known issues in Microsoft Intune](../known-issues.md).
+- Learn about any known issues in Microsoft Intune. For more information, see [Known issues in Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
 - Need extra help? See [How to get support for Microsoft Intune](../fundamentals/get-support.md).

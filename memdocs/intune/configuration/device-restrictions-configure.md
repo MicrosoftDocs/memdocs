@@ -66,8 +66,8 @@ This article shows you how to create a device restrictions profile. You can also
 
 4. Depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
-    - [Android settings](../device-restrictions-android.md)
-    - [Android enterprise settings](../device-restrictions-android-for-work.md)
+    - [Android settings](device-restrictions-android.md)
+    - [Android enterprise settings](device-restrictions-android-for-work.md)
     - [iOS/iPadOS settings](device-restrictions-ios.md)
     - [macOS settings](device-restrictions-macos.md)
     - [Windows Phone 8.1 settings](device-restrictions-windows-phone-8-1.md)
@@ -82,7 +82,7 @@ The profile is created and shown on the profiles list.
 
 ## Next steps
 
-After the profile is created, it's ready to be assigned. Next, [assign the profile](../device-profile-assign.md) and [monitor its status](../device-profile-monitor.md).
+After the profile is created, it's ready to be assigned. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 

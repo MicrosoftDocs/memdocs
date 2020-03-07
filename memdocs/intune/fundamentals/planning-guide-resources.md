@@ -61,4 +61,4 @@ Check out these resources for additional information that may be helpful during 
 
 - [Intune User Voice](https://microsoftintune.uservoice.com/) - Want to request a feature or vote with other customers for features? Provide feedback on Intune through User Voice. We're listening.
 
-- [Plan communication](../migration-guide-communication-plan.md) - The communication plan is a key element to an Intune adoption. In this article, you can download the Intune Adoption Kit that includes email templates, an Intune Enrollment guide, and links to instructional videos to assist you in educating your end users on enrollment.
+- [Plan communication](migration-guide-communication-plan.md) - The communication plan is a key element to an Intune adoption. In this article, you can download the Intune Adoption Kit that includes email templates, an Intune Enrollment guide, and links to instructional videos to assist you in educating your end users on enrollment.

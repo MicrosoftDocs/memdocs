@@ -26,7 +26,6 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic; get-started
-ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ---
 
@@ -54,6 +53,6 @@ Intune automatically detects virtual machines and reports them as "Virtual Machi
 Deallocated virtual machines may contribute to noncompliant device reports because they're unable to [check in with the Intune service](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 ## Retirement
-If you only have RDP access, don’t use the [Wipe action](../remote-actions/devices-wipe.md#wipe). The Wipe action will delete the virtual machine's RDP settings and prevent you from ever connecting again.
+If you only have RDP access, don't use the [Wipe action](../remote-actions/devices-wipe.md#wipe). The Wipe action will delete the virtual machine's RDP settings and prevent you from ever connecting again.
 
 

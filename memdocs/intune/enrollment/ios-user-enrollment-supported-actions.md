@@ -25,8 +25,7 @@ ms.reviewer: tisilver
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.custom: seodec18
+ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ---
 
@@ -57,7 +56,7 @@ All other actions aren't supported.
 
 ## End-user actions
 On User Enrollment devices, end users can perform these actions on their devices from the Company Portal application and website:
-- Rename. This action applies only to the user-facing name within the Company Portal. It won’t fully rename the device outside of that context.
+- Rename. This action applies only to the user-facing name within the Company Portal. It won't fully rename the device outside of that context.
 - Remove
 - Remote Lock
 - Check Status
@@ -109,13 +108,13 @@ The following options aren't supported on devices enrolled with User Enrollment.
 - Device-licensed VPP app deployment.
 - Install App Store apps as managed apps.
 - MDM control of applications outside of the managed APFS volume.
-- Application Protection Policies will still apply to these apps. However, you won’t be able to take over management or deploy a managed version of these apps unless the user deletes them from their device.
+- Application Protection Policies will still apply to these apps. However, you won't be able to take over management or deploy a managed version of these apps unless the user deletes them from their device.
 - Actions, configurations, settings, and commands requiring supervision. 
 
 
 ## Known issues in preview
 - VPP license revocation: A notification that the license has been revoked does not appear. The current behavior is that the revocation is successful, but the end user is not notified. 
-- VPP application reporting: In the report located at Client Apps > Apps > [App Name] > Device Install Status, VPP applications deployed to User Enrolled devices are reporting as “failed”, even when the application successfully deploys to the device. 
+- VPP application reporting: In the report located at Client Apps > Apps > [App Name] > Device Install Status, VPP applications deployed to User Enrolled devices are reporting as "failed", even when the application successfully deploys to the device. 
 - Application reporting: For app types unsupported with User Enrollment, reports may provide irrelevant error messages. 
 - Company Portal app experience: Users see all applications targeted to them, regardless of whether those application types are supported for User Enrolled devices. 
 - Company Portal app experience: Users see the same text indicating what organizations can see for User and Device Enrollment if the admin has customized the text indicating what organizations can't see.

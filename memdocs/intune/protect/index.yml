@@ -25,23 +25,23 @@ landingContent:
       - linkListType: overview
         links:
           - text: Compliance overview
-            url: ../device-compliance-get-started.md
+            url: device-compliance-get-started.md
       - linkListType: quickstart
         links:
           - text: Create a device compliance policy
-            url: ../quickstart-set-password-length-android.md
+            url: quickstart-set-password-length-android.md
       - linkListType: tutorial
         links:
           - text: Protect Exchange Online email on managed devices
-            url: ../tutorial-protect-email-on-enrolled-devices.md
+            url: tutorial-protect-email-on-enrolled-devices.md
       - linkListType: how-to-guide
         links:
           - text: Create a policy
-            url: ../create-compliance-policy.md
+            url: create-compliance-policy.md
           - text: Location based compliance
-            url: ../use-network-locations.md
+            url: use-network-locations.md
           - text: Actions for noncompliance
-            url: ../actions-for-noncompliance.md
+            url: actions-for-noncompliance.md
 
   # Card
   - title: Manage privacy and personal data
@@ -53,19 +53,19 @@ landingContent:
       - linkListType: concept
         links:
           - text: Data collection
-            url: ../privacy-data-collect.md
+            url: privacy-data-collect.md
           - text: Data storage and processing
-            url: ../privacy-data-store-process.md
+            url: privacy-data-store-process.md
           - text: Data security and sharing
-            url: ../privacy-data-secure-share.md
+            url: privacy-data-secure-share.md
       - linkListType: how-to-guide
         links:
           - text: Data that Intune shares
-            url: ../privacy-data-secure-share.md
+            url: privacy-data-secure-share.md
           - text: Audit, export, delete
-            url: ../privacy-data-audit-export-delete.md
+            url: privacy-data-audit-export-delete.md
           - text: View and correct personal data
-            url: ../privacy-data-view-correct.md
+            url: privacy-data-view-correct.md
 
   # Card
   - title: Protect devices and networks
@@ -73,23 +73,23 @@ landingContent:
       - linkListType: overview
         links:
           - text: Device protection
-            url: ../device-protect.md
+            url: device-protect.md
           - text: Mobile Threat Defense
-            url: ../mobile-threat-defense.md
+            url: mobile-threat-defense.md
       - linkListType: how-to-guide
         links:
           - text: Microsoft Defender ATP
-            url: ../advanced-threat-protection.md
+            url: advanced-threat-protection.md
           - text: Mobile Threat Defense partners
-            url: ../mtd-apps-ios-app-configuration-policy-add-assign.md
+            url: mtd-apps-ios-app-configuration-policy-add-assign.md
           - text: Security baselines
-            url: ../security-baselines.md
+            url: security-baselines.md
           - text: Endpoint protection
-            url: ../endpoint-protection-configure.md
+            url: endpoint-protection-configure.md
           - text: Network access control
-            url: ../network-access-control-integrate.md
+            url: network-access-control-integrate.md
           - text: Encrypt devices
-            url: ../encrypt-devices.md
+            url: encrypt-devices.md
 
   # Card (optional)
   - title: Use secure authentication methods
@@ -97,19 +97,19 @@ landingContent:
       - linkListType: overview
         links:
           - text: Certificates and Intune
-            url: ../certificates-configure.md
+            url: certificates-configure.md
       - linkListType: how-to-guide
         links:
           - text: SCEP certificate profiles
-            url: ../certificates-scep-configure.md
+            url: certificates-scep-configure.md
           - text: PKCS certificate profiles
-            url: ../certficates-pfx-configure.md
+            url: certficates-pfx-configure.md
           - text: Imported PFX Certificates
-            url: ../certificates-imported-pfx-configure.md
+            url: certificates-imported-pfx-configure.md
 #         - text: Derived Credentials (TBD or 1910)
 #         - url:  tbd
           - text: Windows Hello for Business
-            url: ../windows-hello.md
+            url: windows-hello.md
 
   # Card
   - title: Manage software updates
@@ -119,11 +119,11 @@ landingContent:
 #     - text: Android
 #     - url: not-yet-supported.md
           - text: iOS
-            url: ../software-updates-ios.md
+            url: software-updates-ios.md
 #     - text: macOS
 #     - url: not-yet-supported.md
           - text: Windows
-            url: ../windows-update-for-business-configure.md
+            url: windows-update-for-business-configure.md
 
   # Card
   - title: Use Conditional Access
@@ -131,24 +131,24 @@ landingContent:
       - linkListType: overview
         links:
           - text: Conditional Access overview 
-            url: ../conditional-access.md
+            url: conditional-access.md
           - text: Protect Exchange Online 
-            url: ../exchange-online-protect.md
+            url: exchange-online-protect.md
       - linkListType: tutorial
         links:
           - text: Protect email on managed devices
-            url: ../tutorial-protect-email-on-enrolled-devices.md
+            url: tutorial-protect-email-on-enrolled-devices.md
           - text: Protect email on unmanaged devices
-            url: ../tutorial-protect-email-on-unmanaged-devices.md
+            url: tutorial-protect-email-on-unmanaged-devices.md
       - linkListType: concept
         links:
           - text: ADAL and Intune
-            url: ../app-modern-authentication-block.md
+            url: app-modern-authentication-block.md
       - linkListType: how-to-guide
         links:
           - text: Create and assign Conditional Access policy
-            url: ../conditional-access-exchange-create.md
+            url: conditional-access-exchange-create.md
           - text: Common ways to use Conditional Access
-            url: ../conditional-access-intune-common-ways-use.md
+            url: conditional-access-intune-common-ways-use.md
           - text: Jamf Pro for macOS 
-            url: ../conditional-access-integrate-jamf.md
+            url: conditional-access-integrate-jamf.md

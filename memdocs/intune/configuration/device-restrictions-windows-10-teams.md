@@ -29,10 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Microsoft Intune Windows 10 Team device restriction settings
 
-
-
 This article shows you the Microsoft Intune device restrictions settings that you can configure for devices running Windows 10 Team.
-
 
 ## Apps and experience
 
@@ -57,7 +54,6 @@ To connect to Azure Operational insights, you must specify a **Workspace ID** an
 - **Miracast wireless projection** - If you want to let the Windows 10 Team device use Miracast enabled devices to project, select this option.
 - **Miracast wireless projection channel** - Choose the Miracast channel that is used to establish the connection.
 
-
 ## Next steps
 
-Use the information in [How to configure device restriction settings](../device-restrictions-configure.md) to save, and assign the profile to users and devices.
+Use the information in [How to configure device restriction settings](device-restrictions-configure.md) to save, and assign the profile to users and devices.

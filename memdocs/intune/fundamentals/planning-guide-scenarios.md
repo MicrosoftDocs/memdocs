@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 Identifying your use-case scenarios is an important part of the planning process for a successful Intune deployment. Use-case scenarios are helpful because they let you segment your users into manageable groups by user type or role, and the ownership of the user's device (for example, company or personal).
 
-Let’s discuss a few examples to help your organization identify Intune use-case scenarios, as well as organizational groups, and mobile device platforms associated with each use case.
+Let's discuss a few examples to help your organization identify Intune use-case scenarios, as well as organizational groups, and mobile device platforms associated with each use case.
 
 ## Device ownership
 You can begin by referring to your organization's Intune deployment goals and objectives to help identity the main use-case scenarios for your deployment. Within the scope of your Intune deployment plan, answer the following questions:
@@ -64,7 +64,7 @@ Here are a few examples of use-case and sub-use-case scenarios:
 | BYOD | Information worker |           
 | BYOD | Executives |
 
-You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to enter your organization’s use-case and sub-use-case scenarios.
+You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to enter your organization's use-case and sub-use-case scenarios.
 
 ## Organizational groups for your scenarios
 
@@ -95,4 +95,4 @@ For example, your corporate use-case scenario may support iOS/iPadOS and Android
 
 ## Next steps
 
-The next section provides guidance on [how to identify the Intune requirements for each use case scenario](../planning-guide-requirements.md).
+The next section provides guidance on [how to identify the Intune requirements for each use case scenario](planning-guide-requirements.md).

@@ -32,7 +32,7 @@ Microsoft Intune includes many settings to help manage and protect your devices.
 
 As part of your mobile device management (MDM) solution, use these settings to upgrade your Windows Holographic devices. For the Microsoft HoloLens, you can purchase the Commercial Suite to get the required license for the upgrade. For more information, see [Unlock Windows Holographic for Business features](https://docs.microsoft.com/hololens/hololens1-upgrade-enterprise).
 
-For more information on this feature, see [Upgrade Windows 10 editions or enable S mode](../edition-upgrade-configure-windows-10.md).
+For more information on this feature, see [Upgrade Windows 10 editions or enable S mode](edition-upgrade-configure-windows-10.md).
 
 ## Before you begin
 
@@ -47,6 +47,6 @@ For more information on this feature, see [Upgrade Windows 10 editions or enable
  
 ## Next steps
 
-The profile is created, but it may not be doing anything yet. Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](../device-profile-monitor.md).
+The profile is created, but it may not be doing anything yet. Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
 You can also create edition upgrade profiles for [Windows 10 and later](edition-upgrade-windows-settings.md) devices.

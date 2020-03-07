@@ -34,7 +34,7 @@ This article lists and describes all the email settings available for devices ru
 
 ## Before you begin
 
-[Create a device configuration profile](../email-settings-configure.md).
+[Create a device configuration profile](email-settings-configure.md).
 
 > [!NOTE]
 > These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../ios-enroll.md).
@@ -60,7 +60,7 @@ This article lists and describes all the email settings available for devices ru
 - **Authentication method**: Choose how users to authenticate to the email server. Your options:
   - **Certificate**: Select a client SCEP or PKCS certificate profile you previously created to authenticate the Exchange connection. This option provides the most secure and seamless experience for your users.
   - **Username and Password**: Users are prompted to enter their user name and password.
-  - **Derived credential**: Use a certificate that’s derived from a user’s smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+  - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
   >[!NOTE]
   > Azure multi-factor authentication isn't supported.
@@ -72,9 +72,9 @@ This article lists and describes all the email settings available for devices ru
 
     If the email profile uses Oauth, and the email service doesn't support it, then the **Re-Enter password** option appears broken. For example, nothing happens when the user selects **Re-Enter password** in Apple's device settings.
 
-  - When OAuth is enabled, end users have a different “Modern Authentication” email sign-in experience that supports multi-factor authentication (MFA). 
+  - When OAuth is enabled, end users have a different "Modern Authentication" email sign-in experience that supports multi-factor authentication (MFA). 
 
-  - Some organizations disable the end user’s ability to do [self-service application access](https://docs.microsoft.com/azure/active-directory/manage-apps/manage-self-service-access). In this scenario, the Modern Authentication sign-in may fail until an Administrator creates the “iOS Accounts” enterprise app, and grant users access to the app in Azure AD.
+  - Some organizations disable the end user's ability to do [self-service application access](https://docs.microsoft.com/azure/active-directory/manage-apps/manage-self-service-access). In this scenario, the Modern Authentication sign-in may fail until an Administrator creates the "iOS Accounts" enterprise app, and grant users access to the app in Azure AD.
 
     The default action is to add an application using the [Application Access Panel](https://docs.microsoft.com/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **Add App** feature **without business approval**. For more information, see [assign users to applications](https://docs.microsoft.com/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
 
@@ -125,7 +125,7 @@ This article lists and describes all the email settings available for devices ru
       - **Signing certificate type**: Your options:
         - **Not configured**: Intune doesn't update or change this setting.
         - **None**: As an administrator, you don't force a specific certificate. Select this option so users can choose their own certificate.
-        - **Derived credential**: Use a certificate that’s derived from a user’s smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+        - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
         - **Certificates**: Select an existing PKCS or SCEP certificate profile that's used for signing email messages.
       - **Allow user to change setting**: **Enable** allows users to change the signing certificate. **Disable** (default) prevents users from changing the signing certificate, and forces users to use the certificate you configured.
 
@@ -149,7 +149,7 @@ This article lists and describes all the email settings available for devices ru
       - **Encryption certificate type**: Your options:
         - **Not configured**: Intune doesn't update or change this setting.
         - **None**: As an administrator, you don't force a specific certificate. Select this option so users can choose their own certificate.
-        - **Derived credential**: Use a certificate that’s derived from a user’s smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+        - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
         - **Certificates**: Select an existing PKCS or SCEP certificate profile that's used for signing email messages.
       - **Allow user to change setting**: **Enable** allow users to change the encryption certificate. **Disable** (default) prevents users from changing the encryption certificate, and forces users to use the certificate you configured.
 
@@ -164,6 +164,6 @@ This article lists and describes all the email settings available for devices ru
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](../device-profile-assign.md) and [monitor its status](../device-profile-monitor.md).
+The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-Configure email settings on [Android](../email-settings-android.md), [Android Enterprise](../email-settings-android-enterprise.md), [Windows 10](email-settings-windows-10.md), and [Windows Phone 8.1](email-settings-windows-phone-8-1.md) devices.
+Configure email settings on [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), [Windows 10](email-settings-windows-10.md), and [Windows Phone 8.1](email-settings-windows-phone-8-1.md) devices.

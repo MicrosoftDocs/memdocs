@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Role-based access control (RBAC) with Microsoft Intune
 
-Role-based access control (RBAC) helps you manage who has access to your organization’s resources and what they can do with those resources.  By [assigning roles](assign-role.md) to your Intune users, you can limit what they can see and change. Each role has a set of permissions that determine what users with that role can access and change within your organization.
+Role-based access control (RBAC) helps you manage who has access to your organization's resources and what they can do with those resources.  By [assigning roles](assign-role.md) to your Intune users, you can limit what they can see and change. Each role has a set of permissions that determine what users with that role can access and change within your organization.
 
 To create, edit, or assign roles, your account must have one of the following permissions in Azure AD:
 - **Global Administrator**
@@ -41,7 +41,7 @@ For advice and suggestions about Intune RBAC, you can check out this series of f
 ## Roles
 A role defines the set of permissions granted to users assigned to that role.
 You can use both the built-in and custom roles. Built-in roles cover some common Intune scenarios. You can [create your own custom roles](create-custom-role.md) with the exact set of permissions you need. Several Azure Active Directory roles have permissions to Intune.
-To see a role, choose **Intune** > **Roles** > **All roles** > choose a role. You’ll see the following pages:
+To see a role, choose **Intune** > **Roles** > **All roles** > choose a role. You'll see the following pages:
 
 - **Properties**: The name, description, type, assignments, and scope tags for the role. 
 - **Permissions**: Lists a long set of toggles defining what permissions the role has.
@@ -55,7 +55,7 @@ You can assign built-in roles to groups without further configuration. You can't
 - **Read Only Operator**: Views user, device, enrollment, configuration, and application information. Can't make changes to Intune.
 - **Application Manager**: Manages mobile and managed applications, can read device information and can view device configuration profiles.
 - **Intune Role Administrator**: Manages custom Intune roles and adds assignments for built-in Intune roles. It's the only Intune role that can assign permissions to Administrators.
-- **School Administrator**: Manages Windows 10 devices in [Intune for Education](../introduction-intune-education.md).
+- **School Administrator**: Manages Windows 10 devices in [Intune for Education](introduction-intune-education.md).
 - **Endpoint Security Manager**: Manages security and compliance features, such as security baselines, device compliance, conditional access, and Microsoft Defender ATP.
 
 ### Custom roles
@@ -89,7 +89,7 @@ A role assignment defines:
 - what resources they can change.
 
 You can assign both custom and built-in roles to your users. To be assigned an Intune role, the user must have an Intune license.
-To see a role assignment, choose **Intune** > **Roles** > **All roles** > choose a role > choose an assignment. You’ll see the following pages:
+To see a role assignment, choose **Intune** > **Roles** > **All roles** > choose a role > choose an assignment. You'll see the following pages:
 
 - **Properties**: The name, description, role, members, scopes, and tags of the assignment.
 - **Members**: All users in the listed Azure security groups have permission to manage the users/devices that are listed in Scope (Groups).
@@ -99,9 +99,9 @@ To see a role assignment, choose **Intune** > **Roles** > **All roles** > choose
 ### Multiple role assignments
 If a user has multiple role assignments, permissions, and scope tags, those role assignments extend to different objects as follows:
 
-- Assign permissions and scope tags only apply to the objects (like policies or apps) in that role’s assignment Scope (Groups). Assign permissions and scope tags don’t apply to objects in other role assignments unless the other assignment specifically grants them.
-- Other permissions (such as Create, Read, Update, Delete) and scope tags apply to all objects of the same type (like all policies or all apps) in any of the user’s assignments.
-- Permissions and scope tags for objects of different types (like policies or apps), don’t apply to each other. A Read permission for a policy, for example, doesn’t provide a Read permission to apps in the user’s assignments.
+- Assign permissions and scope tags only apply to the objects (like policies or apps) in that role's assignment Scope (Groups). Assign permissions and scope tags don't apply to objects in other role assignments unless the other assignment specifically grants them.
+- Other permissions (such as Create, Read, Update, Delete) and scope tags apply to all objects of the same type (like all policies or all apps) in any of the user's assignments.
+- Permissions and scope tags for objects of different types (like policies or apps), don't apply to each other. A Read permission for a policy, for example, doesn't provide a Read permission to apps in the user's assignments.
 
 ## Next steps
 - [Assign a role to a user](assign-role.md)

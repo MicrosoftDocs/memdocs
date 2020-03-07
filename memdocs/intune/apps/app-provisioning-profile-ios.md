@@ -68,4 +68,4 @@ As the admin, you can include and exclude security groups to assign iOS/iPadOS a
 
 ## Next steps
 
-Assign the profile to the required iOS/iPadOS devices. For more information, use the steps in [How to assign device profiles](../device-profile-assign.md).
+Assign the profile to the required iOS/iPadOS devices. For more information, use the steps in [How to assign device profiles](../configuration/device-profile-assign.md).

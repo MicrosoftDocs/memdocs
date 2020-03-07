@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 This article helps Intune administrators understand and troubleshoot problems when enrolling Windows devices in Intune.
 
 ## Prerequisites
-Before you start troubleshooting, it’s important to collect some basic information. This information can help you better understand the problem and reduce the time to find a resolution.
+Before you start troubleshooting, it's important to collect some basic information. This information can help you better understand the problem and reduce the time to find a resolution.
 
 Collect the following information about the problem:
 - Is a valid Intune license assigned to the user? Before users can enroll their devices, they must have the necessary license assigned.
@@ -44,7 +44,7 @@ Collect the following information about the problem:
 - How many users are affected? Are all users affected or just some?
 - How many devices are affected? Are all devices affected or just some?
 - What is the MDM authority?
-- How is enrollment being performed? Is it “Bring your own device" (BYOD) or Apple Device Enrollment Program (DEP) with enrollment profiles?
+- How is enrollment being performed? Is it "Bring your own device" (BYOD) or Apple Device Enrollment Program (DEP) with enrollment profiles?
 
 ## Error messages
 
@@ -271,7 +271,7 @@ Make sure that the naming format meets the following requirements:
 
 - Create a unique name for your devices. Names must be 15 characters or less, and can contain letters (a-z, A-Z), numbers (0-9), and hyphens (‐).
 - Names can't be all numbers.
-- Names can’t contain blank space.
+- Names can't contain blank space.
 - Use the %SERIAL% macro to add a hardware-specific serial number. Or, use the %RAND:<# of digits>% macro to add a random string of numbers, the string contains <# of digits> digits. For example, MYPC-%RAND:6% generates a name such as MYPC-123456.
 
 ### Something went wrong. OOBEIDPS.
@@ -279,12 +279,12 @@ Make sure that the naming format meets the following requirements:
 **Cause:** This issue occurs if there's a proxy, firewall, or other network device that's blocking access to the Identity Provider (IdP).
 
 #### Resolution
-Make sure that the required access to internet-based services for Autopilot isn’t blocked. For more information, see [Windows Autopilot networking requirements](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements-network).
+Make sure that the required access to internet-based services for Autopilot isn't blocked. For more information, see [Windows Autopilot networking requirements](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements-network).
 
 
 ### Registering your device for mobile management (Failed:3, 0x801C03EA).
 
-**Cause:** The device has a TPM chip that supports version 2.0, but hasn’t yet been upgraded to version 2.0.
+**Cause:** The device has a TPM chip that supports version 2.0, but hasn't yet been upgraded to version 2.0.
 
 #### Resolution
 Upgrade the TPM chip to version 2.0.
@@ -303,9 +303,9 @@ Joining your organization's network (Previous step failed)
 Registering your device for mobile management (Previous step failed)
 ```
 
-**Cause:** The targeted Windows device doesn’t meet either of the following requirements:
+**Cause:** The targeted Windows device doesn't meet either of the following requirements:
 
-- The device must have a physical TPM 2.0 chip. Devices with virtual TPMs (for example, Hyper-V VMs) or TPM 1.2 chips don’t work with self-deploying mode.
+- The device must have a physical TPM 2.0 chip. Devices with virtual TPMs (for example, Hyper-V VMs) or TPM 1.2 chips don't work with self-deploying mode.
 - The device must be running one of the following versions of Windows:
     - Windows 10 build 1703 or a later version.
     - If Hybrid Azure AD Join is used, Windows 10 build 1809 or a later version.
@@ -321,9 +321,9 @@ For more information about how to deploy a Windows device in kiosk mode with Aut
 
 Error 0x80070774: Something went wrong. Confirm you are using the correct sign-in information and that your organization uses this feature. You can try to do this again or contact your system administrator with the error code 80070774.
 
-This issue typically occurs before the device is restarted in a Hybrid Azure AD Autopilot scenario, when the device times out during the initial Sign in screen. It means that the domain controller can’t be found or successfully reached because of connectivity issues. Or that the device has entered a state which can’t join the domain.
+This issue typically occurs before the device is restarted in a Hybrid Azure AD Autopilot scenario, when the device times out during the initial Sign in screen. It means that the domain controller can't be found or successfully reached because of connectivity issues. Or that the device has entered a state which can't join the domain.
 
-**Cause:** The most common cause is that Hybrid Azure AD Join is being used and the Assign user feature is configured in the Autopilot profile. Using the Assign user feature performs an Azure AD join on the device during the initial sign-in screen which puts the device in a state where it can’t join your on-premises domain. Therefore, the Assign user feature should only be used in standard Azure AD Join Autopilot scenarios.  The feature should be not used in Hybrid Azure AD Join scenarios.
+**Cause:** The most common cause is that Hybrid Azure AD Join is being used and the Assign user feature is configured in the Autopilot profile. Using the Assign user feature performs an Azure AD join on the device during the initial sign-in screen which puts the device in a state where it can't join your on-premises domain. Therefore, the Assign user feature should only be used in standard Azure AD Join Autopilot scenarios.  The feature should be not used in Hybrid Azure AD Join scenarios.
 
 #### Resolution
 
@@ -377,20 +377,18 @@ This issue is usually caused by incorrectly delegating permissions to the organi
 ### The Enrollment Status Page times out before the sign-in screen
 
 **Cause:** This issue can arise if all the following conditions are true:
-- You’re using the Enrollment Status Page to track Microsoft Store for Business apps.
+- You're using the Enrollment Status Page to track Microsoft Store for Business apps.
 - You have an Azure AD Conditional Access policy that uses the require a device to marked as compliant control.
 - The policy applies to All Cloud apps and Windows.
 
 #### Resolution:
 Try either of the following:
 - Target your Intune compliance policies to devices. Make sure that compliance can be determined before the user logs on.
-- Use offline licensing for store apps. This way, the Windows client doesn’t have to check with the Microsoft Store before determining device compliance.
-
-
+- Use offline licensing for store apps. This way, the Windows client doesn't have to check with the Microsoft Store before determining device compliance.
 
 ## Next steps
 
-- [Troubleshoot device enrollment in Intune](../troubleshoot-device-enrollment-in-intune.md)
+- [Troubleshoot device enrollment in Intune](troubleshoot-device-enrollment-in-intune.md)
 - [Ask a question on the Intune forum](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
 - [Check the Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Check the Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)

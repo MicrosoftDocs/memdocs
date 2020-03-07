@@ -38,7 +38,7 @@ This article describes these settings.
 
 ## Before you begin
 
-[Create a device profile](../device-profile-create.md).
+[Create a device profile](device-profile-create.md).
 
 > [!NOTE]
 > These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
@@ -81,11 +81,11 @@ This article describes these settings.
   - **EAP-TLS**: Also enter:
 
     - **Server Trust** - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA) to your wireless network access servers. For example, add `mywirelessserver.contoso.com` or `mywirelessserver`. When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
-    - **Root certificate for server validation**: Choose an existing trusted root certificate profile. This certificate allows the client to trust the wireless network access server’s certificate.
+    - **Root certificate for server validation**: Choose an existing trusted root certificate profile. This certificate allows the client to trust the wireless network access server's certificate.
 
     - **Client Authentication** Choose an **Authentication method**. Your options:
 
-      - **Derived credential**: Use a certificate that’s derived from a user’s smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
       - **Certificates**: Choose the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
@@ -94,11 +94,11 @@ This article describes these settings.
   - **EAP-TTLS**: Also enter:
 
     - **Server Trust** - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA) to your wireless network access servers. For example, add `mywirelessserver.contoso.com` or `mywirelessserver`. When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
-    - **Root certificate for server validation**: Choose an existing trusted root certificate profile. This certificate allows the client to trust the wireless network access server’s certificate.
+    - **Root certificate for server validation**: Choose an existing trusted root certificate profile. This certificate allows the client to trust the wireless network access server's certificate.
 
     - **Client Authentication** - Choose an **Authentication method**. Your options:
 
-      - **Derived credential**: Use a certificate that’s derived from a user’s smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
       - **Username and Password**: Prompt the user for a user name and password to authenticate the connection. Also enter:
         - **Non-EAP method (inner identity)**: Choose how you authenticate the connection. Be sure you choose the same protocol that's configured on your Wi-Fi network.
@@ -114,11 +114,11 @@ This article describes these settings.
   - **PEAP**: Also enter:
 
     - **Server Trust** - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA) to your wireless network access servers. For example, add `mywirelessserver.contoso.com` or `mywirelessserver`. When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
-    - **Root certificate for server validation**: Choose an existing trusted root certificate profile. This certificate allows the client to trust the wireless network access server’s certificate.
+    - **Root certificate for server validation**: Choose an existing trusted root certificate profile. This certificate allows the client to trust the wireless network access server's certificate.
 
     - **Client Authentication** - Choose an **Authentication method**. Your options:
 
-      - **Derived credential**: Use a certificate that’s derived from a user’s smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
       - **Username and Password**: Prompt the user for a user name and password to authenticate the connection. 
 

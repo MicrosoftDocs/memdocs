@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 In this quickstart, you will use Intune to create a group based on an existing user. Groups are used to manage your users and control your employees' access to your company resources. These resources can be part of your company's intranet or can be external resources, such as SharePoint sites, SaaS apps, or web apps.
 
-If you don’t have an Intune subscription, [sign up for a free trial account](free-trial-sign-up.md).
+If you don't have an Intune subscription, [sign up for a free trial account](free-trial-sign-up.md).
 
 >[!NOTE]
 >Intune provides pre-created **All Users** and **All Devices** groups in the console with built-in optimizations for your convenience.
@@ -66,7 +66,7 @@ Once you have successfully created the group, it will appear in the list of **Al
 
 ## Next steps
 
-In this quickstart, you used Intune to create a group based on an existing user. For more information about adding groups to Intune, see [Add groups to organize users and devices](../groups-add.md).
+In this quickstart, you used Intune to create a group based on an existing user. For more information about adding groups to Intune, see [Add groups to organize users and devices](groups-add.md).
 
 To follow this series of Intune quickstarts, continue to the next quickstart.
 

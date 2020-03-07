@@ -38,7 +38,7 @@ In Intune, use this feature to control BIOS settings. Typically, firmware is mor
 
 For example, you use Windows 10 devices in a secure environment, and want to disable the camera. You can disable the camera at the firmware-layer, so it doesn't matter what the end user does. Reinstalling the OS or wiping the computer won't turn the camera back on. In another example, lock down the boot options to prevent users from booting up another OS, or an older version of Windows that doesn't have the same security features.
 
-When you reinstall an older Windows version, install a separate OS, or format the hard drive, you can't override DFCI management. This feature can prevent malware from communicating with OS processes, including elevated OS processes. DFCI’s trust chain uses public key cryptography, and doesn't depend on local UEFI (BIOS) password security. This layer of security blocks local users from accessing managed settings from the device’s UEFI (BIOS) menus.
+When you reinstall an older Windows version, install a separate OS, or format the hard drive, you can't override DFCI management. This feature can prevent malware from communicating with OS processes, including elevated OS processes. DFCI's trust chain uses public key cryptography, and doesn't depend on local UEFI (BIOS) password security. This layer of security blocks local users from accessing managed settings from the device's UEFI (BIOS) menus.
 
 This feature applies to:
 
@@ -50,7 +50,7 @@ This feature applies to:
 
 - The device must be registered for Windows Autopilot by a [Microsoft Cloud Solution Provider (CSP) partner](https://partner.microsoft.com/cloud-solution-provider), or registered directly by the OEM. 
 
-  Devices manually registered for Autopilot, such as [imported from a csv file](../enrollment/enrollment-autopilot.md#add-devices), aren't allowed to use DFCI. By design, DFCI management requires external attestation of the device’s commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot.
+  Devices manually registered for Autopilot, such as [imported from a csv file](../enrollment/enrollment-autopilot.md#add-devices), aren't allowed to use DFCI. By design, DFCI management requires external attestation of the device's commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot.
 
   Once your device is registered, its serial number is shown in the list of Windows Autopilot devices.
 
@@ -98,7 +98,7 @@ This profile includes the DFCI settings you configure.
 
     - **CPU and IO virtualization**: Your options:
         - **Not configured**: Intune doesn't touch this feature, and leaves any settings as-is.
-        - **Enabled**: The BIOS enables the platform’s CPU and IO virtualization capabilities for use by the OS. It turns on Windows Virtualization Based Security and Device Guard technologies.
+        - **Enabled**: The BIOS enables the platform's CPU and IO virtualization capabilities for use by the OS. It turns on Windows Virtualization Based Security and Device Guard technologies.
         - **Disable**: The BIOS disables the platform CPU & IO virtualization capabilities, and prevents them from being used.
     - **Cameras**: Your options:
         - **Not configured**: Intune doesn't touch this feature, and leaves any settings as-is.
@@ -133,7 +133,7 @@ After the profiles are created, they're [ready to be assigned](../configuration/
 
 When the device runs the Windows Autopilot, during the Enrollment Status page, DFCI may force a reboot. This first reboot enrolls UEFI to Intune. 
 
-If you want to confirm the device is enrolled, you can reboot the device again, but it's not required. Use the device manufacturer’s instructions to open the UEFI menu, and confirm UEFI is now managed.
+If you want to confirm the device is enrolled, you can reboot the device again, but it's not required. Use the device manufacturer's instructions to open the UEFI menu, and confirm UEFI is now managed.
 
 The next time the device syncs with Intune, Windows receives the DFCI settings. Reboot the device. This third reboot is required for UEFI to receive the DFCI settings from Windows.
 
@@ -167,7 +167,7 @@ When you're ready to retire the device and release it from management, update th
 3. Set all other settings to **Not configured**.
 4. Save your settings.
 
-These steps unlock the device’s UEFI (BIOS) menus. The values remain the same as the profile (**Enabled** or **Disabled**), and aren't set back to any default OS values.
+These steps unlock the device's UEFI (BIOS) menus. The values remain the same as the profile (**Enabled** or **Disabled**), and aren't set back to any default OS values.
 
 You're now ready to wipe the device. Once the device is wiped, delete the Autopilot record. Deleting the record prevents the device from automatically re-enrolling when it reboots.
 
@@ -183,4 +183,4 @@ When the DFCI policy is applied, local users can't change settings configured by
 
 ## Next steps
 
-After the profile is assigned, [monitor its status](../device-profile-monitor.md).
+After the profile is assigned, [monitor its status](device-profile-monitor.md).

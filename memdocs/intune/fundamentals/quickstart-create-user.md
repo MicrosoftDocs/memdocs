@@ -89,4 +89,4 @@ In this quickstart, you created a user and assigned an Intune license to that us
 To continue this series of Intune quickstarts, go to the next quickstart:
 
 > [!div class="nextstepaction"]
-> [Quickstart: Create a group to manage users](../quickstart-create-group.md)
+> [Quickstart: Create a group to manage users](quickstart-create-group.md)

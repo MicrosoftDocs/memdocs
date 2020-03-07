@@ -34,7 +34,7 @@ All devices that you manage have a *lifecycle*. Intune can help you manage this 
 
 ## Enroll
 
-Today's mobile device management (MDM) strategies deal with a variety of phones, tablets, and PCs (iOS/iPadOS, Android, Windows, and Mac OS X). If you need to be able to manage the device, which is commonly the case for corporate-owned devices, the first step is to [set up device enrollment](../enrollment/device-enrollment.md). You can also manage Windows PCs by enrolling them with Intune (MDM) or by [installing the Intune client software](../manage-windows-pcs-with-microsoft-intune.md).
+Today's mobile device management (MDM) strategies deal with a variety of phones, tablets, and PCs (iOS/iPadOS, Android, Windows, and Mac OS X). If you need to be able to manage the device, which is commonly the case for corporate-owned devices, the first step is to [set up device enrollment](../enrollment/device-enrollment.md). You can also manage Windows PCs by enrolling them with Intune (MDM) or by [installing the Intune client software](manage-windows-pcs-with-microsoft-intune.md).
 
 ## Configure
 
@@ -50,7 +50,7 @@ In the modern IT world, protecting devices from unauthorized access is one of th
 
 - [**Multi-factor authentication**](../enrollment/multi-factor-authentication.md). Adding an extra layer of authentication to user sign-ins can help make devices even more secure. Many devices support multi-factor authentication that requires a second level of authentication, such as a phone call or text message, before users can gain access.
 - [**Windows Hello for Business settings**](../protect/windows-hello.md). Windows Hello for Business is an alternative sign-in method that lets users use a *gesture*—such as a fingerprint or Windows Hello—to sign in without needing a password.
-- [**Policies to protect Windows PCs (with the Intune client software)**](../policies-to-protect-windows-pcs-in-microsoft-intune.md). When you manage Windows PCs by using the Intune client software, policies are available that let you control settings for Endpoint Protection, software updates, and Windows Firewall on PCs that you manage.
+- [**Policies to protect Windows PCs (with the Intune client software)**](policies-to-protect-windows-pcs-in-microsoft-intune.md). When you manage Windows PCs by using the Intune client software, policies are available that let you control settings for Endpoint Protection, software updates, and Windows Firewall on PCs that you manage.
 
 ## Retire
 

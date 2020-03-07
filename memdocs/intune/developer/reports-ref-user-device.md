@@ -43,4 +43,4 @@ The **userDeviceAssociation** entity contains user device associations in your o
 
 ## Next steps
 
-- Learn more about the [Intune Data Warehouse](../reports-nav-create-intune-reports.md).
+- Learn more about the [Intune Data Warehouse](reports-nav-create-intune-reports.md).

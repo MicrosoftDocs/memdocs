@@ -59,4 +59,4 @@ The **date** entity represents dates that are referenced across multiple data wa
 
 ## Next steps
 
-- Learn more about the [Intune Data Warehouse](../reports-nav-create-intune-reports.md).
+- Learn more about the [Intune Data Warehouse](reports-nav-create-intune-reports.md).

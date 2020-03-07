@@ -62,15 +62,15 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
 4. Depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
-    - [Android Samsung Knox Standard settings](../email-settings-android.md)
-    - [Android Enterprise settings](../email-settings-android-enterprise.md)
+    - [Android Samsung Knox Standard settings](email-settings-android.md)
+    - [Android Enterprise settings](email-settings-android-enterprise.md)
     - [iOS/iPadOS settings](email-settings-ios.md)
     - [Windows Phone 8.1 settings](email-settings-windows-phone-8-1.md)
     - [Windows 10 settings](email-settings-windows-10.md)
 
 5. When you're done, select **OK** > **Create** to save your changes.
 
-After you enter your settings, and create the profile, your profile is shown in the profiles list. Next, [assign this profile to some groups](../device-profile-assign.md).
+After you enter your settings, and create the profile, your profile is shown in the profiles list. Next, [assign this profile to some groups](device-profile-assign.md).
 
 ## Remove an email profile
 
@@ -84,7 +84,7 @@ Email profiles are assigned to device groups, not user groups. There are differe
 
 You can help secure email profiles using the following options:
 
-- **Certificates**: When you create the email profile, you choose a certificate profile previously created in Intune. This certificate is known as the identity certificate. It authenticates against a trusted certificate profile or a root certificate to confirm a user’s device is allowed to connect. The trusted certificate is assigned to the computer that authenticates the email connection. Typically, this computer is the native mail server.
+- **Certificates**: When you create the email profile, you choose a certificate profile previously created in Intune. This certificate is known as the identity certificate. It authenticates against a trusted certificate profile or a root certificate to confirm a user's device is allowed to connect. The trusted certificate is assigned to the computer that authenticates the email connection. Typically, this computer is the native mail server.
 
   For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Intune](../protect/certificates-configure.md).
 
@@ -100,7 +100,7 @@ If the user already configured an email account, then the email profile is assig
 
 - **Android Samsung Knox Standard**: An existing, duplicate email profile is detected based on the email address, and overwrites it with the Intune profile. Android doesn't use host name to identify the profile. Don't create multiple email profiles using the same email address on different hosts. The profiles overwrite each other.
 
-- **Android work profiles**: Intune provides two Android work email profiles: one for the Gmail app, and one for the Nine Work app. These apps are available in the Google Play Store, and install in the device work profile. These apps don't create duplicate profiles. Both apps support connections to Exchange. To use email connectivity, deploy one of these email apps to your users' devices. Then create and deploy the appropriate email profile. Email apps such as Nine Work may not be free. Review the app’s licensing details, or contact the app company with any questions.
+- **Android work profiles**: Intune provides two Android work email profiles: one for the Gmail app, and one for the Nine Work app. These apps are available in the Google Play Store, and install in the device work profile. These apps don't create duplicate profiles. Both apps support connections to Exchange. To use email connectivity, deploy one of these email apps to your users' devices. Then create and deploy the appropriate email profile. Email apps such as Nine Work may not be free. Review the app's licensing details, or contact the app company with any questions.
 
 ## Changes to assigned email profiles
 
@@ -108,4 +108,4 @@ If you make changes to an email profile you previously assigned, end users may s
 
 ## Next steps
 
-Once the profile is created, it isn't doing anything yet. Next, [assign the profile](../device-profile-assign.md).
+Once the profile is created, it isn't doing anything yet. Next, [assign the profile](device-profile-assign.md).

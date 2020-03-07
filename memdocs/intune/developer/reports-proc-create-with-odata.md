@@ -54,7 +54,7 @@ Install the latest version of Power BI Desktop. You can download Power BI Deskto
 ## Connect to the OData feed for the Intune Data Warehouse for your tenant
 
 > [!Note]  
-> You need permission to **Reports** in Intune. For more information, see [Authorization](../reports-api-url.md).
+> You need permission to **Reports** in Intune. For more information, see [Authorization](reports-api-url.md#authorization).
 
 1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Open the **Intune Data Warehouse** pane by selecting the Data Warehouse link under **Other tasks** on the right side of the **Microsoft Intune - Overview** blade.

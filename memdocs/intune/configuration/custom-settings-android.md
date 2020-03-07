@@ -19,7 +19,6 @@ ms.assetid: 494b3892-916e-4b40-9b67-61adec889bdf
 
 #ROBOTS:
 #audience:
-
 ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
@@ -80,6 +79,6 @@ This article shows you how to create a custom profile for Android devices.
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](../device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 Create a [custom profile on Android Enterprise devices](custom-settings-android-for-work.md).

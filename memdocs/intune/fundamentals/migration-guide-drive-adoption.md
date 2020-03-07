@@ -82,4 +82,4 @@ Choose one of the following options:
 
 ## Next steps
 
-Learn about the [typical migration cycle](../migration-guide-cycle.md).
+Learn about the [typical migration cycle](migration-guide-cycle.md).

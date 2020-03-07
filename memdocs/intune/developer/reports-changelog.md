@@ -177,22 +177,22 @@ The following table lists changes to properties found in the [users](intune-data
 _Released March 2019_
 
 ### V1.0 changes reflecting back to beta
-When V1.0 was first introduced in 1808, it differed in some significant ways from the beta API. In 1903 those changes will be reflected back into the beta API version. If you have important reports that use the beta API version, we strongly recommend switching those reports to V1.0 to avoid breaking changes. Please refer to [API version information](../reports-api-url.md) for more information on Data Warehouse API versions and backwards compatibility. 
+When V1.0 was first introduced in 1808, it differed in some significant ways from the beta API. In 1903 those changes will be reflected back into the beta API version. If you have important reports that use the beta API version, we strongly recommend switching those reports to V1.0 to avoid breaking changes. Please refer to [API version information](reports-api-url.md) for more information on Data Warehouse API versions and backwards compatibility.
 
 ## 1902 
 _Released February 2019_
 
-### Power BI Compliance app 
+### Power BI Compliance app
 
-Access your Intune Data Warehouse in Power BI Online using the [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) app. With this Power BI app, you can now access and share pre-created reports without any setup and without leaving your web browser. 
+Access your Intune Data Warehouse in Power BI Online using the [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) app. With this Power BI app, you can now access and share pre-created reports without any setup and without leaving your web browser.
 
 > [!NOTE]
 > There are two additional filters you can apply to the Intune Compliance app.
 
 #### Add additional filters to the Intune Compliance app
 1. Open the [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) app in your web browsers.
-2. Click **Non-Compliant Devices** and select **Non-Compliant** in the **complianceStatus** filter. 
-3. Click on **Unknown Devices** and select **Not Yet Available** in the **complianceStatus** filter. 
+2. Click **Non-Compliant Devices** and select **Non-Compliant** in the **complianceStatus** filter.
+3. Click on **Unknown Devices** and select **Not Yet Available** in the **complianceStatus** filter.
 
 ## 1812 
 _Released December 2018_
@@ -251,7 +251,7 @@ _Released November  2017_
 
 The **Users** entity collection contains all the Azure Active Directory (Azure AD) users with assigned licenses in your enterprise. These records include user states during the data collection period, even if the user has been removed. For example, a user may be added to Intune and then removed during the course of the last month. While this user is not present at the time of the report, the user and state are present in the data. You could create a report that would show the duration of the user's historic presence in your data.
 
-In contrast, the new **Current User** entity collection only contains users who have not been removed. The **Current User** entity collection only contains currently active users. For information about the **current user** entity collection, see [Reference for current user entity](../reports-ref-current-user.md).
+In contrast, the new **Current User** entity collection only contains users who have not been removed. The **Current User** entity collection only contains currently active users. For information about the **current user** entity collection, see [Reference for current user entity](reports-ref-current-user.md).
 
 ## 1709
 _Released October  2017_
@@ -266,5 +266,5 @@ You can now build reports and data visualizations using the user device associat
 - The entity, [**IntuneManagementExtension**](reports-ref-intunemanagementextension.md), added. **IntuneManagementExtension** contains entities for mobile devices that track information such as version and installation status.
 
 ## Next steps
-- Learn [what’s new each week in Intune](../fundamentals/whats-new.md). You can also find out about upcoming changes, important notices about the service, and information about past releases.
+- Learn [what's new each week in Intune](../fundamentals/whats-new.md). You can also find out about upcoming changes, important notices about the service, and information about past releases.
 - Read the [Microsoft Intune Blog](https://go.microsoft.com/fwlink/?LinkID=273882).

@@ -14,7 +14,6 @@ ms.subservice: fundamentals
 ms.technology: 
 ms.custom: microsoft-intune 
 ms.assetid: 0649d310-43a7-4b01-85d2-da255d03e1da
-audience: ITPro
 
 # optional metadata
 
@@ -69,7 +68,7 @@ A key task of any device management solution is to provide security and protecti
 
 - **Microsoft 365** is a key component to simplifying common IT tasks. In the Microsoft 365 admin center, you create users, and manage groups. You also get access to other services, such as Intune, Azure AD, and more.
 
-  For example, create an iOS/iPadOS devices group in Microsoft 365. Then, use Intune to push policies to the iOS/iPadOS devices group that focus on iOS/iPadOS features, such as access to the app store, using AirDrop, backing up to iCloud, using Apple’s web filter, and more.
+  For example, create an iOS/iPadOS devices group in Microsoft 365. Then, use Intune to push policies to the iOS/iPadOS devices group that focus on iOS/iPadOS features, such as access to the app store, using AirDrop, backing up to iCloud, using Apple's web filter, and more.
 
 - **Windows Defender** includes many security features to help protect Windows 10 devices. For example, using Intune and Windows Defender together, you can:
 

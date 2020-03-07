@@ -37,10 +37,10 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-[Create a device restrictions configuration profile](../device-restrictions-configure.md).
+[Create a device restrictions configuration profile](device-restrictions-configure.md).
 
 > [!NOTE]
-> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](../ios-enroll.md).
+> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
 
 ## General
 
@@ -74,7 +74,7 @@ These settings are added to a device configuration profile in Intune, and then a
   - iOS 9.3 and newer
   - iPadOS 13.0 and newer
 
-- **Unprompted screen observation by Classroom app**: If set to **Allow**, teachers can silently observe the screen of students iOS/iPadOS devices using the Classroom app without the students' knowledge. Student devices enrolled in a class using the Classroom app automatically give permission to that course’s teacher. **Not configured** (default) prevents this feature.
+- **Unprompted screen observation by Classroom app**: If set to **Allow**, teachers can silently observe the screen of students iOS/iPadOS devices using the Classroom app without the students' knowledge. Student devices enrolled in a class using the Classroom app automatically give permission to that course's teacher. **Not configured** (default) prevents this feature.
 
   To use this setting, set the **Screen capture** setting to **Block**.
 
@@ -228,7 +228,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
   **Not configured** (default) allows these features.
 
-- **Block password proximity requests**: Choose **Block** so a user’s device doesn't request passwords from nearby devices. **Not configured** (default) allows these password requests.
+- **Block password proximity requests**: Choose **Block** so a user's device doesn't request passwords from nearby devices. **Not configured** (default) allows these password requests.
 - **Block password sharing**: **Block** prevents sharing passwords between devices using AirDrop. **Not configured** (default) allows passwords to be shared.
 - **Require Touch ID or Face ID authentication for password or credit card information AutoFill**: When set to **Require**, users must authenticate using TouchID or FaceID before passwords or credit card information can be auto filled in Safari and other apps. **Not configured** (default) allows users to control this feature in the device settings.
 
@@ -656,7 +656,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 ## Settings that require supervised mode
 
-iOS/iPadOS supervised mode can only be enabled during initial device setup through Apple’s Device Enrollment Program, or by using Apple Configurator. Once supervised mode is enabled, Intune can configure a device with the following functionality:
+iOS/iPadOS supervised mode can only be enabled during initial device setup through Apple's Device Enrollment Program, or by using Apple Configurator. Once supervised mode is enabled, Intune can configure a device with the following functionality:
 
 - App Lock (Single App Mode) 
 - Global HTTP Proxy 
@@ -705,6 +705,6 @@ iOS/iPadOS supervised mode can only be enabled during initial device setup throu
 
 ## Next steps
 
-[Assign the profile](../device-profile-assign.md) and [monitor its status](../device-profile-monitor.md).
+[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 You can also restrict device features and settings on [macOS](device-restrictions-macos.md) devices.

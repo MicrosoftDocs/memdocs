@@ -37,7 +37,7 @@ ms.collection: M365-identity-device-management
 
 Intune uses policies that help you manage settings on Windows PCs. For example, you can use a policy to control settings for the Windows Firewall on PCs. Many Intune settings are similar to settings that you might configure with Windows Group Policy. However, it is possible that, at times, the two methods might conflict with each another.
 
-When conflicts happen, domain-level Group Policy takes precedence over Intune policy, unless the PC can’t sign in to the domain. In this case, Intune policy is applied to the client PC.
+When conflicts happen, domain-level Group Policy takes precedence over Intune policy, unless the PC can't sign in to the domain. In this case, Intune policy is applied to the client PC.
 
 ## What to do if you are using Group Policy
 Make sure that policies that you apply are not being managed by Group Policy. To help prevent conflicts, you can use one or more of the following methods:
@@ -128,4 +128,4 @@ You can apply GPOs to only those security groups that are specified in the **Sec
 The new security group must be maintained as enrollment in the Intune service changes.
 
 ## See also
-[Manage Windows PCs with Microsoft Intune](../manage-windows-pcs-with-microsoft-intune.md)
+[Manage Windows PCs with Microsoft Intune](manage-windows-pcs-with-microsoft-intune.md)

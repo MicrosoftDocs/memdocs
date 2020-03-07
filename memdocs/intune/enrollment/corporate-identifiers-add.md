@@ -25,8 +25,7 @@ ms.reviewer: spshumwa
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.custom: seodec18
+ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ---
 
@@ -59,7 +58,7 @@ This feature is supported for the following platforms:
 | Device admin managed Android OS v10 | Not supported | Not supported |
 | Other Android | Not supported | Supported |
 
-<!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as corporate-owned. -->
+<!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's device enrollment program (DEP) or Apple Configurator to have them appear as corporate-owned. -->
 
 [Learn how to find an Apple device serial number](https://support.apple.com/HT204308).<br>
 [Learn how to find your Android device serial number](https://support.google.com/store/answer/3333000).
