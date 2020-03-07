@@ -2,7 +2,7 @@
 title: Proxy server support
 titleSuffix: Configuration Manager
 description: Learn how Configuration Manager site system servers use proxy servers.
-ms.date: 07/30/2018
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -77,6 +77,15 @@ These settings are on the **Proxy and Account Settings** tab of the software upd
 >  When this account cannot access the internet, software updates fail to download. The following entry is logged to **ruleengine.log**:  
 > `Failed to download the update from internet. Error = 12007.`  
 
+## <a name="bkmk_other"></a> Other features that use the proxy for a site system server
+
+*(Introduced in version 2002)*
+
+Starting in Configuration Manager version 2002, the following features use the proxy of the site system that hosts the [service connection point](#service-connection-point) role: <!--5913817-->
+
+- [Azure Active Directory (Azure AD) user discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc)
+- [Azure AD user group discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_azuregroupdisco)
+- [Synchronizing collection membership results to Azure Active Directory groups](/configmgr/core/clients/manage/collections/create-collections#bkmk_aadcollsync)
 
 
 ## Configure the proxy for a site system server  

@@ -67,7 +67,7 @@ The site system's proxy settings, including authentication, are now used by:
 - Azure AD user group discovery
 - Synchronizing collection membership results to Azure Active Directory groups
 
-<!-- For more information, see [Proxy server support](/configmgr/core/plan-design/network/proxy-server-support). -->
+For more information, see [Proxy server support](/configmgr/core/plan-design/network/proxy-server-support#bkmk_other).
 
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
