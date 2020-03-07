@@ -21,7 +21,7 @@ ms.assetid: f9015e3a-c22c-42eb-90e6-ba48dee3a41d
 #ROBOTS:
 
 #audience:
-#ms.devlang:
+
 ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150

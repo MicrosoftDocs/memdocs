@@ -17,7 +17,7 @@ ms.assetid: 25b3c26e-cf4e-4152-8306-bf4be4af2ad1
 # optional metadata
 
 #audience:
-#ms.devlang:
+
 ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150

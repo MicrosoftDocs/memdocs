@@ -19,7 +19,7 @@ ms.assetid: 95191d64-9895-4f2e-8c5b-f0e85be086d8
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150

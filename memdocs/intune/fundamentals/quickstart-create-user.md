@@ -18,7 +18,7 @@ ms.assetid: 820fcb18-0927-4ebd-be79-dce92b51c261
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150

@@ -20,7 +20,7 @@ ms.assetid:
 ROBOTS: NOINDEX 
 
 #audience:
-#ms.devlang:
+
 ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150

@@ -20,7 +20,7 @@ ms.reviewer: chrisbal
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -98,17 +98,17 @@ A work profile includes the following features:
 
 Intune APP and work profiles are complementary technologies that can be used together or separately. Architecturally, both solutions enforce policies at different layers – APP at the individual app layer, and work profile at the profile layer. Deploying apps managed with an APP policy to an app in a work profile is a valid and supported scenario. To use APP, work profiles, or a combination depends on your DLP requirements.
 
-Work profiles and APP complement each other’s settings by providing additional coverage if one profile doesn't meet your organization's data protection requirements. For example, work profiles don't natively provide controls to restrict an app from saving to an untrusted cloud storage location. APP includes this feature. You may decide that DLP provided solely by the work profile is sufficient, and choose not to use APP. Or you may require the protections from a combination of the two.
+Work profiles and APP complement each other's settings by providing additional coverage if one profile doesn't meet your organization's data protection requirements. For example, work profiles don't natively provide controls to restrict an app from saving to an untrusted cloud storage location. APP includes this feature. You may decide that DLP provided solely by the work profile is sufficient, and choose not to use APP. Or you may require the protections from a combination of the two.
 
 ### Suppress APP policy for work profiles
 
 You may need to support individual users who have multiple devices - unmanaged devices in an APP-WE scenario, and managed devices with work profiles.
 
-For example, you require end users to enter a PIN when opening a work app. Depending on the device, the PIN features are handled by APP or by the work profile. For the APP-WE devices, the PIN-to-launch behavior is enforced by APP. For work profile devices, you can use a device or work profile PIN enforced by the OS. To accomplish this scenario, configure APP settings so that they don't apply *when* an app is deployed into a work profile. If you don’t configure it this way, the end user gets prompted for a PIN by the device, and again at the APP layer.
+For example, you require end users to enter a PIN when opening a work app. Depending on the device, the PIN features are handled by APP or by the work profile. For the APP-WE devices, the PIN-to-launch behavior is enforced by APP. For work profile devices, you can use a device or work profile PIN enforced by the OS. To accomplish this scenario, configure APP settings so that they don't apply *when* an app is deployed into a work profile. If you don't configure it this way, the end user gets prompted for a PIN by the device, and again at the APP layer.
 
 ### Control multi-identity behavior in work profiles
 
-Office applications, such as Outlook and OneDrive, have “multi-identity” behavior. Within one instance of the application, the end user can add connections to multiple distinct accounts or cloud storage locations. Within the application, the data retrieved from these locations can be separate or merged. And, the user can context switch between personal identities (user@outlook.com) and organization identities (user@contoso.com).
+Office applications, such as Outlook and OneDrive, have "multi-identity" behavior. Within one instance of the application, the end user can add connections to multiple distinct accounts or cloud storage locations. Within the application, the data retrieved from these locations can be separate or merged. And, the user can context switch between personal identities (user@outlook.com) and organization identities (user@contoso.com).
 
 When using work profiles, you may want to disable this multi-identity behavior. When you disable it, badged instances of the app in the work profile can only be configured with an organization identity. Use the Allowed Accounts app configuration setting for supporting Office Android apps.
 
@@ -137,7 +137,7 @@ For example, customers in or have users in China can't use Android device manage
 
 ## Summary
 
-Using Intune, both APP-WE and Android Enterprise work profiles are available for your Android BYOD program. To choose APP-WE or work profiles depends upon your business and usage requirements. In summary, use work profiles if you need MDM activities on managed devices, such as certificate deployment, app push, and so on. Use APP-WE if you don’t want or can’t manage devices, and are using only Intune APP-enabled apps.
+Using Intune, both APP-WE and Android Enterprise work profiles are available for your Android BYOD program. To choose APP-WE or work profiles depends upon your business and usage requirements. In summary, use work profiles if you need MDM activities on managed devices, such as certificate deployment, app push, and so on. Use APP-WE if you don't want or can't manage devices, and are using only Intune APP-enabled apps.
 
 ## Next steps
 [Start using app protection policies](app-protection-policy.md), or [enroll your devices](../enrollment/android-enroll.md).

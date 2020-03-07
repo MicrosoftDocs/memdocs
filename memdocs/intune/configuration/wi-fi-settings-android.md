@@ -19,7 +19,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150

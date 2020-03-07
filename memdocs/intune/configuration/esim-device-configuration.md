@@ -18,7 +18,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: ericor
 ms.suite: ems
 search.appverid: MET150

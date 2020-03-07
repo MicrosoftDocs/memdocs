@@ -19,7 +19,7 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: samyada
 ms.suite: ems
 search.appverid: MET150

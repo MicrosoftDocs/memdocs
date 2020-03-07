@@ -19,7 +19,7 @@ ms.assetid: 068a73bb-e6b3-44a6-8f6e-4cf7d455bbf3
 # optional metadata
 
 #audience:
-#ms.devlang:
+
 ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150

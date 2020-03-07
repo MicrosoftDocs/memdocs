@@ -19,7 +19,7 @@ ms.assetid: 494b3892-916e-4b40-9b67-61adec889bdf
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150

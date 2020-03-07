@@ -19,7 +19,7 @@ searchScope:
 # optional metadata
 ROBOTS:  
 #audience:
-#ms.devlang:
+
 ms.reviewer: jieyang
 ms.suite: ems
 #ms.tgt_pltfrm:

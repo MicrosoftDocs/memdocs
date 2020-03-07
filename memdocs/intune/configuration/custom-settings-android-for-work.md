@@ -19,7 +19,7 @@ ms.assetid: 4724d6e5-05e5-496c-9af3-b74f083141f8
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150

@@ -16,7 +16,7 @@ ms.assetid:
 # optional metadata
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: lacranda; rimarram
 ms.suite: ems
 search.appverid: MET150

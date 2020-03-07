@@ -19,7 +19,7 @@ ms.assetid: 7954a686-25dc-4fce-b395-324816f46d3b
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure

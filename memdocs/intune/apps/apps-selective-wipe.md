@@ -20,7 +20,7 @@ ms.assetid: 42605e6e-5b84-44ff-b86e-346ea123b53e
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150

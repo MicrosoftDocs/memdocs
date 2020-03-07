@@ -18,7 +18,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 search.appverid: MET150

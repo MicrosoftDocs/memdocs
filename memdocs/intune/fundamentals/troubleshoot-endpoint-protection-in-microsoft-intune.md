@@ -19,7 +19,7 @@ ROBOTS:
 # optional metadata
 
 #audience:
-#ms.devlang:
+
 ms.reviewer: tscott
 ms.suite: ems
 search.appverid: MET150

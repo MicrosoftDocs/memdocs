@@ -17,7 +17,7 @@ ms.assetid: 297926f6-c029-4003-bda4-9ee031d47dda
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150

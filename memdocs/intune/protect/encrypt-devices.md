@@ -18,7 +18,7 @@ ms.assetid:
 # optional metadata
 
 #audience:
-#ms.devlang:
+
 ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150

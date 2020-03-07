@@ -20,7 +20,7 @@ ms.assetid: 439c33a6-e80c-4da9-ba09-a51fc36f62ad
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: tisilver
 ms.suite: ems
 search.appverid: MET150

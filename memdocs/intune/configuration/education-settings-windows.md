@@ -19,7 +19,7 @@ ms.assetid: 6f4de4bd-3dde-4a8d-8e22-46c5d06c3eea
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: kakyker  
 ms.suite: ems
 search.appverid: MET150

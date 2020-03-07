@@ -19,7 +19,7 @@ ms.assetid: ae8b6528-7979-47d8-abe0-58cea1905270
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150

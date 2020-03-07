@@ -19,7 +19,7 @@ ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150

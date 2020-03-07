@@ -20,7 +20,7 @@ ms.assetid: abebfb5e-054b-435a-903d-d1c31767bcf2
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: priyar
 ms.suite: ems
 search.appverid: MET150

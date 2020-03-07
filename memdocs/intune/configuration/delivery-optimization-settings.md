@@ -19,7 +19,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: kerimh
 ms.suite: ems
 search.appverid: MET150

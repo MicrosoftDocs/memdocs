@@ -19,7 +19,7 @@ ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: davidra
 ms.suite: ems
 search.appverid: MET150

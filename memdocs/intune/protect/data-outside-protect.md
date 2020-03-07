@@ -20,7 +20,7 @@ ms.assetid: 6a88573a-aa60-455c-858c-74562798246b
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: pchacon
 ms.suite: ems
 search.appverid: MET150

@@ -17,7 +17,7 @@ ms.author: erikje
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: spshumwa
 ms.suite: ems
 search.appverid: MET150

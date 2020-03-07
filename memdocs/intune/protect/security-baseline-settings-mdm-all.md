@@ -21,7 +21,7 @@ zone_pivot_groups: windows-mdm-versions
 #ROBOTS:
 
 #audience:
-#ms.devlang:
+
 #ms.reviewer:  
 ms.suite: ems
 search.appverid: MET150

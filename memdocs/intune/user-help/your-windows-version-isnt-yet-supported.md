@@ -24,7 +24,7 @@ searchScope:
 
 ROBOTS:  
 #audience:
-#ms.devlang:
+
 ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
@@ -36,3 +36,4 @@ ms.collection:
 With the rapid pace of development of technology, sometimes your device could actually be ahead of what your company support has had the opportunity to test. It's possible that being on the newest version of Windows may not work with some of your company's other tools. 
 
 You will need to contact your company support to resolve this issue. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+''''

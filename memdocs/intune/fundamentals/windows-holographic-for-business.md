@@ -17,7 +17,7 @@ ms.assetid: 585a2f17-106b-4f02-adf7-05f08a92dbc1
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
