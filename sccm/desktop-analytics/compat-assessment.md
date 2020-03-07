@@ -63,7 +63,7 @@ To see this recommendation in the Desktop Analytics portal:
 1. Select the **Apps** tab.
 1. Select an app, and then view the compatibility risk factors and recommendations in the side pane.
 
-![Screenshot of asset recommendation in Desktop Analytics portal](media/3594545-app-removed.png)
+[![Screenshot of asset recommendation in Desktop Analytics portal](media/3594545-app-removed.png)](media/3594545-app-removed.png#lightbox)
 
 ### Blocking upgrade
 
