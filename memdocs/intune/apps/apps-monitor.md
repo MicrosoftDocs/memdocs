@@ -20,7 +20,7 @@ ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
@@ -102,5 +102,5 @@ A user status list is shown when you select **User install status** in the **Mon
 
 ## Next steps
 
-- To learn more about working with your Intune data, see [Use the Intune Data Warehouse](../reports-nav-create-intune-reports.md).
+- To learn more about working with your Intune data, see [Use the Intune Data Warehouse](../developer/reports-nav-create-intune-reports.md).
 - To learn about app configuration policies, see [App configuration policies for Intune](app-configuration-policies-overview.md).

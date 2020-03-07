@@ -18,7 +18,7 @@ ms.assetid: 73DF3B90-6D52-4EF6-AFFD-1873A18C7421
 # optional metadata
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: dariusz
 ms.suite: ems
 search.appverid: MET150

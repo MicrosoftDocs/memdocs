@@ -21,7 +21,7 @@ Customer intent: As an Intune admin, I want to learn where to find the different
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer:
 ms.suite: ems
 #ms.tgt_pltfrm:
@@ -38,13 +38,13 @@ In this tutorial, you will:
 > * Tour Microsoft Intune
 > * Configure the Azure portal
 
-If you don’t have an Intune subscription, [sign up for a free trial account](free-trial-sign-up.md).
+If you don't have an Intune subscription, [sign up for a free trial account](free-trial-sign-up.md).
 
 ## Prerequisites
 Before setting up Microsoft Intune, review the following requirements:
 
-- [Supported operating systems and browsers](../supported-devices-browsers.md) 
-- [Network configuration requirements and bandwidth](../network-bandwidth-use.md)
+- [Supported operating systems and browsers](supported-devices-browsers.md) 
+- [Network configuration requirements and bandwidth](network-bandwidth-use.md)
 
 ## Sign up for a Microsoft Intune free trial
 
@@ -69,9 +69,9 @@ Follow the steps below to better understand Intune in the Azure portal. Once you
 
     ![Screenshot of the device enrollment pane](./media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-02.png)
     
-    Intune lets you manage your workforce’s devices and apps, including how they access your company data. To use this mobile device management (MDM) service, the devices must first be enrolled in Intune. When a device is enrolled, it is issued an MDM certificate. This certificate is used to communicate with the Intune service. 
+    Intune lets you manage your workforce's devices and apps, including how they access your company data. To use this mobile device management (MDM) service, the devices must first be enrolled in Intune. When a device is enrolled, it is issued an MDM certificate. This certificate is used to communicate with the Intune service. 
 
-    There are several methods to enroll your workforce’s devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](mdm-authority-set.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](setup-steps.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](../enrollment/device-enrollment.md)
+    There are several methods to enroll your workforce's devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](mdm-authority-set.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](setup-steps.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](../enrollment/device-enrollment.md)
 
 3. From [Intune](https://aka.ms/intuneportal), select **Device compliance** to display details about compliance for devices managed by Intune. You will see details similar to the following image.
 
@@ -121,25 +121,25 @@ Follow the steps below to better understand Intune in the Azure portal. Once you
 
     ![Screenshot of the Groups pane](./media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-09.png)
 
-    You can set up groups to suit your organizational needs. Create groups to organize users or devices by geographic location, department, or hardware characteristics. Use groups to manage tasks at scale. For example, you can set policies for many users or deploy apps to a set of devices. For more information about groups, see [Add groups to organize users and devices](../groups-add.md).
+    You can set up groups to suit your organizational needs. Create groups to organize users or devices by geographic location, department, or hardware characteristics. Use groups to manage tasks at scale. For example, you can set policies for many users or deploy apps to a set of devices. For more information about groups, see [Add groups to organize users and devices](groups-add.md).
 
 10. From [Intune](https://aka.ms/intuneportal), select **Help and support** to request help. As an IT admin, you can use the **Help and Support** option to search and view solutions, as well as file an on-line support ticket for Intune. 
 
     ![Screenshot of the Help and support pane](./media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-10.png)
 
-    To create a support ticket, your account must be assigned as an administrator role in Azure Active Directory. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**. For more information, see [How to get support for Microsoft Intune](../get-support.md).
+    To create a support ticket, your account must be assigned as an administrator role in Azure Active Directory. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**. For more information, see [How to get support for Microsoft Intune](get-support.md).
 
 11. From [Intune](https://aka.ms/intuneportal), select **Tenant Status** to display details about your Intune tenant.
 
     ![Screenshot of the Tenant Status pane](./media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-11.png)
 
-    Tenant status details include connector status, Intune service health, and Intune news. If there are any issues with your tenant or Intune itself, you will find details in the **Tenant Status** pane. For more information, see [Intune Tenant Status](../tenant-status.md).
+    Tenant status details include connector status, Intune service health, and Intune news. If there are any issues with your tenant or Intune itself, you will find details in the **Tenant Status** pane. For more information, see [Intune Tenant Status](tenant-status.md).
 
 12. From [Intune](https://aka.ms/intuneportal), select **Troubleshoot** to reach a shortcut on troubleshooting tips, requesting support, or checking the status of Intune. This information is specific the Intune user you select.
 
     ![Screenshot of the Troubleshoot pane](./media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-12.png)
 
-For more information about troubleshooting within Intune, see [Use the troubleshooting portal to help users at your company](../help-desk-operators.md).
+For more information about troubleshooting within Intune, see [Use the troubleshooting portal to help users at your company](help-desk-operators.md).
 
 ## Configure the Azure portal
 

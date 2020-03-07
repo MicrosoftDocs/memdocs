@@ -18,7 +18,6 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 search.appverid: MET150
@@ -32,7 +31,7 @@ ms.collection: M365-identity-device-management
 This article shows you all the Microsoft Intune device restrictions settings that you can configure for devices running Android.
 
 >[!TIP]
->If the settings you want are not available, you might be able to configure your devices using a [custom profile](../custom-settings-android.md).
+>If the settings you want are not available, you might be able to configure your devices using a [custom profile](custom-settings-android.md).
 
 ## General
 
@@ -46,7 +45,7 @@ This article shows you all the Microsoft Intune device restrictions settings tha
 - **Screen capture (Samsung Knox only)**: Choose **Block** to prevent screenshots. **Not configured** lets the user capture the screen contents as an image.
 - **Voice assistant (Samsung Knox only)**: Choose **Block** to disable the S Voice service. **Not configured** allows the use of S Voice service and app on the device. This setting doesn't apply to Bixby or the voice assistant for accessibility that reads the screen content aloud.
 - **YouTube (Samsung Knox only)**: Choose **Block** to prevent users from using the YouTube app. **Not configured** allows using the YouTube app on the device.
-- **Shared devices (Samsung Knox only)**: Configure a managed Samsung Knox Standard device as shared. When set to **Allow**, end users can sign in and out of the device with their Azure AD credentials. The device stays managed, whether it’s in use or not.</br>When used in with a SCEP certificate profile, this feature allows end users to share a device with the same apps for all users. But, each user has their own SCEP user certificate. When users sign out, all app data is cleared. This feature is limited to LOB apps only. </br>**Not configured** prevents multiple end users from signing in to the Company Portal app on the device using their Azure AD credentials.
+- **Shared devices (Samsung Knox only)**: Configure a managed Samsung Knox Standard device as shared. When set to **Allow**, end users can sign in and out of the device with their Azure AD credentials. The device stays managed, whether it's in use or not.</br>When used in with a SCEP certificate profile, this feature allows end users to share a device with the same apps for all users. But, each user has their own SCEP user certificate. When users sign out, all app data is cleared. This feature is limited to LOB apps only. </br>**Not configured** prevents multiple end users from signing in to the Company Portal app on the device using their Azure AD credentials.
 - **Block date and time changes (Samsung Knox)**: Choose **Block** to prevent the user from changing the date and time settings on the device. **Not configured** allows users to change the date and time settings.
 
 ## Password
@@ -57,7 +56,7 @@ This article shows you all the Microsoft Intune device restrictions settings tha
     > Samsung Knox devices automatically require a 4-digit PIN during MDM enrollment. Native Android devices may automatically require a PIN to become compliant with Conditional Access.
 
 - **Minimum password length**: Enter the minimum length of password a user must enter (between 4 and 16 characters).
-- **Maximum minutes of inactivity until screen locks**: Enter the maximum number of minutes of inactivity allowed on the device until the screen locks. On a device, an end user can’t set a time value greater than the configured time in the profile. An end user can set a lower time value. For example, if the profile is set to 15 minutes, an end user can set the value to 5 minutes. An end user can’t set the value to 30 minutes. 
+- **Maximum minutes of inactivity until screen locks**: Enter the maximum number of minutes of inactivity allowed on the device until the screen locks. On a device, an end user can't set a time value greater than the configured time in the profile. An end user can set a lower time value. For example, if the profile is set to 15 minutes, an end user can set the value to 5 minutes. An end user can't set the value to 30 minutes. 
 - **Number of sign-in failures before wiping device**: Enter the number of sign-in failures to allow before the device is wiped.
 - **Password expiration (days)**: Enter the number of days before the device password must be changed.
 - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
@@ -168,6 +167,6 @@ Kiosk settings apply only to Samsung Knox Standard devices, and only to apps you
 
 ## Next steps
 
-[Assign the profile](../device-profile-assign.md) and [monitor its status](../device-profile-monitor.md).
+[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 You can also create kiosk profiles for [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) and [Windows 10](kiosk-settings.md) devices.

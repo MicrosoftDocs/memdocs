@@ -19,7 +19,7 @@ ms.assetid:
  
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: tanvira
 ms.suite: ems
 search.appverid: 

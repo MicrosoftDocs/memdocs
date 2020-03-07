@@ -18,7 +18,7 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: chmaguir
 ms.suite: ems
 search.appverid: MET150
@@ -29,10 +29,10 @@ ms.collection: M365-identity-device-management
 
 # Assign licenses to users so they can enroll devices in Intune
 
-Whether you manually add users or synchronize from your on-premises Active Directory, you must first assign each user an Intune license before users can enroll their devices in Intune. For a list of licenses, see [Licenses that include Intune](../licenses.md).
+Whether you manually add users or synchronize from your on-premises Active Directory, you must first assign each user an Intune license before users can enroll their devices in Intune. For a list of licenses, see [Licenses that include Intune](licenses.md).
 
 > [!NOTE]
-> Users assigned Intune app protection policy and not enrolling their devices into Microsoft Intune will also require an Intune license to receive policy. 
+> Users assigned Intune app protection policy and not enrolling their devices into Microsoft Intune will also require an Intune license to receive policy.
 
 ## Assign an Intune license Microsoft Endpoint Manager Admin Center
 
@@ -84,7 +84,7 @@ Organizations that use Microsoft Enterprise Mobility + Security (formerly Enterp
 
 To selectively assign user licenses for EMS services, open PowerShell as an administrator on a computer with the [Azure Active Directory Module for Windows PowerShell](https://msdn.microsoft.com/library/jj151815.aspx#bkmk_installmodule) installed. You can install PowerShell on a local computer or on an ADFS server.
 
-You must create a new license SKU definition that applies only to the desired service plans. To do this, disable the plans you don’t want to apply. For example, you might create a license SKU definition that does not assign an Intune license. To see a list of available services, type:
+You must create a new license SKU definition that applies only to the desired service plans. To do this, disable the plans you don't want to apply. For example, you might create a license SKU definition that does not assign an Intune license. To see a list of available services, type:
 
     (Get-MsolAccountSku | Where {$_.SkuPartNumber -eq "EMS"}).ServiceStatus
 
@@ -95,7 +95,7 @@ Create a new user on the command line and assign an EMS license without enabling
 
     Connect-MsolService
 
-    New-MsolUser -DisplayName “Test User” -FirstName FName -LastName LName -UserPrincipalName user@<TenantName>.onmicrosoft.com –Department DName -UsageLocation US
+    New-MsolUser -DisplayName "Test User" -FirstName FName -LastName LName -UserPrincipalName user@<TenantName>.onmicrosoft.com –Department DName -UsageLocation US
 
     $CustomEMS = New-MsolLicenseOptions -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
     Set-MsolUserLicense -UserPrincipalName user@<TenantName>.onmicrosoft.com -AddLicenses <TenantName>:EMS -LicenseOptions $CustomEMS

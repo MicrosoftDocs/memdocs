@@ -23,7 +23,7 @@ searchScope:
 
 ROBOTS:  
 #audience:
-#ms.devlang:
+
 #ms.reviewer: natgreen
 #ms.suite: ems
 #ms.tgt_pltfrm:

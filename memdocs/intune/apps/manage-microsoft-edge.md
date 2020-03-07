@@ -20,7 +20,7 @@ ms.assetid: 3fb2f050-ec94-42ab-be05-c3d4101148bb
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150

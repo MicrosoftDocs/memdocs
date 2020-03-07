@@ -20,7 +20,7 @@ searchScope:
 
 ROBOTS:  
 #audience:
-#ms.devlang:
+
 ms.reviewer: scottduf
 ms.suite: ems
 #ms.tgt_pltfrm:

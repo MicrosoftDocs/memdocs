@@ -21,7 +21,7 @@ searchScope:
 
 ROBOTS:  
 #audience:
-#ms.devlang:
+
 ms.reviewer: esmich, elocholi
 ms.suite: ems
 #ms.tgt_pltfrm:

@@ -19,7 +19,7 @@ ms.assetid: 5027d012-d6c2-4971-a9ac-217f91d67d87
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 #ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150

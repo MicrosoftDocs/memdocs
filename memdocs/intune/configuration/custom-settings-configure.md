@@ -18,7 +18,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -42,8 +42,8 @@ Custom settings are configured differently for each platform. For example, to co
 
 Custom profiles are created similar to built-in profiles, and are available on the following platforms:
 
-- [Android](../custom-settings-android.md)
-- [Android Enterprise](../custom-settings-android-for-work.md)
+- [Android](custom-settings-android.md)
+- [Android Enterprise](custom-settings-android-for-work.md)
 - [iOS/iPadOS](custom-settings-ios.md)
 - [macOS](custom-settings-macos.md)
 - [Windows 10](custom-settings-windows-10.md)
@@ -54,8 +54,8 @@ Custom profiles are created similar to built-in profiles, and are available on t
 
 Choose your platform, and get started:
 
-- [Android](../custom-settings-android.md)
-- [Android Enterprise](../custom-settings-android-for-work.md)
+- [Android](custom-settings-android.md)
+- [Android Enterprise](custom-settings-android-for-work.md)
 - [iOS/iPadOS](custom-settings-ios.md)
 - [macOS](custom-settings-macos.md)
 - [Windows 10](custom-settings-windows-10.md)

@@ -18,7 +18,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 #ms.reviewer: tisilver
 #ms.suite: ems
 search.appverid: MET150

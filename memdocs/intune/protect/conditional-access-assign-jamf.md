@@ -20,7 +20,7 @@ ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
 
 #ROBOTS: 
 #audience:
-#ms.devlang:
+
 ms.reviewer: elocholi
 ms.suite: ems
 search.appverid: MET150

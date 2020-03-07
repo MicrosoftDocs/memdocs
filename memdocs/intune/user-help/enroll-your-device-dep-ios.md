@@ -21,7 +21,7 @@ searchScope:
 
 ROBOTS:  
 #audience:
-#ms.devlang:
+
 ms.reviewer: japoehlm
 ms.suite: ems
 #ms.tgt_pltfrm:

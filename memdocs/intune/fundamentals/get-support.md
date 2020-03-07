@@ -20,7 +20,7 @@ ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
 # optional metadata
 
 #audience:
-#ms.devlang:
+
 ms.reviewer: srik
 ms.suite: ems
 search.appverid: MET150

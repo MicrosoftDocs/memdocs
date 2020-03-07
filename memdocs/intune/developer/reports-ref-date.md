@@ -18,7 +18,7 @@ ms.assetid: 6B4BC650-62F7-4049-9DE4-CDECB579B58F
 # optional metadata
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
@@ -59,4 +59,4 @@ The **date** entity represents dates that are referenced across multiple data wa
 
 ## Next steps
 
-- Learn more about the [Intune Data Warehouse](../reports-nav-create-intune-reports.md).
+- Learn more about the [Intune Data Warehouse](reports-nav-create-intune-reports.md).

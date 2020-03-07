@@ -19,7 +19,7 @@ ms.assetid: c2654491-5144-408a-a45a-644eb91ac1bb
 # optional metadata
 
 #audience:
-#ms.devlang:
+
 ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
@@ -42,7 +42,7 @@ Intune can use the [TeamViewer](https://www.teamviewer.com) software, purchased 
 Before you begin to establish and to respond to remote assistance requests, ensure that the following prerequisites are in place:
 
 - You must have [signed up for a TeamViewer account](https://login.teamviewer.com/LogOn#register) to log in to the TeamViewer website.
-- Windows PCs that you want to administer must be [managed by the Windows software client](../manage-windows-pcs-with-microsoft-intune.md)
+- Windows PCs that you want to administer must be [managed by the Windows software client](manage-windows-pcs-with-microsoft-intune.md)
 - All Windows PC operating systems supported by Intune can be administered.
 
 ## Configure the TeamViewer Connector

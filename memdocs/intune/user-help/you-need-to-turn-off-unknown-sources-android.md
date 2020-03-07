@@ -22,7 +22,7 @@ searchScope:
 
 ROBOTS:  
 #audience:
-#ms.devlang:
+
 #ms.reviewer: chrisbal
 #ms.suite: ems
 #ms.tgt_pltfrm:

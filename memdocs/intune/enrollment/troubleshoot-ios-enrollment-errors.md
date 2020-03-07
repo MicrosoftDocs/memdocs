@@ -18,7 +18,7 @@ ms.assetid:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: mghadial
 #ms.suite: ems
 search.appverid: MET150
@@ -33,7 +33,7 @@ This article helps Intune administrators understand and troubleshoot problems wh
 
 ## Prerequisites
 
-Before you start troubleshooting, it’s important to collect some basic information. This information can help you better understand the problem and reduce the time to find a resolution.
+Before you start troubleshooting, it's important to collect some basic information. This information can help you better understand the problem and reduce the time to find a resolution.
 
 Collect the following information about the problem:
 
@@ -44,7 +44,7 @@ Collect the following information about the problem:
 - How many users are affected? Are all users affected or just some?
 - How many devices are affected? Are all devices affected or just some?
 - What is the MDM authority?
-- How is enrollment being performed? Is it “Bring your own device" (BYOD) or Apple Device Enrollment Program (DEP) with enrollment profiles?
+- How is enrollment being performed? Is it "Bring your own device" (BYOD) or Apple Device Enrollment Program (DEP) with enrollment profiles?
 
 ## Error messages
 
@@ -73,7 +73,7 @@ Collect the following information about the problem:
 **Cause:** The necessary CNAME records in DNS don't exist.
 
 #### Resolution
-Create CNAME DNS resource records for your company’s domain. For example, if your company’s domain is contoso.com, create a CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to EnterpriseEnrollment-s.manage.microsoft.com.
+Create CNAME DNS resource records for your company's domain. For example, if your company's domain is contoso.com, create a CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to EnterpriseEnrollment-s.manage.microsoft.com.
 
 Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, enrollment.manage.microsoft.com.
 
@@ -246,7 +246,7 @@ Disable MFA, and then re-enroll the device.
 
 ## Next steps
 
-- [Troubleshoot device enrollment in Intune](../troubleshoot-device-enrollment-in-intune.md)
+- [Troubleshoot device enrollment in Intune](troubleshoot-device-enrollment-in-intune.md)
 - [Ask a question on the Intune forum](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
 - [Check the Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Check the Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)

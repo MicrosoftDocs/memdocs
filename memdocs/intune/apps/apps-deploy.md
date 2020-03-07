@@ -20,7 +20,7 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
@@ -73,7 +73,7 @@ The following table lists the various options for assigning apps to users and de
      > [!NOTE]
      > **For iOS/iPadOS apps only**:
      > - To configure what happens to managed apps when devices are no longer managed, you can select the intended setting under **Uninstall on device removal**. For more information, see [App uninstall setting for iOS/iPadOS managed apps](apps-deploy.md#app-uninstall-setting-for-ios-managed-apps).
-     > - If you have created an iOS/iPadOS VPN profile that contains per-app VPN settings, you can select the VPN profile under **VPN**. When the app is run, the VPN connection is opened. For more information, see [VPN settings for iOS/iPadOS devices](../vpn-settings-ios.md).
+     > - If you have created an iOS/iPadOS VPN profile that contains per-app VPN settings, you can select the VPN profile under **VPN**. When the app is run, the VPN connection is opened. For more information, see [VPN settings for iOS/iPadOS devices](../configuration/vpn-settings-ios.md).
      >
      > **For Android apps only**: If you deploy an Android app as **Available with or without enrollment**, reporting status will only be available on enrolled devices.
      >
@@ -114,7 +114,7 @@ The information in the following table can help you understand the resulting int
 |User Available without enrollment|User Required|Required
 |User Available without enrollment|User Available|Available|
 |User Available without enrollment|Device Required|Required and Available without enrollment|
-|User Available without enrollment|Device Uninstall|Uninstall and Available without enrollment.<br><br>If the user didn’t install the app from the Company Portal, the uninstall is honored.<br><br>If the user installs the app from the Company Portal, the install is prioritized over the uninstall.|
+|User Available without enrollment|Device Uninstall|Uninstall and Available without enrollment.<br><br>If the user didn't install the app from the Company Portal, the uninstall is honored.<br><br>If the user installs the app from the Company Portal, the install is prioritized over the uninstall.|
 
 > [!NOTE]
 > For managed iOS store apps only, when you add these apps to Microsoft Intune and assign them as **Required**, the apps are automatically created with both **Required** and **Available** intents.<br><br>

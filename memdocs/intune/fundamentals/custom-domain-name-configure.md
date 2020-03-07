@@ -19,7 +19,7 @@ ms.assetid: 2382f36f-13d8-4a32-81ad-6cfa604889c3
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150

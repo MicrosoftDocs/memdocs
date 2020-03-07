@@ -20,7 +20,7 @@ ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150

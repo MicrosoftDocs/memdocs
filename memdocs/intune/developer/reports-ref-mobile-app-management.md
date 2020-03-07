@@ -18,7 +18,7 @@ ms.assetid: 084F11AD-F7BA-45A4-8424-45E6E4564930
 # optional metadata
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150

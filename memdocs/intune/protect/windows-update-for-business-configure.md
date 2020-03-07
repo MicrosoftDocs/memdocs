@@ -18,7 +18,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 Use Intune to manage the install of Windows 10 software updates from Windows Update for Business.
 
-By using Windows Update for Business, you simplify the update management experience. You don’t need to approve individual updates for groups of devices. You can manage risk in your environments by configuring an update rollout strategy. Intune provides the ability to [configure update settings](windows-update-settings.md) on devices and gives you the ability to defer update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
+By using Windows Update for Business, you simplify the update management experience. You don't need to approve individual updates for groups of devices. You can manage risk in your environments by configuring an update rollout strategy. Intune provides the ability to [configure update settings](windows-update-settings.md) on devices and gives you the ability to defer update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
 
 Intune stores only the update policy assignments, not the updates themselves. Devices access Windows Update directly for the updates.
 
@@ -208,7 +208,7 @@ When a device receives a Windows 10 feature updates policy:
 
 - While the installed version of Windows remains set, devices can still receive and install quality and security updates for their Windows version for the duration of support for that version, which helps you to keep devices current and secure.
 
-- Unlike using *Pause* with an update ring, which expires after 35 days, the Windows 10 feature updates policy remains in effect. Devices won’t install a new Windows version until you modify or remove the Windows 10 feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
+- Unlike using *Pause* with an update ring, which expires after 35 days, the Windows 10 feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the Windows 10 feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
 
 ### Prerequisites for Windows 10 feature updates
 
@@ -217,7 +217,7 @@ The following prerequisites must be met to use Windows 10 feature updates in Int
 - Devices must be enrolled in Intune MDM and Azure AD joined or Azure AD registered.
 - To use the Feature Updates policy with Intune, devices must have telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetry is configured under *Reporting and Telemetry* as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md).
   
-  Devices that receive Feature Updates policy and that have telemetry set to *Not configured*, which means it’s off, might install a later version of Windows than defined in the Feature Update policy. The prerequisite to require telemetry is under review as this feature moves towards general availability.
+  Devices that receive Feature Updates policy and that have telemetry set to *Not configured*, which means it's off, might install a later version of Windows than defined in the Feature Update policy. The prerequisite to require telemetry is under review as this feature moves towards general availability.
 
 ### Limitations for Windows 10 feature updates
 
@@ -251,10 +251,10 @@ From this pane, you can:
 
 ## Validation and reporting for Windows 10 updates
 
-For both Windows 10 update rings and Windows 10 feature updates, use [Intune compliance reports for updates](../windows-update-compliance-reports.md) to monitor update status of devices. This solution uses [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) with your Azure subscription.
+For both Windows 10 update rings and Windows 10 feature updates, use [Intune compliance reports for updates](windows-update-compliance-reports.md) to monitor update status of devices. This solution uses [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) with your Azure subscription.
 
 ## Next steps
 
-[Windows update settings supported by Intune](../windows-update-settings.md)
+[Windows update settings supported by Intune](windows-update-settings.md)
 
 [Troubleshooting Windows 10 update rings](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Windows-10-Update-Ring-Policies/ba-p/714046)

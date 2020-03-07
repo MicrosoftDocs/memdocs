@@ -18,7 +18,7 @@ ms.assetid: 40622ced-6029-4abf-873e-b51d2b51934c
 # optional metadata
 
 #audience:
-#ms.devlang:
+
 ms.reviewer: tscott
 ms.suite: ems
 search.appverid: MET150
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 This article lists common errors, status codes, descriptions, and possible solutions when accessing organization resources. Use this information to help troubleshoot access issues when using Microsoft Intune.
 
-If you need support help, see [get support for Microsoft Intune](../get-support.md).
+If you need support help, see [get support for Microsoft Intune](get-support.md).
 
 ## Status codes for MDM managed Windows devices
 
@@ -39,10 +39,10 @@ If you need support help, see [get support for Microsoft Intune](../get-support.
 |---------------|-----------------|--------------|
 |10 (APP_CI_ENFORCEMENT_IN_PROGRESS)|Installation in progress||
 |20 (APP_CI_ENFORCEMENT_IN_PROGRESS_WAITING_CONTENT)|Waiting for content||
-|30 (APP_CI_ENFORCEMENT_ERROR_RETRIEVING_CONTENT)|Retrieving content|Probable Cause: Job status 30 indicates that a user download of an app failed.<br /><br />Likely causes for this may be:<br /><br />The device lost Internet connectivity while the download was in progress.<br /><br />The certificate issued to the device at the time of enrollment may have expired.<br /><br />Mitigation:<br /><br />Launch the Company Apps app from Control Panel on the device to confirm that the device certificate hasn’t expired; if it has then you will need to re-enroll the device.<br /><br />Confirm that the device is connected to the Internet and try to request the app again.|
+|30 (APP_CI_ENFORCEMENT_ERROR_RETRIEVING_CONTENT)|Retrieving content|Probable Cause: Job status 30 indicates that a user download of an app failed.<br /><br />Likely causes for this may be:<br /><br />The device lost Internet connectivity while the download was in progress.<br /><br />The certificate issued to the device at the time of enrollment may have expired.<br /><br />Mitigation:<br /><br />Launch the Company Apps app from Control Panel on the device to confirm that the device certificate hasn't expired; if it has then you will need to re-enroll the device.<br /><br />Confirm that the device is connected to the Internet and try to request the app again.|
 |40 (APP_CI_ENFORCEMENT_IN_PROGRESS_CONTENT_DOWNLOADED)|Content download complete||
 |50 (APP_CI_ENFORCEMENT_IN_PROGRESS_INSTALLING)|Installation in progress||
-|60 (APP_CI_ENFORCEMENT_ERROR_INSTALLING)|Installation ​Error occurred|The app installation failed after download.<br /><br />The code signing certificate with which app was signed is not present on the device.<br /><br />A framework dependency on which the application depends is not found installed on the device.<br /><br />Ensure that the code signing certificate with which your app was signed is present on the device and confirm with the admin that such a certificate was targeted for all enterprise enrolled Windows RT devices.<br /><br />In case the installation failure is due to a missing framework dependency, the admin will have to re-publish the application again packaging the framework along with the application package.<br /><br />The application package downloaded isn’t a valid package, may have been corrupted, or may not be compatible with the OS version on the device.|
+|60 (APP_CI_ENFORCEMENT_ERROR_INSTALLING)|Installation ​Error occurred|The app installation failed after download.<br /><br />The code signing certificate with which app was signed is not present on the device.<br /><br />A framework dependency on which the application depends is not found installed on the device.<br /><br />Ensure that the code signing certificate with which your app was signed is present on the device and confirm with the admin that such a certificate was targeted for all enterprise enrolled Windows RT devices.<br /><br />In case the installation failure is due to a missing framework dependency, the admin will have to re-publish the application again packaging the framework along with the application package.<br /><br />The application package downloaded isn't a valid package, may have been corrupted, or may not be compatible with the OS version on the device.|
 |70 (APP_CI_ENFORCEMENT_SUCCEEDED)|Installation Success||
 |80 (APP_CI_ENFORCEMENT_IN_PROGRESS)|Uninstall in progress||
 |90 (APP_CI_ENFORCEMENT_ERROR)|Uninstall Error occurred||
@@ -87,11 +87,11 @@ If you need support help, see [get support for Microsoft Intune](../get-support.
 
 |Error text in Company Portal|HTTP status code|Additional error information|
 |---|---|---|
-|__Internal server issue__ <br>Looks like you couldn’t reach us due to an internal error on our server. Retry and then contact your IT admin if the issue continues.|500 error|This error is likely caused by a problem on in the Intune service. The issue should be resolved on the Intune service side and is likely not due to issues on the customer side.|
-|__Temporarily unavailable__ <br>Looks like you couldn’t reach us because our service is temporarily unavailable. Retry and then contact your IT admin if the issue continues.|503 error|This is likely due to a temporary Intune service issue, such as the service being under maintenance. The issue should be resolved on the Intune service side and is likely not due to issues on the customer side.|
-|__Can’t connect to server__ <br>Looks like you couldn’t reach us. Retry and then contact your IT admin if the issue continues.|Not associated with an HTTP status code|A secure connection to the server could not be made, likely due to an SSL issue with the certs being used. This issue may be due to customer configurations not being compliant with Apple’s requirements for App Transport Security (ATS).|
-|__Something went wrong__ <br>The Company Portal client couldn’t load. Retry and then contact your IT admin if the issue continues.|400 error|Any error with an HTTP status code in the 400s that does not have a more specific error message will see this one. This is a client side error happening in the Company Portal app for iOS/iPadOS.|
-|__Can't reach server__ <br>Looks like you couldn’t reach us. Retry and then contact your IT admin if the issue continues.|500 error|Any error with an HTTP status code in the 500s that does not have a more specific error message will see this one. This is a service side error happening in the Intune service.|
+|__Internal server issue__ <br>Looks like you couldn't reach us due to an internal error on our server. Retry and then contact your IT admin if the issue continues.|500 error|This error is likely caused by a problem on in the Intune service. The issue should be resolved on the Intune service side and is likely not due to issues on the customer side.|
+|__Temporarily unavailable__ <br>Looks like you couldn't reach us because our service is temporarily unavailable. Retry and then contact your IT admin if the issue continues.|503 error|This is likely due to a temporary Intune service issue, such as the service being under maintenance. The issue should be resolved on the Intune service side and is likely not due to issues on the customer side.|
+|__Can't connect to server__ <br>Looks like you couldn't reach us. Retry and then contact your IT admin if the issue continues.|Not associated with an HTTP status code|A secure connection to the server could not be made, likely due to an SSL issue with the certs being used. This issue may be due to customer configurations not being compliant with Apple's requirements for App Transport Security (ATS).|
+|__Something went wrong__ <br>The Company Portal client couldn't load. Retry and then contact your IT admin if the issue continues.|400 error|Any error with an HTTP status code in the 400s that does not have a more specific error message will see this one. This is a client side error happening in the Company Portal app for iOS/iPadOS.|
+|__Can't reach server__ <br>Looks like you couldn't reach us. Retry and then contact your IT admin if the issue continues.|500 error|Any error with an HTTP status code in the 500s that does not have a more specific error message will see this one. This is a service side error happening in the Intune service.|
 
 ### Service errors
 
@@ -390,4 +390,4 @@ If you need support help, see [get support for Microsoft Intune](../get-support.
 
 ## Next steps
 
-Contact Microsoft Support to [get support for Microsoft Intune](../get-support.md).
+Contact Microsoft Support to [get support for Microsoft Intune](get-support.md).

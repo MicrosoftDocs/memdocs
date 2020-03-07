@@ -21,7 +21,7 @@ searchScope:
 
 ROBOTS: NOINDEX, NOFOLLOW   
 #audience:
-#ms.devlang:
+
 ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:

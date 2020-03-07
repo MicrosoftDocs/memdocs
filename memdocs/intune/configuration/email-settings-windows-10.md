@@ -18,7 +18,6 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -65,4 +64,4 @@ Use the email profile settings to configure the Mail app on your devices running
   - **Tasks**
 
 ## Next steps
-[Configure email settings in Intune](../email-settings-configure.md)
+[Configure email settings in Intune](email-settings-configure.md)

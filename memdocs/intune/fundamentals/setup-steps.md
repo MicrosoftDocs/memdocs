@@ -19,7 +19,7 @@ ms.assetid: d158503c-1276-422b-ab81-5f66c1cd7e7a
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
@@ -45,9 +45,9 @@ If you're currently using Microsoft Endpoint Configuration Manager to manage com
 |   1   | [Supported configurations](supported-devices-browsers.md) - Need-to-know info before you start. This includes supported configurations and networking requirements.|
 |   2   |  [Sign in to Intune](account-sign-up.md) - Sign in to your trial subscription or create a new Intune subscription. |
 |   3   | [Configure domain name](custom-domain-name-configure.md) - Set DNS registration to connect your company's domain name with Intune. This gives users a familiar domain when connecting to Intune and using resources. |
-|   4   | [Add users](users-add.md) and [groups](../groups-add.md) - Add users and groups, or connect Active Directory to sync with Intune. Required unless your devices are "userless" kiosk devices, for example. Groups are used to assign apps, settings, and other resources.|
-|   5   | [Assign licenses](../licenses-assign.md) - Give users permission to use Intune. Each user or userless device requires an Intune license to access the service. |
-|   6   | [Set the MDM authority](../mdm-authority-set.md) - Use user and device groups to simplify management tasks. Groups are used to assign apps, settings, and other resources. |
+|   4   | [Add users](users-add.md) and [groups](groups-add.md) - Add users and groups, or connect Active Directory to sync with Intune. Required unless your devices are "userless" kiosk devices, for example. Groups are used to assign apps, settings, and other resources.|
+|   5   | [Assign licenses](licenses-assign.md) - Give users permission to use Intune. Each user or userless device requires an Intune license to access the service. |
+|   6   | [Set the MDM authority](mdm-authority-set.md) - Use user and device groups to simplify management tasks. Groups are used to assign apps, settings, and other resources. |
 |   7   | [Add apps](../apps/apps-add.md) - Apps can be assigned to groups and automatically or optionally installed. |
 |   8   | [Configure devices](../configuration/device-profiles.md) - Set up profiles that manage device settings. Device profiles can preconfigure settings for email, VPN, Wi-Fi, and device features. They can also restrict devices to help protect both devices and data. |
 |   9   |  [Customize Company Portal](../apps/company-portal-app.md) - Customize the Intune Company Portal that users use to enroll devices and install apps. These settings appear in both the Company Portal app and the Intune Company Portal website.       |

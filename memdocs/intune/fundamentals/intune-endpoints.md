@@ -19,7 +19,7 @@ ms.assetid: b8d9aef2-8757-4e22-9b24-a0833d27304c
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: kerimh
 ms.suite: ems
 search.appverid: MET150

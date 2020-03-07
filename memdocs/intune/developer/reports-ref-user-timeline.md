@@ -18,7 +18,7 @@ ms.assetid: 363D148E-688F-4830-B6DE-AB4FE3648817
 # optional metadata
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
@@ -82,5 +82,5 @@ Any person wanting to see only those dimension entities that currently exist wou
 
 ## Next steps
 
-- To learn more about the **Current User** entity, see [Reference for current user entity](../reports-ref-current-user.md).
-- To learn more about the **User** entity, see [Reference for user entity](../reports-ref-user.md).
+- To learn more about the **Current User** entity, see [Reference for current user entity](reports-ref-data-model.md).
+- To learn more about the **User** entity, see [Reference for user entity](reports-ref-user.md).

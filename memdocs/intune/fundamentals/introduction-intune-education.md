@@ -18,7 +18,7 @@ ms.assetid: ca36589b-804d-40b8-b112-9195d8897800
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: travisj
 ms.suite: ems
 search.appverid: MET150

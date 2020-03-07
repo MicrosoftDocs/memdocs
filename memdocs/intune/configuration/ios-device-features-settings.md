@@ -18,7 +18,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer:
 ms.suite: ems
 search.appverid:
@@ -33,14 +33,14 @@ Intune includes some built-in settings to allow iOS/iPadOS users to use differen
 
 Use these features to control iOS/iPadOS devices as part of your mobile device management (MDM) solution.
 
-This article lists these settings, and describes what each setting does. For more information on these features, go to [Add iOS/iPadOS or macOS device feature settings](../device-features-configure.md).
+This article lists these settings, and describes what each setting does. For more information on these features, go to [Add iOS/iPadOS or macOS device feature settings](device-features-configure.md).
 
 ## Before you begin
 
-[Create an iOS/iPadOS device configuration profile](../device-features-configure.md).
+[Create an iOS/iPadOS device configuration profile](device-features-configure.md).
 
 > [!NOTE]
-> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](../ios-enroll.md).
+> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
 
 ## AirPrint
 
@@ -63,7 +63,7 @@ To add AirPrint servers, you can:
 
 To add AirPrinter servers, you need the IP address of the printer, the resource path, and the port. The following steps show you how to get this information.
 
-1. On a Mac that’s connected to the same local network (subnet) as the AirPrint printers, open **Terminal** (from **/Applications/Utilities**).
+1. On a Mac that's connected to the same local network (subnet) as the AirPrint printers, open **Terminal** (from **/Applications/Utilities**).
 2. In the Terminal, type `ippfind`, and select enter.
 
     Note the printer information. For example, it may return something similar to `ipp://myprinter.local.:631/ipp/port1`. The first part is the name of the printer. The last part (`ipp/port1`) is the resource path.
@@ -111,7 +111,7 @@ You can add up to **six** items (apps and folders combined) for the device dock.
       You can add up to **20** pages for the device dock.
 
 > [!NOTE]
-> When you add icons using the Dock settings, the icons on the Home Screen and pages are locked, and can’t be moved. This may be by design with iOS/iPadOS and Apple’s MDM policies.
+> When you add icons using the Dock settings, the icons on the Home Screen and pages are locked, and can't be moved. This may be by design with iOS/iPadOS and Apple's MDM policies.
 
 #### Example
 
@@ -207,7 +207,7 @@ This feature applies to:
   Device tokens can also be used to add device-specific information to these fields. For example, to show the serial number, enter `Serial Number: {{serialnumber}}`. On the lock screen, the text shows similar to `Serial Number 123456789ABC`. When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `deviceName` or any other device-specific value.
 
   > [!NOTE]
-  > Variables aren't validated in the UI, and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}` instead of `{{deviceid}}`, then the literal string is shown instead of the device’s unique ID. Be sure to enter the correct information.
+  > Variables aren't validated in the UI, and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}` instead of `{{deviceid}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information.
 
 ## Single sign-on
 
@@ -258,7 +258,7 @@ This feature applies to:
 
 - **Filter Type**: Choose to allow specific web sites. Your options:
 
-  - **Configure URLs**: Use Apple’s built-in web filter that looks for adult terms, including profanity and sexually explicit language. This feature evaluates each web page as it's loaded, and identifies and blocks unsuitable content. You can also add URLs that you don't want checked by the filter. Or, block specific URLs, regardless of Apple's filter settings.
+  - **Configure URLs**: Use Apple's built-in web filter that looks for adult terms, including profanity and sexually explicit language. This feature evaluates each web page as it's loaded, and identifies and blocks unsuitable content. You can also add URLs that you don't want checked by the filter. Or, block specific URLs, regardless of Apple's filter settings.
 
     - **Permitted URLs**: **Add** the URLs you want to allow. These URLs bypass Apple's web filter.
 
@@ -267,7 +267,7 @@ This feature applies to:
 
     - **Blocked URLs**: **Add** the URLs you want to stop from opening, regardless of the Apple web filter settings.
 
-  - **Specific websites only** (for the Safari web browser only): These URLs are added to the Safari browser’s bookmarks. The user is **only** allowed to visit these sites; no other sites can be opened. Use this option only if you know the exact list of URLs that users can access.
+  - **Specific websites only** (for the Safari web browser only): These URLs are added to the Safari browser's bookmarks. The user is **only** allowed to visit these sites; no other sites can be opened. Use this option only if you know the exact list of URLs that users can access.
 
     - **URL**: Enter the URL of the website you want to allow. For example, enter `https://www.contoso.com`.
     - **Bookmark Path**: Apple changed this setting. All bookmarks go into the **Approved Sites** folder. Bookmarks don't go in to the bookmark path you enter.
@@ -287,9 +287,9 @@ This feature applies to:
 - **SSO app extension type**: Choose the type of SSO app extension. Your options:
 
   - **Not configured**: App extensions aren't used. To disable an app extension, you can switch the SSO app extension type to **Not configured**.
-  - **Redirect**: Use a generic, customizable redirect app extension to perform SSO with modern authentication flows. Be sure you know the extension ID for your organization’s app extension.
-  - **Credential**: Use a generic, customizable credential app extension to perform SSO with challenge-and-response authentication flows. Be sure you know the extension ID for your organization’s app extension.
-  - **Kerberos**: Use Apple’s built-in Kerberos extension, which is included on iOS 13.0+ and iPadOS 13.0+. This option is a Kerberos-specific version of the **Credential** app extension.
+  - **Redirect**: Use a generic, customizable redirect app extension to perform SSO with modern authentication flows. Be sure you know the extension ID for your organization's app extension.
+  - **Credential**: Use a generic, customizable credential app extension to perform SSO with challenge-and-response authentication flows. Be sure you know the extension ID for your organization's app extension.
+  - **Kerberos**: Use Apple's built-in Kerberos extension, which is included on iOS 13.0+ and iPadOS 13.0+. This option is a Kerberos-specific version of the **Credential** app extension.
 
   > [!TIP]
   > With the **Redirect** and **Credential** types, you add your own configuration values to pass through the extension. If you're using **Credential**, consider using built-in configuration settings provided by Apple in the **Kerberos** type.
@@ -298,7 +298,7 @@ This feature applies to:
 
 - **Team ID** (Redirect and Credential): Enter the team identifier of your SSO app extension. A team identifier is a 10-character alphanumerical (numbers and letters) string generated by Apple, such as `ABCDE12345`. The team ID isn't required.
 
-  [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (opens Apple’s website) has more information.
+  [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (opens Apple's website) has more information.
 
 - **Realm** (Credential and Kerberos): Enter the name of your authentication realm. The realm name should be capitalized, such as `CONTOSO.COM`. Typically, your realm name is the same as your DNS domain name, but in all uppercase.
 
@@ -309,7 +309,7 @@ This feature applies to:
 
 - **URLs** (Redirect only): Enter the URL prefixes of your identity providers on whose behalf the redirect app extension performs SSO. When a user is redirected to these URLs, the SSO app extension will intervene and prompt SSO.
 
-  - All the URLs in your Intune single sign-on app extension profiles must be unique. You can’t repeat a domain in any SSO app extension profile, even if you’re using different types of SSO app extensions.
+  - All the URLs in your Intune single sign-on app extension profiles must be unique. You can't repeat a domain in any SSO app extension profile, even if you're using different types of SSO app extensions.
   - The URLs must begin with http:// or https://.
 
 - **Additional configuration** (Redirect and Credential): Enter additional extension-specific data to pass to the SSO app extension:
@@ -341,8 +341,8 @@ This feature applies to:
 
 - **Active Directory site code** (Kerberos only): Enter the name of the Active Directory site that the Kerberos extension should use. You may not need to change this value, as the Kerberos extension may automatically find the Active Directory site code.
 - **Cache name** (Kerberos only): Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.
-- **App bundle IDs** (Kerberos only): **Add** the app bundle identifiers that should use single sign-on on your devices. These apps are granted access to the Kerberos Ticket Granting Ticket, the authentication ticket, and authenticate users to services they’re authorized to access.
-- **Domain realm mapping** (Kerberos only): **Add** the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don’t match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
+- **App bundle IDs** (Kerberos only): **Add** the app bundle identifiers that should use single sign-on on your devices. These apps are granted access to the Kerberos Ticket Granting Ticket, the authentication ticket, and authenticate users to services they're authorized to access.
+- **Domain realm mapping** (Kerberos only): **Add** the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
 - **PKINIT certificate** (Kerberos only): **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certficates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you've added in Intune. For more information about certificates, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
 
 ## Wallpaper
@@ -363,6 +363,6 @@ You may experience unexpected behavior when a profile with no image is assigned 
 
 ## Next steps
 
-[Assign the profile](../device-profile-assign.md) and [monitor its status](../device-profile-monitor.md).
+[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 You can also create device feature profiles for [macOS](macos-device-features-settings.md) devices.

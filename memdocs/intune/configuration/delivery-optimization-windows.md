@@ -18,7 +18,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
@@ -30,9 +30,9 @@ ms.reviewer: kerimh
 
 With Intune, use Delivery Optimization settings for your Windows 10 devices to reduce bandwidth consumption when those devices download applications and updates. Configure delivery optimization as part of your device configuration profiles.  
 
-This article describes how to configure delivery optimization settings as part of a device configuration profile. After you create a profile, you then assign or deploy that profile to your Windows 10 devices. 
+This article describes how to configure delivery optimization settings as part of a device configuration profile. After you create a profile, you then assign or deploy that profile to your Windows 10 devices.
 
-To view a list of the delivery optimization settings that Intune supports, see [Delivery Optimization settings for Intune](../delivery-optimization-settings.md).  
+To view a list of the delivery optimization settings that Intune supports, see [Delivery Optimization settings for Intune](delivery-optimization-settings.md).  
 
 To learn about Delivery Optimization on Windows 10, see [Delivery Optimization updates](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) in the Windows documentation.  
 
@@ -49,7 +49,7 @@ To learn about Delivery Optimization on Windows 10, see [Delivery Optimization u
     - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Delivery optimization**.
 
-4. Choose **Settings** > **Configure**, and define how you want updates and apps to download. For information about available settings, see [Delivery optimization settings for Intune](../delivery-optimization-settings.md).
+4. Choose **Settings** > **Configure**, and define how you want updates and apps to download. For information about available settings, see [Delivery optimization settings for Intune](delivery-optimization-settings.md).
 
 5. When finished, select **OK** > **Create** to save your changes.
 
@@ -62,7 +62,7 @@ The profile is created and is shown in the list. Next, [assign the profile](devi
 
 ## Remove Delivery Optimization from Windows 10 Update Rings
 
-Delivery Optimization was previously configured as part of Software Update Rings. Beginning in February of 2019, Delivery Optimization settings are configured as part of a Deliver Optimization device configuration profile, which includes additional settings that affect more than Software Update delivery to devices. If you haven’t already, remove the delivery optimization setting from your Update Rings by setting it to *Not configured*, and then use a Delivery Optimization profile to manage the larger range of available options.
+Delivery Optimization was previously configured as part of Software Update Rings. Beginning in February of 2019, Delivery Optimization settings are configured as part of a Deliver Optimization device configuration profile, which includes additional settings that affect more than Software Update delivery to devices. If you haven't already, remove the delivery optimization setting from your Update Rings by setting it to *Not configured*, and then use a Delivery Optimization profile to manage the larger range of available options.
 
 1. Create a Delivery Optimization device configuration profile:
 
@@ -94,4 +94,4 @@ Delivery Optimization was previously configured as part of Software Update Rings
 ## Next steps
 
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md) its status.  
-View the [delivery optimization settings](../delivery-optimization-settings.md) for Intune.
+View the [delivery optimization settings](delivery-optimization-settings.md) for Intune.

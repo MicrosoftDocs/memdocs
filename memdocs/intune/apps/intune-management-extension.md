@@ -19,7 +19,6 @@ ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 
 #ROBOTS:
 #audience:
-#ms.devlang:
 ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
@@ -227,4 +226,4 @@ To see if the device is auto-enrolled, you can:
 
 ## Next steps
 
-[Monitor](../device-profile-monitor.md) and [troubleshoot](../device-profile-troubleshoot.md) your profiles.
+[Monitor](../configuration/device-profile-monitor.md) and [troubleshoot](../configuration/device-profile-troubleshoot.md) your profiles.
