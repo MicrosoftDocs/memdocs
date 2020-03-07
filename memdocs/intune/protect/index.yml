@@ -49,7 +49,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Privacy and personal data
-            url: ../privacy-personal-data.md
+            url: privacy-personal-data.md
       - linkListType: concept
         links:
           - text: Data collection

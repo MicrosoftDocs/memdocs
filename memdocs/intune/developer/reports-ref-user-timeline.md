@@ -82,5 +82,5 @@ Any person wanting to see only those dimension entities that currently exist wou
 
 ## Next steps
 
-- To learn more about the **Current User** entity, see [Reference for current user entity](reports-ref-current-user.md).
+- To learn more about the **Current User** entity, see [Reference for current user entity](reports-ref-data-model.md).
 - To learn more about the **User** entity, see [Reference for user entity](reports-ref-user.md).

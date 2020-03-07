@@ -49,7 +49,6 @@ These areas contain the entities that are meaningful to your Intune environment.
 - [Policy](reports-ref-policy.md)
 - [Mobile App Management (MAM)](../apps/app-management.md)
 - [User](reports-ref-user.md)
-- [Current User](reports-ref-current-user.md)
 - [User Device Associations](reports-ref-user-device.md)
 
 ## Relationships: Star-schema model

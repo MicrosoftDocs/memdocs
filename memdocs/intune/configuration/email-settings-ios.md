@@ -37,7 +37,7 @@ This article lists and describes all the email settings available for devices ru
 [Create a device configuration profile](email-settings-configure.md).
 
 > [!NOTE]
-> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../ios-enroll.md).
+> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
 
 ## Exchange ActiveSync account settings
 

@@ -75,7 +75,7 @@ Endpoint Manager includes the following services:
 
 - **Azure AD Premium**: Azure AD is used by Endpoint Manager for devices, users, groups, dynamic groups, auto-enrollment, multi-factor authentication, and conditional access. These features are key to protecting devices, apps, and data.
 
-  For more information, see [add users](../users-add.md), [set up auto-enrollment](/intune/enrollment/windows-enroll.md), and [about conditional access](/intune/protect/conditional-access.md).
+  For more information, see [add users](/intune/fundamentals/users-add.md), [set up auto-enrollment](/intune/enrollment/windows-enroll.md), and [about conditional access](/intune/protect/conditional-access.md).
 
 - **Endpoint Manager admin center**: The [admin center](https://devicemanagement.microsoft.com) is a one-stop web site to create policies and manage your devices. It plugs-in other key device management services, including groups, security, conditional access, and reporting. This admin center also shows devices managed by Configuration Manager and Intune (in preview).
 

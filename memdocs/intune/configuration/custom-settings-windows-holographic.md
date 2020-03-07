@@ -177,4 +177,4 @@ Additionally, Intune doesn't support all of the settings listed in [CSPs support
 
 The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-Create a [custom profile on Windows 10 devices](../custom-settings-windows-10.md).
+Create a [custom profile on Windows 10 devices](custom-settings-windows-10.md).
