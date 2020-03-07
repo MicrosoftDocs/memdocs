@@ -30,7 +30,7 @@ Microsoft Defender ATP is a service in the [Windows Defender Security Center](ht
 ### <a name="bkmk_os"></a> Supported client operating systems
 Based on the version of Configuration Manager you're running, the following client operating systems can be onboarded:
 
-#### Configuration Manager version 1906 and prior
+#### Configuration Manager version 1910 and prior
 
 - Clients computers running Windows 10, version 1607 and later
 
