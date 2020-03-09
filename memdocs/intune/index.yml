@@ -15,7 +15,7 @@ highlightedContent:
   items:
     - title: What is Intune?
       itemType: overview
-      url: ./fundamentals/what-is-intune.md
+      url: /mem/intune/fundamentals/what-is-intune.md
     - title: What's new in Intune
       itemType: overview
       url: ./fundamentals/whats-new.md
