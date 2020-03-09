@@ -91,6 +91,20 @@ Starting in Configuration Manager version 1910, you'll see a node called **All M
    - [Manually deploy software updates](/configmgr/sum/deploy-use/manually-deploy-software-updates)
    - [Download software updates](/configmgr/sum/deploy-use/download-software-updates)
 
+## <a name="bkmk_edge-dash"></a> Microsoft Edge Management dashboard
+<!--3871913-->
+*(Introduced in version 2002)*
+Starting in Configuration Manager 2002, the Microsoft Edge Management dashboard provides you insights on the usage of Microsoft Edge and other browsers. In this dashboard, you can:
+
+- See how many of your devices have Microsoft Edge installed
+- See how many clients have different versions of Microsoft Edge installed
+- Have a view of the installed browsers across devices
+- Have a view of preferred browser by device
+
+From the **Software Library** workspace, click **Microsoft Edge Management** to see the dashboard. Change the collection for the graph data by clicking **Browse** and choosing another collection. By default your five largest collections are in the drop-down list. When you select a collection that isn't in the list, the newly selected collection takes the bottom spot on your drop-down list.
+
+[![Microsoft Edge Management dashboard](./media/3871913-microsoft-edge-dashboard.png)](./media/3871913-microsoft-edge-dashboard.png#lightbox)
+
 ## Next steps
 
 [Monitor applications](/configmgr/apps/deploy-use/monitor-applications-from-the-console)
