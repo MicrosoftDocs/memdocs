@@ -75,6 +75,7 @@ Use the Desktop Analytics portal to review any reported issues with assets that 
 
 6. Repeat this review for other assets.  
 
+For more information to help with this review process, see [Compatibility assessment](/configmgr/desktop-analytics/compat-assessment).
 
 ## Create software
 
