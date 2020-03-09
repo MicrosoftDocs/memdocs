@@ -2,7 +2,7 @@
 title: How to deploy to pilot
 titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics pilot group.
-ms.date: 03/03/2020
+ms.date: 03/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -35,7 +35,6 @@ Take the following actions for the additional recommended devices list:
 - **Add all to pilot**: Adds all of the recommended devices to the pilot group
 - **Add to pilot**: Only add individual devices
 - **Replace** any specific devices from the pilot
-- **Recalculate** when you're done making changes
 
 As you add devices from the **recommended**  to the **included** pilot list, the coverage and redundancy for your critical and  important assets in the pilot increases. A higher redundancy means the assets covered have a statistically significant number of devices included in your pilot.
 
