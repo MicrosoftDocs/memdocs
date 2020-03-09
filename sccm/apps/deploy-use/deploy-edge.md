@@ -94,6 +94,7 @@ Starting in Configuration Manager version 1910, you'll see a node called **All M
 ## <a name="bkmk_edge-dash"></a> Microsoft Edge Management dashboard
 <!--3871913-->
 *(Introduced in version 2002)*
+
 Starting in Configuration Manager 2002, the Microsoft Edge Management dashboard provides you insights on the usage of Microsoft Edge and other browsers. In this dashboard, you can:
 
 - See how many of your devices have Microsoft Edge installed
