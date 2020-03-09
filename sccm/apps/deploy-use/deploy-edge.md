@@ -101,6 +101,20 @@ Starting in Configuration Manager 2002, the Microsoft Edge Management dashboard 
 - Have a view of the installed browsers across devices
 - Have a view of preferred browser by device
 
+### Prerequisites for the dashboard
+
+Enable the following properties in the below [hardware inventory](/configmgr/core/clients/manage/inventory/extend-hardware-inventory) classes for the Microsoft Edge Management dashboard:
+
+- **Installed Software - Asset Intelligence (SMS_InstalledSoftware)**
+   - Software Code
+   - Product Name
+   - Product Version
+
+- **Default Browser (SMS_DefaultBrowser)**
+   - Browser Program ID
+
+### View the dashboard
+
 From the **Software Library** workspace, click **Microsoft Edge Management** to see the dashboard. Change the collection for the graph data by clicking **Browse** and choosing another collection. By default your five largest collections are in the drop-down list. When you select a collection that isn't in the list, the newly selected collection takes the bottom spot on your drop-down list.
 
 [![Microsoft Edge Management dashboard](./media/3871913-microsoft-edge-dashboard.png)](./media/3871913-microsoft-edge-dashboard.png#lightbox)
