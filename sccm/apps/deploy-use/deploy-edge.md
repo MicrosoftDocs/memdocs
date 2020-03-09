@@ -100,7 +100,7 @@ Starting in Configuration Manager 2002, the Microsoft Edge Management dashboard 
 - See how many of your devices have Microsoft Edge installed
 - See how many clients have different versions of Microsoft Edge installed
 - Have a view of the installed browsers across devices
-- Have a view of preferred browser by device
+- Have a view of preferred browser by device <!--5907383-->
 
 ### Prerequisites for the dashboard
 
