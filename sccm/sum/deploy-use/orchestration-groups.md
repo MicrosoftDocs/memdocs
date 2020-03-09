@@ -35,10 +35,18 @@ Members of an orchestration group can be any Configuration Manager client, not j
 
 ## Prerequisites
 
+### Site server and permission prerequisites
 - To see all of the orchestration groups and updates for those groups, your account needs to be a **Full Administrator**.
+   - Role based administration for orchestration groups currently isn't available.
 - Enable the **Orchestration Groups** feature. For more information, see [Enable optional features](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
    - When you enable **Orchestration Groups**, the site disables the **Server Groups** feature. This behavior avoids any conflicts between the two features.
-- Don't add a machine to more than one orchestration group.  
+
+### Client prerequisites
+- Upgrade the target devices to the latest version of the Configuration Manager client.
+- Members of an orchestration group should be assigned to the same site.
+   - Devices can be in more than one orchestration group but should not be duplicated in a single orchestration group.
+
+### Permissions
 
 ## Create an orchestration group
 
@@ -106,6 +114,7 @@ To delete the orchestration group, select it then click **Delete** in the ribbon
    - Orchestration starts when any client in the group tries to install any software update at deadline or during a maintenance window. It starts for the entire group, and makes sure that the devices update by following the orchestration group rules.
 - You can manually start orchestration by selecting it from the **Orchestration Group** node, then choosing **Start Orchestration** from the ribbon or right-click menu.
    [![Start Orchestration ](./media/3098816-start-orchestration.png)](./media/3098816-start-orchestration.png#lightbox)
+- When an orchestration group is in a *Failed* state, you can start it by using **Start Orchestration** button.  
 
 > [!TIP]
 > - Orchestration groups only apply to software update deployments. They don't apply to other deployments.
@@ -161,7 +170,7 @@ In the **Orchestration Group** node, select an orchestration group. In the ribbo
 
 ## Reset the orchestration state for a group member
 
-If you want to rerun orchestration on a group member, you can clear its state such as *Complete* or *Failed*. To clear the state, right-click on the Orchestration Group member and select **Reset Orchestration Group Member**. You can also click **Reset Orchestration Group Member** from the ribbon.
+If you want to rerun orchestration on a group member, you can clear its state such as *Complete* or *Failed*. To clear the state, right-click on the Orchestration Group member and select **Reset Orchestration Group Member**. You can also click **Reset Orchestration Group Member** from the ribbon. Before resetting the state, you should check the client to see why it failed and correct any issues found.
    [![Reset Orchestration Group Member](./media/3098816-reset-group-member.png)](./media/3098816-reset-group-member.png#lightbox)
 
 ## Log files
