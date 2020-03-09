@@ -36,16 +36,16 @@ conceptualContent:
         - url: ./intune/enrollment/index.yml
           itemType: overview
           text: Enroll devices   
-        - url: ./mem/intune/remote-actions/index.yml
+        - url: ./intune/remote-actions/index.yml
           itemType: overview
           text: Remotely manage devices   
-        - url: ./mem/intune/protect/index.yml
+        - url: ./intune/protect/index.yml
           itemType: overview
           text: Create compliance rules for users and devices 
-        - url: ./mem/intune/configuration/index.yml
+        - url: ./intune/configuration/index.yml
           itemType: overview
           text: Control device features and settings   
-        - url: ./mem/intune/apps/index.yml
+        - url: ./intune/apps/index.yml
           itemType: concept
           text: Manage and protect apps
     - title: Microsoft Endpoint Configuration Manager
