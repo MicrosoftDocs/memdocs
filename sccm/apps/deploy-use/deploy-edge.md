@@ -63,7 +63,7 @@ Create a Microsoft Edge application using the built-in application experience, w
 1. On the **Microsoft Edge Settings** page, select:
    - The channel to deploy
    - The version to deploy
-   - If you want to **Allow Microsoft Edge to automatically update the version of the client on the end user's device** (Added in version 2002).
+   - If you want to **Allow Microsoft Edge to automatically update the version of the client on the end user's device** (added in version 2002)
 1. On the **Deployment** page, decide if you want to deploy the application. If you select **Yes**, you can specify your deployment settings for the application. For more information about deployment settings, see [Deploy applications](/configmgr/apps/deploy-use/deploy-applications#bkmk_deploy-general).
 1. In **Software Center** on the client device, the user can see and install the application.
 
