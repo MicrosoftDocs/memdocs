@@ -36,75 +36,75 @@ conceptualContent:
   items:
     - title: Plan for Intune adoption
       links:
-        - url: /fundamentals/planning-guide.md
+        - url: ./fundamentals/planning-guide.md
           itemType: concept
           text: Intune planning guide 
-        - url: /fundamentals/migration-guide.md
+        - url: ./fundamentals/migration-guide.md
           itemType: concept
           text: Intune migration guide
-        - url: /fundamentals/migration-guide-communication-plan.md
+        - url: ./fundamentals/migration-guide-communication-plan.md
           itemType: concept
           text: Communication plan for your users
       footerLink:
         text: See more
-        url: /fundamentals/index.yml          
+        url: ./fundamentals/index.yml          
     - title: Set up Intune
       links:
-        - url: /fundamentals/setup-steps.md
+        - url: ./fundamentals/setup-steps.md
           itemType: how-to-guide
           text: Steps to set up Intune
-        - url: /fundamentals/supported-devices-browsers.md
+        - url: ./fundamentals/supported-devices-browsers.md
           itemType: reference
           text: Supported operating systems and browsers
-        - url: /fundamentals/role-based-access-control.md
+        - url: ./fundamentals/role-based-access-control.md
           itemType: reference
           text: Role-based access control
-        - url: /fundamentals/licenses.md
+        - url: ./fundamentals/licenses.md
           itemType: concept
           text: Intune licensing
       footerLink:
         text: See more
-        url: /fundamentals/index.yml        
+        url: ./fundamentals/index.yml        
     - title: Enroll devices
       links:
-        - url: /enrollment/device-enrollment.md
+        - url: ./enrollment/device-enrollment.md
           itemType: concept
           text: Device enrollment overview
-        - url: /enrollment/device-management-capabilities.md
+        - url: ./enrollment/device-management-capabilities.md
           itemType: concept  
           text: Enrolled device management capabilities
-        - url: /enrollment/windows-enrollment-methods.md
+        - url: ./enrollment/windows-enrollment-methods.md
           itemType: how-to-guide
           text: Intune enrollment methods for Windows devices
-        - url: /enrollment/windows-enroll.md
+        - url: ./enrollment/windows-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for Windows
-        - url: /enrollment/ios-enroll.md
+        - url: ./enrollment/ios-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for iOS devices        
-        - url: /enrollment/android-enroll.md
+        - url: ./enrollment/android-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for Android devices
       footerLink:
         text: See more
-        url: /enrollment/index.yml
+        url: ./enrollment/index.yml
     - title: Remotely manage devices
       links:
-        - url: /remote-actions/device-management.md
+        - url: ./remote-actions/device-management.md
           itemType: concept
           text: Device management overview
-        - url: /remote-actions/custom-notifications.md
+        - url: ./remote-actions/custom-notifications.md
           itemType: how-to-guide
           text: Send custom notifications
-        - url: /remote-actions/devices-wipe.md
+        - url: ./remote-actions/devices-wipe.md
           itemType: how-to-guide
           text: Remove devices
       footerLink:
         text: See more
-        url: /remote-actions/index.yml           
+        url: ./remote-actions/index.yml           
     - title: Create compliance rules for users and devices
       links:
-        - url: /protect/device-compliance-get-started.md
+        - url: ./protect/device-compliance-get-started.md
           itemType: concept
           text: Compliance overview
         - url: ./protect/use-network-locations.md

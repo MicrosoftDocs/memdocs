@@ -27,10 +27,10 @@ conceptualContent:
   items:
     - title: Microsoft Intune
       links:
-        - url: ./intune
+        - url: ./intune/index.yml
           itemType: overview
           text: Microsoft Intune documentation 
-        - url: ./intune/fundamentals
+        - url: ./intune/fundamentals/index.yml
           itemType: overview
           text: Plan for and set up Intune   
         - url: ./intune/enrollment
