@@ -8,8 +8,8 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 02/25/2020
-ms.topic: conceptual
-ms.service: 
+ms.topic: overview
+ms.service: microsoft-intune
 ms.subservice: 
 ms.localizationpriority: high
 ms.technology:
