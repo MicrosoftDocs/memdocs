@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -170,8 +170,8 @@ This feature applies to:
   
   - **Add**: Select to add your configuration keys.
 
-- **Keychain usage** (Kerberos only): Choose **Block** to prevent passwords from being saved and stored in the keychain. **Not configured** (default) allows passwords to be saved and stored in the keychain.  
-- **Face ID, Touch ID, or passcode** (Kerberos only): **Require** forces users to enter their Face ID, Touch ID, or Apple passcode to sign in to the domains you added. **Not configured** (default) doesn't require users to use biometrics or passcode to sign in.
+- **Keychain usage** (Kerberos only): Choose **Block** to prevent passwords from being saved and stored in the keychain. If blocked, user aren't prompted to save their password, and need to re-enter the password when the Kerberos ticket expires. **Not configured** (default) allows passwords to be saved and stored in the keychain. Users aren't prompted to re-enter their password when the ticket expires.
+- **Face ID, Touch ID, or passcode** (Kerberos only): **Require** forces users to enter their Face ID, Touch ID, or device passcode when the credential is needed to refresh the Kerberos ticket. **Not configured** (default) doesn't require users to use biometrics or device passcode to refresh the Kerberos ticket. If **Keychain usage** is blocked, then this setting doesn't apply.
 - **Default realm** (Kerberos only): Choose **Enable** to set the **Realm** value you entered as the default realm. **Not configured** (default) doesn't set a default realm.
 
   > [!TIP]
