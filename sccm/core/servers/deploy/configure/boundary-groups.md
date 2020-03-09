@@ -211,6 +211,50 @@ Common scenarios for enabling this option:
 
 - You have a single large boundary group for all remote office locations. Enable this option and clients only share content within the subnet at the remote office location, instead of risking sharing content between locations.
 
+Starting in version 2002, depending on the configuration of your network, you can exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet. By default, Configuration Manager excludes the default Teredo subnet (`2001:0000:%`).<!--3555777-->
+
+Import your subnet exclusion list as a comma-separated subnet string. Use the percent sign (`%`) as a wildcard character. On the top-level site server, set or read the **SubnetExclusionList** embedded property for the **SMS_HIERARCHY_MANAGER** component in the **SMS_SCI_Component** class. For more information, see [SMS_SCI_Component server WMI class](/configmgr/develop/reference/core/servers/configure/sms_sci_component-server-wmi-class).
+
+##### Sample PowerShell script to update the subnet exclusion list
+
+The following script is a sample way of changing this value. Append your subnets to the **PropertyValue** variable after `2001:0000:%,172.16.16.0`. It's a comma separated string. Run this script on the top-level site server in your hierarchy.
+
+```PowerShell
+$PropertyValue = "2001:0000:%,172.16.16.0"
+$PropertyName = "SubnetExclusionList"
+
+$providerMachine = Get-WmiObject -Class "SMS_ProviderLocation" -Namespace "root\sms"
+
+if ($providerMachine -is [system.array])
+{
+    $providerMachine=$providerMachine[0]
+}
+
+$SiteCode = $providerMachine.SiteCode
+
+$component = Get-WmiObject -Query 'select comp.* from sms_sci_component comp join SMS_SCI_SiteDefinition sdef on sdef.SiteCode=comp.SiteCode where sdef.ParentSiteCode="" and comp.componentname="SMS_HIERARCHY_MANAGER"' -ComputerName $providerMachine.Machine -Namespace root\sms\site_$SiteCode
+$properties = $component.props
+
+Write-host "Updating property for site " $SiteCode
+
+foreach ($property in $properties)
+{
+  if ($property.propertyname -like $PropertyName)
+  {
+    Write-host "Current value for SubnetExclusionList is  " $property.value1
+    $property.value1 = $PropertyValue
+    Write-host "Updating value for SubnetExclusionList to " $property.value1
+    break
+  }
+}
+
+$component.props = $properties
+$component.put()
+```
+
+> [!NOTE]
+> By default, Configuration Manager includes the Teredo subnet in this list. When you change the list, always read the existing value first. Append additional subnets to the list, and then set the new value.
+
 #### <a name="bkmk_bgoptions3"></a> Prefer distribution points over peers with the same subnet
 
 By default, the management point prioritizes peer cache sources at the top of the list of content locations. This setting reverses that priority for clients that are in the same subnet as the peer cache source.  

@@ -123,12 +123,9 @@ We've made it easier to navigate CMPivot entities. Starting in this technical pr
 
 <!-- 3555777 -->
 
-Boundary groups include the following option for peer downloads: During peer downloads, only use peers within the same subnet. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet and boundary group as the client. For more information on this option, see Boundary group options for peer downloads.
+Boundary groups include the following option for peer downloads: **During peer downloads, only use peers within the same subnet**. If you enable this option, the content location list from the management point only includes peer sources that are in the same subnet and boundary group as the client. Depending on the configuration of your network, you can now exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet.
 
-Depending on the configuration of your network, you can now exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet. By default, Configuration Manager excludes the default Teredo subnet (2001:0000:%).
-
-<!-- For more information, see [Boundary group options](/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions). -->
-
+For more information, see [Boundary group options](/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
 ## <a name="bkmk_client"></a> Client management
 
