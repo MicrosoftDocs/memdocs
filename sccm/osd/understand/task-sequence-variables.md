@@ -789,12 +789,12 @@ Specifies the name of a workgroup that the destination computer joins. The lengt
 
 (input)
 
-Specifies whether sysprep resets the product activation flag.
+Specifies whether sysprep keeps or resets the product activation flag.
 
 #### Valid values
 
-- `true`
-- `false` (default)
+- `true`: keep the activation flag
+- `false` (default): reset the activation flag
 
 ### <a name="OSDLocalAdminPassword"></a> OSDLocalAdminPassword
 
