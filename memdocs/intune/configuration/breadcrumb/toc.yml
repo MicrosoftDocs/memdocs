@@ -6,10 +6,14 @@
     tocHref: /enterprise-mobility-security/
     topicHref: /enterprise-mobility-security/
     items:
-    - name: Intune
-      tocHref: /intune/
-      topicHref: /intune/
+    - name: Microsoft Endpoint Manager
+      tocHref: /mem/
+      topicHref: /mem/
       items:
-      - name: Configuration
-        tocHref: /intune/protect/
-        topicHref: /intune/configuration/
+      - name: Intune
+        tocHref: /mem/intune/
+        topicHref: /mem/intune/
+        items:
+        - name: Configuration
+          tocHref: /mem/intune/protect/
+          topicHref: /mem/intune/configuration/
