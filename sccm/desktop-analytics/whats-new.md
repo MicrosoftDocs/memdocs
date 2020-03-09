@@ -2,7 +2,7 @@
 title: What's new in Desktop Analytics
 titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
-ms.date: 03/03/2020
+ms.date: 03/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -37,6 +37,12 @@ For more information, see the following articles:
 
 - [Global pilot](/configmgr/desktop-analytics/deploy-pilot#bkmk_GlobalPilot)
 - [How to create deployment plans](/configmgr/desktop-analytics/create-deployment-plans)
+
+### Identify compatibility safeguards
+
+<!-- 5746559 -->
+
+Windows compatibility data classifies some apps and drivers with a *safeguard*, which may cause the update to Windows 10 to fail or rollback. Desktop Analytics can now help you to identify these safeguards in advance, so that you can remediate the asset before you deploy the update. For more information, see [Compatibility assessment - Safeguards](/configmgr/desktop-analytics/compat-assessment#safeguards).
 
 ## January 2020
 

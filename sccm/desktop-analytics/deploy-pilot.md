@@ -85,6 +85,8 @@ Use the Desktop Analytics portal to review any reported issues with assets that 
 
 6. Repeat this review for other assets.  
 
+For more information to help with this review process, see [Compatibility assessment](/configmgr/desktop-analytics/compat-assessment).
+
 ## Create software
 
 Before you can deploy Windows, first create the software objects in Configuration Manager. For more information, see [Windows 10 in-place upgrade task sequence](https://docs.microsoft.com/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system).

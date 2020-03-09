@@ -107,7 +107,7 @@ The Configuration Manager documentation library, like most content on docs.micro
 
 2. To edit the source file, click the pencil icon.  
 
-3. Make changes in the markdown source. For more information, see [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/how-to-write-use-markdown).  
+3. Make changes in the markdown source. For more information, see [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/markdown-reference).  
 
 4. In the Propose file change section, enter the public commit comment describing *what* you changed. Then click **Propose file change**.  
 
