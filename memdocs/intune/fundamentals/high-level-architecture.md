@@ -19,7 +19,7 @@ ms.assetid: 3b992f64-fe34-4270-9730-bc6c65c308ed
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 #ms.reviewer: [ALIAS]
 #ms.suite: ems
 search.appverid: MET150

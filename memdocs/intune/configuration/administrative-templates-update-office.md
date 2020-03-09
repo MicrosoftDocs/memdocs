@@ -17,7 +17,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
@@ -57,7 +57,7 @@ Be sure to [enable Office365 ProPlus Automatic Updates](https://docs.microsoft.c
 2. Be sure to [assign the policy](device-profile-assign.md) to your Windows 10 devices. To test your policy sooner, you can also sync the policy:
 
     - [Sync the policy in Intune](../remote-actions/device-sync.md)
-    - [Manually sync the policy on the device](https://docs.microsoft.com/intune-user-help/sync-your-device-manually-windows#sync-from-settings-app)
+    - [Manually sync the policy on the device](https://docs.microsoft.com/user-help/sync-your-device-manually-windows#sync-from-settings-app)
 
 ## Check the Intune registry keys
 

@@ -19,7 +19,7 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150

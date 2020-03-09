@@ -19,7 +19,7 @@ ms.assetid: 95191d64-9895-4f2e-8c5b-f0e85be086d8
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
@@ -89,7 +89,7 @@ Depending on where you want to route the audit log data, you need one of the fol
 
             [Azure log analytics workspace](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) provides more details on these settings.
 
-    - **LOG** > **AuditLogs**: Choose this option to send the [Intune audit logs](../monitor-audit-logs.md) to your storage account, event hub, or log analytics. The audit logs show the history of every task that generates a change in Intune, including who did it and when.
+    - **LOG** > **AuditLogs**: Choose this option to send the [Intune audit logs](monitor-audit-logs.md) to your storage account, event hub, or log analytics. The audit logs show the history of every task that generates a change in Intune, including who did it and when.
 
       If you choose to use a storage account, then also enter how many days you want to keep the data (retention). To keep data forever, set **Retention (days)** to `0` (zero).
 

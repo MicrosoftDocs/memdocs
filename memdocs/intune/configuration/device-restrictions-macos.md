@@ -19,7 +19,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -37,10 +37,10 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-[Create a device restrictions configuration profile](../device-restrictions-configure.md).
+[Create a device restrictions configuration profile](device-restrictions-configure.md).
 
 > [!NOTE]
-> These settings apply to different enrollment types. For more information on the different enrollment types, see [macOS enrollment](../macos-enroll.md).
+> These settings apply to different enrollment types. For more information on the different enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
 
 ## General
 
@@ -74,7 +74,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
   To use this setting, set the **Screenshots** setting to **Not configured** (screenshots are allowed).
 
-- **Unprompted screen observation by Classroom app**: **Allow** lets teachers see their students’ screens without requiring the student to agree. **Not configured** (default) requires the student to agree before the teacher can see the screens.
+- **Unprompted screen observation by Classroom app**: **Allow** lets teachers see their students' screens without requiring the student to agree. **Not configured** (default) requires the student to agree before the teacher can see the screens.
 
   To use this setting, set the **Screenshots** setting to **Not configured** (screenshots are allowed).
 
@@ -112,7 +112,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
   **Not configured** (default) allows these features.
 
-- **Block password proximity requests**: Choose **Block** so a user’s device doesn't request passwords from nearby devices. **Not configured** (default) allows these password requests.
+- **Block password proximity requests**: Choose **Block** so a user's device doesn't request passwords from nearby devices. **Not configured** (default) allows these password requests.
 
 - **Block password sharing**: **Block** prevents sharing passwords between devices using AirDrop. **Not configured** (default) allows passwords to be shared.
 
@@ -180,6 +180,6 @@ To add apps to these lists, you can:
 
 ## Next steps
 
-[Assign the profile](../device-profile-assign.md) and [monitor its status](../device-profile-monitor.md).
+[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also restrict device features and settings on [iOS/iPadOS](../device-restrictions-ios.md) devices.
+You can also restrict device features and settings on [iOS/iPadOS](device-restrictions-ios.md) devices.

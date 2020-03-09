@@ -19,7 +19,7 @@ ms.assetid: aa7ecff7-8579-4009-8fd6-e17074df67de
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
@@ -69,7 +69,7 @@ The following list is an overview on how NAC integration works when integrated w
 8. Once the device is enrolled and compliant, NAC partner solution gets the state from Intune.
 9. Connection is successfully established which allows the device access to corporate resources.
 
-## Use NAC for VPN on your iOS devices  
+## Use NAC for VPN on your iOS/iPadOS devices  
 
 NAC is available on the following VPNs without enabling NAC in the VPN profile:
 

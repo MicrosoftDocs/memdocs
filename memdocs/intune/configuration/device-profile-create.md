@@ -19,7 +19,7 @@ ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
@@ -68,9 +68,9 @@ This article:
    - **Settings**: The following articles describe the settings for each profile type:
 
        - [Administrative templates](administrative-templates-windows.md)
-       - [Custom](../custom-settings-configure.md)
-       - [Delivery optimization](../delivery-optimization-windows.md)
-       - [Device features](../device-features-configure.md)
+       - [Custom](custom-settings-configure.md)
+       - [Delivery optimization](delivery-optimization-windows.md)
+       - [Device features](device-features-configure.md)
        - [Device restrictions](device-restrictions-configure.md)
        - [Edition upgrade and mode switch](edition-upgrade-configure-windows-10.md)
        - [Education](education-settings-configure.md)
@@ -83,7 +83,7 @@ This article:
        - [Preference file](preference-file-settings-macos.md)
        - [SCEP certificate](../protect/certificates-scep-configure.md)
        - [Trusted certificate](../protect/certificates-configure.md)
-       - [Update policies](../software-updates-ios.md)
+       - [Update policies](../protect/software-updates-ios.md)
        - [VPN](vpn-settings-configure.md)
        - [Wi-Fi](wi-fi-settings-configure.md)
        - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
@@ -132,9 +132,9 @@ To approach these scenarios, you:
 
 - If there are two profiles with the exact same settings, then the profile without an applicability rule is applied. 
 
-  For example, ProfileA targets the Windows 10 devices group, enables BitLocker, and doesn’t have an applicability rule. ProfileB targets the same Windows 10 devices group, enables BitLocker, and has an applicability rule to only apply the profile to Windows 10 Enterprise.
+  For example, ProfileA targets the Windows 10 devices group, enables BitLocker, and doesn't have an applicability rule. ProfileB targets the same Windows 10 devices group, enables BitLocker, and has an applicability rule to only apply the profile to Windows 10 Enterprise.
 
-  When both profiles are assigned, ProfileA is applied because it doesn’t have an applicability rule. 
+  When both profiles are assigned, ProfileA is applied because it doesn't have an applicability rule. 
 
 When you assign the profile to the groups, the applicability rules act as a filter, and only target the devices that meet your criteria.
 
@@ -194,4 +194,4 @@ When creating profiles, consider the following recommendations:
 
 ## Next steps
 
-[Assign the profile](../device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).

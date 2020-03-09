@@ -20,7 +20,7 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: craigma
 ms.suite: ems
 search.appverid: MET150

@@ -19,7 +19,7 @@ ROBOTS: NOINDEX,NOFOLLOW
 # optional metadata
 
 #audience:
-#ms.devlang:
+
 ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150

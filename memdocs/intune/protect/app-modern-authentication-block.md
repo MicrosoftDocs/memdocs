@@ -20,7 +20,7 @@ ms.assetid: 73db3070-d033-40fb-a8f1-58b9d198021e
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: chrisgre
 ms.suite: ems
 search.appverid: MET150

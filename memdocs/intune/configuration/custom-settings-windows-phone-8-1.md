@@ -19,7 +19,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -80,6 +80,6 @@ In the following example, Windows 8.1 phone devices are prevented from changing 
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](../device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-Create a [custom profile on Windows 10 devices](../custom-settings-windows-10.md).
+Create a [custom profile on Windows 10 devices](custom-settings-windows-10.md).

@@ -19,7 +19,7 @@ ms.assetid:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
@@ -61,7 +61,7 @@ To get logs after the profile is already deployed with Intune, connect the devic
 On the device, logs are saved in `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
 
 ### Get logs from email
-To get logs after the profile is already deployed with Intune, end users can email you the logs using an email app on the device. On the Zebra device, open the Company Portal app, and [send the logs](https://docs.microsoft.com/intune-user-help/send-logs-to-your-it-admin-by-email-android). Using the send logs feature also creates a PowerLift incident ID, which you can reference if contacting Microsoft support.
+To get logs after the profile is already deployed with Intune, end users can email you the logs using an email app on the device. On the Zebra device, open the Company Portal app, and [send the logs](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android). Using the send logs feature also creates a PowerLift incident ID, which you can reference if contacting Microsoft support.
 
 ## Read the logs
 

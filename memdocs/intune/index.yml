@@ -9,7 +9,7 @@ metadata:
   author: dougeby
   ms.author: dougeby
   manager: mtillman
-  ms.date: 09/16/2019
+  ms.date: 02/28/2020
 
 highlightedContent:
   items:
@@ -93,7 +93,6 @@ conceptualContent:
         - url: ./remote-actions/device-management.md
           itemType: concept
           text: Device management overview
-          text: Device management capabilities
         - url: ./remote-actions/custom-notifications.md
           itemType: how-to-guide
           text: Send custom notifications
@@ -230,13 +229,13 @@ additionalContent:
         - text: What's new in Intune for Education?
           url: https://docs.microsoft.com/intune-education/whats-new-in-edu
         - text: How is Intune for Education different from the full version?
-          url: introduction-intune-education.md
+          url: ./fundamentals/introduction-intune-education.md
       - title: Intune for Government
         links: 
         - text: Enterprise Mobility + Security for US Government service description
           url: https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description
         - text: US government endpoints for Intune
-          url: intune-us-government-endpoints.md
+          url: ./fundamentals/intune-us-government-endpoints.md
         - text: Azure Government site
           url: https://azure.microsoft.com/global-infrastructure/government/
       - title: Microsoft 365
@@ -280,4 +279,4 @@ additionalContent:
           summary: Get help on the Intune Customer Success site  
           url: https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess
 
-  footer: "Have feedback or want to contribute to docs? [See this resource](use-docs.md)!"
+  footer: "Have feedback or want to contribute to docs? [See this resource](./fundamentals/use-docs.md)!"

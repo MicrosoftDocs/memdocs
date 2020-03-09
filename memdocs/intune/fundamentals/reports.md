@@ -19,7 +19,7 @@ ms.assetid:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure

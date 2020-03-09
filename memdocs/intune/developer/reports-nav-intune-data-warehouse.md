@@ -18,7 +18,7 @@ ms.assetid: 701D6CE9-43F6-4A29-8E84-E2B59931C635
 # optional metadata
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
@@ -59,8 +59,8 @@ For more information, see [Get data from the Data Warehouse API with a REST clie
 
 The API requires authorization with Azure AD. Azure AD uses OAuth 2.0. Once authorized, you can get data from the API using an HTTP GET verb and contacting the exposed entity collections. For details see:
 
-- [Authorization](../reports-api-url.md)
-- [API URL Structure](../reports-api-url.md)
+- [Authorization](reports-api-url.md#authorization)
+- [API URL Structure](reports-api-url.md#api-url-structure)
 
 ## Intune Data Warehouse data model
 

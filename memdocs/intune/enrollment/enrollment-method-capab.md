@@ -20,20 +20,19 @@ ms.assetid:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 #ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.custom: seodec18
+ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ---
 
 # Intune enrollment method capabilities for Windows devices
 [!INCLUDE[azure_portal](../includes/azure_portal.md)]
 
-There are several methods to enroll your workforce’s devices in Intune. Each method has different best practices and capabilities, as shown in the tables below.
+There are several methods to enroll your workforce's devices in Intune. Each method has different best practices and capabilities, as shown in the tables below.
 
 ## Best practices by enrollment method
 | **Best practices** | **[Azure AD joined](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Azure AD joined with Autopilot (User driven mode)](enrollment-autopilot.md)** |**[Azure AD joined with Autopilot (Self deploying mode)](enrollment-autopilot.md)** |**[Bulk](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[Co-management](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)** |

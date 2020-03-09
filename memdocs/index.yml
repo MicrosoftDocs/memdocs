@@ -4,12 +4,12 @@ summary: Official product documentation for Microsoft Endpoint Manager
 
 metadata:
   services: service
-  ms.service: microsoft-endpoint-manager
+  ms.service: microsoft-intune
   ms.topic: hub-page
   author: dougeby
   ms.author: dougeby
   manager: mtillman
-  ms.date: 02/29/2020
+  ms.date: 03/09/2020
 
 highlightedContent:
   items:
@@ -21,38 +21,38 @@ highlightedContent:
       url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
     - title: "Tutorial: Walkthrough Intune in Microsoft Endpoint Manager"
       itemType: tutorial
-      url: https://docs.microsoft.com/en-us/intune/fundamentals/tutorial-walkthrough-endpoint-manager
-    - title: Microsoft Intune documentation
-      itemType: get-started
-      url: /intune
-    - title: Microsoft Endpoint Configuration Manager documentation
-      itemType: get-started
-      url: https://docs.microsoft.com/configmgr          
+      url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md
 
 conceptualContent:
   items:
     - title: Microsoft Intune
       links:
-        - url: /mem/intune/fundamentals
+        - url: ./intune/index.yml
+          itemType: overview
+          text: Microsoft Intune documentation 
+        - url: ./intune/fundamentals/index.yml
           itemType: overview
           text: Plan for and set up Intune   
-        - url: /mem/intune/enrollment
+        - url: ./intune/enrollment/index.yml
           itemType: overview
           text: Enroll devices   
-        - url: /mem/intune/remote-actions
+        - url: ./intune/remote-actions/index.yml
           itemType: overview
           text: Remotely manage devices   
-        - url: /mem/intune/protect
+        - url: ./intune/protect/index.yml
           itemType: overview
           text: Create compliance rules for users and devices 
-        - url: /mem/intune/configuration
+        - url: ./intune/configuration/index.yml
           itemType: overview
           text: Control device features and settings   
-        - url: /mem/intune/apps
+        - url: ./intune/apps/index.yml
           itemType: concept
           text: Manage and protect apps
     - title: Microsoft Endpoint Configuration Manager
       links:
+        - url: https://docs.microsoft.com/configmgr
+          itemType: get-started
+          text: Microsoft Endpoint Configuration Manager documentation
         - url: https://docs.microsoft.com/configmgr/comanage
           itemType: concept
           text: Manage device workloads in Configuration Manager and Intune
@@ -81,7 +81,7 @@ conceptualContent:
       links:
         - url: https://docs.microsoft.com/windows/deployment/windows-autopilot/
           itemType: concept
-          text: Windows Autopilot
+          text: Windows Autopilot documentation
         - url: /intune/enrollment/enrollment-autopilot.md
           itemType: how-to-guide
           text: "Intune: Enroll Windows devices using Windows Autopilot"

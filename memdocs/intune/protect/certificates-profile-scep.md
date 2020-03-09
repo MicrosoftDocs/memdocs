@@ -17,7 +17,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
@@ -132,7 +132,7 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
         > [!IMPORTANT]
         > - When you specify a variable, enclose the variable name in curly brackets { } as seen in the example, to avoid an error.  
         > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
-        > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn’t have an IMEI number, the profile fails to install.
+        > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.
 
    - **Subject alternative name**:
      Select how Intune automatically creates the subject alternative name (SAN) in the certificate request. Options for the SAN depend on the Certificate type you selected; either **User** or **Device**.
@@ -173,9 +173,9 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
         > [!IMPORTANT]
         > - When using a device certificate variable, enclose the variable name in curly brackets { }.
-        > - Don’t use curly brackets **{ }**, pipe symbols **|**, and semicolons **;**, in the text that follows the variable.
+        > - Don't use curly brackets **{ }**, pipe symbols **|**, and semicolons **;**, in the text that follows the variable.
         > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
-        > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the SAN of a SCEP profile and is assigned to a device that doesn’t have an IMEI number, the profile fails to install.
+        > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the SAN of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.
 
    - **Certificate validity period**:
 
@@ -246,7 +246,7 @@ When your subject name includes one of the special characters, use one of the fo
 
 **For example**, you have a Subject Name that appears as *Test user (TestCompany, LLC)*.  A CSR that includes a CN that has the comma between *TestCompany* and *LLC* presents a problem.  The problem can be avoided by placing quotes around the entire CN, or by removing of the comma from between *TestCompany* and *LLC*:
 
-- **Add quotes**: *CN=*”Test User (TestCompany, LLC)”,OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **Add quotes**: *CN=*"Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 - **Remove the comma**: *CN=Test User (TestCompany LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 
  However, attempts to escape the comma by using a backslash character will fail with an error in the CRP logs:
@@ -284,7 +284,7 @@ Assign SCEP certificate profiles the same way you [deploy device profiles](../co
 - Although you create and assign the trusted certificate profile and the SCEP certificate profile separately, both must be assigned. Without both installed on a device, the SCEP certificate policy fails. Ensure that any trusted root certificate profiles are also deployed to the same groups as the SCEP profile. For example, if you are deploying a SCEP certificate profile to a user group, the trusted root (and intermediate) certificate profile must also be deployed to that same user group.
 
 > [!NOTE]
-> On iOS devices, when a SCEP certificate profile or a PKCS certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the iOS device having multiple certificates delivered by the SCEP or PKCS certificate request. 
+> On iOS/iPadOS devices, when a SCEP certificate profile or a PKCS certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the iOS/iPadOS device having multiple certificates delivered by the SCEP or PKCS certificate request. 
 
 
 ## Next steps

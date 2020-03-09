@@ -19,7 +19,6 @@ ms.assetid: 4724d6e5-05e5-496c-9af3-b74f083141f8
 
 #ROBOTS:
 #audience:
-#ms.devlang:
 ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
@@ -106,6 +105,6 @@ When you assign this profile to Android Enterprise devices you manage, copy and 
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](../device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-Create a [custom profile on Android devices](../custom-settings-android.md).
+Create a [custom profile on Android devices](custom-settings-android.md).

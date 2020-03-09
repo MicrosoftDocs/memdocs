@@ -31,11 +31,11 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/intune/bread/toc.json",
+      "breadcrumb_path": "/mem/intune/bread/toc.json",
       "product_feedback_displaytext": "Intune Feedback",
       "product_feedback_url": "https://microsoftintune.uservoice.com/",
       "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/Intunedocs",
+      "feedback_github_repo": "MicrosoftDocs/memdocs",
       "feedback_product_url": "https://microsoftintune.uservoice.com/",  
       "brand": "Intune",
       "searchScope": ["Intune"]

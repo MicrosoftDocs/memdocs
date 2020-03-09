@@ -18,7 +18,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: ericor
 ms.suite: ems
 search.appverid: MET150
@@ -197,4 +197,4 @@ The eSIM profile is also removed when the device is [retired](../remote-actions/
   - **Cellular activation failure, contact mobile operator**: The activation code may not be activated within their network. Or, the profile download and cellular activation failed.
 
 ## Next steps
-[Configure device profiles](../device-profiles.md)
+[Configure device profiles](device-profiles.md)

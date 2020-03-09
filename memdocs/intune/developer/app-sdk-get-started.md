@@ -19,7 +19,7 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
@@ -112,7 +112,7 @@ Microsoft Intune collects data on usage statistics for your app.
 
 * **Intune App SDK for Android**: The Intune App SDK for Android does not control data collection from your app. The Company Portal application logs telemetry data by default. This data is sent to Microsoft Intune. As per Microsoft Policy, we do not collect any personally identifiable information (PII). 
 
-  * If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](https://docs.microsoft.com/intune-user-help/turn-off-microsoft-usage-data-collection-android). 
+  * If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](https://docs.microsoft.com/user-help/turn-off-microsoft-usage-data-collection-android). 
 
 ## Line-of-business app version numbers
 

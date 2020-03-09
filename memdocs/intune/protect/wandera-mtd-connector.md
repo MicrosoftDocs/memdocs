@@ -20,7 +20,7 @@ ms.assetid:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 #ms.reviewer: davidra
 #ms.suite: ems
 search.appverid: MET150
@@ -45,9 +45,9 @@ You can configure *conditional access* policies that are based on Wandera's risk
 
 ## How do Intune and Wandera Mobile Threat Defense help protect your company resources?  
 
-Wandera’s mobile app seamlessly installs using Microsoft Intune. This app captures file system, network stack, and device and application telemetry (where available). This information synchronizes to the Wandera cloud service to assess the device's risk for mobile threats. These risk level classifications are configurable to suit your needs in the Wandera console, RADAR.
+Wandera's mobile app seamlessly installs using Microsoft Intune. This app captures file system, network stack, and device and application telemetry (where available). This information synchronizes to the Wandera cloud service to assess the device's risk for mobile threats. These risk level classifications are configurable to suit your needs in the Wandera console, RADAR.
 
-The compliance policy in Intune includes a rule for MTD  based on Wandera’s risk assessment. When this rule is enabled, Intune evaluates device compliance with the policy that you enabled.
+The compliance policy in Intune includes a rule for MTD  based on Wandera's risk assessment. When this rule is enabled, Intune evaluates device compliance with the policy that you enabled.
 
 For devices that are noncompliant, access to resources like Office 365 can be blocked. Users on blocked devices receive guidance from the Wandera app to resolve the issue and regain access.
 
@@ -56,7 +56,7 @@ For devices that are noncompliant, access to resources like Office 365 can be bl
 The following platforms are supported for Wandera when enrolled in Intune:
 
 - Android 5.0 and later  
-- iOS 10.2 and later  
+- iOS 10.2 and later 
 
 For more information about platform and device, see the [Wandera website](https://www.wandera.com/mobile-threat-defense/).
 

@@ -17,7 +17,7 @@ ms.assetid: 585a2f17-106b-4f02-adf7-05f08a92dbc1
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -51,10 +51,10 @@ Intune provides the Company Portal app for users to access company data, enroll 
 
 Using the Company Portal app, you can also run the following actions:
 
-- [Remove a device from Intune](../intune-user-help/unenroll-your-device-from-intune-windows.md) using the Settings app or the Company Portal app
-- [Rename a device](../intune-user-help/rename-your-device-cpapp.md)
-- [Install apps](../intune-user-help/install-apps-cpapp-windows.md) on a device
-- [Sync devices manually](../intune-user-help/sync-your-device-manually-windows.md) from the Settings app or the Company Portal app
+- [Remove a device from Intune](../user-help/unenroll-your-device-from-intune-windows.md) using the Settings app or the Company Portal app
+- [Rename a device](../user-help/rename-your-device-cpapp.md)
+- [Install apps](../user-help/install-apps-cpapp-windows.md) on a device
+- [Sync devices manually](../user-help/sync-your-device-manually-windows.md) from the Settings app or the Company Portal app
 
 ## Compliance policy
 

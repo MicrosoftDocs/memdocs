@@ -20,13 +20,12 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: chmaguir
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.custom: seodec18
+ms.custom: intune-azure;seodec18 
 ms.collection: M365-identity-device-management
 ---
 

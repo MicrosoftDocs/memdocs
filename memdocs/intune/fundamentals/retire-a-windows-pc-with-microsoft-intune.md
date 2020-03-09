@@ -19,7 +19,7 @@ ms.assetid: 5c916182-d99c-44c5-a779-3f596f261c40
 # optional metadata
 
 #audience:
-#ms.devlang:
+
 ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
@@ -38,7 +38,7 @@ Use the following steps to retire desktops that you are managing as PCs by runni
 
 2. Select the devices you want to retire, and then choose **Retire/Wipe**.
 
-To re-enroll a PC into Intune, reinstall the software client on the PC using guidance in [Install the Windows PC client with Microsoft Intune](../install-the-windows-pc-client-with-microsoft-intune.md).
+To re-enroll a PC into Intune, reinstall the software client on the PC using guidance in [Install the Windows PC client with Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 If a PC cannot connect to Intune, a message is displayed in the **Dashboard** workspace.
 

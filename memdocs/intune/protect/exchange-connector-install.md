@@ -20,7 +20,7 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150

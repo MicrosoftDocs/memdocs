@@ -18,7 +18,7 @@ ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: sumitp
 #ms.suite: ems
 search.appverid: MET150
@@ -295,11 +295,11 @@ When you choose a failure row, more details are provided.
 ## Collect available data from mobile device
 
 Use the following resources to help collect device data when troubleshooting user's device issues:
-- [Send iOS/iPadOS enrollment errors to your IT administrator](../intune-user-help/send-errors-to-your-it-admin-ios.md)
-- [Help your company support fix device issues with verbose logging](../intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-- [Send Android logs to your company support using a USB cable](../intune-user-help/send-logs-to-your-it-admin-using-cable-android.md)
-- [Send Android diagnostic data logs to your IT administrator using email](../intune-user-help/send-logs-to-your-it-admin-by-email-android.md)
-- [Send Android enrollment errors to your IT administrator](../intune-user-help/send-logs-to-your-it-admin-by-email-android.md)
+- [Send iOS/iPadOS enrollment errors to your IT administrator](../user-help/send-errors-to-your-it-admin-ios.md)
+- [Help your company support fix device issues with verbose logging](../user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+- [Send Android logs to your company support using a USB cable](../user-help/send-logs-to-your-it-admin-using-cable-android.md)
+- [Send Android diagnostic data logs to your IT administrator using email](../user-help/send-logs-to-your-it-admin-by-email-android.md)
+- [Send Android enrollment errors to your IT administrator](../user-help/send-logs-to-your-it-admin-by-email-android.md)
 
 ## Next steps
 

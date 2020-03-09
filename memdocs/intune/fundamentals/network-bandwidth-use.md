@@ -20,7 +20,7 @@ ms.assetid: 0f737d48-24bc-44cd-aadd-f0a1d59f6893
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: kerimh
 ms.suite: ems
 search.appverid: MET150
@@ -48,7 +48,7 @@ This table lists the approximate size and frequency of common content that trave
 |Operations Manager agent|11 MB|**One time**<br /><br />Additional downloads are possible when there are updates for this content type.|
 |Policy agent|3 MB|**One time**<br /><br />Additional downloads are possible when there are updates for this content type.|
 |Remote Assistance via Microsoft Easy Assist agent|6 MB|**One time**<br /><br />Additional downloads are possible when there are updates for this content type.|
-|Daily client operations|6 MB|**Daily**<br /><br />The Intune client regularly communicates with the Intune service to check for updates and policies, and to report the client’s status to the service.|
+|Daily client operations|6 MB|**Daily**<br /><br />The Intune client regularly communicates with the Intune service to check for updates and policies, and to report the client's status to the service.|
 |Endpoint Protection malware definition updates|Varies<br /><br />Typically 40 KB to 2 MB|**Daily**<br /><br />Up to three times a day.|
 |Endpoint Protection engine update|5 MB|**Monthly**|
 |Software updates|Varies<br /><br />The size depends on the updates you deploy.|**Monthly**<br /><br />Typically, software updates release on the second Tuesday of each month.<br /><br />A newly enrolled or deployed computer can use more network bandwidth while downloading the full set of previously released updates.|
@@ -83,7 +83,7 @@ For information about using a proxy server to cache content, see the documentati
 During hours that you configure, you can use BITS on a Windows computer to reduce the network bandwidth. You can configure BITS policy on the **Network bandwidth** page of the Intune Agent policy.
 
 > [!NOTE]
-> For MDM management on Windows, only the OS’s management interface for the MobileMSI app type uses BITS to download. AppX/MsiX use their own non-BITS download stack and Win32 apps via the Intune agent use Delivery Optimization rather than BITS.
+> For MDM management on Windows, only the OS's management interface for the MobileMSI app type uses BITS to download. AppX/MsiX use their own non-BITS download stack and Win32 apps via the Intune agent use Delivery Optimization rather than BITS.
 
 To learn more about BITS and Windows computers, see [Background Intelligent Transfer Service](https://technet.microsoft.com/library/bb968799.aspx) in the TechNet Library.
 
@@ -111,10 +111,8 @@ When the Intune client is installed on computers, BranchCache and distributed ca
 If you use BranchCache, work with other administrators in your organization to manage Group Policy and Intune Firewall policy. Ensure they don't deploy policy that disables BranchCache or Firewall exceptions. For more about BranchCache, see [BranchCache Overview](https://technet.microsoft.com/library/hh831696.aspx).
 
 > [!NOTE]
-> You can use Microsoft Intune to manage Windows PCs either [as mobile devices with mobile device management (MDM)](../enrollment/windows-enroll.md) or as computers with the Intune software client. Microsoft recommends that customers [use the MDM management solution](../enrollment/windows-enroll.md) whenever possible. When managed this way, BranchCache is not supported. For more information, see [Compare managing Windows PCs as computers or mobile devices](../pc-management-comparison.md).
-
+> You can use Microsoft Intune to manage Windows PCs either [as mobile devices with mobile device management (MDM)](../enrollment/windows-enroll.md) or as computers with the Intune software client. Microsoft recommends that customers [use the MDM management solution](../enrollment/windows-enroll.md) whenever possible. When managed this way, BranchCache is not supported. For more information, see [Compare managing Windows PCs as computers or mobile devices](pc-management-comparison.md).
 
 ## Next steps
 
-[Review endpoints for Intune](../intune-endpoints.md)
-
+[Review endpoints for Intune](intune-endpoints.md)

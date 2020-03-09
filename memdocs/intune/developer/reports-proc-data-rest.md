@@ -18,7 +18,7 @@ ms.assetid: D6D15039-4036-446C-A58F-A5E18175720A
 # optional metadata
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
@@ -109,7 +109,7 @@ The endpoint follows the following format:
 For example, the **dates** entity looks like:
 `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 
-For more information, see [Intune Data Warehouse API endpoint](../reports-api-url.md).
+For more information, see [Intune Data Warehouse API endpoint](reports-api-url.md).
 
 ### Make the REST call
 
@@ -235,6 +235,6 @@ The following sample contains a simple REST client. The code uses the **httpClie
 
 ## Next steps
 
-You can find details on authorization, the API URL structure, and OData endpoints in [Use the Intune Data Warehouse API](../reports-api-url.md).
+You can find details on authorization, the API URL structure, and OData endpoints in [Use the Intune Data Warehouse API](reports-api-url.md).
 
 You can also refer to the Intune Data Warehouse Data Model to find the data entities contained in the API. For more information, see [Intune Data Warehouse API Data Model](reports-ref-data-model.md)

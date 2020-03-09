@@ -18,7 +18,7 @@ ms.assetid: c59514d7-1256-4576-9380-e7a0b85a0378
 # optional metadata
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150

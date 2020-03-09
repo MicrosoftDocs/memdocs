@@ -17,7 +17,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150

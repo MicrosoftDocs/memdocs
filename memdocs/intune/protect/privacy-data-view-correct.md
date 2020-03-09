@@ -20,7 +20,7 @@ ms.assetid: 1ba77bc7-505e-4eca-a49e-dcdaa75d0043
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
@@ -41,7 +41,7 @@ Intune admins can view some personal data based on their access permissions, but
 Admins can see end user personal information in various blades in the Intune UI. The following articles explain what information admins do and don’t have access to:
 - [See device details](../remote-actions/device-inventory.md) in Intune explains how you can review details about an end user’s device.
 - [Monitor app information and assignments](../apps/apps-monitor.md) explains how to see details about apps installed on an end user’s device.
-- The [What information can my company see when I enroll my device? article](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) gives end users a list of data that their company can and can’t see. It’s best to clearly tell your users what kind of data you’re collecting and why you’re collecting it. This article can be the first step in that transparency.
+- The [What information can my company see when I enroll my device? article](https://docs.microsoft.com/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) gives end users a list of data that their company can and can’t see. It’s best to clearly tell your users what kind of data you’re collecting and why you’re collecting it. This article can be the first step in that transparency.
 
 ### Who can view the data?
 

@@ -20,7 +20,7 @@ ms.assetid: ab396092-907a-44b7-a157-aabee62176a9
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: coferro
 ms.suite: ems
 search.appverid: MET150

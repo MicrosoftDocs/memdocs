@@ -20,13 +20,12 @@ ms.assetid: 439c33a6-e80c-4da9-ba09-a51fc36f62ad
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: tisilver
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.custom: seodec18
+ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ---
 
@@ -66,7 +65,7 @@ You can also enroll company-owned iOS/iPadOS devices with a [device enrollment m
 
 ## Device Enrollment Program
 
-Organizations can purchase iOS/iPadOS devices through Apple's Device Enrollment Program (DEP). DEP lets you deploy an enrollment profile “over the air” to bring devices into management. For more information, see [Device Enrollment Program](device-enrollment-program-enroll-ios.md).
+Organizations can purchase iOS/iPadOS devices through Apple's Device Enrollment Program (DEP). DEP lets you deploy an enrollment profile "over the air" to bring devices into management. For more information, see [Device Enrollment Program](device-enrollment-program-enroll-ios.md).
 
 ## User enrollment
 User Enrollment gives admins a subset of management options compared to other enrollment methods. For more information, see [User Enrollment supported actions, passwords, and other options](ios-user-enrollment-supported-actions.md) and [Set up iOS/iPadOS and iPadOS User Enrollment](ios-user-enrollment.md).
@@ -79,7 +78,7 @@ Apple School Manager is a device purchase and enrollment program for schools. Li
 
 You can enroll iOS/iPadOS devices with Apple Configurator running on a Mac computer. To prepare devices, you USB-connect them and install an enrollment profile. You can enroll devices with Apple Configurator in two ways:
 
-- Setup Assistant enrollment - Wipes the device, prepares it to run Setup Assistant, and installs the company's policies for the device’s new user.
+- Setup Assistant enrollment - Wipes the device, prepares it to run Setup Assistant, and installs the company's policies for the device's new user.
 - Direct enrollment - Doesn't wipe the device and enrolls the device with a predefined policy. This method is for devices with no user affinity.
 
 Learn more about [Apple Configurator enrollment](apple-configurator-enroll-ios.md).
@@ -106,7 +105,7 @@ User affinity is required to support the following:
 
 Devices that are configured with no user affinity do not support the Company Portal and should not have the app installed. The Company Portal is designed for users who have corporate credentials and require access to personalized corporate resources (like email). Devices that are enrolled with no user affinity aren't intended to have a dedicated user sign in. Kiosk, point of sale (POS), or shared-utility devices are typical use cases for devices that are enrolled with no user affinity.
 
-If user affinity is required, be sure that the device’s enrollment profile has **User Affinity** selected before enrolling the device. To change the affinity status on a device, you must retire the device and reenroll it.
+If user affinity is required, be sure that the device's enrollment profile has **User Affinity** selected before enrolling the device. To change the affinity status on a device, you must retire the device and reenroll it.
 
 ## See also
 

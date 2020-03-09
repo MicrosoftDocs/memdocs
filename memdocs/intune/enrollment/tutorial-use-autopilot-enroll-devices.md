@@ -21,7 +21,7 @@ Customer intent: As an Intune admin, I want to set up Windows Autopilot so that 
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: spshumwa
 ms.suite: ems
 search.appverid: MET150
@@ -42,13 +42,13 @@ In this tutorial, you'll learn how to:
 > * Assign the Autopilot deployment profile to the device group
 > * Distribute Windows devices to users
 
-If you don’t have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 For an overview of Autopilot benefits, scenarios, and prerequisites, see [Overview of Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
 
 
 ## Prerequisites
-- [Set up Windows automatic enrollment](../quickstart-setup-auto-enrollment.md)
+- [Set up Windows automatic enrollment](quickstart-setup-auto-enrollment.md)
 - [Azure Active Directory Premium subscription](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 

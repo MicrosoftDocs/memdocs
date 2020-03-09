@@ -18,7 +18,7 @@ ms.assetid: 48e9c41a-d2de-424e-9610-cfd1ad514210
 # optional metadata
 
 #audience:
-#ms.devlang:
+
 ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
@@ -36,7 +36,7 @@ ms.collection: M365-identity-device-management
 
 Microsoft Intune can help you to secure your managed computers in a number of ways, including the management of software updates that keep your computers up-to-date by ensuring the latest patches and software updates are quickly installed.
 
-If you have not yet installed the Intune client on your computers, see [Install the Windows PC client with Microsoft Intune](../install-the-windows-pc-client-with-microsoft-intune.md).
+If you have not yet installed the Intune client on your computers, see [Install the Windows PC client with Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 When new updates are available from Microsoft Update, or you have created a third-party update, and they are applicable to your managed computers, a notification is displayed on the **Overview** page of the **Updates** workspace. After you choose this notification link, you can then perform various operations like viewing more information about the update, approving or declining the update, and viewing the computers that will install the update if it is approved.
 
@@ -56,7 +56,7 @@ Before you begin to create and approve software updates, configure and deploy po
 
 2. Configure and deploy a **Microsoft Intune Agent Settings** policy for the update settings. You can use recommended settings or customize the settings. If you need more information about how to create and deploy policies, see [Common Windows PC management tasks with the Microsoft Intune computer client](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
-The following table shows the values you can configure in the policy and also the recommended values that will be used if you don’t customize the policy. You can find these settings in the **Updates** section.
+The following table shows the values you can configure in the policy and also the recommended values that will be used if you don't customize the policy. You can find these settings in the **Updates** section.
 
   |Policy setting|Details|
     |------------------|--------------------|
@@ -129,7 +129,7 @@ The new rule is shown in the **Automatic Approval Rules** section of the **Servi
 
 2. In the **Automatic Approval Rules** section, select a rule, and then do one of the following:
 
-    - To edit the rule, choose **Edit**, and then change the rule’s parameters in the **Update Auto Approval Rule Wizard**.
+    - To edit the rule, choose **Edit**, and then change the rule's parameters in the **Update Auto Approval Rule Wizard**.
 
     - To run the rule, choose **Run Selected**.
 

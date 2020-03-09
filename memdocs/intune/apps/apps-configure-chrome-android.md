@@ -20,7 +20,7 @@ ms.assetid:
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150

@@ -20,7 +20,7 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 #ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
@@ -32,9 +32,9 @@ ms.collection: M365-identity-device-management
 # What is device enrollment?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Intune lets you manage your workforce’s devices and apps and how they access your company data. To use this mobile device management (MDM), the devices must first be enrolled in the Intune service. When a device is enrolled, it's issued an MDM certificate. This certificate is used to communicate with the Intune service.
+Intune lets you manage your workforce's devices and apps and how they access your company data. To use this mobile device management (MDM), the devices must first be enrolled in the Intune service. When a device is enrolled, it's issued an MDM certificate. This certificate is used to communicate with the Intune service.
 
-As you can see in the following tables, there are several methods to enroll your workforce’s devices. Each method depends on the device's ownership (personal or corporate), device type (iOS, Windows, Android), and management requirements (resets, affinity, locking).
+As you can see in the following tables, there are several methods to enroll your workforce's devices. Each method depends on the device's ownership (personal or corporate), device type (iOS, Windows, Android), and management requirements (resets, affinity, locking).
 
 By default, devices for all platforms are allowed to enroll in Intune. However, you can [restrict devices by platform](enrollment-restrictions-set.md#create-a-device-type-restriction).
 
@@ -42,7 +42,7 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 
 | **Method** | **Reset Required** | [**User Affinity**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Locked** | **Details** |
 |:---:|:---:|:---:|:---:|:---:|
-| | Devices are wiped during enrollment. | Associates each device with a user.| If yes, users can’t unenroll devices. | |
+| | Devices are wiped during enrollment. | Associates each device with a user.| If yes, users can't unenroll devices. | |
 |**[BYOD](#bring-your-own-device)** | No| Yes | No | [More information](apple-mdm-push-certificate-get.md)|
 |**[DEM](#device-enrollment-manager)**| No |No |No | [More information](device-enrollment-program-enroll-ios.md)|
 |**[DEP](#apple-device-enrollment-program)**| Yes | Optional | Optional|[More information](device-enrollment-program-enroll-ios.md)|
@@ -72,14 +72,14 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 
 | **Personal** | **Enrollment Methods** | **Reset Required** | **User Affinity** | **Locked** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android Device Admin**|**User initiated via Company Portal** | No | Yes | No | [More information](https://docs.microsoft.com/intune-user-help/enroll-device-android-company-portal)|
+|**Android Device Admin**|**User initiated via Company Portal** | No | Yes | No | [More information](https://docs.microsoft.com/user-help/enroll-device-android-company-portal)|
 |**Android Enterprise Work Profile**|**User initiated via Company Portal**| No | Yes | No | [More information](android-work-profile-enroll.md)|
 
 
 | **Corporate** | **Enrollment Methods** | **Reset Required** | **User Affinity** | **Locked** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Android Device Admin**|**[DEM](#device-enrollment-manager) initiated via Company Portal**| No | No | No |[More information](device-enrollment-manager-enroll.md)|
-|**Android Device Admin**|**(Pre-declared IMEI or SN) User initiated via Company Portal**| No | Yes | No | [More information](./../corporate-identifiers-add.md)|
+|**Android Device Admin**|**(Pre-declared IMEI or SN) User initiated via Company Portal**| No | Yes | No | [More information](corporate-identifiers-add.md)|
 |**Android Device Admin with Zebra Mobility Extensions**|**User or [DEM](#device-enrollment-manager) initiated via Company Portal**| No | Yes if user initiated, No if [DEM](#device-enrollment-manager) initiated | No | [More information](../configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise Dedicated**|**NFC, Token, QR code, Zero Touch**| Yes | No | Configurable via policy | [More information](android-kiosk-enroll.md)|
 |**Android Enterprise Fully Managed**|**NFC, Token, QR code, Zero Touch**| Yes | Yes | Configurable via policy | [More information](android-dedicated-devices-fully-managed-enroll.md)|
@@ -95,7 +95,7 @@ Bring your own devices (BYOD) include personally-owned phones, tablets, and PCs.
 Device enrollment manager (DEM) is a special user account that's used to enroll and manage multiple corporate-owned devices. Managers can install the Company Portal and enroll many user-less devices. These types of devices are good for point-of-sale or utility apps, for example, but not for users who need to access email or company resources. Learn more about [DEM](device-enrollment-manager-enroll.md).
 
 ### Apple Device Enrollment Program
-Apple Device Enrollment Program (DEP) management lets you create and deploy policy “over the air” to iOS/iPadOS and macOS devices that are purchased and managed with DEP. The device is enrolled when users turn on the device for the first time and run Setup Assistant. This method supports iOS/iPadOS supervised mode, which enables a device to be configured with specific functionality.
+Apple Device Enrollment Program (DEP) management lets you create and deploy policy "over the air" to iOS/iPadOS and macOS devices that are purchased and managed with DEP. The device is enrolled when users turn on the device for the first time and run Setup Assistant. This method supports iOS/iPadOS supervised mode, which enables a device to be configured with specific functionality.
 
 Learn more about iOS/iPadOS DEP enrollment:
 

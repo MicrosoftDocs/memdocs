@@ -18,7 +18,7 @@ ms.assetid: 777484A7-09CE-4409-987F-76B3F87DFE93
 # optional metadata
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
@@ -43,4 +43,4 @@ The **userDeviceAssociation** entity contains user device associations in your o
 
 ## Next steps
 
-- Learn more about the [Intune Data Warehouse](../reports-nav-create-intune-reports.md).
+- Learn more about the [Intune Data Warehouse](reports-nav-create-intune-reports.md).

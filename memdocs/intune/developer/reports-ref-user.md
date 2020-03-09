@@ -18,7 +18,7 @@ ms.assetid: C29A6EEA-72B7-427E-9601-E05B408F3BB0
 # optional metadata
 #ROBOTS:
 #audience:
-#ms.devlang:
+
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
@@ -50,5 +50,5 @@ The **user** entity collection contains user data. These records include user st
 
 
 ## Next steps
-- You can use the **Current User** entity collection to limit the user data to users who are currently active. For more information, see [Reference for current user entity](../reports-ref-current-user.md).
+- You can use the **Current User** entity collection to limit the user data to users who are currently active. For more information, see [Reference for current user entity](reports-ref-data-model.md).
 - To learn more about how the data warehouse tracks a user's lifetime in Intune, see [User lifetime representation in the Intune Data Warehouse](reports-ref-user-timeline.md).

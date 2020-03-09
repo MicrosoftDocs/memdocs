@@ -19,7 +19,7 @@ ms.assetid: f0afda7e-f4c3-4bcd-b4bf-4304103cf73e
 # optional metadata
 
 #audience:
-#ms.devlang:
+
 ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
@@ -60,12 +60,11 @@ The Microsoft Intune Center is installed on all managed computers. You can confi
 
 See the following resources for information about policies and settings that you can configure for Windows PCs:
 
-- [Keep Windows PCs up-to-date with software updates in Microsoft Intune](../keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md) - These policies make managed computers check for, and download software updates from, Microsoft and from third parties. These updates do not include OS upgrades (e.g., upgrading from Windows 7 to Windows 10, or upgrades from one Windows 10 version to a later version).
+- [Keep Windows PCs up-to-date with software updates in Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md) - These policies make managed computers check for, and download software updates from, Microsoft and from third parties. These updates do not include OS upgrades (e.g., upgrading from Windows 7 to Windows 10, or upgrades from one Windows 10 version to a later version).
 
-- [Help secure Windows PCs with Endpoint Protection for Microsoft Intune](../help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md) - These settings include scan schedules and actions to take when malware is detected.
+- [Help secure Windows PCs with Endpoint Protection for Microsoft Intune](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md) - These settings include scan schedules and actions to take when malware is detected.
 
-- [Help protect Windows PCs using Windows Firewall policies in Microsoft Intune](../help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) - These policies simplify the administration of Windows Firewall settings on managed computers.
-
+- [Help protect Windows PCs using Windows Firewall policies in Microsoft Intune](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) - These policies simplify the administration of Windows Firewall settings on managed computers.
 
 ## See also
 
