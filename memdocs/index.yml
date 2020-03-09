@@ -27,13 +27,13 @@ conceptualContent:
   items:
     - title: Microsoft Intune
       links:
-        - url: ./mem/intune/index.yml
+        - url: ./intune/
           itemType: overview
           text: Microsoft Intune documentation 
-        - url: ./mem/intune/fundamentals/index.yml
+        - url: ./intune/fundamentals/
           itemType: overview
           text: Plan for and set up Intune   
-        - url: /mem/intune/enrollment
+        - url: ./intune/enrollment
           itemType: overview
           text: Enroll devices   
         - url: /mem/intune/remote-actions
