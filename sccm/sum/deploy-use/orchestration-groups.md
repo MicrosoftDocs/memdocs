@@ -37,16 +37,16 @@ Members of an orchestration group can be any Configuration Manager client, not j
 
 ### Site server and permission prerequisites
 - To see all of the orchestration groups and updates for those groups, your account needs to be a **Full Administrator**.
-   - Role based administration for orchestration groups currently isn't available.
+   - Role-based administration for orchestration groups currently isn't available.
 - Enable the **Orchestration Groups** feature. For more information, see [Enable optional features](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
    - When you enable **Orchestration Groups**, the site disables the **Server Groups** feature. This behavior avoids any conflicts between the two features.
 
 ### Client prerequisites
 - Upgrade the target devices to the latest version of the Configuration Manager client.
 - Members of an orchestration group should be assigned to the same site.
-   - Devices can be in more than one orchestration group but should not be duplicated in a single orchestration group.
+- Devices can't be in more than one orchestration group.
+   - Devices already in an orchestration group won't' be available to select when adding new members.
 
-### Permissions
 
 ## Create an orchestration group
 
@@ -59,7 +59,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
    - **Orchestration Group member timeout (in minutes)**: Time limit for a single device in the group to complete the update installation.
 
 1. On the **Member Selection** page, first specify the **Site code**. Then select **Add** to add device resources as members of this orchestration group. **Search** for devices by name, and then **Add** them. You can also filter your search to a single collection by using **Search in Collection**.  Select **OK** when you finish adding devices to the selected resources list.
-   - When selecting resources for the group, only valid clients are shown. Checks are made to verify the site code, that the client is installed, and that resources aren't duplicated.
+   - When selecting resources for the group, only valid clients are shown. Checks are made for verifying the site code, that the client is installed, and that resources aren't duplicated.
 
 1. On the **Rule Selection** page, select one of the following options:
 
@@ -110,11 +110,17 @@ To delete the orchestration group, select it then click **Delete** in the ribbon
 
 ## Start orchestration
 
-- [Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates) to a collection that contains the members of the orchestration group.
-   - Orchestration starts when any client in the group tries to install any software update at deadline or during a maintenance window. It starts for the entire group, and makes sure that the devices update by following the orchestration group rules.
-- You can manually start orchestration by selecting it from the **Orchestration Group** node, then choosing **Start Orchestration** from the ribbon or right-click menu.
+1. [Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates) to a collection that contains the members of the orchestration group.
+
+1. Orchestration starts when any client in the group tries to install any software update at deadline or during a maintenance window. It starts for the entire group, and makes sure that the devices update by following the orchestration group rules.
+1. You can manually start orchestration by selecting it from the **Orchestration Group** node, then choosing **Start Orchestration** from the ribbon or right-click menu.
+1. If an orchestration group is in a *Failed* state:
+   1. Determine why the orchestration failed and resolve any issues.
+   1. [Reset the orchestration state for group members](#bkmk_reset).
+   1. From the **Orchestration Group** nose, click the **Start Orchestration** button to restart orchestration.
+    reset that status it by using **Start Orchestration** button.  
    [![Start Orchestration ](./media/3098816-start-orchestration.png)](./media/3098816-start-orchestration.png#lightbox)
-- When an orchestration group is in a *Failed* state, you can start it by using **Start Orchestration** button.  
+
 
 > [!TIP]
 > - Orchestration groups only apply to software update deployments. They don't apply to other deployments.
@@ -168,7 +174,7 @@ In the **Orchestration Group** node, select an orchestration group. In the ribbo
 - **OG Unique ID**: Unique ID of the orchestration group the member belongs to.
 - **Resource ID**: Resource ID of the device.
 
-## Reset the orchestration state for a group member
+## <a name="bkmk_reset"></a> Reset the orchestration state for a group member
 
 If you want to rerun orchestration on a group member, you can clear its state such as *Complete* or *Failed*. To clear the state, right-click on the Orchestration Group member and select **Reset Orchestration Group Member**. You can also click **Reset Orchestration Group Member** from the ribbon. Before resetting the state, you should check the client to see why it failed and correct any issues found.
    [![Reset Orchestration Group Member](./media/3098816-reset-group-member.png)](./media/3098816-reset-group-member.png#lightbox)
