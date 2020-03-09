@@ -31,7 +31,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/mem/intune/bread/toc.json",
+      "breadcrumb_path": "/mem/breadcrumb/toc.json",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/memdocs",
       "feedback_product_url": "",  

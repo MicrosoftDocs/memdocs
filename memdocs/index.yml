@@ -4,12 +4,12 @@ summary: Official product documentation for Microsoft Endpoint Manager
 
 metadata:
   services: service
-  ms.service: microsoft-endpoint-manager
+  ms.service: microsoft-intune
   ms.topic: hub-page
   author: dougeby
   ms.author: dougeby
   manager: mtillman
-  ms.date: 02/29/2020
+  ms.date: 03/09/2020
 
 highlightedContent:
   items:
