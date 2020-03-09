@@ -213,6 +213,9 @@ Common scenarios for enabling this option:
 
 Starting in version 2002, depending on the configuration of your network, you can exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet. By default, Configuration Manager excludes the default Teredo subnet (`2001:0000:%`).<!--3555777-->
 
+> [!NOTE]
+> In version 2002, when you [expand a stand-alone primary site](/configmgr/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand) to add a central administration site (CAS), the subnet exclusion list reverts to the default. To work around this issue, after site expansion, run the PowerShell script to customize the subnet exclusion list on the CAS.<!-- 6309068 -->
+
 Import your subnet exclusion list as a comma-separated subnet string. Use the percent sign (`%`) as a wildcard character. On the top-level site server, set or read the **SubnetExclusionList** embedded property for the **SMS_HIERARCHY_MANAGER** component in the **SMS_SCI_Component** class. For more information, see [SMS_SCI_Component server WMI class](/configmgr/develop/reference/core/servers/configure/sms_sci_component-server-wmi-class).
 
 ##### Sample PowerShell script to update the subnet exclusion list
