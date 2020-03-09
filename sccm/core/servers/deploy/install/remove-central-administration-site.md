@@ -21,7 +21,7 @@ manager: dougeby
 Starting in version 2002, if the hierarchy consists of the central administration site (CAS) and a single child primary site, you can remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single site.
 
 > [!IMPORTANT]
-> In this version of Configuration Manager, this feature is pre-release and not enabled by default. It's currently available for Microsoft Premier customers. In the future, this feature will be available to all customers.
+> In this version of Configuration Manager, this feature is pre-release and not enabled by default. It's currently available for Microsoft Premier customers.
 >
 > To enable this feature, contact your technical account manager for assistance:
 >
@@ -100,7 +100,7 @@ If setup comes across an issue, use the wizard to retry the process.
 
 When setup is complete, it resets the primary site. For more information, see [Run a site reset](/configmgr/core/servers/manage/modify-your-infrastructure#bkmk_reset).
 
-### Monitor and verify
+## Monitor and verify
 
 Review the following logs during the setup process:
 
