@@ -49,7 +49,7 @@ Lookout's mobile app, **Lookout for work**, is installed and run on mobile devic
   - [Enable the MTD connector in Intune](../protect/mtd-connector-enable.md)
 
 - **Support for unenrolled devices** - Intune can use the risk assessment data from the Lookout for work app on unenrolled devices when you use Intune app protection policies. Admins can use this combination to help protect corporate data within a [Microsoft Intune protected app](../apps/apps-supported-intune-apps.md), Admins can also issue a block or selective wipe for corporate data on those unenrolled devices. To support using Lookout for work with unenrolled devices:
-  - [Add the MDT app to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md) on unenrolled devices
+  - [Add the MTD app to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md)
   - [Create a Mobile Threat Defense app protection policy](../protect/mtd-app-protection-policy.md)
   - [Enable the MTD connector in Intune for unenrolled devices](../protect/mtd-enable-unenrolled-devices.md)
 
