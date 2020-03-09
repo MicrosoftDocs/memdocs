@@ -32,9 +32,9 @@ To take full advantage of new Configuration Manager features, after you update t
 
 <!-- 3607277 -->
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+If your hierarchy consists of a central administration site (CAS) and a single child primary site, you can now remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single primary site.
 
-<!-- For more information, see [](). -->
+For more information, see [Remove the CAS](/configmgr/core/servers/deploy/install/remove-central-administration-site).
 
 ### New management insight rules from Microsoft Services
 
