@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -74,12 +74,12 @@ When malicious apps such as malware are detected on devices, you can block devic
 *Block when malicious apps are detected:*
 
 > [!div class="mx-imgBorder"]
-> ![Check Point MTD block when malicious apps are detected](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-MTD-2.PNG)
+> ![Check Point MTD block when malicious apps are detected](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-2.PNG)
 
 *Access granted on remediation:*
 
 > [!div class="mx-imgBorder"]
-> ![Check Point MTD access granted](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-MTD-3.PNG)
+> ![Check Point MTD access granted](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-3.PNG)
 
 ### Control access based on threat to network
 
@@ -88,12 +88,12 @@ Detect threats like **Man-in-the-middle** in network, and protect access to Wi-F
 *Block network access through Wi-Fi:*
 
 > [!div class="mx-imgBorder"]
-> ![Check Point MTD block network access through Wi-Fi](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-MTD-4.PNG)
+> ![Check Point MTD block network access through Wi-Fi](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-4.PNG)
 
 *Access granted on remediation:*
 
 > [!div class="mx-imgBorder"]
-> ![Check Point MTD Wi-Fi access granted](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-MTD-5.PNG)
+> ![Check Point MTD Wi-Fi access granted](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-5.PNG)
 
 ### Control access to SharePoint Online based on threat to network
 
@@ -102,12 +102,12 @@ Detect threats like **Man-in-the-middle** in network, and prevent synchronizatio
 *Block SharePoint Online when network threats are detected:*
 
 > [!div class="mx-imgBorder"]
-> ![Check Point MTD block SharePoint Online access](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-MTD-6.PNG)
+> ![Check Point MTD block SharePoint Online access](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-6.PNG)
 
 *Access granted on remediation:*
 
 > [!div class="mx-imgBorder"]
-> ![Check Point MTD SharePoint Online access granted](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-MTD-7.PNG)
+> ![Check Point MTD SharePoint Online access granted](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-7.PNG)
 
 <!-- ### Control access on unenrolled devices based on threats from malicious apps
 
