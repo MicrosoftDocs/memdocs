@@ -15,22 +15,22 @@ highlightedContent:
   items:
     - title: What is Intune?
       itemType: overview
-      url: /fundamentals/what-is-intune.md
+      url: ./fundamentals/what-is-intune.md
     - title: What's new in Intune
       itemType: overview
-      url: /fundamentals/whats-new.md
+      url: ./fundamentals/whats-new.md
     - title: Features in development
       itemType: overview
-      url: /fundamentals/in-development.md    
+      url: ./fundamentals/in-development.md    
     - title: Try Intune for free
       itemType: get-started
-      url: /fundamentals/free-trial-sign-up.md
+      url: ./fundamentals/free-trial-sign-up.md
     - title: Set up automatic enrollment for Windows 10 devices
       itemType: get-started
-      url: /enrollment/quickstart-setup-auto-enrollment.md
+      url: ./enrollment/quickstart-setup-auto-enrollment.md
     - title: Intune reports
       itemType: overview
-      url: /fundamentals/reports.md
+      url: ./fundamentals/reports.md
 
 conceptualContent:
   items:
