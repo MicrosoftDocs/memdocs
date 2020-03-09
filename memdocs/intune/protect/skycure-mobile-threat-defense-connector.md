@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,7 +20,7 @@ ms.assetid: df4ce3f6-a093-432c-ab86-7a83865e389e
 
 #ROBOTS:
 #audience:
-
+#ms.devlang:
 ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
@@ -45,6 +45,22 @@ You can enable SEP Mobile risk assessment through Intune device compliance polic
 
 > [!NOTE]
 > This Mobile Threat Defense vendor is not supported for unenrolled devices.
+
+## Supported platforms
+
+- **Android 4.1 and later**
+
+- **iOS 8 and later**
+
+## Pre-requisites
+
+- Azure Active Directory Premium
+
+- Microsoft Intune subscription
+
+- Symantec Endpoint Protection Mobile subscription
+
+For more information, check [Symantec website](https://www.skycure.com/skycure-microsoft-integration/).
 
 ## How do Intune and SEP Mobile help protect your company resources?
 
@@ -74,11 +90,11 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 - Accessing company apps
 
-**Block when malicious apps are detected:**
+*Block when malicious apps are detected:*
 
 ![Conceptual image of Malicious apps detected](./media/skycure-mobile-threat-defense-connector/symantec-arch-1.png)
 
-**Access granted on remediation:**
+*Access granted on remediation:*
 
 ![Image of Access granted on remediation after malicious apps detected](./media/skycure-mobile-threat-defense-connector/symantec-arch-2.png)
 
@@ -86,11 +102,11 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 Detect threats like **Man-in-the-middle** in network, and protect access to Wi-Fi networks based on the device risk.
 
-**Block network access through Wi-Fi:**
+*Block network access through Wi-Fi:*
 
 ![Block network access through Wi-Fi](./media/skycure-mobile-threat-defense-connector/symantec-arch-3.png)
 
-**Access granted on remediation:**
+*Access granted on remediation:*
 
 ![Access granted on remediation](./media/skycure-mobile-threat-defense-connector/symantec-arch-4.png)
 
@@ -98,29 +114,24 @@ Detect threats like **Man-in-the-middle** in network, and protect access to Wi-F
 
 Detect threats like **Man-in-the-middle** in network, and prevent synchronization of corporate files based on the device risk.
 
-**Block SharePoint Online when network threats are detected:**
+*Block SharePoint Online when network threats are detected:*
 
 ![Block SharePoint Online when network threats are detected](./media/skycure-mobile-threat-defense-connector/symantec-arch-5.png)
 
-**Access granted on remediation:**
+*Access granted on remediation:*
 
 ![Access granted on remediation for Sharepoint example](./media/skycure-mobile-threat-defense-connector/symantec-arch-6.png)
 
-## Supported platforms
+<!-- 
+### Control access on unenrolled devices based on threats from malicious apps
 
-- **Android 4.1 and later**
+When the Symantec Endpoint Protection Mobile Threat Defense solution considers a device to be infected:
+![App protection policy blocks due to detected malware](./media/skycure-mobile-threat-defense-connector/symantec-app-policy-block.png)
 
-- **iOS 8 and later**
+Access is granted on remediation:
 
-## Pre-requisites
-
-- Azure Active Directory Premium
-
-- Microsoft Intune subscription
-
-- Symantec Endpoint Protection Mobile subscription
-
-For more information, check [Symantec website](https://www.skycure.com/skycure-microsoft-integration/).
+![Access is granted on remediation for App protection policy](./media/skycure-mobile-threat-defense-connector/symantec-app-policy-remediated.png)
+-->
 
 ## Next steps
 

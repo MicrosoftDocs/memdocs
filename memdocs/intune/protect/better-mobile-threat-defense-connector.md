@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,7 +20,7 @@ ms.assetid:
 
 #ROBOTS:
 #audience:
-
+#ms.devlang:
 #ms.reviewer: [ALIAS]
 #ms.suite: ems
 search.appverid: MET150
@@ -39,53 +39,15 @@ You can configure Conditional Access policies based on Better Mobile risk assess
 
 The Better Mobile app is installed and run on mobile devices. This app captures file system, network stack, device, and application telemetry where available, and then sends the data to the Better Mobile cloud service to assess the device's risk for mobile threats.
 
-The Intune device compliance policy includes a rule for Mobile Threat Defense, which is based on the Better Mobile risk assessment. When this rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources like Exchange Online and SharePoint Online. Users also receive guidance from the Better Mobile app installed in their devices to resolve the issue and regain access to corporate resources.
+- **Support for enrolled devices** - Intune device compliance policy includes a rule for Mobile Threat Defense (MTD), which can use risk assessment information from Better Mobile. When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources like Exchange Online and SharePoint Online. Users also receive guidance from the Better Mobile app installed in their devices to resolve the issue and regain access to corporate resources. To support using Better Mobile with enrolled devices:
+  - [Add MTD apps to devices](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)
+  - [Create a device compliance policy that supports MTD](../protect/mtd-device-compliance-policy-create.md)
+  - [Enable the MTD connector in Intune](../protect/mtd-connector-enable.md)
 
-## Sample scenarios
-
-Here are some common scenarios.
-
-### Control access based on threats from malicious apps
-
-When malicious apps such as malware are detected on devices, you can block devices from the following actions until the threat is resolved:
-
-- Connecting to corporate e-mail
-
-- Syncing corporate files with the OneDrive for Work app
-
-- Accessing company apps
-
-**Block when malicious apps are detected:**
-
-![Image that shows malicious apps detected](./media/better-mobile-threat-defense-connector/better_mobile_maliciousapps_blocked.png)
-
-**Access granted on remediation:**
-
-![Malicious apps detected access granted](./media/better-mobile-threat-defense-connector/better_mobile_maliciousapps_unblocked.png)
-
-### Control access based on threat to network
-
-Detect threats to your network like **Man-in-the-middle** attacks, and protect access to Wi-Fi networks based on the device risk.
-
-**Block network access through Wi-Fi:**
-
-![Block network access through Wi-Fi](./media/better-mobile-threat-defense-connector/better_mobile_network_wifi_blocked.png)
-
-**Access granted on remediation:**
-
-![Image that shows access granted on remediation](./media/better-mobile-threat-defense-connector/better_mobile_network_wifi_unblocked.png)
-
-### Control access to SharePoint Online based on threat to network
-
-Detect threats to your network like **Man-in-the-middle** attacks, and prevent synchronization of corporate files based on the device risk.
-
-**Block SharePoint Online when network threats are detected:**
-
-![Block SharePoint Online when network threats are detected](./media/better-mobile-threat-defense-connector/better_mobile_network_spo_blocked.png)
-
-**Access granted on remediation:**
-
-![Access granted on remediation for Sharepoint example](./media/better-mobile-threat-defense-connector/better_mobile_network_spo_unblocked.png)
+- **Support for unenrolled devices** - Intune can use the risk assessment data from the Better Mobile app on unenrolled devices when you use Intune app protection policies. Admins can use this combination to help protect corporate data within a [Microsoft Intune protected app](../apps/apps-supported-intune-apps.md), Admins can also issue a block or selective wipe for corporate data on those unenrolled devices. To support using Better Mobile with unenrolled devices:
+  - [Add the MDT app to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md) on unenrolled devices
+  - [Create a Mobile Threat Defense app protection policy](../protect/mtd-app-protection-policy.md)
+  - [Enable the MTD connector in Intune for unenrolled devices](../protect/mtd-enable-unenrolled-devices.md)
 
 ## Supported platforms
 
@@ -102,6 +64,61 @@ Detect threats to your network like **Man-in-the-middle** attacks, and prevent s
 - Better Mobile Threat Defense subscription
 
   - For more information, see the [Better Mobile website](https://www.better.mobi/).
+
+## Sample scenarios
+
+Here are some common scenarios.
+
+### Control access based on threats from malicious apps
+
+When malicious apps such as malware are detected on devices, you can block devices from the following actions until the threat is resolved:
+
+- Connecting to corporate e-mail
+
+- Syncing corporate files with the OneDrive for Work app
+
+- Accessing company apps
+
+Block when malicious apps are detected:
+
+![Image that shows malicious apps detected](./media/better-mobile-threat-defense-connector/better-mobile-maliciousapps-blocked.png)
+
+Access is granted on remediation:
+
+![Malicious apps detected access granted](./media/better-mobile-threat-defense-connector/better-mobile-maliciousapps-unblocked.png)
+
+### Control access based on threat to network
+
+Detect threats to your network like **Man-in-the-middle** attacks, and protect access to Wi-Fi networks based on the device risk.
+
+Block network access through Wi-Fi:
+
+![Block network access through Wi-Fi](./media/better-mobile-threat-defense-connector/better-mobile-network-wifi-blocked.png)
+
+Access is granted on remediation:
+
+![Image that shows access granted on remediation](./media/better-mobile-threat-defense-connector/better-mobile-network-wifi-unblocked.png)
+
+### Control access to SharePoint Online based on threat to network
+
+Detect threats to your network like **Man-in-the-middle** attacks, and prevent synchronization of corporate files based on the device risk.
+
+Block SharePoint Online when network threats are detected:
+
+![Block SharePoint Online when network threats are detected](./media/better-mobile-threat-defense-connector/better-mobile-network-spo-blocked.png)
+
+Access granted on remediation:
+
+![Access granted on remediation for Sharepoint example](./media/better-mobile-threat-defense-connector/better-mobile-network-spo-unblocked.png)
+
+### Control  access on unenrolled devices based on threats from malicious apps
+
+When the BETTER Mobile Threat Defense solution considers a device to be infected:
+![App protection policy blocks due to detected malware](./media/better-mobile-threat-defense-connector/better-mobile-app-policy-block.png)
+
+Access is granted on remediation:
+
+![Access is granted on remediation for App protection policy](./media/better-mobile-threat-defense-connector/better-mobile-app-policy-remediated.png)
 
 ## Next steps
 

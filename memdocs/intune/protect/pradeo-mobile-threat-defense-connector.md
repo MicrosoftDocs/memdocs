@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 03/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,7 +20,7 @@ ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 
 #ROBOTS:
 #audience:
-
+#ms.devlang:
 #ms.reviewer: [ALIAS]
 #ms.suite: ems
 search.appverid: MET150
@@ -37,6 +37,22 @@ You can configure Conditional Access policies based on Pradeo risk assessment en
 
 > [!NOTE]
 > This Mobile Threat Defense vendor is not supported for unenrolled devices.
+
+## Supported platforms
+
+- **Android 4.0.3 and later**
+
+- **iOS 7 and later**
+
+## Prerequisites
+
+- Azure Active Directory Premium
+
+- Microsoft Intune subscription
+
+- Pradeo Security for Mobile Threat Defense subscription
+
+  - For more information, see the [Pradeo website](https://www.pradeo.com/en-US/mobile-threat-protection).
 
 ## How do Intune and Pradeo help protect your company resources?
 
@@ -58,53 +74,49 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 - Accessing company apps
 
-**Block when malicious apps are detected:**
+*Block when malicious apps are detected:*
 
-![Conceptual image of Malicious apps detected](./media/pradeo-mobile-threat-defense-connector/pradeo_maliciousapps_blocked.png)
+![Conceptual image of Malicious apps detected](./media/pradeo-mobile-threat-defense-connector/pradeo-maliciousapps-blocked.png)
 
-**Access granted on remediation:**
+*Access granted on remediation:*
 
-![Malicious apps detected access granted](./media/pradeo-mobile-threat-defense-connector/pradeo_maliciousapps_unblocked.png)
+![Malicious apps detected access granted](./media/pradeo-mobile-threat-defense-connector/pradeo-maliciousapps-unblocked.png)
 
 ### Control access based on threat to network
 
 Detect threats to your network like **Man-in-the-middle** attacks, and protect access to Wi-Fi networks based on the device risk.
 
-**Block network access through Wi-Fi:**
+*Block network access through Wi-Fi:*
 
-![Block network access through Wi-Fi](./media/pradeo-mobile-threat-defense-connector/pradeo_network_wifi_blocked.png)
+![Block network access through Wi-Fi](./media/pradeo-mobile-threat-defense-connector/pradeo-network-wifi-blocked.png)
 
-**Access granted on remediation:**
+*Access granted on remediation:*
 
-![Conceptual image of Access granted on remediation](./media/pradeo-mobile-threat-defense-connector/pradeo_network_wifi_unblocked.png)
+![Conceptual image of Access granted on remediation](./media/pradeo-mobile-threat-defense-connector/pradeo-network-wifi-unblocked.png)
 
 ### Control access to SharePoint Online based on threat to network
 
 Detect threats to your network like **Man-in-the-middle** attacks, and prevent synchronization of corporate files based on the device risk.
 
-**Block SharePoint Online when network threats are detected:**
+*Block SharePoint Online when network threats are detected:*
 
-![Block SharePoint Online when network threats are detected](./media/pradeo-mobile-threat-defense-connector/pradeo_network_spo_blocked.png)
+![Block SharePoint Online when network threats are detected](./media/pradeo-mobile-threat-defense-connector/pradeo-network-spo-blocked.png)
 
-**Access granted on remediation:**
+*Access granted on remediation:*
 
-![Conceptual image of Access granted on remediation for Sharepoint example](./media/pradeo-mobile-threat-defense-connector/pradeo_network_spo_unblocked.png)
+![Conceptual image of Access granted on remediation for Sharepoint example](./media/pradeo-mobile-threat-defense-connector/pradeo-network-spo-unblocked.png)
 
-## Supported platforms
+<!-- 
+### Control access on unenrolled devices based on threats from malicious apps
 
-- **Android 4.0.3 and later**
+When the Pradeo Mobile Threat Defense solution considers a device to be infected:
 
-- **iOS 7 and later**
+![App protection policy blocks due to detected malware](./media/pradeo-mobile-threat-defense-connector/pradeo-app-policy-block.png)
 
-## Prerequisites
+Access is granted on remediation:
 
-- Azure Active Directory Premium
-
-- Microsoft Intune subscription
-
-- Pradeo Security for Mobile Threat Defense subscription
-
-  - For more information, see the [Pradeo website](https://www.pradeo.com/en-US/mobile-threat-protection).
+![Access is granted on remediation for App protection policy](./media/pradeo-mobile-threat-defense-connector/pradeo-app-policy-remediated.png)
+-->
 
 ## Next steps
 
