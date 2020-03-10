@@ -1,0 +1,52 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "intune-azure/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/media/**",
+          "**/*.png",
+          "**/*.gif",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "intune-azure/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "breadcrumb_path": "/mem/breadcrumb/toc.json",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/memdocs",
+      "feedback_product_url": "",  
+      "brand": "Intune",
+      "searchScope": ["Intune"]
+    },
+    "fileMetadata": {
+      "featureFlags": {
+        "*.md" : [
+          "show_binary_rating"
+        ]
+      }
+    },
+    "template": [],
+    "dest": "intune-azure",
+    "markdownEngineName": "markdig"
+  }
+}
