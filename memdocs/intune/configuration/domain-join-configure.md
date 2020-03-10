@@ -26,9 +26,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-## Configuration Domain Join settings for hybrid Azure AD joined devices in Microsoft Intune
+# Configuration Domain Join settings for hybrid Azure AD joined devices in Microsoft Intune
 
-Many environments use on-premises Active Directory (AD). You can join your AD domain-joined devices to Azure AD. These devices are called hybrid Azure AD joined devices. Using Windows Autopilot, you can [enroll hybrid Azure AD joined](../enrollment/windows-autopilot-hybrid.md) devices in Intune. To enroll, you also need a **Domain Join** configuration profile.
+Many environments use on-premises Active Directory (AD). When AD domain-joined devices are also joined to Azure AD, they're called hybrid Azure AD joined devices. Using Windows Autopilot, you can [enroll hybrid Azure AD joined devices](../enrollment/windows-autopilot-hybrid.md) in Intune. To enroll, you also need a **Domain Join** configuration profile.
 
 A **Domain Join** configuration profile includes on-premises Active Directory domain information. When devices are provisioning (and typically offline), this profile deploys the AD domain details so devices know which on-premises domain to join. If you don't create a domain join profile, these devices might fail to deploy.
 
@@ -38,7 +38,7 @@ This feature applies to:
 - Hybrid Azure AD joined devices
 - Hybrid deployment with Autopilot + Intune
 
-This article shows you how to create a domain join profile for a hybrid Autopilot deployment. You can also see all available settings.
+This article shows you how to create a domain join profile for a hybrid Autopilot deployment. You can also see the available settings.
 
 ## Create the profile
 
@@ -61,7 +61,7 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
 
 5. When you're done, select **OK** > **Create** to save your changes.
 
-The profile is created and shown on the profiles list. It's also ready for you to [deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](../enrollment/windows-autopilot-hybrid.md).
+The profile is created and shown on the profiles list. It's now ready for you to [deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](../enrollment/windows-autopilot-hybrid.md).
 
 ## Next steps
 
