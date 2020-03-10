@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,8 +30,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # Apply features and settings on your devices using device profiles in Microsoft Intune
-
-
 
 Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android, and Windows. Then, use Intune to apply or "assign" the profile to the devices.
 
@@ -121,6 +119,14 @@ This feature supports:
 - macOS
 - Windows 10 and later
 - Windows 10 Team
+
+## Domain join
+
+[Domain join](domain-join-configure.md) configures on-premises Active Directory domain information. This information is deployed to hybrid Azure AD joined devices when provisioned using Windows Autopilot and Intune. This profile tells devices which domain and OU to join.
+
+This feature supports:
+
+- Windows 10 and later
 
 ## Edition upgrade
 
