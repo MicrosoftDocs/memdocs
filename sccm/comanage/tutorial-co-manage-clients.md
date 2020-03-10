@@ -111,7 +111,7 @@ To configure Azure AD Connect, you need credentials of a global administrator fo
 
 If you experience issues with completing hybrid Azure AD join for domain joined Windows devices, see [Troubleshooting hybrid Azure AD join for Windows current devices](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
 
-## Configure Client Settings to direct clients register with Azure AD
+## Configure Client Settings to direct clients to register with Azure AD
 
 Use Client Settings to configure Configuration Manager clients to automatically register with Azure AD.  
 
@@ -147,7 +147,7 @@ Automatic enrollment also lets users enroll their Windows 10 devices to Intune. 
 4. Return to **Mobility (MDM and MAM)** and then select **Microsoft Intune Enrollment**.  
 
     > [!NOTE]
-    > Some tenants may not have this options to configure.<!-- SCCMDocs#1230 -->
+    > Some tenants may not have these options to configure.<!-- SCCMDocs#1230 -->
     >
     > **Microsoft Intune** is how you configure the MDM app for Azure AD. **Microsoft Intune Enrollment** is a specific Azure AD app that's created when you apply multi-factor authentication policies for iOS and Android enrollment. For more information, see [Require multi-factor authentication for Intune device enrollments](https://docs.microsoft.com/intune/enrollment/multi-factor-authentication).
 
