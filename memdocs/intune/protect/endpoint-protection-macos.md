@@ -120,7 +120,7 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
  
   **Default**: *Varies* - When the setting *Disable prompt at sign out* is set to **Not configured**, this setting defaults to **Not configured**. When *Disable prompt at sign out* is set to **Disable**, this setting defaults to **1** and a value of **Not configured** isn't an option.
 
-- **Hide recovery key**
+- **Hide recovery key**  
   Choose to hide the personal key from a device user during FileVault 2 encryption. Later, device users can view a personal recovery key for an encrypted macOS device from the iOS company portal app or from the company portal website. To view the key, from the app or website, go to device details and select *get recovery key*.
 
   - **Not configured** – The personal key is visible to the device user during encryption.
