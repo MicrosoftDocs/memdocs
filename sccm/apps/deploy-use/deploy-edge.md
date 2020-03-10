@@ -98,7 +98,8 @@ Starting in Configuration Manager version 1910, you'll see a node called **All M
 Starting in Configuration Manager 2002, the Microsoft Edge Management dashboard provides you insights on the usage of Microsoft Edge and other browsers. In this dashboard, you can:
 
 - See how many of your devices have Microsoft Edge installed
-- See how many clients have different versions of Microsoft Edge installed
+- See how many clients have different versions of Microsoft Edge installed.
+   - This chart doesn't include Canary Channel.
 - Have a view of the installed browsers across devices
 - Have a view of preferred browser by device <!--5907383-->
 
@@ -113,6 +114,10 @@ Enable the following properties in the below [hardware inventory](/configmgr/cor
 
 - **Default Browser (SMS_DefaultBrowser)**
    - Browser Program ID
+
+- **SMS_BrowserUsage (SMS_BrowserUsage)**
+   - BrowserName
+   - UsagePercentage
 
 ### View the dashboard
 
