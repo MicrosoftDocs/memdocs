@@ -1,0 +1,93 @@
+### YamlMime:Landing
+
+title: Microsoft Intune fundamentals
+summary: Microsoft Intune is a cloud-based service that helps enable your workforce to be productive while keeping your corporate data protected. Learn about planning, migration, and set up fundamentals for Intune.
+metadata:
+  title: Intune fundamentals
+  description: Learn about planning, migration, and set up fundamentals for Intune.
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: fundamentals
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: dougeby
+  ms.author: erikre
+  ms.manager: dougeby
+  ms.date: 12/05/2019  
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: About Microsoft Intune
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: What is Intune?
+        url: what-is-intune.md
+      - text: What's New
+        url: whats-new.md
+      - text: Features in development
+        url: in-development.md
+    - linkListType: tutorial
+      links: 
+      - text: Walkthrough Intune in Microsoft Endpoint Manager
+        url: tutorial-walkthrough-endpoint-manager.md 
+      - text: Walkthrough Intune in the Azure portal
+        url: tutorial-walkthrough-intune-portal.md       
+    - linkListType: concept
+      links:
+        - text: What is device management?
+          url: what-is-device-management.md
+        - text: High-level architecture
+          url: high-level-architecture.md
+        - text: Common ways to use Intune
+          url: common-scenarios.md
+        - text: Technology decisions for BYOD with EMS
+          url: byod-technology-decisions.md
+ 
+  # Card (optional)
+  - title: Intune adoption
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Plan communications
+        url: migration-guide-communication-plan.md
+      - text: Planning guide
+        url: planning-guide.md
+      - text: Migration guide
+        url: migration-guide.md
+      - text: Intune Adoption Kit
+        url: https://www.microsoft.com/download/details.aspx?id=58348
+
+  # Card (optional)
+  - title: Set up Intune
+    linkLists:
+    - linkListType: quickstart
+      links: 
+      - text: Try Intune for free
+        url: free-trial-sign-up.md  
+    - linkListType: concept
+      links:
+      - text: Supported configurations
+        url: supported-devices-browsers.md
+      - text: Network configuration requirements
+        url: network-bandwidth-use.md
+      - text: Intune network endpoints
+        url: intune-endpoints.md
+      - text: Role-based access control
+        url: role-based-access-control.md
+      - text: Intune licenses
+        url: licenses.md
+    - linkListType: how-to-guide
+      links:
+      - text: Steps to set up Intune
+        url: setup-steps.md
+      - text: Add users
+        url: users-add.md
+      - text: Add groups
+        url: groups-add.md
+      - text: Use scope tags
+        url: scope-tags.md
