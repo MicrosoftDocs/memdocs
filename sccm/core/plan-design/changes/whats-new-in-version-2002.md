@@ -36,13 +36,28 @@ If your hierarchy consists of a central administration site (CAS) and a single c
 
 For more information, see [Remove the CAS](/configmgr/core/servers/deploy/install/remove-central-administration-site).
 
-### New management insight rules from Microsoft Services
+### New management insight rules
 
-<!-- 3607758 -->
+This release includes the following management insight rules:
 
-This release includes additional management insight rules courtesy of Microsoft Premier Field Engineering. These rules are a sample of the many more checks that Microsoft Premier provides in the Services Hub.
+- Nine rules in the **Configuration Manager Assessment** group courtesy of Microsoft Premier Field Engineering. These rules are a sample of the many more checks that Microsoft Premier provides in the Services Hub.<!-- 3607758 -->
 
-<!-- For more information, see [Management insights](/configmgr/core/servers/manage/management-insights). -->
+  - Active Directory Security Group Discovery is configured to run too frequently
+  - Active Directory System Discovery is configured to run too frequently
+  - Active Directory User Discovery is configured to run too frequently
+  - Collections limited to All Systems or All Users
+  - Heartbeat Discovery is disabled
+  - Long running collection queries enabled for incremental updates
+  - Reduce the number of applications and packages on distribution points
+  - Secondary site installation issues
+  - Update all sites to the same version
+
+- Two additional rules in the **Cloud Services** group to help you configure your site for adding secure HTTPS communication:<!-- 6268489 -->
+
+  - Sites that don't have proper HTTPS configuration
+  - Devices not uploaded to Azure AD
+
+For more information, see [Management insights](/configmgr/core/servers/manage/management-insights).
 
 ### Improvements to administration service
 
