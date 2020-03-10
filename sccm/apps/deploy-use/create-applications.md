@@ -33,6 +33,7 @@ Create applications using the following methods:
 This article also includes the following information to configure a deployment type:  
 
 - [Content](#bkmk_dt-content)
+- [Task Sequence](#bkmk_dt-ts)
 - [Detection Method](#bkmk_dt-detect)
 - [User Experience](#bkmk_dt-ux)
 - [Requirements](#bkmk_dt-require)
@@ -281,7 +282,7 @@ On the **Task Sequence** page, specify the following information:
 
 - **Uninstall task sequence** (optional): Select a task sequence that removes this app.
 
-> [!Note]  
+> [!TIP]  
 > If your task sequence doesn't appear in the list, double-check that it doesn't include any OS deployment or OS upgrade steps. Also confirm that it isn't marked as a high-impact task sequence. For more information, review the prerequisites for the [Task sequence deployment type](/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt).
 
 ### <a name="bkmk_dt-detect"></a> Deployment type **Detection Method** options
