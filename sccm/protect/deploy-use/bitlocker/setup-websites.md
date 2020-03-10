@@ -58,9 +58,12 @@ This process uses a PowerShell script, MBAMWebSiteInstaller.ps1, to install thes
   - `HelpDesk`: Install only the administration and monitoring website
   - `SSP`: Install only the self-service portal
 
-- `IISWebSite`: The website where the script installs the MBAM web applications. By default, it uses the IIS default website.
+- `-IISWebSite`: The website where the script installs the MBAM web applications. By default, it uses the IIS default website.
 
 - `InstallDirectory`: The path where the script installs the web application files. By default, this path is `C:\inetpub`.
+
+- `-Uninstall`: Uninstalls the BitLocker Management Help Desk/Self-Service web portal sites on a web server where they have been previously installed.
+
 
 ## Run the script
 
