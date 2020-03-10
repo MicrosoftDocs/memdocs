@@ -182,13 +182,11 @@ You can now create a Microsoft Edge application that's set up to receive automat
 
 You can now install complex applications using task sequences via the application model. Add a deployment type to an app that's a task sequence, either to install or uninstall the app. This feature provides the following behaviors:
 
-- Deploy an app task sequence to a user collection
-
 - Display the app task sequence with an icon in Software Center. An icon makes it easier for users to find and identify the app task sequence.
 
 - Define additional metadata for the app task sequence, including localized information
 
-<!-- For more information, see [](). -->
+For more information, see [Create Windows applications](/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt).
 
 
 ## <a name="bkmk_osd"></a> OS deployment

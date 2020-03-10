@@ -62,8 +62,9 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 -->
 
 <!-- With each current branch release, to help purge this list a bit, remove any entries that were added as a full feature in a version that's no longer supported -->
-| Feature          | Added as pre-release | Added as a full feature |  
+| Feature          | Added as pre-release | Added as a full feature |
 |------------------|----------------------|-------------------------|
+| [Task sequence deployment type](/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt) <!--3555953--> | Version 2002 | ![Not yet](media/red_x.png) |
 | [Remove the central administration site](/configmgr/core/servers/deploy/install/remove-central-administration-site) <!-- 3607277 --> | Version 2002 | ![Not yet](media/red_x.png) |
 | [Task sequence debugger](/sccm/osd/deploy-use/debug-task-sequence) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71--> | Version 1906 | ![Not yet](media/red_x.png) |
 | [Application groups](/sccm/apps/deploy-use/create-app-groups) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D--> | Version 1906 | ![Not yet](media/red_x.png) |
