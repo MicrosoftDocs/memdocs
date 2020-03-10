@@ -41,8 +41,6 @@ Use this information to understand how and where your end users get the apps tha
 
 **Unmanaged apps**--Apps that users can download from the iOS/iPadOS App Store that aren't integrated with the Intune app SDK. Intune doesn’t have any control over the distribution, management, or selective wipe of these apps.  
 
-Apple restrictions prohibit line-of-business and managed App Store apps from being listed in the Company Portal app. To get around this issue, the tiles in the Company Portal app for iOS/iPadOS point users to different views in a single location (the Company Portal website) for all of their apps.
-
 Enrolled users get their apps by tapping on the following tiles on the Apps screen of the Company Portal app:
 
 - **All Apps** points to a list of all apps in the ALL tab of the [Company Portal website](https://portal.manage.microsoft.com).
@@ -54,6 +52,11 @@ Enrolled users get their apps by tapping on the following tiles on the Apps scre
 ![iOS Company Portal apps screen](./media/end-user-apps-ios/ios-cp-app-main-apps-screen.png)
 
 For information on how to add apps, see [How to add an app to Microsoft Intune](../apps/apps-add.md).
+
+## App management takeover
+If an app is already installed on an end user's device, the iOS/iPadOS device shows an alert to allow management of the app by your organization. The end user must allow the organization to take management of the app before app configurations can be applied to a managed device. If the user cancels the alert, the alert will appear periodically for as long as the device is managed and the app is assigned.
+
+![App management takeover alert](https://microsoft-my.sharepoint-df.com/:i:/p/arnab/EQTvVU2trxREhB8JxnEm9RcBylgEfYaUqDeRd5RdXNkslA?e=BZXCFf)
 
 ## See also
 
