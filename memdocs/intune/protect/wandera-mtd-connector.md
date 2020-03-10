@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,7 +20,7 @@ ms.assetid:
 
 #ROBOTS:
 #audience:
-
+#ms.devlang:
 #ms.reviewer: davidra
 #ms.suite: ems
 search.appverid: MET150
@@ -79,11 +79,11 @@ When malicious apps such as malware are detected on devices, you can block devic
 - Syncing corporate files with the OneDrive for Work app  
 - Accessing company apps  
 
-**Block when malicious apps are detected**:
+*Block when malicious apps are detected*:
 
 ![Conceptual image of Malicious apps detected](./media/wandera-mtd-connector/wandera-malicious-apps-blocked.png)  
 
-**Access granted on remediation**: 
+*Access granted on remediation*: 
 
 ![Conceptual image of access granted after remediation](./media/wandera-mtd-connector/wandera-malicious-apps-unblocked.png)
 
@@ -92,11 +92,11 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 Detect threats to your network such as man-in-the-middle attacks and protect access to Wi-Fi networks based on the device risk.  
 
-**Block network access through Wi-Fi**:  
+*Block network access through Wi-Fi*:  
 
 ![Block network access through Wi-Fi](./media/wandera-mtd-connector/wandera-network-wifi-blocked.png)
 
-**Access granted on remediation**:  
+*Access granted on remediation*:  
 
 ![Access granted on remediation](./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png)  
 
@@ -104,14 +104,25 @@ Detect threats to your network such as man-in-the-middle attacks and protect acc
 
 Detect threats to your network such as Man-in-the-middle attacks, and prevent synchronization of corporate files based on the device risk.
 
-**Block SharePoint Online when network threats are detected**:  
+*Block SharePoint Online when network threats are detected*:  
 
 ![Block SharePoint Online when network threats are detected](./media/wandera-mtd-connector/wandera-network-spo-blocked.png)  
 
-
-**Access granted on remediation**:  
+*Access granted on remediation*:  
 
 ![Access granted on remediation for SharePoint example](./media/wandera-mtd-connector/wandera-network-spo-unblocked.png)  
+
+<!-- 
+### Control access on unenrolled devices based on threats from malicious apps
+
+When the Wandera Mobile Threat Defense solution considers a device to be infected:
+
+![App protection policy blocks due to detected malware](./media/wandera-mtd-connector/wandera-mobile-app-policy-block.png)
+
+Access is granted on remediation:
+
+![Access is granted on remediation for App protection policy](./media/wandera-mtd-connector/wandera-mobile-app-policy-remediated.png)
+-->
 
 ## Next steps
 
