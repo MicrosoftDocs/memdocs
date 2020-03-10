@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 03/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -101,24 +101,32 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
     *Personal key* recovery keys are created for devices. Configure the following settings for the personal key.  
 
     - **Location of personal recovery key** - Specify a short message to the user that explains how and where they can retrieve their personal recovery key. This text is inserted into the message the user sees on their log in screen when prompted to enter their personal recovery key if a password is forgotten.  
-      
+
     - **Personal recovery key rotation** - Specify how frequently the personal recovery key for a device will rotate. You can select the default of **Not configured**, or a value of **1** to **12** months.  
 
-  - **Disable prompt at sign out**  
-    Prevent the prompt to the user that requests they enable FileVault when they sign out.  When set to Disable, the prompt at sign-out is disabled and instead, the user is prompted when they sign in.  
-    - **Not configured**  
-    - **Disable** - Disable the prompt at sign-out.
+- **Disable prompt at sign out**  
+   Prevent the prompt to the user that requests they enable FileVault when they sign out.  When set to Disable, the prompt at sign-out is disabled and instead, the user is prompted when they sign in.  
+  - **Not configured**  
+  - **Disable** - Disable the prompt at sign-out.
 
-    **Default**: Not configured  
+  **Default**: Not configured  
 
-  - **Number of times allowed to bypass**  
+- **Number of times allowed to bypass**  
   Set the number of times a user can ignore prompts to enable FileVault before FileVault is required for the user to sign in. 
 
-    - **Not configured** - Encryption on the device is required before the next sign-in is allowed.  
-    - **1** to **10** - Allow a user to ignore the prompt from 1 to 10 times before requiring encryption on the device.  
-    - **No limit, always prompt** - The user is prompted to enable FileVault but encryption is never required.  
+  - **Not configured** - Encryption on the device is required before the next sign-in is allowed.  
+  - **1** to **10** - Allow a user to ignore the prompt from 1 to 10 times before requiring encryption on the device.  
+  - **No limit, always prompt** - The user is prompted to enable FileVault but encryption is never required.  
  
-    **Default**: *Varies* - When the setting *Disable prompt at sign out* is set to **Not configured**, this setting defaults to **Not configured**. When *Disable prompt at sign out* is set to **Disable**, this setting defaults to **1** and a value of **Not configured** isn't an option.
+  **Default**: *Varies* - When the setting *Disable prompt at sign out* is set to **Not configured**, this setting defaults to **Not configured**. When *Disable prompt at sign out* is set to **Disable**, this setting defaults to **1** and a value of **Not configured** isn't an option.
+
+- **Hide recovery key**
+  Choose to hide the personal key from a device user during FileVault 2 encryption. Later, device users can view a personal recovery key for an encrypted macOS device from the iOS company portal app or from the company portal website. To view the key, from the app or website, go to device details and select *get recovery key*.
+
+  - **Not configured** – The personal key is visible to the device user during encryption.
+  - **Yes** – The personal key is hidden from the device user during encryption. 
+
+  **Default**: Not configured
 
 For more information about FileVault with Intune, see [FileVault recovery keys](encryption-monitor.md#filevault-recovery-keys).
 
