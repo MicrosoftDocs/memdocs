@@ -2,7 +2,7 @@
 title: Configure boundary groups
 titleSuffix: Configuration Manager
 description: Help clients find site systems by using boundary groups to logically organize related network locations called boundaries
-ms.date: 09/17/2019
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Configure boundary groups for Configuration Manager
@@ -29,22 +27,21 @@ To increase the availability of servers to a wider range of network locations, a
 Clients use a boundary group for:  
 
 - Automatic site assignment  
-- To find a site system server that can provide a service, including:  
-    - Distribution points for content location  
-    - Software update points  
-    - State migration points  
+- To find a site system server that can provide a service, including:
 
-        > [!NOTE]
-        > The state migration point doesn't use fallback relationships. For more information, see [Fallback](#fallback).
+  - Distribution points for content location  
+  - Software update points  
+  - State migration points  
 
-    - Preferred management points  
+    > [!NOTE]
+    > The state migration point doesn't use fallback relationships. For more information, see [Fallback](#fallback).
 
-        > [!NOTE]  
-        > If you use preferred management points, enable this option for the hierarchy, not from within the boundary group configuration. For more information, see [Enable use of preferred management points](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_proc-prefer).  
+  - Preferred management points  
 
-    - Cloud management gateway (starting in version 1902)
+    > [!NOTE]  
+    > If you use preferred management points, enable this option for the hierarchy, not from within the boundary group configuration. For more information, see [Enable use of preferred management points](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_proc-prefer).  
 
-
+  - Cloud management gateway (starting in version 1902)
 
 ## Boundary groups and relationships
 
@@ -62,7 +59,6 @@ For more information, see the following procedures:
 
 - [Create a boundary group](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_create)  
 - [Configure a boundary group](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_config)  
-
 
 ## Fallback
 
@@ -101,7 +97,6 @@ To manage fallback to the default site boundary group:
 
 - Open the properties of a custom boundary group. Change the values for the explicit link to a default site boundary group. When you set a new time in minutes for fallback or block fallback, that change affects only the link you're configuring. Configuration of the explicit link overrides the settings on the **Default Behavior** tab of a default site boundary group.  
 
-
 ## Site assignment  
 
 You can configure each boundary group with an assigned site for clients.  
@@ -123,7 +118,6 @@ For more information on how to configure site assignment, see the following proc
 - [Configure site assignment and select site system servers](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_references)
 - [Configure a fallback site for automatic site assignment](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_site-fallback)
 
-
 ## Distribution points
 
 When a client requests the location of a distribution point, Configuration Manager sends the client a list of site systems. These site systems are of the appropriate type associated with each boundary group that includes the client's current network location:
@@ -132,7 +126,7 @@ When a client requests the location of a distribution point, Configuration Manag
 
 - **During OS deployment**, clients request a location to send or receive their state migration information.  
 
-    - Starting in version 1810, clients acquire content based on boundary group behaviors. For more information, see [Task sequence support for boundary groups](#bkmk_bgr-osd).  
+  - Clients acquire content based on boundary group behaviors. For more information, see [Task sequence support for boundary groups](#bkmk_bgr-osd).  
 
 During content deployment, if a client requests content that isn't available from a source in its current boundary group, the client continues to request that content. The client tries different content sources in its current boundary group until it reaches the fallback period for a neighbor or the default site boundary group. If the client still hasn't found content, it then expands its search for content sources to include the neighbor boundary groups.
 
@@ -141,21 +135,21 @@ If you configure the content to distribute on-demand, and it isn't available on 
 ### <a name="bkmk_ccmsetup"></a> Client installation
 
 <!--1358840-->
-When installing the Configuration Manager client, the ccmsetup process contacts the management point to locate the necessary content. During this process in versions 1806 and earlier, the management point only returns distribution points in the client's current boundary group. If no content is available, the setup process falls back to download content from the management point. There's no option to fall back to distribution points in other boundary groups that might have the necessary content.
-
-Starting in version 1810, the management point returns distribution points based on boundary group configuration. If you define relationships on the boundary group, the management point returns distribution points in the following order:
+When installing the Configuration Manager client, the ccmsetup process contacts the management point to locate the necessary content. The management point returns distribution points based on boundary group configuration. If you define relationships on the boundary group, the management point returns distribution points in the following order:
 
 1. Current boundary group  
 2. Neighbor boundary groups  
 3. The site default boundary group  
 
 > [!Note]  
-> The client setup process doesn't use the fallback time. To locate content as quickly as possible, it immediately falls back to the next boundary group.  
+> The client setup process doesn't use the fallback time. To locate content as quickly as possible, it immediately falls back to the next boundary group.
+>
+> In previous versions of Configuration Manager, during this process the management point only returned distribution points in the client's current boundary group. If no content was available, the setup process fell back to download content from the management point. There was no option to fall back to distribution points in other boundary groups that might have the necessary content.
 
 ### <a name="bkmk_bgr-osd"></a> Task sequence support for boundary groups
 
 <!--1359025-->
-Starting in version 1810, when a device runs a task sequence and needs to acquire content, it now uses boundary group behaviors similar to the Configuration Manager client.
+When a device runs a task sequence and needs to acquire content, it uses boundary group behaviors similar to the Configuration Manager client.
 
 Configure this behavior using the following settings on the **Distribution Points** page of the task sequence deployment:
 
@@ -184,15 +178,12 @@ The task sequence log file **smsts.log** shows the priority of the location sour
 
 ### <a name="bkmk_bgoptions"></a> Boundary group options for peer downloads
 
-<!--1356193-->
-Starting in version 1806, boundary groups include the following additional settings to give you more control over content distribution in your environment:  
+<!--1356193, 1358749-->
+Boundary groups include the following additional settings to give you more control over content distribution in your environment:  
 
 - [Allow peer downloads in this boundary group](#bkmk_bgoptions1)  
 
 - [During peer downloads, only use peers within the same subnet](#bkmk_bgoptions2)  
-
-<!--1358749-->
-Version 1810 adds the following options:  
 
 - [Prefer distribution points over peers with the same subnet](#bkmk_bgoptions3)  
 
@@ -220,15 +211,65 @@ Common scenarios for enabling this option:
 
 - You have a single large boundary group for all remote office locations. Enable this option and clients only share content within the subnet at the remote office location, instead of risking sharing content between locations.
 
+Starting in version 2002, depending on the configuration of your network, you can exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet. By default, Configuration Manager excludes the default Teredo subnet (`2001:0000:%`).<!--3555777-->
+
+> [!NOTE]
+> In version 2002, when you [expand a stand-alone primary site](/configmgr/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand) to add a central administration site (CAS), the subnet exclusion list reverts to the default. To work around this issue, after site expansion, run the PowerShell script to customize the subnet exclusion list on the CAS.<!-- 6309068 -->
+
+Import your subnet exclusion list as a comma-separated subnet string. Use the percent sign (`%`) as a wildcard character. On the top-level site server, set or read the **SubnetExclusionList** embedded property for the **SMS_HIERARCHY_MANAGER** component in the **SMS_SCI_Component** class. For more information, see [SMS_SCI_Component server WMI class](/configmgr/develop/reference/core/servers/configure/sms_sci_component-server-wmi-class).
+
+##### Sample PowerShell script to update the subnet exclusion list
+
+The following script is a sample way of changing this value. Append your subnets to the **PropertyValue** variable after `2001:0000:%,172.16.16.0`. It's a comma separated string. Run this script on the top-level site server in your hierarchy.
+
+```PowerShell
+$PropertyValue = "2001:0000:%,172.16.16.0"
+$PropertyName = "SubnetExclusionList"
+
+$providerMachine = Get-WmiObject -Class "SMS_ProviderLocation" -Namespace "root\sms"
+
+if ($providerMachine -is [system.array])
+{
+    $providerMachine=$providerMachine[0]
+}
+
+$SiteCode = $providerMachine.SiteCode
+
+$component = Get-WmiObject -Query 'select comp.* from sms_sci_component comp join SMS_SCI_SiteDefinition sdef on sdef.SiteCode=comp.SiteCode where sdef.ParentSiteCode="" and comp.componentname="SMS_HIERARCHY_MANAGER"' -ComputerName $providerMachine.Machine -Namespace root\sms\site_$SiteCode
+$properties = $component.props
+
+Write-host "Updating property for site " $SiteCode
+
+foreach ($property in $properties)
+{
+  if ($property.propertyname -like $PropertyName)
+  {
+    Write-host "Current value for SubnetExclusionList is  " $property.value1
+    $property.value1 = $PropertyValue
+    Write-host "Updating value for SubnetExclusionList to " $property.value1
+    break
+  }
+}
+
+$component.props = $properties
+$component.put()
+```
+
+> [!NOTE]
+> By default, Configuration Manager includes the Teredo subnet in this list. When you change the list, always read the existing value first. Append additional subnets to the list, and then set the new value.
+
 #### <a name="bkmk_bgoptions3"></a> Prefer distribution points over peers with the same subnet
 
-By default, the management point prioritizes peer cache sources at the top of the list of content locations. This setting reverses that priority for clients that are in the same subnet as the peer cache source.  
+By default, the management point prioritizes peer cache sources at the top of the list of content locations. This setting reverses that priority for clients that are in the same subnet as the peer cache source.
+
+> [!TIP]
+> This behavior applies to the Configuration Manager client. It doesn't apply when the task sequence downloads content. When the task sequence runs, it prefers peer cache sources over distribution points.<!-- SCCMDocs#1376 -->
 
 #### <a name="bkmk_bgoptions4"></a> Prefer cloud distribution points over distribution points
 
 If you have a branch office with a faster internet link, you can now prioritize cloud content.  
 
-In version 1902, this setting is now titled **Prefer cloud based sources over on-premise sources**. Cloud based sources include the following:<!-- SCCMDocs#1529 -->
+In version 1902, this setting is now titled **Prefer cloud based sources over on-premise sources**. Cloud-based sources include the following:<!-- SCCMDocs#1529 -->
 
 - Cloud distribution points
 - Microsoft Update (added in version 1902)
@@ -237,7 +278,7 @@ In version 1902, this setting is now titled **Prefer cloud based sources over on
 
 Clients use boundary groups to find a new software update point. To control which servers a client can find, add individual software update points to different boundary groups.
 
-If you update from a version prior to 1702, each site adds all existing software update points to the default site boundary group. This site update behavior maintains the prior client behavior to select a software update point from the pool of available servers. This behavior is maintained until you choose to add individual software update points to different boundary groups for controlled selection and fallback behavior.
+If you add all existing software update points to the default site boundary group, the client selects a software update point from the pool of available servers. This behavior is similar to earlier versions of Configuration Manager current branch. For controlled selection and fallback behavior, add individual software update points to different boundary groups.
 
 If you install a new site, software update points aren't added to the default site boundary group. Assign software update points to a boundary group so that clients can find and use them.
 
@@ -287,15 +328,12 @@ Review your boundary group configurations. Before you start this change, make su
 
 For more information, see [Manually switch clients to a new software update point](/sccm/sum/plan-design/plan-for-software-updates#BKMK_ManuallySwitchSUPs).
 
-
 ## Management points
 
 <!-- 1324594 -->
-Starting in version 1802, configure fallback relationships for management points between boundary groups. This behavior provides greater control for the management points that clients use. On the **Relationships** tab of the boundary group properties, there's a column for management point. When you add a new fallback boundary group, the fallback time for the management point is currently always zero (0). This behavior is the same for the **Default Behavior** on the site default boundary group.
+Configure fallback relationships for management points between boundary groups. This behavior provides greater control for the management points that clients use. On the **Relationships** tab of the boundary group properties, there's a column for management point. When you add a new fallback boundary group, the fallback time for the management point is currently always zero (0). This behavior is the same for the **Default Behavior** on the site default boundary group.
 
-Previously, a common problem occurs when you have a protected management point in a secure network. Clients on the main corporate network receive policy that includes this protected management point, even though they can't communicate with it across a firewall. To address this problem, use the **Never fallback** option to make sure that clients only fallback to management points with which they can communicate.
-
-When upgrading the site to version 1802, Configuration Manager adds all intranet management points into the site default boundary group. (This group of servers doesn't include management points that are only internet-facing.) This upgrade behavior makes sure that older client versions continue to communicate with management points. To take full advantage of this feature, move your management points to the desired boundary groups.
+Previously, a common problem occurred when you had a protected management point in a secure network. Clients on the main network received policy that included this protected management point, even though they couldn't communicate with it across a firewall. To address this problem now, use the **Never fallback** option to make sure that clients only fall back to management points with which they can communicate.
 
 > [!Note]  
 > If you enable distribution points in the site default boundary group to fallback, and a management point is colocated on a distribution point, the site also adds that management point to the site default boundary group.<!--VSO 2841292-->  
@@ -329,11 +367,10 @@ Clients use local management points first (locality 3), remote second (locality 
 
 When a client receives five errors in 10 minutes and fails to communicate with a management point in its current boundary group, it tries to contact a management point in a neighbor or the site default boundary group. If the management point in the current boundary group later comes back online, the client returns to the local management point on the next refresh cycle. The refresh cycle is 24 hours, or when the Configuration Manager agent service restarts.
 
-
 ## <a name="bkmk_preferred"></a> Preferred management points
 
 > [!Note]
-> The behavior of this hierarchy setting, **Clients prefer to use management points specified in boundary groups**, changes starting in version 1802. When you enable this setting, Configuration Manager uses the boundary group functionality for the assigned management point. For more information, see [management points](#management-points).
+> The behavior of this hierarchy setting, **Clients prefer to use management points specified in boundary groups**, changed in version 1802. When you enable this setting, Configuration Manager uses the boundary group functionality for the assigned management point. For more information, see [management points](#management-points).
 
 Preferred management points enable a client to identify a management point that's associated with its current network location (boundary).  
 
@@ -346,7 +383,6 @@ Preferred management points enable a client to identify a management point that'
 > [!NOTE]  
 > Client roaming means it changes its network locations. For example, when a laptop travels to a remote office location. When a client roams, it might use a management point from the local site before attempting to use a server from its assigned site. This list of servers from its assigned site includes the preferred management points. For more information, see [Understand how clients find site resources and services](/sccm/core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services).  
 
-
 ## Overlapping boundaries  
 
 Configuration Manager supports overlapping boundary configurations for content location. When the client's network location belongs to more than one boundary group:
@@ -356,7 +392,6 @@ Configuration Manager supports overlapping boundary configurations for content l
 - When a client requests a server to send or receive its state migration information, Configuration Manager sends the client a list of all state migration points associated with a boundary group that includes the current network location of the client.  
 
 This behavior enables the client to select the nearest server from which to transfer the content or state migration information.  
-
 
 ## Example of using boundary groups
 
@@ -393,7 +428,6 @@ With this configuration:
 - If the client hasn't found content after a total of 120 minutes, it falls back to include the *default site boundary group* as part of its continued search. Now the pool includes all distribution points from the three configured boundary groups, and the final distribution point located on the site server. The client then continues its search for content, changing distribution points every two minutes until content is found.  
 
 By configuring the different neighbor groups to be available at different times, you control when specific distribution points are added as a content source location. The client uses fallback to the default site boundary group as a safety net for content that isn't available from any other location.
-
 
 ## Changes from prior versions
 
@@ -445,7 +479,6 @@ When a client searches for a content source location, it tries to access each di
     > When you create an explicit link from the current boundary group to the default site boundary group, and define a fallback time that is less than the fallback time for a link to a neighbor boundary group, clients begin searching source locations from the default site boundary group before including the neighbor group.  
 
 - When the client fails to get content from the last server in the pool, it begins the process again.  
-
 
 ## See also
 
