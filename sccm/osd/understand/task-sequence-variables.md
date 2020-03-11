@@ -2,7 +2,7 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 11/29/2019
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Task sequence variables
@@ -116,8 +114,6 @@ When the current task sequence step is running in Windows PE, this variable is `
 Specifies the IP addresses used by the computer.
 
 ### <a name="SMSTSLastActionName"></a> _SMSTSLastActionName
-
-*Starting in version 1810*  
 
 Stores the name of the last action that was run. This variable relates to **_SMSTSLastActionRetCode**. The task sequence logs these values to the smsts.log file. This variable is beneficial when troubleshooting a task sequence. When a step fails, a custom script can include the step name along with the return code.
 
@@ -294,6 +290,90 @@ Specifies the UUID of the computer.
 ### <a name="SMSTSWTG"></a> _SMSTSWTG
 
 Specifies if the computer is running as a Windows To Go device.
+
+### <a name="TSCRMEMORY"></a> _TS_CRMEMORY
+
+*Starting in version 2002*<!--6005561-->
+*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+
+A read-only variable for whether the **Minimum memory (MB)** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
+
+### <a name="TSCRSPEED"></a> _TS_CRSPEED
+
+*Starting in version 2002*<!--6005561-->
+*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+
+A read-only variable for whether the **Minimum processor speed (MHz)** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
+
+### <a name="TSCRDISK"></a> _TS_CRDISK
+
+*Starting in version 2002*<!--6005561-->
+*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+
+A read-only variable for whether the **Minimum free disk space (MB)** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
+
+### <a name="TSCROSTYPE"></a> _TS_CROSTYPE
+
+*Starting in version 2002*<!--6005561-->
+*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+
+A read-only variable for whether the **Current OS to be refreshed is** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
+
+### <a name="TSCRARCH"></a> _TS_CRARCH
+
+*Starting in version 2002*<!--6005561-->
+*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+
+A read-only variable for whether the **Architecture of current OS** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
+
+### <a name="TSCRMINOSVER"></a> _TS_CRMINOSVER
+
+*Starting in version 2002*<!--6005561-->
+*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+
+A read-only variable for whether the **Minimum OS version** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
+
+### <a name="TSCRMAXOSVER"></a> _TS_CRMAXOSVER
+
+*Starting in version 2002*<!--6005561-->
+*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+
+A read-only variable for whether the **Maximum OS version** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
+
+### <a name="TSCRCLIENTMINVER"></a> _TS_CRCLIENTMINVER
+
+*Starting in version 2002*<!--6005561-->
+*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+
+A read-only variable for whether the **Minimum client version** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
+
+### <a name="TSCROSLANGUAGE"></a> _TS_CROSLANGUAGE
+
+*Starting in version 2002*<!--6005561-->
+*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+
+A read-only variable for whether the **Language of current OS** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
+
+### <a name="TSCRACPOWER"></a> _TS_CRACPOWER
+
+*Starting in version 2002*<!--6005561-->
+*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+
+A read-only variable for whether the **AC power plugged in** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
+
+### <a name="TSCRNETWORK"></a> _TS_CRNETWORK
+
+*Starting in version 2002*<!--6005561-->
+*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+
+A read-only variable for whether the **Network adapter connected** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
+
+### <a name="TSCRWIRED"></a> _TS_CRWIRED
+
+*Starting in version 2002*<!--6005561-->
+*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+
+A read-only variable for whether the **Network adapter is not wireless** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSAppInstallStatus"></a> _TSAppInstallStatus
 
@@ -621,7 +701,6 @@ Specifies the RFC 1779 format name of the organizational unit (OU) that the dest
 ### <a name="OSDDoNotLogCommand"></a> OSDDoNotLogCommand
 
 <!--1358493-->
-*Starting in version 1806*  
 *Applies to the [Install Package](/configmgr/osd/understand/task-sequence-steps#BKMK_InstallPackage) step.*
 
 *Starting in version 1902*  
@@ -694,7 +773,6 @@ An optional user-defined version number to assign to the captured OS image. This
 ### <a name="OSDInstallDriversAdditionalOptions"></a> OSDInstallDriversAdditionalOptions
 
 <!--516679/2840016-->
-*Starting in version 1806*  
 *Applies to the [Apply Driver Package](/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage) step.*
 
 (input)

@@ -215,7 +215,7 @@ When you install and register a new Configuration Manager client, and also deplo
 
 <!-- 6005561 -->
 
-You can now verify more device properties in the Check Readiness task sequence step. Use this step in a task sequence to verify the target computer meets your prerequisite conditions.
+You can now verify more device properties in the **Check Readiness** task sequence step. Use this step in a task sequence to verify the target computer meets your prerequisite conditions.
 
 - Architecture of current OS
 - Minimum OS version
@@ -225,7 +225,7 @@ You can now verify more device properties in the Check Readiness task sequence s
 - AC power plugged in
 - Network adapter is connected and not wireless
 
-<!-- For more information, see [Task sequence steps - Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness). -->
+For more information, see [Task sequence steps - Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness).
 
 ### Improvements to task sequence progress
 

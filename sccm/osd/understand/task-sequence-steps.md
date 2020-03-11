@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 12/02/2019
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Task sequence steps
@@ -642,25 +640,84 @@ Use this step to verify that the target computer meets the specified deployment 
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Check Readiness**.
 
+Starting in version 2002, this step includes eight new checks. None of these new checks are selected by default in new or existing instances of the step.<!--6005561--> For more information on each check, see the specific sections below.
+
+- **Architecture of current OS**
+- **Minimum OS version**
+- **Maximum OS version**
+- **Minimum client version**
+- **Language of current OS**
+- **AC power plugged in**
+- **Network adapter connected**
+  - **Network adapter is not wireless**
+
+> [!IMPORTANT]
+> To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
+
+Use the following task sequence variables with this step:  
+
+- [_TS_CRMEMORY](/configmgr/osd/understand/task-sequence-variables#TSCRMEMORY)
+- [_TS_CRSPEED](/configmgr/osd/understand/task-sequence-variables#TSCRSPEED)
+- [_TS_CRDISK](/configmgr/osd/understand/task-sequence-variables#TSCRDISK)
+- [_TS_CROSTYPE](/configmgr/osd/understand/task-sequence-variables#TSCROSTYPE)
+- [_TS_CRARCH](/configmgr/osd/understand/task-sequence-variables#TSCRARCH)
+- [_TS_CRMINOSVER](/configmgr/osd/understand/task-sequence-variables#TSCRMINOSVER)
+- [_TS_CRMAXOSVER](/configmgr/osd/understand/task-sequence-variables#TSCRMAXOSVER)
+- [_TS_CRCLIENTMINVER](/configmgr/osd/understand/task-sequence-variables#TSCRCLIENTMINVER)
+- [_TS_CROSLANGUAGE](/configmgr/osd/understand/task-sequence-variables#TSCROSLANGUAGE)
+- [_TS_CRACPOWER](/configmgr/osd/understand/task-sequence-variables#TSCRACPOWER)
+- [_TS_CRNETWORK](/configmgr/osd/understand/task-sequence-variables#TSCRNETWORK)
+- [_TS_CRWIRED](/configmgr/osd/understand/task-sequence-variables#TSCRWIRED)
+
+The **smsts.log** includes the outcome of all checks. If one check fails, the task sequence engine continues to evaluate the other checks. The step doesn't fail until all checks are complete. If at least one check fails, the step fails, and it returns error code **4316**. This error code translates to "The resource required for this operation does not exist."
+
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
-#### Ensure minimum memory (MB)
+#### Minimum memory (MB)
 
 Verify that the amount of memory, in megabytes (MB), meets or exceeds the specified amount. The step enables this setting by default.  
 
-#### Ensure minimum processor speed (MHz)  
+#### Minimum processor speed (MHz)  
 
 Verify that the speed of the processor, in megahertz (MHz), meets or exceeds the specified amount. The step enables this setting by default.  
 
-#### Ensure minimum free disk space (MB)
+#### Minimum free disk space (MB)
 
 Verify that the amount of free disk space, in megabytes (MB), meets or exceeds the specified amount.  
 
-#### Ensure current OS to be refreshed is
+#### Current OS to be refreshed is
 
 Verify that the OS installed on the target computer meets the specified requirement. The step sets this setting to **CLIENT** by default.  
+
+#### Architecture of current OS
+
+Starting in version 2002, verify whether the current OS is **32-bit** or **64-bit**.
+
+#### Minimum OS version
+
+Starting in version 2002, verify that the current OS is running a version later than specified. Specify the version with major version, minor version, and build number. For example, `10.0.16299`.
+
+#### Maximum OS version
+
+Starting in version 2002, verify that the current OS is running a version earlier than specified. Specify the version with major version, minor version, and build number. For example, `10.0.18356`.
+
+#### Minimum client version
+
+Starting in version 2002, verify that the Configuration Manager client version is at least the specified version. Specify the client version in the following format: `5.00.8913.1005`.
+
+#### Language of current OS
+
+Starting in version 2002, verify that the current OS language matches what you specify. Select the language name, and the step compares the associated language code. This check compares the language that you select to the **OSLanguage** property of the **Win32_OperatingSystem** WMI class on the client.
+
+#### AC power plugged in
+
+Starting in version 2002, verify that the device is plugged in and not on battery.
+
+#### Network adapter connected
+
+Starting in version 2002, verify that the device has a network adapter that's connected to the network. You can also select the dependent check to verify that the **Network adapter is not wireless**.
 
 ### Options
 
@@ -1302,7 +1359,7 @@ Select this option to prevent Sysprep from resetting the product activation flag
 <!--SCCMDocs-pr issue 2695-->
 This option instructs Sysprep to shutdown the computer instead of its default restart behavior.
 
-Starting in version 1810, this step is used in the [Windows Autopilot for existing devices](/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices) task sequence.
+The [Windows Autopilot for existing devices](/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices) task sequence uses this step with this option.
 
 - If you want the task sequence to refresh the device and then immediately start OOBE for Autopilot, leave this option off.  
 
