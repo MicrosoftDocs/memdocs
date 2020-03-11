@@ -2923,7 +2923,7 @@ You now have the option to select the following Windows 10 Insider Preview servi
 - Windows Insider build &#8208; Slow
 - Release Windows Insider build 
 
-For more information about these channels, see [Manage Insider Preview Builds](https://insider.windows.com/for-business-organization-admin/).   
+For more information about these channels, see [Manage Insider Preview Builds](https://insider.windows.com/en-us/for-business-getting-started/#explore).
 For more information about creating deployment channels in Intune, see [Manage software updates in Intune](../protect/windows-update-for-business-configure.md).
 
 ### New Windows Defender Exploit Guard settings<!-- 1631893 -->
