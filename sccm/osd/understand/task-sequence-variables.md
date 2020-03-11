@@ -387,6 +387,16 @@ The task sequence sets this variable with the installation status for the applic
 
 - **Success**: There are no errors or warnings detected during the Install Application step.  
 
+### <a name="TSSecureBoot"></a> _TSSecureBoot
+
+*Starting in version 2002*<!--5842295-->
+
+Use this variable to determine the state of secure boot on a UEFI-enabled device. The variable can have one of the following values:
+
+- `NA`: The associated registry value doesn't exist, which means the device doesn't support secure boot.
+- `Enabled`: The device has secure boot enabled.
+- `Disabled`: The device has secure boot disabled.
+
 ### <a name="OSDAdapter"></a> OSDAdapter
 
 *Applies to the [Apply Network Settings](task-sequence-steps.md#BKMK_ApplyNetworkSettings) step.*

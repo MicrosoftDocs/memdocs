@@ -243,7 +243,7 @@ The task sequence progress window now includes the following improvements:
 
 This release includes the following improvements to OS deployment:
 
-- The task sequence environment includes a new read-only variable, `_TSSecureBoot`.<!--5842295--> Use this variable to determine the state of secure boot on a UEFI-enabled device. <!-- For more information, see [Task sequence variables](/configmgr/osd/understand/task-sequence-variables). -->
+- The task sequence environment includes a new read-only variable, `_TSSecureBoot`.<!--5842295--> Use this variable to determine the state of secure boot on a UEFI-enabled device. For more information, see [Task sequence variables - _TSSecureBoot](/configmgr/osd/understand/task-sequence-variables#TSSecureBoot).
 
 - You can now set task sequence variables to configure the user context that the [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine) and [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) steps use.<!-- 5573175 --> For example, now you don't need to configure the **Run Command Line** step with a placeholder account to use the [SMSTSRunCommandLineUserName](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName) and [SMSTSRunCommandLineUserPassword](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserPassword) variables.<!-- For more information, see [Task sequence steps](/configmgr/osd/understand/task-sequence-steps). -->
 
