@@ -1875,6 +1875,7 @@ Use the following task sequence variables with this step:
 - [SMSTSDisableWow64Redirection](/configmgr/osd/understand/task-sequence-variables#SMSTSDisableWow64Redirection)  
 - [SMSTSRunCommandLineUserName](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName)  
 - [SMSTSRunCommandLineUserPassword](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserPassword)  
+- [SMSTSRunCommandLineAsUser](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineAsUser) (starting in version 2002)<!-- 5573175 -->
 - [WorkingDirectory](/configmgr/osd/understand/task-sequence-variables#WorkingDirectory)  
 
 ### Cmdlets for Run Command Line
@@ -1982,6 +1983,7 @@ To add this step in the task sequence editor, select **Add**, select **General**
 Use the following task sequence variables with this step:  
 
 - [OSDLogPowerShellParameters](/configmgr/osd/understand/task-sequence-variables#OSDLogPowerShellParameters) (starting in version 1902)<!--3556028-->  
+- [SMSTSRunPowerShellAsUser](/sccm/osd/understand/task-sequence-variables#SMSTSRunPowerShellAsUser) (starting in version 2002)<!-- 5573175 -->
 - [SMSTSRunPowerShellUserName](/sccm/osd/understand/task-sequence-variables#SMSTSRunPowerShellUserName)  
 - [SMSTSRunPowerShellUserPassword](/sccm/osd/understand/task-sequence-variables#SMSTSRunPowerShellUserPassword)  
 

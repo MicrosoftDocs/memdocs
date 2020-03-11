@@ -1682,6 +1682,19 @@ Indicates that a restart is requested after the current task sequence step is co
 
 Requests a retry after the current task sequence step is completed. If this task sequence variable is set, also set the [SMSTSRebootRequested](#SMSTSRebootRequested) variable to `true`. After the computer is restarted, the task sequence manager reruns the same task sequence step.
 
+### <a name="SMSTSRunCommandLineAsUser"></a> SMSTSRunCommandLineAsUser
+
+*Starting in version 2002*<!-- 5573175 -->
+*Applies to the [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step.*
+
+Use task sequence variables to configure the user context for the **Run Command Line** step. You don't need to configure the **Run Command Line** step with a placeholder account to use the [SMSTSRunCommandLineUserName](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName) and [SMSTSRunCommandLineUserPassword](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserPassword) variables.
+
+Configure `SMSTSRunCommandLineAsUser` with one of the following values:
+
+- `true`: Any further **Run Command Line** steps run in the context of the user specified in `SMSTSRunCommandLineUserName`.
+
+- `false`: Any further **Run Command Line** steps run in the context that you configured on the step.
+
 ### <a name="SMSTSRunCommandLineUserName"></a> SMSTSRunCommandLineUserName
 
 *Applies to the [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step.*
@@ -1691,7 +1704,9 @@ Requests a retry after the current task sequence step is completed. If this task
 Specifies the account by which the command line is run. The value is a string of the form username or domain\username. Specify the account password with the [SMSTSRunCommandLineUserPassword](#SMSTSRunCommandLineUserPassword) variable.
 
 > [!NOTE]
-> To use these variables, configure the **Run Command Line** step with the setting to **Run this step as the following account**. When you enable this option, if you're setting the user name and password with variables, specify any value for the account.
+> Starting in version 2002, use the [SMSTSRunCommandLineAsUser](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineAsUser) variable with this variable to configure the user context for this step.
+>
+> In version 1910 and earlier, configure the **Run Command Line** step with the setting to **Run this step as the following account**. When you enable this option, if you're setting the user name and password with variables, specify any value for the account.
 
 For more information on the task sequence run-as account, see [Accounts](/configmgr/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
 
@@ -1702,6 +1717,19 @@ For more information on the task sequence run-as account, see [Accounts](/config
 (input)
 
 Specifies the password for the account specified by the [SMSTSRunCommandLineUserName](#SMSTSRunCommandLineUserName) variable.
+
+### <a name="SMSTSRunPowerShellAsUser"></a> SMSTSRunPowerShellAsUser
+
+*Starting in version 2002*<!-- 5573175 -->
+*Applies to the [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) step.*
+
+Use task sequence variables to configure the user context for the **Run PowerShell Script** step. You don't need to configure the **Run PowerShell Script** step with a placeholder account to use the [SMSTSRunPowerShellUserName](/configmgr/osd/understand/task-sequence-variables#SMSTSRunPowerShellUserName) and [SMSTSRunPowerShellUserPassword](/configmgr/osd/understand/task-sequence-variables#SMSTSRunPowerShellUserPassword) variables.
+
+Configure `SMSTSRunPowerShellAsUser` with one of the following values:
+
+- `true`: Any further **Run PowerShell Script** steps run in the context of the user specified in `SMSTSRunPowerShellUserName`.
+
+- `false`: Any further **Run PowerShell Script** steps run in the context that you configured on the step.
 
 ### <a name="SMSTSRunPowerShellUserName"></a> SMSTSRunPowerShellUserName
 
