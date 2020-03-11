@@ -86,7 +86,7 @@ Review the [Configuration Manager technical preview article](https://docs.micros
 You can now issue bulk commands for the following remote actions: restart, rename, Autopilot reset, wipe, and delete. To see the new bulk actions, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Bulk actions**.
 
 #### All devices list improved search, sort, and filter<!--6179023-->
-The All devices list has been improved for better performance, searching, sorting, and filtering.
+The All devices list has been improved for better performance, searching, sorting, and filtering. For more information, see [this Support Tip](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946).
 
 <!-- ########################## -->
 ## Week of February 24, 2020
