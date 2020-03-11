@@ -2,7 +2,7 @@
 title: User experience analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for User experience analytics preview.
-ms.date: 03/02/2020
+ms.date: 03/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -36,7 +36,7 @@ This initial release, focuses on three things:
 - [**Proactive remediation scripting**](#bkmk_uea_prs): Fix common support issues before end-users notice issues
 - [**Start up performance**](#bkmk_uea_bp): Help IT get users from power-on to productivity quickly without lengthy boot and sign in delays
 
-This release is just the beginning. We’ll be rapidly rolling out new insights for other key user-experiences soon after initial release.
+This release is just the beginning. We'll be rapidly rolling out new insights for other key user-experiences soon after initial release.
 
 ## <a name="bkmk_uea_prereq"></a> Getting started
 
@@ -75,12 +75,12 @@ For proactive remediations, users of the device need one of the following licens
 
 Once your data is ready, you'll notice some information on the **Overview** page, explained in more detail below:
 
-- The **User experience score** is a 50/50 weighted average of the **Recommended software** and **Startup performance scores**. We’ll be expanding the set of subscores over time.
+- The **User experience score** is a 50/50 weighted average of the **Recommended software** and **Startup performance scores**. We'll be expanding the set of subscores over time.
 
 - You can compare your current score to other scores by setting a baseline.
   - As described in the [baseline](#bkmk_uea_baselines) section, there's a built-in baseline for *Commercial median* to see how you compare to a typical enterprise. You can create new baselines based on your current metrics so you can track progress or view regressions over time.
    - Baseline markers are shown for your overall score and subscores. If any of the scores have regressed by more than the configurable threshold from the selected baseline, the score is displayed in red and the top-level score is flagged as needing attention.
-  - A status of **insufficient data** means you don’t have enough devices reporting to provide a meaningful score. We currently require at least five devices.
+  - A status of **insufficient data** means you don't have enough devices reporting to provide a meaningful score. We currently require at least five devices.
 
 - **Filters** will enable you to view your score on a subset of devices or users. However, the filter functionality isn't enabled in this preview.
 
@@ -158,7 +158,7 @@ While there are many articles on how to optimize Group Policies performance, you
 
 ### <a name="bkmk_uea_sb"></a> Slow boot and sign-in times
 
-Startup performance provides an insight on the number of devices with slow boot or sign-in times. A boot score or sign-in score of “0” means it's slow. Clicking through takes you to the devices view. The devices are sorted by core boot time or core sign-in time respectively, so you can see affected devices for further troubleshooting.
+Startup performance provides an insight on the number of devices with slow boot or sign-in times. A boot score or sign-in score of "0" means it's slow. Clicking through takes you to the devices view. The devices are sorted by core boot time or core sign-in time respectively, so you can see affected devices for further troubleshooting.
 
 If you click through to a particular device, you can see its boot and sign-in history. The history helps you determine if the issue was a regression and when it might have occurred.
 
@@ -168,9 +168,9 @@ We're working on more startup performance insights, which will be available in f
 
 ## <a name="bkmk_uea_prs"></a> Proactive remediations
 
-Proactive remediations are script packages that can detect and fix common support issues on a user's device before they even realize there's a problem. These remediations can help reduce support calls. You can create your own script package, or deploy one of the scripts we've written and used in our environment for reducing support tickets.
+Proactive remediations are script packages that can detect and fix common support issues on a user's device before they even realize there's a problem. These remediations can help reduce support calls. You can create your own script package, or deploy one of the script packages we've written and used in our environment for reducing support tickets.
 
-Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you'll be able to deploy these script packages and see reports on their effectiveness. We're actively developing new scripts and would like to know your experiences using these scripts. Reach out to your user experience analytics preview contact if you have any feedback on the script packages.
+Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you'll be able to deploy these script packages and see reports on their effectiveness. We're actively developing new script packages and would like to know your experiences using them. Reach out to your user experience analytics preview contact if you have any feedback on the script packages.
 
 ### <a name="bkmk_uea_prs_ps1"></a> Get the detection and remediation scripts
 
@@ -227,9 +227,9 @@ To assign this setting to a subset of devices, [Create a profile](/intune/config
    
   - Configure the **Settings**:
    
-   	- **Health Monitoring**: Select **Enable** to collect event information from Windows 10 devices
-	
-	- **Scope**: Select **Boot performance** 
+       - **Health Monitoring**: Select **Enable** to collect event information from Windows 10 devices
+    
+    - **Scope**: Select **Boot performance** 
 
   - Use the [Scope tags](/intune/configuration/device-profile-create#scope-tags) and [Applicability rules](/intune/configuration/device-profile-create#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
 
@@ -243,7 +243,7 @@ To assign this setting to a subset of devices, [Create a profile](/intune/config
 You can compare your current scores and subscores to others by setting a baseline.
 
 1. There's a built-in baseline for **Commercial median**, which allows you to compare your scores to a typical enterprise.
-1. You can create new baselines based on your current metrics to track progress or view regressions over time. Click the **Create new** button and give your new baseline a name. We recommend a name that includes the date, so it’s easier to select from the drop-down in the reports pages.
+1. You can create new baselines based on your current metrics to track progress or view regressions over time. Click the **Create new** button and give your new baseline a name. We recommend a name that includes the date, so it's easier to select from the drop-down in the reports pages.
 1. There's a limit of 100 baselines per tenant. You can delete old baselines that are no longer needed.
 1. Your current metrics will be flagged red and show as regressed if they fall below the current baseline in your reports. Because it's perfectly normal for metrics to fluctuate from day to day, you can set a regression threshold, which defaults to 10%. With this threshold, metrics are only flagged as regressed if they've regressed by more than 10%.
 
@@ -336,7 +336,7 @@ This table shows the script names, descriptions, detections, remediations, and c
 $numDays = 7
 
 try {
-    $gpResult = gpresult /R | Select-String -pattern “Last time Group Policy was applied:” | Select-Object -last 1
+    $gpResult = gpresult /R | Select-String -pattern "Last time Group Policy was applied:" | Select-Object -last 1
 
     if ($gpResult){
     [int]$lastGPUpdateDays = (New-TimeSpan -Start $lastGPUpdateDate -End (Get-Date)).Days
@@ -400,7 +400,7 @@ $curSvcStat,$svcCTRSvc,$errMsg = "","",""
 # Main script
 If (-not (Test-Path -Path 'hklm:\Software\Microsoft\Office\16.0')){
     Return "Office 16.0 (or greater) not present on this machine"
-	exit 0   
+    exit 0   
 } 
 
 Try{        
@@ -649,12 +649,12 @@ The following illustration shows how required functional data flows from individ
 
 [![User experience data flow diagram](media/uea-dataflow.png)](media/uea-dataflow.png#lightbox)
 
-1. Configure the **Intune data collection** policy for enrolled devices. By default, this policy is assigned to “All Devices” when you **Start** User experience analytics. However, you can [change the assignment](#bkmk_uea_set) at any time to a subset of devices or no devices at all.
+1. Configure the **Intune data collection** policy for enrolled devices. By default, this policy is assigned to "All Devices" when you **Start** User experience analytics. However, you can [change the assignment](#bkmk_uea_set) at any time to a subset of devices or no devices at all.
 
 2. Devices send required functional data.
 
-	- For Intune devices with the assigned policy, data is sent from the Intune management extension. For more information, see [requirements](#bkmk_uea_prereq).
-	- For Configuration Manager managed devices, data can also flow to Microsoft Endpoint Management through the ConfigMgr connector. The ConfigMgr connector is cloud attached. It only requires connection to an Intune tenant, not turning on co-management.
+    - For Intune devices with the assigned policy, data is sent from the Intune management extension. For more information, see [requirements](#bkmk_uea_prereq).
+    - For Configuration Manager managed devices, data can also flow to Microsoft Endpoint Management through the ConfigMgr connector. The ConfigMgr connector is cloud attached. It only requires connection to an Intune tenant, not turning on co-management.
 
 > [!Note]  
 > The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been correctly assigned the policy to show the startup score on the admin console.  
@@ -686,7 +686,7 @@ Currently, the basic functionality of User experience analytics collects informa
 - **desktopUsableDurationInMilliseconds:** Time for desktop (explorer.exe) to be usable
 - **name:** Windows
 - **ver:** The version of the current OS.
-- **topProcesses:** List of processes loaded during boot with name, with cpu usage stats and app details (Name, publisher, version). For example *{\"ProcessName\":\"svchost\",\"CpuUsage\":43,\"ProcessFullPath\":\"C:\\\\Windows\\\\System32\\\\svchost.exe\",\"ProductName\":\"Microsoft® Windows® Operating System\",\"Publisher\":\"Microsoft Corporation\",\"ProductVersion\":\"10.0.18362.1\"}*
+- **topProcesses:** List of processes loaded during boot with name, with cpu usage stats and app details (Name, publisher, version). For example *{\"ProcessName\":\"svchost\",\"CpuUsage\":43,\"ProcessFullPath\":\"C:\\\\Windows\\\\System32\\\\svchost.exe\",\"ProductName\":\"Microsoft&reg; Windows&reg; Operating System\",\"Publisher\":\"Microsoft Corporation\",\"ProductVersion\":\"10.0.18362.1\"}*
 
 > [!Important]  
 > Our data handling policies are described in the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the baselines up-to-date.
