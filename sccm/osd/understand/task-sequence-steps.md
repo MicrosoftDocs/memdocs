@@ -92,6 +92,11 @@ Put similar device drivers into a driver package, and distribute them to the app
 
 The **Apply Driver Package** step is useful for stand-alone media. This step is also useful to install a specific set of drivers. These types of drivers include devices that Windows plug-and-play doesn't detect, such as network printers.  
 
+> [!TIP]
+> For an overview on drivers in Configuration Manager, see [Use task sequences to install drivers](https://docs.microsoft.com/configmgr/osd/get-started/manage-drivers#BKMK_TSDrivers).
+>
+> Use content pre-caching to download an applicable driver package before a user installs the task sequence. For more information, see [Configure pre-cache content](https://docs.microsoft.com/configmgr/osd/deploy-use/configure-precache-content).
+
 This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 
 Use the following task sequence variables with this step:  
@@ -201,6 +206,9 @@ Use the following task sequence variables with this step:
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Apply Operating System Image**.
 
 This step performs actions depending on whether it uses an OS image or an OS upgrade package.  
+
+> [!TIP]
+> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](https://docs.microsoft.com/configmgr/osd/deploy-use/configure-precache-content).
 
 #### OS image actions
 
@@ -407,6 +415,9 @@ Use the following task sequence variables with this step:
 - [SMSTSDriverRequestSendTimeOut](/configmgr/osd/understand/task-sequence-variables#SMSTSDriverRequestSendTimeOut)  
 
 To add this step in the task sequence editor, select **Add**, select **Drivers**, and select **Auto Apply Drivers**.
+
+> [!TIP]
+> For an overview of drivers in Configuration Manager, see [Use task sequences to install drivers](https://docs.microsoft.com/configmgr/osd/get-started/manage-drivers#BKMK_TSDrivers).
 
 ### Properties  
 
@@ -1157,6 +1168,9 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [New-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallsoftware?view=sccm-ps)
 - [Remove-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallsoftware?view=sccm-ps)
 - [Set-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallsoftware?view=sccm-ps)
+
+> [!TIP]
+> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](https://docs.microsoft.com/configmgr/osd/deploy-use/configure-precache-content).
 
 ### Properties  
 
@@ -2084,6 +2098,9 @@ Use the following task sequence variables with this step:
 
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Upgrade Operating System**.
 
+> [!TIP]
+> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](https://docs.microsoft.com/configmgr/osd/deploy-use/configure-precache-content).
+
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
@@ -2108,11 +2125,20 @@ Specify the product key to apply to the upgrade process.
 
 #### Provide the following driver content to Windows Setup during upgrade
 
-Add drivers to the destination computer during the upgrade process. This setting corresponds to the Windows Setup command-line option `/InstallDriver`. The drivers must be compatible with Windows 10. Specify one of the following options:  
+Add drivers to the destination computer during the upgrade process. The drivers must be compatible with Windows 10. This setting corresponds to the Windows Setup command-line option `/InstallDriver`. For more information, see [Windows Setup command-line options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
 
-- **Driver package**: Select **Browse** and choose an existing driver package from the list.  
+Specify one of the following options:  
 
-- **Staged content**:  Select this option to specify the location for the driver package. You can specify a local folder, network path, or a task sequence variable. When you use a variable for the source path, set its value earlier in the task sequence. For example, by using the [Download Package Content](/configmgr/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent) step.  
+- **Driver package**: Select **Browse** and choose an existing driver package from the list.
+
+- **Staged content**: Select this option to specify the location for the driver content. You can specify a local folder, network path, or a task sequence variable. When you use a variable for the source path, set its value earlier in the task sequence. For example, by using the [Download Package Content](/configmgr/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent) step.  
+
+> [!TIP]
+> If you want to have dynamic content for multiple types of hardware:
+>
+> - Use multiple instances of this step with conditions for the hardware types and separate driver content.
+>
+> - Use multiple instances of the [Download Package Content](/configmgr/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent) step. Place the content in a common location, and then use the **Staged content** option. The benefit of this method is the task sequence has a single **Upgrade OS** step.
 
 #### Time-out (minutes)
 
