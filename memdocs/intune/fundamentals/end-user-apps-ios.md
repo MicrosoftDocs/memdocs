@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/07/2019
+ms.date: 03/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -39,7 +39,7 @@ Use this information to understand how and where your end users get the apps tha
 
 **Managed apps**--Apps that can be managed through policies and that have been "wrapped" by Intune or have been built with the Intune App Software Development Kit (SDK). These apps can be managed by Intune, and app protection policies can be applied to them.
 
-**Unmanaged apps**--Apps that users can download from the iOS/iPadOS App Store that aren't integrated with the Intune app SDK. Intune doesn’t have any control over the distribution, management, or selective wipe of these apps.  
+**Unmanaged apps**--Apps that users can download from the iOS/iPadOS App Store that aren't integrated with the Intune app SDK. Intune doesn't have any control over the distribution, management, or selective wipe of these apps.  
 
 Enrolled users get their apps by tapping on the following tiles on the Apps screen of the Company Portal app:
 
@@ -54,9 +54,10 @@ Enrolled users get their apps by tapping on the following tiles on the Apps scre
 For information on how to add apps, see [How to add an app to Microsoft Intune](../apps/apps-add.md).
 
 ## App management takeover
-If an app is already installed on an end user's device, the iOS/iPadOS device shows an alert to allow management of the app by your organization. The end user must allow the organization to take management of the app before app configurations can be applied to a managed device. If the user cancels the alert, the alert will appear periodically for as long as the device is managed and the app is assigned.
+If an app is already installed on an end user's device, the iOS/iPadOS device shows an alert to allow management of the app by your organization. The end user must allow the organization to take management of the app before app configurations can be applied to a managed device. If the user cancels the alert, the alert will appear periodically for as long as the device is managed and the app is assigned.  
 
-![App management takeover alert](https://microsoft-my.sharepoint-df.com/:i:/p/arnab/EQTvVU2trxREhB8JxnEm9RcBylgEfYaUqDeRd5RdXNkslA?e=BZXCFf)
+
+![Image of the App Management Change alert, showing Cancel and Manage options.](./media/end-user-apps-ios/intune-app-management-confirmation-2002.png)
 
 ## See also
 
