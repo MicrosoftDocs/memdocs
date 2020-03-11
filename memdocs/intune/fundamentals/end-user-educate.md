@@ -57,7 +57,7 @@ These policies could also negatively affect employee productivity.
 
 Read the following list of tips to make your organization's Intune deployment easier for device users.
 
-* __Be resourceful.__ The Intune documentation helps users complete Intune-specific tasks, such as enrolling and troubleshooting devices. Users can click and access some articles directly from the Company Portal. These specific articles help explain the Company Portal app installation, Intune enrollment, general tasks that users can do on their devices, and troubleshooting. A list of this documentation is also found in the article, [Use managed devices to get work done](../end-user/use-managed-devices-to-get-work-done.md).
+* __Be resourceful.__ The Intune documentation helps users complete Intune-specific tasks, such as enrolling and troubleshooting devices. Users can click and access some articles directly from the Company Portal. These specific articles help explain the Company Portal app installation, Intune enrollment, general tasks that users can do on their devices, and troubleshooting. A list of this documentation is also found in the article, [Use managed devices to get work done](../user-help/use-managed-devices-to-get-work-done.md).
 
 * __Be accessible.__ Tell users where they can seek help for their device problems. When you [customize the Company Portal](../apps/company-portal-app.md), be sure to include your IT administrator's contact information.
 
@@ -68,16 +68,16 @@ Read the following list of tips to make your organization's Intune deployment ea
 * __Be aware.__ The Intune user experience impacts your productivity too. Understanding the users experience makes it easier for you to troubleshoot device and user problems. For example, you can learn and understand how your users acquire their apps. Knowing this information ahead of time will make it easier and faster to diagnose and fix problems.
 
 * **Android**
-  * [Using an Android device with Intune](../end-user/using-your-android-device-with-intune.md)
-  * [How your Android users get their apps](../end-user/end-user-apps-android.md)
+  * [Using an Android device with Intune](../user-help/using-your-android-device-with-intune.md)
+  * [How your Android users get their apps](../user-help/end-user-apps-android.md)
 
 * **iOS**
-  * [Using an iOS/iPadOS device with Intune](../end-user/using-your-ios-device-with-intune.md)
-  * [How your iOS/iPadOS users get their apps](../end-user/end-user-apps-ios.md)
+  * [Using an iOS/iPadOS device with Intune](../user-help/using-your-ios-device-with-intune.md)
+  * [How your iOS/iPadOS users get their apps](../user-help/end-user-apps-ios.md)
 
 * **Windows**
-  * [Using a Windows device with Intune](../end-user/using-your-windows-device-with-intune.md)
-  * [How your Windows users get their apps](../end-user/end-user-apps-windows.md)
+  * [Using a Windows device with Intune](../user-help/using-your-windows-device-with-intune.md)
+  * [How your Windows users get their apps](../user-help/end-user-apps-windows.md)
 
 * __Be forthcoming.__ Be clear about what you're going to manage on user devices. Tell users what kind of data you're collecting and why you're collecting it. Inform them of how you're planning to use all data. [Microsoft believes that you have a right to as much information as possible about how we handle your customer data in the cloud](https://www.microsoft.com/trustcenter/about/transparency), and believes that this philosophy can greatly increase user satisfaction with Intune.
 
