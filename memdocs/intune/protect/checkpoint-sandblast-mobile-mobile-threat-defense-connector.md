@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,7 +20,7 @@ ms.assetid: 706a4228-9bdf-41e0-b8d1-64c923dd2d2b
 
 #ROBOTS:
 #audience:
-
+#ms.devlang:
 ms.reviewer: davidra
 ms.suite: ems
 search.appverid: MET150
@@ -37,6 +37,21 @@ You can configure Conditional Access policies based on Check Point SandBlast Mob
 
 > [!NOTE]
 > This Mobile Threat Defense vendor is not supported for unenrolled devices.
+
+## Supported platforms
+
+- **Android 4.1 and later**
+
+- **iOS 8 and later**
+
+## Pre-requisites
+
+- Azure Active Directory Premium
+
+- Microsoft Intune subscription
+
+- Check Point SandBlast Mobile Threat Defense subscription
+  - See [CheckPoint SandBlast website](https://www.checkpoint.com/) for more information.
 
 ## How do Intune and Check Point SandBlast Mobile help protect your company resources?
 
@@ -56,52 +71,55 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 - Accessing company apps
 
-**Block when malicious apps are detected:**
+*Block when malicious apps are detected:*
 
-![Check Point MTD block when malicious apps are detected](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-MTD-2.PNG)
+> [!div class="mx-imgBorder"]
+> ![Check Point MTD block when malicious apps are detected](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-2.PNG)
 
-**Access granted on remediation:**
+*Access granted on remediation:*
 
-![Check Point MTD access granted](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-MTD-3.PNG)
+> [!div class="mx-imgBorder"]
+> ![Check Point MTD access granted](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-3.PNG)
 
 ### Control access based on threat to network
 
 Detect threats like **Man-in-the-middle** in network, and protect access to Wi-Fi networks based on the device risk.
 
-**Block network access through Wi-Fi:**
+*Block network access through Wi-Fi:*
 
-![Check Point MTD block network access through Wi-Fi](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-MTD-4.PNG)
+> [!div class="mx-imgBorder"]
+> ![Check Point MTD block network access through Wi-Fi](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-4.PNG)
 
-**Access granted on remediation:**
+*Access granted on remediation:*
 
-![Check Point MTD Wi-Fi access granted](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-MTD-5.PNG)
+> [!div class="mx-imgBorder"]
+> ![Check Point MTD Wi-Fi access granted](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-5.PNG)
 
 ### Control access to SharePoint Online based on threat to network
 
 Detect threats like **Man-in-the-middle** in network, and prevent synchronization of corporate files based on the device risk.
 
-**Block SharePoint Online when network threats are detected:**
+*Block SharePoint Online when network threats are detected:*
 
-![Check Point MTD block SharePoint Online access](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-MTD-6.PNG)
+> [!div class="mx-imgBorder"]
+> ![Check Point MTD block SharePoint Online access](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-6.PNG)
 
-**Access granted on remediation:**
+*Access granted on remediation:*
 
-![Check Point MTD SharePoint Online access granted](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-MTD-7.PNG)
+> [!div class="mx-imgBorder"]
+> ![Check Point MTD SharePoint Online access granted](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-7.PNG)
 
-## Supported platforms
+<!-- ### Control access on unenrolled devices based on threats from malicious apps
 
-- **Android 4.1 and later**
+When the Check Point Sandblast Mobile Threat Defense solution considers a device to be infected:
+> [!div class="mx-imgBorder"]
+> ![App protection policy blocks due to detected malware](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/sandblast-app-policy-block.png)
 
-- **iOS 8 and later**
+Access is granted on remediation:
 
-## Pre-requisites
-
-- Azure Active Directory Premium
-
-- Microsoft Intune subscription
-
-- Check Point SandBlast Mobile Threat Defense subscription
-  - See [CheckPoint SandBlast website](https://www.checkpoint.com/) for more information.
+> [!div class="mx-imgBorder"]
+> ![Access is granted on remediation for App protection policy](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/sandblast-app-policy-remediated.png)
+-->
 
 ## Next steps
 
