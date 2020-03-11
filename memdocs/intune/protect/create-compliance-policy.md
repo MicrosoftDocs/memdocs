@@ -102,7 +102,7 @@ To use device compliance policies, be sure you:
 
 7. On the **Actions for noncompliance** tab, specify a sequence of actions to apply automatically to devices that don't meet this compliance policy.
 
-   You can add multiople actions and configure schedules and additional details for some actions. For example, you might change the schedule of the default action *Mark device noncompliant* to occur after one day. You can then add an action to send an email to the user when the device isn't compliant to warn them of this. You can also add  actions that lock or retire devices that remain noncompliant.
+   You can add multiple actions and configure schedules and additional details for some actions. For example, you might change the schedule of the default action *Mark device noncompliant* to occur after one day. You can then add an action to send an email to the user when the device isn't compliant to warn them of that status. You can also add  actions that lock or retire devices that remain noncompliant.
 
    For information about the actions you can configure, see [Add actions for noncompliant devices](actions-for-noncompliance.md), including how to create notification emails to send to your users.
 
@@ -114,11 +114,11 @@ To use device compliance policies, be sure you:
 
 9. On the **Assignments** tab, assign the policy to your groups.  
 
-   Select **+ Select groups to include** and then assign the fepolicy to one or more groups. The policy will apply to these groups when you save the policy after the next step. 
+   Select **+ Select groups to include** and then assign the policy to one or more groups. The policy will apply to these groups when you save the policy after the next step. 
 
 10. On the **Review + create** tab, review the settings and select **Create** when ready to save the compliance policy.  
 
-    The users or devices targeted by your policy are evaluated for compliance when they check-in with Intune.
+    The users or devices targeted by your policy are evaluated for compliance when they check in with Intune.
 
 <!-- Evaluate option  - pending details as to its fate with this new Full Screen UI udpate  
 
