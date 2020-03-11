@@ -117,15 +117,21 @@ On the **Properties** tab for this step, configure the settings described in thi
 
 Specify the driver package that contains the needed device drivers. Select **Browse** to launch the **Select a Package** dialog box. Select an existing driver package to apply. The bottom of the dialog box displays the associated package properties.  
 
+#### Install driver package via running DISM with recurse option
+
+Select this option to add the `/recurse` parameter to the DISM command line when Windows applies the driver package.
+
+When you enable this option, you can also specify additional DISM command-line parameters. Use the [OSDInstallDriversAdditionalOptions](/configmgr/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions) task sequence variable to include more options. For more information, see [Windows 10 DISM Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).<!-- SCCMDocs#2125 -->
+
 #### Select the mass storage driver within the package that needs to be installed before setup on pre-Windows Vista operating systems
 
 Specify any mass storage drivers needed to install a classic OS.  
 
-#### Driver
+##### Driver
 
 Select the mass storage driver file to install before setup of a classic OS. The drop-down list populates from the specified package.  
 
-#### Model
+##### Model
 
 Specify the boot-critical device that is needed for pre-Windows Vista OS deployments.  
 
