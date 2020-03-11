@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -34,6 +34,9 @@ Use the Microsoft Intune management extension to upload PowerShell scripts in In
 This feature applies to:
 
 - Windows 10 and later
+
+> [!NOTE]
+> PowerShell scripts support Azure AD registered devices in Intune. However, this functionality does not support devices running Windows 10 Home edition. 
 
 ## Move to modern management
 
