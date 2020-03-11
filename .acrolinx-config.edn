@@ -1,2 +1,2 @@
 {:allowed-branchname-matches ["^master$" "^release..*"]
- :allowed-filename-matches ["intune"]}
+ :allowed-filename-matches ["memdocs"]}
