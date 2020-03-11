@@ -44,6 +44,7 @@ You can use bulk device actions for the following remote actions:
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > **Bulk Device Actions**.
+![Bulk device actions](./media/bulk-device-actions/bulk-device-actions.png)
 3. On the **Bulk device action** page, select an **OS** and **Device action** > **Next**.
 4. On the **Devices** page, select from 1 to 100 devices > **Next**.
 5. On the **Review + create** page, select **Create**.
