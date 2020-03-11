@@ -204,6 +204,7 @@ The following table lists CMG support for Configuration Manager features:
 | Software distribution (user-targeted, available)<br>([all requirements](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Supported](media/green_check.png) |
 | Windows 10 in-place upgrade task sequence      | ![Supported](media/green_check.png) |
 | Task sequences that aren't using boot images and are deployed with an option: **Download all content locally before starting task sequence**      | ![Supported](media/green_check.png) |
+| Task sequences that aren't using boot images  | ![Supported](media/green_check.png) (1910)|
 | CMPivot     | ![Supported](media/green_check.png)  (1806) |
 | Any other task sequence scenario     | ![Not supported](media/Red_X.png) |
 | Client push     | ![Not supported](media/Red_X.png) |
