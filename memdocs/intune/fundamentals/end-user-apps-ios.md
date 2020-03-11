@@ -59,7 +59,7 @@ If an app is already installed on an end user's device, the iOS/iPadOS device sh
 
 ![Image of the App Management Change alert, showing Cancel and Manage options.](./media/end-user-apps-ios/intune-app-management-confirmation-2002.png)
 
-## See also
+## See also  
 
 [How your Android users get their apps](end-user-apps-android.md)
 
