@@ -16,6 +16,7 @@
         items:
         - name: Intune user help
           tocHref: /intune/user-help/
+          topicHref: /intune/user-help/use-managed-devices-to-get-work-done.md
           - name: Apps
             tocHref: /mem/intune/apps/
             topicHref: /mem/intune/apps/
