@@ -56,7 +56,7 @@
     - name: Examine device inventory
       href: device-inventory.md
   - name: Bulk device actions
-    items: bulk-device-actions.md
+    href: bulk-device-actions.md
   - name: Troubleshooting
     items:
     - name: Troubleshoot device actions
