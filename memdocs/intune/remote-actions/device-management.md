@@ -82,6 +82,7 @@ The actions available depend on the device platform, and the configuration of th
   - [Wipe](devices-wipe.md#wipe)
   - [Send custom notification](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)
   - [Synchronize device](device-sync.md)
+- [Bulk device actions](bulk-device-actions.md)
 
 ## Next steps
 
