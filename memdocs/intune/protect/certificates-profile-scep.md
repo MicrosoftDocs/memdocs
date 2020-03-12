@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -38,28 +38,31 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profile** > **Create profile**.
+2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
 
 3. Enter the following properties:
+   - **Platform**: Choose the platform of your devices.
+   - **Profile**: Select **SCEP certificate**
 
-4. Enter a **Name** and **Description** for the SCEP certificate profile.
+     For the **Android Enterprise** platform, *Profile type* is divided into two categories, *Device Owner Only* and *Work Profile Only*. Be sure to select the correct SCEP certificate profile for the devices you manage.  
 
-5. From the **Platform** drop-down list, select a [supported device platform](certificates-configure.md#supported-platforms-and-certificate-profiles) for this SCEP certificate.
+     SCEP certificate profiles for the *Device Owner Only* profile have the following limitations:
 
-6. From the **Profile type** drop-down list, select **SCEP certificate**.  
+      1. Under Monitoring, certificate reporting isn't available for Device Owner SCEP certificate profiles.
 
-   For the **Android Enterprise** platform, *Profile type* is divided into two categories, *Device Owner Only* and *Work Profile Only*. Be sure to select the correct SCEP certificate profile for the devices you manage.  
+      2. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for Device Owners. You can manage revocation through an external process or directly with the certification authority.
 
-   SCEP certificate profiles for the *Device Owner Only* profile have the following limitations:
+      3. For Android Enterprise dedicated devices, SCEP certificate profiles are supported for Wi-Fi network configuration and authentication only.  SCEP certificate profiles on Android Enterprise dedicated devices are not supported for VPN or app authentication.
 
-   1. Under Monitoring, certificate reporting isn't available for Device Owner SCEP certificate profiles.
+4. Select **Create**.
 
-   2. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for Device Owners. You can manage revocation through an external process or directly with the certification authority. 
+5. In **Basics**, enter the following properties:
+   - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is *SCEP profile for entire company*.
+   - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
-   4. For Android Enterprise dedicated devices, SCEP certificate profiles are supported for Wi-Fi network configuration and authentication only.  SCEP certificate profiles on Android Enterprise dedicated devices are not supported for VPN or app authentication.   
+6. Select **Next**.
 
-   
-7. Select **Settings**, and then complete the following configurations:
+7. In **Configuration settings**, complete the following configurations:
 
    - **Certificate type**:
 
@@ -227,7 +230,22 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
      Enter one or more URLs for the NDES Servers that issue certificates via SCEP. For example, enter something like *https://ndes.contoso.com/certsrv/mscep/mscep.dll*. You can add additional SCEP URLs for load balancing as needed as URLs are randomly pushed to the device with the profile. If one of the SCEP servers isn't available, the SCEP request will fail and it's possible that on later device check-ins, the cert request could be made against the same server that is down.
 
-8. Select **OK**, and then select **Create**. The profile is created and appears on the *Device configuration - Profiles* list.
+8. Select **Next**.
+
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+   Select **Next**.
+
+10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see Assign user and device profiles.
+
+    Select **Next**.
+
+11. (*Applies to Windows 10 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
+
+  For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
+
+12. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
 
 ### Avoid certificate signing requests with escaped special characters
 

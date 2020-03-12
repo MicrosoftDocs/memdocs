@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -47,8 +47,8 @@ Intune supports import of PFX certificates for the following platforms:
 - Android - Device Administrator
 - Android Enterprise - Fully Managed
 - Android Enterprise - Work profile
-- iOS
-- Mac
+- iOS/iPadOS
+- macOS
 - Windows 10
 
 ## Requirements
@@ -217,29 +217,54 @@ After importing the certificates to Intune, create a **PKCS imported certificate
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profile** > **Create profile**.
+2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
 
 3. Enter the following properties:
+   - **Platform**: Choose the platform of your devices.
+   - **Profile**: Select **PKCS imported certificate**
 
-   - **Name** for the profile
-   - Optionally set a description
-   - **Platform** to deploy the profile to
-   - Set **Profile type** to **PKCS imported certificate**
+4. Select **Create**.
 
-4. Select **Settings**, and enter the following properties:
+5. In **Basics**, enter the following properties:
+   - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is *PKCS imported certificate profile for entire company*.
+   - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+
+6. Select **Next**.
+
+7. In **Configuration settings**, enter the following properties:
 
    - **Intended purpose**: Specify the intended purpose of the certificates that are imported for this profile. Administrators can import certificates with different intended purposes (like S/MIME signing or S/MIME encryption). The intended purpose selected in the certificate profile matches the certificate profile with the right imported certificates. Intended purpose is a tag to group imported certificates together and doesn't guarantee that certificates imported with that tag will meet the intended purpose.  
+
+   <!-- Not in new UI:
    - **Certificate validity period**: Unless the validity period was changed in the certificate template, this option defaults to one year.
+   -->
    - **Key storage provider (KSP)**: For Windows, select where to store the keys on the device.
 
-5. Select **OK** > **Create** to save your profile.
+8. Select **Next**.
+
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+   Select **Next**.
+
+10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see Assign user and device profiles.
+
+    Select **Next**.
+
+11. (*Applies to Windows 10 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
+
+    For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
+
+    Select **Next**.
+
+12. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Support for third-party partners
 
 The following partners provide supported methods or tools you can use to import PFX certificates to Intune.
 
 ### DigiCert
-If you use the DigiCert PKI Platform service, you can use the DigiCert **Import Tool for Intune S/MIME Certificates** to import PFX certificates to Intune. Use of this tool replaces the need to follow the instructions in the section [Import PFX Certificates to Intune](#import-pfx-certificates-to-intune) that’s detailed earlier in this article.
+
+If you use the DigiCert PKI Platform service, you can use the DigiCert **Import Tool for Intune S/MIME Certificates** to import PFX certificates to Intune. Use of this tool replaces the need to follow the instructions in the section [Import PFX Certificates to Intune](#import-pfx-certificates-to-intune) that's detailed earlier in this article.
 
 To learn more about the DigiCert Import tool, including how to obtain the tool, see https://knowledge.digicert.com/tutorials/microsoft-intune.html in the DigiCert knowledge base.
 
