@@ -69,12 +69,14 @@ Members of an orchestration group can be any Configuration Manager client, not j
 
    - **Specify the maintenance sequence**, then sort the selected resources in the proper order. Use this setting to explicitly define the order in which devices run the software update deployment.
 
-1. On the **Pre-Script** page, enter a PowerShell script to run on each device *before* the deployment runs. The script should return a value of `0` for success, or `3010` for success with restart. Specify a **Script timeout (in seconds)** value, which fails the script if it doesn't complete in the specified time.
+1. On the **Pre-Script** page, enter a PowerShell script to run on each device *before* the deployment runs. The script should return a value of `0` for success, or `3010` for success with restart.
 
-1. On the **Post-Script** page, enter a PowerShell script to run on each device *after* the deployment runs and a **Script timeout (in seconds)** value. The behavior is otherwise the same as the PreScript.
+1. On the **Post-Script** page, enter a PowerShell script to run on each device *after* the deployment runs. The behavior is otherwise the same as the PreScript.
 
 1. Complete the wizard.
 
+> [!WARNING]
+> Ensure pre-scripts and post-scripts are tested before using them. The pre-scripts and post-scripts don't timeout and will run indefinitely.
 
 ## View orchestration groups and members
 
@@ -100,12 +102,12 @@ To delete the orchestration group, select it then click **Delete** in the ribbon
       - **Specify the maintenance sequence**: Sort the selected resources to the proper order. Use this setting to explicitly define the order in which devices run the software update deployment.
 
    - **Pre-Script**: 
-       - Enter a PowerShell script that runs on each device *before* the deployment runs. The script should return a value of `0` for success, or `3010` for success with restart. 
-       - **Script timeout (in seconds)**: Value in seconds that fails the script if it doesn't complete in the specified time.
-
+       - Enter a PowerShell script that runs on each device *before* the deployment runs. The script should return a value of `0` for success, or `3010` for success with restart.
+       
    - **Post-Script**:
       - Enter a PowerShell script to run on each device *after* the deployment runs. The script should return a value of `0` for success, or `3010` for success with restart.
-      - **Script timeout (in seconds)**: Value in seconds that fails the script if it doesn't complete in the specified time.
+   > [!WARNING]
+   > Ensure pre-scripts and post-scripts are tested before using them. The pre-scripts and post-scripts don't timeout and will run indefinitely.
 
 
 ## Start orchestration
