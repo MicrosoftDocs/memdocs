@@ -15,11 +15,11 @@
         topicHref: /intune/
         items:
           - name: Intune for Education
-            tocHref: /mem/intune-education/
-            topicHref: /mem/intune-education/
+            tocHref: /intune-education/
+            topicHref: /intune-education/
           - name: Intune user help
-            tocHref: /mem/intune/user-help/
-            topicHref: /mem/intune-user-help/
+            tocHref: /mem/intune/user-help/use-managed-devices-to-get-work-done.md
+            topicHref: /mem/intune/user-help/use-managed-devices-to-get-work-done.md
           - name: Apps
             tocHref: /mem/intune/apps/
             topicHref: /mem/intune/apps/
