@@ -413,7 +413,8 @@ Specify the server licensing mode.
 
 #### Maximum connections
 
-Specify the maximum number of connections that are available for this computer as stated in your license agreement.  
+> [!NOTE]
+> This setting only applies to legacy versions of Windows that are no longer supported.<!-- #4833 -->
 
 #### Randomly generate the local administrator password and disable the account on all supported platforms (recommended)  
 
