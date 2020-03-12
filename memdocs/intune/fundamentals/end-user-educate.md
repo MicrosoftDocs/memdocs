@@ -69,7 +69,7 @@ Read the following list of tips to make your organization's Intune deployment ea
 
 * **Android**
   * [Using an Android device with Intune](../user-help/why-enroll-android-device.md)
-  * [How your Android users get their apps](../user-help/end-user-apps-android.md)
+  * [How your Android users get their apps](end-user-apps-android.md)
 
 * **iOS**
   * [Using an iOS/iPadOS device with Intune](../user-help/using-your-ios-device-with-intune.md)
