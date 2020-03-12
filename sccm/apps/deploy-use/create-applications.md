@@ -2,7 +2,7 @@
 title: Create applications
 titleSuffix: Configuration Manager
 description: Create applications with deployment types, detection methods, and requirements to install software.
-ms.date: 12/03/2019
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Create applications in Configuration Manager
@@ -23,24 +21,24 @@ A Configuration Manager application defines the metadata about application. An a
 Create applications using the following methods:  
 
 - Automatically create an application and deployment types by reading the application installation files:  
-    - [Create an application](#bkmk_create) and [automatically detect](#bkmk_auto-app) application information
-    - [Create a deployment type](#bkmk_create-dt) and [automatically identify](#bkmk_auto-dt) deployment type information
+  - [Create an application](#bkmk_create) and [automatically detect](#bkmk_auto-app) application information
+  - [Create a deployment type](#bkmk_create-dt) and [automatically identify](#bkmk_auto-dt) deployment type information
 
 - Manually create an application and then add deployment types later:  
-    - [Create an application](#bkmk_create) and [manually specify](#bkmk_manual-app) application information
-    - [Create a deployment type](#bkmk_create-dt) and [manually specify](#bkmk_manual-dt) deployment type information
+  - [Create an application](#bkmk_create) and [manually specify](#bkmk_manual-app) application information
+  - [Create a deployment type](#bkmk_create-dt) and [manually specify](#bkmk_manual-dt) deployment type information
 
 - [Import an application](#bkmk_import) from a file  
 
 This article also includes the following information to configure a deployment type:  
 
 - [Content](#bkmk_dt-content)
+- [Task Sequence](#bkmk_dt-ts)
 - [Detection Method](#bkmk_dt-detect)
 - [User Experience](#bkmk_dt-ux)
 - [Requirements](#bkmk_dt-require)
 - [Return Codes](#bkmk_dt-return)
 - [Dependencies](#bkmk_dt-depend)
-
 
 ## <a name="bkmk_create"></a> Create an application  
 
@@ -83,7 +81,7 @@ Next, automatically detect or manually specify application information:
 
     - **Use an automatic VPN connection (if configured)**: If you've deployed a VPN profile to the device on which the user launches the app, connect the VPN when the app starts. This option is only for Windows 8.1 and Windows Phone 8.1. On Windows Phone 8.1 devices, if you deploy more than one VPN profile to the device, automatic VPN connections aren't supported. For more information, see [VPN profiles](/sccm/protect/deploy-use/vpn-profiles).  
 
-    - **Provision this application for all users on the device**<!--1358310-->: Starting in version 1806, provision an application with a Windows app package for all users on the device. For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).  
+    - **Provision this application for all users on the device**<!--1358310-->: Provision an application with a Windows app package for all users on the device. For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).  
 
        > [!Tip]  
        > If you're modifying an existing application, this setting is on the **User Experience** tab of the Windows app package deployment type properties.  
@@ -153,7 +151,6 @@ To add more deployment types or configure other settings, see [Create deployment
 
 The new application now appears in the **Applications** node of the Configuration Manager console.  
 
-
 ## <a name="bkmk_create-dt"></a> Create deployment types for the application  
 
 If you [automatically detect application information](#bkmk_auto-app), you may not need to finish some of the steps in this section.  
@@ -162,6 +159,7 @@ If you [automatically detect application information](#bkmk_auto-app), you may n
 > When you view the properties of an existing deployment type, the following sections correspond to tabs of the deployment type properties window:  
 >
 > - [Content](#bkmk_dt-content)
+> - [Task Sequence](#bkmk_dt-ts)
 > - [Detection Method](#bkmk_dt-detect)
 > - [User Experience](#bkmk_dt-ux)
 > - [Requirements](#bkmk_dt-require)
@@ -236,19 +234,19 @@ On the **Content** page, specify the following information:
     > [!IMPORTANT]  
     > The System account of the site server computer must have permissions to the specified content location.  
 
-    - **Persist content in the client cache**: The Configuration Manager client indefinitely keeps in its cache the deployment type content. The client persists the content even if the app is already installed. This option is useful with some deployments, like Windows Installer–based software. Windows Installer needs a local copy of the source content for applying updates. This option reduces the available cache space. If you select this option, it might cause a large deployment to fail at a later point if the cache doesn't have sufficient available space.  
+  - **Persist content in the client cache**: The Configuration Manager client indefinitely keeps in its cache the deployment type content. The client persists the content even if the app is already installed. This option is useful with some deployments, like Windows Installer–based software. Windows Installer needs a local copy of the source content for applying updates. This option reduces the available cache space. If you select this option, it might cause a large deployment to fail at a later point if the cache doesn't have sufficient available space.  
 
 - **Installation program**: Specify the name of the installation program and any required installation parameters.  
 
-    - **Installation start in**: Optionally specify the folder that has the installation program for the deployment type. This folder can be an absolute path on the client or a path to the distribution point folder that has the installation files.  
+  - **Installation start in**: Optionally specify the folder that has the installation program for the deployment type. This folder can be an absolute path on the client or a path to the distribution point folder that has the installation files.  
 
 - **Uninstall program**: Optionally specify the name of the uninstall program and any required parameters.  
 
-    - **Uninstall start in**: Optionally specify the folder that has the uninstall program for the deployment type. This folder can be an absolute path on the client. It can also be a relative path on a distribution point of the folder with the package.  
+  - **Uninstall start in**: Optionally specify the folder that has the uninstall program for the deployment type. This folder can be an absolute path on the client. It can also be a relative path on a distribution point of the folder with the package.  
 
-- **Repair program**: Starting in version 1810, for Windows Installer and Script Installer deployment types, optionally specify the name of the repair program and any required parameters.<!--1357866-->  
+- **Repair program**: For Windows Installer and Script Installer deployment types, optionally specify the name of the repair program and any required parameters.<!--1357866-->  
 
-    - **Repair start in**: Optionally specify the folder that has the repair program for the deployment type. This folder can be an absolute path on the client. It can also be a relative path on a distribution point of the folder with the package.  
+  - **Repair start in**: Optionally specify the folder that has the repair program for the deployment type. This folder can be an absolute path on the client. It can also be a relative path on a distribution point of the folder with the package.  
 
 - **Run installation and uninstall program as 32-bit process on 64-bit clients**: Use the 32-bit file and registry locations on Windows-based computers to run the installation program for the deployment type.  
 
@@ -258,19 +256,34 @@ When you view the properties of a deployment type, the following options appear 
 
 - **Uninstall content settings**:  
 
-    - **Same as install content**: If the install and uninstall content are the same, select this option. This option is the default.  
+  - **Same as install content**: If the install and uninstall content are the same, select this option. This option is the default.  
 
-    - **No uninstall content**: If your application doesn't need content for uninstall, select this option.  
+  - **No uninstall content**: If your application doesn't need content for uninstall, select this option.  
 
-    - **Different from install content**: If the uninstall content is different from the install content, select this option.  
+  - **Different from install content**: If the uninstall content is different from the install content, select this option.  
 
-        - **Uninstall content location**: Specify the network path to the content that's used to uninstall the application.  
+    - **Uninstall content location**: Specify the network path to the content that's used to uninstall the application.  
 
 - **Allow clients to use distribution points from the default site boundary group**: Specify if clients should download and install the software from a distribution point in the site default boundary group when the content isn't available from a distribution point in the current or neighbor boundary groups.  
 
 - **Deployment options**: Specify if clients should download the application when they use a distribution point from a neighbor or the default site boundary groups.  
 
 - **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information, see [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache). BranchCache is always enabled on clients. This setting was removed in version 1802, as clients use BranchCache if the distribution point supports it.  
+
+### <a name="bkmk_dt-ts"></a> Deployment type **Task Sequence** options
+
+<!--3555953-->
+
+For more information on the task sequence deployment type starting in version 2002, see [Task sequence deployment type](/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt).
+
+On the **Task Sequence** page, specify the following information:
+
+- **Install task sequence**: Select a task sequence that runs the installation process for this app.
+
+- **Uninstall task sequence** (optional): Select a task sequence that removes this app.
+
+> [!TIP]  
+> If your task sequence doesn't appear in the list, double-check that it doesn't include any OS deployment or OS upgrade steps. Also confirm that it isn't marked as a high-impact task sequence. For more information, review the prerequisites for the [Task sequence deployment type](/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt).
 
 ### <a name="bkmk_dt-detect"></a> Deployment type **Detection Method** options
 
@@ -338,7 +351,7 @@ When you create more than one detection method for a deployment type, you can gr
 2. In the **Script Editor** dialog box, select a **Script type** to detect the deployment type: PowerShell, VBScript, or JScript.  
 
     > [!Note]  
-    > Starting in version 1810, when a Windows PowerShell script runs as a app detection method, the Configuration Manager client calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. A PowerShell profile is a script that runs when PowerShell starts. <!--3607762-->  
+    > When a Windows PowerShell script runs as a app detection method, the Configuration Manager client calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. A PowerShell profile is a script that runs when PowerShell starts. <!--3607762-->  
 
 3. In the **Script contents** box, enter the script that you want to use, or paste in the contents of an existing script. Choose **Open** to browse to an existing saved script. Select **Clear** to remove the text in the Script contents field. If necessary, enable the option to **Run script as 32-bit process on 64-bit clients**.  
 
@@ -444,11 +457,11 @@ On the **User Experience** page, specify the following information:
 
 - **Installation behavior**: In the drop-down list, select one of the following options:  
 
-    - **Install for user**: The client only installs the application for the user to whom you deploy the application.  
+  - **Install for user**: The client only installs the application for the user to whom you deploy the application.  
 
-    - **Install for system**: The client installs the application only once. It's available to all users.  
+  - **Install for system**: The client installs the application only once. It's available to all users.  
 
-    - **Install for system if resource is device; otherwise, install for user**: If you deploy the application to a device, the client installs it for all users. If you deploy the application to a user, the client only installs it for that user.  
+  - **Install for system if resource is device; otherwise, install for user**: If you deploy the application to a device, the client installs it for all users. If you deploy the application to a user, the client only installs it for that user.  
 
 - **Logon requirement**: Select one of the following options:  
 
@@ -463,13 +476,13 @@ On the **User Experience** page, specify the following information:
 
 - **Installation program visibility**: Specify the mode in which the deployment type runs on client devices. Select one of the following options:  
 
-    - **Maximized**: The deployment type runs maximized on client devices. Users see all installation activity.  
+  - **Maximized**: The deployment type runs maximized on client devices. Users see all installation activity.  
 
-    - **Normal**: The deployment type runs in the normal mode based on system and program defaults. This mode is the default.  
+  - **Normal**: The deployment type runs in the normal mode based on system and program defaults. This mode is the default.  
 
-    - **Minimized**: The deployment type runs minimized on client devices. Users might see the installation activity in the notification area or taskbar.  
+  - **Minimized**: The deployment type runs minimized on client devices. Users might see the installation activity in the notification area or taskbar.  
 
-    - **Hidden**: The deployment type runs hidden on client devices. Users see no installation activity.  
+  - **Hidden**: The deployment type runs hidden on client devices. Users see no installation activity.  
 
 - **Allow users to view and interact with the program installation**: Specify whether a user can interact with the deployment type installation to set up the installation options.  
 
@@ -621,7 +634,6 @@ When you create some deployment types, Configuration Manager automatically adds 
 |15605    |Fast Retry|
 |15618    |Fast Retry|
 
-
 ## <a name="bkmk_appv"></a> Additional options for App-V deployment types  
 
 Configure additional options that are unique to deployment types for virtual applications (App-V).  
@@ -654,7 +666,6 @@ Configure additional options that are unique to deployment types for virtual app
 
 5. Select **OK** to close the deployment type properties. Then select **OK** to close the application properties.  
 
-
 ## <a name="bkmk_import"></a> Import an application  
 
 Use the following procedure to import an application into Configuration Manager:
@@ -676,7 +687,6 @@ The new application appears in the **Applications** node.
 
 For more information about how to export an application, see [Management tasks for applications](/sccm/apps/deploy-use/management-tasks-applications).
 
-
 ## <a name="bkmk_deploy-types"></a> Supported deployment types  
 
 Configuration Manager supports the following deployment types for applications:
@@ -684,9 +694,8 @@ Configuration Manager supports the following deployment types for applications:
 | Deployment type name | Description |
 |--------------------------|----------------------|  
 | **Windows Installer (\*.msi file)** | A Windows Installer file. |  
-| **Windows app package (\*.appx, \*.appxbundle)** | For Windows 8 or later. Select a Windows app package file or a Windows app bundle package. |  
-| **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)** | Starting in version 1806, for new Windows 10 app package (.msix) and app bundle (.msixbundle) formats. Select a Windows app package file or a Windows app bundle package.<!--1357427--> |  
-| **Windows app package (in the Windows Store)** | For Windows 8 or later. Specify a link to the app in the Windows Store, or browse the store to select the app.<sup>[Note 1](#bkmk_note1)</sup> |  
+| **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)** | A Windows app package file (.appx), a Windows app bundle package (.appxbundle), a Windows 10 app package (.msix), or Windows 10 app bundle (.msixbundle).<!--1357427--> |  
+| **Windows app package (in the Windows Store)** | Specify a link to the app in the Windows Store, or browse the store to select the app.<sup>[Note 1](#bkmk_note1)</sup> |  
 | **Script Installer** | Specify a script or program that runs on Windows clients to install content or to do an action. Use this deployment type for setup.exe installers or script wrappers. |  
 | **Microsoft Application Virtualization 4** | A Microsoft App-V v4 manifest. |  
 | **Microsoft Application Virtualization 5** | A Microsoft App-V v5 package file. |  
@@ -694,7 +703,8 @@ Configuration Manager supports the following deployment types for applications:
 | **Windows Phone app package (in the Windows Phone Store)** | Specify a link to the app in the Windows Store. |  
 | **Mac OS X** | For macOS computers running the Configuration Manager client. Create a .cmmac file with the **CMAppUtil** tool. |  
 | **Web Application** | Specify a link to a web application. This deployment type installs a shortcut to the web application on the user's device. |  
-| **Windows Installer through MDM (\*.msi)** | Create and deploy Windows Installer-based apps to Windows 10 devices. For more information, see [Deploy Windows Installer apps to MDM-enrolled Windows 10 devices](/sccm/apps/get-started/creating-windows-applications#bkmk_mdm-msi). |  
+| **Windows Installer through MDM (\*.msi)** | Create and deploy Windows Installer-based apps to Windows 10 devices. For more information, see [Deploy Windows Installer apps to MDM-enrolled Windows 10 devices](/sccm/apps/get-started/creating-windows-applications#bkmk_mdm-msi). |
+| **Task sequence** | Starting in version 2002, install or uninstall complex applications using task sequences. For more information, see [Task sequence deployment type](/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt). <!--3555953--> |
 
 > [!NOTE]
 > The Configuration Manager console may display other deployment types, but they are for platforms that are no longer supported. For more information, see [What happened to hybrid?](/configmgr/mdm/understand/what-happened-to-hybrid).

@@ -32,17 +32,32 @@ To take full advantage of new Configuration Manager features, after you update t
 
 <!-- 3607277 -->
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+If your hierarchy consists of a central administration site (CAS) and a single child primary site, you can now remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single primary site.
 
-<!-- For more information, see [](). -->
+For more information, see [Remove the CAS](/configmgr/core/servers/deploy/install/remove-central-administration-site).
 
-### New management insight rules from Microsoft Services
+### New management insight rules
 
-<!-- 3607758 -->
+This release includes the following management insight rules:
 
-This release includes additional management insight rules courtesy of Microsoft Premier Field Engineering. These rules are a sample of the many more checks that Microsoft Premier provides in the Services Hub.
+- Nine rules in the **Configuration Manager Assessment** group courtesy of Microsoft Premier Field Engineering. These rules are a sample of the many more checks that Microsoft Premier provides in the Services Hub.<!-- 3607758 -->
 
-<!-- For more information, see [Management insights](/configmgr/core/servers/manage/management-insights). -->
+  - Active Directory Security Group Discovery is configured to run too frequently
+  - Active Directory System Discovery is configured to run too frequently
+  - Active Directory User Discovery is configured to run too frequently
+  - Collections limited to All Systems or All Users
+  - Heartbeat Discovery is disabled
+  - Long running collection queries enabled for incremental updates
+  - Reduce the number of applications and packages on distribution points
+  - Secondary site installation issues
+  - Update all sites to the same version
+
+- Two additional rules in the **Cloud Services** group to help you configure your site for adding secure HTTPS communication:<!-- 6268489 -->
+
+  - Sites that don't have proper HTTPS configuration
+  - Devices not uploaded to Azure AD
+
+For more information, see [Management insights](/configmgr/core/servers/manage/management-insights).
 
 ### Improvements to administration service
 
@@ -67,7 +82,7 @@ The site system's proxy settings, including authentication, are now used by:
 - Azure AD user group discovery
 - Synchronizing collection membership results to Azure Active Directory groups
 
-<!-- For more information, see [Proxy server support](/configmgr/core/plan-design/network/proxy-server-support). -->
+For more information, see [Proxy server support](/configmgr/core/plan-design/network/proxy-server-support#bkmk_other).
 
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
@@ -123,12 +138,9 @@ We've made it easier to navigate CMPivot entities. Starting in this technical pr
 
 <!-- 3555777 -->
 
-Boundary groups include the following option for peer downloads: During peer downloads, only use peers within the same subnet. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet and boundary group as the client. For more information on this option, see Boundary group options for peer downloads.
+Boundary groups include the following option for peer downloads: **During peer downloads, only use peers within the same subnet**. If you enable this option, the content location list from the management point only includes peer sources that are in the same subnet and boundary group as the client. Depending on the configuration of your network, you can now exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet.
 
-Depending on the configuration of your network, you can now exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet. By default, Configuration Manager excludes the default Teredo subnet (2001:0000:%).
-
-<!-- For more information, see [Boundary group options](/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions). -->
-
+For more information, see [Boundary group options](/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
 ## <a name="bkmk_client"></a> Client management
 
@@ -182,13 +194,11 @@ You can now create a Microsoft Edge application that's set up to receive automat
 
 You can now install complex applications using task sequences via the application model. Add a deployment type to an app that's a task sequence, either to install or uninstall the app. This feature provides the following behaviors:
 
-- Deploy an app task sequence to a user collection
-
 - Display the app task sequence with an icon in Software Center. An icon makes it easier for users to find and identify the app task sequence.
 
 - Define additional metadata for the app task sequence, including localized information
 
-<!-- For more information, see [](). -->
+For more information, see [Create Windows applications](/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt).
 
 
 ## <a name="bkmk_osd"></a> OS deployment
@@ -205,7 +215,7 @@ When you install and register a new Configuration Manager client, and also deplo
 
 <!-- 6005561 -->
 
-You can now verify more device properties in the Check Readiness task sequence step. Use this step in a task sequence to verify the target computer meets your prerequisite conditions.
+You can now verify more device properties in the **Check Readiness** task sequence step. Use this step in a task sequence to verify the target computer meets your prerequisite conditions.
 
 - Architecture of current OS
 - Minimum OS version
@@ -215,7 +225,7 @@ You can now verify more device properties in the Check Readiness task sequence s
 - AC power plugged in
 - Network adapter is connected and not wireless
 
-<!-- For more information, see [Task sequence steps - Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness). -->
+For more information, see [Task sequence steps - Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness).
 
 ### Improvements to task sequence progress
 
@@ -233,13 +243,13 @@ The task sequence progress window now includes the following improvements:
 
 This release includes the following improvements to OS deployment:
 
-- The task sequence environment includes a new read-only variable, `_TSSecureBoot`.<!--5842295--> Use this variable to determine the state of secure boot on a UEFI-enabled device. <!-- For more information, see [Task sequence variables](/configmgr/osd/understand/task-sequence-variables). -->
+- The task sequence environment includes a new read-only variable, `_TSSecureBoot`.<!--5842295--> Use this variable to determine the state of secure boot on a UEFI-enabled device. For more information, see [_TSSecureBoot](/configmgr/osd/understand/task-sequence-variables#TSSecureBoot).
 
-- You can now set task sequence variables to configure the user context that the [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine) and [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) steps use.<!-- 5573175 --> For example, now you don't need to configure the **Run Command Line** step with a placeholder account to use the [SMSTSRunCommandLineUserName](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName) and [SMSTSRunCommandLineUserPassword](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserPassword) variables.<!-- For more information, see [Task sequence steps](/configmgr/osd/understand/task-sequence-steps). -->
+- Set task sequence variables to configure the user context for the **Run Command Line** and **Run PowerShell Script** steps.<!-- 5573175 --> For more information, see [SMSTSRunCommandLineAsUser](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineAsUser) and [SMSTSRunPowerShellAsUser](/configmgr/osd/understand/task-sequence-variables#SMSTSRunPowerShellAsUser).
 
-- Set the [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) **Parameters** property to a variable.<!-- 5690481 --> <!-- For more information, see [Task sequence steps](/configmgr/osd/understand/task-sequence-steps). -->
+- On the **Run PowerShell Script** step, you can now set the **Parameters** property to a variable.<!-- 5690481 --> For more information, see [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript).
 
-- The Configuration Manager PXE responder now sends status messages to the site server. This change makes it easier to troubleshoot OS deployments that use this service.<!-- 5568051 --> <!-- For more information, see [](). -->
+- The Configuration Manager PXE responder now sends status messages to the site server. This change makes it easier to troubleshoot OS deployments that use this service.<!-- 5568051 -->
 
 
 <!-- ## <a name="bkmk_userxp"></a> Software Center -->
@@ -265,7 +275,7 @@ For more information, see [Orchestration groups](/configmgr/sum/deploy-use/orche
 
 Configuration Manager now detects if a servicing stack update (SSU) is part of an installation for multiple updates. When an SSU is detected, it's installed first. After install of the SSU, a software update evaluation cycle runs to install the remaining updates. This change allows a dependent cumulative update to be installed after the servicing stack update. The device doesn't need to restart between installs, and you don't need to create an additional maintenance window. SSUs are installed first only for non-user initiated installs. For instance, if a user initiates an installation for multiple updates from Software Center, the SSU might not be installed first.
 
-<!-- For more information, see [](). -->
+For more information, see [Plan for software updates](/configmgr/sum/plan-design/plan-for-software-updates#bkmk_SSU).
 
 ### Office 365 updates for disconnected software update points
 
@@ -289,12 +299,11 @@ Configuration Manager now expands its support for onboarding devices to Microsof
 
 ### Improvements to BitLocker management
 
-<!-- 5925683 -->
+- The BitLocker management policy now includes additional settings, including policies for fixed and removable drives.<!-- 5925683 --> For more information, see [BitLocker settings reference](/configmgr/protect/tech-ref/bitlocker/settings).
 
-The BitLocker management policy now includes additional settings, including policies for fixed and removable drives.
+- In Configuration Manager current branch version 1910, to integrate the BitLocker recovery service you had to HTTPS-enable a management point. The HTTPS connection is necessary to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Configuring the management point and all clients for HTTPS can be challenging for many customers.
 
-<!-- For more information, see [](). -->
-
+    Starting in this version, the HTTPS requirement is for the IIS website that hosts the recovery service, not the entire management point role. This change relaxes the certificate requirements, and still encrypts the recovery keys in transit.<!-- 5925660 --> For more information, see [Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data).
 
 ## <a name="bkmk_report"></a> Reporting
 
