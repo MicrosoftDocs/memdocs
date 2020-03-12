@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Intune includes device restriction policies that help administrators control Android, iOS/iPadOS, macOS, and Windows devices. These restrictions let you control a wide range of settings and features to protect your organization's resources. For example, administrators can:
 
-- Allow or block the device camera
+- Allow or block the device camera*
 - Control access to Google Play, app stores, viewing documents, and gaming
 - Block built-in apps, or create a list of apps that allowed or prohibited
 - Allow or prevent backing up files to cloud and storage accounts
@@ -41,6 +41,8 @@ Intune includes device restriction policies that help administrators control And
 These features are available in Intune, and are configurable by the administrator. Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, you can then push or deploy the profile to devices in your organization.
 
 This article shows you how to create a device restrictions profile. You can also see all the available settings for the different platforms.
+
+*Intune will only be able to allow or disable the device camera, will never have access or provide access to your camera or pictures. This means that we can only enable or disable the camera of the device.
 
 ## Create the profile
 
