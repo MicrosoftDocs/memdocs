@@ -68,8 +68,8 @@ Read the following list of tips to make your organization's Intune deployment ea
 * __Be aware.__ The Intune user experience impacts your productivity too. Understanding the users experience makes it easier for you to troubleshoot device and user problems. For example, you can learn and understand how your users acquire their apps. Knowing this information ahead of time will make it easier and faster to diagnose and fix problems.
 
 * **Android**
-  * [Using an Android device with Intune](../user-help/using-your-android-device-with-intune.md)
-  * [How your Android users get their apps](../user-help/why-enroll-android-device.md)
+  * [Using an Android device with Intune](../user-help/why-enroll-android-device.md)
+  * [How your Android users get their apps](../user-help/end-user-apps-android.md)
 
 * **iOS**
   * [Using an iOS/iPadOS device with Intune](../user-help/using-your-ios-device-with-intune.md)
