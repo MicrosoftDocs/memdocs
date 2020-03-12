@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 This article helps you understand how and where your Android device administrator end users get the apps that you distribute through Microsoft Intune. The information can vary by device type (native Android devices or Samsung Knox Standard devices).
 
-## Native (non-Samsung Knox Standard) Android devices
+## Native (non-Samsung Knox Standard) Android devices  
 
 | App type | Line-of-business (LOB) apps | Play Store apps  |
 | ------------- |-------------| -----|
