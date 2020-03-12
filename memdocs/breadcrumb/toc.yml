@@ -15,8 +15,8 @@
         topicHref: /intune/
         items:
         - name: Intune user help
-          tocHref: /intune/user-help/
-          topicHref: /intune/user-help/
+          tocHref: /mem/intune/user-help/
+          topicHref: /mem/intune/user-help/
         - name: Apps
           tocHref: /mem/intune/apps/
           topicHref: /mem/intune/apps/
