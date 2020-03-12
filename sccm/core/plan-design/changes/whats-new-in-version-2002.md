@@ -249,7 +249,7 @@ This release includes the following improvements to OS deployment:
 
 - On the **Run PowerShell Script** step, you can now set the **Parameters** property to a variable.<!-- 5690481 --> For more information, see [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript).
 
-- The Configuration Manager PXE responder now sends status messages to the site server. This change makes it easier to troubleshoot OS deployments that use this service.<!-- 5568051 --> <!-- For more information, see [](). -->
+- The Configuration Manager PXE responder now sends status messages to the site server. This change makes it easier to troubleshoot OS deployments that use this service.<!-- 5568051 -->
 
 
 <!-- ## <a name="bkmk_userxp"></a> Software Center -->
