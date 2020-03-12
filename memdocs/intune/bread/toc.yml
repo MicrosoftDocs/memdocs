@@ -10,10 +10,9 @@
       tocHref: /intune/
       topicHref: /intune/
       items:
-        - name: End-user help
-        - name: Intune for Education
-          tocHref: /intune-education/
-          topicHref: /intune-education/
+        - name: Intune user help
+          tocHref: /intune/user-help/
+          topicHref: /intune/user-help/
         - name: Apps
           tocHref: /intune/apps/
           topicHref: /intune/apps/
