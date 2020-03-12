@@ -18,8 +18,8 @@
             tocHref: /intune-education/
             topicHref: /intune-education/
           - name: Intune user help
-            tocHref: /mem/intune/user-help/use-managed-devices-to-get-work-done.md
-            topicHref: /mem/intune/user-help/use-managed-devices-to-get-work-done.md
+            tocHref: /mem/intune/user-help/
+            topicHref: /mem/intune/user-help/
           - name: Apps
             tocHref: /mem/intune/apps/
             topicHref: /mem/intune/apps/
