@@ -125,7 +125,7 @@ If you selected the **Enter XML data** option under the **Setting format** dropd
 1. Added your configuration XML.
 
     > [!NOTE]
-    > The Product ID can either be Business (`O365ProPlusBusiness`) or Proplus (`O365ProPlusRetail`). However, you can only configure the app suite of the Office 365 Business edition using XML data. 
+    > The Product ID can either be Business (`O365BusinessRetail`) or Proplus (`O365ProPlusRetail`). However, you can only configure the app suite of the Office 365 Business edition using XML data. 
 
 2. Click **Next** to display the **Scope tags** page.
 
