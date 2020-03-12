@@ -2,7 +2,7 @@
 title: Tutorial&#58; Enable co-management for existing clients
 titleSuffix: Configuration Manager
 description: Configure co-management with Microsoft Intune when you already manage Windows 10 devices with Configuration Manager.
-ms.date: 02/25/2020
+ms.date: 03/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: tutorial
@@ -59,7 +59,7 @@ If not already present in your environment, during this tutorial you'll:
 
 Throughout this tutorial, use the following permissions to complete tasks:
 
-- An account that is a *global administrator* in Azure  
+- An account that is a *global administrator* in Azure Active Directory (Azure AD) 
 - An account that is a *domain admin* on your on-premises infrastructure  
 - An account that is a *full administrator* for *all* scopes in Configuration Manager
 
@@ -83,7 +83,7 @@ Hybrid Azure AD requires configuration of Azure AD Connect to keep computer acco
 
 Beginning with version 1.1.819.0, Azure AD Connect provides you with a wizard to configure hybrid Azure AD join. Use of that wizard simplifies the configuration process.  
 
-To configure Azure AD Connect, you need credentials of a global administrator for your Azure AD tenant.  
+To configure Azure AD Connect, you need credentials of a global administrator for Azure AD.  
 
 > [!TIP]  
 > The following procedure should not be considered authoritative for set up of Azure AD Connect but is provided here to help streamline configuration of co-management between Intune and Configuration Manager. For the authoritative content on this and related procedures for set up of Azure AD, see [Configure hybrid Azure AD join for managed domains](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains) in the Azure AD documentation.  
@@ -94,7 +94,7 @@ To configure Azure AD Connect, you need credentials of a global administrator fo
 2. Launch Azure AD Connect, and then select **Configure**.
 3. On the **Additional tasks** page, select **Configure device options**, and then select **Next**.
 4. On the **Overview** page, select **Next**.
-5. On the **Connect to Azure AD** page, enter the credentials of a global administrator for your Azure AD tenant.
+5. On the **Connect to Azure AD** page, enter the credentials of a global administrator for Azure AD.
 6. On the **Device options** page, select **Configure Hybrid Azure AD join**, and then select **Next**.
 7. On the **Device operating systems** page, select the operating systems used by devices in your Active Directory environment, and then select **Next**.  
 
