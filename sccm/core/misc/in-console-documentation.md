@@ -2,7 +2,7 @@
 title: In-console documentation
 titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
-ms.date: 02/10/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -22,7 +22,7 @@ ROBOTS: NOINDEX
 
 # Microsoft Endpoint Configuration Manager documentation
 
-*Last update: February 10, 2020*
+*Last update: March 12, 2020*
 
 This content can assist you in learning and supporting Configuration Manager.
 
@@ -50,22 +50,22 @@ A curated list of important articles.
 
 ## Trending
 
-The most popular articles between January 1 and January 31, 2020.
+The most popular articles between February 1 and February 29, 2020.
 
 | Page views | Title |
 |------------|-------|
-| 24389 | [What's new in version 1910](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1910) |
-| 18683 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 18160 | [Log file reference](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
-| 16392 | [Updates and servicing](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
-| 14575 | [Ports used for connections](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
-| 13404 | [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
-| 12933 | [Deploy and update Microsoft Edge, version 77 and later](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge) |
-| 12017 | [Deploy clients to Windows](https://docs.microsoft.com/configmgr/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 11385 | [Support for Windows 10](https://docs.microsoft.com/configmgr/core/plan-design/configs/support-for-windows-10) |
-| 10688 | [What is Configuration Manager?](https://docs.microsoft.com/configmgr/core/understand/introduction) |
+| 17949 | [Log file reference](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
+| 16788 | [What's new in version 1910](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1910) |
+| 16336 | [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
+| 15901 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 15582 | [Updates and servicing](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
+| 13294 | [Ports used for connections](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
+| 11675 | [Deploy clients to Windows](https://docs.microsoft.com/configmgr/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 11649 | [Co-management for Windows 10 devices](https://docs.microsoft.com/configmgr/comanage/overview) |
+| 10898 | [What is Configuration Manager?](https://docs.microsoft.com/configmgr/core/understand/introduction) |
+| 9837 | [Software Center user guide](https://docs.microsoft.com/configmgr/core/understand/software-center) |
 
-The [Configuration Manager hub page](https://docs.microsoft.com/configmgr/) received 30,626 page views in this time period.
+The [Configuration Manager hub page](https://docs.microsoft.com/configmgr/) received 31,487 page views in this time period.
 
 ## Recently updated
 
@@ -73,16 +73,16 @@ Articles with a recent and significant update.
 
 | Last reviewed | Title |
 |---------------|-------|
-| 01/31/2020 | [Upgrade Readiness](https://docs.microsoft.com/configmgr/core/clients/manage/upgrade-readiness) |
-| 01/31/2020 | [FAQ for Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/faq) |
-| 01/30/2020 | [Diagnostic and usage data FAQ](https://docs.microsoft.com/configmgr/core/plan-design/diagnostics/frequently-asked-questions) |
-| 01/27/2020 | [Release notes](https://docs.microsoft.com/configmgr/core/servers/deploy/install/release-notes) |
-| 01/24/2020 | [Product and licensing FAQ](https://docs.microsoft.com/configmgr/core/understand/product-and-licensing-faq) |
-| 01/17/2020 | [Technical preview 2001](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2001) |
-| 01/16/2020 | [What's new in Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/whats-new) |
-| 01/16/2020 | [Deploy and update Microsoft Edge, version 77 and later](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge) |
-| 01/09/2020 | [On-premises MDM](https://docs.microsoft.com/configmgr/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure) |
-| 01/07/2020 | [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection) |
+| 2/28/2020 | [Technical preview 2002.2](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2002-2) |
+| 2/28/2020 | [Enable data sharing](https://docs.microsoft.com/configmgr/desktop-analytics/enable-data-sharing) |
+| 2/26/2020 | [Manage high-risk deployments](https://docs.microsoft.com/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments) |
+| 2/19/2020 | [Deprecated for site servers](https://docs.microsoft.com/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-server) |
+| 2/19/2020 | [Deprecated for clients](https://docs.microsoft.com/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client) |
+| 2/14/2020 | [Extend and Migrate on-premises site to Microsoft Azure](https://docs.microsoft.com/configmgr/core/support/azure-migration-tool) |
+| 2/13/2020 | [Technical preview 2002](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2002) |
+| 2/12/2020 | [Product and licensing FAQ](https://docs.microsoft.com/configmgr/core/understand/product-and-licensing-faq) |
+| 2/3/2020 | [FAQ for Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/faq) |
+| 2/3/2020 | [Technical preview 2001.2](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2001-2) |
 
 ## Troubleshooting articles
 
