@@ -30,11 +30,13 @@ Use Desktop Analytics with Configuration Manager to:
 
 ![Screenshot of the Desktop Analytics home page in the Azure portal](media/portal-home.png)
 
-The following video is a session from Ignite 2019, which includes more information on Desktop Analytics including demos:
+The following video is a session from Ignite 2019, which includes more information on Desktop Analytics:
 
 <!-- [Using Desktop Analytics and Configuration Manager to reduce Windows TCO through data-driven insights for management, servicing, and support](https://myignite.techcommunity.microsoft.com/sessions/81689?source=sessions)-->
 
 > [!VIDEO https://medius.studios.ms/Embed/Video-nc/IG19-BRK3085]
+
+Skip to 10:00 for an in-depth demo.
 
 > [!Note]  
 > Desktop Analytics is a successor of Windows Analytics, which retired on January 31, 2020.
