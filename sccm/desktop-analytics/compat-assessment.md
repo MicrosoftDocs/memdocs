@@ -120,7 +120,7 @@ Windows compatibility data classifies some apps and drivers with a *safeguard*, 
     > [!NOTE]
     > This entry isn't a real app that's installed on your devices. It's a placeholder to help identify apps or drivers in your environment with the safeguard compatibility tag.
 
-1. In the recommendation section, select the link to *Learn more*.<!-- need link here --> This link opens the Windows website with the current list of apps or drivers with the safeguard tag.
+1. In the recommendation section, select the link to *Learn more*. This link opens the Windows website with the current list of apps or drivers with the safeguard tag.
 
 1. Compare the current published list against the list of assets in your environment. Remediate any potentially problematic apps or drivers by updating to a compatible version.
 
