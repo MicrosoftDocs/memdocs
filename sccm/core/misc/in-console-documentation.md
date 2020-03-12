@@ -22,7 +22,7 @@ ROBOTS: NOINDEX
 
 # Microsoft Endpoint Configuration Manager documentation
 
-*Last update: February 12, 2020*
+*Last update: March 12, 2020*
 
 This content can assist you in learning and supporting Configuration Manager.
 
