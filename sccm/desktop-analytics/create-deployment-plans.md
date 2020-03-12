@@ -2,7 +2,7 @@
 title: How to create deployment plans
 titleSuffix: Configuration Manager
 description: A how-to guide for creating deployment plans in Desktop Analytics.
-ms.date: 03/03/2020
+ms.date: 03/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -34,7 +34,7 @@ Follow the steps in this section to use Desktop Analytics to create a plan for d
 
     - **Device groups**: Select one or more groups from the same hierarchy. These groups are [device collections](/configmgr/desktop-analytics/connect-configmgr#bkmk_Collections) synchronized from Configuration Manager.
 
-        If you connect multiple Configuration Manager hierarchies to the same Desktop Analytics instance, the hierarchy name prefixes the collection name in the global pilot configuration. Hover over the collection name to see the hierarchy ID.<!-- 4814075 -->
+        If you connect multiple Configuration Manager hierarchies to the same Desktop Analytics instance, a display name for the hierarchy prefixes the collection name in the global pilot configuration. This name is the **Display Name** property on the Desktop Analytics connection in the Configuration Manager console.<!-- 4814075 -->
 
         > [!NOTE]
         > If you select collections for multiple hierarchies, the portal displays a warning. You can't create the deployment plan with collections from multiple hierarchies.<!-- 4814075 -->
