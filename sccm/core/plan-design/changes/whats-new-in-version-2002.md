@@ -215,7 +215,7 @@ When you install and register a new Configuration Manager client, and also deplo
 
 <!-- 6005561 -->
 
-You can now verify more device properties in the Check Readiness task sequence step. Use this step in a task sequence to verify the target computer meets your prerequisite conditions.
+You can now verify more device properties in the **Check Readiness** task sequence step. Use this step in a task sequence to verify the target computer meets your prerequisite conditions.
 
 - Architecture of current OS
 - Minimum OS version
@@ -225,7 +225,7 @@ You can now verify more device properties in the Check Readiness task sequence s
 - AC power plugged in
 - Network adapter is connected and not wireless
 
-<!-- For more information, see [Task sequence steps - Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness). -->
+For more information, see [Task sequence steps - Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness).
 
 ### Improvements to task sequence progress
 
@@ -243,13 +243,13 @@ The task sequence progress window now includes the following improvements:
 
 This release includes the following improvements to OS deployment:
 
-- The task sequence environment includes a new read-only variable, `_TSSecureBoot`.<!--5842295--> Use this variable to determine the state of secure boot on a UEFI-enabled device. <!-- For more information, see [Task sequence variables](/configmgr/osd/understand/task-sequence-variables). -->
+- The task sequence environment includes a new read-only variable, `_TSSecureBoot`.<!--5842295--> Use this variable to determine the state of secure boot on a UEFI-enabled device. For more information, see [_TSSecureBoot](/configmgr/osd/understand/task-sequence-variables#TSSecureBoot).
 
-- You can now set task sequence variables to configure the user context that the [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine) and [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) steps use.<!-- 5573175 --> For example, now you don't need to configure the **Run Command Line** step with a placeholder account to use the [SMSTSRunCommandLineUserName](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName) and [SMSTSRunCommandLineUserPassword](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserPassword) variables.<!-- For more information, see [Task sequence steps](/configmgr/osd/understand/task-sequence-steps). -->
+- Set task sequence variables to configure the user context for the **Run Command Line** and **Run PowerShell Script** steps.<!-- 5573175 --> For more information, see [SMSTSRunCommandLineAsUser](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineAsUser) and [SMSTSRunPowerShellAsUser](/configmgr/osd/understand/task-sequence-variables#SMSTSRunPowerShellAsUser).
 
-- Set the [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) **Parameters** property to a variable.<!-- 5690481 --> <!-- For more information, see [Task sequence steps](/configmgr/osd/understand/task-sequence-steps). -->
+- On the **Run PowerShell Script** step, you can now set the **Parameters** property to a variable.<!-- 5690481 --> For more information, see [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript).
 
-- The Configuration Manager PXE responder now sends status messages to the site server. This change makes it easier to troubleshoot OS deployments that use this service.<!-- 5568051 --> <!-- For more information, see [](). -->
+- The Configuration Manager PXE responder now sends status messages to the site server. This change makes it easier to troubleshoot OS deployments that use this service.<!-- 5568051 -->
 
 
 <!-- ## <a name="bkmk_userxp"></a> Software Center -->
