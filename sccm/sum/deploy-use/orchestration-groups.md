@@ -76,7 +76,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
 1. Complete the wizard.
 
 > [!WARNING]
-> Ensure pre-scripts and post-scripts are tested before using them. The pre-scripts and post-scripts don't timeout and will run indefinitely.
+> Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached.
 
 ## View orchestration groups and members
 
@@ -107,7 +107,7 @@ To delete the orchestration group, select it then click **Delete** in the ribbon
    - **Post-Script**:
       - Enter a PowerShell script to run on each device *after* the deployment runs. The script should return a value of `0` for success, or `3010` for success with restart.
    > [!WARNING]
-   > Ensure pre-scripts and post-scripts are tested before using them. The pre-scripts and post-scripts don't timeout and will run indefinitely.
+   > Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached.
 
 
 ## Start orchestration
