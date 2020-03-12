@@ -293,84 +293,84 @@ Specifies if the computer is running as a Windows To Go device.
 
 ### <a name="TSCRMEMORY"></a> _TS_CRMEMORY
 
-*Starting in version 2002*  <!--6005561-->
+*Starting in version 2002* <!--6005561-->  
 *Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Minimum memory (MB)** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRSPEED"></a> _TS_CRSPEED
 
-*Starting in version 2002*  <!--6005561-->
+*Starting in version 2002* <!--6005561-->  
 *Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Minimum processor speed (MHz)** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRDISK"></a> _TS_CRDISK
 
-*Starting in version 2002*  <!--6005561-->
+*Starting in version 2002* <!--6005561-->  
 *Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Minimum free disk space (MB)** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCROSTYPE"></a> _TS_CROSTYPE
 
-*Starting in version 2002*  <!--6005561-->
+*Starting in version 2002* <!--6005561-->  
 *Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Current OS to be refreshed is** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRARCH"></a> _TS_CRARCH
 
-*Starting in version 2002*  <!--6005561-->
+*Starting in version 2002* <!--6005561-->  
 *Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Architecture of current OS** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRMINOSVER"></a> _TS_CRMINOSVER
 
-*Starting in version 2002*  <!--6005561-->
+*Starting in version 2002* <!--6005561-->  
 *Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Minimum OS version** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRMAXOSVER"></a> _TS_CRMAXOSVER
 
-*Starting in version 2002*  <!--6005561-->
+*Starting in version 2002* <!--6005561-->  
 *Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Maximum OS version** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRCLIENTMINVER"></a> _TS_CRCLIENTMINVER
 
-*Starting in version 2002*  <!--6005561-->
+*Starting in version 2002* <!--6005561-->  
 *Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Minimum client version** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCROSLANGUAGE"></a> _TS_CROSLANGUAGE
 
-*Starting in version 2002*  <!--6005561-->
+*Starting in version 2002* <!--6005561-->  
 *Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Language of current OS** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRACPOWER"></a> _TS_CRACPOWER
 
-*Starting in version 2002*  <!--6005561-->
+*Starting in version 2002* <!--6005561-->  
 *Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **AC power plugged in** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRNETWORK"></a> _TS_CRNETWORK
 
-*Starting in version 2002*<!--6005561-->
+*Starting in version 2002* <!--6005561-->  
 *Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Network adapter connected** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRWIRED"></a> _TS_CRWIRED
 
-*Starting in version 2002*  <!--6005561-->
+*Starting in version 2002* <!--6005561-->  
 *Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Network adapter is not wireless** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
@@ -389,7 +389,7 @@ The task sequence sets this variable with the installation status for the applic
 
 ### <a name="TSSecureBoot"></a> _TSSecureBoot
 
-*Starting in version 2002*  <!--5842295-->
+*Starting in version 2002* <!--5842295-->  
 
 Use this variable to determine the state of secure boot on a UEFI-enabled device. The variable can have one of the following values:
 
@@ -1684,7 +1684,7 @@ Requests a retry after the current task sequence step is completed. If this task
 
 ### <a name="SMSTSRunCommandLineAsUser"></a> SMSTSRunCommandLineAsUser
 
-*Starting in version 2002*  <!-- 5573175 -->
+*Starting in version 2002* <!-- 5573175 -->  
 *Applies to the [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step.*
 
 Use task sequence variables to configure the user context for the **Run Command Line** step. You don't need to configure the **Run Command Line** step with a placeholder account to use the [SMSTSRunCommandLineUserName](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName) and [SMSTSRunCommandLineUserPassword](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserPassword) variables.
@@ -1720,7 +1720,7 @@ Specifies the password for the account specified by the [SMSTSRunCommandLineUser
 
 ### <a name="SMSTSRunPowerShellAsUser"></a> SMSTSRunPowerShellAsUser
 
-*Starting in version 2002*  <!-- 5573175 -->
+*Starting in version 2002* <!-- 5573175 -->  
 *Applies to the [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) step.*
 
 Use task sequence variables to configure the user context for the **Run PowerShell Script** step. You don't need to configure the **Run PowerShell Script** step with a placeholder account to use the [SMSTSRunPowerShellUserName](/configmgr/osd/understand/task-sequence-variables#SMSTSRunPowerShellUserName) and [SMSTSRunPowerShellUserPassword](/configmgr/osd/understand/task-sequence-variables#SMSTSRunPowerShellUserPassword) variables.
