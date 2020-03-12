@@ -40,6 +40,19 @@ An Intune device can have zero or one primary user assigned to it. When there's 
 2. Choose **Devices** > choose a device.
 3. On the **Overview** page, you can see the primary user listed.
 
+## Change a device's primary user
+
+The primary user of a device can be updated for devices Windows 10 devices that are Azure AD Joined or Hybrid Azure AD Joined.
+
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Choose **Devices** > **All devices** > choose a device > **Properties** > **Change primary user**.
+3. Select a new user and choose **Select**.
+
+After the primary user is updated, it will also be updated in Intune and Azure AD device blades.
+
+The primary user can't be changed on co-managed Windows 10 devices.
+
+
 ## What is the primary user?
 The primary user property is used to map a licensed Intune user to their devices in:
 - The Company Portal app

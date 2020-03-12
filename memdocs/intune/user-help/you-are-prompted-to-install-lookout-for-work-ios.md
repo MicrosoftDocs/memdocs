@@ -41,7 +41,7 @@ Before you can access your work, your company needs you to install the Lookout f
 
 1. If you see the following prompt, tap **Install** to allow Lookout for Work to be installed on your device.
 
-      ![Screenshot of App Installation prompt with a Cancel and Install buttons.](/user-help/media/ios-mts-install-app-request-after-1804.png)
+      ![Screenshot of App Installation prompt with a Cancel and Install buttons.](./media/ios-mts-install-app-request-after-1804.png)
 
 2. When you see the following message, tap **Settings**, turn on **Location Services**, and then tap **Continue**.
 

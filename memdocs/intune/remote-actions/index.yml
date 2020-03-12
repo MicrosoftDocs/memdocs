@@ -38,6 +38,8 @@ landingContent:
             url: device-sync.md
           - text: Remotely administer devices with TeamViewer
             url: teamviewer-support.md
+          - text: Use bulk device actions
+            url: bulk-device-actions.md
 
   # Card (optional)
   - title: Remove and restart
