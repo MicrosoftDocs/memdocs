@@ -247,7 +247,7 @@ This release includes the following improvements to OS deployment:
 
 - Set task sequence variables to configure the user context for the **Run Command Line** and **Run PowerShell Script** steps.<!-- 5573175 --> For more information, see [SMSTSRunCommandLineAsUser](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineAsUser) and [SMSTSRunPowerShellAsUser](/configmgr/osd/understand/task-sequence-variables#SMSTSRunPowerShellAsUser).
 
-- Set the [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) **Parameters** property to a variable.<!-- 5690481 --> <!-- For more information, see [Task sequence steps](/configmgr/osd/understand/task-sequence-steps). -->
+- On the **Run PowerShell Script** step, you can now set the **Parameters** property to a variable.<!-- 5690481 --> For more information, see [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript).
 
 - The Configuration Manager PXE responder now sends status messages to the site server. This change makes it easier to troubleshoot OS deployments that use this service.<!-- 5568051 --> <!-- For more information, see [](). -->
 

@@ -2045,6 +2045,8 @@ If a parameter value includes a special character, use single quotation marks (`
 
 For example: `-Arg1 '%TSVar1%' -Arg2 '%TSVar2%'`
 
+Starting in version 2002, set this property to a variable.<!-- 5690481 --> For example, if you specify `%MyScriptVariable%`, when the task sequence runs the script, it adds the value of this custom variable to the PowerShell command line.
+
 #### PowerShell execution policy
 
 Determine which PowerShell scripts (if any) you allow to run on the computer. Choose one of the following execution policies:  
