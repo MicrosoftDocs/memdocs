@@ -101,7 +101,7 @@ Starting in version 2002, the task sequence progress window includes the followi
 
 - Increased the width of the window to give you more space to better show the organization name in a single line
 
-![Example task sequence progress](media/2356386-task-sequence-progress.png)
+![Example task sequence progress window](media/2356386-task-sequence-progress.png)
 
 By default, the task sequence progress window uses the existing text. If you make no changes, it continues to work the same as in version 1910 and earlier. To show the new progress information, specify the task sequence variable, [TSProgressInfoLevel](/configmgr/osd/understand/task-sequence-variables#TSProgressInfoLevel).
 
@@ -122,7 +122,7 @@ The count of total steps doesn't include the following items in the task sequenc
 
 If the task sequence fails, it displays the **Task Sequence Error** window.
 
-<!-- screenshot -->
+![Example task sequence error window](media/task-sequence-error.png)
 
 - You customize the header information the same as the task sequence progress window.
 
