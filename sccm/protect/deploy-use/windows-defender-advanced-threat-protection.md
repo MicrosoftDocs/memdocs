@@ -2,7 +2,7 @@
 title: Microsoft Defender Advanced Threat Protection
 titleSuffix: Configuration Manager
 description: Learn how to manage and monitor Microsoft Defender Advanced Threat Protection, a new service that helps enterprises respond to advanced attacks.
-ms.date: 01/07/2020
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -24,18 +24,38 @@ Microsoft Defender ATP is a service in the [Windows Defender Security Center](ht
 ## Prerequisites
 
 - Subscription to the Microsoft Defender Advanced Threat Protection online service  
-- Clients computers running Windows 10, version 1607 and later  
 - Clients computers running the Configuration Manager client
+- Clients using an OS listed in the [Supported client operating systems](#bkmk_os) section below. 
 
-## Create an onboarding configuration file  
+### <a name="bkmk_os"></a> Supported client operating systems
+Based on the version of Configuration Manager you're running, the following client operating systems can be onboarded:
+
+#### Configuration Manager version 1910 and prior
+
+- Clients computers running Windows 10, version 1607 and later
+
+#### Configuration Manager version 2002 and later
+<!--5229962-->
+- Windows 7 SP1
+- Windows 8.1
+- Windows 10, version 1607 or later
+- Windows Server 2008 R2 SP1
+- Windows Server 2012 R2
+- Windows Server 2016
+- Windows Server 2016, version 1803
+- Windows Server 2019
+
+## Create an onboarding configuration file
 
 1. Go to the [Microsoft Defender ATP online service](https://securitycenter.windows.com/) and sign in.
-
-2. Select **Machine Management** under **Settings**, and then select **Onboarding**.
-
-3. Select **Configuration Manager (current branch) version 1606** and select  **Download package**.
-
-4. Download the compressed archive (.zip) file and extract the contents.
+1. Select **Machine Management** under **Settings**, and then select **Onboarding**.
+1. Select the operating systems you'd like to onboard from the list.
+   - If you're onboarding Windows 10, Windows Server 1803, and Windows Server 2019:
+      1. Select **Configuration Manager (current branch) version 1606** and select **Download package**.
+      1. Download the compressed archive (.zip) file and extract the contents.
+   - If you're onboarding another Windows operating system: 
+      1. Select the operating systems you'd like to onboard from the list. For example, choose either **Windows 7 and 8.1** or **Windows Server 2008 R2 SP1, 2012 R2 and 2016**.
+      1. Copy the values for the **Workspace key** and **Workspace ID** from the **Configure connection** section once the process completes.
 
 > [!IMPORTANT]
 > The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
@@ -43,18 +63,15 @@ Microsoft Defender ATP is a service in the [Windows Defender Security Center](ht
 ## Onboard devices
 
 1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender ATP Policies** and select **Create Windows Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
-
-2. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
-
-3. **Browse** to the Configuration file provided by your organization’s Microsoft Defender ATP cloud service tenant.
-
-4. Specify the file samples that are collected and shared from managed devices for analysis.  
+1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
+1. **Browse** to the Configuration file provided by your organization's Microsoft Defender ATP cloud service tenant.
+   - For **Windows 7 and 8.1** or **Windows Server 2008 R2 SP1, 2012 R2 and 2016**, provide the **Workspace key** and **Workspace ID**.
+1. Specify the file samples that are collected and shared from managed devices for analysis.  
 
    - **None**
 
    - **All file types**  
-
-5. Review the summary and complete the wizard.  
+1. Review the summary and complete the wizard.  
 
 Select **Deploy** to target the Microsoft Defender ATP policy to clients.
 
@@ -62,7 +79,7 @@ Select **Deploy** to target the Microsoft Defender ATP policy to clients.
 
 1. In the Configuration Manager console, navigate **Monitoring** > **Security** and then select **Windows Defender ATP**.  
 
-2. Review the Microsoft Defender Advanced Threat Protection dashboard.  
+1. Review the Microsoft Defender Advanced Threat Protection dashboard.  
 
     - **Windows Defender Agent Deployment Status**: The number and percentage of eligible managed client computers with active Microsoft Defender ATP policy onboarded  
 
@@ -74,25 +91,25 @@ Select **Deploy** to target the Microsoft Defender ATP policy to clients.
 
         - **Agent state** - The system service for the agent in Windows isn't running  
 
-        - **Not onboarded** - Policy was applied but the agent has not reported policy onboard  
+        - **Not onboarded** - Policy was applied but the agent hasn't reported policy onboard  
 
 ## Create an offboarding configuration file  
 
 1. Sign in to the [Microsoft Defender ATP online service](https://securitycenter.windows.com/).
 
-2. Select **Machine Management** under **Settings**, and then select **Onboarding**.  
+1. Select **Machine Management** under **Settings**, and then select **Onboarding**.  
 
-3. Select **Configuration Manager (current branch) version 1606** and select **Endpoint offboarding**.  
+1. Select **Configuration Manager (current branch) version 1606** and select **Endpoint offboarding**.  
 
-4. Download the compressed archive (.zip) file and extract the contents. Offboarding files are valid for 30 days.
+1. Download the compressed archive (.zip) file and extract the contents. Offboarding files are valid for 30 days.
 
-5. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender ATP Policies** and select **Create Windows Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
+1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender ATP Policies** and select **Create Windows Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
 
-6. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Offboarding**.
+1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Offboarding**.
 
-7. **Browse** to the Configuration file provided by your organization’s Microsoft Defender ATP cloud service tenant.
+1. **Browse** to the Configuration file provided by your organization's Microsoft Defender ATP cloud service tenant.
 
-8. Review the summary and complete the wizard.  
+1. Review the summary and complete the wizard.  
 
 Select **Deploy** to target the Microsoft Defender ATP policy to clients.  
 

@@ -29,7 +29,6 @@ To take full advantage of new Configuration Manager features, after you update t
 ## <a name="bkmk_infra"></a> Site infrastructure
 
 ### Remove a central administration site
-
 <!-- 3607277 -->
 
 If your hierarchy consists of a central administration site (CAS) and a single child primary site, you can now remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single primary site.
@@ -294,8 +293,7 @@ For more information, see [Synchronize Office 365 updates from a disconnected so
 ### Expand Microsoft Defender Advanced Threat Protection (ATP) onboarding
 
 <!-- 5229962 -->
-
-Configuration Manager now expands its support for onboarding devices to Microsoft Defender ATP.<!-- For more information, see [Microsoft Defender Advanced Threat Protection](/sccm/protect/deploy-use/windows-defender-advanced-threat-protection#onboard-devices). -->
+Configuration Manager has expanded its support for onboarding devices to Microsoft Defender ATP. For more information, see [Microsoft Defender Advanced Threat Protection](/sccm/protect/deploy-use/windows-defender-advanced-threat-protection#onboard-devices)
 
 ### Improvements to BitLocker management
 
