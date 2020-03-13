@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 3/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -21,7 +21,7 @@ ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
 #ROBOTS: 
 #audience:
 
-ms.reviewer: elocholi
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -45,7 +45,10 @@ The procedures in this article require access to both the Intune and Jamf Pro co
 
 2. Select **Devices** > **Compliance policies**. If you're using a previously created policy, select that policy in the console and then go to the next step of this procedure. To create a new policy, select **Create Policy** and then specify details for a policy with a *Platform* of **macOS**. Configure *Settings* and *Actions for noncompliance* to meet your organizational requirements, and then select **Create** to save the policy.
 
-3. On the policies *Overview* pane, select **Assignments**. Use the available options to configure which Azure Active Directory (Azure AD) users and security groups receive this policy. Jamf integration with Intune doesn’t support compliance policy that targets device groups.
+3. On the policies *Overview* pane, select **Assignments**. Use the available options to configure which Azure Active Directory (Azure AD) users and security groups receive this policy. **Jamf integration with Intune doesn’t support compliance policy that targets device groups.**
+
+> [!NOTE]
+> Jamf integration with Intune only supports AAD user groups. Device compliance policies that are targeted to device groups will not apply.
 
 4. When you select **Save**, the policy deploys to the users.  
 
