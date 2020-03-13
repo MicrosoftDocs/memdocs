@@ -356,6 +356,11 @@ OneTrace now supports customizable log groups, similar to the feature in Support
 
 <!-- For more information, see [Support Center OneTrace](/configmgr/core/support/support-center-onetrace). -->
 
+## <a name="bkmk_extend"></a> Improvements to extend and migrate on-premises site to Microsoft Azure
+<!--5665775, 6307931-->
+The extend and migrate on-premises site to Microsoft Azure tool now supports provisioning multiple site system roles on a single Azure virtual machine. You can add site system roles after the initial Azure virtual machine deployment has completed.
+
+For more information, see [Extend and migrate on-premises site to Microsoft Azure](/configmgr/core/support/azure-migration-tool#bkmk_add_role).
 
 ## Other updates
 
