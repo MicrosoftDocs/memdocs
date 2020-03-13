@@ -29,7 +29,6 @@ To take full advantage of new Configuration Manager features, after you update t
 ## <a name="bkmk_infra"></a> Site infrastructure
 
 ### Remove a central administration site
-
 <!-- 3607277 -->
 
 If your hierarchy consists of a central administration site (CAS) and a single child primary site, you can now remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single primary site.
