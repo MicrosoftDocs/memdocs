@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 Intune for Government is an application and mobile management platform designed to help ensure security, privacy and control, compliance, and transparency. It meets federal, state, and local US government needs with physical and logical network-isolated instances of Azure. These instances are dedicated to US government with all customer data, applications, and hardware residing in the continental United States. 
 
-Intune for Government includes a physically isolated instance of Microsoft Intune that supports security and compliance requirements critical to US government. Intune is a cloud-based enterprise mobility management (EMM) service that is the foundation for Intune for Government. Government agencies will have access to the same features available to commercial customers. These include FedRAMP and DoD compliance certifications, and Operated by screen US persons.
+Intune for Government includes a physically isolated instance of Microsoft Intune that supports security and compliance requirements critical to US government. Intune is a cloud-based enterprise mobility management (EMM) service that is the foundation for Intune for Government. Government agencies will have access to the same features available to commercial customers. These include FedRAMP and DoD compliance certifications, and Operated by screened US persons.
 
 With Intune for Government you can manage Windows 10, iOS, and Android devices using the full MDM capabilities available in Intune. For example, you can:
 
