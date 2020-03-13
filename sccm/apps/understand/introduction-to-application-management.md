@@ -2,7 +2,7 @@
 title: Introduction to app management
 titleSuffix: Configuration Manager
 description: Discover the basic information you'll need to manage and deploy applications in Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Introduction to application management in Configuration Manager
@@ -130,16 +128,17 @@ Configuration Manager lets you deploy the following app types:
 
 - Windows Installer (msi)  
 
-- Windows app package (appx or appxbundle)  
-
-    > [!Note]  
-    > This type includes the new Windows 10 app package (msix) and app bundle (msixbundle) formats.<!--1357427-->  
+- Windows app package and app bundles (appx, appxbundle, msix, msixbundle)  
 
 - Windows app package in the Microsoft Store  
+
+- Script installer for third-party installers and script wrappers
 
 - Microsoft App-V v4 and v5  
 
 - macOS  
+
+- A non-OS deployment task sequence for complex apps
 
 Additionally, when you manage devices through Configuration Manager [on-premises device management](/configmgr/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure), manage these further app types:  
 

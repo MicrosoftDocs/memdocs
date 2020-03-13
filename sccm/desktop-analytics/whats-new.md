@@ -2,7 +2,7 @@
 title: What's new in Desktop Analytics
 titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
-ms.date: 01/16/2020
+ms.date: 03/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -21,6 +21,28 @@ Learn what's new each month in Desktop Analytics.
 
 To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## March 2020
+
+### Support for multiple hierarchies
+
+<!-- 4814075, 6079184 -->
+
+You can now connect multiple Configuration Manager hierarchies to a single Azure Active Directory tenant with a single Commercial ID for Desktop Analytics. The portal categorizes devices from different hierarchies, and improves the experiences for global pilots and deployment plans.
+
+- When you configure your global pilot, if you include collections that contain more than 20% of your total enrolled devices, the portal displays a warning.
+- When you create a deployment plan, if you select collections for multiple hierarchies, the portal displays a warning.
+
+For more information, see the following articles:
+
+- [Global pilot](/configmgr/desktop-analytics/deploy-pilot#bkmk_GlobalPilot)
+- [How to create deployment plans](/configmgr/desktop-analytics/create-deployment-plans)
+
+### Identify compatibility safeguards
+
+<!-- 5746559 -->
+
+Windows compatibility data classifies some apps and drivers with a *safeguard*, which may cause the update to Windows 10 to fail or rollback. Desktop Analytics can now help you to identify these safeguards in advance, so that you can remediate the asset before you deploy the update. For more information, see [Compatibility assessment - Safeguards](/configmgr/desktop-analytics/compat-assessment#safeguards).
 
 ## January 2020
 

@@ -28,8 +28,6 @@
     href: get-started/configure-classifications-and-products.md
   - name: Manage settings for software updates
     href: get-started/manage-settings-for-software-updates.md
-  - name: Remove a software update point
-    href: get-started/remove-a-software-update-point.md
   - name: Synchronize software updates in disconnected environments
     items:
     - name: Synchronize software updates from a disconnected software update point
@@ -58,6 +56,8 @@
       href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
   - name: Software updates maintenance
     href: deploy-use/software-updates-maintenance.md
+  - name: Orchestration groups
+    href: deploy-use/orchestration-groups.md  
   - name: Service a server group
     href: deploy-use/service-a-server-group.md
   - name: Office 365 client management dashboard

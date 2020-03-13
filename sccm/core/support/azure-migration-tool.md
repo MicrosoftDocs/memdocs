@@ -2,7 +2,7 @@
 title: Extend and Migrate on-premises site to Microsoft Azure
 titleSuffix: Configuration Manager
 description: Learn about how to use the migration tool to programmatically create Azure virtual machines for Configuration Manager.
-ms.date: 02/14/2020
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -42,8 +42,6 @@ Microsoft.Resources/subscriptions/resourceGroups/write <br>
 Microsoft.Resources/deployments/read <br>
 Microsoft.Resources/deployments/write <br>
 Microsoft.Resources/deployments/validate/action <br>
-Microsoft.Authorization/roleAssignments/read <br>
-Microsoft.Authorization/roleAssignments/write <br>
 Microsoft.Compute/virtualMachines/extensions/read <br>
 Microsoft.Compute/virtualMachines/extensions/write <br>
 Microsoft.Compute/virtualMachines/read <br>
@@ -165,6 +163,13 @@ The tool doesn't currently have any tasks to migrate the database from on-premis
     [![Deploy site roles by running the generated PowerShell script](./media/3556022-run-powershell-script-deployment.png)](./media/3556022-run-powershell-script-deployment.png#lightbox)
 
 1. Repeat this process to configure more roles.
+
+## <a name="bkmk_add_role"></a> Add site roles to an existing virtual machine deployment
+<!--5665775, 6307931-->
+Starting in Configuration Manager version 2002, the extend and migrate on-premises site to Microsoft Azure tool supports provisioning multiple site system roles on a single Azure virtual machine. You can add site system roles after the initial Azure virtual machine deployment has completed. To add a new role to an existing virtual machine, do the following steps:
+1. On the **Deployments in Azure** tab, click on a virtual machine deployment that has a **Completed** status.
+1. Click the **Create new** button to add an additional role to the virtual machine.
+
 
 ## Next steps
 
