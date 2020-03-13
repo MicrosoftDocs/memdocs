@@ -136,14 +136,18 @@ The following steps provide guidance to help you add a Windows app to Intune.
 
         For example, if your app filename is **MyApp123**, add the following:<br>
         `msiexec /p "MyApp123.msp"`<p>
-        And, if the application is `ApplicationName.exe`, the command would be the application name followed by the command arguments (switches) supported by the package. <br>For example:<br>
+        And, if the application is `ApplicationName.exe`, the command would be the application name followed by the command arguments (switches) supported by the package. <br>
+        For example:<br>
         `ApplicationName.exe /quiet`<br>
         In the above command, the `ApplicationName.exe` package supports the `/quiet` command argument.<p> 
         For the specific arguments supported by the application package, contact your application vendor.
 
+        > [!IMPORTANT]
+        > Admins must be careful when they utilize the command tools. Unexpected or harmful commands may be passed using the the install and uninstall command field.
+
     - **Uninstall command**: Add the complete uninstall command line to uninstall the app based on the app's GUID. 
 
-        For example:
+        For example:<br>
         `msiexec /x "{12345A67-89B0-1234-5678-000001000000}"`
 
     - **Install behavior**: Set the install behavior to either **System** or **User**.
