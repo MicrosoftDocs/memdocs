@@ -2,7 +2,7 @@
 title: What's new in Desktop Analytics
 titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
-ms.date: 03/03/2020
+ms.date: 03/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -23,6 +23,20 @@ To get notified when this page is updated, copy and paste the following URL into
 <!-- a locale is required for the RSS search string -->
 
 ## March 2020
+
+### Support for multiple hierarchies
+
+<!-- 4814075, 6079184 -->
+
+You can now connect multiple Configuration Manager hierarchies to a single Azure Active Directory tenant with a single Commercial ID for Desktop Analytics. The portal categorizes devices from different hierarchies, and improves the experiences for global pilots and deployment plans.
+
+- When you configure your global pilot, if you include collections that contain more than 20% of your total enrolled devices, the portal displays a warning.
+- When you create a deployment plan, if you select collections for multiple hierarchies, the portal displays a warning.
+
+For more information, see the following articles:
+
+- [Global pilot](/configmgr/desktop-analytics/deploy-pilot#bkmk_GlobalPilot)
+- [How to create deployment plans](/configmgr/desktop-analytics/create-deployment-plans)
 
 ### Identify compatibility safeguards
 
