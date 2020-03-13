@@ -236,8 +236,7 @@ The task sequence progress window now includes the following improvements:
 - Shows the current step number, total number of steps, and percent completion
 - Increased the width of the window to give you more space to better show the organization name in a single line
 
-<!-- For more information, see [](). -->
-
+For more information, see [User experiences for OS deployment](/configmgr/osd/understand/user-experience#task-sequence-progress).
 
 ### Improvements to OS deployment
 
