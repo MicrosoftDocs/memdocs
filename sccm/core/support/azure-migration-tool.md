@@ -42,8 +42,6 @@ Microsoft.Resources/subscriptions/resourceGroups/write <br>
 Microsoft.Resources/deployments/read <br>
 Microsoft.Resources/deployments/write <br>
 Microsoft.Resources/deployments/validate/action <br>
-Microsoft.Authorization/roleAssignments/read <br>
-Microsoft.Authorization/roleAssignments/write <br>
 Microsoft.Compute/virtualMachines/extensions/read <br>
 Microsoft.Compute/virtualMachines/extensions/write <br>
 Microsoft.Compute/virtualMachines/read <br>
