@@ -2,7 +2,7 @@
 title: Deploy and update Microsoft Edge, version 77 and later
 titleSuffix: Configuration Manager
 description: How to deploy and update Microsoft Edge, version 77 and later with Configuration Manager
-ms.date: 03/03/2020
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -38,10 +38,17 @@ The device running the Configuration Manager console needs access to the followi
 |`https://edgeupdates.microsoft.com/api/products?view=enterprise`|Information about releases of Microsoft Edge|
 |`http://dl.delivery.mp.microsoft.com`|Content for Microsoft Edge releases|
 
-### Verify Microsoft Edge update policies
+### <a name="bkmk_autoupdate"></a> Verify Microsoft Edge update policies
+
+#### Configuration Manager version 1910
 
 In version 1910, when Microsoft Edge is deployed, the installation script turns off automatic updates for Microsoft Edge so they can be managed with Configuration Manager. You can change this behavior using Group Policy. For more information, see [Plan your deployment of Microsoft Edge](https://docs.microsoft.com/deployedge/deploy-edge-plan-deployment#define-and-configure-policies) and [Microsoft Edge update policies](https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies).
 
+#### Configuration Manager version 2002 and later
+<!--4561024-->
+Starting in version 2002, you can create a Microsoft Edge application that's set up to receive automatic updates rather than having automatic updates disabled. This change allows you to choose to manage updates for Microsoft Edge with Configuration Manager or allow Microsoft Edge to automatically update. When creating the application, select **Allow Microsoft Edge to automatically update the version of the client on the end user's device** on the **Microsoft Edge Settings** page. If you previously used Group Policy to change this behavior, Group Policy will overwrite the setting made by Configuration Manager during installation of Microsoft Edge.
+
+[![Microsoft Edge automatic update setting](./media/4561024-autoupdate-edge.png)](./media/4561024-autoupdate-edge.png#lightbox)
 
 ### Create a deployment
 
@@ -53,10 +60,10 @@ Create a Microsoft Edge application using the built-in application experience, w
    ![Microsoft Edge Management node right-click action](./media/4561024-create-microsoft-edge-application.png)
 
 1. On the **Application Settings** page of the wizard, specify a name, description, and location for the content for the app. Ensure the content location folder you specify is empty.
-1. On the **Microsoft Edge Settings** page, you select a channel and version to deploy. The Learn More link takes you to the [Microsoft Edge Insiders page](https://www.microsoftedgeinsider.com/).
-
-   ![Microsoft Edge Settings page in the deployment wizard](./media/4561024-edge-settings-wizard.png)
-
+1. On the **Microsoft Edge Settings** page, select:
+   - The channel to deploy
+   - The version to deploy
+   - If you want to **Allow Microsoft Edge to automatically update the version of the client on the end user's device** (added in version 2002)
 1. On the **Deployment** page, decide if you want to deploy the application. If you select **Yes**, you can specify your deployment settings for the application. For more information about deployment settings, see [Deploy applications](/configmgr/apps/deploy-use/deploy-applications#bkmk_deploy-general).
 1. In **Software Center** on the client device, the user can see and install the application.
 

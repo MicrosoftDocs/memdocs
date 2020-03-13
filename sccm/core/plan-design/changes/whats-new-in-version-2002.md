@@ -185,7 +185,7 @@ From the Software Library workspace, click Microsoft Edge Management to see the 
 
 You can now create a Microsoft Edge application that's set up to receive automatic updates rather than having automatic updates disabled. This change allows you to choose to manage updates for Microsoft Edge with Configuration Manager or allow Microsoft Edge to automatically update. When creating the application, select Allow Microsoft Edge to automatically update the version of the client on the end user's device on the Microsoft Edge Settings page.
 
-<!-- For more information, see [Microsoft Edge management](/configmgr/apps/deploy-use/deploy-edge). -->
+For more information, see [Microsoft Edge management](/configmgr/apps/deploy-use/deploy-edge#bkmk_autoupdate).
 
 ### Task sequence as an app model deployment type
 
