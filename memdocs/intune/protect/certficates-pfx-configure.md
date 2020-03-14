@@ -165,7 +165,12 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 7. **Apply** > **Close**
 8. Go back to the Intune portal (**Intune** > **Device Configuration** > **Certification Connectors**). After a few moments, a green check mark is shown, and the **Connection status** is **Active**. Your connector server can now communicate with Intune.
 9. If you have a web proxy in your networking environment, you might need additional configurations to enable the connector to work. For more information, see [Work with existing on-premises proxy servers](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) in the Azure Active Directory documentation.
-<ul><li>Android Enterprise (*Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10 and later
+    - Android Enterprise (*Work Profile*)
+    - iOS
+    - macOS
+    - Windows 10 and later
+
+> [!NOTE]
 > The Microsoft Intune Certificate Connector supports TLS 1.2. If TLS 1.2 is installed on the server that hosts the Connector, the connector uses TLS 1.2. Otherwise, TLS 1.1 is used. Currently, TLS 1.1 is used for authentication between the devices and server.
 
 ## Create a trusted certificate profile
@@ -288,7 +293,7 @@ Platforms:
   > [!IMPORTANT]  
   > - When you specify a variable, enclose the variable name in curly brackets { } as seen in the example, to avoid an error.  
   > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
-  > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn’t have an IMEI number, the profile fails to install.  
+  > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.  
  
 ## What's new for Connectors
 
