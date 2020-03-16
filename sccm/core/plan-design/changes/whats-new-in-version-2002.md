@@ -355,6 +355,11 @@ A status message with an ID of 53900 is a successful submission and 53901 is a f
 
 <!-- For more information, see [Product feedback](/configmgr/core/understand/find-help#BKMK_1806Feedback). -->
 
+### Search all subfolders for configuration items and configuration baselines
+
+<!--5891241-->
+
+Similar to improvements in previous releases, you can now use the **All Subfolders** search option from the **Configuration Items** and **Configuration Baselines** nodes.
 
 ## <a name="bkmk_tools"></a> Tools
 
