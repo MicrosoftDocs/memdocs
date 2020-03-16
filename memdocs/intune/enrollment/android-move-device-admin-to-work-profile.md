@@ -45,7 +45,7 @@ Users who sign in to a non-compliant device will see notification informing them
 - [Set Android Enterprise work profile enrollment](android-work-profile-enroll.md) for the group of users who are moving to Android work profile.
 - Consider increasing your user device limits. When unenrolling devices from device administrator management, device records might not be immediately removed. To provide cushion during this period, you might need to increase device limit capacity so that the users can enroll into work profile management.
   - [Configure Azure Active Directory device settings](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings) to for Maximum number of devices per user.
-  - Adjust the [Intune device limit restrictions](enrollment-restrictions-set#create-a-device-limit-restriction.md) by setting the Device limit. 
+  - Adjust the [Intune device limit restrictions](enrollment-restrictions-set.md#create-a-device-limit-restrictiond) by setting the Device limit. 
 
 ## Create device compliance policy
 
