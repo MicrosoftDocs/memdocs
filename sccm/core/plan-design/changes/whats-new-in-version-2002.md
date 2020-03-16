@@ -233,7 +233,7 @@ For more information, see [Task sequence steps - Check Readiness](/configmgr/osd
 
 The task sequence progress window now includes the following improvements:
 
-- Shows the current step number, total number of steps, and percent completion
+- You can enable it to show the current step number, total number of steps, and percent completion
 - Increased the width of the window to give you more space to better show the organization name in a single line
 
 For more information, see [User experiences for OS deployment](/configmgr/osd/understand/user-experience#task-sequence-progress).

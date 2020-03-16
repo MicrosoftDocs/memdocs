@@ -43,9 +43,11 @@ For more information, see [Use Software Center to deploy Windows over the networ
 
 ## PXE
 
-Different hardware models have different experiences for PXE. Most devices specify the `F12` key to boot to the network. The following example shows the Hyper-V PXE experience:
+Different hardware models have different experiences for PXE. To boot to the network, UEFI-based devices typically use the `Enter` key, and BIOS-based devices use the `F12` key.
 
-![Example PXE screen from a Hyper-V virtual machine](media/hyperv-pxe.png)
+The following example shows the Hyper-V Gen1 (BIOS) PXE experience:
+
+![Example BIOS PXE screen from a Hyper-V virtual machine](media/hyperv-pxe.png)
 
 After the device successfully boots via PXE, it behaves similarly to bootable media. For more information, see the next section on the [Task sequence wizard](#task-sequence-wizard).
 
@@ -74,6 +76,28 @@ If you deploy more than one task sequence to the device, you see this page to se
 
 ![Screenshot of the task sequence selection page of the Task Sequence Wizard](media/task-sequence-wizard-select.png)
 
+### Edit task sequence variables
+
+If any task sequence variables have empty values, the wizard shows a page to edit the variable values.
+
+<!-- screenshot -->
+
+## Prestart commands
+
+You can customize task sequence media or boot images to run a prestart command. A prestart command runs before the task sequence starts. The following actions are some of the more common ones:
+
+- Prompt the user for dynamic values, like the computer name
+- Specify network configuration
+- Set user device affinity
+
+The prestart command is a command line that you specify with a script or program. The user experience is unique to that script or program.
+
+For more information, see the following articles:
+
+- [Prestart commands for task sequence media](/configmgr/osd/understand/prestart-commands-for-task-sequence-media)
+- [Manage boot images](/configmgr/osd/get-started/manage-boot-images#customization)
+- [Task sequence media](/configmgr/osd/deploy-use/create-task-sequence-media)
+
 ## Task sequence progress
 
 When the task sequence runs, it displays the **Installation progress** window:
@@ -94,6 +118,8 @@ When the task sequence runs, it displays the **Installation progress** window:
 - The second line only shows for some steps that provide more detailed progress.
 
 - Use the task sequence variable [TSDisableProgressUI](/configmgr/osd/understand/task-sequence-variables#TSDisableProgressUI) to control when the task sequence displays progress.
+
+    To completely disable the progress window, disable the option to **Show Task Sequence progress** on the **User Experience** page of the task sequence deployment.
 
 Starting in version 2002, the task sequence progress window includes the following improvements:<!--5932692-->
 
