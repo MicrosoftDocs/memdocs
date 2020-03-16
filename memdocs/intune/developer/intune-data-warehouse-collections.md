@@ -245,14 +245,17 @@ The **device** entity lists all enrolled devices under management and their corr
 | AndroidSecurityPatchLevel  | Android security patch level                                                                                                                                                           |
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | Device supervised status                                                                                                                                                               |
-| FreeStorageSpaceInBytes    | Free Storage in Bytes.                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | Total Storage in Bytes.                                                                                                                                                                |
+| FreeStorageSpaceInBytes    | Free Storage in bytes.                                                                                                                                                                 |
+| TotalStorageSpaceInBytes   | Total storage capacity in bytes.                                                                                                                                                                |
 | EncryptionState            | Encryption state on the   device.                                                                                                                                                      |
 | SubscriberCarrier          | Subscriber carrier of the device                                                                                                                                                       |
 | PhoneNumber                | Phone number of the device                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | Cellular technology of the   device                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
+| Model                      | The device model.                                                                                                                                                                      |
+| Office365Version           | The version of Office 365 that is installed on the device.                                                                                                                             |
+| PhysicalMemoryInBytes      | The physical memory in bytes.                                                                                                                                                          |
 
 
 ## deviceTypes
