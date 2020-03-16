@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 03/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -224,6 +224,7 @@ The **device** entity lists all enrolled devices under management and their corr
 | DeviceRegistrationState    | Key   of the client registration state attribute for this device.                                                                                                                      |
 | OwnerTypeKey               | Key   of the owner type attribute for this device: corporate, personal, or unknown.                                                                                                    |
 | EnrolledDateTime           | Date   and time that this device was enrolled.                                                                                                                                         |
+| EthernetMacAddress           | The unique network identifier of this device.                                                                                                                                        |
 | LastSyncDateTime           | Last known device check-in with   Intune.                                                                                                                                              |
 | ManagementAgentKey         | Key of the management agent   associated with this device.                                                                                                                             |
 | ManagementStateKey         | Key of the management state   associated with this device, indicating latest state of a remote action or if   it was jailbroken/rooted.                                                |
