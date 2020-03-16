@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/12/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -119,6 +119,17 @@ Depending on where you want to route the audit log data, you need one of the fol
 You can also export the audit logs in other parts of Intune, including enrollment, compliance, configuration, devices, client apps, and more.
 
 For more information, see [Use audit logs to track and monitor events](monitor-audit-logs.md). You can choose where to send the audit logs, as described in [send logs to Azure monitor](#send-logs-to-azure-monitor) (in this article).
+
+## Audit log properties
+
+In the audit log, you can find properties that have specific values. The following table provides these details.
+
+| Property | Property description | Values |
+|----------------|------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ActivityType  | The action that the admin takes. | Create, Delete, Patch, Action, SetReference, RemoveReference, Get, Search |
+| ActorType  | Person taking the action. | Unknown = 0, ItPro, IW, System, Partner, Application, GuestUser |
+| Category  | The pane in which the action took place. | Other = 0, Enrollment = 1, Compliance = 2, DeviceConfiguration = 3,   Device = 4, Application = 5, EBookManagement = 6, ConditionalAccess= 7,   OnPremiseAccess= 8, Role = 9, SoftwareUpdates =10, DeviceSetupConfiguration =   11, DeviceIntent = 12, DeviceIntentSetting = 13, DeviceSecurity = 14,   GroupPolicyAnalytics = 15 |
+| ActivityResult | Whether the action has been successful or not. | Success = 1 |
 
 ## Cost considerations
 

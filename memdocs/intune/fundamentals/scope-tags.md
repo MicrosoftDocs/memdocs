@@ -68,7 +68,7 @@ The default scope tag feature is similar to the security scopes feature in Micro
     - **All users and all devices**: All users and devices can be managed by the users in the Admin Groups.
 
 5. Choose **Next**
-6. On the **Scope tags** page, select the tags that you want to add to this role. Users in the Admin Groups will have access to Intune objects that also have the same scope tag.
+6. On the **Scope tags** page, select the tags that you want to add to this role. Users in the Admin Groups will have access to Intune objects that also have the same scope tag. You can assign a maximum of 100 scope tags to a role.
 7. Choose **Next** to go to the **Review + create** page and then choose **Create**.
 
 ## Assign scope tags to other objects
@@ -77,7 +77,7 @@ For objects that support scope tags, scope tags usually appear under **Propertie
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Configuration profiles** > choose a profile.
 
-2. Choose **Properties** > **Scope (Tags)** > **Edit** > **Select scope tags** > choose the tags that you want to add to the profile.
+2. Choose **Properties** > **Scope (Tags)** > **Edit** > **Select scope tags** > choose the tags that you want to add to the profile. You can assign a maximum of 100 scope tags to an object.
 4. Choose **Select** > **Review + save**.
 
 ## Scope tag details

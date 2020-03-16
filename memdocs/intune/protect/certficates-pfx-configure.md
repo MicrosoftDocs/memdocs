@@ -14,7 +14,7 @@ ms.technology:
 ms.assetid:
 
 # optional metadata
-
+ 
 #ROBOTS:
 #audience:
 
@@ -164,14 +164,14 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 6. On the **Advanced** tab, it's recommended to leave **Use this computer's SYSTEM account (default)** selected.
 7. **Apply** > **Close**
 8. Go back to the Intune portal (**Intune** > **Device Configuration** > **Certification Connectors**). After a few moments, a green check mark is shown, and the **Connection status** is **Active**. Your connector server can now communicate with Intune.
-9. If you have a web proxy in your networking environment, you might need additional configurations to enable the connector to work. For more information, see [Work with existing on-premises proxy servers](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) in the Azure Active Directory documentation.  
-  
-   - Android Enterprise (*Work Profile*)
-   - iOS/iPadOS
-   - macOS
-   - Windows 10 and later
-   
-   The Microsoft Intune Certificate Connector supports TLS 1.2. If TLS 1.2 is installed on the server that hosts the Connector, the connector uses TLS 1.2. Otherwise, TLS 1.1 is used. Currently, TLS 1.1 is used for authentication between the devices and server.
+9. If you have a web proxy in your networking environment, you might need additional configurations to enable the connector to work. For more information, see [Work with existing on-premises proxy servers](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) in the Azure Active Directory documentation.
+    - Android Enterprise (*Work Profile*)
+    - iOS
+    - macOS
+    - Windows 10 and later
+
+> [!NOTE]
+> The Microsoft Intune Certificate Connector supports TLS 1.2. If TLS 1.2 is installed on the server that hosts the Connector, the connector uses TLS 1.2. Otherwise, TLS 1.1 is used. Currently, TLS 1.1 is used for authentication between the devices and server.
 
 ## Create a trusted certificate profile
 
