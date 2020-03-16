@@ -368,7 +368,7 @@ OneTrace now supports customizable log groups, similar to the feature in Support
 - Compliance settings (also referred to as Desired Configuration Management)
 - Software updates
 
-<!-- For more information, see [Support Center OneTrace](/configmgr/core/support/support-center-onetrace). -->
+For more information, see [Support Center OneTrace](/configmgr/core/support/support-center-onetrace).
 
 ## <a name="bkmk_extend"></a> Improvements to extend and migrate on-premises site to Microsoft Azure
 <!--5665775, 6307931-->
