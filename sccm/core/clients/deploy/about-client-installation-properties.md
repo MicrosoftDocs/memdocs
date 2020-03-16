@@ -65,7 +65,7 @@ If you extend the Active Directory schema for Configuration Manager, the site pu
 
 ## CCMSetup.exe command-line parameters
 
-### /?
+### <a name="bkmk_help"></a> /?
 
 Shows available command-line parameters for ccmsetup.exe.  
 
@@ -318,7 +318,7 @@ Example: `CCMSetup.exe CCMALLOWSILENTREBOOT`
 
 To specify that the client is always internet-based and never connects to the intranet, set this property value to `1`. The client's connection type displays **Always Internet**.  
 
-Use this property with [**CCMHOSTNAME**](#CCMHOSTNAME) to specify the FQDN of the internet-based management point. Also use it with the CCMSetup parameter [**/UsePKICert**](#UsePKICert) and the site code ([**SMSSITECODE**](#SMSSITECODE)).
+Use this property with [**CCMHOSTNAME**](#ccmhostname) to specify the FQDN of the internet-based management point. Also use it with the CCMSetup parameter [**/UsePKICert**](#usepkicert) and the site code ([**SMSSITECODE**](#smssitecode)).
 
 For more information about internet-based client management, see [Considerations for client communications from the internet or an untrusted forest](/configmgr/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan).
 
@@ -367,7 +367,7 @@ Examples:
 
 For the complete list of attributes that you can use for certificate selection, see [Supported attribute values for PKI certificate selection criteria](#BKMK_attributevalues).
 
-If more than one certificate matches the search, and you set [**CCMFIRSTCERT**](#CCMFIRSTCERT) to `1`, then the client installer selects the certificate with the longest validity period.
+If more than one certificate matches the search, and you set [**CCMFIRSTCERT**](#ccmfirstcert) to `1`, then the client installer selects the certificate with the longest validity period.
 
 ### CCMCERTSTORE
 
@@ -377,7 +377,7 @@ Example: `CCMSetup.exe /UsePKICert CCMCERTSTORE="ConfigMgr"`
 
 ### CCMDEBUGLOGGING
 
-This property enables debug logging when the client installs. This property causes the client to log low-level information for troubleshooting. Avoid using this property in production sites. Excessive logging can occur, which might make it difficult to find relevant information in the log files. Also enable [**CCMENABLELOGGING**](#CCMENABLELOGGING).
+This property enables debug logging when the client installs. This property causes the client to log low-level information for troubleshooting. Avoid using this property in production sites. Excessive logging can occur, which might make it difficult to find relevant information in the log files. Also enable [**CCMENABLELOGGING**](#ccmenablelogging).
 
 Supported values:
 
@@ -578,7 +578,7 @@ Example: `CCMSetup.exe RESETKEYINFORMATION=TRUE`
 
 ### SITEREASSIGN
 
-Enables automatic site reassignment for client upgrades when used with [SMSSITECODE=AUTO](#SMSSITECODE).
+Enables automatic site reassignment for client upgrades when used with [SMSSITECODE=AUTO](#smssitecode).
 
 Example: `CCMSetup.exe SMSSITECODE=AUTO SITEREASSIGN=TRUE`
 
@@ -588,7 +588,7 @@ Specifies the location of the client cache folder on the client computer. By def
 
 Example: `CCMSetup.exe SMSCACHEDIR="C:\Temp"`  
 
-Use this property with the [**SMSCACHEFLAGS**](#SMSCACHEFLAGS) property to control the client cache folder location. For example, to install the client cache folder on the largest available client disk drive: `CCMSetup.exe SMSCACHEDIR=Cache SMSCACHEFLAGS=MAXDRIVE`
+Use this property with the [**SMSCACHEFLAGS**](#smscacheflags) property to control the client cache folder location. For example, to install the client cache folder on the largest available client disk drive: `CCMSetup.exe SMSCACHEDIR=Cache SMSCACHEFLAGS=MAXDRIVE`
 
 ### SMSCACHEFLAGS
 
@@ -596,23 +596,23 @@ Use this property to specify further installation details for the client cache f
 
 If you don't include this property:
 
-- The client installs the cache folder according to the [**SMSCACHEDIR**](#SMSCACHEDIR) property
+- The client installs the cache folder according to the [**SMSCACHEDIR**](#smscachedir) property
 - The folder isn't compressed
-- The client uses the [**SMSCACHESIZE**](#SMSCACHESIZE) property as the size limit in MB of the cache
+- The client uses the [**SMSCACHESIZE**](#smscachesize) property as the size limit in MB of the cache
 
 When you upgrade an existing client, the client installer ignores this property.
 
 #### Values for the SMSCACHEFLAGS property
 
-- **PERCENTDISKSPACE**: Set the cache size as a percentage of the *total* disk space. If you specify this property, also set [**SMSCACHESIZE**](#SMSCACHESIZE) to a percentage value.
+- **PERCENTDISKSPACE**: Set the cache size as a percentage of the *total* disk space. If you specify this property, also set [**SMSCACHESIZE**](#smscachesize) to a percentage value.
 
-- **PERCENTFREEDISKSPACE**: Set the cache size as a percentage of the *free* disk space. If you specify this property, also set [**SMSCACHESIZE**](#SMSCACHESIZE) as a percentage value. For example, the disk has 10 MB free, and you specify `SMSCACHESIZE=50`. The client installer sets the cache size to 5 MB. You can't use this property with the **PERCENTDISKSPACE** property.
+- **PERCENTFREEDISKSPACE**: Set the cache size as a percentage of the *free* disk space. If you specify this property, also set [**SMSCACHESIZE**](#smscachesize) as a percentage value. For example, the disk has 10 MB free, and you specify `SMSCACHESIZE=50`. The client installer sets the cache size to 5 MB. You can't use this property with the **PERCENTDISKSPACE** property.
 
-- **MAXDRIVE**: Install the cache on the largest available disk. If you specify a path with the [**SMSCACHEDIR**](#SMSCACHEDIR) property, the client installer ignores this value.
+- **MAXDRIVE**: Install the cache on the largest available disk. If you specify a path with the [**SMSCACHEDIR**](#smscachedir) property, the client installer ignores this value.
 
-- **MAXDRIVESPACE**: Install the cache on the disk drive with the most free space. If you specify a path with the [**SMSCACHEDIR**](#SMSCACHEDIR) property, the client installer ignores this value.
+- **MAXDRIVESPACE**: Install the cache on the disk drive with the most free space. If you specify a path with the [**SMSCACHEDIR**](#smscachedir) property, the client installer ignores this value.
 
-- **NTFSONLY**: Only install the cache on an NTFS-formatted disk drive. If you specify a path with the [**SMSCACHEDIR**](#SMSCACHEDIR) property, the client installer ignores this value.
+- **NTFSONLY**: Only install the cache on an NTFS-formatted disk drive. If you specify a path with the [**SMSCACHEDIR**](#smscachedir) property, the client installer ignores this value.
 
 - **COMPRESS**: Store the cache in a compressed form.
 
@@ -705,7 +705,7 @@ Example: `CCMSetup.exe /UsePKICert SMSSIGNCERT=C:\folder\smssign.cer`
 This property specifies a Configuration Manager site to which you assign the client. This value can either be a three-character site code or the word `AUTO`. If you specify `AUTO`, or don't specify this property, the client attempts to determine its site assignment from Active Directory Domain Services or from a specified management point. To enable `AUTO` for client upgrades, also set [SITEREASSIGN=TRUE](#sitereassign).
 
 > [!NOTE]  
-> If you also specify an internet-based management point with the [**CCMHOSTNAME**](#CCMHOSTNAME) property, don't use `AUTO` with **SMSSITECODE**. Directly assign the client to its site by specifying the site code.
+> If you also specify an internet-based management point with the [**CCMHOSTNAME**](#ccmhostname) property, don't use `AUTO` with **SMSSITECODE**. Directly assign the client to its site by specifying the site code.
 
 Example: `CCMSetup.exe SMSSITECODE=XZY`
 
