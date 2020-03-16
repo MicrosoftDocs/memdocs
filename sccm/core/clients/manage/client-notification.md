@@ -139,7 +139,7 @@ Starting in version 1910, there are new device actions for **Client Diagnostics*
 - **Disable verbose logging**: Change the global log level to default, and disable debug logging.
 - **Collect Client Logs** (starting in 2002): A client notification message is sent to the selected clients to gather the CCM logs. The logs are returned using software inventory file collection. <!--4226618-->
    - The size limit for the compressed client logs is 100 MB. <!--6366098-->
-   - Use [Resource Explorer](configmgr/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory#bkmk_diag) manage and view these files.
+   - Use [Resource Explorer](/configmgr/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory#bkmk_diag) manage and view these files.
 
    [![Collect client logs from the console](./media/4226618-collect-client-logs.png)](./media/4226618-collect-client-logs.png#lightbox)
 
@@ -149,7 +149,7 @@ Starting in version 1910, there are new device actions for **Client Diagnostics*
 
 For more information about these settings, see [About log files](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-client).
 
-Track the status of the task in the **diagnostics.log** on the client.
+Track the status of the task in the **diagnostics.log** on the client. When client logs are collected, additional information is logged in **MP_SinvCollFile.log** on the management point and **sinvproc.log** on the site server.
 
 ### Prerequisites - Client diagnostics
 
