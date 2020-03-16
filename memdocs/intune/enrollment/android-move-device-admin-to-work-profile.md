@@ -51,7 +51,7 @@ Users who sign in to a non-compliant device will see a notification informing th
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
 
-    ![Create policy](./media/android-move-device-admin-to-work-profile/create-profile.png)
+    ![Create policy](./media/android-move-device-admin-to-work-profile/create-policy.png)
 
 2. On the **Create a policy** page, set **Platform** to **Android device administrator** > **Create**.
 3. On the **Basics** page, type in the **Name** and **Description** > **Next**.
