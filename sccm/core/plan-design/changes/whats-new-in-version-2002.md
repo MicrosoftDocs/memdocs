@@ -29,7 +29,7 @@ To take full advantage of new Configuration Manager features, after you update t
 ## <a name="bkmk_infra"></a> Site infrastructure
 
 ### Remove a central administration site
-<!-- 3607277 -->
+<!-- 3607277 --> 
 
 If your hierarchy consists of a central administration site (CAS) and a single child primary site, you can now remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single primary site.
 
@@ -149,7 +149,7 @@ For more information, see [Boundary group options](/configmgr/core/servers/deplo
 
 You can now trigger a client device to upload its client logs to the site server by sending a client notification action from the Configuration Manager console.
 
-<!-- For more information, see [Client notification](/configmgr/core/clients/manage/client-notification#client-diagnostics). -->
+For more information, see [Client notification](/configmgr/core/clients/manage/client-notification#client-diagnostics).
 
 ### Wake up a device from the central administration site
 
