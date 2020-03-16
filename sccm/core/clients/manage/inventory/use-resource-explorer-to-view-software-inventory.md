@@ -44,7 +44,7 @@ Use Resource Explorer in Configuration Manager to view information about softwar
 
 4.  You can right-click any item in the right-pane of the Resource Explorer window and choose **Properties** to view the collected inventory information in a more readable format.  
  
-## <a name="bkmk_diag"> </a>View and manage collected diagnostic files
+## <a name="bkmk_diag"> </a> View and manage collected diagnostic files
 
 Starting in Configuration Manager version 2002, use Resource Explorer to view and manage the files gathered when you use s client notification to [collect client logs](/configmgr/core/clients/manage/client-notification#client-diagnostics). 
 
