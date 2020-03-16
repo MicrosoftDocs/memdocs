@@ -50,13 +50,12 @@ These settings are added to a device configuration profile in Intune, and then a
 
 - **Screen capture**: **Block** prevents screenshots or screen captures on the device. In iOS/iPadOS 9.0 and newer, it also blocks screen recordings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image or as a video.
 
-- **Enterprise app trust**: **Block** removes the **Trust Enterprise Developer** button in Settings > General > Profiles & Device Management on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users choose to trust apps that aren't downloaded from the app store.
-
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
 
 - **Untrusted TLS certificates**: **Block** prevents untrusted Transport Layer Security (TLS) certificates on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow TLS certificates.
 - **Block over-the-air PKI updates**: **Block** prevents your users from receiving software updates unless the device is connected to a computer. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow a device to receive software updates without being connected to a computer.
 - **Limit ad tracking**: Choose **Limit** to disable the device advertising identifier. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might keep it enabled.
+- **Enterprise app trust**: **Block** removes the **Trust Enterprise Developer** button in Settings > General > Profiles & Device Management on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users choose to trust apps that aren't downloaded from the app store.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
