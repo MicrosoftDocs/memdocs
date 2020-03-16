@@ -208,7 +208,7 @@ For more information, see [Create Windows applications](/configmgr/apps/get-star
 
 When you install and register a new Configuration Manager client, and also deploy a task sequence to it, it's difficult to determine how soon after registration it will run the task sequence. This release introduces a new client setup property that you can use to start a task sequence on a client after it successfully registers with the site.
 
-<!-- For more information, see [](). -->
+For more information, see [About client installation properties - PROVISIONTS](/configmgr/core/clients/deploy/about-client-installation-properties#provisionts).
 
 ### Improvements to Check Readiness task sequence step
 
