@@ -212,6 +212,10 @@ Outlook has a combined email view of both "personal" and "corporate" emails. In 
 
 For more information about multi-identity in Intune, see [MAM and multi-identity](apps-supported-intune-apps.md).
 
+  >[!NOTE]
+  > Although Edge is in "corporate" context, user can intentionally move OneDrive "corporate" context files to unknown personal cloud storage location. To avoid this, please refer [Specify allowed or blocked sites list for Microsoft Edge]  and configure allowed/blocked site list for Edge.
+
+
 ### Intune app PIN
 
 The Personal Identification Number (PIN) is a passcode used to verify that the correct user is accessing the organization's data in an application.
