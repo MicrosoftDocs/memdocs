@@ -727,7 +727,7 @@ When using CMPivot outside of the Configuration Manager console, you can query j
   - Each client is limited to 128 KB worth of data per query.
   - Results may be truncated if the results of the query exceed 128 KB.
   
-## CMPivot starting in version 2002
+## <a name="bkmk_2002"></a> CMPivot starting in version 2002
 <!--5870934-->
 We've made it easier to navigate CMPivot entities. Starting in Configuration Manager version 2002, you can search CMPivot entities. New icons have also been added to easily differentiate the entities and the entity object types.
 
