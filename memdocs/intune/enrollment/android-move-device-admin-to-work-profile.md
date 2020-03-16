@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 You can move Android devices from device administrator to work profile management by using the compliance setting for the Android device administrator platform. This setting lets you make devices non-compliant if they are managed with device administrator. 
 
-Users who sign in to a non-compliant device will see notification informing them that they must update their device management. After they tap **Resolve**, they'll be taken to a checklist that will  guide them through:
+Users who sign in to a non-compliant device will see a notification informing them that they must update their device management. After they tap **Resolve**, they'll be taken to a checklist that will  guide them through:
 1. Unenrolling from device administrator management
 2. Enrolling into work profile management
 3. Resolving any compliance issues. 
@@ -49,18 +49,35 @@ Users who sign in to a non-compliant device will see notification informing them
 
 ## Create device compliance policy
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance policies** > **Policies and select Create Policy**.
-2. Set the **Platform** to **Android device administrator** and select **Create**.
-3. In the **Compliance settings** tab in the **Device Health** section, set **Block devices managed with device administrator** to **Yes**.
-4. Set **Actions for noncompliance**. You can include the  URL below in your messages to users. The message will launch the Android Company Portal to the **Update device settings** page. This page starts their flow to move to work profile management.
-  - [https://portal.manage.microsoft.com/UpdateSettings.aspx](https://portal.manage.microsoft.com/UpdateSettings.aspx).
-  - For US government, you can use this link instead: [https://portal.manage.microsoft.us/UpdateSettings.aspx](https://portal.manage.microsoft.us/UpdateSettings.aspx).
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
 
+    ![Create policy](./media/android-move-device-admin-to-work-profile/create-profile.png)
+
+2. On the **Create a policy** page, set **Platform** to **Android device administrator** > **Create**.
+3. On the **Basics** page, type in the **Name** and **Description** > **Next**.
+
+    ![Basics page](./media/android-move-device-admin-to-work-profile/basics.png)
+    
+4. On the **Compliance settings** page, in the **Device Health** section, set **Block devices managed with device administrator** to **Yes** > **Next**.
+5. On the **Locations** page, you can add locations if you want > **Next**.
+6. On the **Actions for noncompliance**, set a **Send email to end user** action.
+
+    ![Send email](./media/android-move-device-admin-to-work-profile/send-email.png)
+
+
+    In the email, you can include the URL below in your messages to users. The URL will launch the Android Company Portal to the **Update device settings** page. This page starts their flow to move to work profile management.
+    - [https://portal.manage.microsoft.com/UpdateSettings.aspx](https://portal.manage.microsoft.com/UpdateSettings.aspx).
+    - For US government, you can use this link instead: [https://portal.manage.microsoft.us/UpdateSettings.aspx](https://portal.manage.microsoft.us/UpdateSettings.aspx).
+  
   > [!NOTE]
   > - Of course, you can use user-friendly hyper-text for the links in your communication with users. However, don't use URL-shorteners because the links may not work if changed that way.
   > - If the Android Company Portal open and in the background, when a user taps the link they might go to the last page they had open instead. So, your messaging can include something like this: "Close the Android Company Portal before tapping this link."
 
-5. Assign the policy to a group that has devices enrolled with device administrator management, and select **Create**.
+  Choose **Next**.
+
+7. On the **Scope tags** page, select any scope tags you want to include.
+8. On the **Assignments** page, assign the policy to a group that has devices enrolled with device administrator management > **Next**.
+9. On the **Review + create** page, confirm all your settings and then select **Create**.
 
 
 ## Next steps
