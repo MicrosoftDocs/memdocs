@@ -163,12 +163,7 @@ From the central administration site (CAS), in the Devices or Device Collections
 
 <!--5954175-->
 
-The **All Windows 10 (ARM64)** platform is now available in the list of supported OS versions on the following objects:
-
-- Configuration item supported platforms
-- Application deployment type requirements
-- Package program requirements
-- Task sequence advanced properties
+The **All Windows 10 (ARM64)** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.
 
 > [!NOTE]
 > If you previously selected the top-level **Windows 10** platform, this action automatically selected both **All Windows 10 (64-bit)** and **All Windows 10 (32-bit)**. This new platform isn't automatically selected. If you want to add **All Windows 10 (ARM64)**, manually select it in the list.
