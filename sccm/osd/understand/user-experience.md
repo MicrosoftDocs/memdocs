@@ -80,7 +80,7 @@ If you deploy more than one task sequence to the device, you see this page to se
 
 If any task sequence variables have empty values, the wizard shows a page to edit the variable values.
 
-<!-- screenshot -->
+![Screenshot of the edit task sequence variables page of the Task Sequence Wizard](media/task-sequence-wizard-variables.png)
 
 ## Prestart commands
 
