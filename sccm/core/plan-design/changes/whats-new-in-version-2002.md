@@ -126,9 +126,9 @@ Use the Desktop Analytics Connection Health dashboard in Configuration Manager t
 
 <!-- 5870934 -->
 
-We've made it easier to navigate CMPivot entities. Starting in this technical preview, you can search CMPivot entities and see entity properties.
+We've made it easier to navigate CMPivot entities. You can now search CMPivot entities. New icons have also been added to easily differentiate the entities and the entity object types.
 
-<!-- For more information, see [CMPivot](configmgr/core/servers/manage/cmpivot). -->
+For more information, see [CMPivot](/configmgr/core/servers/manage/cmpivot).
 
 
 ## <a name="bkmk_content"></a> Content management
