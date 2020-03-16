@@ -683,7 +683,6 @@ iOS/iPadOS supervised mode can only be enabled during initial device setup throu
 - Passcode modifications 
 - Device name changes 
 - Automatic app downloads 
-- Changes to enterprise app trust 
 - Apple Music 
 - Mail Drop 
 - Pair with Apple Watch 
