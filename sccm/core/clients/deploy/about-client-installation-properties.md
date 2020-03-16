@@ -547,6 +547,29 @@ Example: `CCMSetup.exe NOTIFYONLY=TRUE`
 
 For more information, see [How to configure client status](configure-client-status.md).
 
+### PROVISIONTS
+
+<!--5526972-->
+
+Starting in version 2002, use this property to start a task sequence on a client after it successfully registers with the site.
+
+For example, you provision a new Windows 10 device with Windows Autopilot, auto-enroll it to Microsoft Intune, and then install the Configuration Manager client for co-management. If you specify this new option, the newly provisioned client then runs a task sequence. This process gives you additional flexibility to install applications and software updates, or configure settings.
+
+Use the following process:
+
+1. [Create a non-OS deployment task sequence](/configmgr/osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments) to install apps, install software updates, and configure settings.
+
+1. [Deploy this task sequence](/configmgr/osd/deploy-use/deploy-a-task-sequence) to the new built-in collection, **All Provisioning Devices**. Note the task sequence deployment ID, for example `PRI20001`.
+
+1. [Install the Configuration Manager client](/configmgr/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual) on a device, and include the following property: `PROVISIONTS=PRI20001`. Set the value of this property as the task sequence deployment ID.
+
+    - If you're installing the client from Intune during co-management enrollment, see [How to prepare internet-based devices for co-management](/configmgr/comanage/how-to-prepare-win10).
+
+      > [!NOTE]
+      > This method may have additional prerequisites. For example, enrolling the site to Azure Active Directory, or creating a content-enabled cloud management gateway.
+
+After the client installs and properly registers with the site, it starts the referenced task sequence. If client registration fails, the task sequence won't start.
+
 ### RESETKEYINFORMATION
 
 If a client has the wrong Configuration Manager trusted root key, it can't contact a trusted management point to receive the new trusted root key. Use this property to remove the old trusted root key. This situation may occur when you move a client from one site hierarchy to another. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the trusted root key](/configmgr/core/plan-design/security/plan-for-security#BKMK_PlanningForRTK).
