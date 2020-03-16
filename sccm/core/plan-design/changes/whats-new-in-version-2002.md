@@ -159,6 +159,22 @@ From the central administration site (CAS), in the Devices or Device Collections
 
 <!-- For more information, see [How to configure Wake on LAN](/configmgr/core/clients/deploy/configure-wake-on-lan#bkmk_wol-1810). -->
 
+### Improvements to support for ARM64 devices
+
+<!--5954175-->
+
+The **All Windows 10 (ARM64)** platform is now available in the list of supported OS versions on the following objects:
+
+- Configuration item supported platforms
+- Application deployment type requirements
+- Package program requirements
+- Task sequence advanced properties
+
+> [!NOTE]
+> If you previously selected the top-level **Windows 10** platform, this action automatically selected both **All Windows 10 (64-bit)** and **All Windows 10 (32-bit)**. This new platform isn't automatically selected. If you want to add **All Windows 10 (ARM64)**, manually select it in the list.
+
+For more information on Configuration Manager's support for ARM64 devices, see [Windows 10 on ARM64](/configmgr/core/plan-design/configs/support-for-windows-10#bkmk_arm64).
+
 
 <!-- ## <a name="bkmk_comgmt"></a> Co-management -->
 
