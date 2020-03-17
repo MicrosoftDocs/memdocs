@@ -101,7 +101,4 @@ To manage Antivirus settings, your account must have the Intune [role-based acce
 
 ## Next steps
 
-View settings for the available antivirus profiles:
-
-- [Microsoft Defender Antivirus](antivirus-microsoft-defender-antivirus-settings.md)
-- [Windows Security experience](antivirus-windows-security-experience-settings.md)
+View settings the [Microsoft Defender Antivirus](antivirus-microsoft-defender-antivirus-settings.md) profile.

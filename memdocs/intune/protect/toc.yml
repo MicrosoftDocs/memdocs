@@ -267,12 +267,8 @@
         href: security-baseline-settings-defender-atp.md
       - name: Microsoft Edge baseline settings
         href: security-baseline-settings-edge.md
-    - name: Antivirus
-      items:
-      - name: Microsoft Defender Antivirus
-        href: antivirus-microsoft-defender-antivirus-settings.md
-      - name: Windows Security experience
-        href: antivirus-windows-security-experience-settings.md
+    - name: Microsoft Defender Antivirus
+      href: antivirus-microsoft-defender-antivirus-settings.md
     - name: Windows update settings
       href: windows-update-settings.md
     - name: Compliance policy settings - Android
