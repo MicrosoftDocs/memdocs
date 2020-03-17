@@ -69,11 +69,11 @@ Users who sign in to a non-compliant device will see a notification informing th
     - [https://portal.manage.microsoft.com/UpdateSettings.aspx](https://portal.manage.microsoft.com/UpdateSettings.aspx).
     - For US government, you can use this link instead: [https://portal.manage.microsoft.us/UpdateSettings.aspx](https://portal.manage.microsoft.us/UpdateSettings.aspx).
   
-  > [!NOTE]
-  > - Of course, you can use user-friendly hyper-text for the links in your communication with users. However, don't use URL-shorteners because the links may not work if changed that way.
-  > - If the Android Company Portal open and in the background, when a user taps the link they might go to the last page they had open instead. So, your messaging can include something like this: "Close the Android Company Portal before tapping this link."
+    > [!NOTE]
+    > - Of course, you can use user-friendly hyper-text for the links in your communication with users. However, don't use URL-shorteners because the links may not work if changed that way.
+    > - If the Android Company Portal open and in the background, when a user taps the link they might go to the last page they had open instead. So, your messaging can include something like this: "Close the Android Company Portal before tapping this link."
 
-  Choose **Next**.
+    Choose **Next**.
 
 7. On the **Scope tags** page, select any scope tags you want to include.
 8. On the **Assignments** page, assign the policy to a group that has devices enrolled with device administrator management > **Next**.
