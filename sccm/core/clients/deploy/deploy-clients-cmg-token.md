@@ -26,6 +26,8 @@ Starting in version 2002, Configuration Manager extends its device support with 
 
 - Create a bulk registration token for internet-based devices
 
+To take full advantage of this feature, after you update the site, also update clients to the latest version. The complete scenario isn't functional until the client version is also the latest. If necessary, make sure you [promote the new client version to production](/configmgr/core/clients/manage/upgrade/test-client-upgrades#to-promote-the-new-client-to-production).
+
 > [!NOTE]
 > These methods only support device-centric management scenarios.
 >
