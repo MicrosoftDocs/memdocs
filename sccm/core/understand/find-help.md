@@ -78,6 +78,8 @@ Starting in Configuration Manager 2002, when you **Send a smile** or **Send a fr
    - Message ID of 53900 for a successful submission.
    - Message ID  of 53901 for a failed submission.
 
+View status messages from **Monitoring** > **System Status** > **Status Message Queries**. Start with the **All Status Messages** query and select your time frame. When the messages load, click on the **Filter messages** button and filter for Message ID 53900 or 53901.
+
 Status messages aren't created if you [Send feedback that you saved for later submission](/sccm/core/understand/find-help#BKMK_NoInternet).
 
 [![Status message for successfully submitting feedback](./media/5891852-send-smile-status-message.png)](./media/5891852-send-smile-status-message.png#lightbox)
