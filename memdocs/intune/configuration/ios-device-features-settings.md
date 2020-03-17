@@ -309,7 +309,7 @@ This feature applies to:
         - `https://login-us.microsoftonline.com`
 
     > [!IMPORTANT]
-    > To achieve SSO with the iOS/iPadOS Microsoft Azure AD extension, first install the iOS/iPadOS Microsoft Authenticator app on the device. Authenticator delivers the Azure AD extension to the device, and the the MDM SSO app extension settings activate the Azure AD extension. Once Authenticator and the SSO app extension profile are installed on the device, users must enter their credentials to sign in and establish a session. This session is then used across different applications without requiring users to authenticate again.
+    > To achieve SSO with the iOS/iPadOS Microsoft Azure AD extension, first install the iOS/iPadOS Microsoft Authenticator app on the device. Authenticator delivers the Azure AD extension to the device, and the MDM SSO app extension settings activate the Azure AD extension. Once Authenticator and the SSO app extension profile are installed on the device, users must enter their credentials to sign in and establish a session. This session is then used across different applications without requiring users to authenticate again.
 
   - **Credential**: Use a generic, customizable credential app extension to use SSO with challenge-and-response authentication flows. Be sure you know the extension ID for your organization's app extension.
   - **Kerberos**: Use Apple's built-in Kerberos extension, which is included on iOS 13.0+ and iPadOS 13.0+. This option is a Kerberos-specific version of the **Credential** app extension.
