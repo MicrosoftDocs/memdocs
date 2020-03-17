@@ -29,20 +29,34 @@ To take full advantage of new Configuration Manager features, after you update t
 ## <a name="bkmk_infra"></a> Site infrastructure
 
 ### Remove a central administration site
-
-<!-- 3607277 -->
+<!-- 3607277 --> 
 
 If your hierarchy consists of a central administration site (CAS) and a single child primary site, you can now remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single primary site.
 
 For more information, see [Remove the CAS](/configmgr/core/servers/deploy/install/remove-central-administration-site).
 
-### New management insight rules from Microsoft Services
+### New management insight rules
 
-<!-- 3607758 -->
+This release includes the following management insight rules:
 
-This release includes additional management insight rules courtesy of Microsoft Premier Field Engineering. These rules are a sample of the many more checks that Microsoft Premier provides in the Services Hub.
+- Nine rules in the **Configuration Manager Assessment** group courtesy of Microsoft Premier Field Engineering. These rules are a sample of the many more checks that Microsoft Premier provides in the Services Hub.<!-- 3607758 -->
 
-<!-- For more information, see [Management insights](/configmgr/core/servers/manage/management-insights). -->
+  - Active Directory Security Group Discovery is configured to run too frequently
+  - Active Directory System Discovery is configured to run too frequently
+  - Active Directory User Discovery is configured to run too frequently
+  - Collections limited to All Systems or All Users
+  - Heartbeat Discovery is disabled
+  - Long running collection queries enabled for incremental updates
+  - Reduce the number of applications and packages on distribution points
+  - Secondary site installation issues
+  - Update all sites to the same version
+
+- Two additional rules in the **Cloud Services** group to help you configure your site for adding secure HTTPS communication:<!-- 6268489 -->
+
+  - Sites that don't have proper HTTPS configuration
+  - Devices not uploaded to Azure AD
+
+For more information, see [Management insights](/configmgr/core/servers/manage/management-insights).
 
 ### Improvements to administration service
 
@@ -112,9 +126,9 @@ Use the Desktop Analytics Connection Health dashboard in Configuration Manager t
 
 <!-- 5870934 -->
 
-We've made it easier to navigate CMPivot entities. Starting in this technical preview, you can search CMPivot entities and see entity properties.
+We've made it easier to navigate CMPivot entities. You can now search CMPivot entities. New icons have also been added to easily differentiate the entities and the entity object types.
 
-<!-- For more information, see [CMPivot](configmgr/core/servers/manage/cmpivot). -->
+For more information, see [CMPivot](/configmgr/core/servers/manage/cmpivot#bkmk_2002).
 
 
 ## <a name="bkmk_content"></a> Content management
@@ -123,12 +137,9 @@ We've made it easier to navigate CMPivot entities. Starting in this technical pr
 
 <!-- 3555777 -->
 
-Boundary groups include the following option for peer downloads: During peer downloads, only use peers within the same subnet. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet and boundary group as the client. For more information on this option, see Boundary group options for peer downloads.
+Boundary groups include the following option for peer downloads: **During peer downloads, only use peers within the same subnet**. If you enable this option, the content location list from the management point only includes peer sources that are in the same subnet and boundary group as the client. Depending on the configuration of your network, you can now exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet.
 
-Depending on the configuration of your network, you can now exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet. By default, Configuration Manager excludes the default Teredo subnet (2001:0000:%).
-
-<!-- For more information, see [Boundary group options](/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions). -->
-
+For more information, see [Boundary group options](/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
 ## <a name="bkmk_client"></a> Client management
 
@@ -138,7 +149,7 @@ Depending on the configuration of your network, you can now exclude certain subn
 
 You can now trigger a client device to upload its client logs to the site server by sending a client notification action from the Configuration Manager console.
 
-<!-- For more information, see [Client notification](/configmgr/core/clients/manage/client-notification#client-diagnostics). -->
+For more information, see [Client notification](/configmgr/core/clients/manage/client-notification#client-diagnostics).
 
 ### Wake up a device from the central administration site
 
@@ -146,7 +157,18 @@ You can now trigger a client device to upload its client logs to the site server
 
 From the central administration site (CAS), in the Devices or Device Collections node, you can now use the client notification action to Wake Up devices. This action was previously only available from a primary site.
 
-<!-- For more information, see [How to configure Wake on LAN](/configmgr/core/clients/deploy/configure-wake-on-lan#bkmk_wol-1810). -->
+For more information, see [How to configure Wake on LAN](/configmgr/core/clients/deploy/configure-wake-on-lan#bkmk_wol-1810).
+
+### Improvements to support for ARM64 devices
+
+<!--5954175-->
+
+The **All Windows 10 (ARM64)** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.
+
+> [!NOTE]
+> If you previously selected the top-level **Windows 10** platform, this action automatically selected both **All Windows 10 (64-bit)** and **All Windows 10 (32-bit)**. This new platform isn't automatically selected. If you want to add **All Windows 10 (ARM64)**, manually select it in the list.
+
+For more information on Configuration Manager's support for ARM64 devices, see [Windows 10 on ARM64](/configmgr/core/plan-design/configs/support-for-windows-10#bkmk_arm64).
 
 
 <!-- ## <a name="bkmk_comgmt"></a> Co-management -->
@@ -175,7 +197,7 @@ For more information, see [Microsoft Edge management](/configmgr/apps/deploy-use
 
 You can now create a Microsoft Edge application that's set up to receive automatic updates rather than having automatic updates disabled. This change allows you to choose to manage updates for Microsoft Edge with Configuration Manager or allow Microsoft Edge to automatically update. When creating the application, select Allow Microsoft Edge to automatically update the version of the client on the end user's device on the Microsoft Edge Settings page.
 
-<!-- For more information, see [Microsoft Edge management](/configmgr/apps/deploy-use/deploy-edge). -->
+For more information, see [Microsoft Edge management](/configmgr/apps/deploy-use/deploy-edge#bkmk_autoupdate).
 
 ### Task sequence as an app model deployment type
 
@@ -183,13 +205,11 @@ You can now create a Microsoft Edge application that's set up to receive automat
 
 You can now install complex applications using task sequences via the application model. Add a deployment type to an app that's a task sequence, either to install or uninstall the app. This feature provides the following behaviors:
 
-- Deploy an app task sequence to a user collection
-
 - Display the app task sequence with an icon in Software Center. An icon makes it easier for users to find and identify the app task sequence.
 
 - Define additional metadata for the app task sequence, including localized information
 
-<!-- For more information, see [](). -->
+For more information, see [Create Windows applications](/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt).
 
 
 ## <a name="bkmk_osd"></a> OS deployment
@@ -200,13 +220,13 @@ You can now install complex applications using task sequences via the applicatio
 
 When you install and register a new Configuration Manager client, and also deploy a task sequence to it, it's difficult to determine how soon after registration it will run the task sequence. This release introduces a new client setup property that you can use to start a task sequence on a client after it successfully registers with the site.
 
-<!-- For more information, see [](). -->
+For more information, see [About client installation properties - PROVISIONTS](/configmgr/core/clients/deploy/about-client-installation-properties#provisionts).
 
 ### Improvements to Check Readiness task sequence step
 
 <!-- 6005561 -->
 
-You can now verify more device properties in the Check Readiness task sequence step. Use this step in a task sequence to verify the target computer meets your prerequisite conditions.
+You can now verify more device properties in the **Check Readiness** task sequence step. Use this step in a task sequence to verify the target computer meets your prerequisite conditions.
 
 - Architecture of current OS
 - Minimum OS version
@@ -216,7 +236,7 @@ You can now verify more device properties in the Check Readiness task sequence s
 - AC power plugged in
 - Network adapter is connected and not wireless
 
-<!-- For more information, see [Task sequence steps - Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness). -->
+For more information, see [Task sequence steps - Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness).
 
 ### Improvements to task sequence progress
 
@@ -224,23 +244,22 @@ You can now verify more device properties in the Check Readiness task sequence s
 
 The task sequence progress window now includes the following improvements:
 
-- Shows the current step number, total number of steps, and percent completion
+- You can enable it to show the current step number, total number of steps, and percent completion
 - Increased the width of the window to give you more space to better show the organization name in a single line
 
-<!-- For more information, see [](). -->
-
+For more information, see [User experiences for OS deployment](/configmgr/osd/understand/user-experience#task-sequence-progress).
 
 ### Improvements to OS deployment
 
 This release includes the following improvements to OS deployment:
 
-- The task sequence environment includes a new read-only variable, `_TSSecureBoot`.<!--5842295--> Use this variable to determine the state of secure boot on a UEFI-enabled device. <!-- For more information, see [Task sequence variables](/configmgr/osd/understand/task-sequence-variables). -->
+- The task sequence environment includes a new read-only variable, `_TSSecureBoot`.<!--5842295--> Use this variable to determine the state of secure boot on a UEFI-enabled device. For more information, see [_TSSecureBoot](/configmgr/osd/understand/task-sequence-variables#TSSecureBoot).
 
-- You can now set task sequence variables to configure the user context that the [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine) and [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) steps use.<!-- 5573175 --> For example, now you don't need to configure the **Run Command Line** step with a placeholder account to use the [SMSTSRunCommandLineUserName](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName) and [SMSTSRunCommandLineUserPassword](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserPassword) variables.<!-- For more information, see [Task sequence steps](/configmgr/osd/understand/task-sequence-steps). -->
+- Set task sequence variables to configure the user context for the **Run Command Line** and **Run PowerShell Script** steps.<!-- 5573175 --> For more information, see [SMSTSRunCommandLineAsUser](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineAsUser) and [SMSTSRunPowerShellAsUser](/configmgr/osd/understand/task-sequence-variables#SMSTSRunPowerShellAsUser).
 
-- Set the [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) **Parameters** property to a variable.<!-- 5690481 --> <!-- For more information, see [Task sequence steps](/configmgr/osd/understand/task-sequence-steps). -->
+- On the **Run PowerShell Script** step, you can now set the **Parameters** property to a variable.<!-- 5690481 --> For more information, see [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript).
 
-- The Configuration Manager PXE responder now sends status messages to the site server. This change makes it easier to troubleshoot OS deployments that use this service.<!-- 5568051 --> <!-- For more information, see [](). -->
+- The Configuration Manager PXE responder now sends status messages to the site server. This change makes it easier to troubleshoot OS deployments that use this service.<!-- 5568051 -->
 
 
 <!-- ## <a name="bkmk_userxp"></a> Software Center -->
@@ -258,7 +277,7 @@ An orchestration group gives you the flexibility to update devices based on a pe
 
 Members of an orchestration group can be any Configuration Manager client, not just servers. The orchestration group rules apply to the devices for all software update deployments to any collection that contains an orchestration group member. Other deployment behaviors still apply. For example, maintenance windows and deployment schedules.
 
-<!-- For more information, see [](). -->
+For more information, see [Orchestration groups](/configmgr/sum/deploy-use/orchestration-groups).
 
 ### Evaluate software updates after a servicing stack update
 
@@ -285,8 +304,7 @@ For more information, see [Synchronize Office 365 updates from a disconnected so
 ### Expand Microsoft Defender Advanced Threat Protection (ATP) onboarding
 
 <!-- 5229962 -->
-
-Configuration Manager now expands its support for onboarding devices to Microsoft Defender ATP.<!-- For more information, see [Microsoft Defender Advanced Threat Protection](/sccm/protect/deploy-use/windows-defender-advanced-threat-protection#onboard-devices). -->
+Configuration Manager has expanded its support for onboarding devices to Microsoft Defender ATP. For more information, see [Microsoft Defender Advanced Threat Protection](/sccm/protect/deploy-use/windows-defender-advanced-threat-protection#onboard-devices)
 
 ### Improvements to BitLocker management
 
@@ -330,8 +348,13 @@ When you Send a smile or Send a frown, a status message is created when the feed
 
 A status message with an ID of 53900 is a successful submission and 53901 is a failed submission.
 
-<!-- For more information, see [Product feedback](/configmgr/core/understand/find-help#BKMK_1806Feedback). -->
+For more information, see [Product feedback](/configmgr/core/understand/find-help#BKMK_1806Feedback).
 
+### Search all subfolders for configuration items and configuration baselines
+
+<!--5891241-->
+
+Similar to improvements in previous releases, you can now use the **All Subfolders** search option from the **Configuration Items** and **Configuration Baselines** nodes.
 
 ## <a name="bkmk_tools"></a> Tools
 
@@ -345,8 +368,13 @@ OneTrace now supports customizable log groups, similar to the feature in Support
 - Compliance settings (also referred to as Desired Configuration Management)
 - Software updates
 
-<!-- For more information, see [Support Center OneTrace](/configmgr/core/support/support-center-onetrace). -->
+For more information, see [Support Center OneTrace](/configmgr/core/support/support-center-onetrace).
 
+## <a name="bkmk_extend"></a> Improvements to extend and migrate on-premises site to Microsoft Azure
+<!--5665775, 6307931-->
+The extend and migrate on-premises site to Microsoft Azure tool now supports provisioning multiple site system roles on a single Azure virtual machine. You can add site system roles after the initial Azure virtual machine deployment has completed.
+
+For more information, see [Extend and migrate on-premises site to Microsoft Azure](/configmgr/core/support/azure-migration-tool#bkmk_add_role).
 
 ## Other updates
 

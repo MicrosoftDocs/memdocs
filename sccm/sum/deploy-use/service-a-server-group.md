@@ -5,7 +5,7 @@ description: "The Configuration Manager console provides alerts and statuses to 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 12/07/2016
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -13,14 +13,13 @@ ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
 
 
 ---
-
-
 # Service a server group
 
 *Applies to: Configuration Manager (current branch)*
 
 >[!IMPORTANT]
->Pre-release features are features that are in the Current Branch for early testing in a production environment. These features are fully supported but are still in active development and might receive changes until they move out of the pre-release category. You must turn on this feature for it to be available. For more information, see [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+> - Starting in Configuration Manager version 2002, server groups have been replaced by orchestration groups. For more information, see [Orchestration groups](/configmgr/sum/deploy-use/orchestration-groups).
+> - Pre-release features are features that are in the Current Branch for early testing in a production environment. These features are fully supported but are still in active development and might receive changes until they move out of the pre-release category. You must turn on this feature for it to be available. For more information, see [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
 Starting in Configuration Manager version 1606, you can configure server group settings for a collection to define how many, what percentage, or in what order computers in the collection will install software updates. You can also configure pre-deployment and post-deployment PowerShell scripts to run custom actions.
 
