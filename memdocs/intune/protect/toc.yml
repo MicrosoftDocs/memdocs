@@ -169,8 +169,6 @@
       href: security-baselines-monitor.md
   - name: Endpoint protection
     href: endpoint-protection-configure.md
-  - name: Antrivirus policy
-    href: endpoint-security-antivirus-policy.md
   - name: Network access control
     href: network-access-control-integrate.md
   - name: Windows Hello
