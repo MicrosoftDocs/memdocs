@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,7 +20,7 @@ ms.assetid:
 
 #ROBOTS:
 #audience:
-
+#ms.devlang:
 #ms.reviewer: davidra
 #ms.suite: ems
 search.appverid: MET150
@@ -37,55 +37,80 @@ You can configure Conditional Access policies based on Sophos Mobile risk assess
 > [!NOTE]
 > This Mobile Threat Defense vendor is not supported for unenrolled devices.
 
+## Supported platforms
+
+- Android 5.0 and later
+- iOS 11.0 and later
+
+## Prerequisites
+
+- Azure Active Directory Premium
+- Microsoft Intune subscription
+- Sophos Mobile Threat Defense subscription
+
+For more information, see the [Sophos website](https://www.sophos.com/products/mobile-control.aspx).
+
 ## How do Intune and Sophos Mobile help protect your company resources?
+
 Sophos Mobile app for Android and iOS/iPadOS captures file system, network stack, device, and application telemetry where available, and then sends the telemetry data to the Sophos Mobile cloud service to assess the device's risk for mobile threats.
+
 The Intune device compliance policy includes a rule for Sophos Mobile Threat Defense, which is based on the Sophos Mobile risk assessment. When this rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources like Exchange Online and SharePoint Online. Users also receive guidance from the Sophos Mobile app installed in their devices to resolve the issue and regain access to corporate resources.  
 
 ## Sample scenarios
-Here are some common scenarios.  
+
+Here are some common scenarios.
+
 ### Control access based on threats from malicious apps
+
 When malicious apps such as malware are detected on devices, you can block devices from the following actions until the threat is resolved:
+
 - Connecting to corporate e-mail
 - Syncing corporate files with the OneDrive for Work app
 - Accessing company apps
 
-**Block when malicious apps are detected**:
- 
-![Conceptual image of Malicious apps detected](./media/sophos-mtd-connector/sophos_malicious_apps_blocked.png)  
+*Block when malicious apps are detected*:
 
-**Access granted on remediation**:  
-![Conceptual image of access granted after remediation](./media/sophos-mtd-connector/sophos_malicious_apps_unblocked.png)
+![Conceptual image of Malicious apps detected](./media/sophos-mtd-connector/sophos-malicious-apps-blocked.png)  
 
-### Control access based on threat to network  
+*Access granted on remediation*:  
+![Conceptual image of access granted after remediation](./media/sophos-mtd-connector/sophos-malicious-apps-unblocked.png)
+
+### Control access based on threat to network
+
 Detect threats to your network like Man-in-the-middle attacks, and protect access to Wi-Fi networks based on the device risk.  
 
-**Block network access through Wi-Fi**:  
-![Block network access through Wi-Fi](./media/sophos-mtd-connector/sophos_network_wifi_blocked.png)
+*Block network access through Wi-Fi*:  
+![Block network access through Wi-Fi](./media/sophos-mtd-connector/sophos-network-wifi-blocked.png)
 
-**Access granted on remediation**:   
-![Access granted on remediation](./media/sophos-mtd-connector/sophos_network_wifi_unblocked.png)  
+*Access granted on remediation*:   
+![Access granted on remediation](./media/sophos-mtd-connector/sophos-network-wifi-unblocked.png)  
 
-### Control access to SharePoint Online based on threat to network  
+### Control access to SharePoint Online based on threat to network
+
 Detect threats to your network like Man-in-the-middle attacks, and prevent synchronization of corporate files based on the device risk.  
 
-**Block SharePoint Online when network threats are detected**:   
-![Block SharePoint Online when network threats are detected](./media/sophos-mtd-connector/sophos_network_spo_blocked.png)  
+*Block SharePoint Online when network threats are detected*:
 
-**Access granted on remediation**:  
-![Access granted on remediation for Sharepoint example](./media/sophos-mtd-connector/sophos_network_spo_unblocked.png)  
+![Block SharePoint Online when network threats are detected](./media/sophos-mtd-connector/sophos-network-spo-blocked.png)  
 
-## Supported platforms  
-- Android 5.0 and later
-- iOS 11.0 and later
+*Access granted on remediation*:
 
-## Prerequisites  
-- Azure Active Directory Premium
-- Microsoft Intune subscription 
-- Sophos Mobile Threat Defense subscription
+![Access granted on remediation for Sharepoint example](./media/sophos-mtd-connector/sophos-network-spo-unblocked.png)  
 
-For more information, see the [Sophos website](https://www.sophos.com/en-us/products/mobile-control.aspx).
+<!-- 
+### Control access on unenrolled devices based on threats from malicious apps
 
-## Next steps  
+When the Sophos Mobile Threat Defense solution considers a device to be infected:
+
+![App protection policy blocks due to detected malware](./media/sophos-mtd-connector/sophos-mobile-app-policy-block.png)
+
+Access is granted on remediation:
+
+![Access is granted on remediation for App protection policy](./media/sophos-mtd-connector/sophos-mobile-app-policy-remediated.png)
+-->
+
+## Next steps
+
 - [Integrate Sophos with Intune](sophos-mtd-connector-integration.md)
 - [Set up Sophos apps](mtd-apps-ios-app-configuration-policy-add-assign.md)
 - [Create Sophos device compliance policy](mtd-device-compliance-policy-create.md)

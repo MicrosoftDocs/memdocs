@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 03/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,6 +58,27 @@ Learn what's new each week in Microsoft Intune. You can also find [important not
 -->  
 
 <!-- ########################## -->
+## Week of March 9, 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Configure Delivery Optimization agent when downloading Win32 app content<!-- 5410945 -->
+
+You can configure the Delivery Optimization agent to download Win32 app content either in background or foreground mode based on assignment. For existing Win32 apps, content will continue to download in background mode. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > *select the Win32 app* > **Properties**. Select **Edit** next to **Assignments**.  Edit the assignment by selecting **Include** under **Mode** in the **Required** section.  You will find the new setting in the **App settings** section. For more information about Delivery Optimization, see [Win32 app management - Delivery Optimization](../apps/apps-win32-app-management.md#delivery-optimization).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Change Primary User for Windows devices<!-- 3794742 idready wnready -->
+You can change the Primary User for Windows hybrid and Azure AD Joined devices. To do so, go to **Intune** > **Devices** > **All devices** > choose a device > **Properties** > **Primary User**. For more information, see [Change a device's primary user](../remote-actions/find-primary-user.md#change-a-devices-primary-user).
+
+A new RBAC permission (Managed Devices / Set primary user) has also been created for this task. The permission has been added to built-in roles including Helpdesk Operator, School Administrator, and Endpoint Security Manager.
+
+This feature is rolling out to customers globally under preview. You should see the feature within the next few weeks.
+
+
+<!-- ########################## -->
 ## Week of March 2, 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -72,7 +93,7 @@ Review the [Configuration Manager technical preview article](https://docs.micros
 You can now issue bulk commands for the following remote actions: restart, rename, Autopilot reset, wipe, and delete. To see the new bulk actions, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Bulk actions**.
 
 #### All devices list improved search, sort, and filter<!--6179023-->
-The All devices list has been improved for better performance, searching, sorting, and filtering.
+The All devices list has been improved for better performance, searching, sorting, and filtering. For more information, see [this Support Tip](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946).
 
 <!-- ########################## -->
 ## Week of February 24, 2020

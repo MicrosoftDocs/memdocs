@@ -232,21 +232,14 @@ It takes about 15 minutes for the device profile status to change from *Not assi
    - OU=Mine,DC=contoso,DC=com
    
    Here are some examples that are not valid:
-   - CN=Computers,DC=contoso,DC=com  (you can’t specify a container, instead leave the value blank to use the default for the domain)
+   - CN=Computers,DC=contoso,DC=com  (you can't specify a container, instead leave the value blank to use the default for the domain)
    - OU=Mine  (you must specify the domain via the DC= attributes)
      
    > [!NOTE]
    > Don't use quotation marks around the value in **Organizational unit**.
 5. Select **OK** > **Create**.  
     The profile is created and displayed in the list.
-6. To assign the profile, follow the steps under [Assign a device profile](../configuration/device-profile-assign.md#assign-a-device-profile) and assign the profile to the same group used at this step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group)
-   - Deploying multiple Domain Join profiles
-   
-     a. Create a dynamic group that includes all your Autopilot devices with a specific Autopilot deployment profile, enter (device.enrollmentProfileName -eq "Autopilot Profile Name"). 
-     
-     b. Replace 'Autopilot Profile Name' with the display name of the profile created under [Create and assign an Autopilot deployment profile](windows-autopilot-hybrid.md#create-and-assign-an-autopilot-deployment-profile). 
-     
-     c. Create multiple Autopilot deployment profiles and assign that device to the profile specified in this dynamic group.
+6. To assign the profile, follow the steps under [Assign a device profile](../configuration/device-profile-assign.md#assign-a-device-profile) and assign the profile to the same group used at this step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Alternatively, different groups can be used if there is a need to join devices to different domains or OUs.
 
 > [!NOTE]
 > The naming capabilities for Windows Autopilot for Hybrid Azure AD Join do not support variables such as %SERIAL% and only support prefixes for the computer name.

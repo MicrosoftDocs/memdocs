@@ -25,19 +25,22 @@
     - name: Administrative templates on Windows
       href: administrative-templates-windows.md
     - name: Update Office using administrative templates
-      href: administrative-templates-update-office.md      
+      href: administrative-templates-update-office.md
+    displayName: ADMX, GPO, group policy
   - name: Device features on iOS/iPadOS and macOS
     href: device-features-configure.md
   - name: Restrict device settings and features
     href: device-restrictions-configure.md
     displayName: Device restrictions
+  - name: Update Windows
+    href: delivery-optimization-windows.md
+    displayName: delivery optimization; updates
   - name: BIOS settings on Windows
     href: device-firmware-configuration-interface-windows.md
     displayName: DFCI, firmware
-  - name: Updates
-    href: delivery-optimization-windows.md
-    displayName: delivery optimization; updates
-  - name: Upgrade editions and S mode
+  - name: Domain Join on Windows
+    href: domain-join-configure.md
+  - name: Upgrade Windows and S mode
     href: edition-upgrade-configure-windows-10.md
   - name: Email
     href: email-settings-configure.md
@@ -69,9 +72,9 @@
     displayName: mx
   - name: OEMConfig on Android Enterprise
     href: android-oem-configuration-overview.md
-  - name: eSIM cellular profiles
+  - name: eSIM cellular on Windows
     href: esim-device-configuration.md  
-  - name: Monitor telecom expenses
+  - name: Telecom expenses on Android, iOS/iPadOS
     href: telecom-expenses-monitor.md
   - name: Custom device settings
     href: custom-settings-configure.md
@@ -89,7 +92,6 @@
         href: android-zebra-mx-logs-troubleshoot.md        
       - name: Common questions and answers
         href: device-profile-troubleshoot.md
-
 - name: Reference
   items:
   - name: Configuration profile settings
