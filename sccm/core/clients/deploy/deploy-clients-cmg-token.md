@@ -56,6 +56,10 @@ If you can't install and register clients on the internal network, create a bulk
     > [!TIP]
     > For more information on this command line, see [Install and register the client using Azure AD identity](/configmgr/core/clients/deploy/deploy-clients-cmg-azure#install-and-register-the-client-using-azure-ad-identity). This process is similar, just doesn't use the Azure AD properties.
 
+### Known issues
+
+You can't create a bulk registration token on a site that has a site server in passive mode.<!-- 6399087 -->
+
 ### Bulk registration token tool usage
 
 The `BulkRegistrationTokenTool.exe` tool is in the `\bin\X64` folder of the Configuration Manager installation directory on the site server. Sign in to the site server, and run it as an administrator. It supports the following command-line parameters:
