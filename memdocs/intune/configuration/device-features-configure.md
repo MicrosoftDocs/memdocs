@@ -157,7 +157,7 @@ These settings configure an app extension that enables single sign-on (SSO) for 
 
 In Intune, use these settings to configure an SSO app extension created by your organization, your identity provider, Microsoft, or Apple. The SSO app extension handles authentication for your users. These settings configure redirect-type and credential-type SSO app extensions.
 
-- The redirect-type is designed for modern authentication protocols, such as OAuth and SAML2. Microsoft has an iOS/iPadOS Azure AD redirect-type SSO app extension that configures the single sign-on app extension settings.
+- The redirect-type is designed for modern authentication protocols, such as OAuth and SAML2. Microsoft has an iOS/iPadOS Azure AD redirect-type SSO app extension that can be enabled with the single sign-on app extension settings.
 - The credential-type is designed for challenge-and-response authentication flows. You can choose between a Kerberos-specific credential extension provided by Apple, or a generic credential extension.
 
 For a list of the settings you can configure in Intune, see [iOS/iPadOS SSO app extension](ios-device-features-settings.md#single-sign-on-app-extension) and [macOS SSO app extension](macos-device-features-settings.md#single-sign-on-app-extension).
