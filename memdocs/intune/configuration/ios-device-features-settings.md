@@ -289,13 +289,13 @@ This feature applies to:
   - **Not configured**: App extensions aren't used. To disable an app extension, you can switch the SSO app extension type to **Not configured**.
   - **Redirect**: Use a generic, customizable redirect app extension to use SSO with modern authentication flows. Be sure you know the extension ID for your organization's app extension.
 
-    On iOS/iPadOS 13.0+ devices, you can configure the Microsoft Azure AD SSO app extension using this redirect SSO app extension. The Microsoft Azure AD extension enables single sign-on with Microsoft apps and organization apps that use Azure AD for authentication. The Azure AD extension acts as an advanced authentication broker that offers security and end user experience improvements. All apps that previously used brokered authentication with the Microsoft Authenticator app continue to get SSO with the SSO extension. The Azure AD SSO extension doesn't support browser SSO yet. For more information about SSO using the iOS/iPadOS authentication broker, see [Configure SSO on macOS and iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
+    On iOS/iPadOS 13.0+ devices, you can configure the Microsoft Azure AD SSO app extension using this redirect SSO app extension type. The Microsoft Azure AD extension enables single sign-on among Microsoft apps and organization apps that use Azure AD for authentication. The Azure AD extension acts as an advanced authentication broker that offers security and end user experience improvements. All apps that previously used brokered authentication with the Microsoft Authenticator app continue to get SSO with the SSO extension. The Azure AD SSO extension doesn't support browser SSO yet. For more information about SSO and the iOS/iPadOS authentication broker, see [Configure SSO on macOS and iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
 
     To configure the iOS Microsoft Azure AD extension:
 
     1. Set the **SSO app extension type** to **Redirect**.
     2. Set **Extension ID** to `com.microsoft.azureauthenticator.ssoextension`.
-    3. In the URL, enter the following URLs:
+    3. In the **URLs** setting, enter the following URLs:
 
         - `https://login.microsoftonline.com`
         - `https://login.windows.net`
@@ -309,7 +309,7 @@ This feature applies to:
         - `https://login-us.microsoftonline.com`
 
     > [!IMPORTANT]
-    > To achieve SSO with the iOS/iPadOS Microsoft Azure AD extension, first install the iOS/iPadOS Microsoft Authenticator app on the device. Authenticator deploys the Azure AD extension to the device, and deploys the MDM settings that activate the Azure AD extension. Once Authenticator and the SSO app extension profile are installed on the device, users must enter their credentials to sign in and establish a session. This session is then used across different applications without requiring users to authenticate again.
+    > To achieve SSO with the iOS/iPadOS Microsoft Azure AD extension, first install the iOS/iPadOS Microsoft Authenticator app on the device. Authenticator delivers the Azure AD extension to the device, and the MDM SSO app extension settings activate the Azure AD extension. Once Authenticator and the SSO app extension profile are installed on the device, users must enter their credentials to sign in and establish a session. This session is then used across different applications without requiring users to authenticate again.
 
   - **Credential**: Use a generic, customizable credential app extension to use SSO with challenge-and-response authentication flows. Be sure you know the extension ID for your organization's app extension.
   - **Kerberos**: Use Apple's built-in Kerberos extension, which is included on iOS 13.0+ and iPadOS 13.0+. This option is a Kerberos-specific version of the **Credential** app extension.
