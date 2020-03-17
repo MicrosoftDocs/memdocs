@@ -2,7 +2,7 @@
 title: "Configure Wake on LAN"
 titleSuffix: "Configuration Manager"
 description: "Select Wake On LAN settings in Configuration Manager."
-ms.date: 08/07/2019
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -64,7 +64,8 @@ Right-click on the client, go to **Client Notification**, then select **Wake up*
 - **To wake up all sleeping clients in a collection:** Right-click on the device collection, go to **Client Notification**, then select **Wake up**.
    - This action can't be run on built-in collections.
    - When you have a mix of asleep and awake clients in a collection, only the clients that are asleep are sent a Wake on LAN request.
-   - This action is only active when the Configuration Manager console is connected to a stand-alone or child primary site. When connected to a Central Administration Site, the action is not available.
+   - Starting in Configuration Manager 2002, this action is available from a console connected to a Central Administration site, a stand-alone site, or child primary site.
+   - In versions 1910 and earlier, this action is only active when the Configuration Manager console is connected to a stand-alone or child primary site. When connected to a Central Administration Site, the action is not available.
 
 ### What to expect when only the new version of Wake on LAN is enabled
 
