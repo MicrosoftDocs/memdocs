@@ -39,7 +39,7 @@ By customizing the end-user experience, you will help provide a familiar and hel
 
 ### Branding
 
-The following table provides the branding customization detils for the end-user experinece:
+The following table provides the branding customization details for the end-user experience:
 
 | Field name | More information |
 |---|---|---|
@@ -89,7 +89,7 @@ Enter your organization’s support information to provide your employees with c
 
 ## Company information and privacy statement
 
-The following table provides additional configuration detils:
+The following table provides additional configuration details:
 
 | Field name | Maximum length | More information |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
