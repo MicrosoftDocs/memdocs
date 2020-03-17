@@ -37,18 +37,18 @@ In the Antivirus node, the settings are logically grouped into profiles (categor
 
 The following profiles are available for Antivirus:
 
-- [**Microsoft Defender Antivirus**](antivirus-microsoft-defender-antivirus-settings.md) - Manage device settings for Microsoft Defender Antivirus. You can enable cloud protection, Microsoft defender Antivirus exclusions, remediation actions, scan settings, and more.
+- **Microsoft Defender Antivirus** - Manage device settings for Microsoft Defender Antivirus. You can enable cloud protection, Microsoft defender Antivirus exclusions, remediation actions, scan settings, and more.
 
-  The settings in this profile are a new and separate instance of the settings that are found in [device restriction profiles](../configuration/device-restrictions-configure.md), and:
+  The [settings in this profile](antivirus-microsoft-defender-antivirus-settings.md) are a new and separate instance of the settings that are found in [device restriction profiles](../configuration/device-restrictions-configure.md), and:
   
   - Support a third option for configuration that's not available when configured as a device restriction.
   - Apply to devices that you co-manage with Configuration Manager when you've configured the [Endpoint Protection workload](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) slider in Configuration Manager to support *Pilot Intune* or *Intune*.
 
   Plan to use the new *Antivirus* >  *Microsoft Defender Antivirus* profile in place of configuring these settings through a device restriction profile.
 
-- [**Windows Security experience**](antivirus-windows-security-experience-settings.md) - Manage the user experience on Windows 10 devices for the Windows Security app. With these settings you can control what the user can see in the app, and how notifications display on the device.
+- **Windows Security experience** - Manage the user experience on Windows 10 devices for the Windows Security app. With these settings you can control what the user can see in the app, and how notifications display on the device.
 
-  The settings in this profile are the same settings that are found in [Device configuration profiles](../configuration/device-profile-create.md) for Endpoint Protection.
+  The settings in this profile are the same settings as in the Device configuration profile for [Windows 10 Endpoint Protection](../protect/endpoint-protection-windows-10.md).
 
 ## About settings conflicts
 
