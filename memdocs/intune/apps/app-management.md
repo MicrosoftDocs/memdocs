@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/05/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -122,7 +122,7 @@ The following items within the console provide app related functionality:
 - **Windows side loading keys**: Add a Windows side-loading key that can be used to install an app directly to devices rather than publishing and downloading the app from the Windows store. For more information, see [Side-load a Windows app](app-sideload-windows.md).
 - **Apple VPP tokens**: Apply and view your iOS/iPadOS Volume Purchase Program (VPP) licenses. For more information, see [iOS/iPadOS volume-purchased apps](vpp-apps-ios.md).
 - **Managed Google Play**: Managed Google Play is Google's enterprise app store and sole source of applications for Android Enterprise. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](apps-add-android-for-work.md).
-- **Branding and customizing**: Customize the Company Portal to give it your company branding. For more information, see [Company Portal configuration](company-portal-app.md).
+- **Customization**: Customize the Company Portal to give it your company branding. For more information, see [Company Portal configuration](company-portal-app.md).
 
 ## Next steps
 

@@ -87,7 +87,7 @@ Enter your organization’s support information to provide your employees with c
 | Website URL | 150 | The support website that users should use. The URL must be   in the format `https://www.contoso.com`.  |
 | Additional information | 120 | Include any additional support-related messaging to users   here. |
 
-## Configuration
+## Company information and privacy statement
 
 The following table provides additional configuration detils:
 
