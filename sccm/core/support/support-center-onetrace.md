@@ -58,6 +58,8 @@ Starting in version 2002, OneTrace supports customizable log groups, similar to 
 - Compliance settings (also referred to as Desired Configuration Management)
 - Software updates
 
+To show log groups, go to the **View** menu, and select **Log groups**.
+
 ![Screenshot of OneTrace log group for application management](media/5559993-onetrace-log-groups.png)
 
 ### Customize log groups
