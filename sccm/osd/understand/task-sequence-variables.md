@@ -1818,6 +1818,16 @@ Use this variable to control when the task sequence displays progress to end use
 
 Specify whether the task sequence engine considers a detected warning as an error during this step. The task sequence sets the [_TSAppInstallStatus](#TSAppInstallStatus) variable to `Warning` when one or more applications, or a required dependency, didn't install because it didn't meet a requirement. When you set this variable to `True`, and the task sequence sets **_TSAppInstallStatus** to `Warning`, the outcome is an error. A value of `False` is the default behavior.
 
+### <a name="TSProgressInfoLevel"></a> TSProgressInfoLevel
+
+*Starting in version 2002*<!--5932692-->  
+
+Specify this variable to control the type of information that the task sequence progress window displays. Use the following values for this variable:
+
+- `1`: Include the current step and total steps to the progress text. For example, **2 of 10**.
+- `2`: Include the current step, total steps, and percentage completed. For example, **2 of 10 (20% complete)**.
+- `3`: Include the percentage completed. For example, **(20% complete)**.
+
 ### <a name="WorkingDirectory"></a> WorkingDirectory
 
 *Applies to the [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) step.*
