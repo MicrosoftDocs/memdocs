@@ -82,7 +82,7 @@
     - name: Manage Android Enterprise work profile devices
       href: android-enterprise-overview.md        
     - name: Move device administrator devices to work profile management
-      href: android-move-device-admin-to-work-profile.md        
+      href: android-move-device-admin-work-profile.md        
     - name: Samsung Knox Mobile Enrollment 
       href: android-samsung-knox-mobile-enroll.md
       displayName: kda; kme

@@ -51,18 +51,18 @@ Users who sign in to a non-compliant device will see a notification informing th
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
 
-    ![Create policy](./media/android-move-device-admin-to-work-profile/create-policy.png)
+    ![Create policy](./media/android-move-device-admin-work-profile/create-policy.png)
 
 2. On the **Create a policy** page, set **Platform** to **Android device administrator** > **Create**.
 3. On the **Basics** page, type in the **Name** and **Description** > **Next**.
 
-    ![Basics page](./media/android-move-device-admin-to-work-profile/basics.png)
+    ![Basics page](./media/android-move-device-admin-work-profile/basics.png)
     
 4. On the **Compliance settings** page, in the **Device Health** section, set **Block devices managed with device administrator** to **Yes** > **Next**.
 5. On the **Locations** page, you can add locations if you want > **Next**.
 6. On the **Actions for noncompliance**, set a **Send email to end user** action.
 
-    ![Send email](./media/android-move-device-admin-to-work-profile/send-email.png)
+    ![Send email](./media/android-move-device-admin-work-profile/send-email.png)
 
 
     In the email, you can include the URL below in your messages to users. The URL will launch the Android Company Portal to the **Update device settings** page. This page starts their flow to move to work profile management.
