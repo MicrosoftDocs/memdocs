@@ -102,6 +102,7 @@ Starting in Configuration Manager 2002, the Microsoft Edge Management dashboard 
    - This chart doesn't include Canary Channel.
 - Have a view of the installed browsers across devices
 - Have a view of preferred browser by device <!--5907383-->
+   - Currently for the 2002 release, this chart will be empty.
 
 ### Prerequisites for the dashboard
 
