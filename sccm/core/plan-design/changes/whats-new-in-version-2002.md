@@ -105,7 +105,7 @@ Configuration Manager extends its device support with the following methods:
 - Register on the internal network for a unique token
 - Create a bulk registration token for internet-based devices
 
-<!-- For more information, see [](). -->
+For more information, see [Token-based authentication for CMG](/configmgr/core/clients/deploy/deploy-clients-cmg-token).
 
 ## <a name="bkmk_da"></a> Desktop Analytics
 
