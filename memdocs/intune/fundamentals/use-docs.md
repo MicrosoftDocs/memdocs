@@ -112,7 +112,7 @@ Follow these general guidelines when contributing to Intune docs:
 
 ## Consolidation of documentation for Microsoft Endpoint Manager
 
-To better support combined scenarios for Intune and Configuration Manager, this documentation library was moved to [https://docs.microsoft.com/memdocs/intune](https://docs.microsoft.com/memdocs/intune). The Configuration Manager documentation library will later move to [https://docs.microsoft.com/memdocs/configmgr](https://docs.microsoft.com/memdocs/configmgr). All links will automatically redirect, so you don't need to make any changes for reading this content.
+To better support combined scenarios for Intune and Configuration Manager, this documentation library was moved to [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune). The Configuration Manager documentation library will later move to `docs.microsoft.com/mem/configmgr`. All links will automatically redirect, so you don't need to make any changes for reading this content.
 
 If you provide feedback or contribute to articles, some changes are necessary:
 

@@ -40,6 +40,19 @@ An Intune device can have zero or one primary user assigned to it. When there's 
 2. Choose **Devices** > choose a device.
 3. On the **Overview** page, you can see the primary user listed.
 
+## Change a device's primary user
+
+The primary user of a device can be updated for devices Windows 10 devices that are Azure AD Joined or Hybrid Azure AD Joined.
+
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Choose **Devices** > **All devices** > choose a device > **Properties** > **Change primary user**.
+3. Select a new user and choose **Select**.
+
+After the primary user is updated, it will also be updated in Intune and Azure AD device blades.
+
+The primary user can't be changed on co-managed Windows 10 devices.
+
+
 ## What is the primary user?
 The primary user property is used to map a licensed Intune user to their devices in:
 - The Company Portal app
@@ -49,9 +62,9 @@ The primary user property is used to map a licensed Intune user to their devices
 ### Company Portal app
 The Company Portal app expects that the user account that signed in to the Company Portal is the primary user of that device. If another user has been assigned as the primary user, the Company Portal shows a warning:
 
-“This device is already assigned to someone in your organization. Contact company support about becoming the primary device user. You can continue to use Company Portal but functionality will be limited.”
+"This device is already assigned to someone in your organization. Contact company support about becoming the primary device user. You can continue to use Company Portal but functionality will be limited."
 
-If an Intune device has no primary user assigned, then the Company Portal app detects it as a shared device. Shared devices are visually identifiable with a “shared” label appearing on the device tile. In this mode, the Company Portal can still be used to request and install available apps. However, self-service actions (reset/rename/retire) aren't available.  
+If an Intune device has no primary user assigned, then the Company Portal app detects it as a shared device. Shared devices are visually identifiable with a "shared" label appearing on the device tile. In this mode, the Company Portal can still be used to request and install available apps. However, self-service actions (reset/rename/retire) aren't available.  
 
 To appear in the Company Portal on shared devices, available apps must be assigned to a user group. They'll be installed in the system context or user context, depending on how the app was configured by the IT administrator. For more information about app context, see [Installing apps on Windows 10 devices](../apps/apps-windows-10-app-deploy.md). Company Portal version 10.3.4651.0 or later is required to use this feature.
 
@@ -78,7 +91,7 @@ Intune automatically adds primary user to devices during or soon after enrollmen
 | Android | Android Corporate-Owned, Dedicated devices | None | Not applicable |
 
 ## Primary user and Azure AD device owner
-In some cases, the Intune primary user may be different from the Azure AD Device’s **Owner** property (viewable under **Devices** > **Azure AD Devices**). The Azure AD Device owner is added during a device’s registration into Azure Active Directory.
+In some cases, the Intune primary user may be different from the Azure AD Device's **Owner** property (viewable under **Devices** > **Azure AD Devices**). The Azure AD Device owner is added during a device's registration into Azure Active Directory.
 
 ## Next steps
 [Manage your Intune devices.](device-management.md)

@@ -75,9 +75,6 @@ By adding the **Webex** package as an exception to the MAM data transfer policy,
     
     <code>com.samsung.android.messaging</code>
 
-- Android **Certificate installer** example:
-    To exempt the native **Certificate installer** app so that Outlook for Android can install a S/MIME certificate (delivered as an email attachment) into the Android KeyStore, you must add the data transfer exception for the following string: <code>com.android.certinstaller</code>. For more information, see [Sensitivity labeling and protection in Outlook for iOS/iPadOS and Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android).
-
 ## Next steps
 
 - [Create and deploy app protection policies](app-protection-policies.md)
