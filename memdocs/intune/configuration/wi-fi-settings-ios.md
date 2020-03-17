@@ -68,8 +68,8 @@ This article describes these settings.
 - **Connect automatically**: Choose **Enable** to automatically connect to this network when the device is in range. Choose **Disable** to prevent devices from automatically connecting.
 - **Hidden network**: Choose **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Choose **Disable** to show this network in the list of available networks on the device.
 - **Security type**: Select the security protocol to authenticate to the Wi-Fi network. Your options:
-  - **WPA - Enterprise**: Enter the password in **Pre-shared key**. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
-  - **WPA/WPA2 - Enterprise**: Enter the password in **Pre-shared key**. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
+  - **WPA - Enterprise**
+  - **WPA/WPA2 - Enterprise**
 
 - **EAP type**: Choose the Extensible Authentication Protocol (EAP) type used to authenticate secured wireless connections. Your options:
 
