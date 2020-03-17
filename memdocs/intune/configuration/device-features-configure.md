@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create iOS/iPadOS or macOS device profile with Microsoft Intune - Azure | Microsoft Docs
-description: Add or create an iOS, iPadOS, or macOS device profile, and then configure settings for AirPrint, layout of the home screen, app notifications, shared device, single sign-in, and web content filter settings in Microsoft Intune.
+description: Add or create an iOS, iPadOS, or macOS device profile, and then configure settings for AirPrint, layout of the home screen, app notifications, shared device, single sign-on, and web content filter settings in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -80,7 +80,7 @@ Associated domains allow you to create a relationship between your domains, such
 
 For a list of the settings you can configure in Intune, see [Associated domains on macOS](macos-device-features-settings.md#associated-domains).
 
-For more information on this feature, see [Setting Up an App’s Associated Domains](https://developer.apple.com/documentation/security/password_autofill/setting_up_an_app_s_associated_domains) on Apple's web site.
+For more information on this feature, see [Setting Up an App's Associated Domains](https://developer.apple.com/documentation/security/password_autofill/setting_up_an_app_s_associated_domains) on Apple's web site.
 
 Applies to:
 
@@ -153,16 +153,16 @@ Applies to:
 
 ## Single sign-on app extension
 
-These settings configure an app extension that enables single sign-on (SSO) for your iOS, iPadOS, and macOS devices. Most Line of Business (LOB) apps and organization websites require some level of secure user authentication. In many cases, authentication requires users to enter the same credentials repeatedly. SSO gives users access to apps and websites after entering their credentials once. After they sign-in, users can access apps and websites automatically, or use Face ID, Touch ID, or Apple passcode to gain access.
+These settings configure an app extension that enables single sign-on (SSO) for your iOS, iPadOS, and macOS devices. Most Line of Business (LOB) apps and organization websites require some level of secure user authentication. In many cases, authentication requires users to enter the same credentials repeatedly. SSO gives users access to apps and websites after entering their credentials once. SSO also provides a better authentication experience for users, and reduces the number of repeated prompts for credentials.
 
-In Intune, use these settings to configure an SSO ap extension created by your organization, identity provider, or Apple. The SSO app extension handles authentication for your users. These settings configure redirect-type and credential-type SSO app extensions.
+In Intune, use these settings to configure an SSO app extension created by your organization, your identity provider, Microsoft, or Apple. The SSO app extension handles authentication for your users. These settings configure redirect-type and credential-type SSO app extensions.
 
-- The redirect-type is designed for modern authentication protocols like OAuth and SAML2.
-- The credential-type is designed for challenge-and-response authentication flows. You can choose between a Kerberos-specific credential extension provided by Apple and a generic credential extension.
+- The redirect-type is designed for modern authentication protocols, such as OAuth and SAML2. Microsoft has an iOS/iPadOS Azure AD redirect-type SSO app extension that configures the single sign-on app extension settings.
+- The credential-type is designed for challenge-and-response authentication flows. You can choose between a Kerberos-specific credential extension provided by Apple, or a generic credential extension.
 
 For a list of the settings you can configure in Intune, see [iOS/iPadOS SSO app extension](ios-device-features-settings.md#single-sign-on-app-extension) and [macOS SSO app extension](macos-device-features-settings.md#single-sign-on-app-extension).
 
-For more information on developing an SSO app extension, watch [Extensible Enterprise SSO](https://developer.apple.com/videos/play/tech-talks/301) on Apple’s web site. To read Apple’s description of the feature, visit [Single Sign-On Extensions payload settings](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web). 
+For more information on developing an SSO app extension, watch [Extensible Enterprise SSO](https://developer.apple.com/videos/play/tech-talks/301) on Apple's web site. To read Apple's description of the feature, visit [Single Sign-On Extensions payload settings](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web). 
 
 > [!NOTE]
 > The **Single sign-on app extension** feature is different than the **Single sign-on** feature:
@@ -171,7 +171,7 @@ For more information on developing an SSO app extension, watch [Extensible Enter
 >
 > - The **Single sign-on app extension** settings define extensions for use by identity providers or organizations to deliver a seamless enterprise sign-on experience. The **Single sign-on** settings define Kerberos account information for when users access servers or apps.
 >
-> - The **Single sign-on app extension** uses the Apple operating system to authenticate. So, it might provide an end-user experience that is better than that of **Single sign-on**.
+> - The **Single sign-on app extension** uses the Apple operating system to authenticate. So, it might provide an end-user experience that's better than **Single sign-on**.
 >
 > - From a development perspective, with **Single sign-on app extension**, you can use any type of redirect SSO or credential SSO authentication. With **Single sign-on**, you can only use Kerberos SSO authentication.
 >
@@ -198,7 +198,7 @@ Applies to:
 
 ## Web content filter
 
-These settings can use Apple’s built-in AutoFilter algorithm to evaluate web pages, and block adult content and adult language. You can also create a list of allowed web links and restricted web links. For example, you can allow only `contoso` web sites to open.
+These settings use Apple's built-in AutoFilter algorithm to evaluate web pages, and block adult content and adult language. You can also create a list of allowed web links and restricted web links. For example, you can allow only `contoso` web sites to open.
 
 For a list of the settings you can configure in Intune, see [Web content filter on iOS/iPadOS](ios-device-features-settings.md#web-content-filter).
 
