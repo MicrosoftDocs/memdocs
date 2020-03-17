@@ -157,7 +157,7 @@ For more information, see [Client notification](/configmgr/core/clients/manage/c
 
 From the central administration site (CAS), in the Devices or Device Collections node, you can now use the client notification action to Wake Up devices. This action was previously only available from a primary site.
 
-<!-- For more information, see [How to configure Wake on LAN](/configmgr/core/clients/deploy/configure-wake-on-lan#bkmk_wol-1810). -->
+For more information, see [How to configure Wake on LAN](/configmgr/core/clients/deploy/configure-wake-on-lan#bkmk_wol-1810).
 
 ### Improvements to support for ARM64 devices
 
