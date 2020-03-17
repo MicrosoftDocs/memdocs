@@ -289,6 +289,3 @@ Learn more
   - **No** - The Defender User Interface (UI) is inaccessible and notifications ware suppressed.
   - **Yes**
 
-## Next steps
-
-[Create or manage Antivirus policies](../protect/endpoint-security-antivirus-policy.md)
