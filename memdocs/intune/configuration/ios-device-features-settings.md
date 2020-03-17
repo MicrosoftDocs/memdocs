@@ -2,12 +2,12 @@
 # required metadata
 
 title: iOS/iPadOS device feature settings in Microsoft Intune - Azure | Microsoft Docs
-description: See all the settings to configure iOS and iPadOS devices for AirPrint, layout of the home screen, app notifications, shared device, single sign-in, and web content filter settings in Microsoft Intune. Use these settings in a device configuration profile to configure iOS/iPadOS devices to use these Apple features in your organization.
+description: See all the settings to configure iOS and iPadOS devices for AirPrint, home screen layout, app notifications, shared devices, single sign-on, and web content filter settings in Microsoft Intune. Use these settings in a device configuration profile to configure iOS/iPadOS devices to use these Apple features in your organization.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # iOS and iPadOS device settings to use common iOS/iPadOS features in Intune
 
-Intune includes some built-in settings to allow iOS/iPadOS users to use different Apple features on their devices. For example, administrators can control how iOS/iPadOS users use AirPrint printers, add apps and folders to the dock and pages on the home screen, show app notifications, show asset tag details on the lock screen, use single sign-on authentication, and authenticate users with certificates.
+Intune includes some built-in settings to allow iOS/iPadOS users to use different Apple features on their devices. For example, you can control AirPrint printers, add apps and folders to the dock and home screen pages, show app notifications, show asset tag details on the lock screen, use single sign-on authentication, and use certificate authentication.
 
 Use these features to control iOS/iPadOS devices as part of your mobile device management (MDM) solution.
 
@@ -52,7 +52,7 @@ This article lists these settings, and describes what each setting does. For mor
 - **IP address**: Enter the IPv4 or IPv6 address of the printer. If you use hostnames to identify printers, you can get the IP address by pinging the printer in the terminal. Get the IP address and path (in this article) provides more details.
 - **Path**: The path is typically `ipp/print` for printers on your network. Get the IP address and path (in this article) provides more details.
 - **Port**: Enter the listening port of the AirPrint destination. If you leave this property blank, AirPrint uses the default port. Available on iOS 11.0+, and iPadOS 13.0+.
-- **TLS**: Choose **Enable** to secure AirPrint connections with Transport Layer Security (TLS). Available on iOS 11.0+, and iPadOS 13.0+.
+- **TLS**: **Enable** secures AirPrint connections with Transport Layer Security (TLS). Available on iOS 11.0+, and iPadOS 13.0+.
 
 To add AirPrint servers, you can:
 
@@ -85,7 +85,7 @@ This feature applies to:
 
 ### Dock
 
-Use the **Dock** settings to add up to six items or folders to the dock of the iOS/iPadOS screen. Many devices support fewer items. For example, iPhone devices support up to four items. In this case, only the first four items you add are shown on the device.
+Use the **Dock** settings to add up to six items or folders to the dock on the screen. Many devices support fewer items. For example, iPhone devices support up to four items. In this case, only the first four items you add are shown on the device.
 
 You can add up to **six** items (apps and folders combined) for the device dock.
 
@@ -287,8 +287,31 @@ This feature applies to:
 - **SSO app extension type**: Choose the type of SSO app extension. Your options:
 
   - **Not configured**: App extensions aren't used. To disable an app extension, you can switch the SSO app extension type to **Not configured**.
-  - **Redirect**: Use a generic, customizable redirect app extension to perform SSO with modern authentication flows. Be sure you know the extension ID for your organization's app extension.
-  - **Credential**: Use a generic, customizable credential app extension to perform SSO with challenge-and-response authentication flows. Be sure you know the extension ID for your organization's app extension.
+  - **Redirect**: Use a generic, customizable redirect app extension to use SSO with modern authentication flows. Be sure you know the extension ID for your organization's app extension.
+
+    On iOS/iPadOS 13.0+ devices, you can configure the Microsoft Azure AD SSO app extension using this redirect SSO app extension. The Microsoft Azure AD extension enables single sign-on with Microsoft apps and organization apps that use Azure AD for authentication. The Azure AD extension acts as an advanced authentication broker that offers security and end user experience improvements. All apps that previously used brokered authentication with the Microsoft Authenticator app continue to get SSO with the SSO extension. The Azure AD SSO extension doesn't support browser SSO yet. For more information about SSO using the iOS/iPadOS authentication broker, see [Configure SSO on macOS and iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
+
+    To configure the iOS Microsoft Azure AD extension:
+
+    1. Set the **SSO app extension type** to **Redirect**.
+    2. Set **Extension ID** to `com.microsoft.azureauthenticator.ssoextension`.
+    3. In the URL, enter the following URLs:
+
+        - `https://login.microsoftonline.com`
+        - `https://login.windows.net`
+        - `https://login.microsoft.com`
+        - `https://sts.windows.net`
+        - `https://login.partner.microsoftonline.cn`
+        - `https://login.chinacloudapi.cn`
+        - `https://login.microsoftonline.de`
+        - `https://login.microsoftonline.us`
+        - `https://login.usgovcloudapi.net`
+        - `https://login-us.microsoftonline.com`
+
+    > [!IMPORTANT]
+    > To achieve SSO with the iOS/iPadOS Microsoft Azure AD extension, first install the iOS/iPadOS Microsoft Authenticator app on the device. Authenticator deploys the Azure AD extension to the device, and deploys the MDM settings that activate the Azure AD extension. Once Authenticator and the SSO app extension profile are installed on the device, users must enter their credentials to sign in and establish a session. This session is then used across different applications without requiring users to authenticate again.
+
+  - **Credential**: Use a generic, customizable credential app extension to use SSO with challenge-and-response authentication flows. Be sure you know the extension ID for your organization's app extension.
   - **Kerberos**: Use Apple's built-in Kerberos extension, which is included on iOS 13.0+ and iPadOS 13.0+. This option is a Kerberos-specific version of the **Credential** app extension.
 
   > [!TIP]
@@ -307,7 +330,7 @@ This feature applies to:
   - All the domains in your single sign-on app extension Intune profiles must be unique. You can't repeat a domain in any sign-on app extension profile, even if you're using different types of SSO app extensions.
   - These domains aren't case-sensitive.
 
-- **URLs** (Redirect only): Enter the URL prefixes of your identity providers on whose behalf the redirect app extension performs SSO. When a user is redirected to these URLs, the SSO app extension will intervene and prompt SSO.
+- **URLs** (Redirect only): Enter the URL prefixes of your identity providers on whose behalf the redirect app extension uses SSO. When users are redirected to these URLs, the SSO app extension intervenes and prompts SSO.
 
   - All the URLs in your Intune single sign-on app extension profiles must be unique. You can't repeat a domain in any SSO app extension profile, even if you're using different types of SSO app extensions.
   - The URLs must begin with http:// or https://.
@@ -324,7 +347,7 @@ This feature applies to:
 
   - **Add**: Select to add your configuration keys.
 
-- **Keychain usage** (Kerberos only): Choose **Block** to prevent passwords from being saved and stored in the keychain. If blocked, user aren't prompted to save their password, and need to re-enter the password when the Kerberos ticket expires. **Not configured** (default) allows passwords to be saved and stored in the keychain. Users aren't prompted to re-enter their password when the ticket expires.
+- **Keychain usage** (Kerberos only): Choose **Block** to prevent passwords from being saved and stored in the keychain. If blocked, users aren't prompted to save their password, and need to reenter the password when the Kerberos ticket expires. **Not configured** (default) allows passwords to be saved and stored in the keychain. Users aren't prompted to reenter their password when the ticket expires.
 - **Face ID, Touch ID, or passcode** (Kerberos only): **Require** forces users to enter their Face ID, Touch ID, or device passcode when the credential is needed to refresh the Kerberos ticket. **Not configured** (default) doesn't require users to use biometrics or device passcode to refresh the Kerberos ticket. If **Keychain usage** is blocked, then this setting doesn't apply.
 - **Default realm** (Kerberos only): Choose **Enable** to set the **Realm** value you entered as the default realm. **Not configured** (default) doesn't set a default realm.
 
