@@ -29,25 +29,34 @@ ms.reviewer: mattsha
 ---
 # Use Antivirus setting to manage common Antivirus
 
-Security Admins can use the Antivirus node of Endpoint security to manage logical groupings of common antivirus and related settings for Windows 10 devices. The available settings are the same settings that are found in device configuration or device restriction policies. Settings include Endpoint Protection, Microsoft Defender Antivirus, the end-user experience when using the Windows Security app on their device, and more.
+*The Antivirus settings are in Public Preview*
 
-In the Antivirus node, the settings are logically grouped into profiles (categories) like *Microsoft Defender Antivirus* or *Windows Security experience*. These logical groups are intended to provide a focused method to manage related settings that would otherwise require different configuration or restriction policies.
+Security Admins can use the Antivirus node of Endpoint security to manage logical groupings of common antivirus and related settings for managed devices. 
 
-The following are the available Antivirus profile types. Click through the links to view the settings each profile includes:
+In the Antivirus node, the settings are logically grouped into profiles (categories) like *Microsoft Defender Antivirus* or *Windows Security experience*. These logical groups provide a focused method to manage related settings that otherwise require different device configuration or restriction policies.
 
-- [Microsoft Defender Antivirus](antivirus-microsoft-defender-antivirus-settings.md) - Manage device settings for Microsoft Defender Antivirus. You can enable cloud protection, Microsoft defender Antivirus exclusions, remediation actions, scan settings, and more.
+The following profiles are available for Antivirus:
 
-- [Windows Security experience](antivirus-windows-security-experience-settings.md) - Manage the user experience on Windows 10 devices for the Windows Security app. With these settings you can control what the user can see in the app, and how notifications display on the device.
+- [**Microsoft Defender Antivirus**](antivirus-microsoft-defender-antivirus-settings.md) - Manage device settings for Microsoft Defender Antivirus. You can enable cloud protection, Microsoft defender Antivirus exclusions, remediation actions, scan settings, and more.
 
-Both profile types apply to devices you manage with Intune standalone. The profiles also apply to co-managed devices when you've configured the [Endpoint Protection workload](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) in Configuration Manager to support *Pilot Intune* or *Intune*.
+  The settings in this profile are a new and separate instance of the settings that are found in [device restriction profiles](../configuration/device-restrictions-configure.md), and:
+  
+  - Support a third option for configuration that's not available when configured as a device restriction.
+  - Apply to devices that you co-manage with Configuration Manager when you've configured the [Endpoint Protection workload](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) slider in Configuration Manager to support *Pilot Intune* or *Intune*.
+
+  Plan to use the new *Antivirus* >  *Microsoft Defender Antivirus* profile in place of configuring these settings through a device restriction profile.
+
+- [**Windows Security experience**](antivirus-windows-security-experience-settings.md) - Manage the user experience on Windows 10 devices for the Windows Security app. With these settings you can control what the user can see in the app, and how notifications display on the device.
+
+  The settings in this profile are the same settings that are found in [Device configuration profiles](../configuration/device-profile-create.md) for Endpoint Protection.
 
 ## About settings conflicts
 
-As with other settings you can configure with Intune, the settings you apply using an Antivirus profile can conflict with settings you define with device configuration or device restriction profiles. Intune manages conflicts the same way as other conflicts. For more information, see Troubleshoot policies and profiles.
+As with other settings you can configure with Intune, the settings you apply using an Antivirus profile can conflict with settings you define with device configuration or device restriction profiles. Intune manages conflicts the same way as other conflicts. For more information, see [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md).
 
 ## Create an Antivirus policy
 
-To manage Antivirus settings, your account must have the Intune [role-based access control](../fundamentals/role-based-access-control.md) (RBAC) permissions for **Security baselines**. These are included with the built-in **Endpoint security manager** role.
+To manage Antivirus settings, your account must have the Intune [role-based access control](../fundamentals/role-based-access-control.md) (RBAC) permissions for **Security baselines**. These permissions are included with the built-in **Endpoint security manager** role.
 
 1. Sign in to the Microsoft Endpoint Manager Admin Center.
 
@@ -75,7 +84,7 @@ To manage Antivirus settings, your account must have the Intune [role-based acce
 6. On the **Configuration settings** tab, view the groups of **Settings** that are available in the profile you selected. You can expand a group to view the settings in that group, and the default values for those settings in the profile.
 
    > [!div class="mx-imgBorder"]
-   > ![Example screen shot of the configuration settings tab](./media/endpoint-security-antivirus-policy/configuration-settings-tab.png)
+   > ![Example screenshot of the configuration settings tab](./media/endpoint-security-antivirus-policy/configuration-settings-tab.png)
 
 7. On the **Scope tags** tab, choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
 
