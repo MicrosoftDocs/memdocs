@@ -50,6 +50,8 @@ Starting in version 2002, if the hierarchy consists of the central administratio
 
 - If you use Configuration Manager or System Center Updates Publisher to manage [third-party software updates](/configmgr/sum/deploy-use/third-party-software-updates), export the WSUS signing certificate from the software update point on the CAS.
 
+  - Before you remove the CAS, wait for the deadlines of any required deployments of third-party software updates. Clients pre-download content for required deployments, and when you change the software update point, the content hash changes with *local publishing* of software updates. (This behavior doesn't impact other content types, only local publishing of third-party software updates.) If you remove the CAS with these required deployments still in-progress, they'll fail on clients with a hash mismatch error.
+
 - Review any third-party software that might have a dependency on the CAS.
 
 ## Prerequisites
