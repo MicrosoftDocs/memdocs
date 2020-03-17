@@ -297,7 +297,7 @@ The Microsoft Intune app for Android has been updated with the following improve
 - Added the display of custom push notifications, aligning the app with the support recently added in the Company Portal app for iOS and Android. For more information, see [Send custom notifications in Intune](../remote-actions/custom-notifications.md).
 ""
 #### For iOS devices, customize the enrollment process privacy screen of the Company Portal<!-- 4394993 -->
-Using Markdown, you can customize the Company Portal's privacy screen that end users see during iOS enrollment. Specifically, you'll be able to customize the list of things that your organization can't see or do on the device. For more information, see [How to configure the Intune Company Portal app](../apps/company-portal-app.md#privacy-statement-customization).
+Using Markdown, you can customize the Company Portal's privacy screen that end users see during iOS enrollment. Specifically, you'll be able to customize the list of things that your organization can't see or do on the device. For more information, see [How to configure the Intune Company Portal app](../apps/company-portal-app.md#company-information-and-privacy-statement).
 
 
 

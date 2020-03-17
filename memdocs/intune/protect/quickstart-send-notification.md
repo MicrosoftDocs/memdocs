@@ -72,7 +72,7 @@ For details about setting your company name, company contact information, and co
 
 - [Company information and privacy statement](../apps/company-portal-app.md#company-information-and-privacy-statement)
 - [Support information](../apps/company-portal-app.md#support-information)
-- [Company identity branding customization](../apps/company-portal-app.md#company-identity-branding-customization).
+- [Customizing the user experience](../apps/company-portal-app.md#customizing-the-user-experience).
 
 ## Add a noncompliance policy
 
