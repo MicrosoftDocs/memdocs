@@ -31,9 +31,9 @@ ms.collection: M365-identity-device-management
 
 # Move Android devices from device administrator to work profile management
 
-You can move Android devices from device administrator to work profile management by using the compliance setting for the Android device administrator platform. This setting lets you make devices non-compliant if they are managed with device administrator. 
+You can help users move their Android devices from device administrator to work profile management by using the compliance setting for the Android device administrator platform. This setting lets you make devices non-compliant if they are managed with device administrator. 
 
-Users who sign in to a non-compliant device will see a notification informing them that they must update their device management. After they tap **Resolve**, they'll be taken to a checklist that will  guide them through:
+When user see that they are out of compliance fo rthis reaon, they can tap **Resolve**. They'll be taken to a checklist that will  guide them through:
 1. Unenrolling from device administrator management
 2. Enrolling into work profile management
 3. Resolving any compliance issues. 
@@ -44,7 +44,7 @@ Users who sign in to a non-compliant device will see a notification informing th
 - Set up Android work profile management by [connecting your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).
 - [Set Android Enterprise work profile enrollment](android-work-profile-enroll.md) for the group of users who are moving to Android work profile.
 - Consider increasing your user device limits. When unenrolling devices from device administrator management, device records might not be immediately removed. To provide cushion during this period, you might need to increase device limit capacity so that the users can enroll into work profile management.
-  - [Configure Azure Active Directory device settings](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings) to for Maximum number of devices per user.
+  - [Configure Azure Active Directory device settings](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings) for Maximum number of devices per user.
   - Adjust the [Intune device limit restrictions](enrollment-restrictions-set.md#create-a-device-limit-restriction) by setting the Device limit. 
 
 ## Create device compliance policy
@@ -59,6 +59,9 @@ Users who sign in to a non-compliant device will see a notification informing th
     ![Basics page](./media/android-move-device-admin-work-profile/basics.png)
     
 4. On the **Compliance settings** page, in the **Device Health** section, set **Block devices managed with device administrator** to **Yes** > **Next**.
+
+    ![Block devices](./media/android-move-device-admin-work-profile/block-devices.png)
+
 5. On the **Locations** page, you can add locations if you want > **Next**.
 6. On the **Actions for noncompliance**, set a **Send email to end user** action.
 
