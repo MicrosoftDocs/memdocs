@@ -63,7 +63,7 @@ When user see that they are out of compliance fo rthis reaon, they can tap **Res
     ![Block devices](./media/android-move-device-admin-work-profile/block-devices.png)
 
 5. On the **Locations** page, you can add locations if you want > **Next**.
-6. On the **Actions for noncompliance**, set a **Send email to end user** action.
+6. On the **Actions for noncompliance**, you can set the **Send email to end user** action.
 
     ![Send email](./media/android-move-device-admin-work-profile/send-email.png)
 
@@ -74,7 +74,7 @@ When user see that they are out of compliance fo rthis reaon, they can tap **Res
   
     > [!NOTE]
     > - Of course, you can use user-friendly hyper-text for the links in your communication with users. However, don't use URL-shorteners because the links may not work if changed that way.
-    > - If the Android Company Portal open and in the background, when a user taps the link they might go to the last page they had open instead. So, your messaging can include something like this: "Close the Android Company Portal before tapping this link."
+    > - If the Android Company Portal open and in the background, when a user taps the link they might go to the last page they had open instead.
 
     Choose **Next**.
 
@@ -82,8 +82,22 @@ When user see that they are out of compliance fo rthis reaon, they can tap **Res
 8. On the **Assignments** page, assign the policy to a group that has devices enrolled with device administrator management > **Next**.
 9. On the **Review + create** page, confirm all your settings and then select **Create**.
 
+## Troubleshooting
+
+## Resolve button doesn't appear on the user's device
+The **Resolve** button won't appear on the user's device if the user enrolls into device administrator management after they've been targeted with the device compliance policy explained above.
+To get the **Resolve** button to appear, the user must postpone setup and restart the process from the notification.
+To avoid this condition, use enrollment restrictions to block enrollment into devie administrator management.
+
+## Android Company Portal 404 error
+Users might get a 404 error when they tap the link to the **Update device settings** page of the Android Company Portal. This error can be caused by one of the following:
+- The device is not an Android.
+- The Android device does not have the Company Portal app.
+- The Android Company Portal version is earlier than 5.0.4720.0.
+- The Android device uses Android 6 or earlier. 
 
 ## Next steps
+[See the end user flow](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md)
 [Manage Android work profile devices with Intune](android-enterprise-overview.md)
 
 
