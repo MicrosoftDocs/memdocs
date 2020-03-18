@@ -174,7 +174,7 @@ The **Most frequent enrollment blockers and configuration alerts** tile of the C
 
 ### Endpoint connectivity checks
 
-Starting in version 2002,<!-- 4963230 --> if a client can't reach a required endpoint, this property shows a numbered list of endpoints to which it can't connect due to proxy configuration issues. Compare this list with the published list of [required endpoints](/configmgr/desktop-analytics/enable-data-sharing#endpoints).
+Starting in version 2002,<!-- 4963230 --> to detect proxy authentication issues, clients perform connectivity checks against required endpoints. If a client can't reach a required endpoint, this property shows a numbered list of endpoints to which it can't connect due to proxy configuration issues. Compare this list with the published list of [required endpoints](/configmgr/desktop-analytics/enable-data-sharing#endpoints).
 
 ### Connectivity status
 
@@ -191,7 +191,7 @@ Where `%s` is the URL of a required endpoint.
 
 You may also see non-deterministic error messages that don't need attention until devices have enrollment issues. For example:
 
-`This status is not related to proxy configuration, it can be a transient issue, consider to investigate only if you are experiencing device enrollment or configuration alert issues.`
+`This status is not related to proxy configuration, consider to investigate only if you are experiencing device enrollment or configuration alert issues.`
 
 For more information on configuring proxy servers for use with Desktop Analytics, see [Proxy server authentication](/configmgr/desktop-analytics/enable-data-sharing#proxy-server-authentication).
 
