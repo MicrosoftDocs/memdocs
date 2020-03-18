@@ -49,7 +49,7 @@ View the Antivirus policy settings you can configure for the Microsoft Defender 
 - **Automatic sample submission**  
   Sends sample files to Microsoft to help protect device users and your organization from potential threats.
 
-  - **Not configured** (*default*)  
+  - **Not configured** (*default*) - The setting is restored to the system default.
   - **Enabled** - Cloud-delivered protection is turned on.  Device users can't change this setting.
   - **Disabled** - The setting is disabled. Device users can't change this setting.
 
@@ -57,7 +57,7 @@ View the Antivirus policy settings you can configure for the Microsoft Defender 
 
   Configure how diagnostic and usage data is shared with Microsoft.
 
-  - **Not configured** (*default*)  
+  - **Not configured** (*default*) - The setting is restored to the system default.
   - **Required**
   - **Optional**
 
