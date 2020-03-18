@@ -580,6 +580,8 @@
       items:
       - name: Introduction to reporting
         href: servers/manage/introduction-to-reporting.md
+      - name: Integrate with Power BI Report Server
+        href: servers/manage/powerbi-report-server.md
       - name: Planning for reporting
         items:
         - name: Plan for reporting
