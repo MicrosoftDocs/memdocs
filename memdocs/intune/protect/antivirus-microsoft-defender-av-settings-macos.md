@@ -26,7 +26,7 @@ ms.reviewer: samyada
 
 ---
 
-# Settings for macOS Microsoft Defender Antivirus policy
+# Settings for macOS Microsoft Defender Antivirus policy in Microsoft Intune
 
 View the Antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for macOS in Microsoft Intune.
 
