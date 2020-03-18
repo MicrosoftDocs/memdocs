@@ -115,7 +115,7 @@ For Android devices, use the following key/value pairs:
 | **Values** | <ul><li>One or more <code>;</code> delimited UPNs.</li><li>Only account(s) allowed are the managed user account(s) defined by this key.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token may be used to represent the enrolled user account.</li></ul> |
 
    > [!NOTE]
-   > You must use Outlook for Android 2.2.222 and later, Word, Excel, PowerPoint for Android 16.0.9327.1000 and later or OneDrive for Android 5.28 and later when allowing only configured organization accounts with multi-identity.<p></p>
+   > You must use Outlook for Android 2.2.222 and later, Office, Word, Excel, PowerPoint for Android 16.0.9327.1000 and later, or OneDrive for Android 5.28 and later when allowing only configured organization accounts with multi-identity.<p></p>
    > As the Microsoft Intune administrator, you can control which user accounts are added to Microsoft Office applications on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. The supporting applications process the app configuration and remove and block unapproved accounts.<p></p>
 
 ## Enter JSON data
