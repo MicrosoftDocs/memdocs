@@ -37,7 +37,7 @@ The Company Portal apps, Company Portal website, and Intune app on Android are w
 
 By customizing the end-user experience, you will help provide a familiar and helpful experience for your end users. To do this, navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant Administration** > **Customization**, and then configure the required settings. These settings will apply to the Company Portal apps, Company Portal website, and Intune app on Android.
 
-### Branding
+## Branding
 
 The following table provides the branding customization details for the end-user experience:
 
@@ -88,7 +88,7 @@ Enter your organization’s support information, so employees can reach out with
 | Website URL | 150 | The support website that users should use. The URL must be   in the format `https://www.contoso.com`.  |
 | Additional information | 120 | Include any additional support-related messaging to users   here. |
 
-## Company information and privacy statement
+## Configuration
 
 The following table provides additional configuration details:
 
@@ -98,7 +98,7 @@ The following table provides additional configuration details:
 | Privacy message in the Company Portal for iOS/iPadOS | 520 | Keep the Default or set   a Custom message to list the items that your organization can or can't see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links. |
 | Device enrollment | N/A | Specify if and how users should be prompted to enroll into   mobile device management. Details below. |
 
-### Configuration
+### Device enrollment setting options
 
 > [!NOTE]
 > Support for the device enrollment setting requires end users have these Company Portal versions:
