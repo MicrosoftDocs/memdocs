@@ -321,7 +321,7 @@ Configuration Manager has expanded its support for onboarding devices to Microso
 
 You can now integrate Power BI Report Server with Configuration Manager reporting. This integration gives you modern visualization and better performance. It adds console support for Power BI reports similar to what already exists with SQL Server Reporting Services.
 
-<!-- For more information, see [](). -->
+For more information, see [Integrate with Power BI Report Server](/configmgr/core/servers/manage/powerbi-report-server).
 
 
 ## <a name="bkmk_admin"></a> Configuration Manager console
