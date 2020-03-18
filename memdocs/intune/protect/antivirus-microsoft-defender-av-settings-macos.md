@@ -28,7 +28,7 @@ ms.reviewer: samyada
 
 # Settings for Microsoft Defender ATP for Mac in Microsoft Intune
 
-View the *Antivirus* profile settings you can configure for Microsoft Defender ATP for Mac in Microsoft Intune. For more information about these settings, see [Microsoft Defender Advanced Threat Protection for Mac]((https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) in the Windows documentation.
+View the *Antivirus* profile settings you can configure for Microsoft Defender ATP for Mac in Microsoft Intune. For more information about these settings, see [Microsoft Defender Advanced Threat Protection for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) in the Windows documentation.
 
 **Microsoft Defender ATP**
 
