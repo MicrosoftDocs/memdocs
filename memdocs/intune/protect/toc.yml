@@ -265,9 +265,9 @@
         href: security-baseline-settings-defender-atp.md
       - name: Microsoft Edge baseline settings
         href: security-baseline-settings-edge.md
-    - name: Antivirus policy settings
+    - name: Antivirus policy
       items:
-      - name: Microsoft Defender Antivirus
+      - name: Windows 10 Microsoft Defender Antivirus settings
         href: antivirus-microsoft-defender-av-settings-windows.md
     - name: Windows update settings
       href: windows-update-settings.md
