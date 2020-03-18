@@ -232,7 +232,7 @@ It takes about 15 minutes for the device profile status to change from *Not assi
    - OU=Mine,DC=contoso,DC=com
    
    Here are some examples that are not valid:
-   - CN=Computers,DC=contoso,DC=com  (you can’t specify a container, instead leave the value blank to use the default for the domain)
+   - CN=Computers,DC=contoso,DC=com  (you can't specify a container, instead leave the value blank to use the default for the domain)
    - OU=Mine  (you must specify the domain via the DC= attributes)
      
    > [!NOTE]
