@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Antivirus policy settings for Microsoft Defender Antivirus for Intune | Microsoft Docs
-description: See a list of the settings in the Microsoft Defender Antivirus profile you can configure as part of Endpoint security Antivirus policy in Microsoft Intune.
+title: Windows 10 Antivirus policy settings for Microsoft Defender Antivirus for Intune | Microsoft Docs
+description: See a list of the settings in the Microsoft Defender Antivirus profile for Windows 10. You can configure these settings as part of Endpoint security Antivirus policy in Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -28,9 +28,9 @@ ms.reviewer: mattsha
 
 ---
 
-# Settings for Microsoft Defender Antivirus policy
+# Settings for Windows 10 Microsoft Defender Antivirus policy in Microsoft Intune
 
-View the Antivirus policy settings you can configure for the Microsoft Defender Antivirus profile in Microsoft Intune.
+View the Antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows 10 in Microsoft Intune.
 
 ## Cloud protection
 
