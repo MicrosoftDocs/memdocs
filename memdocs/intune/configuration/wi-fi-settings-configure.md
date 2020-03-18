@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -63,7 +63,7 @@ Wi-Fi profiles support the following device platforms:
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
     - **Platform**: Choose the platform of your devices. Your options:
 
-      - **Android**
+      - **Android device administrator**
       - **Android Enterprise**
       - **iOS/iPadOS**
       - **macOS**
@@ -79,7 +79,7 @@ Wi-Fi profiles support the following device platforms:
 
 4. Some of the Wi-Fi settings are different for each platform. To see the settings for a specific platform, choose your platform:
 
-    - [Android](wi-fi-settings-android.md)
+    - [Android device administrator](wi-fi-settings-android.md)
     - [Android Enterprise](wi-fi-settings-android-enterprise.md), including dedicated devices
     - [iOS/iPadOS](wi-fi-settings-ios.md)
     - [macOS](wi-fi-settings-macos.md)
