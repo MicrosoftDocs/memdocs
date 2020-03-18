@@ -92,8 +92,6 @@ For more information, see [Proxy server support](/configmgr/core/plan-design/net
 
 If the Configuration Manager site server fails to connect to required endpoints for a cloud service, it raises a critical status message ID 11488. When the site server can't connect to the service, the SMS_SERVICE_CONNECTOR component status changes to critical. View detailed status in the Component Status node of the Configuration Manager console.
 
-<!-- For more information, see [](). -->
-
 ### Token-based authentication for cloud management gateway
 
 <!-- 5686290 -->
@@ -117,7 +115,7 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 
 Use the Desktop Analytics Connection Health dashboard in Configuration Manager to monitor the clients' connectivity health. It now helps you to more easily identify any client connectivity issues in two areas:
 
-<!-- For more information, see [](). -->
+For more information, see []().
 
 
 ## <a name="bkmk_real"></a> Real-time management
