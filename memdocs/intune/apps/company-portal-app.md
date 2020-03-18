@@ -49,14 +49,14 @@ The following table provides the branding customization details for the end-user
 | **Show in header** | Select whether the header in the end-user experiences   should display the **Company logo and name**, the **Company logo only**, or the **Company name only**. The preview boxes below will only show the logos, not the   name.  |
 | **Upload logo for theme color background** | Upload the logo you want to show on top of your selected   theme color. For the best appearance, upload a logo with a transparent   background. You can see how this will look in the preview box below the   setting.<p>Maximum image size: 400 x 400 px<br>Maximum file size:   750KB<br>File type: PNG, JPG, or JPEG |
 | **Upload logo for white or light background** | Upload the logo you want to show on top of white or light-colored backgrounds. For the best appearance, upload a logo with a   transparent background. You can see how this will look on a white background   in the preview box below the setting.<p>Maximum image size: 400 x 400   px<br>Maximum file size: 750KB<br>File type: PNG, JPG, or JPEG |
-| **Upload brand image** | Upload an image that reflects   your organization’s brand.<p><ul><li>Recommended image   width: Greater than 1125 px (required to be at least 650   px)</li><li>Maximum image size: 1.3 MB</li><li>File   type: PNG, JPG, or JPEG</li><ul><p>It is displayed in these   locations:<ul><li>iOS/iPadOS Company Portal: Background image on   the user's profile page.</li><li>Company Portal website:   Background image on the user’s profile page.</li><li>Android   Intune app: In the drawer and as a background image on the user’s profile   page.</li><ul> |
+| **Upload brand image** | Upload an image that reflects   your organization’s brand.<p><ul><li>Recommended image   width: Greater than 1125 px (required to be at least 650   px)</li><li>Maximum image size: 1.3 MB</li><li>File   type: PNG, JPG, or JPEG</li><li>It is displayed in these   locations:</li><ul><li>iOS/iPadOS Company Portal: Background image on   the user's profile page.</li><li>Company Portal website:   Background image on the user’s profile page.</li><li>Android   Intune app: In the drawer and as a background image on the user’s profile   page.</li></ul></ul> |
 
 > [!NOTE]
 > When a user is installing an iOS/iPadOS application from the Company Portal they will receive a prompt. This occurs when the iOS/iPadOS app is linked to the app store, linked to a volume-purchase program (VPP), or linked to a line-of-business (LOB) app. The prompt allows the users to accept the action or allow management of the app. The prompt will display your company name, or when your company name is unavailable, **Company Portal** will be displayed.
 
 ### Brand image best practices
 
-The right brand image can enhance the user’s trust by presenting a strong sense of your organization’s brand. Here are some tips you may want to consider for acquiring, choosing, and optimizing the image for Company Portal.
+The right brand image can enhance the user’s trust by presenting a strong sense of your organization’s brand. Here are some tips you may want to consider for acquiring, choosing, and optimizing the image for the display locations.
 
 - Reach out to your marketing or art department. They may already have an approved set of brand images. They may also be able to help you optimize images as needed.
 - Consider both landscape and portrait composition. The image should have sufficient background surrounding the focal point. The image may be cropped differently based on device size, orientation, and platform.
@@ -67,20 +67,21 @@ The right brand image can enhance the user’s trust by presenting a strong sens
 
 The following image shows an example of the brand image on an iPhone:
 
-![Screenshot of example iPhone branding image](./media/company-portal-app/company-portal-app-01.png)
+<img alt="Screenshot of example iPhone branding image" src="./media/company-portal-app/company-portal-app-01.png" width="250">
 
 The following shows an example of the brand image in the Intune app for Android:
 
-![Screenshot of example #1 for Intune app for Android branding image](./media/company-portal-app/company-portal-app-02.png)
-![Screenshot of example #2 for Intune app for Android branding image](./media/company-portal-app/company-portal-app-03.png)
+<img alt="Screenshot of example #1 for Intune app for Android branding image" src="./media/company-portal-app/company-portal-app-02.png" width="250">
+
+<img alt="Screenshot of example #2 for Intune app for Android branding image" src="./media/company-portal-app/company-portal-app-03.png" width="250">
 
 ## Support information
 
-Enter your organization’s support information to provide your employees with contact information for Intune-related questions. This support information will be displayed on **Support**, **Help & Support**, and **Helpdesk** pages across the end-user experience.
+Enter your organization’s support information, so employees can reach out with questions. This support information will be displayed on **Support**, **Help & Support**, and **Helpdesk** pages across the end-user experience.
 
 | Field name | Maximum length | More information |
 |------------------------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Contact name | 40 | This name is the name of who users will be reaching when   they reach out for support. |
+| Contact name | 40 | This name is who users will reach when they contact support. |
 | Phone number | 20 | This number enables users to call for support. |
 | Email address | 40 | This email address is where users can send emails for   support. You must enter a valid email address in the format `alias@domainname.com`. |
 | Website name | 40 | This is the friendly name that is displayed in some   locations for the URL to the support website. If you specify a support   website URL and no friendly name, then the URL itself is displayed in the end-user experiences.  |
@@ -94,20 +95,19 @@ The following table provides additional configuration details:
 | Field name | Maximum length | More information |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Privacy statement URL | 79 | Set your organization’s privacy statement to appear when   users click on privacy links. You must enter a valid URL in the format `https://www.contoso.com`. |
-| Privacy message in the Company Portal for iOS/iPadOS | 520 | Keep the Default or set   a Custom message to list the items that your organization can't see or do on   managed iOS/iPadOS devices. You can use markdown to add bullets, bolding,   italics, and links. |
-|  |  |  |
+| Privacy message in the Company Portal for iOS/iPadOS | 520 | Keep the Default or set   a Custom message to list the items that your organization can or can't see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links. |
 | Device enrollment | N/A | Specify if and how users should be prompted to enroll into   mobile device management. Details below. |
 
-## Device enrollment setting options
+### Configuration
 
 > [!NOTE]
 > Support for the device enrollment setting requires end users have these Company Portal versions:
--	Company Portal on iOS: version 4.4 or later
--	Company Portal on Android: version 5.0.4715.0 or later
+> - Company Portal on iOS/iPadOS: version 4.4 or later
+> - Company Portal on Android: version 5.0.4715.0 or later 
 
 |    Device enrollment   options    |    Description    |    Checklist prompts    |    Notification    |    Device details status    |    App details status    (of an app that   requires enrollment)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
-|    Available, with prompts    |    The default experience with prompts to enroll on all   possible locations.    |    Yes    |    Yes    |    Yes    |    Yes    |
+|    Available, with prompts    |    The default experience with prompts to enroll in all   possible locations.    |    Yes    |    Yes    |    Yes    |    Yes    |
 |    Available, no prompts    |    User can enroll via the status in device details for   their current device or from apps that require enrollment.    |    No    |    No    |    Yes    |    Yes    |
 |    Unavailable    |    There is no way for users to enroll.    |    No    |    No    |    No    |    No<sup>(1)</sup>    |
 
@@ -119,7 +119,7 @@ The following table provides additional configuration details:
 > [!NOTE]
 > Consistent with Microsoft and Apple policy, we do not sell any data collected by our service to any third parties for any reason.
 
-## Company Portal derived credentials for iOS devices
+## Company Portal derived credentials for iOS/iPadOS devices
 
 Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC) Derived Credentials in partnership with credential providers DISA Purebred, Entrust Datacard, and Intercede. End users will go through additional steps post-enrollment of their iOS/iPadOS device to verify their identity in the Company Portal application. Derived Credentials will be enabled for users by first setting up a credential provider for your tenant, then targeting a profile that uses Derived Credentials to users or devices.
 
@@ -165,7 +165,7 @@ End users will also be able to see the available shortcuts in the Windows Compan
 Users can perform actions on their local or remote devices via the Company Portal app or website or the Intune app on Android. The actions that a user can perform vary based on device platform and configuration. In all cases, the remote device actions can only be performed by device’s Primary User.
 
 - **Retire** – Removes the device from Intune Management. In the company portal app and website, this shows as **Remove**.
-- **Wipe** – This action initiates a device reset. In the company portal website this is shown as **Reset**, or **Factory Reset** in the iOS Company Portal App.
+- **Wipe** – This action initiates a device reset. In the company portal website this is shown as **Reset**, or **Factory Reset** in the iOS/iPadOS Company Portal App.
 - **Rename** – This action changes the device name that the user can see in the Company Portal. It does not change the local device name, only the listing in the Company Portal.
 - **Sync** – This action initiates a device check-in with the Intune service. This shows as **Check Status** in the Company Portal.
 - **Remote Lock** – This locks the device, requiring a PIN to unlock it.
@@ -190,10 +190,10 @@ Some platforms and configurations do not allow self-service device actions. This
 <sup>(2)</sup> **Key Recovery** for MacOS is only available via the Web Portal.<br>
 <sup>(3)</sup> All remote actions are disabled if using a Device Enrollment Manager enrollment.<br>
 <sup>(4)</sup> **Rename** only changes the device name in the Company Portal app or Web Portal, not on the device.<br>
-<sup>(5)</sup> **Wipe** is not available on User Enrolled iOS devices.<br>
+<sup>(5)</sup> **Wipe** is not available on User Enrolled iOS/iPadOS devices.<br>
 <sup>(6)</sup> **Reset Passcode** is not supported on some Android and Android Enterprise configurations. For more information, see [Reset or remove a device passcode in Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> **Retire** and **Wipe** are not available on Android Enterprise Device Owner scenarios (COPE, COBO, COSU).<br> 
-<sup>(8)</sup> **Reset Passcode** is not supported on User Enrolled iOS devices.
+<sup>(8)</sup> **Reset Passcode** is not supported on User Enrolled iOS/iPadOS devices.
 
 ## Next steps
 
