@@ -371,17 +371,15 @@ In addition to blocking InPrivate and MSA browsing, you can only allow use of Mi
 - [Android setting](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 - [iOS setting](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
-## Use Microsoft Edge on iOS to access managed app logs
+## Use Microsoft Edge to access managed app logs
 
-Users with Microsoft Edge installed on their iOS device can view the management status of all Microsoft published apps. They can send logs for troubleshooting their managed iOS apps. Here's how:
+Users with Microsoft Edge installed on their iOS or Android device can view the management status of all Microsoft published apps. They can send logs for troubleshooting their managed iOS or Android apps by using the following steps:
 
-1. Open Microsoft Edge on your iOS device.
+1. Open Microsoft Edge on your device.
 2. Type `about:intunehelp` in the address box.
 3. Microsoft Edge launches troubleshooting mode.
 
 For a list of the settings stored in the app logs, see [Review app protection logs in the Managed Browser](app-protection-policy-settings-log.md).
-
-To see how to view logs on Android devices, see [Send logs to your IT admin by email](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android).
 
 ## Security and privacy for Microsoft Edge
 
