@@ -3,7 +3,7 @@
 
 title: Move to new device management setup | Microsoft Docs
 titlesuffix: Microsoft Intune
-description: How to proceed when you're told to move to a new device mangement setup. 
+description: What to do when you're told to move to a new device management setup. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -31,17 +31,17 @@ ms.collection:
 ---
 # Move to new device management setup  
 
-If you receive the following message in Company Portal, your organization requires you to move to a new device management setup, which involves adding a work profile to your device. 
+If you receive the following message in Company Portal, your organization requires you to move to a new device management setup. 
 
 ![Example image, highlighting move to new device management setup message in Company Portal app.](./media/company-portal-new-management-2003.png)
 
-The work profile will separate the work data on your device from the personal data. Your organization will manage the work profile, which only consists of school or work-related files and data. Your organization can't see or manage the personal data on your device. 
+The setup involves adding a work profile to your device. The work profile will separate the work data on your device from the personal data. Your organization will manage the work profile, which only consists of school or work-related files and data. Your organization can't see or manage the personal data on your device. 
 
 There are two ways to view the list of settings that need to be updated on your device:
-* Company Portal notification: When you receive a notification, tap the flag icon. Then tap the message that says **You need to update settings on this device**.  
+* Company Portal notification: When you receive a notification, tap the flag icon. Then tap the message that reads, **You need to update settings on this device**.  
 
     ![The **Notification** screen, highlighting the update device settings message.](./media/company-portal-notification-2003.png)  
-* Device status: Go to DEVICES and select the first device on the list. Then tap the message that says **You need to update settings on this device**.  
+* Device status: Go to DEVICES and select the first device on the list. Then tap the message that reads, **You need to update settings on this device**.  
 
     ![The **Device Details** screen, highlighting the update device settings message.](./media/company-portal-device-status-2003.png)
 
