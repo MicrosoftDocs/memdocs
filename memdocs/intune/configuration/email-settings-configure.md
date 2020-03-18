@@ -3,12 +3,12 @@
 
 title: Configure email settings in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix:
-description: Create an email profile in Microsoft Intune, and deploy this profile to Android Enterprise, iOS, iPadOS, and Windows devices. Use an email profile to configure common email settings, including an email server and authentication method to connect to corporate email on devices you manage.
+description: Create an email profile in Microsoft Intune, and deploy this profile to Android device administrator, Android Enterprise, iOS, iPadOS, and Windows devices. Use an email profile to configure common email settings, including an email server and authentication method to connect to corporate email on devices you manage.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,7 +33,7 @@ Microsoft Intune includes different email settings you can deploy to devices in 
 
 You can use email profiles to configure the built-in email settings for the following devices:
 
-- Android Samsung Knox Standard 4.0 and newer
+- Android device administrator on Samsung Knox Standard 4.0 and newer
 - Android Enterprise
 - iOS 8.0 and newer
 - iPadOS 13.0 and newer
@@ -52,7 +52,7 @@ This article shows you how to create an email profile in Microsoft Intune. It al
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
     - **Platform**: Choose the platform of your devices. Your options:
 
-        - **Android** (Samsung Android Knox Standard only)
+        - **Android device administrator** (Samsung Android Knox Standard only)
         - **Android enterprise**
         - **iOS/iPadOS**
         - **Windows Phone 8.1**
@@ -62,7 +62,7 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
 4. Depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
-    - [Android Samsung Knox Standard settings](email-settings-android.md)
+    - [Android device administrator Samsung Knox Standard settings](email-settings-android.md)
     - [Android Enterprise settings](email-settings-android-enterprise.md)
     - [iOS/iPadOS settings](email-settings-ios.md)
     - [Windows Phone 8.1 settings](email-settings-windows-phone-8-1.md)

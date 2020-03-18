@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,6 +32,10 @@ This article shows you all the Microsoft Intune device restrictions settings tha
 
 >[!TIP]
 >If the settings you want are not available, you might be able to configure your devices using a [custom profile](custom-settings-android.md).
+
+## Before you begin
+
+[Create a device configuration profile](device-restrictions-configure.md).
 
 ## General
 
