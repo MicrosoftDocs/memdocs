@@ -247,6 +247,19 @@ If the SCEP application pool isn't started, check the application event log on t
 
   ![IIS permissions](../protect/media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png)
 
+- **Cause 4**: The NDESPolicy module certificate has expired.
+
+  The CAPI2 log (see Cause 2's resolution) will show errors relating to the certificate referenced by 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint' being outside of the certificate's validity period.
+
+  **Resolution**: Update the reference with the thumbprint of a valid certificate.
+  1. Identify a replacement certificate:
+     - Renew the existing certificate
+     - Select a different certificate with similar proprties (subject, EKU, key type and length, etc.)
+     - Enroll a new certificate
+  2. Export the `NDESPolicy` Registry key to back up the current values.
+  3. Replace the data of the `NDESCertThumbprint` Registry value with the thumbprint of the new certificate, removing all whitespace and converting the text to lowercase.
+  4. Restart the NDES IIS App Pools or execute `iisreset` from an elevated command prompt.
+
 #### GatewayTimeout
 
 When you browse to the SCEP server URL, you receive the following error:
