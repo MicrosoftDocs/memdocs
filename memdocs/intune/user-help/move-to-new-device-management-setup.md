@@ -31,7 +31,7 @@ ms.collection:
 ---
 # Move to new device management setup  
 
-If you receive the following message in Company Portal, your organization requires you to move to a new device management setup. 
+If you receive the following message in Company Portal, your organization requires you to move to a new type of device management setup. 
 
 ![Example image, highlighting move to new device management setup message in Company Portal app.](./media/company-portal-new-management-2003.png)
 
