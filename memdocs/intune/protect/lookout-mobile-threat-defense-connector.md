@@ -32,7 +32,6 @@ ms.collection: M365-identity-device-management
 # Lookout Mobile Endpoint Security connector with Intune
 
 You can control mobile device access to corporate resources based on risk assessment conducted by Lookout, a Mobile Threat Defense solution integrated with Microsoft Intune. Risk is assessed based on telemetry collected from devices by the Lookout service including:
-
 - Operating system vulnerabilities
 - Malicious apps installed
 - Malicious network profiles
