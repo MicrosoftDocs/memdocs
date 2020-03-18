@@ -31,11 +31,7 @@ ms.collection:
 ---
 # Move to new device management setup  
 
-If you receive the following message in Company Portal, your organization requires you to move to a new type of device management setup. 
-
-![Example image, highlighting move to new device management setup message in Company Portal app.](./media/company-portal-new-management-2003.png)
-
-The setup involves adding a work profile to your device. The work profile will separate the work data on your device from the personal data. Your organization will manage the work profile, which only consists of school or work-related files and data. Your organization can't see or manage the personal data on your device. 
+If your organization requires you to move to a new device management setup, you'll need to follow the onscreen steps to add a work profile. A work profile separates the work data on your device from the personal data. Your organization will manage the work profile, which consists of only school or work-related files and data. Your organization won't see or manage the personal data on your device. 
 
 Complete the following steps to set up your work profile. 
 
