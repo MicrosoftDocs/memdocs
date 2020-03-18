@@ -204,7 +204,7 @@ Similarly to configuring a homepage shortcut, you can configure multiple top sit
 These settings allow you to customize the New Tab Page for Microsoft Edge to display your organization's logo and brand color as the page background.
 
 To upload your organization's logo and color, first complete the following steps:
-- Within the Azure portal, navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) -> **Tenant Administration** -> **Branding and customization** -> **Company Identity Branding**.
+- Within the Azure portal, navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) -> **Tenant Administration** -> **Customization** -> **Company Identity Branding**.
 - To set your brand's logo, under "Display", choose "Company Logo only". Transparent background logos are recommended. 
 - To set your brand's background color, under "Display" choose "Theme Color". Microsoft Edge applies a lighter shade of the color on the New Tab Page, which ensures the page has high readability. 
 
