@@ -111,7 +111,7 @@ SEP Mobile syncs the devices running its Mobile Threat Defense service with the 
 
 3. Choose **Properties**.
 
-4. Next to the **Directory ID**, choose the copy icon, and then paste it to a safe location. You’ll need this identifier in a later step.
+4. Next to the **Directory ID**, choose the copy icon, and then paste it to a safe location. You'll need this identifier in a later step.
 
     ![Image showing Directory ID in the Azure portal](./media/skycure-mtd-connector-integration/symantec-azure-portal-directory-ID.png)
 

@@ -41,7 +41,7 @@ This article shows you how to view all your devices, and their properties in the
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices** > **All devices** > select one of your listed devices to open its details:
 
-   - **Overview** shows the device name, and lists some key properties of the device, like whether it's a bring-your-own-device (BYOD) device, check in time, and more. You can do the following on the device:
+   - **Overview** shows the device name, and lists some key properties of the device, like whether it's a personal or corporate device, serial number, primary user, and more. You can do the following on the device:
       - [Retire](devices-wipe.md#retire)
       - [Wipe](devices-wipe.md#wipe)
       - [Delete](devices-wipe.md#delete-devices-from-the-intune-portal)

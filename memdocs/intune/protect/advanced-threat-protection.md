@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -48,7 +48,7 @@ The following example helps explain how these solutions work together to help pr
 Consider an event where someone sends a Word attachment with embedded malicious code to a user within your organization.
 
 - The user opens the attachment, and enables the content.
-- An elevated privilege attack starts, and an attacker from a remote machine has admin rights to the victim’s device.
+- An elevated privilege attack starts, and an attacker from a remote machine has admin rights to the victim's device.
 - The attacker then remotely accesses the user's other devices. This security breach can impact the entire organization.
 
 Microsoft Defender ATP can help resolve security events like this scenario.
@@ -105,7 +105,7 @@ You only need to enable Defender ATP a single time per tenant.
 > - Are used by Intune MTD to require that devices are registered in Azure AD so that they have a device ID before communicating to MTD partners. The ID is required so that devices and can successfully report their status to Intune.
 > - Have no effect on any other Cloud apps or Resources.
 > - Are distinct from conditional access policies you might create to help manage MTD.
-> - By default, don’t interact with other conditional access policies you use for evaluation.
+> - By default, don't interact with other conditional access policies you use for evaluation.
 >
 > To view classic conditional access policies, in [Azure](https://portal.azure.com/#home), go to **Azure Active Directory** > **Conditional Access** > **Classic policies**.
 
@@ -141,24 +141,26 @@ When you established the connection to Microsoft Defender ATP, Intune received a
 
 The compliance policy determines the level of risk that you consider as acceptable for a device.
 
-### Create the compliance policy
+If your not familiar with creating compliance policy, reference the [Create a policy](../protect/create-compliance-policy.md#create-the-policy) procedure from the *Create a compliance policy in Microsoft Intune* article. The following information is specific to configuring Defender ATP as part of a compliance policy.
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Compliance policies** > **Create policy**.
-3. Enter a **Name** and **Description**.
-4. In **Platform**, select **Windows 10 and later**.
-5. Under **Settings**, select **Microsoft Defender ATP**.
-6. Set **Require the device to be at or under the machine risk score** to your preferred level.
+
+2. Select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
+
+3. For **Platform** select *Windows 10 and later*, and then, select **Create** to open the **Create policy** configuration window.
+
+4. On the **Basics** tab, specify a **Name** that helps you identify this later. You can also choose to specify a **Description**.
+  
+5. On the **Compliance settings** tab, expand the **Microsoft Defender ATP** group and set **Require the device to be at or under the machine risk score** to your preferred level.
 
    Threat level classifications are [determined by Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
-   - **Clear**: This level is the most secure. The device can't have any existing threats and still access company resources. If any threats are found, the device is evaluated as noncompliant. (Microsoft Defender ATP users the value *Secure*.)
+   - **Clear**: This level is the most secure. The device can't have any existing threats and still access company resources. If any threats are found, the device is evaluated as noncompliant. (Microsoft Defender ATP uses the value *Secure*.)
    - **Low**: The device is compliant if only low-level threats exist. Devices with medium or high threat levels aren't compliant.
    - **Medium**: The device is compliant if the threats found on the device are low or medium. If high-level threats are detected, the device is determined as noncompliant.
    - **High**: This level is the least secure and allows all threat levels. So devices that with high, medium, or low threat levels are considered compliant.
 
-7. Select **OK**, and **Create** to save your changes (and create the policy).
-8. [Assign the device compliance policy](create-compliance-policy.md#assign-the-policy) to applicable groups.
+6. Complete the configuration of the policy, including assignment of the policy to applicable groups.
 
 ## Create a Conditional Access policy
 
