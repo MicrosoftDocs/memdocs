@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -41,9 +41,10 @@ Intune creates a shortcut to the web app on the user's device. For iOS/iPadOS de
 
 > [!Note]
 > A browser must be installed on the user's device to launch web apps. 
-
-> [!Note]
-> For Android Enterprise devices, see [Managed Google Play web links](apps-add-android-for-work.md#managed-google-play-web-links)
+> 
+> For Android Enterprise devices, see [Managed Google Play web links](apps-add-android-for-work.md#managed-google-play-web-links).
+> 
+> For iOS devices, new web clips (pinned web apps) will open in Microsoft Edge instead of the Intune Managed Browser when required to open in a protected browser. For older iOS web clips, you must retarget these web clips to ensure they open in Microsoft Edge rather then the Managed Browser.
 
 ## Add a web app to Intune
 To add an app to Intune as a shortcut to an app on the web, do the following:
