@@ -61,6 +61,7 @@ You can create VPN profiles using the following connection types:
 - Cisco AnyConnect
   - Android device administrator
   - Android Enterprise work profiles
+  - Android Enterprise device owner (fully managed)
   - iOS/iPadOS
   - macOS
 
@@ -78,7 +79,7 @@ You can create VPN profiles using the following connection types:
   - iOS/iPadOS
   - macOS
 
-  Learn how to create custom VPN profiles by using URI settings in [Create a profile with custom settings](custom-settings-configure.md).
+  Create custom VPN profiles using URI settings in [Create a profile with custom settings](custom-settings-configure.md).
 
 - F5 Access
   - Android device administrator
