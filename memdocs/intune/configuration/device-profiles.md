@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: karthib
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Apply features and settings on your devices using device profiles in Microsoft Intune
 
-Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android, and Windows. Then, use Intune to apply or "assign" the profile to the devices.
+Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android device administrator, Android Enterprise, and Windows. Then, use Intune to apply or "assign" the profile to the devices.
 
 As part of your mobile device management (MDM) solution, use these configuration profiles to complete different tasks. Some profile examples include:
 
@@ -60,7 +60,7 @@ This feature supports:
 
 This feature supports: 
 
-- Android
+- Android device administrator
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -74,7 +74,7 @@ This feature supports:
 
 This feature supports:
 
-- Android
+- Android device administrator
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -113,8 +113,8 @@ This feature supports:
 
 This feature supports:
 
-- Android
-- Android enterprise
+- Android device administrator
+- Android Enterprise
 - iOS/iPadOS
 - macOS
 - Windows 10 and later
@@ -148,7 +148,7 @@ This feature supports:
 
 This feature supports: 
 
-- Android
+- Android device administrator
 - Android Enterprise
 - iOS/iPadOS
 - Windows Phone 8.1
@@ -246,7 +246,7 @@ Virtual private networks (VPNs) give users secure remote access to your company 
 
 This feature supports: 
 
-- Android
+- Android device administrator
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -260,7 +260,7 @@ This feature supports:
 
 This feature supports: 
 
-- Android
+- Android device administrator
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -281,7 +281,7 @@ This feature supports:
 
 This feature supports:
 
-- Android (Mobility Extensions)
+- Android device administrator (Mobility Extensions)
 
 ## Manage and troubleshoot
 
