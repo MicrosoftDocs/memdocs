@@ -111,12 +111,13 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 
 ### Connection Health dashboard shows client connection issues
 
-<!-- 4963230, 4963383 -->
+Use the Desktop Analytics Connection Health dashboard in Configuration Manager to monitor the clients' connectivity health. It now helps you to more easily identify client proxy configuration issues in two areas:
 
-Use the Desktop Analytics Connection Health dashboard in Configuration Manager to monitor the clients' connectivity health. It now helps you to more easily identify any client connectivity issues in two areas:
+- **Endpoint connectivity checks**: If clients can't reach a required endpoint, you see a configuration alert in the dashboard. Drill down to see the endpoints to which clients can't connect due to proxy configuration issues.<!-- 4963230 -->
 
-For more information, see []().
+- **Connectivity status**: If your clients use a proxy server to access the Desktop Analytics cloud service, Configuration Manager now displays proxy authentication issues from clients. Drill down to see clients that are unable to enroll due to proxy authentication.<!-- 4963383 -->
 
+For more information, see [Monitor connection health](/configmgr/desktop-analytics/monitor-connection-health).
 
 ## <a name="bkmk_real"></a> Real-time management
 
