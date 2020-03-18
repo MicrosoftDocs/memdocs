@@ -72,12 +72,14 @@ This article:
        - [Delivery optimization](delivery-optimization-windows.md)
        - [Device features](device-features-configure.md)
        - [Device restrictions](device-restrictions-configure.md)
+       - [Domain join](domain-join-configure.md)
        - [Edition upgrade and mode switch](edition-upgrade-configure-windows-10.md)
        - [Education](education-settings-configure.md)
        - [Email](email-settings-configure.md)
        - [Endpoint protection](../protect/endpoint-protection-configure.md)
        - [Identity protection](../protect/identity-protection-configure.md)  
        - [Kiosk](kiosk-settings.md)
+       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
        - [PKCS certificate](../protect/certficates-pfx-configure.md)
        - [PKCS imported certificate](../protect/certificates-imported-pfx-configure.md)
        - [Preference file](preference-file-settings-macos.md)
@@ -86,12 +88,12 @@ This article:
        - [Update policies](../protect/software-updates-ios.md)
        - [VPN](vpn-settings-configure.md)
        - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
        - [Windows Information Protection](../protect/windows-information-protection-configure.md)
 
      For example, if you select **iOS/iPadOS** for the platform, your profile type options look similar to the following profile:
 
-     ![Create iOS/iPadOS profile in Intune](./media/device-profile-create/create-device-profile.png)
+     > [!div class="mx-imgBorder"]
+     > ![Create iOS/iPadOS profile in Intune](./media/device-profile-create/create-device-profile.png)
 
 4. When finished, select **OK** > **Create** to save your changes. The profile is created, and shown in the list.
 
@@ -142,7 +144,8 @@ When you assign the profile to the groups, the applicability rules act as a filt
 
 1. Select **Applicability Rules**. You can choose the **Rule**, **Property**, and **OS edition**:
 
-    ![Add an applicability rule to a device configuration profile in Microsoft Intune](./media/device-profile-create/applicability-rules.png)
+    > [!div class="mx-imgBorder"]
+    > ![Add an applicability rule to a device configuration profile in Microsoft Intune](./media/device-profile-create/applicability-rules.png)
 
 2. In **Rule**, choose if you want to include or exclude users or groups. Your options:
 
@@ -188,7 +191,8 @@ When creating profiles, consider the following recommendations:
 
   The following image shows an example of a setting that can apply to users and/or apply to devices:
 
-  ![Intune admin template that applies to user and devices](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  > [!div class="mx-imgBorder"]
+  > ![Intune admin template that applies to user and devices](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 - Every time you create a restrictive policy, communicate this change to your users. For example, if you're changing the passcode requirement from 4 characters to 6 characters, let your users know before your assign the policy.
 

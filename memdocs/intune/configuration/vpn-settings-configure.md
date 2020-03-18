@@ -63,9 +63,6 @@ You can create VPN profiles using the following connection types:
   - Android Enterprise work profiles
   - iOS/iPadOS
   - macOS
-  - Windows 10
-  - Windows 8.1
-  - Windows Phone 8.1
 
 - Cisco (IPSec)
   - iOS/iPadOS
