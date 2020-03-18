@@ -83,6 +83,10 @@ Do all steps of this process on the same server:
 
 1. Create a report in Power BI Desktop.
 
+    - In Power BI Desktop, when you connect to a data source, select **DirectQuery** for the Connection settings.
+
+    - Only use supported SQL views in these reports. For more information, see [Creating custom reports by using SQL Server views in Configuration Manager](/configmgr/develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views).
+
 1. When the report is ready to save, go to the **File** menu, select **Save as**, then choose **Power BI Report Server**.
 
 1. In the **Power BI Report Server Selection** window, enter the URL for the reporting services point as the **New report server address**. For example, `https://rsp.contoso.com/Reports`.
@@ -94,6 +98,9 @@ In the Configuration Manager console, you see the new report in the list of Powe
 After you create a report, use the following actions in the Configuration Manager console:
 
 - **Run in Browser**: Opens the Power BI report in the web browser. Share this URL with others, for example: `https://rsp.contoso.com/Reports/POWERBI/ConfigMgr_ABC/Windows%2010/Windows10%20Dashboard?rs:embed=true`
+
+    > [!TIP]
+    > You can only view these reports in the web browser.
 
 - **Edit**: Make changes to the report in Power BI Desktop. For an existing report, use the **Save** option to save changes back to the report server.
 
