@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 You can use role-based access control and scope tags to make sure that the right admins have the right access and visibility to the right Intune objects. Roles determine what access admins have to which objects. Scope tags determine which objects admins can see.
 
-For example, let’s say a Seattle regional office admin has the Policy and Profile Manager role. You want this admin to see and manage only the profiles and policies that only apply to Seattle devices. To set up this access, you would:
+For example, let's say a Seattle regional office admin has the Policy and Profile Manager role. You want this admin to see and manage only the profiles and policies that only apply to Seattle devices. To set up this access, you would:
 
 1. Create a scope tag called Seattle.
 2. Create a role assignment for the Policy and Profile Manager role with: 
