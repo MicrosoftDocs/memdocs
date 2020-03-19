@@ -97,10 +97,10 @@ The **Resolve** button won't appear on the user's device if the user enrolls int
 
 To get the **Resolve** button to appear, the user must postpone setup and restart the process from the notification.
 
-To avoid this condition, use enrollment restrictions to block enrollment into devie administrator management.
+To avoid this condition, use enrollment restrictions to block enrollment into device administrator management.
 
-## Android Company Portal 404 error
-Users might get a 404 error when they tap the link to the **Update device settings** page of the Android Company Portal. This error can be caused by one of the following:
+## User sees an error after tapping URL to Update device settings page
+Users might see an error page in the browser when they tap the URL to the **Update device settings page** of the Android Company Portal. This error can be caused by one of the following:
 - The device isn't an Android.
 - The Android device doesn't have the Company Portal app.
 - The Android Company Portal version is earlier than 5.0.4720.0.
