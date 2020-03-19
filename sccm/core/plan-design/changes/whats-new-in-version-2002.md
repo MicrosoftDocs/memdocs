@@ -185,10 +185,11 @@ The Microsoft Edge management dashboard provides you insights on the usage of Mi
 - See how many of your devices have Microsoft Edge installed
 - See how many clients have different versions of Microsoft Edge installed
 - Have a view of the installed browsers across devices
+- Have a view of preferred browser by device
 
 From the Software Library workspace, click Microsoft Edge Management to see the dashboard. Change the collection for the graph data by clicking Browse and choosing another collection. By default your five largest collections are in the drop-down list. When you select a collection that isn't in the list, the newly selected collection takes the bottom spot on your drop-down list.
 
-<!-- For more information, see [Microsoft Edge management](/configmgr/apps/deploy-use/deploy-edge). -->
+For more information, see [Microsoft Edge management](/configmgr/apps/deploy-use/deploy-edge#bkmk_edge-dash). 
 
 ### Improvements to Microsoft Edge management
 
