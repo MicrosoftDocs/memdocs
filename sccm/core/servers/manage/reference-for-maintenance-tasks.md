@@ -508,7 +508,7 @@ To summarize software metering data and to conserve disk space in the database, 
 
 ### Summarize Installed Software Data
 
-Use this task to summarize the data for installed software from multiple records into one general record. Data summarization can compress the amount of data that's stored in the Configuration Manager database. For more information, see [Introduction to software inventory](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).
+Use this task to summarize the data from collected asset intelligence software information through the hardware inventory to merge multiple records into one general record. Data summarization can compress the amount of data that's stored in the Configuration Manager database. For more information, see [Introduction to hardware inventory](/sccm/core/clients/manage/inventory/introduction-to-hardware-inventory).
 
 |||
 |---------|---------|
