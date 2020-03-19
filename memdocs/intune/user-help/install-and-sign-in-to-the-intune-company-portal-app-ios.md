@@ -42,6 +42,6 @@ Install the Company Portal app on your iOS device to get access to your work and
 
 3. Open the Company Portal app, enter your work or school email address and password, and then tap **Sign in**.
 
-    If you are signing into the Company Portal app for the first time, and your company or school is using Intune, you will be prompted to enroll your device in Intune. To enroll, follow the steps in [enroll your iOS device in Intune](enroll-your-device-in-intune-ios.md). You can also [sign in using another device](https://docs.microsoft.com/user-help/sign-in-to-the-company-portal#sign-in-from-another-device).
+    If you are signing into the Company Portal app for the first time, and your company or school is using Intune, you will be prompted to enroll your device in Intune. To enroll, follow the steps in [enroll your iOS device in Intune](enroll-your-device-in-intune-ios.md). You can also [sign in using another device](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal#sign-in-from-another-device).
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

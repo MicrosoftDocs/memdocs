@@ -325,6 +325,8 @@ This issue typically occurs before the device is restarted in a Hybrid Azure AD 
 
 **Cause:** The most common cause is that Hybrid Azure AD Join is being used and the Assign user feature is configured in the Autopilot profile. Using the Assign user feature performs an Azure AD join on the device during the initial sign-in screen which puts the device in a state where it can't join your on-premises domain. Therefore, the Assign user feature should only be used in standard Azure AD Join Autopilot scenarios.  The feature should be not used in Hybrid Azure AD Join scenarios.
 
+Another possible cause for this error is that the Autopilot object's associated AzureAD device has been deleted. To resolve this, delete the Autopilot object and reimport the hash to generate a new one.
+
 #### Resolution
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose >  **Devices** > **Windows** > **Windows devices**.
