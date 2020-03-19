@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 You can help users move their Android devices from device administrator to work profile management by using the compliance setting for the Android device administrator platform. This setting lets you make devices non-compliant if they are managed with device administrator. 
 
-When user see that they are out of compliance fo rthis reaon, they can tap **Resolve**. They'll be taken to a checklist that will  guide them through:
+When users see that they are out of compliance for this reason, they can tap **Resolve**. They'll be taken to a checklist that will  guide them through:
 1. Unenrolling from device administrator management
 2. Enrolling into work profile management
 3. Resolving any compliance issues. 
