@@ -1,14 +1,13 @@
 ---
 # required metadata
 
-title: Custom per-app VPN profile for Android
-titleSuffix: Microsoft Intune
-description: Learn how to create a per-app VPN profile for Android devices managed by Microsoft Intune.
+title: Custom per-app VPN profile for Android in Microsoft Intune - Azure | Microsoft Docs
+description: Learn how to create a per-app VPN profile for Android device administrator devices managed by Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -48,14 +47,14 @@ After you assign the policy to your Android device or user groups, users should 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Android per-app VPN profile for entire company**.
+    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Android device administrator per-app VPN profile for entire company**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    - **Platform**: Select **Android**.
+    - **Platform**: Select **Android device administrator**.
     - **Profile type**: Select **VPN**.
 
-4. Choose **Settings** > **Configure**. Then, configure the VPN profile. For more information, see [How to configure VPN settings](vpn-settings-configure.md) and [Intune VPN settings for Android devices](vpn-settings-android.md).
+4. Choose **Settings** > **Configure**. Then, configure the VPN profile. For more information, see [Configure VPN settings](vpn-settings-configure.md) and [VPN settings for Android device administrator devices](vpn-settings-android.md).
 
-Take note of the **Connection Name** value you specify when creating the VPN profile. This name will be needed in the next step. For example, **MyAppVpnProfile**.
+Take note of the **Connection Name** value you enter when creating the VPN profile. This name is needed in the next step. In this example, the connection name is **MyAppVpnProfile**.
 
 ## Step 2: Create a custom configuration policy
 
@@ -65,7 +64,7 @@ Take note of the **Connection Name** value you specify when creating the VPN pro
 
     - **Name**: Enter a descriptive name for the custom profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Custom OMA-URI Android VPN profile for entire company**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    - **Platform**: Select **Android**.
+    - **Platform**: Select **Android device administrator**.
     - **Profile type**: Select **Custom**.
 
 4. Choose **Settings** > **Configure**.
@@ -76,7 +75,8 @@ Take note of the **Connection Name** value you specify when creating the VPN pro
     - **Data type**: Enter **String**.
     - **Value**: Enter a semicolon-separated list of packages to associate with the profile. For example, if you want Excel and the Google Chrome browser to use the VPN connection, enter `com.microsoft.office.excel;com.android.chrome`.
 
-![Example Android per-app VPN custom policy](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
+    > [!div class="mx-imgBorder"]
+    >![Example Android device administrator per-app VPN custom policy](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
 
 ### Set your app list to blacklist or whitelist (optional)
 
