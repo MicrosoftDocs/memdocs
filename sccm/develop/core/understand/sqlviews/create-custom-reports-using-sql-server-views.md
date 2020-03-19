@@ -26,7 +26,7 @@ This documentation includes an overview of the Configuration Manager SQL view sc
 
 This document was created using Microsoft SQL Server 2012, Report Builder 3.0 and Configuration Manager. The available SQL views, options, and commands might vary depending on the version of each product you are using. For more information, see the documentation for the products you are using.
 
-## What’s new for reporting in Configuration Manager
+## What's new for reporting in Configuration Manager
 
 This section lists the changes that have been made since Configuration Manager 2007 for Configuration Manager reporting.
 
@@ -54,7 +54,7 @@ This section lists the changes that have been made since Configuration Manager 2
 
 ## Changes made to reporting in Configuration Manager
 
-- Configuration Manager reports are now fully enabled for role-based administration. The data for all reports included with Configuration Manager is filtered based on the permissions of the administrative user who runs the report. Administrative users with specific roles can only view information defined for their roles. For more information, see the [Planning for Role-Based Administration](/sccm/core/servers/manage/planning-for-reporting#BKMK_RoleBaseAdministration) for Reports section in the  Planning for Reporting in Configuration Manager article in the Configuration Manager Documentation Library.
+- Configuration Manager reports are now fully enabled for role-based administration. The data for all reports included with Configuration Manager is filtered based on the permissions of the administrative user who runs the report. Administrative users with specific roles can only view information defined for their roles. For more information, see the [Planning for Role-Based Administration](/sccm/core/servers/manage/planning-for-reporting#plan-for-role-based-administration) for Reports section in the  Planning for Reporting in Configuration Manager article in the Configuration Manager Documentation Library.
 
 ## In this section
 
