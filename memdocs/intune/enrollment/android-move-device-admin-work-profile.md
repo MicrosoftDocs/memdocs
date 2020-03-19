@@ -31,9 +31,9 @@ ms.collection: M365-identity-device-management
 
 # Move Android devices from device administrator to work profile management
 
-You can help users move their Android devices from device administrator to work profile management by using the compliance setting for the Android device administrator platform. This setting lets you make devices non-compliant if they are managed with device administrator. 
+You can help users move their Android devices from device administrator to work profile management by using the compliance setting for the Android device administrator platform. This setting lets you make devices non-compliant if they're managed with device administrator. 
 
-When users see that they are out of compliance for this reason, they can tap **Resolve**. They'll be taken to a checklist that will  guide them through:
+When users see that they're out of compliance for this reason, they can tap **Resolve**. They'll be taken to a checklist that will  guide them through:
 1. Unenrolling from device administrator management
 2. Enrolling into work profile management
 3. Resolving any compliance issues. 
@@ -91,8 +91,8 @@ To avoid this condition, use enrollment restrictions to block enrollment into de
 
 ## Android Company Portal 404 error
 Users might get a 404 error when they tap the link to the **Update device settings** page of the Android Company Portal. This error can be caused by one of the following:
-- The device is not an Android.
-- The Android device does not have the Company Portal app.
+- The device isn't an Android.
+- The Android device doesn't have the Company Portal app.
 - The Android Company Portal version is earlier than 5.0.4720.0.
 - The Android device uses Android 6 or earlier. 
 
