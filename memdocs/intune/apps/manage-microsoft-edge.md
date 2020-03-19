@@ -361,7 +361,7 @@ By default, Microsoft Edge on iOS offers to save your users passwords to the key
 You can disable the extension framework within Microsoft Edge to prevent users from installing any extention apps. To do this, configure the following setting:
 
 |    Key    |    Value    |
-|-----------|-------------=|
+|-----------|-------------|
 |    `com.microsoft.intune.mam.managedbrowser.disableExtensionFramework`    |    **true** will disable the extension framework    |
 
 ### Disable InPrivate browsing and Microsoft Accounts to restrict browsing to work-only contexts
