@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -69,36 +69,35 @@ The following list is an overview on how NAC integration works when integrated w
 8. Once the device is enrolled and compliant, NAC partner solution gets the state from Intune.
 9. Connection is successfully established which allows the device access to corporate resources.
 
-## Use NAC for VPN on your iOS/iPadOS devices  
+## Use NAC for VPN on your iOS/iPadOS devices
 
 NAC is available on the following VPNs without enabling NAC in the VPN profile:
 
-  - NAC for Cisco Legacy AnyConnect
-  - F5 Access Legacy
-  - Citrix VPN
+- NAC for Cisco Legacy AnyConnect
+- F5 Access Legacy
+- Citrix VPN
 
-NAC is also supported for Cisco AnyConnect, Citrix SSO, and F5 Access. 
+NAC is also supported for Cisco AnyConnect, Citrix SSO, and F5 Access.
 
-### To enable NAC for Cisco AnyConnect for iOS:
+### To enable NAC for Cisco AnyConnect for iOS
 
-  - Integrate ISE with Intune for NAC as described in the link below.
-  - Set the **Enable Network Access Control (NAC)** setting in the VPN profile to **Yes**.
+- Integrate ISE with Intune for NAC as described in the link below.
+- Set the **Enable Network Access Control (NAC)** setting in the VPN profile to **Yes**.
 
-### To enable NAC for Citrix SSO:
+### To enable NAC for Citrix SSO
 
-  - Use Citrix Gateway 12.0.59 or higher.  
-  - Users must have Citrix SSO 1.1.6 or later installed.
-  - [Integrate NetScaler with Intune for NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) as described in the Citrix product documentation.
-  - In the VPN profile, select **Base settings** > **Enable Network Access Control (NAC)** > select **I agree**.
+- Use Citrix Gateway 12.0.59 or higher.  
+- Users must have Citrix SSO 1.1.6 or later installed.
+- [Integrate NetScaler with Intune for NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) as described in the Citrix product documentation.
+- In the VPN profile, select **Base settings** > **Enable Network Access Control (NAC)** > select **I agree**.
 
+### To enable NAC for F5 Access
 
-### To enable NAC for F5 Access:
+- Use F5 BIG-IP 13.1.1.5 or later.
+- Integrate BIG-IP with Intune for NAC. The [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 guide lists the steps.
+- In the VPN profile, select **Base settings** > **Enable Network Access Control (NAC)** > select **I agree**.
 
-  - Use F5 BIG-IP 13.1.1.5. BIG-IP 14 isn't supported.
-  - Integrate BIG-IP with Intune for NAC. The [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 guide lists the steps.
-  - In the VPN profile, select **Base settings** > **Enable Network Access Control (NAC)** > select **I agree**.
-
-  The VPN connection is disconnected every 24 hours for security reasons. The VPN can immediately be reconnected.
+The VPN connection is disconnected every 24 hours for security reasons. The VPN can immediately be reconnected.
 
 We're working with our partners to release a NAC solution for these newer clients. When solutions are ready, this article will be updated with additional information.
 

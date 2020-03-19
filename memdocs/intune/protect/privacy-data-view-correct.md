@@ -38,10 +38,10 @@ Intune admins can view some personal data based on their access permissions, but
 
 ## View personal data
 
-Admins can see end user personal information in various blades in the Intune UI. The following articles explain what information admins do and don’t have access to:
-- [See device details](../remote-actions/device-inventory.md) in Intune explains how you can review details about an end user’s device.
-- [Monitor app information and assignments](../apps/apps-monitor.md) explains how to see details about apps installed on an end user’s device.
-- The [What information can my company see when I enroll my device? article](https://docs.microsoft.com/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) gives end users a list of data that their company can and can’t see. It’s best to clearly tell your users what kind of data you’re collecting and why you’re collecting it. This article can be the first step in that transparency.
+Admins can see end user personal information in various blades in the Intune UI. The following articles explain what information admins do and don't have access to:
+- [See device details](../remote-actions/device-inventory.md) in Intune explains how you can review details about an end user's device.
+- [Monitor app information and assignments](../apps/apps-monitor.md) explains how to see details about apps installed on an end user's device.
+- The [What information can my company see when I enroll my device? article](https://docs.microsoft.com/mem/intune/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) gives end users a list of data that their company can and can't see. It's best to clearly tell your users what kind of data you're collecting and why you're collecting it. This article can be the first step in that transparency.
 
 ### Who can view the data?
 
@@ -53,7 +53,7 @@ You can learn more about Microsoft data practices by reading the Online Services
 
 ## Correct end user personal data
 
-Admins can’t update device or app specific information. If an end user wants to correct any personal data (like the device name), they must do so directly on their device. Such changes are synchronized the next time they connect to Intune.
+Admins can't update device or app specific information. If an end user wants to correct any personal data (like the device name), they must do so directly on their device. Such changes are synchronized the next time they connect to Intune.
 
 
 ## Next steps

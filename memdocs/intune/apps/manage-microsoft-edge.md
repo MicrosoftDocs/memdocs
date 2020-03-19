@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -266,6 +266,15 @@ Use the following key/value pairs to configure either an allowed or blocked site
 |    Key    |    Value    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Choose from:<p>1. Specify allowed URLs (only these URLs are allowed; no other sites can be accessed):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Specify blocked URLs (all other sites can be accessed):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow or block as a single value, separated by a pipe `|` character.<br>**Examples:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
+
+The following sites are always allowed regardless of the defined allow list or block list settings:
+- `https://*.microsoft.com/*`
+- `http://*.microsoft.com/*`
+- `https://microsoft.com/*`
+- `http://microsoft.com/*`
+- `https://*.windowsazure.com/*`
+- `https://*.microsoftonline.com/*`
+- `https://*.microsoftonline-p.com/*`
 
 ### URL formats for allowed and blocked site list 
 You can use various URL formats to build your allowed/blocked sites lists. These permitted patterns are detailed in the following table. Some notes before you get started: 
