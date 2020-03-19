@@ -391,6 +391,7 @@ To enable Microsoft Edge as a kiosk app, first configure this parent setting:
 
 ### Show address bar in kiosk mode
 To show the address bar within Microsoft Edge when it's in Kiosk mode, configure the following setting:
+
 |    Key    |    Value    |
 |-----------|-------------|
 |    `com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode`    |    **true** shows the address bar. <br> **false** (default) will hide the address bar.    |
