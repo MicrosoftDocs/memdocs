@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -95,7 +95,6 @@ PKCS certificates *stay* on the device (certificates aren't revoked or removed) 
 - An administrator removes the user or group from Azure AD.
 - An administrator changes or updates the PKCS profile.
 - A certificate profile is removed from the group assignment.
-
 
 ## iOS devices
 
@@ -194,8 +193,8 @@ A root certificate is removed when:
 - An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
 
 PKCS certificates *stay* on the device (certificates aren't revoked or removed) when:
-- A user loses the Intune license.
 
+- A user loses the Intune license.
 - An administrator withdraws the Intune license.
 - An administrator removes the user or group from Azure AD.
 - An administrator changes or updates the PKCS profile.
@@ -232,7 +231,23 @@ SCEP certificates *stay* on the device (certificates aren't revoked or removed) 
 
 ### PKCS certificates
 
-PKCS certificates aren't supported on macOS.
+A PKCS certificate is revoked *and* removed when:
+
+- A user unenrolls.
+- An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
+
+A root certificate is removed when:
+
+- A user unenrolls.
+- An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
+
+PKCS certificates stay on the device (certificates aren't revoked or removed) when:
+
+- A user loses the Intune license.
+- An administrator withdraws the Intune license.
+- A certificate profile is removed from the group assignment. (The Profile is removed.)
+- An administrator removes the user or group from Azure AD.
+- An administrator changes or updates the PKCS profile.
 
 ## Next steps
 
