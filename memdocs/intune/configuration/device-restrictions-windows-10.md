@@ -90,7 +90,7 @@ These settings use the [ApplicationManagement policy CSP](https://docs.microsoft
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might allow end users to install apps from places other than the Microsoft Store, including apps defined in other policy settings.  
   - **Anywhere**: Turns off app recommendations, and allows users to install apps from any location.  
   - **Store Only**: Forces end users to only install apps from the Microsoft Store.
-  - **Recommendations**: When installing an app from the web that’s available in the Microsoft Store, users see a message recommending they download it from the store.  
+  - **Recommendations**: When installing an app from the web that's available in the Microsoft Store, users see a message recommending they download it from the store.  
   - **Prefer Store**: Warns users when they install apps from places other than the Microsoft Store.
 
   [SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
@@ -319,7 +319,7 @@ This device restrictions profile is directly related to the kiosk profile you cr
 - **Start Microsoft Edge with**: Choose which pages open when Microsoft Edge starts. Your options:
   - **Custom start pages**: Enter the start pages, such as `http://www.contoso.com`. Microsoft Edge loads the start pages you enter.
   - **New Tab page**: Microsoft Edge load whatever is entered in the **New Tab URL** setting.
-  - **Last session’s page**: Microsoft Edge loads the last session page.
+  - **Last session's page**: Microsoft Edge loads the last session page.
   - **Start pages in local app settings**: Microsoft Edge start with the default start page defined by the OS.
 
 - **Allow user to change start pages**: **Yes** (default) lets users change the start pages. Administrators can use the `EdgeHomepageUrls` to enter the start pages that users see by default when open Microsoft Edge. **No** blocks users from changing the start pages.
@@ -380,8 +380,8 @@ This device restrictions profile is directly related to the kiosk profile you cr
 - **Save browsing history**: **Yes** (default) allow saving the browsing history in Microsoft Edge. **No** prevents saving the browsing history.
 - **Clear browsing data on exit** (desktop only): **Yes** clears the history, and browsing data when the user exits Microsoft Edge. **No** (default) uses the OS default, which may cache the browsing data.
 - **Sync browser settings between user's devices**: Choose how you want to sync browser settings between devices. Your options:
-  - **Allow**: Allow syncing of Microsoft Edge browser settings between user’s devices
-  - **Block and enable user override**: Block syncing of Microsoft Edge browser settings between user’s devices. Users can override this setting.
+  - **Allow**: Allow syncing of Microsoft Edge browser settings between user's devices
+  - **Block and enable user override**: Block syncing of Microsoft Edge browser settings between user's devices. Users can override this setting.
   - **Block**: Block syncing of Microsoft Edge browser setting between users devices. Users can't override this setting.
 
 When "block and enable user override" is selected, user can override admin designation.
@@ -439,7 +439,7 @@ These settings use the [DeviceLock policy CSP](https://docs.microsoft.com/window
   - **Minimum password length**: Enter the minimum number or characters required, from 4-16. For example, enter `6` to require at least six characters in the password length.
   
     > [!IMPORTANT]
-    > When the password requirement is changed on a Windows desktop, users are impacted the next time they sign in, as that’s when the device goes from idle to active. Users with passwords that meet the requirement are still prompted to change their passwords.
+    > When the password requirement is changed on a Windows desktop, users are impacted the next time they sign in, as that's when the device goes from idle to active. Users with passwords that meet the requirement are still prompted to change their passwords.
     
   - **Number of sign-in failures before wiping device**: Enter the number of authentication failures allowed before the device may be wiped, up to 11. The valid number you enter depends on the edition. [DeviceLock/MaxDevicePasswordFailedAttempts CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) lists the supported values. `0` (zero) may disable the device wipe functionality.
 
@@ -478,7 +478,7 @@ These settings use the [DeviceLock policy CSP](https://docs.microsoft.com/window
 
 ## Per-app privacy exceptions
 
-You can add apps that should have a different privacy behavior from what you define in “Default privacy”.
+You can add apps that should have a different privacy behavior from what you define in "Default privacy".
 
 - **Package Name**: App package family name.
 - **App Name**: The name of the app.

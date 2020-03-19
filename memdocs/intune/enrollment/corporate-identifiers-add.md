@@ -20,7 +20,6 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 
 #ROBOTS:
 #audience:
-
 ms.reviewer: spshumwa
 ms.suite: ems
 search.appverid: MET150
@@ -83,7 +82,7 @@ This .csv file when viewed in a text editor appears as:
 > [!IMPORTANT]
 > Some Android and iOS/iPadOS devices have multiple IMEI numbers. Intune only reads one IMEI number per enrolled device. If you import an IMEI number but it is not the IMEI inventoried by Intune, the device is classified as a personal device instead of a corporate-owned device. If you import multiple IMEI numbers for a device, uninventoried numbers display **Unknown** for enrollment status.<br>
 >Also note:
->Serial Numbers are the recommended form of identification for iiOS/iPadOSOS devices.
+>Serial Numbers are the recommended form of identification for iOS/iPadOSOS devices.
 >Android Serial numbers are not guaranteed to be unique or present. Check with your device supplier to understand if serial number is a reliable device ID.
 >Serial numbers reported by the device to Intune might not match the displayed ID in the Android Settings/About menus on the device. Verify the type of serial number reported by the device manufacturer.
 >Attempting to upload a file with serial numbers containing dots (.) will cause the upload to fail. Serial numbers with dots are not supported.

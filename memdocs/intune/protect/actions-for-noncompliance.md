@@ -89,7 +89,7 @@ To send email to your users, create a notification message template. When a devi
    - **Email footer – Include company name**
    - **Email footer – Include contact information**
 
-   The logo you upload as part of the Company Portal branding is used for email templates. For more information about Company Portal branding, see [Company identity branding customization](../apps/company-portal-app.md#company-identity-branding-customization).
+   The logo you upload as part of the Company Portal branding is used for email templates. For more information about Company Portal branding, see [Company identity branding customization](../apps/company-portal-app.md#customizing-the-user-experience).
 
    ![Example of a compliant notification message in Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
