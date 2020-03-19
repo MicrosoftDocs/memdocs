@@ -75,7 +75,7 @@ The settings shown in the following list are determined by the VPN connection ty
     > [!NOTE]
     > If username and password are used as the authentication method for Cisco IPsec VPN, they must deliver the SharedSecret through a custom Apple Configurator profile.
 
-  - **Derived credential**: Use a certificate that’s derived from a user’s smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+  - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
 - **Excluded URLs** (Zscaler only): When connected to the Zscaler VPN, the listed URLs are accessible outside the Zscaler cloud. 
 
@@ -86,10 +86,10 @@ The settings shown in the following list are determined by the VPN connection ty
 
 - **Enable network access control (NAC)** (Cisco AnyConnect, Citrix SSO, F5 Access): When you choose **I agree**, the device ID is included in the VPN profile. This ID can be used for authentication to the VPN to allow or prevent network access.
 
-    **When using Cisco AnyConnect with ISE**, be sure to:
+  **When using Cisco AnyConnect with ISE**, be sure to:
 
-    - If you have not already done so, integrate ISE with Intune for NAC as described under **Configure Microsoft Intune as an MDM Server** in the [Cisco Identity Services Engine Administrator Guide](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html).
-    - Enable NAC in the VPN profile.
+  - If you have not already done so, integrate ISE with Intune for NAC as described under **Configure Microsoft Intune as an MDM Server** in the [Cisco Identity Services Engine Administrator Guide](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html).
+  - Enable NAC in the VPN profile.
 
   **When using Citrix SSO with Gateway**, be sure to:
 
