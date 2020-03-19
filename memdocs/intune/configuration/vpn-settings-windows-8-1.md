@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,11 +28,13 @@ ms.collection: M365-identity-device-management
 
 # Add VPN settings on Windows 8.1 devices in Microsoft Intune
 
-
-
 This article shows you the Intune settings you can use to configure VPN connections on devices running Windows 8.1.
 
 Depending on the settings you choose, not all values in the following list are configurable.
+
+## Before you begin
+
+[Create a device configuration profile](vpn-settings-configure.md).
 
 ## Base VPN settings
 
@@ -52,7 +54,7 @@ Depending on the settings you choose, not all values in the following list are c
   - **F5 Edge Client**
   - **Pulse Secure**
 
-<!--- **Fingerprint** (Check Point Capsule VPN only): Specify a string (for example, "Contoso Fingerprint Code") that will be used to verify that the VPN server can be trusted. A fingerprint can be sent to the client so it knows to trust any server that presents the same fingerprint when connecting. If the device doesn’t already have the fingerprint, it will prompt the user to trust the VPN server that they are connecting to while showing the fingerprint. (The user manually verifies the fingerprint and chooses **trust** to connect.) --->
+<!--- **Fingerprint** (Check Point Capsule VPN only): Specify a string (for example, "Contoso Fingerprint Code") that will be used to verify that the VPN server can be trusted. A fingerprint can be sent to the client so it knows to trust any server that presents the same fingerprint when connecting. If the device doesn't already have the fingerprint, it will prompt the user to trust the VPN server that they are connecting to while showing the fingerprint. (The user manually verifies the fingerprint and chooses **trust** to connect.) --->
 
 - **Login group or domain** (SonicWall Mobile Connect only): Specify the name of the login group or domain that you want to connect to.
 
@@ -87,6 +89,8 @@ Depending on the settings you choose, not all values in the following list are c
   ```
 
   For more information on writing custom XML commands, see the manufacturer's VPN documentation.
+
+- **Split tunneling**: **Enable** lets devices decide which connection to use depending on the traffic. For example, a user in a hotel uses the VPN connection to access work files, but use the hotel's standard network for regular web browsing. If you want all traffic to use the VPN tunnel when the VPN connection is active, then set to **Disable**.
 
 ## Proxy settings
 

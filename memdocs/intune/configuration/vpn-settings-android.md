@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -36,7 +36,7 @@ To learn more about VPN profiles in Intune, see [VPN profiles](vpn-settings-conf
 
 ## Before you begin
 
-[Create a device configuration profile](vpn-settings-configure.md#create-a-device-profile), and choose **Android**.
+[Create a device configuration profile](vpn-settings-configure.md), and choose **Android device administrator**.
 
 ## Base VPN
 
@@ -57,7 +57,7 @@ To learn more about VPN profiles in Intune, see [VPN profiles](vpn-settings-conf
   - **Pulse Secure**
   - **Citrix SSO**
 
-- **Fingerprint** (Check Point Capsule VPN only): Enter a string, such as **Contoso Fingerprint Code**, to verify that the VPN server can be trusted. A fingerprint is sent to the client so the client knows to trust any server that has the same fingerprint. If the device doesn’t have the fingerprint, it prompts the user to trust the VPN server while showing the fingerprint. The user manually verifies the fingerprint, and chooses to trust to connect.
+- **Fingerprint** (Check Point Capsule VPN only): Enter a string, such as **Contoso Fingerprint Code**, to verify that the VPN server can be trusted. A fingerprint is sent to the client so the client knows to trust any server that has the same fingerprint. If the device doesn't have the fingerprint, it prompts the user to trust the VPN server while showing the fingerprint. The user manually verifies the fingerprint, and chooses to trust to connect.
 - **Enter key and value pairs for the Citrix VPN attributes** (Citrix only): Enter key and value pairs, provided by Citrix. These values configure the properties of the VPN connection. 
 
   You can also **Import** a comma-separated values file (.csv) with keys and value pairs. Be sure to review the **My data has headers** and **Key** properties.
