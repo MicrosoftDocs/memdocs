@@ -86,20 +86,20 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
 The [end user flow to move to new device management setup](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md) guides users through unenrolling from device administrator management and getting set up with work profile management. Users must have [Android device administrator enrolled devices](android-enroll-device-administrator.md) with Android Company Portal version 5.0.4720.0 or later.
 
-## User sees an error after tapping Resolve
+### User sees an error after tapping Resolve
 If users see an error after tapping the **Resolve** button, it's likely because of one of these reasons:
 - Work profile enrollment isn't set up correctly (either an Android Enterprise account isn't connected or enrollment restrictions are set to block work profile enrollment).
 - The device is running Android 4.4 or earlier, which doesn’t support work profile enrollment. 
 - The device manufacturer doesn’t support work profile enrollment on the device model.
 
-## Resolve button doesn't appear on the user's device
+### Resolve button doesn't appear on the user's device
 The **Resolve** button won't appear on the user's device if the user enrolls into device administrator management after they've been targeted with the device compliance policy explained above.
 
 To get the **Resolve** button to appear, the user must postpone setup and restart the process from the notification.
 
 To avoid this condition, use enrollment restrictions to block enrollment into device administrator management.
 
-## User sees an error after tapping URL to Update device settings page
+### User sees an error after tapping URL to Update device settings page
 Users might see an error page in the browser when they tap the URL to the **Update device settings page** of the Android Company Portal. This error can be caused by one of the following:
 - The device isn't an Android.
 - The Android device doesn't have the Company Portal app.
