@@ -84,7 +84,7 @@ For more information about device registration, see [Register your personal devi
 If the installation fails, contact your IT support person. Go to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) to find your organization's contact information.  
 
 You can also send your app logs to your IT support person to provide them with more context about the installation.  
-* Android users: [Upload and email your logs](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android) from Company Portal.   
+* Android users: [Upload and email your logs](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) from Company Portal.   
 
 * iOS device users: [Retrieve and send your logs](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-on-ios-to-access-managed-app-logs) from Microsoft Edge for iOS.  
 
