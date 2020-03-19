@@ -31,9 +31,9 @@ ms.collection: M365-identity-device-management
 
 # Move Android devices from device administrator to work profile management
 
-You can move Android devices from device administrator to work profile management by using the compliance setting for the Android device administrator platform. This setting lets you make devices non-compliant if they are managed with device administrator. 
+You can help users move their Android devices from device administrator to work profile management by using the compliance setting for the Android device administrator platform. This setting lets you make devices non-compliant if they're managed with device administrator. 
 
-Users who sign in to a non-compliant device will see a notification informing them that they must update their device management. After they tap **Resolve**, they'll be taken to a checklist that will  guide them through:
+When users see that they're out of compliance for this reason, they can tap **Resolve**. They'll be taken to a checklist that will  guide them through:
 1. Unenrolling from device administrator management
 2. Enrolling into work profile management
 3. Resolving any compliance issues. 
@@ -44,7 +44,7 @@ Users who sign in to a non-compliant device will see a notification informing th
 - Set up Android work profile management by [connecting your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).
 - [Set Android Enterprise work profile enrollment](android-work-profile-enroll.md) for the group of users who are moving to Android work profile.
 - Consider increasing your user device limits. When unenrolling devices from device administrator management, device records might not be immediately removed. To provide cushion during this period, you might need to increase device limit capacity so that the users can enroll into work profile management.
-  - [Configure Azure Active Directory device settings](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings) to for Maximum number of devices per user.
+  - [Configure Azure Active Directory device settings](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings) for Maximum number of devices per user.
   - Adjust the [Intune device limit restrictions](enrollment-restrictions-set.md#create-a-device-limit-restriction) by setting the Device limit. 
 
 ## Create device compliance policy
@@ -59,8 +59,11 @@ Users who sign in to a non-compliant device will see a notification informing th
     ![Basics page](./media/android-move-device-admin-work-profile/basics.png)
     
 4. On the **Compliance settings** page, in the **Device Health** section, set **Block devices managed with device administrator** to **Yes** > **Next**.
+
+    ![Block devices](./media/android-move-device-admin-work-profile/block-devices.png)
+
 5. On the **Locations** page, you can add locations if you want > **Next**.
-6. On the **Actions for noncompliance**, set a **Send email to end user** action.
+6. On the **Actions for noncompliance**, you can set the **Send email to end user** action.
 
     ![Send email](./media/android-move-device-admin-work-profile/send-email.png)
 
@@ -71,7 +74,7 @@ Users who sign in to a non-compliant device will see a notification informing th
   
     > [!NOTE]
     > - Of course, you can use user-friendly hyper-text for the links in your communication with users. However, don't use URL-shorteners because the links may not work if changed that way.
-    > - If the Android Company Portal open and in the background, when a user taps the link they might go to the last page they had open instead. So, your messaging can include something like this: "Close the Android Company Portal before tapping this link."
+    > - If the Android Company Portal open and in the background, when a user taps the link they might go to the last page they had open instead.
 
     Choose **Next**.
 
@@ -79,8 +82,22 @@ Users who sign in to a non-compliant device will see a notification informing th
 8. On the **Assignments** page, assign the policy to a group that has devices enrolled with device administrator management > **Next**.
 9. On the **Review + create** page, confirm all your settings and then select **Create**.
 
+## Troubleshooting
+
+## Resolve button doesn't appear on the user's device
+The **Resolve** button won't appear on the user's device if the user enrolls into device administrator management after they've been targeted with the device compliance policy explained above.
+To get the **Resolve** button to appear, the user must postpone setup and restart the process from the notification.
+To avoid this condition, use enrollment restrictions to block enrollment into devie administrator management.
+
+## Android Company Portal 404 error
+Users might get a 404 error when they tap the link to the **Update device settings** page of the Android Company Portal. This error can be caused by one of the following:
+- The device isn't an Android.
+- The Android device doesn't have the Company Portal app.
+- The Android Company Portal version is earlier than 5.0.4720.0.
+- The Android device uses Android 6 or earlier. 
 
 ## Next steps
+[See the end user flow](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md)
 [Manage Android work profile devices with Intune](android-enterprise-overview.md)
 
 
