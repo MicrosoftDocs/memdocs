@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Move Android devices from device administrator to work profile management
 
-You can help users move their Android devices from device administrator to work profile management by using the compliance setting for the Android device administrator platform. This setting lets you make devices non-compliant if they're managed with device administrator. 
+You can help users move their Android devices from device administrator to work profile management by using the compliance setting to **Block devices managed with device administrator**. This setting lets you make devices non-compliant if they're managed with device administrator. 
 
 When users see that they're out of compliance for this reason, they can tap **Resolve**. They'll be taken to a checklist that will  guide them through:
 1. Unenrolling from device administrator management
@@ -40,7 +40,7 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
 ## Prerequisites
 
-- You must have devices enrolled with [Android device administrator management](android-enroll-device-administrator.md).
+- Users must have [Android device administrator enrolled devices](android-enroll-device-administrator.md) with Android Company Portal version 5.0.4720.0 or later.
 - Set up Android work profile management by [connecting your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).
 - [Set Android Enterprise work profile enrollment](android-work-profile-enroll.md) for the group of users who are moving to Android work profile.
 - Consider increasing your user device limits. When unenrolling devices from device administrator management, device records might not be immediately removed. To provide cushion during this period, you might need to increase device limit capacity so that the users can enroll into work profile management.
@@ -74,7 +74,7 @@ When users see that they're out of compliance for this reason, they can tap **Re
   
     > [!NOTE]
     > - Of course, you can use user-friendly hyper-text for the links in your communication with users. However, don't use URL-shorteners because the links may not work if changed that way.
-    > - If the Android Company Portal open and in the background, when a user taps the link they might go to the last page they had open instead.
+    > - If the Android Company Portal is open and in the background, when a user taps the link they might go to the last page they had open instead.
 
     Choose **Next**.
 
@@ -84,9 +84,19 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
 ## Troubleshooting
 
+The [end user flow to move to new device management setup](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md) guides users through unenrolling from device administrator management and getting set up with work profile management. Users must have [Android device administrator enrolled devices](android-enroll-device-administrator.md) with Android Company Portal version 5.0.4720.0 or later.
+
+## User sees an error after tapping Resolve
+If users see an error after tapping the **Resolve** button, it's likely because of one of these reasons:
+- Work profile enrollment isn't set up correctly (either an Android Enterprise account isn't connected or enrollment restrictions are set to block work profile enrollment).
+- The device is running Android 4.4 or earlier, which doesn’t support work profile enrollment. 
+- The device manufacturer doesn’t support work profile enrollment on the device model.
+
 ## Resolve button doesn't appear on the user's device
 The **Resolve** button won't appear on the user's device if the user enrolls into device administrator management after they've been targeted with the device compliance policy explained above.
+
 To get the **Resolve** button to appear, the user must postpone setup and restart the process from the notification.
+
 To avoid this condition, use enrollment restrictions to block enrollment into devie administrator management.
 
 ## Android Company Portal 404 error
