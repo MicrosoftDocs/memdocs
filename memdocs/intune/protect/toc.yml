@@ -268,9 +268,9 @@
     - name: Antivirus policy settings
       items:
       - name: macOS Defender Antivirus settings
-        href: antivirus-microsoft-defender-av-settings-macos.md
+        href: antivirus-microsoft-defender-settings-macos.md
       - name: Windows 10 Microsoft Defender Antivirus settings
-        href: antivirus-microsoft-defender-av-settings-windows.md
+        href: antivirus-microsoft-defender-settings-windows.md
     - name: Windows update settings
       href: windows-update-settings.md
     - name: Compliance policy settings - Android
