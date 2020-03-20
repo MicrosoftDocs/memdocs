@@ -61,7 +61,7 @@ To get logs after the profile is already deployed with Intune, connect the devic
 On the device, logs are saved in `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
 
 ### Get logs from email
-To get logs after the profile is already deployed with Intune, end users can email you the logs using an email app on the device. On the Zebra device, open the Company Portal app, and [send the logs](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android). Using the send logs feature also creates a PowerLift incident ID, which you can reference if contacting Microsoft support.
+To get logs after the profile is already deployed with Intune, end users can email you the logs using an email app on the device. On the Zebra device, open the Company Portal app, and [send the logs](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android). Using the send logs feature also creates a PowerLift incident ID, which you can reference if contacting Microsoft support.
 
 ## Read the logs
 
@@ -143,7 +143,7 @@ When older devices sign in using the Company Portal app, users may see a message
 
 If Google Play services aren't available, some tasks take up to 8 hours to finish. [Limitations of Intune Company Portal app for Android](https://support.microsoft.com/help/3211588/limitations-of-intune-company-portal-app-for-android-in-china) (opens another Microsoft web site) may be a good resource.
 
-### “Device spoofing suspected” shows in Intune
+### "Device spoofing suspected" shows in Intune
 
 This error means that Intune suspects a non-Zebra Android device is reporting its model and manufacturer as a Zebra device.
 

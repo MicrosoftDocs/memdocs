@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,7 +35,7 @@ This article describes these settings. [Use Wi-Fi on your devices](wi-fi-setting
 
 ## Before you begin
 
-[Create a device profile](wi-fi-settings-configure.md#create-a-device-profile).
+[Create a device profile](wi-fi-settings-configure.md).
 
 ## Device owner only
 

@@ -35,6 +35,7 @@ When you configure features on iOS/iPadOS devices, you can also add the built-in
 | Bundle ID                   | App Name     | Publisher |
 |-----------------------------|--------------|-----------|
 | com.apple.AppStore          | App Store    | Apple     |
+| com.apple.store.Jolly       | Apple Store  | Apple     |
 | com.apple.calculator        | Calculator   | Apple     |
 | com.apple.mobilecal         | Calendar     | Apple     |
 | com.apple.camera            | Camera       | Apple     |

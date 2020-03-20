@@ -2,12 +2,12 @@
 # required metadata
 
 title: Configure VPN settings to iOS/iPadOS devices in Microsoft Intune - Azure | Microsoft Docs
-description: Add or create a VPN configuration profile using virtual private network (VPN) configuration settings, including the connection details, authentication methods, and split tunneling in the base settings; the custom VPN settings with the identifier, and the key and value pairs; the per-app VPN settings that include Safari URLs, and on-demand VPNs with SSIDs or DNS search domains; and the proxy settings to include a configuration script, IP or FQDN address, and TCP port in Microsoft Intune on devices running iOS/iPadOS.
+description: Add or create a VPN configuration profile on iOS/iPadOS devices using virtual private network (VPN) configuration settings. Configure the connection details, authentication methods, split tunneling, custom VPN settings with the identifier, key and value pairs, per-app VPN settings that include Safari URLs, and on-demand VPNs with SSIDs or DNS search domains, proxy settings to include a configuration script, IP or FQDN address, and TCP port in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -75,7 +75,7 @@ The settings shown in the following list are determined by the VPN connection ty
     > [!NOTE]
     > If username and password are used as the authentication method for Cisco IPsec VPN, they must deliver the SharedSecret through a custom Apple Configurator profile.
 
-  - **Derived credential**: Use a certificate that’s derived from a user’s smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+  - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
 - **Excluded URLs** (Zscaler only): When connected to the Zscaler VPN, the listed URLs are accessible outside the Zscaler cloud. 
 
@@ -86,10 +86,10 @@ The settings shown in the following list are determined by the VPN connection ty
 
 - **Enable network access control (NAC)** (Cisco AnyConnect, Citrix SSO, F5 Access): When you choose **I agree**, the device ID is included in the VPN profile. This ID can be used for authentication to the VPN to allow or prevent network access.
 
-    **When using Cisco AnyConnect with ISE**, be sure to:
+  **When using Cisco AnyConnect with ISE**, be sure to:
 
-    - If you have not already done so, integrate ISE with Intune for NAC as described under **Configure Microsoft Intune as an MDM Server** in the [Cisco Identity Services Engine Administrator Guide](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html).
-    - Enable NAC in the VPN profile.
+  - If you haven't already, integrate ISE with Intune for NAC as described at **Configure Microsoft Intune as an MDM Server** in the [Cisco Identity Services Engine Administrator Guide](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html).
+  - Enable NAC in the VPN profile.
 
   **When using Citrix SSO with Gateway**, be sure to:
 
@@ -111,6 +111,34 @@ The settings shown in the following list are determined by the VPN connection ty
 ## IKEv2 settings
 
 These settings apply when you choose **Connection type** > **IKEv2**.
+
+- **Always-on VPN**: **Enable** sets a VPN client to automatically connect and reconnect to the VPN. Always-on VPN connections stay connected or immediately connect when the user locks their device, the device restarts, or the wireless network changes. When set to **Disable** (default), always-on VPN for all VPN clients is disabled. When enabled, also configure:
+
+  - **Network interface**: All IKEv2 settings only apply to the network interface you choose. Your options:
+    - **Wi-Fi and Cellular** (default): The IKEv2 settings apply to the Wi-Fi and cellular interfaces on the device.
+    - **Cellular**: The IKEv2 settings only apply to the cellular interface on the device. Select this option if you're deploying to devices with the Wi-Fi interface disabled or removed.
+    - **Wi-Fi**: The IKEv2 settings only apply to the Wi-Fi interface on the device.
+  - **User to disable VPN configuration**: **Enable** lets users turn off always-on VPN. **Disable** (default) prevents users from turning it off.​ The default value for this setting is the most secure option.
+  - **Voicemail**: Choose what happens with voicemail traffic when always-on VPN is enabled. Your options:
+    - **Force network traffic through VPN** (default): This setting is the most secure option.
+    - **Allow network traffic to pass outside VPN**
+    - **Drop network traffic**
+  - **AirPrint**: Choose what happens with AirPrint traffic when always-on VPN is enabled. Your options:
+    - **Force network traffic through VPN** (default): This setting is the most secure option.
+    - **Allow network traffic to pass outside VPN**
+    - **Drop network traffic**
+  - **Cellular services**: On iOS 13.0+, choose what happens with cellular traffic when always-on VPN is enabled. Your options:
+    - **Force network traffic through VPN** (default): This setting is the most secure option.
+    - **Allow network traffic to pass outside VPN**
+    - **Drop network traffic**
+  - **Allow traffic from non-native captive networking apps to pass outside VPN**: A captive network refers to Wi-Fi hotspots typically found in restaurants and hotels. Your options:
+    - **No**: Forces all Captive Networking (CN) app traffic through the VPN tunnel​.
+    - **Yes, all apps**: Allows all CN app traffic to bypass the VPN​.
+    - **Yes, specific apps**: **Add** a list of CN apps whose traffic can bypass the VPN​. Enter the bundle identifiers of CN app. For example, enter `com.contoso.app.id.package`.
+
+  - **Traffic from Captive Websheet app to pass outside VPN**: Captive WebSheet is a built-in web browser that handles captive sign on. **Enable** allows the browser app traffic to bypass the VPN. **Disable** (default) forces WebSheet traffic to use the always-on VPN. The default value is the most secure option.
+  - **Network address translation (NAT) keepalive interval (seconds)**: To stay connected to the VPN, the device sends network packets to remain active. Enter a value in seconds on how often these packets are sent, from 20-1440. For example, enter a value of `60` to send the network packets to the VPN every 60 seconds. By default, this value is set to `110` seconds.
+  - **Offload NAT keepalive to hardware when device is asleep**: When a device is asleep, **Enable** (default) has NAT continuously send keep-alive packets so the device stays connected to the VPN. **Disable** turns off this feature.
 
 - **Remote identifier**: Enter the network IP address, FQDN, UserFQDN, or ASN1DN of the IKEv2 server. For example, enter `10.0.0.3` or `vpn.contoso.com`. Typically, you enter the same value as the [**Connection name**](#base-vpn-settings) (in this article). But, it does depend on your IKEv2 server settings.
 
@@ -187,7 +215,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 ## Automatic VPN settings
 
-- **Per-app VPN**: Enables per-app VPN. Allows the VPN connection to trigger automatically when certain apps are opened. Also associate the apps with this VPN profile. Per-app VPN is not supported on IKEv2. For more information, see [instructions for setting up per-app VPN for iOS/iPadOS](vpn-setting-configure-per-app.md). 
+- **Per-app VPN**: Enables per-app VPN. Allows the VPN connection to trigger automatically when certain apps are opened. Also associate the apps with this VPN profile. Per-app VPN isn't supported on IKEv2. For more information, see [instructions for setting up per-app VPN for iOS/iPadOS](vpn-setting-configure-per-app.md). 
   - **Provider Type**: Only available for Pulse Secure and Custom VPN.
   - When using iOS/iPadOS **per-app VPN** profiles with Pulse Secure or a Custom VPN, choose app-layer tunneling (app-proxy) or packet-level tunneling (packet-tunnel). Set the **ProviderType** value to **app-proxy** for app-layer tunneling, or **packet-tunnel** for packet-layer tunneling. If you're not sure which value to use, check your VPN provider's documentation.
   - **Safari URLs that will trigger this VPN**: Add one or more web site URLs. When these URLs are visited using the Safari browser on the device, the VPN connection is automatically established.
@@ -197,8 +225,8 @@ These settings apply when you choose **Connection type** > **IKEv2**.
   - **SSIDs or DNS search domains**: Select whether this condition uses wireless network **SSIDs**, or **DNS search domains**. Choose **Add** to configure one or more SSIDs or search domains.
   - **URL string probe**: Optional. Enter a URL that the rule uses as a test. If the device accesses this URL without redirection, then the VPN connection is started. And, the device connects to the target URL. The user doesn't see the URL string probe site.
 
-    For example, a URL string probe is an auditing Web server URL that checks device compliance before connecting the VPN. Or, the URL tests the VPN's ability to connect to a site before connecting the device to the target URL through the VPN.
-.
+    For example, a URL string probe is an auditing Web server URL that checks device compliance before connecting the VPN. Or, the URL tests the VPN's ability to connect to a site before the device connects to the target URL through the VPN.
+
   - **Domain action**: Choose one of the following items:
     - Connect if needed
     - Never connect

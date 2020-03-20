@@ -65,6 +65,9 @@ If Microsoft Edge is not targeted with Intune policy, users can't use it to acce
 
 You can use Azure AD Conditional Access to redirect your users to access corporate content only through Microsoft Edge. This restricts mobile browser access to Azure AD-connected web apps to policy-protected Microsoft Edge. This blocks access from any other unprotected browsers, such as Safari or Chrome. You can apply Conditional Access to Azure resources like Exchange Online and SharePoint Online, the Microsoft 365 admin center, and even on-premises sites that you have exposed to external users via the [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started).
 
+> [!NOTE]
+> New web clips (pinned web apps) on iOS devices will open in Microsoft Edge instead of the Intune Managed Browser when required to open in a protected browser. For older iOS web clips, you must retarget these web clips to ensure they open in Microsoft Edge rather then the Managed Browser.
+
 To restrict Azure AD-connected web apps to use Microsoft Edge on iOS and Android:
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Under the Intune node, select **Conditional Access** > **New policy**.
@@ -204,7 +207,7 @@ Similarly to configuring a homepage shortcut, you can configure multiple top sit
 These settings allow you to customize the New Tab Page for Microsoft Edge to display your organization's logo and brand color as the page background.
 
 To upload your organization's logo and color, first complete the following steps:
-- Within the Azure portal, navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) -> **Tenant Administration** -> **Branding and customization** -> **Company Identity Branding**.
+- Within the Azure portal, navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) -> **Tenant Administration** -> **Customization** -> **Company Identity Branding**.
 - To set your brand's logo, under "Display", choose "Company Logo only". Transparent background logos are recommended. 
 - To set your brand's background color, under "Display" choose "Theme Color". Microsoft Edge applies a lighter shade of the color on the New Tab Page, which ensures the page has high readability. 
 
@@ -379,7 +382,6 @@ In addition to blocking InPrivate and MSA browsing, you can only allow use of Mi
 >[!NOTE]
 > `com.microsoft.intune.mam.managedbrowser.disableFeatures` can be used to disable multiple features simultaneously. For example, to disable both InPrivate and password, use `inprivate| password`.
 
-
 ## Configure Microsoft Edge as a kiosk app on Android devices
 
 ### Enable Microsoft Edge as a kiosk app
@@ -401,17 +403,19 @@ To show the address bar within Microsoft Edge when it's in Kiosk mode, configure
 |-----------|-------------|
 |    `com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode`    |    **true** shows the bottom action bar within Microsoft Edge. <br> **false** (default) hides the bottom bar.    |
 
-## Use Microsoft Edge on iOS to access managed app logs
 
-Users with Microsoft Edge installed on their iOS device can view the management status of all Microsoft published apps. They can send logs for troubleshooting their managed iOS apps. Here's how:
+## Use Microsoft Edge to access managed app logs
 
-1. Open Microsoft Edge on your iOS device.
+
+Users with Microsoft Edge installed on their iOS or Android device can view the management status of all Microsoft published apps. They can send logs for troubleshooting their managed iOS or Android apps by using the following steps:
+
+1. Open Microsoft Edge on your device.
 2. Type `about:intunehelp` in the address box.
 3. Microsoft Edge launches troubleshooting mode.
 
 For a list of the settings stored in the app logs, see [Review app protection logs in the Managed Browser](app-protection-policy-settings-log.md).
 
-To see how to view logs on Android devices, see [Send logs to your IT admin by email](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android).
+To see how to view logs on Android devices, see [Send logs to your IT admin by email](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android).
 
 ## Security and privacy for Microsoft Edge
 
