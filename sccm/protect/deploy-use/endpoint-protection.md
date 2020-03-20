@@ -2,7 +2,7 @@
 title: Endpoint Protection
 titleSuffix: Configuration Manager
 description: Learn how to manage antimalware policies and Windows Firewall security for clients.
-ms.date: 05/13/2019
+ms.date: 03/18/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -55,6 +55,8 @@ Beginning with Windows 10 and Windows Server 2016 computers, Windows Defender is
 -   [How to monitor Endpoint Protection](monitor-endpoint-protection.md) - Monitoring activity reports, infected client computers, and more.  
 
 -   [How to manage antimalware policies and firewall settings for Endpoint Protection](endpoint-antimalware-firewall.md) - Remediate malware found on client computers  
+
+-   [Log files for Endpoint Protection](/configmgr/core/plan-design/hierarchy/log-files#BKMK_EPLog)  
 
 
 ## Managing Windows Firewall with Endpoint Protection  
