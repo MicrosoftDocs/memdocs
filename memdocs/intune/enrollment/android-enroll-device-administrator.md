@@ -55,7 +55,7 @@ After a user has enrolled, you can begin managing their devices in Intune, inclu
 
 For information about other user tasks, see these articles:
 - [Resources about the end-user experience with Microsoft Intune](../fundamentals/end-user-educate.md)
-- [Using your Android device with Intune](https://docs.microsoft.com/user-help/using-your-android-device-with-intune)
+- [Using your Android device with Intune](https://docs.microsoft.com/mem/intune/user-help/why-enroll-android-device)
 
 
 ## Block device administrator enrollment

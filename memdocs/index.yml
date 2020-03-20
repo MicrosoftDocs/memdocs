@@ -82,7 +82,7 @@ conceptualContent:
         - url: https://docs.microsoft.com/windows/deployment/windows-autopilot/
           itemType: concept
           text: Windows Autopilot documentation
-        - url: /intune/enrollment/enrollment-autopilot.md
+        - url: /mem/intune/enrollment/enrollment-autopilot
           itemType: how-to-guide
           text: "Intune: Enroll Windows devices using Windows Autopilot"
         - url: https://docs.microsoft.com/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices
