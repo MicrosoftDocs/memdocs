@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020 
+ms.date: 03/05/2020 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -37,8 +37,17 @@ Learn about the most recent updates to the Microsoft Intune apps. We regularly a
 
 If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
-<!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+
+## Week of March 2, 2020   
+### Improved sign-in experience in Company Portal for Android   
+We've updated the layout of several sign-in screens in the Company Portal app for Android to make the experience more modern, simple, and clean for users. To see all Company Portal for Android enrollment instructions, go to [Enroll your Android device](/intune-user-help/enroll-device-android-company-portal) or [Enroll with Android work profile](/intune-user-help/enroll-device-android-work-profile).   
+
+
+|Updated|Previous|   
+|---|---|   
+|![Example image of new Company Portal sign in screen, sign in button.](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![Example image of previous Company Portal sign in page, showing busier design.](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
+|![Example image of new sign-in progress screen, showing one progress bar.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Example image of previous sign-in progress screen, showing a busier design.](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
 ## Week of February 3, 2020
 
 ### Screen removed from Company Portal, Android work profile enrollment <!--6103987 -->
