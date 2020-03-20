@@ -108,6 +108,7 @@ Users might see an error page in the browser when they tap the URL to the **Upda
 
 ## Next steps
 [See the end user flow](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md)
+
 [Manage Android work profile devices with Intune](android-enterprise-overview.md)
 
 
