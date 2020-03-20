@@ -135,6 +135,12 @@ To help you determine which devices are ready to upgrade to Office 365 ProPlus, 
 - Macro readiness
 - Macro advisories
 
+The following video is a session from Ignite 2019, which includes more information:
+
+> [!VIDEO https://medius.studios.ms/Embed/Video-nc/IG19-BRK3090]
+
+[Best practices for compatibility assessment and Microsoft Office 365 ProPlus upgrades using Office Readiness in Configuration Manager](https://myignite.techcommunity.microsoft.com/sessions/79338?source=sessions)
+
 ### Using the Office 365 ProPlus upgrade readiness dashboard
 
 After verifying you have the [prerequisites](#prerequisites), use the following instructions to use the dashboard:
