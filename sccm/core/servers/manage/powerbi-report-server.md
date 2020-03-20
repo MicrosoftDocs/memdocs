@@ -28,6 +28,9 @@ Save Power BI Desktop report files (.PBIX) and deploy them to the Power BI Repor
 
 - Download [Microsoft Power BI Report Server-September 2019](https://www.microsoft.com/download/details.aspx?id=57270).
 
+    > [!NOTE]
+    > Don't install Power BI Report Server right away. For the proper process based on your environment, see [Configure the reporting services point](#configure-the-reporting-services-point).
+
 - Download [Microsoft Power BI Desktop (Optimized for Power BI Report Server - September 2019)](https://www.microsoft.com/download/details.aspx?id=57271).
 
     > [!IMPORTANT]
@@ -39,19 +42,14 @@ Save Power BI Desktop report files (.PBIX) and deploy them to the Power BI Repor
 
 This process varies depending upon whether you already have this role in the site.
 
-### If you don't have a reporting services point
+### You have a reporting services point
 
-Do all steps of this process on the same server:
-
-1. Install Power BI Report Server.
-
-2. Add the reporting services point role in Configuration Manager. For more information, see [Configure reporting](/configmgr/core/servers/manage/configuring-reporting).
-
-### If you already have a reporting services point
-
-Do all steps of this process on the same server:
+Only use this process if you already have a reporting services point in the site. Do all steps of this process on the same server:
 
 1. In **Reporting Server Configuration Manager**, back up the **Encryption Keys**. For more information, see [SSRS Encryption Keys - Back Up and Restore Encryption Keys](https://docs.microsoft.com/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
+
+    > [!WARNING]
+    > If you skip this step, you'll lose access to any custom reports in SQL Server Reporting Services.
 
 1. Remove the reporting services point role from the site.
 
@@ -66,6 +64,14 @@ Do all steps of this process on the same server:
     1. Use **Reporting Server Configuration Manager** to restore the **Encryption Keys**.
 
 1. Add the reporting services point role in Configuration Manager.
+
+### You don't have a reporting services point
+
+Only use this process if you don't already have a reporting services point in the site. Do all steps of this process on the same server:
+
+1. Install Power BI Report Server.
+
+2. Add the reporting services point role in Configuration Manager. For more information, see [Configure reporting](/configmgr/core/servers/manage/configuring-reporting).
 
 ## Configure the Configuration Manager console
 

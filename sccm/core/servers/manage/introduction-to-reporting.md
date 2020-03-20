@@ -68,7 +68,7 @@ Like other Configuration Manager objects, an administrative user must have the a
 
 ### Create and modify reports
 
-For Reporting Services-based reports, Configuration Manager uses Microsoft SQL Server Report Builder as the exclusive authoring and editing tool for model-based and SQL-based reports. When you create or edit a report in the Configuration Manager console, Report Builder opens. For more information, see [Manage Configuration Manager reports](/configmgr/core/servers/manage/operations-and-maintenance-for-reporting#BKMK_ManageReports).
+For Reporting Services-based reports, Configuration Manager uses Microsoft SQL Server Report Builder as the exclusive authoring and editing tool for model-based and SQL-based reports. When you create or edit a report in the Configuration Manager console, Report Builder opens. For more information, see [Operations and maintenance for reporting](/configmgr/core/servers/manage/operations-and-maintenance-for-reporting).
 
 Starting in version 2002, to create or edit Power BI reports, the console integrates with Power BI Desktop. For more information, see [Create Power BI reports](/configmgr/core/servers/manage/powerbi-report-server#create-power-bi-reports).
 

@@ -82,6 +82,4 @@ For more information about any security recommendations and privacy information 
 
 ## Next steps
 
-- [Prerequisites for reporting](/configmgr/core/servers/manage/prerequisites-for-reporting)
-
-- [Reporting recommendations](/configmgr/core/servers/manage/best-practices-for-reporting)
+[Prerequisites for reporting](/configmgr/core/servers/manage/prerequisites-for-reporting)
