@@ -110,7 +110,7 @@ Following are key considerations for each supported partner.  Become familiar wi
 
 #### DISA Purebred
 
-Review the [user workflow for DISA Purebred](https://docs.microsoft.com/user-help/enroll-ios-device-disa-purebred). Key requirements for this workflow include:
+Review the [user workflow for DISA Purebred](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-disa-purebred). Key requirements for this workflow include:
 
 - Users need access to a computer or KIOSK where they can use their smart card to authenticate to the issuer.
 
@@ -126,7 +126,7 @@ For information getting and configuring the DISA Purebred app, see [Deploy the D
 
 #### Entrust Datacard
 
-Review the [user workflow for Entrust Datacard](https://docs.microsoft.com/user-help/enroll-ios-device-entrust-datacard). Key requirements for this workflow include:
+Review the [user workflow for Entrust Datacard](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-entrust-datacard). Key requirements for this workflow include:
 
 - Users need access to a computer or KIOSK where they can use their smart card to authenticate to the issuer.
 
@@ -136,7 +136,7 @@ Review the [user workflow for Entrust Datacard](https://docs.microsoft.com/user-
 
 #### Intercede
 
-Review the [user workflow for Intercede](https://docs.microsoft.com/user-help/enroll-ios-device-intercede). Key requirements for this workflow include:
+Review the [user workflow for Intercede](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-intercede). Key requirements for this workflow include:
 
 - Users need access to a computer or KIOSK where they can use their smart card to authenticate to the issuer.
 

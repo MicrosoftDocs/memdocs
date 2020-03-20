@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Assign Managed Google Play apps to Android Enterprise devices
+title: Add and assign Managed Google Play apps to Android Enterprise devices
 titleSuffix: Microsoft Intune
 description: Understand how to synchronize and assign apps to Android Enterprise devices from the Managed Google Play store.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps

@@ -50,8 +50,8 @@ You can also make sure that the time and date on the user's device are set corre
 
 Your managed device users can collect enrollment and diagnostic logs for you to review. User instructions for collecting logs are provided in:
 
-- [Send Android enrollment errors to your IT admin](https://docs.microsoft.com/user-help/send-enrollment-errors-to-your-it-admin-android)
-- [Send iOS/iPadOS errors to your IT admin](https://docs.microsoft.com/user-help/send-errors-to-your-it-admin-ios)
+- [Send Android enrollment errors to your IT admin](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
+- [Send iOS/iPadOS errors to your IT admin](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
 
 
 ## General enrollment issues
