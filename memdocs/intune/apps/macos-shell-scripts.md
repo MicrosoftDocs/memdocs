@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/11/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,7 +27,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use shell scripts on macOS devices in Intune (Preview)
+# Use shell scripts on macOS devices in Intune (Public Preview)
 
 > [!NOTE]
 > Shell scripts for macOS devices is currently in preview. Review the list of [known issues in preview](macos-shell-scripts.md#known-issues) before using this feature.
