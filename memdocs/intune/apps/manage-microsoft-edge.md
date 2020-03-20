@@ -374,7 +374,7 @@ Users with Microsoft Edge installed on their iOS device can view the management 
 
 For a list of the settings stored in the app logs, see [Review app protection logs in the Managed Browser](app-protection-policy-settings-log.md).
 
-To see how to view logs on Android devices, see [Send logs to your IT admin by email](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android).
+To see how to view logs on Android devices, see [Send logs to your IT admin by email](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android).
 
 ## Security and privacy for Microsoft Edge
 
