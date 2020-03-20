@@ -45,9 +45,9 @@ Endpoint Manager includes the following services:
 
   If you have on-premises infrastructure, such as Exchange or an Active Directory, the Intune connectors are also available:
 
-  - The **Intune Connector for Active Directory** adds entries to your on-premises Active Directory domain for computers that enroll using Windows Autopilot. For more information, see [Deploy hybrid Azure AD-joined devices](/intune/enrollment/windows-autopilot-hybrid.md).
-  - The **Intune Exchange connector** allows (or blocks) device access to your Exchange servers if devices are enrolled in Intune, and compliant with your policies. For more information, see [Set up the on-premises Intune Exchange connector](/intune/protect/exchange-connector-install.md).
-  - The **Intune certificate connector** processes certificate requests from devices that use certificates for authentication and S/MIME email encryption. For more information, see [Use certificates for authentication](/intune/protect/certificates-configure.md).
+  - The **Intune Connector for Active Directory** adds entries to your on-premises Active Directory domain for computers that enroll using Windows Autopilot. For more information, see [Deploy hybrid Azure AD-joined devices](/mem/intune/enrollment/windows-autopilot-hybrid).
+  - The **Intune Exchange connector** allows (or blocks) device access to your Exchange servers if devices are enrolled in Intune, and compliant with your policies. For more information, see [Set up the on-premises Intune Exchange connector](/mem/intune/protect/exchange-connector-install).
+  - The **Intune certificate connector** processes certificate requests from devices that use certificates for authentication and S/MIME email encryption. For more information, see [Use certificates for authentication](/mem/intune/protect/certificates-configure).
 
   As part of Endpoint Manager, use Intune to create and check for compliance, and deploy apps, features, and settings to your devices using the cloud.
 
@@ -75,11 +75,11 @@ Endpoint Manager includes the following services:
 
   As part of Endpoint Manager, use Autopilot to preconfigure devices, and automatically enroll devices in Intune. You can also integrate Autopilot with Configuration Manager and co-management for more complex device configurations (in preview).
 
-  For more information, see [Windows Autopilot overview](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot) and [Enroll Windows devices in Intune](/intune/enrollment/enrollment-autopilot.md).
+  For more information, see [Windows Autopilot overview](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot) and [Enroll Windows devices in Intune](/mem/intune/enrollment/enrollment-autopilot).
 
 - **Azure AD Premium**: Azure AD is used by Endpoint Manager for devices, users, groups, dynamic groups, auto-enrollment, multi-factor authentication, and conditional access. These features are key to protecting devices, apps, and data.
 
-  For more information, see [add users](/intune/fundamentals/users-add.md), [set up auto-enrollment](/intune/enrollment/windows-enroll.md), and [about conditional access](/intune/protect/conditional-access.md).
+  For more information, see [add users](/mem/intune/fundamentals/users-add), [set up auto-enrollment](/mem/intune/enrollment/windows-enroll), and [about conditional access](/mem/intune/protect/conditional-access).
 
 - **Endpoint Manager admin center**: The [admin center](https://devicemanagement.microsoft.com) is a one-stop web site to create policies and manage your devices. It plugs-in other key device management services, including groups, security, conditional access, and reporting. This admin center also shows devices managed by Configuration Manager and Intune (in preview).
 

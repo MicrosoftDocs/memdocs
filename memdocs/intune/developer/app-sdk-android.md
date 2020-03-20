@@ -389,7 +389,7 @@ deriving (e.g. `MediaPlayer`) also have required MAM equivalents, and
 | android.preference.PreferenceActivity | MAMPreferenceActivity |
 | android.support.multidex.MultiDexApplication | MAMMultiDexApplication |
 | android.widget.TextView | MAMTextView |
-| android.widget.AutoCompleteTextView |	MAMAutoCompleteTextView |
+| android.widget.AutoCompleteTextView |    MAMAutoCompleteTextView |
 | android.widget.CheckedTextView | MAMCheckedTextView |
 | android.widget.EditText | MAMEditText |
 | android.inputmethodservice.ExtractEditText | MAMExtractEditText |
@@ -416,7 +416,7 @@ deriving (e.g. `MediaPlayer`) also have required MAM equivalents, and
 |--|--|
 | android.support.v7.app.AlertDialog.Builder | MAMAlertDialogBuilder |
 | android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
-| android.support.v7.widget.AppCompatAutoCompleteTextView |	MAMAppCompatAutoCompleteTextView |
+| android.support.v7.widget.AppCompatAutoCompleteTextView |    MAMAppCompatAutoCompleteTextView |
 | android.support.v7.widget.AppCompatCheckedTextView | MAMAppCompatCheckedTextView |
 | android.support.v7.widget.AppCompatEditText | MAMAppCompatEditText |
 | android.support.v7.widget.AppCompatMultiAutoCompleteTextView | MAMAppCompatMultiAutoCompleteTextView |
@@ -715,7 +715,7 @@ AAD UPN and the cloud service username does not exist or the username
 is not known. `SaveLocation.LOCAL` is not a cloud service and so
 should always be used with a `null` username parameter.
 
-The previous method of determining whether a user’s policy allowed them to save data to various locations was `getIsSaveToPersonalAllowed()` within the same **AppPolicy** class. This function is now **deprecated** and should not be used, the following invocation is equivalent to `getIsSaveToPersonalAllowed()`:
+The previous method of determining whether a user's policy allowed them to save data to various locations was `getIsSaveToPersonalAllowed()` within the same **AppPolicy** class. This function is now **deprecated** and should not be used, the following invocation is equivalent to `getIsSaveToPersonalAllowed()`:
 
 ```java
 MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(SaveLocation.LOCAL, null);
@@ -861,7 +861,7 @@ however apps which use `MAMDataProtectionManager` should
 When MAM calls the app's `MANAGEMENT_REMOVED` receiver, the following will be true:
 * MAM has already decrypted previously encrypted files (but not
   protected data buffers) belonging to the app. Files in public
-  locations on the sdcard that don’t directly belong to the app
+  locations on the sdcard that don't directly belong to the app
   (e.g. the Documents or Download folders) are not decrypted.
 * New files or protected data buffers created by the receiver method
   (or any other code running after the receiver starts) will not
@@ -1153,7 +1153,7 @@ When an account is first registered, it begins in the `PENDING` state, indicatin
 | `NOT_LICENSED` | The user is not licensed for Intune, or the attempt to contact the Intune MAM service failed.  The app should continue in an unmanaged (normal) state and the user should not be blocked.  Enrollments will be retried periodically in case the user becomes licensed in the future. |
 | `ENROLLMENT_SUCCEEDED` | The enrollment attempt succeeded, or the user is already enrolled.  In the case of a successful enrollment, a policy refresh notification will be sent before this notification.  Access to corporate data should be allowed. |
 | `ENROLLMENT_FAILED` | The enrollment attempt failed.  Further details can be found in the device logs.  The app should not allow access to corporate data in this state, since it was previously determined that the user is licensed for Intune.|
-| `WRONG_USER` | Only one user per device can enroll an app with the MAM service. This result indicates that the user for whom this result was delivered (the second user) is targeted with MAM policy, but a different user is already enrolled. Because MAM policy cannot be enforced for the second user, your app must not allow access to this user’s data (possibly by removing the user from your app) unless/until enrollment for this user succeeds at a later time. Concurrent with delivering this `WRONG_USER` result, MAM will prompt with the option to remove the existing account. If the human user answers in the affirmative, it will indeed be possible to enroll the second user a short time later. As long as the second user remains registered, MAM will retry enrollment periodically. |
+| `WRONG_USER` | Only one user per device can enroll an app with the MAM service. This result indicates that the user for whom this result was delivered (the second user) is targeted with MAM policy, but a different user is already enrolled. Because MAM policy cannot be enforced for the second user, your app must not allow access to this user's data (possibly by removing the user from your app) unless/until enrollment for this user succeeds at a later time. Concurrent with delivering this `WRONG_USER` result, MAM will prompt with the option to remove the existing account. If the human user answers in the affirmative, it will indeed be possible to enroll the second user a short time later. As long as the second user remains registered, MAM will retry enrollment periodically. |
 | `UNENROLLMENT_SUCCEEDED` | Unenrollment was successful.|
 | `UNENROLLMENT_FAILED` | The unenrollment request failed.  Further details can be found in the device logs. In general, this will not occur as long as the app passes a valid (neither null nor empty) UPN. There is no direct, reliable remediation the app can take. If this value is received when unregistering a valid UPN, please report as a bug to the Intune MAM team.|
 | `PENDING` | The initial enrollment attempt for the user is in progress.  The app can block access to corporate data until the enrollment result is known, but is not required to do so. |
@@ -1212,9 +1212,9 @@ public interface MAMComplianceManager {
 }
 ```
 
-The `remediateCompliance()` method is called to attempt to put the app under management to satisfy the conditions for AAD to grant the requested token.  The first four parameters can be extracted from the exception received by the ADAL `AuthenticationCallback.onError()` method (see code sample below).  The final parameter is a boolean which controls whether a UX is shown during the compliance attempt.  This is a simple blocking progress style interface provided as a default for apps that don’t have a need to show customized UX during this operation.  It will only block while the compliance remediation is in progress and will not display the final result.  The app should register a notification receiver to handle the success or failure of the compliance remediation attempt (see below).
+The `remediateCompliance()` method is called to attempt to put the app under management to satisfy the conditions for AAD to grant the requested token.  The first four parameters can be extracted from the exception received by the ADAL `AuthenticationCallback.onError()` method (see code sample below).  The final parameter is a boolean which controls whether a UX is shown during the compliance attempt.  This is a simple blocking progress style interface provided as a default for apps that don't have a need to show customized UX during this operation.  It will only block while the compliance remediation is in progress and will not display the final result.  The app should register a notification receiver to handle the success or failure of the compliance remediation attempt (see below).
 
-The `remediateCompliance()` method may do a MAM enrollment as part of establishing compliance.  The app may receive an enrollment notification if it has registered a notification receiver for enrollment notifications.  The app’s registered `MAMServiceAuthenticationCallback` will have its `acquireToken()` method called to get a token for the MAM enrollment. `acquireToken()` will be called before the app has acquired its own token, so any bookkeeping or account creation tasks that the app does after a successful token acquisition may not have been done yet.  The callback must be able to acquire a token in this case.  If you can't return a token from `acquireToken()`, the compliance remediation attempt will fail.  If you call `updateToken()` later with a valid token for the requested resource, the compliance remediation will be retried immediately with the given token.
+The `remediateCompliance()` method may do a MAM enrollment as part of establishing compliance.  The app may receive an enrollment notification if it has registered a notification receiver for enrollment notifications.  The app's registered `MAMServiceAuthenticationCallback` will have its `acquireToken()` method called to get a token for the MAM enrollment. `acquireToken()` will be called before the app has acquired its own token, so any bookkeeping or account creation tasks that the app does after a successful token acquisition may not have been done yet.  The callback must be able to acquire a token in this case.  If you can't return a token from `acquireToken()`, the compliance remediation attempt will fail.  If you call `updateToken()` later with a valid token for the requested resource, the compliance remediation will be retried immediately with the given token.
 
 > [!NOTE]
 > Silent token acquisition will still be possible in `acquireToken()` because the user will have already been guided to install the broker and register the device before `ADALError.AUTH_FAILED_INTUNE_POLICY_REQUIRED` error is received.  This results in the broker having a valid refresh token in its cache, allowing silent acqisition of the requested token to succeed.
@@ -1264,7 +1264,7 @@ The `getComplianceStatus()` method returns the result of the compliance remediat
 | PENDING | The attempt to remediate compliance failed because the status response had not yet been received from the service when the time limit was exceeded. The app should try its token acquisition again later. |
 | COMPANY_PORTAL_REQUIRED | The Company Portal must be installed on the device in order for compliance remediation to succeed.  If the Company Portal is already installed on the device, the app needs to be restarted.  In this case, a dialog will be shown asking the user to restart the app. |
 
-If the compliance status is `MAMCAComplianceStatus.COMPLIANT`, the app should re-initiate its original token acquisition (for its own resource). If the compliance remediation attempt failed, the `getComplianceErrorTitle()` and `getComplianceErrorMessage()` methods will return localized strings that the app can display to the end user if it chooses.  Most of the error cases aren't remediable by the app, so for the general case it may be best to fail account creation or login and allow the user to try again later.  If a failure is persistent, the MAM logs may help determine the cause.  The end user can submit the logs using the directions found [here](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android "Email logs to your company support").
+If the compliance status is `MAMCAComplianceStatus.COMPLIANT`, the app should re-initiate its original token acquisition (for its own resource). If the compliance remediation attempt failed, the `getComplianceErrorTitle()` and `getComplianceErrorMessage()` methods will return localized strings that the app can display to the end user if it chooses.  Most of the error cases aren't remediable by the app, so for the general case it may be best to fail account creation or login and allow the user to try again later.  If a failure is persistent, the MAM logs may help determine the cause.  The end user can submit the logs using the directions found [here](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android "Email logs to your company support").
 
 Since `MAMComplianceNotification` extends `MAMUserNotification`, the identity of the user for whom the remediation was attempted is also available.
 
@@ -1391,7 +1391,7 @@ A BackupAgent allows you to be much more explicit about what data is backed up. 
 
 **Multi-identity Restore:**
 
-The Data Backup guide specifies a general algorithm for restoring your application’s data and provides a code sample in the [Extending BackupAgent](https://developer.android.com/guide/topics/data/keyvaluebackup.html#BackupAgent) section. In order to have a successful multi-identity restore, you must follow the general structure provided in this code sample with special attention to the following:
+The Data Backup guide specifies a general algorithm for restoring your application's data and provides a code sample in the [Extending BackupAgent](https://developer.android.com/guide/topics/data/keyvaluebackup.html#BackupAgent) section. In order to have a successful multi-identity restore, you must follow the general structure provided in this code sample with special attention to the following:
 
 1. You must utilize a `while(data.readNextHeader())` loop to go through the backup entities. In the previous code, `data` is the local variable name for the **MAMBackupDataInput** that is passed to your app upon restore.
 
@@ -1561,7 +1561,7 @@ identity switch.
 In addition to the app's ability to set the identity, a thread, or a context's identity may change based on data ingress from another Intune-managed app that has app protection policy.
 
 #### Examples
-1. If an activity is launched from an `Intent` sent by another MAM app, the activity’s identity will be set based on the effective identity in the other app at the point the `Intent` was sent.
+1. If an activity is launched from an `Intent` sent by another MAM app, the activity's identity will be set based on the effective identity in the other app at the point the `Intent` was sent.
 
 2. For services, the thread identity will be set similarly for the duration of an `onStart` or `onBind` call. Calls into the `Binder` returned from `onBind` will also temporarily set the thread identity.
 
@@ -1674,7 +1674,7 @@ To use `MAMAsyncTask`, simply inherit from it instead of `AsyncTask` and replace
 ```
 
 ### File Protection
-Every file has an identity associated with it at the time of creation, based on thread and process identity. This identity will be used for both file encryption and selective wipe. Only files whose identity is managed and has policy requiring encryption will be encrypted. The SDK's default selective functionality wipe will only wipe files associated with the managed identity for which a wipe has been requested. The app may query or change a file’s identity using the `MAMFileProtectionManager` class.
+Every file has an identity associated with it at the time of creation, based on thread and process identity. This identity will be used for both file encryption and selective wipe. Only files whose identity is managed and has policy requiring encryption will be encrypted. The SDK's default selective functionality wipe will only wipe files associated with the managed identity for which a wipe has been requested. The app may query or change a file's identity using the `MAMFileProtectionManager` class.
 
 ```java
 public final class MAMFileProtectionManager {
@@ -1686,12 +1686,12 @@ public final class MAMFileProtectionManager {
     * this method will silently do nothing.
     *
     * @param identity
-    * 		Identity to set.
+    *         Identity to set.
     * @param file
-    * 		File to protect.
+    *         File to protect.
     *
     * @throws IOException
-    * 		If the file cannot be protected.
+    *         If the file cannot be protected.
     */
    public static void protect(final File file, final String identity) throws IOException;
 
@@ -2051,7 +2051,7 @@ MAMAppConfig appConfig = configManager.getAppConfig(identity);
 String fooValue = null;
 if (appConfig.hasConflict("foo")) {
     List<String> values = appConfig.getAllStringsForKey("foo");
-	fooValue = chooseBestValue(values);
+    fooValue = chooseBestValue(values);
 } else {
     valueToUse = appConfig.getStringForKey("foo", MAMAppConfig.StringQueryType.Any);
 }
@@ -2172,7 +2172,7 @@ The Intune SDK maintains the contract provided by the Android API, though failur
 The Intune App SDK for Android does not control data collection from your app. The Company Portal application logs system-generated data by default. This data is sent to Microsoft Intune. As per Microsoft Policy, we do not collect any personal data.
 
 > [!NOTE]
-> If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](https://docs.microsoft.com/user-help/turn-off-microsoft-usage-data-collection-android). 
+> If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android). 
 
 ## Recommended Android best practices
 
