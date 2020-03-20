@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -203,6 +203,7 @@ To learn how to add apps for each platform to Intune, see:
 - [Windows LOB app](lob-apps-windows.md)
 - [Office 365 apps for Windows 10](apps-add-office365.md)
 - [Office 365 apps for macOS](apps-add-office365-macos.md)
+- [Managed Google Play apps](apps-add-android-for-work.md)
 - [Microsoft Edge for Windows 10](apps-windows-edge.md)
 - [Microsoft Edge for macOS](apps-edge-macos.md)
 - [Built-in apps](apps-add-built-in.md)
