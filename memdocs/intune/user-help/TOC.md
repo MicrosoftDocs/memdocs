@@ -16,6 +16,7 @@
 #### [Enroll your Android device](enroll-device-android-company-portal.md)  
 #### [Enroll with Android work profile](enroll-device-android-work-profile.md)
 #### [Enroll with Microsoft Intune app](enroll-device-android-microsoft-intune-app.md)
+### [Move to new device management setup](move-to-new-device-management-setup.md)
 ### [Use managed apps on your device](use-managed-apps-on-your-device-android.md)
 ### [Encrypt your device](encrypt-your-device-android.md)
 ### [Set your PIN or password](set-your-pin-or-password-android.md)

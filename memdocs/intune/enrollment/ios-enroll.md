@@ -50,7 +50,7 @@ You can let users enroll their personal devices for Intune management, know as "
 - Device Enrollment is what you may think of as typical BYOD enrollment. It provides admins with a wide range of management options.
 - User Enrollment is a more streamlined enrollment process that provides admins with a subset of device management options. This feature is currently in preview. 
 
-After you've completed the prerequisites and assigned user licenses, users can download the Intune Company Portal app from the App Store, and follow enrollment instructions in the app. You can customize the Company Portal privacy statement on iOS/iPadOS devices as explained in [privacy statement customization](../apps/company-portal-app.md#privacy-statement-customization).
+After you've completed the prerequisites and assigned user licenses, users can download the Intune Company Portal app from the App Store, and follow enrollment instructions in the app. You can customize the Company Portal privacy statement on iOS/iPadOS devices as explained in [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md#configuration).
 
 ## Company-owned iOS/iPadOS devices
 
