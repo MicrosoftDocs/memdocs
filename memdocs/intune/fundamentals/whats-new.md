@@ -87,15 +87,6 @@ A new Intune feature is available that enables users to retrieve their personal 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
 
-#### Device configuration profile settings and values are updated for Windows platforms<!-- 4091122   -->
-When you create device configuration profiles for Windows platforms (**Devices** > **Configuration profiles** > **Create profile** > any **Windows** option for platform), some settings and their values are different from the CSP, and can be confusing. The setting names and their values are updated to be clearer.
-
-Applies to:
-- Windows 10 and later device configuration profiles
-- Windows Holographic for Business device configuration profiles
-- Windows 8.1 device configuration profiles
-- Windows Phone 8.1 device configuration profiles
-
 #### VPN profiles with IKEv2 VPN connections can use always on with iOS/iPadOS devices<!-- 1947932   -->
 On iOS/iPadOS devices, you can create a VPN profile that uses an IKEv2 connection (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **VPN** for profile type). Now, you can configure always-on with IKEv2. When configured, IKEv2 VPN profiles connect automatically, and stay connected (or quickly reconnect) to the VPN. It stays connected even when moving between networks or restarting devices.
 
