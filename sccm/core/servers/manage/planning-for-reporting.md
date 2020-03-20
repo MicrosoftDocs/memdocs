@@ -53,6 +53,9 @@ Unlike other objects in Configuration Manager, the security rights that you set 
 
 For example, the **Software Update Manager** security role has the **Run Report** and **Modify Report** permissions. Users with the **Software Update Manager** role can only run and modify reports for software updates. The Configuration Manager console doesn't display reports for other objects to this role. The exception to this behavior is that some reports aren't associated with specific Configuration Manager securable objects. For these reports, the administrative user must have the **Read** right for the **Site** permission to run the reports and the **Modify** right for the **Site** permission to modify the reports.  
 
+> [!IMPORTANT]
+> For users from a different domain than that of the reporting services point account to successfully run reports, establish a two-way trust between the two domains.
+
 Reports are fully enabled for role-based administration. Configuration Manager filters the data for all included reports based on the permissions of the user who runs the report. Users with specific roles can only view information defined for their roles.
 
 For more information about security rights for reporting, see [Configure reporting](/configmgr/core/servers/manage/configuring-reporting).
@@ -70,6 +73,12 @@ Consider the following recommendations and tips for reporting in Configuration M
 - Schedule report subscription processing to run outside standard office hours. Whenever possible, processing subscriptions during off-hours can minimize the CPU processing on the Configuration Manager site database server. This practice also improves availability for unpredicted report requests.
 
 - Site updates preserve built-in reports. If you modify a standard report, when the site updates, it renames the report with an underscore prefix (`_`). This behavior makes sure that the site update doesn't overwrite the modified report by the standard report.
+
+## Security and privacy
+
+Configuration Manager reports display information that it collects during standard Configuration Manager management operations. For example, you can display a report of information that Configuration Manager collected from discovery or inventory. Reports can also contain the current status information for client management operations, such as deploying software, and checking for compliance.
+
+For more information about any security recommendations and privacy information for Configuration Manager operations that might generate data that you can view in reports, see [Security and privacy for Configuration Manager](/configmgr/core/plan-design/security/security-and-privacy).  
 
 ## Next steps
 

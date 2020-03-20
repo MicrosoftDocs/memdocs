@@ -596,8 +596,6 @@
         href: servers/manage/operations-and-maintenance-for-reporting.md
       - name: Create custom report models
         href: servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md
-      - name: Security and privacy for reporting
-        href: servers/manage/security-and-privacy-for-reporting.md
     - name: Data warehouse
       href: servers/manage/data-warehouse.md
   - name: Support Center

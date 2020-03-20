@@ -111,7 +111,7 @@ A report subscription in Reporting Services is a recurring request to deliver a 
 
 You can manage report subscriptions in the Configuration Manager console. The report server processes the subscriptions. It distributes them by using delivery extensions that are deployed on the server. By default, you can create subscriptions that send reports to a shared folder or to an email address.
 
-For more information, see [Manage report subscriptions](/configmgr/core/servers/manage/operations-and-maintenance-for-reporting#BKMK_ManageReportSubscriptions).
+For more information, see [Manage report subscriptions](/configmgr/core/servers/manage/operations-and-maintenance-for-reporting#bkmk_subscription).
 
 ## Report Builder
 

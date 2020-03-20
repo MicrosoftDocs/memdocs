@@ -55,7 +55,7 @@ The deployment state for package and program deployments is not aggregated.
 
  Application management in Configuration Manager includes a number of built-in reports that enable you to monitor information about applications and deployments. These reports have the report category of **Software Distribution – Application Monitoring**.  
 
- For more information about how to configure reporting in Configuration Manager, see [Reporting](../../core/servers/manage/reporting.md).  
+ For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
 
 ## Monitor the state of an application in the Configuration Manager console  
 

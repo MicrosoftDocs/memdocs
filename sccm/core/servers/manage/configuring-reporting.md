@@ -2,7 +2,7 @@
 title: Configure reporting
 titleSuffix: Configuration Manager
 description: How to set up reporting in your Configuration Manager hierarchy, including information about SQL Server Reporting Services.
-ms.date: 08/22/2019
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Configure reporting in Configuration Manager
@@ -22,11 +20,11 @@ Before you can create, modify, and run reports in the Configuration Manager cons
 
 Before you install and configure SQL Server Reporting Services in your hierarchy, review the following Configuration Manager reporting articles:  
 
-- [Introduction to reporting in Configuration Manager](/sccm/core/servers/manage/introduction-to-reporting)  
+- [Introduction to reporting](/sccm/core/servers/manage/introduction-to-reporting)  
 
-- [Planning for reporting in Configuration Manager](/sccm/core/servers/manage/planning-for-reporting)  
+- [Plan for reporting](/sccm/core/servers/manage/planning-for-reporting)  
 
-## <a name="BKMK_SQLReportingServices"></a> SQL Server Reporting Services
+## SQL Server Reporting Services
 
 SQL Server Reporting Services is a server-based reporting platform that provides comprehensive reporting functionality for different kinds of data sources. The reporting services point in Configuration Manager communicates with SQL Server Reporting Services to:
 
@@ -38,7 +36,9 @@ When you run a report, the Reporting Services component connects to the Configur
 
 Before you can install the reporting services point in a Configuration Manager site, install and configure SQL Server Reporting Services on the target site system. For more information, see [Install SQL Server Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services).  
 
-Use the following procedure to verify that SQL Server Reporting Services is installed and running correctly.  
+### Verify SQL Server Reporting Services installation
+
+Use the following procedure to verify that SQL Server Reporting Services is installed and running correctly.
 
 1. Go to the **Start** menu on the site system, and open **Reporting Services Configuration Manager**. You may find it in the **Configuration Tools** section of the **Microsoft SQL Server** group.
 
@@ -57,19 +57,19 @@ Use the following procedure to verify that SQL Server Reporting Services is inst
 
 7. Select **Exit** to close Reporting Services Configuration Manager.  
 
-## <a name="BKMK_ReportBuilder3"></a> Configure reporting to use Report Builder 3.0
+## Configure reporting to use Report Builder 3.0
 
 1. On the computer running the Configuration Manager console, open the Windows Registry Editor.  
 
-2. Browse to **HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node/Microsoft/ConfigMgr10/AdminUI/Reporting**.  
+2. Browse to `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\ConfigMgr10\AdminUI\Reporting`.
 
 3. Open the **ReportBuilderApplicationManifestName** key to edit the value data.  
 
-4. Change **ReportBuilder_2_0_0_0.application** to **ReportBuilder_3_0_0_0.application**, and then select **OK**.  
+4. Change the value to `ReportBuilder_3_0_0_0.application`, and then select **OK** to save.
 
 5. Close the Windows Registry Editor.  
 
-## <a name="BKMK_InstallReportingServicesPoint"></a> Install a reporting services point
+## Install a reporting services point
 
 To manage reports at the site, install the reporting services point. The reporting services point:
 
@@ -77,7 +77,7 @@ To manage reports at the site, install the reporting services point. The reporti
 - Applies the security policy for the reports and folders
 - Sets configuration settings in Reporting Services
 
-### <a name="bkmk_requirements" /> Requirements and limitations
+### Requirements and limitations
 
 Before you can view or manage reports in the Configuration Manager console, you need a reporting services point. Configure this site system role on a server with Microsoft SQL Server Reporting Services. For more information, see [Prerequisites for reporting](/sccm/core/servers/manage/prerequisites-for-reporting).  
 
@@ -167,7 +167,7 @@ When you install a reporting services point on a site without language packs, th
 
 For more information, see [Language packs](/sccm/core/servers/deploy/install/language-packs).
 
-### <a name="BKMK_FileInstallationAndSecurity"></a> File installation and report folder security rights
+### File installation and report folder security rights
 
 Configuration Manager does the following actions to install the reporting services point and to configure Reporting Services:  
 
@@ -198,7 +198,7 @@ Configuration Manager does the following actions to install the reporting servic
 
 Configuration Manager connects to Reporting Services and sets the permissions for users on the Configuration Manager and Reporting Services root folders and specific report folders. After the initial installation of the reporting services point, Configuration Manager connects to Reporting Services every 10 minutes to verify that the user rights configured on the report folders are the associated rights that are set for Configuration Manager users. When users are added or user rights are modified on the report folder by using Reporting Services Report Manager, Configuration Manager overwrites those changes by using the role-based assignments stored in the site database. Configuration Manager also removes users that don't have Reporting rights in Configuration Manager.  
 
-### <a name="BKMK_SecurityRoles"></a> Reporting Services security roles
+### Reporting Services security roles
 
 When Configuration Manager installs the reporting services point, it adds the following security roles in Reporting Services:  
 
@@ -206,7 +206,7 @@ When Configuration Manager installs the reporting services point, it adds the fo
 
 - **ConfigMgr Report Administrators**: Users assigned with this security role can do all tasks related to reporting in Configuration Manager.  
 
-## <a name="BKMK_VerifyReportingServicesPointInstallation"></a> Verify installation
+## <a name="bkmk_verify"></a> Verify installation
 
 Verify the installation of the reporting services point by looking at specific status messages and log file entries. Use the following procedure to verify that the reporting services point installation was successful.  
 
@@ -231,7 +231,7 @@ Open the **Srsrp.log** file, located in the **Logs** directory of the Configurat
 
 Step through this log file starting from the time that the reporting services point was successfully installed. Verify that the report folders were created, the reports were deployed, and the security policy on each folder was confirmed. After the last line of security policy confirmations, look for the string `Successfully checked that the SRS web service is healthy on server`.  
 
-## <a name="BKMK_Certificate"></a> Configure a certificate to author reports
+## Configure a certificate to author reports
 
 There are many options for you to author reports in SQL Server Reporting Services. When you create or edit reports in the Configuration Manager console, Configuration Manager opens Report Builder to use as the authoring environment. Regardless of how you author your Configuration Manager reports, you need a self-signed certificate for server authentication to the site database server.
 
@@ -242,7 +242,7 @@ Configuration Manager automatically installs the certificate on the site server 
 
 When you create or modify reports from a Configuration Manager console on a different computer, export the certificate from the site server. The specific certificate's friendly name is the FQDN of the site server in the **Trusted People** certificate store for the local computer. Add this certificate to the **Trusted People** certificate store on the computer that runs the Configuration Manager console.  
 
-## <a name="BKMK_ModifyReportingServicesPoint"></a> Modify reporting services point settings
+## Modify reporting services point settings
 
 After you install this role, you can modify the site database connection and authentication settings in the reporting services point properties.
 
@@ -267,13 +267,17 @@ After you install this role, you can modify the site database connection and aut
 
 For more information about these settings, see the descriptions in the section to [Install the reporting services point on a site system](#bkmk_install).
 
-## <a name="bkmk_upgradesql" /> Upgrade SQL Server
+## Power BI Report Server
+
+Starting in version 2002, you can integrate reporting with Power BI Report Server. For more information on configuring it, see [Integrate with Power BI Report Server](/configmgr/core/servers/manage/powerbi-report-server).
+
+## Upgrade SQL Server
 
 To upgrade SQL Server and SQL Server Reporting Services, first remove the reporting services point from the site. After you upgrade SQL Server, then reinstall the reporting services point in Configuration Manager.
 
 If you don't follow this process, you'll see errors when you run or edit reports from the Configuration Manager console. You can continue to run and edit reports successfully from a web browser.  
 
-## <a name="BKMK_ConfigureReportOptions"></a> Configure report options
+## Configure report options
 
 You can select the default reporting services point that you use to manage reports. The site can have more than one reporting services point, but it only uses the default server to manage reports. Use the following procedure to configure report options for your site.  
 
@@ -283,7 +287,7 @@ You can select the default reporting services point that you use to manage repor
 
 1. Select the default report server in the list, and then select **OK**.
 
-If it doesn't show any servers, verify that you installed and configured a reporting services point in the site. For more information, see [Verify installation](#BKMK_VerifyReportingServicesPointInstallation).
+If it doesn't show any servers, verify that you installed and configured a reporting services point in the site. For more information, see [Verify installation](#bkmk_verify).
 
 Make sure your computer runs a version of SQL Server Report Builder that matches the version of SQL Server that you use for your report server. Otherwise you'll see an error, the default report server won't save, and you can't create or edit reports.<!-- SCCMDocs#791 -->
 

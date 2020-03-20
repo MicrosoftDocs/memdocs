@@ -54,7 +54,7 @@ After you have deployed Configuration Manager configuration baselines to devices
 > [!IMPORTANT]  
 >  You must use a wildcard (**%**) character when you use the parameters **Device filter** and User filter in the compliance settings reports.  
 
- For more information about how to configure Reporting in Configuration Manager, see [Reporting](../../core/servers/manage/reporting.md)  
+ For more information about how to configure Reporting in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).
 
 ##  View compliance results on a Configuration Manager Windows client computer
 
