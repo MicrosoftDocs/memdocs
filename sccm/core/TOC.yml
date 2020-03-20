@@ -703,6 +703,8 @@
         href: clients/deploy/deploy-clients-to-windows-computers.md
       - name: Install clients using Azure AD
         href: clients/deploy/deploy-clients-cmg-azure.md
+      - name: Token-based authentication for CMG
+        href: clients/deploy/deploy-clients-cmg-token.md
       - name: Client installation properties
         href: clients/deploy/about-client-installation-properties.md
       - name: Client installation properties published to AD
