@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -225,17 +225,34 @@ You can specify **Derived credential** for the following profile types and purpo
 Use derived credentials for certificate-based authentication to web sites and applications. To deliver a derived credential for app authentication:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
-3. Enter the following settings:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Derived credential for iOS/iPadOS devices profile**.
-    - **Description**: Enter a description that gives an overview of the setting, and any other important details.
-    - **Platform**: Select **iOS/iPadOS**.
-    - **Profile type**: Select **Derived credential**.
+3. Enter the following properties:
+   - **Platform**: Select the platform of the devices that will receive this profile.
+   - **Profile**: Select **Derived credential**
 
-4. Select **OK** to save your changes.
-5. When finished, select **OK** > **Create** to create the Intune profile. When complete, your profile is shown in the **Devices - Configuration profiles** list.
-6. Select your new profile > **Assignments**. Select the groups that should receive the policy.
+4. Select **Create**.
+
+5. In **Basics**, enter the following properties:
+
+   - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Derived credential for iOS/iPadOS devices profile**.
+   - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+
+6. Select **Next**.
+
+7. In **Configuration settings**, Set **Use a derived credential for app authentication** to **Yes**, and then select **Next**.
+
+8. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+   Select **Next**.
+
+9. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+    Select **Next**.
+
+10. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
  
 Users receive the app or email notification depending on the settings you specified when you set up the derived credential issuer. The notification informs the user to launch the Company Portal so that the derived credential policies can be processed.
 
