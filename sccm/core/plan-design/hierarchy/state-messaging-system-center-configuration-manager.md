@@ -2,7 +2,7 @@
 title: State messages
 titleSuffix: Configuration Manager
 description: Descriptions of state messages in the supported versions of Configuration Manager.
-ms.date: 02/26/2019
+ms.date: 03/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -104,7 +104,7 @@ Each Configuration Manager feature that uses state messages is identified by the
 | 13 | Downloaded update        |
 | 14 |Failed to download the update        |
 
-## 500 STATE_TOPTCTYPE_SUM_UPDATE_DETECTION
+## 500 STATE_TOPICTYPE_SUM_UPDATE_DETECTION
 
 |     State Message ID     |  State Message Description |
 |:-------------|:------|
