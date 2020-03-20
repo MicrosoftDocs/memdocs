@@ -41,7 +41,7 @@ If you're an employee or student, be sure to check out the screenshots and links
 
 ## Week of March 2, 2020   
 ### Improved sign-in experience in Company Portal for Android   
-We've updated the layout of several sign-in screens in the Company Portal app for Android to make the experience more modern, simple, and clean for users. To see all Company Portal for Android enrollment instructions, go to [Enroll your Android device](/intune-user-help/enroll-device-android-company-portal) or [Enroll with Android work profile](/intune-user-help/enroll-device-android-work-profile).   
+We've updated the layout of several sign-in screens in the Company Portal app for Android to make the experience more modern, simple, and clean for users. To see all Company Portal for Android enrollment instructions, go to [Enroll your Android device](../user-help/enroll-device-android-company-portal) or [Enroll with Android work profile](../user-help/enroll-device-android-work-profile).   
 
 
 |Updated|Previous|   
