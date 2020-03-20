@@ -440,7 +440,7 @@ Use the following information to help you monitor and plan for power management 
 
 - A graph showing the average daily CO2 generated (in tons) for each computer in the specified collection for the last 31 days.  
 
-- A table showing the total daily CO2 generated and the average daily CO2 generatedfor computers in the specified collection for the last 31 days.  
+- A table showing the total daily CO2 generated and the average daily CO2 generated for computers in the specified collection for the last 31 days.  
 
   The **Environmental Impact by Day** report calculates the amount of CO2 generated (in tons) by using the time that a computer or monitor was turned on in a 24 hour period.  
 
