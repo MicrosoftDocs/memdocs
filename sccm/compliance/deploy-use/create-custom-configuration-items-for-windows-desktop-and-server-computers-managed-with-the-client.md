@@ -381,7 +381,7 @@ Build custom reports to view the remediation history by using the public view **
 
 ### Enable the Track remediation history when supported option
 
-- For new configuration items, add the **Track remediation history when supported** option in the **Compliance Rules** tab when you create a new setting on the wizard's **Settings** page
+- For new configuration items, add the **Track remediation history when supported** option in the **Compliance Rules** tab when you create a new setting on the wizard's **Settings** page.
 - For existing configuration items, add the **Track remediation history when supported** option on the **Compliance Rules** tab in the configuration item **Properties**.
 [ ![Track remediation history when supported in version 2002](./media/4261411-remediation-history.png)](./media/4261411-remediation-history.png#lightbox)
 
