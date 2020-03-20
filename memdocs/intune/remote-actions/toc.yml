@@ -49,12 +49,16 @@
       href: device-rename.md
     - name: Send notifications
       href: custom-notifications.md
-    - name: Remote control mobile devices
+    - name: Remotely assist mobile devices
+      href: remote-assist-mobile-devices.md
+    - name: Use TeamViewer for remote administration
       href: teamviewer-support.md
     - name: Synchronize device
       href: device-sync.md
     - name: Examine device inventory
       href: device-inventory.md
+  - name: Bulk device actions
+    href: bulk-device-actions.md
   - name: Troubleshooting
     items:
     - name: Troubleshoot device actions

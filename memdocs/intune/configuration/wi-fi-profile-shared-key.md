@@ -20,7 +20,7 @@ ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 #ROBOTS:
 #audience:
 
-ms.reviewer: karanda
+ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -56,7 +56,7 @@ This feature supports:
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Custom OMA-URI Wi-Fi profile settings for Android devices**.
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Custom OMA-URI Wi-Fi profile settings for Android device administrator devices**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
     - **Platform**: Choose your platform.
     - **Profile type**: Select **Custom**.
@@ -143,6 +143,7 @@ xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
 ```
 
 ### EAP-based Wi-Fi profile example
+
 The following example includes the XML code for an EAP-based Wi-Fi profile: The example is provided to show proper format and provide more details. It's only an example, and isn't intended as a recommended configuration for your environment.
 
 

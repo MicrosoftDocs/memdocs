@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 03/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -41,7 +41,7 @@ For more information about configuration service providers (CSPs), see [Configur
 
 ## Microsoft Defender Application Guard  
 
-While using Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren’t listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary, which are configured in Device Configuration.  
+While using Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren't listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary, which are configured in Device Configuration.  
 
 Application Guard is only available for Windows 10 (64-bit) devices. Using this profile installs a Win32 component to activate Application Guard.  
 
@@ -174,7 +174,7 @@ These settings are applicable to all network types.
   **Default**: Not configured  
   Firewall CSP: [MdmStore/Global/OpportunisticallyMatchAuthSetPerKM](https://go.microsoft.com/fwlink/?linkid=872550)  
   
-  - **Enable** Keying modules must ignore only the authentication suites that they don’t support.  
+  - **Enable** Keying modules must ignore only the authentication suites that they don't support.  
   - **Not configured**, Keying modules must ignore the entire authentication set if they don't support all of the authentication suites specified in the set.  
 
 
@@ -347,7 +347,7 @@ Custom Firewall rules support the following options:
   - **File path** – You must specify a file path to an app on the client device, which can be an absolute path, or a relative path. For example:  C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe.  
     Firewall CSP: [FirewallRules/*FirewallRuleName*/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)  
 
-  - **Windows service** – Specify the Windows service short name if it’s a service and not an application that sends or receives traffic. To find the service short name, use the PowerShell command **Get-Service**.  
+  - **Windows service** – Specify the Windows service short name if it's a service and not an application that sends or receives traffic. To find the service short name, use the PowerShell command **Get-Service**.  
     Firewall CSP: [FirewallRules/*FirewallRuleName*/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)  
 
   - **All**– *No additional configuration is available*.  
@@ -363,7 +363,7 @@ Specify the local and remote addresses to which this rule applies.
   Select **Any address** or **Specified address**.  
 
   When you use *Specified address*, you add one or more addresses as a comma-separated list of local addresses that are covered by the rule. Valid tokens include:  
-  - Use an asterisk “*” for *any* local address. If you use an asterisk, it must be the only token you use.  
+  - Use an asterisk "*" for *any* local address. If you use an asterisk, it must be the only token you use.  
   - To specify a subnet use either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.  
   - A valid IPv6 address.  
   - An IPv4 address range in the format of "start address - end address" with no spaces included.  
@@ -376,7 +376,7 @@ Specify the local and remote addresses to which this rule applies.
   Select **Any address** or **Specified address**.  
 
   When you use *Specified address*, you add one or more addresses as a comma-separated list of remote addresses that are covered by the rule. Tokens aren't case-sensitive. Valid tokens include:  
-  - Use an asterisk “*” for *any* remote address. If you use an asterisk, it must be the only token you use.  
+  - Use an asterisk "*" for *any* remote address. If you use an asterisk, it must be the only token you use.  
   - "Defaultgateway"  
   - "DHCP"  
   - "DNS"  
@@ -477,7 +477,7 @@ Base settings are universal BitLocker settings for all types of data drives. The
   - **Not configured** - Allow the warning for other disk encryption to be shown.  
 
   > [!TIP]  
-  > To install BitLocker automatically and silently on a device that’s Azure AD joined and runs Windows 1809 or later, this setting must be set to *Block*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+  > To install BitLocker automatically and silently on a device that's Azure AD joined and runs Windows 1809 or later, this setting must be set to *Block*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
   When set to *Block*, you can then configure the following setting:  
 
@@ -490,7 +490,7 @@ Base settings are universal BitLocker settings for all types of data drives. The
      - **Not configured** only Administrators can enable BitLocker encryption on the device.  
 
   > [!TIP]  
-  > To install BitLocker automatically and silently on a device that’s Azure AD joined and runs Windows 1809 or later, this setting must be set to *Allow*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+  > To install BitLocker automatically and silently on a device that's Azure AD joined and runs Windows 1809 or later, this setting must be set to *Allow*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
 - **Configure encryption methods**  
   **Default**: Not configured  
@@ -566,7 +566,7 @@ These settings apply specifically to operating system data drives.
     - **Require startup PIN with TPM**
 
     > [!TIP]
-    > To install BitLocker automatically and silently on a device that’s Azure AD joined and runs Windows 1809 or later, this setting must not be set to *Require startup PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+    > To install BitLocker automatically and silently on a device that's Azure AD joined and runs Windows 1809 or later, this setting must not be set to *Require startup PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
   - **Compatible TPM startup key**  
     **Default**: Allow startup key with TPM  
@@ -578,7 +578,7 @@ These settings apply specifically to operating system data drives.
     - **Require startup key with TPM**  
 
     > [!TIP]
-    > To install BitLocker automatically and silently on a device that’s Azure AD joined and runs Windows 1809 or later, this setting must not be set to *Require startup key with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+    > To install BitLocker automatically and silently on a device that's Azure AD joined and runs Windows 1809 or later, this setting must not be set to *Require startup key with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
   - **Compatible TPM startup key and PIN**  
     **Default**: Allow startup key and PIN with TPM  
@@ -589,7 +589,7 @@ These settings apply specifically to operating system data drives.
     - **Require startup key and PIN with TPM**   
 
     > [!TIP]  
-    > To install BitLocker automatically and silently on a device that’s Azure AD joined and runs Windows 1809 or later, this setting must not be set to *Require startup key and PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+    > To install BitLocker automatically and silently on a device that's Azure AD joined and runs Windows 1809 or later, this setting must not be set to *Require startup key and PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
 - **Minimum PIN Length**  
     **Default**: Not configured  
@@ -900,7 +900,7 @@ Block the following to help prevent against script threats:
   - **Block** - Block untrusted and unsigned processes that run from USB.  
   - **Audit only**  
   
-- **Executables that don’t meet a prevalence, age, or trusted list criteria**  
+- **Executables that don't meet a prevalence, age, or trusted list criteria**  
   **Default**: Not configured  
   Rule: [Block executable files from running unless they meet a prevalence, age, or trusted list criterion](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
 
@@ -1246,7 +1246,7 @@ Use these options to configure the local security settings on Windows 10 devices
   LocalPoliciesSecurityOptions CSP: [Accounts_RenameAdministratorAccount](https://go.microsoft.com/fwlink/?linkid=867917)  
  
 
-  Define a different account name to be associated with the security identifier (SID) for the account “Administrator”.  
+  Define a different account name to be associated with the security identifier (SID) for the account "Administrator".  
 
  #### Guest  
 
@@ -1261,7 +1261,7 @@ Use these options to configure the local security settings on Windows 10 devices
   **Default**: *Not configured*  
   LocalPoliciesSecurityOptions CSP: [Accounts_RenameGuestAccount](https://go.microsoft.com/fwlink/?linkid=867918)  
   
-  Define a different account name to be associated with the security identifier (SID) for the account “Guest”.  
+  Define a different account name to be associated with the security identifier (SID) for the account "Guest".  
 
 ### Devices  
 
@@ -1307,7 +1307,7 @@ Use these options to configure the local security settings on Windows 10 devices
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MachineInactivityLimit](https://go.microsoft.com/fwlink/?linkid=867891)  
 
 
-  Enter the maximum minutes of inactivity on the interactive desktop’s sign-in screen until the screen saver starts. (**0** - **99999**)  
+  Enter the maximum minutes of inactivity on the interactive desktop's sign-in screen until the screen saver starts. (**0** - **99999**)  
 
 - **Require CTRL+ALT+DEL to log on**  
   **Default**: Not configured  
@@ -1528,7 +1528,7 @@ Use these options to configure the local security settings on Windows 10 devices
   - **Prompt for credentials on the secure desktop**  
   - **Prompt for credentials**  
 
-- **Route elevation prompts to user’s interactive desktop**  
+- **Route elevation prompts to user's interactive desktop**  
   **Default**: Not Configured  
   LocalPoliciesSecurityOptions CSP: [UserAccountControl_SwitchToTheSecureDesktopWhenPromptingForElevation](https://go.microsoft.com/fwlink/?linkid=867899)  
 
@@ -1654,240 +1654,6 @@ Use these options to configure the local security settings on Windows 10 devices
   - **Manual**
   - **Automatic**
   - **Disabled**
-
-## User Rights
-
-- **Access Credential Manager as trusted caller**  
-  **Default**: Not configured  
-  CSP: [UserRights/AccessCredentialManagerAsTrustedCaller](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accesscredentialmanagerastrustedcaller)
-
-  This user right is used by Credential Manager during Backup and Restore operations. Users' saved credentials might be compromised if this privilege is given to other entities.
-  - **Not configured**
-  - **Allow**
-
-- **Allow local log on**  
-  **Default**: Not configured  
-  CSP: [UserRights/AllowLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-allowlocallogon)
-
-  This user right determines which users can log on to the computer.
-  - **Not configured**
-  - **Allow**
-
-- **Allow Access From Network**  
-  **Default**: Not configured  
-  CSP: [UserRights/AccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accessfromnetwork)
-
-  This user right determines which users and groups are allowed to connect to the computer over the network.
-  - **Not configured**
-  - **Allow**
-
-- **Act As Part Of The OS**  
-  **Default**: Not configured  
-  CSP: [UserRights/ActAsPartOfTheOperatingSystem](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-actaspartoftheoperatingsystem)
-
-  Act As Part Of The OS
-  - **Not configured**
-  - **Allow**  
-
-- **Backup files and directories**  
-  **Default**: Not configured  
-  CSP: [UserRights/BackupFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-backupfilesanddirectories)
-
-  This user right determines which users can bypass file, directory, registry, and other persistent objects permissions when backing up files and directories.
-  - **Not configured**
-  - **Allow**
-
-- **Change the system time**  
-  **Default**: Not configured  
-  CSP: [UserRights/ChangeSystemTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-changesystemtime)
-
-  This user right determines which users and groups can change the time and date on the internal clock of the computer.
-  - **Not configured**
-  - **Allow**
-
-- **Create global objects**  
-  **Default**: Not configured  
-  CSP: [UserRights/CreateGlobalObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createglobalobjects)
-
-  This security setting determines whether users can create global objects that are available to all sessions. Users who can create global objects could affect processes that run under other users' sessions, which could lead to application failure or data corruption.
-  - **Not configured**
-  - **Allow**
-
-- **Create pagefile**  
-  **Default**: Not configured  
-  CSP: [UserRights/CreatePageFile](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpagefile)
-
-  This user right determines which users and groups can call an internal API to create and change the size of a page file.
-  - **Not configured**
-  - **Allow**
-
-- **Create permanent shared objects**  
-  **Default**: Not configured  
-  CSP: [UserRights/CreatePermanentSharedObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpermanentsharedobjects)
-
-  This user right determines which accounts can be used by processes to create a directory object using the object manager.
-  - **Not configured**
-  - **Allow**
-
-- **Create symbolic links**  
-  **Default**: Not configured  
-  CSP: [UserRights/CreateSymbolicLinks](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createsymboliclinks)
-
-  This user right determines if the user can create a symbolic link from the computer to which they are logged on.
-  - **Not configured**
-  - **Allow**
-
-- **Create tokens**  
-  **Default**: Not configured  
-  CSP: [UserRights/CreateToken](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createtoken)
-
-  This user right determines which users/groups can be used by processes to create a token that can then be used to get access to any local resources when the process uses an internal API to create an access token.
-  - **Not configured**
-  - **Allow**
-
-- **Debug programs**  
-  **Default**: Not configured  
-    CSP: [UserRights/DebugPrograms](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-debugprograms)
-
-  This user right determines which users can attach a debugger to any process or to the kernel.
-  - **Not configured**
-  - **Allow**
-
-- **Deny Access From Network**  
-  **Default**: Not configured  
-  CSP: [UserRights/DenyAccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyaccessfromnetwork)
-
-  This user right determines which users are prevented from accessing a computer over the network.
-  - **Not configured**
-  - **Allow**
-
-- **Deny log on as a service**  
-  **Default**: Not configured  
-  CSP: [UserRights/DenyLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denylocallogon)
-
-  This security setting determines which service accounts are prevented from registering a process as a service.
-  - **Not configured**
-  - **Allow**
-
-- **Deny log on through Remote Desktop Services**  
-  **Default**: Not configured  
-  CSP: [UserRights/DenyRemoteDesktopServicesLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyremotedesktopserviceslogon)
-
-  This user right determines which users and groups are prohibited from logging on as a Remote Desktop Services client.
-  - **Not configured**
-  - **Allow**
-
-- **Enable delegation**  
-  **Default**: Not configured  
-  CSP: [UserRights/EnableDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-enabledelegation)
-
- This user right determines which users can set the Trusted for Delegation setting on a user or computer object.
-  - **Not configured**
-  - **Allow**
-
-- **Generate security audits**  
-  **Default**: Not configured  
-  CSP: [UserRights/GenerateSecurityAudits](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-generatesecurityaudits)
-
-  This user right determines which accounts can be used by a process to add entries to the security log. The security log is used to trace unauthorized system access.
-  - **Not configured**
-  - **Allow**
-
-- **Impersonate a client**  
-  **Default**: Not configured  
-  CSP: [UserRights/ImpersonateClient](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-impersonateclient)
-
-  Assigning this user right to a user allows programs running on behalf of that user to impersonate a client. Requiring this user right for this kind of impersonation prevents an unauthorized user from convincing a client to connect to a service that they have created and then impersonating that client, which can elevate the unauthorized user's permissions to administrative or system levels.
-  - **Not configured**
-  - **Allow**
-
-- **Increase scheduling priority**  
-  **Default**: Not configured  
-  CSP: [UserRights/IncreaseSchedulingPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-increaseschedulingpriority)
-
-  This user right determines which accounts can use a process with Write Property access to another process to increase the execution priority assigned to the other process.
-  - **Not configured**
-  - **Allow**
-
-- **Load and unload device drivers**  
-  **Default**: Not configured  
-  CSP: [UserRights/LoadUnloadDeviceDrivers](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-loadunloaddevicedrivers)
-
-  This user right determines which users can dynamically load and unload device drivers or other code in to kernel mode.
-  - **Not configured**
-  - **Allow**
-
-- **Lock pages in memory**  
-  **Default**: Not configured  
-  CSP: [UserRights/LockMemory](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-lockmemory)
-
-  This user right determines which accounts can use a process to keep data in physical memory, which prevents the system from paging the data to virtual memory on disk.
-  - **Not configured**
-  - **Allow**
-
-- **Manage auditing and security log**  
-  **Default**: Not configured  
-  CSP: [UserRights/ManageAuditingAndSecurityLog](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-manageauditingandsecuritylog)
-
-  This user right determines which users can specify object access auditing options for individual resources, such as files, Active Directory objects, and registry keys.
-  - **Not configured**
-  - **Allow**
-
-- **Perform volume maintenance tasks**  
-  **Default**: Not configured  
-  CSP: [UserRights/ManageVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-managevolume)
-
-  This user right determines which users and groups can run maintenance tasks on a volume, such as remote defragmentation.
-  - **Not configured**
-  - **Allow**
-
-- **Modify firmware environment values**  
-  **Default**: Not configured  
-  CSP: [UserRights/ModifyFirmwareEnvironment](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyfirmwareenvironment)
-
-  This user right determines who can modify firmware environment values.
-  - **Not configured**
-  - **Allow**
-
-- **Modify an object label**  
-  **Default**: Not configured  
-  CSP: [UserRights/ModifyObjectLabel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyobjectlabel)
-
-  This user right determines which user accounts can modify the integrity label of objects, such as files, registry keys, or processes owned by other users.
-  - **Not configured**
-  - **Allow**
-
-- **Profile single process**  
-  **Default**: Not configured  
-  CSP: [UserRights/ProfileSingleProcess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-profilesingleprocess)
-
-  This user right determines which users can use performance monitoring tools to monitor the performance of system processes.
-  - **Not configured**
-  - **Allow**
-
-- **Remote shutdown**  
-  **Default**: Not configured  
-  CSP: [UserRights/RemoteShutdown](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-remoteshutdown)
-
-  This user right determines which users are allowed to shut down a computer from a remote location on the network. Misuse of this user right can result in a denial of service.
-  - **Not configured**
-  - **Allow**
-  
-- **Restore files and directories**  
-  **Default**: Not configured  
-  CSP: [UserRights/RestoreFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-restorefilesanddirectories)
-  
-  This user right determines which users can bypass file, directory, registry, and other persistent objects permissions when restoring backed up files and directories, and determines which users can set any valid security principal as the owner of an object.
-  - **Not configured**
-  - **Allow**
-  
-- **Take ownership of files or objects**  
-  **Default**: Not configured  
-  CSP: [UserRights/TakeOwnership](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-takeownership)
-
-  This user right determines which users can take ownership of any securable object in the system, including Active Directory objects, files and folders, printers, registry keys, processes, and threads.
-  - **Not configured**
-  - **Allow**
 
 ## Next steps
 

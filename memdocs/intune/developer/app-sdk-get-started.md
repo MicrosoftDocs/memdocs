@@ -112,7 +112,7 @@ Microsoft Intune collects data on usage statistics for your app.
 
 * **Intune App SDK for Android**: The Intune App SDK for Android does not control data collection from your app. The Company Portal application logs telemetry data by default. This data is sent to Microsoft Intune. As per Microsoft Policy, we do not collect any personally identifiable information (PII). 
 
-  * If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](https://docs.microsoft.com/user-help/turn-off-microsoft-usage-data-collection-android). 
+  * If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android). 
 
 ## Line-of-business app version numbers
 
@@ -183,7 +183,7 @@ Once you have registered your app within an Azure tenant, and it is showing up u
 3. Click **+ Add a permission**.
 4. Click on the **APIs my organization uses**. 
 5. In the search box, enter **Microsoft Mobile Application Management**.
-6. Under **Delegated Permissions**, select the **DeviceManagementManagedApps.ReadWrite: Read and Write the User’s App Management Data*** checkbox.
+6. Under **Delegated Permissions**, select the **DeviceManagementManagedApps.ReadWrite: Read and Write the User's App Management Data*** checkbox.
 7. Click **Add permissions**.
 
 > [!NOTE]

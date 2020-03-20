@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 03/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -34,7 +34,7 @@ ms.collection: M365-identity-device-management
 Before you can assign, monitor, configure, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Office 365 apps for Windows 10 devices. By selecting this app type in Intune, you can assign and install Office 365 apps to devices you manage that run Windows 10. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Office 365 apps are displayed as a single entry in the list of apps in the Intune console within Azure.
 
 > [!NOTE]
-> You must use Office 365 ProPlus licenses to activate Office 365 ProPlus apps deployed through Microsoft Intune. Currently, Office 365 Business edition is not supported by Intune.
+> You must use Office 365 ProPlus licenses to activate Office 365 ProPlus apps deployed through Microsoft Intune. Office 365 Business edition is supported by Intune, however you must configure the app suite of the Office 365 Business edition using XML data. For more information, see [Configure app suite using XML data](apps-add-office365.md#step-2---option-2-configure-app-suite-using-xml-data).
 
 ## Before you start
 
@@ -123,6 +123,10 @@ If you selected the **Enter XML data** option under the **Setting format** dropd
 ![Add Office 365 configuration designer](./media/apps-add-office365/apps-add-office365-01.png)
 
 1. Added your configuration XML.
+
+    > [!NOTE]
+    > The Product ID can either be Business (`O365BusinessRetail`) or Proplus (`O365ProPlusRetail`). However, you can only configure the app suite of the Office 365 Business edition using XML data. 
+
 2. Click **Next** to display the **Scope tags** page.
 
 For more information about entering XML data, see [Configuration options for the Office Deployment Tool](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
@@ -234,4 +238,4 @@ The following tables list common error codes you might encounter and their meani
 
 ## Next steps
 
-- To assign the app suite to additional groups, see [Assign apps to groups](/intune-azure/manage-apps/deploy-apps).
+- To assign the app suite to additional groups, see [Assign apps to groups](/mem/intune/apps/apps-deploy).

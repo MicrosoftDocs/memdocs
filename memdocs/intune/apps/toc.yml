@@ -192,6 +192,8 @@
           href: windows-information-protection-policy-create.md
         - name: Manage data transfer between iOS apps
           href: data-transfer-between-apps-manage-ios.md
+      - name: Review app protection logs
+        href: app-protection-policy-settings-log.md          
     - name: Troubleshoot
       items:
       - name: Help users troubleshoot problems
@@ -202,8 +204,6 @@
         href: app-install-error-codes.md
       - name: Troubleshoot mobile application management
         href: troubleshoot-mam.md
-      - name: Review app protection logs
-        href: app-protection-policy-settings-log.md
 - name: Reference
   items:
     - name: Protect apps with Intune App SDK

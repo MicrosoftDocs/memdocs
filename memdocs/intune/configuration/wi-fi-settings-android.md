@@ -38,7 +38,7 @@ This article describes these settings.
 
 ## Before you begin
 
-[Create a device profile](device-profile-create.md).
+[Create a device profile](wi-fi-settings-configure.md).
 
 ## Basic
 

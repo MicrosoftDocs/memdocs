@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/25/2020
+ms.date: 03/20/2020
 ms.topic: conceptual 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -14,7 +14,7 @@ ms.technology:
 ms.assetid:
 
 # optional metadata
-
+ 
 #ROBOTS:
 #audience:
 
@@ -165,34 +165,54 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 7. **Apply** > **Close**
 8. Go back to the Intune portal (**Intune** > **Device Configuration** > **Certification Connectors**). After a few moments, a green check mark is shown, and the **Connection status** is **Active**. Your connector server can now communicate with Intune.
 9. If you have a web proxy in your networking environment, you might need additional configurations to enable the connector to work. For more information, see [Work with existing on-premises proxy servers](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) in the Azure Active Directory documentation.
-<ul><li>Android Enterprise (*Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10 and later
+    - Android Enterprise (*Work Profile*)
+    - iOS
+    - macOS
+    - Windows 10 and later
+
+> [!NOTE]
 > The Microsoft Intune Certificate Connector supports TLS 1.2. If TLS 1.2 is installed on the server that hosts the Connector, the connector uses TLS 1.2. Otherwise, TLS 1.1 is used. Currently, TLS 1.1 is used for authentication between the devices and server.
 
 ## Create a trusted certificate profile
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
-
-   ![Navigate to Intune and create a new profile for a trusted certificate](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
 
 3. Enter the following properties:
+   - **Platform**: Choose the platform of the devices that will receive this profile.
+   - **Profile**: Select **Trusted certificate**
+  
+4. Select **Create**.
 
-    - **Name** for the profile
-    - Optionally set a description
-    - **Platform** to deploy the profile to
-    - Set **Profile type** to **Trusted certificate**
+5. In **Basics**, enter the following properties:
+   - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is *Trusted certificate profile for entire company*.
+   - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
-4. Select **Settings**, and specify the .cer file Root CA Certificate you previously exported.
+6. Select **Next**.
+
+7. In **Configuration settings**, specify the .cer file Root CA Certificate you previously exported.
 
    > [!NOTE]
-   > Depending on the platform you chose in **Step 2**, you may or may not have an option to choose the **Destination store** for the certificate.
+   > Depending on the platform you chose in **Step 3**, you may or may not have an option to choose the **Destination store** for the certificate.
 
    ![Create a profile and upload a trusted certificate](./media/certficates-pfx-configure/certificates-pfx-configure-profile-fill.png)
 
-5. Select **OK** > **Create** to save your profile.
+8. Select **Next**.
 
-6. To assign the new profile to one or more devices, see [assign Microsoft Intune device profiles](../configuration/device-profile-assign.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+   Select **Next**.
+
+10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+    Select **Next**.
+
+11. (*Applies to Windows 10 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
+
+  For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
+
+12. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Create a PKCS certificate profile
 
@@ -201,13 +221,29 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
 
 3. Enter the following properties:
+   - **Platform**: Choose the platform of your devices. Your options:
+     - Android device administrator
+     - Android Enterprise > Device owner only
+     - Android Enterprise > Work profile only
+     - iOS/iPadOS
+     - macOS
+     - Windows 10 and later
+   - **Profile**: Select **PKCS certificate**
 
-    - **Name** for the profile
-    - Optionally set a description
-    - **Platform** to deploy the profile to
-    - Set **Profile type** to **PKCS certificate**
+   > [!NOTE]
+   > On devices with an Android Enterprise profile, certificates installed using a PKCS certificate profile are not visible on the device. To confirm successful certificate deployment, check the status of the profile in the Intune console.
+4. Select **Create**.
 
-4. Select **Settings**, and configure the properties that apply to the platform you selected:
+5. In **Basics**, enter the following properties:
+   - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is *PKCS profile for entire company*.
+   - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+
+6. Select **Next**.
+7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Select your platform for detailed settings:
+   -Android device administrator
+   -Android Enterprise
+   -iOS/iPadOS
+   -Windows 10
    
    |Setting     | Platform     | Details   |
    |------------|------------|------------|
@@ -224,12 +260,18 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
    |**Allow all apps access to private key** |<ul><li>macOS  |Set to **Enable** to give apps that are configured for the associated mac device access to the PKCS certificates private key. <br><br> For more information on this setting, see *AllowAllAppsAccess* the Certificate Payload section of [Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) in the Apple developer documentation. |
    |**Root Certificate**             |<ul><li>Android device administrator </li><li>Android Enterprise (*Device Owner*, *Work Profile*) |Select a root CA certificate profile that was previously assigned. |
 
-5. Select **OK** > **Create** to save your profile.
+8. Select **Next**.
 
-6. To assign the new profile to one or more devices, see [assign Microsoft Intune device profiles](../configuration/device-profile-assign.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-   > [!NOTE]
-   > On devices with an Android Enterprise profile, certificates installed using a PKCS certificate profile are not visible on the device. To confirm successful certificate deployment, check the status of the profile in the Intune console.
+   Select **Next**.
+
+10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+    Select **Next**.
+
+11. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
 
 ### Subject name format
 
@@ -288,7 +330,7 @@ Platforms:
   > [!IMPORTANT]  
   > - When you specify a variable, enclose the variable name in curly brackets { } as seen in the example, to avoid an error.  
   > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
-  > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn’t have an IMEI number, the profile fails to install.  
+  > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.  
  
 ## What's new for Connectors
 

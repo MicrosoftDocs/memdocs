@@ -44,7 +44,7 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 |:---:|:---:|:---:|:---:|:---:|
 | | Devices are wiped during enrollment. | Associates each device with a user.| If yes, users can't unenroll devices. | |
 |**[BYOD](#bring-your-own-device)** | No| Yes | No | [More information](apple-mdm-push-certificate-get.md)|
-|**[DEM](#device-enrollment-manager)**| No |No |No | [More information](device-enrollment-program-enroll-ios.md)|
+|**[DEM](#device-enrollment-manager)**| No |No |No | [More information](device-enrollment-manager-enroll.md)|
 |**[DEP](#apple-device-enrollment-program)**| Yes | Optional | Optional|[More information](device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| Yes | Optional | No| [More information](apple-configurator-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| No | No | No|[More information](apple-configurator-enroll-ios.md)|
@@ -72,7 +72,7 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 
 | **Personal** | **Enrollment Methods** | **Reset Required** | **User Affinity** | **Locked** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android Device Admin**|**User initiated via Company Portal** | No | Yes | No | [More information](https://docs.microsoft.com/user-help/enroll-device-android-company-portal)|
+|**Android Device Admin**|**User initiated via Company Portal** | No | Yes | No | [More information](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
 |**Android Enterprise Work Profile**|**User initiated via Company Portal**| No | Yes | No | [More information](android-work-profile-enroll.md)|
 
 

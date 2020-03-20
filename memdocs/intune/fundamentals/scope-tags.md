@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 You can use role-based access control and scope tags to make sure that the right admins have the right access and visibility to the right Intune objects. Roles determine what access admins have to which objects. Scope tags determine which objects admins can see.
 
-For example, let’s say a Seattle regional office admin has the Policy and Profile Manager role. You want this admin to see and manage only the profiles and policies that only apply to Seattle devices. To set up this access, you would:
+For example, let's say a Seattle regional office admin has the Policy and Profile Manager role. You want this admin to see and manage only the profiles and policies that only apply to Seattle devices. To set up this access, you would:
 
 1. Create a scope tag called Seattle.
 2. Create a role assignment for the Policy and Profile Manager role with: 
@@ -68,7 +68,7 @@ The default scope tag feature is similar to the security scopes feature in Micro
     - **All users and all devices**: All users and devices can be managed by the users in the Admin Groups.
 
 5. Choose **Next**
-6. On the **Scope tags** page, select the tags that you want to add to this role. Users in the Admin Groups will have access to Intune objects that also have the same scope tag.
+6. On the **Scope tags** page, select the tags that you want to add to this role. Users in the Admin Groups will have access to Intune objects that also have the same scope tag. You can assign a maximum of 100 scope tags to a role.
 7. Choose **Next** to go to the **Review + create** page and then choose **Create**.
 
 ## Assign scope tags to other objects
@@ -77,7 +77,7 @@ For objects that support scope tags, scope tags usually appear under **Propertie
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Configuration profiles** > choose a profile.
 
-2. Choose **Properties** > **Scope (Tags)** > **Edit** > **Select scope tags** > choose the tags that you want to add to the profile.
+2. Choose **Properties** > **Scope (Tags)** > **Edit** > **Select scope tags** > choose the tags that you want to add to the profile. You can assign a maximum of 100 scope tags to an object.
 4. Choose **Select** > **Review + save**.
 
 ## Scope tag details
