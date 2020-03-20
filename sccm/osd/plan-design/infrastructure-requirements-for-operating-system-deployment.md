@@ -174,7 +174,7 @@ For more information about how to capture and restore user state, see [Manage us
 
 ### Reporting services point  
 
-To use Configuration Manager reports for OS deployments, install and configure a reporting point. For more information, see [Reporting](/sccm/core/servers/manage/reporting).  
+To use Configuration Manager reports for OS deployments, install and configure a reporting point. For more information, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
 
 
 ### Security permissions for OS deployments  

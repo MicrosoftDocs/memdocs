@@ -23,7 +23,7 @@ Use the following information to find security best practices and privacy inform
 
 -   [Security and privacy for site administration](../../../core/plan-design/hierarchy/security-and-privacy-for-site-administration.md)  
 
--   [Security and privacy for reporting](../../../core/servers/manage/security-and-privacy-for-reporting.md)  
+-   [Security and privacy for reporting](../../../core/servers/manage/planning-for-reporting.md#security-and-privacy)  
 
 -   [Security and privacy for migration to Configuration Manager current branch](../../../core/migration/security-and-privacy-for-migration.md)  
 

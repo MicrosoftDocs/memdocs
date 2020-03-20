@@ -24,7 +24,7 @@ Before you start working with Configuration Manager compliance settings, there a
 |Prerequisite|More information|  
 |------------------|----------------------|  
 |Windows Configuration Manager clients must be enabled and configured for compliance evaluation.|See below|  
-|If you want to run reports, then you must configure reporting for your site.|[Reporting](../../core/servers/manage/reporting.md)|  
+|If you want to run reports, then you must configure reporting for your site.|[Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting)|  
 |Required security permissions.|The **Compliance Settings Manager** security role includes the necessary permissions to manage compliance settings, user data and profiles configuration items, and remote connection profiles.<br /><br /> [Configure role-based administration](../../core/servers/deploy/configure/configure-role-based-administration.md)|  
 
 ##  Enable and configure compliance settings (for Windows PCs only)  

@@ -580,24 +580,22 @@
       items:
       - name: Introduction to reporting
         href: servers/manage/introduction-to-reporting.md
-      - name: Planning for reporting
+      - name: Integrate with Power BI Report Server
+        href: servers/manage/powerbi-report-server.md
+      - name: Plan for reporting
         items:
         - name: Plan for reporting
           href: servers/manage/planning-for-reporting.md
         - name: Prerequisites for reporting
           href: servers/manage/prerequisites-for-reporting.md
-        - name: Best practices for reporting
-          href: servers/manage/best-practices-for-reporting.md
         - name: List of reports
           href: servers/manage/list-of-reports.md
       - name: Configure reporting
         href: servers/manage/configuring-reporting.md
       - name: Operations and maintenance for reporting
         href: servers/manage/operations-and-maintenance-for-reporting.md
-      - name: Creating custom report models
+      - name: Create custom report models
         href: servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md
-      - name: Security and privacy for reporting
-        href: servers/manage/security-and-privacy-for-reporting.md
     - name: Data warehouse
       href: servers/manage/data-warehouse.md
   - name: Support Center

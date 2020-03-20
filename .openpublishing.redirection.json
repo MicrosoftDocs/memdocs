@@ -859,6 +859,21 @@
             "source_path": "sccm/compliance/plan-design/scap/troubleshooting-scap.md",
             "redirect_url": "/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#unsupported-and-removed-features",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/servers/manage/best-practices-for-reporting.md",
+            "redirect_url": "/configmgr/core/servers/manage/planning-for-reporting#reporting-recommendations",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/servers/manage/security-and-privacy-for-reporting.md",
+            "redirect_url": "/configmgr/core/servers/manage/planning-for-reporting#security-and-privacy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/servers/manage/reporting.md",
+            "redirect_url": "/configmgr/core/servers/manage/introduction-to-reporting",
+            "redirect_document_id": false
         }
     ]
 }

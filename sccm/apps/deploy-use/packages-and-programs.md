@@ -253,7 +253,7 @@ To monitor package and program deployments, use the same procedures that you use
 
 Packages and programs also include a number of built-in reports, which enable you to monitor information about the deployment status of packages and programs. These reports have the report category of **Software Distribution – Packages and Programs** and **Software Distribution – Package and Program Deployment Status**.  
 
-For more information about how to configure reporting in Configuration Manager, see [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting).  
+For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
 
 
 ## Manage packages and programs
