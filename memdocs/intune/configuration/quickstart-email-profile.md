@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/20/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -41,39 +41,47 @@ Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.co
 
 ## Create an iOS/iPadOS email profile
 
-1. Select **Devices** > **Configuration profiles** > **Create profile**.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
+2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
    ![Create an email profile for iOS/iPadOS in Intune](./media/quickstart-email-profile/ios-create-profile.png)
 
-2. Under **Name**, enter a descriptive name for the new profile. For this example, enter **iOS require work email**.
-3. Enter the following profile information:
-    - For **Description**, enter **Require iOS/iPadOS devices to use work email**.
-    - For **Platform**, select **iOS/iPadOS**.
-    - For **Profile type**, select **Email**.
+3. Enter the following properties:
+   - **Platform**: Select **iOS/iPadOS**
+   - **Profile**: Select **Email**
+  
+4. Select **Create**.
+
+5. In **Basics**, enter the following properties:
+   - **Name**: Enter a descriptive name for the new profile. For this example, enter **iOS require work email**.
+   - **Description**: Enter **Require iOS/iPadOS devices to use work email**
+
 
         ![Create an email profile for use with iOS/iPadOS devices in Intune](./media/quickstart-email-profile/ios-email-profile-name.png)
 
-4. Select **Settings**, and enter the following settings (leave the defaults for other settings):
+6. Select **Next**.
+
+7. In **Configuration settings**, enter the following settings (leave the defaults for other settings):
    - **Email server**: For this quickstart, enter **outlook.office365.com**. This setting specifies the Exchange location (URL) of the email server that the iOS/iPadOS mail app will use to connect to email.
    - **Account name**: Enter **Company Email**.
    - **Username attribute from AAD**: This name is the attribute Intune gets from Azure Active Directory (Azure AD). Intune dynamically generates the username for this profile using this name. For this quickstart, we'll assume that we want the **User Principal Name** to be used as the username for the profile (for example, user1@contoso.com).
    - **Email address attribute from AAD**: This setting is the email address from Azure AD that will be used to sign in to Exchange. For this quickstart, select **User Principal Name**.
    - **Authentication method**: For this quickstart, select **Username and password**. (You can also choose **Certificate** if you've already set up a certificate for Intune.)
 
-        ![Create an email profile for iOS/iPadOS use](./media/quickstart-email-profile/ios-email-profile.png)
+8. Select **Next**.
 
-5. Select **OK** > **Create**. The new profile appears on the profiles list with the dashboard displayed so you can monitor how the profile has been assigned to iOS/iPadOS devices and iOS/iPadOS users.
-6. Select **Assignments**.
-7. Select the **Include** tab, and then select **All Users & All Devices**. 
-8. Select **Save**.
+9. In **Scope tags** (optional), Select **Next**. We won't use a scope tag for this profile.
+
+10. In **Assignments**, use the drop-down for **Assign to** and select **All users and all devices**.  Then, select **Next**.
+
+11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. 
 
 ## Clean up resources
 
 If you don't intend to use the profile you created for additional tutorials or testing, you can delete it now.
 
-1. In Intune, select **Device configuration**, and then select **Profiles**.
-2. Select the test profile you created, **iOS/iPadOS require work email**.
-3. Select the ellipses (**...**) next to the profile, and then select **Delete**.
+1. In Intune, select**Devices** > **Device configuration**.
+2. Select the test profile you created, **iOS/iPadOS require work email**, and then select **Delete**. 
 
 ## Next steps
 

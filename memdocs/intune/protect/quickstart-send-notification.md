@@ -70,9 +70,9 @@ To send email to your users, create a notification message template. When a devi
 
 For details about setting your company name, company contact information, and company logo, see the following articles:
 
-- [Company information and privacy statement](../apps/company-portal-app.md#company-information-and-privacy-statement)
+- [Company information and privacy statement](../apps/company-portal-app.md#configuration)
 - [Support information](../apps/company-portal-app.md#support-information)
-- [Company identity branding customization](../apps/company-portal-app.md#company-identity-branding-customization).
+- [Customizing the user experience](../apps/company-portal-app.md#customizing-the-user-experience).
 
 ## Add a noncompliance policy
 
