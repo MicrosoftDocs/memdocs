@@ -145,10 +145,13 @@ The new Enterprise options are like those that have been available for a Basic W
 We've updated the [user experience](../configuration/device-profile-create.md) in the Endpoint Management Admin Center (**Devices** > **Configuration profiles** > **Create profile**) for creating and modifying the following profile types. The new experience presents the same settings as before, but uses a wizard-like experience that doesn't require as much horizontal scrolling. You won't need to modify existing configurations with the new experience.
 
 - Derived credential
+- Email
 - PKCS certificate
 - PKCS imported certificate
 - SCEP certificate
 - Trusted certificate
+- VPN
+- Wi-Fi
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device enrollment
@@ -157,8 +160,8 @@ We've updated the [user experience](../configuration/device-profile-create.md) i
 You can configure whether device enrollment in the Company Portal on Android and iOS devices is available with prompts, available without prompts, or unavailable to users. To find these setting in Intune, navigate to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and, select **Tenant administration** > **Customization** > **Edit** > **Device enrollment**.  
 
 Support for the device enrollment setting requires end users have these Company Portal versions:
--	Company Portal on iOS: version 4.4 or later
--	Company Portal on Android: version 5.0.4715.0 or later
+-    Company Portal on iOS: version 4.4 or later
+-    Company Portal on Android: version 5.0.4715.0 or later
 
 For more information about existing Company Portal customization, see [How to configure the Microsoft Intune Company Portal app](../apps/company-portal-app.md).
 
@@ -169,15 +172,15 @@ For more information about existing Company Portal customization, see [How to co
 We've added a report to the Microsoft Endpoint Manager admin console in the Android Devices overview page that displays how many Android devices have been enrolled in each device management solution. This chart (like the same chart already in the Azure console) shows work profile, fully managed, dedicated, and device administrator enrolled device counts. To see the report, choose **Devices** > **Android** > **Overview**.
 
 #### Guide users from Android device administrator management to work profile management<!--5857738 idready wnready wnstaged-->
-We're releasing a new compliance setting for the Android device administrator platform. This setting lets you make a device non-compliant if it’s managed with device administrator.
+We're releasing a new compliance setting for the Android device administrator platform. This setting lets you make a device non-compliant if it's managed with device administrator.
 
-On these non-compliant devices, on the **Update device settings** page users will see the **Move to new device management setup** message. If they tap the **Resolve** button, they’ll be guided through:
+On these non-compliant devices, on the **Update device settings** page users will see the **Move to new device management setup** message. If they tap the **Resolve** button, they'll be guided through:
 
 1. Unenrolling from device administrator management
 2. Enrolling in work profile management
 3. Resolving compliance issues 
  
-Google is decreasing device administrator support in new Android releases in an effort to move to modern, richer, and more secure device management with Android Enterprise.  Intune can only provide full support for device administrator-managed Android devices running Android 10 and later through Q2 CY2020. Device administrator-managed devices (except Samsung) that are running Android 10 or later after this time won't be able to be entirely managed. In particular, impacted devices won’t receive new password requirements. For more information, see this [Notice](#decreasing-support-for-android-device-administrator).
+Google is decreasing device administrator support in new Android releases in an effort to move to modern, richer, and more secure device management with Android Enterprise.  Intune can only provide full support for device administrator-managed Android devices running Android 10 and later through Q2 CY2020. Device administrator-managed devices (except Samsung) that are running Android 10 or later after this time won't be able to be entirely managed. In particular, impacted devices won't receive new password requirements. For more information, see this [Notice](#decreasing-support-for-android-device-administrator).
 
 For more information about this setting, see [Move Android devices from device administrator to work profile management](../enrollment/android-move-device-admin-work-profile.md). 
 
@@ -197,7 +200,7 @@ Additional device inventory properties are available using the Intune Data Wareh
 For more information, see [Microsoft Intune Data Warehouse API](../developer/reports-nav-intune-data-warehouse.md) and the Intune Data Warehouse [device](../developer/intune-data-warehouse-collections.md#devices) entity.
 
 #### Help and support workflow update to support additional services<!-- 5654170   -->
-We've updated the Help and support page in the Microsoft Endpoint Manager admin center where you now [choose the management type you use](../fundamentals/get-support.md#options-to-access-help-and-support). With this change you’ll be able to select from the following management types:
+We've updated the Help and support page in the Microsoft Endpoint Manager admin center where you now [choose the management type you use](../fundamentals/get-support.md#options-to-access-help-and-support). With this change you'll be able to select from the following management types:
 
 - Configuration Manager (includes Desktop Analytics)
 - Intune
@@ -207,7 +210,7 @@ We've updated the Help and support page in the Microsoft Endpoint Manager admin 
 ### Security
 
 #### Use a preview of security administrator focused policies as part of Endpoint security<!--6131401  -->
-As a public preview, we’ve added several new policy groups under the Endpoint security node in the Microsoft Endpoint Management admin center. As a security admin you can use these new policies to focus on specific aspects of device security to manage discrete groups of related settings without the overhead of the larger Device Configuration policy body.
+As a public preview, we've added several new policy groups under the Endpoint security node in the Microsoft Endpoint Management admin center. As a security admin you can use these new policies to focus on specific aspects of device security to manage discrete groups of related settings without the overhead of the larger Device Configuration policy body.
 
 With the exception of the new *Antivirus policy for Microsoft Defender Antivirus* (see below), the settings in each new of these new preview policies and profiles are the same settings that you might already configure through [Device configuration profiles](../configuration/device-profile-create.md) today.
 
@@ -222,7 +225,7 @@ The following are the new policy types that are all in preview, and their availa
 
       The Antivirus profile for *Microsoft Defender Antivirus* is an exception that introduces a new instance of settings that are found as part of a device restriction profile. These new Antivirus settings:
 
-        - Are the same settings as found in device restrictions, but support a third option for configuration that’s not available when configured as a device restriction.
+        - Are the same settings as found in device restrictions, but support a third option for configuration that's not available when configured as a device restriction.
         - Apply to devices that are co-managed with Configuration Manager, when the [co-management workload slider](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) for Endpoint Protection is set to Intune.
 
      Plan to use the new *Antivirus* > *Microsoft Defender Antivirus* profile in place of configuring them through a device restriction profile.
