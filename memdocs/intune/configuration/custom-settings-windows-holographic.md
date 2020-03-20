@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Custom settings - Windows Holographic for Business devices - Microsoft Intune
+title: Custom settings - Windows Holographic for Business devices - Microsoft Intune | Microsoft Docs
 description: Add or create a custom profile to use the OMA-URI settings for devices running Windows Holographic for Business in Microsoft Intune, including Microsoft Hololens. You can set AllowFastReconnect, AllowVPN, AllowUpdateService, UpdateServiceURL, RequireUpdatesApproval, ApprovedUpdates, and ApplicationLaunchRestrictions policy configuration service provider (CSP) settings.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 03/19/2020
 ms.article: article
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -96,12 +96,12 @@ The following settings are useful for devices running Windows Holographic for Bu
 > |---|---|
 > |./Vendor/MSFT/Policy/Config/Settings/AllowVPN|Integer<br/>0 - not allowed<br/>1 - allowed (default)|
 
-### [RequireUpdatesApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
+### [RequireUpdateApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |---|---|
-> |./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Integer<br/>0 – Not configured. The device installs all applicable updates.<br/>1 – The device only installs updates that are both applicable and on the Approved Updates list. Set this policy to 1 if IT wants to control the deployment of updates on devices, such as when testing is required prior to deployment.|
+> |./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|This setting is available in RS5 (build 17763) and earlier. Starting with 19H1 (build 18362), use [Windows Update for Business](../protect/windows-update-for-business-configure.md).<br/><br/>Integer<br/>0 – Not configured. The device installs all applicable updates.<br/>1 – The device only installs updates that are both applicable and on the Approved Updates list. Set this policy to 1 if IT wants to control the deployment of updates on devices, such as when testing is required prior to deployment.|
 
 ### [ScheduledInstallTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduledinstalltime)
 
@@ -115,7 +115,7 @@ The following settings are useful for devices running Windows Holographic for Bu
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |---|---|
-> |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|String<br/>URL - the device checks for updates from the WSUS server at the specified URL.<br/>Not configured - The device checks for updates from Microsoft Update.|
+> |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|This setting is available in RS5 (build 17763) and earlier. Starting with 19H1 (build 18362), use [Windows Update for Business](../protect/windows-update-for-business-configure.md).<br/><br/>String<br/>URL - the device checks for updates from the WSUS server at the specified URL.<br/>Not configured - The device checks for updates from Microsoft Update.|
 
 ### [ApprovedUpdates](https://docs.microsoft.com/windows/client-management/mdm/update-csp)
 
