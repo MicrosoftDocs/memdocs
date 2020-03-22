@@ -284,6 +284,10 @@ You have enabled management and syncing between Apple and Intune, and assigned a
 See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program](../user-help/enroll-your-device-dep-ios.md).
 
 ## Renew a DEP token  
+
+> [!NOTE]
+> In addition to renewing your DEP token yearly, you will need to renew your enrollment program token within Intune and Apple Business Manager when the Managed Apple ID password changes for the user who set up the token in Apple business Manager or that user leaves your Apple Business Manager organization.
+
 1. Go to deploy.apple.com.  
 2. Under **Manage Servers**, choose your MDM server associated with the token file that you want to renew.
 3. Choose **Generate New Token**.
