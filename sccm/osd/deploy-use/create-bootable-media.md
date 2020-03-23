@@ -72,6 +72,9 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
 ## Process
 
+ > [!NOTE]  
+ > For PKI environments, since the Root CA is specified at the Primary site, make sure the bootable media is created at the Primary site. The CAS site does not have the Root CA information to properly create the bootable media.
+
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node.  
 
 2. On the **Home** tab of the ribbon, in the **Create** group, select **Create Task Sequence Media**. This action starts the Create Task Sequence Media Wizard.  
