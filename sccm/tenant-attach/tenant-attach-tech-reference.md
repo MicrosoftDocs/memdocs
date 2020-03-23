@@ -30,13 +30,13 @@ When an admin runs an action from Microsoft Endpoint Manager admin center, the n
 
 ## Configuration Manager Components
 
-- **SMS_SERVICE_NOTIFICATION**: Uses the Gateway Notification Worker for processing the notification from Azure.
+- **SMS_SERVICE_CONNECTOR**: Uses the Gateway Notification Worker for processing the notification from Microsoft Endpoint Manager admin center.
 - **SMS_NOTIFICATION_SERVICE**: Gets the notification and creates a client notification.
 - **BgbAgent**: The client gets task and runs the requested action. BGB is also known as *Big Green Button*.
 
-## SMS_SERVICE_NOTIFICATION
+## SMS_SERVICE_CONNECTOR
 
-**CMGatewayNotificationWorker.log** example:
+When an action is initiated from the Microsoft Endpoint Manager admin center, **CMGatewayNotificationWorker.log** processes the request.  
 
 ```text
 Received new notification. Validating basic notification details...
@@ -67,7 +67,7 @@ Forwarded BGB remote task. TemplateID: 1 TaskGuid: a43dd1b3-a006-4604-b012-55293
 
 ## SMS_NOTIFICATION_SERVICE
 
-Once the message is sent to the SMS_NOTIFICATION_SERVICE, a task is sent to the corresponding client. You'll see the below in the **BgbServer.log**:
+Once the message is sent to the SMS_NOTIFICATION_SERVICE, a task is sent from the management point to the corresponding client. You'll see the below in the **BgbServer.log, which is on the management point:
 
 ```text
 Get one push message from database.
@@ -86,7 +86,7 @@ Send Task response message <BgbResponseMessage TimeStamp="2020-01-21T15:43:43Z">
 
 ## Common issues
 
-If the admin doesn't have the required permissions in Configuration Manager, you'll see an `Unauthorized` response in the **CMGAtewayNotificationWorker.log**.
+If the admin doesn't have the required permissions in Configuration Manager, you'll see an `Unauthorized` response in the **CMGatewayNotificationWorker.log**.
 
 ```text
 Received new notification. Validating basic notification details..
