@@ -177,8 +177,8 @@ Consider using these steps to test your policy before deploying the policy to al
       1. On the device, go to `C:\Program Files (x86)\Microsoft Office\Updates\Detection\Version`.
       2. Open the `VersionDescriptor.xml` file, and go to the `<Version>` section. The available version should be the same version you entered in the Intune policy, such as:
 
-        > [!div class="mx-imgBorder"]
-        > ![Check the version section in the version descriptor Office XML file](./media/administrative-templates-update-office/office-version-descriptor-xml-example.png)
+          > [!div class="mx-imgBorder"]
+          > ![Check the version section in the version descriptor Office XML file](./media/administrative-templates-update-office/office-version-descriptor-xml-example.png)
 
 4. After the update is installed, the Office app should show the new version (for example, on the **Account** menu)
 
