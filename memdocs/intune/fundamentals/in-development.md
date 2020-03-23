@@ -162,7 +162,7 @@ You'll be able to add and deploy scripts to macOS devices. This support extends 
 <!-- ***********************************************-->
 ## Security
 
-### Derived credentials support on Android COBO devices<!--4839592-->
+### Derived credentials support on Android fully managed devices<!--4839592-->
 You'll be able to use derived credentials on Android Enterprise fully managed devices. Support will be included for retrieving a derived credential for Entrust Datacard, Intercede, and DISA Purebred. You'll be able to use a derived credential for app authentication, Wi-Fi, VPN, or S/MIME signing and/or encryption with apps that support it.
 
 ### Privacy preferences settings for macOS devices<!-- 2934232 --> 
