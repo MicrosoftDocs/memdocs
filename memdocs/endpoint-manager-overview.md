@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/25/2020
+ms.date: 03/23/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: 
@@ -81,7 +81,7 @@ Endpoint Manager includes the following services:
 
   For more information, see [add users](/mem/intune/fundamentals/users-add), [set up auto-enrollment](/mem/intune/enrollment/windows-enroll), and [about conditional access](/mem/intune/protect/conditional-access).
 
-- **Endpoint Manager admin center**: The [admin center](https://devicemanagement.microsoft.com) is a one-stop web site to create policies and manage your devices. It plugs-in other key device management services, including groups, security, conditional access, and reporting. This admin center also shows devices managed by Configuration Manager and Intune (in preview).
+- **Endpoint Manager admin center**: The [admin center](https://go.microsoft.com/fwlink/?linkid=2109431) is a one-stop web site to create policies and manage your devices. It plugs-in other key device management services, including groups, security, conditional access, and reporting. This admin center also shows devices managed by Configuration Manager and Intune (in preview).
 
 ## Choose what's right for you
 
