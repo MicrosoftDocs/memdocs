@@ -141,7 +141,7 @@ We've added a new action for noncompliant devices that you can add to any policy
 
 The new Enterprise options are like those that have been available for a Basic Wi-Fi profile for iOS.
 
-#### New user experience for certificate profiles<!-- 5615208   -->
+#### New user experience for certificate, email, VPN, and Wi-Fi, VPN profiles<!-- 5615208   -->
 We've updated the [user experience](../configuration/device-profile-create.md) in the Endpoint Management Admin Center (**Devices** > **Configuration profiles** > **Create profile**) for creating and modifying the following profile types. The new experience presents the same settings as before, but uses a wizard-like experience that doesn't require as much horizontal scrolling. You won't need to modify existing configurations with the new experience.
 
 - Derived credential
