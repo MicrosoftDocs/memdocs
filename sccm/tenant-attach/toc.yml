@@ -4,5 +4,5 @@
   items:
   - name: Enable tenant attach
     href: tenant-attach.md
-  - name: Troubleshoot tenant attach
+  - name: Troubleshoot device actions
     href: tenant-attach-tech-reference.md

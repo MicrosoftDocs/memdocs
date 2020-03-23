@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot tenant attach
+title: Troubleshoot device action
 titleSuffix: Configuration Manager
-description: "Troubleshoot tenant attach technical reference for Configuration Manager"
+description: "Troubleshoot device actions technical reference for Configuration Manager"
 ms.date: 03/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
@@ -12,7 +12,7 @@ author: mestew
 ms.author: mstewart
 ---
 
-# Troubleshooting Configuration Manager actions from the Microsoft Endpoint Manager admin center
+# Troubleshooting device actions for Configuration Manager devices
 
 *Applies to: Configuration Manager (current branch)*
 
