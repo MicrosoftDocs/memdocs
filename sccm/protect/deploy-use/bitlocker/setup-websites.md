@@ -53,14 +53,22 @@ This process uses a PowerShell script, MBAMWebSiteInstaller.ps1, to install thes
 
 - `-MbamReportUsersGroupName <DomainUserGroup>`: For example, `contoso\BitLocker report users`. A domain user group whose members have read-only access to the **Reports** area of the administration and monitoring website.
 
+    > [!NOTE]
+    > The installer script doesn't create the domain user groups that you specify in the **-HelpdeskUsersGroupName**, **-HelpdeskAdminsGroupName**, and **-MbamReportUsersGroupName** parameters. Before you run the script, make sure to create these groups.
+    >
+    > When you specify the **-HelpdeskUsersGroupName**, **-HelpdeskAdminsGroupName**, and **-MbamReportUsersGroupName** parameters, make sure to specify both the domain name and the group name. Use the format `"domain\user_group"`. Don't exclude the domain name. If the domain name or group name contains spaces or special characters, enclose the parameter in quotation marks (`"`).
+
 - `-SiteInstall Both`: Specify which of the components to install. Valid options include:
   - `Both`: Install both components
   - `HelpDesk`: Install only the administration and monitoring website
   - `SSP`: Install only the self-service portal
 
-- `IISWebSite`: The website where the script installs the MBAM web applications. By default, it uses the IIS default website.
+- `-IISWebSite`: The website where the script installs the MBAM web applications. By default, it uses the IIS default website.
 
 - `InstallDirectory`: The path where the script installs the web application files. By default, this path is `C:\inetpub`.
+
+- `-Uninstall`: Uninstalls the BitLocker Management Help Desk/Self-Service web portal sites on a web server where they have been previously installed.
+
 
 ## Run the script
 
