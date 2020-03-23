@@ -31,7 +31,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Basic application and deployment type counts: total apps, total apps with multiple deployment types, total apps with dependencies, total superseded apps, and count of deployment technologies in use
 
-- Basic Configuration Manager site hierarchy data: site list, type, version, status, client count, and time zone
+- ***[Updated]*** Basic Configuration Manager site hierarchy data: site list, type, version, status, client count, time zone, and health status
 
 - Basic database configuration: processors, memory size, memory settings, Configuration Manager database configuration, Configuration Manager database size, cluster configuration, configuration of distributed views, and change tracking version  
 
@@ -55,7 +55,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Count of Windows 10 devices by branch, build, and unique Active Directory forest  
 
-- Count of Windows 10 clients that use Windows Update for Business  
+- ***[Removed]*** Count of Windows 10 clients that use Windows Update for Business  
 
 - Database performance metrics: replication processing information, top SQL Server stored procedures by processor, and disk usage
 
@@ -85,7 +85,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Count of clients joined to Azure Active Directory  
 
-- Count of phased deployments created by type  
+- ***[Removed]*** Count of phased deployments created by type  
 
 - Count of extended interoperability clients  
 
@@ -119,7 +119,25 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Hash of key site attributes (site ID, SQL broker ID, and site exchange key)
 
-- ***[New]*** Count of Microsoft Edge installations
+- Count of Microsoft Edge installations
+
+- ***[Moved]*** Count of Azure Active Directory applications and services connected to Configuration Manager
+
+- ***[New]*** Site health information
+
+- ***[New]*** Configuration Manager console crash locations
+
+- ***[New]*** Configuration Manager console usage statistics
+
+- ***[New]*** Cloud attach and detach actions
+
+- ***[New]*** Status of last sync with Intune cloud service
+
+- ***[New]*** Counts of errors from administration service
+
+- ***[New]*** Use of the bulk registration token
+
+- ***[New]*** Count of clients by default and preferred browser
 
 ## <a name="bkmk_level2"></a> Level 2 - Enhanced
 
@@ -205,9 +223,11 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Aggregated statistics on Office add-ins, usage of the Office Readiness Toolkit, and counts of clients with Office 365 ProPlus
 
-- ***[New]*** Aggregated statistics on Office add-in health
+- Aggregated statistics on Office add-in health
 
-- ***[New]*** Count and size of Office Pro Plus pilot collections
+- Count and size of Office Pro Plus pilot collections
+
+- ***[New]*** Number of Office Pro Plus devices sending Office health data
 
 ### Client  
 
@@ -263,15 +283,15 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Configuration and usage statistics of Cloud Management Gateway: counts of regions and environments, and authentication/authorization statistics  
 
-- Count of Azure Active Directory applications and services connected to Configuration Manager  
-
 - Count of collections synced to Azure Log Analytics  
 
 - Count of Upgrade Analytics Connectors  
 
 - Whether the Azure Log Analytics cloud connector is enabled  
 
-- Count of pull-distribution points with a cloud distribution point as a source location  
+- Count of pull-distribution points with a cloud distribution point as a source location
+
+- ***[New]*** Usage of the cloud services onboarding wizard
 
 ### CMPivot
 
@@ -321,6 +341,16 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Count of OneDrive policies (created, deployed)
 
+### Configuration Manager console
+
+- Count of non-critical console notifications
+
+- Count of folders
+
+- ***[New]*** Console performance information
+
+- ***[New]*** 25 most common actions, wizards, property sheets, and tree nodes accessed in the console
+
 ### Content  
 
 - Boundary group statistics: how many fast, how many slow, count per group, and fallback relationships  
@@ -343,7 +373,9 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Content library type, whether local or remote  
 
-- Count of boundary groups by configuration  
+- Count of boundary groups by configuration
+
+- ***[New]*** Count of subnets excluded from peer cache
 
 ### Endpoint Protection  
 
@@ -357,7 +389,9 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Endpoint Protection deployment errors, count of Endpoint Protection policy deployment error codes  
 
-- Endpoint Protection antimalware and Windows Firewall policy usage (number of unique policies assigned to group). This data doesn't include any information about the settings included in the policy.  
+- Endpoint Protection antimalware and Windows Firewall policy usage (number of unique policies assigned to group). This data doesn't include any information about the settings included in the policy.
+
+- ***[New]*** Aggregated statistics for Microsoft Defender Advanced Threat Protection policies
 
 ### Migration  
 
@@ -437,7 +471,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Cluster patching statistics  
 
-- Configuration of Windows 10 express updates  
+- ***[Removed]*** Configuration of Windows 10 express updates  
 
 - Configurations that are used for active Windows 10 servicing plans  
 
@@ -445,19 +479,19 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Count of Microsoft Surface drivers synced  
 
-- Count of update groups and assignments  
+- ***[Removed]*** Count of update groups and assignments  
 
-- Count of update packages and the maximum/minimum/average number of distribution points that are targeted with packages  
+- ***[Removed]*** Count of update packages and the maximum/minimum/average number of distribution points that are targeted with packages  
 
-- Count of updates that are created and deployed with System Center Update Publisher  
+- ***[Removed]*** Count of updates that are created and deployed with System Center Update Publisher  
 
-- Count of Windows Update for Business policies created and deployed  
+- ***[Removed]*** Count of Windows Update for Business policies created and deployed  
 
 - Aggregated statistics of Windows Update for Business configurations  
 
-- Number of automatic deployment rules that are tied to synchronization  
+- ***[Removed]*** Number of automatic deployment rules that are tied to synchronization  
 
-- Number of automatic deployment rules that create new or add updates to an existing group  
+- ***[Removed]*** Number of automatic deployment rules that create new or add updates to an existing group  
 
 - Number of automatic deployment rules that have multiple deployments  
 
@@ -469,7 +503,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Software update point synchronization schedule  
 
-- Total/average number of collections that have software update deployments and the maximum/average number of deployed updates  
+- ***[Removed]*** Total/average number of collections that have software update deployments and the maximum/average number of deployed updates  
 
 - Update scan error codes and machine count  
 
@@ -490,6 +524,10 @@ For Configuration Manager version 2002, this level includes the following data:
 - List of subscriptions to third-party software update catalogs
 
 - Use of WSUS maintenance settings
+
+- ***[New]*** Orchestration group usage
+
+- ***[New]*** Windows Update fallback configuration settings
 
 ### SQL/performance data  
 
@@ -515,6 +553,10 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Aggregated performance statistics of calls made to Software Center endpoints on the management point
 
+- SQL maintenance task configuration and status
+
+- ***[New]*** Status of recent re-initialization requests
+
 ### Miscellaneous  
 
 - Configuration of data warehouse service point including synchronization schedule, average time, and use of customized tables feature  
@@ -533,23 +575,19 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Aggregated statistics on Desktop Analytics enrollment errors and usage
 
-- Count of non-critical console notifications
-
 - Aggregated system boot time statistics by OS, form-factor, and drive type
 
 - Aggregated statistics on the use of Desktop Analytics
 
-- SQL maintenance task configuration and status
+- Usage of the Azure migration tool
 
-- ***[New]*** Count of folders
-
-- ***[New]*** Usage of the Azure migration tool
+- ***[New]*** Count of clients with browser usage
 
 ## <a name="bkmk_level3"></a> Level 3 - Full
 
 For Configuration Manager version 2002, this level includes the following data:
 
-- Automatic deployment rule evaluation schedule information  
+- ***[Removed]*** Automatic deployment rule evaluation schedule information  
 
 - ATP health summary  
 
@@ -569,9 +607,9 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - List of processes configured with installation behavior for applications  
 
-- Minimum/maximum/average number of hours since last software update scan  
+- ***[Removed]*** Minimum/maximum/average number of hours since last software update scan  
 
-- Minimum/maximum/average number of inactive clients in software update deployment collections  
+- ***[Removed]*** Minimum/maximum/average number of inactive clients in software update deployment collections  
 
 - Minimum/maximum/average number of software updates per package  
 
@@ -579,7 +617,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Overall compliance of software update deployments  
 
-- Count of groups that have expired software updates  
+- ***[Removed]*** Count of groups that have expired software updates  
 
 - Software update deployment error codes and counts  
 
