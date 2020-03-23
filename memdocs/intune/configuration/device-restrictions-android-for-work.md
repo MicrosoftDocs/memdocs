@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -82,7 +82,7 @@ These settings apply to Android Enterprise enrollment types where Intune control
 
 ### System security settings
 
-- **Threat scan on apps**: **Require** (default) enables Google Play Protect to scan apps before and after they’re installed. If it detects a threat, it may warn the user to remove the app from the device. **Not configured** doesn't enable or run Google Play Protect to scan apps.
+- **Threat scan on apps**: **Require** (default) enables Google Play Protect to scan apps before and after they're installed. If it detects a threat, it may warn the user to remove the app from the device. **Not configured** doesn't enable or run Google Play Protect to scan apps.
 
 ### Dedicated device settings
 
@@ -140,7 +140,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
     > - Phone: 1080x1920 px
     > - Tablet: 1920x1080 px
     >
-    > For the best experience and crisp details, it’s suggested that per device image assets be created to the display specifications.
+    > For the best experience and crisp details, it's suggested that per device image assets be created to the display specifications.
     >
     > Modern displays have higher pixel densities and can display equivalent 2K/4K definition images.
 
@@ -320,7 +320,7 @@ These settings apply to Android Enterprise enrollment types where Intune control
 - **Minimum password length**: Enter the minimum number of characters the user's password must have, from **4**-**16**.
 - **Maximum minutes of inactivity until work profile locks**: Select the amount of time before the work profile locks. The user must then enter their credentials to regain access.
 - **Number of sign-in failures before wiping device**: Enter the number of times an incorrect password can be entered before the work profile is wiped from the device.
-- **Password expiration (days)**: Enter the number of days until an end user's password must be changed (from **1**-**255**).
+- **Password expiration (days)**: Enter the number of days until an end user's password must be changed (from **1**-**365**).
 - **Required password type**: Select the type of password that must be set on the device. Choose from:
   - **Device default**
   - **Low security biometric**
@@ -341,7 +341,7 @@ These password settings apply to personal profiles on devices that use a work pr
 - **Minimum password length**: Enter the minimum number of characters the user's password must have, from **4**-**14**.
 - **Maximum minutes of inactivity until screen locks**: Select the amount of time before an inactive device automatically locks
 - **Number of sign-in failures before wiping device**: Enter the number of times an incorrect password can be entered before the work profile is wiped from the device.
-- **Password expiration (days)**: Enter the number of days until an end user's password must be changed (from **1**-**255**)
+- **Password expiration (days)**: Enter the number of days until an end user's password must be changed (from **1**-**365**)
 - **Required password type**: Select the type of password that must be set on the device. Choose from:
   - **Device default**
   - **Low security biometric**
