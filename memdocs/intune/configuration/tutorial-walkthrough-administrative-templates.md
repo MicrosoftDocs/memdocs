@@ -117,7 +117,7 @@ This admin center is focused on device management, and includes Azure services, 
 You can also open the Endpoint Manager admin center from the [Microsoft 365 admin center](https://admin.microsoft.com):
 
 1. Go to [https://admin.microsoft.com](https://admin.microsoft.com).
-2. Sign in with your administrator account of your Microsoft 365 tenant subscription.
+2. Sign in with the administrator account of your Microsoft 365 tenant subscription.
 3. Under **Admin centers**, select **All admin centers** > **Endpoint management**. The Endpoint Manager admin center opens.
 
     > [!div class="mx-imgBorder"]
@@ -241,7 +241,7 @@ In this section, we create an administrative template in Intune, look at some se
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 5. Select **Next**.
-6. In **Configuration settings**, in the **Select a category** drop-down list, select **All products**. All the settings are shown. In these settings, notice the following properties:
+6. In **Configuration settings**, in the drop-down list, select **All products**. All the settings are shown. In these settings, notice the following properties:
 
     - The **Path** to the policy is the same as Group Policy Management or GPEdit.
     - The setting applies to users or devices.
@@ -349,17 +349,16 @@ In this template, we configure some Internet Explorer settings to lock down devi
 
 ### Assign your template
 
-1. In your template, select **Assignments**. You may have to close your template, and then select it from the **Devices - Configuration profiles** list:
+1. In your template, select **Assignments** > **Select groups to include**:
 
     > [!div class="mx-imgBorder"]
     > ![Select your administrative template profile from the Device Configuration profiles list in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
 
-2. Choose **Select groups to include**. A list of existing users and groups is shown.
-3. Select the **All Windows 10 student devices** group you created earlier > **Select**.
+2. A list of existing users and groups is shown. Select the **All Windows 10 student devices** group you created earlier > **Select**.
 
     If you're using this tutorial in a production environment, then consider adding groups that are empty. The goal is to practice assigning your template.
 
-4. Select **Next** > **Next** > **Create** to save your changes.
+3. Select **Next** to the **Review + create** tab. Select **Create** to save your changes.
 
 As soon as the profile is saved, it applies to the devices when they check in with Intune. If the devices are connected to the internet, it can happen immediately. For more information on policy refresh times, see [How long does it take for devices to get a policy, profile, or app after they're assigned](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
@@ -402,13 +401,12 @@ For more information on OneDrive client settings, see [Use Group Policy to contr
 
 ### Assign your template
 
-1. In your template, select **Assignments**.
-2. Choose **Select groups to include**. A list of existing users and groups is shown.
-3. Select the **All Windows devices** group you created earlier > **Select**.
+1. In your template, select **Assignments** > **Select groups to include**
+2. A list of existing users and groups is shown. Select the **All Windows devices** group you created earlier > **Select**.
 
     If you're using this tutorial in a production environment, then consider adding groups that are empty. The goal is to practice assigning your template.
 
-4. Select **Next** > **Next** > **Create** to save your changes.
+3. Select **Next** to the **Review + create** tab. Select **Create** to save your changes.
 
 At this point, you created some administrative templates, and assigned them to groups you created. The next step is to create an administrative template using Windows PowerShell and the Microsoft Graph API for Intune.
 

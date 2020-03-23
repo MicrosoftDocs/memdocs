@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -92,6 +92,12 @@ These changes will be rolling out on a phased basis throughout the month of Marc
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
 
+#### New user experience when creating administrative templates on Windows devices<!--5096036 -->
+Based on customer feedback, and our move to the new Azure full screen experience, we've rebuilt the Administrative Templates profile experience with a folder view. We haven't made changes to any settings or existing profiles. So, you're existing profiles will stay the same, and will be usable in the new view. You can still navigate all settings options by selecting **All Settings**, and using search. The tree view is split by Computer and User configurations. You will find Windows, Office and Edge settings in their associated folders.  
+
+Applies to:
+- Windows 10 and newer
+
 #### VPN profiles with IKEv2 VPN connections can use always on with iOS/iPadOS devices<!-- 1947932   -->
 On iOS/iPadOS devices, you can create a VPN profile that uses an IKEv2 connection (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **VPN** for profile type). Now, you can configure always-on with IKEv2. When configured, IKEv2 VPN profiles connect automatically, and stay connected (or quickly reconnect) to the VPN. It stays connected even when moving between networks or restarting devices.
 
@@ -107,7 +113,7 @@ On Android Enterprise devices, you create and update OEMConfig profiles (**Devic
 
 For more information on OEMConfig profiles, see [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
 
-This feature applies to:
+Applies to:
 - Android Enterprise
 
 #### Configure the iOS/iPadOS Microsoft Azure AD SSO app extension<!-- 567534   -->

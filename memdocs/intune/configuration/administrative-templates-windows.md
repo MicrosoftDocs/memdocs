@@ -2,7 +2,7 @@
 # required metadata
 
 title: Use templates for Windows 10 devices in Microsoft Intune - Azure | Microsoft Docs
-description: Use Administrative templates in Microsoft Intune to create groups of settings for Windows 10 devices. Use these settings in a device configuration profile to control Office programs, Microsoft Edge, secure features in Internet Explorer, control access to OneDrive, use remote desktop features, enable Auto-Play, set power management settings, use HTTP printing, use different user sign in options, and control the event log size.
+description: Use Administrative templates in Microsoft Intune and Endpoint Manager to create groups of settings for Windows 10 devices. Use these settings in a device configuration profile to control Office programs, Microsoft Edge, secure features in Internet Explorer, control access to OneDrive, use remote desktop features, enable Auto-Play, set power management settings, use HTTP printing, use different user sign-in options, and control the event log size.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -69,19 +69,19 @@ This article lists the steps to create a template for Windows 10 devices, and sh
 7. In **Configuration settings**, configure settings that apply to the device (**Computer configuration**), and settings that apply to users **(User configuration**):
 
     > [!div class="mx-imgBorder"]
-    >
+    > ![Apply ADMX template settings to users and devices in Microsoft Intune Endpoint Manager](./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png)
 
 8. When you select **Computer configuration**, the setting categories are shown. You can select any category to see the available settings.
 
     For example, select **Computer configuration** > **Windows components** > **Internet Explorer** to see all the device settings that apply to Internet Explorer:
 
     > [!div class="mx-imgBorder"]
-    >
+    > ![See all device settings that apply to Internet Explorer in Microsoft Intune Endpoint Manager](./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png)
 
 9. You can also select **All settings** to see every device setting. Scroll down to use the before and next arrows to see more settings:
 
     > [!div class="mx-imgBorder"]
-    >
+    > ![See a sample list of settings and use previous and next buttons](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
 
 10. Select any setting. For example, filter on **Office**, and select **Activate Restricted Browsing**. A detailed description of the setting is shown. Choose **Enabled**, **Disabled**, or leave the setting as **Not configured** (default). The detailed description also explains what happens when you choose **Enabled**, **Disabled**, or **Not configured**.
 
@@ -122,7 +122,7 @@ There are hundreds of settings available in these templates. To make it easier t
 - In your template, use the **Search** box to find specific settings. You can search by setting, or path. For example, search for `copy`. All the settings with `copy` are shown:
 
   > [!div class="mx-imgBorder"]
-  > 
+  > ![Search for copy to show all the device settings in administrative templates in Intune](./media/administrative-templates-windows/search-copy-settings.png) 
 
   In another example, search for `microsoft word`. You see the settings you can set for the Microsoft Word program. Search for `explorer` to see the Internet Explorer settings you can add to your template.
 
