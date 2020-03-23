@@ -69,7 +69,7 @@ The Profile pane of the macOS and iOS Company Portal has been updated to include
 #### Retarget web clips to Microsoft Edge on iOS devices<!-- 5455276   -->
 Newly deployed web clips (pinned web apps) on iOS devices that are required to open in a protected browser, will open in Microsoft Edge rather than the Intune Managed Browser. You must retarget pre-existing web clips to ensure they open in Microsoft Edge rather than the Managed Browser. For more information, see [Manage web access by using Microsoft Edge with Microsoft Intune](../apps/manage-microsoft-edge.md) and [Add web apps to Microsoft Intune](../apps/web-app.md).
 
-#### Use the Intune diagnostic tool with Microsoft Edge for Android<!-- 473544  -->
+#### Use the Intune diagnostic tool with Microsoft Edge for Android<!-- 4735244  -->
 Microsoft Edge for Android is now integrated with the Intune diagnostic tool. Similarly to the experience on Microsoft Edge for iOS, entering "about:intunehelp" into the URL bar (the address box) of Microsoft Edge on the device will start the Intune diagnostic tool. This tool will provide detailed logs. Users can be guided to collect and send these logs to their IT department, or view MAM logs for specific apps.
 
 #### Updates to Intune branding and customization<!-- 5236032  -->
@@ -110,7 +110,7 @@ For more information on OEMConfig profiles, see [Use and manage Android Enterpri
 This feature applies to:
 - Android Enterprise
 
-#### Configure the iOS/iPadOS Microsoft Azure AD SSO app extension<!-- 567534   -->
+#### Configure the iOS/iPadOS Microsoft Azure AD SSO app extension<!-- 5672534   -->
 The Microsoft Azure AD team created a redirect single sign-on (SSO) app extension to allow iOS/iPadOS 13.0+ users to gain access to Microsoft apps and websites with one sign-on. All apps that previously had brokered authentication with the Microsoft Authenticator app will continue to get SSO with the new SSO extension. With the Azure AD SSO app extension release, you can configure the SSO extension with the redirect SSO app extension type (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device features** for profile type > **Single sign-on app extension**).
 
 Applies to:
