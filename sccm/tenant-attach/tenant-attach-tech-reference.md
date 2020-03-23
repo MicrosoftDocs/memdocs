@@ -31,7 +31,7 @@ When an admin runs an action from Microsoft Endpoint Manager admin center, the n
 ## Configuration Manager Components
 
 - **SMS_SERVICE_CONNECTOR**: Uses the Gateway Notification Worker for processing the notification from Microsoft Endpoint Manager admin center.
-- **SMS_NOTIFICATION_SERVICE**: Gets the notification and creates a client notification.
+- **SMS_NOTIFICATION_SERVER**: Gets the notification and creates a client notification.
 - **BgbAgent**: The client gets task and runs the requested action.
 
 ## SMS_SERVICE_CONNECTOR
@@ -58,16 +58,16 @@ Forwarded BGB remote task. TemplateID: 1 TaskGuid: a43dd1b3-a006-4604-b012-55293
    Authorized to perform client action. TemplateID: RequestMachinePolicy TenantId: a1b2c3a1-b2c3-d4a1-b2c3-d4a1b2c3a1b2 AADUserID:     a1b2c3a1-b2c3-d4a1-b2c3-d4a1b2c3a1b2
    ```
 
-1. The remote task is forwarded to the SMS_NOTIFICATION_SERVICE.
+1. The remote task is forwarded to the SMS_NOTIFICATION_SERVER.
 
     ```text
    Forwarded BGB remote task. TemplateID: 1 TaskGuid: a43dd1b3-a006-4604-b012-5529380b3b6f TaskParam: TargetDeviceIDs: 1  
     ```
 
 
-## SMS_NOTIFICATION_SERVICE
+## SMS_NOTIFICATION_SERVER
 
-Once the message is sent to the SMS_NOTIFICATION_SERVICE, a task is sent from the management point to the corresponding client. You'll see the below in the **BgbServer.log**, which is on the management point:
+Once the message is sent to the SMS_NOTIFICATION_SERVER, a task is sent from the management point to the corresponding client. You'll see the below in the **BgbServer.log**, which is on the management point:
 
 ```text
 Get one push message from database.
