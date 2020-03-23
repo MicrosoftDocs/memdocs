@@ -32,7 +32,7 @@ When an admin runs an action from Microsoft Endpoint Manager admin center, the n
 
 - **SMS_SERVICE_CONNECTOR**: Uses the Gateway Notification Worker for processing the notification from Microsoft Endpoint Manager admin center.
 - **SMS_NOTIFICATION_SERVICE**: Gets the notification and creates a client notification.
-- **BgbAgent**: The client gets task and runs the requested action. BGB is also known as *Big Green Button*.
+- **BgbAgent**: The client gets task and runs the requested action.
 
 ## SMS_SERVICE_CONNECTOR
 
@@ -67,7 +67,7 @@ Forwarded BGB remote task. TemplateID: 1 TaskGuid: a43dd1b3-a006-4604-b012-55293
 
 ## SMS_NOTIFICATION_SERVICE
 
-Once the message is sent to the SMS_NOTIFICATION_SERVICE, a task is sent from the management point to the corresponding client. You'll see the below in the **BgbServer.log, which is on the management point:
+Once the message is sent to the SMS_NOTIFICATION_SERVICE, a task is sent from the management point to the corresponding client. You'll see the below in the **BgbServer.log**, which is on the management point:
 
 ```text
 Get one push message from database.
