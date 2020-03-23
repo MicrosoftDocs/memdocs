@@ -73,7 +73,7 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
 ### <a name="bkmk_arm64"></a> Windows 10 on ARM64
 
-Configuration Manager supports the client on Windows 10 ARM64 devices. Existing client management features should work with these new devices. For example, hardware and software inventory, software updates, and application management. OS deployment is not supported. <!-- 1353704 -->
+Configuration Manager supports the client on Windows 10 ARM64 devices. OS deployment is not supported.<!-- 1353704 -->
 
 Starting in version 2002,<!--5954175--> the **All Windows 10 (ARM64)** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.
 
