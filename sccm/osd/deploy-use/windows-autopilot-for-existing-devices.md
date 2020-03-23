@@ -2,12 +2,10 @@
 title: Windows Autopilot for existing devices
 titleSuffix: Configuration Manager
 description: Use a Configuration Manager task sequence to reimage and provision a Windows 7 device for Windows Autopilot user-driven mode
-ms.date: 03/05/2019
+ms.date: 03/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-
-
 ms.assetid: 2e96f847-5b5a-4da9-8e8f-6aa488838508
 author: aczechowski
 ms.author: aaroncz
@@ -126,11 +124,13 @@ If you edit the task sequence, it's similar to the default task sequence to appl
 
 The Windows Autopilot for existing devices task sequence results in a device joined to Azure Active Directory (Azure AD). 
 
- > [!NOTE]  
- > Windows 10 1903 and 1909 Autopilot has a known issue where the **AutopilotConfigurationFile.json** file gets deleted during Sysprep. For this reason if deploying Windows 10 1903 or 1909, edit the Task Sequence created in the above steps and make the following two changes
- >1. Disable the **Prepare Windows for Capture** step
- >2. Immediately after the disalbed **Prepare Windows for Capture** step, add a new **Run Command Line** step that runs the command **c:\windows\system32\sysprep\sysprep.exe /oobe /reboot**
- > See the [Windows Autopilot - known issues](https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/known-issues) for additional information
+> [!NOTE]  
+> With Windows 10 version 1903 and version 1909, Autopilot has a known issue where Sysprep deletes the **AutopilotConfigurationFile.json** file. If you use this method to deploy Windows 10 version 1903 or version 1909, edit this task sequence, and make the following changes:
+>
+> 1. Disable the **Prepare Windows for Capture** step.
+> 2. Immediately after the disabled **Prepare Windows for Capture** step, add a new **Run Command Line** step. Configure it to run the following command line: `c:\windows\system32\sysprep\sysprep.exe /oobe /reboot`
+>
+> For more information, see [Windows Autopilot - known issues](https://docs.microsoft.com/windows/deployment/windows-autopilot/known-issues).
 
 Use OneDrive for Business [known folder move](https://docs.microsoft.com/onedrive/redirect-known-folders) to make sure the user's data is backed up before the Windows 10 upgrade.
 
