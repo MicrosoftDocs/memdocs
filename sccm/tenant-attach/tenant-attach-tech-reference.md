@@ -34,7 +34,7 @@ When an admin runs an action from Microsoft Endpoint Manager admin center, the n
 - **SMS_NOTIFICATION_SERVICE**: Gets the notification and creates a client notification.
 - **BgbAgent**: The client gets task and runs the requested action. BGB is also known as *Big Green Button*.
 
-## SMS_SERVICE_NOTIFICATION - CMGatewayNotificationWorker
+## SMS_SERVICE_NOTIFICATION
 
 **CMGatewayNotificationWorker.log** example:
 
@@ -94,7 +94,7 @@ Validating device action message content...
 Unauthorized to perform client action. TemplateID: RequestMachinePolicy TenantId: a1b2c3a1-b2c3-d4a1-b2c3-d4a1b2c3a1b2 AADUserID: 3a1e89e6-e190-4615-9d38-a208b0eb1c78
 ```  
 
-Ensure the user running the action from the Microsoft Endpoint Manager admin center has the required permissions on Configuration Manager site. For more information, see [Microsoft Endpoint Manager tenant attach prerequisites](tenant-attach#prerequisites).
+Ensure the user running the action from the Microsoft Endpoint Manager admin center has the required permissions on Configuration Manager site. For more information, see [Microsoft Endpoint Manager tenant attach prerequisites](./tenant-attach#prerequisites).
 
 ## Next steps
 

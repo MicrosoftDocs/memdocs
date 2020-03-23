@@ -2,7 +2,7 @@
   href: index.yml
 - name: Deploy and use
   items:
-  - name: Tenant attach
+  - name: Enable tenant attach
     href: tenant-attach.md
   - name: Troubleshoot tenant attach
     href: tenant-attach-tech-reference.md
