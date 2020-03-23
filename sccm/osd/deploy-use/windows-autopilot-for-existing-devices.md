@@ -126,11 +126,11 @@ If you edit the task sequence, it's similar to the default task sequence to appl
 
 The Windows Autopilot for existing devices task sequence results in a device joined to Azure Active Directory (Azure AD). 
 
-    > [!NOTE]  
-    > Windows 10 1903 and 1909 Autopilot has a known issue where the **AutopilotConfigurationFile.json** file gets deleted during Sysprep. For this reason if deploying Windows 10 1903 or 1909, edit the Task Sequence created in the above steps and make the following two changes
-    >1. Disable the **Prepare Windows for Capture** step
-    >2. Immediately after the disalbed **Prepare Windows for Capture** step, add a new **Run Command Line** step that runs the command **c:\windows\system32\sysprep\sysprep.exe /oobe /reboot**
-    >See the [Windows Autopilot - known issues](https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/known-issues) for additional information
+ > [!NOTE]  
+ > Windows 10 1903 and 1909 Autopilot has a known issue where the **AutopilotConfigurationFile.json** file gets deleted during Sysprep. For this reason if deploying Windows 10 1903 or 1909, edit the Task Sequence created in the above steps and make the following two changes
+ >1. Disable the **Prepare Windows for Capture** step
+ >2. Immediately after the disalbed **Prepare Windows for Capture** step, add a new **Run Command Line** step that runs the command **c:\windows\system32\sysprep\sysprep.exe /oobe /reboot**
+ >See the [Windows Autopilot - known issues](https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/known-issues) for additional information
 
 Use OneDrive for Business [known folder move](https://docs.microsoft.com/onedrive/redirect-known-folders) to make sure the user's data is backed up before the Windows 10 upgrade.
 
