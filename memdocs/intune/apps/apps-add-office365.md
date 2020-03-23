@@ -238,4 +238,4 @@ The following tables list common error codes you might encounter and their meani
 
 ## Next steps
 
-- To assign the app suite to additional groups, see [Assign apps to groups](/intune-azure/manage-apps/deploy-apps).
+- To assign the app suite to additional groups, see [Assign apps to groups](/mem/intune/apps/apps-deploy).

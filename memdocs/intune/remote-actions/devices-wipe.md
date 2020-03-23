@@ -193,7 +193,7 @@ If you want to completely remove an Apple DEP device from management by Intune, 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the device > **Retire**.
 ![Screenshot for retire](./media/devices-wipe/retire.png)
-3. Visit [deploy.apple.com](http://deploy.apple.com) and search for the device by its serial number.
+3. Visit [business.apple.com](http://business.apple.com) and search for the device by its serial number.
 4. In the **Assigned to** menu, choose **Unassigned**.
 
 5. Choose **Reassign**.

@@ -258,7 +258,7 @@ For more information about these improvements, see the [Intune Customer Success 
 ### App management
 
 #### Managed Google Play private LOB apps<!-- 1464182  -->'
-Intune now allows IT admins to publish private Android LOB apps to Managed Google Play via an iframe embedded in the 'ntune console.  Previously, IT admins needed to publish LOB apps directly to Google's Play publishing console, which required several steps and was time consuming. This new feature allows for easy publishing of LOB apps with a minimal set of steps, without needing to leave the Intune console.  Admins will no longer need to manually register as a developer with Google, and will no longer need to pay the Google $25 registration fee.  Any of the Android Enterprise management scenarios that use Managed Google Play can take advantage of this feature (work profile, dedicated, fully managed, and non-enrolled devices). From Intune, select **Client apps** > **Apps** > **Add**. Then, select **Managed Google Play** from the **App type** list. For more information about Managed Google Play apps, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
+Intune now allows IT admins to publish private Android LOB apps to Managed Google Play via an iframe embedded in the Intune console.  Previously, IT admins needed to publish LOB apps directly to Google's Play publishing console, which required several steps and was time consuming. This new feature allows for easy publishing of LOB apps with a minimal set of steps, without needing to leave the Intune console.  Admins will no longer need to manually register as a developer with Google, and will no longer need to pay the Google $25 registration fee.  Any of the Android Enterprise management scenarios that use Managed Google Play can take advantage of this feature (work profile, dedicated, fully managed, and non-enrolled devices). From Intune, select **Client apps** > **Apps** > **Add**. Then, select **Managed Google Play** from the **App type** list. For more information about Managed Google Play apps, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
 
 #### Windows Company Portal experience<!-- 1473353, 3598357 -->
 The Windows Company Portal is being updated. You will be able to use multiple filters on the Apps page within the Windows Company Portal. The Device Details page is also being updated with an improved user experience. We are in the process of rolling out these updates to all customers and expect to be completed by the end of next week.
@@ -297,7 +297,7 @@ The Microsoft Intune app for Android has been updated with the following improve
 - Added the display of custom push notifications, aligning the app with the support recently added in the Company Portal app for iOS and Android. For more information, see [Send custom notifications in Intune](../remote-actions/custom-notifications.md).
 ""
 #### For iOS devices, customize the enrollment process privacy screen of the Company Portal<!-- 4394993 -->
-Using Markdown, you can customize the Company Portal's privacy screen that end users see during iOS enrollment. Specifically, you'll be able to customize the list of things that your organization can't see or do on the device. For more information, see [How to configure the Intune Company Portal app](../apps/company-portal-app.md#privacy-statement-customization).
+Using Markdown, you can customize the Company Portal's privacy screen that end users see during iOS enrollment. Specifically, you'll be able to customize the list of things that your organization can't see or do on the device. For more information, see [How to configure the Intune Company Portal app](../apps/company-portal-app.md#configuration).
 
 
 
@@ -319,7 +319,7 @@ Applies to:
 
 In Intune, you create profiles for iOS and macOS devices (**Device configuration** > **Profiles** > **Create profile** > **iOS** or **macOS** for platform > **Device features**, **Device restrictions**, or **Extensions** for profile type). 
 
-In this 'pdate, the available settings in the Intune portal are categorized by the enrollment type they apply to:
+In this update, the available settings in the Intune portal are categorized by the enrollment type they apply to:
 
 - iOS
   - User enrollment""
@@ -1099,7 +1099,7 @@ The Company Portal for iOS enrollment screens and steps have been updated to ali
 * Open the Settings app to install the management profile on their device.
 * Return to the Company Portal app to complete enrollment.  
 
-For updated enrollment steps and screens, see [Enroll iOS device in Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios).
+For updated enrollment steps and screens, see [Enroll iOS device in Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios).
 
 #### OpenSSL encryption for Android app protection policies<!-- 3747362 -->
 Intune app protection policies (APP) on Android devices now uses an OpenSSL encryption library that is FIPS 140-2 compliant. For more information, see the [encryption](../apps/app-protection-policy-settings-android.md#encryption) section of [Android app protection policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md).
@@ -1396,7 +1396,7 @@ There are new app installation error messages related to the following:
 In Intune, select **Client apps** > **Apps** > "App name" > **Device install status**. New error messages will be available in the **Status details** column.
 
 #### New App categories screen in the Company Portal app for Windows 10<!-- 3834780  -->
-A new screen called **App categories** has been added to improve the app browsing and selection experience in Company Portal for Windows 10. Users will now see their apps sorted under categories such as **Featured**, **Education**, and **Productivity**. This change appears in Company Portal versions 10.3.3451.0 and later. To view the new screen, see [What's new in the app UI](whats-new-app-ui.md). For more information about apps in the Company Portal, see [Install and share apps on your device](https://docs.microsoft.com/user-help/install-apps-cpapp-windows).  
+A new screen called **App categories** has been added to improve the app browsing and selection experience in Company Portal for Windows 10. Users will now see their apps sorted under categories such as **Featured**, **Education**, and **Productivity**. This change appears in Company Portal versions 10.3.3451.0 and later. To view the new screen, see [What's new in the app UI](whats-new-app-ui.md). For more information about apps in the Company Portal, see [Install and share apps on your device](https://docs.microsoft.com/mem/intune/user-help/install-apps-cpapp-windows).  
 
 #### Power BI Compliance app<!-- 1455231 doc-work-item -->
 Access your Intune Data Warehouse in Power BI Online using the [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) app. With this Power BI app, you can now access and share pre-created reports without any setup and without leaving your web browser. For additional information, see [Change log - Power BI Compliance app](../developer/reports-changelog.md#power-bi-compliance-app).
@@ -2309,7 +2309,7 @@ We've added new features, based on feedback from customers, to the Company Porta
 - Improved performance for large app catalogs
 - Increased accessibility for all users  
 
-The [Intune Company Portal website documentation](https://docs.microsoft.com/user-help/using-the-intune-company-portal-website) has been updated to reflect these changes. To view an example of the app enhancements, see [UI updates for Intune end-user apps](whats-new-app-ui.md).  
+The [Intune Company Portal website documentation](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website) has been updated to reflect these changes. To view an example of the app enhancements, see [UI updates for Intune end-user apps](whats-new-app-ui.md).  
 
 ### Monitor and troubleshoot
 

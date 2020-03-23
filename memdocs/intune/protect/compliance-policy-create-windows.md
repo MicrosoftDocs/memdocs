@@ -181,7 +181,7 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
   [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
-  > If the device immediately syncs after a reboot, or immediately syncs waking from sleep, then this setting may report as an **Error**. This scenario might not affect the overall device compliance status. To re-evaluate the compliance status, manually [sync the device](https://docs.microsoft.com/user-help/sync-your-device-manually-windows).
+  > If the device immediately syncs after a reboot, or immediately syncs waking from sleep, then this setting may report as an **Error**. This scenario might not affect the overall device compliance status. To re-evaluate the compliance status, manually [sync the device](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows).
 
 - **Trusted Platform Module (TPM)**:  
   - **Not configured** (*default*) -  Intune doesn't check the device for a TPM chip version.

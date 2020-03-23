@@ -2,12 +2,12 @@
 # required metadata
 
 title: Restrict devices features using policy in Microsoft Intune - Azure | Microsoft Docs
-description: Add a device profile to restrict features on Android, macOS, iOS, iPadOS, Windows Phone, and Windows 10 devices in Microsoft Intune
+description: Add a device profile to restrict features on Android device administrator, Android Enterprise, macOS, iOS, iPadOS, Windows Phone, and Windows 10 devices in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,8 +27,6 @@ ms.collection: M365-identity-device-management
 ---
  
 # Configure device restriction settings in Microsoft Intune
-
-
 
 Intune includes device restriction policies that help administrators control Android, iOS/iPadOS, macOS, and Windows devices. These restrictions let you control a wide range of settings and features to protect your organization's resources. For example, administrators can:
 
@@ -52,7 +50,7 @@ This article shows you how to create a device restrictions profile. You can also
     - **Description**: Enter a description for the policy. This setting is optional, but recommended.
     - **Platform**: Choose the platform of your devices. Your options:  
 
-        - **Android**
+        - **Android device administrator**
         - **Android enterprise**
         - **iOS/iPadOS**
         - **macOS**
@@ -66,7 +64,7 @@ This article shows you how to create a device restrictions profile. You can also
 
 4. Depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
-    - [Android settings](device-restrictions-android.md)
+    - [Android device administrator settings](device-restrictions-android.md)
     - [Android enterprise settings](device-restrictions-android-for-work.md)
     - [iOS/iPadOS settings](device-restrictions-ios.md)
     - [macOS settings](device-restrictions-macos.md)
