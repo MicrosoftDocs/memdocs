@@ -38,6 +38,16 @@ The process to enable and collect logs varies by platform:
 - **Windows 10 devices** - Use *MDMDiag* and event logs. See, [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) in the Windows client management content, and the blog [Troubleshooting Windows 10 Intune Policy Failures](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/).
 - **Android devices** - Use Microsoft Edge for Android to collect logs. For details, see [Manage web access by using Microsoft Edge with Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
 
+> [!Note]
+> On Android Fully Managed devices, use Microsoft Intune app to upload app protection logs. 
+> 1. Launch Microsoft Intune app.
+> 2. Tap on the three bars on the left top corner and go to Settings. 
+> 3. Tap on Log detail level and choose Verbose. 
+> 4. Go to Help and Get Support. 
+> 5. Upload logs. Share the ID with your support professional, if you have a support case open. 
+> [!Note]
+> On Android Fully Managed devices, in certain instances Intune Company Portal app may be visible under all apps. This happens when app associated with app protection policy is either not installed or not launched.
+
 The following table lists the App protection policy setting name and supported values that are recorded in the log. In addition, each setting identifies the policy setting found within Microsoft Endpoint Manager portal. For detailed information on each setting, see [iOS/iPadOS app protection policy settings](app-protection-policy-settings-ios.md).
 
 ## App protection policy settings
