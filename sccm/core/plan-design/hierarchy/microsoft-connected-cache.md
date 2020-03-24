@@ -85,6 +85,8 @@ When you configure clients to use the Connected Cache server, they no longer req
 
         > [!Note]  
         > The default cache size should be sufficient for most customers. You can adjust the cache size later.
+        >
+        > If the cache size on disk exceeds the allocated space, ARR clears space by removing content based on its built-in heuristics.<!-- SCCMDocs#2045 -->
 
     4. **Retain cache when disabling the Connected Cache server**: If you remove the cache server, and you enable this option, the server keeps the cache's content on the disk.  
 
