@@ -1,0 +1,30 @@
+### YamlMime:Landing
+
+title: Tenant attach documentation
+summary: Upload your Configuration Manager devices to the cloud service and take actions on them.
+ 
+
+metadata:
+  title: Tenant attach documentation documentation
+  titleSuffix: Configuration Manager
+  description: Upload your Configuration Manager devices to the cloud service and take actions on them.
+  ms.product: configuration-manager
+  ms.technology: configmgr-other
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 03/20/2020
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  - title: About tenant attach
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Enable tenant attach
+            url: device-sync-actions.md
+      - linkListType: reference
+        links:
+          - text: Troubleshoot tenant attach
+            url: technical-reference.md

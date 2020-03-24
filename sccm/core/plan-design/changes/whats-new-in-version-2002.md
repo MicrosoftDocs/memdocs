@@ -26,6 +26,14 @@ To take full advantage of new Configuration Manager features, after you update t
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2002+-+Configuration+Manager%22&locale=en-us`
 
+## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
+ 
+### <a name="bkmk_attach"></a> Device sync and device actions
+<!--3555758 live 3/4/2020-->
+Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. Starting in this release you can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center.
+
+For more information, see [Microsoft Endpoint Manager tenant attach](/sccm/tenant-attach/device-sync-actions).
+
 ## <a name="bkmk_infra"></a> Site infrastructure
 
 ### Remove a central administration site
