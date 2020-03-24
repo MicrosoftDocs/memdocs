@@ -76,7 +76,6 @@ If you have the Company Portal app open on an Android device, the notification r
 - To create a message, use an account that is assigned an Intune role that includes the correct permission as described in the preceding *Permissions* section. To assign permissions to a user, see [Role assignments](../fundamentals/role-based-access-control.md#role-assignments).
 - Custom notifications are limited to 50-character titles and 500-character messages.  
 - Intune doesn’t save text from previously sent custom notifications. To resend a message, you must recreate that message.  
-- You can only send up to 25 messages to groups per hour. This restriction is at the tenant level. This limitation doesn't apply when sending notifications to individual devices.
 - You can only send up to 25 messages to groups per hour. This restriction is at the tenant level. This limitation doesn't apply when sending notifications to individuals.
 - When sending messages to individual devices, you can only send up to 10 messages per hour to the same device.
 - You can send notifications to users in groups. When sending notifications to groups, each notification can directly target up to 25 groups. Nested groups don't count against this total. When sending a notification to a group, messages target only the users in the group and are sent to each iOS/iPadOS or Android device that the user has registered. Devices in the group will be ignored when targeting the notification.
