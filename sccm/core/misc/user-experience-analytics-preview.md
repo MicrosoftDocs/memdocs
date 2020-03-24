@@ -2,7 +2,7 @@
 title: User experience analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for User experience analytics preview.
-ms.date: 03/11/2020
+ms.date: 03/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -46,7 +46,7 @@ To start using User experience analytics, verify the prerequisites, then start g
 
 This current preview requires:
 - Intune enrolled devices running Windows 10
-- Startup performance insights are only available for devices running version 1903 or later of Windows 10.
+- Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](#bkmk_uea_endpoints).
 - The [Intune Service Administrator role](https://docs.microsoft.com/intune/fundamentals/role-based-access-control) is required to [start gathering data](#bkmk_uea_start).
    - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
@@ -89,6 +89,9 @@ Once your data is ready, you'll notice some information on the **Overview** page
 [![User experience analytics overview page](media/uea-overview-page.png)](media/uea-overview-page.png#lightbox)
 
 ## <a name="bkmk_uea_rs"></a> Recommended software
+
+> [!Important]  
+> Endpoint Analytics computes the **Software adoption** score for all your Intune managed devices, regardless of whether they've been enrolled in Endpoint Analytics or not.
 
 Certain software is known to improve the end-user experience, independent of lower-level health metrics. For example, Windows 10 has a much higher Net Promoter score than Windows 7. The **Software adoption** score is a number between 0 and 100 that represents a weighted average of the percent of devices that have deployed various recommended software. The current weighting is higher for Windows than for the other metrics since users interact with them more often. The metrics are described below: 
 
@@ -665,29 +668,37 @@ The average latency end to end is about 12 hours and is gated by the time it tak
 
 ### <a name="bkmk_uea_datacollection"></a>Data collection
 
-Currently, the basic functionality of User experience analytics collects information associated with your boot performance records. As we add additional functionality over time, the data collected will vary as needed. The main datapoints currently being collected:
+Currently, the basic functionality of User experience analytics collects information associated with boot performance records that falls into the [identified](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#identified-data) and [pseudonymized](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#pseudonymized-data) categories. As we add additional functionality over time, the data collected will vary as needed. The main datapoints currently being collected:
 
-- **id:** Unique device ID used by Windows Update
-- **localId:** A locally-defined unique ID for the device. This is not the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
-- **aaddeviceid:** Azure Active Directory device ID
-- **orgId:** Unique GUID representing the Microsoft O365 Tenant
-- **authIdEnt**
-- **make:** Device manufacturer
-- **model:** Device model
-- **deviceClass:** The device classification. For example, Desktop, Server, or Mobile.
-- **Country:** The device region setting
-- **logOnId**
-- **bootId:** The system boot ID
-- **coreBootTimeInMilliseconds:** Time for core boot
-- **totalBootTimeInMilliseconds:** Total boot time
-- **updateTimeInMilliseconds:** Time for OS updates to complete
-- **gpLogonDurationInMilliseconds**: Time for Group policies to process
-- **desktopShownDurationInMilliseconds:** Time for desktop (explorer.exe) to be loaded
-- **desktopUsableDurationInMilliseconds:** Time for desktop (explorer.exe) to be usable
-- **name:** Windows
-- **ver:** The version of the current OS.
-- **topProcesses:** List of processes loaded during boot with name, with cpu usage stats and app details (Name, publisher, version). For example *{\"ProcessName\":\"svchost\",\"CpuUsage\":43,\"ProcessFullPath\":\"C:\\\\Windows\\\\System32\\\\svchost.exe\",\"ProductName\":\"Microsoft&reg; Windows&reg; Operating System\",\"Publisher\":\"Microsoft Corporation\",\"ProductVersion\":\"10.0.18362.1\"}*
+#### Identified data
 
+- Hardware inventory information
+  - **make:** Device manufacturer
+  - **model:** Device model
+  - **deviceClass:** The device classification. For example, Desktop, Server, or Mobile.
+  - **Country:** The device region setting
+- Application inventory, like
+  - **name:** Windows
+  - **ver:** The version of the current OS.
+  
+#### Pseudonymized data
+
+- Diagnostic, performance, and usage data tied to a user and/or device
+  - **logOnId**
+  - **bootId:** The system boot ID
+  - **coreBootTimeInMilliseconds:** Time for core boot
+  - **totalBootTimeInMilliseconds:** Total boot time
+  - **updateTimeInMilliseconds:** Time for OS updates to complete
+  - **gpLogonDurationInMilliseconds**: Time for Group policies to process
+  - **desktopShownDurationInMilliseconds:** Time for desktop (explorer.exe) to be loaded
+  - **desktopUsableDurationInMilliseconds:** Time for desktop (explorer.exe) to be usable
+  - **topProcesses:** List of processes loaded during boot with name, with cpu usage stats and app details (Name, publisher, version). For example *{\"ProcessName\":\"svchost\",\"CpuUsage\":43,\"ProcessFullPath\":\"C:\\\\Windows\\\\System32\\\\svchost.exe\",\"ProductName\":\"Microsoft&reg; Windows&reg; Operating System\",\"Publisher\":\"Microsoft Corporation\",\"ProductVersion\":\"10.0.18362.1\"}*
+- Device data not tied to a device or user (if this data is tied to a device or user, Intune treats it as identified data)
+  - **id:** Unique device ID used by Windows Update
+  - **localId:** A locally-defined unique ID for the device. This is not the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
+  - **aaddeviceid:** Azure Active Directory device ID
+  - **orgId:** Unique GUID representing the Microsoft O365 Tenant
+  
 > [!Important]  
 > Our data handling policies are described in the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the baselines up-to-date.
 
