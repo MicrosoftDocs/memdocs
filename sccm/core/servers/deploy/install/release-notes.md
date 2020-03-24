@@ -99,6 +99,24 @@ To work around this issue, create a folder called `scripts` in the `AdminConsole
 
 ## OS deployment
 
+### Task sequences can't run over CMG
+
+*Applies to: Configuration Manager version 2002*
+
+There are two instances in which task sequences can't run on a device that communicates via a cloud management gateway (CMG):
+
+- You configure the site for Enhanced HTTP and the management point is HTTP.<!-- 6358851 -->
+
+    To work around this issue, configure the management point for HTTPS.
+
+- You installed and registered the client with a bulk registration token for authentication.<!-- 6377921 -->
+
+    To work around this issue, use one of the following authentication methods:
+
+  - Pre-register the device on the internal network
+  - Configure the device with a client authentication certificate
+  - Join the device to Azure AD
+
 ### After passive site server is promoted, the default boot image packages still have package source on the previous active server
 
 <!--3453224, SCCMDocs-pr issue 3097-->
