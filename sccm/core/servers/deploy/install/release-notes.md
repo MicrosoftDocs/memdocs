@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 01/27/2020
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -24,15 +24,14 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2002](/sccm/core/plan-design/changes/whats-new-in-version-2002)
 - [What's new in version 1910](/sccm/core/plan-design/changes/whats-new-in-version-1910)
 - [What's new in version 1906](/sccm/core/plan-design/changes/whats-new-in-version-1906)  
 - [What's new in version 1902](/sccm/core/plan-design/changes/whats-new-in-version-1902)
-- [What's new in version 1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)
 
 > [!Tip]  
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
-
 
 ## Set up and upgrade  
 
@@ -66,9 +65,7 @@ When installing the update for version 1906 in an environment with domain contro
 
 `[Completed with warning]:Verify that the Active Directory domain functional level is Windows Server 2003 or later`
 
-#### Workaround
-
-Ignore the warning.
+To work around this issue, ignore the warning.
 
 ### Azure AD user discovery and collection group sync don't work after site expansion
 
@@ -84,26 +81,8 @@ If you then expand a standalone primary site to a hierarchy with a central admin
 
 `Could not obtain application secret for tenant xxxxx. If this is after a site expansion, please run "Renew Secret Key" from admin console.`
 
-#### Workaround
+To work around this issue, renew the key associated with the app registration in Azure AD. For more information, see [Renew secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
 
-Renew the key associated with the app registration in Azure AD. For more information, see [Renew secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
-
-
-### Cloud service manager component stopped on site server in passive mode
-
-<!--VSO 2858826, SCCMDocs issue 772-->
-*Applies to: Configuration Manager version 1806*
-
-If the [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) is colocated with a [site server in passive mode](/sccm/core/servers/deploy/configure/site-server-high-availability), then deployment and monitoring of a [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) doesn't start. The cloud service manager component (SMS_CLOUD_SERVICES_MANAGER) is in a stopped state.
-
-#### Workaround
-
-Move the service connection point role to another server.
-
-
-<!-- ## Backup and recovery  -->
-
-<!--## Client deployment and upgrade-->
 ## Application management
 
 ### Unable to get certificate for Powershell error when deploying Microsoft Edge, version 77 and later
@@ -112,14 +91,11 @@ Move the service connection point role to another server.
 
 If you are running the Configuration Manager console on an OS where the language is Swedish, Hungarian, or Japanese, you'll receive the following error when deploying Microsoft Edge, version 77 and later:
 
-- Unable to get certificate for Powershell
+`Unable to get certificate for Powershell`
 
 This error occurs because a `scripts` folder doesn't exist under the `AdminConsole\bin` directory for Swedish, Hungarian, or Japanese languages. The scripts folder is localized in these OS languages.
 
-#### Workaround
-
-Create a folder called `scripts` in the `AdminConsole\bin` directory. Copy the files from your localized folder to the newly created `scripts` folder. Deploy Microsoft Edge, version 77 and later once the files have been copied.
-
+To work around this issue, create a folder called `scripts` in the `AdminConsole\bin` directory. Copy the files from your localized folder to the newly created `scripts` folder. Deploy Microsoft Edge, version 77 and later once the files have been copied.
 
 ## OS deployment
 
@@ -130,10 +106,7 @@ Create a folder called `scripts` in the `AdminConsole\bin` directory. Copy the f
 
 If you have a site server in passive mode (server B), when you promote it to active, the content location for the default boot images continues to reference the previously active server (server A). If server A has a hardware failure, you can't update or change the default boot images.
 
-#### Workaround
-
-None
-
+There's no workaround for this issue.
 
 ## Software updates
 
@@ -152,9 +125,7 @@ The **App Author** role may appear to have some permissions to phased deployment
 
 A user with one these roles can start the Create Phased Deployment wizard, and can see phased deployments for an application or software update. They can't complete the wizard, or make any changes to an existing deployment.
 
-#### Workaround
-
-Create a custom security role. Copy an existing security role, and add the following permissions on the **Phased Deployment** object class:
+To work around this issue, create a custom security role. Copy an existing security role, and add the following permissions on the **Phased Deployment** object class:
 
 - Create  
 - Delete  
@@ -174,10 +145,7 @@ If you have a hierarchy, and enable **Hardware inventory** site data for [distri
 
 `Unexpected exception 'System.Data.SqlClient.SqlException' Remote access is not supported for transaction isolation level "SNAPSHOT".:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action'1 wrapCloseInAction)`
 
-#### Workaround
-
-Disable **Hardware inventory** site data for distributed views on every site replication link.
-
+To work around this issue, disable **Hardware inventory** site data for distributed views on every site replication link.
 
 ### Console unexpectedly closes when removing collections
 
@@ -186,9 +154,7 @@ Disable **Hardware inventory** site data for distributed views on every site rep
 
 After you connect the site to [Desktop Analytics](/sccm/desktop-analytics/connect-configmgr), you can **Select specific collections to synchronize with Desktop Analytics**. If you remove a collection and apply the changes, immediately adding a new collection causes an unhandled exception. The console unexpectedly closes.
 
-#### Workaround
-
-When you remove a collection, select **OK** to close the properties window. Then open the properties again to add a new collection on the **Desktop Analytics Connection** tab.
+To work around this issue, when you remove a collection, select **OK** to close the properties window. Then open the properties again to add a new collection on the **Desktop Analytics Connection** tab.
 
 ### Pilot status tile shows some devices as 'undefined'
 
@@ -256,3 +222,9 @@ To work around this issue:
 After November 21, 2019, if you update to version 1906 from version 1902 or earlier, the BitLocker management feature will be turned on and available. This feature is an optional feature starting in version 1910. It's unsupported in version 1906. If you try to use it in version 1906, you may experience unexpected results. If you don't use the feature, there's no impact.
 
 To use the [BitLocker management feature](/configmgr/protect/plan-design/bitlocker-management), update to version 1910.
+
+<!--
+## Backup and recovery
+
+## Client deployment and upgrade
+-->
