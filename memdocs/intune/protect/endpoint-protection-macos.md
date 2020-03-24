@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -26,9 +26,13 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# MacOS endpoint protection settings in Intune  
+# macOS endpoint protection settings in Intune  
 
 This article shows you the endpoint protection settings that you can configure for devices that run macOS. You configure these settings by using a macOS device configuration profile for [endpoint protection](endpoint-protection-configure.md) in Intune.  
+
+## Before you begin
+
+[Create a macOS endpoint protection profile](endpoint-protection-configure.md).
 
 ## Gatekeeper  
 
@@ -101,7 +105,7 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
     *Personal key* recovery keys are created for devices. Configure the following settings for the personal key.  
 
     - **Location of personal recovery key** - Specify a short message to the user that explains how and where they can retrieve their personal recovery key. This text is inserted into the message the user sees on their log in screen when prompted to enter their personal recovery key if a password is forgotten.  
-      
+
     - **Personal recovery key rotation** - Specify how frequently the personal recovery key for a device will rotate. You can select the default of **Not configured**, or a value of **1** to **12** months.  
 
   - **Disable prompt at sign out**  
@@ -122,3 +126,8 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
 
 For more information about FileVault with Intune, see [FileVault recovery keys](encryption-monitor.md#filevault-recovery-keys).
 
+## Next steps
+
+[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+
+You can also configure endpoint protection on [Windows 10 and newer devices](endpoint-protection-windows-10.md).

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -49,23 +49,38 @@ Before you create a profile, review the following articles that detail the endpo
 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
-3. Enter a **Name** and **Description** for the endpoint protection profile.
+3. Enter the following properties:
 
-4. From the **Platform** drop-down list, select the device platform to which you want to apply custom settings. Currently, you can choose one of the following platforms for device restriction settings:
+    - **Platform**: Choose the platform of your devices. Your options:
 
-   - **macOS**
-   - **Windows 10 and later**
+        - **macOS**
+        - **Windows 10 and later**
 
-5. From the **Profile type** drop-down list, choose **Endpoint protection**.
+    - **Profile**: Select **Endpoint protection**.
 
-6. Depending on the platform you chose, the settings you can configure are different. See:
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
+
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: Endpoint Protection profile that configures the Firewall for all macOS devices**.
+    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
+
+6. Select **Next**.
+
+7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
    - [macOS settings](endpoint-protection-macos.md)
    - [Windows 10 settings](endpoint-protection-windows-10.md)
 
-7. After you configure applicable settings, select **Create** on the **Create profile** page.
+8. Select **Next**.
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-   The profile is created and appears on the profiles list page. To assign this profile to groups, see [assign device profiles](../configuration/device-profile-assign.md).
+    Select **Next**.
+
+10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+
+    Select **Next**.
+
+11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Add custom Firewall rules for Windows 10 devices
 
@@ -87,20 +102,22 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
 2. Select **Devices** > **Configuration profiles** > **Create Profile**.
 
-3. For *Platform*, select **Windows 10 and later**, and then for *Profile type* select **Endpoint protection**.
+3. For *Platform*, select **Windows 10 and later**, and then for *Profile* select **Endpoint protection**.
 
-4. Select **Microsoft Defender Firewall** to open the configuration page, and then for *Firewall rules* select **Add** to open the **Create Rule** page.
+    Select **Create**.
 
-5. Specify settings for the Firewall rule, and then select **OK** to save it. To review the available custom firewall rule options in documentation, see [Custom Firewall rules](endpoint-protection-windows-10.md#firewall-rules).
+4. Enter a **Name** for your profile > **Next**.
+5. In **Configuration settings**, select **Microsoft Defender Firewall**. For *Firewall rules*, select **Add** to open the **Create Rule** page.
 
-6. After you save the rule, it appears on the *Microsoft Defender Firewall* page in the list of rules.
+6. Specify settings for the Firewall rule, and then select **OK** to save it. To review the available custom firewall rule options in documentation, see [Custom Firewall rules](endpoint-protection-windows-10.md#firewall-rules).
 
-7. To modify a rule, select the rule from the list, to open the **Edit Rule** page.
+    1. The rule appears on the *Microsoft Defender Firewall* page in the list of rules.
+    2. To modify a rule, select the rule from the list, to open the **Edit Rule** page.
+    3. To delete a rule from a profile, select the ellipsis **(…)** for the rule, and then select **Delete**.
+    4. To change the order in which rules display, select the *up arrow, down arrow* icon at the top of the rule list.
 
-8. To delete a rule from a profile, select the ellipsis **(…)** for the rule, and then select **Delete**.
-
-9. To change the order in which rules display, select the *up arrow, down arrow* icon at the top of the rule list.
+7. Select **Next** until you get to **Review + create**. When you select **Create**, your changes are saved and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Next steps
 
-To assign a profile to groups, see [assign device profiles](../configuration/device-profile-assign.md).
+The profile is created, but it may not be doing anything yet. Next, [assign the profile](../configuration/device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
