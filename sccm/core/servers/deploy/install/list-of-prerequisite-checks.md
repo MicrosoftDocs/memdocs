@@ -2,7 +2,7 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 02/26/2020
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -585,6 +585,18 @@ To resolve this warning, check whether the despooler and scheduler site system c
 *Applies to: Management point*
 
 The Background Intelligent Transfer Service (BITS) is installed and enabled in IIS.
+
+### Check if the site uses Upgrade Readiness cloud service connector
+
+*Applies to: Central administration site, primary site*
+
+The Upgrade Readiness service is retired as of January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+
+Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](/sccm/desktop-analytics/overview).
+
+If your Configuration Manager site had a connection to Upgrade Readiness, you need to remove it and reconfigure clients. For more information, see [Remove Upgrade Readiness connection](/configmgr/core/clients/manage/upgrade-readiness#bkmk_remove).
+
+If you ignore this prerequisite warning, Configuration Manager setup automatically removes the Upgrade Readiness connector.<!-- #4898 -->
 
 ### Cloud management gateway requires either token-based authentication or an HTTPS management point
 
