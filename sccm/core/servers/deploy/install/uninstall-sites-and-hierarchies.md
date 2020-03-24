@@ -152,7 +152,7 @@ Before you uninstall a primary site, review the following tasks:
 
 - Reconfigure any [client installation methods](/configmgr/core/clients/deploy/plan/client-installation-methods) that may reference a static site code.
 
-- If this primary site has any site-specific cloud-attached services, make sure to remove the cloud resources.
+- If this primary site has any site-specific cloud-attached services, make sure to remove them. If you still need the cloud resources, move them to another primary site in the hierarchy. Remove them from the primary site that you're going to uninstall, and add them to another primary site.
 
 - If this primary site has any [discovery methods](/configmgr/core/servers/deploy/configure/run-discovery) for the hierarchy, move them to another site.
 
