@@ -1,8 +1,8 @@
 ---
-title: User experience analytics preview
+title: Endpoint analytics preview
 titleSuffix: Configuration Manager
-description: Instructions for User experience analytics preview.
-ms.date: 03/23/2020
+description: Instructions for Endpoint analytics preview.
+ms.date: 03/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -13,12 +13,12 @@ manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW 
 ---
 
-# <a name="bkmk_uea"></a> User experience analytics private preview
+# <a name="bkmk_uea"></a> Endpoint analytics private preview
 
 > [!Note]  
 > This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
-## User experience analytics overview
+## Endpoint analytics overview
 
 It's not uncommon for end users to experience long boot times or other disruptions. These disruptions can be due to a combination of:
 
@@ -28,7 +28,7 @@ It's not uncommon for end users to experience long boot times or other disruptio
 
 These issues and other end-user experience problems persist because IT doesn't have much visibility into the end-user experience. Generally, the only visibility into these issues come from a slow costly support channel that doesn't usually provide clear information about what needs to be optimized. It's not only IT support bearing the cost of these problems. The time information workers spend dealing with issues is also costly. Performance, reliability, and support issues that reduce user productivity can have a large impact on an organization's bottom line as well.
 
-**User experience analytics** aims to improve user productivity and reduce IT support costs by providing insights into the user experience. The insights enable IT to optimize the end-user experience with proactive support and to detect regressions to the user experience by assessing user impact of configuration changes.
+**Endpoint analytics** aims to improve user productivity and reduce IT support costs by providing insights into the user experience. The insights enable IT to optimize the end-user experience with proactive support and to detect regressions to the user experience by assessing user impact of configuration changes.
 
 This initial release, focuses on three things:
 
@@ -36,11 +36,11 @@ This initial release, focuses on three things:
 - [**Proactive remediation scripting**](#bkmk_uea_prs): Fix common support issues before end-users notice issues
 - [**Start up performance**](#bkmk_uea_bp): Help IT get users from power-on to productivity quickly without lengthy boot and sign in delays
 
-This release is just the beginning. We'll be rapidly rolling out new insights for other key user-experiences soon after initial release.
+This release is just the beginning. We'll be rapidly rolling out new insights for other key user-experiences soon after initial release. For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new-endpoint-analytics.md).
 
 ## <a name="bkmk_uea_prereq"></a> Getting started
 
-To start using User experience analytics, verify the prerequisites, then start gathering data. 
+To start using Endpoint analytics, verify the prerequisites, then start gathering data. 
 
 ### Technical Prerequisites
 
@@ -56,7 +56,7 @@ Configuration Manager devices and Intune enrolled devices on prior versions of W
 
 ### Licensing Prerequisites
 
-User experience analytics is included in the following plans: 
+Endpoint analytics is included in the following plans: 
 
 - [Enterprise Mobility + Security E3](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) or higher
 - [Microsoft 365 Enterprise E3](https://www.microsoft.com/en-us/microsoft-365/enterprise?rtc=1) or higher. 
@@ -86,7 +86,7 @@ Once your data is ready, you'll notice some information on the **Overview** page
 
 - **Insights and recommendations** is a prioritized list to improve your score. This list is filtered to the subnode's context when you navigate to **Best practices** or **Recommended software**.
 
-[![User experience analytics overview page](media/uea-overview-page.png)](media/uea-overview-page.png#lightbox)
+[![Endpoint analytics overview page](media/overview-page.png)](media/overview-page.png#lightbox)
 
 ## <a name="bkmk_uea_rs"></a> Recommended software
 
@@ -95,7 +95,7 @@ Once your data is ready, you'll notice some information on the **Overview** page
 
 Certain software is known to improve the end-user experience, independent of lower-level health metrics. For example, Windows 10 has a much higher Net Promoter score than Windows 7. The **Software adoption** score is a number between 0 and 100 that represents a weighted average of the percent of devices that have deployed various recommended software. The current weighting is higher for Windows than for the other metrics since users interact with them more often. The metrics are described below: 
 
-[![User experience analytics Recommended software page](media/uea-recommended-software.png)](media/uea-recommended-software.png#lightbox)
+[![Endpoint analytics Recommended software page](media/recommended-software.png)](media/recommended-software.png#lightbox)
 
 ### <a name="bkmk_uea_win10"></a> Windows 10
 
@@ -141,7 +141,7 @@ The startup performance score helps IT get users from power-on to productivity q
 - **Boot score**: Based on the time from power-on to sign in. We look at the last boot time from each device, excluding the update phase, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
 - **Sign-in score**: Based on the time from when credentials have been entered until the user can access the desktop. We look at the last sign-in time to each device, excluding first sign-ins or sign-ins immediately after a feature update, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
 
-[![User experience analytics startup performance page](media/uea-startup-performance.png)](media/uea-startup-performance.png#lightbox)
+[![Endpoint analytics startup performance page](media/startup-performance.png)](media/startup-performance.png#lightbox)
 
 The **Startup performance** page also provides a prioritized list of **Insights and recommendations**, described in the following sections:
 
@@ -173,7 +173,7 @@ We're working on more startup performance insights, which will be available in f
 
 Proactive remediations are script packages that can detect and fix common support issues on a user's device before they even realize there's a problem. These remediations can help reduce support calls. You can create your own script package, or deploy one of the script packages we've written and used in our environment for reducing support tickets.
 
-Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you'll be able to deploy these script packages and see reports on their effectiveness. We're actively developing new script packages and would like to know your experiences using them. Reach out to your user experience analytics preview contact if you have any feedback on the script packages.
+Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you'll be able to deploy these script packages and see reports on their effectiveness. We're actively developing new script packages and would like to know your experiences using them. Reach out to your Endpoint analytics preview contact if you have any feedback on the script packages.
 
 ### <a name="bkmk_uea_prs_ps1"></a> Get the detection and remediation scripts
 
@@ -188,12 +188,12 @@ Each script package consists of a detection script, a remediation script, and me
 The **Microsoft Intune Management Extension** service gets the scripts from Intune and runs them. The scripts are rerun every 24 hours. To deploy and monitor the scripts, follow the instructions below:
 
 1. Go to the **Proactive remediations** node in the console.
-1. Click the **Create** button to create a script package.
-     [![User experience analytics Proactive remediations page. Select the create link.](media/uea-proactive-remediations-create.png)](media/uea-proactive-remediations-create.png#lightbox)
+1. Click the **Create script package** button to create a script package.
+     [![Endpoint analytics Proactive remediations page. Select the create link.](media/proactive-remediations-create.png)](media/proactive-remediations-create.png#lightbox)
 1. In the **Basics** step, give the script package a **Name** and optionally, a **description**. The **Publisher** field can be edited, but defaults to your tenant name. **Version** can't be edited. 
 1. On the **Settings** step, copy the text from the scripts you downloaded into the **Detection script** and **Remediation script** fields. 
    - You need the corresponding detection and remediation script to be in the same package. For example, the `DetGPLastUpd.ps1` detection script corresponds with the `RemGPLastUpd.ps11` remediation script.
-       [![User experience analytics Proactive remediations script settings page.](media/uea-proactive-remediations-script-settings.png)](media/uea-proactive-remediations-script-settings.png#lightbox)
+       [![Endpoint analytics Proactive remediations script settings page.](media/proactive-remediations-script-settings.png)](media/proactive-remediations-script-settings.png#lightbox)
 1. Finish the options on the **Settings** page with the following recommended configurations:
    - **Run this script using the logged-on credentials**: This is dependent on the script. For more information, see the [Script descriptions](#bkmk_uea_scripts).
    - **Enforce script signature check**: No
@@ -201,13 +201,13 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 1. Click **Next** then assign any **Scope tags** you need.
 1. In the **Assignments** step, select the device groups to which you want to deploy the script package.
 1. Complete the **Review + Create** step for your deployment.
-1. Under **Reporting** > **User experience analytics - Proactive remediations**, you can see an overview of your detection and remediation status.
-       [![User experience analytics Proactive remediations report, overview page.](media/uea-proactive-remediations-report-overview.png)](media/uea-proactive-remediations-report-overview.png#lightbox)
+1. Under **Reporting** > **Endpoint analytics - Proactive remediations**, you can see an overview of your detection and remediation status.
+       [![Endpoint analytics Proactive remediations report, overview page.](media/proactive-remediations-report-overview.png)](media/proactive-remediations-report-overview.png#lightbox)
 1. Click on **Device status** to get status details for each device in your deployment.
-       [![User experience analytics Proactive remediations device status.](media/uea-proactive-remediations-device-status.png)](media/uea-proactive-remediations-device-status.png#lightbox)
+       [![Endpoint analytics Proactive remediations device status.](media/proactive-remediations-device-status.png)](media/proactive-remediations-device-status.png#lightbox)
 
 
-## <a name="bkmk_uea_set"></a> User experience analytics settings
+## <a name="bkmk_uea_set"></a> Endpoint analytics settings
 
 From the settings page, you can select **General** or **Baseline**. Each of these settings is described below:
 
@@ -239,7 +239,7 @@ To assign this setting to a subset of devices, [Create a profile](/intune/config
 > [!NOTE]
 > There is a placeholder for instructions for configuring the Configuration Manager data connector. However, this functionality has not been implemented in this initial private preview.
 
-  [![User experience analytics general settings page](media/uea-settings-general.png)](media/uea-settings-general.png#lightbox)
+  [![Endpoint analytics general settings page](media/settings-general.png)](media/settings-general.png#lightbox)
 
 ### <a name="bkmk_uea_baselines"></a> Baseline management
 
@@ -250,24 +250,24 @@ You can compare your current scores and subscores to others by setting a baselin
 1. There's a limit of 100 baselines per tenant. You can delete old baselines that are no longer needed.
 1. Your current metrics will be flagged red and show as regressed if they fall below the current baseline in your reports. Because it's perfectly normal for metrics to fluctuate from day to day, you can set a regression threshold, which defaults to 10%. With this threshold, metrics are only flagged as regressed if they've regressed by more than 10%.
 
-   [![User experience analytics baseline settings page](media/uea-settings-baseline.png)](media/uea-settings-baseline.png#lightbox)
+   [![Endpoint analytics baseline settings page](media/settings-baseline.png)](media/settings-baseline.png#lightbox)
 
 ## <a name="bkmk_uea_tshoot"></a> Troubleshooting
 
-To enroll devices to User Experience Analytics, they need to send required functional data to Microsoft. If your environment uses a proxy server, use this information to help configure the proxy.
+To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft. If your environment uses a proxy server, use this information to help configure the proxy.
 
 ### <a name="bkmk_uea_endpoints"></a> Endpoints
 
 To enable functional data sharing, configure your proxy server to allow the following endpoints:
 
 > [!Important]  
-> For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the required functional data sharing endpoints. SSL interception and inspection aren't possible. To use User Experience Analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
+> For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the required functional data sharing endpoints. SSL interception and inspection aren't possible. To use Endpoint analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
 
 | Endpoint  | Function  |
 |-----------|-----------|
 | `https://*.events.data.microsoft.com` | Used to send [required functional data](#bkmk_uea_datacollection) to the Intune data collection endpoint. |
-| `https://graph.windows.net` | Used to automatically retrieve settings  when attaching your hierarchy to User Experience Analytics (on Configuration Manager Server role). For more information, see [Configure the proxy for a site system server](/sccm/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server). |
-| `https://*.manage.microsoft.com` | Used to synch device collection and devices with User Experience Analytics (on Configuration Manager Server role only). For more information, see [Configure the proxy for a site system server](/sccm/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server). |
+| `https://graph.windows.net` | Used to automatically retrieve settings  when attaching your hierarchy to Endpoint analytics (on Configuration Manager Server role). For more information, see [Configure the proxy for a site system server](/sccm/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server). |
+| `https://*.manage.microsoft.com` | Used to synch device collection and devices with Endpoint analytics (on Configuration Manager Server role only). For more information, see [Configure the proxy for a site system server](/sccm/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server). |
 
 
 ### Proxy server authentication
@@ -644,15 +644,15 @@ catch{
 }
 ```
 
-## <a name="bkmk_uea_privacy"></a> User Experience Analytics data privacy
+## <a name="bkmk_uea_privacy"></a> Endpoint analytics data privacy
 
 ### Data flow
 
 The following illustration shows how required functional data flows from individual devices through our data services, transient storage, and to your tenant. Data flows through our existing enterprise pipelines without reliance on Windows diagnostic data.
 
-[![User experience data flow diagram](media/uea-dataflow.png)](media/uea-dataflow.png#lightbox)
+[![User experience data flow diagram](media/dataflow.png)](media/dataflow.png#lightbox)
 
-1. Configure the **Intune data collection** policy for enrolled devices. By default, this policy is assigned to "All Devices" when you **Start** User experience analytics. However, you can [change the assignment](#bkmk_uea_set) at any time to a subset of devices or no devices at all.
+1. Configure the **Intune data collection** policy for enrolled devices. By default, this policy is assigned to "All Devices" when you **Start** Endpoint analytics. However, you can [change the assignment](#bkmk_uea_set) at any time to a subset of devices or no devices at all.
 
 2. Devices send required functional data.
 
@@ -668,7 +668,7 @@ The average latency end to end is about 12 hours and is gated by the time it tak
 
 ### <a name="bkmk_uea_datacollection"></a>Data collection
 
-Currently, the basic functionality of User experience analytics collects information associated with boot performance records that falls into the [identified](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#identified-data) and [pseudonymized](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#pseudonymized-data) categories. As we add additional functionality over time, the data collected will vary as needed. The main datapoints currently being collected:
+Currently, the basic functionality of Endpoint analytics collects information associated with boot performance records that falls into the [identified](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#identified-data) and [pseudonymized](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#pseudonymized-data) categories. As we add additional functionality over time, the data collected will vary as needed. The main datapoints currently being collected:
 
 #### Identified data
 
