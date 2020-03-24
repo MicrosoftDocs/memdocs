@@ -2,12 +2,10 @@
 title: Microsoft Connected Cache
 titleSuffix: Configuration Manager
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization
-ms.date: 11/29/2019
+ms.date: 03/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-
-
 ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
@@ -61,6 +59,8 @@ When you configure clients to use the Connected Cache server, they no longer req
   - Don't preinstall the IIS [Application Request Routing](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) feature. Connected Cache installs ARR and configures its settings. Microsoft can't guarantee that the Connected Cache's ARR configuration won't conflict with other applications on the server that also use this feature.
 
   - The distribution point requires internet access to the Microsoft cloud. The specific URLs can vary depending upon the specific cloud-enabled content. For more information, see [Internet access requirements](/sccm/core/plan-design/network/internet-endpoints).
+
+  - Starting in version 2002, the Connected Cache application can use an unauthenticated proxy server for internet access. For more information, see [Configure the proxy for a site system server](/configmgr/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server).<!-- 5856396 -->
 
 - Clients running Windows 10 version 1709 or later
 

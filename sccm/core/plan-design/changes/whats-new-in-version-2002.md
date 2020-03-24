@@ -140,6 +140,12 @@ Boundary groups include the following option for peer downloads: **During peer d
 
 For more information, see [Boundary group options](/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
+### Proxy support for Microsoft Connected Cache
+
+<!-- 5856396 -->
+
+If your environment uses an unauthenticated proxy server for internet access, now when you enable a Configuration Manager distribution point for Microsoft Connected Cache, it can communicate through the proxy. For more information, see [Microsoft Connected Cache](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache).
+
 ## <a name="bkmk_client"></a> Client management
 
 ### Client log collection
