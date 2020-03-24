@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 # Automatically enroll iOS/iPadOS devices with Apple's Automated Device Enrollment
 
 > [!IMPORTANT]
-> Apple recently changed from using the Apple Device Enrollment Program (DEP) to Apple Automated Device Enrollment (ADE). Intune is in the process of update the Intune user interface to reflect that. Until such changes are complete, you'll continue to see *Device Enrollment Program* in the Intune portal. Wherever that is shown, it now uses Automated Device Enrollment.
+> Apple recently changed from using the Apple Device Enrollment Program (DEP) to Apple Automated Device Enrollment (ADE). Intune is in the process of updating the Intune user interface to reflect that. Until such changes are complete, you'll continue to see *Device Enrollment Program* in the Intune portal. Wherever that is shown, it now uses Automated Device Enrollment.
 
 You can set up Intune to enroll iOS/iPadOS devices purchased through Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com) (formerly Device Enrollment Program). Automated Device Enrollment lets you enroll large numbers of devices without ever touching them. Devices like iPhones, iPads, and MacBooks can be shipped directly to users. When the user turns on the device, Setup Assistant, which includes the typical out-of-box-experience for Apple products, runs with preconfigured settings and the device enrolls into management.
 
@@ -47,7 +47,7 @@ ADE enrollments aren't compatible with the app store version of the Company Port
 
 To enable modern authentication during enrollment, push the app to the device using **Install Company Portal with VPP** (Volume Purchase Program) in the ADE profile. For more information, see [Automatically enroll iOS/iPadOS devices with Apple's ADE](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
-To enable the Company Portal to update automatically and provide the Company Portal app on devices already enrolled with DEP, deploy the Company Portal app through Intune as a required Volume Purchase Program (VPP) app with an [Application Configuration policy](../apps/app-configuration-policies-use-ios.md) applied.
+To enable the Company Portal to update automatically and provide the Company Portal app on devices already enrolled with ADE, deploy the Company Portal app through Intune as a required Volume Purchase Program (VPP) app with an [Application Configuration policy](../apps/app-configuration-policies-use-ios.md) applied.
 
 > [!NOTE]
 > During automated device enrollment, while the Company Portal is running in single app mode, clicking the **Learn more** link results in an error message because of single app mode. After enrollment is completed, you can view more information in the CP when the device is no longer in single app mode. 
@@ -98,8 +98,8 @@ You use the [Apple Business Manager (ABM)](https://business.apple.com/) or [Appl
 
 ### Step 2. Use your key to download a token from Apple.
 
-1. Choose **Create a token for Apple's Device Enrollment Program** to open Apple's Deployment Program portal, and sign in with your company Apple ID. You can use this Apple ID to renew your DEP token.
-2. In Apple's [Deployment Programs portal](https://deploy.apple.com), choose **Get Started** for **Device Enrollment Program**.
+1. Choose **Create a token for Apple's Device Enrollment Program** to open Apple's Business portal, and sign in with your company Apple ID. You can use this Apple ID to renew your ADE token.
+2. In Apple's [Business portal](https://business.apple.com), choose **Get Started** for **Device Enrollment Program**.
 
 3. On the **Manage Servers** page, choose **Add MDM Server**.
 4. Enter the **MDM Server Name**, and then choose **Next**. The server name is for your reference to identify the mobile device management (MDM) server. It isn't the name or URL of the Microsoft Intune server.
@@ -134,7 +134,7 @@ With the push certificate, Intune can enroll and manage iOS/iPadOS devices by pu
 
 ## Create an Apple enrollment profile
 
-Now that you've installed your token, you can create an enrollment profile for DEP devices. A device enrollment profile defines the settings applied to a group of devices during enrollment. There is a limit of 100 enrollment profiles per DEP token.
+Now that you've installed your token, you can create an enrollment profile for ADE devices. A device enrollment profile defines the settings applied to a group of devices during enrollment. There is a limit of 100 enrollment profiles per ADE token.
 
 > [!NOTE]
 > Devices will be blocked if there aren't enough Company Portal licenses for a VPP token, or if the token has expired. Intune will display an alert when a token is about to expire or licenses are running low.
@@ -171,7 +171,7 @@ Now that you've installed your token, you can create an enrollment profile for D
 6. If you chose **Company Portal** for **Select where users must authenticate**, you can use a VPP token to automatically install the Company Portal on the device. In this case, the user doesn't have to supply an Apple ID. To install the Company Portal with a VPP token, choose a token under **Install Company Portal with VPP**. Requires that the Company Portal has already been added to the VPP token. To ensure that the Company Portal app continue to be updated after enrollment, make sure that you have configured an app deployment in Intune (Intune>Client Apps). So that user interaction is not required, you'll most likely want to have the Company Portal as a iOS/iPadOS VPP app, make it a required app, and use device licensing for the assignment. Make sure that the token doesn't expire and that you have enough device licenses for the Company Portal app. If the token expires or runs out of licenses, Intune installs the App Store Company Portal instead and prompts for an Apple ID. 
 
     > [!NOTE]
-    > When **Select where users must authenticate** is to **Company Portal**, make sure that the device enrollment process is performed within the first 24 hours of the company portal being downloaded to the DEP device. Otherwise enrollment might fail, and a factory reset will be needed to enroll the device.
+    > When **Select where users must authenticate** is to **Company Portal**, make sure that the device enrollment process is performed within the first 24 hours of the company portal being downloaded to the ADE device. Otherwise enrollment might fail, and a factory reset will be needed to enroll the device.
     
     ![Screenshot of install company portal with VPP.](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
 
@@ -189,7 +189,7 @@ Now that you've installed your token, you can create an enrollment profile for D
 
     ![Device Management Settings screenshot.](./media/device-enrollment-program-enroll-ios/supervisedmode.png)
 
-    **Supervised** devices give you more management options and disabled Activation Lock by default. Microsoft recommends using DEP as the mechanism for enabling supervised mode, especially if you're deploying large numbers of iOS/iPadOS devices.
+    **Supervised** devices give you more management options and disabled Activation Lock by default. Microsoft recommends using ADE as the mechanism for enabling supervised mode, especially if you're deploying large numbers of iOS/iPadOS devices.
 
     Users are notified that their devices are supervised in two ways:
 
@@ -264,7 +264,7 @@ Now that Intune has permission to manage your devices, you can synchronize Intun
    ![Screenshot of the Enrollment Program Devices node and Sync link.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    To follow Apple's terms for acceptable enrollment program traffic, Intune imposes the following restrictions:
-   - A full sync can run no more than once every seven days. During a full sync, Intune fetches the complete updated list of serial numbers assigned to the Apple MDM server connected to Intune. If a DEP device is deleted from the Intune portal, it should be unassigned from the Apple MDM server in the DEP portal. If it's not unassigned, it won't be reimported to Intune until the full sync is run.   
+   - A full sync can run no more than once every seven days. During a full sync, Intune fetches the complete updated list of serial numbers assigned to the Apple MDM server connected to Intune. If an ADE device is deleted from the Intune portal, it should be unassigned from the Apple MDM server in the ADE portal. If it's not unassigned, it won't be reimported to Intune until the full sync is run.   
    - A sync is run automatically every 24 hours. You can also sync by clicking the **Sync** button (no more than once every 15 minutes). All sync requests are given 15 minutes to finish. The **Sync** button is disabled until a sync is completed. This sync will refresh existing device status and import new devices assigned to the Apple MDM server.   
 
 
@@ -286,16 +286,16 @@ You can pick a default profile to be applied to all devices enrolling with a spe
 2. Choose **Set Default Profile**, choose a profile in the drop-down list, and then choose **Save**. This profile will be applied to all devices that enroll with the token.
 
 ## Distribute devices
-You have enabled management and syncing between Apple and Intune, and assigned a profile to  let your DEP devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license. Devices without user affinity require a device license. An activated device can't apply an enrollment profile until the device is wiped.
+You have enabled management and syncing between Apple and Intune, and assigned a profile to  let your ADE devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license. Devices without user affinity require a device license. An activated device can't apply an enrollment profile until the device is wiped.
 
 See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program](../user-help/enroll-your-device-dep-ios.md).
 
-## Renew a DEP token  
+## Renew an ADE token  
 
 > [!NOTE]
-> In addition to renewing your DEP token yearly, you will need to renew your enrollment program token within Intune and Apple Business Manager when the Managed Apple ID password changes for the user who set up the token in Apple business Manager or that user leaves your Apple Business Manager organization.
+> In addition to renewing your ADE token yearly, you will need to renew your enrollment program token within Intune and Apple Business Manager when the Managed Apple ID password changes for the user who set up the token in Apple business Manager or that user leaves your Apple Business Manager organization.
 
-1. Go to deploy.apple.com.  
+1. Go to business.apple.com.  
 2. Under **Manage Servers**, choose your MDM server associated with the token file that you want to renew.
 3. Choose **Generate New Token**.
 
