@@ -76,7 +76,7 @@ Before you create a profile, review the following articles that detail the endpo
 
     Select **Next**.
 
-10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
     Select **Next**.
 
@@ -94,7 +94,7 @@ When you plan for profiles with custom Firewall rules, consider the following in
 
 - When a rule fails to apply, all rules in the profile are reported as failed. Intune cannot identify which individual rule failed.  
 
-The Firewall rules that Intune can manage are detailed in the Windows [Firewall configuration service provider]( https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (CSP). To review the list of custom firewall settings for Windows 10 devices that Intune supports, see [Custom Firewall rules](endpoint-protection-windows-10.md#firewall-rules).
+The Firewall rules that Intune can manage are detailed in the Windows [Firewall configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (CSP). To review the list of custom firewall settings for Windows 10 devices that Intune supports, see [Custom Firewall rules](endpoint-protection-windows-10.md#firewall-rules).
 
 ### To add custom firewall rules to an Endpoint protection profile
 
@@ -120,4 +120,4 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
 ## Next steps
 
-The profile is created, but it may not be doing anything yet. Next, [assign the profile](../configuration/device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+The profile is created, but it may not be doing anything yet. Next, [assign the profile](../configuration/device-profile-assign.md) and [monitor its status](../configuration/device-profile-monitor.md).

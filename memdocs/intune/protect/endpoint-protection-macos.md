@@ -128,6 +128,6 @@ For more information about FileVault with Intune, see [FileVault recovery keys](
 
 ## Next steps
 
-[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+[Assign the profile](../configuration/device-profile-assign.md) and [monitor its status](../configuration/device-profile-monitor.md).
 
 You can also configure endpoint protection on [Windows 10 and newer devices](endpoint-protection-windows-10.md).
