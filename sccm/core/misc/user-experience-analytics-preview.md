@@ -668,29 +668,37 @@ The average latency end to end is about 12 hours and is gated by the time it tak
 
 ### <a name="bkmk_uea_datacollection"></a>Data collection
 
-Currently, the basic functionality of User experience analytics collects information associated with your boot performance records. As we add additional functionality over time, the data collected will vary as needed. The main datapoints currently being collected:
+Currently, the basic functionality of User experience analytics collects information associated with boot performance records that falls into the [identified](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#identified-data) and [pseudonymized](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#pseudonymized-data) categories. As we add additional functionality over time, the data collected will vary as needed. The main datapoints currently being collected:
 
-- **id:** Unique device ID used by Windows Update
-- **localId:** A locally-defined unique ID for the device. This is not the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
-- **aaddeviceid:** Azure Active Directory device ID
-- **orgId:** Unique GUID representing the Microsoft O365 Tenant
-- **authIdEnt**
-- **make:** Device manufacturer
-- **model:** Device model
-- **deviceClass:** The device classification. For example, Desktop, Server, or Mobile.
-- **Country:** The device region setting
-- **logOnId**
-- **bootId:** The system boot ID
-- **coreBootTimeInMilliseconds:** Time for core boot
-- **totalBootTimeInMilliseconds:** Total boot time
-- **updateTimeInMilliseconds:** Time for OS updates to complete
-- **gpLogonDurationInMilliseconds**: Time for Group policies to process
-- **desktopShownDurationInMilliseconds:** Time for desktop (explorer.exe) to be loaded
-- **desktopUsableDurationInMilliseconds:** Time for desktop (explorer.exe) to be usable
-- **name:** Windows
-- **ver:** The version of the current OS.
-- **topProcesses:** List of processes loaded during boot with name, with cpu usage stats and app details (Name, publisher, version). For example *{\"ProcessName\":\"svchost\",\"CpuUsage\":43,\"ProcessFullPath\":\"C:\\\\Windows\\\\System32\\\\svchost.exe\",\"ProductName\":\"Microsoft&reg; Windows&reg; Operating System\",\"Publisher\":\"Microsoft Corporation\",\"ProductVersion\":\"10.0.18362.1\"}*
+#### Identified data
 
+- Hardware inventory information
+  - **make:** Device manufacturer
+  - **model:** Device model
+  - **deviceClass:** The device classification. For example, Desktop, Server, or Mobile.
+  - **Country:** The device region setting
+- Application inventory, like
+  - **name:** Windows
+  - **ver:** The version of the current OS.
+  
+#### Pseudonymized data
+
+- Diagnostic, performance, and usage data tied to a user and/or device
+  - **logOnId**
+  - **bootId:** The system boot ID
+  - **coreBootTimeInMilliseconds:** Time for core boot
+  - **totalBootTimeInMilliseconds:** Total boot time
+  - **updateTimeInMilliseconds:** Time for OS updates to complete
+  - **gpLogonDurationInMilliseconds**: Time for Group policies to process
+  - **desktopShownDurationInMilliseconds:** Time for desktop (explorer.exe) to be loaded
+  - **desktopUsableDurationInMilliseconds:** Time for desktop (explorer.exe) to be usable
+  - **topProcesses:** List of processes loaded during boot with name, with cpu usage stats and app details (Name, publisher, version). For example *{\"ProcessName\":\"svchost\",\"CpuUsage\":43,\"ProcessFullPath\":\"C:\\\\Windows\\\\System32\\\\svchost.exe\",\"ProductName\":\"Microsoft&reg; Windows&reg; Operating System\",\"Publisher\":\"Microsoft Corporation\",\"ProductVersion\":\"10.0.18362.1\"}*
+- Device data not tied to a device or user (if this data is tied to a device or user, Intune treats it as identified data)
+  - **id:** Unique device ID used by Windows Update
+  - **localId:** A locally-defined unique ID for the device. This is not the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
+  - **aaddeviceid:** Azure Active Directory device ID
+  - **orgId:** Unique GUID representing the Microsoft O365 Tenant
+  
 > [!Important]  
 > Our data handling policies are described in the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the baselines up-to-date.
 
