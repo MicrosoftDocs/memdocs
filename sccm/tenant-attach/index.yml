@@ -23,8 +23,8 @@ landingContent:
       - linkListType: overview
         links:
           - text: Enable tenant attach
-            url: tenant-attach.md
+            url: device-sync-actions.md
       - linkListType: reference
         links:
           - text: Troubleshoot tenant attach
-            url: tenant-attach-tech-reference.md
+            url: technical-reference.md

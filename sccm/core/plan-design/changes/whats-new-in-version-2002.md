@@ -32,7 +32,7 @@ To take full advantage of new Configuration Manager features, after you update t
 <!--3555758 live 3/4/2020-->
 Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. Starting in this release you can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center.
 
-For more information, see [Microsoft Endpoint Manager tenant attach](/sccm/tenant-attach/tenant-attach).
+For more information, see [Microsoft Endpoint Manager tenant attach](/sccm/tenant-attach/device-sync-actions).
 
 ## <a name="bkmk_infra"></a> Site infrastructure
 

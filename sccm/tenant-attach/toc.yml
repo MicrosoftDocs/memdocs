@@ -3,6 +3,6 @@
 - name: Deploy and use
   items:
   - name: Enable tenant attach
-    href: tenant-attach.md
+    href: device-sync-actions.md
   - name: Troubleshoot device actions
-    href: tenant-attach-tech-reference.md
+    href: technical-reference.md

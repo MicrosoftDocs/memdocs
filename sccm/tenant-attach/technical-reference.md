@@ -28,7 +28,7 @@ The available actions are:
   
 When an admin runs an action from Microsoft Endpoint Manager admin center, the notification request is forwarded to Configuration Manager site, and from the site to the client.
 
-## Configuration Manager Components
+## Configuration Manager components
 
 - **SMS_SERVICE_CONNECTOR**: Uses the Gateway Notification Worker for processing the notification from Microsoft Endpoint Manager admin center.
 - **SMS_NOTIFICATION_SERVER**: Gets the notification and creates a client notification.
@@ -94,7 +94,7 @@ Validating device action message content...
 Unauthorized to perform client action. TemplateID: RequestMachinePolicy TenantId: a1b2c3a1-b2c3-d4a1-b2c3-d4a1b2c3a1b2 AADUserID: 3a1e89e6-e190-4615-9d38-a208b0eb1c78
 ```  
 
-Ensure the user running the action from the Microsoft Endpoint Manager admin center has the required permissions on Configuration Manager site. For more information, see [Microsoft Endpoint Manager tenant attach prerequisites](/sccm/tenant-attach/tenant-attach#prerequisites).
+Ensure the user running the action from the Microsoft Endpoint Manager admin center has the required permissions on Configuration Manager site. For more information, see [Microsoft Endpoint Manager tenant attach prerequisites](/sccm/tenant-attach/device-sync-actions#prerequisites).
 
 ## Next steps
 

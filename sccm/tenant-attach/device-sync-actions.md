@@ -107,4 +107,4 @@ Use the following logs, located in &lt;ConfigMgr install directory>\Logs, to mon
 
 ## Next steps
 
-For more information about the tenant attach log files, see [Troubleshoot tenant attach](tenant-attach-tech-reference.md).
+For more information about the tenant attach log files, see [Troubleshoot tenant attach](technical-reference.md).
