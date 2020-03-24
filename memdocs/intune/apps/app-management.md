@@ -75,7 +75,7 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 <sup>1</sup> Consider using [Windows Information Protection](../protect/windows-information-protection-configure.md) to protect apps on devices that run Windows 10.<br>
 <sup>2</sup> Applies to devices managed by Intune only.<br>
 <sup>3</sup> Intune supports available apps from Managed Google Play store on Android Enterprise devices.<br>
-<sup>4</sup> Intune does not provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings). 
+<sup>4</sup> Intune does not provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md#dedicated-devices). 
 
 
 ## Get started

@@ -278,7 +278,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
     For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
 
-    For more information on this feature, see [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)) (opens an Android site).
+  For more information on this feature, see [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)) (opens an Android site).
 
 ## Work profile only
 
@@ -349,9 +349,9 @@ These settings apply to Android Enterprise enrollment types where Intune control
   - **Device default**
   - **Low security biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
   - **Required**
-  - **At least numeric**: Password must only be numbers, such as `123456789`.
+  - **At least numeric**: Includes numeric characters, such as `123456789`.
   - **Numeric complex**: Repeated or consecutive numbers, such as `1111` or `1234`, aren't allowed.
-  - **At least alphabetic**: Letters in the alphabet are required. Numbers and symbols aren't required.
+  - **At least alphabetic**: Includes letters in the alphabet. Numbers and symbols aren't required.
   - **At least alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
   - **At least alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
 
@@ -376,11 +376,12 @@ These password settings apply to personal profiles on devices that use a work pr
   - **Device default**
   - **Low security biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
   - **Required**
-  - **At least numeric**: Password must only be numbers, such as `123456789`.
+  - **At least numeric**: Includes numeric characters, such as `123456789`.
   - **Numeric complex**: Repeated or consecutive numbers, such as `1111` or `1234`, aren't allowed.
-  - **At least alphabetic**: Letters in the alphabet are required. Numbers and symbols aren't required.
+  - **At least alphabetic**: Includes letters in the alphabet. Numbers and symbols aren't required.
   - **At least alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
   - **At least alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
+
 - **Prevent reuse of previous passwords**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
 - **Fingerprint unlock**: **Block** prevents users from using the device fingerprint scanner to unlock the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.
 - **Smart Lock and other trust agents**: **Block** prevents Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. If devices are in a trusted location, then this feature, also known as a trust agent, lets you disable or bypass the device lock screen password. For example, bypass the work profile password when devices are connected to a specific Bluetooth device, or when devices are close to an NFC tag. Use this setting to prevent users from configuring Smart Lock.

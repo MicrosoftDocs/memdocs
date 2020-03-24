@@ -72,8 +72,8 @@ This article shows you all the Microsoft Intune device restrictions settings tha
 - **Password expiration (days)**: Enter the number of days, until the device password must be changed, from 1-365. For example, enter `90` to expire the password after 90 days. When the password expires, users are prompted to create a new password. When the value is blank, Intune doesn't change or update this setting.
 - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
   - **Device default**
-  - **Low security biometric**
-  - **At least numeric**
+  - **Low security biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
+  - **At least numeric**: Includes numeric characters, such as `123456789`.
   - **Numeric complex**: Repeated or consecutive numbers, such as "1111" or "1234", aren't allowed. Before you assign this setting to devices, be sure to update the Company Portal app to the latest version on those devices.
 
     When set to **Numeric complex**, and you assign the setting to devices running an Android version earlier than 5.0, then the following behavior applies:
@@ -81,9 +81,10 @@ This article shows you all the Microsoft Intune device restrictions settings tha
     - If the Company Portal app is running a version earlier than 1704, no PIN policy applies to devices, and an error shows in the Microsoft Endpoint Manager admin center.
     - If the Company Portal app runs the 1704 version or later, only a simple PIN can be applied. Android version earlier than 5.0 don't support this setting. No error is shown in the Microsoft Endpoint Manager admin center.
 
-  - **At least alphabetic**
-  - **At least alphanumeric**
-  - **At least alphanumeric with symbols**
+  - **At least alphabetic**: Includes letters in the alphabet. Numbers and symbols aren't required.
+  - **At least alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
+  - **At least alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
+
 - **Prevent reuse of previous passwords**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
 - **Fingerprint unlock (Samsung Knox only)**: **Block** prevents using a fingerprint to unlock devices. When set to **Not configured** (default), Intune doesn't change or update this setting.By default, the OS might allow users to unlock devices using a fingerprint.
 - **Smart Lock and other trust agents**: **Block** prevents Smart Lock or other trust agents from adjusting lock screen settings. If the device is in a trusted location, then this feature, also known as a trust agent, lets you disable or bypass the device lock screen password. For example, use this feature when devices are connected to a specific Bluetooth device, or when devices are close to an NFC tag. You can use this setting to prevent users from configuring Smart Lock.
@@ -193,4 +194,4 @@ Kiosk settings apply only to Samsung Knox Standard devices, and only to apps you
 
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also create kiosk profiles for [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) and [Windows 10](kiosk-settings.md) devices.
+You can also create kiosk profiles for [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) and [Windows 10](kiosk-settings.md) devices.
