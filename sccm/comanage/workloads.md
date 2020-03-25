@@ -5,13 +5,11 @@ description: Learn about the workloads that you can switch from Configuration Ma
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 11/29/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-
-
 ---
 
 # Co-management workloads
@@ -113,8 +111,10 @@ Use Intune to manage client apps and PowerShell scripts on co-managed Windows 10
 
 For more information on the Intune feature, see [What is Microsoft Intune app management?](https://docs.microsoft.com/intune/app-management).
 
-> [!Note]  
-> The client apps workload is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features). This feature may appear in the list of features as **Mobile apps for co-managed devices**.<!-- 5849669 -->
+> [!Tip]  
+> This feature was first introduced in version 1806 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 2002, it's no longer a pre-release feature.  
+>
+> This feature may appear in the list of features as **Mobile apps for co-managed devices**.<!-- 5849669 -->
 
 Starting in version 1910, when you enable Microsoft Connected Cache on your Configuration Manager distribution points, they can now serve Microsoft Intune Win32 apps to co-managed clients. For more information, see [Microsoft Connected Cache in Configuration Manager](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
 
