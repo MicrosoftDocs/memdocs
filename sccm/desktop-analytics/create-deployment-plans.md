@@ -37,6 +37,8 @@ Follow the steps in this section to use Desktop Analytics to create a plan for d
         If you connect multiple Configuration Manager hierarchies to the same Desktop Analytics instance, a display name for the hierarchy prefixes the collection name in the global pilot configuration. This name is the **Display Name** property on the Desktop Analytics connection in the Configuration Manager console.<!-- 4814075 -->
 
         > [!NOTE]
+        > Support for multiple hierarchies requires Configuration Manager version 1910 or later.
+        >
         > If you select collections for multiple hierarchies, the portal displays a warning. You can't create the deployment plan with collections from multiple hierarchies.<!-- 4814075 -->
 
     - **Readiness rules**: These rules help to determine which devices qualify for upgrade. For more information, see [Readiness rules](#readiness-rules).  
