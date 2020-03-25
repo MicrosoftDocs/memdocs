@@ -49,8 +49,11 @@ The primary user of a device can be updated for devices Windows 10 devices that 
 3. Select a new user and choose **Select**.
 
 After the primary user is updated, it will also be updated in Intune and Azure AD device blades.
-
-The primary user can't be changed on co-managed Windows 10 devices.
+>[!NOTE]
+>1. Updates to the primary user across Endpoint Manager and and Azure AD can take up to 10 minutes to be reflected.
+>2. The primary user currently can't be changed on co-managed Windows 10 devices. 
+>3. Changing the primary user of the device does not make any changes to local group membership such as adding or removing users from the "Administrators" local group
+>4. Changing the primary user does not change the "Enrolled by" user. 
 
 
 ## What is the primary user?
