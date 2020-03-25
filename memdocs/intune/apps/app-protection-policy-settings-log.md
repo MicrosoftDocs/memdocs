@@ -39,8 +39,7 @@ The process to enable and collect logs varies by platform:
 - **Android devices** - Use Microsoft Edge for Android to collect logs. For details, see [Manage web access by using Microsoft Edge with Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
 
 > [!Note]
-> On Android Fully Managed devices, in certain instances the Intune Company Portal app may be visible under all apps. This happens when app associated with an app protection policy is either not installed or not launched. 
-
+> On Android Fully Managed devices, in certain instances the Intune Company Portal app may be visible under all apps. This happens when an app associated with an app protection policy is either not installed or not launched. 
 
 The following table lists the App protection policy setting name and supported values that are recorded in the log. In addition, each setting identifies the policy setting found within Microsoft Endpoint Manager portal. For detailed information on each setting, see [iOS/iPadOS app protection policy settings](app-protection-policy-settings-ios.md).
 
