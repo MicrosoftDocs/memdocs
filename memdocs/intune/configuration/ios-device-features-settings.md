@@ -117,11 +117,13 @@ You can add up to **six** items (apps and folders combined) for the device dock.
 
 In the following example, the dock screen shows only the Safari, Mail, and Stocks apps. The Mail app is selected to show its properties:
 
-![Sample iOS/iPadOS dock settings](./media/ios-device-features-settings/FfFiUcP.png)
+> [!div class="mx-imgBorder"]
+> ![Sample iOS/iPadOS dock settings](./media/ios-device-features-settings/FfFiUcP.png)
 
 When you assign the policy to an iPhone, the dock looks similar to the following image:
 
-![Sample iOS/iPadOS dock layout on iPhone](./media/ios-device-features-settings/bAgCe8F.png)
+> [!div class="mx-imgBorder"]
+> ![Sample iOS/iPadOS dock layout on iPhone](./media/ios-device-features-settings/bAgCe8F.png)
 
 ### Pages
 
@@ -162,11 +164,13 @@ You can add up to **40** pages on a device.
 
 In the following example, a new page named **Contoso** is added. The page shows the Find Friends and Settings apps. The Settings app is selected to show its properties:
 
-![iOS/iPadOS Home screen settings example in Intune](./media/ios-device-features-settings/Jc2OxyX.png)
+> [!div class="mx-imgBorder"]
+> ![iOS/iPadOS Home screen settings example in Intune](./media/ios-device-features-settings/Jc2OxyX.png)
 
 When you assign the policy to an iPhone, the page looks similar to the following image:
 
-![iOS/iPadOS device with modified home screen in Intune](./media/ios-device-features-settings/Bd37PHa.png)
+> [!div class="mx-imgBorder"]
+> ![iOS/iPadOS device with modified home screen in Intune](./media/ios-device-features-settings/Bd37PHa.png)
 
 ## App notifications
 
@@ -174,7 +178,8 @@ When you assign the policy to an iPhone, the page looks similar to the following
 
 - **Add**: Add notifications for apps:
 
-    ![Add app notification in iOS/iPadOS profile in Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+  > [!div class="mx-imgBorder"]
+  > ![Add app notification in iOS/iPadOS profile in Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
 
   - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
   - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on devices.
@@ -217,7 +222,8 @@ This feature applies to:
 
   - **User principal name**: The UPN is parsed in the following way:
 
-    ![iOS/iPadOS Username SSO attribute in Intune](./media/ios-device-features-settings/User-name-attribute.png)
+    > [!div class="mx-imgBorder"]
+    > ![iOS/iPadOS Username SSO attribute in Intune](./media/ios-device-features-settings/User-name-attribute.png)
 
     You can also overwrite the realm with the text you enter in the **Realm** text box.
 
