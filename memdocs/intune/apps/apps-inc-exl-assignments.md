@@ -94,7 +94,7 @@ When you make group assignments, groups that have already been assigned aren't a
 
 To edit assignments, in the app **Assignments** list, select the row that contains the specific assignment that you want to change. You can also remove an assignment by selecting the ellipse (**…**) at the end of a row, and then selecting **Remove**. To change the view of the **Assignments** list, group by **Assignment type** or by **Included/Excluded**.
 
-![Intune app assignments - Complete](/media/apps-inc-exl-assignments/apps-inc-exl-05.png)
+![Intune app assignments - Complete](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 
 ## Next steps
 
