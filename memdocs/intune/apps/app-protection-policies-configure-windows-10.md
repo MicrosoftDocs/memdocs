@@ -29,7 +29,7 @@ ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Get ready to configure app protection policies for Windows 10 
+# Get ready for Windows Information Protection in Windows 10 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -60,4 +60,4 @@ Enable mobile application management (MAM) for Windows 10 by setting the MAM pro
 
 ## Next steps
 
-[Create a WIP app protection policy](windows-information-protection-policy-create.md)
+[Create a WIP policy](windows-information-protection-policy-create.md)
