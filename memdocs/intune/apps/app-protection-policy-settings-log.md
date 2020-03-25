@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 03/25/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -39,15 +39,7 @@ The process to enable and collect logs varies by platform:
 - **Android devices** - Use Company Portal app to collect and upload logs.(https://docs.microsoft.com/en-us/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android). 
 
 > [!Note]
-> On Android Fully Managed devices, use Microsoft Intune app to upload app protection logs. 
-> 1. Launch Microsoft Intune app.
-> 2. Tap on the three bars on the left top corner and go to Settings. 
-> 3. Tap on Log detail level and choose Verbose. 
-> 4. Go to Help and Get Support. 
-> 5. Upload logs. Share the ID with your support professional, if you have a support case open. 
-
-> [!Note]
-> On Android Fully Managed devices, in certain instances Intune Company Portal app may be visible under all apps. This happens when app associated with app protection policy is either not installed or not launched. 
+> On Android Fully Managed devices, in certain instances the Intune Company Portal app may be visible under all apps. This happens when app associated with an app protection policy is either not installed or not launched. 
 
 
 The following table lists the App protection policy setting name and supported values that are recorded in the log. In addition, each setting identifies the policy setting found within Microsoft Endpoint Manager portal. For detailed information on each setting, see [iOS/iPadOS app protection policy settings](app-protection-policy-settings-ios.md).
