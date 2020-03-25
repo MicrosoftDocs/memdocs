@@ -668,7 +668,7 @@ EPStatus
 
 ### <a name="bkmk_local-eval"></a> Local device query evaluation using CMPivot standalone
 <!--3197353-->
-When using CMPivot outside of the Configuration Manager console, you can query just the local device without the need for the Configuration Manager infrastructure. You can now leverage the CMPivot Azure Log Analytics queries to quickly view WMI information on the local device. This also enables validation and refinement of CMPivot queries, before running them in a larger environment. CMPivot standalone is a [pre-release feature](/sccm/core/servers/manage/pre-release-features#bkmk_table) and is only available in English. For more information about installing CMPivot standalone, see [Install CMPivot standalone](#install-cmpivot-standalone).
+When using CMPivot outside of the Configuration Manager console, you can query just the local device without the need for the Configuration Manager infrastructure. You can now leverage the CMPivot Azure Log Analytics queries to quickly view WMI information on the local device. This also enables validation and refinement of CMPivot queries, before running them in a larger environment. CMPivot standalone is only available in English. For more information about installing CMPivot standalone, see [Install CMPivot standalone](#install-cmpivot-standalone).
 
 #### Known issues for local device query evaluation
 
