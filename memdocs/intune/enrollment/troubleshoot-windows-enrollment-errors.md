@@ -44,7 +44,7 @@ Collect the following information about the problem:
 - How many users are affected? Are all users affected or just some?
 - How many devices are affected? Are all devices affected or just some?
 - What is the MDM authority?
-- How is enrollment being performed? Is it "Bring your own device" (BYOD) or Apple Device Enrollment Program (DEP) with enrollment profiles?
+- How is enrollment being performed? Is it "Bring your own device" (BYOD) or Apple Automated Device Enrollment (ADE) with enrollment profiles?
 
 ## Error messages
 
