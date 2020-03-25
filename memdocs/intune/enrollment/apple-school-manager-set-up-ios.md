@@ -35,7 +35,7 @@ ms.collection: M365-identity-device-management
 
 You can set up Intune to enroll iOS/iPadOS devices purchased through the [Apple School Manager](https://school.apple.com/) program. Using Intune with Apple School Manager, you can enroll large numbers of iOS/iPadOS devices without ever touching them. When a student or teacher turns on the device, Setup Assistant runs with preconfigured settings and the device enrolls into management.
 
-To enable Apple School Manager enrollment, you use both the Intune and Apple School Manager portals. A list of serial numbers or a purchase order number is required so you can assign devices to Intune for management. You create DEP enrollment profiles containing settings that applied to devices during enrollment.
+To enable Apple School Manager enrollment, you use both the Intune and Apple School Manager portals. A list of serial numbers or a purchase order number is required so you can assign devices to Intune for management. You create Automated Device Enrollment (ADE) enrollment profiles containing settings that applied to devices during enrollment.
 
 Apple School Manager enrollment can't be used with [Apple's Device Enrollment Program](device-enrollment-program-enroll-ios.md) or the [device enrollment manager](device-enrollment-manager-enroll.md).
 
@@ -110,7 +110,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     > These aren't supported when authenticating with Apple Setup Assistant.
 
 6. Choose **Device Management Settings** and choose if you want devices using this profile to be supervised.
-    **Supervised** devices give you more management options and disabled Activation Lock by default. Microsoft recommends using DEP as the mechanism for enabling supervised mode, especially for organizations that are deploying large numbers of iOS/iPadOS devices.
+    **Supervised** devices give you more management options and disabled Activation Lock by default. Microsoft recommends using ADE as the mechanism for enabling supervised mode, especially for organizations that are deploying large numbers of iOS/iPadOS devices.
 
     Users are notified that their devices are supervised in two ways:
 
