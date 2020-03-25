@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -85,7 +85,7 @@ To add AirPrinter servers, you need the IP address of the printer, the resource 
   
   When adding any app, folder, or file, be sure to enter the correct path. Not all items are in the `Applications` folder. If users move an item from one location to another, then the path changes. This moved item won't be opened when the user signs in.
 
-- **Hide from user configuration**: **Hide** doesn't show the app in the Users & Groups login items list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the app in the login items list.
+- **Hide from user configuration**: **Hide** doesn't show the app in the Users & Groups login items list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS shows item you start at login in the Users & Groups login items list with the hide option unchecked.
 
 ## Login window
 
