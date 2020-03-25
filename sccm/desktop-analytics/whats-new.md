@@ -33,6 +33,9 @@ You can now connect multiple Configuration Manager hierarchies to a single Azure
 - When you configure your global pilot, if you include collections that contain more than 20% of your total enrolled devices, the portal displays a warning.
 - When you create a deployment plan, if you select collections for multiple hierarchies, the portal displays a warning.
 
+> [!NOTE]
+> Support for multiple hierarchies requires Configuration Manager version 2002 or later.
+
 For more information, see the following articles:
 
 - [Global pilot](/configmgr/desktop-analytics/deploy-pilot#bkmk_GlobalPilot)
