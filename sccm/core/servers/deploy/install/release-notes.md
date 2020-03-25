@@ -85,7 +85,7 @@ To work around this issue, renew the key associated with the app registration in
 
 ## Application management
 
-### Unable to get certificate for Powershell error when deploying Microsoft Edge, version 77 and later
+### Unable to get certificate for PowerShell error when deploying Microsoft Edge, version 77 and later
 <!--5769384-->
 *Applies to: Configuration Manager version 1910*
 
