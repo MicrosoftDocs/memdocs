@@ -28,7 +28,7 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Check compliance on your Android device
+# Check compliance on your Android device  
 Manually start a device check-in from the Company Portal to:
 
 * Update your device status 
