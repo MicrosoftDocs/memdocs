@@ -144,7 +144,7 @@ Assign a valid Intune license to the user, and then enroll the device.
 To fix this issue, use one of the following methods: 
  
 ##### Assign a valid license to the user
-Go to the [Microsoft 365 Admin Center](https://portal.office.com/adminportal/home), and then assign either an Intune or an Office 365 license to the user.
+Go to the [Microsoft 365 Admin Center](https://admin.microsoft.com), and then assign either an Intune or an Office 365 license to the user.
 
 ##### Correct the MDM terms of use URL
   1. Sign in to the [Azure portal](https://portal.azure.com/), and then select **Azure Active Directory**.    

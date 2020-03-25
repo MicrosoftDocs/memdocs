@@ -44,7 +44,7 @@ When users see that they're out of compliance for this reason, they can tap **Re
 - Set up Android work profile management by [connecting your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).
 - [Set Android Enterprise work profile enrollment](android-work-profile-enroll.md) for the group of users who are moving to Android work profile.
 - Consider increasing your user device limits. When unenrolling devices from device administrator management, device records might not be immediately removed. To provide cushion during this period, you might need to increase device limit capacity so that the users can enroll into work profile management.
-  - [Configure Azure Active Directory device settings](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings) for Maximum number of devices per user.
+  - [Configure Azure Active Directory device settings](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) for Maximum number of devices per user.
   - Adjust the [Intune device limit restrictions](enrollment-restrictions-set.md#create-a-device-limit-restriction) by setting the Device limit. 
 
 ## Create device compliance policy
@@ -84,13 +84,13 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
 ## Troubleshooting
 
-The [end user flow to move to new device management setup](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md) guides users through unenrolling from device administrator management and getting set up with work profile management. Users must have [Android device administrator enrolled devices](android-enroll-device-administrator.md) with Android Company Portal version 5.0.4720.0 or later.
+The [end user flow to move to new device management setup](../user-help/move-to-new-device-management-setup.md) guides users through unenrolling from device administrator management and getting set up with work profile management. Users must have [Android device administrator enrolled devices](android-enroll-device-administrator.md) with Android Company Portal version 5.0.4720.0 or later.
 
 ### User sees an error after tapping Resolve
 If users see an error after tapping the **Resolve** button, it's likely because of one of these reasons:
 - Work profile enrollment isn't set up correctly (either an Android Enterprise account isn't connected or enrollment restrictions are set to block work profile enrollment).
-- The device is running Android 4.4 or earlier, which doesn’t support work profile enrollment. 
-- The device manufacturer doesn’t support work profile enrollment on the device model.
+- The device is running Android 4.4 or earlier, which doesn't support work profile enrollment. 
+- The device manufacturer doesn't support work profile enrollment on the device model.
 
 ### Resolve button doesn't appear on the user's device
 The **Resolve** button won't appear on the user's device if the user enrolls into device administrator management after they've been targeted with the device compliance policy explained above.
@@ -107,7 +107,5 @@ Users might see an error page in the browser when they tap the URL to the **Upda
 - The Android device uses Android 6 or earlier. 
 
 ## Next steps
-[See the end user flow](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md)
+[See the end user flow](../user-help/move-to-new-device-management-setup.md)
 [Manage Android work profile devices with Intune](android-enterprise-overview.md)
-
-

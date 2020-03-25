@@ -803,7 +803,7 @@ Attack surface reduction rules help prevent behaviors malware often uses to infe
 
 - **Flag credential stealing from the Windows local security authority subsystem**  
   **Default**: Not configured  
-  Rule: [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem-lsassexe)
+  Rule: [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   Help prevent actions and apps that are typically used by exploit-seeking malware to infect machines.  
 
