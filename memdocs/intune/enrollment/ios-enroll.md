@@ -65,14 +65,14 @@ You can also enroll company-owned iOS/iPadOS devices with a [device enrollment m
 
 ## Automated Device Enrollment
 
-Organizations can purchase iOS/iPadOS devices through Apple's Automated Device Enrollment (ADE). DEP lets you deploy an enrollment profile "over the air" to bring devices into management. For more information, see [Device Enrollment Program](device-enrollment-program-enroll-ios.md).
+Organizations can purchase iOS/iPadOS devices through Apple's Automated Device Enrollment (ADE). ADE lets you deploy an enrollment profile "over the air" to bring devices into management. For more information, see [Device Enrollment Program](device-enrollment-program-enroll-ios.md).
 
 ## User enrollment
 User Enrollment gives admins a subset of management options compared to other enrollment methods. For more information, see [User Enrollment supported actions, passwords, and other options](ios-user-enrollment-supported-actions.md) and [Set up iOS/iPadOS and iPadOS User Enrollment](ios-user-enrollment.md).
 
 ## Apple School Manager
 
-Apple School Manager is a device purchase and enrollment program for schools. Like DEP, you can deploy a profile to enroll devices in management. Learn more about [Apple School Manager](apple-school-manager-set-up-ios.md).
+Apple School Manager is a device purchase and enrollment program for schools. Like ADE, you can deploy a profile to enroll devices in management. Learn more about [Apple School Manager](apple-school-manager-set-up-ios.md).
 
 ## Apple Configurator
 
@@ -83,7 +83,7 @@ You can enroll iOS/iPadOS devices with Apple Configurator running on a Mac compu
 
 Learn more about [Apple Configurator enrollment](apple-configurator-enroll-ios.md).
 
-## Use the Company Portal on DEP-enrolled or Apple Configurator-enrolled devices
+## Use the Company Portal on ADE-enrolled or Apple Configurator-enrolled devices
 
 Devices configured with user affinity can install and run the Company Portal app to download apps and manage devices. After users receive their devices, they must complete a number of additional steps to complete the Setup Assistant and install the Company Portal app.
 
