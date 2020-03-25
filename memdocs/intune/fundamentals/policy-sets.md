@@ -67,7 +67,7 @@ When you create a policy set, you create a single unit of assignment, and manage
     - **Policy set name** - Provide a name for this policy set.
     - **Description** - Optionally, provide a description for the policy set.
    <p>
-   <img alt="Create policy set - Basics" src="/media/policy-sets/policy-sets-01.png">
+      <img alt="Create policy set - Basics" src="./media/policy-sets/policy-sets-01.png">
 
 4. Click **Next: Application management**.<br>
    On the **Application management** page you can optionally [add apps](../apps/apps-add.md), [app configuration policies](../apps/app-configuration-policies-overview.md), and [app protection policies](../apps/app-protection-policy.md) to your policy set. For information about app management, see [What is Microsoft Intune app management?](../apps/app-management.md).

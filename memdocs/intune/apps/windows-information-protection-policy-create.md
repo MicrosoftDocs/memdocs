@@ -3,12 +3,12 @@
 
 title: Windows Information Protection (WIP) app protection policy
 titleSuffix: Microsoft Intune
-description: Create and deploy Windows Information Protection (WIP) app protection policy with Microsoft Intune
+description: Create and deploy Windows Information Protection (WIP) policy with Microsoft Intune
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -29,11 +29,11 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Create and deploy Windows Information Protection (WIP) app protection policy with Intune
+# Create and deploy Windows Information Protection (WIP) policy with Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-You can use app protection policies with Windows 10 apps to protect apps without device enrollment.
+You can use Windows Information Protection (WIP) policies with Windows 10 apps to protect apps without device enrollment.
 
 ## Before you begin
 
@@ -53,10 +53,10 @@ You must understand a few concepts when adding a WIP policy:
 
 ## Prerequisites
 
-You must configure the MAM provider before you can create a WIP app protection policy. Learn more about [how to configure your MAM provider with Intune](app-protection-policies-configure-windows-10.md).  
+You must configure the MAM provider before you can create a WIP policy. Learn more about [how to configure your MAM provider with Intune](app-protection-policies-configure-windows-10.md).  
 
 > [!IMPORTANT]
-> WIP does not support multi-identity, only one managed identity can exist at a time.
+> WIP does not support multi-identity, only one managed identity can exist at a time. For more information about the capabilities and limitations of WIP, see [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 Additionally, you need to have the following license and update:
 
@@ -67,7 +67,7 @@ Additionally, you need to have the following license and update:
 
 
 
-## To add a WIP app protection policy
+## To add a WIP policy
 
 After you set up Intune in your organization, you can create a WIP-specific policy.
 
@@ -80,7 +80,7 @@ After you set up Intune in your organization, you can create a WIP-specific poli
 3. Add the following values:
     - **Name:** Type a name (required) for your new policy.
     - **Description:** (Optional) Type a description.
-    - **Platform:** Choose **Windows 10** as the supported platform for your app protection policy.
+    - **Platform:** Choose **Windows 10** as the supported platform for your WIP policy.
     - **Enrollment state:** Choose **Without enrollment** as the enrollment state for your policy.
 4. Choose **Create**. The policy is created and appears in the table on the **App protection policies** pane.
 
