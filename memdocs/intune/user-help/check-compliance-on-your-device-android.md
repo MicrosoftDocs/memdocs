@@ -44,6 +44,6 @@ If you recently made changes to your device settings, you may need to manually c
 
 3. Under **Device Settings Status**, tap **Check device settings**. Company Portal will check your device to confirm that it's meeting your organization's policy requirements. 
 
-4. After the check, your device settings status will either read, **Compliant** or **Not in Compliance**. If you're required to make any changes, a message will appear at the top of the screen. Tap it for more details. 
+4. After the check, your device settings status will either read, **In Compliance** or **Not in Compliance**. If you're required to make any changes, a message will appear at the top of the screen. Tap it for more details. 
 
 For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
