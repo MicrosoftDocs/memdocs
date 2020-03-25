@@ -85,7 +85,7 @@ These settings are added to a device configuration profile in Intune, and then a
 ### Settings apply to: Device enrollment and Automated device enrollment
 
 - **Password**: **Require** users to enter a password to access devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require a password. It also doesn't force any restrictions, such as blocking simple passwords or setting a minimum length.
-  - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
+  - **Required password type**: Enter the required password complexity level your organization requires. Your options:
     - **Not configured**: Intune doesn't change or update this setting.
     - **Numeric**: Password must only be numbers, such as 123456789.
     - **Alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
@@ -94,7 +94,7 @@ These settings are added to a device configuration profile in Intune, and then a
     - macOS 10.10.3 and newer
 
   - **Number of non-alphanumeric characters in password**: Enter the number of complex characters required in the password, from 0-4. A complex character is a symbol, such as `?`
-  - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
+  - **Minimum password length**: Enter the minimum length the password must have, from 4-16 characters.
   - **Simple passwords**: Allow using simple passwords, such as `0000` or `1234`.
   - **Maximum minutes after screen lock before password is required**: Enter the length of time devices must be inactive before a password is required to unlock it. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
   - **Maximum minutes of inactivity until screen locks**: Enter the length of time devices must be idle before the screen is automatically locked. For example, enter 5 to lock devices after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
@@ -135,7 +135,7 @@ These settings are added to a device configuration profile in Intune, and then a
 - **Type of restricted apps list**: Create a list of apps that users aren't allowed to install or use. Your options:
 
   - **Not configured** (default): Intune doesn't change or update this setting. By default, users might have access to apps you assign, and built-in apps.
-  - **Prohibited apps**: List the apps (not managed by Intune) that users aren't allowed to install and run. Users aren't prevented from installing a prohibited app. If a user installs an app from this list, it's reported in Intune..
+  - **Prohibited apps**: List the apps (not managed by Intune) that users aren't allowed to install and run. Users aren't prevented from installing a prohibited app. If a user installs an app from this list, it's reported in Intune.
   - **Approved apps**: List the apps that users are allowed to install. To stay compliant, users must not install other apps. Apps that are managed by Intune are automatically allowed, including the Company Portal app. Users aren't prevented from installing an app that isn't on the approved list. But if they do, it's reported in Intune.
 
 - **App Bundle ID**: Enter the app [bundle ID](bundle-ids-built-in-ios-apps.md) of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
