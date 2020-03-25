@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -56,7 +56,7 @@ You must understand a few concepts when adding a WIP policy:
 You must configure the MAM provider before you can create a WIP policy. Learn more about [how to configure your MAM provider with Intune](app-protection-policies-configure-windows-10.md).  
 
 > [!IMPORTANT]
-> WIP does not support multi-identity, only one managed identity can exist at a time. For more information about the capabilities and limitations of WIP, see [Protect your enterprise data using Windows Information Protection (WIP)] https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip
+> WIP does not support multi-identity, only one managed identity can exist at a time. For more information about the capabilities and limitations of WIP, see [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 Additionally, you need to have the following license and update:
 
