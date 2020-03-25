@@ -29,7 +29,14 @@ ms.collection:
 ---
 
 # Check compliance on your Android device
-Initiate a compliance check from Company Portal to regain access to your work or school resources or to update your device status. During a check-in, Company Portal confirms that the settings on your device meet your organization's policy requirements.  Some organizations  may limit or restrict access to work or school resources until you check in and confirm that your device is compliant. 
+Manually start a device check-in from the Company Portal to:
+
+* Update your device status 
+* Regain access to your work or school resources 
+
+During a check-in, Company Portal will confirm that the settings on your device meet your organization's policy requirements.  Your organization can limit or restrict access to work or school resources until you check in.  
+
+If you recently made changes to your device settings, you may need to manually check-in to register these changes with Company Portal. 
 
 1. Open the Company Portal app for Android on your device.  
 
