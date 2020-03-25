@@ -10,8 +10,6 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart 
 manager: dougeby
-
-
 ---
 
 # CMPivot for real-time data in Configuration Manager
@@ -466,7 +464,7 @@ Starting in version 1906, the following items were added to CMPivot:
 
 - [Joins, additional operators, and aggregators](#bkmk_cmpivot_joins)
 - [Added CMPivot permissions to the Security Administrator role](#bkmk_cmpivot_secadmin1906)
-- [CMPivot standalone](#bkmk_standalone) was added as a **pre-release feature**
+- [CMPivot standalone](#bkmk_standalone)
 
 ### <a name="bkmk_cmpivot_joins"></a> Add joins, additional operators, and aggregators in CMPivot
 <!--4054074-->
@@ -554,7 +552,10 @@ Starting in version 1906, the following permissions have been added to Configura
 ### <a name="bkmk_standalone"></a> CMPivot standalone
 <!--3555890, 4619340, 4683130 -->
 
-Starting in version 1906, you can use CMPivot as a standalone app. CMPivot standalone is a [pre-release feature](/sccm/core/servers/manage/pre-release-features#bkmk_table) and is only available in English. Run CMPivot outside of the Configuration Manager console to view the real-time state of devices in your environment. This change enables you to use CMPivot on a device without first installing the console.
+Starting in version 1906, you can use CMPivot as a standalone app. CMPivot standalone is only available in English. Run CMPivot outside of the Configuration Manager console to view the real-time state of devices in your environment. This change enables you to use CMPivot on a device without first installing the console.
+
+> [!Tip]  
+> This feature was first introduced in version 1906 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 2002, it's no longer a pre-release feature.  
 
 You can share the power of CMPivot with other personas, such as helpdesk or security admins, who don't have the console installed on their computer. These other personas can use CMPivot to query Configuration Manager alongside the other tools that they traditionally use. By sharing this rich management data, you can work together to proactively solve business problems that cross roles.
 
@@ -667,7 +668,7 @@ EPStatus
 
 ### <a name="bkmk_local-eval"></a> Local device query evaluation using CMPivot standalone
 <!--3197353-->
-When using CMPivot outside of the Configuration Manager console, you can query just the local device without the need for the Configuration Manager infrastructure. You can now leverage the CMPivot Azure Log Analytics queries to quickly view WMI information on the local device. This also enables validation and refinement of CMPivot queries, before running them in a larger environment. CMPivot standalone is a [pre-release feature](/sccm/core/servers/manage/pre-release-features#bkmk_table) and is only available in English. For more information about installing CMPivot standalone, see [Install CMPivot standalone](#install-cmpivot-standalone).
+When using CMPivot outside of the Configuration Manager console, you can query just the local device without the need for the Configuration Manager infrastructure. You can now leverage the CMPivot Azure Log Analytics queries to quickly view WMI information on the local device. This also enables validation and refinement of CMPivot queries, before running them in a larger environment. CMPivot standalone is only available in English. For more information about installing CMPivot standalone, see [Install CMPivot standalone](#install-cmpivot-standalone).
 
 #### Known issues for local device query evaluation
 

@@ -391,9 +391,12 @@ For more information, see [Extend and migrate on-premises site to Microsoft Azur
 
 ## Other updates
 
-As of this version, the following features are no longer pre-release:
+As of this version, the following features are no longer [pre-release](/configmgr/core/servers/manage/pre-release-features):
 
-- [Client apps for co-managed devices](/configmgr/comanage/workloads#client-apps) (previously known as *Mobile apps for co-managed devices*)
+- [Azure Active Directory user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco)<!--3611956-->
+- [Synchronize collection membership results to Azure Active Directory](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync)<!--3607475-->
+- [CMPivot standalone](/sccm/core/servers/manage/cmpivot#bkmk_standalone)<!--3555890/4692885-->
+- [Client apps for co-managed devices](/configmgr/comanage/workloads#client-apps) (previously known as *Mobile apps for co-managed devices*)<!-- 1357892/3600959 -->
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2002 release notes](https://docs.microsoft.com/powershell/sccm/2002-release-notes?view=sccm-ps).
 
