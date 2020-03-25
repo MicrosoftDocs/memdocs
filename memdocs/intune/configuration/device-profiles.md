@@ -138,7 +138,7 @@ This feature supports:
 
 ## Education
 
-[Education settings - Windows 10](education-settings-configure.md) configure options for the [Windows Take a Test app](https://docs.microsoft.com/en-us/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
+[Education settings - Windows 10](education-settings-configure.md) configure options for the [Windows Take a Test app](https://docs.microsoft.com/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
 
 [Education settings - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
 
