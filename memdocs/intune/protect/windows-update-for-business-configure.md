@@ -82,7 +82,7 @@ Windows 10 update rings support [scope tags](../fundamentals/scope-tags.md). You
 
 ### Create and assign update rings
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Windows** > **Windows 10 Update Rings** > **Create**.
 
@@ -229,7 +229,7 @@ The following prerequisites must be met to use Windows 10 feature updates in Int
 
 ### Create and assign Windows 10 feature updates
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Windows** > **Windows 10 Feature updates** > **Create**.
 

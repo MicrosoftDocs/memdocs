@@ -37,7 +37,7 @@ Before you assign an app to a device or a group of users, you must first add the
 
 You can add an Android Enterprise system app to Intune from the Azure portal by doing the following:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the available **Other** types, select **Android Enterprise system app**.
 4. Click **Select**. The **Add app** steps are displayed.

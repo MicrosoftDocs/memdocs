@@ -50,7 +50,7 @@ DEM user accounts and devices that are enrolled with a DEM user account have the
 
 ## Add a device enrollment manager
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Device enrollment managers**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Device enrollment managers**.
 
 2. Select **Add**.
 
@@ -71,6 +71,6 @@ Removing a device enrollment manager doesn't affect enrolled devices.
 
 **To remove a device enrollment manager**
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Device enrollment managers**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Device enrollment managers**.
 2. On the **Device enrollment managers** blade, select the DEM user, and select **Delete**.
 

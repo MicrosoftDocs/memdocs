@@ -106,7 +106,7 @@ EnterpriseEnrollment-s.manage.microsoft.com is the preferred FQDN for enrollment
 Using a method other than the CNAME configuration is not supported. For example, using a proxy server to redirect enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc to either enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc or manage.microsoft.com/EnrollmentServer/Discovery.svc is not supported.
 
 **Step 2: Verify CNAME** (optional)<br>
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **CNAME Validation**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **CNAME Validation**.
 2. In the **Domain** box, enter the company website and then choose **Test**.
 
 ## Tell users how to enroll Windows devices

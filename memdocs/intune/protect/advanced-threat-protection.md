@@ -77,7 +77,7 @@ The first step you take is to set up the service-to-service connection between I
 
 You only need to enable Defender ATP a single time per tenant.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Microsoft Defender ATP**, and then select **Open the Microsoft Defender Security Center**.
 
@@ -91,7 +91,7 @@ You only need to enable Defender ATP a single time per tenant.
 
     3. Select **Save preferences**.
 
-4. Return to **Microsoft Defender ATP** in the Microsoft Endpoint Manager Admin Center. Under **MDM Compliance Policy Settings**, set **Connect Windows devices version 10.0.15063 and above to Microsoft Defender ATP** to **On**.
+4. Return to **Microsoft Defender ATP** in the Microsoft Endpoint Manager admin center. Under **MDM Compliance Policy Settings**, set **Connect Windows devices version 10.0.15063 and above to Microsoft Defender ATP** to **On**.
 
 5. Select **Save**.
 
@@ -117,7 +117,7 @@ When you established the connection to Microsoft Defender ATP, Intune received a
 
 ### Create the device configuration profile
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter a **Name** and **Description**.
 4. For **Platform**, select **Windows 10 and later**
@@ -143,7 +143,7 @@ The compliance policy determines the level of risk that you consider as acceptab
 
 If your not familiar with creating compliance policy, reference the [Create a policy](../protect/create-compliance-policy.md#create-the-policy) procedure from the *Create a compliance policy in Microsoft Intune* article. The following information is specific to configuring Defender ATP as part of a compliance policy.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
 
@@ -167,9 +167,9 @@ If your not familiar with creating compliance policy, reference the [Create a po
 The Conditional Access policy blocks access to resources for devices that exceed the threat level you set in your compliance policy. You can block access from the device to corporate resources, such as SharePoint or Exchange Online.
 
 > [!TIP]
-> Conditional Access is an Azure Active Directory (Azure AD) technology. The Conditional Access node accessed from the Microsoft Endpoint Manager Admin Center is the same node as accessed from *Azure AD*.
+> Conditional Access is an Azure Active Directory (Azure AD) technology. The Conditional Access node accessed from the Microsoft Endpoint Manager admin center is the same node as accessed from *Azure AD*.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Conditional Access** > **New policy**.
 
@@ -193,7 +193,7 @@ The Conditional Access policy blocks access to resources for devices that exceed
 
 Next, monitor the state of devices that have the Microsoft Defender ATP compliance policy.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Monitor** > **Policy compliance**.
 

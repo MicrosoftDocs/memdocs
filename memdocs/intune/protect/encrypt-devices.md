@@ -46,7 +46,7 @@ User-approved device enrollment is required for FileVault to work on the device.
 
 FileVault is a whole-disk encryption program that is included with macOS. You can use Intune to configure FileVault on devices that run **macOS 10.13 or later**.
 
-To configure FileVault, create a [device configuration profile](../configuration/device-profile-create.md) for endpoint protection for the macOS platform. FileVault settings are one of the available settings categories for macOS endpoint protection.
+To configure FileVault, create a [device configuration profile](endpoint-protection-configure.md) for endpoint protection for the macOS platform. FileVault settings are one of the available settings categories for macOS endpoint protection.
 
 After you create a policy to encrypt devices with FileVault, the policy is applied to devices in two stages. First, the device is prepared to enable Intune to retrieve and back up the recovery key. This action is referred to as escrow. After the key is escrowed, the disk encryption can start.
 
@@ -69,7 +69,7 @@ Following are the FileVault permissions, which are part of the **Remote tasks** 
 
 ### How to configure macOS FileVault
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -108,13 +108,13 @@ Use Intune to configure BitLocker Drive Encryption on devices that run Windows 1
 
 BitLocker is available on devices that run **Windows 10 or later**.
 
-Configure BitLocker when you create a [device configuration profile](../configuration/device-profile-create.md) for endpoint protection for the Windows 10 or later platform. BitLocker settings are in the Windows Encryption settings category for Windows 10 endpoint protection.
+Configure BitLocker when you create a [device configuration profile](endpoint-protection-configure.md) for endpoint protection for the Windows 10 or later platform. BitLocker settings are in the Windows Encryption settings category for Windows 10 endpoint protection.
 
 ![BitLocker settings](./media/encrypt-devices/bitlocker-settings.png)
 
 ### How to configure Windows 10 BitLocker
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -131,7 +131,7 @@ Configure BitLocker when you create a [device configuration profile](../configur
 
 ### Silently enable BitLocker on devices
 
-You can configure a BitLocker policy that automatically and silently enables BitLocker on a device. That means that BitLocker enables successfully without presenting any UI to the end user, even when that user isn’t a local Administrator on the device.
+You can configure a BitLocker policy that automatically and silently enables BitLocker on a device. That means that BitLocker enables successfully without presenting any UI to the end user, even when that user isn't a local Administrator on the device.
 
 **Device Prerequisites**:
 
@@ -177,7 +177,7 @@ Devices must meet the following prerequisites to support rotation of the BitLock
   
 #### To rotate the BitLocker recovery key
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **All devices**.
 

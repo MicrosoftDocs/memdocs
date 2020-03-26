@@ -75,7 +75,7 @@ After you set up Intune in your organization, you can create a WIP-specific poli
 > For related information about creating WIP policies for Intune, including available settings and how to configure them, see [Create a Windows Information Protection (WIP) policy with MAM using the Azure portal for Microsoft Intune](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) in the Windows Security documentation library. 
 
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection policies** > **Create policy**.
 3. Add the following values:
     - **Name:** Type a name (required) for your new policy.
@@ -86,7 +86,7 @@ After you set up Intune in your organization, you can create a WIP-specific poli
 
 ## To add recommended apps to your protected apps list
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection policies**.
 3. On the **App protection policies** pane, choose the policy you want to modify. The **Intune App Protection** pane is displayed.
 4. Choose **Protected apps** from the **Intune App Protection** pane. The **Protected apps** pane opens showing you all apps that are already included in the list for this app protection policy.
@@ -99,7 +99,7 @@ After you set up Intune in your organization, you can create a WIP-specific poli
 
 **To add a Store app**
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection policies**.
 3. On the **App protection policies** pane, choose the policy you want to modify. The **Intune App Protection** pane is displayed.
 4. Choose **Protected apps** from the **Intune App Protection** pane. The **Protected apps** pane opens showing you all apps that are already included in the list for this app protection policy.
@@ -112,7 +112,7 @@ After you set up Intune in your organization, you can create a WIP-specific poli
 ## Add a desktop app to your protected apps list
 
 **To add a desktop app**
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection policies**.
 3. On the **App protection policies** pane, choose the policy you want to modify. The **Intune App Protection** pane is displayed.
 4. Choose **Protected apps** from the **Intune App Protection** pane. The **Protected apps** pane opens showing you all apps that are already included in the list for this app protection policy.
