@@ -37,7 +37,7 @@ You can explicitly choose to wipe your company’s corporate data from the end u
 
 ## Create an app protection policy using conditional launch actions
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection Policies**.
 3. Click **Create policy** and select the platform of the device for your policy. 
 4. Click **Configure required settings** to see the list of settings available to be configured for the policy. 

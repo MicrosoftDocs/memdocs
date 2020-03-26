@@ -38,7 +38,7 @@ The **Devices** workload gives you insights into the devices you manage, and let
 
 ## Get to your devices
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices**. This view shows detailed information about the individual devices, and what you can do with them, including:
 
    - **Overview** shows a visual snapshot of the enrolled devices, how many devices are using the different platforms, and more.

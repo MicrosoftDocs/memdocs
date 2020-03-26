@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -41,73 +41,64 @@ This article:
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Profiles are created in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In this admin center, select **Devices**. You have the following options:
 
-2. Select **Devices** > **Configuration profiles**. You have the following options:
+- **Overview**: Lists the status of your profiles, and provides additional details on the profiles you assigned to users and devices.
+- **Monitor**: Check the status of your profiles for success or failure, and also view logs on your profiles.
+- **By platform**: Create and view policies and profiles by your platform. This view may also show features specific to the platform. For example, select **Windows**. You'll see Windows-specific features, such as **Windows 10 Update Rings** and **PowerShell scripts**.
+- **Policy**: Create device profiles, upload custom [PowerShell scripts](../apps/intune-management-extension.md) to run on devices, and add data plans to devices using [eSIM](esim-device-configuration.md).
 
-    - **Overview**: Lists the status of your profiles, and provides additional details on the profiles you assigned to users and devices.
-    - **Manage**: Create device profiles, upload custom [PowerShell scripts](../apps/intune-management-extension.md) to run within the profile, and add data plans to devices using [eSIM](esim-device-configuration.md).
-    - **Monitor**: Check the status of a profile for success or failure, and also view logs on your profiles.
-    - **Setup**: Add a SCEP or PFX certificate authority, or enable [Telecom Expense Management](telecom-expenses-monitor.md) in the profile.
+When you create a profile (**Configuration profiles** > **Create profile**), choose your platform:
 
-3. Select **Create profile**. Enter the following properties:
+- **Android device administrator**
+- **Android Enterprise**
+- **iOS/iPadOS**
+- **macOS**
+- **Windows 10 and later**
+- **Windows 8.1 and later**
+- **Windows Phone 8.1**
 
-   - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **WP email profile for entire company**.
-   - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-   - **Platform**: Choose the platform of your devices. Your options:  
+Then, choose the profile type. Depending on the platform you choose, the settings you can configure are different. The following articles describe the settings for the different profile types:
 
-       - **Android device administrator**
-       - **Android enterprise**
-       - **iOS/iPadOS**
-       - **macOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 and later**
-       - **Windows 10 and later**
+- [Administrative templates (Windows)](administrative-templates-windows.md)
+- [Custom](custom-settings-configure.md)
+- [Delivery optimization (Windows)](delivery-optimization-windows.md)
+- [Derived credential (Android Enterprise, iOS, iPadOS)](../protect/derived-credentials.md)
+- [Device features (macOS, iOS, iPadOS)](device-features-configure.md)
+- [Device firmware (Windows)](device-firmware-configuration-interface-windows.md)
+- [Device restrictions](device-restrictions-configure.md)
+- [Domain join (Windows)](domain-join-configure.md)
+- [Edition upgrade and mode switch (Windows)](edition-upgrade-configure-windows-10.md)
+- [Education (iOS, iPadOS)](../fundamentals/education-settings-configure-ios.md)
+- [Email](email-settings-configure.md)
+- [Endpoint protection (macOS, Windows)](../protect/endpoint-protection-configure.md)
+- [Extensions (macOS)](kernel-extensions-overview-macos.md)
+- [Identity protection (Windows)](../protect/identity-protection-configure.md)
+- [Kiosk](kiosk-settings.md)
+- [Microsoft Defender ATP (Windows)](../protect/advanced-threat-protection.md)
+- [Mobility Extensions (MX) profile (Android device administrator)](android-zebra-mx-overview.md)
+- [OEMConfig (Android Enterprise)](android-oem-configuration-overview.md)
+- [PKCS certificate](../protect/certficates-pfx-configure.md)
+- [PKCS imported certificate](../protect/certificates-imported-pfx-configure.md)
+- [Preference file (macOS)](preference-file-settings-macos.md)
+- [SCEP certificate](../protect/certificates-scep-configure.md)
+- [Secure assessment (Education) (Windows)](education-settings-configure.md)
+- [Shared multi-user device (Windows)](shared-user-device-settings.md)
+- [Telecom expenses (Android device administrator, iOS, iPadOS)](telecom-expenses-monitor.md)
+- [Trusted certificate](../protect/certificates-configure.md)
+- [VPN](vpn-settings-configure.md)
+- [Wi-Fi](wi-fi-settings-configure.md)
 
-   - **Profile type**: Select the type of settings you want to create. The list shown depends on the **platform** you choose.
-   - **Settings**: The following articles describe the settings for each profile type:
+For example, if you select **iOS/iPadOS** for the platform, your profile type options look similar to the following profile:
 
-       - [Administrative templates](administrative-templates-windows.md)
-       - [Custom](custom-settings-configure.md)
-       - [Delivery optimization](delivery-optimization-windows.md)
-       - [Device features](device-features-configure.md)
-       - [Device restrictions](device-restrictions-configure.md)
-       - [Domain join](domain-join-configure.md)
-       - [Edition upgrade and mode switch](edition-upgrade-configure-windows-10.md)
-       - [Education](education-settings-configure.md)
-       - [Email](email-settings-configure.md)
-       - [Endpoint protection](../protect/endpoint-protection-configure.md)
-       - [Identity protection](../protect/identity-protection-configure.md)  
-       - [Kiosk](kiosk-settings.md)
-       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
-       - [PKCS certificate](../protect/certficates-pfx-configure.md)
-       - [PKCS imported certificate](../protect/certificates-imported-pfx-configure.md)
-       - [Preference file](preference-file-settings-macos.md)
-       - [SCEP certificate](../protect/certificates-scep-configure.md)
-       - [Trusted certificate](../protect/certificates-configure.md)
-       - [Update policies](../protect/software-updates-ios.md)
-       - [VPN](vpn-settings-configure.md)
-       - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Windows Information Protection](../protect/windows-information-protection-configure.md)
-
-     For example, if you select **iOS/iPadOS** for the platform, your profile type options look similar to the following profile:
-
-     > [!div class="mx-imgBorder"]
-     > ![Create iOS/iPadOS profile in Intune](./media/device-profile-create/create-device-profile.png)
-
-4. When finished, select **OK** > **Create** to save your changes. The profile is created, and shown in the list.
+> [!div class="mx-imgBorder"]
+> ![Create iOS/iPadOS profile in Intune](./media/device-profile-create/create-device-profile.png)
 
 ## Scope tags
 
-After you add the settings, you can also add a scope tag to the profile. Scope tags filter profiles to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`.
+After you add the settings, you can also add a scope tag to the profile. Scope tags filter profiles to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. And, are used in distributed IT.
 
 For more information about scope tags, and what you can do, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
-
-### Add a scope tag
-
-1. Select **Scope (Tags)**.
-2. Select **Add** to create a new scope tag. Or, select an existing scope tag from the list.
-3. Select **OK** to save your changes.
 
 ## Applicability rules
 
@@ -187,7 +178,7 @@ When creating profiles, consider the following recommendations:
 
 - Separate user policies from device policies.
 
-  For example, [Administrative Templates in Intune](administrative-templates-windows.md) have hundreds of ADMX settings. These templates show if a settings applies to users or devices. When creating admin templates, assign your users settings to a users group, and assign your device settings to a devices group.
+  For example, [Administrative Templates in Intune](administrative-templates-windows.md) have hundreds of ADMX settings. These templates show if a setting applies to users or devices. When creating admin templates, assign your users settings to a users group, and assign your device settings to a devices group.
 
   The following image shows an example of a setting that can apply to users and/or apply to devices:
 
