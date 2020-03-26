@@ -78,7 +78,7 @@ Before you can disable Activation Lock on devices, you must enable it by followi
 
 The Intune **Disable Activation Lock** remote device action removes the Activation Lock from an iOS/iPadOS device without requiring the user's Apple ID and password. After you disable the Activation Lock, the device turns on Activation Lock again when the Find My iPhone app starts. Disable the Activation Lock only if you have physical access to the device.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. On the **Intune** blade, select **Devices**.
 4. On the **Devices** blade, select **All devices**.
 5. On the list of devices that you manage, select the **Disable Activation Lock** device remote action.

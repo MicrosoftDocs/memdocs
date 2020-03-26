@@ -37,7 +37,7 @@ Intune **discovered apps** is a list of detected apps on the Intune enrolled dev
 
 Intune provides an aggregated list of detected apps on the Intune enrolled devices in your tenant.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **Monitor** > **Discovered apps**.
 
 >[!NOTE]
@@ -47,7 +47,7 @@ Intune provides an aggregated list of detected apps on the Intune enrolled devic
 
 Intune also provides the list of discovered apps for the individual device in your tenant.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All Devices**.
 3. Select a device.
 4. To view detected apps for this device, select **Discovered Apps** in the **Monitor** section.

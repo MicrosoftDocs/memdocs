@@ -38,7 +38,7 @@ This article shows you how to view all your devices, and their properties in the
 
 ## View the device details
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices** > **All devices** > select one of your listed devices to open its details:
 
    - **Overview** shows the device name, and lists some key properties of the device, like whether it's a personal or corporate device, serial number, primary user, and more. You can do the following on the device:

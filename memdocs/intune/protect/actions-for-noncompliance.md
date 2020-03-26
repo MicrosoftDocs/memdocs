@@ -75,7 +75,7 @@ There are several types of actions:
 
 To send email to your users, create a notification message template. When a device is noncompliant, the details you enter in the template is shown in the email sent to your users.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Compliance policies** > **Notifications** > **Create notification**.
 3. Under *Basics*, specify the following information:
 
@@ -106,7 +106,7 @@ When you create a device compliance policy, Intune automatically creates an acti
 
 In addition to the default action to mark devices as not compliant, you can add optional actions when you create a compliance policy, or update an existing policy.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Compliance policies** > **Policies**, select one of your policies, and then select **Properties**.
 

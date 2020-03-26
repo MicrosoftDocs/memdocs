@@ -39,7 +39,7 @@ A Conditional Access policy specifies the app or services you want to protect, t
 
 ## Create Conditional Access policy
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Conditional Access** > **Policies** > **New policy**.
   ![Create a new Conditional Access policy](./media/create-conditional-access-intune/create-ca.png)

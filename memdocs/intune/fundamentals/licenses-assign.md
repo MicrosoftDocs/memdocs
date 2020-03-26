@@ -34,11 +34,11 @@ Whether you manually add users or synchronize from your on-premises Active Direc
 > [!NOTE]
 > Users assigned Intune app protection policy and not enrolling their devices into Microsoft Intune will also require an Intune license to receive policy.
 
-## Assign an Intune license Microsoft Endpoint Manager Admin Center
+## Assign an Intune license Microsoft Endpoint Manager admin center
 
-You can use the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) to manually add cloud-based users and assign licenses to both cloud-based user accounts and accounts synchronized from your on-premises Active Directory to Azure AD.
+You can use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to manually add cloud-based users and assign licenses to both cloud-based user accounts and accounts synchronized from your on-premises Active Directory to Azure AD.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Users** > **All Users** > choose a user > **Licenses** > **Assignments**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Users** > **All Users** > choose a user > **Licenses** > **Assignments**.
 
 2. Choose the box for **Intune** > **Save**.
 

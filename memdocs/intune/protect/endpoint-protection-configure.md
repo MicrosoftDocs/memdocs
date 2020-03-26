@@ -45,7 +45,7 @@ Before you create a profile, review the following articles that detail the endpo
 
 ## Create a device profile containing endpoint protection settings
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -98,7 +98,7 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
 ### To add custom firewall rules to an Endpoint protection profile
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** > **Create Profile**.
 

@@ -49,7 +49,7 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 
 ### Create an iOS/iPadOS or Android app protection policy
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. In Intune portal, choose **Apps** > **App protection policies**. This selection opens the **App protection policies** details, where you create new policies and edit existing policies.
 3. Select **Create policy** and select either **iOS/iPadOS** or **Android**. The **Create policy** pane is displayed.
 4. On the **Basics** page, add the following values:
@@ -62,7 +62,7 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 
     The **Platform** value is set based on your above choice.
 
-    ![Screenshot of the Basics page of the Create policy pane](/media/app-protection-policies/app-protection-add-policies-01.png)
+    ![Screenshot of the Basics page of the Create policy pane](./media/app-protection-policies/app-protection-add-policies-01.png)
 
 5. Click **Next** to display the **Apps** page.<br>
     The **Apps** page allows you to choose how you want to apply this policy to apps on different devices. You must add at least one app.<p>

@@ -40,7 +40,7 @@ Typically, if settings are available to you through Device configuration, config
 > [!NOTE]
 > It is currently possible, and advisable, to set allow-listed applications and pinned web links through **Apps** and **Device configuration**. For the full list of settings available in **Device configuration** that impact Managed Home Screen,  see [Dedicated device settings](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).  
 
-First, navigate to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **App configuration policies**. Add a configuration policy for **Managed devices** running **Android** and choose **Managed Home Screen** as the associated app. Click on **Configuration settings** to configure the different available Managed Home Screen settings. 
+First, navigate to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **App configuration policies**. Add a configuration policy for **Managed devices** running **Android** and choose **Managed Home Screen** as the associated app. Click on **Configuration settings** to configure the different available Managed Home Screen settings. 
 
 ## Choosing a Configuration Settings Format
 

@@ -47,7 +47,7 @@ Users with the following permissions can review audit logs:
 
 You can review audit logs in the monitoring group for each Intune workload:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Audit logs**.
 3. To filter the results, select **Filter** and refine the results using the following options.
     - **Category**: such as **Compliance**, **Device**, and **Role**.
