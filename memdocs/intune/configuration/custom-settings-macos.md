@@ -42,7 +42,7 @@ This article provides some guidance on using Apple Configurator and Apple Profil
 
 ## Before you begin
 
-[Create the profile](device-profile-create.md).
+[Create the profile](custom-settings-configure.md).
 
 ## What you need to know
 

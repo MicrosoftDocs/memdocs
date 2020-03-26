@@ -291,4 +291,4 @@ After you delete an issuer and then add a new one, device users must request a n
 
 ## Next steps
 
-[Create device configuration profiles](../configuration/device-profile-create.md).
+[Device configuration profile overview](../configuration/device-profile-create.md)
