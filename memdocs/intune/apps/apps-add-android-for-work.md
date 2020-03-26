@@ -65,7 +65,7 @@ There are two ways to browse and approve Managed Google Play store apps with Int
 
 ### Add a Managed Google Play store app directly in the Intune console
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
 4. Click **Select**. The **Managed Google Play** app store is displayed.
@@ -119,7 +119,7 @@ There are two ways to add LOB apps to Managed Google Play:
 
 ### Managed Google Play private (LOB) app publishing directly in the Intune console
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
 4. Click **Select**. The **Managed Google Play** app store is displayed within Intune.
@@ -160,7 +160,7 @@ Managed Google Play web links are installable and manageable just like other And
 
 Web links will open with Microsoft Edge or any other browser app you choose to deploy. Be sure to deploy at least one browser app to devices in order for web links to be able to open properly. However, all of the **Display** options available for web links (full screen, standalone, and minimal UI) will only work with the Chrome browser. 
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
 4. Click **Select**. The **Managed Google Play** app store is displayed within Intune.
@@ -178,7 +178,7 @@ Web links will open with Microsoft Edge or any other browser app you choose to d
 
 If you have approved an app from the store and don't see it in the **Apps** workload, force an immediate sync as follows:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Apps** > **Tenant administration** > **Connectors and tokens** > **Managed Google Play**.
 5. In the **Managed Google Play** pane, choose **Refresh**.  
     The page updates the time and status of the last sync.

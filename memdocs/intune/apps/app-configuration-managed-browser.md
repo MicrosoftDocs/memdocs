@@ -101,7 +101,7 @@ To restrict Azure AD-connected web apps to use the Intune Managed Browser on mob
 > [!TIP]  
 > Conditional Access is an Azure Active Directory (Azure AD) technology. The Conditional Access node accessed from *Intune* is the same node as accessed from *Azure AD*.  
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Conditional Access** > **New policy**.
 3. Add the policy **Name**. 
 4. In the **Assignments** section, select **Conditions** > **Client apps**. The **Client apps** pane is displayed.
@@ -142,7 +142,7 @@ SSO requires your device to be registered by the Microsoft Authenticator app on 
 >[!IMPORTANT]
 >For app configurations to apply, the user's protected browser or another app on the device must already be managed by [Intune app protection policy](app-protection-policy.md)
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App configuration policies** > **Add** > **Managed apps**.
 3. On the **Basics** page of the **Create app configuration policy** pane, enter a **Name** and optional **Description** for the app configuration settings.
 4. Choose **Select the public app** and choose the **Managed Browser** and/or **Edge** for iOS/iPadOS, for Android, or for both.

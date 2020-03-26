@@ -76,7 +76,7 @@ The Intune management extension has the following prerequisites. Once the prereq
 
 ## Create a script policy and assign it
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **PowerShell scripts** > **Add**.
 
     ![Add and use PowerShell scripts in Microsoft Intune](./media/intune-management-extension/mgmt-extension-add-script.png)

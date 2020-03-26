@@ -48,7 +48,7 @@ Windows Information Protection (WIP) policies can be deployed without requiring 
 
 ## Create a wipe request
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App selective wipe** > **Create wipe request**.<br>
    The **Create wipe request** pane is displayed.
 3. Click **Select user**, choose the user whose app data you want to wipe, and click **Select** at the bottom of the **Select user** pane.

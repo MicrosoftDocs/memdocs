@@ -117,7 +117,7 @@ To connect Intune with Jamf Pro:
 
 ### Enable Intune to integrate with Jamf Pro
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Partner device management**.
 
@@ -166,7 +166,7 @@ If you no longer use Jamf Pro to manage Macs in your organization and want users
 
 3. Select **Save**. Jamf Pro sends your configuration to Intune and the integration will be terminated.
 
-4. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+4. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 5. Select **Tenant administration** > **Connectors and tokens** > **Partner device management** to verify that the status is now **Terminated**.
 

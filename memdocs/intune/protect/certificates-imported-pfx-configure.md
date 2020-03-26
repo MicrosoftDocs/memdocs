@@ -89,7 +89,7 @@ When you use Intune to deploy an **imported PFX certificate** to a user, there a
 
 ## Download, install, and configure the PFX Certificate Connector for Microsoft Intune
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **Add**.
 
@@ -108,7 +108,7 @@ When you use Intune to deploy an **imported PFX certificate** to a user, there a
 
 6. Close the window.
 
-7. In the Microsoft Endpoint Manager Admin Center, go back to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. In a few moments, a green check mark appears and the connection status updates. The connector server can now communicate with Intune.
+7. In the Microsoft Endpoint Manager admin center, go back to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. In a few moments, a green check mark appears and the connection status updates. The connector server can now communicate with Intune.
 
 ## Import PFX Certificates to Intune
 
@@ -215,7 +215,7 @@ For more information about other available commands, see the readme file at [PFX
 
 After importing the certificates to Intune, create a **PKCS imported certificate** profile, and assign it to Azure Active Directory groups.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
 

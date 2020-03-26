@@ -87,7 +87,7 @@ User Approved MDM enrollment is a type of macOS enrollment that you can use to m
 During the BYOD enrollment process, the user will be asked to manually approve the Apple management profile. Instructions are provided in the Company Portal app for macOS. Although approval of the management profile is not required to complete enrollment, Intune recommends user approved enrollments. If the user does not approve the profile during enrollment, the user can go to **System Preferences** > **Profiles**, choose the management profile, and select **Approve**.    
 
 ### Find out if a device is User Approved
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices**> choose the device > **Hardware**.
 3. Check the **User approved enrollment** field.
 
