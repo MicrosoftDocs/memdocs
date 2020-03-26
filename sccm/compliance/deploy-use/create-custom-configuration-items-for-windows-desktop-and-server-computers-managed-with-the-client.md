@@ -2,7 +2,7 @@
 title: Create custom configuration items
 titleSuffix: Configuration Manager
 description: Manage settings for Windows computers and servers with a custom configuration item for Windows desktops and servers
-ms.date: 03/04/2019
+ms.date: 03/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -368,6 +368,22 @@ Compliance rules specify the conditions that define the compliance of a configur
     - **Critical with event**: Computers that fail this compliance rule report a failure severity of **Critical**. This severity level is also logged as a Windows event in the application event log.  
 
 
+## <a name="bkmk_track"></a> Track remediation history when supported
+<!--42631411-->
+*(Introduced in version 2002)*
+
+Starting in Configuration Manager version 2002, you can **Track remediation history when supported** on your configuration item compliance rules. When this option is enabled, any remediation that occurs on the client for the configuration item generates a state message. The history is stored in the Configuration Manager database.
+
+Build custom reports to view the remediation history by using the public view **v_CIRemediationHistory**. The `RemediationDate` column is the time, in UTC, the client ran the remediation. The `ResourceID` identifies the device. Building custom reports with the **v_CIRemediationHistory** view helps you:
+
+- Identify possible issues with your remediation scripts
+- Find trends in remediations such as a client that is consistently non-compliant each evaluation cycle.
+
+### Enable the Track remediation history when supported option
+
+- For new configuration items, add the **Track remediation history when supported** option in the **Compliance Rules** tab when you create a new setting on the wizard's **Settings** page.
+- For existing configuration items, add the **Track remediation history when supported** option on the **Compliance Rules** tab in the configuration item **Properties**.
+[ ![Track remediation history when supported in version 2002](./media/4261411-remediation-history.png)](./media/4261411-remediation-history.png#lightbox)
 
 ## Next steps
 

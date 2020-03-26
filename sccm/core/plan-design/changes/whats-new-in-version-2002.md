@@ -184,6 +184,12 @@ The **All Windows 10 (ARM64)** platform is available in the list of supported OS
 For more information on Configuration Manager's support for ARM64 devices, see [Windows 10 on ARM64](/configmgr/core/plan-design/configs/support-for-windows-10#bkmk_arm64).
 
 
+### Track remediation history when supported
+<!--42631411-->
+You can now **Track remediation history when supported** on your configuration item compliance rules. When this option is enabled, any remediation that occurs on the client for the configuration item generates a state message. The history is stored in the Configuration Manager database.
+
+For more information on this setting, see [Create custom configuration items for Windows desktop and server computers managed with the Configuration Manager client](/configmgr/compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client#bkmk_track).
+
 <!-- ## <a name="bkmk_comgmt"></a> Co-management -->
 
 
