@@ -39,17 +39,17 @@ If you don’t have an Intune subscription, [sign up for a free trial account](.
 ## Get an Apple Device Enrollment token
 Before enrolling iOS/iPadOS devices with Apple's corporate enrollment features, you need an Apple Device Enrollment token (.pem) file. This token lets Intune sync information about Apple devices that your corporation owns. It also permits Intune to upload enrollment profiles to Apple and to assign devices to those profiles.
 
-You use the ABM or DEP portal to create a Device Enrollment token. You also use the portals to assign devices to Intune for management.
+You use the Apple portal to create a Device Enrollment token. You also use the portals to assign devices to Intune for management.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens** > **Add**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens** > **Add**.
 
 2. Grant permission to Microsoft to send user and device information to Apple by selecting **I agree**.
 
    ![Screenshot of Enrollment Program Token pane in Apple Certificates workspace to download public key.](./media/tutorial-use-device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
-3. Choose **Download your public key** to download and save the encryption key (.pem) file locally. The .pem file is used to request a trust-relationship certificate from the ABM or DEP portal.
+3. Choose **Download your public key** to download and save the encryption key (.pem) file locally. The .pem file is used to request a trust-relationship certificate from the Apple portal.
 
-4. Choose **Create a token for Apple's Device Enrollment Program** to open Apple's Deployment Program portal, and sign in with your company Apple ID. You can use this Apple ID to renew your DEP token.
+4. Choose **Create a token for Apple's Device Enrollment Program** to open Apple's Deployment Program portal, and sign in with your company Apple ID. You can use this Apple ID to renew your token.
 
 5. In Apple's [Deployment Programs portal](https://deploy.apple.com), choose **Get Started** for **Device Enrollment Program**. Your process may be slightly different than the following steps in [Apple Business Manager](https://business.apple.com).
 
@@ -77,11 +77,11 @@ You use the ABM or DEP portal to create a Device Enrollment token. You also use 
 ## Create an Apple enrollment profile
 Now that you've installed your token, you can create an enrollment profile for corporate-owned iOS/iPadOS devices. A device enrollment profile defines the settings applied to a group of devices during enrollment.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens**.
 
 2. Select the token you just installed, choose **Profiles** > **Create profile**.
 
-3. Under **Create Profile**, enter *TestDEPProfile* for **Name** and *Testing DEP for iOS/iPadOS devices* for **Description**. Users do not see these details.
+3. Under **Create Profile**, enter *TestProfile* for **Name** and *Testing ADE for iOS/iPadOS devices* for **Description**. Users do not see these details.
 
 4. Choose **iOS** under **Platform**.
 
@@ -113,28 +113,28 @@ Now that you've installed your token, you can create an enrollment profile for c
 
 ## Sync managed devices to Intune
 
-After you set up an enrollment program token with the ABM, ASM, or DEP portal and assign devices there to the MDM server, you can wait for these devices to sync to the Intune service, or manually push a sync. Without a manual sync, devices may take up to 24 hours to show up in the Azure portal.
+After you set up an enrollment program token with the ABM, ASM, or ADE portal and assign devices there to the MDM server, you can wait for these devices to sync to the Intune service, or manually push a sync. Without a manual sync, devices may take up to 24 hours to show up in the Azure portal.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens** > choose a token in the list > **Devices** > **Sync**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens** > choose a token in the list > **Devices** > **Sync**.
 
 ## Assign an enrollment profile to iOS/iPadOS devices
 
-You must assign an enrollment program profile to devices before they can enroll. These devices are synced to Intune from Apple, and must be assigned to the proper MDM server token in the ABM, ASM, or DEP portal.
+You must assign an enrollment program profile to devices before they can enroll. These devices are synced to Intune from Apple, and must be assigned to the proper MDM server token in the ABM, ASM, or ADE portal.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens** > choose your token in the list.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens** > choose your token in the list.
 2. Choose **Devices** > choose devices in the list > **Assign profile**.
 3. Under **Assign profile**, choose a profile for the devices > **Assign**.
 
 ## Distribute devices to users
 
-You've set up management and syncing between Apple and Intune, and assigned a profile to let your DEP devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license.
+You've set up management and syncing between Apple and Intune, and assigned a profile to let your ADE devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license.
 
 ## Next steps
 
 You can find more information about other options available for enrolling iOS/iPadOS devices.
 
 > [!div class="nextstepaction"]
-> [In-depth iOS/iPadOS DEP enrollment article](device-enrollment-program-enroll-ios.md)
+> [In-depth iOS/iPadOS ADE enrollment article](device-enrollment-program-enroll-ios.md)
 
 <!--commenting out because inaccurate>
 ## Clean up resources

@@ -35,7 +35,7 @@ ms.collection: M365-identity-device-management
 
 You can use app configuration policies with managed apps that support the Intune App SDK, even on devices that are not enrolled. 
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed apps**.
 3. On the **Basics** page, set the following details:
     - **Name**: The name of the profile that will appear in the Azure portal.

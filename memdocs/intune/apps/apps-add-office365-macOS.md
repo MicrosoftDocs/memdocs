@@ -44,7 +44,7 @@ Before you begin adding Office 365 to macOS devices, understand the following de
 
 ## Select the Office 365 Suite app type
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. Select **macOS** in the **Office 365 Suite** section of the **Select app type** pane.
 4. Click **Select**. The **Add Office 365 Suite** steps are displayed.

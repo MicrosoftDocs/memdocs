@@ -31,7 +31,7 @@ ms.custom: intune-azure
 
 The Microsoft Intune encryption report is a centralized location to view details about a device’s encryption status and find options to manage device recovery keys. The recovery key options that are available depend on the type of device you're viewing.
 
-To find the report, Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Monitor**, and then under *Configuration*, select **Encryption report**.
+To find the report, Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Monitor**, and then under *Configuration*, select **Encryption report**.
 
 ## View encryption details
 
@@ -191,7 +191,7 @@ Intune supports multiple options to rotate and recover personal recovery keys. O
 
   To rotate a recovery key:
 
-  1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
   
   2. Select **Devices** > **All devices**.
   
@@ -219,7 +219,7 @@ Intune supports multiple options to rotate and recover personal recovery keys. O
 
 Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10 devices, from within the Intune portal. To be accessible, the device must have its keys escrowed to Azure AD.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **All devices**.
 

@@ -39,7 +39,7 @@ This article walks you through both monitoring options.
 
 When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. You can view these insights from the Overview pane of the security baseline in the Intune console.  It takes up to 24 hours for data to appear after you first assign a baseline. Later changes take up to six hours to appear.
 
-To view monitoring data for the baseline and devices, sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). Next, select **Endpoint security** > **Security Baselines**, select a baseline, and view the **Overview** pane.
+To view monitoring data for the baseline and devices, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Next, select **Endpoint security** > **Security Baselines**, select a baseline, and view the **Overview** pane.
 
 The **Overview** pane provides two methods to monitor status:
 
@@ -114,7 +114,7 @@ Monitoring the profile gives you insight into the deployment state of your devic
 
 View details about the security configurations that apply to an individual device, which can help you isolate settings that  are misconfigured.
 
-1. Sign in to the  sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the  sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to  **Devices** > **All devices** and select the device you want to view.
 

@@ -42,7 +42,7 @@ This article provides some guidance on using Apple Configurator and Apple Profil
 
 ## Before you begin
 
-[Create the profile](device-profile-create.md).
+[Create the profile](custom-settings-configure.md).
 
 ## What you need to know
 
@@ -66,7 +66,7 @@ This article provides some guidance on using Apple Configurator and Apple Profil
   You can also add device tokens to your custom configuration files. Device tokens are used to add device-specific information. For example, to show the serial number, enter `{{serialnumber}}`. On the device, the text shows similar to `123456789ABC` which is unique to each device. When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `deviceid` or any other device-specific value.
 
   > [!NOTE]
-  > Variables aren't validated in the UI, and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}` instead of `{{deviceid}}`, then the literal string is shown instead of the device’s unique ID. Be sure to enter the correct information.
+  > Variables aren't validated in the UI, and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}` instead of `{{deviceid}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information.
 
 Select **OK** > **Create** to save your changes. The profile is created and shown in the profiles list.
 

@@ -95,7 +95,7 @@ Much like a line-of-business (LOB) app, you can add a Win32 app to Microsoft Int
 
 The following steps provide guidance to help you add a Windows app to Intune.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the **Other** app types, select **Windows app (Win32)**.
 
@@ -355,7 +355,7 @@ You can configure the start time and deadline time for a Win32 app. At the start
 
 Set the app availability based on a date and time for a required app using the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**.
 3. Select an existing **Windows app (Win32)** from the list. 
 4. From the app pane, select **Properties** > **Edit** next to the **Assignments** section > **Add group** below the **Required** assignment type. 

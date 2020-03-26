@@ -82,7 +82,7 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 
 You can find most app-related information in the **Apps** workload, which you can access by doing the following:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Apps**.
 
     ![The Apps workload pane](./media/app-management/apps-workload.png)

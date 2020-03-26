@@ -61,13 +61,13 @@ When you create a policy set, you create a single unit of assignment, and manage
 
 ## How to create a policy set
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Policy Sets** > **Policy sets** > **Create**.
 3. On the **Basics** page, add the following values:
     - **Policy set name** - Provide a name for this policy set.
     - **Description** - Optionally, provide a description for the policy set.
    <p>
-   <img alt="Create policy set - Basics" src="/media/policy-sets/policy-sets-01.png">
+      <img alt="Create policy set - Basics" src="./media/policy-sets/policy-sets-01.png">
 
 4. Click **Next: Application management**.<br>
    On the **Application management** page you can optionally [add apps](../apps/apps-add.md), [app configuration policies](../apps/app-configuration-policies-overview.md), and [app protection policies](../apps/app-protection-policy.md) to your policy set. For information about app management, see [What is Microsoft Intune app management?](../apps/app-management.md).

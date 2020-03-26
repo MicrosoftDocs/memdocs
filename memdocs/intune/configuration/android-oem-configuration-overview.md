@@ -157,7 +157,6 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | --- | --- | ---|
 | Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
 | Zebra Technologies | com.zebra.oemconfig.common | [Zebra OEMConfig overview](http://techdocs.zebra.com/oemconfig ) |
-| Datalogic | com.datalogic.oemconfig | [User Documentation for Datalogic OEMConfig](https://datalogic.github.io/oemconfig/) |
 | Honeywell | com.honeywell.oemconfig |  |
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
 | Spectralink - Barcodes | com.spectralink.barcode.service |  |

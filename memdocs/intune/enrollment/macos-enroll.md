@@ -64,7 +64,7 @@ For information about other end-user tasks, see these articles:
 
 ## Company-owned macOS devices
 For organizations that purchase devices for their users, Intune supports the following macOS company-owned device enrollment methods:
-- [Apple's Device Enrollment Program (DEP)](device-enrollment-program-enroll-macos.md): Organizations can purchase macOS devices through Apple's Device Enrollment Program (DEP). DEP lets you deploy an enrollment profile "over the air" to bring devices into management.
+- [Apple's Automated Device Enrollment (ADE)](device-enrollment-program-enroll-macos.md): Organizations can purchase macOS devices through ADE. ADE lets you deploy an enrollment profile "over the air" to bring devices into management.
 - [Device enrollment manager (DEM)](device-enrollment-manager-enroll.md): You can use a DEM account to enroll up to 1,000 devices.
 
 ## Block macOS enrollment
@@ -87,7 +87,7 @@ User Approved MDM enrollment is a type of macOS enrollment that you can use to m
 During the BYOD enrollment process, the user will be asked to manually approve the Apple management profile. Instructions are provided in the Company Portal app for macOS. Although approval of the management profile is not required to complete enrollment, Intune recommends user approved enrollments. If the user does not approve the profile during enrollment, the user can go to **System Preferences** > **Profiles**, choose the management profile, and select **Approve**.    
 
 ### Find out if a device is User Approved
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices**> choose the device > **Hardware**.
 3. Check the **User approved enrollment** field.
 
