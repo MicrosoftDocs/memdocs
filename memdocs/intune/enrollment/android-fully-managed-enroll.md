@@ -60,7 +60,7 @@ To set up Android Enterprise fully managed device management, follow these steps
 
 ### Enable corporate owned user devices
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment**  > **Corporate-owned, fully managed user devices**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment**  > **Corporate-owned, fully managed user devices**.
 2. Under **Allow users to enroll corporate-owned user devices**, choose **Yes**.
 
 > [!NOTE]

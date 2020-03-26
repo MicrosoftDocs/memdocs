@@ -36,7 +36,7 @@ When you use Intune to deploy Windows update to Windows 10 devices, view details
 
 To review a policy report on the deployment status for the Windows 10 update rings that you have configured:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Overview** > **Software update status**. You can see general information about the status of any update rings you assigned.
 

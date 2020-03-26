@@ -69,7 +69,7 @@ You can use Azure AD Conditional Access to redirect your users to access corpora
 > New web clips (pinned web apps) on iOS devices will open in Microsoft Edge instead of the Intune Managed Browser when required to open in a protected browser. For older iOS web clips, you must retarget these web clips to ensure they open in Microsoft Edge rather then the Managed Browser.
 
 To restrict Azure AD-connected web apps to use Microsoft Edge on iOS and Android:
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Under the Intune node, select **Conditional Access** > **New policy**.
 3. Select **Grant** from the **Access controls** section of the pane.
 4. Select **Require approved client app**.
@@ -108,7 +108,7 @@ SSO requires your device to be registered by either the Microsoft Authenticator 
 
 To create app configuration for Microsoft Edge:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App configuration policies** > **Add**.
 3. On the **Add configuration policy** pane, enter a **Name** and optional **Description** for the app configuration settings.
 4. For **Device enrollment** type, choose **Managed apps**.

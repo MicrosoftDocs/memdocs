@@ -61,7 +61,7 @@ As a result, it's not recommended to assign apps to mixed groups.
 
 To assign an app to groups by using the include and exclude assignment:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**. The list of added apps is shown.
 3. Select the app that you want to assign. A dashboard displays information about the app.
 4. In the **Manage** section of the menu, select **Assignments**.

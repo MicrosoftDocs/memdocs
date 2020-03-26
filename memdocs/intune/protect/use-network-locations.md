@@ -54,7 +54,7 @@ To create a location-based compliance policy:
 
 ## Create a location
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance policies** > **Locations** > **Create**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance policies** > **Locations** > **Create**.
 
 2. Enter the following properties:  
 
