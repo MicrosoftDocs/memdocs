@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -58,9 +58,6 @@ Ensure that the following prerequisites are met when composing shell scripts and
 4. In **Script settings**, enter the following properties, and select **Next**:
    - **Upload script**: Browse to the shell script. The script file must be less than 200 KB in size.
    - **Run script as signed-in user**: Select **Yes** to run the script with the user's credentials on the device. Choose **No** (default) to run the script as the root user. 
-   - **Hide script notifications on devices**: By default, script notifications are shown for each script on run. End users see *IT is configuring your computer* notification from Intune Company Portal on macOS devices.
-   - **Script frequency**: Select how often the script is to be run. Choose **Not configured** (default) to run a script only once.
-   - **Max number of times to retry if script fails**: Select how many times the script should be run if it returns a non-zero exit code. Choose **Not configured** (default) to not retry when a script fails.
 5. In **Scope tags**, optionally add scope tags for the script, and select **Next**. You can use scope tags to determine who can see scripts in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 6. Select **Assignments** > **Select groups to include**. An existing list of Azure AD groups is shown. Select one or more device groups that include the users whose macOS devices are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy.
    > [!NOTE]
@@ -103,11 +100,11 @@ Your assigned-intune role requires **Device configurations** permissions to dele
  Microsoft Intune MDM Agent is necessary to be installed on managed macOS devices in order to enable advanced device management capabilities that are not supported by the native macOS operating system.
  
  ### How is the agent installed?
- The agent is automatically and silently installed on Intune-managed macOS devices that you assign at least one shell script to in Microsoft Endpoint Manager Admin Center. The agent is installed at `/Library/Intune/Microsoft Intune Agent.app` when applicable and doesn't appear in **Finder > Applications** on macOS devices. The agent appears as `IntuneMdmAgent` in **Activity Monitor** when running on macOS devices.
+ The agent is automatically and silently installed on Intune-managed macOS devices that you assign at least one shell script to in Microsoft Endpoint Manager Admin Center. The agent is installed at `/Library/Intune/Microsoft Intune Agent.app` when applicable and doesn't appear in **Finder** > **Applications** on macOS devices. The agent appears as `IntuneMdmAgent` in **Activity Monitor** when running on macOS devices.
 
 ### What does the agent do?
  - The agent silently authenticates with Intune services before checking in to receive assigned shell scripts for the macOS device.
- - The agent receives assigned shell scripts and runs the scripts based on the configured schedule, retry attempts, notification settings, etc. set by the admin.
+ - The agent receives assigned shell scripts and runs the scripts based on the configured schedule, retry attempts, notification settings, and other settings set by the admin.
  - The agent checks for new or updated scripts with Intune services usually every 8 hours. This check-in process is independent of the MDM check-in. 
 
  >[!NOTE]
@@ -120,12 +117,13 @@ Your assigned-intune role requires **Device configurations** permissions to dele
  - The agent is in an irrecoverable state for more than 24 hours (device-awake time).
 
  ### How to turn off usage data sent to Microsoft for shell scripts?
- To turn off usage data sent to Microsoft from Intune MDM Agent, **open Company Portal > Menu > Preferences > uncheck "allow Microsoft to collect usage data"**. This will turn off usage data sent for both Intune MDM agent and Company Portal.
+ To turn off usage data sent to Microsoft from Intune MDM Agent, open Company Portal and select **Menu** > **Preferences** > *uncheck 'allow Microsoft to collect usage data'*. This will turn off usage data sent for both Intune MDM agent and Company Portal.
 
 ## Known issues
 - **User group assignment:** Shell scripts assigned to user groups doesn't apply to devices. User group assignment is currently not supported in preview. Use device group assignment to assign scripts.
 - **Collect logs:** "Collect logs" action is visible. But when log collection is attempted, it shows "an error occurred" and doesn't capture logs. Log collection is currently not supported in preview.
 - **No script run status:** In the unlikely event that a script is received on the device and the device goes offline before the run status is reported, the device will not report run status for the script in the admin console.
+- **User status report:** An empty report issue exists. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Monitor**. The user status shows an empty report.
 
 ## Next steps
 
