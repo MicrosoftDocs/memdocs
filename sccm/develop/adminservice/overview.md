@@ -19,7 +19,7 @@ manager: dougeby
 > [!Tip]  
 > This feature was first introduced in version 1810 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1906, it's no longer a pre-release feature.  
 
-The SMS Provider also provides API interoperability access over HTTPS, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site. For more information, see [What is the administration service?](/configmgr/develop/rest/overview).
+The SMS Provider also provides API interoperability access over HTTPS, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site. For more information, see [What is the administration service?](/configmgr/develop/adminservice/overview).
 
 The **administration service** URL format is `https://<servername>/AdminService/wmi/<ClassName>` where `<servername>` is the server where the SMS Provider is installed and `<ClassName>` is a valid Configuration Manager WMI class name. In version 1810, this class name doesn't include the `SMS_` prefix. In version 1902 and later, this class name is the same as the WMI class name.
 

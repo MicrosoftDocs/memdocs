@@ -32,7 +32,7 @@ Configuration Manager administrative users use an SMS Provider to access informa
 
 The SMS Provider helps enforce Configuration Manager security. It returns only the information that the console user is authorized to view.  
 
-The SMS Provider also provides API interoperability access over HTTPS, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site. For more information, see [What is the administration service?](/configmgr/develop/rest/overview).
+The SMS Provider also provides API interoperability access over HTTPS, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site. For more information, see [What is the administration service?](/configmgr/develop/adminservice/overview).
 
 > [!IMPORTANT]  
 > When each instance of the SMS Provider for a site is offline, Configuration Manager consoles can't connect to the site.  
@@ -229,4 +229,4 @@ The Windows ADK installation can require up to 650 MB of free disk space on each
 
 The SMS Provider provides API interoperability access over an HTTPS OData connection, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site.
 
-For more information, see [What is the administration service?](/configmgr/develop/rest/overview)
+For more information, see [What is the administration service?](/configmgr/develop/adminservice/overview)
