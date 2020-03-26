@@ -44,11 +44,22 @@ Members of an orchestration group can be any Configuration Manager client, not j
    - When you enable **Orchestration Groups**, the site disables the **Server Groups** feature. This behavior avoids any conflicts between the two features.
 
 ### Client prerequisites
+
 - Upgrade the target devices to the latest version of the Configuration Manager client.
 - Members of an orchestration group should be assigned to the same site.
 - Devices can't be in more than one orchestration group.
    - Devices already in an orchestration group won't' be available to select when adding new members.
 
+
+## Limitations
+
+- You can have up to 1000 orchestration group members without adding additional management points or CPU cores.
+- Orchestration groups don't work in interoperability mode. For more information, see [Interoperability between different versions of Configuration Manager](/configmgr/core/plan-design/hierarchy/interoperability-between-different-versions#bkmk_mixed). <!--6389000-->
+- If updates are initiated by users from Software Center, you shouldn't use orchestration groups for those devices. <!--6362887-->
+
+## Server groups are automatically updated to orchestration groups
+
+The **Orchestration Groups** feature is the evolution of the [Server Groups](/sccm/sum/deploy-use/service-a-server-group) feature. When you install Configuration Manager version 2002 or later and you have Server Groups enabled, your server groups are automatically moved to orchestration groups.
 
 ## Create an orchestration group
 
