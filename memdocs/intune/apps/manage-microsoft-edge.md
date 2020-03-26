@@ -349,7 +349,7 @@ By default, Microsoft Edge prompts users for browsing history data collection to
 
 |    Key    |    Value    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     `com.microsoft.intune.man.managedbrowser.disableShareBrowsingHistory`    |     **true** will disable this prompt from displaying to end users.     |
+|     `com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory`    |     **true** will disable this prompt from displaying to end users.     |
 
 ### Disable prompts that offer to save passwords
 
