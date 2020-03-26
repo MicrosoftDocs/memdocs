@@ -62,7 +62,7 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 
     The **Platform** value is set based on your above choice.
 
-    ![Screenshot of the Basics page of the Create policy pane](/media/app-protection-policies/app-protection-add-policies-01.png)
+    ![Screenshot of the Basics page of the Create policy pane](./media/app-protection-policies/app-protection-add-policies-01.png)
 
 5. Click **Next** to display the **Apps** page.<br>
     The **Apps** page allows you to choose how you want to apply this policy to apps on different devices. You must add at least one app.<p>

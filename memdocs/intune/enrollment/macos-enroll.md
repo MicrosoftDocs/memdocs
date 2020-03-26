@@ -64,7 +64,7 @@ For information about other end-user tasks, see these articles:
 
 ## Company-owned macOS devices
 For organizations that purchase devices for their users, Intune supports the following macOS company-owned device enrollment methods:
-- [Apple's Device Enrollment Program (DEP)](device-enrollment-program-enroll-macos.md): Organizations can purchase macOS devices through Apple's Device Enrollment Program (DEP). DEP lets you deploy an enrollment profile "over the air" to bring devices into management.
+- [Apple's Automated Device Enrollment (ADE)](device-enrollment-program-enroll-macos.md): Organizations can purchase macOS devices through ADE. ADE lets you deploy an enrollment profile "over the air" to bring devices into management.
 - [Device enrollment manager (DEM)](device-enrollment-manager-enroll.md): You can use a DEM account to enroll up to 1,000 devices.
 
 ## Block macOS enrollment

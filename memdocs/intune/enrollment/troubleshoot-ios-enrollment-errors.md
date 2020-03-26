@@ -44,7 +44,7 @@ Collect the following information about the problem:
 - How many users are affected? Are all users affected or just some?
 - How many devices are affected? Are all devices affected or just some?
 - What is the MDM authority?
-- How is enrollment being performed? Is it "Bring your own device" (BYOD) or Apple Device Enrollment Program (DEP) with enrollment profiles?
+- How is enrollment being performed? Is it "Bring your own device" (BYOD) or Apple Automated Device Enrollment (ADE) with enrollment profiles?
 
 ## Error messages
 
@@ -109,7 +109,7 @@ If your company uses multiple domains for user credentials, create CNAME records
 **Cause:** The user who is trying to enroll the device does not have a Microsoft Intune license.
 
 #### Resolution
-1. Go to the [Office 365 Admin Center](https://portal.office.com/adminportal/home#/homepage), and then choose **Users > Active Users**.
+1. Go to the [Office 365 Admin Center](https://admin.microsoft.com), and then choose **Users > Active Users**.
 2. Select the user account that you want to assign an Intune user license to, and then choose **Product licenses > Edit**.
 3. Switch the toggle to the **On** position for the license that you want to assign to this user, and then choose **Save**.
 4. Re-enroll the device.
@@ -161,7 +161,7 @@ If your company uses multiple domains for user credentials, create CNAME records
 **Cause:** The user who is trying to enroll the device does not have a valid Intune license.
 
 #### Resolution
-1. Go to the [Microsoft 365 admin center](https://portal.office.com/adminportal/home#/homepage), and then choose **Users** > **Active Users**.
+1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com), and then choose **Users** > **Active Users**.
 2. Select the affected user account > **Product licenses** > **Edit**.
 3. Verify that a valid Intune license is assigned to this user.
 4. Re-enroll the device.
@@ -170,7 +170,7 @@ If your company uses multiple domains for user credentials, create CNAME records
 
 **Cause:** The user who is trying to enroll the device does not have a valid Intune license.
 
-1. Go to the [Microsoft 365 admin center](https://portal.office.com/adminportal/home#/homepage), and then choose **Users** > **Active Users**.
+1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com), and then choose **Users** > **Active Users**.
 2. Select the affected user account, and then choose **Product licenses** > **Edit**.
 3. Verify that a valid Intune license is assigned to this user.
 4. Re-enroll the device.
@@ -207,7 +207,7 @@ Renew the APNs certificate, and then re-enroll the device.
 
 ### XPC_TYPE_ERROR Connection invalid
 
-When you turn on a DEP-managed device that is assigned an enrollment profile, enrollment fails, and you receive the following error message:
+When you turn on a ADE-managed device that is assigned an enrollment profile, enrollment fails, and you receive the following error message:
 
 ```
 asciidoc
@@ -217,7 +217,7 @@ iPhone com.apple.accessibility.AccessibilityUIServer(MobileAsset)[288] <Notice>:
 iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" }
 ```
 
-**Cause:** There's a connection issue between the device and the Apple DEP service.
+**Cause:** There's a connection issue between the device and the Apple ADE service.
 
 #### Resolution
 Fix the connection issue, or use a different network connection to enroll the device. You may also have to contact Apple if the issue persists.
@@ -225,20 +225,20 @@ Fix the connection issue, or use a different network connection to enroll the de
 
 ## Other issues
 
-### DEP enrollment doesn't start
-When you turn on a DEP-managed device that is assigned an enrollment profile, the Intune enrollment process isn't initiated.
+### ADE enrollment doesn't start
+When you turn on a ADE-managed device that is assigned an enrollment profile, the Intune enrollment process isn't initiated.
 
-**Cause:** The enrollment profile is created before the DEP token is uploaded to Intune.
+**Cause:** The enrollment profile is created before the ADE token is uploaded to Intune.
 
 #### Resolution
 
 1. Edit the enrollment profile. You can make any change to the profile. The purpose is to update the modification time of the profile.
-2. Synchronize DEP-managed devices: In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment program tokens** > choose a token > **Sync now**. A sync request is sent to Apple.
+2. Synchronize ADE-managed devices: In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment program tokens** > choose a token > **Sync now**. A sync request is sent to Apple.
 
-### DEP enrollment stuck at user login
-When you turn on a DEP-managed device that is assigned an enrollment profile, the initial setup sticks after you enter credentials.
+### ADE enrollment stuck at user login
+When you turn on a ADE-managed device that is assigned an enrollment profile, the initial setup sticks after you enter credentials.
 
-**Cause:** Multi-Factor authentication (MFA) is enabled. Currently MFA doesn't work during enrollment on DEP devices.
+**Cause:** Multi-Factor authentication (MFA) is enabled. Currently MFA doesn't work during enrollment on ADE devices.
 
 #### Resolution
 Disable MFA, and then re-enroll the device.

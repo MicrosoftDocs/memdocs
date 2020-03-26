@@ -110,7 +110,7 @@ Intune is used in many sectors, including [government](https://docs.microsoft.co
 
 ## Next steps
 
-- Read some of the [common business problems that Intune helps solve](https://docs.microsoft.com/intune/common-scenarios).
+- Read some of the [common business problems that Intune helps solve](common-scenarios.md).
 - Start with a [30-day trial of Intune](free-trial-sign-up.md).
 - Plan your [migration to Intune](migration-guide.md).
 - Using your free trial or subscription, step through the [Quickstart: Create an email device profile for iOS](../configuration/quickstart-email-profile.md).
