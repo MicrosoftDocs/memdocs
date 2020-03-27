@@ -58,7 +58,7 @@ Learn what's new each week in Microsoft Intune. You can also find [important not
 -->  
 
 <!-- ########################## -->
-## Week of March 24,2020
+## Week of March 24, 2020
 
 ### Improved user interface experience when creating device restrictions profiles on Android and Android Enterprise devices<!-- 5841361 -->
 
@@ -70,13 +70,13 @@ When you create a profile for Android or Android Enterprise devices, the experie
 
 For more information on the device restrictions you can configure, see [Android device administrator](../configuration/device-restrictions-android.md) and [Android Enterprise](../configuration/device-restrictions-android-for-work.md).
 
-### Improved user interface experience when creating configuration profiles on iOS and macOS devices<!-- 5569002 5568997 -->
+### Improved user interface experience when creating configuration profiles on iOS/iPadOS and macOS devices<!-- 5569002 5568997 -->
 
-When you create a profile for iOS or macOS devices, the experience in the Endpoint Management admin center is updated. This change impacts the following device configuration profiles (**Devices** > **Configuration Profiles** > **Create profile** > **iOS** or **macOS** for platform):
+When you create a profile for iOS or macOS devices, the experience in the Endpoint Management admin center is updated. This change impacts the following device configuration profiles (**Devices** > **Configuration Profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform):
 
-- Custom: ios, macOS
-- Device features: ios, macOS
-- Device restrictions: ios, macOS
+- Custom: iOS, macOS
+- Device features: iOS, macOS
+- Device restrictions: iOS, macOS
 - Endpoint protection: macOS
 - Extensions: macOS
 - Preference file: macOS
