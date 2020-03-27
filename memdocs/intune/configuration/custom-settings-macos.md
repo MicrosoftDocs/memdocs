@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -68,10 +68,8 @@ This article provides some guidance on using Apple Configurator and Apple Profil
   > [!NOTE]
   > Variables aren't validated in the UI, and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}` instead of `{{deviceid}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information.
 
-Select **OK** > **Create** to save your changes. The profile is created and shown in the profiles list.
-
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md).
+The profile is created, but it may not be doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-See how to [create the profile on iOS/iPadOS devices](custom-settings-ios.md).
+Create a [custom profile on iOS/iPadOS devices](custom-settings-ios.md).

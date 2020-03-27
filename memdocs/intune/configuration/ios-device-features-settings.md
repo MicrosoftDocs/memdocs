@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -37,7 +37,7 @@ This article lists these settings, and describes what each setting does. For mor
 
 ## Before you begin
 
-[Create an iOS/iPadOS device configuration profile](device-features-configure.md).
+[Create an iOS/iPadOS device features profile](device-features-configure.md).
 
 > [!NOTE]
 > These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
@@ -85,11 +85,11 @@ This feature applies to:
 
 ### Dock
 
-Use the **Dock** settings to add up to six items or folders to the dock on the screen. Many devices support fewer items. For example, iPhone devices support up to four items. In this case, only the first four items you add are shown on the device.
+Use the **Dock** settings to add up to six items or folders to the dock on the screen. Many devices support fewer items. For example, iPhone devices support up to four items. In this case, only the first four items you add are shown on devices.
 
 You can add up to **six** items (apps and folders combined) for the device dock.
 
-- **Add**: Adds apps or folders to the dock on the device.
+- **Add**: Adds apps or folders to the dock on devices.
 - **Type**: Add an **App** or a **Folder**:
 
   - **App**: Choose this option to add apps to the dock on the screen. Enter:
@@ -117,11 +117,13 @@ You can add up to **six** items (apps and folders combined) for the device dock.
 
 In the following example, the dock screen shows only the Safari, Mail, and Stocks apps. The Mail app is selected to show its properties:
 
-![Sample iOS/iPadOS dock settings](./media/ios-device-features-settings/FfFiUcP.png)
+> [!div class="mx-imgBorder"]
+> ![Sample iOS/iPadOS dock settings](./media/ios-device-features-settings/FfFiUcP.png)
 
 When you assign the policy to an iPhone, the dock looks similar to the following image:
 
-![Sample iOS/iPadOS dock layout on iPhone](./media/ios-device-features-settings/bAgCe8F.png)
+> [!div class="mx-imgBorder"]
+> ![Sample iOS/iPadOS dock layout on iPhone](./media/ios-device-features-settings/bAgCe8F.png)
 
 ### Pages
 
@@ -138,7 +140,7 @@ You can add up to **40** pages on a device.
 
   You can add up to **60** items (apps and folder combined) on a device.
 
-  - **Add**: Adds apps or folders to a page on the device.
+  - **Add**: Adds apps or folders to a page on devices.
 
     - **Type**: Add an **App** or a **Folder**:
 
@@ -151,7 +153,7 @@ You can add up to **40** pages on a device.
 
         Apps that you add to a page in a folder are arranged from left to right, and in the same order as the list. If you add more apps than can fit on a page, the apps are moved to another page.
 
-        - **Folder name**: Enter a name for the folder. This name is shown to users on the device.
+        - **Folder name**: Enter a name for the folder. This name is shown to users on devices.
         - **Add**: Adds pages to the folder. Also enter the following properties:
 
           - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
@@ -162,11 +164,13 @@ You can add up to **40** pages on a device.
 
 In the following example, a new page named **Contoso** is added. The page shows the Find Friends and Settings apps. The Settings app is selected to show its properties:
 
-![iOS/iPadOS Home screen settings example in Intune](./media/ios-device-features-settings/Jc2OxyX.png)
+> [!div class="mx-imgBorder"]
+> ![iOS/iPadOS Home screen settings example in Intune](./media/ios-device-features-settings/Jc2OxyX.png)
 
 When you assign the policy to an iPhone, the page looks similar to the following image:
 
-![iOS/iPadOS device with modified home screen in Intune](./media/ios-device-features-settings/Bd37PHa.png)
+> [!div class="mx-imgBorder"]
+> ![iOS/iPadOS device with modified home screen in Intune](./media/ios-device-features-settings/Bd37PHa.png)
 
 ## App notifications
 
@@ -174,18 +178,19 @@ When you assign the policy to an iPhone, the page looks similar to the following
 
 - **Add**: Add notifications for apps:
 
-    ![Add app notification in iOS/iPadOS profile in Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+  > [!div class="mx-imgBorder"]
+  > ![Add app notification in iOS/iPadOS profile in Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
 
   - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
-  - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the device.
-  - **Publisher**: Enter the publisher of the app you're adding. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the device.
-  - **Notifications**: **Enable** or **Disable** the app from sending notifications to the device.
+  - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on devices.
+  - **Publisher**: Enter the publisher of the app you're adding. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on devices.
+  - **Notifications**: **Enable** or **Disable** the app from sending notifications to devices.
     - **Show in Notification Center**: **Enable** allows the app to show notifications in the device Notification Center. **Disable** prevents the app from showing notifications in the Notification Center.
-    - **Show in Lock Screen**: Select **Enable** to see notifications from the app on the device lock screen. **Disable** prevents the app from showing notifications on the lock screen.
-    - **Alert type**: When the device is unlocked from, choose how the notification is shown. Your options:
+    - **Show in Lock Screen**: **Enable** shows app notifications on the device lock screen. **Disable** prevents the app from showing notifications on the lock screen.
+    - **Alert type**: When devices are unlocked, choose how the notification is shown. Your options:
       - **None**: No notification is shown.
       - **Banner**: A banner is briefly shown with the notification.
-      - **Modal**: The notification is shown and the user must manually dismiss it before continuing to use the device.
+      - **Modal**: The notification is shown and users must manually dismiss it before continuing to use the device.
     - **Badge on app icon**: Select **Enable** to add a badge to the app icon. The badge means the app sent a notification.
     - **Sounds**: Select **Enable** to play a sound when a notification is delivered.
 
@@ -200,9 +205,9 @@ This feature applies to:
 
 - **Asset tag information**: Enter information about the asset tag of the device. For example, enter `Owned by Contoso Corp` or `Serial Number: {{serialnumber}}`.
 
-  The text you enter is shown on the sign in window and lock screen on the device.
+  The text you enter is shown on the sign in window and lock screen on devices.
 
-- **Lock screen footnote**: If the device is lost or stolen, enter a note that might help get the device returned. You can enter any text you want. For example, enter something like `If found, call Contoso at ...`.
+- **Lock screen footnote**: If devices are lost or stolen, enter a note that might help get the device returned. You can enter any text you want. For example, enter something like `If found, call Contoso at ...`.
 
   Device tokens can also be used to add device-specific information to these fields. For example, to show the serial number, enter `Serial Number: {{serialnumber}}`. On the lock screen, the text shows similar to `Serial Number 123456789ABC`. When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `deviceName` or any other device-specific value.
 
@@ -213,15 +218,16 @@ This feature applies to:
 
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
 
-- **Username attribute from AAD**: Intune looks for this attribute for each user in Azure AD. Intune then populates the respective field (such as UPN) before generating the XML that gets installed on the device. Your options:
+- **Username attribute from AAD**: Intune looks for this attribute for each user in Azure AD. Intune then populates the respective field (such as UPN) before generating the XML that gets installed on devices. Your options:
 
   - **User principal name**: The UPN is parsed in the following way:
 
-    ![iOS/iPadOS Username SSO attribute in Intune](./media/ios-device-features-settings/User-name-attribute.png)
+    > [!div class="mx-imgBorder"]
+    > ![iOS/iPadOS Username SSO attribute in Intune](./media/ios-device-features-settings/User-name-attribute.png)
 
     You can also overwrite the realm with the text you enter in the **Realm** text box.
 
-    For example, Contoso has several regions, including Europe, Asia, and North America. Contoso wants their Asia users to use SSO, and the app requires the UPN in the `username@asia.contoso.com` format. When you select **User Principal Name**, the realm for each user is taken from Azure AD, which is `contoso.com`. So for users in Asia, select **User Principal Name**, and enter `asia.contoso.com`. The end user's UPN becomes `username@asia.contoso.com`, instead of `username@contoso.com`.
+    For example, Contoso has several regions, including Europe, Asia, and North America. Contoso wants their Asia users to use SSO, and the app requires the UPN in the `username@asia.contoso.com` format. When you select **User Principal Name**, the realm for each user is taken from Azure AD, which is `contoso.com`. So for users in Asia, select **User Principal Name**, and enter `asia.contoso.com`. The user's UPN becomes `username@asia.contoso.com`, instead of `username@contoso.com`.
 
   - **Intune device ID**: Intune automatically selects the Intune Device ID.
 
@@ -235,7 +241,7 @@ This feature applies to:
 - **Realm**: Enter the domain part of the URL. For example, enter `contoso.com`.
 - **URL prefixes that will use Single Sign On**: **Add** any URLs in your organization that require user single sign-on authentication.
 
-  For example, when a user connects to any of these sites, the iOS/iPadOS device uses the single sign-on credentials. The user doesn't need to enter any additional credentials. If multi-factor authentication is enabled, then users are required to enter the second authentication.
+  For example, when a user connects to any of these sites, the iOS/iPadOS device uses the single sign-on credentials. Users don't need to enter any additional credentials. If multi-factor authentication is enabled, then users are required to enter the second authentication.
 
   > [!NOTE]
   > These URLs must be properly formatted FQDN. Apple requires these to be in the `http://<yourURL.domain>` format.
@@ -244,13 +250,13 @@ This feature applies to:
 
   The `http://.com` and `https://.com` patterns match all HTTP and HTTPS URLs, respectively.
 
-- **Apps that will use Single Sign On**: **Add** apps on end users' devices that can use single sign-on.
+- **Apps that will use Single Sign On**: **Add** apps on users devices that can use single sign-on.
 
   The `AppIdentifierMatches` array must include strings that match app bundle IDs. These strings may be exact matches, such as `com.contoso.myapp`, or enter a prefix match on the bundle ID using the \* wildcard character. The wildcard character must appear after a period character (.), and may appear only once, at the end of the string, such as `com.contoso.*`. When a wildcard is included, any app whose bundle ID begins with the prefix is granted access to the account.
 
   Use **App Name** to enter a user-friendly name to help you identify the bundle ID.
 
-- **Credential renewal certificate**: If using certificates for authentication (not passwords), select the existing SCEP or PFX certificate as the authentication certificate. Typically, this certificate is the same certificate that's deployed to the user for other profiles, such as VPN, Wi-Fi, or email.
+- **Credential renewal certificate**: If using certificates for authentication (not passwords), select the existing SCEP or PFX certificate as the authentication certificate. Typically, this certificate is the same certificate that's deployed to users for other profiles, such as VPN, Wi-Fi, or email.
 
 ## Web content filter
 
@@ -267,13 +273,13 @@ This feature applies to:
 
     - **Blocked URLs**: **Add** the URLs you want to stop from opening, regardless of the Apple web filter settings.
 
-  - **Specific websites only** (for the Safari web browser only): These URLs are added to the Safari browser's bookmarks. The user is **only** allowed to visit these sites; no other sites can be opened. Use this option only if you know the exact list of URLs that users can access.
+  - **Specific websites only** (for the Safari web browser only): These URLs are added to the Safari browser's bookmarks. Users are **only** allowed to visit these sites; no other sites can be opened. Use this option only if you know the exact list of URLs that users can access.
 
     - **URL**: Enter the URL of the website you want to allow. For example, enter `https://www.contoso.com`.
     - **Bookmark Path**: Apple changed this setting. All bookmarks go into the **Approved Sites** folder. Bookmarks don't go in to the bookmark path you enter.
     - **Title**: Enter a descriptive title for the bookmark.
 
-    If you don't enter any URLs, then end users can't access any websites except for `microsoft.com`, `microsoft.net`, and `apple.com`. These URLs are automatically allowed by Intune.
+    If you don't enter any URLs, then users can't access any websites except for `microsoft.com`, `microsoft.net`, and `apple.com`. These URLs are automatically allowed by Intune.
 
 ## Single sign-on app extension
 
@@ -286,10 +292,10 @@ This feature applies to:
 
 - **SSO app extension type**: Choose the type of SSO app extension. Your options:
 
-  - **Not configured**: App extensions aren't used. To disable an app extension, you can switch the SSO app extension type to **Not configured**.
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might not use app extensions. To disable an app extension, you can switch the SSO app extension type to **Not configured**.
   - **Redirect**: Use a generic, customizable redirect app extension to use SSO with modern authentication flows. Be sure you know the extension ID for your organization's app extension.
 
-    On iOS/iPadOS 13.0+ devices, you can configure the **Microsoft Azure AD SSO app extension** using this redirect SSO app extension type. The Microsoft Azure AD extension enables single sign-on among Microsoft apps and organization apps that use Azure AD for authentication. The Azure AD extension acts as an advanced authentication broker that offers security and end user experience improvements. All apps that previously used brokered authentication with the Microsoft Authenticator app continue to get SSO with the SSO extension. The Azure AD SSO extension doesn't support browser SSO yet. For more information about SSO and the iOS/iPadOS authentication broker, see [Configure SSO on macOS and iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
+    On iOS/iPadOS 13.0+ devices, you can configure the **Microsoft Azure AD SSO app extension** using this redirect SSO app extension type. The Microsoft Azure AD extension enables single sign-on among Microsoft apps and organization apps that use Azure AD for authentication. The Azure AD extension acts as an advanced authentication broker that offers security and user experience improvements. All apps that previously used brokered authentication with the Microsoft Authenticator app continue to get SSO with the SSO extension. The Azure AD SSO extension doesn't support browser SSO yet. For more information about SSO and the iOS/iPadOS authentication broker, see [Configure SSO on macOS and iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
 
     **To configure the iOS Microsoft Azure AD extension:**
 
@@ -310,7 +316,7 @@ This feature applies to:
         - `https://login-us.microsoftonline.com`
 
     > [!IMPORTANT]
-    > To achieve SSO with the iOS/iPadOS Microsoft Azure AD extension, first install the iOS/iPadOS Microsoft Authenticator app on the device. Authenticator delivers the Azure AD extension to the device, and the MDM SSO app extension settings activate the Azure AD extension. Once Authenticator and the SSO app extension profile are installed on the device, users must enter their credentials to sign in and establish a session. This session is then used across different applications without requiring users to authenticate again.
+    > To achieve SSO with the iOS/iPadOS Microsoft Azure AD extension, first install the iOS/iPadOS Microsoft Authenticator app on devices. Authenticator delivers the Azure AD extension to devices, and the MDM SSO app extension settings activate the Azure AD extension. Once Authenticator and the SSO app extension profile are installed on devices, users must enter their credentials to sign in and establish a session. This session is then used across different applications without requiring users to authenticate again.
 
   - **Credential**: Use a generic, customizable credential app extension to use SSO with challenge-and-response authentication flows. Be sure you know the extension ID for your organization's app extension.
   - **Kerberos**: Use Apple's built-in Kerberos extension, which is included on iOS 13.0+ and iPadOS 13.0+. This option is a Kerberos-specific version of the **Credential** app extension.
@@ -348,9 +354,9 @@ This feature applies to:
 
   - **Add**: Select to add your configuration keys.
 
-- **Keychain usage** (Kerberos only): Choose **Block** to prevent passwords from being saved and stored in the keychain. If blocked, users aren't prompted to save their password, and need to reenter the password when the Kerberos ticket expires. **Not configured** (default) allows passwords to be saved and stored in the keychain. Users aren't prompted to reenter their password when the ticket expires.
-- **Face ID, Touch ID, or passcode** (Kerberos only): **Require** forces users to enter their Face ID, Touch ID, or device passcode when the credential is needed to refresh the Kerberos ticket. **Not configured** (default) doesn't require users to use biometrics or device passcode to refresh the Kerberos ticket. If **Keychain usage** is blocked, then this setting doesn't apply.
-- **Default realm** (Kerberos only): Choose **Enable** to set the **Realm** value you entered as the default realm. **Not configured** (default) doesn't set a default realm.
+- **Keychain usage** (Kerberos only): **Block** prevents passwords from being saved and stored in the keychain. If blocked, users aren't prompted to save their password, and need to reenter the password when the Kerberos ticket expires. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passwords to be saved and stored in the keychain. Users aren't prompted to reenter their password when the ticket expires.
+- **Face ID, Touch ID, or passcode** (Kerberos only): **Require** forces users to enter their Face ID, Touch ID, or device passcode when the credential is needed to refresh the Kerberos ticket. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require users to use biometrics or device passcode to refresh the Kerberos ticket. If **Keychain usage** is blocked, then this setting doesn't apply.
+- **Default realm** (Kerberos only): **Enable** sets the **Realm** value you entered as the default realm. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not set a default realm.
 
   > [!TIP]
   > - **Enable** this setting if you're configuring multiple Kerberos SSO app extensions in your organization.
@@ -375,8 +381,8 @@ You may experience unexpected behavior when a profile with no image is assigned 
 
 ### Settings apply to: Automated device enrollment (supervised)
 
-- **Wallpaper Display Location**: Choose a location on the device to show the image. Your options:
-  - **Not configured**: A custom image isn't added to the device. The device uses the operating system default.
+- **Wallpaper Display Location**: Choose a location on devices to show the image. Your options:
+  - **Not configured**: Intune doesn't change or update this setting. A custom image isn't added to devices. By default, the OS might set its own image.
   - **Lock screen**: Adds the image to the lock screen.
   - **Home screen**: Adds the image to the home screen.
   - **Lock screen and Home screen**: Uses the same image on the lock screen and home screen.
