@@ -35,7 +35,7 @@ This feature applies to:
 - Windows 10 and later
 - Windows Holographic for Business
 
-To create kiosk profiles for other platforms, see [Android device administrator](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+To create kiosk profiles for other platforms, see [Android device administrator](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 Intune supports one kiosk profile per device. If you need multiple kiosk profiles on a single device, you can use a [Custom OMA-URI](custom-settings-windows-10.md).
 
@@ -77,7 +77,6 @@ The profile is created, and shown in the profiles list. Next, [assign](device-pr
 You can create kiosk profiles for devices that run the following platforms:
 
 - [Android device administrator](device-restrictions-android.md#kiosk)
-- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)
-- [iOS/iPadOS](device-restrictions-ios.md#kiosk)
+- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)
 - [Windows 10 and later](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)
