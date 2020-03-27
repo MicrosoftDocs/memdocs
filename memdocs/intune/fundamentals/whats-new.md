@@ -74,9 +74,9 @@ For more information on the device restrictions you can configure, see [Android 
 
 When you create a profile for iOS or macOS devices, the experience in the Endpoint Management admin center is updated. This change impacts the following device configuration profiles (**Devices** > **Configuration Profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform):
 
-- Custom: iOS, macOS
-- Device features: iOS, macOS
-- Device restrictions: iOS, macOS
+- Custom: iOS/iPadOS, macOS
+- Device features: iOS/iPadOS, macOS
+- Device restrictions: iOS/iPadOS, macOS
 - Endpoint protection: macOS
 - Extensions: macOS
 - Preference file: macOS
