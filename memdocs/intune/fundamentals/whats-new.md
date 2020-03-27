@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,6 +58,46 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 -->  
 
 <!-- ########################## -->
+## Week of March 24, 2020
+
+### Improved user interface experience when creating device restrictions profiles on Android and Android Enterprise devices<!-- 5841361 -->
+
+When you create a profile for Android or Android Enterprise devices, the experience in the Endpoint Management admin center is updated. This change impacts the following device configuration profiles (**Devices** > **Configuration Profiles** > **Create profile** > **Android device administrator** or **Android Enterprise** for platform):
+
+- Device restrictions: Android device administrator
+- Device restrictions: Android Enterprise device owner
+- Device restrictions: Android Enterprise work profile
+
+For more information on the device restrictions you can configure, see [Android device administrator](../configuration/device-restrictions-android.md) and [Android Enterprise](../configuration/device-restrictions-android-for-work.md).
+
+### Improved user interface experience when creating configuration profiles on iOS/iPadOS and macOS devices<!-- 5569002 5568997 -->
+
+When you create a profile for iOS or macOS devices, the experience in the Endpoint Management admin center is updated. This change impacts the following device configuration profiles (**Devices** > **Configuration Profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform):
+
+- Custom: iOS/iPadOS, macOS
+- Device features: iOS/iPadOS, macOS
+- Device restrictions: iOS/iPadOS, macOS
+- Endpoint protection: macOS
+- Extensions: macOS
+- Preference file: macOS
+
+### Hide from user configuration setting in device features on macOS devices<!-- 6524869 -->
+
+When you create a device features configuration profile on macOS devices, there's a new **Hide from user configuration** setting (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Device features** for profile > **Login items**).
+
+This feature sets an app's hide checkmark in the **Users & Groups** login items apps list on macOS devices. Existing profiles show this setting within the list as unconfigured. To configure this setting, administrators can update existing profiles.
+
+When set to **Hide**, the hide checkbox is checked for the app, and users can't change it. It also hides the app from users after users sign in to their devices.
+
+> [!div class="mx-imgBorder"]
+> ![Hide apps on macOS devices after users sign in to the device in Microsoft Intune and Endpoint Manager](./media/whats-new/macos-hide-checkmark-users-groups-login-items-apps-list.png)
+
+For more information on the setting you can configure, see [macOS device feature settings](../configuration/macos-device-features-settings.md).
+
+This feature applies to:
+
+- macOS
+
 ## Week of March 16, 2020 (2003 Service release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
