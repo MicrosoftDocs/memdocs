@@ -59,9 +59,9 @@ Configuration Manager devices and Intune enrolled devices on prior versions of W
 Endpoint analytics is included in the following plans: 
 
 - [Enterprise Mobility + Security E3](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) or higher
-- [Microsoft 365 Enterprise E3](https://www.microsoft.com/en-us/microsoft-365/enterprise?rtc=1) or higher. 
+- [Microsoft 365 Enterprise E3](https://www.microsoft.com/en-us/microsoft-365/enterprise?rtc=1) or higher.
 
-For proactive remediations, users of the device need one of the following licenses:
+Proactive remediations and startup performance also require one of the following licenses for the managed devices:
 - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F1, E3, or E5)
 - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows Virtual Desktop Access E3 or E5
@@ -70,6 +70,7 @@ For proactive remediations, users of the device need one of the following licens
 
 1. Go to `https://devicemanagement.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
 1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](#bkmk_uea_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
+   - For more information about common issues, see [Troubleshooting startup performance device enrollment](#bkmk_uea_enrollment_tshooter).
 
 ## Overview page
 
@@ -254,9 +255,29 @@ You can compare your current scores and subscores to others by setting a baselin
 
 ## <a name="bkmk_uea_tshoot"></a> Troubleshooting
 
-To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft. If your environment uses a proxy server, use this information to help configure the proxy.
+The sections below can be used to assist in troubleshooting issues you may encounter.
+
+### <a name="bkmk_uea_enrollment_tshooter"></a> Troubleshooting startup performance device enrollment
+
+If the overview page shows a startup performance score of zero accompanied by a banner showing it is waiting for data, or if the startup performance's device performance tab shows fewer devices than you expect, there are some steps you can take to troubleshoot the issue.
+
+First, here's a quick summary of common issues:
+1. Startup performance data is currently only available for US tenants. 
+1. Intune can only collect data from Windows 10 devices version 1903 or later
+1. Intune can only collect data from Windows 10 Enterprise devices (Windows 10 Professional is not supported)
+These issues will not apply to data coming from the Configuration Manager connector, which is currently not enabled.
+
+Second, here's a quick checklist to go through for troubleshooting:
+1. Make sure you have the Windows Health Monitoring profile targeted to all the devices for which you want performance data. You can find a link to this profile from within the endpoint analytics setting page, or you navigate to it as you would any other Intune profile. Look at the assignment tab to make sure it is assigned to the expected set of devices. 
+1. Have a look at which devices have been successfully configured for data collection. You can also see this information in the profiles overview page.  
+   - There is a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
+1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 24 hours after for the device to show up in the device performance tab.
+1. If your device has been successfully configured for data collection, has subsequently restarted, and after 24 hours you are still not seeing it, then it may be that the device can't reach our collection endpoints. This issue may happen if your company uses a proxy server and the endpoints have not been enabled in the proxy. For more information, see [Troubleshooting endpoints](#bkmk_uea_endpoints).
+
 
 ### <a name="bkmk_uea_endpoints"></a> Endpoints
+
+To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft. If your environment uses a proxy server, use this information to help configure the proxy.
 
 To enable functional data sharing, configure your proxy server to allow the following endpoints:
 
@@ -300,25 +321,6 @@ This approach is the most complex because it requires the following configuratio
   - Routed connection, or that uses network address translation (NAT)
 
 - Configure proxy servers to allow the computer accounts in Active Directory to access the diagnostic data endpoints. This configuration requires proxy servers to support Windows-Integrated Authentication.  
-
-### <a name="bkmk_uea_enrollment_tshooter"></a> Troubleshooting startup performance device enrollment
-
-If the overview page shows a startup performance score of zero accompanied by a banner showing it is waiting for data, or if the startup performance's device performance tab shows fewer devices than you expect, there are some steps you can take to troubleshoot the issue.
-
-First, here's a quick summary of common issues:
-1. Startup performance data is currently only available for US tenants. 
-1. Intune can only collect data from Windows 10 devices version 1903 or later
-1. Intune can only collect data from Windows 10 Enterprise devices (Windows 10 Professional is not supported)
-These issues will not apply to data coming from the Configuration Manager connector, which is currently not enabled.
-
-Second, here's a quick checklist to go through for troubleshooting:
-1. Make sure you have the Windows Health Monitoring profile targeted to all the devices for which you want performance data. You can find a link to this profile from within the endpoint analytics setting page, or you navigate to it as you would any other Intune profile. Look at the assignment tab to make sure it is assigned to the expected set of devices. 
-1. Have a look at which devices have been successfully configured for data collection. You can also see this information in the profiles overview page.  
-   - There is a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
-1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 24 hours after for the device to show up in the device performance tab.
-1. If your device has been successfully configured for data collection, has subsequently restarted, and after 24 hours you are still not seeing it, then it may be that the device can't reach our collection endpoints. This issue may happen if your company uses a proxy server and the endpoints have not been enabled in the proxy. For more information, see [Troubleshooting endpoints](#bkmk_uea_endpoints).
-
-
 
 ## <a name="bkmk_uea_faq"></a> Frequently asked questions
 
