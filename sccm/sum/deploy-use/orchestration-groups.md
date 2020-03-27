@@ -53,7 +53,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
 
 ## Limitations
 
-- You can have up to 1000 orchestration group members without adding additional management points or CPU cores.
+- You can have up to 1000 orchestration group members.
 - Orchestration groups don't work in interoperability mode. For more information, see [Interoperability between different versions of Configuration Manager](/configmgr/core/plan-design/hierarchy/interoperability-between-different-versions#bkmk_mixed). <!--6389000-->
 - If updates are initiated by users from Software Center, orchestration will be bypassed. <!--6362887-->
 

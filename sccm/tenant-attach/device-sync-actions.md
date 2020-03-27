@@ -26,8 +26,8 @@ Starting in Configuration Manager version 2002, you can upload your Configuratio
    - Onboarding creates a third-party app and a first party service principal in your Azure AD tenant.
 - An Azure public cloud environment.
 - The user account triggering device actions has the following prerequisites:
-   - Has been discovered with [Azure Active Directory user discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc)
-   - Has been discovered with [Active Directory user discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser)
+   - Has been discovered with both [Azure Active Directory user discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc) and [Active Directory user discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
+      - Meaning the user account needs to be a synced user object in Azure AD.
    - The **Notify Resource** permission under **Collections** object class in Configuration Manager.
 - Enable this [pre-release feature](/configmgr/core/servers/manage/pre-release-features) from **Administration** > **Overview** > **Updates and Servicing** > **Features**.
 
