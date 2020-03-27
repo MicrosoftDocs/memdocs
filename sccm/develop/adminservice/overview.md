@@ -16,78 +16,72 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
+The [SMS Provider](/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider) provides API interoperability access over HTTPS, called the **administration service**. The administration service is a representational state transfer (REST) API based on the Open Data (OData) v4 protocol.
+
 > [!Tip]  
 > This feature was first introduced in version 1810 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1906, it's no longer a pre-release feature.  
 
-The SMS Provider also provides API interoperability access over HTTPS, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site. For more information, see [What is the administration service?](/configmgr/develop/adminservice/overview).
+The administration service currently has two layers or routes:
 
-The **administration service** URL format is `https://<servername>/AdminService/wmi/<ClassName>` where `<servername>` is the server where the SMS Provider is installed and `<ClassName>` is a valid Configuration Manager WMI class name. In version 1810, this class name doesn't include the `SMS_` prefix. In version 1902 and later, this class name is the same as the WMI class name.
+- Administration service > WMI > SQL: `https://<SMSProviderFQDN>/AdminService/wmi/<ClassName>`
 
-For example:
+    The WMI route supports both GET and POST commands to over 700 classes.
 
-- 1810: `https://servername/AdminService/wmi/Site`
-- 1902 and later: `https://servername/AdminService/wmi/SMS_Site`
+- Administration service > OData/SQL: `https://<SMSProviderFQDN>/AdminService/v1/<ClassName>`
 
-> [!Note]  
-> The administration service class names are case-sensitive. Make sure to use the proper capitalization, for example SMS_Site.
+    This versioned route supports new Configuration Manager functionality.
 
-Make direct calls to this service with the Windows PowerShell cmdlet [Invoke-RestMethod](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod).
+The `<ClassName>` value is a valid Configuration Manager class name. The administration service class names are case-sensitive. Make sure to use the proper capitalization. For example, `SMS_Site`.
 
-> [!Tip]  
-> You can use this cmdlet in a task sequence. This action lets you access information from the site without requiring a custom web service to interface with the WMI provider.
+> [!NOTE]
+> In Configuration Manager version 1810, this class name didn't include the `SMS_` prefix. In version 1902 and later, for better consistency, the administration service class names are the same as the WMI class names.
 
-You can also use it to access site data from Power BI using the OData connector option.
+## Scenarios
+
+Configuration Manager natively uses the administration service for the following features:
+
+- [Email approval of apps](/configmgr/apps/deploy-use/app-approval#bkmk_email-approve)
+
+- [View recently connected consoles](/configmgr/core/servers/manage/admin-console#bkmk_viewconnected)
+
+- The **Security** node of the console (version 1906 and later)<!-- link to section with more detail, perhaps in the set-up article -->
+
+- Microsoft Endpoint Manager [tenant attach](/configmgr/tenant-attach/device-sync-actions) (version 2002 and later)
+
+<!-- - Community Hub -->
+
+In addition, you can develop custom solutions with the administration service, for example:
+
+- Replace a custom web service to access information from the site.
+
+- In PowerShell scripts that you run directly from the Configuration Manager console. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/configmgr/apps/deploy-use/create-deploy-scripts).
+
+- A PowerShell script in a task sequence. This action lets you access information from the site without requiring a custom web service to interface with the WMI provider. For more information, see [Task sequence steps - Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript).
+
+- Access site data from Power BI using the OData connector option.
+
+## Prerequisites
+
+Configure the following prerequisites on the server that hosts the SMS Provider role:
+
+- Install the .NET Framework version 4.5 or later.
+
+    > [!NOTE]
+    > Configuration Manager version 1810 requires .NET 4.5.2 or later.
+
+- Enable secure HTTPS communication with a trusted certificate. For more information, see [How to set up the administration service](/configmgr/develop/adminservice/set-up-admin-service).
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [How to set up the administration service](/configmgr/develop/adminservice/set-up-admin-service)
+
+<!-- EOF -->
+
+
+
+
+<!-- Make direct calls to this service with the Windows PowerShell cmdlet [Invoke-RestMethod](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod).
 
 The administration service logs its activity to the **adminservice.log** file.
-
-### Enable the administration service through the CMG
-
-The **SMS Provider** appears as a role with an option to allow communication over the cloud management gateway (CMG). The current use for this setting is to enable application approvals via email from a remote device. For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).
-
-#### Prerequisites
-
-- The server that hosts the SMS Provider requires .NET 4.5.2 or later.  
-
-    - Starting in version 1902, this prerequisite is version .NET 4.5 or later.  
-
-- Enable the SMS Provider to use a certificate. Use one of the following options:  
-
-    - Enable [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http) (recommended)  
-
-        > [!Note]  
-        > When the site creates a certificate for the SMS Provider, it won't be trusted by the web browser on the client. Based on your security settings, accessing the REST provider, you may see a security warning.  
-
-    - Manually bind a PKI-based certificate to port 443 in IIS on the server that hosts the SMS Provider role  
-
-#### Process to enable the API through the CMG
-
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Servers and Site System Roles** node.  
-
-2. Select the server with the **SMS Provider** role.  
-
-3. In the details pane, select the **SMS Provider** role, and select **Properties** in the ribbon on the **Site Role** tab.  
-
-4. Select the option to **Allow Configuration Manager cloud management gateway traffic for administration service**.  
-
-
-### Enable the Configuration Manager console to use the administration service
-
-<!--4223683-->
-Starting in version 1906, enable some nodes of the Configuration Manager console to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI.
-
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node. In the ribbon, select **Hierarchy Settings**.
-
-1. On the **General** page, select the option to **Enable the Configuration Manager console to use the administration service**.
-
-In version 1906, it only affects the following nodes under the **Security** node in the **Administration** workspace:
-
-- Administrative Users
-- Security Roles
-- Security Scopes
-- Console Connections
-
-When you select one of these nodes, if the following error message displays:
-
-*Configuration Manager can't connect to the administration service*
-
-Review the information below the error. Then verify that the administration service is enabled, configured, and functional.
+ -->
