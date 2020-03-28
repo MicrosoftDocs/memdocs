@@ -18,7 +18,7 @@ manager: dougeby
 
 Use the steps in this article to set up the administration service on your SMS Provider. Before you start, read the administration service [Prerequisites](/configmgr/develop/adminservice/overview#prerequisites).
 
-## Enable secure HTTPS communication
+## <a name="bkmk_https"></a> Enable secure HTTPS communication
 
 Configure the administration service to use a secure HTTPS connection to protect the data in transit across the network. Use one of the following options:
 
@@ -28,7 +28,7 @@ Configure the administration service to use a secure HTTPS connection to protect
 
 ### Enable Enhanced HTTP
 
-If you enable [Enhanced HTTP](/configmgr/core/plan-design/hierarchy/enhanced-http), the site generates certificates for site system roles like the SMS Provider. The site server issues and signs these certificates with it's self-signed **SMS Issuing** root certificate. This option doesn't require a public key infrastructure (PKI). Configuration Manager creates and manages the certificates, and binds them to the IIS services as needed.
+If you enable [Enhanced HTTP](/configmgr/core/plan-design/hierarchy/enhanced-http), the site generates certificates for site system roles like the SMS Provider. The site server issues and signs these certificates with its self-signed **SMS Issuing** root certificate. This option doesn't require a public key infrastructure (PKI). Configuration Manager creates and manages the certificates, and binds them to the IIS services as needed.
 
 When the site creates a certificate for the SMS Provider, clients won't trust it by default. If you try to access the administration service from a web browser on a client, you may see a security warning. Export the SMS Issuing root certificate from the Configuration Manager site, and install it on clients in the Trusted Root Certification Authorities store.
 
@@ -60,7 +60,7 @@ When the site creates a certificate for the SMS Provider, clients won't trust it
 
 1. Distribute and import the root certificate to the Trusted Root Certification Authorities store on any computer that you want to access the administration service.
 
-    - Manually import the certificate where and when needed. See the steps above for the Certificate Import Wizard.
+    - Manually import the certificate where you need it. See the steps above for the Certificate Import Wizard.
     - Use Configuration Manager to distribute and install the certificate using a custom script. For example, use the [Import-Certificate](https://docs.microsoft.com/powershell/module/pkiclient/import-certificate) PowerShell cmdlet.
     - Use the following Active Directory group policy: **Computer Configuration\Policies\Windows Settings\Security Settings\Public Key Policies\Trusted Root Certification Authorities**
 
@@ -72,9 +72,9 @@ There are two primary methods of using a server authentication certificate:
 
   - If your environment already has a PKI, you can use it to issue a server authentication certificate for the SMS Provider. This certificate is similar to the certificate you would use for a management point or distribution point. For more information, see [PKI certificate requirements](/configmgr/core/plan-design/network/pki-certificate-requirements#BKMK_PKIcertificates_for_servers).
 
-  - Most enterprise PKI implementations add the trusted root CAs to Windows clients. For example, using Active Directory Certificate Services with group policy. If you issue the SMS Provider server authentication certificate from a CA that your clients don't automatically trust, add the CA trusted root certificate to clients that need to access the administration service.
+  - Most enterprise PKI implementations add the trusted root CAs to Windows clients. For example, using Active Directory Certificate Services with group policy. If you issue the certificate from a CA that your clients don't automatically trust, add the CA trusted root certificate to clients. You can scope this trust to only the clients that need to access the administration service.
 
-- Use a certificate from a public and globally-trusted certificate provider. For example, but not limited to, DigiCert, Thawte, or VeriSign. Windows clients include trusted root certificate authorities (CAs) from these providers. By using a server authentication certificate issued by one of these providers, your clients automatically trust it.  
+- Use a certificate from a public and globally trusted certificate provider. For example, but not limited to, DigiCert, Thawte, or VeriSign. Windows clients include trusted root certificate authorities (CAs) from these providers. By using a server authentication certificate issued by one of these providers, your clients automatically trust it.  
 
 Once you have a server authentication certificate for the SMS Provider, you need to manually bind it to port 443 in IIS on the server that hosts the SMS Provider role.
 
@@ -102,7 +102,7 @@ For example:
 
 `netsh http add sslcert ipport=0.0.0.0:443 certhash=5aef9c1f348d4d1c8675309ca3363c2a5d3b617d appid={e9f0631d-6d1c-41b4-9617-454705f9c011}`
 
-## Enable internet access
+## <a name="bkmk_cmg"></a> Enable internet access
 
 You can use the administration service on-premises only, or you can enable it for access through the cloud management gateway (CMG). Some scenarios require access to the administration service from the internet, such as tenant attach or app approvals via email.
 
@@ -115,14 +115,28 @@ Then use the following process to enable the administration service through the 
 2. Select the server with the **SMS Provider** role.  
 
     > [!TIP]
-    > 
+    > On the ribbon, in the **Home** tab, select **Servers with Role** and then select **SMS Provider**. This action shows you the site systems with that role.
 
 3. In the details pane, select the **SMS Provider** role, and select **Properties** in the ribbon on the **Site Role** tab.  
 
 4. Select the option to **Allow Configuration Manager cloud management gateway traffic for administration service**.  
 
+To access the administration service from the internet, replace the SMS Provider FQDN with the CMG endpoint. For example:
 
-### Enable the Configuration Manager console to use the administration service
+`https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500/AdminService`
+
+> [!TIP]
+> To get the value for this endpoint, use the following steps:
+>
+> - Create a CMG. For more information, see [Set up a CMG](/configmgr/core/clients/manage/cmg/setup-cloud-management-gateway).
+> - On an active client, open a Windows PowerShell command prompt as an administrator.
+> - Run the following command:
+>
+>    ```PowerShell
+>    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP
+>    ```
+
+## <a name="bkmk_console"></a> Enable console usage
 
 <!--4223683-->
 Starting in version 1906, enable some nodes of the Configuration Manager console to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI.
@@ -131,7 +145,7 @@ Starting in version 1906, enable some nodes of the Configuration Manager console
 
 1. On the **General** page, select the option to **Enable the Configuration Manager console to use the administration service**.
 
-In version 1906, it only affects the following nodes under the **Security** node in the **Administration** workspace:
+This change only affects the following nodes under the **Security** node in the **Administration** workspace:
 
 - Administrative Users
 - Security Roles
@@ -143,3 +157,24 @@ When you select one of these nodes, if the following error message displays:
 *Configuration Manager can't connect to the administration service*
 
 Review the information below the error. Then verify that the administration service is enabled, configured, and functional.
+
+## Verify
+
+Test the administration service by doing a simple query in a web browser, for example:
+
+`https://smsprovider.contoso.com/adminservice/v1/$metadata`
+
+The administration service logs its activity to the **adminservice.log** file on the SMS Provider server in the Configuration Manager installation directory.
+
+For the above metadata query, the log file shows the following lines:
+
+```log
+Processing incoming request for resource [https://smsprovider.contoso.com/adminservice/v1/%24metadata], method: [GET], User - [CONTOSO\jqadmin]
+...
+Completing request with response code [200] reason [OK]
+```
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [How to use the administration service](/configmgr/develop/adminservice/usage)

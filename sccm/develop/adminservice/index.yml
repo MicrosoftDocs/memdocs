@@ -24,6 +24,6 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: How to set up
-            url: set-up-admin-service.md
+            url: set-up.md
           - text: How to use
-            url: use-admin-service.md
+            url: usage.md

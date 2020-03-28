@@ -44,7 +44,7 @@ Configuration Manager natively uses the administration service for the following
 
 - [View recently connected consoles](/configmgr/core/servers/manage/admin-console#bkmk_viewconnected)
 
-- The **Security** node of the console (version 1906 and later)<!-- link to section with more detail, perhaps in the set-up article -->
+- The **Security** [node of the console](/configmgr/develop/adminservice/set-up#bkmk_console) (version 1906 and later)
 
 - Microsoft Endpoint Manager [tenant attach](/configmgr/tenant-attach/device-sync-actions) (version 2002 and later)
 
@@ -69,19 +69,9 @@ Configure the following prerequisites on the server that hosts the SMS Provider 
     > [!NOTE]
     > Configuration Manager version 1810 requires .NET 4.5.2 or later.
 
-- Enable secure HTTPS communication with a trusted certificate. For more information, see [How to set up the administration service](/configmgr/develop/adminservice/set-up-admin-service).
+- Enable secure HTTPS communication with a trusted certificate. For more information, see [Enable secure HTTPS communication](/configmgr/develop/adminservice/set-up#bkmk_https).
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [How to set up the administration service](/configmgr/develop/adminservice/set-up-admin-service)
-
-<!-- EOF -->
-
-
-
-
-<!-- Make direct calls to this service with the Windows PowerShell cmdlet [Invoke-RestMethod](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod).
-
-The administration service logs its activity to the **adminservice.log** file.
- -->
+> [How to set up the administration service](/configmgr/develop/adminservice/set-up)

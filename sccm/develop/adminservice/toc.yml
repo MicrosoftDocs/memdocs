@@ -5,9 +5,9 @@
 - name: How-to guides
   items:
   - name: How to set up
-    href: set-up-admin-service.md
+    href: set-up.md
   - name: How to use
-    href: use-admin-service.md
+    href: usage.md
 - name: Reference
   items:
   - name: Frequently asked questions
