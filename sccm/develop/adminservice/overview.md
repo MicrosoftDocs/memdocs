@@ -73,6 +73,8 @@ Configure the following prerequisites on the server that hosts the SMS Provider 
 
 - Enable secure HTTPS communication with a trusted certificate. For more information, see [Enable secure HTTPS communication](/configmgr/develop/adminservice/set-up#bkmk_https).
 
+To access the administration service, your user account needs to be an administrative user in Configuration Manager. If you access the administration service via a cloud management gateway, you need to have an account in Azure Active Directory (Azure AD).
+
 ## Next steps
 
 > [!div class="nextstepaction"]

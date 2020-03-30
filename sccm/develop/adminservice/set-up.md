@@ -168,7 +168,7 @@ When you select one of these nodes, if the following error message displays:
 
 *Configuration Manager can't connect to the administration service*
 
-Review the information below the error. Then verify that the administration service is enabled, configured, and functional.
+Review the information below the error. Then verify that the administration service is enabled, configured, and functional. For more information including log files to review, see the [Verify](#verify) section.
 
 ## Verify
 
