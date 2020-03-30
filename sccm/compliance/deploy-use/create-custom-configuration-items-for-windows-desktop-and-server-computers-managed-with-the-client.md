@@ -368,7 +368,7 @@ Compliance rules specify the conditions that define the compliance of a configur
     - **Critical with event**: Computers that fail this compliance rule report a failure severity of **Critical**. This severity level is also logged as a Windows event in the application event log.  
 
 
-## <a name="bkmk_track"></a> Track remediation history when supported
+## <a name="bkmk_track"></a> Track configuration item remediations
 <!--42631411-->
 *(Introduced in version 2002)*
 
