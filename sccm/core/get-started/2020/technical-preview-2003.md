@@ -24,6 +24,7 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2003/1234567.md)] -->
 
+[!INCLUDE [5691658](includes/2003/5691658.md)]
 [!INCLUDE [4261411](includes/2003/4261411.md)]
 [!INCLUDE [5907383](includes/2003/5907383.md)]
 [!INCLUDE [6250367](includes/2003/6250367.md)]
