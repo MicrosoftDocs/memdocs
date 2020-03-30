@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/25/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -342,6 +342,8 @@ These settings are added to a device configuration profile in Intune, and then a
 ### Settings apply to: Automated device enrollment (supervised)
 
 - **Camera**: **Block** prevents access to the camera on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the device's camera.
+
+  Intune only manages access to the device camera. It doesn't have access to pictures or videos.
 
   Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
