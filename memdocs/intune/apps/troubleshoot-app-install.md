@@ -38,7 +38,7 @@ On Microsoft Intune MDM-managed devices, sometimes app installations can fail. W
 
 Intune provides app troubleshooting details based on the apps installed on a specific user's device.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Troubleshoot + support**.
 3. Click **Select user** to select a user to troubleshoot. The **Select users** pane will be displayed.
 4. Select a user by typing the name or email address. Click **Select** at the bottom of the pane. The troubleshooting information for the user is displayed in the **Troubleshoot** pane. 

@@ -42,7 +42,7 @@ Guided scenarios offer specific functionality. The following details help explai
 
 ### Launching  
 
-All guided scenarios are available from **[Device Management portal](https://devicemanagement.microsoft.com)** > **Troubleshooting + support** > **Guided scenarios**. 
+All guided scenarios are available from **[Device Management portal](https://endpoint.microsoft.com)** > **Troubleshooting + support** > **Guided scenarios**. 
 
 The guided scenario begins with an introduction explaining the purpose of the scenario and any prerequisites required to complete the setup. At this point, your admin permissions are checked to verify you have all the necessary privileges to complete the scenario.  
 

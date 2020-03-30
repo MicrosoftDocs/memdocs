@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -42,20 +42,26 @@ This article shows you how to create a custom profile for Android device adminis
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
+    - **Platform**: Choose the platform of your devices. Your options:  
+
+        - **Android device administrator**
+        - **Android Enterprise**
+        - **iOS/iPadOS**
+        - **macOS**
+        - **Windows 10 and later**
+        - **Windows Phone 8.1**
+
+    - **Profile**: Select **Custom**.
+
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
+
     - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Windows 10: Custom profile that enables AllowVPNOverCellular custom OMA-URI**.
-    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    - **Platform**: Select the platform of your devices. Your options:
+    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
-      - **Android device administrator**
-      - **Android Enterprise**
-      - **iOS/iPadOS**
-      - **macOS**
-      - **Windows 10 and later**
-      - **Windows 8.1 and later**
+6. Select **Next**.
 
-    - **Profile Type**: Select **Custom**.
-
-4. The settings are different for each platform. To see the settings for a specific platform, select your platform:
+7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
     - [Android device administrator](custom-settings-android.md)
     - [Android Enterprise](custom-settings-android-for-work.md)
@@ -65,10 +71,24 @@ This article shows you how to create a custom profile for Android device adminis
     - [Windows Holographic for Business](custom-settings-windows-holographic.md)
     - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
-5. When you're done, select **Create Profile** > **Create**.
+8. Select **Next**.
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-The profile is created, and shown in the profiles list (**Device configuration** > **Profiles**).
+    Select **Next**.
+
+10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+
+    Select **Next**.
+
+11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
+## Example
+
+In the following example, the **Connectivity/AllowVPNOverCellular** setting is enabled. This setting allows a Windows 10 device to open a VPN connection when on a cellular network.
+
+> [!div class="mx-imgBorder"]
+> ![Example of a custom policy containing VPN settings in Intune and Endpoint Manager](./media/custom-settings-configure/custom-policy-example.png)
 
 ## Next steps
 
-After the profile is created, it's ready to be assigned. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+The profile is created, but it may not be doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).

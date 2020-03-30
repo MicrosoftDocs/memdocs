@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -212,7 +212,9 @@ These settings use the [experience policy CSP](https://docs.microsoft.com/window
   This policy setting doesn't apply if the computer is Azure AD joined and auto-enrollment is enabled.
 
 - **Manual root certificate installation** (mobile only): **Block** prevents end users from manually installing root certificates, and intermediate CAP certificates. When set to **Not configured** (default), Intune doesn't change or update this setting.
-- **Camera**: **Block** prevents end users from using the camera on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
+- **Camera**: **Block** prevents end users from using the camera on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the device camera.
+
+  Intune only manages access to the device camera. It doesn't have access to pictures or videos.
 
   [Camera CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 

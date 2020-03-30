@@ -60,7 +60,7 @@ You can enable SEP Mobile risk assessment through Intune device compliance polic
 
 - Symantec Endpoint Protection Mobile subscription
 
-For more information, check [Symantec website](https://www.skycure.com/skycure-microsoft-integration/).
+For more information, check [Symantec website](https://help.symantec.com/cs/sep_mobile/SEPMOBILE/v131237277_v127904070/Integrating-Microsoft-Intune-with-Endpoint-Protection-Mobile?locale=EN_US).
 
 ## How do Intune and SEP Mobile help protect your company resources?
 

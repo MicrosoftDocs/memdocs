@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -51,10 +51,8 @@ If you add properties with **Configuration Designer**, you can automatically con
 
    ![Configuration settings format - Use configuration designer](./media/configure-microsoft-launcher/configure-microsoft-launcher-01.png)
 
-    > [!NOTE]
-    > Once properties are configured via the Configuration Designer, the JSON data will also be updated to only reflect these properties. To add additional configuration keys into the JSON Data, use the JSON script below to copy the necessary lines for each configuration key. 
-
-When editing previously created app configuration policies, if complex properties have been configured, the edit process will display the JSON Data editor. All previously configured settings will be preserved and you can switch to use the configuration designer to modify supported settings. 
+   > [!NOTE]
+   > Once properties are configured via the Configuration Designer, the JSON data will also be updated to only reflect these properties. To add additional configuration keys into the JSON Data, use the [JSON script example](../apps/configure-microsoft-launcher.md#microsoft-launcher-configuration-example) to copy the necessary lines for each configuration key. 
 
 ## Using Configuration Designer
 

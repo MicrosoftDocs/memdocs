@@ -61,7 +61,7 @@ As a result, it's not recommended to assign apps to mixed groups.
 
 To assign an app to groups by using the include and exclude assignment:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**. The list of added apps is shown.
 3. Select the app that you want to assign. A dashboard displays information about the app.
 4. In the **Manage** section of the menu, select **Assignments**.
@@ -94,7 +94,7 @@ When you make group assignments, groups that have already been assigned aren't a
 
 To edit assignments, in the app **Assignments** list, select the row that contains the specific assignment that you want to change. You can also remove an assignment by selecting the ellipse (**…**) at the end of a row, and then selecting **Remove**. To change the view of the **Assignments** list, group by **Assignment type** or by **Included/Excluded**.
 
-![Intune app assignments - Complete](/media/apps-inc-exl-assignments/apps-inc-exl-05.png)
+![Intune app assignments - Complete](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 
 ## Next steps
 

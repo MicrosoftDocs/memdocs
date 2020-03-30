@@ -56,7 +56,7 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 ## To enable the Mobile Threat Defense connector
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**.
 

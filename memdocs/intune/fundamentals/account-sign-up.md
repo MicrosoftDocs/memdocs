@@ -67,7 +67,7 @@ To grant access to administer the service for users with other permissions, then
 
 ### Intune Admin portal URL
 
-Microsoft 365 Admin Center: https://devicemanagement.microsoft.com
+Microsoft Endpoint Manager admin center: https://endpoint.microsoft.com
 
 Intune Azure portal: https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade
 
@@ -80,7 +80,7 @@ The Intune classic portal is only used for managing devices enrolled with the In
 
 Microsoft 365 Business: https://portal.microsoft.com/adminportal
 
-Office 365 Mobile Device Management: https://portal.office.com/adminportal/home#/MifoDevices
+Office 365 Mobile Device Management: https://admin.microsoft.com/adminportal/home#/MifoDevices
 
 ## See also
 

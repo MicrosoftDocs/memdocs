@@ -38,6 +38,9 @@ The process to enable and collect logs varies by platform:
 - **Windows 10 devices** - Use *MDMDiag* and event logs. See, [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) in the Windows client management content, and the blog [Troubleshooting Windows 10 Intune Policy Failures](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/).
 - **Android devices** - Use Microsoft Edge for Android to collect logs. For details, see [Manage web access by using Microsoft Edge with Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
 
+  > [!Note]
+  > On Android Fully Managed devices, in certain instances the Intune Company Portal app may be visible under all apps. This may happen when an app associated with an app protection policy is either not installed or not launched. 
+
 The following table lists the App protection policy setting name and supported values that are recorded in the log. In addition, each setting identifies the policy setting found within Microsoft Endpoint Manager portal. For detailed information on each setting, see [iOS/iPadOS app protection policy settings](app-protection-policy-settings-ios.md).
 
 ## App protection policy settings

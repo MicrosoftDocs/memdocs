@@ -42,7 +42,7 @@ As an Intune admin, you can use the **Help and Support** option to file an on-li
 
 ## Help and support experience
 
-The Help and support experience for Intune is available from the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and from all of the blades (or pages) under Intune in the Azure portal.
+The Help and support experience for Intune is available from the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and from all of the blades (or pages) under Intune in the Azure portal.
 
 The *Help and support* experience is similar to the experience seen in the [Microsoft 365 admin center](https://admin.microsoft.com/), and replaces the previous *Help + support*, which remains in place for other services in Azure.
 
@@ -68,9 +68,9 @@ This problem occurs when you have not authenticated your new tenant account thro
   > [!NOTE]  
   > If your instance of Intune is hosted on the private cloud for government, also known as a sovereign cloud like Azure Government, see [Intune support for private cloud for government](#intune-support-for-private-cloud-for-government), later in this article. The Intune *Help and support* experience won't be available on the private cloud for government until next year.
 
-- **From the Microsoft Endpoint Manager Admin Center**
+- **From the Microsoft Endpoint Manager admin center**
 
-  - From any node in the Microsoft Endpoint Manager Admin Center, select the **?** icon in the upper-right corner of the portal, and then use the drop-down to select the management type you want help with. The Microsoft Endpoint Manager Admin Center supports the following management types, and you must select the one you want assistance for, like Intune:
+  - From any node in the Microsoft Endpoint Manager admin center, select the **?** icon in the upper-right corner of the portal, and then use the drop-down to select the management type you want help with. The Microsoft Endpoint Manager admin center supports the following management types, and you must select the one you want assistance for, like Intune:
 
     - Configure Manager (includes Desktop Analytics)
     - Intune

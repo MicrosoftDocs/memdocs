@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,10 +30,12 @@ ms.collection: M365-identity-device-management
 
 On Windows 10 devices, use Intune to run devices as a kiosk, sometimes known as a dedicated device. A device in kiosk mode can run one app, or run many apps. You can show and customize a start menu, add different apps, including Win32 apps, add a specific home page to a web browser, and more. 
 
-This feature applies to devices running:
+This feature applies to:
 
 - Windows 10 and later
 - Windows Holographic for Business
+
+To create kiosk profiles for other platforms, see [Android device administrator](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 Intune supports one kiosk profile per device. If you need multiple kiosk profiles on a single device, you can use a [Custom OMA-URI](custom-settings-windows-10.md).
 
@@ -73,7 +75,8 @@ The profile is created, and shown in the profiles list. Next, [assign](device-pr
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 You can create kiosk profiles for devices that run the following platforms:
+
 - [Android device administrator](device-restrictions-android.md#kiosk)
-- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)
+- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)
 - [Windows 10 and later](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

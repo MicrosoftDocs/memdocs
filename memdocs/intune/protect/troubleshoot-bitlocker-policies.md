@@ -75,7 +75,7 @@ How do you confirm that the settings have been applied to the targeted device? F
 
 When you use Device Configuration policy to configure BitLocker, you can check the status of the policy in the Intune portal.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** and then select the profile that contains BitLocker settings.
 
