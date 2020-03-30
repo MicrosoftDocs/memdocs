@@ -82,9 +82,9 @@ The following Configuration Manager features support or require enhanced HTTP:
 
 ## Prerequisites  
 
-- A management point configured for HTTP client connections. Set this option on the **General** tab of the site system role properties.  
+- A management point configured for HTTP client connections. Set this option on the **General** tab of the management point role properties.  
 
-- A distribution point configured for HTTP client connections. Set this option on the **General** tab of the site system role properties. Don't enable the option to **Allow clients to connect anonymously**.  
+- A distribution point configured for HTTP client connections. Set this option on the **Communication** tab of the distribution point role properties. Don't enable the option to **Allow clients to connect anonymously**.  
 
 - Onboard the site to Azure AD for cloud management.  
 
