@@ -61,6 +61,10 @@ Across these scenarios the following specific device use cases may apply:
 
 - Mergers and acquisitions, where it may be easiest to join devices to Azure AD and manage through a CMG.  
 
+- Workgroup clients. These devices may require additional configuration, such as certificates.<!-- SCCMDocs#1925 -->
+
+    Starting in version 2002, Configuration Manager supports token-based authentication, which may help with management of remote workgroup clients. For more information, see [Token-based authentication for CMG](/configmgr/core/clients/deploy/deploy-clients-cmg-token).
+
 > [!Important]
 > By default all clients receive policy for a CMG, and start using it when they become internet-based. Depending upon the scenario and use case that applies to your organization, you may need to scope usage of the CMG. For more information, see the [Enable clients to use a cloud management gateway](/sccm/core/clients/deploy/about-client-settings#enable-clients-to-use-a-cloud-management-gateway) client setting.
 
@@ -260,6 +264,8 @@ CMG uses the following Azure components, which incur charges to the Azure subscr
 
     > [!NOTE]  
     > Performing other actions, such as deploying software updates or applications, increases the amount of outbound data transfer from Azure.
+
+- Internet-based clients get Microsoft software update content from Windows Update at no charge. Don't distribute update packages with Microsoft update content to a cloud distribution point, otherwise you may incur storage and data egress costs.  
 
 - Misconfiguration of the CMG option to **Verify client certificate revocation** can cause additional traffic from clients to the CMG. This additional traffic can increase the Azure egress data, which can increase your Azure costs.<!-- SCCMDocs#1434 --> For more information, see [Publish the certificate revocation list](https://docs.microsoft.com/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_crl).  
 
