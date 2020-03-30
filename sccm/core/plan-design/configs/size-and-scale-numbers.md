@@ -166,6 +166,14 @@ Use the following capacity information to plan for software updates objects:
 - **Limit of 580 security scopes for automatic deployment rules** -<!--ado 4962928-->
 Limit the number of security scopes on automatic deployment rules (ADRs) to less than 580. When you create an ADR, the security scopes that have access to it are automatically added. If there are more than 580 security scopes set, the ADR will fail to run and an error is logged in ruleengine.log.
 
+### SMS Provider
+
+<!-- SCCMDocs#1958 -->
+
+Each instance of the SMS Provider supports simultaneous connections from multiple requests. The only limitations on these connections are the number of server connections that are available to Windows, and the available resources on the server to service the connection requests.
+
+For more information, see [Plan for the SMS Provider](/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider).
+
 ## <a name="bkmk_clientnumbers"></a> Client numbers for sites and hierarchies
 
 Use the following information to determine how many clients and which types of clients you can support at a site or in a hierarchy.  
