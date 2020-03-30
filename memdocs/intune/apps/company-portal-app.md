@@ -49,18 +49,18 @@ The following table provides the branding customization details for the end-user
 | **Show in header** | Select whether the header in the end-user experiences   should display the **Company logo and name**, the **Company logo only**, or the **Company name only**. The preview boxes below will only show the logos, not the   name.  |
 | **Upload logo for theme color background** | Upload the logo you want to show on top of your selected   theme color. For the best appearance, upload a logo with a transparent   background. You can see how this will look in the preview box below the   setting.<p>Maximum image size: 400 x 400 px<br>Maximum file size:   750KB<br>File type: PNG, JPG, or JPEG |
 | **Upload logo for white or light background** | Upload the logo you want to show on top of white or light-colored backgrounds. For the best appearance, upload a logo with a   transparent background. You can see how this will look on a white background   in the preview box below the setting.<p>Maximum image size: 400 x 400   px<br>Maximum file size: 750KB<br>File type: PNG, JPG, or JPEG |
-| **Upload brand image** | Upload an image that reflects   your organization’s brand.<p><ul><li>Recommended image   width: Greater than 1125 px (required to be at least 650   px)</li><li>Maximum image size: 1.3 MB</li><li>File   type: PNG, JPG, or JPEG</li><li>It is displayed in these   locations:</li><ul><li>iOS/iPadOS Company Portal: Background image on   the user's profile page.</li><li>Company Portal website:   Background image on the user’s profile page.</li><li>Android   Intune app: In the drawer and as a background image on the user’s profile   page.</li></ul></ul> |
+| **Upload brand image** | Upload an image that reflects   your organization's brand.<p><ul><li>Recommended image   width: Greater than 1125 px (required to be at least 650   px)</li><li>Maximum image size: 1.3 MB</li><li>File   type: PNG, JPG, or JPEG</li><li>It is displayed in these   locations:</li><ul><li>iOS/iPadOS Company Portal: Background image on   the user's profile page.</li><li>Company Portal website:   Background image on the user's profile page.</li><li>Android   Intune app: In the drawer and as a background image on the user's profile   page.</li></ul></ul> |
 
 > [!NOTE]
 > When a user is installing an iOS/iPadOS application from the Company Portal they will receive a prompt. This occurs when the iOS/iPadOS app is linked to the app store, linked to a volume-purchase program (VPP), or linked to a line-of-business (LOB) app. The prompt allows the users to accept the action or allow management of the app. The prompt will display your company name, or when your company name is unavailable, **Company Portal** will be displayed.
 
 ### Brand image best practices
 
-The right brand image can enhance the user’s trust by presenting a strong sense of your organization’s brand. Here are some tips you may want to consider for acquiring, choosing, and optimizing the image for the display locations.
+The right brand image can enhance the user's trust by presenting a strong sense of your organization's brand. Here are some tips you may want to consider for acquiring, choosing, and optimizing the image for the display locations.
 
 - Reach out to your marketing or art department. They may already have an approved set of brand images. They may also be able to help you optimize images as needed.
 - Consider both landscape and portrait composition. The image should have sufficient background surrounding the focal point. The image may be cropped differently based on device size, orientation, and platform.
-- Avoid using a generic, stock image. The image should reflect your organization’s brand and feel familiar to users. If you don’t have one, it’s better to not use one than use a generic one that has no meaning to your user.
+- Avoid using a generic, stock image. The image should reflect your organization's brand and feel familiar to users. If you don't have one, it's better to not use one than use a generic one that has no meaning to your user.
 - Remove unnecessary metadata. Image file can come with metadata such as camera profile, geo location, title, caption, and so on. Use an image optimization tool to strip out this information to maintain quality while meeting file size limit.
 
 ### Brand image examples
@@ -77,7 +77,7 @@ The following shows an example of the brand image in the Intune app for Android:
 
 ## Support information
 
-Enter your organization’s support information, so employees can reach out with questions. This support information will be displayed on **Support**, **Help & Support**, and **Helpdesk** pages across the end-user experience.
+Enter your organization's support information, so employees can reach out with questions. This support information will be displayed on **Support**, **Help & Support**, and **Helpdesk** pages across the end-user experience.
 
 | Field name | Maximum length | More information |
 |------------------------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -94,7 +94,7 @@ The following table provides additional configuration details:
 
 | Field name | Maximum length | More information |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Privacy statement URL | 79 | Set your organization’s privacy statement to appear when   users click on privacy links. You must enter a valid URL in the format `https://www.contoso.com`. |
+| Privacy statement URL | 79 | Set your organization's privacy statement to appear when   users click on privacy links. You must enter a valid URL in the format `https://www.contoso.com`. |
 | Privacy message in the Company Portal for iOS/iPadOS | 520 | Keep the Default or set   a Custom message to list the items that your organization can or can't see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links. |
 | Device enrollment | N/A | Specify if and how users should be prompted to enroll into   mobile device management. Details below. |
 
@@ -111,7 +111,7 @@ The following table provides additional configuration details:
 |    Available, no prompts    |    User can enroll via the status in device details for   their current device or from apps that require enrollment.    |    No    |    No    |    Yes    |    Yes    |
 |    Unavailable    |    There is no way for users to enroll.    |    No    |    No    |    No    |    No<sup>(1)</sup>    |
 
-<sup>(1)</sup> **Known issue:** If you set apps to require enrollment for install and also set device enrollment to “Unavailable,” the Company Portal app on Android will still guide users to enroll. This will be removed shortly.
+<sup>(1)</sup> **Known issue:** If you set apps to require enrollment for install and also set device enrollment to "Unavailable," the Company Portal app on Android will still guide users to enroll. This will be removed shortly.
 
 > [!NOTE]
 > If you are using Azure Government, app logs are offered to the end user to decide how they will share when they initiate the process to get help with an issue. However, if you are not using Azure Government, the Company Portal will send app logs directly to Microsoft when the user initiates the process to get help with an issue. Sending the app logs to Microsoft will make it easier to troubleshoot and resolve issues.
@@ -162,7 +162,7 @@ End users will also be able to see the available shortcuts in the Windows Compan
 
 ## User self-service device actions from the Company Portal
 
-Users can perform actions on their local or remote devices via the Company Portal app or website or the Intune app on Android. The actions that a user can perform vary based on device platform and configuration. In all cases, the remote device actions can only be performed by device’s Primary User.
+Users can perform actions on their local or remote devices via the Company Portal app or website or the Intune app on Android. The actions that a user can perform vary based on device platform and configuration. In all cases, the remote device actions can only be performed by device's Primary User.
 
 - **Retire** – Removes the device from Intune Management. In the company portal app and website, this shows as **Remove**.
 - **Wipe** – This action initiates a device reset. In the company portal website this is shown as **Reset**, or **Factory Reset** in the iOS/iPadOS Company Portal App.
@@ -197,4 +197,4 @@ Some platforms and configurations do not allow self-service device actions. This
 
 ## Next steps
 
-- [Manually add the Windows 10 Company Portal app by using Microsoft Intune](company-portal-app.md)
+- [Add apps](apps-add.md)
