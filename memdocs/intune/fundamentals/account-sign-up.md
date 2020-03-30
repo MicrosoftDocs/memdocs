@@ -67,7 +67,7 @@ To grant access to administer the service for users with other permissions, then
 
 ### Intune Admin portal URL
 
-Microsoft Endpoint Manager admin center: https://devicemanagement.microsoft.com
+Microsoft Endpoint Manager admin center: https://endpoint.microsoft.com
 
 Intune Azure portal: https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade
 
