@@ -63,7 +63,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### New URL for the Microsoft Endpoint Manager admin center<!-- 3704810 -->
 To align with the announcement of Microsoft Endpoint Manager at Ignite last year, we have changed the URL for the Microsoft Endpoint Manager admin center (formerly Microsoft 365 Device Management) to [https://endpoint.microsoft.com](https://endpoint.microsoft.com). The old admin center URL [https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com) will continue to work, but we recommend you start accessing the Microsoft Endpoint Manager admin center using the new URL.
 
-For more information, see [Simplify IT tasks using the Microsoft Endpoint Manager admin center](what-is-device-management#simplify-it-tasks-using-the-device-management-admin-center.md).
+For more information, see [Simplify IT tasks using the Microsoft Endpoint Manager admin center](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).
 
 ## Week of March 23, 2020
 
