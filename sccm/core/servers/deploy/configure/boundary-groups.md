@@ -60,6 +60,21 @@ For more information, see the following procedures:
 - [Create a boundary group](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_create)  
 - [Configure a boundary group](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_config)  
 
+### <a name="bkmk_show-boundary"></a> Show boundary groups for devices
+
+<!--6521835-->
+
+Starting in version 2002, to help you better identify and troubleshoot device behaviors with boundary groups, you can view the boundary groups for specific devices. In the **Devices** node or when you show the members of a **Device Collection**, add the new **Boundary Group(s)** column to the list view.
+
+- If a device is in more than one boundary group, the value is a comma-separated list of boundary group names.
+
+- The data updates when the client makes a location request to the site, or at most every 24 hours.
+
+- If a client is roaming and not a member of a boundary group, the value is blank.
+
+> [!NOTE]
+> This information is site data and only available on primary sites. You won't see a value for this column when you connect the Configuration Manager to a central administration site.
+
 ## Fallback
 
 To prevent problems when clients can't find an available site system in their current boundary group, define the relationship between boundary groups for fallback behavior. Fallback lets a client expand its search to additional boundary groups to find an available site system.
