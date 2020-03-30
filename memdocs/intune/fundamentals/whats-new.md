@@ -58,7 +58,14 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 -->  
 
 <!-- ########################## -->
-## Week of March 24, 2020
+## Week of March 30, 2020
+
+### New URL for the Microsoft Endpoint Manager admin center
+To align with the announcement of Microsoft Endpoint Manager at Ignite last year, we have changed the URL for the Microsoft Endpoint Manager admin center (formerly Microsoft 365 Device Management) to [https://endpoint.microsoft.com](https://endpoint.microsoft.com). The old admin center URL [https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com) will continue to work, but we recommend you start accessing the Microsoft Endpoint Manager admin center using the new URL.
+
+For more information, see [Simplify IT tasks using the Microsoft Endpoint Manager admin center](https://docs.microsoft.com/en-us/mem/intune/fundamentals/what-is-device-management#simplify-it-tasks-using-the-device-management-admin-center).
+
+## Week of March 23, 2020
 
 ### Improved user interface experience when creating device restrictions profiles on Android and Android Enterprise devices<!-- 5841361 -->
 
