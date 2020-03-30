@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/21/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -26,7 +26,7 @@ ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# In development for Microsoft Intune - March 2020
+# In development for Microsoft Intune - April 2020
 
 To help in your readiness and planning, this page lists Intune UI updates and features that are in development but not yet released. In addition to the information on this page: 
 
@@ -61,11 +61,26 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 <!-- ***********************************************-->
 ## App management
 
-### Company Portal for iOS to support landscape mode<!--6048329  -->
-Users will be able to enroll their devices, find apps, and get IT support using the screen orientation of their choice. The app will automatically detect and adjust screens to fit portrait or landscape mode, unless users lock the screen in portrait mode.
+### Update to Android app configuration policies<!-- 6113334  -->
+Android app configuration policies will be updated to allow admins to select the device enrollment type before creating an app config profile. The functionality is being added to account for certificate profiles that are based on enrollment type (Work profile or Device Owner).  Upon release, the following will occur:
 
-### Improved sign-in experience in Company Portal for Android<!-- 6103997  -->
-We're updating the layout of several sign-in screens in the Company Portal app for Android to make the experience more modern, simple, and clean for users.
+1. Existing policies created prior to the release of this feature that do not have any certificate profiles associated with the policy will default to Work Profile and Device Owner Profile for device enrollment type.
+2. Existing policies created prior to the release of this feature that have certificate profiles associated with them will default to Work Profile only.
+3. If a new profile is created and Work Profile and Device Owner Profile are selected for device enrollment type, you'll not be able to associate a certificate profile with the app config policy.
+4. If a new profile is created and Work Profile only is selected, Work Profile certificate policies created under Device Configuration can be utilized.
+5. If a new profile is created and Device Owner only is selected, Device Owner certificate policies created under Device Configuration can be utilized.
+
+Existing policies will not remediate or issue new certificates.
+
+Additionally, we're adding Gmail and Nine email configuration profiles that will work for both Work Profile and Device Owner enrollment types, including the use of certificate profiles on both email configuration types.  Any Gmail or Nine policies that you have created under Device Configuration for Work Profiles will continue to apply to the device and it is not necessary to move them to app configuration policies.
+
+In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can find app configuration policies by selecting **Apps** > **App configuration polices**. For more information about app configuration policies, see [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md).
+
+### Microsoft Teams is now included in the Office 365 Suite for macOS<!-- 5903936  -->
+Users who are assigned Microsoft Office for macOS in Microsoft Endpoint Manager will now receive Microsoft Teams in addition to the existing Microsoft Office apps (Word, Excel, PowerPoint, Outlook and OneNote). Intune will recognize the existing Mac devices that have the other Office for macOS apps installed, and will attempt to install Microsoft Teams the next time the device checks in with Intune. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can find the **Office 365 Suite** for macOS by selecting **Apps** > **macOS** > **Add**. For more information, see [Assign Office 365 to macOS devices with Microsoft Intune](../apps/apps-add-office365-macos.md).
+
+### Group targeting support for Customization pane <!-- 4722837  -->
+You will be able to target the settings in the Customization pane to user groups. From the Intune portal, select **Client apps** > **Customization**. For more information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](company-portal-app.md].
 
 <!-- ***********************************************-->
 ## Device configuration
@@ -86,14 +101,8 @@ When you create a profile for iOS/iPadOS or macOS devices, the experience in the
 - Extensions: macOS
 - Preference file: macOS
 
-### Improved user interface experience when creating OEMConfig configuration profiles on Android Enterprise devices<!-- 5568645   -->
-When you create or edit an OEMConfig profile for Android Enterprise devices, the experience in the Endpoint Management admin center is updated. The updated experience will provide a summary of settings you've configured at a glance. This change impacts the OEMConfig device configuration profile (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **OEMConfig** for profile type).
-
-This feature applies to:
-- Android Enterprise 
-
 ### Device configuration profile settings and values will be updated for Windows platforms<!-- 4091122 -->
-When you create device configuration profiles for Windows platforms (**Devices** > **Configuration profiles** > **Create profile** > any **Windows** option for platform), some settings and their values are different from the CSP, and can be confusing. The setting names and their values will be updated to be more clear.
+When you create device configuration profiles for Windows platforms (**Devices** > **Configuration profiles** > **Create profile** > any **Windows** option for platform), some settings and their values are different from the CSP, and can be confusing. The setting names and their values will be updated to be clearer.
 
 Applies to:
 
@@ -101,15 +110,6 @@ Applies to:
 - Windows Holographic for Business device configuration profiles
 - Windows 8.1 device configuration profiles
 - Windows Phone 8.1 device configuration profiles
-
-### Improved user interface experience when creating device restrictions profiles on Android and Android Enterprise devices<!-- 5841361 -->
-When you create a profile for Android or Android Enterprise devices, the experience in the Endpoint Management admin center will be updated. This change impacts the following device configuration profiles (**Devices** > **Configuration Profiles** > **Create profile** > **Android device administrator** or **Android Enterprise** for platform):
-
-- Device restrictions: Android device administrator
-- Device restrictions: Android Enterprise device owner
-- Device restrictions: Android Enterprise work profile
-
-For more information on the device restrictions you can configure, see [Android device administrator](../configuration/device-restrictions-android.md) and [Android Enterprise](../configuration/device-restrictions-android-for-work.md).
 
 ### Configure the Microsoft Defender ATP app for macOS  <!-- 5520115  -->
 You'll soon be able to configure the [settings](../protect/endpoint-protection-macos.md) for the Microsoft Defender ATP app for devices that run macOS as part of an Endpoint protection device configuration profile (**Devices** > **Configuration profiles** > **Create profile**, select **macOS** for the *Platform*, and then **Endpoint protection** for the *Profile type*). There will be eight settings for macOS device configuration. 
@@ -121,29 +121,46 @@ We're adding a new setting to the FileVault category within the [macOS Endpoint 
 
 This setting won't be available in previously created policy. You'll need to re-create FileVault policies to configure this setting to make use of it. 
 
-### Configure Delivery Optimization agent when downloading Win32 app content<!-- 5410945  -->
-You will be able to configure the Delivery Optimization agent to download Win32 app content either in background or foreground mode based on assignment. For existing Win32 apps, content will continue to download in background mode. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > *select the Win32 app* > **Properties**. Select **Edit** next to **Assignments**.  Edit the assignment by selecting **Include** under **Mode** in the **Required** section.  You will find the new setting in the **App settings** section when it becomes available. For more information about Delivery Optimization, see [Win32 app management - Delivery Optimization](../apps/apps-win32-app-management.md#delivery-optimization).
+### Send push notifications as an action for non-compliance <!-- 1733150   -->
+For iOS and Android platforms, we're adding a new action for non-compliance that will send an app push notification through the Company Portal app. Users can click on the notifications, which will launch the Company Portal app that then displays the reason they are non-compliant. Admins will be able to configure this new action for non-compliance in the Microsoft Endpoint Manager admin center by going to **Devices** > **Compliance policies** > **Create policy**, and then selecting the *Action* to send an app push notification.
+
+### Pre-release testing for Managed Google Play apps<!-- 2681933  -->
+Organizations that are using [Google Play's closed test tracks for app pre-release testing](https://support.google.com/googleplay/android-developer/answer/3131213) will be able to manage these tracks with Intune. You'll be able to selectively assign Line of Business apps that are published to Google Play's pre-production tracks to pilot groups in order to perform testing. In Intune, you'll also be able to see whether an app has a pre-production build test track published to it, as well as be able to assign that track to AAD user or device groups. This feature is available for all of our currently supported Android Enterprise scenarios (work profile, fully managed, and dedicated). In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can add a managed google play app by selecting **Apps** > **Android** > **Add**. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
+
+### Manage S/MIME settings for Outlook on Android<!-- 6517085   -->
+You'll be able to use App configuration policies to manage the S/MIME setting for Outlook on devices that run Android Enterprise. You'll also be able to choose whether or not to allow the device users to enable or disable S/MIME in Outlook settings. To use App configuration policy for Android, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Apps** > **App configuration policies** > **Add** > **Managed devices**.
+
+### Additional options in SSO and SSO app extension profiles on iOS/iPadOS devices<!-- 6504155  -->
+On iOS/iPadOS devices, you can:
+
+- In SSO profiles (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device features** for profile > **Single sign-on**), set the Kerberos principal name to be the Security Account Manager (SAM) account name in SSO profiles. 
+- In SSO app extension profiles (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device features** for profile > **Single sign-on app extension**), configure the iOS/iPadOS Microsoft Azure AD extension with fewer clicks by using a new SSO app extension type. You can enable the Azure AD extension for shared devices and send extension-specific data to the extension.
+
+Applies to:
+- iOS/iPadOS 13.0+
+
+For more information on using single sign-on on iOS/iPadOS devices, see [Single sign-on app extension overview](../configuration/device-features-configure.md#single-sign-on-app-extension) and [Single sign-on settings list](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
 
 <!-- ***********************************************-->
-<!--## Device enrollment-->
+## Device enrollment
+
+### Bring-your-own-devices can use VPN to deploy<!--5015344 -->
+The new  Autopilot profile **Skip Domain Connectivity Check** toggle lets you deploy Hybrid Azure AD Join devices without access to your corporate network using your own third party Win32 VPN client. To see the new toggle, go to [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices**  > **Windows** > **Windows enrollment** > **Deployment profiles** > **Create profile** > **Out-of-box experience (OOBE)**.
 
 <!-- ***********************************************-->
 ## Device management
 
-### Change Primary User for Windows devices <!-- 3794742 -->
-You'll be able to change the Primary User for Windows hybrid and Azure AD Joined devices. To do so, go to **Intune** > **Devices** > **All devices** > choose a device > **Properties** > **Primary User**.
-
 ### PowerShell scripts support for BYOD devices<!-- 1862833  -->
 PowerShell scripts will support Azure AD registered devices in Intune. For more information about PowerShell, see [Use PowerShell scripts on Windows 10 devices in Intune](../apps/intune-management-extension.md). This functionality does not support devices running Windows 10 Home edition.
 
-### New information in device details<!-- 5604099 -->
-The following information will be on the **Overview** page for devices:
-
-- Storage capacity (amount of physical storage on device)
-- Memory capacity (amount of physical memory on device)
-
 ### Script support for macOS devices<!-- 4280361  -->
 You'll be able to add and deploy scripts to macOS devices. This support extends your ability to configure macOS devices beyond what is possible using native MDM capabilities on macOS devices.
+
+### Log Analytics will include device details log<!--6014987  -->
+Intune device detail logs will be available in **Reports** > **Log analytics**. You can correlate device details to build custom queries and Azure workbooks.
+
+### Push notification when device ownership type is changed<!-- 5575875  -->
+You'll be able to configure a push notification to send to both your Android and iOS Company Portal users when their device ownership type has been changed from Personal to Corporate as a privacy courtesy. This setting can be found in the Microsoft Endpoint Manager by selecting **Tenant administration** > **Customization**. To learn more about how device ownership affects your end-users, see [Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership).
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
@@ -186,3 +203,6 @@ The settings that are supported with Intune aren't changing. This is only an upd
 ## See also
 
 For details about recent developments, see [What's new in Microsoft Intune](whats-new.md).
+
+
+
