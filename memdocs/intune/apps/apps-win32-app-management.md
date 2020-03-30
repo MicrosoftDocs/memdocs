@@ -53,7 +53,7 @@ You can download the [Microsoft Win32 Content Prep Tool](https://go.microsoft.co
 
 ### Process flow to create .intunewin file
 
-   <img alt="Process flow to create a .intunewin file" src="./media/apps-win32-app-management/prepare-win32-app.svg" width="700">
+   <img alt="Process flow to create a .intunewin file" src="./media/apps-win32-app-management/prepare-win32-app.png" width="700">
 
 ### Run the Microsoft Win32 Content Prep Tool
 
