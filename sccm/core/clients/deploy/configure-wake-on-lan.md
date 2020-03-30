@@ -35,6 +35,11 @@ Starting in Configuration Manager 1810, there's a new way to wake up sleeping ma
     - For wake-up when a deadline occurs, the older version of Wake on LAN is used.
     -  If the older version isn't enabled, client wake up won't occur for deployments created with the settings **Use Wake-on-LAN to wake up clients for required deployments** or **Send wake-up packets**.  
 
+> [!IMPORTANT]
+> The Wake On LAN feature is recommended for use on only a limited amount of devices (100) at a time.
+>
+> When you use the Wake On LAN feature to wake up machines from Configuration Manager admin console, the wake up requests are put in to an internal queue that's shared by other real-time action features. Examples of those other features are Run Scripts, CMPivot, and other fast-channel client notifications. Depending on the performance of your site systems, the wake up actions may take an extended amount of time and delay the other real-time action. It is suggested to not wake up more than 100 machines at a single time. To know if you are getting a backlog in this area that may cause delays, you can look in the ...\inboxes\objmgr.box directory to see if there are a large number of files with .OPA extension.
+
 
 ### Security role permissions
 
