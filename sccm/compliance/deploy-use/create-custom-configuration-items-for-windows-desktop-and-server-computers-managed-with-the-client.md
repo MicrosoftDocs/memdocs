@@ -369,7 +369,7 @@ Compliance rules specify the conditions that define the compliance of a configur
 
 
 ## <a name="bkmk_track"></a> Track configuration item remediations
-<!--42631411-->
+<!--4261411-->
 *(Introduced in version 2002)*
 
 Starting in Configuration Manager version 2002, you can **Track remediation history when supported** on your configuration item compliance rules. When this option is enabled, any remediation that occurs on the client for the configuration item generates a state message. The history is stored in the Configuration Manager database.

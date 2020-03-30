@@ -27,9 +27,9 @@ To take full advantage of new Configuration Manager features, after you update t
 > `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2002+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
- 
+
 ### <a name="bkmk_attach"></a> Device sync and device actions
-<!--3555758 live 3/4/2020-->
+<!--3555758-->
 Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. Starting in this release you can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center.
 
 For more information, see [Microsoft Endpoint Manager tenant attach](/sccm/tenant-attach/device-sync-actions).
@@ -37,7 +37,7 @@ For more information, see [Microsoft Endpoint Manager tenant attach](/sccm/tenan
 ## <a name="bkmk_infra"></a> Site infrastructure
 
 ### Remove a central administration site
-<!-- 3607277 --> 
+<!-- 3607277 -->
 
 If your hierarchy consists of a central administration site (CAS) and a single child primary site, you can now remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single primary site.
 
@@ -94,7 +94,6 @@ The site system's proxy settings, including authentication, are now used by:
 
 For more information, see [Proxy server support](/configmgr/core/plan-design/network/proxy-server-support#bkmk_other).
 
-
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
 ### Critical status message shows server connection errors to required endpoints
@@ -124,9 +123,9 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 
 Use the Desktop Analytics Connection Health dashboard in Configuration Manager to monitor the clients' connectivity health. It now helps you to more easily identify client proxy configuration issues in two areas:
 
-- **Endpoint connectivity checks**: If clients can't reach a required endpoint, you see a configuration alert in the dashboard. Drill down to see the endpoints to which clients can't connect due to proxy configuration issues.<!-- 4963230 -->
+- **Endpoint connectivity checks**: If clients can't reach a required endpoint, you see a configuration alert in the dashboard. Drill down to see the endpoints to which clients can't connect because of proxy configuration issues.<!-- 4963230 -->
 
-- **Connectivity status**: If your clients use a proxy server to access the Desktop Analytics cloud service, Configuration Manager now displays proxy authentication issues from clients. Drill down to see clients that are unable to enroll due to proxy authentication.<!-- 4963383 -->
+- **Connectivity status**: If your clients use a proxy server to access the Desktop Analytics cloud service, Configuration Manager now displays proxy authentication issues from clients. Drill down to see clients that are unable to enroll because of proxy authentication.<!-- 4963383 -->
 
 For more information, see [Monitor connection health](/configmgr/desktop-analytics/monitor-connection-health).
 
@@ -139,7 +138,6 @@ For more information, see [Monitor connection health](/configmgr/desktop-analyti
 We've made it easier to navigate CMPivot entities. You can now search CMPivot entities. New icons have also been added to easily differentiate the entities and the entity object types.
 
 For more information, see [CMPivot](/configmgr/core/servers/manage/cmpivot#bkmk_2002).
-
 
 ## <a name="bkmk_content"></a> Content management
 
@@ -186,15 +184,13 @@ The **All Windows 10 (ARM64)** platform is available in the list of supported OS
 
 For more information on Configuration Manager's support for ARM64 devices, see [Windows 10 on ARM64](/configmgr/core/plan-design/configs/support-for-windows-10#bkmk_arm64).
 
-
 ### Track configuration item remediations
-<!--42631411-->
+<!--4261411-->
 You can now **Track remediation history when supported** on your configuration item compliance rules. When this option is enabled, any remediation that occurs on the client for the configuration item generates a state message. The history is stored in the Configuration Manager database.
 
 For more information on this setting, see [Create custom configuration items for Windows desktop and server computers managed with the Configuration Manager client](/configmgr/compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client#bkmk_track).
 
 <!-- ## <a name="bkmk_comgmt"></a> Co-management -->
-
 
 ## <a name="bkmk_app"></a> Application management
 
@@ -211,7 +207,7 @@ The Microsoft Edge management dashboard provides you insights on the usage of Mi
 
 From the Software Library workspace, click Microsoft Edge Management to see the dashboard. Change the collection for the graph data by clicking Browse and choosing another collection. By default your five largest collections are in the drop-down list. When you select a collection that isn't in the list, the newly selected collection takes the bottom spot on your drop-down list.
 
-For more information, see [Microsoft Edge management](/configmgr/apps/deploy-use/deploy-edge#bkmk_edge-dash). 
+For more information, see [Microsoft Edge management](/configmgr/apps/deploy-use/deploy-edge#bkmk_edge-dash).
 
 ### Improvements to Microsoft Edge management
 
@@ -232,7 +228,6 @@ You can now install complex applications using task sequences via the applicatio
 - Define additional metadata for the app task sequence, including localized information
 
 For more information, see [Create Windows applications](/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt).
-
 
 ## <a name="bkmk_osd"></a> OS deployment
 
@@ -283,9 +278,7 @@ This release includes the following improvements to OS deployment:
 
 - The Configuration Manager PXE responder now sends status messages to the site server. This change makes it easier to troubleshoot OS deployments that use this service.<!-- 5568051 -->
 
-
 <!-- ## <a name="bkmk_userxp"></a> Software Center -->
-
 
 ## <a name="bkmk_sum"></a> Software updates
 
@@ -317,16 +310,14 @@ You can use a new tool to import Office 365 updates from an internet-connected W
 
 For more information, see [Synchronize Office 365 updates from a disconnected software update point](/configmgr/sum/get-started/synchronize-office-updates-disconnected).
 
-
 <!-- ## <a name="bkmk_o365"></a> Office management -->
-
 
 ## <a name="bkmk_protect"></a> Protection
 
 ### Expand Microsoft Defender Advanced Threat Protection (ATP) onboarding
 
 <!-- 5229962 -->
-Configuration Manager has expanded its support for onboarding devices to Microsoft Defender ATP. For more information, see [Microsoft Defender Advanced Threat Protection](/sccm/protect/deploy-use/windows-defender-advanced-threat-protection#onboard-devices)
+Configuration Manager has expanded its support for onboarding devices to Microsoft Defender ATP. For more information, see [Microsoft Defender Advanced Threat Protection](/sccm/protect/deploy-use/windows-defender-advanced-threat-protection#onboard-devices).
 
 ### Improvements to BitLocker management
 
@@ -345,7 +336,6 @@ Configuration Manager has expanded its support for onboarding devices to Microso
 You can now integrate Power BI Report Server with Configuration Manager reporting. This integration gives you modern visualization and better performance. It adds console support for Power BI reports similar to what already exists with SQL Server Reporting Services.
 
 For more information, see [Integrate with Power BI Report Server](/configmgr/core/servers/manage/powerbi-report-server).
-
 
 ## <a name="bkmk_admin"></a> Configuration Manager console
 
@@ -394,13 +384,13 @@ For more information, see [Support Center OneTrace](/configmgr/core/support/supp
 
 ### <a name="bkmk_extend"></a> Improvements to extend and migrate on-premises site to Microsoft Azure
 <!--5665775, 6307931-->
-The extend and migrate on-premises site to Microsoft Azure tool now supports provisioning multiple site system roles on a single Azure virtual machine. You can add site system roles after the initial Azure virtual machine deployment has completed.
+The tool to extend and migrate on-premises site to Microsoft Azure now supports provisioning multiple site system roles on a single Azure virtual machine. You can add site system roles after the initial Azure virtual machine deployment has completed.
 
 For more information, see [Extend and migrate on-premises site to Microsoft Azure](/configmgr/core/support/azure-migration-tool#bkmk_add_role).
 
 ## Other updates
 
-As of this version, the following features are no longer [pre-release](/configmgr/core/servers/manage/pre-release-features):
+Starting with this version, the following features are no longer [pre-release](/configmgr/core/servers/manage/pre-release-features):
 
 - [Azure Active Directory user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco)<!--3611956-->
 - [Synchronize collection membership results to Azure Active Directory](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync)<!--3607475-->
@@ -443,8 +433,8 @@ When you're ready to install this version, see [Installing updates for Configura
 >
 > Learn more about:
 >
-> - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites) 
-> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines) 
+> - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)
+> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 For known significant issues, see the [Release notes](/sccm/core/servers/deploy/install/release-notes).
 
