@@ -41,7 +41,7 @@ Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.co
 
 ## Create an iOS/iPadOS email profile
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
    ![Create an email profile for iOS/iPadOS in Intune](./media/quickstart-email-profile/ios-create-profile.png)

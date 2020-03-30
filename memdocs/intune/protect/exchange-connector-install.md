@@ -87,7 +87,7 @@ Create an Active Directory user account for the Intune Exchange connector. The a
 
 On a Windows server that can support the Intune Exchange connector:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).  Use an account that's an administrator in the on-premises Exchange server and that has a license to use Exchange Server.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  Use an account that's an administrator in the on-premises Exchange server and that has a license to use Exchange Server.
 
 2. Select **Tenant administration** > **Exchange access**.
 
@@ -218,7 +218,7 @@ You might need to reinstall an Intune Exchange connector. Because only a single 
 
 After you successfully configure the Exchange connector, you can view the status of the connections and the last successful synchronization attempt:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Tenant administration** > **Exchange access**.
 
@@ -238,7 +238,7 @@ An Intune Exchange connector automatically synchronizes EAS and Intune device re
 
 You can force a connector to run a sync by using the **Quick Sync** or **Full Sync** options on the Intune dashboard:
 
-   1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+   1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
    2. Select **Tenant administration** > **Exchange access** >  **Exchange ActiveSync on-premises connector**.
 

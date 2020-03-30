@@ -43,7 +43,7 @@ The **Sync** device action forces the selected device to immediately check in wi
 
 ## Sync a device
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
 3. Select **Devices** > **All devices**.
 4. In the list of devices you manage, select a device to open its *Overview* pane, and then select **Sync**.
 5. To confirm, select **Yes**.

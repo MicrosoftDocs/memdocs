@@ -92,11 +92,11 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
 2. Ensure that all VPP purchasers within your organization have completed step 1 before proceeding.
 3. Verify that all purchased apps and licenses have migrated to Apps and Books in Apple Business Manager or Apple School Manager.
 4. Download new location token by going to **Apple Business (or School) Manager** > **Settings** > **Apps and Books** > **My Server Tokens**.
-5. Update location token in Microsoft Endpoint Manager Admin Center by going to **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens** and sync the token.
+5. Update location token in Microsoft Endpoint Manager admin center by going to **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens** and sync the token.
 
 ## Upload an Apple VPP or location token
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
 3. On the list of VPP tokens pane, select **Create**.
 4. On the **Create VPP token** pane, specify the following information:

@@ -57,7 +57,7 @@ No. And you don't need to enter the dashes.
 ## Remove devices action
 
 ### How do I tell who started a Retire/Wipe?
-In the the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs** > check the **Initiated By** column.
+In the the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs** > check the **Initiated By** column.
 If you don't see an entry, the most likely person to have initiated the action is the user of the device. They probably used the Company Portal app or portal.manage.microsoft.com.
 
 ### Why wasn't my application uninstalled after using Retire?
@@ -72,7 +72,7 @@ This is expected behavior. Google doesn't allow Factory Resetting of Work Profil
 Because retiring a device doesn't revoke access tokens. You can use Conditional Access policies to mitigate this condition.
 
 ### How can I monitor a Retire/Wipe action after it was issued?
-In the the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs**.
+In the the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs**.
 
 ### Why do wipes sometimes show as Pending indefinitely?
 Devices don't always report their status back to the Intune service before the reset was started. So, the action shows as Pending. If you've confirmed the action was successful, delete the device from the service.

@@ -74,7 +74,7 @@ Before you can configure Conditional Access, verify the following configurations
 
 #### To set up Conditional Access for Android work profile devices
 
-  1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
   
   2. Deploy the Gmail or Nine Work app as **Required**.
 
@@ -101,7 +101,7 @@ The native **Mail** application on Windows 8.1 and later (when enrolled into MDM
 
 Before you can use the following procedure to set up Exchange on-premises access control, you must install and configure at least one [Intune on-premises Exchange connector](exchange-connector-install.md) for Exchange on-premises.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Tenant administration** > **Exchange access**, and then select **Exchange On-premises access**.
 

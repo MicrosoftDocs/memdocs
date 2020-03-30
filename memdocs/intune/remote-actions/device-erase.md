@@ -35,7 +35,7 @@ ms.collection: M365-identity-device-management
 
 You can erase all data from a macOS device, including the operating system. The device will also be removed from Intune management. No warning will be given to the end user.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > choose the device you want to erase.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > choose the device you want to erase.
 2. Click **More** > **Erase** > provide a 6-digit number for the **Recovery Pin**. This is the pin that you must give to the user so that they can reinstall the operating system on their device. Be sure to make a note of this pin because it won't be visible after the erase action completes.
 ![Screenshot](./media/device-erase/providepin.png)
 3. Click **OK** to erase the device.

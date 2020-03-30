@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: kakyker; annovich
 ms.suite: ems
 search.appverid:
 #ms.tgt_pltfrm:
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # macOS device feature settings in Intune
 
-Intune includes some built-in settings to customize features on your macOS devices. For example, administrators can add AirPrint printers, choose how users sign in, configure the power controls, use single sign-on authentication, and more.
+Intune includes built-in settings to customize features on your macOS devices. For example, administrators can add AirPrint printers, choose how users sign in, configure the power controls, use single sign-on authentication, and more.
 
 Use these features to control macOS devices as part of your mobile device management (MDM) solution.
 
@@ -44,7 +44,7 @@ This article lists these settings, and describes what each setting does. It also
 
 ## AirPrint
 
-### Settings apply to: Device enrollment and Automated device enrollment 
+### Settings apply to: Device enrollment and Automated device enrollment
 
 - **IP address**: Enter the IPv4 or IPv6 address of the printer. If you use host names to identify printers, you can get the IP address by pinging the printer in the Terminal app. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) provides more details.
 - **Path**: Enter the path of the printer. The path is typically `ipp/print` for printers on your network. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) provides more details.
@@ -74,7 +74,7 @@ To add AirPrinter servers, you need the IP address of the printer, the resource 
 
 ### Settings apply to: All enrollment types
 
-- **Files, folders, and custom apps**: **Add** the path of a file, folder, custom app, or system app you want to open when a user signs in to the device. System apps, or apps built or customized for your organization are typically in the `Applications` folder, with a path similar to `/Applications/AppName.app`. 
+- **Files, folders, and custom apps**: **Add** the path of a file, folder, custom app, or system app you want to open when users sign in to their devices. System apps, or apps built or customized for your organization are typically in the `Applications` folder, with a path similar to `/Applications/AppName.app`. 
 
   You can add many files, folders, and apps. For example, enter:  
   
@@ -83,7 +83,9 @@ To add AirPrinter servers, you need the IP address of the printer, the resource 
   - `/Applications/Microsoft Office/root/Office16/winword.exe`
   - `/Users/UserName/music/itunes.app`
   
-  When adding any app, folder, or file, be sure to enter the correct path. Not all items are in the `Applications` folder. If a user moves an item from one location to another, then the path changes. This moved item won't be opened when the user signs in.
+  When adding any app, folder, or file, be sure to enter the correct path. Not all items are in the `Applications` folder. If users move an item from one location to another, then the path changes. This moved item won't be opened when the user signs in.
+
+- **Hide from user configuration**: **Hide** doesn't show the app in the Users & Groups login items list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS shows item you start at login in the Users & Groups login items list with the hide option unchecked.
 
 ## Login window
 
@@ -91,37 +93,37 @@ To add AirPrinter servers, you need the IP address of the printer, the resource 
 
 #### Window Layout
 
-- **Show additional information in the menu bar**: When the time area on the menu bar is selected, **Allow** shows the host name and macOS version. **Not configured** (default) doesn't show this information on the menu bar.
-- **Banner**: Enter a message that's shown on the sign in screen on the device. For example, enter your organization information, a welcome message, lost and found information, and so on.
-- **Choose login format**: Choose how users sign in to the device. Your options:
+- **Show additional information in the menu bar**: When the time area on the menu bar is selected, **Allow** shows the host name and macOS version. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show this information on the menu bar.
+- **Banner**: Enter a message that's shown on the sign in screen on devices. For example, enter your organization information, a welcome message, lost and found information, and so on.
+- **Choose login format**: Choose how users sign in to devices. Your options:
   - **Prompt for username and password** (default): Requires users to enter a username and password.
   - **List all users, prompt for password**: Requires users to select their username from a user list, and then enter their password. Also configure:
 
-    - **Local users**: **Hide** doesn't show the local user accounts in the user list, which may include the standard and admin accounts. Only the network and system user accounts are shown. **Not configured** (default) shows the local user accounts in the user list.
-    - **Mobile accounts**: **Hide** doesn't show mobile accounts in the user list. **Not configured** (default) shows the mobile accounts in the user list. Some mobile accounts may show as network users.
-    - **Network users**: Select **Show** to list the network users in the user list. **Not configured** (default) doesn't show the network user accounts in the user list.
-    - **Admin users**: **Hide** doesn't show the administrator user accounts in the user list. **Not configured** (default) shows the administrator user accounts in the user list.
-    - **Other users**: Select **Show** to list **Other...** users in the user list. **Not configured** (default) doesn't show the other user accounts in the user list.
+    - **Local users**: **Hide** doesn't show the local user accounts in the user list, which may include the standard and admin accounts. Only the network and system user accounts are shown. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the local user accounts in the user list.
+    - **Mobile accounts**: **Hide** doesn't show mobile accounts in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the mobile accounts in the user list. Some mobile accounts may show as network users.
+    - **Network users**: Select **Show** to list the network users in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the network user accounts in the user list.
+    - **Admin users**: **Hide** doesn't show the administrator user accounts in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the administrator user accounts in the user list.
+    - **Other users**: Select **Show** to list **Other...** users in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the other user accounts in the user list.
 
 #### Login screen power settings
 
-- **Shut Down button**: **Hide** doesn't show the shutdown button on the sign in screen. **Not configured** (default) shows the shutdown button.
-- **Restart button**: **Hide** doesn't show the restart button on the sign in screen. **Not configured** (default) shows the restart button.
-- **Sleep button**: **Hide** doesn't show the sleep button on the sign in screen. **Not configured** (default) shows the sleep button.
+- **Shut Down button**: **Hide** doesn't show the shutdown button on the sign in screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the shutdown button.
+- **Restart button**: **Hide** doesn't show the restart button on the sign in screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the restart button.
+- **Sleep button**: **Hide** doesn't show the sleep button on the sign in screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the sleep button.
 
 #### Other
 
-- **Disable user login from Console**: **Disable** hides the macOS command line used to sign in. For typical users, **Disable** this setting. **Not configured** (default) allows advanced users to sign in using the macOS command line. To enter console mode, users enter `>console` in the Username field, and must authenticate in the console window.
+- **Disable user login from Console**: **Disable** hides the macOS command line used to sign in. For typical users, **Disable** this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow advanced users to sign in using the macOS command line. To enter console mode, users enter `>console` in the Username field, and must authenticate in the console window.
 
 #### Apple Menu
 
 After users sign in to the devices, the following settings impact what they can do.
 
-- **Disable Shut Down**: **Disable** prevents users from selecting the **Shutdown** option after the user signs in. **Not configured** (default) allows users to select the **Shutdown** menu item on the device.
-- **Disable Restart**: **Disable** prevents users from selecting the **Restart** option after the user signs in. **Not configured** (default) allows users to select the **Restart** menu item on the device.
-- **Disable Power Off**: **Disable** prevents users from selecting the **Power off** option after the user signs in. **Not configured** (default) allows users to select the **Power off** menu item on the device.
-- **Disable Log Out** (macOS 10.13 and later): **Disable** prevents users from selecting the **Log out** option after the user signs in. **Not configured** (default) allows users to select the **Log out** menu item on the device.
-- **Disable Lock Screen** (macOS 10.13 and later): **Disable** prevents users from selecting the **Lock screen** option after the user signs in. **Not configured** (default) allows users to select the **Lock screen** menu item on the device.
+- **Disable Shut Down**: **Disable** prevents users from selecting the **Shutdown** option after the user signs in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Shutdown** menu item on devices.
+- **Disable Restart**: **Disable** prevents users from selecting the **Restart** option after the user signs in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Restart** menu item on devices.
+- **Disable Power Off**: **Disable** prevents users from selecting the **Power off** option after the user signs in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Power off** menu item on devices.
+- **Disable Log Out** (macOS 10.13 and later): **Disable** prevents users from selecting the **Log out** option after the user signs in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Log out** menu item on devices.
+- **Disable Lock Screen** (macOS 10.13 and later): **Disable** prevents users from selecting the **Lock screen** option after the user signs in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Lock screen** menu item on devices.
 
 ## Single sign-on app extension
 
@@ -134,8 +136,8 @@ This feature applies to:
 - **SSO app extension type**: Choose the type of credential SSO app extension. Your options:
 
   - **Not configured**: App extensions aren't used. To disable an app extension, switch the SSO app extension type to **Not configured**.
-  - **Redirect**: Use a generic, customizable redirect app extension to perform SSO with modern authentication flows. Be sure you know the extension and team ID for your organization's app extension.
-  - **Credential**: Use a generic, customizable credential app extension to perform SSO with challenge-and-response authentication flows. Be sure you know the extension ID and team ID for your organization's SSO app extension.  
+  - **Redirect**: Use a generic, customizable redirect app extension to use SSO with modern authentication flows. Be sure you know the extension and team ID for your organization's app extension.
+  - **Credential**: Use a generic, customizable credential app extension to use SSO with challenge-and-response authentication flows. Be sure you know the extension ID and team ID for your organization's SSO app extension.  
   - **Kerberos**: Use Apple's built-in Kerberos extension, which is included on macOS Catalina 10.15 and newer. This option is a Kerberos-specific version of the **Credential** app extension.
 
   > [!TIP]
@@ -153,7 +155,7 @@ This feature applies to:
   - All the domains in your single sign-on app extension Intune profiles must be unique. You can't repeat a domain in any sign-on app extension profile, even if you're using different types of SSO app extensions.
   - These domains aren't case-sensitive.
 
-- **URLs** (Redirect only): Enter the URL prefixes of your identity providers on whose behalf the redirect app extension performs SSO. When a user is redirected to these URLs, the SSO app extension will intervene and prompt SSO.
+- **URLs** (Redirect only): Enter the URL prefixes of your identity providers on whose behalf the redirect app extension uses SSO. When users are redirected to these URLs, the SSO app extension intervenes, and prompts for SSO.
 
   - All the URLs in your Intune single sign-on app extension profiles must be unique. You can't repeat a domain in any SSO app extension profile, even if you're using different types of SSO app extensions.
   - The URLs must begin with http:// or https://.
@@ -170,35 +172,35 @@ This feature applies to:
   
   - **Add**: Select to add your configuration keys.
 
-- **Keychain usage** (Kerberos only): Choose **Block** to prevent passwords from being saved and stored in the keychain. If blocked, user aren't prompted to save their password, and need to re-enter the password when the Kerberos ticket expires. **Not configured** (default) allows passwords to be saved and stored in the keychain. Users aren't prompted to re-enter their password when the ticket expires.
-- **Face ID, Touch ID, or passcode** (Kerberos only): **Require** forces users to enter their Face ID, Touch ID, or device passcode when the credential is needed to refresh the Kerberos ticket. **Not configured** (default) doesn't require users to use biometrics or device passcode to refresh the Kerberos ticket. If **Keychain usage** is blocked, then this setting doesn't apply.
-- **Default realm** (Kerberos only): Choose **Enable** to set the **Realm** value you entered as the default realm. **Not configured** (default) doesn't set a default realm.
+- **Keychain usage** (Kerberos only): Choose **Block** to prevent passwords from being saved and stored in the keychain. If blocked, users aren't prompted to save their password, and need to reenter the password when the Kerberos ticket expires. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passwords to be saved and stored in the keychain. Users aren't prompted to reenter their password when the ticket expires.
+- **Face ID, Touch ID, or passcode** (Kerberos only): **Require** forces users to enter their Face ID, Touch ID, or device passcode when the credential is needed to refresh the Kerberos ticket. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require users to use biometrics or device passcode to refresh the Kerberos ticket. If **Keychain usage** is blocked, then this setting doesn't apply.
+- **Default realm** (Kerberos only): Choose **Enable** to set the **Realm** value you entered as the default realm. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not set a default realm.
 
   > [!TIP]
   > - **Enable** this setting if you're configuring multiple Kerberos SSO app extensions in your organization.
   > - **Enable** this setting if you're using multiple realms. It sets the **Realm** value you entered as the default realm.
   > - If you only have one realm, leave it **Not configured** (default).
 
-- **Autodiscover** (Kerberos only): When set to **Block**, the Kerberos extension doesn't automatically use LDAP and DNS to determine its Active Directory site name. **Not configured** (default) allows the extension to automatically find the Active Directory site name.
-- **Password changes** (Kerberos only): **Block** prevents users from changing the passwords they use to sign in to the domains you entered. **Not configured** (default) allows password changes.  
-- **Password sync** (Kerberos only): Choose **Enable** to sync your users' local passwords to Azure AD. **Not configured** (default) disables password sync to Azure AD. Use this setting as an alternative or backup to SSO. This setting doesn't work if users are signed in with an Apple mobile account.
-- **Windows Server Active Directory password complexity** (Kerberos only): Choose **Require** to force user passwords to meet Active Directory's password complexity requirements. See [Password must meet complexity requirements](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements) for more information. **Not configured** (default) doesn't require users to meet Active Directory's password requirement.
-- **Minimum password length** (Kerberos only): Enter the minimum number of characters that can make up a user's password. **Not configured** (default) doesn't enforce a minimum password length on the users.
-- **Password reuse limit** (Kerberos only): Enter the number of new passwords, from 1-24, that must be used until a previous password can be reused on the domain. **Not configured** (default) doesn't enforce a password reuse limit.
-- **Minimum password age** (Kerberos only): Enter the number of days that a password must be used on the domain before a user can change it. **Not configured** (default) doesn't enforce a minimum age of passwords before they can be changed.
-- **Password expiration notification** (Kerberos only): Enter the number of days before a password expires that users get notified that their password will expire. **Not configured** (default) uses `15` days.
-- **Password expiration** (Kerberos only): Enter the number of days before the device password must be changed. **Not configured** (default) means user passwords never expire.
-- **Password change URL** (Kerberos only): Enter the URL that launches when the user initiates a Kerberos password change.
+- **Autodiscover** (Kerberos only): When set to **Block**, the Kerberos extension doesn't automatically use LDAP and DNS to determine its Active Directory site name. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the extension to automatically find the Active Directory site name.
+- **Password changes** (Kerberos only): **Block** prevents users from changing the passwords they use to sign in to the domains you entered. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow password changes.  
+- **Password sync** (Kerberos only): Choose **Enable** to sync your users' local passwords to Azure AD. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable password sync to Azure AD. Use this setting as an alternative or backup to SSO. This setting doesn't work if users are signed in with an Apple mobile account.
+- **Windows Server Active Directory password complexity** (Kerberos only): Choose **Require** to force user passwords to meet Active Directory's password complexity requirements. For more information, see [Password must meet complexity requirements](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require users to meet Active Directory's password requirement.
+- **Minimum password length** (Kerberos only): Enter the minimum number of characters that can make up users passwords. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a minimum password length on the users.
+- **Password reuse limit** (Kerberos only): Enter the number of new passwords, from 1-24, that must be used until a previous password can be reused on the domain. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a password reuse limit.
+- **Minimum password age** (Kerberos only): Enter the number of days that a password must be used on the domain before users can change it. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a minimum age of passwords before they can be changed.
+- **Password expiration notification** (Kerberos only): Enter the number of days before a password expires that users get notified that their password will expire. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might use `15` days.
+- **Password expiration** (Kerberos only): Enter the number of days before the device password must be changed. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might never expire passwords.
+- **Password change URL** (Kerberos only): Enter the URL that opens when users start a Kerberos password change.
 - **Principal name** (Kerberos only): Enter the username of the Kerberos principal. You don't need to include the realm name. For example, in `user@contoso.com`, `user` is the principal name, and `contoso.com` is the realm name.
 
   > [!TIP]
-  > - You can also use variables in the principal name by entering curly brackets `{{ }}`. For example, to show the username, enter       `Username: {{username}}`. 
+  > - You can also use variables in the principal name by entering curly brackets `{{ }}`. For example, to show the username, enter `Username: {{username}}`. 
   > - However, be careful with variable substitution because variables aren't validated in the UI and they are case sensitive. Be sure to enter the correct information.
   
 - **Active Directory site code** (Kerberos only): Enter the name of the Active Directory site that the Kerberos extension should use. You may not need to change this value, as the Kerberos extension may automatically find the Active Directory site code.
 - **Cache name** (Kerberos only): Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.  
 - **Password requirements message** (Kerberos only): Enter a text version of your organization's password requirements that's shown to users. The message is shown if you don't require Active Directory's password complexity requirements, or don't enter a minimum password length.  
-- **App bundle IDs** (Kerberos only): **Add** the app bundle identifiers that should use single sign-on on your devices. These apps are granted access to the Kerberos Ticket Granting Ticket, the authentication ticket, and authenticate users to services they're authorized to access.
+- **App bundle IDs** (Kerberos only): **Add** the app bundle identifiers that should use single sign-on on your devices. These apps are granted access to the Kerberos Ticket Granting Ticket and the authentication ticket. The apps also authenticate users to services they're authorized to access.
 - **Domain realm mapping** (Kerberos only): **Add** the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
 - **PKINIT certificate** (Kerberos only): **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certficates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you've added in Intune. For more information about certificates, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
 

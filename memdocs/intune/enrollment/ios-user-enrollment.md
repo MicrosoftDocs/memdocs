@@ -47,7 +47,7 @@ For more information about the options available with User Enrollment, see [User
 
 An enrollment profile defines the settings applied to a group of devices during enrollment. 
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **ioS enrollment** > **Enrollment types (preview)** > **Create profile** > **iOS/iPadOS**. This profile is where you'll indicate what enrollment experience your iOS/iPadOS and iPadOS end users will have on devices not enrolled through a corporate Apple method. If you'd like to make changes, you can edit this profile after you've created it.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **ioS enrollment** > **Enrollment types (preview)** > **Create profile** > **iOS/iPadOS**. This profile is where you'll indicate what enrollment experience your iOS/iPadOS and iPadOS end users will have on devices not enrolled through a corporate Apple method. If you'd like to make changes, you can edit this profile after you've created it.
 
     ![Create Apple enrollment profile](./media/ios-user-enrollment/create-profile.png)
 
@@ -82,7 +82,7 @@ An enrollment profile defines the settings applied to a group of devices during 
 
 After you've created more than one enrollment type profile, you can change the priority order in which they're applied.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment types (preview)**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment types (preview)**.
 2. Drag and drop the profiles in the list in the order you want them applied.
 
 In case of conflicts between profiles for any user, the higher priority profile is applied for the user.
