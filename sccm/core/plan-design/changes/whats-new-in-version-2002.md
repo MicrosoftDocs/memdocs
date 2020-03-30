@@ -346,13 +346,13 @@ For more information, see [Integrate with Power BI Report Server](/configmgr/cor
 
 ## <a name="bkmk_admin"></a> Configuration Manager console
 
-### Attach files to feedback
+### Show boundary groups for devices
 
-<!-- 3556011 -->
+<!--6521835-->
 
-You can now choose to attach log and diagnostic files when you use Send a Frown in the Configuration Manager console to send feedback to Microsoft. This additional information can help us more quickly determine the cause of the problem. Files included with feedback are transmitted and stored using Microsoft Error Reporting (also known as Windows Error Reporting).
+To help you better troubleshoot device behaviors with boundary groups, you can now view the boundary groups for specific devices. In the **Devices** node or when you show the members of a **Device Collection**, add the new **Boundary Group(s)** column to the list view.
 
-<!-- For more information, see [Product feedback](/configmgr/core/understand/find-help#product-feedback). -->
+For more information, see [Boundary groups](/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_show-boundary).
 
 ### Send a smile improvements
 
