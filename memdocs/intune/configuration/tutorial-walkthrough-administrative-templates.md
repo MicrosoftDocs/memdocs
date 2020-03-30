@@ -241,10 +241,20 @@ In this section, we create an administrative template in Intune, look at some se
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 5. Select **Next**.
-6. In **Configuration settings**, in the drop-down list, select **All products**. All the settings are shown. In these settings, notice the following properties:
+6. In **Configuration settings**, settings apply to devices (**Computer configuration**), and settings apply to users (**User configuration**):
 
-    - The **Path** to the policy is the same as Group Policy Management or GPEdit.
-    - The setting applies to users or devices.
+    > [!div class="mx-imgBorder"]
+    > ![Apply ADMX template settings to users and devices in Microsoft Intune Endpoint Manager](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
+
+7. Expand **Computer configuration** > **Microsoft Edge** > select **SmartScreen settings**. Notice the path to the policy, and all the available settings:
+
+    > [!div class="mx-imgBorder"]
+    > ![See the Microsoft Edge SmartScreen policy settings in ADMX templates in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-path.png)
+
+8. In search, enter **download**. Notice the policy settings are filtered:
+
+    > [!div class="mx-imgBorder"]
+    > ![Filter the Microsoft Edge SmartScreen policy settings in Microsoft Intune ADMX template](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-search-download.png)
 
 ### Open Group Policy Management
 
@@ -275,18 +285,18 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
     > ![See the Computer configuration setting options in group policy](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
 5. In the Endpoint Manager admin center, go to your **Admin template - Windows 10 student devices** template.
-6. Select **All products** from the drop-down list, and search for **personalization**:
+6. Select **Computer configuration** > **Control Panel** > **Personalization**. Notice the available settings:
 
     > [!div class="mx-imgBorder"]
-    > ![Search for personalization in administrative template in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/search-personalization-administrative-template.png)
+    > ![The personalization policy setting path in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-control-panel-personalization-path.png)
 
-    Notice the available settings.
-
-    The setting type is **Device**, and the path is **\Control Panel\Personalization**. This path is similar to what you just saw in Group Policy Management Editor. If you open the setting, you see the same **Not configured**, **Enabled**, and **Disabled** options you see in Group Policy Management Editor.
+    The setting type is **Device**, and the path is **/Control Panel/Personalization**. This path is similar to what you just saw in Group Policy Management Editor. If you open the **Prevent enabling lock screen camera** setting, you see the same **Not configured**, **Enabled**, and **Disabled** options you see in Group Policy Management Editor.
 
 #### Compare a user policy
 
-1. In your admin template, search for **inprivate browsing**. Notice the path, and that the setting applies to users and devices.
+1. In your admin template, select **Computer configuration** > **All settings**, and search for **inprivate browsing**. Notice the path.
+
+    Do the same for **User configuration**. Select **All settings**, and search for **inprivate browsing**.
 
 2. In **Group Policy Management Editor**, find the matching user and device settings:
 
@@ -302,9 +312,11 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 #### Compare an Edge policy
 
 1. In the Endpoint Manager admin center, go to your **Admin template - Windows 10 student devices** template.
-2. Select **Edge version 77 and later** from the drop-down list.
-3. Search for **startup**. Notice the available settings.
-4. In Group Policy Management Editor, find these settings:
+2. Expand **Computer configuration** > **Microsoft Edge** > **Startup, homepage and new tab page**. Notice the available settings.
+
+    Do the same for **User configuration**.
+
+3. In Group Policy Management Editor, find these settings:
 
     - Device: Expand **Computer configuration** > **Policies** > **Administrative Templates** > **Microsoft Edge** > **Startup, homepage and new tab page**.
     - User: Expand **User configuration** > **Policies** > **Administrative Templates** > **Microsoft Edge** > **Startup, homepage and new tab page**
@@ -313,7 +325,7 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 
 You created an administrative template in Intune. In this template, we looked at some ADMX settings, and looked at the same ADMX settings in Group Policy Management.
 
-## Add settings to the Students admin template
+## Add settings to the Students admin template - START HERE
 
 In this template, we configure some Internet Explorer settings to lock down devices shared by multiple students.
 
