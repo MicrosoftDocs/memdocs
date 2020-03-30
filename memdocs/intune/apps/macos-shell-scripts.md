@@ -86,7 +86,7 @@ There could be several reasons:
 * The agent may not be installed. Check that the agent is installed at `/Library/Intune/Microsoft Intune Agent.app` on the macOS device.
 * The agent may not be in a healthy state. The agent will attempt to recover for 24 hours, remove itself and reinstall if shell scripts are still assigned.
 
-### How frequently are script run status reported?
+### How frequently is script run status reported?
 Script run status is reported to Microsoft Endpoint Manager Admin Console as soon as script run is complete. If a script is scheduled to run periodically at a set  frequency, it only reports status the first time it runs.
 
 ### When are shell scripts run again?
