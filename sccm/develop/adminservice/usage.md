@@ -31,6 +31,9 @@ There are several ways that you can directly query the administration service:
 
 The next sections cover the first two methods.
 
+> [!IMPORTANT]
+> The administration service class names are case-sensitive. Make sure to use the proper capitalization. For example, `SMS_Site`.
+
 ### Web browser
 
 You can use a web browser to easily query the administration service. When you specify a query URI as the browser's URL, the administration service processes the GET request, and returns the result in JSON format. Some web browsers may not display the result in an easy to read format.
@@ -69,12 +72,56 @@ You can use the **Invoke-RestMethod** cmdlet in a PowerShell script from the **R
 
 For more information, see [Task sequence steps - Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript).
 
-## Power BI
+## Power BI Desktop
 
-POwerBI example with screenshots from Tianshu email subject "RE: AdminService release notes"
-    Also includes examples of the DEvice class on v1 route
+You can use Power BI Desktop to query data in Configuration Manager via the administration service. For more information, see [What is Power BI Desktop?](https://docs.microsoft.com/power-bi/desktop-what-is-desktop)
+
+1. In Power BI Desktop, in the ribbon, select **Get Data**, and select **OData feed**.
+
+1. For the **URL**, specify the administration service route. For example, `https://smsprovider.contoso.com/AdminService/wmi/`
+
+1. Choose **Windows Authentication**.
+
+1. In the **Navigator** window, select the items to use in your Power BI dashboard or report.
+
+[![Screenshot of Navigator window in Power BI Desktop](media/powerbi-desktop-navigator.png)](media/powerbi-desktop-navigator.png#lightbox)
 
 ## Example queries
+
+### Get more details about a specific device
+
+`https://<ProviderFQDN>/AdminService/wmi/SMS_R_System(<ResourceID>)`
+
+For example: `https://smsprovider.contoso.com/AdminService/wmi/SMS_R_System(16777219)`
+
+### v1 Device class examples
+
+- Get all devices: `https://<ProviderFQDN>/AdminService/v1.0/Device`
+
+- Get single device: `https://<ProviderFQDN>/AdminService/v1.0/Device(<ResourceID>)`
+
+- Run CMPivot on a device:
+
+  ```rest
+  Verb: POST
+  URI: https://<ProviderFQDN>/AdminService/v1.0/Device(<ResourceID>)/AdminService.RunCMPivot
+  Body: {"InputQuery":"<CMPivot query to run>"}
+  ```
+
+- See CMPivot job result:
+
+  ```rest
+  Verb: GET
+  URI: https://<ProviderFQDN>/AdminService/v1.0/Device(<ResourceID>)/AdminService.CMPivotResult(OperationId=<Operation ID of the CM Pivot job>)
+  ```
+
+- See which collections a device belongs to: `https://<ProviderFQDN>/AdminService/v1.0/Device(16777219)/ResourceCollectionMembership?$expand=Collection&$select=Collection`
+
+### Filter results with startswith
+
+This example URI only shows collections whose names start with `All`.
+
+`https://<ProviderFQDN>/AdminService/wmi/SMS_Collection?$filter=startswith(Name,'All') eq true`
 
 ### Run a static WMI method
 
@@ -85,32 +132,3 @@ Verb: Post
 URI: https://<ProviderFQDN>/AdminService/wmi/SMS_Admin.GetAdminExtendedData
 Body: {"Type":1}
 ```
-
-### Filter results with startswith
-
-This example URI only shows collections whose names start with `All`.
-
-`https://<ProviderFQDN>/AdminService/wmi/SMS_Collection?$filter=startswith(Name,'All') eq true`
-
-### v1 Device class examples
-
-- Get all devices: `https://<ProviderFQDN>/AdminService/v1.0/Device`
-
-- Get single device: `https://<ProviderFQDN>/AdminService/v1.0/Device(<MachineId>)`
-
-- Run CMPivot on a device:
-
-  ```rest
-  Verb: POST
-  URI: https://<ProviderFQDN>/AdminService/v1.0/Device(<MachineId>)/AdminService.RunCMPivot
-  Body: {"InputQuery":"<CMPivot query to run>"} (The CMPivot query should be passed as a string in the message body.)
-  ```
-
-- See CMPivot job result:
-
-  ```rest
-  Verb: GET
-  URI: https://<ProviderFQDN>/AdminService/v1.0/Device(<MachineId>)/AdminService.CMPivotResult(OperationId=<Operation ID of the CM Pivot job>)
-  ```
-
-- See which collections a device belongs to: `https://<ProviderFQDN>/AdminService/v1.0/Device(16777219)/ResourceCollectionMembership?$expand=Collection&$select=Collection`

@@ -53,10 +53,14 @@ To support the SMS Provider, the target server must meet the following prerequis
 
 - At least 650 MB of free disk space to support the Windows ADK components. For more information about Windows ADK and the SMS Provider, see [OS deployment requirements](#BKMK_WAIKforSMSProv).  
 
-- Enable Windows server role **Web Server (IIS)**  
+- For the [administration service](/configmgr/develop/adminservice/overview) REST API:
+
+  - .NET 4.5 or later
+
+  - Enable Windows server role **Web Server (IIS)**
 
     > [!Note]  
-    > Every SMS Provider attempts to install the [administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service), which requires a certificate. This service has a dependency on IIS to bind that certificate to HTTPS port 443. If you enable [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http), then the site binds that certificate using IIS APIs. If your site uses PKI, you need to manually bind a PKI certificate in IIS on the SMS Provider.  
+    > Every SMS Provider attempts to install the administration service, which requires a certificate. This service has a dependency on IIS to bind that certificate to HTTPS port 443. If you enable [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http), then the site binds that certificate using IIS APIs. If your site uses PKI, you need to manually bind a PKI certificate in IIS on the SMS Provider. Starting in version 2002, the site automatically uses the site's self-signed certificate.
 
 ## <a name="bkmk_location"></a> Locations  
 

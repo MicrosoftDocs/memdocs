@@ -75,9 +75,12 @@ The administration service is a REST API for the SMS Provider. Previously, you h
 - Enable Enhanced HTTP for the entire site
 - Manually bind a PKI-based certificate to IIS on the server that hosts the SMS Provider role
 
-Starting in this release, the administration service automatically uses the site's self-signed certificate. This change helps reduce the friction for easier use of the administration service. The site always generates this certificate. The Enhanced HTTP site setting to Use Configuration Manager-generated certificates for HTTP site systems only controls whether site systems use it or not. Now the administration service ignores this site setting, as it always uses the site's certificate even if no other site system is using Enhanced HTTP.
+Starting in this release, the administration service automatically uses the site's self-signed certificate. This change helps reduce the friction for easier use of the administration service. The site always generates this certificate. The Enhanced HTTP site setting to **Use Configuration Manager-generated certificates for HTTP site systems** only controls whether site systems use it or not. Now the administration service ignores this site setting, as it always uses the site's certificate even if no other site system is using Enhanced HTTP. You can still use a PKI-based server authentication certificate.
 
-<!-- For more information, see [](). -->
+For more information, see the following new articles:
+
+- [What is the administration service?](/configmgr/develop/adminservice/overview)
+- [How to set up the administration service](/configmgr/develop/adminservice/set-up)
 
 ### Proxy support for Azure Active Directory discovery and group sync
 
@@ -399,6 +402,8 @@ As of this version, the following features are no longer [pre-release](/configmg
 - [Client apps for co-managed devices](/configmgr/comanage/workloads#client-apps) (previously known as *Mobile apps for co-managed devices*)<!-- 1357892/3600959 -->
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2002 release notes](https://docs.microsoft.com/powershell/sccm/2002-release-notes?view=sccm-ps).
+
+For more information on changes to the administration service REST API, see [Administration service release notes](/configmgr/develop/adminservice/release-notes#bkmk_2002).
 
 <!--
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/nnnnn).

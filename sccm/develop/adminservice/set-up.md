@@ -20,13 +20,22 @@ Use the steps in this article to set up the administration service on your SMS P
 
 ## <a name="bkmk_https"></a> Enable secure HTTPS communication
 
-Configure the administration service to use a secure HTTPS connection to protect the data in transit across the network. Use one of the following options:
+Configure the administration service to use a secure HTTPS connection to protect the data in transit across the network.
+
+Starting in version 2002,<!--5728365--> the administration service automatically uses the site's self-signed certificate. This change helps reduce the friction for easier use of the administration service. The site always generates this certificate. Now the administration service ignores the Enhanced HTTP site setting, as it always uses the site's certificate even if no other site system is using Enhanced HTTP. You can still manually bind a PKI-based server authentication certificate. If you've already bound a PKI certificate to port 443 on the SMS Provider server, the administration service uses that existing certificate.
+
+In version 1910 and earlier, use one of the following options:
 
 - Enable the site to use Enhanced HTTP (recommended)
 
 - Manually bind a server authentication certificate to port 443 in IIS on the server that hosts the SMS Provider role. This certificate can come from your organization's PKI, or from a third-party certificate provider.
 
 ### Enable Enhanced HTTP
+
+> [!NOTE]
+> The configuration in this section applies to version 1910 and earlier.
+>
+> Starting in version 2002, the administration service automatically uses the site's self-signed certificate. The Enhanced HTTP site setting to **Use Configuration Manager-generated certificates for HTTP site systems** only controls whether site systems use it or not. Now the administration service ignores this site setting, as it always uses the site's certificate even if no other site system is using Enhanced HTTP.
 
 If you enable [Enhanced HTTP](/configmgr/core/plan-design/hierarchy/enhanced-http), the site generates certificates for site system roles like the SMS Provider. The site server issues and signs these certificates with its self-signed **SMS Issuing** root certificate. This option doesn't require a public key infrastructure (PKI). Configuration Manager creates and manages the certificates, and binds them to the IIS services as needed.
 
@@ -65,6 +74,9 @@ When the site creates a certificate for the SMS Provider, clients won't trust it
     - Use the following Active Directory group policy: **Computer Configuration\Policies\Windows Settings\Security Settings\Public Key Policies\Trusted Root Certification Authorities**
 
 ### Use a server authentication certificate
+
+> [!NOTE]
+> Starting in version 2002, by default the administration service automatically uses the site's self-signed certificate. You can still manually bind a PKI-based server authentication certificate. Before you can bind your PKI-based certificate, manually unbind the site's self-signed certificate from port 443 on the SMS Provider.
 
 There are two primary methods of using a server authentication certificate:
 
@@ -160,16 +172,20 @@ Review the information below the error. Then verify that the administration serv
 
 ## Verify
 
+When the site installs the administration service, it logs activity to the **RESTPROVIDERSetup.log** file in the Configuration Manager installation directory. By default this path is `C:\Program Files\Microsoft Configuration Manager\logs`.
+
+The site tracks the health state of the administration service in the **SMS_REST_PROVIDER.log** file. You can see the service start and information about the certificate.
+
 Test the administration service by doing a simple query in a web browser, for example:
 
-`https://smsprovider.contoso.com/adminservice/v1/$metadata`
+`https://smsprovider.contoso.com/adminservice/v1.0/$metadata`
 
 The administration service logs its activity to the **adminservice.log** file on the SMS Provider server in the Configuration Manager installation directory.
 
 For the above metadata query, the log file shows the following lines:
 
 ```log
-Processing incoming request for resource [https://smsprovider.contoso.com/adminservice/v1/%24metadata], method: [GET], User - [CONTOSO\jqadmin]
+Processing incoming request for resource [https://smsprovider.contoso.com/adminservice/v1.0/%24metadata], method: [GET], User - [CONTOSO\jqadmin]
 ...
 Completing request with response code [200] reason [OK]
 ```

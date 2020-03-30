@@ -16,12 +16,12 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-## Changes in version 2002
+## <a name="bkmk_2002"></a> Changes in version 2002
 
 <!-- 5728365 -->
-Starting in version 2002, the administration service automatically uses the site's self-signed certificate. This change helps reduce the friction for easier use of the administration service. The site always generates this certificate. Now the administration service ignores the Enhanced HTTP site setting, as it always uses the site's certificate even if no other site system is using Enhanced HTTP. For more information, see <!-- need link -->
+Starting in version 2002, the administration service automatically uses the site's self-signed certificate. This change helps reduce the friction for easier use of the administration service. The site always generates this certificate. Now the administration service ignores the Enhanced HTTP site setting, as it always uses the site's certificate even if no other site system is using Enhanced HTTP. For more information, see [Enable secure HTTPS communication](/configmgr/develop/adminservice/set-up#bkmk_https).
 
-## Changes in version 1910
+## <a name="bkmk_1910"></a> Changes in version 1910
 <!-- 4651 -->
 
 - The WMI route now supports static WMI methods. For example:
@@ -38,7 +38,7 @@ Starting in version 2002, the administration service automatically uses the site
 
 - Use the Power BI Desktop feature to get data from an **OData feed**. You can then see all WMI entities and their objects in Power BI Desktop to create custom reports.
 
-- The **v1** route exposes the **Device** class. For example: `https://<ProviderFQDN>/AdminService/v1/Device`
+- The **v1.0** route exposes the **Device** class. For example: `https://<ProviderFQDN>/AdminService/v1.0/Device`
 
 > [!TIP]
 > For more examples, see [How to use the administration service](/configmgr/develop/adminservice/usage).

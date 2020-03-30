@@ -12,7 +12,7 @@ metadata:
   ms.topic: landing-page
   author: aczechowski
   ms.author: aaroncz
-  ms.date: 02/06/2020
+  ms.date: 03/20/2020
 
 landingContent:
   - title: About Configuration Manager SDK
@@ -29,6 +29,8 @@ landingContent:
         links:
           - text: Configuration Manager API reference
             url: reference/configuration-manager-reference.md
+          - text: Administration service REST API
+            url: adminservice/index.yml
 
   - title: Get started
     linkLists:

@@ -25,11 +25,11 @@ The administration service currently has two layers or routes:
 
 - Administration service > WMI > SQL: `https://<SMSProviderFQDN>/AdminService/wmi/<ClassName>`
 
-    The WMI route supports both GET and POST commands to over 700 classes.
+    The **WMI** route supports both GET and POST commands to over 700 classes.
 
-- Administration service > OData/SQL: `https://<SMSProviderFQDN>/AdminService/v1/<ClassName>`
+- Administration service > OData/SQL: `https://<SMSProviderFQDN>/AdminService/v1.0/<ClassName>`
 
-    This versioned route supports new Configuration Manager functionality.
+    This versioned route (**v1.0**) supports new Configuration Manager functionality.
 
 The `<ClassName>` value is a valid Configuration Manager class name. The administration service class names are case-sensitive. Make sure to use the proper capitalization. For example, `SMS_Site`.
 
@@ -63,6 +63,8 @@ In addition, you can develop custom solutions with the administration service, f
 ## Prerequisites
 
 Configure the following prerequisites on the server that hosts the SMS Provider role:
+
+- Enable Windows server role **Web Server (IIS)**
 
 - Install the .NET Framework version 4.5 or later.
 
