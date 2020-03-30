@@ -1001,4 +1001,4 @@
 - name: Configuration Manager API reference
   href: reference/configuration-manager-reference.md
 - name: Administration service REST API
-  href: /adminservice/index.yml
+  href: adminservice/index.yml
