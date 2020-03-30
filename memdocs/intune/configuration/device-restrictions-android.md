@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -39,7 +39,10 @@ This article shows you all the Microsoft Intune device restrictions settings tha
 
 ## General
 
-- **Camera**: **Block** prevents access to the camera. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the device camera.
+- **Camera**: **Block** prevents access to the device camera. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the device camera.
+
+  Intune only manages access to the device camera. It doesn't have access to pictures or videos.
+
 - **Copy and paste (Samsung Knox only)**: **Block** prevents copy-and-paste. **Not configured** allows copy and paste functions on devices.
 - **Clipboard sharing between apps (Samsung Knox only)**: **Block** prevents using the clipboard to copy-and-paste between apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow copy and paste functions on devices.
 - **Diagnostic data submission (Samsung Knox only)**: **Block** stops users from submitting bug reports from devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to submit the data.

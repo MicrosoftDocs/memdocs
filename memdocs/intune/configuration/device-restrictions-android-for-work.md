@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,6 +43,9 @@ These settings apply to Android Enterprise enrollment types where Intune control
 
 - **Screen capture**: **Block** prevents screenshots or screen captures on the device. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image.
 - **Camera**: **Block** prevents access to the camera on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.
+
+  Intune only manages access to the device camera. It doesn't have access to pictures or videos.
+
 - **Default permission policy**: This setting defines the default permission policy for requests for runtime permissions. Your options
   - **Device default**: Use the device's default setting.
   - **Prompt**: Users are prompted to approve the permission.
