@@ -76,7 +76,7 @@ The following Configuration Manager features support or require enhanced HTTP:
 - [OS deployment without a network access account](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#enhanced-http)
 - [Enable co-management for new internet-based Windows 10 devices](/sccm/comanage/tutorial-co-manage-new-devices)
 - [App approvals via email](/sccm/apps/deploy-use/app-approval#bkmk_email-approve)
-- [Administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)
+- [Administration service](/configmgr/develop/adminservice/overview)
 - [View recently connected consoles](/sccm/core/servers/manage/admin-console#bkmk_viewconnected)
 
 > [!Note]  
