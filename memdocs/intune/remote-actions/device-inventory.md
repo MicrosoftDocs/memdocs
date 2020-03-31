@@ -54,9 +54,9 @@ This article shows you how to view all your devices, and their properties in the
       - [Quick scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
       - [Full scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
       - Update Windows Defender security intelligence
-      - [BitLocker key rotation](https://docs.microsoft.com/en-us/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [BitLocker key rotation](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
       - [Rename device](device-rename.md)
-      - [New Remote Assistance Session](https://docs.microsoft.com/en-us/mem/intune/remote-actions/teamviewer-support)
+      - [New Remote Assistance Session](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
    - Use **Properties** to assign a [device category you create](../enrollment/device-group-mapping.md), and change ownership of the device to a personal device, or a corporate device.
    - **Hardware** includes many details about the device, like the device ID, operating system and version, storage space, and more details.
    - **Discovered apps** lists all the apps that Intune found installed on the device, and the app versions. For more information, see [Intune discovered apps](../apps/app-discovered-apps.md).
