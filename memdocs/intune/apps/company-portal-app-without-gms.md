@@ -72,7 +72,7 @@ The following tasks can require up to 8 hours to finish:
 | Remote lock  |    |    |
 | Passcode reset  |    |    |
 
-If the device recently enrolled, the compliance, non-compliance, and configuration check-in runs more frequently. For more information on device check-ins, see [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md#frequently-asked-questions-about-intune-policies). 
+If the device recently enrolled, the compliance, non-compliance, and configuration check-in runs more frequently. For more information on device check-ins, see [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md). 
 
 ## Next steps
 
