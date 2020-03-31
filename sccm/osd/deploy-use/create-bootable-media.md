@@ -160,6 +160,9 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
     - **Management point**: Only for *site-based media*, select a management point from a primary site.  
 
     - **Associated management points**: Only for *dynamic media*, select the primary site management points to use, and a priority order for the initial communication.  
+    
+        > [!NOTE]  
+        > HTTPS enabled management points will only be displayed when a PKI certificate is specified in Step 6.  
 
 8. On the **Customization** page, specify the following options:  
 
