@@ -100,7 +100,7 @@ If you don't have co-management enabled, use the **Configure co-management** wiz
    [![Device overview in Microsoft Endpoint Manager admin center](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
 ## Log files
-Use the following logs, located in &lt;ConfigMgr install directory>\Logs, to monitor the device upload:
+Use the following logs located on the service connection point:
 
 - **CMGatewaySyncUploadWorker.log**
 - **CMGatewayNotificationWorker.log**
