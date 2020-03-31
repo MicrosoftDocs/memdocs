@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -214,7 +214,7 @@ When a device receives a Windows 10 feature updates policy:
 
 The following prerequisites must be met to use Windows 10 feature updates in Intune.
 
-- Devices must be enrolled in Intune MDM and Azure AD joined or Azure AD registered.
+- Devices must be enrolled in Intune MDM and be Hybrid AD joined, Azure AD joined, or Azure AD registered.
 - To use the Feature Updates policy with Intune, devices must have telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetry is configured under *Reporting and Telemetry* as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md).
   
   Devices that receive Feature Updates policy and that have telemetry set to *Not configured*, which means it's off, might install a later version of Windows than defined in the Feature Update policy. The prerequisite to require telemetry is under review as this feature moves towards general availability.
