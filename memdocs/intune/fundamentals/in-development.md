@@ -64,11 +64,11 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 ### Update to Android app configuration policies<!-- 6113334  -->
 Android app configuration policies will be updated to allow admins to select the device enrollment type before creating an app config profile. The functionality is being added to account for certificate profiles that are based on enrollment type (Work profile or Device Owner).  Upon release, the following will occur:
 
-1. Existing policies created prior to the release of this feature that do not have any certificate profiles associated with the policy will default to Work Profile and Device Owner Profile for device enrollment type.
-2. Existing policies created prior to the release of this feature that have certificate profiles associated with them will default to Work Profile only.
-3. If a new profile is created and Work Profile and Device Owner Profile are selected for device enrollment type, you'll not be able to associate a certificate profile with the app config policy.
-4. If a new profile is created and Work Profile only is selected, Work Profile certificate policies created under Device Configuration can be utilized.
-5. If a new profile is created and Device Owner only is selected, Device Owner certificate policies created under Device Configuration can be utilized.
+- Existing policies created prior to the release of this feature that do not have any certificate profiles associated with the policy will default to Work Profile and Device Owner Profile for device enrollment type.
+- Existing policies created prior to the release of this feature that have certificate profiles associated with them will default to Work Profile only.
+- If a new profile is created and Work Profile and Device Owner Profile are selected for device enrollment type, you'll not be able to associate a certificate profile with the app config policy.
+- If a new profile is created and Work Profile only is selected, Work Profile certificate policies created under Device Configuration can be utilized.
+- If a new profile is created and Device Owner only is selected, Device Owner certificate policies created under Device Configuration can be utilized.
 
 Existing policies will not remediate or issue new certificates.
 
