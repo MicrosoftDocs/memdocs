@@ -128,7 +128,7 @@ The following features are available with the most recent Configuration Manager 
 - [Show boundary groups for devices](/sccm/core/get-started/2020/technical-preview-2003#bkmk_boundary) <!--6521835-->
 - [New feedback wizard](/sccm/core/get-started/2020/technical-preview-2003#bkmk_feedback) <!--3180826-->
 - [Improvements to Microsoft Edge Management dashboard](/sccm/core/get-started/2020/technical-preview-2003#bkmk_edge) <!--5907383-->
-- [Start CMPivot from a single device](/sccm/core/get-started/2020/technical-preview-2003#bkmk_cmpivot) <!--6518631-->
+- [Improvements to CMPivot](/sccm/core/get-started/2020/technical-preview-2003#bkmk_cmpivot) <!--6518631-->
 - [Query for feedback sent to Microsoft](/sccm/core/get-started/2020/technical-preview-2003#bkmk_smile) <!--6488450-->
 - [New SDK method for task sequence progress](/sccm/core/get-started/2020/technical-preview-2003#bkmk_tsapi) <!--6448458-->
 - [Improvements to OS deployment](/sccm/core/get-started/2020/technical-preview-2003#bkmk_osd) <!--6452769-->

@@ -29,7 +29,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Show boundary groups for devices](includes/2003/6521835.md)]
 [!INCLUDE [New feedback wizard](includes/2003/3180826.md)]
 [!INCLUDE [Improvements to Microsoft Edge Management dashboard](includes/2003/5907383.md)]
-[!INCLUDE [Start CMPivot from a single device](includes/2003/6518631.md)]
+[!INCLUDE [Improvements to CMPivot](includes/2003/6518631.md)]
 [!INCLUDE [Query for feedback sent to Microsoft](includes/2003/6488450.md)]
 [!INCLUDE [New SDK method for task sequence progress](includes/2003/6448458.md)]
 [!INCLUDE [Improvements to OS deployment](includes/2003/6452769.md)]
