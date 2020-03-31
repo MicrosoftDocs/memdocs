@@ -61,6 +61,9 @@ The specific enrollment restrictions that you can create include:
 
 Default restrictions are automatically provided for both device type and device limit enrollment restrictions. You can change the options for the defaults. Default restrictions apply to all user and userless enrollments. You can override these defaults by creating new restrictions with higher priorities.
 
+>[!NOTE]
+>for iOS and macOS platforms, we need to have the enrollment allowed in the default restrictions for ADE(former DEP) enrollment type, otherwise the enrollment will fail.
+
 ## Create a device type restriction
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > **Create restriction** > **Device type restriction**.
