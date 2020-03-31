@@ -36,7 +36,7 @@ Device encryption protects your files and folders from unauthorized access if yo
 
 Before you can access school or work resources, your organization might require you to:
 
-* [Encrypt your device](#encrypt-your-device)
+* [Encrypt your device](#encrypt-device)
 * [Enable secure startup](#enable-secure-startup)
 * [Set a startup passcode or PIN](#set-startup-passcode-or-pin)  
 
@@ -71,7 +71,7 @@ Your organization may require you to enable secure startup as part of their encr
 
 
 ## Set startup passcode or PIN 
-When you [encrypt your device](#encrypt-your-device) and [enable secure startup](#enable-secure-startup), you'll be prompted to set your device PIN or password. No further steps are needed. 
+When you [encrypt your device](#encrypt-device) and [enable secure startup](#enable-secure-startup), you'll be prompted to set your device PIN or password. No further steps are needed. 
 
 To choose or change the lock screen type:
 
@@ -89,7 +89,7 @@ To choose or change the lock screen type:
 **Issue**: You see a message saying that you still need to encrypt your device.  
 
 **Things to try**:
-   *  Make sure that you've set a PIN or password on your device. 
-   * [Enable secure startup](#enable-secure-startup.)
+   *  Make sure you've set a PIN or password on your device. 
+   * [Enable secure startup](#enable-secure-startup)
 
 Still need help? Contact your company support (check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for contact information), or write the <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android team</a>.  
