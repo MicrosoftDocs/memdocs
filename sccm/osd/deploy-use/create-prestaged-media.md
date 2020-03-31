@@ -107,8 +107,11 @@ The hard drive of the destination computer must be formatted before the prestage
 
         > [!IMPORTANT]  
         > As a security best practice, always assign a password to help protect the prestaged media.  
-
+ 
     - For HTTP communications, select **Create self-signed media certificate**. Then specify the start and expiration date for the certificate.  
+    
+    > [!NOTE] 
+     > If you select this option HTTPS management points will not available for selection on the Boot image page of this wizard.
 
     - For HTTPS communications, select **Import PKI certificate**. Then specify the certificate to import and its password.  
 
