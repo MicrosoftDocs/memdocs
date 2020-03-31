@@ -7,7 +7,7 @@ description: Security baseline settings supported by Intune for managing Microso
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 03/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -21,7 +21,7 @@ ms.assetid:
 
 #audience:
 
-ms.reviewer: shpate
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,603 +31,841 @@ ms.collection: M365-identity-device-management
 
 # Microsoft Defender Advanced Threat Protection baseline settings for Intune
 
-View the Microsoft Defender Advanced Threat Protection (formerly Windows Defender Advanced Threat Protection) baseline settings that are supported by Microsoft Intune. The Advanced Threat Protection (ATP) baseline defaults represent the recommended configuration for ATP, and might not match baseline defaults for other security baselines.  
+View the Microsoft Defender Advanced Threat Protection baseline settings that are supported by Microsoft Intune. The Advanced Threat Protection (ATP) baseline defaults represent the recommended configuration for ATP, and might not match baseline defaults for other security baselines.
 
-The Microsoft Defender Advanced Threat Protection baseline is available when your environment meets the prerequisites for using [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites). 
+The details in this article apply to version 3 of the Microsoft Defender ATP baseline, which released on March 1, 2020.
+
+The Microsoft Defender Advanced Threat Protection baseline is available when your environment meets the prerequisites for using [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites).
 
 This baseline is optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender ATP security baseline](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
-## Application Guard  
+## Application Guard
+
 For more information, see [WindowsDefenderApplicationGuard CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp) in the Windows documentation.  
 
-While using Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren’t listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary.  
+While using Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren't listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary.  
 
-- **Application Guard** - *Settings/AllowWindowsDefenderApplicationGuard*  
-  Select *Yes* to turn on this feature, which opens untrusted sites in a Hyper-V virtualized browsing container. When set to *Not configured*, any site (trusted and untrusted) opens on the device, and not in a virtualized container.  
-
-  **Default**: Yes
- 
-  - **External content on enterprise sites** - *Settings/BlockNonEnterpriseContent*  
-    Select *Yes* to block content from unapproved websites from loading. When set to *Not configured*, non-enterprise sites can open on the device. 
- 
-    **Default**: Yes
-
-  - **Clipboard behavior** - *Settings/ClipboardSettings*  
-    Choose what copy and paste actions are allowed between the local PC and the Application Guard virtual browser.  Options include:
-    - Not Configured  
-    - Block copy and paste between PC and browser - Block both. Data can't transfer between the PC and the virtual browser.  
-    - Allow copy and paste from browser to PC only - Data can't transfer from the PC into the virtual browser.
-    - Allow copy and paste from PC to browser only - Data can't transfer from the virtual browser to the host PC.
-    - Allow copy and paste between PC and browser - No block for content exists.  
-
-    **Default**: Block copy and paste between PC and browser  
-
-- **Windows network isolation policy – Enterprise network domain names**  
-  For more information, see [Policy CSP - NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation) in the Windows documentation.
+- **Turn on Application Guard for Edge (Options)**  
+  CSP: [Settings/AllowWindowsDefenderApplicationGuard](https://go.microsoft.com/fwlink/?linkid=872350)
   
-  Specify a list of Enterprise resource as domains, IP address ranges, and network boundaries that are hosted in the cloud that Application Guard treats as enterprise sites.  
-
-  **Default**: securitycenter.windows.com
-
-## Application Reputation  
-
-For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) in the Windows documentation.
-
-- **Block execution of unverified files**  
-    Block user from running unverified files. When set to *Not Configured*, employees can ignore SmartScreen warnings and run malicious files. Set to *Yes* so that employees can’t ignore SmartScreen warnings and run malicious files.  
+  - **Enabled for Edge** (*default*) - Application Guard opens unapproved sites in a Hyper-V virtualized browsing container.
+  - **Not configured** - Any site (trusted and untrusted) opens on the device, and not in a virtualized container.  
   
-    **Default**: Yes
+  When set to *Enable for Edge*, you can configure *Block external content from non-enterprise approved sites* and *Clipboard behavior*.
 
-- **Require SmartScreen for apps and files**  
-  Set to *Yes* to enable SmartScreen for Windows.  
+  - **Block external content from non-enterprise approved sites**  
+    CSP: [Settings/BlockNonEnterpriseContent](https://go.microsoft.com/fwlink/?linkid=872352)
 
-  **Default**: Yes
+    - **Yes** (*default*) - Block content from unapproved websites from loading.
+    - **Not configured** - Non-enterprise sites can open on the device
 
-## Attack Surface Reduction  
+  - **Clipboard behavior**  
+    CSP: [Settings/ClipboardSettings](https://go.microsoft.com/fwlink/?linkid=872351)
 
-- **Office apps launch child process type**  
-  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – When set to *Block*, Office apps won’t be allowed to create child processes. Office apps include Word, Excel, PowerPoint, OneNote, and Access. Creation of a child process is a typical malware behavior, especially for macro-based attacks that attempt to use Office apps to launch or download malicious executables.  
+    Choose what copy and paste actions are allowed between the local PC and the Application Guard virtual browser. Options include:
+    - **Not Configured**  
+    - **Block copy and paste between PC and browser** (*default*) - Block both. Data can't transfer between the PC and the virtual browser.
+    - **Allow copy and paste from browser to PC only** - Data can't transfer from the PC into the virtual browser.
+    - **Allow copy and paste from PC to browser only** - Data can't transfer from the virtual browser to the host PC.
+    - **Allow copy and paste between PC and browser** - No block for content exists.
 
-  **Default**: Block
+- **Windows network isolation policy**  
+  CSP: [Policy CSP - NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation)
 
-- **Script downloaded payload execution type**  
-  [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection) – Specify a level of detection for potentially unwanted applications that download or attempt to install.  
+  Specify a list of *Network domains*, which are Enterprise resources that are hosted in the cloud that Application Guard treats as enterprise sites
+  - **Configure** (*default*)
+  - **Not configured**
 
-  **Default**: Block 
+  When set to *Configure* you can then define *Network domains*.
 
-- **Prevent credential stealing type**  
-  Set to *Enable* to [Protect derived domain credentials with Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard). Microsoft Defender Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. Unauthorized access to these secrets can lead to credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. Microsoft Defender Credential Guard prevents these attacks by protecting NTLM password hashes, Kerberos Ticket Granting Tickets, and credentials stored by applications as domain credentials.  
+  - **Network domains**  
+    Select **Add** and specify domains, IP address ranges, and network boundaries. By default, *securitycenter.windows.com* is configured.
 
-  **Default**: Enable
+## BitLocker
 
-- **Email content execution**  
-  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – When set to *Block*, This rule blocks the following file types from being run or launched from an email seen in either Microsoft Outlook or webmail (such as Gmail.com or Outlook.com):  
+For more information, [BitLocker Group Policy settings](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) in the Windows documentation.
 
-  - Executable files (such as .exe, .dll, or .scr)  
-  - Script files (such as a PowerShell .ps, VisualBasic .vbs, or JavaScript .js file)  
-  - Script archive files  
+- **Require storage cards to be encrypted (mobile only)**  
+  CSP: [RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)
 
-  **Default**: Block
+  This setting only applies to Windows Mobile and Mobile Enterprise SKU devices.
+  - **Yes** (*default*) - Encryption on storage cards is required for mobile devices.
+  - **Not configured** - The setting returns to the OS default, which is to not require storage card encryption.
 
-- **Adobe Reader launch in a child process**  
-  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – *Enable* this rule to block Adobe Reader from creating a child process. Through social engineering or exploits, malware can download and launch additional payloads and break out of Adobe Reader.  
+- **Enable full disk encryption for OS and fixed data drives**  
+  CSP: [RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)
 
-  **Default**: Enable
+  If the drive was encrypted before this policy applied, no extra action is taken. If the encryption method and options match that of this policy, configuration should return success. If an in-place BitLocker configuration option doesn't match this policy, configuration will likely return an error.
+  
+  To apply this policy to a disk already encrypted, decrypt the drive and reapply the MDM policy. Windows default is to not require BitLocker drive encryption, however on Azure AD Join and Microsoft Account (MSA) registration/login automatic encryption may apply enabling BitLocker at XTS-AES 128-bit encryption.
 
-- **Script obfuscated macro code**  
-  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Malware and other threats can attempt to obfuscate or hide their malicious code in some script files. This rule prevents scripts that appear to be obfuscated from running.  
-    
-  **Default**: Block
+  - **Yes** (*default*) - Enforce use of BitLocker.
+  - **Not configured** - No BitLocker enforcement takes place.
 
-- **Untrusted USB process**  
-  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – When set to *Block*, unsigned, or untrusted executable files from USB removable drives and SD cards can't run.
+- **BitLocker system drive policy**  
+  [BitLocker Group Policy settings](https://go.microsoft.com/fwlink/?linkid=2067025)
 
-  Executable files include:
-  - Executable files (such as .exe, .dll, or .scr)
-  - Script files (such as a PowerShell .ps, VisualBasic .vbs, or JavaScript .js file)  
+  - **Configure** (*default*)
+  - **Not configured**
 
-  **Default**: Block
+  When set to *Configure*, you can then configure *Configure encryption method for Operating System drives*.
 
-- **Office apps other process injection**  
-  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - When set to *Block*, Office apps, including Word, Excel, PowerPoint, and OneNote, can’t inject code into other processes. Code injection is typically used by malware to run malicious code in an attempt to hide the activity from antivirus scanning engines.  
+  - **Configure encryption method for Operating System drives**  
+    CSP: [EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
+    This setting is available when *BitLocker system drive policy* is set to *Configure*.  
 
-  **Default**: Block
+    Configure the encryption method and cipher strength for system drives.  *XTS- AES 128-bit* is the Windows default encryption method and the recommended value.
 
-- **Office macro code allow Win32 imports**  
-  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - When set to *Block*, this rule attempts to block Office files that contain macro code that can import Win32 DLLs. Office files include Word, Excel, PowerPoint, and OneNote. Malware can use macro code in Office files to import and load Win32 DLLs, which are then used to make API calls to allow further infection throughout the system.  
+    - **Not configured** (*default*)
+    - **AES 128bit CBC**
+    - **AES 256bit CBC**
+    - **AES 128bit XTS**
+    - **AES 256bit XTS**
 
-  **Default**: Block
+- **BitLocker fixed drive policy**  
+  [BitLocker Group Policy settings](https://go.microsoft.com/fwlink/?linkid=2067018)
 
-- **Office communication apps launch in a child process**  
-  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – When set to *Enable*, this rule prevents Outlook from creating child processes. By blocking the creation of a child process, this rule protects against social engineering attacks and prevents exploit code from abusing a vulnerability in Outlook.  
+  - **Configure** (*default*)
+  - **Not configured**
 
-  **Default**: Enable
+  When set to *Configure*, you can then configure *Block write access to fixed data-drives not protected by BitLocker* and *Configure encryption method for fixed data-drives*.
 
-- **Office apps executable content creation or launch**  
-  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – When set to *Block*, Office apps can’t create executable content. Office apps include Word, Excel, PowerPoint, OneNote, and Access.  
+  - **Block write access to fixed data-drives not protected by BitLocker**  
+    CSP: [FixedDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872534)  
+    This setting is available when *BitLocker fixed drive policy* is set to *Configure*.
 
-  This rule targets typical behaviors used by suspicious and malicious add-ons and scripts (extensions) that create or launch executable files. This is a typical malware technique. Extensions are blocked from being used by Office apps. Typically, these extensions use the Windows Scripting Host (.wsh files) to run scripts that automate certain tasks or provide user-created add-on features.
+    - **Not configured** (*default*) - Data can be written to non-encrypted fixed drives.
+    - **Yes** - Windows will not allow any data to be written to fixed drives that are not BitLocker protected. If a fixed drive is not encrypted, the user will need to complete the BitLocker setup wizard for the drive before write access is granted.
 
-  **Default**: Block
+  - **Configure encryption method for fixed data-drives**  
+    CSP: [EncryptionMethodByDriveType](hhttps://go.microsoft.com/fwlink/?linkid=872526)  
+    This setting is available when *BitLocker fixed drive policy* is set to *Configure*.
 
-## BitLocker  
+    Configure the encryption method and cipher strength for fixed data-drives disks. *XTS- AES 128-bit* is the Windows default encryption method and the recommended value.
 
-For more information, [BitLocker Group Policy settings](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) in the Windows documentation.  
+    - **Not configured** (*default*)
+    - **AES 128bit CBC**
+    - **AES 256bit CBC**
+    - **AES 128bit XTS**
+    - **AES 256bit XTS**
 
-- **Encrypt devices**  
-  Select *Yes* to enable BitLocker device encryption. Depending on device hardware and version of Windows, device users might be asked to confirm that there's no third-party encryption on the device. Turning on Windows encryption while third-party encryption is active will render the device unstable.  
+- **BitLocker removable drive policy**  
+  [BitLocker Group Policy settings](https://go.microsoft.com/fwlink/?linkid=2067140)
 
-   **Default**: Yes
+  - **Configure** (*default*)
+  - **Not configured**
 
-- **Bit locker removable drive policy**  
-  The values for this policy determine the strength of the cipher that BitLocker uses for encryption of removable drives. Enterprises control the encryption level for increased security (AES-256 is stronger than AES-128). If you select *Yes* to enable this setting, you can configure an encryption algorithm and key cipher strength for fixed data drives, operating system drives, and removable data drives individually. For fixed and operating system drives, we recommend that you use the XTS-AES algorithm. For removable drives, you should use AES-CBC 128-bit or AES-CBC 256-bit if the drive is used in other devices that aren't running Windows 10, version 1511 or later. Changing the encryption method has no effect if the drive is already encrypted or if encryption is in progress. In these cases, this policy setting is ignored. 
+  When set to *Configure*, you can then configure *Configure encryption method for removable data-drives* and *Block write access to removable data-drives not protected by BitLocker*.
 
-  For Bit locker removable drive policy, configure the following settings:
+  - **Configure encryption method for removable data-drives**  
+    CSP: [EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
+    This setting is available when *BitLocker removable drive policy* is set to *Configure*.
 
-  - **Require encryption for write access**  
-    **Default**: Yes
+    Configure the encryption method and cipher strength for removable data-drives disks. *XTS- AES 128-bit* is the Windows default encryption method and the recommended value.
 
-  - **Encryption method**  
-    **Default**: AES 128bit CBC
+    - **Not configured**
+    - **AES 128bit CBC**
+    - **AES 256bit CBC** (*default*)
+    - **AES 128bit XTS**
+    - **AES 256bit XTS**
 
-- **Encrypt storage card (mobile only)**
-  Selecting *Yes* will encrypt the storage card of the mobile device.  
+  - **Block write access to removable data-drives not protected by BitLocker**  
+    CSP: [RemovableDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872540)  
+    This setting is available when *BitLocker removable drive policy* is set to *Configure*.
 
-   **Default**: Yes
+    - **Not configured** (*default*) - Data can be written to non-encrypted removable drives.  
+    - **Yes** - Windows will not allow any data to be written to removable drives that are not BitLocker protected. If a removable drive is not encrypted, the user must complete the BitLocker setup wizard for the drive before write access is granted.
 
-- **Bit locker fixed drive policy**  
-  The values for this policy determine the strength of the cipher that BitLocker uses for encryption of fixed drives. Enterprises can control the encryption level for increased security (AES-256 is stronger than AES-128). If you enable this setting, you can configure an encryption algorithm and key cipher strength for fixed data drives, operating system drives, and removable data drives individually. For fixed and operating system drives, we recommend that you use the XTS-AES algorithm. For removable drives, you should use AES-CBC 128-bit or AES-CBC 256-bit if the drive is used in other devices that aren't running Windows 10, version 1511 or later. Changing the encryption method has no effect if the drive is already encrypted or if encryption is in progress. In these cases, this policy setting is ignored.
+## Browser
 
-  For Bit locker fixed drive policy, configure the following settings:
+- **Require SmartScreen for Microsoft Edge**  
+  CSP: [Browser/AllowSmartScreen](https://go.microsoft.com/fwlink/?linkid=2067029)
 
-  - **Require encryption for write access**  
-    **Default**: Yes
+  - **Yes** (*default*) - Use SmartScreen to protect users from potential phishing scams and malicious software.
+  - **Not configured**
 
-  - **Encryption method**  
-    **Default**: AES 128bit XTS
+- **Block malicious site access**  
+  CSP: [Browser/PreventSmartScreenPromptOverride](https://go.microsoft.com/fwlink/?linkid=2067040)  
 
-- **Bit locker system drive policy**  
-  The values for this policy determine the strength of the cipher that BitLocker uses for encryption of the system drive. Enterprises may want to control the encryption level for increased security (AES-256 is stronger than AES-128). If you enable this setting, you can configure an encryption algorithm and key cipher strength for fixed data drives, operating system drives, and removable data drives individually. For fixed and operating system drives, we recommend that you use the XTS-AES algorithm. For removable drives, you should use AES-CBC 128-bit or AES-CBC 256-bit if the drive is used in other devices that aren't running Windows 10, version 1511 or later. Changing the encryption method has no effect if the drive is already encrypted or if encryption is in progress. In these cases, this policy setting is ignored.  
+  - **Yes** (*default*) - Block users from ignoring the Microsoft Defender SmartScreen Filter warnings and block them from going to the site.
+  - **Not configured**
 
-  For Bit locker system drive policy, configure the following settings:  
+- **Block unverified file download**  
+  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](https://go.microsoft.com/fwlink/?linkid=2067023)  
 
-  - **Encryption method**  
-    **Default**: AES 128bit XTS
+  - **Yes** (*default*) - Block users from ignoring the Microsoft Defender SmartScreen Filter warnings and block them from downloading unverified files.
+  - **Not configured**
 
-## Device Control  
-
-- **Scan removable drives during a full scan**  
-  [Defender/AllowFullScanRemovableDriveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning) - When set to *Yes*, Defender scans for malicious and unwanted software in removable drives, like flash drives, during a full scan. Defender Antivirus scans all files on USB devices before files on the USB device can run.
-
-  Related setting in this list: *Defender/AllowFullScanOnMappedNetworkDrives*  
-
-  **Default**: Yes
-
-- **Enumeration of external devices incompatible with Kernel DMA Protection**  
-   See *DmaGuard/DeviceEnumerationPolicy* in [Policy CSP - DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
-
-  This policy provides additional security against external DMA capable devices. It allows for more control over the enumeration of external DMA capable devices that are incompatible with DMA device memory isolation and sandboxing.
-
-  This policy only takes effect when Kernel DMA Protection is supported and enabled by the system firmware. Kernel DMA Protection is a platform feature that can't be controlled by policy or by the user of a device. It must be supported by the system at the time of manufacturing. 
-
-  To check if the system supports Kernel DMA Protection, run MSINFO32.exe on the system, and review the *Kernel DMA Protection* field on the Summary page.  
-
-  Options include: 
-  - *Device default* - After sign in or screen unlock, devices with DMA remapping compatible drivers are allowed to enumerate at any time. Devices with DMA remapping incompatible drivers will only be enumerated after the user unlocks the screen
-  - *Allow all* - All external DMA capable PCIe devices will be enumerated at any time
-  - *Block all* - Devices with DMA remapping compatible drivers are allowed to enumerate at any time. Devices with DMA remapping incompatible drivers will never be allowed to start and perform DMA at any time.
-
-  **Default**: Device default
-
-- **Hardware device installation by device identifiers**  
-  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids) - With this policy, you specify a list of Plug and Play hardware IDs and compatible IDs for devices that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting (set to *Block hardware device installation*), Windows is prevented from installing a device whose hardware ID or compatible ID appears in the list you create. If you enable this policy setting on a remote desktop server, the policy affects redirection of the specified devices from a remote desktop client to the remote desktop server. If you disable or don't configure this policy setting (set to *Allow hardware device installation*), devices can install and update as allowed or prevented by other policy settings.  
-
-  **Default**: Block hardware device installation  
-
-  When *Block hardware device installation* is selected, the following settings are available.
-  - **Remove matching hardware devices**  
-    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.  
-
-    **Default**: Yes
-
-  - **Hardware device identifiers that are blocked**  
-    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*. To configure this setting, expand the option, select **+ Add**, and then specify the hardware device identifier you want to block.  
-
-    **Default**: PCI\CC_0C0A
+## Data Protection
 
 - **Block direct memory access**  
-  [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess) - Use this policy setting to block direct memory access (DMA) for all hot pluggable PCI downstream ports on a device, until a user logs into Windows. Once a user logs in, Windows will enumerate the PCI devices connected to the host plug PCI ports. Every time the user locks the machine, DMA is blocked on hot plug PCI ports with no children devices until the user logs in again. Devices that were already enumerated when the machine was unlocked will continue to function until unplugged. 
+  CSP: [DataProtection/AllowDirectMemoryAccess](https://go.microsoft.com/fwlink/?linkid=2067031)  
 
-  This policy setting is only enforced when BitLocker or device encryption is enabled.  
+  This policy setting is only enforced when BitLocker or device encryption is enabled.
 
-  **Default**: Yes
+  - **Yes** (*default*) - Block direct memory access (DMA) for all hot pluggable PCI downstream ports until a user logs into Windows. After a user logs in, Windows enumerates the PCI devices connected to the host plug PCI ports. Every time the user locks the machine, DMA is blocked on hot plug PCI ports with no children devices until the user logs in again. Devices that were already enumerated when the machine was unlocked will continue to function until unplugged.
+  - **Not configured**
 
+## Device Guard  
 
-- **Hardware device installation by setup classes**  
-  [DeviceInstallation/AllowInstallationOfMatchingDeviceSetupClasses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-allowinstallationofmatchingdevicesetupclasses) - With this policy you can specify a list of device setup class globally unique identifiers (GUIDs) for device drivers that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting (set to *Block hardware device installation*), Windows is prevented from installing or updating device drivers whose device setup class GUIDs appear in the list you create. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server. If you disable or don't configure this policy setting (set to *Allow hardware device installation*), Windows can install and update devices as allowed or prevented by other policy settings.  
+- **Turn on credential guard**  
+  CSP: [DeviceGuard/ConfigureSystemGuardLaunch](https://go.microsoft.com/fwlink/?linkid=872424)
 
-  **Default**: Block hardware device installation
+  Credential Guard uses Windows Hypervisor to provide protections, which requires Secure Boot and DMA protections to function, which requires that hardware requirements are met.
 
-  When *Block hardware device installation* is selected, the following settings are available.  
+  - **Not configured** - Disable the use of Credential Guard, which is the Windows default.
+  - **Enable with UEFI lock** (*default*) - Enable Credential Guard and not allow it to be disabled remotely, as the UEFI persisted configuration must be manually cleared.
+  - **Enable without UEFI lock** - Enable Credential Guard and allow it to be turned off without physical access to the machine.
 
-  - **Remove matching hardware devices**  
-    This setting is available only when *Hardware device installation by setup classes* is set to *Block hardware device installation*.  
- 
-    **Default**: Yes  
+## Device Installation
+
+- **Hardware device installation by device identifiers**  
+  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](hhttps://go.microsoft.com/fwlink/?linkid=2066794)  
+  
+  This policy setting allows you to specify a list of Plug and Play hardware IDs and compatible IDs for devices that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device.  If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+
+  - **Not configured**
+  - **Allow hardware device installation** - Devices can be installed and updated as allowed or prevented by other policy settings.
+  - **Block hardware device installation** (*default*) - Windows is prevented from installing a device whose hardware ID or compatible ID appears in a list you define.
+
+  When set to *Block hardware device installation* you can configure *Remove matching hardware devices* and *Hardware device identifiers that are blocked*.
+
+  - **Remove matching hardware devices**
+
+    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
+    - **Yes**
+    - **Not configured**
 
   - **Hardware device identifiers that are blocked**  
-    This setting is available only when Hardware device installation by setup classes is set to Block hardware device installation. To configure this setting, expand the option, select **+ Add**, and then specify the hardware device identifier you want to block.  
- 
-    **Default**: {d48179be-ec20-11d1-b6b8-00c04fa372a7}
+    
+    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
 
-## Endpoint Detection and Response  
-For more information, see [WindowsAdvancedThreatProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) in the Windows documentation.  
+    Select **Add**, and then specify the hardware device identifier you want to block.
 
-- **Expedite telemetry reporting frequency** - *Configuration/TelemetryReportingFrequency*
+- **Hardware device installation by setup classes**  
+  CSP: [DeviceInstallation/AllowInstallationOfMatchingDeviceSetupClasses](https://go.microsoft.com/fwlink/?linkid=2067048)  
+  
+  This policy setting allows you to specify a list of device setup class globally unique identifiers (GUIDs) for device drivers that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+
+  - **Not configured**
+  - **Allow hardware device installation** - Windows can install and update devices as allowed or prevented by other policy settings.
+  - **Block hardware device installation** (*default*) - Windows is prevented from installing a device whose setup class GUIDs appear in a list you define.
+
+  When set to *Block hardware device installation* you can configure *Remove matching hardware devices* and *Hardware device identifiers that are blocked*.
+
+  - **Remove matching hardware devices**
+
+    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
+    - **Yes**
+    - **Not configured**
+
+  - **Hardware device identifiers that are blocked**
+
+    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
+
+    Select **Add**, and then specify the hardware device identifier you want to block.
+
+## DMA Guard
+
+- **Enumeration of external devices incompatible with Kernel DMA Protection**  
+  CSP: [DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+
+  This policy can provide additional security against external DMA capable devices. It allows for more control over the enumeration of external DMA capable devices incompatible with DMA Remapping/device memory isolation and sandboxing.
+  
+  This policy only takes effect when Kernel DMA Protection is supported and enabled by the system firmware. Kernel DMA Protection is a platform feature that must be supported by the system at the time of manufacturing. To check if the system supports Kernel DMA Protection, check the Kernel DMA Protection field in the Summary page of MSINFO32.exe.
+
+  - **Not configured** - (*default*)
+  - **Block all**
+  - **Allow all**
+
+## Endpoint Detection and Response
+
+For more information about the following settings, see [WindowsAdvancedThreatProtection](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) CSP in the Windows documentation.
+
+- **Sample sharing for all files**  
+  CSP: [Configuration/SampleSharing](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+
+  Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.  
+  
+  - **Yes** (*default*)
+  - **Not configured**
+
+- **Expedite telemetry reporting frequency**  
+  CSP: [Configuration/TelemetryReportingFrequency](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Expedite Microsoft Defender Advanced Threat Protection telemetry reporting frequency.  
 
-  **Default**: Yes
+  - **Yes** (*default*)
+  - **Not configured**
 
-- **Sample sharing for all files** - *Configuration/SampleSharing* 
+## Firewall
 
-  Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.  
-
-  **Default**: Yes
-
-## Exploit Protection  
-
-- **Exploit protection XML**  
-  For more information, see [Import, export, and deploy exploit protection configurations](/windows/security/threat-protection/microsoft-defender-atp/import-export-exploit-protection-emet-xml) in the Windows documentation.  
-
-  Enables the IT admin to push out a configuration representing the desired system and application mitigation options to all the devices in the organization. The configuration is represented by an XML. 
-
-  Exploit protection applies helps protect devices from malware that use exploits to spread and infect. You use the Windows Security app or PowerShell to create a set of mitigations (known as a configuration). You can then export this configuration as an XML file and share it with multiple machines on your network so they all have the same set of mitigation settings.
- 
-  You can also convert and import an existing EMET configuration XML file into an exploit protection configuration XML.
-
-- **Block exploit protection override**  
-  [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride) – Set to *Yes* to prevent users from making changes to the exploit protection settings area in the Microsoft Defender Security Center. If you disable or don't configure this setting, local users can make changes in the exploit protection settings area.  
-  **Default**: Yes  
-
-## Microsoft Defender Antivirus  
-
-For more information, see [Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) in the Windows documentation.
-
-- **Scan scripts loaded in Microsoft web browsers**  
-  [Defender/AllowScriptScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning) – Set to *Yes* to allow Microsoft Defender Script Scanning functionality.  
-
-  **Default**: Yes
-
-- **Scan incoming mail messages**  
-  [Defender/AllowEmailScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning) – Set to *Yes* to allow Microsoft Defender to scan email.  
-
-  **Default**: Yes
-
-- **Defender sample submission consent**  
-  [Defender/SubmitSamplesConsent](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) - Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not (and if the user has specified never to ask), the UI is launched to ask for user consent (when *Cloud-delivered protection* is set to *Yes*) before sending data.  
-
-  **Default**: Send safe samples automatically
-
-- **Network Inspection System (NIS)**  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) - Block malicious traffic detected by signatures in the Network Inspection System (NIS).  
- 
-  **Default**: Yes
-
-- **Signature update interval (in hours)**  
-  [Defender/SignatureUpdateInterval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval) – Specify in hours, how often the device checks for new Defender signature updates.  
- 
-  **Default**: 4
-
-- **Configure low CPU priority for scheduled scans**  
-  [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority) – When set to *Yes*, CPU priority for scans is set to low. When *Not Configured*, no changes are made to CPU priority for scheduled scans.  
-
-    **Default**: Yes
-
-- **Defender block on access protection**  
-  [Defender/AllowOnAccessProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection) – When set to *Yes*, Microsoft Defender On Access Protection is enabled.  
-
-  **Default**: Yes
-
-- **Type of system scan to perform**  
-  [Defender/ScanParameter](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter) - Defender scan type.  
-
-  **Default**: Quick scan
-
-- **Scan all downloads**  
-  [Defender/AllowIOAVProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection) - When set to *Yes*, Defender scans all downloaded files and attachments.  
-
-  **Default**: Yes
-
-- **Days before deleting quarantined malware**  
-  [Defender/DaysToRetainCleanedMalware](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware) - Specify how many days to keep quarantine items on the system before they're automatically deleted. When set to zero, items in quarantine are never automatically deleted.  
-
-  **Default**: 0
-
-- **Scheduled scan start time**  
-  [Defender/ScheduleScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime) – Schedule a time of day for Defender to scan devices. 
-  
-  Related option in this list: *Defender/ScheduleScanDay*   
-
-  **Default**: 2 AM
-
-- **Cloud-delivered protection**  
-  [Defender/AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection) – When set to *Yes*, Microsoft Defender sends information to Microsoft about any problems it finds. Microsoft will analyze that information, learn more about problems affecting you and other customers, and offer improved solutions.
-
-  When this policy is set to *Yes*, you can use *Defender sample submission consent type* to give users control over sending information from their device.  
-
-  **Default**: Yes
-
-- **Defender potentially unwanted app action**  
-  [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection) – Microsoft Defender Antivirus can identify and block *potentially unwanted applications* (PUAs) from downloading and installing on endpoints in your network. 
- 
-  - When set to *Block*, Microsoft Defender blocks PUAs, and lists them in history along with other threats.
-  - When set to *Audit*, Microsoft Defender detects PUAs but doesn't block them. Information about the applications Microsoft Defender would have taken action against can be found by searching for events that were created by Microsoft Defender in the Event Viewer.  
-  - When set to *Device default*, PUA protection is off.  
- 
-  **Default**: Block
-
-- **Defender cloud extended timeout**  
-  [Defender/CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout) - Specify the maximum amount of additional time that Microsoft Defender Antivirus should block a file while waiting for a result from the cloud. The base amount of time Microsoft Defender waits is 10 seconds. Any additional time you specify here (up to 50 seconds) is added to those 10 seconds. In most cases the scan takes less time than the maximum. Extending the time allows the cloud to thoroughly investigate suspicious files.  
-
-  By default the expanded time value is 0 (disabled). Intune recommends that you enable this setting and specify at least 20 additional seconds.  
- 
-  **Default**: 0
-
-- **Scan archive files**  
-  [Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning) – Set to *Yes*  to have Microsoft Defender scan archive files.  
-
-  **Default**: Yes
-
-- **Defender system scan schedule**  
-  [Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday) - Schedule on which day Defender scans devices. 
- 
-  Related option in this list: *Defender/ScheduleScanTime*
-
-  **Default**: User defined
-
-- **Behavior monitoring**  
-  [Defender/AllowBehaviorMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring) – Set to *Yes* to turn on Microsoft Defender Behavior Monitoring functionality. Embedded in Windows 10, Microsoft Defender Behavior Monitoring sensors collect and process behavioral signals from the operating system and send this sensor data to your private, isolated, cloud instance of Microsoft Defender ATP.  
-
-  **Default**: Yes
-
-- **Scan files opened from network folders**  
-  [Defender/AllowScanningNetworkFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles) – Set to *Yes* to have Microsoft Defender scan files on the network. The user won’t be able to remove detected malware from read-only files.  
-
-  **Default**: Yes
-
-- **Defender cloud block level**  
-  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) – Use this policy to determine how aggressive Microsoft Defender Antivirus is in blocking and scanning suspicious files. Options include:
-
-  - High - Aggressively block unknown files while optimizing client performance (greater chance of false positives)
-  - High plus - Aggressively block unknown files and apply additional protection measures (might impact client performance)
-  - Zero tolerance - Block all unknown executable files
-
-  **Default**: Not Configured
-
-- **Real-time monitoring**  
-  [Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring) – Set to *Yes* to allow Microsoft Defender Realtime Monitoring.  
-
-  **Default**: Yes
-
-- **CPU usage limit during a scan**  
-  [Defender/AvgCPULoadFactor](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor) – Specify the maximum average CPU % usage that Microsoft Defender can use during a scan.  
-
-  **Default**: 50
-
-- **Scan mapped network drives during a full scan**  
-  [Defender/AllowFullScanOnMappedNetworkDrives](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives) - Set to *Yes* to have Microsoft Defender scan files on the network. The user can't remove detected malware from read-only files,
-
-  Related setting in this list: *Defender/AllowScanningNetworkFiles*
-
-  **Default**: Yes
-
-- **Block end-user access to Defender**  
-  [Defender/AllowUserUIAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess) – Set to *Yes* to block end-users access to the Microsoft Defender UI on their device.  
-
-  **Default**: Yes
-
-- **Quick scan start time**  
-  [Defender/ScheduleQuickScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime) - Schedule a time of day for Defender to run a quick scan.  
-
-  **Default**: 2 AM
-
-## Microsoft Defender Firewall
 For more information, see [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) in the Windows documentation.
 
-- **Security association idle time before deletion** - *MdmStore/Global/SaIdleTime*   
-  Security associations are deleted after network traffic isn't seen for this number of seconds.  
-  **Default**: 300
+- **Disable stateful File Transfer Protocol (FTP)**  
+  CSP: [MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)  
 
-- **File Transfer Protocol** - *MdmStore/Global/DisableStatefulFtp*   
-  Blocks stateful File Transfer Protocol (FTP).  
-  **Default**: Yes
+  - **Yes** (*default*)
+  - **Not configured** - The firewall will use FTP to inspect and filter secondary network connections, which could cause your firewall rules to be ignored.
 
-- **Packet queuing** - *MdmStore/Global/EnablePacketQueue*    
-  Specify how scaling for the software on the receive side is enabled for the encrypted receive and clear text forward for the IPsec tunnel gateway scenario. This ensures that the packet order is preserved.  
-  **Default**: Device default
+- **Number of seconds a security association can be idle before it's deleted**  
+CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
 
-- **Firewall profile domain** - *FirewallRules/FirewallRuleName/Profiles*  
-  Specifies the profiles to which the rule belongs: Domain, Private, Public. This value represents the profile for networks that are connected to domains.  
+  Specify how long the security associations are kept after network traffic is no longer seen. When not configured, the system deletes a security association after it's been idle for *300* seconds (the default).
+  
+  The number must be from **300** to **3600** seconds.
 
-  Available settings:  
-  - **Unicast responses to multicast broadcasts required**  
-    **Default**: Yes
+- **Preshared key encoding**  
+  CSP: [MdmStore/Global/PresharedKeyEncoding](https://go.microsoft.com/fwlink/?linkid=872541)
 
-  - **Authorized application rules from group policy merged**  
-    **Default**: Yes
+   If you don't require UTF-8, preshared keys will initially be encoded using UTF-8. After that, device users can choose another encoding method.
 
-  - **Inbound notifications blocked**  
-    **Default**: Yes
+  - **Not configured**
+  - **None**
+  - **UTF8** (*default*)
 
-  - **Global port rules from group policy merged**  
-    **Default**: Yes
+- **Certificate revocation list (CRL) verification**  
+  CSP: [MdmStore/Global/CRLcheck](https://go.microsoft.com/fwlink/?linkid=872548)
 
-  - **Stealth mode blocked**  
-    **Default**: Yes
+  Specify how certificate revocation list (CRL) verification is enforced.  
 
-  - **Firewall enabled**  
-    **Default**: Allowed
+  - **Not configured** (*default*) - CRL verification is disabled.
+  - **None**
+  - **Attempt**
+  - **Require**
 
-  - **Connection security rules from group policy not merged**  
-    **Default**: Yes
+- **Packet queuing**  
+  CSP: [MdmStore/Global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)
 
-  - **Policy rules from group policy not merged**  
-    **Default**: Yes
+  Specify how scaling for the software on the receive side is enabled for the encrypted receive and clear text forward for the IPsec tunnel gateway scenario. This setting ensures that the packet order is preserved.
 
-- **Firewall profile public** - *FirewallRules/FirewallRuleName/Profiles*  
-  Specifies the profiles to which the rule belongs: Domain, Private, Public. This value represents the profile for public networks. These networks are classified as public by the administrators in the server host. The classification happens the first time the host connects to the network. Usually these networks are at airports, coffee shops, and other public places where the peers in the network or the network administrator aren't trusted.  
+  - **Not configured** (*default*) - Packet queuing returns to the client default, which is disabled.
+  - **Disabled**
+  - **Queue Inbound**
+  - **Queue Outbound**
+  - **Queue Both**
 
-  Available settings:
+- **Firewall profile private**  
+  [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067041)
 
-  - **Inbound connections blocked**  
-    **Default**: Yes 
+  - **Configure** (*default*)
+  - **Not configured**
 
-  - **Unicast responses to multicast broadcasts required**  
-    **Default**: Yes  
-
-  - **Stealth mode required**  
-    **Default**: Yes 
- 
-  - **Outbound connections required**  
-    **Default**: Yes  
-
-  - **Authorized application rules from group policy merged**  
-    **Default**: Yes  
-
-  - **Inbound notifications blocked**  
-    **Default**: Yes  
-
-  - **Global port rules from group policy merged**  
-    **Default**: Yes
-
-  - **Stealth mode blocked**  
-    **Default**: Yes
-
-  - **Firewall enabled**  
-    **Default**: Allowed  
-
-  - **Connection security rules from group policy not merged**  
-    **Default**: Yes  
-
-  - **Incoming traffic required**  
-    **Default**: Yes
-
-  - **Policy rules from group policy not merged**  
-    **Default**: Yes  
-
-- **Firewall profile private** - *FirewallRules/FirewallRuleName/Profiles*  
-  Specifies the profiles to which the rule belongs: Domain, Private, Public. This value represents the profile for private networks.  
-
-  Available settings: 
+  When set to *Configure*, you can configure the following additional settings.
 
   - **Inbound connections blocked**  
-    **Default**: Yes
+    CSP: [/DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
+
+    - **Yes** (*default*)
+    - **Not configured**
 
   - **Unicast responses to multicast broadcasts required**  
-    **Default**: Yes
+    CSP: [/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+    - **Yes** (*default*)
+    - **Not configured**
 
   - **Stealth mode required**  
-    **Default**: Yes
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Yes** (*default*)
+    - **Not configured**
 
   - **Outbound connections required**  
-    **Default**: Yes
+    CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
+
+    - **Yes** (*default*)
+    - **Not configured**
 
   - **Inbound notifications blocked**  
-    **Default**: Yes
+    CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+
+    - **Yes** (*default*)
+    - **Not configured**
 
   - **Global port rules from group policy merged**  
-    **Default**: Yes
+    CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Yes** (*default*)
+    - **Not configured**
 
   - **Stealth mode blocked**  
-    **Default**: Yes  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Yes** (*default*)
+    - **Not configured**
 
   - **Firewall enabled**  
-    **Default**: Allowed
+    CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+
+    - **Not configured**
+    - **Blocked**
+    - **Allowed** (*default*)
 
   - **Authorized application rules from group policy not merged**  
-    **Default**: Yes
+    CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Yes** (*default*)
+    - **Not configured**
 
   - **Connection security rules from group policy not merged**  
-    **Default**: Yes
+    CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Yes** (*default*)
+    - **Not configured**
 
   - **Incoming traffic required**  
-    **Default**: Yes
+    CSP: [/Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **Yes** (*default*)
+    - **Not configured**
 
   - **Policy rules from group policy not merged**  
-    **Default**: Yes  
+    CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
 
-- **Firewall pre shared key encoding method**  
-  **Default**: UTF8
+    - **Yes** (*default*)
+    - **Not configured**
 
-- **Certificate revocation list verification**  
-  **Default**: Device default
+- **Firewall profile public**  
+  [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067143)
 
-## Web & Network Protection  
+  - **Configure** (*default*)
+  - **Not configured**
 
-- **Network protection type**  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)  - This policy allows you to turn network protection on or off in Microsoft Defender Exploit Guard. Network protection is a feature of Microsoft Defender Exploit Guard that protects employees using any app from accessing phishing scams, exploit-hosting sites, and malicious content on the Internet. This includes preventing third-party browsers from connecting to dangerous sites.  
+  When set to *Configure*, you can configure the following additional settings.
 
-  When set to either *Enable* or *Audit mode*, users can’t turn off network protection, and you can use the Microsoft Defender Security Center to view information about connection attempts.  
- 
-  - *Enable* will block users and apps from connecting to dangerous domains.  
-  - *Audit mode* doesn’t block users and apps from connecting to dangerous domains.  
+  - **Inbound connections blocked**  
+    CSP: [/DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
 
-  When set to *User defined*, users and apps aren’t blocked from connecting to dangerous domains, and information about connections isn’t available in Microsoft Defender Security Center.  
+    - **Yes** (*default*)
+    - **Not configured**
 
-  **Default**: Audit mode
+  - **Unicast responses to multicast broadcasts required**  
+    CSP: [/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
 
-- **Require SmartScreen for Microsoft Edge**  
-  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) - Microsoft Edge uses Microsoft Defender SmartScreen (turned on) to protect users from potential phishing scams and malicious software by default. By default, this policy is enabled (set to *Yes*), and when enabled prevents users from turning off Microsoft Defender SmartScreen.  When the effective policy for a device is equal to Not configured, users can turn off Microsoft Defender SmartScreen, which leaves the device unprotected.  
+    - **Yes** (*default*)
+    - **Not configured**
 
-  **Default**: Yes
+  - **Stealth mode required**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+  - **Outbound connections required**  
+    CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+  - **Authorized application rules from group policy not merged**  
+    CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+  - **Inbound notifications blocked**  
+    CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+  - **Global port rules from group policy merged**  
+    CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+  - **Stealth mode blocked**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+  - **Firewall enabled**  
+    CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+
+    - **Not configured**
+    - **Blocked**
+    - **Allowed** (*default*)
+
+  - **Connection security rules from group policy not merged**  
+    CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+  - **Incoming traffic required**  
+    CSP: [/Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+  - **Policy rules from group policy not merged**  
+    CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+- **Firewall profile domain**  
+  CSP: [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2066796)
+
+  - **Unicast responses to multicast broadcasts required**  
+    CSP: [/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+  - **Authorized application rules from group policy not merged**  
+    CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Yes** (*default*)
+    - **Not configured**  
+
+  - **Inbound notifications blocked**  
+    CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+  - **Global port rules from group policy merged**  
+    CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+  - **Stealth mode blocked**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+  - **Firewall enabled**  
+    CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+
+    - **Not configured**
+    - **Blocked**
+    - **Allowed** (*default*)
+
+  - **Connection security rules from group policy not merged**  
+    CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+  - **Policy rules from group policy not merged**  
+    CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+## Microsoft Defender
+
+- **Run daily quick scan at**  
+  CSP: [Defender/ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053&clcid=0x409)
   
-- **Block malicious site access**  
-  [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) - By default, Microsoft Edge allows users to bypass (ignore) the Microsoft Defender SmartScreen warnings about potentially malicious sites, allowing users to continue to the site. With this policy enabled (set to *Yes*), Microsoft Edge prevents users from bypassing the warnings and blocks them from continuing to the site.  
+   Configure when the daily quick scan runs. By default, the scan run is set to **2 AM**.
 
-  **Default**: Yes
+- **Scheduled scan start time**  
+  
+  By default, this is set to **2 AM**.
 
-- **Block unverified file download**  
-  [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) - By default, Microsoft Edge allows users to bypass (ignore) the Microsoft Defender SmartScreen warnings about potentially malicious files, allowing them to continue downloading unverified files. With this policy enabled (set to *Yes*), users are prevented from bypassing the warnings and can't download unverified files.  
+- **Configure low CPU priority for scheduled scans**  
+  CSP: [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
-  **Default**: Yes
+  -**Yes** (*default*)
+  - **Not configured**
 
-## Windows Hello for Business  
+- **Block Office communication apps from creating child processes**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874499)  
+
+  This ASR rule is controlled via the following GUID: 26190899-1602-49e8-8b27-eb1d0a1ce869.
+  - **Not configured** - The Windows default is restored, is to not block creation of child processes.
+  - **User defined**
+  - **Enable** (*default*) - Office communication applications are blocked from creating child processes.
+  - **Audit mode** - Windows events are raised instead of blocking child processes.
+
+- **Block Adobe Reader from creating child processes**  
+  [Reduce attack surfaces with attack surface reduction rules](https://go.microsoft.com/fwlink/?linkid=853979)  
+
+  - **Not configured** - The Windows default is restored, is to not block creation of child processes.
+  - **User defined**
+  - **Enable** (*default*) - Adobe Reader is blocked from creating child processes.
+  - **Audit mode** - Windows events are raised instead of blocking child processes.
+
+- **Scan incoming email messages**  
+  CSP: [Defender/AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052&clcid=0x409)
+
+  - **Yes** (*default*) - E-mail mailbox and mail files such as PST, DBX, MNX, MIME, and BINHEX are scanned.
+  - **Not configured** - The setting returns to the client default of e-mail files not being scanned.
+
+- **Turn on real-time protection**  
+  CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050&clcid=0x409)
+
+  - **Yes** (*default*) - Real-time monitoring is enforced and the user cannot disable it.
+  - **Not configured** - The setting is returned to client default, which is on, but the user can change it. To disable real-time monitoring, use a custom URI.
+
+- **Number of days (0-90) to keep quarantined malware**  
+  CSP: [Defender/DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055&clcid=0x409)
+
+  Configure the number of days items should be kept in the quarantine folder before being removed. The default is zero (**0**), which results in quarantined files never being removed.
+
+- **Defender system scan schedule**  
+  CSP: [Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
+
+  Schedule on which day Defender scans devices. By default the scan is **User defined** but can be set to *Everyday*, any day of the week, or to have *No scheduled scan*.
+
+- **Additional amount of time (0-50 seconds) to extend cloud protection timeout**  
+  CSP: [Defender/CloudExtendedTimeout](https://go.microsoft.com/fwlink/?linkid=2113940&clcid=0x409)
+
+  Defender Antivirus automatically blocks suspicious files for 10 seconds so it can scan the files in the cloud to make sure they're safe. With this setting, you can add up to 50 additional seconds to this timeout.  By default, the timeout is set to zero (**0**).
+
+- **Scan mapped network drives during a full scan**  
+  CSP: [Defender/AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
+
+  - **Yes** (*default*) - During a full scan, mapped network drives are included.
+  - **Not configured** - The client returns to its default, which disables scanning on mapped network drives.
+
+- **Turn on network protection**  
+  CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
+  
+  - **Yes** (*default*) - Block malicious traffic detected by signatures in the Network Inspection System (NIS).
+  - **Not configured**
+
+- **Scan all downloaded files and attachments**  
+  CSP: [Defender/AllowIOAVProtection](https://go.microsoft.com/fwlink/?linkid=2113934&clcid=0x409)
+
+  - **Yes** (*default*) - All downloaded files and attachments are scanned. The setting is returned to client default, which is on, but the user can change it. To disable this setting, use a custom URI.
+  - **Not configured** - The setting is returned to client default, which is on, but the user can change it. To disable this setting, use a custom URI.
+
+- **Block on access protection**  
+  CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+
+  - **Yes** (*default*)
+  - **Not configured**
+
+- **Scan browser scripts**  
+  CSP: [Defender/AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
+
+  - **Yes** (*default*) - The Microsoft Defender Script Scanning functionality is enforced and the user cannot turn them off.
+  - **Not configured** -  The setting is returned to client default, which is to enable script scanning, however the user can turn it off.
+
+- **Block user access to Microsoft Defender app**  
+  CSP: [Defender/AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)
+
+  - **Yes** (*default*) - The Microsoft Defender User Interface (UI) is inaccessible and notifications are surprised
+  - **Not configured**
+ When set to Yes, the Windows Defender User Interface (UI) will be inaccessible and notifications will be surprised. When set to Not configured, the setting will return to client default in which UI and notifications will be allowed
+
+- **Maximum allowed CPU usage (0-100 percent) per scan**  
+  CSP: [Defender/AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046&clcid=0x409)
+
+  Specify as a percentage the maximum amount of CPU to use for a scan. The default is **50**.
+
+- **Scan type**  
+  CSP: [Defender/ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
+
+  - **User defined**
+  - **Disabled**
+  - **Quick scan** (*default*)
+  - **Full scan**
+
+- **Enter how often (0-24 hours) to check for security intelligence updates**  
+  CSP: [Defender/SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)
+
+  Specify how often to check for updated signatures, in hours. For example, a value of 1 will check each hour. A value of 2 will check every two hours, and so on.
+
+  If no value is defined, devices use the client default of **8** hours.
+
+- **Defender sample submission consent**  
+  CSP: [Defender/SubmitSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not (and if the user has specified never to ask), the UI is launched to ask for user consent (when *Cloud-delivered protection* is set to *Yes*) before sending data.
+
+  - **Send safe samples automatically** (*default*)
+  - **Always prompt**
+  - **Never send**
+  - **Send all samples automatically**
+
+- **Cloud-delivered protection level**  
+  CSP: [CloudBlockLevel](https://go.microsoft.com/fwlink/?linkid=2113942)
+
+  Configure how aggressive Defender Antivirus is in blocking and scanning suspicious files.
+  - **Not configured** (*default*) - Default Defender blocking level.
+  - **High** - Aggressively block unknowns while optimizing client performance, which includes a greater chance of false positives.
+  - **High plus** - Aggressively block unknowns and apply additional protection measures that might impact client performance.
+  - **Zero tolerance** - Block all unknown executable files.
+
+- **Scan archive files**  
+  CSP: [Defender/AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
+
+  - **Yes** (*default*) - Scanning of archive files such as ZIP or CAB files is enforced.
+  - **Not configured** - The setting will be returned back to client default, which is to scan archived files, however the user may disable scanning.
+
+- **Turn on behavior monitoring**  
+  CSP: [Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
+
+  - **Yes** (*default*) - Behavior monitoring is enforced and the user cannot disable it.
+  - **Not configured** - The setting is returned to client default, which is on, but the user can change it. To disable real-time monitoring, use a custom URI.
+  
+- **Scan removable drives during full scan**  
+  CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946&clcid=0x409)
+
+  - **Yes** (*default*) - During a full scan, removable drives (like USB flash drives) are scanned.
+  - **Not configured** - The setting returns to client default, which scans removable drives, however the user can disable this scan.
+  
+- **Scan network files**  
+  CSP: [Defender/AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
+
+  - **Yes** (*default*) - Microsoft Defender scans network files.
+  - **Not configured** - The client returns to its default, which disables scanning of network files.
+  
+- **Defender potentially unwanted app action**  
+  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+
+  Specify the level of detection for potentially unwanted applications (PUAs). Defender alerts users when potentially unwanted software is being downloaded or attempts to install on a device.
+  - **Device default**
+  - **Block** (*default*) - Detected items are blocked, and show in history along with other threats.
+  - **Audit** - Defender detects potentially unwanted applications, but takes no action. You can review information about the applications Defender would have taken action against by searching for events that are created by Defender in the Event Viewer.
+
+- **Turn on cloud-delivered protection**  
+  CSP: [AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+
+  By default, Defender on Windows 10 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
+
+  - **Yes** (*default*) - Cloud-delivered protection is turned on.  Device users can't change this setting.
+  - **Not configured**  - The setting is restored to the system default.
+
+- **Block Office applications from injecting code into other processes**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872974)
+
+  This ASR rule is controlled via the following GUID: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
+  - **Not configured** - The setting returns to the Windows default, which is off.
+  - **Block** (*default*) - Office applications are blocked from injecting code into other processes.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block Office applications from creating executable content**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872975)
+
+  This ASR rule is controlled via the following GUID: 3B576869-A4EC-4529-8536-B80A7769E899
+  - **Not configured** - The setting returns to the Windows default, which is off.
+  - **Block** (*default*) - Office applications are blocked from create executable content.
+  - **Audit mode** - Windows events are raised instead of blocking.
+  
+- **Block JavaScript or VBScript from launching downloaded executable content**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872979)
+
+   This ASR rule is controlled via the following GUID: D3E037E1-3EB8-44C8-A917-57927947596D
+  - **Not configured** - The setting returns to the Windows default, which is off.
+  - **Block** (*default*) - Defender blocks JavaScript or VBScript files that have been downloaded from the Internet from being executed.
+  - **Audit mode** - Windows events are raised instead of blocking.
+  
+- **Enable network protection**  
+  CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
+
+  - **Not configured** -The setting returns to the Windows default, which is disabled.
+  - **User defined**
+  - **Enable** - Network protection is enabled for all users on the system.
+  - **Audit mode** (*default*) - Users aren't blocked from dangerous domains and Windows events are raised instead.
+
+- **Block untrusted and unsigned processes that run from USB**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874502)
+
+  This ASR rule is controlled via the following GUID: b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
+  - **Not configured** - The setting returns to the Windows default, which is off.
+  - **Block** (*default*) - Untrusted and unsigned processes that run from a USB drive are blocked.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block credential stealing from the Windows local security authority subsystem (lsass.exe)**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874499)
+
+  This ASR rule is controlled via the following GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+  - **Not configured** -The setting returns to the Windows default, which is off.
+  - **User defined**
+  - **Enable** (*default*) - Attempts to steal credentials via lsass.exe are blocked.
+  - **Audit mode** - Users aren't blocked from dangerous domains and Windows events are raised instead.
+
+- **Block executable content download from email and webmail clients**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  - **Not configured** - The setting returns to the Windows default, which is off.
+  - **Block** (*default*) - Executable content downloaded from email and webmail clients is blocked.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block all Office applications from creating child processes**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872976)
+
+  This ASR rule is controlled via the following GUID: D4F940AB-401B-4EFC-AADC-AD5F3C50688A
+  - **Not configured** - The setting returns to the Windows default, which is off.
+  - **Block** (*default*)
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block execution of potentially obfuscated scripts (js/vbs/ps)**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872978)
+
+  This ASR rule is controlled via the following GUID: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  - **Not configured** - The setting returns to the Windows default, which is off.
+  - **Block** (*default*) - Defender will block execution of obfuscated scripts.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block Win32 API calls from Office macro**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872977)
+
+  This ASR rule is controlled via the following GUID: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
+  - **Not configured** - The setting returns to the Windows default, which is off.
+  - **Block** (*default*) - Office macro's will be blocked from using Win32 API calls.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+## Microsoft Defender Security Center
+
+- **Block users from editing the Exploit Guard protection interface**  
+  CSP: [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://go.microsoft.com/fwlink/?linkid=2067239)
+
+  - **Yes** (*default*) -  Prevent users from making changes to the exploit protection settings area in the Microsoft Defender Security Center.
+  - **Not configured** - Local users can make changes in the exploit protection settings area.
+
+## Smart Screen
+
+- **Block users from ignoring SmartScreen warnings**  
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+   This setting requires the 'Enforce SmartScreen for apps and files' setting be enabled.
+  - **Yes** (*default*) - SmartScreen will not present an option for the user to disregard the warning and run the app. The warning will be presented, but the user will be able to bypass it.
+  - **Not configured** - Returns the setting to the Windows default, which allows the user override.
+
+- **Require apps from store only**  
+
+  - **Yes** (*default*)
+  - **Not configured**
+
+- **Turn on Windows SmartScreen**  
+  CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
+
+  - **Yes** (*default*) - Enforce the use of SmartScreen for all users.
+  - **Not configured** - Return the setting to Windows default, which is to enable SmartScreen, however users may change this setting. To disable SmartScreen, use a custom URI.
+
+## Windows Hello for Business
 
 For more information, see [PassportForWork CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp) in the Windows documentation.
 
-- **Configure Windows Hello for Business** - *TenantId/Policies/UsePassportForWork*    
-  Windows Hello for Business is an alternative method for signing into Windows by replacing passwords, Smart Cards, and Virtual Smart Cards.  
+- **Block Windows Hello for Business**  
 
+   Windows Hello for Business is an alternative method for signing into Windows by replacing passwords, Smart Cards, and Virtual Smart Cards.
 
-  > [!IMPORTANT]
-  > The options for this setting are reversed from their implied meaning. While reversed, a value of *Yes* does not enable Windows Hello and instead is treated as *Not configured*. When this setting is set to *Not configured*, Windows Hello is enabled on devices that receive this baseline.
-  >
-  > The following descriptions have been revised to reflect this behavior. The reversal of settings will be fixed in a future update to this security baseline.
+  - **Not configured** - Devices device provision Windows Hello for Business, which is the Windows default.
+  - **Disabled** (*default*) - Devices provision Windows Hello for Business.
+  - **Enabled** - Devices do not provision Windows Hello for Business for any user.
 
-  - When set to *Not configured*, Windows Hello is enabled, and the device provisions Windows Hello for Business.
-  - When set to *Yes*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If it's enabled, it remains enabled.
-  <!-- expected behavior 
-  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
-  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
-  -->
+  When set to *Disabled*, you can configure the following settings:
 
-  You cannot disable Windows Hello for Business through this baseline. You can disable Windows Hello for Business when you configure [Windows enrollment](windows-hello.md), or as part of a device configuration profile for [identity protection](identity-protection-configure.md).  
+  - **Lowercase letters in PIN**  
+    - **Not allowed**
+    - **Required**
+    - **Allowed** (*default*)
 
-Windows Hello for Business is an alternative method for signing into Windows by replacing passwords, Smart Cards, and Virtual Smart Cards.  
+  - **Special characters in PIN**
+    - **Not allowed**
+    - **Required**
+    - **Allowed** (*default*)
 
-  If you enable or don't configure this policy setting, the device provisions Windows Hello for Business. If you disable this policy setting, the device doesn't provision Windows Hello for Business for any user.
-
-  Intune doesn't support disabling Windows Hello. Instead, you can configure policy to enable Windows Hello for Business (Yes), or to not configure Windows Hello directly (not configured). When not configured, a device can receive configuration through other policy, which might enable or disable this feature.  
-
-  **Default**: Yes  
-
-- **Require lowercase letters in PIN** - *TenantId/Policies/PINComplexity/LowercaseLetters*  
-  **Default**: Allowed  
-
-- **Require special characters in PIN** - *TenantId/Policies/PINComplexity/SpecialCharacters*  
-  **Default**: Allowed  
-
-- **Require uppercase letters in PIN** - *TenantId/Policies/PINComplexity/UppercaseLetters*   
-  **Default**: Allowed  
-
+  - **Uppercase letters in PIN**
+    - **Not allowed**
+    - **Required**
+    - **Allowed** (*default*)
