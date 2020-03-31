@@ -64,16 +64,25 @@ Enrolled Android devices report to Intune every 8 hours. For example, if a devic
 
 The following tasks can require up to 8 hours to finish: 
 
-| Intune Administrator Console  | Intune Company Portal app for Android  | Intune Company Portal Website  |
-|---------------------------------|--------------------------------------------------|------------------------------------|
-| Full wipe  | Remote device removal  | Device removal (local and remote)  |
-| Selective wipe  | Device reset  | Device reset  |
-| New or updated app deployments  | Installation of available line-of-business apps  | Device passcode reset  |
-| Remote lock  |    |    |
-| Passcode reset  |    |    |
+**Intune console**:
+- Full wipe
+- Selective wipe
+- New or updated app deployments
+- Remote lock
+- Passcode reset
+
+**Intune Company Portal app for Android**:
+- Remote device removal
+- Device reset
+- Installation of available line-of-business apps
+
+**Intune Company Portal website**:
+- Device removal (local and remote)
+- Device reset
+- Device passcode reset
 
 If the device recently enrolled, the compliance, non-compliance, and configuration check-in runs more frequently. For more information on device check-ins, see [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md). 
 
 ## Next steps
 
-- [Add apps](apps-add.md)
+- [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md)
