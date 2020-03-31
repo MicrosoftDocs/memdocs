@@ -378,6 +378,8 @@ When a feature isn't optional, it's installed automatically. It doesn't appear i
 
 When you enable a new feature or pre-release feature, the Configuration Manager hierarchy manager (HMAN) must process the change before that feature becomes available. Processing of the change is often immediate. Depending on the HMAN processing cycle, it can take up to 30 minutes to complete. After the change is processed, restart the console before you can use the feature.
 
+Starting in version 2002,<!--5834830--> when new cloud-based features are available in the Microsoft Endpoint Manager admin center, or other attached cloud services for your on-premises Configuration Manager installation, you can now opt in to these new features in the Configuration Manager console.
+
 ### List of optional features
 
 The following features are optional in the latest version of Configuration Manager:<!--505213-->  
