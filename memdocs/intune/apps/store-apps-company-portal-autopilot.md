@@ -56,9 +56,9 @@ Company Portal (Offline) is chosen to be installed by using the steps below. The
 ## Assign the Company Portal app
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with your admin account. 
-2. Select the **Apps** tab on the right pane.
-3. Under **By platform**, select **Windows**.
-4. Select **Company Portal (Offline)**.
+2. Select the**Apps**tab on the right pane.
+3. Under**By platform**, select**Windows**.
+4. Select**Company Portal (Offline)**.
 5. You must either Wait for the sync schedule to complete or do a manual sync from Microsoft Endpoint Manager admin center.
 6. Assign the Company Portal app as a required app to your selected autopilot device groups.
 
