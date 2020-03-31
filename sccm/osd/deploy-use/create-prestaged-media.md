@@ -148,6 +148,9 @@ The hard drive of the destination computer must be formatted before the prestage
 
     - **Associated management points**: Only for *dynamic media*, select the primary site management points to use, and a priority order for the initial communication.  
 
+        > [!NOTE]  
+        > HTTPS enabled management points will only be displayed when a PKI certificate is specified in Step 6.  
+
 9. On the **Images** page, specify the following options:  
 
     - **Image package**: Specify the OS image to use. For more information, see [Manage OS images](/sccm/osd/get-started/manage-operating-system-images).  
