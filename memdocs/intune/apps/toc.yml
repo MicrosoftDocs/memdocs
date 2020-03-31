@@ -88,6 +88,8 @@
           href: store-apps-company-portal-autopilot.md
         - name: Company Portal app - Download
           href: store-apps-company-portal-app.md
+        - name: Company Portal app - Without GMS
+          href: company-portal-app-without-gms.md          
         - name: Microsoft Edge for Windows 10
           href: apps-windows-edge.md
         - name: Microsoft Edge for macOS
