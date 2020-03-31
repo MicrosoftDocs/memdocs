@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 03/27/2020
+ms.date: 03/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -123,15 +123,15 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2003
 
-- [4261411](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--4261411-->
-- [5907383](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--5907383-->
-- [6250367](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--6250367-->
-- [6488450](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--6488450-->
-- [6518631](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--6518631-->
-- [6521835](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--6521835-->
-- [3180826](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--3180826-->
-- [6448458](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--6448458-->
-- [6452769](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--6452769-->
+- [Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager console](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--5691658-->
+- [Track configuration item remediations](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--4261411-->
+- [Show boundary groups for devices](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--6521835-->
+- [New feedback wizard](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--3180826-->
+- [Improvements to Microsoft Edge Management dashboard](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--5907383-->
+- [Start CMPivot from a single device](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--6518631-->
+- [Query for feedback sent to Microsoft](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--6488450-->
+- [New SDK method for task sequence progress](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--6448458-->
+- [Improvements to OS deployment](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--6452769-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.

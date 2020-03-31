@@ -2,7 +2,7 @@
 title: Technical preview 2003
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2003.
-ms.date: 03/27/2020
+ms.date: 03/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -24,16 +24,15 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2003/1234567.md)] -->
 
-[!INCLUDE [5691658](includes/2003/5691658.md)]
-[!INCLUDE [4261411](includes/2003/4261411.md)]
-[!INCLUDE [5907383](includes/2003/5907383.md)]
-[!INCLUDE [6250367](includes/2003/6250367.md)]
-[!INCLUDE [6488450](includes/2003/6488450.md)]
-[!INCLUDE [6518631](includes/2003/6518631.md)]
-[!INCLUDE [6521835](includes/2003/6521835.md)]
-[!INCLUDE [3180826](includes/2003/3180826.md)]
-[!INCLUDE [6448458](includes/2003/6448458.md)]
-[!INCLUDE [6452769](includes/2003/6452769.md)]
+[!INCLUDE [Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager console](includes/2003/5691658.md)]
+[!INCLUDE [Track configuration item remediations](includes/2003/4261411.md)]
+[!INCLUDE [Show boundary groups for devices](includes/2003/6521835.md)]
+[!INCLUDE [New feedback wizard](includes/2003/3180826.md)]
+[!INCLUDE [Improvements to Microsoft Edge Management dashboard](includes/2003/5907383.md)]
+[!INCLUDE [Start CMPivot from a single device](includes/2003/6518631.md)]
+[!INCLUDE [Query for feedback sent to Microsoft](includes/2003/6488450.md)]
+[!INCLUDE [New SDK method for task sequence progress](includes/2003/6448458.md)]
+[!INCLUDE [Improvements to OS deployment](includes/2003/6452769.md)]
 
 <!--
 ## General known issues
