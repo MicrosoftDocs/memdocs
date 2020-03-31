@@ -12,17 +12,17 @@ ms.custom: include file
 These notices provide important information that can help you prepare for future Intune changes and features.
 
 ### Microsoft Intune support for Windows 10 Mobile ending<!--3544938-->
-Microsoft mainstream support for Windows 10 Mobile ended in December, 2019. As mentioned in this support statement, Windows 10 Mobile users will no longer be eligible to receive new security updates, non-security hotfixes, free assisted support options or online technical content updates from Microsoft. Based on the all-up Mobile OS support, Microsoft Intune will now end support for both the Company Portal for the Windows 10 Mobile app and the Windows 10 Mobile Operating System on May 11, 2020.
+Microsoft mainstream support for Windows 10 Mobile ended in December 2019. As mentioned in this support statement, Windows 10 Mobile users will no longer be eligible to receive new security updates, non-security hotfixes, free assisted support options or online technical content updates from Microsoft. Based on the all-up Mobile OS support, Microsoft Intune will now end support for both the Company Portal for the Windows 10 Mobile app and the Windows 10 Mobile Operating System on May 11, 2020.
 
 #### How does this affect me?
-If you have Windows 10 Mobile devices deployed in your organization, between now and May 11, 2020 you can enroll new devices, add or remove policies and apps, or update any management settings. After May 11, we will stop new enrollments, and eventually remove Windows 10 Mobile management from the Intune UI. Devices will no longer check into the Intune service and we will delete device and policy data.  
+If you have Windows 10 Mobile devices deployed in your organization, between now and May 11, 2020 you can enroll new devices, add, or remove policies and apps, or update any management settings. After May 11, we will stop new enrollments, and eventually remove Windows 10 Mobile management from the Intune UI. Devices will no longer check into the Intune service and we will delete device and policy data.  
 
 #### What do I need to do to prepare for this change?
 You can check your Intune reporting to see what devices or users may be affected. Go to **Devices** > **All devices** and filter by OS. You can add in additional columns to help identify who in your organization has devices running Windows 10 Mobile. Request that your end users upgrade their devices or discontinue using the devices for corporate access.
 
 
 ### Updated support statement for 'Adobe Acrobat Reader for Intune' mobile app<!--5746776-->
-We shared in MC188653 at the end of August, that the Adobe Acrobat Reader for Intune mobile app was reaching end-of-life on December 1, 2019 and that Adobe was planning on supporting Intune’s app protection policies within their main Acrobat Reader app. Since then, we received customer feedback that we needed to provide more time to continue allowing IT admins to target, and end users to begin using Adobe Acrobat Reader for Intune. Given the high usage of Adobe Acrobat Reader for Intune on end user devices and its importance in enterprise scenarios, we want to make sure any experience meets your organization's app protection needs. 
+We shared in MC188653 at the end of August, that the Adobe Acrobat Reader for Intune mobile app was reaching end-of-life on December 1, 2019 and that Adobe was planning on supporting Intune’s app protection policies within their main Acrobat Reader app. Since then, we received customer feedback that we needed to provide more time to continue allowing IT admins to target, and end users to begin using Adobe Acrobat Reader for Intune. Given the high usage of Adobe Acrobat Reader for Intune on end-user devices and its importance in enterprise scenarios, we want to make sure any experience meets your organization's app protection needs. 
 
 While we still recommend targeting the general Acrobat Reader mobile app in your policies since the Acrobat Reader mobile app supports App Protection Policies and has integrated the Intune SDK, the Adobe Acrobat Reader for Intune app will continue to be supported until March 31, 2020. 
 
@@ -36,7 +36,7 @@ Let your end users and helpdesk know of this change. You can use the [Company Po
 https://helpx.adobe.com/acrobat/kb/intune-app-end-of-life.html
 
 ### Take Action: Use Microsoft Edge for your Protected Intune Browser Experience<!--5728447-->
-As we have been sharing over the past year, Microsoft Edge mobile supports the same set of management features as the Managed Browser, while providing a much-improved end user experience. To make way for the robust experiences provided in Microsoft Edge, we will be retiring the Intune Managed Browser. Starting on January, 27, 2020, Intune will no longer support the Intune Managed Browser.  
+As we have been sharing over the past year, Microsoft Edge mobile supports the same set of management features as the Managed Browser, while providing a much-improved end-user experience. To make way for the robust experiences provided in Microsoft Edge, we will be retiring the Intune Managed Browser. Starting on January, 27, 2020, Intune will no longer support the Intune Managed Browser.  
 
 #### How does this affect me? 
 Starting on February 1, 2020, the Intune Managed Browser will no longer be available in the Google Play Store or the iOS App Store. At this point, you will still be able to target new app protection policies to the Intune Managed Browser, though new users won't be able to download the Intune Managed Browser app. In addition, on iOS, new web clips that are pushed down to MDM-enrolled device will open in Microsoft Edge instead of the Intune Managed Browser.  
