@@ -47,7 +47,7 @@ Before you can access school or work resources, your organization might require 
 
 Follow these steps to encrypt your device. Your device may restart several times. 
 
-The name and location of the encryption option will vary depending on your device manufacturer and version. 
+The name and location of the encryption option will vary depending on your device manufacturer and Android version. 
 
 1. Open the **Settings** app.
 2. Type **security** or **encrypt** in the app's search bar to find related settings.
