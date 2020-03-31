@@ -2,7 +2,7 @@
 title: Enhanced HTTP
 titleSuffix: Configuration Manager
 description: Use modern authentication to secure client communication without the need for PKI certificates.
-ms.date: 05/28/2019
+ms.date: 03/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -37,7 +37,10 @@ All other client communication is over HTTP. Enhanced HTTP isn't the same as ena
 > PKI certificates are still a valid option for customers with the following requirements:  
 >
 > - All client communication is over HTTPS  
-> - Advanced control of the signing infrastructure  
+> - Advanced control of the signing infrastructure
+>
+> Also, If you're already using PKI, the PKI cert bound in IIS will be used even if enhanced HTTP is turned on.
+
 
 
 ## <a name="bkmk_scenario"></a> Scenarios
