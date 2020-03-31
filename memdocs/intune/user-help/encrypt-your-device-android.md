@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 03/31/2020
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -38,7 +38,7 @@ Before you can access school or work resources, your organization might require 
 
 * [Encrypt your device](#encrypt-device)
 * [Enable secure startup](#enable-secure-startup)
-* [Set a startup passcode or PIN](#set-startup-passcode-or-pin)  
+* [Set startup passcode, PIN, or other authentication method](#set-startup-passcode)  
 
 > [!Note]
 > Certain Android devices from Huawei, Vivo, and OPPO can't be encrypted. For more information, see [Device encrypted but app says otherwise](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
@@ -52,14 +52,16 @@ The name and location of the encryption option will vary depending on your devic
 1. Open the **Settings** app.
 2. Type **security** or **encrypt** in the app's search bar to find related settings.
 3. Tap the option to encrypt your device. Follow the onscreen instructions.  
-4. When prompted, set a lock screen password or PIN. 
+4. When prompted, set a lock screen password, PIN, or other authentication method (if allowed by your organization). 
 5. To recheck settings, open the Company Portal or Microsoft Intune app.
     * Company Portal users: Select your device and tap **Check device settings**. 
     * Microsoft Intune users: You'll have to wait until the page updates, but when it does, your encryption status should change to compliant. 
 
 ## Enable secure startup
 
-Your organization may require you to enable secure startup as part of their encryption policy. This feature further protects your device by requiring a password or PIN to be entered before the phone starts up. The name and location of the secure startup option will vary depending on your device manufacturer and version. On some devices, this setting may be called **Strong protection**. 
+Your organization may require you to enable secure startup as part of their encryption policy. This feature further protects your device by requiring a password or PIN to be entered before the phone starts up. You many have additional authentication options but it will vary depending on what your organization allows. 
+
+The name and location of the secure startup option will vary depending on your device manufacturer and Android version. On some devices, this setting may be called **Strong protection**. 
 
 1. Open the **Settings** app.
 2. Type **secure startup** in the app's search bar.
@@ -70,8 +72,8 @@ Your organization may require you to enable secure startup as part of their encr
     * Microsoft Intune users: You'll have to wait until the page updates, but when it does, your encryption status should change to compliant.  
 
 
-## Set startup passcode or PIN 
-When you [encrypt your device](#encrypt-device) and [enable secure startup](#enable-secure-startup), you'll be prompted to set your device PIN or password. No further steps are needed. 
+## Set startup passcode   
+When you [encrypt your device](#encrypt-device) and [enable secure startup](#enable-secure-startup), you'll be prompted to set your device PIN, password, or other authentication method (if allowed by your organization). No further steps are needed. 
 
 To choose or change the lock screen type:
 
@@ -89,7 +91,7 @@ To choose or change the lock screen type:
 **Issue**: You see a message saying that you still need to encrypt your device.  
 
 **Things to try**:
-   *  Make sure you've set a PIN or password on your device. 
-   * [Enable secure startup](#enable-secure-startup)
+   *  [Set a lock screen](#set-startup-passcode) on your device. 
+   * [Enable secure startup](#enable-secure-startup).
 
 Still need help? Contact your company support (check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for contact information), or write the <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android team</a>.  
