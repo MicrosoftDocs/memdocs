@@ -37,8 +37,6 @@ Therefore, to avoid such reduced functionality, we advise against enrolling new 
 
 For the same reasons, we also recommend that you migrate devices off of device administrator management if the devices are going to update to Android 10. 
 
-For more information about Intune support for Android device administrator support, see the [Notices section](../fundamentals/whats-new.md#decreasing-support-for-android-device-administrator).
-
 If you still decide to have users enroll their Android devices with device administrator management, continue to the next section.  
 
 For more information about Google's Android Enterprise features, see these articles:

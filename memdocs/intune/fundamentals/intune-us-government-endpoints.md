@@ -55,6 +55,7 @@ The following tables list the ports and services that the Intune client accesses
 - Azure portal: https:\//portal.azure.us/ 
 - Office 365: https:\//portal.office365.us/ 
 - Intune Company Portal: https:\//portal.manage.microsoft.us/ 
+- Microsoft Endpoint Manager admin center: https:\//endpoint.microsoft.us/
 
 ## Partner service endpoints that Intune depends on:
 - AAD Sync service: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc
