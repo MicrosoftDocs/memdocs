@@ -2,7 +2,7 @@
 title: Manage settings for software updates
 titleSuffix: "Configuration Manager"
 description: "Learn about the client settings that are appropriate for software updates at your site after you install the software update point."
-ms.date: 03/26/2017
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -119,7 +119,7 @@ On the **Maximum Run Time** tab, you can view and configure the following settin
 - **Maximum run time**: Specifies the maximum number of minutes allotted for a software update installation to complete before the installation is no longer monitored by Configuration Manager. This setting is also used to determine whether there is enough available time remaining to install the update before the end of a maintenance window. The default setting is 60 minutes for service packs. For other software update types, the default is 10 minutes if you did a fresh install of Configuration Manager version 1511 or higher and 5 minutes when you upgraded from a previous version. Values can range from 5 to 9999 minutes.  
 
 > [!IMPORTANT]  
->  Be sure to set the maximum run time value smaller than the configured maintenance window time. Otherwise, the software update installation will never initiate.  
+>  Be sure to set the maximum run time value smaller than the configured maintenance window time or increase the maintenance window time to a value greater than the maximum run time. Otherwise, the software update installation will never initiate.  
 
 ####  <a name="BKMK_SetCustomSeverity"></a> Set custom severity  
 In the properties for a software update, you can use the **Custom Severity** tab to configure custom severity values for the software updates. This may be necessary if the predefined severity values do not meet your needs. The custom values are listed in the **Custom Severity** column in the Configuration Manager console. You can sort the software updates by the defined custom severity values and can also create queries and reports that can filter on these values. You can configure this setting only on the central administration site or stand-alone primary site.  
