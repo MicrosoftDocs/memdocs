@@ -75,7 +75,8 @@ When you use multiple security baselines, review the settings in each one to ide
 In addition, security baselines often manage the same settings you might set with [device configuration profiles](../configuration/device-profiles.md) or other types of policy. Therefore, remain aware of and consider your additional policies and profiles for settings when seeking to avoid or resolve conflicts.
 
 Use the information at the following links to help identify and resolve conflicts:
-- [Troubleshoot policies and profiles in Intune](https://docs.microsoft.com/en-us/mem/intune/configuration/troubleshoot-policies-in-microsoft-intune)
+
+- [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
 - [Monitor your security baselines](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
 
 ## Available security baselines
