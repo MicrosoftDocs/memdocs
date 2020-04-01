@@ -70,6 +70,8 @@
   items:
   - name: Plan deployment
     items:
+    - name: New planning guide
+      href: intune-planning-guide.md
     - name: Planning guide
       href: planning-guide.md
       items:
