@@ -2,12 +2,10 @@
 title: Deploy BitLocker management
 titleSuffix: Configuration Manager
 description: Deploy the BitLocker management agent to Configuration Manager clients and the recovery service to management points
-ms.date: 11/29/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-
-
 ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
@@ -161,7 +159,7 @@ Configuration Manager stores the recovery information in the site database. With
 If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), you can seamlessly migrate management to Configuration Manager. When you deploy BitLocker management policies in Configuration Manager, clients automatically upload recovery keys and packages to the Configuration Manager recovery service.
 
 > [!IMPORTANT]
-> If existing functionality of stand-alone MBAM is required when migrating from stand-alone MBAM to Configuration Manager BitLocker Management, do not reuse stand-alone MBAM servers or components with Configuration Manager BitLocker Management. Doing so will cause functionality of stand-alone MBAM to stop working when Configuration Manager BitLocker Management installs its components on those servers. This includes running the MBAMWebSiteInstaller.ps1 script to setup the BitLocker portals. Instead use new and seperate servers when setting up Configuration Manager BitLocker Management.
+> When you migrate from stand-alone MBAM to Configuration Manager BitLocker management, if you require existing functionality of stand-alone MBAM, don't reuse stand-alone MBAM servers or components with Configuration Manager BitLocker management. If you reuse these servers, stand-alone MBAM will stop working when Configuration Manager BitLocker management installs its components on those servers. Don't run the MBAMWebSiteInstaller.ps1 script to set up the BitLocker portals on stand-alone MBAM servers. When you set up Configuration Manager BitLocker management, use separate servers.
 
 ### Group policy
 
