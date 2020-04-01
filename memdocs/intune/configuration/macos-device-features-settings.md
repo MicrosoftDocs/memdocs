@@ -87,6 +87,9 @@ To add AirPrinter servers, you need the IP address of the printer, the resource 
 
 - **Hide from user configuration**: **Hide** doesn't show the app in the Users & Groups login items list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS shows item you start at login in the Users & Groups login items list with the hide option unchecked.
 
+  > [!NOTE]
+  > This setting is rolling out to all customers over the next couple of weeks.
+
 ## Login window
 
 ### Settings apply to: Device enrollment and Automated device enrollment
