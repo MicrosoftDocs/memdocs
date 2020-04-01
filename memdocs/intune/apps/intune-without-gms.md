@@ -41,7 +41,7 @@ If Google Play isn't available, Android devices can download the [Microsoft In
 
 ### For users in mainland China 
 
-Because the Google Play Store is currently not available in mainland China, Android devices must obtain apps from Chinese app marketplaces. For more information, see [Install the Company Portal app in mainland China](../user-help/install-intune-company-portal-android-china.md).
+Because the Google Play Store is currently not available in mainland China, Android devices must obtain apps from Chinese app marketplaces. For more information, see [Install the Company Portal app in mainland China](../user-help/install-company-portal-android-china.md).
 
 ## Limitations of Intune device administrator management when GMS is unavailable 
 
