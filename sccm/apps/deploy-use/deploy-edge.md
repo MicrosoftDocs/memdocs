@@ -2,7 +2,7 @@
 title: Deploy and update Microsoft Edge, version 77 and later
 titleSuffix: Configuration Manager
 description: How to deploy and update Microsoft Edge, version 77 and later with Configuration Manager
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual

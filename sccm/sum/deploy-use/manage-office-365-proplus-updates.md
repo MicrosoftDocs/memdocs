@@ -5,7 +5,7 @@ description: "Configuration Manager synchronizes Office 365 client updates from 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum

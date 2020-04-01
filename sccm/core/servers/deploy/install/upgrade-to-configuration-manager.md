@@ -2,7 +2,7 @@
 title: Upgrade to current branch
 titleSuffix: Configuration Manager
 description: Learn the steps for running a successful in-place upgrade from a site and hierarchy that runs System Center 2012 Configuration Manager.
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

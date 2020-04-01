@@ -2,7 +2,7 @@
 title: Admin service FAQ
 titleSuffix: Configuration Manager
 description: Frequently asked questions (FAQ) about the Configuration Manager administration service
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual

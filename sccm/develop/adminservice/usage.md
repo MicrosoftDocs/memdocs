@@ -2,7 +2,7 @@
 title: How to use the admin service
 titleSuffix: Configuration Manager
 description: Learn how you can use the administration service in custom scenarios.
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: Token-based authentication for CMG
 titleSuffix: Configuration Manager
 description: Register a client on the internal network for a unique token or create a bulk registration token for internet-based devices.
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual

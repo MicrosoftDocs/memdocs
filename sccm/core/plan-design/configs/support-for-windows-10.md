@@ -2,7 +2,7 @@
 title: Support for Windows 10
 titleSuffix: Configuration Manager
 description: Learn about the Windows 10 versions that are supported as clients or for OSD with Configuration Manager
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

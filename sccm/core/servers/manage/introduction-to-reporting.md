@@ -2,7 +2,7 @@
 title: Introduction to reporting
 titleSuffix: Configuration Manager
 description: Learn about the set of tools and resources available to you for managing reporting in Configuration Manager.
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

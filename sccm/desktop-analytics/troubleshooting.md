@@ -2,7 +2,7 @@
 title: Troubleshoot Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

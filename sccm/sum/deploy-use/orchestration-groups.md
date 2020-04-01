@@ -2,7 +2,7 @@
 title: Orchestration Groups
 titleSuffix: Configuration Manager
 description: Create orchestration groups and deploy updates to them. 
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual

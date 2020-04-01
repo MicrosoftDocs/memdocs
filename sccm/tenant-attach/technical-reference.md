@@ -2,7 +2,7 @@
 title: Troubleshoot device action
 titleSuffix: Configuration Manager
 description: "Troubleshoot device actions technical reference for Configuration Manager"
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
