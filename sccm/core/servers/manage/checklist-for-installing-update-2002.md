@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2002.
 ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 2993032a-1204-4bd8-b5af-17a980bb0649
 author: mestew
