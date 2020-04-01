@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -69,7 +69,7 @@ You must download an external tool, mark the downloaded tool as an executable, a
     - `IntuneAppUtil -h`<br>
     This command will show usage information for the tool.
     
-    - `IntuneAppUtil -c <source_file> -o <output_file> [-v]`<br>
+    - `IntuneAppUtil -c <source_file> -o <folder_path> [-v]`<br>
     This command will wrap *.pkg* LOB app file to a *.intunemac* file.
     
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
