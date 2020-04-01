@@ -160,6 +160,9 @@ Configuration Manager stores the recovery information in the site database. With
 
 If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), you can seamlessly migrate management to Configuration Manager. When you deploy BitLocker management policies in Configuration Manager, clients automatically upload recovery keys and packages to the Configuration Manager recovery service.
 
+> [!IMPORTANT]
+> If existing functionality of stand-alone MBAM is required when migrating from stand-alone MBAM to Configuration Manager BitLocker Management, do not reuse stand-alone MBAM servers or components with Configuration Manager BitLocker Management. Doing so will cause functionality of stand-alone MBAM to stop working when Configuration Manager BitLocker Management installs its components on those servers. This includes running the MBAMWebSiteInstaller.ps1 script to setup the BitLocker portals. Instead use new and seperate servers when setting up Configuration Manager BitLocker Management.
+
 ### Group policy
 
 - The BitLocker management settings are fully compatible with MBAM group policy settings. If devices receive both group policy settings and Configuration Manager policies, configure them to match.
