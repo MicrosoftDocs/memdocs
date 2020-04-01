@@ -133,8 +133,8 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
     - For HTTP communications, select **Create self-signed media certificate**. Then specify the start and expiration date for the certificate.  
     
-     > [!NOTE]  
-     > If you select this option HTTPS management points will not be available for selection on the **Boot image** page of this wizard.
+      > [!NOTE]  
+      > If you select this option HTTPS management points will not be available for selection on the **Boot image** page of this wizard.
 
     - For HTTPS communications, select **Import PKI certificate**. Then specify the certificate to import and its password.  
 
