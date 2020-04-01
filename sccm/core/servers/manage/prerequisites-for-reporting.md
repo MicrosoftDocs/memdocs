@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Understand various dependencies that impact your use of reporting in Configuration Manager.
 ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 9cc508a5-5023-4833-b776-ae9a6971138f
 author: aczechowski

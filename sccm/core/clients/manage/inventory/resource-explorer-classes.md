@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: "Shows the classes that appear in Resource Explorer"
 ms.date: 11/12/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 
 

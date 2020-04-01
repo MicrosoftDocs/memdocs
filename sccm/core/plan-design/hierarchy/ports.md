@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
 ms.date: 11/19/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski

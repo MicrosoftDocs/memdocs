@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics production group.
 ms.date: 06/14/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about what's new in the latest update for Configuration Manager.
 ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
 author: mestew

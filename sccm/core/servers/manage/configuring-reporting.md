@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: How to set up reporting in your Configuration Manager hierarchy, including information about SQL Server Reporting Services.
 ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski

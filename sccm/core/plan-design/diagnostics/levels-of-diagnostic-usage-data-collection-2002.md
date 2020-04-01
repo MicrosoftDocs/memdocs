@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 2002.
 ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 264ea96f-f26a-4fb7-a23f-ecf36054e54b
 author: aczechowski

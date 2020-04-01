@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Configure alerts, and use the status system to remain informed about the state of your Configuration Manager deployment."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
 author: mestew

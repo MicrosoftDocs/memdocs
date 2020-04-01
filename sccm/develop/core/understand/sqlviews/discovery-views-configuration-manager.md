@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: System resource objects, which include any resources that were discovered on the network.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
 
 

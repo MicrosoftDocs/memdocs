@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about how to use the CMTrace tool to view log files for Configuration Manager.
 ms.date: 07/26/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 6a4a3290-5228-4871-918a-554aa1c20834
 author: mestew

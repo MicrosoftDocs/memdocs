@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
 ms.date: 03/12/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the set of tools and resources available to you for managing reporting in Configuration Manager.
 ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski

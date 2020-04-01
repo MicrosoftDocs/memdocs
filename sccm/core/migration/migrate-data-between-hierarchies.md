@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn how to transfer data from a source hierarchy to a Configuration Manager destination hierarchy.
 ms.date: 11/05/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: cf014eb0-f8c2-4d37-b8d7-368d63a10b89
 author: aczechowski

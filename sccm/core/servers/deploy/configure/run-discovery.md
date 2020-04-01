@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Read an overview of the discovery process and discovery data records."
 ms.date: 02/8/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 30844519-ce14-456f-bfb8-4318b578e9f6
 author: mestew

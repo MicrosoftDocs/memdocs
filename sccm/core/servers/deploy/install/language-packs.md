@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the language support available in Configuration Manager.
 ms.date: 06/29/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: mestew

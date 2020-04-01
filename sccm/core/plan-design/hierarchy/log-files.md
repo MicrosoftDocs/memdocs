@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski

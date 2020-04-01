@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use boundaries and boundary groups to define network locations and accessible site systems for devices you manage.
 ms.date: 06/18/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 54aa20d5-791e-4416-9db4-5aaea472c0b7
 author: mestew

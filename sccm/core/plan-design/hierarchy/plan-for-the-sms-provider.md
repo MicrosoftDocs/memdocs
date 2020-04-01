@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the SMS Provider site system role in Configuration Manager.
 ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 author: aczechowski

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Understand Configuration Manager site system roles and how to add them to extend the functionality and capacity of your site.
 ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: b90de2d9-494e-43ad-b269-c8ed589f37d3
 author: mestew

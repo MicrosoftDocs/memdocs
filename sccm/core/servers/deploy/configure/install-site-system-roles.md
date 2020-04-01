@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Add site system roles to an existing or new site system server in the site.
 ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
 author: mestew

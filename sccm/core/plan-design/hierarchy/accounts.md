@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL objects used in Configuration Manager.
 ms.date: 10/23/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski

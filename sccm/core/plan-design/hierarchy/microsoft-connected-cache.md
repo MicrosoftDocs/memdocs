@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization
 ms.date: 03/20/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski

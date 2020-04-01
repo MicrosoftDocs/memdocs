@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Identify the changes and new capabilities in Configuration Manger versus System Center 2012 Configuration Manager.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
 author: mestew

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn which Windows and networking features Configuration Manager supports.
 ms.date: 02/19/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
 author: mestew

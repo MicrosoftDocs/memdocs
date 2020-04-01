@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data that Configuration Manager collects
 ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: 3c46bdb2-5bda-47c8-b5f4-9365a4b3521c

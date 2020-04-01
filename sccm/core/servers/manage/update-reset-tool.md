@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Use the update reset tool for in-console updates for Configuration Manager."
 ms.date: 07/31/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 25fa89d6-7e47-45a6-8f4e-70b77560fba6
 author: mestew

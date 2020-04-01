@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Determine the number of site system roles and sites that you'll need to support the devices in your environment.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew

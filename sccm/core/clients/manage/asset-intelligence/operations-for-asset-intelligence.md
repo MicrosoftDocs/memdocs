@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Do common Asset Intelligence tasks in Configuration Manager."
 ms.date: 08/30/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: e8159bd9-5c2b-4d25-82f9-78fcfd732ba9
 author: mestew

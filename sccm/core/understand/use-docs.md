@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn tips on using the Configuration Manager technical documentation library.
 ms.date: 06/20/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski

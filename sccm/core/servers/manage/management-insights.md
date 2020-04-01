@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the management insights functionality available in the Configuration Manager console.
 ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew

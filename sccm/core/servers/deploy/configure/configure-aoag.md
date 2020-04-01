@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Set up and manage SQL Server Always On availability groups with Configuration Manager
 ms.date: 09/05/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 7e4ec207-bb49-401f-af1b-dd705ecb465d
 author: mestew

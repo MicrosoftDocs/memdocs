@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1910 of Configuration Manager current branch.
 ms.date: 01/22/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud
 ms.date: 03/20/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew

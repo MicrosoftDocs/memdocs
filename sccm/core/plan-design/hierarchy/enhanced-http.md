@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use modern authentication to secure client communication without the need for PKI certificates.
 ms.date: 03/28/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski

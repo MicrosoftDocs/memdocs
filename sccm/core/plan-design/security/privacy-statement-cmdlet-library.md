@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about how Microsoft collects and uses data related to the Configuration Manager cmdlets
 ms.date: 01/3/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: bec00fb4-1ac0-4e49-b330-0871b3722459
 author: aczechowski

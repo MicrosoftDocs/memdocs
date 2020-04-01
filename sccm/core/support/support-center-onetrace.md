@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: OneTrace is a new log viewer with Support Center that has improvements over CMTrace.
 ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 4cde43d1-9b09-4601-b389-0776de451b4e
 author: aczechowski

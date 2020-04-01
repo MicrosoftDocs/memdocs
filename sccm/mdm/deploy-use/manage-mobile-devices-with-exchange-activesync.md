@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Manage mobile devices with the Exchange Server connector in Configuration Manager.
 ms.date: 12/31/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-hybrid
+ms.technology: configmgr-mdm
 ms.topic: conceptual
 ms.assetid: aba688d9-fd5b-4c42-8cb4-f7e1b161ef50
 author: aczechowski

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Consider the site database and the site database server role as you plan your Configuration Manager hierarchy."
 ms.date: 03/08/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 author: aczechowski

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
 ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: mestew

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 1806.
 ms.date: 05/13/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: a0287beb-70a9-4b57-a627-e7bfba27fd3b
 author: aczechowski

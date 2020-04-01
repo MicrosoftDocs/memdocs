@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Review the Configuration Manager version history, and learn about the phases of service offered.
 ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
 author: mestew

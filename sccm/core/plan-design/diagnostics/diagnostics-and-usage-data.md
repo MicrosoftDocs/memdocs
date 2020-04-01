@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the diagnostics and usage data that Configuration Manager collects about itself.
 ms.date: 12/23/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 88ac4e55-d47b-4c94-b9c3-704c6a48b845
 author: aczechowski

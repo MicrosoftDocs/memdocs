@@ -4,7 +4,7 @@ titleSuffix: Microsoft Deployment Toolkit
 description: A quickstart guide for Microsoft Deployment Toolkit (MDT) lite-touch installation (LTI)
 ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.technology: configmgr-mdt
 ms.topic: article
 ms.assetid: 21bedd68-e925-46e0-a540-df8c0aba2d6c
 author: aczechowski  

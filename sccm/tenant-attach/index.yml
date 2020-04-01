@@ -9,7 +9,7 @@ metadata:
   titleSuffix: Configuration Manager
   description: Upload your Configuration Manager devices to the cloud service and take actions on them.
   ms.product: configuration-manager
-  ms.technology: configmgr-other
+  ms.technology: configmgr-core
   ms.topic: landing-page
   author: mestew
   ms.author: mstewart

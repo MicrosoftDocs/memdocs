@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the requirements for a Configuration Manager site system in an Active Directory domain.
 ms.date: 10/22/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 8c5a13f8-42d5-4898-b7b6-e594dae8b335
 author: mestew

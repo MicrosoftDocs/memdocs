@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn the steps for running a successful in-place upgrade from a site and hierarchy that runs System Center 2012 Configuration Manager.
 ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
 author: mestew
