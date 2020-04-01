@@ -74,6 +74,9 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 - To integrate the BitLocker recovery service in Configuration Manager requires a HTTPS-enabled management point. On the properties of the management point, the **Client connections** setting must be **HTTPS**.
 
     > [!NOTE]
+    > For sites that have more than one management point, all management points at the site that a BitLocker managed client could potentially talk to need to be HTTPS.
+
+    > [!NOTE]
     > In version 1910, it doesn't support Enhanced HTTP.
 
 - To use the BitLocker management reports, install the reporting services point site system role. For more information, see [Configure reporting](/configmgr/core/servers/manage/configuring-reporting).
