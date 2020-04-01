@@ -130,6 +130,8 @@
   items:
   - name: BitLocker management
     items:
+    - name: Settings reference
+      href: tech-ref/bitlocker/settings.md
     - name: Troubleshoot BitLocker
       href: tech-ref/bitlocker/troubleshoot.md
     - name: BitLocker event logs

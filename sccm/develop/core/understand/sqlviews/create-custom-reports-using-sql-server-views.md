@@ -18,7 +18,7 @@ manager: dougeby
 
 Configuration Manager queries SQL Server views in the Configuration Manager site database to retrieve the information that is displayed in reports. The Configuration Manager site database contains a large collection of information about the network, computers, users, user groups, and many other components of the computing environment. The database also contains objects that represent Configuration Manager operations, such as deployments, software updates, configuration baselines, reports, and status messages. Configuration Manager administrators need to understand the different categories of the SQL views, what information is stored in each view, and how the SQL views can be joined to one another to create reports that return the required information. Because Configuration Manager queries and collections retrieve information from Windows Management Instrumentation (WMI) instead of Configuration Manager SQL views, it is also helpful to know how the SQL view schema is related to the WMI schema.
 
-This documentation assumes that you have a basic understanding of Configuration Manager and SQL statements, that you have a working Configuration Manager infrastructure in place, and that you have a basic understanding of Configuration Manager reports. For more information about creating reports in Configuration Manager, see  [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting). For more information about how to write basic SQL statements, see your SQL Server documentation.
+This documentation assumes that you have a basic understanding of Configuration Manager and SQL statements, that you have a working Configuration Manager infrastructure in place, and that you have a basic understanding of Configuration Manager reports. For more information about creating reports in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting). For more information about how to write basic SQL statements, see your SQL Server documentation.
 
 This documentation includes an overview of the Configuration Manager SQL view schema and SQL views, an overview of the existing reports and associated reporting procedures, sample SQL statements for each Configuration Manager SQL view category, exercises for creating custom reports, an overview for writing report SQL statements, and an overview of the Configuration Manager Provider WMI schema.
 
@@ -26,7 +26,7 @@ This documentation includes an overview of the Configuration Manager SQL view sc
 
 This document was created using Microsoft SQL Server 2012, Report Builder 3.0 and Configuration Manager. The available SQL views, options, and commands might vary depending on the version of each product you are using. For more information, see the documentation for the products you are using.
 
-## What’s new for reporting in Configuration Manager
+## What's new for reporting in Configuration Manager
 
 This section lists the changes that have been made since Configuration Manager 2007 for Configuration Manager reporting.
 
@@ -54,7 +54,7 @@ This section lists the changes that have been made since Configuration Manager 2
 
 ## Changes made to reporting in Configuration Manager
 
-- Configuration Manager reports are now fully enabled for role-based administration. The data for all reports included with Configuration Manager is filtered based on the permissions of the administrative user who runs the report. Administrative users with specific roles can only view information defined for their roles. For more information, see the [Planning for Role-Based Administration](/sccm/core/servers/manage/planning-for-reporting#BKMK_RoleBaseAdministration) for Reports section in the  Planning for Reporting in Configuration Manager article in the Configuration Manager Documentation Library.
+- Configuration Manager reports are now fully enabled for role-based administration. The data for all reports included with Configuration Manager is filtered based on the permissions of the administrative user who runs the report. Administrative users with specific roles can only view information defined for their roles. For more information, see the [Planning for Role-Based Administration](/sccm/core/servers/manage/planning-for-reporting#plan-for-role-based-administration) for Reports section in the  Planning for Reporting in Configuration Manager article in the Configuration Manager Documentation Library.
 
 ## In this section
 

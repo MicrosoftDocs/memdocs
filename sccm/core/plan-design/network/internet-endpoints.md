@@ -2,12 +2,10 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 08/30/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-
-
 ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
@@ -32,6 +30,8 @@ Other Configuration Manager features may require additional endpoints from the s
 
 > [!TIP]  
 > The service connection point uses the Microsoft Intune service when it connects to `go.microsoft.com` or `manage.microsoft.com`. There's a known issue in which the Intune connector experiences connectivity issues if the Baltimore CyberTrust Root Certificate isn't installed, is expired, or is corrupted on the service connection point. For more information, see [KB 3187516: Service connection point doesn't download updates](https://support.microsoft.com/help/3187516).  
+
+Starting in version 2002, if the Configuration Manager site fails to connect to required endpoints for a cloud service, it raises a critical status message ID 11488. When it can't connect to the service, the SMS_SERVICE_CONNECTOR component status changes to critical. View detailed status in the [Component Status](/configmgr/core/servers/manage/use-alerts-and-the-status-system#BKMK_MonitorSystemStatus) node of the Configuration Manager console.<!-- 5566763 -->
 
 ### <a name="bkmk_scp-updates"/> Updates and servicing
 
@@ -74,16 +74,13 @@ For more information on this function, see [Configure Azure services for use wit
 
 - `management.azure.com`  
 
-
 ## Co-management
 
 If you enroll Windows 10 devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](https://docs.microsoft.com/intune/intune-endpoints).
 
-
 ## Microsoft Store for Business
 
 If you integrate Configuration Manager with the [Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business), make sure the service connection point and targeted devices can access the cloud service. For more information, see [Microsoft Store for Business proxy configuration](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
-
 
 ## <a name="bkmk_cloud"></a> Cloud services
 
@@ -119,7 +116,6 @@ For Azure AD user discovery, the **service connection point** needs access to:
 The cloud management point (CMG) connection point site system supports using a web proxy. For more information on configuring this role for a proxy, see [Proxy server support](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). The CMG connection point only needs to connect to the CMG service endpoints. It doesn't need access to other Azure endpoints.
 
 For more information on the CMG, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
-
 
 ## <a name="bkmk_sum"></a> Software updates
 
@@ -166,7 +162,6 @@ You might need to add endpoints to a firewall that's between two site systems in
 
 - `https://<FQDN for software update point on parent site>`  
 
-
 ## Manage Office 365
 
 If you use Configuration Manager to deploy and update Office 365, allow the following endpoints:
@@ -176,7 +171,6 @@ If you use Configuration Manager to deploy and update Office 365, allow the foll
 - `officecdn.microsoft.com` to synchronize the software update point for Office 365 client updates
 
 - `config.office.com` to create custom configurations for Office 365 deployments
-
 
 ## Configuration Manager console
 
@@ -207,16 +201,13 @@ If you use the **Geographical View**, allow access to the following endpoint:
 
 - `http://maps.bing.com`
 
-
 ## Desktop Analytics
 
 For more information on the required endpoints for the Desktop Analytics cloud service, see [Enable data sharing](/sccm/desktop-analytics/enable-data-sharing#endpoints).
 
-
 ## Microsoft public IP addresses
 
 For more information on the Microsoft IP address ranges, see [Microsoft Public IP Space](https://www.microsoft.com/download/details.aspx?id=53602). These addresses update regularly. There's no granularity by service, any IP address in these ranges could be used.
-
 
 ## See also
 

@@ -2,7 +2,7 @@
 title: Current branch versions
 titleSuffix: Configuration Manager
 description: Review the Configuration Manager version history, and learn about the phases of service offered.
-ms.date: 11/29/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Support for Configuration Manager current branch versions
@@ -24,9 +22,7 @@ Microsoft plans to release updates for Configuration Manager current branch a fe
 
 - **Security Updates (Only)** servicing phase - After the release of a new current branch version, Microsoft only supports security updates to older versions for the remainder of that version's support lifecycle (shown in Figure 1).  
 
-([View graphic at full size](media/servicing_support_timeline.png))
-
-![Configuration Manager servicing and support timeline graphic](media/servicing_support_timeline.png)  
+[ ![Configuration Manager servicing and support timeline graphic](media/servicing_support_timeline.png) ](media/servicing_support_timeline.png#lightbox)
 
 Figure 1. Example of the release cycle overlap for current branch servicing support. This example is for illustration of the cycle, and doesn't represent actual or expected release dates.
 

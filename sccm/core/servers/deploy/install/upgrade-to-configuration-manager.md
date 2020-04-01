@@ -2,7 +2,7 @@
 title: Upgrade to current branch
 titleSuffix: Configuration Manager
 description: Learn the steps for running a successful in-place upgrade from a site and hierarchy that runs System Center 2012 Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Upgrade to Configuration Manager current branch
@@ -27,11 +25,11 @@ Do an in-place upgrade to Configuration Manager current branch from a site and h
 
 The following options are the currently supported in-place upgrade paths:
 
-### Upgrade to version 1902
+### Upgrade to version 2002
 
-You can upgrade the following products to a *fully licensed* version of Configuration Manager, current branch version 1902:
+You can upgrade the following products to a *fully licensed* version of Configuration Manager, current branch version 2002:
 
-- An *evaluation* install of Configuration Manager, current branch version 1902
+- An *evaluation* install of Configuration Manager, current branch version 2002
 - System Center 2012 Configuration Manager with Service Pack 1
 - System Center 2012 Configuration Manager with Service Pack 2
 - System Center 2012 R2 Configuration Manager

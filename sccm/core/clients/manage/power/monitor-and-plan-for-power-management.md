@@ -22,7 +22,7 @@ Use the following information to help you monitor and plan for power management 
 ##  <a name="BKMK_How_to_use_reports"></a> How to use reports for power management  
  Power management in Configuration Manager includes several reports to help you analyze power consumption and computer power settings in your organization. The reports can also be used to help you troubleshoot problems.  
 
- Before you can use the power management reports, you must configure reporting for your hierarchy. For more information about reporting in Configuration Manager, see [Reporting](../../../../core/servers/manage/reporting.md).  
+ Before you can use the power management reports, you must configure reporting for your hierarchy. For more information about reporting in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
 
 > [!NOTE]  
 >  Power management information used by daily reports is retained in the Configuration Manager site database for 31 days.  
@@ -440,7 +440,7 @@ Use the following information to help you monitor and plan for power management 
 
 - A graph showing the average daily CO2 generated (in tons) for each computer in the specified collection for the last 31 days.  
 
-- A table showing the total daily CO2 generated and the average daily CO2 generatedfor computers in the specified collection for the last 31 days.  
+- A table showing the total daily CO2 generated and the average daily CO2 generated for computers in the specified collection for the last 31 days.  
 
   The **Environmental Impact by Day** report calculates the amount of CO2 generated (in tons) by using the time that a computer or monitor was turned on in a 24 hour period.  
 

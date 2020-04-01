@@ -2,7 +2,7 @@
 title: Levels of diagnostic usage data
 titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data that Configuration Manager collects
-ms.date: 12/23/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -17,7 +17,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuration Manager version 1910 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level.
+Configuration Manager collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level.
 
 > [!IMPORTANT]
 > Configuration Manager doesn't collect site codes, sites names, IP addresses, user names, computer names, physical addresses, or email addresses on the Basic or Enhanced levels. Any collection of this information on the Full level isn't purposeful. It's potentially included in advanced diagnostic information like log files or memory snapshots. Microsoft doesn't use this information to identify you, contact you, or develop advertising.
@@ -58,11 +58,11 @@ To change the data collection level, you need **Modify** permissions on the **Si
 
 The following articles detail the specific data that Configuration Manager collects at each level with each supported version:
 
+- [Diagnostic and usage data for 2002](/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002)
 - [Diagnostic and usage data for 1910](/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1910)
 - [Diagnostic and usage data for 1906](/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906)
 - [Diagnostic and usage data for 1902](/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902)
 - [Diagnostic and usage data for 1810](/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810)
-- [Diagnostic and usage data for 1806](/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806)
 
 ## Next steps
 

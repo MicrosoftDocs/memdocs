@@ -208,9 +208,9 @@ additionalContent:
             - url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
               text: PowerShell
             - url: ./develop/index.yml
-              text: SDK concepts
-            - url: ./develop/reference/configuration-manager-reference.md
-              text: SDK reference
+              text: Software development kit (SDK)
+            - url: ./develop/adminservice/index.yml
+              text: Administration service REST API
             - url: ./develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md
               text: SQL views
         - title: Tools

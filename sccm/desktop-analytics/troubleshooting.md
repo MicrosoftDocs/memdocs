@@ -2,7 +2,7 @@
 title: Troubleshoot Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 07/26/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,15 +10,11 @@ ms.assetid: 63e08f3f-9558-4ed7-9bf3-3a185ddaac5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Troubleshoot Desktop Analytics
 
 Use the details in this article to help you troubleshoot issues with Desktop Analytics integrated with Configuration Manager.
-
-
 
 ## Confirm prerequisites
 
@@ -30,13 +26,11 @@ Many common issues are caused by missing prerequisites. First confirm the follow
 
 - [How to enable data sharing](/sccm/desktop-analytics/enable-data-sharing), which covers the following topics:  
 
-    - Internet endpoints to which clients need to connect  
+  - Internet endpoints to which clients need to connect  
 
-    - Proxy server authentication  
+  - Proxy server authentication  
 
-    - Diagnostic data levels  
-
-
+  - Diagnostic data levels  
 
 ## Monitor connection health
 
@@ -47,6 +41,7 @@ For more information, see [Monitor connection health](/sccm/desktop-analytics/mo
 > [!NOTE]
 > The Configuration Manager connection to Desktop Analytics relies upon the service connection point. Any changes to this site system role may impact synchronization with the cloud service. For more information, see [About the service connection point](/configmgr/core/servers/deploy/configure/about-the-service-connection-point#bkmk_move).
 
+Starting in version 2002, if the Configuration Manager site fails to connect to required endpoints for a cloud service, it raises a critical status message ID 11488. When it can't connect to the service, the SMS_SERVICE_CONNECTOR component status changes to critical. View detailed status in the [Component Status](/configmgr/core/servers/manage/use-alerts-and-the-status-system#BKMK_MonitorSystemStatus) node of the Configuration Manager console.<!-- 5566763 -->
 
 ## Log files
 
@@ -59,21 +54,19 @@ Starting in Configuration Manager version 1906, use the **DesktopAnalyticsLogsCo
 1. On the service connection point, go to the following registry key: `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
 2. Set the **LoggingLevel** value to `0`  
 
-
 ## <a name="bkmk_AzureADApps"></a> Azure AD applications
 
 Desktop Analytics adds the following applications to your Azure AD:
 
 - **Configuration Manager Microservice**: Connects Configuration Manager with Desktop Analytics. This app has no access requirements.  
 
-- **MALogAnalyticsReader**: Monitors your Azure Log Analytics workspace to ensure the daily snapshot has been copied succcesfully. For more information, see [MALogAnalyticsReader application role](#bkmk_MALogAnalyticsReader).  
+- **MALogAnalyticsReader**: Monitors your Azure Log Analytics workspace to ensure the daily snapshot has been copied successfully. For more information, see [MALogAnalyticsReader application role](#bkmk_MALogAnalyticsReader).  
 
-- **Office365 client Admin**: Enables Configuration Manager retrieval of deployment plan information and device readiness status from Desktop Analytics. 
+- **Office365 client Admin**: Enables Configuration Manager retrieval of deployment plan information and device readiness status from Desktop Analytics.
 
 If you need to provision these apps after completing setup, go to the **Connected services** pane. Select **Configure users and apps access**, and provision the apps.  
 
 - **Azure AD app for Configuration Manager**. If you need to provision or troubleshoot connection issues after completing setup, see [Create and import app for Configuration Manager](#create-and-import-app-for-configuration-manager). This app requires  **Write CM Collection Data** and **Read CM Collection Data** on the **Configuration Manager Service** API.  
-
 
 ### Create and import app for Configuration Manager
 
@@ -117,7 +110,6 @@ If you can't create the Azure AD app for Configuration Manager from the Configur
     5. Select **Add permissions**.  
 
 6. On the **API permissions** panel, select **Grant admin consent...**. Select **Yes**.  
-
 
 #### Import app in Configuration Manager
 
@@ -165,7 +157,6 @@ If you're having problems creating or importing the app, first check **SMSAdminU
 
 - Check status messages for the **SMS_SERVICE_CONNECTOR** component regarding the *Desktop Analytics worker*.
 
-
 ### <a name="bkmk_MALogAnalyticsReader"></a> MALogAnalyticsReader application role
 
 When you set up Desktop Analytics, you consent on behalf of your organization. This consent is to assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace. This application role is required by Desktop Analytics.
@@ -187,7 +178,6 @@ If there's a problem with this process during setup, use the following process t
 4. Select **Save**.
 
 The portal shows a notification that it added the role assignment.
-
 
 ## Data latency
 

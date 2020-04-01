@@ -47,7 +47,7 @@ This article includes resources for Security and Privacy for Configuration Manag
 
 -   [Security and privacy for Asset Intelligence](../../../core/clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md)  
 
--   [Security and privacy for reporting](../../../core/servers/manage/security-and-privacy-for-reporting.md)  
+-   [Security and privacy for reporting](../../../core/servers/manage/planning-for-reporting.md#security-and-privacy)  
 
 
 
