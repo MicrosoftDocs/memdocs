@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -157,4 +157,8 @@ On Windows 10 devices, there's a built-in MDM diagnostic information report. Thi
 
 ## Next steps
 
-[Monitor device profiles](../configuration/device-profile-monitor.md) and [see some common issues and resolutions](../configuration/device-profile-troubleshoot.md).
+- [Learn about security baselines](security-baslines.md)
+- [Avoid conflicts](security-baselines.md#avoid-conflicts)
+- [Monitor device profiles](../configuration/device-profile-monitor.md) 
+- [Common issues and resolutions](../configuration/device-profile-troubleshoot.md).
+- [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
