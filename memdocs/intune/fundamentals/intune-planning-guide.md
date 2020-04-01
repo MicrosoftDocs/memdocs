@@ -104,11 +104,11 @@ To make managing devices easier, you can use Intune device categories to automat
 
   These categories will become your [scope tags](scope-tags.md).
 
-- Many organizations separate groups by the device type, such as iOS, Android, or Windows devices. Some examples:
+- Many organizations separate groups by the device type, such as iOS, iPadOS, Android, or Windows devices. Some examples:
 
   - Distribute specific apps to specific devices. For example, deploy the Microsoft shuttle app to devices in the Redmond network.
   - Deploy policies to specific locations. For example, deploy a VPN profile to devices in the Charlotte network so they automatically connect when in range.
-  - Control settings on specific devices. For example, disable the camera on Android Enterprise devices used on a manufacturing floor, create a Windows Defender antivirus profile for all Windows devices, or add Exchange e-mail settings to all iOS devices.
+  - Control settings on specific devices. For example, disable the camera on Android Enterprise devices used on a manufacturing floor, create a Windows Defender antivirus profile for all Windows devices, or add Exchange e-mail settings to all iOS/iPadOS devices.
 
   These categories will become your [device enrollment categories](../enrollment/device-group-mapping.md).
 
@@ -138,7 +138,7 @@ This section includes device information that you should consider.
 
 ### Supported platforms
 
-Intune supports Android, Android Enterprise, iOS, macOS, and Windows devices. For the specific versions, see [supported platforms](supported-devices-browsers.md).
+Intune supports Android device administrator, Android Enterprise, iOS, iPadOS, macOS, and Windows devices. For the specific versions, see [supported platforms](supported-devices-browsers.md).
 
 **Task**: If your devices use unsupported versions, which are primarily older operating systems, then it's time to upgrade the OS or replace the devices. These older OS' and devices might have limited support, and are a potential security risk. This task includes desktop computers running Windows 7, iPhone 7 devices running the original v10.0 OS, and so on.
 
@@ -307,7 +307,7 @@ The next task is to plan how and when your users and devices receive your polici
 
     - **Geography**: Deploy your policies to all users in a specific geography, whether it's the same continent, country/region, or same organization building. This rollout lets you focus on the specific location of users. You could provide a "white glove" approach, as the number of locations deploying Intune at the same time is less. There are chances of different departments or different use cases at the same location. So, you could be testing different use cases simultaneously.
 
-    - **Platform**: This rollout deploys similar platforms at the same time. For example, deploy policies to all iOS devices in February, all Android devices in March, and all Windows devices in April. This approach might simplify help desk support, as they only support one platform at a time.
+    - **Platform**: This rollout deploys similar platforms at the same time. For example, deploy policies to all iOS/iPadOS devices in February, all Android devices in March, and all Windows devices in April. This approach might simplify help desk support, as they only support one platform at a time.
 
     Using a staged approach, you can get feedback from a wide range of user types.
 
@@ -422,7 +422,7 @@ Include your IT support and helpdesk in the early stages of Intune deployment pl
   - Quickly identify issues and resolution.
   - Improve the overall user experience.
 
-- Train your help desk and support teams. Have them enroll devices running the different platforms used in your organization (Android, iOS, macOS, Windows) so they're familiar with the process. Consider using help desk and support teams as a pilot group for your scenarios.
+- Train your help desk and support teams. Have them enroll devices running the different platforms used in your organization (Android, iOS/iPadOS, macOS, Windows) so they're familiar with the process. Consider using help desk and support teams as a pilot group for your scenarios.
 
   There are training resources available, including [YouTube videos](https://www.youtube.com/results?search_query=intune+training), Microsoft tutorials on [enrollment](../enrollment/tutorial-use-autopilot-enroll-devices.md), [compliance](../protect/tutorial-protect-email-on-enrolled-devices.md), [configuration](../configuration/tutorial-walkthrough-administrative-templates.md), and courses through training partners.
 
