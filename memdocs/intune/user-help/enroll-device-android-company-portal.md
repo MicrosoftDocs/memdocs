@@ -39,7 +39,7 @@ Enroll your personal or corporate-owned Android device to get secure access to c
 > protection outside of what native Android provides. To check if you have a Samsung Knox device,> go to **Settings** > **About device**. If you don't see **Knox version** listed there, you have a native Android device.
 
 ## Enroll device  
-Make sure to install the Intune Company Portal app [from Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). See [Install Company Portal app in mainland China] for a list of stores that offer the app in mainland China.  
+Make sure to install the Intune Company Portal app [from Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). See [Install Company Portal app in mainland China](install-intune-company-portal-android-china.md) for a list of stores that offer the app in mainland China.    
 
 During enrollment, you might be asked to choose a category that best describes how you use your device. Your company support uses your answer to check the apps that you have access to.  
 
