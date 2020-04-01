@@ -32,7 +32,7 @@ ms.collection:
 
 # Install Company Portal app for Android in mainland China   
 
-The Intune Company Portal app for Android is available to install from the following stores: 
+Install the Intune Company Portal app to access  school or work resources on your Android device. Company Portal is available to install from the following stores: 
 
 * [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
 * [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)

@@ -12,7 +12,7 @@
 
 ## Using your Android device
 ### [Why enroll your Android device](why-enroll-android-device.md)
-### [Install Company Portal app in China](install-company-portal-app-China.md)
+### [Install Company Portal app in China](install-company-portal-android-china.md)
 ### Enroll your device
 #### [Enroll your Android device](enroll-device-android-company-portal.md)  
 #### [Enroll with Android work profile](enroll-device-android-work-profile.md)
