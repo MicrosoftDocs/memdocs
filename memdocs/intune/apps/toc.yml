@@ -27,7 +27,7 @@
     href: android-deployment-scenarios-app-protection-work-profiles.md
     displayName: app-we; without; without enrollment
   - name: Use Intune without GMS
-    href: intune-without-gms.md      
+    href: manage-without-gms.md      
   - name: MAM FAQ
     href: mam-faq.md
 - name: How-to guides
