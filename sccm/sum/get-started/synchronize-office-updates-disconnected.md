@@ -2,7 +2,7 @@
 title: "Synchronize Office 365 updates with no Internet connection"
 titleSuffix: "Configuration Manager"
 description: "Synchronize Office 365 updates on the top-level software update point that is disconnected from the Internet."
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum

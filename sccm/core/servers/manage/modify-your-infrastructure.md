@@ -2,7 +2,7 @@
 title: Modify infrastructure
 titleSuffix: Configuration Manager
 description: Make changes or take actions that affect your Configuration Manager infrastructure.
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

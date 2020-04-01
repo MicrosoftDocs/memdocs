@@ -5,7 +5,7 @@ description: Learn about the different digital certificates to use with the clou
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client

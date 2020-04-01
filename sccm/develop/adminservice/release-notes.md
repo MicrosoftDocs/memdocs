@@ -2,7 +2,7 @@
 title: Admin service release notes
 titleSuffix: Configuration Manager
 description: Information about changes to the administration service with each Configuration Manager release
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual

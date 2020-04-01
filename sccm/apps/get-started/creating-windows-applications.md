@@ -2,7 +2,7 @@
 title: Create Windows applications
 titleSuffix: Configuration Manager
 description: Learn more information about creating and deploying Windows applications in Configuration Manager.
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual

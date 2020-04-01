@@ -2,7 +2,7 @@
 title: Pre-release features
 titleSuffix: Configuration Manager
 description: Pre-release features are features that are in the current branch for early testing in a production environment.
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

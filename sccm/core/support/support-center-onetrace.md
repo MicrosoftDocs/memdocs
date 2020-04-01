@@ -2,7 +2,7 @@
 title: Support Center OneTrace (Preview)
 titleSuffix: Configuration Manager
 description: OneTrace is a new log viewer with Support Center that has improvements over CMTrace.
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: Checklist for 2002
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2002.
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

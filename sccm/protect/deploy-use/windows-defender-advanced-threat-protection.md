@@ -2,7 +2,7 @@
 title: Microsoft Defender Advanced Threat Protection
 titleSuffix: Configuration Manager
 description: Learn how to manage and monitor Microsoft Defender Advanced Threat Protection, a new service that helps enterprises respond to advanced attacks.
-ms.date: 03/20/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
