@@ -40,6 +40,9 @@ These features are available in Intune, and are configurable by the administrato
 
 This article shows you how to create a device restrictions profile. You can also see all the available settings for the different platforms.
 
+> [!NOTE]
+> The Intune user interface (UI) is updating to a full screen experience, and may take several weeks. Until your tenant receives this update, you will have a slightly different workflow when you create or edit settings described in this article.
+
 ## Create the profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -108,7 +108,7 @@ Policy sets, new to 1910, have the following known issues.
 
 - MAM policy types that support policy sets include the following: 
   - MAM WIP( Windows) MDM targeted managed app protection 
-  - MAM iiOS/iPadOSOS targeted managed app protection
+  - MAM iOS/iPadOS targeted managed app protection
   - MAM Android targeted managed app protection
   - MAM iOS/iPadOS targeted managed app configuration
   - MAM Android targeted managed app configuration
