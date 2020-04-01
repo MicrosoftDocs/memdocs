@@ -23,9 +23,11 @@
   items:
   - name: App lifecycle
     href: app-lifecycle.md
-  - name: App protection policies and work profiles (Android)
+  - name: APP and work profiles (Android)
     href: android-deployment-scenarios-app-protection-work-profiles.md
     displayName: app-we; without; without enrollment
+  - name: Use Intune without GMS
+    href: intune-without-gms.md      
   - name: MAM FAQ
     href: mam-faq.md
 - name: How-to guides
@@ -88,8 +90,6 @@
           href: store-apps-company-portal-autopilot.md
         - name: Company Portal app - Download
           href: store-apps-company-portal-app.md
-        - name: Company Portal app - Without GMS
-          href: company-portal-app-without-gms.md          
         - name: Microsoft Edge for Windows 10
           href: apps-windows-edge.md
         - name: Microsoft Edge for macOS
