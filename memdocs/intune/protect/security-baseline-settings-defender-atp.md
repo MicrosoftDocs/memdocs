@@ -7,7 +7,7 @@ description: Security baseline settings supported by Intune for managing Microso
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 04/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -869,3 +869,9 @@ For more information, see [PassportForWork CSP](https://docs.microsoft.com/windo
     - **Not allowed**
     - **Required**
     - **Allowed** (*default*)
+
+## Next steps
+
+- [Learn about security baselines](security-baselines.md)
+- [Avoid conflicts](security-baselines.md#avoid-conflicts)
+- [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
