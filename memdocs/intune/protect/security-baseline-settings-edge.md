@@ -152,4 +152,6 @@ View the Microsoft Edge web browser baseline settings that are supported by Micr
 
 ## Next steps
 
-[Use security baselines in Intune](security-baselines.md)
+- [Learn about security baselines](security-baselines.md)
+- [Avoid conflicts](security-baselines.md#avoid-conflicts)
+- [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)

@@ -48,6 +48,9 @@ These settings are added to a device configuration profile in Intune, and then a
 - Only some apps work with managed preferences, and might not allow you to manage all settings.
 - Be sure you upload property list files that target device channel settings, not user channel settings. Property list files target the entire device.
 
+> [!NOTE]
+> The Intune user interface (UI) is updating to a full screen experience, and may take several weeks. Until your tenant receives this update, you will have a slightly different workflow when you create or edit settings described in this article.
+
 ## Create the profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
