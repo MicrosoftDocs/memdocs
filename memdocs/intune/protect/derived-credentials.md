@@ -175,7 +175,7 @@ Create and provide guidance to your users on how to start the derived credential
 
 We recommend you provide a URL that will host your guidance. You specify this URL when you configure the derived credential issuer for your tenant, and that URL is made available from within the Company Portal app. If you don't specify your own URL, Intune provides a link to generic details. These details can't cover all scenarios and might not be accurate for your environment.
 
-### 5) Deploy Intune policies that require derived credentials)
+### <dive id="supported-objects"> 5) Deploy Intune policies that require derived credentials
 
 Create new policies or edit existing policies to use derived credentials. Derived credentials replace other authentication methods for the following objects:
 
@@ -212,7 +212,7 @@ Before you create policies that require use of a derived credential, set up a cr
 
    - Enroll a device with an issuer to get a new derived credential.
    - Get a new derived credential when the current credential is close to expiration.
-   - Use a derived credential with a [supported object](#5\)-deploy-intune-policies-that-require-derived-credentials).
+   - Use a derived credential with a [supported object](#supported-objects).
 
 7. When ready, select **Save** to complete configuration of the derived credential issuer.
 
