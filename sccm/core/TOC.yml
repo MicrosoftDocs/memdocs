@@ -74,10 +74,10 @@
     items:
     - name: Features and capabilities
       href: plan-design/changes/features-and-capabilities.md
-    - name: What's changed from Configuration Manager 2012
-      href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
-    - name: What’s new in incremental versions
+    - name: What's new in incremental versions
       href: plan-design/changes/whats-new-incremental-versions.md
+    - name: What's new in version 2002
+      href: plan-design/changes/whats-new-in-version-2002.md
     - name: What's new in version 1910
       href: plan-design/changes/whats-new-in-version-1910.md      
     - name: What's new in version 1906
@@ -86,8 +86,8 @@
       href: plan-design/changes/whats-new-in-version-1902.md
     - name: What's new in version 1810
       href: plan-design/changes/whats-new-in-version-1810.md
-    - name: What's new in version 1806
-      href: plan-design/changes/whats-new-in-version-1806.md
+    - name: What's changed from Configuration Manager 2012
+      href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: Removed and deprecated
       items:
       - name: Removed and deprecated overview
@@ -212,6 +212,8 @@
       items:
         - name: Overview of levels
           href: plan-design/diagnostics/levels-overview.md
+        - name: Data for version 2002
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
         - name: Data for version 1910
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1910.md
         - name: Data for version 1906
@@ -220,8 +222,6 @@
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
         - name: Data for version 1810
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
-        - name: Data for version 1806
-          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md
     - name: Frequently asked questions (FAQ)
       href: plan-design/diagnostics/frequently-asked-questions.md
   - name: Security and privacy for Configuration Manager
@@ -264,16 +264,18 @@
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
+    - name: 2003 features
+      href: get-started/2020/technical-preview-2003.md
+    - name: 2002.2 features
+      href: get-started/2020/technical-preview-2002-2.md
+    - name: 2002 features
+      href: get-started/2020/technical-preview-2002.md
     - name: 2001.2 features
       href: get-started/2020/technical-preview-2001-2.md
     - name: 2001 features
       href: get-started/2020/technical-preview-2001.md
     - name: 1912 features
       href: get-started/2019/technical-preview-1912.md
-    - name: 1911 features
-      href: get-started/2019/technical-preview-1911.md
-    - name: 1910 features
-      href: get-started/2019/technical-preview-1910.md
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview
@@ -350,8 +352,6 @@
         href: servers/deploy/install/upgrade-to-configuration-manager.md
       - name: Scenarios to streamline your installation
         href: servers/deploy/install/scenarios-to-streamline-your-installation.md
-      - name: Uninstalling sites and hierarchies
-        href: servers/deploy/install/uninstall-sites-and-hierarchies.md
   - name: Configure sites and hierarchies
     items:
     - name: Configure sites and hierarchies overview
@@ -432,6 +432,12 @@
       href: servers/deploy/configure/configure-role-based-administration.md
     - name: Configure Azure services
       href: servers/deploy/configure/azure-services-wizard.md
+  - name: Uninstall and remove
+    items:
+    - name: Uninstall roles, sites, and hierarchies
+      href: servers/deploy/install/uninstall-sites-and-hierarchies.md
+    - name: Remove the CAS
+      href: servers/deploy/install/remove-central-administration-site.md
   - name: Technical references
     items:
     - name: Accounts
@@ -508,6 +514,8 @@
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: Use the hotfix installer
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Checklist for installing update 2002
+      href: servers/manage/checklist-for-installing-update-2002.md
     - name: Checklist for installing update 1910
       href: servers/manage/checklist-for-installing-update-1910.md
     - name: Checklist for installing update 1906
@@ -516,8 +524,6 @@
       href: servers/manage/checklist-for-installing-update-1902.md
     - name: Checklist for installing update 1810
       href: servers/manage/checklist-for-installing-update-1810.md
-    - name: Checklist for installing update 1806
-      href: servers/manage/checklist-for-installing-update-1806.md
     - name: Support for current branch versions
       href: servers/manage/current-branch-versions-supported.md
   - name: Backup and recovery
@@ -574,24 +580,22 @@
       items:
       - name: Introduction to reporting
         href: servers/manage/introduction-to-reporting.md
-      - name: Planning for reporting
+      - name: Integrate with Power BI Report Server
+        href: servers/manage/powerbi-report-server.md
+      - name: Plan for reporting
         items:
         - name: Plan for reporting
           href: servers/manage/planning-for-reporting.md
         - name: Prerequisites for reporting
           href: servers/manage/prerequisites-for-reporting.md
-        - name: Best practices for reporting
-          href: servers/manage/best-practices-for-reporting.md
         - name: List of reports
           href: servers/manage/list-of-reports.md
       - name: Configure reporting
         href: servers/manage/configuring-reporting.md
       - name: Operations and maintenance for reporting
         href: servers/manage/operations-and-maintenance-for-reporting.md
-      - name: Creating custom report models
+      - name: Create custom report models
         href: servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md
-      - name: Security and privacy for reporting
-        href: servers/manage/security-and-privacy-for-reporting.md
     - name: Data warehouse
       href: servers/manage/data-warehouse.md
   - name: Support Center
@@ -699,6 +703,8 @@
         href: clients/deploy/deploy-clients-to-windows-computers.md
       - name: Install clients using Azure AD
         href: clients/deploy/deploy-clients-cmg-azure.md
+      - name: Token-based authentication for CMG
+        href: clients/deploy/deploy-clients-cmg-token.md
       - name: Client installation properties
         href: clients/deploy/about-client-installation-properties.md
       - name: Client installation properties published to AD

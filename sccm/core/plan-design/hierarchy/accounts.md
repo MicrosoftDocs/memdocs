@@ -382,7 +382,7 @@ A Configuration Manager client first tries to use its computer account to downlo
 Starting in version 1806, a workgroup or Azure AD-joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).<!--1358228,1358278-->
 
 > [!Note]  
-> If you enable **Enhanced HTTP** to not require the network access account, the distribution point needs to be running Windows Server 2008 R2 SP1 or later. <!--SCCMDocs-pr issue #2696-->
+> If you enable **Enhanced HTTP** to not require the network access account, the distribution point needs to be running Windows Server 2012 or later. <!--SCCMDocs-pr issue #2696-->
 >  
 > Upgrade clients to at least version 1806 before enabling this functionality. If you only allow **Enhanced HTTP** connections, older clients can't authenticate using this method, so can't download the client upgrade package from a distribution point. <!--vso2841213-->   
 
@@ -453,6 +453,9 @@ SQL Server Reporting Services uses the **Reporting services point account** to r
 
 > [!NOTE]  
 > The account you specify must have **Log on locally** permissions on the computer hosting the SQL Reporting Services database.
+
+> [!NOTE]  
+> The account is automatically granted all necessary rights by being added to the smsschm_users SQL Database Role on the ConfigMgr database.
 
 For more information, see [Introduction to reporting](/sccm/core/servers/manage/introduction-to-reporting).
 

@@ -99,6 +99,11 @@ A Configuration Manager client that communicates with a management point from a 
 
 Starting in version 1902, you can't deploy a package or task sequence to a client version 5.7730 or earlier. To work around this limitation, upgrade the client to a later version.
 
+## Software updates
+
+### Orchestration groups
+
+Orchestration groups, introduced in version 2002, can't be used in a mixed-version hierarchy. <!--SCCMDocs-pr issue ##5056, 6389000-->
 
 ## <a name="BKMK_ConsoleInterop"></a> Interoperability for the Configuration Manager console  
 

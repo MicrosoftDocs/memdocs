@@ -1,8 +1,8 @@
 ---
-title: "Uninstall sites"
-titleSuffix: "Configuration Manager"
-description: "Use these details as a guide to uninstall a Configuration Manager site."
-ms.date: 10/06/2016
+title: Uninstall sites
+titleSuffix: Configuration Manager
+description: A guide for removing roles, and uninstalling sites and hierarchies
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,122 +10,272 @@ ms.assetid: d466edd2-97f0-44c1-a73e-d71abbdbf4a8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
-# Uninstall sites and hierarchies in Configuration Manager
+
+# Uninstall roles, sites, and hierarchies in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Use the following details as a guide if you need to uninstall a Configuration Manager site.  
+Use this article as a guide to uninstall a Configuration Manager site system role, site, or hierarchy.
 
-To decommission a hierarchy with multiple sites, the sequence of removal is important. Start by uninstalling the sites  at the bottom of the hierarchy and then move upward:  
+Starting in version 2002, you can also remove the central administration site (CAS) from a hierarchy, but keep the primary site.
 
-1.  Remove secondary sites attached to primary sites.  
-2.  Remove primary sites.
-3.  After all primary sites are removed, you can uninstall the central administrations site.  
+## <a name="bkmk_role"></a> Site system role
 
+You might want to remove a role from a site system server for the following reasons:
 
-##  <a name="BKMK_RemoveSecondarysite"></a> Remove a secondary site from a hierarchy  
-You cannot move a secondary site or reassign a secondary site to a new parent primary site. To be removed from a hierarchy, a secondary site must be deleted from its direct parent site. Use the Delete Secondary Site Wizard from the Configuration Manager console to remove a secondary site. When you remove a secondary site, you must choose whether to delete it or uninstall it:  
+- Broader infrastructure change, such as network or physical locations
+- Decommission the underlying server
+- Consolidate roles to reduce costs and complexity
+- Reconfigure or redesigning the site roles
+- Discontinue use of the feature that role supports
 
--   **Uninstall the secondary site**. Use this option to remove a functional secondary site that is accessible from the network. This option uninstalls Configuration Manager from the secondary site server, and then deletes all information about the site and its resources from the Configuration Manager site hierarchy. If Configuration Manager installed SQL Server Express as part of the secondary site installation, Configuration Manager will uninstall SQL Express when it uninstalls the secondary site. If SQL Server Express was installed before you installed the secondary site, Configuration Manager will not uninstall SQL Server Express.  
+When you decide you need to remove a role, first consider your answers to the following questions:
 
--   **Delete the secondary site**. Use this option if one of the following is true:  
+- Do you still need the role in the site? If so, does another site system already have the role?
 
-    -   A secondary site failed to install  
-    -   The secondary site continues to be displayed in the Configuration Manager console after you uninstall it
+- Are other site systems with this role properly sized to support your business requirements for performance and availability?
 
-    This option deletes all information about the site and its resources from the Configuration Manager hierarchy, but leaves Configuration Manager installed on the secondary site server.  
+- Are all clients already reconfigured to use another role? Will you rely upon default client behaviors to fall back or discover another server?
 
-    > [!NOTE]  
-    >  You also can use the Hierarchy Maintenance Tool and the **/DELSITE** option to delete a secondary site. For more information, see [Hierarchy Maintenance Tool (Preinst.exe) for Configuration Manager](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md).  
+### Procedure to remove a site system role
 
-#### To uninstall or delete a secondary site  
+Use the following procedure to remove a role:
 
-1.  Verify that the administrative user that runs Setup has the following security rights:  
+1. In the **Configuration Manager** console, go to the **Administration** workspace. Expand **Site Configuration**, and then select the **Servers and Site System Roles** node.
 
-    -   Administrative rights on the secondary site computer  
-    -   Local Administrator rights on the remote site database server for the primary site, if it is remote  
-    -   Infrastructure Administrator or Full Administrator security role on the parent primary site  
-    -   Sysadmin rights on the site database of the secondary site  
+1. Select the site system server with the role to remove. In the **Site System Roles** details pane, select the target role.
 
-2.  In the Configuration Manager console, select **Administration**.  
-3.  In the **Administration** workspace, expand **Site Configuration**, and then select **Sites**.  
-4.  Select the secondary site server that you want to remove.  
-5.  On the **Home** tab, in the **Site** group, select **Delete**.  
-6.  On the **General** page, select whether to uninstall or delete the secondary site, and then click **Next**.  
-7.  On the **Summary** page, verify the settings, and then select **Next**.  
-8.  On the **Completion** page, select **Close** to exit the wizard.  
+1. In the ribbon, on the **Site Role** tab, in the **Site Role** group, select **Remove Role**. Confirm that you want to remove the role.
 
-##  <a name="BKMK_UninstallPrimary"></a> Uninstall a primary site  
-You can run Configuration Manager Setup to uninstall a primary site that does not have an associated secondary site. Before you uninstall a primary site, consider the following:  
+### Additional information for specific roles
 
--   When Configuration Manager clients are within the boundaries configured at the site, and the primary site is part of a Configuration Manager hierarchy, consider adding the boundaries to a different primary site in the hierarchy before you uninstall the primary site.  
--   When the primary site server is no longer available, you must use the Hierarchy Maintenance Tool at the central administration site to delete the primary site from the site database. For more information, see [Hierarchy Maintenance Tool (Preinst.exe) for Configuration Manager](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md).  
+Some roles may have additional steps and considerations.
 
-Use the following procedure to uninstall a primary site.  
+#### Software update point
 
-#### To uninstall a primary site  
+After you remove the software update point, Configuration Manager updates the client policy to remove the software update point from the list. When you remove the last software update point at the site, the software update point list contains no software update points. With no roles available, software updates management is essentially disabled at the site.
 
-1.  Verify that the administrative user that runs Setup has the following security rights:  
+When you have more than one software update point at a primary site, and you remove the software update point that's the synchronization source, choose another software update point at the site to be the new synchronization source.
 
-    -   Local Administrator rights on the central administration site server  
-    -   Local Administrator rights on the remote site database server for the central administration site, if it is remote
-    -   Sysadmin rights on the site database of the central administration site  
-    -   Local Administrator rights on the primary site computer  
-    -   Local Administrator rights on the remote site database server for the primary site, if it is remote  
-    -   A user name associated with the Infrastructure Administrator or Full Administrator security role on the central administration site  
+## <a name="bkmk_secondary"></a> Secondary site  
 
-2.  Start Configuration Manager Setup on the primary site server by using one of the following methods:  
+Other than when you're [decommissioning a hierarchy](#bkmk_hierarchy), the main reason to remove a secondary site is because of a broader infrastructure change, such as network or physical locations. Also review the reasons to [choose a secondary site](/configmgr/core/plan-design/hierarchy/design-a-hierarchy-of-sites#BKMK_ChooseSecondary).
 
-    -   On **Start**, select **Configuration Manager Setup**.  
-    -   Open Setup.exe from &lt;*ConfigMgrInstallationMedia*>\SMSSETUP\BIN\X64.  
-    -   Open Setup.exe from &lt;*ConfigMgrInstallationPath*>\BIN\X64.  
+When you decide you need to remove a secondary site, first consider your answers to the following questions:
 
-3.  On the **Before You Begin** page, select **Next**.  
-4.  On the **Getting Started** page, select **Uninstall a Configuration Manager site**, and then select **Next**.  
-5.  On the **Uninstall the Configuration Manager Site**, specify whether to remove the site database from the primary site server, and whether to remove the Configuration Manager console. By default, Setup removes both items.  
+- Did you remove all site system roles from the site server?
+
+- Are any boundaries or boundary groups associated with the secondary site? Reconfigure boundaries before removing the site.
+
+- Are any clients still at the location?
+
+- Have you configured other content management options like [peer caching](/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management#peer-caching-technologies)?
+
+### Options to delete secondary sites
+
+You can't move or reassign a secondary site to another primary site. When you remove a secondary site from its direct parent site, choose whether to uninstall or delete it.
+
+#### Uninstall the secondary site
+
+Use this option to remove a functional secondary site that's accessible from the network. This option uninstalls Configuration Manager from the secondary site server. It then deletes all information about the site and its resources from the Configuration Manager site.
+
+If Configuration Manager installed SQL Server Express for the secondary site, Configuration Manager uninstalls SQL Express as well. If you installed SQL Server Express before you installed the secondary site, Configuration Manager doesn't uninstall SQL Server Express.
+
+#### Delete the secondary site
+
+Use this option in the following situations:
+
+- It failed to install
+
+- After you uninstall it, the Configuration Manager console still shows the secondary site
+
+    This option deletes all information about the site and its resources from the Configuration Manager hierarchy, but doesn't make any changes on the site server.
+
+    > [!TIP]
+    >  You also can use the Hierarchy Maintenance Tool with the **/DELSITE** option to delete a secondary site. For more information, see [Hierarchy Maintenance Tool (Preinst.exe)](/configmgr/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
+
+### Prerequisites to delete a secondary site
+
+The administrative user that runs Configuration Manager setup needs the following security rights:
+
+- Local **Administrator** rights on the secondary site server
+
+- If the primary site database server is remote from the primary site server, local **Administrator** rights on the remote site database server for the primary site.
+
+- **Infrastructure Administrator** or **Full Administrator** security role on the parent primary site
+
+- **Sysadmin** rights on the secondary site database
+
+### Procedure to delete a secondary site
+
+Use the following procedure to uninstall or delete a secondary site:
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and then select the **Sites** node.
+
+1. Select the secondary site server that you want to remove. In the ribbon, on the **Home** tab, in the **Site** group, select **Delete**.
+
+1. On the **General** page, select whether to uninstall or delete the secondary site.
+
+1.  Complete the wizard.
+
+## <a name="bkmk_primary"></a> Primary site  
+
+You might want to uninstall a primary site from your hierarchy for the following reasons:
+
+- Consolidate sites to reduce costs and complexity
+- Reconfigure or redesign the sites of the hierarchy
+
+Before you uninstall a child primary site that uses [distributed views](/configmgr/core/plan-design/hierarchy/database-replication#bkmk_distviews) for its replication link to the CAS, first turn off distributed views in your hierarchy. For more information, see [Uninstall a primary site that is configured with distributed views](#bkmk_distviews).
+
+### <a name="bkmk_pri-plan"></a> Plan to uninstall a primary site
+
+Before you uninstall a primary site, review the following tasks:
+
+- Review boundaries, boundary groups, and fallback relationships. If you assign clients to a new site, but don't change the boundaries, they may be considered roaming. For more information, see [Define site boundaries and boundary groups](/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
+
+- Make sure all active clients are reassigned to another primary site in the hierarchy. Otherwise clients will be unmanaged after you uninstall the site. For more information, see [How to assign clients to a site](/configmgr/core/clients/deploy/assign-clients-to-a-site).
+
+  - Review the list of site roles to make sure the new site provides the same level of service.
+
+  - Make sure that you've properly sized the other site systems with this role in the other site. They will need to support your business requirements for performance and availability with the additional clients.
+
+  - If this site has lots of clients, reassign them in stages. Monitor database replication as clients refresh full inventory and other site-specific data. If you manage software updates, clients will assign to a new software update point. This behavior causes a full scan for update compliance.
+
+  - Client reassignment may impact reports and queries that rely on inventory data, and state-based compliance. Consider temporarily adjusting any client cycles during the transition.
+
+  - Review all client assignment methods to make sure that none refer to this primary site.
+
+- Check if any actively used objects in the hierarchy have static references to the site code. For example, collection queries, task sequences, or administrative scripts.
+
+- If the hierarchy uses a [fallback site](/configmgr/core/servers/deploy/configure/boundary-group-procedures#bkmk_site-fallback) for automatic site assignment, make sure it doesn't reference this primary site.
+
+- Reconfigure any [client installation methods](/configmgr/core/clients/deploy/plan/client-installation-methods) that may reference a static site code.
+
+- If this primary site has any site-specific cloud-attached services, make sure to remove them. If you still need the cloud resources, move them to another primary site in the hierarchy. Remove them from the primary site that you're going to uninstall, and add them to another primary site.
+
+- If this primary site has any [discovery methods](/configmgr/core/servers/deploy/configure/run-discovery) for the hierarchy, move them to another site.
+
+- Retire any site-based [OS deployment media](/configmgr/osd/deploy-use/create-task-sequence-media).
+
+- Uninstall all site system roles from the site and the site server. For more information, see [Uninstall site system roles](#bkmk_role). While this preparation step isn't required, it helps identify any additional dependencies before uninstalling the site.
+
+- Uninstall any secondary sites under this primary site. For more information, see the [Secondary site](#bkmk_secondary) section.
+
+### <a name="bkmk_pri-prereq"></a> Prerequisites to uninstall a primary site
+
+The administrative user that runs Configuration Manager setup needs the following security rights:
+
+- Local **Administrator** rights on the CAS server
+
+- If the CAS database server is remote from the site server, local **Administrator** rights on the remote site database server for the CAS.
+
+- **Sysadmin** rights on the CAS site database
+
+- Local **Administrator** rights on the primary site server
+
+- If the primary site database server is remote from the primary site server, local **Administrator** rights on the remote site database server for the primary site.
+
+- **Infrastructure Administrator** or **Full Administrator** security role on the CAS
+
+### <a name="bkmk_pri-process"></a> Procedure to uninstall a primary site
+
+You run Configuration Manager setup to uninstall a primary site that doesn't have an associated secondary site. Use the following procedure to uninstall a primary site:
+
+> [!TIP]
+> If the primary site server is no longer available, use the Hierarchy Maintenance Tool at the CAS to delete the primary site from the site database. For more information, see [Hierarchy Maintenance Tool (Preinst.exe)](/configmgr/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
+
+1. Start Configuration Manager setup on the primary site server by using one of the following methods:
+
+    - On the **Start** menu, select **Configuration Manager Setup**.
+
+    - In the directory for the Configuration Manager *installation media*, open `\SMSSETUP\BIN\X64\setup.exe`. Make sure this version is the same as the site version.
+
+    - In the directory where Configuration Manager is *installed*, open `\BIN\X64\setup.exe`.
+
+1. Review the information on the **Before You Begin** page.
+
+1. On the **Getting Started** page, select **Uninstall a Configuration Manager site**.
 
     > [!IMPORTANT]  
     >  When a secondary site is attached to the primary site, you must remove the secondary site before you can uninstall the primary site.  
 
-6.  Select **Yes** to confirm the uninstallation of the Configuration Manager primary site.  
+1. On the **Uninstall the Configuration Manager Site** page, both of the following options are enabled by default:
 
-##  <a name="BKMK_UninstallPrimaryDistViews"></a> Uninstall a primary site that is configured with distributed views  
- Before you uninstall a child primary site that has distributed views turned on for its replication link to the central administration site, you must turn off distributed views in your hierarchy. Use the following information to turn off distributed views before you uninstall a primary site.  
+    - Remove the site database from the primary site server
+    - Remove the Configuration Manager console
 
-#### To uninstall a primary site that is configured with distributed views  
+1. Select **Yes** to confirm the uninstallation of the Configuration Manager primary site.
 
-1.  Before you uninstall any primary site, you must turn off distributed views on each link in the hierarchy between the central administration site and a primary site.  
-2.  After you turn off distributed views on each link, confirm that the data from the primary site finishes reinitializing at the central administration site. To monitor the initialization of data, in the Configuration Manager console, in the **Monitoring** workspace, view the link on the **Database Replication** node.  
-3.  After the data successfully reinitializes with the central administration site, you can uninstall the primary site. To uninstall a primary site, see [Uninstall a primary site](#BKMK_UninstallPrimary).  
-4.  When the primary site is completely uninstalled, you can reconfigure distributed views on links to primary sites.  
+### <a name="bkmk_distviews"></a> Uninstall a primary site that uses distributed views
+
+1. Before you uninstall a child primary site, turn off distributed views on each link in the hierarchy between the CAS and a primary site.
+
+1. After you turn off distributed views on each link, confirm that the data from the primary site finishes reinitializing at the CAS. To monitor the initialization of data, see [Monitor replication](/configmgr/core/servers/manage/monitor-replication).
+
+1. After the data successfully reinitializes with the CAS, you can [uninstall the primary site](#bkmk_pri-process).
+
+1. When the primary site is uninstalled, you can reconfigure distributed views on links from the CAS to other primary sites.
+
+    > [!IMPORTANT]
+    > If you uninstall the primary site before you turn off distributed views at each site, or before the data from the primary site successfully reinitializes at the CAS, data replication might fail.
+
+## <a name="bkmk_hierarchy"></a> Decommission a hierarchy
+
+Some organizations have multiple hierarchies because of mergers, acquisitions, test environments, or other business requirements. If you consolidate management to a single hierarchy, this action can help reduce costs and complexity. Another reason to decommission the hierarchy is that you're migrating to a cloud-only management service such as Microsoft Intune, and are ready to remove your on-premises infrastructure.
+
+To decommission a hierarchy with multiple sites, the sequence of removal is important. Start by uninstalling the sites at the bottom of the hierarchy and then move upward:
+
+1. Remove secondary sites attached to primary sites.
+2. Uninstall primary sites.
+3. After you uninstall all primary sites, you can uninstall the CAS.
+
+For more information, see the following sections:
+
+- [Remove a secondary site](#bkmk_secondary)
+- [Uninstall a primary site](#bkmk_primary)
+- [Uninstall the CAS](#bkmk_uninstall-cas)
+
+### <a name="bkmk_uninstall-cas"></a> Uninstall the CAS
+
+The final step to decommission a hierarchy is to uninstall the CAS. Run Configuration Manager setup to uninstall the CAS that doesn't have child primary sites.
+
+#### Prerequisites to uninstall the CAS
+
+The administrative user who runs Configuration Manager setup needs the following security rights:
+
+- Local **Administrator** rights on the CAS server
+
+- If the CAS database server is remote from the site server, local **Administrator** rights on the remote site database server for the CAS.
+
+#### Procedure to uninstall the CAS
+
+1. Start Configuration Manager setup on the CAS server by using one of the following methods:
+
+    - On the **Start** menu, select **Configuration Manager Setup**.
+
+    - In the directory for the Configuration Manager *installation media*, open `\SMSSETUP\BIN\X64\setup.exe`. Make sure this version is the same as the site version.
+
+    - In the directory where Configuration Manager is *installed*, open `\BIN\X64\setup.exe`.
+
+1. Review the information on the **Before You Begin** page.
+
+1. On the **Getting Started** page, select **Uninstall a Configuration Manager site**.
 
     > [!IMPORTANT]  
-    >  If you uninstall the primary site before you turn off distributed views at each site, or before the data from the primary site successfully reinitializes at the central administration site, replication of data between primary sites and the central administration site might fail. In this scenario, you must turn off distributed views for each link in your site hierarchy, and then, after the data successfully reinitializes with the central administration site, you can reconfigure distributed views.  
+    >  Remove all child primary sites before you can uninstall the CAS.  
 
-##  <a name="BKMK_UninstallCAS"></a> Uninstall the central administration site  
- You can run Configuration Manager Setup to uninstall a central administration site that does not have child primary sites. Use the following procedure to uninstall the central administration site.  
+1. On the **Uninstall the Configuration Manager Site** page, both of the following options are enabled by default:
 
-#### To uninstall a central administration site  
+    - Remove the site database from the CAS server
+    - Remove the Configuration Manager console
 
-1.  Verify that the administrative user who runs Setup has the following security rights:  
+1. Select **Yes** to confirm the uninstallation of the Configuration Manager central administration site (CAS).
 
-    -   Local Administrator rights on the central administration site server  
-    -   Local Administrator rights on the site database server for the central administration site, if the site database server is not installed on the site server 
+## <a name="bkmk_remove-cas"></a> Remove the CAS
 
-2.  Start Configuration Manager Setup on the central administration site server by using one of the following methods:  
+<!-- 3607277 -->
 
-    -   On **Start**, click **Configuration Manager Setup**.  
-    -   Open Setup.exe from &lt;*ConfigMgrInstallationMedia*>\SMSSETUP\BIN\X64.  
-    -   Open Setup.exe from &lt;*ConfigMgrInstallationPath*>\BIN\X64.  
+Starting in version 2002, if the hierarchy consists of the CAS and a single child primary site, you can remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single site.
 
-3.  On the **Before You Begin** page, select **Next**.  
-4.  On the **Getting Started** page, select **Uninstall a Configuration Manager site**, and then select **Next**.  
-5.  On the **Uninstall the Configuration Manager Site**, specify whether to remove the site database from the central administration site server, and whether to remove the Configuration Manager console. By default, Setup removes both items.  
-
-    > [!IMPORTANT]  
-    >  When there is a primary site attached to the central administration site, you must uninstall the primary site before you can uninstall the central administration site.  
-
-6.  Select **Yes** to confirm the uninstallation of the Configuration Manager central administration site.  
+For more information, see [Remove the CAS](/configmgr/core/servers/deploy/install/remove-central-administration-site).

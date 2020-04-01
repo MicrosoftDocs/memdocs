@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 12/17/2019
+ms.date: 03/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -359,6 +359,9 @@ You use Configuration Manager boundary groups to define and regulate content dis
 ### Use Configuration Manager Boundary Groups for Delivery Optimization Group ID
 
 Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content.
+
+ [!Note]
+> Microsoft recommends allowing the client to configure this setting via local policy rather than group policy. This allows the boundary group identifier to be set as the Delivery Optimization group identifier on the client. For more information, see [Delivery Optimization](/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization).
 
 ### Enable devices managed by Configuration Manager to use Microsoft Connected Cache servers for content download
 

@@ -2,7 +2,7 @@
 title: Extend and Migrate on-premises site to Microsoft Azure
 titleSuffix: Configuration Manager
 description: Learn about how to use the migration tool to programmatically create Azure virtual machines for Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -42,8 +42,6 @@ Microsoft.Resources/subscriptions/resourceGroups/write <br>
 Microsoft.Resources/deployments/read <br>
 Microsoft.Resources/deployments/write <br>
 Microsoft.Resources/deployments/validate/action <br>
-Microsoft.Authorization/roleAssignments/read <br>
-Microsoft.Authorization/roleAssignments/write <br>
 Microsoft.Compute/virtualMachines/extensions/read <br>
 Microsoft.Compute/virtualMachines/extensions/write <br>
 Microsoft.Compute/virtualMachines/read <br>
@@ -110,7 +108,10 @@ For more information about permissions and assigning roles, see [Manage access t
     |**Domain password**|The password of the domain user to join the domain. The tool verifies it after you select **Start**. To protect the password during Azure deployment, store the password as a secret in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview). Then, use the reference here. If needed, create a new one from the [Azure portal](https://portal.azure.com).|
     |**Domain DNS IP**|Used for joining the domain. By default, the tool uses the current DNS from your current machine.|
     |**Type**|Read only. It shows *Passive Site Server* as the type.|
-    
+
+    > [!IMPORTANT]
+    > By default the virtual machines are set to **No** for **Use existing Windows Server license**. If you want to utilize your on-premises Windows Server licenses with Software Assurance, configure this setting in the [Azure portal](https://portal.azure.com) after the virtual machines are provisioned. For more information, see [Azure Hybrid Benefit for Windows Server](https://docs.microsoft.com/windows-server/get-started/azure-hybrid-benefit).
+
 1. To start provisioning the Azure VM, select **Start**. To monitor the deployment status, switch to the **Deployments in Azure** tab in the tool. To get the latest status, select **Refresh deployment status**.
 
     > [!TIP]
@@ -162,6 +163,13 @@ The tool doesn't currently have any tasks to migrate the database from on-premis
     [![Deploy site roles by running the generated PowerShell script](./media/3556022-run-powershell-script-deployment.png)](./media/3556022-run-powershell-script-deployment.png#lightbox)
 
 1. Repeat this process to configure more roles.
+
+## <a name="bkmk_add_role"></a> Add site roles to an existing virtual machine deployment
+<!--5665775, 6307931-->
+Starting in Configuration Manager version 2002, the extend and migrate on-premises site to Microsoft Azure tool supports provisioning multiple site system roles on a single Azure virtual machine. You can add site system roles after the initial Azure virtual machine deployment has completed. To add a new role to an existing virtual machine, do the following steps:
+1. On the **Deployments in Azure** tab, click on a virtual machine deployment that has a **Completed** status.
+1. Click the **Create new** button to add an additional role to the virtual machine.
+
 
 ## Next steps
 

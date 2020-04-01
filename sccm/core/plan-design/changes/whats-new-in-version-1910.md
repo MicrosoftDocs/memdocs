@@ -346,16 +346,18 @@ This release includes the following improvements to search in the Configuration 
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1910 release notes](https://docs.microsoft.com/powershell/sccm/1910-release-notes?view=sccm-ps).
 
+For more information on changes to the administration service REST API, see [Administration service release notes](/configmgr/develop/adminservice/release-notes#bkmk_1910).
+
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4535776).
 
 <!--
 As of this version, the following features are no longer pre-release:
 - [SMS Provider administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)
 - [Device Guard management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)
-
-The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
-
 -->
+The following update rollup (4537079) is available in the console starting on February 18, 2020: [Update Rollup for Microsoft Endpoint Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4537079).
+
+
 
 <!--
 ### Hotfixes
@@ -364,7 +366,8 @@ The following additional hotfixes are available to address specific issues:
 
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
-| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
+| [4552181](https://support.microsoft.com/help/4552181) | Content distribution stalls in Configuration Manager current branch, version 1910 | 16 March 2020 | No |
+| [4552430](https://support.microsoft.com/help/4552430) | Third-party update category synchronization resets to default in Configuration Manager | 18 March 2020 | No |
 
 > [!NOTE]  
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](/sccm/core/servers/manage/updates#bkmk_supersede).

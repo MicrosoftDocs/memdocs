@@ -2,7 +2,7 @@
 title: Configure discovery
 titleSuffix: Configuration Manager
 description: Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory.
-ms.date: 07/31/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Configure discovery methods for Configuration Manager
@@ -250,8 +248,8 @@ When configuring the **Cloud Management** Azure service:
 ## <a name="bkmk_azuregroupdisco"></a> Azure AD User Group Discovery
 
 <!--3611956-->
-> [!Note]  
-> In this version of Configuration Manager, Azure AD User Group Discovery is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).  
+> [!Tip]  
+> This feature was first introduced in version 1906 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 2002, it's no longer a pre-release feature.  
 
 You can discover user groups and members of those groups from Azure AD. When the site finds users in Azure AD groups that it hasn't previously discovered, it adds them as new user resources in Configuration Manager. A user group resource record is created when the group is a security group.
 
@@ -479,7 +477,7 @@ Use the following procedures to first discover only your network topology, and t
 
 9. To configure discovery to query specific DHCP servers, switch to the **DHCP** tab. Then configure one or more of the following options:  
 
-    - To query the DHCP server on the computer that is running discovery, enable the option to **Always use the site server’s DHCP server**.  
+    - To query the DHCP server on the computer that is running discovery, enable the option to **Always use the site server's DHCP server**.  
 
       > [!NOTE]  
       > To use this option, the server must lease its IP address from a DHCP server and can't use a static IP address.  

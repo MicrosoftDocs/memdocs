@@ -4,9 +4,7 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
-ms.date: 08/23/2019
-
-
+ms.date: 03/12/2020
 ---
 <!--3555750 FKA 1357954 --Don't apply H2/H3 in this include file since they are context driven by article-->
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node. Click **Configure co-management** in the ribbon to open the **Co-management Configuration Wizard**.
@@ -15,7 +13,10 @@ ms.date: 08/23/2019
 
     - The **Azure environment** to use. For example, the Azure Public Cloud or the Azure US Government Cloud.<!--4075452-->  
 
-    - Select **Sign In**. Sign in to your Intune tenant, and then select **Next**.  
+    - Select **Sign In**. Sign in as an Azure AD global administrator, and then select **Next**.  
+
+        > [!TIP]
+        > You sign in this one time for the purposes of this wizard. The credentials aren't stored or reused elsewhere.
 
 3. On the **Enablement** page, choose the following settings:
 

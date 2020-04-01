@@ -25,7 +25,7 @@ To monitor your hierarchy in Configuration Manager, use the **Monitoring** works
 
 Along with using the Configuration Manager console for monitoring, use the following features:
 
-- [Reporting](/sccm/core/servers/manage/reporting)
+- [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting)
 - [Log files](/sccm/core/plan-design/hierarchy/log-files).  
 
 When you monitor sites, look for signs that indicate problems that require you to take action. For example:  

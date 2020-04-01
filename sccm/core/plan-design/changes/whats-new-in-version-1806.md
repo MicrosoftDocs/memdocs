@@ -10,8 +10,7 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ROBOTS: NOINDEX
 ---
 
 # What's new in version 1806 of Configuration Manager current branch
@@ -264,7 +263,7 @@ For more information, see [Configure Microsoft Edge settings](/sccm/compliance/d
 <!--1357552-->
 Convert Security Content Automation Protocol (SCAP) content to compliance settings baselines and generate SCAP reports using a console extension. This feature also includes a new dashboard to visualize the client compliance as well as XCCDF rule compliance. 
 
-For more information, see [About the SCAP extensions](/sccm/compliance/plan-design/scap/about-scap).
+
 
 
 

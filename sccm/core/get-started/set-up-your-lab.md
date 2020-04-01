@@ -34,7 +34,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
 -   **The lab environment uses SQL Server 2012 SP2** for the site database.  
 
-     You can download an evaluation version of SQL Server 2012 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29066).  
+     You can download an evaluation version of SQL Server 2012 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=43340).  
 
      SQL Server has [Supported versions of SQL Server](../../core/plan-design/configs/support-for-sql-server-versions.md#bkmk_SQLVersions) that must be met for use with Configuration Manager.  
 
@@ -60,7 +60,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
      For additional information, review this [overview of Active Directory Domain Services](https://technet.microsoft.com/library/hh831484).  
 
--   **Hyper-V is used with a few virtual machines** to verify that the management steps taken in these exercises are functioning as expected. A minimum of three virtual machines is recommended, with Windows 7 (or later) installed.  
+-   **Hyper-V is used with a few virtual machines** to verify that the management steps taken in these exercises are functioning as expected. A minimum of three virtual machines is recommended, with Windows 10 installed.  
 
      For additional information, review this [overview of Hyper-V](https://technet.microsoft.com/library/hh831531.aspx).  
 

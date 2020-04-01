@@ -103,4 +103,4 @@ To identify the language packs that are installed on a computer that runs the Co
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs`  
 
-Customize hardware inventory to collect this information. Then build a custom report to view the language details. For more information about collecting custom hardware inventory, see [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory). For more information about creating reports, see [Manage Configuration Manager reports](/sccm/core/servers/manage/operations-and-maintenance-for-reporting#BKMK_ManageReports).  
+Customize hardware inventory to collect this information. Then build a custom report to view the language details. For more information about collecting custom hardware inventory, see [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory). For more information, see [Create reports](/sccm/core/servers/manage/operations-and-maintenance-for-reporting#create-reports).

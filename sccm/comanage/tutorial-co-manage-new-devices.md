@@ -5,7 +5,7 @@ description: Learn how to configure co-management for new internet-based Windows
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 03/12/2020
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -34,7 +34,6 @@ Use this tutorial when:
 > * Configure the management point and clients to use the CMG
 > * Enable co-management in Configuration Manager
 > * Configure Intune to install the Configuration Manager client
-> * Assign license for cloud services
 
 ## Prerequisites  
 
@@ -46,8 +45,10 @@ Use this tutorial when:
   > [!TIP]  
   > An Enterprise Mobility and Security (EMS) Subscription includes both Azure Active Directory Premium and Microsoft Intune. EMS Subscription ([free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial)).  
 
-- Users must be [assigned licenses](tutorial-co-manage-clients.md#assign-intune-licenses-to-users) for *Intune* and *Azure Active Directory Premium*
 - Intune is configured to [auto-enroll devices](tutorial-co-manage-clients.md#configure-auto-enrollment-of-devices-to-intune)  
+
+> [!TIP]
+> You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](/configmgr/core/understand/product-and-licensing-faq#bkmk_mem).
 
 ### On-premises infrastructure
 
@@ -69,7 +70,7 @@ Use this tutorial when:
 
 Throughout this tutorial, use the following permissions to complete tasks:
 
-- An account that is a *global administrator* in Azure
+- An account that is a *global administrator* for Azure Active Directory (Azure AD)
 - An account that is a *domain admin* on your on-premises infrastructure  
 - An account that is a *full administrator* for *all* scopes in Configuration Manager
 
@@ -93,7 +94,7 @@ About this certificate:
 When you request the CMG server authentication certificate, you specify what must be a unique name to identify your *Cloud service (classic)* in Azure. By default, the Azure public cloud uses *cloudapp.net*, and the CMG is hosted within the cloudapp.net domain as *\<YourUniqueDnsName>.cloudapp.net*.  
 
 > [!TIP]  
-> In this tutorial, the **CMG server authentication certificate** uses an FQDN that ends in *contoso.com*.  After we create the CMG we’ll configure a canonical name record (CNAME) in our organization’s public DNS. This record creates an alias for the CMG that maps to the name that we use in the public certificate.  
+> In this tutorial, the **CMG server authentication certificate** uses an FQDN that ends in *contoso.com*.  After we create the CMG we'll configure a canonical name record (CNAME) in our organization's public DNS. This record creates an alias for the CMG that maps to the name that we use in the public certificate.  
 
 Before you request your public certificate, confirm the name you want to use is available in Azure. You don't directly create the service in Azure. Instead, the name that's specified in the public certificate you request is used by Configuration Manager to create the cloud service when you install the CMG.  
 
@@ -117,9 +118,9 @@ We recommend you use your primary site server to generate the certificate signin
 Request a version 2 key provider type when you generate a CSR. Only version 2 certificates are supported.  
 
 > [!TIP]  
-> When we deploy the CMG, we will also install a cloud distribution point (CDP) at the same time. By default, when you deploy a CMG, the option **Allow CMG to function as a cloud distribution point and serve content from Azure storage** is selected. Co-locating the CDP on the server with the CMG removes the need for separate certificates and configurations to support the CDP. Even though the CDP isn’t required to use co-management, it is useful in most environments.  
+> When we deploy the CMG, we will also install a cloud distribution point (CDP) at the same time. By default, when you deploy a CMG, the option **Allow CMG to function as a cloud distribution point and serve content from Azure storage** is selected. Co-locating the CDP on the server with the CMG removes the need for separate certificates and configurations to support the CDP. Even though the CDP isn't required to use co-management, it is useful in most environments.  
 >
-> If you will use additional cloud distribution points for co-management, you’ll need to request separate certificates for each additional server. To request a public certificate for the CDP, use the same details as for the cloud management gateway CSR. You need only change the common name so that it is unique for each CDP.  
+> If you will use additional cloud distribution points for co-management, you'll need to request separate certificates for each additional server. To request a public certificate for the CDP, use the same details as for the cloud management gateway CSR. You need only change the common name so that it is unique for each CDP.  
 
 #### Details for the cloud management gateway CSR
 
@@ -166,7 +167,7 @@ Export the *CMG server authentication certificate* from your server. Re-exportin
 
 3. In the Certificate Export Wizard, select **Next**, select **Yes, export the private key**, and then **Next**.  
 
-4. On the Export File Format page, select **Personal Information Exchange - PKCS #12 (.PFX)**, select **Next**, and provide a password. For file name, specify a name like **C:\ConfigMgrCloudMGServer**. You’ll reference this file when you create the CMG in Azure.  
+4. On the Export File Format page, select **Personal Information Exchange - PKCS #12 (.PFX)**, select **Next**, and provide a password. For file name, specify a name like **C:\ConfigMgrCloudMGServer**. You'll reference this file when you create the CMG in Azure.  
 
 5. Select **Next**, and then confirm the following settings before selecting **Finish** to complete the export:  
 
@@ -189,7 +190,7 @@ Run the following procedure from the primary site server.
 
 1. From the primary site server, open the Configuration Manager console and go to **Administration > Cloud Services > Azure Services**, and select **Configure Azure Services**.  
 
-   On the Configure Azure Service page, specify a friendly Name for the cloud management service you’re configuring. For example: *My cloud management service*.
+   On the Configure Azure Service page, specify a friendly Name for the cloud management service you're configuring. For example: *My cloud management service*.
 
    Then select **Cloud Management**, and then select **Next**.  
 
@@ -204,7 +205,7 @@ Run the following procedure from the primary site server.
 
    - **App ID URI**: This value needs to be unique in your Azure AD tenant. It is in the access token used by the Configuration Manager client to request access to the service. By default, this value is `https://ConfigMgrService`.  
 
-   Next, select **Sign in**, and specify an Azure Global Admin account. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager and doesn't need to be the same account that runs the Azure Services Wizard.
+   Next, select **Sign in**, and specify an Azure AD Global Administrator account. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager and doesn't need to be the same account that runs the Azure Services Wizard.
 
    After you sign in, the results display. Select **OK** to close the Create Server Application dialog and return to the App Properties page.
 
@@ -215,7 +216,7 @@ Run the following procedure from the primary site server.
    - **Application Name**: Specify a friendly name for the app, such as *Cloud Management native client app*.
 
    - **Reply URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default, this value is `https://ConfigMgrClient`.
-   Next, select **Sign in**, and specify an Azure Global Admin account. Like the Web app, these credentials aren't saved and don't require permissions in Configuration Manager.
+   Next, select **Sign in**, and specify an Azure AD Global Administrator account. Like the Web app, these credentials aren't saved and don't require permissions in Configuration Manager.
 
    After you sign in, the results are display. Select **OK** to close the Create Client Application dialog and return to the App Properties page. Then, select **Next** to continue.
 
@@ -413,37 +414,9 @@ The following procedure deploys the app for installing the Configuration Manager
 3. Select **OK** and then **Save** the configuration.
 The app is now required by users and devices you assigned it to. After the app installs the Configuration Manager client on a device, it's managed by co-management.
 
-## Assign Intune licenses to users
-
-A commonly overlooked but critical action is to assign an Intune license to each user who uses a device that is co-managed.  
-
-To assign licenses to groups of users, use Azure Active Directory.  
-
-1. Sign in to the [Azure portal](https://portal.azure.com/) with an Administrator account. To manage licenses, the account must be a global administrator role or user account administrator.  
-
-2. Select **All services** in the left navigation pane, and then select **Azure Active Directory**.  
-
-3. On the **Azure Active Directory** pane, select **Licenses** to open a pane where you can see and manage all licensable products in the tenant.  
-
-4. Under **All products**, select your product option that includes the Intune license, and then select **Assign** at the top of the pane.  
-
-   For example, you might select **Enterprise Mobility + Security E5** if that is how you obtain Intune.  
-
-5. On the **Assign license** pane, click **Users and groups** to open the **Users and groups** pane. Select the groups, and individual users to whom you want to assign a license.  Then, click **Select** at the bottom of the pane to confirm that selection.  
-
-6. On the **Assign license** pane, click **Assignment options** to display all service plans included in the product you selected previously. If you selected a single product like Intune, then only that product is shown.  
-   - Set **Microsoft Intune** to **On**.  
-   - Assign each user a license for **Azure Active Directory Premium**.  
-
-   When the applicable licenses are assigned, select **OK**.  
-
-7. To complete the assignment, on the **Assign license** pane, click **Assign** at the bottom of the pane.  
-
-8. A notification is displayed in the upper-right corner that shows the status and outcome of the process. If the assignment to the group couldn't be completed (for example, because of pre-existing licenses in the group), click the notification to view details of the failure. 
-
 ## Summary
 
-After you complete the configuration steps of this tutorial, including the last action to ensure licenses are assigned, your devices can successfully be co-managed.
+After you complete the configuration steps of this tutorial, you can start co-managing your devices.
 
 ## Next steps
 

@@ -35,7 +35,6 @@ This article lists the prerequisites for software updates in Configuration Manag
   - [KB 3095113 and KB 3159706 (or an equivalent update)](#BKMK_wsus2012) are needed for WSUS 6.2 and 6.3 if you deploy Windows 10 upgrades.
 
 > [!NOTE]
-> - Beginning with version 1702, Windows Server 2008 R2 isn't supported for the software update point role. For more information, see [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#bkmk_2008r2sp1).
 > - When you have multiple software update points at a site, ensure that they're all running the same version of WSUS.
 
 ### WSUS Administration Console  

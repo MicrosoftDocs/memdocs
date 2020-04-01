@@ -2,12 +2,10 @@
 title: Microsoft Connected Cache
 titleSuffix: Configuration Manager
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization
-ms.date: 11/29/2019
+ms.date: 03/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-
-
 ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
@@ -62,6 +60,8 @@ When you configure clients to use the Connected Cache server, they no longer req
 
   - The distribution point requires internet access to the Microsoft cloud. The specific URLs can vary depending upon the specific cloud-enabled content. For more information, see [Internet access requirements](/sccm/core/plan-design/network/internet-endpoints).
 
+  - Starting in version 2002, the Connected Cache application can use an unauthenticated proxy server for internet access. For more information, see [Configure the proxy for a site system server](/configmgr/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server).<!-- 5856396 -->
+
 - Clients running Windows 10 version 1709 or later
 
 ## Enable Connected Cache
@@ -85,6 +85,8 @@ When you configure clients to use the Connected Cache server, they no longer req
 
         > [!Note]  
         > The default cache size should be sufficient for most customers. You can adjust the cache size later.
+        >
+        > If the cache size on disk exceeds the allocated space, ARR clears space by removing content based on its built-in heuristics.<!-- SCCMDocs#2045 -->
 
     4. **Retain cache when disabling the Connected Cache server**: If you remove the cache server, and you enable this option, the server keeps the cache's content on the disk.  
 

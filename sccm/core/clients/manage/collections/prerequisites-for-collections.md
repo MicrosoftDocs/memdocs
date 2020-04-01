@@ -23,5 +23,5 @@ Collections in Configuration Manager contain only dependencies within the produc
 
 |Dependency|More information|  
 |----------------|----------------------|  
-|Reporting services point|The reporting services point site system role must be installed before you can run reports for collections. For more information, see [Reporting](../../../../core/servers/manage/reporting.md).|  
+|Reporting services point|The reporting services point site system role must be installed before you can run reports for collections. For more information, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).|  
 |Specific security permissions must have been granted to manage collections|You must have the following security permissions to manage compliance settings:<br /><br /> - To create and manage collections: **Create**, **Delete**, **Modify**, **Modify Folder**, **Move Object**, **Read** and **Read Resource** for the **Collection** Object.<br /><br /> - To manage collection settings: **Modify Collection Setting** for the **Collection** Object.<br /><br /> The **Modify Folder** permission is required for all collection folders, including the root folder.|  

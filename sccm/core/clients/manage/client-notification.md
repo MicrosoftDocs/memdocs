@@ -2,7 +2,7 @@
 title: Client notification
 titleSuffix: Configuration Manager
 description: Manage clients by taking immediate action from the central Configuration Manager console.
-ms.date: 11/29/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -131,23 +131,25 @@ Starting in version 1810, trigger devices configured to support Wake-on-LAN to w
 Trigger the selected devices to restart. For more information, see [Restart clients](/sccm/core/clients/manage/manage-clients#restart-clients).
 
 ## Client diagnostics
-
 <!--4433455-->
 
-Starting in version 1910, there are new device actions for **Client Diagnostics** in the Configuration Manager console. This release includes the following actions:
+Starting in version 1910, there are new device actions for **Client Diagnostics** in the Configuration Manager console. The following actions have been added:
 
 - **Enable verbose logging**: Change the global log level for the CCM component to verbose, and enable debug logging.
 - **Disable verbose logging**: Change the global log level to default, and disable debug logging.
+- **Collect Client Logs** (starting in 2002): A client notification message is sent to the selected clients to gather the CCM logs. The logs are returned using software inventory file collection. <!--4226618-->
+   - The size limit for the compressed client logs is 100 MB. <!--6366098-->
+   - Use [Resource Explorer](/configmgr/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory#bkmk_diag) manage and view these files.
+
+   [![Collect client logs from the console](./media/4226618-collect-client-logs.png)](./media/4226618-collect-client-logs.png#lightbox)
 
 > [!IMPORTANT]
-> These actions only change the log verbosity, not the size or history. More verbose logging can generate more log content.
+> - These actions only change the log verbosity, not the size or history. More verbose logging can generate more log content.
+> - The management point role also uses the CCM component. If the targeted device is also a management point, this action also applies to that role.
 
 For more information about these settings, see [About log files](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-client).
 
-> [!NOTE]
-> The management point role also uses the CCM component. If the targeted device is also a management point, this action also applies to that role.
-
-Track the status of the task in the **diagnostics.log** on the client.
+Track the status of the task in the **diagnostics.log** on the client. When client logs are collected, additional information is logged in **MP_SinvCollFile.log** on the management point and **sinvproc.log** on the site server.
 
 ### Prerequisites - Client diagnostics
 
@@ -161,6 +163,7 @@ Track the status of the task in the **diagnostics.log** on the client.
   - Infrastructure Administrator  
 
   Add this permission to any custom roles that need to use client notification actions.
+
 
 ## Endpoint Protection
 

@@ -314,7 +314,7 @@ After you install the Configuration Manager client, devices don't unenroll from 
 
 ### Install the Configuration Manager client by using Intune
 
-1. In Intune, [add a Windows line-of-business app](https://docs.microsoft.com/intune/lob-apps-windows) that contains the Configuration Manager client installation file **CCMSetup.msi**. You can find this file in the `\bin\i386` folder of the Configuration Manager installation directory on the site server.  
+1. In Intune, [add a Windows line-of-business app](https://docs.microsoft.com/mem/intune/apps/lob-apps-windows) that contains the Configuration Manager client installation file **CCMSetup.msi**. You can find this file in the `\bin\i386` folder of the Configuration Manager installation directory on the site server.  
 
 2. In the Intune Software Publisher, enter command-line parameters. For example, use this command with a traditional client on an intranet:  
 
@@ -323,7 +323,7 @@ After you install the Configuration Manager client, devices don't unenroll from 
     > [!NOTE]  
     > For an example of a command to use with a modern Windows 10 client using Azure AD authentication, see [How to prepare internet-based devices for co-management](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client).  
 
-3. [Assign the app](https://docs.microsoft.com/intune/deploy-use/deploy-apps-in-microsoft-intune) to a group of the enrolled Windows computers.  
+3. [Assign the app](https://docs.microsoft.com/mem/intune/apps/apps-deploy) to a group of the enrolled Windows computers.  
 
 ## <a name="BKMK_ClientImage"></a> OS image installation
 

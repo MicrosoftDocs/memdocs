@@ -2,7 +2,7 @@
 title: "View software inventory with Resource Explorer"
 titleSuffix: "Configuration Manager"
 description: "Use Resource Explorer to view software inventory in Configuration Manager."
-ms.date: 02/22/2017
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -44,3 +44,25 @@ Use Resource Explorer in Configuration Manager to view information about softwar
 
 4.  You can right-click any item in the right-pane of the Resource Explorer window and choose **Properties** to view the collected inventory information in a more readable format.  
  
+## <a name="bkmk_diag"> </a> View and manage collected diagnostic files
+
+Starting in Configuration Manager version 2002, use Resource Explorer to view and manage the files gathered when you use client notification to [collect client logs](/configmgr/core/clients/manage/client-notification#client-diagnostics). 
+
+1. From the **Devices** node, right-click on the device you want to view logs for.
+1. Select **Start**, then **Resource Explorer**.
+1. From **Resource Explorer**, click on **Diagnostic Files**.
+1. In the **Diagnostic Files** list, you can see the collection date for the files. The name format of the client logs is `Support_<guid>.zip`.
+1. Right-click on the zip file and select one of the following options:
+    - **Open Support Center**: Launches [Support Center](/configmgr/core/support/support-center).
+    - **Copy**: Copies the row information from Resource Explorer.
+    - **View file**: Opens the folder where the zip file is located with File Explorer.
+    - **Save**: Opens a Save File dialog for the selected file.
+    - **Export**: Saves the Resource Explorer columns shown in **Diagnostic Files**.
+    - **Refresh**: Refreshes the file list.
+    - **Properties**: Returns the properties on the selected file. 
+
+[![Review and save client logs from Resource Explorer](./../media/4226618-view-collected-client-logs.png)](./../media/4226618-view-collected-client-logs.png#lightbox)
+
+## Next steps
+
+[Use Support Center](/configmgr/core/support/support-center) to view collected diagnostic files.

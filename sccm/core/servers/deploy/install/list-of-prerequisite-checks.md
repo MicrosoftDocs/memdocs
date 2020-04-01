@@ -2,7 +2,7 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 07/26/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # List of prerequisite checks for Configuration Manager
@@ -588,6 +586,18 @@ To resolve this warning, check whether the despooler and scheduler site system c
 
 The Background Intelligent Transfer Service (BITS) is installed and enabled in IIS.
 
+### Check if the site uses Upgrade Readiness cloud service connector
+
+*Applies to: Central administration site, primary site*
+
+The Upgrade Readiness service is retired as of January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+
+Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](/sccm/desktop-analytics/overview).
+
+If your Configuration Manager site had a connection to Upgrade Readiness, you need to remove it and reconfigure clients. For more information, see [Remove Upgrade Readiness connection](/configmgr/core/clients/manage/upgrade-readiness#bkmk_remove).
+
+If you ignore this prerequisite warning, Configuration Manager setup automatically removes the Upgrade Readiness connector.<!-- #4898 -->
+
 ### Cloud management gateway requires either token-based authentication or an HTTPS management point
 
 *Applies to: Cloud management gateway*
@@ -633,6 +643,12 @@ The Windows Firewall is disabled, or a relevant Windows Firewall exception exist
 IIS website has bindings for the HTTPS communication protocol.
 
 When you install site roles that require HTTPS, configure IIS site bindings on the specified server with a valid public key infrastructure (PKI) certificate.
+
+### Invalid discovery records
+
+*Applies to: central administration site*
+
+There are discovery records that are no longer valid. These records will be marked for deletion.
 
 ### Microsoft XML Core Services 6.0 (MSXML60)
 

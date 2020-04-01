@@ -2,7 +2,7 @@
 title: Create collections
 titleSuffix: Configuration Manager
 description: Create collections in Configuration Manager to more easily manage groups of users and devices.
-ms.date: 07/26/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # How to create collections in Configuration Manager
@@ -168,6 +166,9 @@ In the **Query Rule Properties** dialog box, specify the following information.
 
 - **Edit Query Statement**: Opens the **Query Statement Properties** dialog box, where you can write a query to use as the rule for the collection. For more information about queries, see [Introduction to queries](/sccm/core/servers/manage/introduction-to-queries).  
 
+        
+        > [!TIP]  
+        > On the General tab, selecting the checkbox to **Omit duplicate rows (select distinct)** may result in less rows returned and potentially quicker results. 
 
 ### <a name="bkmk-category"></a> Device category rule
 
@@ -214,10 +215,10 @@ For more information about exporting collections, see [How to manage collections
 5. Complete the wizard to import the collection. The new collection is displayed in the **User Collections** or **Device Collections** node of the **Assets and Compliance** workspace. Refresh or reload the Configuration Manager console to see the collection members for the newly imported collection.  
 
 ## <a name="bkmk_aadcollsync"></a> Synchronize collection membership results to Azure Active Directory groups
-*(Introduced as a pre-release feature starting in version 1906)*
+
 <!--3607475-->
-> [!NOTE]
-> Synchronization of collection memberships to an Azure Active Directory (Azure AD) group is a pre-release feature that was first introduced in version 1906. To enable it, see the [Pre-release features](/sccm/core/servers/manage/pre-release-features) article.
+> [!Tip]  
+> This feature was first introduced in version 1906 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 2002, it's no longer a pre-release feature.  
 
 You can enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization allows you to use your existing on premises grouping rules in the cloud by creating Azure AD group memberships based on collection membership results. You can synchronize device collections. Only devices with an Azure Active Directory record are reflected in the Azure AD Group. Both Hybrid Azure AD Joined and Azure Active Director joined devices are supported.
 

@@ -159,4 +159,4 @@ Configuration Manager includes built-in reports that you can use to monitor info
 > [!IMPORTANT]  
 > Use the wildcard character (`%`) when you use the parameters **Device filter** and **User filter** in the reports for compliance settings.  
 
-For more information about how to configure reporting in Configuration Manager, see [Reporting](/configmgr/core/servers/manage/reporting).  
+For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  

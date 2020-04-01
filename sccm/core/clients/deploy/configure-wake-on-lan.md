@@ -2,7 +2,7 @@
 title: "Configure Wake on LAN"
 titleSuffix: "Configuration Manager"
 description: "Select Wake On LAN settings in Configuration Manager."
-ms.date: 08/07/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -35,6 +35,11 @@ Starting in Configuration Manager 1810, there's a new way to wake up sleeping ma
     - For wake-up when a deadline occurs, the older version of Wake on LAN is used.
     -  If the older version isn't enabled, client wake up won't occur for deployments created with the settings **Use Wake-on-LAN to wake up clients for required deployments** or **Send wake-up packets**.  
 
+> [!IMPORTANT]
+> The Wake On LAN feature is recommended for use on only a limited amount of devices (100) at a time.
+>
+> When you use the Wake On LAN feature to wake up machines from Configuration Manager admin console, the wake up requests are put in to an internal queue that's shared by other real-time action features. Examples of those other features are Run Scripts, CMPivot, and other fast-channel client notifications. Depending on the performance of your site systems, the wake up actions may take an extended amount of time and delay the other real-time action. It is suggested to not wake up more than 100 machines at a single time. To know if you are getting a backlog in this area that may cause delays, you can look in the ...\inboxes\objmgr.box directory to see if there are a large number of files with .OPA extension.
+
 
 ### Security role permissions
 
@@ -64,7 +69,8 @@ Right-click on the client, go to **Client Notification**, then select **Wake up*
 - **To wake up all sleeping clients in a collection:** Right-click on the device collection, go to **Client Notification**, then select **Wake up**.
    - This action can't be run on built-in collections.
    - When you have a mix of asleep and awake clients in a collection, only the clients that are asleep are sent a Wake on LAN request.
-   - This action is only active when the Configuration Manager console is connected to a stand-alone or child primary site. When connected to a Central Administration Site, the action is not available.
+   - Starting in Configuration Manager 2002, this action is available from a console connected to a Central Administration site, a stand-alone site, or child primary site.
+   - In versions 1910 and earlier, this action is only active when the Configuration Manager console is connected to a stand-alone or child primary site. When connected to a Central Administration Site, the action is not available.
 
 ### What to expect when only the new version of Wake on LAN is enabled
 
