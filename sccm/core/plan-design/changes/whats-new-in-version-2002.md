@@ -115,6 +115,12 @@ Configuration Manager extends its device support with the following methods:
 
 For more information, see [Token-based authentication for CMG](/configmgr/core/clients/deploy/deploy-clients-cmg-token).
 
+### Microsoft Endpoint Configuration Manager cloud features
+
+<!--5834830-->
+
+When new cloud-based features are available in the Microsoft Endpoint Manager admin center, or other attached cloud services for your on-premises Configuration Manager installation, you can now opt in to these new features in the Configuration Manager console. For more information on enabling features in the Configuration Manager console, see [Enable optional features from updates](/configmgr/core/servers/manage/install-in-console-updates#bkmk_options).
+
 ## <a name="bkmk_da"></a> Desktop Analytics
 
 For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](/configmgr/desktop-analytics/whats-new).

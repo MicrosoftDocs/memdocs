@@ -35,12 +35,18 @@ Starting in version 2002, if the hierarchy consists of the central administratio
 
 - Make sure your child primary site meets the size and scale requirements for a [stand-alone primary site](/configmgr/core/plan-design/configs/size-and-scale-numbers#bkmk_pri).
 
-- Move or retire any site roles at the CAS, except the service connection point and the software update point. Configuration Manager setup handles these two roles when you remove the CAS. The following roles are most common at the CAS that you need to retire or move to the child primary site:
+- Move or retire any site roles at the CAS, except the service connection point and the software update point. Configuration Manager setup handles these two roles when you remove the CAS.
+
+  The following roles are most common at the CAS, which you need to retire or move to the primary site:
 
   - Asset Intelligence sync point
   - Endpoint Protection point
   - Reporting services point
   - Data warehouse service point
+  - Cloud management gateway (CMG)
+
+    > [!NOTE]
+    > If you enabled the CMG for content, plan to redistribute the content after you recreate the CMG on the primary site.<!-- 6608659 -->
 
 - Turn off distributed views
 
