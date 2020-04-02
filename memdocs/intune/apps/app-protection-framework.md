@@ -67,6 +67,9 @@ The following App Protection Policy settings should be enabled for the applicabl
 
 Microsoft recommends reviewing and categorizing usage scenarios, and then configuring users using the prescriptive guidance for that level. As with any framework, settings within a corresponding level may need to be adjusted based on the needs of the organization as data protection must evaluate the threat environment, risk appetite, and impact to usability.  
 
+### Conditional Access Policies
+To ensure that only apps supporting App Protection Polices access work or school account data, Azure Active Directory Conditional Access policies are required. See **Scenario 1: Office 365 apps require approved apps with app protection policies** in [Require app protection policy for cloud app access with Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access) for steps to implement the specific policies.
+
 ### Apps to include in the App Protection Policies  
 
 For each App Protection Policy, the following core Microsoft apps should be included:
