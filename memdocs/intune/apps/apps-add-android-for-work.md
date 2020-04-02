@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -228,6 +228,8 @@ When necessary, you can delete managed Google Play apps from Microsoft Intune. T
 
 > [!NOTE]
 > If an app is unapproved or deleted from the managed Google Play store, it will not be removed from the Intune client apps list. This allows you to still target an uninstall policy to users even if the app is unapproved.
+> 
+> To turn off Android Enterprise enrollment and management, see [Disconnect your Android Enterprise administrative account](../enrollment/connect-intune-android-enterprise.md#disconnect-your-android-enterprise-administrative-account).
 
 ## Android Enterprise system apps
 
