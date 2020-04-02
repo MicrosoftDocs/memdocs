@@ -22,6 +22,9 @@ highlightedContent:
     - title: "Tutorial: Walkthrough Intune in Microsoft Endpoint Manager"
       itemType: tutorial
       url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md
+    - title: Secure your remote workforce
+      itemType: get-started
+      url: https://docs.microsoft.com/enterprise-mobility-security/remote-work/
 
 conceptualContent:
   items:
