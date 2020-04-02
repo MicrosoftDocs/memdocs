@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the client operating systems that Configuration Manager no longer supports.
 ms.date: 02/19/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 604ab835-bce3-4fe3-a7f3-3f059cfc0ecf
 author: mestew

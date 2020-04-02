@@ -19,7 +19,7 @@ manager: dougeby
 
 You can use Configuration Manager reports to view audit information for remote control.  
 
- For more information about how to configure reporting in Configuration Manager, see [Reporting](../../../../core/servers/manage/reporting.md).  
+ For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
 
  The following two reports are available with the category **Status Messages - Audit**:  
 

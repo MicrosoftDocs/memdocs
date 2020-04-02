@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Instructions for Endpoint analytics preview.
 ms.date: 03/27/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: 00537b90-f6d2-45e9-a9a1-6b3ada466a16
 author: mestew

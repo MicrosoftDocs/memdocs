@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 1910.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: b3ce6b9a-7d54-4374-9b7a-f017f872bd6f
 author: aczechowski

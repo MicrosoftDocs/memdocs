@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the primary management capabilities of Configuration Manager.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
 author: mestew

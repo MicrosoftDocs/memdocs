@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn about actions to take before updating from Configuration Manager version 1511 to version 1602."
 ms.date: 02/7/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: b63ef197-01f0-4894-b929-5ef8403c5195
 author: mestew

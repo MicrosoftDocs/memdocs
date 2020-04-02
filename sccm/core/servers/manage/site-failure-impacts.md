@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Understand the effects of various failures in a Configuration Manager site.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 6f0e08f8-f2e1-4823-90f6-7b1f4341eb46
 author: aczechowski

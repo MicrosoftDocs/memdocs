@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Follow a step-by-step example to learn how to create and deploy PKI certificates that Configuration Manager uses.
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: mestew

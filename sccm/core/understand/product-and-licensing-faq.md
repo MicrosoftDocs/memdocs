@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Find answers for common product and license questions for Configuration Manager.
 ms.date: 02/12/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski

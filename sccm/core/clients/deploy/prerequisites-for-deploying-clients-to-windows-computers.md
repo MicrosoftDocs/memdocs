@@ -109,7 +109,7 @@ For more information, see [Determine the site system roles for clients](/sccm/co
 |Management point|To deploy the Configuration Manager client, you don't require a management point. Clients require a management point to transfer information with the site. Without a management point, you can't manage client computers.|  
 |Distribution point|The distribution point is an optional, but recommended site system role for client deployment and management. All distribution points host the client source files. Clients find the nearest distribution point from which to download the source files during client deployment or update. If the site doesn't have a distribution point, computers download the client source files from their management point.|  
 |Fallback status point|The fallback status point is an optional, but recommended site system role for client deployment. The fallback status point tracks client deployment and enables computers in the Configuration Manager site to send state messages when they can't communicate with a management point.|  
-|Reporting services point|The reporting services point is an optional, but recommended site system role. It displays reports related to client deployment and management. For more information, see [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting).|  
+|Reporting services point|The reporting services point is an optional, but recommended site system role. It displays reports related to client deployment and management. For more information, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).|  
 
 ### Installation method dependencies  
 
@@ -242,7 +242,7 @@ For more information, see [Determine the site system roles for clients](/sccm/co
 
     The reporting services point is an optional, but recommended site system role that can display reports related to mobile device enrollment and client management.  
 
-    For more information, see [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting).  
+    For more information, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
 
 - To configure enrollment for mobile devices, you must have the following security permissions:  
 

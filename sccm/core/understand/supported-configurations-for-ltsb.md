@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Understand what operating systems and dependent products work with the Long-Term Servicing Branch of System Center Configuration Manager."
 ms.date: 05/10/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski

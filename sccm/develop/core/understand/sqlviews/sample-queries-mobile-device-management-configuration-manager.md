@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Sample queries that show how to join mobile device management views to other views when the device is managed by Configuration Manager.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
 
 

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Get hardware recommendations to help you scale your Configuration Manager environment beyond a basic deployment.
 ms.date: 05/23/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 5267f0af-34d3-47a0-9ab8-986c41276e6c
 author: mestew

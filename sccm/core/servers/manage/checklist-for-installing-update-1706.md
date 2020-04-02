@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn about actions to take before updating to Configuration Manager version 1706."
 ms.date: 12/19/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 7def067e-845c-4db3-9d56-fa1dcf2fd7c7
 author: mestew

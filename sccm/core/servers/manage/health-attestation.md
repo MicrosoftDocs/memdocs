@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn about the Device Health Attestation functionality viewable in the Configuration Manager console."
 ms.date: 10/05/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: mestew

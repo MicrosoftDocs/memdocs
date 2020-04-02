@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use distribution points to host the content that you deploy to devices and users.
 ms.date: 12/03/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski

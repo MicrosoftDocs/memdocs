@@ -50,4 +50,4 @@ You can view information from Linux and UNIX servers in the Configuration Manage
 
  It's also possible to create custom reports that are specific to Linux and UNIX server data. The **Caption** property of the hardware inventory class **Operating System** is a useful attribute that you can use to identify specific Operating Systems in the report query.  
 
- For information about reports in Configuration Manager, see [Reporting](../../../core/servers/manage/reporting.md).  
+ For information about reports in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  

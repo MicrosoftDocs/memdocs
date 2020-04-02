@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
 ms.date: 07/31/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew

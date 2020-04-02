@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Configure scheduling, throttling, and prestaged content for Configuration Manager."
 ms.date: 02/6/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: e80d1151-91db-4a27-8411-a957297b67d0
 author: aczechowski

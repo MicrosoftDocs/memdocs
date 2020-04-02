@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use asset intelligence in Configuration Manager to inventory and manage software license usage throughout your enterprise.
 ms.date: 12/10/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 0bdfdef5-390f-4099-8bde-de51d9a89175
 author: mestew
@@ -169,7 +169,7 @@ The **Asset Intelligence** home page includes the following sections:
 
 ## <a name="BKMK_AssetIntelligenceReports"></a> Asset intelligence reports  
 
-The asset intelligence reports are located in the Configuration Manager console, in the **Monitoring** workspace, in the **Asset intelligence** folder under the **Reporting** node. The reports provide information about hardware, license management, and software. For more information about reports in Configuration Manager, see [Reporting](/sccm/core/servers/manage/reporting).  
+The asset intelligence reports are located in the Configuration Manager console, in the **Monitoring** workspace, in the **Asset intelligence** folder under the **Reporting** node. The reports provide information about hardware, license management, and software. For more information about reports in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
 
 > [!NOTE]  
 > The accuracy of the quantity of installed software titles and license information displayed in asset intelligence reports might vary from the actual number of software titles installed or licenses that are used in the environment. This variation is because of the complex dependencies and limitations involved in inventorying software license information for software titles that are installed in enterprise environments. Don't use asset intelligence reports as the sole source for determining purchased software license compliance.  

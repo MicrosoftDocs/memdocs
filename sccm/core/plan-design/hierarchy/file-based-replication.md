@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn how Configuration Manager uses file-based replication to transfer data between sites in your hierarchy
 ms.date: 08/09/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 65fcc1a8-214e-4dd9-8093-de4cd4a00442
 author: mestew

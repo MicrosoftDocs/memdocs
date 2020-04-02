@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use Windows Autopilot with co-management in Configuration Manager to simplify the set up of new Windows 10 devices.
 ms.date: 02/21/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology: configmgr-comanage
 ms.topic: conceptual
 ms.assetid: e3e3c97f-5945-49ab-a622-9f6fe6b9737e
 author: aczechowski

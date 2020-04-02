@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about basic concepts for Configuration Manager.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: cc4cdb35-f0b4-42b5-9cec-6431a8c30793
 author: aczechowski

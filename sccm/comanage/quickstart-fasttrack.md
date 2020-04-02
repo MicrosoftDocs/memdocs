@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: The FastTrack organization is a large group of Microsoft engineers who specialize in helping all types of organizations deploy Microsoft 365
 ms.date: 01/14/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology: configmgr-comanage
 ms.topic: conceptual
 ms.assetid: 42e80570-d637-41a4-97b7-ebf1f8975af3
 author: aczechowski

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn how Configuration Manager site systems and components communicate across a network.
 ms.date: 10/25/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 68fe0e7e-351e-4222-853a-877475adb589
 author: aczechowski

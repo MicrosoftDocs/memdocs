@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Find requirements for PKI certificates that you might need for Configuration Manager."
 ms.date: 11/20/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 author: mestew

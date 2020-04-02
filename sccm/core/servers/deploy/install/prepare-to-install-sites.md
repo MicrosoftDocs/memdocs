@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "If you're planning to install multiple Configuration Manager sites, read this information to help you save time, and to prevent errors."
 ms.date: 09/18/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 9089e1b5-cba4-42bd-a2de-126ef882a3af
 author: mestew

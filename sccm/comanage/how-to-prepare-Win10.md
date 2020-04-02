@@ -5,13 +5,11 @@ description: Learn how to prepare your Windows 10 internet-based devices for co-
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/31/2019
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-
-
 ---
 
 # How to prepare internet-based devices for co-management
@@ -28,7 +26,7 @@ To configure your devices to be automatically enroll into Intune when they join 
 
 ### Gather information from Configuration Manager
 
-Starting in version 1802, use Configuration Manager to collect and report the device information required by Intune. This information includes the device serial number, Windows product identifier, and a hardware identifier. It's used to register the device in Intune to support Windows Autopilot.
+Use Configuration Manager to collect and report the device information required by Intune. This information includes the device serial number, Windows product identifier, and a hardware identifier. It's used to register the device in Intune to support Windows Autopilot.
 
 1. In the Configuration Manager console, go to the **Monitoring** workspace, expand the **Reporting** node, expand **Reports**, and select the **Hardware - General** node.  
 
@@ -51,8 +49,8 @@ For more information, see [Windows Autopilot for existing devices task sequence]
 
 For internet-based devices in the second path, you need to create an app in Intune. Deploy this app to Windows 10 devices that aren't already Configuration Manager clients.
 
-> [!Note]  
-> Before deploying this app to devices, you must ensure that the devices trust the CMG server authentication certificate. For more information, see [CMG trusted root certificate to clients](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_cmgroot). If the device does not trust the CMG server authentication certificate, you would see WINHTTP_CALLBACK_STATUS_FLAG_INVALID_CA error in the ccmsetup.log on the client.
+> [!NOTE]
+> Before you assign this app to devices in Intune, make sure that the devices trust the CMG server authentication certificate. For more information, see [CMG trusted root certificate to clients](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_cmgroot). If a device doesn't trust the CMG server authentication certificate, you'll see a WINHTTP_CALLBACK_STATUS_FLAG_INVALID_CA error in the ccmsetup.log on the client.
 
 ### Get the command line from Configuration Manager
 
@@ -66,7 +64,7 @@ The following command line is an example:
 `CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC"`
 
 <!--1358215-->
-Starting in version 1806, fewer command-line properties are now required.  
+Decide which command-line properties you require for your environment:  
 
 - The following command-line properties are required in all scenarios:  
   - CCMHOSTNAME  
@@ -79,19 +77,24 @@ Starting in version 1806, fewer command-line properties are now required.
 - If the client roams back to the intranet, the following property is required:  
   - SMSMP  
 
-- If using your own PKI SSL certificate and your CRL isn't published to the internet, the following parameter is required:  
+- If using your own PKI certificate, and your CRL isn't published to the internet, the following parameter is required:  
   - /noCRLCheck  
 
-     For more information, see [Planning for CRLs](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs)  
+    For more information, see [Planning for CRLs](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs).
 
-Starting in version 1810, the site publishes additional Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. Now the only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.<!--3607731-->
+- Starting in version 2002, use the following property to bootstrap a task sequence immediately after client registration:
+  - PROVISIONTS
 
-> [!Note]
+    For more information, see [About client installation properties - PROVISIONTS](/configmgr/core/clients/deploy/about-client-installation-properties#provisionts).
+
+The site publishes additional Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. The only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.<!--3607731-->
+
+> [!NOTE]
 > If you're already deploying the Configuration Manager client from Intune, update the Intune app with a new command line and new MSI. <!-- SCCMDocs-pr issue 3084 -->
 
 The following example includes all of these properties:
 
-`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
+`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com PROVISIONTS=PRI20001`
 
 For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).
 

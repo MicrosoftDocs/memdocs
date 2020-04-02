@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Understand the supported versions of Configuration Manager, supported source-site languages, and required configurations for migration."
 ms.date: 05/7/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
 author: aczechowski

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: With Azure AD you can take advantage of improved productivity for your users and security for your resources, across both cloud and on-prem environments
 ms.date: 01/14/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology: configmgr-comanage
 ms.topic: conceptual
 ms.assetid: 2af37410-d04c-4059-801c-9edb8bf72d89
 author: aczechowski
