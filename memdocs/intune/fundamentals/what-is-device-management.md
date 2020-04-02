@@ -80,7 +80,7 @@ A key task of any device management solution is to provide security and protecti
 
 There are a couple of ways to approach device management. First, you can manage different aspects of devices using the features built in to Intune. This approach is called **Mobile device management (MDM)**. Users "enroll" their devices, and use certificates to communicate with Intune. As an IT administrator, you push apps on devices, restrict devices to a specific operating system, block personal devices, and more. If a device is ever lost or stolen, you can also remove all data from the device.
 
-In the second approach, you manage apps on devices. This approach is called **Mobile application management (MAM)**. Users can use their personal devices to access organizational resources. When opening an app, such as email or SharePoint, users are prompted for additional authentication. If a device is ever lost or stolen, you can remove all organization data from the device.
+In the second approach, you manage apps on devices. This approach is called **Mobile application management (MAM)**. Users can use their personal devices to access organizational resources. When opening an app, such as email or SharePoint, users are prompted for additional authentication. If a device is ever lost or stolen, you can remove all organization data from the Intune Managed applications.
 
 You can also use a combination of [MDM and MAM](byod-technology-decisions.md) together.
 
