@@ -252,11 +252,17 @@ For information about how to change the account that is used by the SQL Server s
 
 ### SQL Server Reporting Services
 
-SQL Server Reporting Services is required for installing a reporting services point that lets you run reports.  
+SQL Server Reporting Services is required for installing a reporting services point that lets you run reports. Configuration Manager supports the same versions of SQL Server for reporting as it does for the site database.
+
+For more information, see [Prerequisites for reporting in Configuration Manager](../../servers/manage/prerequisites-for-reporting.md).
 
 > [!IMPORTANT]  
-> After you upgrade SQL Server from a previous version, you might see the following error:  *Report Builder Does Not Exist*.  
+> After you upgrade SQL Server from a previous version, you might see the following error: *Report Builder Does Not Exist*.  
 > To resolve this error, you must reinstall the reporting services point site system role.  
+
+### Data warehouse service point
+
+The data warehouse uses a separate database. You can host it on the site database server, or a separate SQL Server. For more information, see [The data warehouse service point for Configuration Manager](../../servers/manage/data-warehouse.md).
 
 ### SQL Server ports
 
