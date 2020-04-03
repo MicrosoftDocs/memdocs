@@ -2,7 +2,7 @@
 title: Supported SQL Server versions
 titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
-ms.date: 08/05/2019
+ms.date: 04/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Supported SQL Server versions for Configuration Manager
@@ -20,10 +18,10 @@ manager: dougeby
 
 Each Configuration Manager site requires a supported SQL Server version and configuration to host the site database.  
 
-##  <a name="bkmk_Instances"></a> SQL Server instances and locations  
- 
+## <a name="bkmk_Instances"></a> SQL Server instances and locations
+
 ### Central administration site and primary sites
- 
+
 The site database must use a full installation of SQL Server.  
 
 SQL Server can be located on:  
@@ -38,8 +36,8 @@ The following instances are supported:
 - A SQL Server cluster. See [Use a SQL Server cluster to host the site database](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database).
 - A SQL Server AlwaysOn availability group. For more information, see [SQL Server AlwaysOn for a highly available site database](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
+### Secondary sites
 
-### Secondary sites  
 The site database can use the default instance of a full installation of SQL Server or SQL Server Express.  
 
 SQL Server must be located on the site server computer.  
@@ -54,7 +52,7 @@ The following configurations aren't supported:
 
 SQL Server transactional replication is supported only for replicating objects to management points that are configured to use [database replicas](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).  
 
-##  <a name="bkmk_SQLVersions"></a> Supported versions of SQL Server
+## <a name="bkmk_SQLVersions"></a> Supported versions of SQL Server
 
 In a hierarchy with multiple sites, different sites can use different versions of SQL Server to host the site database. So long as the following items are true:
 
@@ -64,11 +62,49 @@ In a hierarchy with multiple sites, different sites can use different versions o
 
 For SQL Server 2016 and prior, support for each SQL version and service pack follows the [Microsoft Lifecycle Policy](https://aka.ms/sqllifecycle). Support for a specific SQL Server service pack includes cumulative updates unless they break backward compatibility to the base service pack version. Starting with SQL Server 2017, service packs won't be released since it follows a [modern servicing model](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/). The SQL Server team recommends ongoing, [proactive installation of cumulative updates](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/) as they become available.
 
-
 Unless specified otherwise, the following versions of SQL Server are supported with all active versions of Configuration Manager. If support for a new SQL Server version is added, the Configuration Manager version that adds that support is noted. Similarly, if support is deprecated, look for details about affected versions of Configuration Manager.
 
 > [!IMPORTANT]  
 > When you use SQL Server Standard for the database at the central administration site, you limit the total number of clients that a hierarchy can support. See [Size and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers).
+
+### SQL Server 2019: Standard, Enterprise
+
+Starting with Configuration Manager version 1910, you can use this version with any cumulative update, as long as your cumulative update version is supported by the SQL lifecycle.
+
+This version of SQL can be used for the following sites:
+
+- A central administration site
+- A primary site
+- A secondary site
+
+### Known issue with SQL Server 2019
+
+There's a known issue<!--6436234--> with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
+```
+
+While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
+
+You can safely disable this SQL feature for the site database server because Configuration Manager doesn't use it.
+
+If you don't disable scalar UDF inlining in SQL 2019, the site server will randomly fail to query the site database. For example, you'll see the following errors in **hman.log**:
+
+```hman.log
+*** [HY000][0][Microsoft][SQL Server Native Client 11.0]Unspecified error occurred on SQL Server. Connection may have been terminated by the server.
+*** select dbo.fnGetSiteMode(dbo.fnGetSiteCode())
+*** [HY000][596][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot continue the execution because the session is in the kill state.
+Failed to execute SQL command select dbo.fnGetSiteMode(dbo.fnGetSiteCode())
+```
+
+You may see similar errors in other logs, such as **SmsAdminUI.log**.
+
+SQL Server version 2019 logs the following error:
+
+`Microsoft SQL Server reported SQL message 596, severity 21: [HY000][596][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot continue the execution because the session is in the kill state.`
+
+You'll also see crash dumps (`.mdump` files) from SQL in its log directory, which by default is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`.
 
 ### SQL Server 2017: Standard, Enterprise
 
@@ -190,11 +226,12 @@ The SQL Server Service Broker is required both for intersite replication as well
 
 Configuration Manager automatically enables the SQL [TRUSTWORTHY database property](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property). This property is required by Configuration Manager to be **ON**.
 
+## <a name="bkmk_optional"></a> Optional configurations for SQL Server
 
-##  <a name="bkmk_optional"></a> Optional configurations for SQL Server  
 The following configurations are optional for each database that uses a full SQL Server installation.  
 
-### SQL Server service  
+### SQL Server service
+
 You can configure the SQL Server service to run using:  
 
 - A *low rights domain user* account:  
@@ -213,14 +250,16 @@ For information about SPNs for the site database, see [Manage the SPN for the si
 
 For information about how to change the account that is used by the SQL Server service, see [SCM Services - Change the service startup account](https://docs.microsoft.com/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account).  
 
-### SQL Server Reporting Services  
+### SQL Server Reporting Services
+
 SQL Server Reporting Services is required for installing a reporting services point that lets you run reports.  
 
 > [!IMPORTANT]  
 > After you upgrade SQL Server from a previous version, you might see the following error:  *Report Builder Does Not Exist*.  
 > To resolve this error, you must reinstall the reporting services point site system role.  
 
-### SQL Server ports  
+### SQL Server ports
+
 For communication to the SQL Server database engine and for intersite replication, you can use the default SQL Server port configurations or specify custom ports:  
 
 - **Intersite communications** use the SQL Server Service Broker, which uses port TCP 4022 by default.  
@@ -239,7 +278,6 @@ When a computer running SQL Server hosts a database from more than one site, eac
 If you have a firewall enabled on the computer that is running SQL Server, make sure that it's configured to allow the ports that are being used by your deployment and at any locations on the network between computers that communicate with the SQL Server.  
 
 For an example of how to configure SQL Server to use a specific port, see [Configure a server to listen on a specific TCP port](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
-
 
 ## Upgrade options for SQL Server
 
