@@ -77,7 +77,7 @@ This version of SQL can be used for the following sites:
 - A primary site
 - A secondary site
 
-### Known issue with SQL Server 2019
+#### Known issue with SQL Server 2019
 
 There's a known issue<!--6436234--> with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
 
