@@ -2069,6 +2069,8 @@ Starting in version 1902, save the script output to a custom task sequence varia
 > [!Note]  
 > Starting in version 1910, Configuration Manager limits this output to the last 1000 characters.
 
+For an example of how to use this step property, see [How to set variables](using-task-sequence-variables.md#bkmk_run-ps).
+
 #### Start in
 
 <!-- 3556028 -->

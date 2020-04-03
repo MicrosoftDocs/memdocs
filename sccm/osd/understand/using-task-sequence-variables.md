@@ -98,8 +98,9 @@ The task sequence stores some variables as an array. Each element in the array r
 
 For custom variables or variables that aren't read-only, there are several methods to initialize and set the value of the variable:  
 
-- [Set Task Sequence Variable](#bkmk_set-ts-step)  
-- [Set Dynamic Variables](#bkmk_set-dyn-step)  
+- [Set Task Sequence Variable](#bkmk_set-ts-step) step
+- [Set Dynamic Variables](#bkmk_set-dyn-step) step
+- [Run PowerShell Script](#bkmk_run-ps) step
 - [Collection and device variables](#bkmk_set-coll-var)  
 - [TSEnvironment COM object](#bkmk_set-com)  
 - [Prestart command](#bkmk_set-prestart)  
@@ -137,6 +138,48 @@ For more information, see [Set Task Sequence Variable](/sccm/osd/understand/task
 Use this step in the task sequence to set one or more task sequence variables. You define rules in this step to determine which variables and values to use.
 
 For more information, see [Set Dynamic Variables](/sccm/osd/understand/task-sequence-steps#BKMK_SetDynamicVariables).
+
+### <a name="bkmk_run-ps"></a> Run PowerShell Script
+
+<!-- 6315548 -->
+
+Use this step in the task sequence to use a PowerShell script to set a task sequence variable.
+
+You can specify a script name from a package, or directly enter a PowerShell script in the step. Then use the step property to **Output to task sequence variable** to save the script output to a custom task sequence variable.
+
+For more information on this step, see [Run PowerShell Script](task-sequence-steps.md#BKMK_RunPowerShellScript).
+
+> [!NOTE]
+> You can also use a PowerShell script to set one or more variables with the **TSEnvironment** object. For more information, see [How to use variables in a running task sequence](/sccm/develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence) in the Configuration Manager SDK.
+
+#### Example scenario with Run PowerShell Script step
+
+Your environment has users in multiple countries, so you want to query the OS language to set as a condition on multiple language-specific **Apply OS** steps.
+
+1. Add an instance of the **Run PowerShell Script** to the task sequence before the **Apply OS** steps.
+
+1. Use the option to **Enter a PowerShell script** to specify the following command:
+
+    ```powershell
+    (Get-Culture).TwoLetterISOLanguageName
+    ```
+
+    For more information on the cmdlet, see [Get-Culture](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-culture). For more information on the two-letter ISO language names, see [List of ISO 639-1 codes](https://wikipedia.org/wiki/List_of_ISO_639-1_codes).
+
+1. For the option to **Output to task sequence variable**, specify `CurrentOSLanguage`.
+
+    [![Screenshot of example Run PowerShell Script step](media/run-powershell-script-example-language.png)](media/run-powershell-script-example-language.png#lightbox)
+
+1. On the **Apply OS** step for the English language image, create the following condition: `Task Sequence Variable CurrentOSLanguage equals "en"`
+
+    [![Screenshot of example condition on Apply OS step](media/condition-custom-task-sequence-variable.png)](media/condition-custom-task-sequence-variable.pnd#lightbox)
+
+    > [!TIP]
+    > For more information on how to create a condition on a step, see [How to access variables - Step condition](#bkmk_access-condition).
+
+1. Save and deploy the task sequence.
+
+When the **Run PowerShell Script** step runs on a device with the English language version of Windows, the command returns the value `en`. It then saves that value into the custom variable. When the **Apply OS** step for the English language image runs on the same device, the condition evaluates to true. If you have multiple instances of the **Apply OS** step for different languages, the task sequence dynamically runs the step that matches the OS language.
 
 ### <a name="bkmk_set-coll-var"></a> Collection and device variables
 
