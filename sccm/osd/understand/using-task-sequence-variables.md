@@ -168,11 +168,11 @@ Your environment has users in multiple countries, so you want to query the OS la
 
 1. For the option to **Output to task sequence variable**, specify `CurrentOSLanguage`.
 
-    [![Screenshot of example Run PowerShell Script step](media/run-powershell-script-example-language.png)](media/run-powershell-script-example-language.png#lightbox)
+    ![Screenshot of example Run PowerShell Script step](media/run-powershell-script-example-language.png)
 
 1. On the **Apply OS** step for the English language image, create the following condition: `Task Sequence Variable CurrentOSLanguage equals "en"`
 
-    [![Screenshot of example condition on Apply OS step](media/condition-custom-task-sequence-variable.png)](media/condition-custom-task-sequence-variable.pnd#lightbox)
+    ![Screenshot of example condition on Apply OS step](media/condition-custom-task-sequence-variable.png)
 
     > [!TIP]
     > For more information on how to create a condition on a step, see [How to access variables - Step condition](#bkmk_access-condition).
