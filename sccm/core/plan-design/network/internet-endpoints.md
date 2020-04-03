@@ -99,9 +99,11 @@ For CMG/CDP service deployment, the **service connection point** needs access to
 
 The **CMG connection point** needs access to the following service endpoints:
 
-- ServiceManagementEndpoint: `https://management.core.windows.net/`  
+- Service management endpoint: `https://management.core.windows.net/`  
 
-- StorageEndpoint: `blob.core.windows.net` and `table.core.windows.net`
+- Storage endpoint: `<name>.blob.core.windows.net` and `<name>.table.core.windows.net`
+
+    Where `<name>` is the cloud service name of your CMG or CDP. For example, if your CMG is `GraniteFalls.CloudApp.Net`, then the first storage endpoint to allow is `GraniteFalls.blob.core.windows.net`.<!-- SCCMDocs#2288 -->
 
 For Azure AD token retrieval by the **Configuration Manager console** and **client**:
 
