@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,6 +56,17 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 ### Role-based access control
 -->  
+
+<!-- ########################## -->
+## Week of April 6, 2020
+
+#### New shell script settings for macOS devices<!-- 6884363 -->
+When configuring shell scripts for macOS devices, you can now configure the following new settings: 
+- Hide script notifications on devices
+- Script frequency
+- Maximum number of times to retry if script fails
+
+For more information, see [Use shell scripts on macOS devices in Intune](../apps/macos-shell-scripts.md).
 
 <!-- ########################## -->
 ## Week of March 30, 2020
