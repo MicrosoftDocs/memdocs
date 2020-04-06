@@ -5,7 +5,7 @@ description: Use Windows Update for Business (WUfB) to keep Windows 10 up-to-dat
 author: mestew  
 ms.author: mstewart
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -58,7 +58,7 @@ Use the following procedure to identify clients that use WUfB to get Windows 10 
 1. There's a new attribute, **UseWUServer**, under the **Windows Update** node in Configuration Manager Resource Explorer.
 1. Create a collection based on the **UseWUServer** attribute for all the computers that are connected via WUfB for updates and upgrades. You can create a collection based on a query similar to the one below:  
 
-    ```sql
+    ```wql
     Select sr.* from SMS_R_System as sr join SMS_G_System_WINDOWSUPDATE as su on sr.ResourceID=su.ResourceID where su.UseWUServer is null
     ```
 
@@ -84,7 +84,7 @@ For more information about the Windows Insider program, see [Getting started wit
 1. On the **Home** tab, in the **Create** group, select **Create Windows Update for Business Policy** to open the Create Windows Update for Business Policy Wizard.
 1. On the **General** page, provide a name and description for the policy.
 1. On the **Deferral Policies** page, configure whether to defer or pause Feature Updates. Feature Updates are generally new features for Windows. After you configure the **Branch readiness level** setting, you can then define if, and for how long, you would like to defer receiving Feature Updates following their availability from Microsoft.
-    - **Branch readiness level**: Set the branch for which the device will receive Windows updates (Semi-Annual Channel (Targeted) or Semi-Annual Channel).
+    - **Branch readiness level**: Set the branch for which the device will receive Windows updates. Choose either Semi-Annual Channel (Targeted), Semi-Annual Channel, or a Windows Insider build.
     - **Deferral period (days)**:  Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for up to 365 days from their release.
     - **Pause Features Updates starting**: Select whether to pause devices from receiving Feature Updates for up to 35 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You can unpause Feature Updates by clearing the checkbox.
 1. Choose whether to defer or pause Quality Updates. Quality Updates are generally fixes and improvements to existing Windows functionality and are typically published the first Tuesday of every month, though can be released at any time by Microsoft. You can define if, and for how long, you would like to defer receiving Quality Updates following their availability.
