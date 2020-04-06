@@ -108,7 +108,7 @@ Your assigned-intune role requires **Device configurations** permissions to dele
  - The agent checks for new or updated scripts with Intune services usually every 8 hours. This check-in process is independent of the MDM check-in. 
  
  ### How can I manually initiate an agent check-in from a Mac?
-On a managed Mac that has the agent installed, open **Terminal**, run `sudo killall IntuneMdmAgent` command. The `IntuneMdmAgent` process will restart immediately, which will initiate a check-in with Intune.
+On a managed Mac that has the agent installed, open **Terminal**, run the `sudo killall IntuneMdmAgent` command to terminate the `IntuneMdmAgent` process. The `IntuneMdmAgent` process will restart immediately, which will initiate a check-in with Intune.
 
 Alternatively, you can do the following:
 1. Open **Activity Monitor** > **View** > *select **All processes**.* 
