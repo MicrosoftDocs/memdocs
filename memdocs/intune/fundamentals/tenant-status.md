@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -19,7 +19,7 @@ ms.assetid: 7954a686-25dc-4fce-b395-324816f46d3b
 
 #ROBOTS:
 #audience:
-
+ms.reviewer: crisk
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
@@ -28,12 +28,12 @@ ms.collection: M365-identity-device-management
 # Use the Intune Tenant Status page
 The Microsoft Intune Tenant Status page is a centralized hub where you can view current and important details about your tenant. Details include license availability and use, connector status, and important communications about the Intune service.  
 
-To view the dashboard, sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and then select **Tenant Status**.  *Tenant Status* appears under **Help and support**.  
+To view the dashboard, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Tenant administration**, and then select **Tenant Status**.
 
 The page is divided into three tabs:
 
 ## Tenant details
-Tenant details provide at-a-glance information about your tenant. View details like your tenant name and location, your MDM Authority, and your tenants service release number. The service release number is a link that opens the *What’s new in Intune* article on Microsoft docs. In *What's new*, you can read about the latest features and updates to the Intune service.  
+Tenant details provide at-a-glance information about your tenant. View details like your tenant name and location, your MDM Authority, and your tenants service release number. The service release number is a link that opens the *What's new in Intune* article on Microsoft docs. In *What's new*, you can read about the latest features and updates to the Intune service.  
 
 On this tab you'll also find basic information about your available licenses and how many are assigned to users. Licenses for devices aren't shown.
 
