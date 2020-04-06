@@ -109,9 +109,17 @@ Your assigned-intune role requires **Device configurations** permissions to dele
  - The agent silently authenticates with Intune services before checking in to receive assigned shell scripts for the macOS device.
  - The agent receives assigned shell scripts and runs the scripts based on the configured schedule, retry attempts, notification settings, and other settings set by the admin.
  - The agent checks for new or updated scripts with Intune services usually every 8 hours. This check-in process is independent of the MDM check-in. 
+ 
+ ### How can I manually initiate an agent check-in from a Mac?
+On a managed Mac that has the agent installed, open **Terminal**, run the `sudo killall IntuneMdmAgent` command to terminate the `IntuneMdmAgent` process. The `IntuneMdmAgent` process will restart immediately, which will initiate a check-in with Intune.
 
- >[!NOTE]
- > The **Check settings** action in Company Portal only forces an MDM check-in. There is no manual action for agent check-in.
+Alternatively, you can do the following:
+1. Open **Activity Monitor** > **View** > *select **All processes**.* 
+2. Search for processes named `IntuneMdmAgent`. 
+3. Quit the process running for **root** user. 
+
+> [!NOTE]
+> The **Check settings** action in Company Portal and the **Sync** action for devices in Microsoft Endpoint Manager Admin Console initiates an MDM check-in and does not force an agent check-in.
 
  ### When is the agent removed?
  There are several conditions that can cause the agent to be removed from the device such as:
