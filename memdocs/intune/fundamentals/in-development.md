@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -90,16 +90,6 @@ A new macOS device configuration profile will be available that configures wired
 
 Applies to:
 - macOS
-
-### Improved user interface experience when creating configuration profiles on iOS/iPadOS and macOS devices<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984  -->
-When you create a profile for iOS/iPadOS or macOS devices, the experience in the Endpoint Management Admin Center will be updated. This change impacts the following device configuration profiles (**Devices** > **Configuration Profiles** > **Create profile** > **iOS** or **macOS** for platform):
-
-- Custom: iOS/iPadOS, macOS
-- Device features: iOS/iPadOS, macOS
-- Device restrictions: iOS/iPadOS, macOS
-- Endpoint protection: macOS
-- Extensions: macOS
-- Preference file: macOS
 
 ### Device configuration profile settings and values will be updated for Windows platforms<!-- 4091122 -->
 When you create device configuration profiles for Windows platforms (**Devices** > **Configuration profiles** > **Create profile** > any **Windows** option for platform), some settings and their values are different from the CSP, and can be confusing. The setting names and their values will be updated to be clearer.

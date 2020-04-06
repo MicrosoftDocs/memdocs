@@ -69,7 +69,7 @@ To set up Android Enterprise fully managed device management, follow these steps
 When this setting is set to **Yes**, it provides you with an enrollment token (a random string) and a QR code for your Intune tenant. This single enrollment token is valid for all your users and won't expire. Depending on the Android OS and version of the device, you can use either the token or QR code to enroll the device.
 
 ## Enroll the fully managed devices
-You can now [enroll your fully managed devices](android-dedicated-devices-fully-managed-enroll.md).
+You can now [enroll your fully managed devices](android-dedicated-devices-fully-managed-enroll.md) (but not when using DEM accounts).
 
 ## Next steps
 - [Add Android Enterprise fully managed device configuration policies](../configuration/device-restrictions-android-for-work.md#device-owner-only)
