@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: 
 ms.date: mm/dd/yyyy
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other #analytics app client comanage compliance core mdm mdt osd other protect sdk sum
 ms.topic: conceptual
 ms.assetid: [PowerShell New-Guid cmdlet]
 author: aczechowski

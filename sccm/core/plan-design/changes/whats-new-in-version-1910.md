@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1910 of Configuration Manager current branch.
 ms.date: 01/22/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
@@ -346,6 +346,8 @@ This release includes the following improvements to search in the Configuration 
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1910 release notes](https://docs.microsoft.com/powershell/sccm/1910-release-notes?view=sccm-ps).
 
+For more information on changes to the administration service REST API, see [Administration service release notes](/configmgr/develop/adminservice/release-notes#bkmk_1910).
+
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4535776).
 
 <!--
@@ -364,7 +366,8 @@ The following additional hotfixes are available to address specific issues:
 
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
-| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
+| [4552181](https://support.microsoft.com/help/4552181) | Content distribution stalls in Configuration Manager current branch, version 1910 | 16 March 2020 | No |
+| [4552430](https://support.microsoft.com/help/4552430) | Third-party update category synchronization resets to default in Configuration Manager | 18 March 2020 | No |
 
 > [!NOTE]  
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](/sccm/core/servers/manage/updates#bkmk_supersede).

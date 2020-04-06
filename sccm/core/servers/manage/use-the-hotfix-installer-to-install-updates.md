@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Find out when and how to install updates via the Hotfix Installer for Configuration Manager."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: mestew

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the long-term servicing branch of Configuration Manager.
 ms.date: 08/23/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski

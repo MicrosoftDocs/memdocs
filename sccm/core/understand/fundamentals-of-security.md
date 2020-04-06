@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the layers of security in Configuration Manager.
 ms.date: 10/22/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 author: aczechowski

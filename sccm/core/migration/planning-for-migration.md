@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn about sites and hierarchies before you migrate data to a Configuration Manager current branch destination hierarchy."
 ms.date: 01/12/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: b2bf493e-1e10-496f-a139-2646522703ed
 author: aczechowski

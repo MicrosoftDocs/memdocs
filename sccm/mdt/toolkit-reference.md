@@ -4,7 +4,7 @@ titleSuffix: Microsoft Deployment Toolkit
 description: Reference details for Microsoft Deployment Toolkit (MDT)
 ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.technology: configmgr-mdt
 ms.topic: article
 ms.assetid: ac670143-b7cd-47d0-86ed-14cb2554dfc7
 author: aczechowski  

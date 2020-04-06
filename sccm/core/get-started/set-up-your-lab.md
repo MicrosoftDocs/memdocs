@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Set up a lab for evaluating Configuration Manager with simulated real-life activities.
 ms.date: 09/26/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
@@ -34,7 +34,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
 -   **The lab environment uses SQL Server 2012 SP2** for the site database.  
 
-     You can download an evaluation version of SQL Server 2012 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29066).  
+     You can download an evaluation version of SQL Server 2012 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=43340).  
 
      SQL Server has [Supported versions of SQL Server](../../core/plan-design/configs/support-for-sql-server-versions.md#bkmk_SQLVersions) that must be met for use with Configuration Manager.  
 

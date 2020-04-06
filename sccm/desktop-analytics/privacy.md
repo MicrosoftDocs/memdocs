@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Desktop Analytics is committed to customer data privacy
 ms.date: 12/12/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: b5606f15-f589-485c-a599-cdabf1a9e7ac
 author: aczechowski

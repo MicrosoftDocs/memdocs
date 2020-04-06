@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn how to deploy Configuration Manager by using options that maintain a high level of available service.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
 author: aczechowski

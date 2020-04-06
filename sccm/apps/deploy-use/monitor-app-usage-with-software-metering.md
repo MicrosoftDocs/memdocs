@@ -29,7 +29,7 @@ Software metering has no external dependencies, only dependencies within the pro
 |Dependency|More information|
 |----------------|----------------------|
 |Client settings for software metering.|To use software metering, the client setting **Enable software metering on clients** must be enabled and deployed to computers. You can deploy software metering settings to all computers in the hierarchy, or you can deploy custom settings to groups of computers. See **Configure software metering** in this topic.|
-|The reporting services point.|You must configure a reporting services point before you can view software metering reports. For more information, see [Reporting](../../core/servers/manage/reporting.md).|
+|The reporting services point.|You must configure a reporting services point before you can view software metering reports. For more information, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).|
 
 ##  Configure software metering
  This procedure configures the default client settings for software metering and applies to all computers in your hierarchy. If you want these settings to apply to only some computers, create a custom device client setting and deploy it to a collection that contains the computers on which you want to use software metering. For more information about how to create custom device settings, see [Configure client settings](../../core/clients/deploy/configure-client-settings.md).
@@ -124,7 +124,7 @@ Software metering has no external dependencies, only dependencies within the pro
 ##  Monitor software metering
  Software metering in Configuration Manager includes a number of built-in reports which allow you to monitor information about software metering operations. These reports have the report category of **Software Metering**.
 
- For more information about how to configure reporting in Configuration Manager, see [Reporting](../../core/servers/manage/reporting.md).
+ For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).
 
  Additionally, you can create queries and collections based on the data stored in the Configuration Manager database by software metering.
 

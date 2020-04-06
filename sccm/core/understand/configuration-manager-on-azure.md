@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Information about using Configuration Manager on an Azure environment.
 ms.date: 03/27/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski

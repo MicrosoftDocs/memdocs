@@ -2,16 +2,14 @@
 title: How to deploy to pilot
 titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics pilot group.
-ms.date: 06/14/2019
+ms.date: 03/12/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # How to deploy to pilot with Desktop Analytics
@@ -19,7 +17,6 @@ manager: dougeby
 One of the benefits of Desktop Analytics is to help identify the smallest set of devices that provide the widest coverage of factors. It focuses on the factors that are most important to a pilot of Windows upgrades and updates. Making sure the pilot is more successful allows you to move more quickly and confidently to broad deployments in production.  
 
 [!INCLUDE [Definition of pilot and production](includes/define-pilot-prod.md)]
-
 
 ## Identify devices
 
@@ -38,26 +35,41 @@ Take the following actions for the additional recommended devices list:
 - **Add all to pilot**: Adds all of the recommended devices to the pilot group
 - **Add to pilot**: Only add individual devices
 - **Replace** any specific devices from the pilot
-- **Recalculate** when you're done making changes
 
-As you add devices from the **recommended**  to the **included** pilot list, the coverage and redundancy for your critical and  important assets in the pilot increases. A higher redundancy means the assets covered have a statistically significant number of devices included in your pilot. 
+As you add devices from the **recommended**  to the **included** pilot list, the coverage and redundancy for your critical and  important assets in the pilot increases. A higher redundancy means the assets covered have a statistically significant number of devices included in your pilot.
 
 ## <a name="bkmk_GlobalPilot"></a>Global Pilot
 
 You can also make system-wide decisions about which Configuration Manager collections to include or exclude from pilots. In the main Desktop Analytics menu, in the Global Settings group, select **Global pilot**.
 
+If you connect multiple Configuration Manager hierarchies to the same Desktop Analytics instance, a display name for the hierarchy prefixes the collection name in the global pilot configuration. This name is the **Display Name** property on the Desktop Analytics connection in the Configuration Manager console.<!-- 4814075 -->
+
+> [!NOTE]
+> Support for multiple hierarchies requires Configuration Manager version 1910 or later.
+
+- Don't include collections that contain more than 20% of your total enrolled devices to Desktop Analytics. If you include a large collection, the portal displays a warning. You can include multiple small collections without warning, but still be cautious about the number of devices in your pilot. <!-- 6079184 -->
+
+- To get accurate pilot recommendations for deployment plans in a specific Configuration Manager hierarchy, only include collections from that hierarchy.
+
 ### Example
 
 - You configure the Desktop Analytics connection in Configuration Manager to target the **All Systems** collection. This action enrolls all clients to the service.
-- You also configure additional collections to sync with Desktop Analytics:
-    - All Windows 10 clients
-    - All IT devices
-    - CEO office
-- In the **Global pilot** settings, you include the **All IT devices** collections. You exclude the **CEO office** collection.
-- You create a deployment plan, and select  **All Windows 10 clients** collection as your **Target group**.
-- The **Pilot devices included** list contains the subset of devices on your **Target group**: **All Windows 10 clients** that are also in the Global Pilot *inclusion* list: **All IT devices**  
-- The **Additional Recommended Devices** lists contains a set of devices from your **Target group** that provide maximum coverage and redundancy for your important assets.  Desktop Analytics excludes from this list any devices in your global pilot *exclusion* list: **CEO office**
 
+- You also configure additional collections to sync with Desktop Analytics:
+
+  - All Windows 10 clients (3,000 devices)
+
+  - All IT devices (200 total devices, 150 of which run Windows 10)
+
+  - CEO office (20 devices)
+
+- In the **Global pilot** settings, you include the **All Windows 10 clients** collections. You exclude the **CEO office** collection.
+
+- You create a deployment plan, and select **All IT devices** collection as your **Target group**. You intend this deployment plan only for devices in the IT department.
+
+- The **Pilot devices included** list contains the subset of devices that are in both your **Target group**: **All IT devices** and the Global Pilot *inclusion* list: **All Windows 10 clients**. 150 devices are in this list, because only 150 devices in the **All IT devices** collection run Windows 10.
+
+- The **Additional Recommended Devices** lists contains a set of devices from your **Target group** that provide maximum coverage and redundancy for your important assets. Desktop Analytics excludes from this list any devices in your global pilot *exclusion* list: **CEO office**.
 
 ## Address issues
 
@@ -71,15 +83,15 @@ Use the Desktop Analytics portal to review any reported issues with assets that 
 
 4. On the **Apps** tab, review the apps that need your input.  
 
-5. For each app, select the app name. In the information pane, review the recommendation, and select the upgrade decision. If you choose **Not reviewed** or **Unable**, then Desktop Analytics doesn't include devices with this app in the pilot deployment. If you choose **Ready (with remediation)**, use the   **Remediation notes** to capture the actions to take to address an issue, like *reinstall* or *find the manufacturer’s recommended version*.
+5. For each app, select the app name. In the information pane, review the recommendation, and select the upgrade decision. If you choose **Not reviewed** or **Unable**, then Desktop Analytics doesn't include devices with this app in the pilot deployment. If you choose **Ready (with remediation)**, use the   **Remediation notes** to capture the actions to take to address an issue, like *reinstall* or *find the manufacturer's recommended version*.
 
 6. Repeat this review for other assets.  
 
+For more information to help with this review process, see [Compatibility assessment](/configmgr/desktop-analytics/compat-assessment).
 
 ## Create software
 
 Before you can deploy Windows, first create the software objects in Configuration Manager. For more information, see [Windows 10 in-place upgrade task sequence](https://docs.microsoft.com/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system).
-
 
 ## Deploy to pilot devices
 
@@ -117,7 +129,6 @@ Configuration Manager uses the data from Desktop Analytics to create collections
 > [!Important]  
 > These collections continue to sync as their membership changes. For example, if you identify an issue with an asset and mark it as **Unable**, devices with that asset no longer meet the *ready* criteria. These devices are dropped from the production deployment collection.
 
-
 ## Monitor
 
 ### Configuration Manager console
@@ -127,8 +138,10 @@ Open the deployment plan. The **Preparing upgrade decisions - overall status** t
 - **Up to date**: Devices have upgraded to the target Windows version for this deployment plan
 
 - **Upgrade decision complete**: One of the following states:
-    - Devices with noteworthy assets that are **Ready** or **Ready with remediation**
-    - The device state is **Blocked**, [**Replace device**](/sccm/desktop-analytics/about-deployment-plans#plan-assets) or **Reinstall device**
+
+  - Devices with noteworthy assets that are **Ready** or **Ready with remediation**
+
+  - The device state is **Blocked**, [**Replace device**](/sccm/desktop-analytics/about-deployment-plans#plan-assets) or **Reinstall device**
 
 - **Not reviewed**: Devices with noteworthy assets **Not reviewed** or **Review in progress**
 
@@ -139,7 +152,6 @@ The device status updates in the **Pilot status** and **Production status** tile
 - Your deployment progresses
 
 You can also use Configuration Manager deployment monitoring the same as any other task sequence deployment. For more information, see [Monitor OS deployments](/sccm/osd/deploy-use/monitor-operating-system-deployments).
-
 
 ### Desktop Analytics portal
 
@@ -164,7 +176,6 @@ The **Needs attention** categories show the same information, but sorted differe
 Select a specific listing in either view to get more details about the detected issue.
 
 As you address these deployment issues, the dashboard continues to show the progress of devices. It updates as devices move from **Needs attention** to **Completed**.
-
 
 ## Next steps
 

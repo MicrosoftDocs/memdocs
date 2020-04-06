@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn the differences between available branches of Configuration Manager.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski

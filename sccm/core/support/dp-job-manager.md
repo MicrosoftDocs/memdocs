@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use the DP Job Queue Manager to troubleshoot and manage content distribution jobs to Configuration Manager distribution points. 
 ms.date: 07/30/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 4b72922a-d11e-4aef-b309-19f5f0716f32
 author: mestew

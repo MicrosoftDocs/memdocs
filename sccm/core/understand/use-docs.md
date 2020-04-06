@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn tips on using the Configuration Manager technical documentation library.
 ms.date: 06/20/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
@@ -107,7 +107,7 @@ The Configuration Manager documentation library, like most content on docs.micro
 
 2. To edit the source file, click the pencil icon.  
 
-3. Make changes in the markdown source. For more information, see [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/how-to-write-use-markdown).  
+3. Make changes in the markdown source. For more information, see [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/markdown-reference).  
 
 4. In the Propose file change section, enter the public commit comment describing *what* you changed. Then click **Propose file change**.  
 

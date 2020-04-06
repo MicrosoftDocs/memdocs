@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
 ms.date: 02/19/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: mestew
@@ -173,10 +173,12 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ### Windows Server roles and features
 
-- If you're using the [administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service), the server that hosts the SMS Provider role requires .NET 4.5.2 or later  <!-- SCCMDocs issue #1203 -->
-    - Starting in version 1902, this prerequisite is version .NET 4.5 or later.
+- If you're using the [administration service](/configmgr/develop/adminservice/overview), the server that hosts the SMS Provider role requires .NET 4.5 or later  <!-- SCCMDocs issue #1203 -->
 
-- Web Server (IIS): Every provider attempts to install the [administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service). This service has a dependency on IIS to bind a certificate to HTTPS port 443. Configuration Manager uses IIS APIs to check this certificate configuration. If you configure the site for [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http), Configuration Manager uses IIS APIs to bind the SCCM-generated certificate.
+    > [!NOTE]
+    > Configuration Manager version 1810 requires .NET 4.5.2 or later.
+
+- Web Server (IIS): Every provider attempts to install the [administration service](/configmgr/develop/adminservice/overview). This service has a dependency on IIS to bind a certificate to HTTPS port 443. Configuration Manager uses IIS APIs to check this certificate configuration. If you configure the site for [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http), Configuration Manager uses IIS APIs to bind the site-generated certificate. Starting in version 2002, the site automatically uses the site's self-signed certificate.
 
 ### SQL Server Native Client
 

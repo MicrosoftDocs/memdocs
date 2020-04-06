@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn about the features, products, and operating systems that Configuration Manager no longer supports."
 ms.date: 01/25/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: b0adf873-2ff4-4a7b-b5e7-6047f146511f
 author: mestew

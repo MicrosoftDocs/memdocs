@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use tools and options in Configuration Manager to manage the content that you deploy.
 ms.date: 12/17/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski

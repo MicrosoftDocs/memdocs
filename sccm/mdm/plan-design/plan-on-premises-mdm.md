@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Plan for on-premises mobile device management to manage mobile devices in Configuration Manager
 ms.date: 01/09/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-hybrid
+ms.technology: configmgr-mdm
 ms.topic: conceptual
 ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
 author: aczechowski

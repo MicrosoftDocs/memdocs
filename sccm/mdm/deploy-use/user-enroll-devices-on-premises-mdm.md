@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Understand how users enroll devices with on-premises mobile device management (MDM) in Configuration Manager.
 ms.date: 01/13/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-hybrid
+ms.technology: configmgr-mdm
 ms.topic: conceptual
 ms.assetid: 59004b34-b64f-4d77-898c-07bf3dc75430
 author: aczechowski

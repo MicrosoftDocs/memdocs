@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Frequently asked questions about diagnostic and usage data for Configuration Manager
 ms.date: 01/30/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 3fe32aa2-d594-4ad0-a291-b8f5395ac50b
 author: aczechowski

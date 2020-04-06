@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Find answers for common product and license questions for Configuration Manager.
 ms.date: 02/12/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
@@ -67,7 +67,7 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 
 Yes. Effective December 1, 2019, if you're already licensed for Configuration Manager, then you're also automatically licensed for Intune for enrolling Windows PCs in [co-management](/configmgr/comanage/overview). This change makes it easier for you to manage Windows devices with Microsoft Endpoint Manager.
 
-A new license is now available that lets Configuration Manager customers with Software Assurance get Intune PC management rights without having to purchase an additional Intune license for co-management. You no longer need to purchase and assign individual Intune or EMS licenses to your users.
+A new license is now available that lets Configuration Manager customers with Software Assurance get Intune PC management rights without having to purchase an additional Intune license for co-management. You no longer need to purchase and assign individual Intune licenses to your users.
 
 - Devices managed by Configuration Manager and enrolled into co-management have almost the same rights as an Intune standalone-managed PC. However, after resetting they can't be re-provisioned by using AutopIlot.
 

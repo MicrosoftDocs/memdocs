@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn how to use the Support Center tools.
 ms.date: 11/27/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
 author: mestew

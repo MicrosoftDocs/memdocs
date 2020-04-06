@@ -58,4 +58,4 @@ After you have deployed Configuration Manager Email, Wi-Fi or VPN profiles to us
 > [!IMPORTANT]  
 >  You must use a wildcard (%) character when you use the parameters **Device filter** and **User filter** in the compliance settings reports.  
 
- For more information about how to configure reporting in Configuration Manager, see [Reporting](../../core/servers/manage/reporting.md).  
+ For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  

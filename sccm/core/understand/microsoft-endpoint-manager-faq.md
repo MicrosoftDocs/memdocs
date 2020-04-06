@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Frequently asked questions about Microsoft Endpoint Configuration Manager
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 
 

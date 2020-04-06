@@ -2,9 +2,9 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 02/06/2020
+ms.date: 03/03/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: overview
 ms.assetid: 38b2bed2-20dd-4ce1-abc0-219343d2c4b8
 author: aczechowski
@@ -29,6 +29,14 @@ Use Desktop Analytics with Configuration Manager to:
 - Deploy Windows 10 to pilot and production-managed devices  
 
 ![Screenshot of the Desktop Analytics home page in the Azure portal](media/portal-home.png)
+
+The following video is a session from Ignite 2019, which includes more information on Desktop Analytics:
+
+> [!VIDEO https://medius.studios.ms/Embed/Video-nc/IG19-BRK3085]
+
+[Using Desktop Analytics and Configuration Manager to reduce Windows TCO through data-driven insights for management, servicing, and support](https://myignite.techcommunity.microsoft.com/sessions/81689?source=sessions)
+
+Skip to 10:00 for an in-depth demo.
 
 > [!Note]  
 > Desktop Analytics is a successor of Windows Analytics, which retired on January 31, 2020.
@@ -68,16 +76,19 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
       - [**Owner**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), or [**Contributor**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) and [**User Access Administrator**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) permissions on the subscription to create a workspace in a new resource group.  
 
-    - To access the portal after onboarding, you need: 
-    
+    - To access the portal after onboarding, you need:
+
       - [**Desktop Analytics Administrator**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) role and [**Owner**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), or [**Contributor**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) permissions on the resource group where the workspace was created.
 
 - Configuration Manager, version 1902 with update rollup (4500571) or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
     - [**Full Administrator**](/sccm/core/understand/fundamentals-of-role-based-administration#bkmk_Planroles) role in Configuration Manager  
 
-    > [!Note]  
-    > Desktop Analytics supports one Commercial ID per Azure Active Directory (Azure AD) tenant and Configuration Manager hierarchy. If you have multiple hierarchies in your environment, use different Commercial IDs and Azure AD tenants.<!-- 4958160 -->
+    > [!NOTE]
+    > Desktop Analytics supports multiple Configuration Manager hierarchies reporting to a single Azure AD tenant.<!-- 4814075 --> If you have multiple hierarchies in your environment, you have the following options:
+    >
+    > - Use different Commercial IDs and Azure AD tenants.
+    > - Configure both hierarchies to use the same Commercial ID to share the Azure AD tenant and Desktop Analytics instance.
 
 - Devices running Windows 7, Windows 8.1, or Windows 10  
 

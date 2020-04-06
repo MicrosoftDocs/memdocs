@@ -2,26 +2,23 @@
 title: Monitor connection health
 titleSuffix: Configuration Manager
 description: Details on how to monitor the connection health and device states for Desktop Analytics in Configuration Manager.
-ms.date: 10/31/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: 1f4e26f7-42f2-40c8-80cf-efd405349c6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Monitor connection health
 
 Use the **Connection Health** dashboard in Configuration Manager to drill down into categories by device health. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Desktop Analytics Servicing** node, and select the **Connection Health** dashboard.  
 
-![Screenshot of the Configuration Manager Connection Health dashboard](media/connection-health-dashboard.png)
+[![Screenshot of the Configuration Manager Connection Health dashboard](media/connection-health-dashboard.png)](media/connection-health-dashboard.png#lightbox)
 
 When you first set up Desktop Analytics, these charts may not show complete data. It can take 2-3 days for active devices to send diagnostic data to the Desktop Analytics service, the service to process the data, and then synchronize with your Configuration Manager site.<!-- 4098037 -->
-
 
 ## Connection details
 
@@ -33,12 +30,12 @@ This tile displays the following basic information about the connection from Con
 
 - **Devices Targeted**: All of the devices in the target collection, minus the following types of devices:
 
-    - Decommissioned
-    - Obsolete
-    - Inactive
-    - Unmanaged
-    - Devices running Long Term Servicing Channel (LTSC) versions of Windows 10
-    - Devices running Windows Server
+  - Decommissioned
+  - Obsolete
+  - Inactive
+  - Unmanaged
+  - Devices running Long Term Servicing Channel (LTSC) versions of Windows 10
+  - Devices running Windows Server
 
     For more information on these device states, see [About client status](/sccm/core/clients/manage/monitor-clients#bkmk_about).
 
@@ -46,7 +43,6 @@ This tile displays the following basic information about the connection from Con
     > Configuration Manager uploads to Desktop Analytics all of the devices in the target collection minus decommissioned and obsolete clients.
 
 - **Devices eligible for DA**: The number of devices targeted minus devices that are ineligible for Desktop Analytics. For example, devices in the target collection that run Windows Server or Windows 10 long-term servicing channel (LTSC).
-
 
 ## Last sync details
 
@@ -59,11 +55,10 @@ This tile shows when Configuration Manager syncs with the Desktop Analytics clou
 - **Next service sync**: When you can expect the next daily snapshot in Desktop Analytics.
 
 > [!Note]  
-> When you first enroll devices into Desktop Analytics, it can take several days for data to upload and process. During this time, the **Last sync details** tile may appear blank. 
+> When you first enroll devices into Desktop Analytics, it can take several days for data to upload and process. During this time, the **Last sync details** tile may appear blank.
 > Additionally, none of the values in this tile automatically update when you request an on-demand snapshot. For more information, see [Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).
 
 If you think some devices aren't showing in Desktop Analytics, make sure the devices are supported by Desktop Analytics. For more information, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).
-
 
 ## Connection health
 
@@ -104,6 +99,12 @@ Configuration Manager detects one or more blocking issues that prevent device en
 
 For example, the Configuration Manager client isn't at least version 1902 (5.0.8790). Update the client to the latest version. Consider enabling automatic client upgrade for the Configuration Manager site. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
+Starting in version 2002, you can more easily identify client proxy configuration issues in two areas:
+
+- **Endpoint connectivity checks**: If clients can't reach a required endpoint, you see a configuration alert in the dashboard. Drill down into clients that are unable to enroll to see the endpoints to which clients can't connect due to proxy configuration issues. For more information, see [Endpoint connectivity checks](#endpoint-connectivity-checks).<!-- 4963230 -->
+
+- **Connectivity status**: If your clients use a proxy server to access Desktop Analytics, Configuration Manager displays proxy authentication issues from clients. Drill down to see clients that are unable to enroll due to proxy authentication issues. For more information, see [Connectivity status](#connectivity-status).<!-- 4963383 -->
+
 ### Configuration alert
 
 The device doesn't appear in Desktop Analytics or appears with an incomplete inventory. Configuration Manager also identified an issue with device enrollment. For more information, see the list of [Desktop Analytics device properties in Configuration Manager](#bkmk_config-issues).
@@ -126,7 +127,6 @@ Configuration Manager successfully configured the device, but Desktop Analytics 
 
 This issue is often fixed automatically when the device retries. If it persists, make sure the device can communicate with the service. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
-
 ## Device list
 
 To see a specific list of devices by status, start with the **Connection Health** dashboard. Select one of the segments of the **Connection health** tile and drill down to a list of devices in this state. This custom device view displays the following Desktop Analytics columns by default:
@@ -136,21 +136,21 @@ To see a specific list of devices by status, start with the **Connection Health*
 - Windows diagnostic data opt-in
 - Windows commercial data opt-in
 - Windows diagnostic endpoint connectivity
-
-> [!Note]  
-> Ignore the column for **Office diagnostic endpoint connectivity**. It's reserved for future functionality.
+- Connectivity status (starting in version 2002)
+- Endpoint connectivity checks (starting in version 2002)
 
 These columns correspond to the key [prerequisites](/sccm/desktop-analytics/overview#prerequisites) for devices to communicate with Desktop Analytics.
 
-![Screenshot of Properly Enrolled device list](media/device-list-properly-enrolled.png)
+[![Screenshot of Unable to Enroll device list](media/device-list-unable-to-enroll.png)](media/device-list-unable-to-enroll.png#lightbox)
 
 Select a device to see the full list of available properties in the detail pane. You can also add any of these properties as columns to the device list.
-
 
 ## <a name="bkmk_config-issues"></a> Device properties
 
 The following Desktop Analytics device properties are available as columns in the Configuration Manager device list:
 
+- [Endpoint connectivity checks](#endpoint-connectivity-checks) (starting in version 2002)
+- [Connectivity status](#connectivity-status) (starting in version 2002)
 - [Appraiser configuration](#appraiser-configuration)  
 - [Minimum compatibility update](#minimum-compatibility-update)  
 - [Appraiser version](#appraiser-version)  
@@ -170,15 +170,35 @@ The following Desktop Analytics device properties are available as columns in th
 - [Unique device identifier retrieval](#unique-device-identifier-retrieval)  
 - [Windows diagnostic data opt-in](#windows-diagnostic-data-opt-in)  
 
-> [!Note]  
-> Ignore the properties for **Office diagnostic endpoint connectivity** and **Office diagnostic data opt-in**. They're reserved for future functionality.
-
 The **Most frequent enrollment blockers and configuration alerts** tile of the Connection Health dashboard displays the properties that devices most often report as an issue.
+
+### Endpoint connectivity checks
+
+Starting in version 2002,<!-- 4963230 --> to detect proxy authentication issues, clients perform connectivity checks against required endpoints. If a client can't reach a required endpoint, this property shows a numbered list of endpoints to which it can't connect due to proxy configuration issues. Compare this list with the published list of [required endpoints](/configmgr/desktop-analytics/enable-data-sharing#endpoints).
+
+### Connectivity status
+
+Starting in version 2002,<!-- 4963383 --> if your clients use a proxy server to access Desktop Analytics, this property shows proxy authentication issues. It includes the following details related to proxy authentication:
+
+- Status code
+- Return code
+
+You'll see errors similar to the following in the log file:
+
+`Error 407: Can't connect to Microsoft %s. Check your network/proxy settings`
+
+Where `%s` is the URL of a required endpoint.
+
+You may also see non-deterministic error messages that don't need attention until devices have enrollment issues. For example:
+
+`This status is not related to proxy configuration, consider to investigate only if you are experiencing device enrollment or configuration alert issues.`
+
+For more information on configuring proxy servers for use with Desktop Analytics, see [Proxy server authentication](/configmgr/desktop-analytics/enable-data-sharing#proxy-server-authentication).
 
 ### Appraiser configuration
 
 <!--20,21-->
-Appraiser is the Windows component that corresponds to the [compatibility updates](/sccm/desktop-analytics/enroll-devices#update-devices). It assesses the apps and drivers on the device for compatibility with the latest version of Windows. 
+Appraiser is the Windows component that corresponds to the [compatibility updates](/sccm/desktop-analytics/enroll-devices#update-devices). It assesses the apps and drivers on the device for compatibility with the latest version of Windows.
 
 If this check is successful, then the appraiser component is properly configured on the device.
 
@@ -349,7 +369,7 @@ There's a different ID for the device. This registry key is used by group policy
 
 2. In the **Connected services** pane, the **Enroll devices** pane is selected by default. In the Enroll devices pane, the Information section displays your Commercial ID key.  
 
-![Screenshot of commercial ID in Desktop Analytics portal](media/commercial-id.png)
+[![Screenshot of commercial ID in Desktop Analytics portal](media/commercial-id.png)](media/commercial-id.png#lightbox)
 
 > [!Important]  
 > Only **Get new ID key** when you can't use the current one. If you regenerate the commercial ID, [re-enroll your devices with the new Id](/sccm/desktop-analytics/enroll-devices#device-enrollment). This process might result in loss of diagnostic data during the transition.  
@@ -436,8 +456,6 @@ This property checks that Windows is properly configured to allow diagnostic dat
 Check the permissions on these registry keys. Make sure that the local System account can access these keys for the Configuration Manager client to set. It can also be caused by a conflicting group policy object. For more information, see [Windows settings](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 For more information, review M365AHandler.log on the client.  
-
-
 
 ## See also
 

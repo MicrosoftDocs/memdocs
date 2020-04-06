@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the available discovery methods to find devices on your network, from Active Directory, or Azure Active Directory.
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
 author: mestew

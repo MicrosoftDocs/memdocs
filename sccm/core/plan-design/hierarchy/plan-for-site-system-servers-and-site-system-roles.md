@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Consider site system servers and site system roles as you plan your Configuration Manager hierarchy.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 0a7415ba-2c53-4433-983e-780e92aa662f
 author: aczechowski

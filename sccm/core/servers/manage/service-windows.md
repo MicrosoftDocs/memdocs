@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use service windows to control when Configuration Manager sites install updates.
 ms.date: 01/11/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: ca4886d4-7173-46be-8dcd-1657d5b0deb9
 author: aczechowski

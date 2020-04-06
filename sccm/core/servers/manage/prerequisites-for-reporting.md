@@ -1,58 +1,47 @@
 ---
-title: "Prerequisites for reporting"
-titleSuffix: "Configuration Manager"
-description: "Understand various dependencies that impact your use of reporting in Configuration Manager."
-ms.date: 01/29/2018
+title: Prerequisites for reporting
+titleSuffix: Configuration Manager
+description: Understand various dependencies that impact your use of reporting in Configuration Manager.
+ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 9cc508a5-5023-4833-b776-ae9a6971138f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # Prerequisites for reporting in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Reporting in Configuration Manager has external dependencies and dependencies within the product.  
+Reporting in Configuration Manager has the following dependencies:
 
-## Dependencies external to Configuration Manager  
- The following table lists the external dependencies for reporting.  
+- SQL Server Reporting Services
+- Reporting services point
+- Power BI Report Server (optional, starting in version 2002)
 
-|Prerequisite|More information|  
-|------------------|----------------------|  
-|SQL Server Reporting Services|Before you can use reporting in Configuration Manager, you must install and configure SQL Server Reporting Services.<br /><br /> For information about planning and deploying Reporting Services in your environment, see the [Reporting Services](https://go.microsoft.com/fwlink/p/?LinkId=212032) section in the SQL Server 2008 Books Online.|  
-|Site system role dependencies for the computers that run the reporting services point.|[Supported configurations for Configuration Manager](../../../core/plan-design/configs/supported-configurations.md)|  
+## SQL Server Reporting Services
 
-## Dependencies internal to Configuration Manager  
- The following table lists the dependencies for reporting in Configuration Manager.  
+Before you can use reporting in Configuration Manager, install and configure SQL Server Reporting Services.
 
-|Prerequisite|More information|  
-|------------------|----------------------|  
-|Reporting services point|The reporting services point site system role must be configured before you can use reporting in Configuration Manager. For more information about how to install and configure a reporting services point, see [Configuring reporting](../../../core/servers/manage/configuring-reporting.md).|  
+For more information about planning and deploying Reporting Services, see the [Install SQL Server Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services).
 
-## Supported SQL Server versions for the Reporting Services Point  
- The Reporting Services database can be installed on either the default instance or a named instance of a 64-bit SQL Server installation. The SQL Server instance can be co-located with the site system server, or on a remote computer.  
+Install the Reporting Services database on either the default instance or a named instance of a 64-bit SQL Server installation. Colocate the SQL Server instance with the site system server, or configure it on a remote computer.
 
- The following table lists the SQL Server versions that are supported by the reporting services point.  
+Configuration Manager supports the same versions of SQL Server for reporting as it does for the site database. For more information, see [Supported SQL Server versions](/configmgr/core/plan-design/configs/support-for-sql-server-versions#bkmk_SQLVersions).
 
-|SQL Server version|Reporting Services point|  
-|------------------------|------------------------------|
-|SQL Server 2017 with a minimum of cumulative update 2<br /><br /> -   Standard<br />-   Enterprise|Yes, starting in Configuration Manager version 1710|  
-|SQL Server 2016 with SP1<br /><br /> -   Standard<br />-   Enterprise|Yes| 
-|SQL Server 2016<br /><br /> -   Standard<br />-   Enterprise|Yes|
-|SQL Server 2014 with SP2<br /><br /> -   Standard<br />-   Enterprise|Yes|
-|SQL Server 2014 with SP1<br /><br /> -   Standard<br />-   Enterprise|Yes|
-|SQL Server 2012 with SP4 <br /><br /> -   Standard<br />-   Enterprise|Yes|  
-|SQL Server 2012 with SP3 <br /><br /> -   Standard<br />-   Enterprise|Yes|  
-|SQL Server 2008 R2 with SP3<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|Yes, for supported versions of Configuration Manager prior to 1702.|  
-|SQL Server Express 2008 R2 with SP3|Not Supported| 
+## Reporting services point
 
+Before you can use reporting in Configuration Manager, configure the reporting services point site system role.
 
+For more information, see [Site and site system prerequisites](/configmgr/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012RSpoint).
 
+## Power BI Report Server
+
+Starting in version 2002, you can integrate reporting with Power BI Report Server. For more information including prerequisites, see [Integrate with Power BI Report Server](/configmgr/core/servers/manage/powerbi-report-server).
 
 ## Next steps
-[Operations and maintenance for reporting](operations-and-maintenance-for-reporting.md)
+
+[Configure reporting](/configmgr/core/servers/manage/configuring-reporting)

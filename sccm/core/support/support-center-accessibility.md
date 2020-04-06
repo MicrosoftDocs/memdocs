@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the accessibility features of Support Center in Configuration Manager.
 ms.date: 11/27/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 1b931c9d-ffae-4d8e-baa7-c330a152674f
 author: mestew

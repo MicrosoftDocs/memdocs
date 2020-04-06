@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use the Send Schedule Tool to trigger a schedule on a Configuration Manager client.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: d5ce547d-3b3b-47d3-bcd7-6ff94692c046
 author: mestew

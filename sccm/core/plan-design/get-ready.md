@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Find topics that will help you plan a Configuration Manager deployment."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 3e839a3e-e476-4ec2-bf29-21e78180441d
 author: mestew

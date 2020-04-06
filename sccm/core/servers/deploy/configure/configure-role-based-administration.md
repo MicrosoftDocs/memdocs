@@ -3,7 +3,7 @@ title: Configure role-based administration
 titleSuffix: Configuration Manager
 ms.date: 11/08/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 57413dd3-b2f8-4a5f-b27f-8464d357caff
 author: mestew

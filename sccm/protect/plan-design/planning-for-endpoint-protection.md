@@ -3,7 +3,7 @@ title: Plan for Endpoint Protection
 titleSuffix: "Configuration Manager"
 ms.date: 05/13/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: mestew

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Find out when and how to use the update registration tool to manually import an update to the Configuration Manager console."
 ms.date: 03/27/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 8cc13635-85d6-4b07-a3ec-c42188bc5c74
 author: mestew

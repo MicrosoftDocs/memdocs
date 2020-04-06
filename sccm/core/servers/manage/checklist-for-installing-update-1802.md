@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1802.
 ms.date: 06/08/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 6af92de2-b2c7-4d5c-affd-6cce81979fb5
 author: mestew

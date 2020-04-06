@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn about the Configuration Manager settings that enable clients to find content on a slow network."
 ms.date: 01/3/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 70b5cbc0-64ba-49bd-8b34-fb4c09b2b95b
 author: aczechowski

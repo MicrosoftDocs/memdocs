@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Review this reference to help you prepare to install a Configuration Manager site or hierarchy."
 ms.date: 04/18/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
 author: mestew

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the solutions that Microsoft offers for managing PCs, servers, and devices.
 ms.date: 01/24/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 author: aczechowski
@@ -42,7 +42,7 @@ For more information, see the following articles:
 - [What is Azure Stack?](https://docs.microsoft.com/azure-stack/operator/azure-stack-overview)
 - [What is Windows Admin Center?](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/what-is)
 - [What is Virtual Machine Manager?](https://docs.microsoft.com/system-center/vmm/overview)
-- [Azure management products](https://docs.microsoft.com/azure/#pivot=products&panel=mgmt)
+- [Azure management products](https://docs.microsoft.com/azure/)
 - [What is Windows Virtual Desktop?](https://docs.microsoft.com/azure/virtual-desktop/overview)
 
 For more information on the Configuration Manager and Intune solutions, continue to the next section.

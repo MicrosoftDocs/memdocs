@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Identify key configurations and requirements so you can plan, deploy, and maintain a functional Configuration Manager deployment."
 ms.date: 10/08/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 author: mestew

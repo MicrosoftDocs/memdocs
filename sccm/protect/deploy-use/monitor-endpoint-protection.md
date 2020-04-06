@@ -52,7 +52,7 @@ You can monitor Endpoint Protection in your Microsoft Configuration Manager hier
 3.  In the *<collection name\>* list, select a computer, and then click the **Malware Detail** tab.  
 
 ##  <a name="BKMK_3"></a> How to Monitor Endpoint Protection by Using Reports  
- Use the following reports to help you view information about Endpoint Protection in your hierarchy. You can also use these reports to help troubleshoot any Endpoint Protection problems. For more information about how to configure reporting in Configuration Manager, see [Reporting](../../core/servers/manage/reporting.md) and [Log files](../../core/plan-design/hierarchy/log-files.md). The Endpoint Protection reports are in the Endpoint Protection folder.  
+ Use the following reports to help you view information about Endpoint Protection in your hierarchy. You can also use these reports to help troubleshoot any Endpoint Protection problems. For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting) and [Log files](../../core/plan-design/hierarchy/log-files.md). The Endpoint Protection reports are in the Endpoint Protection folder.  
 
 |Report name|Description|  
 |-----------------|-----------------|  

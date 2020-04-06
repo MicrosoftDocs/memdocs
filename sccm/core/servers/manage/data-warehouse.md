@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Data warehouse service point and database for Configuration Manager
 ms.date: 05/09/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
 author: mestew

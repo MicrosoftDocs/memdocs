@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Plan and design for distributing software content through Microsoft Azure with cloud distribution points in Configuration Manager.
 ms.date: 06/17/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski

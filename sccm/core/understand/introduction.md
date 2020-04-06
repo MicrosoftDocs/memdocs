@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn the basics of Microsoft Endpoint Configuration Manager.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
 author: aczechowski

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Set up certificates for trusted communications with on-premises mobile device management (MDM) in Configuration Manager.
 ms.date: 01/09/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-hybrid
+ms.technology: configmgr-mdm
 ms.topic: conceptual
 ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 author: aczechowski

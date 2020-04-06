@@ -137,7 +137,7 @@ The following awards are calculated by the number of legitimate contributions to
 
 - [Contributor Guide](https://docs.microsoft.com/contribute)
 
-- [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/how-to-write-use-markdown)
+- [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/markdown-reference)
 
 ## Official rules
 

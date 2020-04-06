@@ -2,9 +2,9 @@
 title: Enable data sharing
 titleSuffix: Configuration Manager
 description: A reference guide for sharing diagnostics data with Desktop Analytics.
-ms.date: 02/28/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
@@ -68,6 +68,8 @@ To enable data sharing, configure your proxy server to allow the following inter
 > [!Important]  
 > For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the diagnostic data endpoints. SSL interception and inspection aren't possible. To use Desktop Analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
 
+Starting in version 2002, if the Configuration Manager site fails to connect to required endpoints for a cloud service, it raises a critical status message ID 11488. When it can't connect to the service, the SMS_SERVICE_CONNECTOR component status changes to critical. View detailed status in the [Component Status](/configmgr/core/servers/manage/use-alerts-and-the-status-system#BKMK_MonitorSystemStatus) node of the Configuration Manager console.<!-- 5566763 -->
+
 ### Server connectivity endpoints
 
 The service connection point needs to communicate with the following endpoints:
@@ -88,7 +90,6 @@ Client devices need to communicate with the following endpoints:
 | `https://v10.events.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1803 _without_ the 2018-09 cumulative update installed. |
 | `https://v10.vortex-win.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1709 or earlier. |
 | `https://vortex-win.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 7 and Windows 8.1 |
-| `https://v20.events.data.microsoft.com` | Connected user experience and diagnostic component endpoint. |
 
 ### Client connectivity endpoints
 
@@ -109,6 +110,7 @@ Client devices need to communicate with the following endpoints:
 | 11 | `https://kmwatsonc.events.data.microsoft.com` | [Online Crash Analysis (OCA)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis). Required for device health reports in Windows 10, version 1809 or later. |
 | 12 | `https://oca.telemetry.microsoft.com`  | [Online Crash Analysis (OCA)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis). Required to monitor deployment health in Windows 10, version 1803 or earlier. |
 | 13 | `https://login.live.com` | Required to provide a more reliable device identity for Desktop Analytics. <br> <br>To disable end-user Microsoft account access, use policy settings instead of blocking this endpoint. For more information, see [The Microsoft account in the enterprise](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication). |
+| 14 | `https://v20.events.data.microsoft.com` | Connected user experience and diagnostic component endpoint. |
 
 ## Proxy server authentication
 

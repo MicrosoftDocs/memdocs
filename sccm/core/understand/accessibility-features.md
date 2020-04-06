@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the features that make Configuration Manager accessible for everyone.
 ms.date: 03/27/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski

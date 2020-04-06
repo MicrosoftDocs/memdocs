@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
@@ -312,6 +312,7 @@ The following table lists the log files that are on the Configuration Manager si
 |rcmctrl.log|Records the activities of database replication between sites in the hierarchy.|Site server|  
 |replmgr.log|Records the replication of files between the site server components and the Scheduler component.|Site server|  
 |ResourceExplorer.log|Records errors, warnings, and information about running Resource Explorer.|Computer that runs the Configuration Manager console|  
+|RESTPROVIDERSetup.log|Installation of the SMS Provider administration service REST API|Computer with the SMS Provider|
 |ruleengine.log|Records details about automatic deployment rules for the identification, content download, and software update group and deployment creation.|Site server|  
 |schedule.log|Records details about site-to-site job and file replication.|Site server|  
 |sender.log|Records the files that transfer by file-based replication between sites.|Site server|  
@@ -322,7 +323,9 @@ The following table lists the log files that are on the Configuration Manager si
 |SMS_AZUREAD_DISCOVERY_AGENT.log| Log file for synchronization of collection membership results to Azure Active directory. This was first introduced as a pre-release feature starting in Configuration Manager version 1906.| Site server|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.|
-|SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy|   
+|SMS_OrchestrationGroup.log| Log file for orchestration groups|Site server|
+|SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy|
+|SMS_REST_PROVIDER.log|Service health state for the SMS Provider administration service REST API, including certificate information|Computer with the SMS Provider|
 |SmsAdminUI.log|Records Configuration Manager console activity.|Computer that runs the Configuration Manager console|  
 |SMSAWEBSVCSetup.log|Records the installation activities of the Application Catalog web service.|Site system server|  
 |smsbkup.log|Records output from the site backup process.|Site server|  
@@ -831,7 +834,8 @@ The following table lists the log files that contain information related to soft
 |ScanAgent.log|Records details about scan requests for software updates, the WSUS location, and related actions.|Client|  
 |SdmAgent.log|Records details about the tracking of remediation and compliance. However, the software updates log file, Updateshandler.log, provides more informative details about installing the software updates that are required for compliance.<br /><br /> This log file is shared with compliance settings.|Client|  
 |ServiceWindowManager.log|Records details about the evaluation of maintenance windows.|Client|
-|SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.|  
+|SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.| 
+|SMS_OrchestrationGroup.log| Log file for orchestration groups|Site server| 
 |SmsWusHandler.log|Records details about the scan process for the Inventory Tool for Microsoft Updates.|Client|  
 |StateMessage.log|Records details about software update state messages that are created and sent to the management point.|Client|  
 |SUPSetup.log|Records details about the software update point installation. When the software update point installation completes, **Installation was successful** is written to this log file.|Site system server|  

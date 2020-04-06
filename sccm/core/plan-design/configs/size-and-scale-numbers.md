@@ -4,14 +4,12 @@ titleSuffix: Configuration Manager
 description: Determine the number of site system roles and sites that you'll need to support the devices in your environment.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Size and scale numbers for Configuration Manager
@@ -28,7 +26,6 @@ For more information, see the following articles:
 - [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)
 
 These support numbers are based on using the recommended hardware for Configuration Manager. They're also based on the default settings for all available Configuration Manager features. When you don't use the recommended hardware or use more aggressive custom settings, the performance of site systems can degrade. The site systems might not meet the stated levels of support. (An example of more aggressive client settings is running hardware or software inventory more frequently than the defaults of once every seven days.)
-
 
 ## <a name="bkmk_SiteSystemScale"></a> Site types  
 
@@ -47,7 +44,6 @@ These support numbers are based on using the recommended hardware for Configurat
 ### Secondary site  
 
 - Secondary sites don't support child sites.  
-
 
 ## <a name="bkmk_roles"></a> Site system roles
 
@@ -82,9 +78,9 @@ These support numbers are based on using the recommended hardware for Configurat
     > [!Tip]  
     > In a hierarchy, create the CMG at the central administration site.  
 
-    - One CMG supports one to 16 virtual machine (VM) instances in the Azure cloud service.  
+  - One CMG supports one to 16 virtual machine (VM) instances in the Azure cloud service.  
 
-    - Each CMG VM instance supports 6,000 simultaneous client connections. When the CMG is under high load due to more than the supported number of clients, it still handles requests but there may be delay.  
+  - Each CMG VM instance supports 6,000 simultaneous client connections. When the CMG is under high load due to more than the supported number of clients, it still handles requests but there may be delay.  
 
 For more information, see CMG [Performance and scale](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#performance-and-scale)
 
@@ -96,19 +92,22 @@ For more information, see CMG [Performance and scale](/sccm/core/clients/manage/
 
 For more information, see CMG [Performance and scale](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#performance-and-scale)
 
+> [!NOTE]
+> When considering hardware requirements for the CMG connection point, see [Recommended hardware for remote site system servers](https://docs.microsoft.com/configmgr/core/plan-design/configs/recommended-hardware#bkmk_RemoteSiteSystem).<!-- SCCMDocs#2276 -->
+
 ### Distribution point  
 
 - Distribution points per site:  
 
-    - Each primary and secondary site supports up to 250 distribution points.  
+  - Each primary and secondary site supports up to 250 distribution points.  
 
-    - Each primary and secondary site supports up to 2000 additional distribution points that are configured as pull-distribution points. **For example**, a single primary site supports 2250 distribution points when 2000 of those distribution points are configured as pull-distribution points.  
+  - Each primary and secondary site supports up to 2000 additional distribution points that are configured as pull-distribution points. **For example**, a single primary site supports 2250 distribution points when 2000 of those distribution points are configured as pull-distribution points.  
 
-    - Each distribution point supports connections from up to 4,000 clients.  
+  - Each distribution point supports connections from up to 4,000 clients.  
 
-    - A pull-distribution point acts like a client when it accesses content from a source distribution point.  
+  - A pull-distribution point acts like a client when it accesses content from a source distribution point.  
 
-- Each primary site supports a combined total of up to 5,000 distribution points. This total includes all the distribution points at the primary site and all the distribution points that belong to the primary site’s child secondary sites.  
+- Each primary site supports a combined total of up to 5,000 distribution points. This total includes all the distribution points at the primary site and all the distribution points that belong to the primary site's child secondary sites.  
 
 - Each distribution point supports a combined total of up to 10,000 packages and applications.  
 
@@ -134,7 +133,8 @@ For information about the number of clients and devices that a management point 
 
 ### Software update point  
 
-Use the following recommendations as a baseline. This baseline helps you determine the information for the software updates capacity planning that is appropriate to your organization. The actual capacity requirements might vary from the recommendations listed in this article depending on the following criteria: 
+Use the following recommendations as a baseline. This baseline helps you determine the information for the software updates capacity planning that is appropriate to your organization. The actual capacity requirements might vary from the recommendations listed in this article depending on the following criteria:
+
 - Your specific networking environment
 - The hardware that you use to host the software update point site system
 - The number of managed clients
@@ -148,12 +148,12 @@ The number of supported clients depends on the version of Windows Server Update 
 
 - The software update point can support up to 150,000 clients when a remote server meets WSUS requirements, WSUS is used with Configuration Manager, and you configure the following settings:
 
-    IIS Application Pools:
-    - Increase the WsusPool Queue Length to 2000
-    - Increase the WsusPool Private Memory limit x4 times, or set to 0 (unlimited). For example, if the default limit is 1,843,200 KB, increase it to 7,372,800. For more information, see this [Configuration Manager support team blog post](https://www.phoenixtekk.com/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors/).  
+  IIS Application Pools:
+
+  - Increase the WsusPool Queue Length to 2000
+  - Increase the WsusPool Private Memory limit x4 times, or set to 0 (unlimited). For example, if the default limit is 1,843,200 KB, increase it to 7,372,800. For more information, see this [Configuration Manager support team blog post](https://www.phoenixtekk.com/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors/).  
 
     For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](/sccm/core/plan-design/configs/recommended-hardware#bkmk_ScaleSieSystems).  
-
 
 #### <a name="bkmk_sum-capacity-obj"></a> Capacity planning for software updates objects  
 
@@ -165,6 +165,14 @@ Use the following capacity information to plan for software updates objects:
 
 - **Limit of 580 security scopes for automatic deployment rules** -<!--ado 4962928-->
 Limit the number of security scopes on automatic deployment rules (ADRs) to less than 580. When you create an ADR, the security scopes that have access to it are automatically added. If there are more than 580 security scopes set, the ADR will fail to run and an error is logged in ruleengine.log.
+
+### SMS Provider
+
+<!-- SCCMDocs#1958 -->
+
+Each instance of the SMS Provider supports simultaneous connections from multiple requests. The only limitations on these connections are the number of server connections that are available to Windows, and the available resources on the server to service the connection requests.
+
+For more information, see [Plan for the SMS Provider](/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider).
 
 ## <a name="bkmk_clientnumbers"></a> Client numbers for sites and hierarchies
 
@@ -201,11 +209,11 @@ A stand-alone primary site supports the following number of devices:
 
 - 175,000 total clients and devices, not to exceed:  
 
-    - 150,000 desktops (computers that run Windows, Linux, and UNIX). Also see, support for [embedded devices](#embedded).
+  - 150,000 desktops (computers that run Windows, Linux, and UNIX). Also see, support for [embedded devices](#embedded).
 
-    - 25,000 devices that run Mac and Windows CE 7.0
+  - 25,000 devices that run Mac and Windows CE 7.0
 
-    - 50,000 devices that you manage by using on-premises MDM  
+  - 50,000 devices that you manage by using on-premises MDM  
 
 For example, a stand-alone primary site that supports 150,000 desktops and 10,000 Macs can only support an additional 15,000 mobile devices managed by on-premises MDM.
 
@@ -225,10 +233,10 @@ Each management point can support the following number of devices:
 
 - 25,000 total clients and devices, not to exceed:  
 
-    - 25,000 desktops (computers that run Windows, Linux, and UNIX)  
+  - 25,000 desktops (computers that run Windows, Linux, and UNIX)  
 
-    - One of the following (not both):  
+  - One of the following (not both):  
 
-        - 10,000 devices that are managed by using on-premises MDM  
+    - 10,000 devices that are managed by using on-premises MDM  
 
-        - 10,000 devices that run Mac and Windows CE 7.0 clients
+    - 10,000 devices that run Mac and Windows CE 7.0 clients
