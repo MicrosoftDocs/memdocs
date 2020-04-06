@@ -2,7 +2,7 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 04/01/2020
+ms.date: 04/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -59,7 +59,7 @@ The following supported versions of Configuration Manager are currently availabl
 | [**1910**](/sccm/core/plan-design/changes/whats-new-in-version-1910)<br /> (5.00.8913) | November 29, 2019 | May 29, 2021 | No | Yes |
 | [**1906**](/sccm/core/plan-design/changes/whats-new-in-version-1906)<br /> (5.00.8853) | July 26, 2019 | January 26, 2021 | No | Yes |
 | [**1902**](/sccm/core/plan-design/changes/whats-new-in-version-1902)<br /> (5.00.8790) | March 27, 2019 | September 27, 2020 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
-| [**1810**](/sccm/core/plan-design/changes/whats-new-in-version-1810)<br /> (5.00.8740) | November 27, 2018 | May 27, 2020 | No | Yes |
+| [**1810**](/sccm/core/plan-design/changes/whats-new-in-version-1810)<br /> (5.00.8740) | November 27, 2018 | December 1, 2020 | No | Yes |
 
 <a name="bkmk_note1"></a>
 
