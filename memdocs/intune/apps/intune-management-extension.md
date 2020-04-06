@@ -134,18 +134,22 @@ The Intune management extension has the following prerequisites. Once the prereq
   -  Check in
   -  Run script **ConfigScript01**
   -  Script fails
+
 9AM
   -  Check in
   -  Run script **ConfigScript01**
   -  Script fails (retry count = 1)
+
 10 AM
   -  Check in
   -  Run script **ConfigScript01**
   -  Script fails (retry count = 2)
+  
 11 AM
   -  Check in
   -  Run script **ConfigScript01**
   -  Script fails (retry count = 3)
+
 12 PM
   -  Check in
   - No additional attempts are made to run **ConfigScript01**script.
