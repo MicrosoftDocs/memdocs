@@ -42,7 +42,6 @@ Apple School Manager enrollment can't be used with [Apple's Device Enrollment Pr
 **Prerequisites**
 - [Apple Mobile Device Management (MDM) Push certificate](apple-mdm-push-certificate-get.md)
 - [MDM Authority](../fundamentals/mdm-authority-set.md)
-- [Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
 - If using ADFS, user affinity requires [WS-Trust 1.3 Username/Mixed endpoint](https://technet.microsoft.com/library/adfs2-help-endpoints). [Learn more](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 - Devices purchased from the [Apple School Management](http://school.apple.com) program
 
