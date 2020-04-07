@@ -287,7 +287,7 @@ Enable this option only if one of the following conditions applies:
 
 > [!WARNING]  
 > - If you choose this option when neither of these conditions apply, the client doesn't install software updates and required applications. This setting doesn't prevent users from installing available software from Software Center, including applications, packages, and task sequences.  
-> -  When you enable this setting, toast notifications for new software or required software don't occur. <!--6347668-->
+> -  When you enable this setting, toast notifications for new software or required software don't occur on clients. <!--6347668-->
 
 ### PowerShell execution policy
 
