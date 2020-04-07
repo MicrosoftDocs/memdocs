@@ -95,7 +95,8 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
        - **Serial number**
        - **Custom**: When you select this option, a **Custom** text box is also shown. Use this field to enter a custom subject name format, including variables. Custom format supports two variables: **Common Name (CN)** and **Email (E)**. **Common Name (CN)** can be set to any of the following variables:
 
-         - **CN={{UserName}}**: The user principal name of the user, such as janedoe@contoso.com.
+         - **CN={{UserName}}**: The user name of the user, such as janedoe.
+         - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.*
          - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Azure Active Directory (AD). This ID is typically used to authenticate with Azure AD.
          - **CN={{SERIALNUMBER}}**: The unique serial number (SN) typically used by the manufacturer to identify a device.
          - **CN={{IMEINumber}}**: The International Mobile Equipment Identity (IMEI) unique number used to identify a mobile phone.
@@ -111,6 +112,8 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
          That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. [CertStrToName function](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) describes this function, and its supported strings.
+         
+         * For Android Device Owner Only profiles, this setting will not work. Android Device Owner Only profiles can be used for devices without User so this profile will not be able to get the user principal name of the user. If you really need this option for devices with users, you can use a workaround like this: **CN={{UserName}}@contoso.com** It will provide the User Name and the domain you added manully, such as janedoe@contoso.com
 
       - **Device certificate type**
 
