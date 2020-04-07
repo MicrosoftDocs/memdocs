@@ -165,7 +165,7 @@ When you use a cloud distribution point in your hierarchy, use the following inf
 
     > [!Important]  
     > - While the Configuration Manager console doesn't block the distribution of Microsoft software updates to a cloud distribution point, you're paying Azure costs to store content that clients don't use. Internet-based clients always get Microsoft software update content from the Microsoft Update cloud service. Don't distribute Microsoft software updates to a cloud distribution point.
-    > - When using a cloud distribution point, the content for third-party updates won't download to clients if Delivery Optimization is enabled. <!--6598587--> 
+    > - When using a cloud distribution point, the content for third-party updates won't download to clients if [Delivery Optimization](/configmgr/core/clients/deploy/about-client-settings#delivery-optimization) is enabled. <!--6598587--> 
 
 - Starting in version 1806, configure a pull-distribution point to use a cloud distribution point as a source. For more information, see [About source distribution points](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point#about-source-distribution-points).<!--1321554-->  
 
