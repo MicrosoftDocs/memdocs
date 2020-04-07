@@ -118,7 +118,7 @@ The recommended remediation action is to register existing devices in Autopilot 
 
 ### <a name="bkmk_uea_aad"></a> Azure Active Directory
 
-Azure Active Directory (Azure AD) provides users with numerous productivity benefits including device-wide single sign-on to apps and services, Windows Hello sign-in, self-service bitlocker recovery, and corporate data roaming.
+Azure Active Directory (Azure AD) provides users with numerous productivity benefits including device-wide single sign-on to apps and services, Windows Hello sign-in, self-service BitLocker recovery, and corporate data roaming.
 
 This metric measures the percent of devices enrolled in Azure AD.
 
@@ -270,8 +270,8 @@ If the overview page shows a startup performance score of zero accompanied by a 
 
 First, here's a quick summary of limitations for startup performance data collection:
 1. Devices must be Windows 10 version 1903 or later.
-2. Devices must be Azure AD joined. We currently do not support Workplace Joined devices, although are actively investigating the feasability of adding this functionality to Windows.
-3. Devices must be Windows 10 Enterprise edition. Windows 10 Home and Professional are not currenlty supported, although are actively investigating the feasability of adding this functionality to Windows.
+2. Devices must be Azure AD joined. We currently do not support Workplace Joined devices, although are actively investigating the feasibility of adding this functionality to Windows.
+3. Devices must be Windows 10 Enterprise edition. Windows 10 Home and Professional are not currently supported, although are actively investigating the feasibility of adding this functionality to Windows.
 
 Note that these issues will not apply to data coming from the upcoming Configuration Manager connector; it will be able to collect data from any Configuration Manager client PC, regardless of version, edition, or directory configuration.
 
