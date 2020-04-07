@@ -117,7 +117,7 @@ For more information about the types of apps that your organization needs, see "
 Intune lets you modify the functionality of apps that you deploy to help align them with your company's compliance and security policies. This control allows you to determine how your company data is protected. Intune-managed apps are enabled with a rich set of mobile application protection policies, such as:
 
 - Restricting copy-and-paste and save-as functions.
-- Configuring web links to open inside the Intune Managed Browser app.
+- Configuring web links to open inside the Microsoft Edge app.
 - Enabling multi-identity use and app-level Conditional Access.
 
 Intune-managed apps can also enable app protection without requiring enrollment, which gives you the choice of applying data loss-prevention policies without managing the user's device. Additionally, you can incorporate mobile-app management in your mobile and line-of-business apps by using the Intune App SDK and App Wrapping Tool. For more information about these tools, see [Intune App SDK overview](../developer/app-sdk.md).

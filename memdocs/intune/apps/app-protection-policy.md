@@ -306,7 +306,7 @@ If the user is using the app when selective wipe is initiated, the [Intune SDK](
 Intune app protection depends on the identity of the user to be consistent between the application and the [Intune SDK](../developer/app-sdk.md). The only way to guarantee that is through modern authentication. There are scenarios in which apps may work with an on-prem configuration, but they are neither consistent nor guaranteed.
 
 **Secure way to open web links from managed apps**<br>
-The IT administrator can deploy and set app protection policy for the [Intune Managed Browser app](app-configuration-managed-browser.md), a web browser developed by Microsoft Intune that can be managed easily with Intune. The IT administrator can require all web links in Intune-managed apps to be opened using the Managed Browser app.
+The IT administrator can deploy and set app protection policy for the [Microsoft Edge](app-configuration-managed-browser.md), a web browser that can be managed easily with Intune. The IT administrator can require all web links in Intune-managed apps to be opened using the Managed Browser app.
 
 ## App protection experience for iOS devices
 
