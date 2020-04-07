@@ -286,7 +286,8 @@ Enable this option only if one of the following conditions applies:
 - You use the Configuration Manager software development kit (SDK) to manage client agent notifications, and the installation of applications and software updates.  
 
 > [!WARNING]  
-> If you choose this option when neither of these conditions apply, the client doesn't install software updates and required applications. This setting doesn't prevent users from installing available software from Software Center, including applications, packages, and task sequences.  
+> - If you choose this option when neither of these conditions apply, the client doesn't install software updates and required applications. This setting doesn't prevent users from installing available software from Software Center, including applications, packages, and task sequences.  
+> -  When you enable this setting, toast notifications for new software or required software don't occur. <!--6347668-->
 
 ### PowerShell execution policy
 
