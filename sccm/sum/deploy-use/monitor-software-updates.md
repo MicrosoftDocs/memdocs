@@ -5,7 +5,7 @@ description: "The Configuration Manager console provides alerts and statuses to 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 04/08/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -130,8 +130,8 @@ This report returns the deployment errors at the site and a count of computers t
 
 3.  In the results pane, click the **Details** tab. Status information for the distribution point is displayed.  
 
-##  <a name="BKMK_SeeAlso"></a> See also
+## Next steps
 
 - [Log files for Software Updates](/configmgr/core/plan-design/hierarchy/log-files#BKMK_SU_NAPLog)
 
-- [Software Updates management whitepaper](https://www.microsoft.com/en-us/download/confirmation.aspx?id=44578)
+- [Software Updates management whitepaper](https://www.microsoft.com/download/confirmation.aspx?id=44578)
