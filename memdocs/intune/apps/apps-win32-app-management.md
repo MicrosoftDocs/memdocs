@@ -401,6 +401,8 @@ Agent logs on the client machine are commonly in `C:\ProgramData\Microsoft\Intun
 > **On X86 client machines**:<br>
 > *C:\Program Files\Microsoft Intune Management Extension\Content*<br>
 > *C:\windows\IMECache*
+>
+> For more information, see [Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
 
 ### Detecting the Win32 app file version using PowerShell
 

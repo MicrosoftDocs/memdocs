@@ -947,6 +947,9 @@ Block the following to help prevent email threats:
 > **On X86 client machines**:  
 > *C:\Program Files\Microsoft Intune Management Extension\Content*  
 > *C:\windows\IMECache*  
+>
+> For more information, see [Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
+
 
 ### Controlled folder access  
 
