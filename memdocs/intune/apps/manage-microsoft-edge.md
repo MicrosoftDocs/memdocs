@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -44,8 +44,8 @@ Microsoft Intune protection policies for Microsoft Edge help to protect your org
 
 You and your end users can download Microsoft Edge from public app stores for use in your organizations. 
 The operating system requirements for browser policies are either of the following:
-- Android 4 and later
-- iOS 8.0 and later
+- Android 5 and later
+- iOS 12.0 and later
 
 ## Application protection policies for Microsoft Edge
 
@@ -421,7 +421,7 @@ To see how to view logs on Android devices, see [Send logs to your IT admin by e
 
 The following are additional security and privacy considerations for Microsoft Edge:
 
-- Microsoft Edge doesn't consume settings that users set for the native browserhttps://docs.microsoft.com/en-us/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps on their devices, because Microsoft Edge can't access these settings.
+- Microsoft Edge doesn't consume settings that users set for the native browser on their devices, because Microsoft Edge can't access these settings.
 - You can configure the option **Require simple PIN for access** or **Require corporate credentials for access** in an app protection policy associated with Microsoft Edge. If a user selects the help link on the authentication page, they can browse any internet sites, regardless of whether they were added to a blocked list in the policy.
 - Microsoft Edge can block access to sites only when they are accessed directly. It doesn't block access when users use intermediate services (such as a translation service) to access the site.
 - To allow authentication, and access to Intune documentation, ***.microsoft.com** is exempt from the allow or block list settings. It's always allowed.
