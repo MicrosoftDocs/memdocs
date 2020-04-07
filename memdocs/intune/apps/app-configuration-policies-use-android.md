@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -52,7 +52,7 @@ App configuration policies in Microsoft Intune supply settings to Managed Google
 8. Click **Add** to display the **Add permissions** pane.
 9. Click the permissions that you want to override. Permissions granted will override the "Default app permissions" policy for the selected apps.
 10. Set the **Permission state** for each permission. You can choose from **Prompt**, **Auto grant**, or **Auto deny**. For more information about permissions, see [Android Enterprise settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md).
-11. In the dropdown box, select the **Configuration settings format**. Select one of the following methods to add configuration information:
+11. If the managed app supports configuration settings, in the dropdown box, select the **Configuration settings format**. Select one of the following methods to add configuration information:
     - **Use configuration designer**
     - **Enter JSON data**<br><br>
     For details about using the configuration designer, see [Use configuration designer](#use-the-configuration-designer). For details about entering XML data, see [Enter JSON data](#enter-json-data).
