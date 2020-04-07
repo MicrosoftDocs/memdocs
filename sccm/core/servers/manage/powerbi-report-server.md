@@ -34,7 +34,8 @@ Save Power BI Desktop report files (.PBIX) and deploy them to the Power BI Repor
 - Download [Microsoft Power BI Desktop (Optimized for Power BI Report Server - September 2019)](https://www.microsoft.com/download/details.aspx?id=57271), or later.
 
     > [!IMPORTANT]
-    > Only use versions of Power BI Desktop from the [Microsoft Download Center](https://www.microsoft.com/download/), don't use the version from the Microsoft Store.
+    > - Only use versions of Power BI Desktop from the [Microsoft Download Center](https://www.microsoft.com/download/), don't use the version from the Microsoft Store.
+    > - Only use a version of [Power BI Desktop that states it's **Optimized for Power BI Report server**](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop).
 
 - Power BI integration uses the same role-based administration for reporting.
 
