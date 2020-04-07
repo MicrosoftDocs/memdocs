@@ -201,6 +201,10 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 10. Choose if you want locked enrollment for devices using this profile. **Locked enrollment** disables iOS/iPadOS settings that allow the management profile to be removed from the **Settings** menu. After device enrollment, you can't change this setting without wiping the device. Such devices must have the **Supervised** Management Mode set to *Yes*. 
 
+    > [!NOTE]
+    > Once the device is enrolled with **Locked enrollment** users will not be able to **Remove Device** or **Factory Reset** using Company Portal app. The options will be greyed out. They will also be unable to remove the device using Company Portal website (https://portal.manage.microsoft.com).
+    > Additionally if a BYOD device is convereted to an Apple's Automated Device Enrollment device and enrolled with **Locked enrollment** enabled profile, user will be allowed to **Remove Device** or **Factory Reset** for 30 days and then the options will be disabled or greyed out. Reference: https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859
+
 11. Choose if you want the devices using this profile to be able to **Sync with computers**. If you choose **Allow Apple Configurator by certificate**, you must choose a certificate under **Apple Configurator Certificates**.
 
      > [!NOTE]
