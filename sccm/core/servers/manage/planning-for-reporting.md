@@ -23,7 +23,7 @@ Reporting in Configuration Manager provides a set of tools and resources that he
 When you run Configuration Manager reports at a site, the reports have access to the information in the site database in which it connects. Use the following sections to help you determine where to install the reporting services point and what data source to use.
 
 > [!NOTE]
-> For more information about planning for site systems in Configuration Manager, see [Add site system roles](/configmgr/core/deploy/configure/add-site-system-roles).
+> For more information about planning for site systems in Configuration Manager, see [Add site system roles](/configmgr/core/servers/deploy/configure/add-site-system-roles).
 
 ### Supported site system servers
 
@@ -43,7 +43,7 @@ For more information on global and site data, see [Types of data](/configmgr/cor
 
 Depending on how you configure the site, site systems in the same site communicate with each other by using server message block (SMB), HTTP, or HTTPS. Configuration Manager doesn't manage this communication. It can occur at any time without network bandwidth control. Review your available network bandwidth before you install the reporting services point role on a site system.
 
-For more information about planning for site systems, see [Add site system roles](/configmgr/core/deploy/configure/add-site-system-roles).
+For more information about planning for site systems, see [Add site system roles](/configmgr/core/servers/deploy/configure/add-site-system-roles).
 
 ## Plan for role-based administration
 
@@ -60,7 +60,7 @@ Reports are fully enabled for role-based administration. Configuration Manager f
 
 For more information about security rights for reporting, see [Configure reporting](/configmgr/core/servers/manage/configuring-reporting).
 
-For more information about role-based administration in Configuration Manager, see [Configure role-based administration](/configmgr/core/deploy/configure/configure-role-based-administration).
+For more information about role-based administration in Configuration Manager, see [Configure role-based administration](/configmgr/core/servers/deploy/configure/configure-role-based-administration).
 
 ## Reporting recommendations
 
