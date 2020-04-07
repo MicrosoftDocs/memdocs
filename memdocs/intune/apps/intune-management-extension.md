@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -127,7 +127,34 @@ The Intune management extension has the following prerequisites. Once the prereq
 
 - End users aren't required to sign in to the device to execute PowerShell scripts.
 
-- The Intune management extension client checks with Intune once every hour and after every reboot for any new scripts or changes. After you assign the policy to the Azure AD groups, the PowerShell script runs, and the run results are reported. Once the script executes, it doesn't execute again unless there's a change in the script or policy.
+- The Intune management extension agent checks with Intune once every hour and after every reboot for any new scripts or changes. After you assign the policy to the Azure AD groups, the PowerShell script runs, and the run results are reported. Once the script executes, it doesn't execute again unless there's a change in the script or policy. If the script fails, the Intune management extension agent will attempt to retry the script three times for the next 3 consecutive Intune management extension agent check-ins.
+
+### Failure to run script example
+8 AM
+  -  Check in
+  -  Run script **ConfigScript01**
+  -  Script fails
+
+9AM
+  -  Check in
+  -  Run script **ConfigScript01**
+  -  Script fails (retry count = 1)
+
+10 AM
+  -  Check in
+  -  Run script **ConfigScript01**
+  -  Script fails (retry count = 2)
+  
+11 AM
+  -  Check in
+  -  Run script **ConfigScript01**
+  -  Script fails (retry count = 3)
+
+12 PM
+  -  Check in
+  - No additional attempts are made to run **ConfigScript01**script.
+  - Going forward, if no additional changes are made to the script, no additional attempts will be made to run the script.
+
 
 ## Monitor run status
 
