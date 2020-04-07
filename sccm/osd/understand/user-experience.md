@@ -109,7 +109,7 @@ When the task sequence runs, it displays the **Installation progress** window:
 - You can customize the organization name at the top of the window. (The above example shows the default value, `IT Organization`). Change the **Organization name** client setting in the **Computer Agent** group. For more information, see [About client settings](/configmgr/core/clients/deploy/about-client-settings#computer-agent).
 
     > [!TIP]
-    > The task sequence stores this value in the read-only variable [_SMSTSOrgName](/configmgr/osd/understand/task-sequence-variables#_SMSTSOrgName).
+    > The task sequence stores this value in the read-only variable [_SMSTSOrgName](/configmgr/osd/understand/task-sequence-variables#SMSTSOrgName).
 
 - You can customize the subheading. (The above example shows the default value, `Running: <task sequence name>`.) On the properties of the task sequence, select the option to **Use custom text** for the progress notification text. It allows a maximum of 255 characters.
 
