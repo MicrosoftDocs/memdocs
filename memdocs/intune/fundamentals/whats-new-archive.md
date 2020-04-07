@@ -3610,7 +3610,7 @@ When the profile has been pushed to the device, the next step depends on the pro
 ### Access to managed app logs for iOS<!-- 1469920 -->
 End users with the managed Browser installed can now view the management status of all Microsoft published apps and send logs for troubleshooting their managed iOS apps.
 
-Learn how to enable the troubleshooting mode in the Managed Browser on an iOS device, see [How to access to managed app logs using the Managed Browser on iOS](../apps/app-configuration-managed-browser.md#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios).
+Learn how to enable the troubleshooting mode in the Managed Browser on an iOS device, see [How to access to managed app logs using the Managed Browser on iOS](../apps/app-configuration-managed-browser.md).
 
 ### Improvements to device setup workflow in the Company Portal for iOS in version 2.9.0<!-- 1417174 -->
 
