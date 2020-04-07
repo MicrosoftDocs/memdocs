@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 03/31/2020
+ms.date: 04/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -355,6 +355,7 @@ You use Configuration Manager boundary groups to define and regulate content dis
 > [!Note]
 > - Delivery Optimization is only available on Windows 10 clients.
 > - Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
+> - When using a CMG, the content for third-party updates won't download to clients if Delivery Optimization is enabled. <!--6598587--> 
 
 ### Use Configuration Manager Boundary Groups for Delivery Optimization Group ID
 
@@ -529,7 +530,7 @@ Added in 1810. When set to **Enable**, configures the power settings on the netw
 
 ### Enable wake-up proxy
 
-Specify **Yes** to supplement the site’s Wake On LAN setting, when it's configured for unicast packets.  
+Specify **Yes** to supplement the site's Wake On LAN setting, when it's configured for unicast packets.  
 
 For more information about wake-up proxy, see [Plan how to wake up clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).  
 
@@ -888,6 +889,7 @@ Set this option to **Yes** to allow clients to use delta content files. This set
 - Before enabling this client setting, ensure Delivery Optimization is configured appropriately for your environment. For more information, see [Windows Delivery Optimization](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#windows-delivery-optimization) and the [Delivery Optimization client setting](#delivery-optimization).
  - This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
  - Starting in Configuration Manager version 1910, when this option is set, delta download is used for all Windows update installation files, not just express installation files.
+    - When using a CMG, the content for third-party updates won't download to clients if **Download delta content when available** is enabled. <!--6598587--> 
 
 
 ### Port that clients use to receive requests for delta content
