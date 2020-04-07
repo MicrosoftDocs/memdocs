@@ -48,7 +48,7 @@ To start using Endpoint analytics, verify the prerequisites, then start gatherin
 
 This current preview requires:
 - Intune enrolled devices running Windows 10
-- Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise (Home and Pro editions aren't currently supported), and the devices must Azure AD joined or Hybrid Azure AD joined. Workplace joined machines aren't currently supported.
+- Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise (Home and Pro editions aren't currently supported), and the devices must be Azure AD joined or Hybrid Azure AD joined. Workplace joined machines aren't currently supported.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](#bkmk_uea_endpoints).
 - The [Intune Service Administrator role](https://docs.microsoft.com/intune/fundamentals/role-based-access-control) is required to [start gathering data](#bkmk_uea_start).
    - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
