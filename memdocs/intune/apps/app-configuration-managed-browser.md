@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Using a browser protected with Intune policy (Microsoft Edge, you can ensure corporate websites are always accessed with safeguards in place.  When configured with Intune, protected browsers can take advantage of the following:
+Using a browser protected with an Intune policy, such as Microsoft Edge, you can ensure corporate websites are always accessed with safeguards in place. When configured with Intune, protected browsers can take advantage of the following:
 
 - Application protection policies
 - Conditional Access
