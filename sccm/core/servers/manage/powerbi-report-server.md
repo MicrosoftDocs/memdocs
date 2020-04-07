@@ -2,7 +2,7 @@
 title: Integrate with Power BI Report Server
 titleSuffix: Configuration Manager
 description: Integrate Power BI Report Server with Configuration Manager reporting for modern visualization and better performance.
-ms.date: 04/01/2020
+ms.date: 04/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -26,15 +26,16 @@ Save Power BI Desktop report files (.PBIX) and deploy them to the Power BI Repor
 
 - Power BI Report Server license. For more information, see [Licensing Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/get-started#licensing-power-bi-report-server).
 
-- Download [Microsoft Power BI Report Server-September 2019](https://www.microsoft.com/download/details.aspx?id=57270).
+- Download [Microsoft Power BI Report Server-September 2019](https://www.microsoft.com/download/details.aspx?id=57270), or later.
 
     > [!NOTE]
     > Don't install Power BI Report Server right away. For the proper process based on your environment, see [Configure the reporting services point](#configure-the-reporting-services-point).
 
-- Download [Microsoft Power BI Desktop (Optimized for Power BI Report Server - September 2019)](https://www.microsoft.com/download/details.aspx?id=57271).
+- Download [Microsoft Power BI Desktop (Optimized for Power BI Report Server - September 2019)](https://www.microsoft.com/download/details.aspx?id=57271), or later.
 
     > [!IMPORTANT]
-    > Only use this version of Power BI Desktop, don't use the version from the Microsoft Store.
+    > - Only use versions of Power BI Desktop from the [Microsoft Download Center](https://www.microsoft.com/download/), don't use the version from the Microsoft Store.
+    > - Only use a version of [Power BI Desktop that states it's **Optimized for Power BI Report server**](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop).
 
 - Power BI integration uses the same role-based administration for reporting.
 
