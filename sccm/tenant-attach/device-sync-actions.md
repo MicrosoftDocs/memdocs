@@ -2,7 +2,7 @@
 title: Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
 description: "Upload your Configuration Manager devices to the cloud service and take actions from the admin center."
-ms.date: 04/01/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -27,8 +27,7 @@ Starting in Configuration Manager version 2002, you can upload your Configuratio
 - An Azure public cloud environment.
 - The user account triggering device actions has the following prerequisites:
    - Has been discovered with both [Azure Active Directory user discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc) and [Active Directory user discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
-      - Meaning the user account needs to be a synced user object in Azure AD.
-   - The **Notify Resource** permission under **Collections** object class in Configuration Manager.
+      - This means the user account needs to be a synced user object in Azure AD.
 - Enable this [pre-release feature](/configmgr/core/servers/manage/pre-release-features) from **Administration** > **Overview** > **Updates and Servicing** > **Features**.
 
 ## Internet endpoints
