@@ -225,9 +225,9 @@ For Managed Google Play apps deployed to Android Enterprise work profile devices
 
 ## Working with Managed Google Play closed testing tracks
 
-You can distribute a non-production version of a line-of-business app to devices enrolled in **Android Enterprise Work Profile**, **Fully Managed**, and **Dedicated** scenarios. The workflow for assigning a production version of a LOB app to a group that currently exists isn't any different from assigning a non-produdction channel.
+You can distribute a non-production version of a line-of-business (LOB) app to devices enrolled in **Android Enterprise Work Profile**, **Fully Managed**, and **Dedicated** scenarios. The workflow for assigning a production version of a LOB app to a group that currently exists isn't any different from assigning a non-produdction channel.
 
-Assign a production version of a LOB app:
+Assign a production version LOB app:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** and select the line-of-business that app you would like to distribute.
 3. Click **Properties** and scroll down to assignments. 
