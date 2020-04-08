@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 04/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -222,6 +222,19 @@ Alternatively, you can configure Google Play to automatically reapprove app perm
 ## Additional Managed Google Play app reporting for Android Enterprise work profile devices
 
 For Managed Google Play apps deployed to Android Enterprise work profile devices, you can view the status and version number of the app installed on a device using Intune. 
+
+## Working with Managed Google Play closed testing tracks
+
+You can distribute a non-production version of a line-of-business app to devices enrolled in **Android Enterprise Work Profile**, **Fully Managed**, and **Dedicated** scenarios. The workflow for assigning a production version of a LOB app to a group that currently exists isn't any different from assigning a non-produdction channel.
+
+Assign a production version of a LOB app:
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All apps** and select the line-of-business that app you would like to distribute.
+3. Click **Properties** and scroll down to assignments. 
+4. Click **edit**.
+5. Assign your app to a group and choose the desired track for that group.
+
+After deployment, the install status of each track will correspond with the track's version number in Managed Google Play.
 
 ## Delete Managed Google Play apps
 When necessary, you can delete managed Google Play apps from Microsoft Intune. To delete a managed Google Play app, open Microsoft Intune in the Azure portal and select **Apps** > **All apps**. From the app list, select the ellipses (...) to the right of the managed Google Play app, then select **Delete** from the displayed list. When you delete a managed Google Play app from the app list, the managed Google Play app is automatically unapproved.
