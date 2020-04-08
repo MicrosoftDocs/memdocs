@@ -16,7 +16,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-When you use the current branch of Configuration Manager, you can install the in-console update for version 2002 to update your hierarchy from a previous version. <!-- baseline only statement:-->Version 2002 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), so you can use the installation media to install the first site of a new hierarchy.
+When you use the current branch of Configuration Manager, you can install the in-console update for version 2002 to update your hierarchy from a previous version. <!-- baseline only statement:-->Version 2002 is also available as [baseline media](/sccm/core/servers/manage/updates#bkmk_Baselines), so you can use the installation media to install the first site of a new hierarchy.
 
 To get the update for version 2002, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. To download the update when your service connection point is offline, [use the service connection tool](/sccm/core/servers/manage/use-the-service-connection-tool).<!-- SCCMDocs#1946 -->
 

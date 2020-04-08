@@ -29,7 +29,7 @@ This article introduces the features that are available in the Technical Preview
 **The following are new features you can try out with this version.**  
 
 ## Improvements to Endpoint Protection
-Improvement to Endpoint Protection antimalware policy settings - You can now specify the level at which the Endpoint Protection Cloud Protection Service will block suspicious files. A new setting enables administrators to specify “risky” computers based on the high amounts of malware they encounter.
+Improvement to Endpoint Protection antimalware policy settings - You can now specify the level at which the Endpoint Protection Cloud Protection Service will block suspicious files. A new setting enables administrators to specify "risky" computers based on the high amounts of malware they encounter.
 
 ## Increased number of enrolled devices
 Administrators can now enable users to enroll up to 15 devices in hybrid mobile device management with Intune. The limit was 5 devices per user previously.
@@ -88,7 +88,7 @@ The procedure to create and deploy a Configuration Manager application from a pa
 
 We've added many new settings you can use in your configuration items for various device platforms.
 These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager.
-If you need help with any of these settings, open [Manage settings and features on your devices with Microsoft Intune policies](https://docs.microsoft.com/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) and then select the settings subtopic for the platform you want.
+If you need help with any of these settings, open [Manage settings and features on your devices with Microsoft Intune policies](/mem/intune/configuration/device-profiles) and then select the settings subtopic for the platform you want.
 
 
 ### New settings for Android devices
@@ -236,13 +236,13 @@ The following sections detail the changes introduced with this preview, how the 
 The following are key changes to boundary groups and how clients find content. Many of these changes and concepts work together.
 - **Configurations for Fast or Slow are removed:** You no longer configure individual distribution points to be fast or slow.  Instead, each site system associated with a boundary group is treated the same. Because of this change, the **References** tab of the boundary group properties no longer supports the configuration of Fast or Slow.
 - **New default boundary group at each site:**  Each primary site has a new default boundary group named ***Default-Site-Boundary-Group\<sitecode>***.  When a client is not on a network location that is assigned to a boundary group, that client will use the site systems associated with the default group from its assigned site. Plan to use this boundary group as a replacement to the concept of fallback content location.    
-  -  **‘Allow fallback source locations for content’** is removed: You no longer explicitly configure a distribution point to be used for fallback, and the options to set this are removed from the UI.
+  -  **'Allow fallback source locations for content'** is removed: You no longer explicitly configure a distribution point to be used for fallback, and the options to set this are removed from the UI.
 
   Additionally, the result of setting **Allow clients to use a fallback source location for content** on a deployment type for applications has changed. This setting on a deployment type now enables a client to use the default site boundary group as a content source location.
 
   -  **Boundary groups relationships:** Each boundary group can be linked to one or more additional boundary groups. These links form relationships that are configured on the new boundary group properties tab named **Relationships**:
   -   Each boundary group that a client is directly associated with is called a **current** boundary group.  
-  -   Any boundary group a client can use due to an association between that client’s *current* boundary group and another group is called a **neighbor** boundary group.
+  -   Any boundary group a client can use due to an association between that client's *current* boundary group and another group is called a **neighbor** boundary group.
   -  It is on the **Relationships** tab that you add boundary groups that can be used as a *neighbor* boundary group. You can also configure a time in minutes that determines when a client that fails to find content from a distribution point in the *current* group will begin to search content locations from those *neighbor* boundary groups.
 
       When you add or change a boundary group configuration, you will have the option to block fallback to that specific boundary group from the current group you are configuring.
@@ -256,7 +256,7 @@ The following are key changes to boundary groups and how clients find content. M
 
 - **Clients attempt to get content from each distribution point for up to 2 minutes:** When a client searches for a content source location, it attempts to access each distribution point for 2 minutes before then trying another distribution point. This is a change from previous versions where clients attempted to connect to a distribution point for up to 2 hours.
 
-  - The first distribution point that a client attempts to use is randomly selected from the pool of available distribution points in the client’s *current* boundary group (or groups).
+  - The first distribution point that a client attempts to use is randomly selected from the pool of available distribution points in the client's *current* boundary group (or groups).
 
   - After two minutes, if the client has not found the content, it switches to a new distribution point and attempts to get content from that server. This process repeats every two minutes until the client finds the content or reaches the last server in its pool.
 
@@ -278,11 +278,11 @@ Beginning with this technical preview, you define boundary group relationships t
 
 On the Relationships tab you add other boundary groups to configure a relationship to those groups. Each relationship is a one-way link from the **current** boundary group to the boundary group you add, which is called a **neighbor**. For each link you create, you can configure distribution points with a   fallback time in minutes. This time is used to determine after how long clients in the *current* boundary group can begin using distribution points in the *neighbor* boundary group if they are unable to find a valid content source location from their current boundary group.
 
-When a client can’t find content and begins to search locations from neighbor boundary groups, it increases the pool of available distribution points for that client in a controlled manner.  
+When a client can't find content and begins to search locations from neighbor boundary groups, it increases the pool of available distribution points for that client in a controlled manner.  
 
 - A boundary group can have more than one Relationship. This lets you configure fallback to different neighbors to occur after different periods of time.
 - Clients will only fallback to a boundary group that is a direct neighbor of their current boundary group.
-- When a client is a member of multiple boundary groups, the current boundary group is defined as a union of all that client’s boundary groups.  That client can then fallback to a neighbor of any of those original boundary groups.
+- When a client is a member of multiple boundary groups, the current boundary group is defined as a union of all that client's boundary groups.  That client can then fallback to a neighbor of any of those original boundary groups.
 
 In addition to the links you define, there is an implied link that is created automatically between the boundary groups you create and the default boundary group that is automatically created for each site. This automatic link:
 - Is used by clients that are not on a boundary associated with any boundary group in your hierarchy automatically use the default boundary group from their assigned site to identify valid content source locations.   
@@ -323,7 +323,7 @@ When you install version 1609 and update your site, the following configurations
 
   The following table identifies the new fallback behavior you can expect from the combination the original deployment settings and distribution point configurations:
 
-Original deployment configuration for “Do not run program” in slow network  |Original distribution point configuration for “Allow client to use a fallback source location for content”  |New fallback behavior  
+Original deployment configuration for "Do not run program" in slow network  |Original distribution point configuration for "Allow client to use a fallback source location for content"  |New fallback behavior  
 ---------|---------|---------
 Selected     |  Selected    |  **No fallback** - Only use the distribution points in current boundary group       
 Selected     |  Not selected|  **No fallback** - Only use the distribution points in current boundary group       
