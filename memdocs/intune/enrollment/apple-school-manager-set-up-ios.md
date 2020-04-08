@@ -109,7 +109,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     > These aren't supported when authenticating with Apple Setup Assistant.
 
 6. Choose **Device Management Settings** and choose if you want devices using this profile to be supervised.
-    **Supervised** devices give you more management options and disabled Activation Lock by default. Microsoft recommends using ADE as the mechanism for enabling supervised mode, especially for organizations that are deploying large numbers of iOS/iPadOS devices.
+    **Supervised** devices give you more management options and disabled Activation Lock by default. Microsoft recommends using ADE as the mechanism for enabling Intune's supervised mode, especially for organizations that are deploying large numbers of iOS/iPadOS devices.
 
     Users are notified that their devices are supervised in two ways:
 
