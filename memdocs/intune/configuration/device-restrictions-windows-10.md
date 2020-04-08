@@ -85,11 +85,13 @@ These settings use the [ApplicationManagement policy CSP](https://docs.microsoft
 
   [ApplicationManagement/AllowGameDVR CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
-- **Apps from store only**: This setting determines the user experience when users install apps from places other than the Microsoft Store. Your options:
+- **Apps from store only**: This setting determines the user experience when users install apps from places other than the Microsoft Store. This setting does not prevent installation of content from USB devices, network shares or other non-internet sources. Important: Using a trustworthy browser helps ensure that these protections work as expected.
+
+Your options:
 
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might allow end users to install apps from places other than the Microsoft Store, including apps defined in other policy settings.  
   - **Anywhere**: Turns off app recommendations, and allows users to install apps from any location.  
-  - **Store Only**: Forces end users to only install apps from the Microsoft Store.
+  - **Store Only**: This policy setting is intended to prevent malicious content from affecting your user's devices when downloading executable content from the internet. When users attempt to install apps from the internet, installation will be blocked, and they will see a message recommending they download apps from the Microsoft Store.
   - **Recommendations**: When installing an app from the web that's available in the Microsoft Store, users see a message recommending they download it from the store.  
   - **Prefer Store**: Warns users when they install apps from places other than the Microsoft Store.
 
