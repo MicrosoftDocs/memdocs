@@ -72,44 +72,46 @@ You use the Apple portal to create a Device Enrollment token. You also use the p
 
 10. In the **Apple token** box, browse to the certificate (.pem) file, choose **Open**, and then choose **Create**. 
 
-11. If you would like to apply Scope Tags to limit which admins have access to this token, select scopes.
+11. If you want to apply Scope Tags to limit which admins have access to this token, select scopes.
 
 ## Create an Apple enrollment profile
 Now that you've installed your token, you can create an enrollment profile for corporate-owned iOS/iPadOS devices. A device enrollment profile defines the settings applied to a group of devices during enrollment.
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens**.
 
-2. Select the token you just installed, choose **Profiles** > **Create profile**.
+2. Select the token you just installed, choose **Profiles** > **Create profile** > **iOS**.
 
-3. Under **Create Profile**, enter *TestProfile* for **Name** and *Testing ADE for iOS/iPadOS devices* for **Description**. Users do not see these details.
+3. On the **Basics** page, enter *TestProfile* for **Name** and *Testing ADE for iOS/iPadOS devices* for **Description**. Users do not see these details.
 
-4. Choose **iOS** under **Platform**.
+4. Select **Next**.
 
-5. Determine if you would like your devices to enroll with or without **User Affinity**. User Affinity is designed for devices that will be used by particular users. If your users will want to use the Company Portal for services like installing apps, choose **Enroll with User Affinity**. If your users do not need the Company Portal or you want to provision the device for many users, choose **Enroll without User Affinity**.
+5. On the **Management Settings** page, decide if you want your devices to enroll with or without **User Affinity**. User Affinity is designed for devices that will be used by particular users. If your users will want to use the Company Portal for services like installing apps, choose **Enroll with User Affinity**. If your users do not need the Company Portal or you want to provision the device for many users, choose **Enroll without User Affinity**.
 
-6. If you chose to enroll with User Affinity, determine if you would like to Authenticate with Company Portal or Apple Setup Assistant. If you would like to use Multi-Factor Authentication, allow users to change passwords upon first sign in, or prompt users to reset their expired passwords during enrollment, choose **Yes** under **Authenticate with Company Portal instead of Apple Setup Assistant**. If you are comfortable using Apple's provided basic HTTP authentication through Apple Setup Assistant, choose **No**. If you choose **Yes** and you would like the Company Portal application to update automatically on end users' devices, separately deploy the Company Portal as a required app to these users through Apple's Volume Purchasing Program (VPP).
+6. If you chose to enroll with User Affinity, the **Slect where users must authenticate** option appears. Decide if you want to Authenticate with Company Portal or Apple Setup Assistant.
+  - **Company Portal**: Select this option to use Multi-Factor Authentication, allow users to change passwords upon first sign in, or prompt users to reset their expired passwords during enrollment. If you want the Company Portal application to update automatically on end users' devices, separately deploy the Company Portal as a required app to these users through Apple's Volume Purchasing Program (VPP).
+  - **Setup Assistant**: Select this optino to use Apple's provided basic HTTP authentication through Apple Setup Assistant
+  
+7. If you chose to enroll with User Affinity and Authenticate with Company Portal, the **Install Company Poral with VPP** option appears. If you install the Company Portal with a VPP token, your user won't have to enter an Apple ID and Password to download the Company Portal from the app store during enrollment. Choose **Use Token:** under **Install Company Portal with VPP** to select a VPP token that has free licenses of the Company Portal available. If you don't want to use VPP to deploy the Company Portal, choose **Don't use VPP**. 
 
-7. If you chose to enroll with User Affinity and Authenticate with Company Portal, determine if you would like to install Company Portal with Apple's Volume Purchase Program (VPP). If you install the Company Portal with a VPP token, your user will not have to enter an Apple ID and Password to download the Company Portal from the app store during enrollment. Choose **Use Token:** under **Install Company Portal with VPP** to select a VPP token that has free licenses of the Company Portal available. If you don't want to use VPP to deploy the Company Portal, choose **Don't use VPP** under **Install Company Portal with VPP**. 
+8. If you chose to enroll with User Affinity, Authenticate with Company Portal, and Install Company Portal with VPP, decide if you want to run the Company Portal in Single App Mode until Authentication. This setting allows you to ensure the user will not have access to other apps until they have finished the corporate enrollment. If you want to restrict the user to this flow until enrollment is completed, choose **Yes** under **Run Company Portal in Single App Mode until authentication**. 
 
-8. If you chose to enroll with User Affinity, Authenticate with Company Portal, and Install Company Portal with VPP, decide if you would like to run the Company Portal in Single App Mode until Authentication. This setting allows you to ensure the user will not have access to other apps until they have finished the corporate enrollment. If you would like to restrict the user to this flow until enrollment is completed, choose **Yes** under **Run Company Portal in Single App Mode until authentication**. 
-
-9. Choose **Device Management Settings** and choose **Yes** under **Supervised**. Supervised devices give you the most management options for your corporate iOS/iPadOS devices.
+9. Under **Device Management Settings**, choose **Yes** under **Supervised** (if you chose **Enroll with User Affinity**, this is automatically set to **Yes**). Supervised devices give you the most management options for your corporate iOS/iPadOS devices.
 
 10. Choose **Yes** under **Locked enrollment** to ensure your users cannot remove management of the corporate device. 
 
 11. Choose an option under **Sync with Computers** to determine if the iOS/iPadOS devices will be able to sync with computers.
 
-12. By default, Apple names the device with the device type (i.e. iPad). If you would like to provide a different name template, choose **Yes** under **Apply device name template**. Enter the name you would like to apply to the devices, where the strings *{{SERIAL}}* and *{{DEVICETYPE}}* will substitute each device's serial number and device type. Otherwise, choose **No** under **Apply device name template**.
+12. By default, Apple names the device with the device type (i.e. iPad). If you want to provide a different name template, choose **Yes** under **Apply device name template**. Enter the name you want to apply to the devices, where the strings *{{SERIAL}}* and *{{DEVICETYPE}}* will substitute each device's serial number and device type. Otherwise, choose **No** under **Apply device name template**.
 
-13. Choose **OK**.
+13. Choose **Next**.
 
-14. Choose **Setup Assistant customization** and enter *Tutorial department* for **Department Name**. This string is what users see when they tap **About configuration** during device activation.
+14. On the **Setup Assistant** page, *Tutorial department* for **Department Name**. This string is what users see when they tap **About configuration** during device activation.
 
 15. Under **Department Phone**, enter a phone number. This number appears when users tap the **Need help** button during activation.
 
 16. You can **Show** or **Hide** a variety of screens during device activation. For the most seamless enrollment experience, set all screens to **Hide**.
 
-17. Choose **OK** > **Create**.
+17. Choose **Next** to go to the **Review + Create** page. Select **Create**.
 
 ## Sync managed devices to Intune
 
