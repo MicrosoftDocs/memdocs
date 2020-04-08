@@ -135,7 +135,7 @@ You assign the settings to groups of users in Azure AD. If that user has the tar
 
 ## Direct users to Microsoft Edge instead of the Intune Managed Browser 
 
-Both the Intune Managed Browser and Microsoft Edge can be used as policy-protected browsers. To ensure that your users are being directed to use the correct browser app, target all of your Intune-managed apps (for example, Outlook, OneDrive, and SharePoint) with the following configuration setting:
+Microsoft Edge can be used as a policy-protected browser. To ensure that your users are being directed to use the correct browser app, target all of your Intune-managed apps (for example, Outlook, OneDrive, and SharePoint) with the following configuration setting:
 
 |    Key    |    Value    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
