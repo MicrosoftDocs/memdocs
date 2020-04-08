@@ -46,7 +46,7 @@ manager: dougeby
 
     2. Sign in to Intune with administrator credentials  
         ``` PowerShell  
-        Connect-AutopilotIntune 
+        connect-msgraph 
         ```
 
     3. Retrieve all Windows Autopilot profiles associated with your Intune tenant  
