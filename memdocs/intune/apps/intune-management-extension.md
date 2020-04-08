@@ -55,6 +55,9 @@ The Intune management extension has the following prerequisites. Once the prereq
 - Devices joined to Azure Active Directory (AD), including:  
   
   - Hybrid Azure AD-joined: Devices joined to Azure Active Directory (AD), and also joined to on-premises Active Directory (AD). See [Plan your hybrid Azure Active Directory join implementation](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) for guidance.
+  
+  > [!TIP]
+  > Be sure devices are [joined](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) to Azure AD. Devices that are only [registered](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) in Azure AD won't receive your scripts.  
 
 - Devices enrolled in Intune, including:
 
@@ -74,8 +77,8 @@ The Intune management extension has the following prerequisites. Once the prereq
     - [Client apps workload](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
     - [How to switch Configuration Manager workloads to Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
   
-> [!TIP]
-> Be sure devices are [joined](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) to Azure AD. Devices that are only [registered](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) in Azure AD won't receive your scripts.
+> [!NOTE]
+> For information about using Window 10 VMs, see [Using Windows 10 virtual machines with Intune](../fundamentals/windows-10-virtual-machines.md).
 
 ## Create a script policy and assign it
 
