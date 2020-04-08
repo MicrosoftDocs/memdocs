@@ -25,7 +25,7 @@ Starting in Configuration Manager version 2002, you can upload your Configuratio
 - An account that is a *Global Administrator* for signing  in when applying this change. For more information, see [Azure Active Directory (Azure AD) administrator roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
    - Onboarding creates a third-party app and a first party service principal in your Azure AD tenant.
 - An Azure public cloud environment.
-- The user account triggering device actions has the following prerequisites:
+- The user accounts triggering device actions have the following prerequisites:
    - Has been discovered with both [Azure Active Directory user discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc) and [Active Directory user discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
       - This means the user account needs to be a synced user object in Azure AD.
    - The **Initiate Configuration Manager action** permission under **Remote tasks** in the Microsoft Endpoint Manager admin center.
