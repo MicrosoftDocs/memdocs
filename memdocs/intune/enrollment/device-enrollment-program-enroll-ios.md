@@ -71,6 +71,13 @@ Support for unsupervised ADE devices was deprecated in iOS/iPadOS 11. In iOS/iPa
 - [Mobile Device Management (MDM) Authority](../fundamentals/mdm-authority-set.md)
 - [Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
 
+## Supported volume
+
+- Maximum enrollment profiles per token: 1,000
+- Maximum Automated Device Enrollment devices per profile: no limit (within maximum number of devices per token)
+- Maximum Automated Device Enrollment tokens per Intune account: 2,000
+- Maximum Automated Device Enrollment devices per token: 75,000
+
 ## Get an Apple ADE token
 
 Before you can enroll iOS/iPadOS devices with ADE, you need a ADE token (.p7m) file from Apple. This token lets Intune sync information about ADE devices that your corporation owns. It also permits Intune to upload enrollment profiles to Apple and to assign devices to those profiles.
