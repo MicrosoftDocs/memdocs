@@ -88,8 +88,8 @@ You use the [Apple Business Manager (ABM)](https://business.apple.com/) or [Appl
 
 2. Grant permission to Microsoft to send user and device information to Apple by selecting **I agree**.
 
-> [!NOTE]
-> Once you progress beyond step 2 to download the Intune public key certificate, do not close the wizard or navigate away from this page. Doing so will invalidate the certificate you have downloaded, and you will need to repeat this process again. If you encounter this situation, you will typically note that the **Create** button on the **Review + create** tab is greyed out, and you cannot complete the process.
+   > [!NOTE]
+   > Once you progress beyond step 2 to download the Intune public key certificate, do not close the wizard or navigate away from this page. Doing so will invalidate the certificate you have downloaded, and you will need to repeat this process again. If you encounter this situation, you will typically note that the **Create** button on the **Review + create** tab is greyed out, and you cannot complete the process.
 
    ![Screenshot of Enrollment Program Token pane in Apple Certificates workspace to download public key.](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
@@ -202,8 +202,8 @@ Now that you've installed your token, you can create an enrollment profile for A
 10. Choose if you want locked enrollment for devices using this profile. **Locked enrollment** disables iOS/iPadOS settings that allow the management profile to be removed from the **Settings** menu. After device enrollment, you can't change this setting without wiping the device. Such devices must have the **Supervised** Management Mode set to *Yes*. 
 
     > [!NOTE]
-    > Once the device is enrolled with **Locked enrollment** users will not be able to **Remove Device** or **Factory Reset** using Company Portal app. The options will be greyed out. They will also be unable to remove the device using Company Portal website (https://portal.manage.microsoft.com).
-    > Additionally if a BYOD device is convereted to an Apple's Automated Device Enrollment device and enrolled with **Locked enrollment** enabled profile, user will be allowed to **Remove Device** or **Factory Reset** for 30 days and then the options will be disabled or greyed out. Reference: https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859
+    > After the device is enrolled with **Locked enrollment**, users will not be able to use **Remove Device** or **Factory Reset** by in the Company Portal app. The options will be unavailable to the user. The user also won't be able to remove the device in the Company Portal website (https://portal.manage.microsoft.com).
+    > Also, if a BYOD device is convereted to an Apple Automated Device Enrollment device and enrolled with a **Locked enrollment** enabled profile, the user will be allowed to use **Remove Device** and **Factory Reset** for 30 days, and then the options will be disabled or unavailable. Reference: https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859.
 
 11. Choose if you want the devices using this profile to be able to **Sync with computers**. If you choose **Allow Apple Configurator by certificate**, you must choose a certificate under **Apple Configurator Certificates**.
 
