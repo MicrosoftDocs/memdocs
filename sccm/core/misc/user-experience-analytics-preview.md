@@ -2,7 +2,7 @@
 title: Endpoint analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for Endpoint analytics preview.
-ms.date: 04/08/2020
+ms.date: 04/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -68,7 +68,22 @@ Proactive remediations also require one of the following licenses for the manage
 - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows Virtual Desktop Access E3 or E5
 
-### <a name="bkmk_uea_start"></a> Start gathering data
+### Permissions
+
+#### Endpoint analytics permissions
+
+The following permissions are used for Endpoint analytics:
+- **Read** under the **Device configurations** category.
+- Permissions appropriate to the user's role under the **Endpoint Analytics** category.
+
+A read-only user would only need the **Read** permission under both the **Device configurations** and **Endpoint Analytics** categories. An Intune administrator would typically need all permissions.
+
+#### Proactive remediations permissions
+
+For Proactive remediations, the user needs permissions appropriate to their role under the **Device configurations** category.  Permissions in the **Endpoint Analytics** category aren't needed if the user only uses Proactive remediations.
+
+
+## <a name="bkmk_uea_start"></a> Start gathering data
 
 1. Go to `https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
 1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](#bkmk_uea_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
