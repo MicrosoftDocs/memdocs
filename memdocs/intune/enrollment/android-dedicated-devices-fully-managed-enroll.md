@@ -35,7 +35,7 @@ After you've set up your [Android Enterprise dedicated devices](android-kiosk-en
 
 | Enrollment method | Minimum Android OS version for dedicated and fully managed devices |
 | ----- | ----- |
-| Near Field Communication | 5.1 |
+| Near Field Communication | 6.0 |
 | Token entry | 6.0 |
 | QR code | 7.0 |
 | Zero Touch  | 8.0\* |
