@@ -140,7 +140,7 @@ Applies to:
 
 Most Line of Business (LOB) apps require some level of user authentication to support security. In many cases, the authentication requires users to enter the same credentials repeatedly. To improve the user experience, developers can create apps that use single sign-on (SSO). Using single sign-on reduces the number of times a user must enter credentials.
 
-The single sign-on profile is based on Kerberos. Kerberos is a network authentication protocol that uses secret-key cryptography to authenticate client-server applications. The settings define Kerberos account information when accessing servers or specified apps, and handle Kerberos challenges for web pages and native apps. Apple recommends you use the [Kerberos SSO app extension](#single-sign-on-app-extension) (in this article) settings instead of the SSO settings.  
+The single sign-on profile is based on Kerberos. Kerberos is a network authentication protocol that uses secret-key cryptography to authenticate client-server applications. The Intune settings define Kerberos account information when accessing servers or specified apps, and handle Kerberos challenges for web pages and native apps. Apple recommends you use the [Kerberos SSO app extension](#single-sign-on-app-extension) (in this article) settings instead of the SSO settings.  
 
 To use single sign-on, be sure you have:
 
