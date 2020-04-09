@@ -73,7 +73,7 @@ Support for unsupervised ADE devices was deprecated in iOS/iPadOS 11. In iOS/iPa
 
 ## Supported volume
 
-- Maximum enrollment profiles per token: 1,000 
+- Maximum enrollment profiles per token: 1,000  
 - Maximum Automated Device Enrollment devices per profile: no limit (within maximum number of devices per token)
 - Maximum Automated Device Enrollment tokens per Intune account: 2,000
 - Maximum Automated Device Enrollment devices per token: 75,000
