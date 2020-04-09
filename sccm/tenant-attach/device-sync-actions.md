@@ -29,7 +29,6 @@ Starting in Configuration Manager version 2002, you can upload your Configuratio
    - Has been discovered with both [Azure Active Directory user discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc) and [Active Directory user discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
       - This means the user account needs to be a synced user object in Azure AD.
    - The **Initiate Configuration Manager action** permission under **Remote tasks** in the Microsoft Endpoint Manager admin center.
-- In the Configuration Manager console, enable this [pre-release feature](/configmgr/core/servers/manage/pre-release-features) from **Administration** > **Overview** > **Updates and Servicing** > **Features**.
 
 
 ## Internet endpoints
