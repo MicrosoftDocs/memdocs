@@ -86,7 +86,7 @@ View the Microsoft Edge web browser baseline settings that are supported by Micr
 
    You can select 'BlockPlugins' (2) to block Adobe Flash on all sites, or you can select 'ClickToPlay' (3) to let Adobe Flash run but require the user to click the placeholder to start it. In any case, the 'PluginsAllowedForUrls' and 'PluginsBlockedForUrls' policies take precedence over 'DefaultPluginsSetting'. Automatic playback is only allowed for domains explicitly listed in the 'PluginsAllowedForUrls' policy. If you want to enable automatic playback for all sites, consider adding http://* and https://* to this list. If you don't configure this policy, the user can change this setting manually. * 2 = Block the Adobe Flash plug-in * 3 = Click to play The former '1' option set allow-all, but this functionality is now only handled by the 'PluginsAllowedForUrls' policy. Existing policies using '1' will operate in Click-to-play mode.
   -->
-  
+
   - **Enabled** (*default*) 
   - **Disabled**  
   - **Not configured**  
@@ -120,6 +120,7 @@ View the Microsoft Edge web browser baseline settings that are supported by Micr
   - **Minimum SSL version enabled**
 
 
+::: zone-end
 
 ::: zone pivot="edge-october-2019"
 
