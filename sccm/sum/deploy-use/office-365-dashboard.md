@@ -237,7 +237,7 @@ This tile summarizes devices that have issues with add-ins, macros, or both.
 - Multiple issues: The macro has more than one of the above issues.
 
 > [!NOTE]
-> Macro inventory is populated by data from the Readiness Toolkit for Office and recently used data files. Macros health is populated by health data. Due to the different data sources, it's possible for the macro health status to be **Needs review** when the macro inventory is **Not scanned**. <!--5922845-->
+> Macro inventory is populated by data from the Readiness Toolkit for Office and recently used data files. Macro health is populated by health data. Due to the different data sources, it's possible for the macro health status to be **Needs review** when the macro inventory is **Not scanned**. <!--5922845-->
 
 ### Known issues
 
