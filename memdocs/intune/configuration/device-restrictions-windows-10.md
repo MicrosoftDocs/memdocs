@@ -147,9 +147,13 @@ These settings use the [Bluetooth policy CSP](https://docs.microsoft.com/windows
 These settings use the [accounts policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts); which also lists the supported Windows editions.
 
 - **Microsoft account**: **Block** prevents end users from associating a Microsoft account with the device. **Not configured** (default) allows adding and using a Microsoft account.
+> [!Note]
+> Configuring this setting to **Block** may impact certain enrollment scenarios which rely on user intervention to complete the process.
 - **Non-Microsoft account**: **Block** prevents end users from adding non-Microsoft accounts using the user interface. **Not configured** (default) allows users to add email accounts that aren't associated with a Microsoft account.
 - **Settings synchronization for Microsoft account**: **Not configured** (default) allows device and app settings associated with a Microsoft account to synchronize between devices. **Block** prevents this synchronization.
-- **Microsoft Account sign-in assistant**: When set to **Not configured** (default), end users can start and stop the **Microsoft Account Sign-In Assistant** (wlidsvc) service. This operating system service allows users to sign in to their Microsoft account. **Disable** prevents end users from controlling the Microsoft Sign-in Assistant service (wlidsvc).
+- **Microsoft Account sign-in assistant**: When set to **Not configured** (default), end users can start and stop the **Microsoft Account Sign-In Assistant** (wlidsvc) service. This operating system service allows users to sign in to their Microsoft account. **Disable** configures the Microsoft Sign-in Assistant service (wlidsvc) to Disabled and prevents end users from manually starting it.
+> [!Note]
+> **Disabling** this service may impact certain enrollment scenarios which rely on user intervention to complete the process. 
 
 ## Cloud Printer
 
