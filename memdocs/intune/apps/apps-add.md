@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -117,7 +117,7 @@ For more information about the types of apps that your organization needs, see "
 Intune lets you modify the functionality of apps that you deploy to help align them with your company's compliance and security policies. This control allows you to determine how your company data is protected. Intune-managed apps are enabled with a rich set of mobile application protection policies, such as:
 
 - Restricting copy-and-paste and save-as functions.
-- Configuring web links to open inside the Intune Managed Browser app.
+- Configuring web links to open inside the Microsoft Edge app.
 - Enabling multi-identity use and app-level Conditional Access.
 
 Intune-managed apps can also enable app protection without requiring enrollment, which gives you the choice of applying data loss-prevention policies without managing the user's device. Additionally, you can incorporate mobile-app management in your mobile and line-of-business apps by using the Intune App SDK and App Wrapping Tool. For more information about these tools, see [Intune App SDK overview](../developer/app-sdk.md).
@@ -157,7 +157,7 @@ App categories can be used to help you sort apps to make them easier for users t
 
 When you add an app to Intune, you are given the option to select the category you want. Use the platform-specific topics to add an app and assign categories. To create and edit your own categories, use the following procedure:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Apps** > **App categories**.  
     The **App categories** pane displays a list of current categories. 
 5. Do either of the following:
@@ -203,6 +203,7 @@ To learn how to add apps for each platform to Intune, see:
 - [Windows LOB app](lob-apps-windows.md)
 - [Office 365 apps for Windows 10](apps-add-office365.md)
 - [Office 365 apps for macOS](apps-add-office365-macos.md)
+- [Managed Google Play apps](apps-add-android-for-work.md)
 - [Microsoft Edge for Windows 10](apps-windows-edge.md)
 - [Microsoft Edge for macOS](apps-edge-macos.md)
 - [Built-in apps](apps-add-built-in.md)

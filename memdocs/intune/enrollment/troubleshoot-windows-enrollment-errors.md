@@ -44,7 +44,7 @@ Collect the following information about the problem:
 - How many users are affected? Are all users affected or just some?
 - How many devices are affected? Are all devices affected or just some?
 - What is the MDM authority?
-- How is enrollment being performed? Is it "Bring your own device" (BYOD) or Apple Device Enrollment Program (DEP) with enrollment profiles?
+- How is enrollment being performed? Is it "Bring your own device" (BYOD) or Apple Automated Device Enrollment (ADE) with enrollment profiles?
 
 ## Error messages
 
@@ -63,7 +63,7 @@ Error 80180003: "Something went wrong. This user is not authorized to enroll. Yo
 There are several possible solutions to this issue:
 
 ##### Remove devices that were enrolled
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).    
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).    
 2. Go to **Users** > **All Users**.    
 3. Select the affected user account, and then click **Devices**.    
 4. Select any unused or unwanted devices, and then click **Delete**. 
@@ -73,12 +73,12 @@ There are several possible solutions to this issue:
 > [!NOTE]
 > This method increases the device enrollment limit for all users, not just the affected user.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Devices** > **Enrollment restrictions** > **Default** (under **Device limit restrictions**) > **Properties** > **Edit** (next to **Device limit**) > increase the **Device limit** (maximum 15)> **Review + Save**.    
  
 
 ##### Check device type restrictions
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) with a global administrator account.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with a global administrator account.
 2. Go to **Devices** > **Enrollment restrictions**, and then select the **Default** restriction under **Device Type Restrictions**.    
 3. Select **Platforms**, and then select **Allow** for **Windows (MDM)**.
 
@@ -144,7 +144,7 @@ Assign a valid Intune license to the user, and then enroll the device.
 To fix this issue, use one of the following methods: 
  
 ##### Assign a valid license to the user
-Go to the [Microsoft 365 Admin Center](https://portal.office.com/adminportal/home), and then assign either an Intune or an Office 365 license to the user.
+Go to the [Microsoft 365 Admin Center](https://admin.microsoft.com), and then assign either an Intune or an Office 365 license to the user.
 
 ##### Correct the MDM terms of use URL
   1. Sign in to the [Azure portal](https://portal.azure.com/), and then select **Azure Active Directory**.    
@@ -204,7 +204,7 @@ Error: "There was a problem. Your organization does not support this version of 
 #### Resolution
 To fix this issue in a stand-alone Intune environment, follow these steps: 
  
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), chooses **Devices** > **Enrollment restrictions** > choose a device type restriction.    
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), chooses **Devices** > **Enrollment restrictions** > choose a device type restriction.    
 2. Choose **Properties** > **Edit** (next to **Platform settings**) > **Allow** for **Windows (MDM)**.    
 3. Click **Review + Save**.    
 
@@ -325,9 +325,11 @@ This issue typically occurs before the device is restarted in a Hybrid Azure AD 
 
 **Cause:** The most common cause is that Hybrid Azure AD Join is being used and the Assign user feature is configured in the Autopilot profile. Using the Assign user feature performs an Azure AD join on the device during the initial sign-in screen which puts the device in a state where it can't join your on-premises domain. Therefore, the Assign user feature should only be used in standard Azure AD Join Autopilot scenarios.  The feature should be not used in Hybrid Azure AD Join scenarios.
 
+Another possible cause for this error is that the Autopilot object's associated AzureAD device has been deleted. To resolve this, delete the Autopilot object and reimport the hash to generate a new one.
+
 #### Resolution
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose >  **Devices** > **Windows** > **Windows devices**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose >  **Devices** > **Windows** > **Windows devices**.
 2. Select the device which is experiencing the issue > click the ellipsis (…) on the rightmost side.
 3. Select **Unassign user** and wait for the process to finish.
 4. Verify that the Hybrid Azure AD Autopilot profile is assigned before re-attempting OOBE.

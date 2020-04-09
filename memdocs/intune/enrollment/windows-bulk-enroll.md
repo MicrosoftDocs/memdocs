@@ -64,11 +64,13 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 7. Provide your Azure AD credentials to get a bulk token.
    ![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
-8. Click **Next** when **Bulk Token** is fetched successfully.
+8. In the **Use this account everywhere on this device** page, select **This app only**.
 
-9. Optionally, you can **Add applications** and **Add certificates**. These apps and certificates are provisioned on the device.
+9. Click **Next** when **Bulk Token** is fetched successfully.
 
-10. Optionally, you can password protect your provisioning package.  Click **Create**.
+10. Optionally, you can **Add applications** and **Add certificates**. These apps and certificates are provisioned on the device.
+
+11. Optionally, you can password protect your provisioning package.  Click **Create**.
     ![Screenshot of package protection in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## Provision devices

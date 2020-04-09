@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/27/2020
+ms.date: 04/02/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -62,6 +62,7 @@ The following error messages and descriptions provide details about iOS/iPadOS i
 |--------------------|------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0x87D12906 | -2016335610 | Apple   MDM Agent error: App installation command failed with no error reason   specified. Retry app installation. | Apple   MDM Agent returned that the installation command failed. |
 | 0x87D1313C | -2016333508 | Network   connection on the client was lost or interrupted. Later attempts should   succeed in a better network environment. | The   network connection was lost while the updated download service URL was sent   to the device. Specifically, a server with the specified hostname could not   be found. |
+| 0x87D1313D | -2016333507 | Could not retrieve license for the app with iTunes Store ID | Sync the associated VPP token, then sync the device with Intune. If the issue persists, remove group assignment and reassign the VPP app as device-licensed. If the issue still persists, revoke the app license from the device by navigating to **Apps** > **iOS** > *select VPP app* > **App licenses** > *select device*. Then, revoke license and try re-assigning the app to the user group or device group. If the issue still persists, revoke all VPP licenses for the device by going to **Devices** > **iOS** > *select device* > **Overview** > **Revoke licenses**, then retire the device and re-enroll to Intune.
 | 0x87D11388 | -2016341112 | iOS/iPadOS   device is currently busy.  | The   iOS/iPadOS device was busy, which resulted in an error. The device was locked. The   user needs to unlock the device to install the app. |
 | 0x87D13B64 | -2016330908 | The   app installation has failed.  | An   app installation failure occurred. iOS/iPadOS Console logs are needed to   troubleshoot this error. |
 | 0x87D13B66 | -2016330906 | The   app is managed, but has expired or been removed by the user.  | Either   the user explicitly uninstalled the app, or the app is expired but failed to   download, or the app detection does not match the response from the device.   Additionally, this error could occur based on an iOS/iPadOS 9.2.2 platform bug. |
@@ -95,6 +96,8 @@ The following error messages and descriptions provide details about iOS/iPadOS i
 | 0x87D13B77 | -2016330889 | The   secure connection failed.  | App   Manifest validation failure due to network connectivity(Secure Connection   Failed) |
 | 0x87D13B80 | -2016330880 | CannotConnectToITunesStoreError | App install   failed due to failure to Connect To ITunes Store |
 | 0x87D13B9F  | -2016330849 | The VPP App has an update   available | This code is returned when a   VPP app is installed but there is a newer version available. |
+| 0x87D13B9E | 2016330850 | Can't enforce app uninstall setting. Retry installing the app. | The app is already installed on the device but the "uninstall on retire" setting does not match the configured value. Advise the user to request the app-install from Company Portal to attempt applying the "uninstall on retire" setting again. |
+
 
 ## Other installation errors
 

@@ -41,16 +41,16 @@ DEM user accounts and devices that are enrolled with a DEM user account have the
 - Wipe can't be done from the Company Portal. Wiping a device enrolled by a DEM user account can be done from the Intune in Azure portal.
 - Only the local device appears in the Company Portal app or website.
 - DEM user accounts cannot use Apple Volume Purchase Program (VPP) apps with Apple VPP user licenses because of per-user Apple ID requirements for app management.
-- DEM accounts cannot be used when enrolling devices via Apple's Device Enrollment Program (DEP).
+- DEM accounts cannot be used when enrolling devices via Apple's Automated Device Enrollment (ADE).
 - Devices can install VPP apps if they have Apple VPP device licenses.
 - Devices are blocked for Conditional Access with the exception of Windows 10 1803+
 - Every device enrolled with DEM accounts needs to be properly licensed to be managed by Intune. The license could be an Intune user license or an Intune device license.
 - If you're [enrolling Android Enterprise work profile devices](android-work-profile-enroll.md) by using a DEM account, there is a limit of 10 devices that can be enrolled per account.
-
+- [Enrolling Android Enterprise fully managed devices](android-fully-managed-enroll.md) with DEM accounts isn't supported.
 
 ## Add a device enrollment manager
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Device enrollment managers**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Device enrollment managers**.
 
 2. Select **Add**.
 
@@ -71,6 +71,6 @@ Removing a device enrollment manager doesn't affect enrolled devices.
 
 **To remove a device enrollment manager**
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Device enrollment managers**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Device enrollment managers**.
 2. On the **Device enrollment managers** blade, select the DEM user, and select **Delete**.
 

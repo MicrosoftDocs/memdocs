@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 04/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -85,11 +85,13 @@ These settings use the [ApplicationManagement policy CSP](https://docs.microsoft
 
   [ApplicationManagement/AllowGameDVR CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
-- **Apps from store only**: This setting determines the user experience when users install apps from places other than the Microsoft Store. Your options:
+- **Apps from store only**: This setting determines the user experience when users install apps from places other than the Microsoft Store. It doesn't prevent installation of content from USB devices, network shares, or other non-internet sources. Use a trustworthy browser to help make sure these protections work as expected.
+
+  Your options:
 
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might allow end users to install apps from places other than the Microsoft Store, including apps defined in other policy settings.  
   - **Anywhere**: Turns off app recommendations, and allows users to install apps from any location.  
-  - **Store Only**: Forces end users to only install apps from the Microsoft Store.
+  - **Store Only**: Intent is to prevent malicious content from affecting your user devices when downloading executable content from the internet. When users try to install apps from the internet, the installation is blocked. Users see a message recommending they download apps from the Microsoft Store.
   - **Recommendations**: When installing an app from the web that's available in the Microsoft Store, users see a message recommending they download it from the store.  
   - **Prefer Store**: Warns users when they install apps from places other than the Microsoft Store.
 
@@ -144,10 +146,15 @@ These settings use the [Bluetooth policy CSP](https://docs.microsoft.com/windows
 
 These settings use the [accounts policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts); which also lists the supported Windows editions.
 
-- **Microsoft account**: **Block** prevents end users from associating a Microsoft account with the device. **Not configured** (default) allows adding and using a Microsoft account.
+- **Microsoft account**: **Block** prevents end users from associating a Microsoft account with the device. **Block** may also impact some enrollment scenarios that rely on users to complete the enrollment process.
+
+  **Not configured** (default) allows adding and using a Microsoft account.
+
 - **Non-Microsoft account**: **Block** prevents end users from adding non-Microsoft accounts using the user interface. **Not configured** (default) allows users to add email accounts that aren't associated with a Microsoft account.
 - **Settings synchronization for Microsoft account**: **Not configured** (default) allows device and app settings associated with a Microsoft account to synchronize between devices. **Block** prevents this synchronization.
-- **Microsoft Account sign-in assistant**: When set to **Not configured** (default), end users can start and stop the **Microsoft Account Sign-In Assistant** (wlidsvc) service. This operating system service allows users to sign in to their Microsoft account. **Disable** prevents end users from controlling the Microsoft Sign-in Assistant service (wlidsvc).
+- **Microsoft Account sign-in assistant**: When set to **Not configured** (default), end users can start and stop the **Microsoft Account Sign-In Assistant** (wlidsvc) service. This operating system service allows users to sign in to their Microsoft account. **Disable** configures the Microsoft Sign-in Assistant service (wlidsvc) to Disabled and prevents end users from manually starting it.
+
+  **Disable** may also impact some enrollment scenarios that rely on users to complete the enrollment. For example, you're using [AutoPilot white glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). Typically, users are shown an Azure AD sign in window. When set to **Disable**, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
 
 ## Cloud Printer
 
@@ -212,7 +219,9 @@ These settings use the [experience policy CSP](https://docs.microsoft.com/window
   This policy setting doesn't apply if the computer is Azure AD joined and auto-enrollment is enabled.
 
 - **Manual root certificate installation** (mobile only): **Block** prevents end users from manually installing root certificates, and intermediate CAP certificates. When set to **Not configured** (default), Intune doesn't change or update this setting.
-- **Camera**: **Block** prevents end users from using the camera on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
+- **Camera**: **Block** prevents end users from using the camera on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the device camera.
+
+  Intune only manages access to the device camera. It doesn't have access to pictures or videos.
 
   [Camera CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 
@@ -902,6 +911,11 @@ These settings use the [defender policy CSP](https://docs.microsoft.com/windows/
   [Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### Microsoft Defender Antivirus Exclusions
+
+You can exclude certain files from Microsoft Defender Antivirus scans by modifying exclusion lists. **Generally, you shouldn't need to apply exclusions**. Microsoft Defender Antivirus includes a number of automatic exclusions based on known OS behaviors and typical management files, such as those used in enterprise management, database management, and other enterprise scenarios and situations.
+
+> [!WARNING]
+> **Defining exclusions lowers the protection offered by Microsoft Defender Antivirus**. Always evaluate the risks that are associated with implementing exclusions. Only exclude files you know aren't malicious.
 
 - **Files and folders to exclude from scans and real-time protection**: Adds one or more files and folders like **C:\Path** or **%ProgramFiles%\Path\filename.exe** to the exclusions list. These files and folders aren't included in any real-time or scheduled scans.
 - **File extensions to exclude from scans and real-time protection**: Add one or more file extensions like **jpg** or **txt** to the exclusions list. Any files with these extensions aren't included in any real-time or scheduled scans.

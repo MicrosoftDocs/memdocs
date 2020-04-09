@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -69,15 +69,15 @@ You must download an external tool, mark the downloaded tool as an executable, a
     - `IntuneAppUtil -h`<br>
     This command will show usage information for the tool.
     
-    - `IntuneAppUtil -c <source_file> -o <output_file> [-v]`<br>
-    This command will wrap *.pkg* LOB app file to a *.intunemac* file.
+    - `IntuneAppUtil -c <source_file> -o <output_directory_path> [-v]`<br>
+    This command will wrap the *.pkg* LOB app file provided in `<source_file>` to a *.intunemac* file of the same name and place it in the folder pointed to by `<output_directory_path>`.
     
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     This command will extract the detected parameters and version for the created *.intunemac* file.
 
 ## Select the app type
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the **Other** app types, select **Line-of-business app**.
 4. Click **Select**. The **Add app** steps are displayed.

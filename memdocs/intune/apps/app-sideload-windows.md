@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -57,7 +57,7 @@ If you deploy the app as required to users or devices then you do not need the I
 
 If your Windows 10 device does not already trust the certificate authority, then after you have signed your appx package and uploaded it to the Intune service, you need to upload the code signing certificate to the Intune portal:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Click **Tenant administration** > **Connectors and tokens** > **Windows enterprise certifcates**.
 3. Select a file under **Code-signing certificate file**.
 4. Select your *.cer* file and click **Open**.
@@ -92,7 +92,7 @@ If you do not want to provide access to the Microsoft Store, you can manually de
 2. Once the app has been acquired, select the app in the **Inventory** page.  
 3. Select **Windows 10 all devices** as the **Platform**, then the appropriate **Architecture** and download. An app license file is not needed for this app.
    ![Image of Windows 10 X86 Package details for Download](./media/app-sideload-windows/Win10CP-all-devices.png)
-4. Download all the packages under “Required Frameworks”. This must be done for x86, x64 and ARM architectures – resulting in a total of 9 packages as shown below.
+4. Download all the packages under “Required Frameworks”. This must be done for x86, x64, ARM, and ARM64 architectures – resulting in a total of 9 packages as shown below.
 
    ![Image of dependency files to Download ](./media/app-sideload-windows/Win10CP-dependent-files.png)
 5. Before uploading the Company Portal app to Intune, create a folder (e.g., C:&#92;Company Portal) with the packages structured in the following way:

@@ -26,6 +26,8 @@
   - name: App protection policies and work profiles (Android)
     href: android-deployment-scenarios-app-protection-work-profiles.md
     displayName: app-we; without; without enrollment
+  - name: Use Intune without GMS
+    href: manage-without-gms.md      
   - name: MAM FAQ
     href: mam-faq.md
 - name: How-to guides
@@ -96,6 +98,8 @@
           href: apps-advanced-threat-protection-macos.md
       - name: PowerShell scripts
         href: intune-management-extension.md
+      - name: macOS shell scripts
+        href: macos-shell-scripts.md        
     - name: Assign apps
       items:
       - name: Assign apps to groups

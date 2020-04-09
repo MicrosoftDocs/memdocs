@@ -43,7 +43,7 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 ## Add Microsoft Defender ATP to Intune
 You can add Microsoft Defender ATP to Intune using the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **App type** list under the **Microsoft Defender ATP**, select **macOS**.
 

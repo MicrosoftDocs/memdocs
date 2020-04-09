@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -63,62 +63,67 @@ To use device compliance policies, be sure you:
 
 - Enroll devices to one user, or enroll without a primary user. Devices enrolled to multiple users aren't supported.
 
+> [!NOTE]
+> The Intune user interface (UI) is updating to a full screen experience, and may take several weeks. Until your tenant receives this update, you will have a slightly different workflow when you create or edit settings described in this article.
+
 ## Create the policy
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Compliance policies** > **Create Policy**.
+2. Select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
 
-3. Specify the following properties:
+3. Select a **Platform** for this policy from the following options:
+   - *Android device administrator*
+   - *Android Enterprise*
+   - *iOS/iPadOS*
+   - *macOS*
+   - *Windows Phone 8.1*
+   - *Windows 8.1 and later*
+   - *Windows 10 and later*
 
-   - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Mark iOS/iPadOS jailbroken devices as not compliant**.
+    For *Android Enterprise*, you also select a **Policy type**:
+     - *Android device owner compliance policy*
+     - *Android work profile compliance policy*
 
-   - **Description**: Enter a description for the policy. This setting is optional, but recommended.
+    Then, select **Create** to open the **Create policy** configuration window.
 
-   - **Platform**: Choose the platform of your devices. Your options:
-     - **Android device administrator**
-     - **Android Enterprise**
-     - **iOS/iPadOS**
-     - **macOS**
-     - **Windows Phone 8.1**
-     - **Windows 8.1 and later**
-     - **Windows 10 and later**
+4. On the **Basics** tab, specify a **Name** that helps you identify them later. For example, a good policy name is **Mark iOS/iPadOS jailbroken devices as not compliant**.
 
-     For *Android Enterprise*, you must then select a **Profile type**:
-     - **Device owner**
-     - **Work Profile**
+   You can also choose to specify a **Description**.
+  
+5. On the **Compliance settings** tab, expand the available categories, and configure settings for your policy.  The following articles describe the settings for each platform:
+   - [Android device administrator](compliance-policy-create-android.md)
+   - [Android Enterprise](compliance-policy-create-android-for-work.md)
+   - [iOS/iPadOS](compliance-policy-create-ios.md)
+   - [macOS](compliance-policy-create-mac-os.md)
+   - [Windows Phone 8.1, Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
+   - [Windows 10 and later](compliance-policy-create-windows.md)  
 
-   - **Settings**: The following articles list and describe the settings for each platform:
-     - [Android device administrator](compliance-policy-create-android.md)
-     - [Android Enterprise](compliance-policy-create-android-for-work.md)
-     - [iOS/iPadOS](compliance-policy-create-ios.md)
-     - [macOS](compliance-policy-create-mac-os.md)
-     - [Windows Phone 8.1, Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
-     - [Windows 10 and later](compliance-policy-create-windows.md)  
+6. On the **Locations** tab, you can force compliance based on the location of the device. Choose from existing locations. If you don't have an available location yet, see [Use Locations (network fence)](use-network-locations.md) for guidance.
+   > [!TIP]
+   > **Locations** are available only for the *Android device administrator* platform.
 
-   - **Locations** *(Android device administrator)*: In your policy, you can force compliance by the location of the device. Choose from existing locations. Don't have a location yet? [Use Locations (network fence)](use-network-locations.md) in Intune provides some guidance.  
+7. On the **Actions for noncompliance** tab, specify a sequence of actions to apply automatically to devices that don't meet this compliance policy.
 
-   - **Actions for noncompliance**: For devices that don't meet your compliance policies, you can add a sequence of actions to apply automatically. You can change the schedule when the device is marked non-compliant, such as after one day. You can also configure a second action that sends an email to the user when the device isn't compliant.
+   You can add multiple actions and configure schedules and additional details for some actions. For example, you might change the schedule of the default action *Mark device noncompliant* to occur after one day. You can then add an action to send an email to the user when the device isn't compliant to warn them of that status. You can also add  actions that lock or retire devices that remain noncompliant.
 
-     [Add actions for noncompliant devices](actions-for-noncompliance.md) provides more information, including creating a notification email to your users.
+   For information about the actions you can configure, see [Add actions for noncompliant devices](actions-for-noncompliance.md), including how to create notification emails to send to your users.
 
-     For example, you're using the Locations feature, and add a location in a compliance policy. The default action for noncompliance applies when you select at least one location. If the device isn't connected to the selected locations, it's immediately considered not compliant. You can give your users a grace period, such as one day.
+   Another example includes the use of Locations where you add at least one location to a compliance policy. In this case, the default action for noncompliance applies when you select at least one location. If the device isn't connected to any of the selected locations, it's considered not compliant. You can configure the schedule to give your users a grace period, such as one day.
 
-   - **Scope (Tags)**: Scope tags are a great way to filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. After you add the settings, you can also add a scope tag to your compliance policies. [Use scope tags to filter policies](../fundamentals/scope-tags.md) is a good resource.
+8. On the **Scope tags** tab, select tags to help filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. After you add the settings, you can also add a scope tag to your compliance policies. 
 
-4. When finished, select **OK** > **Create** to save your changes. The policy is created, and shown in the list. Next, assign the policy to your groups.
+   For information on using scope tags, see [Use scope tags to filter policies](../fundamentals/scope-tags.md).
 
-## Assign the policy
+9. On the **Assignments** tab, assign the policy to your groups.  
 
-Once a policy is created, the next step is to assign the policy to your groups:
+   Select **+ Select groups to include** and then assign the policy to one or more groups. The policy will apply to these groups when you save the policy after the next step. 
 
-1. Choose a policy you created. Existing policies are in **Devices** > **Compliance policies** > **Policies**.
+10. On the **Review + create** tab, review the settings and select **Create** when ready to save the compliance policy.  
 
-2. Select the *policy* > **Assignments**. You can include or exclude Azure Active Directory (AD) security groups.
+    The users or devices targeted by your policy are evaluated for compliance when they check in with Intune.
 
-3. Choose **Selected groups** to see your Azure AD security groups. Select the groups you want this policy to apply > Choose **Save** to deploy the policy.
-
-The users or devices targeted by your policy are evaluated for compliance when they check-in with Intune.
+<!-- Evaluate option  - pending details as to its fate with this new Full Screen UI udpate  
 
 ### Evaluate how many users are targeted
 
@@ -129,18 +134,6 @@ When you assign the policy, you can also **Evaluate** how many users are affecte
 2. Select a *policy* > **Assignments** > **Evaluate**. A message shows you how many users are targeted by this policy.
 
 If the **Evaluate** button is grayed out, make sure the policy is assigned to one or more groups.
-
-<!-- ## Actions for noncompliance
-
-For devices that don't meet your compliance policies, you can add a sequence of actions to apply automatically. You can change the schedule when the device is marked non-compliant, such as after one day. You can also configure a second action that sends an email to the user when the device isn't compliant.
-
-[Add actions for noncompliant devices](actions-for-noncompliance.md) provides more information, including creating a notification email to your users.
-
-For example, you're using the Locations feature, and add a location in a compliance policy. The default action for noncompliance applies when you select at least one location. If the device isn't connected to the selected locations, it's immediately considered not compliant. You can give your users a grace period, such as one day.
-
-## Scope tags
-
-Scope tags are a great way to assign and filter policies to specific groups, such as Sales, HR, All US-NC employees, and so on. After you add the settings, you can also add a scope tag to your compliance policies. [Use scope tags to filter policies](../fundamentals/scope-tags.md) is a good resource.
 -->
 
 ## Refresh cycle times
@@ -151,7 +144,7 @@ At any time, users can open the Company Portal app, and sync the device to immed
 
 ### Assign an InGracePeriod status
 
-The InGracePeriod status for a compliance policy is a value. This value is determined by the combination of a device’s grace period, and a device’s actual status for that compliance policy.
+The InGracePeriod status for a compliance policy is a value. This value is determined by the combination of a device's grace period, and a device's actual status for that compliance policy.
 
 Specifically, if a device has a NonCompliant status for an assigned compliance policy, and:
 
@@ -164,8 +157,8 @@ The following table summarizes these points:
 |Actual compliance status|Value of assigned grace period|Effective compliance status|
 |---------|---------|---------|
 |NonCompliant |No grace period assigned |NonCompliant |
-|NonCompliant |Yesterday’s date|NonCompliant|
-|NonCompliant |Tomorrow’s date|InGracePeriod|
+|NonCompliant |Yesterday's date|NonCompliant|
+|NonCompliant |Tomorrow's date|InGracePeriod|
 
 For more information about monitoring device compliance policies, see [Monitor Intune Device compliance policies](compliance-policy-monitor.md).
 

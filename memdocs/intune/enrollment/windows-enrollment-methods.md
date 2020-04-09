@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -41,7 +41,7 @@ There are two ways to get devices enrolled in Intune:
 
 Users can self-enroll their Windows device by using any of these methods:
 
-- [Bring your own device (BYOD)](https://docs.microsoft.com/user-help/enroll-windows-10-device): Users enroll their personally owned devices by choosing to connect a **Work and School** account from **Settings** of the device. This process:
+- [Bring your own device (BYOD)](https://docs.microsoft.com/mem/intune/user-help/enroll-windows-10-device): Users enroll their personally owned devices by choosing to connect a **Work and School** account from **Settings** of the device. This process:
   - Registers the device with Azure Active Directory to gain access to corporate resource like email.
   - Enrolls the device in Intune as a personal owned device (BYOD).
 If an administrator has configured Auto enrollment (available with Azure AD premium subscriptions), the user only has to enter their credentials once. Otherwise, they'll have to enroll separately through MDM only enrollment and reenter their credentials.  

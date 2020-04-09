@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,8 +27,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # Add VPN settings on macOS devices in Microsoft Intune
-
-
 
 This article shows you the Intune settings you can use to configure VPN connections on devices running macOS.
 

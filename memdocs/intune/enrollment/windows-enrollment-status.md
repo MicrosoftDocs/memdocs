@@ -70,14 +70,14 @@ You can also set the priority order for each profile to account for conflicting 
 
 To turn on the Enrollment Status Page, follow the steps below.
  
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
 2. In the **Enrollment Status Page** blade, choose **Default** > **Settings**.
 3. For **Show app and profile installation progress**, choose **Yes**.
 4. Choose the other settings that you want to turn on and then choose **Save**.
 
 ## Create Enrollment Status Page profile and assign to a group
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page** > **Create profile**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page** > **Create profile**.
 2. Provide a **Name** and **Description**.
 3. Choose **Create**.
 4. Choose the new profile in the **Enrollment Status Page** list.
@@ -88,7 +88,7 @@ To turn on the Enrollment Status Page, follow the steps below.
 
 A user can be in many groups and have many Enrollment Status Page profiles. To handle such conflicts, you can set the priorities for each profile. While enrolling, if someone has more than one Enrollment Status Page profile, only the highest priority profile is applied to the enrolling device.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
 2. Hover over the profile in the list.
 3. Using the three vertical dots, drag the profile to the desired position on the list.
 
@@ -96,7 +96,7 @@ A user can be in many groups and have many Enrollment Status Page profiles. To h
 
 You can specify which apps need to be installed before the user can access the desktop.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
 2. Choose a profile > **Settings**.
 3. Choose **Yes** for **Show app and profile installation progress**.
 4. Choose **Yes** for **Block device use until all apps and profiles are installed**.

@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,8 +28,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # macOS device settings to configure and use kernel extensions in Intune
-
-
 
 This article lists and describes the different kernel extension settings you can control on macOS devices. As part of your mobile device management (MDM) solution, use these settings to add and manage kernel extensions on your devices.
 
@@ -48,7 +46,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ### Settings apply to: User approved, Automated device enrollment
 
-- **Allow User Overrides**: **Allow** lets users approve kernel extensions not included in the configuration profile. **Not configured** (default) prevents users from allowing extensions not included in the configuration profile. Meaning, only extensions included in the configuration profile are allowed.
+- **Allow User Overrides**: **Allow** lets users approve kernel extensions not included in the configuration profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from allowing extensions not included in the configuration profile. Meaning, only extensions included in the configuration profile are allowed.
 
   See [user-approved kernel extension loading](https://developer.apple.com/library/archive/technotes/tn2459/_index.html) (opens Apple's web site) for more information on this feature.
 

@@ -170,7 +170,7 @@ If you'll use the connector with only the DigiCert CA, you can use the instructi
 
 Download the latest Intune Certificate Connector version from the Intune administration portal and follow these instructions.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **+ Add**.
 
@@ -241,7 +241,7 @@ The PKCS certificates you'll deploy for Intune managed devices must be chained w
 
 2. Create a trusted certificate profile in the Intune portal:
 
-   a. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+   a. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
    b. Select **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -280,7 +280,7 @@ The certificate profile OID is associated with a certificate profile template in
 
 ## Create a PKCS certificate profile
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -323,7 +323,7 @@ Intune Certificate Connector service logs are available in **%ProgramFiles%\Micr
 
 | Issue/error message | Resolution steps |
 | --- | --- |
-| Unable to sign in with the Intune tenant admin account on NDES Connector UI. | This can happen when the on-premises certificate connector isn't enabled in the Microsoft Endpoint Manager Admin Center. To resolve this issue: <br><br> 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). <br> 2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. <br> 3. Locate the certificate connector and ensure it's enabled. <br><br> After you complete the previous steps, try to sign in with the same Intune tenant admin account in the NDES Connector UI. |
+| Unable to sign in with the Intune tenant admin account on NDES Connector UI. | This can happen when the on-premises certificate connector isn't enabled in the Microsoft Endpoint Manager admin center. To resolve this issue: <br><br> 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). <br> 2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. <br> 3. Locate the certificate connector and ensure it's enabled. <br><br> After you complete the previous steps, try to sign in with the same Intune tenant admin account in the NDES Connector UI. |
 | NDES Connector certificate could not be found. <br><br> System.ArgumentNullException: Value can't be null. | Intune Certificate Connector shows this error if the Intune tenant administrator account has never signed in to the NDES Connector UI. <br><br> If this error persists, restart Intune Service Connector. <br><br> 1. Open **services.msc**. <br> 2. Select **Intune Connector Service**. <br> 3. Right-click and select **Restart**.|
 | NDES Connector - IssuePfx -Generic Exception: <br> System.NullReferenceException: Object reference not set to an instance of an object. | This error is transient. Restart Intune Service Connector. <br><br> 1. Open **services.msc**. <br> 2. Select **Intune Connector Service**. <br> 3. Right-click and select **Restart**. |
 | DigiCert Provider - Failed to get DigiCert policy. <br><br>“The operation has timed out.” | Intune Certificate Connector received an operation time-out error while communicating with the DigiCert CA. If this error continues to occur, increase the connection time-out value and try again. <br><br> To increase the connection time-out: <br> 1. Go to the NDES Connector computer. <br>2. Open the **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config** file in Notepad. <br> 3. Increase the time-out value for the following parameter: <br><br> `CloudCAConnTimeoutInMilliseconds` <br><br> 4. Restart the Intune Certificate Connector service. <br><br> If the issue persists, contact DigiCert customer support. |

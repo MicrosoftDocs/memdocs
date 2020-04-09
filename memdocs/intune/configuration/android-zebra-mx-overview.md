@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,8 +30,6 @@ ms.collection: M365-identity-device-management
 
 # Use and manage Zebra devices with Zebra Mobility Extensions in Microsoft Intune
 
-
-
 Intune includes a rich set of features, including managing apps and configuring device settings. These built-in features and settings manage Android devices manufactured by Zebra Technologies, also known as "Zebra devices".
 
 On Android devices, use Zebra's **Mobility Extensions (MX)** profiles to customize or add more Zebra-specific settings.
@@ -40,7 +38,9 @@ This article shows you how to use Zebra Mobility Extensions (MX) on Zebra device
 
 This feature applies to:
 
-- Android
+- Android device administrator
+
+For Android Enterprise devices, use [OEMConfig](android-oem-configuration-overview.md).
 
 Your company may use Zebra devices for retail, on the factory floor, and more. For example, you're a retailer and your environment includes thousands of Zebra mobile devices used by sales associates. Intune can help manage these devices as part of your mobile device management (MDM) solution.
 
@@ -143,14 +143,14 @@ In Intune, create a device configuration profile:
 
     - **Name**: Enter a descriptive name for the new profile.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    - **Platform**: Select **Android**.
+    - **Platform**: Select **Android device administrator**.
     - **Profile type**: Select **MX profile (Zebra only)**.
 
 4. In **MX profile in .xml format**, add the XML profile file [you exported from StageNow](#step-4-create-a-device-management-profile-in-stagenow) (in this article).
 5. Select **OK** > **Create** to save your changes. The policy is created and shown in the list.
 
     > [!TIP]
-    > For security reasons, you won’t see the profile XML text after you save it. The text is encrypted, and you only see asterisks (`****`). For your reference, it's recommended to save copies of the MX profiles before you add them to Intune.
+    > For security reasons, you won't see the profile XML text after you save it. The text is encrypted, and you only see asterisks (`****`). For your reference, it's recommended to save copies of the MX profiles before you add them to Intune.
 
 The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 

@@ -78,7 +78,7 @@ Microsoft Store for Business apps are modern apps, purchased from the Microsoft 
 ### Categorize Microsoft Store for Business apps 
 To categorize Microsoft Store for Business apps: 
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**. 
 3. Select a Microsoft Store for Business app. Then select **Properties** > **App Information** > **Category**. 
 4. Select a category.

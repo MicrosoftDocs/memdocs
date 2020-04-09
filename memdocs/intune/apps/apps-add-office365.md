@@ -53,7 +53,7 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 
 ## Select the Office 365 Suite app type
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. Select **Windows 10** in the **Office 365 Suite** section of the **Select app type** pane.
 4. Click **Select**. The **Add Office 365 Suite** steps are displayed.
@@ -238,4 +238,4 @@ The following tables list common error codes you might encounter and their meani
 
 ## Next steps
 
-- To assign the app suite to additional groups, see [Assign apps to groups](/intune-azure/manage-apps/deploy-apps).
+- To assign the app suite to additional groups, see [Assign apps to groups](/mem/intune/apps/apps-deploy).

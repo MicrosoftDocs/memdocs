@@ -803,7 +803,7 @@ Attack surface reduction rules help prevent behaviors malware often uses to infe
 
 - **Flag credential stealing from the Windows local security authority subsystem**  
   **Default**: Not configured  
-  Rule: [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem-lsassexe)
+  Rule: [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   Help prevent actions and apps that are typically used by exploit-seeking malware to infect machines.  
 
@@ -947,6 +947,9 @@ Block the following to help prevent email threats:
 > **On X86 client machines**:  
 > *C:\Program Files\Microsoft Intune Management Extension\Content*  
 > *C:\windows\IMECache*  
+>
+> For more information, see [Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
+
 
 ### Controlled folder access  
 

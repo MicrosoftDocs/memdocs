@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -39,7 +39,7 @@ To learn more about VPN profiles in Intune, see [VPN profiles](vpn-settings-conf
 
 ## Before you begin
 
-[Create a device configuration profile](vpn-settings-configure.md#create-a-device-profile), and choose **Android Enterprise**.
+[Create a device configuration profile](vpn-settings-configure.md), and choose **Android Enterprise**.
 
 ## Device owner only
 

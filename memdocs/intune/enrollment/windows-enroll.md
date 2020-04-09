@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-This article helps IT administrators simplify Windows enrollment for their users. Once you've [set up Intune](../fundamentals/setup-steps.md), users enroll Windows devices by [signing in](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-windows) with their work or school account.  
+This article helps IT administrators simplify Windows enrollment for their users. Once you've [set up Intune](../fundamentals/setup-steps.md), users enroll Windows devices by [signing in](https://docs.microsoft.com/mem/intune/user-help/windows-enrollment-company-portal) with their work or school account.  
 
 As an Intune admin, you can simplify enrollment in the following ways:
 
@@ -106,7 +106,7 @@ EnterpriseEnrollment-s.manage.microsoft.com is the preferred FQDN for enrollment
 Using a method other than the CNAME configuration is not supported. For example, using a proxy server to redirect enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc to either enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc or manage.microsoft.com/EnrollmentServer/Discovery.svc is not supported.
 
 **Step 2: Verify CNAME** (optional)<br>
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **CNAME Validation**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **CNAME Validation**.
 2. In the **Domain** box, enter the company website and then choose **Test**.
 
 ## Tell users how to enroll Windows devices
@@ -115,7 +115,7 @@ Tell your users how to enroll their Windows devices and what to expect after the
 > [!NOTE]
 > End users must access the Company Portal website through Microsoft Edge to view Windows apps that you've assigned for specific versions of Windows. Other browsers, including Google Chrome, Mozilla Firefox, and Internet Explorer do not support this type of filtering.
 
-For end-user enrollment instructions, see [Enroll your Windows device in Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-windows). You can also tell users to review [What can my IT admin see on my device](https://docs.microsoft.com/user-help/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).
+For end-user enrollment instructions, see [Enroll your Windows device in Intune](../user-help/windows-enrollment-company-portal.md). You can also tell users to review [What can my IT admin see on my device](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
 >[!IMPORTANT]
 > If you do not have Auto-MDM enrollment enabled, but you have Windows 10 devices that have been joined to Azure AD, two records will be visible in the Intune console after enrollment. You can stop this by making sure that users with Azure AD joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account. 
