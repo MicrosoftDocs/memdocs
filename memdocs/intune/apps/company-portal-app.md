@@ -35,7 +35,7 @@ The Company Portal apps, Company Portal website, and Intune app on Android are w
 
 ## Customizing the user experience
 
-By customizing the end-user experience, you will help provide a familiar and helpful experience for your end users. To do this, navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant Administration** > **Customization**, and then configure the required settings. These settings will apply to the Company Portal apps, Company Portal website, and Intune app on Android. After configuring the settings in the **Customization** pane, you can target the settings to user groups. 
+By customizing the end-user experience, you will help provide a familiar and helpful experience for your end users. To do this, navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and select **Tenant Administration** > **Customization**, where you can either edit the default policy or create up to 10 group targeted policies. These settings will apply to the Company Portal apps, Company Portal website, and Intune app on Android.
 
 ## Branding
 
