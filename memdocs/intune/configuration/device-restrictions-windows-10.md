@@ -154,7 +154,7 @@ These settings use the [accounts policy CSP](https://docs.microsoft.com/windows/
 - **Settings synchronization for Microsoft account**: **Not configured** (default) allows device and app settings associated with a Microsoft account to synchronize between devices. **Block** prevents this synchronization.
 - **Microsoft Account sign-in assistant**: When set to **Not configured** (default), end users can start and stop the **Microsoft Account Sign-In Assistant** (wlidsvc) service. This operating system service allows users to sign in to their Microsoft account. **Disable** configures the Microsoft Sign-in Assistant service (wlidsvc) to Disabled and prevents end users from manually starting it.
 
-  **Disable** may also impact some enrollment scenarios that rely on users to complete the enrollment process. For example, you're using the [AutoPilot White glove scenario](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). Typically, users are shown an Azure AD sign window. When set to **Disable**, the Azure AD sign in option may not be shown. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
+  **Disable** may also impact some enrollment scenarios that rely on users to complete the enrollment. For example, you're using [AutoPilot white glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). Typically, users are shown an Azure AD sign in window. When set to **Disable**, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
 
 ## Cloud Printer
 
