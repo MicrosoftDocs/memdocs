@@ -7,12 +7,13 @@ description: Security baseline settings supported by Intune for managing Microso
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/30/2019
+ms.date: 04/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology:
 ms.assetid:
+zone_pivot_groups: edge-baseline-versions
 
 # optional metadata
 
@@ -20,7 +21,7 @@ ms.assetid:
 
 #audience:
 
-ms.reviewer: shpate
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,14 +29,99 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
+<!-- Pivots in use: 
+
+::: zone pivot="edge-october-2019"
+::: zone-end
+
+::: zone pivot="edge-april-2020"
+::: zone-end
+
+::: zone pivot="edge-october-2019,edge-april-2020"
+::: zone-end
+-->
+
 # Microsoft Edge baseline settings for Intune
 
 View the Microsoft Edge web browser baseline settings that are supported by Microsoft Intune. The Microsoft Edge baseline defaults represent the recommended configuration for Microsoft Edge browsers, and might not match baseline defaults for other security baselines.
 
+::: zone pivot="edge-october-2019"
+
 > [!NOTE]
-> The Microsoft Edge baseline is in Public Preview. 
+> The Microsoft Edge baseline is in Public Preview.
+
+::: zone-end
+::: zone pivot="edge-october-2019,edge-april-2020"
 
 ## Microsoft Edge
+
+::: zone-end
+::: zone pivot="edge-april-2020"
+
+- **Supported authentication schemes**
+  Specifies which HTTP authentication schemes are supported. You can configure the policy by using these values: *basic*, *digest*, *ntlm*, and *negotiate*. Separate multiple values with commas. If you don't configure this policy, all four schemes are used.
+
+  - **Enabled** (*default*) - Schemes you select are used.
+  - **Disabled**
+  - **Not configured** - All four schemes are used.
+  
+  When set to *Enabled* you can configure the following setting where you select which authentication to use:
+
+  - **Supported authentication schemes**
+    Select from the following options:
+    - **Basic**
+    - **Digest**
+    - **NTLM** *(Selected by default)*
+    - **Negotiate** *(Selected by default)*
+ 
+- **Default Adobe Flash setting**
+  - **Default Adobe Flash setting**
+
+- **Default Adobe Flash setting**  
+  CSP: [Browser/AllowFlash](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflash), and [Browser/AllowFlashClickToRun](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
+  
+  <!-- UI text which is pending decryption:
+  
+  Determines whether websites that aren't covered by 'PluginsAllowedForUrls' or 'PluginsBlockedForUrls' can automatically run the Adobe Flash plug-in.
+
+   You can select 'BlockPlugins' (2) to block Adobe Flash on all sites, or you can select 'ClickToPlay' (3) to let Adobe Flash run but require the user to click the placeholder to start it. In any case, the 'PluginsAllowedForUrls' and 'PluginsBlockedForUrls' policies take precedence over 'DefaultPluginsSetting'. Automatic playback is only allowed for domains explicitly listed in the 'PluginsAllowedForUrls' policy. If you want to enable automatic playback for all sites, consider adding http://* and https://* to this list. If you don't configure this policy, the user can change this setting manually. * 2 = Block the Adobe Flash plug-in * 3 = Click to play The former '1' option set allow-all, but this functionality is now only handled by the 'PluginsAllowedForUrls' policy. Existing policies using '1' will operate in Click-to-play mode.
+  -->
+  
+  - **Enabled** (*default*) 
+  - **Disabled**  
+  - **Not configured**  
+
+  When set to *Enabled* you can configure the following setting where you set the Adobe Flash setting to use.  
+ 
+  - **Default Adobe Flash setting**  
+
+    - **Block the Adobe Flash plugin** (*default*) - Block Adobe Flash on all sites
+    - **Click to play** - Adobe Flash runs, but the user must select the option to start it.
+
+
+
+
+
+
+- **Control which extensions cannot be installed**
+  - **Extension IDs the user should be prevented from installing (or * for all)**
+ 
+
+
+- **Allow user-level native messaging hosts (installed without admin permissions)**
+- **Enable saving passwords to the password manager**
+- **Prevent bypassing Microsoft Defender SmartScreen prompts for sites**
+- **Prevent bypassing of Microsoft Defender SmartScreen warnings about - downloads**
+- **Enable site isolation for every site**
+- **Configure Microsoft Defender SmartScreen**
+- **Configure Microsoft Defender SmartScreen to block potentially unwanted apps**
+- **Allow users to proceed from the SSL warning page**
+- **Minimum SSL version enabled**
+  - **Minimum SSL version enabled**
+
+
+
+::: zone pivot="edge-october-2019"
 
 - **Prevent bypassing Microsoft Defender SmartScreen prompts for sites**  
   **Default**: Enabled  
@@ -149,6 +235,8 @@ View the Microsoft Edge web browser baseline settings that are supported by Micr
 
   Enables user-level installation of native messaging hosts. 
   - If you disable this policy, Microsoft Edge will only use native messaging hosts installed on the system level. By default, if you don't configure this policy, Microsoft Edge will allow usage of user-level native messaging hosts.
+
+::: zone-end
 
 ## Next steps
 
