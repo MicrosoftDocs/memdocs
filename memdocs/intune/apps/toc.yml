@@ -147,10 +147,10 @@
           href: apps-configure-chrome-android.md
       - name: Volume-purchased apps and books
         items:
-        - name: Volume purchased apps and books
+        - name: Volume-purchased overview
           href: vpp-apps.md
           displayName: vpp; volume purchased
-        - name: Volume purchased iOS apps
+        - name: Volume-purchased iOS apps
           href: vpp-apps-ios.md
         - name: Microsoft Store for Business apps
           href: windows-store-for-business.md
