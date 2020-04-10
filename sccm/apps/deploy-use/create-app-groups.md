@@ -2,7 +2,7 @@
 title: Create application groups
 titleSuffix: Configuration Manager
 description: Create a group of applications that you can send to a user or device collection as a single deployment in Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 04/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -56,7 +56,7 @@ To troubleshoot an app group deployment, use the following log files on the clie
 
 ### Known issues
 
-- Apps in the group can only contain **Windows Installer** or **Script** deployment types.
+- *Version 1906*: Apps in the group can only contain **Windows Installer** or **Script** deployment types.
   - *Version 1906*: Set the deployment type installation behavior to **Install for system**.
 - The following deployment options may not work: alerts, approval, phased deployment, repair.
 - You can't export or import app groups.
