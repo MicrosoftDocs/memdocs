@@ -132,3 +132,5 @@ Devices properties display **Ownership** for each device records in Intune. As a
 3. Specify **Device ownership** as **Personal** or **Corporate**.
 
    ![Device properties showing Device category and Device ownership options](./media/corporate-identifiers-add/device-properties.png)
+
+You can configure a push notification to send to both your Android and iOS Company Portal users when their device ownership type has been changed from **Personal** to **Corporate** as a privacy courtesy. This setting can be found in the Microsoft Endpoint Manager by selecting **Tenant administration** > **Customization**. For more information, see [Company Portal - Configuration](../apps/company-portal-app.md#configuration).
