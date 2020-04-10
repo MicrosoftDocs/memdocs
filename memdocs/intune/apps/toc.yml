@@ -206,6 +206,8 @@
         href: app-install-error-codes.md
       - name: Troubleshoot mobile application management
         href: troubleshoot-mam.md
+      - name: Troubleshoot macOS shell script policies
+        href: macos-script-logs.md        
 - name: Reference
   items:
     - name: Protect apps with Intune App SDK
