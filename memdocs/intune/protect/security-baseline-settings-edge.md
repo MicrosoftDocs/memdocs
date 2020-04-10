@@ -156,6 +156,15 @@ View the Microsoft Edge web browser baseline settings that are supported by Micr
 
   This policy is available only on Windows instances that are joined to a Microsoft Active Director domain, or on Windows 10 Pro or Enterprise instances that are enrolled for device management.
 
+- **Configure Microsoft Defender SmartScreen to block potentially unwanted apps**  
+    Configure Microsoft Defender SmartScreen behavior for blocking potentially unwanted apps. Microsoft Defender SmartScreen can provide a warning messages to help protect users from adware, coin miners, bundleware, and other low-reputation apps that are hosted by websites. Potentially unwanted app blocking in Microsoft Defender SmartScreen is turned off by default.
+
+  - **Enabled** (*default*) - Potentially unwanted apps are blocked.
+  - **Disabled** - Potentially unwanted apps are not blocked.
+  - **Not configured** - Users can choose whether to use potentially unwanted app blocking in Microsoft Defender SmartScreen.
+
+  This policy is available only on Windows instances that are joined to a Microsoft Active Director domain, or on Windows 10 Pro or Enterprise instances that are enrolled for device management.
+
 - **Allow users to proceed from the SSL warning page**  
    CSP: [Browser/PreventCertErrorOverrides](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
 
