@@ -21,7 +21,7 @@ ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
 #ROBOTS: 
 #audience:
 
-ms.reviewer: jinyoon
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 When your organization uses [Jamf Pro](https://www.jamf.com) to manage macOS devices, you can use Microsoft Intune compliance policies with Azure Active Directory (Azure AD) Conditional Access to ensure devices in your organization are compliant before they can access company resources. This article will help you configure Jamf integration with Intune.
 
-When Jamf Pro integrates with Intune, you can sync the inventory data from macOS devices with Intune, through Azure AD. Intune's compliance engine then analyzes the inventory data to generate a report. Intune's analysis is combined with intelligence about the device user’s Azure AD identity to drive enforcement through Conditional Access. Devices that are compliant with the Conditional Access policies can gain access to protected company resources.
+When Jamf Pro integrates with Intune, you can sync the inventory data from macOS devices with Intune, through Azure AD. Intune's compliance engine then analyzes the inventory data to generate a report. Intune's analysis is combined with intelligence about the device user's Azure AD identity to drive enforcement through Conditional Access. Devices that are compliant with the Conditional Access policies can gain access to protected company resources.
 
 After you configure integration, you'll then [configure Jamf and Intune to enforce compliance with Conditional Access](conditional-access-assign-jamf.md) on devices managed by Jamf.
 
@@ -92,7 +92,7 @@ To connect Intune with Jamf Pro:
 5. Select **Certificates & secrets** under **Manage**. Select the **New client secret** button. Enter a value in **Description**, select any option for **Expires** and choose **Add**.
 
    > [!IMPORTANT]
-   > Before you leave this page, copy the value for the client secret and record it for later use. You will need this value in later procedures. This value isn’t available again, without recreating the app registration.
+   > Before you leave this page, copy the value for the client secret and record it for later use. You will need this value in later procedures. This value isn't available again, without recreating the app registration.
 
 6. Select **API permissions** under **Manage**. 
 
@@ -139,7 +139,7 @@ To connect Intune with Jamf Pro:
 2. In Intune, go to the **Partner device management** page. Under **Connector Settings** configure groups for assignment:
 
    - Select **Include** and specify which User groups you want to target for macOS enrollment with Jamf.
-   - Use **Exclude** to select groups of Users that won’t enroll with Jamf and instead will enroll their Macs directly with Intune.
+   - Use **Exclude** to select groups of Users that won't enroll with Jamf and instead will enroll their Macs directly with Intune.
 
    *Exclude* overrides *Include*, which means any device that is in both groups is excluded from Jamf and directed to enroll with Intune.
 
@@ -148,7 +148,7 @@ To connect Intune with Jamf Pro:
 
 3. Select **Evaluate** to determine how many devices will be enrolled with Jamf, based on your group configurations.
 
-4. Select **Save** when you’re ready to apply the configuration.
+4. Select **Save** when you're ready to apply the configuration.
 
 5. To proceed, you will next need to use [Jamf to deploy the Company Portal for Mac](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) so that users can register their devices to Intune.
 
