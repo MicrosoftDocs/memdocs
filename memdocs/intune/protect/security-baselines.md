@@ -77,9 +77,7 @@ When your ready to move to a more recent version of a baseline you use, see [Cha
 
 Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows 10 settings become available with new versions of Windows 10, the MDM Security Baseline might receive a new version instance that includes the newest settings.
 
-In the Intune console, the tile for each baseline displays the baseline template name and basic information about that baseline. The information includes how many profiles you have that use that baseline type, how many separate instances (versions) of the baseline type are available, and a *Last Published* date that identifies when that baseline template was added to your tenant. The following example shows the tile for a well-used MDM Security Baseline:
-
-![Baseline tile](./media/security-baselines/baseline-tile.png)
+In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), under **Endpoint security** > **Security baselines** you'll see a list of the available baselines. The list includes the baseline template name,, how many profiles you have that use that baseline type, how many separate instances (versions) of the baseline type are available, and a *Last Published* date that identifies when the latest version of the baseline template became available.
 
 To view more information about the baseline versions you use, select a baseline tile to open its *Overview* pane, and then select **Versions**. Intune displays details about the versions of that baseline that are in use by your profiles. On the Versions pane, you can select a single version to view deeper details about the profiles that use that version. You can also select two different versions and then choose **Compare baselines** to download a CSV file that details those differences.
 
