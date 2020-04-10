@@ -31,9 +31,9 @@ ms.collection: M365-identity-device-management
 
 # Integrate Jamf Pro with Intune for compliance
 
-When your organization uses [Jamf Pro](https://www.jamf.com) to manage macOS devices, you can use Microsoft Intune compliance policies with Azure Active Directory (Azure AD) Conditional Access to ensure devices in your organization are compliant before they can access company resources. To integrate Jamf Pro with intune, you have to options:
+When your organization uses [Jamf Pro](https://www.jamf.com) to manage macOS devices, you can use Microsoft Intune compliance policies with Azure Active Directory (Azure AD) Conditional Access to ensure devices in your organization are compliant before they can access company resources. To integrate Jamf Pro with Intune, you have to options:
 
-- **Manually configure integration** - Ues the infomratoin in this article to manually configure Jamf integration with Intune.
+- **Manually configure integration** - Use the information in this article to manually configure Jamf integration with Intune.
 - **Use the Jamf Cloud Connector** (*recommended*) - Use the information in [Use the Jamf Cloud Connector with Microsoft Intune](../protect/conditional-access-jamf-cloud-connector.md) to install the Jamf Cloud Connector to integrate Jamf Pro with Microsoft Intune. The Cloud Connector automates many of the steps that are required when you manually configure integration.
 
 

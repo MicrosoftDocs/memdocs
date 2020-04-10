@@ -46,7 +46,7 @@ Use of the Cloud Connector is optional:
 
 If you plan to replace your previous integration with the Jamf Cloud Connector:
 
-- Use the [procedure to remove your current configuration](#remove-the-jamf-pro-integration-for-a-previously-configured-tenant) which includes deleting the Enterprise apps for Jamf Pro and disabling the manual integration. Then you can use the [procedure to configure the Cloud Connector](#configure-the-cloud-connector-for-a-new-tenant).
+- Use the [procedure to remove your current configuration](#remove-the-jamf-pro-integration-for-a-previously-configured-tenant), which includes deleting the Enterprise apps for Jamf Pro and disabling the manual integration. Then you can use the [procedure to configure the Cloud Connector](#configure-the-cloud-connector-for-a-new-tenant).
 - You won't need to re-register devices. Devices tht are already registered can use the Cloud Connector without additional configuration.
 - Be sure to configure the Cloud Connector within 24 hours of removing your manual integration to ensure your registered devices can continue to report their status.
 
@@ -191,7 +191,7 @@ If you currently have a manually configured integration between Intune and Jamf 
 
     ![Connection status is active](./media/conditional-access-jamf-cloud-connector/active-connection-status.png)
 
-When the connection between Jamf Pro and Microsoft Intune is successfully established, Jamf Pro sends inventory information to Microsoft Intune for each computer that is registered with Azure AD (registering with Azure AD is an end user workflow). You can view the Conditional Access Inventory State for a user and a computer in the Local User Account category of a computer's inventory information in Jamf Pro.
+When the connection between Jamf Pro and Microsoft Intune is successfully established, Jamf Pro sends inventory information to Microsoft Intune for each computer that is registered with Azure AD (registering with Azure AD is an end-user workflow). You can view the Conditional Access Inventory State for a user and a computer in the Local User Account category of a computer's inventory information in Jamf Pro.
 
 After you integrate one instance of Jamf Pro by using the Jamf Cloud Connector, you can use this same procedure to configure additional instances of Jamf Pro with the same Intune subscription in your Azure tenant.  
 
