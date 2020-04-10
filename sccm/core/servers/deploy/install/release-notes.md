@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 04/01/2020
+ms.date: 04/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -82,6 +82,14 @@ If you then expand a standalone primary site to a hierarchy with a central admin
 `Could not obtain application secret for tenant xxxxx. If this is after a site expansion, please run "Renew Secret Key" from admin console.`
 
 To work around this issue, renew the key associated with the app registration in Azure AD. For more information, see [Renew secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
+
+## Role based administration
+
+### Security scopes for certain folders don't replicate from CAS to primary sites
+<!--6306759-->
+*Applies to version 1910*
+
+After upgrade to version 1910, [security scopes for folders](/configmgr/core/servers/deploy/configure/configure-role-based-administration#bkmk_config-folder) in user collections and device collections don't get replicated from the CAS to primary sites.
 
 ## Application management
 
