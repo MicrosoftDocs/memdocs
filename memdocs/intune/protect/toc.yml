@@ -88,7 +88,7 @@
     - name: ADAL and Intune
       href: app-modern-authentication-block.md
     - name: Jamf Cloud connector
-      href: conditional-access0jamf-cloud-connector.md
+      href: conditional-access-jamf-cloud-connector.md
     - name: Integrate Jamf Pro with Intune for compliance
       href: conditional-access-integrate-jamf.md
     - name: Enforce compliance on Macs managed with Jamf Pro

@@ -54,8 +54,7 @@ For more information about the Jamf Cloud Connector, see [Configuring the macOS 
 
 ## Prerequisites
 
-**Products and services**:
-
+**Products and services**:  
 - Jamf Pro 10.18 or later
 - A Jamf Pro user account with Conditional Access privileges  
 - Microsoft Intune
