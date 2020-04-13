@@ -91,7 +91,7 @@ landingContent:
         links:
           - text: Set up iOS/iPadOS enrollment
             url: ios-enroll.md
-          - text: Automatically enroll iOS/iPadOS devices with Apple's Device Enrollment Program
+          - text: Automatically enroll iOS/iPadOS devices with Apple's Automated Device Enrollment
             url: device-enrollment-program-enroll-ios.md
           - text: Set up iOS/iPadOS and iPadOS User Enrollment
             url: ios-user-enrollment.md
@@ -115,7 +115,7 @@ landingContent:
         links:
           - text: Set up macOS enrollment
             url: macos-enroll.md
-          - text: Automatically enroll macOS devices with the Device Enrollment Program or Apple School Manager
+          - text: Automatically enroll macOS devices with the Automated Device Enrollment or Apple School Manager
             url: device-enrollment-program-enroll-macos.md
           - text: Set up iOS/iPadOS device enrollment with Apple Configurator
             url: apple-configurator-enroll-ios.md
