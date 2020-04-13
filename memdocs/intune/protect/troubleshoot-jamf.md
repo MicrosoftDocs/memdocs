@@ -118,7 +118,7 @@ There are several common causes for Mac devices that fail to register.
   When you create the app in Azure, you must remove all default API permissions and then assign Intune a single permission of *update_device_attributes*. 
 
   **Resolution**  
-  Review and if necessary correct the permissions for the Jamf app. If you use the Jamf Pro Cloud Connector, this app was created for you. If you manually configured the integration, you created the app in Azure AD. For the app permissions, see the procedure to [create an application for Jamf in Azure AD](.md#create-an-application-in-azure-active-directory).
+  Review and if necessary correct the permissions for the Jamf app. If you use the Jamf Pro Cloud Connector, this app was created for you. If you manually configured the integration, you created the app in Azure AD. For the app permissions, see the procedure to [create an application for Jamf in Azure AD](conditional-access-integrate-jamf.md#create-an-application-in-azure-active-directory).
 
 #### Cause 2  
 
