@@ -70,7 +70,6 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Set app icon size | integer | 2 | Allows you to set the icon size for apps displayed on the home   screen. You can choose the following values in this configuration for   different sizes - 0 (Smallest), 1 (Small), 2 (Regular), 3 (Large) and 4   (Largest). |
 | Set app folder icon | integer | 0 | Allows you to define the appearance of app folders on the home   screen. You can choose the appearance from following values: Dark Square(0);   Dark Circle(1); Light Square(2); Light Circle(3). |
 | Set screen orientation | integer | 1 | Allows you to set the orientation of the home screen to   portrait mode, landscape mode or allow auto rotate. You can set the   orientation by entering values 1 (for portrait mode), 2 (for Landscape mode),   3 (for Autorotate). |
-| Enable device telemetry | bool | FALSE | Enables all the telemetry that is being captured for the   managed home screen. If you enable this, Microsoft will be able to capture device usage telemetry, such as the number of times a particular app is launched on this device. |
 | Set allow-listed applications | bundleArray | FALSE | Allows you to define the set of apps visible on the home screen from amongst the apps installed on the device. You can define the apps   by entering the app package name of the apps that you would like to make   visible, for example com.microsoft.emmx would make settings accessible on the home   screen. The apps that you allow-list in this section should already be installed on the device in order to be visible on the home screen. |
 | Set pinned web links | bundleArray | FALSE | Allows you to pin websites as quick launch icons on the home   screen. With this configuration, you can define the URL and add it to the home   screen for the end user to launch in the browser with a single tap. |
 | Enable screen saver | bool | FALSE | To enable screen saver mode or not. If set to true, you can   configure **screen_saver_image**, **screen_saver_show_time**,   **inactive_time_to_show_screen_saver**, and   **media_detect_screen_saver**. |
@@ -82,8 +81,15 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Type of virtual home button | string | swipe_up | Use **swipe_up** to access home button with a swipe up gesture. Use **float** to access a sticky, persistent  home button that can be moved around the screen by the end user. |
 | Battery and Signal Strength   indicator bar | bool | True  | Turning this setting to `True` shows the battery and signal strength indicator bar. |
 | Exit lock task mode password | string |   | Enter a 4-6-digit code to use to temporarily drop out of lock-task mode for troubleshooting. |
+| Show Managed Setting | bool | TRUE | “Managed Setting”  is a Managed Home Screen app that appears only if you've configured any settings for quick access including, **Show Wi-Fi Setting**, **Show Bluetooth setting**, **Show volume setting**, and **show flashlight setting**. These settings can also be accessed by swiping-down on the screen. Set this key to `False` to hide the “Managed Setting” app and have end-users access settings only via swiping-down.    |
+| Enable easy access debug menu | bool | FALSE | Turn this setting to `True` to access the debug menu from the Managed Settings app or from swipe-down while in Managed Home Screen. The debug menu is currently where the capability to exit kiosk mode lives, and is accessed by clicking the back button about 15 times. Keep this setting set to `False` to keep the entry point to debug menu only accessible via the back button.   |
 | Show Wi-Fi setting | bool | FALSE | Turning this setting to `True` allows the end user to turn on or off Wi-Fi, or to connect to different Wi-Fi networks.  |
+| Enable Wi-Fi allow-list | bool | FALSE | Turn this setting to `True` and fill out the **Wi-Fi allow-list** key to restrict what Wi-Fi networks are shown within Managed Home Screen. Set to `False` to show all possible available Wi-Fi networks the device has discovered. Note that this setting is only relevant if **show Wi-Fi setting** has been set to `True` and the **Wi-Fi allow-list** has been filled out.   |
+| Wi-Fi allow-list| bundleArray | FALSE | Allows you to list all the SSIDs of what Wi-Fi networks you want the device to show within Managed Home Screen. This list is only relevant if **show Wi-Fi setting** and **Enable Wi-Fi allow-list** have been set to `True`. If either of those have been set to `False`, then you do not need to modify this configuration.    |
 | Show Bluetooth setting | bool | FALSE | Turning this setting to `True` allows the end user to turn on or off Bluetooth and to connect to different Bluetooth-capable devices.   |
+| Show volume setting | bool | FALSE | Turning this setting to `True` allows the end user to access a volume slider to adjust media volume.   |
+| Show flashlight setting | bool | FALSE | Turning this setting to `True` allows the end user to on or off the device's flashlight. If the device does not support a flashlight, then this setting will not appear even if configured to `True`.   |
+| Show device info setting | bool | FALSE | Turning this setting to `True` allows the end user to access quick info about the device from the Managed Setting app or swipe-down. Accessible information includes device's make, model and serial number.   |
 | Applications in folder are ordered by name | bool | TRUE | Turning this setting to `False` allows items in a folder to appear in the order in which they are specified. Otherwise, they will appear in the folder alphabetically.   |
 | Application order enabled | bool | FALSE | Turning this setting to `True` allows enables the ability to set the order of applications, weblinks, and folders on the Managed Home Screen. Once enabled, set the ordering with **app_order**.the end user to turn on or off Bluetooth and to connect to different Bluetooth-capable devices.   |
 | Application order | bundleArray | FALSE | Allows you to specify the order of applications, weblinks and folders on the Managed Home Screen. To use this setting, **Lock Home Screen** must be enabled, **Set grid size** must be defined and **Application order enabled** must be set to `True`.   |
@@ -128,10 +134,6 @@ The following is an example JSON script with all the available configuration key
         {
             "key": "screen_orientation",
             "valueInteger": 1
-        },
-        {
-            "key": "enable_telemetry",
-            "valueBool": false
         },
         {
             "key": "applications",
@@ -186,6 +188,51 @@ The following is an example JSON script with all the available configuration key
         {
             "key": "show_bluetooth_setting",
             "valueBool": false
+        },
+        {
+            "key": "show_flashlight_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_volume_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_device_info_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_managed_setting",
+            "valueBool": false
+        },
+        {
+            "key": "enable_easy_access_debugmenu",
+            "valueBool": false
+        },
+        {
+            "key": "enable_wifi_allowlist",
+            "valueBool": false
+        },
+        {
+            "key": "wifi_allowlist",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "SSID",
+                            "valueString": "name of Wi-Fi network 1 here"
+                        },
+                    ]
+                },   
+                {
+                    "managedProperty": [
+                        {
+                            "key": "SSID",
+                            "valueString": "name of Wi-Fi network 2 here"
+                        },
+                    ]
+                }  
+            ]
         },
         {
             "key": "grid_size",
@@ -339,7 +386,7 @@ The following is an example JSON script with all the available configuration key
 The Managed Home Screen app now provides access to Google's Android Device Policy app. The Managed Home Screen app is a custom launcher used for devices enrolled in Intune as Android Enterprise (AE) dedicated devices using multi-app kiosk mode. You can access the Android Device Policy app, or guide users to the Android Device Policy app, for support and debug purposes. This launching capability is available at the time the device enrolls and locks into Managed Home Screen. No additional installations are needed to use this functionality.
 
 ## Managed Home Screen debug screen
-You can access the Managed Home Screen's debug screen by clicking the **back** button until the debug screen is displayed (click the **back** button 15 times or more). From this debug screen, you are able to launch the Android Device Policy application, view and upload logs, or temporarily pause kiosk mode to update the device. For more information about pausing kiosk mode, see the **Leave kiosk mode** item in the Android Enterprise [dedicated device settings](../configuration/device-restrictions-android-for-work.md#dedicated-devices).
+You can access the Managed Home Screen's debug screen by clicking the **back** button until the debug screen is displayed (click the **back** button 15 times or more). From this debug screen, you are able to launch the Android Device Policy application, view and upload logs, or temporarily pause kiosk mode to update the device. For more information about pausing kiosk mode, see the **Leave kiosk mode** item in the Android Enterprise [dedicated device settings](../configuration/device-restrictions-android-for-work.md#dedicated-devices). If you would like an easier way to access Managed Home Screen's debug screen, you can set the **Enable easy access debug menu** to `True` using application configuraion policies. 
 
 ## Next steps
 
