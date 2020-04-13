@@ -145,8 +145,6 @@ For more information about Managed Google Play private apps including a FAQ, see
 2. In the console, select **Add new application**.
 3. You upload and provide information about your app in the same way as you publish any app to the Google Play store. However, you must select **Only make this application available to my organization (<*organization name*>)**.
 
-    ![Make the app available only to your organization](./media/apps-add-android-for-work/restrict.png)
-
     This operation makes the app available only to your organization. It won't be available on the public Google Play store.
 
     For more information about uploading and publishing Android apps, see [Google Developer Console Help](https://support.google.com/googleplay/android-developer/answer/113469).
