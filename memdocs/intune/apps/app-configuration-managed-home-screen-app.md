@@ -91,7 +91,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Show flashlight setting | bool | FALSE | Turning this setting to `True` allows the end user to on or off the device's flashlight. If the device does not support a flashlight, then this setting will not appear even if configured to `True`.   |
 | Show device info setting | bool | FALSE | Turning this setting to `True` allows the end user to access quick info about the device from the Managed Setting app or swipe-down. Accessible information includes device's make, model and serial number.   |
 | Applications in folder are ordered by name | bool | TRUE | Turning this setting to `False` allows items in a folder to appear in the order in which they are specified. Otherwise, they will appear in the folder alphabetically.   |
-| Application order enabled | bool | FALSE | Turning this setting to `True` allows enables the ability to set the order of applications, weblinks, and folders on the Managed Home Screen. Once enabled, set the ordering with **app_order**.the end user to turn on or off Bluetooth and to connect to different Bluetooth-capable devices.   |
+| Application order enabled | bool | FALSE | Turning this setting to `True` allows enables the ability to set the order of applications, weblinks, and folders on the Managed Home Screen. Once enabled, set the ordering with **app_order**.   |
 | Application order | bundleArray | FALSE | Allows you to specify the order of applications, weblinks and folders on the Managed Home Screen. To use this setting, **Lock Home Screen** must be enabled, **Set grid size** must be defined and **Application order enabled** must be set to `True`.   |
 
 ## Enter JSON Data
