@@ -31,11 +31,11 @@ ms.collection: M365-identity-device-management
 
 # Understand Intune and Azure AD's device limit restrictions
 
-Device limit restrictions an be configured two ways:
+Device limit restrictions can be configured two ways:
 - Intune enrollment
 - Azure Active Directory (AD) joined or Azure AD registered
 
-This article clarifies when and why these limits are configured.
+This article clarifies when these limits are applied based on your configuration.
 
 ## Intune device limit restrictions
 
