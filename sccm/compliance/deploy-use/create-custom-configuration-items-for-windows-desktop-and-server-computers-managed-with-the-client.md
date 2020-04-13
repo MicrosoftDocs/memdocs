@@ -2,7 +2,7 @@
 title: Create custom configuration items
 titleSuffix: Configuration Manager
 description: Manage settings for Windows computers and servers with a custom configuration item for Windows desktops and servers
-ms.date: 04/01/2020
+ms.date: 04/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -87,11 +87,14 @@ A detection method in Configuration Manager contains rules that are used to dete
 
 
 
-##  Specify supported platforms  
+## Specify supported platforms  
 
-On the **Supported Platforms** page of the **Create Configuration Item Wizard**, select the Windows versions on which you want the configuration item to be assessed for compliance, or choose **Select all**. 
+On the **Supported Platforms** page of the **Create Configuration Item Wizard**, select the Windows versions on which you want the configuration item to be assessed for compliance, or choose **Select all**.
 
-You can also **Specify the version of Windows manually**. Select **Add** and specify each part of the Windows build number. 
+You can also **Specify the version of Windows manually**. Select **Add** and specify each part of the Windows build number.
+
+> [!NOTE]
+> When specifying Windows Server 2016, the selection for `All Windows Server 2016 and higher 64-bit)` also includes Windows Server 2019. To specify Windows Server 2016 only, use the option to **Specify the version of Windows manually**. <!--5866480-->
 
 
 
