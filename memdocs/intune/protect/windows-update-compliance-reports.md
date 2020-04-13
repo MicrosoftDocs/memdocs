@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Intune compliance reports for updates
 
-When you use Intune to deploy Windows update to Windows 10 devices, view details about update compliance by using Intune or a free solution called *Update Compliance*, which is part of the Microsoft Operations Management Suite (OMS).
+When you use Intune to deploy Windows update to Windows 10 devices, view details about update compliance by using Intune or a free solution called *Update Compliance*. Update Compliance is part of the Microsoft Operations Management Suite (OMS).
 
 ## Use Intune
 
@@ -52,7 +52,7 @@ To review a policy report on the deployment status for the Windows 10 update rin
 
 ## Use Update Compliance
 
-You can monitor Windows 10 update rollouts by using [Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor), a Windows Analytics solution. Update Compliance is offered through the Azure portal and is available free for devices that meet its [prerequisites](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
+You can monitor Windows 10 update rollouts by using [Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor). Update Compliance is offered through the Azure portal and is available free for devices that meet its [prerequisites](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
 
 When you use this solution, you deploy a commercial ID to any of your Intune managed Windows 10 devices for which you want to report update compliance.  
 
