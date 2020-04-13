@@ -151,4 +151,4 @@ landingContent:
           - text: Common ways to use Conditional Access
             url: conditional-access-intune-common-ways-use.md
           - text: Jamf Pro for macOS 
-            url: conditional-access-integrate-jamf.md
+            url: conditional-access-jamf-cloud-connector.md

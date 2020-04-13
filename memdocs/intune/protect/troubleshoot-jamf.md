@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 04/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -38,21 +38,22 @@ This article helps Intune administrators understand and troubleshoot problems wi
 
 Before you start troubleshooting, collect some basic information to clarify the problem and reduce the time to find a resolution. For example, when you encounter a Jamf-Intune integration-related issue, always verify that the prerequisites have all been met. Review the following considerations before you start troubleshooting:
 
-- Review the prerequisites from [Integrate Jamf Pro with Intune](conditional-access-integrate-jamf.md#prerequisites).
-- All users must have Microsoft Intune and Microsoft AAD Premium P1 licenses 
+- Review the prerequisites from the following articles, depending on how you configure Jamf Pro integration with Intune:
+  - [Use the Jamf Cloud Connector to integrate Jamf Pro with Intune](conditional-access-jamf-cloud-connector.md)
+  - [Integrate Jamf Pro with Intune](conditional-access-integrate-jamf.md#prerequisites)
+- All users must have Microsoft Intune and Microsoft AAD Premium P1 licenses
 - You must have a user account that has Microsoft Intune Integration permissions in the Jamf Pro console.
 - You must have a user account that has Global Admin permissions in Azure.
 
+Consider the following information when investigating Jamf Pro integration with Intune:
 
-Consider the following information when investigating Jamf Pro integration with Intune: 
 - What is the exact error message?
 - Where is the error message?
 - When did the problem start?  Has Jamf Pro integration with Intune ever worked?
 - How many users are affected? Are all users affected or just some?
 - How many devices are affected? Are all devices affected or just some?
  
-
-## Common problems 
+## Common problems
 
 The following information can help you identify and resolve common problems for devices after you set up Intune and Jamf Pro integration.  
 
@@ -112,23 +113,23 @@ There are several common causes for Mac devices that fail to register.
 
 #### Cause 1  
 
-**The Jamf Pro enterprise application in Azure has the wrong permission or has more than one permission**  
+**The Jamf Pro enterprise application in Azure has the wrong permission or has more than one permission**
 
   When you create the app in Azure, you must remove all default API permissions and then assign Intune a single permission of *update_device_attributes*. 
 
   **Resolution**  
-  Review and if necessary correct the permissions for the Jamf app you created in Azure AD. See the procedure to [create an application for Jamf in Azure AD](conditional-access-integrate-jamf.md#create-an-application-in-azure-active-directory). 
+  Review and if necessary correct the permissions for the Jamf app. If you use the Jamf Pro Cloud Connector, this app was created for you. If you manually configured the integration, you created the app in Azure AD. For the app permissions, see the procedure to [create an application for Jamf in Azure AD](.md#create-an-application-in-azure-active-directory).
 
 #### Cause 2  
 
 **The **Jamf Native macOS Connector** app wasn't created in your Azure AD tenant or consent for the connector was signed by an account that doesn't have global admin rights**  
 
   **Resolution**  
-  See the *Configuring macOS Intune Integration* section in [Integrating with Microsoft Intune](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html) on docs.jamf.com. 
+  See the *Configuring macOS Intune Integration* section in [Integrating with Microsoft Intune](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html) on docs.jamf.com.
 
 #### Cause 3
 
-**The user doesn't have a valid Intune or Jamf license**  
+**The user doesn't have a valid Intune or Jamf license**
 
   Lack of a valid license can result in the following error, which indicates that the Jamf license is expired:  
   ```
@@ -186,8 +187,10 @@ If Intune integration is turned off, users receive a pop-up window in the Compan
 The Jamf Pro server sends a pulse to the Intune servers when integration is turned off that tells Intune that integration is disabled. 
 
 **Resolution**  
-Re-enable Intune integration within Jamf Pro. See [Configure Microsoft Intune Integration in Jamf Pro](conditional-access-integrate-jamf.md#enable-intune-to-integrate-with-jamf-pro).
+Re-enable Intune integration within Jamf Pro. See the following depending on how you configure integration:
 
+- [Use the Jamf Cloud Connector to integrate Jamf Pro with Intune](conditional-access-jamf-cloud-connector.md)
+- [Manually configure Microsoft Intune Integration in Jamf Pro](conditional-access-integrate-jamf.md#enable-intune-to-integrate-with-jamf-pro).
 
 #### <a name="cause-6"></a>Cause 6  
 
@@ -273,29 +276,27 @@ To resolve this issue, follow the resolution for [*Cause 6*](#cause-6) for  *Dev
 When a device is removed from Intune and Jamf Pro integration, some data can be left behind which can cause successive registrations to create duplicate entries.  
 
 **Resolution**  
-To resolve this issue, follow the resolution for [*Cause 6*](#cause-6) for  *Devices fail to register*, earlier in this article. 
+To resolve this issue, follow the resolution for [*Cause 6*](#cause-6) for  *Devices fail to register*, earlier in this article.
 
 ### Compliance policy fails to evaluate the device  
 
-**Cause**: Jamf integration with Intune doesn't support compliance policy that targets device groups. 
+**Cause**: Jamf integration with Intune doesn't support compliance policy that targets device groups.
 
 **Resolution**  
-Modify compliance policy for macOS devices to be assigned to user groups. 
-
+Modify compliance policy for macOS devices to be assigned to user groups.
 
 ### Could not retrieve the access token for Microsoft Graph API
 
 You receive the following error:
 
-```
-   Could not retrieve the access token for Microsoft Graph API. Check the configuration for Microsoft Intune Integration.
-```   
+`Could not retrieve the access token for Microsoft Graph API. Check the configuration for Microsoft Intune Integration.`
 
-The source of this error can be one of the following causes: 
+The source of this error can be one of the following causes:
 
 #### There's a permission issue with the Jamf Pro application in Azure
 
-While registering the Jamf Pro app in Azure, one of the following conditions occurred:  
+While registering the Jamf Pro app in Azure, one of the following conditions occurred:
+
 - The app received more than one permission.
 - The **Grant admin consent for *\<your company>*** option wasn't selected.  
 
@@ -304,12 +305,13 @@ See the resolution for Cause 1 for [Devices fail to register](#devices-fail-to-r
 
 #### A license required for Jamf-Intune integration has expired
 
-**Resolution**: See the resolution for Cause 3 for [Devices fail to register](#devices-fail-to-register). 
+**Resolution**: See the resolution for Cause 3 for [Devices fail to register](#devices-fail-to-register).
 
 #### The required ports aren't open on your network
 
-**Resolution**: Review the information for network ports in [Prerequisites](conditional-access-integrate-jamf.md#prerequisites) for integrating Jamf Pro with Intune.
-
+**Resolution**:  
+Review the information for network ports in [Prerequisites](conditional-access-jamf-cloud-connector.md#prerequisites) for integrating Jamf Pro with Intune.
 
 ## Next steps
+
 Learn more about [integrating Jamf Pro with Intune](conditional-access-integrate-jamf.md)

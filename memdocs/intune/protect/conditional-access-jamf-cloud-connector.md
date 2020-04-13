@@ -65,9 +65,11 @@ For more information about the Jamf Cloud Connector, see [Configuring the macOS 
 **Network**:  
 The following ports and endpoints must be accessible for Jamf and Intune to integrate correctly:
 
-- Ports 80 and 443
+- **Intune**: Port 443
+- **Apple**: Ports 2195, 2196, and 5223 (push notifications to Intune)
+- **Jamf**: Ports 80 and 5223
+
 - Endpoints:
-  - Ports 80, 443
   - login.microsoftonline.com
   - graph.windows.net  
   - *.manage.microsoft.com  
