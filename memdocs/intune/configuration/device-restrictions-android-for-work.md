@@ -212,6 +212,9 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 - **Number of passwords required before user can reuse a password**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
 - **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
 
+  > [!NOTE]
+  > Device Owner devices will not be prompted to set a password. The settings will be enforced and you will need to set the password manually. The policy enforcing this will report as failed until you set the password that meets your requirements.
+
 ### Power settings
 
 - **Time to lock screen**: Enter the maximum time a user can set until the device locks. For example, if you set this setting to `10 minutes`, then users can set the time from 15 seconds up to 10 minutes. When set to **Not configured** (default), Intune doesn't change or update this setting.
