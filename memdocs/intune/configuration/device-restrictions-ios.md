@@ -327,6 +327,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
 
+This setting is duplicated in the console and we are fixing this with our May release. Currently it only works on supervised devices. With the May release, it will work on device enrolled and automated device enrolled devices, and won't require supervision.
 - **Spotlight search to return results from internet**: **Block** stops Spotlight from returning any results from an Internet search. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Spotlight search connect to the Internet to provide search results.
 
 - **Safari cookies**: Select how cookies are handled on devices. Your options:
@@ -388,6 +389,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 - **Changes to the Find My Friends app settings**: **Block** prevents changes to the Find My Friends app settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change settings for the Find My Friends app.
 
+This setting is duplicated in the console and we are fixing this with our May release. Currently it only works on supervised devices. With the May release, it will work on device enrolled and automated device enrolled devices, and won't require supervision.
 - **Spotlight search to return results from internet**: **Block** stops Spotlight from returning any results from an Internet search. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Spotlight search connect to the Internet to provide search results.
 
 - **Block removal of system apps from device**: **Block** disables the ability to remove system apps from devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to remove system apps.
