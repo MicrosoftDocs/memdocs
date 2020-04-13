@@ -221,7 +221,7 @@ This feature applies to:
 - **Realm**: Enter the domain part of the URL. For example, enter `contoso.com`.
 - **Kerberos principal name**: Intune looks for this attribute for each user in Azure AD. Intune then populates the respective field (such as UPN) before generating the XML that gets installed on devices. Your options:
 
-  - **Not configured**: Intune doesn't change or update this setting. By default, the OS may prompt users for a Kerberos principal name when the profile is deployed to devices. A principal name is required for MDMs to install SSO profiles.
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS will prompt users for a Kerberos principal name when the profile is deployed to devices. A principal name is required for MDMs to install SSO profiles.
   - **User principal name**: The user principal name (UPN) is parsed in the following way:
 
     > [!div class="mx-imgBorder"]
@@ -295,8 +295,8 @@ This feature applies to:
 
 - **SSO app extension type**: Choose the type of SSO app extension. Your options:
 
-  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might not use app extensions. To disable an app extension, you can switch the SSO app extension type to **Not configured**.
-  - **Microsoft Azure AD**: Uses the Microsoft Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for Active Directory accounts across all applications that support [Apple's Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO in Microsoft apps, organization apps, and websites that authenticate using Azure AD.
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS will not use app extensions. To disable an app extension, you can switch the SSO app extension type to **Not configured**.
+  - **Microsoft Azure AD**: Uses the Microsoft Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for Active Directory accounts across all applications that support [Apple's Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Azure AD.
 
     The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements. All apps that previously used brokered authentication with the Microsoft Authenticator app continue to get SSO with the [Microsoft Enterprise SSO plug-in for Apple devices](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin).
 
@@ -310,7 +310,7 @@ This feature applies to:
   > [!TIP]
   > With the **Redirect** and **Credential** types, you add your own configuration values to pass through the extension. If you're using **Credential**, consider using built-in configuration settings provided by Apple in the **Kerberos** type.
 
-- **Enable shared device mode** (Microsoft Azure AD only): Choose **Enable** if you're deploying the Microsoft Enterprise SSO plug-in to iOS/iPadOS devices configured for Azure AD's shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. By default, iOS/iPadOS devices aren't intended to be shared with multiple users.
+- **Shared device mode** (Microsoft Azure AD only): Choose **Enable** if you're deploying the Microsoft Enterprise SSO plug-in to iOS/iPadOS devices configured for Azure AD's shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. By default, iOS/iPadOS devices aren't intended to be shared among multiple users.
 
   For more information about shared device mode and how to enable it, see [Overview of shared device mode](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) and [Shared device mode for iOS devices](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices).  
 
