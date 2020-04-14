@@ -14,10 +14,10 @@ manager: dougeby
 
 
 # Toolkit Reference for the Microsoft Deployment Toolkit
- This reference is part of Microsoft® Deployment Toolkit (MDT) 2013 and provides configuration settings that you can use in the deployment process. Review the MDT 2013 documents *Microsoft Deployment Toolkit Samples Guide* and *Using the Microsoft Deployment Toolkit* for help in customizing configuration settings for the deployment environment.  
+ This reference is part of Microsoft&reg; Deployment Toolkit (MDT) 2013 and provides configuration settings that you can use in the deployment process. Review the MDT 2013 documents *Microsoft Deployment Toolkit Samples Guide* and *Using the Microsoft Deployment Toolkit* for help in customizing configuration settings for the deployment environment.  
 
 > [!NOTE]
->  In this document, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server® 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor–based versions of Windows. Similarly, *MDT* refers to MDT 2013 unless otherwise stated.  
+>  In this document, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server&reg; 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor–based versions of Windows. Similarly, *MDT* refers to MDT 2013 unless otherwise stated.  
 
 ## Task Sequence Steps  
  *Task sequences* are created by the Task Sequence Editor and consist of a combined series of steps that are designed to complete an action. Task sequences can operate across a computer restart and can be configured to automate tasks on a computer without requiring user intervention. In addition, you can add task sequence steps to a task sequence group, which helps keep similar task sequence steps together for better organization and error control.  
@@ -92,8 +92,8 @@ manager: dougeby
 |**Obtain a Domain Name System (DNS) server automatically**|When selected, DHCP is used to obtain the required IP configuration settings for the network connection. This is the default selection.|  
 |**Use the following DNS servers**|When selected, you can provide one or more DNS server IP addresses that will be assigned to the network connection.|  
 |**DNS Suffix**|The DNS suffix that will be applied to all network connections that use TCP/IP.|  
-|**Register this connection’s address in DNS**|Specifies that the computer will attempt dynamic registration of the IP addresses (through DNS) of this connection with the full computer name of this computer.|  
-|**Use this connection’s DNS suffix in DNS registration**|Specifies whether DNS dynamic update is used to register the IP addresses and the connection-specific domain name of this connection.|  
+|**Register this connection's address in DNS**|Specifies that the computer will attempt dynamic registration of the IP addresses (through DNS) of this connection with the full computer name of this computer.|  
+|**Use this connection's DNS suffix in DNS registration**|Specifies whether DNS dynamic update is used to register the IP addresses and the connection-specific domain name of this connection.|  
 |**WINS server addresses**|You can provide one or more Windows Internet Naming Service (WINS) server IP addresses that will be assigned to the network connection.|  
 |**Enable LMHOSTS lookup**|Specifies whether a local area network (LAN) Manager Hosts (LMHOSTS) file for network basic input/output system (NetBIOS) name resolution is used.|  
 |**Default**|Specifies whether this network connection obtains the setting to enable or disable NetBIOS over TCP/IP (NetBT) from a DHCP server. This is the default selection.|  
@@ -137,7 +137,7 @@ manager: dougeby
 |None|None|  
 
 #### Configure ADDS  
- This task sequence step configures the target computer as an Active Directory® Domain Services (AD DS) domain controller. For more information about the settings listed in the following tables and which this task sequence step can configure, see the Microsoft Help and Support article, [Unattended promotion and demotion of Windows 2000 and Windows Server 2003 domain controllers](https://support.microsoft.com/kb/223757).  
+ This task sequence step configures the target computer as an Active Directory&reg; Domain Services (AD DS) domain controller. For more information about the settings listed in the following tables and which this task sequence step can configure, see the Microsoft Help and Support article, [Unattended promotion and demotion of Windows 2000 and Windows Server 2003 domain controllers](https://support.microsoft.com/kb/223757).  
 
  The unique properties and settings for the **Configure ADDS** task sequence step type are:  
 
@@ -203,7 +203,7 @@ manager: dougeby
 |**Name**|**Description**|  
 |-|-|  
 |**Name**|Configure DNS|  
-|Zones|Within the **Scope Details** setting, the following sub-settings are configurable:<br /><br /> -                                 **DNS zone name**. A user-definable name<br /><br /> - Type. The type of DNS zone to be created<br /><br /> - **Replication**. Specifies the replication scheme used to share information among DNS servers<br /><br /> - **Zone file name**. The zone’s DNS database file<br /><br /> -                                 **Dynamic updates**. Enables DNS client computers to register and dynamically update their resource records with a DNS server whenever changes occur<br /><br /> -                                 **Scavenge stale resource records**. Removes stale resource records|  
+|Zones|Within the **Scope Details** setting, the following sub-settings are configurable:<br /><br /> -                                 **DNS zone name**. A user-definable name<br /><br /> - Type. The type of DNS zone to be created<br /><br /> - **Replication**. Specifies the replication scheme used to share information among DNS servers<br /><br /> - **Zone file name**. The zone's DNS database file<br /><br /> -                                 **Dynamic updates**. Enables DNS client computers to register and dynamically update their resource records with a DNS server whenever changes occur<br /><br /> -                                 **Scavenge stale resource records**. Removes stale resource records|  
 |Server Properties|Within the Server Properties setting, the following sub-settings are configurable:<br /><br /> -                                 **Disable recursion**. Specifies that the DNS server will not perform recursion on any query<br /><br /> - **BIND secondaries**. Specifies whether to use fast transfer format to transfer a zone to DNS servers running legacy Berkeley Internet Name Domain (BIND) implementations<br /><br /> - **Fail on load if bad data**. Specifies the DNS server should parse files strictly<br /><br /> -                                 **Enable round robin**. Specifies the DNS server should use the round robin mechanism to rotate and reorder a list of resource records if multiple resource records exist of the same type exist for a query answer<br /><br /> - **Enable netmask ordering**. Specifies whether the DNS server should reorder resource records within the same resource record set in its response to a query based on the IP address of the source of the query<br /><br /> - **Secure cache against pollution**. Specifies whether the DNS server will attempt to clean up responses to avoid cache pollution<br /><br /> - **Name checking**. Configures the name-checking method to be used|  
 
 > [!NOTE]
@@ -213,7 +213,7 @@ manager: dougeby
 >  For more information about these server properties, see [Dnscmd](https://technet.microsoft.com/library/cc772069.aspx).  
 
 #### Enable BitLocker  
- This task sequence step configures BitLocker® Drive Encryption on the target computer. For more information about this step type, see [Enable BitLocker](https://technet.microsoft.com/library/bb632526.aspx).  
+ This task sequence step configures BitLocker&reg; Drive Encryption on the target computer. For more information about this step type, see [Enable BitLocker](https://technet.microsoft.com/library/bb632526.aspx).  
 
  The unique properties and settings for the **Enable BitLocker** task sequence step type are:  
 
@@ -492,10 +492,10 @@ manager: dougeby
 |**Start in**|The starting folder for the application \(The path must be a valid path on the target computer.\)|  
 |**Run this step as the following account**|Allows specification of user credentials that will be used to run the specified command|  
 |**Account**|The user credentials that will be used to run the specified command|  
-|**Load the user’s profile**|When selected, loads the user profile for the specified account|  
+|**Load the user's profile**|When selected, loads the user profile for the specified account|  
 
 #### Run PowerShell Script  
- This task sequence step runs the specified Windows PowerShell™ script on the target computer. For more information about what script accomplishes this task and which properties are used, see [ZTIPowerShell.wsf](#ZTIPowerShell.wsf).  
+ This task sequence step runs the specified Windows PowerShell&trade; script on the target computer. For more information about what script accomplishes this task and which properties are used, see [ZTIPowerShell.wsf](#ZTIPowerShell.wsf).  
 
  The unique properties and settings for the **Run PowerShell Script** task sequence step type are:  
 
@@ -1001,7 +1001,7 @@ manager: dougeby
 |**Conditional qualifier**|**BdeInstallSuppress** does not equal YES|  
 
 #### Enable OEM Disk Configuration  
- This task sequence step sets the **DeploymentType**property to **NEWCOMPUTER**, which allows the target computer’s disk to be partitioned and formatted.  
+ This task sequence step sets the **DeploymentType**property to **NEWCOMPUTER**, which allows the target computer's disk to be partitioned and formatted.  
 
  The unique properties and settings for the **Enable OEM Disk Configuration** task sequence step type are:  
 
@@ -1719,7 +1719,7 @@ manager: dougeby
 
 |**Value**|**Description**|  
 |-|-|  
-|*name*|The name that will be used in the Task Sequencer engine’s display banner|  
+|*name*|The name that will be used in the Task Sequencer engine's display banner|  
 
 |**Example**|  
 |-|  
@@ -2310,7 +2310,7 @@ manager: dougeby
 |-|-|
 |**NO**|Captures no group membership information.|  
 |**ALL**|Captures the membership of all local groups on the target computer.|  
-|**YES**|Captures the membership of the Administrator and Power Users built-in groups and the groups listed in the groups’ properties. This is the default value if some other value is specified. (**YES** is the typical value.)|  
+|**YES**|Captures the membership of the Administrator and Power Users built-in groups and the groups listed in the groups' properties. This is the default value if some other value is specified. (**YES** is the typical value.)|  
 
 |**Example**|  
 |-|    
@@ -2525,7 +2525,7 @@ manager: dougeby
 |`[Settings] Priority=Default  [Default] CustomWizardSelectionProfile=CustomWizard`|  
 
 ####  <a name="Database"></a> Database  
- The property that specifies the database to be used for querying property values from columns in the table specified in the **Table** property. The database resides on the computer specified in the **SQLServer** property. The instance of Microsoft SQL Server® on the computer is specified in the **Instance** property.  
+ The property that specifies the database to be used for querying property values from columns in the table specified in the **Table** property. The database resides on the computer specified in the **SQLServer** property. The instance of Microsoft SQL Server&reg; on the computer is specified in the **Instance** property.  
 
 |**Property configured by**|||**Property applies to**||  
 |-|-|-|-|-|  
@@ -2613,7 +2613,7 @@ manager: dougeby
 cscript.exe LiteTouch.vbs /debug:true  
 ```  
 
- After the LiteTouch.vbs script is started, the **Debug** property’s value is set to **TRUE**, and all other scripts are automatically read the value of this property and provide verbose information.  
+ After the LiteTouch.vbs script is started, the **Debug** property's value is set to **TRUE**, and all other scripts are automatically read the value of this property and provide verbose information.  
 
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or in the MDT DB. Treat this property as read only.  
@@ -3244,7 +3244,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] AreaCode=206 CountryCode=001 Dialing=TONE LongDistanceAccess=9`|  
 
 ####  <a name="DisableTaskMgr"></a> DisableTaskMgr  
- This property controls a user’s ability to start Task Manager by pressing CTRL+ALT+DEL. After the user starts Task Manager, they could interrupt the LTI task sequence while running in the new operating system on the target computer. This property is used in conjunction with the **HideShell** property and is only valid when the **HideShell** property is set to **YES**.  
+ This property controls a user's ability to start Task Manager by pressing CTRL+ALT+DEL. After the user starts Task Manager, they could interrupt the LTI task sequence while running in the new operating system on the target computer. This property is used in conjunction with the **HideShell** property and is only valid when the **HideShell** property is set to **YES**.  
 
 > [!NOTE]
 >  This property and the **HideShell** property must both be set to **YES** to prevent the user pressing CTRL+ALT+DEL and interrupting the LTI task sequence.  
@@ -3628,7 +3628,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] DomainAdmin=NYCAdmin DomainAdminDomain=WOODGROVEBANK DomainAdminPassword=<complex_password>`|  
 
 ####  <a name="DomainAdminDomain"></a> DomainAdminDomain  
- The domain in which the user’s credentials specified in **DomainAdmin** reside.  
+ The domain in which the user's credentials specified in **DomainAdmin** reside.  
 
 > [!NOTE]
 >  For ZTI, the credentials that Configuration Manager specifies typically are used. If the **DomainAdmin** property is specified, the credentials in the **DomainAdmin** property override the credentials that Configuration Manager specifies.  
@@ -4034,7 +4034,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] DisableTaskMgr=YES HideShell=YES`|  
 
 ####  <a name="Home_Page"></a> Home_Page  
- The URL to be used as the Windows Internet Explorer® home page after the target operating system is deployed.  
+ The URL to be used as the Windows Internet Explorer&reg; home page after the target operating system is deployed.  
 
 |**Property configured by**|||**Property applies to**||  
 |-|-|-|-|-|  
@@ -4969,7 +4969,7 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="OSDAdapterxEnableIPProtocolFiltering"></a> OSDAdapterxEnableIPProtocolFiltering  
  This property specifies whether IP protocol filtering should be enabled on the network connection.  
 
- The*x*in this property’s name is a placeholder for a zero-based array that contains network adapter information, such as *OSDAdapter0EnableIPProtocolFiltering* or **OSDAdapter1EnableIPProtocolFiltering**.  
+ The*x*in this property's name is a placeholder for a zero-based array that contains network adapter information, such as *OSDAdapter0EnableIPProtocolFiltering* or **OSDAdapter1EnableIPProtocolFiltering**.  
 
 |**Property configured by**|||**Property applies to**||  
 |-|-|-|-|-|  
@@ -4990,7 +4990,7 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies whether TCP\/IP filtering should be enabled on the network connection. This property is for ZTI only. For LTI, see the [OSDAdapterxEnableTCPIPFiltering](#OSDAdapterxEnableTCPIPFiltering) property.  
 
 > [!NOTE]
->  The*x*in this property’s name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0EnableTCPFiltering** or **OSDAdapter1EnableTFiltering**.  
+>  The*x*in this property's name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0EnableTCPFiltering** or **OSDAdapter1EnableTFiltering**.  
 
 |**Property configured by**|||**Property applies to**||  
 |-|-|-|-|-|  
@@ -6008,7 +6008,7 @@ BackupDir=Client01
 |-|-|
 |*ID1,ID2*|The server role that is to be installed on the target computer.|  
 
- See “C:\Program Files\Microsoft Deployment Toolkit\Bin\ServerManager.xml” for valid ID values.  
+ See "C:\Program Files\Microsoft Deployment Toolkit\Bin\ServerManager.xml" for valid ID values.  
 
 |**Example**|  
 |-|  
@@ -7701,7 +7701,7 @@ PackageGroup001=TopFolder\SecondFolder
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DoCapture=YES BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% UserDataLocation=NETWORK DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName%`|  
 
 ####  <a name="UserDomain"></a> UserDomain  
- The domain in which a user’s credentials (specified in the **UserID** property) reside.  
+ The domain in which a user's credentials (specified in the **UserID** property) reside.  
 
 > [!NOTE]
 >  For a completely automated LTI deployment, provide this property in both CustomSettings.ini and BootStrap.ini. However, note that storing the user credentials in these files stores the credentials in clear text and therefore is not secure.  
@@ -8537,7 +8537,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ####  <a name="WUMU_ExcludeKB"></a> WUMU_ExcludeKB  
  The list of Windows Update/Microsoft Update software updates to ignore (by associated Knowledge Base articles).  
 
- Deployment project team members will want to periodically review the list of updates being installed by the ZTIWindowsUpdate.wsf script to verify that each update meets the project’s needs and expectations. All updates are logged and recorded in the ZTIWindowsUpdate.log file, which is generated during deployment. Each update will indicate its status as INSTALL or SKIP and lists the UpdateID, the update name, and the QNumber associated with each update. If an update needs to be excluded, that update should be added to the CustomSettings.ini file (for LTI deployments).  
+ Deployment project team members will want to periodically review the list of updates being installed by the ZTIWindowsUpdate.wsf script to verify that each update meets the project's needs and expectations. All updates are logged and recorded in the ZTIWindowsUpdate.log file, which is generated during deployment. Each update will indicate its status as INSTALL or SKIP and lists the UpdateID, the update name, and the QNumber associated with each update. If an update needs to be excluded, that update should be added to the CustomSettings.ini file (for LTI deployments).  
 
 |**Property configured by**|||**Property applies to**||  
 |-|-|-|-|-|  
@@ -8556,7 +8556,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 #### WUMU_ExcludeID  
  The list of Windows Update/Microsoft Update software updates to ignore (by associated update ID).  
 
- Deployment project team members will want to periodically review the list of updates being installed by the ZTIWindowsUpdate.wsf script to verify that each update meets the project’s needs and expectations. All updates are logged and recorded in the ZTIWindowsUpdate.log file, which is generated during deployment. Each update will indicate its status as INSTALL or SKIP and lists the UpdateID, the update name, and the QNumber associated with each update. If an update should be excluded, that update should be added to the CustomSettings.ini file (for LTI deployments).  
+ Deployment project team members will want to periodically review the list of updates being installed by the ZTIWindowsUpdate.wsf script to verify that each update meets the project's needs and expectations. All updates are logged and recorded in the ZTIWindowsUpdate.log file, which is generated during deployment. Each update will indicate its status as INSTALL or SKIP and lists the UpdateID, the update name, and the QNumber associated with each update. If an update should be excluded, that update should be added to the CustomSettings.ini file (for LTI deployments).  
 
  For example, if the installation of the Windows Malicious Software Removal Tool should be excluded, look up the line in the ZTIWindowsUpdate.log that shows where the update was identified and installed, and then select the UpdateID number. For example, the UpdateID number for the Windows Malicious Software Removal Tool is adbe6425-6560-4d40-9478-1e35b3cdab4f.  
 
@@ -9186,7 +9186,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |**FolderPath**||-|  
 
 ###  <a name="LTIOEM.wsf"></a> LTIOEM.wsf  
- This script is used by an OEM during an LTI OEM scenario to copy the contents of a media deployment share to the target computer’s hard disk to prepare it for duplication.  
+ This script is used by an OEM during an LTI OEM scenario to copy the contents of a media deployment share to the target computer's hard disk to prepare it for duplication.  
 
 |**Value**|**Description**|  
 |-|-|
@@ -9214,7 +9214,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |**TSGUID**|-||  
 
 ###  <a name="LTISuspend.wsf"></a> LTISuspend.wsf  
- This script suspends a task sequence to allow manual tasks to be performed. When this script runs, it creates a **Resume Task Sequence** shortcut on the user’s desktop that allows the user to restart the task sequence after all manual tasks are completed.  
+ This script suspends a task sequence to allow manual tasks to be performed. When this script runs, it creates a **Resume Task Sequence** shortcut on the user's desktop that allows the user to restart the task sequence after all manual tasks are completed.  
 
 > [!NOTE]
 >  This script is only supported while in the full operating system.  
@@ -9420,9 +9420,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="ZTIApplications.wsf"></a> ZTIApplications.wsf  
  This script initiates an installation of applications that have been configured in the Applications node in Deployment Workbench. This script will not attempt to install any application that:  
 
--   Does not support the target computer’s platform type  
+-   Does not support the target computer's platform type  
 
--   Does not support the target computer’s processor type  
+-   Does not support the target computer's processor type  
 
 -   Has an uninstall entry in the registry under **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall**  
 
@@ -10879,7 +10879,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 -   Verify that the hard disk size meets the minimum size requirements; if not, the script exits.  
 
--   Verify that the target computer’s operating system is installed on drive C; if not, the script exits.  
+-   Verify that the target computer's operating system is installed on drive C; if not, the script exits.  
 
 -   If **DeploymentType = REFRESH**, verify that drive C is not compressed by running `Compact /u C:\`.  
 
@@ -10979,7 +10979,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 -   Microsoft Exchange Server and SQL Server updates  
 
--   Microsoft Visual Studio® updates  
+-   Microsoft Visual Studio&reg; updates  
 
 -   Some non-Microsoft application updates  
 
@@ -11044,9 +11044,6 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 > [!NOTE]
 >  By default, include **QNumber 925471** in the **WUMU_ExcludeKB** list to prevent Windows Vista Ultimate from installing extra language packs.  
 
-> [!NOTE]
->  If intranet sources are not available, this script downloads files from two Microsoft sites: [https://update.microsoft.com/redist/wuredist.cab](https://update.microsoft.com/redist/wuredist.cab) and [https://download.windowsupdate.com/v6/windowsupdate/redist/standalone/muauth.cab](https://download.windowsupdate.com/v6/windowsupdate/redist/standalone/muauth.cab).  
-
 |**Value**|**Description**|  
 |-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
@@ -11091,7 +11088,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |**WUMU_ExcludeKB**|-||  
 
 ###  <a name="ZTIWipeDisk.wsf"></a> ZTIWipeDisk.wsf  
- This script formats the target computer’s hard disk. The script:  
+ This script formats the target computer's hard disk. The script:  
 
 -   Exits if **WipeDisk** is not equal to **TRUE**  
 
@@ -11336,14 +11333,14 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="Wimscript.ini"></a> Wimscript.ini  
  This .ini file is an ImageX configuration file that contains the list of folders and files that will be excluded from an image. It is referenced by ImageX during the LTI Capture Phase.  
 
- For assistance with customizing this file, see the section, "Create an ImageX Configuration File," in the *Windows Preinstallation Environment (Windows PE) User’s Guide*.  
+ For assistance with customizing this file, see the section, "Create an ImageX Configuration File," in the *Windows Preinstallation Environment (Windows PE) User's Guide*.  
 
 |**Value**|**Description**|  
 |-|-|
 |**Location**|*distribution*\Tools\\*platform*|  
 
 ###  <a name="ZTIBIOSCheck.xml"></a> ZTIBIOSCheck.xml  
- This XML file contains metadata about BIOSes for target computers. This file is edited manually and is read by [ZTIBIOSCheck.wsf](#ZTIBIOSCheck.wsf). Extract the necessary information from a target computer to create an entry in this XML file using the Microsoft Visual Basic® Scripting Edition (VBScript) program (ZTIBIOS_Extract_Utility.vbs) that is embedded in this XML file.  
+ This XML file contains metadata about BIOSes for target computers. This file is edited manually and is read by [ZTIBIOSCheck.wsf](#ZTIBIOSCheck.wsf). Extract the necessary information from a target computer to create an entry in this XML file using the Microsoft Visual Basic&reg; Scripting Edition (VBScript) program (ZTIBIOS_Extract_Utility.vbs) that is embedded in this XML file.  
 
 |**Value**|**Description**|  
 |-|-|
@@ -11462,7 +11459,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="Bootsect.exe"></a> Bootsect.exe  
  Bootsect.exe updates the master boot code for hard disk partitions to switch between BOOTMGR and NTLDR. Use this utility to restore the boot sector on the computer.  
 
- For more information on Bootsect.exe, see the section, "Bootsect Command-Line Options," in the *Windows Preinstallation Environment (Windows PE) User’s Guide*.  
+ For more information on Bootsect.exe, see the section, "Bootsect Command-Line Options," in the *Windows Preinstallation Environment (Windows PE) User's Guide*.  
 
 |**Value**|**Description**|  
 |-|-|
@@ -11504,7 +11501,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="Diskpart.exe"></a> Diskpart.exe  
  Diskpart is a text-mode command interpreter that allows management of objects (disks, partitions, or volumes) using scripts or direct input in a Command Prompt window.  
 
- For more information on Diskpart.exe, see the section, "Diskpart Command-Line Options," in the *Windows Preinstallation Environment (Windows PE) User’s Guide*.  
+ For more information on Diskpart.exe, see the section, "Diskpart Command-Line Options," in the *Windows Preinstallation Environment (Windows PE) User's Guide*.  
 
 |**Value**|**Description**|  
 |-|-|
@@ -11537,7 +11534,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="ImageX.exe"></a> ImageX.exe  
  ImageX is a command-line utility that enables OEMs and corporations to capture, modify, and apply file-based disk images for rapid deployment. ImageX works with WIM files for copying to a network, or it can work with other technologies that use WIM images, such as Windows Setup and Windows Deployment Services.  
 
- For more information about ImageX, see the section, "What is ImageX," in the *Windows Preinstallation Environment (Windows PE) User’s Guide*.  
+ For more information about ImageX, see the section, "What is ImageX," in the *Windows Preinstallation Environment (Windows PE) User's Guide*.  
 
 |**Value**|**Description**|  
 |-|-|
@@ -11619,7 +11616,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="Wpeutil.exe"></a> Wpeutil.exe  
  The Windows PE utility (Wpeutil) is a command-line utility with which various commands can be run in a Windows PE session. For example, an administrator can shut down or reboot Windows PE, activate or deactivate a firewall, configure language settings, and initialize a network. MDT uses the utility to initialize Windows PE and network connections, and start LTI deployments.  
 
- For more information on Wpeutil.exe, see the section, "Wpeutil Command-Line Options," in the *Windows Preinstallation Environment (Windows PE) User’s Guide*.  
+ For more information on Wpeutil.exe, see the section, "Wpeutil Command-Line Options," in the *Windows Preinstallation Environment (Windows PE) User's Guide*.  
 
 |**Value**|**Description**|  
 |-|-|
@@ -11711,7 +11708,7 @@ Add-MDTPersistentDrive [-Name] <String> [[-InputObject] <PSObject>] [<CommonPara
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -11774,7 +11771,7 @@ Disable-MDTMonitorService [<CommonParameters>]
  This subsection provides information about the various parameters that can be used with the **Disable-MDTMonitorService** cmdlet.  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can accessed by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can accessed by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -11838,7 +11835,7 @@ Enable-MDTMonitorService [-EventPort] <Int32> [-DataPort] <Int32> [<CommonParame
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -11922,7 +11919,7 @@ Get-MDTDeploymentShareStatistics [-Path <String>] [<CommonParameters>]
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -12018,7 +12015,7 @@ ComputerIdentities : {}
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -12096,7 +12093,7 @@ Get-MDTOperatingSystemCatalog [-ImageFile] <String> [-Index] <Int32> [<CommonPar
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -12141,7 +12138,7 @@ Get-MDTPersistentDrive [<CommonParameters>]
  This subsection provides information about the various parameters that can be used with the **Get- MDTPersistentDrive** cmdlet.  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -12240,7 +12237,7 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 |**Accept wildcard characters?**|**False**|  
 
 ##### -Move [<SwitchParameter\>]  
- This parameter specifies whether the application’s source files should be moved (instead of copied) from the folder where the application’s source files are located, which is specified in the *ApplicationSourcePath* parameter.  
+ This parameter specifies whether the application's source files should be moved (instead of copied) from the folder where the application's source files are located, which is specified in the *ApplicationSourcePath* parameter.  
 
  If this parameter is:  
 
@@ -12287,7 +12284,7 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -12395,7 +12392,7 @@ Import-MDTDriver [-Path <String>] -SourcePath <String[]> [ImportDuplicates] [<Co
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -12547,7 +12544,7 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -12633,7 +12630,7 @@ Import-MDTPackage [-Path <String>] [[-SourcePath] <String[]>] [<CommonParameters
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -12853,7 +12850,7 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -12869,7 +12866,7 @@ Import-MDTTaskSequence -Path "DS001:\Control" –Template "Client.xml" –Name "
 ```  
 
 ##### Description  
- This example imports a task sequence named *Deploy Windows 8 to Reference Computer* and creates the task sequence in the DS001:\Control\WIN8REFERENCE folder in the deployment share. The comment, “Task sequence for deploying Windows 8 to the reference computer (WDG-REF-01),” is assigned to the task sequence. The version number of the task sequence is set to **1.00**.  
+ This example imports a task sequence named *Deploy Windows 8 to Reference Computer* and creates the task sequence in the DS001:\Control\WIN8REFERENCE folder in the deployment share. The comment, "Task sequence for deploying Windows 8 to the reference computer (WDG-REF-01)," is assigned to the task sequence. The version number of the task sequence is set to **1.00**.  
 
  The operating system associated with the task sequence is located at DS001:\Operating Systems\Windows 8_x64 in the deployment share. The registered owner of the operating system will be set to **Woodgrove Bank Employee**. The registered organization of the operating system will be set to **Woodgrove Bank**. The Internet Explorer home page will default to `https://www.woodgrovebank.com`. The password for the local, built-in Administrator account will be set to a value of `P@ssw0rd`. The product key for the operating system will be set to **1234512345123451234512345**.  
 
@@ -12881,7 +12878,7 @@ Import-MDTTaskSequence -Path "DS001:\Control" –Template "Client.xml" –Name "
 ```  
 
 ##### Description  
- This example imports a task sequence named *Deploy Windows 8 to Reference Computer* and creates the task sequence in the DS001:\Control\WIN8REFERENCE folder in the deployment share. The comment, “Task sequence for deploying Windows 8 to the reference computer (WDG-REF-01),” is assigned to the task sequence. The version number of the task sequence is set to **1.00**.  
+ This example imports a task sequence named *Deploy Windows 8 to Reference Computer* and creates the task sequence in the DS001:\Control\WIN8REFERENCE folder in the deployment share. The comment, "Task sequence for deploying Windows 8 to the reference computer (WDG-REF-01)," is assigned to the task sequence. The version number of the task sequence is set to **1.00**.  
 
  The operating system associated with the task sequence is located at DS001:\Operating Systems\Windows 8_x64 in the deployment share, which is passed to the cmdlet using the *$OSObject* variable. The *$OSObject* variable is set to an existing operating system object using the **Get-Item** cmdlet.  
 
@@ -13012,7 +13009,7 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -13104,7 +13101,7 @@ Remove-MDTMonitorData [-Path <String>] [-ComputerObject <PSObject>] [<CommonPara
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -13186,7 +13183,7 @@ Remove-MDTPersistentDrive [-Name] <String> [[-InputObject] <PSObject>] [<CommonP
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -13250,7 +13247,7 @@ Restore-MDTPersistentDrive [-Force] [<CommonParameters>]
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -13355,7 +13352,7 @@ Set-MDTMonitorData [-Path <String>] [-MacAddress <String>] [Settings <Hashtable>
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -13446,7 +13443,7 @@ Test-MDTMonitorData -ServerName <String> -EventPort <Int32> -DataPort <Int32> [<
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -13549,7 +13546,7 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -13639,7 +13636,7 @@ Update-MDTDeploymentShare [-Path <String>] [-Force] [Compress] [<CommonParameter
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -13714,7 +13711,7 @@ Update-MDTLinkedDS -Path <String> [<CommonParameters>]
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -13764,7 +13761,7 @@ Update-MDTMedia -Path <String> [<CommonParameters>]
 |**Accept wildcard characters?**|**False**|  
 
 ##### <CommonParameters\>  
- This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, “about_CommonParameters,” which you can access by typing the following command, and then pressing ENTER:  
+ This cmdlet supports the following common parameters: *Verbose, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction,* and *WarningVariable.* For more information, see the topic, "about_CommonParameters," which you can access by typing the following command, and then pressing ENTER:  
 
 ```  
 Get-Help about_CommonParameters  
@@ -13840,7 +13837,7 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 |**Feature**|**Parent Feature**|**Dependent Features**|  
 |-|-|-|  
-|Windows Media® Center|Media Features|Might affect other Windows features|  
+|Windows Media&reg; Center|Media Features|Might affect other Windows features|  
 |Windows DVD Maker|Media Features|Might affect other Windows features|  
 |Windows Media Player|Media Features|Might affect other Windows features|  
 |Windows Search|N/A|Might affect other Windows features|  
