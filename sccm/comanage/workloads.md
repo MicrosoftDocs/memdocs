@@ -124,6 +124,10 @@ Starting in version 1910, when you enable Microsoft Connected Cache on your Conf
 
 [View the diagram at full size](media/co-management-apps.svg)
 
+## Known issues
+
+When the Endpoint Protection workload is moved over to Intune, but the client is still honoring policies set by Configuration Manager and Microsoft Defender....
+
 ## Next steps
 
 [How to switch workloads](/sccm/comanage/how-to-switch-workloads)  
