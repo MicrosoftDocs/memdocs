@@ -5,7 +5,7 @@ description: Learn about the features and functionality of Software Center
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 11/29/2019
+ms.date: 04/12/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -141,6 +141,29 @@ Specify how Software Center applies changes to software before the deadline
 - **Suspend Software Center activities when my computer is in presentation mode**: This setting is enabled by default.
 - **Sync Policy**: Select this button when instructed by your IT admin. This computer checks with the servers for anything new, such as applications, software updates, or operating systems.
 
+### Remote Control
+
+Specify remote access and remote control settings for your computer
+
+- **Use remote access settings from your IT Department**: This checkbox is selected by default.
+- **Level of remote access allowed**: Select from the following 3 options
+    - **Do not allow remote access**
+    - **View only**
+    - **Full**: This level is enabled by default.
+- **Allow remote control of this computer by administrators when I am away**. This setting is set to **Yes** by default.
+- **When an administrator tries to control this computer remotely**: This setting has two options
+    - **Ask for permission each time**: This option is selected by default.
+    - **Do not ask for permission**
+- **Show the following during remote control**: Both options are selected by default
+    - **Status icon in the notification area**
+    - **A session connection bar on the desktop**
+- **Play sound**: This setting has three options
+    - **When session begins and ends**: This setting is selected by default.
+    - **Repeatedly during session**
+    - **Never**
+
+    For more info, see [Introduction to Remote Control](/configmgr/core/clients/manage/remote-control/introduction-to-remote-control)
+    
 
 ## Custom tab in Software Center
 
