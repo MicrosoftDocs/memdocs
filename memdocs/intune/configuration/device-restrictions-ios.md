@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -327,7 +327,10 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
 
+
 - **Spotlight search to return results from internet**: **Block** stops Spotlight from returning any results from an Internet search. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Spotlight search connect to the Internet to provide search results.
+
+  This setting is duplicated in the UI, and will be fixed in an upcoming release. Currently, this setting applies to supervised devices. In a future release, this setting applies to device enrolled and automated device enrolled devices, and won't require supervision.
 
 - **Safari cookies**: Select how cookies are handled on devices. Your options:
   - Allow
@@ -389,6 +392,8 @@ These settings are added to a device configuration profile in Intune, and then a
 - **Changes to the Find My Friends app settings**: **Block** prevents changes to the Find My Friends app settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change settings for the Find My Friends app.
 
 - **Spotlight search to return results from internet**: **Block** stops Spotlight from returning any results from an Internet search. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Spotlight search connect to the Internet to provide search results.
+
+  This setting is duplicated in the UI, and will be fixed in an upcoming release. Currently, this setting applies to supervised devices. In a future release, this setting applies to device enrolled and automated device enrolled devices, and won't require supervision.
 
 - **Block removal of system apps from device**: **Block** disables the ability to remove system apps from devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to remove system apps.
 
