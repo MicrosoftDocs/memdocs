@@ -46,7 +46,7 @@ This article lists these settings, and describes what each setting does. It also
 
 ### Settings apply to: All enrollment types
 
-- **Add**: Add one AirPrint printer, or many AirPrint printers users can print from their devices. Also enter:
+- **AirPrint destinations**: **Add** one or more AirPrint printers users can print from their devices. Also enter:
   - **Port** (iOS 11.0+, iPadOS 13.0+): Enter the listening port of the AirPrint destination. If you leave this property blank, AirPrint uses the default port.
   - **IP address**: Enter the IPv4 or IPv6 address of the printer. For example, enter `10.0.0.1`. If you use host names to identify printers, you can get the IP address by pinging the printer in the Terminal app. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) provides more details.
   - **Resource path**: Enter the path of the printer. The path is typically `ipp/print` for printers on your network. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) provides more details.
@@ -85,7 +85,7 @@ This feature applies to:
 
 ### Settings apply to: User approved device enrollment, and Automated device enrollment
 
-- **Associated domains**: **Add** an association between your domain and an app. This feature shares sign-on credentials between a Contoso app and a Contoso website. Also enter:
+- **Associated domains**: **Add** an association between your domain and an app. This feature shares sign on credentials between a Contoso app and a Contoso website. Also enter:
 
   - **App ID**: Enter the app identifier of the app to associate with a website. The app identifier includes the team ID and a bundle ID: `TeamID.BundleID`.
 
@@ -126,9 +126,9 @@ This feature applies to:
     When adding any app, folder, or file, be sure to enter the correct path. Not all items are in the `Applications` folder. If users move an item from one location to another, then the path changes. This moved item won't be opened when the user signs in.
 
   - **Hide**: Choose to show or hide the app. Your options:
-    - **Not configured**: Intune doesn't change or update this setting. By default, the OS shows item you start at login in the Users & Groups login items list with the hide option unchecked.
+    - **Not configured**: Intune doesn't change or update this setting. By default, the OS might show items in the Users & Groups login items list with the hide option unchecked.
     - **No**: Shows the app in the Users & Groups login items list.
-    - **Yes**: Doesn't show the app in the Users & Groups login items list.
+    - **Yes**: Hides the app in the Users & Groups login items list.
 
   > [!NOTE]
   > This setting is rolling out to all customers over the next couple of weeks.
@@ -201,7 +201,7 @@ This feature applies to:
     - String
     - Boolean: In **Configuration value**, enter `True` or `False`.
     - Integer: In **Configuration value**, enter a number.
-    
+
   - **Value**: Enter the data.
   
   - **Add**: Select to add your configuration keys.
