@@ -71,9 +71,9 @@ To create a new work profile passcode, use the Reset Passcode action. This actio
 
 Supported Android Enterprise devices enrolled with a work profile receive a new managed profile unlock password or a managed profile challenge for the end user.
 
-For Android Enterprise devices running version 8.x or later and enrolled with a work profile, end users get notified to activate their reset passcode right after enrollment is completed. The notification is displayed if a work profile password is required and set. Once their passcode is entered, the notification is dismissed.
+For Android Enterprise work profile devices running version 8.x or later, end users get notified to activate their reset passcode right after enrollment completes. The notification is displayed if a work profile password is required and set. After their passcode is entered, the notification is dismissed.
 
-For Android Enterprise devices running version 8.x or later and enrolled with Device Owner or Work Profile, after reset passcode is selected from the console, the MEM Intune admin will be presented with a temporary passcode.  The temporary passcode will need to be entered on the device directly.  The temporary passcode for the device will be displayed in the console for 7 days.
+For Android Enterprise device owner or work profile devices running version 8.x or later, after the reset passcode is selected from the console, the MEM Intune admin is presented with a temporary passcode. The temporary passcode must be entered on the device. The temporary passcode for the device will be displayed in the console for 7 days.
 
 
 ## Remove iOS/iPadOS passcodes
