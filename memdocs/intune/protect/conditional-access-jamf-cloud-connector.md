@@ -203,9 +203,7 @@ After you configure integration between Intune and Jamf, you need to [apply comp
 
 ## Disconnect Jamf Pro and Intune
 
-Should you need to remove integration of Jamf Pro with Intune, use the following steps to remove the connection from within the Jamf Pro console.
-
-If you no longer use Jamf Pro to manage Macs in your organization and want users to be managed by Intune, you must remove the connection between Jamf Pro and Intune. Remove the connection by using the Jamf Pro console.
+Should you need to remove integration of Jamf Pro with Intune, use the following steps to remove the connection from within the Jamf Pro console.This information applies to both the Cloud Connector and for a manually configured integration.
 
 1. In Jamf Pro, go to **Global Management** > **Conditional Access**. On the **macOS Intune Integration** tab, select **Edit**.
 
@@ -222,7 +220,11 @@ If you no longer use Jamf Pro to manage Macs in your organization and want users
 
 ## Get support for the Cloud Connector
 
-Because the cloud connector automatically creates the Azure Enterprise apps necessary for integration, your first point of contact for support should be **Jamf**.
+Because the cloud connector automatically creates the Azure Enterprise apps necessary for integration, your first point of contact for support should be **Jamf**. Options include:
+
+- Email support at `support@jamf.com`
+- Use the support portal at Jamf Nation: https://www.jamf.com/support/ 
+
 
 Prior to contacting support:
 
