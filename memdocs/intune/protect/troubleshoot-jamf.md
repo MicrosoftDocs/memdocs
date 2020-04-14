@@ -229,8 +229,8 @@ If a device is unenrolled from Jamf but not correctly removed from Intune, or se
    - Kind: Application password ; Account: com.microsoft.workplacejoin.registeredUserPrincipalName
    - Kind: Certificate ; Issued by: MS-Organization-Access
    - Kind: Identity preference ; Name (ADFS STS URL if present): https://adfs\<DNSName>.com/adfs/ls
-   - Kind: Identity preference ; Name: https://enterpriseregistration.windows.net
-   - Kind: Identity preference ; Name: https://enterpriseregistration.windows.net/  
+   - Kind: Identity preference ; Name: `https://enterpriseregistration.windows.net`
+   - Kind: Identity preference ; Name: `https://enterpriseregistration.windows.net/`
 9. Restart the Mac device.
 10. Uninstall Company Portal from the device.
 11. Go to portal.manage.microsoft.com and delete out all the instances of the Mac device. Wait at least 30 minutes before you go to the next step.
