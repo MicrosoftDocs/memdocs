@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -37,18 +37,18 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-[Create a device kernel extensions configuration profile](kernel-extensions-overview-macos.md).
+[Create a macOS device kernel extensions configuration profile](kernel-extensions-overview-macos.md).
 
 > [!NOTE]
 > These settings apply to different enrollment types. For more information on the different enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
 
 ## Kernel extensions
 
-### Settings apply to: User approved, Automated device enrollment
+### Settings apply to: User approved device enrollment, Automated device enrollment
 
-- **Allow User Overrides**: **Allow** lets users approve kernel extensions not included in the configuration profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from allowing extensions not included in the configuration profile. Meaning, only extensions included in the configuration profile are allowed.
+- **Allow User Overrides**: **Yes** lets users approve kernel extensions not included in the configuration profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from allowing extensions not included in the configuration profile. Meaning, only extensions included in the configuration profile are allowed.
 
-  See [user-approved kernel extension loading](https://developer.apple.com/library/archive/technotes/tn2459/_index.html) (opens Apple's web site) for more information on this feature.
+  For more information on this feature, see [user-approved kernel extension loading](https://developer.apple.com/library/archive/technotes/tn2459/_index.html) (opens Apple's web site).
 
 - **Allowed Team Identifiers**: Use this setting to allow one or many team IDs. Any kernel extensions signed with the team IDs you enter are allowed and trusted. In other words, use this option to allow all kernel extensions within the same team ID, which may be a specific developer or partner.
 
