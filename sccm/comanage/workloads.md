@@ -5,7 +5,7 @@ description: Learn about the workloads that you can switch from Configuration Ma
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -78,6 +78,8 @@ For more information on the Intune feature, see [Endpoint Protection for Microso
 > When you switch this workload, the Configuration Manager policies stay on the device until the Intune policies overwrite them. This behavior makes sure that the device still has protection policies during the transition.
 >
 > The Endpoint Protection workload is also part of device configuration. The same behavior applies when you switch the [Device Configuration](#device-configuration) workload.<!-- SCCMDocs.nl-nl issue #4 -->
+>
+> The Microsoft Defender Antivirus settings that are part of the Device restrictions profile type for Device Configuration don't work with Intune. However, the new policies in **Microsoft Endpoint Manager admin center** > **Endpoint Security** > **Antivirus** work with co-management. The new policy settings are equivalent to the Device restriction settings. <!--6609171-->
 
 ## Device configuration
 
