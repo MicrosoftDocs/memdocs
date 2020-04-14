@@ -8617,7 +8617,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="ProvidingPropertiesforSkippedDeploymentWizardPages"></a> Providing Properties for Skipped Deployment Wizard Pages  
  Table 6 lists the individual Deployment Wizard pages, the property to skip the corresponding wizard page, and the properties that must be configured when skipping the wizard page.  
 
- If the **SkipWizard** property is used to skip all the Deployment Wizard pages, provide all the properties in the **Configure these properties**column. For examples of various deployment scenarios that skip Deployment Wizard pages, see the section, "Fully Automated LTI Deployment Scenario", in the MDT document *Microsoft Deployment Toolkit Samples Guide*.  
+ If the **SkipWizard** property is used to skip all the Deployment Wizard pages, provide all the properties in the **Configure these properties** column. For examples of various deployment scenarios that skip Deployment Wizard pages, see the section, "Fully Automated LTI Deployment Scenario", in the MDT document *Microsoft Deployment Toolkit Samples Guide*.  
 
 > [!NOTE]
 >  In instances where the **Configure These Properties** column is blank, no properties need to be configured when skipping the corresponding wizard page.  
@@ -9696,7 +9696,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |          **Value**          |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     **/debug:*value***      | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
-| **/CoalesceDigits:*value*** |                  Specifies the number of digits that need to be provided when creating the numbering sequence. For example, a value of:<br /><br /> -                              **2** would create PACKAGE03<br /><br /> -                              **3**would create PACKAGE003<br /><br /> The default value if this argument is not provided is **3**.                   |
+| **/CoalesceDigits:*value*** |                  Specifies the number of digits that need to be provided when creating the numbering sequence. For example, a value of:<br /><br /> -                              **2** would create PACKAGE03<br /><br /> -                              **3** would create PACKAGE003<br /><br /> The default value if this argument is not provided is **3**.                   |
 
 #### Properties  
 
@@ -10278,7 +10278,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="ZTIModifyVol.wsf"></a> ZTIModifyVol.wsf  
  This script modifies a volume to set the GPT ID and attributes for utility volumes, which is necessary for creating Windows RE partitions on computers with UEFI. This script needs to be called when deploying to computers with UEFI for these situations:  
 
--   LTI deployments where custom partition (volume) structures are being created, such as creating five partition instead of the standard four partitions that are typicaly created for use with UEFI  
+-   LTI deployments where custom partition (volume) structures are being created, such as creating five partition instead of the standard four partitions that are typically created for use with UEFI  
 
 -   All ZTI and UDI deployments  
 
@@ -11012,7 +11012,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 - Configure the target computer to use a WSUS server, if the **WSUSServer** property was specified.  
 
-- Verify that the latest version ofthe WUA is installed on the target computer.  
+- Verify that the latest version of the WUA is installed on the target computer.  
 
 - Search the target computer for applicable updates that are not already installed and that might be typically hidden.  
 
@@ -13341,7 +13341,7 @@ Set-MDTMonitorData [-Path <String>] [-MacAddress <String>] [Settings <Hashtable>
 ##### -Settings <Hashtable\>  
  This parameter specifies the monitoring data settings for the monitoring data item to be created or updated. The format of the hashtable provided with this parameter is `@{"Setting"="Value"; "Setting1"="Value1"; "Setting2"="Value2}`. If this parameter is not specified, then the monitoring data item is created, but no monitoring information is stored.  
 
- `"Setting"` can be any property listed in the ZTIGather.xml file. `Value` can be any valid value for the property specfied in `"Setting"`.  
+ `"Setting"` can be any property listed in the ZTIGather.xml file. `Value` can be any valid value for the property specified in `"Setting"`.  
 
 |**Parameter**|**Value**|  
 |-|-|  
@@ -15178,12 +15178,12 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 |`OSDNetworkJoinType=0`|  
 
 ####  <a name="OSDSetupWizCancelled"></a> OSDSetupWizCancelled  
- This task sequence variable specifies if the user cancelled the Operating System Deployment (OSD) Setup Wizard.  
+ This task sequence variable specifies if the user canceled the Operating System Deployment (OSD) Setup Wizard.  
 
 |**Value**|**Description**|  
 |-|-|
-|**TRUE**|The user cancelled the Operating System Deployment (OSD) Setup Wizard.|  
-|Does not exist|If the wizard is not cancelled, then the task sequence variable does not exist.|  
+|**TRUE**|The user canceled the Operating System Deployment (OSD) Setup Wizard.|  
+|Does not exist|If the wizard is not canceled, then the task sequence variable does not exist.|  
 
 |**Example**|  
 |-|  
