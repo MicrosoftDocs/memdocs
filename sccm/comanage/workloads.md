@@ -126,7 +126,20 @@ Starting in version 1910, when you enable Microsoft Connected Cache on your Conf
 
 ## Known issues
 
-When the Endpoint Protection workload is moved over to Intune, but the client is still honoring policies set by Configuration Manager and Microsoft Defender....
+When the Endpoint Protection workload is moved over to Intune, the client may still honor policies set by Configuration Manager and Microsoft Defender. <!--5024559-->
+
+To work around this issue, apply the CleanUpPolicy.xml using ConfigSecurityPolicy.exe after the Intune policies have been received by the client using the steps below:
+
+1. Copy and save the below text as `CleanUpPolicy.xml`.
+
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <SecurityPolicy xmlns="http://forefront.microsoft.com/FEP/2010/01/PolicyData" Name="FEP clean-up policy"><PolicySection Name="FEP.AmPolicy"><LocalGroupPolicySettings><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware"/><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Windows Defender"/></LocalGroupPolicySettings></PolicySection></SecurityPolicy>
+   ```
+1. Open an elevated command prompt to `ConfigSecurityPolicy.exe`. Typically this executable is in one of the following directories:
+   - C:\Program Files\Windows Defender
+   - C:\Program Files\Microsoft Security Client
+1. From the command prompt, pass in the xml file to clean up the policy. For example, `ConfigSecurityPolicy.exe C:\temp\CleanUpPolicy.xml`.  
 
 ## Next steps
 
