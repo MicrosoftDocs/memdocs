@@ -2,7 +2,7 @@
 title: Endpoint analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for Endpoint analytics preview.
-ms.date: 04/08/2020
+ms.date: 04/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -53,6 +53,7 @@ This current preview requires:
 - The [Intune Service Administrator role](https://docs.microsoft.com/intune/fundamentals/role-based-access-control) is required to [start gathering data](#bkmk_uea_start).
    - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
    - After clicking **Start** for gathering data, other read-only roles can view the data.
+- For [**Proactive remediation scripting**](#bkmk_uea_prs), devices need to be [co-managed](/configmgr/comanage/overview).
 
 We're in the process of rolling out a private preview Configuration Manager connector, which won't have the limitations above. It will work for any version and edition of Windows and won't require Azure AD or Intune enrollment.
 
@@ -68,7 +69,22 @@ Proactive remediations also require one of the following licenses for the manage
 - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows Virtual Desktop Access E3 or E5
 
-### <a name="bkmk_uea_start"></a> Start gathering data
+### Permissions
+
+#### Endpoint analytics permissions
+
+The following permissions are used for Endpoint analytics:
+- **Read** under the **Device configurations** category.
+- Permissions appropriate to the user's role under the **Endpoint Analytics** category.
+
+A read-only user would only need the **Read** permission under both the **Device configurations** and **Endpoint Analytics** categories. An Intune administrator would typically need all permissions.
+
+#### Proactive remediations permissions
+
+For Proactive remediations, the user needs permissions appropriate to their role under the **Device configurations** category.  Permissions in the **Endpoint Analytics** category aren't needed if the user only uses Proactive remediations.
+
+
+## <a name="bkmk_uea_start"></a> Start gathering data
 
 1. Go to `https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
 1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](#bkmk_uea_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
@@ -200,7 +216,7 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
      [![Endpoint analytics Proactive remediations page. Select the create link.](media/proactive-remediations-create.png)](media/proactive-remediations-create.png#lightbox)
 1. In the **Basics** step, give the script package a **Name** and optionally, a **description**. The **Publisher** field can be edited, but defaults to your tenant name. **Version** can't be edited. 
 1. On the **Settings** step, copy the text from the scripts you downloaded into the **Detection script** and **Remediation script** fields. 
-   - You need the corresponding detection and remediation script to be in the same package. For example, the `DetGPLastUpd.ps1` detection script corresponds with the `RemGPLastUpd.ps11` remediation script.
+   - You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_stale_Group_Policies.ps1` detection script corresponds with the `Remediate_stale_GroupPolicies.ps1` remediation script.
        [![Endpoint analytics Proactive remediations script settings page.](media/proactive-remediations-script-settings.png)](media/proactive-remediations-script-settings.png#lightbox)
 1. Finish the options on the **Settings** page with the following recommended configurations:
    - **Run this script using the logged-on credentials**: This is dependent on the script. For more information, see the [Script descriptions](#bkmk_uea_scripts).
@@ -342,23 +358,23 @@ The scripts exit with a code of 1 to signal to Intune that remediation should oc
 
 ## <a name="bkmk_uea_scripts"></a> Script descriptions
 
-This table shows the script names, descriptions, detections, remediations, and configurable items. Script files whose names start with `det` are detection scripts. Remediation scripts start with `rem`. These scripts can be copied from the next section in this article.
+This table shows the script names, descriptions, detections, remediations, and configurable items. Script files whose names start with `Detect` are detection scripts. Remediation scripts start with `Remediate`. These scripts can be copied from the next section in this article.
 
 |Script name|Description|
 |---|---|
-|**Update stale Group Policies** </br>`DetGPLastUpd.ps1` </br> `RemGPLastUpd.ps1`| Detects if last Group Policy refresh is greater than `7 days` ago.  </br>Customize the 7-day threshold by changing the value for `$numDays` in the detection script. </br></br>Remediates by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`  </br> </br>Can help reduce network connectivity-related support calls when certificates and configurations are delivered via Group Policy. </br> </br> **Run the script using the logged-on credentials**: Yes|
-|**Restart Office Click-to-Run service** </br> `DetectClickToRunServiceState.ps1` </br> `RemediateClickToRunServiceState.ps1`| Detects if the Click-to-Run service is set to automatically start and if the service is stopped. </br> </br> Remediates by setting the service to start automatically and starting the service if it's stopped. </br></br> Helps fix issues where Win32 Office 365 ProPlus won't launch because the Click-to-Run service is stopped. </br> </br> **Run the script using the logged-on credentials**: No|
-|**Check network certificates** </br>`DetExpIssuerCerts.ps1` </br>`RemExpIssuerCerts.ps1`|Detects certificates issued by a CA in either the Machine's or User's personal store that are expired, or near expiry. </br> Specify the CA by changing the value for `$strMatch` in the detection script. Specify 0 for `$expiringDays` to find expired certificates, or specify another number of days to find certificates near expiry.  </br></br>Remediates by raising a toast notification to the user. </br> Specify the `$Title` and `$msgText` values with the message title and text you want users to see. </br> </br> Notifies users of expired certificates that might need to be renewed. </br> </br> **Run the script using the logged-on credentials**: No|
-|**Clear stale certificates** </br>`DetExpUserCerts.ps1` </br> `RemExpUserCerts.ps1`| Detects expired certificates issued by a CA in the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the detection script. </br> </br> Remediates by deleting expired certificates issued by a CA from the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the remediation script. </br> </br> Finds and deletes expired certificates issued by a CA from the current user's personal store. </br> </br> **Run the script using the logged-on credentials**: Yes|
+|**Update stale Group Policies** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Detects if last Group Policy refresh is greater than `7 days` ago.  </br>Customize the 7-day threshold by changing the value for `$numDays` in the detection script. </br></br>Remediates by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`  </br> </br>Can help reduce network connectivity-related support calls when certificates and configurations are delivered via Group Policy. </br> </br> **Run the script using the logged-on credentials**: Yes|
+|**Restart Office Click-to-Run service** </br> `Detect_Click_To_Run_Service_State.ps1` </br> `Remediate_Click_To_Run_Service_State.ps1`| Detects if the Click-to-Run service is set to automatically start and if the service is stopped. </br> </br> Remediates by setting the service to start automatically and starting the service if it's stopped. </br></br> Helps fix issues where Win32 Office 365 ProPlus won't launch because the Click-to-Run service is stopped. </br> </br> **Run the script using the logged-on credentials**: No|
+|**Check network certificates** </br>`Detect_Expired_Issuer_Certificates.ps1` </br>`Remediate_Expired_Issuer_Certificates.ps1`|Detects certificates issued by a CA in either the Machine's or User's personal store that are expired, or near expiry. </br> Specify the CA by changing the value for `$strMatch` in the detection script. Specify 0 for `$expiringDays` to find expired certificates, or specify another number of days to find certificates near expiry.  </br></br>Remediates by raising a toast notification to the user. </br> Specify the `$Title` and `$msgText` values with the message title and text you want users to see. </br> </br> Notifies users of expired certificates that might need to be renewed. </br> </br> **Run the script using the logged-on credentials**: No|
+|**Clear stale certificates** </br>`Detect_Expired_User_Certificates.ps1` </br> `Remediate_Expired_User_Certificates.ps1`| Detects expired certificates issued by a CA in the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the detection script. </br> </br> Remediates by deleting expired certificates issued by a CA from the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the remediation script. </br> </br> Finds and deletes expired certificates issued by a CA from the current user's personal store. </br> </br> **Run the script using the logged-on credentials**: Yes|
 
 ## <a name="bkmk_uea_ps_scripts"></a> PowerShell Scripts
 
-### DetGPLastUpd.ps1
+### Detect_stale_Group_Policies.ps1
 
 ```powershell
 #=============================================================================================================================
 #
-# Script Name:     DetGPLastUpd.ps1
+# Script Name:     Detect_stale_Group_Policies.ps1
 # Description:     Detect if Group Policy has been updated within number of days
 # Notes:           Remediate if "Match", $numDays default value of 7, change as appropriate
 #
@@ -392,12 +408,12 @@ catch {
 }
 ```
 
-### RemGPLastUpd.ps1
+### Remediate_stale_GroupPolicies.ps1
 
 ```powershell
 #=============================================================================================================================
 #
-# Script Name:     RemGPLastUpd.ps1
+# Script Name:     Remediate_stale_GroupPolicies.ps1
 # Description:     This script triggers Group Policy update
 # Notes:           No variable substitution needed
 #
@@ -415,12 +431,12 @@ catch{
 }
 ```
 
-### DetectClickToRunServiceState.ps1
+### Detect_Click_To_Run_Service_State.ps1
 
 ```powershell
 #=============================================================================================================================
 #
-# Script Name:     DetectClickToRunServiceState.ps1
+# Script Name:     Detect_Click_To_Run_Service_State.ps1
 # Description:     Detect if Office 16 installed and if "Click to Run Service" is running.
 # Notes:           No variable substitution should be necessary
 #
@@ -462,12 +478,12 @@ Else{
 }
 ```
 
-### RemediateClickToRunServiceState.ps1
+### Remediate_Click_To_Run_Service_State.ps1
 
 ```powershell
 #=============================================================================================================================
 #
-# Script Name:     RemediateClickToRunServiceState.ps1
+# Script Name:     Remediate_Click_To_Run_Service_State.ps1
 # Description:     Start the "Click to Run Service" and change its startup type to Automatic
 #       Notes:     No variable substitution needed
 #
@@ -524,12 +540,12 @@ Catch{
 Return $curSvcStat
 ```
 
-### DetExpIssuerCerts.ps1
+### Detect_Expired_Issuer_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
 #
-# Script Name:     DetExpIssuerCerts.ps1
+# Script Name:     Detect_Expired_Issuer_Certificates.ps1
 # Description:     Detect expired certificates issued by "CN=<your CA here>" in either Machine
 #                  or User certificate store
 # Notes:           Change the value of the variable $strMatch from "CN=<your CA here>" to "CN=..."
@@ -566,12 +582,12 @@ catch{
 }
 ```
 
-### RemExpIssuerCerts.ps1
+### Remediate_Expired_Issuer_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
 #
-# Script Name:     RemExpIssuerCerts.ps1
+# Script Name:     Remediate_Expired_Issuer_Certificates.ps1
 # Description:     Raise a Toast Notification if expired certificates issued by "CN=..."
 #                  to user or machine on the machine where detection script found them. No remediation action besides
 #                  the Toast is taken.
@@ -610,12 +626,12 @@ $toast = New-Object Windows.UI.Notifications.ToastNotification $xml
 [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier($APP_ID).Show($toast)
 ```
 
-### DetExpUserCerts.ps1
+### Detect_Expired_User_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
 #
-# Script Name:     DetExpUserCerts.ps1
+# Script Name:     Detect_Expired_User_Certificates.ps1
 # Description:     Detect expired certificates issued by "CN=<your CA here>" to User
 # Notes:           Change the value of the variable $certCN from "CN=<your CA here>" to "CN=...".
 #                  Don't change $results
@@ -647,12 +663,12 @@ catch{
 }
 ```
 
-### RemExpUserCerts.ps1
+### Remediate_Expired_User_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
 #
-# Script Name:     RemExpUserCerts.ps1
+# Script Name:     Remediate_Expired_User_Certificates.ps1
 # Description:     Remove expired certificates issued by "CN=<your CA here>" to User
 # Notes:           Change the value of the variable $certCN from "CN=<your CA here>" to "CN=..."
 #
