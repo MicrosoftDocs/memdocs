@@ -943,19 +943,13 @@ ERROR - Unable to create ADODB.Connection object, impossible to query SQL Server
 
   **Figure 25. Flow chart for the Capture Phase**  
 
-## Finding Additional Help  
- Find additional help in resolving MDT deployment problems by:  
+## <a name="MicrosoftSupport"></a> Microsoft Support
 
--   Contacting Microsoft Support as described in [Microsoft Support](#MicrosoftSupport)  
+Microsoft provides Premier and Professional level support for Microsoft Deployment Toolkit.  
 
--   Obtaining additional support through blogs and other Internet resources as described in [Internet Support](#InternetSupport)  
+- Professional level support: [https://support.microsoft.com/](https://support.microsoft.com/)  
 
-###  <a name="MicrosoftSupport"></a> Microsoft Support  
- Microsoft provides Premier and Professional level support for Microsoft Deployment Toolkit.  
-
- Professional level support: [https://support.microsoft.com/](https://support.microsoft.com/)  
-
- Premier level support: [https://premier.microsoft.com/](https://premier.microsoft.com/)  
+- Premier level support: [https://premier.microsoft.com/](https://premier.microsoft.com/)  
 
 > [!NOTE]
->  When contacting support, be clear that the issue is with MDT and the specific version.  
+> When contacting support, be clear that the issue is with MDT and the specific version.
