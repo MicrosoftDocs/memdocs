@@ -91,7 +91,7 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
 ### Set up Windows Store for Business synchronization  
 
-1.  In Azure Active Directory, register Configuration Manager as a “Web Application and/or Web API” management tool. This will give you a client ID that you will need later.  
+1.  In Azure Active Directory, register Configuration Manager as a "Web Application and/or Web API" management tool. This will give you a client ID that you will need later.  
 
     1.  In the Active Directory node of [https://manage.windowsazure.com](https://manage.windowsazure.com), select your Azure Active Directory, then click **Applications** > **Add**.  
 
@@ -164,9 +164,9 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 ##  <a name="BKMK_VPP"></a> Enterprise Data Protection (EDP)  
  You can create configuration items that let you deploy your enterprise data protection (EDP) policies, including letting you choose your protected apps, your EDP-protection level, and how to find enterprise data on the network. For more information about EDP, see the following topics:  
 
--   [Protect your enterprise data using enterprise data protection (EDP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-edp)  
+- [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Create and deploy a Windows Information Protection (WIP) policy using Configuration Manager](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
 
--   [Create and deploy an enterprise data protection (EDP) policy using Configuration Manager](https://technet.microsoft.com/itpro/windows/keep-secure/create-edp-policy-using-sccm)  
 
 ##  <a name="BKMK_End"></a> End users can install apps from the Company Portal  
  On-premises MDM was introduced in the Configuration Manager version 1511. In previous versions, you could deploy applications to MDM-managed Windows 10 devices with a deployment purpose of **Required** install for on-premises MDM managed devices.  
@@ -257,7 +257,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 2.  Users can then browse for, and install apps from the Company Portal.  
 
-     After you open Company Portal, you will see an authentication dialog box named **Configuration Manager** Specify the user’s Active Directory credentials (either in the form of user@domain or domain\user) to log in.  
+     After you open Company Portal, you will see an authentication dialog box named **Configuration Manager** Specify the user's Active Directory credentials (either in the form of user@domain or domain\user) to log in.  
 
 ##  <a name="BKMK_SW1"></a> New tabs for Updates and Operating Systems in Software Center  
  In this release, the following changes have been made to improve the layout of the Software Center application:  
@@ -366,7 +366,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 2. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**. Click Next.  
 
-3. **Browse** to the Configuration file provided by your organization’s Microsoft Defender ATP cloud service tenant. Click **Next**.  
+3. **Browse** to the Configuration file provided by your organization's Microsoft Defender ATP cloud service tenant. Click **Next**.  
 
 4. Specify the file samples that are collected and shared from managed devices for analysis.  
 
@@ -402,7 +402,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
  Health attestation for Windows 10 devices can now be configured to communicate using the on-premises infrastructure. Administrators can specify whether reporting is done via the cloud or on-premises resources. If on-premises is selected for health attestation reporting, then a URL can be specified for the service. This enables client PCs without internet access to  enable and manage devices using health attestation.  
 
 ### Enable health attestation for on-premises devices  
- In 1605, we’ve fixed a few bugs discovered in 1604 Technical Preview.  To try it out, configure on-premises Health Attestation Service using client agent settings.  
+ In 1605, we've fixed a few bugs discovered in 1604 Technical Preview.  To try it out, configure on-premises Health Attestation Service using client agent settings.  
 
 1.  In the Configuration Manager console, navigate **Administration** > **Overview** > **Client settings**, and then set **Use on-premises Health Attestation Service** to **Yes**.  
 
@@ -412,7 +412,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
  When a software update that requires a restart is deployed using Configuration Manager and installed on a computer, a pending restart is scheduled and a restart dialog box is displayed. Currently, for Windows 8 and above, if you shut down or restart the computer using the Windows Power options (instead of from the restart dialog), the restart dialog remains after the computer restarts and the computer will need to restart at the configured deadline. In this technical preview, the option to **Update and Restart** and **Update and Shutdown** will be available on Windows 10 computers in the Windows Power options whenever there is a pending restart for a Configuration Manager software update. After using one of these options, the restart dialog will not display after the computer restarts.  
 
 ##  <a name="BKMK_IMEI"></a> Pre-declare corporate-owned devices with IMEI or iOS serial number  
- You can now identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers or you can manually enter device information.  You can also import serial numbers for iOS devices.  Imported information will set ownership of the devices that enroll as “Corporate”.  An Intune license is still required for each user that accesses the service.  
+ You can now identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers or you can manually enter device information.  You can also import serial numbers for iOS devices.  Imported information will set ownership of the devices that enroll as "Corporate".  An Intune license is still required for each user that accesses the service.  
 
 ### Try it out!  
  Try to complete the following tasks and then let us know how it worked by using our feedback form on the [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) page on the Microsoft Connect site:  
