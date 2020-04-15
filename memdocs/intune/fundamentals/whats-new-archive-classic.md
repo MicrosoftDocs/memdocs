@@ -370,7 +370,7 @@ __Intune App SDK for Cordova plugin now supports MAM without enrollment__
 App developers can now use the Intune App SDK for Cordova plugin to enable MAM functionality without device enrollment in their Cordova-based apps for Android and iOS/iPadOS. The Intune App SDK for Cordova plugin can be found [here](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam).
 
 __Intune App SDK Xamarin component now supports MAM without enrollment__
-App developers can now use the Intune App SDK Xamarin component to enable MAM functionality without device enrollment in their Xamarin-based apps for Android and iOS/iPadOS. The Intune App SDK Xamarin component can be found [here](https://github.com/msintuneappsdk/intune-app-sdk-xamarin).
+App developers can now use the Intune App SDK Xamarin component to enable MAM functionality without device enrollment in their Xamarin-based apps for Android and iOS/iPadOS. The Intune App SDK Xamarin component can be found [here](https://www.npmjs.com/package/cordova-plugin-ms-intune-mam).
 
 ### Notices
 

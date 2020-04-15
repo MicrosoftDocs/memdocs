@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Assign Office 365 to macOS devices with Microsoft Intune
 
-This app type makes it easy for you to assign Office 365 2016 apps to macOS devices. By using this app type, you can install Word, Excel, PowerPoint, Outlook, and OneNote. To help keep the apps more secure and up to date, the apps come with Microsoft AutoUpdate (MAU). The apps that you want are displayed as one app in the list of apps in the Intune console.
+This app type makes it easy for you to assign Office 365 2016 apps to macOS devices. By using this app type, you can install Word, Excel, PowerPoint, Outlook, OneNote, and Teams. To help keep the apps more secure and up to date, the apps come with Microsoft AutoUpdate (MAU). The apps that you want are displayed as one app in the list of apps in the Intune console.
 
 
 ## Before you start
