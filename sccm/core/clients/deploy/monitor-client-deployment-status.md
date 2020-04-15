@@ -53,4 +53,4 @@ Deploying clients across your site takes time and some installations are not suc
 
   To monitor the status of deployed clients, see [How to monitor clients](../../../core/clients/manage/monitor-clients.md)  
 
-  You can use Configuration Manager reports to find out more information about the status of clients in your site. For more information about how to run reports, see [Reporting](../../../core/servers/manage/reporting.md).  
+  You can use Configuration Manager reports to find out more information about the status of clients in your site. For more information about how to run reports, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  

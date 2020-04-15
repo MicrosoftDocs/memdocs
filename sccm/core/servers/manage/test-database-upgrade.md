@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Test upgrade the site database when installing updates for Configuration Manager."
 ms.date: 06/13/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: abb696f3-a816-4f12-a9f1-0503a81e1976
 author: mestew

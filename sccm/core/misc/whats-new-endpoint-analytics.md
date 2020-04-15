@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities in Endpoint Analytics
 ms.date: 03/25/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: a3aa66dd-1356-4ccd-b16f-f87181f7ac92
 author: mestew

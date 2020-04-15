@@ -2,12 +2,10 @@
 title: Plan for BitLocker management
 titleSuffix: Configuration Manager
 description: Plan for managing BitLocker Drive Encryption with Configuration Manager
-ms.date: 11/29/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-
-
 ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
@@ -69,25 +67,28 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 ## Prerequisites
 
-- In version 1910, to create a BitLocker management policy, you need the **Full Administrator** role in Configuration Manager.
+- To create a BitLocker management policy, you need the **Full Administrator** role in Configuration Manager.
 
-- To integrate the BitLocker recovery service in Configuration Manager requires a HTTPS-enabled management point. On the properties of the management point, the **Client connections** setting must be **HTTPS**.
+- The BitLocker recovery service requires HTTPS to encrypt the recovery keys across the network from the Configuration Manage client to the management point. There are two options:
 
     > [!NOTE]
     > For sites that have more than one management point, all management points at the site that a BitLocker managed client could potentially talk to need to be HTTPS.
 
-    > [!NOTE]
-    > In version 1910, it doesn't support Enhanced HTTP.
+  - HTTPS-enable the IIS website on the management point that hosts the recovery service. This option only applies to Configuration Manager version 2002.<!-- 5925660 -->
+
+  - Configure the management point for HTTPS. This option applies to Configuration Manager versions 1910 or 2002.
+
+  For more information, see [Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data).
 
 - To use the BitLocker management reports, install the reporting services point site system role. For more information, see [Configure reporting](/configmgr/core/servers/manage/configuring-reporting).
 
     > [!NOTE]
-    > In version 1910, for the **Recovery Audit Report** to work from the administration and monitoring website, only use a reporting services point at the primary site.
+    > For the **Recovery Audit Report** to work from the administration and monitoring website, only use a reporting services point at the primary site.
 
 - To use the self-service portal or the administration and monitoring website, you need a Windows server running IIS. You can reuse a Configuration Manager site system, or use a standalone web server that has connectivity to the site database server. Use a [supported OS version for site system servers](/configmgr/core/plan-design/configs/supported-operating-systems-for-site-system-servers).
 
     > [!NOTE]
-    > In version 1910, only install the self-service portal and the administration and monitoring website with a primary site database. In a hierarchy, install these websites for each primary site.
+    > Only install the self-service portal and the administration and monitoring website with a primary site database. In a hierarchy, install these websites for each primary site.
 
 - On the web server that will host the self-service portal, install [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4).
 

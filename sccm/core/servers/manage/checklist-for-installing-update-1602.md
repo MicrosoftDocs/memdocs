@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn about actions to take before updating from Configuration Manager version 1511 to version 1602."
 ms.date: 02/7/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: b63ef197-01f0-4894-b929-5ef8403c5195
 author: mestew
@@ -91,7 +91,7 @@ Before you update a site, ensure that you have stopped antivirus software on the
 
  **Create a backup of the site database at the central administration site and primary sites:** Before you update a site, backup the site database to ensure that you have a successful backup to use for disaster recovery.   
 
-For more information, see [Backup and recovery for Configuration Manager](../../../protect/understand/backup-and-recovery.md).  
+For more information, see [Backup and recovery for Configuration Manager](/sccm/core/servers/manage/backup-and-recovery).  
 
  **Backup a customized Configuration.mof file:** If you use a customized Configuration.mof file to define data classes that you use with hardware inventory, create a backup of this file before updating the site. After the update, restore this file to your version 1602 site. When you update a site, the current file is overwritten with the original (default) version of the file. For more information about using this file, see [How to extend hardware inventory](../../../core/clients/manage/inventory/extend-hardware-inventory.md).  
 

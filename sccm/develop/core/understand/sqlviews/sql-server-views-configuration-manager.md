@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: A Microsoft SQL Server view is a virtual table whose contents are based on the result from a SQL query.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
 
 
@@ -42,7 +42,7 @@ Configuration Manager uses Microsoft SQL Server Reporting Services to allow you
 
 - Enables users to export reports in different kinds of popular formats.
 
-For more information about using reports from the Configuration Manager console, see [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting).
+For more information about using reports from the Configuration Manager console, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).
 
 ## Configuration Manager SQL view schema
 

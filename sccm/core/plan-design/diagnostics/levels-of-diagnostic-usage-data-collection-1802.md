@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data collected in version 1802.
 ms.date: 05/13/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 29dd51b8-6576-4010-81ba-3129ed2c3421
 author: aczechowski

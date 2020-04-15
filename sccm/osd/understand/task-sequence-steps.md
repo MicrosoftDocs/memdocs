@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 12/02/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Task sequence steps
@@ -20,9 +18,11 @@ manager: dougeby
 
 The following task sequence steps can be added to a Configuration Manager task sequence. For more information, see [Use the task sequence editor](/configmgr/osd/understand/task-sequence-editor).  
 
+## Common settings
+
 The following settings are common to all task sequence steps:
 
-#### Properties tab
+### Properties for all steps
 
 - **Name**: The task sequence editor requires that you specify a short name to describe this step. When you add a new step, the task sequence editor sets the name to the Type by default. The **Name** length can't exceed 50 characters.  
 
@@ -30,7 +30,7 @@ The following settings are common to all task sequence steps:
 
 The rest of this article describes the other settings on the **Properties** tab for each task sequence step.
 
-#### Options tab  
+### Options for all steps
 
 - **Disable this step**: The task sequence skips this step when it runs on a computer. The icon for this step is greyed out in the task sequence editor.  
 
@@ -48,14 +48,25 @@ Use this step to copy the data image to the specified destination partition.
 
 This step runs only in Windows PE. It doesn't run in the full OS.
 
+To add this step in the task sequence editor, select **Add**, select **Images**, and select **Apply Data Image**.
+
+### Variables for Apply Data Image
+
 Use the following task sequence variables with this step:  
 
 - [OSDDataImageIndex](/configmgr/osd/understand/task-sequence-variables#OSDDataImageIndex)  
 - [OSDWipeDestinationPartition](/configmgr/osd/understand/task-sequence-variables#OSDWipeDestinationPartition)  
 
-To add this step in the task sequence editor, select **Add**, select **Images**, and select **Apply Data Image**.
+### Cmdlets for Apply Data Image
 
-### Properties  
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepApplyDataImage](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyDataImage?view=sccm-ps)
+- [New-CMTSStepApplyDataImage](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyDataImage?view=sccm-ps)
+- [Remove-CMTSStepApplyDataImage](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyDataImage?view=sccm-ps)
+- [Set-CMTSStepApplyDataImage](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyDataImage?view=sccm-ps)
+
+### Properties for Apply Data Image
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -96,6 +107,15 @@ The **Apply Driver Package** step is useful for stand-alone media. This step is 
 
 This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 
+To add this step in the task sequence editor, select **Add**, select **Drivers**, and select **Apply Driver Package**.
+
+> [!TIP]
+> For an overview on drivers in Configuration Manager, see [Use task sequences to install drivers](https://docs.microsoft.com/configmgr/osd/get-started/manage-drivers#BKMK_TSDrivers).
+>
+> Use content pre-caching to download an applicable driver package before a user installs the task sequence. For more information, see [Configure pre-cache content](https://docs.microsoft.com/configmgr/osd/deploy-use/configure-precache-content).
+
+### Variables for Apply Driver Package
+
 Use the following task sequence variables with this step:  
 
 - [OSDApplyDriverBootCriticalContentUniqueID](/configmgr/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalContentUniqueID)  
@@ -104,9 +124,16 @@ Use the following task sequence variables with this step:
 - [OSDApplyDriverBootCriticalINFFile](/configmgr/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalINFFile)  
 - [OSDInstallDriversAdditionalOptions](/configmgr/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)<!--516679/2840016-->
 
-To add this step in the task sequence editor, select **Add**, select **Drivers**, and select **Apply Driver Package**.
+### Cmdlets for Apply Driver Package
 
-### Properties
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [New-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [Remove-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [Set-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyDriverPackage?view=sccm-ps)
+
+### Properties for Apply Driver Package
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -114,15 +141,21 @@ On the **Properties** tab for this step, configure the settings described in thi
 
 Specify the driver package that contains the needed device drivers. Select **Browse** to launch the **Select a Package** dialog box. Select an existing driver package to apply. The bottom of the dialog box displays the associated package properties.  
 
+#### Install driver package via running DISM with recurse option
+
+Select this option to add the `/recurse` parameter to the DISM command line when Windows applies the driver package.
+
+When you enable this option, you can also specify additional DISM command-line parameters. Use the [OSDInstallDriversAdditionalOptions](/configmgr/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions) task sequence variable to include more options. For more information, see [Windows 10 DISM Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).<!-- SCCMDocs#2125 -->
+
 #### Select the mass storage driver within the package that needs to be installed before setup on pre-Windows Vista operating systems
 
 Specify any mass storage drivers needed to install a classic OS.  
 
-#### Driver
+##### Driver
 
 Select the mass storage driver file to install before setup of a classic OS. The drop-down list populates from the specified package.  
 
-#### Model
+##### Model
 
 Specify the boot-critical device that is needed for pre-Windows Vista OS deployments.  
 
@@ -138,6 +171,13 @@ Use this step to specify the network or workgroup configuration information for 
 
 This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 
+To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Apply Network Settings**.
+
+> [!NOTE]
+> If you include multiple instances of this step in a task sequence, conditions don't apply. The settings from the last instance of this step in the task sequence are applied to the device. To work around this behavior, include each step in a separate group with conditions on the group.
+
+### Variables for Apply Network Settings
+
 Use the following task sequence variables with this step:  
 
 - [OSDAdapter](/configmgr/osd/understand/task-sequence-variables#OSDAdapter)  
@@ -151,9 +191,16 @@ Use the following task sequence variables with this step:
 - [OSDJoinPassword](/configmgr/osd/understand/task-sequence-variables#OSDJoinPassword)  
 - [OSDWorkgroupName](/configmgr/osd/understand/task-sequence-variables#OSDWorkgroupName)  
 
-To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Apply Network Settings**.
+### Cmdlets for Apply Network Settings
 
-### Properties
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [New-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [Remove-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [Set-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyNetworkSetting?view=sccm-ps)
+
+### Properties for Apply Network Settings
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -182,17 +229,22 @@ Specify network configurations for each network adapter in the computer. Select 
 
 ## <a name="BKMK_ApplyOperatingSystemImage"></a> Apply Operating System Image  
 
-> [!TIP]  
-> Beginning with Windows 10, version 1709, media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).  
-
 Use this step to install an OS on the destination computer.
-
-> [!NOTE]  
-> The **Setup Windows and ConfigMgr** step starts the installation of Windows.
 
 After the **Apply Operating System** action runs, it sets the **OSDTargetSystemDrive** variable to the drive letter of the partition containing the OS files.  
 
 This task sequence step runs only in Windows PE. It doesn't run in the full OS.
+
+To add this step in the task sequence editor, select **Add**, select **Images**, and select **Apply Operating System Image**.
+
+> [!TIP]
+> Beginning with Windows 10, version 1709, media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).  
+>
+> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](https://docs.microsoft.com/configmgr/osd/deploy-use/configure-precache-content).
+>
+> The **Setup Windows and ConfigMgr** step starts the installation of Windows.
+
+### Variables for Apply OS Image
 
 Use the following task sequence variables with this step:  
 
@@ -200,9 +252,18 @@ Use the following task sequence variables with this step:
 - [OSDImageIndex](/configmgr/osd/understand/task-sequence-variables#OSDImageIndex)  
 - [OSDTargetSystemDrive](/configmgr/osd/understand/task-sequence-variables#OSDTargetSystemDrive)  
 
-To add this step in the task sequence editor, select **Add**, select **Images**, and select **Apply Operating System Image**.
+### Cmdlets for Apply OS Image
 
-This step performs actions depending on whether it uses an OS image or an OS upgrade package.  
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [New-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [Remove-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [Set-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyOperatingSystem?view=sccm-ps)
+
+### Behaviors for Apply OS Image
+
+This step performs different actions depending on whether it uses an OS image or an OS upgrade package.  
 
 #### OS image actions
 
@@ -234,7 +295,7 @@ The **Apply Operating System Image** step performs the following actions when us
 
     2. Merge any values from the user-supplied answer file.  
 
-### Properties
+### Properties for Apply OS Image
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -274,7 +335,7 @@ Configure one of the following options:
 
 - **Logical drive letter stored in a variable**: Specify the task sequence variable containing the drive letter assigned to the partition by Windows PE. This variable is typically set in the Advanced section of the **Partition Properties** dialog box for the **Format and Partition Disk** task sequence step.  
 
-### Options  
+### Options for Apply OS Image
 
 Besides the default options, configure the following additional settings on the **Options** tab of this task sequence step:  
 
@@ -290,11 +351,15 @@ Configure the task sequence to access the OS image directly from the distributio
 
 
 
-## <a name="BKMK_ApplyWindowsSettings"></a> Apply Windows Settings  
+## <a name="BKMK_ApplyWindowsSettings"></a> Apply Windows Settings
 
 Use this step to configure the Windows settings for the destination computer. The task sequence stores these values in the appropriate answer file. Windows Setup uses this answer file during the **Setup Windows and ConfigMgr** step.  
 
 This task sequence step runs only in Windows PE. It doesn't run in the full OS.  
+
+To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Apply Windows Settings**.
+
+### Variables for Apply Windows Settings
 
 Use the following task sequence variables with this step:  
 
@@ -313,9 +378,16 @@ Use the following task sequence variables with this step:
 - [OSDWindowsSettingsUILanguageFallback](/configmgr/osd/understand/task-sequence-variables#OSDWindowsSettingsUILanguageFallback)
 - [OSDWindowsSettingsUserLocale](/configmgr/osd/understand/task-sequence-variables#OSDWindowsSettingsUserLocale)
 
-To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Apply Windows Settings**.
+### Cmdlets for Apply Windows Settings
 
-### Properties
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepApplyWindowsSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [New-CMTSStepApplyWindowsSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [Remove-CMTSStepApplyWindowsSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [Set-CMTSStepApplyWindowsSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyWindowsSetting?view=sccm-ps)
+
+### Properties for Apply Windows Settings
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -341,7 +413,8 @@ Specify the server licensing mode.
 
 #### Maximum connections
 
-Specify the maximum number of connections that are available for this computer as stated in your license agreement.  
+> [!NOTE]
+> This setting only applies to legacy versions of Windows that are no longer supported.<!-- #4833 -->
 
 #### Randomly generate the local administrator password and disable the account on all supported platforms (recommended)  
 
@@ -374,9 +447,21 @@ For more information on these Windows setup answer file values, see [Microsoft-W
 > [!NOTE]
 > If you create a custom Windows setup answer file (unattend.xml), this step overwrites any existing values. To automate a dynamic process for these settings, use the related task sequence variables. For example, [OSDWindowsSettingsInputLocale](/configmgr/osd/understand/task-sequence-variables#OSDWindowsSettingsInputLocale). 
 
-## <a name="BKMK_AutoApplyDrivers"></a> Auto Apply Drivers  
+## <a name="BKMK_AutoApplyDrivers"></a> Auto Apply Drivers
 
 Use this step to match and install drivers as part of the OS deployment.  
+
+> [!IMPORTANT]  
+> Stand-alone media can't use the **Auto Apply Drivers** step. The task sequence has no connection to the Configuration Manager site in this scenario.  
+
+This task sequence step runs only in Windows PE. It doesn't run in the full OS.
+
+To add this step in the task sequence editor, select **Add**, select **Drivers**, and select **Auto Apply Drivers**.
+
+> [!TIP]
+> For an overview of drivers in Configuration Manager, see [Use task sequences to install drivers](https://docs.microsoft.com/configmgr/osd/get-started/manage-drivers#BKMK_TSDrivers).
+
+### Behaviors for Auto Apply Drivers
 
 The **Auto Apply Drivers** task sequence step performs the following actions:  
 
@@ -394,10 +479,7 @@ The **Auto Apply Drivers** task sequence step performs the following actions:
 
 5. During the **Setup Windows and ConfigMgr** step in the task sequence, Windows Setup finds the drivers staged by this step.  
 
-> [!IMPORTANT]  
-> Stand-alone media can't use the **Auto Apply Drivers** step. The task sequence has no connection to the Configuration Manager site in this scenario.  
-
-This task sequence step runs only in Windows PE. It doesn't run in the full OS.
+### Variables for Auto Apply Drivers
 
 Use the following task sequence variables with this step:  
 
@@ -408,9 +490,16 @@ Use the following task sequence variables with this step:
 - [SMSTSDriverRequestResolveTimeOut](/configmgr/osd/understand/task-sequence-variables#SMSTSDriverRequestResolveTimeOut)  
 - [SMSTSDriverRequestSendTimeOut](/configmgr/osd/understand/task-sequence-variables#SMSTSDriverRequestSendTimeOut)  
 
-To add this step in the task sequence editor, select **Add**, select **Drivers**, and select **Auto Apply Drivers**.
+### Cmdlets for Auto Apply Drivers
 
-### Properties  
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [New-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [Remove-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [Set-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepAutoApplyDriver?view=sccm-ps)
+
+### Properties for Auto Apply Drivers
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -441,20 +530,31 @@ This option allows Windows to install drivers without a digital signature.
 
 
 
-## <a name="BKMK_CaptureNetworkSettings"></a> Capture Network Settings  
+## <a name="BKMK_CaptureNetworkSettings"></a> Capture Network Settings
 
 Use this step to capture Microsoft network settings from the computer running the task sequence. The task sequence saves these settings in task sequence variables. These settings override the default settings you configure on the **Apply Network Settings** step.  
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
+
+To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Capture Network Settings**.
+
+### Variables for Capture Network Settings
 
 Use the following task sequence variables with this step:  
 
 - [OSDMigrateAdapterSettings](/configmgr/osd/understand/task-sequence-variables#OSDMigrateAdapterSettings)  
 - [OSDMigrateNetworkMembership](/configmgr/osd/understand/task-sequence-variables#OSDMigrateNetworkMembership)  
 
-To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Capture Network Settings**.
+### Cmdlets for Capture Network Settings
 
-### Properties  
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [New-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [Remove-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [Set-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+
+### Properties for Capture Network Settings
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -472,7 +572,7 @@ Captures the network adapter configuration of the destination computer. It captu
 
 
 
-## <a name="BKMK_CaptureOperatingSystemImage"></a> Capture Operating System Image  
+## <a name="BKMK_CaptureOperatingSystemImage"></a> Capture Operating System Image
 
 This step captures one or more images from a reference computer. The task sequence creates a Windows image (.wim) file on the specified network share. Then use the **Add Operating System Image Package** wizard to import this image into Configuration Manager for image-based OS deployments.  
 
@@ -484,6 +584,10 @@ Specify an account with write permissions to the selected network share. For mor
 
 This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 
+To add this step in the task sequence editor, select **Add**, select **Images**, and select **Capture Operating System Image**.
+
+### Variables for Capture OS Image
+
 Use the following task sequence variables with this step:  
 
 - [OSDCaptureAccount](/configmgr/osd/understand/task-sequence-variables#OSDCaptureAccount)  
@@ -494,9 +598,16 @@ Use the following task sequence variables with this step:
 - [OSDImageVersion](/configmgr/osd/understand/task-sequence-variables#OSDImageVersion)  
 - [OSDTargetSystemRoot](/configmgr/osd/understand/task-sequence-variables#OSDTargetSystemRoot-input)  
 
-To add this step in the task sequence editor, select **Add**, select **Images**, and select **Capture Operating System Image**.
+### Cmdlets for Capture OS Image
 
-### Properties  
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepCaptureSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [New-CMTSStepCaptureSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [Remove-CMTSStepCaptureSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [Set-CMTSStepCaptureSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureSystemImage?view=sccm-ps)
+
+### Properties for Capture OS Image
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -522,7 +633,7 @@ Enter the Windows account that has permissions to the specified network share. S
 
 
 
-## <a name="BKMK_CaptureUserState"></a> Capture User State  
+## <a name="BKMK_CaptureUserState"></a> Capture User State
 
 This step uses the User State Migration Tool (USMT) to capture user state and settings from the computer running the task sequence. This task sequence step is used in conjunction with the **Restore User State** task sequence step. This step always encrypts the USMT state store by using an encryption key that Configuration Manager generates and manages.  
 
@@ -533,6 +644,10 @@ If you want to save and restore user state settings from a state migration point
 This step provides control over a limited subset of the most commonly used USMT options. Specify additional command-line options using the **OSDMigrateAdditionalCaptureOptions** task sequence variable.  
 
 This task sequence step runs only in Windows PE. It doesn't run in the full OS.  
+
+To add this step in the task sequence editor, select **Add**, select **User State**, and select **Capture User State**.
+
+### Variables for Capture User State
 
 Use the following task sequence variables with this step:  
 
@@ -545,9 +660,16 @@ Use the following task sequence variables with this step:
 - [OSDMigrateSkipEncryptedFiles](/configmgr/osd/understand/task-sequence-variables#OSDMigrateSkipEncryptedFiles)  
 - [OSDStateStorePath](/configmgr/osd/understand/task-sequence-variables#OSDStateStorePath)  
 
-To add this step in the task sequence editor, select **Add**, select **User State**, and select **Capture User State**.
+### Cmdlets for Capture User State
 
-### Properties  
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureUserState?view=sccm-ps)
+- [New-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureUserState?view=sccm-ps)
+- [Remove-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureUserState?view=sccm-ps)
+- [Set-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureUserState?view=sccm-ps)
+
+### Properties for Capture User State
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -601,11 +723,15 @@ This option allows you to capture files even if they're locked for editing by an
 
 
 
-## <a name="BKMK_CaptureWindowsSettings"></a> Capture Windows Settings  
+## <a name="BKMK_CaptureWindowsSettings"></a> Capture Windows Settings
 
 Use this step to capture the Windows settings from the computer running the task sequence. The task sequence saves these settings in task sequence variables. These captured settings override the default settings that you configure on the **Apply Windows Settings** step.  
 
 This task sequence step runs in either Windows PE or the full OS.  
+
+To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Capture Windows Settings**.
+
+### Variables for Capture Windows Settings
 
 Use the following task sequence variables with this step:  
 
@@ -616,9 +742,16 @@ Use the following task sequence variables with this step:
 - [OSDRegisteredOrgName](/configmgr/osd/understand/task-sequence-variables#OSDRegisteredOrgName-output)  
 - [OSDTimeZone](/configmgr/osd/understand/task-sequence-variables#OSDTimeZone-output)  
 
-To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Capture Windows Settings**.
+### Cmdlets for Capture Windows Settings
 
-### Properties  
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [New-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [Remove-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [Set-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+
+### Properties for Capture Windows Settings
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -636,44 +769,118 @@ Capture the time zone setting on the computer.
 
 
 
-## <a name="BKMK_CheckReadiness"></a> Check Readiness  
+## <a name="BKMK_CheckReadiness"></a> Check Readiness
 
 Use this step to verify that the target computer meets the specified deployment prerequisite conditions.  
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Check Readiness**.
 
-### Properties  
+Starting in version 2002, this step includes eight new checks. None of these new checks are selected by default in new or existing instances of the step.<!--6005561--> For more information on each check, see the specific sections below.
+
+- **Architecture of current OS**
+- **Minimum OS version**
+- **Maximum OS version**
+- **Minimum client version**
+- **Language of current OS**
+- **AC power plugged in**
+- **Network adapter connected**
+  - **Network adapter is not wireless**
+
+> [!IMPORTANT]
+> To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
+
+The **smsts.log** includes the outcome of all checks. If one check fails, the task sequence engine continues to evaluate the other checks. The step doesn't fail until all checks are complete. If at least one check fails, the step fails, and it returns error code **4316**. This error code translates to "The resource required for this operation does not exist."
+
+### Variables for Check Readiness
+
+Use the following task sequence variables with this step:  
+
+- [_TS_CRMEMORY](/configmgr/osd/understand/task-sequence-variables#TSCRMEMORY)
+- [_TS_CRSPEED](/configmgr/osd/understand/task-sequence-variables#TSCRSPEED)
+- [_TS_CRDISK](/configmgr/osd/understand/task-sequence-variables#TSCRDISK)
+- [_TS_CROSTYPE](/configmgr/osd/understand/task-sequence-variables#TSCROSTYPE)
+- [_TS_CRARCH](/configmgr/osd/understand/task-sequence-variables#TSCRARCH)
+- [_TS_CRMINOSVER](/configmgr/osd/understand/task-sequence-variables#TSCRMINOSVER)
+- [_TS_CRMAXOSVER](/configmgr/osd/understand/task-sequence-variables#TSCRMAXOSVER)
+- [_TS_CRCLIENTMINVER](/configmgr/osd/understand/task-sequence-variables#TSCRCLIENTMINVER)
+- [_TS_CROSLANGUAGE](/configmgr/osd/understand/task-sequence-variables#TSCROSLANGUAGE)
+- [_TS_CRACPOWER](/configmgr/osd/understand/task-sequence-variables#TSCRACPOWER)
+- [_TS_CRNETWORK](/configmgr/osd/understand/task-sequence-variables#TSCRNETWORK)
+- [_TS_CRWIRED](/configmgr/osd/understand/task-sequence-variables#TSCRWIRED)
+
+### Cmdlets for Check Readiness
+
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepPrestartCheck?view=sccm-ps)
+- [New-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepPrestartCheck?view=sccm-ps)
+- [Remove-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepPrestartCheck?view=sccm-ps)
+- [Set-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepPrestartCheck?view=sccm-ps)
+
+### Properties for Check Readiness
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
-#### Ensure minimum memory (MB)
+#### Minimum memory (MB)
 
 Verify that the amount of memory, in megabytes (MB), meets or exceeds the specified amount. The step enables this setting by default.  
 
-#### Ensure minimum processor speed (MHz)  
+#### Minimum processor speed (MHz)  
 
 Verify that the speed of the processor, in megahertz (MHz), meets or exceeds the specified amount. The step enables this setting by default.  
 
-#### Ensure minimum free disk space (MB)
+#### Minimum free disk space (MB)
 
 Verify that the amount of free disk space, in megabytes (MB), meets or exceeds the specified amount.  
 
-#### Ensure current OS to be refreshed is
+#### Current OS to be refreshed is
 
 Verify that the OS installed on the target computer meets the specified requirement. The step sets this setting to **CLIENT** by default.  
 
-### Options
+#### Architecture of current OS
+
+Starting in version 2002, verify whether the current OS is **32-bit** or **64-bit**.
+
+#### Minimum OS version
+
+Starting in version 2002, verify that the current OS is running a version later than specified. Specify the version with major version, minor version, and build number. For example, `10.0.16299`.
+
+#### Maximum OS version
+
+Starting in version 2002, verify that the current OS is running a version earlier than specified. Specify the version with major version, minor version, and build number. For example, `10.0.18356`.
+
+#### Minimum client version
+
+Starting in version 2002, verify that the Configuration Manager client version is at least the specified version. Specify the client version in the following format: `5.00.8913.1005`.
+
+#### Language of current OS
+
+Starting in version 2002, verify that the current OS language matches what you specify. Select the language name, and the step compares the associated language code. This check compares the language that you select to the **OSLanguage** property of the **Win32_OperatingSystem** WMI class on the client.
+
+#### AC power plugged in
+
+Starting in version 2002, verify that the device is plugged in and not on battery.
+
+#### Network adapter connected
+
+Starting in version 2002, verify that the device has a network adapter that's connected to the network. You can also select the dependent check to verify that the **Network adapter is not wireless**.
+
+### Options for Check Readiness
 
 > [!NOTE]  
 > If you enable the **Continue on error** setting on the **Options** tab of this step, it only logs the readiness check results. If a check fails, the task sequence doesn't stop.  
 
 
 
-## <a name="BKMK_ConnectToNetworkFolder"></a> Connect To Network Folder  
+## <a name="BKMK_ConnectToNetworkFolder"></a> Connect To Network Folder
 
 Use this step to create a connection to a shared network folder.  
 
 This task sequence step runs in the full OS or Windows PE.  
+
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Connect To Network Folder**.
+
+### Variables for Connect To Network Folder
 
 Use the following task sequence variables with this step:  
 
@@ -682,9 +889,16 @@ Use the following task sequence variables with this step:
 - [SMSConnectNetworkFolderPassword](/configmgr/osd/understand/task-sequence-variables#SMSConnectNetworkFolderPassword)  
 - [SMSConnectNetworkFolderPath](/configmgr/osd/understand/task-sequence-variables#SMSConnectNetworkFolderPath)  
 
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Connect To Network Folder**.
+### Cmdlets for Connect To Network Folder
 
-### Properties  
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [New-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [Remove-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [Set-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepConnectNetworkFolder?view=sccm-ps)
+
+### Properties for Connect To Network Folder
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -702,7 +916,7 @@ Select **Set** to specify the user account with permissions to connect to this n
 
 
 
-## <a name="BKMK_DisableBitLocker"></a> Disable BitLocker  
+## <a name="BKMK_DisableBitLocker"></a> Disable BitLocker
 
 Use this step to disable BitLocker encryption on the current OS drive, or on a specific drive. This action leaves the key protectors visible in clear text on the hard drive. It doesn't decrypt the contents of the drive. This action completes almost instantly.  
 
@@ -713,14 +927,25 @@ If you have multiple encrypted drives, disable BitLocker on any data drives befo
 
 This step runs only in the full OS. It doesn't run in Windows PE.  
 
+To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Disable BitLocker**.
+
+### Variables for Disable BitLocker
+
 Starting in version 1906, use the following task sequence variables with this step:  
 
 - [OSDBitLockerRebootCount](/configmgr/osd/understand/task-sequence-variables#OSDBitLockerRebootCount)  
 - [OSDBitLockerRebootCountOverride](/configmgr/osd/understand/task-sequence-variables#OSDBitLockerRebootCountOverride)  
 
-To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Disable BitLocker**.
+### Cmdlets for Disable BitLocker
 
-### Properties  
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepDisableBitLocker?view=sccm-ps)
+- [New-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepDisableBitLocker?view=sccm-ps)
+- [Remove-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepDisableBitLocker?view=sccm-ps)
+- [Set-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepDisableBitLocker?view=sccm-ps)
+
+### Properties for Disable BitLocker
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -740,7 +965,7 @@ Starting in version 1906, use this option to specify the number of restarts to k
 You can set and modify this behavior with the task sequence variables [OSDBitLockerRebootCount](/configmgr/osd/understand/task-sequence-variables#OSDBitLockerRebootCount) and [OSDBitLockerRebootCountOverride](/configmgr/osd/understand/task-sequence-variables#OSDBitLockerRebootCountOverride).
 
 
-## <a name="BKMK_DownloadPackageContent"></a> Download Package Content  
+## <a name="BKMK_DownloadPackageContent"></a> Download Package Content
 
 Use this step to download any of the following package types:  
 
@@ -766,7 +991,16 @@ This step runs in either the full OS or Windows PE. The option to save the packa
 
 To add this step in the task sequence editor, select **Add**, select **Software**, and select **Download Package Content**.
 
-### Properties  
+### Cmdlets for Download Package Content
+
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [New-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [Remove-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [Set-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepDownloadPackageContent?view=sccm-ps)
+
+### Properties for Download Package Content
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -813,7 +1047,7 @@ If you configure the [task sequence properties](/configmgr/osd/deploy-use/manage
   - Has a boot image referenced in its properties.
   - There are multiple instances of this task sequence, with different boot images as needed by architecture and language
 
-## <a name="BKMK_EnableBitLocker"></a> Enable BitLocker  
+## <a name="BKMK_EnableBitLocker"></a> Enable BitLocker
 
 Use this step to enable BitLocker encryption on at least two partitions on the hard drive. The first active partition contains the Windows bootstrap code. Another partition contains the OS. The bootstrap partition must remain unencrypted.  
 
@@ -824,10 +1058,7 @@ Use the **Pre-provision BitLocker** step to enable BitLocker on a drive while in
 
 This step runs only in the full OS. It doesn't run in Windows PE.
 
-Use the following task sequence variables with this step:  
-
-- [OSDBitLockerRecoveryPassword](/configmgr/osd/understand/task-sequence-variables#OSDBitLockerRecoveryPassword)  
-- [OSDBitLockerStartupKey](/configmgr/osd/understand/task-sequence-variables#OSDBitLockerStartupKey)  
+To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Enable BitLocker**.
 
 When you specify **TPM Only**, **TPM and Startup Key on USB**, or **TPM and PIN**, the Trusted Platform Module (TPM) must be in the following state before you can run the **Enable BitLocker** step:  
 
@@ -848,9 +1079,23 @@ BitLocker can be used to encrypt multiple drives on a computer system, both OS a
 
 If the hard drive is already encrypted, but BitLocker is disabled, then the **Enable BitLocker** step re-enables the key protectors and completes quickly. Re-encryption of the hard drive isn't necessary in this case.  
 
-To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Enable BitLocker**.
+### Variables for Enable BitLocker
 
-### Properties  
+Use the following task sequence variables with this step:  
+
+- [OSDBitLockerRecoveryPassword](/configmgr/osd/understand/task-sequence-variables#OSDBitLockerRecoveryPassword)  
+- [OSDBitLockerStartupKey](/configmgr/osd/understand/task-sequence-variables#OSDBitLockerStartupKey)  
+
+### Cmdlets for Enable BitLocker
+
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepEnableBitLocker?view=sccm-ps)
+- [New-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepEnableBitLocker?view=sccm-ps)
+- [Remove-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepEnableBitLocker?view=sccm-ps)
+- [Set-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepEnableBitLocker?view=sccm-ps)
+
+### Properties for Enable BitLocker
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -888,7 +1133,7 @@ The encryption process can take hours to complete when encrypting a large hard d
 
 
 
-## <a name="BKMK_FormatandPartitionDisk"></a> Format and Partition Disk  
+## <a name="BKMK_FormatandPartitionDisk"></a> Format and Partition Disk
 
 Use this step to format and partition a specified disk on the destination computer.  
 
@@ -897,6 +1142,10 @@ Use this step to format and partition a specified disk on the destination comput
 
 This step runs only in Windows PE. It doesn't run in the full OS.  
 
+To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Format and Partition Disk**.
+
+### Variables for Format and Partition Disk
+
 Use the following task sequence variables with this step:  
 
 - [OSDDiskIndex](/configmgr/osd/understand/task-sequence-variables#OSDDiskIndex)  
@@ -904,7 +1153,7 @@ Use the following task sequence variables with this step:
 - [OSDPartitions](/configmgr/osd/understand/task-sequence-variables#OSDPartitions)  
 - [OSDPartitionStyle](/configmgr/osd/understand/task-sequence-variables#OSDPartitionStyle)  
 
-To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Format and Partition Disk**.
+### Cmdlets for Format and Partition Disk
 
 Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 
@@ -913,7 +1162,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [Remove-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtssteppartitiondisk?view=sccm-ps)
 - [Set-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtssteppartitiondisk?view=sccm-ps)
 
-### Properties  
+### Properties for Format and Partition Disk
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -947,7 +1196,7 @@ To delete a partition, choose the partition, and then select **Delete**.
 
 
 
-## <a name="BKMK_InstallApplication"></a> Install Application  
+## <a name="BKMK_InstallApplication"></a> Install Application
 
 This step installs the specified applications, or a set of applications defined by a dynamic list of task sequence variables. When the task sequence runs this step, the application installation begins immediately without waiting for a policy polling interval.  
 
@@ -974,6 +1223,10 @@ This behavior is by design: the task sequence requires all app references.<!-- S
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
+To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Application**.
+
+### Variables for Install Application
+
 Use the following task sequence variables with this step:  
 
 - [_TSAppInstallStatus](/configmgr/osd/understand/task-sequence-variables#TSAppInstallStatus)  
@@ -984,7 +1237,7 @@ Use the following task sequence variables with this step:
 > [!NOTE]  
 > If the client fails to retrieve the management point list from location services, use the **SMSTSMPListRequestTimeoutEnabled** and **SMSTSMPListRequestTimeout** task sequence variables. These variables specify how many milliseconds a task sequence waits before it retries installing an application. For more information, see [Task sequence variables](/configmgr/osd/understand/task-sequence-variables).
 
-To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Application**.
+### Cmdlets for Install Application
 
 Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 
@@ -993,7 +1246,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [Remove-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallapplication?view=sccm-ps)
 - [Set-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallapplication?view=sccm-ps)
 
-### Properties  
+### Properties for Install Application
 
 On the **Properties** tab for this step, configure the settings that are described in this section.  
 
@@ -1049,7 +1302,7 @@ This setting specifies that the step continues when an individual application in
 Starting in version 1906, delete the app content from the client cache after the step runs. This behavior is beneficial on devices with small hard drives or when installing lots of large apps in succession.
 
 
-### Options
+### Options for Install Application
 
 > [!NOTE]  
 > When you select **Continue on error** on the **Options** tab of this step, the task sequence continues when an application fails to install. When you don't enable this option, the task sequence fails, and doesn't install remaining applications.  
@@ -1089,11 +1342,16 @@ Programs that use the **Run another program first** option to install a dependen
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
+To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Package**.
+
+### Variables for Install Package
+
 Use the following task sequence variables with this step:  
 
 - [OSDDoNotLogCommand](/configmgr/osd/understand/task-sequence-variables#OSDDoNotLogCommand) <!--1358493-->  
 
-To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Package**.
+### Cmdlets for Install Package
+
 Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 
 - [Get-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallsoftware?view=sccm-ps)
@@ -1101,7 +1359,10 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [Remove-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallsoftware?view=sccm-ps)
 - [Set-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallsoftware?view=sccm-ps)
 
-### Properties  
+> [!TIP]
+> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](https://docs.microsoft.com/configmgr/osd/deploy-use/configure-precache-content).
+
+### Properties for Install Package
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -1149,7 +1410,7 @@ This setting specifies that the step continues if an individual software package
 
 
 
-## <a name="BKMK_InstallSoftwareUpdates"></a> Install Software Updates  
+## <a name="BKMK_InstallSoftwareUpdates"></a> Install Software Updates
 
 Use this step to install software updates on the destination computer. The destination computer isn't evaluated for applicable software updates until this task sequence step runs. At that time, the destination computer is evaluated for software updates like any other Configuration Manager client. For this step to install software updates, first deploy the updates to a collection of which the target computer is a member.  
 
@@ -1157,6 +1418,10 @@ Use this step to install software updates on the destination computer. The desti
 > For best performance, install the latest version of the Windows Update Agent.  
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.
+
+To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Software Updates**.
+
+### Variables for Install Software Updates
 
 Use the following task sequence variables with this step:  
 
@@ -1169,7 +1434,7 @@ Use the following task sequence variables with this step:
 > [!NOTE]  
 > If the client fails to retrieve the management point list from location services, use the **SMSTSMPListRequestTimeoutEnabled** and **SMSTSMPListRequestTimeout** variables. These variables specify how many milliseconds a task sequence waits before it retries installing an application or software update. For more information, see [Task sequence variables](/configmgr/osd/understand/task-sequence-variables).  
 
-To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Software Updates**.
+### Cmdlets for Install Software Updates
 
 Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 
@@ -1180,7 +1445,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 
 For more recommendations and a technical flow chart diagram for this step, see [Install Software Updates](/configmgr/osd/understand/install-software-updates).
 
-### Properties  
+### Properties for Install Software Updates
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -1202,7 +1467,7 @@ In most circumstances, use the default setting to use cached scan results.
 
 The **SMSTSSoftwareUpdateScanTimeout** variable controls the software updates scan timeout during this step. The default value is 60 minutes. For more information, see [Task sequence variables](/configmgr/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout).
 
-### Options  
+### Options for Install Software Updates
 
 Besides the default options, configure the following additional settings on the **Options** tab of this task sequence step:  
 
@@ -1215,11 +1480,15 @@ If one of the updates unexpectedly restarts the computer, retry this step. The s
 
 
 
-## <a name="BKMK_JoinDomainorWorkgroup"></a> Join Domain or Workgroup  
+## <a name="BKMK_JoinDomainorWorkgroup"></a> Join Domain or Workgroup
 
 Use this step to add the destination computer to a workgroup or domain.  
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.
+
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Join Domain or Workgroup**.
+
+### Variables for Join Domain or Workgroup
 
 Use the following task sequence variables with this step:  
 
@@ -1231,9 +1500,16 @@ Use the following task sequence variables with this step:
 - [OSDJoinType](/configmgr/osd/understand/task-sequence-variables#OSDJoinType)  
 - [OSDJoinWorkgroupName](/configmgr/osd/understand/task-sequence-variables#OSDJoinWorkgroupName)  
 
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Join Domain or Workgroup**.
+### Cmdlets for Join Domain or Workgroup
 
-### Properties  
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [New-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [Remove-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [Set-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+
+### Properties for Join Domain or Workgroup
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -1253,7 +1529,7 @@ Select **Set** to enter the username and password for an account with permission
 
 
 
-## <a name="BKMK_PrepareConfigMgrClientforCapture"></a> Prepare ConfigMgr Client for Capture  
+## <a name="BKMK_PrepareConfigMgrClientforCapture"></a> Prepare ConfigMgr Client for Capture
 
 Use this step to remove or configure the Configuration Manager client on the reference computer. This action prepares the computer for capture as part of the imaging process.
 
@@ -1266,26 +1542,42 @@ This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Prepare ConfigMgr Client for Capture**.
 
-### Properties  
+### Cmdlets for Prepare ConfigMgr Client for Capture
 
-This step doesn't require any settings on the **Properties** tab.
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [New-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [Remove-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [Set-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
 
 
 
-## <a name="BKMK_PrepareWindowsforCapture"></a> Prepare Windows for Capture  
+## <a name="BKMK_PrepareWindowsforCapture"></a> Prepare Windows for Capture
 
 Use this step to specify the Sysprep options when capturing an OS image on the reference computer. This step runs Sysprep, and then reboots the computer into the Windows PE boot image specified for the task sequence. This action fails if the reference computer is joined to a domain.  
 
 This step runs only in the full OS. It doesn't run in Windows PE.
+
+To add this step in the task sequence editor, select **Add**, select **Images**, and select **Prepare Windows for Capture**.
+
+### Variables for Prepare Windows for Capture
 
 Use the following task sequence variables with this step:  
 
 - [OSDKeepActivation](/configmgr/osd/understand/task-sequence-variables#OSDKeepActivation)  
 - [OSDTargetSystemRoot](/configmgr/osd/understand/task-sequence-variables#OSDTargetSystemRoot-output)  
 
-To add this step in the task sequence editor, select **Add**, select **Images**, and select **Prepare Windows for Capture**.
+### Cmdlets for Prepare Windows for Capture
 
-### Properties  
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepPrepareWindows?view=sccm-ps)
+- [New-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepPrepareWindows?view=sccm-ps)
+- [Remove-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepPrepareWindows?view=sccm-ps)
+- [Set-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepPrepareWindows?view=sccm-ps)
+
+### Properties for Prepare Windows for Capture
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -1302,7 +1594,7 @@ Select this option to prevent Sysprep from resetting the product activation flag
 <!--SCCMDocs-pr issue 2695-->
 This option instructs Sysprep to shutdown the computer instead of its default restart behavior.
 
-Starting in version 1810, this step is used in the [Windows Autopilot for existing devices](/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices) task sequence.
+The [Windows Autopilot for existing devices](/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices) task sequence uses this step with this option.
 
 - If you want the task sequence to refresh the device and then immediately start OOBE for Autopilot, leave this option off.  
 
@@ -1310,18 +1602,27 @@ Starting in version 1810, this step is used in the [Windows Autopilot for existi
 
 
 
-## <a name="BKMK_PreProvisionBitLocker"></a> Pre-provision BitLocker  
+## <a name="BKMK_PreProvisionBitLocker"></a> Pre-provision BitLocker
 
 Use this step to enable BitLocker on a drive while in Windows PE. By default, only the used drive space is encrypted, so encryption times are much faster. You apply the key management options by using the [Enable BitLocker](#BKMK_EnableBitLocker) step after the OS installs.
 
-This step runs only in Windows PE. It doesn't run in the full OS.  
+> [!IMPORTANT]
+> Pre-provisioning BitLocker requires that the computer has a supported and enabled Trusted Platform Module (TPM).
 
-> [!IMPORTANT]  
-> Pre-provisioning BitLocker requires at least Windows 7. The computer must also contain a supported and enabled Trusted Platform Module (TPM).  
+This step runs only in Windows PE. It doesn't run in the full OS.  
 
 To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Pre-provision BitLocker**.
 
-### Properties  
+### Cmdlets for Pre-provision BitLocker
+
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [New-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [Remove-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [Set-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+
+### Properties for Pre-provision BitLocker
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -1340,7 +1641,7 @@ Select this option to skip drive encryption on a computer that doesn't contain a
 
 
 
-## <a name="BKMK_ReleaseStateStore"></a> Release State Store  
+## <a name="BKMK_ReleaseStateStore"></a> Release State Store
 
 Use this step to notify the state migration point that the capture or restore action is complete. Use this step in conjunction with the **Request State Store**, **Capture User State**, and **Restore User State** steps. You use these steps to migrate user state data using a state migration point and the User State Migration Tool (USMT).  
 
@@ -1355,19 +1656,30 @@ If you use the **Request State Store** step to request access to a state migrati
 
 This step runs only in the full OS. It doesn't run in Windows PE.
 
+To add this step in the task sequence editor, select **Add**, select **User State**, and select **Release State Store**.
+
+### Variables for Release State Store
+
 Use the following task sequence variables with this step:  
 
 - [OSDStateStorePath](/configmgr/osd/understand/task-sequence-variables#OSDStateStorePath)  
 
-To add this step in the task sequence editor, select **Add**, select **User State**, and select **Release State Store**.
+### Cmdlets for Release State Store
 
-### Properties  
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepReleaseStateStore?view=sccm-ps)
+- [New-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepReleaseStateStore?view=sccm-ps)
+- [Remove-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepReleaseStateStore?view=sccm-ps)
+- [Set-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepReleaseStateStore?view=sccm-ps)
+
+### Properties for Release State Store
 
 This step doesn't require any settings on the **Properties** tab.
 
 
 
-## <a name="BKMK_RequestStateStore"></a> Request State Store  
+## <a name="BKMK_RequestStateStore"></a> Request State Store
 
 Use this step to request access to a state migration point when capturing or restoring state.  
 
@@ -1380,6 +1692,10 @@ Use this step in conjunction with the **Release State Store**, **Capture User St
 
 This step runs in the full OS and in Windows PE for offline USMT.
 
+To add this step in the task sequence editor, select **Add**, select **User State**, and select **Request State Store**.
+
+### Variables for Request State Store
+
 Use the following task sequence variables with this step:  
 
 - [OSDStateFallbackToNAA](/configmgr/osd/understand/task-sequence-variables#OSDStateFallbackToNAA)  
@@ -1387,9 +1703,16 @@ Use the following task sequence variables with this step:
 - [OSDStateSMPRetryTime](/configmgr/osd/understand/task-sequence-variables#OSDStateSMPRetryTime)  
 - [OSDStateStorePath](/configmgr/osd/understand/task-sequence-variables#OSDStateStorePath)  
 
-To add this step in the task sequence editor, select **Add**, select **User State**, and select **Request State Store**.
+### Cmdlets for Request State Store
 
-### Properties  
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepRequestStateStore?view=sccm-ps)
+- [New-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepRequestStateStore?view=sccm-ps)
+- [Remove-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepRequestStateStore?view=sccm-ps)
+- [Set-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepRequestStateStore?view=sccm-ps)
+
+### Properties for Request State Store
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -1419,18 +1742,22 @@ If the task sequence can't access the state migration point using the computer a
 
 
 
-## <a name="BKMK_RestartComputer"></a> Restart Computer  
+## <a name="BKMK_RestartComputer"></a> Restart Computer
 
 Use this step to restart the computer running the task sequence. After the restart, the computer automatically continues with the next step in the task sequence.  
 
 This step can be run in either the full OS or Windows PE.
+
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Restart Computer**.
+
+### Variables for Restart Computer
 
 Use the following task sequence variables with this step:  
 
 - [SMSRebootMessage](/configmgr/osd/understand/task-sequence-variables#SMSRebootMessage)  
 - [SMSRebootTimeout](/configmgr/osd/understand/task-sequence-variables#SMSRebootTimeout)  
 
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Restart Computer**.
+### Cmdlets for Restart Computer
 
 Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 
@@ -1439,7 +1766,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [Remove-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepreboot?view=sccm-ps)
 - [Set-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepreboot?view=sccm-ps)
 
-### Properties  
+### Properties for Restart Computer
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -1465,7 +1792,7 @@ Specify the amount of time in seconds before the destination computer restarts. 
 
 
 
-## <a name="BKMK_RestoreUserState"></a> Restore User State  
+## <a name="BKMK_RestoreUserState"></a> Restore User State
 
 Use this step to initiate the User State Migration Tool (USMT) to restore user state and settings to the destination computer. You use this step in conjunction with the **Capture User State** step.  
 
@@ -1480,6 +1807,10 @@ The **Restore User State** step provides control over a limited subset of the mo
 
 This step runs only in the full OS. It doesn't run in Windows PE.
 
+To add this step in the task sequence editor, select **Add**, select **User State**, and select **Restore User State**.
+
+### Variables for Restore User State
+
 Use the following task sequence variables with this step:  
 
 - [_OSDMigrateUsmtRestorePackageID](/configmgr/osd/understand/task-sequence-variables#OSDMigrateUsmtRestorePackageID)  
@@ -1490,9 +1821,16 @@ Use the following task sequence variables with this step:
 - [OSDMigrateLocalAccountPassword](/configmgr/osd/understand/task-sequence-variables#OSDMigrateLocalAccountPassword)  
 - [OSDStateStorePath](/configmgr/osd/understand/task-sequence-variables#OSDStateStorePath)  
 
-To add this step in the task sequence editor, select **Add**, select **User State**, and select **Restore User State**.
+### Cmdlets for Restore User State
 
-### Properties  
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepRestoreUserState?view=sccm-ps)
+- [New-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepRestoreUserState?view=sccm-ps)
+- [Remove-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepRestoreUserState?view=sccm-ps)
+- [Set-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepRestoreUserState?view=sccm-ps)
+
+### Properties for Restore User State
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -1522,11 +1860,15 @@ Enable this option to generate more detailed log file information. When restorin
 
 
 
-## <a name="BKMK_RunCommandLine"></a> Run Command Line  
+## <a name="BKMK_RunCommandLine"></a> Run Command Line
 
 Use this step to run the specified command line.  
 
 This step can be run in the full OS or Windows PE.
+
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Run Command Line**.
+
+### Variables for Run Command Line
 
 Use the following task sequence variables with this step:  
 
@@ -1534,9 +1876,10 @@ Use the following task sequence variables with this step:
 - [SMSTSDisableWow64Redirection](/configmgr/osd/understand/task-sequence-variables#SMSTSDisableWow64Redirection)  
 - [SMSTSRunCommandLineUserName](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName)  
 - [SMSTSRunCommandLineUserPassword](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserPassword)  
+- [SMSTSRunCommandLineAsUser](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineAsUser) (starting in version 2002)<!-- 5573175 -->
 - [WorkingDirectory](/configmgr/osd/understand/task-sequence-variables#WorkingDirectory)  
 
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Run Command Line**.
+### Cmdlets for Run Command Line
 
 Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 
@@ -1545,7 +1888,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [Remove-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepruncommandline?view=sccm-ps)
 - [Set-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepruncommandline?view=sccm-ps)
 
-### Properties  
+### Properties for Run Command Line
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -1615,7 +1958,7 @@ Specifies the Windows user account this step uses to run the command line. The c
 > [!IMPORTANT]  
 > If this step specifies a user account and runs in Windows PE, the action fails. You can't join Windows PE to a domain. The **smsts.log** file records this failure.  
 
-### Options  
+### Options for Run Command Line
 
 Besides the default options, configure the following additional settings on the **Options** tab of this task sequence step:  
 
@@ -1625,7 +1968,7 @@ Include other exit codes from the script that the step should evaluate as succes
 
 
 
-## <a name="BKMK_RunPowerShellScript"></a> Run PowerShell Script  
+## <a name="BKMK_RunPowerShellScript"></a> Run PowerShell Script
 
 Use this step to run the specified Windows PowerShell script.  
 
@@ -1634,13 +1977,21 @@ This step can be run in the full OS or Windows PE. To run this step in Windows P
 > [!NOTE]  
 > PowerShell isn't enabled by default on Windows Embedded operating systems.  
 
+> [!WARNING]
+> Certain anti-malware software may inadvertently trigger events against the Configuration Manager Run PowerShell Script task sequence step. It is recommended to exclude %windir%\temp\smstspowershellscripts so that the anti-malware software permits those scripts to run without interference.
+
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Run PowerShell Script**.
+
+### Variables for Run PowerShell Script
+
 Use the following task sequence variables with this step:  
 
 - [OSDLogPowerShellParameters](/configmgr/osd/understand/task-sequence-variables#OSDLogPowerShellParameters) (starting in version 1902)<!--3556028-->  
+- [SMSTSRunPowerShellAsUser](/sccm/osd/understand/task-sequence-variables#SMSTSRunPowerShellAsUser) (starting in version 2002)<!-- 5573175 -->
 - [SMSTSRunPowerShellUserName](/sccm/osd/understand/task-sequence-variables#SMSTSRunPowerShellUserName)  
 - [SMSTSRunPowerShellUserPassword](/sccm/osd/understand/task-sequence-variables#SMSTSRunPowerShellUserPassword)  
 
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Run PowerShell Script**.
+### Cmdlets for Run PowerShell Script
 
 Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 
@@ -1652,7 +2003,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 > [!Note]  
 > Use signed PowerShell scripts in Unicode format. ANSI format, which is the default, doesn't work with this step.
 
-### Properties  
+### Properties for Run PowerShell Script
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -1698,6 +2049,8 @@ If a parameter value includes a special character, use single quotation marks (`
 
 For example: `-Arg1 '%TSVar1%' -Arg2 '%TSVar2%'`
 
+Starting in version 2002, set this property to a variable.<!-- 5690481 --> For example, if you specify `%MyScriptVariable%`, when the task sequence runs the script, it adds the value of this custom variable to the PowerShell command line.
+
 #### PowerShell execution policy
 
 Determine which PowerShell scripts (if any) you allow to run on the computer. Choose one of the following execution policies:  
@@ -1718,6 +2071,8 @@ Starting in version 1902, save the script output to a custom task sequence varia
 
 > [!Note]  
 > Starting in version 1910, Configuration Manager limits this output to the last 1000 characters.
+
+For an example of how to use this step property, see [How to set variables](using-task-sequence-variables.md#bkmk_run-ps).
 
 #### Start in
 
@@ -1751,7 +2106,7 @@ Starting in version 1902, specify the Windows user account this step uses to run
 > [!IMPORTANT]  
 > If this step specifies a user account and runs in Windows PE, the action fails. You can't join Windows PE to a domain. The **smsts.log** file records this failure.  
 
-### Options  
+### Options for Run PowerShell Script
 
 Besides the default options, configure the following additional settings on the **Options** tab of this task sequence step:  
 
@@ -1771,16 +2126,7 @@ This step runs another task sequence. It creates a parent-child relationship bet
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Run Task Sequence**.
 
-Starting in version 1906, manage this step with the following PowerShell cmdlets:<!-- 2839943, SCCMDocs#1118 -->
-
-- **Get-CMTSStepRunTaskSequence**
-- **New-CMTSStepRunTaskSequence**
-- **Remove-CMTSStepRunTaskSequence**
-- **Set-CMTSStepRunTaskSequence**
-
-For more information, see [1906 release notes - New cmdlets](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps#new-cmdlets).
-
-### Specifications and limitations
+### Specifications and limitations for Run Task Sequence
 
 Consider the following points when you add a child task sequence to a task sequence:  
 
@@ -1802,7 +2148,18 @@ Consider the following points when you add a child task sequence to a task seque
 
 - If a child task sequence has a missing package reference, viewing the parent task sequence doesn't detect this state. If you edit the parent task sequence, it detects any missing references in child task sequences when you make changes to the parent.  
 
-### Properties
+### Cmdlets for Run Task Sequence
+
+Starting in version 1906, manage this step with the following PowerShell cmdlets:<!-- 2839943, SCCMDocs#1118 -->
+
+- **Get-CMTSStepRunTaskSequence**
+- **New-CMTSStepRunTaskSequence**
+- **Remove-CMTSStepRunTaskSequence**
+- **Set-CMTSStepRunTaskSequence**
+
+For more information, see [1906 release notes - New cmdlets](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps#new-cmdlets).
+
+### Properties for Run Task Sequence
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -1812,13 +2169,19 @@ Select **Browse** to select the child task sequence. The **Select a Task Sequenc
 
 
 
-## <a name="BKMK_SetDynamicVariables"></a> Set Dynamic Variables  
+## <a name="BKMK_SetDynamicVariables"></a> Set Dynamic Variables
 
 Use this step to perform the following actions:  
 
 1. Gather information from the computer and its environment. Then set specified task sequence variables with the information.  
 
 2. Evaluate defined rules. Set task sequence variables based on the rules that evaluate to true.  
+
+This step can be run in either the full OS or Windows PE.  
+
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Set Dynamic Variables**.
+
+### Variables for Set Dynamic Variables
 
 The task sequence automatically sets the following read-only task sequence variables:  
 
@@ -1830,9 +2193,7 @@ The task sequence automatically sets the following read-only task sequence varia
 - [\_SMSTSAssetTag](/configmgr/osd/understand/task-sequence-variables#SMSTSAssetTag)  
 - [\_SMSTSUUID](/configmgr/osd/understand/task-sequence-variables#SMSTSUUID)  
 
-This step can be run in either the full OS or Windows PE.  
-
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Set Dynamic Variables**.
+### Cmdlets for Set Dynamic Variables
 
 Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 
@@ -1841,7 +2202,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [Remove-CMTSStepSetDynamicVariable](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetdynamicvariable?view=sccm-ps)
 - [Set-CMTSStepSetDynamicVariable](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetdynamicvariable?view=sccm-ps)
 
-### Properties  
+### Properties for Set Dynamic Variables
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -1874,18 +2235,22 @@ After you select the variables for a rule, provide a value for each variable. Th
 
 
 
-## <a name="BKMK_SetTaskSequenceVariable"></a> Set Task Sequence Variable  
+## <a name="BKMK_SetTaskSequenceVariable"></a> Set Task Sequence Variable
 
 Use this step to set the value of a variable that's used with the task sequence.  
 
 This step can be run in either the full OS or Windows PE.
+
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Set Task Sequence Variable**.
+
+### Variables for Set Task Sequence Variable
 
 Task sequence variables are read by task sequence actions and specify the behavior of those actions. For more information about specific task sequence variables and how to use them, see the following articles:  
 
 - [How to use task sequence variables](/configmgr/osd/understand/using-task-sequence-variables)  
 - [Task sequence variables](/configmgr/osd/understand/task-sequence-variables)  
 
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Set Task Sequence Variable**.
+### Cmdlets for Set Task Sequence Variable
 
 Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 
@@ -1894,7 +2259,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [Remove-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetvariable?view=sccm-ps)
 - [Set-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetvariable?view=sccm-ps)
 
-### Properties  
+### Properties for Set Task Sequence Variable
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -1916,28 +2281,17 @@ The task sequence sets the variable to this value. Set this task sequence variab
 
 
 
-## <a name="BKMK_SetupWindowsandConfigMgr"></a> Setup Windows and ConfigMgr  
+## <a name="BKMK_SetupWindowsandConfigMgr"></a> Setup Windows and ConfigMgr
 
 Use this step to perform the transition from Windows PE to the new OS. This task sequence step is a required part of any OS deployment. It installs the Configuration Manager client into the new OS, and prepares for the task sequence to continue execution in the new OS.  
 
 This step is responsible for transitioning the task sequence from Windows PE to the full OS. The step runs both in Windows PE and the full OS because of this transition. However, since the transition starts in Windows PE, it can only be added during the Windows PE portion of the task sequence.  
 
-Use the following task sequence variables with this step:  
-
-- [SMSClientInstallProperties](/configmgr/osd/understand/task-sequence-variables#SMSClientInstallProperties)  
-
 This step replaces sysprep.inf or unattend.xml directory variables, such as `%WINDIR%` and `%ProgramFiles%`, with the Windows PE installation directory, `X:\Windows`. The task sequence ignores variables specified by using these environment variables.  
 
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Setup Windows and ConfigMgr**.
 
-Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
-
-- [Get-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
-- [New-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
-- [Remove-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
-- [Set-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
-
-### Step actions
+### Behaviors for Setup Windows and ConfigMgr
 
 This step performs the following actions:  
 
@@ -1985,7 +2339,22 @@ The task sequence continues running the next step.
 > Windows group policy normally doesn't process until after the task sequence is complete. This behavior is consistent across different versions of Windows. Other custom actions during the task sequence can trigger group policy evaluation. For more information on the order of operations, see [Run a script after setup is complete (SetupComplete.cmd)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd). <!-- 2841304 -->
 
 
-### Properties  
+### Variables for Setup Windows and ConfigMgr
+
+Use the following task sequence variables with this step:  
+
+- [SMSClientInstallProperties](/configmgr/osd/understand/task-sequence-variables#SMSClientInstallProperties)  
+
+### Cmdlets for Setup Windows and ConfigMgr
+
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [New-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Remove-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Set-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+
+### Properties for Setup Windows and ConfigMgr
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -2003,21 +2372,27 @@ The task sequence step automatically specifies site assignment and the default c
 
 Specify command-line options to use during client installation. For example, enter `/skipprereq: silverlight.exe` to inform CCMSetup.exe to not install the Microsoft Silverlight prerequisite. For more information about available command-line options for CCMSetup.exe, see [About client installation properties](/configmgr/core/clients/deploy/about-client-installation-properties).  
 
-### Options
+### Options for Setup Windows and ConfigMgr
 
 > [!NOTE]  
 > Don't enable **Continue on error** on the **Options** tab. If there's an error during this step, the task sequence fails whether or not you enable this setting.  
 
 
 
-## <a name="BKMK_UpgradeOS"></a> Upgrade Operating System  
-
-> [!TIP]  
-> Beginning with Windows 10, version 1709, media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).  
+## <a name="BKMK_UpgradeOS"></a> Upgrade Operating System
 
 Use this step to upgrade an older version of Windows to a newer version of Windows 10.  
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
+
+To add this step in the task sequence editor, select **Add**, select **Images**, and select **Upgrade Operating System**.
+
+> [!TIP]
+> Beginning with Windows 10, version 1709, media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).  
+>
+> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](https://docs.microsoft.com/configmgr/osd/deploy-use/configure-precache-content).
+
+### Variables for Upgrade OS
 
 Use the following task sequence variables with this step:  
 
@@ -2025,9 +2400,16 @@ Use the following task sequence variables with this step:
 - [SetupCompletePause](/configmgr/osd/understand/task-sequence-variables#SetupCompletePause)
 - [OSDSetupAdditionalUpgradeOptions](/configmgr/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions)  
 
-To add this step in the task sequence editor, select **Add**, select **Images**, and select **Upgrade Operating System**.
+### Cmdlets for Upgrade OS
 
-### Properties  
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [New-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [Remove-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [Set-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+
+### Properties for Upgrade OS
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
@@ -2051,11 +2433,20 @@ Specify the product key to apply to the upgrade process.
 
 #### Provide the following driver content to Windows Setup during upgrade
 
-Add drivers to the destination computer during the upgrade process. This setting corresponds to the Windows Setup command-line option `/InstallDriver`. The drivers must be compatible with Windows 10. Specify one of the following options:  
+Add drivers to the destination computer during the upgrade process. The drivers must be compatible with Windows 10. This setting corresponds to the Windows Setup command-line option `/InstallDriver`. For more information, see [Windows Setup command-line options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
 
-- **Driver package**: Select **Browse** and choose an existing driver package from the list.  
+Specify one of the following options:  
 
-- **Staged content**:  Select this option to specify the location for the driver package. You can specify a local folder, network path, or a task sequence variable. When you use a variable for the source path, set its value earlier in the task sequence. For example, by using the [Download Package Content](/configmgr/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent) step.  
+- **Driver package**: Select **Browse** and choose an existing driver package from the list.
+
+- **Staged content**: Select this option to specify the location for the driver content. You can specify a local folder, network path, or a task sequence variable. When you use a variable for the source path, set its value earlier in the task sequence. For example, by using the [Download Package Content](/configmgr/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent) step.  
+
+> [!TIP]
+> If you want to have dynamic content for multiple types of hardware:
+>
+> - Use multiple instances of this step with conditions for the hardware types and separate driver content.
+>
+> - Use multiple instances of the [Download Package Content](/configmgr/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent) step. Place the content in a common location, and then use the **Staged content** option. The benefit of this method is the task sequence has a single **Upgrade OS** step.
 
 #### Time-out (minutes)
 

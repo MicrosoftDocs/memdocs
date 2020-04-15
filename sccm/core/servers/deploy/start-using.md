@@ -3,7 +3,7 @@ title: Deploy servers and roles
 titleSuffix: Configuration Manager
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 32609a30-465c-4406-b227-aca5c276e015
 author: mestew

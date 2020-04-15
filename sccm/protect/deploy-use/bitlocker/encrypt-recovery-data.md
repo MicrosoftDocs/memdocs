@@ -1,8 +1,8 @@
 ---
 title: Encrypt recovery data
 titleSuffix: Configuration Manager
-description: 
-ms.date: 11/29/2019
+description: Encrypt BitLocker recovery keys, recovery packages, and TPM password hashes across the network and in the Configuration Manager database.
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -18,22 +18,56 @@ manager: dougeby
 
 <!--3601034-->
 
-When you create a BitLocker management policy, Configuration Manager deploys the recovery service on an HTTPS-enabled management point. On the **Client Management** page of the BitLocker management policy, when you **Configure BitLocker Management Services**, the client backs up key recovery information to the site database. This information includes BitLocker recovery keys, recovery packages, and TPM password hashes.
+When you create a BitLocker management policy, Configuration Manager deploys the recovery service to a management point. On the **Client Management** page of the BitLocker management policy, when you **Configure BitLocker Management Services**, the client backs up key recovery information to the site database. This information includes BitLocker recovery keys, recovery packages, and TPM password hashes. When users are locked out of their protected device, you can use this information to help them recover access to the device.
 
-When users are locked out of their protected device, you can use this information to help them recover access to the device. Given the sensitive nature of this information, consider encrypting this data in the site database.
+Given the sensitive nature of this information, you need to protect it in the following circumstances:
 
-This article describes how to use SQL Server cell-level encryption with your own certificate.
+- Configuration Manager requires an HTTPS connection between the client and the recovery service to encrypt the data in transit across the network. There are two options:
 
-If you don't want to create a BitLocker management encryption certificate, opt-in to plain-text storage of the recovery data. When you create a BitLocker management policy, enable the option to **Allow recovery information to be stored in plain text**.
+  - HTTPS-enable the IIS website on the management point that hosts the recovery service, not the entire management point role. This option only applies to Configuration Manager version 2002.<!-- 5925660 -->
 
-> [!NOTE]
-> Another layer of security is to encrypt the entire site database. If you enable encryption on the database, there aren't any functional issues in Configuration Manager.
->
-> Encrypt with caution, especially in large-scale environments. Depending upon the tables you encrypt and the version of SQL, you may notice up to a 25% performance degradation. Update your backup and recovery plans, so that you can successfully recover the encrypted data.
+  - Configure the management point for HTTPS. On the properties of the management point, the **Client connections** setting must be **HTTPS**. This option applies to Configuration Manager versions 1910 or 2002.
+
+    > [!NOTE]
+    > It currently doesn't support Enhanced HTTP.
+
+- Consider also encrypting this data when stored in the site database. You can use SQL Server cell-level encryption with your own certificate.
+
+    If you don't want to create a BitLocker management encryption certificate, opt-in to plain-text storage of the recovery data. When you create a BitLocker management policy, enable the option to **Allow recovery information to be stored in plain text**.
+
+    > [!NOTE]
+    > Another layer of security is to encrypt the entire site database. If you enable encryption on the database, there aren't any functional issues in Configuration Manager.
+    >
+    > Encrypt with caution, especially in large-scale environments. Depending upon the tables you encrypt and the version of SQL, you may notice up to a 25% performance degradation. Update your backup and recovery plans, so that you can successfully recover the encrypted data.
 
 ## Certificate requirements
 
-You can use your own process to create and deploy the BitLocker management encryption certificate, as long as it meets the following requirements:
+### HTTPS server authentication certificate
+
+<!--5925660-->
+
+In Configuration Manager current branch version 1910, to integrate the BitLocker recovery service you had to HTTPS-enable a management point. The HTTPS connection is necessary to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Configuring the management point and all clients for HTTPS can be challenging for many customers.
+
+Starting in version 2002, the HTTPS requirement is for the IIS website that hosts the recovery service, not the entire management point role. This change relaxes the certificate requirements, and still encrypts the recovery keys in transit.
+
+Now the **Client connections** property of the management point can be **HTTP** or **HTTPS**. If the management point is configured for **HTTP**, to support the BitLocker recovery service:
+
+1. Acquire a server authentication certificate. Bind the certificate to the IIS website on the management point that hosts the BitLocker recovery service.
+
+2. Configure clients to trust the server authentication certificate. There are two methods to accomplish this trust:
+
+    - Use a certificate from a public and globally trusted certificate provider. For example, but not limited to, DigiCert, Thawte, or VeriSign. Windows clients include trusted root certificate authorities (CAs) from these providers. By using a server authentication certificate that's issued by one of these providers, your clients should automatically trust it.
+
+    - Use a certificate issued by a CA from your organization's public key infrastructure (PKI). Most PKI implementations add the trusted root CAs to Windows clients. For example, using Active Directory Certificate Services with group policy. If you issue the server authentication certificate from a CA that your clients don't automatically trust, add the CA trusted root certificate to clients.
+
+> [!TIP]
+> The only clients that need to communicate with the recovery service are those clients that you plan to target with a BitLocker management policy and includes a **Client Management** rule.
+
+On the client, use the **BitLockerManagementHandler.log** to troubleshoot this connection. For connectivity to the recovery service, the log shows the URL that the client is using. Locate an entry that starts with `Checking for Recovery Service at`.
+
+### SQL encryption certificate
+
+Use this certificate to enable SQL Server cell-level encryption of BitLocker recovery data. You can use your own process to create and deploy the BitLocker management encryption certificate, as long as it meets the following requirements:
 
 - The name of the BitLocker management encryption certificate must be `BitLockerManagement_CERT`.
 

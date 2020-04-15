@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1906.
 ms.date: 08/27/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: e6837956-1f1e-4104-a348-ac2266199f60
 author: mestew

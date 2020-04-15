@@ -291,5 +291,5 @@ When you use these task sequence steps, you can also specify how the drivers are
 
 ## <a name="BKMK_DriverReports"></a> Driver reports  
 
-You can use several reports in the **Driver Management** reports category to determine general information about the device drivers in the driver catalog. For more information about reports, see [Reporting](/sccm/core/servers/manage/reporting).
+You can use several reports in the **Driver Management** reports category to determine general information about the device drivers in the driver catalog. For more information about reports, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).
 

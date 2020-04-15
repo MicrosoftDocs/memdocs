@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Install or upgrade to the LTSB for System Center Configuration Manager."
 ms.date: 09/06/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: f4f9a5fd-f573-4b99-ad93-b2c76812e922
 author: aczechowski

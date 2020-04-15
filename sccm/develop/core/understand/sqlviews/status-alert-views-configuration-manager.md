@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Information about Configuration Manager component behavior and data flow.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
 
 

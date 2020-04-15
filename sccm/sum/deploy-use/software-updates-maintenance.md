@@ -101,6 +101,15 @@ The following **WSUS Server Cleanup Wizard** options aren't run on the CAS, prim
 
  You have additional WSUS maintenance tasks that Configuration Manager can run to maintain healthy software update points. In addition to declining expired updates in WSUS, Configuration Manager can add non-clustered indexes to the WSUS databases and remove obsolete updates from the WSUS databases. The WSUS maintenance occurs after every synchronization.
 
+### Decline expired updates in WSUS according to supersedence rules
+
+Declining updates in WSUS improves performance by removing those updates from the catalogs sent to clients. Declining updates that Configuration Manager marks as superseded further minimizes the catalogs and improves performance.
+
+1. In the Configuration Manager console, navigate to **Administration** > **Overview** > **Site Configuration** > **Sites**.
+2. Select the site at the top of your Configuration Manager hierarchy.
+3. Click **Configure Site Components** in the Settings group, and then click **Software Update Point** to open Software Update Point Component Properties.
+4. In the **WSUS Maintenance** tab, select **Decline expired updates in WSUS according to supersedence rules**.
+
 ### Add non-clustered indexes to the WSUS database to improve WSUS cleanup performance
 
 The addition of non-clustered indexes improves the WSUS cleanup performance that Configuration Manager does.

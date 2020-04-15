@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Use boundary groups with Configuration Manager versions 1511, 1602, and 1606."
 ms.date: 02/8/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: dec1e0d7-5864-43a8-9f56-413923b3914e
 author: mestew

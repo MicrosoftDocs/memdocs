@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Understand what the Hierarchy Maintenance Tool does, and why you might use it. Includes command-line options reference."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: cead6825-6113-4ba5-a381-ac3598dfee86
 author: mestew

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Understand best practices for security and privacy when you query for information from the site database."
 ms.date: 05/08/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 30080620-20d3-4c38-b8dd-db5516e1acae
 author: aczechowski

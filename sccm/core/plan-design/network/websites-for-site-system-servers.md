@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn about default and custom websites for site system servers in Configuration Manager."
 ms.date: 02/8/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
 author: mestew

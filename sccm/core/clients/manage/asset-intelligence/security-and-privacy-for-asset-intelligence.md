@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Get security and privacy information for Asset Intelligence in Configuration Manager."
 ms.date: 02/22/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: d0c6f7a0-dcae-4e6d-aa28-35d464d97ff7
 author: mestew

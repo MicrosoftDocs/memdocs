@@ -2,16 +2,14 @@
 title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud
-ms.date: 11/29/2019
+ms.date: 03/20/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Install in-console updates for Configuration Manager
@@ -49,7 +47,6 @@ To better understand what happens when updates are downloaded, see the following
 
 - [Flowchart - Update replication](/sccm/core/servers/manage/update-replication-flowchart)  
 
-
 ## Assign permissions to view and manage updates and features
 
 To view updates in the console, a user must have a role-based administration security role that includes the security class **Update packages**. This class grants access to view and manage updates in the Configuration Manager console.
@@ -60,13 +57,13 @@ By default, the **Update packages** class (SMS_CM_Updatepackages) is part of the
 
 - **Full Administrator** with **Modify** and **Read** permissions:  
 
-    - A user with this security role and access to the **All** security scope can view and install updates. The user can also enable features during the installation, and enable individual features after the site updates.  
+  - A user with this security role and access to the **All** security scope can view and install updates. The user can also enable features during the installation, and enable individual features after the site updates.  
 
-    - A user with this security role and access to the **Default** security scope can view and install updates. The user can also enable features during the installation, and view features after the site updates. But this user can't enable the features after the site updates.  
+  - A user with this security role and access to the **Default** security scope can view and install updates. The user can also enable features during the installation, and view features after the site updates. But this user can't enable the features after the site updates.  
 
 - **Read-only Analyst** with **Read** permissions:  
 
-    - A user with this security role and access to the **Default** scope can view updates but not install them. This user can also view features after the site updates, but can't enable them.  
+  - A user with this security role and access to the **Default** scope can view updates but not install them. This user can also view features after the site updates, but can't enable them.  
 
 ### Permissions required for updates and servicing
 
@@ -86,7 +83,6 @@ By default, the **Update packages** class (SMS_CM_Updatepackages) is part of the
 
 - Assign the account to the **All** scope.  
 
-
 ## <a name="bkmk_beforeinstall"></a> Before you install an in-console update  
 
 Review the following steps before you install an update from within the Configuration Manager console.  
@@ -95,13 +91,13 @@ Review the following steps before you install an update from within the Configur
 
 Review the applicable update checklist for actions to take before you start the update:
 
+- [Checklist for installing update 2002](/sccm/core/servers/manage/checklist-for-installing-update-2002)
+
 - [Checklist for installing update 1910](/sccm/core/servers/manage/checklist-for-installing-update-1910)  
 
 - [Checklist for installing update 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906)  
 
 - [Checklist for installing update 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902)
-
-- [Checklist for installing update 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810)  
 
 ### <a name="bkmk_step2"></a> Step 2: Run the prerequisite checker before installing an update  
 
@@ -134,7 +130,6 @@ Later, when you install the update, you can configure the update to ignore prere
 
     3. For more information, see the **ConfigMgrPrereq.log** on the site server.  
 
-
 ## <a name="bkmk_install"></a> Install in-console updates  
 
 When you're ready to install updates from within the Configuration Manager console, begin with the top-level site of your hierarchy. This site is either the central administration site or a standalone primary site.  
@@ -157,13 +152,13 @@ You're presented with the Updates Wizard that displays a list of the product are
 
 - On the **General** page of the wizard, configure **Prerequisite warnings** as necessary:  
 
-    - Prerequisite errors always stop the update installation. Fix errors before you can successfully retry the update installation. For more information, see [Retry installation of a failed update](#bkmk_retry).  
+  - Prerequisite errors always stop the update installation. Fix errors before you can successfully retry the update installation. For more information, see [Retry installation of a failed update](#bkmk_retry).  
 
-    - Prerequisite warnings can also stop the update installation. Fix warnings before you retry the update installation. For more information, see [Retry installation of a failed update](#bkmk_retry).  
+  - Prerequisite warnings can also stop the update installation. Fix warnings before you retry the update installation. For more information, see [Retry installation of a failed update](#bkmk_retry).  
 
-    - **Ignore any prerequisite check warnings and install this update regardless of missing requirements**: Set a condition for the update installation to ignore prerequisite warnings. This option allows the update installation to continue. If you don't select this option, the update installation stops when the process encounters a warning. Unless you've previously run the prerequisite check and fixed prerequisite warnings for a site, don't use this option.  
+  - **Ignore any prerequisite check warnings and install this update regardless of missing requirements**: Set a condition for the update installation to ignore prerequisite warnings. This option allows the update installation to continue. If you don't select this option, the update installation stops when the process encounters a warning. Unless you've previously run the prerequisite check and fixed prerequisite warnings for a site, don't use this option.  
 
-        In both the **Administration** and **Monitoring** workspaces, the Updates and Servicing node includes a button on the ribbon named **Ignore prerequisite warnings**. This button becomes available when an update package fails to complete installation due to prerequisite check warnings. For example, you install an update without using the option to ignore prerequisite warnings (from within the Updates Wizard). The update installation stops with a state of prerequisite warning but no errors. Later, you select **Ignore prerequisite warnings** in the ribbon. This action triggers an automatic continuation of that update installation, which ignores prerequisite warnings. When you use this option, the update installation automatically continues after a few minutes.  
+    In both the **Administration** and **Monitoring** workspaces, the Updates and Servicing node includes a button on the ribbon named **Ignore prerequisite warnings**. This button becomes available when an update package fails to complete installation due to prerequisite check warnings. For example, you install an update without using the option to ignore prerequisite warnings (from within the Updates Wizard). The update installation stops with a state of prerequisite warning but no errors. Later, you select **Ignore prerequisite warnings** in the ribbon. This action triggers an automatic continuation of that update installation, which ignores prerequisite warnings. When you use this option, the update installation automatically continues after a few minutes.  
 
 - When an update applies to the Configuration Manager client, choose to test the client update with a limited set of clients. For more information, see [How to test client upgrades in a pre-production collection](/sccm/core/clients/manage/upgrade/test-client-upgrades).  
 
@@ -190,15 +185,15 @@ Use the following steps to monitor progress:
 
     The update installation is divided into several phases for easier monitoring. For each of the following phases, additional details in the installation status include which log file to view for more information:  
 
-    - **Download**: This phase applies only to the top-level site with the service connection point.
+  - **Download**: This phase applies only to the top-level site with the service connection point.
 
-    - **Replication**
+  - **Replication**
 
-    - **Prerequisites Check**
+  - **Prerequisites Check**
 
-    - **Installation**
+  - **Installation**
 
-    - **Post Installation**: For more information, see [post installation tasks](#post-installation-tasks).  
+  - **Post Installation**: For more information, see [post installation tasks](#post-installation-tasks).  
 
 - View the **CMUpdate.log** file in `<ConfigMgr_Installation_Directory>\Logs` on the site server.  
 
@@ -261,60 +256,59 @@ The post installation tasks include:
 
 - **Installing SMS_EXECUTIVE service**
 
-    - Critical service that runs on the site server.
-    - Reinstallation of this service should complete quickly.
+  - Critical service that runs on the site server.
+  - Reinstallation of this service should complete quickly.
 
 - **Installing SMS_DATABASE_NOTIFICATION_MONITOR component**
 
-    - Critical site component thread of SMS_EXECUTIVE service.
-    - Reinstallation of this service should complete quickly.
+  - Critical site component thread of SMS_EXECUTIVE service.
+  - Reinstallation of this service should complete quickly.
 
 - **Installing SMS_HIERARCHY_MANAGER component**
 
-    - Critical site component that runs on the site server.
-    - Responsible for reinstalling roles on site system servers. Status for individual site system role reinstallation doesn't display.
-    - Reinstallation of this service should complete quickly.
+  - Critical site component that runs on the site server.
+  - Responsible for reinstalling roles on site system servers. Status for individual site system role reinstallation doesn't display.
+  - Reinstallation of this service should complete quickly.
 
     > [!Note]
     > Some Configuration Manager site roles share the client framework. For example, the management point and pull distribution point. When these roles update, the client version on these servers updates at the same time. For more information, see [How to upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers).
 
 - **Installing SMS_REPLICATION_CONFIGURATION_MONITOR component**
 
-    - Critical site component that runs on the site server.
-    - Reinstallation of this service should complete quickly.
+  - Critical site component that runs on the site server.
+  - Reinstallation of this service should complete quickly.
 
 - **Installing SMS_POLICY_PROVIDER component**
 
-    - Critical site component that runs only on primary sites.
-    - Reinstallation of this service should complete quickly.
+  - Critical site component that runs only on primary sites.
+  - Reinstallation of this service should complete quickly.
 
 - **Monitoring replication initialization**
 
-    - This task only displays at the central administration site and child primary sites.
-    - Dependent on the SMS_REPLICATION_CONFIGURATION_MONITOR.
-    - Should complete quickly.
+  - This task only displays at the central administration site and child primary sites.
+  - Dependent on the SMS_REPLICATION_CONFIGURATION_MONITOR.
+  - Should complete quickly.
 
 - **Updating Configuration Manager Client Preproduction Package**
 
-    - This task displays even when client preproduction (also called client piloting) isn't enabled for use.
-    - Doesn't start until all sites in the hierarchy finish installing the update.
+  - This task displays even when client preproduction (also called client piloting) isn't enabled for use.
+  - Doesn't start until all sites in the hierarchy finish installing the update.
 
 - **Updating Client folder on Site Server**
 
-    - This task doesn't display if you use the client in preproduction.  
-    - Should complete quickly.
+  - This task doesn't display if you use the client in preproduction.  
+  - Should complete quickly.
 
 - **Updating Configuration Manager Client Package**
 
-    - This task doesn't display if you use the client in preproduction.  
-    - Finishes only after all sites install the update.  
+  - This task doesn't display if you use the client in preproduction.  
+  - Finishes only after all sites install the update.  
 
 - **Turning on Features**
 
-    - This task displays only at the top-tier site of the hierarchy.
-    - Doesn't start until all sites in the hierarchy finish installing the update.
-    - Individual features aren't displayed.
-
+  - This task displays only at the top-tier site of the hierarchy.
+  - Doesn't start until all sites in the hierarchy finish installing the update.
+  - Individual features aren't displayed.
 
 ## <a name="bkmk_retry"></a> Retry installation of a failed update  
 
@@ -363,13 +357,13 @@ Go to the **Monitoring** workspace, and select the **Site Servicing Status** nod
 
 After the site updates, review the post-update checklist for the applicable version:  
 
+- [Post-update checklist for version 2002](/sccm/core/servers/manage/checklist-for-installing-update-2002#post-update-checklist)
+
 - [Post-update checklist for version 1910](/sccm/core/servers/manage/checklist-for-installing-update-1910#post-update-checklist)  
 
 - [Post-update checklist for version 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906#post-update-checklist)  
 
 - [Post-update checklist for version 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist)  
-
-- [Post-update checklist for version 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist)  
 
 ## <a name="bkmk_options"></a> Enable optional features from updates  
 
@@ -383,6 +377,8 @@ When a feature isn't optional, it's installed automatically. It doesn't appear i
 > In a multi-site hierarchy, enable optional or pre-release features only from the central administration site. This behavior ensures there are no conflicts across the hierarchy. <!--507197-->  
 
 When you enable a new feature or pre-release feature, the Configuration Manager hierarchy manager (HMAN) must process the change before that feature becomes available. Processing of the change is often immediate. Depending on the HMAN processing cycle, it can take up to 30 minutes to complete. After the change is processed, restart the console before you can use the feature.
+
+Starting in version 2002,<!--5834830--> when new cloud-based features are available in the Microsoft Endpoint Manager admin center, or other attached cloud services for your on-premises Configuration Manager installation, you can now opt in to these new features in the Configuration Manager console.
 
 ### List of optional features
 
@@ -419,11 +415,9 @@ The following features are optional in the latest version of Configuration Manag
 >
 > For more information on features that are only available in the technical preview branch, see [Technical Preview](/sccm/core/get-started/technical-preview).
 
-
 ## <a name="bkmk_prerelease"></a> Use pre-release features from updates
 
 The current branch includes pre-release features for early testing in a production environment. For more information, see [pre-release features](/sccm/core/servers/manage/pre-release-features).
-
 
 ## <a name="bkmk_faq"></a> Frequently asked questions
 

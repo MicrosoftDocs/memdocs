@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Get details about changes and new capabilities introduced in version 1606 of Configuration Manager."
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
 author: mestew
@@ -145,12 +145,12 @@ You can now run a compliance scan immediately after a client installs software u
 ### Improvements to the task sequence step: Install Software Updates
 A new setting, **Evaluate software updates from cached scan results**, gives you the option to do a full scan for software updates, instead of using the cached scan results. For details, see [Task sequence steps](../../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates).
 
-Also, a new task sequence variable, **SMSTSSoftwareUpdateScanTimeout**, is available. This variable lets you control the timeout for the software updates scan during the Install Software Updates task sequence step. The default value is 30 minutes. For details, see [Task sequence built-in variables](../../../osd/understand/task-sequence-built-in-variables.md).
+Also, a new task sequence variable, **SMSTSSoftwareUpdateScanTimeout**, is available. This variable lets you control the timeout for the software updates scan during the Install Software Updates task sequence step. The default value is 30 minutes. For details, see [Task sequence built-in variables](/sccm/osd/understand/task-sequence-variables).
 
 ### OSDPreserveDriveLetter task sequence variable has been deprecated
 The OSDPreserveDriveLetter task sequence variable has been deprecated. Starting in Configuration Manager version 1606, Windows Setup determines the best drive letter to use (typically C:) during an operating system deployment, by default.
 
-For details, see [Task sequence built-in variables](../../../osd/understand/task-sequence-built-in-variables.md).
+For details, see [Task sequence built-in variables](/sccm/osd/understand/task-sequence-variables).
 
 ### Customize the RamDisk TFTP window size for PXE-enabled distribution points
 You can now customize the RamDisk window size for PXE-enabled distribution points. If you have customized your network, it could cause the boot image download to fail with a time-out error, because the window size is too large. The RamDisk Trivial File Transfer Protocol (TFTP) window size customization lets you optimize TFTP traffic when you are using PXE to meet your specific network requirements.

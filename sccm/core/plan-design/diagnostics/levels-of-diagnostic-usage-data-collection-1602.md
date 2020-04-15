@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn about the levels of diagnostics and usage data that Configuration Manager version 1602 collects."
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 1210a1ca-78c7-4d17-81cf-ac1bc5c5cf3e
 author: aczechowski

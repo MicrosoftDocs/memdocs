@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Use role-based administration to control administrative access to Configuration Manager and objects that you manage."
 ms.date: 07/26/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
 author: mestew
@@ -49,7 +49,7 @@ When you  design and implement administrative security for Configuration Manager
  The administrative scope controls the objects that an administrative user views in the Configuration Manager console, and it controls the permissions that a user has on those objects. Role-based administration configurations replicate to each site in the hierarchy as global data, and then are applied to all administrative connections.  
 
 > [!IMPORTANT]  
-> Intersite replication delays can prevent a site from receiving changes for role-based administration. For information about how to monitor intersite database replication, see the [Data transfers between sites](../../core/servers/manage/data-transfers-between-sites.md) topic.  
+> Intersite replication delays can prevent a site from receiving changes for role-based administration. For information about how to monitor intersite database replication, see the [Data transfers between sites](/sccm/core/plan-design/hierarchy/data-transfers-between-sites) topic.  
 
 ##  <a name="bkmk_Planroles"></a> Security roles
 

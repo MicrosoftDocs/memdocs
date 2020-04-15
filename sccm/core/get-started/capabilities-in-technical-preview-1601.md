@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview for Configuration Manager, version 1601."
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: aae1cf2f-2c04-4f68-a03a-f4a925433c09
 author: aczechowski
@@ -196,18 +196,18 @@ A client is online if it is currently connected to a Configuration Manager manag
 
  To see the new settings, choose **Microsoft Edge** from the configuration item **Device Settings** page of the **Create Configuration Item** wizard.  
 
- For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
+ For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).  
 
 ### Compliance settings for Windows 10 Team devices  
  Use these new compliance settings to configure devices that run Windows 10 team, such as Surface Hub Devices.  
 
  To see the new settings, choose **Windows 10 Team** from the configuration item **Device Settings** page of the **Create Configuration Item** wizard.  
 
- For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
+ For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).  
 
 ### Android - Kiosk Mode for Samsung KNOX Standard<br />Hybrid  
  Kiosk mode lets you lock a device to only allow certain features to work. For example, you can allow a device to only run one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point of sale device. These settings are not available for Samsung KNOX Standard devices in the **Windows 8.1 and Windows 10** configuration item (settings apply to Windows 10 devices only).  
 
  To see the new settings, choose **Kiosk Mode - Samsung KNOX** from the configuration item **Device Settings** page of the **Create Configuration Item** wizard.  
 
- For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
+ For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).  

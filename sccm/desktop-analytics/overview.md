@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
 ms.date: 03/03/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: overview
 ms.assetid: 38b2bed2-20dd-4ce1-abc0-219343d2c4b8
 author: aczechowski
@@ -32,9 +32,9 @@ Use Desktop Analytics with Configuration Manager to:
 
 The following video is a session from Ignite 2019, which includes more information on Desktop Analytics:
 
-<!-- [Using Desktop Analytics and Configuration Manager to reduce Windows TCO through data-driven insights for management, servicing, and support](https://myignite.techcommunity.microsoft.com/sessions/81689?source=sessions)-->
-
 > [!VIDEO https://medius.studios.ms/Embed/Video-nc/IG19-BRK3085]
+
+[Using Desktop Analytics and Configuration Manager to reduce Windows TCO through data-driven insights for management, servicing, and support](https://myignite.techcommunity.microsoft.com/sessions/81689?source=sessions)
 
 Skip to 10:00 for an in-depth demo.
 

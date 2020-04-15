@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Use administrator checklists to help you plan a migration strategy to Configuration Manager current branch."
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 295fdf07-93cc-490c-acdd-ce3ee88cb36f
 author: aczechowski

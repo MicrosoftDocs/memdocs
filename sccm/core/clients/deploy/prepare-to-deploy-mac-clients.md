@@ -147,13 +147,9 @@ Install both roles in the same site. You don't have to install them on the same 
 
 For more information about site system role placement and considerations, see [Site system roles](/sccm/core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles#bkmk_planroles).  
 
-These procedures configure the site system roles to support Mac computers:   
+To add the site system roles to support Mac computers, see [Install site system roles](/configmgr/core/servers/deploy/configure/install-site-system-roles).
 
--   [New site system server](/sccm/core/servers/deploy/configure/install-site-system-roles#to-install-site-system-roles-on-a-new-site-system-server)  
-
--   [Existing site system server](/sccm/core/servers/deploy/configure/install-site-system-roles#bkmk_Install)    
-
-In either case, on the **System Role Selection** page, select **Enrollment proxy point** and **Enrollment point** from the list of available roles.  
+On the **System Role Selection** page, select **Enrollment proxy point** and **Enrollment point** from the list of available roles.  
 
 
 

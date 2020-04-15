@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about which OS versions you can install the Configuration Manager console.
 ms.date: 02/19/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 21a80050-6452-4b7d-8424-99bddf9fa1f4
 author: mestew
