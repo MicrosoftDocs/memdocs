@@ -30,7 +30,7 @@ Starting in Configuration Manager version 2002, you can upload your Configuratio
       - This means the user account needs to be a synced user object in Azure AD.
    - The **Initiate Configuration Manager action** permission under **Remote tasks** in the Microsoft Endpoint Manager admin center.
 - Microsoft Endpoint Configuration Manager permissions:
-   - grant the sync user at least **collection - notify resource** permissions in MEMCM [Configure Security Roles](/configmgr/core/servers/deploy/configure/configure-role-based-administration#BKMK_ConfigSecRole)
+   - grant the sync user at least **collection - notify resource** permissions in MEMCM [Create Custom Security Roles](/configmgr/core/servers/deploy/configure/configure-role-based-administration?branch=pr-en-us-5247#BKMK_CreateSecRole)
 
 
 ## Internet endpoints
