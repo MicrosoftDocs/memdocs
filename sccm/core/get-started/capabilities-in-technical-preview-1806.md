@@ -4,19 +4,20 @@ titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager Technical Preview version 1806.
 ms.date: 06/06/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 52d64ef0-8c0d-42c3-857e-07d7ec776f29
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
 
-# Capabilities in Technical Preview 1806 for System Center Configuration Manager
+# Capabilities in Technical Preview 1806 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
 This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1806. You can install this version to update and add new capabilities to your technical preview site. 
 
@@ -179,7 +180,7 @@ You can now transition the Office 365 workload from Configuration Manager to Mic
 There is also a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Office 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application, thus don't install Office 365 deployed via Configuration Manager.
 
 ### Known issue
-- This workload transition currently only applies to Office 365 deployments. Configuration Manager continues to manage Office 365 updates.<!--510876--> For more information including a possible workaround, see the Configuration Manager version 1802 release note [Changing Office 365 client setting doesn’t apply](/sccm/core/servers/deploy/install/release-notes#changing-office-365-client-setting-doesnt-apply).
+- This workload transition currently only applies to Office 365 deployments. Configuration Manager continues to manage Office 365 updates.<!--510876--> For more information including a possible workaround, see the Configuration Manager version 1802 release note [Changing Office 365 client setting doesn’t apply](/sccm/core/servers/deploy/install/release-notes).
 
 
 
@@ -354,4 +355,4 @@ In [Configuration Manager version 1710](/sccm/core/plan-design/changes/whats-new
 
 
 ## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    

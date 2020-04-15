@@ -2,7 +2,7 @@
 title: Windows client deployment prerequisites
 titleSuffix: Configuration Manager
 description: Learn about the prerequisites for deploying the Configuration Manager client to Windows computers.
-ms.date: 07/26/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Prerequisites for deploying clients to Windows computers in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Deploying Configuration Manager clients in your environment has the following external dependencies and dependencies within the product. Additionally, each client deployment method has its own dependencies that must be met for client installations to be successful.  
 
@@ -41,13 +42,7 @@ Use the following information to determine the prerequisites for when you instal
 #### <a name="bkmk_sha2"></a> SHA-2 code signing support
 
 <!--SCCMDocs-pr#3404-->
-Due to weaknesses in the SHA-1 algorithm and to align to industry standards, Microsoft now only signs Configuration Manager binaries using the more secure SHA-2 algorithm. The following Windows OS versions require an update for SHA-2 code signing support:
-
-- Windows 7 SP1
-- Windows Server 2008 R2 SP1
-- Windows Server 2008 SP2
-
-For more information, see [2019 SHA-2 code signing support requirement for Windows and WSUS](https://support.microsoft.com/en-us/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
+Due to weaknesses in the SHA-1 algorithm and to align to industry standards, Microsoft now only signs Configuration Manager binaries using the more secure SHA-2 algorithm. Legacy Windows OS versions require an update for SHA-2 code signing support. For more information, see [2019 SHA-2 code signing support requirement for Windows and WSUS](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
 
 If you don't update these OS versions, you can't install the Configuration Manager client version 1906. This behavior applies to either a new client install or updating it from a previous version.
 
@@ -81,14 +76,14 @@ If the client requires these dependencies to complete the installation, it autom
 |Microsoft SQL Server Compact 4.0 SP1 components|Required to store information related to client operations.|  
 
 > [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
 > - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
 > - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
 >
-> If you're still using the application catalog website user experience, the client requires Microsoft Silverlight 5.1.41212.0. Starting in Configuration Manager 1802, the client doesn't automatically install Silverlight. The primary functionality of the application catalog is now included in Software Center.<!--1356195-->
+> If you're still using the application catalog website user experience, the client requires Microsoft Silverlight 5.1.41212.0. The client doesn't automatically install Silverlight. The primary functionality of the application catalog is now included in Software Center.<!--1356195-->
 
 #### <a name="dotNet"></a> Additional details about Microsoft .NET Framework version 4.5.2  
 
@@ -114,7 +109,7 @@ For more information, see [Determine the site system roles for clients](/sccm/co
 |Management point|To deploy the Configuration Manager client, you don't require a management point. Clients require a management point to transfer information with the site. Without a management point, you can't manage client computers.|  
 |Distribution point|The distribution point is an optional, but recommended site system role for client deployment and management. All distribution points host the client source files. Clients find the nearest distribution point from which to download the source files during client deployment or update. If the site doesn't have a distribution point, computers download the client source files from their management point.|  
 |Fallback status point|The fallback status point is an optional, but recommended site system role for client deployment. The fallback status point tracks client deployment and enables computers in the Configuration Manager site to send state messages when they can't communicate with a management point.|  
-|Reporting services point|The reporting services point is an optional, but recommended site system role. It displays reports related to client deployment and management. For more information, see [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting).|  
+|Reporting services point|The reporting services point is an optional, but recommended site system role. It displays reports related to client deployment and management. For more information, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).|  
 
 ### Installation method dependencies  
 
@@ -134,7 +129,7 @@ The following prerequisites are specific to the various methods of client instal
 
 - The client computer needs to communicate with a distribution point or a management point to download the source files.  
 
-- Starting in version 1806, when you require Kerberos mutual authentication, clients must be in a trusted Active Directory forest. Kerberos in Windows relies upon Active Directory for mutual authentication.<!--1358204-->  
+- When you require Kerberos mutual authentication, clients must be in a trusted Active Directory forest. Kerberos in Windows relies upon Active Directory for mutual authentication.<!--1358204-->  
 
 To use client push, you need the following security permissions:  
 
@@ -169,9 +164,6 @@ To download the source files, the client computer needs to communicate with a di
 To download the source files, the client computer needs to communicate with a distribution point or a management point. Unless you specified CCMSetup.exe with the following command-line parameter: `ccmsetup /source`  
 
 #### Microsoft Intune MDM installation
-
-> [!Important]
-> Hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
 
 - Requires a Microsoft Intune subscription and appropriate licenses.  
 
@@ -250,7 +242,7 @@ For more information, see [Determine the site system roles for clients](/sccm/co
 
     The reporting services point is an optional, but recommended site system role that can display reports related to mobile device enrollment and client management.  
 
-    For more information, see [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting).  
+    For more information, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
 
 - To configure enrollment for mobile devices, you must have the following security permissions:  
 

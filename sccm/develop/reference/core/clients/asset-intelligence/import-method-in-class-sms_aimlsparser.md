@@ -9,10 +9,11 @@ ms.assetid: 384ee719-c047-49a3-9847-5df0e443245f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Import Method in Class SMS_AIMLSParser
-The `Import` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, imports the MLS statement as specified by the `MLSFilepath` parameter (in UNC format) into the System Center Configuration Manager database.  
+The `Import` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports the MLS statement as specified by the `MLSFilepath` parameter (in UNC format) into the Configuration Manager database.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

@@ -10,12 +10,13 @@ ms.assetid: ff6e7267-302a-4563-815e-cdc0d1a4b60f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create prestaged media
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Prestaged media in Configuration Manager is a Windows Image (WIM) file. It can be installed on a bare-metal computer by the manufacturer or at your staging center that's not connected to the production Configuration Manager environment. Prestaged media contains the boot image used to start the destination computer and the OS image that's applied to the destination computer. You can also specify applications, packages, and driver packages to include as part of the prestaged media. The task sequence that deploys the OS isn't included in the media. Prestaged media is applied to the hard drive of a new computer before the computer is sent to the end user.
 
@@ -64,6 +65,9 @@ The hard drive of the destination computer must be formatted before the prestage
 
 ## Process
 
+ > [!NOTE]  
+ > For PKI environments, since the Root CA is specified at the Primary site, make sure the prestaged media is created at the Primary site. The CAS site does not have the Root CA information to properly create the prestaged media.
+
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node.  
 
 2. On the **Home** tab of the ribbon, in the **Create** group, select **Create Task Sequence Media**. This action starts the Create Task Sequence Media Wizard.  
@@ -103,8 +107,11 @@ The hard drive of the destination computer must be formatted before the prestage
 
         > [!IMPORTANT]  
         > As a security best practice, always assign a password to help protect the prestaged media.  
-
+ 
     - For HTTP communications, select **Create self-signed media certificate**. Then specify the start and expiration date for the certificate.  
+    
+        > [!NOTE] 
+        > If you select this option HTTPS management points will not be available for selection on the **Boot image** page of this wizard.
 
     - For HTTPS communications, select **Import PKI certificate**. Then specify the certificate to import and its password.  
 
@@ -140,6 +147,9 @@ The hard drive of the destination computer must be formatted before the prestage
     - **Management point**: Only for *site-based media*, select a management point from a primary site.  
 
     - **Associated management points**: Only for *dynamic media*, select the primary site management points to use, and a priority order for the initial communication.  
+
+        > [!NOTE]  
+        > HTTPS enabled management points will only be displayed when a PKI certificate is specified in the **Security** page of this wizard.  
 
 9. On the **Images** page, specify the following options:  
 

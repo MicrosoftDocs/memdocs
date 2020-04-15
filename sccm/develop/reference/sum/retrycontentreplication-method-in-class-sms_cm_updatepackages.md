@@ -9,7 +9,8 @@ ms.assetid: fde34edf-3ba7-4a89-9004-05c793aaa7e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # RetryContentReplication Method in Class SMS_CM_UpdatePackages
 The `RetryContentReplication` Windows Management Instrumentation (WMI) class method, in Configuration Manager, triggers DistMgr to copy content from the source to the content library.  

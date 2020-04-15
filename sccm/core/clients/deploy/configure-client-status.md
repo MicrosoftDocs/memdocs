@@ -1,7 +1,7 @@
 ---
 title: "Configure client status"
 titleSuffix: "Configuration Manager"
-description: "Select client status settings in System Center Configuration Manager."
+description: "Select client status settings in Configuration Manager."
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,13 +10,14 @@ ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# How to configure client status in System Center Configuration Manager
+# How to configure client status in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Before you can monitor System Center Configuration Manager client status and remediate problems that are found, you must configure your site to specify the parameters that are used to mark clients as inactive and configure options to alert you if client activity falls below a specified threshold. You can also disable computers from automatically remediating any problems that client status finds.  
+Before you can monitor Configuration Manager client status and remediate problems that are found, you must configure your site to specify the parameters that are used to mark clients as inactive and configure options to alert you if client activity falls below a specified threshold. You can also disable computers from automatically remediating any problems that client status finds.  
 
 ##  <a name="BKMK_1"></a> To Configure Client Status  
 
@@ -101,4 +102,4 @@ Before you can monitor System Center Configuration Manager client status and rem
 
 4. Close the registry editor.  
 
-   You can also install clients using the CCMSetup **NotifyOnly** installation property to exclude them from automatic remediation. For more information about this client installation property, see [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
+   You can also install clients using the CCMSetup **NotifyOnly** installation property to exclude them from automatic remediation. For more information about this client installation property, see [About client installation properties](../../../core/clients/deploy/about-client-installation-properties.md).  

@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Use the Content Library Transfer tool to transfer content from one disk drive to another on a Configuration Manager distribution point.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 7d07bd0a-7012-47f7-8bc5-509a402915b7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Content Library Transfer tool
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The Content Library Transfer tool is one of the [Configuration Manager tools](/sccm/core/support/tools). It transfers content from one disk drive to another. The tool is designed to run on distribution point site systems. It supports distribution points colocated with a site or remote site systems.  
 

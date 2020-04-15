@@ -1,24 +1,25 @@
 ---
 title: "New in version 1602"
 titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1602 of System Center Configuration Manager."
+description: "Get details about changes and new capabilities introduced in version 1602 of Configuration Manager."
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 4021eca1-adfb-4e5a-adee-159263c29637
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# What&#39;s new in version 1602 of System Center Configuration Manager
+# What&#39;s new in version 1602 of Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
-Update 1602 for System Center Configuration Manager is only available as an in-console update for previously installed sites that run version 1511. Version 1511 is the initial, baseline version you use to install new Configuration Manager sites.  
+Update 1602 for Configuration Manager is only available as an in-console update for previously installed sites that run version 1511. Version 1511 is the initial, baseline version you use to install new Configuration Manager sites.  
 
 
 > [!TIP]  
@@ -44,7 +45,7 @@ Update 1602 for System Center Configuration Manager is only available as an in-c
 ###  <a name="bkmk_AOAG"></a> SQL Server AlwaysOn availability groups  
  Use SQL Server AlwaysOn availability groups to host the site database at primary sites, and the central administration site as a high-availability and disaster-recovery solution.  
 
- For details, see [SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).  
+ For details, see [SQL Server AlwaysOn for a highly available site database for Configuration Manager](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).  
 
 ## Operating system deployment  
 
@@ -57,7 +58,7 @@ Update 1602 for System Center Configuration Manager is only available as an in-c
 
 -   Available Windows 10 upgrades now only display in the **Windows 10 Servicing** \ **All Windows 10 Updates** node of the Configuration Manager console. These updates no longer display in the **Software Updates** \ **All Software Updates** node of the console.  
 
--   A servicing plan is considered a high-risk deployment, and the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site’s properties. For more information, see [Settings to manage high-risk deployments for System Center Configuration Manager](../../../protect/understand/settings-to-manage-high-risk-deployments.md).  
+-   A servicing plan is considered a high-risk deployment, and the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site’s properties. For more information, see [Settings to manage high-risk deployments for Configuration Manager](../../../protect/understand/settings-to-manage-high-risk-deployments.md).  
 
 -   Users who start a Windows 10 Upgrade package now receive a message that they will be upgrading their operating system.  
 
@@ -66,12 +67,11 @@ Update 1602 for System Center Configuration Manager is only available as an in-c
 ### iOS app configuration policies  
  Use Configuration Manager app configuration policies to supply settings that might be required when the user runs an iOS app. For example, an app might require the user to specify a custom port number, language, security settings, or branding settings (such as a company logo). If these settings are incorrectly entered, this can increase the burden on your help desk, and also slow the adoption of new apps.  
 
- App configuration policies can help you eliminate these problems by letting you deploy these settings to users in a policy, before they run the app. The settings are then supplied automatically, and the user doesn't need to take any action. For details, see [Configure iOS apps with app configuration policies in System Center Configuration Manager](../../../apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md).  
+ App configuration policies can help you eliminate these problems by letting you deploy these settings to users in a policy, before they run the app. The settings are then supplied automatically, and the user doesn't need to take any action.
 
 ### Manage volume-purchased iOS apps  
  Configuration Manager can help you deploy and manage apps you purchased in volume from the Apple Volume-Purchase Program (VPP). Configuration Manager imports the license information from the app store, and tracks how many of the licenses you have used.  
 
- For details, see [Manage volume-purchased iOS apps with System Center Configuration Manager](../../../apps/deploy-use/manage-volume-purchased-ios-apps.md).  
 
 ### Automatic creation of Office mobile apps  
  When you update to version 1602 from 1511, Configuration Manager automatically creates the following Microsoft Office mobile apps for Android and iOS:  
@@ -90,55 +90,52 @@ Update 1602 for System Center Configuration Manager is only available as an in-c
 
 You will find these apps in the **Applications** node of the Configuration Manager console.  
 
- For more information about deploying applications, see [How to deploy applications with System Center Configuration Manager](../../../apps/deploy-use/deploy-applications.md).  
+ For more information about deploying applications, see [How to deploy applications with Configuration Manager](../../../apps/deploy-use/deploy-applications.md).  
 
 ## Software updates  
 
 ### Manage Office 365 client updates  
- System Center Configuration Manager has the ability to manage Office 365 client updates by using the software update management workflow. For more information, see [Manage Office 365 ProPlus updates with System Center Configuration Manager](/sccm/sum/deploy-use/manage-office-365-proplus-updates).  
+ Configuration Manager has the ability to manage Office 365 client updates by using the software update management workflow. For more information, see [Manage Office 365 ProPlus updates with Configuration Manager](/sccm/sum/deploy-use/manage-office-365-proplus-updates).  
 
 ## Compliance settings  
 
 ### Compliance settings for devices running Windows 10 Team  
  New settings have been added to the **Windows 8.1 and Windows 10** configuration item. These settings help you control devices running Windows 10 Team, such as a Surface Hub device.  
 
- For details, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
+ For details, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
 
 ### Kiosk mode settings for Android Samsung KNOX Standard devices  
  Kiosk mode allows you to lock a device so that only certain features work. For example, you can allow a device to run only one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point-of-sale device. In Configuration Manager, you can now specify kiosk mode settings for Samsung KNOX Standard devices.  
 
- For details, see [How to create configuration items for Android and Samsung KNOX Standard devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).  
 
 ## Conditional access  
 
-### Conditional access for PCs managed by System Center Configuration Manager  
- Previous to this release, to set up conditional access for a PC, the PC either had to be enrolled in Intune or had to be a domain-joined PC. Beginning with the 1602 update, conditional access for PCs managed by System Center Configuration manager is supported. For your PCs that are managed by System Center Configuration Manager, you can restrict access to Exchange Online and SharePoint Online only to devices that are compliant with the compliance policies you set.  
+### Conditional access for PCs managed by Configuration Manager  
+ Previous to this release, to set up conditional access for a PC, the PC either had to be enrolled in Intune or had to be a domain-joined PC. Beginning with the 1602 update, conditional access for PCs managed by Configuration Manager is supported. For your PCs that are managed by Configuration Manager, you can restrict access to Exchange Online and SharePoint Online only to devices that are compliant with the compliance policies you set.  
 
- For details, see [Manage access to Office 365 services for PCs managed by System Center Configuration Manager](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 ### Restricting access based on the health of devices  
  You can now restrict access to email and Office 365 services based on the health of the devices, as reported by the Health Attestation Service. Additionally, devices managed by Intune are included in the device health reports.  
 
- The Configuration Manager console features a new compliance rule that allows you to specify if the devices should be allowed or blocked access based on their health status. For details about Health Attestation Service and how the health of devices is reported in Intune, see [Health attestation for System Center Configuration Manager](../../../core/servers/manage/health-attestation.md).  
+ The Configuration Manager console features a new compliance rule that allows you to specify if the devices should be allowed or blocked access based on their health status. For details about Health Attestation Service and how the health of devices is reported in Intune, see [Health attestation for Configuration Manager](../../../core/servers/manage/health-attestation.md).  
 
 ### New compliance policy rules  
  New compliance policy rules, like automatic updates and requiring a password to unlock devices, have been added to support better security requirements.
 
- For more details, see [Device compliance policies in System Center Configuration Manager](../../../protect/deploy-use/device-compliance-policies.md).  
 
 ### Make sure enrolled and compliant devices always have access to Exchange on-premises  
  When you check the following option, devices that are enrolled in Intune, and compliant with the compliance policies, are allowed to access Exchange on-premises: **Default rule override - Always allow Intune enrolled and compliant devices to access Exchange on-premises:**. This rule is available on the  **General page** of the **Configure Conditional Access Policy Wizard** for Exchange on-premises.
 
  This rule overrides the default rule, which means that even if you set the default rule to quarantine or block access, enrolled and compliant devices will still be able to access Exchange on-premises. Use this setting when you want enrolled and compliant devices to always have access to email through Exchange on-premises.   
 
- For the detailed walkthrough, see [Manage email access in System Center Configuration Manager](../../../protect/deploy-use/manage-email-access.md).  
+ For the detailed walkthrough, see [Manage email access](../../../protect/deploy-use/manage-email-access.md).  
 
 ## Client management  
 
 ### Client online status  
  A new  status for clients is available for monitoring if a computer is online or not. A computer is considered online if it's connected to its assigned management point. To indicate that the computer is online, the client sends ping-like messages to the management point. If the management point doesn't receive a message after 5 minutes, the client is considered offline.  
 
- For details, see [How to monitor clients in System Center Configuration Manager](../../../core/clients/manage/monitor-clients.md).  
+ For details, see [How to monitor clients](../../../core/clients/manage/monitor-clients.md).  
 
 ### Refresh PC machine and user policy from Software Center  
  A new option, **Sync Policy**, has been added to the **Options** > **Computer Maintenance** page of Software Center that causes the PC to refresh its Configuration Manager machine and user policy.  
@@ -163,7 +160,7 @@ You will find these apps in the **Applications** node of the Configuration Manag
 
 -   Code Integrity  
 
-For details, see [Health attestation for System Center Configuration Manager](../../../core/servers/manage/health-attestation.md).  
+For details, see [Health attestation for Configuration Manager](../../../core/servers/manage/health-attestation.md).  
 
 ### Improvements to Endpoint Protection antimalware settings  
  1602 adds the following new settings in Endpoint Protection antimalware policy for Windows Defender:  
@@ -182,7 +179,7 @@ For details, see [Health attestation for System Center Configuration Manager](..
 
     Additionally, in the “Exclusion settings” section of endpoint protection antimalware policy, the existing **Exclude files and folders** setting now allows device exclusions.  
 
-For details, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/endpoint-antimalware-policies.md).  
+For details, see [How to create and deploy antimalware policies for Endpoint Protection](../../../protect/deploy-use/endpoint-antimalware-policies.md).  
 
 ## Mobile device management  
 
@@ -196,8 +193,6 @@ For details, see [How to create and deploy antimalware policies for Endpoint Pro
 -   Reactivate the device.  
 
 Configuration Manager can request the Activation Lock status of both supervised and unsupervised devices that run iOS 7.1 and later. For supervised devices, Configuration Manager can retrieve the Activation Lock bypass code and directly issue it to the device.  
-
- For details, see [Help protect iOS devices with Activation Lock bypass in System Center Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock).  
 
 ### Monitor terms and conditions deployments  
  You can monitor terms and conditions deployments in the Configuration Manager console.  

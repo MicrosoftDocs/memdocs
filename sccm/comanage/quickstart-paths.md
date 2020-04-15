@@ -4,13 +4,14 @@ titleSuffix: Configuration Manager
 description: Understand the prerequisites for the two primary ways for you to setup co-management.
 ms.date: 06/27/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology: configmgr-comanage
 ms.topic: conceptual
 ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Paths to co-management

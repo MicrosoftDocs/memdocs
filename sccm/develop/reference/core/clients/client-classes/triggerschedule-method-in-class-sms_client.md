@@ -9,7 +9,8 @@ ms.assetid: a4e13dea-899a-4d9e-8e5b-60b7f81c0c45
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # TriggerSchedule Method in Class SMS_Client
 The `TriggerSchedule` method, in Configuration Manager, triggers the client to run the specified schedule.  
@@ -69,7 +70,6 @@ UInt32 TriggerSchedule(
 |Windows Installer Source List Update Cycle|{00000000-0000-0000-0000-000000000107}|
 |Software Updates Assignments Evaluation Cycle|{00000000-0000-0000-0000-000000000108}|
 |Branch Distribution Point Maintenance Task|{00000000-0000-0000-0000-000000000109}|
-|DCM policy|{00000000-0000-0000-0000-000000000110}|
 |Send Unsent State Message|{00000000-0000-0000-0000-000000000111}|
 |State System policy cache cleanout|{00000000-0000-0000-0000-000000000112}|
 |Scan by Update Source|{00000000-0000-0000-0000-000000000113}|

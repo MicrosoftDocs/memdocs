@@ -10,12 +10,13 @@ ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Packages and programs in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager continues to support packages and programs that were used in Configuration Manager 2007. A deployment that uses packages and programs might be more suitable than an application when you deploy any of the following tools or scripts:  
 
@@ -252,7 +253,7 @@ To monitor package and program deployments, use the same procedures that you use
 
 Packages and programs also include a number of built-in reports, which enable you to monitor information about the deployment status of packages and programs. These reports have the report category of **Software Distribution – Packages and Programs** and **Software Distribution – Package and Program Deployment Status**.  
 
-For more information about how to configure reporting in Configuration Manager, see [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting).  
+For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
 
 
 ## Manage packages and programs

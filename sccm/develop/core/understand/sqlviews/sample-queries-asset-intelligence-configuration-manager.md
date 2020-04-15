@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common Asset Intelligence views to other views.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 3e00495e-9ed8-49e7-a6ad-2d67c7ecf9b0
 author: aczechowski
 ms.author: aaroncz

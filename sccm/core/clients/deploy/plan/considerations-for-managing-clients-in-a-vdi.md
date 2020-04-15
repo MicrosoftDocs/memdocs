@@ -10,14 +10,15 @@ ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Manage Configuration Manager clients in a virtual desktop infrastructure (VDI)
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-System Center Configuration Manager supports installing the Configuration Manager client on the following virtual desktop infrastructure (VDI) scenarios:  
+Configuration Manager supports installing the Configuration Manager client on the following virtual desktop infrastructure (VDI) scenarios:  
 
 - **Personal virtual machines** - Personal virtual machines are generally used when you want to make sure that user data and settings are maintained on the virtual machine between sessions.  
 

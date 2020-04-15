@@ -10,11 +10,12 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Get started with compliance settings in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Get started with compliance settings in Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Before creating Configuration Manager compliance settings, first learn about core concepts and understand how they work.  
 
@@ -36,12 +37,9 @@ Configuration items fall into two main categories:
 | Device type | More information |  
 |------------|----------------------|  
 | Windows PCs (with the Configuration Manager client) | Create custom configuration items to assess objects such as registry keys, files, and Active Directory attributes.<br /><br /> When you use the Windows 10 configuration item type, select settings from a predefined list. |  
-| Windows PCs (enrolled with Microsoft Intune) | Select settings from a predefined list. |  
-| iOS devices (enrolled with Microsoft Intune) | Select settings from a predefined list. |  
-| Android devices (enrolled with Microsoft Intune) | Select settings from a predefined list. |  
-| Windows Phone devices (enrolled with Microsoft Intune) | Select settings from a predefined list. |  
+| Windows PCs (enrolled with on-premises MDM) | Select settings from a predefined list. |  
+| Windows Phone devices (enrolled with on-premises MDM) | Select settings from a predefined list. |  
 | Mac computers (with the Configuration Manager client) | Create custom configuration items to assess objects such as macOS preferences, and results returned by a script. |  
-| Mac computers (enrolled with Microsoft Intune) | Select settings from a predefined list. |  
 
 
 

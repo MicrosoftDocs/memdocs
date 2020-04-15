@@ -9,10 +9,11 @@ ms.assetid: 70b565ae-76c1-472c-8988-be24dd3e3644
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Handle Configuration Manager Synchronous Errors by Using Managed Code
-To handle a System Center Configuration Manager error that is raised in a synchronous query, you catch the [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx) exception. Because this exception is also caught by SMS_Exception], you can catch it and the [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) exception in the same catch block.  
+To handle a Configuration Manager error that is raised in a synchronous query, you catch the [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx) exception. Because this exception is also caught by SMS_Exception], you can catch it and the [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) exception in the same catch block.  
 
  If the exception that is caught in an SMS_Exception is an [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx), you can use it to get to the underlying `__ExtendedException` or `SMS_ExtendedException`. Because the managed SMS Provider library does not wrap these exceptions, you will need to use the System.Management namespace [ManagementException](https://msdn.microsoft.com/library/system.management.managementexception.aspx) object to access them.  
 

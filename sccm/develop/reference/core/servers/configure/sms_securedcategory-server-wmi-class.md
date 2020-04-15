@@ -9,7 +9,8 @@ ms.assetid: 25ae1991-bb85-400b-be7e-7efed4575a57
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SecuredCategory Server WMI Class
 The `SMS_SecuredCategory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the RBA security category. An RBA security category defines a set of objects associated with it.  

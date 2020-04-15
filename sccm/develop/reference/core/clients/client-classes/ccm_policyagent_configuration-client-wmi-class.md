@@ -9,10 +9,11 @@ ms.assetid: 72e377e9-0494-4ec6-a7b6-4361df7112e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_PolicyAgent_Configuration Client WMI Class
-In System Center Configuration Manager, the `CCM_PolicyAgent_Configuration` class is a client Windows Management Instrumentation (WMI) class that represents the Policy Agent configuration for a given authority.  
+In Configuration Manager, the `CCM_PolicyAgent_Configuration` class is a client Windows Management Instrumentation (WMI) class that represents the Policy Agent configuration for a given authority.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -118,7 +119,7 @@ Class CCM_PolicyAgent_Configuration : CCM_Policy
 
  `true` if the Policy Agent sends user group information when requesting a user policy.  
 
- This method/property has been removed or deprecated in System Center Configuration Manager SP1.  
+ This method/property has been removed or deprecated in Configuration Manager SP1.  
 
  `PolicyEnableUserPolicyOnInternet`  
  Data type: `Boolean`  

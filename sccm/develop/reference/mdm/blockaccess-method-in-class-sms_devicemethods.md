@@ -9,7 +9,8 @@ ms.assetid: d659f70b-c01f-41ab-8f65-1af181a07c9d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # BlockAccess Method in Class SMS_DeviceMethods
 The `BlockAccess` Windows Management Instrumentation (WMI) class method, in Configuration Manager, blocks the Exchange ActiveSync device from accessing Exchange.  

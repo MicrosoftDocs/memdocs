@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Learn how to reset your Desktop Analytics account.
 ms.date: 08/16/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 884d4864-950b-4139-b778-d5368e1f6ef2
 author: aczechowski
 ms.author: aaroncz

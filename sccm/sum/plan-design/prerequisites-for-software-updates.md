@@ -1,7 +1,7 @@
 ---
 title: Prerequisites for software updates
 titleSuffix: "Configuration Manager"
-description: "Learn about prerequisites for software updates in System Center Configuration Manager."
+description: "Learn about prerequisites for software updates in Configuration Manager."
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -10,14 +10,15 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.collection: M365-identity-device-management
+
+
 ---
 
-# Prerequisites for software updates in System Center Configuration Manager
+# Prerequisites for software updates in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-This article lists the prerequisites for software updates in System Center Configuration Manager. For each of the prerequisites, the external dependencies and internal dependencies are listed in separate tables.  
+This article lists the prerequisites for software updates in Configuration Manager. For each of the prerequisites, the external dependencies and internal dependencies are listed in separate tables.  
 
 ## Software update dependencies that are external to Configuration Manager  
  The following sections list the external dependencies for software updates.  
@@ -34,7 +35,6 @@ This article lists the prerequisites for software updates in System Center Confi
   - [KB 3095113 and KB 3159706 (or an equivalent update)](#BKMK_wsus2012) are needed for WSUS 6.2 and 6.3 if you deploy Windows 10 upgrades.
 
 > [!NOTE]
-> - Beginning with version 1702, Windows Server 2008 R2 isn't supported for the software update point role. For more information, see [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#bkmk_2008r2sp1).
 > - When you have multiple software update points at a site, ensure that they're all running the same version of WSUS.
 
 ### WSUS Administration Console  

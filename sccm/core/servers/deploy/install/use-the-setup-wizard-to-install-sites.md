@@ -3,18 +3,19 @@ title: Setup wizard
 titleSuffix: Configuration Manager
 ms.date: 07/26/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Use the Setup Wizard to install Configuration Manager sites
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 To install a new Configuration Manager site by using a guided user interface, use the Configuration Manager Setup Wizard (setup.exe). The wizard supports installing a primary site or central administration site. You also use the wizard to [upgrade an evaluation installation](/sccm/core/servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install) of Configuration Manager to a fully licensed installation. When you don't want to use the wizard, you can instead use an [installation script](/sccm/core/servers/deploy/install/use-a-command-line-to-install-sites) and run an unattended command-line installation.
 
@@ -29,7 +30,9 @@ Install a secondary site from within the Configuration Manager console. Secondar
 > - **Download required prerequisite files**: `smssetup\bin\x64\setupdl.exe`. For more information, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader).
 > - **Install Configuration Manager console**: `smssetup\bin\i386\consolesetup.exe`. For more information, see [Install consoles](/sccm/core/servers/deploy/install/install-consoles).
 > - [**Download System Center Updates Publisher**](/sccm/sum/tools/updates-publisher) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626548 -->
-> - [**Download clients for additional operating systems**](https://www.microsoft.com/download/details.aspx?id=47719) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626550 -->
+> - **Download clients for additional operating systems**: <!-- https://go.microsoft.com/fwlink/p/?LinkId=626550 -->
+>   - [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850)
+>   - [Clients for UNIX and Linux](https://www.microsoft.com/download/details.aspx?id=47719)
 > - [**Release notes**](/sccm/core/servers/deploy/install/release-notes) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
 > - [**Read documentation**](https://docs.microsoft.com/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
 > - **Obtain installation assistance**: [TechNet Forums: Configuration Manager (Current Branch) – Site and Client Deployment](https://social.technet.microsoft.com/Forums/en-us/home?forum=ConfigMgrDeployment) <!--NOTE: this link requires en-us locale to work-->   <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
@@ -50,7 +53,7 @@ If you're installing a central administration site as part of a site expansion s
 
 ### <a name="bkmk_installpri"></a> Process to install a primary or central administration site
 
-1. On the computer where you want to install the site, run `<InstallationMedia>\SMSSETUP\BIN\X64\Setup.exe` to start the **System Center Configuration Manager Setup Wizard**.  
+1. On the computer where you want to install the site, run `<InstallationMedia>\SMSSETUP\BIN\X64\Setup.exe` to start the **Configuration Manager Setup Wizard**.  
 
     > [!NOTE]  
     > When you install a central administration site to expand on a stand-alone primary site, or install a new child primary site in an existing hierarchy, use installation media (source files) that match the version of the existing site or sites. If you've installed in-console updates that have changed the version of the previously installed sites, don't use the original installation media. Instead, use source files from the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder) of an updated site. Configuration Manager requires you to use source files that match the version of the existing site that your new site will connect to.  
@@ -354,7 +357,7 @@ Use the Configuration Manager console to install a secondary site.
         - **SQL Server Broker port**: Specify the SQL Server Service Broker (SSB) port for SQL Server to use. Specify a valid port that no other site or service is using, and that no firewall restrictions block.  
 
     > [!TIP]  
-    > For a list of the SQL Server versions that System Center Configuration Manager supports, see [Supported SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions).  
+    > For a list of the SQL Server versions that Configuration Manager supports, see [Supported SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions).  
 
 7. On the **Distribution Point** page, configure settings for the distribution point that will be installed on the secondary site server.  
 

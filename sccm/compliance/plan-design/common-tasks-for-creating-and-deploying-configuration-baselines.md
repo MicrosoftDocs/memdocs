@@ -1,7 +1,7 @@
 ---
 title: "Common tasks for configuration baselines "
 titleSuffix: "Configuration Manager"
-description: "Learn about how to create and deploy System Center Configuration Manager configuration baselines."
+description: "Learn about how to create and deploy Configuration Manager configuration baselines."
 ms.date: 07/12/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -10,17 +10,18 @@ ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Common tasks for creating and deploying configuration baselines with System Center Configuration Manager
+# Common tasks for creating and deploying configuration baselines with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-This topic contains common scenarios to help you learn about how to create and deploy System Center Configuration Manager configuration baselines.  
+This topic contains common scenarios to help you learn about how to create and deploy Configuration Manager configuration baselines.  
 
  If you are already familiar with compliance settings, you can find detailed documentation about all the features you use in the [Create configuration baselines](../../compliance/deploy-use/create-configuration-baselines.md) and [Deploy configuration baselines](../../compliance/deploy-use/deploy-configuration-baselines.md) topics.  
 
- Before you start, read [Get started with compliance settings in System Center Configuration Manager](../../compliance/get-started/get-started-with-compliance-settings.md) to learn some basics about compliance settings, and also read [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) to implement any necessary prerequisites.  
+ Before you start, read [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md) to learn some basics about compliance settings, and also read [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) to implement any necessary prerequisites.  
 
 ## Create a configuration baseline  
  In this example, you've created a configuration item for only Windows 10 PCs that run the Configuration Manager client.  

@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1906 of Configuration Manager current branch.
 ms.date: 10/01/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # What's new in version 1906 of Configuration Manager current branch
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Update 1906 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1802 or later. <!-- baseline only statement:When installing a new site, it's also available as a baseline version.--> This article summarizes the changes and new features in Configuration Manager, version 1906.  
 
@@ -336,7 +337,7 @@ For more information, see [About task sequence steps](/sccm/osd/understand/task-
 <!--3699337-->
 If the Configuration Manager console stops responding, you can be locked out of making further changes to a task sequence. Now when you attempt to access a locked task sequence, you can now **Discard Changes**, and continue editing the object.
 
-For more information, see [Manage task sequences](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#bkmk_sedo).
+For more information, see [Use the task sequence editor](/sccm/osd/understand/task-sequence-editor#bkmk_sedo).
 
 ### Pre-cache driver packages and OS images
 
@@ -394,7 +395,7 @@ This release includes the following infrastructure improvements to Software Cent
 >
 > - The Silverlight user experience isn't supported as of current branch version 1806.
 > - Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles.
-> - In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> - Support ends for the application catalog roles with version 1910.  
 
 For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat) and [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center).
 
@@ -509,7 +510,7 @@ For more information, see [Monitor software updates](/sccm/sum/deploy-use/monito
 
 To help you determine which devices are ready to upgrade to Office 365 ProPlus, there's a new readiness dashboard. It includes the **Office 365 ProPlus upgrade readiness** tile that released in Configuration Manager current branch version 1902. In the Configuration Manager console, go to the **Software Library** workspace, expand **Office 365 Client Management**, and select the **Office 365 ProPlus Upgrade Readiness** node.
 
-For more information on the dashboard, prerequisites, and using this data, see [Integration for Office 365 ProPlus readiness](/sccm/sum/deploy-use/office-365-dashboard#office-365-proplus-upgrade-readiness-dashboard).
+For more information on the dashboard, prerequisites, and using this data, see [Integration for Office 365 ProPlus readiness](/configmgr/sum/deploy-use/office-365-dashboard#bkmk_readiness-dash).
 
 
 ## <a name="bkmk_protect"></a> Protection
@@ -611,7 +612,7 @@ Version 1906 deprecates support for the following products:
 As of this version, the following features are no longer pre-release:
 
 - [SMS Provider administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)
-- [Device Guard management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)
+- [Windows Defender Application Control management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4514258).
 

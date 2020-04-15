@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Learn to recover your sites in Configuration Manager.
 ms.date: 08/23/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Recover a Configuration Manager site
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Run a Configuration Manager site recovery after a site fails or data loss occurs in the site database. Repairing and resynchronizing data are the core tasks of a site recovery and are required to prevent interruption of operations.
 
@@ -349,10 +350,6 @@ Repeat this process for all task sequences.
 After a site server recovery, reenter Windows sideloading keys specified for the site. These keys are reset during site recovery. After you reenter the sideloading keys, the site resets the count in the **Activations used** column for Windows sideloading keys.
 
 For example, before the site failure the **Total activations** count shows as **100**. The number of keys that devices have used, or **Activations used**, is **90**. After the site recovery, the **Total activations** value still displays **100**, but the **Activations used** column incorrectly displays **0**. After 10 new devices use a sideloading key, there are no more sideloading keys, and the 11th device fails to apply a sideloading key.
-
-### Recreate the Microsoft Intune subscription
-
-If you recover a Configuration Manager site server after the site server is reimaged, the Microsoft Intune subscription isn't restored. Reconnect your subscription after you recover the site. Don't create a new APN request. Instead upload the current valid PEM file. Use the same file that you uploaded the last time you configured or renewed iOS management. For more information, see [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription).
 
 ### Recreate Azure services
 

@@ -1,40 +1,39 @@
 ---
-title: "Fundamentals"
-titleSuffix: "Configuration Manager"
-description: "Learn about basic concepts for System Center Configuration Manager."
-ms.date: 12/30/2016
+title: Fundamentals
+titleSuffix: Configuration Manager
+description: Learn about basic concepts for Configuration Manager.
+ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: cc4cdb35-f0b4-42b5-9cec-6431a8c30793
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Fundamentals of System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# Fundamentals of Configuration Manager
 
-If you are new to System Center Configuration Manager, read the fundamental topics to learn about basic concepts for Configuration Manager before you run setup to install your first site. If you are familiar with Configuration Manager, then you can dive right in. We recommend that you start with [What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).  
+*Applies to: Configuration Manager (current branch)*
 
- For information about supported operating systems and supported environments, hardware requirements, and capacity information, see [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md).  
+If you're new to Configuration Manager current branch, start with the fundamentals. Before you run setup to install your first site, learn about the basic concepts of Configuration Manager. If you're already familiar with System Center 2012 Configuration Manager, then start with [What's changed from System Center 2012 Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).
 
- When you deploy Configuration Manager, you deploy one or more sites:  
+For information about supported operating systems and supported environments, hardware requirements, and capacity information, see [Supported configurations for Configuration Manager](/configmgr/core/plan-design/configs/supported-configurations).  
 
-- **When you deploy multiple sites**, the sites form child to parent relationships that are collectively referred to as a hierarchy. Use a hierarchy to centrally manage a larger number of sites and devices.  Data and information flows down the hierarchy to reach devices that you manage. Information about devices, and results of configuration tasks and requests flow up the hierarchy.  
+See the following articles to learn about fundamental concepts for Configuration Manager:
 
-- **When you deploy a single site**, it is also referred to as a hierarchy.  
+- [Fundamentals of sites and hierarchies](/configmgr/core/understand/fundamentals-of-sites-and-hierarchies)  
 
-  Some configuration tasks and settings will apply to all sites in a hierarchy, while others apply to individual sites.  
+- [About upgrade, update, and install](/configmgr/core/understand/upgrade-update-install)
 
-## Fundamental concepts for System Center Configuration Manager
-View the following topics to learn about fundamental concepts for System Center Configuration Manager:  
+- [Fundamentals of managing devices](/configmgr/core/understand/fundamentals-of-managing-devices)  
 
--   [Fundamentals of sites and hierarchies for System Center Configuration Manager](../../core/understand/fundamentals-of-sites-and-hierarchies.md)  
+- [Fundamentals of client management tasks](/configmgr/core/understand/fundamentals-of-client-management-tasks)  
 
--   [Fundamentals of managing devices with System Center Configuration Manager](../../core/understand/fundamentals-of-managing-devices.md)  
+- [Fundamentals of security](/configmgr/core/understand/fundamentals-of-security)  
 
--   [Fundamentals of client management tasks for System Center Configuration Manager](../../core/understand/fundamentals-of-client-management-tasks.md)  
+- [Fundamentals of role-based administration](/configmgr/core/understand/fundamentals-of-role-based-administration)
 
--   [Fundamentals of security for System Center Configuration Manager](../../core/understand/fundamentals-of-security.md)  
+- [Fundamentals of content management](/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management)

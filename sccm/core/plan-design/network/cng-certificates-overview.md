@@ -4,13 +4,14 @@ titleSuffix: Configuration Manager
 description: Learn about support for Cryptography Next Generation (CNG) certificates for Configuration Manager clients and servers.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # CNG certificates overview

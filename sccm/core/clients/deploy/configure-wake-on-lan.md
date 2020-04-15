@@ -1,8 +1,8 @@
 ---
 title: "Configure Wake on LAN"
 titleSuffix: "Configuration Manager"
-description: "Select Wake On LAN settings in System Center Configuration Manager."
-ms.date: 08/07/2019
+description: "Select Wake On LAN settings in Configuration Manager."
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,13 +10,14 @@ ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# How to configure Wake on LAN in System Center Configuration Manager
+# How to configure Wake on LAN in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Specify Wake on LAN settings for System Center Configuration Manager when you want to bring computers out of a sleep state.
+Specify Wake on LAN settings for Configuration Manager when you want to bring computers out of a sleep state.
 
 ## <a name="bkmk_wol-1810"></a> Wake on LAN starting in version 1810
 <!--3607710-->
@@ -33,6 +34,11 @@ Starting in Configuration Manager 1810, there's a new way to wake up sleeping ma
 - Machines only wake when you notify them through the **Wake Up** client notification.
     - For wake-up when a deadline occurs, the older version of Wake on LAN is used.
     -  If the older version isn't enabled, client wake up won't occur for deployments created with the settings **Use Wake-on-LAN to wake up clients for required deployments** or **Send wake-up packets**.  
+
+> [!IMPORTANT]
+> The Wake On LAN feature is recommended for use on only a limited amount of devices (100) at a time.
+>
+> When you use the Wake On LAN feature to wake up machines from Configuration Manager admin console, the wake up requests are put in to an internal queue that's shared by other real-time action features. Examples of those other features are Run Scripts, CMPivot, and other fast-channel client notifications. Depending on the performance of your site systems, the wake up actions may take an extended amount of time and delay the other real-time action. It is suggested to not wake up more than 100 machines at a single time. To know if you are getting a backlog in this area that may cause delays, you can look in the ...\inboxes\objmgr.box directory to see if there are a large number of files with .OPA extension.
 
 
 ### Security role permissions
@@ -63,7 +69,8 @@ Right-click on the client, go to **Client Notification**, then select **Wake up*
 - **To wake up all sleeping clients in a collection:** Right-click on the device collection, go to **Client Notification**, then select **Wake up**.
    - This action can't be run on built-in collections.
    - When you have a mix of asleep and awake clients in a collection, only the clients that are asleep are sent a Wake on LAN request.
-   - This action is only active when the Configuration Manager console is connected to a stand-alone or child primary site. When connected to a Central Administration Site, the action is not available.
+   - Starting in Configuration Manager 2002, this action is available from a console connected to a Central Administration site, a stand-alone site, or child primary site.
+   - In versions 1910 and earlier, this action is only active when the Configuration Manager console is connected to a stand-alone or child primary site. When connected to a Central Administration Site, the action is not available.
 
 ### What to expect when only the new version of Wake on LAN is enabled
 
@@ -80,16 +87,16 @@ Starting in version 1902, the **Wake Up** client notification honors your existi
 
 ## <a name="bkmk_wol-previous"></a>  Wake on LAN for version 1806 and earlier
 
-Specify Wake on LAN settings for System Center Configuration Manager when you want to bring computers out of a sleep state to install required software, such as software updates, applications, task sequences, and programs.
+Specify Wake on LAN settings for Configuration Manager when you want to bring computers out of a sleep state to install required software, such as software updates, applications, task sequences, and programs.
 
 You can supplement Wake on LAN by using the wake-up proxy client settings. However, to use wake-up proxy, you must first enable Wake on LAN for the site and specify **Use wake-up packets only** and the **Unicast** option for the Wake on LAN transmission method. This wake-up solution also supports ad-hoc connections, such as a remote desktop connection.
 
-Use the first procedure to configure a primary site for Wake on LAN. Then, use the second procedure to configure the wake-up proxy client settings. This second procedure configures the default client settings for the wake-up proxy settings to apply to all computers in the hierarchy. If you want these settings to apply to only selected computers, create a custom device setting and assign it to a collection that contains the computers that you want to configure for wake-up proxy. For more information about how to create custom client settings, see [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).
+Use the first procedure to configure a primary site for Wake on LAN. Then, use the second procedure to configure the wake-up proxy client settings. This second procedure configures the default client settings for the wake-up proxy settings to apply to all computers in the hierarchy. If you want these settings to apply to only selected computers, create a custom device setting and assign it to a collection that contains the computers that you want to configure for wake-up proxy. For more information about how to create custom client settings, see [How to configure client settings](../../../core/clients/deploy/configure-client-settings.md).
 
 A computer that receives the wake-up proxy client settings will likely pause its network connection for 1-3 seconds. This occurs because the client must reset the network interface card to enable the wake-up proxy driver on it.
 
 > [!WARNING]
-> To avoid unexpected disruption to your network services, first evaluate wake-up proxy on an isolated and representative network infrastructure. Then use custom client settings to expand your test to a selected group of computers on several subnets. For more information about how wake-up proxy works, see [Plan how to wake up clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-wake-up-clients.md).
+> To avoid unexpected disruption to your network services, first evaluate wake-up proxy on an isolated and representative network infrastructure. Then use custom client settings to expand your test to a selected group of computers on several subnets. For more information about how wake-up proxy works, see [Plan how to wake up clients](../../../core/clients/deploy/plan/plan-wake-up-clients.md).
 
 
 ### To configure Wake on LAN for a site for version 1806 and earlier
@@ -98,7 +105,7 @@ A computer that receives the wake-up proxy client settings will likely pause its
 
 1. In the Configuration Manager console, go to **Administration > Site Configuration > Sites**.
 2. Click the primary site to configure, and then click **Properties**.
-3. Click the **Wake on LAN** tab, and configure the options that you require for this site. To support wake-up proxy, make sure you select **Use wake-up packets only** and **Unicast**. For more information, see [Plan how to wake up clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-wake-up-clients.md).
+3. Click the **Wake on LAN** tab, and configure the options that you require for this site. To support wake-up proxy, make sure you select **Use wake-up packets only** and **Unicast**. For more information, see [Plan how to wake up clients](../../../core/clients/deploy/plan/plan-wake-up-clients.md).
 4. Click **OK** and repeat the procedure for all primary sites in the hierarchy.
 
 ![Enable Wake On LAN in the site properties](media/wol-site-properties.png)

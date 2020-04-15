@@ -9,14 +9,15 @@ ms.assetid: 18161bed-17b9-49df-bb83-20082f519bd8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Delete a Collection
-Your application can delete a collection in System Center Configuration Manager by using the [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) and class properties.  
+Your application can delete a collection in Configuration Manager by using the [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) and class properties.  
 
 > [!IMPORTANT]
 >
-> - Care should be exercised when deleting any System Center Configuration Manager object.
+> - Care should be exercised when deleting any Configuration Manager object.
 >
 > - We recommend that if you are deleting several collections, you do so one at a time, to allow database operations time to manage changes associated with the deletions.  
 

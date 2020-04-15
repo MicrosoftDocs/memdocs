@@ -9,7 +9,8 @@ ms.assetid: 3b5b6f45-d435-4096-8e7f-13290d4019c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetMachinePolicy Method in Class CCM_ClientUtilities
 The `GetMachinePolicy` Windows Management Instrumentation (WMI) class method gets and evaluates the machine policy for a client device.  

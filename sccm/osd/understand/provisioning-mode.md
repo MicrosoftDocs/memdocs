@@ -6,7 +6,8 @@ ms.date: 05/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 3e3ff3a4-7a75-41bb-bdf9-33ede9c0e3a3
 author: aczechowski
 ms.author: aaroncz
@@ -15,7 +16,7 @@ manager: dougeby
 
 # Provisioning mode
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 During an OS deployment task sequence, Configuration Manager places the client in provisioning mode. (An OS deployment task sequence includes in-place upgrade to Windows 10.) In this state, the client doesn't process policy from the site. This behavior allows the task sequence to run without risk of additional deployments running on the client. When the task sequence completes, either success or handled failure, it exits client provisioning mode.
 

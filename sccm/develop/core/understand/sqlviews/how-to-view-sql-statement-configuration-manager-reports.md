@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Information to find out what SQL statement is used in a Configuration Manager report.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: e596b1be-c09e-4e44-a400-43345ab0f71b
 author: aczechowski
 ms.author: aaroncz

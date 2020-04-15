@@ -9,10 +9,11 @@ ms.assetid: 29b71ea3-7470-4f58-a3fb-89dbbe98b386
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_Template Server WMI Class
-The `SMS_Template` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a deployment template available on the site that you can use instead of the System Center Configuration Manager console deployment wizard to deploy a software update.  
+The `SMS_Template` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a deployment template available on the site that you can use instead of the Configuration Manager console deployment wizard to deploy a software update.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

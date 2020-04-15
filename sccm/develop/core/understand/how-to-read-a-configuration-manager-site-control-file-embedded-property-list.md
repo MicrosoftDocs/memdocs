@@ -9,10 +9,11 @@ ms.assetid: 2b9ed9ec-4f07-4d87-891c-773badf6a694
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Read a Configuration Manager Site Control File Embedded Property List
-In System Center Configuration Manager, you read an embedded property list from a site control file resource by getting the [SMS_EmbeddedPropertyList](../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md) object for the embedded object from the resources *PropLists* property array.  
+In Configuration Manager, you read an embedded property list from a site control file resource by getting the [SMS_EmbeddedPropertyList](../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md) object for the embedded object from the resources *PropLists* property array.  
 
  An embedded property list has the following properties that you can set. For more information, see [SMS_EmbeddedPropertyList](../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md).  
 
@@ -22,7 +23,7 @@ In System Center Configuration Manager, you read an embedded property list from 
 |Values|An array of string values. Each array item represents a single property list item.|  
 
 > [!CAUTION]
->  Making changes to the site control file can cause irreparable damage to your System Center Configuration Manager site.  
+>  Making changes to the site control file can cause irreparable damage to your Configuration Manager site.  
 
 ### To read  a site control file embedded property list  
 

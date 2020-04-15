@@ -1,8 +1,8 @@
 ---
 title: Create and run scripts
 titleSuffix: Configuration Manager
-description: Create and run Powershell scripts on client devices.
-ms.date: 09/04/2019
+description: Create and run PowerShell scripts on client devices.
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,34 +10,32 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create and run PowerShell scripts from the Configuration Manager console
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 <!--1236459-->
-System Center Configuration Manager has an integrated ability to run Powershell scripts. Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently.  
-
-> [!TIP]  
-> This feature was first introduced in version 1706 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1802, this feature is no longer a pre-release feature.  
-
+Configuration Manager has an integrated ability to run PowerShell scripts. PowerShell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently.  
 
 > [!Note]  
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 
-With this integration in System Center Configuration Manager, you can use the *Run Scripts* functionality to do the following things:
+With this integration in Configuration Manager, you can use the *Run Scripts* functionality to do the following things:
 
-- Create and edit scripts for use with System Center Configuration Manager.
+- Create and edit scripts for use with Configuration Manager.
 - Manage script usage through roles and security scopes. 
 - Run scripts on collections or individual on-premises managed Windows PCs.
 - Get rapid aggregated script results from client devices.
 - Monitor script execution and view reporting results from script output.
 
->[!WARNING]
->Given the power of scripts, we remind you to be intentional and careful with their usage. We have built in additional safeguards to assist you; segregated roles and scopes. Be sure to validate the accuracy of scripts before running them and confirm they are from a trusted source, to prevent unintended script execution. Be mindful of extended characters or other obfuscation and educate yourself about securing scripts. [Learn more about PowerShell script security](/sccm/apps/deploy-use/learn-script-security)
+> [!WARNING]
+> - Given the power of scripts, we remind you to be intentional and careful with their usage. We have built in additional safeguards to assist you; segregated roles and scopes. Be sure to validate the accuracy of scripts before running them and confirm they are from a trusted source, to prevent unintended script execution. Be mindful of extended characters or other obfuscation and educate yourself about securing scripts. [Learn more about PowerShell script security](/sccm/apps/deploy-use/learn-script-security)
+> - Certain anti-malware software may inadvertently trigger events against the Configuration Manager Run Scripts or CMPivot features. It is recommended to exclude %windir%\CCM\ScriptStore so that the anti-malware software permits those features to run without interference.
 
 ## Prerequisites
 
@@ -98,7 +96,7 @@ This approval is primarily used for the testing phase of script development.
 
 ## Security scopes
 *(Introduced with version 1710)*  
-Run Scripts uses security scopes, an existing feature of Configuration Manager, to control scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
+Run Scripts uses security scopes, an existing feature of Configuration Manager, to control scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
 ## <a name="bkmk_ScriptRoles"></a> Create security roles for scripts
 The three security roles used for running scripts aren't created by default in Configuration Manager. To create the script runners, script authors, and script approvers roles, follow the outlined steps.
@@ -122,7 +120,7 @@ The three security roles used for running scripts aren't created by default in C
 
 
 **Role Name**: Script Authors  
-- **Description**: These permissions enable this role to author scripts, but they can’t approve or run them.  
+- **Description**: These permissions enable this role to author scripts, but they can't approve or run them.  
 - **Permissions**: Ensure the following permissions are set.
  
 |Category|Permission|State|
@@ -136,7 +134,7 @@ The three security roles used for running scripts aren't created by default in C
 
 
 **Role Name**: Script Approvers  
-- **Description**: These permissions enable this role to approve scripts, but they can’t create or run them.  
+- **Description**: These permissions enable this role to approve scripts, but they can't create or run them.  
 - **Permissions:** Ensure the following permissions are set.  
 
 |Category|Permission|State|
@@ -176,7 +174,7 @@ Adding parameters to a script provides increased flexibility for your work. You 
 
 In the **Create Script** dialog, click **Script Parameters** under **Script**.
 
-Each of your script's parameters has its own dialog for adding further details and validation. If there's a default parameter in the script, it will be enumerated in the parameter UI and you can set it. Configuration Manager won't overwrite the default value since it will never modify the script directly. You can think of this as “pre-populated suggested values” are provided in the UI, but Configuration Manager doesn't provide access to “default” values at run-time. This can be worked around by editing the script to have the correct defaults. <!--17694323-->
+Each of your script's parameters has its own dialog for adding further details and validation. If there's a default parameter in the script, it will be enumerated in the parameter UI and you can set it. Configuration Manager won't overwrite the default value since it will never modify the script directly. You can think of this as "pre-populated suggested values" are provided in the UI, but Configuration Manager doesn't provide access to "default" values at run-time. This can be worked around by editing the script to have the correct defaults. <!--17694323-->
 
 >[!IMPORTANT]
 > Parameter values can't contain an apostrophe. </br></br>
@@ -347,5 +345,5 @@ Starting in version 1810, additional logging was added for troubleshooting.
 
 ## See Also
 
-- [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md)
+- [Configure role-based administration for Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md)
 - [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration)

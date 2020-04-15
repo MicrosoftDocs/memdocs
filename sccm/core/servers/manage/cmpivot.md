@@ -2,29 +2,29 @@
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
 description: Learn how to use CMPivot in Configuration Manager to query clients in real time.
-ms.date: 09/05/2019
+ms.date: 04/08/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart 
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
 # CMPivot for real-time data in Configuration Manager
 
 <!--1358456-->
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager has always provided a large centralized store of device data, which customers use for reporting purposes. The site typically collects this data on a weekly basis. Starting in version 1806, CMPivot is a new in-console utility that now provides access to real-time state of devices in your environment. It immediately runs a query on all currently connected devices in the target collection and returns the results. Then filter and group this data in the tool. By providing real-time data from online clients, you can more quickly answer business questions, troubleshoot issues, and respond to security incidents.
 
-For example, in [mitigating speculative execution side channel vulnerabilities](https://blogs.technet.microsoft.com/configurationmgr/2018/01/08/additional-guidance-to-mitigate-speculative-execution-side-channel-vulnerabilities/), one of the requirements is to update the system BIOS. You can use CMPivot to quickly query on system BIOS information, and find clients that aren't in compliance.
+For example, in [mitigating speculative execution side channel vulnerabilities](https://techcommunity.microsoft.com/t5/configuration-manager-blog/additional-guidance-to-mitigate-speculative-execution-side/ba-p/274974), one of the requirements is to update the system BIOS. You can use CMPivot to quickly query on system BIOS information, and find clients that aren't in compliance.
 
- > [!Tip]  
- > Some security software may block scripts running from c:\windows\ccm\scriptstore. This can prevent successful execution of CMPivot queries. Some security software may also generate audit events or alerts when running CMPivot PowerShell.
+ > [!IMPORTANT]  
+ > - Some security software may block scripts running from c:\windows\ccm\scriptstore. This can prevent successful execution of CMPivot queries. Some security software may also generate audit events or alerts when running CMPivot PowerShell.
+ > - Certain anti-malware software may inadvertently trigger events against the Configuration Manager Run Scripts or CMPivot features. It is recommended to exclude %windir%\CCM\ScriptStore so that the anti-malware software permits those features to run without interference.
 
 
 ## Prerequisites
@@ -217,7 +217,7 @@ To be proactive with operational maintenance, once a week you run CMPivot agains
 
 ### Example 3: BIOS version
 
-To [mitigate speculative execution side channel vulnerabilities](https://blogs.technet.microsoft.com/configurationmgr/2018/01/08/additional-guidance-to-mitigate-speculative-execution-side-channel-vulnerabilities/), one of the requirements is to update the system BIOS. You start with a query for the **BIOS** entity. You then **Group by** the **Version** property. Then right-click a specific value, such as "LENOVO - 1140", and select **Show devices with**.  
+To [mitigate speculative execution side channel vulnerabilities](https://techcommunity.microsoft.com/t5/configuration-manager-blog/additional-guidance-to-mitigate-speculative-execution-side/ba-p/274974), one of the requirements is to update the system BIOS. You start with a query for the **BIOS** entity. You then **Group by** the **Version** property. Then right-click a specific value, such as "LENOVO - 1140", and select **Show devices with**.  
 
 `Bios | summarize countif( (Version == 'LENOVO - 1140') ) by Device | where (countif_ > 0)`
 
@@ -399,9 +399,9 @@ MessageId 40805: User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Sc
 <!--3610960-->
 Starting in Configuration Manager version 1902, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
 
-Running CMPivot on the CAS will require additional permissions when SQL or the provider aren't on the same machine or in the case of SQL Always On configuration. With these remote configurations, you have a “double hop scenario” for CMPivot.
+Running CMPivot on the CAS will require additional permissions when SQL or the provider aren't on the same machine or in the case of SQL Always On configuration. With these remote configurations, you have a "double hop scenario" for CMPivot.
 
-To get CMPivot to work on the CAS in such a “double hop scenario”, you can define constrained delegation. To understand the security implications of this configuration, read the [Kerberos constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. If you have more than one remote configuration such as SQL or SMS Provider being colocated with the CAS or not, you may require a combination of permission settings. Below are the steps that you need to take:
+To get CMPivot to work on the CAS in such a "double hop scenario", you can define constrained delegation. To understand the security implications of this configuration, read the [Kerberos constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. Kerberos needs to work through all of the hops between the machines.<!--5746133--> If you have more than one remote configuration such as SQL or SMS Provider being colocated with the CAS or not, or multiple trusted forests, you may require a combination of permission settings. Below are the steps that you may need to take:
 
 ### CAS has a remote SQL server
 
@@ -464,7 +464,7 @@ Starting in version 1906, the following items were added to CMPivot:
 
 - [Joins, additional operators, and aggregators](#bkmk_cmpivot_joins)
 - [Added CMPivot permissions to the Security Administrator role](#bkmk_cmpivot_secadmin1906)
-- [CMPivot standalone](#bkmk_standalone) was added as a **pre-release feature**
+- [CMPivot standalone](#bkmk_standalone)
 
 ### <a name="bkmk_cmpivot_joins"></a> Add joins, additional operators, and aggregators in CMPivot
 <!--4054074-->
@@ -552,9 +552,12 @@ Starting in version 1906, the following permissions have been added to Configura
 ### <a name="bkmk_standalone"></a> CMPivot standalone
 <!--3555890, 4619340, 4683130 -->
 
-Starting in version 1906, you can use CMPivot as a standalone app. CMPivot standalone is a [pre-release feature](/sccm/core/servers/manage/pre-release-features#bkmk_table) and is only available in English. Run CMPivot outside of the Configuration Manager console to view the real-time state of devices in your environment. This change enables you to use CMPivot on a device without first installing the console.
+Starting in version 1906, you can use CMPivot as a standalone app. CMPivot standalone is only available in English. Run CMPivot outside of the Configuration Manager console to view the real-time state of devices in your environment. This change enables you to use CMPivot on a device without first installing the console.
 
-You can share the power of CMPivot with other personas, such as helpdesk or security admins, who don’t have the console installed on their computer. These other personas can use CMPivot to query Configuration Manager alongside the other tools that they traditionally use. By sharing this rich management data, you can work together to proactively solve business problems that cross roles.
+> [!Tip]  
+> This feature was first introduced in version 1906 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 2002, it's no longer a pre-release feature.  
+
+You can share the power of CMPivot with other personas, such as helpdesk or security admins, who don't have the console installed on their computer. These other personas can use CMPivot to query Configuration Manager alongside the other tools that they traditionally use. By sharing this rich management data, you can work together to proactively solve business problems that cross roles.
 
 #### Install CMPivot standalone
 
@@ -567,8 +570,172 @@ You can share the power of CMPivot with other personas, such as helpdesk or secu
    ![Browse to the collection you want to run your query against](./media/3555890-cmpivot-standalone-browse-collection.png)
 
 > [!NOTE]
-> Right-click actions, such as **Run Scripts** and **Resource Explorer**, aren't avilable in CMPivot standalone.
+> Right-click actions, such as **Run Scripts**, **Resource Explorer**, and web search aren't available in CMPivot standalone. CMPivot standalone's primary use is querying independently from the Configuration Manager infrastructure. To help security administrators, CMpivot standalone does include the ability to connect to Microsoft Defender Security Center. <!--5605358-->
 
+## <a name="bkmk_cmpivot1910"></a> CMPivot starting in version 1910
+<!--5410930, 3197353-->
+Starting in version 1910, CMPivot was significantly optimized to reduce network traffic and load on your servers. Additionally, a number of entities and entity enhancements were added to aid in troubleshooting and hunting. The following changes were introduced for CMPivot in version 1910:
+
+- [Optimizations to the CMPivot engine](#bkmk_optimization)
+- Additional entities and entity enhancements:
+  - Windows event logs ([WinEvent](#bkmk_WinEvent))
+  - File content ([FileContent](#bkmk_File))
+  - Dlls loaded by processes ([ProcessModule](#bkmk_ProcessModule))
+  - Azure Active Directory information ([AADStatus](#bkmk_AadStatus))
+  - Endpoint protection status ([EPStatus](#bkmk_EPStatus))
+- [Local device query evaluation using CMPivot standalone](#bkmk_local-eval)
+- [Other enhancements to CMPivot](#bkmk_Other)
+
+
+### <a name="bkmk_optimization"></a> Optimizations to the CMPivot engine
+<!--3197353-->
+To reduce network traffic and load on your servers, CMPivot was optimized in 1910. Many query operations are now performed directly on the client rather than on the servers. This change also means that some CMPivot operations return minimal data from the first query. If you decide to drill into the data for more information, a new query might run to fetch the additional data from the client. For instance, previously a large data set was returned to the server when you ran a "summarized count" query.  While returning a large data set offered immediate drill-down, many times only the summarized count was needed. In 1910 when you choose to drill into a specific client, another collection of the data occurs to return the additional data you've requested. This change brings better performance and scalability to queries against a large number of clients. <!--3197353, 5458337-->
+
+#### Examples
+
+The CMPivot optimizations drastically reduce the network and server CPU load needed to run CMPivot queries. With these optimizations, we can now sift through gigabytes of client data in real time. The following queries illustrate these optimizations:
+
+- Search all event logs on all clients in your enterprise for authentication failures.
+
+   ``` Kusto
+   EventLog('Security')
+   | where  EventID == 4673
+   | summarize count() by Device
+   | order by count_ desc
+   ```
+
+- Search for a file by hash.
+
+   ``` Kusto
+   Device
+   | join kind=leftouter ( File('%windir%\\system32\\*.exe')
+   | where SHA256Hash == 'A92056D772260B39A876D01552496B2F8B4610A0B1E084952FE1176784E2CE77')
+   | project Device, MalwareFound = iif( isnull(FileName), 'No', 'Yes')
+   ```
+
+### <a name="bkmk_WinEvent"></a> WinEvent(\<logname>,[\<timespan>])
+
+This entity is used to get events from event logs and event tracing log files. The entity gets data from event logs that are generated by the Windows Event Log technology. The entity also gets events in log files generated by Event Tracing for Windows (ETW). WinEvent looks at events that have occurred within the last 24 hours by default. However, the 24-hour default can be overridden by including a timespan.
+
+``` Kusto
+WinEvent('Microsoft-Windows-HelloForBusiness/Operational', 1d)
+| where LevelDisplayName =='Error'
+| summarize count() by Device
+```
+
+### <a name="bkmk_File"></a> FileContent(\<filename>)
+
+FileContent is used to get the contents of a text file.
+
+``` Kusto
+FileContent('c:\\windows\\SMSCFG.ini')
+| where Content startswith  'SMS Unique Identifier='
+| project Device, SMSId= substring(Content,22)
+```
+
+### <a name="bkmk_ProcessModule"></a> ProcessModule(\<processname>)  
+
+This entity is used to enumerate the modules (dlls) loaded by a given process. ProcessModule is useful when hunting for malware that hides in legitimate processes.  
+
+``` Kusto
+ProcessModule('powershell')
+| summarize count() by ModuleName
+| order by count_ desc
+```
+
+### <a name="bkmk_AadStatus"></a> AadStatus
+
+This entity can be used to get the current Azure Active Directory identity information from a device.
+
+``` Kusto
+AadStatus
+| project Device, IsAADJoined=iif( isnull(DeviceId),'No','Yes')
+| summarize DeviceCount=count() by IsAADJoined
+| render piechart
+```
+
+### <a name="bkmk_EPStatus"></a> EPStatus
+
+EPStatus is used to get the status of antimalware software installed on the computer.
+
+``` Kusto
+EPStatus
+| project Device, QuickScanAge=datetime_diff('day',now(),QuickScanEndTime)
+| summarize DeviceCount=count() by QuickScanAge
+| order by QuickScanAge
+| render barchart
+```
+
+### <a name="bkmk_local-eval"></a> Local device query evaluation using CMPivot standalone
+<!--3197353-->
+When using CMPivot outside of the Configuration Manager console, you can query just the local device without the need for the Configuration Manager infrastructure. You can now leverage the CMPivot Azure Log Analytics queries to quickly view WMI information on the local device. This also enables validation and refinement of CMPivot queries, before running them in a larger environment. CMPivot standalone is only available in English. For more information about installing CMPivot standalone, see [Install CMPivot standalone](#install-cmpivot-standalone).
+
+#### Known issues for local device query evaluation
+
+ - If you query on **This PC** for a WMI entity that you don't have access to, such as a locked down WMI class, you may see a crash in CMPivot. Run CMPivot using an account with elevated privileges to query those entities. <!--5753242-->
+- If you query non-WMI entities on **This PC**, you'll see an **Invalid namespace** or an ambiguous exception.
+- Run CMPivot standalone from the start menu shortcut, not directly from the path of the executable file. <!--5787962-->
+
+### <a name="bkmk_Other"></a> Other enhancements
+
+- You can do regular expression type queries using the new `like` operator. For example:<!--3056858-->
+  
+   ```kusto
+   //Find BIOS manufacture that contains any word like Micro, such as Microsoft
+   Bios
+   | where Manufacturer like '%Micro%'
+   ```
+
+- We've updated the **CcmLog()** and **EventLog()** entities to only look at messages in the last 24 hours by default. This behavior can be overridden by passing in an optional timespan. For example, the following query will look at events in the last 1 hour:
+
+   ```kusto
+   CcmLog('Scripts',1h)
+   ```
+
+- The **File()** entity has been updated to collect information about Hidden and System files, and include the MD5 hash. While an MD5 hash isn't as accurate as the SHA256 hash, it tends to be the commonly reported hash in most malware bulletins.  
+
+- You can add comments in queries.<!-- 5431463 --> This behavior is useful when sharing queries. For example:
+
+    ``` Kusto
+    //Get the top ten devices sorted by user
+    Device
+    | top 10 by UserName
+    ```
+
+- CMPivot automatically connects to the last site.<!-- 5420395 --> After you start CMPivot, you can connect to a new site if necessary.
+
+- From the **Export** menu, select the new option to **Query link to clipboard**.<!-- 5431577 --> This action copies a link to the clipboard that you can share with others. For example:
+
+    `cmpivot:Ly8gU2FtcGxlIHF1ZXJ5DQpPcGVyYXRpbmdTeXN0ZW0NCnwgc3VtbWFyaXplIGNvdW50KCkgYnkgQ2FwdGlvbg0KfCBvcmRlciBieSBjb3VudF8gYXNjDQp8IHJlbmRlciBiYXJjaGFydA==`
+
+    This link opens CMPivot standalone with the following query:
+
+    ``` Kusto
+    // Sample query
+    OperatingSystem
+    | summarize count() by Caption
+    | order by count_ asc
+    | render barchart
+    ```
+
+    > [!TIP]
+    > For this link to work, [install CMPivot standalone](#install-cmpivot-standalone).
+
+- In query results, if the device is enrolled in Microsoft Defender Advanced Threat Protection (ATP), right-click the device to launch the **Microsoft Defender Security Center** online portal.
+
+### Known issues for CMPivot in version 1910
+
+- The maximum results banner may not be displayed when the limit is reached. <!--5431427-->
+  - Each client is limited to 128 KB worth of data per query.
+  - Results may be truncated if the results of the query exceed 128 KB.
+  
+## <a name="bkmk_2002"></a> CMPivot starting in version 2002
+<!--5870934-->
+We've made it easier to navigate CMPivot entities. Starting in Configuration Manager version 2002, you can search CMPivot entities. New icons have also been added to easily differentiate the entities and the entity object types.
+
+![Searching CMPivot entities](./media/5870934-search-cmpivot-entities.png)
+
+ 
 ## Inside CMPivot
 
 CMPivot sends queries to clients using the Configuration Manager "fast channel". This communication channel from server to client is also used by other features such as client notification actions, client status, and Endpoint Protection. Clients return results via the similarly quick state message system. State messages are temporarily stored in the database. For more information about the ports used for client notification, see the [Ports](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-MP) article.
@@ -577,7 +744,7 @@ The queries and the results are all just text. The entities **InstallSoftware** 
 
 ![CMPivot underlined entities example](media/cmpivot-underlined-entities.png)
 
-Starting in Configuration Manager 1810, CMPivot can query hardware inventory data, including extended hardware inventory classes. These new entities (entities not underlined on the welcome page) may return much larger data sets, depending on how much data is defined for a given hardware inventory property. For example, the “InstalledExecutable” entity might return multiple MB of data per client, depending on the specific data you query on. Be mindful of the performance and scalability on your systems when returning larger hardware inventory data sets from larger collections using CMPivot.
+Starting in Configuration Manager 1810, CMPivot can query hardware inventory data, including extended hardware inventory classes. These new entities (entities not underlined on the welcome page) may return much larger data sets, depending on how much data is defined for a given hardware inventory property. For example, the "InstalledExecutable" entity might return multiple MB of data per client, depending on the specific data you query on. Be mindful of the performance and scalability on your systems when returning larger hardware inventory data sets from larger collections using CMPivot.
 
 A query times out after one hour. For example, a collection has 500 devices, and 450 of the clients are currently online. Those active devices receive the query and return the results almost immediately. If you leave the CMPivot window open, as the other 50 clients come online, they also receive the query, and return results. 
 

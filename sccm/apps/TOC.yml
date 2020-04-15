@@ -1,5 +1,5 @@
-- name: Application management
-  href: understand/introduction-to-application-management.md
+- name: App management documentation
+  href: index.yml
 - name: Understand and explore
   items:
   - name: Introduction
@@ -51,9 +51,11 @@
       href: deploy-use/share-applications.md
     - name: Simulate application deployments
       href: deploy-use/simulate-application-deployments.md
+    - name: Deploy Microsoft Edge, version 77 and later
+      href: deploy-use/deploy-edge.md
     - name: Deploy App-V virtual applications
       href: get-started/deploying-app-v-virtual-applications.md
-    - name: Troubleshoot application deployments
+    - name: Troubleshooting tips for app deployment
       href: deploy-use/troubleshoot-application-deployment.md
   - name: Monitor applications
     items:
@@ -69,10 +71,8 @@
       href: deploy-use/management-tasks-applications.md
     - name: User device affinity
       href: deploy-use/link-users-and-devices-with-user-device-affinity.md
-    - name: Microsoft Store for Business volume-purchased apps
+    - name: Microsoft Store for Business and Education
       href: deploy-use/manage-apps-from-the-windows-store-for-business.md
-    - name: Troubleshoot Microsoft Store for Business integration
-      href: deploy-use/troubleshoot-microsoft-store-for-business-integration.md
     - name: App-V virtual environments
       href: deploy-use/create-app-v-virtual-environments.md
     - name: Import and export applications
@@ -91,17 +91,40 @@
     - name: Learn about PowerShell script security
       href: deploy-use/learn-script-security.md
   - name: Package Conversion Manager
-    href: pcm/package-conversion-manager.md
     items:
+    - name: Plan for Package Conversion Manager 
+      href: pcm/package-conversion-manager.md
     - name: How to analyze and convert packages
       href: pcm/how-to-analyze-and-convert.md
 #    - name: How to use the plug-in
 #      href: pcm/how-to-use-plug-in.md
+#     - name: Plug-in configuration XML
+#       href: pcm/plugin-config-xml.md
+- name: Troubleshoot
+  items:
+  - name: Troubleshoot application deployments
+    items:
+    - name: Before you begin
+      href: understand/app-deployment-technical-reference.md
+    - name: Application deployment policy
+      href: understand/deployment-policy-technical-reference.md
+    - name: Application deployment for devices
+      href: understand/device-deployment-technical-reference.md
+    - name: Application deployment for users
+      href: understand/user-deployment-technical-reference.md
+    - name: Application deployment client components
+      href: understand/client-components-technical-reference.md
+    - name: Application evaluation
+      href: understand/deployment-evaluation-technical-reference.md
+    - name: Application download
+      href: understand/deployment-download-technical-reference.md
+    - name: Application installation
+      href: understand/deployment-install-technical-reference.md
+  - name: Troubleshoot Microsoft Store for Business and Education integration
+    href: deploy-use/troubleshoot-microsoft-store-for-business-integration.md
+  - name: Troubleshoot Package Conversion Manager
+    items:
     - name: Troubleshoot Package Conversion Manager
       href: pcm/troubleshoot-pcm.md
-    - name: Technical references
-      items:
-#      - name: Plug-in configuration XML
-#        href: pcm/plugin-config-xml.md
-      - name: Error messages
-        href: pcm/error-messages.md
+    - name: Error messages for Package Conversion Manager
+      href: pcm/error-messages.md

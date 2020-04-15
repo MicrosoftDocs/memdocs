@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Optimize security and privacy for content management in Configuration Manager.
 ms.date: 10/26/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 5f38b726-dc00-433a-ba05-5b7dbb0d8e99
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Security and privacy for content management in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article contains security and privacy information for content management in Configuration Manager. 
 

@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Information about the schema that can be used when creating reports.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: c409ea11-a284-40d2-9a27-9833c876a318
 author: aczechowski
 ms.author: aaroncz

@@ -9,10 +9,11 @@ ms.assetid: f2a51410-3735-49fe-9024-be458ab3578d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ClearLastNBSAdvForMachines Method in Class SMS_Collection
-The `ClearLastNBSAdvForMachines` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, clears the last Network Boot advertisement for selected client computers.  
+The `ClearLastNBSAdvForMachines` Windows Management Instrumentation (WMI) class method, in Configuration Manager, clears the last Network Boot advertisement for selected client computers.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

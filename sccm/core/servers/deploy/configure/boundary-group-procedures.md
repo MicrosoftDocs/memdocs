@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Configure boundary groups to logically organize related network locations called boundaries.
 ms.date: 11/27/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: a1fe22d0-4695-4de0-8bf0-e3475b03cf0e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to configure boundary groups for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article includes procedures on how to configure boundary groups. Before you begin, make sure you understand boundary group concepts. For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).
 

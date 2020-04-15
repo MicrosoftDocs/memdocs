@@ -2,7 +2,7 @@
 title: UUP preview
 titleSuffix: Configuration Manager
 description: Instructions for preview of UUP integration
-ms.date: 10/25/2019
+ms.date: 11/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,7 +11,8 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # UUP private preview instructions
@@ -95,9 +96,15 @@ For UUP updates to install successfully, install both of the following updates:
 
 | Windows 10 version | Minimum compliance level | Additional catalog update |
 | ------------------ | ------------------------ | ------------------ |
-| **Windows 10, version 1809** | August 2019, [KB4511553](https://support.microsoft.com/help/4511553/windows-10-update-kb4511553) | [KB4514987](https://www.catalog.update.microsoft.com/search.aspx?q=4514987) |
-| **Windows 10, version 1803** | April 2019, [KB4493464](https://support.microsoft.com/help/4493464/windows-10-update-kb4493464) | [KB4512745](https://www.catalog.update.microsoft.com/search.aspx?q=4512745) |
-| **Windows 10, version 1709** | April 2019, [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441) | [KB4512744](https://www.catalog.update.microsoft.com/search.aspx?q=4512744) |
+| **Windows 10, version 1903** | RTM | November 7, 2019, [KB4529943](https://www.catalog.update.microsoft.com/search.aspx?q=4529943) |
+| **Windows 10, version 1809** | August 2019, [KB4511553](https://support.microsoft.com/help/4511553/windows-10-update-kb4511553) | November 7, 2019, [KB4514987](https://www.catalog.update.microsoft.com/search.aspx?q=4514987) |
+| **Windows 10, version 1803** | April 2019, [KB4493464](https://support.microsoft.com/help/4493464/windows-10-update-kb4493464) | November 7, 2019, [KB4512745](https://www.catalog.update.microsoft.com/search.aspx?q=4512745) |
+| **Windows 10, version 1709** | April 2019, [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441) | November 7, 2019, [KB4512744](https://www.catalog.update.microsoft.com/search.aspx?q=4512744) |
+
+> [!IMPORTANT]
+> - If you apply the November 12, 2019 updates to the client before applying the November 7, 2019 additional catalog update, the Windows Update Agent changes needed to support UUP will be overwritten. To remediate clients in that scenario, apply the additional catalog update after the November 12, 2019 updates are installed.
+> - If you apply a feature update to the client, you will need to reinstall the additional catalog update after the upgrade is complete.
+> - To make it easier to test feature updates, import the updates into Configuration Manager. For more information, see [Import updates from the Microsoft Update Catalog](/configmgr/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog). After the feature update is complete, the additional catalog update shows as **required**, which allows for automatic deployment to the up-level OS version.
 
 ### 4. Allow clients to download delta content when available
 
@@ -191,11 +198,12 @@ When you look at the total content that's downloaded and distributed over a 12-m
 For the preview, test your typical real-world scenarios. UUP supports all content channels, including:
 
 - Windows Delivery Optimization (DO)
+  - When using DO, ensure it's configured properly. For more information, see [Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery).
 - Configuration Manager peer cache
 - Windows BranchCache
 - Use the **No deployment package** option, and clients download straight from Microsoft Update. Use this option with delivery optimization.
 - Third-party alternate content providers
 
-For more information, see [Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery).
+For more information about content channels, see [Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery).
 
 <!-- TODO: Addlink to WSUS Perf documentation-->

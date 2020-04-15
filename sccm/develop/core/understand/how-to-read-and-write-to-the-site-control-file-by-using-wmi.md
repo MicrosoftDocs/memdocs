@@ -9,10 +9,11 @@ ms.assetid: 815a4ee8-b211-48de-ba9f-6eff7497dd2b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Read and Write to the Configuration Manager Site Control File by Using WMI
-In System Center Configuration Manager, you write to the site control file using Windows Management Instrumentation (WMI) by using the `SMS_SiteControlFile` class methods.  
+In Configuration Manager, you write to the site control file using Windows Management Instrumentation (WMI) by using the `SMS_SiteControlFile` class methods.  
 
  When writing to the site control file by using WMI, you use a session handle to identify your application. This is used to manage concurrent updates to the file.  
 
@@ -22,8 +23,8 @@ In System Center Configuration Manager, you write to the site control file using
 
 |Method|Description|  
 |------------|-----------------|  
-|`CommitSCF`|Applies your changes to the System Center Configuration Manager database.|  
-|`RefreshSCF`|Refreshes your in-memory copy of the site control file with any recent changes from the System Center Configuration Manager database.|  
+|`CommitSCF`|Applies your changes to the Configuration Manager database.|  
+|`RefreshSCF`|Refreshes your in-memory copy of the site control file with any recent changes from the Configuration Manager database.|  
 |`GetSessionHandle`|Gets your in-memory copy of the site control file and a session handle. You place the session handle in an `IWbemContext` object that is passed to all `IWbemServices` methods.|  
 |`ReleaseSessionHandle`|Releases your in-memory copy of the site control file and any resources associated with your session handle.|  
 

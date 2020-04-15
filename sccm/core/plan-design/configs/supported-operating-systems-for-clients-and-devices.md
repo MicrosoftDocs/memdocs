@@ -2,20 +2,19 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 10/08/2019
+ms.date: 02/19/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
 # Supported OS versions for clients and devices for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager supports installing client software on Windows and macOS computers.  
 
@@ -24,7 +23,6 @@ Configuration Manager supports installing client software on Windows and macOS c
 Review the following requirements and limitations for all clients:
 
 - Changing the startup type or **Log on as** settings for any Configuration Manager service isn't supported. This change can prevent key services from running correctly.
-
 
 ## Windows computers  
 
@@ -38,18 +36,20 @@ To manage the following Windows OS versions, use the client that's included with
 
 - **Windows 8.1** (x86, x64): Professional, Enterprise
 
-- **Windows 7 with SP1** (x86, x64): Professional, Enterprise, and Ultimate
-
 #### Windows Virtual Desktop
 
 <!--3556025-->
-[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) is a preview feature of Microsoft Azure and Microsoft 365. Starting in version 1906, use Configuration Manager to manage these virtual devices running Windows in Azure.
+[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) is a desktop and app virtualization service that runs on Microsoft Azure. Starting in version 1906, use Configuration Manager to manage these virtual devices running Windows in Azure.
 
-Similar to a terminal server, these virtual devices allow multiple concurrent active user sessions. To help with client performance, Configuration Manager now disables user policies on any device that allows these multiple user sessions. Even if you enable user policies, the client disables them by default on these devices, which include Windows Virtual Desktop and terminal servers.
+Similar to a terminal server, some of these virtual devices allow multiple concurrent active user sessions. To help with client performance, Configuration Manager now disables user policies on any device that allows these multiple user sessions. Even if you enable user policies, the client disables them by default on these devices, which include Windows 10 Enterprise multi-session and terminal servers.
 
 The client only disables user policy when it detects this type of device during a new installation. For an existing client of this type that you update to this version, the previous behavior persists. On an existing device, it configures the user policy setting even if it detects that the device allows multiple user sessions.
 
-If you require user policy in this scenario, and accept any potential performance impact, use the Configuration Manager SDK with the [SMS_PolicyAgentConfig server WMI class](/sccm/develop/reference/core/clients/config/sms_policyagentconfig-server-wmi-class). Set the new `PolicyEnableUserPolicyOnTS` property to `true`.
+If you require user policy in this scenario, and accept any potential performance impact, use one of the following methods to enable user policy:
+
+- In version 1910 and later, use [client settings](/configmgr/core/clients/deploy/configure-client-settings). In the **Client Policy** group, configure the following setting: **Enable user policy for multiple user sessions**.<!-- 4737447 -->
+
+- In version 1906, use the Configuration Manager SDK with the [SMS_PolicyAgentConfig server WMI class](/sccm/develop/reference/core/clients/config/sms_policyagentconfig-server-wmi-class). Set the new `PolicyEnableUserPolicyOnTS` property to `true`.
 
 > [!Note]  
 > You can't use co-management with a client running Windows 10 Enterprise multi-session. <!-- SCCMDocs-pr#3950 -->
@@ -71,12 +71,6 @@ If you require user policy in this scenario, and accept any potential performanc
 
 - **Windows Storage Server 2012** (x64)
 
-- **Windows Server 2008 R2 with SP1** (x64): Standard, Enterprise, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
-
-- **Windows Storage Server 2008 R2** (x86, x64): Workgroup, Standard, Enterprise
-
-- **Windows Server 2008 with SP2** (x86, x64): Standard, Enterprise, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
-
 #### Server Core
 
 The following versions specifically refer to the Server Core installation of the OS. <sup>[Note 3](#bkmk_note3)</sup>  
@@ -91,10 +85,6 @@ Windows Server semi-annual channel versions are Server Core installations, such 
 
 - **Windows Server 2012** (x64) <sup>[Note 2](#bkmk_note2)</sup>
 
-- **Windows Server 2008 R2** with no service pack, or with SP1 (x64)
-
-- **Windows Server 2008 SP2** (x86, x64)
-
 #### <a name="bkmk_note1"></a> Note 1
 
 Configuration Manager tests and supports Windows Server Datacenter editions, but isn't officially certified for Windows Server. Configuration Manager hotfix support isn't offered for issues that are specific to Windows Server Datacenter Edition. For more information on the Windows Server certification program, see [Windows Server Catalog](https://www.windowsservercatalog.com/).
@@ -107,7 +97,6 @@ To support [client push installation](/sccm/core/clients/deploy/plan/client-inst
 
 The new Software Center app isn't supported on any version of Windows Server Core.<!--SCCMDocs issue 683-->
 
-
 ## Windows Embedded computers  
 
 Manage Windows Embedded devices by installing the Configuration Manager client on the device. For more information, see [Planning for client deployment to Windows Embedded devices](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices).  
@@ -118,11 +107,11 @@ Manage Windows Embedded devices by installing the Configuration Manager client o
 
 - Clients that use one of the following are supported for all features except power management:  
 
-    - Enhanced Write Filters (EWF)
+  - Enhanced Write Filters (EWF)
 
-    - RAM File-Based Write Filters (FBWF)
+  - RAM File-Based Write Filters (FBWF)
 
-    - Unified Write Filters (UWF)  
+  - Unified Write Filters (UWF)  
 
 - The application catalog isn't supported for any Windows Embedded device.  
 
@@ -142,7 +131,6 @@ Manage Windows Embedded devices by installing the Configuration Manager client o
 - **Windows Embedded POSReady 7** (x86, x64)
 
 - **Windows Embedded Standard 7 with SP1** (x86, x64)
-
 
 ## Windows CE computers
 
@@ -185,17 +173,17 @@ Manage Windows CE devices with the Configuration Manager mobile device legacy cl
 
 ## <a name="bkmk_ESU"></a> Extended Security Updates and Configuration Manager
 
-The [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) program is a last resort option for customers who need to run certain legacy Microsoft products past the end of support. It includes Critical and/or Important security updates (as defined by the [Microsoft Security Response Center (MSRC)](https://www.microsoft.com/msrc)) for a maximum of three years after the product’s End of Extended Support date.
+The [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) program is a last resort option for customers who need to run certain legacy Microsoft products past the end of support. For example, Windows 7. It includes Critical and/or Important security updates (as defined by the [Microsoft Security Response Center (MSRC)](https://www.microsoft.com/msrc)) for a maximum of three years after the product’s End of Extended Support date.
 
-Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](/sccm/core/servers/manage/updates#version-details) can be used to deploy and install Windows security updates released under the program. The latest released version can also be used to deploy supported OSes via operating system deployment (OSD).
+Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](/sccm/core/servers/manage/updates#version-details) can be used to deploy and install Windows security updates released under the program. The latest released version can also be used to deploy Windows 10 to devices running Windows 7.
 
-Client management features not related to Windows software update management or OSD will no longer be tested on the operating systems covered under the ESU program and we don't guarantee that they'll continue to function. It's highly recommended to upgrade or migrate to a current version of the operating systems as soon as possible to receive client management support.
+Client management features not related to Windows software update management or OS deployment will no longer be tested on the operating systems covered under the ESU program and we don't guarantee that they'll continue to function. It's highly recommended to upgrade or migrate to a current version of the operating systems as soon as possible to receive client management support.
 
 ## Mac computers  
 
 Manage Apple Mac computers with the Configuration Manager client for macOS.  
 
-The macOS client installation package isn't supplied with the Configuration Manager media. Download the **Clients for Additional Operating Systems** from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719).  
+The macOS client installation package isn't supplied with the Configuration Manager media. Download it from the Microsoft Download Center, [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850).  
 
 For more information, see [How to deploy clients to Macs](/sccm/core/clients/deploy/deploy-clients-to-macs).  
 
@@ -205,24 +193,11 @@ For more information, see [How to deploy clients to Macs](/sccm/core/clients/dep
 
 ### Supported versions
 
+- **macOS Catalina (10.15)** (requires Configuration Manager site version 1910 or later, and Configuration Manager client for macOS version 5.0.8742.1000 or later)
+
 - **macOS Mojave (10.14)**
 
 - **macOS High Sierra (10.13)**
-
-- **macOS Sierra (10.12)**
-
-- **macOS 10.11** (El Capitan)  
-
-- **macOS 10.10** (Yosemite)  
-
-- **macOS 10.9** (Mavericks)
-
-- **macOS 10.8** (Mountain Lion)
-
-- **macOS 10.7** (Lion)
-
-- **macOS 10.6** (Snow Leopard)
-
 
 ## Linux and UNIX servers  
 
@@ -337,10 +312,6 @@ The following versions are supported by using the indicated .tar file.
 ## <a name="bkmk_OnpremOS"></a> On-premises MDM
 
 Configuration Manager has built-in capabilities for managing mobile devices that are on-premises without installing client software. For more information, see [Manage mobile devices with on-premises infrastructure](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure).  
-
-### Requirements and limitations
-
-- Configure the **Service connection point** at the top-tier site of your hierarchy.  
 
 ### Supported operating systems
 

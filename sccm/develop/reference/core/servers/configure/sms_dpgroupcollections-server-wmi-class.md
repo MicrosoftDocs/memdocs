@@ -9,7 +9,8 @@ ms.assetid: 0ed27133-baea-4d59-a18f-1a6f503b8599
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_DPGroupCollections Server WMI Class
 The `SMS_DPGroupCollections` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes collection association for a given distribution point group.  

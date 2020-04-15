@@ -9,7 +9,8 @@ ms.assetid: c31f0f2e-09f6-41e6-ac20-622080053b73
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ConfigurationItemLatestBaseClass Server WMI Class
 The `SMS_ConfigurationItemLatestBaseClass` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the latest version of Configuration Items in the system.  
@@ -124,16 +125,22 @@ Class SMS_ConfigurationItemLatestBaseClass : SMS_BaseClass
 |6|Driver|  
 |7|OtherConfigurationItem|  
 |8|SoftwareUpdateBundle|  
-|9|SoftwareUpdateAuthorizationList|  
+|9|AuthorizationList (SoftwareUpdateAuthorizationList)|  
 |10|AppModel|  
 |11|GlobalSettings|  
 |13|GlobalExpression|  
 |14|Platform|  
 |21|DeploymentType|  
+|24|Install Policy Type|  
 |25|DeploymentTechnology|  
 |26|HostingTechnology|  
 |27|InstallerTechnology|  
-|28|AbstractConfigurationItem|  
+|28|PublishingItem|  
+|29|ApplicationGroup|  
+|40|SettingsDefinition|  
+|50|ConfigurationPolicy|  
+|60|VirtualEnvironment|  
+|70|AbstractConfigurationItem|  
 
  `CIVersion`  
  Data type: `UInt32`  

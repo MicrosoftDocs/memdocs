@@ -6,7 +6,8 @@ ms.date: 07/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 9aaf466a-3f40-4468-b3cd-f0010f21f05a
 author: aczechowski
 ms.author: aaroncz
@@ -15,7 +16,7 @@ manager: dougeby
 
 # Azure AD authentication workflow
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article is a technical reference for the Configuration Manager client installation process on a Windows 10 device that's joined to Azure Active Directory (Azure AD). It details the workflow process for the device authentication and client installation.  
  

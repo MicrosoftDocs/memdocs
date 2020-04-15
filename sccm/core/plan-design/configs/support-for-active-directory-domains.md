@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Learn about the requirements for a Configuration Manager site system in an Active Directory domain.
 ms.date: 10/22/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 8c5a13f8-42d5-4898-b7b6-e594dae8b335
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Support for Active Directory domains in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 All Configuration Manager site systems must be members of a supported Active Directory domain. Configuration Manager client computers can be domain members or workgroup members.  
 

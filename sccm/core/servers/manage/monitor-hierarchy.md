@@ -4,27 +4,28 @@ titleSuffix: Configuration Manager
 description: Learn how to monitor your infrastructure in Configuration Manager by using the Monitoring workspace in the console.
 ms.date: 06/06/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 007dbb73-18a7-48a3-a489-97cf9fc4f140
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Monitor the hierarchy
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 To monitor your hierarchy in Configuration Manager, use the **Monitoring** workspace in the Configuration Manager console.  
 
 > [!NOTE]  
-> The exception to this location is when migrating sites. Monitored this process in the **Migration** node of the **Administration** workspace. For more information, see [Operations for migrating to System Center Configuration Manager](/sccm/core/migration/operations-for-migration).  
+> The exception to this location is when migrating sites. Monitored this process in the **Migration** node of the **Administration** workspace. For more information, see [Operations for migrating to Configuration Manager current branch](/sccm/core/migration/operations-for-migration).  
 
 Along with using the Configuration Manager console for monitoring, use the following features:
 
-- [Reporting](/sccm/core/servers/manage/reporting)
+- [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting)
 - [Log files](/sccm/core/plan-design/hierarchy/log-files).  
 
 When you monitor sites, look for signs that indicate problems that require you to take action. For example:  

@@ -1,7 +1,7 @@
 ---
 title: Site size and performance FAQ
 titleSuffix: Configuration Manager
-description: Answers to common System Center Configuration Manager questions about site sizing and performance.
+description: Answers to common Configuration Manager questions about site sizing and performance.
 author: aczechowski
 ms.author: aaroncz
 ms.prod: configuration-manager
@@ -9,9 +9,9 @@ ms.topic: conceptual
 ms.date: 04/19/2019
 ---
 
-# System Center Configuration Manager site sizing and performance FAQ
+# Configuration Manager site sizing and performance FAQ
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This document addresses frequently asked questions about Configuration Manager site sizing guidance and common performance issues.
 
@@ -29,7 +29,7 @@ For disks containing SQL database files, use either NTFS or ReFS formatting, wit
 
 Modern arrays of solid-state drives (SSD) and Azure Premium Storage can provide high IOPS on a single volume, with few disks. You typically add more drives to an array for additional storage, not additional throughput. If you're using physical spindle-based disks, you may need more IOPS than you can generate on a single volume. You should allocate 60% of the total recommended IOPS and disk space for the *.mdf* file, 20% for the *.ldf* file, and 20% for the log and data temp files. The *.ldf* and temp files can all reside on a single volume with 40% (20% + 20%) of your allocated IOPS.
 
-By default, SQL creates one temp data file. You should create more, to avoid SQL locks and waiting for access to a single file. Community opinions vary on the best number of temp data files to create, from four to eight. Testing reveals little difference between four to eight, so you can create four *equally sized* temp data files. Your tempdb data files should be up to 20-25% the size of your full database.
+SQL Servers earlier than SQL Server 2016 created by default only one temp data file. You should create more, to avoid SQL locks and waiting for access to a single file. Community opinions vary on the best number of temp data files to create, from four to eight. Testing reveals little difference between four to eight, so you can create four *equally sized* temp data files. Your tempdb data files should be up to 20-25% the size of your full database.
 
 ### Are there any other recommendations for disk setup?
 

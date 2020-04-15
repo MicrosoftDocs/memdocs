@@ -1,22 +1,23 @@
 ---
-title: "Prerequisite Checker"
-titleSuffix: "Configuration Manager"
-description: "Learn how to use Prerequisite Checker to identify and fix problems that might block a site or site system role installation."
-ms.date: 03/1/2017
+title: Prerequisite checker
+titleSuffix: Configuration Manager
+description: Learn how to use prerequisite checker to identify and fix problems that might block a site or site system role installation.
+ms.date: 01/13/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: aaf13bb8-4ba2-4bd7-9fac-d36a9d88a1b6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Prerequisite Checker for System Center Configuration Manager
+# Prerequisite Checker for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
- Before you run Setup to install or upgrade a System Center Configuration Manager site, or before you install a site system role on a new server, you can use this stand-alone application (**Prereqchk.exe**) from the version of Configuration Manager that you want use to verify server readiness. Use Prerequisite Checker to identify and fix problems that would block a site or site system role installation.  
+ Before you run Setup to install or upgrade a Configuration Manager site, or before you install a site system role on a new server, you can use this stand-alone application (**Prereqchk.exe**) from the version of Configuration Manager that you want use to verify server readiness. Use Prerequisite Checker to identify and fix problems that would block a site or site system role installation.  
 
 > [!NOTE]  
 >  Prerequisite Checker always runs as part of Setup.  
@@ -34,7 +35,7 @@ When you run Prerequisite Checker at a command prompt and specify specific comma
 -   Prerequisite Checker performs only the checks that are associated with the site server or site systems that you specify in the command line.  
 -   To check a remote computer, your user account must have Administrator rights to the remote computer.  
 
-For more information about the checks that Prerequisite Checker performs, see [List of prerequisite checks for System Center Configuration Manager](../../../../core/servers/deploy/install/list-of-prerequisite-checks.md).  
+For more information about the checks that Prerequisite Checker performs, see [List of prerequisite checks for Configuration Manager](../../../../core/servers/deploy/install/list-of-prerequisite-checks.md).  
 
 ## Copy Prerequisite Checker files to another computer  
 
@@ -45,11 +46,13 @@ For more information about the checks that Prerequisite Checker performs, see [L
 
 2.  Copy the following files to the destination folder on the other computer:  
 
-    -   Prereqchk.exe  
-    -   Prereqcore.dll  
-    -   Basesql.dll  
-    -   Basesvr.dll  
-    -   Baseutil.dll  
+    - prereqchk.exe
+    - prereqcore.dll
+    - prereqchkres.dll
+      - This file is in the subfolder for the install language. For instance, English is in the `00000409` subfolder. <!--586808-->
+    - basesql.dll
+    - basesvr.dll
+    - baseutil.dll
 
 ##  Run Prerequisite Checker with default checks  
 

@@ -9,7 +9,8 @@ ms.assetid: 3fa45ffd-9661-4863-b86a-e552a865b2d5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CMSiteConfiguration Server WMI Class
 The `SMS_CMSiteConfiguration` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that returns the site’s monitored configuration status, such as the SQL Server port, SQL Server Service Broker port, and SQL Server Firewall port.  

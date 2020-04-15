@@ -1,7 +1,7 @@
 ---
 title: "Configure remote control"
 titleSuffix: "Configuration Manager"
-description: "Set up remote control in System Center Configuration Manager."
+description: "Set up remote control in Configuration Manager."
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,13 +10,14 @@ ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Configuring remote control in System Center Configuration Manager
+# Configuring remote control in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
- This procedure describes configuring the default client settings for remote control. These settings apply to all computers in your hierarchy. If you want these settings to apply to only some computers, assign a custom device client setting to a collection that contains those computers. For more information a see [How to configure client settings in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md). 
+ This procedure describes configuring the default client settings for remote control. These settings apply to all computers in your hierarchy. If you want these settings to apply to only some computers, assign a custom device client setting to a collection that contains those computers. For more information a see [How to configure client settings](../../../../core/clients/deploy/configure-client-settings.md). 
 
 To use Remote Assistance or Remote Desktop, it must be installed and configured on the computer that runs the Configuration Manager console. For more information about how to install and configure Remote Assistance or Remote Desktop, see your Windows documentation.  
 
@@ -32,7 +33,7 @@ To use Remote Assistance or Remote Desktop, it must be installed and configured 
 
    You can change the company name that appears in the **ConfigMgr Remote Control** dialog box by configuring a value for **Organization name displayed in Software Center** in the **Computer Agent** client settings.  
 
-   Client computers are configured with these settings the next time they download client policy. To initiate policy retrieval for a single client, see [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
+   Client computers are configured with these settings the next time they download client policy. To initiate policy retrieval for a single client, see [How to manage clients](../../../../core/clients/manage/manage-clients.md).  
 
 #### Enable keyboard translation
 

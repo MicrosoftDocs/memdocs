@@ -1,23 +1,24 @@
 ---
 title: "New version 1706"
 titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1706 of System Center Configuration Manager."
+description: "Get details about changes and new capabilities introduced in version 1706 of Configuration Manager."
 ms.date: 08/11/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# What&#39;s new in version 1706 of System Center Configuration Manager
+# What&#39;s new in version 1706 of Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Update 1706 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1606, 1610, or 1702.
+Update 1706 for Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1606, 1610, or 1702.
 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
@@ -137,7 +138,7 @@ In this release, we've added new configuration item settings for Windows 10 devi
   - OpenSearch XML URL
   - Homepages (desktop only)
 
-For details of all Windows 10 settings, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
+For details of all Windows 10 settings, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
 
 ### New device compliance policy rules
 
@@ -166,7 +167,6 @@ For details of all Windows 10 settings, see [How to create configuration items f
   * Android 4.2 through 4.4
   * Samsung KNOX Standard 4.0+
 
-See [create and deploy a device compliance policy](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy) to try the new device compliance rules
 
 ## Application Management
 
@@ -188,8 +188,6 @@ For more information, see [Create and run PowerShell scripts from the Configurat
 Beginning with this release, you can use three new mobile application management (MAM) policy settings:
 
 - **Block screen capture (Android devices only):** Specifies that the screen capture capabilities of the device are blocked when using this app.
-
-See [protect apps using app protection policies in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
 
 
 ## Operating system deployment
@@ -238,8 +236,6 @@ Improvements have been made to leverage the Office Click-to-Run user experience 
 <!-- 1318608 -->
 Windows Analytics is a set of solutions that allow you to form insight into the current state of your environment. Devices in your environment report Windows telemetry data. The data can be accessed through the Azure portal. In the case of Upgrade Readiness the data is directly available in the monitoring node of the Configuration Manager console.
 
-For more information, see [Use Windows Analytics with Configuration Manager](/sccm/core/clients/manage/monitor-windows-analytics).
-
 
 <!-- ## Inventory  -->
 
@@ -249,13 +245,10 @@ For more information, see [Use Windows Analytics with Configuration Manager](/sc
 <!-- 1338403 -->
 With this release, the values for the **Allow data sharing between work and personal profile** setting in the **Work Profile** setting group have been updated. We’ve also added a custom setting to block copy-paste between work and personal profiles.
 
-For more information, see [Configuration items for Android for Work devices](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client).
 
 ### Android and iOS enrollment restrictions
 <!-- 1290826 -->
 With this release, you can now specify that users cannot enroll personal Android or iOS devices. New device restriction settings let you limit Android device enrollment to predeclared devices. For iOS devices, you can block enrollment of all devices except those enrolled with Apple's Device Enrollment Program, Apple Configurator, or the Intune device enrollment manager account.
-- For more information about Android enrollment restrictions, see [Set up Android device management](/sccm/mdm/deploy-use/enroll-hybrid-android).
-- For more information about iOS enrollment restrictions, see [Configure iOS enrollment restrictions](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac#configure-enrollment-restrictions).
 
 ## Protect devices
 

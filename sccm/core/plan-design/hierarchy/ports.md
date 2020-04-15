@@ -2,20 +2,21 @@
 title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
-ms.date: 10/09/2019
+ms.date: 11/19/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Ports used in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article lists the network ports that Configuration Manager uses. Some connections use ports that aren't configurable, and some support custom ports that you specify. If you use any port filtering technology, verify that the required ports are available. These port filtering technologies include firewalls, routers, proxy servers, or IPsec.   
 
@@ -40,6 +41,8 @@ Configuration Manager enables you to configure the ports for the following types
 - Software update point to WSUS server  
 
 - Site server to site database server  
+
+- Site server to WSUS database server
 
 - Reporting services points  
 
@@ -620,6 +623,11 @@ Starting in version 1806 you can relocate the Content Library to another storage
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|  
 
+###  <a name="BKMK_PortsSite-SQL-WSUS"></a> Site server -- > SQL Server for WSUS  
+
+|Description|UDP|TCP|  
+|-----------------|---------|---------|  
+|SQL over TCP|--|1433 <sup>[Note 3](#bkmk_note3) Alternate port available</sup>|  
 
 ###  <a name="BKMK_PortsSite-Provider"></a> Site server -- > SMS Provider  
 
@@ -708,7 +716,13 @@ After installation, you can change the port. You don't have to use the same port
 - If the HTTP port is anything else, the HTTPS port must be 1 or higher, for example, 8530 and 8531.   
 
     > [!NOTE]  
-    >  When you configure the software update point to use HTTPS, the HTTP port must also be open. Unencrypted data, such as the EULA for specific updates, uses the HTTP port.  
+    >  When you configure the software update point to use HTTPS, the HTTP port must also be open. Unencrypted data, such as the EULA for specific updates, uses the HTTP port. 
+
+- The site server makes a connection to the SQL server hosting the SUSDB when you enable the following options for WSUS cleanup:
+  - Add non-clustered indexes to the WSUS database to improve WSUS cleanup performance
+  - Remove obsolete updates from the WSUS database
+  
+  If the default SQL Server port is changed to an alternate port with SQL Server Configuration Manager, ensure the site server can connect using the defined port. Configuration Manager doesn't support dynamic ports. By default, SQL Server named instances use dynamic ports for connections to the database engine. When you use a named instance, manually configure the static port.
 
 #### <a name="bkmk_note4"></a> Note 4: Trivial FTP (TFTP) Daemon
 The Trivial FTP (TFTP) Daemon system service doesn't require a user name or password and is an integral part of Windows Deployment Services (WDS). The Trivial FTP Daemon service implements support for the TFTP protocol that's defined by the following RFCs:  

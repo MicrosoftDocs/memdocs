@@ -11,7 +11,8 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Product end of support
@@ -38,7 +39,7 @@ Microsoft recommends the following migration plan:
 For more information, see the following articles:
 
 - [Microsoft Support article](https://support.microsoft.com/help/4096323)  
-- [Configuration Manager support blog post](https://blogs.technet.microsoft.com/configurationmgr/2018/03/30/configuration-manager-2007-approaching-end-of-support-what-you-need-to-know/)  
+- [Configuration Manager support blog post](https://techcommunity.microsoft.com/t5/configuration-manager-blog/configuration-manager-2007-approaching-end-of-support-what-you/ba-p/274995)  
 - [Introduction to Configuration Manager current branch](/sccm/core/understand/introduction)  
 - [Documentation on how to migrate to Configuration Manager current branch](/sccm/core/migration/migrate-data-between-hierarchies)  
     This article also includes a video that discusses and demonstrates common migration scenarios.

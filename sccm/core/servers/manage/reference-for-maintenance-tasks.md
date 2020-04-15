@@ -2,20 +2,21 @@
 title: Reference for maintenance tasks
 titleSuffix: Configuration Manager
 description: Details for each of the Configuration Manager site maintenance tasks
-ms.date: 09/03/2019
+ms.date: 03/30/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Reference for maintenance tasks in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article lists the details for each of the Configuration Manager site maintenance tasks. Each entry specifies the site types where the task is available, and whether it's enabled by default.
 
@@ -311,7 +312,7 @@ Use this task to delete from the site database information about client notifica
 
 ### Delete Aged Passcode Records
 
-Use this task at the top-level site of your hierarchy to delete aged Passcode Reset data for Android and Windows Phone devices. Passcode Reset data is encrypted, but does include the PIN for devices. By default, this task is enabled, and deletes data that is older than one day.  
+Use this task at the top-level site of your hierarchy to delete aged Passcode Reset data for Windows Phone devices. Passcode Reset data is encrypted, but does include the PIN for devices. By default, this task is enabled, and deletes data that is older than one day.  
 
 |||
 |---------|---------|
@@ -507,7 +508,7 @@ To summarize software metering data and to conserve disk space in the database, 
 
 ### Summarize Installed Software Data
 
-Use this task to summarize the data for installed software from multiple records into one general record. Data summarization can compress the amount of data that's stored in the Configuration Manager database. For more information, see [Introduction to software inventory](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).
+Use this task to summarize the data from collected asset intelligence software information through the hardware inventory to merge multiple records into one general record. Data summarization can compress the amount of data that's stored in the Configuration Manager database. For more information, see [Configure Asset Intelligence maintenance tasks](/configmgr/core/clients/manage/asset-intelligence/configuring-asset-intelligence#BKMK_ConfigureMaintenanceTasks).
 
 |||
 |---------|---------|

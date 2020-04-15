@@ -9,7 +9,8 @@ ms.assetid: b01f156d-97c2-4cf1-870c-96623fa30262
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # UpdateFeatureExposureStatus Method in Class SMS_CM_UpdateFeatures
 The `UpdateFeatureExposureStatus` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the feature exposure status for an update feature extension.  

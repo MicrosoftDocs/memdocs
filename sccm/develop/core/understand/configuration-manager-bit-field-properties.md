@@ -9,10 +9,11 @@ ms.assetid: b2e8a746-7b57-4381-87a1-c49d9434811a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Bit Field Properties
-Some System Center Configuration Manager object properties are implemented as bit fields, where individual binary bits of an integer (usually a `uint32` data type) are used as `Boolean` flags to store information. These properties can be difficult to interpret at the user interface because the bit field is often displayed as a decimal number.  
+Some Configuration Manager object properties are implemented as bit fields, where individual binary bits of an integer (usually a `uint32` data type) are used as `Boolean` flags to store information. These properties can be difficult to interpret at the user interface because the bit field is often displayed as a decimal number.  
 
  For example, the Security User Class Permissions object (`SMS_UserClassPermissions`) contains an integer property called `ClassPermissions`, which is defined as an `int32` data type with the following bit flags:  
 

@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Use this diagram to start troubleshooting SQL performance for Configuration Manager
 ms.date: 08/09/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 9930a8a4-4d7f-47a4-bf6b-4c36d0ed5528
 author: aczechowski
 ms.author: aaroncz

@@ -9,10 +9,11 @@ ms.assetid: b33c6ead-e705-4fe7-9f83-1b66d905f881
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ReadFromString Method in Class SMS_ScheduleMethods
-The `ReadFromString` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, reads [SMS_ScheduleToken Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_scheduletoken-server-wmi-class.md) objects from an interval string.  
+The `ReadFromString` Windows Management Instrumentation (WMI) class method, in Configuration Manager, reads [SMS_ScheduleToken Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_scheduletoken-server-wmi-class.md) objects from an interval string.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -44,7 +45,7 @@ SInt32 ReadFromString(
 
 The ScheduleToken class uses two DWORDs to store the schedule data.   
 
-Values for the first DWORD layed out as follows:   
+Values for the first DWORD laid out as follows:   
 
   3 3 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1   
   1 0 9 8 7 6 5 4 3 2 1 0 9 8 7 6 5 4 3 2 1 0 9 8 7 6 5 4 3 2 1 0   
@@ -53,7 +54,7 @@ Values for the first DWORD layed out as follows:
  |  Minute   |  Hour   |  Day    | Month |   Year    | Minutes   |   
  +-----------+---------+---------+-------+-----------+-----------+   
 
-Values for the second DWORD layed out as follows:   
+Values for the second DWORD laid out as follows:   
 
  SCHED_TOKEN_RECUR_NONE   
 

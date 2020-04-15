@@ -1,23 +1,24 @@
 ---
 title: "Technical Preview 1711 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview version 1711 for System Center Configuration Manager."
+description: "Learn about features available in the Technical Preview version 1711 for Configuration Manager."
 ms.date: 11/17/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 2e68dc12-6776-437a-9138-45cd7d4bf9cf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Capabilities in Technical Preview 1711 for System Center Configuration Manager
+# Capabilities in Technical Preview 1711 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1711. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1711. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
 
 
 <!--  Known Issues Template   
@@ -72,7 +73,7 @@ With this preview, you can allow an end user to interact with an application ins
 
 Try to complete the following tasks and then send **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
 
-1.  Create or edit an application. For more information, see [Create applications with System Center Configuration Manager](/sccm/apps/deploy-use/create-applications).
+1.  Create or edit an application. For more information, see [Create applications with Configuration Manager](/sccm/apps/deploy-use/create-applications).
 
     a. Choose the **User Experience** tab in the **Windows Installer (\*msi file) Properties**.
 
@@ -84,7 +85,7 @@ Try to complete the following tasks and then send **Feedback** from the **Home**
 
     e. Select the **Allow users to interact with the program installation** box.
 
-2.  Create or edit a task sequence to install the application using the **Install Application** step. For more information, see [Install Application](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication) in the [Task sequence steps in System Center Configuration Manager](/sccm/osd/understand/task-sequence-steps).
+2.  Create or edit a task sequence to install the application using the **Install Application** step. For more information, see [Install Application](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication) in the [Task sequence steps](/sccm/osd/understand/task-sequence-steps).
 
     a. Imaging task sequence after the Setup Windows and Configuration Manager step.
 
@@ -109,4 +110,4 @@ You can also use this feature when deploying an app using the wizard.
 <!-- When we have another H2 in this topic, Add this Next Steps section back in.  -->
 
 ## Next Steps
-For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    

@@ -9,7 +9,8 @@ ms.assetid: 0d714937-63a5-4224-8c2a-16ffd1d25cd3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Unlock Method in Class SMS_DeviceSettingPackage
 The `Unlock` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site to the current site, unlocking the device setting package.  

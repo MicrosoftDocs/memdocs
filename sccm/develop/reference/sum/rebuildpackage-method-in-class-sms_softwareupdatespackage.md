@@ -9,7 +9,8 @@ ms.assetid: 0cc4b1e3-7e96-45fe-a1c5-e012aa1af8b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # RebuildPackage Method in Class SMS_SoftwareUpdatesPackage
 The `RebuildPackage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, brings the software updates package to its expected state if files are found to be corrupt or have been deleted.  

@@ -2,30 +2,27 @@
 title: Current branch versions
 titleSuffix: Configuration Manager
 description: Review the Configuration Manager version history, and learn about the phases of service offered.
-ms.date: 07/26/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
 # Support for Configuration Manager current branch versions
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Microsoft plans to release updates for Configuration Manager current branch a few times per year. For versions of Configuration Manager released prior to 1710, support is for 12 months. Beginning with version 1710, each update version remains in support for 18 months from its general availability release date. Microsoft provides technical support for the entire period of support. There are two distinct servicing phases that depend on the availability of the latest current branch version.  
+Microsoft plans to release updates for Configuration Manager current branch a few times per year. Each update version remains in support for 18 months from its general availability release date. Microsoft provides technical support for the entire period of support. There are two distinct servicing phases that depend on the availability of the latest current branch version:
 
 - **Security and Critical Updates** servicing phase - When running the latest current branch version of Configuration Manager, you receive both Security and Critical Updates.  
 
 - **Security Updates (Only)** servicing phase - After the release of a new current branch version, Microsoft only supports security updates to older versions for the remainder of that version's support lifecycle (shown in Figure 1).  
 
-([View graphic at full size](media/servicing_support_timeline.png))
-
-![Configuration Manager servicing and support timeline graphic](media/servicing_support_timeline.png)  
+[ ![Configuration Manager servicing and support timeline graphic](media/servicing_support_timeline.png) ](media/servicing_support_timeline.png#lightbox)
 
 Figure 1. Example of the release cycle overlap for current branch servicing support. This example is for illustration of the cycle, and doesn't represent actual or expected release dates.
 

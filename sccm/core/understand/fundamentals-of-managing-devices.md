@@ -1,30 +1,28 @@
 ---
 title: Fundamentals of managing devices
 titleSuffix: Configuration Manager
-description: Learn how to use System Center Configuration Manager to manage devices.
+description: Learn how to use Configuration Manager to manage devices.
 ms.date: 07/26/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 2bca3db9-115a-451d-8c93-f073ceefe0c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Fundamentals of managing devices with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager can manage two broad categories of devices:
 
 - *Clients* are devices like workstations, laptops, servers, and mobile devices where you install the Configuration Manager client software. Some management functions, like hardware inventory, require this client software.  
 
-- *Managed devices* can include *clients*, but typically it's a mobile device where the Configuration Manager client software isn't installed. On this kind of device, you manage by using Intune, or the built-in on-premises mobile device management in Configuration Manager.
-
-    > [!Important]  
-    > Hybrid mobile device management is a [deprecated feature](/sccm/mdm/understand/hybrid-mobile-device-management).
+- *Managed devices* can include *clients*, but typically it's a mobile device where the Configuration Manager client software isn't installed. On this kind of device, you manage by using the built-in on-premises mobile device management in Configuration Manager.
 
 You can also group and identify devices based on the user, not just the client type.
 

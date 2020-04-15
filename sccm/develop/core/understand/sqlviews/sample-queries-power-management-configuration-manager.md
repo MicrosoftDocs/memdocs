@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Sample queries that show how to join power management views to other views.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 4a68faf9-29c7-458b-b3ef-fb99aad5ee7d
 author: aczechowski
 ms.author: aaroncz

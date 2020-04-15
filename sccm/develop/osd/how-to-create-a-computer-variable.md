@@ -9,10 +9,11 @@ ms.assetid: e4db0e59-84c0-44eb-8e41-acb91c4ee463
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a Computer Variable in Configuration Manager
-You create a computer variable for a computer that is running System Center Configuration Manager by adding instances of [SMS_MachineVariable](../../develop/reference/osd/sms_machinevariable-server-wmi-class.md) to the [SMS_MachineSettings](../../develop/reference/osd/sms_machinesettings-server-wmi-class.md) class `MachineVariables` array property.  
+You create a computer variable for a computer that is running Configuration Manager by adding instances of [SMS_MachineVariable](../../develop/reference/osd/sms_machinevariable-server-wmi-class.md) to the [SMS_MachineSettings](../../develop/reference/osd/sms_machinesettings-server-wmi-class.md) class `MachineVariables` array property.  
 
 ### To create a computer variable  
 

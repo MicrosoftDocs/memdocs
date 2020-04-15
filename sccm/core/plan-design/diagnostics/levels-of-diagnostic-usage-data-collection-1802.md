@@ -4,17 +4,19 @@ titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data collected in version 1802.
 ms.date: 05/13/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 29dd51b8-6576-4010-81ba-3129ed2c3421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Levels of diagnostic usage data collection for version 1802 of System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+ROBOTS: NOINDEX
+---
+# Levels of diagnostic usage data collection for version 1802 of Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager version 1802 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail about data collected at each level.
 
@@ -464,7 +466,7 @@ For Configuration Manager version 1802, this level includes the following data:
 
 - Compliance Settings: SCEP, VPN, Wi-Fi, and compliance policy template configuration details
 
-- DCM config pack for System Center Configuration Manager usage
+- DCM config pack for Configuration Manager usage
 
 - Detailed client deployment installation errors
 

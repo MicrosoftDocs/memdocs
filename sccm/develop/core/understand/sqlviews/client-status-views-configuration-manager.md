@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Information about the client status components on Configuration Manager client computers.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 9f7f8cc5-8173-4a3d-be97-02c1686a3751
 author: aczechowski
 ms.author: aaroncz

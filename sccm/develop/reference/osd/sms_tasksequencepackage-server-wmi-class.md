@@ -9,7 +9,8 @@ ms.assetid: 753d2469-bb46-4bcd-bb3b-7078f4739531
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequencePackage Server WMI Class
 The `SMS_TaskSequencePackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence package that defines the steps to run for the task sequence.  
@@ -89,8 +90,8 @@ Class SMS_TaskSequencePackage : SMS_PackageBaseclass
 |[AddDistributionPoints Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/adddistributionpoints-method-in-class-sms_tasksequencepackage.md)|Adds the distribution points for the task sequence package.|  
 |[CheckReferencesShareType Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/checkreferencessharetype-method-in-class-sms_tasksequencepackage.md)|Checks all referred package for this task sequence and returns all that are not shared.|  
 |[GetClientConfigPolicies Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/getclientconfigpolicies-method-in-class-sms_tasksequencepackage.md)|Gets all site-wide client configuration policies and their corresponding policy assignments.|  
-|[GetContentHash Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/getcontenthash-method-in-class-sms_tasksequencepackage.md)|Gets the hash of specific System Center Configuration Manager content.|  
-|[GetPackageDefaultHash Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/getpackagedefaulthash-method-in-class-sms_tasksequencepackage.md)|Gets the hash of a System Center Configuration Manager package.|  
+|[GetContentHash Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/getcontenthash-method-in-class-sms_tasksequencepackage.md)|Gets the hash of specific Configuration Manager content.|  
+|[GetPackageDefaultHash Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/getpackagedefaulthash-method-in-class-sms_tasksequencepackage.md)|Gets the hash of a Configuration Manager package.|  
 |[GetPackageHash Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/getpackagehash-method-in-class-sms_tasksequencepackage.md)|Gets the certificate hash for the task sequence package.|  
 |[GetSequence Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/getsequence-method-in-class-sms_tasksequencepackage.md)|Gets a task sequence from a task sequence package.|  
 |[GetTsPolicies Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/gettspolicies-method-in-class-sms_tasksequencepackage.md)|Gets all policies associated with the specified task sequence.|  

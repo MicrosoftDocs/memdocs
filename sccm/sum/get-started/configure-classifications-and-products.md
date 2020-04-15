@@ -5,16 +5,17 @@ description: Follow these steps to configure software update classifications and
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/02/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configure classifications and products to synchronize  
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Software updates metadata is retrieved during the synchronization process in Configuration Manager based on the settings that you specify in the Software Update Point component properties. After you synchronize software updates for the first time, or when new products and classifications are released, you must go to the properties to select the new items. Use the following procedure to configure classifications and products to synchronize.  
 
@@ -44,14 +45,7 @@ Software updates metadata is retrieved during the synchronization process in Con
      - **Upgrade**: Specifies an  upgrade for Windows 10 features and functionality. Your software update points and sites must run a minimum of WSUS 6.2 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) to get the **Upgrade** classification. For more information about installing this update and other updates for **Upgrades**, see [Prerequisites for software updates](/sccm/sum/plan-design/prerequisites-for-software-updates#BKMK_wsus2012).
 
     > [!NOTE]
-    > 
-    > You can select the **Include Microsoft Surface drivers and firmware updates** checkbox to synchronize Microsoft Surface drivers.<!--1098490--> All software update points must run Windows Server 2016 to successfully synchronize Surface drivers. If you enable a software update point on a computer running Windows Server 2012 after you enable Surface drivers, the scan results for the driver updates are not accurate. This results in incorrect compliance data displayed in the Configuration Manager console and in Configuration Manager reports.  
-    >  
-    > - This feature was first introduced in version 1706 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1710, this feature is no longer a pre-release feature.  
-    >  
-    > - Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
-    >
-    > - Drivers for ARM devices aren't supported for synchronization.
+    > You can select the **Include Microsoft Surface drivers and firmware updates** checkbox to synchronize Microsoft Surface drivers.<!--1098490--> For more information, see the [Include Microsoft Surface drivers and firmware updates](#bkmk_Surface) section.
 
 5. On the **Products** tab, specify the products for which you want to synchronize software updates, and then click **Close**.  
 
@@ -62,12 +56,72 @@ Software updates metadata is retrieved during the synchronization process in Con
     - When software updates are applicable to multiple products, and at least one of the products was selected for synchronization, all of the products appear in the Configuration Manager console even if some products weren't selected. For example, if Windows Server 2012 is the only operating system that you selected, and if a software update applies to Windows 8 and Windows Server 2012, both products are displayed in the Configuration Manager console.  
 
     > [!NOTE]  
-    > **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10**  product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product in Configuration Manager version 1906. <!--4682946-->
+    > **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10** product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product in Configuration Manager version 1906. <!--4682946-->
     >
     > When you update to Configuration Manager version 1906 and have the **Windows 10** product selected for synchronization, the following actions occur automatically:
     > - The **Windows 10, version 1903 and later** product is added for synchronization.
     > - [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
     > - [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow) are updated to include the **Windows 10, version 1903 and later** product.
+
+## <a name="bkmk_Surface"></a> Include Microsoft Surface drivers and firmware updates
+
+You can select the **Include Microsoft Surface drivers and firmware updates** checkbox to synchronize Microsoft Surface drivers.<!--1098490--> All software update points must run Windows Server 2016 with cumulative update [KB4025339](https://support.microsoft.com/help/4025339) or later installed to successfully synchronize Surface drivers. If you enable a software update point on a computer running Windows Server 2012 after you enable Surface drivers, the scan results for the driver updates are not accurate. This results in incorrect compliance data displayed in the Configuration Manager console and in Configuration Manager reports.  
+
+- This feature was first introduced in version 1706 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1710, this feature is no longer a pre-release feature.  
+- Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+- Drivers for ARM devices aren't supported for synchronization.
+
+## Configuring products for versions of Windows 10
+
+### Windows 10, version 1909
+
+Windows 10, version 1909 shares a common core operating system with Windows 10, version 1903. Both of these versions are serviced with the same cumulative updates. For more information about Windows 10, version 1909, see the [Windows 10, version 1909 delivery options](https://aka.ms/1909mechanics) blog post.
+
+To make sure both your Windows 10 version 1909 and Windows 10, version 1903 clients install updates from Configuration Manager:
+
+- Approve updates for both the 1909 and 1903 versions of Windows 10.
+  - The updates have different titles and applicability rules for each OS version.
+  - Approving each update per version and  architecture of the OS maintains the normal approval process for admins.
+- The cumulative update installation files are the same for both the 1909 and 1903 versions of Windows 10.
+  - Configuration Manager will only download the update source files once.
+
+#### Feature Updates for Windows 10, version 1909
+
+When you approve feature updates for Windows 10, version 1909, there are a few different options you'll see:
+
+- Windows 10, version 1903 clients are offered an [Enablement Package](https://support.microsoft.com/en-us/help/4517245/feature-update-via-windows-10-version-1909-enablement-package), released November 12, 2019.
+  - The enablement package is a small, quick to install file that activates the Windows 10, version 1909 features and restarts the device.
+  - Prerequisites for the enablement package include:
+    - A minimum cumulative update of [KB4517389](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4517389), released October 8, 2019.
+    - A minimum servicing stack update of [KB4520390](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4520390), released September 24, 2019.
+  - This update, like any other Feature Update, isn't available for import from `https:\\catalog.update.microsoft.com`.
+  - The update will automatically synchronize with WSUS if you have the **Windows 10, version 1903 and later** product and **Upgrades** classification selected for synchronization.
+  - In the Configuration Manager console, go to the **Software Library** workspace, expand **Windows 10 Servicing**, and select the **All Windows 10 Updates** node. Search for the terms "enablement" or "4517245".
+
+    > [!TIP]
+    > Since these are feature updates, they aren't in the **All Software Updates** node.
+
+- Windows 10, version 1809 and earlier clients are upgraded with a single direct feature update.
+  - This is just like all other previous installations for Feature Updates that you've done for Windows 10.
+
+> [!NOTE]
+> Both the enablement package and the traditional feature update for Windows 10, version 1909 will show as "Installed" in reporting, regardless of which path was used to install it.
+
+### Windows 10, version 1903 and later
+
+**Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10**  product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product in Configuration Manager version 1906. <!--4682946-->
+
+#### Windows 10, version 1903 and later with Configuration Manager version 1906
+When you update to Configuration Manager version 1906 and have the **Windows 10** product selected for synchronization, the following actions occur automatically:
+- The **Windows 10, version 1903 and later** product is added for synchronization.
+- [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
+- [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow) are updated to include the **Windows 10, version 1903 and later** product.
+
+#### Windows 10, version 1903 and later with Configuration Manager version 1902
+If you are using Configuration Manager 1902 with Windows 10,version 1903 clients, you'll need to:
+- Select the **Windows 10, version 1903 and later** product for synchronization.
+- Update any [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) for Windows 10, version 1903 clients.
+- Update [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow) for Windows 10, version 1903 clients.
 
 ## <a name="bkmk_WIfB"></a> Windows Insider Program
 <!--3556023-->
@@ -123,9 +177,9 @@ Cumulative Updates for Windows Insider will be available for WSUS and by extensi
 
 The [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) program is a last resort option for customers who need to run certain legacy Microsoft products past the end of support. It includes Critical and/or Important security updates (as defined by the [Microsoft Security Response Center (MSRC)](https://www.microsoft.com/msrc)) for a maximum of three years after the product’s End of Extended Support date.
 
-Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](/sccm/core/servers/manage/updates#version-details) can be used to deploy and install Windows security updates released under the program. The latest released version can also be used to deploy supported OSes via operating system deployment (OSD).
+Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. For example, Windows 7. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](/sccm/core/servers/manage/updates#version-details) can be used to deploy and install Windows security updates released under the program. The latest released version can also be used to deploy Windows 10 to devices running Windows 7.
 
-Client management features not related to Windows software update management or OSD will no longer be tested on the operating systems covered under the ESU program and we don't guarantee that they'll continue to function. It's highly recommended to upgrade or migrate to a current version of the operating systems as soon as possible to receive client management support.
+Client management features not related to Windows software update management or OS deployment will no longer be tested on the operating systems covered under the ESU program and we don't guarantee that they'll continue to function. It's highly recommended to upgrade or migrate to a current version of the operating systems as soon as possible to receive client management support.
 
 
 ## Next steps

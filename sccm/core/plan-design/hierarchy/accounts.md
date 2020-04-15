@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL objects used in Configuration Manager.
 ms.date: 10/23/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Accounts used in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the following information to identify the Windows groups, accounts, and SQL objects that are used in Configuration Manager, how they are used, and any requirements.  
 
@@ -344,7 +345,7 @@ For more information, see [Install site system roles for on-premises MDM](/sccm/
 
 ### Exchange Server connection account  
 
-The site server uses the **Exchange Server connection account** to connect to the specified Exchange Server. It uses this connection to find and manage mobile devices that connect to Exchange Server. This account requires Exchange PowerShell cmdlets that provide the required permissions to the Exchange Server computer. For more information about the cmdlets, see [Manage mobile devices with Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
+The site server uses the **Exchange Server connection account** to connect to the specified Exchange Server. It uses this connection to find and manage mobile devices that connect to Exchange Server. This account requires Exchange PowerShell cmdlets that provide the required permissions to the Exchange Server computer. For more information about the cmdlets, see [Install and configure the Exchange connector](/configmgr/mdm/deploy-use/install-configure-exchange-connector).  
 
 
 ### Management point connection account  
@@ -381,7 +382,7 @@ A Configuration Manager client first tries to use its computer account to downlo
 Starting in version 1806, a workgroup or Azure AD-joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).<!--1358228,1358278-->
 
 > [!Note]  
-> If you enable **Enhanced HTTP** to not require the network access account, the distribution point needs to be running Windows Server 2008 R2 SP1 or later. <!--SCCMDocs-pr issue #2696-->
+> If you enable **Enhanced HTTP** to not require the network access account, the distribution point needs to be running Windows Server 2012 or later. <!--SCCMDocs-pr issue #2696-->
 >  
 > Upgrade clients to at least version 1806 before enabling this functionality. If you only allow **Enhanced HTTP** connections, older clients can't authenticate using this method, so can't download the client upgrade package from a distribution point. <!--vso2841213-->   
 
@@ -452,6 +453,9 @@ SQL Server Reporting Services uses the **Reporting services point account** to r
 
 > [!NOTE]  
 > The account you specify must have **Log on locally** permissions on the computer hosting the SQL Reporting Services database.
+
+> [!NOTE]  
+> The account is automatically granted all necessary rights by being added to the smsschm_users SQL Database Role on the ConfigMgr database.
 
 For more information, see [Introduction to reporting](/sccm/core/servers/manage/introduction-to-reporting).
 
@@ -647,7 +651,7 @@ Asset Intelligence Volume Licenses import. ConfigMgr grants this permission to u
 
 ### smsdbrole_AIUS
 
-Asset Intelligence Update Synchronization. ConfigMgr grants the computer account that host the Asset Intelligence Synchronization Point account access to get Access Intelligence proxy data and to view pending AI data for upload.
+Asset Intelligence Update Synchronization. ConfigMgr grants the computer account that host the Asset Intelligence Synchronization Point account access to get Asset Intelligence proxy data and to view pending AI data for upload.
 
 ### smsdbrole_AMTSP
 

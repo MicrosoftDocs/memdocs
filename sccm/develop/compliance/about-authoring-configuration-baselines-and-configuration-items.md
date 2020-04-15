@@ -9,7 +9,8 @@ ms.assetid: 39e47528-ea59-4d32-8baf-d017d3a44426
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # About authoring configuration baselines and configuration items

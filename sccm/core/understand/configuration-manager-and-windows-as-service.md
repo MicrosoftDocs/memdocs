@@ -4,20 +4,21 @@ titleSuffix: Configuration Manager
 description: Get basic information on adopting Configuration Manager current branch to support Windows as a service.
 ms.date: 06/15/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: c8534a1e-57b8-4688-b6e6-299d82cfcec9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Configuration Manager and Windows as a Service
 
-*Applies To: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-System Center Configuration Manager provides comprehensive control over feature updates for Windows 10. To fully adopt the Windows as a service model, you also must adopt the Configuration Manager current branch model. To stay current with Windows 10, requires that you stay current with Configuration Manager for the best experience. New versions of Configuration Manager are required to take full advantage of the exciting new enterprise features for Windows 10. This article is intended to be a landing page for the key articles required to adopt Configuration Manager current branch. Configuration Manager current branch gets you on your way to Windows as a service.
+Configuration Manager provides comprehensive control over feature updates for Windows 10. To fully adopt the Windows as a service model, you also must adopt the Configuration Manager current branch model. To stay current with Windows 10, requires that you stay current with Configuration Manager for the best experience. New versions of Configuration Manager are required to take full advantage of the exciting new enterprise features for Windows 10. This article is intended to be a landing page for the key articles required to adopt Configuration Manager current branch. Configuration Manager current branch gets you on your way to Windows as a service.
 
 ## Key articles about adopting Configuration Manager current branch
 
@@ -36,18 +37,18 @@ System Center Configuration Manager provides comprehensive control over feature 
 
 ## Key articles about adopting Windows as a service
 
-| Article        | Description          | 
+| Article        | Description          |
 | ------------- |-------------|
 |[Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service)|Explains how to use servicing plans to deploy Windows 10 feature updates.|
 |[Upgrade Windows 10 via task sequence](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)|The details of creating a task sequence to upgrade Windows 10 with additional recommendations.|
 |[Phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|Phased deployments automate a coordinated, sequenced rollout of a task sequence across multiple collections.|  
 |[Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)|Use Configuration Manager to manage update content to stay current with Windows 10.|
-|[Integrate with Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)|Upgrade Readiness allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10.| 
+|[Use Desktop Analytics](/configmgr/desktop-analytics/overview)|Desktop Analytics allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10.|
 |[Windows Update for Business integration (optional)](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)|Explains how to define and deploy Windows Update for Business (WUfB) policies using Configuration Manager.|
-|[Use co-management with Microsoft Intune and Windows Update for Business (optional)](/sccm/comanage/overview)|Provides an overview of co-management| 
+|[Use co-management with Microsoft Intune and Windows Update for Business (optional)](/sccm/comanage/overview)|Provides an overview of co-management|
 
 
 ## Related articles
 
-- [In-place upgrade to System Center Configuration Manager (Current Branch) from ConfigMgr 2012](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
-- [Plan for migration to System Center Configuration Manager (Current Branch) from ConfigMgr 2007](/sccm/core/migration/planning-for-migration)
+- [In-place upgrade to Configuration Manager current branch from System Center 2012 Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
+- [Plan for migration to Configuration Manager current branch](/sccm/core/migration/planning-for-migration)

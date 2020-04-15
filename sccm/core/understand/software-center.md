@@ -5,17 +5,18 @@ description: Learn about the features and functionality of Software Center
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 04/12/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Software Center user guide
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Your organization's IT admin uses Software Center to install applications, software updates, and upgrade Windows. This user guide explains the functionality of Software Center for users of the computer.
 
@@ -27,13 +28,16 @@ General notes about Software Center functionality:
 
 <!-- - Your IT admin may change the color of Software Center, and add your organization's logo. The images in this article show the default experience. -->
 
+## <a name="bkmk_open"></a> How to open Software Center
 
-## How to open Software Center
+For the simplest method to start Software Center on a Windows 10 computer, press **Start** and type `Software Center`. You may not need to type the entire string for Windows to find the best match.
 
-For the simplest method to start Software Center on a Windows 10 computer, press **Start** and type `Software Center`.
+If you navigate the Start menu, look under the **Microsoft Endpoint Manager** group for the **Software Center** icon.
 
-If you navigate the Start menu, look under the **Microsoft System Center** group for the **Software Center** icon.
+![Microsoft Endpoint Manager start menu icons](media/microsoft-endpoint-manager-start-menu.png)
 
+> [!NOTE]
+> The Start menu path changed in version 1910. In version 1906 and earlier, the folder name is **Microsoft System Center**. When you update Configuration Manager to version 1910 or later, make sure to update any internal documentation that you maintain to include this new location.
 
 ## Applications
 
@@ -137,6 +141,29 @@ Specify how Software Center applies changes to software before the deadline
 - **Suspend Software Center activities when my computer is in presentation mode**: This setting is enabled by default.
 - **Sync Policy**: Select this button when instructed by your IT admin. This computer checks with the servers for anything new, such as applications, software updates, or operating systems.
 
+### Remote Control
+
+Specify remote access and remote control settings for your computer
+
+- **Use remote access settings from your IT Department**: This checkbox is selected by default.
+- **Level of remote access allowed**: Select from the following 3 options
+    - **Do not allow remote access**
+    - **View only**
+    - **Full**: This level is enabled by default.
+- **Allow remote control of this computer by administrators when I am away**. This setting is set to **Yes** by default.
+- **When an administrator tries to control this computer remotely**: This setting has two options
+    - **Ask for permission each time**: This option is selected by default.
+    - **Do not ask for permission**
+- **Show the following during remote control**: Both options are selected by default
+    - **Status icon in the notification area**
+    - **A session connection bar on the desktop**
+- **Play sound**: This setting has three options
+    - **When session begins and ends**: This setting is selected by default.
+    - **Repeatedly during session**
+    - **Never**
+
+    For more info, see [Introduction to Remote Control](/configmgr/core/clients/manage/remote-control/introduction-to-remote-control)
+    
 
 ## Custom tab in Software Center
 

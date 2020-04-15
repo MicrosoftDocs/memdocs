@@ -1,7 +1,7 @@
 ---
 title: "Create a Program"
 titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
+ms.date: "03/23/2020"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -9,10 +9,11 @@ ms.assetid: de2289de-d10e-4454-be69-47209bf59113
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a Program
-The following example shows how to create a program, in System Center Configuration Manager, by using the `SMS_Program` class and class properties.  
+The following example shows how to create a program, in Configuration Manager, by using the `SMS_Program` class and class properties.  
 
 > [!IMPORTANT]
 >  Any advertised program will fail to run when the maintenance windows that are defined on the client computer are set for a period that is less than that program's **Maximum allowed run time setting**. For more information, see Program Run Scenario Using Maintenance Windows in the Configuration Manager documentation.  
@@ -114,7 +115,7 @@ public void CreateProgram(WqlConnectionManager connection,
 |`newProgramName`|-   Managed: `String`<br />-   VBScript: `String`|The name for the new program.|  
 |`newProgramComment`|-   Managed: `String`<br />-   VBScript: `String`|Comment that describes the program in the Configuration Manager console.|  
 |`newProgramCommandLine`|-   Managed: `String`<br />-   VBScript: `String`|The command line that runs when the program is launched.|  
-|`newMaxRunTime`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The approximate duration, in minutes, of program execution on the client computer.|  
+|`newMaxRunTime`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The approximate duration, in minutes, of program execution on the client computer. This parameter can have a max value of 720 minutes or 12 hours.|  
 
 ## Compiling the Code  
  The C# example requires:  

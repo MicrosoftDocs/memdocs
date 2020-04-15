@@ -4,19 +4,20 @@ titleSuffix: "Configuration Manager"
 description: "Read an overview of the discovery process and discovery data records."
 ms.date: 02/8/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 30844519-ce14-456f-bfb8-4318b578e9f6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Run discovery for System Center Configuration Manager
+# Run discovery for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-You use one or more discovery methods in System Center Configuration Manager to find device and user resources that you can manage. You can also use discovery to identify network infrastructure in your environment. There are several different methods you can use to discover different things, and each method has its own configurations and limitations.  
+You use one or more discovery methods in Configuration Manager to find device and user resources that you can manage. You can also use discovery to identify network infrastructure in your environment. There are several different methods you can use to discover different things, and each method has its own configurations and limitations.  
 
 ## Overview of discovery  
  Discovery is the process by which Configuration Manager learns about the things you can manage. The following are the available discovery methods:  
@@ -36,9 +37,9 @@ You use one or more discovery methods in System Center Configuration Manager to 
 -   Server Discovery  
 
 > [!TIP]  
->  You can learn about the individual discovery methods in [About discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/about-discovery-methods.md).  
+>  You can learn about the individual discovery methods in [About discovery methods for Configuration Manager](../../../../core/servers/deploy/configure/about-discovery-methods.md).  
 >   
->  For assistance in selecting which methods to use, and at which sites in your hierarchy, see [Select discovery methods to use for System Center Configuration Manager](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md).  
+>  For assistance in selecting which methods to use, and at which sites in your hierarchy, see [Select discovery methods to use for Configuration Manager](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md).  
 
  To use most discovery methods, you must enable the method at a site, and set it up to search specific network or Active Directory locations. When it runs, it queries the specified location for information about devices or users that Configuration Manager can manage. When a discovery method successfully finds information about a resource, it puts that information into a file called a discovery data record (DDR). That file is then processed by a primary or central administration site. Processing of a DDR creates a new record in the site database for newly discovered resources, or updates existing records with new information.  
 
@@ -72,8 +73,8 @@ DDR files are identified by the .ddr extension, and have a typical size of about
 
 The following topics can build a foundation that will help you use discovery methods successfully:  
 
--   [About discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/about-discovery-methods.md)  
+-   [About discovery methods for Configuration Manager](../../../../core/servers/deploy/configure/about-discovery-methods.md)  
 
--   [Select discovery methods to use for System Center Configuration Manager](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md)  
+-   [Select discovery methods to use for Configuration Manager](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md)  
 
-Then, when you understand the methods you want to use, find guidance to set up each method in [Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
+Then, when you understand the methods you want to use, find guidance to set up each method in [Configure discovery methods for Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  

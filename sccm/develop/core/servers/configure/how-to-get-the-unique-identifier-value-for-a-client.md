@@ -9,10 +9,11 @@ ms.assetid: 5c2a9bd7-9a0f-439d-9238-5bad67a0ad58
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Get the Unique Identifier Value for a Client
-When you discover system resource data for a client, in System Center Configuration Manager, you must specify the client's unique identifier value in the data discovery record (DDR), such as:  
+When you discover system resource data for a client, in Configuration Manager, you must specify the client's unique identifier value in the data discovery record (DDR), such as:  
 
 ```  
 DDRAddString("SMS Unique Identifier",  

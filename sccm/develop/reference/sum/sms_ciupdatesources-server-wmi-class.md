@@ -9,10 +9,11 @@ ms.assetid: 475fd0a6-dd50-4b4c-8b84-ebe32129d40f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CIUpdateSources Server WMI Class
-The `SMS_CIUpdateSources` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that provides information on all the update sources associated with an [SMS_SoftwareUpdate Server WMI Class](../../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md) object.  
+The `SMS_CIUpdateSources` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides information on all the update sources associated with an [SMS_SoftwareUpdate Server WMI Class](../../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md) object.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

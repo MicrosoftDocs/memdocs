@@ -10,12 +10,11 @@ ms.assetid: f3bf1737-827d-48fa-8bb1-f48fe71afe0c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
 # How to analyze and convert packages with Package Conversion Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 <!--1357861-->
 
@@ -47,7 +46,7 @@ Before you can convert a package, first analyze it. Depending on the results of 
 
     - **Not Applicable**: This package is missing required content or a program. Add any missing content or programs and retry analysis. Or leave it in an unconverted state and continue to deploy it as a package.  
 
-
+    - **Unknown**: First run the **Analyze** task, or wait for the next scheduled analysis. If the state doesn't change, then see [Troubleshoot Package Conversion Manager](/configmgr/apps/pcm/troubleshoot-pcm).<!-- SCCMDocs#2044 -->
 
 ## <a name="bkmk_convert"></a> How to convert packages
 

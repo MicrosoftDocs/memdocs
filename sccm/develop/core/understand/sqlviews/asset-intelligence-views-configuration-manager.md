@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Information about software applications that are in use throughout the Configuration Manager hierarchy.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: a2ab0d62-4053-4a59-8c5c-613604275909
 author: aczechowski
 ms.author: aaroncz

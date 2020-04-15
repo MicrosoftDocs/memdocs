@@ -9,7 +9,8 @@ ms.assetid: 24d3514f-b1b7-4ac3-b1ac-17548aa3f273
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # RefreshPkgSource Method in Class SMS_TaskSequencePackage
 The `RefreshPkgSource` class method, in Configuration Manager, refreshes the package source at all distribution points when the package properties have not changed.  

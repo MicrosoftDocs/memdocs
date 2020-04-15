@@ -2,7 +2,7 @@
 title: "Synchronize updates with no Internet connection "
 titleSuffix: "Configuration Manager"
 description: "Run software updates synchronization on the top-level software update point that is disconnected from the Internet."
-ms.date: 01/23/2017
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,14 +10,15 @@ ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Synchronize software updates from a disconnected software update point  
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
- When the software update point at the top-level site is disconnected from the Internet, you must use the export and import functions of the WSUSUtil tool to synchronize software updates metadata. You can choose an existing WSUS server not in your Configuration Manager hierarchy as the synchronization source. This topic provides information about how to use the export and import functions of the WSUSUtil tool.  
+ When the software update point at the top-level site is disconnected from the Internet, you must use the export and import functions of the WSUSUtil tool to synchronize software updates metadata. You can choose an existing WSUS server not in your Configuration Manager hierarchy as the synchronization source. This article provides information about how to use the export and import functions of the WSUSUtil tool.  
 
  To export and import software updates metadata, you must export software updates metadata from the WSUS database on a specified export server, then copy the locally stored license terms files to the disconnected software update point, and then import the software updates metadata to the WSUS database on the disconnected software update point.  
 
@@ -39,7 +40,8 @@ ms.collection: M365-identity-device-management
 3.  In the results pane, find the latest software updates synchronization attempt and verify that it completed successfully.  
 
 > [!IMPORTANT]  
->  The WSUSUtil tool must be run locally on the export server to export the software updates metadata, and it also must be run on the disconnected software update point server to import the software updates metadata. In addition, the user that runs the WSUSUtil tool must be a member of the local Administrators group on each server.  
+> - The WSUSUtil tool must be run locally on the export server to export the software updates metadata, and it also must be run on the disconnected software update point server to import the software updates metadata. In addition, the user that runs the WSUSUtil tool must be a member of the local Administrators group on each server.  
+> - If you are using Windows Server 2012, ensure [KB2819484](https://support.microsoft.com/help/2819484/cab-file-that-is-exported-by-using-the-wsusutil-exe-command-is-display) is installed on the WSUS servers.
 
 ## Export process for software updates  
  The export process for software updates consists of two main steps: to copy the locally stored license terms files to the disconnected software update point, and to export software updates metadata from the WSUS database on the export server.  
@@ -61,15 +63,15 @@ ms.collection: M365-identity-device-management
 2.  Type the following to export the software updates metadata to a package file:  
 
      **wsusutil.exe export**  *packagename*  *logfile*  
-
+ 
      For example:  
 
-     **wsusutil.exe export export.cab export.log**  
+     **wsusutil.exe export export.xml.gz export.log**  
 
-     The format can be summarized as follows: WSUSutil.exe is followed by the export option, the name of the export .cab file that is created during the export operation, and the name of a log file. WSUSutil.exe exports the metadata from the export server and creates a log file of the operation.  
+     The format can be summarized as follows: WSUSutil.exe is followed by the export option, the name of the export .xml.gz file that is created during the export operation, and the name of a log file. WSUSutil.exe exports the metadata from the export server and creates a log file of the operation.  
 
     > [!NOTE]  
-    >  The package (.cab file) and the log file name must be unique in the current folder.  
+    >  The package (.xml.gz file) and the log file name must be unique in the current folder.  
 
 3.  Move the export package to the folder that contains WSUSutil.exe on the import WSUS server.  
 
@@ -92,11 +94,11 @@ ms.collection: M365-identity-device-management
 
      For example:  
 
-     **wsusutil.exe import export.cab import.log**  
+     **wsusutil.exe import export.xml.gz import.log**  
 
-     The format can be summarized as follows: WSUSutil.exe is followed by the import command, the name of package file (.cab) that is created during the export operation, the path to the package file if it is in a different folder, and the name of a log file. WSUSutil.exe imports the metadata from the export server and creates a log file of the operation.  
+     The format can be summarized as follows: WSUSutil.exe is followed by the import command, the name of package file (.xml.gz) that is created during the export operation, the path to the package file if it is in a different folder, and the name of a log file. WSUSutil.exe imports the metadata from the export server and creates a log file of the operation.  
 
 ## Next steps
 After you synchronize software updates for the first time, or after there are new classifications or products available, you must [configure the new classifications and products](configure-classifications-and-products.md) to synchronize software updates with the new criteria.
 
-After you syncrhonize software updates with the criteria that you need, [manage settings for software updates](manage-settings-for-software-updates.md).  
+After you synchronize software updates with the criteria that you need, [manage settings for software updates](manage-settings-for-software-updates.md).   

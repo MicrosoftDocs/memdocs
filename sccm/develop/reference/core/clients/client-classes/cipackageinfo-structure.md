@@ -9,10 +9,11 @@ ms.assetid: 560625bf-5cd2-4cb0-8df8-d17951afabe7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CIPackageInfo Structure
-In System Center Configuration Manager, the `CIPackageInfo` structure contains package information for a configuration item.  
+In Configuration Manager, the `CIPackageInfo` structure contains package information for a configuration item.  
 
 ## Syntax  
 

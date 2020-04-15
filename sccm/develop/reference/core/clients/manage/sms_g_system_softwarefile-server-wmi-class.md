@@ -9,10 +9,11 @@ ms.assetid: 2b64ccf4-9ab2-498a-a4be-dbcecadb1886
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_G_System_SoftwareFile Server WMI Class
-The `SMS_G_System_SoftwareFile` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that contains information about all software files that were inventoried on the client computer.  
+The `SMS_G_System_SoftwareFile` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains information about all software files that were inventoried on the client computer.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -56,7 +57,7 @@ Class SMS_G_System_SoftwareFile : SMS_G_System
 
  Qualifiers: v  
 
- Value indicating the file count. This value is always 1 because System Center Configuration Manager tracks individual file paths.  
+ Value indicating the file count. This value is always 1 because Configuration Manager tracks individual file paths.  
 
  `FileDescription`  
  Data type: **String**  
@@ -74,7 +75,7 @@ Class SMS_G_System_SoftwareFile : SMS_G_System
 
  Qualifiers: [key]  
 
- System Center Configuration Manager-supplied ID that uniquely identifies the file.  
+ Configuration Manager-supplied ID that uniquely identifies the file.  
 
  `FileName`  
  Data type: **String**  
@@ -187,7 +188,7 @@ AND swf.ResourceID = swp.ResourceID
 4.  Updates the site control file. For more information, see [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file).  
 
 > [!NOTE]
->  Collecting inventory information for some files, for example, DLL files, can generate a large volume of network traffic and substantially increase the size of the System Center Configuration Manager database. For this reason, test any changes you make in a test environment before implementing them in a production environment.  
+>  Collecting inventory information for some files, for example, DLL files, can generate a large volume of network traffic and substantially increase the size of the Configuration Manager database. For this reason, test any changes you make in a test environment before implementing them in a production environment.  
 
 ## Requirements  
 

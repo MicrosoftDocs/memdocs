@@ -10,12 +10,13 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create a task sequence to upgrade an OS in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use task sequences in Configuration Manager to automatically upgrade an OS on a destination computer. This upgrade can be from Windows 7 or later to Windows 10, or from Windows Server 2012 or later to Windows Server 2016. Create a task sequence that references the OS upgrade package and any other content to install, such as applications or software updates. The task sequence to upgrade an OS is part of the [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md) scenario.  
 
@@ -132,7 +133,7 @@ Add steps in this group to remove any drivers that are incompatible with this ve
 
 Add steps in this group to remove or suspend third-party security programs, such as antivirus.  
 
-If you're using a third-party disk encryption program, provide its encryption driver to Windows Setup with the `/ReflectDrivers` [command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#23). Add a [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to the task sequence in this group. Set the task sequence variable to **OSDSetupAdditionalUpgradeOptions**. Set the value to `/ReflectDrivers` with the path to the driver. This [task sequence variable](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions) appends the Windows Setup command-line used by the task sequence. Contact your software vendor for any additional guidance on this process.  
+If you're using a third-party disk encryption program, provide its encryption driver to Windows Setup with the `/ReflectDrivers` [command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#reflectdrivers). Add a [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to the task sequence in this group. Set the task sequence variable to **OSDSetupAdditionalUpgradeOptions**. Set the value to `/ReflectDrivers` with the path to the driver. This [task sequence variable](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions) appends the Windows Setup command-line used by the task sequence. Contact your software vendor for any additional guidance on this process.  
 
 ### Download Package Content task sequence step  
 
@@ -262,7 +263,7 @@ If you want to change the device from BIOS to UEFI during this task sequence, se
 ### Manage BitLocker
 
 <!--SCCMDocs issue #494-->
-If you're using BitLocker Disk Encryption, then by default Windows Setup automatically suspends it during upgrade. Starting in Windows 10 version 1803, Windows Setup includes the `/BitLocker` command-line parameter to control this behavior. If your security requirements necessitate keeping active disk encryption at all times, then use the **OSDSetupAdditionalUpgradeOptions** [task sequence variable](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions) in the **Prepare for Upgrade** group to include `/BitLocker TryKeepActive`. For more information, see [Windows Setup Command-line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#33).
+If you're using BitLocker Disk Encryption, then by default Windows Setup automatically suspends it during upgrade. Starting in Windows 10 version 1803, Windows Setup includes the `/BitLocker` command-line parameter to control this behavior. If your security requirements necessitate keeping active disk encryption at all times, then use the **OSDSetupAdditionalUpgradeOptions** [task sequence variable](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions) in the **Prepare for Upgrade** group to include `/BitLocker TryKeepActive`. For more information, see [Windows Setup Command-line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
 
 ### Remove default apps
 
@@ -271,4 +272,4 @@ Some customers remove default provisioned apps in Windows 10. For example, the B
 
 Add a **Run Command Line** step to the task sequence in the **Prepare for Upgrade** group. Specify a command line similar to the following example:
 
-`cmd /c reg delete "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.BingWeather_8wekyb3d8bbwe" /f`
+`cmd /c reg add "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.BingWeather_8wekyb3d8bbwe" /f`

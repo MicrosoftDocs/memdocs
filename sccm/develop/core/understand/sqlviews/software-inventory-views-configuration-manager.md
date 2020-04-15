@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Information about the files and their associated products that are found on Configuration Manager clients during software inventory scanning.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 65066949-cce6-4202-b8e7-f4e1014ee470
 author: aczechowski
 ms.author: aaroncz

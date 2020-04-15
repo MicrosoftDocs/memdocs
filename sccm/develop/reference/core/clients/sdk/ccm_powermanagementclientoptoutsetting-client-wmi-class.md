@@ -9,7 +9,8 @@ ms.assetid: 2341f440-5c3b-414d-9321-1e9f367758f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_PowerManagementClientOptoutSetting Client WMI Class
 The `CCM_PowerManagementClientOptoutSetting` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the settings that allow users to exclude their device from power management.   

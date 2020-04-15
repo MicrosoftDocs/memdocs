@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Sample queries that show how to join site administration views to other views to retrieve specific data.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 965581db-786b-413e-a444-26533a339642
 author: aczechowski
 ms.author: aaroncz

@@ -9,7 +9,8 @@ ms.assetid: ddc3da5e-2d17-4e03-9987-d7fc5c06f25d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_Admin Server WMI Class
 The `SMS_Admin` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the role-based administration user.  

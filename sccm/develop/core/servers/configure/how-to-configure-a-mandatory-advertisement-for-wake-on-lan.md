@@ -9,7 +9,8 @@ ms.assetid: 4cf2d556-eda8-42c1-9ad2-2e1229798e98
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure a Software Distribution Mandatory Advertisement for Wake On LAN
 You can configure an existing mandatory advertisement for Wake On LAN by using the `SMS_Advertisement` class and properties.  

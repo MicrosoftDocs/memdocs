@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Learn how to upgrade infrastructure, such as SQL Server and the OS of site systems.
 ms.date: 08/09/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Upgrade on-premises infrastructure that supports Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the information in this article to help you upgrade the server infrastructure that runs Configuration Manager.  
 

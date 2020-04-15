@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Get best practices and other information about security in Configuration Manager.
 ms.date: 11/27/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Plan for security in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article describes the concepts for you to consider when planning for security with your Configuration Manager implementation. It includes the following sections:  
 
@@ -393,9 +394,7 @@ Configuration Manager integrates with Azure Active Directory (Azure AD) to enabl
 
 **Server**  
 
-- [Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness)  
-
-- [Windows Analytics](/sccm/core/clients/manage/monitor-windows-analytics)  
+- [Desktop Analytics](/sccm/desktop-analytics/overview)  
 
 - [Azure Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics)  
 

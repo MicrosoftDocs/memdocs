@@ -1,27 +1,28 @@
 ---
 title: "Configure Asset Intelligence"
 titleSuffix: "Configuration Manager"
-description: "Set up Asset Intelligence in System Center Configuration Manager."
+description: "Set up Asset Intelligence in Configuration Manager."
 ms.date: 02/22/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Configure Asset Intelligence in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Configure Asset Intelligence in Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Asset Intelligence inventories and manages software license usage.   
 
 ## Steps to configure Asset Intelligence  
    
 
-- **Step 1**:To collect the inventory data required for Asset Intelligence reports, you have to enable the hardware inventory client agent as described in [How to extend hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/extend-hardware-inventory.md).
+- **Step 1**:To collect the inventory data required for Asset Intelligence reports, you have to enable the hardware inventory client agent as described in [How to extend hardware inventory](../../../../core/clients/manage/inventory/extend-hardware-inventory.md).
 - **Step 2**: [Enable Asset Intelligence Hardware Inventory Reporting Classes](#BKMK_EnableAssetIntelligence).  
 - **Step 3**: [Install an Asset Intelligence Synchronization Point](#BKMK_InstallAssetIntelligenceSynchronizationPoint)
 - **Step 4**: [Enable auditing of success logon events](#BKMK_EnableSuccessLogonEvents)  
@@ -96,7 +97,7 @@ In addition to downloading new Asset Intelligence catalog information, the Asset
     > [!WARNING]  
     >  If a proxy server is required to connect to System Center Online, the connection certificate might also be deleted if the user account password expires for the account configured for proxy server authentication.  
 
-9. On the **Synchronization Schedule** page, specify whether to synchronize the Asset Intelligence catalog on a schedule. When you enable the synchronization schedule, you specify a simple or custom synchronization schedule. During scheduled synchronization, the Asset Intelligence synchronization point connects to System Center Online to retrieve the latest Asset Intelligence catalog. You can manually synchronize the Asset Intelligence catalog from the Asset Intelligence node in the Configuration Manager console. For the steps to manually synchronize the Asset Intelligence catalog, see the [To manually synchronize the Asset Intelligence catalog](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md#BKMK_ManuallySynchronizeCatalog) section in the [Operations for Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md).  
+9. On the **Synchronization Schedule** page, specify whether to synchronize the Asset Intelligence catalog on a schedule. When you enable the synchronization schedule, you specify a simple or custom synchronization schedule. During scheduled synchronization, the Asset Intelligence synchronization point connects to System Center Online to retrieve the latest Asset Intelligence catalog. You can manually synchronize the Asset Intelligence catalog from the Asset Intelligence node in the Configuration Manager console. For the steps to manually synchronize the Asset Intelligence catalog, see the [To manually synchronize the Asset Intelligence catalog](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md#BKMK_ManuallySynchronizeCatalog) section in the [Operations for Asset Intelligence](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md).  
 
 10. Complete the wizard 
 
@@ -180,7 +181,7 @@ Asset Intelligence matches the products that you specify in the general license 
 7.  Run the Asset Intelligence **License 15A - Third Party Software Reconciliation Report** to verify that the licensing information has been successfully imported into the Asset Intelligence catalog.  
 
 > [!NOTE]  
->  For an example of a general software license file that you can use for testing purposes, see [Example Asset Intelligence general license import file in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md).  
+>  For an example of a general software license file that you can use for testing purposes, see [Example Asset Intelligence general license import file](../../../../core/clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md).  
 
 #### Sample table to describe software licenses  
  When creating a general license statement import file, the information in the following table can be used to describe software licenses to be imported into the Asset Intelligence catalog.  

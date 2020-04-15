@@ -9,7 +9,8 @@ ms.assetid: 201e931a-1a80-4a50-b166-d1ccbb37d0b4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetClientPilotingConfigs Method in Class SMS_Site
 The `GetClientPilotingConfigs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the configurations for client piloting settings.  

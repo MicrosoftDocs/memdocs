@@ -9,7 +9,8 @@ ms.assetid: dec5c5c8-c0b3-400c-835e-08ade5256a30
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ICcmAlternateDownloadProvider : ModifyJobTimeout Method
 The **ICcmAlternateDownloadProvider::ModifyJobTimeout** method, in Configuration Manager, instructs the provider to modify the timeout for a given job.  

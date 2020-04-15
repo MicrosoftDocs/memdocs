@@ -9,7 +9,8 @@ ms.assetid: 480a698f-3120-4469-9a9b-aa7a83fce474
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SoftwareTag Client WMI Class
 The `SMS_SoftwareTag` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that indicates the presence of a software application on a computer.  

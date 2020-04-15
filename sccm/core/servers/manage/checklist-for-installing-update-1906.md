@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1906.
 ms.date: 08/27/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: e6837956-1f1e-4104-a348-ac2266199f60
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Checklist for installing update 1906 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you use the current branch of Configuration Manager, you can install the in-console update for version 1906 to update your hierarchy from a previous version. <!-- baseline only statement:(Because version 1902 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)-->
 

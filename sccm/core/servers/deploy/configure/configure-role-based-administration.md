@@ -1,20 +1,21 @@
 ---
 title: Configure role-based administration
 titleSuffix: Configuration Manager
-ms.date: 07/26/2019
+ms.date: 11/08/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 57413dd3-b2f8-4a5f-b27f-8464d357caff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Configure role-based administration for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 In Configuration Manager, role-based administration combines security roles, security scopes, and assigned collections to define the administrative scope for each administrative user. An administrative scope includes the objects that an administrative user can view in the Configuration Manager console and the tasks related to those objects that the administrative user has permission to perform. Role-based administration configurations are applied at each site in a hierarchy.  
 
@@ -114,7 +115,9 @@ In Configuration Manager, role-based administration combines security roles, sec
 1. Choose **OK** to save the assigned security scopes.  
 
     > [!IMPORTANT]  
-    > Existing security roles will automatically get **Folder Class** permissions added when you install Configuration Manager version 1906. You'll need to add **Folder Class** permissions for any new security roles and verify existing roles have the appropriate permissions for your environment.
+    > - Existing security roles will automatically get **Folder Class** permissions added when you install Configuration Manager version 1906. You'll need to add **Folder Class** permissions for any new security roles and verify existing roles have the appropriate permissions for your environment.
+    > 
+    > - An item is searchable in folder outside of a user’s security scope if that user shares a security scope with the person who created the object. <!--5602690-->
 
 ## <a name="BKMK_ConfigColl"></a> Configure collections to manage security
 

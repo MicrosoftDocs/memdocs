@@ -9,7 +9,8 @@ ms.assetid: 2261bb91-979c-49e4-a243-733d2339988e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetTSRelatedToDriverCategory Method in Class SMS_TaskSequencePackage
 The `GetTSRelatedToDriverCategory` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets task sequence packages related to the specified category.  

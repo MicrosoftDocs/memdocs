@@ -1,70 +1,59 @@
 ---
-title: "How users enroll devices with On-premises MDM "
-titleSuffix: "Configuration Manager"
-description: "Understand how users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager."
-ms.date: 03/05/2017
+title: How users enroll devices
+titleSuffix: Configuration Manager
+description: Understand how users enroll devices with on-premises mobile device management (MDM) in Configuration Manager.
+ms.date: 01/13/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-hybrid
+ms.technology: configmgr-mdm
 ms.topic: conceptual
 ms.assetid: 59004b34-b64f-4d77-898c-07bf3dc75430
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
-# How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# How users enroll devices with on-premises MDM in Configuration Manager
 
-With System Center Configuration Manager On-premises Mobile Device Management, users can enroll devices if they have been granted enrollment permission (by way of updated client settings), and their devices have the required root certificate installed to have trusted communications with the servers hosting the required site system roles. For more information on how to set up enrollment, see [Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md).  
+*Applies to: Configuration Manager (current branch)*
 
-> [!NOTE]  
->  The current branch of Configuration Manager supports enrollment in On-premises Mobile Device Management for devices running the following operating systems:  
->   
-> -  Windows 10 Enterprise  
-> -   Windows 10 Pro  
-> -   Windows 10 Team \(beginning in Configuration Manager version 1602\)  
-> -   Windows 10 Mobile  
-> -   Windows 10 Mobile Enterprise
-> -   Windows 10 IoT Enterprise   
+With Configuration Manager on-premises mobile device management (MDM), users can enroll their devices. There are two prerequisites:
 
-The following tasks explain how to enroll and verify enrollment of computers and devices for On\-premises Mobile Device Management:  
+- With client settings, you grant the user permission to enroll.
 
--   [Enroll a Windows 10 computer](#bkmk_enrollDesk)  
+- You install the required trusted root certificate on the device.
 
--   [Enroll a Windows 10 Mobile device](#bkmk_enrollMob)  
+For more information on how to set up enrollment, see [Set up device enrollment for on-premises MDM](/configmgr/mdm/get-started/set-up-device-enrollment-on-premises-mdm).
 
--   [Verify device enrollment](#bkmk_verify)  
+## <a name="bkmk_enrollDesk"></a> Enroll Windows 10
 
-##  <a name="bkmk_enrollDesk"></a> Enroll a Windows 10 computer  
+1. On a Windows 10 computer, go to **Settings**.
 
-1.  On a Windows 10 computer, go to **Settings**.  
+1. Select **Accounts**, and then select **Access work or school**.
 
-2.  Click **Accounts**, and then click **Work access**.  
+1. Select **Connect**, enter your user principal name (UPN), and select **Continue**. The UPN may be the same as your email address, for example, jdoe@contoso.com.
 
-3.  In Work Access under **Connect to work or school**, click **Connect**, enter your work email address, and click **Continue**.  
+1. Enter the fully qualified domain name (FQDN) of the enrollment proxy point, and select **Continue**.
 
-4.  Enter the FQDN of the server hosting the enrollment proxy point site system role, and click **Continue**.  
+1. Enter your password, and select **Sign in**.
 
-5.  In Connecting to a service, enter your work email password, and click **Sign in**.  
+1. Windows doesn't need to remember the sign-in info for this action, so select **Skip**.
 
-6.  Click **Skip** for remembering the sign-in info, and after a short time the device is connected.  
+After a short time, the device enrolls with Configuration Manager.
 
-##  <a name="bkmk_enrollMob"></a> Enroll a Windows 10 Mobile device  
+## <a name="bkmk_enrollMob"></a> Enroll Windows 10 Mobile
 
-1.  On a Windows 10 Mobile device, go to **Settings**.  
+1. On a Windows 10 Mobile device, go to **Settings**.
 
-2.  Click **Accounts**, and then click **Work access**.  
+1. Select **Accounts**, and then select **Work access**.
 
-3.  Click **Connect**.  
+1. Select **Connect**.
 
-4.  Enter your work email address and the FQDN of the server hosting the enrollment proxy point site system role. Click **Connect**.  
+1. Enter your UPN and the FQDN of the enrollment proxy point. Then select **Connect**.
 
-5.  On the next screen, enter your work email address and password, and then click **Sign-in**. After a short time,  the device is enrolled. Click **Done**.  
+1. On the next screen, enter your UPN and password, and then select **Sign-in**.
 
-##  <a name="bkmk_verify"></a> Verify device enrollment  
- You can verify that devices have been successfully enrolled in the Configuration Manager console.  
+After a short time, the device enrolls with Configuration Manager. Select **Done**.
 
-1.  Start the Configuration Manager console.  
+## <a name="bkmk_verify"></a> Verify enrollment
 
-2.  Click **Assets and Compliance** > **Overview** > **Devices**. The enrolled device appears in the list.  
+Use the Configuration Manager console to verify that devices are enrolled successfully. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select **Devices**. Browse or search for the enrolled device in the list of devices.

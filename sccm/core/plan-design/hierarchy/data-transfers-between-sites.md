@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Learn how Configuration Manager moves data between sites, and how you can manage the transfer of the data across your network.
 ms.date: 08/09/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Data transfers between sites
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager uses *file-based replication* and *database replication* to transfer different types of information between sites. Learn about how Configuration Manager moves data between sites, and how you can manage the transfer of data across your network.  
 

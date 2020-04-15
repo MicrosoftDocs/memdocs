@@ -9,10 +9,11 @@ ms.assetid: 95a1f0b7-2568-403f-bd24-43abc859eaf0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Set Operating System Deployment Branding Information in Configuration Manager
-You set the operating system deployment branding information for the System Center Configuration Manager client by changing the `OSDBrandingSubtitle` property of the client agent component section in the site control file.  
+You set the operating system deployment branding information for the Configuration Manager client by changing the `OSDBrandingSubtitle` property of the client agent component section in the site control file.  
 
 > [!NOTE]
 >  `OSDBrandingSubtitle` is encoded with BASE64 encoding.  
@@ -117,7 +118,7 @@ public void SetOsdBranding(
 |---------------|----------|-----------------|  
 |`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: `SWbemServices`|A valid connection to the SMS Provider.|  
 |`context (VBScript)`|-   VBScript: `SWbemContext`|A valid context qualifier object. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)|  
-|`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code for the System Center Configuration Manager site.|  
+|`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code for the Configuration Manager site.|  
 |`brandingText`|-   Managed: `String`<br />-   VBScript: `String`|The text used to update the branding text.|  
 
 ## Compiling the Code  

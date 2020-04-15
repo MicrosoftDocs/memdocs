@@ -1,20 +1,21 @@
 ---
 title: "Websites for site systems"
 titleSuffix: "Configuration Manager"
-description: "Learn about default and custom websites for site system servers in System Center Configuration Manager."
+description: "Learn about default and custom websites for site system servers in Configuration Manager."
 ms.date: 02/8/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Websites for site system servers in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Websites for site system servers in Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Several Configuration Manager site system roles require the use of Microsoft Internet Information Services (IIS) and use the default IIS website to host site system services. When you must run other web applications on the same server and settings are not compatible with Configuration Manager, consider using a custom website for Configuration Manager.  
 
@@ -106,7 +107,7 @@ Additionally:
 
 -   When you change from the default website to use a custom website, Configuration Manager does not remove the old virtual directories. If you want to remove the files that Configuration Manager used, you must manually delete the virtual directories that were created under the default website.  
 
--   If you change the site to use custom websites, clients that are already assigned to the site must then be reconfigured to use the new client request ports for the custom websites. See [How to configure client communication ports in System Center Configuration Manager](../../../core/clients/deploy/configure-client-communication-ports.md).  
+-   If you change the site to use custom websites, clients that are already assigned to the site must then be reconfigured to use the new client request ports for the custom websites. See [How to configure client communication ports](../../../core/clients/deploy/configure-client-communication-ports.md).  
 
 ## Set up custom websites  
 Because the steps to create a custom website vary for different operating system versions, refer to documentation for your operating system version for exact steps, but use the following information when applicable:  

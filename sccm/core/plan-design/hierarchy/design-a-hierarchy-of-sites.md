@@ -4,17 +4,18 @@ titleSuffix: Configuration Manager
 description: Understand the available topologies and management options for Configuration Manager to plan your site hierarchy.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 07ce872e-1558-42ad-b5ad-582c5b1bdbb4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Design a hierarchy of sites for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Before installing the first site of a new Configuration Manager hierarchy, it's a good idea to understand:  
 

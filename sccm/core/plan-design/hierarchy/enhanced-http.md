@@ -2,20 +2,21 @@
 title: Enhanced HTTP
 titleSuffix: Configuration Manager
 description: Use modern authentication to secure client communication without the need for PKI certificates.
-ms.date: 05/28/2019
+ms.date: 03/28/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Enhanced HTTP
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 <!--1356889,1358460-->
 
@@ -36,7 +37,10 @@ All other client communication is over HTTP. Enhanced HTTP isn't the same as ena
 > PKI certificates are still a valid option for customers with the following requirements:  
 >
 > - All client communication is over HTTPS  
-> - Advanced control of the signing infrastructure  
+> - Advanced control of the signing infrastructure
+>
+> Also, If you're already using PKI, the PKI cert bound in IIS will be used even if enhanced HTTP is turned on.
+
 
 
 ## <a name="bkmk_scenario"></a> Scenarios
@@ -72,7 +76,7 @@ The following Configuration Manager features support or require enhanced HTTP:
 - [OS deployment without a network access account](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#enhanced-http)
 - [Enable co-management for new internet-based Windows 10 devices](/sccm/comanage/tutorial-co-manage-new-devices)
 - [App approvals via email](/sccm/apps/deploy-use/app-approval#bkmk_email-approve)
-- [Administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)
+- [Administration service](/configmgr/develop/adminservice/overview)
 - [View recently connected consoles](/sccm/core/servers/manage/admin-console#bkmk_viewconnected)
 
 > [!Note]  
@@ -81,9 +85,9 @@ The following Configuration Manager features support or require enhanced HTTP:
 
 ## Prerequisites  
 
-- A management point configured for HTTP client connections. Set this option on the **General** tab of the site system role properties.  
+- A management point configured for HTTP client connections. Set this option on the **General** tab of the management point role properties.  
 
-- A distribution point configured for HTTP client connections. Set this option on the **General** tab of the site system role properties. Don't enable the option to **Allow clients to connect anonymously**.  
+- A distribution point configured for HTTP client connections. Set this option on the **Communication** tab of the distribution point role properties. Don't enable the option to **Allow clients to connect anonymously**.  
 
 - Onboard the site to Azure AD for cloud management.  
 

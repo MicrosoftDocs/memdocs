@@ -2,7 +2,7 @@
 title: Enable third party updates
 titleSuffix: Configuration Manager
 description: Enable third party updates in Configuration Manager
-ms.date: 07/30/2018
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum 
 ms.topic: conceptual
@@ -10,15 +10,18 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Enable third-party updates 
 
-*Applies to: System Center Configuration Manager version 1806*
+*Applies to: Configuration Manager (current branch)*
 
 Beginning with version 1806, the **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point (SUP), and then deploy them to clients.  <!--1357605, 1352101, 1358714-->
 
+> [!Note]  
+> Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Enable third party update support on clients**. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
 
 
 ## Prerequisites 
@@ -30,6 +33,7 @@ Beginning with version 1806, the **Third-Party Software Update Catalogs** node i
     -  Internet access to any third-party catalogs and update content files. Additional ports other than 443 may be needed.
     - Third-party updates use the same proxy settings as the SUP.
 
+
 ## Additional requirements when the SUP is remote from the top-level site server 
 
 1. SSL must be enabled on the SUP when it's remote. This requires a server authentication certificate generated from an internal certificate authority or via a public provider.
@@ -38,7 +42,7 @@ Beginning with version 1806, the **Third-Party Software Update Catalogs** node i
         - Configuration Manager downloads third-party content for software update packages from your WSUS content directory over HTTP.   
     - [Configure SSL on the SUP](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
 
-2. When setting the third-party updates WSUS signing certificate configuration to **Configuration Manager manages the updates** in the Software Update Point Component Properties, the following configurations are required to allow the creation of the self-signed WSUS signing certificate: 
+2. When setting the third-party updates WSUS signing certificate configuration to **Configuration Manager manages the certificate** in the Software Update Point Component Properties, the following configurations are required to allow the creation of the self-signed WSUS signing certificate: 
    - Remote registry should be enabled on the SUP server.
    -  The **WSUS server connection account** should have remote registry permissions on the SUP/WSUS server. 
 
@@ -149,6 +153,73 @@ Once the third-party updates are in the **All Updates** node, you can choose whi
 8. Clients will need to run a scan and evaluate updates before you can see compliance results.  You can manually trigger this cycle from the Configuration Manager control panel on a client by running the **Software Updates Scan Cycle** action.
 
 
+## <a name="bkmk_1910"></a> Improvements for third-party updates starting in 1910
+<!--4469002-->
+You now have more granular controls over synchronization of third party updates catalogs. Starting in Configuration Manager version 1910, you can configure the synchronization schedule for each catalog independently. When using catalogs that include categorized updates, you can configure synchronization to include only specific categories of updates to avoid synchronizing the entire catalog. With categorized catalogs, when you're confident you'll deploy a category, you can configure it to automatically download and publish to WSUS.
+
+### Set the schedule for a catalog in a new catalog subscription
+
+1. Go to the **Software Library** workspace, expand **Software Updates**, then select the **Third-Party Software Update Catalogs** node.
+1. Select the catalog to subscribe and click **Subscribe to Catalog** in the ribbon.
+1. Choose your options on the **Schedule** page if you want to override the default synchronization schedule:
+   - **Simple schedule**:  Chose the hour, day or month interval.
+   - **Custom schedule**: Set a complex schedule.
+
+### Update the schedule per catalog
+
+1. Go to the **Software Library** workspace, expand **Software Updates**, then select the **Third-Party Software Update Catalogs** node.
+1. Right-click on the catalog and select **Properties**.
+1. Choose your options on the Schedule tab: 
+   - **Simple schedule**:  Chose the hour, day or month interval.
+   - **Custom schedule**: Set a complex schedule.
+
+### New subscription to a third-party v3 catalog
+
+> [!IMPORTANT]
+> This option is only available for v3 third-party update catalogs, which support categories for updates. These options are disabled for catalogs that aren't published in the new v3 format.
+
+
+1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Software Updates** and select the **Third-Party Software Update Catalogs** node.
+1. Select the catalog to subscribe and click **Subscribe to Catalog** in the ribbon.
+1. Choose your options on the **Select Categories** page:
+
+   - **Synchronize all update categories** (default)
+       - Synchronizes all updates in the third-party update catalog into Configuration Manager.
+   -  **Select categories for synchronization**
+       - Choose which categories and child categories to synchronize into Configuration Manager.
+
+      ![Select update categories to synchronize into Configuration Manager](./media/4469002-select-categories-for-sync.png)
+1. Choose if you want to **Stage update content** for the catalog. When you stage the content, all updates in the selected categories are automatically downloaded to your top-level software update point meaning you don't need to ensure they're already downloaded before deploying. You should only automatically stage content for updates you are likely to deploy them to avoid excessive bandwidth and storage requirements.
+
+   - **Do not stage content, synchronize for scanning only (recommended)**
+     - Don't download any content for updates in the third-party catalog
+   - **Stage the content for selected categories automatically**
+     - Choose the update categories that will automatically download content.
+     - The content for updates in selected categories will be downloaded to the top-level software update point's WSUS content directory.
+      ![Select update categories to stage content](./media/4469002-stage-content.png)
+1. Set your **Schedule** for catalog synchronization, then complete the wizard.
+
+ 
+
+### Edit an existing subscription
+
+> [!IMPORTANT]
+> This option is only available for v3 third-party update catalogs, which support categories for updates. These options are disabled for catalogs that aren't published in the new v3 format.
+
+1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Software Updates** and select the **Third-Party Software Update Catalogs** node.
+1. Right-click on the catalog and select **Properties**.
+1. Choose your options on the **Select Categories** tab.
+   - **Synchronize all update categories** (default)
+       - Synchronizes all updates in the third-party update catalog into Configuration Manager.
+   -  **Select categories for synchronization**
+       - Choose which categories and child categories to synchronize into Configuration Manager.
+1. Choose your options for the **Stage update content** tab.
+   - **Do not stage content, synchronize for scanning only (recommended)**
+     - Don't download any content for updates in the third-party catalog
+   - **Stage the content for selected categories automatically**
+     - Choose the update categories that will automatically download content.
+     - The content for updates in selected categories will be downloaded to the top-level software update point's WSUS content directory. 
+
 ## Monitoring progress of third-party software updates 
 
 Synchronization of third-party software updates is handled by the SMS_ISVUPDATES_SYNCAGENT component on the top-level default software update point. You can view status messages from this component, or see more detailed status in the SMS_ISVUPDATES_SYNCAGENT.log. This log is on the  top-level software update point in the site system Logs folder. By default this path is C:\Program Files\Microsoft Configuration Manager\Logs. For more information on monitoring the general software update management process, see [Monitor software updates](../deploy-use/monitor-software-updates.md) 
@@ -161,6 +232,7 @@ Synchronization of third-party software updates is handled by the SMS_ISVUPDATES
      - You can still use the older catalog cab file version as long as the download URL is https and the updates are signed. The content will fail to publish because the certificates for the binaries aren't in the cab file and already approved. You can work around this issue by finding the certificate in the **Certificates** node, unblocking it, then publish the update again. If you're publishing multiple updates signed with different certificates, you'll need to unblock each certificate that is used.
      - For more information, see status messages 11523 and 11524 in the below status message table.
 -  When the third-party software update synchronization service on the top-level software update point requires a proxy server for internet access, digital signature checks may fail. To mitigate this issue, configure the WinHTTP proxy settings on the site system. For more information, see [Netsh commands for WinHTTP](https://go.microsoft.com/fwlink/p/?linkid=199086).
+- When using a CMG for content storage, the content for third-party updates won't download to clients if [Delivery Optimization](/configmgr/core/clients/deploy/about-client-settings#delivery-optimization) is enabled. <!--6598587--> 
 
 ## Status messages
 

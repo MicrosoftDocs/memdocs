@@ -10,13 +10,14 @@ ms.assetid: b6b86078-fcc4-46cf-87d6-4b52b914b712
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Create App-V virtual environments in System Center Configuration Manager
+# Create App-V virtual environments in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-In a Microsoft Application Virtualization (App-V) virtual environment in System Center Configuration Manager (Configuration Manager), deployed virtual applications can share the same file system and registry on client Windows PCs. Unlike standard virtual applications, these applications can share data with each other. Virtual environments are created or modified on client PCs when the application is installed or when clients next evaluate their installed applications. You can order these applications so that when multiple applications try to modify a file system or registry value, the application with the highest order takes priority.  
+In a Microsoft Application Virtualization (App-V) virtual environment in Configuration Manager, deployed virtual applications can share the same file system and registry on client Windows PCs. Unlike standard virtual applications, these applications can share data with each other. Virtual environments are created or modified on client PCs when the application is installed or when clients next evaluate their installed applications. You can order these applications so that when multiple applications try to modify a file system or registry value, the application with the highest order takes priority.  
 
 > [!IMPORTANT]  
 >  Do not rely on App-V virtual environments to provide security protection, such as from malware.  

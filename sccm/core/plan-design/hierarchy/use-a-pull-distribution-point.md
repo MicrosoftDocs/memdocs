@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Learn about configurations and limitations for using a pull-distribution point with Configuration Manager."
 ms.date: 05/06/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Use a pull-distribution point with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 When you distribute content to a standard distribution point in the Configuration Manager console, the site server pushes the content to the distribution point. A pull-distribution point gets content by downloading it from a source location like a client.  

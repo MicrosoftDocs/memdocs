@@ -9,7 +9,8 @@ ms.assetid: c801d253-b949-4b1f-8a08-455f70e04ada
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CH_Settings Server WMI Class
 The `SMS_CH_Settings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client status settings.  

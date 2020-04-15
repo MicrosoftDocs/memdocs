@@ -9,7 +9,8 @@ ms.assetid: bee70974-26a3-4285-af09-d23c1e99d116
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_FirewallSettings Server WMI Class
 The `SMS_FirewallSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the firewall configuration setting definitions used to define configuration rules. This is a read-only built-in configuration item.  

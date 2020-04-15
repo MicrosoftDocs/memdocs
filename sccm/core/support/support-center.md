@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Troubleshoot Configuration Manager clients with the Support Center.
 ms.date: 07/26/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Support Center for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 <!--1357489-->
 Starting in version 1810, use Support Center for client troubleshooting, real-time log viewing, or capturing the state of a Configuration Manager client computer for later analysis. Support Center is a single tool to consolidate many administrator troubleshooting tools.

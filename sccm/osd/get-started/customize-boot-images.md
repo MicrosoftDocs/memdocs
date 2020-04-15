@@ -10,11 +10,12 @@ ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Customize boot images with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Customize boot images with Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Each version of Configuration Manager supports a specific version of the Windows Assessment and Deployment Kit (Windows ADK). You can service, or customize, boot images from the Configuration Manager console when they are based on a Windows PE  version from the supported version of Windows ADK. For other boot images, you must customize them by using another method, such as using the Deployment Image Servicing and Management (DISM) command-line tool that is part of the Windows AIK and Windows ADK.  
 

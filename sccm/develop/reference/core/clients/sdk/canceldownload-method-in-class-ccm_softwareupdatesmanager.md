@@ -9,7 +9,8 @@ ms.assetid: 890faba7-0382-4189-adc6-8ea16a9296da
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CancelDownload Method in Class CCM_SoftwareUpdatesManager
 The `CanceDownload` WMI class method, in Configuration Manager, cancels an in-progress download of software updates during a deployment.  

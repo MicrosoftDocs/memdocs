@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: About the retirement of the Ready for Windows website
 ms.date: 10/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 3f09226c-4ca7-4e43-9ae8-5ee6e78e6bc2
 author: aczechowski
 ms.author: aaroncz
@@ -30,25 +31,25 @@ Feedback from IT managers is that they want these insights integrated with the t
 
 ### What is Desktop Analytics?
 
-[Desktop Analytics](https://aka.ms/dadocs) is a cloud-based service that integrates with Configuration Manager. The service provides insight and intelligence for you to make more informed decisions about the update readiness of your Windows endpoints. It combines the data specific to your organization with aggregated insights from the millions of Windows devices connected to Microsoft’s cloud services.
+[Desktop Analytics](https://aka.ms/dadocs) is a cloud-based service that integrates with Configuration Manager. The service provides insight and intelligence for you to make more informed decisions about the update readiness of your Windows endpoints. It combines the data specific to your organization with aggregated insights from the millions of Windows devices connected to Microsoft's cloud services.
 
--	Get a comprehensive view into the endpoints, applications, and drivers under management in your organization.
+-    Get a comprehensive view into the endpoints, applications, and drivers under management in your organization.
 
--	Assess application and driver compatibility with the latest Windows feature updates. Receive mitigation recommendations for known issues, as well as advanced insights for line-of-business apps.
+-    Assess application and driver compatibility with the latest Windows feature updates. Receive mitigation recommendations for known issues, as well as advanced insights for line-of-business apps.
 
--	Use artificial intelligence (AI) from the Microsoft cloud to optimize the set of pilot devices that adequately represent your overall environment.
+-    Use artificial intelligence (AI) from the Microsoft cloud to optimize the set of pilot devices that adequately represent your overall environment.
 
 ### Why should I use Desktop Analytics for my Windows deployment plans?
 
 Desktop Analytics provides the following benefits:
 
--	**Device and software inventory**: Inventory of key factors such as apps and versions of Windows.
+-    **Device and software inventory**: Inventory of key factors such as apps and versions of Windows.
 
--	**Pilot identification**: Identification of the smallest set of devices that provide the widest coverage of factors. It focuses on the factors that are most important to a pilot of Windows upgrades and updates. Making sure the pilot is more successful allows you to continue more quickly and confidently to broad deployments in production.
+-    **Pilot identification**: Identification of the smallest set of devices that provide the widest coverage of factors. It focuses on the factors that are most important to a pilot of Windows upgrades and updates. Making sure the pilot is more successful allows you to continue more quickly and confidently to broad deployments in production.
 
--	**Issue identification**: Using aggregated market data along with data from your environment, the service predicts potential issues to getting and staying current with Windows. It then suggests potential mitigations.
+-    **Issue identification**: Using aggregated market data along with data from your environment, the service predicts potential issues to getting and staying current with Windows. It then suggests potential mitigations.
 
--	**Configuration Manager integration**: It cloud-enables your existing on-premises infrastructure. Use this data and analysis to deploy and manage Windows on your devices.
+-    **Configuration Manager integration**: It cloud-enables your existing on-premises infrastructure. Use this data and analysis to deploy and manage Windows on your devices.
 
 ### What does the *Ready for Windows* status mean in Desktop Analytics?
 
@@ -56,15 +57,15 @@ The **Adoption Status** is based on information from commercial devices that sha
 
 Desktop Analytics provides the adoption status for each version of an asset found in commercial devices. This status doesn't include data from consumer devices or devices that don't share data. The status may not be representative of the adoption rate across all Windows 10 devices.
 
-For more information, see [Compatibility assessment](/sccm/desktop-analytics/compat-assessment#ready-for-windows).
+For more information, see [Compatibility assessment](/sccm/desktop-analytics/compat-assessment).
 
 ### What assets get the *Ready for Windows* status in Desktop Analytics? 
 
 Assets have the *Ready for Windows* status in Desktop analytics if:
 
--	The software provider declares support for the solution.
--	Customers have deployed it on a significant number of commercial Windows 10 devices that are sharing information with Microsoft.
--	The asset is relevant to commercial users.
+-    The software provider declares support for the solution.
+-    Customers have deployed it on a significant number of commercial Windows 10 devices that are sharing information with Microsoft.
+-    The asset is relevant to commercial users.
 
 ### What additional insights do I get in Desktop Analytics?
 

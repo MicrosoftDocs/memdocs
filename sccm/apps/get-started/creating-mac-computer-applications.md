@@ -10,11 +10,12 @@ ms.assetid: ab1aecdd-d943-44f5-b0a9-e8fe7439e5d6
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
----
-# Create Mac computer applications with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Create Mac computer applications with Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Keep the following considerations in mind when you create and deploy applications for Mac computers.  
 
@@ -22,7 +23,7 @@ Keep the following considerations in mind when you create and deploy application
 >  The procedures in this topic cover information about deploying applications to Mac computers on which you installed the Configuration Manager client. Mac computers that you enrolled with Microsoft Intune do not support application deployment.  
 
 ## General considerations  
- You can use System Center Configuration Manager to deploy applications to Mac computers that run the Configuration Manager Mac client. The steps to deploy software to Mac computers are similar to the steps to deploy software to Windows computers. However, before you create and deploy applications for Mac computers that are managed by Configuration Manager, consider the following:  
+ You can use Configuration Manager to deploy applications to Mac computers that run the Configuration Manager Mac client. The steps to deploy software to Mac computers are similar to the steps to deploy software to Windows computers. However, before you create and deploy applications for Mac computers that are managed by Configuration Manager, consider the following:  
 
 -   Before you can deploy Mac application packages to Mac computers, you must use the **CMAppUtil** tool on a Mac computer to convert these applications into a format that can be read by Configuration Manager.  
 
@@ -106,7 +107,7 @@ Use the following procedure to help you create an application for Mac computers 
 4.  On the **General** page of the **Create Application Wizard**, select **Automatically detect information about this application from installation files**.  
 
     > [!NOTE]  
-    >  If you want to specify information about the application yourself, select **Manually specify the application information**. For more information about how to manually specify the information, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md).  
+    >  If you want to specify information about the application yourself, select **Manually specify the application information**. For more information about how to manually specify the information, see [How to create applications with Configuration Manager](../../apps/deploy-use/create-applications.md).  
 
 5.  In the **Type** drop-down list, select **Mac OS X**.  
 

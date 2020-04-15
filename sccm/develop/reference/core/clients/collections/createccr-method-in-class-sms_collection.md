@@ -9,7 +9,8 @@ ms.assetid: 2127929c-6a20-457d-a351-5c3262363430
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CreateCCR Method in Class SMS_Collection
 The `CreateCCR` Windows Management Instrumentation (WMI) class method creates a client configuration request (CCR) for a particular resource.  

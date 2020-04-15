@@ -1,7 +1,7 @@
 ---
 title: "SMS_SCI_SQLTask Class"
 titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
+ms.date: "04/07/2020"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -9,7 +9,8 @@ ms.assetid: 92b5c389-ae47-4a77-8dbc-181926f23ba8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SCI_SQLTask Server WMI Class
 The `SMS_SCI_SQLTask` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines a SQL task to be run periodically.  
@@ -57,17 +58,17 @@ Class SMS_SCI_SQLTask : SMS_SiteControlItem
 
  Qualifiers: [bits]  
 
- Days of the week on which the SQL task executes. Possible values are listed below. The default value is 0.  
+ Days of the week on which the SQL task executes. Possible values are listed below. Take the sum of the values for tasks that execute on multiple days. For example, if all days are selected this property would have a value of 127.  
 
 |||  
 |-|-|  
-|0|SUNDAY|  
-|1|MONDAY|  
-|2|TUESDAY|  
-|3|WEDNESDAY|  
-|4|THURSDAY|  
-|5|FRIDAY|  
-|6|SATURDAY|  
+|1|SUNDAY|  
+|2|MONDAY|  
+|4|TUESDAY|  
+|8|WEDNESDAY|  
+|16|THURSDAY|  
+|32|FRIDAY|  
+|64|SATURDAY|  
 
  `DeleteOlderThan`  
  Data type: `UInt32`  

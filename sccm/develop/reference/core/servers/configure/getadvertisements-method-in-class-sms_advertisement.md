@@ -9,7 +9,8 @@ ms.assetid: 269422ee-e896-49ca-9cdc-c648055d1395
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetAdvertisements Method in Class SMS_Advertisement
 The `GetAdvertisements` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the advertisement id for a computer.  

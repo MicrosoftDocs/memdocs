@@ -9,10 +9,11 @@ ms.assetid: e6b6bb80-6c63-4bc0-9f7e-8f8194e281e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Assign a Package to a Distribution Point
-The following example shows how to assign a distribution point to a package by using the `SMS_DistributionPoint` and `SMS_SystemResourceList` classes in System Center Configuration Manager. You only need to assign a distribution point to a package if the package contains source files (PkgSourcePath). The package is not advertised until the program source files have been propagated to a distribution point share. You can use the default distribution point share, or you can specify a share to use. You can also specify more than one distribution point to use to distribute your package source files, although this example does not demonstrate that.  
+The following example shows how to assign a distribution point to a package by using the `SMS_DistributionPoint` and `SMS_SystemResourceList` classes in Configuration Manager. You only need to assign a distribution point to a package if the package contains source files (PkgSourcePath). The package is not advertised until the program source files have been propagated to a distribution point share. You can use the default distribution point share, or you can specify a share to use. You can also specify more than one distribution point to use to distribute your package source files, although this example does not demonstrate that.  
 
 ### To assign a package to a distribution point  
 

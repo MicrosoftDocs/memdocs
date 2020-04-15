@@ -4,13 +4,14 @@ titleSuffix: Configuration Manager
 description: How to remove Desktop Analytics from your Azure account
 ms.date: 10/17/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: 6e7d2850-b0af-497e-bbc1-bfc2a7420a7a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to close your account
@@ -54,7 +55,7 @@ A global administrator can reactivate the account within 90 days. To restore Des
 The Desktop Analytics data ages out based on your data retention policy for the workspace. You can continue using any other solutions in same workspace.
 
 > [!Important]  
-> If you're using the Log Analytics workspace with other solutions like Windows Analytics, don't delete the workspace.
+> If you're using the Log Analytics workspace with other solutions, don't delete the workspace.
 
 ## Remove user and app access
 

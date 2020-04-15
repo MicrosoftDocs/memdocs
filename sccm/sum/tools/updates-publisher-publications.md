@@ -10,7 +10,8 @@ ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Manage publications in Updates Publisher
 

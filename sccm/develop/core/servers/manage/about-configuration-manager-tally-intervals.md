@@ -8,10 +8,11 @@ ms.assetid: 792581fa-e652-4009-a702-91c2aad49904
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager Tally Intervals
-System Center Configuration Manager is configured with 16 default tally intervals. The intervals for a site are maintained in the site control file. The values are stored in the order that is shown in the following table. For information about accessing these values in the site control file, see the example at the end of this topic.  
+Configuration Manager is configured with 16 default tally intervals. The intervals for a site are maintained in the site control file. The values are stored in the order that is shown in the following table. For information about accessing these values in the site control file, see the example at the end of this topic.  
 
 > [!NOTE]
 >  You can use only the tally intervals that are listed in the table in your queries. When you use a tally interval that is not from the list, an object is returned that contains no data.  

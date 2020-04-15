@@ -1,20 +1,21 @@
 ---
 title: "Plan the site database"
 titleSuffix: "Configuration Manager"
-description: "Consider the site database and the site database server role as you plan your System Center Configuration Manager hierarchy."
+description: "Consider the site database and the site database server role as you plan your Configuration Manager hierarchy."
 ms.date: 03/08/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Plan for the site database for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Plan for the site database for Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 The site database server is a computer that runs a supported version of Microsoft SQL Server. SQL Server is used to store information for Configuration Manager sites. Each site in a Configuration Manager hierarchy contains a site database and a server that is assigned the site database server role.  
 
@@ -36,10 +37,10 @@ The following SQL Server configurations can be used to host the site database:
 
 -   A named instance on a clustered instance of SQL Server  
 
--   A SQL Server AlwaysOn availability group (beginning with version 1602 of System Center Configuration Manager)
+-   A SQL Server AlwaysOn availability group (beginning with version 1602 of Configuration Manager)
 
 
-To host the site database, the SQL Server must meet the requirements detailed in [Support for SQL Server versions for System Center Configuration Manager](../../../core/plan-design/configs/support-for-sql-server-versions.md).  
+To host the site database, the SQL Server must meet the requirements detailed in [Support for SQL Server versions for Configuration Manager](../../../core/plan-design/configs/support-for-sql-server-versions.md).  
 
 
 

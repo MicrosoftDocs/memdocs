@@ -1,22 +1,23 @@
 ---
 title: "Command-line install"
 titleSuffix: "Configuration Manager"
-description: "Learn how to run System Center Configuration Manager Setup at a command prompt for a variety of site installations."
+description: "Learn how to run Configuration Manager Setup at a command prompt for a variety of site installations."
 ms.date: 03/27/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Use a command-line to install System Center Configuration Manager sites
+# Use a command-line to install Configuration Manager sites
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
- You can run System Center Configuration Manager Setup at a command prompt to install a variety of site types.
+ You can run Configuration Manager Setup at a command prompt to install a variety of site types.
 
 ## Supported tasks for command-line installations
  This method of running Setup supports the following site installation and site maintenance tasks:

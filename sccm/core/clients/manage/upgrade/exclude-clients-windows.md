@@ -10,12 +10,13 @@ ms.assetid: 4cd6031f-8844-4d0b-8166-b24d6528a94e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to exclude clients from upgrade in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 You can exclude a collection of clients from automatically installing updated client versions. Use this exclusion for a collection of computers that need greater care when upgrading the client. A client that's in an excluded collection ignores requests to install updated client software.
 

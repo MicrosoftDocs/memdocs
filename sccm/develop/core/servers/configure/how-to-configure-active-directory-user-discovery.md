@@ -9,10 +9,11 @@ ms.assetid: d64464a2-dba8-4e87-a487-bfdeb9073e12
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure Active Directory User Discovery
-In System Center Configuration Manager, you configure the Active Directory User Discovery settings by modifying the necessary site control file settings.  
+In Configuration Manager, you configure the Active Directory User Discovery settings by modifying the necessary site control file settings.  
 
 ### To configure Active Directory User Discovery  
 

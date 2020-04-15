@@ -1,8 +1,8 @@
 ﻿---
 title: Troubleshoot MSfB integration
 titleSuffix: Configuration Manager
-description: Provides suggestions and resolutions to troubleshoot some of the most common problems with Microsoft Store for Business integration.
-ms.date: 08/30/2019
+description: Provides suggestions and resolutions to troubleshoot some of the most common problems with Microsoft Store for Business and Education integration.
+ms.date: 12/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,14 +10,15 @@ ms.assetid: 09929057-ecf2-4d49-aee0-709916932b14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
-# Troubleshoot the Microsoft Store for Business integration with Configuration Manager
+# Troubleshoot the Microsoft Store for Business and Education integration with Configuration Manager
 
-This article provides key troubleshooting tips and fixes for some of the top issues that you may have with the Microsoft Store for Business (MSfB) integration with Configuration Manager.
+This article provides key troubleshooting tips and fixes for some of the top issues that you may have with the Microsoft Store for Business and Education (MSfB) integration with Configuration Manager.
 
-For more information about using the Microsoft Store for Business with Configuration Manager, see [Manage apps from the Microsoft Store for Business with Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+For more information about using the Microsoft Store for Business and Education with Configuration Manager, see [Manage apps from the Microsoft Store for Business and Education with Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
 ## Monitor
 
@@ -39,7 +40,7 @@ In the Configuration Manager console, go to the **Software Library** workspace, 
 
 ## Log files
 
-### MSfBSyncWorker.log
+### WSfBSyncWorker.log
 
 This log file is located on the service connection point, under `\Logs` in the Configuration Manager installation directory. It records information about the communication with the cloud service. This information includes metadata, icons, packages, and license file retrieval.
 
@@ -47,7 +48,7 @@ To change the log level, change the `LoggingLevel` value to `0` in the `HKLM\SOF
 
 ### SMS_CLOUDCONNECTION.log
 
-This log file is located on the service connection point, under `\Logs` in the Configuration Manager installation directory. If the MSfBSyncWorker service isn't started, or repeatedly starts and stops, review the entries in this log file.
+This log file is located on the service connection point, under `\Logs` in the Configuration Manager installation directory. If the WSfBSyncWorker service isn't started, or repeatedly starts and stops, review the entries in this log file.
 
 > [!NOTE]
 > This log file is shared with other features.
@@ -69,7 +70,7 @@ This log file is located on the site server for the top-level site in the hierar
 
 When the last sync status is *failed*, start by reviewing the following [log files](#log-files) to identify the symptom:
 
-- MSfBSyncWorker.log
+- WSfbSyncWorker.log
 - SMS_CLOUDCONNECTION.log
 
 Then look at one of the following sections for common issues:
@@ -85,11 +86,11 @@ Then look at one of the following sections for common issues:
 
 #### Cause
 
-This issue can occur if the configured Azure Active Directory (Azure AD) application doesn't have permissions to manage the Microsoft Store for Business for this tenant.
+This issue can occur if the configured Azure Active Directory (Azure AD) application doesn't have permissions to manage the Microsoft Store for Business and Education for this tenant.
 
 #### Workaround
 
-1. Open the [Microsoft Store for Business portal](https://www.microsoft.com/business-store), and sign in as an administrator.
+1. Sign in as an administrator to the Microsoft Store for Business or Education portal.
 1. Go to **Settings**, and select **Management tools**.
 1. If the application isn't listed, select **Add a management tool**. Then search by name and select the Azure AD application associated with the same ClientID as Configuration Manager.
 1. If the status doesn't show **Active**, then select **Activate** in the **Action** section.
@@ -99,14 +100,14 @@ This issue can occur if the configured Azure Active Directory (Azure AD) applica
 > To find the ClientID in Configuration Manager:
 >
 > 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Active Directory Tennts** node.
-> 1. Select the tenant that you use for the Microsoft Store for Business integration.
+> 1. Select the tenant that you use for the Microsoft Store for Business and Education integration.
 > 1. In the results pane, find the matching application, and look at the **Client ID** column.
 
 ### <a name="bkmk_fail-symptom2"></a> The secret key is invalid
 
 #### Cause
 
-This issue can occur if the secret key has expired on the Azure AD app for the Microsoft Store for Business configuration.
+This issue can occur if the secret key has expired on the Azure AD app for the Microsoft Store for Business and Education configuration.
 
 #### Resolution
 
@@ -120,7 +121,7 @@ This issue can occur if the connected app no longer exists in Azure AD.
 
 #### Resolution
 
-Delete and recreate the connection to the Microsoft Store for Business.
+Delete and recreate the connection to the Microsoft Store for Business and Education.
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Microsoft Store for Business** node.
 1. Select the existing connection.
@@ -129,13 +130,13 @@ Delete and recreate the connection to the Microsoft Store for Business.
 Then recreate the connection. For more information, see the following articles:
 
 - [Configure Azure Services](/sccm/core/servers/deploy/configure/azure-services-wizard)
-- [Set up Microsoft Store for Business synchronization](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_setup)
+- [Set up Microsoft Store for Business and Education synchronization](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_setup)
 
 ### <a name="bkmk_fail-symptom4"></a> Content location does not exist
 
 #### Cause
 
-When you set up the Microsoft Store for Business connection, you specify a network share for storing synchronized content. This issue can occur if this share doesn't exist or has incorrect permissions.
+When you set up the Microsoft Store for Business and Education connection, you specify a network share for storing synchronized content. This issue can occur if this share doesn't exist or has incorrect permissions.
 
 To see the location that you configured:
 
@@ -143,7 +144,7 @@ To see the location that you configured:
 
 1. Select the account and open its **Properties**.
 
-1. Switch to the **Configuration** tab. The **Location** setting shows the network path to store application content downloaded from the Microsoft Store for Business.
+1. Switch to the **Configuration** tab. The **Location** setting shows the network path to store application content downloaded from the Microsoft Store for Business and Education.
 
 #### Workaround
 
@@ -184,11 +185,11 @@ This issue can occur if the application's package is larger than 500 MB. Configu
 
 You can't automatically sync these apps, but you can download the content, and manually create the application:
 
-1. Get the failing application ID from the following line in **MSfBSynWorker.log**:
+1. Get the failing application ID from the following line in **WSfbSynWorker.log**:
 
     `Error(s) syncing or downloading application <ApplicationID> from the Microsoft Store for Business.`
 
-1. Go to the [Microsoft Store for Business portal](https://www.microsoft.com/business-store), and sign in as a store administrator. Find the page for this application.
+1. Sign in as an administrator to the Microsoft Store for Business or Education portal. Find the page for this application.
 
     > [!Tip]
     > The URL for the page is similar to: `https://businessstore.microsoft.com/en-us/store/p/app/ApplicationID`
@@ -230,7 +231,7 @@ Start by reviewing the following [log files](#log-files) to identify the symptom
 
 - BusinessAppProcessWorker.log
 - SMS_BUSINESS_APP_PROCESS_MANAGER.log
-- MSfBSyncWorker.log
+- WsfbSyncWorker.log
 - SMS_CLOUDCONNECTION.log
 
 Then look at one of the following sections for common issues:
@@ -252,7 +253,7 @@ Wait for at least 10 minutes before starting another sync.
 
 #### Cause
 
-This issue can occur if the SMS_BUSINESS_APP_PROCESS_MANAGER component stops the MSfBSyncWorker thread. The error may specify either `2` or `4` workers.
+This issue can occur if the SMS_BUSINESS_APP_PROCESS_MANAGER component stops the WsfbSyncWorker thread. The error may specify either `2` or `4` workers.
 
 #### Workaround
 
@@ -300,7 +301,7 @@ To resolve this problem, restart the **SMS_Executive** service.
 
 #### Cause
 
-This issue can occur if the Microsoft Store for Business application's license information doesn't contain localized data for the specified language.
+This issue can occur if the Microsoft Store for Business and Education application's license information doesn't contain localized data for the specified language.
 
 #### Workaround
 
@@ -328,7 +329,7 @@ Start a new sync. When the sync completes, it should verify and download any inc
 
 #### Cause
 
-This issue can occur if you deploy the application to a client running a version of Windows 10 earlier than version 1511. Offline licensed apps from the Microsoft Store for Business are only supported on Windows 10 version 1511 and later.
+This issue can occur if you deploy the application to a client running a version of Windows 10 earlier than version 1511. Offline licensed apps from the Microsoft Store for Business and Education are only supported on Windows 10 version 1511 and later.
 
 #### Resolution
 
@@ -338,10 +339,3 @@ Install the latest version of Windows 10.
 ## Next steps
 
 To find additional help, see [Find help for using Configuration Manager](/sccm/core/understand/find-help).
-
-<!-- these videos are old...1604/1605, is there still benefit in linking to them?
-- Here are also some videos to learn more about it:
-
-  - [How to set up the required prerequisites in AAD and the Microsoft Store for Business portal](https://www.youtube.com/watch?v=fC1AQY42flQ)
-  - [Choose languages to sync and create apps from app metadata for each Microsoft Store for Business, and how to create apps from app metadata](https://www.youtube.com/watch?v=VJs-475rfaI)
- -->

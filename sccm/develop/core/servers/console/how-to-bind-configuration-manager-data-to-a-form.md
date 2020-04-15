@@ -8,10 +8,11 @@ ms.assetid: c8ae07f8-0d77-4cf2-850f-c13fc140eab6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Bind Configuration Manager Data to a Form
-In System Center Configuration Manager, to bind Configuration Manager console data to a property sheet, you use the `DataBindings` property of the property sheet's control class.  
+In Configuration Manager, to bind Configuration Manager console data to a property sheet, you use the `DataBindings` property of the property sheet's control class.  
 
  The `DataBindings` property is used to bind to the objects in the form's `Property Manager`. After an object changes, mark the object as changed with *SetDirtyFlag*. This ensures that the object is serialized properly when the dialog box is dismissed.  
 

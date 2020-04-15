@@ -2,25 +2,23 @@
 title: Deprecated for clients
 titleSuffix: Configuration Manager
 description: Learn about the client operating systems that Configuration Manager no longer supports.
-ms.date: 07/26/2019
+ms.date: 02/19/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 604ab835-bce3-4fe3-a7f3-3f059cfc0ecf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
 # Removed and deprecated items for Configuration Manager clients
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article describes products and operating systems that are removed from support for Configuration Manager clients, or will be removed in a future update (deprecated). It provides early notice about future changes that might affect your use of Configuration Manager.  
 
 This information may change in the future. It might not include each deprecated feature, product, or operating system.  
-
 
 ## Deprecated client operating systems  
 
@@ -28,6 +26,9 @@ Unless noted otherwise, each supported OS is supported as a Configuration Manage
 
 |**Operating systems**|**Deprecation first announced**|**Support removed**|  
 |-|-|-|
+|Windows 7||January 14, 2020|
+|Windows Server 2008||January 14, 2020|
+|Windows Server 2008 R2||January 14, 2020|
 |Windows CE 7.0|July 19, 2019|The first version released after June 30, 2020|
 |Windows 10 Mobile|July 19, 2019|The first version released after June 30, 2020|
 |Windows 10 Mobile Enterprise|July 19, 2019|The first version released after June 30, 2020|
@@ -44,7 +45,6 @@ Unless noted otherwise, each supported OS is supported as a Configuration Manage
 |Windows Mobile 6.0 - 6.5|July 10, 2015|Version 1511|  
 |Nokia Symbian Belle|July 10, 2015|Version 1511|  
 |Windows CE 5.0 - 6.0|July 10, 2015|Version 1511|  
-
 
 ## See also
 

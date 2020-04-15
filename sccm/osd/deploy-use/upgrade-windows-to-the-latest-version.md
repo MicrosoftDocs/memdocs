@@ -10,12 +10,13 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Upgrade Windows to the latest version with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article provides the steps in Configuration Manager to upgrade the OS on a computer. You can choose from different deployment methods, such as stand-alone media or Software Center. The in-place upgrade scenario has the following features:  
 

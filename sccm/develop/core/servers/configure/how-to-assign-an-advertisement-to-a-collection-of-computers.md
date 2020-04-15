@@ -9,13 +9,14 @@ ms.assetid: fc94ef17-5ecf-44a9-9805-585ce5b8f402
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Assign an Advertisement to a Collection of Computers
-You can assign an advertisement to a collection by using the `SMS_Advertisement` class in System Center Configuration Manager. Advertisements are closely tied to packages, programs and collections. For more information, see [Software Distribution Overview](../../../../develop/core/servers/configure/software-distribution-overview.md).  
+You can assign an advertisement to a collection by using the `SMS_Advertisement` class in Configuration Manager. Advertisements are closely tied to packages, programs and collections. For more information, see [Software Distribution Overview](../../../../develop/core/servers/configure/software-distribution-overview.md).  
 
 > [!NOTE]
->  Detailed information about the `SMS_Advertisement` class and class properties is in the reference section of the System Center Configuration Manager Software Development Kit (SDK).  
+>  Detailed information about the `SMS_Advertisement` class and class properties is in the reference section of the Configuration Manager Software Development Kit (SDK).  
 
 ### To assign an advertisement to a collection  
 
@@ -64,10 +65,10 @@ public void AssignSWDAdvertisementToCollection(WqlConnectionManager connection, 
         // Populate the collection id property of the advertisement.  
         advertisementToAssign["CollectionID"].StringValue = existingCollectionID;  
 
-        // Save the advertisment and properties.  
+        // Save the advertisement and properties.  
         advertisementToAssign.Put();  
 
-        // Output advertisment and collection information.  
+        // Output advertisement and collection information.  
         Console.WriteLine("Assigned advertisement: " + existingAdvertisementID);  
         Console.WriteLine("                        " + advertisementToAssign["AdvertisementName"].StringValue);  
         Console.WriteLine("To collection:          " + existingCollectionID);  

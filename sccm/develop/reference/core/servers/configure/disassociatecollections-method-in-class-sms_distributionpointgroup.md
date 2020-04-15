@@ -9,10 +9,11 @@ ms.assetid: 7659ac2f-349e-421c-9be4-273012c4368b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # DisassociateCollections Method in Class SMS_DistributionPointGroup
-The `DisassociateCollections` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, removes a set of associated collections from this distribution point group.  
+The `DisassociateCollections` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes a set of associated collections from this distribution point group.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

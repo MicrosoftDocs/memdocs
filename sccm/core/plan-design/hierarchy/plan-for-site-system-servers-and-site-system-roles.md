@@ -2,20 +2,21 @@
 title: Plan site system roles
 titleSuffix: Configuration Manager
 description: Consider site system servers and site system roles as you plan your Configuration Manager hierarchy.
-ms.date: 07/26/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 0a7415ba-2c53-4433-983e-780e92aa662f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Plan for site system servers and site system roles in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Each Configuration Manager site you install includes a site server that's a **site system server**. The site can also include additional site system servers on computers that are remote from the site server. Site system servers (the site server or a remote site system server) support **site system roles**.  
 
@@ -65,7 +66,7 @@ To install additional providers, run Configuration Manager setup to [Manage the 
 ### Application catalog web service point
 
 > [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -77,7 +78,7 @@ A site system role that provides software information to the application catalog
 ### Application catalog website point
 
 > [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -158,7 +159,7 @@ A site system role that integrates with SQL Server Reporting Services to create 
 
 ### Service connection point
 
-A site system role that uploads usage data from your site, and is required to make updates for Configuration Manager available in the console. This role also helps to manage mobile devices with Microsoft Intune and on-premises MDM. A hierarchy only supports a single instance of this role, and that must be at the top-tier site of your hierarchy. If you expand a standalone primary site into a larger hierarchy, uninstall this role from the primary site, and then install it at the central administration site. For more information, see [About the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point).  
+A site system role that uploads usage data from your site, and is required to make updates for Configuration Manager available in the console. A hierarchy only supports a single instance of this role, and that must be at the top-tier site of your hierarchy. If you expand a standalone primary site into a larger hierarchy, uninstall this role from the primary site, and then install it at the central administration site. For more information, see [About the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point).  
 
 ### Software update point
 

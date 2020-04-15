@@ -4,21 +4,22 @@ titleSuffix: "Configuration Manager"
 description: "Learn how to manage your queries. Includes a table for detailed reference."
 ms.date: 04/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: e562e2a0-8df8-4952-952f-e8c38461c612
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# How to manage queries in System Center Configuration Manager
+# How to manage queries in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-This article can help you manage queries in System Center Configuration Manager.  
+This article can help you manage queries in Configuration Manager.  
 
- For information about how to create queries, see [How to create queries in System Center Configuration Manager](../../../core/servers/manage/create-queries.md).  
+ For information about how to create queries, see [How to create queries](../../../core/servers/manage/create-queries.md).  
 
 ## Manage queries
  In the **Monitoring** workspace, select **Queries**, select the query to manage, and then select a management task.  
@@ -33,4 +34,4 @@ This article can help you manage queries in System Center Configuration Manager.
 |**Move**|Opens the **Move Selected Items** dialog box. This dialog box lets you move the selected query to a folder that you previously created under the **Queries** node.|
 
 ## Next steps 
- [Create queries in System Center Configuration Manager](../../../core/servers/manage/create-queries.md)
+ [Create queries](../../../core/servers/manage/create-queries.md)

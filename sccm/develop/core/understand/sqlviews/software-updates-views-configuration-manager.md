@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Information about the software updates metadata, software update groups, and software update bundles.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 1e6741d2-7737-4446-b65f-e6e330c09458
 author: aczechowski
 ms.author: aaroncz

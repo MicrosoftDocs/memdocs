@@ -2,7 +2,7 @@
 title: Windows Hello for Business settings
 titleSuffix: Configuration Manager
 description: Learn how to integrate Windows Hello for Business with Configuration Manager.
-ms.date: 12/21/2018
+ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,96 +10,148 @@ ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Windows Hello for Business settings in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 <!--1245704-->
-Configuration Manager lets you integrate with Windows Hello for Business (formerly Microsoft Passport for Windows), which is an alternative sign-in method for Windows 10 devices. Hello for Business uses Active Directory, or an Azure Active Directory account to replace a password, smart card, or virtual smart card. Hello for Business lets you use a **user gesture** to log in, instead of a password. A user gesture might be a simple PIN, biometric authentication, or an external device such as a fingerprint reader.
-
+Configuration Manager integrates with Windows Hello for Business. (This feature was formerly known as Microsoft Passport for Work.) Windows Hello for Business is an alternative sign-in method for Windows 10 devices. It uses Active Directory or an Azure Active Directory (Azure AD) account to replace a password, smart card, or virtual smart card. Hello for Business lets you use a *user gesture* to sign in instead of a password. A user gesture might be a PIN, biometric authentication, or an external device such as a fingerprint reader.
 
 > [!Important]  
-> As of December 2017, Windows Hello for Business settings in Configuration Manager is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Windows Server 2016 Active Directory Federation Services Registration Authority (ADFS RA) deployment is simpler, provides a better user experience, and has a more deterministic certificate enrollment experience.  
+> Starting in version 1910, certificate-based authentication with Windows Hello for Business settings in Configuration Manager isn't supported. For more information, see [deprecated features](/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Key-based authentication is still valid.
+>
+> Active Directory Federation Services Registration Authority (ADFS RA) deployment is simpler, provides a better user experience, and has a more deterministic certificate enrollment experience. Use ADFS RA for certificate-based authentication with Windows Hello for Business.
+>
+> For co-managed devices, consider moving the [**Resource access policies** workload](/configmgr/comanage/workloads#resource-access-policies) to Intune. Then use Intune policies to manage these certificates. For more information, see [How to switch workloads](/configmgr/comanage/how-to-switch-workloads).
 
-
-For more information, see [Windows Hello for Business](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification).
-
+For more information, see [Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
 > [!Note]  
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/configmgr/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
+Configuration Manager integrates with Windows Hello for Business in the following ways:  
 
-Configuration Manager integrates with Windows Hello for Business in two ways:  
+- Control which gestures users can and can't use to sign in.  
 
-- You can use Configuration Manager to control which gestures users can and cannot use to sign in.  
+- Store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles](/configmgr/protect/deploy-use/introduction-to-certificate-profiles).  
 
-- You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles](introduction-to-certificate-profiles.md).  
+- Create and deploy a Windows Hello for Business profile to control its settings on domain-joined Windows 10 devices that run the Configuration Manager client. Starting in version 1910, you can't use certificate-based authentication. When using key-based authentication, you don't need to deploy a certificate profile.
 
-- You can deploy Windows Hello for Business policies to domain-joined Windows 10 devices that run the Configuration Manager client. This configuration is described in the [Configure Windows Hello for Business on domain-joined Windows 10 devices](#configure-windows-hello-for-business-on-domain-joined-windows-10-devices) section. When you use Configuration Manager with Microsoft Intune (hybrid), you can configure these settings on Windows 10, and Windows 10 Mobile devices. For more information, see [Configure Windows Hello for Business settings (hybrid)](/sccm/mdm/deploy-use/windows-hello-for-business-settings).
+## Configure a profile  
 
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings**, expand **Company Resource Access**, and select the **Windows Hello for Business Profiles** node.
 
+1. In the ribbon, select **Create Windows Hello for Business Profile** to start the profile wizard.
 
-## Configure Windows Hello for Business on domain-joined Windows 10 devices
+1. On the **General** page, specify a name and an optional description for this profile.
 
-You can control Windows Hello for Business settings on domain-joined Windows 10 devices by creating and deploying a Windows Hello for Business Profile. This approach is recommended.
+1. On the **Supported Platforms** page, select the OS versions to which this profile should apply.
 
+1. On the **Settings** page, configure the following settings:
 
-If you are using certificate-based authentication, you must also deploy a certificate profile, as described in [Configure a certificate profile](#configure-a-certificate-profile-to-enroll-the-windows-hello-for-business-enrollment-certificate-in-configuration-manager). If you are using key-based authentication, you do not need to deploy a certificate profile.
+    - **Configure Windows Hello for Business**: Specify whether this profile enables, disables, or doesn't configure Hello for Business.
 
+    - **Use a Trusted Platform Module (TPM)**: A TPM provides an additional layer of data security. Choose one of the following values:  
 
+      - **Required**: Only devices with an accessible TPM can provision Windows Hello for Business.  
 
-## Configure a Windows Hello for Business profile  
+      - **Preferred**: Devices first attempt to use a TPM. If it's not available, they can use software encryption.
 
-In the Configuration Manager console, under **Company Resource Access**, right-click **Windows Hello for Business Profiles** and choose **New** to start the profile wizard. Provide the settings requested by the wizard, review and confirm the settings on the last page, and click **Close**. Here's an example of what your settings might look like:  
+    - **Authentication method**: Set this option to **Not configured** or **Key-based**.
 
-![Windows Hello for Business Policy wizard, showing the list of available settings](../media/Hello-for-Business-settings.png)
+        > [!NOTE]
+        > Starting in version 1910, certificate-based authentication with Windows Hello for Business settings in Configuration Manager isn't supported.
 
+    - **Configure minimum PIN length**: If you want to require a minimum length for the user's PIN, enable this option and specify a value. When enabled, the default value is `4`.
 
+    - **Configure maximum PIN length**: If you want to require a maximum length for the user's PIN, enable this option and specify a value. When enabled the default value is `127`.
 
-## Configure a certificate profile to enroll the Windows Hello for Business enrollment certificate in Configuration Manager  
+    - **Require PIN expiration (days)**: Specifies the number of days before the user must change the device PIN.
 
-If you want to use Windows Hello for Business certificate-based logon, configure the following components:  
+    - **Prevent reuse of previous PINs**: Don't allow users to use PINs they have previously used.
 
--   A Configuration Manager certificate profile.  
+    - **Require upper-case letters in PIN**: Specifies whether users must include uppercase letters in the Windows Hello for Business PIN. Choose from:  
 
--   In the certificate profile, select a template that uses Smart Card logon EKU.  
+      - **Allowed**: Users can use uppercase characters in their PIN, but don't have to.
 
-- If you intend to store certificate profiles in the Windows Hello for Business key container, and the certificate profile uses the **Smart Card Logon** EKU, you must configure the following permissions for key registration to ensure the certificate is validated correctly.
-You must first have created the **Key Admins** group and added all Configuration Manager management point computers as members to this group.
+      - **Required**: Users must include at least one uppercase character in their PIN.  
 
-Some configurations might not need you to configure permissions, or might require further configurations. Refer to the following table for more help:
+      - **Not allowed**: Users can't use uppercase characters in their PIN.  
 
-|Windows client version|Configuration Manager 1602 or 1606|Configuration Manager 1610|Configuration Manager 1702 or later|
-|-|-|-|-|
-|Windows 10 Anniversary Update|No hotfix required<br><br>No permissions required<br><br>No Windows schema update required|No hotfix required (see **Warning**)<br><br>No permissions required<br><br>No Windows schema update required|Configure permissions<br><br>Apply Windows Server 2016 schema to Active Directory|
-|Windows 10 Creators Update or later|Not supported|Install [this hotfix](https://support.microsoft.com/help/4010155/update-rollup-for-system-center-configuration-manager-current-branch-v)<br><br>Configure permissions<br><br>Apply Windows Server 2016 schema to Active Directory|Configure permissions<br><br>Apply Windows Server 2016 schema to Active Directory|
+    - **Require lower-case letters in PIN**: Specifies whether users must include lowercase letters in the Windows Hello for Business PIN. Choose from:  
 
-> [!WARNING]
-> While [the hotfix](https://support.microsoft.com/help/4010155/update-rollup-for-system-center-configuration-manager-current-branch-v) is not required for Configuration Manager 1610 and Windows 10 Anniversary Update, it may be installed.  If the hotfix is installed, you need to configure permissions and apply Windows Server 2016 schema to Active Directory.
+      - **Allowed**: Users can use lowercase characters in their PIN, but don't have to.
 
-## To configure permissions
+      - **Required**: Users must include at least one lowercase character in their PIN.  
 
-1. Sign in to a domain controller or management workstations with Domain Admin, or equivalent credentials.
-2. Open **Active Directory Users and Computers**.
-3. From the navigation pane, right-click your domain name, and then click **Properties**.
-4. On the **Security** tab of the *\<domain name>* **Properties** dialog box, click **Advanced**. 
-If the **Security** tab is not displayed, turn on **Advanced Features** from the **View** menu of **Active Directory Users and Computers**.
-5. Click **Add**.
-6. In the **Permission Entry for** *\<domain name>* dialog box, click **Select a principal**.
-7. In the **Select User, Computer, Service Account, or Group** dialog box, type **Key Admins** in the **Enter the object name to select** text box. Click **OK**.
-8. From the **Applies to** list, select **Descendant User objects**.
-9. Scroll to the bottom of the page and click **Clear all**.
-10. In the **Properties** section, select **Read msDS-KeyCredentialLink**.
-11. Click **OK** three times to complete the task.
+      - **Not allowed**: Users can't use lowercase characters in their PIN.  
 
+    - **Configure special characters**: Specifies the use of special characters in the PIN. Choose from:  
+
+        > [!NOTE]
+        > Special characters include the following set:
+        >
+        > ``` characters
+        > ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~
+        > ```
+
+      - **Allowed**: Users can use special characters in their PIN, but don't have to.  
+
+      - **Required**: Users must include at least one special character in their PIN.  
+
+      - **Not allowed**: Users can't use special characters in their PIN. This behavior is also if the setting is **Not configured**.  
+
+    - **Configure the use of digits in PIN**: Specifies the use of numbers in the PIN. Choose from:
+
+      - **Allowed**: Users can use numbers in their PIN, but don't have to.  
+
+      - **Required**: Users must include at least one number in their PIN.  
+
+      - **Not allowed**: Users can't use numbers in their PIN.
+
+    - **Enable biometric gestures**: Use biometric authentication such as facial recognition or fingerprint. These modes are an alternative to a PIN for Windows Hello for Business. Users still configure a PIN in case biometric authentication fails.  
+
+      If set to **Yes**, Windows Hello for Business allows biometric authentication. If set to **No**, Windows Hello for Business prevents biometric authentication for all account types.  
+
+    - **Use enhanced anti-spoofing**: Configures enhanced anti-spoofing on devices that support it. If set to **Yes**, where supported, Windows requires all users to use anti-spoofing for facial features.  
+
+    - **Use Phone Sign In**: Configures two-factor authentication with a mobile phone.
+
+1. Complete the wizard.
+
+The following screenshot is an example of Windows Hello for Business profile settings:  
+
+![Windows Hello for Business Policy wizard, showing the list of available settings](../media/hello-for-business-settings.png)
+
+## Configure permissions
+
+1. As a Domain Administrator or equivalent credentials, sign in to a secure, administrative workstation that has the following optional feature installed: RSAT: Active Directory Domain Services and Lightweight Directory Services Tools.
+
+1. Open the **Active Directory Users and Computers** console.
+
+1. Select the domain, go to the **Action** Menu, and select **Properties**.
+
+1. Switch to the **Security** tab, and select **Advanced**.
+
+    > [!TIP]
+    > If you don't see the **Security** tab, close the properties window. Go to the **View** menu, and select **Advanced Features**.
+
+1. Select **Add**.
+
+1. Choose **Select a principal** and enter `Key Admins`.
+
+1. From the **Applies to** list, select **Descendant User objects**.
+
+1. At the bottom of the page, select **Clear all**.
+
+1. In the **Properties** section, select **Read msDS-KeyCredentialLink**.
+
+1. Select **OK** to save your changes and close all windows.
 
 ## Next steps
 
-For more information, see [Certificate profiles](introduction-to-certificate-profiles.md).  
-
-
-
-
+[Certificate profiles](/configmgr/protect/deploy-use/introduction-to-certificate-profiles)

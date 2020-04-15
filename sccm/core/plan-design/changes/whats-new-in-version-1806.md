@@ -4,18 +4,18 @@ titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1806 of Configuration Manager current branch.
 ms.date: 10/26/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+ROBOTS: NOINDEX
 ---
 
 # What's new in version 1806 of Configuration Manager current branch
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Update 1806 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1706, 1710, or 1802. <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
 
@@ -34,7 +34,7 @@ The following sections provide details about the changes and new features in ver
 
 Learn about support changes before they are implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
 
-As of August 14, 2018, the hybrid mobile device management feature is deprecated. For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+As of August 14, 2018, the hybrid mobile device management feature is deprecated. For more information, see [What happened to hybrid MDM](/sccm/mdm/understand/what-happened-to-hybrid).<!--Intune feature 2683117-->  
 
 <!--
 Version 1806 drops support for the following products:
@@ -263,7 +263,7 @@ For more information, see [Configure Microsoft Edge settings](/sccm/compliance/d
 <!--1357552-->
 Convert Security Content Automation Protocol (SCAP) content to compliance settings baselines and generate SCAP reports using a console extension. This feature also includes a new dashboard to visualize the client compliance as well as XCCDF rule compliance. 
 
-For more information, see [About the SCAP extensions](/sccm/compliance/plan-design/scap/about-scap).
+
 
 
 
@@ -590,7 +590,7 @@ The following additional hotfixes are available to address specific issues:
 
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
-| [4346645](https://support.microsoft.com/help/4346645) | Update for System Center Configuration Manager version 1806, first wave | 31 August 2018 | Yes |
+| [4346645](https://support.microsoft.com/help/4346645) | Update for Configuration Manager version 1806, first wave | 31 August 2018 | Yes |
 | [4465865](https://support.microsoft.com/help/4465865) | Software updates do not download in Configuration Manager environment if WSUS is disconnected<br><br>This update is also in the update rollup (4462978) | 01 October 2018 | Yes |
 | [4471892](https://support.microsoft.com/help/4471892) | PXE Responder doesn't work across subnets in Configuration Manager 1806 | 23 November 2018 | No |
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |

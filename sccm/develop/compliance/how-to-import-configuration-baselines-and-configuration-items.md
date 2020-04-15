@@ -9,10 +9,11 @@ ms.assetid: 9ce05e8b-bd49-47d4-827d-3676a96c28a8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Import Configuration Baselines and Configuration Items
-In System Center Configuration Manager, importing a configuration baseline or configuration item by using the Configuration Manager SDK requires a properly formatted XML file. Unlike the Configuration Manager console, the Configuration Manager SDK does not support directly importing a CAB file.  
+In Configuration Manager, importing a configuration baseline or configuration item by using the Configuration Manager SDK requires a properly formatted XML file. Unlike the Configuration Manager console, the Configuration Manager SDK does not support directly importing a CAB file.  
 
 > [!IMPORTANT]
 >  The encoding of the XML file must be set to UTF-16 encoded Unicode. The XML encoding can be identified in the XML header:  

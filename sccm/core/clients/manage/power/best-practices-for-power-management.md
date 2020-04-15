@@ -10,12 +10,13 @@ ms.assetid: 9f7142e1-c972-4384-853b-2da1568cb3e3
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Recommendations for power management in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the following recommendations for power management in Configuration Manager.  
 

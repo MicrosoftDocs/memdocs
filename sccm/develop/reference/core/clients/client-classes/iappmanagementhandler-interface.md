@@ -9,7 +9,8 @@ ms.assetid: 674e4aa0-f1bf-45f5-b369-4c0592a93b57
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # IAppManagementHandler Interface
 The `IAppManagementHandler` interface, in Configuration Manager defines functions to interact with the handler.  
@@ -36,5 +37,5 @@ The `IAppManagementHandler` interface, in Configuration Manager defines function
 
 ## See Also  
  [Application Management Client Interfaces](../../../../../develop/reference/core/clients/client-classes/application-management-client-interfaces.md)   
- [System Center Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+ [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

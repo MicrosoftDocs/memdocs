@@ -1,25 +1,26 @@
 ---
 title: "Capabilities in Technical Preview 1612"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1612."
+description: "Learn about features available in the Technical Preview for Configuration Manager, version 1612."
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: bceab2e8-2f05-4a17-9ac8-a7a558670fb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Capabilities in Technical Preview 1612 for System Center Configuration Manager
+# Capabilities in Technical Preview 1612 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
 
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1612. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1612. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
 
 
 **The following are new features you can try out with this version.**  
@@ -66,7 +67,7 @@ In addition to installing and configuring the data warehouse database, several n
 ### Install the Data Warehouse
 You install the Data Warehouse site system role on a central administration site or primary site by using the **Add Site System Roles Wizard** or the **Create Site System Server Wizard**. See [Install site system roles](/sccm/core/servers/deploy/configure/install-site-system-roles) for more information. A hierarchy supports multiple instances of this role, but only one instance is supported at each site.  
 
-When you install the role, Configuration Manager creates the data warehouse database for you on the instance of SQL Server that you specify. If you specify the name of an existing database (as you would do if you [move the data warehouse database to a new SQL Server](#move-the-data-warehouse-database)), Configuration Manager doesn’t create a new database but instead uses the one you specify.
+When you install the role, Configuration Manager creates the data warehouse database for you on the instance of SQL Server that you specify. If you specify the name of an existing database (as you would do if you [move the data warehouse database to a new SQL Server](#move-the-data-warehouse-database)), Configuration Manager doesn't create a new database but instead uses the one you specify.
 
 #### Configurations used during installation
 Use the following information to complete installation of the site system role:
@@ -166,7 +167,7 @@ The tool can be run in two modes:
 2. **Delete mode**:
    When you run the tool with the **/delete** switch, the tool runs in delete mode.
 
-   - When the tool runs in this mode, orphaned content that is found on the specified distribution point can be deleted from the distribution point’s content library.
+   - When the tool runs in this mode, orphaned content that is found on the specified distribution point can be deleted from the distribution point's content library.
    -  Before deleting each file, the user is prompted to confirm that the file should be deleted.  You can select, **Y** for yes, **N** for no, or **Yes to all** to skip further prompts and delete all orphaned content.  
    </br>
 
@@ -230,7 +231,7 @@ A new Windows 10 notification informs end users that they must take additional a
 ## Windows Store for Business support in Configuration Manager
 
 You can now deploy online licensed apps with a deployment purpose of **Available** from the Windows Store for Business to PCs running the Configuration Manager client.
-For more details, see [Manage apps from the Windows Store for Business with System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+For more details, see [Manage apps from the Windows Store for Business with Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
 Support for this feature is currently only available to PCs running the Windows 10 RS2 preview build.
 
@@ -238,7 +239,7 @@ Support for this feature is currently only available to PCs running the Windows 
 You can now return to a previous page when you run a task sequence and there is a failure. Prior to this release, you had to restart the task sequence when there was a failure. For example, you can use the **Previous** button in the following scenarios:
 
 - When a computer starts in Windows PE, the task sequence bootstrap dialog might display before the task sequence is available. When you click Next in this scenario, the final page of the task sequence displays with a message that there are no task sequences available. Now, you can click **Previous** to search again for available task sequences. You can repeat this process until the task sequence is available.
-- When you run a task sequence, but dependent content packages are not yet available on distribution points, the task sequence fails. You can now distribute the missing content (if it wasn’t distributed yet) or wait for the content to be available on distribution points, and then click **Previous** to have the task sequence search again for the content.
+- When you run a task sequence, but dependent content packages are not yet available on distribution points, the task sequence fails. You can now distribute the missing content (if it wasn't distributed yet) or wait for the content to be available on distribution points, and then click **Previous** to have the task sequence search again for the content.
 
 ## Express installation files support for Windows 10 updates
 We have added express installation files support in Configuration Manager for Windows 10 updates. When you use a supported version of Windows 10, you can now use Configuration Manager settings to download only the delta between the current month's Windows 10 Cumulative Update and the previous month's update. Currently in Configuration Manager Current Branch, the full Windows 10 Cumulative Update (including all updates from previous months) are downloaded each month. Using express installation files provides for smaller downloads and faster installation times on clients.
@@ -314,4 +315,4 @@ After you make these configuration changes, you can create a user policy and mov
 
 ## Change to configuring multi-factor authentication for device enrollment
 
-Now that you can set up multi-factor authentication (MFA) for device enrollment in the Azure portal, the MFA option has been removed in the Configuration Manager console. You can find more information on setting up MFA for enrollment [in this Microsoft Intune topic](https://docs.microsoft.com/intune/deploy-use/multi-factor-authentication-azure-active-directory).
+Now that you can set up multi-factor authentication (MFA) for device enrollment in the Azure portal, the MFA option has been removed in the Configuration Manager console. You can find more information on setting up MFA for enrollment [in this Microsoft Intune topic](/mem/intune/enrollment/multi-factor-authentication).

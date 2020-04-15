@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Learn how to configure site components to modify the behavior of site system roles and site status reporting.
 ms.date: 10/26/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 5fccbbeb-0faa-4943-83c2-e67db62d392d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Site components for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 For each Configuration Manager site, you can configure site components to modify the behavior of site system roles and site status reporting. Site component configurations apply to a site, and to each instance of an applicable site system role at the site.  
 

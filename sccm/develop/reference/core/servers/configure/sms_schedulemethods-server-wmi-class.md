@@ -9,10 +9,11 @@ ms.assetid: e7ccc430-34b6-4c65-8933-d13bf8e8202f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ScheduleMethods Server WMI Class
-The `SMS_ScheduleMethods` abstract Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents methods for decoding and encoding schedule tokens into and from a System Center Configuration Manager interval string.  
+The `SMS_ScheduleMethods` abstract Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents methods for decoding and encoding schedule tokens into and from a Configuration Manager interval string.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -44,9 +45,9 @@ Class SMS_ScheduleMethods : SMS_BaseClass
 
   For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
-  A Configuration Manager interval string is an internal representation of a schedule token, represented by an [SMS_ScheduleToken Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_scheduletoken-server-wmi-class.md) object. System Center Configuration Manager interval strings are not of the same format as WMI interval strings.  
+  A Configuration Manager interval string is an internal representation of a schedule token, represented by an [SMS_ScheduleToken Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_scheduletoken-server-wmi-class.md) object. Configuration Manager interval strings are not of the same format as WMI interval strings.  
 
-  This class is not used to convert schedule tokens to or from the friendly scheduling strings, for example, "Occurs every 1 day(s) effective 9:27AM Tuesday", found in the System Center Configuration Manager console.  
+  This class is not used to convert schedule tokens to or from the friendly scheduling strings, for example, "Occurs every 1 day(s) effective 9:27AM Tuesday", found in the Configuration Manager console.  
 
 ## Requirements  
 

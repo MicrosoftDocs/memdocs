@@ -2,11 +2,12 @@
 title: About log files
 titleSuffix: Configuration Manager
 description: Use log files to troubleshoot issues with Configuration Manager clients and site systems.
-ms.date: 07/26/2019
+ms.date: 11/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: b1751e3c-a60c-4ab7-a943-2595df1eb612
 author: aczechowski
 ms.author: aaroncz
@@ -14,6 +15,8 @@ manager: dougeby
 ---
 
 # About log files in Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 In Configuration Manager, client and site server components record process information in individual log files. You can use the information in these log files to help you troubleshoot issues that might occur. By default, Configuration Manager enables logging for client and server components.
 
@@ -35,7 +38,7 @@ All Configuration Manager log files are plain text, so you can view them with an
 
 ### CMTrace
 
-To view the logs, use the Configuration Manager log viewer tool **CMTrace**. It's located in the \\SMSSetup\\Tools folder of the Configuration Manager source media. The CMTrace tool is added to all boot images that are added to the Software Library. Starting in version 1806, the CMTrace log viewing tool is automatically installed along with the Configuration Manager client.<!--1357971--> For more information, see [CMTrace](/sccm/core/support/cmtrace).
+To view the logs, use the Configuration Manager log viewer tool **CMTrace**. It's located in the `\SMSSetup\Tools` folder of the Configuration Manager source media. The CMTrace tool is added to all boot images that are added to the Software Library. The CMTrace log viewing tool is automatically installed along with the Configuration Manager client.<!--1357971--> For more information, see [CMTrace](/sccm/core/support/cmtrace).
 
 ### OneTrace
 
@@ -56,6 +59,7 @@ You can change the configuration of the log files, such as the verbose level, si
 - [During client installation](#bkmk_logoptions-clientprop)
 - [Using Configuration Manager Service Manager](#bkmk_logoptions-sm)
 - [Using the Windows Registry](#bkmk_logoptions-registry)
+- [In the Configuration Manager console](#bkmk_logoptions-console)
 
 ### <a name="bkmk_logoptions-clientprop"></a> Configure logging options during client installation
 
@@ -213,6 +217,17 @@ To change the verbose level of the AdminUI.log for the Configuration Manager con
 
 1. Save the file, and restart the console.
 
+### <a name="bkmk_logoptions-console"></a> Configure logging options in the Configuration Manager console
+
+<!-- 4433455 -->
+
+Starting in version 1910, enable or disable verbose logging on a client or collection from the console:
+
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, select the **Devices** node, and choose a target device.
+
+1. In the ribbon, on the **Home** tab, in the **Device** group, select **Client Diagnostics**. Choose one of the available actions.
+
+For more information, see [Client diagnostics](/sccm/core/clients/manage/client-notification#client-diagnostics).
 
 ## <a name="BKMK_LogLocation"></a> Locating log files
 

@@ -10,12 +10,13 @@ ms.assetid: e46ad501-5d73-44ac-92de-0de14ef72b83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to deploy clients to Macs
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article describes how to deploy and maintain the Configuration Manager client on Mac computers. To learn about what you have to configure before deploying clients to Mac computers, see [Prepare to deploy client software to Macs](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients).
 
@@ -76,11 +77,11 @@ For more information, see [How to configure client settings](/sccm/core/clients/
 
 
 
-## <a name="bkmk_download"></a> Download the Mac client  
+## <a name="bkmk_download"></a> Download the client for macOS
 
-1. Download the Mac OS X client file package from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719). Save **ConfigmgrMacClient.msi** to a computer that runs Windows. This file isn't on the Configuration Manager installation media.  
+1. Download the macOS client file package,  [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850). Save **ConfigmgrMacClient.msi** to a computer that runs Windows. This file isn't on the Configuration Manager installation media.  
 
-2. Run the installer on the Windows computer. Extract the Mac client package, **Macclient.dmg**, to a folder on the local disk. The default path is `C:\Program Files (x86)\Microsoft\System Center 2012 Configuration Manager Mac Client`.  
+2. Run the installer on the Windows computer. Extract the Mac client package, **Macclient.dmg**, to a folder on the local disk. The default path is `C:\Program Files\Microsoft\System Center Configuration Manager for Mac client`.  
 
 3. Copy the **Macclient.dmg** file to a folder on the Mac computer.  
 

@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Use the logs collector tool to help troubleshoot Desktop Analytics
 ms.date: 07/26/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 349b2a69-af46-481f-afb2-24d98774e852
 author: aczechowski
 ms.author: aaroncz
@@ -30,7 +31,7 @@ Starting in Configuration Manager version 1906, use the **DesktopAnalyticsLogsCo
 - For Windows 7 with Service Pack 1, PowerShell version 4.0 or later
     - [.NET framework version 4.6 or later](https://dotnet.microsoft.com/download/dotnet-framework)
 
-    - [Windows Management Framework version 4.0](http://aka.ms/wmf4download) or [later](http://aka.ms/wmf5download)
+    - Windows Management Framework [version 4.0](https://support.microsoft.com/help/2819745) (aka.ms/wmf4download) or [version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) (aka.ms/wmf5download)
 
 ## Usage
 

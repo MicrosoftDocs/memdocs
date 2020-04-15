@@ -2,20 +2,19 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 07/31/2019
+ms.date: 04/08/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
 # Release notes for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a Microsoft Support knowledge base article.  
 
@@ -25,17 +24,36 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2002](/sccm/core/plan-design/changes/whats-new-in-version-2002)
+- [What's new in version 1910](/sccm/core/plan-design/changes/whats-new-in-version-1910)
 - [What's new in version 1906](/sccm/core/plan-design/changes/whats-new-in-version-1906)  
 - [What's new in version 1902](/sccm/core/plan-design/changes/whats-new-in-version-1902)
-- [What's new in version 1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)
-- [What's new in version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 
 > [!Tip]  
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: 
+> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
 
-
 ## Set up and upgrade  
+
+### Client automatic upgrade happens immediately for all clients
+
+<!-- 6040412 -->
+
+*Applies to version 1910*
+
+If your site uses [automatic client upgrade](/configmgr/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade), when you update the site to version 1910, all clients immediately upgrade after the site updates successfully. The only randomization is when clients receive the policy, which by default is every hour. For a large site with many clients, this behavior can consume a significant amount of network traffic and stress distribution points.
+
+For more information on affected versions, see [Client update for Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4538166).
+
+### Site server in passive mode doesn't update configuration.mof
+
+<!-- 5787848 -->
+
+*Applies to version 1910*
+
+If your site includes a [site server in passive mode](/configmgr/core/servers/deploy/configure/site-server-high-availability), you may lose inventory customizations when you update the site. The site doesn't currently synchronize the configuration.mof when you fail over the site servers.
+
+To work around this issue, manually back up and restore the site's configuration.mof.
 
 ### Setup prerequisite warning on domain functional level on Server 2019
 
@@ -47,9 +65,7 @@ When installing the update for version 1906 in an environment with domain contro
 
 `[Completed with warning]:Verify that the Active Directory domain functional level is Windows Server 2003 or later`
 
-#### Workaround
-
-Ignore the warning.
+To work around this issue, ignore the warning.
 
 ### Azure AD user discovery and collection group sync don't work after site expansion
 
@@ -65,43 +81,49 @@ If you then expand a standalone primary site to a hierarchy with a central admin
 
 `Could not obtain application secret for tenant xxxxx. If this is after a site expansion, please run "Renew Secret Key" from admin console.`
 
-#### Workaround
+To work around this issue, renew the key associated with the app registration in Azure AD. For more information, see [Renew secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
 
-Renew the key associated with the app registration in Azure AD. For more information, see [Renew secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
+## Role based administration
 
+### Security scopes for certain folders don't replicate from CAS to primary sites
+<!--6306759-->
+*Applies to version 1910*
 
-### Setup command-line option JoinCEIP must be specified
+After upgrade to version 1910, [security scopes for folders](/configmgr/core/servers/deploy/configure/configure-role-based-administration#bkmk_config-folder) in user collections and device collections don't get replicated from the CAS to primary sites.
 
-<!--510806-->
-*Applies to: Configuration Manager version 1802*
+## Application management
 
-Starting in Configuration Manager version 1802, the Customer Experience Improvement Program (CEIP) feature is removed from the product. When [automating installation](/sccm/core/servers/deploy/install/command-line-options-for-setup) of a new site from a command-line or unattended script, setup returns an error that a required parameter is missing.
+### Unable to get certificate for PowerShell error when deploying Microsoft Edge, version 77 and later
+<!--5769384-->
+*Applies to: Configuration Manager version 1910*
 
-#### Workaround
+If you are running the Configuration Manager console on an OS where the language is Swedish, Hungarian, or Japanese, you'll receive the following error when deploying Microsoft Edge, version 77 and later:
 
-While it has no effect on the outcome of the setup process, include the **JoinCEIP** parameter in your setup command line.
+`Unable to get certificate for Powershell`
 
-> [!Note]  
-> The EnableSQM parameter for [console setup](/sccm/core/servers/deploy/install/install-consoles) is not required.
+This error occurs because a `scripts` folder doesn't exist under the `AdminConsole\bin` directory for Swedish, Hungarian, or Japanese languages. The scripts folder is localized in these OS languages.
 
-### Cloud service manager component stopped on site server in passive mode
-
-<!--VSO 2858826, SCCMDocs issue 772-->
-*Applies to: Configuration Manager version 1806*
-
-If the [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) is colocated with a [site server in passive mode](/sccm/core/servers/deploy/configure/site-server-high-availability), then deployment and monitoring of a [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) doesn't start. The cloud service manager component (SMS_CLOUD_SERVICES_MANAGER) is in a stopped state.
-
-#### Workaround
-
-Move the service connection point role to another server.
-
-
-<!-- ## Backup and recovery  -->
-
-<!--## Client deployment and upgrade-->
-
+To work around this issue, create a folder called `scripts` in the `AdminConsole\bin` directory. Copy the files from your localized folder to the newly created `scripts` folder. Deploy Microsoft Edge, version 77 and later once the files have been copied.
 
 ## OS deployment
+
+### Task sequences can't run over CMG
+
+*Applies to: Configuration Manager version 2002*
+
+There are two instances in which task sequences can't run on a device that communicates via a cloud management gateway (CMG):
+
+- You configure the site for Enhanced HTTP and the management point is HTTP.<!-- 6358851 -->
+
+    To work around this issue, configure the management point for HTTPS.
+
+- You installed and registered the client with a bulk registration token for authentication.<!-- 6377921 -->
+
+    To work around this issue, use one of the following authentication methods:
+
+  - Pre-register the device on the internal network
+  - Configure the device with a client authentication certificate
+  - Join the device to Azure AD
 
 ### After passive site server is promoted, the default boot image packages still have package source on the previous active server
 
@@ -110,10 +132,7 @@ Move the service connection point role to another server.
 
 If you have a site server in passive mode (server B), when you promote it to active, the content location for the default boot images continues to reference the previously active server (server A). If server A has a hardware failure, you can't update or change the default boot images.
 
-#### Workaround
-
-None
-
+There's no workaround for this issue.
 
 ## Software updates
 
@@ -132,9 +151,7 @@ The **App Author** role may appear to have some permissions to phased deployment
 
 A user with one these roles can start the Create Phased Deployment wizard, and can see phased deployments for an application or software update. They can't complete the wizard, or make any changes to an existing deployment.
 
-#### Workaround
-
-Create a custom security role. Copy an existing security role, and add the following permissions on the **Phased Deployment** object class:
+To work around this issue, create a custom security role. Copy an existing security role, and add the following permissions on the **Phased Deployment** object class:
 
 - Create  
 - Delete  
@@ -142,22 +159,6 @@ Create a custom security role. Copy an existing security role, and add the follo
 - Read  
 
 For more information, see [Create custom security roles](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole)
-
-### Changing Office 365 client setting doesn't apply
-
-<!--511551-->
-*Applies to: Configuration Manager version 1802*  
-
-Deploy a [client setting](/sccm/core/clients/deploy/about-client-settings#enable-management-of-the-office-365-client-agent) with **Enable Management of the Office 365 Client Agent** configured to `Yes`. Then change that setting to `No` or `Not Configured`. After updating policy on targeted clients, Office 365 updates are still managed by Configuration Manager.
-
-#### Workaround
-
-Change the following registry value to `0` and restart the **Microsoft Office Click-to-Run Service** (ClickToRunSvc):
-
-```Registry
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\office\16.0\Common\officeupdate]
-"OfficeMgmtCOM"=dword:00000000
-```
 
 ## Desktop Analytics
 
@@ -170,10 +171,7 @@ If you have a hierarchy, and enable **Hardware inventory** site data for [distri
 
 `Unexpected exception 'System.Data.SqlClient.SqlException' Remote access is not supported for transaction isolation level "SNAPSHOT".:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action'1 wrapCloseInAction)`
 
-#### Workaround
-
-Disable **Hardware inventory** site data for distributed views on every site replication link.
-
+To work around this issue, disable **Hardware inventory** site data for distributed views on every site replication link.
 
 ### Console unexpectedly closes when removing collections
 
@@ -182,9 +180,7 @@ Disable **Hardware inventory** site data for distributed views on every site rep
 
 After you connect the site to [Desktop Analytics](/sccm/desktop-analytics/connect-configmgr), you can **Select specific collections to synchronize with Desktop Analytics**. If you remove a collection and apply the changes, immediately adding a new collection causes an unhandled exception. The console unexpectedly closes.
 
-#### Workaround
-
-When you remove a collection, select **OK** to close the properties window. Then open the properties again to add a new collection on the **Desktop Analytics Connection** tab.
+To work around this issue, when you remove a collection, select **OK** to close the properties window. Then open the properties again to add a new collection on the **Desktop Analytics Connection** tab.
 
 ### Pilot status tile shows some devices as 'undefined'
 
@@ -195,31 +191,66 @@ When you use the Configuration Manager console to monitor your pilot deployment 
 
 These **undefined** devices are **up-to-date** with the target version of the OS for that deployment plan. No further action is necessary.
 
+## Cloud services
 
-## Mobile device management  
+### Azure service for US Government cloud shows as public cloud
 
-### Validation for iOS app link sometimes fails on valid link
+<!-- 6036748 -->
 
-*Applies to: Configuration Manager version 1810 and earlier*
+*Applies to version 1910*
 
-<!-- LSI 106004348 -->
-When you create a new application of type **App Package for iOS from App Store**, the validator doesn't accept some valid URLs for the **Location**. Specifically, the iOS App Store doesn't require a value for the app name section of the URL. For example, both of the following links are valid and point to the same app, but the **Create Application Wizard** only accepts the first:
+If you create a connection to an Azure service, and set the **Azure environment** to the government cloud, the properties of the connection show the environment as the Azure public cloud. This issue is only a display problem in the console, the service is in the government cloud. To confirm the configuration, run the following SQL query on the site database:
 
-- `https://itunes.apple.com/us/app/app-name/id123456789?mt=8`
-- `https://itunes.apple.com/us/app//id123456789?mt=8`
+```SQL
+Select Environment, Name, TenantID From AAD_Tenant_Ex
+```
 
-#### Workaround
+For the government cloud, the result of this query is `2` for the specific tenant.
 
-When you create an iOS app that's missing the app name from the URL, add any value as if it were the app name to the URL. For example:
+### Can't download content from a cloud management gateway enabled for TLS 1.2
 
-- `https://itunes.apple.com/us/app/any-string/id123456789?mt=8`
+<!-- 5771680 -->
 
-This action allows you to complete the wizard. The app is still successfully deployed to iOS devices. The string you add to the URL appears as the **Name** on the **General Information** tab in the wizard. It's also the app's label in the Company Portal.
+*Applies to version 1906, 1910 early update ring*
 
+If you enable a cloud management gateway (CMG) to **function as a cloud distribution point and serve content from Azure storage** and **Enforce TLS 1.2**, you may see content downloads fail.
 
+The following errors show in the DataTransferService.log on the client:
 
+``` log
+Request to https://cmg1.contoso.com:443/downloadrestservice.svc/getcontentxmlsecure?pid=CMG00013&cid=CMG00013&tid=GUID:3fb5cf5d-28a5-4460-ab39-9184ca214369&iss=CMDP.IAAS2.CONTOSO.COM&alg=1.2.840.113549.1.1.11&st=2019-11-19T01:44:04&et=2019-11-19T09:44:04 failed with 400
+Successfully queued event on HTTP/HTTPS failure for server 'cmg1.contoso.com'.
+Error sending DAV request. HTTP code 400, status 'Bad Request'
+GetDirectoryList_HTTP('https://cmg1.contoso.com:443/downloadrestservice.svc/getcontentxmlsecure?pid=CMG00013&cid=CMG00013&tid=GUID:3fb5cf5d-28a5-4460-ab39-9184ca214369&iss=CMDP.IAAS2.CONTOSO.COM&alg=1.2.840.113549.1.1.11&st=2019-11-19T01:44:04&et=2019-11-19T09:44:04') failed with code 0x87d0027e.​
+Error retrieving manifest (0x87d0027e).
+```
 
-<!-- ## Reports and monitoring    -->
-<!-- ## Conditional access   -->
+The following errors show in the CMGContentService.log on the server:
 
-<!-- ## Endpoint Protection -->
+``` log
+ERROR: Exception processing request. Microsoft.WindowsAzure.Storage.StorageException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.ComponentModel.Win32Exception: The client and server cannot communicate, because they do not possess a common algorithm...
+```
+
+To work around this issue:
+
+- Update the site to the globally available version of 1910, released on December 20, 2019. (If you previously updated to the 1910 early update ring, you need to update to this build when it's available.)
+
+- Alternatively, use a traditional [cloud distribution point](/configmgr/core/plan-design/hierarchy/use-a-cloud-based-distribution-point). That role doesn't enforce TLS 1.2, but is compatible with clients that require TLS 1.2.
+
+## Protection
+
+### BitLocker management appears in version 1906
+
+*Applies to version 1906*
+
+<!-- 5984688 -->
+
+After November 21, 2019, if you update to version 1906 from version 1902 or earlier, the BitLocker management feature will be turned on and available. This feature is an optional feature starting in version 1910. It's unsupported in version 1906. If you try to use it in version 1906, you may experience unexpected results. If you don't use the feature, there's no impact.
+
+To use the [BitLocker management feature](/configmgr/protect/plan-design/bitlocker-management), update to version 1910.
+
+<!--
+## Backup and recovery
+
+## Client deployment and upgrade
+-->

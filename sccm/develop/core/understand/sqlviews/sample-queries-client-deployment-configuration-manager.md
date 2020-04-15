@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common client deployment views to other views.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 66e102b8-f80c-4dc8-b39c-e2a5a50c74a6
 author: aczechowski
 ms.author: aaroncz

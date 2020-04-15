@@ -2,15 +2,14 @@
 title: Deployment plans in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about deployment plans in Desktop Analytics.
-ms.date: 08/14/2019
+ms.date: 01/14/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: 0f369f3a-f251-4f34-9302-1bdc6ea5d139
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
 # About deployment plans in Desktop Analytics
@@ -78,6 +77,14 @@ The Windows upgrade decision to **Replace device** can be because of one of the 
 - There's another plug-and-play component on the system that blocks upgrade
 - There's a wireless component that uses an XP-emulated driver
 - A network component with an active connection will lose its driver. In other words, after upgrade it could lose network connectivity.
+
+The Windows upgrade decision to **Re-install** indicates the upgrade will require a reinstall as opposed to an in-place upgrade. 
+
+A **Blocked** Windows upgrade decision can be caused by the following reasons:
+
+- You set the upgrade decision of one or more assets to **Unable**.
+
+- The inventory data for that device is incomplete and Desktop Analytics can't do a full compatibility assessment.
 
 ### Apps
 

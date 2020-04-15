@@ -4,14 +4,15 @@ titleSuffix: Configuration Manager
 description: A tutorial on using Desktop Analytics and Configuration Manager to deploy Windows 10 to a pilot group.
 ms.date: 06/13/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: tutorial
 ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 #Customer intent: As an IT Pro, I want to use Desktop Analytics to intelligently pilot Windows 10 so that I can understand the best devices to start with getting current with Windows.
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Tutorial: Deploy Windows 10 to pilot

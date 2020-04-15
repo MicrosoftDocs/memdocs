@@ -9,7 +9,8 @@ ms.assetid: 74689e4e-e08f-490e-800c-5ed77c4e4db5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SettingsDefinitionBase Server WMI Class
 The `SMS_SettingsDefinitionBase` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the base class for settings definition.  

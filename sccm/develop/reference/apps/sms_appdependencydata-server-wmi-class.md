@@ -9,7 +9,8 @@ ms.assetid: 907740f6-2b58-4cd3-b94e-b120ef9947e6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_AppDependencyData Server WMI Class
 The `SMS_AppDependencyData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application deployment dependency data.  

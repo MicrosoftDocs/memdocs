@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Sample queries that show how to join some of the most commonly used status message views to other views.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 61c9b4be-4656-413a-8fb1-c6e72d89fbaa
 author: aczechowski
 ms.author: aaroncz

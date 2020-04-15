@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Configure security-related options for Configuration Manager.
 ms.date: 11/27/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Configure security in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the information in this article to help you set up security-related options for Configuration Manager. It covers the following security options:
 - [Client computer communication](#BKMK_ConfigureClientPKI) for client PKI certificates  

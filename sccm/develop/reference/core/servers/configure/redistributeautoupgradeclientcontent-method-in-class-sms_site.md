@@ -9,7 +9,8 @@ ms.assetid: a38e35de-5e02-4574-8f2a-4f526ded22c0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # RedistributeAutoUpgradeClientContent Method in Class SMS_Site
 The `RedistributeAutoUpgradeClientContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, redistributes auto-upgrade client content to the specified distribution point.  

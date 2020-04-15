@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Learn how to transfer data from a source hierarchy to a Configuration Manager destination hierarchy.
 ms.date: 11/05/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: cf014eb0-f8c2-4d37-b8d7-368d63a10b89
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Migrate data between hierarchies in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use migration to transfer data from a supported source hierarchy to your Configuration Manager (current branch) destination hierarchy. When you migrate data from a source hierarchy:  
 

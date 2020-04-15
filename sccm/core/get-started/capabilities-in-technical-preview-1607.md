@@ -1,23 +1,24 @@
 ---
 title: "Capabilities in Technical Preview 1607"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1607."
+description: "Learn about features available in the Technical Preview for Configuration Manager, version 1607."
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 2bb69547-3370-4860-96b0-7fb600c56482
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Capabilities in Technical Preview 1607 for System Center Configuration Manager
+# Capabilities in Technical Preview 1607 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1607. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1607. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
 
 
 **The following are new features you can try out with this version.**  
@@ -52,7 +53,7 @@ Custom branding for the Software Center is applied according to the following ru
 
 2. If the Application Catalog website point site server role is installed, then Software Center will display the organization name and color specified in the Application Catalog website point site server role properties. For more information, see [Configuration options for Application Catalog website point](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website).
 
-3. If a Microsoft Intune subscription is configured and connected to the Configuration Manager environment, then Software Center will display the organization name, color and company logo specified in the Intune subscription properties. For more information, see [Configure the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription).
+3. If a Microsoft Intune subscription is configured and connected to the Configuration Manager environment, then Software Center will display the organization name, color and company logo specified in the Intune subscription properties.
 
 ## Use the same network adapter for multiple PXE initiated deployments
 In Technical Preview version 1607, when you use an ethernet adapter to image multiple devices (such as a USB ethernet adapter that you use on multiple devices), you can enable a new setting that allows you to enter hardware identifiers for the ethernet adapters. Configuration Manager ignores the hardware identifiers in the list when performing a PXE installation and for client registration.

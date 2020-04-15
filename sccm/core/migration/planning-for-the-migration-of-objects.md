@@ -1,42 +1,23 @@
 ---
 title: "Migrate objects"
 titleSuffix: "Configuration Manager"
-description: "Learn how to plan for the migration of objects between hierarchies in a System Center Configuration Manager environment."
+description: "Learn how to plan for the migration of objects between hierarchies in a Configuration Manager current branch environment."
 ms.date: 01/12/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Plan for the migration of Configuration Manager objects to System Center Configuration Manager
+# Plan for the migration of Configuration Manager objects to Configuration Manager current branch
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-With System Center Configuration Manager, you can migrate many of the different objects that are associated with different features found at a source site. Use the following sections to help you plan for the migration of objects between hierarchies.  
-
--   [Plan to migrate software updates](#Plan_migrate_Software_updates)  
-
--   [Plan to migrate content](#Plan_Migrate_content)  
-
--   [Plan to migrate collections](#BKMK_MigrateCollections)  
-
--   [Plan to migrate operating system deployments](#Plan_migrate_OSD)  
-
--   [Plan to migrate desired configuration management](#Plan_Migrate_Compliance_settings)  
-
--   [Plan to migrate boundaries](#Plan_migrate_Boundaries)  
-
--   [Plan to migrate reports](#Plan_Migrate_reports)  
-
--   [Plan to migrate organizational and search folders](#Plan_Migrate_Org_Folders)  
-
--   [Plan to migrate Asset Intelligence customizations](#Plan_Migrate_AI)  
-
--   [Plan to migrate software metering rules customizations](#Plan_Migrate_SWM_Rules)  
+With Configuration Manager current branch, you can migrate many of the different objects that are associated with different features found at a source site.
 
 ##  <a name="Plan_migrate_Software_updates"></a> Plan to migrate software updates  
  You can migrate software update objects, like software update packages and software update deployments.  
@@ -67,15 +48,15 @@ When you migrate from a Configuration Manager 2007 source hierarchy, the migrati
 |Software update packages|Software update packages remain software update packages.|  
 |Software update templates|Software update templates remain software update templates.<br /><br /> The **Duration** value in Configuration Manager 2007 deployment templates does not migrate.|  
 
-When you migrate objects from a System Center 2012 Configuration Manager or System Center Configuration Manager source hierarchy, the software updates objects are not modified.  
+When you migrate objects from a System Center 2012 Configuration Manager or Configuration Manager current branch source hierarchy, the software updates objects are not modified.  
 
 ##  <a name="Plan_Migrate_content"></a> Plan to migrate content  
- You can migrate content from a supported source hierarchy to your destination hierarchy. For a Configuration Manager 2007 source hierarchy, this content includes software distribution packages and programs and virtual applications, like Microsoft Application Virtualization (App-V). For System Center 2012 Configuration Manager and System Center Configuration Manager source hierarchies, this content includes applications and App-V virtual applications. When you migrate content between hierarchies, the compressed source files migrate to the destination hierarchy.  
+ You can migrate content from a supported source hierarchy to your destination hierarchy. For a Configuration Manager 2007 source hierarchy, this content includes software distribution packages and programs and virtual applications, like Microsoft Application Virtualization (App-V). For System Center 2012 Configuration Manager and Configuration Manager current branch source hierarchies, this content includes applications and App-V virtual applications. When you migrate content between hierarchies, the compressed source files migrate to the destination hierarchy.  
 
 ### Packages and programs  
  When you migrate packages and programs, they are not modified by migration. However, before you migrate them, you must set up each package to use a Universal Naming Convention (UNC) path for its source file location. As part of the configuration to migrate packages and programs, you must assign a site in the destination hierarchy to manage this content. The content is not migrated from the assigned site, but after migration, the assigned site accesses the original source file location by using the UNC mapping.  
 
- After you migrate a package and program to the destination hierarchy, and while migration from the source hierarchy remains active, you can make the content available to clients in that hierarchy by using a shared distribution point. To use a shared distribution point, the content must remain accessible on the distribution point at the source site. For more about shared distribution points, see [Share distribution points between source and destination hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) in [Plan a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md).  
+ After you migrate a package and program to the destination hierarchy, and while migration from the source hierarchy remains active, you can make the content available to clients in that hierarchy by using a shared distribution point. To use a shared distribution point, the content must remain accessible on the distribution point at the source site. For more about shared distribution points, see [Share distribution points between source and destination hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) in [Plan a content deployment migration strategy](../../core/migration/planning-a-content-deployment-migration-strategy.md).  
 
  For content that has migrated, if the content version changes in the source hierarchy or the destination hierarchy, clients can no longer access the content from the shared distribution point in the destination hierarchy. In this scenario, you must re-migrate the content to restore a consistent version of the package between the source hierarchy and the destination hierarchy. This information syncs during the data gathering cycle.  
 
@@ -83,7 +64,7 @@ When you migrate objects from a System Center 2012 Configuration Manager or Syst
 >  For each package that you migrate, update the package in the destination hierarchy. This action can prevent issues with deploying the package to distribution points in the destination hierarchy. However, when you update a package on the distribution point in the destination hierarchy, clients in that hierarchy will no longer be able to get that package from a shared distribution point. To update a package in the destination hierarchy, in the Configuration Manager console, go to the Software Library, right-click on the package, and then select **Update Distribution Points**. Do this action for each package that you migrate.  
 
 > [!TIP]  
->  You can use Microsoft System Center Configuration Manager Package Conversion Manager to convert packages and programs into System Center Configuration Manager applications. Download Package Conversion Manager from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=212950) site. For more information, see [Configuration Manager Package Conversion Manager](https://go.microsoft.com/fwlink/p/?LinkId=247245).  
+> Use Package Conversion Manager to convert packages and programs into Configuration Manager applications. For more information, see [Package Conversion Manager](/configmgr/apps/pcm/package-conversion-manager).  
 
 ### Virtual applications  
 When you migrate App-V packages from a supported Configuration Manager 2007 site, the migration process converts them to applications in the destination hierarchy. Additionally, based on existing advertisements for the App-V package, the following deployment types are created in the destination hierarchy:  
@@ -98,9 +79,9 @@ When you migrate App-V packages from a supported Configuration Manager 2007 site
 >  If you migrate a previously migrated Configuration Manager 2007 App-V package, the migration fails because virtual application packages do not support the overwrite migration behavior. In this scenario, you must delete the migrated virtual application package from the destination hierarchy, and then create a new migration job to migrate the virtual application.  
 
 > [!NOTE]  
->  After you migrate an App-V package, you can use the Update Content wizard to change the source path for App-V deployment types. For more about how to update content for a deployment type, see How to manage deployment types in [Management tasks for System Center Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md).  
+>  After you migrate an App-V package, you can use the Update Content wizard to change the source path for App-V deployment types. For more about how to update content for a deployment type, see How to manage deployment types in [Management tasks for Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md).  
 
-When you migrate from a System Center 2012 Configuration Manager or System Center Configuration Manager source hierarchy, you can migrate objects for the App-V virtual environment in addition to App-V deployment types and applications. For more about App-V environments, see [Deploying App-V virtual applications with System Center Configuration Manager](../../apps/get-started/deploying-app-v-virtual-applications.md).  
+When you migrate from a System Center 2012 Configuration Manager or Configuration Manager current branch source hierarchy, you can migrate objects for the App-V virtual environment in addition to App-V deployment types and applications. For more about App-V environments, see [Deploying App-V virtual applications](../../apps/get-started/deploying-app-v-virtual-applications.md).  
 
 ### Advertisements  
 You can migrate advertisements from a supported Configuration Manager 2007 source site to the destination hierarchy by using collection-based migration. If you upgrade a client, it retains the history of previously run advertisements to prevent the client from rerunning migrated advertisements.  
@@ -109,10 +90,10 @@ You can migrate advertisements from a supported Configuration Manager 2007 sourc
 >  You cannot migrate advertisements for virtual packages. This is an exception to the migration of advertisements.  
 
 ### Applications  
- You can migrate applications from a supported System Center 2012 Configuration Manager or System Center Configuration Manager source hierarchy to a destination hierarchy. If you reassign a client from the source hierarchy to the destination hierarchy, the client retains the history of previously installed applications to prevent the client from rerunning a migrated application.  
+ You can migrate applications from a supported System Center 2012 Configuration Manager or Configuration Manager current branch source hierarchy to a destination hierarchy. If you reassign a client from the source hierarchy to the destination hierarchy, the client retains the history of previously installed applications to prevent the client from rerunning a migrated application.  
 
 ##  <a name="BKMK_MigrateCollections"></a> Plan to migrate collections  
- You can migrate the criteria for collections from a supported System Center 2012 Configuration Manager or System Center Configuration Manager source hierarchy. For this, you use an object-based migration job. When you migrate a collection, you migrate the rules for the collection and not information about the members of the collection or information or objects related to the members of the collection.  
+ You can migrate the criteria for collections from a supported System Center 2012 Configuration Manager or Configuration Manager current branch source hierarchy. For this, you use an object-based migration job. When you migrate a collection, you migrate the rules for the collection and not information about the members of the collection or information or objects related to the members of the collection.  
 
  Migration of the collection object is not supported when you migrate from a Configuration Manager 2007 source hierarchy.  
 
@@ -140,12 +121,12 @@ You can migrate configuration items and configuration baselines.
 > [!NOTE]  
 >  Uninterpreted configuration items from Configuration Manager 2007 source hierarchies are not supported for migration. You cannot migrate or import these configuration items to the destination hierarchy. For more about uninterpreted configuration items, see Uninterpreted configuration items in the [About Configuration Items in Desired Configuration Management](https://go.microsoft.com/fwlink/?LinkId=103846) topic in the Configuration Manager 2007 documentation library.  
 
-You can import Configuration Manager 2007 Configuration Packs. The import process automatically converts the configuration packs to be compatible with System Center Configuration Manager.  
+You can import Configuration Manager 2007 Configuration Packs. The import process automatically converts the configuration packs to be compatible with Configuration Manager current branch.  
 
 ##  <a name="Plan_migrate_Boundaries"></a> Plan to migrate boundaries  
- You can migrate boundaries between hierarchies. When you migrate boundaries from Configuration Manager 2007, each boundary from the source site migrates at the same time and is added to a new boundary group that is created in the destination hierarchy. When you migrate boundaries from a System Center 2012 Configuration Manager or System Center Configuration Manager hierarchy, each boundary you select is added to a new boundary group in the destination hierarchy.  
+ You can migrate boundaries between hierarchies. When you migrate boundaries from Configuration Manager 2007, each boundary from the source site migrates at the same time and is added to a new boundary group that is created in the destination hierarchy. When you migrate boundaries from a System Center 2012 Configuration Manager or Configuration Manager current branch hierarchy, each boundary you select is added to a new boundary group in the destination hierarchy.  
 
- Each automatically created boundary group is enabled for content location but not for site assignment. This prevents overlapping boundaries for site assignment between the source and destination hierarchies. When you migrate from a Configuration Manager 2007 source site, this helps prevent new Configuration Manager 2007 clients that install from incorrectly assigning to the destination hierarchy. By default,  System Center Configuration Manager clients do not automatically assign to Configuration Manager 2007 sites.  
+ Each automatically created boundary group is enabled for content location but not for site assignment. This prevents overlapping boundaries for site assignment between the source and destination hierarchies. When you migrate from a Configuration Manager 2007 source site, this helps prevent new Configuration Manager 2007 clients that install from incorrectly assigning to the destination hierarchy. By default, Configuration Manager current branch clients do not automatically assign to Configuration Manager 2007 sites.  
 
  During migration, if you share a distribution point with the destination hierarchy, any boundaries that are associated with that distribution automatically migrate to the destination hierarchy. In the destination hierarchy, migration creates a new read-only boundary group for each shared distribution point. If you change the boundaries for the distribution point in the source hierarchy, the boundary group in the destination hierarchy updates with these changes during the next data gathering cycle.  
 
@@ -153,26 +134,26 @@ You can import Configuration Manager 2007 Configuration Packs. The import proces
 Configuration Manager does not support the migration of reports. Instead, use SQL Server Reporting Services Report Builder to export reports from the source hierarchy, and then import them to the destination hierarchy.  
 
 > [!NOTE]  
->  Because there are schema changes for reports between Configuration Manager 2007 and System Center Configuration Manager, test each report that you import from a Configuration Manager 2007 hierarchy to ensure that it functions as expected.  
+>  Because there are schema changes for reports between Configuration Manager 2007 and Configuration Manager current branch, test each report that you import from a Configuration Manager 2007 hierarchy to ensure that it functions as expected.  
 
-For more about reporting, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+For more about reporting, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
 
 ##  <a name="Plan_Migrate_Org_Folders"></a> Plan to migrate organizational and search folders  
- You can migrate organizational folders and search folders from a supported source hierarchy to a destination hierarchy. In addition, from a System Center 2012 Configuration Manager or System Center Configuration Manager source hierarchy, you can migrate the criteria for a saved search to a destination hierarchy.  
+ You can migrate organizational folders and search folders from a supported source hierarchy to a destination hierarchy. In addition, from a System Center 2012 Configuration Manager or Configuration Manager current branch source hierarchy, you can migrate the criteria for a saved search to a destination hierarchy.  
 
  By default, the migration process maintains your search folder and administrative folder structures for objects and collections when you migrate. However, in the Create Migration Job wizard, on the **Settings** page, you can set up a migration job to not migrate the organizational structure for objects by unchecking the box for this option. The organizational structures of collections are always maintained.  
 
- One exception to this is a search folder that contains virtual applications. When an App-V package is migrated, the App-V package is transformed into an application in System Center Configuration Manager. After migration of the search folder, only the remaining packages are found, and the search folder cannot locate an App-V package because of this conversion to an application when the App-V package migrates.  
+ One exception to this is a search folder that contains virtual applications. When an App-V package is migrated, the App-V package is transformed into an application in Configuration Manager. After migration of the search folder, only the remaining packages are found, and the search folder cannot locate an App-V package because of this conversion to an application when the App-V package migrates.  
 
- When you migrate a saved search from a System Center 2012 Configuration Manager or System Center Configuration Manager source hierarchy, you migrate the criteria for the search, and not the information about the search results. Migration of a saved search is not applicable from a Configuration Manager 2007 source site.  
+ When you migrate a saved search from a System Center 2012 Configuration Manager or Configuration Manager current branch source hierarchy, you migrate the criteria for the search, and not the information about the search results. Migration of a saved search is not applicable from a Configuration Manager 2007 source site.  
 
 ##  <a name="Plan_Migrate_AI"></a> Plan to migrate Asset Intelligence customizations  
- You can migrate customizations for Asset Intelligence from a supported source hierarchy to a destination hierarchy. There are no significant changes to the structure of Asset Intelligence customizations between Configuration Manager 2007 and System Center Configuration Manager.  
+ You can migrate customizations for Asset Intelligence from a supported source hierarchy to a destination hierarchy. There are no significant changes to the structure of Asset Intelligence customizations between Configuration Manager 2007 and Configuration Manager current branch.  
 
 > [!NOTE]  
->  System Center Configuration Manager does not support the migration of Asset Intelligence objects from a Configuration Manager 2007 site that is using Asset Intelligence Service 2.0 (AIS 2.0).  
+> Configuration Manager current branch doesn't support the migration of Asset Intelligence objects from a Configuration Manager 2007 site that is using Asset Intelligence Service 2.0 (AIS 2.0).  
 
 ##  <a name="Plan_Migrate_SWM_Rules"></a> Plan to migrate software metering rules customizations  
- There are no significant changes to software metering between Configuration Manager 2007 and System Center Configuration Manager. You can migrate your software metering rules from a supported source hierarchy to a destination hierarchy.  
+ There are no significant changes to software metering between Configuration Manager 2007 and Configuration Manager current branch. You can migrate your software metering rules from a supported source hierarchy to a destination hierarchy.  
 
  By default, software metering rules that you migrate to a destination hierarchy are not associated with a specific site in the destination hierarchy and instead apply to all clients in the hierarchy. To apply a software metering rule to clients at a specific site, you must edit the metering rule after it migrates.  

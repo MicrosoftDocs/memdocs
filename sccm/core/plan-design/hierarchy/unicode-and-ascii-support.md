@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Learn about support for Unicode and ASCII characters in Configuration Manager objects.
 ms.date: 08/21/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 2bdec799-905f-48bc-aed5-2d92134739e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Unicode and ASCII support in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager creates most objects by using Unicode characters. However, several objects only support ASCII characters, or they have other limitations.  
 

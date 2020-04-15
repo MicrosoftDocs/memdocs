@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1810.
 ms.date: 02/28/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Checklist for installing update 1810 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you use the current branch of Configuration Manager, you can install the in-console update for version 1810 to update your hierarchy from a previous version. <!-- baseline only statement: (Because version 1802 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)-->
 
@@ -27,7 +28,7 @@ To get the update for version 1810, you must use a service connection point at t
 
     -   The dmpdownloader.log may indicate that the dmpdownloader process is waiting for an interval before checking for updates. To restart the download of the update's redistribution files, restart the **SMS_Executive** service on the site server.
 
-    -   Another common download issue occurs when proxy server settings prevent downloads from http://silverlight.dlservice.microsoft.com, http://download.microsoft.com/, and/or http://go.microsoft.com.
+    -   Another common download issue occurs when proxy server settings prevent downloads from `silverlight.dlservice.microsoft.com`, `download.microsoft.com`, and `go.microsoft.com`.
 
 For more information about installing updates, see [In-console updates and servicing](/sccm/core/servers/manage/updates#bkmk_inconsole).
 

@@ -1,22 +1,23 @@
 ---
 title: Monitor software updates
 titleSuffix: "Configuration Manager"
-description: "The System Center Configuration Manager console provides alerts and statuses to monitor updates and compliance."
+description: "The Configuration Manager console provides alerts and statuses to monitor updates and compliance."
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/09/2019
+ms.date: 04/08/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
-ms.collection: M365-identity-device-management
+
+
 ---
-# Monitor software updates in System Center Configuration Manager
+# Monitor software updates in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-System Center Configuration Manager provides many ways to help you to monitor software updates objects, processes, and compliance information. Use the following sections to monitor software updates.
+Configuration Manager provides many ways to help you to monitor software updates objects, processes, and compliance information. Use the following sections to monitor software updates.
 
 ## Software updates dashboard
 
@@ -128,3 +129,9 @@ This report returns the deployment errors at the site and a count of computers t
 2.  Select the distribution point for which to view distribution point status information.  
 
 3.  In the results pane, click the **Details** tab. Status information for the distribution point is displayed.  
+
+## Next steps
+
+- [Log files for Software Updates](/configmgr/core/plan-design/hierarchy/log-files#BKMK_SU_NAPLog)
+
+- [Software Updates management whitepaper](https://www.microsoft.com/download/confirmation.aspx?id=44578)

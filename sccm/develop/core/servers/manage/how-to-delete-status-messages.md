@@ -9,10 +9,11 @@ ms.assetid: 883d80f4-a623-4d5e-9b98-84f62f068205
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Delete Status Messages
-In System Center Configuration Manager, you delete status messages by calling the `SMS_StatusMessage` class `DeleteByID` method and supplying an array of status message `RecordID` identifiers. Alternatively, you can call the `SMS_StatusMessage` class `DeleteByQuery` method and supply a WQL query that identifies the status messages to be deleted.  
+In Configuration Manager, you delete status messages by calling the `SMS_StatusMessage` class `DeleteByID` method and supplying an array of status message `RecordID` identifiers. Alternatively, you can call the `SMS_StatusMessage` class `DeleteByQuery` method and supply a WQL query that identifies the status messages to be deleted.  
 
 ### To delete a status message  
 

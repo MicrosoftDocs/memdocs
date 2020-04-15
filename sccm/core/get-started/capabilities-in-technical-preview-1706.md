@@ -1,23 +1,24 @@
 ---
 title: "Technical Preview 1706"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview version 1706 for System Center Configuration Manager."
+description: "Learn about features available in the Technical Preview version 1706 for Configuration Manager."
 ms.date: 09/15/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: ca3b4714-2a16-495e-8a17-1d87991d5556
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Capabilities in Technical Preview 1706 for System Center Configuration Manager
+# Capabilities in Technical Preview 1706 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1706. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1706. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
 
 
 <!--  Known Issues Template   
@@ -247,18 +248,18 @@ This preview introduces several improvements to the [accessibility features](/sc
 
 ## Changes to the Azure Services Wizard to support Upgrade Readiness
 <!-- 1353331 -->
-Beginning with this release, use the Azure Services Wizard to configure a connection from Configuration Manager to [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics). The use of the wizard simplifies configuration of the connector by using a common wizard for related Azure services.   
+Beginning with this release, use the Azure Services Wizard to configure a connection from Configuration Manager to Upgrade Readiness. The use of the wizard simplifies configuration of the connector by using a common wizard for related Azure services.   
 
 Although the method to configure the connection has changed, prerequisites for the connection and how you use Upgrade Readiness remain unchanged.   
 
 ### Prerequisites for Upgrade Readiness
-The prerequisites for a [connection to Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness#connect-configuration-manager-to-upgrade-readiness) are unchanged from those detailed for the Current Branch of Configuration Manager. They are repeated here for convenience:  
+The prerequisites for a connection to Upgrade Readiness are unchanged from those detailed for the Current Branch of Configuration Manager. They are repeated here for convenience:  
 
 **Prerequisites**
 - In order to add the connection, your Configuration Manager environment must first configure a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) in an [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
 - Register Configuration Manager as a “Web Application and/or Web API” management tool, and get the [client ID from this registration](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
 - Create a client key for the registered management tool in Azure Active Directory.
-- In the Azure Management Portal, provide the registered web app with permission to access OMS, as described in [Provide Configuration Manager with permissions to OMS](https://azure.microsoft.com/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms).
+- In the Azure portal, provide the registered web app with permission to access OMS.
 
 > [!IMPORTANT]       
 > When configuring permission to access OMS, be sure to choose the **Contributor** role, and assign it permissions to the resource group of the registered app.
@@ -458,7 +459,7 @@ You can configure Entrust as the certification authority when adding a Certifica
 ## Cisco (IPsec) support for iOS VPN profiles
 <!-- 1321367 -->
 
-You can create a iOS VPN profile with Cisco (IPsec) as the connection type. For more information, see [Create VPN profiles](https://docs.microsoft.com/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles).
+You can create a iOS VPN profile with Cisco (IPsec) as the connection type. For more information, see [Create VPN profiles](https://docs.microsoft.com/configmgr/protect/deploy-use/create-vpn-profiles#create-a-vpn-profile).
 
 
 ## New Windows configuration item settings
@@ -524,7 +525,6 @@ For more information about compliance settings, see [Ensure device compliance](/
   * Android 4.2 through 4.4
   * Samsung KNOX Standard 4.0+
 
-See [create and deploy a device compliance policy](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy) to try the new device compliance rules.
 
 ## New mobile application management policy settings
 Beginning with this release, you can use three new mobile application management (MAM) policy settings:
@@ -534,8 +534,6 @@ Beginning with this release, you can use three new mobile application management
 - **Disable contact sync:** Prevents the app from saving data to the native Contacts app on the device.
 
 - **Disable printing:** Prevents the app from printing work or school data.
-
-See [protect apps using app protection policies in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
 
 ## Android and iOS enrollment restrictions
 <!-- 1290826 -->

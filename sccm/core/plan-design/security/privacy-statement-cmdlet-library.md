@@ -4,26 +4,27 @@ titleSuffix: Configuration Manager
 description: Learn about how Microsoft collects and uses data related to the Configuration Manager cmdlets
 ms.date: 01/3/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: bec00fb4-1ac0-4e49-b330-0871b3722459
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 --- 
 
 # Configuration Manager cmdlet library privacy statement
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-This privacy statement covers the features for the System Center Configuration Manager Cmdlet Library.  
+This privacy statement covers the features for the Configuration Manager Cmdlet Library.  
 
 ## Usage data  
 
 #### What this feature does
 
-The System Center Configuration Manager cmdlet library lets you manage a Configuration Manager hierarchy by using Windows PowerShell cmdlets and scripts. The cmdlet library collects information about how you use the cmdlets in the library to identify trends and usage patterns. The cmdlet library also collects the types and numbers of errors that you receive when you use the cmdlets.  
+The Configuration Manager cmdlet library lets you manage a Configuration Manager hierarchy by using Windows PowerShell cmdlets and scripts. The cmdlet library collects information about how you use the cmdlets in the library to identify trends and usage patterns. The cmdlet library also collects the types and numbers of errors that you receive when you use the cmdlets.  
 
 #### Information collected, processed, or transmitted
    
@@ -35,7 +36,7 @@ Microsoft uses this information to improve the quality, security, and integrity 
 
 #### Choice/control   
 
-This usage data feature is enabled by default. The System Center Configuration Manager cmdlet library has two registry keys that control this functionality.  
+This usage data feature is enabled by default. The Configuration Manager cmdlet library has two registry keys that control this functionality.  
 
  To fully opt out, set these two registry key values. They are for each of the Event Tracing for Windows (ETW) providers:  
 
@@ -48,4 +49,4 @@ This usage data feature is enabled by default. The System Center Configuration M
 
 ## Next steps
 
-[System Center Configuration Manager Cmdlet Library documentation](https://docs.microsoft.com/powershell/sccm/configurationmanager/).   
+[Configuration Manager Cmdlet Library documentation](https://docs.microsoft.com/powershell/sccm/configurationmanager/).   

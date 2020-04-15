@@ -1,5 +1,5 @@
-- name: Configuration Manager SDK
-  href: core/misc/system-center-configuration-manager-sdk.md
+- name: Configuration Manager SDK documentation
+  href: index.yml
 - name: Overview
   items:
   - name: Configuration Manager SDK overview
@@ -1000,3 +1000,5 @@
     href: core/servers/manage/how-to-determine-advertisement-status.md
 - name: Configuration Manager API reference
   href: reference/configuration-manager-reference.md
+- name: Administration service REST API
+  href: adminservice/index.yml

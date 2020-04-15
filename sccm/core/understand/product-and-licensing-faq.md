@@ -2,20 +2,19 @@
 title: Product and licensing FAQ
 titleSuffix: Configuration Manager
 description: Find answers for common product and license questions for Configuration Manager.
-ms.date: 10/22/2019
+ms.date: 02/12/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
 # Frequently asked questions for Configuration Manager branches and licensing
 
-*Applies to: System Center Configuration Manager (Current Branch), System Center Configuration Manager (Long-Term Servicing Branch)*
+*Applies to: Configuration Manager (current branch) & System Center Configuration Manager (long-term servicing branch)*
 
 This FAQ addresses common licensing questions about Configuration Manager current branch and the long-term servicing branch (LTSB) versions, available through Microsoft Volume Licensing programs. This article is for informational purposes. It doesn't supersede or replace any documentation covering Configuration Manager licensing. For more information, see the [Product Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). The Product Terms describe the use terms for all Microsoft products in Volume Licensing.
 
@@ -63,6 +62,20 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 
 > [!IMPORTANT]
 > Configuration Manager isn't included in the [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business) plan.
+
+### <a name="bkmk_mem"></a> Does anything change with the rebrand to Microsoft Endpoint Manager?
+
+Yes. Effective December 1, 2019, if you're already licensed for Configuration Manager, then you're also automatically licensed for Intune for enrolling Windows PCs in [co-management](/configmgr/comanage/overview). This change makes it easier for you to manage Windows devices with Microsoft Endpoint Manager.
+
+A new license is now available that lets Configuration Manager customers with Software Assurance get Intune PC management rights without having to purchase an additional Intune license for co-management. You no longer need to purchase and assign individual Intune licenses to your users.
+
+- Devices managed by Configuration Manager and enrolled into co-management have almost the same rights as an Intune standalone-managed PC. However, after resetting they can't be re-provisioned by using AutopIlot.
+
+- Windows 10 devices enrolled into Intune by using other means require full Intune licenses.
+
+- If you want to use Intune for managing iOS, Android, or macOS devices, then you do need the appropriate Intune subscription through standalone Intune license, Enterprise Mobility + Security (EMS), or Microsoft 365.
+
+- The licensing that you previously had for System Center Configuration Manager still applies to Microsoft Endpoint Configuration Manager. If installing a new site, use existing product keys.
 
 ### <a name="bkmk_ems-expires"></a> I have Enterprise Mobility + Security and it expired, what must I do now?  
 
@@ -112,7 +125,7 @@ If *SA* or your subscription is active, you have use rights for Configuration Ma
 
 ### <a name="bkmk_sql"></a> What are the use rights associated with the SQL technology provided with Configuration Manager?
 
-All of the System Center products include SQL Server technology. Microsoft's licensing terms for these products allow customer use of SQL Server technology only to support System Center components. SQL Server client access licenses are not required for that use.
+Configuration Manager includes SQL Server technology. Microsoft's licensing terms for this product allows your use of SQL Server technology only to support Configuration Manager components. SQL Server client access licenses are not required for that use.
 
 Approved use rights for the SQL capabilities with Configuration Manager include:
 
@@ -121,7 +134,6 @@ Approved use rights for the SQL capabilities with Configuration Manager include:
 - SQL Server Reporting Services (SSRS) for reporting point role
 - Data warehouse service point role
 - Database replicas for management point roles
-- SQL Server Always On
 
 The SQL Server license that's included with Configuration Manager supports each instance of SQL Server that you install to host a database for Configuration Manager. However, only databases for Configuration Manager in the preceding list can run on that SQL Server when you use this license. If a database for any additional Microsoft or third-party product shares the SQL Server, you must have a separate license for that SQL Server instance.
  <!-- sms500967 -->
@@ -130,4 +142,4 @@ The SQL Server license that's included with Configuration Manager supports each 
 
 In versions 1806 and earlier, to start using on-premises MDM, you need a Microsoft Intune subscription. The subscription is only required to track licensing of the devices and isn't used to manage or store management information for the devices. All management data is stored in your organization using the on-premises Configuration Manager infrastructure.  
 
-Starting in version 1810, an Intune connection is no longer required for new on-premises MDM deployments.<!--3607730, fka 1359124--> Your organization still requires Intune licenses to use this feature. You can't currently remove the Intune connection from existing on-premises MDM deployments. For more information, see the [Intune support blog post](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
+Starting in version 1810, an Intune connection is no longer required for new on-premises MDM deployments.<!--3607730, fka 1359124--> Your organization still requires Intune licenses to use this feature. For more information, see the [Intune support blog post](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).

@@ -9,7 +9,8 @@ ms.assetid: 56f1a21f-3f6d-47b9-924a-ebb47ff49bd5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # SMS_PolicyAgentConfig server WMI class

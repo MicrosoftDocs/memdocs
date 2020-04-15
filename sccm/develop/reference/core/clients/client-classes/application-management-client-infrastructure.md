@@ -9,7 +9,8 @@ ms.assetid: 0d22ecc3-d5f9-4833-a711-044c10d5e93a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Application Management Client Infrastructure
 This section provides reference information for the Configuration Manager application management client infrastructure.  
@@ -19,5 +20,5 @@ This section provides reference information for the Configuration Manager applic
  Describes interfaces in Configuration Manager used for managing application management functionality on the client.  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+ [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

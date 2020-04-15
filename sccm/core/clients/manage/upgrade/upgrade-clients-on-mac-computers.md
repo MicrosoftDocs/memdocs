@@ -10,12 +10,13 @@ ms.assetid: 74c60941-5eae-4905-9e58-252bdb39df96
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # How to upgrade clients on Mac computers in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Follow the high-level steps in this article to upgrade the client for Mac computers by using a Configuration Manager application. You can also download the Mac client installation file, copy it to a shared network location or a local folder on the Mac computer, and then instruct users to manually run the installation.  
 
@@ -24,11 +25,11 @@ Follow the high-level steps in this article to upgrade the client for Mac comput
 
 ## Download the latest Mac client
 
-The Mac client for Configuration Manager isn't supplied on the Configuration Manager installation media. Download it from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719). The Mac client installation files are contained in a Windows Installer file named **ConfigmgrMacClient.msi**.  
+The Mac client for Configuration Manager isn't supplied on the Configuration Manager installation media. Download it from the Microsoft Download Center, [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850). The Mac client installation files are contained in a Windows Installer file named **ConfigmgrMacClient.msi**.  
 
 ## Create the Mac client installation file
 
-On a computer that runs Windows, run **ConfigmgrMacClient.msi**. This installer unpacks the Mac client installation file, named **Macclient.dmg**. By default, you can find this file in the following folder: **C:\Program Files (x86)\Microsoft\System Center 2012 Configuration Manager Mac Client**.  
+On a computer that runs Windows, run **ConfigmgrMacClient.msi**. This installer unpacks the Mac client installation file, named **Macclient.dmg**. By default, you can find this file in the following folder: **C:\Program Files\Microsoft\System Center Configuration Manager for Mac client**.  
 
 ## Extract the client installation files
 

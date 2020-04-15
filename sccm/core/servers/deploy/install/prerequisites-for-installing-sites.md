@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Learn about prerequisites for installing the different types of Configuration Manager sites.
 ms.date: 07/31/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Prerequisites for installing Configuration Manager sites
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Before you begin a site installation, learn about the prerequisites for installing the different types of Configuration Manager sites.
 
@@ -127,7 +128,6 @@ To successfully replicate data between a central administration site and a prima
 After you expand the site, you need to reconfigure the following Azure services with Configuration Manager:
 
 - [Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics)  
-- [Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness)  
 - [Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)  
 - [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
 

@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Create automation scripts to install Configuration Manager from a command line.
 ms.date: 08/21/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Command-line options for Configuration Manager setup
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use the following information to configure scripts or to install Configuration Manager from a command line.  
 

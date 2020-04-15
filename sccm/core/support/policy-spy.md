@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Use Policy Spy to view and troubleshoot the policy system on Configuration Manager clients.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 1012ec24-27d9-4193-8236-918d283c7448
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Policy Spy
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Policy Spy is one of the [Configuration Manager tools](/sccm/core/support/tools). It's a tool for viewing and troubleshooting the policy system on Configuration Manager clients. Run **PolicySpy.exe** to open the user interface. For more information on command-line usage, see [Command-line syntax](#bkmk_policyspy-syntax).
 

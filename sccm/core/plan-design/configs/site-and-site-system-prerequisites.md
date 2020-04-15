@@ -2,24 +2,21 @@
 title: Site prerequisites
 titleSuffix: Configuration Manager
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
-ms.date: 07/31/2019
+ms.date: 02/19/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
 # Site and site system prerequisites for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Windows-based computers require specific configurations to support their use as Configuration Manager site system servers.
-
-This article primarily focuses on [Windows Server 2012 and later](#bkmk_2012Prereq). [Windows Server 2008 R2 and Windows Server 2008](#bkmk_2008) are supported for the distribution point site system role. For more information, see [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).
 
 For some products, like Windows Server Update Services (WSUS) for the software update point, you need to refer to the product documentation to identify additional prerequisites and limitations for use. Only configurations that directly apply for use with Configuration Manager are included here.
 
@@ -80,6 +77,8 @@ See the main sections of this article for the specific prerequisites for site sy
 - .NET Framework 3.5
 
 - Remote Differential Compression  
+
+- When you use a software update point on a server other than the site server, install the WSUS Administration Console on the site server.
 
 ### .NET Framework
 
@@ -174,10 +173,12 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ### Windows Server roles and features
 
-- If you're using the [administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service), the server that hosts the SMS Provider role requires .NET 4.5.2 or later  <!-- SCCMDocs issue #1203 -->
-    - Starting in version 1902, this prerequisite is version .NET 4.5 or later.
+- If you're using the [administration service](/configmgr/develop/adminservice/overview), the server that hosts the SMS Provider role requires .NET 4.5 or later  <!-- SCCMDocs issue #1203 -->
 
-- Web Server (IIS): Every provider attempts to install the [administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service). This service has a dependency on IIS to bind a certificate to HTTPS port 443. Configuration Manager uses IIS APIs to check this certificate configuration. If you configure the site for [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http), Configuration Manager uses IIS APIs to bind the SCCM-generated certificate.
+    > [!NOTE]
+    > Configuration Manager version 1810 requires .NET 4.5.2 or later.
+
+- Web Server (IIS): Every provider attempts to install the [administration service](/configmgr/develop/adminservice/overview). This service has a dependency on IIS to bind a certificate to HTTPS port 443. Configuration Manager uses IIS APIs to check this certificate configuration. If you configure the site for [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http), Configuration Manager uses IIS APIs to bind the site-generated certificate. Starting in version 2002, the site automatically uses the site's self-signed certificate.
 
 ### SQL Server Native Client
 
@@ -187,7 +188,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 ## <a name="bkmk_2012acwspreq"></a> Application catalog website point  
 
 > [!Important]  
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -241,7 +242,7 @@ For more information about .NET Framework versions, see the following articles:
 ## <a name="bkmk_2012ACwsitepreq"></a> Application catalog web service point  
 
 > [!Important]  
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
 > For more information, see the following articles:
 >
@@ -388,12 +389,12 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ### To support PXE or multicast  
 
+- Enable a PXE responder on a distribution point without Windows Deployment Service.  
+
 - Install and configure the Windows Deployment Services (WDS) Windows Server role.  
 
     > [!NOTE]  
     > WDS installs and configures automatically when you configure a distribution point to support PXE or multicast on a server that runs Windows Server 2012 or later.  
-
-- Starting in version 1806, enable a PXE responder on a distribution point without Windows Deployment Service.  
 
 - For a multicast-enabled distribution point, make sure the SQL Server Native Client is installed and up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
 
@@ -711,62 +712,3 @@ For more information about .NET Framework versions, see the following articles:
 
 When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
 
-
-## <a name="bkmk_2008"></a> Prerequisites for Windows Server 2008 R2 and Windows Server 2008  
-
-Windows Server 2008 and Windows Server 2008 R2 are now in extended support and are no longer in mainstream support, as detailed by the [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Removed and deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os).  
-
-These OS versions aren't supported for site servers or most site system roles. They're still supported for the distribution point site system role, including pull-distribution points and for PXE and multicast.
-
-### <a name="bkmk_2008dppreq"></a> Distribution point  
-
-### IIS configuration
-
-You can use the default IIS configuration or a custom configuration. To use a custom IIS configuration, you must enable the following options for IIS:  
-
-- Application Development:  
-
-    - ISAPI Extensions  
-
-- Security:  
-
-    - Windows Authentication  
-
-- IIS 6 Management Compatibility:  
-
-    - IIS 6 Metabase Compatibility  
-
-    - IIS 6 WMI Compatibility  
-
-When you use a custom IIS configuration, you can remove options that aren't required, such as the following items:  
-
-- Common HTTP Features:  
-
-    - HTTP Redirection  
-
-- IIS Management Scripts and Tools  
-
-### Windows feature  
-
-- Remote Differential Compression  
-
-### Visual C++ Redistributable
-
-- Configuration Manager installs the Microsoft Visual C++ 2013 Redistributable Package on each computer that hosts a distribution point.  
-
-- The version that is installed depends on the computer's platform (x86 or x64).  
-
-### To support PXE or multicast  
-
-- Install and configure the Windows Deployment Services (WDS) Windows Server role.  
-
-    > [!NOTE]  
-    > WDS installs and configures automatically when you configure a distribution point to support PXE or multicast on a server that runs Windows Server 2012 or later.  
-
-- Starting in version 1806, enable a PXE responder on a distribution point without Windows Deployment Service.  
-
-For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
-
-<!--sms.503672 -Clarified BITS use-->
-> [!NOTE]  
-> When the distribution point transfers content, it transfers using the **Background Intelligent Transfer Service** (BITS) built into the Windows operating system. The distribution point role doesn't require the optional BITS IIS Server Extension feature to be installed because the client does not  upload information to it.

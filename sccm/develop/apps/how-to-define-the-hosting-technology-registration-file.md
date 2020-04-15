@@ -9,7 +9,8 @@ ms.assetid: 47960cf4-e7dd-4e26-92b7-5774cfc44a1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Define the Hosting Technology Registration File
 To define a hosting technology registration file, create an XML file based on the `http://schemas.microsoft.com/SystemCenterConfigurationManager/2009/AppMgmtDigest` schema. Used in the installation process, the registration file registers the custom hosting technology with Configuration Manager.  The hosting technology registration file is required for the installation of the custom hosting technology.

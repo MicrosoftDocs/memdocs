@@ -4,13 +4,14 @@ titleSuffix: Configuration Manager
 description: The FastTrack organization is a large group of Microsoft engineers who specialize in helping all types of organizations deploy Microsoft 365
 ms.date: 01/14/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology: configmgr-comanage
 ms.topic: conceptual
 ms.assetid: 42e80570-d637-41a4-97b7-ebf1f8975af3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Get help from FastTrack for co-management
@@ -36,7 +37,7 @@ The FastTrack for Microsoft 365 site also includes expert-created documentation,
 
 3. Enter the number of **EMS Licenses** in your organization.  
 
-4. Complete the form by adding your contact information, business scenarios, and the products you're trying to troubleshoot. For example, if you need assistance migrating from Intune hybrid to Intune standalone, select **Microsoft Intune** on the form.  
+4. Complete the form by adding your contact information, business scenarios, and the products you're trying to troubleshoot.
 
 5. Submit the request. 
 

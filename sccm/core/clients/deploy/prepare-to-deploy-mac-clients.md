@@ -10,12 +10,13 @@ ms.assetid: 2285a953-6a86-4ed5-97dd-cd57b02bc1ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Prepare to deploy client software to Macs
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Follow these steps to make sure that you're ready to [deploy the Configuration Manager client to Mac computers](/sccm/core/clients/deploy/deploy-clients-to-macs).
 
@@ -146,13 +147,9 @@ Install both roles in the same site. You don't have to install them on the same 
 
 For more information about site system role placement and considerations, see [Site system roles](/sccm/core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles#bkmk_planroles).  
 
-These procedures configure the site system roles to support Mac computers:   
+To add the site system roles to support Mac computers, see [Install site system roles](/configmgr/core/servers/deploy/configure/install-site-system-roles).
 
--   [New site system server](/sccm/core/servers/deploy/configure/install-site-system-roles#to-install-site-system-roles-on-a-new-site-system-server)  
-
--   [Existing site system server](/sccm/core/servers/deploy/configure/install-site-system-roles#bkmk_Install)    
-
-In either case, on the **System Role Selection** page, select **Enrollment proxy point** and **Enrollment point** from the list of available roles.  
+On the **System Role Selection** page, select **Enrollment proxy point** and **Enrollment point** from the list of available roles.  
 
 
 

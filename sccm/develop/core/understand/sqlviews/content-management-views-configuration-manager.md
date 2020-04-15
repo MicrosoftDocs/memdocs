@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Provides the tools for you to manage content files for applications, packages, software updates, and operating system deployment.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 80e86983-2e3b-4a10-9755-5f0d98688462
 author: aczechowski
 ms.author: aaroncz

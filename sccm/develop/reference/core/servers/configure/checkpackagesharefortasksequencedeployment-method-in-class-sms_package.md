@@ -9,7 +9,8 @@ ms.assetid: 94d247a9-c862-433d-84b5-d19d7ca39a0e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CheckPackageShareForTaskSequenceDeployment Method in Class SMS_Package
 The `CheckPackageShareForTaskSequenceDeployment` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks whether the package share type meets the requirements of a task sequence deployment.  

@@ -9,10 +9,11 @@ ms.assetid: d9ef0822-0931-4459-b121-49d953b0a233
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddPackages Method in Class SMS_DistributionPointGroup
-The `AddPackages` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, assigns a set of packages to the distribution point group.  
+The `AddPackages` Windows Management Instrumentation (WMI) class method, in Configuration Manager, assigns a set of packages to the distribution point group.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

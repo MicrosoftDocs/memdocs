@@ -9,10 +9,11 @@ ms.assetid: 26421f68-0708-4c5a-a0a3-f3a399ed9b8e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Delete a Software Metering Rule
-You delete a software metering rule, in System Center Configuration Manager, by loading the instance of the software metering rule that is identified by the software metering rule ID and calling the delete method.  
+You delete a software metering rule, in Configuration Manager, by loading the instance of the software metering rule that is identified by the software metering rule ID and calling the delete method.  
 
 ### To delete a software metering rule  
 
@@ -26,7 +27,7 @@ You delete a software metering rule, in System Center Configuration Manager, by 
  The following example method shows how to delete a software metering rule by loading an instance of the software metering rule that is identified by the software metering rule ID and calling the delete method.  
 
 > [!IMPORTANT]
->  The rule ID corresponds to the value stored in the property `RuleID`. The System Center Configuration Manager console displays a **Rule ID** column, which actually corresponds to the value stored in the property `SecurityID`.  
+>  The rule ID corresponds to the value stored in the property `RuleID`. The Configuration Manager console displays a **Rule ID** column, which actually corresponds to the value stored in the property `SecurityID`.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
@@ -117,5 +118,5 @@ public void DeleteSWMRule(WqlConnectionManager connection,
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+ [Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [SMS_MeteredProductRule Server WMI Class](../../develop/reference/apps/sms_meteredproductrule-server-wmi-class.md)

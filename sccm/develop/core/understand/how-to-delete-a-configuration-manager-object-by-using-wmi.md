@@ -9,10 +9,11 @@ ms.assetid: e843aaf1-f278-447d-82b1-642f4286b65d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Delete a Configuration Manager Object by Using WMI
-To delete a System Center Configuration Manager object, in System Center Configuration Manager, call the [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) object [Delete_](https://msdn.microsoft.com/library/aa393771.aspx) method.  
+To delete a Configuration Manager object, in Configuration Manager, call the [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) object [Delete_](https://msdn.microsoft.com/library/aa393771.aspx) method.  
 
 ### To delete a Configuration Manager object  
 

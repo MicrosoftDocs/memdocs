@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Use the Collection Evaluation Viewer to view and troubleshoot the collection evaluation process in Configuration Manager.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: caad2d93-087c-4dc0-a2a7-6a2fd808b4c8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Collection Evaluation Viewer
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Collection Evaluation Viewer is one of the [Configuration Manager tools](/sccm/core/support/tools). Use it to view and troubleshoot the collection evaluation process on the primary site server.
 

@@ -4,18 +4,17 @@ titleSuffix: Configuration Manager
 description: Plan to use a SQL Server Always On availability group with Configuration Manager
 ms.date: 07/26/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
 # Prepare to use SQL Server Always On availability groups with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use this article to prepare Configuration Manager to use SQL Server Always On availability groups. This feature provides a high availability and disaster recovery solution for the site database.  
 
@@ -149,7 +148,7 @@ Run the following SQL script to verify database configurations for both primary 
     SELECT @dbname = sd.name FROM sys.sysdatabases sd WHERE sd.dbid = DB_ID()
 
     IF (@dbname = N'master' OR @dbname = N'model' OR @dbname = N'msdb' OR @dbname = N'tempdb' OR @dbname = N'distribution' ) BEGIN
-    RAISERROR(N'ERROR: Script is targetting a system database.  It should be targeting the DB you created instead.', 0, 1)
+    RAISERROR(N'ERROR: Script is targeting a system database.  It should be targeting the DB you created instead.', 0, 1)
     GOTO Branch_Exit;
     END ELSE
     PRINT N'INFO: Targeted database is ' + @dbname + N'.'
@@ -289,10 +288,11 @@ For example, consider the following scenario:
 #### Multi-subnet failover
 
 <!-- SCCMDocs-pr#3734 -->
-Starting in version 1906, you can enable the [MultiSubnetFailover connection string keyword](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually add the following value to the Windows Registry on the site server:
+Starting in version 1906, you can enable the [MultiSubnetFailover connection string keyword](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually add the following values to the Windows Registry on the site server:
 
 ``` Registry
 HKLM:\SOFTWARE\Microsoft\SMS\Identification
+HKLM:\SOFTWARE\Microsoft\SMS\SQL Server
 
 MSF Enabled : 1 (DWORD)
 ```
