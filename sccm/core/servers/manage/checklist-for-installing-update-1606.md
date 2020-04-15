@@ -101,7 +101,7 @@ Before you update a site, ensure that you have stopped antivirus software on the
 
 **Create a backup of the site database at the central administration site and primary sites:** Before you update a site, back up the site database to ensure that you have a successful backup to use for disaster recovery.   
 
-For more information, see [Backup and recovery for Configuration Manager](../../../protect/understand/backup-and-recovery.md).  
+For more information, see [Backup and recovery for Configuration Manager](/sccm/core/servers/manage/backup-and-recovery).  
 
 <!-- Removed from update guidance 6/6/2017
 **Test the database upgrade on a copy of the most recent site database backup:** Before you update a Configuration Manager central administration site or primary site, test the site database upgrade process on a copy of the site database.  

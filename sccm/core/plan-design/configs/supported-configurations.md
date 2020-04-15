@@ -49,7 +49,7 @@ Learn about which operating systems can host the Configuration Manager console t
 -  [Support for SQL Server versions](../../../core/plan-design/configs/support-for-sql-server-versions.md)  
 Learn about which versions of SQL Server can host the site database and reporting database, as well as about required configurations and optional configurations that you can use.
 
--  [High-availability options](../../../protect/understand/high-availability-options.md)  
+-  [High-availability options](/sccm/core/servers/deploy/configure/high-availability-options)  
 Learn about the options you can implement when designing your environment to help maintain a high level of available service for your Configuration Manager deployment.
 
 -  [Recommended hardware](../../../core/plan-design/configs/recommended-hardware.md)  

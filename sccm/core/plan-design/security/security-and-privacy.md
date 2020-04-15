@@ -60,7 +60,7 @@ This article includes resources for Security and Privacy for Configuration Manag
 
 -   [Security best practices and privacy information for Configuration Manager](../../../core/plan-design/security/security-best-practices-and-privacy-information.md)  
 
--   [Cryptographic controls technical reference for Configuration Manager](../../../protect/deploy-use/cryptographic-controls-technical-reference.md)  
+-   [Cryptographic controls technical reference for Configuration Manager](/sccm/core/plan-design/security/cryptographic-controls-technical-reference)  
 
 -   [Ports used](../../../core/plan-design/hierarchy/ports.md)  
 

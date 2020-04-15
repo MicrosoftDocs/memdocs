@@ -49,7 +49,7 @@ When you  design and implement administrative security for Configuration Manager
  The administrative scope controls the objects that an administrative user views in the Configuration Manager console, and it controls the permissions that a user has on those objects. Role-based administration configurations replicate to each site in the hierarchy as global data, and then are applied to all administrative connections.  
 
 > [!IMPORTANT]  
-> Intersite replication delays can prevent a site from receiving changes for role-based administration. For information about how to monitor intersite database replication, see the [Data transfers between sites](../../core/servers/manage/data-transfers-between-sites.md) topic.  
+> Intersite replication delays can prevent a site from receiving changes for role-based administration. For information about how to monitor intersite database replication, see the [Data transfers between sites](/sccm/core/plan-design/hierarchy/data-transfers-between-sites) topic.  
 
 ##  <a name="bkmk_Planroles"></a> Security roles
 

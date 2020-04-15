@@ -128,7 +128,7 @@ You will find these apps in the **Applications** node of the Configuration Manag
 
  This rule overrides the default rule, which means that even if you set the default rule to quarantine or block access, enrolled and compliant devices will still be able to access Exchange on-premises. Use this setting when you want enrolled and compliant devices to always have access to email through Exchange on-premises.   
 
- For the detailed walkthrough, see [Manage email access](../../../protect/deploy-use/manage-email-access.md).  
+ For the detailed walkthrough, see [Manage email access](/configmgr/mdm/understand/what-happened-to-hybrid).  
 
 ## Client management  
 
