@@ -2,7 +2,7 @@
 title: Encrypt recovery data
 titleSuffix: Configuration Manager
 description: Encrypt BitLocker recovery keys, recovery packages, and TPM password hashes across the network and in the Configuration Manager database.
-ms.date: 04/01/2020
+ms.date: 04/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -64,6 +64,11 @@ Now the **Client connections** property of the management point can be **HTTP** 
 > The only clients that need to communicate with the recovery service are those clients that you plan to target with a BitLocker management policy and includes a **Client Management** rule.
 
 On the client, use the **BitLockerManagementHandler.log** to troubleshoot this connection. For connectivity to the recovery service, the log shows the URL that the client is using. Locate an entry that starts with `Checking for Recovery Service at`.
+
+> [!NOTE]
+> If your site has more than one management point, enable HTTPS on all management points at the site with which a BitLocker-managed client could potentially communicate. If the HTTPS management point is unavailable, the client could fail over to an HTTP management point, and then fail to escrow its recovery key.
+>
+> This recommendation applies to both options: enable the management point for HTTPS, or enable the IIS website that hosts the recovery service on the management point.
 
 ### SQL encryption certificate
 
