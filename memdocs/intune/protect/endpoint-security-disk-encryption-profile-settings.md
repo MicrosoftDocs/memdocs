@@ -357,4 +357,4 @@ Supported platforms and profiles:
 
 ## Next steps
 
-[Configure disk encryption polices](../protect/endpoint-security-disk-encryption-profiles.md)
+[Configure disk encryption polices](../protect/endpoint-security-configure-disk-encryption-profiles.md)

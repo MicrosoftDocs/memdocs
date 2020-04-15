@@ -103,7 +103,7 @@ The available profiles depend on the device platform.
 
    Windows 10:
    - **Microsoft Defender Antivirus** – Windows 10 [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-windows.md)
-   - **Windows Security experience** - Windows 10 [Windows Security app policy settings](../protect/antivirus-security-experience-windows.md)
+   - **Windows Security experience** - Windows 10 [Windows Security app policy settings](../protect/antivirus-security-experience-windows-settings.md)
 
 7. Select **Next**.
 

@@ -40,7 +40,7 @@ The Endpoint security node groups the tools that are available through Intune th
 
 - **Manage security configurations on devices through tightly focused policies**.  Each [Endpoint security policy](#use-policies-to-manage-device-security) focuses on specific aspects of device security like antivirus, disk encryption, firewalls, and several areas made available through integration with Defender ATP.
 
-- **Establish device and user requirements through compliance policy**. With [compliance policies](../protect/device-compliance-get-started), you set the rules that devices and users must meet to be considered compliant. Rules can include OS versions, password requirements, device threat-levels, and more. When you integrate with Azure AD [conditional access policies](#configure-conditional-access) to enforce compliance policies, you can gate access to corporate resources for both managed devices, and devices that aren’t managed yet.
+- **Establish device and user requirements through compliance policy**. With [compliance policies](../protect/device-compliance-get-started.md), you set the rules that devices and users must meet to be considered compliant. Rules can include OS versions, password requirements, device threat-levels, and more. When you integrate with Azure AD [conditional access policies](#configure-conditional-access) to enforce compliance policies, you can gate access to corporate resources for both managed devices, and devices that aren’t managed yet.
 
 - **Integrate Intune with your Microsoft Defender Advanced Threat Protection (Defender ATP) team**. By [integrating with Defender ATP](#set-up-integration-with-defender-atp) you gain access to [security tasks](#review-security-tasks-from-defender-atp) that closely tie Defender ATP and Intune together to help identify and remediate devices that are at risk.
 
@@ -193,7 +193,7 @@ Use Antivirus profiles to manage Defender ATP antivirus settings on devices that
 
   Unlike settings that are part of a device restriction profile, these Antivirus settings support improved options. These settings can be used to manage Antivirus on co-managed devices when the [co-management workload slider](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) for Endpoint Protection is set to Intune. The Antivirus setting from device restriction profiles can’t be used with co-management.
 
-- **Windows Security experience** – Manage [settings for the Windows Security app](../protect/antivirus-windows-security-app-settings.md). The Windows security app is used by a number of Windows security features to provide notifications about the health and security of the machine. Security app notifications include firewalls, antivirus products, Windows Defender SmartScreen, and others.
+- **Windows Security experience** – Manage [settings for the Windows Security app](../protect/antivirus-security-experience-windows-settings.md). The Windows security app is used by a number of Windows security features to provide notifications about the health and security of the machine. Security app notifications include firewalls, antivirus products, Windows Defender SmartScreen, and others.
 
 ### Disk encryption
 
@@ -208,7 +208,7 @@ Because the encryption methods are part of the platforms, there are no additiona
 
 #### macOS profiles
 
-- **FileVault** – FileVault provides built-in Full Disk Encryption for macOS devices. Manage [settings for FileVault](../protect/disk-encryption-profile-settings.md#macos) on devices that run macOS.
+- **FileVault** – FileVault provides built-in Full Disk Encryption for macOS devices. Manage [settings for FileVault](../protect/endpoint-security-disk-encryption-profile-settings.md#macos) on devices that run macOS.
 
 #### Windows 10 profiles
 
@@ -351,7 +351,7 @@ While Intune can integrate with several [Mobile Threat Defense partners](../prot
 
 Configure:
 
-- [Security baselines](../protect/security-)
+- [Security baselines](../protect/security-baslines.md)
 - [Compliance policies](../protect/device-compliance-get-started.md)
 - [Conditional access policies](#configure-conditional-access)
 - [Integration with Defender ATP](../protect/advanced-threat-protection.md)

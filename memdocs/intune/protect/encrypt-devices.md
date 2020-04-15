@@ -34,7 +34,7 @@ Use Intune to manage a devices built-in disk or drive encryption to protect data
 Configure disk encryption for macOS FileVault or Windows 10 BitLocker as part of the following policies:
 
 - [Disk encryption policy](endpoint-security-configure-disk-encryption.md)for Endpoint security.
-- [Device configuration profile](../protect/pendpoint-protection-configure.md) for endpoint protection.
+- [Device configuration profile](../protect/endpoint-protection-configure.md) for endpoint protection.
 
 Intune also provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices.
 
@@ -113,7 +113,7 @@ BitLocker is available on devices that run **Windows 10 or later**.
 
 To configure BitLocker, use:
 
-- Endpoint security [disk encryption policy for Windows 10 BitLocker](endpoint-security-configure-disk-encryptioin.md#filevault-profile-for-macos). The BitLocker profile in *Endpoint security* is a focused group of settings that is dedicated to configuring BitLocker.
+- Endpoint security [disk encryption policy for Windows 10 BitLocker](../protect/endpoint-security-configure-disk-encryptioin.md#filevault-profile-for-macos). The BitLocker profile in *Endpoint security* is a focused group of settings that is dedicated to configuring BitLocker.
 - A [device configuration profile](endpoint-protection-configure.md) for endpoint protection for the Windows 10 or later platform. BitLocker settings are in the Windows Encryption settings category for Windows 10 endpoint protection.
 
   ![BitLocker settings](./media/encrypt-devices/bitlocker-settings.png)
