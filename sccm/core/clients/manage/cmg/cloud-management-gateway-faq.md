@@ -49,7 +49,7 @@ By scaling CMG to include two or more instances, you automatically benefit from 
 If you already deployed [internet-based client management](/sccm/core/clients/manage/plan-internet-based-client-management) (IBCM), you can also deploy the cloud management gateway. Clients receive policy for both services. As they roam onto the internet, they randomly select and use one of these internet-based services.
 
 
-### Do the user accounts have to be in the same Azure subscription as the subscription that hosts the CMG cloud service?
+### Do the user accounts have to be in the same Azure AD tenant as the tenant associated with the subscription that hosts the CMG cloud service?
 <!--SCCMDocs-pr issue #2873-->
 If your environment has more than one subscription, you can deploy CMG into any subscription that can host Azure cloud services. 
 
@@ -59,7 +59,7 @@ This question is common in the following scenarios:
 
 - Your use of Azure has grown organically across different teams  
 
-When you're using a Resource Manager deployment, onboard the associated Azure AD tenant. This connection allows Configuration Manager to authenticate to Azure to create, deploy, and manage the CMG.  
+When you're using a Resource Manager deployment, onboard the Azure AD tenant associated with the subscription. This connection allows Configuration Manager to authenticate to Azure to create, deploy, and manage the CMG.  
 
 If you're using Azure AD authentication for the users and devices managed over the CMG, onboard that Azure AD tenant. For more information on Azure services for cloud management, see [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard). When you onboard each Azure AD tenant, a single CMG can provide Azure AD authentication for multiple tenants, regardless of the hosting location.
 
