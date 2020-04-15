@@ -1977,6 +1977,9 @@ This step can be run in the full OS or Windows PE. To run this step in Windows P
 > [!NOTE]  
 > PowerShell isn't enabled by default on Windows Embedded operating systems.  
 
+> [!WARNING]
+> Certain anti-malware software may inadvertently trigger events against the Configuration Manager Run PowerShell Script task sequence step. It is recommended to exclude %windir%\temp\smstspowershellscripts so that the anti-malware software permits those scripts to run without interference.
+
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Run PowerShell Script**.
 
 ### Variables for Run PowerShell Script
