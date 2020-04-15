@@ -82,7 +82,7 @@ Consider the following fields:
 
   - **Compliance**: Compliance is evaluated against the compliance policies that are assigned to the device. The source of these policies and what information is in the console depends on how the device is managed; Intune, Configuration Manager, or co-management.
 
-  After compliance is reported to the admin center for a device, you can drill into the details to view additional details. When a device isn’t compliant, drill into its details to information about which policies aren't compliant.  That information can help you investigate and help you bring the device into compliance.
+    After compliance is reported to the admin center for a device, you can drill into the details to view additional details. When a device isn’t compliant, drill into its details to information about which policies aren't compliant.  That information can help you investigate and help you bring the device into compliance.
 
   - **Last check-in**: If a device hasn’t checked in for some time, its details, including its Compliance status, can be out of date.
 
@@ -179,7 +179,7 @@ Use Antivirus profiles to manage Defender ATP antivirus settings on devices that
 - Windows 10 or later
 - Any supported version of macOS
 - For Intune to manage antivirus settings on a device, Defender ATP must be installed on that device.
-- The Windows Security app is installed on
+- The Windows Security app is installed on all devices that run Window 10, and no additional prerequisites are required.
 
 #### macOS profiles
 
@@ -210,7 +210,7 @@ Because the encryption methods are part of the platforms, there are no additiona
 
 - **FileVault** – FileVault provides built-in Full Disk Encryption for macOS devices. Manage [settings for FileVault](../protect/disk-encryption-profile-settings.md#macos) on devices that run macOS.
 
-### Windows 10 profiles
+#### Windows 10 profiles
 
 - **BitLocker** – BitLocker Drive Encryption is a data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers. Manage [settings for BitLocker](../protect/disk-encryption-profile-settings.md#bitlocker).
 
@@ -233,7 +233,7 @@ Use Firewall policy to configure a devices built-in firewall on devices that run
 
 ### Endpoint detection and response
 
-When you integrate Defender ATP with Intune, you can use policy for endpoint detection and response. 
+When you integrate Defender ATP with Intune, you can use policy for endpoint detection and response.
 
 The capabilities of Microsoft Defender ATP endpoint detection and response provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
 
@@ -318,7 +318,7 @@ In addition to setting conditions for compliance, you can configure automatic ac
 
 When you integrate Intune with Azure AD [conditional access policies](#configure-conditional-access) to enforce compliance policies, Conditional access can use the compliance data to gate access to corporate resources for both managed devices, and devices that aren’t managed yet.
 
-To learn more, see [Set rules on devices to allow access to resources in your organization using Intune](../protect/ device-compliance-get-started.md).
+To learn more, see [Set rules on devices to allow access to resources in your organization using Intune](../protect/device-compliance-get-started.md).
 
 ## Configure conditional access
 
@@ -339,7 +339,7 @@ To learn more about using conditional access with Intune, see [Learn about Condi
 
 When you integrate Microsoft Defender Advanced Threat Protection (Defender ATP) with Intune, you improve your ability to identify and respond to risks.
 
-While Intune can integrate with several Mobile Threat Defense partners](../protect/mobile-threat-defense.md), when you use Defender ATP you gain a tight integration between Defender ATP and Intune with access to deep device protection options, including:
+While Intune can integrate with several [Mobile Threat Defense partners](../protect/mobile-threat-defense.md), when you use Defender ATP you gain a tight integration between Defender ATP and Intune with access to deep device protection options, including:
 
 - Security tasks – Seamless communication between ATP and Intune admins about devices at risk, how to remediate them, and confirmation when those risks are mitigated.
 - Access to device protection settings *attack surface reduction* rules, and *endpoint detection and response* that help protect devices from a variety of risks
