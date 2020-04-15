@@ -87,10 +87,8 @@ For Android app configuration policies, you can select the device enrollment typ
 
 > [!IMPORTANT]
 > Existing policies created prior to the release of this feature (April 2020 release - 2004) that do not have any certificate profiles associated with the policy will default to Work Profile and Device Owner Profile for device enrollment type. Also, existing policies created prior to the release of this feature that have certificate profiles associated with them will default to Work Profile only.
-
-Existing policies will not remediate or issue new certificates.
-
-Additionally, you can use Gmail and Nine email configuration profiles that will work for both Work Profile and Device Owner enrollment types, including the use of certificate profiles on both email configuration types. Any Gmail or Nine policies that you have created under Device Configuration for Work Profiles will continue to apply to the device and it is not necessary to move them to app configuration policies.
+> 
+> Existing policies will not remediate or issue new certificates.
 
 ## Validate the applied app configuration policy
 
