@@ -45,7 +45,7 @@ To create, edit, or assign roles, your account must have one of the following pe
 
 3. On the **Permissions** page, choose the permissions you want to use with this role.
 
-4. On the **Scope (Tags)** page, choose the tags for this role. This role can access resources that also have these tags. Choose **Next**.
+4. On the **Scope (Tags)** page, choose the tags for this role. When this role is assigned to a user, that user can access resources that also have these tags. Choose **Next**.
 
 5. On the **Review + create** page, when you're done, choose **Create**. The new role is displayed in the list on the **Intune roles - All roles** blade.
 
