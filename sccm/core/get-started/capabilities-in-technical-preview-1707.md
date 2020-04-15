@@ -66,7 +66,7 @@ Click a section of the **Surface Models** chart for a complete list of the devic
 ## Configure and deploy Windows Defender Application Guard policies
 <!-- 1351960 -->
 
-[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) is a new Windows feature that helps protect your users by opening untrusted web sites in a secure isolated container that is not accessible by other parts of the operating system. In this technical preview, we’ve added support to configure this feature using Configuration Manager compliance settings which you configure, and then deploy to a collection. This feature will be released in preview for the 64-bit version of the Windows 10 Fall Creator’s Update (codename: RS3). To test this feature now, you must be using a preview version of this update.
+[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) is a new Windows feature that helps protect your users by opening untrusted web sites in a secure isolated container that is not accessible by other parts of the operating system. In this technical preview, we've added support to configure this feature using Configuration Manager compliance settings which you configure, and then deploy to a collection. This feature will be released in preview for the 64-bit version of the Windows 10 Fall Creator's Update (codename: RS3). To test this feature now, you must be using a preview version of this update.
 
 ### Before you start
 
@@ -80,8 +80,9 @@ To create and deploy Windows Defender Application Guard policies, the Windows 10
 2. In the **Assets and Compliance** workspace, choose **Overview** > **Endpoint Protection** > **Windows Defender Application Guard**.
 3. In the **Home** tab, in the **Create** group, click **Create Windows Defender Application Guard Policy**.
 4. Using the blog post as a reference, you can browse and configure the available settings to try the feature out.
-5. In this release, we’ve added the new **Network Definition** page to the wizard. On this page, specify the corporate identity, and define your corporate network boundary.<br>Windows 10 PCs store only one network isolation list on the client. In this release, you can create two different kinds of network isolation lists (one from Windows Information Protection, and one from Windows Defender Application Guard), and deploy them to the client. If you deploy both policies, these network isolation lists must match. If you deploy lists that don’t match to the same client, the deployment will fail.
-You can find more information about how to specify network definitions in the [Windows Information Protection documentation](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm).
+5. In this release, we've added the new **Network Definition** page to the wizard. On this page, specify the corporate identity, and define your corporate network boundary.<br>Windows 10 PCs store only one network isolation list on the client. In this release, you can create two different kinds of network isolation lists (one from Windows Information Protection, and one from Windows Defender Application Guard), and deploy them to the client. If you deploy both policies, these network isolation lists must match. If you deploy lists that don't match to the same client, the deployment will fail.
+You can find more information about how to specify network definitions in the [Windows Information Protection documentation](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
+
 6. When you are finished, complete the wizard, and deploy the policy to one or more Windows 10 devices.
 
 ### Further reading
@@ -92,7 +93,7 @@ To read more about Windows Defender Application Guard, see [this blog post](http
 <!-- 1236459 --->
 
 In the last Technical Preview, we introduced a new capability that lets you [Create and run PowerShell scripts from the Configuration Manager console](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console).
-In this Technical Preview, we’ve expanded on this capability. Configuration Manager now reads the PowerShell script, and displays any parameters in the Create Script Wizard. You can supply a value for the parameter in the wizard that will be used when the script is run. Alternatively, you can leave the parameter blank. If you do this, you will need to supply a value for the parameter when you run the script.
+In this Technical Preview, we've expanded on this capability. Configuration Manager now reads the PowerShell script, and displays any parameters in the Create Script Wizard. You can supply a value for the parameter in the wizard that will be used when the script is run. Alternatively, you can leave the parameter blank. If you do this, you will need to supply a value for the parameter when you run the script.
 In this technical preview, you must supply any parameters that a script requires. In a future release, we plan to make supplying script parameters optional.
 
 ### Try it out!

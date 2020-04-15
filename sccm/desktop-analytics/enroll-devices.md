@@ -2,7 +2,7 @@
 title: Enroll devices in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn how to enroll devices in Desktop Analytics.
-ms.date: 10/30/2019
+ms.date: 04/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,95 +10,55 @@ ms.assetid: 2ea18d09-c957-47f7-8e54-c6f2b3c74347
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # How to enroll devices in Desktop Analytics
 
 When you [connect Configuration Manager](/sccm/desktop-analytics/connect-configmgr) to Desktop Analytics, you configure settings to enroll devices to Desktop Analytics. You can change these settings at any time. Also make sure the devices are up to date.
 
-
-
 ## Update devices
 
-There are two types of updates that you need to apply for the best experience with Desktop Analytics:
+Desktop Analytics uses two main Windows components:
 
-- [Compatibility updates](#bkmk_appraiser)  
-- [Connected User Experiences and Telemetry service](#bkmk_diagtrack)
+- **Compatibility component**: The compatibility component (**Appraiser**) runs diagnostics on the Windows device to evaluate its compatibility status with the latest versions of Windows 10.
 
+- **Connected User Experiences and Telemetry service**: With Windows diagnostic data enabled, the Connected User Experience and Telemetry service (**DiagTrack**) collects system, application, and driver data. Microsoft analyzes this data, and shares it back to you via Desktop Analytics.
 
-### <a name="bkmk_appraiser"></a> Compatibility updates
+Install the latest version of these components to get the best experience with Desktop Analytics.
 
-The compatibility component (Appraiser) runs diagnostics on the Windows device to evaluate its compatibility status with the latest versions of the Windows 10.
+The following table lists the updates for each component on supported OS versions:
+
+| OS version | Appraiser | DiagTrack |
+| --------------| ----------------------- | -------------------|
+| Windows 10 1909 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4529964) |
+| Windows 10 1903 | Included | [Latest cumulative update](https://support.microsoft.com/help/4498140) |
+| Windows 10 1809 | Included | [Latest cumulative update](https://support.microsoft.com/help/4464619) |
+| Windows 10 1803 | Included | [Latest cumulative update](https://support.microsoft.com/help/4099479) |
+| Windows 10 1709 | Included | [Latest cumulative update](https://support.microsoft.com/help/4043454) |
+| Windows 8.1 | [KB 2976978](https://support.microsoft.com/help/2976978) <sup>[Note 2](#bkmk_note2)</sup> | [Latest monthly rollup](https://support.microsoft.com/help/4009470) |
+| Windows 7 SP1 | [KB 2952664](https://support.microsoft.com/help/2952664) <sup>[Note 3](#bkmk_note3)</sup> | [Latest monthly rollup](https://support.microsoft.com/help/4009469) |
+
+> [!TIP]
+> Use Configuration Manager to automatically install these updates. For more information, see [Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates).
+>
+> Restart devices after you install the compatibility updates for the first time.
+
+### <a name="bkmk_note1"></a> Note 1: Windows 10
+
+While Windows 10 includes these components by default, Windows 10 devices require the latest cumulative update to get the full functionality of Desktop Analytics. For example, to assess the device for compatibility against the latest OS version, and to get the near real-time information for deployments and enrollment status.
+
+### <a name="bkmk_note2"></a> Note 2: Windows 8.1
 
 Microsoft regularly increments the updates for this component, but the associated KB number doesn't change. Make sure that you always have the latest version of the update.
 
-Restart devices after you install the compatibility updates for the first time.
+This component runs diagnostics on Windows 8.1 systems that participate in the Windows Customer Experience Improvement Program. These diagnostics help determine whether you might have compatibility issues when upgrading to Windows 10.
 
-> [!Tip]  
-> Use Configuration Manager to automatically install the latest version of these updates. For more information, see [Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates).  
+### <a name="bkmk_note3"></a> Note 3: Windows 7
 
-> [!Note]  
-> There's a related optional update, [KB 3150513](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=3150513). This update provides updated configuration and definitions for older compatibility updates. For more information, see [Latest compatibility definition update for Windows](https://support.microsoft.com/help/3150513).  
+If your organization doesn't apply "Monthly Quality Rollup" updates to Windows 7 devices, and only applies "Security Only" updates, you'll find some "Security Only" updates in the [list of updates superseding KB 2952664](https://www.catalog.update.microsoft.com/ScopedViewInline.aspx?updateid=ad3652cd-2689-4726-b3ef-b086ded23c7c). You can install these newer updates instead of KB 2952664.
 
-#### Windows 10
-
-Windows 10 includes the compatibility component. To get the latest compatibility update, install the latest Windows 10 cumulative update.
-
-#### Windows 8.1
-
-Download the update: [KB 2976978](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2976978) 
-
-Runs diagnostics on the Windows 8.1 systems that participate in the Windows Customer Experience Improvement Program. These diagnostics help determine whether you might have compatibility issues when upgrading to Windows 10.
-
-For more information, see [Compatibility update for keeping Windows up-to-date in Windows 8.1](https://support.microsoft.com/help/2976978).
-
-#### Windows 7 with Service Pack 1
-
-Download the update: [KB 2952664](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2952664) 
-
-Runs diagnostics on the Windows 7 with Service Pack 1 (SP1) systems that participate in the Windows Customer Experience Improvement Program. These diagnostics help determine whether you might have compatibility issues when upgrading to Windows 10.
-
-For more information, see [Compatibility update for keeping Windows up-to-date in Windows 7](https://support.microsoft.com/help/2952664).
-
-
-### <a name="bkmk_diagtrack"></a> Connected User Experiences and Telemetry service
-
-With Windows diagnostic data enabled, the Connected User Experience and Telemetry service (DiagTrack) collects system, application, and driver data. Microsoft analyzes this data, and shares it back to you via Desktop Analytics.
-
-For the best experience, install the following updates depending upon the OS version.
-
-> [!Note]  
-> When you install these updates, expect the following behaviors:
-> 
-> - Devices that you enroll to Desktop Analytics show up in the service in less than an hour  
-> - Devices quickly report the status on Windows feature and quality updates  
->
-> Without these updates, these processes can take over 48 hours for a device to report to Desktop Analytics.  
-
-
-#### Windows 10
-
-Install the latest Windows 10 cumulative update.
-
-<!-- 
-- Windows 10 1809: Included in RTM build
-- Windows 10 1803: [KB4458469](https://support.microsoft.com/help/4458469) (OS Build 17134.319)
-- Windows 10 1709: [KB4457136](https://support.microsoft.com/help/4457136) (OS Build 16299.697)
-- Windows 10 1703: [KB4457141](https://support.microsoft.com/help/4457141) (OS Build 15063.1358)
-- Windows 10 1607: [KB4457127](https://support.microsoft.com/help/4457127) (OS Build 14393.2517)
- -->
-
-#### Windows 8.1
-
-Install the October 2018 monthly rollup, [KB4462926](https://support.microsoft.com/help/4462926)
-
-#### Windows 7
-
-Install the October 2018 monthly rollup, [KB4462923](https://support.microsoft.com/help/4462923)
-
-
+> [!NOTE]
+> For Windows 8.1, Microsoft only revises KB 2976978 as part of "Monthly Quality Rollup" updates.
 
 ## Device enrollment
 

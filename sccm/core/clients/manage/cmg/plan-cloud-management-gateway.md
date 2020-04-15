@@ -144,7 +144,7 @@ Fourth Coffee has a central administration site in an on-premises datacenter at 
 As clients roam onto the internet, they communicate with the CMG in the West US Azure region. The CMG forwards this communication to the CMG connection point in the client's assigned primary site.
 
 > [!TIP]
-> You don't need to deploy multiple CMG instances for the purposes of geolocation. The Configuration Manager client is mostly unaffected by the slightly latency that occurs with the cloud service, even when geographically distant.
+> You don't need to deploy more than one cloud management gateway for the purposes of geolocation. The Configuration Manager client is mostly unaffected by the slight latency that can occur with the cloud service, even when geographically distant.
 
 ## Requirements
 
