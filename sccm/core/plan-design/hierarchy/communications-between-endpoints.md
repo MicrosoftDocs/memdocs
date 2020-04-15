@@ -79,8 +79,8 @@ When you deploy a site system role that uses Internet Information Services (IIS)
 ### <a name="bkmk_client2mp"></a> Client to management point communication
 
 There are two stages when a client communicates with a management point: authentication (transport) and authorization (message). This process varies depending upon the following factors: 
-- Site configuration: HTTP, HTTPS, or enhanced HTTP
-- Management point configuration: HTTPS only, or allows HTTP or HTTPS
+- Site configuration: HTTPS only, allows HTTP or HTTPS, or allows HTTP or HTTPS with enhanced HTTP enabled
+- Management point configuration: HTTPS or HTTP
 - Device identity for device-centric scenarios
 - User identity for user-centric scenarios
 
