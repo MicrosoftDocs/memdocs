@@ -160,7 +160,7 @@ These changes apply to new VPN profiles.
 
 To minimize compatibility risk, existing VPN profiles are unchanged.  When you edit an existing profile, the settings appear as they did when the profile was created.  
 
-For more information, see [VPN Profiles on mobile devices](../../../mdm/deploy-use/create-vpn-profiles.md).
+For more information, see [VPN Profiles on mobile devices](/configmgr/protect/deploy-use/vpn-profiles).
 
 ### Limited support for Cryptography: Next Generation (CNG) certificates <!-- 1356191 -->
 

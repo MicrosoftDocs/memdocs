@@ -138,7 +138,7 @@ When you install the update bundle on a site server, you can choose to automatic
 > When you choose to automatically update the site database, the process updates a database regardless whether the database is located on the site server or on a remote computer.  
 
 > [!IMPORTANT]  
-> Before you update the site database, create a backup of the site database. You cannot uninstall an update to the site database. For information about how to create a backup for Configuration Manager, see [Backup and recovery for Configuration Manager](../../../protect/understand/backup-and-recovery.md).  
+> Before you update the site database, create a backup of the site database. You cannot uninstall an update to the site database. For information about how to create a backup for Configuration Manager, see [Backup and recovery for Configuration Manager](/sccm/core/servers/manage/backup-and-recovery).  
 
 **Manual Update of the Site Database**  
 

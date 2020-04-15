@@ -52,7 +52,7 @@ Coho Vineyard & Winery is opening a visitor center and needs kiosks that run Win
    > [!NOTE]  
    >  The restarts that are required to install the Endpoint Protection client are a one-time occurrence, which happen during the setup period for the devices and before the visitor center is operational. Unlike the periodic deployment of applications or software definition updates, the next time the Endpoint Protection client is installed on the same device will probably be when the company upgrades to the next version of Configuration Manager.  
 
-    For more information, see [Configuring Endpoint Protection](../../../protect/deploy-use/configure-endpoint-protection.md).  
+    For more information, see [Configuring Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection-configure).  
 
 6. With the configuration settings for the client now in place, the Admin prepares to install the Configuration Manager clients. Before the Admin can install the clients, they must manually disable the write filter on the Windows Embedded devices. The Admin reads the OEM documentation that accompanies the kiosks and follows their instructions to disable the write filters.  
 
@@ -102,7 +102,7 @@ Coho Vineyard & Winery is opening a visitor center and needs kiosks that run Win
      The Admin selects the Windows Embedded devices collection for the automatic deployment rule.  
 
      For more information, see  
-               Step 3: Configure Configuration Manager Software Updates to Deliver Definition Updates to Client Computers in [Configuring Endpoint Protection](../../../protect/deploy-use/configure-endpoint-protection.md)  
+               Step 3: Configure Configuration Manager Software Updates to Deliver Definition Updates to Client Computers in [Configuring Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection-configure)  
 
 10. The Admin decides to configure a maintenance task that periodically commits all changes on the overlay. This task is to support the software update definitions deployment, to reduce the number of updates that accumulate and must be installed again, each time the device restarts. In the Admin's experience, this helps the antimalware programs run more efficiently.  
 

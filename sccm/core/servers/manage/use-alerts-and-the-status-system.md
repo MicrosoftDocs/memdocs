@@ -190,7 +190,7 @@ Because the status system maintains separate configurations for each site you mu
 
 |Action|More Information|  
 |------------|----------------------|  
-|Configure Endpoint Protection alerts for a collection|See **How to Configure Alerts for Endpoint Protection in Configuration Manager** in [Configuring Endpoint Protection](../../../protect/deploy-use/configure-endpoint-protection.md)|  
+|Configure Endpoint Protection alerts for a collection|See **How to Configure Alerts for Endpoint Protection in Configuration Manager** in [Configuring Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection-configure)|  
 |Configure client status alerts for a collection|See  [How to configure client status](../../../core/clients/deploy/configure-client-status.md).|  
 |Manage Configuration Manager alerts|See the section [Management tasks for alerts](#BKMK_Manage) in this topic.|  
 |Configure email subscriptions to alerts|See the section [Management tasks for alerts](#BKMK_Manage) in this topic..|  

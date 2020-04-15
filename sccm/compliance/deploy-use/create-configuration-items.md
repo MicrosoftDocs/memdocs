@@ -29,7 +29,7 @@ Before you start, read [Get started with compliance settings](../../compliance/g
 
 ## Configuration items for devices managed with Intune
 
-Before you start, read [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md). To learn some basics about compliance settings, read [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) to implement any necessary prerequisites. To review information about configuration items for devices managed with Intune, see [Configuration items for devices managed with Intune](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md).
+Before you start, read [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md). To learn some basics about compliance settings, read [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) to implement any necessary prerequisites. To review information about configuration items for devices managed with Intune, see [Configuration items for devices managed with Intune](/configmgr/mdm/understand/what-happened-to-hybrid).
 
 ## Next steps
 
