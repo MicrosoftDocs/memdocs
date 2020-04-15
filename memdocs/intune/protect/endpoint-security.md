@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage endpoint security in Microft Intune | Microsoft Docs
-description: Learn how Security Administrators can use the Endpoint Security node to manage device security and remediate issues for devices in Microft Endpoint Manager. 
+description: Learn how Security Administrators can use the Endpoint Security node to manage device security and remediate issues for devices in Microsoft Endpoint Manager. 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -212,7 +212,7 @@ Because the encryption methods are part of the platforms, there are no additiona
 
 #### Windows 10 profiles
 
-- **BitLocker** – BitLocker Drive Encryption is a data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers. Manage [settings for BitLocker](../protect/disk-encryption-profile-settings.md#bitlocker).
+- **BitLocker** – BitLocker Drive Encryption is a data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers. Manage [settings for BitLocker](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker).
 
 ### Firewall
 
