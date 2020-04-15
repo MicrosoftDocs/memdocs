@@ -23,12 +23,12 @@ To enroll devices to Desktop Analytics, they need to send diagnostic data to Mic
 When you integrate Configuration Manager with Desktop Analytics, you also use it to manage the diagnostic data level on devices. For the best experience, use Configuration Manager.
 
 > [!Important]  
-> In most circumstances, only use Configuration Manager to configure these settings. Don't also apply these settings in domain group policy objects. For more information, see [Conflict resolution](/configmgr/desktop-analytics/enroll-devices#conflict-resolution).
+> In most circumstances, only use Configuration Manager to configure these settings. Don't also apply these settings in domain group policy objects. For more information, see [Conflict resolution](enroll-devices.md#conflict-resolution).
 
 The basic functionality of Desktop Analytics works at the **Basic** [diagnostic data level](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels). If you don't configure the **Enhanced (Limited)** level in Configuration Manager, you won't get the following features of Desktop Analytics:
 
 - App usage
-- [Additional app insights](https://docs.microsoft.com/sccm/desktop-analytics/compat-assessment#additional-insights)
+- [Additional app insights](compat-assessment.md#additional-insights)
 - Deployment status data
 - Health monitoring data
 
@@ -46,7 +46,7 @@ For more information about diagnostic data shared with Microsoft with **Enhanced
 > [!Important]
 > Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, while Desktop Analytics supports Windows 8.1 devices, Microsoft doesn't collect Windows diagnostic data from Windows 8.1 devices located in European countries (EEA and Switzerland).
 
-For more information, see [Desktop Analytics privacy](/sccm/desktop-analytics/privacy).
+For more information, see [Desktop Analytics privacy](privacy.md).
 
 The following articles are also good resources for better understanding Windows diagnostic data levels:
 
@@ -68,7 +68,7 @@ To enable data sharing, configure your proxy server to allow the following inter
 > [!Important]  
 > For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the diagnostic data endpoints. SSL interception and inspection aren't possible. To use Desktop Analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
 
-Starting in version 2002, if the Configuration Manager site fails to connect to required endpoints for a cloud service, it raises a critical status message ID 11488. When it can't connect to the service, the SMS_SERVICE_CONNECTOR component status changes to critical. View detailed status in the [Component Status](/configmgr/core/servers/manage/use-alerts-and-the-status-system#BKMK_MonitorSystemStatus) node of the Configuration Manager console.<!-- 5566763 -->
+Starting in version 2002, if the Configuration Manager site fails to connect to required endpoints for a cloud service, it raises a critical status message ID 11488. When it can't connect to the service, the SMS_SERVICE_CONNECTOR component status changes to critical. View detailed status in the [Component Status](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) node of the Configuration Manager console.<!-- 5566763 -->
 
 ### Server connectivity endpoints
 
@@ -77,8 +77,8 @@ The service connection point needs to communicate with the following endpoints:
 | Endpoint  | Function  |
 |-----------|-----------|
 | `https://aka.ms` | Used to locate the service |
-| `https://graph.windows.net` | Used to automatically retrieve settings like CommercialId when attaching your hierarchy to Desktop Analytics (on Configuration Manager Server role). For more information, see [Configure the proxy for a site system server](/sccm/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server). |
-| `https://*.manage.microsoft.com` | Used to synch device collection memberships, deployment plans, and device readiness status with Desktop Analytics (on Configuration Manager Server role only). For more information, see [Configure the proxy for a site system server](/sccm/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server). |
+| `https://graph.windows.net` | Used to automatically retrieve settings like CommercialId when attaching your hierarchy to Desktop Analytics (on Configuration Manager Server role). For more information, see [Configure the proxy for a site system server](../core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
+| `https://*.manage.microsoft.com` | Used to synch device collection memberships, deployment plans, and device readiness status with Desktop Analytics (on Configuration Manager Server role only). For more information, see [Configure the proxy for a site system server](../core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
 
 ### User experience and diagnostic component endpoints
 
@@ -114,7 +114,7 @@ Client devices need to communicate with the following endpoints:
 
 ## Proxy server authentication
 
-Make sure that a proxy doesn't block the diagnostic data because of authentication. If your organization uses proxy server authentication for outbound traffic, use one or more of the following approaches:
+If your organization uses proxy server authentication for internet access, make sure that it doesn't block the diagnostic data because of authentication. If your proxy doesn't allow devices to send this data, they won't show in Desktop Analytics.
 
 ### Bypass (recommended)
 
@@ -124,21 +124,37 @@ Configure your proxy servers to not require proxy authentication for traffic to 
 
 Configure devices to use the signed-in user's context for proxy authentication. This method requires the following configurations:
 
-- Devices have the current quality update for Windows 7, Windows 8.1, or Windows 10, version 1703 or later
+- Devices have the current quality update for a supported version of Windows
+
 - Configure user-level proxy (WinINET proxy) in **Proxy settings** in the Network & Internet group of Windows Settings. You can also use the legacy Internet Options control panel.
+
 - Make sure that the users have proxy permission to reach the diagnostic data endpoints. This option requires that the devices have console users with proxy permissions, so you can't use this method with headless devices.
 
 > [!IMPORTANT]
-> The user proxy authentication approach is incompatible with the use of Microsoft Defender Advanced Threat Protection. This behavior is because this authentication relies on the **DisableEnterpriseAuthProxy** registry key set to `0`, while Microsoft Defender ATP requires it to be set to `1`. For more information, see [Configure machine proxy and Internet connectivity settings](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
+> The user proxy authentication approach is incompatible with the use of Microsoft Defender Advanced Threat Protection. This behavior is because this authentication relies on the **DisableEnterpriseAuthProxy** registry key set to `0`, while Microsoft Defender ATP requires it to be set to `1`. For more information, see [Configure machine proxy and internet connectivity settings in Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
 ### Device proxy authentication
+
+This approach supports the following scenarios:
+
+- Headless devices, where no user signs in, or users of the device don't have internet access
+
+- Authenticated proxies that don't use Windows Integrated Authentication
+
+- If you also use Microsoft Defender Advanced Threat Protection
 
 This approach is the most complex because it requires the following configurations:
 
 - Make sure devices can reach the proxy server through WinHTTP in local system context. Use one of the following options to configure this behavior:
-  - The command line 'netsh winhttp set proxy'
-  - Web Proxy Auto-discovery Protocol (WPAD)
+
+  - The command line `netsh winhttp set proxy`
+
+  - Web proxy auto-discovery (WPAD) protocol
+
   - Transparent proxy
+
+  - Configure device-wide WinINET proxy using the following group policy setting: **Make proxy settings per-machine (rather than per-user)** (ProxySettingsPerUser = `1`)
+
   - Routed connection, or that uses network address translation (NAT)
 
 - Configure proxy servers to allow the computer accounts in Active Directory to access the diagnostic data endpoints. This configuration requires proxy servers to support Windows Integrated Authentication.  

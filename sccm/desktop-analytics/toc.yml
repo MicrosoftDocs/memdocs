@@ -52,6 +52,8 @@
     href: log-collector.md
   - name: Monitor connection health
     href: monitor-connection-health.md
+  - name: Group policy settings
+    href: group-policy-settings.md
   - name: Frequently asked questions
     href: faq.md
   - name: Get support
