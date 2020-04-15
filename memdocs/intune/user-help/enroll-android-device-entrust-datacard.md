@@ -120,27 +120,11 @@ Derived credentials are an implementation of the National Institute of Standards
 
     ![Example image of Set up your work phone screen, highlighting Start button.](./media/fully-managed-intune-app-17.png)   
  
-15. Tap **Sign in from another device**. Sign in with your work or school account. 
-
-16. Write down the onscreen code.  
-
-       > [!div class="mx-imgBorder"]
-       > ![Screenshot of Intune app with onscreen message and code.](./media/copy-code-intercede.png)
-
-17. Switch to your smart card-enabled device and go to https://microsoft.com/devicelogin.
-
-18. Enter the code you previously wrote down.
-
-       > [!div class="mx-imgBorder"]
-       > ![Screenshot of the Company Portal website "Enter code" prompt.](./media/enter-code-intercede.png)
-
-19. Insert your smart card to sign in.  
-
-20. Return to the Intune app on your mobile device and follow the onscreen instructions to complete enrollment. 
+15. Return to the Intune app on your mobile device and follow the onscreen instructions until enrollment is done. 
 
     ![Example image of Set up access, register your device screen, highlighting Done button.](./media/fully-managed-intune-app-19.png)   
 
-21. Continue to the [set up your smart card](enroll-android-device-entrust-datacard.md#set-up-smart-card) section in this article to finish setting up your device.  
+16. Continue to the [set up your smart card](enroll-android-device-entrust-datacard.md#set-up-smart-card) section in this article to finish setting up your device.  
 
 ### QR code enrollment  
 In this section, you'll scan your company-provided QR code.  When you're done, we'll redirect you back to the device enrollment steps.     
