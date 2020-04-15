@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Manage applications for on-premises mobile device management (MDM) in Configuration Manager.
 ms.date: 01/13/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-hybrid
+ms.technology: configmgr-mdm
 ms.topic: conceptual
 ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
 author: aczechowski

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Install and configure the Exchange connector for Configuration Manager to manage mobile devices via ActiveSync.
 ms.date: 12/31/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-hybrid
+ms.technology: configmgr-mdm
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: e179e30a-a1fc-461e-8087-ff3a55803450

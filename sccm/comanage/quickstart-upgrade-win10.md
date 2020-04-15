@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Upgrade devices to Windows 10 version 1709 or later, which is required for co-management
 ms.date: 01/14/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology: configmgr-comanage
 ms.topic: conceptual
 ms.assetid: 561eb5b6-f90c-485a-91c2-e45bb0ce7877
 author: aczechowski

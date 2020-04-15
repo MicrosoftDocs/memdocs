@@ -2,12 +2,10 @@
 title: Windows Autopilot for existing devices
 titleSuffix: Configuration Manager
 description: Use a Configuration Manager task sequence to reimage and provision a Windows 7 device for Windows Autopilot user-driven mode
-ms.date: 03/05/2019
+ms.date: 03/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-
-
 ms.assetid: 2e96f847-5b5a-4da9-8e8f-6aa488838508
 author: aczechowski
 ms.author: aaroncz
@@ -48,7 +46,7 @@ manager: dougeby
 
     2. Sign in to Intune with administrator credentials  
         ``` PowerShell  
-        Connect-AutopilotIntune 
+        connect-msgraph 
         ```
 
     3. Retrieve all Windows Autopilot profiles associated with your Intune tenant  
@@ -125,6 +123,14 @@ If you edit the task sequence, it's similar to the default task sequence to appl
 - **Prepare Windows for Capture**: This step runs Windows Sysprep, and has the setting to **Shutdown the computer after running this action**. For more information, see [Prepare Windows for Capture](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareWindowsforCapture).  
 
 The Windows Autopilot for existing devices task sequence results in a device joined to Azure Active Directory (Azure AD). 
+
+> [!NOTE]  
+> With Windows 10 version 1903 and version 1909, Autopilot has a known issue where Sysprep deletes the **AutopilotConfigurationFile.json** file. If you use this method to deploy Windows 10 version 1903 or version 1909, edit this task sequence, and make the following changes:
+>
+> 1. Disable the **Prepare Windows for Capture** step.
+> 2. Immediately after the disabled **Prepare Windows for Capture** step, add a new **Run Command Line** step. Configure it to run the following command line: `c:\windows\system32\sysprep\sysprep.exe /oobe /reboot`
+>
+> For more information, see [Windows Autopilot - known issues](https://docs.microsoft.com/windows/deployment/windows-autopilot/known-issues).
 
 Use OneDrive for Business [known folder move](https://docs.microsoft.com/onedrive/redirect-known-folders) to make sure the user's data is backed up before the Windows 10 upgrade.
 

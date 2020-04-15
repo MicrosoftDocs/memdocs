@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn how to use prerequisite checker to identify and fix problems that might block a site or site system role installation.
 ms.date: 01/13/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: aaf13bb8-4ba2-4bd7-9fac-d36a9d88a1b6
 author: mestew

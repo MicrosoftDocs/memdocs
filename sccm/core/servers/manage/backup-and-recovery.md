@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn to back up your sites before the event of failure or data loss in Configuration Manager.
 ms.date: 01/08/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew

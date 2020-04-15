@@ -2,16 +2,14 @@
 title: Management insights
 titleSuffix: Configuration Manager
 description: Learn about the management insights functionality available in the Configuration Manager console.
-ms.date: 11/29/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Management insights in Configuration Manager
@@ -29,7 +27,7 @@ To view the rules, your account needs the **read** permission on the **site** ob
 2. Go to the **Administration** workspace, expand **Management Insights**, and select **All Insights**.  
 
     > [!Note]  
-    > Starting in version 1810, when you select the **Management Insights** node, it shows the [Management insights dashboard](#bkmk_insights).  
+    > When you select the **Management Insights** node, it shows the [Management insights dashboard](#bkmk_insights).  
 
 3. Open the management insights group name you want to review. Select **Show Insights** in the ribbon.  
 
@@ -70,7 +68,7 @@ Depending upon the rule, this action has one of the following behaviors:
 
 <!--1357979-->
 
-Starting in version 1810, the **Management Insights** node includes a graphical dashboard. This dashboard displays an overview of the rule states, which makes it easier for you to show your progress.
+The **Management Insights** node includes a graphical dashboard. This dashboard displays an overview of the rule states, which makes it easier for you to show your progress.
 
 Use the following filters at the top of the dashboard to refine the view:
 
@@ -99,14 +97,15 @@ The dashboard includes the following tiles:
 
 Rules are organized into the following management insight groups:
 
-- [Applications](#applications)  
-- [Cloud services](#cloud-services)  
-- [Collections](#collections)  
-- [Proactive maintenance](#proactive-maintenance)  
-- [Security](#security)  
-- [Simplified management](#simplified-management)  
-- [Software Center](#software-center)  
-- [Windows 10](#windows-10)  
+- [Applications](#applications)
+- [Cloud services](#cloud-services)
+- [Collections](#collections)
+- [Configuration Manager Assessment](#configuration-manager-assessment)
+- [Proactive maintenance](#proactive-maintenance)
+- [Security](#security)
+- [Simplified management](#simplified-management)
+- [Software Center](#software-center)
+- [Windows 10](#windows-10)
 
 ### Applications
 
@@ -120,9 +119,13 @@ Helps you integrate with many cloud services, which enable modern management of 
 
 - **Assess co-management readiness**: Helps you understand what steps are needed to enable co-management. This rule has prerequisites. For more information, see [Co-management overview](/sccm/comanage/overview).  
 
+- **Devices not uploaded to Azure AD**: Starting in version 2002, this rule lists devices that aren't uploaded to Azure AD because the site isn't properly configured for HTTPS.<!--6268489--> Configure [Enhanced HTTP](/configmgr/core/plan-design/hierarchy/enhanced-http), or enable at least one management point for HTTPS. If you already configured the site for HTTPS communication, this rule doesn't appear.
+
 - **Configure Azure services for use with Configuration Manager**: This rule helps you onboard Configuration Manager to Azure AD, which enables clients to authenticate with the site using Azure AD. For more information, see [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard).  
 
 - **Enable devices to be hybrid Azure Active Directory joined**: Azure AD-joined devices allow users to sign in with their domain credentials while ensuring devices meet the organization's security and compliance standards. For more information, see [Azure AD hybrid identity design considerations](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview).  
+
+- **Sites that don't have proper HTTPS configuration**: Starting in version 2002, this rule lists sites in your hierarchy that aren't properly configured for HTTPS. This configuration prevents the site from [synchronizing collection membership results to Azure Active Directory (Azure AD) groups](/configmgr/core/clients/manage/collections/create-collections#bkmk_aadcollsync). It may cause Azure AD sync to not upload all devices. Management of these clients may not function properly.<!--6268489--> Configure [Enhanced HTTP](/configmgr/core/plan-design/hierarchy/enhanced-http), or enable at least one management point for HTTPS. If you already configured the site for HTTPS communication, this rule doesn't appear.
 
 - **Update clients to the latest Windows 10 version**: Windows 10, version 1709 or above improves and modernizes the computing experience of your users. For more information, see [Key articles about adopting Windows as a service](/sccm/core/understand/configuration-manager-and-windows-as-service#key-articles-about-adopting-windows-as-a-service).  
 
@@ -148,6 +151,37 @@ Starting in version 1902, there are new rules with recommendations on managing c
 
   - **Collections with no query rules and schedule full evaluation selected**  
 
+### Configuration Manager Assessment
+
+<!--3607758-->
+
+Starting in version 2002, this group is courtesy of Microsoft Premier Field Engineering. These rules are a sample of the many more checks that Microsoft Premier provides in the [Services Hub](https://docs.microsoft.com/services-hub/health/getting_started_with_on_demand_assessments).
+
+- **Active Directory Security Group Discovery is configured to run too frequently**: You typically don't need to configure Active Directory Security Group Discovery to occur more frequently than every three hours. A more frequent configuration can have a negative performance impact on Active Directory, the network, and Configuration Manager. Enable incremental synchronization instead of using a full sync schedule. For more information, see [Active Directory group discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutGroup).
+
+- **Active Directory System Discovery is configured to run too frequently**: You typically don't need to configure Active Directory System Discovery to occur more frequently than every three hours. A more frequent configuration can have a negative performance impact on Active Directory, the network, and Configuration Manager. Enable incremental synchronization instead of using a full sync schedule. For more information, see [Active Directory system discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutSystem).
+
+- **Active Directory User Discovery is configured to run too frequently**: You typically don't need to configure Active Directory User Discovery to occur more frequently than every three hours. A more frequent configuration can have a negative performance impact on Active Directory, the network, and Configuration Manager. Enable incremental synchronization instead of using a full sync schedule. For more information, see [Active Directory user discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
+
+- **Collections limited to All Systems or All Users**: Review any collections that use the **All Systems** or **All Users** collections as the limiting collection. Configuration Manager updates the membership of these default collections with data from the Active Directory discovery methods. This data may not be valid information for Configuration Manager clients.
+
+- **Heartbeat Discovery is disabled**: Heartbeat discovery requires that you install the Configuration Manager client on devices. It's the only discovery method that clients start. All other methods occur on site servers. Heartbeat discovery is essential to keep client activity status current. It makes sure that the site doesn't accidentally age out the resource records from the site database. For more information, see [Heartbeat discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutHeartbeat).
+
+- **Long running collection queries enabled for incremental updates**: Collections with a last incremental refresh time higher than 30 seconds use site server and database resources, which could potentially impact overall Configuration Manager performance. For more information, see [Best practices for collections](/configmgr/core/clients/manage/collections/best-practices-for-collections).
+
+- **Reduce the number of applications and packages on distribution points**: Microsoft officially supports a combined total of up to 10,000 packages and applications on a distribution point. Exceeding this total can lead to operational problems. For more information, see [Size and scale numbers - distribution point](/configmgr/core/plan-design/configs/size-and-scale-numbers#distribution-point).
+
+- **Secondary site installation issues**: The installation status of some secondary sites is **Pending** or **Failed**. These states mean that you started the install but it didn't complete successfully. Until the secondary site install finishes, clients may not communicate properly with the primary site. Check the **Monitoring** workspace, and retry the installation. For more information, see [Retry installation of a failed update](/configmgr/core/servers/manage/install-in-console-updates#bkmk_retry).
+
+- **Update all sites to the same version**: Use the same version of Configuration Manager in a hierarchy. This configuration makes sure all sites provide the same functionality. Sites of different versions in the same hierarchy introduce interoperability scenarios. Later versions of Configuration Manager include new features and resolve known issues. For more information, see [Interoperability between different versions](/configmgr/core/plan-design/hierarchy/interoperability-between-different-versions).
+
+For more information on these rules, see [Remediation steps for Configuration Manager management insights](https://docs.microsoft.com/services-hub/health/remediation-steps-configmgr).
+
+> [!TIP]
+> If you're already a customer of Microsoft Unified or Microsoft Premier, sign in to the [Services Hub](https://serviceshub.microsoft.com/assessments/) for additional on-demand assessments.
+>
+> For more information about Microsoft Services, see [Support Solutions](https://www.microsoft.com/enterprise/services/support).
+
 ### Proactive maintenance
 
 <!--1352184-->
@@ -155,7 +189,7 @@ The rules in this group highlight potential configuration issues to avoid throug
 
 - **Boundary groups with no assigned site systems**: Without assigned site systems, boundary groups can only be used for site assignment. For more information, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).  
 
-- **Boundary groups with no members**: Boundary groups aren’t applicable for site assignment or content lookup if they don’t have any members. For more information, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).  
+- **Boundary groups with no members**: Boundary groups aren't applicable for site assignment or content lookup if they don't have any members. For more information, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).  
 
 - **Distribution points not serving content to clients**: Distribution points that haven't served content to clients in the past 30 days. This data is based on reports from clients of their download history. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points).  
 

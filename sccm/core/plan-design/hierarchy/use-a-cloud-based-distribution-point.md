@@ -2,9 +2,9 @@
 title: Cloud distribution point
 titleSuffix: Configuration Manager
 description: Plan and design for distributing software content through Microsoft Azure with cloud distribution points in Configuration Manager.
-ms.date: 06/17/2019
+ms.date: 04/08/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
@@ -164,7 +164,8 @@ When you use a cloud distribution point in your hierarchy, use the following inf
   - Third-party software updates  
 
     > [!Important]  
-    > While the Configuration Manager console doesn't block the distribution of Microsoft software updates to a cloud distribution point, you're paying Azure costs to store content that clients don't use. Internet-based clients always get Microsoft software update content from the Microsoft Update cloud service. Don't distribute Microsoft software updates to a cloud distribution point.  
+    > - While the Configuration Manager console doesn't block the distribution of Microsoft software updates to a cloud distribution point, you're paying Azure costs to store content that clients don't use. Internet-based clients always get Microsoft software update content from the Microsoft Update cloud service. Don't distribute Microsoft software updates to a cloud distribution point.
+    > - When using a cloud distribution point, the content for third-party updates won't download to clients if [Delivery Optimization](/configmgr/core/clients/deploy/about-client-settings#delivery-optimization) is enabled. <!--6598587--> 
 
 - Starting in version 1806, configure a pull-distribution point to use a cloud distribution point as a source. For more information, see [About source distribution points](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point#about-source-distribution-points).<!--1321554-->  
 

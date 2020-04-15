@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
 ms.date: 07/31/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
@@ -169,6 +169,9 @@ Select **Sign in** to authenticate to Azure as an administrative user. These cre
 
 Select **OK** to create the web app in Azure AD and close the Create Server Application dialog. This action returns to the [Server app dialog](#server-app-dialog).
 
+> [!NOTE]
+> If you have an Azure AD Conditional Access policy defined and applies to **All Cloud apps** - you must exclude the created Server Application from this policy. For more information on how to exclude specific apps, see [Azure AD Conditional Access Documentation](https://docs.microsoft.com/azure/active-directory/conditional-access/).
+
 ### Native Client app
 
 This app is the Azure AD type *Native*, also referred to as a client app in Configuration Manager.
@@ -208,7 +211,6 @@ When you select **Create** from the Client App dialog, it opens the Create Clien
 Select **Sign in** to authenticate to Azure as an administrative user. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
 
 Select **OK** to create the native app in Azure AD and close the Create Client Application dialog. This action returns to the [Client App dialog](#client-app-dialog).
-
 
 ## Configuration or Discovery
 

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use these diagrams to help understand and troubleshoot SQL replication between Configuration Manager sites
 ms.date: 02/05/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 71d7430e-c5aa-485b-8dc0-c80fd8f29f17
 author: aczechowski

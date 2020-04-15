@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Co-management offers immediate value when you enable it.
 ms.date: 01/14/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology: configmgr-comanage
 ms.topic: conceptual
 ms.assetid: 8d878443-90e7-46e4-9cd3-99e2a19b2ad0
 author: aczechowski

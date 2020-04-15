@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about using a third-party MDM service with Configuration Manager 
 ms.date: 05/21/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology: configmgr-comanage
 ms.topic: conceptual
 
 

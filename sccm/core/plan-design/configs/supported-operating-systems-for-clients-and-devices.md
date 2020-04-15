@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
 ms.date: 02/19/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
@@ -39,7 +39,7 @@ To manage the following Windows OS versions, use the client that's included with
 #### Windows Virtual Desktop
 
 <!--3556025-->
-[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) is a preview feature of Microsoft Azure and Microsoft 365. Starting in version 1906, use Configuration Manager to manage these virtual devices running Windows in Azure.
+[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) is a desktop and app virtualization service that runs on Microsoft Azure. Starting in version 1906, use Configuration Manager to manage these virtual devices running Windows in Azure.
 
 Similar to a terminal server, some of these virtual devices allow multiple concurrent active user sessions. To help with client performance, Configuration Manager now disables user policies on any device that allows these multiple user sessions. Even if you enable user policies, the client disables them by default on these devices, which include Windows 10 Enterprise multi-session and terminal servers.
 

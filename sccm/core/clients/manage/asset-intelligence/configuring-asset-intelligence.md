@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Set up Asset Intelligence in Configuration Manager."
 ms.date: 02/22/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 author: mestew

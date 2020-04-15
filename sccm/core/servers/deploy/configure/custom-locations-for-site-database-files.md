@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn how to specify custom locations for SQL Server database files."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 author: mestew

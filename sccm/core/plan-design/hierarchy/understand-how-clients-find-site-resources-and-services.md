@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn how and when Configuration Manager clients use service location to find site resources."
 ms.date: 02/7/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski

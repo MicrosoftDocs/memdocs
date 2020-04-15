@@ -1,7 +1,7 @@
 ---
 title: "Create a Program"
 titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
+ms.date: "03/23/2020"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -115,7 +115,7 @@ public void CreateProgram(WqlConnectionManager connection,
 |`newProgramName`|-   Managed: `String`<br />-   VBScript: `String`|The name for the new program.|  
 |`newProgramComment`|-   Managed: `String`<br />-   VBScript: `String`|Comment that describes the program in the Configuration Manager console.|  
 |`newProgramCommandLine`|-   Managed: `String`<br />-   VBScript: `String`|The command line that runs when the program is launched.|  
-|`newMaxRunTime`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The approximate duration, in minutes, of program execution on the client computer.|  
+|`newMaxRunTime`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The approximate duration, in minutes, of program execution on the client computer. This parameter can have a max value of 720 minutes or 12 hours.|  
 
 ## Compiling the Code  
  The C# example requires:  

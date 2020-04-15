@@ -1,10 +1,10 @@
 ---
-title: User experience analytics preview
+title: Endpoint analytics preview
 titleSuffix: Configuration Manager
-description: Instructions for User experience analytics preview.
-ms.date: 03/11/2020
+description: Instructions for Endpoint analytics preview.
+ms.date: 04/10/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: 00537b90-f6d2-45e9-a9a1-6b3ada466a16
 author: mestew
@@ -13,12 +13,14 @@ manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW 
 ---
 
-# <a name="bkmk_uea"></a> User experience analytics private preview
+# <a name="bkmk_uea"></a> Endpoint analytics private preview
 
 > [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
+> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
+>
+> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new-endpoint-analytics.md). 
 
-## User experience analytics overview
+## Endpoint analytics overview
 
 It's not uncommon for end users to experience long boot times or other disruptions. These disruptions can be due to a combination of:
 
@@ -28,7 +30,7 @@ It's not uncommon for end users to experience long boot times or other disruptio
 
 These issues and other end-user experience problems persist because IT doesn't have much visibility into the end-user experience. Generally, the only visibility into these issues come from a slow costly support channel that doesn't usually provide clear information about what needs to be optimized. It's not only IT support bearing the cost of these problems. The time information workers spend dealing with issues is also costly. Performance, reliability, and support issues that reduce user productivity can have a large impact on an organization's bottom line as well.
 
-**User experience analytics** aims to improve user productivity and reduce IT support costs by providing insights into the user experience. The insights enable IT to optimize the end-user experience with proactive support and to detect regressions to the user experience by assessing user impact of configuration changes.
+**Endpoint analytics** aims to improve user productivity and reduce IT support costs by providing insights into the user experience. The insights enable IT to optimize the end-user experience with proactive support and to detect regressions to the user experience by assessing user impact of configuration changes.
 
 This initial release, focuses on three things:
 
@@ -36,40 +38,57 @@ This initial release, focuses on three things:
 - [**Proactive remediation scripting**](#bkmk_uea_prs): Fix common support issues before end-users notice issues
 - [**Start up performance**](#bkmk_uea_bp): Help IT get users from power-on to productivity quickly without lengthy boot and sign in delays
 
-This release is just the beginning. We'll be rapidly rolling out new insights for other key user-experiences soon after initial release.
+This release is just the beginning. We'll be rapidly rolling out new insights for other key user-experiences soon after initial release. For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new-endpoint-analytics.md).
 
 ## <a name="bkmk_uea_prereq"></a> Getting started
 
-To start using User experience analytics, verify the prerequisites, then start gathering data. 
+To start using Endpoint analytics, verify the prerequisites, then start gathering data. 
 
 ### Technical Prerequisites
 
 This current preview requires:
 - Intune enrolled devices running Windows 10
-- Startup performance insights are only available for devices running version 1903 or later of Windows 10.
+- Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise (Home and Pro editions aren't currently supported), and the devices must be Azure AD joined or Hybrid Azure AD joined. Workplace joined machines aren't currently supported.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](#bkmk_uea_endpoints).
 - The [Intune Service Administrator role](https://docs.microsoft.com/intune/fundamentals/role-based-access-control) is required to [start gathering data](#bkmk_uea_start).
    - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
    - After clicking **Start** for gathering data, other read-only roles can view the data.
+- For [**Proactive remediation scripting**](#bkmk_uea_prs), devices need to be [co-managed](/configmgr/comanage/overview).
 
-Configuration Manager devices and Intune enrolled devices on prior versions of Windows 10 aren't currently supported for this preview.
+We're in the process of rolling out a private preview Configuration Manager connector, which won't have the limitations above. It will work for any version and edition of Windows and won't require Azure AD or Intune enrollment.
 
 ### Licensing Prerequisites
 
-User experience analytics is included in the following plans: 
+Endpoint analytics is included in the following plans: 
 
 - [Enterprise Mobility + Security E3](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) or higher
-- [Microsoft 365 Enterprise E3](https://www.microsoft.com/en-us/microsoft-365/enterprise?rtc=1) or higher. 
+- [Microsoft 365 Enterprise E3](https://www.microsoft.com/en-us/microsoft-365/enterprise?rtc=1) or higher.
 
-For proactive remediations, users of the device need one of the following licenses:
+Proactive remediations also require one of the following licenses for the managed devices:
 - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F1, E3, or E5)
 - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows Virtual Desktop Access E3 or E5
 
-### <a name="bkmk_uea_start"></a> Start gathering data
+### Permissions
 
-1. Go to `https://devicemanagement.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
+#### Endpoint analytics permissions
+
+The following permissions are used for Endpoint analytics:
+- **Read** under the **Device configurations** category.
+- Permissions appropriate to the user's role under the **Endpoint Analytics** category.
+
+A read-only user would only need the **Read** permission under both the **Device configurations** and **Endpoint Analytics** categories. An Intune administrator would typically need all permissions.
+
+#### Proactive remediations permissions
+
+For Proactive remediations, the user needs permissions appropriate to their role under the **Device configurations** category.  Permissions in the **Endpoint Analytics** category aren't needed if the user only uses Proactive remediations.
+
+
+## <a name="bkmk_uea_start"></a> Start gathering data
+
+1. Go to `https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
 1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](#bkmk_uea_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
+   - For more information about common issues, see [Troubleshooting startup performance device enrollment](#bkmk_uea_enrollment_tshooter).
 
 ## Overview page
 
@@ -86,13 +105,16 @@ Once your data is ready, you'll notice some information on the **Overview** page
 
 - **Insights and recommendations** is a prioritized list to improve your score. This list is filtered to the subnode's context when you navigate to **Best practices** or **Recommended software**.
 
-[![User experience analytics overview page](media/uea-overview-page.png)](media/uea-overview-page.png#lightbox)
+[![Endpoint analytics overview page](media/overview-page.png)](media/overview-page.png#lightbox)
 
 ## <a name="bkmk_uea_rs"></a> Recommended software
 
+> [!Important]  
+> Endpoint Analytics computes the **Software adoption** score for all your Intune managed devices, regardless of whether they've been enrolled in Endpoint Analytics or not.
+
 Certain software is known to improve the end-user experience, independent of lower-level health metrics. For example, Windows 10 has a much higher Net Promoter score than Windows 7. The **Software adoption** score is a number between 0 and 100 that represents a weighted average of the percent of devices that have deployed various recommended software. The current weighting is higher for Windows than for the other metrics since users interact with them more often. The metrics are described below: 
 
-[![User experience analytics Recommended software page](media/uea-recommended-software.png)](media/uea-recommended-software.png#lightbox)
+[![Endpoint analytics Recommended software page](media/recommended-software.png)](media/recommended-software.png#lightbox)
 
 ### <a name="bkmk_uea_win10"></a> Windows 10
 
@@ -112,7 +134,7 @@ The recommended remediation action is to register existing devices in Autopilot 
 
 ### <a name="bkmk_uea_aad"></a> Azure Active Directory
 
-Azure Active Directory (Azure AD) provides users with numerous productivity benefits including device-wide single sign-on to apps and services, Windows Hello sign-in, self-service bitlocker recovery, and corporate data roaming.
+Azure Active Directory (Azure AD) provides users with numerous productivity benefits including device-wide single sign-on to apps and services, Windows Hello sign-in, self-service BitLocker recovery, and corporate data roaming.
 
 This metric measures the percent of devices enrolled in Azure AD.
 
@@ -131,24 +153,26 @@ The built-in baseline of **Commercial median** doesn't currently have metrics fo
 ## <a name="bkmk_uea_bp"></a> Startup performance
 
 > [!NOTE]
-> The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been correctly assigned the policy to show the startup score on the admin console.  
+> If you are not seeing startup performance data from all your devices, please see [Troubleshooting startup performance device enrollment](#bkmk_uea_enrollment_tshooter).
 
 The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays. The **Startup score** is a number between 0 and 100. This score is a weighted average of **Boot score** and the **Sign-in** score, which are computed as follows:
 
 - **Boot score**: Based on the time from power-on to sign in. We look at the last boot time from each device, excluding the update phase, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
-- **Sign-in score**: Based on the time from when credentials have been entered until the user can access the desktop. We look at the last sign-in time to each device, excluding first sign-ins or sign-ins immediately after a feature update, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
+- **Sign-in score**: Based on the time from when credentials have been entered until the user can access a responsive desktop (meaning the desktop has rendered and the CPU usage has fallen below 50% for at least 2 seconds). We look at the last sign-in time to each device, excluding first sign-ins or sign-ins immediately after a feature update, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
 
-[![User experience analytics startup performance page](media/uea-startup-performance.png)](media/uea-startup-performance.png#lightbox)
+[![Endpoint analytics startup performance page](media/startup-performance.png)](media/startup-performance.png#lightbox)
+
+### Insights
 
 The **Startup performance** page also provides a prioritized list of **Insights and recommendations**, described in the following sections:
 
-### <a name="bkmk_uea_hdd"></a> Hard disk drives
+#### <a name="bkmk_uea_hdd"></a> Hard disk drives
 
 Startup performance provides an insight on the number of devices on which the boot drive is a hard disk. Hard disk drives typically result in boot times three to four times longer than solid-state drives. We also report the expected improvement to start up performance you would gain by moving to solid-state drives.
 
 Click though to see the list of devices that have hard disk drives. The recommended action is to upgrade these devices to solid-state drives.
 
-### <a name="bkmk_uea_gp"></a> Group Policy
+#### <a name="bkmk_uea_gp"></a> Group Policy
 
 Startup performance provides an insight on the number of devices that have delays to boot and sign-in times caused by Group Policy. Clicking through takes you to the devices view. The view is sorted by Group Policy time, so you can see affected devices for further troubleshooting.
 
@@ -156,21 +180,24 @@ If you click through to a particular device, you can see its boot and sign-in hi
 
 While there are many articles on how to optimize Group Policies performance, you may choose to migrate to cloud-management instead. Migrating to cloud-management allows you to use [Intune security baselines](https://docs.microsoft.com/intune/protect/security-baselines) and the soon-to-be-released Policy Analytics tool.
 
-### <a name="bkmk_uea_sb"></a> Slow boot and sign-in times
+#### <a name="bkmk_uea_sb"></a> Slow boot and sign-in times
 
 Startup performance provides an insight on the number of devices with slow boot or sign-in times. A boot score or sign-in score of "0" means it's slow. Clicking through takes you to the devices view. The devices are sorted by core boot time or core sign-in time respectively, so you can see affected devices for further troubleshooting.
 
 If you click through to a particular device, you can see its boot and sign-in history. The history helps you determine if the issue was a regression and when it might have occurred.
 
-### More startup performance insights are on the way
+### Reporting tabs
 
-We're working on more startup performance insights, which will be available in future previews.
+The **Startup performance** page has reporting tabs that provide support for the insights, including:
+1. **Model performance**. This tab let's you see the boot and sign-in performance by device model, which can help you identify if performance problems are isolated to particular models.
+1. **Device performance**. This tab provides boot and sign-in metrics for all your devices. You can sort by a particular metric (e.g., GP sign-in time) to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name. If you click through a device you can see it's boot and sign-in history, which can help you identify if there was a recent regression
+1. **Startup processes**. This tab (if visible; we've only flighted this to some of you as we are still developing this feature) will show you which processes are impacting the sign-in "time to responsive desktop" phase; that is - keeping the CPU above 50% after the desktop has rendered.
 
 ## <a name="bkmk_uea_prs"></a> Proactive remediations
 
 Proactive remediations are script packages that can detect and fix common support issues on a user's device before they even realize there's a problem. These remediations can help reduce support calls. You can create your own script package, or deploy one of the script packages we've written and used in our environment for reducing support tickets.
 
-Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you'll be able to deploy these script packages and see reports on their effectiveness. We're actively developing new script packages and would like to know your experiences using them. Reach out to your user experience analytics preview contact if you have any feedback on the script packages.
+Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you'll be able to deploy these script packages and see reports on their effectiveness. We're actively developing new script packages and would like to know your experiences using them. Reach out to your Endpoint analytics preview contact if you have any feedback on the script packages.
 
 ### <a name="bkmk_uea_prs_ps1"></a> Get the detection and remediation scripts
 
@@ -185,12 +212,12 @@ Each script package consists of a detection script, a remediation script, and me
 The **Microsoft Intune Management Extension** service gets the scripts from Intune and runs them. The scripts are rerun every 24 hours. To deploy and monitor the scripts, follow the instructions below:
 
 1. Go to the **Proactive remediations** node in the console.
-1. Click the **Create** button to create a script package.
-     [![User experience analytics Proactive remediations page. Select the create link.](media/uea-proactive-remediations-create.png)](media/uea-proactive-remediations-create.png#lightbox)
+1. Click the **Create script package** button to create a script package.
+     [![Endpoint analytics Proactive remediations page. Select the create link.](media/proactive-remediations-create.png)](media/proactive-remediations-create.png#lightbox)
 1. In the **Basics** step, give the script package a **Name** and optionally, a **description**. The **Publisher** field can be edited, but defaults to your tenant name. **Version** can't be edited. 
 1. On the **Settings** step, copy the text from the scripts you downloaded into the **Detection script** and **Remediation script** fields. 
-   - You need the corresponding detection and remediation script to be in the same package. For example, the `DetGPLastUpd.ps1` detection script corresponds with the `RemGPLastUpd.ps11` remediation script.
-       [![User experience analytics Proactive remediations script settings page.](media/uea-proactive-remediations-script-settings.png)](media/uea-proactive-remediations-script-settings.png#lightbox)
+   - You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_stale_Group_Policies.ps1` detection script corresponds with the `Remediate_stale_GroupPolicies.ps1` remediation script.
+       [![Endpoint analytics Proactive remediations script settings page.](media/proactive-remediations-script-settings.png)](media/proactive-remediations-script-settings.png#lightbox)
 1. Finish the options on the **Settings** page with the following recommended configurations:
    - **Run this script using the logged-on credentials**: This is dependent on the script. For more information, see the [Script descriptions](#bkmk_uea_scripts).
    - **Enforce script signature check**: No
@@ -198,13 +225,13 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 1. Click **Next** then assign any **Scope tags** you need.
 1. In the **Assignments** step, select the device groups to which you want to deploy the script package.
 1. Complete the **Review + Create** step for your deployment.
-1. Under **Reporting** > **User experience analytics - Proactive remediations**, you can see an overview of your detection and remediation status.
-       [![User experience analytics Proactive remediations report, overview page.](media/uea-proactive-remediations-report-overview.png)](media/uea-proactive-remediations-report-overview.png#lightbox)
+1. Under **Reporting** > **Endpoint analytics - Proactive remediations**, you can see an overview of your detection and remediation status.
+       [![Endpoint analytics Proactive remediations report, overview page.](media/proactive-remediations-report-overview.png)](media/proactive-remediations-report-overview.png#lightbox)
 1. Click on **Device status** to get status details for each device in your deployment.
-       [![User experience analytics Proactive remediations device status.](media/uea-proactive-remediations-device-status.png)](media/uea-proactive-remediations-device-status.png#lightbox)
+       [![Endpoint analytics Proactive remediations device status.](media/proactive-remediations-device-status.png)](media/proactive-remediations-device-status.png#lightbox)
 
 
-## <a name="bkmk_uea_set"></a> User experience analytics settings
+## <a name="bkmk_uea_set"></a> Endpoint analytics settings
 
 From the settings page, you can select **General** or **Baseline**. Each of these settings is described below:
 
@@ -236,7 +263,7 @@ To assign this setting to a subset of devices, [Create a profile](/intune/config
 > [!NOTE]
 > There is a placeholder for instructions for configuring the Configuration Manager data connector. However, this functionality has not been implemented in this initial private preview.
 
-  [![User experience analytics general settings page](media/uea-settings-general.png)](media/uea-settings-general.png#lightbox)
+  [![Endpoint analytics general settings page](media/settings-general.png)](media/settings-general.png#lightbox)
 
 ### <a name="bkmk_uea_baselines"></a> Baseline management
 
@@ -247,24 +274,45 @@ You can compare your current scores and subscores to others by setting a baselin
 1. There's a limit of 100 baselines per tenant. You can delete old baselines that are no longer needed.
 1. Your current metrics will be flagged red and show as regressed if they fall below the current baseline in your reports. Because it's perfectly normal for metrics to fluctuate from day to day, you can set a regression threshold, which defaults to 10%. With this threshold, metrics are only flagged as regressed if they've regressed by more than 10%.
 
-   [![User experience analytics baseline settings page](media/uea-settings-baseline.png)](media/uea-settings-baseline.png#lightbox)
+   [![Endpoint analytics baseline settings page](media/settings-baseline.png)](media/settings-baseline.png#lightbox)
 
 ## <a name="bkmk_uea_tshoot"></a> Troubleshooting
 
-To enroll devices to User Experience Analytics, they need to send required functional data to Microsoft. If your environment uses a proxy server, use this information to help configure the proxy.
+The sections below can be used to assist in troubleshooting issues you may encounter.
+
+### <a name="bkmk_uea_enrollment_tshooter"></a> Troubleshooting startup performance device enrollment
+
+If the overview page shows a startup performance score of zero accompanied by a banner showing it is waiting for data, or if the startup performance's device performance tab shows fewer devices than you expect, there are some steps you can take to troubleshoot the issue.
+
+First, here's a quick summary of limitations for startup performance data collection:
+1. Devices must be Windows 10 version 1903 or later.
+2. Devices must be Azure AD joined. We currently do not support Workplace Joined devices, although are actively investigating the feasibility of adding this functionality to Windows.
+3. Devices must be Windows 10 Enterprise edition. Windows 10 Home and Professional are not currently supported, although are actively investigating the feasibility of adding this functionality to Windows.
+
+Note that these issues will not apply to data coming from the upcoming Configuration Manager connector; it will be able to collect data from any Configuration Manager client PC, regardless of version, edition, or directory configuration.
+
+Second, here's a quick checklist to go through for troubleshooting:
+1. Make sure you have the Windows Health Monitoring profile targeted to all the devices for which you want performance data. You can find a link to this profile from within the endpoint analytics setting page, or you navigate to it as you would any other Intune profile. Look at the assignment tab to make sure it is assigned to the expected set of devices. 
+1. Have a look at which devices have been successfully configured for data collection. You can also see this information in the profiles overview page.  
+   - There is a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
+1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 24 hours after for the device to show up in the device performance tab.
+1. If your device has been successfully configured for data collection, has subsequently restarted, and after 24 hours you are still not seeing it, then it may be that the device can't reach our collection endpoints. This issue may happen if your company uses a proxy server and the endpoints have not been enabled in the proxy. For more information, see [Troubleshooting endpoints](#bkmk_uea_endpoints).
+
 
 ### <a name="bkmk_uea_endpoints"></a> Endpoints
+
+To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft. If your environment uses a proxy server, use this information to help configure the proxy.
 
 To enable functional data sharing, configure your proxy server to allow the following endpoints:
 
 > [!Important]  
-> For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the required functional data sharing endpoints. SSL interception and inspection aren't possible. To use User Experience Analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
+> For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the required functional data sharing endpoints. SSL interception and inspection aren't possible. To use Endpoint analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
 
 | Endpoint  | Function  |
 |-----------|-----------|
 | `https://*.events.data.microsoft.com` | Used to send [required functional data](#bkmk_uea_datacollection) to the Intune data collection endpoint. |
-| `https://graph.windows.net` | Used to automatically retrieve settings  when attaching your hierarchy to User Experience Analytics (on Configuration Manager Server role). For more information, see [Configure the proxy for a site system server](/sccm/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server). |
-| `https://*.manage.microsoft.com` | Used to synch device collection and devices with User Experience Analytics (on Configuration Manager Server role only). For more information, see [Configure the proxy for a site system server](/sccm/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server). |
+| `https://graph.windows.net` | Used to automatically retrieve settings  when attaching your hierarchy to Endpoint analytics (on Configuration Manager Server role). For more information, see [Configure the proxy for a site system server](/sccm/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server). |
+| `https://*.manage.microsoft.com` | Used to synch device collection and devices with Endpoint analytics (on Configuration Manager Server role only). For more information, see [Configure the proxy for a site system server](/sccm/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server). |
 
 
 ### Proxy server authentication
@@ -310,23 +358,23 @@ The scripts exit with a code of 1 to signal to Intune that remediation should oc
 
 ## <a name="bkmk_uea_scripts"></a> Script descriptions
 
-This table shows the script names, descriptions, detections, remediations, and configurable items. Script files whose names start with `det` are detection scripts. Remediation scripts start with `rem`. These scripts can be copied from the next section in this article.
+This table shows the script names, descriptions, detections, remediations, and configurable items. Script files whose names start with `Detect` are detection scripts. Remediation scripts start with `Remediate`. These scripts can be copied from the next section in this article.
 
 |Script name|Description|
 |---|---|
-|**Update stale Group Policies** </br>`DetGPLastUpd.ps1` </br> `RemGPLastUpd.ps1`| Detects if last Group Policy refresh is greater than `7 days` ago.  </br>Customize the 7-day threshold by changing the value for `$numDays` in the detection script. </br></br>Remediates by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`  </br> </br>Can help reduce network connectivity-related support calls when certificates and configurations are delivered via Group Policy. </br> </br> **Run the script using the logged-on credentials**: Yes|
-|**Restart Office Click-to-Run service** </br> `DetectClickToRunServiceState.ps1` </br> `RemediateClickToRunServiceState.ps1`| Detects if the Click-to-Run service is set to automatically start and if the service is stopped. </br> </br> Remediates by setting the service to start automatically and starting the service if it's stopped. </br></br> Helps fix issues where Win32 Office 365 ProPlus won't launch because the Click-to-Run service is stopped. </br> </br> **Run the script using the logged-on credentials**: No|
-|**Check network certificates** </br>`DetExpIssuerCerts.ps1` </br>`RemExpIssuerCerts.ps1`|Detects certificates issued by a CA in either the Machine's or User's personal store that are expired, or near expiry. </br> Specify the CA by changing the value for `$strMatch` in the detection script. Specify 0 for `$expiringDays` to find expired certificates, or specify another number of days to find certificates near expiry.  </br></br>Remediates by raising a toast notification to the user. </br> Specify the `$Title` and `$msgText` values with the message title and text you want users to see. </br> </br> Notifies users of expired certificates that might need to be renewed. </br> </br> **Run the script using the logged-on credentials**: No|
-|**Clear stale certificates** </br>`DetExpUserCerts.ps1` </br> `RemExpUserCerts.ps1`| Detects expired certificates issued by a CA in the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the detection script. </br> </br> Remediates by deleting expired certificates issued by a CA from the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the remediation script. </br> </br> Finds and deletes expired certificates issued by a CA from the current user's personal store. </br> </br> **Run the script using the logged-on credentials**: Yes|
+|**Update stale Group Policies** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Detects if last Group Policy refresh is greater than `7 days` ago.  </br>Customize the 7-day threshold by changing the value for `$numDays` in the detection script. </br></br>Remediates by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`  </br> </br>Can help reduce network connectivity-related support calls when certificates and configurations are delivered via Group Policy. </br> </br> **Run the script using the logged-on credentials**: Yes|
+|**Restart Office Click-to-Run service** </br> `Detect_Click_To_Run_Service_State.ps1` </br> `Remediate_Click_To_Run_Service_State.ps1`| Detects if the Click-to-Run service is set to automatically start and if the service is stopped. </br> </br> Remediates by setting the service to start automatically and starting the service if it's stopped. </br></br> Helps fix issues where Win32 Office 365 ProPlus won't launch because the Click-to-Run service is stopped. </br> </br> **Run the script using the logged-on credentials**: No|
+|**Check network certificates** </br>`Detect_Expired_Issuer_Certificates.ps1` </br>`Remediate_Expired_Issuer_Certificates.ps1`|Detects certificates issued by a CA in either the Machine's or User's personal store that are expired, or near expiry. </br> Specify the CA by changing the value for `$strMatch` in the detection script. Specify 0 for `$expiringDays` to find expired certificates, or specify another number of days to find certificates near expiry.  </br></br>Remediates by raising a toast notification to the user. </br> Specify the `$Title` and `$msgText` values with the message title and text you want users to see. </br> </br> Notifies users of expired certificates that might need to be renewed. </br> </br> **Run the script using the logged-on credentials**: No|
+|**Clear stale certificates** </br>`Detect_Expired_User_Certificates.ps1` </br> `Remediate_Expired_User_Certificates.ps1`| Detects expired certificates issued by a CA in the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the detection script. </br> </br> Remediates by deleting expired certificates issued by a CA from the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the remediation script. </br> </br> Finds and deletes expired certificates issued by a CA from the current user's personal store. </br> </br> **Run the script using the logged-on credentials**: Yes|
 
 ## <a name="bkmk_uea_ps_scripts"></a> PowerShell Scripts
 
-### DetGPLastUpd.ps1
+### Detect_stale_Group_Policies.ps1
 
 ```powershell
 #=============================================================================================================================
 #
-# Script Name:     DetGPLastUpd.ps1
+# Script Name:     Detect_stale_Group_Policies.ps1
 # Description:     Detect if Group Policy has been updated within number of days
 # Notes:           Remediate if "Match", $numDays default value of 7, change as appropriate
 #
@@ -360,12 +408,12 @@ catch {
 }
 ```
 
-### RemGPLastUpd.ps1
+### Remediate_stale_GroupPolicies.ps1
 
 ```powershell
 #=============================================================================================================================
 #
-# Script Name:     RemGPLastUpd.ps1
+# Script Name:     Remediate_stale_GroupPolicies.ps1
 # Description:     This script triggers Group Policy update
 # Notes:           No variable substitution needed
 #
@@ -383,12 +431,12 @@ catch{
 }
 ```
 
-### DetectClickToRunServiceState.ps1
+### Detect_Click_To_Run_Service_State.ps1
 
 ```powershell
 #=============================================================================================================================
 #
-# Script Name:     DetectClickToRunServiceState.ps1
+# Script Name:     Detect_Click_To_Run_Service_State.ps1
 # Description:     Detect if Office 16 installed and if "Click to Run Service" is running.
 # Notes:           No variable substitution should be necessary
 #
@@ -430,12 +478,12 @@ Else{
 }
 ```
 
-### RemediateClickToRunServiceState.ps1
+### Remediate_Click_To_Run_Service_State.ps1
 
 ```powershell
 #=============================================================================================================================
 #
-# Script Name:     RemediateClickToRunServiceState.ps1
+# Script Name:     Remediate_Click_To_Run_Service_State.ps1
 # Description:     Start the "Click to Run Service" and change its startup type to Automatic
 #       Notes:     No variable substitution needed
 #
@@ -492,12 +540,12 @@ Catch{
 Return $curSvcStat
 ```
 
-### DetExpIssuerCerts.ps1
+### Detect_Expired_Issuer_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
 #
-# Script Name:     DetExpIssuerCerts.ps1
+# Script Name:     Detect_Expired_Issuer_Certificates.ps1
 # Description:     Detect expired certificates issued by "CN=<your CA here>" in either Machine
 #                  or User certificate store
 # Notes:           Change the value of the variable $strMatch from "CN=<your CA here>" to "CN=..."
@@ -534,12 +582,12 @@ catch{
 }
 ```
 
-### RemExpIssuerCerts.ps1
+### Remediate_Expired_Issuer_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
 #
-# Script Name:     RemExpIssuerCerts.ps1
+# Script Name:     Remediate_Expired_Issuer_Certificates.ps1
 # Description:     Raise a Toast Notification if expired certificates issued by "CN=..."
 #                  to user or machine on the machine where detection script found them. No remediation action besides
 #                  the Toast is taken.
@@ -578,12 +626,12 @@ $toast = New-Object Windows.UI.Notifications.ToastNotification $xml
 [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier($APP_ID).Show($toast)
 ```
 
-### DetExpUserCerts.ps1
+### Detect_Expired_User_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
 #
-# Script Name:     DetExpUserCerts.ps1
+# Script Name:     Detect_Expired_User_Certificates.ps1
 # Description:     Detect expired certificates issued by "CN=<your CA here>" to User
 # Notes:           Change the value of the variable $certCN from "CN=<your CA here>" to "CN=...".
 #                  Don't change $results
@@ -615,12 +663,12 @@ catch{
 }
 ```
 
-### RemExpUserCerts.ps1
+### Remediate_Expired_User_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
 #
-# Script Name:     RemExpUserCerts.ps1
+# Script Name:     Remediate_Expired_User_Certificates.ps1
 # Description:     Remove expired certificates issued by "CN=<your CA here>" to User
 # Notes:           Change the value of the variable $certCN from "CN=<your CA here>" to "CN=..."
 #
@@ -641,15 +689,15 @@ catch{
 }
 ```
 
-## <a name="bkmk_uea_privacy"></a> User Experience Analytics data privacy
+## <a name="bkmk_uea_privacy"></a> Endpoint analytics data privacy
 
 ### Data flow
 
 The following illustration shows how required functional data flows from individual devices through our data services, transient storage, and to your tenant. Data flows through our existing enterprise pipelines without reliance on Windows diagnostic data.
 
-[![User experience data flow diagram](media/uea-dataflow.png)](media/uea-dataflow.png#lightbox)
+[![User experience data flow diagram](media/dataflow.png)](media/dataflow.png#lightbox)
 
-1. Configure the **Intune data collection** policy for enrolled devices. By default, this policy is assigned to "All Devices" when you **Start** User experience analytics. However, you can [change the assignment](#bkmk_uea_set) at any time to a subset of devices or no devices at all.
+1. Configure the **Intune data collection** policy for enrolled devices. By default, this policy is assigned to "All Devices" when you **Start** Endpoint analytics. However, you can [change the assignment](#bkmk_uea_set) at any time to a subset of devices or no devices at all.
 
 2. Devices send required functional data.
 
@@ -665,29 +713,37 @@ The average latency end to end is about 12 hours and is gated by the time it tak
 
 ### <a name="bkmk_uea_datacollection"></a>Data collection
 
-Currently, the basic functionality of User experience analytics collects information associated with your boot performance records. As we add additional functionality over time, the data collected will vary as needed. The main datapoints currently being collected:
+Currently, the basic functionality of Endpoint analytics collects information associated with boot performance records that falls into the [identified](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#identified-data) and [pseudonymized](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#pseudonymized-data) categories. As we add additional functionality over time, the data collected will vary as needed. The main datapoints currently being collected:
 
-- **id:** Unique device ID used by Windows Update
-- **localId:** A locally-defined unique ID for the device. This is not the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
-- **aaddeviceid:** Azure Active Directory device ID
-- **orgId:** Unique GUID representing the Microsoft O365 Tenant
-- **authIdEnt**
-- **make:** Device manufacturer
-- **model:** Device model
-- **deviceClass:** The device classification. For example, Desktop, Server, or Mobile.
-- **Country:** The device region setting
-- **logOnId**
-- **bootId:** The system boot ID
-- **coreBootTimeInMilliseconds:** Time for core boot
-- **totalBootTimeInMilliseconds:** Total boot time
-- **updateTimeInMilliseconds:** Time for OS updates to complete
-- **gpLogonDurationInMilliseconds**: Time for Group policies to process
-- **desktopShownDurationInMilliseconds:** Time for desktop (explorer.exe) to be loaded
-- **desktopUsableDurationInMilliseconds:** Time for desktop (explorer.exe) to be usable
-- **name:** Windows
-- **ver:** The version of the current OS.
-- **topProcesses:** List of processes loaded during boot with name, with cpu usage stats and app details (Name, publisher, version). For example *{\"ProcessName\":\"svchost\",\"CpuUsage\":43,\"ProcessFullPath\":\"C:\\\\Windows\\\\System32\\\\svchost.exe\",\"ProductName\":\"Microsoft&reg; Windows&reg; Operating System\",\"Publisher\":\"Microsoft Corporation\",\"ProductVersion\":\"10.0.18362.1\"}*
+#### Identified data
 
+- Hardware inventory information
+  - **make:** Device manufacturer
+  - **model:** Device model
+  - **deviceClass:** The device classification. For example, Desktop, Server, or Mobile.
+  - **Country:** The device region setting
+- Application inventory, like
+  - **name:** Windows
+  - **ver:** The version of the current OS.
+  
+#### Pseudonymized data
+
+- Diagnostic, performance, and usage data tied to a user and/or device
+  - **logOnId**
+  - **bootId:** The system boot ID
+  - **coreBootTimeInMilliseconds:** Time for core boot
+  - **totalBootTimeInMilliseconds:** Total boot time
+  - **updateTimeInMilliseconds:** Time for OS updates to complete
+  - **gpLogonDurationInMilliseconds**: Time for Group policies to process
+  - **desktopShownDurationInMilliseconds:** Time for desktop (explorer.exe) to be loaded
+  - **desktopUsableDurationInMilliseconds:** Time for desktop (explorer.exe) to be usable
+  - **topProcesses:** List of processes loaded during boot with name, with cpu usage stats and app details (Name, publisher, version). For example *{\"ProcessName\":\"svchost\",\"CpuUsage\":43,\"ProcessFullPath\":\"C:\\\\Windows\\\\System32\\\\svchost.exe\",\"ProductName\":\"Microsoft&reg; Windows&reg; Operating System\",\"Publisher\":\"Microsoft Corporation\",\"ProductVersion\":\"10.0.18362.1\"}*
+- Device data not tied to a device or user (if this data is tied to a device or user, Intune treats it as identified data)
+  - **id:** Unique device ID used by Windows Update
+  - **localId:** A locally-defined unique ID for the device. This is not the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
+  - **aaddeviceid:** Azure Active Directory device ID
+  - **orgId:** Unique GUID representing the Microsoft O365 Tenant
+  
 > [!Important]  
 > Our data handling policies are described in the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the baselines up-to-date.
 

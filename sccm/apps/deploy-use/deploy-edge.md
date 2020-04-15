@@ -2,7 +2,7 @@
 title: Deploy and update Microsoft Edge, version 77 and later
 titleSuffix: Configuration Manager
 description: How to deploy and update Microsoft Edge, version 77 and later with Configuration Manager
-ms.date: 03/03/2020
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -38,10 +38,17 @@ The device running the Configuration Manager console needs access to the followi
 |`https://edgeupdates.microsoft.com/api/products?view=enterprise`|Information about releases of Microsoft Edge|
 |`http://dl.delivery.mp.microsoft.com`|Content for Microsoft Edge releases|
 
-### Verify Microsoft Edge update policies
+### <a name="bkmk_autoupdate"></a> Verify Microsoft Edge update policies
+
+#### Configuration Manager version 1910
 
 In version 1910, when Microsoft Edge is deployed, the installation script turns off automatic updates for Microsoft Edge so they can be managed with Configuration Manager. You can change this behavior using Group Policy. For more information, see [Plan your deployment of Microsoft Edge](https://docs.microsoft.com/deployedge/deploy-edge-plan-deployment#define-and-configure-policies) and [Microsoft Edge update policies](https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies).
 
+#### Configuration Manager version 2002 and later
+<!--4561024-->
+Starting in version 2002, you can create a Microsoft Edge application that's set up to receive automatic updates rather than having automatic updates disabled. This change allows you to choose to manage updates for Microsoft Edge with Configuration Manager or allow Microsoft Edge to automatically update. When creating the application, select **Allow Microsoft Edge to automatically update the version of the client on the end user's device** on the **Microsoft Edge Settings** page. If you previously used Group Policy to change this behavior, Group Policy will overwrite the setting made by Configuration Manager during installation of Microsoft Edge.
+
+[![Microsoft Edge automatic update setting](./media/4561024-autoupdate-edge.png)](./media/4561024-autoupdate-edge.png#lightbox)
 
 ### Create a deployment
 
@@ -53,10 +60,10 @@ Create a Microsoft Edge application using the built-in application experience, w
    ![Microsoft Edge Management node right-click action](./media/4561024-create-microsoft-edge-application.png)
 
 1. On the **Application Settings** page of the wizard, specify a name, description, and location for the content for the app. Ensure the content location folder you specify is empty.
-1. On the **Microsoft Edge Settings** page, you select a channel and version to deploy. The Learn More link takes you to the [Microsoft Edge Insiders page](https://www.microsoftedgeinsider.com/).
-
-   ![Microsoft Edge Settings page in the deployment wizard](./media/4561024-edge-settings-wizard.png)
-
+1. On the **Microsoft Edge Settings** page, select:
+   - The channel to deploy
+   - The version to deploy
+   - If you want to **Allow Microsoft Edge to automatically update the version of the client on the end user's device** (added in version 2002)
 1. On the **Deployment** page, decide if you want to deploy the application. If you select **Yes**, you can specify your deployment settings for the application. For more information about deployment settings, see [Deploy applications](/configmgr/apps/deploy-use/deploy-applications#bkmk_deploy-general).
 1. In **Software Center** on the client device, the user can see and install the application.
 
@@ -90,6 +97,41 @@ Starting in Configuration Manager version 1910, you'll see a node called **All M
    - [Create a phased deployment](/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)
    - [Manually deploy software updates](/configmgr/sum/deploy-use/manually-deploy-software-updates)
    - [Download software updates](/configmgr/sum/deploy-use/download-software-updates)
+
+## <a name="bkmk_edge-dash"></a> Microsoft Edge Management dashboard
+<!--3871913-->
+*(Introduced in version 2002)*
+
+Starting in Configuration Manager 2002, the Microsoft Edge Management dashboard provides you insights on the usage of Microsoft Edge and other browsers. In this dashboard, you can:
+
+- See how many of your devices have Microsoft Edge installed
+- See how many clients have different versions of Microsoft Edge installed.
+   - This chart doesn't include Canary Channel.
+- Have a view of the installed browsers across devices
+- Have a view of preferred browser by device <!--5907383-->
+   - Currently for the 2002 release, this chart will be empty.
+
+### Prerequisites for the dashboard
+
+Enable the following properties in the below [hardware inventory](/configmgr/core/clients/manage/inventory/extend-hardware-inventory) classes for the Microsoft Edge Management dashboard:
+
+- **Installed Software - Asset Intelligence (SMS_InstalledSoftware)**
+   - Software Code
+   - Product Name
+   - Product Version
+
+- **Default Browser (SMS_DefaultBrowser)**
+   - Browser Program ID
+
+- **SMS_BrowserUsage (SMS_BrowserUsage)**
+   - BrowserName
+   - UsagePercentage
+
+### View the dashboard
+
+From the **Software Library** workspace, click **Microsoft Edge Management** to see the dashboard. Change the collection for the graph data by clicking **Browse** and choosing another collection. By default your five largest collections are in the drop-down list. When you select a collection that isn't in the list, the newly selected collection takes the bottom spot on your drop-down list.
+
+[![Microsoft Edge Management dashboard](./media/3871913-microsoft-edge-dashboard.png)](./media/3871913-microsoft-edge-dashboard.png#lightbox)
 
 ## Next steps
 

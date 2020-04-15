@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Set up firewalls, ports, and domains to prepare for Configuration Manager communications.
 ms.date: 06/19/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: d6993bba-f6bd-4639-adbf-efc1c638b2f3
 author: mestew

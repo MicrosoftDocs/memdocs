@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
 ms.date: 03/12/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
@@ -32,6 +32,9 @@ You can now connect multiple Configuration Manager hierarchies to a single Azure
 
 - When you configure your global pilot, if you include collections that contain more than 20% of your total enrolled devices, the portal displays a warning.
 - When you create a deployment plan, if you select collections for multiple hierarchies, the portal displays a warning.
+
+> [!NOTE]
+> Support for multiple hierarchies requires Configuration Manager version 1910 or later.
 
 For more information, see the following articles:
 

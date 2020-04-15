@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Customize the Support Center configuration file.
 ms.date: 11/27/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: a6f7f6b7-9ef3-4ffa-a3cf-d877ac55983b
 author: mestew

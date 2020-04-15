@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Information about the computer hardware scanned on Configuration Manager client computers.
 ms.date: 06/03/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
 
 

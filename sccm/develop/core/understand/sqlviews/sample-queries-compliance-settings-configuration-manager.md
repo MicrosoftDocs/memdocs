@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Sample queries that show how to join compliance settings views to each other and to views from other view categories.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: fdf87ece-b625-4c34-8fd7-f056d9cdf8b6
 author: aczechowski

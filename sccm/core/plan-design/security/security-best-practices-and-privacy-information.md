@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Find resources that provide security best practices and privacy information for Configuration Manager."
 ms.date: 01/3/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: b7bff8a0-fe76-4d3b-aac6-065290888bea
 author: aczechowski
@@ -23,7 +23,7 @@ Use the following information to find security best practices and privacy inform
 
 -   [Security and privacy for site administration](../../../core/plan-design/hierarchy/security-and-privacy-for-site-administration.md)  
 
--   [Security and privacy for reporting](../../../core/servers/manage/security-and-privacy-for-reporting.md)  
+-   [Security and privacy for reporting](../../../core/servers/manage/planning-for-reporting.md#security-and-privacy)  
 
 -   [Security and privacy for migration to Configuration Manager current branch](../../../core/migration/security-and-privacy-for-migration.md)  
 

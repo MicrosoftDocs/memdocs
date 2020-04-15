@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Provision cloud resources for Configuration Manager to supplement your on-premises infrastructure.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski

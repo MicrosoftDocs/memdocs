@@ -5,13 +5,11 @@ description: Learn about the workloads that you can switch from Configuration Ma
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 11/29/2019
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-
-
 ---
 
 # Co-management workloads
@@ -80,6 +78,8 @@ For more information on the Intune feature, see [Endpoint Protection for Microso
 > When you switch this workload, the Configuration Manager policies stay on the device until the Intune policies overwrite them. This behavior makes sure that the device still has protection policies during the transition.
 >
 > The Endpoint Protection workload is also part of device configuration. The same behavior applies when you switch the [Device Configuration](#device-configuration) workload.<!-- SCCMDocs.nl-nl issue #4 -->
+>
+> The Microsoft Defender Antivirus settings that are part of the Device restrictions profile type for Intune Device configuration are not included in scope of the Endpoint protection slider. To manage Microsoft Defender Antivirus for co-managed devices with the endpoint protection slider enabled, use the new Antivirus policies in **Microsoft Endpoint manager admin center** > **Endpoint security** > **Antivirus**. The new policy type has new and improved options available, and support all of the same settings available in the Device restrictions profile. <!--6609171-->
 
 ## Device configuration
 
@@ -113,8 +113,10 @@ Use Intune to manage client apps and PowerShell scripts on co-managed Windows 10
 
 For more information on the Intune feature, see [What is Microsoft Intune app management?](https://docs.microsoft.com/intune/app-management).
 
-> [!Note]  
-> The client apps workload is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features). This feature may appear in the list of features as **Mobile apps for co-managed devices**.<!-- 5849669 -->
+> [!Tip]  
+> This feature was first introduced in version 1806 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 2002, it's no longer a pre-release feature.  
+>
+> This feature may appear in the list of features as **Mobile apps for co-managed devices**.<!-- 5849669 -->
 
 Starting in version 1910, when you enable Microsoft Connected Cache on your Configuration Manager distribution points, they can now serve Microsoft Intune Win32 apps to co-managed clients. For more information, see [Microsoft Connected Cache in Configuration Manager](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
 
@@ -123,6 +125,23 @@ Starting in version 1910, when you enable Microsoft Connected Cache on your Conf
 ![Diagram of co-management app workloads](media/co-management-apps.svg)
 
 [View the diagram at full size](media/co-management-apps.svg)
+
+## Known issues
+
+When the Endpoint Protection workload is moved over to Intune, the client may still honor policies set by Configuration Manager and Microsoft Defender. <!--5024559-->
+
+To work around this issue, apply the CleanUpPolicy.xml using ConfigSecurityPolicy.exe after the Intune policies have been received by the client using the steps below:
+
+1. Copy and save the below text as `CleanUpPolicy.xml`.
+
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <SecurityPolicy xmlns="http://forefront.microsoft.com/FEP/2010/01/PolicyData" Name="FEP clean-up policy"><PolicySection Name="FEP.AmPolicy"><LocalGroupPolicySettings><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware"/><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Windows Defender"/></LocalGroupPolicySettings></PolicySection></SecurityPolicy>
+   ```
+1. Open an elevated command prompt to `ConfigSecurityPolicy.exe`. Typically this executable is in one of the following directories:
+   - C:\Program Files\Windows Defender
+   - C:\Program Files\Microsoft Security Client
+1. From the command prompt, pass in the xml file to clean up the policy. For example, `ConfigSecurityPolicy.exe C:\temp\CleanUpPolicy.xml`.  
 
 ## Next steps
 

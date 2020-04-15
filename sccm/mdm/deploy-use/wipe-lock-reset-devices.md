@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Protect device data with full wipe, selective wipe, remote lock, or passcode reset by using Configuration Manager on-premises mobile device management (MDM).
 ms.date: 08/14/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-hybrid
+ms.technology: configmgr-mdm
 ms.topic: conceptual
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 author: aczechowski

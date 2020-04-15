@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Review a list of reports that are supplied with Configuration Manager. The reports appear in various categories.
 ms.date: 11/27/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski

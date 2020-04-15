@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Configure security-related options for Configuration Manager.
 ms.date: 11/27/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
 author: aczechowski

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: About the retirement of the Ready for Windows website
 ms.date: 10/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 
 

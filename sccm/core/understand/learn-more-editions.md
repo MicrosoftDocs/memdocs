@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the licensing requirements for the installation options available with Configuration Manager
 ms.date: 06/04/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski

@@ -22,7 +22,7 @@ You can create and deploy [Windows Defender Application Guard (Application Guard
 
 ## Prerequisites
 
-To create and deploy a Windows Defender Application Guard policy, you must use the Windows 10 Fall Creator’s Update (1709). The Windows 10 devices to which you deploy the policy must be configured with a network isolation policy. For more information, see the [Windows Defender Application Guard overview](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
+To create and deploy a Windows Defender Application Guard policy, you must use the Windows 10 Fall Creator's Update (1709). The Windows 10 devices to which you deploy the policy must be configured with a network isolation policy. For more information, see the [Windows Defender Application Guard overview](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
 
 ## Create a policy, and to browse the available settings
 
@@ -41,7 +41,7 @@ To create and deploy a Windows Defender Application Guard policy, you must use t
     >  - one from Windows Information Protection
     >  - one from Windows Defender Application Guard
     >
-    > If you deploy both policies, these network isolation lists must match. If you deploy lists that don’t match to the same client, the deployment will fail. For more information, see the [Windows Information Protection documentation](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm).
+    > If you deploy both policies, these network isolation lists must match. If you deploy lists that don't match to the same client, the deployment will fail. For more information, see the [Windows Information Protection documentation](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
 
 6. When you're finished, complete the wizard, and deploy the policy to one or more Windows 10 1709 devices.
 

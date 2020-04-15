@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Find resources about security and privacy for Configuration Manager."
 ms.date: 01/3/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: e18be4d1-9f6e-477c-a79d-c46014b4a03a
 author: aczechowski
@@ -47,7 +47,7 @@ This article includes resources for Security and Privacy for Configuration Manag
 
 -   [Security and privacy for Asset Intelligence](../../../core/clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md)  
 
--   [Security and privacy for reporting](../../../core/servers/manage/security-and-privacy-for-reporting.md)  
+-   [Security and privacy for reporting](../../../core/servers/manage/planning-for-reporting.md#security-and-privacy)  
 
 
 

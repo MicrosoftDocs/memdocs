@@ -9,7 +9,7 @@ metadata:
   titleSuffix: Configuration Manager
   description: Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune.
   ms.product: configuration-manager
-  ms.technology: configmgr-other
+  ms.technology: configmgr-comanage
   ms.topic: landing-page
   author: mestew
   ms.author: mstewart

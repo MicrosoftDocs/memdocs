@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics pilot group.
 ms.date: 03/12/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
@@ -43,6 +43,9 @@ As you add devices from the **recommended**  to the **included** pilot list, the
 You can also make system-wide decisions about which Configuration Manager collections to include or exclude from pilots. In the main Desktop Analytics menu, in the Global Settings group, select **Global pilot**.
 
 If you connect multiple Configuration Manager hierarchies to the same Desktop Analytics instance, a display name for the hierarchy prefixes the collection name in the global pilot configuration. This name is the **Display Name** property on the Desktop Analytics connection in the Configuration Manager console.<!-- 4814075 -->
+
+> [!NOTE]
+> Support for multiple hierarchies requires Configuration Manager version 1910 or later.
 
 - Don't include collections that contain more than 20% of your total enrolled devices to Desktop Analytics. If you include a large collection, the portal displays a warning. You can include multiple small collections without warning, but still be cautious about the number of devices in your pilot. <!-- 6079184 -->
 

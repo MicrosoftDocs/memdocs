@@ -4,7 +4,7 @@ titleSuffix: Microsoft Deployment Toolkit
 description: Learn how to use the Microsoft Deployment Toolkit (MDT)
 ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.technology: configmgr-mdt
 ms.topic: article
 ms.assetid: 10a846c2-e63c-4c2b-8210-7485bfe7e47f
 author: aczechowski  

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: A how-to guide for setting up and onboarding to Desktop Analytics.
 ms.date: 02/06/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: 7ff8d453-f24d-4230-a116-585190a663fc
 author: aczechowski

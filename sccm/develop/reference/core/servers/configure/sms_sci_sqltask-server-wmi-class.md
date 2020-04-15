@@ -1,7 +1,7 @@
 ---
 title: "SMS_SCI_SQLTask Class"
 titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
+ms.date: "04/07/2020"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -58,17 +58,17 @@ Class SMS_SCI_SQLTask : SMS_SiteControlItem
 
  Qualifiers: [bits]  
 
- Days of the week on which the SQL task executes. Possible values are listed below. The default value is 0.  
+ Days of the week on which the SQL task executes. Possible values are listed below. Take the sum of the values for tasks that execute on multiple days. For example, if all days are selected this property would have a value of 127.  
 
 |||  
 |-|-|  
-|0|SUNDAY|  
-|1|MONDAY|  
-|2|TUESDAY|  
-|3|WEDNESDAY|  
-|4|THURSDAY|  
-|5|FRIDAY|  
-|6|SATURDAY|  
+|1|SUNDAY|  
+|2|MONDAY|  
+|4|TUESDAY|  
+|8|WEDNESDAY|  
+|16|THURSDAY|  
+|32|FRIDAY|  
+|64|SATURDAY|  
 
  `DeleteOlderThan`  
  Data type: `UInt32`  

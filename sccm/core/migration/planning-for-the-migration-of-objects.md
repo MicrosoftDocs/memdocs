@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn how to plan for the migration of objects between hierarchies in a Configuration Manager current branch environment."
 ms.date: 01/12/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
@@ -136,7 +136,7 @@ Configuration Manager does not support the migration of reports. Instead, use SQ
 > [!NOTE]  
 >  Because there are schema changes for reports between Configuration Manager 2007 and Configuration Manager current branch, test each report that you import from a Configuration Manager 2007 hierarchy to ensure that it functions as expected.  
 
-For more about reporting, see [Reporting](../../core/servers/manage/reporting.md).  
+For more about reporting, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
 
 ##  <a name="Plan_Migrate_Org_Folders"></a> Plan to migrate organizational and search folders  
  You can migrate organizational folders and search folders from a supported source hierarchy to a destination hierarchy. In addition, from a System Center 2012 Configuration Manager or Configuration Manager current branch source hierarchy, you can migrate the criteria for a saved search to a destination hierarchy.  

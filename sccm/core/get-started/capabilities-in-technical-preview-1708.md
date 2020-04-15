@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview version 1708 for Configuration Manager."
 ms.date: 08/25/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 3c061ceb-3bdb-4d4f-8c60-344964bd416b
 author: aczechowski
