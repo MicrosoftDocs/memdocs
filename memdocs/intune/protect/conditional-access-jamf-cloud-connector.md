@@ -102,7 +102,7 @@ If you have not previously set up a connection between Jamf Pro and Intune, or i
 
 1. Sign in to the Jamf Pro console.
 
-2. Select **Settings** (the gear icon in the upper right corner), and then go to **Global Management* > **Conditional Access**.
+2. Select **Settings** (the gear icon in the upper right corner), and then go to **Global Management** > **Conditional Access**.
 
    ![Navigate to Conditional Access](./media/conditional-access-jamf-cloud-connector/navigate-jamf-console-1.png)
 
