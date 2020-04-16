@@ -90,7 +90,7 @@ Derived credentials are an implementation of the National Institute of Standards
 
    ![Example image of Chrome Terms of Service screen, highlighting Accept & Continue button.](./media/fully-managed-intune-app-06.png)  
 
-6. On the sign-in screen, tap **Sign-in options" and then **Sign in from another device**. 
+6. On the sign-in screen, tap **Sign-in options** and then **Sign in from another device**. 
 
 7. Write down the onscreen code.  
 
