@@ -79,8 +79,6 @@
         href: endpoint-security-configure-disk-encryption.md
       - name: Account protection
         items:
-        - name: Windows Hello
-          href: windows-hello.md
         - name: Identity protection
           href: identity-protection-configure.md  
     - name: Microsoft Defender ATP
@@ -155,6 +153,12 @@
         href: encrypt-devices.md
       - name: Monitor device encryption
         href: encryption-monitor.md
+  - name: Windows Hello
+    items:
+    - name: Windows Hello
+      href: windows-hello.md
+    - name: Identity protection
+      href: identity-protection-configure.md
   - name: Conditional Access
     items:
     - name: Conditional Access overview
