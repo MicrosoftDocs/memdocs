@@ -118,7 +118,7 @@ To configure BitLocker, use:
 
   ![BitLocker settings](./media/encrypt-devices/bitlocker-settings.png)
 
-### How to configure Windows 10 BitLocker as a device configuratoin profile
+### How to configure Windows 10 BitLocker as a device configuration profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
