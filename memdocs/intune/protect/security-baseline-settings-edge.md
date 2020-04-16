@@ -183,7 +183,7 @@ View the Microsoft Edge web browser baseline settings that are supported by Micr
   When set to *Enabled*, you can configure TLS by using the following setting.
 
   - **Minimum SSL version enabled**
-    Set the minimum version of TLS to use. Microsoft Edge won't use any version of SSL/TLS thats lower than the specified version.
+    Set the minimum version of TLS to use. Microsoft Edge won't use any version of SSL/TLS that's lower than the specified version.
     - **TLS 1.0**
     - **TLS 1.1**
     - **TLS 1.2** (*default*)
