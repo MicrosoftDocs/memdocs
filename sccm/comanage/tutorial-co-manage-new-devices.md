@@ -124,7 +124,7 @@ Request a version 2 key provider type when you generate a CSR. Only version 2 ce
 
 #### Details for the cloud management gateway CSR
 
-- **Common Name**: ClousServiceNameCMG.YourCompanyPubilcDomainName.com  
+- **Common Name**: CloudServiceNameCMG.YourCompanyPubilcDomainName.com  
 Example: MyCSG.contoso.com  
 - **Subject Alternative Name**: Same as the Common Name (CN)  
 - **Organization**:  The name of your organization  
