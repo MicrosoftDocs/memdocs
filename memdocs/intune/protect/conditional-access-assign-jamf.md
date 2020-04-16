@@ -41,8 +41,7 @@ The procedures in this article require access to both the Intune and Jamf Pro co
 Intune supports two methods to integrate Jamf Pro, which you configure separately from the procedures in this article:
 
 - Recommended: [Use the Jamf Cloud Connector to integrate Jamf Pro with Intune](conditional-access-jamf-cloud-connector.md)
--[Manually configure integration of Jamf Pro with Intune](conditional-access-integrate-jamf.md)
-
+- [Manually configure integration of Jamf Pro with Intune](conditional-access-integrate-jamf.md)
 
 ## Set up device compliance policies in Intune
 
