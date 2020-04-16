@@ -113,7 +113,7 @@ BitLocker is available on devices that run **Windows 10 or later**.
 
 To configure BitLocker, use:
 
-- Endpoint security [disk encryption policy for Windows 10 BitLocker](../protect/endpoint-security-configure-disk-encryptioin.md#filevault-profile-for-macos). The BitLocker profile in *Endpoint security* is a focused group of settings that is dedicated to configuring BitLocker.
+- Endpoint security [disk encryption policy for Windows 10 BitLocker](../protect/endpoint-security-configure-disk-encryption.md#filevault-profile-for-macos). The BitLocker profile in *Endpoint security* is a focused group of settings that is dedicated to configuring BitLocker.
 - A [device configuration profile](endpoint-protection-configure.md) for endpoint protection for the Windows 10 or later platform. BitLocker settings are in the Windows Encryption settings category for Windows 10 endpoint protection.
 
   ![BitLocker settings](./media/encrypt-devices/bitlocker-settings.png)

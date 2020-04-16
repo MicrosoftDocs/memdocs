@@ -201,5 +201,5 @@ Devices must meet the following prerequisites to support rotation of the BitLock
 
 ## Next steps
 
-[Endpoint security in Intune](../protect/endpoint-security-intune.md)
+[Endpoint security in Intune](../protect/endpoint-security.md)
 Review profile settings for disk encryption](../protect/endpoint-security-disk-encryption-profile-settings.md)

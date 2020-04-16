@@ -208,7 +208,7 @@ Because the encryption methods are part of the platforms, there are no additiona
 
 #### macOS profiles
 
-- **FileVault** – FileVault provides built-in Full Disk Encryption for macOS devices. Manage [settings for FileVault](../protect/endpoint-security-disk-encryption-profile-settings.md#macos) on devices that run macOS.
+- **FileVault** – FileVault provides built-in Full Disk Encryption for macOS devices. Manage [settings for FileVault](../protect/endpoint-security-disk-encryption-profile-settings.md#filevault) on devices that run macOS.
 
 #### Windows 10 profiles
 
@@ -351,7 +351,7 @@ While Intune can integrate with several [Mobile Threat Defense partners](../prot
 
 Configure:
 
-- [Security baselines](../protect/security-baslines.md)
+- [Security baselines](../protect/security-baselines.md)
 - [Compliance policies](../protect/device-compliance-get-started.md)
 - [Conditional access policies](#configure-conditional-access)
 - [Integration with Defender ATP](../protect/advanced-threat-protection.md)
