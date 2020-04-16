@@ -60,6 +60,33 @@
       href: actions-for-noncompliance.md
     - name: Monitor device compliance
       href: compliance-policy-monitor.md
+  - Manage endpoint security
+    items:
+    - name: Endpoint security
+      href: endpoint-security.md
+      items:
+      - name: Security baselines
+        items: 
+        - name: Security baselines 
+          href: security-baselines.md
+        - name: Monitor your baselines
+          href: security-baselines-monitor.md
+      - name: Security tasks
+        href: atp-manage-vulnerabilities.md 
+      - name: Endpoint security policy
+        items:
+        - name: Antivirus policy
+          href: endpoint-security-configure-antivirus.md
+        - name: Disk encryption policy
+          href: endpoint-security-configure-disk-encryption.md
+        - name: Account protection
+          items:
+          - name: Windows Hello
+            href: windows-hello.md
+          - name: Identity protection
+            href: identity-protection-configure.md  
+      - name: Microsoft Defender ATP
+        href: advanced-threat-protection.md  
   - name: Encrypt devices
     items:
     - name: Encrypt Devices
@@ -155,28 +182,10 @@
           items:
           - name: Zimperium and Intune integration
             href: zimperium-mtd-connector-integration.md     
-    - name: Microsoft Defender
-      items: 
-      - name: Microsoft Defender ATP
-        href: advanced-threat-protection.md  
-      - name: Security tasks
-        href: atp-manage-vulnerabilities.md  
-  - name: Security baselines
-    items: 
-    - name: Security baselines 
-      href: security-baselines.md
-    - name: Monitor your baselines
-      href: security-baselines-monitor.md
   - name: Endpoint protection
     href: endpoint-protection-configure.md
   - name: Network access control
     href: network-access-control-integrate.md
-  - name: Windows Hello
-    items:
-    - name: Windows Hello
-      href: windows-hello.md
-    - name: Identity protection
-      href: identity-protection-configure.md  
   - name: Certificates
     items: 
     - name: Use certificates for authentication
