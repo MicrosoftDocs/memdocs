@@ -147,7 +147,7 @@
         href: encrypt-devices.md
       - name: Monitor device encryption
         href: encryption-monitor.md
-  - name: Windows Hello
+  - name: Identity protection
     items:
     - name: Windows Hello
       href: windows-hello.md
