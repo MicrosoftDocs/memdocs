@@ -70,7 +70,10 @@ Consider the following fields:
     - Domain Joined
     - Hybrid AAD Joined (joined to the AD and AAD)
 
-    Compliance status is managed in Configuration Manager and might not be visible in the Microsoft Endpoint Manager admin center.  Similarly, these devices won’t receive policy deployed by Intune.
+    Compliance status is managed in Configuration Manager and might not be visible in the Microsoft Endpoint Manager admin center. 
+    
+    <!-- Tenant attached devices can receive your endpoint security policies. The following policy types are supported, with additional policy types being added in future updates to Intune: 
+    --> 
 
     For more information, see [Enable tenant attach](https://docs.microsoft.com/configmgr/tenant-attach/device-sync-actions) in the Configuration Manager documentation.
 
@@ -78,17 +81,17 @@ Consider the following fields:
 
     With co-management, you [choose different co-management workloads](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) to determine which aspects are managed by Configuration Manager or by Intune. These choices will affect which policies the device applies, and how compliance data is reported to the admin center.
 
-    For example, you can use Intune to configure policy for Antivirus, Firewall, and Encryption. These policy types are considered policy for *Endpoint Protection*. To have a co-managed device use the Intune policies and not the Configuration Manager policies, the co-management slider for Endpoint Protection must be set to either *Intune* or *Pilot Intune*. If the slider is set to Configuration Manager, the device uses the policies and settings from Configuration Manager instead.
+    For example, you can use Intune to configure policy for Antivirus, Firewall, and Encryption. These policy types are considered policy for *Endpoint Protection*. To have a co-managed device use the Intune policies and not the Configuration Manager policies, set the co-management slider for Endpoint Protection to either *Intune* or *Pilot Intune*. If the slider is set to Configuration Manager, the device uses the policies and settings from Configuration Manager instead.
 
-  - **Compliance**: Compliance is evaluated against the compliance policies that are assigned to the device. The source of these policies and what information is in the console depends on how the device is managed; Intune, Configuration Manager, or co-management.
+- **Compliance**: Compliance is evaluated against the compliance policies that are assigned to the device. The source of these policies and what information is in the console depends on how the device is managed; Intune, Configuration Manager, or co-management. For co-managed devices to report compliance, set the co-management slider for Device Compliance to either Intune or Pilot Intune.  
 
-    After compliance is reported to the admin center for a device, you can drill into the details to view additional details. When a device isn’t compliant, drill into its details to information about which policies aren't compliant.  That information can help you investigate and help you bring the device into compliance.
+  After compliance is reported to the admin center for a device, you can drill into the details to view additional details. When a device isn’t compliant, drill into its details to information about which policies aren't compliant.  That information can help you investigate and help you bring the device into compliance.
 
-  - **Last check-in**: If a device hasn’t checked in for some time, its details, including its Compliance status, can be out of date.
+- **Last check-in**: If a device hasn’t checked in for some time, its details, including its Compliance status, can be out of date.
 
 ### Remote actions for devices
 
-When you view details for a device, you can access remote actions that apply to the device.
+Remote actions are actions you can start or apply to a device from the Microsoft Endpoint Manager admin center. When you view details for a device, you can access remote actions that apply to the device.
 
 Remote actions display across the top of the devices *Overview* page. Actions that can’t display because of limited space on your screen are available by selecting the ellipsis on the right side:
 
@@ -105,25 +108,19 @@ The remote actions that are available depend on how the device is managed:
 
 - **Co-management**: You can access both Intune remote actions and Configuration Manager actions.
 
-Remote actions are actions you can start from the Microsoft Endpoint Manager admin center, which take effect the next time that device checks in with either Intune or Configuration Manager, depending on the action you use.
-
 Some of the Intune remote actions can help secure devices or safeguard data that might be on the device. With remote actions you can lock a device, reset a device, remove company data, scan for malware outside of a scheduled run, and rotate BitLocker keys.
 
 The following Intune remote actions are of interest to the security admin, and are a subset of the [full list](../remote-actions/device-inventory.md#view-the-device-details). Not all actions are available for all device platforms. The links go to content that provides in-depth details for each action.
 
-- [Retire](../remote-actions/devices-wipe.md#retire) - Remove managed app data (where applicable), settings, and email profiles that were assigned by using Intune. The device is removed from Intune management.
+- [Synchronize device](../remote-actions/device-sync.md) – For the device to immediately check in with Intune. When a device checks in, it immediately receives any pending actions or policies that have been assigned to it.  
 
-- [Wipe](../remote-actions/devices-wipe.md#wipe) – Restores a device to its factory default settings. The user data is kept if you choose the **Retain enrollment state and user account** checkbox. Otherwise, all data, apps, and settings will be removed.
+- [Restart](../remote-actions/device-restart.md) – Force a Windows 10 device to restart, within five minutes. THe device owner won't automatically be notified of the restart and might lose work.
 
-- [Delete](../remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal) – Remove the device from the Intune portal. The next time the device checks in, any company data on the device is removed. You can also set up a clean-up rule that can delete a device when it hasn’t checked in from between 30 and 270 days.
+- [Quick Scan](../configuration/device-restrictions-windows-10.md) – Have Defender run a quick scan of the device for malware and then submit the results to Intune. A quick scan looks at common locations where there could be malware registered, such as registry keys and known Windows startup folders.
 
-- [Remote lock](../remote-actions/device-remote-lock.md) – Remotely lock a device. To unlock the device, the device owner enters their passcode.
+- [Full scan](../configuration/device-restrictions-windows-10.md) – Have Defender run a scan of the device for malware and then submit the results to Intune. A full scan looks at common locations where there could be malware registered, and also scans every file and folder on the device.
 
-- [Reset passcode](../remote-actions/device-passcode-reset.md) - Reset the passcode for an entire device, or for a device users work profile, depending on the Android platform in use.
-
-- Update Windows Defender security intelligence – Have the device update its malware definitions for Microsoft Defender. This action doesn’t start a scan.
-
-- [Full scan](../configuration/device-restrictions-windows-10.md) – Have Defender run a scan of the device for malware and then submit the results to Intune. In addition to Full, there is an option for a quick scan.
+- Update Windows Defender security intelligence – Have the device update its malware definitions for Microsoft Defender Antivirus. This action doesn’t start a scan. 
 
 - [BitLocker key rotation](../protect/encrypt-devices.md#to-rotate-the-bitlocker-recovery-key) – Remotely rotate the BitLocker recovery key of a device that runs Windows 10 version 1909 or later.
 
@@ -342,8 +339,9 @@ When you integrate Microsoft Defender Advanced Threat Protection (Defender ATP) 
 While Intune can integrate with several [Mobile Threat Defense partners](../protect/mobile-threat-defense.md), when you use Defender ATP you gain a tight integration between Defender ATP and Intune with access to deep device protection options, including:
 
 - Security tasks – Seamless communication between ATP and Intune admins about devices at risk, how to remediate them, and confirmation when those risks are mitigated.
-- Access to device protection settings *attack surface reduction* rules, and *endpoint detection and response* that help protect devices from a variety of risks
-- Access to protection features like *Application Guard* and antivirus policy and settings that you can manage with Intune.
+- Streamlined onboarding for *Endpoint detection and response* on clients
+- Use of ATP device risk signals in Intune compliance policies
+- Access to *Tamper protection* capabilities
 
  To learn more about using Defender ATP with Intune, see [Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune](../protect/advanced-threat-protection.md)
 
