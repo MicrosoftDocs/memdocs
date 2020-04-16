@@ -90,11 +90,11 @@ Derived credentials are an implementation of the National Institute of Standards
 
    ![Example image of Chrome Terms of Service screen, highlighting Accept & Continue button.](./media/fully-managed-intune-app-06.png)  
 
-6. On the sign-in screen, tap **Sign in from another device**. Sign in with your work or school account. 
+6. On the sign-in screen, tap **Sign-in options" and then **Sign in from another device**. 
 
 7. Write down the onscreen code.  
 
-8. Switch to your smart card-enabled device and go to https://microsoft.com/devicelogin.
+8. Switch to your smart card-enabled device and go to the web address that's shown on your screen. 
 
 9. Enter the code you previously wrote down.
 
@@ -103,10 +103,7 @@ Derived credentials are an implementation of the National Institute of Standards
 
 10. Insert your smart card to sign in.  
 
-11. On the sign-in screen, sign in with your work or school account.   
-
-    a. Enter your email and tap **Next**.      
-    b. Enter your password and tap **Sign in**.  
+11. On the sign-in screen, select your work or school account. Then switch back to your mobile device.
 
 12. Depending on your organization's requirements, you might be prompted to update settings, such as screen lock or encryption. If you see these prompts, tap **SET** and follow the onscreen instructions.  
 
@@ -165,7 +162,7 @@ In this section, you'll enter your company-provided token. When you're done, we'
    > [!div class="mx-imgBorder"]
    > ![Example screenshot of the Company Portal push notification on device home screen.](./media/action-required-in-app-android.png)
 
-2. On the **Setup smart card** screen:
+2. On the **Set up smart card** screen:
 
    1. Tap the link to your organization's setup instructions. If your organization doesn't provide additional instructions, you'll be sent to this article.
 
