@@ -77,10 +77,6 @@
         href: endpoint-security-configure-antivirus.md
       - name: Disk encryption policy
         href: endpoint-security-configure-disk-encryption.md
-      - name: Account protection
-        items:
-        - name: Identity protection
-          href: identity-protection-configure.md  
     - name: Microsoft Defender ATP
       href: advanced-threat-protection.md  
     - name: Threat protection
@@ -95,7 +91,7 @@
           - name: Create an MTD app protection policy
             href: mtd-app-protection-policy.md
           - name: Enable MTD for unenrolled devices
-            href: mtd-enable-unenrolled-devices.md                    
+            href: mtd-enable-unenrolled-devices.md
         - name: MTD on enrolled devices
           items:
           - name: Add MTD apps to enrolled devices
