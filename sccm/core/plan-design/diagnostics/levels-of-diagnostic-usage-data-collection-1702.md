@@ -1,23 +1,24 @@
 ---
 title: "Diagnostic data for 1702"
 titleSuffix: "Configuration Manager"
-description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1702 collects."
-ms.date: 3/27/2017
+description: "Learn about the levels of diagnostics and usage data that Configuration Manager version 1702 collects."
+ms.date: 03/27/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: d43ab033-2902-4681-8716-b4b17a6df372
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Levels of diagnostic usage data collection for version 1702 of System Center Configuration Manager
+# Levels of diagnostic usage data collection for version 1702 of Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-System Center Configuration Manager version 1702 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail about data that each level collects.
+Configuration Manager version 1702 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail about data that each level collects.
 
 Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[Removed]***, or ***[Moved]***.
 
@@ -37,7 +38,7 @@ You change the data collection level from within the console by navigating to **
 ##  <a name="bkmk_level1"></a> Level 1 - Basic
 The Basic level includes data about your hierarchy, data that's required to help improve your installation or upgrade experience, and data that helps determine the Configuration Manager updates that are applicable for your hierarchy.
 
-For System Center Configuration Manager version 1702, this level includes the following:
+For Configuration Manager version 1702, this level includes the following:
 
 - Admin Console:
    - Statistics about console connections (operating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)
@@ -79,7 +80,7 @@ For System Center Configuration Manager version 1702, this level includes the fo
 
      - Software Assurance expiration date      
 
-     - Update pack deployment status and errors, download progress, and prerequisite errors 	
+     - Update pack deployment status and errors, download progress, and prerequisite errors 
 
      - Use of update fast ring
 
@@ -98,7 +99,7 @@ The Enhanced level is the default after setup finishes. This level includes data
 
 This level is recommended because it provides Microsoft with the minimum data that's required to make useful improvements in future versions of products and services. This level does not collect object names (sites, users, computer, or objects), details of security-related objects, or vulnerabilities like counts of systems that require software updates.
 
-For System Center Configuration Manager version 1702, this level includes the following:
+For Configuration Manager version 1702, this level includes the following:
 
 - **Application management:**  
 
@@ -400,7 +401,7 @@ For System Center Configuration Manager version 1702, this level includes the fo
 ##  <a name="bkmk_level3"></a> Level 3 - Full
 The Full level includes all data in the Basic and Enhanced levels. It also includes additional information about Endpoint Protection, update compliance percentages, and software update information.  This level can also include advanced diagnostic information like system files and memory snapshots which might include personal information that existed in memory or log files at the time of capture.
 
-For System Center Configuration Manager version 1702, this level includes the following:
+For Configuration Manager version 1702, this level includes the following:
 
 - Automatic deployment rule evaluation schedule information
 
@@ -411,7 +412,7 @@ For System Center Configuration Manager version 1702, this level includes the fo
 - Compliance Settings: SCEP, VPN, Wi-Fi and Compliance Policy template configuration details
 Count of groups that have expired software updates
 
-- DCM config pack for System Center Configuration Manager usage
+- DCM config pack for Configuration Manager usage
 
 - Detailed client deployment installation errors
 - Endpoint Protection health summary (including count of protected, at risk, unknown, and unsupported clients)

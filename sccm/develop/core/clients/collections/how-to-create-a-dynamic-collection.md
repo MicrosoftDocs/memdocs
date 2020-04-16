@@ -9,10 +9,11 @@ ms.assetid: 7d27ea5b-8941-4453-b90b-35d9ad2891eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a Dynamic Collection
-In System Center Configuration Manager, your application uses the [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) to define the attributes of a collection, such as the membership rules and the refresh schedule. The `MemberClassName` property contains the system-generated class name that contains the members of the collection.  
+In Configuration Manager, your application uses the [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) to define the attributes of a collection, such as the membership rules and the refresh schedule. The `MemberClassName` property contains the system-generated class name that contains the members of the collection.  
 
  Members of a collection are specified by using direct rules, query rules, or both. Direct rules define an explicit resource, whereas query rules define a dynamic collection that is regularly evaluated based on the current state of the site.  
 
@@ -59,7 +60,7 @@ CreateDynamicCollection(WMIConnection, "New Dynamic Collection Name", "New dynam
 
 ### To create a dynamic collection  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Create the new collection object by using the [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) class.  
 
@@ -177,12 +178,8 @@ public void CreateDynamicCollection(WqlConnectionManager connection, string newC
 ## See Also  
  [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)   
  [SMS_CollectionRuleQuery Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionrulequery-server-wmi-class.md)   
- [Configuration Manager Collections](../../../../develop/core/clients/collections/collections.md)   
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
- [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
- [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)   
- [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)   
- [How to Use Configuration Manager Objects with WMI](../../../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md)   
- [How to Use Configuration Manager Objects with Managed Code](../../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)   
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+ [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)

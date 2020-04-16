@@ -10,12 +10,13 @@ ms.assetid: f053fa73-c553-4522-a6b9-f885f23fe57c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Package Conversion Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 <!--1357861-->
 
@@ -126,17 +127,17 @@ Not all packages are suitable to be converted into applications. Before you begi
 
 The best types of package for conversion to applications are those that contain user-facing software, for example:  
 
- - Windows Installer files (.msi and .msu)  
+- Windows Installer files (.msi and .msu)  
 
- - Microsoft Application Virtualization (App-V) programs  
+- Microsoft Application Virtualization (App-V) programs  
 
- - Windows executable files (.exe)  
+- Windows executable files (.exe)  
 
 The types of package that are best kept as packages and not converted to applications include:
 
- - System maintenance tools. For example, scripts or backup utilities.  
+- System maintenance tools. For example, scripts or backup utilities.  
 
- - Packages for software that are out of support.
+- Packages for software that are out of support.
 
 > [!Tip]  
 > After identifying packages that aren't appropriate for conversion into applications, move them to a separate folder in the Configuration Manager console. To create a package folder in the Configuration Manager console:  
@@ -149,26 +150,26 @@ The types of package that are best kept as packages and not converted to applica
 
 For each package you want to convert, ensure that they conform to the following conditions:  
 
- - The source files location is a full UNC path, for example `\\Server\Share\File`.  
+- The source files location is a full UNC path, for example `\\Server\Share\File`.  
 
- - Windows Installer files use only one unique product code.  
+- Windows Installer files use only one unique product code.  
 
 
 ### <a name="bkmk_test"></a> Select test packages
 
 If possible, your group of test packages should include packages that meet the following criteria:  
 
- - At least one test package with a readiness state of **Automatic**.  
+- At least one test package with a readiness state of **Automatic**.  
 
- - At least one test package with a readiness state of **Manual**.  
+- At least one test package with a readiness state of **Manual**.  
 
 Ideally, your test packages should be core packages, for example:  
 
- - Packages that you know well.  
+- Packages that you know well.  
 
- - Packages that are the most important to your organization.  
+- Packages that are the most important to your organization.  
 
- - Packages that you can most easily test.  
+- Packages that you can most easily test.  
 
 Identify the packages that are appropriate for testing. Then move them to a separate folder in the Configuration Manager console.
 
@@ -186,13 +187,13 @@ To analyze an individual package or a small group, use Package Conversion Manage
 
 After analyzing the test packages, investigate the packages with a readiness state of **Manual** or **Error**. Determine the reasons why they have that state. Some common reasons for a readiness state of **Manual** or **Error** include:
 
- - The package doesn't contain the information required to create a detection method in an application deployment type.  
+- The package doesn't contain the information required to create a detection method in an application deployment type.  
 
- - The package doesn't contain the information required to convert collections to global conditions and requirements.  
+- The package doesn't contain the information required to convert collections to global conditions and requirements.  
 
- - The package contains more than one program.  
+- The package contains more than one program.  
 
- - The package is dependent on another package that you haven't converted to an application.  
+- The package is dependent on another package that you haven't converted to an application.  
 
 For more information, use the following resources:  
 

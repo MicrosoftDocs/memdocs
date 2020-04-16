@@ -9,7 +9,8 @@ ms.assetid: e64823ec-48c0-4001-ba00-9ba5906a7336
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_Application Client WMI Class
 The `CCM_Application` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application.   
@@ -504,6 +505,3 @@ Class CCM_Application : CCM_SoftwareBase
 
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Client SDK WMI Classes](../../../../../develop/reference/core/clients/sdk/client-sdk-wmi-classes.md)

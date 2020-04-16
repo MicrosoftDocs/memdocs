@@ -9,7 +9,8 @@ ms.assetid: a38f79cd-7493-470f-9ca0-489c985cdf75
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddChangeNotification Method in Class SMS_TaskSequencePackage
 The `AddChangeNotification` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a task sequence package change notification.  

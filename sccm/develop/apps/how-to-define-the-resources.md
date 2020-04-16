@@ -9,7 +9,8 @@ ms.assetid: 29a19b45-0413-4cb1-a74a-4c38cdc84118
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Define the Resources
 To support the Installer, a custom XML schema should be included as part of the assembly. The schema file (XSD) file must be included as a resource in the assembly.  
@@ -35,7 +36,7 @@ To support the Installer, a custom XML schema should be included as part of the 
 
      The following example from the RDP sample project demonstrates how to define a custom schema file.  
 
-    ```  
+    ```xml
     <?xml version="1.0" encoding="utf-8"?>  
     <xs:schema id="RdpInstaller" version="1" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/SystemsManagement/2009/ApplicationManagement" xmlns="http://schemas.microsoft.com/SystemsManagement/2009/ApplicationManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
       <xs:complexType name="RdpInstaller">  
@@ -78,5 +79,4 @@ To support the Installer, a custom XML schema should be included as part of the 
 ## See Also  
  [How to Define the Hosting Technology](../../develop/apps/how-to-define-the-hosting-technology.md)   
  [How To Define the Installer Technology](../../develop/apps/how-to-define-the-installer-technology.md)   
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

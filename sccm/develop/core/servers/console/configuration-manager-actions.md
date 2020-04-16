@@ -8,10 +8,11 @@ ms.assetid: e17c2d91-aecc-4697-8084-64a56cda49d9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Actions
-System Center Configuration Manager console actions are tasks or commands that are performed by making context menu or action panel selections. There are a number of standard action types such as cut, paste, and properties. You can also add your own custom actions to perform tasks such as running programs and displaying dialog boxes. You can restrict the availability of actions to such criteria as regular expressions, security permissions, and method call results.  
+Configuration Manager console actions are tasks or commands that are performed by making context menu or action panel selections. There are a number of standard action types such as cut, paste, and properties. You can also add your own custom actions to perform tasks such as running programs and displaying dialog boxes. You can restrict the availability of actions to such criteria as regular expressions, security permissions, and method call results.  
 
  In the Configuration Manager console, actions are defined in XML by the [ActionDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actiondescription.aspx) element.  
 
@@ -51,7 +52,7 @@ System Center Configuration Manager console actions are tasks or commands that a
 
    For more information, see [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md).  
 
-   For more information about the Configuration Manager console nodes, see [Configuration Manager Administrator Console Nodes](../../../../develop/core/servers/console/console-nodes.md).  
+   For more information about the Configuration Manager console nodes, see [About console nodes](/sccm/develop/core/servers/console/about-configuration-manager-console-nodes).  
 
 ## Conditional Actions  
  Actions can be made available (displayed) according to specified conditions. The conditions are defined by the following:  
@@ -67,7 +68,7 @@ System Center Configuration Manager console actions are tasks or commands that a
 ## See Also  
  [Configuration Manager Action XML](../../../../develop/core/servers/console/configuration-manager-action-xml.md)   
  [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md)   
- [Configuration Manager Console Actions](../../../../develop/core/servers/console/console-actions.md)   
- [Configuration Manager Console Forms](../../../../develop/core/servers/console/console-forms.md)   
- [Configuration Manager Console Views](../../../../develop/core/servers/console/console-views.md)   
+ [About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions)
+ [About console forms](/sccm/develop/core/servers/console/about-configuration-manager-console-forms)
+ [About console views](/sccm/develop/core/servers/console/about-configuration-manager-console-views)
  [How to Find a Configuration Manager Node GUID](../../../../develop/core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md)

@@ -10,17 +10,18 @@ ms.assetid: 0a9dc0fe-a942-40a2-bab1-7eeee4d95380
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Create an Endpoint Protection point site system role
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
- The Endpoint Protection point site system role must be installed before you can use Endpoint Protection. It must be installed on one site system server only, and it must be installed at the top of the hierarchy on a central administration site or a stand-alone primary site.
+The Endpoint Protection point site system role must be installed before you can use Endpoint Protection. It must be installed on one site system server only, and it must be installed at the top of the hierarchy on a central administration site or a stand-alone primary site.
 
- Use one of the following procedures depending on whether you want to install a new site system server for Endpoint Protection or use an existing site system server:
- - [Install on a new site system server](#new-site-system-server)
- - [Install on an existing site system server](#existing-site-system-server)
+Use one of the following procedures depending on whether you want to install a new site system server for Endpoint Protection or use an existing site system server:
+- [Install on a new site system server](#new-site-system-server)
+- [Install on an existing site system server](#existing-site-system-server)
 
 > [!IMPORTANT]
 >  When you install an Endpoint Protection point, an Endpoint Protection client is installed on the server hosting the Endpoint Protection point. Services and scans are disabled on this client to enable it to co-exist with any existing antimalware solution that is installed on the server. If you later enable this server for management by Endpoint Protection and select the option to remove any third-party antimalware solution, the third-party product will not be removed. You must uninstall this product manually.
@@ -45,7 +46,7 @@ ms.collection: M365-identity-device-management
 7.  On the **Cloud Protection Service** page, select the level of information that you want to send to Microsoft to help develop new definitions, and then click **Next**.
 
     > [!NOTE]
-    >  This option configures the Cloud Protection Service (formerly known as Microsoft Active Protection Service or MAPS) settings that are used by default. You can then configure custom settings for each antimalware policy you create. Join Cloud Protection Service, to help to keep your computers more secure by supplying Microsoft with malware samples that can help Microsoft to keep antimalware definitions more up-to-date. Additionally, when you join Cloud Protection Service, the Endpoint Protection client can use the dynamic signature service to download new definitions before they are published to Windows Update. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
+    >  This option configures the Cloud Protection Service (formerly known as Microsoft Active Protection Service or MAPS) settings that are used by default. You can then configure custom settings for each antimalware policy you create. Join Cloud Protection Service, to help to keep your computers more secure by supplying Microsoft with malware samples that can help Microsoft to keep antimalware definitions more up-to-date. Additionally, when you join Cloud Protection Service, the Endpoint Protection client can use the dynamic signature service to download new definitions before they are published to Windows Update. For more information, see [How to create and deploy antimalware policies for Endpoint Protection](endpoint-antimalware-policies.md).
 
 8.  Complete the wizard.
 
@@ -70,6 +71,6 @@ ms.collection: M365-identity-device-management
 7.  On the **Cloud Protection Service** page, select the level of information that you want to send to Microsoft to help develop new definitions, and then click **Next**.
 
     > [!NOTE]
-    >  This option configures the Cloud Protection Service settings (formerly known as MAPS) that are used by default. You can configure custom settings for each antimalware policy you configure. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
+    >  This option configures the Cloud Protection Service settings (formerly known as MAPS) that are used by default. You can configure custom settings for each antimalware policy you configure. For more information, see [How to create and deploy antimalware policies for Endpoint Protection](endpoint-antimalware-policies.md).
 
 8.  Complete the wizard.

@@ -9,10 +9,11 @@ ms.assetid: ce0a6939-840e-401c-9843-d5c94c00b9e6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create Form XML for a Configuration Manager Property Sheet
-In System Center Configuration Manager, to create the form XML for a Configuration Manager property sheet, you create an XML file that describes an `SmsFormData`.  
+In Configuration Manager, to create the form XML for a Configuration Manager property sheet, you create an XML file that describes an `SmsFormData`.  
 
  Every Configuration Manager console form extension has an associated form XML file that describes the assembly, the type of the form to be displayed, and—in the case of property sheets—how the property pages are organized. The property sheet XML file is referenced by the action XML when an action is selected.  
 
@@ -32,7 +33,7 @@ In System Center Configuration Manager, to create the form XML for a Configurati
 
 2.  In Notepad, create an XML file that contains the following XML:  
 
-    ```  
+    ```xml
     <?xml version="1.0" encoding="utf-8"?>  
     <SmsFormData xmlns="http://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework" FormatVersion="1">  
       <Form Id="PROPERTYSHEETGUID" CustomData="SomeData" FormType="PropertySheet" ForceRefresh="true">  

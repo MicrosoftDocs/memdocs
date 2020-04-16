@@ -2,7 +2,7 @@
 title: Manage OS images
 titleSuffix: Configuration Manager
 description: Learn the methods to manage OS images stored in Windows image (WIM) files.
-ms.date: 05/28/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Manage OS images with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 OS images in Configuration Manager are stored in the Windows image (WIM) file format. These images are a compressed collection of reference files and folders use to install and configure a new OS on a computer. Many OS deployment scenarios require an OS image.
 
@@ -72,6 +73,8 @@ Before you can use an OS image, add it to your Configuration Manager site.
         > Configuration Manager doesn't modify the source image file. It creates a new image file in the same source directory.
         >
         > This extraction process can fail for extremely large image files, for example over 60 GB. The DISM error is `Not enough storage is available to process this command.` The command line that Configuration Manager uses is in the smsprov.log and dism.log. Manually run the same command and then import the image.<!-- SCCMDocs-pr issue 3502 -->  
+
+    - Starting in version 1906, if you want to pre-cache content on a client, specify the **Architecture** and **Language** of the image. For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).<!--4224642-->  
 
 4. On the **General** page, specify the following information. This information is useful for identification purposes when you have more than one OS image.  
 

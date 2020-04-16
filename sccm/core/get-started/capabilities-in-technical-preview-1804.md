@@ -4,19 +4,20 @@ titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager Technical Preview version 1804.
 ms.date: 05/21/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 8af43618-ec60-4c3e-a007-12399d1335b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
 
-# Capabilities in Technical Preview 1804 for System Center Configuration Manager
+# Capabilities in Technical Preview 1804 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
 This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1804. You can install this version to update and add new capabilities to your technical preview site. 
 
@@ -107,15 +108,15 @@ This feedback goes directly to the Microsoft product team for Configuration Mana
 
 The following anonymous information is always included with the feedback for context:  
 
- - Configuration Manager console version and language  
+- Configuration Manager console version and language  
 
- - Configuration Manager site version  
+- Configuration Manager site version  
 
- - Support ID, also known as the hierarchy ID  
+- Support ID, also known as the hierarchy ID  
 
- - OS version and language for the system on which the console is running  
+- OS version and language for the system on which the console is running  
 
- - The exact location in the console from which you clicked the smile  
+- The exact location in the console from which you clicked the smile  
 
 This data is consistent with the collection of our diagnostics and usage data. For more information, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).
 
@@ -135,9 +136,9 @@ Use Support Center for client troubleshooting, real-time log viewing, or capturi
 
 ### New Support Center features  
 
- - A new log viewer, OneTrace. It works similar to CMTrace, and includes improvements such as a tabbed view and dockable windows.  
+- A new log viewer, OneTrace. It works similar to CMTrace, and includes improvements such as a tabbed view and dockable windows.  
 
- - A new data collector feature gathers diagnostic logs from the local or a remote Configuration Manager client. It provides real-time diagnostic of inventory (replaces Client Spy), policy (replaces Policy Spy), and client cache.  
+- A new data collector feature gathers diagnostic logs from the local or a remote Configuration Manager client. It provides real-time diagnostic of inventory (replaces Client Spy), policy (replaces Policy Spy), and client cache.  
 
 
 
@@ -148,37 +149,37 @@ The Configuration Manager server and client tools are now included with the tech
 
 #### Server tools  
 
- - **DP Job Manager**: Troubleshoots content distribution jobs to distribution points  
+- **DP Job Manager**: Troubleshoots content distribution jobs to distribution points  
 
- - **Collection Evaluation Viewer**: View collection evaluation details  
+- **Collection Evaluation Viewer**: View collection evaluation details  
 
- - **Content Library Explorer**: View contents of the content library single instance store  
+- **Content Library Explorer**: View contents of the content library single instance store  
 
- - **Content Library Transfer**: Transfers content library between drives  
+- **Content Library Transfer**: Transfers content library between drives  
 
- - **Content Ownership Tool**: Changes ownership of orphaned packages. These packages exist in the site without an owning site server.  
+- **Content Ownership Tool**: Changes ownership of orphaned packages. These packages exist in the site without an owning site server.  
 
- - **Role-based Administration and Auditing Tool**: Helps administrators audit roles configuration  
+- **Role-based Administration and Auditing Tool**: Helps administrators audit roles configuration  
 
 #### Client tools
 
- - **CMTrace**: View logs  
+- **CMTrace**: View logs  
 
- - **Deployment Monitoring Tool**: Troubleshoot applications, updates, and baseline deployments  
+- **Deployment Monitoring Tool**: Troubleshoot applications, updates, and baseline deployments  
 
- - **Policy Spy**: View policy assignments  
+- **Policy Spy**: View policy assignments  
 
- - **Power Viewer Tool**: View status of power management feature  
+- **Power Viewer Tool**: View status of power management feature  
 
- - **Send Schedule Tool**: Trigger schedules and evaluations of DCM baselines  
+- **Send Schedule Tool**: Trigger schedules and evaluations of DCM baselines  
 
 > [!Important]  
 > [Support Center](#support-center) is recommended for most use cases, as it includes the same or improved functionality for the following tools:  
->  - Client Spy
->  - CMTrace<sup>1</sup> 
->  - Deployment Monitoring Tool
->  - Policy Spy
->  - Send Schedule Tool
+> - Client Spy
+> - CMTrace<sup>1</sup> 
+> - Deployment Monitoring Tool
+> - Policy Spy
+> - Send Schedule Tool
 > 
 > <sup>1</sup> CMTrace doesn't depend upon .NET or Windows Presentation Foundation (WPF), so is still used in Windows PE boot images.
 
@@ -290,17 +291,17 @@ After adding the architecture criteria, the automatic deployment rule properties
 ## Improvements to OS deployment
 We made the following improvements to OS deployment, some of which were the result of your user voice feedback.  
 
- - [Mask sensitive data stored in task sequence variables](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): In the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step, select the new option to **Do not display this value**. For example, when specifying a password.<!--1358330--> The following behaviors apply when you enable this option:
-   - The value of the variable isn't displayed in smsts.log.
-   - The Configuration Manager console and SMS Provider handle this value the same as other secrets such as passwords.
-   - The value isn't included when you export the task sequence.
-   - The task sequence editor doesn't read this value when you edit the step. Retype the entire value to make changes.
+- [Mask sensitive data stored in task sequence variables](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): In the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step, select the new option to **Do not display this value**. For example, when specifying a password.<!--1358330--> The following behaviors apply when you enable this option:
+  - The value of the variable isn't displayed in smsts.log.
+  - The Configuration Manager console and SMS Provider handle this value the same as other secrets such as passwords.
+  - The value isn't included when you export the task sequence.
+  - The task sequence editor doesn't read this value when you edit the step. Retype the entire value to make changes.
 
-   > [!Important]  
-   > Variables and their values are saved with the task sequence as XML, and obfuscated in the database. When the client requests a task sequence policy from the management point, it is encrypted in transit and when stored on the client. However, all variable values are plain text in the task sequence environment in memory during runtime on the client. If the task sequence includes a step to output the value of the variable, this output is in plain text. This behavior requires an explicit action by the administrator to include such a step in the task sequence. 
+  > [!Important]  
+  > Variables and their values are saved with the task sequence as XML, and obfuscated in the database. When the client requests a task sequence policy from the management point, it is encrypted in transit and when stored on the client. However, all variable values are plain text in the task sequence environment in memory during runtime on the client. If the task sequence includes a step to output the value of the variable, this output is in plain text. This behavior requires an explicit action by the administrator to include such a step in the task sequence. 
 
 
- - [Mask program name during Run Command Step of a task sequence](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): To prevent potentially sensitive data from being displayed or logged, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`. This variable masks the program name in the smsts.log during a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) task sequence step. <!--1358493-->  
+- [Mask program name during Run Command Step of a task sequence](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): To prevent potentially sensitive data from being displayed or logged, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`. This variable masks the program name in the smsts.log during a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) task sequence step. <!--1358493-->  
 
 
 
@@ -310,4 +311,4 @@ We made the following improvements to OS deployment, some of which were the resu
 
 
 ## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    

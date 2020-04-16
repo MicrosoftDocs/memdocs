@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 06/20/2019
+ms.date: 04/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # About client settings in Configuration Manager
 
-*Applies to: System Center Configuration Manager (current branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Manage all client settings in the Configuration Manager console from the **Client Settings** node in the **Administration** workspace. Configuration Manager comes with a set of default settings. When you change the default client settings, these settings are applied to all clients in the hierarchy. You can also configure custom client settings, which override the default client settings when you assign them to collections. For more information, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
 
@@ -61,6 +62,11 @@ Set up the client computer for [Windows BranchCache](/sccm/core/plan-design/conf
 
 - **Maximum BranchCache cache size (percentage of disk)**: The percentage of the disk that you allow BranchCache to use.
 
+> [!TIP]
+> If you set **Configure BranchCache** to **No**, then Configuration Manager doesn't configure any BranchCache settings.
+>
+> To disable BranchCache, set **Configure BranchCache** to **Yes**, and then set **Enable BranchCache** to **No**.<!-- 6244852 -->
+
 ### Configure client cache size
 
 The Configuration Manager client cache on Windows computers stores temporary files used to install applications and programs. If this option is set to **No**, the default size is 5,120 MB.
@@ -70,7 +76,10 @@ If you choose **Yes**, then specify:
 - **Maximum cache size (MB)**
 - **Maximum cache size (percentage of disk)**: The client cache size expands to the maximum size in megabytes (MB), or the percentage of the disk, whichever is less.
 
-### Enable Configuration Manager client in full OS to share content
+### Enable as peer cache source
+
+> [!Note]  
+> In version 1902 and earlier, this setting was named **Enable Configuration Manager client in full OS to share content**. The behavior of the setting didn't change.
 
 Enables [peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) for Configuration Manager clients. Choose **Yes**, and then specify the port through which the client communicates with the peer computer.
 
@@ -79,6 +88,17 @@ Enables [peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) for Con
 - **Port for content download from peer** (default TCP 8003): Configuration Manager automatically configures Windows Firewall rules to allow this traffic. If you use a different firewall, you must manually configure rules to allow this traffic.  
 
     For more information, see [Ports used for connections](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp).  
+
+### Minimum duration before cached content can be removed (minutes)
+
+<!--4485509-->
+Starting in version 1906, specify the minimum time for the Configuration Manager client to keep cached content. This client setting defines the minimum amount of time Configuration Manager agent should wait before it can remove content from the cache in case more space is needed.
+
+By default this value is 1,440 minutes (24 hours).
+The maximum value for this setting is 10,080 minutes (1 week).
+
+This setting gives you greater control over the client cache on different types of devices. You might reduce the value on clients that have small hard drives and don't need to keep existing content before another deployment runs.
+
 
 ## Client policy  
 
@@ -97,11 +117,14 @@ This value is 60 minutes by default. Reducing this value causes clients to poll 
 
 When you set this option to **Yes**, and use [user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser), then clients receive applications and programs targeted to the signed-in user.  
 
-The Application Catalog receives the list of available software for users from the site server. Thus, this setting doesn't have to be **Yes** for users to see and request applications from the Application Catalog. If this setting is **No**, users can't install the applications that they see in the Application Catalog.  
-
-In addition, if this setting is **No**, users don't receive required applications that you deploy to users. Users also don't receive any other management tasks in user policies.  
+If this setting is **No**, users don't receive required applications that you deploy to users. Users also don't receive any other management tasks in user policies.  
 
 This setting applies to users when their computer is on either the intranet or the internet. It must be **Yes** if you also want to enable user policies on the internet.  
+
+> [!Note]  
+> Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You can't install new application catalog roles.
+>
+> If you're still using the application catalog, it receives the list of available software for users from the site server. Thus, this setting doesn't have to be **Yes** for users to see and request applications from the application catalog. If this setting is **No**, users can't install the applications that they see in the application catalog.  
 
 ### Enable user policy requests from internet clients
 
@@ -113,13 +136,24 @@ Set this option to **Yes** for users to receive the user policy on internet-base
 
 - The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM). For more information, see [Considerations for client communications from the internet](/sccm/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan).  
 
-- Starting in version 1710, the cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications on Azure AD-joined devices](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- The cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications on Azure AD-joined devices](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
 
-If you set this option to **No**, or any of the previous requirements aren't met, then a computer on the internet only receives computer policies. In this scenario, users can still see, request, and install applications from an internet-based Application Catalog. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users don't receive user policies until the computer is connected to the intranet.  
+If you set this option to **No**, or any of the previous requirements aren't met, then a computer on the internet only receives computer policies. In this scenario, users can still see, request, and install applications from an internet-based application catalog. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users don't receive user policies until the computer is connected to the intranet.  
 
 > [!NOTE]  
 > For internet-based client management, application approval requests from users don't require user policies or user authentication. The cloud management gateway doesn't support application approval requests.  
 
+### Enable user policy for multiple user sessions
+
+<!--4737447-->
+
+*Applies to version 1910*
+
+By default, this setting is disabled. Even if you enable user policies, starting in version 1906 the client disables them by default on any device that allows multiple concurrent active user sessions. For example, terminal servers or Windows 10 Enterprise multi-session in [Windows Virtual Desktop](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-virtual-desktop).
+
+The client only disables user policy when it detects this type of device during a new installation. For an existing client of this type that you update to version 1906 or later, the previous behavior persists. On an existing device, it configures the user policy setting even if it detects that the device allows multiple user sessions.
+
+If you require user policy in this scenario, and accept any potential performance impact, enable this client setting.
 
 
 ## Cloud services
@@ -166,34 +200,40 @@ For more information about the following three settings, see [User notifications
 
 ### Default Application Catalog website point
 
-> [!Note]  
-> Starting in version 1806, the application catalog website point is no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).
+> [!Important]  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
-> The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+> For more information, see the following articles:
+>
+> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
+> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
 
-Configuration Manager uses this setting to connect users to the Application Catalog from Software Center. Select **Set Website** to specify a server that hosts the Application Catalog website point. Enter its NetBIOS name or FQDN, specify automatic detection, or specify a URL for customized deployments. In most cases, automatic detection is the best choice.
+Configuration Manager uses this setting to connect users to the application catalog from Software Center. Select **Set Website** to specify a server that hosts the application catalog website point. Enter its NetBIOS name or FQDN, specify automatic detection, or specify a URL for customized deployments. In most cases, automatic detection is the best choice.
 
 ### Add default Application Catalog website to Internet Explorer trusted sites zone
 
-> [!Note]  
-> Starting in version 1806, the application catalog website point is no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).
+> [!Important]  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 >
-> The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+> For more information, see the following articles:
+>
+> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
+> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
 
-If this option is **Yes**, the client automatically adds the current default Application Catalog website URL to the Internet Explorer trusted sites zone.  
+If this option is **Yes**, the client automatically adds the current default application catalog website URL to the Internet Explorer trusted sites zone.  
 
-This setting ensures that the Internet Explorer setting for Protected Mode isn't enabled. If Protected Mode is enabled, the Configuration Manager client might not be able to install applications from the Application Catalog. By default, the trusted sites zone also supports user sign-in for the Application Catalog, which requires Windows authentication.  
+This setting ensures that the Internet Explorer setting for Protected Mode isn't enabled. If Protected Mode is enabled, the Configuration Manager client might not be able to install applications from the application catalog. By default, the trusted sites zone also supports user sign-in for the application catalog, which requires Windows authentication.  
 
-If you leave this option as **No**, Configuration Manager clients might not be able to install applications from the Application Catalog. An alternative method is to configure these Internet Explorer settings in another zone for the Application Catalog URL that clients use.  
+If you leave this option as **No**, Configuration Manager clients might not be able to install applications from the application catalog. An alternative method is to configure these Internet Explorer settings in another zone for the application catalog URL that clients use.  
 
 ### Allow Silverlight applications to run in elevated trust mode
 
 > [!Important]  
-> Starting in Configuration Manager version 1802, the client doesn't automatically install Silverlight.
+> The client doesn't automatically install Silverlight.
 >
 > Starting in version 1806, the **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).  
 
-This setting must be **Yes** for users to use the Application Catalog.  
+This setting must be **Yes** for users to use the application catalog.  
 
 If you change this setting, it takes effect when users next load their browser, or refresh their currently opened browser window.  
 
@@ -205,14 +245,9 @@ Type the name that users see in Software Center. This branding information helps
 
 ### Use new Software Center
 
-Starting in Configuration Manager 1802, the default setting is **Yes**.
+The default setting is **Yes**.
 
-If you set this option to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which isn't a prerequisite for the Software Center.
-
-Starting in version 1806, the application catalog website point and web service point roles are no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).
-
-> [!Note]  
-> The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+When you set this option to **Yes**, then all client computers use the Software Center. Software Center shows software, software updates, and task sequences that you deploy to users or devices.
 
 ### Enable communication with Health Attestation Service
 
@@ -224,10 +259,7 @@ Set this option to **Yes** for devices to use an on-premises service. Set to **N
 
 ### Install permissions
 
-> [!IMPORTANT]  
-> This setting applies to the Application Catalog and Software Center. This setting has no effect when users use the Company Portal.  
-
-Configure how users can initiate the installation of software, software updates, and task sequences:  
+Configure how users can install software, software updates, and task sequences:  
 
 - **All Users**: Users with any permission except Guest.  
 
@@ -235,7 +267,7 @@ Configure how users can initiate the installation of software, software updates,
 
 - **Only Administrators and primary users**: Users must be a member of the local Administrators group, or a primary user of the computer.  
 
-- **No Users**: No users signed in to a client computer can initiate the installation of software, software updates, and task sequences. Required deployments for the computer always install at the deadline. Users can't initiate the installation of software from the Application Catalog or Software Center.  
+- **No Users**: No users signed in to a client computer can install software, software updates, and task sequences. Required deployments for the computer always install at the deadline. Users can't install software from Software Center.  
 
 ### Suspend BitLocker PIN entry on restart
 
@@ -254,7 +286,8 @@ Enable this option only if one of the following conditions applies:
 - You use the Configuration Manager software development kit (SDK) to manage client agent notifications, and the installation of applications and software updates.  
 
 > [!WARNING]  
-> If you choose this option when neither of these conditions apply, the client doesn't install software updates and required applications. This setting doesn't prevent users from installing applications from the Application Catalog, or the installation of packages, programs, and task sequences.  
+> - If you choose this option when neither of these conditions apply, the client doesn't install software updates and required applications. This setting doesn't prevent users from installing available software from Software Center, including applications, packages, and task sequences.  
+> -  When you enable this setting, toast notifications for new software or required software don't occur on clients. <!--6347668-->
 
 ### PowerShell execution policy
 
@@ -301,24 +334,41 @@ The following settings must be shorter in duration than the shortest maintenance
 - **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**
 - **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**
 
+
 For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
+
+- **Specify the snooze duration for computer restart countdown notifications (minutes)** (Starting in version 1906)<!--3976435-->
+  - The default value is 240 minutes.
+  - Your snooze duration value should be less than the temporary notification value minus the value for the notification the user can't dismiss.
+  - For more information, see [Device restart notifications](/sccm/core/clients/deploy/device-restart-notifications).
 
 **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**<!--3555947-->: Starting in version 1902, configuring this setting to **Yes** changes the user experience to be more intrusive. This setting applies to all deployments of applications, task sequences, and software updates. For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact).
 
+> [!IMPORTANT]
+> In Configuration Manager 1902, under certain circumstances, the dialog box won't replace toast notifications. To resolve this issue, install the [update rollup for Configuration Manager version 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
 
 
-## Delivery Optimization
+## Delivery Optimization 
 
 <!-- 1324696 -->
-You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Starting in version 1802, configure Delivery Optimization to use your boundary groups when sharing content among peers.
+You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers.
 
 > [!Note]
-> Delivery Optimization is only available on Windows 10 clients
+> - Delivery Optimization is only available on Windows 10 clients.
+> - Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
+> - When using a CMG for content storage, the content for third-party updates won't download to clients if Delivery Optimization is enabled. <!--6598587--> 
 
 ### Use Configuration Manager Boundary Groups for Delivery Optimization Group ID
 
 Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content.
 
+ [!Note]
+> Microsoft recommends allowing the client to configure this setting via local policy rather than group policy. This allows the boundary group identifier to be set as the Delivery Optimization group identifier on the client. For more information, see [Delivery Optimization](/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization).
+
+### Enable devices managed by Configuration Manager to use Microsoft Connected Cache servers for content download
+
+<!--3555764-->
+Choose **Yes** to allow clients to download content from an on-premises distribution point that you enable as a Microsoft Connected Cache server. For more information, see [Microsoft Connected Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/microsoft-connected-cache).
 
 
 ## Endpoint Protection
@@ -330,11 +380,11 @@ Choose **Yes** to apply the boundary group identifier as the Delivery Optimizati
 
 Choose **Yes** if you want to manage existing Endpoint Protection and Windows Defender clients on computers in your hierarchy.  
 
-Choose this option if you've already installed the Endpoint Protection client, and want to manage it with Configuration Manager. This separate installation includes a scripted process that uses a Configuration Manager application or package and program. Starting in Configuration Manager 1802, Windows 10 devices don't need to have the Endpoint Protection agent installed. However, those devices will still need **Manage Endpoint Protection client on client computers** enabled. <!--503654-->
+Choose this option if you've already installed the Endpoint Protection client, and want to manage it with Configuration Manager. This separate installation includes a scripted process that uses a Configuration Manager application or package and program. Windows 10 devices don't need to have the Endpoint Protection agent installed. However, those devices will still need **Manage Endpoint Protection client on client computers** enabled. <!--503654-->
 
 ### Install Endpoint Protection client on client computers
 
-Choose **Yes** to install and enable the Endpoint Protection client on client computers that aren't already running the client. Starting in Configuration Manager 1802, Windows 10 clients don't need to have the Endpoint Protection agent installed.  
+Choose **Yes** to install and enable the Endpoint Protection client on client computers that aren't already running the client. Windows 10 clients don't need to have the Endpoint Protection agent installed.  
 
 > [!NOTE]  
 > If the Endpoint Protection client is already installed, choosing **No** doesn't uninstall the Endpoint Protection client. To uninstall the Endpoint Protection client, set the **Manage Endpoint Protection client on client computers** client setting to **No**. Then, deploy a package and program to uninstall the Endpoint Protection client.  
@@ -452,12 +502,12 @@ Choose one of the following options for this setting:
 
     - Client state messages to send to the site  
 
-    - Software installation requests by using the Application Catalog  
+    - Software installation requests from Software Center  
 
     - Required deployments (when the installation deadline is reached)  
 
     > [!IMPORTANT]  
-    > The client always permits software installations from Software Center or the Application Catalog, regardless of the metered internet connection settings.  
+    > The client always permits software installations from Software Center, regardless of the metered internet connection settings.  
 
     If the client reaches the data transfer limit for the metered internet connection, the client no longer tries to communicate with Configuration Manager sites.  
 
@@ -481,7 +531,7 @@ Added in 1810. When set to **Enable**, configures the power settings on the netw
 
 ### Enable wake-up proxy
 
-Specify **Yes** to supplement the site’s Wake On LAN setting, when it's configured for unicast packets.  
+Specify **Yes** to supplement the site's Wake On LAN setting, when it's configured for unicast packets.  
 
 For more information about wake-up proxy, see [Plan how to wake up clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).  
 
@@ -561,7 +611,7 @@ Set this option to **Yes** to show a high-visibility session connection bar on c
 Set this option to use sound to indicate when a remote control session is active on a client computer. Select one of the following options:
 
 - **No sound**
-- **Beginning and send of session** (default)
+- **Beginning and end of session** (default)
 - **Repeatedly during session**  
 
 ### Manage unsolicited Remote Assistance settings
@@ -615,18 +665,42 @@ Set this option to **Yes**, and then specify the following settings to brand Sof
 
 ### <a name="bkmk_HideUnapproved"></a> Hide unapproved applications in Software Center
 
-Starting in Configuration Manager version 1802, when you enable this option, user-available applications that require approval are hidden in Software Center.<!--1355146-->
+When you enable this option, user-available applications that require approval are hidden in Software Center.<!--1355146-->
 
 ### <a name="bkmk_HideInstalled"></a> Hide installed applications in Software Center
 
-Starting in Configuration Manager version 1802, when you enable this option, applications that are already installed no longer show in the Applications tab. This option is set as the default when you install or upgrade to Configuration Manager 1802. Installed applications are still available for review under the installation status tab. <!--1357592-->
+When you enable this option, applications that are already installed no longer show in the Applications tab. This option is set as the default when you install or upgrade to Configuration Manager 1802. Installed applications are still available for review under the installation status tab. <!--1357592-->
 
 ### <a name="bkmk_HideAppCat"></a> Hide Application Catalog link in Software Center
 
-Starting in Configuration Manager version 1806, you can specify the visibility of the Application Catalog web site link in Software Center. When this option is set, users won't see the Application Catalog web site link in the Installation status node of Software Center. <!--1358214-->
+Specify the visibility of the application catalog web site link in Software Center. When this option is set, users won't see the application catalog web site link in the Installation status node of Software Center. <!--1358214-->
 
+> [!Important]  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 
 ### Software Center tab visibility
+
+#### Starting in version 1906
+<!--4063773-->
+
+Choose which tabs should be visible in Software Center. Use the **Add** button to move a tab to **Visible tabs**. Use the **Remove**  button to move it to the **Hidden tabs** list. Order the tabs using the **Move Up** or **Move Down** buttons. 
+
+Available tabs:
+- **Applications**
+- **Updates**
+- **Operating Systems**
+- **Installation Status**
+- **Device Compliance**
+- **Options**
+- Add up to 5 custom tabs by clicking the **Add tab** button.
+  - Specify the **Tab name** and **Content URL** for your custom tab.
+  - Click **Delete Tab** to remove a custom tab.  
+
+  >[!Important]  
+  > - Some website features may not work when using it as a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659-->
+  > - Specify only trusted or intranet website addresses when you add a custom tab.<!--SCCMDocs issue 1575-->
+
+#### Version 1902 and earlier
 
 Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:
 
@@ -636,7 +710,7 @@ Configure the additional settings in this group to **Yes** to make the following
 - **Installation Status**
 - **Device Compliance**
 - **Options**
-- **Specify a custom tab for Software Center** (starting in version 1806) <!--1358132-->
+- **Specify a custom tab for Software Center** <!--1358132-->
     - **Tab name**
     - **Content URL**
 
@@ -653,11 +727,11 @@ For example, if your organization doesn't use compliance policies, and you want 
 
 - Configure the **Default application filter** as either **All** or only **Required** applications.  
 
-    - Software Center always uses your default setting. Users can change this filter, but Software Center doesn't persist their preference.  
+  - Software Center always uses your default setting. Users can change this filter, but Software Center doesn't persist their preference.  
 
- - Set the **Default application view** as either **Tile view** or **List view**. 
+- Set the **Default application view** as either **Tile view** or **List view**. 
 
-    - If a user changes this configuration, Software Center persists the user's preference in the future. 
+  - If a user changes this configuration, Software Center persists the user's preference in the future. 
 
 
 ## Software deployment  
@@ -807,14 +881,27 @@ Use this setting to expedite installation for required software updates. This se
 
 Use this setting to specify the period of time for the previous setting. You can enter a value from 1 to 23 hours, and from 1 to 365 days. By default, this setting is configured for seven days.  
 
-### Enable installation of Express installation files on clients
+### Allow clients to download delta content when available
 
-Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
+*(Introduced in version 1902)*
+
+Set this option to **Yes** to allow clients to use delta content files. This setting allows the Windows Update Agent on the device to determine what content is needed and selectively download it. 
+
+- Before enabling this client setting, ensure Delivery Optimization is configured appropriately for your environment. For more information, see [Windows Delivery Optimization](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#windows-delivery-optimization) and the [Delivery Optimization client setting](#delivery-optimization).
+ - This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
+ - Starting in Configuration Manager version 1910, when this option is set, delta download is used for all Windows update installation files, not just express installation files.
+    - When using a CMG for content storage, the content for third-party updates won't download to clients if **Download delta content when available** is enabled. <!--6598587--> 
 
 
-### Port used to download content for Express installation files
+### Port that clients use to receive requests for delta content
 
-This setting configures the local port for the HTTP listener to download express content. It's set to 8005 by default. You don't need to open this port in the client firewall.
+*(Introduced in version 1902)*
+
+This setting configures the local port for the HTTP listener to download delta content. It's set to 8005 by default. You don't need to open this port in the client firewall. 
+
+> [!NOTE]
+>This client setting replaces **Port used to download content for Express installation files**.
+
 
 ### Enable management of the Office 365 Client Agent
 
@@ -822,7 +909,24 @@ When you set this option to **Yes**, it enables the configuration of Office 365 
 
 ### <a name="bkmk_SUMMaint"></a> Enable installation of software updates in "All deployments" maintenance window when "Software Update" maintenance window is available
 
-When you set this option to **Yes** and the client has at least one "Software Update" maintenance window defined, software updates will install during an "All deployments" maintenance window. By default, this setting is set to **No**. This client setting was added in Configuration Manager version 1810. <!--2839307-->
+Starting in version 1810, when you set this option to **Yes** and the client has at least one "Software Update" maintenance window defined, software updates will install during an "All deployments" maintenance window.
+
+By default, this setting is set to **No**. This value uses the same behavior as before: if both types exist, it ignores the window. <!--2839307-->
+
+> [!NOTE]
+> This setting also applies to maintenance windows that you configure to apply to **Task sequences**.<!-- SCCMDocs-pr #4596 -->
+>
+> If the client only has an **All deployments** window available, it still installs software updates or task sequences in that window.
+
+#### Maintenance window example
+
+For example, you configure the following maintenance windows:
+
+- **All deployment**: 02:00 - 04:00
+- **Software updates**: 04:00 - 06:00
+
+By default, the client only installs software updates during the second maintenance window. It ignores the maintenance window for all deployments in this scenario. When you change this setting to **Yes**, the client installs software updates between 02:00 - 06:00.
+
 
 ### <a name="bkmk_thread-priority"></a> Specify thread priority for feature updates
 
@@ -844,7 +948,19 @@ This client setting provides the following options:
 
 ### Enable third party software updates
 
-When you set this option to **Yes**, it sets the policy for **Allow signed updates for an intranet Microsoft update service location** and installs the signing certificate to the Trusted Publisher store on the client. This client setting was added in Configuration Manager version 1802.
+When you set this option to **Yes**, it sets the policy for **Allow signed updates for an intranet Microsoft update service location** and installs the signing certificate to the Trusted Publisher store on the client.
+
+### <a name="bkmk_du"></a>Enable Dynamic Update for feature updates
+<!--4062619-->
+Starting in Configuration Manager version 1906, you can configure [Dynamic Update for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet. When this setting is set to either **Yes** or **No**, Configuration Manager modifies the [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) file that is used during feature update installation.
+
+- **Not Configured** - The default value. No changes are made to the setupconfig file.
+  - Dynamic Update is enabled by default on all supported versions of Windows 10.
+    - For Windows 10 versions 1803 and prior, Dynamic Update checks the device's WSUS server for approved dynamic updates. In Configuration Manager environments, dynamic updates are never directly approved in the WSUS server so these devices don't install them.
+    - Starting with Windows 10 version 1809, Dynamic Update uses the device's internet connection to get dynamic updates from Microsoft Update. These dynamic updates aren't published for WSUS use.
+- **Yes** - Enables Dynamic Update.
+- **No** - Disables Dynamic Update.
+
 
 ## State Messaging
 
@@ -875,8 +991,9 @@ Choose **Yes** to create automatic user device affinity based on the usage infor
 <!--3485366-->
 When this setting is **Yes**, users can identify their own primary devices in Software Center. For more information, see the [Software Center user guide](/sccm/core/understand/software-center#work-information).
 
-
-
 ## Windows Analytics
 
-For more information on these settings, see [Configure Clients to report data to Windows Analytics](/sccm/core/clients/manage/monitor-windows-analytics#configure-clients-to-report-data-to-windows-analytics).
+> [!Important]  
+> The Windows Analytics service is retired as of January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+>
+> Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](/sccm/desktop-analytics/overview).

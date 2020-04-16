@@ -4,20 +4,18 @@ titleSuffix: Configuration Manager
 description: A tutorial on using Desktop Analytics and Configuration Manager to deploy Windows 10 to a pilot group.
 ms.date: 06/13/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: tutorial
 ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 #Customer intent: As an IT Pro, I want to use Desktop Analytics to intelligently pilot Windows 10 so that I can understand the best devices to start with getting current with Windows.
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Tutorial: Deploy Windows 10 to pilot
-
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
 This tutorial uses Desktop Analytics and Configuration Manager to deploy Windows 10 to a pilot group. It highlights the integration of the cloud service to deliver insights to deploy Windows with the on-premises product. Use Desktop Analytics to determine the best devices to put in a pilot group. Then use Configuration Manager to get current with Windows.
 
@@ -39,7 +37,7 @@ Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A
 
 Before you start this tutorial, make sure you have the following prerequisites:  
 
-- An active Azure subscription, with [**Global Admin**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permissions  
+- An active Azure subscription, with [**Global Admin**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) permissions  
 
     For more information, see [Desktop Analytics prerequisites](/sccm/desktop-analytics/overview#prerequisites).
 
@@ -76,7 +74,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
     - `https://oca.telemetry.microsoft.com`  
     - `https://login.live.com`  
     - `https://graph.windows.net` (on Configuration Manager server role only)
-    - `https://fef.msua06.manage.microsoft.com` (on Configuration Manager server role only)
+    - `https://*.manage.microsoft.com` (on Configuration Manager server role only)
 
     For more information, see [How to enable data sharing for Desktop Analytics](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
@@ -359,7 +357,7 @@ Next, distribute the OS upgrade package to distribution points.
 4. On the **General** page of the Deploy Software Wizard, select **Browse** next to the **Software** field. Select your Windows 10 in-place upgrade task sequence, and select **Next**.  
 
     > [!Note]  
-    > With the Desktop Analytics integration, Configuration Manager automatically creates a collection for the pilot deployment plan. It can take up to 10 minutes for this collection to synchronize before you can use it.<!-- 3887891 -->
+    > With the Desktop Analytics integration, Configuration Manager automatically creates pilot and production collections for the deployment plan. Before you can use them, it can take time for these collections to synchronize. For more information, see [Troubleshoot - Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).<!-- 4984639 -->
     >
     > This collection is reserved for Desktop Analytics deployment plan devices. Manual changes to this collection aren't supported.<!-- 3866460, SCCMDocs-pr 3544 -->  
 

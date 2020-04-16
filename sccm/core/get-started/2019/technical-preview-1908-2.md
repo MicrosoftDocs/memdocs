@@ -1,0 +1,44 @@
+---
+title: Technical preview 1908.2
+titleSuffix: Configuration Manager
+description: Learn about new features available in the Configuration Manager technical preview branch version 1908.2.
+ms.date: 08/30/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-core
+ms.topic: conceptual
+ms.assetid: aa987459-9200-4f5a-9471-f53d892b0bef
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+
+
+ROBOTS: NOINDEX
+---
+
+# Features in Configuration Manager technical preview version 1908.2
+
+*Applies to: Configuration Manager (technical preview branch)*
+
+This article introduces the features that are available in the technical preview for Configuration Manager, version 1908.2. Install this version to update and add new features to your technical preview site.
+
+Review the [technical preview](/sccm/core/get-started/technical-preview) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.
+
+The following sections describe the new features to try out in this version:
+
+<!-- [!INCLUDE [Example feature name](includes/1903/1234567.md)] -->
+
+[!INCLUDE [Improvements to Console Connections](includes/1908-2/4923997.md)]
+[!INCLUDE [Improvements to multicast-enabled distribution points](includes/1908-2/3785535.md)]
+[!INCLUDE [Optimizations to the CMPivot engine](includes/1908-2/3197353.md)]
+[!INCLUDE [Set keyboard layout during OS deployment](includes/1908-2/5138936.md)]
+
+
+<!-- ## Known issues -->
+
+<!-- [!INCLUDE [Client health dashboard](includes/1903/known-issue-health.md)] -->
+
+## Next steps
+
+For more information about installing or updating the technical preview branch, see [Technical preview](/sccm/core/get-started/technical-preview).
+
+For more information about the different branches of Configuration Manager, see [Which branch of Configuration Manager should I use?](/sccm/core/understand/which-branch-should-i-use)

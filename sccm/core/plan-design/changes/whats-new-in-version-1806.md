@@ -4,18 +4,18 @@ titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1806 of Configuration Manager current branch.
 ms.date: 10/26/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+ROBOTS: NOINDEX
 ---
 
 # What's new in version 1806 of Configuration Manager current branch
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Update 1806 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1706, 1710, or 1802. <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
 
@@ -34,7 +34,7 @@ The following sections provide details about the changes and new features in ver
 
 Learn about support changes before they are implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
 
-As of August 14, 2018, the hybrid mobile device management feature is deprecated. For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+As of August 14, 2018, the hybrid mobile device management feature is deprecated. For more information, see [What happened to hybrid MDM](/sccm/mdm/understand/what-happened-to-hybrid).<!--Intune feature 2683117-->  
 
 <!--
 Version 1806 drops support for the following products:
@@ -162,7 +162,7 @@ For more information, see [How to install clients with client push](/sccm/core/c
 
 ### <a name="bkmk_ehttp"></a> Enhanced HTTP site system
 <!--1356889,1358228-->
-Using HTTPS communication is recommended for all Configuration Manager communication paths, but can be challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. 
+Using HTTPS communication is recommended for all Configuration Manager communication paths, but can be challenging for some customers due to the overhead of managing PKI certificates.
 
 This release includes improvements to how clients communicate with site systems. On the site properties, **Client Computer Communication** tab, select the option for **HTTPS or HTTP**, and then enable the new option to **Use Configuration Manager-generated certificates for HTTP site systems**. This feature is a [pre-release feature](/sccm/core/servers/manage/pre-release-features).
 
@@ -171,7 +171,7 @@ For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhan
 
 ### Azure AD device identity 
 <!--1358460-->
-An [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) or [hybrid Azure AD device](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
+An [Azure AD-joined](/azure/active-directory/devices/concept-azure-ad-join) or [hybrid Azure AD device](/azure/active-directory/devices/concept-azure-ad-join-hybrid) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
 
 For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
 
@@ -263,7 +263,7 @@ For more information, see [Configure Microsoft Edge settings](/sccm/compliance/d
 <!--1357552-->
 Convert Security Content Automation Protocol (SCAP) content to compliance settings baselines and generate SCAP reports using a console extension. This feature also includes a new dashboard to visualize the client compliance as well as XCCDF rule compliance. 
 
-For more information, see [About the SCAP extensions](/sccm/compliance/plan-design/scap/about-scap).
+
 
 
 
@@ -323,7 +323,7 @@ For more information, see [Package Conversion Manager](/sccm/apps/pcm/package-co
 This release includes the following improvements to phased deployments:  
 
 #### Create a phased deployment with manually configured phases
-<!--1358148--> 
+<!--1358148-->
 For a task sequence, now manually configure the phases when you create a phased deployment. Add up to 10 additional phases from the **Phases** tab of the Create Phased Deployment wizard. You can still automatically create a default two-phase deployment. 
 
 For more information, see [Create a phased deployment with manually configured phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_manual).
@@ -400,11 +400,11 @@ For more information, see [Task sequences and the network access account](/sccm/
  For more information, see [Upgrade Operating System](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS).
 
 #### Revised documentation for task sequence variables
- Two new articles are now available for understanding task sequence variables:  
+Two new articles are now available for understanding task sequence variables:  
 
- - [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables) is a new article that describes the different types of variables, methods to set the variables, and how to access them.  
+- [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables) is a new article that describes the different types of variables, methods to set the variables, and how to access them.  
 
- - [Task sequence variables](/sccm/osd/understand/task-sequence-variables) is a reference for all available task sequence variables. This article combines the previous articles, which separated built-in variables from action variables. 
+- [Task sequence variables](/sccm/osd/understand/task-sequence-variables) is a reference for all available task sequence variables. This article combines the previous articles, which separated built-in variables from action variables. 
 
 
 
@@ -590,7 +590,7 @@ The following additional hotfixes are available to address specific issues:
 
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
-| [4346645](https://support.microsoft.com/help/4346645) | Update for System Center Configuration Manager version 1806, first wave | 31 August 2018 | Yes |
+| [4346645](https://support.microsoft.com/help/4346645) | Update for Configuration Manager version 1806, first wave | 31 August 2018 | Yes |
 | [4465865](https://support.microsoft.com/help/4465865) | Software updates do not download in Configuration Manager environment if WSUS is disconnected<br><br>This update is also in the update rollup (4462978) | 01 October 2018 | Yes |
 | [4471892](https://support.microsoft.com/help/4471892) | PXE Responder doesn't work across subnets in Configuration Manager 1806 | 23 November 2018 | No |
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
@@ -603,9 +603,9 @@ When you're ready to install this version, see [Installing updates for Configura
 > [!TIP]  
 > To install a new site, use a baseline version of Configuration Manager.  
 >
->  Learn more about:    
->   - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
+> Learn more about:    
+> - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
+> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 For known, significant issues, see the [Release notes](/sccm/core/servers/deploy/install/release-notes).
 

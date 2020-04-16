@@ -4,7 +4,7 @@ titleSuffix: Microsoft Deployment Toolkit
 description: A quickstart guiide for using Microsoft Deployment Toolkit (MDT) for user-driven installations (UDI)
 ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.technology: configmgr-mdt
 ms.topic: article
 ms.assetid: dcddc250-9361-4e69-af45-472da4ef5fd5
 author: aczechowski  
@@ -69,9 +69,9 @@ manager: dougeby
 
  The resources listed in Table 1 reflect the system resources recommended to perform the steps in this guide. For information on the minimum system resource requirements for:  
 
--   Windows Server 2008 R2, see [Installing Windows Server 2008 R2](http://technet.microsoft.com/library/dd379511\(WS.10\).aspx)  
+-   Windows Server 2008 R2, see [Installing Windows Server 2008 R2](https://technet.microsoft.com/library/dd379511\(WS.10\).aspx)  
 
--   SQL Server 2008 R2, see [Hardware and Software Requirements for Installing SQL Server 2008 R2](http://technet.microsoft.com/library/ms143506.aspx)  
+-   SQL Server 2008 R2, see [Hardware and Software Requirements for Installing SQL Server 2008 R2](https://technet.microsoft.com/library/ms143506.aspx)  
 
 > [!NOTE]
 >  This guide assumes that MDT is being evaluated on 64-bit (x64) physical or virtual computers. If evaluating MDT on 32-bit (x86) platforms, download and install the x86 editions of MDT and the components that this guide describes.  
@@ -183,8 +183,8 @@ manager: dougeby
 |Windows 8.1 distribution files from the product media|E:\Source$\Windows_8-1|  
 |Device drivers required for the reference and target computers (WDG-REF-01 and WDG-CLI-01)|E:\Source$\Drivers|  
 |SQL Server 2008 R2 from the product media|E:\Source$\SQL2008|  
-|SQL Server 2008 R2 SP1, available at [http://www.microsoft.com/download/en/details.aspx?id=26727](http://www.microsoft.com/download/en/details.aspx?id=26727)|E:\Source$\SQL2008R2SP1|  
-|SQL Server 2008 R2 SP1 CU6, available at [http://support.microsoft.com/kb/2679367](http://support.microsoft.com/kb/2679367)|E:\Source$\SQL2008R2SP1CU6|  
+|SQL Server 2008 R2 SP1, available at [https://www.microsoft.com/download/en/details.aspx?id=26727](https://www.microsoft.com/download/en/details.aspx?id=26727)|E:\Source$\SQL2008R2SP1|  
+|SQL Server 2008 R2 SP1 CU6, available at [https://support.microsoft.com/kb/2679367](https://support.microsoft.com/kb/2679367)|E:\Source$\SQL2008R2SP1CU6|  
 |System Center 2012 R2 Configuration Manager from the product media|E:\Source$\ConfigMgr|  
 |Office Professional Plus 2010 32-bit Volume Licensing version from the product media|E:\ Source$\OfficeProPlus2010|  
 
@@ -289,7 +289,7 @@ manager: dougeby
 |                 SQL Server Agent service account                  |      1.  In **First name**, type **SQL Agent**.<br />2.  In **Last name**, type **Service Account**.<br />3.  In **User logon name**, type **SQLAgent**.<br />4.  In **Password** and **Confirm password**, type <strong>P@ssw0rd</strong>.<br />5.  Clear the **User must change password at next logon** check box.<br />6.  Select the **Password never expires** check box.<br />7.  Make the account a member of the Domain Admins security group.<br />8.  In **Description**, type **Service account used to run SQL Server 2008 R2 Agent service**.      |
 |            SQL Server Database Engine service account             | 1.  In **First name**, type **SQL DB Engine**.<br />2.  In **Last name**, type **Service Account**.<br />3.  In **User logon name**, type **SQLDBEngine**.<br />4.  In **Password** and **Confirm password**, type <strong>P@ssw0rd</strong>.<br />5.  Clear the **User must change password at next logon** check box.<br />6.  Select the **Password never expires** check box.<br />7.  Make the account a member of the Domain Admins security group.<br />8.  In **Description**, type **Service account used to run SQL Server 2008 R2 database engine**.  |
 |           SQL Server Reporting Services service account           | 1.  In **First name**, type **SQL Reporting**.<br />2.  **In Last name**, type **Service Account**.<br />3.  In **User logon name**, type **SQLReport**.<br />4.  In **Password** and **Confirm password**, type <strong>P@ssw0rd</strong>.<br />5.  Clear the **User must change password at next logon** check box.<br />6.  Select the **Password never expires** check box.<br />7.  Make the account a member of the Domain Admins security group.<br />8.  In **Description**, type **Service account used to run SQL Server 2008 R2 reporting services**. |
-| System Center Configuration Manager Client Network Access account |                           1.  In **First name**, type **CM 2012**.<br />2.  In **Last name**, type **Client Network Access**.<br />3.  In **User logon** name, type **CMNetAccess**.<br />4.  In **Password** and **Confirm password**, type <strong>P@ssw0rd</strong>.<br />5.  Clear the **User must change password at next logon** check box.<br />6.  Select the **Password never expires** check box.<br />7.  In **Description**, type **Service account used as the network access account for Configuration Manager Client**.                           |
+| Configuration Manager Client Network Access account |                           1.  In **First name**, type **CM 2012**.<br />2.  In **Last name**, type **Client Network Access**.<br />3.  In **User logon** name, type **CMNetAccess**.<br />4.  In **Password** and **Confirm password**, type <strong>P@ssw0rd</strong>.<br />5.  Clear the **User must change password at next logon** check box.<br />6.  Select the **Password never expires** check box.<br />7.  In **Description**, type **Service account used as the network access account for Configuration Manager Client**.                           |
 
 ###  <a name="InstallSQLServer2008"></a> Step 1-9: Install SQL Server 2008 R2  
  Before installing Configuration Manager, install SQL Server 2008 R2 SP1 and CU6.  
@@ -424,7 +424,7 @@ manager: dougeby
 ###  <a name="InstallConfigurationManager"></a> Step 1-11: Install Configuration Manager  
  When the other products and technologies have been installed, install Configuration Manager. Before doing so, however, extend the Active Directory schema so that computers can locate the distribution points, service locator points, and other server roles. Also, you can extend the schema after you have installed Configuration Manager. For more information about how to extend the Active Directory schema for Configuration Manager, see the section, “Extend the Active Directory Schema,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
- After extending the Active Directory schema, install Configuration Manager. The configuration of WDG-MDT-01 supports Configuration Manager for this sample. The configuration of computers in the production network may vary. To find out more about the prerequisites for installing Configuration Manager, see [Supported Configurations for Configuration Manager](http://technet.microsoft.com/library/gg682077.aspx).  
+ After extending the Active Directory schema, install Configuration Manager. The configuration of WDG-MDT-01 supports Configuration Manager for this sample. The configuration of computers in the production network may vary. To find out more about the prerequisites for installing Configuration Manager, see [Supported Configurations for Configuration Manager](https://technet.microsoft.com/library/gg682077.aspx).  
 
  **To install Configuration Manager**  
 
@@ -1207,7 +1207,7 @@ manager: dougeby
 
      The Windows PowerShell Modules command prompt opens.  
 
-13. Create a Windows PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](http://technet.microsoft.com/library/hh849829.aspx) cmdlet, as shown in the following example:  
+13. Create a Windows PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](https://technet.microsoft.com/library/hh849829.aspx) cmdlet, as shown in the following example:  
 
     ```  
     New-PSDrive -Name DS001 -PSProvider mdtprovider -Root d:\DeploymentShare$  
@@ -1485,7 +1485,7 @@ manager: dougeby
 
 - Modify the Config.xml file.  
 
-  For more information about each of these methods, see [Customize Setup before installing Office 2010](http://technet.microsoft.com/library/cc179121.aspx).  
+  For more information about each of these methods, see [Customize Setup before installing Office 2010](https://technet.microsoft.com/library/cc179121.aspx).  
 
   For the purposes of this guide, the unattended installation of Office Professional Plus 2010 will be done by creating an OCT Setup customization file (.msp file). You will save the OCT Setup customization file in the Updates folder, which is automatically scanned by the Office Professional Plus 2010 Setup Wizard.  
 
@@ -2151,7 +2151,7 @@ Figure 1. Custom wizard page to be created
 
      The Windows PowerShell Modules command prompt opens.  
 
-14. Create a Windows PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](http://technet.microsoft.com/library/hh849829.aspx) cmdlet as shown in the following example:  
+14. Create a Windows PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](https://technet.microsoft.com/library/hh849829.aspx) cmdlet as shown in the following example:  
 
     ```  
     New-PSDrive -Name DS001 -PSProvider mdtprovider -Root d:\DeploymentShare$  

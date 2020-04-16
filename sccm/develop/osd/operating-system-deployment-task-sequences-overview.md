@@ -9,10 +9,11 @@ ms.assetid: 957ac65f-a14b-4659-84b8-b83190698cc7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Operating System Deployment Task Sequences Overview
-In System Center Configuration Manager, a task sequence is a series of one or more task steps that can be advertised to Configuration Manager clients to run user-specified actions. Task sequences are used with operating system deployment to build source computers, capture an operating system image, migrate user and computer settings, and deploy an image to a collection of target computers. Task sequences can also be used to run other Configuration Manager actions, such as deploying Configuration Manager software packages or running custom command lines.  
+In Configuration Manager, a task sequence is a series of one or more task steps that can be advertised to Configuration Manager clients to run user-specified actions. Task sequences are used with operating system deployment to build source computers, capture an operating system image, migrate user and computer settings, and deploy an image to a collection of target computers. Task sequences can also be used to run other Configuration Manager actions, such as deploying Configuration Manager software packages or running custom command lines.  
 
  Configuration Manager provides a rich Windows Management Instrumentation (WMI) object model for creating and editing task sequences. For more information, see [Operating System Deployment Task Sequence Object Model](../../develop/osd/operating-system-deployment-task-sequence-object-model.md).  
 
@@ -28,14 +29,14 @@ In System Center Configuration Manager, a task sequence is a series of one or mo
  There is also a command-line action that the administrator can use for running scripts or executable files on the Configuration Manager client computer.  
 
 ### Custom Actions  
- An action that you create yourself is a custom action. You can create custom actions that call a process or script that you define in a Managed Object Format (MOF) file. You can also create a control that integrates the custom action you create into the task sequence editor. This allows the administrator to change custom action properties in the same way that the System Center Configuration Manager supplied actions are changed. Typically, you create these custom actions when the built-in actions do not satisfy your requirements for an action. For more information about creating custom actions, see [About Configuration Manager Custom Actions](../../develop/osd/about-configuration-manager-custom-actions.md).  
+ An action that you create yourself is a custom action. You can create custom actions that call a process or script that you define in a Managed Object Format (MOF) file. You can also create a control that integrates the custom action you create into the task sequence editor. This allows the administrator to change custom action properties in the same way that the Configuration Manager supplied actions are changed. Typically, you create these custom actions when the built-in actions do not satisfy your requirements for an action. For more information about creating custom actions, see [About Configuration Manager Custom Actions](../../develop/osd/about-configuration-manager-custom-actions.md).  
 
 ## Running Task Sequences  
  To run a task sequence, you must perform the following:  
 
 #### To run a task sequence  
 
-1.  Ensure that you have the Configuration Manager site server installed and that you have clients to deploy task sequences to. Depending on your environment, you might need to configure the State Migration Point or PXE Service Point. For more information, see [Operating System Deployment Site Role Configuration](../../develop/osd/operating-system-deployment-site-role-configuration.md).  
+1.  Ensure that you have the Configuration Manager site server installed and that you have clients to deploy task sequences to. Depending on your environment, you might need to configure the State Migration Point or PXE Service Point. For more information, see [About OS deployment site role configuration](/sccm/develop/osd/about-operating-system-deployment-site-role-configuration).  
 
 2.  Create a package containing the files you need for deployment. For example, to deploy a boot image you will need to create a boot image package ([SMS_BootImagePackage Server WMI Class](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md)).  
 
@@ -77,9 +78,6 @@ In System Center Configuration Manager, a task sequence is a series of one or mo
 ## Pre-Execution Hooks  
  You can run scripts or executables that can interact with the user in Windows PE before the task sequence is selected. For more information, see Operating System Media Pre-Execution Hook in the Configuration Manager library documentation.  
 
-## Securing Task Sequences  
- A task sequence package ([SMS_TaskSequencePackage Server WMI Class](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md)) is secured by using the [SMS_UserClassPermissions Server WMI Class](../../develop/reference/misc/sms_userclasspermissions-server-wmi-class.md) and [SMS_UserInstancePermissionInfo Server WMI Class](../../develop/reference/misc/sms_userinstancepermissioninfo-server-wmi-class.md) permissions to set class and instance permissions.  
+## See also
 
-## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
- [Operating System Deployment Task Sequence Object Model](../../develop/osd/operating-system-deployment-task-sequence-object-model.md)
+[OS deployment task sequence object model](/sccm/develop/osd/operating-system-deployment-task-sequence-object-model)

@@ -10,12 +10,13 @@ ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Install Software Updates
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The **Install Software Updates** step is commonly used in Configuration Manager task sequences. When installing or updating the OS, it triggers the software updates components to scan for and deploy updates. This step can cause challenges for some customers, such as long timeout delays or missed updates. Use the information in this article to help mitigate common issues with this step, and for better troubleshooting when things go wrong.
 
@@ -47,7 +48,7 @@ Starting in version 1902, automate this process when you add an OS image to the 
 
 When you apply software updates to the image, optimize the output by removing any superseded updates. Use the DISM command-line tool, for example:
 
-```
+``` Command
 dism /Mount-Image /ImageFile:C:\Data\install.wim /MountDir:C:\Mountdir
 dism /Image:C:\Mountdir /Cleanup-Image /StartComponentCleanup /ResetBase
 dism /Unmount-Image /MountDir:C:\Mountdir /Commit  

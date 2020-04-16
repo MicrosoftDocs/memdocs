@@ -9,10 +9,11 @@ ms.assetid: 0c53d501-e55a-4224-bb40-154a16ff3855
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetSummary Method in Class SMS_AIMLSParser
-The `GetSummary` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, retrieves the counts of imported Microsoft License count and non-Microsoft license count.  
+The `GetSummary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the counts of imported Microsoft License count and non-Microsoft license count.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

@@ -9,7 +9,8 @@ ms.assetid: 8227372d-303d-4c6e-bee5-da20bd443437
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequence_PrepareOSAction Server WMI Class
 The `SMS_TaskSequence_PrepareOSAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that specifies the Sysprep options to use when capturing Windows settings from the reference computer.  
@@ -46,7 +47,7 @@ Class SMS_TaskSequence_PrepareOSAction : SMS_TaskSequence_Action
 
  `true` to build a mass-storage device driver list. The default value is `false`.  
 
- The task sequence variable associated with this property is OSDBuildStorageDriverList. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDBuildStorageDriverList. For more information, see the MSDN documentation for [Task Sequence Variables](https://docs.microsoft.com/configmgr/osd/understand/task-sequence-variables).  
 
  `Condition`  
  Data type: `SMS_TaskSequence_Condition`  
@@ -91,9 +92,9 @@ Class SMS_TaskSequence_PrepareOSAction : SMS_TaskSequence_Action
 
  Qualifiers: [not_null, VariableName("OSDKeepActivation")]  
 
- `true` to keep the current product activation flag or reset it. The default value is `false`.  
+ `true` to keep the current product activation flag. `false` to reset it. The default value is `false`.  
 
- The task sequence variable associated with this property is OSDKeepActivation. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDKeepActivation. For more information, see the MSDN documentation for [Task Sequence Variables](https://docs.microsoft.com/configmgr/osd/understand/task-sequence-variables).  
 
  `Name`  
  Data type: `String`  
@@ -135,11 +136,8 @@ Class SMS_TaskSequence_PrepareOSAction : SMS_TaskSequence_Action
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)

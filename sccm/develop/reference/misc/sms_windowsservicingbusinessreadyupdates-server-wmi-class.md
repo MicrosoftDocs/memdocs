@@ -9,7 +9,8 @@ ms.assetid: 94ec78e1-bef9-4a49-b6e8-0b615589de5b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_WindowsServicingBusinessReadyUpdates Server WMI Class
 For internal use only.  
@@ -52,11 +53,8 @@ Class SMS_WindowsServicingBusinessReadyUpdates : SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Windows 10 Servicing Server WMI Classes](../../../develop/reference/misc/windows-10-servicing-server-wmi-classes.md)

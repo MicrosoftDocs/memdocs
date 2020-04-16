@@ -9,10 +9,11 @@ ms.assetid: 063a6390-8eb4-459d-b0b6-34592afe6326
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetChainedPullDPs Method in Class SMSDistributionPointInfo
-The `GetChainedPullDPs` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, ensures that when a source distribution point is assigned, a looping chain is not generated. (If distribution point 1 is the source of distribution point 2, and distribution point 2 is the source of distribution point 3, then distribution point 3 cannot be source of distribution point 1).  
+The `GetChainedPullDPs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, ensures that when a source distribution point is assigned, a looping chain is not generated. (If distribution point 1 is the source of distribution point 2, and distribution point 2 is the source of distribution point 3, then distribution point 3 cannot be source of distribution point 1).  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -55,4 +56,3 @@ sint32 GetChainedPullDPs(
 
 ## See Also  
  [SMS_Application Server WMI Class](../../../../../develop/reference/apps/sms_application-server-wmi-class.md)   
- [Application Model Server WMI Classes](../../../../../develop/reference/apps/application-management-server-wmi-classes.md)

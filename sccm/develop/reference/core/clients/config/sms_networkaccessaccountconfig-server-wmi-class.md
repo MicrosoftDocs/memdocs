@@ -9,7 +9,8 @@ ms.assetid: 51f0329c-e8ed-4a24-8439-de6597d5f7da
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_NetworkAccessAccountConfig Server WMI Class
 The `SMS_NetworkAccessAccountConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a computer or domain account used to access files on a Configuration Manager site system.  
@@ -47,7 +48,7 @@ Class SMS_NetworkAccessAccountConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- This property is no longer used in System Center Configuration Manager.  
+ This property is no longer used in Configuration Manager.  
 
  `Username`  
  Data type: `String`  

@@ -1,35 +1,38 @@
 ---
 title: "New version 1710 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1710 of System Center Configuration Manager."
-ms.date: 1/08/2018
+description: "Get details about changes and new capabilities introduced in version 1710 of Configuration Manager."
+ms.date: 01/08/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+ROBOTS: NOINDEX
+
+
 ---
-# What&#39;s new in version 1710 of System Center Configuration Manager
+# What&#39;s new in version 1710 of Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Update 1710 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1610, 1702, or 1706.
+Update 1710 for Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1610, 1702, or 1706.
 
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in System Center Configuration Manager current branch, version 1710](https://support.microsoft.com/help/4056470/summary-of-changes-in-system-center-configuration-manager-current-bran).
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1710](https://support.microsoft.com/help/4056470/summary-of-changes-in-system-center-configuration-manager-current-bran).
 
 The following additional updates to this release are also now available:
-- [Update rollup for System Center Configuration Manager current branch, version 1710](https://support.microsoft.com/help/4057517/update-rollup-for-system-center-configuration-manager-current-branch-v)
-- [Update rollup 2 for System Center Configuration Manager current branch, version 1710](https://support.microsoft.com/en-us/help/4086143/update-rollup-2-for-system-center-configuration-manager-current-branch)
+- [Update rollup for Configuration Manager current branch, version 1710](https://support.microsoft.com/help/4057517/update-rollup-for-system-center-configuration-manager-current-branch-v)
+- [Update rollup 2 for Configuration Manager current branch, version 1710](https://support.microsoft.com/en-us/help/4086143/update-rollup-2-for-system-center-configuration-manager-current-branch)
 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
->  Learn more about:    
->   - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
->   - [Installing updates at sites](/sccm/core/servers/manage/updates)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
+>
+> Learn more about:    
+> - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
+> - [Installing updates at sites](/sccm/core/servers/manage/updates)  
+> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 The following sections provide details about changes and new capabilities introduced in version 1710 of Configuration Manager.  
 
@@ -65,7 +68,7 @@ In the previous Windows 10 updates, you can already join a Windows 10 device to 
 ### Restart computers from the Configuration Manager console  <!-- 1356283 -->
 Beginning with this release, you can use the Configuration Manager console to identify client devices that require a restart, and then use a client notification action to restart them.
 
-See [How to manage clients in System Center Configuration Manager](/sccm/core/clients/manage/manage-clients#restart-clients)
+See [How to manage clients](/sccm/core/clients/manage/manage-clients#restart-clients)
 
 
 <!-- ## Compliance settings -->
@@ -111,7 +114,7 @@ To learn more about the child task sequence, see [Child task sequence](/sccm/osd
 <!-- 1351224 -->
 You can add enterprise branding elements and specify the visibility of tabs on Software Center. You can add your Software Center specific company name, set a Software Center configuration color theme, set a company logo, and set the visible tabs for client devices.
 
-For more information, see [Plan for and configure application management in System Center Configuration Manager](/sccm/apps/plan-design/plan-for-and-configure-application-management).
+For more information, see [Plan for and configure application management](/sccm/apps/plan-design/plan-for-and-configure-application-management).
 
 ## Software updates
 
@@ -121,12 +124,10 @@ Beginning with this release, managing Surface driver updates is no longer a pre-
 
 ## Reporting
 
-### Limit Windows 10 Enhanced telemetry to only send data relevant to Windows Analytics Device Health
+### Limit Windows 10 Enhanced data to only send data relevant to Windows Analytics Device Health
 <!-- 1356148 -->
 
-You can now set the Windows 10 telemetry data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** telemetry level with Windows 10 version 1709 or later.
-
-For more information, see [How to configure client settings in System Center Configuration Manager](/sccm/core/clients/deploy/configure-client-settings).
+You can now set the Windows 10 diagnostic data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** level with Windows 10 version 1709 or later.
 
 <!-- ## Inventory  -->
 
@@ -135,29 +136,12 @@ For more information, see [How to configure client settings in System Center Con
 
 ### Actions for non-compliance 
 <!--1321366 -->    
-You can now configure a time-ordered sequence of actions that are applied to devices that fall out of compliance. For example, you can notify users of non-compliant devices via e-mail or mark those devices non-compliant. For details, see [Set up actions for non-compliance](/sccm/mdm/deploy-use/actions-for-noncompliance).
+You can now configure a time-ordered sequence of actions that are applied to devices that fall out of compliance. For example, you can notify users of non-compliant devices via e-mail or mark those devices non-compliant.
 
 ### Windows 10 ARM64 device support
 <!-- 1355000 -->
 
 Hybrid mobile device management (MDM) scenarios will be supported on ARM64 devices running Windows 10 when these devices are available.
-
-These scenarios include:
-
-- [Enroll devices](../../../mdm/deploy-use/enroll-hybrid-windows.md)
-- [Perform remote full and selective wipe actions](../../../mdm/deploy-use/wipe-lock-reset-devices.md)
-- [Manage settings through configuration items and baselines](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)
-- [Manage compliance policy](../../../mdm/deploy-use/device-compliance-policies.md) and [conditional access](../../../protect/deploy-use/manage-access-to-services.md)
-- Manage access to company resources through:
-   - [Certificate profiles](../../../mdm/deploy-use/create-pfx-certificate-profiles.md)
-   - [VPN profiles](../../../mdm/deploy-use/create-vpn-profiles.md)
-   - [Wi-Fi profiles](../../../mdm/deploy-use/create-wifi-profiles.md)
-   - [Email profiles](../../../mdm/deploy-use/create-exchange-activesync-profiles.md)
-- [Configure Windows Hello for Business policy](../../../mdm/deploy-use/windows-hello-for-business-settings.md)
-- [Manage applications](../../../mdm/deploy-use/management-tasks-applications.md)
-
-> [!NOTE]
-> Deploying .appxbundle applications built for multiple architectures may not work on these devices, and this scenario is not supported at this time.
 
 ### Improved VPN Profile Experience in Configuration Manager Console 
 <!-- 1318232 -->
@@ -176,7 +160,7 @@ These changes apply to new VPN profiles.
 
 To minimize compatibility risk, existing VPN profiles are unchanged.  When you edit an existing profile, the settings appear as they did when the profile was created.  
 
-For more information, see [VPN Profiles on mobile devices in System Center Configuration Manager](../../../mdm/deploy-use/create-vpn-profiles.md).
+For more information, see [VPN Profiles on mobile devices](/configmgr/protect/deploy-use/vpn-profiles).
 
 ### Limited support for Cryptography: Next Generation (CNG) certificates <!-- 1356191 -->
 

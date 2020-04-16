@@ -1,7 +1,7 @@
 ---
 title: "Monitor Endpoint Protection status"
 titleSuffix: "Configuration Manager"
-description: "Learn how monitor Endpoint Protection in your System Center Configuration Manager hierarchy."
+description: "Learn how monitor Endpoint Protection in your Configuration Manager hierarchy."
 ms.date: 03/13/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -10,13 +10,14 @@ ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to monitor Endpoint Protection status
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-You can monitor Endpoint Protection in your Microsoft System Center Configuration Manager hierarchy by using the **Endpoint Protection Status** node under **Security** in the **Monitoring** workspace, the **Endpoint Protection** node in the **Assets and Compliance** workspace, and by using reports.  
+You can monitor Endpoint Protection in your Microsoft Configuration Manager hierarchy by using the **Endpoint Protection Status** node under **Security** in the **Monitoring** workspace, the **Endpoint Protection** node in the **Assets and Compliance** workspace, and by using reports.  
 
 ##  <a name="BKMK_1"></a> How to Monitor Endpoint Protection by Using the Endpoint Protection Status Node  
 
@@ -51,7 +52,7 @@ You can monitor Endpoint Protection in your Microsoft System Center Configuratio
 3.  In the *<collection name\>* list, select a computer, and then click the **Malware Detail** tab.  
 
 ##  <a name="BKMK_3"></a> How to Monitor Endpoint Protection by Using Reports  
- Use the following reports to help you view information about Endpoint Protection in your hierarchy. You can also use these reports to help troubleshoot any Endpoint Protection problems. For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md) and [Log files in System Center Configuration Manager](../../core/plan-design/hierarchy/log-files.md). The Endpoint Protection reports are in the Endpoint Protection folder.  
+ Use the following reports to help you view information about Endpoint Protection in your hierarchy. You can also use these reports to help troubleshoot any Endpoint Protection problems. For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting) and [Log files](../../core/plan-design/hierarchy/log-files.md). The Endpoint Protection reports are in the Endpoint Protection folder.  
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -65,7 +66,7 @@ You can monitor Endpoint Protection in your Microsoft System Center Configuratio
 
 |Alert level|Description|  
 |-----------------|-----------------|  
-|**Failed**|Endpoint Protection failed to remediate the malware. Check your logs for details of the error.<br /><br /> **Note:** For a list of Configuration Manager and Endpoint Protection log files, see the "Endpoint Protection" section in the [Log files in System Center Configuration Manager](../../core/plan-design/hierarchy/log-files.md) topic.|  
+|**Failed**|Endpoint Protection failed to remediate the malware. Check your logs for details of the error.<br /><br /> **Note:** For a list of Configuration Manager and Endpoint Protection log files, see the "Endpoint Protection" section in the [Log files](../../core/plan-design/hierarchy/log-files.md) topic.|  
 |**Removed**|Endpoint Protection successfully removed the malware.|  
 |**Quarantined**|Endpoint Protection moved the malware to a secure location and prevented it from running until you remove it or allow it to run.|  
 |**Cleaned**|The malware was cleaned from the infected file.|  

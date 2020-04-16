@@ -9,7 +9,8 @@ ms.assetid: ce5440c9-2d58-4793-b727-51b6ea030e29
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetAutoInstallRequiredSoftwaretoNonBusinessHours Method in Class CCM_ClientUXSettings
 The `GetAutoInstallRequiredSoftwaretoNonBusinessHours` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets the value for `AutomaticallyInstallSoftware`.   

@@ -9,7 +9,8 @@ ms.assetid: 759cd7fa-2980-4b1a-905a-1bb1a21402af
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_CONTENTFLAG Enumeration
 The **CCM_CONTENTFLAG** enumeration contains options for transferring content.  
@@ -53,6 +54,3 @@ CCM_CONTENTFLAG;
 
 ## Development Requirements  
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Alternate Content Provider](../../../../../develop/reference/core/servers/configure/alternate-content-provider-classes.md)

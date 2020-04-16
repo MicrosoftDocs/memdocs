@@ -9,10 +9,11 @@ ms.assetid: 37d49bb2-4753-4eb8-baad-627151098437
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_G_System_SoftwareProduct Server WMI Class
-The `SMS_G_System_SoftwareProduct` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that provides software product information for software files that contain resource strings.  
+The `SMS_G_System_SoftwareProduct` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides software product information for software files that contain resource strings.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -50,7 +51,7 @@ Class SMS_G_System_SoftwareProduct : SMS_G_System
 
  Qualifiers: [key]  
 
- System Center Configuration Manager-supplied ID that uniquely identifies the product. The property links this product with the software file information contained in an [SMS_G_System_SoftwareFile Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system_softwarefile-server-wmi-class.md) object.  
+ Configuration Manager-supplied ID that uniquely identifies the product. The property links this product with the software file information contained in an [SMS_G_System_SoftwareFile Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system_softwarefile-server-wmi-class.md) object.  
 
  `ProductLanguage`  
  Data type: **UInt32**  
@@ -107,22 +108,21 @@ Class SMS_G_System_SoftwareProduct : SMS_G_System
 
 3. For newly added inventory types, adds entries to the following `Path`, `Subdirectories`, and `Exclude` embedded property lists.  
 
-   Updates the site control file. For information about updating the site control file, see [Configuration Manager Site Control File](../../../../../develop/core/understand/site-control-file.md).  
+   Updates the site control file. For more information, see [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file).  
 
 > [!NOTE]
->  Collecting inventory information for some files, for example, DLL files, can generate a large volume of network traffic and substantially increase the size of the System Center Configuration Manager database. For this reason, test any changes you make in a test environment before implementing them in a production environment.  
+>  Collecting inventory information for some files, for example, DLL files, can generate a large volume of network traffic and substantially increase the size of the Configuration Manager database. For this reason, test any changes you make in a test environment before implementing them in a production environment.  
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Resource Management Server WMI Classes](../../../../../develop/reference/core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md)   
  [SMS_G_System Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system-server-wmi-class.md)   
  [SMS_SoftwareConversionRules Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_softwareconversionrules-server-wmi-class.md)   
  [SMS_G_System_SoftwareFile Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system_softwarefile-server-wmi-class.md)   
- [Configuration Manager Site Control File](../../../../../develop/core/understand/site-control-file.md)
+ [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file)

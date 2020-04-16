@@ -2,22 +2,19 @@
 title: Troubleshoot Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 06/28/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: 63e08f3f-9558-4ed7-9bf3-3a185ddaac5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
 # Troubleshoot Desktop Analytics
 
 Use the details in this article to help you troubleshoot issues with Desktop Analytics integrated with Configuration Manager.
-
-
 
 ## Confirm prerequisites
 
@@ -29,13 +26,11 @@ Many common issues are caused by missing prerequisites. First confirm the follow
 
 - [How to enable data sharing](/sccm/desktop-analytics/enable-data-sharing), which covers the following topics:  
 
-    - Internet endpoints to which clients need to connect  
+  - Internet endpoints to which clients need to connect  
 
-    - Proxy server authentication  
+  - Proxy server authentication  
 
-    - Diagnostic data levels  
-
-
+  - Diagnostic data levels  
 
 ## Monitor connection health
 
@@ -43,24 +38,21 @@ Use the **Connection Health** dashboard in Configuration Manager to drill down i
 
 For more information, see [Monitor connection health](/sccm/desktop-analytics/monitor-connection-health).
 
+> [!NOTE]
+> The Configuration Manager connection to Desktop Analytics relies upon the service connection point. Any changes to this site system role may impact synchronization with the cloud service. For more information, see [About the service connection point](/configmgr/core/servers/deploy/configure/about-the-service-connection-point#bkmk_move).
+
+Starting in version 2002, if the Configuration Manager site fails to connect to required endpoints for a cloud service, it raises a critical status message ID 11488. When it can't connect to the service, the SMS_SERVICE_CONNECTOR component status changes to critical. View detailed status in the [Component Status](/configmgr/core/servers/manage/use-alerts-and-the-status-system#BKMK_MonitorSystemStatus) node of the Configuration Manager console.<!-- 5566763 -->
 
 ## Log files
 
 For more information, see [Log files for Desktop Analytics](/sccm/core/plan-design/hierarchy/log-files#desktop-analytics)
 
+Starting in Configuration Manager version 1906, use the **DesktopAnalyticsLogsCollector.ps1** tool from the Configuration Manager install directory to help troubleshoot Desktop Analytics. It runs some basic troubleshooting steps and collects the relevant logs into a single working directory. For more information, see [Logs collector](/sccm/desktop-analytics/log-collector).
+
 ### Enable verbose logging
 
 1. On the service connection point, go to the following registry key: `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
 2. Set the **LoggingLevel** value to `0`  
-3. (Optional) Run the following SQL command on the site database:  
-
-    ```SQL
-    DELETE FROM M365AProperties WHERE Name = 'M365ATenantUpdateInfo_LastUpdateTime'
-    ```
-
-4. Restart the **SMS_EXECUTIVE** service on the site server
-
-
 
 ## <a name="bkmk_AzureADApps"></a> Azure AD applications
 
@@ -68,20 +60,21 @@ Desktop Analytics adds the following applications to your Azure AD:
 
 - **Configuration Manager Microservice**: Connects Configuration Manager with Desktop Analytics. This app has no access requirements.  
 
-- **MALogAnalyticsReader**: Retrieves OMS groups and devices created in Log Analytics. For more information, see [MALogAnalyticsReader application role](#bkmk_MALogAnalyticsReader).  
+- **MALogAnalyticsReader**: Monitors your Azure Log Analytics workspace to ensure the daily snapshot has been copied successfully. For more information, see [MALogAnalyticsReader application role](#bkmk_MALogAnalyticsReader).  
+
+- **Office365 client Admin**: Enables Configuration Manager retrieval of deployment plan information and device readiness status from Desktop Analytics.
 
 If you need to provision these apps after completing setup, go to the **Connected services** pane. Select **Configure users and apps access**, and provision the apps.  
 
 - **Azure AD app for Configuration Manager**. If you need to provision or troubleshoot connection issues after completing setup, see [Create and import app for Configuration Manager](#create-and-import-app-for-configuration-manager). This app requires  **Write CM Collection Data** and **Read CM Collection Data** on the **Configuration Manager Service** API.  
 
-
 ### Create and import app for Configuration Manager
 
-After completing the [Initial onboarding](/sccm/desktop-analytics/set-up#initial-onboarding) on the Desktop Analytics portal, use the following steps to manually create and import the app for Configuration Manager if you can't create this Azure AD app from the Configure Azure Services wizard.
+If you can't create the Azure AD app for Configuration Manager from the Configure Azure Services wizard, or if you want to reuse an existing app, you need to manually create and import it. After completing the [Initial onboarding](/sccm/desktop-analytics/set-up#initial-onboarding) on the Desktop Analytics portal, use the following steps:
 
 #### Create app in Azure AD
 
-1. Open the [Azure portal](http://portal.azure.com) as a user with *Global Admin* permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New registration**.  
+1. Open the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New registration**.  
 
 2. In the **Create** panel, configure the following settings:  
 
@@ -117,7 +110,6 @@ After completing the [Initial onboarding](/sccm/desktop-analytics/set-up#initial
     5. Select **Add permissions**.  
 
 6. On the **API permissions** panel, select **Grant admin consent...**. Select **Yes**.  
-
 
 #### Import app in Configuration Manager
 
@@ -165,14 +157,13 @@ If you're having problems creating or importing the app, first check **SMSAdminU
 
 - Check status messages for the **SMS_SERVICE_CONNECTOR** component regarding the *Desktop Analytics worker*.
 
-
 ### <a name="bkmk_MALogAnalyticsReader"></a> MALogAnalyticsReader application role
 
 When you set up Desktop Analytics, you consent on behalf of your organization. This consent is to assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace. This application role is required by Desktop Analytics.
 
 If there's a problem with this process during setup, use the following process to manually add this permission:
 
-1. Go to the [Azure portal](http://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.  
+1. Go to the [Azure portal](https://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.  
 
 2. In the workspace menu, select **Access control (IAM)**, then select **Add**.  
 
@@ -188,17 +179,19 @@ If there's a problem with this process during setup, use the following process t
 
 The portal shows a notification that it added the role assignment.
 
-
 ## Data latency
 
 <!-- 3846531 -->
-When you first set up Desktop Analytics, the reports in Configuration Manager and the Desktop Analytics portal may not show complete data right away. It can take 2-3 days for the following steps to occur:
+When you first setup Desktop Analytics, enroll new clients, or configure new deployment plans, the reports in Configuration Manager and the Desktop Analytics portal may not show complete data right away. It can take 2-3 days for the following steps to occur:
 
 - Active devices send diagnostic data to the Desktop Analytics service
 - The service processes the data
 - The service synchronizes with your Configuration Manager site
 
-When syncing device collections from your Configuration Manager hierarchy to Desktop Analytics, it can take up to 10 minutes for those collections to appear in the Desktop Analytics portal. Similarly, when you create a deployment plan in Desktop Analytics, it can take up to 10 minutes for the new collections associated with the deployment plan to appear in your Configuration Manager hierarchy. The primary sites create the collections, and the central administration site synchronizes with Desktop Analytics.
+When syncing device collections from your Configuration Manager hierarchy to Desktop Analytics, it can take up to one hour for those collections to appear in the Desktop Analytics portal. Similarly, when you create a deployment plan in Desktop Analytics, it can take up to one hour for the new collections associated with the deployment plan to appear in your Configuration Manager hierarchy. The primary sites create the collections, and the central administration site synchronizes with Desktop Analytics. Configuration Manager can take up to 24 hours to evaluate and update collection membership. To speed up this process, manually update the collection membership.<!-- 4984639 -->
+
+> [!Note]
+> For manual collection updates to reflect changes, the SMS_SERVICE_CONNECTOR_M365ADeploymentPlanWorker component first needs to synchronize. It can take up to one hour for this process to run. For more information, see the **M365ADeploymentPlanWorker.log**.
 
 Within the Desktop Analytics portal, there are two types of data: **Administrator data** and **diagnostic data**:
 

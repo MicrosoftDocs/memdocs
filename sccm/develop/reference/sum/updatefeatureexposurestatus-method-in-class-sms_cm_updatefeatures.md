@@ -9,7 +9,8 @@ ms.assetid: b01f156d-97c2-4cf1-870c-96623fa30262
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # UpdateFeatureExposureStatus Method in Class SMS_CM_UpdateFeatures
 The `UpdateFeatureExposureStatus` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the feature exposure status for an update feature extension.  
@@ -40,12 +41,11 @@ The `UpdateFeatureExposureStatus` Windows Management Instrumentation (WMI) class
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
  [SMS_CM_UpdateFeatures Server WMI Class](../../../develop/reference/sum/sms_cm_updatefeatures-server-wmi-class.md)   
- [Configuration Manager Software Updates Server WMI Classes](../../../develop/reference/sum/software-updates-server-wmi-classes.md)

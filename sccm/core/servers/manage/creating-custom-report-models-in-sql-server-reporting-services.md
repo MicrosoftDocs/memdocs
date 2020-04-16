@@ -4,19 +4,20 @@ titleSuffix: "Configuration Manager"
 description: "Define report models to meet your business requirements, and then deploy the report models to Configuration Manager."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
-# Creating custom report models for System Center Configuration Manager in SQL Server Reporting Services
+# Creating custom report models for Configuration Manager in SQL Server Reporting Services
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Sample report models are included in System Center Configuration Manager, but you can also define report models to meet your own business requirements, and then deploy the report model to Configuration Manager to use when you create new model-based reports. The following table provides the steps to create and deploy a basic report model.  
+Sample report models are included in Configuration Manager, but you can also define report models to meet your own business requirements, and then deploy the report model to Configuration Manager to use when you create new model-based reports. The following table provides the steps to create and deploy a basic report model.  
 
 > [!NOTE]  
 >  For the steps to create a more advanced report model, see the [Steps for Creating an Advanced Report Model in SQL Server Reporting Services](#AdvancedReportModel) section in this topic.  
@@ -143,11 +144,11 @@ Sample report models are included in System Center Configuration Manager, but yo
 
 4. In the file _&lt;Model Name\>_**.dsv**, locate the first line of the file, which reads as follows:  
 
-    **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
+    `<DataSourceView xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`
 
     Edit this line to read as follows:  
 
-    **&lt;DataSourceView xmlns="<http://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView"\>**  
+    `<DataSourceView xmlns="<https://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView">`  
 
 5. Copy the entire contents of the file to the Windows Clipboard.  
 
@@ -386,11 +387,11 @@ Sample report models are included in System Center Configuration Manager, but yo
 
 4. In the file _&lt;Model Name\>_**.dsv**, locate the first line of the file, which reads as follows:  
 
-    **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
+    `<DataSourceView xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`
 
     Edit this line to read as follows:  
 
-    **&lt;DataSourceView xmlns="<http://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView"\>**  
+    `<DataSourceView xmlns="<https://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView">`
 
 5. Copy the entire contents of the file to the Windows Clipboard.  
 

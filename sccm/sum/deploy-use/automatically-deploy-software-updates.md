@@ -5,17 +5,18 @@ description: Automatically deploy software updates by using automatic deployment
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/02/2018
+ms.date: 11/29/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.collection: M365-identity-device-management
+
+
 ---
 
 #  Automatically deploy software updates  
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Use an automatic deployment rule (ADR) rather than adding new updates to an existing software update group. Typically, you use ADRs to deploy monthly software updates (also known as "Patch Tuesday" updates) and for managing Endpoint Protection definition updates. If you need help to determine which deployment method is right for you, see [Deploy software updates](deploy-software-updates.md).
 
@@ -66,8 +67,8 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
         > [!IMPORTANT]  
         >  When you deploy definition updates, set the detail level to **Error only** to have the client report a state message only when a definition update fails. Otherwise, the client reports a large number of state messages that might impact site server performance.  
         
-> [!NOTE]  
-> The **Error only** detail level does not send the enforcement status messages required for tracking pending reboots.
+        > [!NOTE]  
+        > The **Error only** detail level does not send the enforcement status messages required for tracking pending reboots.
 
     -   **License terms setting**: Specify whether to automatically deploy software updates with associated license terms. Some software updates include license terms. When you automatically deploy software updates, the license terms aren't displayed, and there isn't an option to accept the license terms. Choose to automatically deploy all software updates regardless of an associated license term, or only deploy updates that don't have associated license terms.  
 
@@ -81,25 +82,27 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
      - If needed, filter on the content size for software updates in automatic deployment rules. For more information, see [Configuration Manager and simplified Windows servicing on down level operating systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).  
 
+     - Starting in version 1910, you can use **Deployed** as an update filter for your automatic deployment rules. This filter helps identify new updates that may need to be deployed to your pilot or test collections. The software update filter can also help avoid redeploying older updates. 
+         - When using **Deployed** as a filter, be mindful that you may have already deployed the update to another collection, such as a pilot or test collection. <!--4852033-->
      - Starting in version 1806, a property filter for **Architecture** is now available. Use this filter to exclude architectures like Itanium and ARM64 that are less common. Remember that there are 32-bit (x86) applications and components running on 64-bit (x64) systems. Unless you're certain that you don't need x86, enable it as well when you choose x64.<!--1322266-->  
 
+    > [!NOTE]  
+    > **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10**  product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product in Configuration Manager version 1906. For more information, see [Configuring products for versions of Windows 10](/configmgr/sum/get-started/configure-classifications-and-products#windows-10-version-1903-and-later) <!--4682946-->
 
-6.  On the **Evaluation Schedule** page, specify whether to enable the ADR to run on a schedule. When enabled, click **Customize** to set the recurring schedule.  
+
+6. On the **Evaluation Schedule** page, specify whether to enable the ADR to run on a schedule. When enabled, click **Customize** to set the recurring schedule.  
 
     - The start time configuration for the schedule is based on the local time of the computer that runs the Configuration Manager console.  
 
     - The ADR evaluation can run as often as three times per day.  
 
     - Never set the evaluation schedule with a frequency that exceeds the software updates synchronization schedule. This page displays the software update point sync schedule to help you determine evaluation schedule frequency.  
-    
+
     - To manually run the ADR, select the rule in the **Automatic Deployment Rule** node of the console, and then click **Run Now** in the ribbon.  
-    
-       > [!NOTE]  
-       > Starting in version 1802, ADRs can be scheduled to evaluate offset from a base day. For example, if Patch Tuesday actually falls on Wednesday for you, set the evaluation schedule for the second Tuesday of the month offset by one day.<!--1357133-->  
-       >  
-       > When scheduling evaluation with an offset during the last week of the month, if you choose an offset that continues into the next month, the site schedules evaluation for the last day of the month.<!--506731-->  
-       >  
-       > ![ADR custom evaluation schedule offset from base day](./media/ADR-evaluation-schedule-offset.PNG)
+
+    - Starting in version 1802, ADRs can be scheduled to evaluate offset from a base day. For example, if Patch Tuesday actually falls on Wednesday for you, set the evaluation schedule for the second Tuesday of the month offset by one day.<!--1357133-->  
+        - When scheduling evaluation with an offset during the last week of the month, if you choose an offset that continues into the next month, the site schedules evaluation for the last day of the month.<!--506731-->  
+        ![ADR custom evaluation schedule offset from base day](./media/ADR-evaluation-schedule-offset.PNG)
 
    
 7.  On the **Deployment Schedule** page, configure the following settings:  

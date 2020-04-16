@@ -10,13 +10,14 @@ ms.assetid: 6ecdfad1-6305-45a8-ae75-3f33b967cb8f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Create and deploy Windows Firewall policies for Endpoint Protection in System Center Configuration Manager
+# Create and deploy Windows Firewall policies for Endpoint Protection in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Firewall policies for Endpoint Protection in System Center Configuration Manager let you perform basic Windows Firewall configuration and maintenance tasks on client computers in your hierarchy. You can use Windows Firewall policies to perform the following tasks:  
+Firewall policies for Endpoint Protection in Configuration Manager let you perform basic Windows Firewall configuration and maintenance tasks on client computers in your hierarchy. You can use Windows Firewall policies to perform the following tasks:  
 
 -   Control whether Windows Firewall is turned on or off.  
 
@@ -33,9 +34,6 @@ Firewall policies for Endpoint Protection in System Center Configuration Manager
 4.  On the **General** page of the **Create Windows Firewall Policy Wizard**, specify a name and an optional description for this firewall policy, and then click **Next**.  
 
 5.  On the **Profile Settings** page of the wizard, configure the following settings for each network profile:  
-
-    > [!IMPORTANT]  
-    >  If you want to deploy Windows Firewall policies to computers running Windows Server 2008 and Windows Vista Service Pack 1, you must first install [Hotfix KB971800](http://go.microsoft.com/fwlink/p/?LinkId=231239) on these computers.  
 
     > [!NOTE]  
     >  For more information about network profiles, see the Windows documentation.  

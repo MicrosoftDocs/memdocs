@@ -5,7 +5,7 @@ titleSuffix: Microsoft Deployment Toolkit
 description: Developers guide for user driven installation (UDI) of Microsoft Deployment Toolkit (MDT)
 ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.technology: configmgr-mdt
 ms.topic: article
 ms.assetid: a2b3a3a0-7b81-4191-b1f9-c618e59347c3
 author: aczechowski  
@@ -55,11 +55,11 @@ Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer
 
 - **Custom wizard page editors**. You use wizard page editors to configure the behavior of your custom wizard page. The custom wizard page editors are implemented as DLLs that the UDI Wizard Designer reads. You create wizard page editors using:  
 
-  - [WPF](http://msdn.microsoft.com/library/ms754130.aspx) version 4.0  
+  - [WPF](https://msdn.microsoft.com/library/ms754130.aspx) version 4.0  
 
-  - [Microsoft Prism](http://compositewpf.codeplex.com/) version 4.0  
+  - [Microsoft Prism](https://compositewpf.codeplex.com/) version 4.0  
 
-  - [Microsoft Unity Application Block](http://unity.codeplex.com/) (Unity) version 2.1  
+  - [Microsoft Unity Application Block](https://unity.codeplex.com/) (Unity) version 2.1  
 
     MDT includes all the assemblies necessary to create a custom wizard page editor for use in the UDI Wizard Designer. The UDI SDK includes an example of how to create custom wizard page editors.  
 
@@ -82,7 +82,7 @@ Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer
 2.  Prepare the UDI Development environment software perquisites as described in [Prepare the UDI Development Environment Software Prerequisites](#PrepareUDIDevelopmentEnvironmentSoftwarePrerequisites).  
 
 #####  <a name="PrepareUDIDevelopmentEnvironmentHardwarePrerequisites"></a> Prepare the UDI Development Environment Hardware Prerequisites  
- The UDI development environment hardware prerequisites are the same hardware requirements for the edition of Microsoft Visual Studio you are using. For more information about these requirements, see the system requirements for each edition in the [Visual Studio Documentation](http://docs.microsoft.com/visualstudio).  
+ The UDI development environment hardware prerequisites are the same hardware requirements for the edition of Microsoft Visual Studio you are using. For more information about these requirements, see the system requirements for each edition in the [Visual Studio Documentation](https://docs.microsoft.com/visualstudio).  
 
 #####  <a name="PrepareUDIDevelopmentEnvironmentSoftwarePrerequisites"></a> Prepare the UDI Development Environment Software Prerequisites  
  The UDI development environment has the following software prerequisites:  
@@ -94,7 +94,7 @@ Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer
     > [!NOTE]
     >  IntelItanium versions (IA-64) of Windows operating system are not supported for UDI development environments.  
 
-     For more information about the operating systems that Visual Studio 2010 supports, see the system requirements for each edition in the [Visual Studio Documentation](http://docs.microsoft.com/visualstudio).  
+     For more information about the operating systems that Visual Studio 2010 supports, see the system requirements for each edition in the [Visual Studio Documentation](https://docs.microsoft.com/visualstudio).  
 
 -   Microsoft .NET Framework version 4.0 (required by Visual Studio 2010)  
 
@@ -115,7 +115,7 @@ Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer
     > [!NOTE]
     >  The sample source code for the UDI Wizard Designer editor pages is written in C#. Install the C# language if you want to use the sample source code.  
 
-     For more information about installing Visual Studio 2010, see [Installing Visual Studio](http://msdn.microsoft.com/library/e2h7fzkw.aspx).  
+     For more information about installing Visual Studio 2010, see [Installing Visual Studio](https://msdn.microsoft.com/library/e2h7fzkw.aspx).  
 
 2.  Install MDT.  
 
@@ -442,7 +442,7 @@ Figure 2. Folder structure for UDI development
   -   Adds information that will be shown on the **Summary** page using the **SaveFields** method  
 
 #####  <a name="TheNextButtonisClickedinCustomWizardPage"></a> Step 4: The Next Button Is Clicked in the Custom Wizard Page  
- When the user completes the fields on the custom wizard page, he or she clicks **Next**, which calls the **OnNextClicked** method. The **OnNextClicked** method performs any necessary tasks before proceeding to the next wizard page, such as recording any configuration changes made on the custom wizard page.  
+ When the user completes the fields on the custom wizard page, they click **Next**, which calls the **OnNextClicked** method. The **OnNextClicked** method performs any necessary tasks before proceeding to the next wizard page, such as recording any configuration changes made on the custom wizard page.  
 
  For the example custom wizard page, the override for the **OnNextClicked** method is implemented in the LocationPage.ccp file. In the **OnNextClicked** method in the example custom wizard page, the following methods are called:  
 
@@ -462,11 +462,11 @@ Figure 2. Folder structure for UDI development
 ####  <a name="ReviewUDIWizardDesignerArchitecture"></a> Review the UDI Wizard Designer Architecture  
  The UDI Wizard Designer was developed using WPF, Prism, and Unity. The UDI Designer is used to edit the UDI Wizard configuration file (UDIWizard_Config.xml), which the UDI Wizard (OSDSetupWizard.exe) reads at runtime. The [Pages](#Pages) element in the UDI Wizard configuration file contains a list of pages that has a separate [Page](#Page) element for each wizard page.  
 
- When you edit the configuration settings for a wizard page, the UDI Wizard Designer loads the custom page editor that corresponds to the wizard page type. The custom wizard page editors are developed as WPF user controls. The custom wizard page editor pages use the [Model–View–ViewModel](http://msdn.microsoft.com/magazine/dd419663.aspx) (MVVM) design pattern for WPF.  
+ When you edit the configuration settings for a wizard page, the UDI Wizard Designer loads the custom page editor that corresponds to the wizard page type. The custom wizard page editors are developed as WPF user controls. The custom wizard page editor pages use the [Model–View–ViewModel](https://msdn.microsoft.com/magazine/dd419663.aspx) (MVVM) design pattern for WPF.  
 
  The MVVM design pattern helps separate the user interface (UI; presentation) from the data being presented. The data is a façade over the [Page](#Page) element in the UDI Wizard configuration file (the Config.xml file in the example), which is accessed using the [CurrentPage](#CurrentPage) property of the [IDataService](#IDataService) interface.  
 
- The UDI Wizard Designer uses the **DependencyAttribute** to obtain access to the **DataService** class based on the dependency injection framework in Unity. For more information about the dependency interjection framework in Unity, see [Inject Some Life into Your Applications—Getting to Know the Unity Application Block](http://msdn.microsoft.com/library/ff650806.aspx).  
+ The UDI Wizard Designer uses the **DependencyAttribute** to obtain access to the **DataService** class based on the dependency injection framework in Unity. For more information about the dependency interjection framework in Unity, see [Inject Some Life into Your Applications—Getting to Know the Unity Application Block](https://msdn.microsoft.com/library/ff650806.aspx).  
 
 ####  <a name="ReviewConfigurableComponentsofUDIWizardPage"></a> Review Configurable Components of a UDI Wizard Page  
  As you create your custom wizard page, some of the configuration settings may be set in code and cannot be changed after you have compiled the page. However, for other configuration settings, you will need to allow those configuration settings to be changed using the UDI Wizard Designer.  
@@ -540,7 +540,7 @@ Figure 2. Folder structure for UDI development
  Mode=TwoWay}"/>  
 ```  
 
- For more information, see [How to: Make Data Available for Binding in XAML](http://msdn.microsoft.com/library/ms748857.aspx).  
+ For more information, see [How to: Make Data Available for Binding in XAML](https://msdn.microsoft.com/library/ms748857.aspx).  
 
  Use the **Views:CollectionTControl.ColumnCollectionView** element in the XAML to edit the list of available locations in the grid view. You use the [CollectionTControl](#CollectionTControl) control to display the grid view and bind the grid view to the [Data](#Data) element with the name **Location** in the UDI configuration file.  
 
@@ -3632,7 +3632,7 @@ FieldData="{Binding DataContext.Location, ElementName=ControlRoot}"
  This property allows you to set the text that will appear in the header of the control. Think of this property as a title for the control; by default, it appears as bold, orange text.  
 
 ###### InstructionText  
- Set this property to the text you want to appear below the header—typically instruction text that tells the user of your custom editor when and why he or she would want to modify the behavior of the field.  
+ Set this property to the text you want to appear below the header—typically instruction text that tells the user of your custom editor when and why they would want to modify the behavior of the field.  
 
 ### Interfaces  
 Table 70 lists the interfaces that you can use to create custom wizard page editors.  

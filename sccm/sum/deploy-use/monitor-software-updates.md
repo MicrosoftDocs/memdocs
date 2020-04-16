@@ -1,25 +1,42 @@
 ---
 title: Monitor software updates
 titleSuffix: "Configuration Manager"
-description: "The System Center Configuration Manager console provides alerts and statuses to monitor updates and compliance."
+description: "The Configuration Manager console provides alerts and statuses to monitor updates and compliance."
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 04/08/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
-ms.collection: M365-identity-device-management
+
+
 ---
-# Monitor software updates in System Center Configuration Manager
+# Monitor software updates in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-System Center Configuration Manager provides many ways to help you to monitor software updates objects, processes, and compliance information. Use the following sections to monitor software updates.
+Configuration Manager provides many ways to help you to monitor software updates objects, processes, and compliance information. Use the following sections to monitor software updates.
 
 ## Software updates dashboard
-Starting in Configuration Manager version 1610, you can use the Software Updates Dashboard to view the current compliance status of devices in your organization and quickly analyze the data to see which devices are at risk. To view the dashboard, navigate to **Monitoring** > **Overview** > **Security** > **Software Updates Dashboard**.   
+
+*(Introduced in version 1610)*
+
+Starting in Configuration Manager version 1610, you can use the Software Updates Dashboard to view the current compliance status of devices in your organization and quickly analyze the data to see which devices are at risk. To view the dashboard, navigate to **Monitoring** > **Overview** > **Security** > **Software Updates Dashboard**.
+
+## Drill through required updates
+<!--4224414-->
+*(Introduced in version 1906)*
+
+You can drill through compliance statistics to see which devices require a specific Office 365 software update. To view the device list, you need permission to view updates and the collections the devices belong to. To drill down into the device list:
+
+1. Go to **Software Library** > **Software Updates** > **All Software Updates**.
+1. Select any update that is required by at least one device.
+1. Look at the **Summary** tab and find the pie chart under  **Statistics**.
+1. Select the **View Required** hyperlink next to the pie chart to drill down into the device list.
+1. This action takes you to a temporary node under **Devices** where you can see the devices requiring the update. You can also take actions for the node such as creating a new collection from the list.
+
 
 ##  <a name="BKMK_SUAlerts"></a> Alerts for software updates  
  You can configure alerts for software updates to notify administrative users when compliance levels for software update deployments are below the configured percentage. You can configure alerts for software update deployments in the following locations:  
@@ -35,7 +52,7 @@ After you configure the alert settings, if the specified conditions occur, Confi
 2.  Manage the configured alerts in the **Alerts** node in the **Monitoring** workspace.  
 
 ##  <a name="BKMK_SUSyncStatus"></a> Software updates synchronization status  
- After you initiate the synchronization process, you can monitor the synchronization process from the Configuration Manager console for all software update points in your hierarchy. Use the following procedure to monitor the software update synchronization process.  
+ After you start the synchronization process, you can monitor the synchronization process from the Configuration Manager console for all software update points in your hierarchy. Use the following procedure to monitor the software update synchronization process.  
 
 #### To monitor the software updates synchronization process  
 
@@ -55,7 +72,7 @@ After you configure the alert settings, if the specified conditions occur, Confi
 3.  On the **Home** tab, in the **Deployment** group, click **View Status**.  
 
 ##  <a name="BKMK_SUReports"></a> Software updates reports  
- The state messages for software updates provide information about the compliance of software updates and about the evaluation and enforcement state of software update deployments. You can run software update reports to display these state messages. There are more than 30 predefined software update reports available. They are organized in several categories and can be used to report on specific information about software updates and deployments. In addition to using the preconfigured reports, you can also create custom software update reports according to the needs of your enterprise. For more information, see [Operations and maintenance for reporting](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
+ The state messages for software updates provide information about the compliance of software updates and about the evaluation and enforcement state of software update deployments. You can run software update reports to display these state messages. There are more than 30 predefined software update reports available. They're organized in several categories and can be used to report on specific information about software updates and deployments. In addition to using the preconfigured reports, you can also create custom software update reports according to the needs of your enterprise. For more information, see [Operations and maintenance for reporting](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
 
 ### Recommended software updates reports
 The following are some of the reports that are useful in identifying potential issues: 
@@ -112,3 +129,9 @@ This report returns the deployment errors at the site and a count of computers t
 2.  Select the distribution point for which to view distribution point status information.  
 
 3.  In the results pane, click the **Details** tab. Status information for the distribution point is displayed.  
+
+## Next steps
+
+- [Log files for Software Updates](/configmgr/core/plan-design/hierarchy/log-files#BKMK_SU_NAPLog)
+
+- [Software Updates management whitepaper](https://www.microsoft.com/download/confirmation.aspx?id=44578)

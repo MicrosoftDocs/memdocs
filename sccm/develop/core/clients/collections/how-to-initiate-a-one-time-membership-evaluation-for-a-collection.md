@@ -9,7 +9,8 @@ ms.assetid: c1733ce8-d443-4b0f-83f4-82f82d619c7c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Initiate a One-time Membership Evaluation for a Collection
 ### To Initiate a One-time Membership Evaluation  
@@ -61,5 +62,4 @@ public void RefreshCollection(WqlConnectionManager connection, string collection
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Collections](../../../../develop/core/clients/collections/collections.md)   
  [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)

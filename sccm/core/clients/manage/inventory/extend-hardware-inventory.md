@@ -1,7 +1,7 @@
 ---
 title: "Extend hardware inventory"
 titleSuffix: "Configuration Manager"
-description: "Learn ways to extend hardware inventory in System Center Configuration Manager."
+description: "Learn ways to extend hardware inventory in Configuration Manager."
 ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,11 +10,12 @@ ms.assetid: d5bfab4f-c55e-4545-877c-5c8db8bc1891
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# How to extend hardware inventory in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# How to extend hardware inventory in Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Hardware inventory reads information from Windows PCs by using Windows Management Instrumentation (WMI). WMI is the Microsoft implementation of web-based Enterprise Management (WBEM), an industry standard for accessing management information in an enterprise. In previous versions of Configuration Manager, you extended hardware inventory by modifying the file sms_def.mof on the site server. This file contained a list of WMI classes that could be read by hardware inventory. Editing this file, you could enable and disable existing classes, and also create new classes to inventory.  
 
@@ -40,7 +41,7 @@ The Configuration.mof file is used to define the data classes to be inventoried 
 |Create IDMIF Files|Use IDMIF files to collect information about assets in your organization that are not associated with a Configuration Manager client, for example, projectors, photocopiers and network printers. See [To create IDMIF files](#BKMK_IDMIF) in this article.|  
 
 ## Procedures to extend hardware inventory  
-These procedures help you to configure the default client settings for hardware inventory and they apply to all the clients in your hierarchy. If you want these settings to apply to only some clients, create a custom client device setting and assign it to a collection of specific clients. See [How to configure client settings in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md).  
+These procedures help you to configure the default client settings for hardware inventory and they apply to all the clients in your hierarchy. If you want these settings to apply to only some clients, create a custom client device setting and assign it to a collection of specific clients. See [How to configure client settings](../../../../core/clients/deploy/configure-client-settings.md).  
 
 ###  <a name="BKMK_Enable"></a> To enable or disable existing inventory classes  
 
@@ -161,4 +162,4 @@ Beginning in Configuration Manager 1802, you can specify the length of strings t
  After you create an IDMIF file, store it in the _%Windir%_**\CCM\Inventory\Idmifs** folder on client computers. Configuration Manager will collect information from this file during the next scheduled hardware inventory cycle. You must declare new classes for information contained in the file by adding or importing them.  
 
 > [!NOTE]
-> MIF files could contain large amounts of data and collecting this data could negatively affect the performance of your site. Enable MIF collection only when required and configure the option **Maximum custom MIF file size (KB)** in the hardware inventory settings. For more information, see [Introduction to hardware inventory in System Center Configuration Manager](introduction-to-hardware-inventory.md).
+> MIF files could contain large amounts of data and collecting this data could negatively affect the performance of your site. Enable MIF collection only when required and configure the option **Maximum custom MIF file size (KB)** in the hardware inventory settings. For more information, see [Introduction to hardware inventory](introduction-to-hardware-inventory.md).

@@ -9,10 +9,11 @@ ms.assetid: 41ae8c45-e00d-4d98-905d-e5a1303bdc30
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_Policy Client WMI Class
-In System Center Configuration Manager, the `CCM_Policy` class is a client Windows Management Instrumentation (WMI) class that represents a client policy.  
+In Configuration Manager, the `CCM_Policy` class is a client Windows Management Instrumentation (WMI) class that represents a client policy.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -59,7 +60,7 @@ Class CCM_Policy
 
  Qualifiers: [key]  
 
- Precedence is used to resolve conflicts between policies from the same policy authority. For example, this occurs in System Center Configuration Manager when using collection variables to override site-wide policy, or setting a value for a collection variable on multiple collections of which the same client is a member.  
+ Precedence is used to resolve conflicts between policies from the same policy authority. For example, this occurs in Configuration Manager when using collection variables to override site-wide policy, or setting a value for a collection variable on multiple collections of which the same client is a member.  
 
  `PolicyRuleID`  
  Data type: `String`  

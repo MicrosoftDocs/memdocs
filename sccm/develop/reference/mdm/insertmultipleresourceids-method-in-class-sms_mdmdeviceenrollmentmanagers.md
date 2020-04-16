@@ -9,7 +9,8 @@ ms.assetid: b0f727a9-9325-47f3-91e6-2b589033b37d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # InsertMultipleResourceIds Method in Class SMS_MDMDeviceEnrollmentManagers
 The `InsertMultipleResourceIds` Windows Management Instrumentation (WMI) class method, in Configuration Manager, inserts multiple resource IDs.  
@@ -46,4 +47,3 @@ The `InsertMultipleResourceIds` Windows Management Instrumentation (WMI) class m
 
 ## See Also  
  [SMS_MDMDeviceEnrollmentManagers Server WMI Class](../../../develop/reference/mdm/sms_mdmdeviceenrollmentmanagers-server-wmi-class.md)   
- [Mobile Device Management Server WMI Classes](../../../develop/reference/mdm/mobile-device-management-server-wmi-classes.md)

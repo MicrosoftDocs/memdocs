@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Create a Configuration Manager report that displays hardware inventory information.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: d7e964d3-5c1a-42c5-81fd-57fc833cb55a
 author: aczechowski
 ms.author: aaroncz

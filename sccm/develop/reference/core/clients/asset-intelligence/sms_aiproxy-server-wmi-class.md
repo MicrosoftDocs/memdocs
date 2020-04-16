@@ -9,10 +9,11 @@ ms.assetid: dbd4b08e-979f-426e-979b-4dce5dce48dc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_AIProxy Server WMI Class
-The `SMS_AIProxy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents an Asset Intelligence proxy computer.  
+The `SMS_AIProxy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an Asset Intelligence proxy computer.  
 
 > [!NOTE]
 >  This class can be accessed only on the central administration site.  
@@ -276,4 +277,4 @@ Class SMS_AIProxy : SMS_BaseClass
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Configuration Manager Asset Intelligence](../../../../../develop/core/clients/asset-intelligence/asset-intelligence.md)
+[Initiate Asset Intelligence synchronization](/sccm/develop/core/clients/asset-intelligence/how-to-initiate-a-synchronization)

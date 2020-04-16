@@ -1,5 +1,6 @@
-- name: Operating system deployment
-- name: Understand and explore
+- name: OS deployment documentation
+  href: index.yml
+- name: Understand
   items:
   - name: Introduction to OS deployment
     href: understand/introduction-to-operating-system-deployment.md
@@ -9,6 +10,36 @@
     href: plan-design/infrastructure-requirements-for-operating-system-deployment.md
   - name: Planning considerations for automating tasks
     href: plan-design/planning-considerations-for-automating-tasks.md
+  - name: Scenarios to deploy enterprise operating systems
+    items:
+    - name: OS deployment scenarios overview
+      href: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+    - name: Upgrade Windows to the latest version
+      href: deploy-use/upgrade-windows-to-the-latest-version.md
+    - name: Windows Autopilot for existing devices
+      href: deploy-use/windows-autopilot-for-existing-devices.md
+    - name: Refresh an existing computer with a new version of Windows
+      href: deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md
+    - name: Install a new version of Windows on a new computer (bare metal)
+      href: deploy-use/install-new-windows-version-new-computer-bare-metal.md
+    - name: Replace an existing computer and transfer settings
+      href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
+  - name: Methods to deploy enterprise operating systems
+    items:
+    - name: OS deployment methods
+      href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+    - name: Use PXE to deploy Windows over the network
+      href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
+    - name: Use Software Center to deploy Windows over the network
+      href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
+    - name: Use bootable media to deploy Windows over the network
+      href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
+    - name: Use stand-alone media to deploy Windows without using the network
+      href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
+    - name: Use multicast to deploy Windows over the network
+      href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
+    - name: Create an image for an OEM in factory or a local depot
+      href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
   - name: Security and privacy for OS deployment
     href: plan-design/security-and-privacy-for-operating-system-deployment.md
   - name: Planning for OS deployment interoperability
@@ -47,72 +78,40 @@
     href: get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md
 - name: Deploy and use
   items:
-  - name: Scenarios to deploy enterprise operating systems
+  - name: Manage and create task sequences
+    href: deploy-use/manage-task-sequences-to-automate-tasks.md
+  - name: Create task sequences to automate tasks
     items:
-    - name: OS deployment scenarios overview
-      href: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
-    - name: Upgrade Windows to the latest version
-      href: deploy-use/upgrade-windows-to-the-latest-version.md
-    - name: Windows Autopilot for existing devices
-      href: deploy-use/windows-autopilot-for-existing-devices.md
-    - name: Refresh an existing computer with a new version of Windows
-      href: deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md
-    - name: Install a new version of Windows on a new computer (bare metal)
-      href: deploy-use/install-new-windows-version-new-computer-bare-metal.md
-    - name: Replace an existing computer and transfer settings
-      href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
-  - name: Methods to deploy enterprise operating systems
-    items:
-    - name: OS deployment methods
-      href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
-    - name: Use PXE to deploy Windows over the network
-      href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
-    - name: Use Software Center to deploy Windows over the network
-      href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
-    - name: Use bootable media to deploy Windows over the network
-      href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
-    - name: Use stand-alone media to deploy Windows without using the network
-      href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
-    - name: Use multicast to deploy Windows over the network
-      href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
-    - name: Create an image for an OEM in factory or a local depot
-      href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
-    - name: Deploy Windows to Go
-      href: deploy-use/deploy-windows-to-go.md
-  - name: Manage Windows as a service
-    href: deploy-use/manage-windows-as-a-service.md
-  - name: Create a phased deployment
-    href: deploy-use/create-phased-deployment-for-task-sequence.md
-  - name: Manage and monitor phased deployments
-    href: deploy-use/manage-monitor-phased-deployments.md
-  - name: Monitor OS deployments
-    href: deploy-use/monitor-operating-system-deployments.md
-  - name: Manage task sequences to automate tasks
-    items:
-    - name: Manage and create task sequences
-      href: deploy-use/manage-task-sequences-to-automate-tasks.md
     - name: Create a task sequence to install an OS
       href: deploy-use/create-a-task-sequence-to-install-an-operating-system.md
     - name: Create a task sequence to upgrade an OS
       href: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+    - name: Task sequence steps to manage BIOS to UEFI conversion
+      href: deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md
     - name: Create a task sequence to capture an OS
       href: deploy-use/create-a-task-sequence-to-capture-an-operating-system.md
     - name: Create a task sequence to capture and restore user state
       href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
-    - name: Deploy a task sequence
-      href: deploy-use/deploy-a-task-sequence.md  
-    - name: Use a task sequence to manage virtual hard disks
-      href: deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md
-  - name: Custom task sequence scenarios
-    items:
     - name: Create a custom task sequence
       href: deploy-use/create-a-custom-task-sequence.md
     - name: Create a task sequence for non-OS deployments
       href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
-    - name: Task sequence steps to manage BIOS to UEFI conversion
-      href: deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md
-    - name: Preprovision BitLocker in Windows PE
-      href: deploy-use/preprovision-bitlocker-in-windows-pe.md
+  - name: Deploy a task sequence
+    href: deploy-use/deploy-a-task-sequence.md
+  - name: Create a phased deployment
+    href: deploy-use/create-phased-deployment-for-task-sequence.md
+  - name: Manage and monitor phased deployments
+    href: deploy-use/manage-monitor-phased-deployments.md
+  - name: Manage Windows as a service
+    href: deploy-use/manage-windows-as-a-service.md
+  - name: Deploy Windows to Go
+    href: deploy-use/deploy-windows-to-go.md
+  - name: Monitor OS deployments
+    href: deploy-use/monitor-operating-system-deployments.md
+  - name: Debug a task sequence
+    href: deploy-use/debug-task-sequence.md
+  - name: Configure pre-cache content
+    href: deploy-use/configure-precache-content.md
   - name: Create task sequence media
     items:
     - name: Task sequence media overview
@@ -127,12 +126,18 @@
       href: deploy-use/create-capture-media.md
 - name: Technical references
   items:
+  - name: Use the task sequence editor
+    href: understand/task-sequence-editor.md
+  - name: User experiences for OS deployment
+    href: understand/user-experience.md
   - name: Task sequence steps
     items:
     - name: About task sequence steps
       href: understand/task-sequence-steps.md
     - name: Install Software Updates
       href: understand/install-software-updates.md
+    - name: Pre-provision BitLocker in Windows PE
+      href: deploy-use/preprovision-bitlocker-in-windows-pe.md
   - name: How to use task sequence variables
     href: understand/using-task-sequence-variables.md
   - name: Task sequence variables

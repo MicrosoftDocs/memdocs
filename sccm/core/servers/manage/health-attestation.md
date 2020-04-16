@@ -4,17 +4,18 @@ titleSuffix: "Configuration Manager"
 description: "Learn about the Device Health Attestation functionality viewable in the Configuration Manager console."
 ms.date: 10/05/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Health attestation for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Health attestation for Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Administrators can view the status of [Windows 10 Device Health Attestation](https://technet.microsoft.com/library/mt592023.aspx) in the Configuration Manager console.  Device health attestation lets the administrator ensure that client computers have the following trustworthy BIOS, TPM, and boot software configurations enabled:  
 
@@ -71,5 +72,3 @@ Configuration Manager Device Health Attestation displays the following:
 -   **Devices Reporting Health Attestation** - Shows the percentage of devices reporting Health Attestation status  
 -   **Noncompliant Devices by Client Type** - Shows share of mobile devices and computers that are noncompliant  
 -   **Top Missing Health Attestation Settings** - Shows the number of devices missing the health attestation setting, listed per setting
-
-Client Device Health Attestation status can be used to define rules for conditional access in compliance policies for devices managed by Configuration Manager with Microsoft Intune. For details, see [Manage device compliance policies in System Center Configuration Manager](/sccm/protect/deploy-use/device-compliance-policies).  

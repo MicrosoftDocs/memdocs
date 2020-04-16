@@ -9,7 +9,8 @@ ms.assetid: 24654af4-e004-417f-8874-d0e77279822b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Uninstall Method in Class CCM_Application
 The `Uninstall` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that uninstalls an application.   

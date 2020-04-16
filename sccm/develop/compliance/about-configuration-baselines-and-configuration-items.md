@@ -9,10 +9,11 @@ ms.assetid: 56bdef4b-bcf8-46f5-bf92-d86e0dfce08d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Baselines and Configuration Items
-In System Center Configuration Manager, baselines are used to define the configuration of a product or system that is established at a specific point in time. Configuration baselines in System Center Configuration Manager contain a defined set of desired configurations that are evaluated for compliance as a group.  
+In Configuration Manager, baselines are used to define the configuration of a product or system that is established at a specific point in time. Configuration baselines in Configuration Manager contain a defined set of desired configurations that are evaluated for compliance as a group.  
 
 ## Configuration Baselines  
  Configuration baselines contain one or more configuration items with associated rules, and they are assigned to computers through collections, together with a compliance evaluation schedule.  
@@ -81,7 +82,7 @@ In System Center Configuration Manager, baselines are used to define the configu
 
  Configuration items are the building blocks for configuration baselines, and consequently the same configuration item can be used in multiple configuration baselines.  
 
- System Center Configuration Manager supports the following configuration item types:  
+ Configuration Manager supports the following configuration item types:  
 
  **Operating system configuration item**  
  A configuration item to determine compliance for settings relating to the operating system version and configuration.  
@@ -142,5 +143,3 @@ In System Center Configuration Manager, baselines are used to define the configu
 
  Additionally, if you want to use an imported configuration item but delete from it objects or settings (or their related validation criteria), your only editing choice is to create a duplicate configuration item and edit that duplicate configuration item accordingly.  
 
-## See Also  
- [Configuration Manager Compliance Settings (DCM)](../../develop/compliance/compliance-settings-dcm.md)

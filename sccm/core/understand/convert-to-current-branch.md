@@ -1,18 +1,18 @@
 ---
-title: "Upgrade the long-term servicing branch to the current branch "
-titleSuffix: "Configuration Manager"
-description: "Learn how to convert a Long-Term Servicing Branch site to a Current Branch site."
-ms.date: 2/8/2017
+title: Upgrade the LTSB to current branch
+titleSuffix: Configuration Manager
+description: Learn how to convert a long-term servicing branch (LTSB) site to a current branch site.
+ms.date: 02/8/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: ec5b54cf-62b7-4ed1-9bb3-e8c63b9641c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
----
 
+
+---
 
 # Upgrade the long-term servicing branch to the current branch
 
@@ -24,7 +24,7 @@ When you have a current Software Assurance agreement (or similar licensing right
 
 If you have multiple sites, you only need to convert the top-tier site of your hierarchy. After the top-tier site is converted:
 - Child primary sites automatically convert.
--	You must manually update secondary sites from within the Configuration Manager console.
+- You must manually update secondary sites from within the Configuration Manager console.
 
 ## Run setup to convert the Long-Term Servicing Branch
 On the top-tier site of your hierarchy, you can run Configuration Manager setup from qualifying baseline media and select **Site maintenance**.  Then, when presented with the licensing page, select the option for the Current Branch and complete the wizard.

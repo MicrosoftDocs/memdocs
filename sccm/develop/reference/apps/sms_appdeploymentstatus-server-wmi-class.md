@@ -9,7 +9,8 @@ ms.assetid: 20668ec6-c221-4c44-8119-19565706d544
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_AppDeploymentStatus Server WMI Class
 The `SMS_AppDeploymentStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application deployment status.  
@@ -227,6 +228,3 @@ Class SMS_AppDeploymentStatus : SMS_BaseClass
 
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Application Management Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

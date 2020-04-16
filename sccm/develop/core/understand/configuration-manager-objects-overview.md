@@ -9,12 +9,13 @@ ms.assetid: f3ddf4dc-2acd-4d59-be88-b2296d9333cd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Objects Overview
-The System Center Configuration Manager objects are instances of Configuration Manager-specific Windows Management Instrumentation (WMI) classes that are managed by the SMS Provider. The Configuration Manager object class categories are described in the following table.  
+The Configuration Manager objects are instances of Configuration Manager-specific Windows Management Instrumentation (WMI) classes that are managed by the SMS Provider. The Configuration Manager object class categories are described in the following table.  
 
-|System Center Configuration Manager Object Class Category|Description|  
+|Configuration Manager Object Class Category|Description|  
 |----------------------------------------------------------------------------------------|-----------------|  
 |Software distribution|Objects associated with the software distribution feature of Configuration Manager, such as advertisement, collection, package, and program objects.|  
 |Scheduling|Organizes scheduled Configuration Manager events, such as inventory updates.|  
@@ -28,21 +29,21 @@ The System Center Configuration Manager objects are instances of Configuration M
 |Collected files|Contains information about files collected from clients.|  
 
 ## DebugView  
- To show SMS Provider object property values in the System Center Configuration Manager console results pane, start the console with the following command line:  
+ To show SMS Provider object property values in the Configuration Manager console results pane, start the console with the following command line:  
 
  \<InstallationDirectory>\Microsoft.ConfigurationManagement.exe /SMS:DebugView=1  
 
- For more information about command-line options, see [Configuration Manager Console Command-Line Options](../../../develop/reference/core/servers/console/console-command-line-options.md)  
+ For more information, see [Configuration Manager console command-line options](/sccm/core/servers/manage/admin-console#command-line-options).  
 
 ## See Also  
  [Configuration Manager Association Classes](../../../develop/core/understand/association-classes.md)   
  [Configuration Manager Bit Field Properties](../../../develop/core/understand/configuration-manager-bit-field-properties.md)   
- [Configuration Manager Console Command-Line Options](../../../develop/reference/core/servers/console/console-command-line-options.md)   
+ [Configuration Manager console command-line options](/sccm/core/servers/manage/admin-console#command-line-options)
  [Configuration Manager Date and Time Formats](../../../develop/core/understand/date-and-time-formats.md)   
  [Configuration Manager Embedded Objects](../../../develop/core/understand/embedded-objects.md)   
  [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md)   
- [How to Use Configuration Manager Objects With Managed Code](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)   
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [Configuration Manager Lazy Properties](../../../develop/core/understand/configuration-manager-lazy-properties.md)   
- [Configuration Manager Errors](../../../develop/core/understand/configuration-manager-errors.md)   
+ [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)
  [Configuration Manager Object Security](../../../develop/core/understand/configuration-manager-object-security.md)   
  [Configuration Manager Special Queries](../../../develop/core/understand/special-queries.md)

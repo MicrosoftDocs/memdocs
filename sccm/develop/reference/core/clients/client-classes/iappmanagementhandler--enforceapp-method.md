@@ -9,7 +9,8 @@ ms.assetid: 3c554beb-fe34-42ec-bc02-d427238ec811
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # IAppManagementHandler::EnforceApp Method
 The `IAppManagementHandler::EnforceApp` method, in Configuration Manager, starts the installation of a specific application.  
@@ -114,6 +115,5 @@ HRESULT EnforceApp(
 ## See Also  
  [IAppManagementHandler Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementhandler-interface.md)   
  [Application Management Client Interfaces](../../../../../develop/reference/core/clients/client-classes/application-management-client-interfaces.md)   
- [System Center Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Scenario: Extending Application Management](../../../../../develop/apps/scenario--extending-application-management.md)   
+ [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

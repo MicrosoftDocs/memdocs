@@ -2,7 +2,7 @@
 title: OSD infrastructure requirements
 titleSuffix: Configuration Manager
 description: Learn the external and product dependencies and requirements for OS deployment in Configuration Manager
-ms.date: 10/02/2018
+ms.date: 07/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,16 +10,13 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
 # Infrastructure requirements for OS deployment in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 OS deployment in Configuration Manager has external dependencies as well as dependencies within the product. Use this article to help you prepare the infrastructure for OS deployment.  
-
-
 
 ##  <a name="BKMK_ExternalDependencies"></a> Dependencies external to Configuration Manager  
 
@@ -35,8 +32,10 @@ For more information, see the following articles:
 
 - [Download the Windows ADK for Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install)  
 
-- [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)  
+    > [!IMPORTANT]
+    > Make sure to download both the **Windows ADK for Windows 10** and the **Windows PE add-on for the ADK**.
 
+- [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)  
 
 #### Site systems
 The Windows ADK is a prerequisite for the following site systems servers:
@@ -175,7 +174,7 @@ For more information about how to capture and restore user state, see [Manage us
 
 ### Reporting services point  
 
-To use Configuration Manager reports for OS deployments, install and configure a reporting point. For more information, see [Reporting](/sccm/core/servers/manage/reporting).  
+To use Configuration Manager reports for OS deployments, install and configure a reporting point. For more information, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
 
 
 ### Security permissions for OS deployments  
@@ -257,7 +256,9 @@ If you plan to co-host the distribution point on a server running DHCP, consider
      `WDSUTIL /Set-Server /UseDHCPPorts:No /DHCPOption60:Yes`  
 
 > [!NOTE]
-> When using the PXE responder without WDS instead of WDS, it is not supported to also run DHCP on the same server.
+> In version 1810 and earlier, it's not supported to use the PXE responder without WDS on servers that are also running a DHCP server.
+>
+> Starting in version 1902, when you enable a PXE responder on a distribution point without Windows Deployment Service, it can now be on the same server as the DHCP service. For more information, see [Configure at least one distribution point to accept PXE requests](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network#BKMK_Configure).
 
 
 ##  <a name="BKMK_SupportedOS"></a> Supported operating systems  

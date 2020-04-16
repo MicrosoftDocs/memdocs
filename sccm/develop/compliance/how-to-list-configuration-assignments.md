@@ -9,10 +9,11 @@ ms.assetid: cd79bf83-591d-47b1-afdb-a23fbae90e58
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to List Configuration Assignments
-The following code examples show how to list the current configuration baseline assignments and a specific set of properties for each assignment in System Center Configuration Manager.  
+The following code examples show how to list the current configuration baseline assignments and a specific set of properties for each assignment in Configuration Manager.  
 
 ### To list Configuration Assignments  
 
@@ -23,7 +24,7 @@ The following code examples show how to list the current configuration baseline 
 3.  Loop through the array of available configuration baseline assignments, listing each configuration baseline assignment and specific properties.  
 
 ## Example  
- The following example method shows how to list the current configuration baseline assignments and a specific set of properties for each assignment in System Center Configuration Manager.  
+ The following example method shows how to list the current configuration baseline assignments and a specific set of properties for each assignment in Configuration Manager.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
@@ -182,8 +183,7 @@ public void DCMAssignments_ListProperties(WqlConnectionManager connection)
 
 ## See Also  
  [About Configuration Baselines and Configuration Items](../../develop/compliance/about-configuration-baselines-and-configuration-items.md)   
- [How to Use Configuration Manager Objects With WMI](../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md)   
- [How to Use Configuration Manager Objects With Managed Code](../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)   
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [How to Connect to a Configuration Manager Provider using Managed Code](../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to a Configuration Manager Provider Using WMI](../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [SMS_BaselineAssignment Server WMI Class](../../develop/reference/compliance/sms_baselineassignment-server-wmi-class.md)

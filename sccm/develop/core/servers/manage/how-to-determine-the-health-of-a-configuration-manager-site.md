@@ -9,10 +9,11 @@ ms.assetid: 2b49a2b8-b141-4ed3-9b94-925a6cca1711
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Determine the Health of a Configuration Manager Site
-You can determine the overall health or status of a site, in System Center Configuration Manager, by inspecting the `SMS_SummarizerSiteStatus` object `Status` property. The `Status` property has three possible values:  
+You can determine the overall health or status of a site, in Configuration Manager, by inspecting the `SMS_SummarizerSiteStatus` object `Status` property. The `Status` property has three possible values:  
 
 |Value|Description|  
 |-----------|-----------------|  
@@ -20,11 +21,11 @@ You can determine the overall health or status of a site, in System Center Confi
 |1|The site has warning conditions.|  
 |2|The site has error conditions.|  
 
- `SMS_SummarizerSiteStatus` is an example of a System Center Configuration Manager summarizer. For more information about other summarizer classes, see [Status Server WMI Classes](../../../../develop/reference/core/servers/manage/status-server-wmi-classes.md).  
+ `SMS_SummarizerSiteStatus` is an example of a Configuration Manager summarizer. For more information, see [SMS_SummarizerSiteStatus server WMI class](/sccm/develop/reference/core/servers/manage/sms_summarizersitestatus-server-wmi-class).  
 
 ### To determine a site's health  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Get the `SMS_SummarizerSiteStatus` object by using the Configuration Manager site code.  
 
@@ -103,8 +104,8 @@ public void ShowSiteHealth(WqlConnectionManager connection, string siteCode)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).|  
-|`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|A valid task System Center Configuration Manager site code|  
+|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).|  
+|`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|A valid task Configuration Manager site code|  
 
 ## Compiling the Code  
  This C# example requires:  
@@ -132,5 +133,4 @@ public void ShowSiteHealth(WqlConnectionManager connection, string siteCode)
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [About Configuration Manager Status and State](../../../../develop/core/servers/manage/about-configuration-manager-status-and-summarizers.md)   
- [Status Server WMI Classes](../../../../develop/reference/core/servers/manage/status-server-wmi-classes.md)
+ [About status messages](/sccm/develop/core/servers/manage/about-configuration-manager-status-messages)

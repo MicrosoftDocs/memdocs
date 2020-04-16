@@ -9,7 +9,8 @@ ms.assetid: 4adf2263-faa3-444b-b331-bb5ca4acfb4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SendNotifyProgressToCTM Method
 The **SendNotifyProgressToCTM** method notifies Content Transfer Manager of the progress of a job.  
@@ -103,6 +104,3 @@ HRESULT stdcall SendNotifyProgressToCTM(
 
 ## Development Requirements  
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Alternate Content Provider](../../../../../develop/reference/core/servers/configure/alternate-content-provider-classes.md)

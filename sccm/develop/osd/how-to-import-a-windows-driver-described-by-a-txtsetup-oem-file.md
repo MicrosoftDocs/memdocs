@@ -9,17 +9,18 @@ ms.assetid: 1b6e61bc-ac48-4229-8c13-d470e4e8caf0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Import a Windows Driver Described by a Txtsetup.oem File into Configuration Manager
-You can import a Windows driver that is described by a Txtsetup.oem file, in System Center Configuration Manager, by using the [CreateFromOEM Method in Class SMS_Driver](../../develop/reference/osd/createfromoem-method-in-class-sms_driver.md). System Center Configuration Manager can automatically create definitions for most drivers from just an .inf file. However, when installing mass-storage drivers on pre-Windows Vista operating systems, Configuration Manager also must have some information that is contained in the Txtsetup.oem file. To facilitate this, `CreateFromOEM` creates [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) objects for each .inf file that is referenced in the Txtsetup.oem file. You then have the opportunity to customize the driver properties before saving them.  
+You can import a Windows driver that is described by a Txtsetup.oem file, in Configuration Manager, by using the [CreateFromOEM Method in Class SMS_Driver](../../develop/reference/osd/createfromoem-method-in-class-sms_driver.md). Configuration Manager can automatically create definitions for most drivers from just an .inf file. However, when installing mass-storage drivers on pre-Windows Vista operating systems, Configuration Manager also must have some information that is contained in the Txtsetup.oem file. To facilitate this, `CreateFromOEM` creates [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) objects for each .inf file that is referenced in the Txtsetup.oem file. You then have the opportunity to customize the driver properties before saving them.  
 
 > [!NOTE]
 >  If a driver manufacturer has provided a Txtsetup.oem file, you should import the driver by using this procedure instead of the .inf files if you plan to deploy Windows 2000, Windows XP, or Windows Server 2003.  
 
 ### To import a Windows driver  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Call the [SMS_Driver](../../develop/reference/osd/sms_driver-server-wmi-class.md) class [CreateFromOEM](../../develop/reference/osd/createfromoem-method-in-class-sms_driver.md) method to get a collection of management base objects.  
 
@@ -226,6 +227,6 @@ public string GetDriverName(IResultObject driver)
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
-## See Also  
- [How to Specify The Supported Platforms for a Driver](../../develop/osd/how-to-specify-the-supported-platforms-for-a-driver.md)   
- [Operating System Deployment Driver Management](../../develop/osd/operating-system-deployment-driver-management.md)
+## See also
+
+[How to specify the supported platforms for a driver](/sccm/develop/osd/how-to-specify-the-supported-platforms-for-a-driver)

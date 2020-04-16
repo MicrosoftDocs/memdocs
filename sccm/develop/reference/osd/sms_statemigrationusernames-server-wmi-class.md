@@ -9,7 +9,8 @@ ms.assetid: 26d7ad7d-e8e6-41f4-9300-a4a4359dba31
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_StateMigrationUserNames Server WMI Class
 The `SMS_StateMigrationUserNames` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a localized user name during state migration.  
@@ -59,12 +60,12 @@ Class SMS_StateMigrationUserNames
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)   
- [SMS_StateMigration Server WMI Class](../../../develop/reference/osd/sms_statemigration-server-wmi-class.md)
+## See also
+
+[SMS_StateMigration server WMI class](/sccm/develop/reference/osd/sms_statemigration-server-wmi-class)

@@ -9,10 +9,11 @@ ms.assetid: 57b6120e-a157-4bd4-8b52-8ebc31b4b41f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CIAllCategories Server WMI Class
-The `SMS_CIAllCategories` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that lists all of the SMS_CategoryInstance Server WMI Class or [SMS_UpdateCategoryInstance Server WMI Class](../../../develop/reference/sum/sms_updatecategoryinstance-server-wmi-class.md) object instances for a given SMS_ConfigurationItem object.  
+The `SMS_CIAllCategories` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists all of the SMS_CategoryInstance Server WMI Class or [SMS_UpdateCategoryInstance Server WMI Class](../../../develop/reference/sum/sms_updatecategoryinstance-server-wmi-class.md) object instances for a given SMS_ConfigurationItem object.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -44,7 +45,7 @@ Class SMS_CIAllCategories : SMS_BaseClass
 
  Qualifiers: [key, read, Not_null]  
 
- System Center Configuration Manager-generated, site-specific ID for the category instance. This ID is defined by the `CategoryInstanceID` property of SMS_CategoryInstanceBase Server WMI Class for the specific configuration item.  
+ Configuration Manager-generated, site-specific ID for the category instance. This ID is defined by the `CategoryInstanceID` property of SMS_CategoryInstanceBase Server WMI Class for the specific configuration item.  
 
  `CategoryInstance_UniqueID`  
  Data type: `String`  
@@ -131,13 +132,12 @@ Class SMS_CIAllCategories : SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Updates Server WMI Classes](../../../develop/reference/sum/software-updates-server-wmi-classes.md)   
  [SMS_UpdateCategoryInstance Server WMI Class](../../../develop/reference/sum/sms_updatecategoryinstance-server-wmi-class.md)   
- [Configuration Manager Software Updates](../../../develop/sum/software-updates.md)
+ [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)

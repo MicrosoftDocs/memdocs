@@ -2,28 +2,26 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 06/06/2019
+ms.date: 04/15/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
 # Updates and servicing for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager uses an in-console service method called **Updates and Servicing**. This in-console method makes it easy to find and install recommended updates for your Configuration Manager infrastructure. In-console servicing is supplemented by out-of-band updates such as hotfixes. The out-of-band updates are intended for customers who need to resolve issues that might be specific to their environment.  
 
 > [!TIP]  
 > The terms *upgrade*, *update*, and *install* are used to describe three separate concepts in Configuration Manager. For more information about how each term is used, see [About upgrade, update, and install](/sccm/core/understand/upgrade-update-install).  
 
-
-##  <a name="bkmk_Baselines"></a> Baseline and update versions  
+## <a name="bkmk_Baselines"></a> Baseline and update versions  
 
 Use the latest baseline version when you install a new site in a new hierarchy.
 
@@ -57,11 +55,11 @@ The following supported versions of Configuration Manager are currently availabl
 
 | Version | Availability date | [Support end date](/sccm/core/servers/manage/current-branch-versions-supported) | Baseline | In-console update |  
 |-------------|-----------|------------|--------------|------------------------|  
-| [1902](/sccm/core/plan-design/changes/whats-new-in-version-1902)<br /><br /> 5.00.8790.1000 | March 27, 2019 | September 27, 2020 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
-| [1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)<br /><br /> 5.00.8740.1000 | November 27, 2018 | May 27, 2020 | No | Yes |
-| [1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)<br /><br /> 5.00.8692.1000 | July 31, 2018 | January 31, 2020 | No | Yes |
-| [1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000 | March 22, 2018 | September 22, 2019 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
-| [1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000 | November 20, 2017 | May 20, 2019 | No | Yes |
+| [**2002**](/sccm/core/plan-design/changes/whats-new-in-version-2002)<br /> (5.00.8968) | May 2020 | October 1, 2021 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
+| [**1910**](/sccm/core/plan-design/changes/whats-new-in-version-1910)<br /> (5.00.8913) | November 29, 2019 | May 29, 2021 | No | Yes |
+| [**1906**](/sccm/core/plan-design/changes/whats-new-in-version-1906)<br /> (5.00.8853) | July 26, 2019 | January 26, 2021 | No | Yes |
+| [**1902**](/sccm/core/plan-design/changes/whats-new-in-version-1902)<br /> (5.00.8790) | March 27, 2019 | September 27, 2020 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
+| [**1810**](/sccm/core/plan-design/changes/whats-new-in-version-1810)<br /> (5.00.8740) | November 27, 2018 | December 1, 2020 | No | Yes |
 
 <a name="bkmk_note1"></a>
 
@@ -80,21 +78,23 @@ The following table lists historical versions of Configuration Manager current b
 
 | Version | Availability date | Support end date | Baseline | In-console update |  
 |-------------|-----------|------------|--------------|------------------------|  
-| 1706 <br /><br /> 5.00.8540.1000 | July 31, 2017 | July 31, 2018 | No | Yes |
-| 1702 <br /><br /> 5.00.8498.1000 | March 27, 2017 | March 27, 2018 | Yes | Yes |
-| 1610 <br /><br /> 5.00.8458.1000 | November 18, 2016 | November 18, 2017 | No | Yes |
-| 1606 <br /><br /> 5.00.8412.1000 | July 22, 2016 | July 22, 2017 | No | Yes |
-| 1606 with the 1606 hotfix rollup (KB3186654) <br><br>5.00.8412.1307 | October 12, 2016 | October 12, 2017 | Yes | No |
-| 1602<br /><br /> 5.00.8355.1000 | March 11, 2016 | March 11, 2017 | No | Yes |
-| 1511 <br /><br /> 5.00.8325.1000 | December 8, 2015 | December 8, 2016 | Yes | No |  
+| **1806** <br /> (5.00.8692) | July 31, 2018 | January 31, 2020 | No | Yes |
+| **1802** <br /> (5.00.8634) | March 22, 2018 | September 22, 2019 | Yes | Yes |
+| **1710** <br /> (5.00.8577) | November 20, 2017 | May 20, 2019 | No | Yes |
+| **1706** <br /> (5.00.8540) | July 31, 2017 | July 31, 2018 | No | Yes |
+| **1702** <br /> (5.00.8498) | March 27, 2017 | March 27, 2018 | Yes | Yes |
+| **1610** <br /> (5.00.8458) | November 18, 2016 | November 18, 2017 | No | Yes |
+| **1606** <br /> (5.00.8412.1000) | July 22, 2016 | July 22, 2017 | No | Yes |
+| **1606 with KB3186654** <br />5.00.8412.1307) | October 12, 2016 | October 12, 2017 | Yes | No |
+| **1602** <br /> (5.00.8355) | March 11, 2016 | March 11, 2017 | No | Yes |
+| **1511** <br /> (5.00.8325) | December 8, 2015 | December 8, 2016 | Yes | No |  
 
 #### How to check the version
 
-To check the version of your Configuration Manager site, in the console go to **About System Center Configuration Manager** at the top-left corner of the console. This dialog displays the site and console versions.  
+To check the version of your Configuration Manager site, in the console go to **About Configuration Manager** at the top-left corner of the console. This dialog displays the site and console versions.  
 
 > [!Note]  
-> Starting in version 1802, the console version is now slightly different from the site version. The minor version of the console now corresponds to the Configuration Manager release version. For example, in Configuration Manager version 1802 the initial site version is 5.0.8634.1000, and the initial console version is 5.**1802**.1082.1700. The build (1082) and revision (1700) numbers may change with future hotfixes to the 1802 release.
-
+> The console version is slightly different from the site version. The minor version of the console corresponds to the Configuration Manager release version. For example, in Configuration Manager version 1802 the initial site version is 5.0.8634.1000, and the initial console version is 5.**1802**.1082.1700. The build (1082) and revision (1700) numbers may change with future hotfixes.
 
 ## <a name="bkmk_inconsole"></a> In-console updates and servicing  
 
@@ -102,7 +102,7 @@ When you use a production-ready installation of Configuration Manager current br
 
 These updates include:  
 
-- New versions, like version 1806, 1810, or 1902.  
+- New versions, like version 1906, 1910, or 2002.
 
 - Updates that include new features for your current version.
 
@@ -148,7 +148,7 @@ When you install an in-console update, the following process occurs:
 - After a primary site is updated, secondary sites don't automatically update. Instead, you must manually initiate the secondary site update.  
 
 > [!NOTE]  
-> The Configuration Manager current branch, the long-term servicing branch, and the technical preview branch are different releases. Updates that apply for one branch aren't available as in-console updates for the other branches. For more information about available branches, see [Which branch of Configuration Manager should I use?](/sccm/core/understand/which-branch-should-i-use)
+> The Configuration Manager current branch, the long-term servicing branch, and the technical preview branch are different releases. Updates that apply for one branch aren't available as in-console updates for the other branches. For more information about available branches, see [Which branch of Configuration Manager should I use?](/sccm/core/understand/which-branch-should-i-use).
 
 ### <a name="bkmk_supersede"></a> Supersedence for in-console hotfixes
 
@@ -165,7 +165,6 @@ There are three hotfixes available: Hotfix-A, Hotfix-B, and Hotfix-C. Hotfix-A i
 |Installed|Installed|Not installed|Hotfix-B shows as installed<br/>Hotfix-C shows as ready to install|
 |Not installed|Not installed|Installed|Hotfix-C shows as installed|
 
-
 ## <a name="bkmk_outofband"></a> Out-of-band hotfixes  
 
 Some hotfixes release with limited availability to address specific issues. Other hotfixes are applicable to all customers but can't install using the in-console method. These fixes are delivered out-of-band and not discovered from the Microsoft cloud service.  
@@ -174,7 +173,7 @@ Typically, when you're seeking to fix or address a problem with your deployment 
 
 Install these fixes manually, using one of the following two methods:  
 
-#### Update Registration Tool
+### Update Registration Tool
 
 This tool manually imports the hotfix into your Configuration Manager console. Then install the update as you would in-console updates that are discovered automatically.  
 
@@ -183,7 +182,7 @@ This method is used for hotfixes that use the following file name structure:
 
 For more information, see [Use the update registration tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes).  
 
-#### Hotfix Installer
+### Hotfix Installer
 
 Use this tool to manually install a hotfix that can't be installed using the in-console method.  
 
@@ -191,7 +190,6 @@ This method is used for fixes that use the following file name structure:
     `<Product>-<product version>-<KB article ID>-<platform>-<language>.exe`  
 
 For more information, see [Use the hotfix installer to install updates](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates).  
-
 
 ## Next steps
 

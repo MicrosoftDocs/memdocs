@@ -9,10 +9,11 @@ ms.assetid: a17b4116-4491-4775-9d80-dea6e071801d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Client Resource Conditions
-In System Center Configuration Manager SP1, the Configuration Manager client has added the ability to be aware of system resources state and act accordingly. The resources being monitored are power, network, and user idleness. This addition makes the Configuration Manager client a better citizen in terms of optimizing power utilization and not disturbing the end user experience as much as possible.  
+In Configuration Manager SP1, the Configuration Manager client has added the ability to be aware of system resources state and act accordingly. The resources being monitored are power, network, and user idleness. This addition makes the Configuration Manager client a better citizen in terms of optimizing power utilization and not disturbing the end user experience as much as possible.  
 
 ## LaunchConditions  
  A new property called `LaunchConditions` has been added to the `CCM_Scheduler_ScheduledMessage` class. The property can be a combination of the below values.  
@@ -20,9 +21,9 @@ In System Center Configuration Manager SP1, the Configuration Manager client has
 |Value|Meaning|Comment|  
 |-----------|-------------|-------------|  
 |0|No resource conditions.|This is the same behavior as versions of Configuration Manager prior to SP1.|  
-|1|Fire only when the battery is at low or above state.|Definition of critical/low/high battery state is defined in the [Windows SYSTEM_POWER_STATUS structure](http://go.microsoft.com/fwlink/?LinkId=275109).|  
-|2|Fire only when the battery is at high or changing state.|Definition of critical/low/high battery state is defined in the [Windows SYSTEM_POWER_STATUS structure](http://go.microsoft.com/fwlink/?LinkId=275109).|  
-|4|Fire only when the computer is charging.|Definition of critical/low/high battery state is defined in the [Windows SYSTEM_POWER_STATUS structure](http://go.microsoft.com/fwlink/?LinkId=275109).|  
+|1|Fire only when the battery is at low or above state.|Definition of critical/low/high battery state is defined in the [Windows SYSTEM_POWER_STATUS structure](https://go.microsoft.com/fwlink/?LinkId=275109).|  
+|2|Fire only when the battery is at high or changing state.|Definition of critical/low/high battery state is defined in the [Windows SYSTEM_POWER_STATUS structure](https://go.microsoft.com/fwlink/?LinkId=275109).|  
+|4|Fire only when the computer is charging.|Definition of critical/low/high battery state is defined in the [Windows SYSTEM_POWER_STATUS structure](https://go.microsoft.com/fwlink/?LinkId=275109).|  
 |8|Fire only when the user is idle.|This check is only performed on desktop systems.|  
 |16|Fire only when the network is connected.||  
 
@@ -42,5 +43,4 @@ In System Center Configuration Manager SP1, the Configuration Manager client has
 |Software Inventory Launch Conditions|10 = fire only when battery is high+ and user is idle.|  
 
 ## See Also  
- [Configuration Manager Client Programming](../../../../develop/core/clients/programming/client-programming.md)   
  [CCM_Scheduler_ScheduledMessage Client WMI Class](../../../../develop/reference/core/clients/client-classes/ccm_scheduler_scheduledmessage-client-wmi-class.md)

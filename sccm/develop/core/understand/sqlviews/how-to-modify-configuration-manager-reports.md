@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Information about viewing the properties of, and modifying Configuration Manager reports.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 9e27d0a3-9b5a-410e-9d80-49eef493a1e2
 author: aczechowski
 ms.author: aaroncz

@@ -6,7 +6,8 @@ ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 3f516dae-a958-440e-9e7c-28de24bf2803
 author: aczechowski
 ms.author: aaroncz
@@ -29,8 +30,6 @@ uint32 ImportMachineEntryToMultipleCollections
     [IN]    String MACAddress  
     [IN]    Boolean OverwriteExistingRecord  
     [IN]    String FQDN  
-    [IN]    Boolean IsAMTMachine  
-    [IN]    String MEBxPassword  
     [IN]    String AdminPassword  
     [IN]    Boolean AddToCollection  
     [IN]    SMS_CollectionRule CollectionRule  
@@ -83,22 +82,6 @@ Data type: `String`
 Qualifiers: [id("4"), in, optional]  
 
 Fully qualified domain name of this computer.  
-
-#### `IsAMTMachine`
-
-Data type: `Boolean`  
-
-Qualifiers: [id("5"), in, optional]  
-
-Enable out of band functionality on this computer.  
-
-#### `MEBxPassword`
-
-Data type: `String`  
-
-Qualifiers: [id("6"), in, optional]  
-
-Management Engine BIOS extension (MEBx) password for the built-in Intel Active Management Technology (Intel AMT) firmware administrative user.  
 
 #### `AdminPassword`
 

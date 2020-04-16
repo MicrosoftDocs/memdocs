@@ -9,10 +9,11 @@ ms.assetid: b375eea9-ff01-4b23-913a-4d023715dbe6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager Custom Action Client Applications
-The task sequence application, in System Center Configuration Manager, performs the custom action operation during the client deployment. The application can be a process, a script, or other commands. The requirements for the application, such as the operating environment, command-line arguments, properties, and return codes are defined in a Managed Object Format (MOF) file. They are added to the task sequence environment when the action is processed.  
+The task sequence application, in Configuration Manager, performs the custom action operation during the client deployment. The application can be a process, a script, or other commands. The requirements for the application, such as the operating environment, command-line arguments, properties, and return codes are defined in a Managed Object Format (MOF) file. They are added to the task sequence environment when the action is processed.  
 
 ## Custom Action MOF File  
  The MOF file for a custom action is similar to the following:  
@@ -59,7 +60,7 @@ CommandLine("smsswd.exe /run:PackageID abc.exe [any abc.exe command line args]"
 ### Environment  
  The MOF file should specify the operating environment with the [SMS_TaskSequence_Action Server WMI Class](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md)`SupportedEnvironment` property. The available environments are Windows PE (`WinPE`), full operating system (`FullOS`), or both environments (`WinPEandFullOS`).  
 
- The choice of environment depends on the circumstances. For example, pre-operating install configuration will likely be done in the Windows PE environment. For more information, see [http://go.microsoft.com/fwlink/?LinkID=110498](http://go.microsoft.com/fwlink/?LinkID=110498). Updates to currently installed operating systems will use the full operating system environment. For example, software or driver installation. Operating system environment agnostic tasks such as reboots or the creation of network connections, can be performed by using both environment settings.  
+ The choice of environment depends on the circumstances. For example, pre-operating install configuration will likely be done in the Windows PE environment. For more information, see [https://go.microsoft.com/fwlink/?LinkID=110498](https://go.microsoft.com/fwlink/?LinkID=110498). Updates to currently installed operating systems will use the full operating system environment. For example, software or driver installation. Operating system environment agnostic tasks such as reboots or the creation of network connections, can be performed by using both environment settings.  
 
 ### Processing  
  During processing, you access the task sequence variables defined by the MOF file by using the `TSEnvironment` COM automation object. For more information, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  
@@ -74,10 +75,10 @@ CommandLine("smsswd.exe /run:PackageID abc.exe [any abc.exe command line args]"
 |0|Success|  
 |Non-zero|Failure|  
 
- If a reboot is required after the application finishes, the `SMSTSRebootRequested` environment variable should be set. For more information, see [http://go.microsoft.com/fwlink/?LinkId=110499](http://go.microsoft.com/fwlink/?LinkId=110498). For information about setting environment variables, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  
+ If a reboot is required after the application finishes, the `SMSTSRebootRequested` environment variable should be set. For more information, see [https://go.microsoft.com/fwlink/?LinkId=110499](https://go.microsoft.com/fwlink/?LinkId=110498). For information about setting environment variables, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  
 
 ## Deployment  
- To be used by System Center Configuration Manager, the custom action application must be available from a Configuration Manager package. The administrator can create the package by using either the Configuration Manager console or by using a programming language. For more information, see [How to Create a Package](../../develop/core/servers/configure/how-to-create-a-package.md).  
+ To be used by Configuration Manager, the custom action application must be available from a Configuration Manager package. The administrator can create the package by using either the Configuration Manager console or by using a programming language. For more information, see [How to Create a Package](../../develop/core/servers/configure/how-to-create-a-package.md).  
 
  The package identifier must be available for the deployment to work. Typically the MOF file declares a property to hold it, as in the following example:  
 
@@ -102,12 +103,12 @@ string          PackageIDForAbcExe;
 -   The package identifier is provided by using the `/run` command-line parameter to Smsswd.exe.  
 
 ## Pre-Network Partition and Pre-Partition Setup  
- If you need to configure disk or network connectivity before you have a disk partition and before you have network connectivity, you will need to create an application to perform these tasks. Your application should be placed in a custom boot image by using the Windows Assessment and Deployment Kit. For more information, see TechNet documentation for the Windows Assessment and Deployment Kit ([http://go.microsoft.com/fwlink/?LinkId=111704](http://go.microsoft.com/fwlink/?LinkId=111704)).  
+ If you need to configure disk or network connectivity before you have a disk partition and before you have network connectivity, you will need to create an application to perform these tasks. Your application should be placed in a custom boot image by using the Windows Assessment and Deployment Kit. For more information, see TechNet documentation for the Windows Assessment and Deployment Kit ([https://go.microsoft.com/fwlink/?LinkId=111704](https://go.microsoft.com/fwlink/?LinkId=111704)).  
 
 > [!NOTE]
 >  Adding files to the boot image file can increase the minimum RAM requirements and can, due to low memory conditions, cause task sequences to fail in unexpected ways.  
 
- You will then need to import the image into System Center Configuration Manager as a custom image. For more information, see How to Add a Boot Image to Configuration Manager ([http://go.microsoft.com/fwlink/?LinkId=111706](http://go.microsoft.com/fwlink/?LinkId=111706)).  
+ You will then need to import the image into Configuration Manager as a custom image. For more information, see How to Add a Boot Image to Configuration Manager ([https://go.microsoft.com/fwlink/?LinkId=111706](https://go.microsoft.com/fwlink/?LinkId=111706)).  
 
  The application, any supporting files, and the custom SMSTS.INI should be placed in the Windows folder.  
 
@@ -116,4 +117,3 @@ string          PackageIDForAbcExe;
 ## See Also  
  [About Configuration Manager Custom Actions](../../develop/osd/about-configuration-manager-custom-actions.md)   
  [About the Configuration Manager Custom Action MOF File](../../develop/osd/about-configuration-manager-custom-action-mof-files.md)   
- [Extending Operating System Deployment](../../develop/osd/extending-operating-system-deployment.md)

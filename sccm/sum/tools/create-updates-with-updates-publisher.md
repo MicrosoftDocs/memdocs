@@ -2,7 +2,7 @@
 title: "Create updates"
 titleSuffix: "Configuration Manager"
 description: "Create and bundle software updates with System Center Updates Publisher"
-ms.date: 4/29/2017
+ms.date: 04/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,7 +10,8 @@ ms.assetid: 46a1a8ac-126c-4ee6-ae09-32dfbdb83368
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Create  software updates and update bundles with Updates Publisher
 
@@ -55,7 +56,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
    - **Description**: A friendly description of the update. You might include what the update installs, and why or when it should be used.
 
-	 **Classification:** The following are common descriptions for the different classifications.
+   **Classification:** The following are common descriptions for the different classifications.
 
    - **Update**: An update to an application or file that is currently installed.
 
@@ -71,30 +72,30 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
    - **Tool**: Specifies a tool or feature that helps complete one or more tasks.
 
-	 -   **Driver**: An update for driver software.
+   - **Driver**: An update for driver software.
 
    **Vendor:** Specify a vendor for the update. You can use the dropdown list to use values from updates that are in the repository. When you specify a vendor, the wizard creates a folder with that vendor name under **All Software Updates** in the **Updates Workspace** if that folder does not already exist. The following are Windows Server Update Services (WSUS) reserved names that cannot be entered for updates you create:
-   >*   Microsoft Corporation
-   >*   Microsoft
-   >*   Update
-   >*   Software Update
-   >*   Tools
-   >*   Tool
-   >*   Critical
-   >*   Critical Updates
-   >*   Security
-   >*   Security Updates
-   >*   Feature Pack
-   >*   Update Rollup
-   >*   Service Pack
-   >*   Driver
-   >*   Driver Update
-   >*   Bundle
-   >*   Bundle Update
+   - Microsoft Corporation
+   - Microsoft
+   - Update
+   - Software Update
+   - Tools
+   - Tool
+   - Critical
+   - Critical Updates
+   - Security
+   - Security Updates
+   - Feature Pack
+   - Update Rollup
+   - Service Pack
+   - Driver
+   - Driver Update
+   - Bundle
+   - Bundle Update
 
-**Product**: Specify the type of product that the update is for. You can use the dropdown list to use values from updates that are in the repository. The same list of WSUS reserved names that cannot be used for **Vendor**, cannot be used for **Product**.
+   **Product**: Specify the type of product that the update is for. You can use the dropdown list to use values from updates that are in the repository. The same list of WSUS reserved names that cannot be used for **Vendor**, cannot be used for **Product**.
 
- **More info URL**: Specify the URL where you can find more information about this update. You must use lowercase letters for **https** or **http** when you enter this URL.
+   **More info URL**: Specify the URL where you can find more information about this update. You must use lowercase letters for **https** or **http** when you enter this URL.
 
 4. On the **Optional Info** page, you can configure details that provide additional information about the update.
 

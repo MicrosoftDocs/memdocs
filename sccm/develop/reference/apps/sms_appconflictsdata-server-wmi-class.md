@@ -9,7 +9,8 @@ ms.assetid: 10bc1a50-aa5d-4120-bfa5-43e04c23122a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_AppConflictsData Server WMI Class
 The `SMS_AppConflictsData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the conflict of an application deployment configuration.  
@@ -127,6 +128,3 @@ Class SMS_AppConflictsData : SMS_BaseClass
 
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Application Management Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

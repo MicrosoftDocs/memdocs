@@ -4,7 +4,7 @@ titleSuffix: Microsoft Deployment Toolkit
 description: Troubleshooting reference for the Microsoft Deployment Toolkit (MDT)
 ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.technology: configmgr-mdt
 ms.topic: article
 ms.assetid: 91a7a69a-deac-4b0f-aac9-b7bd187c53fb
 author: aczechowski  
@@ -13,18 +13,18 @@ manager: dougeby
 ---
 
 # Troubleshooting Reference for the Microsoft Deployment Toolkit
- The deployment of operating systems and applications as well as the migration of user state can be a challenging endeavor, even when you are equipped with appropriate tools and guidance. This reference, which is part of Microsoft® Deployment Toolkit (MDT) 2013, provides information on current known issues, possible workarounds for those issues, and troubleshooting guidance.  
+ The deployment of operating systems and applications as well as the migration of user state can be a challenging endeavor, even when you are equipped with appropriate tools and guidance. This reference, which is part of Microsoft&reg; Deployment Toolkit (MDT) 2013, provides information on current known issues, possible workarounds for those issues, and troubleshooting guidance.  
 
 > [!NOTE]
 >  In this document, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor–based versions of Windows. Similarly, *MDT* refers to MDT 2013 unless otherwise stated.  
 
 > [!NOTE]
->  The Microsoft Diagnostics and Recovery Toolset (DaRT) contains powerful tools for recovering and troubleshooting client computers that do not start or have become unstable. You can use DaRT to determine the cause of a crash, restore lost files, and so on. You can also use DaRT as a troubleshooting tool when developing and deploying a Windows operating system. For example, if a built image fails to start correctly, you can start the client computer containing the image by using ERD Commander—a diagnostic environment. Then, you can explore the client computer’s hard disk, view the event log, remove updates, change operating system settings, and so on. DaRT is part of the Microsoft Desktop Optimization Pack for Software Assurance. To learn more about DaRT, see [http://www.microsoft.com/windows/enterprise/products-and-technologies/mdop/dart.aspx](http://www.microsoft.com/windows/enterprise/products-and-technologies/mdop/dart.aspx).  
+>  The Microsoft Diagnostics and Recovery Toolset (DaRT) contains powerful tools for recovering and troubleshooting client computers that do not start or have become unstable. You can use DaRT to determine the cause of a crash, restore lost files, and so on. You can also use DaRT as a troubleshooting tool when developing and deploying a Windows operating system. For example, if a built image fails to start correctly, you can start the client computer containing the image by using ERD Commander—a diagnostic environment. Then, you can explore the client computer's hard disk, view the event log, remove updates, change operating system settings, and so on. DaRT is part of the Microsoft Desktop Optimization Pack for Software Assurance. For more information, see [Diagnostics and Recovery Toolset 10](https://docs.microsoft.com/microsoft-desktop-optimization-pack/dart-v10/).  
 
 ## Understanding Logs  
  Before effective troubleshooting of MDT can begin, you must have a clear understanding of the many .log files used during an operating system deployment. When you know which log files to research for what failure condition and at what time, issues that were once mysterious and difficult to understand may become clear and understandable.  
 
- The MDT log file format is designed to be read by Trace32, which is part of the System Center Configuration Manager 2007 Toolkit V2, available for download from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=9257). The logs can also be read by the Configuration Manager Trace Log Tool (CMTrace) that is available with System Center 2012 Configuration Manager and later versions. Use these tools whenever possible to read the log files, because it makes finding errors much easier.  
+ The MDT log file format is designed to be read by [CMTrace](/configmgr/core/support/cmtrace). Use this tool whenever possible to read the log files, because it makes finding errors much easier.  
 
  The rest of this section details the log files created during deployment as well as during Windows Setup. This section also provides examples of when to use the files for troubleshooting.  
 
@@ -48,7 +48,7 @@ manager: dougeby
 - **DeploymentWorkbench_*id*.log**. This log file is created in the %temp% folder when you specify **a /debug** when starting the Deployment Workbench.  
 
 ### Configuration Manager Operating System Deployment Logs  
- For information about which operating system deployment log files created by Microsoft System Center 2012 R2 Configuration Manager, see [Technical Reference for Log Files in Configuration Manager](http://technet.microsoft.com/library/hh427342.aspx).  
+ For information about which operating system deployment log files created by Microsoft System Center 2012 R2 Configuration Manager, see [Technical Reference for Log Files in Configuration Manager](https://technet.microsoft.com/library/hh427342.aspx).  
 
  When running the Windows User State Migration Tool (USMT), MDT automatically adds the logging options to save the USMT log files to the MDT log file locations. The log files and when they are created are as follows:  
 
@@ -267,11 +267,9 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 
 5. Open a Command Prompt window, type **NET HELPMSG 64**, and then press ENTER.  
 
-    The **NET HELPMSG** command translates the numerical error code into meaningful text. In the case of the error code provided here, it translates to “The specified network name is no longer available.”  
+    The **NET HELPMSG** command translates the numerical error code into meaningful text. In the case of the error code provided here, it translates to "The specified network name is no longer available."  
 
    This information indicates that a networking problem may exist on the target computer or between the target computer and the server on which the deployment share resides. These problems might include network drivers not being installed properly or a mismatch in speed and duplex settings.  
-
-   **Possible Solution 2:** Use the Microsoft Exchange Server Error Code Look-up utility. This command-line utility is valuable in assisting with error code translation. It is available for download from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=985).  
 
 ### Review of Sample Logs  
  MDT creates log files that you can use to troubleshoot problems in the MDT deployment process. The following sections provide examples of how to use the MDT log files to troubleshoot the deployment process:  
@@ -294,7 +292,7 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
     ```  
 
 > [!NOTE]
->  For clarity, the log file contents above have been represented as they appear while being viewed using the Trace32 program.  
+>  For clarity, the log file contents above have been represented as they appear while being viewed using CMTrace.  
 
  **Possible Solution:** The issue, as pointed out on the first line of the log file sample, is that permission to access the database was denied. Therefore, the script cannot establish a secure connection to the database, possibly because a user ID and password were not available. As a result, database access was attempted using the computer account. The easiest way to work around this issue is to grant everyone Read access to the database.  
 
@@ -313,9 +311,9 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   Installation error 30029 while installing the 2007 Microsoft Office system or related files as described in [The 2007 Microsoft Office System](#MicrosoftOfficeSystem)  
 
 ####  <a name="BlockedExecutables"></a> Blocked Executables  
- **Problem:** If installation source files are downloaded from the Internet, it is likely that they will be marked with one or more NTFS file system data streams. For more information about NTFS data streams, see [File Streams](http://msdn2.microsoft.com/library/aa364404\(VS.85\).aspx). The existence of NTFS file system data streams might cause an **Open File – Security Warning** prompt to be displayed. The installation will not proceed until you click **Run** at the prompt.  
+ **Problem:** If installation source files are downloaded from the Internet, it is likely that they will be marked with one or more NTFS file system data streams. For more information about NTFS data streams, see [File Streams](/windows/win32/fileio/file-streams). The existence of NTFS file system data streams might cause an **Open File – Security Warning** prompt to be displayed. The installation will not proceed until you click **Run** at the prompt.  
 
- Figure 2 shows, you can view NTFS file system data streams using the **More** command and the [Streams utility](http://technet.microsoft.com/sysinternals/bb897440.aspx).  
+ Figure 2 shows, you can view NTFS file system data streams using the **More** command and the [Streams utility](https://technet.microsoft.com/sysinternals/bb897440.aspx).  
 
  ![TroubleshootingReference2](media/TroubleshootingReference2.jpg "TroubleshootingReference2")  
 Figure 2. NTFS data streams  
@@ -348,9 +346,9 @@ Figure 2. NTFS data streams
   Application Microsoft Office 2007 Professional returned an unexpected return code: 30029  
   ```  
 
-  **Possible Solution 1:** Relocate the MSP file to the Updates directory, and then run setup.exe without specifying the **\/adminfile** option. For more information about deploying updates during the installation, see [Deploying the 2007 Office system](http://technet.microsoft.com/library/cc303395\(v=Office.12\).aspx).  
+  **Possible Solution 1:** Relocate the MSP file to the Updates directory, and then run setup.exe without specifying the **\/adminfile** option. For more information about deploying updates during the installation, see [Deploying the 2007 Office system](https://technet.microsoft.com/library/cc303395\(v=Office.12\).aspx).  
 
-  **Possible Solution 2:** Verify that the MSP file does not have the **Suppress modal** check box selected. For more information about configuring this setting, see [Overview of 2007 Office System Deployment](http://technet.microsoft.com/library/bb490141.aspx).  
+  **Possible Solution 2:** Verify that the MSP file does not have the **Suppress modal** check box selected. For more information about configuring this setting, see [Overview of 2007 Office System Deployment](https://technet.microsoft.com/library/bb490141.aspx).  
 
 ### AutoLogon  
  Review the problems and solutions for automatic logon issues:  
@@ -365,7 +363,7 @@ Figure 2. NTFS data streams
  **Possible Solution:** Be sure that the GPO is applied to specific organizational units \(OUs\) and not included in the default domain GPO. When you add computers to the domain, specify that they be added to an OU that is not affected by a GPO that enforces a logon security banner. In the Task Sequence Editor, include as one of the last task sequence steps a script that relocates the computer account to the desired OU.  
 
 > [!NOTE]
->  If you are reusing existing Active Directory® Domain Services \(AD DS\) accounts, ensure that prior to deploying to the target computer you have relocated the target computer’s account to an OU that is not affected by the GPO that enforces the security logon banner.  
+>  If you are reusing existing Active Directory&reg; Domain Services \(AD DS\) accounts, ensure that prior to deploying to the target computer you have relocated the target computer's account to an OU that is not affected by the GPO that enforces the security logon banner.  
 
 ####  <a name="PromtedforUserCredentials"></a> Prompted for User Credentials  
  **Problem:** You created an image of a computer that was joined to the domain. While deploying the new image to a target computer, the deployment process halts, because auto\-logon does not occur and the user is prompted to enter appropriate credentials. The deployment process resumes when the credentials are provided and the user is logged on.  
@@ -375,7 +373,7 @@ Figure 2. NTFS data streams
 ### BIOS  
  **Problem:** While deploying to a target computer that is equipped with Intel vPro technology, the deployment may end with a stop error. Even though all updated drivers have been included as out\-of\-box drivers in the Deployment Workbench, the target computer does not start.  
 
- Possible Solution: Review the settings in the target computer’s basic input\/output system \(BIOS\) to determine whether the default Serial Advanced Technology Attachment mode is configured as Advanced Host Controller Interface \(AHCI\). Unfortunately, certain Windows operating systems do not support AHCI by default.  
+ Possible Solution: Review the settings in the target computer's basic input\/output system \(BIOS\) to determine whether the default Serial Advanced Technology Attachment mode is configured as Advanced Host Controller Interface \(AHCI\). Unfortunately, certain Windows operating systems do not support AHCI by default.  
 
 ### Database Problems  
  Review database\-related problems and solutions:  
@@ -385,9 +383,9 @@ Figure 2. NTFS data streams
 -   Errors generated as a result of broken connections with the database server as described in [Named Pipe Connections](#NamedPipeConnections)  
 
 ####  <a name="BlockedSQLServerBrowserRequests"></a> Blocked SQL Server Browser Requests  
- **Problem:** During the MDT deployment process, information can be retrieved from Microsoft SQL Server® databases. However, errors might be generated that relate to an improperly configured firewall on the database server.  
+ **Problem:** During the MDT deployment process, information can be retrieved from Microsoft SQL Server&reg; databases. However, errors might be generated that relate to an improperly configured firewall on the database server.  
 
- **Possible Solution:** The Windows Firewall in Windows Server helps prevent unauthorized access to computer resources. However, if the firewall is configured incorrectly, attempts to connect to a SQL Server instance may be blocked. To access an instance of SQL Server that is behind the firewall, configure the firewall on the computer that is running SQL Server. For more information on configuring firewall ports for SQL Server, see the Microsoft Support article [How do I open the firewall port for SQL Server on Windows Server 2008?](http://support.microsoft.com/kb/968872)  
+ **Possible Solution:** The Windows Firewall in Windows Server helps prevent unauthorized access to computer resources. However, if the firewall is configured incorrectly, attempts to connect to a SQL Server instance may be blocked. To access an instance of SQL Server that is behind the firewall, configure the firewall on the computer that is running SQL Server. For more information on configuring firewall ports for SQL Server, see the Microsoft Support article [How do I open the firewall port for SQL Server on Windows Server 2008?](https://support.microsoft.com/kb/968872)  
 
 ####  <a name="NamedPipeConnections"></a> Named Pipe Connections  
  **Problem:** During the MDT deployment process, information can be retrieved from SQL Server databases. However, errors might be generated that relate to broken SQL Server connections. These can be caused by not enabling named pipe connections in Microsoft SQL Server.  
@@ -435,7 +433,7 @@ Figure 2. NTFS data streams
 
 13. Close the SQL Server Configuration Manager console.  
 
-    For additional information, [How to enable remote connections in SQL Server 2008](http://blogs.msdn.com/b/walzenbach/archive/2010/04/14/how-to-enable-remote-connections-in-sql-server-2008.aspx).  
+    For additional information, [How to enable remote connections in SQL Server 2008](https://blogs.msdn.com/b/walzenbach/archive/2010/04/14/how-to-enable-remote-connections-in-sql-server-2008.aspx).  
 
 #####  <a name="EnableNamedPipeConnectionsinSQL"></a> Enable Named Pipe Connections in SQL Server 2005  
  To enable named pipe connections in SQL Server 2005, perform the following steps:  
@@ -462,14 +460,14 @@ Figure 2. NTFS data streams
 
 9. Close SQL Server 2005 Surface Area Configuration.  
 
-   For additional information, see the Microsoft Support article [How to configure SQL Server 2005 to allow remote connections](http://support.microsoft.com/kb/914277)  
+   For additional information, see the Microsoft Support article [How to configure SQL Server 2005 to allow remote connections](https://support.microsoft.com/kb/914277)  
 
 ### Deployment Scripts  
  Review MDT\-related problems and solutions:  
 
 -   Prompted for user credentials and may receive error 0x80070035 as described in [Credentials_script](#Credentials_script)  
 
--   Error message “Wuredist.cab not found” appears as described in [ZTIWindowsUpdate](#ZTIWindowsUpdate)  
+-   Error message "Wuredist.cab not found" appears as described in [ZTIWindowsUpdate](#ZTIWindowsUpdate)  
 
 ####  <a name="Credentials_script"></a> Credentials\_script  
  **Problem:** During the last start\-up of a newly deployed computer, the user is prompted to provide user credentials and may receive error 0x80070035, which indicates that the network path was not found.  
@@ -482,7 +480,7 @@ Figure 2. NTFS data streams
 ####  <a name="ZTIWindowsUpdate"></a> ZTIWindowsUpdate  
  **Problem:** If you use the ZTIWindowsUpdate.wsf script to apply software updates during deployment, note that this script may communicate directly with the Microsoft Update website to download and install the required Windows Update Agent binaries, scan for applicable software updates, download the binaries for the applicable software updates, and then install the downloaded binaries. This process requires that your networking infrastructure be configured to allow the target computer to gain access to the Microsoft Update website.  
 
- If the deployment share does not contain the Windows Update Agent installation files and the target computer does not have appropriate Internet access, error “wuredist.cab not found” is reported in the ZTIWindowsUpdate.log and BDD.log files.  
+ If the deployment share does not contain the Windows Update Agent installation files and the target computer does not have appropriate Internet access, error "wuredist.cab not found" is reported in the ZTIWindowsUpdate.log and BDD.log files.  
 
  **Possible Solution:** Follow the steps outlined in the section, "ZTIWindowsUpdate.wsf", in the MDT document *Toolkit Reference*.  
 
@@ -492,7 +490,7 @@ Figure 2. NTFS data streams
 -   Updating WIM files fails when updating a deployment share as described in [Failure to Update WIM Files](#FailuretoUpdateWIMFiles).  
 
 ####  <a name="FailuretoUpdateWIMFiles"></a> Failure to Update WIM Files  
- In a “simple” environment:  
+ In a "simple" environment:  
 
 - MDT typically picks up WIMGAPI.DLL from C:\\Windows\\system32 \(always in the path\). The version of this WIMGAPI.DLL must match the version \(build\) of the operating system.  
 
@@ -515,7 +513,7 @@ Figure 2. NTFS data streams
 ### Disks and Partitioning  
  Review disk partitioning problems and solutions:  
 
--   BitLocker® Drive Encryption issues as described in [BitLocker Drive Encryption](#BitLockerDriveEncryption)  
+-   BitLocker&reg; Drive Encryption issues as described in [BitLocker Drive Encryption](#BitLockerDriveEncryption)  
 
 -   Disk partitioning errors as described in Disk Partitioning Errors  
 
@@ -524,14 +522,14 @@ Figure 2. NTFS data streams
 ####  <a name="BitLockerDriveEncryption"></a> BitLocker Drive Encryption  
  Deploying BitLocker requires a specific configuration for proper deployment. The following potential problems may be related to the configuration of the target computer:  
 
--   In ZTI and UDI deployments, the ZTIBde.wsf Script Fails with the Error “Unable to open registry key ‘HKEY\_CURRENT\_USER\\Control Panel\\International\\LocaleName’ for reading”, as described in [ZTIBde.wsf Script Fails with the Error “Unable to open registry key ‘HKEY_CURRENT_USER\Control Panel\International\LocaleName’ for reading”](#ZTIBde.wsf).  
+-   In ZTI and UDI deployments, the ZTIBde.wsf Script Fails with the Error "Unable to open registry key 'HKEY\_CURRENT\_USER\\Control Panel\\International\\LocaleName' for reading", as described in [ZTIBde.wsf Script Fails with the Error "Unable to open registry key 'HKEY_CURRENT_USER\Control Panel\International\LocaleName' for reading"](#ZTIBde.wsf).  
 
 -   USB devices, CD drives, DVD drives, or other removable media devices on the target computer that appear as multiple drive letters, as described in [Devices Appear as Multiple Drive Letters](#DevicesAppearasMultipleDriveLetters)  
 
 -   Shrinking drive C on the target computer to provide sufficient unallocated disk space as described in [Problems with Shrinking Disks](#ProblemswithShrinkingDisks)  
 
-#####  <a name="ZTIBde.wsf"></a> ZTIBde.wsf Script Fails with the Error “Unable to open registry key ‘HKEY\_CURRENT\_USER\\Control Panel\\International\\LocaleName’ for reading”  
- **Problem:** While trying to deploy BitLocker on the target computer in ZTI or UDI, the ZTIBde.wsf script fails with the error “Unable to open registry key ‘HKEY\_CURRENT\_USER\\Control Panel\\International\\LocaleName’ for reading.”  
+#####  <a name="ZTIBde.wsf"></a> ZTIBde.wsf Script Fails with the Error "Unable to open registry key 'HKEY\_CURRENT\_USER\\Control Panel\\International\\LocaleName' for reading"  
+ **Problem:** While trying to deploy BitLocker on the target computer in ZTI or UDI, the ZTIBde.wsf script fails with the error "Unable to open registry key 'HKEY\_CURRENT\_USER\\Control Panel\\International\\LocaleName' for reading."  
 
  **Possible Solution:** Specify the locale in the **UILanguage** property. In ZTI and UDI, the ZTIBde.wsf script runs in the system control, so a full user profile is not loaded. When the ZTIBde.wsf script tries to read the locale information it is not in the registry, because the registry \(user profile\) is not fully loaded. As a workaround, specify the locale in the **UILanguage** property.  
 
@@ -583,7 +581,7 @@ Figure 2. NTFS data streams
 -   Troubleshooting device driver installation issues using the SetupAPI.log as described in [Troubleshoot Device Installation with SetupAPI.log](#TroubleshootDeviceInstallationwithSetupAPI.log)  
 
 ####  <a name="TroubleshootDeviceInstallationwithSetupAPI.log"></a> Troubleshoot Device Installation with SetupAPI.log  
- The white paper [Troubleshooting Device Installation with the SetupAPI Log File](http://msdn.microsoft.com/windows/hardware/gg463393.aspx) provides information about debugging Windows device installation. Specifically, the paper provides guidelines for driver developers and testers to interpret the SetupAPI log file.  
+ The white paper [Troubleshooting Device Installation with the SetupAPI Log File](https://msdn.microsoft.com/windows/hardware/gg463393.aspx) provides information about debugging Windows device installation. Specifically, the paper provides guidelines for driver developers and testers to interpret the SetupAPI log file.  
 
  One of the most useful log files for debugging purposes is the SetupAPI.log file. This plain\-text file maintains the information that SetupAPI records about device installation, service pack installation, and update installation. Specifically, the file maintains a record of device and driver changes as well as major system changes beginning from the most recent Windows installation. This paper focuses on using the SetupAPI log file to troubleshoot device installation; it does not describe the log file sections that are associated with service pack and update installations.  
 
@@ -599,7 +597,7 @@ Figure 2. NTFS data streams
 
  The second phase of this protocol takes place between the client computer and a boot server and uses the DHCP message format as a convenient format for communication. This second phase is otherwise unrelated to the standard DHCP services. The next few pages outline the step\-by\-step process during PXE client computer initialization.  
 
- For more information on troubleshooting PXE boot\-related issues in Windows Deployment Services running in Legacy or Mixed mode, see the Microsoft Support article [Description of PXE Interaction Among PXE Client, DHCP, and RIS Server](http://support.microsoft.com/kb/244036).  
+ For more information on troubleshooting PXE boot\-related issues in Windows Deployment Services running in Legacy or Mixed mode, see the Microsoft Support article [Description of PXE Interaction Among PXE Client, DHCP, and RIS Server](https://support.microsoft.com/kb/244036).  
 
  Review the following solutions for PXE boot issues:  
 
@@ -615,7 +613,7 @@ Figure 2. NTFS data streams
 #####  <a name="EnsuretheProperDHCPConfiguration"></a> Ensure the Proper DHCP Configuration  
  Depending on the router models in use, the specific router configuration of DHCP broadcast forwarding may be supported to either a subnet \(or router interface\) or a specific host. If the DHCP servers and the computer running Windows Deployment Services are separate computers, ensure that the routers that forward DHCP broadcasts are designed so that both the DHCP and Windows Deployment Services servers receive the client broadcasts; otherwise, the client computer does not receive a reply to its remote boot request.  
 
- Is there a router between the client computer and the remote installation server that is not allowing the DHCP\-based requests or responses through? When the Windows Deployment Services client computer and the Windows Deployment Services server are on separate subnets, configure the router between the two systems to forward DHCP packets to the Windows Deployment Services server. This arrangement is necessary, because Windows Deployment Services client computers discover a Windows Deployment Services server by using a DHCP broadcast message. Without DHCP forwarding set up on a router, the client computers’ DHCP broadcasts do not reach the Windows Deployment Services server. This DHCP forwarding process is sometimes referred to as *DHCP Proxy* or *IP Helper Address* in router configuration manuals. Refer to the router instructions for more information about setting up DHCP forwarding on a specific router.  
+ Is there a router between the client computer and the remote installation server that is not allowing the DHCP\-based requests or responses through? When the Windows Deployment Services client computer and the Windows Deployment Services server are on separate subnets, configure the router between the two systems to forward DHCP packets to the Windows Deployment Services server. This arrangement is necessary, because Windows Deployment Services client computers discover a Windows Deployment Services server by using a DHCP broadcast message. Without DHCP forwarding set up on a router, the client computers' DHCP broadcasts do not reach the Windows Deployment Services server. This DHCP forwarding process is sometimes referred to as *DHCP Proxy* or *IP Helper Address* in router configuration manuals. Refer to the router instructions for more information about setting up DHCP forwarding on a specific router.  
 
 #####  <a name="ImprovePXEIPAddressAssignmentResponseTime"></a> Improve PXE IP Address Assignment Response Time  
  Check the following elements if it is taking a long time \(15–20 seconds\) for the PXE client computer to retrieve an IP address:  
@@ -637,7 +635,7 @@ Figure 2. NTFS data streams
 ####  <a name="ComputerAccountisintheWrongOU"></a> The Computer Account Is in the Wrong OU  
  **Problem:** The target computer is properly joined to the domain, but the computer account is in the wrong OU.  
 
- **Possible Solution 1:** If an account pre\-exists for the target computer, the account will remain in its original OU. To move the account to the specified OU, add a task sequence step that uses an automation tool, such as a Microsoft Visual Basic® Scripting Edition, to move the account.  
+ **Possible Solution 1:** If an account pre\-exists for the target computer, the account will remain in its original OU. To move the account to the specified OU, add a task sequence step that uses an automation tool, such as a Microsoft Visual Basic&reg; Scripting Edition, to move the account.  
 
  **Possible Solution 2:** Verify that the specified OU is in the correct format and that it exists. The correct OU format should be `OU=Reception,OU=NYC,DC=Woodgrovebank,DC=com`.  
 
@@ -658,9 +656,9 @@ Figure  SEQ Figure \\\* ARABIC 3. PXE service point error
 
 -   Original equipment manufacturer \(OEM\) task sequences in LTI are listed on boot images with the opposite processor architecture as described in [The OEM Task Sequence Incorrectly Appears for a Boot Image Created for a Different Processor Architecture](#OEMTaskSequenceIncorrectlyAppearsforBootImage).  
 
--   The Windows Deployment Wizard displays the error message “Bad Task Sequence Item \(Invalid OS GUID\)” as described in [Bad Task Sequence Item (Invalid OS GUID) Message in the Windows Deployment Wizard](#BadTaskSequenceItem).  
+-   The Windows Deployment Wizard displays the error message "Bad Task Sequence Item \(Invalid OS GUID\)" as described in [Bad Task Sequence Item (Invalid OS GUID) Message in the Windows Deployment Wizard](#BadTaskSequenceItem).  
 
--   While configuring a network connection name, the message “Please enter a valid name for the network adapter” is displayed as described in [Apply Network Settings](#ApplyNetworkSettings).  
+-   While configuring a network connection name, the message "Please enter a valid name for the network adapter" is displayed as described in [Apply Network Settings](#ApplyNetworkSettings).  
 
 -   Problems that may occur as a result of improper configuration of continue on error configuration settings for task sequence steps as described in [Use Continue on Error](#UseContinueonError).  
 
@@ -674,12 +672,12 @@ Figure  SEQ Figure \\\* ARABIC 3. PXE service point error
 ####  <a name="OEMTaskSequenceIncorrectlyAppearsforBootImage"></a> The OEM Task Sequence Incorrectly Appears for a Boot Image Created for a Different Processor Architecture  
  **Problem:** A task sequence based on a LTI OEM task sequence template is showing up for a boot image with a different processor architecture. For example, an OEM task sequence that deploys a 64\-bit operation system is showing on a 32\-bit boot image.  
 
- **Possible Solution:** This is expected behavior as OEM task sequences in LTI are not considered to be “platform\-specific” will always be listed, regardless of the processor architecture of the boot image.  
+ **Possible Solution:** This is expected behavior as OEM task sequences in LTI are not considered to be "platform\-specific" will always be listed, regardless of the processor architecture of the boot image.  
 
 ####  <a name="BadTaskSequenceItem"></a> Bad Task Sequence Item \(Invalid OS GUID\) Message in the Windows Deployment Wizard  
- **Problem:** When running the Windows Deployment Wizard, the wizard displays the error message “Bad Task Sequence Item \(Invalid OS GUID\).” The operating system is listed in the OperatingSystem.xml file; however, the operating system is not displayed in the Deployment Workbench.  
+ **Problem:** When running the Windows Deployment Wizard, the wizard displays the error message "Bad Task Sequence Item \(Invalid OS GUID\)." The operating system is listed in the OperatingSystem.xml file; however, the operating system is not displayed in the Deployment Workbench.  
 
- **Possible Solution:** The original operating system source has two or more WIM files associated. A SKU that is associated with a task sequence is deleted; however, other SKUs for the operating system source still exist. When the task sequence that references the deleted SKU is selected on the **Select a task sequence to execute on this computer** wizard page in the Windows Deployment Wizard, the error message “Bad Task Sequence Item \(Invalid OS GUID\)" is displayed after you click **Next** on the wizard page.  
+ **Possible Solution:** The original operating system source has two or more WIM files associated. A SKU that is associated with a task sequence is deleted; however, other SKUs for the operating system source still exist. When the task sequence that references the deleted SKU is selected on the **Select a task sequence to execute on this computer** wizard page in the Windows Deployment Wizard, the error message "Bad Task Sequence Item \(Invalid OS GUID\)" is displayed after you click **Next** on the wizard page.  
 
  To resolve this problem, perform one of the following tasks:  
 
@@ -688,7 +686,7 @@ Figure  SEQ Figure \\\* ARABIC 3. PXE service point error
 -   Change the task sequence to use a different operating system image.  
 
 ####  <a name="ApplyNetworkSettings"></a> Apply Network Settings  
- **Problem:** When configuring the network connection name in the Deployment Workbench, a validation error prompts you with the message, “Please enter a valid name for the network adapter.”  
+ **Problem:** When configuring the network connection name in the Deployment Workbench, a validation error prompts you with the message, "Please enter a valid name for the network adapter."  
 
  **Possible Solution:** Remove any spaces and invalid characters from the specified connection name.  
 
@@ -753,7 +751,7 @@ Figure  SEQ Figure \\\* ARABIC 3. PXE service point error
   ZTI ERROR - Non-zero return code by LTIApply, rc = 2  
   ```  
 
-  Investigate the issue by mounting the WIM file using ImageX results in the error, “The data is invalid.” Further investigation shows that the date stamp of the .wim file is many years before the current date. It is possible that another process, such as a virus scanner, was holding the .wim file open after it was previously closed at the conclusion of a Read or Write process.  
+  Investigate the issue by mounting the WIM file using ImageX results in the error, "The data is invalid." Further investigation shows that the date stamp of the .wim file is many years before the current date. It is possible that another process, such as a virus scanner, was holding the .wim file open after it was previously closed at the conclusion of a Read or Write process.  
 
   **Possible Solution:** Restore the .wim file from backup media.  
 
@@ -785,10 +783,10 @@ ERROR - Unable to create ADODB.Connection object, impossible to query SQL Server
  **Possible Solution:** This error may indicate that the Windows PE image was not created using MDT. If you are using Configuration Manager, do not use one of the existing Windows PE images that Configuration Manager created; instead, create an image using the Import Microsoft Deployment Task Sequence Wizard.  
 
 > [!NOTE]
->  The Windows PE images that Configuration Manager creates contain components that support scripting, XML, and Windows Management Instrumentation (WMI), but they do not contain components that support Microsoft ActiveX® Data Objects (ADO).  
+>  The Windows PE images that Configuration Manager creates contain components that support scripting, XML, and Windows Management Instrumentation (WMI), but they do not contain components that support Microsoft ActiveX&reg; Data Objects (ADO).  
 
 ####  <a name="MissingorIncorrectDrivers"></a> Deployment Process Not Initiated—Missing or Incorrect Drivers  
- **Problem:** When deploying to certain target computers, Windows PE starts, runs **wpeinit**, opens a Command Prompt window, but does not actually start the deployment process. Troubleshooting by mapping a network drive from the target computer indicates that the network adapter drivers are not loaded. A review of the SetupAPI.log file located in *X*:\Windows\System32\Inf indicates that Windows PE generates errors when it is configuring the network adapter, one of which is, “This driver is not meant for this platform.” The drivers in the **Out-of-Box Drivers** list have been injected into the image.  
+ **Problem:** When deploying to certain target computers, Windows PE starts, runs **wpeinit**, opens a Command Prompt window, but does not actually start the deployment process. Troubleshooting by mapping a network drive from the target computer indicates that the network adapter drivers are not loaded. A review of the SetupAPI.log file located in *X*:\Windows\System32\Inf indicates that Windows PE generates errors when it is configuring the network adapter, one of which is, "This driver is not meant for this platform." The drivers in the **Out-of-Box Drivers** list have been injected into the image.  
 
  **Possible Solution:** It is possible that Windows PE is having a driver conflict with another driver. When configuring the settings for the Windows PE image in the Deployment Workbench, create a Windows PE drivers group that contains only network adapter and storage drivers, and then configure the deployment share to use only the Windows PE driver group.  
 
@@ -945,44 +943,13 @@ ERROR - Unable to create ADODB.Connection object, impossible to query SQL Server
 
   **Figure 25. Flow chart for the Capture Phase**  
 
-## Finding Additional Help  
- Find additional help in resolving MDT deployment problems by:  
+## <a name="MicrosoftSupport"></a> Microsoft Support
 
--   Contacting Microsoft Support as described in [Microsoft Support](#MicrosoftSupport)  
+Microsoft provides Premier and Professional level support for Microsoft Deployment Toolkit.  
 
--   Obtaining additional support through blogs and other Internet resources as described in [Internet Support](#InternetSupport)  
+- Professional level support: [https://support.microsoft.com/](https://support.microsoft.com/)  
 
-###  <a name="MicrosoftSupport"></a> Microsoft Support  
- Microsoft provides Premier and Professional level support for Microsoft Deployment Toolkit.  
-
- Professional level support: [http://support.microsoft.com/](http://support.microsoft.com/)  
-
- Premier level support: [https://premier.microsoft.com/](https://premier.microsoft.com/)  
+- Premier level support: [https://premier.microsoft.com/](https://premier.microsoft.com/)  
 
 > [!NOTE]
->  When contacting support, be clear that the issue is with MDT and the specific version.  
-
-###  <a name="InternetSupport"></a> Internet Support  
- Many online sources provide additional troubleshooting assistance for MDT beyond what is covered in this reference. These online sources include:  
-
--   Microsoft-hosted blogs  
-
-    -   [MDT Team blog](http://blogs.technet.com/b/msdeployment/)  
-
-    -   [Configuration Manager Team blog](http://blogs.technet.com/b/configmgrteam/)  
-
-    -   [Michael Niehaus’ blog](http://blogs.technet.com/b/mniehaus/) (Michael Niehaus writes on Windows and Microsoft Office deployment.)  
-
--   Microsoft-hosted newsgroups and forums:  
-
-     The following newsgroups and forums are available with support from Microsoft employees, industry peers, and Microsoft Valued Professionals:  
-
-    -   [Configuration Manager - Operating System Deployment](http://social.technet.microsoft.com/Forums/home?forum=configmanagerosd)  
-
-    -   [Windows 8 Installation, Setup, and Deployment](http://social.technet.microsoft.com/Forums/windows/home?forum=w8itproinstall)  
-
--   Deployment-related information sources from outside Microsoft:  
-
-    -   [DeployVista.com](http://www.deployvista.com/)  
-
-    -   [myITforum.com](http://www.myitforum.com/)
+> When contacting support, be clear that the issue is with MDT and the specific version.

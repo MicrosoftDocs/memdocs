@@ -9,7 +9,8 @@ ms.assetid: 83a2cce8-789b-4599-9823-98d02a8e733f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # FileCollectionAction Client WMI Class
 In Configuration Manager, the **FileCollectionAction** class is a client Windows Management Instrumentation (WMI) class that associates a set of file collection rules with reporting details, tying together files to collect with the destination of the report.  

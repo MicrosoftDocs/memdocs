@@ -1,29 +1,33 @@
 ---
 title: Manage high-risk deployments
 titleSuffix: Configuration Manager
-description: Learn how to configure deployment verification site settings in Configuration Manager to warn admins if they create a high-risk deployment.
-ms.date: 07/30/2018
+description: Configure deployment verification site settings in Configuration Manager to warn admins if they create a high-risk deployment.
+ms.date: 02/26/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 8d37b983-a964-402c-819d-2512ed2d463b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
+
 # Settings to manage high-risk deployments for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
+With Configuration Manager, you can configure *deployment verification* site settings. These settings warn administrators if they create a high-risk task sequence deployment. A high-risk deployment is:  
 
-With Configuration Manager, you can configure deployment verification site settings. These settings warn administrators if they create a high-risk task sequence deployment. A high-risk deployment is:  
+- A deployment that's automatically installed  
 
--   A deployment that's automatically installed  
-
--   Has the potential to cause unwanted results  
+- Has the potential to cause unwanted results  
 
 For example, a task sequence with a purpose of **Required** that deploys an operating system is considered high-risk.  
+
+> [!WARNING]
+> If you use PXE deployments, and configure device hardware with the network adapter as the first boot device, these devices can automatically start an OS deployment task sequence without user interaction. Deployment verification doesn't manage this configuration. While this configuration may simplify the process and reduce user interaction, it puts the device at greater risk for accidental reimage.
+
+## <a name="bkmk_settings"></a> Deployment verification settings
 
 To reduce the risk of an unwanted high-risk deployment, you can configure size limits in these deployment verification settings:  
 
@@ -37,17 +41,19 @@ To reduce the risk of an unwanted high-risk deployment, you can configure size l
 
 - **Collections with site system servers**: When the target collection includes a computer with a site system role, block deployments or require verification before creating the deployment. When a deployment is blocked, select a different collection that meets the deployment verification criteria to continue creating the deployment.  
 
-> [!NOTE]  
->  High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you can't select a built-in collection such as **All Systems**.  
+> [!NOTE]
+> High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you can't select a built-in collection such as **All Systems**.  
 
-### Configure deployment verification for a site  
+## Configure deployment verification
 
-1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, select **Sites**, and then select the primary site to configure.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, select **Sites**, and then select the primary site to configure.
 
-2.  Click **Properties** in the ribbon, and then switch to the **Deployment Verification** tab.  
+2. In the ribbon, select **Properties**, and then switch to the **Deployment Verification** tab.
 
-3.  After setting configurations you want to use, click **OK** to save the configuration.  
+3. Configure the [settings](#bkmk_settings) you want to use, and then select **OK** to save the configuration and close the properties.
 
+## Next steps
 
-### See also  
- [Configure sites and hierarchies](/sccm/core/servers/deploy/configure/configure-sites-and-hierarchies)
+[Manage task sequences - high-impact settings](/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks#high-impact-settings)
+
+[Configure sites and hierarchies](/sccm/core/servers/deploy/configure/configure-sites-and-hierarchies)

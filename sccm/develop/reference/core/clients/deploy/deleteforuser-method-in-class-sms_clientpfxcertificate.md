@@ -9,7 +9,8 @@ ms.assetid: af6c7a1c-824e-4ccd-ac51-c3b20df3d543
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # DeleteForUser Method in Class SMS_ClientPfxCertificate
 The `DeleteForUse` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes a certificate for a user.  
@@ -62,4 +63,3 @@ The `DeleteForUse` Windows Management Instrumentation (WMI) class method, in Con
 
 ## See Also  
  [SMS_ClientPfxCertificate Server WMI Class](../../../../../develop/reference/core/clients/deploy/sms_clientpfxcertificate-server-wmi-class.md)   
- [Configuration Manager Client Deployment Server WMI Classes](../../../../../develop/reference/core/clients/deploy/client-deployment-server-wmi-classes.md)

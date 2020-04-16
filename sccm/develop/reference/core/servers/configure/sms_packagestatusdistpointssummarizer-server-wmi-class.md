@@ -9,7 +9,8 @@ ms.assetid: 9b365b0d-404c-4c37-a39a-3849c9d6d906
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_PackageStatusDistPointsSummarizer Server WMI Class
 The `SMS_PackageStatusDistPointsSummarizer` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists the distribution summary for packages on given site for a given distribution point.  
@@ -78,7 +79,6 @@ Class SMS_PackageStatusDistPointsSummarizer : SMS_BaseClass
 |257|PKG_TYPE_IMAGE|  
 |258|PKG_TYPE_BOOTIMAGE|  
 |259|PKG_TYPE_OSINSTALLIMAGE|  
-|260|PKG_TYPE_VHD|  
 
  `SecuredTypeID`  
  Data type: `UInt32`  
@@ -173,11 +173,8 @@ Class SMS_PackageStatusDistPointsSummarizer : SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Software Distribution Server WMI Classes](../../../../../develop/reference/core/servers/configure/software-distribution-server-wmi-classes.md)

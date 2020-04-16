@@ -9,12 +9,13 @@ ms.assetid: 519ea4d0-94ed-4fff-beec-edb99e6089e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Windows PowerShell Basics
 System Center 2012 Configuration Manager SP1 introduced native PowerShell support. Windows PowerShell is Microsoft's approach to automation and is being implemented across all System Center products. This topic will introduce you to some of the basics of using Windows PowerShell with Configuration Manager.  
 
- First, you need to make sure that Windows PowerShell 3.0 or later is installed. If Windows PowerShell 3.0 or later is not installed, you can download the latest version of  Windows PowerShell as part of the [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395).  
+ First, you need to make sure that Windows PowerShell 3.0 or later is installed. If Windows PowerShell 3.0 or later is not installed, you can download the latest version of  Windows PowerShell as part of the [Windows Management Framework 5.0](https://www.microsoft.com/download/details.aspx?id=50395).  
 
  To get started:  
 

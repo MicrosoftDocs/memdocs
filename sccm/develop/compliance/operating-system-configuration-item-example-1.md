@@ -9,14 +9,15 @@ ms.assetid: bee6d39d-fbf9-451e-bd3a-0330cc57d910
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Operating System Configuration Item Example 1
-In System Center Configuration Manager, the following Operating System Configuration Item Schema example checks for Windows XP SP2.  
+In Configuration Manager, the following Operating System Configuration Item Schema example checks for Windows XP SP2.  
 
 ## Operating System Configuration Item Example  
 
-```  
+```xml
 <?xml version="1.0" encoding="utf-8"?>  
 
 <!--   
@@ -86,4 +87,4 @@ OperatingSystem identifies how to determine whether or not this operating system
 ```  
 
 ## See Also  
- [Authoring Desired Configuration Management Configuration Baselines and Configuration Items](../../develop/compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md)
+[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)

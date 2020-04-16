@@ -9,7 +9,8 @@ ms.assetid: 57854375-a2c6-461b-9631-d0dcb422c3d2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # FallbackSUP Method in Class SMS_BoundaryGroupRelationships
  The `FallbackSUP` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the fallback time, in minutes, for a software update point (SUP). The default value is 120.  

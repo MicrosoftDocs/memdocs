@@ -9,10 +9,11 @@ ms.assetid: 4c27ec03-c358-4244-a5c5-d0784e5b4713
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # General Configuration Item Example 1
-The following example is a general configuration item schema example that checks the registry to see whether, in this case, remote control is enabled in System Center Configuration Manager.  
+The following example is a general configuration item schema example that checks the registry to see whether, in this case, remote control is enabled in Configuration Manager.  
 
 ## General Configuration Item Example  
 
@@ -128,4 +129,4 @@ Rules defined against the value of the setting.
 ```  
 
 ## See Also  
- [Authoring Compliance Settings Configuration Baselines and Configuration Items](../../develop/compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md)
+[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)

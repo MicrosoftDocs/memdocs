@@ -9,7 +9,8 @@ ms.assetid: 049f86f3-634e-46ca-b162-7fa5b5ac8d14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ICCMEvent::EventType Property
 `ICcmEvent::EventType` is a read/write property, in Configuration Manager, that indicates the type of Windows Management Instrumentation (WMI) event that is being raised.  

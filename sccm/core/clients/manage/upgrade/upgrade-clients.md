@@ -1,7 +1,7 @@
 ---
-title: "Upgrade clients"
-titleSuffix: "Configuration Manager"
-description: "Get information about how to upgrade clients in System Center Configuration Manager."
+title: Upgrade clients
+titleSuffix: Configuration Manager
+description: Get information about how to upgrade clients in Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,13 +10,15 @@ ms.assetid: 446c83b5-c292-4e74-ba19-0792ac6b3472
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Upgrade clients in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# Upgrade clients in Configuration Manager
 
-You can use different methods to upgrade the System Center Configuration Manager client software on Windows computers, UNIX and Linux servers, and Mac computers. Here are the advantages and disadvantages of each method.  
+*Applies to: Configuration Manager (current branch)*
+
+You can use different methods to upgrade the Configuration Manager client software on Windows computers, UNIX and Linux servers, and Mac computers. Here are the advantages and disadvantages of each method.  
 
 > [!TIP]  
 >  If you are upgrading your server infrastructure from a previous version of Configuration Manager \(such as Configuration Manager 2007 or System Center 2012 Configuration Manager\), we recommend that you complete the server upgrades including installing all current branch updates, before upgrading the Configuration Manager clients. This way, you'll also have the most recent version of the client software.  
@@ -79,9 +81,9 @@ You can use different methods to upgrade the System Center Configuration Manager
 
 - [How to Install Configuration Manager Clients Manually](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual)  
 
-- [How to upgrade clients for Linux and UNIX servers in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)  
+- [How to upgrade clients for Linux and UNIX servers](../../../../core/clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)  
 
-- [How to upgrade clients on Mac computers in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-on-mac-computers.md)  
+- [How to upgrade clients on Mac computers](../../../../core/clients/manage/upgrade/upgrade-clients-on-mac-computers.md)  
 
 ## Upgrade installation (application management)  
  **Supported client platform:** Windows  
@@ -104,7 +106,7 @@ You can use different methods to upgrade the System Center Configuration Manager
 ## Automatic client upgrade  
 
 > [!NOTE]  
->  Can be used to upgrade Configuration Manager 2007 clients to System Center Configuration Manager clients. A Configuration Manager 2007 client can assign to a Configuration Manager site, but cannot perform any actions besides automatic client upgrade.  
+> Can be used to upgrade Configuration Manager 2007 clients to Configuration Manager current branch clients. A Configuration Manager 2007 client can assign to a Configuration Manager site, but cannot perform any actions besides automatic client upgrade.  
 
  **Supported client platform:** Windows  
 
@@ -126,7 +128,7 @@ You can use different methods to upgrade the System Center Configuration Manager
 
 - Limited scheduling options.  
 
-  For more information, see [How to upgrade clients for Windows computers in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
+  For more information, see [How to upgrade clients for Windows computers](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
 ## Client testing  
  **Supported client platform:** Windows  
@@ -141,4 +143,4 @@ You can use different methods to upgrade the System Center Configuration Manager
 
 - Can only be used to upgrade the client software and cannot be used to install a new client.  
 
-  [How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  
+  [How to test client upgrades in a pre-production collection](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  

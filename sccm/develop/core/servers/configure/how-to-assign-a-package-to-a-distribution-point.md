@@ -9,10 +9,11 @@ ms.assetid: e6b6bb80-6c63-4bc0-9f7e-8f8194e281e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Assign a Package to a Distribution Point
-The following example shows how to assign a distribution point to a package by using the `SMS_DistributionPoint` and `SMS_SystemResourceList` classes in System Center Configuration Manager. You only need to assign a distribution point to a package if the package contains source files (PkgSourcePath). The package is not advertised until the program source files have been propagated to a distribution point share. You can use the default distribution point share, or you can specify a share to use. You can also specify more than one distribution point to use to distribute your package source files, although this example does not demonstrate that.  
+The following example shows how to assign a distribution point to a package by using the `SMS_DistributionPoint` and `SMS_SystemResourceList` classes in Configuration Manager. You only need to assign a distribution point to a package if the package contains source files (PkgSourcePath). The package is not advertised until the program source files have been propagated to a distribution point share. You can use the default distribution point share, or you can specify a share to use. You can also specify more than one distribution point to use to distribute your package source files, although this example does not demonstrate that.  
 
 ### To assign a package to a distribution point  
 
@@ -138,8 +139,7 @@ public void AssignPackageToDistributionPoint(WqlConnectionManager connection, st
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
- [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
- [Configuration Manager Site Control File](../../../../develop/core/understand/site-control-file.md)   
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+ [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file)
  [SMS_SCI_Component Server WMI Class](../../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md)   
  [SMS_SystemResourceList Server WMI Class](../../../../develop/reference/core/servers/configure/sms_systemresourcelist-server-wmi-class.md)

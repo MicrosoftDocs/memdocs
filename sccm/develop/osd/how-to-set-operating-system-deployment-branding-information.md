@@ -9,10 +9,11 @@ ms.assetid: 95a1f0b7-2568-403f-bd24-43abc859eaf0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Set Operating System Deployment Branding Information in Configuration Manager
-You set the operating system deployment branding information for the System Center Configuration Manager client by changing the `OSDBrandingSubtitle` property of the client agent component section in the site control file.  
+You set the operating system deployment branding information for the Configuration Manager client by changing the `OSDBrandingSubtitle` property of the client agent component section in the site control file.  
 
 > [!NOTE]
 >  `OSDBrandingSubtitle` is encoded with BASE64 encoding.  
@@ -21,7 +22,7 @@ You set the operating system deployment branding information for the System Cent
 
 ### To set operating system deployment branding information  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md) .  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals) .  
 
 2.  Get the client agent site control file client component object from [SMS_SCI_ClientComp Server WMI Class](../../develop/reference/core/servers/configure/sms_sci_clientcomp-server-wmi-class.md).  
 
@@ -117,7 +118,7 @@ public void SetOsdBranding(
 |---------------|----------|-----------------|  
 |`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: `SWbemServices`|A valid connection to the SMS Provider.|  
 |`context (VBScript)`|-   VBScript: `SWbemContext`|A valid context qualifier object. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)|  
-|`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code for the System Center Configuration Manager site.|  
+|`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code for the Configuration Manager site.|  
 |`brandingText`|-   Managed: `String`<br />-   VBScript: `String`|The text used to update the branding text.|  
 
 ## Compiling the Code  
@@ -141,7 +142,6 @@ public void SetOsdBranding(
 
 ## See Also  
  [SMS_SCI_ClientComp Server WMI Class](../../develop/reference/core/servers/configure/sms_sci_clientcomp-server-wmi-class.md)   
- [About Operating System Deployment Site Role Configuration](../../develop/osd/about-operating-system-deployment-site-role-configuration.md)   
- [Operating System Deployment Site Role Configuration](../../develop/osd/operating-system-deployment-site-role-configuration.md)   
+ [About OS deployment site role configuration](/sccm/develop/osd/about-operating-system-deployment-site-role-configuration)
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)

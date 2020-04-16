@@ -9,7 +9,8 @@ ms.assetid: c37551e3-f22b-42e5-9943-858fb58acdf0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CI_ComplianceHistory Server WMI Class
 The `SMS_CI_ComplianceHistory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides the compliance history for both configuration items and configuration baselines.  
@@ -165,7 +166,7 @@ Class SMS_CI_ComplianceHistory : SMS_BaseClass
 
  Qualifiers: None  
 
- This property is deprecated. In System Center Configuration Manageronly the Configuration Item version is used.  
+ This property is deprecated. in Configuration Manageronly the Configuration Item version is used.  
 
  `UserName`  
  Data type: `String`  

@@ -9,10 +9,11 @@ ms.assetid: 8b292712-09c5-438e-adc1-0458c96a50dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddType Method in Class SMS_UserMachineRelationship
-The `AddType` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, adds a type of the relationship between a user and a device.  
+The `AddType` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a type of the relationship between a user and a device.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and is intended to show the definition of the method.  
 
@@ -47,4 +48,3 @@ sint32 AddType(
 
 ## See Also  
  [SMS_Application Server WMI Class](../../../../../develop/reference/apps/sms_application-server-wmi-class.md)   
- [Application Model Server WMI Classes](../../../../../develop/reference/apps/application-management-server-wmi-classes.md)

@@ -9,10 +9,11 @@ ms.assetid: 933bdb86-7a0e-457d-826e-80c349744ab6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetTestSmtpConnectionResult Method in Class SMS_Subscription
-The `GetTestSmtpConnectionResult` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, gets the test SMTP connection result.  
+The `GetTestSmtpConnectionResult` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the test SMTP connection result.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -63,6 +64,6 @@ sint32 GetTestSmtpConnectionResult(
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [SMS_Subscription Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_subscription-server-wmi-class.md)   
- [Alert System WMI Server Classes](../../../../../develop/reference/core/servers/manage/alert-system-server-wmi-classes.md)
+## See also
+
+[SMS_Subscription server WMI class](/sccm/develop/reference/core/servers/manage/sms_subscription-server-wmi-class)

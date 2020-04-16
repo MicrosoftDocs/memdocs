@@ -9,10 +9,11 @@ ms.assetid: 8040e549-3866-4ee9-a412-e5cd1e6ffa64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ResourceMap Server WMI Class
-The `SMS_ResourceMap` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that maps a resource type to its resource class name and display name.  
+The `SMS_ResourceMap` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that maps a resource type to its resource class name and display name.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -43,7 +44,7 @@ Class SMS_ResourceMap : SMS_BaseClass
 
  Qualifiers: None  
 
- Name displayed in the System Center Configuration Manager console to represent the resource class name. For a list of the default resource display names, see the `ResourceType` property.  
+ Name displayed in the Configuration Manager console to represent the resource class name. For a list of the default resource display names, see the `ResourceType` property.  
 
  `ResourceClassName`  
  Data type: **String**  
@@ -82,11 +83,8 @@ Class SMS_ResourceMap : SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Resource Management Server WMI Classes](../../../../../develop/reference/core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md)

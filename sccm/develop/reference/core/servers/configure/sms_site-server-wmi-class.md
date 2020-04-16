@@ -9,7 +9,8 @@ ms.assetid: a8824024-5e6c-49f9-a54e-9b5ec597b86d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_Site Server WMI Class
 The `SMS_Site` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents identification and status data for a Configuration Manager site installation.  
@@ -54,7 +55,6 @@ Class SMS_Site : SMS_BaseClass
 |[ImportMachineEntry Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md)|Imports computer information.|  
 |[IsUsedCert Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/isusedcert-method-in-class-sms_site.md)|Determines whether the specified certificate is used.|  
 |[RedistributeAutoUpgradeClientContent Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/redistributeautoupgradeclientcontent-method-in-class-sms_site.md)|Redistributes auto-upgrade client content to the specified distribution point.|  
-|[SubmitAMTCert Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/submitamtcert-method-in-class-sms_site.md)|Submits a certificate for a computer that implements Intel Active Management Technology (Intel AMT).|  
 |[SubmitRegistrationRecord Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/submitregistrationrecord-method-in-class-sms_site.md)|Submits a registration record.|  
 |[UpdateAutoUpgradeClientContent Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/updateautoupgradeclientcontent-method-in-class-sms_site.md)|Updates auto-upgrade client content to all distribution points.|  
 |[UpdateAutoUpgradeConfigs Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/updateautoupgradeconfigs-method-in-class-sms_site.md)|Updates configurations for auto-upgrade settings.|  

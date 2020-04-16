@@ -1,6 +1,8 @@
 ---
 title: In-console documentation
-ms.date: 06/10/2019
+titleSuffix: Configuration Manager
+description: This article only displays in the Configuration Manager console.
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -9,7 +11,6 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
 ---
 
 <!-- 
@@ -19,9 +20,9 @@ ms.collection: M365-identity-device-management
 - Process: https://microsoft.sharepoint.com/teams/ConfigMgr/Documents/ContentPub/Data%20collection%20process%20for%20Feature%201357546%20In-console%20documentation.docx?web=1
 -->
 
-# Configuration Manager documentation
+# Microsoft Endpoint Configuration Manager documentation
 
-*Last update: 06/10/2019*
+*Last update: March 12, 2020*
 
 This content can assist you in learning and supporting Configuration Manager.
 
@@ -29,40 +30,42 @@ This content can assist you in learning and supporting Configuration Manager.
 
 For more information, see the following articles:
 
-- [Configuration Manager documentation library](https://docs.microsoft.com/sccm)  
-- [How to use the Configuration Manager docs](https://docs.microsoft.com/sccm/core/understand/use-docs)
+- [Configuration Manager documentation library](https://docs.microsoft.com/configmgr)  
+- [How to use the Configuration Manager docs](https://docs.microsoft.com/configmgr/core/understand/use-docs)
 
 ## Recommended
 
 A curated list of important articles.
 
-- [Co-management for Windows 10 devices](https://docs.microsoft.com/sccm/comanage/overview)  
-- [CMPivot](https://docs.microsoft.com/sccm/core/servers/manage/cmpivot)  
-- [Create and run PowerShell scripts](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts)  
-- [Phased deployments](https://docs.microsoft.com/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
-- [Manage Office 365 ProPlus updates](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates)  
-- [Fundamentals of Configuration Manager current branch and Windows as a service](https://docs.microsoft.com/sccm/core/understand/configuration-manager-and-windows-as-service)
-- [Optimize Windows 10 update delivery with Configuration Manager](https://docs.microsoft.com/sccm/sum/deploy-use/optimize-windows-10-update-delivery)
-- [Technical preview releases](https://docs.microsoft.com/sccm/core/get-started/technical-preview)
-- [Use cloud services to supplement on-premises infrastructure](https://docs.microsoft.com/sccm/core/understand/use-cloud-services)
-- [Plan for the cloud management gateway](https://docs.microsoft.com/sccm/core/clients/manage/plan-cloud-management-gateway)
+- [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview)
+- [Co-management for Windows 10 devices](https://docs.microsoft.com/configmgr/comanage/overview)  
+- [CMPivot](https://docs.microsoft.com/configmgr/core/servers/manage/cmpivot)  
+- [Plan for BitLocker management](https://docs.microsoft.com/configmgr/protect/plan-design/bitlocker-management)  
+- [Microsoft Edge management](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge)  
+- [Manage Office 365 ProPlus updates](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates)  
+- [Fundamentals of Configuration Manager current branch and Windows as a service](https://docs.microsoft.com/configmgr/core/understand/configuration-manager-and-windows-as-service)
+- [Optimize Windows 10 update delivery with Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/optimize-windows-10-update-delivery)
+- [Technical preview releases](https://docs.microsoft.com/configmgr/core/get-started/technical-preview)
+- [Use cloud services to supplement on-premises infrastructure](https://docs.microsoft.com/configmgr/core/understand/use-cloud-services)
 
 ## Trending
 
-The most popular articles between May 1 and May 31, 2019.
+The most popular articles between February 1 and February 29, 2020.
 
 | Page views | Title |
 |------------|-------|
-| 21370 | [Log files for troubleshooting](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
-| 17017 | [What's new in version 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
-| 12122 | [Ports used for connections](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
-| 11906 | [Manage Office 365 ProPlus updates](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
-| 11463 | [Deploy clients to Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 10421 | [Support for Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
-| 9138 | [Checklist for 1902](https://docs.microsoft.com/sccm/core/servers/manage/checklist-for-installing-update-1902) |
-| 8944 | [Install console](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
-| 8508 | [Client installation parameters and properties](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
-| 8399 | [Updates and servicing](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 17949 | [Log file reference](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
+| 16788 | [What's new in version 1910](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1910) |
+| 16336 | [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
+| 15901 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 15582 | [Updates and servicing](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
+| 13294 | [Ports used for connections](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
+| 11675 | [Deploy clients to Windows](https://docs.microsoft.com/configmgr/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 11649 | [Co-management for Windows 10 devices](https://docs.microsoft.com/configmgr/comanage/overview) |
+| 10898 | [What is Configuration Manager?](https://docs.microsoft.com/configmgr/core/understand/introduction) |
+| 9837 | [Software Center user guide](https://docs.microsoft.com/configmgr/core/understand/software-center) |
+
+The [Configuration Manager hub page](https://docs.microsoft.com/configmgr/) received 31,487 page views in this time period.
 
 ## Recently updated
 
@@ -70,35 +73,39 @@ Articles with a recent and significant update.
 
 | Last reviewed | Title |
 |---------------|-------|
-| 5/31/2019 | [How to enable TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
-| 5/29/2019 | [Provisioning mode](https://docs.microsoft.com/sccm/osd/understand/provisioning-mode) |
-| 5/29/2019 | [Troubleshoot app deployments](https://docs.microsoft.com/sccm/apps/deploy-use/troubleshoot-application-deployment) |
-| 5/29/2019 | [Approve-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest) |
-| 5/29/2019 | [Import and export applications](https://docs.microsoft.com/sccm/apps/deploy-use/import-export-applications) |
-| 5/28/2019 | [What's new in version 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
-| 5/28/2019 | [Enhanced HTTP](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/enhanced-http) |
-| 5/24/2019 | [Azure AD authentication workflow](https://docs.microsoft.com/sccm/core/clients/manage/azure-ccmsetup) |
-| 5/24/2019 | [SetDPMaintenanceMode method](https://docs.microsoft.com/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo) |
-| 5/21/2019 | [Deprecated features](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) |
+| 2/28/2020 | [Technical preview 2002.2](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2002-2) |
+| 2/28/2020 | [Enable data sharing](https://docs.microsoft.com/configmgr/desktop-analytics/enable-data-sharing) |
+| 2/26/2020 | [Manage high-risk deployments](https://docs.microsoft.com/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments) |
+| 2/19/2020 | [Deprecated for site servers](https://docs.microsoft.com/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-server) |
+| 2/19/2020 | [Deprecated for clients](https://docs.microsoft.com/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client) |
+| 2/14/2020 | [Extend and Migrate on-premises site to Microsoft Azure](https://docs.microsoft.com/configmgr/core/support/azure-migration-tool) |
+| 2/13/2020 | [Technical preview 2002](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2002) |
+| 2/12/2020 | [Product and licensing FAQ](https://docs.microsoft.com/configmgr/core/understand/product-and-licensing-faq) |
+| 2/3/2020 | [FAQ for Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/faq) |
+| 2/3/2020 | [Technical preview 2001.2](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2001-2) |
 
 ## Troubleshooting articles
 
 Guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
 
+- [Troubleshoot application deployments](https://docs.microsoft.com/configmgr/apps/understand/app-deployment-technical-reference)
 - [Troubleshooting PXE boot issues](https://support.microsoft.com/help/4468612)
 - [Understand and troubleshoot Updates and Servicing in Configuration Manager](https://support.microsoft.com/help/4490424)
 - [Troubleshooting software update synchronization issues](https://support.microsoft.com/help/10059)
 - [Understanding and troubleshooting content distribution](https://support.microsoft.com/help/4482728)
-- [Understanding and troubleshooting the Microsoft Store for Business integration](https://support.microsoft.com/help/4010214)
+- [Understanding and troubleshooting the Microsoft Store for Business integration](https://docs.microsoft.com/configmgr/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration)
 - [Software update management troubleshooting](https://support.microsoft.com/help/10680)
 - [Troubleshooting the Install Application task sequence step](https://support.microsoft.com/help/18408/)
+- [Troubleshoot Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/troubleshooting)
+- [Troubleshoot Microsoft Connected Cache](https://docs.microsoft.com/configmgr/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache)
 
 ## New and updated support articles
 
-Support articles that are new or updated between May 14 and June 10, 2019.
+Support articles that are new or updated between February 21 and March 19, 2020.
 
-- [KB 4503442: Error 403 when Configuration Manager clients try to communicate with CMG](https://support.microsoft.com/help/4503442)
-- [KB 4503578: Reporting stops working after you move a reporting services point or enable TLS 1.2 in Configuration Manager](https://support.microsoft.com/help/4503578)
-- [KB 4505440: Software Update Managemenent Troubleshooting in Configuration Manager](https://support.microsoft.com/help/4505440)
+- [KB 4552430 Third-party update category synchronization resets to default in Configuration Manager](https://support.microsoft.com/help/4552430)
+- [KB 4551013 Revised third-party updates fail to download in Configuration Manager](https://support.microsoft.com/help/4551013)
+- [KB 4552181 Content distribution stalls in Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4552181)
+- [KB 4550023 A Configuration Manager in-place upgrade task sequence doesn't continue after a Windows 10 in-place upgrade rollback](https://support.microsoft.com/help/4550023)
 
-To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **System Center Configuration Manager**.  
+To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.  

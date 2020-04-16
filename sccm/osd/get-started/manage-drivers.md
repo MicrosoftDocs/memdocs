@@ -2,7 +2,7 @@
 title: Manage drivers
 titleSuffix: Configuration Manager
 description: Use the Configuration Manager driver catalog to import device drivers, group drivers in packages, and distribute those packages to distribution points.
-ms.date: 03/02/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: 84802d55-112e-4f7f-9a48-74a80d91a0f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Manage drivers in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager provides a driver catalog that you can use to manage the Windows device drivers in your Configuration Manager environment. Use the driver catalog to import device drivers into Configuration Manager, to group them in packages, and to distribute those packages to distribution points. Device drivers can be used when you install the full OS on the destination computer and when you use Windows PE in a boot image. Windows device drivers consist of a setup information (INF) file and any additional files that are required to support the device. When you deploy an OS, Configuration Manager obtains the hardware and platform information for the device from its INF file. 
 
@@ -94,9 +95,12 @@ Updates the device driver package on all the distribution points where the packa
 Opens the **Properties** dialog box. Review and change the content and properties of the driver. For example, change the name and description of the driver, enable or disable it, and specify on which platforms it can run. 
 
 <!--3607716, fka 1358270-->
-Starting in version 1810, driver packages have metadata fields for **Manufacturer** and **Model**. Use these fields to tag driver packages with information to assist in general housekeeping, or to identify old and duplicate drivers that you can delete. On the **General** tab, select an existing value from the drop-down lists, or enter a string to create a new entry. 
+Starting in version 1810, driver packages have metadata fields for **Manufacturer** and **Model**. Use these fields to tag driver packages with information to assist in general housekeeping, or to identify old and duplicate drivers that you can delete. On the **General** tab, select an existing value from the drop-down lists, or enter a string to create a new entry.
 
-In the **Driver Packages** node, these fields display in the list as the **Driver Manufacturer** and **Driver Model** columns. They can also be used as search criteria. 
+In the **Driver Packages** node, these fields display in the list as the **Driver Manufacturer** and **Driver Model** columns. They can also be used as search criteria.
+
+Starting in version 1906, use these attributes to pre-cache content on a client. For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).<!--4224642-->  
+
 
 
 
@@ -287,5 +291,5 @@ When you use these task sequence steps, you can also specify how the drivers are
 
 ## <a name="BKMK_DriverReports"></a> Driver reports  
 
-You can use several reports in the **Driver Management** reports category to determine general information about the device drivers in the driver catalog. For more information about reports, see [Reporting](/sccm/core/servers/manage/reporting).
+You can use several reports in the **Driver Management** reports category to determine general information about the device drivers in the driver catalog. For more information about reports, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).
 

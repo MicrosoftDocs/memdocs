@@ -2,20 +2,21 @@
 title: Prepare Windows Servers
 titleSuffix: Configuration Manager
 description: Ensure that a computer meets prerequisites for use as a site server or a site system server for Configuration Manager.
-ms.date: 2/14/2017
+ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Prepare Windows Servers to support Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Before you can use a Windows computer as a site system server for Configuration Manager, the computer must meet the prerequisites for its intended use as a site server or site system server.  
 

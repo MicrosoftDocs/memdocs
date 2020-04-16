@@ -9,7 +9,8 @@ ms.assetid: 1a2b53a2-4fa1-4671-baba-0e6fbfc63eb5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_SIIB_SenderType Server WMI Class
 The `SMS_SIIB_SenderType` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the sender type for the associated Configuration Manager console property pages.  

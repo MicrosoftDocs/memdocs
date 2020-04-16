@@ -9,7 +9,8 @@ ms.assetid: 190bd52c-9a7e-4aa6-a994-81629a262760
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CIDeploymentUnknownStatus Server WMI Class
 The `SMS_CIDeploymentUnknownStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the status of a configuration item deployment for unknown status.  
@@ -147,6 +148,3 @@ Class SMS_CIDeploymentUnknownStatus : SMS_BaseClass
 
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Application Management Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

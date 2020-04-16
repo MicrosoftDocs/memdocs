@@ -1,30 +1,32 @@
 ---
 title: "New version 1702"
 titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1702 of System Center Configuration Manager."
+description: "Get details about changes and new capabilities introduced in version 1702 of Configuration Manager."
 ms.date: 05/02/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# What&#39;s new in version 1702 of System Center Configuration Manager
+# What&#39;s new in version 1702 of Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Update 1702 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1602, 1606, or 1610. It is also available as a baseline version you can use when installing a new deployment.
+Update 1702 for Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1602, 1606, or 1610. It is also available as a baseline version you can use when installing a new deployment.
 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
->  Learn more about:    
->   - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
->   - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
+>
+> Learn more about:    
+> - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
+> - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 The following sections provide details about changes and new capabilities introduced in version 1702 of Configuration Manager.  
 
@@ -44,21 +46,21 @@ Version 1702 drops support for the following products:
 
 ### Improvements for in-console search
 The following are improvements to using search in the Configuration Manager console:
- - **Object Path:**  
+- **Object Path:**  
   Many objects now support a column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object that is returned.   
 
 - **Preservation of search text:**  
   When you enter text into the search text box, and then switch between searching a sub-node and the current node, the text that you typed will now persist and remain available for a new search without having to reenter it.
 
 - **Preservation of your decision to search sub-nodes:**  
- The option that you choose for searching the *current node* or *all sub-nodes* now persists when you change the node you are working in. This new behavior means that you do not need to constantly reset this decision as you move around the console. By default, when you open the console the option is to search only the current node.
+  The option that you choose for searching the *current node* or *all sub-nodes* now persists when you change the node you are working in. This new behavior means that you do not need to constantly reset this decision as you move around the console. By default, when you open the console the option is to search only the current node.
 
 
 ### Send feedback from the Configuration Manager console
 
- You can use the in-console feedback options to send feedback directly to the development team.
+You can use the in-console feedback options to send feedback directly to the development team.
 
- You can find the **Feedback** option:
+You can find the **Feedback** option:
 - In the ribbon, at the far left of the Home tab of each node.  
   ![Ribbon](./media/feedback-home.png)
 
@@ -90,25 +92,25 @@ The following are changes for Updates and Servicing:
 
 
 ### Data Warehouse service point
- Use the Data Warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.
+Use the Data Warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.
 
- The data warehouse supports up to 2 TB of data, with timestamps for change tracking. Storage of data is accomplished by automated synchronizations from the Configuration Manager site database to the data warehouse database. This information is then accessible from your Reporting Services point.
+The data warehouse supports up to 2 TB of data, with timestamps for change tracking. Storage of data is accomplished by automated synchronizations from the Configuration Manager site database to the data warehouse database. This information is then accessible from your Reporting Services point.
 
- For more information, see [The Data Warehouse service point](/sccm/core/servers/manage/data-warehouse).
+For more information, see [The Data Warehouse service point](/sccm/core/servers/manage/data-warehouse).
 
 
 ### Peer Cache improvements
- Beginning with version 1702, a peer cache source computer will reject a request for content when the peer cache source computer meets any of the following conditions:  
-  -  Is in low battery mode.
-  -  CPU load exceeds 80% at the time the content is requested.
-  -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
-  -  There are no more available connections to the computer.   
+Beginning with version 1702, a peer cache source computer will reject a request for content when the peer cache source computer meets any of the following conditions:  
+-  Is in low battery mode.
+-  CPU load exceeds 80% at the time the content is requested.
+-  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
+-  There are no more available connections to the computer.   
 For more information, see **Limited access to a peer cache source** in [Peer Cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache).   
 
 Additionally, three new reports are added to your reporting point. You can use these reports to understand more details about rejected content requests, including which boundary group, computer, and content was involved. See [Monitoring](/sccm/core/plan-design/hierarchy/client-peer-cache#monitoring) in the peer cache topic.
 
 ### Content library cleanup tool
- Use the [content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) to remove content from distribution points when that content is no longer associated with an application.
+Use the [content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) to remove content from distribution points when that content is no longer associated with an application.
 
 
 ### Use the OMS connector with the Azure Government cloud
@@ -127,7 +129,6 @@ Beginning with version 1702, clients use boundary groups to find a new software 
 ### New compliance settings for iOS
 
 We've added many new settings for iOS devices to match those available with Microsoft Intune.
-For a list of all available settings, see [Create configuration items for iOS and Mac OS X devices managed with Intune](/sccm/mdm/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client).
 
 
 ## Application Management
@@ -196,14 +197,14 @@ This version introduced the following improvements:
 
 ### Improvements to the Auto Apply Driver task sequence
 New task sequence variables are now available to configure the timeout value on the Auto Apply Driver task sequence step when making HTTP catalog requests. The following variables and default values (in seconds) are available:
-   - SMSTSDriverRequestResolveTimeOut  
-     Default: 60
-   - SMSTSDriverRequestConnectTimeOut  
-     Default: 60
-   - SMSTSDriverRequestSendTimeOut  
-     Default: 60
-   - SMSTSDriverRequestReceiveTimeOut  
-     Default: 480
+- SMSTSDriverRequestResolveTimeOut  
+  Default: 60
+- SMSTSDriverRequestConnectTimeOut  
+  Default: 60
+- SMSTSDriverRequestSendTimeOut  
+  Default: 60
+- SMSTSDriverRequestReceiveTimeOut  
+  Default: 480
 
 ### Windows 10 ADK tracked by build version
 The Windows 10 ADK is now tracked by build version to ensure a more supported experience when customizing Windows 10 boot images. For example, if the site uses the Windows ADK for Windows 10, version 1607, only boot images with version 10.0.14393 can be customized in the console. For details about customizing WinPE versions, see [Customize boot images](/sccm/osd/get-started/customize-boot-images).
@@ -261,15 +262,7 @@ To prevent issues when upgrading from prior versions of Configuration Manager, m
 > - **All iOS 10 and higher iPad devices**
 
 ### Android for Work support
-Starting with 1702, Hybrid mobile device management with Microsoft Intune now supports Android for Work device enrollment and management. Managed Android for Work device guidance:
-
-- [Enroll Android for Work devices](/sccm/mdm/deploy-use/enroll-hybrid-android#enable-android-enrollment)
-- [Approve and deploy Android for Work apps](/sccm/mdm/deploy-use/creating-android-applications#approve-and-deploy-android-for-work-apps)
-- [Create configuration items for Android for Work](/sccm/mdm/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-for-work-configuration-items)
-- [Selective wipe on Android for Work devices](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe)
-- [Email profiles for Android for Work](/sccm/mdm/deploy-use/create-exchange-activesync-profiles)
-- [Compliance policies for Android for Work](/sccm/mdm/deploy-use/create-compliance-policy)
-
+Starting with 1702, Hybrid mobile device management with Microsoft Intune now supports Android for Work device enrollment and management.
 
 ### Deploy volume-purchased iOS apps to device collections
 
@@ -287,17 +280,13 @@ You can now deploy licensed apps to devices as well as users. Depending on the a
 |1702 and later|Yes|Device|Device license|
 |1702 and later|No|Device|User license|
 
-For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
-
 ### Support for iOS Volume Purchase Program for Education
 
 You can now also deploy and track apps you purchased from the iOS Volume Purchase Program for Education.
-For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
 ### Support for multiple volume-purchase program tokens
 
 You can now associate multiple Apple volume-purchase program tokens with Configuration Manager.
-For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
 ### Support for line of business apps in Windows Store for Business
 
@@ -309,14 +298,11 @@ A new device compliance policy rule is available to help you block access to cor
 
 Additionally, this helps organizations to mitigate data leakage through unsecured apps, and prevent excessive data consumption through certain apps.
 
-- Learn more [how device compliance policies work](/sccm/mdm/deploy-use/device-compliance-policies).
-- Learn more [how to create device compliance policies](/sccm/mdm/deploy-use/create-compliance-policy).
 
 ### New Mobile Threat Defense monitoring tools
 
 Beginning in version 1702, you have new ways to monitor the compliance status with your Mobile Threat Defense service provider.
 
-- Learn more [how to monitor Mobile Threat Defense compliance](https://docs.microsoft.com/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance).
 
 ## Protect devices
 

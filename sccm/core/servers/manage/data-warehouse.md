@@ -4,24 +4,25 @@ titleSuffix: Configuration Manager
 description: Data warehouse service point and database for Configuration Manager
 ms.date: 05/09/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 #  The data warehouse service point for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 <!--1277922-->
 Use the data warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.
 
 > [!Note]  
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+> In version 1910, Configuration Manager enables this feature by default. In version 1906 or earlier, Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 
 The data warehouse supports up to 2 TB of data, with timestamps for change tracking. The data warehouse stores data by automatically synchronizing data from the Configuration Manager site database to the data warehouse database. This information is then accessible from your reporting service point. Data synchronized to the data warehouse database is kept for three years. Periodically, a built-in task removes data that's older than three years.
@@ -66,7 +67,7 @@ Starting in version 1810, you can synchronize more tables from the site database
 
     - SQL Server failover cluster  
 
-- If you use [distributed views](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews), the data warehouse service point must install on the same server that hosts the central administration site's database.  
+- If you use [distributed views](/sccm/core/plan-design/hierarchy/database-replication#bkmk_distviews), the data warehouse service point must install on the same server that hosts the central administration site's database.  
 
 For more information on SQL Server licensing, see the [product and licensing FAQ](/sccm/core/understand/product-and-licensing-faq). <!-- sms500967 -->
 
@@ -149,7 +150,7 @@ The data warehouse site system role includes the following reports, under the **
 
 - **Infrastructure Health Overview - Historical**: Displays an overview of the health of your Configuration Manager infrastructure.  
 
-- **List of Malware Detected - Historical**:	View malware that has been detected in the organization.  
+- **List of Malware Detected - Historical**: View malware that has been detected in the organization.  
 
 - **Software Distribution Summary - Historical**: A summary of software distribution for a specific advertisement and machine.  
 
@@ -220,7 +221,7 @@ Grant the **Reporting Services Point Account** the **db_datareader** permission 
 
 When you open a data warehouse report, it returns the following error:
 
-```
+``` Output
 An error has occurred during report processing. (rsProcessingAborted)
 Cannot create a connection to data source 'AutoGen__39B693BB_524B_47DF_9FDB_9000C3118E82_'. (rsErrorOpeningConnection)
 A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)

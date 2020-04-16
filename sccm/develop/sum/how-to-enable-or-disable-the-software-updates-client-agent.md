@@ -9,10 +9,11 @@ ms.assetid: 6993ac90-2dd3-49a5-a14d-fe86356e644c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Enable or Disable the Software Updates Client Agent
-You enable or disable the Software Updates Client Agent, in System Center Configuration Manager, by modifying the site control file settings.  
+You enable or disable the Software Updates Client Agent, in Configuration Manager, by modifying the site control file settings.  
 
 ### To enable or disable the Software Updates Client Agent  
 
@@ -150,9 +151,6 @@ public void EnableDisableSUMClientAgent(WqlConnectionManager connection,
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
- [Software Updates Setup and Configuration](../../develop/sum/software-updates-setup-and-configuration.md)   
  [About Software Updates Setup and Configuration](../../develop/sum/about-software-updates-setup-and-configuration.md)   
  [About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   

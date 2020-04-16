@@ -1,28 +1,29 @@
 ---
 title: "Content source location"
 titleSuffix: "Configuration Manager"
-description: "Learn about the System Center Configuration Manager settings that enable clients to find content on a slow network."
-ms.date: 1/3/2017
+description: "Learn about the Configuration Manager settings that enable clients to find content on a slow network."
+ms.date: 01/3/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 70b5cbc0-64ba-49bd-8b34-fb4c09b2b95b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Content source location scenarios in System Center Configuration Manager
+# Content source location scenarios in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Prior to version 1610, System Center Configuration Manager supported several settings that combined to define how and where clients find content when they are on a slow network. The possible combinations affect the content location clients use, and whether they can successfully use a fallback location when a preferred source for content is not available.  
+Prior to version 1610, Configuration Manager supported several settings that combined to define how and where clients find content when they are on a slow network. The possible combinations affect the content location clients use, and whether they can successfully use a fallback location when a preferred source for content is not available.  
 
 > [!IMPORTANT]  
 > **If your sites run version 1511, 1602, or 1606**, the information in this topic applies to your infrastructure. Also see [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606) for information that's specific to boundary groups with these versions of Configuration Manager.
 >
-> **If your sites run version 1610 or later**, use the information in [Define site boundaries and boundary groups for System Center Configuration Manager](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups) to understand how your clients find distribution points that have available content.
+> **If your sites run version 1610 or later**, use the information in [Define site boundaries and boundary groups for Configuration Manager](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups) to understand how your clients find distribution points that have available content.
 
 
 

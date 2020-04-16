@@ -9,7 +9,8 @@ ms.assetid: ab4e741a-2a0a-4b08-aa47-42bfb9dd94ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ExtendedStatus Server WMI Class
 The `SMS_ExtendedStatus` Windows Management Instrumentation (WMI) class, in Configuration Manager, supports an error object that supplies the cause and nature of the current error.  
@@ -177,12 +178,11 @@ Class SMS_ExtendedStatus : __ExtendedStatus
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Configuration Manager Supporting Classes](../../../develop/reference/misc/supporting-server-wmi-classes.md)   
  [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md)

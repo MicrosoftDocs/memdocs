@@ -1,8 +1,8 @@
 ---
-title: "Wi-Fi and VPN profile prerequisites"
-titleSuffix: "Configuration Manager"
-description: "Learn about the security permissions needed to manage certificate profiles, Wi-Fi profiles, and VPN profiles in System Center Configuration Manager."
-ms.date: 11/23/2016
+title: Wi-Fi and VPN profile prerequisites
+titleSuffix: Configuration Manager
+description: Learn about the prerequisites to manage Wi-Fi profiles and VPN profiles in Configuration Manager
+ms.date: 01/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,15 +10,15 @@ ms.assetid: d2dacb2d-ab3b-42a2-8dc8-94da31f993c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
-# Prerequisites for Wi-Fi and VPN Profiles in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# Prerequisites for Wi-Fi and VPN profiles in Configuration Manager
 
-Wi-Fi and VPN profiles in System Center Configuration Manager have dependencies only within the product.  
+*Applies to: Configuration Manager (current branch)*
 
- You must have the following security permissions to manage company resource access settings, such as certificate profiles, Wi-Fi profiles, and VPN profiles:  
+Wi-Fi and VPN profiles in Configuration Manager have dependencies only within the product.
+
+You need the following security permissions to manage company resource access settings, such as certificate profiles, Wi-Fi profiles, and VPN profiles:  
 
 - To view and manage alerts and reports for Wi-Fi and profiles: **Create**, **Delete**, **Modify**, **Modify Report**, **Read**, and **Run Report** for the **Alerts** object.  
 
@@ -30,7 +30,7 @@ Wi-Fi and VPN profiles in System Center Configuration Manager have dependencies 
 
 - To run queries that are related to Wi-Fi and VPN profiles: **Read** permission for the **Query** object.  
 
-- To view Wi-Fi and VPN profiles information in the System Center Configuration Manager console: **Read** permission for the **Site** object.  
+- To view Wi-Fi and VPN profiles information in the Configuration Manager console: **Read** permission for the **Site** object.  
 
 - To view status messages for Wi-Fi and VPN profiles: **Read** permission for the **Status Messages** object.  
 
@@ -40,4 +40,4 @@ Wi-Fi and VPN profiles in System Center Configuration Manager have dependencies 
 
 - To create and manage Wi-Fi profiles: **Author Policy**, **Modify Report**, **Read**, and **Run Report** for the **Wi-Fi Profile** object.  
 
-  The **Company Resource Access Manager** security role includes these permissions that are required to manage Wi-Fi profiles in System Center Configuration Manager. For more information, see [Configure security in System Center Configuration Manager](../../core/plan-design/security/configure-security.md).
+The **Company Resource Access Manager** built-in security role includes these permissions that are required to manage Wi-Fi profiles in Configuration Manager. For more information, see [Configure security](/configmgr/core/plan-design/security/configure-security).

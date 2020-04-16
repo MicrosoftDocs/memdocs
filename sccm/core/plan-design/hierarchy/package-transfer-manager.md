@@ -1,22 +1,23 @@
 ---
 title: "Package Transfer Manager"
 titleSuffix: "Configuration Manager"
-description: "Understand how Package Transfer Manager in System Center Configuration Manager transfers content from a site server to remote distribution points."
-ms.date: 2/8/2017
+description: "Understand how Package Transfer Manager in Configuration Manager transfers content from a site server to remote distribution points."
+ms.date: 02/8/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 3359f254-dd48-42b7-9eab-c92a3417e3fb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Package Transfer Manager in System Center Configuration Manager
+# Package Transfer Manager in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-In a System Center Configuration Manager site, the Package Transfer Manager is a  component of the SMS_Executive service that manages the transfer of content from a site server computer to remote distribution points in a site. (A remote distribution point is one that is not located on the site server computer.) The Package Transfer Manager does not support configurations by the admin, but understanding how it operates can help you plan your content management infrastructure. It can also help you resolve problems with content distribution.
+In a Configuration Manager site, the Package Transfer Manager is a  component of the SMS_Executive service that manages the transfer of content from a site server computer to remote distribution points in a site. (A remote distribution point is one that is not located on the site server computer.) The Package Transfer Manager does not support configurations by the admin, but understanding how it operates can help you plan your content management infrastructure. It can also help you resolve problems with content distribution.
 
 
 When you distribute content to one or more remote distribution points at a site, the **Distribution Manager** creates a content transfer job. It then notifies the Package Transfer Manager on primary and secondary site servers to transfer the content to the remote distribution points.
@@ -24,7 +25,7 @@ When you distribute content to one or more remote distribution points at a site,
  Package Transfer Manager logs its actions in the **pkgxfermgr.log** file on the site server. The log file is the only location where you can view the activities of the Package Transfer Manager.  
 
 > [!NOTE]  
->  In previous versions of Configuration Manager, the Distribution Manager manages the transfer of content to a remote distribution point. Distribution Manager also manages the transfer of content between sites. With the System Center Configuration Manager, Distribution Manager continues to manage the transfer of content between two sites. However, the Package Transfer Manager now manages the transfer of content to large numbers of distribution points. This helps to increase the overall performance of content deployment both between sites and to distribution points within a site.  
+>  In previous versions of Configuration Manager, the Distribution Manager manages the transfer of content to a remote distribution point. Distribution Manager also manages the transfer of content between sites. With the Configuration Manager, Distribution Manager continues to manage the transfer of content between two sites. However, the Package Transfer Manager now manages the transfer of content to large numbers of distribution points. This helps to increase the overall performance of content deployment both between sites and to distribution points within a site.  
 
 To transfer content to a standard distribution point, Package Transfer Manager operates the same as the Distribution Manager operates in previous versions of Configuration Manager. That is, it actively manages the transfer of files to each remote distribution point. However, to distribute content to a pull-distribution point, the Package Transfer Manager notifies the pull-distribution point that content is available. The pull-distribution point then takes over the transfer process.  
 
@@ -63,7 +64,7 @@ The following information describes how Package Transfer Manager manages the tra
 
         -   By default, Package Transfer Manager can simultaneously process three unique packages, and distribute them to five distribution points in parallel. Collectively, these are called **Concurrent distribution settings**. To set up concurrent distribution, in the **Software Distribution Component Properties** for each site, go to the **General** tab.  
 
-        -   Package Transfer Manager uses the scheduling and network bandwidth configurations of each distribution point when transferring content to that distribution point. To configure these settings, in the **Properties** of each remote distribution point, go to the **Schedule** and **Rate Limits** tabs. For more information, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+        -   Package Transfer Manager uses the scheduling and network bandwidth configurations of each distribution point when transferring content to that distribution point. To configure these settings, in the **Properties** of each remote distribution point, go to the **Schedule** and **Rate Limits** tabs. For more information, see [Manage content and content infrastructure for Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
     -   **Pull-distribution point:** When a pull-distribution point receives a notification file, the distribution point begins the process to transfer the content. The transfer process runs independently on each pull-distribution point:  
 

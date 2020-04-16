@@ -8,10 +8,11 @@ ms.assetid: fc75e803-b86e-4baa-a2a0-c47d4aedbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Configuration Manager Console Forms
-You can extend the System Center Configuration Manager console with new Windows forms. Specifically, you can add form-based dialog boxes and property sheets. A user accesses these forms from Configuration Manager actions that you define.  
+You can extend the Configuration Manager console with new Windows forms. Specifically, you can add form-based dialog boxes and property sheets. A user accesses these forms from Configuration Manager actions that you define.  
 
 > [!NOTE]
 >  Wizards are another Windows form that is used by the Configuration Manager console, but you cannot extend or add wizards by using the Configuration Manager console framework. You can, however, run your own wizard solution by using Configuration Manager actions.  
@@ -40,7 +41,7 @@ You can extend the System Center Configuration Manager console with new Windows 
 ### Create the Form Action XML  
  An action describes the type of extension that is called, and where the action is placed in the Configuration Manager console user interface. For an extension form, you use the `ShowDialog` action type to display the form. For more information, see [How to Create Action XML for a Configuration Manager Property Sheet](../../../../develop/core/servers/console/how-to-create-action-xml-for-a-configuration-manager-property-sheet.md).  
 
- For more information about actions, see [About Configuration Manager Console Actions](../../../../develop/core/servers/console/about-configuration-manager-console-actions.md).  
+ For more information about actions, see [About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions).  
 
 ### Create the Form Property Sheet XML  
  Whether or not the form is a property sheet, the form has a form XML file that defines the assembly, namespace, and type of the form. In property sheets, it defines the order of the property pages on the property sheet. There is a property sheet XML file for every Configuration Manager console form.  

@@ -9,7 +9,8 @@ ms.assetid: 35580da2-c86f-43ad-933d-aa5d70ebb9c9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Get the Properties of a Collection
 ### To get the properties of a collection  
@@ -61,5 +62,4 @@ public void ReadCollectionProperties(WqlConnectionManager connection, string col
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Collections](../../../../develop/core/clients/collections/collections.md)   
  [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)

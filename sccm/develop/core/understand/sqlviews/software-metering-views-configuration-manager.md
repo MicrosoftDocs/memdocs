@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Information such as the software metering rules that are created in the Configuration Manager hierarchy.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: e88c5f27-7ce1-48b3-bf3d-e4e6f5100b19
 author: aczechowski
 ms.author: aaroncz

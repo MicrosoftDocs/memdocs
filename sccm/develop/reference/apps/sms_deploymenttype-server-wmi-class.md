@@ -9,7 +9,8 @@ ms.assetid: bc6991d3-d016-49c9-84a6-ac0510dd8579
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_DeploymentType Server WMI Class
 The `SMS_DeploymentType` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the deployment type of an application. This is read-only class.  For creation, modification, or deletion of deployment types, refer to [SMS_Application Server WMI Class](../../../develop/reference/apps/sms_application-server-wmi-class.md).  
@@ -541,6 +542,3 @@ Class SMS_DeploymentType : SMS_ConfigurationItemBaseClass
 
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Application Management Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

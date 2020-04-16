@@ -1,7 +1,7 @@
 ---
-title: "Common compliance management tasks for client-managed devices "
-titleSuffix: "Configuration Manager"
-description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
+title: Common compliance management tasks
+titleSuffix: Configuration Manager
+description: Learn about Configuration Manager compliance settings by working through some common scenarios.
 ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -10,39 +10,40 @@ ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
-# Common tasks for managing compliance on devices with the System Center Configuration Manager client
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# Common tasks for managing compliance on devices with the Configuration Manager client
 
-The scenarios in this topic give you an introduction to using System Center Configuration Manager compliance settings by working through some common scenarios you might encounter.  
+*Applies to: Configuration Manager (current branch)*
 
- If you are already familiar with compliance settings, detailed documentation about all the features you use can be found in the [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md) section.  
+This article gives you an introduction to using Configuration Manager compliance settings by guiding you through some common scenarios that you might come across.  
 
- Before you start, read [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md) to learn some basics about compliance settings, and also read [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) to implement any necessary prerequisites.  
+ If you're already familiar with compliance settings, you can find detailed information about all the features you use in [Configuration items for devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md).  
+
+ Before you start, read [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md) to learn some basics about compliance settings. Read [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) for information about necessary prerequisites.  
 
 ## General information for each scenario  
- In each scenario, you'll create a configuration item that performs a specific task. open the Create Configuration Item Wizard, use the following steps:  
+ In each scenario, you'll create a configuration item that performs a specific task. To open the Create Configuration Item Wizard and get started, take these steps:  
 
-1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **Configuration Items**.  
+1.  In the Configuration Manager console, select **Assets and Compliance** > **Compliance Settings** > **Configuration Items**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
+1.  On the **Home** tab, in the **Create** group, select **Create Configuration Item**.  
 
-4.  On the **General** tab of the Create Configuration Item Wizard as shown below, specify a name and description for the configuration item, then choose the appropriate configuration item type for each scenario in this topic.  
+1.  On the **General** page of the Create Configuration Item Wizard, shown in the following screenshot, specify a name and description for the configuration item. Then choose the appropriate configuration item type for each scenario in this article.  
 
-     ![Shows general page of the create configuration item wizard.](/sccm/mdm/deploy-use/media/Compliance-Settings-Wizard---1.png)  
+     ![General page of the Create Configuration Item Wizard](/sccm/mdm/deploy-use/media/Compliance-Settings-Wizard---1.png)  
 
-## Scenarios for Windows 10 devices managed with the Configuration Manager client  
+## Scenario: Disable Bluetooth on Windows 10 devices
 
-### Scenario: Disable the use of Bluetooth on Windows 10 devices  
- In this scenario, your security department have identified the Bluetooth capability on devices as a means that could be used to transmit sensitive corporate information outside the company. You have recently upgraded all of your PCs to Windows 10 and decide to disable the Bluetooth capability on these devices.  
+ In this scenario, your security department has determined that the Bluetooth capability on devices could be used to transmit sensitive corporate information outside the company. You've recently upgraded all your computers to Windows 10. You decide to disable Bluetooth on these devices.  
 
-1. On the **General** page of the Create Configuration Item wizard, select the **Windows 10** configuration item type, then click **Next**.  
+1. On the **General** page of the Create Configuration Item Wizard, select the **Windows 10** configuration item type, and then select **Next**.  
 
 2. On the **Supported Platforms** page of the wizard, select all Windows 10 platforms.  
 
-3. On the **Device Settings** page, select **Device**, then click **Next**.  
+3. On the **Device Settings** page, select **Device**, and then select **Next**.  
 
 4. On the **Device** page, select **Prohibited** as the value for **Bluetooth**.  
 
@@ -50,35 +51,34 @@ The scenarios in this topic give you an introduction to using System Center Conf
 
 6. Complete the wizard to create the configuration item.  
 
-   You can now use the information in the [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
+ You can now use the information in the [Common tasks for creating and deploying configuration baselines with Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) article to help you deploy the configuration you've created to devices.  
 
-## Scenarios for Windows desktop and server computers managed with the Configuration Manager client  
- On Mac computers running the Configuration Manager client, you have two options for assessing compliance:  
+## Scenario: Remediate an incorrect registry value on Windows desktop computers
 
-- Evaluate a Mac OS X preferences (plist) file.  
+> [!NOTE] 
+> On Mac computers running the Configuration Manager client, you have two options for assessing compliance:  
+> - Evaluate a Mac OS X preferences (plist) file.
+> - Use a custom script and evaluate the results returned by the script.  
+>
+>For more information, see [How to create configuration items for Mac OS X devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md).  
 
-- Use a custom script and evaluate the results returned by the script.  
+ In this scenario, you discover that an important line-of-business app doesn't run correctly on some Windows 8.1 computers that you manage. You determine that this is because a registry key named **HKEY_LOCAL_MACHINE\SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1** is set to a value of **0** on some computers. For the line-of-business app to run successfully, this value needs to be set to **1**.  
 
-  For more information, see [How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md).  
+ In this procedure, you'll create a configuration item that monitors for and automatically remediates any incorrect registry key values that are found.  
 
-### Scenario: Remediate an incorrect registry value on Windows desktop computers  
- In this scenario, you discover that an important line of business app is not running correctly on some computers you manage that run Windows 8.1. After investigation, you discover that this is because a registry key named **HKEY_LOCAL_MACHINE\SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1** is set to a value of **0** on some computers. For the line of business app to run successfully, this value must be set to **1**.  
+1. On the **General** page of the Create Configuration Item Wizard, select the **Windows Desktops and Servers (custom)** configuration item type, and then select **Next**.  
 
- In this procedure, you'll create a configuration item that monitors for, and automatically remediates any incorrect registry key values found.  
+2. On the **Supported Platforms** page of the wizard, select **Windows 8.1** (to ensure the configuration item applies only to affected computers).  
 
-1. On the **General** page of the Create Configuration Item wizard, select the **Windows Desktops and Servers (custom)** configuration item type, then click **Next**.  
+3. On the **Settings** page, select **New** to create a new setting.  
 
-2. On the **Supported Platforms** page of the wizard, select **Windows 8.1** (to ensure the configuration item only applies to affected computers).  
-
-3. On the **Settings** page, click **New** to create a new setting.  
-
-4. On the **General** tab of the **Create Setting** dialog box, configure the following:  
+4. On the **General** tab of the **Create Setting** dialog box, configure these settings:  
 
    -   **Name** > **Example setting**  
 
    -   **Setting type** > **Registry value**  
 
-   -   **Data type** > **Integer** (as the value contains a number only)  
+   -   **Data type** > **Integer** (because the value contains a number only)  
 
    -   **Hive** > **HKEY_LOCAL_MACHINE**  
 
@@ -86,21 +86,21 @@ The scenarios in this topic give you an introduction to using System Center Conf
 
    -   **Value** > **1** (the required value)  
 
-5. On the **Compliance Rules** tab of the **Create Setting** dialog box, click **New**, then in the **Create Rule** dialog box, configure the following:  
+5. On the **Compliance Rules** tab of the **Create Setting** dialog box, select **New**. In the **Create Rule** dialog box, configure these settings:  
 
    -   **Name** > **Example Rule**  
 
-   -   **Selected setting** – Verify that the selected setting is **Example setting**.  
+   -   **Selected setting** > Verify that the selected setting is **Example setting**.
 
    -   **Rule type** > **Value**  
 
-   -   **The setting must comply with the following rule** – Verify that the setting name is correct and configure the option to specify that the setting value must equal **1**.  
+   -   **The setting must comply with the following rule** > Verify that the setting name is correct and configure the option to specify that the setting value must equal **1**.  
 
-   -   **Remediate noncompliant rules when supported** – Check this box to ensure that Configuration Manager will reset the registry key value to the correct value if it is incorrect.  
+   -   **Remediate noncompliant rules when supported** > Select this check box to ensure that Configuration Manager will reset the registry key value to the correct value if it's incorrect.  
 
 6. Complete the wizard to create the configuration item.  
 
-   You can now use the information in the [Common tasks for creating and deploying configuration baselines](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
+ You can now use the information in the [Common tasks for creating and deploying configuration baselines](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) article to help you deploy the configuration you've created to devices.  
 
 ## Next steps
 

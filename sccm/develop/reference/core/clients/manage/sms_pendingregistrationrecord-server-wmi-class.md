@@ -9,10 +9,11 @@ ms.assetid: c1e1b321-2d60-490e-a9ae-83f370f5cc88
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_PendingRegistrationRecord Server WMI Class
-The `SMS_PendingRegistrationRecord` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that describes hardware conflicts between two computers.  
+The `SMS_PendingRegistrationRecord` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes hardware conflicts between two computers.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -84,7 +85,7 @@ Class SMS_PendingRegistrationRecord
 
  Qualifiers: None  
 
- The System Center Configuration Manager unique identifier of a client that registered on the current site with the same `HardwareID`  
+ The Configuration Manager unique identifier of a client that registered on the current site with the same `HardwareID`  
 
  `FQDN`  
  Data type: `String`  
@@ -179,7 +180,7 @@ Class SMS_PendingRegistrationRecord
 
  Qualifiers: None  
 
- The System Center Configuration Manager site this client belongs to.  
+ The Configuration Manager site this client belongs to.  
 
  `SMSID`  
  Data type: `String`  
@@ -222,11 +223,8 @@ Class SMS_PendingRegistrationRecord
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Supporting Classes](../../../../../develop/reference/misc/supporting-server-wmi-classes.md)

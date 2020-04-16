@@ -9,7 +9,8 @@ ms.assetid: aa3fabb4-c0b4-4a99-a8c3-0889e8c99491
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # SMS_DistributionPointInfo server WMI class
@@ -517,7 +518,5 @@ For more information, see [Configuration Manager server development requirements
 
 
 ## See also
-
-- [Software distribution server WMI classes](/sccm/develop/reference/core/servers/configure/software-distribution-server-wmi-classes)
 
 - [SMS_DistributionPoint server WMI class](/sccm/develop/reference/core/servers/configure/sms_distributionpoint-server-wmi-class)

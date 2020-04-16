@@ -1,22 +1,21 @@
 ---
 title: "Cryptographic controls technical reference"
 titleSuffix: "Configuration Manager"
-description: "Learn how signing and encryption can help protect attacks from reading data in System Center Configuration Manager."
-ms.date: 12/8/2017
+description: "Learn how signing and encryption can help protect attacks from reading data in Configuration Manager."
+ms.date: 12/08/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
+
 # Cryptographic controls technical reference
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-
-System Center Configuration Manager uses signing and encryption to help protect the management of the devices in the Configuration Manager hierarchy. With signing, if data has been altered in transit, it's discarded. Encryption helps prevent an attacker from reading the data by using a network protocol analyzer.  
+Configuration Manager uses signing and encryption to help protect the management of the devices in the Configuration Manager hierarchy. With signing, if data has been altered in transit, it's discarded. Encryption helps prevent an attacker from reading the data by using a network protocol analyzer.  
 
  The primary hashing algorithm that Configuration Manager uses for signing is SHA-256. When two Configuration Manager sites communicate with each other, they sign their communications with SHA-256. The primary encryption algorithm implemented in Configuration Manager is 3DES. This is used for storing data in the Configuration Manager database and for client HTTP communication. When you use client communication over HTTPS, you can configure your public key infrastructure (PKI) to use RSA certificates with the maximum hashing algorithms and key lengths that are documented in [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
@@ -41,25 +40,20 @@ System Center Configuration Manager uses signing and encryption to help protect 
  The hashing algorithm for policy is SHA-1 and SHA-256.  
 
 ### Content hashing  
- The distribution manager service on the site server hashes the content files for all packages. The policy provider includes the hash in the software distribution policy. When the Configuration Manager client downloads the content, the client regenerates the hash locally and compares it to the one supplied in the policy. If the hashes match, the content has not been altered and the client installs it. If a single byte of the content has been altered, the hashes will not match and the software will not be installed. This check helps to ensure that the correct software is installed because the actual content is crosschecked with the policy.  
 
- The default hashing algorithm for content is SHA-256. To change this default, see the documentation for the Configuration Manager Software Development Kit (SDK).  
+The distribution manager service on the site server hashes the content files for all packages. The policy provider includes the hash in the software distribution policy. When the Configuration Manager client downloads the content, the client regenerates the hash locally and compares it to the one supplied in the policy. If the hashes match, the content has not been altered and the client installs it. If a single byte of the content has been altered, the hashes will not match and the software will not be installed. This check helps to ensure that the correct software is installed because the actual content is crosschecked with the policy.  
 
- Not all devices can support content hashing. The exceptions include:  
+The default hashing algorithm for content is SHA-256.
 
--   Windows clients when they stream App-V content.  
+Not all devices can support content hashing. The exceptions include:  
 
--   Windows Phone clients, though these clients verify the signature of an application that is signed by a trusted source.  
+- Windows clients when they stream App-V content.  
 
--   Windows RT client, though these clients verify the signature of an application that is signed by a trusted source and also use package full name (PFN) validation.  
+- Windows Phone clients, though these clients verify the signature of an application that is signed by a trusted source.  
 
--   iOS, though these devices verify the signature of an application that is signed by any developer certificate from a trusted source.  
+- Windows RT client, though these clients verify the signature of an application that is signed by a trusted source and also use package full name (PFN) validation.  
 
--   Nokia client, though, these clients verify the signature of an application that uses a self-signed certificate. Or, the signature of a certificate from a trusted source and the certificate can sign Nokia Symbian Installation Source (SIS) applications.  
-
--   Android. In addition, these devices do not use signature validation for application installation.  
-
--   Clients that run on versions of Linux and UNIX that do not support SHA-256. For more information, see [Planning for client deployment to Linux and UNIX computers](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers).  
+- Clients that run on versions of Linux and UNIX that do not support SHA-256. For more information, see [Planning for client deployment to Linux and UNIX computers](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers).  
 
 ### Inventory signing and encryption  
  Inventory that clients send to management points is always signed by devices, regardless of whether they communicate with management points over HTTP or HTTPS. If they use HTTP, you can choose to encrypt this data, which is a security best practice.  
@@ -191,21 +185,17 @@ System Center Configuration Manager uses signing and encryption to help protect 
 
 - Multicast-enabled distribution point  
 
-- Out of band service point  
-
 - Reporting services point  
 
 - Software update point  
 
 - State migration point  
 
-- System Health Validator point  
-
 - Microsoft Intune connector  
 
-  These certificates are managed automatically by Configuration Manager, and where necessary, automatically generated.  
+These certificates are managed automatically by Configuration Manager, and where necessary, automatically generated.  
 
-  Configuration Manager also uses a client authentication certificate to send status messages from the distribution point to the management point. When the management point is configured for HTTPS client connections only, you must use a PKI certificate. If the management point accepts HTTP connections, you can use a PKI certificate or select the option to use a self-signed certificate that has client authentication capability, uses SHA-256, and has a key length of 2048 bits.  
+Configuration Manager also uses a client authentication certificate to send status messages from the distribution point to the management point. When the management point is configured for HTTPS client connections only, you must use a PKI certificate. If the management point accepts HTTP connections, you can use a PKI certificate or select the option to use a self-signed certificate that has client authentication capability, uses SHA-256, and has a key length of 2048 bits.  
 
 ### Server communication between sites  
  Configuration Manager transfers data between sites by using database replication and file-based replication. For more information, see [Communications between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints).  
@@ -259,11 +249,11 @@ System Center Configuration Manager uses signing and encryption to help protect 
 ## About SSL vulnerabilities
 To improve the security of your Configuration Manager clients and servers, do the following:
 
--	Enable TLS 1.2
+- Enable TLS 1.2
 
-    To enable TLS 1.2 for Configuration Manager, see [How to enable TLS 1.2 for Configuration Manager](enable-tls-1-2.md).
--	Disable SSL 3.0, TLS 1.0, and TLS 1.1 
--	Reorder the TLS-related cipher suites 
+  To enable TLS 1.2 for Configuration Manager, see [How to enable TLS 1.2 for Configuration Manager](enable-tls-1-2.md).
+- Disable SSL 3.0, TLS 1.0, and TLS 1.1 
+- Reorder the TLS-related cipher suites 
 
 For more information, see [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/en-us/kb/245030/) and [Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx). These procedures do not affect Configuration Manager functionality.
 

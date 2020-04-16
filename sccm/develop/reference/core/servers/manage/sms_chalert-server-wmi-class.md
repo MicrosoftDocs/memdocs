@@ -9,7 +9,8 @@ ms.assetid: 8f534910-a91f-4c04-83e5-c6ae1f8dbed2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_CHAlert Server WMI Class
 The `SMS_CHAlert` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client status alerts.  

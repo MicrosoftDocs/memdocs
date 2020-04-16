@@ -9,7 +9,8 @@ ms.assetid: b6e5fec6-6d2f-442e-8f06-ac9269165a23
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_VirtualEnvironment Server WMI Classes
 The `SMS_VirtualEnvironment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents   

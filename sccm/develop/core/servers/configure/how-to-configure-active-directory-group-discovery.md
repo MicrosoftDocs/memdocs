@@ -9,10 +9,11 @@ ms.assetid: 789485ee-5f76-40da-8d06-8417eb6794a9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure Active Directory Group Discovery
-You configure the Active Directory Group Discovery settings, in System Center Configuration Manager, by modifying the necessary site control file settings.  
+You configure the Active Directory Group Discovery settings, in Configuration Manager, by modifying the necessary site control file settings.  
 
 ### To configure Active Directory Group Discovery  
 
@@ -195,11 +196,9 @@ public void ConfigureADGroupDiscoverySettings(WqlConnectionManager connection,
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Discovery](../../../../develop/core/servers/configure/discovery.md)   
  [About the Configuration Manager Site Control File](../../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)   
  [SMS_SCI_Component Server WMI Class](../../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md)   
- [Configuration Manager Schedules](../../../../develop/core/understand/schedules.md)   
+ [About schedules](/sccm/develop/core/understand/about-configuration-manager-schedules)
  [How to Create a Schedule Token](../../../../develop/core/understand/how-to-create-a-schedule-token.md)

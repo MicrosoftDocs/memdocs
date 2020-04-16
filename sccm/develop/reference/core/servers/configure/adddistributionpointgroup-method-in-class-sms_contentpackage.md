@@ -9,7 +9,8 @@ ms.assetid: ad858478-ae62-42be-ad8c-38d16c5c4d26
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # AddDistributionPointGroup Method in Class SMS_ContentPackage
 The `AddDistributionPointGroup` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the content package to a set of distribution point groups.  
@@ -47,4 +48,3 @@ sint32 AddDistributionPointGroup (
 
 ## See Also  
  [SMS_Application Server WMI Class](../../../../../develop/reference/apps/sms_application-server-wmi-class.md)   
- [Application Model Server WMI Classes](../../../../../develop/reference/apps/application-management-server-wmi-classes.md)

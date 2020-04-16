@@ -1,7 +1,7 @@
 ---
 title: "Planning client deployment to Windows Embedded devices"
 titleSuffix: "Configuration Manager"
-description: "Plan for client deployment to Windows Embedded devices in System Center Configuration Manager."
+description: "Plan for client deployment to Windows Embedded devices in Configuration Manager."
 ms.date: 06/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,13 +10,14 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Planning for client deployment to Windows Embedded devices in System Center Configuration Manager
+# Planning for client deployment to Windows Embedded devices in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-<a name="BKMK_DeployClientEmbedded"></a> If your Windows Embedded device does not include the System Center Configuration Manager client, you can use any of the client installation methods if the device meets the required dependencies. If the embedded device supports write filters, you must disable these filters before you install the client, and then re-enable the filters again after the client is installed and assigned to a site.  
+<a name="BKMK_DeployClientEmbedded"></a> If your Windows Embedded device does not include the Configuration Manager client, you can use any of the client installation methods if the device meets the required dependencies. If the embedded device supports write filters, you must disable these filters before you install the client, and then re-enable the filters again after the client is installed and assigned to a site.  
 
  Note that when you disable the filters, you should not disable the filter drivers. Typically these drivers are started automatically when the computer is started. Disabling the drivers will either prevent installation of the client, or interfere with write filter orchestration which will cause client operations to fail. These are the services associated with each write filter type that must remain running:  
 
@@ -41,11 +42,11 @@ ms.collection: M365-identity-device-management
 
  Configuration Manager supports managing the following types of write filters:  
 
-- File-Based Write Filter (FBWF) -  For more information, see [File-Based Write Filter](http://go.microsoft.com/fwlink/?LinkID=204717).  
+- File-Based Write Filter (FBWF) -  For more information, see [File-Based Write Filter](https://go.microsoft.com/fwlink/?LinkID=204717).  
 
-- Enhanced Write Filter (EWF) RAM - For more information, see [Enhanced Write Filter](http://go.microsoft.com/fwlink/?LinkId=204718).  
+- Enhanced Write Filter (EWF) RAM - For more information, see [Enhanced Write Filter](https://go.microsoft.com/fwlink/?LinkId=204718).  
 
-- Unified Write Filter (UWF) - For more information, see [Unified Write Filter](http://go.microsoft.com/fwlink/?LinkId=309236).  
+- Unified Write Filter (UWF) - For more information, see [Unified Write Filter](https://go.microsoft.com/fwlink/?LinkId=309236).  
 
   Configuration Manager does not support write filter operations when the Windows Embedded device is in EWF RAM Reg mode.  
 
@@ -80,7 +81,7 @@ ms.collection: M365-identity-device-management
 > [!NOTE]
 > No additional exceptions are needed by the Configuration Manager client other than those documented in the above **Important** box. Adding additional Configuration Manager or WMI (WBEM) related exceptions may lead to failures of the Configuration Manager including devices getting stuck in servicing mode or devices experiencing reboot loops. Unneeded exceptions include the Configuration Manager client directory, the CCMcache directory, the CCMSetup directory, the Task Sequence cache directory, the WBEM directory, and Configuration Manager related registry keys.
 
- For an example scenario to deploy and manage write-filter-enabled Windows Embedded devices in Configuration Manager see [Example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices](../../../../core/clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md).  
+ For an example scenario to deploy and manage write-filter-enabled Windows Embedded devices in Configuration Manager see [Example scenario for deploying and managing Configuration Manager clients on Windows Embedded devices](../../../../core/clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md).  
 
  For more information about how to build images for Windows Embedded devices and configure write filters, see your Windows Embedded documentation, or contact your OEM.  
 

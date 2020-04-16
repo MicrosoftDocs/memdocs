@@ -4,19 +4,20 @@ titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager Technical Preview version 1803.
 ms.date: 03/27/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 56dc4b07-5aa4-43e2-9be8-d26ae5ff5613
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
 
-# Capabilities in Technical Preview 1803 for System Center Configuration Manager
+# Capabilities in Technical Preview 1803 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
 This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1803. You can install this version to update and add new capabilities to your technical preview site. 
 
@@ -112,8 +113,8 @@ You can now create a customized tab to open a webpage in Software Center. This f
 3. For **Software Center settings**, click **Customize**.
 4. Switch to the **Tabs** tab.
 5. Enable the option to **Specify a custom tab for Software Center**.
-	1. Enter a name in the **Tab name** text field. This name is what displays to the user in Software Center.
-	2. Enter a valid URL in the **Content URL** text field. This URL is the content that Software Center displays when users click this tab.
+    1. Enter a name in the **Tab name** text field. This name is what displays to the user in Software Center.
+    2. Enter a valid URL in the **Content URL** text field. This URL is the content that Software Center displays when users click this tab.
 
 > [!Tip]  
 > Software Center uses Internet Explorer components for rendering the web page.
@@ -139,9 +140,9 @@ Selecting **Enable third party software updates** in client settings does the fo
 As a result of your [user voice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/20234866-allow-us-to-copy-information-out-of-the-asset-det) You can now enable copy/paste functionality in the asset details pane in deployment and distribution status monitoring views.  <!--1357552-->
 
 ## SCAP Extensions
-The pre-release version of SCAP Extensions is available in the Cd.latest folder under SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi. This pre-release version of the SCAP extensions can be installed on any currently supported versions of Configuration Manager current branch and LTSB 1606. For more information, see [About the Security Content Automation Protocol (SCAP) extensions](/sccm/compliance/plan-design/scap/about-scap).
+The pre-release version of SCAP Extensions is available in the Cd.latest folder under SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi. This pre-release version of the SCAP extensions can be installed on any currently supported versions of Configuration Manager current branch and LTSB 1606.
 
 
 
 ## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    

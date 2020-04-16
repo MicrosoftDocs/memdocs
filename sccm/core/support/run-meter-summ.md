@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Use the Run Meter Summarization Tool to trigger the software metering summarization tasks in Configuration Manager.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: d27f88fe-817f-4af4-b290-c16f2e46cf31
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Run Meter Summarization Tool
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The Run Meter Summarization Tool is one of the [Configuration Manager tools](/sccm/core/support/tools). Use it to immediately trigger the maintenance tasks for software metering summarization on primary sites. By default, these tasks run as scheduled in **Site Maintenance** tasks, which start after 12:00 AM every day. 
 

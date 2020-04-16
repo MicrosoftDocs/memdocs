@@ -6,7 +6,8 @@ ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 3e8e24ba-615d-4e97-9411-a2bab792a264
 author: aczechowski
 ms.author: aaroncz
@@ -95,7 +96,5 @@ The method succeeded.
 - [IProgressUI interface](/sccm/develop/reference/core/clients/client-classes/iprogressui-interface)  
 
 - [About reporting Configuration Manager custom action progress](/sccm/develop/osd/about-reporting-configuration-manager-custom-action-progress)  
-
-- [Extending OS deployment](/sccm/develop/osd/extending-operating-system-deployment)  
 
 - [How to use task sequence variables in a running Configuration Manager task sequence](/sccm/develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence)  

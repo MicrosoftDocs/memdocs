@@ -9,7 +9,8 @@ ms.assetid: 1843e467-9330-437c-b3d8-fe84a45284a3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # UpdateProfileIDForDevices Method in Class SMS_MDMCorpOwnedDevices
 The `UpdateProfileIdForDevices` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the  profile IDs for device serial numbers.  
@@ -54,4 +55,3 @@ sint32 UpdateProfileIdForDevices(
 
 ## See Also  
  [SMS_MDMCorpOwnedDevices Server WMI Class](../../../develop/reference/mdm/sms_mdmcorpowneddevices-server-wmi-class.md)   
- [Mobile Device Management Server WMI Classes](../../../develop/reference/mdm/mobile-device-management-server-wmi-classes.md)

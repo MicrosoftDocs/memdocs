@@ -8,12 +8,18 @@ ms.assetid: 1283e2a3-d4e2-4fba-a6c3-7dcd94598a0d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About the Configuration Manager Site Control File
-The site control file in System Center Configuration Manager is an ASCII text file (Sitectrl.ct0) that contains the configuration of each site. There are two types of site control files:  
+Site control in Configuration Manager defines the settings for a specific site. The settings for each site are contained in the database and are accessed through Windows Management Instrumentation (WMI) when working with scripting languages, and through the managed SMS Provider library when working with a managed language.  
 
-- Actual site control file - A working copy of the site control file that is stored in the System Center Configuration Manager site database and in the inbox in the site control manager.  
+> [!NOTE]
+>  Previous releases of Configuration Manager had a physical file that was processed for site settings referred to as the site control file. Configuration Manager stores site settings directly in the site database; however, very little has changed when programmatically configuring a site.  
+
+The site control file in Configuration Manager is an ASCII text file (Sitectrl.ct0) that contains the configuration of each site. There are two types of site control files:  
+
+- Actual site control file - A working copy of the site control file that is stored in the Configuration Manager site database and in the inbox in the site control manager.  
 
 - Delta site control file - Contains the proposed site control file changes that are to be processed.  
 
@@ -49,7 +55,7 @@ BEGIN_CLIENT_COMPONENT
 END_CLIENT_COMPONENT  
 ```  
 
- The provider has several Windows Management Instrumentation (WMI) classes that represent resources in the site control file. For example, [SMS_SCI_Component Server WMI Class](../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md) holds information on the server components stored on a System Center Configuration Manager site server. These classes derive from [SMS_SiteControlItem Server WMI Class](../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md). For more information, see [Configuration Manager Site Configuration Server WMI Classes &#91;reference&#93;](../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md).  
+ The provider has several Windows Management Instrumentation (WMI) classes that represent resources in the site control file. For example, [SMS_SCI_Component Server WMI Class](../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md) holds information on the server components stored on a Configuration Manager site server. These classes derive from [SMS_SiteControlItem Server WMI Class](../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md). For more information, see [Configuration Manager Site Configuration Server WMI Classes &#91;reference&#93;](../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md).  
 
  The following example is the declaration for [SMS_SCI_ClientConfig Server WMI Class](../../../develop/reference/core/servers/configure/sms_sci_clientconfig-server-wmi-class.md).  
 

@@ -10,12 +10,13 @@ ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Hardware inventory for Linux and UNIX in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 > [!Important]  
 > Starting in version 1902, Configuration Manager doesn't support Linux or UNIX clients. 
@@ -101,7 +102,7 @@ Actions for hardware inventory are entered into the client log file, **scxcm.log
 ###  <a name="BKMK_LinuxProvider"></a> Create a custom hardware inventory provider for Linux and UNIX computers:  
  To create a custom hardware inventory provider for the Configuration Manager client for Linux and UNIX, use **OMI Source - v.1.0.6** and follow the instructions from the OMI Getting Started Guide. This process includes creating a Managed Object Format (MOF) file that defines the schema of the new provider. Later, you import the MOF file to Configuration Manager to enable support of the new custom inventory class.  
 
- Both the OMI Source - v.1.0.6, and the OMI Getting Started Guide are available for download from [The Open Group](https://github.com/microsoft/omi/blob/master/README.md) website. You can locate these downloads on the **Documents** tab at the following web page on the OpenGroup.org website: [Open Management Infrastructure (OMI)](http://go.microsoft.com/fwlink/p/?LinkId=286805).  
+ Both the OMI Source - v.1.0.6, and the OMI Getting Started Guide are available for download from [The Open Group](https://github.com/microsoft/omi/blob/master/README.md) website. You can locate these downloads on the **Documents** tab at the following web page on the OpenGroup.org website: [Open Management Infrastructure (OMI)](https://go.microsoft.com/fwlink/p/?LinkId=286805).  
 
 ###  <a name="BKMK_AddProvidertoLinux"></a> Configure each computer that runs Linux or UNIX with the custom hardware inventory provider:  
  After you create a custom inventory provider, you must copy and then register the provider library file on each computer that has inventory you want to collect.  
@@ -120,4 +121,4 @@ Actions for hardware inventory are entered into the client log file, **scxcm.log
 ###  <a name="BKMK_AddLinuxProvidertoCM"></a> Enable the new inventory class in Configuration Manager:  
  Before Configuration Manager can report on inventory that's reported by the new provider on Linux and UNIX computers, you must import the Managed Object Format (MOF) file that defines the schema of your custom provider.  
 
- To import a custom MOF file into Configuration Manager, see [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
+ To import a custom MOF file into Configuration Manager, see [How to configure hardware inventory](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  

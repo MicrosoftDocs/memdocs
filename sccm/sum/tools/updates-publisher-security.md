@@ -2,7 +2,7 @@
 title: "Certificates and security"
 titleSuffix: "Configuration Manager"
 description: "Manage certificates and security for System Center Updates Publisher"
-ms.date: 4/29/2017
+ms.date: 04/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Manage certificates and security for Updates Publisher
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 The following procedures can help you to configure the certificate store on the update server, configure a self-signing certificate on the client computer, and to configure the Group Policy to allow the Windows Update Agent on computers to scan for published updates.
 
@@ -71,7 +72,7 @@ The following is provided as one example of how to configure the signing certifi
    -   For certification authority (CA) issued certificates: Add the certificate to the **Trusted Publishers** certificate store.
 
    > [!NOTE]
-   > The WUA also checks whether the **Allow signed content from intranet Microsoft update service location** Group Policy setting is enabled on the local computer. This policy setting must be enabled for WUA to scan for the updates that were created and published with Updates Publisher. For more information about enabling this Group Policy setting, see [How to Configure the Group Policy on Client Computers](https://docs.microsoft.com/en-us/previous-versions/bb530967(v=technet.10)).
+   > The WUA also checks whether the **Allow signed content from intranet Microsoft update service location** Group Policy setting is enabled on the local computer. This policy setting must be enabled for WUA to scan for the updates that were created and published with Updates Publisher. For more information about enabling this Group Policy setting, see [How to Configure the Group Policy on Client Computers](https://docs.microsoft.com/previous-versions/bb530967(v=technet.10)).
 
 
 

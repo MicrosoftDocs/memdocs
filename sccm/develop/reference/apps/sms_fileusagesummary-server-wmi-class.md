@@ -9,10 +9,11 @@ ms.assetid: 8d8a7a1d-1ba4-4867-b1b5-042e186e5656
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_FileUsageSummary Server WMI Class
-The `SMS_FileUsageSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that provides a usage summary of a metered file.  
+The `SMS_FileUsageSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides a usage summary of a metered file.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -85,11 +86,8 @@ Class SMS_FileUsageSummary : SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Software Metering Server WMI Classes](../../../develop/reference/apps/software-metering-server-wmi-classes.md)

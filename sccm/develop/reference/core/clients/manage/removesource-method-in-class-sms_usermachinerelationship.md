@@ -9,10 +9,11 @@ ms.assetid: 683ee78e-5a8f-480c-8c95-db1333178c98
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # RemoveSource Method in Class SMS_UserMachineRelationship
-The `RemoveSource` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, removes a source for the relationship between a user and a device.  
+The `RemoveSource` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes a source for the relationship between a user and a device.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -47,4 +48,3 @@ sint32 RemoveSource(
 
 ## See Also  
  [SMS_Application Server WMI Class](../../../../../develop/reference/apps/sms_application-server-wmi-class.md)   
- [Application Model Server WMI Classes](../../../../../develop/reference/apps/application-management-server-wmi-classes.md)

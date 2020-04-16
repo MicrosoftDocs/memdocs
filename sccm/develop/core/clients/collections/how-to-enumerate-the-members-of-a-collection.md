@@ -9,10 +9,11 @@ ms.assetid: b6405754-0475-4a07-a6ff-1adc76de3815
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Enumerate the Members of a Collection
-In System Center Configuration Manager, the preferred method to enumerate through a collection is to use `SMS_FullCollectionMembership Server WMI Class`.  
+In Configuration Manager, the preferred method to enumerate through a collection is to use `SMS_FullCollectionMembership Server WMI Class`.  
 
  **Query 1: SMS_FullCollectionMembership**: This example shows how to enumerate the members of the All Systems (SMS00001) collection by using the `SMS_FullCollectionMembership Server WMI Class`.  
 
@@ -191,8 +192,5 @@ public void EnumerateCollectionMembers(WqlConnectionManager connection)
 ## See Also  
  [SMS_CollectionMember_a Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionmember_a-server-wmi-class.md)   
  [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)   
- [Configuration Manager Collections](../../../../develop/core/clients/collections/collections.md)   
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
- [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
- [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)   
- [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+ [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)

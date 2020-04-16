@@ -1,24 +1,27 @@
 ---
-title: "SMS_PolicyAgentConfig Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_PolicyAgentConfig class
+titleSuffix: Configuration Manager
+ms.date: 07/26/2019
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 56f1a21f-3f6d-47b9-924a-ebb47ff49bd5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# SMS_PolicyAgentConfig Server WMI Class
-The `SMS_PolicyAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents how the client policy system is configured. These settings affect which policies are retrieved, when and how often they are retrieved, and how the client policy processing component takes action on policy updates.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+
+---
+
+# SMS_PolicyAgentConfig server WMI class
+
+The `SMS_PolicyAgentConfig` WMI class is an SMS Provider server class in Configuration Manager. It represents how the client policy system is configured. These settings affect which policies are retrieved, when and how often they're retrieved, and how the client policy processing component takes action on policy updates.  
+
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
 ## Syntax  
 
-```  
+```MOF
 Class SMS_PolicyAgentConfig : SMS_ClientAgentConfig_BaseClass  
 {  
     UInt32 AgentID;  
@@ -26,6 +29,7 @@ Class SMS_PolicyAgentConfig : SMS_ClientAgentConfig_BaseClass
     Boolean PolicyEnableUserAuthForAllUserPolicies;  
     Boolean PolicyEnableUserGroupSupport;  
     Boolean PolicyEnableUserPolicyOnInternet;  
+    Boolean PolicyEnableUserPolicyOnTS;  
     Boolean PolicyEnableUserPolicyPolling;  
     UInt32 PolicyRequestAssignmentTimeout;  
     UInt32 PolicyTimeDelayBeforeUserPolicyRefreshAtLogonOrUnlock;  
@@ -35,27 +39,31 @@ Class SMS_PolicyAgentConfig : SMS_ClientAgentConfig_BaseClass
 };  
 ```  
 
-## Methods  
- The `SMS_PolicyAgentConfig` class does not define any methods.  
+## Methods
 
-## Properties  
- `AgentID`  
- Data type: `UInt32`  
+The `SMS_PolicyAgentConfig` class doesn't define any methods.  
 
- Access type: Read-only  
+## Properties
 
- Qualifiers: [key, read]  
+### `AgentID`
 
- Identifies the client agent component. The Policy Agent ID is 13.  
+Data type: `UInt32`  
 
- `PolicyDownloadMethod`  
- Data type: `String`  
+Access type: Read-only  
 
- Access type: Read/Write  
+Qualifiers: [key, read]  
 
- Qualifiers: none  
+Identifies the client agent component. The policy agent ID is 13.  
 
- Method used by the Policy Agent to download policy files. Possible values are listed below. This value can only be NULL if PolicyRequestTarget is NULL. This value should not be changed.  
+### `PolicyDownloadMethod`
+
+Data type: `String`  
+
+Access type: Read/Write  
+
+Qualifiers: none  
+
+Method used by the policy agent to download policy files. Possible values are listed below. This value can only be NULL if PolicyRequestTarget is NULL. This value shouldn't be changed.  
 
 |||  
 |-|-|  
@@ -63,93 +71,113 @@ Class SMS_PolicyAgentConfig : SMS_ClientAgentConfig_BaseClass
 |HTTP|Download policy files synchronously by using direct HTTP. Policy paths must be HTTP URLs.|  
 |BITS|Drizzle policy files asynchronously by using the Data Transfer Service. Policy paths must be HTTP URLs.|  
 
- `PolicyEnableUserAuthForAllUserPolicies`  
- Data type: `Boolean`  
+### `PolicyEnableUserAuthForAllUserPolicies`
 
- Access type: Read/Write  
+Data type: `Boolean`  
 
- Qualifiers: none  
+Access type: Read/Write  
 
- `true` when the policy agent requests policies specific for users on the computer and enforces user authentication with the management point.  
+Qualifiers: none  
 
- `PolicyEnableUserGroupSupport`  
- Data type: `Boolean`  
+`true` when the policy agent requests policies specific for users on the computer and enforces user authentication with the management point.  
 
- Access type: Read/Write  
+### `PolicyEnableUserGroupSupport`
 
- Qualifiers: none  
+Data type: `Boolean`  
 
- `true` if the Policy Agent sends user group information when requesting a user policy.  
+Access type: Read/Write  
 
- `PolicyEnableUserPolicyOnInternet`  
- Data type: `Boolean`  
+Qualifiers: none  
 
- Access type: Read/Write  
+`true` if the Policy Agent sends user group information when requesting a user policy.  
 
- Qualifiers: none  
+### `PolicyEnableUserPolicyOnInternet`
 
- `true` to enable user policy requests from internet clients.  
+Data type: `Boolean`  
 
- `PolicyEnableUserPolicyPolling`  
- Data type: `Boolean`  
+Access type: Read/Write  
 
- Access type: Read/Write  
+Qualifiers: none  
 
- Qualifiers: none  
+`true` to enable user policy requests from internet clients.  
 
- `true` to enable user policy polling.  
+### `PolicyEnableUserPolicyOnTS`
 
- `PolicyRequestAssignmentTimeout`  
- Data type: `UInt32`  
+<!--3556025-->
+Data type: `Boolean`  
 
- Access type: Read/Write  
+Access type: Read/Write  
 
- Qualifiers: none  
+Qualifiers: none  
 
- Timeout for the policy request assignment.  
+Starting in version 1906, set to `true` to enable user policy on a terminal server, such as Windows Virtual Desktop. User policy is disabled by default on these devices to help client performance. If you enable this property, you accept any potential performance impact to these devices.
 
- `PolicyTimeDelayBeforeUserPolicyRefreshAtLogonOrUnlock`  
- Data type: `UInt32`  
+If PolicyEnableUserPolicyPolling is false, this property is ignored.
 
- Access type: Read/Write  
+### `PolicyEnableUserPolicyPolling`
 
- Qualifiers: none  
+Data type: `Boolean`  
 
- The amount of time in milliseconds before the policy agent will automatically retrieve new user policies after unlocking the desktop, or after log on.  
+Access type: Read/Write  
 
- `PolicyTimeUntilAck`  
- Data type: `UInt32`  
+Qualifiers: none  
 
- Access type: Read/Write  
+`true` to enable user policy polling.  
 
- Qualifiers: none  
+### `PolicyRequestAssignmentTimeout`
 
- The time that must elapse before the policy is acknowledged.  
+Data type: `UInt32`  
 
- `PolicyTimeUntilExpire`  
- Data type: `UInt32`  
+Access type: Read/Write  
 
- Access type: Read/Write  
+Qualifiers: none  
 
- Qualifiers: none  
+Timeout for the policy request assignment.  
 
- The number of days that the Policy Agent should wait since it last received a ReplyAssignments message from the authority before removing its policy. At half this time, the Policy Agent begins requesting acknowledgments. If this value is NULL, the policy never expires.  
+### `PolicyTimeDelayBeforeUserPolicyRefreshAtLogonOrUnlock`
 
- `PolicyTimeUntilUpdateActualConfig`  
- Data type: `UInt32`  
+Data type: `UInt32`  
 
- Access type: Read/Write  
+Access type: Read/Write  
 
- Qualifiers: none  
+Qualifiers: none  
 
- The time that must elapse before the actual configuration is updated.  
+The amount of time in milliseconds before the policy agent automatically retrieves new user policies after the user signs in or unlocks the desktop.  
 
-## Remarks  
+### `PolicyTimeUntilAck`
 
-## Requirements  
+Data type: `UInt32`  
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+Access type: Read/Write  
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
+Qualifiers: none  
+
+The time that must elapse before the policy is acknowledged.  
+
+### `PolicyTimeUntilExpire`
+
+Data type: `UInt32`  
+
+Access type: Read/Write  
+
+Qualifiers: none  
+
+The number of days that the policy agent should wait since it last received a ReplyAssignments message from the authority before removing its policy. At half this time, the policy agent begins requesting acknowledgments. If this value is NULL, the policy never expires.  
+
+### `PolicyTimeUntilUpdateActualConfig`
+
+Data type: `UInt32`  
+
+Access type: Read/Write  
+
+Qualifiers: none  
+
+The time that must elapse before the actual configuration is updated.  
+
+## Runtime requirements
+
+For more information, see [Configuration Manager server runtime requirements](/sccm/develop/core/reqs/server-runtime-requirements).  
+
+## Development requirements
+
+For more information, see [Configuration Manager server development requirements](/sccm/develop/core/reqs/server-development-requirements).

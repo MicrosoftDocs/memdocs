@@ -9,7 +9,8 @@ ms.assetid: c17604c0-fa60-4b94-b42a-07dcfe9a70a7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ClearContextHandle Method in Class SMS_ContextMethods
 The `ClearContextHandle` method, in Configuration Manager, clears cached context data that is associated with the specified context handle.  

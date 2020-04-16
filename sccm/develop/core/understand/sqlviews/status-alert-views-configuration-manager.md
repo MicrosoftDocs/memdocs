@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Information about Configuration Manager component behavior and data flow.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 40851148-f8ff-4959-b884-164fec0563e7
 author: aczechowski
 ms.author: aaroncz

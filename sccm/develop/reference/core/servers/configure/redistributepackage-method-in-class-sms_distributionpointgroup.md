@@ -9,10 +9,11 @@ ms.assetid: 0eda3c97-28a6-481c-8af4-6dfbd7942bf7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # ReDistributePackage Method in Class SMS_DistributionPointGroup
-The `ReDistributePackage` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, redistributes a package to all of the member distribution points.  
+The `ReDistributePackage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, redistributes a package to all of the member distribution points.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -47,4 +48,3 @@ sint32 ReDistributePackage (
 
 ## See Also  
  [SMS_Application Server WMI Class](../../../../../develop/reference/apps/sms_application-server-wmi-class.md)   
- [Application Model Server WMI Classes](../../../../../develop/reference/apps/application-management-server-wmi-classes.md)

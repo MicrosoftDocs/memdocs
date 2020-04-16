@@ -9,10 +9,11 @@ ms.assetid: 9cfacf13-1d30-4a0c-9453-aaa3e9aa677b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # RemoveDistributionPoints Method in Class SMS_DistributionPointGroup
-The `RemoveDistributionPoints` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, removes distribution points from this distribution point group.  
+The `RemoveDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes distribution points from this distribution point group.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -55,4 +56,3 @@ sint32 RemoveDistributionPoints(
 
 ## See Also  
  [SMS_Application Server WMI Class](../../../../../develop/reference/apps/sms_application-server-wmi-class.md)   
- [Application Model Server WMI Classes](../../../../../develop/reference/apps/application-management-server-wmi-classes.md)

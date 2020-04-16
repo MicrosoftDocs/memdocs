@@ -9,10 +9,11 @@ ms.assetid: bc7ee810-933e-403f-af2d-da75f4c17c1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Enable and Disable Remote Tools
-You enable or disable the Remote Tools Client Agent, in System Center Configuration Manager, by modifying the site control file settings.  
+You enable or disable the Remote Tools Client Agent, in Configuration Manager, by modifying the site control file settings.  
 
 ### To enable or disable the Remote Tools Client Agent  
 
@@ -149,7 +150,7 @@ public void EnableDisableRemoteControlClientAgent(WqlConnectionManager connectio
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+ [Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [About the Configuration Manager Site Control File](../../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)   

@@ -1,23 +1,24 @@
 ---
 title: "Capabilities in Technical Preview 1703"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1703."
+description: "Learn about features available in the Technical Preview for Configuration Manager, version 1703."
 ms.date: 03/24/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 2e801f8c-d331-41ee-8f27-908448fc0951
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Capabilities in Technical Preview 1703 for System Center Configuration Manager
+# Capabilities in Technical Preview 1703 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1703. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1703. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
 
 
 **The following are new features you can try out with this version.**  
@@ -38,7 +39,6 @@ You can now deploy licensed apps to devices as well as users. Depending on the a
 |1702 and later|Yes|Device|Device license|
 |1702 and later|No|Device|User license|
 
-For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
 ## Direct links to applications in Software Center
 
@@ -53,13 +53,13 @@ Use the following URL format to open Software Center to a particular application
 
 ### How to get the application identifier of an application.
 
-1.	In the Configuration Manager console, click **Software Library**.
-2.	In the Software Library workspace, expand **Application Management**, and then click **Applications**.
-3.	In the **Applications** view, right-click one of the column headers, and then, from the list, select **CI Unique ID**. You’ll see that the unique ID of each application is now shown in the list.
-4.	Note the **CI Unique ID** of the application you want to provide a link to, for example:
+1. In the Configuration Manager console, click **Software Library**.
+2. In the Software Library workspace, expand **Application Management**, and then click **Applications**.
+3. In the **Applications** view, right-click one of the column headers, and then, from the list, select **CI Unique ID**. You’ll see that the unique ID of each application is now shown in the list.
+4. Note the **CI Unique ID** of the application you want to provide a link to, for example:
 **ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
-5.	Then, remove any text following the application GUID, in this case **/2**. This leaves you with the application identifier.
-6.	Finally, to finish constructing the link, precede it with **Softwarecenter:SoftwareID=**. Using the example above, the final link will read:
+5. Then, remove any text following the application GUID, in this case **/2**. This leaves you with the application identifier.
+6. Finally, to finish constructing the link, precede it with **Softwarecenter:SoftwareID=**. Using the example above, the final link will read:
 **Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**.
 
 By using this link, end users can open Software Center directly to the application you specified.
@@ -80,17 +80,17 @@ Technical preview 1703 introduces the **Configure Azure Services** wizard. This 
 
 With technical preview 1703, only Windows Store for Business (WSfB) is configured by using this wizard.  Other cloud services are configured by using their separate workflows.
 
--	Use the information in this preview topic to replace the configuration steps found in the [Set up Windows Store for Business synchronization](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_setup) section of the Current Branch topic [Manage apps from the Windows Store for Business with System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+- Use the information in this preview topic to replace the configuration steps found in the [Set up Windows Store for Business synchronization](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_setup) section of the Current Branch topic [Manage apps from the Windows Store for Business with Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
--	For more information about web apps, see [Authentication and authorization in Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview), and [Web Apps overview](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
+- For more information about web apps, see [Authentication and authorization in Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview), and [Web Apps overview](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
 
 ### Prerequisites and planning
 When you set up a connection between Configuration Manager and the Windows Store for Business, you must provide a folder where app content synchronized from the store will be kept. To ensure that this folder is secure and that its content can be deployed to devices, make sure the following permissions are in place:
--	The computer on which you install the service connection point site system role (the top-level site in the hierarchy) must have read and write permissions to the folder you specified when using the **Computer$** account.  
+- The computer on which you install the service connection point site system role (the top-level site in the hierarchy) must have read and write permissions to the folder you specified when using the **Computer$** account.  
 
--	The app author must have read permissions to the folder you specified.  
+- The app author must have read permissions to the folder you specified.  
 
--	The **Computer$** account of each computer that hosts an instance of the SMS Provider must be able to use the folder you specified.
+- The **Computer$** account of each computer that hosts an instance of the SMS Provider must be able to use the folder you specified.
 
 In Azure Active Directory, register Configuration Manager as a web application or Web API management tool. This creates the client ID that you will need later.
 
@@ -136,25 +136,21 @@ This version introduces the ability to expand and collapse task sequence groups.
 
 
 ## Client settings to configure Windows Analytics for Upgrade Readiness
-Beginning with this version, you can use device client settings to simplify the configuration of the Windows telemetry necessary to use [Windows Analytics](https://www.microsoft.com/en-us/WindowsForBusiness/windows-analytics) solutions like [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) with Configuration Manager. Configuration Manager can retrieve data from Windows Analytics that can provide valuable insights into the current state of your environment based on the Windows telemetry data reported by your client computers. Windows telemetry data is reported by client computers to the Windows telemetry service, and then relevant data is subsequently transferred to Windows Analytics solutions that are hosted in one of your organization's OMS workspaces. Upgrade Readiness is a Windows Analytics solution that can help you prioritize decisions about Windows upgrades for your managed devices.
-
-For information about Windows telemetry settings, see [Configure Windows telemetry in your organization](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization).
+Beginning with this version, you can use device client settings to simplify the configuration of the Windows diagnostic data necessary to use Windows Analytics solutions like Upgrade Readiness with Configuration Manager. Configuration Manager can retrieve data from Windows Analytics that can provide valuable insights into the current state of your environment based on the Windows diagnostic data reported by your client computers. Windows diagnostic data is reported by client computers to the Windows diagnostic service, and then relevant data is subsequently transferred to Windows Analytics solutions that are hosted in one of your organization's OMS workspaces. Upgrade Readiness is a Windows Analytics solution that can help you prioritize decisions about Windows upgrades for your managed devices.
 
 ### Prerequisites
-- You must have configured your site to use the Upgrade Readiness cloud service. For more information see [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)
+- You must have configured your site to use the Upgrade Readiness cloud service.
 
 ### Configure Windows Analytics client settings
 To configure Windows Analytics, in the Configuration Manager console go to **Administration** > **Client Settings**, double-click **Create Custom Device Client Settings** and then check **Windows Analytics**.  
 
 Then, configure the following after navigating to the **Windows Analytics** settings tab:
 - **Commercial ID**  
-The commercial ID key maps information from devices you manage to the OMS workspace that hosts your organization's Windows Analytics data. If you have already configured a commercial ID key for use with Upgrade Readiness, use that ID. If you do not yet have a commercial ID key, see [Generate your commercial ID key]( https://technet.microsoft.com /itpro/windows/deploy/upgrade-readiness-get-started#generate-your-commercial-id-key).
+The commercial ID key maps information from devices you manage to the OMS workspace that hosts your organization's Windows Analytics data. If you have already configured a commercial ID key for use with Upgrade Readiness, use that ID. If you do not yet have a commercial ID key, generate your commercial ID key.
 
-- Set a **Telemetry level for Windows 10 devices**   
-For information about what is collected by each Windows 10 telemetry level, see  [Configure Windows telemetry in your organization]( https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization#telemetry-levels).
+- Set a **Diagnostic data level for Windows 10 devices**
 
 - Choose to **opt-in to commercial data collection on Windows 7, 8 and 8.1 devices**   
-For information about data collected from these operating systems when you opt-in, see download  the [Windows 7, Windows 8, and Windows 8.1 appraiser telemetry events and fields](https://go.microsoft.com/fwlink/?LinkID=822965) pdf file from Microsoft.
 
 - **Configure Internet Explore data collection**
-On devices running Windows 8.1 or earlier, Internet Explorer data collection can allow Upgrade Readiness to detect web app incompatibilities that could prevent a smooth upgrade to Windows 10. Internet Explorer data collection can be enabled on a per internet zone basis. For more information about internet zones, see [About URL Security Zones](https://msdn.microsoft.com/en-us/library/ms537183(v=vs.85).aspx).
+On devices running Windows 8.1 or earlier, Internet Explorer data collection can allow Upgrade Readiness to detect web app incompatibilities that could prevent a smooth upgrade to Windows 10. Internet Explorer data collection can be enabled on a per internet zone basis.

@@ -4,13 +4,14 @@ titleSuffix: Configuration Manager
 description: Understand the prerequisites for the two primary ways for you to setup co-management.
 ms.date: 06/27/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology: configmgr-comanage
 ms.topic: conceptual
 ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Paths to co-management
@@ -33,7 +34,7 @@ Here's what you need to set it up:
     - One of the following [Azure AD hybrid identity options](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin):  
        - [Password hash synchronization](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) with [Seamless Single Sign-on (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
        - [Pass-through authentication](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta) with [Seamless Single Sign-on (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
-       - [Federated SSO (with Active Directory Federation Services (AD FS)) ](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
+       - [Federated SSO (with Active Directory Federation Services (AD FS))](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
     - Azure AD Connect
     - Azure AD Premium license
     - Configure hybrid Azure AD-join (choose one option):

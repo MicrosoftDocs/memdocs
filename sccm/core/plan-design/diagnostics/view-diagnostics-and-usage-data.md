@@ -1,44 +1,58 @@
 ---
-title: "View diagnostics data"
-titleSuffix: "Configuration Manager"
-description: "View diagnostic and usage data to confirm that your System Center Configuration Manager hierarchy contains no sensitive information."
-ms.date: 3/27/2017
+title: View diagnostics data
+titleSuffix: Configuration Manager
+description: View diagnostic and usage data to confirm that your Configuration Manager hierarchy contains no sensitive information.
+ms.date: 12/23/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 594eb284-0d93-4c5d-9ae6-f0f71203682a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
-# How to view diagnostics and usage data for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# How to view diagnostics and usage data for Configuration Manager
 
-You can view diagnostic and usage data from your System Center Configuration Manager hierarchy to confirm that no sensitive or identifiable information is included. Telemetry data is summarized and stored in the **TEL_TelemetryResults** table of the site database and is formatted to be programmatically usable and efficient. Although the following options give you a view of the exact data sent to Microsoft, they are not intended to be used for other purposes, like data analysis.  
+*Applies to: Configuration Manager (current branch)*
 
-Use the following SQL command to view the contents of this table and show the exact data that is sent. (You can also export this data to a text file.):  
+You can view diagnostic and usage data from your Configuration Manager hierarchy to confirm that it includes no sensitive or identifiable information. The site summarizes and stores its diagnostic data in the **TEL_TelemetryResults** table of the site database. It formats the data to be programmatically usable and efficient.
 
--   **SELECT \* FROM TEL_TelemetryResults**  
+The information in this article gives you a view of the exact data sent to Microsoft. It's not intended to be used for other purposes, like data analysis.  
 
-> [!NOTE]  
->  Before you install version 1602, the table that stores telemetry data is **TelemetryResults**.  
+## View data in database
 
-When the service connection point is in offline mode, you can use the service connection tool to export the current diagnostics and usage data to a comma-separated values (CSV) file. Run the service connection tool on the service connection point by using the **-Export** parameter.  
+Use the following SQL command to view the contents of this table and show the exact data that's sent:  
 
-##  <a name="bkmk_hashes"></a> One-way hashes  
-Some data consists of strings of random alphanumeric characters. Configuration Manager uses the SHA-256 algorithm, which uses one-way hashes, to ensure that we do not collect potentially sensitive data. The algorithm leaves data in a state where it can still be used for correlation and comparison purposes. For example, instead of collecting the names of tables in the site database, a one-way hash is captured for each table name. This ensures that any custom table names that you created or product add-ons from others are not visible. We can then do the same one-way hash of the SQL table names that ship by default in the product and compare the results of the two queries to determine the deviation of your database schema from the product default. This is then used to improve updates that require changes to the SQL schema.  
+``` SQL
+SELECT * FROM TEL_TelemetryResults
+```
 
-When viewing the raw data, a common hashed value will appear in each row of data. This is the hierarchy ID. This hashed value is used to ensure that data is correlated with the same hierarchy without identifying the customer or source.  
+## Export the data
 
-#### To see how the one-way hash works  
+When the service connection point is in offline mode, use the service connection tool to export the current data to a comma-separated values (CSV) file. Run the service connection tool on the service connection point with the **-Export** parameter.
 
-1.  Get your hierarchy ID by running the following SQL statement in SQL Management Studio against the Configuration Manager database: **select [dbo].[fnGetHierarchyID]\(\)**  
+For more information, see [Use the service connection tool](/configmgr/core/servers/manage/use-the-service-connection-tool).
 
-2.  Use the following Windows PowerShell script to do the one-way hash of the GUID that's obtained from the database. You can then compare this against the hierarchy ID in the raw data to see how we obscure this data.  
+## <a name="bkmk_hashes"></a> One-way hashes
 
-    ```  
+Some data consists of strings of random alphanumeric characters. Configuration Manager uses the SHA-256 algorithm to create one-way hashes. This process makes sure that Microsoft doesn't collect potentially sensitive data. The hashed data can still be used for correlation and comparison purposes.
+
+For example, instead of collecting the names of tables in the site database, it captures the one-way hash for each table name. This behavior makes sure that any custom table names aren't visible. Microsoft then does the same one-way hash process of the default SQL table names. Comparing the results of the two queries determines the deviation of your database schema from the product default. This information is then used to improve updates that require changes to the SQL schema.  
+
+When you view the raw data, a common hashed value appears in each row of data. This hash is the hierarchy ID. It's used to correlate data with the same hierarchy without identifying the customer or source.
+
+### How the one-way hash works
+
+1. Get your hierarchy ID by running the following SQL query in SQL Management Studio against the Configuration Manager database:
+
+    ``` SQL
+    select [dbo].[fnGetHierarchyID]()
+    ```
+
+2. Use the following Windows PowerShell script to do the one-way hash of your hierarchy ID.  
+
+    ``` PowerShell
     Param( [Parameter(Mandatory=$True)] [string]$value )  
       $guid = [System.Guid]::NewGuid()  
       if( [System.Guid]::TryParse($value,[ref] $guid) -eq $true ) {  
@@ -47,13 +61,20 @@ When viewing the raw data, a common hashed value will appear in each row of data
     } else {  
       #otherwise hash as string (unicode)  
       $ue = New-Object System.Text.UnicodeEncoding  
-      $bytesToHash = $ue.GetBytes($value)   
+      $bytesToHash = $ue.GetBytes($value)
     }  
-      # Load Hash Provider (https://en.wikipedia.org/wiki/SHA-2)   
-    $hashAlgorithm = [System.Security.Cryptography.SHA256Cng]::Create()    
-    # Hash the input   
-    $hashedBytes = $hashAlgorithm.ComputeHash($bytesToHash)              
-    # Base64 encode the result for transport   
-    $result = [Convert]::ToBase64String($hashedBytes)    
-    return $result   
-    ```  
+      # Load Hash Provider (https://en.wikipedia.org/wiki/SHA-2)
+    $hashAlgorithm = [System.Security.Cryptography.SHA256Cng]::Create()
+    # Hash the input
+    $hashedBytes = $hashAlgorithm.ComputeHash($bytesToHash)
+    # Base64 encode the result for transport
+    $result = [Convert]::ToBase64String($hashedBytes)
+    return $result
+    ```
+
+3. Compare the script output against the GUID in the raw data. This process shows how the data is obscured.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview)

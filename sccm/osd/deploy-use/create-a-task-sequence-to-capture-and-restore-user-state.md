@@ -10,12 +10,13 @@ ms.assetid: d566d85c-bf7a-40e7-8239-57640a1db5f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create a task sequence to capture and restore user state in Configuration Manager
 
- *Applies to: System Center Configuration Manager (Current Branch)*
+ *Applies to: Configuration Manager (current branch)*
 
  Use Configuration Manager task sequences to capture and restore the user state data in OS deployment scenarios. In these scenarios, you want to retain the user state of the current OS. Depending on the type of task sequence you create, the capture and restore steps might be automatically added as part of the task sequence. In other scenarios, you might need to manually add the capture and restore steps to the task sequence. This article provides the steps that you must add to an existing task sequence to capture and restore user state data.  
 
@@ -23,9 +24,9 @@ ms.collection: M365-identity-device-management
 
 ## Task sequence steps  
 
- To capture and restore the user state, add the following steps to the task sequence:  
+To capture and restore the user state, add the following steps to the task sequence:  
 
- - [Request State Store](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore): If you store the user state on the state migration point, you need this step.  
+- [Request State Store](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore): If you store the user state on the state migration point, you need this step.  
 
 - [Capture User State](/sccm/osd/understand/task-sequence-steps#BKMK_CaptureUserState): This step captures the user state data. It then stores the data on either the state migration point or the local disk using hardlinks.  
 

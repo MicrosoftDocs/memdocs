@@ -9,10 +9,11 @@ ms.assetid: 0386de30-a4f7-4e89-a92f-31692cc62d46
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_G_System Server WMI Class
-The `SMS_G_System` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that serves as the abstract base class for all hardware and software system classes, for example, [SMS_G_System_CI_ComplianceState Server WMI Class](../../../../../develop/reference/compliance/sms_g_system_ci_compliancestate-server-wmi-class.md).  
+The `SMS_G_System` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the abstract base class for all hardware and software system classes, for example, [SMS_G_System_CI_ComplianceState Server WMI Class](../../../../../develop/reference/compliance/sms_g_system_ci_compliancestate-server-wmi-class.md).  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -47,12 +48,11 @@ Class SMS_G_System : SMS_Group
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Resource Management Server WMI Classes](../../../../../develop/reference/core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md)   
  [SMS_Group Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_group-server-wmi-class.md)

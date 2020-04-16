@@ -9,7 +9,8 @@ ms.assetid: e22cf0ef-08c1-41e7-9627-e3e19b15b664
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_UserLogonEvents Client WMI Class
 The `CCM_UserLogonEvents` Client WMI class is a client class, in Configuration Manager, that represents a user logon event.  
@@ -59,15 +60,10 @@ class CCM_UserLogonEvents
 
  The SID of the user.  
 
-## Remarks  
-
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Client SDK WMI Classes](../../../../../develop/reference/core/clients/sdk/client-sdk-wmi-classes.md)

@@ -1,25 +1,26 @@
 ---
 title: "Capabilities in Technical Preview 1609"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1609."
+description: "Learn about features available in the Technical Preview for Configuration Manager, version 1609."
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: e2a59116-b2e5-4dd2-90eb-0b8a5eb50b56
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Capabilities in Technical Preview 1609 for System Center Configuration Manager
+# Capabilities in Technical Preview 1609 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
 
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1609. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1609. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
 
 **Known Issues in this Technical Preview:**  
 *  When you update to the Configuration Manager 1609 Technical Preview, any edition upgrade policies you have deployed will be deleted. To continue to use these policies, you must recreate and deploy them.
@@ -28,7 +29,7 @@ This article introduces the features that are available in the Technical Preview
 **The following are new features you can try out with this version.**  
 
 ## Improvements to Endpoint Protection
-Improvement to Endpoint Protection antimalware policy settings - You can now specify the level at which the Endpoint Protection Cloud Protection Service will block suspicious files. A new setting enables administrators to specify “risky” computers based on the high amounts of malware they encounter.
+Improvement to Endpoint Protection antimalware policy settings - You can now specify the level at which the Endpoint Protection Cloud Protection Service will block suspicious files. A new setting enables administrators to specify "risky" computers based on the high amounts of malware they encounter.
 
 ## Increased number of enrolled devices
 Administrators can now enable users to enroll up to 15 devices in hybrid mobile device management with Intune. The limit was 5 devices per user previously.
@@ -73,7 +74,7 @@ In this release, we've updated [Windows Store for Business integration](/sccm/ap
 
 #### Create and deploy a Configuration Manager application from the synchronized app data
 
-The procedure to create and deploy a Configuration Manager application from a paid store app is the same as for creating an application from a free app. See the section **Create and deploy a Configuration Manager application from a Windows Store for Business app** in [Manage apps from the Windows Store for Business with System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+The procedure to create and deploy a Configuration Manager application from a paid store app is the same as for creating an application from a free app. See the section **Create and deploy a Configuration Manager application from a Windows Store for Business app** in [Manage apps from the Windows Store for Business with Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
 
 #### Modify the client secret key from Azure Active Directory
@@ -87,7 +88,7 @@ The procedure to create and deploy a Configuration Manager application from a pa
 
 We've added many new settings you can use in your configuration items for various device platforms.
 These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager.
-If you need help with any of these settings, open [Manage settings and features on your devices with Microsoft Intune policies](https://docs.microsoft.com/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) and then select the settings subtopic for the platform you want.
+If you need help with any of these settings, open [Manage settings and features on your devices with Microsoft Intune policies](/mem/intune/configuration/device-profiles) and then select the settings subtopic for the platform you want.
 
 
 ### New settings for Android devices
@@ -235,13 +236,13 @@ The following sections detail the changes introduced with this preview, how the 
 The following are key changes to boundary groups and how clients find content. Many of these changes and concepts work together.
 - **Configurations for Fast or Slow are removed:** You no longer configure individual distribution points to be fast or slow.  Instead, each site system associated with a boundary group is treated the same. Because of this change, the **References** tab of the boundary group properties no longer supports the configuration of Fast or Slow.
 - **New default boundary group at each site:**  Each primary site has a new default boundary group named ***Default-Site-Boundary-Group\<sitecode>***.  When a client is not on a network location that is assigned to a boundary group, that client will use the site systems associated with the default group from its assigned site. Plan to use this boundary group as a replacement to the concept of fallback content location.    
-  -  **‘Allow fallback source locations for content’** is removed: You no longer explicitly configure a distribution point to be used for fallback, and the options to set this are removed from the UI.
+  -  **'Allow fallback source locations for content'** is removed: You no longer explicitly configure a distribution point to be used for fallback, and the options to set this are removed from the UI.
 
   Additionally, the result of setting **Allow clients to use a fallback source location for content** on a deployment type for applications has changed. This setting on a deployment type now enables a client to use the default site boundary group as a content source location.
 
   -  **Boundary groups relationships:** Each boundary group can be linked to one or more additional boundary groups. These links form relationships that are configured on the new boundary group properties tab named **Relationships**:
   -   Each boundary group that a client is directly associated with is called a **current** boundary group.  
-  -   Any boundary group a client can use due to an association between that client’s *current* boundary group and another group is called a **neighbor** boundary group.
+  -   Any boundary group a client can use due to an association between that client's *current* boundary group and another group is called a **neighbor** boundary group.
   -  It is on the **Relationships** tab that you add boundary groups that can be used as a *neighbor* boundary group. You can also configure a time in minutes that determines when a client that fails to find content from a distribution point in the *current* group will begin to search content locations from those *neighbor* boundary groups.
 
       When you add or change a boundary group configuration, you will have the option to block fallback to that specific boundary group from the current group you are configuring.
@@ -255,7 +256,7 @@ The following are key changes to boundary groups and how clients find content. M
 
 - **Clients attempt to get content from each distribution point for up to 2 minutes:** When a client searches for a content source location, it attempts to access each distribution point for 2 minutes before then trying another distribution point. This is a change from previous versions where clients attempted to connect to a distribution point for up to 2 hours.
 
-  - The first distribution point that a client attempts to use is randomly selected from the pool of available distribution points in the client’s *current* boundary group (or groups).
+  - The first distribution point that a client attempts to use is randomly selected from the pool of available distribution points in the client's *current* boundary group (or groups).
 
   - After two minutes, if the client has not found the content, it switches to a new distribution point and attempts to get content from that server. This process repeats every two minutes until the client finds the content or reaches the last server in its pool.
 
@@ -269,45 +270,45 @@ The following are key changes to boundary groups and how clients find content. M
 
 ### How the new model works
 When you configure boundary groups, you associate  boundaries (network locations) and site system roles, like distribution points, to the boundary group. This helps link clients to site system servers like distribution points that are located near the clients on the network.   
--	You can assign the same boundary to multiple boundary groups
--	Site system servers, like distribution points, can be associated to multiple boundary groups, making them available to a wider range of network locations
--	If a distribution point is not associated to a boundary group, clients will not be able to use that distribution point as a content source location.
+- You can assign the same boundary to multiple boundary groups
+- Site system servers, like distribution points, can be associated to multiple boundary groups, making them available to a wider range of network locations
+- If a distribution point is not associated to a boundary group, clients will not be able to use that distribution point as a content source location.
 
 Beginning with this technical preview, you define boundary group relationships to configure fallback behavior for content source locations. This new behavior is configured on the new **Relationships** tab of the boundary group properties and replaces configuring site systems to be slow or fast, and configuring a boundary group to allow fallback source location for content.
 
 On the Relationships tab you add other boundary groups to configure a relationship to those groups. Each relationship is a one-way link from the **current** boundary group to the boundary group you add, which is called a **neighbor**. For each link you create, you can configure distribution points with a   fallback time in minutes. This time is used to determine after how long clients in the *current* boundary group can begin using distribution points in the *neighbor* boundary group if they are unable to find a valid content source location from their current boundary group.
 
-When a client can’t find content and begins to search locations from neighbor boundary groups, it increases the pool of available distribution points for that client in a controlled manner.  
+When a client can't find content and begins to search locations from neighbor boundary groups, it increases the pool of available distribution points for that client in a controlled manner.  
 
--	A boundary group can have more than one Relationship. This lets you configure fallback to different neighbors to occur after different periods of time.
--	Clients will only fallback to a boundary group that is a direct neighbor of their current boundary group.
--	When a client is a member of multiple boundary groups, the current boundary group is defined as a union of all that client’s boundary groups.  That client can then fallback to a neighbor of any of those original boundary groups.
+- A boundary group can have more than one Relationship. This lets you configure fallback to different neighbors to occur after different periods of time.
+- Clients will only fallback to a boundary group that is a direct neighbor of their current boundary group.
+- When a client is a member of multiple boundary groups, the current boundary group is defined as a union of all that client's boundary groups.  That client can then fallback to a neighbor of any of those original boundary groups.
 
 In addition to the links you define, there is an implied link that is created automatically between the boundary groups you create and the default boundary group that is automatically created for each site. This automatic link:
--	Is used by clients that are not on a boundary associated with any boundary group in your hierarchy automatically use the default boundary group from their assigned site to identify valid content source locations.   
-- 	Is a default fallback option from the current boundary group to the sites default boundary group that is used after 120 minutes.
+- Is used by clients that are not on a boundary associated with any boundary group in your hierarchy automatically use the default boundary group from their assigned site to identify valid content source locations.   
+-  Is a default fallback option from the current boundary group to the sites default boundary group that is used after 120 minutes.
 
-**Example of using the new model:** 	
+**Example of using the new model:** 
 You create three boundary groups that do not share boundaries or site system servers:
--	Group BG_A with distribution points DP_A1 and DP_A2 associated to the group
--	Group BG_B with distribution points DP_B1 and DP_B2 associated to the group
--	Group BG_C with distribution points DP_C1 and DP_C2 associated to the group
+- Group BG_A with distribution points DP_A1 and DP_A2 associated to the group
+- Group BG_B with distribution points DP_B1 and DP_B2 associated to the group
+- Group BG_C with distribution points DP_C1 and DP_C2 associated to the group
 
 You add the network locations of your clients as boundaries to only the BG_A boundary group, and you then configure relationships from that boundary group to the other two boundary groups:
--	You configure distribution points for the first *neighbor* group (BG_B) to be used after 10 minutes. This group contains distribution points DP_B1 and DP_B2. Both are well connected to the first groups boundary locations.
--	You configure the second *neighbor* group (BG_C) to be used after 20 minutes. This group contains distribution points DP_C1 and DP_C2. Both are across a WAN from the other two boundary groups.
--	You also add an additional distribution point that is located on the site server to the sites default site boundary group. This is your least preferred content source location, but it is centrally located to all your boundary groups.
+- You configure distribution points for the first *neighbor* group (BG_B) to be used after 10 minutes. This group contains distribution points DP_B1 and DP_B2. Both are well connected to the first groups boundary locations.
+- You configure the second *neighbor* group (BG_C) to be used after 20 minutes. This group contains distribution points DP_C1 and DP_C2. Both are across a WAN from the other two boundary groups.
+- You also add an additional distribution point that is located on the site server to the sites default site boundary group. This is your least preferred content source location, but it is centrally located to all your boundary groups.
 
-	Example of boundary groups and fallback times:
+  Example of boundary groups and fallback times:
 
-	 ![BG_Fallack](media/BG_Fallback.png)
+  ![BG_Fallack](media/BG_Fallback.png)
 
 
 With this configuration:
--	The client begins searching for content from distribution points in its *current* boundary group (BG_A), searching each distribution point for two minutes before switching to the next distribution point in the boundary group. The clients pool of valid content source locations includes DP_A1 and DP_A2.
--	If the client fails to find content from its *current* boundary group after searching for 10 minutes, it then adds the distribution points from the BG_B boundary group to its search. It then continues to search for content from a distribution point in its combined pool of distribution points that now includes those from both the BG_A and BG_B boundary groups. The client continues to contact each distribution point for two minutes before switching to the next distribution point from its pool. The clients pool of valid content source locations includes DP_A1, DP_A2, DP_B1, and DP_B2.
--	After an additional 10 minutes (20 minutes total) if the client still has not found a distribution point with content, it expands its pool of available distribution points to include those from the second *neighbor* group, boundary group BG_C. The client now has 6 distribution points to search (DP_A1, DP_A2, DP_B2, DP_B2, DP_C1, and DP_C2) and continues changing to a new distribution point every two minutes until content is found.
--	If the client has not found content after a total of 120 minutes, it falls back to include the *default site boundary group* as part of its continued search. Now the pool of distribution points includes all the distribution points from the three configured boundary groups and the final distribution point located on the site server computer.  The client then continues its search for content, changing distribution points every two minutes until content is found.
+- The client begins searching for content from distribution points in its *current* boundary group (BG_A), searching each distribution point for two minutes before switching to the next distribution point in the boundary group. The clients pool of valid content source locations includes DP_A1 and DP_A2.
+- If the client fails to find content from its *current* boundary group after searching for 10 minutes, it then adds the distribution points from the BG_B boundary group to its search. It then continues to search for content from a distribution point in its combined pool of distribution points that now includes those from both the BG_A and BG_B boundary groups. The client continues to contact each distribution point for two minutes before switching to the next distribution point from its pool. The clients pool of valid content source locations includes DP_A1, DP_A2, DP_B1, and DP_B2.
+- After an additional 10 minutes (20 minutes total) if the client still has not found a distribution point with content, it expands its pool of available distribution points to include those from the second *neighbor* group, boundary group BG_C. The client now has 6 distribution points to search (DP_A1, DP_A2, DP_B2, DP_B2, DP_C1, and DP_C2) and continues changing to a new distribution point every two minutes until content is found.
+- If the client has not found content after a total of 120 minutes, it falls back to include the *default site boundary group* as part of its continued search. Now the pool of distribution points includes all the distribution points from the three configured boundary groups and the final distribution point located on the site server computer.  The client then continues its search for content, changing distribution points every two minutes until content is found.
 
 By configuring the different neighbor groups to be available at different times you control when specific distribution points are added as a content source location, and when, or if, the client uses fallback to the default site boundary group as a safety net for content that is not available from any other location.
 
@@ -322,12 +323,12 @@ When you install version 1609 and update your site, the following configurations
 
   The following table identifies the new fallback behavior you can expect from the combination the original deployment settings and distribution point configurations:
 
-Original deployment configuration for “Do not run program” in slow network  |Original distribution point configuration for “Allow client to use a fallback source location for content”  |New fallback behavior  
+Original deployment configuration for "Do not run program" in slow network  |Original distribution point configuration for "Allow client to use a fallback source location for content"  |New fallback behavior  
 ---------|---------|---------
 Selected     |  Selected    |  **No fallback** - Only use the distribution points in current boundary group       
 Selected     |  Not selected|  **No fallback** - Only use the distribution points in current boundary group       
 Not selected |  Not selected|  **Fallback to neighbor** - Use the distribution points in current boundary group, and then add the distribution points from the neighbor boundary group. Unless an explicit link to the default site boundary group is configured, clients will not fallback to that group.    
-Not selected | Selected		|   **Normal fallback** - Use distribution points in current boundary group, then those from the neighbor and site default boundary groups
+Not selected | Selected |   **Normal fallback** - Use distribution points in current boundary group, then those from the neighbor and site default boundary groups
 
  All other deployment configurations result in **Normal fallback**.  
 
@@ -396,15 +397,15 @@ In an existing task sequence to install an operating system, you will add a new 
 3. Under the new group, add the **Restart Computer** task sequence step. In **Specify what to run after restart**, select **The boot image assigned to this task sequence is selected** to start the computer in Windows PE.  
 4. On the **Options** tab, add a task sequence variable as a condition where **_SMSTSInWinPE equals false**. This prevents this step from running if the computer is already in Windows PE.
 
-	![Restart Computer step](media/Restart-in-Windows-PE.png)
+    ![Restart Computer step](media/Restart-in-Windows-PE.png)
 5. Add a step to start the OEM tool that will convert the firmware from BIOS to UEFI. This will typically be a **Run Command Line** task sequence step with a command line to start the OEM tool.
-5.	Add the Format and Partition Disk task sequence step that will partition and format the hard drive. In the step, do the following:
-	1.	Create the FAT32 partition that will be converted to UEFI before the operating system is installed. Choose **GPT** for **Disk type**.
-	![Format and partition disk step](media/Format-and-partition-disk.png)
-	2.	Go to the properties for the FAT32 partition. Enter **TSUEFIDrive** in the **Variable** field. When the task sequence detects this variable, it will prepare for the UEFI transition before restarting the computer.
-	![Partition properties](media/Partition-properties.png)
-	3. Create an NTFS partition that the task sequence engine uses to save its state and to store log files.
-6.	Add the **Restart Computer** task sequence step. In **Specify what to run after restart**, select **The boot image assigned to this task sequence is selected** to start the computer in Windows PE.  
+5. Add the Format and Partition Disk task sequence step that will partition and format the hard drive. In the step, do the following:
+    1. Create the FAT32 partition that will be converted to UEFI before the operating system is installed. Choose **GPT** for **Disk type**.
+    ![Format and partition disk step](media/Format-and-partition-disk.png)
+    2. Go to the properties for the FAT32 partition. Enter **TSUEFIDrive** in the **Variable** field. When the task sequence detects this variable, it will prepare for the UEFI transition before restarting the computer.
+    ![Partition properties](media/Partition-properties.png)
+    3. Create an NTFS partition that the task sequence engine uses to save its state and to store log files.
+6. Add the **Restart Computer** task sequence step. In **Specify what to run after restart**, select **The boot image assigned to this task sequence is selected** to start the computer in Windows PE.  
 
 
 
@@ -446,4 +447,4 @@ Complete the following sections in order:
 
 
 ## See Also
-[Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md)
+[Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md)

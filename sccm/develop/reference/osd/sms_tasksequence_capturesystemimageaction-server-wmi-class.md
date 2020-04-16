@@ -9,7 +9,8 @@ ms.assetid: e6e66344-a49d-4718-90e8-002e21c8aca5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_TaskSequence_CaptureSystemImageAction Server WMI Class
 The `SMS_TaskSequence_CaptureSystemImageAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that specifies an existing network share and WIM file to use when saving the image.  
@@ -61,7 +62,7 @@ Class SMS_TaskSequence_CaptureSystemImageAction : SMS_TaskSequence_Action
 
  Password of the account specified by the `CaptureUsername` property.  
 
- The task sequence variable associated with this property is OSDCaptureAccountPassword. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDCaptureAccountPassword. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `CaptureUsername`  
  Data type: `String`  
@@ -72,7 +73,7 @@ Class SMS_TaskSequence_CaptureSystemImageAction : SMS_TaskSequence_Action
 
  A Windows account name that has permissions to the network share where the captured image will be stored, specified by `CaptureDestination`. This name is specified in "domain\username" format. To set this property, you must have write access to the destination folder.  
 
- The task sequence variable associated with this property is OSDCaptureAccount. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDCaptureAccount. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Condition`  
  Data type: `SMS_TaskSequence_Condition`  
@@ -177,12 +178,12 @@ Class SMS_TaskSequence_CaptureSystemImageAction : SMS_TaskSequence_Action
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)   
- [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md)
+## See also
+
+[SMS_TaskSequence_Action server WMI class](/sccm/develop/reference/osd/sms_tasksequence_action-server-wmi-class)

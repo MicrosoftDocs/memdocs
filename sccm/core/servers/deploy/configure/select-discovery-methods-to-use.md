@@ -4,23 +4,24 @@ titleSuffix: "Configuration Manager"
 description: "Review considerations for which methods to use and at which sites to run them."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 127ce713-d085-430f-ac7b-2701637fe126
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Select discovery methods to use for System Center Configuration Manager
+# Select discovery methods to use for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-To successfully and efficiently use discovery for System Center Configuration Manager, you must consider which methods to use and at which sites to run them.  
+To successfully and efficiently use discovery for Configuration Manager, you must consider which methods to use and at which sites to run them.  
 
  Because discovery can generate a large volume of network traffic, and the resultant discovery data records (DDRs) can use significant CPU resources during processing, use only those discovery methods that you require to meet your goals. You might start by using only one or two discovery methods, and then later enable additional methods in a controlled manner to extend the level of discovery in your environment. The information in this topic can help you make informed decisions.  
 
- For information about the different discovery methods, see [About discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/about-discovery-methods.md).  
+ For information about the different discovery methods, see [About discovery methods for Configuration Manager](../../../../core/servers/deploy/configure/about-discovery-methods.md).  
 
 ## Select methods to discover different things  
  To discover potential Configuration Manager client computers or user resources, you must enable the appropriate discovery methods. You can use different combinations of discovery methods to locate different resources, and to discover additional information about those resources. The discovery methods that you use determine the type of resources that are discovered, and which Configuration Manager services and agents are used in the discovery process. They also determine the type of information about resources that you can discover.  

@@ -10,13 +10,14 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.collection: M365-identity-device-management
+
+
 ---
 
 
 # Install and configure a software update point  
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 > [!IMPORTANT]  
@@ -71,7 +72,7 @@ ms.collection: M365-identity-device-management
 ### WSUS Server Connection Account  
  You can configure an account to be used by the site server when it connects to WSUS that runs on the software update point. When you don't configure this account, the Configuration Manager uses the computer account for the site server to connect to WSUS. Configure the WSUS Server Connection Account on the **Proxy and Account Settings** page of the wizard, or on the **Proxy and Account Settings** tab in Software update point Properties.  You can configure the account in different places of the wizard depending on the version of Configuration Manager that you use.  
 
- For more information about Configuration Manager accounts, see [Accounts used in System Center Configuration Manager](../../core/plan-design/hierarchy/accounts.md).  
+ For more information about Configuration Manager accounts, see [Accounts used](../../core/plan-design/hierarchy/accounts.md).  
 
 ## Synchronization source  
  You can configure the upstream synchronization source for software updates synchronization on the **Synchronization Source** page of the wizard, or on the **Sync Settings** tab in Software Update Point Component Properties. Your options for the synchronization source vary depending on the site.  
@@ -90,7 +91,7 @@ ms.collection: M365-identity-device-management
     > [!NOTE]  
     >  When there is a firewall between the software update point and the Internet, the firewall might need to be configured to accept the HTTP and HTTPS ports that are used for the WSUS Web site. You can also choose to restrict access on the firewall to limited domains. For more information about how to plan for a firewall that supports software updates, see [Configure firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  
 
--   **<a name="BKMK_wsussync"></a>Synchronize from an upstream data source location**: Use this setting to synchronize software updates metadata from the upstream synchronization source. The child primary sites and secondary sites are automatically configured to use the parent site URL for this setting. You have the option to synchronize software updates from an existing WSUS server. Specify a URL, such as https://WSUSServer:8531, where 8531 is the port that is used to connect to the WSUS server.  
+-   **<a name="BKMK_wsussync"></a>Synchronize from an upstream data source location**: Use this setting to synchronize software updates metadata from the upstream synchronization source. The child primary sites and secondary sites are automatically configured to use the parent site URL for this setting. You have the option to synchronize software updates from an existing WSUS server. Specify a URL, such as `https://WSUSServer:8531`, where 8531 is the port that is used to connect to the WSUS server.  
 
 -   **Do not synchronize from Microsoft Update or upstream data source**: Use this setting to manually synchronize software updates when the software update point at the top-level site is disconnected from the Internet. For more information, see [Synchronize software updates from a disconnected software update point](synchronize-software-updates-disconnected.md).  
 

@@ -9,7 +9,8 @@ ms.assetid: b12131ec-cbe0-4c93-9729-e78d904a1a11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Extending Application Management Overview
 By default, Application Management supports creating numerous deployment types such as Windows Installer, Script Installer, Microsoft Application Virtualization, Nokia SIS files and Windows Mobile Cabinet file deployment technologies. Partners that must continue to use a specific deployment technology not natively supported by Configuration Manager, can extend the Application Management model to support a custom deployment type.  
@@ -199,5 +200,4 @@ By default, Application Management supports creating numerous deployment types s
  Microsoft.ConfigurationManagement.ManagementProvider.dll  
 
 ## See Also  
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

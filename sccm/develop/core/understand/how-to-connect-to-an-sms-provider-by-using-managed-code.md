@@ -9,7 +9,8 @@ ms.assetid: 2a435561-01b7-45d5-b7cf-89fc1845025f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Connect to an SMS Provider in Configuration Manager by Using Managed Code
 To connect to a SMS Provider, use **WqlConnectionManager.Connect**. After it is connected, **WqlConnectionManager.Connect** has methods to query, create, delete, and otherwise use Configuration Manager Windows Management Instrumentation (WMI) objects.  
@@ -21,7 +22,7 @@ To connect to a SMS Provider, use **WqlConnectionManager.Connect**. After it is 
 
  If you do not have access privileges on the remote SMS Provider, or if you want to use a different user account, then you must supply user credentials for a user account that has access privileges.  
 
- **WQLConnectionManager.Connection** requires a [SmsNamedValuesDictionary](https://msdn.microsoft.com/en-us/library/microsoft.configurationmanagement.managementprovider.smsnamedvaluesdictionary.aspx) object. This can be used to store cached information such as the computer name.  
+ **WQLConnectionManager.Connection** requires a [SmsNamedValuesDictionary](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsnamedvaluesdictionary.aspx) object. This can be used to store cached information such as the computer name.  
 
  It is pre-populated with a number of values that can be used in your application.  
 
@@ -116,6 +117,6 @@ public WqlConnectionManager Connect(string serverName, string userName, string u
  [UnauthorizedAccessException](https://msdn.microsoft.com/library/system.unauthorizedaccessexception.aspx) is raised when the wrong credentials are passed to **WqlConnectionManager.Connect**.  
 
 ## See Also  
- [About the Configuration Manager Provider](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md)   
+ [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)
  [How to Add a Configuration Manager Context Qualifier Using Managed Code](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md)   
- [How to Use Configuration Manager Objects With Managed Code](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)

@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Manually deploy software updates  
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 A manual software update deployment is the process of selecting software updates from the Configuration Manager console and manually starting the deployment process. Or add selected software updates to an update group, and then manually deploy the update group. You typically use manual deployments to get your clients up-to-date with required software updates. You then use automatic deployment rules (ADR) to manage ongoing monthly software update deployments. Also use this manual method to deploy out-of-band software updates. For more information on which deployment method is right for you, see [Deploy software updates](deploy-software-updates.md).
 

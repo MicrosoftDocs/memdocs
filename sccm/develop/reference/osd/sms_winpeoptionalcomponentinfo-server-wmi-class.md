@@ -9,7 +9,8 @@ ms.assetid: 5b4d124c-2eb3-4e32-9027-c076dc27e91f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_WinPEOptionalComponentInfo Server WMI Class
 The `SMS_WinPEOptionalComponentInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents WinPE optional components information.  

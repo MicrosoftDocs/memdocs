@@ -10,11 +10,12 @@ ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Customize boot images with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Customize boot images with Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Each version of Configuration Manager supports a specific version of the Windows Assessment and Deployment Kit (Windows ADK). You can service, or customize, boot images from the Configuration Manager console when they are based on a Windows PE  version from the supported version of Windows ADK. For other boot images, you must customize them by using another method, such as using the Deployment Image Servicing and Management (DISM) command-line tool that is part of the Windows AIK and Windows ADK.  
 
@@ -32,7 +33,7 @@ Each version of Configuration Manager supports a specific version of the Windows
 
    Windows PE 3.1<sup>1</sup> and Windows PE 5  
 
-   <sup>1</sup> You can only add a boot image to Configuration Manager when it is based on Windows PE 3.1. Install the Windows AIK Supplement for Windows 7 SP1 to upgrade Windows AIK for Windows 7 (based on Windows PE 3) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). You can download Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=5188).  
+   <sup>1</sup> You can only add a boot image to Configuration Manager when it is based on Windows PE 3.1. Install the Windows AIK Supplement for Windows 7 SP1 to upgrade Windows AIK for Windows 7 (based on Windows PE 3) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). You can download Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5188).  
 
    For example, when you have Configuration Manager, you can customize boot images from Windows ADK for Windows 10 (based on Windows PE 10) from the Configuration Manager console. However, while boot images based on Windows PE 5 are supported, you must customize them from a different computer and use the version of DISM that is installed with Windows ADK for Windows 8. Then, you can add the boot image to the Configuration Manager console.  
 
@@ -48,7 +49,7 @@ Each version of Configuration Manager supports a specific version of the Windows
 
 - For Windows PE 5, see [WinPE: Add packages (Optional Components Reference)](https://msdn.microsoft.com/library/windows/hardware/dn938382\(v=vs.85\).aspx)  
 
-- For Windows PE 3.1, see the [Add a Package to a Windows PE Image](http://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) topic in the Windows 7 TechNet Documentation Library.  
+- For Windows PE 3.1, see the [Add a Package to a Windows PE Image](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) topic in the Windows 7 TechNet Documentation Library.  
 
 > [!NOTE]
 >When you boot to WinPE from a customized boot image that includes tools that you added, you can open a command prompt from WinPE and type the file name of the tool to run it. The location of these tools are automatically added to the path variable. The command prompt can only be added if the **Enable command support (testing only)** setting is selected on the **Customization** tab in the boot image properties.
@@ -60,7 +61,7 @@ Each version of Configuration Manager supports a specific version of the Windows
 
 1. Install the Windows ADK on a computer that does not have another version of Windows AIK or Windows ADK, and does not have any Configuration Manager components installed.  
 
-2. Download Windows ADK for Windows 8.1 from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=39982).  
+2. Download Windows ADK for Windows 8.1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=39982).  
 
 3. Copy the boot image (wimpe.wim) from the Windows ADK installation folder (for example, <*Installation path*>\Windows Kits\\<*version*>\Assessment and Deployment Kit\Windows Preinstallation Environment\\<*x86 or amd64*>\\<*locale*>) to a destination folder on the computer from which you will customize the boot image. This procedure uses C:\WinPEWAIK as the destination folder name.  
 
@@ -71,7 +72,7 @@ Each version of Configuration Manager supports a specific version of the Windows
     Where C:\WinPEWAIK is the folder that contains the boot image and C:\WinPEMount is the mounted folder.  
 
    > [!NOTE]
-   >  For more information about DISM, see the [DISM - Deployment Image Servicing and Management Technical Reference](http://technet.microsoft.com/library/hh824821.aspx) topic in the Windows 8.1 and Windows 8 TechNet Documentation Library.
+   >  For more information about DISM, see the [DISM - Deployment Image Servicing and Management Technical Reference](https://technet.microsoft.com/library/hh824821.aspx) topic in the Windows 8.1 and Windows 8 TechNet Documentation Library.
 
 5. After you mount the boot image, use DISM to add optional components to the boot image. In Windows PE 5, the 64-bit optional components are located in <*Installation path*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs.  
 
@@ -107,7 +108,7 @@ Each version of Configuration Manager supports a specific version of the Windows
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  For more information about the optional components that you can add to the boot image, see the [Windows PE Optional Components Reference](http://technet.microsoft.com/library/hh824926.aspx) topic in the Windows 8.1 and Windows 8 TechNet Documentation Library.  
+   >  For more information about the optional components that you can add to the boot image, see the [Windows PE Optional Components Reference](https://technet.microsoft.com/library/hh824926.aspx) topic in the Windows 8.1 and Windows 8 TechNet Documentation Library.  
 
 6. Use DISM to add specific drivers to the boot image, when required. Type the following to add drivers to the boot image:  
 
@@ -180,9 +181,9 @@ Each version of Configuration Manager supports a specific version of the Windows
 
 #### To customize a boot image that uses Windows PE 3.1  
 
-1. Install the Windows AIK on a computer that does not have another version of Windows AIK or Windows ADK, and does not have any Configuration Manager components installed. Download Windows AIK from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=5753).  
+1. Install the Windows AIK on a computer that does not have another version of Windows AIK or Windows ADK, and does not have any Configuration Manager components installed. Download Windows AIK from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5753).  
 
-2. Install the Windows AIK Supplement for Windows 7 with SP1 on the computer from step 1. Download Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=5188).  
+2. Install the Windows AIK Supplement for Windows 7 with SP1 on the computer from step 1. Download Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5188).  
 
 3. Copy the boot image (wimpe.wim) from the Windows AIK installation folder (for example, <*InstallationPath*>\Windows AIK\Tools\PETools\amd64\\) to a folder on the computer from which you will customize the boot image. This procedure uses C:\WinPEWAIK as the folder name.  
 
@@ -193,7 +194,7 @@ Each version of Configuration Manager supports a specific version of the Windows
     Where C:\WinPEWAIK is the folder that contains the boot image and C:\WinPEMount is the mounted folder.  
 
    > [!NOTE]
-   >  For more information about DISM, see the [Deployment Image Servicing and Management Technical Reference](http://technet.microsoft.com/library/dd744256\(v=ws.10\).aspx) topic in the Windows 7 TechNet Documentation Library.  
+   >  For more information about DISM, see the [Deployment Image Servicing and Management Technical Reference](https://technet.microsoft.com/library/dd744256\(v=ws.10\).aspx) topic in the Windows 7 TechNet Documentation Library.  
 
 5. After you mount the boot image, use DISM to add optional components to the boot image. In Windows PE 3.1, for example, the optional components are located in <*InstallationPath*>\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\.  
 
@@ -223,7 +224,7 @@ Each version of Configuration Manager supports a specific version of the Windows
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  For more information about the different packages that you can add to the boot image, see the [Add a Package to a Windows PE Image](http://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) topic in the Windows 7 TechNet Documentation Library.  
+   >  For more information about the different packages that you can add to the boot image, see the [Add a Package to a Windows PE Image](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) topic in the Windows 7 TechNet Documentation Library.  
 
 6. Use DISM to add specific drivers to the boot image, when required. Type the following to add drivers to the boot image, if required:  
 

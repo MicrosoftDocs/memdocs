@@ -9,7 +9,8 @@ ms.assetid: a45f7f94-d2c4-4185-9035-ef07b90c7846
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_ServiceWindow Server WMI Class
 The `SMS_ServiceWindow` Windows Management Instrumentation (WMI) class, in Configuration Manager, is an SMS Provider server class that represents a window of time, called a maintenance window, in which a program is allowed to execute on a group of computers.  
@@ -162,12 +163,11 @@ Class SMS_ServiceWindow
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Distribution Server WMI Classes](../../../../../develop/reference/core/servers/configure/software-distribution-server-wmi-classes.md)   
- [Software Distribution Maintenance Windows](../../../../../develop/core/servers/configure/software-distribution-maintenance-windows.md)
+ [About maintenance windows](/sccm/develop/core/servers/configure/about-maintenance-windows)

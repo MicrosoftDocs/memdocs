@@ -1,22 +1,23 @@
 ---
 title: "Migration checklists"
 titleSuffix: "Configuration Manager"
-description: "Use administrator checklists to help you plan a migration strategy to System Center Configuration Manager."
+description: "Use administrator checklists to help you plan a migration strategy to Configuration Manager current branch."
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 295fdf07-93cc-490c-acdd-ce3ee88cb36f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Administrator checklists for migration planning in System Center Configuration Manager
+# Administrator checklists for migration planning in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-Use the following administrator checklists to help you plan your migration strategy to System Center Configuration Manager.
+Use the following administrator checklists to help you plan your migration strategy to Configuration Manager current branch.
 
 ##  <a name="Checklist_Migraiton_Planning"></a> Administrator checklist for migration planning  
  Use the following checklist for pre-migration planning steps.  
@@ -27,12 +28,12 @@ Use the following administrator checklists to help you plan your migration strat
 
 -   **Review the functionality and changes that are available with the version of Configuration Manager that you use, and use this information to help you design your destination hierarchy:**  
 
-    For more information, see [Fundamentals of System Center Configuration Manager](../../core/understand/fundamentals.md) and [What's new in System Center Configuration Manager](../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md).  
+    For more information, see [Fundamentals of Configuration Manager](../../core/understand/fundamentals.md) and [What's new](../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md).  
 
 
 -   **Determine the administrative security model to use for role-based administration:**  
 
-    For more information, see [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
+    For more information, see [Fundamentals of role-based administration for Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
 -   **Assess your network and Active Directory topology:** 
     Review your existing domain structure and network topology and consider how this influences your hierarchy design and migration tasks.  
@@ -47,7 +48,7 @@ Use the following administrator checklists to help you plan your migration strat
 
 -   **Plan your object migration strategy:**  
 
-    Plan to use the available migration jobs to migrate different objects, including site boundaries, collections, advertisements, and deployments. For more information, see [Types of migration jobs](../../core/migration/planning-a-migration-job-strategy.md#Types_of_Migration) in [Planning a migration job strategy in System Center Configuration Manager](../../core/migration/planning-a-migration-job-strategy.md)  
+    Plan to use the available migration jobs to migrate different objects, including site boundaries, collections, advertisements, and deployments. For more information, see [Types of migration jobs](../../core/migration/planning-a-migration-job-strategy.md#Types_of_Migration) in [Planning a migration job strategy](../../core/migration/planning-a-migration-job-strategy.md)  
 
     Configuration Manager migrates only the objects that you select. Any objects that are not migrated and that are required in the destination hierarchy must be re-created in the destination hierarchy.  
 
@@ -55,7 +56,7 @@ Use the following administrator checklists to help you plan your migration strat
 
 -   **Plan your client migration strategy:**  
 
-    Plan to migrate clients by using a controlled approach that limits the network bandwidth and server processing requirements when you migrate clients to the destination hierarchy. For more about planning a client migration strategy, see [Planning a client migration strategy in System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md).  
+    Plan to migrate clients by using a controlled approach that limits the network bandwidth and server processing requirements when you migrate clients to the destination hierarchy. For more about planning a client migration strategy, see [Planning a client migration strategy](../../core/migration/planning-a-client-migration-strategy.md).  
 
 -   **Plan for inventory and compliance data:**  
 
@@ -72,13 +73,13 @@ Use the following checklist to help you plan a destination hierarchy before you 
 
 -   **Identify the computers to use in the destination hierarchy:**  
 
-    Configuration Manager does not support an in-place upgrade from Configuration Manager 2007 infrastructure. Instead you use migration to move data from Configuration Manager 2007 to System Center Configuration Manager. This requires you to use a side-by-side deployment and install System Center Configuration Manager on new computers.  
+    Configuration Manager does not support an in-place upgrade from Configuration Manager 2007 infrastructure. Instead you use migration to move data from Configuration Manager 2007 to Configuration Manager current branch. This requires you to use a side-by-side deployment and install Configuration Manager on new computers.  
 
-    Similarly, when you migrate from another System Center Configuration Manager hierarchy, you must install a new destination hierarchy that is a side-by-side deployment to your source hierarchy.  
+    Similarly, when you migrate from another Configuration Manager hierarchy, you must install a new destination hierarchy that is a side-by-side deployment to your source hierarchy.  
 
 -   **Create your destination hierarchy:**  
 
-    To prepare for migration, install and configure a System Center Configuration Manager destination hierarchy that includes a primary site. For example:  
+    To prepare for migration, install and configure a Configuration Manager destination hierarchy that includes a primary site. For example:  
 
     -   Install a central administration site and then install at least one child primary.  
 
@@ -109,7 +110,7 @@ Use the following checklist to migrate data from the source hierarchy to the des
 
 -   **Enable migration in the destination hierarchy:**  
 
-    Configure a source hierarchy by specifying the top-level site of the source hierarchy. For more about specifying the source site, see [Planning a source hierarchy strategy in System Center Configuration Manager](../../core/migration/planning-a-source-hierarchy-strategy.md).  
+    Configure a source hierarchy by specifying the top-level site of the source hierarchy. For more about specifying the source site, see [Planning a source hierarchy strategy](../../core/migration/planning-a-source-hierarchy-strategy.md).  
 
 -   **When the source hierarchy runs Configuration Manager 2007 SP2, select and configure additional sites in the source hierarchy:**  
 
@@ -122,7 +123,7 @@ Use the following checklist to migrate data from the source hierarchy to the des
 
     You can share distribution points between the two hierarchies to make content for objects that you migrate available to clients in the destination hierarchy. This ensures that the same content remains available for clients in both hierarchies and that you can maintain this content until you stop gathering data and finish the migration.  
 
-    For information about shared distribution points, see [Share distribution points between source and destination hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) in [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md).  
+    For information about shared distribution points, see [Share distribution points between source and destination hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) in [Planning a content deployment migration strategy](../../core/migration/planning-a-content-deployment-migration-strategy.md).  
 
 -   **Create and run migration jobs to migrate objects associated with the clients in the source hierarchy:**  
 
@@ -130,7 +131,7 @@ Use the following checklist to migrate data from the source hierarchy to the des
 
     For example, when you migrate content, regardless of the migration job you use, you must assign a site in the destination hierarchy to own management of that content. The assigned site will access the original source file location for the content and is responsible for distributing that content to distribution points in the destination hierarchy.  
 
-    For more information, see [Create and edit migration jobs for system center configuration manager](../../core/migration/operations-for-migration.md#Create_Edit_migration_Jobs) in [Operations for migrating to System Center Configuration Manager](../../core/migration/operations-for-migration.md).  
+    For more information, see [Create and edit migration jobs for Configuration Manager](../../core/migration/operations-for-migration.md#Create_Edit_migration_Jobs) in [Operations for migrating to Configuration Manager current branch](../../core/migration/operations-for-migration.md).  
 
 -   **Migrate clients to the destination hierarchy:**  
 
@@ -142,16 +143,16 @@ Use the following checklist to migrate data from the source hierarchy to the des
 
     When you migrate a client to the destination hierarchy, the client is associated with its data that you previously migrated to that destination hierarchy.  
 
-    For more information, see [Planning a client migration strategy in System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md).  
+    For more information, see [Planning a client migration strategy](../../core/migration/planning-a-client-migration-strategy.md).  
 
 -   **Upgrade or reassign shared distribution points:**  
 
-    When you no longer have to support clients in your source hierarchy, you can upgrade shared distribution points from a Configuration Manager 2007 source site, or reassign shared distribution points from a System Center 2012 Configuration Manager or System Center Configuration Manager source site. When you upgrade or reassign a distribution point, the site system role transfers to a primary site in the destination hierarchy and the distribution point is removed from the source site in the source hierarchy. When you upgrade or reassign a shared distribution point, the content remains on the distribution point computer and you do not have to redeploy the content to new distribution points in the destination hierarchy.  
+    When you no longer have to support clients in your source hierarchy, you can upgrade shared distribution points from a Configuration Manager 2007 source site, or reassign shared distribution points from a System Center 2012 Configuration Manager or Configuration Manager current branch source site. When you upgrade or reassign a distribution point, the site system role transfers to a primary site in the destination hierarchy and the distribution point is removed from the source site in the source hierarchy. When you upgrade or reassign a shared distribution point, the content remains on the distribution point computer and you do not have to redeploy the content to new distribution points in the destination hierarchy.  
 
     You can also upgrade a distribution point that is co-located on a Configuration Manager 2007 secondary site server. This removes the secondary site and results in only a distribution point in the destination hierarchy.  
 
-    For information about shared distribution points, see [Share distribution points between source and destination hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) in [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md).  
+    For information about shared distribution points, see [Share distribution points between source and destination hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) in [Planning a content deployment migration strategy](../../core/migration/planning-a-content-deployment-migration-strategy.md).  
 
 -   **Finish migration:**  
 
-    After you have migrated data and clients from all sites in the source hierarchy and you have upgraded applicable distribution points, you can finish migration. To finish migration you stop gathering data for each source site in the source hierarchy. You can then remove migration information that you do not need and decommission your source hierarchy infrastructure. For more information, see [Planning to complete migration in System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md).  
+    After you have migrated data and clients from all sites in the source hierarchy and you have upgraded applicable distribution points, you can finish migration. To finish migration you stop gathering data for each source site in the source hierarchy. You can then remove migration information that you do not need and decommission your source hierarchy infrastructure. For more information, see [Planning to complete migration](../../core/migration/planning-to-complete-migration.md).  

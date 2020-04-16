@@ -9,10 +9,11 @@ ms.assetid: aab98600-7a43-4a03-ba05-3fcb828e6c82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a Data Discovery Record
-The data discovery record (DDR), in System Center Configuration Manager, specifies the resource type, the discovery process, the site that discovered the resource, and the resource properties. System Center Configuration Manager provides six library functions that you use to create your own DDRs. For more information. see [About Creating a Data Discovery Record](../../../../develop/core/servers/configure/about-creating-a-data-discovery-record.md).  
+The data discovery record (DDR), in Configuration Manager, specifies the resource type, the discovery process, the site that discovered the resource, and the resource properties. Configuration Manager provides six library functions that you use to create your own DDRs. For more information. see [About Creating a Data Discovery Record](../../../../develop/core/servers/configure/about-creating-a-data-discovery-record.md).  
 
 ### To create a data discovery record  
 
@@ -133,8 +134,6 @@ public void CreateNewDDR()
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
-## See Also  
- [Configuration Manager SDK](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Discovery](../../../../develop/core/servers/configure/discovery.md)   
- [Extending Resource Discovery](../../../../develop/core/servers/configure/extending-resource-discovery.md)   
- [SMSResGen COM Automation Class](../../../../develop/reference/core/servers/configure/smsresgen-com-automation-class.md)
+## See also
+
+[SMSResGen COM Automation Class](../../../../develop/reference/core/servers/configure/smsresgen-com-automation-class.md)

@@ -1,93 +1,77 @@
 ---
-title: "Deployment PKI certificates"
-titleSuffix: "Configuration Manager"
-description: "Follow a step-by-step example to learn how to create and deploy PKI certificates that System Center Configuration Manager uses."
+title: Example PKI certificate deployment
+titleSuffix: Configuration Manager
+description: Follow a step-by-step example to learn how to create and deploy PKI certificates that Configuration Manager uses.
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 certification authority
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# Step-by-step example deployment of the PKI certificates for Configuration Manager: Windows Server 2008 certification authority
 
-This step-by-step example deployment, which uses a Windows Server 2008 certification authority (CA), has procedures that show you how to create and deploy the public key infrastructure (PKI) certificates that System Center Configuration Manager uses. These procedures use an enterprise certification authority (CA) and certificate templates. The steps are appropriate for a test network only, as a proof of concept.  
+*Applies to: Configuration Manager (current branch)*
 
- Because there is no single method of deployment for the required certificates, consult your particular PKI deployment documentation for the required procedures and best practices to deploy the required certificates for a production environment. For more about the certificate requirements, see [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
+This step-by-step example deployment, which uses a Windows Server 2008 certification authority (CA), has procedures that show you how to create and deploy the public key infrastructure (PKI) certificates that Configuration Manager uses. These procedures use an enterprise certification authority (CA) and certificate templates. The steps are appropriate for a test network only, as a proof of concept.  
+
+Because there's no single method of deployment for the required certificates, consult your particular PKI deployment documentation for the required procedures and best practices to deploy the required certificates for a production environment. For more about the certificate requirements, see [PKI certificate requirements for Configuration Manager](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
 > [!TIP]
->  You can adapt the instructions in this topic for operating systems that are not documented in the Test Network Requirements section. However, if you are running the issuing CA on Windows Server 2012, you are not prompted for the certificate template version. Instead, specify this on the **Compatibility** tab of the template properties:  
-> 
+> You can adapt the instructions in this topic for operating systems that aren't documented in the Test Network Requirements section. However, if you are running the issuing CA on Windows Server 2012, you're not prompted for the certificate template version. Instead, specify this on the **Compatibility** tab of the template properties:  
+>
 > - **Certification Authority**: **Windows Server 2003**  
->   -   **Certificate recipient**: **Windows XP / Server 2003**  
+>   - **Certificate recipient**: **Windows XP / Server 2003**  
 
-## In this section  
- The following sections include example step-by-step instructions to create and deploy the following certificates that can be used with System Center Configuration Manager:  
+## <a name="BKMK_testnetworkenvironment"></a> Test network requirements
 
- [Test network requirements](#BKMK_testnetworkenvironment)  
+The step-by-step instructions have the following requirements:  
 
- [Overview of the certificates](#BKMK_overview2008)  
+- The test network is running Active Directory Domain Services with Windows Server 2008, and it is installed as a single domain, single forest.  
 
- [Deploy the web server certificate for site systems that run IIS](#BKMK_webserver2008_cm2012)  
+- You have a member server running Windows Server 2008 Enterprise Edition, which has the Active Directory Certificate Services role installed on it, and it is set up as an enterprise root certification authority (CA).  
 
- [Deploy the service certificate for cloud-based distribution points](#BKMK_clouddp2008_cm2012)  
+- You have one computer that has Windows Server 2008 (Standard Edition or Enterprise Edition, R2 or later) installed on it, that computer is designated as a member server, and Internet Information Services (IIS) is installed on it. This computer will be the Configuration Manager site system server that you will configure with an intranet fully qualified domain name (FQDN) to support client connections on the intranet and an internet FQDN if you must support mobile devices that are enrolled by Configuration Manager and clients on the internet.  
 
- [Deploy the client certificate for Windows computers](#BKMK_client2008_cm2012)  
+- You have one Windows Vista client that has the latest service pack installed, and this computer is set up with a computer name that comprises ASCII characters and is joined to the domain. This computer will be a Configuration Manager client computer.  
 
- [Deploy the client certificate for distribution points](#BKMK_clientdistributionpoint2008_cm2012)  
+- You can sign in with a root domain administrator account or an enterprise domain administrator account and use this account for all procedures in this example deployment.  
 
- [Deploy the enrollment certificate for mobile devices](#BKMK_mobiledevices2008_cm2012)  
+## <a name="BKMK_overview2008"></a> Overview of the certificates
 
- [Deploy the certificates for AMT](#BKMK_AMT2008_cm2012)  
-
- [Deploy the client Certificate for Mac computers](#BKMK_MacClient_SP1)  
-
-##  <a name="BKMK_testnetworkenvironment"></a> Test network requirements  
- The step-by-step instructions have the following requirements:  
-
--   The test network is running Active Directory Domain Services with Windows Server 2008, and it is installed as a single domain, single forest.  
-
--   You have a member server running Windows Server 2008 Enterprise Edition, which has the Active Directory Certificate Services role installed on it, and it is set up as an enterprise root certification authority (CA).  
-
--   You have one computer that has Windows Server 2008 (Standard Edition or Enterprise Edition, R2 or later) installed on it, that computer is designated as a member server, and Internet Information Services (IIS) is installed on it. This computer will be the System Center Configuration Manager site system server that you will configure with an intranet fully qualified domain name (FQDN) to support client connections on the intranet and an internet FQDN if you must support mobile devices that are enrolled by System Center Configuration Manager and clients on the internet.  
-
--   You have one Windows Vista client that has the latest service pack installed, and this computer is set up with a computer name that comprises ASCII characters and is joined to the domain. This computer will be a System Center Configuration Manager client computer.  
-
--   You can sign in with a root domain administrator account or an enterprise domain administrator account and use this account for all procedures in this example deployment.  
-
-##  <a name="BKMK_overview2008"></a> Overview of the certificates  
- The following table lists the types of PKI certificates that might be required for System Center Configuration Manager and describes how they are used.  
+The following table lists the types of PKI certificates that might be required for Configuration Manager and describes how they are used.  
 
 |Certificate Requirement|Certificate Description|  
 |-----------------------------|-----------------------------|  
-|Web server certificate for site systems that run IIS|This certificate is used to encrypt data and authenticate the server to clients. It must be installed externally from System Center Configuration Manager on site systems servers that run Internet Information Services (IIS) and that are set up in System Center Configuration Manager to use HTTPS.<br /><br /> For the steps to set up and install this certificate, see [Deploy the web server certificate for site systems that run IIS](#BKMK_webserver2008_cm2012) in this topic.|  
+|Web server certificate for site systems that run IIS|This certificate is used to encrypt data and authenticate the server to clients. It must be installed externally from Configuration Manager on site systems servers that run Internet Information Services (IIS) and that are set up in Configuration Manager to use HTTPS.<br /><br /> For the steps to set up and install this certificate, see [Deploy the web server certificate for site systems that run IIS](#BKMK_webserver2008_cm2012) in this topic.|  
 |Service certificate for clients to connect to cloud-based distribution points|For the steps to configure and install this certificate, see [Deploy the service certificate for cloud-based distribution points](#BKMK_clouddp2008_cm2012) in this topic.<br /><br /> **Important:** This certificate is used in conjunction with the Windows Azure management certificate. For more about the management certificate, see [How to Create a Management Certificate](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate) and [How to Add a Management Certificate to a Windows Azure Subscription](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate) in the Windows Azure Platform section of the MSDN Library.|  
-|Client certificate for Windows computers|This certificate is used to authenticate System Center Configuration Manager client computers to site systems that are set up to use HTTPS. It can also be used for management points and state migration points to monitor their operational status when they are set up to use HTTPS. It must be installed externally from System Center Configuration Manager on computers.<br /><br /> For the steps to set up and install this certificate, see [Deploy the client certificate for Windows computers](#BKMK_client2008_cm2012) in this topic.|  
+|Client certificate for Windows computers|This certificate is used to authenticate Configuration Manager client computers to site systems that are set up to use HTTPS. It can also be used for management points and state migration points to monitor their operational status when they are set up to use HTTPS. It must be installed externally from Configuration Manager on computers.<br /><br /> For the steps to set up and install this certificate, see [Deploy the client certificate for Windows computers](#BKMK_client2008_cm2012) in this topic.|  
 |Client certificate for distribution points|This certificate has two purposes:<br /><br /> The certificate is used to authenticate the distribution point to an HTTPS-enabled management point before the distribution point sends status messages.<br /><br /> When the **Enable PXE support for clients** distribution point option is selected, the certificate is sent to computers that PXE boot so that they can connect to a HTTPS-enabled management point during the deployment of the operating system.<br /><br /> For the steps to set up and install this certificate, see [Deploy the client certificate for distribution points](#BKMK_clientdistributionpoint2008_cm2012) in this topic.|  
-|Enrollment certificate for mobile devices|This certificate is used to authenticate System Center Configuration Manager mobile device clients to site systems that are set up to use HTTPS. It must be installed as part of mobile device enrollment in System Center Configuration Manager, and you choose the configured certificate template as a mobile device client setting.<br /><br /> For the steps to set up this certificate, see [Deploy the enrollment certificate for mobile devices](#BKMK_mobiledevices2008_cm2012) in this topic.|  
-|Certificates for Intel AMT|Three certificates relate to out-of-band management for Intel AMT-based computers:<ul><li>An  Active Management Technology (AMT) provisioning certificate</li><li>An AMT web server certificate</li><li>Optionally, a client authentication certificate for 802.1X wired or wireless networks</li></ul>The AMT provisioning certificate must be installed externally from System Center Configuration Manager on the out-of-band service point computer, and then you choose the installed certificate in the out-of-band service point properties. The AMT web server certificate and the client authentication certificate are installed during AMT provisioning and management, and you choose the configured certificate templates in the out-of-band management component properties.<br /><br /> For the steps to set up these certificates, see [Deploy the certificates for AMT](#BKMK_AMT2008_cm2012) in this topic.|  
-|Client certificate for Mac computers|You can request and install this certificate from a Mac computer when you use System Center Configuration Manager enrollment and choose the configured certificate template as a mobile device client setting.<br /><br /> For the steps to set up this certificate, see [Deploy the client certificate for Mac computers](#BKMK_MacClient_SP1) in this topic.|  
+|Enrollment certificate for mobile devices|This certificate is used to authenticate Configuration Manager mobile device clients to site systems that are set up to use HTTPS. It must be installed as part of mobile device enrollment in Configuration Manager, and you choose the configured certificate template as a mobile device client setting.<br /><br /> For the steps to set up this certificate, see [Deploy the enrollment certificate for mobile devices](#BKMK_mobiledevices2008_cm2012) in this topic.|  
+|Client certificate for Mac computers|You can request and install this certificate from a Mac computer when you use Configuration Manager enrollment and choose the configured certificate template as a mobile device client setting.<br /><br /> For the steps to set up this certificate, see [Deploy the client certificate for Mac computers](#BKMK_MacClient_SP1) in this topic.|  
 
-##  <a name="BKMK_webserver2008_cm2012"></a> Deploy the web server certificate for site systems that run IIS  
- This certificate deployment has the following procedures:  
+## <a name="BKMK_webserver2008_cm2012"></a> Deploy the web server certificate for site systems that run IIS
 
--   Create and issue the web server certificate template on the certification authority  
+This certificate deployment has the following procedures:  
 
--   Request the web server certificate  
+- Create and issue the web server certificate template on the certification authority  
 
--   Configure IIS to use the web server certificate  
+- Request the web server certificate  
 
-###  <a name="BKMK_webserver22008"></a> Create and issue the web server certificate template on the certification authority  
- This procedure creates a certificate template for System Center Configuration Manager site systems and adds it to the certification authority.  
+- Configure IIS to use the web server certificate  
 
-##### To create and issue the web server certificate template on the certification authority  
+### <a name="BKMK_webserver22008"></a> Create and issue the web server certificate template on the certification authority
 
-1.  Create a security group named **ConfigMgr IIS Servers** that has the member servers to install System Center Configuration Manager site systems that will run IIS.  
+This procedure creates a certificate template for Configuration Manager site systems and adds it to the certification authority.  
+
+##### To create and issue the web server certificate template on the certification authority
+
+1.  Create a security group named **ConfigMgr IIS Servers** that has the member servers to install Configuration Manager site systems that will run IIS.  
 
 2.  On the member server that has Certificate Services installed, in the Certification Authority console, right-click **Certificate Templates** and then choose **Manage** to load the **Certificate Templates** console.  
 
@@ -145,20 +129,20 @@ This step-by-step example deployment, which uses a Windows Server 2008 certifica
 
 12. In the **Certificate Properties** dialog box, in the **Subject** tab, do not make any changes to **Subject name**. This means that the **Value** box for the **Subject name** section remains blank. Instead, from the **Alternative name** section, choose the **Type** drop-down list, and then choose **DNS**.  
 
-13. In the **Value** box, specify the FQDN values that you will specify in the System Center Configuration Manager site system properties, and then choose **OK** to close the **Certificate Properties** dialog box.  
+13. In the **Value** box, specify the FQDN values that you will specify in the Configuration Manager site system properties, and then choose **OK** to close the **Certificate Properties** dialog box.  
 
      Examples:  
 
-    -   If the site system will only accept client connections from the intranet, and the intranet FQDN of the site system server is **server1.internal.contoso.com**, enter **server1.internal.contoso.com**, and then choose **Add**.  
+    - If the site system will only accept client connections from the intranet, and the intranet FQDN of the site system server is **server1.internal.contoso.com**, enter **server1.internal.contoso.com**, and then choose **Add**.  
 
-    -   If the site system will accept client connections from the intranet and the internet, and the intranet FQDN of the site system server is **server1.internal.contoso.com** and the internet FQDN of the site system server is **server.contoso.com**:  
+    - If the site system will accept client connections from the intranet and the internet, and the intranet FQDN of the site system server is **server1.internal.contoso.com** and the internet FQDN of the site system server is **server.contoso.com**:  
 
         1.  Enter **server1.internal.contoso.com**, and then choose **Add**.  
 
         2.  Enter **server.contoso.com**, and then choose **Add**.  
 
         > [!NOTE]  
-        >  You can specify the FQDNs for System Center Configuration Manager in any order. However, check that all devices that will use the certificate, such as mobile devices and proxy web servers, can use a certificate subject alternative name (SAN) and multiple values in the SAN. If devices have limited support for SAN values in certificates, you might have to change the order of the FQDNs or use the Subject value instead.  
+        >  You can specify the FQDNs for Configuration Manager in any order. However, check that all devices that will use the certificate, such as mobile devices and proxy web servers, can use a certificate subject alternative name (SAN) and multiple values in the SAN. If devices have limited support for SAN values in certificates, you might have to change the order of the FQDNs or use the Subject value instead.  
 
 14. On the **Request Certificates** page, choose **ConfigMgr Web Server Certificate** from the list of available certificates, and then choose **Enroll**.  
 
@@ -186,23 +170,23 @@ This step-by-step example deployment, which uses a Windows Server 2008 certifica
 
 6. Close **Internet Information Services (IIS) Manager**.  
 
-   The member server is now set up with a System Center Configuration Manager web server certificate.  
+   The member server is now set up with a Configuration Manager web server certificate.  
 
 > [!IMPORTANT]  
->  When you install the System Center Configuration Manager site system server on this computer, make sure that you specify the same FQDNs in the site system properties as you specified when you requested the certificate.  
+>  When you install the Configuration Manager site system server on this computer, make sure that you specify the same FQDNs in the site system properties as you specified when you requested the certificate.  
 
 ##  <a name="BKMK_clouddp2008_cm2012"></a> Deploy the service certificate for cloud-based distribution points  
 
 This certificate deployment has the following procedures:  
 
--   [Create and issue a custom web server certificate template on the certification authority](#BKMK_clouddpcreating2008)  
+- [Create and issue a custom web server certificate template on the certification authority](#BKMK_clouddpcreating2008)  
 
--   [Request the custom web server certificate](#BKMK_clouddprequesting2008)  
+- [Request the custom web server certificate](#BKMK_clouddprequesting2008)  
 
--   [Export the custom web server certificate for cloud-based distribution points](#BKMK_clouddpexporting2008)  
+- [Export the custom web server certificate for cloud-based distribution points](#BKMK_clouddpexporting2008)  
 
 ###  <a name="BKMK_clouddpcreating2008"></a> Create and issue a custom web server certificate template on the certification authority  
- This procedure creates a custom certificate template that is based on the web server certificate template. The certificate is for System Center Configuration Manager cloud-based distribution points and the private key must be exportable. After the certificate template is created, it is added to the certification authority.  
+ This procedure creates a custom certificate template that is based on the web server certificate template. The certificate is for Configuration Manager cloud-based distribution points and the private key must be exportable. After the certificate template is created, it is added to the certification authority.  
 
 > [!NOTE]
 >  This procedure uses a different certificate template from the web server certificate template that you created for site systems that run IIS. Although both certificates require server authentication capability, the certificate for cloud-based distribution points requires you to enter a custom-defined value for the Subject Name and the private key must be exported. As a security best practice, do not set up certificate templates so that the private key can be exported unless this configuration is required. The cloud-based distribution point requires this configuration because you must import the certificate as a file, rather than choose it from the certificate store.  
@@ -210,12 +194,12 @@ This certificate deployment has the following procedures:
 >  When you create a new certificate template for this certificate, you can restrict the computers that can request a certificate whose private key can be exported. On a production network, you might also consider adding the following changes for this certificate:  
 > 
 > - Require approval to install the certificate for additional security.  
->   -   Increase the certificate validity period. Because you must export and import the certificate each time before it expires, an increase of the validity period reduces how often you must repeat this procedure. However, an increase of the validity period also decreases the security of the certificate because it provides more time for an attacker to decrypt the private key and steal the certificate.  
->   -   Use a custom value in the certificate Subject Alternative Name (SAN) to help identify this certificate from standard web server certificates that you use with IIS.  
+>   - Increase the certificate validity period. Because you must export and import the certificate each time before it expires, an increase of the validity period reduces how often you must repeat this procedure. However, an increase of the validity period also decreases the security of the certificate because it provides more time for an attacker to decrypt the private key and steal the certificate.  
+>   - Use a custom value in the certificate Subject Alternative Name (SAN) to help identify this certificate from standard web server certificates that you use with IIS.  
 
 ##### To create and issue the custom web server certificate template on the certification authority  
 
-1.  Create a security group named **ConfigMgr Site Servers** that has the member servers to install System Center Configuration Manager primary site servers that will manage cloud-based distribution points.  
+1.  Create a security group named **ConfigMgr Site Servers** that has the member servers to install Configuration Manager primary site servers that will manage cloud-based distribution points.  
 
 2.  On the member server that is running the Certification Authority console, right-click **Certificate Templates**, and then choose **Manage** to load the Certificate Templates management console.  
 
@@ -236,16 +220,15 @@ This certificate deployment has the following procedures:
 
 9. Select the **Enroll** permission for this group, and do not clear the **Read** permission.  
 
-    > [!NOTE]
-    > Ensure that **Minimum key size** on the **Cryptography** tab has been set to **2048**
+10. Choose the **Cryptography** tab and ensure that **Minimum key size** has been set to **2048**.
 
-10. Choose **OK**, and then close **Certificate Templates Console**.  
+11. Choose **OK**, and then close **Certificate Templates Console**.  
 
-11. In the Certification Authority console, right-click **Certificate Templates**, choose **New**, and then choose **Certificate Template to Issue**.  
+12. In the Certification Authority console, right-click **Certificate Templates**, choose **New**, and then choose **Certificate Template to Issue**.  
 
-12. In the **Enable Certificate Templates** dialog box, choose the new template that you just created, **ConfigMgr Cloud-Based Distribution Point Certificate**, and then choose **OK**.  
+13. In the **Enable Certificate Templates** dialog box, choose the new template that you just created, **ConfigMgr Cloud-Based Distribution Point Certificate**, and then choose **OK**.  
 
-13. If you do not have to create and issue more certificates, close **Certification Authority**.  
+14. If you do not have to create and issue more certificates, close **Certification Authority**.  
 
 ###  <a name="BKMK_clouddprequesting2008"></a> Request the custom web server certificate  
  This procedure requests and then installs the custom web server certificate on the member server that will run the site server.  
@@ -313,21 +296,21 @@ This certificate deployment has the following procedures:
 
 8. Close **Certificates (Local Computer)**.  
 
-9. Store the file securely and ensure that you can access it from the System Center Configuration Manager console.  
+9. Store the file securely and ensure that you can access it from the Configuration Manager console.  
 
    The certificate is now ready to be imported when you create a cloud-based distribution point.  
 
 ##  <a name="BKMK_client2008_cm2012"></a> Deploy the client certificate for Windows computers  
  This certificate deployment has the following procedures:  
 
--   Create and issue the Workstation Authentication certificate template on the certification authority  
+- Create and issue the Workstation Authentication certificate template on the certification authority  
 
--   Configure autoenrollment of the Workstation Authentication template by using Group Policy  
+- Configure autoenrollment of the Workstation Authentication template by using Group Policy  
 
--   Automatically enroll the Workstation Authentication certificate and verify its installation on computers  
+- Automatically enroll the Workstation Authentication certificate and verify its installation on computers  
 
 ###  <a name="BKMK_client02008"></a> Create and issue the Workstation Authentication certificate template on the certification authority  
- This procedure creates a certificate template for System Center Configuration Manager client computers and adds it to the certification authority.  
+ This procedure creates a certificate template for Configuration Manager client computers and adds it to the certification authority.  
 
 ##### To create and issue the Workstation Authentication certificate template on the certification authority  
 
@@ -408,7 +391,7 @@ This certificate deployment has the following procedures:
 
 12. Repeat steps 1 through 11 for the member server to verify that the server that will be set up as the management point also has a client certificate.  
 
-    The computer is now set up with a System Center Configuration Manager client certificate.  
+    The computer is now set up with a Configuration Manager client certificate.  
 
 ##  <a name="BKMK_clientdistributionpoint2008_cm2012"></a> Deploy the client certificate for distribution points  
 
@@ -417,23 +400,23 @@ This certificate deployment has the following procedures:
 
  This certificate deployment has the following procedures:  
 
--   Create and issue a custom Workstation Authentication certificate template on the certification authority  
+- Create and issue a custom Workstation Authentication certificate template on the certification authority  
 
--   Request the custom Workstation Authentication certificate  
+- Request the custom Workstation Authentication certificate  
 
--   Export the client certificate for distribution points  
+- Export the client certificate for distribution points  
 
 ###  <a name="BKMK_clientdistributionpoint02008"></a> Create and issue a custom Workstation Authentication certificate template on the certification authority  
- This procedure creates a custom certificate template for System Center Configuration Manager distribution points so that the private key can be exported and adds the certificate template to the certification authority.  
+ This procedure creates a custom certificate template for Configuration Manager distribution points so that the private key can be exported and adds the certificate template to the certification authority.  
 
 > [!NOTE]
 >  This procedure uses a different certificate template from the certificate template that you created for client computers. Although both certificates require client authentication capability, the certificate for distribution points requires that the private key is exported. As a security best practice, do not set up certificate templates so the private key can be exported unless this configuration is required. The distribution point requires this configuration because you must import the certificate as a file rather than choose it from the certificate store.  
 > 
->  When you create a new certificate template for this certificate, you can restrict the computers that can request a certificate whose private key can be exported. In our example deployment, this will be the security group that you previously created for System Center Configuration Manager site system servers that run IIS. On a production network that distributes the IIS site system roles, consider creating a new security group for the servers that run distribution points so that you can restrict the certificate to just these site system servers. You might also consider adding the following modifications for this certificate:  
+>  When you create a new certificate template for this certificate, you can restrict the computers that can request a certificate whose private key can be exported. In our example deployment, this will be the security group that you previously created for Configuration Manager site system servers that run IIS. On a production network that distributes the IIS site system roles, consider creating a new security group for the servers that run distribution points so that you can restrict the certificate to just these site system servers. You might also consider adding the following modifications for this certificate:  
 > 
 > - Require approval to install the certificate for additional security.  
->   -   Increase the certificate validity period. Because you must export and import the certificate each time before it expires, an increase of the validity period reduces how often you must repeat this procedure. However, an increase of the validity period also decreases the security of the certificate because it provides more time for an attacker to decrypt the private key and steal the certificate.  
->   -   Use a custom value in the certificate Subject field or Subject Alternative Name (SAN) to help identify this certificate from standard client certificates. This can be particularly helpful if you will use the same certificate for multiple distribution points.  
+>   - Increase the certificate validity period. Because you must export and import the certificate each time before it expires, an increase of the validity period reduces how often you must repeat this procedure. However, an increase of the validity period also decreases the security of the certificate because it provides more time for an attacker to decrypt the private key and steal the certificate.  
+>   - Use a custom value in the certificate Subject field or Subject Alternative Name (SAN) to help identify this certificate from standard client certificates. This can be particularly helpful if you will use the same certificate for multiple distribution points.  
 
 ##### To create and issue the custom Workstation Authentication certificate template on the certification authority  
 
@@ -519,7 +502,7 @@ This certificate deployment has the following procedures:
 
 8. Close **Certificates (Local Computer)**.  
 
-9. Store the file securely and ensure that you can access it from the System Center Configuration Manager console.  
+9. Store the file securely and ensure that you can access it from the Configuration Manager console.  
 
    The certificate is now ready to be imported when you set up the distribution point.  
 
@@ -530,11 +513,11 @@ This certificate deployment has the following procedures:
  This certificate deployment has a single procedure to create and issue the enrollment certificate template on the certification authority.  
 
 ### Create and issue the enrollment certificate template on the certification authority  
- This procedure creates an enrollment certificate template for System Center Configuration Manager mobile devices and adds it to the certification authority.  
+ This procedure creates an enrollment certificate template for Configuration Manager mobile devices and adds it to the certification authority.  
 
 ##### To create and issue the enrollment certificate template on the certification authority  
 
-1. Create a security group that has users who will enroll mobile devices in System Center Configuration Manager.  
+1. Create a security group that has users who will enroll mobile devices in Configuration Manager.  
 
 2. On the member server that has Certificate Services installed, in the Certification Authority console, right-click **Certificate Templates**, and then choose **Manage** to load the Certificate Templates management console.  
 
@@ -545,7 +528,7 @@ This certificate deployment has the following procedures:
    > [!IMPORTANT]  
    >  Do not select **Windows 2008 Server, Enterprise Edition**.  
 
-5. In the **Properties of New Template** dialog box, on the **General** tab, enter a template name, like **ConfigMgr Mobile Device Enrollment Certificate**, to generate the enrollment certificates for the mobile devices to be managed by System Center Configuration Manager.  
+5. In the **Properties of New Template** dialog box, on the **General** tab, enter a template name, like **ConfigMgr Mobile Device Enrollment Certificate**, to generate the enrollment certificates for the mobile devices to be managed by Configuration Manager.  
 
 6. Choose the **Subject Name** tab, make sure that **Build from this Active Directory information** is selected, select **Common name** for the **Subject name format:**, and then clear **User principal name (UPN)** from **Include this information in alternate subject name**.  
 
@@ -561,177 +544,12 @@ This certificate deployment has the following procedures:
 
     The mobile device enrollment certificate template is now ready to be selected when you set up a mobile device enrollment profile in the client settings.  
 
-##  <a name="BKMK_AMT2008_cm2012"></a> Deploy the certificates for AMT  
- This certificate deployment has the following procedures:  
-
--   Create, issue, and install the AMT provisioning certificate  
-
--   Create and issue the web server certificate for AMT-based computers  
-
--   Create and issue the client authentication certificates for 802.1X AMT-based computers  
-
-###  <a name="BKMK_AMTprovisioning2008"></a> Create, issue, and install the AMT provisioning certificate  
- Create the provisioning certificate with your internal CA when the AMT-based computers are set up with the certificate thumbprint of your internal root CA. When this is not the case and you must use an external certification authority, use the instructions from the company that issued the AMT provisioning certificate, which will often involve requesting the certificate from the company's public web site. You might also find detailed instructions for your chosen external CA on the [Intel vPro Expert Center: Microsoft vPro Manageability web site](http://go.microsoft.com/fwlink/?LinkId=132001).  
-
-> [!IMPORTANT]  
->  External CAs might not support the Intel AMT provisioning object identifier. When this is the case, supply the **Intel(R) Client Setup Certificate** OU attribute.  
-
- When you request an AMT provisioning certificate from an external CA, install the certificate into the Computer Personal certificate store on the member server that will host the out-of-band service point.  
-
-##### To request and issue the AMT provisioning certificate  
-
-1. Create a security group that has the computer accounts of site system servers that will run the out-of-band service point.  
-
-2. On the member server that has Certificate Services installed, in the Certification Authority console, right-click **Certificate Templates**, and then choose **Manage** to load the **Certificate Templates** console.  
-
-3. In the results pane, right-click the entry that has **Web Server** in the **Template Display Name** column, and then choose **Duplicate Template**.  
-
-4. In the **Duplicate Template** dialog box, ensure that **Windows 2003 Server, Enterprise Edition** is selected, and then choose **OK**.  
-
-   > [!IMPORTANT]  
-   >  Do not select **Windows 2008 Server, Enterprise Edition**.  
-
-5. In the **Properties of New Template** dialog box, on the **General** tab, enter a template name, like **ConfigMgr AMT Provisioning**, for the AMT provisioning certificate template.  
-
-6. Choose the **Subject Name** tab, choose **Build from this Active Directory information**, and then choose **Common name**.  
-
-7. Choose the **Extensions** tab, make sure that **Application Policies** is selected, and then choose **Edit**.  
-
-8. In the **Edit Application Policies Extension** dialog box, choose **Add**.  
-
-9. In the **Add Application Policy** dialog box, choose **New**.  
-
-10. In the **New Application Policy** dialog box, enter **AMT Provisioning** in the **Name** field, and then enter the following number for the **Object identifier**: **2.16.840.1.113741.1.2.3**.  
-
-11. Choose **OK**, and then choose **OK** in the **Add Application Policy** dialog box.  
-
-12. Choose **OK** in the **Edit Application Policies Extension** dialog box.  
-
-13. In the **Properties of New Template** dialog box, the following is listed as the **Application Policies** description: **Server Authentication** and **AMT Provisioning**.  
-
-14. Choose the **Security** tab, and then remove the **Enroll** permission from the **Domain Admins** and **Enterprise Admins** security groups.  
-
-15. Choose **Add**, enter the name of a security group that has the computer account for the out-of-band service point site system role, and then choose **OK**.  
-
-16. Choose the **Enroll** permission for this group, and do not clear the **Read** permission..  
-
-17. Choose **OK**, and then close the **Certificate Templates** console.  
-
-18. In **Certification Authority**, right-click **Certificate Templates**, choose **New**, and then choose **Certificate Template to Issue**.  
-
-19. In the **Enable Certificate Templates** dialog box, choose the new template that you just created, **ConfigMgr AMT Provisioning**, and then choose **OK**.  
-
-    > [!NOTE]  
-    >  If you cannot complete steps 18 or 19, check that you are using the Enterprise Edition of Windows Server 2008. Although you can set up templates with Windows Server Standard Edition and Certificate Services, you cannot deploy certificates by using modified certificate templates unless you are using the Enterprise Edition of Windows Server 2008.  
-
-20. Do not close **Certification Authority**.  
-
-    The AMT provisioning certificate from your internal CA is now ready to be installed on the out-of-band service point computer.  
-
-##### To install the AMT provisioning certificate  
-
-1. Restart the member server that runs IIS to ensure that it can access the certificate template with the configured permission.  
-
-2. Choose **Start**, choose **Run**, and then enter **mmc.exe.** In the empty console, choose **File**, and then choose **Add/Remove Snap-in**.  
-
-3. In the **Add or Remove Snap-ins** dialog box, choose **Certificates** from the list of **Available snap-ins**, and then choose **Add**.  
-
-4. In the **Certificate snap-in** dialog box, choose **Computer account**, and then choose **Next**.  
-
-5. In the **Select Computer** dialog box, ensure that **Local computer: (the computer this console is running on)** is selected, and then choose **Finish**.  
-
-6. In the **Add or Remove Snap-ins** dialog box, choose **OK**.  
-
-7. In the console, expand **Certificates (Local Computer)**, and then choose **Personal**.  
-
-8. Right-click **Certificates**, choose **All Tasks**, and then choose **Request New Certificate**.  
-
-9. On the **Before You Begin** page, choose **Next**.  
-
-10. If you see the **Select Certificate Enrollment Policy** page, choose **Next**.  
-
-11. On the **Request Certificates** page, select **AMT Provisioning** from the list of available certificates, and then choose **Enroll**.  
-
-12. On the **Certificates Installation Results** page, wait until the certificate is installed, and then choose **Finish**.  
-
-13. Close **Certificates (Local Computer)**.  
-
-    The AMT provisioning certificate from your internal CA is now installed and is ready to be selected in the out-of-band service point properties.  
-
-### Create and issue the web server certificate for AMT-based computers  
- Use the following procedure to prepare the web server certificates for AMT-based computers.  
-
-##### To create and issue the web server certificate template  
-
-1. Create an empty security group that has the AMT computer accounts that System Center Configuration Manager creates during AMT provisioning.  
-
-2. On the member server that has Certificate Services installed, in the Certification Authority console, right-click **Certificate Templates**, and then choose **Manage** to load the **Certificate Templates** console.  
-
-3. In the results pane, right-click the entry that has **Web Server** in the **Template Display Name** column, and then choose **Duplicate Template**.  
-
-4. In the **Duplicate Template** dialog box, ensure that **Windows 2003 Server, Enterprise Edition** is selected, and then choose **OK**.  
-
-   > [!IMPORTANT]  
-   >  Do not select **Windows 2008 Server, Enterprise Edition.**  
-
-5. In the **Properties of New Template** dialog box, on the **General** tab, enter a template name, like **ConfigMgr AMT Web Server Certificate**, to generate the web certificates that will be used for out-of-band management on AMT computers.  
-
-6. Choose the **Subject Name** tab, choose **Build from this Active Directory information**, choose **Common name** for the **Subject name format**, and then clear **User principal name (UPN)** for the alternative subject name.  
-
-7. Choose the **Security** tab, and then remove the **Enroll** permission from the **Domain Admins** and **Enterprise Admins** security groups.  
-
-8. Choose **Add**, and enter the name of the security group that you created for AMT provisioning, and then choose **OK**.  
-
-9. Choose the following **Allow** permissions for this security group: **Read** and **Enroll**.  
-
-10. Choose **OK**, and then close the **Certificate Templates** console.  
-
-11. In the **Certification Authority** console, right-click **Certificate Templates**, choose **New**, and then choose **Certificate Template to Issue**.  
-
-12. In the **Enable Certificate Templates** dialog box, choose the new template that you just created, **ConfigMgr AMT Web Server Certificate**, and then choose **OK**.  
-
-13. If you do not have to create and issue more certificates, close **Certification Authority**.  
-
-    The AMT Web server template is now ready to set up AMT-based computers with web server certificates. Choose this certificate template in the out-of-band management component properties.  
-
-### Create and issue the client authentication certificates for 802.1X AMT-based computers  
- Use the following procedure if AMT-based computers will use client certificates for 802.1X authenticated wired or wireless networks.  
-
-##### To create and issue the client authentication certificate template on the CA  
-
-1. On the member server that has Certificate Services installed, in the Certification Authority console, right-click **Certificate Templates**, and then choose **Manage** to load the **Certificate Templates** console.  
-
-2. In the results pane, right-click the entry that has **Workstation Authentication** in the **Template Display Name** column, and then choose **Duplicate Template**.  
-
-   > [!IMPORTANT]  
-   >  Do not select **Windows 2008 Server, Enterprise Edition.**  
-
-3. In the **Properties of New Template** dialog box, on the **General** tab, enter a template name, like **ConfigMgr AMT 802.1X Client Authentication Certificate**, to generate the client certificates that will be used for out-of-band management on AMT computers.  
-
-4. Choose the **Subject Name** tab, choose **Build from this Active Directory information**, and then choose **Common name** for the **Subject name format**. Clear **DNS name** for the alternative subject name, and then choose **User principal name (UPN)**.  
-
-5. Choose the **Security** tab, and then remove the **Enroll** permission from the **Domain Admins** and **Enterprise Admins** security groups.  
-
-6. Choose **Add**, enter the name of the security group that you will specify in the out-of-band management component properties to contain the computer accounts of the AMT-based computers, and then choose **OK**.  
-
-7. Select the following **Allow** permissions for this security group: **Read** and **Enroll**.  
-
-8. Choose **OK**, and then close the **Certificate Templates** management console, **certtmpl - [Certificate Templates]**.  
-
-9. In the **Certification Authority** management console, right-click **Certificate Templates**, choose **New**, and then choose **Certificate Template to Issue**.  
-
-10. In the **Enable Certificate Templates** dialog box, choose the new template that you just created, **ConfigMgr AMT 802.1X Client Authentication Certificate**, and then choose **OK**.  
-
-11. If you do not need to create and issue more certificates, close **Certification Authority**.  
-
-    The client authentication certificate template is now ready to issue certificates to AMT-based computers that can be used for 802.1X client authentication. Choose this certificate template in the out-of-band management component properties.  
-
 ##  <a name="BKMK_MacClient_SP1"></a> Deploy the client certificate for Mac computers  
 
 This certificate deployment has a single procedure to create and issue the enrollment certificate template on the certification authority.  
 
 ###  <a name="BKMK_MacClient_CreatingIssuing"></a> Create and issue a Mac client certificate template on the certification authority  
- This procedure creates a custom certificate template for System Center Configuration Manager Mac computers and adds the certificate template to the certification authority.  
+ This procedure creates a custom certificate template for Configuration Manager Mac computers and adds the certificate template to the certification authority.  
 
 > [!NOTE]  
 >  This procedure uses a different certificate template from the certificate template that you might have created for Windows client computers or for distribution points.  
@@ -740,7 +558,7 @@ This certificate deployment has a single procedure to create and issue the enrol
 
 ##### To create and issue the Mac client certificate template on the certification authority  
 
-1. Create a security group that has user accounts for administrative users who will enroll the certificate on the Mac computer by using System Center Configuration Manager.  
+1. Create a security group that has user accounts for administrative users who will enroll the certificate on the Mac computer by using Configuration Manager.  
 
 2. On the member server that is running the Certification Authority console, right-click **Certificate Templates**, and then choose **Manage** to load the Certificate Templates management console.  
 

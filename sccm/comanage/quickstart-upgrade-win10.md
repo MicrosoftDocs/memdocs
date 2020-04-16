@@ -4,13 +4,14 @@ titleSuffix: Configuration Manager
 description: Upgrade devices to Windows 10 version 1709 or later, which is required for co-management
 ms.date: 01/14/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology: configmgr-comanage
 ms.topic: conceptual
 ms.assetid: 561eb5b6-f90c-485a-91c2-e45bb0ce7877
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Upgrade Windows 10 for co-management
@@ -36,11 +37,11 @@ Here are some tips we've learned from helping thousands of customers get current
 
 - Use phased deployments to roll out this upgrade to the right people at the right times. For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).  
 
-- Use pre-caching to reduce user wait times. For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).  
+- Use pre-caching to reduce user wait times. For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).  
 
 - Use the default in-place upgrade task sequence template. Then configure your steps for pre- and post-upgrade, and any failure actions. For more information, see [Recommended task sequence steps for post-processing](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#recommended-task-sequence-steps-for-post-processing).  
 
-- If your environment has a highly mobile workforce, Configuration Manager supports in-place upgrade over the cloud management gateway (CMG). This feature allows you to upgrade your Windows 10 clients when they're internet-based. For more information on the CMG, see [](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
+- If your environment has a highly mobile workforce, Configuration Manager supports in-place upgrade over the cloud management gateway (CMG). This feature allows you to upgrade your Windows 10 clients when they're internet-based. For more information on the CMG, see [Deploy Windows 10 in-place upgrade via CMG](/configmgr/osd/deploy-use/deploy-a-task-sequence#deploy-windows-10-in-place-upgrade-via-cmg).  
 
 - Offer an opt-in to co-management for users who want to be early adopters. This approach accelerates initial adoption. By identifying these people in advance, you can make sure good coverage in the early days of a rollout. You also receive validation and feedback from users that are happy for change and interested in more frequent releases. Early adopter programs generate interest in the new technologies and grow in size over time.  
 

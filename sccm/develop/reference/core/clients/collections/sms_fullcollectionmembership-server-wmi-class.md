@@ -9,7 +9,8 @@ ms.assetid: c8c0f370-89b4-4fcf-9057-0867d1f6dc3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_FullCollectionMembership Server WMI Class
 The `SMS_FullCollectionMembership` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists all member resources of a specific collection.  
@@ -19,8 +20,6 @@ The `SMS_FullCollectionMembership` Windows Management Instrumentation (WMI) clas
 ```  
 Class SMS_FullCollectionMembership : SMS_BaseClass   
 {   
-      String AMTFullVersion;  
-      UInt32 AMTStatus;  
       UInt32 ClientCertType;  
       UInt32 ClientType;   
       String ClientVersion;   
@@ -45,7 +44,6 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
       UInt32 ResourceType;   
       String SiteCode;   
       String SMSID;  
-      Boolean SuppressAutoProvision;  
 };  
 ```  
 
@@ -53,24 +51,6 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
  The `SMS_FullCollectionMembership` class does not define any methods.  
 
 ## Properties  
- `AMTFullVersion`  
- Data type: `String`  
-
- Access type: Read Only  
-
- Qualifiers: None  
-
- Starting with Configuration Manager version 1606, this property is no longer used.  
-
- `AMTStatus`  
- Data type: `UInt32`  
-
- Access type: Read Only  
-
- Qualifiers: None  
-
- Starting with Configuration Manager version 1606, this property is no longer used.  
-
  `ClientCertType`  
  Data type: `UInt32`  
 
@@ -312,15 +292,6 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
 
   Configuration Manager unique ID.  
 
-  `SuppressAutoProvision`  
-  Data type: `Boolean`  
-
-  Access type: Read Only  
-
-  Qualifiers: None  
-
-  When set to `true` and when this resource belongs to a collection configured for automatic provisioning, prevents the resource from being automatically provisioned by an Out of Band service point.  
-
 ## Remarks  
  Class qualifiers for this class include:  
 
@@ -336,5 +307,6 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [Configuration Manager Collections](../../../../../develop/core/clients/collections/collections.md)
+## See Also
+
+[Enumerate the members of a collection](/sccm/develop/core/clients/collections/how-to-enumerate-the-members-of-a-collection)

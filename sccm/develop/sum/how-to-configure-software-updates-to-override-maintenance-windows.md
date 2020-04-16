@@ -9,10 +9,11 @@ ms.assetid: 2b623f07-91ab-43cf-999c-7f868855eb3a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Configure Software Updates to Override Maintenance Windows
-You configure software updates to override maintenance windows, in System Center Configuration Manager, by updating the `OverrideServiceWindows` property of an assignment (deployment).  
+You configure software updates to override maintenance windows, in Configuration Manager, by updating the `OverrideServiceWindows` property of an assignment (deployment).  
 
 ### To configure software updates to override maintenance windows  
 
@@ -114,8 +115,6 @@ public void ConfigureSoftwareUpdatestoOverrideMaintenanceWindow(WqlConnectionMan
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
-## See Also  
- [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
- [Software Updates and Maintenance Windows](../../develop/sum/software-updates-and-maintenance-windows.md)   
- [SMS_UpdatesAssignment](../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md)
+## See also
+
+[SMS_UpdatesAssignment](/sccm/develop/reference/sum/sms_updatesassignment-server-wmi-class)

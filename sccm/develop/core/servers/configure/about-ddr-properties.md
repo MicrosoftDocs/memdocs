@@ -9,10 +9,11 @@ ms.assetid: ec596c8c-868b-4228-8a3c-5e82d20e6c48
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About DDR Properties
-In System Center Configuration Manager, the architecture for a resource is defined in both the database and the data discovery record (DDR). If the architecture is not defined in the database, the definition is created from the setting in the DDR.  
+In Configuration Manager, the architecture for a resource is defined in both the database and the data discovery record (DDR). If the architecture is not defined in the database, the definition is created from the setting in the DDR.  
 
  The architecture definition consists of properties and their types, maximum lengths, and flag settings. Some flag settings can be taken only from the architecture definition in the database, some can be overwritten by settings in the DDR, and others are taken only from the DDR. Even flags that can be set only in the DDR have meaning in the architecture definition in the database because these are used to set the flags on the DDRs that are replicated to a site's parent. These replicated DDRs are sent up when an incoming DDR is processing and are the combination of the incoming DDR and the resource stored in the database.  
 
@@ -77,9 +78,4 @@ In System Center Configuration Manager, the architecture for a resource is defin
  This property is used by the DDM to determine when to generate a client configuration request (CCR) for push client installation. The property takes the format of "\<operating system name> \<operating system version>". The operating system name should be the common name of the operating system, not the name of the release ("Windows NT" instead of "Windows 2000" or "Windows XP"). The recognized operating system names for push installation are "Microsoft Windows NT Server" (servers products), "Microsoft Windows NT Workstation" (workstation products), and "Microsoft Windows NT Advanced Server".  
 
 #### Client Type  
- Client type 1 is the System Center Configuration Manager client type.  
-
-## See Also  
- [System Center Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Discovery](../../../../develop/core/servers/configure/discovery.md)   
- [Extending Discovery and Inventory](../../../../develop/core/servers/configure/extending-resource-discovery.md)
+ Client type 1 is the Configuration Manager client type.  

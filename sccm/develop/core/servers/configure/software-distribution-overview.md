@@ -9,10 +9,11 @@ ms.assetid: b3c66208-ef68-4e4f-9fd5-2baf0ea0b19f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Software Distribution Overview
-With this release, System Center Configuration Manager expands the abilities of system administrators to centrally manage computers effectively. Building on the capabilities provided by Configuration Manager 2007, System Center Configuration Manager provides a refined tool set for software distribution.  
+With this release, Configuration Manager expands the abilities of system administrators to centrally manage computers effectively. Building on the capabilities provided by Configuration Manager 2007, Configuration Manager provides a refined tool set for software distribution.  
 
 ## Distributing Software  
  The software distribution process advertises packages, which contain programs, to members of a collection. The client then installs the software from specified distribution points. The order in which you create the components that make up the software distribution process is important.  
@@ -38,5 +39,4 @@ With this release, System Center Configuration Manager expands the abilities of 
    [How to Create an Advertisement](../../../../develop/core/servers/configure/how-to-create-an-advertisement.md)  
 
 ## See Also  
- [Configuration Manager SDK](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)

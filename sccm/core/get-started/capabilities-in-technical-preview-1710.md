@@ -1,23 +1,24 @@
 ---
 title: "Technical Preview 1710 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview version 1710 for System Center Configuration Manager."
+description: "Learn about features available in the Technical Preview version 1710 for Configuration Manager."
 ms.date: 11/20/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: f4706a58-1f11-4eab-b1eb-3d1a0da02d0f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Capabilities in Technical Preview 1710 for System Center Configuration Manager
+# Capabilities in Technical Preview 1710 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1710. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1710. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
 
 
 <!--  Known Issues Template   
@@ -48,7 +49,7 @@ This article introduces the features that are available in the Technical Preview
 
 ## Improvements for deploying PowerShell Scripts from Configuration Manager
 With this release, PowerShell scripts you deploy now support use of the following improvements: 
-- **Security Scopes**.  Scripts now use security scopes to control scripts authoring and execution. This is done through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
+- **Security Scopes**.  Scripts now use security scopes to control scripts authoring and execution. This is done through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 - **Real-time monitoring**. When you monitor the run of a script, it is now in real-time as the script runs.
 - **Parameter validation**. Each parameter in your script has a **Script Parameter Properties** dialog for you to add validation for that parameter. After adding validation, you should get errors if you are entering a value for a parameter that does not meet its validation.
 
@@ -61,15 +62,12 @@ To try out using the Run Scripts feature, see [Create and run scripts](../../app
 
 
 
-## Limit Windows 10 Enhanced telemetry to only send data relevant to Windows Analytics Device Health
+## Limit Windows 10 Enhanced data to only send data relevant to Windows Analytics Device Health
 <!-- 1356148 -->
 
-With this release, you can now set the Windows 10 telemetry data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** telemetry level with Windows 10 version 1709 or later.
+With this release, you can now set the Windows 10 diagnostic data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** level with Windows 10 version 1709 or later.
 
-The Enhanced (Limited) telemetry level includes metrics from the basic level, as well as a subset of data collected from the **Enhanced** level relevant to Windows Analytics. For more information on telemetry levels, see [Telemetry levels](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#use-group-policy-to-set-the-diagnostic-data-level).
-
-### Try it out!
-To configure Windows 10 telemetry collection on clients, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings). Open the **Cloud Services** window, and set Windows 10 telemetry to **Enhanced**.
+The Enhanced (Limited) level includes metrics from the basic level, as well as a subset of data collected from the **Enhanced** level relevant to Windows Analytics.
 
 
 ## Software Center no longer distorts icons larger than 250x250  
@@ -158,7 +156,7 @@ With the 1710 Technical Preview build, the following three changes have been mad
 Device Guard policies have been renamed to Windows Defender Application Control policies. So, for example, the **Create Device Guard policy wizard** is now named **Create Windows Defender Application Control policy wizard**.
 
 ### Restart is not required to apply policies
-Starting with the Fall Creators Update for Windows version 1709, devices using the new version of Windows don’t require a restart to apply the Windows Defender Application Control policies.
+Starting with the Fall Creators Update for Windows version 1709, devices using the new version of Windows don't require a restart to apply the Windows Defender Application Control policies.
 
 Restarting is the default.
 
@@ -189,7 +187,7 @@ To let a device running Windows Defender SmartScreen run trusted software, follo
 
 ## Configure and deploy Windows Defender Application Guard policies <!-- 1351960 -->
 
-[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) is a new Windows feature that helps protect your users by opening untrusted web sites in a secure isolated container that is not accessible by other parts of the operating system. In this technical preview, we’ve added support to configure this feature using Configuration Manager compliance settings which you configure, and then deploy to a collection. This feature will be released in preview for the 64-bit version of the Windows 10 Creator’s Update (codename: RS2). To test this feature now, you must be using a preview version of this update.
+[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) is a new Windows feature that helps protect your users by opening untrusted web sites in a secure isolated container that is not accessible by other parts of the operating system. In this technical preview, we've added support to configure this feature using Configuration Manager compliance settings which you configure, and then deploy to a collection. This feature will be released in preview for the 64-bit version of the Windows 10 Creator's Update. To test this feature now, you must be using a preview version of this update.
 
 ### Before you start
 To create and deploy Windows Defender Application Guard policies, the Windows 10 devices to which you deploy the policy must be configured with a network isolation policy. For more information, see the blog post referenced later. This capability works only with current Windows 10 Insider builds. To test it, your clients must be running a recent Windows 10 Insider Build.
@@ -203,12 +201,12 @@ To create a policy, and to browse the available settings:
 2. In the **Assets and Compliance** workspace, choose **Overview** > **Endpoint Protection** > **Windows Defender Application Guard**.
 3. In the **Home** tab, in the **Create** group, click **Create Windows Defender Application Guard Policy**.
 4. Using the blog post as a reference, you can browse and configure the available settings to try the feature out.
-5. In this release, we’ve added the new Network Definition page to the wizard. Here, specify the corporate identity, and define your corporate network boundary.
+5. In this release, we've added the new Network Definition page to the wizard. Here, specify the corporate identity, and define your corporate network boundary.
 
     > [!NOTE]
-    > Windows 10 PCs store only one network isolation list on the client. In this release, you can create two different kinds of network isolation lists (one from Windows Information Protection, and one from Windows Defender Application Guard), and deploy them to the client. If you deploy both policies, these network isolation lists must match. If you deploy lists that don’t match to the same client, the deployment will fail.
+    > Windows 10 PCs store only one network isolation list on the client. In this release, you can create two different kinds of network isolation lists (one from Windows Information Protection, and one from Windows Defender Application Guard), and deploy them to the client. If you deploy both policies, these network isolation lists must match. If you deploy lists that don't match to the same client, the deployment will fail.
 
-    You can find more information about how to specify network definitions in the [Windows Information Protection documentation](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm).
+    You can find more information about how to specify network definitions in the [Windows Information Protection documentation]- [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
 
 6. When you are finished, complete the wizard, and deploy the policy to one or more Windows 10 devices.
 
@@ -217,4 +215,4 @@ To create a policy, and to browse the available settings:
 To read more about Windows Defender Application Guard, see [this blog post](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97). Additionally, to learn more about Windows Defender Application Guard Standalone mode, see [this blog post](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903).
 
 ## Next Steps
-For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    

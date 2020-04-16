@@ -9,10 +9,11 @@ ms.assetid: c4e64b28-2159-4286-b1ef-4935c7e07e14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a Driver Package for a Windows Driver in Configuration Manager
-You create a package for an operating system deployment driver, in System Center Configuration Manager, by creating a [SMS_DriverPackage Server WMI Class](../../develop/reference/osd/sms_driverpackage-server-wmi-class.md) object. To add a driver to the package, you call the [AddDriverContent Method in Class SMS_DriverPackage](../../develop/reference/osd/adddrivercontent-method-in-class-sms_driverpackage.md).  
+You create a package for an operating system deployment driver, in Configuration Manager, by creating a [SMS_DriverPackage Server WMI Class](../../develop/reference/osd/sms_driverpackage-server-wmi-class.md) object. To add a driver to the package, you call the [AddDriverContent Method in Class SMS_DriverPackage](../../develop/reference/osd/adddrivercontent-method-in-class-sms_driverpackage.md).  
 
  Driver packages are used to store the content associated with drivers. When creating a driver package, the source location should initially be an empty share that the SMS Provider has read and write access to. When a driver is added to a driver package, using `AddDriverContent`, the SMS Provider will copy the content from the driver source location to a subdirectory in the driver package share.  
 
@@ -27,7 +28,7 @@ You create a package for an operating system deployment driver, in System Center
 
 ### To create a driver package and add driver content  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Create an [SMS_DriverPackage](../../develop/reference/osd/sms_driverpackage-server-wmi-class.md) object.  
 

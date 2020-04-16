@@ -9,7 +9,8 @@ ms.assetid: 4dd6209a-9074-4b70-8f19-7814cfef2c62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_Role Server WMI Class
 The `SMS_Role` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an RBA role.  
@@ -163,15 +164,10 @@ Class SMS_Role : SMS_BaseClass
 
  The site code of the site where the role was created.  
 
-## Remarks  
-
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Role Based Administration Server WMI Classes](../../../../../develop/reference/core/servers/configure/role-based-administration-server-wmi-classes.md)

@@ -1,7 +1,7 @@
 ---
 title: "Example scenario - deploy Windows Embedded clients"
 titleSuffix: "Configuration Manager"
-description: "See an example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices."
+description: "See an example scenario for deploying and managing Configuration Manager clients on Windows Embedded devices."
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,11 +10,12 @@ ms.assetid: 10049c89-b37c-472b-b317-ce4f56cd4be7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# Example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# Example scenario for deploying and managing Configuration Manager clients on Windows Embedded devices
+
+*Applies to: Configuration Manager (current branch)*
 
 This scenario demonstrates how you can manage write-filter-enabled Windows Embedded devices with Configuration Manager.If your embedded devices do not support write filters, they behave as standard Configuration Manager clients and these procedures don't apply.  
 
@@ -26,17 +27,17 @@ Coho Vineyard & Winery is opening a visitor center and needs kiosks that run Win
 
 1. The Configuration Manager administrator (the Admin) reads how Windows Embedded devices uses write filters and how Configuration Manager can make this easier by automatically disabling and then re-enabling the writer filters to persist a software installation.  
 
-    For more information, see [Planning for client deployment to Windows Embedded devices in System Center Configuration Manager](../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
+    For more information, see [Planning for client deployment to Windows Embedded devices](../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
 2. Before the Admin installs the Configuration Manager client, the Admin creates a new query-based device collection for the Windows Embedded devices. Because the company uses standard naming formats to identify their computers, the Admin can uniquely identify Windows Embedded devices by the first six letters of the computer name: **WEMDVC**. The Admin uses the following WQL query to create this collection: **select SMS_R_System.NetbiosName from SMS_R_System where SMS_R_System.NetbiosName like "WEMDVC%"**  
 
     This collection allows the Admin to manage the Windows Embedded devices with different configuration options from the other devices. The Admin will use this collection to control restarts, deploy Endpoint Protection with client settings, and deploy the interactive presentation application.  
 
-    See [How to create collections in System Center Configuration Manager](../../../core/clients/manage/collections/create-collections.md).  
+    See [How to create collections](../../../core/clients/manage/collections/create-collections.md).  
 
 3. The Admin configures the collection for a maintenance window to ensure that restarts that might be required for installing the presentation application and any upgrades do not occur during opening hours for the visitor center. Opening hours will be 09:00 through 18:00, Monday through Sunday. The Admin configures the maintenance window for every day, 18:30 through 06:00.  
 
-4. For more information, see [How to use maintenance windows in System Center Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md).  
+4. For more information, see [How to use maintenance windows](../../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 5. The Admin then configures a custom device client setting to install the Endpoint Protection client by selecting **Yes** for the following settings, and then deploys this custom client setting to the Windows Embedded device collection:  
 
@@ -51,7 +52,7 @@ Coho Vineyard & Winery is opening a visitor center and needs kiosks that run Win
    > [!NOTE]  
    >  The restarts that are required to install the Endpoint Protection client are a one-time occurrence, which happen during the setup period for the devices and before the visitor center is operational. Unlike the periodic deployment of applications or software definition updates, the next time the Endpoint Protection client is installed on the same device will probably be when the company upgrades to the next version of Configuration Manager.  
 
-    For more information, see [Configuring Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/configure-endpoint-protection.md).  
+    For more information, see [Configuring Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection-configure).  
 
 6. With the configuration settings for the client now in place, the Admin prepares to install the Configuration Manager clients. Before the Admin can install the clients, they must manually disable the write filter on the Windows Embedded devices. The Admin reads the OEM documentation that accompanies the kiosks and follows their instructions to disable the write filters.  
 
@@ -67,15 +68,15 @@ Coho Vineyard & Winery is opening a visitor center and needs kiosks that run Win
 
     For more information, see:  
 
-   -   [How to deploy clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md)  
+   -   [How to deploy clients to Windows computers](../../../core/clients/deploy/deploy-clients-to-windows-computers.md)  
 
-   -   [How to assign clients to a site in System Center Configuration Manager](../../../core/clients/deploy/assign-clients-to-a-site.md)  
+   -   [How to assign clients to a site](../../../core/clients/deploy/assign-clients-to-a-site.md)  
 
 7. Now that the Configuration Manager client is installed on the Windows Embedded devices, the Admin confirms that they can manage them in the same way as they manage the standard Windows clients. For example, from the Configuration Manager console, the Admin can remotely manage them by using remote control, initiate client policy for them, and view client properties and hardware inventory.  
 
     Because these devices are joined to an Active Directory domain, the Admin does not have to manually approve them as trusted clients and confirms from the Configuration Manager console that they are approved.  
 
-    For more information, see [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
+    For more information, see [How to manage clients](../../../core/clients/manage/manage-clients.md).  
 
 8. To install the interactive presentation software, the Admin runs the **Deploy Software Wizard** and configures a required application. On the **User Experience** page of the wizard, in the **Write filter handling for Windows Embedded devices** section, they accept the default option that selects **Commit changes at deadline or during a maintenance window (requires restarts)**.  
 
@@ -83,7 +84,7 @@ Coho Vineyard & Winery is opening a visitor center and needs kiosks that run Win
 
     The Admin deploys the application to the Windows Embedded devices collection.  
 
-    For more information, see [How to deploy applications with System Center Configuration Manager](../../../apps/deploy-use/deploy-applications.md).  
+    For more information, see [How to deploy applications with Configuration Manager](../../../apps/deploy-use/deploy-applications.md).  
 
 9. To configure definition updates for Endpoint Protection, the Admin uses software updates and runs the Create Automatic Deployment Rule Wizard. They select the **Definition Updates** template to prepopulate the wizard with settings that are appropriate for Endpoint Protection.  
 
@@ -101,7 +102,7 @@ Coho Vineyard & Winery is opening a visitor center and needs kiosks that run Win
      The Admin selects the Windows Embedded devices collection for the automatic deployment rule.  
 
      For more information, see  
-               Step 3: Configure Configuration Manager Software Updates to Deliver Definition Updates to Client Computers in [Configuring Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/configure-endpoint-protection.md)  
+               Step 3: Configure Configuration Manager Software Updates to Deliver Definition Updates to Client Computers in [Configuring Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection-configure)  
 
 10. The Admin decides to configure a maintenance task that periodically commits all changes on the overlay. This task is to support the software update definitions deployment, to reduce the number of updates that accumulate and must be installed again, each time the device restarts. In the Admin's experience, this helps the antimalware programs run more efficiently.  
 
@@ -127,7 +128,7 @@ Coho Vineyard & Winery is opening a visitor center and needs kiosks that run Win
     7. The Admin completes the wizard without any further changes.  
 
        For more information, see  
-                 [Manage task sequences to automate tasks in System Center Configuration Manager](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md).  
+                 [Manage task sequences to automate tasks](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md).  
 
 11. For the kiosks to run automatically, the Admin writes a script to configure the devices for the following settings:  
 
@@ -137,7 +138,7 @@ Coho Vineyard & Winery is opening a visitor center and needs kiosks that run Win
 
       The Admin uses packages and programs to deploy this script to the Windows Embedded devices collection. When the Admin runs the Deploy Software Wizard, they again select the **Commit changes at deadline or during a maintenance window (requires restarts)** check box to persist the changes after a restart.  
 
-      For more information, see [Packages and programs in System Center Configuration Manager](../../../apps/deploy-use/packages-and-programs.md).  
+      For more information, see [Packages and programs](../../../apps/deploy-use/packages-and-programs.md).  
 
 12. The following morning, the Admin checks the Windows Embedded devices. They confirm the following:  
 
@@ -151,9 +152,9 @@ Coho Vineyard & Winery is opening a visitor center and needs kiosks that run Win
 
       For more information, see:  
 
-    - [How to monitor Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/monitor-endpoint-protection.md)  
+    - [How to monitor Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md)  
 
-    - [Monitor applications with System Center Configuration Manager](/sccm/apps/deploy-use/monitor-applications-from-the-console)  
+    - [Monitor applications with Configuration Manager](/sccm/apps/deploy-use/monitor-applications-from-the-console)  
 
 13. The Admin monitors the kiosks and reports the successful management of them to their manager. As a result, 20 kiosks are ordered for the visitor center.  
 

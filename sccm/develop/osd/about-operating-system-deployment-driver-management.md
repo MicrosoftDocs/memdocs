@@ -9,10 +9,11 @@ ms.assetid: 789d981f-d0c5-447b-9d93-24d2e0eef5f0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # About Operating System Deployment Driver Management
-In System Center Configuration Manager, the driver catalog helps manage the cost and complexity of deploying an operating system in an environment that contains different types of computers and devices. By storing device drivers in the driver catalog and not with each individual operating system image, the number of operating system images that is needed is greatly reduced. For more information about the driver catalog, see [http://go.microsoft.com/fwlink/?LinkId=110504](http://go.microsoft.com/fwlink/?LinkId=110504).  
+In Configuration Manager, the driver catalog helps manage the cost and complexity of deploying an operating system in an environment that contains different types of computers and devices. By storing device drivers in the driver catalog and not with each individual operating system image, the number of operating system images that is needed is greatly reduced. For more information about the driver catalog, see [https://go.microsoft.com/fwlink/?LinkId=110504](https://go.microsoft.com/fwlink/?LinkId=110504).  
 
 > [!NOTE]
 >  Before a driver can be used, it must be added to a driver package. For more information, see [How to Create a Driver Package for a Windows Driver in Configuration Manager](../../develop/osd/how-to-create-a-driver-package-for-a-windows-driver.md).  
@@ -45,8 +46,4 @@ In System Center Configuration Manager, the driver catalog helps manage the cost
  Windows drivers can be configured to support specific platforms. The supported platforms are stored in the driver package XML. For more information, see [How to Specify The Supported Platforms for a Driver](../../develop/osd/how-to-specify-the-supported-platforms-for-a-driver.md).  
 
 ### Driver Categories  
- You can associate categories with Windows device drivers. For more information, see [How to Add a Category to a Windows Driver](../../develop/osd/how-to-add-a-category-to-a-windows-driver.md)  
-
-## See Also  
- [Operating System Deployment Driver Management](../../develop/osd/operating-system-deployment-driver-management.md)   
- [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)
+ You can associate categories with Windows device drivers. For more information, see [How to Add a Category to a Windows Driver](../../develop/osd/how-to-add-a-category-to-a-windows-driver.md)

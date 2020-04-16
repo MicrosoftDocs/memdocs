@@ -1,27 +1,30 @@
 ---
-title: "Start using System Center Configuration Manager"
+title: Deploy servers and roles
+titleSuffix: Configuration Manager
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 32609a30-465c-4406-b227-aca5c276e015
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Start using System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# Deploy servers and roles
 
-After you plan out your System Center Configuration Manager site and hierarchy  topology and are ready to get sites installed or upgraded, use the information in the following topics:  
+*Applies to: Configuration Manager (current branch)*
 
--   [Install System Center Configuration Manager sites](/sccm/core/servers/deploy/install/installing-sites)  
+After you plan out your Configuration Manager site and hierarchy topology and are ready to get sites installed or upgraded, use the information in the following articles:  
 
--   [Upgrade to System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md)  
+- [Install Configuration Manager sites](/sccm/core/servers/deploy/install/installing-sites)  
 
--   [Scenarios to streamline your installation of System Center Configuration Manager](../../../core/servers/deploy/install/scenarios-to-streamline-your-installation.md)  
+- [Upgrade to Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)  
 
--   [Configure sites and hierarchies for System Center Configuration Manager](../../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)  
+- [Scenarios to streamline your installation of Configuration Manager](/sccm/core/servers/deploy/install/scenarios-to-streamline-your-installation)  
 
--   [Migrate data between hierarchies in System Center Configuration Manager](../../../core/migration/migrate-data-between-hierarchies.md)  
+- [Configure sites and hierarchies](/sccm/core/servers/deploy/configure/configure-sites-and-hierarchies)  
+
+- [Migrate data between hierarchies](/sccm/core/migration/migrate-data-between-hierarchies)  

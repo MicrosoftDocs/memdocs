@@ -10,12 +10,13 @@ ms.assetid: c667d6af-80c4-485f-910c-896c0171fd00
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Manage clients on the internet with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Typically in Configuration Manager, most of the managed computers and servers are physically on the same internal network as the site system servers that perform management functions. However, you can manage clients outside your internal network when they are connected to the internet. This ability doesn't require the clients to connect via VPN to reach the site system servers.
 
@@ -32,7 +33,7 @@ The cloud management gateway provides management of internet-based clients. It u
 
 #### Advantages  
 
--   No additional infrastructure investment required.  
+-   No additional on-premises infrastructure investment required.  
 
 -   Does not expose on-premises infrastructure to the internet.  
 
@@ -46,7 +47,7 @@ The cloud management gateway provides management of internet-based clients. It u
 
 -   Management data sent through cloud service.  
 
-For more information, see [Plan for cloud management gateway](plan-cloud-management-gateway.md).  
+For more information, see [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
 
 
 

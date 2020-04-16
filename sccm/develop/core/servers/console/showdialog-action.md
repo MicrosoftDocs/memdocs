@@ -8,10 +8,11 @@ ms.assetid: f5912944-21ac-40d2-a026-f9b2ea69d9c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager ShowDialog Action
-The `ShowDialog` action, in System Center Configuration Manager, opens a property sheet or regular dialog box in the Configuration Manager console. With the `ShowDialog` action, you can display existing dialog boxes or extension dialog boxes that you create.  
+The `ShowDialog` action, in Configuration Manager, opens a property sheet or regular dialog box in the Configuration Manager console. With the `ShowDialog` action, you can display existing dialog boxes or extension dialog boxes that you create.  
 
  The following attributes and elements are specific to an action that opens a dialog box:  
 
@@ -42,7 +43,7 @@ The `ShowDialog` action, in System Center Configuration Manager, opens a propert
 </ActionDescription>  
 ```  
 
- For more information about creating and showing dialog boxes, see [Configuration Manager Console Dialog Boxes](../../../../develop/core/servers/console/console-forms.md).  
+ For more information about creating and showing dialog boxes, see [About console forms](/sccm/develop/core/servers/console/about-configuration-manager-console-forms).  
 
 ## See Also  
  [About Configuration Manager Dialog Boxes](../../../../develop/core/servers/console/about-configuration-manager-console-forms.md)   

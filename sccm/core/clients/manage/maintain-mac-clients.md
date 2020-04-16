@@ -10,11 +10,12 @@ ms.assetid: cf6337a2-700c-47f3-b6f8-5814f9b81e59
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Maintain Mac clients
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Here are procedures for uninstalling Mac clients and for renewing their certificates.
 
@@ -24,7 +25,7 @@ Here are procedures for uninstalling Mac clients and for renewing their certific
 
 2.  Navigate to the Tools folder and enter the following command-line:  
 
-     **./CMUninstall -c**  
+     `./CMUninstall -c`
 
     > [!NOTE]  
     >  The **-c** property instructs the client uninstall to also remove  client crash logs and log files. We recommend this to avoid confusion if you later reinstall the client.  
@@ -96,7 +97,7 @@ Here are procedures for uninstalling Mac clients and for renewing their certific
 
 7.  In the **Edit Discovery Script** dialog box, enter the following Shell Script:  
 
-    ```  
+    ``` Shell
     defaults read com.microsoft.ccmclient SMSID  
     ```  
 
@@ -106,7 +107,7 @@ Here are procedures for uninstalling Mac clients and for renewing their certific
 
 10. In the **Create Remediation Script** dialog box, enter the following Shell Script:  
 
-    ```  
+    ``` Shell
     defaults delete com.microsoft.ccmclient SMSID  
     ```  
 
@@ -126,11 +127,11 @@ Here are procedures for uninstalling Mac clients and for renewing their certific
 
 14. Create a configuration baseline that contains the configuration item that you have just created and deploy it to the device collection that you created in step 1.  
 
-     For more information about how to create and deploy configuration baselines, see [How to create configuration baselines in System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-baselines.md) and [How to deploy configuration baselines in System Center Configuration Manager](../../../compliance/deploy-use/deploy-configuration-baselines.md).  
+     For more information about how to create and deploy configuration baselines, see [How to create configuration baselines](../../../compliance/deploy-use/create-configuration-baselines.md) and [How to deploy configuration baselines](../../../compliance/deploy-use/deploy-configuration-baselines.md).  
 
 15. On Mac computers that have the SMSID removed, run the following command to install a new certificate:  
 
-    ```  
+    ``` Shell
     sudo ./CMEnroll -s <enrollment_proxy_server_name> -ignorecertchainvalidation -u <'user name'>  
     ```  
 
@@ -138,7 +139,7 @@ Here are procedures for uninstalling Mac clients and for renewing their certific
 
 16. To limit the enrolled certificate to Configuration Manager, on the Mac computer, open a terminal window and make the following changes:  
 
-    a.  Enter the command **sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access**  
+    a.  Enter the command `sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access`
 
     b.  In the **Keychain Access** dialog, in the **Keychains** section, choose **System**, and then, in the **Category** section, choose **Keys**.  
 

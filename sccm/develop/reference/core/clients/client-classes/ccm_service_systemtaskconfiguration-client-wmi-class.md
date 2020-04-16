@@ -9,13 +9,14 @@ ms.assetid: d7864ef9-16f6-4c98-afe6-7d4a21275263
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_Service_SystemTaskConfiguration Client WMI Class
 > [!IMPORTANT]
 >  This class supports the Configuration Manager 2007 infrastructure and is not intended to be used directly from your code.  
 
- In System Center Configuration Manager, the `CCM_Service_SystemTaskConfiguration` class is a client Windows Management Instrumentation (WMI) class that supports system task configuration for the CCMEXEC service.  
+ in Configuration Manager, the `CCM_Service_SystemTaskConfiguration` class is a client Windows Management Instrumentation (WMI) class that supports system task configuration for the CCMEXEC service.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

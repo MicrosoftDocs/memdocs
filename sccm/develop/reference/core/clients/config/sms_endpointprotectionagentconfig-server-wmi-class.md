@@ -9,7 +9,8 @@ ms.assetid: 6c5c8c61-9afc-481e-a288-04352a1e0614
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_EndpointProtectionAgentConfig Server WMI Class
 The `SMS_EndpointProtectionAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies the settings for the Endpoint Protection client.  

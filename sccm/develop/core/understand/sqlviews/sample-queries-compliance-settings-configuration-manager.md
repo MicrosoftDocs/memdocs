@@ -4,9 +4,8 @@ titleSuffix: Configuration Manager
 description: Sample queries that show how to join compliance settings views to each other and to views from other view categories.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
 ms.assetid: fdf87ece-b625-4c34-8fd7-f056d9cdf8b6
 author: aczechowski
 ms.author: aaroncz
@@ -38,7 +37,7 @@ The following query retrieves the configuration baselines that have been evaluat
     SELECT DISTINCT v_LocalizedCIProperties.DisplayName AS [Baseline Name], 
       v_LocalizedCIProperties.Description AS [Baseline Description], 
       v_CIComplianceStatusDetail.Netbios_Name0 AS [Computer Name], 
-      v_RA_System_IPAddresses.IP_Addresses0 AS [IP Address], v_CIComplianceStatusDetail.Severity, 
+      v_RA_System_IPAddresses.IP_Addresses0 AS [IP Address], v_CIComplianceStatusDetail.RuleSeverity, 
       v_CIComplianceStatusDetail.LastComplianceMessageTime AS [Last Compliance Message] 
     FROM v_CIComplianceStatusDetail INNER JOIN v_RA_System_IPAddresses ON 
       v_CIComplianceStatusDetail.ResourceID = v_RA_System_IPAddresses.ResourceID 

@@ -4,18 +4,19 @@ titleSuffix: Configuration Manager
 description: Learn about the layers of security in Configuration Manager.
 ms.date: 10/22/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Fundamentals of security for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article summarizes the following fundamental security components of any Configuration Manager environment:
 - [Security layers](#bkmk_layers)

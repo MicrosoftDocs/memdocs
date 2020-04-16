@@ -9,7 +9,8 @@ ms.assetid: 064a7248-6a42-4dbc-b937-9be7e3454cd4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Release a Lock on a SEDO-Enabled Object
 ### To Release an Explicit Lock on a SEDO-enabled Object  
@@ -118,4 +119,3 @@ class Program
 
 ## See Also  
  [Configuration Manager SEDO](../../../develop/core/understand/sedo.md)   
- [Configuration Manager Programming Fundamentals](../../../develop/core/understand/configuration-manager-programming-fundamentals.md)

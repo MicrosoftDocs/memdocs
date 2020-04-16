@@ -2,20 +2,21 @@
 title: Find help
 titleSuffix: Configuration Manager
 description: Find resources for additional information about Configuration Manager.
-ms.date: 05/02/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 
-ms.collection: M365-identity-device-management
+
+
 ---
 # Find help for using Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article provides the following sections with multiple resources to find help for using Configuration Manager:  
 
@@ -47,36 +48,41 @@ For tips on searching, providing feedback, and more information about using the 
 
 Starting in Configuration Manager version 1806, you can send product feedback directly from the console. If you need to attach logs, use [Feedback Hub](#BKMK_FeedbackHub). You can do the following things: <!--1357542-->
 
-  - **Send a smile**: Send feedback on what you liked.
-  - **Send a frown**: Send feedback on what you didn't like.
-  - **Send a suggestion**: Takes you to the [UserVoice website](https://configurationmanager.uservoice.com/) to share your idea.
+- **Send a smile**: Send feedback on what you liked.
+- **Send a frown**: Send feedback on what you didn't like.
+- **Send a suggestion**: Takes you to the [UserVoice website](https://configurationmanager.uservoice.com/) to share your idea.
 
-    ![Submit feedback in Configuration Manager 1806](media/1806-send-a-smile.png)
+  ![Submit feedback in Configuration Manager 1806](media/1806-send-a-smile.png)
 
 
-### Send a smile
+### Send a smile or send a frown
 
-To send feedback on something that you liked follow the instructions below: 
-1. In the upper right corner of the console, click on the smiley face. 
-2. In the drop-down menu, select **Send a smile**.
-3. Use the text box to explain what you liked. 
-4. Choose if you would like to share your e-mail address and a screenshot. 
+To send feedback on something that you liked follow the instructions below:
+
+1. In the upper right corner of the console, click on the smiley face.
+2. In the drop-down menu, select **Send a smile** or **Send a frown**.
+3. Use the text box to explain what you liked or what you didn't like. 
+4. Choose if you would like to share your e-mail address and a screenshot.
 5. Click **Submit Feedback**
      - If you don't have internet connectivity, click on **Save** at the bottom. Follow the instructions in the [Send feedback that you saved for later submission](#BKMK_NoInternet) section to send it to Microsoft. 
 
 ![Submit feedback form in Configuration Manager 1806](media/1806-feedback-form.png)
 
+#### Status messages for send a smile
+<!--5891852-->
+Starting in Configuration Manager 2002, when you **Send a smile** or **Send a frown**, a status message is created when the feedback is submitted. This improvement provides a record of:
+- When the feedback was submitted
+- Who submitted the feedback
+- The feedback ID
+- If the feedback submission was successful or not
+   - Message ID of 53900 for a successful submission.
+   - Message ID  of 53901 for a failed submission.
 
-### Send a frown
+View status messages from **Monitoring** > **System Status** > **Status Message Queries**. Start with the **All Status Messages** query and select your time frame. When the messages load, click on the **Filter messages** button and filter for Message ID 53900 or 53901.
 
-To send feedback on something that you didn't like, follow the instructions below:
+Status messages aren't created if you [Send feedback that you saved for later submission](/sccm/core/understand/find-help#BKMK_NoInternet).
 
-1. In the upper right corner of the console, click on the smiley face. 
-2. In the drop-down menu, select **Send a frown**.
-3. Use the text box to explain what you didn't like. 
-4. Choose if you would like to share your e-mail address and a screenshot. 
-5. Click **Submit Feedback**
-     - If you don't have internet connectivity, click on **Save** at the bottom. Follow the instructions in the [Send feedback that you saved for later submission](#BKMK_NoInternet) section to send it to Microsoft.  
+[![Status message for successfully submitting feedback](./media/5891852-send-smile-status-message.png)](./media/5891852-send-smile-status-message.png#lightbox)
 
 ### Send a suggestion
 
@@ -84,8 +90,8 @@ When you **Send a suggestion**, you're directed to [UserVoice](https://configura
 
 - **Noted** - We understand the request and it makes sense. We've added it to our backlog.
 - **Planned** - We've started coding for this feature and expect it to show up in a tech preview build within the next few months.
-- **Started** - The feature is now in a tech preview. Go check it out, and give us feedback. Let us know if the feature is on the right track or not. Put additional feedback in the comments section of the original request for others to see and comment on. We’ll read that and use the feedback to try to improve the feature.
-- **Completed** - The first version of the feature is in a production build. This status doesn’t mean we're 100% done with the feature, and will no longer improve it. But it does mean that v1 of the features is in a production build, and you can start using it for real. We're marking it completed because:
+- **Started** - The feature is now in a tech preview. Go check it out, and give us feedback. Let us know if the feature is on the right track or not. Put additional feedback in the comments section of the original request for others to see and comment on. We'll read that and use the feedback to try to improve the feature.
+- **Completed** - The first version of the feature is in a production build. This status doesn't mean we're 100% done with the feature, and will no longer improve it. But it does mean that v1 of the features is in a production build, and you can start using it for real. We're marking it completed because:
   - We want you to know the feature is production ready.
   - We want to give back your UserVoice votes so you can use them on other items.
   - You can file new Design Change Requests to this feature to help us know the next most important improvement for this feature.
@@ -93,13 +99,13 @@ When you **Send a suggestion**, you're directed to [UserVoice](https://configura
 ### Information sent with feedback
 
 When you **Send a smile** or **Send a frown**, the following information is sent with the feedback:
- 
-   - OS build information
-   - Configuration Manager hierarchy ID
-   - Product build information
-   - Language information
-   - Device identifier 
-       - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient:MachineId
+
+- OS build information
+- Configuration Manager hierarchy ID
+- Product build information
+- Language information
+- Device identifier 
+    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient:MachineId
 
 
 
@@ -136,17 +142,17 @@ Starting in version 1902, when you send feedback through the Configuration Manag
 ##  <a name="BKMK_FeedbackHub"></a> Product feedback for versions 1802 and earlier
 
 Report potential product defects through the [Feedback Hub app](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app) built-in to Windows 10. When you **Add new feedback**, be sure to select the **Enterprise Management** category, and then choose from one of the following subcategories:
- - Configuration Manager Client
- - Configuration Manager Console
- - Configuration Manager OS Deployment
- - Configuration Manager Server
+- Configuration Manager Client
+- Configuration Manager Console
+- Configuration Manager OS Deployment
+- Configuration Manager Server
 
 Continue to use the [UserVoice page](https://configurationmanager.uservoice.com/) to vote on new feature ideas in Configuration Manager. The Configuration Manager product team uses the following UserVoice status values:
 
 - **Noted** - We understand the request and it makes sense. We've added it to our backlog.
 - **Planned** - We've started coding for this feature and expect it to show up in a tech preview build within the next few months.
-- **Started** - The feature is now in a tech preview. Go check it out, and give us feedback. Let us know if the feature is on the right track or not. Put additional feedback in the comments section of the original request for others to see and comment on. We’ll read that and use the feedback to try to improve the feature.
-- **Completed** - The first version of the feature is in a production build. This status doesn’t mean we're 100% done with the feature, and will no longer improve it. But it does mean that v1 of the features is in a production build, and you can start using it for real. We're marking it completed because:
+- **Started** - The feature is now in a tech preview. Go check it out, and give us feedback. Let us know if the feature is on the right track or not. Put additional feedback in the comments section of the original request for others to see and comment on. We'll read that and use the feedback to try to improve the feature.
+- **Completed** - The first version of the feature is in a production build. This status doesn't mean we're 100% done with the feature, and will no longer improve it. But it does mean that v1 of the features is in a production build, and you can start using it for real. We're marking it completed because:
   - We want you to know the feature is production ready.
   - We want to give back your UserVoice votes so you can use them on other items.
   - You can file new Design Change Requests to this feature to help us know the next most important improvement for this feature.
@@ -162,7 +168,7 @@ The following links provide information about support options and community reso
 
 -   [Microsoft support](https://aka.ms/cmcbsupport)  
 
--   [Configuration Manager Community: System Center Configuration Manager (Current Branch) Survival Guide](https://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx )  
+-   [Configuration Manager Community: Configuration Manager (Current Branch) Survival Guide](https://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx )  
 
 -   [Configuration Manager forums page](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)  
     <!-- NOTE: the above URL requires "en-US" for the category to work -->

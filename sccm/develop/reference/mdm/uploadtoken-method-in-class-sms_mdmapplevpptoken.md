@@ -9,7 +9,8 @@ ms.assetid: ec148faa-654f-46ce-ba73-5910ad45bada
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # UploadToken Method in Class SMS_MDMAppleVppToken
 The `UploadToken` Windows Management Instrumentation (WMI) class method, in Configuration Manager, uploads an Apple Volume Purchase Program (VPP) token to Microsoft Intune.  
@@ -70,4 +71,3 @@ sint32 UploadToken(
 
 ## See Also  
  [SMS_MDMAppleVppToken Server WMI Class](../../../develop/reference/mdm/sms_mdmapplevpptoken-server-wmi-class.md)   
- [Mobile Device Management Server WMI Classes](../../../develop/reference/mdm/mobile-device-management-server-wmi-classes.md)

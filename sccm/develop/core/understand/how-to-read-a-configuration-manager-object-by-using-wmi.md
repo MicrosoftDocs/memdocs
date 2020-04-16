@@ -9,10 +9,11 @@ ms.assetid: 17017166-8b01-4a7d-99df-97be3bdda83f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Read a Configuration Manager Object by Using WMI
-In System Center Configuration Manager, you read a Configuration Manager object by using the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [Get](https://msdn.microsoft.com/library/aa393868.aspx) method to return an object instance that is identified by a key value.  
+In Configuration Manager, you read a Configuration Manager object by using the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [Get](https://msdn.microsoft.com/library/aa393868.aspx) method to return an object instance that is identified by a key value.  
 
 > [!NOTE]
 >  To query for multiple objects, use either a synchronous or asynchronous query. For more information, see [How to Perform a Synchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md)  
@@ -54,8 +55,8 @@ End Sub
 |`packageID`|`String`|A package identifier. This can be obtained from the [SMS_Package](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) class PackageID property.|  
 
 ## See Also  
- [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950)   
- [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects-overview.md)   
+ [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page)   
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [How to Call a Configuration Manager Object Class Method by Using WMI](../../../develop/core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-wmi.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [How to Create a Configuration Manager Object by Using WMI](../../../develop/core/understand/how-to-create-a-configuration-manager-object-by-using-wmi.md)   
@@ -64,4 +65,3 @@ End Sub
  [How to Perform an Asynchronous Configuration Manager Query by Using WMI](../../../develop/core/understand/how-to-perform-an-asynchronous-configuration-manager-query-by-using-wmi.md)   
  [How to Perform a Synchronous Configuration Manager Query by Using WMI](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md)   
  [How to Read Lazy Properties by Using WMI](../../../develop/core/understand/how-to-read-lazy-properties-by-using-wmi.md)   
- [How to Use Configuration Manager Objects With WMI](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md)

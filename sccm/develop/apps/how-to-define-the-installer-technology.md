@@ -9,7 +9,8 @@ ms.assetid: c47f7a79-62de-4afa-a901-a25789329f32
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How To Define the Installer Technology
 To define the application management installer technology, implement the `Microsoft.ConfigurationManagement.ApplicationManagement.DeploymentTechnology.InstallerTechnology` class. The new class instance will define the installer technology used to install a specific application to devices.  
@@ -62,5 +63,4 @@ To define the application management installer technology, implement the `Micros
 ## See Also  
  [How to Define the Deployment Technology](../../develop/apps/how-to-define-the-deployment-technology.md)   
  [How to Define the Hosting Technology](../../develop/apps/how-to-define-the-hosting-technology.md)   
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

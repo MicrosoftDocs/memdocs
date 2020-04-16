@@ -5,18 +5,64 @@ description: Integrate Upgrade Readiness with Configuration Manager to access Wi
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 09/04/2018
+ms.date: 01/31/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
-ms.collection: M365-identity-device-management
 ---
 
 # Integrate Upgrade Readiness with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
+> [!Important]  
+> The Windows Analytics service is retired as of January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+>
+> Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](/sccm/desktop-analytics/overview).
+
+If your Configuration Manager site had a connection to Upgrade Readiness, you need to remove it and reconfigure clients.
+
+## <a name="bkmk_remove"></a> Remove Upgrade Readiness connection
+
+1. Open the Configuration Manager console as a user with the **Full administrator** role.
+
+1. Go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node.
+
+1. Delete the Windows Analytics service.
+
+## Reconfigure clients
+
+### Unenroll devices
+
+First, review the site's default or any custom client device settings in the **Windows Analytics** group. For example, disable the following setting: **Manage Windows telemetry settings with Configuration Manager**.
+
+> [!IMPORTANT]
+> If you plan to use Desktop Analytics, it configures Windows diagnostic data settings on clients. Use the Azure services connection wizard to configure these settings for use with Desktop Analytics. For more information, see [How to connect Configuration Manager with Desktop Analytics](/configmgr/desktop-analytics/connect-configmgr).
+
+On enrolled devices, remove the CommercialID value from the following Windows Registry keys:
+
+- `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
+- `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
+
+### Windows diagnostic data configuration
+
+If you don't want your devices to continue sending diagnostic data:
+
+- Windows 10: set the diagnostic data level to **Security**
+- Windows 7 SP1 or 8.1: disable the **Commercial Data Opt-in Key**
+
+Set these values using one of the following methods:
+
+- Group policy, in **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Data Collection and Preview Builds**
+- Mobile device management (MDM), such as [Microsoft Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry)
+
+For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
+
+> [!NOTE]  
+> When you apply these changes, devices immediately stop sending diagnostic data. It may take 24-48 hours for Microsoft to stop processing insights for your workspace. Microsoft deletes this data from its cloud services within 30 days or less.
+
+<!--
 Upgrade Readiness is a part of [Windows Analytics](https://docs.microsoft.com/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness). It allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10. Integrate Upgrade Readiness with Configuration Manager to access client upgrade compatibility data in the Configuration Manager console. Then use this data to create collections, and target devices for upgrade or remediation.
 
 
@@ -90,7 +136,7 @@ After you've integrated Upgrade Readiness with Configuration Manager, you can vi
 4. View the devices in a particular readiness state, and then create a dynamic collection for those devices. Then use that collection to upgrade those devices, or take action to remediate devices that are in a blocked state.  
 
 > [!Note]  
-> The site synchronizes data with Upgrade Readiness once a week.<!--SCCMDocs issue 732--> To manually trigger synchronization:
+> The site synchronizes data with Upgrade Readiness once a week. To manually trigger synchronization:
 > 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node.  
 > 2. Select the Upgrade Readiness connection from the list.  
 > 3. In the ribbon, select the option to synchronize.  

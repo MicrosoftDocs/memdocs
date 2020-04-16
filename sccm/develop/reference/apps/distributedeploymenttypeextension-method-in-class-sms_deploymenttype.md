@@ -9,7 +9,8 @@ ms.assetid: 8e9b5909-9122-4858-b830-99513c35e6eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # DistributeDeploymentTypeExtension Method in Class SMS_DeploymentType
 The `DistributeDeploymentTypeExtension` Windows Management Instrumentation (WMI) class method, in Configuration Manager, schedules a Deployment Type Extension to be distributed throughout the hierarchy.  
@@ -47,4 +48,3 @@ sint32 DistributeDeploymentTypeExtension (
 
 ## See Also  
  [SMS_DeploymentType Server WMI Class](../../../develop/reference/apps/sms_deploymenttype-server-wmi-class.md)   
- [Application Model Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

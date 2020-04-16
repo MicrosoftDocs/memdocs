@@ -9,10 +9,11 @@ ms.assetid: 7b950db4-135b-4107-b949-2d9615de4518
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetAvailableLanguages Method in Class SMS_Subscription
-The `GetAvailableLanguages` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, gets the available languages.  
+The `GetAvailableLanguages` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the available languages.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -45,6 +46,6 @@ sint32 GetAvailableLanguages(
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [SMS_Subscription Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_subscription-server-wmi-class.md)   
- [Alert System WMI Server Classes](../../../../../develop/reference/core/servers/manage/alert-system-server-wmi-classes.md)
+## See also
+
+[SMS_Alert server WMI class](/sccm/develop/reference/core/servers/manage/sms_alert-server-wmi-class)

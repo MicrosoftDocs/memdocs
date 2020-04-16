@@ -9,10 +9,11 @@ ms.assetid: 268bb9d1-3058-4c09-8e38-148a51d879f7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Association Classes
-In System Center Configuration Manager, an association allows you to logically relate the instances of two classes. Typically, an association consists of two key properties (which are paths, or pointers, that uniquely identify the location of the other class instances), but an association can also contain additional properties. The provider uses the key properties to retrieve the requested data.  
+In Configuration Manager, an association allows you to logically relate the instances of two classes. Typically, an association consists of two key properties (which are paths, or pointers, that uniquely identify the location of the other class instances), but an association can also contain additional properties. The provider uses the key properties to retrieve the requested data.  
 
  Although association classes provide a convenient means to collect related information, they are inherently slow. If performance is an issue, you should consider collecting the related information yourself.  
 
@@ -47,9 +48,8 @@ In System Center Configuration Manager, an association allows you to logically r
  [Configuration Manager Date and Time Formats](../../../develop/core/understand/date-and-time-formats.md)   
  [Configuration Manager Embedded Objects](../../../develop/core/understand/embedded-objects.md)   
  [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md)   
- [How to Use Configuration Manager Objects With Managed Code](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)   
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [Configuration Manager Lazy Properties](../../../develop/core/understand/configuration-manager-lazy-properties.md)   
- [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects-overview.md)   
- [Configuration Manager Errors](../../../develop/core/understand/configuration-manager-errors.md)   
+ [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)
  [Configuration Manager Object Security](../../../develop/core/understand/configuration-manager-object-security.md)   
  [Configuration Manager Special Queries](../../../develop/core/understand/special-queries.md)

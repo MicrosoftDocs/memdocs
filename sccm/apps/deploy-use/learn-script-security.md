@@ -10,12 +10,13 @@ ms.assetid: a0bd093d-67a5-4f74-bf79-dd604889f5ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Learn more about PowerShell script security
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 It is the administrator’s responsibility to validate proposed PowerShell and PowerShell parameter usage in their environment. Here are some helpful resources to help educate administrators about the power of PowerShell and potential risk surfaces. This is to help mitigate potential risk surfaces and allow safe scripts to be used.
 
@@ -64,8 +65,8 @@ Best practices for preventing malicious parameters or script injection are:
 
 ## Environment Recommendations
 General recommendations for PowerShell administrators.
-1. Deploy latest version of PowerShell, such as version 5 or greater, built into Windows 10. Alternatively, you can deploy the [Windows Management Framework](https://www.microsoft.com/en-us/download/details.aspx?id=54616), available down to, and including Windows 7 and Windows Server 2008 R2. 
+1. Deploy latest version of PowerShell, such as version 5 or greater, built into Windows 10. Alternatively, you can deploy the [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616). 
 2. Enable, and collect PowerShell logs, optionally including Protected Event Logging. Incorporate these logs into your signatures, hunting, and incident response workflows.
 3. Implement Just Enough Administration on high-value systems to eliminate or reduce unconstrained administrative access to those systems.
-4. Deploy Device Guard/Application Control policies to allow pre-approved administrative tasks to use the full capability of the PowerShell language, while limiting interactive and unapproved use to a limited subset of the PowerShell language.
+4. Deploy Windows Defender Application Control policies to allow pre-approved administrative tasks to use the full capability of the PowerShell language, while limiting interactive and unapproved use to a limited subset of the PowerShell language.
 5. Deploy Windows 10 to give your antivirus provider full access to all content (including content generated or de-obfuscated at runtime) processed by Windows Scripting Hosts including PowerShell.

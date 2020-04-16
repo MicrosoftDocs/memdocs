@@ -9,10 +9,11 @@ ms.assetid: 55a605ba-93f2-4b63-b34e-a36d41659665
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # MoveMembers Method in Class SMS_ObjectContainerItem
-The `MoveMembers` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, moves folder items to another folder.  
+The `MoveMembers` Windows Management Instrumentation (WMI) class method, in Configuration Manager, moves folder items to another folder.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -66,11 +67,8 @@ SInt32 MoveMembers(
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Console Extension](../../../../../develop/reference/core/servers/console/console-extension-server-wmi-classes.md)

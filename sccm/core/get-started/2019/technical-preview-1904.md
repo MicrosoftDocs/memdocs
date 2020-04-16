@@ -4,18 +4,20 @@ titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1904.
 ms.date: 04/29/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 34d0f753-7338-48d5-88a7-dba3f0441479
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+ROBOTS: NOINDEX
+
+
 ---
 
 # Features in Configuration Manager technical preview version 1904
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
 This article introduces the features that are available in the technical preview for Configuration Manager, version 1904. Install this version to update and add new features to your technical preview site.
 

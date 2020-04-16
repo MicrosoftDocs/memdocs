@@ -9,10 +9,11 @@ ms.assetid: d9378514-6125-4bbe-b0bf-7e84e688203e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Special Queries
-Extended WMI Query Language (WQL) supports queries that are specific to System Center Configuration Manager needs. The following table describes the additional queries that are supported.  
+Extended WMI Query Language (WQL) supports queries that are specific to Configuration Manager needs. The following table describes the additional queries that are supported.  
 
  Array property  
  Particular values in an array property.  
@@ -44,7 +45,7 @@ Extended WMI Query Language (WQL) supports queries that are specific to System C
  Although prototype queries are most useful in processing the results of JOIN operations, they are supported for all queries. To request a class definition as the result set, set the `lFlags` parameter in `IWbemServices::ExecQuery` or `IWbemServices::ExecQueryAsync` to WBEM_FLAG_PROTOTYPE.  
 
 ## Collection-limiting Queries  
- A System Center Configuration Manager collection is a grouping of resources such as computers and users. Extended WQL supports queries against particular collections. There are two approaches that you can use to limit a query to a particular collection:  
+ A Configuration Manager collection is a grouping of resources such as computers and users. Extended WQL supports queries against particular collections. There are two approaches that you can use to limit a query to a particular collection:  
 
  Set the LimitToCollectionIDs context value to the required CollectionID value. This context value is made available through the IWbemContext pointer in the `IWbemServices::ExecQuery` method to the name of the collection.  
 
@@ -58,8 +59,7 @@ Extended WMI Query Language (WQL) supports queries that are specific to System C
  [Configuration Manager Date and Time Formats](../../../develop/core/understand/date-and-time-formats.md)   
  [Configuration Manager Embedded Objects](../../../develop/core/understand/embedded-objects.md)   
  [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md)   
- [How to Use Configuration Manager Objects With Managed Code](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)   
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [Configuration Manager Lazy Properties](../../../develop/core/understand/configuration-manager-lazy-properties.md)   
- [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects-overview.md)   
- [Configuration Manager Errors](../../../develop/core/understand/configuration-manager-errors.md)   
+ [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)
  [Configuration Manager Object Security](../../../develop/core/understand/configuration-manager-object-security.md)

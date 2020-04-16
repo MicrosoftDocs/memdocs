@@ -1,28 +1,31 @@
 ---
 title: "Capabilities in Technical Preview 1606"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1606."
+description: "Learn about features available in the Technical Preview for Configuration Manager, version 1606."
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 134a2f60-811e-4dc9-a8f5-1ce0018c5c12
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Capabilities in Technical Preview 1606 for System Center Configuration Manager
+# Capabilities in Technical Preview 1606 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1606. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1606. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
 
 **Known Issues in this Technical Preview:**  
 *  When you update from Technical Preview 1604 to 1605, and then to version 1606, the update might fail and an error similar to the following is logged in the **cmupdate.log**:
 
-       ERROR: Failed to execute SQL Server command:  ~ ~-- Create site boundary group ~IF  dbo.fnIsCasOrStandalonePrimary() = 1 ~BEGIN ~   PRINT N'Create site boundary group during upgrade' ~   EXEC dbo.spBuildDefaultBoundaryGroups @UserName = N'SYSTEM' ~END          
+    ``` Log
+    ERROR: Failed to execute SQL Server command:  ~ ~-- Create site boundary group ~IF  dbo.fnIsCasOrStandalonePrimary() = 1 ~BEGIN ~   PRINT N'Create site boundary group during upgrade' ~   EXEC dbo.spBuildDefaultBoundaryGroups @UserName = N'SYSTEM' ~END
+    ```
 
     If this occurs, in the **Updates and Servicing** node click **Check for updates**, and then **Retry** the update installation.
     ***
@@ -103,7 +106,7 @@ Further reading:
 
 2.  Enroll a  Windows 10 Anniversary Update device for On\-premises Mobile Device Management.  
 
-For information on how to prepare your site and enroll devices for On\-premises Mobile Device Management, see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
+For information on how to prepare your site and enroll devices for On\-premises Mobile Device Management, see [Manage mobile devices with on-premises infrastructure](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
 ## <a name="cloud_proxy"></a>Cloud Proxy Service for managing clients on the Internet
 
@@ -193,7 +196,7 @@ Make sure to copy the subscription ID associated with the management certificate
 
 #### Add the cloud proxy connector point
 
-The cloud proxy connector point is a new site system role for communicating with Cloud Proxy Service. To add the cloud proxy connector point, follow the instructions in [Add site system roles for System Center Configuration Manager](../../core/servers/deploy/configure/add-site-system-roles.md).
+The cloud proxy connector point is a new site system role for communicating with Cloud Proxy Service. To add the cloud proxy connector point, follow the instructions in [Add site system roles for Configuration Manager](../../core/servers/deploy/configure/add-site-system-roles.md).
 
 #### Configure roles for cloud proxy traffic
 
@@ -218,7 +221,7 @@ For more information, see [Manage Office 365 ProPlus updates](https://technet.mi
 
 ### Set the Configuration Manager client setting to manage the Office 365 client agent
 1.  In the Configuration Manager console, click **Administration** > **Overview** > **Client Settings**.
-2. Open the appropriate device settings to enable the client agent. For more information about default and custom client settings, see [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).
+2. Open the appropriate device settings to enable the client agent. For more information about default and custom client settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).
 3. Click **Software Updates** and select **Yes** for the **Enable management of the Office 365 Client Agent** setting.  
 
 

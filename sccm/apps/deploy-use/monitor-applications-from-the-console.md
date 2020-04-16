@@ -10,18 +10,19 @@ ms.assetid: 784c295c-b8b8-4202-ab9f-665908d49d6d
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
+
+
 ---
-# Monitor applications from the System Center Configuration Manager console
+# Monitor applications from the Configuration Manager console
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
-In System Center Configuration Manager, you can monitor the deployment of all software, including software updates, compliance settings, applications, task sequences, and packages and programs. You can monitor deployments by using the **Monitoring** workspace in the Configuration Manager console or by using reports.  
+In Configuration Manager, you can monitor the deployment of all software, including software updates, compliance settings, applications, task sequences, and packages and programs. You can monitor deployments by using the **Monitoring** workspace in the Configuration Manager console or by using reports.  
 
  Applications in Configuration Manager support state-based monitoring, which enables you to track the last application deployment state for users and devices. These state messages display information about individual devices. For example, if an application is deployed to a collection of users, you can view the compliance state of the deployment and the deployment purpose in the Configuration Manager console.  
 
-## Learn about compliance states in System Center Configuration Manager
+## Learn about compliance states
  An application deployment state has one of the following compliance states:  
 
 -   **Success** – The application deployment succeeded or was found to be already installed.  
@@ -54,7 +55,7 @@ The deployment state for package and program deployments is not aggregated.
 
  Application management in Configuration Manager includes a number of built-in reports that enable you to monitor information about applications and deployments. These reports have the report category of **Software Distribution – Application Monitoring**.  
 
- For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+ For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
 
 ## Monitor the state of an application in the Configuration Manager console  
 

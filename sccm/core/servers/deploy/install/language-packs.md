@@ -4,17 +4,18 @@ titleSuffix: Configuration Manager
 description: Learn about the language support available in Configuration Manager.
 ms.date: 06/29/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Language packs in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 This article provides technical details about language support in Configuration Manager. Configuration Manager site servers and clients are considered language-neutral. Add support for display languages by installing **server language packs** or **client language packs** at a central administration site and at primary sites. You select the server and client languages to support at a site from the available language pack files during the site installation process.
  
@@ -102,4 +103,4 @@ To identify the language packs that are installed on a computer that runs the Co
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs`  
 
-Customize hardware inventory to collect this information. Then build a custom report to view the language details. For more information about collecting custom hardware inventory, see [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory). For more information about creating reports, see [Manage Configuration Manager reports](/sccm/core/servers/manage/operations-and-maintenance-for-reporting#BKMK_ManageReports).  
+Customize hardware inventory to collect this information. Then build a custom report to view the language details. For more information about collecting custom hardware inventory, see [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory). For more information, see [Create reports](/sccm/core/servers/manage/operations-and-maintenance-for-reporting#create-reports).

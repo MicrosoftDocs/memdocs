@@ -9,7 +9,8 @@ ms.assetid: 242c1cf6-3cb8-4ed7-89fb-501130832730
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Define the Hosting Technology
 To define a custom application management hosting technology, implement the `Microsoft.ConfigurationManagement.ApplicationManagement.HostingTechnology` class. The new class instance will define the hosting technology for a specific file type.  
@@ -62,5 +63,4 @@ public const string TechnologyId = "Rdp";
 ## See Also  
  [How to Define the Deployment Technology](../../develop/apps/how-to-define-the-deployment-technology.md)   
  [How To Define the Installer Technology](../../develop/apps/how-to-define-the-installer-technology.md)   
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

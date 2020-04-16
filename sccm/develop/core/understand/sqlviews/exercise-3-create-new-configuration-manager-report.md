@@ -4,9 +4,10 @@ titleSuffix: Configuration Manager
 description: Create a simple report and configure the report properties.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
+
+
 ms.assetid: 16e62994-a1e2-4ee9-bf62-3985ecb1c745
 author: aczechowski
 ms.author: aaroncz

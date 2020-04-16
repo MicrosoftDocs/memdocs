@@ -9,10 +9,11 @@ ms.assetid: 72debf3d-bc74-4993-95b0-31cc99843d8e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # BlockClients Method in Class SMS_Collection
-The `BlockClients` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, blocks specified client computers from communicating with the site.  
+The `BlockClients` Windows Management Instrumentation (WMI) class method, in Configuration Manager, blocks specified client computers from communicating with the site.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

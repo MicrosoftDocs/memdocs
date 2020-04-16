@@ -9,10 +9,11 @@ ms.assetid: f7789fb5-fa96-4e88-8737-9adcb0498c4f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # SMS_UpdateComplianceStatus Server WMI Class
-The `SMS_UpdateComplianceStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents the client computer compliance status for software updates.  
+The `SMS_UpdateComplianceStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the client computer compliance status for software updates.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -85,7 +86,6 @@ Class SMS_UpdateComplianceStatus : SMS_BaseClass
 |0|NONE|  
 |1|SMS|  
 |2|USER|  
-|3|NAP|  
 
  `LastEnforcementMessageID`  
  Data type: `UInt32`  
@@ -215,12 +215,11 @@ Class SMS_UpdateComplianceStatus : SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Updates Server WMI Classes](../../../develop/reference/sum/software-updates-server-wmi-classes.md)   
- [Configuration Manager Software Updates](../../../develop/sum/software-updates.md)
+ [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)

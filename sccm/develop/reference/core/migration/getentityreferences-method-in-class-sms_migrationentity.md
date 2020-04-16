@@ -9,7 +9,8 @@ ms.assetid: 84d3851e-e98b-4c1f-a9cb-2df7821ca6ce
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetEntityReferences Method in Class SMS_MigrationEntity
 The `GetEntityReferences` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the referenced entities of the specified entities.  
@@ -63,12 +64,12 @@ SInt32 GetEntityReferences(
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [SMS_MigrationEntity Server WMI Class](../../../../develop/reference/core/migration/sms_migrationentity-server-wmi-class.md)   
- [Migration Server WMI Classes](../../../../develop/reference/core/migration/migration-server-wmi-classes.md)
+## See also
+
+[SMS_MigrationEntity Server WMI Class](../../../../develop/reference/core/migration/sms_migrationentity-server-wmi-class.md)

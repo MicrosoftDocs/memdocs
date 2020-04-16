@@ -4,13 +4,14 @@ titleSuffix: Configuration Manager
 description: Control user access to organizational resources based on compliance rules from Intune
 ms.date: 05/13/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology: configmgr-comanage
 ms.topic: conceptual
 ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Conditional access with co-management
@@ -29,7 +30,7 @@ With co-management, Intune evaluates every device in your network to determine h
 
     - For co-managed devices, Configuration Manager also does configuration-based evaluation. For example, required updates or apps compliance. Intune combines this evaluation along with its own assessment.  
 
-2. Intune detects active security incidents on a device. It uses the intelligent security of [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/get-started) (formerly Windows Defender ATP) and other [mobile threat defense providers](https://www.lookout.com/about/partners/microsoft). These partners run ongoing behavioral analysis on devices. This analysis detects active incidents, and then passes this information to Intune for real-time compliance evaluation.  
+2. Intune detects active security incidents on a device. It uses the intelligent security of [Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) (formerly Windows Defender ATP) and other [mobile threat defense providers](https://www.lookout.com/about/partners/microsoft). These partners run ongoing behavioral analysis on devices. This analysis detects active incidents, and then passes this information to Intune for real-time compliance evaluation.  
 
     - This evaluation is post-security breach and incident-based  
 

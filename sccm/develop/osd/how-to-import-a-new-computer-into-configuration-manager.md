@@ -9,10 +9,11 @@ ms.assetid: 84858dfe-ba1f-448b-8da1-0fe38f619cd6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Import a New Computer into Configuration Manager
-You add a new computer directly to the System Center Configuration Manager database by calling the [ImportMachineEntry Method in Class SMS_Site](../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md). This can be used to deploy operating systems to computers that have not yet been discovered automatically by System Center Configuration Manager.  
+You add a new computer directly to the Configuration Manager database by calling the [ImportMachineEntry Method in Class SMS_Site](../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md). This can be used to deploy operating systems to computers that have not yet been discovered automatically by Configuration Manager.  
 
  You must provide the following information:  
 
@@ -31,7 +32,7 @@ You add a new computer directly to the System Center Configuration Manager datab
 
 ### To add a new computer  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Call the [ImportMachineEntry Method in Class SMS_Site](../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md).  
 
@@ -181,4 +182,4 @@ public int AddNewComputer(
 
 ## See Also  
  [ImportMachineEntry Method in Class SMS_Site](../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md)   
- [Operating System Deployment Computer Management](../../develop/osd/operating-system-deployment-computer-management.md)
+ [About OS deployment computer management](/sccm/develop/osd/about-computer-management)

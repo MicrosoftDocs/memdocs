@@ -4,17 +4,18 @@ titleSuffix: Configuration Manager
 description: Learn about the available discovery methods to find devices on your network, from Active Directory, or Azure Active Directory.
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
----
-# About discovery methods for System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+# About discovery methods for Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
 
 Configuration Manager discovery methods find different devices on your network, devices and users from Active Directory, or users from Azure Active Directory (Azure AD). To efficiently use a discovery method, you should understand its available configurations and limitations.  
 
@@ -192,14 +193,19 @@ For more information about how to configure this discovery method, see [Configur
 
 
 ## <a name="azureaddisc"></a> Azure Active Directory User Discovery
-Use Azure Active Directory (Azure AD) User Discovery to search your Azure AD subscription for users with a modern cloud identity. Azure AD user discovery can find the following attributes:  
--   objectId
--   displayName
--   mail
--   mailNickname
--   onPremisesSecurityIdentifier
--   userPrincipalName
--   AAD tenantID
+
+Use Azure Active Directory (Azure AD) User Discovery to search your Azure AD subscription for users with a modern cloud identity. Azure AD user discovery can find the following attributes:
+
+- objectId
+- displayName
+- mail
+- mailNickname
+- onPremisesSecurityIdentifier
+- userPrincipalName
+- AAD tenantID
+- onPremisesDomainName
+- onPremisesSamAccountName
+- onPremisesDistinguishedName
 
 This method supports full and delta synchronization of user attributes from Azure AD. This information can then be used along-side discovery data you collect from the other discovery methods.
 
@@ -207,7 +213,19 @@ Actions for Azure AD user discovery are recorded in the **SMS_AZUREAD_DISCOVERY_
 
 To configure Azure AD user discovery, see [Configure Azure Services](/sccm/core/servers/deploy/configure/Azure-services-wizard) for Cloud Management. For information about how to configure this discovery method, see [Configure Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc).
 
+## <a name="bkmk_azuregroupdisco"></a> Azure Active Directory user group discovery
+<!--3611956-->
+*(Introduced as a [pre-release feature](/sccm/core/servers/manage/pre-release-features) in version 1906)*
 
+You can discover user groups and members of those groups from Azure Active directory (Azure AD). Azure AD user group discovery can find the following attributes:
+
+- objectId
+- displayName
+- mailNickname
+- onPremisesSecurityIdentifier
+- AAD tenantID
+
+Actions for Azure AD user group discovery are recorded in the **SMS_AZUREAD_DISCOVERY_AGENT.log** file on the top-tier site server of the hierarchy. For information about how to configure this discovery method, see [Configure Azure AD user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco).
 
 ##  <a name="bkmk_aboutHeartbeat"></a> Heartbeat Discovery  
 **Configurable:** Yes  

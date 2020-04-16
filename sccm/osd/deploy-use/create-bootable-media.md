@@ -10,12 +10,13 @@ ms.assetid: ead79e64-1b63-4d0d-8bd5-addff8919820
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 
 # Create bootable media
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Bootable media in Configuration Manager contains the boot image, optional prestart commands and associated files, and Configuration Manager files. Use prestaged media for the following OS deployment scenarios:  
 
@@ -71,6 +72,9 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
 ## Process
 
+ > [!NOTE]  
+ > For PKI environments, since the Root CA is specified at the Primary site, make sure the bootable media is created at the Primary site. The CAS site does not have the Root CA information to properly create the bootable media.
+
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node.  
 
 2. On the **Home** tab of the ribbon, in the **Create** group, select **Create Task Sequence Media**. This action starts the Create Task Sequence Media Wizard.  
@@ -116,7 +120,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
         - Configuration Manager writes a text file called `MediaLabel.txt` to the root of the media. By default, the file includes a single line of text: `label=Configuration Manager`. If you customize the label for media, this line uses your custom label instead of the default value.  
 
-    - **Include autorun.inf file on media**<!-- 4090666 -->: Starting in version 1902, Configuration Manager doesn't add an autorun.inf file by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](https://docs.microsoft.com/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.  
+    - **Include autorun.inf file on media**<!-- 4090666 -->: Starting in version 1906, Configuration Manager doesn't add an autorun.inf file by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](https://docs.microsoft.com/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.  
 
 6. On the **Security** page, specify the following options:  
 
@@ -128,6 +132,9 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
         > As a security best practice, always assign a password to help protect the bootable media.  
 
     - For HTTP communications, select **Create self-signed media certificate**. Then specify the start and expiration date for the certificate.  
+    
+      > [!NOTE]  
+      > If you select this option HTTPS management points will not be available for selection on the **Boot image** page of this wizard.
 
     - For HTTPS communications, select **Import PKI certificate**. Then specify the certificate to import and its password.  
 
@@ -156,6 +163,9 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
     - **Management point**: Only for *site-based media*, select a management point from a primary site.  
 
     - **Associated management points**: Only for *dynamic media*, select the primary site management points to use, and a priority order for the initial communication.  
+    
+        > [!NOTE]  
+        > HTTPS enabled management points will only be displayed when a PKI certificate is specified in the **Security** page of this wizard.  
 
 8. On the **Customization** page, specify the following options:  
 

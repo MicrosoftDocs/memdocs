@@ -9,7 +9,8 @@ ms.assetid: f3492456-84e4-44e4-ae30-b0f0073c62ce
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetCurrentWindowAvailableTime Method in Class CCM_ServiceWindowManager
 The `GetCurrentWindowAvailableTime` WMI class method, in Configuration Manager, gets the time remaining in a currently active service window for a specified type.  

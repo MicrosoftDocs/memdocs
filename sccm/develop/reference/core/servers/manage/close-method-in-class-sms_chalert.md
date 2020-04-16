@@ -9,10 +9,11 @@ ms.assetid: 803a62cb-bfa5-4384-91c9-3fa4bada3c06
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Close Method in Class SMS_CHAlert
-The `Close` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, postpones the alert.  
+The `Close` Windows Management Instrumentation (WMI) class method, in Configuration Manager, postpones the alert.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -53,6 +54,6 @@ sint32 Close(
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [SMS_Alert Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_alert-server-wmi-class.md)   
- [Alert System WMI Server Classes](../../../../../develop/reference/core/servers/manage/alert-system-server-wmi-classes.md)
+## See also
+
+[SMS_Alert server WMI class](/sccm/develop/reference/core/servers/manage/sms_alert-server-wmi-class)

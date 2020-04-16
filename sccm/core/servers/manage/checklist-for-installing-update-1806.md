@@ -4,18 +4,18 @@ titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1806.
 ms.date: 08/22/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: bb0a87a6-fd65-440b-90a5-2fef35622c9d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+ROBOTS: NOINDEX
 ---
 
 # Checklist for installing update 1806 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 When you use the current branch of Configuration Manager, you can install the in-console update for version 1806 to update your hierarchy from a previous version. <!-- baseline only statement: (Because version 1802 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)-->
 
@@ -27,7 +27,7 @@ To get the update for version 1806, you must use a service connection point at t
 
     -   The dmpdownloader.log may indicate that the dmpdownloader process is waiting for an interval before checking for updates. To restart the download of the update's redistribution files, restart the **SMS_Executive** service on the site server.
 
-    -   Another common download issue occurs when proxy server settings prevent downloads from http://silverlight.dlservice.microsoft.com and http://download.microsoft.com.
+    -   Another common download issue occurs when proxy server settings prevent downloads from `silverlight.dlservice.microsoft.com` and `download.microsoft.com`.
 
 For more information about installing updates, see [In-console updates and servicing](/sccm/core/servers/manage/updates#bkmk_inconsole).
 
@@ -94,7 +94,7 @@ For more information, see [Use alerts and the status system](/sccm/core/servers
 #### Review file and data replication between sites   
 Ensure that file and database replication between sites is operational and current. Delays or backlogs in either can prevent a smooth, successful update. For database replication, you can use the Replication Link Analyzer to help resolve issues prior to starting the update.
 
-For more information, see [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA).
+For more information, see [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA).
 
 #### Install all applicable critical Windows updates
 Before you install an update for Configuration Manager, install any critical OS updates for each applicable site system. These servers include the site server, site database server, and remote site system roles. If an update that you install requires a restart, restart the applicable servers before you start the upgrade.
@@ -176,8 +176,10 @@ In the Configuration Manager console, go to the following locations to view the 
 -   **Monitoring** workspace, **Database Replication** node  
 
 For more information, see the following articles:  
-- [Monitor hierarchy and replication infrastructure](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)
-- [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  
+
+- [Monitor hierarchy](/sccm/core/servers/manage/monitor-hierarchy)
+- [Monitor replication](/sccm/core/servers/manage/monitor-replication)
+- [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA)  
 
 
 #### Update Configuration Manager consoles

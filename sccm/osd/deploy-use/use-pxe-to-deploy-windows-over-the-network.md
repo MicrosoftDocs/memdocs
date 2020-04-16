@@ -2,7 +2,7 @@
 title: Use PXE for OSD over the network
 titleSuffix: Configuration Manager
 description: Use PXE-initiated OS deployments to refresh a computer’s operating system or to install a new version of Windows on a new computer.
-ms.date: 05/28/2019
+ms.date: 02/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,11 @@ ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
 ---
 
 # Use PXE to deploy Windows over the network with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 Preboot execution environment (PXE)-initiated OS deployments in Configuration Manager let clients request and deploy operating systems over the network. In this deployment scenario, you send the OS image and the boot images to a PXE-enabled distribution point.
 
@@ -30,24 +29,23 @@ You can use PXE-initiated OS deployments in the following scenarios:
 
 Complete the steps in one of the OS deployment scenarios, and then use the sections in this article to prepare for PXE-initiated deployments.
 
-
+> [!WARNING]
+> If you use PXE deployments, and configure device hardware with the network adapter as the first boot device, these devices can automatically start an OS deployment task sequence without user interaction. Deployment verification doesn't manage this configuration. While this configuration may simplify the process and reduce user interaction, it puts the device at greater risk for accidental reimage.
 
 ## <a name="BKMK_Configure"></a> Configure at least one distribution point to accept PXE requests
 
 To deploy operating systems to Configuration Manager clients that make PXE boot requests, you must configure one or more distribution points to accept PXE requests. Once you configure the distribution point, it responds to PXE boot requests and determines the appropriate deployment action to take. For more information, see [Install or modify a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
 
 > [!NOTE]  
-> When configuring a single PXE enabled distribution point to support multiple subnets it is not supported to use DHCP options. Configure IP helpers on the routers to allow PXE requests to be forwarded to your PXE enabled distribution points.
-
-> [!Note]  
-> In version 1810 and earlier, it's not supported to use the PXE responder without WDS on servers that are also running a DHCP server.
+> When configuring a single PXE enabled distribution point to support multiple subnets it's not supported to use DHCP options. Configure IP helpers on the routers to allow PXE requests to be forwarded to your PXE enabled distribution points.
+>
+> In version 1810, it's not supported to use the PXE responder without WDS on servers that are also running a DHCP server.
 >
 > Starting in version 1902, when you enable a PXE responder on a distribution point without Windows Deployment Service, it can now be on the same server as the DHCP service.<!--3734270, SCCMDocs-pr #3416--> Add the following settings to support this configuration:  
 >
 > - Set the DWord value **DoNotListenOnDhcpPort** to `1` in the following registry key: `HKLM\Software\Microsoft\SMS\DP`.
 > - Set DHCP option 60 to `PXEClient`.  
 > - Restart the SCCMPXE and DHCP services on the server.  
-
 
 ## Prepare a PXE-enabled boot image
 
@@ -57,13 +55,9 @@ To use PXE to deploy an OS, you must have both x86 and x64 PXE-enabled boot imag
 
 - If you change the properties for the boot image, update and redistribute the boot image to distribution points. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
 
-
-
 ## Manage duplicate hardware identifiers
 
 Configuration Manager may recognize multiple computers as the same device if they have duplicate SMBIOS attributes or you use a shared network adapter. Mitigate these issues by managing duplicate hardware identifiers in hierarchy settings. For more information, see [Manage duplicate hardware identifiers](/sccm/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers).
-
-
 
 ## <a name="BKMK_PXEExclusionList"></a> Create an exclusion list for PXE deployments
 
@@ -93,13 +87,9 @@ When you deploy operating systems with PXE, you can create an exclusion list on 
 
 5. Restart the WDS service or PXE responder service after you make this registry change. You don't need to restart the server.<!--512129-->  
 
-
-
 ## <a name="BKMK_RamDiskTFTP"></a> RamDisk TFTP block size and window size
 
 You can customize the RamDisk TFTP block and window sizes for PXE-enabled distribution points. If you've customized your network, a large block or window size could cause the boot image download to fail with a time-out error. The RamDisk TFTP block and window size customizations allow you to optimize TFTP traffic when using PXE to meet your specific network requirements. To determine what configuration is most efficient, test the customized settings in your environment. For more information, see [Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_RamDiskTFTP).
-
-
 
 ## Configure deployment settings
 
@@ -110,8 +100,6 @@ To use a PXE-initiated OS deployment, configure the deployment to make the OS av
 - Only media and PXE
 
 - Only media and PXE (hidden)
-
-
 
 ## <a name="BKMK_Deploy"></a> Deploy the task sequence
 
@@ -125,8 +113,6 @@ You can redeploy a required PXE deployment by clearing the status of the last PX
 
 > [!IMPORTANT]  
 > The PXE protocol isn't secure. Make sure that the PXE server and the PXE client are located on a physically secure network, such as in a data center to prevent unauthorized access to your site.
-
-
 
 ## How the boot image is selected for PXE
 
@@ -143,6 +129,6 @@ The following list provides details about how a boot image is selected for clien
 
 3. In the list of task sequences found in step 2, Configuration Manager looks for a boot image that matches the architecture of the client that's trying to boot. If a boot image is found with the same architecture, that boot image is used.  
 
-    If it finds more than one boot image, it uses the *highest* or most recent deployment ID. In the case of a multi-site hierarchy, the *higher* letter site would take precedence in that string comparison. For example, if they're both matched otherwise, a year-old deployment from site ZZZ is selected over yesterday's deployment from site AAA.<!-- SCCMDocs issue 877 -->  
+    If it finds more than one boot image, it uses the *highest* or most recent task sequence deployment ID. In the case of a multi-site hierarchy, the *higher* letter site would take precedence in that string comparison. For example, if they're both matched otherwise, a year-old deployment from site ZZZ is selected over yesterday's deployment from site AAA.<!-- SCCMDocs issue 877 -->  
 
 4. If a boot image isn't found with the same architecture, Configuration Manager looks for a boot image that's compatible with the architecture of the client. It looks in the list of task sequences found in step 2. For example, a 64-bit BIOS/MBR client is compatible with 32-bit and 64-bit boot images. A 32-bit BIOS/MBR client is compatible with only 32-bit boot images. UEFI clients are only compatible with matching architecture. A 64-bit UEFI client is compatible with only 64-bit boot images and a 32-bit UEFI client is compatible with only 32-bit boot images.

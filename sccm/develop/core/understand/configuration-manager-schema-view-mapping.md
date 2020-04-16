@@ -9,7 +9,8 @@ ms.assetid: 3a3bee08-602d-40f8-b62b-e2ffe116d103
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Configuration Manager Schema View Mapping
 In Configuration Manager, the names of views and columns are designed to be as close to the SMS Provider Windows Management Instrumentation (WMI) schema as possible. Because the views names and view column names must be valid SQL identifiers, there are some discrepancies between WMI and SQL names. However, in the majority of cases the following rules can be applied to convert a WMI class name to its corresponding SQL Server view:  
@@ -49,7 +50,6 @@ In Configuration Manager, the names of views and columns are designed to be as c
   For more information about the classes that Configuration Manager supports, see [Configuration Manager Reference](../../../develop/reference/configuration-manager-reference.md).  
 
 ## See Also  
- [About Configuration Manager Schema](../../../develop/core/understand/about-configuration-manager-schema.md)   
  [Configuration Manager Schema Overview](../../../develop/core/understand/configuration-manager-schema-overview.md)   
  [Configuration Manager Schema SQL Views](../../../develop/core/understand/configuration-manager-schema-sql-views.md)   
  [Configuration Manager SQL View Security](../../../develop/core/understand/sql-view-security.md)

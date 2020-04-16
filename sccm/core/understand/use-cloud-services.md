@@ -1,22 +1,24 @@
 ---
-title: "Use cloud services to supplement on-premises infrastructure"
-titleSuffix: "Configuration Manager"
-description: "Provision cloud resources for System Center Configuration Manager to supplement your on-premises infrastructure."
+title: Use cloud services
+titleSuffix: Configuration Manager
+description: Provision cloud resources for Configuration Manager to supplement your on-premises infrastructure.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
-# Use cloud services with System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# Use cloud services with Configuration Manager
 
-System Center Configuration Manager supports several cloud-based options. These can supplement your on-premises infrastructure, and can help solve business problems like:  
+*Applies to: Configuration Manager (current branch)*
+
+Configuration Manager supports several cloud-based options. These can supplement your on-premises infrastructure, and can help solve business problems like:  
 
 -   How to manage BYOD (by using Intune for mobile device management).  
 
@@ -31,7 +33,7 @@ Although provisioning cloud resources is not something you must do before you de
 
 -   For information about cloud-based distribution points, see [Install cloud-based distribution points](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure).
 
--   For more information about Azure, see [Azure](http://go.microsoft.com/fwlink/p/?LinkId=262965) in the MSDN Library.  
+-   For more information about Azure, see [Azure](https://go.microsoft.com/fwlink/p/?LinkId=262965) in the MSDN Library.  
 
 ### Azure virtual machines (for cloud-based infrastructure)  
  Configuration Manager supports using computers that run in virtual machines in Azure, just as it does when run on-premises within your physical corporate network. You can use Azure virtual machines in the following scenarios:  
@@ -49,7 +51,7 @@ An Azure subscription is required to use Azure virtual machines. You incur charg
 Additionally, Configuration Manager sites and clients that run in Azure virtual machines are subject to the same license requirements as on-premises installations.  
 
 ### Azure services (for cloud-based distribution points)  
- You can use an Azure service to host a Configuration Manager distribution point, which is called a called cloud-based distribution point. You can [use a cloud-based distribution point with System Center Configuration Manager](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md) alongside on-premises distribution points, and distribution points deployed in Azure virtual machines.  
+ You can use an Azure service to host a Configuration Manager distribution point, which is called a called cloud-based distribution point. You can [use a cloud-based distribution point with Configuration Manager](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md) alongside on-premises distribution points, and distribution points deployed in Azure virtual machines.  
 
  This is different than using an Azure virtual machine, on which you deploy a site system role. Cloud-based distribution points:  
 
@@ -60,17 +62,6 @@ Additionally, Configuration Manager sites and clients that run in Azure virtual 
 -   Support clients on the Internet and the intranet.  
 
 An Azure subscription is required to use Azure to host distribution points. You incur charges based on the amount of data that transfers to and from the service.  
-
-### Microsoft Intune (for mobile device management)  
- You can integrate your Microsoft Intune subscription with Configuration Manager to enable management of devices by using the Intune service. This integration:  
-
--   Is called a hybrid configuration, and it extends Configuration Manager (or Intune, depending on your perspective) to support a wide variety of devices.  
-
--   Requires the Microsoft Intune Connector site system role.  
-
--   Requires you to have a separate Intune subscription with sufficient licenses for the devices you will manage with Intune.  
-
-Although Intune uses Azure, it does not require you to independently configure Azure, nor are you subject to additional costs beyond that of the Intune subscription.  
 
 ### Additional Configuration Manager capabilities  
  Some Configuration Manager capabilities can connect to cloud-based services, like:  
@@ -86,10 +77,10 @@ These additional capabilities do not require you to have an Azure subscription. 
 
  For more information, see the details for the different cloud-based resource scenarios. You can also view the following topics for Azure security:  
 
--   [Azure: Understanding Security Account Management in Azure](http://go.microsoft.com/fwlink/p/?LinkId=262968)  
+-   [Azure: Understanding Security Account Management in Azure](https://go.microsoft.com/fwlink/p/?LinkId=262968)  
 
--   [Azure Security Overview](http://go.microsoft.com/fwlink/p/?LinkId=262970)  
+-   [Azure Security Overview](https://go.microsoft.com/fwlink/p/?LinkId=262970)  
 
--   [Get Past the Security Crossroads in Your Cloud Migration](http://go.microsoft.com/fwlink/p/?LinkId=262971)  
+-   [Get Past the Security Crossroads in Your Cloud Migration](https://go.microsoft.com/fwlink/p/?LinkId=262971)  
 
--   [Data Security in Azure Part 1 of 2](http://go.microsoft.com/fwlink/p/?LinkId=262974)  
+-   [Data Security in Azure Part 1 of 2](https://go.microsoft.com/fwlink/p/?LinkId=262974)  

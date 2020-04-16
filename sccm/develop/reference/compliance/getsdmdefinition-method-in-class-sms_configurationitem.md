@@ -9,10 +9,11 @@ ms.assetid: b2daf3d7-2073-48c5-be2d-1aef24c70f93
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # GetSDMDefinition Method in Class SMS_ConfigurationItem
-The `GetSDMDefinition` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, retrieves the System Definition Model (SDM) definition of the configuration item in XML format.  
+The `GetSDMDefinition` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the System Definition Model (SDM) definition of the configuration item in XML format.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

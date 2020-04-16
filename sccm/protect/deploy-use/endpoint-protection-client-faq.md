@@ -10,11 +10,12 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # Endpoint Protection client frequently asked questions
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
 
 This FAQ is for computer users whose IT administrator has deployed Windows Defender or Endpoint Protection to their managed computer. The content here might not apply to other antimalware software. Microsoft System Center Endpoint Protection manages Windows Defender on Windows 10. It can also deploy and manage the Endpoint Protection client to computers before Windows 10. While Windows Defender is described in this article, its information also applies to Endpoint Protection.  
@@ -102,7 +103,7 @@ To remove all unwanted or potentially harmful items that Windows Defender detect
 
 3.  To learn more about the detected threats, click the **History** tab, and then select **All detected items**.  
 
-4.  If you don't see all the detected items, click **View details**. If you're prompted for an administrator password or confirmation, type the password or confirm the action. On systems running Windows XP, you may need to log on as an administrator on this computer.  
+4.  If you don't see all the detected items, click **View details**. If you're prompted for an administrator password or confirmation, type the password or confirm the action.
 
 > [!NOTE]  
 >  During computer cleanup, whenever possible, Windows Defender removes only the infected part of a file, not the entire file.  
@@ -140,7 +141,7 @@ To remove all unwanted or potentially harmful items that Windows Defender detect
 
 -   Make sure your antivirus and antispyware software, Windows Defender, is using the latest updates again potential threats (see How do I keep virus and spyware definitions up to date?). Also make sure you're always using the latest version of Windows Defender.  
 
--   Only download updates from reputable sources. For Windows operating systems, always go to [Microsoft Update](http://go.microsoft.com/fwlink/?LinkID=96304) (http://go.microsoft.com/fwlink/?LinkID=96304) and for other software always use the legitimate websites of the company or person who produces it.  
+-   Only download updates from reputable sources. For Windows operating systems, always go to [Microsoft Update](https://go.microsoft.com/fwlink/?LinkID=96304) (https://go.microsoft.com/fwlink/?LinkID=96304) and for other software always use the legitimate websites of the company or person who produces it.  
 
 -   If you receive an e-mail with an attachment and you're unsure of the source, then you should delete it immediately. Don't download any applications or files from unknown sources, and be careful when trading files with other users.  
 

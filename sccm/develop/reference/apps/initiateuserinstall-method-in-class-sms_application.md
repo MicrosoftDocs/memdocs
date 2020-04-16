@@ -9,7 +9,8 @@ ms.assetid: 955b71e0-6890-4cae-8ce1-9d3e3b5d78fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # InitiateUserInstall Method in Class SMS_Application
 > [!WARNING]
@@ -65,4 +66,3 @@ SInt32 InitiateUserInstall (
 
 ## See Also  
  [SMS_Application Server WMI Class](../../../develop/reference/apps/sms_application-server-wmi-class.md)   
- [Configuration Manager Application Management Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

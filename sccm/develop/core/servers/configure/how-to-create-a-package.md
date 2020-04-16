@@ -9,10 +9,11 @@ ms.assetid: 2c295b3b-e23c-4084-ad4a-8bba328ef6fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # How to Create a Package
-The following example shows how to create a package in System Center Configuration Manager by using the `SMS_Package` class and class properties.  
+The following example shows how to create a package in Configuration Manager by using the `SMS_Package` class and class properties.  
 
 ### To create a package  
 
@@ -123,7 +124,6 @@ public void CreatePackage(WqlConnectionManager connection, string newPackageName
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
- [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
  [SMS_Package Server WMI Class](../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md)   
- [PowerShell Cmdlet: New-CMPackage](http://go.microsoft.com/fwlink/?LinkId=309284)
+ [PowerShell Cmdlet: New-CMPackage](https://go.microsoft.com/fwlink/?LinkId=309284)

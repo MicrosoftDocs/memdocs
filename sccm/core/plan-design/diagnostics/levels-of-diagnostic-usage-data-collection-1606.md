@@ -1,23 +1,24 @@
 ---
 title: "Diagnostic data for 1606"
 titleSuffix: "Configuration Manager"
-description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1606 collects."
+description: "Learn about the levels of diagnostics and usage data that Configuration Manager version 1606 collects."
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: f7350d03-f440-4744-82d4-75f8c6c25028
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Levels of diagnostic usage data collection for version 1606 of System Center Configuration Manager
+# Levels of diagnostic usage data collection for version 1606 of Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-System Center Configuration Manager version 1606 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail about data that each level collects.
+Configuration Manager version 1606 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail about data that each level collects.
 
 Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[Removed]***, or ***[Moved]***.
 
@@ -33,17 +34,17 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
 ##  <a name="bkmk_level1"></a> Level 1 - Basic
  The Basic level includes data about your hierarchy, data that's required to help improve your installation or upgrade experience, and data that helps determine the Configuration Manager updates that are applicable for your hierarchy.
 
- Beginning with System Center Configuration Manager version 1606, this level includes the following:
+ Beginning with Configuration Manager version 1606, this level includes the following:
 
 
- -   Setup Information:
- 	  - Build, install type, language packs, features that you enabled  
+-   Setup Information:
+      - Build, install type, language packs, features that you enabled  
 
- 	  -   Update pack deployment status and errors, download progress, and prerequisite errors 	
+      -   Update pack deployment status and errors, download progress, and prerequisite errors 
 
- 	  -  Version of post-upgrade script
+      -  Version of post-upgrade script
 
- 	  -  Use of update fast ring
+      -  Use of update fast ring
 
 -   Database performance metrics (replication processing information, top SQL Server stored procedures by processor, and disk usage)
 
@@ -80,7 +81,7 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
 -  Use of Network Discovery (enabled or disabled)
 -  Admin Console:
 
-	 -  Statistics about console connections (operating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)    
+    -  Statistics about console connections (operating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)    
 
 
 - ***[New]*** SQL version, service pack level, edition, collation ID, and character set
@@ -91,7 +92,7 @@ The Enhanced level is the default after setup finishes. This level includes data
 
 This level is recommended because it provides Microsoft with the minimum data that's required to make useful improvements in future versions of products and services. This level does not collect object names (sites, users, computer, or objects), details about security-related objects, or vulnerabilities like counts of systems that require software updates.
 
-Beginning with System Center Configuration Manager version 1606, this level includes the following:
+Beginning with Configuration Manager version 1606, this level includes the following:
 
 -   **Application management:**  
 
@@ -352,7 +353,7 @@ Beginning with System Center Configuration Manager version 1606, this level incl
 ##  <a name="bkmk_level3"></a> Level 3 - Full
 The Full level includes all data in the Basic and Enhanced levels. It also includes additional information about Endpoint Protection, update compliance percentages, and software update information. This level can also include advanced diagnostic information like system files and memory snapshots which might include personal information that existed in memory or log files at the time of capture.
 
-Beginning with System Center Configuration Manager version 1606, this level includes the following:
+Beginning with Configuration Manager version 1606, this level includes the following:
 
 -   Collection evaluation and refresh statistics
 
@@ -387,7 +388,7 @@ Beginning with System Center Configuration Manager version 1606, this level incl
 
 -   ***[New]*** Top 50 CPUs in the environment
 
--   ***[New]*** DCM config pack for System Center Configuration Manager usage
+-   ***[New]*** DCM config pack for Configuration Manager usage
 
 -   ***[New]*** MSI product code (common apps that customers deploy)
 

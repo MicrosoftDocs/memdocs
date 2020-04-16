@@ -1,4 +1,5 @@
-- name: Device compliance
+- name: Device compliance documentation
+  href: index.yml
 - name: Understand and explore
   items:
   - name: Ensure device compliance
@@ -21,16 +22,6 @@
       href: plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md
   - name: Security and privacy
     href: plan-design/security-and-privacy-for-compliance-settings.md
-  - name: Security Content Automation Protocol (SCAP) extensions
-    items:
-    - name: About SCAP extensions
-      href: plan-design/scap/about-scap.md
-    - name: Install and configure SCAP extensions
-      href: plan-design/scap/install-configure-scap.md
-    - name: Deploy and monitor SCAP compliance
-      href: plan-design/scap/deploy-monitor-export.md
-    - name: Troubleshoot SCAP extensions
-      href: plan-design/scap/troubleshooting-scap.md
 - name: Deploy and use
   items:
   - name: Create configuration items

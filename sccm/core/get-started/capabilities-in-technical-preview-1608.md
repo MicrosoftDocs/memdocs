@@ -1,23 +1,24 @@
 ---
 title: "Capabilities in Technical Preview 1608"
 titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1608."
+description: "Learn about features available in the Technical Preview for Configuration Manager, version 1608."
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 63e1df5e-637c-4b07-b7ec-95340f43a805
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.collection: M365-identity-device-management
+
+
 ---
-# Capabilities in Technical Preview 1608 for System Center Configuration Manager
+# Capabilities in Technical Preview 1608 for Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1608. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1608. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
 
 
 **The following are new features you can try out with this version.**  
@@ -42,7 +43,7 @@ We have added a field to the properties for inventoried software that lets you s
 
 ### Filter the software display
 After you have defined parent to child relationships, you can filter your view to only show software that is a parent or that has no defined relationship. This hides all software that is set as a child of another inventoried software. To do so:
-   1.	For the Search bar, choose to **Add Criteria**
+   1. For the Search bar, choose to **Add Criteria**
    2. Select **Parent Software** and then change the criteria value to **is empty**, and then click **Search**.
 
 The display now shows only the parent software items, or software that has no defined relationships. Software that is only a child of another title does not display.

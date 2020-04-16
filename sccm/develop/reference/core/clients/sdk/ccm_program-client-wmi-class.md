@@ -9,7 +9,8 @@ ms.assetid: 2c024101-cb8e-4185-b3b2-6b9c509f7919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
 # CCM_Program Client WMI Class
 The `CCM_Program` WMI class is a client class, in Configuration Manager, that represents a legacy software distribution program on the client.  
@@ -332,15 +333,10 @@ class CCM_Program : CCM_SoftwareBase
 
  Version of the software distribution program.  
 
-## Remarks  
-
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Client SDK WMI Classes](../../../../../develop/reference/core/clients/sdk/client-sdk-wmi-classes.md)

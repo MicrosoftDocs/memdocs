@@ -1,24 +1,28 @@
 ---
-title: "Configuration Manager on Azure"
-description: "Information about using Configuration Manager on an Azure environment."
+title: Configuration Manager on Azure
+titleSuffix: Configuration Manager
+description: Information about using Configuration Manager on an Azure environment.
 ms.date: 03/27/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+
+
 ---
+
 # Configuration Manager on Azure - Frequently Asked Questions
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+*Applies to: Configuration Manager (current branch)*
 
 The following questions and answers can help you understand when to use and how to configure Configuration Manager on Microsoft Azure.
 
 ## General Questions
 ### My company is trying to move as many physical servers as possible to Microsoft Azure, can I move Configuration Manager servers to Azure?
-Certainly, this is a supported scenario.  See [Support for Virtualization Environments for System Center Configuration Manager](/sccm/core/plan-design/configs/support-for-virtualization-environments).
+Certainly, this is a supported scenario.  See [Support for Virtualization Environments for Configuration Manager](/sccm/core/plan-design/configs/support-for-virtualization-environments).
 
 ### Great! My environment requires multiple sites. Should all child primary sites be in Azure with the central administration site or on-premises? What about secondary sites?
 Site-to-site communications (file-based and database replication) benefits from the proximity of being hosted in Azure. However, all client related traffic would be remote from site servers and site systems. If you use a fast and reliable network connection between Azure and your intranet with an unlimited data plan, hosting all your infrastructure in Azure is an option.
@@ -30,11 +34,11 @@ No, it is an IaaS (Infrastructure as a Service) because you host your Configurat
 
 ### What areas should I pay attention to when considering a move of my Configuration Manager infrastructure to Azure?
 Great question, here are the areas that are most important when making this decision, each is explored in a separate section of this topic:
-1.	Networking
-2.	Availability
-3.	Performance
-4.	Cost
-5.	User Experience
+1. Networking
+2. Availability
+3. Performance
+4. Cost
+5. User Experience
 
 ## Networking
 ### What about networking requirements, should I use ExpressRoute or an Azure VPN Gateway?
@@ -80,7 +84,7 @@ While Configuration Manager is not tested with Azure load balancers, if the func
 [Azure VM size and type](https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs), Azure VM disks (premium storage is recommended, especially for SQL Server), networking latency, and speed are the most important areas.
 
 ### So, tell me more about Azure virtual machines; what size VMs should I use?
-In general, your compute power (CPU and Memory) need to meet the [recommended hardware for System Center Configuration Manager](/sccm/core/plan-design/configs/recommended-hardware). But there are some differences between regular computer hardware and Azure VMs, especially when it comes to the disks these VMs use.  What size VMs you use depends on the size of your environment but here are some recommendations:
+In general, your compute power (CPU and Memory) need to meet the [recommended hardware for Configuration Manager](/sccm/core/plan-design/configs/recommended-hardware). But there are some differences between regular computer hardware and Azure VMs, especially when it comes to the disks these VMs use.  What size VMs you use depends on the size of your environment but here are some recommendations:
 - For production deployments of any significant size we recommend “**S**” class Azure VMs. This is because they can leverage Premium Storage disks.  Non “S” class VMs use blob storage and in general will not meet the performance requirements necessary for an acceptable production experience.
 - Multiple Premium Storage disks should be used for higher scale, and striped in the Windows Disk Management console for maximum IOPS.  
 - We recommend using better or multiple premium disks during your initial site deployment (like P30 instead of P20, and 2xP30 in a striped volume instead of 1xP30). Then, if your site later needs to ramp up in VM size due to additional load, you can take advantage of the additional CPU and memory that a larger VM size provides. You will also have disks already in place that can take advantage of the additional IOPS throughput that the larger VM size allows.
@@ -124,10 +128,10 @@ In general, you can leverage the normal guidance as it relates to WAN links and 
 ### What about content distribution and content management? Should standard distribution points be in Azure or on-premises, and should I use BranchCache or pull-distribution points on-premises? Or should I make exclusive use of Cloud Distribution Points?
 The approach for content management is much the same as for site servers and site systems.
 - If you use a fast and reliable network connection between Azure and your intranet with an unlimited data plan, hosting standard distribution points in Azure could be an option.
--  If you use a metered data plan and bandwidth cost is a concern or the network connection between Azure and your intranet is not fast or can be unreliable, then you might consider other approaches. These include locating standard or pull distribution points on-premises as well as using BranchCache. The use of cloud-based distribution points is also an option but there are some limits on the content types supported (for example, no support for software updates packages).
+- If you use a metered data plan and bandwidth cost is a concern or the network connection between Azure and your intranet is not fast or can be unreliable, then you might consider other approaches. These include locating standard or pull distribution points on-premises as well as using BranchCache. The use of cloud-based distribution points is also an option but there are some limits on the content types supported (for example, no support for software updates packages).
 
 > [!NOTE]
->  If PXE support is required, you must use on-premises distribution points (standard or pull) to respond to boot requests. [WDS is currently not supported to run on Azure VMs](https://technet.microsoft.com/library/hh831764(v=ws.11).aspx).
+>  If PXE or multicast support is required, you must use on-premises distribution points (standard or pull) to respond to boot requests.
 
 
 ### While I am OK with the limitations of cloud-based distribution points, I don't want to put my management point into a DMZ even though that is needed to support my internet-based clients. Do I have any other options?
@@ -149,26 +153,24 @@ Hard to say since every environment is different. The best thing to do is to cos
 
 ## Additional Resources
 **Fundamentals:**
-http://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
+https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Azure VM Machine Types:**
- - Azure Machine sizes: https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
- - VM Pricing: http://azure.microsoft.com/pricing/details/virtual-machines/  
- - Storage Pricing: http://azure.microsoft.com/pricing/details/storage/
+- Azure Machine sizes: https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
+- VM Pricing: https://azure.microsoft.com/pricing/details/virtual-machines/  
+- Storage Pricing: https://azure.microsoft.com/pricing/details/storage/
 
 **Disk Performance Considerations:**    
- - Premium Disk intro:  http://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
- - Deeper Premium Disk info: http://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
- - Handy collection of charts for max Sizes and Perf targets for Storage: https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
- - Another Intro + some cool uber-geek data on how Premium Storage works behind the covers:  http://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
+- Premium Disk intro:  https://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
+- Deeper Premium Disk info: https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
+- Handy collection of charts for max Sizes and Perf targets for Storage: https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
+- Another Intro + some cool uber-geek data on how Premium Storage works behind the covers:  https://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
 
 **Availability:**
- - Azure IaaS Uptime SLA's: https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
- - Availability Sets Explained: https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
+- Azure IaaS Uptime SLA's: https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
+- Availability Sets Explained: https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
 
 **Connectivity:**
- - Express route vs. Azure VPN: http://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
- - Express Route Pricing: http://azure.microsoft.com/pricing/details/expressroute/
- - More about Express Route: http://azure.microsoft.com/documentation/articles/expressroute-introduction/
-
- 
+- Express route vs. Azure VPN: https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
+- Express Route Pricing: https://azure.microsoft.com/pricing/details/expressroute/
+- More about Express Route: https://azure.microsoft.com/documentation/articles/expressroute-introduction/

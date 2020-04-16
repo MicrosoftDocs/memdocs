@@ -4,9 +4,8 @@ titleSuffix: Configuration Manager
 description: 
 ms.date: mm/dd/yyyy
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other #analytics app client comanage compliance core mdm mdt osd other protect sdk sum
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
 ms.assetid: [PowerShell New-Guid cmdlet]
 author: aczechowski
 ms.author: aaroncz
@@ -14,6 +13,8 @@ manager: dougeby
 ---
 
 # Metadata and Markdown Template
+
+*Applies to: Configuration Manager (current branch, technical preview branch, long-term servicing branch)*
 
 This docs.ms template contains examples of markdown syntax, as well as guidance on setting the metadata. It is available in the root directory of each EM Pilot repository (e.g. ~/Azure-RMSDocs-pr
 /template.md) and is meant to be read as a markdown file, although you can refer to [the published version](https://stage.docs.microsoft.com/en-us/rights-management/template) to see how the markdown examples rendeer.
@@ -148,11 +149,13 @@ If a URL appears in a markdown file, it will be transformed into a clickable lin
 
 ### Codeblock
 
-    function fancyAlert(arg) {
-      if(arg) {
-        $.docs({div:'#foo'})
-      }
-    }
+```
+function fancyAlert(arg) {
+  if(arg) {
+    $.docs({div:'#foo'})
+  }
+}
+```
 
 ### In-line code
 
@@ -202,14 +205,14 @@ This is an example of `in-line code`.
 
 ### Channel 9
 
-<iframe src="http://channel9.msdn.com/Series/Azure-Active-Directory-Videos-Demos/Azure-Active-Directory-Connect-Express-Settings/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe src="https://channel9.msdn.com/Series/Azure-Active-Directory-Videos-Demos/Azure-Active-Directory-Connect-Express-Settings/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
 
 
 ### Youtube
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/R6_eWWfNB54" frameborder="0" allowfullscreen></iframe>
 
-## docs.ms extentions
+## docs.ms extensions
 
 ### Button
 

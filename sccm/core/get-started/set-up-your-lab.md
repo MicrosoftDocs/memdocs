@@ -1,27 +1,32 @@
 ---
-title: "Set up your lab"
-titleSuffix: "Configuration Manager"
-description: "Set up a lab for evaluating Configuration Manager with simulated real-life activities."
-ms.date: 09/21/2017
+title: Set up your lab
+titleSuffix: Configuration Manager
+description: Set up a lab for evaluating Configuration Manager with simulated real-life activities.
+ms.date: 09/26/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.collection: M365-identity-device-management
----
-# Set up your System Center Configuration Manager lab
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+---
+
+# Set up a Configuration Manager lab
+
+*Applies to: Configuration Manager (current branch)*
 
 Following the guidance in this topic will enable you to set up a lab for evaluating Configuration Manager with simulated real-life activities.  
 
-##  <a name="BKMK_LabCore"></a> Core components  
- Setting up your environment for System Center Configuration Manager requires some core components to support the installation of Configuration Manager.    
+> [!NOTE]
+> Microsoft offers a pre-configured version of this lab using an evaluation version of Configuration Manager. For more information, see [Windows and Office deployment and management lab kit](https://docs.microsoft.com/microsoft-365/enterprise/modern-desktop-deployment-and-management-lab). 
 
--   **The lab environment uses Windows Server 2012 R2**, into which we will install System Center Configuration Manager.  
+##  <a name="BKMK_LabCore"></a> Core components  
+ Setting up your environment for Configuration Manager requires some core components to support the installation of Configuration Manager.    
+
+-   **The lab environment uses Windows Server 2012 R2**, into which we will install Configuration Manager.  
 
      You can download an evaluation version of Windows Server 2012 R2 from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
 
@@ -29,9 +34,9 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
 -   **The lab environment uses SQL Server 2012 SP2** for the site database.  
 
-     You can download an evaluation version of SQL Server 2012 from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=29066).  
+     You can download an evaluation version of SQL Server 2012 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=43340).  
 
-     SQL Server has [Supported versions of SQL Server](../../core/plan-design/configs/support-for-sql-server-versions.md#bkmk_SQLVersions) that must be met for use with System Center Configuration Manager.  
+     SQL Server has [Supported versions of SQL Server](../../core/plan-design/configs/support-for-sql-server-versions.md#bkmk_SQLVersions) that must be met for use with Configuration Manager.  
 
     -   Configuration Manager requires a 64-bit version of SQL Server to host the site database.  
 
@@ -55,7 +60,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
      For additional information, review this [overview of Active Directory Domain Services](https://technet.microsoft.com/library/hh831484).  
 
--   **Hyper-V is used with a few virtual machines** to verify that the management steps taken in these exercises are functioning as expected. A minimum of three virtual machines is recommended, with Windows 7 (or later) installed.  
+-   **Hyper-V is used with a few virtual machines** to verify that the management steps taken in these exercises are functioning as expected. A minimum of three virtual machines is recommended, with Windows 10 installed.  
 
      For additional information, review this [overview of Hyper-V](https://technet.microsoft.com/library/hh831531.aspx).  
 
@@ -67,7 +72,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
     -   Virtual machines require local permissions on the machines themselves  
 
-Though not required for this lab, you can review [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md) for additional information on requirements for implementing System Center Configuration Manager. Refer to documentation for  software versions other than those referenced here.  
+Though not required for this lab, you can review [Supported configurations for Configuration Manager](../../core/plan-design/configs/supported-configurations.md) for additional information on requirements for implementing Configuration Manager. Refer to documentation for  software versions other than those referenced here.  
 
 Once you have installed all of these components, there are additional steps you must take to configure your Windows environment for Configuration Manager:  
 
@@ -121,7 +126,7 @@ The next steps required to enable Configuration Manager clients to query Active 
 
 5.  Click **OK** to close the **ADSI Edit** console and complete the procedure.  
 
-     For additional insight into this procedure, please review [Extend the Active Directory schema for System Center Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md)  
+     For additional insight into this procedure, please review [Extend the Active Directory schema for Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md)  
 
 ##  <a name="BKMK_ExtADSchLab"></a> Extend the Active Directory schema using extadsch.exe  
  You will extend the Active Directory schema for this lab, as this allows you to use all Configuration Manager features and functionality with the least amount of administrative overhead. Extending the Active Directory schema is a forest-wide configuration that is done one time per forest. Extending the schema permanently modifies the set of classes and attributes in your base Active Directory configuration. This action is irreversible. Extending the schema allows Configuration Manager to access components that will allow it to function most effectively within your lab environment.  
@@ -139,7 +144,7 @@ The next steps required to enable Configuration Manager clients to query Active 
 
 4.  Verify that the schema extension was successful by reviewing the **extadsch.log** located in the root folder of the system drive.  
 
-     For additional insight into this procedure, please review [Extend the Active Directory schema for System Center Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md).  
+     For additional insight into this procedure, please review [Extend the Active Directory schema for Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md).  
 
 ##  <a name="BKMK_OtherTasksLab"></a> Other required tasks  
  You will also need to complete the following tasks prior to installation.  
@@ -188,7 +193,7 @@ The next steps required to enable Configuration Manager clients to query Active 
 
 9. Click **Install** and verify that the installation completed properly in the **Notifications** pane of **Server Manager**.  
 
-10. After the base installation of .NET completes, navigate to  the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=42643) to obtain the web installer for the .NET Framework 4.5.2. Click the **Download** button, then **Run** the installer. It will automatically detect and install the required components in your selected language.  
+10. After the base installation of .NET completes, navigate to  the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=42643) to obtain the web installer for the .NET Framework 4.5.2. Click the **Download** button, then **Run** the installer. It will automatically detect and install the required components in your selected language.  
 
 For additional information, please review the following articles for why these .NET Frameworks are required:  
 
@@ -208,7 +213,7 @@ The [Background Intelligent Transfer Service (BITS)](https://technet.microsoft.c
 
 You will install BITS for this lab, as this site server will also be used as a management point.  
 
-Internet Information Services (IIS) is a flexible, scalable web server that can be used to host anything on the web. It is used by Configuration Manager for a number of site system roles. For additional information on IIS, review [Websites for site system servers in System Center Configuration Manager](../../core/plan-design/network/websites-for-site-system-servers.md).  
+Internet Information Services (IIS) is a flexible, scalable web server that can be used to host anything on the web. It is used by Configuration Manager for a number of site system roles. For additional information on IIS, review [Websites for site system servers](../../core/plan-design/network/websites-for-site-system-servers.md).  
 
 [Remote Differential Compression (RDC)](https://technet.microsoft.com/library/cc754372.aspx) is a set of APIs that applications can use to determine if any changes have been made to a set of files. RDC enables the application to replicate only the changed portions of a file, keeping network traffic to a minimum.  
 
@@ -266,7 +271,7 @@ Internet Information Services (IIS) is a flexible, scalable web server that can 
 
         -   **URL Authorization**  
 
-        -   **Windows Authorization**  
+        -   **Windows Authentication**  
 
     -   **Application Development**  
 
@@ -342,11 +347,11 @@ Before you begin the installation, launch the  [Prerequisite Checker](/sccm/core
 
 #### To download and install Configuration Manager:  
 
-1.  Navigate to the [System Center Evaluations](https://www.microsoft.com/evalcenter/evaluate-system-center-2012-configuration-manager-and-endpoint-protection) page to download the newest evaluation version of System Center Configuration Manager.  
+1.  Navigate to the [System Center Evaluations](https://www.microsoft.com/evalcenter/evaluate-system-center-2012-configuration-manager-and-endpoint-protection) page to download the newest evaluation version of Configuration Manager.  
 
 2.  Decompress the download media into your predefined location.  
 
-3.  Follow the installation procedure listed at [Install a site using the System Center Configuration Manager Setup Wizard](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites). Within that procedure, you will input the following:  
+3.  Follow the installation procedure listed at [Install a site using the Configuration Manager Setup Wizard](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites). Within that procedure, you will input the following:  
 
     |Step in site installation procedure|Selection|  
     |-----------------------------------------|---------------|  
