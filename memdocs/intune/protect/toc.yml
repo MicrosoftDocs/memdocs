@@ -60,31 +60,29 @@
       href: actions-for-noncompliance.md
     - name: Monitor device compliance
       href: compliance-policy-monitor.md
-  - name: Manage endpoint security
+  - name: Endpoint security
+    href: endpoint-security.md
     items:
-    - name: Endpoint security
-      href: endpoint-security.md
+    - name: Security baselines
+      items: 
+      - name: Security baselines 
+        href: security-baselines.md
+      - name: Monitor your baselines
+        href: security-baselines-monitor.md
+    - name: Security tasks
+      href: atp-manage-vulnerabilities.md 
+    - name: Endpoint security policy
       items:
-      - name: Security baselines
-        items: 
-        - name: Security baselines 
-          href: security-baselines.md
-        - name: Monitor your baselines
-          href: security-baselines-monitor.md
-      - name: Security tasks
-        href: atp-manage-vulnerabilities.md 
-      - name: Endpoint security policy
+      - name: Antivirus policy
+        href: endpoint-security-configure-antivirus.md
+      - name: Disk encryption policy
+        href: endpoint-security-configure-disk-encryption.md
+      - name: Account protection
         items:
-        - name: Antivirus policy
-          href: endpoint-security-configure-antivirus.md
-        - name: Disk encryption policy
-          href: endpoint-security-configure-disk-encryption.md
-        - name: Account protection
-          items:
-          - name: Windows Hello
-            href: windows-hello.md
-          - name: Identity protection
-            href: identity-protection-configure.md  
+        - name: Windows Hello
+          href: windows-hello.md
+        - name: Identity protection
+          href: identity-protection-configure.md  
       - name: Microsoft Defender ATP
         href: advanced-threat-protection.md  
   - name: Encrypt devices
