@@ -87,10 +87,14 @@
       href: app-based-conditional-access-intune-create.md
     - name: ADAL and Intune
       href: app-modern-authentication-block.md
-    - name: Integrate Jamf Pro with Intune for compliance
-      href: conditional-access-integrate-jamf.md
-    - name: Enforce compliance on Macs managed with Jamf Pro
-      href: conditional-access-assign-jamf.md
+    - name: Jamf Pro for macOS
+      items:
+      - name: Use the Jamf Cloud connector
+        href: conditional-access-jamf-cloud-connector.md
+      - name: Manually integrate Jamf with Intune
+        href: conditional-access-integrate-jamf.md
+      - name: Enforce compliance on Macs managed with Jamf Pro
+        href: conditional-access-assign-jamf.md
   - name: Threat protection
     items: 
     - name: Mobile Threat Defense
