@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Extend the Active Directory schema to support Configuration Manager."
 ms.date: 02/7/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: mestew

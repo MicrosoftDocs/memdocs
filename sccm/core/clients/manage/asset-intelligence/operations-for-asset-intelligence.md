@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Do common Asset Intelligence tasks in Configuration Manager."
 ms.date: 08/30/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: e8159bd9-5c2b-4d25-82f9-78fcfd732ba9
 author: mestew
@@ -41,7 +41,7 @@ This topic contains information to help you manage typical Asset Intelligence ta
 2.  In the **Asset and Compliance** workspace, click **Asset Intelligence**. The Asset Intelligence reports are displayed.  
 
 ###  <a name="BKMK_AssetIntelligenceReports"></a> Asset Intelligence reports  
- There are over 60 Asset Intelligence reports that display the information collected by Asset Intelligence. Many of these reports link to more specific reports in which you can query for general information and drill down to more detailed information. The Asset Intelligence reports are located in the Configuration Manager console, in the **Monitoring** workspace, under the **Reporting** node. The reports provide information about hardware, license management, and software. For more information about reports in Configuration Manager, see [Reporting](../../../../core/servers/manage/reporting.md).  
+ There are over 60 Asset Intelligence reports that display the information collected by Asset Intelligence. Many of these reports link to more specific reports in which you can query for general information and drill down to more detailed information. The Asset Intelligence reports are located in the Configuration Manager console, in the **Monitoring** workspace, under the **Reporting** node. The reports provide information about hardware, license management, and software. For more information about reports in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
 
 > [!NOTE]  
 >  The accuracy of installed software title quantities and license information displayed in Asset Intelligence reports might vary from the actual number of software titles installed or licenses in use in the environment because of the complex dependencies and limitations involved in inventorying software license information for software titles installed in enterprise environments. Asset Intelligence reports should not be used as the sole source for determining purchased software license compliance.  

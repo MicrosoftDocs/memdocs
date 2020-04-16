@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Get details about changes and new capabilities introduced in version 1602 of Configuration Manager."
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 4021eca1-adfb-4e5a-adee-159263c29637
 author: mestew
@@ -128,7 +128,7 @@ You will find these apps in the **Applications** node of the Configuration Manag
 
  This rule overrides the default rule, which means that even if you set the default rule to quarantine or block access, enrolled and compliant devices will still be able to access Exchange on-premises. Use this setting when you want enrolled and compliant devices to always have access to email through Exchange on-premises.   
 
- For the detailed walkthrough, see [Manage email access](../../../protect/deploy-use/manage-email-access.md).  
+ For the detailed walkthrough, see [Manage email access](/configmgr/mdm/understand/what-happened-to-hybrid).  
 
 ## Client management  
 

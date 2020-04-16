@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview for Configuration Manager, version 1702."
 ms.date: 02/24/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
 author: aczechowski
@@ -44,7 +44,7 @@ The next time your infrastructure qualifies for two or more updates, only the la
 You have the option to download and install the other available updates, even when they are not the most current version. However, you will receive a warning that the update has been replaced by a newer one. To download an update that is *Available to Download*, select the update in the console and then click **Download**.
 
 **Improved cleanup of older updates**   
-We added an automatic clean-up function that deletes the unneeded downloads from the ‘EasySetupPayload’ folder on your site server.  
+We added an automatic clean-up function that deletes the unneeded downloads from the 'EasySetupPayload' folder on your site server.  
 
 
 ## Peer Cache improvements
@@ -66,7 +66,7 @@ The technical preview site infrastructure, clients, and the Azure AD Domain Serv
 
 
 ### Set up Configuration Manager to use Azure AD
-To use Azure AD with Configuration Manager, you’ll need the following:
+To use Azure AD with Configuration Manager, you'll need the following:
 - Azure subscription.
 - Azure AD with Domain Services (DS).
 - A Configuration Manager site that runs on an Azure VM that is joined to your Azure AD.
@@ -115,7 +115,7 @@ Additionally, this helps organizations to mitigate data leakage through unsecure
 Beginning with this preview version, Configuration Manager Endpoint Protection provides an alert if more than 20% (default) of managed clients are using an expired version of the antimalware client (i.e. Windows Defender or Endpoint Protection client).
 
 ### Try it out
-Ensure Endpoint Protection is enabled on all desktop and server clients using client settings policy. You can now view **Antimalware Client Version** and **Endpoint Protection Deployment Status** by going **Assets and Compliance** > **Overview** > **Devices** > **All Desktops and Serve Clients**. To check for an alert, view **Alerts** in the **Monitoring** workspace. If more than 20% of managed clients are running an expired version of antimalware software, the Antimalware client version is outdated alert is displayed. This alert doesn’t appear on the **Monitoring** > **Overview** tab. To update expired antimalware clients, enable software updates for antimalware clients.
+Ensure Endpoint Protection is enabled on all desktop and server clients using client settings policy. You can now view **Antimalware Client Version** and **Endpoint Protection Deployment Status** by going **Assets and Compliance** > **Overview** > **Devices** > **All Desktops and Serve Clients**. To check for an alert, view **Alerts** in the **Monitoring** workspace. If more than 20% of managed clients are running an expired version of antimalware software, the Antimalware client version is outdated alert is displayed. This alert doesn't appear on the **Monitoring** > **Overview** tab. To update expired antimalware clients, enable software updates for antimalware clients.
 
 To configure the percentage at which the alert is generated, expand **Monitoring** > **Alerts** > **All Alerts**, double-click **Antimalware clients out of date** and modify the **Raise alert if percentage of managed clients with an outdated version of the antimalware client is more than** option.
 
@@ -213,7 +213,7 @@ In the *\<deployment type name>* **Properties** dialog box of a deployment type,
 
 If the application was deployed as **Available**, and an end user tries to install an application, they will be prompted to close any running executables you specified before they can proceed with the installation.
 
-If the application was deployed as **Required**, and the option **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** is selected, they will see a dialog box which informs them that executables you specified will be automatically closed when the application installation deadline is reached. You can schedule these dialogs in **Client Settings** > **Computer Agent**. If you don’t want the end user to see these messages, select **Hide in Software Center and all notifications** on the **User Experience** tab of the deployment’s properties.
+If the application was deployed as **Required**, and the option **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** is selected, they will see a dialog box which informs them that executables you specified will be automatically closed when the application installation deadline is reached. You can schedule these dialogs in **Client Settings** > **Computer Agent**. If you don't want the end user to see these messages, select **Hide in Software Center and all notifications** on the **User Experience** tab of the deployment's properties.
 
 If the application was deployed as **Required** and the option **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** is not selected, then the installation of the app will fail if one or more of the specified applications are running.
 
@@ -230,7 +230,7 @@ For more information about certificates in Configuration Manager, see [Introduct
 
 ## New compliance settings for iOS devices
 
-We've added new settings you can use in your configuration items for iOS devices. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager. If you need help with any of these settings, see [iOS policy settings in Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/ios-policy-settings-in-microsoft-intune).
+We've added new settings you can use in your configuration items for iOS devices. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager. If you need help with any of these settings, see [iOS policy settings in Microsoft Intune](/mem/intune/configuration/device-restrictions-ios).
 
 - **Sync data from managed apps to iCloud**
 - **Handoff to continue activities on other device**

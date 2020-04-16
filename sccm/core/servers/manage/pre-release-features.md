@@ -2,16 +2,14 @@
 title: Pre-release features
 titleSuffix: Configuration Manager
 description: Pre-release features are features that are in the current branch for early testing in a production environment.
-ms.date: 11/29/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Pre-release features in Configuration Manager
@@ -64,17 +62,19 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 -->
 
 <!-- With each current branch release, to help purge this list a bit, remove any entries that were added as a full feature in a version that's no longer supported -->
-| Feature          | Added as pre-release | Added as a full feature |  
+| Feature          | Added as pre-release | Added as a full feature |
 |------------------|----------------------|-------------------------|
+| [Orchestration groups](/configmgr/sum/deploy-use/orchestration-groups) <!--3098816--> | Version 2002 | ![Not yet](media/red_x.png) |
+| [Task sequence deployment type](/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt) <!--3555953--> | Version 2002 | ![Not yet](media/red_x.png) |
+| [Remove the central administration site](/configmgr/core/servers/deploy/install/remove-central-administration-site) <!-- 3607277 --> | Version 2002 | ![Not yet](media/red_x.png) |
 | [Task sequence debugger](/sccm/osd/deploy-use/debug-task-sequence) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71--> | Version 1906 | ![Not yet](media/red_x.png) |
 | [Application groups](/sccm/apps/deploy-use/create-app-groups) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D--> | Version 1906 | ![Not yet](media/red_x.png) |
-| [Azure Active Directory user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->| Version 1906 | ![Not yet](media/red_x.png) |
-| [Synchronize collection membership results to Azure Active Directory](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->| Version 1906| ![Not yet](media/red_x.png)|
-| [CMPivot standalone](/sccm/core/servers/manage/cmpivot#bkmk_standalone) <!--3555890/4692885,no GUID--> | Version 1906 | ![Not yet](media/red_x.png) |
+| [Azure Active Directory user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->| Version 1906 | Version 2002 |
+| [Synchronize collection membership results to Azure Active Directory](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->| Version 1906| Version 2002 |
+| [CMPivot standalone](/sccm/core/servers/manage/cmpivot#bkmk_standalone) <!--3555890/4692885,no GUID--> | Version 1906 | Version 2002 |
 | [SMS Provider administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service) <!--1359052--> | Version 1810 | Version 1906 |
 | [Enhanced HTTP site system](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | Version 1806 | Version 1810 |
-| [Client apps for co-managed devices](/sccm/comanage/workloads#client-apps) <br/> (previously known as *Mobile apps for co-managed devices*) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C--> | Version 1806 | ![Not yet](media/red_x.png) |
-| [SCAP extensions](/sccm/compliance/plan-design/scap/about-scap) <!--3607889--> | Version 1806 | ![Not yet](media/red_x.png) |
+| [Client apps for co-managed devices](/sccm/comanage/workloads#client-apps) <br/> (previously known as *Mobile apps for co-managed devices*) <!--1357892/3600959,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C--> | Version 1806 | Version 2002 |
 | [Package conversion manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | Version 1806 | Version 1810 |
 | [Phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | Version 1802 | Version 1806 |
 | [Windows Defender Application Control management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--3600958 (fka 1355092 & 1319346)--> | Version 1702 | Version 1906 |

@@ -9,13 +9,11 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # Cryptographic controls technical reference
 
 *Applies to: Configuration Manager (current branch)*
-
 
 Configuration Manager uses signing and encryption to help protect the management of the devices in the Configuration Manager hierarchy. With signing, if data has been altered in transit, it's discarded. Encryption helps prevent an attacker from reading the data by using a network protocol analyzer.  
 
@@ -42,19 +40,20 @@ Configuration Manager uses signing and encryption to help protect the management
  The hashing algorithm for policy is SHA-1 and SHA-256.  
 
 ### Content hashing  
- The distribution manager service on the site server hashes the content files for all packages. The policy provider includes the hash in the software distribution policy. When the Configuration Manager client downloads the content, the client regenerates the hash locally and compares it to the one supplied in the policy. If the hashes match, the content has not been altered and the client installs it. If a single byte of the content has been altered, the hashes will not match and the software will not be installed. This check helps to ensure that the correct software is installed because the actual content is crosschecked with the policy.  
 
- The default hashing algorithm for content is SHA-256. To change this default, see the documentation for the Configuration Manager Software Development Kit (SDK).  
+The distribution manager service on the site server hashes the content files for all packages. The policy provider includes the hash in the software distribution policy. When the Configuration Manager client downloads the content, the client regenerates the hash locally and compares it to the one supplied in the policy. If the hashes match, the content has not been altered and the client installs it. If a single byte of the content has been altered, the hashes will not match and the software will not be installed. This check helps to ensure that the correct software is installed because the actual content is crosschecked with the policy.  
 
- Not all devices can support content hashing. The exceptions include:  
+The default hashing algorithm for content is SHA-256.
 
--   Windows clients when they stream App-V content.  
+Not all devices can support content hashing. The exceptions include:  
 
--   Windows Phone clients, though these clients verify the signature of an application that is signed by a trusted source.  
+- Windows clients when they stream App-V content.  
 
--   Windows RT client, though these clients verify the signature of an application that is signed by a trusted source and also use package full name (PFN) validation.  
+- Windows Phone clients, though these clients verify the signature of an application that is signed by a trusted source.  
 
--   Clients that run on versions of Linux and UNIX that do not support SHA-256. For more information, see [Planning for client deployment to Linux and UNIX computers](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers).  
+- Windows RT client, though these clients verify the signature of an application that is signed by a trusted source and also use package full name (PFN) validation.  
+
+- Clients that run on versions of Linux and UNIX that do not support SHA-256. For more information, see [Planning for client deployment to Linux and UNIX computers](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers).  
 
 ### Inventory signing and encryption  
  Inventory that clients send to management points is always signed by devices, regardless of whether they communicate with management points over HTTP or HTTPS. If they use HTTP, you can choose to encrypt this data, which is a security best practice.  

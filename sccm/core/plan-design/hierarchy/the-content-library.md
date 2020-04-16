@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the content library that Configuration Manager uses to reduce the overall size of distributed content.
 ms.date: 07/31/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski

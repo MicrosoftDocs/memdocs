@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn to recover your sites in Configuration Manager.
 ms.date: 08/23/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew

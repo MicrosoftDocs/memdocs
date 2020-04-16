@@ -2,7 +2,7 @@
 title: Manage task sequences
 titleSuffix: Configuration Manager
 description: Create, edit, deploy, import, and export task sequences to manage them and automate tasks in your environment.
-ms.date: 11/29/2019
+ms.date: 02/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -85,8 +85,8 @@ Use the following procedure to configure the behavior of the task sequence on th
 
         If you set the value as **0**, Configuration Manager evaluates the maximum allowed run time as **12** hours (720 minutes) for monitoring progress. However, the task sequence starts as long as the countdown duration doesn't exceed the maintenance window value.  
 
-        > [!NOTE]  
-        > When it reaches the maximum run time, if you set the option to **Run with administrative rights**, and don't set the option to **Allow users to interact with this program**, then Configuration Manager stops the task sequence. If the task sequence itself isn't stopped, Configuration Manager stops monitoring the task sequence after it reaches the maximum allowed run time.  
+        > [!NOTE]
+        > When it reaches the maximum run time, if you don't allow users to interact with a required deployment, then Configuration Manager stops the task sequence. If the task sequence itself isn't stopped, Configuration Manager stops monitoring the task sequence after it reaches the maximum allowed run time.
 
     - **Use a boot image**: Use the selected boot image when the task sequence is run. Select **Browse** to select a different boot image. Clear this option to disable the use of the selected boot image when the task sequence runs.  
 
@@ -100,6 +100,9 @@ Use the following procedure to configure the behavior of the task sequence on th
 ## High-impact settings
 
 Configure a task sequence as high-impact and customize the messages that users receive when they run the task sequence.
+
+> [!WARNING]
+> If you use PXE deployments, and configure device hardware with the network adapter as the first boot device, these devices can automatically start an OS deployment task sequence without user interaction. Deployment verification doesn't manage this configuration. While this configuration may simplify the process and reduce user interaction, it puts the device at greater risk for accidental reimage.
 
 ### Set a task sequence as a high-impact task sequence
 

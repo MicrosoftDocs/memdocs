@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Identify key configurations and requirements so you can plan, deploy, and maintain a functional Configuration Manager deployment."
 ms.date: 10/08/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 author: mestew
@@ -49,7 +49,7 @@ Learn about which operating systems can host the Configuration Manager console t
 -  [Support for SQL Server versions](../../../core/plan-design/configs/support-for-sql-server-versions.md)  
 Learn about which versions of SQL Server can host the site database and reporting database, as well as about required configurations and optional configurations that you can use.
 
--  [High-availability options](../../../protect/understand/high-availability-options.md)  
+-  [High-availability options](/sccm/core/servers/deploy/configure/high-availability-options)  
 Learn about the options you can implement when designing your environment to help maintain a high level of available service for your Configuration Manager deployment.
 
 -  [Recommended hardware](../../../core/plan-design/configs/recommended-hardware.md)  

@@ -2,9 +2,9 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 02/13/2020
+ms.date: 03/31/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
@@ -94,7 +94,7 @@ Microsoft supports each technical preview version up until three successive vers
 
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version.
 
-- **Technical preview version 1911**: The Configuration Manager technical preview branch version 1911 is available as both an in-console update and as a new baseline version.
+- **Technical preview version 2002**: The Configuration Manager technical preview branch version 2002 is available as both an in-console update and as a new baseline version.
 
 Download a baseline version from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -117,25 +117,26 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](/sccm/core/get-started/2020/technical-preview-2002#bkmk_anchor) <!--ID-->
+<!-- - [title](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--ID-->
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2002
+### Technical preview version 2003
 
-- [Evaluate software updates after a servicing stack update](/sccm/core/get-started/2020/technical-preview-2002#bkmk_ssu) <!--4639943-->
-- [Office 365 updates for disconnected software update points](/sccm/core/get-started/2020/technical-preview-2002#bkmk_O365) <!--4065163-->
-- [Improvements to Microsoft Edge management](/sccm/core/get-started/2020/technical-preview-2002#bkmk_edge) <!--4561024-->
-- [Improvements to Orchestration Groups](/sccm/core/get-started/2020/technical-preview-2002#bkmk_orch) <!--3098816-->
-- [Proxy support for Azure Active Directory discovery and group sync](/sccm/core/get-started/2020/technical-preview-2002#bkmk_aad) <!--5913817-->
-- [Improvements to BitLocker management](/sccm/core/get-started/2020/technical-preview-2002#bkmk_bitlocker) <!--5925683-->
-- [Additional improvements to task sequence progress](/sccm/core/get-started/2020/technical-preview-2002#bkmk_tsprogress) <!--5932692-->
-- [Improvements to the ConfigMgr PXE Responder](/sccm/core/get-started/2020/technical-preview-2002#bkmk_pxe) <!--5568051 & 5528656-->
+- [Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager console](/sccm/core/get-started/2020/technical-preview-2003#bkmk_atp) <!--5691658-->
+- [Track configuration item remediations](/sccm/core/get-started/2020/technical-preview-2003#bkmk_track) <!--4261411 in 2002-->
+- [Show boundary groups for devices](/sccm/core/get-started/2020/technical-preview-2003#bkmk_boundary) <!--6521835 in 2002-->
+- [New feedback wizard](/sccm/core/get-started/2020/technical-preview-2003#bkmk_feedback) <!--3180826-->
+- [Improvements to Microsoft Edge Management dashboard](/sccm/core/get-started/2020/technical-preview-2003#bkmk_edge) <!--5907383-->
+- [Improvements to CMPivot](/sccm/core/get-started/2020/technical-preview-2003#bkmk_cmpivot) <!--6518631-->
+- [Query for feedback sent to Microsoft](/sccm/core/get-started/2020/technical-preview-2003#bkmk_smile) <!--6488450-->
+- [New SDK method for task sequence progress](/sccm/core/get-started/2020/technical-preview-2003#bkmk_tsapi) <!--6448458-->
+- [Improvements to OS deployment](/sccm/core/get-started/2020/technical-preview-2003#bkmk_osd) <!--6452769-->
 
-> [!NOTE]  
-> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
+> [!NOTE]
+> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
 
-## Features in recent technical previews
+<!-- temp remove for 2002 CB ## Features in recent technical previews -->
 
 <!-- (explanatory comment)
 This is the full list of new features in the past TP releases since the last CB release.
@@ -143,42 +144,12 @@ Each month, add features from the list above to a new H3 section at the top of t
 When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
 -->
 
-The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1910:
-
-### Technical preview version 2001.2
-
-- [Token based authentication for cloud management gateway](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_cmg) <!--5686290-->
-- [Improvements to orchestration groups](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_orch) <!--3098816-->
-- [New cmdlets for phased deployments](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_pod-psh) <!--6104290-->
-- [Exclude certain subnets for peer content download](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_subnet) <!--3555777-->
-- [Send a smile improvements](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_sendsmile) <!--5891852-->
-- [Improvements to task sequence as a deployment type](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_tsdt) <!--3555953-->
-- [Improvements to Microsoft Edge Management dashboard](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_edge) <!--3871913-->
-- [Improvements to cloud-connected services](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_cloud) <!--4963230, 4963383, 5566763-->
-- [Additional improvement to task sequence progress](/sccm/core/get-started/2020/technical-preview-2001-2#bkmk_tsprogress) <!--2356386, 5932692-->
-
-### Technical preview version 2001
-
-- [Microsoft Edge management dashboard](/sccm/core/get-started/2020/technical-preview-2001#bkmk_edge-dash) <!--3871913-->
-- [Improvements to orchestration groups](/sccm/core/get-started/2020/technical-preview-2001#bkmk_orch) <!--3098816-->
-- [Improvements to Check Readiness task sequence step](/sccm/core/get-started/2020/technical-preview-2001#bkmk_tsready) <!--6005561-->
-- [Integrate Power BI Report Server](/sccm/core/get-started/2020/technical-preview-2001#bkmk_powerbi) <!--3721603-->
-- [OneTrace log groups](/sccm/core/get-started/2020/technical-preview-2001#bkmk_onetrace) <!--5559993-->
-- [Improvements to administration service](/sccm/core/get-started/2020/technical-preview-2001#bkmk_rest) <!--5728365-->
-- [Wake up a device from the central administration site](/sccm/core/get-started/2020/technical-preview-2001#bkmk_wake) <!--6030715-->
-- [Improvements to task sequence progress](/sccm/core/get-started/2020/technical-preview-2001#bkmk_tsprogress) <!--5932692, fka 2356386-->
-
-### Technical preview version 1912
-
-- [Bootstrap a task sequence immediately after client registration](/sccm/core/get-started/2019/technical-preview-1912#bkmk_provisionts) <!--5526972-->
-- [Expand Microsoft Defender Advanced Threat Protection (ATP) onboarding](/sccm/core/get-started/2019/technical-preview-1912#bkmk_atp) <!--5229962-->
-- [New management insight rules from Microsoft Services](/sccm/core/get-started/2019/technical-preview-1912#bkmk_rules) <!--3607758-->
-- [Client log collection](/sccm/core/get-started/2019/technical-preview-1912#client-log-collection) <!--4226618-->
-- [Improvements to CMPivot](/sccm/core/get-started/2019/technical-preview-1912#improvements-to-cmpivot) <!--5870934-->
-- [Improvements to OS deployment](/sccm/core/get-started/2019/technical-preview-1912#bkmk_osd) <!--5842295,5573175,5690481-->
+<!--temp remove for 2002 CB  The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1910: -->
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions#supported-versions).
+
+<!-- ### Technical preview version 2003 -->
 
 ## Features in previous technical previews
 
@@ -193,12 +164,10 @@ The following features were released with previous versions of the Configuration
 | Feature        | Technical preview version |
 |----------------|---------------------------|
 | Attach files to feedback <!--3556011--> | [Tech preview 1910](/sccm/core/get-started/2019/technical-preview-1910#attach-files-to-feedback) |
-| Orchestration Groups <!--3098816--> | [Tech preview 1909](/sccm/core/get-started/2019/technical-preview-1909#bkmk_OGs) |
 | Improvements to multicast-enabled distribution points <!--3785535--> | [Tech preview 1908.2](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_multicast) |
 | Phased deployment templates <!--4961086--> | [Tech preview 1908](/sccm/core/get-started/2019/technical-preview-1908#phased-deployment-templates) |
 | Remote control anywhere using cloud management gateway <!--4575930--> | [Tech Preview 1906](/sccm/core/get-started/2019/technical-preview-1906#remote-control-anywhere-using-cloud-management-gateway) |
 | Improvements to Community Hub <!--3555935--> | [Tech Preview 1906](/sccm/core/get-started/2019/technical-preview-1906#bkmk_hub) |
-| Task sequence as an app model deployment type <!--3555953--> | [Tech Preview 1905](/sccm/core/get-started/2019/technical-preview-1905#bkmk_tsdt) |
 | Improvements to Community Hub <!--4224401--> | [Tech Preview 1905](/sccm/core/get-started/2019/technical-preview-1905#bkmk_hub) |
 | Community Hub and GitHub <!--3555935--> | [Tech Preview 1904](/sccm/core/get-started/2019/technical-preview-1904#community-hub-and-github) |
 | Cloud services cost estimator <!--3555774--> | [Tech Preview 1903](/sccm/core/get-started/2019/technical-preview-1903#bkmk_cmg) |

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Get details about changes and new capabilities introduced in version 1710 of Configuration Manager."
 ms.date: 01/08/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: mestew
@@ -160,7 +160,7 @@ These changes apply to new VPN profiles.
 
 To minimize compatibility risk, existing VPN profiles are unchanged.  When you edit an existing profile, the settings appear as they did when the profile was created.  
 
-For more information, see [VPN Profiles on mobile devices](../../../mdm/deploy-use/create-vpn-profiles.md).
+For more information, see [VPN Profiles on mobile devices](/configmgr/protect/deploy-use/vpn-profiles).
 
 ### Limited support for Cryptography: Next Generation (CNG) certificates <!-- 1356191 -->
 

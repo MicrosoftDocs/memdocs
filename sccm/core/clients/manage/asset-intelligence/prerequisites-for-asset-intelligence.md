@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Get the prerequisites for Asset Intelligence in Configuration Manager."
 ms.date: 02/22/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 23ab4f94-7bfe-436e-8a6a-029409a2730c
 author: mestew

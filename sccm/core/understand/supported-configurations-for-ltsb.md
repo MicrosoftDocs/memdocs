@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Understand what operating systems and dependent products work with the Long-Term Servicing Branch of System Center Configuration Manager."
 ms.date: 05/10/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
@@ -44,16 +44,11 @@ The LTSB supports the use of the following Windows computer operating systems as
 - Windows Server 2016
 - Windows Server 2012 R2 (x64): Standard, Datacenter
 - Windows Server 2012 (x64): Standard, Datacenter
-- Windows Server 2008 R2 with SP1 (x64): Standard, Enterprise, Datacenter
-- Windows Server 2008 with SP2 (x86, x64): Standard, Enterprise, Datacenter  *(See note 1)*
 - Windows 10 Enterprise 2015 LTSB (x86, x64)
 - Windows 10 Enterprise 2016 LTSB (x86, x64)
 - Windows 8.1 (x86, x64): Professional, Enterprise
-- Windows 7 with SP1 (x86, x64): Professional, Enterprise, Ultimate
 - The Server Core installation of Windows Server 2012
-- The Server Core installation of Windows Server 2012 R2    
-
-*Note 1*: This operating system is not supported for site servers or site system roles with the exception of the distribution point and pull-distribution point. You can continue to use this operating system as a distribution point until deprecation of this support is announced, or this operating system's extended support period expires. For more information, see [Installation of Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095).
+- The Server Core installation of Windows Server 2012 R2
 
 ## Client management
 The following sections identify the client operating systems that you can manage with the LTSB. The LTSB does not support the addition of new operating systems as supported clients.
@@ -67,17 +62,11 @@ You can use the LTSB to manage the following Windows computer operating systems 
 - Windows Server 2012 (x64): Standard, Datacenter (Note 1)
 - Windows Storage Server 2012 R2 (x64)
 - Windows Storage Server 2012 (x64)
-- Windows Server 2008 R2 with SP1 (x64): Standard, Enterprise, Datacenter (Note 1)
-- Windows Storage Server 2008 R2 (x86, x64): Workgroup, Standard, Enterprise
-- Windows Server 2008 with SP2 (x86, x64): Standard, Enterprise, Datacenter (Note 1)
 - Windows 10 Enterprise 2015 LTSB (x86, x64)
 - Windows 10 Enterprise 2016 LTSB (x86, x64)
 - Windows 8.1 (x86, x64): Professional, Enterprise
-- Windows 7 with SP1 (x86, x64): Professional, Enterprise, Ultimate
 - The Server Core installation of Windows Server 2012 R2 (x64) (Note 2)
 - The Server Core installation of Windows Server 2012 (x64) (Note 2)
-- The Server Core installation of Windows Server 2008 R2 SP1 (x64)
-- The Server Core installation of Windows Server 2008 SP2 (x86, x64)
 
 **(Note 1)** Datacenter releases are supported but not certified for Configuration Manager.  
 **(Note 2)** To support client push installation, the computer that runs this operating system version must run the File Server role service for the File and Storage Services server role. For information about installing Windows features on a Server Core computer, see [Install Server Roles and Features on a Server Core Server](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx) in the Windows Server 2012 TechNet library.
@@ -286,12 +275,9 @@ The LTSB supports the following operating systems to run the Configuration Manag
 - Windows Server 2016
 - Windows Server 2012 R2 (x64): Standard, Datacenter
 - Windows Server 2012 (x64): Standard, Datacenter
-- Windows Server 2008 R2 with SP1 (x64): Standard, Enterprise, Datacenter
-- Windows Server 2008 with SP2 (x86, x64): Standard, Enterprise, Datacenter
 - Windows 10 Enterprise 2016 LTSB (x86, x64)
 - Windows 10 Enterprise 2015 LTSB (x86, x64)
 - Windows 8.1 (x86, x64): Professional, Enterprise
-- Windows 7 with SP1 (x86, x64): Professional, Enterprise, Ultimate
 
 
 ## SQL Server versions supported for the site database and reporting point

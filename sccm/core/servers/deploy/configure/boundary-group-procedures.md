@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Configure boundary groups to logically organize related network locations called boundaries.
 ms.date: 11/27/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: a1fe22d0-4695-4de0-8bf0-e3475b03cf0e
 author: mestew

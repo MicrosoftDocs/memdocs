@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn how to run Configuration Manager Setup at a command prompt for a variety of site installations."
 ms.date: 03/27/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
 author: mestew

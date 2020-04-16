@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Use migration jobs to configure data that you want to migrate to your Configuration Manager current branch environment."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: a70bfbd4-757a-4468-9312-1c3b373ef9fc
 author: aczechowski
@@ -268,7 +268,7 @@ Use migration jobs to configure the specific data that you want to migrate to yo
 ### Collection dependencies and include objects  
  When you specify a collection to migrate in the Create Migration Job wizard, any dependent collections are automatically selected to be included with the job. This behavior ensures that all necessary resources are available after migration.  
 
- For example: You select a collection for devices that run Windows 7 and is named **Win_7**. This collection is limited to a collection that has all your client operating systems and is named **All_Clients**. The collection **All_Clients** will be automatically selected for migration.  
+ For example: You select a collection for devices that run Windows 10 and is named **Win_10**. This collection is limited to a collection that has all your client operating systems and is named **All_Clients**. The collection **All_Clients** will be automatically selected for migration.  
 
 ### Collection limiting  
  With Configuration Manager current branch, collections are global data and are evaluated at each site in the hierarchy. Therefore, plan how to limit the scope of a collection after it is migrated. During migration, you can identify a collection from the destination hierarchy to use to limit the scope of the collection that you are migrating so that the migrated collection does not include unanticipated members.  

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: How to remove Desktop Analytics from your Azure account
 ms.date: 10/17/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-analytics
 ms.topic: conceptual
 ms.assetid: 6e7d2850-b0af-497e-bbc1-bfc2a7420a7a
 author: aczechowski

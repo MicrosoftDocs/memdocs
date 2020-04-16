@@ -2,16 +2,14 @@
 title: Configuration Manager console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 11/29/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # How to use the Configuration Manager console
@@ -133,12 +131,9 @@ Starting in version 1902, you can view the most recent connections for the Confi
 ### <a name="bkmk_connections-prereq"></a> Prerequisites to view connected consoles
 
 - Your account needs the **Read** permission on the **SMS_Site** object
-- Install IIS on the SMS Provider server <!---SCCMDocs-pr issue 1326-->
-- Enable the SMS Provider to use a certificate.<!--SCCMDocs-pr issue 3135--> Use one of the following options:  
 
-    - Enable [Enhanced HTTP](/configmgr/core/plan-design/hierarchy/enhanced-http) (recommended)
-    - Manually bind a PKI-based certificate to port 443 in IIS on the server that hosts the SMS Provider role  
-- The [Administration Service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service) must be enabled for the **Last Console Heartbeat** to function (introduced in version 1910).
+- Configure the administration service REST API. For more information, see [What is the administration service?](/configmgr/develop/adminservice/overview)
+
 ### View connected consoles
 
 1. In the Configuration Manager console, go to the **Administration** workspace.  
@@ -153,32 +148,30 @@ Starting in version 1902, you can view the most recent connections for the Confi
     - Console version
     - Last connected time: When the user last *opened* the console
     - Starting in version 1910, the **Last Console Heartbeat** column has replaced the **Last Connected Time** column. <!--4923997-->
-       - The [Administration Service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service) must be enabled for the **Last Console Heartbeat** to function.
        - An open console in the foreground sends a heartbeat every 10 minutes.
 
-![View Configuration Manager console connections](media/console-connections.png) 
-## <a name="bkmk_message"></a> Message administrators from Console Connections
+![View Configuration Manager console connections](media/console-connections.png)
+
+## <a name="bkmk_message"></a> Start Microsoft Teams Chat from Console Connections
 <!--4923997-->
 *(Introduced in version 1910)*
 
-Starting in version 1910, you can message other Configuration Manager administrators from the **Console Connections** node. When you choose to message an administrator, Microsoft Teams is launched and a chat is opened with the user.
+Starting in version 1910, you can message other Configuration Manager administrators from the **Console Connections** node using Microsoft Teams. When you choose to **Start Microsoft Teams Chat** with an administrator, Microsoft Teams is launched and a chat is opened with the user.
 
-### Prerequisites for messaging administrators
+### Prerequisites
 
-- For messaging administrators, the account you want to message needs to have been discovered with [Azure AD or AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
+- For starting a chat with an administrator, the account you want to chat with needs to have been discovered with [Azure AD or AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
 - Microsoft Teams installed on the device from which you run the console.
 note
 - All [prerequisites to view connected consoles](#bkmk_connections-prereq)
 
-### Message administrators
+### Start Microsoft Teams Chat
 
 1. Go to **Administration** > **Security** > **Console Connections**.
-1. Right-click on a user's console connection and select **Message Administrator**.
-    - If the User Principal Name isn't found for the selected administrator,  **Message Administrator** is grayed out.
+1. Right-click on a user's console connection and select **Start Microsoft Teams Chat**.
+    - If the User Principal Name isn't found for the selected administrator, **Start Microsoft Teams Chat** is grayed out.
     - An error message, including a download link, appears if Microsoft Teams isn't installed on the device from which you run the console.
     - If Microsoft Teams is installed on the device from which you run the console, it will open a chat with the user.
-
-![Message administrators with Microsoft Teams screenshot](media/4923997-message-administrator.png)
 
 ### Known issues
 
@@ -269,6 +262,25 @@ The Configuration Manager console has the following command-line options:
 ## Tips
 
 ### General
+
+#### <a name="bkmk_search"></a> Improvements to console search
+<!--4640570-->
+*(Introduced in version 1910)*
+
+- You can use the **All Subfolders** search option from the **Driver Packages** and **Queries** nodes.<!--2841181,5424892--> Starting in version 2002, also use this option from the **Configuration Items** and **Configuration Baselines** nodes.<!--5891241-->
+
+- When a search returns more than 1,000 results, select the **OK** button on the notice bar to view more results.<!--4640570-->
+
+    ![Screenshot of notice bar for too many search results](./media/4640570-search-too-many-results.png)
+
+    > [!TIP]
+    > The default limit on search results is 1,000. You can change this default value. In the Configuration Manager console, go to the **Search** tab of the ribbon. In the **Options** group, select **Search Settings**. Change the **Search Results** value. A larger number of search results might take longer to display.
+    >
+    > By default, the upper maximum limit is 100,000. To change this limit, set the DWORD value **QueryResultCountMaximum** in the following registry key:
+    >
+    > `HKEY_CURRENT_USER\Software\Microsoft\ConfigMgr10\AdminUI`
+    >
+    > The in-console setting corresponds to the **QueryResultCountLimit** value in the same key. An administrator can configure these values in the HKLM hive for all users of the device. The HKCU value overrides the HKLM setting.
 
 #### Role based administration for folders
 <!--3600867-->
@@ -476,8 +488,7 @@ Copy information from the **Asset Details** pane for the following monitoring no
 ### Administration workspace
 
 <!--4223683-->
-Starting in version 1906, you can enable some nodes under the **Security** node to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI. For more information, see [Administration service](/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service).
-
+Starting in version 1906, you can enable some nodes under the **Security** node to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI. For more information, see [Set up the administration service](/configmgr/develop/adminservice/set-up#bkmk_console).
 
 ## Next steps
 

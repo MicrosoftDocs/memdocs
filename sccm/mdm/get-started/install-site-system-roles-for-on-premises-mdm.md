@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Install the required site system roles for on-premises mobile device management (MDM) in Configuration Manager.
 ms.date: 01/09/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-hybrid
+ms.technology: configmgr-mdm
 ms.topic: conceptual
 ms.assetid: c3cf9f64-c2b9-4ace-9527-2aba6d4eef04
 author: aczechowski

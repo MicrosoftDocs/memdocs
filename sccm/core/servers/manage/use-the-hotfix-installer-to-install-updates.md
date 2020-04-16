@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Find out when and how to install updates via the Hotfix Installer for Configuration Manager."
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: mestew
@@ -138,7 +138,7 @@ When you install the update bundle on a site server, you can choose to automatic
 > When you choose to automatically update the site database, the process updates a database regardless whether the database is located on the site server or on a remote computer.  
 
 > [!IMPORTANT]  
-> Before you update the site database, create a backup of the site database. You cannot uninstall an update to the site database. For information about how to create a backup for Configuration Manager, see [Backup and recovery for Configuration Manager](../../../protect/understand/backup-and-recovery.md).  
+> Before you update the site database, create a backup of the site database. You cannot uninstall an update to the site database. For information about how to create a backup for Configuration Manager, see [Backup and recovery for Configuration Manager](/sccm/core/servers/manage/backup-and-recovery).  
 
 **Manual Update of the Site Database**  
 

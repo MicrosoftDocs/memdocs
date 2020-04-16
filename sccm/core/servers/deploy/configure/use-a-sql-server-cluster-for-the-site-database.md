@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use a SQL Server cluster to host the Configuration Manager site database
 ms.date: 03/06/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski

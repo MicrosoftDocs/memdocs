@@ -2,7 +2,7 @@
 author: aczechowski
 ms.author: aaroncz
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: include
 ms.date: 10/17/2019
 

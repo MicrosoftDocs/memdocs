@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use these steps to set up a cloud distribution point in Configuration Manager.
 ms.date: 09/06/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski

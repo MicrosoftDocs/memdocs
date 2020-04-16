@@ -2,7 +2,7 @@
 title: Configure pre-cache content
 titleSuffix: Configuration Manager
 description: Learn how clients can download OS deployment content before a user installs the task sequence.
-ms.date: 11/29/2019
+ms.date: 02/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 9d1e8252-99e3-48aa-bfa5-0cf4cd6637b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Configure pre-cache content for task sequences
@@ -62,7 +60,10 @@ Create [OS images](/configmgr/osd/get-started/manage-operating-system-images) fo
 
 Create [driver packages](/configmgr/osd/get-started/manage-drivers#BKMK_ManagingDriverPackages) for specific hardware models. Specify the **Model** on the **General** tab of its properties.
 
-To determine which driver package it downloads during pre-caching, the client evaluates the model against the **Name** property of the **Win32_ComputerSystemProduct** WMI class.  
+To determine which driver package it downloads during pre-caching, the client evaluates the model against the **Name** property of the **Win32_ComputerSystemProduct** WMI class.
+
+> [!TIP]
+> The actual query uses a `LIKE` statement with wildcards: `select * from win32_computersystemproduct where name like "%yourstring%"`. For example, if you specify `Surface` as the model, the query matches all models that include that string.<!-- 6315551 -->
 
 #### Package
 

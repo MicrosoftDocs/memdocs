@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager Technical Preview version 1803.
 ms.date: 03/27/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 56dc4b07-5aa4-43e2-9be8-d26ae5ff5613
 author: aczechowski
@@ -140,7 +140,7 @@ Selecting **Enable third party software updates** in client settings does the fo
 As a result of your [user voice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/20234866-allow-us-to-copy-information-out-of-the-asset-det) You can now enable copy/paste functionality in the asset details pane in deployment and distribution status monitoring views.  <!--1357552-->
 
 ## SCAP Extensions
-The pre-release version of SCAP Extensions is available in the Cd.latest folder under SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi. This pre-release version of the SCAP extensions can be installed on any currently supported versions of Configuration Manager current branch and LTSB 1606. For more information, see [About the Security Content Automation Protocol (SCAP) extensions](/sccm/compliance/plan-design/scap/about-scap).
+The pre-release version of SCAP Extensions is available in the Cd.latest folder under SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi. This pre-release version of the SCAP extensions can be installed on any currently supported versions of Configuration Manager current branch and LTSB 1606.
 
 
 

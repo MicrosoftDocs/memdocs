@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Procedure to create the report in Advanced Exercise 1.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
 
 

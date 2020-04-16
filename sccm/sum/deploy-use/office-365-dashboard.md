@@ -5,7 +5,7 @@ description: "Review Office 365 client information from the Office 365 Client Ma
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 02/14/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -135,6 +135,12 @@ To help you determine which devices are ready to upgrade to Office 365 ProPlus, 
 - Macro readiness
 - Macro advisories
 
+The following video is a session from Ignite 2019, which includes more information:
+
+> [!VIDEO https://medius.studios.ms/Embed/Video-nc/IG19-BRK3090]
+
+[Best practices for compatibility assessment and Microsoft Office 365 ProPlus upgrades using Office Readiness in Configuration Manager](https://myignite.techcommunity.microsoft.com/sessions/79338?source=sessions)
+
 ### Using the Office 365 ProPlus upgrade readiness dashboard
 
 After verifying you have the [prerequisites](#prerequisites), use the following instructions to use the dashboard:
@@ -229,6 +235,9 @@ This tile summarizes devices that have issues with add-ins, macros, or both.
 - Runtime errors: An error happened while the macro was running. These errors can be dependent on the inputs so may not always occur.
 - Compile errors: The macro didn't compile correctly so it won't attempt to run.
 - Multiple issues: The macro has more than one of the above issues.
+
+> [!NOTE]
+> Macro inventory is populated by data from the Readiness Toolkit for Office and recently used data files. Macro health is populated by health data. Due to the different data sources, it's possible for the macro health status to be **Needs review** when the macro inventory is **Not scanned**. <!--5922845-->
 
 ### Known issues
 

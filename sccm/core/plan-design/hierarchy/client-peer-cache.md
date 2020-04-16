@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use client peer cache for source locations when deploying content with Configuration Manager.
 ms.date: 09/19/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
@@ -65,7 +65,7 @@ Starting in version 1806, boundary groups include additional settings to give yo
 > [!NOTE]  
 > If the client falls back to a neighbor boundary group for content, the management point doesn't add the peer cache sources from the neighbor boundary group to the list of potential content source locations.  
 
-Choose only clients best suited as peer cache sources. Evaluate client suitability based on attributes such as chassis type, disk space, and network connectivity. For more information that can help you select the best clients to use for peer cache, see [this blog by a Microsoft consultant](https://blogs.technet.microsoft.com/askpfeplat/2018/11/21/configuration-manager-peer-cache-custom-reporting-examples/).
+Choose only clients best suited as peer cache sources. Evaluate client suitability based on attributes such as chassis type, disk space, and network connectivity. For more information that can help you select the best clients to use for peer cache, see [this blog by a Microsoft consultant](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/configuration-manager-peer-cache-custom-reporting-examples/ba-p/570801).
 
 
 ### Limited access to a peer cache source  

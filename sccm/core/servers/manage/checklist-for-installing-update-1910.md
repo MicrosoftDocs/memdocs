@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1910.
 ms.date: 12/20/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 9afb4452-9e58-40eb-bfd8-cbf9042a2790
 author: mestew

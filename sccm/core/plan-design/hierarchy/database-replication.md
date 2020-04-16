@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn how Configuration Manager database replication uses SQL Server to transfer data in the hierarchy.
 ms.date: 08/09/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 8b495b02-c966-4eb3-92b9-52ebbf5c38ae
 author: mestew
@@ -139,7 +139,7 @@ For example, you use a Configuration Manager console connected to the CAS. You r
 If a replication link has a type of data enabled for distributed views, the child primary site doesn't replicate that data to the CAS. When you turn off distributed views for a type of data, the child primary site resumes normal data replication to the CAS. Before this data is available at the CAS, the replication groups for this data must reinitialize between the primary site and the CAS. After you uninstall a primary site that has distributed views turned on, the CAS must complete reinitialization of its data before you can access data that you enabled for distributed views on the CAS.  
 
 > [!IMPORTANT]  
-> When you use distributed views on any replication link in the site hierarchy, before you uninstall any primary site, turn off distributed views for all replication links. For more information, see [Uninstall a primary site that is configured with distributed views](/sccm/core/servers/deploy/install/uninstall-sites-and-hierarchies#BKMK_UninstallPrimaryDistViews).  
+> When you use distributed views on any replication link in the site hierarchy, before you uninstall any primary site, turn off distributed views for all replication links. For more information, see [Uninstall a primary site that uses distributed views](/sccm/core/servers/deploy/install/uninstall-sites-and-hierarchies#bkmk_distviews).  
 
 ### Prerequisites and limitations for distributed views  
 

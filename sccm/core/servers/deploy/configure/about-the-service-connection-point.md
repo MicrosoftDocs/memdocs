@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about this Configuration Manager site system role, and understand and plan for its range of uses.
 ms.date: 01/08/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: bc2282d5-0571-465b-9528-a555855eaacd
 author: mestew

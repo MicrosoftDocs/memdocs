@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Learn about this tool that enables you to connect to the Configuration Manager cloud service to manually upload usage information."
 ms.date: 09/06/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew

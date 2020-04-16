@@ -2,12 +2,10 @@
 title: Set up BitLocker portals
 titleSuffix: Configuration Manager
 description: Install the BitLocker management components for the self-service portal, and the administration and monitoring website
-ms.date: 11/29/2019
+ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-
-
 ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
@@ -28,7 +26,7 @@ To use the following BitLocker management components in Configuration Manager, y
 You can install the portals on an existing site server with IIS, or use a standalone web server to host them.
 
 > [!NOTE]
-> In version 1910, only install the self-service portal and the administration and monitoring website with a primary site database. In a hierarchy, install these websites for each primary site.
+> Only install the self-service portal and the administration and monitoring website with a primary site database. In a hierarchy, install these websites for each primary site.
 
 Before you start, confirm the [prerequisites](/configmgr/protect/plan-design/bitlocker-management#prerequisites) for these components.
 
@@ -53,14 +51,22 @@ This process uses a PowerShell script, MBAMWebSiteInstaller.ps1, to install thes
 
 - `-MbamReportUsersGroupName <DomainUserGroup>`: For example, `contoso\BitLocker report users`. A domain user group whose members have read-only access to the **Reports** area of the administration and monitoring website.
 
+    > [!NOTE]
+    > The installer script doesn't create the domain user groups that you specify in the **-HelpdeskUsersGroupName**, **-HelpdeskAdminsGroupName**, and **-MbamReportUsersGroupName** parameters. Before you run the script, make sure to create these groups.
+    >
+    > When you specify the **-HelpdeskUsersGroupName**, **-HelpdeskAdminsGroupName**, and **-MbamReportUsersGroupName** parameters, make sure to specify both the domain name and the group name. Use the format `"domain\user_group"`. Don't exclude the domain name. If the domain name or group name contains spaces or special characters, enclose the parameter in quotation marks (`"`).
+
 - `-SiteInstall Both`: Specify which of the components to install. Valid options include:
   - `Both`: Install both components
   - `HelpDesk`: Install only the administration and monitoring website
   - `SSP`: Install only the self-service portal
 
-- `IISWebSite`: The website where the script installs the MBAM web applications. By default, it uses the IIS default website.
+- `-IISWebSite`: The website where the script installs the MBAM web applications. By default, it uses the IIS default website. Create the custom website before using this parameter.
 
-- `InstallDirectory`: The path where the script installs the web application files. By default, this path is `C:\inetpub`.
+- `-InstallDirectory`: The path where the script installs the web application files. By default, this path is `C:\inetpub`. Create the custom directory before using this parameter.
+
+- `-Uninstall`: Uninstalls the BitLocker Management Help Desk/Self-Service web portal sites on a web server where they have been previously installed.
+
 
 ## Run the script
 

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 description: "Discover how to create and import queries in Configuration Manager. Includes example queries and tips."
 ms.date: 05/08/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
@@ -89,18 +89,15 @@ This section contains example WQL queries that you can use in your hierarchy or 
 > [!TIP]  
 > Use the wildcard character `%` to signify any string of characters. For example, `%Visio%` returns Microsoft Office Visio 2010.  
 
-### Computers that run Windows 7
+### Computers that run Windows 10
 
 Use the following query to return the NetBIOS name and operating system version of all computers that run Windows 7.  
-
-> [!TIP]  
-> To return computers that run Windows Server 2008 R2, change `%Workstation 6.1%` to `%Server 6.1%`.  
 
 ``` WQL
 select SMS_R_System.NetbiosName,  
 SMS_R_System.OperatingSystemNameandVersion from
 SMS_R_System where
-SMS_R_System.OperatingSystemNameandVersion like "%Workstation 6.1%"  
+SMS_R_System.OperatingSystemNameandVersion like "%Workstation 10%"  
 ```  
 
 ### Computers with a specific software package installed  

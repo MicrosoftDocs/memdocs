@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use distribution points to host the content that you deploy to devices and users.
 ms.date: 12/03/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
@@ -328,12 +328,14 @@ The following settings are on the **Communication** page of the Create Site Syst
 
 - **Allow clients to connect anonymously**: This setting specifies whether the distribution point allows anonymous connections from Configuration Manager clients to the content library.  
 
+<!-- I don't think this applies any more, but commenting instead of removing just in case.
     > [!Important]  
     > If you don't use this setting, apply the changes described in Microsoft Knowledge Base article [2619572](https://support.microsoft.com/help/2619572/) on Windows 7 clients. Otherwise repair of Windows Installer applications can fail.  
     >
     > When you deploy a Windows Installer application, the Configuration Manager client downloads the file to its local cache. The client eventually removes the files after the installation finishes. The Configuration Manager client updates the Windows Installer source list for the application. It sets the content path to the content library on associated distribution points. Later, if you try to repair the application on the device, MSIExec attempts to access the content path by using an anonymous user.  
     >
     > After you install the update on clients and modify the documented registry key, MSIExec accesses the content path by using the signed-in user account.  
+ -->
 
 - **Create a self-signed certificate or import a PKI client certificate**: Configuration Manager uses this certificate for the following purposes:  
 

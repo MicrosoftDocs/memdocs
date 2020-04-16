@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Modify a Configuration Manager report and then run the modified report.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
 
 

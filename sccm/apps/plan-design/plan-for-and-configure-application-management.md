@@ -93,7 +93,7 @@ For more information about how to install distribution points and manage content
 
 To use the reports in Configuration Manager for application management, first install and configure a reporting services point.
 
-For more information, see [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting).  
+For more information, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
 
 
 ### Client settings

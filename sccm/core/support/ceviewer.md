@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Use the Collection Evaluation Viewer to view and troubleshoot the collection evaluation process in Configuration Manager.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: caad2d93-087c-4dc0-a2a7-6a2fd808b4c8
 author: mestew

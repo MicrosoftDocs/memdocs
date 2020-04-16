@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Maintain visibility of Configuration Manager client health from the Intune on Azure portal
 ms.date: 01/14/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology: configmgr-comanage
 ms.topic: conceptual
 ms.assetid: 5b243aac-8a1a-4f14-ba3f-5446bb483e92
 author: aczechowski

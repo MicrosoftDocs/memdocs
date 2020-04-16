@@ -4,10 +4,8 @@ titleSuffix: Configuration Manager
 description: Describes common issues when enabling Transport Layer Security (TLS) 1.2
 ms.date: 12/13/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
-
-
 ms.assetid: 15083f28-8ff2-4e23-9f5e-b5dbd0859839
 author: mestew
 ms.author: mstewart
@@ -22,7 +20,6 @@ This article provides advice for common issues that occur when you enable TLS 1.
 
 The following client platforms are supported by Configuration Manager but aren't supported in a TLS 1.2 environment:
 
-- Windows Server 2008
 - Windows CE
 - Apple OS X
 - Windows 10 devices managed with on-premises MDM

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Install the Configuration Manager console to connect to a central administration site or primary site.
 ms.date: 04/04/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: d39c201f-d364-4e7b-bde4-faa76d747f33
 author: mestew
