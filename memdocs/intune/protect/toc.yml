@@ -60,7 +60,7 @@
       href: actions-for-noncompliance.md
     - name: Monitor device compliance
       href: compliance-policy-monitor.md
-  - Manage endpoint security
+  - name: Manage endpoint security
     items:
     - name: Endpoint security
       href: endpoint-security.md
