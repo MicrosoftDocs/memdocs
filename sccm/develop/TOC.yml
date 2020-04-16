@@ -364,6 +364,8 @@
   items:
   - name: Create an application with the script deployment type
     href: apps/how-to-create-an-application-with-the-script-deployment-type.md
+  - name: Application approval process
+    href: apps/application-approval-process.md
   - name: Application management extension
     items:
     - name: Deployment type extension versioning
