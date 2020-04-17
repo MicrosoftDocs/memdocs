@@ -90,6 +90,9 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
   - Must meet the prerequisites for installing a primary site. For example, .NET Framework, Remote Differential Compression, and the Windows ADK. For the complete list, see [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).<!-- SCCMDocs issue 765 -->  
 
+    > [!NOTE]
+    > Make sure to install the SQL Server Native Client. If you don't install it, the prerequisite checker during Configuration Manager setup will report an error about missing SQL Server permissions.<!-- SCCMDocs#2290 -->
+
   - Must have its computer account in the local Administrators group on the site server in active mode.<!--516036-->
 
   - Must install using source files that match the version of the site server in active mode.  
