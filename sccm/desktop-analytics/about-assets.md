@@ -26,9 +26,9 @@ In the service portal, select **Assets** in the Desktop Analytics menu.
 The **Devices** tab displays key information about all devices in your organization that you enroll to Desktop Analytics. You can sort on any column or filter for particular values.
 
 > [!NOTE]  
-> If the dashboard isn't reporting the number of devices you expect to see for your environment, see [Desktop Analytics troubleshooting](/sccm/desktop-analytics/troubleshooting).  
+> If the dashboard isn't reporting the number of devices you expect to see for your environment, see [Desktop Analytics troubleshooting](troubleshooting.md).  
 
-In a deployment plan, there's more detail about devices. For more information, see [Plan assets](/sccm/desktop-analytics/about-deployment-plans#plan-assets)
+In a deployment plan, there's more detail about devices. For more information, see [Plan assets](about-deployment-plans.md#plan-assets)
 
 ## Apps
 
@@ -65,7 +65,7 @@ Identifying **Importance** and **Upgrade Decision** is critical for all notewort
 >    - For store apps, filter **Type** as **Modern**
 >    - For system apps, filter **Category** as **Background process** or **Windows component**
 
-In a deployment plan, you can also set the **Upgrade decision**. For more information, see [Plan assets](/sccm/desktop-analytics/about-deployment-plans#plan-assets)
+In a deployment plan, you can also set the **Upgrade decision**. For more information, see [Plan assets](about-deployment-plans.md#plan-assets)
 
 ### Usage
 
@@ -79,8 +79,8 @@ In a deployment plan, you can also set the **Upgrade decision**. For more inform
 
 ## Next steps
 
-- [Learn about Desktop Analytics deployment plans](/sccm/desktop-analytics/about-deployment-plans)  
+- [Learn about Desktop Analytics deployment plans](about-deployment-plans.md)  
 
-- [Learn about security and feature updates](/sccm/desktop-analytics/about-updates)  
+- [Learn about security and feature updates](about-updates.md)  
 
-- [Compatibility assessment in Desktop Analytics](/sccm/desktop-analytics/compat-assessment)  
+- [Compatibility assessment in Desktop Analytics](compat-assessment.md)  

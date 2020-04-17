@@ -57,7 +57,7 @@ The **Adoption Status** is based on information from commercial devices that sha
 
 Desktop Analytics provides the adoption status for each version of an asset found in commercial devices. This status doesn't include data from consumer devices or devices that don't share data. The status may not be representative of the adoption rate across all Windows 10 devices.
 
-For more information, see [Compatibility assessment](/sccm/desktop-analytics/compat-assessment).
+For more information, see [Compatibility assessment](compat-assessment.md).
 
 ### What assets get the *Ready for Windows* status in Desktop Analytics? 
 
@@ -69,7 +69,7 @@ Assets have the *Ready for Windows* status in Desktop analytics if:
 
 ### What additional insights do I get in Desktop Analytics?
 
-Desktop Analytics provides an inventory of the [devices and their installed apps](/sccm/desktop-analytics/about-assets), as well as [advanced insights](/sccm/desktop-analytics/compat-assessment#advanced-insights) for line-of-business apps. 
+Desktop Analytics provides an inventory of the [devices and their installed apps](about-assets.md), as well as [advanced insights](compat-assessment.md#advanced-insights) for line-of-business apps. 
 
 ## Software providers
 

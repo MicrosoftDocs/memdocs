@@ -38,7 +38,7 @@ As part of your deployment plan, you do the following actions:
 
 - Decide how to fix issues with apps based on recommendations from Desktop Analytics  
 
-By default, Desktop Analytics refreshes deployment plan data daily. Any changes you make within a deployment plan, such as assigning importance to an app or choosing a device to include in a pilot, takes up to 24 hours to process. To speed up this process, request an on-demand data refresh. For more information, see [Desktop Analytics FAQ](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
+By default, Desktop Analytics refreshes deployment plan data daily. Any changes you make within a deployment plan, such as assigning importance to an app or choosing a device to include in a pilot, takes up to 24 hours to process. To speed up this process, request an on-demand data refresh. For more information, see [Desktop Analytics FAQ](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
 
 After connecting Desktop Analytics to Configuration Manager, select your collections in the deployment plans. This integration then lets you deploy Windows to a collection based on the Desktop Analytics data.
 
@@ -57,7 +57,7 @@ The following readiness rules are available in deployment plans:
 
 <!-- 4670224 -->
 
-While the [Assets](/sccm/desktop-analytics/about-assets) area also shows devices and apps, the **Plan assets** area under a specific deployment plan includes additional information.
+While the [Assets](about-assets.md) area also shows devices and apps, the **Plan assets** area under a specific deployment plan includes additional information.
 
 ### Devices
 
@@ -88,14 +88,14 @@ A **Blocked** Windows upgrade decision can be caused by the following reasons:
 
 ### Apps
 
-Set the **Upgrade decision** and the **Importance** for this app in this deployment plan. For more information, see [How to create deployment plans](/sccm/desktop-analytics/create-deployment-plans).
+Set the **Upgrade decision** and the **Importance** for this app in this deployment plan. For more information, see [How to create deployment plans](create-deployment-plans.md).
 
-In the details of the app, you can also see the following information: Recommendations, Compatibility risk factors, and Microsoft known issues. Use this information to help set the **Upgrade decision**. For more information, see [Compatibility assessment](/sccm/desktop-analytics/compat-assessment).
+In the details of the app, you can also see the following information: Recommendations, Compatibility risk factors, and Microsoft known issues. Use this information to help set the **Upgrade decision**. For more information, see [Compatibility assessment](compat-assessment.md).
 
-The apps that Desktop Analytics shows as *noteworthy* are based on the low install count threshold for the readiness rules of the deployment plan. For more information, see [Readiness rules](/sccm/desktop-analytics/create-deployment-plans#readiness-rules).
+The apps that Desktop Analytics shows as *noteworthy* are based on the low install count threshold for the readiness rules of the deployment plan. For more information, see [Readiness rules](create-deployment-plans.md#readiness-rules).
 
    > [!Tip]
-   > For more information about the "Not important" app category, see [Automatic upgrade decision of system and store apps](/sccm/desktop-analytics/about-assets#bkmk_plan-autoapp). <!-- 3587232 -->
+   > For more information about the "Not important" app category, see [Automatic upgrade decision of system and store apps](about-assets.md#bkmk_plan-autoapp). <!-- 3587232 -->
 
 
 ### Drivers
@@ -126,8 +126,8 @@ After creating a deployment plan, use Configuration Manager to deploy the produc
 
 ## Next steps
 
-- [Learn about Desktop Analytics assets](/sccm/desktop-analytics/about-assets): devices, drivers, and apps  
+- [Learn about Desktop Analytics assets](about-assets.md): devices, drivers, and apps  
 
-- [Learn about security and feature updates](/sccm/desktop-analytics/about-updates)  
+- [Learn about security and feature updates](about-updates.md)  
 
-- [Create a deployment plan](/sccm/desktop-analytics/create-deployment-plans)  
+- [Create a deployment plan](create-deployment-plans.md)  

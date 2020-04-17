@@ -20,11 +20,11 @@ Use the details in this article to help you troubleshoot issues with Desktop Ana
 
 Many common issues are caused by missing prerequisites. First confirm the following configurations:
 
-- [Prerequisites](/sccm/desktop-analytics/overview#prerequisites)  
+- [Prerequisites](overview.md#prerequisites)  
 
-- [Windows component updates](/sccm/desktop-analytics/enroll-devices#update-devices)  
+- [Windows component updates](enroll-devices.md#update-devices)  
 
-- [How to enable data sharing](/sccm/desktop-analytics/enable-data-sharing), which covers the following topics:  
+- [How to enable data sharing](enable-data-sharing.md), which covers the following topics:  
 
   - Internet endpoints to which clients need to connect  
 
@@ -36,18 +36,18 @@ Many common issues are caused by missing prerequisites. First confirm the follow
 
 Use the **Connection Health** dashboard in Configuration Manager to drill down into categories by device health. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Desktop Analytics Servicing** node, and select the **Connection Health** dashboard.  
 
-For more information, see [Monitor connection health](/sccm/desktop-analytics/monitor-connection-health).
+For more information, see [Monitor connection health](monitor-connection-health.md).
 
 > [!NOTE]
-> The Configuration Manager connection to Desktop Analytics relies upon the service connection point. Any changes to this site system role may impact synchronization with the cloud service. For more information, see [About the service connection point](/configmgr/core/servers/deploy/configure/about-the-service-connection-point#bkmk_move).
+> The Configuration Manager connection to Desktop Analytics relies upon the service connection point. Any changes to this site system role may impact synchronization with the cloud service. For more information, see [About the service connection point](../core/servers/deploy/configure/about-the-service-connection-point.md#bkmk_move).
 
-Starting in version 2002, if the Configuration Manager site fails to connect to required endpoints for a cloud service, it raises a critical status message ID 11488. When it can't connect to the service, the SMS_SERVICE_CONNECTOR component status changes to critical. View detailed status in the [Component Status](/configmgr/core/servers/manage/use-alerts-and-the-status-system#BKMK_MonitorSystemStatus) node of the Configuration Manager console.<!-- 5566763 -->
+Starting in version 2002, if the Configuration Manager site fails to connect to required endpoints for a cloud service, it raises a critical status message ID 11488. When it can't connect to the service, the SMS_SERVICE_CONNECTOR component status changes to critical. View detailed status in the [Component Status](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) node of the Configuration Manager console.<!-- 5566763 -->
 
 ## Log files
 
-For more information, see [Log files for Desktop Analytics](/sccm/core/plan-design/hierarchy/log-files#desktop-analytics)
+For more information, see [Log files for Desktop Analytics](../core/plan-design/hierarchy/log-files.md#desktop-analytics)
 
-Starting in Configuration Manager version 1906, use the **DesktopAnalyticsLogsCollector.ps1** tool from the Configuration Manager install directory to help troubleshoot Desktop Analytics. It runs some basic troubleshooting steps and collects the relevant logs into a single working directory. For more information, see [Logs collector](/sccm/desktop-analytics/log-collector).
+Starting in Configuration Manager version 1906, use the **DesktopAnalyticsLogsCollector.ps1** tool from the Configuration Manager install directory to help troubleshoot Desktop Analytics. It runs some basic troubleshooting steps and collects the relevant logs into a single working directory. For more information, see [Logs collector](log-collector.md).
 
 ### Enable verbose logging
 
@@ -70,7 +70,7 @@ If you need to provision these apps after completing setup, go to the **Connecte
 
 ### Create and import app for Configuration Manager
 
-If you can't create the Azure AD app for Configuration Manager from the Configure Azure Services wizard, or if you want to reuse an existing app, you need to manually create and import it. After completing the [Initial onboarding](/sccm/desktop-analytics/set-up#initial-onboarding) on the Desktop Analytics portal, use the following steps:
+If you can't create the Azure AD app for Configuration Manager from the Configure Azure Services wizard, or if you want to reuse an existing app, you need to manually create and import it. After completing the [Initial onboarding](set-up.md#initial-onboarding) on the Desktop Analytics portal, use the following steps:
 
 #### Create app in Azure AD
 
@@ -141,17 +141,17 @@ If you can't create the Azure AD app for Configuration Manager from the Configur
   
    Select **Verify**, and then select **OK** to close the Import Apps window. Select **Next** on the App page of the Azure Services Wizard.  
 
-To continue the rest of the wizard on the **Diagnostic Data** page, see [Connect to the service](/sccm/desktop-analytics/connect-configmgr#bkmk_connect).
+To continue the rest of the wizard on the **Diagnostic Data** page, see [Connect to the service](connect-configmgr.md#bkmk_connect).
 
 #### Troubleshoot app in Configuration Manager
 
 If you're having problems creating or importing the app, first check **SMSAdminUI.log** for the specific error. Then check the following configurations:
 
-- You've successfully enrolled the tenant to the Desktop Analytics service. For more information, see [How to set up Desktop Analytics](/sccm/desktop-analytics/set-up).
+- You've successfully enrolled the tenant to the Desktop Analytics service. For more information, see [How to set up Desktop Analytics](set-up.md).
 
-- All required endpoints are accessible. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).
+- All required endpoints are accessible. For more information, see [Endpoints](enable-data-sharing.md#endpoints).
 
-- Make sure the user who signs in has the correct permissions. For more information, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).
+- Make sure the user who signs in has the correct permissions. For more information, see [Prerequisites](overview.md#prerequisites).
 
 - Make sure that the user can sign in to Azure in general. This action determines if there are any general Azure AD authentication issues.
 
@@ -209,6 +209,6 @@ Then select **Apply changes**:
 
 ![Screenshot of expanded data currency flyout in Desktop Analytics portal](media/data-currency-flyout-expand.png)
 
-This process generally takes between 15-60 minutes. The timing depends on the size of your workspace and the scope of the changes that need processes. When you request an on-demand data refresh, it doesn't result in any changes to diagnostic data.  For more information, see the [Desktop Analytics FAQ](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
+This process generally takes between 15-60 minutes. The timing depends on the size of your workspace and the scope of the changes that need processes. When you request an on-demand data refresh, it doesn't result in any changes to diagnostic data.  For more information, see the [Desktop Analytics FAQ](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
 
 If you aren't seeing changes updated within the time frames indicated above, wait another 24 hours for the next daily refresh. If you see longer delays, check the service health dashboard. If the service reports as healthy, contact Microsoft support.<!-- 3896921 -->
