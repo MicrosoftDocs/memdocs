@@ -263,13 +263,6 @@
   items:
   - name: API to add third-party certificate authority
     href: scep-libraries-apis.md
-  - name: Antivirus policy settings
-    items:
-    - name: macOS Defender Antivirus settings
-      href: antivirus-microsoft-defender-settings-macos.md
-    - name: Windows 10 Microsoft Defender Antivirus settings
-      href: antivirus-microsoft-defender-settings-windows.md
-  - name: API to add third-party certificate authority
   - name: Compliance policy settings
     items:
     - name: Compliance policy settings - Android
