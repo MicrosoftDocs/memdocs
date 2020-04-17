@@ -142,11 +142,11 @@
           items:
           - name: Zimperium and Intune integration
             href: zimperium-mtd-connector-integration.md     
-    - name: Encrypt devices
+    - name: Encrypt disks
       items:
-      - name: Encrypt Devices
+      - name: Encrypt device disks
         href: encrypt-devices.md
-      - name: Monitor device encryption
+      - name: Monitor disk encryption
         href: encryption-monitor.md
   - name: Identity protection
     items:

@@ -49,7 +49,7 @@ The following sections introduce the policy groups and the profiles available fo
 
 Use Antivirus profiles to manage Defender ATP antivirus settings on devices that run Windows 10 or macOS.
 
-See [Configure antivirus profiles](../protect/endpoint-security-configure-antivirus.md) for prerequisites and additional information about this profile.
+See [Configure antivirus profiles](../protect/endpoint-security-configure-antivirus.md) additional information about this profile.
 
 ### Prerequisites for antivirus policy
 
@@ -80,7 +80,7 @@ To configure antivirus policy, see
 
 Disk encryption profiles focus on settings that manage a devices built-in encryption method, like BitLocker and FileVault.
 
-See [Configure disk encryption profiles](../protect/endpoint-security-configure-disk-encryption.md) for prerequisites and additional information about this profile.
+See [Configure disk encryption profiles](../protect/endpoint-security-configure-disk-encryption.md) additional information about this profile.
 
 ### Prerequisites for Disk encryption profiles
 

@@ -28,7 +28,7 @@ ms.reviewer: mattsha
 
 ---
 
-# Configure Endpoint security Disk Encryption policies in Intune
+# Configure Endpoint security Disk Encryption policy in Intune
 
 As part of Endpoint security in Intune, Disk Encryption policies make it easy for security admins to focus on managing the discrete group of encryption settings for your managed devices.
 

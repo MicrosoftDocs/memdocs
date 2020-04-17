@@ -28,7 +28,7 @@ ms.reviewer: mattsha
 
 ---
 
-# Configure Antivirus policies in Intune
+# Configure Antivirus policy in Intune
 
 As part of Endpoint security in Intune, Antivirus policies make it easy for security admins to focus on managing the discrete group of antivirus settings for your managed devices. To use Antivirus policy, integrate Intune with Microsoft Defender Advanced Threat Protection (Defender ATP) as a Mobile Threat Defense solution.
 
