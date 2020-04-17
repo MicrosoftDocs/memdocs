@@ -209,7 +209,7 @@
       - name: Review app protection logs
         href: app-protection-policy-settings-log.md
       - name: Troubleshooting app protection policy deployment
-        href: troubleshooting-app-protection-policy-deployment.md
+        href: troubleshoot-app-protection-policy-deployment.md
 - name: Reference
   items:
     - name: Protect apps with Intune App SDK
