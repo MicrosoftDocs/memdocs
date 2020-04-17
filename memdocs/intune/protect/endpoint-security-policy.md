@@ -47,55 +47,148 @@ The following sections introduce the policy groups and the profiles available fo
 
 ## Antivirus
 
-Use Antivirus profiles to manage Defender ATP antivirus settings on devices that run Windows 10 or macOS.
+Antivirus policies make it easy for security admins to focus on managing the discrete group of antivirus settings for your managed devices. To use Antivirus policy, integrate Intune with Microsoft Defender Advanced Threat Protection (Defender ATP) as a Mobile Threat Defense solution.
 
-See [Configure antivirus profiles](../protect/endpoint-security-configure-antivirus.md) additional information about this profile.
+Antivirus profiles contain only the settings that are relevant for Defender ATP antivirus for macOS and Windows 10, and for the user experience in the Windows Security app on Windows 10 devices.
+
+While you can configure some of the same settings as part of *Endpoint Protection* profiles for [device configuration](../configuration/device-profile-create.md) or *device restriction* profiles for [device compliance](../protect/device-compliance-get-started.md), those other profiles include additional categories of settings that are unrelated to Antivirus, which can complicate the task of configuring Antivirus. Additionally, for macOS devices, the Antivirus settings aren't available through other profiles. The macOS Antivirus profile replaces the need to configure the settings by using *.plist* files.
 
 ### Prerequisites for antivirus policy
 
-- Windows 10 or later
-- Any supported version of macOS
-- For Intune to manage antivirus settings on a device, Defender ATP must be installed on that device.
-- The Windows Security app is installed on all devices that run Window 10, and no additional prerequisites are required.
+- **macOS**
+  - Any supported version of macOS
+  - For Intune to manage antivirus settings on a device, Defender ATP must be installed on that device. See. [Defender ATP for macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (In the Defender ATP documentation)
+
+- **Windows 10 and later**
+  - For Intune to manage antivirus settings on a device, Defender ATP must be installed on that device. See, [Microsoft Defender ATP for Windows](../protect/advanced-threat-protection.md), in the Intune documentation.
+  - The Windows Security app is installed on all devices that run Window 10, and no additional prerequisites are required.
+  - The Windows Security app is installed on all devices that run Window 10, and no additional prerequisites are required.
 
 ### Antivirus profiles
 
 **macOS profiles**:
 
-- **Antivirus** - Manage Antivirus policy settings for macOS when you use Microsoft Defender ATP for Mac.
+- **Antivirus** - Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-macos.md) for macOS.
+
+  When you use [Microsoft Defender ATP for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), you can configure and deploy Antivirus settings to your managed macOS devices through Intune instead of configuring those settings by use of *.plist* files.
 
 **Windows 10 profiles**:
 
-- **Microsoft Defender Antivirus** - Manage Antivirus policy settings for cloud protection, Antivirus exclusions, remediation, scan options, and more.
+- **Microsoft Defender Antivirus** - Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-windows.md) for Windows 10.
 
-  The *Microsoft Defender Antivirus* profile includes a new instance of settings that are otherwise found as part of a device restriction profile.
+  Defender Antivirus is the next-generation protection component of Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP). Next-generation protection brings together machine learning, big-data analysis, in-depth threat resistance research, and cloud infrastructure to protect devices in your enterprise organization.
 
-  Unlike settings that are part of a device restriction profile, these Antivirus settings support improved options. These settings can be used to manage Antivirus on co-managed devices when the [co-management workload slider](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) for Endpoint Protection is set to Intune. The Antivirus setting from device restriction profiles can’t be used with co-management.
+  The *Microsoft Defender Antivirus* profile is a separate instance of the antivirus settings found in the *Device Restriction profile* for Device Compliance policy. 
+  
+  Unlike the antivirus settings in a *Device Restriction profile*, you can use these settings to with devices that are co-managed. To use these settings, the [co-management workload slider](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) for Endpoint Protection must be set to Intune.
 
-- **Windows Security experience** – Manage [settings for the Windows Security app](../protect/antivirus-security-experience-windows-settings.md). The Windows security app is used by a number of Windows security features to provide notifications about the health and security of the machine. Security app notifications include firewalls, antivirus products, Windows Defender SmartScreen, and others.
+- **Windows Security experience** – Manage the [Windows Security app settings](../protect/antivirus-security-experience-windows-settings.md) that end users can view in the Microsoft Defender Security center and the notifications they receive. The Windows security app is used by a number of Windows security features to provide notifications about the health and security of the machine. Security app notifications include firewalls, antivirus products, Windows Defender SmartScreen, and others.
 
-To configure antivirus policy, see 
 
 ## Disk encryption
 
-Disk encryption profiles focus on settings that manage a devices built-in encryption method, like BitLocker and FileVault.
+Disk encryption profiles focus on only the settings that are relevant for a devices built-in encryption methods, like FileVault or BitLocker.
 
-See [Configure disk encryption profiles](../protect/endpoint-security-configure-disk-encryption.md) additional information about this profile.
+While you can configure the same device settings by using *Endpoint Protection profiles* for device configuration, the device configuration profiles include additional categories of settings that are unrelated to disk encryption, which can complicate the task of configuring only disk encryption.
 
-### Prerequisites for Disk encryption profiles
+Use one of the following profiles for disk encryption:
+- [macOS FileVault](#manage-filevault-for-macos) - FileVault provides built-in Full Disk Encryption for macOS devices. Manage [settings for FileVault](../protect/endpoint-security-disk-encryption-profile-settings.md#filevault) on devices that run macOS.
+- [Windows 10 BitLocker](#mnage-bitlocker-for-windows-10) - BitLocker Drive Encryption is a data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers. Manage [settings for BitLocker](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker).
 
-- Windows 10 or later
-- macOS 10.13 or later
+### Manage FileVault for macOS
 
-Because the encryption methods are part of the platforms, there are no additional general prerequisites. However, some settings for BitLocker can require a TPM.
+**Prerequisites**
 
-### Disk encryption profiles
+- **macOS** - macOS 10.13 or later
 
-- **macOS profiles**:
-  - **FileVault** – FileVault provides built-in Full Disk Encryption for macOS devices. Manage [settings for FileVault](../protect/endpoint-security-disk-encryption-profile-settings.md#filevault) on devices that run macOS.
+#### Create the FileVault profile
 
-- **Windows 10 profiles**:
-  - **BitLocker** – BitLocker Drive Encryption is a data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers. Manage [settings for BitLocker](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker).
+Use the procedure to [Configure endpoint security policy]() to create a Disk Encryption profile for FileVault. 
+
+- For **Platform** select **macOS**.
+- For **Profile**, select **FileVault**
+- For more information about the FileVault settings, see [settings for FileVault](../protect/endpoint-security-disk-encryption-profile-settings.md#filevault).
+
+#### Manage FileVault
+
+After Intune encrypts a macOS device with FileVault, you can view and manage the FileVault recovery keys when you view the Intune [encryption report](../protect/encryption-monitor.md).
+
+After Intune encrypts a macOS device with FileVault, you can view that device's personal recovery key from the web Company Portal on any device. Once in the web Company Portal, choose the encrypted macOS device, and then choose to "Get recovery key" as a remote device action.
+
+#### Retrieve personal recovery key from MEM encrypted macOS devices
+
+End users can retrieve their personal recovery key (FileVault key) using the iOS Company Portal app, the Android Company Portal app, or through the Android Intune app.
+
+The device that has the personal recovery key must be enrolled with Intune and encrypted with FileVault through Intune. Using the iOS Company Portal app, Android Company Portal app, the Android Intune app, or the Company Portal website, the end-user can see the **FileVault** recovery key needed to access their Mac devices. 
+
+End-users can select **Devices** > *the encrypted and enrolled macOS device* > **Get recovery key**. The browser will show the Web Company Portal and display the recovery key.
+
+### Manage BitLocker for Windows 10
+
+**Prerequisites**
+
+- **Windows 10 or later** - Windows 10 or later
+  - Some settings for BitLocker can require a TPM.
+
+#### Create a BitLocker profile
+
+Use the procedure to [Configure endpoint security policy]() to create a Disk Encryption profile for BitLocker:
+
+- For **Platform** select **macOS**.
+- For **Profile**, select **FileVault**
+- For more information about the FileVault settings, see [settings for FileVault](../protect/endpoint-security-disk-encryption-profile-settings.md#filevault).
+
+
+### Silently enable BitLocker on devices
+
+You can configure a BitLocker policy that automatically and silently enables BitLocker on a device. That means that BitLocker enables successfully without presenting any UI to the end user, even when that user isn't a local Administrator on the device.
+
+**Prerequisites to silently enable BitLocker**  
+Devices must meet the following conditions to be eligible for silently enabling BitLocker:
+
+- The device must run Windows 10 version 1809 or later
+- The device must be Azure AD Joined
+
+**BitLocker policy configuration**  
+The following two settings for BitLocker – Base Settings must be configured in the BitLocker profile:
+
+- **Hide prompt about third-party encryption** = **Yes**
+
+- **Allow standard users to enable encryption during Autopilot** = **Yes**
+
+   Devices must not require use of a *startup PIN* or *startup key.* When a TPM startup PIN or startup key is required, BitLocker cannot silently enable and requires interaction from the end user.
+
+   To meet this requirement, in the BitLocker profile ensure the following three settings under BitLocker OS Drive Settings are not set to Required. They can be set to either Blocked or Allowed.
+
+- **Compatible TPM startup PIN** = *Blocked* or *Allowed*
+
+- **Compatible TPM startup key and PIN** = *Blocked* or *Allowed*
+
+### Manage BitLocker recovery keys
+
+After Intune encrypts a Windows 10 device with BitLocker, you can view and retrieve BitLocker recovery keys when you view the Intune encryption report.
+You can use an Intune device action to remotely rotate the BitLocker recovery key of a device that runs Windows 10 version 1909 or later.
+
+#### Prerequisites to rotate BitLocker recovery keys
+
+Devices must meet the following prerequisites to support rotation of the BitLocker recovery key:
+
+- Devices must run Windows 10 version 1909 or later
+- Azure AD-joined and Hybrid-joined devices must have support for key rotation enabled:
+  - **Enable client-driven recovery password for** 
+
+#### To rotate the BitLocker recovery key
+
+1. Sign in to the Microsoft Endpoint Manager admin center.
+
+2. Select **Endpoint security** > **All devices**.
+
+3. In the list of devices that you manage, select a device.
+
+4. On the **Overview** page of the device, select the **BitLocker key rotation**. If you don’t see this option, select the ellipsis (**…**) to show additional options, and then select the **BitLocker key rotation** device remote action.
+
+   ![Select the ellipsis to view more options](./media/endpoint-security-configure-disk-encryption/select-more.png)
+
 
 
 ## Firewall

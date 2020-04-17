@@ -292,11 +292,11 @@
     - name: Firewall policy settings
       href: endpoint-security-firewall-profile-settings.md
     - name: Endpoint detection and response profile settings
-      href: edr-profile-settings.md 
+      href: endpoint-security-edr-profile-settings.md 
       name: Attack surface reduction profile settings
-      href: asr-profile-settings.md
+      href: endpoint-security-asr-profile-settings.md
       name: Account protection profile settings
-      href: account-protection-profile-settings.md
+      href: endpoint-security-account-protection-profile-settings.md
   - name: Security baseline settings
     items: 
     - name: Windows 10 MDM baseline settings
