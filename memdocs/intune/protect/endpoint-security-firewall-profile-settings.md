@@ -167,4 +167,4 @@ Supported platforms and profiles:
 
 ## Next steps
 
-[Configure disk encryption polices](../protect/endpoint-security-configure-disk-encryption.md)
+[Endpoint security policy for firewalls](../protect/endpoint-security-policy.md#firewall)

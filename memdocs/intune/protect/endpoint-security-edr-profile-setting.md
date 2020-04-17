@@ -71,4 +71,4 @@ Supported platforms and profiles:
 
 ## Next steps
 
-[Configure disk encryption polices](../protect/endpoint-security-configure-disk-encryption.md)
+[Endpoint security policy for EDR](../protect/endpoint-security-policy.md#endpoint-detection-and-response)

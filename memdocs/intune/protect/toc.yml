@@ -75,11 +75,6 @@
       href: atp-manage-vulnerabilities.md 
     - name: Security policy
       href: endpoint-security-policy.md
-      items:
-      - name: Antivirus policy
-        href: endpoint-security-configure-antivirus.md
-      - name: Disk encryption policy
-        href: endpoint-security-configure-disk-encryption.md
     - name: Microsoft Defender ATP
       href: advanced-threat-protection.md  
     - name: Mobile Threat Defense partners
@@ -293,9 +288,9 @@
       href: endpoint-security-firewall-profile-settings.md
     - name: Endpoint detection and response profile settings
       href: endpoint-security-edr-profile-settings.md 
-      name: Attack surface reduction profile settings
+    - name: Attack surface reduction profile settings
       href: endpoint-security-asr-profile-settings.md
-      name: Account protection profile settings
+    - name: Account protection profile settings
       href: endpoint-security-account-protection-profile-settings.md
   - name: Security baseline settings
     items: 

@@ -93,7 +93,7 @@ While you can configure the same device settings by using *Endpoint Protection p
 
 Use one of the following profiles for disk encryption:
 - [macOS FileVault](#manage-filevault-for-macos) - FileVault provides built-in Full Disk Encryption for macOS devices. Manage [settings for FileVault](../protect/endpoint-security-disk-encryption-profile-settings.md#filevault) on devices that run macOS.
-- [Windows 10 BitLocker](#mnage-bitlocker-for-windows-10) - BitLocker Drive Encryption is a data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers. Manage [settings for BitLocker](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker).
+- [Windows 10 BitLocker](#manage-bitlocker-for-windows-10) - BitLocker Drive Encryption is a data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers. Manage [settings for BitLocker](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker).
 
 ### Manage FileVault for macOS
 
