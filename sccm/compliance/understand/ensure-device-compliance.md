@@ -52,14 +52,14 @@ Compliance settings in Configuration Manager gives you the tools and resources y
 ## Remote connection profiles  
  This configuration item type allows you to configure your user's PCs to remotely connect to work computers when they are not connected to the domain or if their personal computers are connected over the Internet.  
 
- [Create remote connection profiles](/sccm/compliance/deploy-use/create-remote-connection-profiles)  
+ [Create remote connection profiles](../deploy-use/create-remote-connection-profiles.md)  
 
 ## User data and profiles  
  This configuration item type contains settings that can manage folder redirection, offline files and roaming profiles on computers that run Windows 8 and later for users in your hierarchy.  
 
- [Create user data and profiles configuration items](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items)  
+ [Create user data and profiles configuration items](../deploy-use/create-user-data-and-profiles-configuration-items.md)  
 
 ## Windows edition upgrade policy  
  The edition upgrade policy lets you automatically upgrade Windows 10 devices to a newer version. You can specify a product key to upgrade Windows 10 desktop versions, or a license file that can be used to upgrade devices running Windows 10 Mobile and Windows 10 Holographic.  
 
- [Upgrade Windows devices with the edition upgrade policy](/sccm/compliance/deploy-use/upgrade-windows-version)  
+ [Upgrade Windows devices with the edition upgrade policy](../deploy-use/upgrade-windows-version.md)  
