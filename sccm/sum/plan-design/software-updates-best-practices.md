@@ -28,7 +28,7 @@ Use the following best practices when you install software updates in Configurat
 
 ### <a name="bkmk_shared-susdb"></a> Use a shared WSUS database for software update points  
 
-When you install more than one software update point at a primary site, use the same WSUS database for each software update point in the same Active Directory forest. If you share the same database, it significantly mitigates, but doesn't completely eliminate, the client and the network performance impact that you might experience when clients switch to a new software update point. A delta scan still occurs when a client switches to a new software update point that shares a database with the old software update point, but the scan is much smaller than it would be if the WSUS server has its own database. For more information about software update point switching, see [Software update point switching](/sccm/sum/plan-design/plan-for-software-updates#BKMK_SUPSwitching).  
+When you install more than one software update point at a primary site, use the same WSUS database for each software update point in the same Active Directory forest. If you share the same database, it significantly mitigates, but doesn't completely eliminate, the client and the network performance impact that you might experience when clients switch to a new software update point. A delta scan still occurs when a client switches to a new software update point that shares a database with the old software update point, but the scan is much smaller than it would be if the WSUS server has its own database. For more information about software update point switching, see [Software update point switching](plan-for-software-updates.md#BKMK_SUPSwitching).  
 
 > [!IMPORTANT]  
 >  Also share the local WSUS content folders when you use a shared WSUS database for software update points.  
@@ -73,4 +73,4 @@ When you use an ADR to deploy Endpoint Protection definition updates on a freque
 
 
 ## See Also  
- [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates)
+ [Plan for software updates](plan-for-software-updates.md)

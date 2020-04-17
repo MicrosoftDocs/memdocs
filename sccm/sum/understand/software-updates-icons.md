@@ -123,4 +123,4 @@ Synchronized software updates are displayed in the Configuration Manager console
 
 ## Next steps 
 
-[Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates)
+[Plan for software updates](../plan-design/plan-for-software-updates.md)
