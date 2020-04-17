@@ -33,7 +33,7 @@ This article gives you an introduction to using Configuration Manager compliance
 
 1.  On the **General** page of the Create Configuration Item Wizard, shown in the following screenshot, specify a name and description for the configuration item. Then choose the appropriate configuration item type for each scenario in this article.  
 
-     ![General page of the Create Configuration Item Wizard](/sccm/mdm/deploy-use/media/Compliance-Settings-Wizard---1.png)  
+     ![General page of the Create Configuration Item Wizard](../../mdm/deploy-use/media/Compliance-Settings-Wizard---1.png)  
 
 ## Scenario: Disable Bluetooth on Windows 10 devices
 
@@ -104,4 +104,4 @@ This article gives you an introduction to using Configuration Manager compliance
 
 ## Next steps
 
-[Create and deploy configuration baselines](/sccm/compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines)
+[Create and deploy configuration baselines](common-tasks-for-creating-and-deploying-configuration-baselines.md)

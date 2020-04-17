@@ -85,4 +85,4 @@ Use Configuration Manager to move Windows known folders to OneDrive for Business
 
 ## Next steps
 
-[Create remote connection profiles](/sccm/compliance/deploy-use/create-remote-connection-profiles)
+[Create remote connection profiles](create-remote-connection-profiles.md)
