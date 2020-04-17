@@ -35,7 +35,7 @@ Options are divided into the following:
 -   Logging
 
 ## Update Server
-You must configure Updates Publisher to work with update server like Windows Server Update Services (WSUS) before you can [publish updates](/sccm/sum/tools/manage-updates-with-updates-publisher#publish-updates-and-bundles-from-the-updates-workspace). This includes specifying the server, methods to connect to that server when it is remote from the console, and a certificate to use to digitally sign updates you publish.
+You must configure Updates Publisher to work with update server like Windows Server Update Services (WSUS) before you can [publish updates](manage-updates-with-updates-publisher.md#publish-updates-and-bundles-from-the-updates-workspace). This includes specifying the server, methods to connect to that server when it is remote from the console, and a certificate to use to digitally sign updates you publish.
 
 - **Configure an update server**. When you configure an update server, select the top-level WSUS server (update server) in your Configuration Manager hierarchy so that all child sites have access to the updates that you publish.
 
@@ -48,7 +48,7 @@ You must configure Updates Publisher to work with update server like Windows Ser
 
   Updates Publisher uses the signing certificate to sign the software updates that are published to the update server. Publishing fails if the digital certificate is not available in the certificate store of the update server or the computer that runs Updates Publisher.
 
-  For more information about adding the certificate to the certificate store, see [Certificates and security for Updates Publisher](/sccm/sum/tools/updates-publisher-security).
+  For more information about adding the certificate to the certificate store, see [Certificates and security for Updates Publisher](updates-publisher-security.md).
 
   If a digital certificate is not automatically detected for the update server, choose one of the following:
 
@@ -71,7 +71,7 @@ Use these options when you use Configuration Manager with Updates Publisher.
 
 -   **Specify the Configuration Manager server:** After you enable support for Configuration Manager, specify the location of the top-tier site server from your Configuration Manager hierarchy. If that server is remote from the Updates Publisher install, specify the FQDN of the site server. Choose **Test Connection** to ensure you can connect to the site server.
 
--   **Configure thresholds:** Thresholds are used when you publish updates with a publication type of Automatic. The threshold values help determine when the full content for an update is published instead of only the metadata. To learn more publication types, see [Assign updates to a publication](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)
+-   **Configure thresholds:** Thresholds are used when you publish updates with a publication type of Automatic. The threshold values help determine when the full content for an update is published instead of only the metadata. To learn more publication types, see [Assign updates to a publication](manage-updates-with-updates-publisher.md#assign-updates-and-bundles-to-a-publication)
 
     You can one or both of the following thresholds:
 

@@ -23,9 +23,9 @@ An orchestration group gives you the flexibility to update devices based on a pe
 Members of an orchestration group can be any Configuration Manager client, not just servers. The orchestration group rules apply to the devices for all software update deployments to any collection that contains an orchestration group member. Other deployment behaviors still apply. For example, maintenance windows and deployment schedules.
 
 > [!NOTE]
-> In this version of Configuration Manager, orchestration groups is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).  
+> In this version of Configuration Manager, orchestration groups is a pre-release feature. To enable it, see [Pre-release features](../../core/servers/manage/pre-release-features.md).  
 >
-> The **Orchestration Groups** feature is the evolution of the [Server Groups](/sccm/sum/deploy-use/service-a-server-group) feature. An orchestration group is an object in Configuration Manager.
+> The **Orchestration Groups** feature is the evolution of the [Server Groups](service-a-server-group.md) feature. An orchestration group is an object in Configuration Manager.
 
 ## Orchestration group usage example
 
@@ -40,7 +40,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
 ### Site server and permission prerequisites
 - To see all of the orchestration groups and updates for those groups, your account needs to be a **Full Administrator**.
    - Role-based administration for orchestration groups currently isn't available.
-- Enable the **Orchestration Groups** feature. For more information, see [Enable optional features](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
+- Enable the **Orchestration Groups** feature. For more information, see [Enable optional features](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
    - When you enable **Orchestration Groups**, the site disables the **Server Groups** feature. This behavior avoids any conflicts between the two features.
 
 ### Client prerequisites
@@ -54,12 +54,12 @@ Members of an orchestration group can be any Configuration Manager client, not j
 ## Limitations
 
 - You can have up to 1000 orchestration group members.
-- Orchestration groups don't work in interoperability mode. For more information, see [Interoperability between different versions of Configuration Manager](/configmgr/core/plan-design/hierarchy/interoperability-between-different-versions#bkmk_mixed). <!--6389000-->
+- Orchestration groups don't work in interoperability mode. For more information, see [Interoperability between different versions of Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md#bkmk_mixed). <!--6389000-->
 - If updates are initiated by users from Software Center, orchestration will be bypassed. <!--6362887-->
 
 ## Server groups are automatically updated to orchestration groups
 
-The **Orchestration Groups** feature is the evolution of the [Server Groups](/sccm/sum/deploy-use/service-a-server-group) feature. When you install Configuration Manager version 2002 or later and you have Server Groups enabled, your server groups are automatically moved to orchestration groups.
+The **Orchestration Groups** feature is the evolution of the [Server Groups](service-a-server-group.md) feature. When you install Configuration Manager version 2002 or later and you have Server Groups enabled, your server groups are automatically moved to orchestration groups.
 
 ## Create an orchestration group
 
@@ -125,7 +125,7 @@ To delete the orchestration group, select it then click **Delete** in the ribbon
 
 ## Start orchestration
 
-1. [Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates) to a collection that contains the members of the orchestration group.
+1. [Deploy software updates](deploy-software-updates.md) to a collection that contains the members of the orchestration group.
 
 1. Orchestration starts when any client in the group tries to install any software update at deadline or during a maintenance window. It starts for the entire group, and makes sure that the devices update by following the orchestration group rules.
 1. You can manually start orchestration by selecting it from the **Orchestration Group** node, then choosing **Start Orchestration** from the ribbon or right-click menu.
@@ -211,4 +211,4 @@ Use the following log files on the site server to help monitor and troubleshoot:
 
 ## Next steps
 
-[Deploy software updates](/configmgr/sum/deploy-use/deploy-software-updates)
+[Deploy software updates](deploy-software-updates.md)
