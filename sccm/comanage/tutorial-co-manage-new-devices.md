@@ -195,7 +195,7 @@ Run the following procedure from the primary site server.
    Then select **Cloud Management**, and then select **Next**.  
 
    > [!TIP]  
-   > For more information about the configurations you make in the wizard, see [Start the Azure Services wizard](../core/servers/deploy/configure/Azure-services-wizard#start-the-azure-services-wizard)
+   > For more information about the configurations you make in the wizard, see [Start the Azure Services wizard](../core/servers/deploy/configure/Azure-services-wizard.md#start-the-azure-services-wizard)
 
 2. On the **App Properties** page, for **Web app**, select **Browse** to open the **Server App** dialog, and then select **Create**. Configure the following fields:
 

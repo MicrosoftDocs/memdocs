@@ -91,7 +91,7 @@ For more information to help with this review process, see [Compatibility assess
 
 ## Create software
 
-Before you can deploy Windows, first create the software objects in Configuration Manager. For more information, see [Windows 10 in-place upgrade task sequence](../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system).
+Before you can deploy Windows, first create the software objects in Configuration Manager. For more information, see [Windows 10 in-place upgrade task sequence](../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md).
 
 ## Deploy to pilot devices
 

@@ -109,7 +109,7 @@ Configure a task sequence as high-impact and customize the messages that users r
 Use the following procedure to set a task sequence as high-impact.
 
 > [!NOTE]  
-> Any task sequence that meets certain conditions is automatically defined as high-impact. For more information, see [Manage high-risk deployments](../../core/servers/manage/settings-to-manage-high-risk-deployments).
+> Any task sequence that meets certain conditions is automatically defined as high-impact. For more information, see [Manage high-risk deployments](../../core/servers/manage/settings-to-manage-high-risk-deployments.md).
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.  
 
