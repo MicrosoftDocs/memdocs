@@ -28,7 +28,7 @@ ms.reviewer: mattsha
 
 ---
 
-# Endpoint security disk encryption policy settings
+# Disk encryption policy settings for endpoint security in Intune
 
 View the settings you can configure in profiles for *Disk Encryption* policy in the Endpoint security node of Intune.  
 
