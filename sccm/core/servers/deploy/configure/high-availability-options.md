@@ -40,13 +40,13 @@ The following Configuration Manager options support high availability:
 
 Configuration Manager includes several features that provide near real-time service. If these features are critical to meet your business requirements, plan and configure your sites and hierarchies for high availability. For example:  
 
-- [Client notification actions](/sccm/core/clients/manage/manage-clients), such as restart, start Windows Defender scans, or remote desktop.  
+- [Client notification actions](../../../clients/manage/manage-clients.md), such as restart, start Windows Defender scans, or remote desktop.  
 
 - State-based messages for monitoring features such as software updates and endpoint protection.
 
-- [Scripts](/sccm/apps/deploy-use/create-deploy-scripts)
+- [Scripts](../../../../apps/deploy-use/create-deploy-scripts.md)
 
-- [CMPivot](/sccm/core/servers/manage/cmpivot)
+- [CMPivot](../../manage/cmpivot.md)
 
 Other features of Configuration Manager don't provide real-time service. These features include, but aren't limited to, client settings, hardware and software inventory, software deployments, and compliance settings. Expect them to operate with some data latency. It's unusual for most scenarios that involve a temporary interruption of service to become a critical problem. To minimize downtime, maintain autonomy of operations, and provide a high level of service, configure your sites and hierarchies with high availability in mind.  
 
@@ -65,11 +65,11 @@ For example, Configuration Manager clients typically operate autonomously by usi
 
 ### Use a site server in passive mode
 
-Install an additional site server in *passive* mode for a standalone primary site. The site server in passive mode is in addition to your existing site server in *active* mode. A site server in passive mode is available for immediate use, when needed. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).  
+Install an additional site server in *passive* mode for a standalone primary site. The site server in passive mode is in addition to your existing site server in *active* mode. A site server in passive mode is available for immediate use, when needed. For more information, see [Site server high availability](site-server-high-availability.md).  
 
 ### Use a remote content library
 
-Move the site's content library to a remote location that provides highly available storage. This feature is a requirement for site server high availability. For more information, see [The content library](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).
+Move the site's content library to a remote location that provides highly available storage. This feature is a requirement for site server high availability. For more information, see [The content library](../../../plan-design/hierarchy/the-content-library.md#bkmk_remote).
 
 ### Centralize content sources
 
@@ -77,7 +77,7 @@ All software content in Configuration Manager requires a package source location
 
 ### Use a SQL Server Always On availability group to host the site database
 
-Host the site database at primary sites and the central administration site on SQL Server Always On availability groups. For more information, see [SQL Server Always On for a highly available site database](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).  
+Host the site database at primary sites and the central administration site on SQL Server Always On availability groups. For more information, see [SQL Server Always On for a highly available site database](sql-server-alwayson-for-a-highly-available-site-database.md).  
 
 ### Use a SQL Server cluster to host the site database
 
@@ -159,7 +159,7 @@ Secondary sites only support installation of one management point, which must be
 
 ### Distribution point
 
-Install multiple distribution points, and deploy content to multiple distribution points. Add more than one distribution point per boundary group to make sure clients get several options in their content request. Configure boundary group relationships so that they have a predicable fallback behavior to another boundary group or cloud distribution point. For more information, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).  
+Install multiple distribution points, and deploy content to multiple distribution points. Add more than one distribution point per boundary group to make sure clients get several options in their content request. Configure boundary group relationships so that they have a predicable fallback behavior to another boundary group or cloud distribution point. For more information, see [Configure boundary groups](boundary-groups.md).  
 
 ### Application catalog web service point and application catalog website point
 
@@ -168,14 +168,14 @@ Install multiple distribution points, and deploy content to multiple distributio
 >
 > For more information, see the following articles:
 >
-> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
-> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
+> - [Configure Software Center](../../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
+> - [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
 
 Install more than one instance of each site system role. For best performance, deploy one of each on the same site system server.  
 
 Each application catalog site system role provides the same information as other instances of that role regardless of its location in the hierarchy. When a client makes a request for the application catalog, and you've configured clients to automatically detect the default application catalog website point, the client is directed to an available instance. Clients prefer local application catalog instances, based on the current network location of the client.  
 
-For more information about this client setting and how automatic detection works, see the [Computer Agent](/sccm/core/clients/deploy/about-client-settings#computer-agent) client settings.  
+For more information about this client setting and how automatic detection works, see the [Computer Agent](../../../clients/deploy/about-client-settings.md#computer-agent) client settings.  
 
 
 ## <a name="bkmk_client"></a> High availability for clients  
@@ -282,12 +282,12 @@ While this site system role is critical for keeping Configuration Manager curren
 
 ## See also
 
-- [Supported configurations](/sccm/core/plan-design/configs/supported-configurations)  
+- [Supported configurations](../../../plan-design/configs/supported-configurations.md)  
 
-- [Recommended hardware](/sccm/core/plan-design/configs/recommended-hardware)  
+- [Recommended hardware](../../../plan-design/configs/recommended-hardware.md)  
 
-- [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)
+- [Supported operating systems for site system servers](../../../plan-design/configs/supported-operating-systems-for-site-system-servers.md)
 
-- [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)  
+- [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md)  
 
-- [Site failure impacts](/sccm/core/servers/manage/site-failure-impacts)  
+- [Site failure impacts](../../manage/site-failure-impacts.md)  

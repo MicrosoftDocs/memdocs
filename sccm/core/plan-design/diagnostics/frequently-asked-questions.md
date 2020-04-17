@@ -23,14 +23,14 @@ This article provides answers to frequently asked questions about diagnostic and
 
 To help manage when the site sends data, use the service connection point in offline mode. Then use the service connection tool to manually send data. For more information, see the following articles:
 
-- [About the service connection point](/configmgr/core/servers/deploy/configure/about-the-service-connection-point)
-- [Use the service connection tool](/configmgr/core/servers/manage/use-the-service-connection-tool)
+- [About the service connection point](../../servers/deploy/configure/about-the-service-connection-point.md)
+- [Use the service connection tool](../../servers/manage/use-the-service-connection-tool.md)
 
 To support new versions of Windows 10 and cloud services like Microsoft Intune, you need to update the current branch of Configuration Manager on a regular basis. Microsoft requires at least the basic level of diagnostic and usage data. This data is used to keep the product up to date, improve the update experience, and improve the quality and security of the product.
 
 No data is sent to the service when the service connection point is in offline mode. When you switch to online mode or use the service connection tool, it sends data to the service to check for updates.
 
-You can also choose the level of data that Configuration Manager collects. For more information, see [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview).
+You can also choose the level of data that Configuration Manager collects. For more information, see [Levels of diagnostic usage data](levels-overview.md).
 
 ## <a name="bkmk_retention"></a> What is the data retention period?
 
@@ -50,7 +50,7 @@ The SQL stored procedures run every seven days from the date you installed the s
 
 ## <a name="bkmk_network"></a> Can the data be used to form a network map?
 
-No. This data doesn't include any network details, such as IP addresses or detailed geographic information. For more information, see [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview#bkmk_versions), and find more detail for the version you're using.
+No. This data doesn't include any network details, such as IP addresses or detailed geographic information. For more information, see [Levels of diagnostic usage data](levels-overview.md#bkmk_versions), and find more detail for the version you're using.
 
 The data does include time zone information from each site. This information can provide insight into the broad geolocation and global dispersion of sites in a hierarchy.
 
@@ -68,7 +68,7 @@ Yes, when you integrate those services with Configuration Manager. As part of th
 
 For example, the following cloud services are a part of Microsoft Endpoint Manager:
 
-- [Desktop Analytics data privacy](/configmgr/desktop-analytics/privacy)
+- [Desktop Analytics data privacy](../../../desktop-analytics/privacy.md)
 - [Privacy and personal data in Intune](https://docs.microsoft.com/intune/protect/privacy-personal-data)
 - [Windows Autopilot requirements](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
 
@@ -76,4 +76,4 @@ For example, the following cloud services are a part of Microsoft Endpoint Manag
 
 No. Configuration doesn't collect or transmit any personal data or customer data. It's an on-premises product that you directly deploy, manage, and operate. The diagnostics and usage data that Microsoft collects improves the installation experience, quality, and security of future releases.
 
-For more information about Configuration Manager data, see [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview).
+For more information about Configuration Manager data, see [Levels of diagnostic usage data](levels-overview.md).

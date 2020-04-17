@@ -53,13 +53,13 @@ Be aware of the following prerequisites:
 - The site database must be remote from the site server. The cluster can't include the site system server.  
 
     > [!Note]  
-    > Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. Previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using a SQL cluster and a site server in passive mode. For more information, see [High availability options](/sccm/core/servers/deploy/configure/high-availability-options). <!--3607761, fka 1359132-->  
+    > Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. Previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using a SQL cluster and a site server in passive mode. For more information, see [High availability options](high-availability-options.md). <!--3607761, fka 1359132-->  
 
 - Add the computer account of the site server to the local **Administrators** group of each server in the cluster.  
 
 - To support Kerberos authentication, enable the **TCP/IP** network communication protocol for the network connection of each SQL Server cluster node. The **Named pipes** protocol isn't required, but can be used to troubleshoot Kerberos authentication issues. The network protocol settings are configured in **SQL Server Configuration Manager**, under **SQL Server Network Configuration**.  
 
-- If you use a public key infrastructure (PKI), see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements). There are specific certificate requirements when you use a SQL Server cluster for the site database.  
+- If you use a public key infrastructure (PKI), see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md). There are specific certificate requirements when you use a SQL Server cluster for the site database.  
 
 
 

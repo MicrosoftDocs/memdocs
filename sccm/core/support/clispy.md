@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Client Spy is one of the [Configuration Manager tools](/sccm/core/support/tools). It's a tool for troubleshooting software distribution, inventory, and software metering on Configuration Manager clients. 
+Client Spy is one of the [Configuration Manager tools](tools.md). It's a tool for troubleshooting software distribution, inventory, and software metering on Configuration Manager clients. 
 
 Most of the information retrieved by the tool pertains to software deployments:
 - All current software deployments 

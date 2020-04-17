@@ -20,7 +20,7 @@ manager: dougeby
 
 Update 1902 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1802, 1806, or 1810. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 1902.  
 
-Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902). After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist).
+Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1902](../../servers/manage/checklist-for-installing-update-1902.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-1902.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
@@ -35,13 +35,13 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## <a name="bkmk_deprecated"></a> Deprecated features and operating systems
 
-Learn about support changes before they're implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
+Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
 - The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway by enabling the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. You won't be able to create a traditional cloud distribution point in the future.
 
 Version 1902 drops support for the following products:  
 
-- Linux and UNIX as a client. Deprecation was announced with [version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802#deprecation-announcement-for-linux-and-unix-client-support). Consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
+- Linux and UNIX as a client. Deprecation was announced with [version 1802](whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support). Consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
 
 
 ## <a name="bkmk_infra"></a> Site infrastructure
@@ -57,7 +57,7 @@ In the Configuration Manager console, go to the **Monitoring** workspace. Expand
 
 ![Screenshot of client health dashboard](media/3599209-client-health-dashboard.png)
 
-For more information, see [How to monitor clients](/sccm/core/clients/manage/monitor-clients#bkmk_health).
+For more information, see [How to monitor clients](../../clients/manage/monitor-clients.md#bkmk_health).
 
 ### New management insight rules
 
@@ -67,7 +67,7 @@ The management insights feature has the following new rules:
 
 - **Update clients to a supported Windows 10 version** rule in the **Simplified Management** group. This rule reports on clients that are running a version of Windows 10 that's no longer supported. It also includes clients with a Windows 10 version that's near end of service (three months).<!--3897268-->  
 
-For more information, see [Management insights](/sccm/core/servers/manage/management-insights).
+For more information, see [Management insights](../../servers/manage/management-insights.md).
 
 ### Improvement to enhanced HTTP
 
@@ -77,13 +77,13 @@ You can now enable enhanced HTTP per primary site or for the central administrat
 
 On the properties of the central administration site, select the option to **Use Configuration Manager-generated certificates for HTTP site systems**. This setting only applies to site system roles in the central administration site. It isn't a global setting for the hierarchy.
 
-For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
+For more information, see [enhanced HTTP](../hierarchy/enhanced-http.md).
 
 ### Improvement to setup prerequisites
 
 When you install or update to version 1902, Configuration Manager setup now includes the following prerequisite check:
 
-- **Pending system restart on the remote SQL Server**: This prerequisite check is similar to the **Pending system restart** rule, but it checks a remote SQL Server. For more information, see [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#pending-system-restart-on-the-remote-sql-server). <!--SCCMDocs-pr issue 3377-->  
+- **Pending system restart on the remote SQL Server**: This prerequisite check is similar to the **Pending system restart** rule, but it checks a remote SQL Server. For more information, see [List of prerequisite checks](../../servers/deploy/install/list-of-prerequisite-checks.md#pending-system-restart-on-the-remote-sql-server). <!--SCCMDocs-pr issue 3377-->  
 
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
@@ -93,7 +93,7 @@ When you install or update to version 1902, Configuration Manager setup now incl
 <!--3735092-->
 Configuration Manager can now stop a cloud management gateway (CMG) service when the total data transfer goes over your limit. The CMG has always had alerts to trigger notifications when the usage reached warning or critical levels. To help reduce any unexpected Azure costs because of a spike in usage, this new option turns off the cloud service.
 
-For more information, see [Stop CMG when it exceeds threshold](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#bkmk_stop).
+For more information, see [Stop CMG when it exceeds threshold](../../clients/manage/cmg/monitor-clients-cloud-management-gateway.md#bkmk_stop).
 
 ### Use Azure Resource Manager for cloud services
 
@@ -102,14 +102,14 @@ Starting in version 1810, the classic service deployment in Azure was deprecated
 
 Existing deployments continue to work. Starting in this current branch version, Azure Resource Manager is the only deployment mechanism for new instances of the cloud management gateway and cloud distribution point.
 
-For more information, see [Azure Resource Manager for the cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
+For more information, see [Azure Resource Manager for the cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).
 
 ### Add cloud management gateway to boundary groups
 
 <!--3640932-->
 You can now associate a cloud management gateway (CMG) with a boundary group. This configuration allows clients to default or fallback to the CMG for client communication according to boundary group relationships. This behavior is especially useful in branch office and VPN scenarios. You can direct client traffic away from expensive and slow WAN links to instead use faster internet links to Microsoft Azure.
 
-For more information, see [CMG hierarchy design](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#hierarchy-design) and [Set up CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#configure-boundary-groups).
+For more information, see [CMG hierarchy design](../../clients/manage/cmg/plan-cloud-management-gateway.md#hierarchy-design) and [Set up CMG](../../clients/manage/cmg/setup-cloud-management-gateway.md#configure-boundary-groups).
 
 
 ## <a name="bkmk_real"></a> Real-time management
@@ -119,14 +119,14 @@ For more information, see [CMG hierarchy design](/sccm/core/clients/manage/cmg/p
 <!--3610960-->
 Configuration Manager now supports running CMPivot from the central administration site in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
 
-For more information, see [CMPivot for real-time data](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902).
+For more information, see [CMPivot for real-time data](../../servers/manage/cmpivot.md#bkmk_cmpivot1902).
 
 ### Edit or copy PowerShell scripts
 
 <!--3705507-->
 You can now **Edit** or **Copy** an existing PowerShell script used with the Run Scripts feature. Instead of recreating a script that you need to change, now directly edit it. Both actions use the same wizard experience as when you create a new script. When you edit or copy a script, Configuration Manager doesn't persist the approval state.
 
-For more information, see [Run Scripts](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_psedit).
+For more information, see [Run Scripts](../../../apps/deploy-use/create-deploy-scripts.md#bkmk_psedit).
 
 
 ## <a name="bkmk_content"></a> Content management
@@ -149,9 +149,9 @@ While the distribution point is in maintenance mode, it has the following behavi
 
 - Any scheduled task, like content validation, still runs on the same schedule.
 
-For more information on this feature, see [Maintenance mode](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_maint).
+For more information on this feature, see [Maintenance mode](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_maint).
 
-For more information on automating this process with the Configuration Manager SDK, see [SetDPMaintenanceMode method in class SMS_DistributionPointInfo](/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo).
+For more information on automating this process with the Configuration Manager SDK, see [SetDPMaintenanceMode method in class SMS_DistributionPointInfo](../../../develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo.md).
 
 
 ## <a name="bkmk_client"></a> Client management
@@ -161,21 +161,21 @@ For more information on automating this process with the Configuration Manager S
 <!--3197824-->
 The task sequence sets a timestamp when it puts the client in provisioning mode. A client in provisioning mode checks every 60 minutes the duration of time since the timestamp. If it's been in provisioning mode for more than 48 hours, the client automatically exits provisioning mode and restarts its process.
 
-For more information, see [Provisioning mode](/sccm/osd/understand/provisioning-mode).
+For more information, see [Provisioning mode](../../../osd/understand/provisioning-mode.md).
 
 ### View first screen only during remote control
 
 <!--3231732-->
 When connecting to a client with two or more monitors, it can be difficult to view them all in the Configuration Manager remote control viewer. A remote tools operator can now choose between seeing **All screens** or the **First screen** only.
 
-For more information, see [How to remotely administer a Windows client computer](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer).
+For more information, see [How to remotely administer a Windows client computer](../../clients/manage/remote-control/remotely-administer-a-windows-client-computer.md).
 
 ### Specify a custom port for peer wakeup
 
 <!--3605925-->
 You can now specify a custom port number for wake-up proxy. In client settings, in the **Power Management** group, configure the setting for **Wake On LAN port number (UDP)**.  
 
-For more information, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).
+For more information, see [How to configure Wake on LAN](../../clients/deploy/configure-wake-on-lan.md).
 
 
 ## <a name="bkmk_app"></a> Application management
@@ -185,12 +185,12 @@ For more information, see [How to configure Wake on LAN](/sccm/core/clients/depl
 <!--3594063-->
 This version has improvements to the feature to receive email notifications for application requests. Users could  always add a comment to the request from Software Center. This comment shows on the application request in the Configuration Manager console. Now that comment also shows in the email. Including this comment in the email helps the approvers make a better decision to approve or deny the request.
 
-For more information, see [Email notifications](/sccm/apps/deploy-use/app-approval#bkmk_email-approve).
+For more information, see [Email notifications](../../../apps/deploy-use/app-approval.md#bkmk_email-approve).
 
 ### Improvements to Package Conversion Manager
 
 <!-- SCCMDocs-pr issue #3357 -->
-This version includes the following improvements to [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager):
+This version includes the following improvements to [Package Conversion Manager](../../../apps/pcm/package-conversion-manager.md):
 
 - Scheduled package analysis runs every 7 days by default
 - PowerShell cmdlets for analyzing and converting packages
@@ -213,10 +213,10 @@ This feature works with any supported version of Windows 10, and only with the i
 <!--3556027, fka 1359388-->
 This version includes several improvements to help you better create and manage task sequence media. For more information, see the following articles for specific media types:
 
-- [Create stand-alone media](/sccm/osd/deploy-use/create-stand-alone-media)
-- [Create prestaged media](/sccm/osd/deploy-use/create-prestaged-media)
-- [Create bootable media](/sccm/osd/deploy-use/create-bootable-media)
-- [Create capture media](/sccm/osd/deploy-use/create-capture-media)
+- [Create stand-alone media](../../../osd/deploy-use/create-stand-alone-media.md)
+- [Create prestaged media](../../../osd/deploy-use/create-prestaged-media.md)
+- [Create bootable media](../../../osd/deploy-use/create-bootable-media.md)
+- [Create capture media](../../../osd/deploy-use/create-capture-media.md)
 
 #### Specify temporary storage
 
@@ -239,7 +239,7 @@ When importing a Windows image (WIM) file to Configuration Manager, you can now 
 
 When you import an OS image, select the option to **Extract a specific image index from the specified WIM file**. Then select the image index from the list.  
 
-For more information, see [Add an OS image](/sccm/osd/get-started/manage-operating-system-images#BKMK_AddOSImages).
+For more information, see [Add an OS image](../../../osd/get-started/manage-operating-system-images.md#BKMK_AddOSImages).
 
 ### Optimized image servicing
 
@@ -248,7 +248,7 @@ When you apply software updates to an OS image, there's a new option to optimize
 
 When you create a schedule to update an OS image, select the option to **Remove superseded updates after the image is updated**.
 
-For more information, see [Apply software updates to an image](/sccm/osd/get-started/manage-operating-system-images#bkmk_resetbase).
+For more information, see [Apply software updates to an image](../../../osd/get-started/manage-operating-system-images.md#bkmk_resetbase).
 
 ### Improvements to Run PowerShell Script task sequence step
 
@@ -269,12 +269,12 @@ The **Run PowerShell Script** task sequence step now includes the following impr
 
 - To include the script parameters in the task sequence log, set the task sequence variable **OSDLogPowerShellParameters** to **TRUE**. By default, the parameters aren't in the log.  
 
-- Other improvements that provide similar functionality as the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step. For example, specify alternate user credentials or specify a time-out.
+- Other improvements that provide similar functionality as the [Run Command Line](../../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) step. For example, specify alternate user credentials or specify a time-out.
 
 > [!Important]  
 > To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-For more information, see [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript).
+For more information, see [Run PowerShell Script](../../../osd/understand/task-sequence-steps.md#BKMK_RunPowerShellScript).
 
 ### Other improvements to OS deployment
 
@@ -287,7 +287,7 @@ This version includes the following improvements to OS deployment:
 
 - When you set the **OSDDoNotLogCommand** task sequence variable to true, now it also hides the command line from the Run Command Line step in the log file. It previously only masked the program name from the Install Package step in smsts.log.<!--3654172-->  
 
-- When you enable a PXE responder on a distribution point without Windows Deployment Service, it can now be on the same server as the DHCP service. <!--3734270--> For more information, see [Configure at least one distribution point to accept PXE requests](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network#BKMK_Configure).
+- When you enable a PXE responder on a distribution point without Windows Deployment Service, it can now be on the same server as the DHCP service. <!--3734270--> For more information, see [Configure at least one distribution point to accept PXE requests](../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md#BKMK_Configure).
 
 
 ## <a name="bkmk_userxp"></a> Software Center
@@ -299,16 +299,16 @@ Sometimes users don't see the Windows toast notification about a restart or requ
 
 Now when deployments need a restart or software changes are required, you have the option of using a more intrusive dialog window.
 
-For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact)
+For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact)
 
 ### Configure user device affinity in Software Center
 
 <!--3485366-->
-With [Software Center infrastructure improvements](/sccm/core/plan-design/changes/whats-new-in-version-1806#software-center-infrastructure-improvements) starting in version 1806, the application catalog site server roles are no longer required for most scenarios. Some customers still relied upon the application catalog to allow users to set their primary device for user device affinity.
+With [Software Center infrastructure improvements](whats-new-in-version-1806.md#software-center-infrastructure-improvements) starting in version 1806, the application catalog site server roles are no longer required for most scenarios. Some customers still relied upon the application catalog to allow users to set their primary device for user device affinity.
 
 Now users can set their primary device in Software Center. This action makes them a primary user of the device in Configuration Manager.
 
-For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
+For more information, see [Link users and devices with user device affinity](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
 ### Configure default views in Software Center
 
@@ -325,7 +325,7 @@ This version of Configuration Manager further iterates on how you can customize 
 
 Specify these settings in the **Software Center** group of client settings.
 
-For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#bkmk_swctr_defaults).
+For more information, see [About client settings](../../clients/deploy/about-client-settings.md#bkmk_swctr_defaults).
 
 
 ## <a name="bkmk_sum"></a> Software updates
@@ -333,11 +333,11 @@ For more information, see [About client settings](/sccm/core/clients/deploy/abou
 ### Specify priority for feature updates in Windows 10 servicing
 
 <!--3734525-->
-Adjust the priority with which clients install a feature update through [Windows 10 servicing](/sccm/osd/deploy-use/manage-windows-as-a-service). By default, clients now install feature updates with higher processing priority.
+Adjust the priority with which clients install a feature update through [Windows 10 servicing](../../../osd/deploy-use/manage-windows-as-a-service.md). By default, clients now install feature updates with higher processing priority.
 
 Use client settings to configure this option. In the **Software Updates** group, configure the following setting: **Specify thread priority for feature updates**.
 
-For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-updates).
+For more information, see [About client settings](../../clients/deploy/about-client-settings.md#software-updates).
 
 
 ## <a name="bkmk_o365"></a> Office management
@@ -353,7 +353,7 @@ First, [find your Office 365 tenant ID](https://docs.microsoft.com/onedrive/find
 
 To create and deploy a OneDrive for Business profile, in the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings**, and select the **OneDrive for Business Profiles** node.  
 
-For more information, see the Redirect Windows known folders to OneDrive section in the [OneDrive for Business Profiles](/sccm/compliance/deploy-use/onedrive-profile) article.
+For more information, see the Redirect Windows known folders to OneDrive section in the [OneDrive for Business Profiles](../../../compliance/deploy-use/onedrive-profile.md) article.
 
 ### Integration for Office 365 ProPlus readiness
 
@@ -362,21 +362,21 @@ Use Configuration Manager to identify devices with high confidence that are read
 
 The existing Office 365 client management dashboard now includes a new tile, **Office 365 ProPlus Upgrade Readiness**.
 
-For more information, see [Office 365 client management dashboard](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness)
+For more information, see [Office 365 client management dashboard](../../../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness)
 
 ### Additional languages for Office 365 updates
 
 <!--3555955-->
 Configuration Manager now supports all supported languages for Office 365 client updates. The update workflow now separates the 38 languages for **Windows Update** from the numerous languages for **Office 365 Client Update**.
 
-For more information, see [Manage Office 365 updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates#bkmk_o365_lang)
+For more information, see [Manage Office 365 updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_o365_lang)
 
 ### Office products on lifecycle dashboard
 
 <!--3556026-->
 The product lifecycle dashboard now includes information for installed versions of Office 2003 through Office 2016. Data shows up after the site runs the lifecycle summarization task, which is every 24 hours.
 
-For more information, see [Use the Product Lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard).
+For more information, see [Use the Product Lifecycle dashboard](../../clients/manage/asset-intelligence/product-lifecycle-dashboard.md).
 
 
 ## <a name="bkmk_pod"></a> Phased deployments
@@ -386,7 +386,7 @@ For more information, see [Use the Product Lifecycle dashboard](/sccm/core/clien
 <!--3555949-->
 Phased deployments now have their own dedicated monitoring node. This node makes it easier to identify phased deployments that you created and then navigate to the phased deployment monitoring view. In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Phased Deployments** node. It shows the list of phased deployments.
 
-For more information, see [Phased deployment monitoring view](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_monitor).
+For more information, see [Phased deployment monitoring view](../../../osd/deploy-use/manage-monitor-phased-deployments.md#bkmk_monitor).
 
 ### Improvement to phased deployment success criteria
 
@@ -395,7 +395,7 @@ Specify additional criteria for the success of a phase in a phased deployment. I
 
 Create a phased deployment for a task sequence, software update, or application. Then on the Settings page of the wizard, select the following option as the criteria for success of the first phase: **Number of devices successfully deployed**.
 
-For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).
+For more information, see [Create phased deployments](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md).
 
 
 ## <a name="bkmk_admin"></a> Configuration Manager console
@@ -411,7 +411,7 @@ Based on customer feedback at the Midwest Management Summit (MMS) Desert Edition
 - Views sort by integer values in the **Deployments** node of the **Monitoring** workspace
 - Move the warning for a large number of results
 
-For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips).
+For more information, see [Using the Configuration Manager console](../../servers/manage/admin-console.md#tips).
 
 ### Configuration Manager console notifications
 
@@ -423,42 +423,42 @@ To keep you better informed so that you can take the appropriate action, the Con
 
 This notification is a bar at the top of the console window below the ribbon. It replaces the previous experience when Configuration Manager updates are available. These in-console notifications still display critical information, but don't interfere with your work in the console. You can't dismiss critical notifications. The console displays all notifications in a new notification area of the title bar.
 
-For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console).
+For more information, see [Using the Configuration Manager console](../../servers/manage/admin-console.md).
 
 ### Confirmation of console feedback
 
 <!--3556010-->
-When you send [feedback](/sccm/core/understand/find-help#product-feedback) in the Configuration Manager console, it now shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier.
+When you send [feedback](../../understand/find-help.md#product-feedback) in the Configuration Manager console, it now shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier.
 
-For more information, see [Product feedback](/sccm/core/understand/find-help#bkmk_feedbackid).
+For more information, see [Product feedback](../../understand/find-help.md#bkmk_feedbackid).
 
 ### View recently connected consoles
 
 <!--3699367-->
 You can now view the most recent connections for the Configuration Manager console. The view includes active connections and those consoles that recently connected. In the Configuration Manager console, go to the **Administration** workspace, expand **Security**, and select the **Console Connections** node.
 
-For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#bkmk_viewconnected).
+For more information, see [Using the Configuration Manager console](../../servers/manage/admin-console.md#bkmk_viewconnected).
 
 ### In-console documentation dashboard
 
 <!--3556019, fka 1357546-->
 There's a new **Documentation** node in the new **Community** workspace. This node includes up-to-date information about Configuration Manager documentation and support articles.
 
-For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#bkmk_doc-dashboard).
+For more information, see [Using the Configuration Manager console](../../servers/manage/admin-console.md#bkmk_doc-dashboard).
 
 ### Search device views using MAC address
 
 <!--3600878-->
 You can now search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria.
 
-For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips).
+For more information, see [Using the Configuration Manager console](../../servers/manage/admin-console.md#tips).
 
 ### Use .NET 4.7 for improved console accessibility
 
 <!-- SCCMDocs-pr issue #3228 -->
 To improve the accessibility features of the Configuration Manager console, update .NET to version 4.7 or later on the computer running the console.
 
-For more information, see [Accessibility features in Configuration Manager](/sccm/core/understand/accessibility-features).
+For more information, see [Accessibility features in Configuration Manager](../../understand/accessibility-features.md).
 
 ### Changes to console setup process
 
@@ -470,7 +470,7 @@ There are new components required when installing the Configuration Manager cons
 - ConfigMgr.AC_Extension.i386.cab
 - ConfigMgr.AC_Extension.amd64.cab
 
-When you install or update a site server, it copies these installation files and supported language packs for the site to the **Tools\ConsoleSetup** subfolder. For more information, see [Install the Configuration Manager console](/sccm/core/servers/deploy/install/install-consoles).
+When you install or update a site server, it copies these installation files and supported language packs for the site to the **Tools\ConsoleSetup** subfolder. For more information, see [Install the Configuration Manager console](../../servers/deploy/install/install-consoles.md).
 
 
 ## Other updates
@@ -491,21 +491,21 @@ The following additional hotfixes are available to address specific issues:
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
 
 > [!Note]  
-> Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](/sccm/core/servers/manage/updates#bkmk_supersede).
+> Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
 -->
 
 
 ## Next steps
 
-When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates) and [Checklist for installing update 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902).
+When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 1902](../../servers/manage/checklist-for-installing-update-1902.md).
 
 > [!TIP]  
 > To install a new site, use a baseline version of Configuration Manager.  
 >
 > Learn more about:    
-> - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
-> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)  
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md)  
+> - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)  
 
-For known, significant issues, see the [Release notes](/sccm/core/servers/deploy/install/release-notes).
+For known, significant issues, see the [Release notes](../../servers/deploy/install/release-notes.md).
 
-After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist).
+After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-1902.md#post-update-checklist).

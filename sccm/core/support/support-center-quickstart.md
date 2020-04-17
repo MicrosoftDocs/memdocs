@@ -28,7 +28,7 @@ Create a complete *troubleshooting bundle* file (.zip) that captures the client 
 
 - Local administrative rights to a Configuration Manager client  
 
-- The Support Center installer. This file is on the site server at `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`. For more information, see [Support Center - Install](/sccm/core/support/support-center#install).  
+- The Support Center installer. This file is on the site server at `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`. For more information, see [Support Center - Install](support-center.md#install).  
 
 
 

@@ -21,7 +21,7 @@ ROBOTS: NOINDEX
 
 This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1806. You can install this version to update and add new capabilities to your technical preview site. 
 
-Review the [Technical Preview](/sccm/core/get-started/technical-preview) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
+Review the [Technical Preview](technical-preview.md) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
 
 
 <!--  Known Issues Template
@@ -49,7 +49,7 @@ ERROR: Failed to process configuration manager update.
 This issue occurs in this release when the content library is in a remote location.
 
 #### Workaround
-Move the content library to a drive local to the site server. For more information, see [Configure a remote content library for the site server](/sccm/core/get-started/capabilities-in-technical-preview-1804#configure-a-remote-content-library-for-the-site-server). 
+Move the content library to a drive local to the site server. For more information, see [Configure a remote content library for the site server](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server). 
 
 
 
@@ -73,7 +73,7 @@ SCUP continues to support other catalogs and scenarios. The list of catalogs in 
 
 
 ### Prerequisites
-- Set up software updates management, with an HTTPS-enabled software update point. For more information, see [Prepare for software updates management](/sccm/sum/get-started/prepare-for-software-updates-management).  
+- Set up software updates management, with an HTTPS-enabled software update point. For more information, see [Prepare for software updates management](../../sum/get-started/prepare-for-software-updates-management.md).  
   - The software update point must be on the site server for this feature in this release. <!--515810--> 
 
     > [!Tip]  
@@ -83,7 +83,7 @@ SCUP continues to support other catalogs and scenarios. The list of catalogs in 
 
 - Sufficient disk space on the software update point, WSUSContent folder, to store the source binary content for third-party software updates. The amount of required storage varies based on the vendor, types of updates, and specific updates that you publish for deployment. If you need to move the WSUSContent folder to another drive with more free space, see the WSUS support team blog post [How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/).  
 
-- Enable and deploy the client setting [Enable third party software updates](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates) in the **Software Updates** group.  
+- Enable and deploy the client setting [Enable third party software updates](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) in the **Software Updates** group.  
 
 - The site server requires internet access to download.microsoft.com over HTTPS port 443. The third-party software update synchronization service currently runs on the site server. This service updates the list of available third-party catalogs, downloads the catalogs when you subscribe, and downloads the updates when published. Configure internet proxy settings, if necessary, on the **Proxy** tab of the Site System role properties of the site server computer.  
 
@@ -99,7 +99,7 @@ Perform the following steps *once per hierarchy* to enable and set up the featur
 
 2. Select the top-level site in the hierarchy. In the ribbon, click **Configure Site Components**, and select **Software Update Point**.  
 
-3. Switch to the **Third Party Updates** tab. Select the option to **Enable third-party software updates**. For more information on the certificate options, see [Improvements for enabling third-party software update support](/sccm/core/get-started/capabilities-in-technical-preview-1805#improvements-for-enabling-third-party-software-update-support).  
+3. Switch to the **Third Party Updates** tab. Select the option to **Enable third-party software updates**. For more information on the certificate options, see [Improvements for enabling third-party software update support](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support).  
 
    > [!Note]  
    > If you use the default option for Configuration Manager to manage this certificate, a new certificate of type **Third-party WSUS Signing** is created in the **Certificates** node under **Security** in the **Administration** workspace.  
@@ -122,11 +122,11 @@ Perform the following steps for *each third-party catalog* to which you want to 
    > [!Tip]  
    > After initial subscription, the catalog should start to download immediately. It then resyncs every 24 hours in this release. If you don't want to wait for the catalog to automatically download, click **Sync now** in the ribbon.  
    > 
-   > After the catalog is downloaded, the product metadata must be synchronized to the software update point. For more information on this process as well as how to manually initiate, see [Synchronize software updates](/sccm/sum/get-started/synchronize-software-updates). At this point, you can see the third-party updates in the **All Updates** node. 
+   > After the catalog is downloaded, the product metadata must be synchronized to the software update point. For more information on this process as well as how to manually initiate, see [Synchronize software updates](../../sum/get-started/synchronize-software-updates.md). At this point, you can see the third-party updates in the **All Updates** node. 
 
-5. Next, configure the software update point **Products** for the third-party catalog to which you subscribed. For more information, see [Configure classifications and products to synchronize](/sccm/sum/get-started/configure-classifications-and-products). After the product criteria changes, software update synchronization must occur again.
+5. Next, configure the software update point **Products** for the third-party catalog to which you subscribed. For more information, see [Configure classifications and products to synchronize](../../sum/get-started/configure-classifications-and-products.md). After the product criteria changes, software update synchronization must occur again.
 
-Before you can see compliance results from clients, they need to scan and evaluate updates. You can manually trigger this cycle from the Configuration Manager control panel on a client by running the **Software Updates Scan Cycle** action. For more information on the process, see [Software updates introduction](/sccm/sum/understand/software-updates-introduction).
+Before you can see compliance results from clients, they need to scan and evaluate updates. You can manually trigger this cycle from the Configuration Manager control panel on a client by running the **Software Updates Scan Cycle** action. For more information on the process, see [Software updates introduction](../../sum/understand/software-updates-introduction.md).
 
 
 #### Phase 3: Deploy third-party software updates
@@ -142,17 +142,17 @@ Perform the following steps for *any third-party software updates* you want to d
    > [!Note]  
    > When you publish third-party software update content, any certificates used to sign the content are added to the site. These certificates are of type **Third-party Software Updates Content**. You can manage them from the **Certificates** node under **Security** in the **Administration** workspace.  
 
-3. Deploy the updates using the existing software updates management process. For more information, see [Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates). On the **Download Locations** page of the Deploy Software Updates Wizard, select the default option to **Download software updates from the internet**. In this scenario, the content is already published to the software update point, which is used to download the content for the deployment package.
+3. Deploy the updates using the existing software updates management process. For more information, see [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md). On the **Download Locations** page of the Deploy Software Updates Wizard, select the default option to **Download software updates from the internet**. In this scenario, the content is already published to the software update point, which is used to download the content for the deployment package.
 
 
 ### Monitoring progress of third-party software updates
-Synchronization of third-party software updates is handled by the SMS_ISVUPDATES_SYNCAGENT component on the site server. You can view status messages from this component, or see more detailed status in the SMS_ISVUPDATES_SYNCAGENT.log. This log is on the site server in the **Logs** subfolder of the site installation directory. By default this path is `C:\Program Files\Microsoft Configuration Manager\Logs`. For more information on monitoring the general software update management process, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates).
+Synchronization of third-party software updates is handled by the SMS_ISVUPDATES_SYNCAGENT component on the site server. You can view status messages from this component, or see more detailed status in the SMS_ISVUPDATES_SYNCAGENT.log. This log is on the site server in the **Logs** subfolder of the site installation directory. By default this path is `C:\Program Files\Microsoft Configuration Manager\Logs`. For more information on monitoring the general software update management process, see [Monitor software updates](../../sum/deploy-use/monitor-software-updates.md).
 
 
 ### Known issues
 - The third-party software update synchronization service doesn't support the software update point configured to use a **WSUS Server Connection Account**. If this account is configured on the **Proxy and Account Settings** tab of the Software update point Properties page, you'll see the following error in the SMS_ISVUPDATES_SYNCAGENT.log:  
 `WSUS access account appears to be configured, it is not yet supported for third party updates sync.`  
-For more information on this account, see [Software Update Point Connection Account](/sccm/core/plan-design/hierarchy/accounts#software-update-point-connection-account).<!--515492-->  
+For more information on this account, see [Software Update Point Connection Account](../plan-design/hierarchy/accounts.md#software-update-point-connection-account).<!--515492-->  
 
 - Don't mix the use of other tools such as SCUP with this new integrated third-party software update feature. The third-party software update synchronization service can't publish content to metadata-only updates that were added to WSUS by another application, tool, or script, such as SCUP. The **Publish third-party software update content** action fails on these updates. If you need to deploy third-party updates that this feature doesn't yet support, use your existing process in full for deploying those updates.<!--515497-->  
 
@@ -160,7 +160,7 @@ For more information on this account, see [Software Update Point Connection Acco
 
 ## Configure Windows Defender SmartScreen settings for Microsoft Edge
 <!--1353701-->
-This release adds three settings for [Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) to the [Microsoft Edge browser compliance settings policy](/sccm/compliance/deploy-use/browser-profiles). The policy now includes the following additional settings on the **SmartScreen Settings** page:
+This release adds three settings for [Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) to the [Microsoft Edge browser compliance settings policy](../../compliance/deploy-use/browser-profiles.md). The policy now includes the following additional settings on the **SmartScreen Settings** page:
 - **Allow SmartScreen**: Specifies whether Windows Defender SmartScreen is allowed. For more information, see the [AllowSmartScreen browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
 - **Users can override SmartScreen prompt for sites**: Specifies whether users can override the Windows Defender SmartScreen Filter warnings about potentially malicious websites. For more information, see the [PreventSmartScreenPromptOverride browser policy](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
 - **Users can override SmartScreen prompt for files**: Specifies whether users can override the Windows Defender SmartScreen Filter warnings about downloading unverified files. For more information, see the [PreventSmartScreenPromptOverrideForFiles browser policy](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
@@ -180,7 +180,7 @@ You can now transition the Office 365 workload from Configuration Manager to Mic
 There is also a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Office 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application, thus don't install Office 365 deployed via Configuration Manager.
 
 ### Known issue
-- This workload transition currently only applies to Office 365 deployments. Configuration Manager continues to manage Office 365 updates.<!--510876--> For more information including a possible workaround, see the Configuration Manager version 1802 release note [Changing Office 365 client setting doesn’t apply](/sccm/core/servers/deploy/install/release-notes).
+- This workload transition currently only applies to Office 365 deployments. Configuration Manager continues to manage Office 365 updates.<!--510876--> For more information including a possible workaround, see the Configuration Manager version 1802 release note [Changing Office 365 client setting doesn’t apply](../servers/deploy/install/release-notes.md).
 
 
 
@@ -221,11 +221,11 @@ You can now deploy software updates to devices without first downloading and dis
 ### Try it out!
  Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
 
-1. Start a software update deployment per normal. For more information, see [Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates).
+1. Start a software update deployment per normal. For more information, see [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md).
 2. In the Deploy Software Updates Wizard, on the **Deployment Package** page, select the new option for **No deployment package**.
 
 ### Known issues
-- The icon for an update deployed with this setting incorrectly displays with a red X as if the update is invalid. For more information, see [Icons used for software updates](/sccm/sum/understand/software-updates-icons). <!--515556-->  
+- The icon for an update deployed with this setting incorrectly displays with a red X as if the update is invalid. For more information, see [Icons used for software updates](../../sum/understand/software-updates-icons.md). <!--515556-->  
 - This setting is only integrated with the Deploy Software Updates Wizard. It isn't currently available with automatic deployment rules. <!--515558-->  
 
 
@@ -241,7 +241,7 @@ The Office Customization Tool is now integrated with the Office 365 Installer in
  Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, and select the **Office 365 Client Management** node.
-2. Click the **Office 365 Installer** tile in the dashboard to launch the Office 365 Client Installation Wizard. For more information, see [Deploy Office 365 apps](/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-apps).
+2. Click the **Office 365 Installer** tile in the dashboard to launch the Office 365 Client Installation Wizard. For more information, see [Deploy Office 365 apps](../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
 3. On the **Office Setting** page, click **Go To Office Web Page**. Use the online Office Customization Tool to specify settings for this deployment. 
 4. Click **Submit** in the upper right corner when complete. Finish the Office 365 Client Installation Wizard.
 
@@ -252,7 +252,7 @@ This release includes the following improvements to the cloud management gateway
 
 ### Simplified client bootstrap command line
 <!--1358215-->
-When installing the Configuration Manager client on the internet via a CMG, fewer command-line properties are now required. For more information on one example of this scenario, see the [Command line to install Configuration Manager client](/sccm/comanage/how-to-prepare-Win10#install-the-configuration-manager-client) when preparing for co-management. 
+When installing the Configuration Manager client on the internet via a CMG, fewer command-line properties are now required. For more information on one example of this scenario, see the [Command line to install Configuration Manager client](../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client) when preparing for co-management. 
 
 The following command-line properties are required in all scenarios:
 - CCMHOSTNAME  
@@ -268,7 +268,7 @@ The following property is required if the client will roam back to the intranet:
 The following example includes all of the above properties:   
 `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
 
-For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).
+For more information, see [Client installation properties](../clients/deploy/about-client-installation-properties.md).
 
 ### Download content from a CMG
 <!--1358651-->
@@ -276,7 +276,7 @@ Previously, you had to deploy a cloud distribution point and CMG as separate rol
 
 ### Trusted root certificate isn't required with Azure AD
 <!--503899-->
-When you create a CMG, you're no longer required to provide a [trusted root certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_cmgroot) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard.
+When you create a CMG, you're no longer required to provide a [trusted root certificate](../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_cmgroot) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard.
 
 > [!Important]  
 > If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
@@ -285,7 +285,7 @@ When you create a CMG, you're no longer required to provide a [trusted root cert
 
 ## Improvements to secure client communications
 <!--1358278,1358279-->
-This release continues to iterate on [improved secure client communications](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications) by removing additional dependencies on the network access account. When you enable the new site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the following scenarios don't require a network access account to download content from a distribution point:  
+This release continues to iterate on [improved secure client communications](capabilities-in-technical-preview-1805.md#improved-secure-client-communications) by removing additional dependencies on the network access account. When you enable the new site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the following scenarios don't require a network access account to download content from a distribution point:  
 
 - Task sequences running from boot media or PXE
 - Task sequences running from Software Center  
@@ -296,7 +296,7 @@ These task sequences can be for OS deployment or custom. It is also supported fo
 
 ## Software Center infrastructure improvements
 <!--1358309-->
-Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](../servers/deploy/configure/boundary-groups.md#management-points).
 
 ### Try it out!
  Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
@@ -306,7 +306,7 @@ Application catalog roles are no longer required to display user-available appli
 3. Use Software Center as a targeted user to browse for, request, and install the application.
 
 ### Known issue
-- If you use an Azure Active Directory-joined client with this feature, don't configure the site to **Use Configuration Manager-generated certificates for HTTP site systems**. It currently conflicts with this feature.<!--515846--> For more information on this setting, see [improved secure client communications](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).
+- If you use an Azure Active Directory-joined client with this feature, don't configure the site to **Use Configuration Manager-generated certificates for HTTP site systems**. It currently conflicts with this feature.<!--515846--> For more information on this setting, see [improved secure client communications](capabilities-in-technical-preview-1805.md#improved-secure-client-communications).
 
 
 
@@ -315,7 +315,7 @@ Application catalog roles are no longer required to display user-available appli
 You can now provision an application with a Windows app package for all users on the device. One common example of this scenario is provisioning an app from the Microsoft Store for Business and Education, like Minecraft: Education Edition, to all devices used by students in a school. Previously, Configuration Manager only supported installing these applications per user. After signing in to a new device, a student would have to wait to access an app. Now when the app is provisioned to the device for all users, they can be productive more quickly.
 
 > [!Important]  
-> Be careful with installing, provisioning, and updating different versions of the same Windows app package on a device, which may cause unexpected results. This behavior may occur when using Configuration Manager to provision the app, but then allowing users to update the app from the Microsoft Store. For more information, see the next step guidance when you [Manage apps from the Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#next-steps).  
+> Be careful with installing, provisioning, and updating different versions of the same Windows app package on a device, which may cause unexpected results. This behavior may occur when using Configuration Manager to provision the app, but then allowing users to update the app from the Microsoft Store. For more information, see the next step guidance when you [Manage apps from the Microsoft Store for Business](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).  
 
 When provisioning an offline licensed app, Configuration Manager doesn't allow Windows to automatically update it from the Microsoft Store.  
 
@@ -340,7 +340,7 @@ When provisioning an offline licensed app, Configuration Manager doesn't allow W
 
 ## Improvements to the Surface dashboard
 <!--1358654-->
-This release includes the following improvements to the [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard):
+This release includes the following improvements to the [Surface dashboard](../clients/manage/surface-device-dashboard.md):
 - The Surface dashboard now displays a list of relevant devices when graph sections are selected.
    - Clicking on the **Percent of Surface Devices** tile opens a list of Surface devices.
    - Clicking on a bar in the **Top Five Firmware Versions** tile opens a list of Surface devices with that specific firmware version.
@@ -350,9 +350,9 @@ This release includes the following improvements to the [Surface dashboard](/scc
 
 ## Hardware inventory default unit revision
 <!--514442-->
-In [Configuration Manager version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710#site-infrastructure), the default unit used in many reporting views changed from megabytes (MB) to gigabytes (GB). Due to [improvements to hardware inventory for large integer values](/sccm/core/get-started/capabilities-in-technical-preview-1805#improvement-to-hardware-inventory-for-large-integer-values), and based on customer feedback, this default unit is now MB again.
+In [Configuration Manager version 1710](../plan-design/changes/whats-new-in-version-1710.md#site-infrastructure), the default unit used in many reporting views changed from megabytes (MB) to gigabytes (GB). Due to [improvements to hardware inventory for large integer values](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values), and based on customer feedback, this default unit is now MB again.
 
 
 
 ## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).    

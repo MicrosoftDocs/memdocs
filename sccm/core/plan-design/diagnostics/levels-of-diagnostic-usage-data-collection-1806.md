@@ -17,7 +17,7 @@ ROBOTS: NOINDEX
 
 *Applies to: Configuration Manager (current branch)*
 
-The following sections provide additional detail about data collected at each level. For more information on the levels and how to change them, see [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview).
+The following sections provide additional detail about data collected at each level. For more information on the levels and how to change them, see [Levels of diagnostic usage data](levels-overview.md).
 
 Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[Removed]***, or ***[Moved]***.
 

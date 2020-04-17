@@ -22,7 +22,7 @@ The site server and any of the other site systems can fail and cause a loss of t
 
 Part of your planning process should include understanding the impact on the service that you provide your organization. Because each site system in the site provides different functionality, the impact of a failure on the site differs, depending on the role of the site system that failed. 
 
-Use [high availability options](/sccm/core/servers/deploy/configure/high-availability-options) to help mitigate the failure of any single system. Also plan for and practice a [backup and recovery](/sccm/core/servers/manage/backup-and-recovery) strategy to reduce the amount of time the service is unavailable.
+Use [high availability options](../deploy/configure/high-availability-options.md) to help mitigate the failure of any single system. Also plan for and practice a [backup and recovery](backup-and-recovery.md) strategy to reduce the amount of time the service is unavailable.
 
 The following sections describe the impact when the specified site system isn't operational:
 

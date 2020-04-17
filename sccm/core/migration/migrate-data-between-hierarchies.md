@@ -47,12 +47,12 @@ The following video discusses and demonstrates two common [migration scenarios](
 #### Source hierarchy
 A hierarchy that runs a supported version of Configuration Manager and has data that you want to migrate. When you set up migration, you identify the source hierarchy when you specify the top-level site of a source hierarchy. After you specify a source hierarchy, the top-level site of the destination hierarchy gathers data from the database of the designated source site to identify the data that you can migrate. 
 
-For more information, see [Source hierarchies](/sccm/core/migration/planning-a-source-hierarchy-strategy#BKMK_Source_Hierarchies).
+For more information, see [Source hierarchies](planning-a-source-hierarchy-strategy.md#BKMK_Source_Hierarchies).
 
 #### Source sites
 The sites in the source hierarchy that have data that you can migrate to your destination hierarchy. 
 
-For more information, see [Source sites](/sccm/core/migration/planning-a-source-hierarchy-strategy#BKMK_Source_Sites).
+For more information, see [Source sites](planning-a-source-hierarchy-strategy.md#BKMK_Source_Sites).
 
 #### Destination hierarchy
 A Configuration Manager (current branch) hierarchy where migration runs to import data from a source hierarchy.
@@ -60,39 +60,39 @@ A Configuration Manager (current branch) hierarchy where migration runs to impor
 #### Data gathering
 The ongoing process of identifying the information in a source hierarchy that you can migrate to your destination hierarchy. Configuration Manager checks the source hierarchy on a schedule. This process identifies any changes to information in the source hierarchy that you previously migrated and that you might want to update in the destination hierarchy.
 
-For more information, see [Data gathering](/sccm/core/migration/planning-a-source-hierarchy-strategy#BKMK_Data_Gathering).
+For more information, see [Data gathering](planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering).
 
 #### Migration jobs
 The process of configuring the specific objects to migrate, and then managing the migration of those objects to the destination hierarchy.
 
-For more information, see [Planning a migration job strategy](/sccm/core/migration/planning-a-migration-job-strategy).
+For more information, see [Planning a migration job strategy](planning-a-migration-job-strategy.md).
 
 #### Client migration
 The process of transferring information that clients use from the database of the source site to the database of the destination hierarchy. This migration of data is then followed by an upgrade of client software on devices to the client software version from the destination hierarchy.
 
-For more information, see [Planning a client migration strategy](/sccm/core/migration/planning-a-client-migration-strategy).
+For more information, see [Planning a client migration strategy](planning-a-client-migration-strategy.md).
 
 #### Shared distribution points
 The distribution points from the source hierarchy that Configuration Manager shares with the destination hierarchy during the migration period.
 
 During the migration period, clients assigned to sites in the destination hierarchy can get content from shared distribution points.
 
-For more information, see [Share distribution points between source and destination hierarchies](/sccm/core/migration/planning-a-content-deployment-migration-strategy#About_Shared_DPs_in_Migration).
+For more information, see [Share distribution points between source and destination hierarchies](planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration).
 
 #### Monitoring migration
 The process of monitoring migration activities. You monitor migration progress and success from the **Migration** node in the **Administration** workspace.
 
-For more information, see [Planning to monitor migration activity](/sccm/core/migration/planning-to-monitor-migration-activity).
+For more information, see [Planning to monitor migration activity](planning-to-monitor-migration-activity.md).
 
 #### Stop gathering data
 The process of stopping data gathering from source sites. When you no longer have data to migrate from a source hierarchy, or if you want to pause migration-related activities, you can configure the destination hierarchy to stop gathering data from the source hierarchy.
 
-For more information, see [Data gathering](/sccm/core/migration/planning-a-source-hierarchy-strategy#BKMK_Data_Gathering).
+For more information, see [Data gathering](planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering).
 
 #### Clean up migration data
 The process of finishing migration from a source hierarchy by removing information about the migration from the destination hierarchies database.
 
-For more information, see [Planning to complete migration](/sccm/core/migration/planning-to-complete-migration).
+For more information, see [Planning to complete migration](planning-to-complete-migration.md).
 
 
 
@@ -123,7 +123,7 @@ After you migrate data, and you no longer need the source hierarchy to manage de
 - [Migration from Configuration Manager 2012 or another Configuration Manager hierarchy](#bkmk_2012)
 
 > [!NOTE]  
->  The expansion of a hierarchy that has a standalone site into a hierarchy that has a central administration site isn't categorized as a migration. For information about hierarchy expansion, see [Expand a stand-alone primary site](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_expand).  
+>  The expansion of a hierarchy that has a standalone site into a hierarchy that has a central administration site isn't categorized as a migration. For information about hierarchy expansion, see [Expand a stand-alone primary site](../servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand).  
 
 
 ### <a name="bkmk_2007"></a> Migration from Configuration Manager 2007 hierarchies  
@@ -156,12 +156,12 @@ This central security model in Configuration Manager (current branch) offers hie
 
 ## See also  
 
--   [Planning for migration to Configuration Manager](/sccm/core/migration/planning-for-migration)  
+-   [Planning for migration to Configuration Manager](planning-for-migration.md)  
 
--   [Configuring source hierarchies and source sites for migration](/sccm/core/migration/configuring-source-hierarchies-and-source-sites-for-migration)  
+-   [Configuring source hierarchies and source sites for migration](configuring-source-hierarchies-and-source-sites-for-migration.md)  
 
--   [Operations for migration](/sccm/core/migration/operations-for-migration)  
+-   [Operations for migration](operations-for-migration.md)  
 
--   [Security and privacy for migration](/sccm/core/migration/security-and-privacy-for-migration)  
+-   [Security and privacy for migration](security-and-privacy-for-migration.md)  
 
--   [Start using Configuration Manager](/sccm/core/servers/deploy/start-using)
+-   [Start using Configuration Manager](../servers/deploy/start-using.md)

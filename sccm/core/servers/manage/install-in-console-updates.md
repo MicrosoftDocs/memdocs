@@ -26,10 +26,10 @@ The site only downloads updates that apply to your infrastructure and version. T
 
     By default, Configuration Manager checks for new updates every 24 hours. Manually check for updates in the Configuration Manager console. Go to the **Administration** workspace, select the **Updates and Servicing** node, and choose **Check for Updates** in the ribbon.  
 
-- In **offline mode**, the service connection point doesn't connect to the Microsoft cloud service. To download and then import available updates, [use the Service Connection Tool](/sccm/core/servers/manage/use-the-service-connection-tool).  
+- In **offline mode**, the service connection point doesn't connect to the Microsoft cloud service. To download and then import available updates, [use the Service Connection Tool](use-the-service-connection-tool.md).  
 
 > [!NOTE]  
-> If necessary, import out-of-band fixes into your console. To do so, use the [update registration tool](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes). These out-of-band fixes supplement the updates you get when you synchronize with the Microsoft cloud service.  
+> If necessary, import out-of-band fixes into your console. To do so, use the [update registration tool](use-the-update-registration-tool-to-import-hotfixes.md). These out-of-band fixes supplement the updates you get when you synchronize with the Microsoft cloud service.  
 
 After updates synchronize, view them in the Configuration Manager console. Go to the **Administration** workspace and select the **Updates and Servicing** node.  
 
@@ -39,13 +39,13 @@ After updates synchronize, view them in the Configuration Manager console. Go to
 
 Before you configure the service connection point, understand and plan for its additional uses. The following uses might affect how you configure this site system role:  
 
-- The site uses the service connection point to upload usage information about your site. This information helps the Microsoft cloud service identify the updates that are available for the current version of your infrastructure. For more information, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).  
+- The site uses the service connection point to upload usage information about your site. This information helps the Microsoft cloud service identify the updates that are available for the current version of your infrastructure. For more information, see [Diagnostics and usage data](../../plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
 To better understand what happens when updates are downloaded, see the following flowcharts:  
 
-- [Flowchart - Download updates](/sccm/core/servers/manage/download-updates-flowchart)  
+- [Flowchart - Download updates](download-updates-flowchart.md)  
 
-- [Flowchart - Update replication](/sccm/core/servers/manage/update-replication-flowchart)  
+- [Flowchart - Update replication](update-replication-flowchart.md)  
 
 ## Assign permissions to view and manage updates and features
 
@@ -91,13 +91,13 @@ Review the following steps before you install an update from within the Configur
 
 Review the applicable update checklist for actions to take before you start the update:
 
-- [Checklist for installing update 2002](/sccm/core/servers/manage/checklist-for-installing-update-2002)
+- [Checklist for installing update 2002](checklist-for-installing-update-2002.md)
 
-- [Checklist for installing update 1910](/sccm/core/servers/manage/checklist-for-installing-update-1910)  
+- [Checklist for installing update 1910](checklist-for-installing-update-1910.md)  
 
-- [Checklist for installing update 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906)  
+- [Checklist for installing update 1906](checklist-for-installing-update-1906.md)  
 
-- [Checklist for installing update 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902)
+- [Checklist for installing update 1902](checklist-for-installing-update-1902.md)
 
 ### <a name="bkmk_step2"></a> Step 2: Run the prerequisite checker before installing an update  
 
@@ -136,7 +136,7 @@ When you're ready to install updates from within the Configuration Manager conso
 
 Install the update outside of normal business hours for each site to minimize the effect on business operations. The update installation might include actions like reinstalling site components and site system roles.  
 
-- Child primary sites automatically start the update after the central administration site completes installation of the update. This process is by default and recommended. To control when a primary site installs updates, use [Service windows for site servers](/sccm/core/servers/manage/service-windows).  
+- Child primary sites automatically start the update after the central administration site completes installation of the update. This process is by default and recommended. To control when a primary site installs updates, use [Service windows for site servers](service-windows.md).  
 
 - After the primary parent site update is complete, manually update secondary sites from within the Configuration Manager console. Automatic update of secondary site servers isn't supported.  
 
@@ -160,7 +160,7 @@ You're presented with the Updates Wizard that displays a list of the product are
 
     In both the **Administration** and **Monitoring** workspaces, the Updates and Servicing node includes a button on the ribbon named **Ignore prerequisite warnings**. This button becomes available when an update package fails to complete installation due to prerequisite check warnings. For example, you install an update without using the option to ignore prerequisite warnings (from within the Updates Wizard). The update installation stops with a state of prerequisite warning but no errors. Later, you select **Ignore prerequisite warnings** in the ribbon. This action triggers an automatic continuation of that update installation, which ignores prerequisite warnings. When you use this option, the update installation automatically continues after a few minutes.  
 
-- When an update applies to the Configuration Manager client, choose to test the client update with a limited set of clients. For more information, see [How to test client upgrades in a pre-production collection](/sccm/core/clients/manage/upgrade/test-client-upgrades).  
+- When an update applies to the Configuration Manager client, choose to test the client update with a limited set of clients. For more information, see [How to test client upgrades in a pre-production collection](../../clients/manage/upgrade/test-client-upgrades.md).  
 
 #### 2. During the update installation
 
@@ -168,7 +168,7 @@ As part of the update installation, Configuration Manager does the following act
 
 - Reinstalls any affected components, like site system roles or the Configuration Manager console.  
 
-- Manages updates to clients based on the selections that you made for client piloting, and for [automatic client upgrades](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate).  
+- Manages updates to clients based on the selections that you made for client piloting, and for [automatic client upgrades](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate).  
 
 - Site system servers generally don't need to restart as part of the update. If a role uses .NET, and the package updates that prerequisite component, then the site system may restart.  
 
@@ -213,7 +213,7 @@ After the first site update completes installation:
 
 - Manually update secondary sites from within the Configuration Manager console. For more information, see [start the update installation at a secondary site](#bkmk_secondary).  
 
-- Until all sites in your hierarchy update to the new version, your hierarchy operates in a mixed version mode. For more information, see [Interoperability between different versions](/sccm/core/plan-design/hierarchy/interoperability-between-different-versions).  
+- Until all sites in your hierarchy update to the new version, your hierarchy operates in a mixed version mode. For more information, see [Interoperability between different versions](../../plan-design/hierarchy/interoperability-between-different-versions.md).  
 
 #### 5. Update Configuration Manager consoles
 
@@ -271,7 +271,7 @@ The post installation tasks include:
   - Reinstallation of this service should complete quickly.
 
     > [!Note]
-    > Some Configuration Manager site roles share the client framework. For example, the management point and pull distribution point. When these roles update, the client version on these servers updates at the same time. For more information, see [How to upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers).
+    > Some Configuration Manager site roles share the client framework. For example, the management point and pull distribution point. When these roles update, the client version on these servers updates at the same time. For more information, see [How to upgrade clients](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).
 
 - **Installing SMS_REPLICATION_CONFIGURATION_MONITOR component**
 
@@ -315,7 +315,7 @@ The post installation tasks include:
 When an update fails to install, review the in-console feedback to identify resolutions for warnings and errors. For more details, view the **ConfigMgrPrereq.log** on the site server. Before you retry the installation of an update, you must fix errors, and should fix warnings.  
 
 > [!TIP]  
-> If an update has problems downloading or replicating, use the [update reset tool](/sccm/core/servers/manage/update-reset-tool).  
+> If an update has problems downloading or replicating, use the [update reset tool](update-reset-tool.md).  
 
 When you're ready to retry the installation of an update, select the failed update, and then choose an applicable option. The update installation retry behavior depends on the node where you start the retry, and the retry option that you use.  
 
@@ -357,13 +357,13 @@ Go to the **Monitoring** workspace, and select the **Site Servicing Status** nod
 
 After the site updates, review the post-update checklist for the applicable version:  
 
-- [Post-update checklist for version 2002](/sccm/core/servers/manage/checklist-for-installing-update-2002#post-update-checklist)
+- [Post-update checklist for version 2002](checklist-for-installing-update-2002.md#post-update-checklist)
 
-- [Post-update checklist for version 1910](/sccm/core/servers/manage/checklist-for-installing-update-1910#post-update-checklist)  
+- [Post-update checklist for version 1910](checklist-for-installing-update-1910.md#post-update-checklist)  
 
-- [Post-update checklist for version 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906#post-update-checklist)  
+- [Post-update checklist for version 1906](checklist-for-installing-update-1906.md#post-update-checklist)  
 
-- [Post-update checklist for version 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist)  
+- [Post-update checklist for version 1902](checklist-for-installing-update-1902.md#post-update-checklist)  
 
 ## <a name="bkmk_options"></a> Enable optional features from updates  
 
@@ -387,37 +387,37 @@ The following features are optional in the latest version of Configuration Manag
 <!--Note to include in target articles
 
 > [!Note]  
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](install-in-console-updates.md#bkmk_options).  
 
 -->
 
-- [BitLocker management](/configmgr/protect/plan-design/bitlocker-management) <!-- 3601034,6DD56E46-C3EC-4E38-A16F-E98644BB6434 -->
-- [Synchronize collection membership results to Azure Active Directory](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->
-- [Azure Active Directory user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->
-- [Application groups](/sccm/apps/deploy-use/create-app-groups) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D-->
-- [Task sequence debugger](/sccm/osd/deploy-use/debug-task-sequence) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71-->
-- [Package conversion manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861,4E0C09AF-7FC1-4412-A8BB-166D9BCD0093-->
-- [Client apps for co-managed devices](/sccm/comanage/workloads#client-apps) (previously known as *Mobile apps for co-managed devices*) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
-- [Third-party software updates](/sccm/sum/deploy-use/third-party-software-updates)<!--1357605,1352101,1358714;B5E192AE-C81F-4348-9EF9-07A3C0FBE597-->
-- [Approve application requests for users per device](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
-- [Create and run scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
-- [Surface driver updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490,82AD973A-7CDF-4B67-A665-72875D6E099A-->
-- [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
-- [PFX create](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368,CED76B79-929C-4C45-981F-B9BCA6D38A17-->
+- [BitLocker management](../../../protect/plan-design/bitlocker-management.md) <!-- 3601034,6DD56E46-C3EC-4E38-A16F-E98644BB6434 -->
+- [Synchronize collection membership results to Azure Active Directory](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->
+- [Azure Active Directory user group discovery](../deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->
+- [Application groups](../../../apps/deploy-use/create-app-groups.md) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D-->
+- [Task sequence debugger](../../../osd/deploy-use/debug-task-sequence.md) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71-->
+- [Package conversion manager](../../../apps/pcm/package-conversion-manager.md) <!--1357861,4E0C09AF-7FC1-4412-A8BB-166D9BCD0093-->
+- [Client apps for co-managed devices](../../../comanage/workloads.md#client-apps) (previously known as *Mobile apps for co-managed devices*) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
+- [Third-party software updates](../../../sum/deploy-use/third-party-software-updates.md)<!--1357605,1352101,1358714;B5E192AE-C81F-4348-9EF9-07A3C0FBE597-->
+- [Approve application requests for users per device](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
+- [Create and run scripts](../../../apps/deploy-use/create-deploy-scripts.md) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
+- [Surface driver updates](../../../sum/get-started/configure-classifications-and-products.md) <!--1098490,82AD973A-7CDF-4B67-A665-72875D6E099A-->
+- [Cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
+- [PFX create](../../../protect/deploy-use/introduction-to-certificate-profiles.md) <!--1321368,CED76B79-929C-4C45-981F-B9BCA6D38A17-->
 - [Azure Log Analytics connector](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
-- [Windows Defender Exploit Guard policy](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468,8491D4C8-8484-46B8-BCD6-17DC2CADBAEB-->
-- [VPN for Windows 10](/sccm/protect/deploy-use/vpn-profiles) <!--1283610,EDBEBA3D-3A4D-4465-84D9-D71EB811E7F6-->
-- [Servicing a cluster-aware collection (Server groups)](/sccm/sum/deploy-use/service-a-server-group) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
-- [Windows Hello for Business](/sccm/protect/deploy-use/windows-hello-for-business-settings) (previously known as *Passport for Work*) <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
+- [Windows Defender Exploit Guard policy](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md) <!--1355468,8491D4C8-8484-46B8-BCD6-17DC2CADBAEB-->
+- [VPN for Windows 10](../../../protect/deploy-use/vpn-profiles.md) <!--1283610,EDBEBA3D-3A4D-4465-84D9-D71EB811E7F6-->
+- [Servicing a cluster-aware collection (Server groups)](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
+- [Windows Hello for Business](../../../protect/deploy-use/windows-hello-for-business-settings.md) (previously known as *Passport for Work*) <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
 
 > [!Tip]  
-> For more information on features that require consent to enable, see [pre-release features](/sccm/core/servers/manage/pre-release-features).  
+> For more information on features that require consent to enable, see [pre-release features](pre-release-features.md).  
 >
-> For more information on features that are only available in the technical preview branch, see [Technical Preview](/sccm/core/get-started/technical-preview).
+> For more information on features that are only available in the technical preview branch, see [Technical Preview](../../get-started/technical-preview.md).
 
 ## <a name="bkmk_prerelease"></a> Use pre-release features from updates
 
-The current branch includes pre-release features for early testing in a production environment. For more information, see [pre-release features](/sccm/core/servers/manage/pre-release-features).
+The current branch includes pre-release features for early testing in a production environment. For more information, see [pre-release features](pre-release-features.md).
 
 ## <a name="bkmk_faq"></a> Frequently asked questions
 

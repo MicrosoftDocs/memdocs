@@ -23,7 +23,7 @@ The information in this and the following topics is essential for helping you id
 
 When a Configuration Manager feature or capability requires more specific configurations, that information is included with the feature-specific documentation, and is supplemental to the more general configuration details.  
 
- The products and technologies that are described in the following topics are supported by Configuration Manager. However, their inclusion in this content does not imply an extension of support for any product beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager, including any products that are covered under the [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) program. For more information about Microsoft Support Lifecycles, visit the [Microsoft Support Lifecycle](https://go.microsoft.com/fwlink/p/?LinkId=208270) website. For more information about Extended Security Updates in Configuration Manager, see [Supported OS versions for clients and devices for Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#bkmk_ESU).
+ The products and technologies that are described in the following topics are supported by Configuration Manager. However, their inclusion in this content does not imply an extension of support for any product beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager, including any products that are covered under the [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) program. For more information about Microsoft Support Lifecycles, visit the [Microsoft Support Lifecycle](https://go.microsoft.com/fwlink/p/?LinkId=208270) website. For more information about Extended Security Updates in Configuration Manager, see [Supported OS versions for clients and devices for Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
 
 > [!NOTE]  
 >  For information about Microsoft support lifecycle policy, go to the Microsoft Support Lifecycle Support Policy FAQ website at [Microsoft Support Lifecycle Policy FAQ](https://go.microsoft.com/fwlink/p/?LinkId=31976).  
@@ -49,7 +49,7 @@ Learn about which operating systems can host the Configuration Manager console t
 -  [Support for SQL Server versions](../../../core/plan-design/configs/support-for-sql-server-versions.md)  
 Learn about which versions of SQL Server can host the site database and reporting database, as well as about required configurations and optional configurations that you can use.
 
--  [High-availability options](/sccm/core/servers/deploy/configure/high-availability-options)  
+-  [High-availability options](../../servers/deploy/configure/high-availability-options.md)  
 Learn about the options you can implement when designing your environment to help maintain a high level of available service for your Configuration Manager deployment.
 
 -  [Recommended hardware](../../../core/plan-design/configs/recommended-hardware.md)  

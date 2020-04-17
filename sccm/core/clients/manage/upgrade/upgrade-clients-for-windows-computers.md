@@ -28,15 +28,15 @@ Upgrade the Configuration Manager client on Windows computers using client insta
 
 - Upgrade installation  
 
-For more information, see [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
+For more information, see [How to deploy clients to Windows computers](../../deploy/deploy-clients-to-windows-computers.md).
 
-Exclude clients from upgrade by specifying an exclusion collection. For more information, see [How to exclude clients from upgrade](/sccm/core/clients/manage/upgrade/exclude-clients-windows). Excluded clients still download and run CCMSETUP, but won't upgrade.
+Exclude clients from upgrade by specifying an exclusion collection. For more information, see [How to exclude clients from upgrade](exclude-clients-windows.md). Excluded clients still download and run CCMSETUP, but won't upgrade.
 
 > [!TIP]  
 > If upgrade your server infrastructure from a previous version of Configuration Manager, complete the server upgrades before upgrading the Configuration Manager clients. This process includes installing all current branch updates. The latest current branch update contains the latest version of the client. Upgrade clients after you have installed all of the Configuration Manager updates.
 
 > [!NOTE]
-> If you plan to reassign the site for the clients during upgrade, specify the new site using the `SMSSITECODE` client.msi property. If you use the value of `AUTO` for the `SMSSITECODE`, also specify `SITEREASSIGN=TRUE`. This property allows for automatic site reassignment during upgrade. For more information, see [Client installation properties - SMSSITECODE](/sccm/core/clients/deploy/about-client-installation-properties#smssitecode).
+> If you plan to reassign the site for the clients during upgrade, specify the new site using the `SMSSITECODE` client.msi property. If you use the value of `AUTO` for the `SMSSITECODE`, also specify `SITEREASSIGN=TRUE`. This property allows for automatic site reassignment during upgrade. For more information, see [Client installation properties - SMSSITECODE](../../deploy/about-client-installation-properties.md#smssitecode).
 
 ## <a name="bkmk_autoupdate"></a> About automatic client upgrade
 
@@ -72,7 +72,7 @@ Use the following procedure to configure automatic client upgrade at the CAS. Th
 
 1. On the **Home** tab of the ribbon, in the **Sites** group, select **Hierarchy Settings**.  
 
-1. Switch to the **Client Upgrade** tab. Review the version and date of the production client. Make sure it's the version you want to use to upgrade your clients. If it's not the client version you expect, you may need to promote the pre-production client to production. For more information, see [How to test client upgrades in a pre-production collection](/sccm/core/clients/manage/upgrade/test-client-upgrades).  
+1. Switch to the **Client Upgrade** tab. Review the version and date of the production client. Make sure it's the version you want to use to upgrade your clients. If it's not the client version you expect, you may need to promote the pre-production client to production. For more information, see [How to test client upgrades in a pre-production collection](test-client-upgrades.md).  
 
 1. Select **Upgrade all clients in the hierarchy using the production client**. Select **OK** to confirm.  
 
@@ -85,9 +85,9 @@ Use the following procedure to configure automatic client upgrade at the CAS. Th
     >
     > Because of this behavior, computers that are routinely shut down may take longer to upgrade than expected if the randomly scheduled upgrade time isn't within the normal working hours.
 
-1. To exclude clients from upgrade, select **Exclude specified clients from upgrade**, and specify the collection to exclude. For more information, see [Exclude clients from upgrade](/sccm/core/clients/manage/upgrade/exclude-clients-windows).
+1. To exclude clients from upgrade, select **Exclude specified clients from upgrade**, and specify the collection to exclude. For more information, see [Exclude clients from upgrade](exclude-clients-windows.md).
 
-1. If you want the site to copy the client installation package to distribution points that you've enabled for [prestaged content](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent), select the option to **Automatically distribute client installation package to distribution points that are enabled for prestaged content**.  
+1. If you want the site to copy the client installation package to distribution points that you've enabled for [prestaged content](../../../plan-design/hierarchy/manage-network-bandwidth.md#BKMK_PrestagingContent), select the option to **Automatically distribute client installation package to distribution points that are enabled for prestaged content**.  
 
 1. Select **OK** to save the settings and close Hierarchy Settings Properties.
 
@@ -98,6 +98,6 @@ Clients receive these settings when they next download policy.
 
 ## Next steps
 
-For alternative methods to upgrade clients, see [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
+For alternative methods to upgrade clients, see [How to deploy clients to Windows computers](../../deploy/deploy-clients-to-windows-computers.md).
 
-Exclude specific clients from automatic upgrade. For more information, see [How to exclude clients from upgrade](/sccm/core/clients/manage/upgrade/exclude-clients-windows).
+Exclude specific clients from automatic upgrade. For more information, see [How to exclude clients from upgrade](exclude-clients-windows.md).

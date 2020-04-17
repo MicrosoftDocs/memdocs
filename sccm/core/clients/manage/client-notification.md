@@ -26,7 +26,7 @@ The following actions are on the ribbon in the Device or Collection group of the
 
 ### Install client
 
-Opens the **Install Client Wizard**. This wizard uses client push installation to install a Configuration Manager client. For more information, see [Client push installation](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
+Opens the **Install Client Wizard**. This wizard uses client push installation to install a Configuration Manager client. For more information, see [Client push installation](../deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).
 
 #### Permissions - Install client
 
@@ -44,7 +44,7 @@ Add these permissions to any custom roles that need to push the client.
 
 ### Run script
 
-Opens the **Run Script** wizard to run a PowerShell script on all of the clients in the collection. For more information, see [Create and run PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts).
+Opens the **Run Script** wizard to run a PowerShell script on all of the clients in the collection. For more information, see [Create and run PowerShell scripts](../../../apps/deploy-use/create-deploy-scripts.md).
 
 #### Permissions - Run script
 
@@ -60,7 +60,7 @@ Add this permission to any custom roles that need to run scripts.
 
 ### Start CMPivot
 
-Starts **CMPivot**, which runs real-time queries against the targeted devices. For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot).
+Starts **CMPivot**, which runs real-time queries against the targeted devices. For more information, see [CMPivot](../../servers/manage/cmpivot.md).
 
 #### Permissions - Start CMPivot
 
@@ -88,7 +88,7 @@ Add this permission to any custom roles that need to use client notification act
 
 ### Download computer policy
 
-Refresh the device policy. For more information, see [Initiate policy retrieval for a Configuration Manager client](/sccm/core/clients/manage/manage-clients#BKMK_PolicyRetrieval).  
+Refresh the device policy. For more information, see [Initiate policy retrieval for a Configuration Manager client](manage-clients.md#BKMK_PolicyRetrieval).  
 
 ### Download user policy
 
@@ -96,39 +96,39 @@ Refresh the user policy.
 
 ### Collect discovery data
 
-Trigger clients to send a discovery data record (DDR). For more information, see [Heartbeat discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutHeartbeat).  
+Trigger clients to send a discovery data record (DDR). For more information, see [Heartbeat discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutHeartbeat).  
 
 ### Collect software inventory
 
-Trigger clients to run a software inventory cycle. For more information, see [Introduction to software inventory](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).  
+Trigger clients to run a software inventory cycle. For more information, see [Introduction to software inventory](inventory/introduction-to-software-inventory.md).  
 
 ### Collect hardware inventory
 
-Trigger clients to run a hardware inventory cycle. For more information, see [Introduction to hardware inventory](/sccm/core/clients/manage/inventory/introduction-to-hardware-inventory).  
+Trigger clients to run a hardware inventory cycle. For more information, see [Introduction to hardware inventory](inventory/introduction-to-hardware-inventory.md).  
 
 ### Evaluate application deployments
 
-Trigger clients to run an application deployment evaluation cycle. For more information, see [Schedule re-evaluation for deployments](/sccm/core/clients/deploy/about-client-settings#schedule-re-evaluation-for-deployments).  
+Trigger clients to run an application deployment evaluation cycle. For more information, see [Schedule re-evaluation for deployments](../deploy/about-client-settings.md#schedule-re-evaluation-for-deployments).  
 
 ### Evaluate software update deployments
 
-Trigger clients to run a software updates deployment evaluation cycle. For more information, see [Introduction to software updates](/sccm/sum/understand/software-updates-introduction).  
+Trigger clients to run a software updates deployment evaluation cycle. For more information, see [Introduction to software updates](../../../sum/understand/software-updates-introduction.md).  
 
 ### Switch to the next software update point
 
-Trigger clients to switch to the next available software update point. For more information, see [Software update point switching](/sccm/sum/plan-design/plan-for-software-updates#BKMK_SUPSwitching).  
+Trigger clients to switch to the next available software update point. For more information, see [Software update point switching](../../../sum/plan-design/plan-for-software-updates.md#BKMK_SUPSwitching).  
 
 ### Evaluate device health attestation
 
-Trigger Windows 10 clients to check and send their latest device health state. For more information, see [Health attestation](/sccm/core/servers/manage/health-attestation).  
+Trigger Windows 10 clients to check and send their latest device health state. For more information, see [Health attestation](../../servers/manage/health-attestation.md).  
 
 ### Wake Up
 
-Starting in version 1810, trigger devices configured to support Wake-on-LAN to wake up using other devices on the same subnet to send the Wake-on-LAN package. For more information, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).
+Starting in version 1810, trigger devices configured to support Wake-on-LAN to wake up using other devices on the same subnet to send the Wake-on-LAN package. For more information, see [How to configure Wake on LAN](../deploy/configure-wake-on-lan.md).
 
 ### Restart
 
-Trigger the selected devices to restart. For more information, see [Restart clients](/sccm/core/clients/manage/manage-clients#restart-clients).
+Trigger the selected devices to restart. For more information, see [Restart clients](manage-clients.md#restart-clients).
 
 ## Client diagnostics
 <!--4433455-->
@@ -139,7 +139,7 @@ Starting in version 1910, there are new device actions for **Client Diagnostics*
 - **Disable verbose logging**: Change the global log level to default, and disable debug logging.
 - **Collect Client Logs** (starting in 2002): A client notification message is sent to the selected clients to gather the CCM logs. The logs are returned using software inventory file collection. <!--4226618-->
    - The size limit for the compressed client logs is 100 MB. <!--6366098-->
-   - Use [Resource Explorer](/configmgr/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory#bkmk_diag) manage and view these files.
+   - Use [Resource Explorer](inventory/use-resource-explorer-to-view-software-inventory.md#bkmk_diag) manage and view these files.
 
    [![Collect client logs from the console](./media/4226618-collect-client-logs.png)](./media/4226618-collect-client-logs.png#lightbox)
 
@@ -147,7 +147,7 @@ Starting in version 1910, there are new device actions for **Client Diagnostics*
 > - These actions only change the log verbosity, not the size or history. More verbose logging can generate more log content.
 > - The management point role also uses the CCM component. If the targeted device is also a management point, this action also applies to that role.
 
-For more information about these settings, see [About log files](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-client).
+For more information about these settings, see [About log files](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-client).
 
 Track the status of the task in the **diagnostics.log** on the client. When client logs are collected, additional information is logged in **MP_SinvCollFile.log** on the management point and **sinvproc.log** on the site server.
 
@@ -169,7 +169,7 @@ Track the status of the task in the **diagnostics.log** on the client. When clie
 
 The following actions are under the **Endpoint Protection** menu. This menu is on the ribbon in the Collection group of the Home tab. When you select one or more devices, these actions are on the **Selected Object** tab of the ribbon.
 
-For more information, see [Endpoint Protection in Configuration Manager](/sccm/protect/deploy-use/endpoint-protection).
+For more information, see [Endpoint Protection in Configuration Manager](../../../protect/deploy-use/endpoint-protection.md).
 
 ### Permissions - Endpoint Protection
 
@@ -197,5 +197,5 @@ Trigger Endpoint Protection or Windows Defender to download the latest antimalwa
 
 ## See also
 
-- [How to manage clients](/sccm/core/clients/manage/manage-clients)
-- [How to manage collections](/sccm/core/clients/manage/collections/manage-collections)
+- [How to manage clients](manage-clients.md)
+- [How to manage collections](collections/manage-collections.md)

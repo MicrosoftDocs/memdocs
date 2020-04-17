@@ -18,7 +18,7 @@ manager: dougeby
 
 Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory (Azure AD). First enable and then configure each method that you want to use to search your environment. You can also disable a method by using the same procedure that you use to enable it. The only exceptions to this process are Heartbeat Discovery and Server Discovery:  
 
-- By default, **Heartbeat Discovery** is already enabled when you install a Configuration Manager primary site. It's configured to run on a basic schedule. Keep Heartbeat Discovery enabled. It makes sure that the discovery data records (DDRs) for devices are up-to-date. For more information about Heartbeat Discovery, see [About Heartbeat Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutHeartbeat).  
+- By default, **Heartbeat Discovery** is already enabled when you install a Configuration Manager primary site. It's configured to run on a basic schedule. Keep Heartbeat Discovery enabled. It makes sure that the discovery data records (DDRs) for devices are up-to-date. For more information about Heartbeat Discovery, see [About Heartbeat Discovery](about-discovery-methods.md#bkmk_aboutHeartbeat).  
 
 - **Server Discovery** is an automatic discovery method. It finds computers that you use as site systems. You can't configure or disable it.  
 
@@ -73,7 +73,7 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 
     - To configure a new forest that isn't listed, on the **Home** tab of the ribbon, in the **Create** group, select **Add Forest**. This action opens the **Add Forests** dialog box.
 
-2. On the **General** tab, finish configurations for the forest that you want to discover, and specify the **Active Directory Forest Account**. For more information on this account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#active-directory-forest-account).  
+2. On the **General** tab, finish configurations for the forest that you want to discover, and specify the **Active Directory Forest Account**. For more information on this account, see [Accounts](../../../plan-design/hierarchy/accounts.md#active-directory-forest-account).  
 
     > [!NOTE]  
     > Active Directory Forest Discovery requires a global account to discover and publish to untrusted forests. If you don't use the computer account of the site server, you can only select a global account.  
@@ -109,7 +109,7 @@ Then use the information in the following sections to configure the specific dis
 > [!NOTE]  
 > The information in this section doesn't apply to Active Directory Forest Discovery.  
 
-Although each of these discovery methods is independent of the others, they share similar options. For more information about these configuration options, see [Shared options for group, system, and user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_shared).  
+Although each of these discovery methods is independent of the others, they share similar options. For more information about these configuration options, see [Shared options for group, system, and user discovery](about-discovery-methods.md#bkmk_shared).  
 
 > [!WARNING]  
 > The Active Directory polling by each of these discovery methods can generate significant network traffic. Consider scheduling each discovery method to run at a time when this network traffic doesn't adversely affect business uses of your network.  
@@ -126,7 +126,7 @@ Although each of these discovery methods is independent of the others, they shar
 
         - If you chose **Location**, specify an Active Directory container as a location to discover. You can also enable a recursive search of Active Directory child containers for this location.  
 
-    3. Specify the **Active Directory Group Discovery Account** that the site uses to search this discovery scope. For more information, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#active-directory-group-discovery-account).  
+    3. Specify the **Active Directory Group Discovery Account** that the site uses to search this discovery scope. For more information, see [Accounts](../../../plan-design/hierarchy/accounts.md#active-directory-group-discovery-account).  
 
     4. Select **OK** to save the discovery scope configuration.  
 
@@ -158,7 +158,7 @@ Although each of these discovery methods is independent of the others, they shar
           > [!Tip]  
           > The list of Active Directory containers in the Active Directory System Discovery Properties window includes a column **Has Exclusions**. When you select containers to exclude, this value is **Yes**.  
 
-    3. For each location, specify the account to use as the **Active Directory Discovery Account**. For more information, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#active-directory-system-discovery-account).  
+    3. For each location, specify the account to use as the **Active Directory Discovery Account**. For more information, see [Accounts](../../../plan-design/hierarchy/accounts.md#active-directory-system-discovery-account).  
 
         > [!TIP]  
         > For each specified location, you can configure a set of discovery options and a unique Active Directory Discovery Account.  
@@ -184,7 +184,7 @@ Although each of these discovery methods is independent of the others, they shar
 
     2. For each location, specify options that change the search behavior.  
 
-    3. For each location, specify the account to use as the **Active Directory Discovery Account**. For more information, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#active-directory-user-discovery-account).  
+    3. For each location, specify the account to use as the **Active Directory Discovery Account**. For more information, see [Accounts](../../../plan-design/hierarchy/accounts.md#active-directory-user-discovery-account).  
 
         > [!NOTE]  
         > For each specified location, you can configure a unique set of discovery options and a unique Active Directory Discovery Account.  
@@ -202,11 +202,11 @@ Although each of these discovery methods is independent of the others, they shar
 
 Azure AD User Discovery isn't enabled or configured the same as other discovery methods. Configure it when you onboard the Configuration Manager site to Azure AD.
 
-For more information, see [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
+For more information, see [Azure AD User Discovery](about-discovery-methods.md#azureaddisc).
 
 ### Prerequisites
 
-To enable and configure this discovery method, [Configure Azure Services](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**.
+To enable and configure this discovery method, [Configure Azure Services](azure-services-wizard.md) for **Cloud Management**.
 
 If you use Configuration Manager to *create* the Azure app, it configures the app with the necessary permissions.
 
@@ -242,20 +242,20 @@ When configuring the **Cloud Management** Azure service:
 - In the Azure AD User Discovery Settings dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery, which only checks for new or changed accounts in Azure AD.
 
 > [!Note]  
-> If the user is a federated or synchronized identity, you must use Configuration Manager [Active Directory user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser) as well as Azure AD user discovery. For more information about hybrid identities, see [Define a hybrid identity adoption strategy](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
+> If the user is a federated or synchronized identity, you must use Configuration Manager [Active Directory user discovery](about-discovery-methods.md#bkmk_aboutUser) as well as Azure AD user discovery. For more information about hybrid identities, see [Define a hybrid identity adoption strategy](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
 
 
 ## <a name="bkmk_azuregroupdisco"></a> Azure AD User Group Discovery
 
 <!--3611956-->
 > [!Tip]  
-> This feature was first introduced in version 1906 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 2002, it's no longer a pre-release feature.  
+> This feature was first introduced in version 1906 as a [pre-release feature](../../manage/pre-release-features.md). Beginning with version 2002, it's no longer a pre-release feature.  
 
 You can discover user groups and members of those groups from Azure AD. When the site finds users in Azure AD groups that it hasn't previously discovered, it adds them as new user resources in Configuration Manager. A user group resource record is created when the group is a security group.
 
 ### Prerequisites
 
-- Cloud Management [Azure service](/sccm/core/servers/deploy/configure/azure-services-wizard)
+- Cloud Management [Azure service](azure-services-wizard.md)
 - Permission to read and search Azure AD groups
 
 ### Limitations
@@ -264,7 +264,7 @@ Delta discovery for Azure AD user group discovery is currently disabled.
 
 ### Log files
 
-Use the SMS_AZUREAD_DISCOVERY_AGENT.log for troubleshooting. This log is also shared with Azure AD user discovery. For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files#BKMK_ServerLogs).
+Use the SMS_AZUREAD_DISCOVERY_AGENT.log for troubleshooting. This log is also shared with Azure AD user discovery. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#BKMK_ServerLogs).
 
 ### Enable Azure AD user group discovery
 
@@ -292,7 +292,7 @@ To enable discovery when configuring a new **Cloud Management** Azure service:
 Configuration Manager enables the Heartbeat Discovery method when you install a primary site. If you want to use the default schedule of every seven days, there's nothing else to configure. Otherwise, you only have to configure the schedule for how often clients send the Heartbeat Discovery data record to a management point.  
 
 > [!NOTE]  
-> If you enable both client push installation and the site maintenance task for **Clear Install Flag** at the same site, set the schedule of Heartbeat Discovery to be less than the **Client Rediscovery period** of the **Clear Install Flag** site maintenance task. For more information about site maintenance tasks, see [Maintenance tasks](/sccm/core/servers/manage/maintenance-tasks).  
+> If you enable both client push installation and the site maintenance task for **Clear Install Flag** at the same site, set the schedule of Heartbeat Discovery to be less than the **Client Rediscovery period** of the **Clear Install Flag** site maintenance task. For more information about site maintenance tasks, see [Maintenance tasks](../../manage/maintenance-tasks.md).  
 
 ### Configure the Heartbeat Discovery schedule  
 
@@ -317,7 +317,7 @@ Before you configure Network Discovery, understand the following topics:
 
 - Limiting Network Discovery on the network  
 
-For more information, see [About Network Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutNetwork).  
+For more information, see [About Network Discovery](about-discovery-methods.md#bkmk_aboutNetwork).  
 
 The following sections provide information about common configurations for Network Discovery. You can configure one or more of these configurations for use during the same discovery run. If you use multiple configurations, plan for the interactions that can affect the discovery results.  
 

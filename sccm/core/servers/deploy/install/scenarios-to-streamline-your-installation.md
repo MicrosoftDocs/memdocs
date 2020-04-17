@@ -44,7 +44,7 @@ Follow this sequence:
 1. **Install a top-level site for your new hierarchy** by using the baseline media.  
 
    -   You can use baseline media only to install the first site of a new hierarchy.  
-   -   For example, install a top-level site by using the baseline version of 1606. For more information, see [Use the Setup Wizard to install sites](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites).  
+   -   For example, install a top-level site by using the baseline version of 1606. For more information, see [Use the Setup Wizard to install sites](use-the-setup-wizard-to-install-sites.md).  
 
    After this step, your top-level site runs version 1606.  
 
@@ -66,7 +66,7 @@ Follow this sequence:
 4. **At each primary site, use the in-console option to install new secondary sites.**  
 
    -   Because you did not install secondary sites while primary sites were at version 1606, you do not need to upgrade secondary sites.  
-   -   Instead, install new secondary sites that run version 1610. For more information, see [Install a secondary site](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_secondary) in the [Use the Setup Wizard to install sites](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites) topic.  
+   -   Instead, install new secondary sites that run version 1610. For more information, see [Install a secondary site](use-the-setup-wizard-to-install-sites.md#bkmk_secondary) in the [Use the Setup Wizard to install sites](use-the-setup-wizard-to-install-sites.md) topic.  
 
    After this step, new secondary sites are installed and run version 1610.  
 

@@ -46,14 +46,14 @@ Use Resource Explorer in Configuration Manager to view information about softwar
  
 ## <a name="bkmk_diag"> </a> View and manage collected diagnostic files
 
-Starting in Configuration Manager version 2002, use Resource Explorer to view and manage the files gathered when you use client notification to [collect client logs](/configmgr/core/clients/manage/client-notification#client-diagnostics). 
+Starting in Configuration Manager version 2002, use Resource Explorer to view and manage the files gathered when you use client notification to [collect client logs](../client-notification.md#client-diagnostics). 
 
 1. From the **Devices** node, right-click on the device you want to view logs for.
 1. Select **Start**, then **Resource Explorer**.
 1. From **Resource Explorer**, click on **Diagnostic Files**.
 1. In the **Diagnostic Files** list, you can see the collection date for the files. The name format of the client logs is `Support_<guid>.zip`.
 1. Right-click on the zip file and select one of the following options:
-    - **Open Support Center**: Launches [Support Center](/configmgr/core/support/support-center).
+    - **Open Support Center**: Launches [Support Center](../../../support/support-center.md).
     - **Copy**: Copies the row information from Resource Explorer.
     - **View file**: Opens the folder where the zip file is located with File Explorer.
     - **Save**: Opens a Save File dialog for the selected file.
@@ -65,4 +65,4 @@ Starting in Configuration Manager version 2002, use Resource Explorer to view an
 
 ## Next steps
 
-[Use Support Center](/configmgr/core/support/support-center) to view collected diagnostic files.
+[Use Support Center](../../../support/support-center.md) to view collected diagnostic files.

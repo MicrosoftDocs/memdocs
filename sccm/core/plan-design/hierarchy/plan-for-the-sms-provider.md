@@ -24,7 +24,7 @@ The SMS Provider is a Windows Management Instrumentation (WMI) provider that ass
 
 - Each central administration site and primary site require at least one SMS Provider. You can install additional providers as needed.  
 
-- The **SMS Admins** security group provides access to the SMS Provider. Configuration Manager automatically creates this group on the site server, and on each computer where you install an instance of the SMS Provider. For more information, see [SMS Admins](/sccm/core/plan-design/hierarchy/accounts#sms-admins).  
+- The **SMS Admins** security group provides access to the SMS Provider. Configuration Manager automatically creates this group on the site server, and on each computer where you install an instance of the SMS Provider. For more information, see [SMS Admins](accounts.md#sms-admins).  
 
 - Secondary sites don't support the SMS Provider role.  
 
@@ -32,12 +32,12 @@ Configuration Manager administrative users use an SMS Provider to access informa
 
 The SMS Provider helps enforce Configuration Manager security. It returns only the information that the console user is authorized to view.  
 
-The SMS Provider also provides API interoperability access over HTTPS, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site. For more information, see [What is the administration service?](/configmgr/develop/adminservice/overview).
+The SMS Provider also provides API interoperability access over HTTPS, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site. For more information, see [What is the administration service?](../../../develop/adminservice/overview.md).
 
 > [!IMPORTANT]  
 > When each instance of the SMS Provider for a site is offline, Configuration Manager consoles can't connect to the site.  
 
-For more information about how to manage the SMS Provider, see [Manage the SMS Provider](/sccm/core/servers/manage/modify-your-infrastructure#BKMK_ManageSMSprovider).  
+For more information about how to manage the SMS Provider, see [Manage the SMS Provider](../../servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider).  
 
 ## Installation prerequisites  
 
@@ -53,14 +53,14 @@ To support the SMS Provider, the target server must meet the following prerequis
 
 - At least 650 MB of free disk space to support the Windows ADK components. For more information about Windows ADK and the SMS Provider, see [OS deployment requirements](#BKMK_WAIKforSMSProv).  
 
-- For the [administration service](/configmgr/develop/adminservice/overview) REST API:
+- For the [administration service](../../../develop/adminservice/overview.md) REST API:
 
   - .NET 4.5 or later
 
   - Enable Windows server role **Web Server (IIS)**
 
     > [!Note]  
-    > Every SMS Provider attempts to install the administration service, which requires a certificate. This service has a dependency on IIS to bind that certificate to HTTPS port 443. If you enable [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http), then the site binds that certificate using IIS APIs. If your site uses PKI, you need to manually bind a PKI certificate in IIS on the SMS Provider. Starting in version 2002, the site automatically uses the site's self-signed certificate.
+    > Every SMS Provider attempts to install the administration service, which requires a certificate. This service has a dependency on IIS to bind that certificate to HTTPS port 443. If you enable [Enhanced HTTP](enhanced-http.md), then the site binds that certificate using IIS APIs. If your site uses PKI, you need to manually bind a PKI certificate in IIS on the SMS Provider. Starting in version 2002, the site automatically uses the site's self-signed certificate.
 
 ## <a name="bkmk_location"></a> Locations  
 
@@ -215,7 +215,7 @@ The Configuration Manager WMI schema defines the structure of the SMS Provider. 
 
 The computer where you install an instance of the SMS Provider requires a supported version of the Windows ADK.  
 
-For more information about this requirement, see [Infrastructure requirements for OS deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment#windows-adk-for-windows-10) and [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10).  
+For more information about this requirement, see [Infrastructure requirements for OS deployment](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk-for-windows-10) and [Support for Windows 10](../configs/support-for-windows-10.md).  
 
 When you manage OS deployments, the Windows ADK allows the SMS Provider to complete various tasks, such as:  
 
@@ -233,4 +233,4 @@ The Windows ADK installation can require up to 650 MB of free disk space on each
 
 The SMS Provider provides API interoperability access over an HTTPS OData connection, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site.
 
-For more information, see [What is the administration service?](/configmgr/develop/adminservice/overview)
+For more information, see [What is the administration service?](../../../develop/adminservice/overview.md)

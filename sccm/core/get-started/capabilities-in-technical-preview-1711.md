@@ -27,8 +27,8 @@ This article introduces the features that are available in the Technical Preview
     Workaround details.
 -->
 **Known Issues in this Technical Preview:**
-- **Support for Windows 10, version 1709 (also known as the Fall Creators Update)**.  Beginning with this Windows release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
-- **Update to a new preview version fails when you have a site server in passive mode**. When you run a preview version that has a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), you must uninstall the passive mode site server before you can successfully update your preview site to this new preview version. You can reinstall the passive mode site server after your site completes the update.
+- **Support for Windows 10, version 1709 (also known as the Fall Creators Update)**.  Beginning with this Windows release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](../plan-design/configs/support-for-windows-10.md#windows-10-as-a-client).
+- **Update to a new preview version fails when you have a site server in passive mode**. When you run a preview version that has a [primary site server in passive mode](capabilities-in-technical-preview-1706.md#site-server-role-high-availability), you must uninstall the passive mode site server before you can successfully update your preview site to this new preview version. You can reinstall the passive mode site server after your site completes the update.
 
   To uninstall the passive mode site server:
   1. In the console go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**, and then select the passive mode site server.
@@ -73,7 +73,7 @@ With this preview, you can allow an end user to interact with an application ins
 
 Try to complete the following tasks and then send **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
 
-1.  Create or edit an application. For more information, see [Create applications with Configuration Manager](/sccm/apps/deploy-use/create-applications).
+1.  Create or edit an application. For more information, see [Create applications with Configuration Manager](../../apps/deploy-use/create-applications.md).
 
     a. Choose the **User Experience** tab in the **Windows Installer (\*msi file) Properties**.
 
@@ -85,7 +85,7 @@ Try to complete the following tasks and then send **Feedback** from the **Home**
 
     e. Select the **Allow users to interact with the program installation** box.
 
-2.  Create or edit a task sequence to install the application using the **Install Application** step. For more information, see [Install Application](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication) in the [Task sequence steps](/sccm/osd/understand/task-sequence-steps).
+2.  Create or edit a task sequence to install the application using the **Install Application** step. For more information, see [Install Application](../../osd/understand/task-sequence-steps.md#BKMK_InstallApplication) in the [Task sequence steps](../../osd/understand/task-sequence-steps.md).
 
     a. Imaging task sequence after the Setup Windows and Configuration Manager step.
 
@@ -110,4 +110,4 @@ You can also use this feature when deploying an app using the wizard.
 <!-- When we have another H2 in this topic, Add this Next Steps section back in.  -->
 
 ## Next Steps
-For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).    

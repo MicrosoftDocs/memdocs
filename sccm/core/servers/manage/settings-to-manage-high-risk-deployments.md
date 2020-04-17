@@ -54,6 +54,6 @@ To reduce the risk of an unwanted high-risk deployment, you can configure size l
 
 ## Next steps
 
-[Manage task sequences - high-impact settings](/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks#high-impact-settings)
+[Manage task sequences - high-impact settings](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#high-impact-settings)
 
-[Configure sites and hierarchies](/sccm/core/servers/deploy/configure/configure-sites-and-hierarchies)
+[Configure sites and hierarchies](../deploy/configure/configure-sites-and-hierarchies.md)

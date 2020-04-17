@@ -16,7 +16,7 @@ manager: dougeby
 
 # SQL replication reinit
 
-In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](/sccm/core/plan-design/hierarchy/database-replication).
+In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
 
 Use the following diagram to start troubleshooting SQL replication reinitialization (reinit):
 
@@ -62,6 +62,6 @@ AND rg.ReplicationPattern=N'Site'
 
 ## Next steps
 
-- [Global data reinit](/sccm/core/servers/manage/replication/global-data-reinit)
-- [Site data reinit](/sccm/core/servers/manage/replication/site-data-reinit)
-- [SQL configuration](/sccm/core/servers/manage/replication/sql-configuration)
+- [Global data reinit](global-data-reinit.md)
+- [Site data reinit](site-data-reinit.md)
+- [SQL configuration](sql-configuration.md)

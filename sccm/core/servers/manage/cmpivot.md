@@ -148,11 +148,11 @@ The CMPivot window contains the following elements:
 
       - **Pivot to**: Query for another entity on this device.  
 
-      - **Run Script**: Launch the Run Script wizard to run an existing PowerShell script on this device. For more information, see [Run a script](/sccm/apps/deploy-use/create-deploy-scripts#run-a-script).  
+      - **Run Script**: Launch the Run Script wizard to run an existing PowerShell script on this device. For more information, see [Run a script](../../../apps/deploy-use/create-deploy-scripts.md#run-a-script).  
 
-      - **Remote Control**: Launch a Configuration Manager Remote Control session on this device. For more information, see [How to remotely administer a Windows client computer](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer).  
+      - **Remote Control**: Launch a Configuration Manager Remote Control session on this device. For more information, see [How to remotely administer a Windows client computer](../../clients/manage/remote-control/remotely-administer-a-windows-client-computer.md).  
 
-      - **Resource Explorer**: Launch Configuration Manager Resource Explorer for this device. For more information, see [View hardware inventory](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory) or [View software inventory](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory).  
+      - **Resource Explorer**: Launch Configuration Manager Resource Explorer for this device. For more information, see [View hardware inventory](../../clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md) or [View software inventory](../../clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
 
    - Right-click on any non-device cell to take the following additional actions:  
 
@@ -406,7 +406,7 @@ To get CMPivot to work on the CAS in such a "double hop scenario", you can defin
 ### CAS has a remote SQL server
 
 1. Go to each primary site's SQL server.
-   1. Add the CAS remote SQL server and the CAS site server to the [Configmgr_DviewAccess](/sccm/core/plan-design/hierarchy/accounts#configmgr_dviewaccess) group.
+   1. Add the CAS remote SQL server and the CAS site server to the [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) group.
    ![Configmgr_DviewAccess group on a primary site's SQL server](media/cmpivot-dviewaccess-group.png)
 1. Go to Active Directory Users and Computers.
    1. For each primary site server, right click and select **Properties**.
@@ -425,7 +425,7 @@ To get CMPivot to work on the CAS in such a "double hop scenario", you can defin
 ### CAS has a remote provider
 
 1. Go to each primary site's SQL server.
-   1. Add the CAS provider machine account and the CAS site server to the [Configmgr_DviewAccess](/sccm/core/plan-design/hierarchy/accounts#configmgr_dviewaccess) group.
+   1. Add the CAS provider machine account and the CAS site server to the [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) group.
 1. Go to Active Directory Users and Computers.
    1. Select the CAS provider machine, right click and select **Properties**.
       1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
@@ -442,7 +442,7 @@ To get CMPivot to work on the CAS in such a "double hop scenario", you can defin
 ### SQL Always On
 
 1. Go to each primary site's SQL server.
-   1. Add the CAS site server to the [Configmgr_DviewAccess](/sccm/core/plan-design/hierarchy/accounts#configmgr_dviewaccess) group.
+   1. Add the CAS site server to the [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) group.
 1. Go to Active Directory Users and Computers.
    1. For each primary site server, right click and select **Properties**.
       1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
@@ -555,7 +555,7 @@ Starting in version 1906, the following permissions have been added to Configura
 Starting in version 1906, you can use CMPivot as a standalone app. CMPivot standalone is only available in English. Run CMPivot outside of the Configuration Manager console to view the real-time state of devices in your environment. This change enables you to use CMPivot on a device without first installing the console.
 
 > [!Tip]  
-> This feature was first introduced in version 1906 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 2002, it's no longer a pre-release feature.  
+> This feature was first introduced in version 1906 as a [pre-release feature](pre-release-features.md). Beginning with version 2002, it's no longer a pre-release feature.  
 
 You can share the power of CMPivot with other personas, such as helpdesk or security admins, who don't have the console installed on their computer. These other personas can use CMPivot to query Configuration Manager alongside the other tools that they traditionally use. By sharing this rich management data, you can work together to proactively solve business problems that cross roles.
 
@@ -738,7 +738,7 @@ We've made it easier to navigate CMPivot entities. Starting in Configuration Man
  
 ## Inside CMPivot
 
-CMPivot sends queries to clients using the Configuration Manager "fast channel". This communication channel from server to client is also used by other features such as client notification actions, client status, and Endpoint Protection. Clients return results via the similarly quick state message system. State messages are temporarily stored in the database. For more information about the ports used for client notification, see the [Ports](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-MP) article.
+CMPivot sends queries to clients using the Configuration Manager "fast channel". This communication channel from server to client is also used by other features such as client notification actions, client status, and Endpoint Protection. Clients return results via the similarly quick state message system. State messages are temporarily stored in the database. For more information about the ports used for client notification, see the [Ports](../../plan-design/hierarchy/ports.md#BKMK_PortsClient-MP) article.
 
 The queries and the results are all just text. The entities **InstallSoftware** and **Process** return some of the largest result sets. During performance testing, the largest state message file size from one client for these queries was less than **1 KB**. Scaled to a large environment with 50,000 active clients, this one-time query would generate less than 50 MB of data across the network. All the items on the welcome page that are underlined, will return less than 1k of info per client.
 
@@ -762,12 +762,12 @@ A query times out after one hour. For example, a collection has 500 devices, and
 - Scripts.log
 - StateMessage.log
 
-For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files) and [Troubleshooting CMPivot](/sccm/core/servers/manage/cmpivot-tsg).
+For more information, see [Log files](../../plan-design/hierarchy/log-files.md) and [Troubleshooting CMPivot](cmpivot-tsg.md).
 
 ## Next steps
  
-[Troubleshooting CMPivot](/sccm/core/servers/manage/cmpivot-tsg)
+[Troubleshooting CMPivot](cmpivot-tsg.md)
 
-[Create and run PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts)
+[Create and run PowerShell scripts](../../../apps/deploy-use/create-deploy-scripts.md)
 
 

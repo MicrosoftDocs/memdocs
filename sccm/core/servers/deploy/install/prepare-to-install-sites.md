@@ -20,7 +20,7 @@ manager: dougeby
 To prepare for a successful deployment of one or more Configuration Manager sites, become familiar with the details in this article. These steps can save you time during installation of multiple sites and help prevent missteps that might result in the need to reinstall one or more sites.
 
 > [!TIP]
-> When managing Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts. To learn how each term is used, see [About upgrade, update, and install](/sccm/core/understand/upgrade-update-install).
+> When managing Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts. To learn how each term is used, see [About upgrade, update, and install](../../../understand/upgrade-update-install.md).
 
 ## <a name="bkmk_options"></a> Options for installing different types of sites
 When you install a new Configuration Manager site, the version of the source files that you can use depends on the version of sites that are already in the hierarchy (if any). The installation methods that you can use depend on the type of site you want to install.  

@@ -30,7 +30,7 @@ To help you manage network bandwidth that is used for the content management pro
 > [!IMPORTANT]  
 >  The **Rate Limits** and **Schedule** tabs are displayed only in the properties for distribution points that are not installed on a site server.  
 
-For more information, see [Install and configure distribution points for Configuration Manager](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points).  
+For more information, see [Install and configure distribution points for Configuration Manager](../../servers/deploy/configure/install-and-configure-distribution-points.md).  
 
 ##  <a name="BKMK_PrestagingContent"></a>Prestaged content  
  You can prestage content to add the content files to the content library on a site server or distribution point, before you distribute the content. Because the content files are already in the content library, they do not transfer over the network when you distribute the content. You can prestage content files for applications and packages.  

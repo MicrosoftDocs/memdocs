@@ -19,7 +19,7 @@ ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 > [!Important]  
 > The Windows Analytics service is retired as of January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 >
-> Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](/sccm/desktop-analytics/overview).
+> Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](../../../desktop-analytics/overview.md).
 
 If your Configuration Manager site had a connection to Upgrade Readiness, you need to remove it and reconfigure clients.
 
@@ -38,7 +38,7 @@ If your Configuration Manager site had a connection to Upgrade Readiness, you ne
 First, review the site's default or any custom client device settings in the **Windows Analytics** group. For example, disable the following setting: **Manage Windows telemetry settings with Configuration Manager**.
 
 > [!IMPORTANT]
-> If you plan to use Desktop Analytics, it configures Windows diagnostic data settings on clients. Use the Azure services connection wizard to configure these settings for use with Desktop Analytics. For more information, see [How to connect Configuration Manager with Desktop Analytics](/configmgr/desktop-analytics/connect-configmgr).
+> If you plan to use Desktop Analytics, it configures Windows diagnostic data settings on clients. Use the Azure services connection wizard to configure these settings for use with Desktop Analytics. For more information, see [How to connect Configuration Manager with Desktop Analytics](../../../desktop-analytics/connect-configmgr.md).
 
 On enrolled devices, remove the CommercialID value from the following Windows Registry keys:
 
@@ -81,7 +81,7 @@ Upgrade Readiness relies on Windows Analytics data. In order for Upgrade Readine
 
     - Enable Windows Analytics client settings  
 
-Configure these settings using Configuration Manager client settings. For more information, see [Use Windows Analytics](/sccm/core/clients/manage/monitor-windows-analytics).
+Configure these settings using Configuration Manager client settings. For more information, see [Use Windows Analytics](monitor-windows-analytics.md).
 
 > [!NOTE]  
 > Deploying the correct prerequisite updates and configuring client settings should be sufficient in most environments. If you encounter issues with Upgrade Readiness not receiving data from devices in your environment, then some of these issues may be addressed by using the [Upgrade Readiness deployment script](https://docs.microsoft.com/windows/deployment/upgrade/upgrade-readiness-deployment-script). 
@@ -90,7 +90,7 @@ Configure these settings using Configuration Manager client settings. For more i
 
 ## Connect Configuration Manager to Upgrade Readiness
 
-Use the [Azure services wizard](/sccm/core/servers/deploy/configure/azure-services-wizard) to simplify the process of configuring Azure services you use with Configuration Manager. To connect Configuration Manager with Upgrade Readiness, create an Azure Active Directory (Azure AD) app registration of type *Web app / API* in the [Azure portal](https://portal.azure.com). For more information about how to create an app registration, see [Register your application with your Azure AD tenant](/azure/active-directory/active-directory-app-registration). 
+Use the [Azure services wizard](../../servers/deploy/configure/azure-services-wizard.md) to simplify the process of configuring Azure services you use with Configuration Manager. To connect Configuration Manager with Upgrade Readiness, create an Azure Active Directory (Azure AD) app registration of type *Web app / API* in the [Azure portal](https://portal.azure.com). For more information about how to create an app registration, see [Register your application with your Azure AD tenant](/azure/active-directory/active-directory-app-registration). 
 
 In the Azure portal, give following permissions to your newly registered web app:
 - *Reader* permissions to the resource group that contains the Log Analytics workspace with your Upgrade Readiness data
@@ -108,7 +108,7 @@ The Azure services wizard uses this app registration to allow Configuration Mana
 
 ### Use the Azure Wizard to create the connection
 
-Follow the instructions in [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) to create a connection to Upgrade Readiness by importing the web app registration you created above. 
+Follow the instructions in [Configure Azure services](../../servers/deploy/configure/azure-services-wizard.md) to create a connection to Upgrade Readiness by importing the web app registration you created above. 
 
 If the web app import was successful and the correct permissions are assigned in the Azure portal, the *Configuration* page pre-populates the following values:   
 -  Azure subscriptions  
@@ -145,6 +145,6 @@ After you've integrated Upgrade Readiness with Configuration Manager, you can vi
 
 ## Next steps
 
-- [Upgrade Windows to the latest version](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version)  
-- [Create a task sequence to upgrade an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)  
-- [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
+- [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md)  
+- [Create a task sequence to upgrade an OS](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md)  
+- [Create phased deployments](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md)  

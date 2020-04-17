@@ -18,9 +18,9 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 Configuration Manager allows you to connect to client computers using **Configuration Manager Remote Control**. Before you begin to use remote control, ensure that you review the information in the following articles:  
 
--   [Prerequisites for remote control](/sccm/core/clients/manage/remote-control/prerequisites-for-remote-control)  
+-   [Prerequisites for remote control](prerequisites-for-remote-control.md)  
 
--   [Configuring remote control](/sccm/core/clients/manage/remote-control/configuring-remote-control)  
+-   [Configuring remote control](configuring-remote-control.md)  
 
 Here are three ways to start the remote control viewer:  
 
@@ -37,7 +37,7 @@ Here are three ways to start the remote control viewer:
 3.  Select the computer that you want to remotely administer and then, in the **Home** tab, in the **Device** group, choose **Start** > **Remote Control**.  
 
     > [!IMPORTANT]  
-    >  If the client setting **Prompt user for Remote Control** permission is set to **True**, the connection does not initiate until the user at the remote computer agrees to the remote control prompt. For more information, see [Configuring remote control](/sccm/core/clients/manage/remote-control/configuring-remote-control).  
+    >  If the client setting **Prompt user for Remote Control** permission is set to **True**, the connection does not initiate until the user at the remote computer agrees to the remote control prompt. For more information, see [Configuring remote control](configuring-remote-control.md).  
 
 4.  After the **Configuration Manager Remote Control** window opens, you can remotely administer the client computer. Use the following options to configure the connection.  
 
@@ -91,8 +91,8 @@ CmRcViewer.exe supports the following command-line options:
 **Example: CmRcViewer.exe** *<Address\>* *<\\\Site Server Name>* 
 
 > [!NOTE]  
-> The remote control viewer is supported on all operating systems that are supported for the Configuration Manager console. For more information, see [Supported configurations for Configuration Manager consoles](/sccm/core/plan-design/configs/supported-operating-systems-consoles) and [Prerequisites for remote control](/sccm/core/clients/manage/remote-control/prerequisites-for-remote-control).
+> The remote control viewer is supported on all operating systems that are supported for the Configuration Manager console. For more information, see [Supported configurations for Configuration Manager consoles](../../../plan-design/configs/supported-operating-systems-consoles.md) and [Prerequisites for remote control](prerequisites-for-remote-control.md).
 
 ## Next steps
 
-[Audit remote control usage](/sccm/core/clients/manage/remote-control/audit-remote-control-usage)
+[Audit remote control usage](audit-remote-control-usage.md)

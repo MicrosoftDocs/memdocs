@@ -16,7 +16,7 @@ manager: dougeby
 
 # Reinit missing message
 
-In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](/sccm/core/plan-design/hierarchy/database-replication).
+In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
 
 Use the following diagram to start troubleshooting a missing message with SQL replication reinitialization (reinit):
 
@@ -57,7 +57,7 @@ WHERE RequestTrackingGUID=@trackingGuid
 
 ### Version 1902 and later
 
-To detect the issue and reinit, run the [Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA).
+To detect the issue and reinit, run the [Replication Link Analyzer](../monitor-replication.md#BKMK_RLA).
 
 ### Version 1810 and earlier
 
@@ -75,7 +75,7 @@ Then use the `InitializeData` method on the `SMS_ReplicationGroup` WMI class wit
 - SiteCode1: parent site
 - SiteCode2: child site
 
-For more information, see [InitializeData method in class SMS_ReplicationGroup](/sccm/develop/reference/core/servers/configure/initializedata-method-in-class-sms_replicationgroup).
+For more information, see [InitializeData method in class SMS_ReplicationGroup](../../../../develop/reference/core/servers/configure/initializedata-method-in-class-sms_replicationgroup.md).
 
 #### Example
 
@@ -85,4 +85,4 @@ Invoke-WmiMethod â€“Namespace "root\sms\site_CAS" -Class SMS_ReplicationGroup â€
 
 ## Next steps
 
-- [SQL replication reinitialization (reinit)](/sccm/core/servers/manage/replication/sql-replication-reinit)
+- [SQL replication reinitialization (reinit)](sql-replication-reinit.md)

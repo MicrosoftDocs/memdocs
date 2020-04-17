@@ -19,7 +19,7 @@ manager: aaroncz
 *Applies to: Configuration Manager (current branch)*
 
 This flowchart diagram shows the process by which the site moves the content library to a remote location. For more information, see the following articles:  
-- [The content library](/sccm/core/plan-design/hierarchy/the-content-library)  
-- [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability)
+- [The content library](the-content-library.md)  
+- [Site server high availability](../../servers/deploy/configure/site-server-high-availability.md)
 
 ![Flowchart diagram to move the content library to a remote location](media/manage-content-library-flowchart.png)

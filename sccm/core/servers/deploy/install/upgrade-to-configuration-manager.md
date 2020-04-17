@@ -19,7 +19,7 @@ manager: dougeby
 Do an in-place upgrade to Configuration Manager current branch from a site and hierarchy that runs System Center 2012 Configuration Manager. Before upgrading from System Center 2012 Configuration Manager, you must prepare the sites. This preparation requires you to remove specific configurations that can prevent a successful upgrade. Then follow the upgrade sequence when more than a single site is involved.  
 
 > [!TIP]  
-> When managing Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts. To learn how each term is used, see [About upgrade, update, and install](/sccm/core/understand/upgrade-update-install).
+> When managing Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts. To learn how each term is used, see [About upgrade, update, and install](../../../understand/upgrade-update-install.md).
 
 ## <a name="bkmk_path"></a> In-place upgrade paths  
 
@@ -35,12 +35,12 @@ You can upgrade the following products to a *fully licensed* version of Configur
 - System Center 2012 R2 Configuration Manager
 - System Center 2012 R2 Configuration Manager with Service Pack 1
 
-For more information, see [Frequently asked questions for Configuration Manager branches and licensing](/sccm/core/understand/product-and-licensing-faq).
+For more information, see [Frequently asked questions for Configuration Manager branches and licensing](../../../understand/product-and-licensing-faq.md).
 
 > [!TIP]  
 > When you upgrade from a System Center 2012 Configuration Manager version to current branch, you might be able to streamline your upgrade process. For more information, see the following:  
 >
-> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)  
+> - [Baseline and update versions](../../manage/updates.md#bkmk_Baselines)  
 > - [The CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder)  
 
 ### Unsupported paths
@@ -67,15 +67,15 @@ Resolve issues as detailed in the following Microsoft Support article: [Configur
 
 - Review the server OS version in use to host site system roles:  
 
-  - Some older operating systems supported by System Center 2012 Configuration Manager aren't supported by Configuration Manager current branch. Before the upgrade, remove site system roles on those OS versions. For more information, see [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).
+  - Some older operating systems supported by System Center 2012 Configuration Manager aren't supported by Configuration Manager current branch. Before the upgrade, remove site system roles on those OS versions. For more information, see [Supported operating systems for site system servers](../../../plan-design/configs/supported-operating-systems-for-site-system-servers.md).
 
   - The prerequisite checker for Configuration Manager doesn't verify the prerequisites for site system roles on the site server or on remote site systems  
 
 - Review required prerequisites for each computer that hosts a site system role. For example, to deploy an OS, Configuration Manager uses the Windows 10 Assessment and Deployment Kit (Windows ADK). Before you run Setup, you must download and install Windows 10 ADK on the site server and on each computer that runs an instance of the SMS Provider.  
 
-For more information about supported platforms and prerequisite configurations, see [Supported configurations](/sccm/core/plan-design/configs/supported-configurations).  
+For more information about supported platforms and prerequisite configurations, see [Supported configurations](../../../plan-design/configs/supported-configurations.md).  
 
-For more information about using the Windows ADK with Configuration Manager, see [Infrastructure requirements for OS deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
+For more information about using the Windows ADK with Configuration Manager, see [Infrastructure requirements for OS deployment](../../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
 
 #### Review the site and hierarchy status and verify that there are no unresolved issues
 
@@ -105,9 +105,9 @@ Configuration Manager can't upgrade a primary site that has a database replica f
 
 For more information, see the following articles:  
 
-- System Center 2012 Configuration Manager: [Configure database replicas for management points](/sccm/core/servers/deploy/configure/database-replicas-for-management-points#BKMK_DBReplica_Config)  
+- System Center 2012 Configuration Manager: [Configure database replicas for management points](../configure/database-replicas-for-management-points.md#BKMK_DBReplica_Config)  
 
-- Configuration Manager, current branch: [Database replicas for management points](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)  
+- Configuration Manager, current branch: [Database replicas for management points](../configure/database-replicas-for-management-points.md)  
 
 #### Reconfigure software update points that use NLB
 
@@ -129,9 +129,9 @@ Before you disable a task, record the schedule of the task so you can restore it
 
 For more information about site maintenance tasks, see the following articles:  
 
-- System Center 2012 Configuration Manager: [Planning for site operations](/sccm/core/plan-design/hierarchy/plan-for-the-site-database)  
+- System Center 2012 Configuration Manager: [Planning for site operations](../../../plan-design/hierarchy/plan-for-the-site-database.md)  
 
-- Configuration Manager, current branch: [Reference for maintenance tasks](/sccm/core/servers/manage/reference-for-maintenance-tasks)  
+- Configuration Manager, current branch: [Reference for maintenance tasks](../../manage/reference-for-maintenance-tasks.md)  
 
 #### Run setup prerequisite checker
 
@@ -146,13 +146,13 @@ If you plan to upgrade to the current branch, errors for the LTSB edition can be
 
 Later, when you run Configuration Manager setup to do the upgrade, the prerequisite check runs again. It evaluates your site based on the branch of Configuration Manager you choose to install (current branch, or LTSB). If you choose to upgrade to the current branch, it doesn't run the check for features that aren't supported by the LTSB.
 
-For more information, see the [Prerequisite checker](/sccm/core/servers/deploy/install/prerequisite-checker) and [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks).  
+For more information, see the [Prerequisite checker](prerequisite-checker.md) and [List of prerequisite checks](list-of-prerequisite-checks.md).  
 
 #### Download prerequisite files and redistributable files for Configuration Manager
 
 Use **Setup Downloader** to download prerequisite redistributable files, language packs, and the latest product updates for Configuration Manager.  
 
-For information, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader).  
+For information, see [Setup Downloader](setup-downloader.md).  
 
 #### Plan to manage server and client languages
 
@@ -167,7 +167,7 @@ When you upgrade a site, the site upgrade installs only the language pack versio
 > [!NOTE]  
 > You can't use the language packs from System Center 2012 Configuration Manager to enable languages for a Configuration Manager current branch site.  
 
-For more information about language packs, see [Language packs](/sccm/core/servers/deploy/install/language-packs).  
+For more information about language packs, see [Language packs](language-packs.md).  
 
 #### Review considerations for site upgrades
 
@@ -177,11 +177,11 @@ When you upgrade a site, some features and configurations reset to a default con
 
 Before you upgrade a site, back up the site database to make sure that you have a successful backup to use for disaster recovery.  
 
-For more information, see [Backup and recovery](/sccm/core/servers/manage/backup-and-recovery).  
+For more information, see [Backup and recovery](../../manage/backup-and-recovery.md).  
 
 #### Back up a customized configuration.mof file
 
-If you use a customized configuration.mof file to define data classes you use with hardware inventory, create a backup of this file. After the upgrade, restore this file to your site. For more information, see [How to extend hardware inventory](/sccm/core/clients/manage/inventory/extend-hardware-inventory).  
+If you use a customized configuration.mof file to define data classes you use with hardware inventory, create a backup of this file. After the upgrade, restore this file to your site. For more information, see [How to extend hardware inventory](../../../clients/manage/inventory/extend-hardware-inventory.md).  
 
 #### Test the database upgrade process on a copy of the most recent site database backup
 
@@ -228,17 +228,17 @@ By default, when you upgrade a central administration site or primary site, the 
 > [!TIP]  
 > Close each open console before you start the upgrade.  
 
-For more information, see [Install Configuration Manager consoles](/sccm/core/servers/deploy/install/install-consoles).  
+For more information, see [Install Configuration Manager consoles](install-consoles.md).  
 
 #### Reconfigure database replicas for management points at primary sites
 
 If you use database replicas for management points at primary sites, uninstall the database replicas before you upgrade the site. After you upgrade a primary site, reconfigure the database replica for management points.
 
-For more information, see [Database replicas for management points](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).  
+For more information, see [Database replicas for management points](../configure/database-replicas-for-management-points.md).  
 
 #### Reconfigure any database maintenance tasks you disabled before the upgrade
 
-If you disabled database [maintenance tasks](/sccm/core/servers/manage/reference-for-maintenance-tasks) at a site before the upgrade, reconfigure those tasks at the site using the same settings that were in place before the upgrade.  
+If you disabled database [maintenance tasks](../../manage/reference-for-maintenance-tasks.md) at a site before the upgrade, reconfigure those tasks at the site using the same settings that were in place before the upgrade.  
 
 #### Upgrade clients
 
@@ -249,7 +249,7 @@ When you upgrade a client, the current client software is uninstalled and the ne
 > [!TIP]  
 > When you upgrade the top-level site of a hierarchy, the client installation package on each distribution point in the hierarchy is also updated. When you upgrade a primary site, the client upgrade package that's available from that primary site is updated.  
 
-For more information, see [How to upgrade clients for Windows computers](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers).  
+For more information, see [How to upgrade clients for Windows computers](../../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
 ## <a name="bkmk_considerations"></a> Considerations for upgrading  
 
@@ -304,11 +304,11 @@ After you restore the site database, on the SQL Server computer, run Configurati
 
 For more information, see the following articles:
 
-- [Back up a Configuration Manager site](/sccm/core/servers/manage/backup-and-recovery)  
+- [Back up a Configuration Manager site](../../manage/backup-and-recovery.md)  
 
-- [Command-line options for Setup](/sccm/core/servers/deploy/install/command-line-options-for-setup#bkmk_setup)  
+- [Command-line options for Setup](command-line-options-for-setup.md#bkmk_setup)  
 
-- [Support for SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions)  
+- [Support for SQL Server versions](../../../plan-design/configs/support-for-sql-server-versions.md)  
 
 > [!TIP]  
 > If you integrate Microsoft Intune with Configuration Manager:  
@@ -380,13 +380,13 @@ Before you upgrade a site, close the Configuration Manager console on the site s
     > [!NOTE]  
     > Microsoft doesn't validate the expiration date you entered, and won't use this date for license validation. You can use it as a reminder of your expiration date. Configuration Manager periodically checks for new software updates offered online and your software assurance license status should be current to be eligible to use these additional updates.
 
-    For more information, see [Licensing and branches](/sccm/core/understand/learn-more-editions).
+    For more information, see [Licensing and branches](../../../understand/learn-more-editions.md).
 
 6. On the **Microsoft Software License Terms** page, read and accept the license terms, and then select **Next**.  
 
 7. On the **Prerequisite Licenses** page, read and accept the license terms for the prerequisite software, and then select **Next**. Setup downloads and automatically installs the software on site systems or clients when it's required. Before you can continue to the next page, agree to all terms.  
 
-8. On the **Prerequisite Downloads** page, specify whether Setup downloads the latest content from the internet or use previously downloaded files. This content includes prerequisite redistributable files, language packs, and the latest product updates. If you previously downloaded the files by using Setup Downloader, select **Use previously downloaded files** and specify the download folder. For more information, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader).  
+8. On the **Prerequisite Downloads** page, specify whether Setup downloads the latest content from the internet or use previously downloaded files. This content includes prerequisite redistributable files, language packs, and the latest product updates. If you previously downloaded the files by using Setup Downloader, select **Use previously downloaded files** and specify the download folder. For more information, see [Setup Downloader](setup-downloader.md).  
 
     > [!NOTE]  
     > When you use previously downloaded files, verify that the path to the download folder contains the most recent version of the files.  
@@ -402,7 +402,7 @@ Before you upgrade a site, close the Configuration Manager console on the site s
 
 12. On the **Prerequisite Installation Check** page, if there are no problems listed, select **Next** to upgrade the site and site system roles.
 
-    If Prerequisite Checker finds a problem, select an item on the list for details about how to resolve the problem. Resolve all items in the list that have an **Error** status before you continue Setup. After you resolve the issue, click **Run Check** to restart prerequisite checking. You can also open the ConfigMgrPrereq.log file in the root of the system drive to review the Prerequisite Checker results. The log file can contain additional information that's not displayed in the user interface. For a list of installation prerequisite rules and descriptions, see [Prerequisite Checker](/sccm/core/servers/deploy/install/list-of-prerequisite-checks).
+    If Prerequisite Checker finds a problem, select an item on the list for details about how to resolve the problem. Resolve all items in the list that have an **Error** status before you continue Setup. After you resolve the issue, click **Run Check** to restart prerequisite checking. You can also open the ConfigMgrPrereq.log file in the root of the system drive to review the Prerequisite Checker results. The log file can contain additional information that's not displayed in the user interface. For a list of installation prerequisite rules and descriptions, see [Prerequisite Checker](list-of-prerequisite-checks.md).
 
 On the **Upgrade** page, Setup displays the overall progress status. When Setup completes the core site server and site system installation, you can close the wizard. Site configuration continues in the background.  
 

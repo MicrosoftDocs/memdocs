@@ -135,7 +135,7 @@ The **Distribution Point Configuration Status** node in the **Monitoring** works
 Use the **Client Data Sources** dashboard to better understand from where clients get content in your environment. The dashboard starts displaying data after clients download content and report that information back to the site. This process can take up to 24 hours.
 
 > [!Note]  
-> Configuration Manager doesn't enable this optional feature by default. You must enable the **Client Peer Cache** feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).  
+> Configuration Manager doesn't enable this optional feature by default. You must enable the **Client Peer Cache** feature before using it. For more information, see [Enable optional features from updates](../../manage/install-in-console-updates.md#bkmk_options).  
 
 In the Configuration Manager console, go to the **Monitoring** workspace, expand **Distribution Status**, and select the **Client Data Sources** node. Select a time period to apply to the dashboard. Then select the boundary group for which you want to view information. You can hover your mouse over tiles to see more details about the different content or policy sources.
 
@@ -150,10 +150,10 @@ The dashboard includes the following tiles:
 Displays the sources from which clients got content:
 
 - Distribution point
-- [Cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)
-- [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache)
-- [Peer Cache](/sccm/core/plan-design/hierarchy/client-peer-cache)
-- [Delivery Optimization](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization) (starting in version 1906)<sup>[Note 1](#bkmk_note1)</sup>
+- [Cloud distribution point](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
+- [BranchCache](../../../plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache)
+- [Peer Cache](../../../plan-design/hierarchy/client-peer-cache.md)
+- [Delivery Optimization](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization) (starting in version 1906)<sup>[Note 1](#bkmk_note1)</sup>
 - Microsoft Update: Devices report this source when the Configuration Manager client downloads software updates from Microsoft cloud services. These services include Microsoft Update and Office 365.
 
 ![Client Content Sources tile on the dashboard](media/3555759-do-source.png)
@@ -167,7 +167,7 @@ Displays the sources from which clients got content:
 >
 > - Deploy Windows 10 express updates
 >
-> For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
+> For more information, see [Manage Express installation files for Windows 10 updates](../../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
 
 #### Distribution points
 

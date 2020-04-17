@@ -29,7 +29,7 @@ Sites of different versions can't coexist in the same Configuration Manager hier
 
 You can deploy a Configuration Manager current branch site and hierarchy side by side with an existing System Center 2012 Configuration Manager site or hierarchy. Plan to prevent clients from either version from trying to join a site from the other version.
 
-For example, if two or more Configuration Manager hierarchies have [overlapping boundaries](/sccm/core/servers/deploy/configure/boundary-groups#overlapping-boundaries) that include the same network locations, assign each new client to a specific site instead of using automatic site assignment. For more information, see [How to assign clients to a site](/sccm/core/clients/deploy/assign-clients-to-a-site).  
+For example, if two or more Configuration Manager hierarchies have [overlapping boundaries](../../servers/deploy/configure/boundary-groups.md#overlapping-boundaries) that include the same network locations, assign each new client to a specific site instead of using automatic site assignment. For more information, see [How to assign clients to a site](../../clients/deploy/assign-clients-to-a-site.md).  
 
 Additionally, you can't install a client from System Center 2012 Configuration Manager on a computer that hosts a site system role from Configuration Manager current branch. You also can't you install a Configuration Manager current branch client on a computer that hosts a site system role from System Center 2012 Configuration Manager.  
 
@@ -75,7 +75,7 @@ The same behavior applies when you update between versions of Configuration Mana
 
 #### When upgrading from System Center 2012 Configuration Manager to Configuration Manager current branch
 
-When the top-level site of a hierarchy upgrades to Configuration Manager current branch, it automatically updates the default boot images to use the Windows Assessment and Deployment Kit (ADK) version 10. Use these boot images only for deployments to clients at Configuration Manager current branch sites. For more information, see [Planning for OS deployment interoperability](/sccm/osd/plan-design/planning-for-operating-system-deployment-interoperability).
+When the top-level site of a hierarchy upgrades to Configuration Manager current branch, it automatically updates the default boot images to use the Windows Assessment and Deployment Kit (ADK) version 10. Use these boot images only for deployments to clients at Configuration Manager current branch sites. For more information, see [Planning for OS deployment interoperability](../../../osd/plan-design/planning-for-operating-system-deployment-interoperability.md).
 
 #### When upgrading between Configuration Manager current branch versions
 

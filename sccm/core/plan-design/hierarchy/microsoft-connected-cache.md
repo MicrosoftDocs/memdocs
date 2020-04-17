@@ -58,9 +58,9 @@ When you configure clients to use the Connected Cache server, they no longer req
 
   - Don't preinstall the IIS [Application Request Routing](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) feature. Connected Cache installs ARR and configures its settings. Microsoft can't guarantee that the Connected Cache's ARR configuration won't conflict with other applications on the server that also use this feature.
 
-  - The distribution point requires internet access to the Microsoft cloud. The specific URLs can vary depending upon the specific cloud-enabled content. For more information, see [Internet access requirements](/sccm/core/plan-design/network/internet-endpoints).
+  - The distribution point requires internet access to the Microsoft cloud. The specific URLs can vary depending upon the specific cloud-enabled content. For more information, see [Internet access requirements](../network/internet-endpoints.md).
 
-  - Starting in version 2002, the Connected Cache application can use an unauthenticated proxy server for internet access. For more information, see [Configure the proxy for a site system server](/configmgr/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server).<!-- 5856396 -->
+  - Starting in version 2002, the Connected Cache application can use an unauthenticated proxy server for internet access. For more information, see [Configure the proxy for a site system server](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server).<!-- 5856396 -->
 
 - Clients running Windows 10 version 1709 or later
 
@@ -110,8 +110,8 @@ When clients download cloud-managed content, they use Delivery Optimization from
 
 - Microsoft Store apps
 - Windows features on demand, such as languages
-- If you enable [Windows Update for Business policies](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10): Windows 10 feature and quality updates
-- For [co-management workloads](/sccm/comanage/workloads):
+- If you enable [Windows Update for Business policies](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md): Windows 10 feature and quality updates
+- For [co-management workloads](../../../comanage/workloads.md):
   - Windows Update for Business: Windows 10 feature and quality updates
   - Office Click-to-Run apps: Office apps and updates
   - Client apps: Microsoft Store apps and updates
@@ -121,7 +121,7 @@ On Windows 10 version 1809 or later, verify this behavior with the **Get-Deliver
 
 If the cache server returns any HTTP failure, the Delivery Optimization client falls back to the original cloud source.
 
-For more detailed information, see [Troubleshoot Microsoft Connected Cache in Configuration Manager](/sccm/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache).
+For more detailed information, see [Troubleshoot Microsoft Connected Cache in Configuration Manager](../../servers/deploy/configure/troubleshoot-microsoft-connected-cache.md).
 
 ## <a name="bkmk_intune"></a> Support for Intune Win32 apps
 
@@ -142,22 +142,22 @@ Starting in version 1910, when you enable Connected Cache on your Configuration 
 
 #### Site
 
-- Enable Connected Cache on a distribution point. For more information, see [Microsoft Connected Cache](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache).
+- Enable Connected Cache on a distribution point. For more information, see [Microsoft Connected Cache](microsoft-connected-cache.md).
 
 - The client and the Connected Cache-enabled distribution point need to be in the same boundary group.
 
-- Enable the following client settings in the [**Delivery Optimization**](/configmgr/core/clients/deploy/about-client-settings#delivery-optimization) group:
+- Enable the following client settings in the [**Delivery Optimization**](../../clients/deploy/about-client-settings.md#delivery-optimization) group:
 
   - **Use Configuration Manager Boundary Groups for Delivery Optimization Group ID**
   - **Enable devices managed by Configuration Manger to use Microsoft Connected Cache servers for content download**
 
-- Enable the pre-release feature **Client apps for co-managed devices**. For more information, see [Pre-release features](/configmgr/core/servers/manage/pre-release-features).
+- Enable the pre-release feature **Client apps for co-managed devices**. For more information, see [Pre-release features](../../servers/manage/pre-release-features.md).
 
 - Enable co-management, and switch the **Client apps** workload to **Pilot Intune** or **Intune**. For more information, see the following articles:
 
-  - [Workloads - Client apps](/configmgr/comanage/workloads#client-apps)
-  - [How to enable co-management](/configmgr/comanage/how-to-enable)
-  - [Switch workloads to Intune](/configmgr/comanage/how-to-switch-workloads)
+  - [Workloads - Client apps](../../../comanage/workloads.md#client-apps)
+  - [How to enable co-management](../../../comanage/how-to-enable.md)
+  - [Switch workloads to Intune](../../../comanage/how-to-switch-workloads.md)
 
     If in pilot, add the client to the pilot collection for Client Apps.
 
@@ -174,6 +174,6 @@ Starting in version 1910, when you enable Connected Cache on your Configuration 
 
 ## See also
 
-[Optimize Windows 10 updates with Delivery Optimization](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)
+[Optimize Windows 10 updates with Delivery Optimization](../../../sum/deploy-use/optimize-windows-10-update-delivery.md)
 
-[Troubleshoot Microsoft Connected Cache in Configuration Manager](/sccm/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache)
+[Troubleshoot Microsoft Connected Cache in Configuration Manager](../../servers/deploy/configure/troubleshoot-microsoft-connected-cache.md)

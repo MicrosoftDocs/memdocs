@@ -28,7 +28,7 @@ You can also group and identify devices based on the user, not just the client t
 
 ## Managing devices with the Configuration Manager client
 
-There are two ways to use the Configuration Manager client software to manage a device. The first way is to discover the device on your network, and then deploy the client software to that device. The other way is to manually install the client software on a new computer, and then have that computer join your site when it joins your network. To discover devices where the client software is not installed, run one or more of the built-in discovery methods. After a device is discovered, use one of several methods to install the client software. For information on using discovery, see [Run discovery for Configuration Manager](/sccm/core/servers/deploy/configure/run-discovery).  
+There are two ways to use the Configuration Manager client software to manage a device. The first way is to discover the device on your network, and then deploy the client software to that device. The other way is to manually install the client software on a new computer, and then have that computer join your site when it joins your network. To discover devices where the client software is not installed, run one or more of the built-in discovery methods. After a device is discovered, use one of several methods to install the client software. For information on using discovery, see [Run discovery for Configuration Manager](../servers/deploy/configure/run-discovery.md).  
 
 After discovering the devices that are supported to run the Configuration Manager client software, you can use one of several methods to install the software. After the software is installed and the client is assigned to a primary site, you can begin to manage the device. Common installation methods include:
 
@@ -46,11 +46,11 @@ After the client is installed, you can simplify the tasks of managing devices by
 
 For more information, see these articles:  
 
-- [Choose a device management solution](/sccm/core/plan-design/choose-a-device-management-solution)  
+- [Choose a device management solution](../plan-design/choose-a-device-management-solution.md)  
 
-- [Client installation methods](/sccm/core/clients/deploy/plan/client-installation-methods)  
+- [Client installation methods](../clients/deploy/plan/client-installation-methods.md)  
 
-- [Introduction to collections](/sccm/core/clients/manage/collections/introduction-to-collections)  
+- [Introduction to collections](../clients/manage/collections/introduction-to-collections.md)  
 
 ### Client settings
 
@@ -70,13 +70,13 @@ The following diagram shows an example of how you create and apply custom client
 
 To learn more about client settings, see the following articles:
 
-- [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings)
-- [About client settings](/sccm/core/clients/deploy/about-client-settings)
+- [How to configure client settings](../clients/deploy/configure-client-settings.md)
+- [About client settings](../clients/deploy/about-client-settings.md)
 
 
 ## Managing devices without the Configuration Manager client
 
-Configuration Manager supports the management of some devices that have not installed the client software, and aren't managed by Intune. For more information, see [Manage mobile devices with on-premises infrastructure in Configuration Manager](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure) and [Manage mobile devices with Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
+Configuration Manager supports the management of some devices that have not installed the client software, and aren't managed by Intune. For more information, see [Manage mobile devices with on-premises infrastructure in Configuration Manager](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md) and [Manage mobile devices with Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 
 ## User-based management
 
@@ -102,6 +102,6 @@ One of the ways that users can control their software deployment experience is t
 
 For more information, see the following articles:
 
-- [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center)
-- [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity)
-- [Software Center user guide](/sccm/core/understand/software-center)
+- [Plan for Software Center](../../apps/plan-design/plan-for-software-center.md)
+- [Link users and devices with user device affinity](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)
+- [Software Center user guide](software-center.md)
