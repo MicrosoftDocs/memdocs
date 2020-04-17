@@ -112,7 +112,7 @@ Use this task to delete history information about the online status of clients r
 
 ### Delete Aged Cloud Management Gateway Traffic Data
 
-Use this task to delete from the site database all aged data about the traffic that passes through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This data includes:
+Use this task to delete from the site database all aged data about the traffic that passes through the [cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md). This data includes:
 
 - The number of requests
 - Total request bytes

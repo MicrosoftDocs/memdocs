@@ -87,7 +87,7 @@ For more information, see [Management insights](../../servers/manage/management-
 
 - Multi-subnet failover<!-- SCCMDocs-pr#3734 -->: You can now enable the [MultiSubnetFailover connection string keyword](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually configure the site server. For more information, see the [Multi-subnet failover](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) prerequisite.
 
-- Support for distributed views<!-- SCCMDocs-pr#3792 -->: The site database can be hosted on a SQL Server Always On availability group, and you can enable database replication links to use [distributed views](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_dbrep).
+- Support for distributed views<!-- SCCMDocs-pr#3792 -->: The site database can be hosted on a SQL Server Always On availability group, and you can enable database replication links to use [distributed views](../hierarchy/data-transfers-between-sites.md#bkmk_dbrep).
 
     > [!Note]  
     > This change doesn't apply to SQL Server clusters.
@@ -188,7 +188,7 @@ You can now install Delivery Optimization In-Network Cache (DOINC) server on you
 
 This cache server acts as an on-demand transparent cache for content downloaded by Delivery Optimization. Use client settings to make sure this server is offered only to the members of the local Configuration Manager boundary group.
 
-For more information, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache).
+For more information, see [Delivery Optimization In-Network Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md).
 
 
 ## <a name="bkmk_client"></a> Client management

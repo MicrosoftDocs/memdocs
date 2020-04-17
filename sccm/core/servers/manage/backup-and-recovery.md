@@ -60,7 +60,7 @@ You can automate backup for Configuration Manager sites by scheduling the predef
 -   Backs up the site database
 -   Backs up specific registry keys
 -   Backs up specific folders and files
--   Backs up the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder)   
+-   Backs up the [CD.Latest folder](the-cd.latest-folder.md)   
 
 Plan to run the default site backup task at a minimum of every five days. This schedule is because Configuration Manager uses a *SQL Server change tracking retention period* of five days. For more information, see [SQL Server change tracking retention period](recover-sites.md#sql-server-change-tracking-retention-period).
 
@@ -236,4 +236,4 @@ The VSS is a set of COM APIs that implements a framework to allow volume backups
 
 
 ## Next steps
-After you create a backup, practice [site recovery](/sccm/protect/understand/recover-sites) with that backup. This practice can help you become familiar with the recovery process before you need to rely on it. It can also help confirm the backup was successful for its intended purpose.  
+After you create a backup, practice [site recovery](recover-sites.md) with that backup. This practice can help you become familiar with the recovery process before you need to rely on it. It can also help confirm the backup was successful for its intended purpose.  

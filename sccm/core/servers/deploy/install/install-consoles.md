@@ -47,7 +47,7 @@ Decide which source path to use:
 When possible, start the console installer from the **ConsoleSetup** folder rather than from the source media.
 
 > [!Important]  
-> Don't install the console using the **CD.Latest** source files. It's an unsupported scenario, and may cause problems with the console installation. For more information, see [The CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder#unsupported-scenarios).<!-- SCCMDocs issue 1359 -->  
+> Don't install the console using the **CD.Latest** source files. It's an unsupported scenario, and may cause problems with the console installation. For more information, see [The CD.Latest folder](../../manage/the-cd.latest-folder.md#unsupported-scenarios).<!-- SCCMDocs issue 1359 -->  
 
 If you create a package for installing the console on other computers, make sure the package includes the following files:<!--3612513-->
 

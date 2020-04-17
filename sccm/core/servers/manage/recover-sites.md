@@ -246,7 +246,7 @@ Use one of the following procedures to help you recover your site server and sit
 
 ### Start a site recovery in the setup wizard
 
-1. Copy the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder) to a location outside the Configuration Manager installation folder. From the copy of the CD.Latest folder, run the Configuration Manager setup wizard.  
+1. Copy the [CD.Latest folder](the-cd.latest-folder.md) to a location outside the Configuration Manager installation folder. From the copy of the CD.Latest folder, run the Configuration Manager setup wizard.  
 
 2. On the **Getting Started** page, select **Recover a site**, and then select **Next**.  
 

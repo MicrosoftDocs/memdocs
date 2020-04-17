@@ -147,7 +147,7 @@ The following management insight rules have actions in this release:
 
 You can now transition the device configuration workload from Configuration Manager to Intune after enabling co-management. Transitioning this workload lets you use Intune to deploy MDM polices, while continuing to use Configuration Manager for deploying applications. 
 
-To transition this workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+To transition this workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For more information, see [Co-management for Windows 10 devices](../../comanage/overview.md).
 
 > [!Note]  
 > Moving this workload also moves the **Resource Access** and **Endpoint Protection** workloads, which are a subset of the device configuration workload.
@@ -374,7 +374,7 @@ The default task sequence template for Windows 10 in-place upgrade now includes 
          `%SystemDrive%\$Windows.~BT\Sources\Panther\setupact.log`  
     - For more information on setupact.log and other Windows Setup logs, see [Windows Setup Log files](/windows/deployment/upgrade/log-files).
     - For more information on Configuration Manager client logs, see [Configuration Manager client logs](../plan-design/hierarchy/log-files.md#BKMK_ClientLogs)
-    - For more information on _SMSTSLogPath and other useful variables, see [Task sequence built-in variables](/sccm/osd/understand/task-sequence-built-in-variables)
+    - For more information on _SMSTSLogPath and other useful variables, see [Task sequence built-in variables](../../osd/understand/task-sequence-variables.md)
 
 - **Run diagnostic tools**: To run additional diagnostic tools, add steps in this group. These tools should be automated for collecting additional information from the system as soon after the failure as possible.
     - One such tool is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool that you can use to obtain details about why a Windows 10 upgrade was unsuccessful.

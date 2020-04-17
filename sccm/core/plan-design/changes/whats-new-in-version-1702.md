@@ -114,7 +114,7 @@ Use the [content library cleanup tool](../hierarchy/content-library-cleanup-tool
 
 
 ### Use the OMS connector with the Azure Government cloud
-You can use the OMS connector to connect to OMS Log Analytics in Microsoft Azure Government cloud. This requires you to modify a configuration file before you install the OMS connector so that the connector can work with the Government cloud. For more information, see [Use the OMS connector with the Azure Government cloud](/sccm/core/clients/manage/sync-data-log-analytics).
+You can use the OMS connector to connect to OMS Log Analytics in Microsoft Azure Government cloud. This requires you to modify a configuration file before you install the OMS connector so that the connector can work with the Government cloud. For more information, see [Use the OMS connector with the Azure Government cloud](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm).
 
 ### Software update points are added to boundary groups
 Beginning with version 1702, clients use boundary groups to find a new software update point, and to fallback and find a new software update point if their current one is no longer accessible. You can add individual software update points to different boundary groups to control which servers a client can find. For more information, see [software update points](../../servers/deploy/configure/boundary-groups.md#software-update-points) in the [configuring boundary groups](../../servers/deploy/configure/boundary-groups.md) topic.
@@ -170,7 +170,7 @@ A new hardware inventory class (**SMS_Firmware**) and property (**UEFI**) are av
 ### Improvements to Software Center warning messages for high-impact task sequences
 This release includes the following improvements to Software Center warning messages for high-impact deployment task sequences:
 
-- In the properties for the task sequence, you can now configure any task sequence, including non-operating system task sequences, as a high-risk deployment. Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+- In the properties for the task sequence, you can now configure any task sequence, including non-operating system task sequences, as a high-risk deployment. Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](../../servers/manage/settings-to-manage-high-risk-deployments.md).
 - In the properties for the task sequence, you can choose to use the default notification message or create your own custom notification message for high-impact deployments.
 - In the properties for the task sequence, you can configure Software Center properties, which include make a restart required, the download size of the task sequence, and the estimated run time.
 - The default high-impact deployment message for in-place upgrades now states that

@@ -93,7 +93,7 @@ Use this option in the following situations:
     This option deletes all information about the site and its resources from the Configuration Manager hierarchy, but doesn't make any changes on the site server.
 
     > [!TIP]
-    >  You also can use the Hierarchy Maintenance Tool with the **/DELSITE** option to delete a secondary site. For more information, see [Hierarchy Maintenance Tool (Preinst.exe)](/configmgr/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
+    >  You also can use the Hierarchy Maintenance Tool with the **/DELSITE** option to delete a secondary site. For more information, see [Hierarchy Maintenance Tool (Preinst.exe)](../../manage/hierarchy-maintenance-tool-preinst.exe.md).
 
 ### Prerequisites to delete a secondary site
 
@@ -183,7 +183,7 @@ The administrative user that runs Configuration Manager setup needs the followin
 You run Configuration Manager setup to uninstall a primary site that doesn't have an associated secondary site. Use the following procedure to uninstall a primary site:
 
 > [!TIP]
-> If the primary site server is no longer available, use the Hierarchy Maintenance Tool at the CAS to delete the primary site from the site database. For more information, see [Hierarchy Maintenance Tool (Preinst.exe)](/configmgr/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
+> If the primary site server is no longer available, use the Hierarchy Maintenance Tool at the CAS to delete the primary site from the site database. For more information, see [Hierarchy Maintenance Tool (Preinst.exe)](../../manage/hierarchy-maintenance-tool-preinst.exe.md).
 
 1. Start Configuration Manager setup on the primary site server by using one of the following methods:
 

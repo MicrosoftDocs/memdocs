@@ -46,7 +46,7 @@ Review [Technical Preview for Configuration Manager](technical-preview.md) befor
 
 ## Transition Endpoint Protection workload to Intune using co-management    
 <!-- 1357365 -->
-In this release, you can now transition the Endpoint Protection workload from Configuration Manager to Intune after enabling co-management. To transition the Endpoint Protection workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For details, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+In this release, you can now transition the Endpoint Protection workload from Configuration Manager to Intune after enabling co-management. To transition the Endpoint Protection workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For details, see [Co-management for Windows 10 devices](../../comanage/overview.md).
 
 
  
@@ -71,7 +71,7 @@ For more information, see the **Group** delivery mode option in [Delivery Optimi
 ## Windows 10 in-place upgrade task sequence via cloud management gateway
 <!-- 1357149 -->
 
-The Windows 10 [in-place upgrade task sequence](../../osd/deploy-use/upgrade-windows-to-the-latest-version.md) now supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. 
+The Windows 10 [in-place upgrade task sequence](../../osd/deploy-use/upgrade-windows-to-the-latest-version.md) now supports deployment to internet-based clients managed through the [cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. 
 
 Ensure all of the content referenced by the in-place upgrade task sequence is distributed to a [cloud distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md). Otherwise devices cannot run the task sequence.
 
@@ -103,7 +103,7 @@ The default task sequence template for Windows 10 in-place upgrade now includes 
 ### Additional recommendations
 - Review Windows documentation to [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). This article also includes detailed information about the upgrade process.
 - On the default **Check Readiness** step, enable **Ensure minimum free disk space (MB)**. Set the value to at least **16384** (16 GB) for a 32-bit OS upgrade package, or **20480** (20 GB) for 64-bit. 
-- Use the **SMSTSDownloadRetryCount** [built-in task sequence variable](/sccm/osd/understand/task-sequence-built-in-variables) to retry downloading policy. Currently by default, the client retries twice; this variable is set to two (2). If your clients are not on a wired corporate network connection, additional retries help the client obtain policy. Using this variable causes no negative side effect, other than delayed failure if it cannot download policy.<!-- 501016 --> Also increase the **SMSTSDownloadRetryDelay** variable from the default 15 seconds.
+- Use the **SMSTSDownloadRetryCount** [built-in task sequence variable](../../osd/understand/task-sequence-variables.md) to retry downloading policy. Currently by default, the client retries twice; this variable is set to two (2). If your clients are not on a wired corporate network connection, additional retries help the client obtain policy. Using this variable causes no negative side effect, other than delayed failure if it cannot download policy.<!-- 501016 --> Also increase the **SMSTSDownloadRetryDelay** variable from the default 15 seconds.
 - Perform an inline compatibility assessment. 
    - Add a second **Upgrade Operating System** step early in the **Prepare for Upgrade** group. Name it *Upgrade assessment*. Specify the same upgrade package, and then enable the option to **Perform Windows Setup compatibility scan without starting upgrade**. Enable **Continue on error** on the Options tab. 
    - Immediately following this *Upgrade assessment* step, add a **Run Command Line** step. Specify the following command line:</br> `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`</br>On the **Options** tab, add the following condition: </br>`Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400` </br>This return code is the decimal equivalent of MOSETUP_E_COMPAT_SCANONLY (0xC1900210), which is a successful compatibility scan with no issues. If the *Upgrade Assessment* step succeeds and returns this code, this step is skipped. Otherwise, if the assessment step returns any other return code, this step fails the task sequence with the return code from the Windows Setup compatibility scan.
@@ -223,7 +223,7 @@ The list of [unsupported scenarios](../plan-design/network/cng-certificates-over
 
 ## Cloud management gateway support for Azure Resource Manager
 <!-- 1324735 -->
-When creating an instance of the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
+When creating an instance of the [cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
 
 The CMG wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, we recommend using the Azure Resource Manager deployment model for all new CMG instances. If possible, redeploy existing CMG instances through Resource Manager.
 
@@ -286,7 +286,7 @@ If you deploy applications as available to users, they can now browse and instal
    - Windows 10
    - Azure AD-joined, also known as cloud domain-joined
 - To support internet-based clients:
-    - [Cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) 
+    - [Cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md) 
     - Enable the client setting: **Enable user policy requests from Internet clients** in the [Client Policy](../clients/deploy/about-client-settings.md#client-policy) group
 - To support clients on the corporate network:
     - Add the cloud distribution point to a boundary group used by the clients

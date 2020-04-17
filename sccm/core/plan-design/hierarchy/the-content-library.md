@@ -70,7 +70,7 @@ Use the following options to manage the content library on the central administr
 ## <a name="bkmk_remote"></a> Configure a remote content library for the site server
 
 <!--1357525-->
-Starting in version 1806, to configure [site server high availability](../../servers/deploy/configure/site-server-high-availability.md) or to free up hard drive space on your central administration or primary site servers, relocate the content library to another storage location. Move the content library to another drive on the site server, a separate server, or fault-tolerant disks in a storage area network (SAN). A SAN is recommended, because it's highly available, and provides elastic storage that grows or shrinks over time to meet your changing content requirements. For more information, see [High availability options](/sccm/protect/understand/high-availability-options).
+Starting in version 1806, to configure [site server high availability](../../servers/deploy/configure/site-server-high-availability.md) or to free up hard drive space on your central administration or primary site servers, relocate the content library to another storage location. Move the content library to another drive on the site server, a separate server, or fault-tolerant disks in a storage area network (SAN). A SAN is recommended, because it's highly available, and provides elastic storage that grows or shrinks over time to meet your changing content requirements. For more information, see [High availability options](../../servers/deploy/configure/site-server-high-availability.md).
 
 A remote content library is a prerequisite for [site server high availability](../../servers/deploy/configure/site-server-high-availability.md).
 

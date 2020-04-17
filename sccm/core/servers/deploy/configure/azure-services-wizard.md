@@ -35,7 +35,7 @@ Configure the following Azure services using this wizard:
 
     - [App approval email notifications](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
-- **Log Analytics Connector**: [Connect to Azure Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics). Sync collection data to Log Analytics.  
+- **Log Analytics Connector**: [Connect to Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). Sync collection data to Log Analytics.  
 
     > [!Note]  
     > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](https://docs.microsoft.com/azure/azure-monitor/terminology#log-analytics).  
@@ -218,7 +218,7 @@ After specifying the web and native apps on the Apps page, the Azure Services Wi
 
 - **Cloud Management** service, **Discovery** page: [Configure Azure AD User Discovery](configure-discovery-methods.md#azureaadisc)  
 
-- **Log Analytics Connector** service, **Configuration** page: [Configure the connection to Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics#grant-configuration-manager-with-permissions-to-log-analytics)  
+- **Log Analytics Connector** service, **Configuration** page: [Configure the connection to Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
 
 - **Microsoft Store for Business** service, **Configurations** page: [Configure Microsoft Store for Business synchronization](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_config)  
 

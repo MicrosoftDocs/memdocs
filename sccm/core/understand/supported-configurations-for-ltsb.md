@@ -308,7 +308,7 @@ All LTSB site systems must be members of a supported Windows Active Directory do
 The information in the following Current Branch topics apply to the LTSB:
 - [Size and scale numbers](../plan-design/configs/size-and-scale-numbers.md)
 - [Site and site system prerequisites](../plan-design/configs/site-and-site-system-prerequisites.md)
-- [High availability options](/sccm/protect/understand/high-availability-options)
+- [High availability options](../servers/deploy/configure/high-availability-options.md)
 - [Recommended hardware](../plan-design/configs/recommended-hardware.md)
 - [Support for Windows features and networks](../plan-design/configs/support-for-windows-features-and-networks.md)
 - [Support for virtualization environments](../plan-design/configs/support-for-virtualization-environments.md)

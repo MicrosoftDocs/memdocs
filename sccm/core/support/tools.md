@@ -83,13 +83,13 @@ These tools are in the `ServerTools` subfolder:
 
 - [Content library cleanup tool](../plan-design/hierarchy/content-library-cleanup-tool.md): Use **ContentLibraryCleanup.exe** in `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` to remove orphaned content from a distribution point.  
 
-- [Hierarchy Maintenance Tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe): Use **Preinst.exe** in the `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` shared folder on the site server to pass commands to the hierarchy manager component.  
+- [Hierarchy Maintenance Tool](../../servers/manage/hierarchy-maintenance-tool-preinst.exe): Use **Preinst.exe** in the `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` shared folder on the site server to pass commands to the hierarchy manager component.  
 
 - [Update reset tool](../servers/manage/update-reset-tool.md): Use **CMUpdateReset.exe** in `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` to fix issues when in-console updates have problems downloading or replicating.  
 
 - [Service Connection Tool](../servers/manage/use-the-service-connection-tool.md): Use **ServiceConnectionTool.exe** in `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` to keep your site up-to-date when your service connection point is offline.  
 
-- [Microsoft Deployment Toolkit (MDT)](/sccm/mdt/): A collection of tools, processes, and guidance for automating desktop and server OS deployments.
+- [Microsoft Deployment Toolkit (MDT)](../../mdt/use-the-mdt.md): A collection of tools, processes, and guidance for automating desktop and server OS deployments.
 
 - [System Center Updates Publisher (SCUP)](../../sum/tools/updates-publisher.md): A stand-alone tool to manage and import custom software updates.
 

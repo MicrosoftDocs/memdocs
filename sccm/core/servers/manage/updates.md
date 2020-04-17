@@ -39,7 +39,7 @@ After you install a baseline version, additional versions of Configuration Manag
 
 - Manually update secondary sites to a new update version from within the console.  
 
-When you install an update, the update stores installation files for that version on the site server in a folder named **CD.Latest**. For more information about these files, see [The CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder).  
+When you install an update, the update stores installation files for that version on the site server in a folder named **CD.Latest**. For more information about these files, see [The CD.Latest folder](the-cd.latest-folder.md).  
 
 - Use the files in the CD.Latest folder during site recovery. Also, when your hierarchy no longer runs a baseline version, use these files to install additional sites.  
 

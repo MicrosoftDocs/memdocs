@@ -92,4 +92,4 @@ Configuration Manager requires the enrollment point and the enrollment proxy poi
 
 ## Cloud management gateway connector point
 
-You need a cloud management gateway connector point if you're setting up a [cloud management gateway](/sccm/core/clients/manage/setup-cloud-management-gateway) to [manage clients on the internet](../../manage/manage-clients-internet.md).
+You need a cloud management gateway connector point if you're setting up a [cloud management gateway](../../manage/cmg/plan-cloud-management-gateway.md) to [manage clients on the internet](../../manage/manage-clients-internet.md).

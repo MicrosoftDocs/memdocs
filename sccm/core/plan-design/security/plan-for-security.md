@@ -396,7 +396,7 @@ Configuration Manager integrates with Azure Active Directory (Azure AD) to enabl
 
 - [Desktop Analytics](../../../desktop-analytics/overview.md)  
 
-- [Azure Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics)  
+- [Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
 
 - [Community Hub](../../get-started/capabilities-in-technical-preview-1807.md#bkmk_hub)  
 

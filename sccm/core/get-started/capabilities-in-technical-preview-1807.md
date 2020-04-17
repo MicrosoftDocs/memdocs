@@ -133,7 +133,7 @@ If you've already set up your site for co-management:
 
 3. After the site syncs with Intune, go to the **Monitoring** workspace, and select the **Client Status** node. In the **Overall Client Status** section, see the row for **Inactive clients using Intune**.  
 
-For more information about enabling co-management, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+For more information about enabling co-management, see [Co-management for Windows 10 devices](../../comanage/overview.md).
 
 
 

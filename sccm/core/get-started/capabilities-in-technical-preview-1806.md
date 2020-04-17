@@ -169,13 +169,13 @@ This release adds three settings for [Windows Defender SmartScreen](/windows/sec
 
 ## Sync MDM policy from Microsoft Intune for a co-managed device
 <!--1357377-->
-Starting in this release when you [switch a co-management workload](/sccm/core/clients/manage/co-management-switch-workloads), the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from Client Notifications in the Configuration Manager console. For more information, see [Initiate client policy retrieval using client notification](/sccm/core/clients/manage/manage-clients##BKMK_PolicyRetrieval).
+Starting in this release when you [switch a co-management workload](../../comanage/how-to-switch-workloads.md), the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from Client Notifications in the Configuration Manager console. For more information, see [Initiate client policy retrieval using client notification](../clients/manage/manage-clients.md#BKMK_PolicyRetrieval).
 
 
 
 ## Transition Office 365 workload to Intune using co-management
 <!--1357841-->
-You can now transition the Office 365 workload from Configuration Manager to Microsoft Intune after enabling co-management. To transition this workload, go to the co-management properties page and move the slider bar from Configuration Manager to Pilot or All. For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+You can now transition the Office 365 workload from Configuration Manager to Microsoft Intune after enabling co-management. To transition this workload, go to the co-management properties page and move the slider bar from Configuration Manager to Pilot or All. For more information, see [Co-management for Windows 10 devices](../../comanage/overview.md).
 
 There is also a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Office 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application, thus don't install Office 365 deployed via Configuration Manager.
 

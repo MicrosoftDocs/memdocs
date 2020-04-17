@@ -26,7 +26,7 @@ Configuration Manager provides comprehensive control over feature updates for Wi
 | ------------- |-------------|
 |[Overview of Configuration Manager current branch](../plan-design/changes/whats-new-incremental-versions.md)|Provides a brief summary of the key points for the new servicing model for Configuration Manager (Current Branch)|
 |[Support lifecycle](../servers/manage/current-branch-versions-supported.md)|Explains the new support and servicing model.|
-|[Removed and deprecated items](/sccm//core/plan-design/changes/deprecated/removed-and-deprecated)|Provides early notice about future changes that might affect your use of Configuration Manager.|
+|[Removed and deprecated items](../plan-design/changes/deprecated/removed-and-deprecated.md)|Provides early notice about future changes that might affect your use of Configuration Manager.|
 |[Updates to Configuration Manager current branch](../servers/manage/updates.md)|Explains the easy in-console method of applying feature updates to Configuration Manager.|
 |[Get available updates](../servers/manage/install-in-console-updates.md#get-available-updates)|Explains the two modes available to get new Configuration Manager feature updates.|
 |[Update checklist](../servers/manage/install-in-console-updates.md#bkmk_beforeinstall)|Provides update version-specific checklists, if applicable.| 

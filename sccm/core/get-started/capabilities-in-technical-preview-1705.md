@@ -127,7 +127,7 @@ To add an asynchronous replica to an [availability group you use with Configurat
 ### Use the asynchronous replica to recover your site
 Before you use an asynchronous replica to recover your site database, you must stop the active primary site to prevent additional writes to the site database. After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).
 
-To stop the site, you can use the [hierarchy maintenance tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) to stop key services on the site server. Use the command line: **Preinst.exe /stopsite**   
+To stop the site, you can use the [hierarchy maintenance tool](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md) to stop key services on the site server. Use the command line: **Preinst.exe /stopsite**   
 
 Stopping the site is equivalent to stopping the Site Component Manager service (sitecomp) followed by the SMS_Executive service, on the site server.
 
@@ -211,9 +211,9 @@ Set up the Cloud Management Gateway to let clients access your Configuration Man
 
 You'll find help about how to do this in the following topics:
 
-- [Plan for cloud management gateway in Configuration Manager](/sccm/core/clients/manage/plan-cloud-management-gateway).
-- [Set up cloud management gateway for Configuration Manager](/sccm/core/clients/manage/setup-cloud-management-gateway).
-- [Monitor cloud management gateway in Configuration Manager](/sccm/core/clients/manage/monitor-clients-cloud-management-gateway).
+- [Plan for cloud management gateway in Configuration Manager](../clients/manage/cmg/plan-cloud-management-gateway.md).
+- [Set up cloud management gateway for Configuration Manager](../clients/manage/cmg/setup-cloud-management-gateway.md).
+- [Monitor cloud management gateway in Configuration Manager](../clients/manage/cmg/monitor-clients-cloud-management-gateway.md).
 
 ### Set up the Azure Services app in Configuration Manager Cloud Services
 
@@ -261,7 +261,7 @@ Beginning with the 1705 technical preview release, you use the **Azure Services 
 -   Configuration Manager connects to OMS for features like Log Analytics or Upgrade Readiness.
 
 ### Prerequisites for the OMS Connector
-Prerequisites to configure a connection to OMS are unchanged from those [documented for the Current Branch version 1702](/sccm/core/clients/manage/sync-data-log-analytics). That information is repeated here:  
+Prerequisites to configure a connection to OMS are unchanged from those [documented for the Current Branch version 1702](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). That information is repeated here:  
 
 -   Providing Configuration Manager permission to OMS.
 

@@ -108,7 +108,7 @@ In addition to Internet Protocol version 4 (IPv4), Configuration Manager support
 
 ## <a name="bkmk_NAT"></a> Network Address Translation  
 
-Network Address Translation (NAT) isn't supported in Configuration Manager, unless the site supports clients that are on the internet and the client detects that it's connected to the internet. For more information about internet-based client management, see [Plan for managing internet-based clients](/sccm/core/clients/deploy/plan/plan-for-managing-internet-based-clients).  
+Network Address Translation (NAT) isn't supported in Configuration Manager, unless the site supports clients that are on the internet and the client detects that it's connected to the internet. For more information about internet-based client management, see [Plan for managing internet-based clients](../../clients/manage/plan-internet-based-client-management.md).  
 
 ## <a name="bkmk_storage"></a> Specialized storage technology  
 

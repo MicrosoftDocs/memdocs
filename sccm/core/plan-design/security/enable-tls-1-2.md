@@ -53,7 +53,7 @@ This section describes the dependencies for specific Configuration Manager featu
 
 |Feature or scenario|Update tasks|
 |--- |--- |
-|Site servers (central, primary, or secondary)| - [Update .NET Framework](/sccm/core/plan-design/security/enable-tls-1-2-server##bkmk_net)<br/> - Verify strong cryptography settings|
+|Site servers (central, primary, or secondary)| - [Update .NET Framework](enable-tls-1-2-server.md#bkmk_net)<br/> - Verify strong cryptography settings|
 |Site database server|[Update SQL Server and its client components](enable-tls-1-2-server.md#bkmk_sql)|
 |Secondary site servers|[Update SQL Server and its client components](enable-tls-1-2-server.md#bkmk_sql) to a compliant version of SQL Express|
 |Site system roles| - [Update .NET Framework](enable-tls-1-2-server.md#bkmk_net) and verify strong cryptography settings <br/> - [Update SQL Server and its client components](enable-tls-1-2-server.md#bkmk_sql) on roles that require it, including the [SQL Server Native Client](enable-tls-1-2-server.md#bkmk_sql-client)|
