@@ -69,7 +69,7 @@ You can use app configuration policies to manage the S/MIME setting for Outlook 
 Organizations that are using [Google Play's closed test tracks for app pre-release testing](https://support.google.com/googleplay/android-developer/answer/3131213) can manage these tracks with Intune. You can selectively assign apps that are published to Google Play's pre-production tracks to pilot groups in order to perform testing. In Intune, you can see whether an app has a pre-production build test track published to it, as well as be able to assign that track to AAD user or device groups. This feature is available for all of our currently supported Android Enterprise scenarios (work profile, fully managed, and dedicated). In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can add a Managed Google Play app by selecting **Apps** > **Android** > **Add**. For more information, see [Working with Managed Google Play Closed Testing Tracks](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks).
 
 #### Microsoft Teams is now included in the Office 365 Suite for macOS<!-- 5903936  -->
-Users who are assigned Microsoft Office for macOS in Microsoft Endpoint Manager will now receive Microsoft Teams in addition to the existing Microsoft Office apps (Word, Excel, PowerPoint, Outlook and OneNote). Intune will recognize the existing Mac devices that have the other Office for macOS apps installed, and will attempt to install Microsoft Teams the next time the device checks in with Intune. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can find the **Office 365 Suite** for macOS by selecting **Apps** > **macOS** > **Add**. For more information, see [Assign Office 365 to macOS devices with Microsoft Intune](../apps/apps-add-office365-macos.md).
+Users who are assigned Microsoft Office for macOS in Microsoft Endpoint Manager will now receive Microsoft Teams in addition to the existing Microsoft Office apps (Word, Excel, PowerPoint, Outlook, and OneNote). Intune will recognize the existing Mac devices that have the other Office for macOS apps installed, and will attempt to install Microsoft Teams the next time the device checks in with Intune. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can find the **Office 365 Suite** for macOS by selecting **Apps** > **macOS** > **Add**. For more information, see [Assign Office 365 to macOS devices with Microsoft Intune](../apps/apps-add-office365-macos.md).
 
 #### Update to Android app configuration policies<!-- 6113334  -->
 Android app configuration policies have been updated to allow admins to select the device enrollment type before creating an app config profile. The functionality is being added to account for certificate profiles that are based on enrollment type (Work profile or Device Owner).  This update provides the following:
@@ -126,7 +126,7 @@ For more information on using single sign-on on iOS/iPadOS devices, see [Single 
 ### Device enrollment
 
 #### Delete Apple Automated Device Enrollment token when default profile is present<!--6393220 -->
-Previously, you couldn't delete a default profile which meant that you couldn't delete the Automated Device Enrollment token associated with it. Now, you can delete the token when:
+Previously, you couldn't delete a default profile, which meant that you couldn't delete the Automated Device Enrollment token associated with it. Now, you can delete the token when:
 - no devices are assigned to the token
 - a default profile is present
 To do so, delete the default profile and then delete the associated token.
@@ -180,7 +180,7 @@ You can now configure an [action for noncompliance](../protect/actions-for-nonco
 
 When users select the push notification on their device, the Company Portal or Intune app opens to display details about why they are noncompliant. 
 
-#### Microsoft Edge security baseline for is now Generally Available<!--6586139 -->
+#### Microsoft Edge security baseline is now Generally Available<!--6586139 -->
 A new version of the [Microsoft Edge security baseline](../protect/security-baselines.md#available-security-baselines) is now available, and is released as generally available (GA). The previous Edge baseline was in Preview.  The new baseline version ins April 2020 (Edge version 80 and later). 
 
 With the release of this new baseline, you'll no longer be able to create profiles based on the previous baseline versions, but you can continue to use profiles you created with those versions. You can also choose to [update your existing profiles to use the latest baseline version](../protect/security-baselines.md#change-the-baseline-version-for-a-profile). 
@@ -298,7 +298,7 @@ These changes will be rolling out on a phased basis throughout the month of Marc
 ### Device configuration
 
 #### New user experience when creating administrative templates on Windows devices<!--5096036 -->
-Based on customer feedback, and our move to the new Azure full screen experience, we've rebuilt the Administrative Templates profile experience with a folder view. We haven't made changes to any settings or existing profiles. So, your existing profiles will stay the same, and will be usable in the new view. You can still navigate all settings options by selecting **All Settings**, and using search. The tree view is split by Computer and User configurations. You will find Windows, Office and Edge settings in their associated folders.  
+Based on customer feedback, and our move to the new Azure full screen experience, we've rebuilt the Administrative Templates profile experience with a folder view. We haven't made changes to any settings or existing profiles. So, your existing profiles will stay the same, and will be usable in the new view. You can still navigate all settings options by selecting **All Settings**, and using search. The tree view is split by Computer and User configurations. You will find Windows, Office, and Edge settings in their associated folders.  
 
 Applies to:
 - Windows 10 and newer
@@ -372,7 +372,7 @@ We've updated the [user experience](../configuration/device-profile-create.md) i
 ### Device enrollment
 
 #### Configure if enrollment is available in Company Portal for Android and iOS<!-- 4260128  -->
-You can configure whether device enrollment in the Company Portal on Android and iOS devices is available with prompts, available without prompts, or unavailable to users. To find these setting in Intune, navigate to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and, select **Tenant administration** > **Customization** > **Edit** > **Device enrollment**.  
+You can configure whether device enrollment in the Company Portal on Android and iOS devices is available with prompts, available without prompts, or unavailable to users. To find these settings in Intune, navigate to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and, select **Tenant administration** > **Customization** > **Edit** > **Device enrollment**.  
 
 Support for the device enrollment setting requires end users have these Company Portal versions:
 -    Company Portal on iOS: version 4.4 or later
