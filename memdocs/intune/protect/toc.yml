@@ -261,7 +261,8 @@
       href: troubleshoot-jamf.md
 - name: Reference
   items:
-
+  - name: API to add third-party certificate authority
+    href: scep-libraries-apis.md
   - name: Antivirus policy settings
     items:
     - name: macOS Defender Antivirus settings
@@ -285,26 +286,24 @@
       href: compliance-policy-create-windows-8-1.md
     - name: Compliance policy settings - Windows Phone 8.1
       href: compliance-policy-create-windows-8-1.md
-    - name: Endpoint security policy settings
+  - name: Endpoint security policy settings
+    items:
+    - name: Antivirus policy settings
       items:
-      - name: Antivirus policy settings
-        items:
-        - name: macOS Defender Antivirus settings
-          href: antivirus-microsoft-defender-settings-macos.md
-        - name: Windows 10 Microsoft Defender Antivirus settings
-          href: antivirus-microsoft-defender-settings-windows.md
-      - name: Disk encreyption profile settings
-        href: endpoint-security-disk-encryption-profile-settings.md
-      - name: Firewall policy settings
-        href: endpoint-security-firewall-profile-settings.md
-      - name: Endpoint detection and response profile settings
-        href: edr-profile-settings.md 
-        name: Attack surface reduction profile settings
-        href: asr-profile-settings.md
-        name: Account protection profile settings
-        href: account-protection-profile-settings.md
-    name: Compliance policy settings
-    href: scep-libraries-apis.md
+      - name: macOS Defender Antivirus settings
+        href: antivirus-microsoft-defender-settings-macos.md
+      - name: Windows 10 Microsoft Defender Antivirus settings
+        href: antivirus-microsoft-defender-settings-windows.md
+    - name: Disk encreyption profile settings
+      href: endpoint-security-disk-encryption-profile-settings.md
+    - name: Firewall policy settings
+      href: endpoint-security-firewall-profile-settings.md
+    - name: Endpoint detection and response profile settings
+      href: edr-profile-settings.md 
+      name: Attack surface reduction profile settings
+      href: asr-profile-settings.md
+      name: Account protection profile settings
+      href: account-protection-profile-settings.md
   - name: Security baseline settings
     items: 
     - name: Windows 10 MDM baseline settings
