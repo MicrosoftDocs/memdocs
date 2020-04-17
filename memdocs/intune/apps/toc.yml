@@ -206,6 +206,10 @@
         href: app-install-error-codes.md
       - name: Troubleshoot mobile application management
         href: troubleshoot-mam.md
+      - name: Review app protection logs
+        href: app-protection-policy-settings-log.md
+      - name: Troubleshooting Intune app protection policy deployment
+        href: troubleshooting-app-protection-policy-deployment.md
 - name: Reference
   items:
     - name: Protect apps with Intune App SDK
