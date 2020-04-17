@@ -18,7 +18,7 @@ manager: dougeby
 
 <!--1128774-->
 
-Historically, you could add redundancy to most of the roles in Configuration Manager by having multiple instances of these roles in your environment. Except for the site server itself. Starting in Configuration Manager version 1806, high availability for the site server role is a Configuration Manager-based solution to install an additional site server in *passive* mode. Version 1810 adds hierarchy support, so central administration sites and child primary sites can also have an additional site server in passive mode. The site server in passive mode can be on-premises or cloud-based in Azure.
+Historically, you could add redundancy to most of the roles in Configuration Manager by having multiple instances of these roles in your environment. Except for the site server itself. High availability for the site server role is a Configuration Manager-based solution to install an additional site server in *passive* mode. The central administration site and child primary sites can have an additional site server in passive mode. The site server in passive mode can be on-premises or cloud-based in Azure.
 
 This feature brings the following benefits
 
@@ -56,13 +56,11 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
 - Both site servers must be joined to the same Active Directory domain.  
 
-- In version 1806, the site must be a standalone primary site.  
-
-  - Starting in version 1810, Configuration Manager supports site servers in passive mode in a hierarchy. The central administration site and child primary sites can have an additional site server in passive mode.<!-- 3607755 -->  
+- Configuration Manager supports site servers in passive mode in a hierarchy. The central administration site and child primary sites can have an additional site server in passive mode.<!-- 3607755 -->  
 
 - Both site servers must use the same site database.  
 
-  - In version 1806, the database must be remote from each site server. Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode.<!-- SCCMDocs issue 1074 -->  
+  - The database can be remote from each site server. Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode.<!-- SCCMDocs issue 1074 -->  
 
   - The SQL Server that hosts the site database can use a default instance, named instance, [SQL Server cluster](use-a-sql-server-cluster-for-the-site-database.md), or a [SQL Server Always On availability group](sql-server-alwayson-for-a-highly-available-site-database.md).  
 
@@ -92,6 +90,9 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
   - Must meet the prerequisites for installing a primary site. For example, .NET Framework, Remote Differential Compression, and the Windows ADK. For the complete list, see [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).<!-- SCCMDocs issue 765 -->  
 
+    > [!NOTE]
+    > Make sure to install the SQL Server Native Client. If you don't install it, the prerequisite checker during Configuration Manager setup will report an error about missing SQL Server permissions.<!-- SCCMDocs#2290 -->
+
   - Must have its computer account in the local Administrators group on the site server in active mode.<!--516036-->
 
   - Must install using source files that match the version of the site server in active mode.  
@@ -112,10 +113,6 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
 - Only a single site server in passive mode is supported at each site.  
 
-- In version 1806, a site server in passive mode isn't supported in a hierarchy. A hierarchy includes a central administration site and a child primary site. Only create a site server in passive mode at a standalone primary site.<!--1358224-->  
-
-  - Starting in version 1810, Configuration Manager supports site servers in passive mode in a hierarchy. The central administration site and child primary sites can have an additional site server in passive mode.<!-- 3607755 -->  
-
 - A site server in passive mode isn't supported at a secondary site.<!--SCCMDocs issue 680-->  
 
     > [!NOTE]  
@@ -125,12 +122,10 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
 - Site system roles can't be installed on the new server before you add the site server in passive mode.  
 
-    > [!NOTE]  
-    > After it installs the site server in passive mode, you can add additional roles as necessary. For example, the SMS Provider, or a management point at a primary site.  
+    > [!NOTE]
+    > After it installs the site server in passive mode, you can add additional roles as necessary. For example, a management point at a primary site.
 
 - For roles like the reporting point that use a database, host the database on a server that's remote from both site servers.  
-
-- When you add the site server in passive mode role, the site doesn't also install the SMS Provider role. Install at least one additional instance of the provider on another server for high availability. If your design includes this role on your site server, install it on the new site server after you add the site server in passive mode role. For more information, see [Plan for the SMS Provider](../../../plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
 - The Configuration Manager console doesn't automatically install on the site server in passive mode.  
 
@@ -211,7 +206,7 @@ Similarly as with backup and recovery, plan and practice your process to change 
 This section describes how to change the site server in passive mode to active mode. To access the site and make this change, you need to be able to access an instance of the SMS Provider. For more information, see [Use multiple SMS Providers](../../../plan-design/hierarchy/plan-for-the-sms-provider.md#BKMK_MultiSMSProv).  
 
 > [!IMPORTANT]  
-> By default, only the original site server has the SMS Provider role. If this server is offline, you can't connect to the site as no provider is available. When you add the site server in passive mode, the SMS Provider isn't automatically added. Add at least one additional SMS Provider role to your site for a highly available service.  
+> If all instances of the SMS Provider are offline, you can't connect to the site as no provider is available. When you add the site server in passive mode, setup installs an instance of the SMS Provider on this server.<!-- SCCMDocs#1613 -->
 >
 > The Configuration Manager console requests the list of available SMS Providers from WMI on the site server. When you install multiple SMS Providers at a site, the site randomly assigns each new connection request to use an installed SMS Provider. You can't specify the SMS Provider location to use with a specific connection session. If your console is unable to connect to the site because the current site server is offline, specify the other site server in the Site Connection window.  
 
@@ -250,3 +245,6 @@ The following steps may be required if necessary in your environment:
 ## Daily monitoring
 
 When you have a site server in passive mode, monitor it daily. Make sure its Status remains OK and is ready for use. In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Site Server Status** node. View both site servers and their current status. Also view status in the **Administration** workspace. Expand **Site Configuration**, and select the **Sites** node. Select the site, and then switch to the **Nodes** tab.
+
+> [!NOTE]
+> When you update the site to a new version of Configuration Manager, it also updates the site server in passive mode. <!-- SCCMDocs-pr#4293 -->

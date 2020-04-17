@@ -10,8 +10,6 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-
-
 ---
 
 # Integrate with Windows Update for Business
@@ -85,6 +83,12 @@ For more information about the Windows Insider program, see [Getting started wit
 1. On the **General** page, provide a name and description for the policy.
 1. On the **Deferral Policies** page, configure whether to defer or pause Feature Updates. Feature Updates are generally new features for Windows. After you configure the **Branch readiness level** setting, you can then define if, and for how long, you would like to defer receiving Feature Updates following their availability from Microsoft.
     - **Branch readiness level**: Set the branch for which the device will receive Windows updates. Choose either Semi-Annual Channel (Targeted), Semi-Annual Channel, or a Windows Insider build.
+
+        > [!NOTE]
+        > Deploy policies for **Semi-Annual Channel (Targeted)** to Windows 10, *version 1903 or later*. Deploy policies for **Semi-Annual Channel** to Windows 10, *version 1809 or earlier*.
+        >
+        > If you deploy a policy for **Semi-Annual Channel** to Windows 10, version 1903 or later, the deployment fails with the error **0x8004100c**.<!-- 5593139 -->
+
     - **Deferral period (days)**:  Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for up to 365 days from their release.
     - **Pause Features Updates starting**: Select whether to pause devices from receiving Feature Updates for up to 35 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You can unpause Feature Updates by clearing the checkbox.
 1. Choose whether to defer or pause Quality Updates. Quality Updates are generally fixes and improvements to existing Windows functionality and are typically published the first Tuesday of every month, though can be released at any time by Microsoft. You can define if, and for how long, you would like to defer receiving Quality Updates following their availability.
