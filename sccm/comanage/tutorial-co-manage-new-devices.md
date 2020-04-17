@@ -195,7 +195,7 @@ Run the following procedure from the primary site server.
    Then select **Cloud Management**, and then select **Next**.  
 
    > [!TIP]  
-   > For more information about the configurations you make in the wizard, see [Start the Azure Services wizard](https://docs.microsoft.com/sccm/core/servers/deploy/configure/Azure-services-wizard#start-the-azure-services-wizard)
+   > For more information about the configurations you make in the wizard, see [Start the Azure Services wizard](../core/servers/deploy/configure/Azure-services-wizard#start-the-azure-services-wizard)
 
 2. On the **App Properties** page, for **Web app**, select **Browse** to open the **Server App** dialog, and then select **Create**. Configure the following fields:
 
@@ -420,6 +420,6 @@ After you complete the configuration steps of this tutorial, you can start co-ma
 
 ## Next steps
 
-- Review the status of co-managed devices with the [Co-management dashboard](https://docs.microsoft.com/sccm/core/clients/manage/co-management-dashboard)
+- Review the status of co-managed devices with the [Co-management dashboard](how-to-monitor.md)
 - Use [Windows Autopilot](quickstart-autopilot.md) to provision new devices
-- Use [conditional access](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access) and Intune compliance rules to manage user access to corporate resources
+- Use [conditional access](quickstart-conditional-access.md) and Intune compliance rules to manage user access to corporate resources

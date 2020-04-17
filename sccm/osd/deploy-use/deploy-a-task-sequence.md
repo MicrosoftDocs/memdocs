@@ -179,7 +179,7 @@ Use the following procedure to deploy a task sequence to the computers in a coll
 ## Deploy Windows 10 in-place upgrade via CMG
 
 <!-- 1357149 -->
-The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](/configmgr/core/clients/manage/plan-cloud-management-gateway) (CMG). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet.
+The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md) (CMG). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet.
 
 Make sure all of the content referenced by the in-place upgrade task sequence is distributed to a content-enabled CMG. (Enable the [CMG setting](../../core/clients/manage/cmg/setup-cloud-management-gateway.md#settings): **Allow CMG to function as a cloud distribution point and serve content from Azure storage**.) You can also use a [cloud distribution point](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md). Otherwise devices can't run the task sequence.
 

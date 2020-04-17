@@ -189,9 +189,9 @@ Starting in version 1806, create a phased deployment for an application. Phased 
 
 For more information, see the following articles:  
 
-- [Create a phased deployment](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Create a phased deployment](../../osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
 
-- [Manage and monitor phased deployments](/sccm/osd/deploy-use/manage-monitor-phased-deployments?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Manage and monitor phased deployments](../../osd/deploy-use/manage-monitor-phased-deployments?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
 
 
 
@@ -291,7 +291,7 @@ If you deploy applications as available to users, they can browse and install th
 
 - To support internet-based clients:  
 
-    - [Cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway)  
+    - [Cloud management gateway](../../core/clients/manage/plan-cloud-management-gateway)  
 
     - Enable the client setting: **Enable user policy requests from Internet clients** in the [Client Policy](../../core/clients/deploy/about-client-settings.md#client-policy) group  
 

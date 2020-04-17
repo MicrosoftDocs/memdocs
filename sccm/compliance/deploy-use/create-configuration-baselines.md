@@ -112,7 +112,7 @@ When `User1` uses `Device2`, only `Configuration Baseline 2` gets evaluated when
 ### <a name="bkmk_CA"></a> Create and deploy a compliance policy with a rule for baseline compliance policy assessment
 
 1. In the **Assets and Compliance** workspace, expand **Compliance Settings**, then select the **Compliance Polices** node.
-1. Click **Create Compliance Policy** in the ribbon to bring up the **Create Compliance Policy Wizard**. <!-- For more information, see [Create and deploy a device compliance policy](/sccm/mdm/deploy-use/create-compliance-policy). -->
+1. Click **Create Compliance Policy** in the ribbon to bring up the **Create Compliance Policy Wizard**. 
 1. On the **General** page, select **Compliance rules for devices managed with the Configuration Manager client**.
    - Devices must be managed with the Configuration Manager client to include custom configuration baselines as part of compliance policy assessment.
 1. Select your platforms on the **Supported Platforms** pages.

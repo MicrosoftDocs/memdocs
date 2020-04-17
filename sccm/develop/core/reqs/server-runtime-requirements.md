@@ -17,7 +17,7 @@ Microsoft Configuration Manager server applications that are developed by using 
 
 ## Managed Code  
 
--   A supported version of Windows Server as defined in [Supported operating systems for Configuration Manager site system servers](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers). For more information, see [General Requirements](#general-requirements).
+-   A supported version of Windows Server as defined in [Supported operating systems for Configuration Manager site system servers](../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers). For more information, see [General Requirements](#general-requirements).
 
 -   Installed Configuration Manager site server  
 
@@ -48,7 +48,7 @@ Microsoft Configuration Manager server applications that are developed by using 
 ## General Requirements  
 
 > [!IMPORTANT]
->  For more information about general Configuration Manager requirements, see [Supported configurations for Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-configurations).  
+>  For more information about general Configuration Manager requirements, see [Supported configurations for Configuration Manager](../../../core/plan-design/configs/supported-configurations).  
 
 ## See Also  
 [About console extensions](../servers/console/about-configuration-manager-console-extension.md)
