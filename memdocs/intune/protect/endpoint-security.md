@@ -44,9 +44,11 @@ The Endpoint security node groups the tools that are available through Intune th
 
 - **Integrate Intune with your Microsoft Defender Advanced Threat Protection (Defender ATP) team**. By [integrating with Defender ATP](#set-up-integration-with-defender-atp) you gain access to [security tasks](#review-security-tasks-from-defender-atp) that closely tie Defender ATP and Intune together to help identify and remediate devices that are at risk.
 
-## View All devices and manage device actions
+The following sections of this article discuss the different tasks you can do from the endpoint security node of the admin center. 
 
-When you open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Endpoint security** > **All devices**, you’ll see a list of all the devices from your Azure Active Directory (Azure AD) that are available in Microsoft Endpoint Manager. This list includes devices managed by Intune, Configuration Manager, and by [co-management](https://docs.microsoft.com/configmgr/comanage/overview) by both Intune and Configuration Manager. Devices can be in the cloud and from your on-premises infrastructure when integrated with your Azure AD.
+## Manage devices
+
+The Endpoint security node includes the *All devices* view, which lets you view a list of your devices from your Azure Active Directory (Azure AD) that are available in Microsoft Endpoint Manager. To find it, open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Endpoint security** > **All devices**. This list includes devices managed by Intune, Configuration Manager, and by [co-management](https://docs.microsoft.com/configmgr/comanage/overview) by both Intune and Configuration Manager. Devices can be in the cloud and from your on-premises infrastructure when integrated with your Azure AD.
 
 The initial *All devices* view displays your devices and includes key information about each:
 
@@ -70,10 +72,10 @@ Consider the following fields:
     - Domain Joined
     - Hybrid AAD Joined (joined to the AD and AAD)
 
-    Compliance status is managed in Configuration Manager and might not be visible in the Microsoft Endpoint Manager admin center. 
-    
+    Compliance status is managed in Configuration Manager and might not be visible in the Microsoft Endpoint Manager admin center.
+
     <!-- Tenant attached devices can receive your endpoint security policies. The following policy types are supported, with additional policy types being added in future updates to Intune: 
-    --> 
+    -->
 
     For more information, see [Enable tenant attach](https://docs.microsoft.com/configmgr/tenant-attach/device-sync-actions) in the Configuration Manager documentation.
 
@@ -132,13 +134,22 @@ Options you manage for devices don’t take effect until the device checks in wi
 
 ## Manage Security baselines
 
-Use Intune's security baselines to rapidly deploy a *best practice* configuration of device and application settings to protect your users and devices. Security baselines are supported for devices that run Windows 10 version 1809 and later.
+Security baselines in Intune are pre-configured groups of settings that are best practice recommendations from the relevant Microsoft security teams for the applicable product. Intune supports security baselines for Windows 10 device settings, Microsoft Edge, Microsoft Defender Advanced Threat Protection, and more.
+
+You can use security baselines to rapidly deploy a *best practice* configuration of device and application settings to protect your users and devices. Security baselines are supported for devices that run Windows 10 version 1809 and later.
+
+For more information, see [Use security baselines to configure Windows 10 devices in Intune](../protect/security-baselines.md)
+
+<!-- original - being reduced to minimize this section, as its all in the Security Baseline article: 
+
+Use security baselines to rapidly deploy a *best practice* configuration of device and application settings to protect your users and devices. Security baselines are supported for devices that run Windows 10 version 1809 and later.
 
 The baselines are pre-configured groups of settings that are best practice recommendations from the relevant Microsoft security teams for the applicable product. Intune supports security baselines for Windows 10 device settings, Microsoft Edge, Microsoft Defender Advanced Threat Protection, and more.
 
 When you deploy a security baseline, you can deploy the baseline in its default (recommended) configuration, or customize it to meet the needs of your unique environment.
 
 For more information, see [Use security baselines to configure Windows 10 devices in Intune](../protect/security-baselines.md).
+-->
 
 ## Review Security tasks from Defender ATP
 
@@ -154,11 +165,17 @@ To learn more about using Security tasks, see [Use Intune to remediate vulnerabi
 
 ## Use policies to manage device security
 
-As a security admin, use the policies found under *Manage* in the Endpoint security node to configure device security without the overhead of navigating the larger body and range of settings found in device configuration profiles and security baselines.  
+As a security admin, use the policies found under *Manage* in the Endpoint security node to configure device security without the overhead of navigating the larger body and range of settings found in device configuration profiles and security baselines.
+
+Endpoint security also provides easy access to *Device compliance* and *Conditional access* policies, which are not focused security policies but important tools for managing devices and access to corporate resources.
 
 ![Manage policies](./media/endpoint-security/endpoint-security-policies.png)
 
-Unless noted otherwise, the settings found in Endpoint security policies can also be managed through endpoint protection profiles in Device Configuration policy, and by security baselines. Therefore, it's important to understand how to identify and resolve policy conflicts should a device not adhere to the configurations you expect.
+To start using secuirty policies, see [Manage device security with endpoint security](../protect/endpoint-security-policy.md)
+
+### About policy conflicts
+
+Many of the settings you can configure in the policies for Endpoint security are settings that can also be managed through *endpoint protection* profiles in device configuration policy, and by security baselines. Therefore, it's important to understand how to identify and resolve policy conflicts should a device not adhere to the configurations you expect.
 
 The information at the following links can help you identify and resolve conflicts:
 
@@ -166,139 +183,6 @@ The information at the following links can help you identify and resolve conflic
 - [Monitor your security baselines](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status)
 
 The following sections introduce the policy groups and the profiles available for each group.
-
-### Antivirus
-
-Use Antivirus profiles to manage Defender ATP antivirus settings on devices that run Windows 10 or macOS.
-
-#### Prerequisites
-
-- Windows 10 or later
-- Any supported version of macOS
-- For Intune to manage antivirus settings on a device, Defender ATP must be installed on that device.
-- The Windows Security app is installed on all devices that run Window 10, and no additional prerequisites are required.
-
-#### macOS profiles
-
-- **Antivirus** - Manage Antivirus policy settings for macOS when you use Microsoft Defender ATP for Mac.
-
-### Windows 10 profiles
-
-- **Microsoft Defender Antivirus** - Manage Antivirus policy settings for cloud protection, Antivirus exclusions, remediation, scan options, and more.
-
-  The *Microsoft Defender Antivirus* profile includes a new instance of settings that are otherwise found as part of a device restriction profile.
-
-  Unlike settings that are part of a device restriction profile, these Antivirus settings support improved options. These settings can be used to manage Antivirus on co-managed devices when the [co-management workload slider](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) for Endpoint Protection is set to Intune. The Antivirus setting from device restriction profiles can’t be used with co-management.
-
-- **Windows Security experience** – Manage [settings for the Windows Security app](../protect/antivirus-security-experience-windows-settings.md). The Windows security app is used by a number of Windows security features to provide notifications about the health and security of the machine. Security app notifications include firewalls, antivirus products, Windows Defender SmartScreen, and others.
-
-### Disk encryption
-
-[Disk encryption profiles](../protect/endpoint-security-configure-disk-encryption.md) focus on settings that manage a devices built-in encryption method, like BitLocker and FileVault.
-
-#### Prerequisites
-
-- Windows 10 or later
-- macOS 10.13 or later
-
-Because the encryption methods are part of the platforms, there are no additional general prerequisites. However, some settings for BitLocker can require a TPM.
-
-#### macOS profiles
-
-- **FileVault** – FileVault provides built-in Full Disk Encryption for macOS devices. Manage [settings for FileVault](../protect/endpoint-security-disk-encryption-profile-settings.md#filevault) on devices that run macOS.
-
-#### Windows 10 profiles
-
-- **BitLocker** – BitLocker Drive Encryption is a data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers. Manage [settings for BitLocker](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker).
-
-### Firewall
-
-Use Firewall policy to configure a devices built-in firewall on devices that run macOS and Windows 10.
-
-#### Prerequisites
-
-- Windows 10 or later
-- Any supported version of macOS
-
-#### macOS profiles
-
-- **macOS firewall** – Enable and configure settings for the built-in firewall on macOS.
-
-#### Windows 10 profiles
-
-- **Microsoft Defender Firewall** – Configure settings for Windows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
-
-### Endpoint detection and response
-
-When you integrate Defender ATP with Intune, you can use policy for endpoint detection and response.
-
-The capabilities of Microsoft Defender ATP endpoint detection and response provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
-
-#### Prerequisites
-
-- Windows 10 or later
-- For Intune to manage endpoint detection and response settings on a device, Defender ATP must be installed on that device.
-
-#### Windows 10 profiles
-
-- **Endpoint detection and response** – Manage settings for Microsoft Defender ATP endpoint detection and response.
-
-  The capabilities of Microsoft Defender ATP endpoint detection and response provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
-
-  To learn more, see [endpoint detection and response](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) in the Microsoft Defender ATP documentation.
-
-### Attack surface reduction
-
-Each attack surface reduction profile manages settings for a specific area of a Windows 10 device.
-
-#### Prerequisites
-
-- Windows 10 or later
-- For Intune to manage attack surface reduction settings on a device, Defender ATP must be installed on that device.
-
-#### Windows 10 profiles
-
-- **App and browser isolation** – Manage settings for Windows Defender Application Guard (Application Guard), as part of Defender ATP. Application Guard helps to prevent old and newly emerging attacks and can isolate enterprise-defined sites as untrusted while defining what sites, cloud resources, and internal networks are trusted.
-
-  To learn more, see [Application Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/wd-app-guard-overview) in the Microsoft Defender ATP documentation.
-
-- **Web protection** – Settings you can manage for Web protection in Microsoft Defender ATP configure network protection to secure your machines against web threats. By integrating with Microsoft Edge and popular third-party browsers like Chrome and Firefox, web protection stops web threats without a web proxy and can protect machines while they're away or on-premises. Web protection stops access to phishing sites, malware vectors, exploit sites, untrusted or low-reputation sites, and sites that you have blocked in your custom indicator list.
-
-  To learn more, see [Web protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) in the Microsoft Defender ATP documentation.
-
-- **Application control** - Application control settings can help mitigate security threats by restricting the applications that users can run and the code that runs in the System Core (kernel). Manage settings that can block unsigned scripts and MSIs, and restrict Windows PowerShell to run in Constrained Language Mode.
-
-  To learn more, see [Application Control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) in the Microsoft Defender ATP documentation.
-
-- **Attack surface reduction rules** – Configure settings for attack surface reduction rules that target behaviors that malware and malicious apps typically use to infect computers, including:
-  - Executable files and scripts used in Office apps or web mail that attempt to download or run files
-  - Obfuscated or otherwise suspicious scripts
-  - Behaviors that apps don't usually start during normal day-to-day work
-Reducing your attack surface means offering attackers fewer ways to perform attacks.
-
-  To learn more, see [Attack surface reduction rules](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender ATP documentation.
-
-- **Device control** – With settings for device control, you can configure devices for a layered approach to secure removable media. Microsoft Defender ATP provides multiple monitoring and control features to help prevent threats in unauthorized peripherals from compromising your devices.
-
-  To learn more, see [How to control USB devices and other removable media using Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/device-control/control-usb-devices-using-intune) in the Microsoft Defender ATP documentation.
-
-- Exploit protection - Exploit protection settings can help protect against malware that uses exploits to infect devices and spread. Exploit protection consists of a number of mitigations that can be applied to either the operating system or individual apps.
-
-  To learn more, see [Enable exploit protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) in the Microsoft Defender ATP documentation.
-
-### Account protection
-
-Protect the identity and accounts of your users by configuring Windows Hello and credential guard.
-
-#### Prerequisites
-
-- Windows 10 or later
-
-#### Windows 10 profiles
-
-- **Account protection** – Settings for account protection policies help you protect user credentials.
-
-  To learn more, see [Identity and access management](https://docs.microsoft.com/windows/security/identity-protection/) in the Windows identity and access management documentation.
 
 ## Use device compliance policy
 

@@ -35,22 +35,7 @@ As part of Endpoint security in Intune, Antivirus policies make it easy for secu
 Antivirus profiles contain only the settings that are relevant for Defender ATP antivirus for macOS and Windows 10, and for the user experience in the Windows Security app on Windows 10 devices.
 
 While you can configure some of the same settings as part of *Endpoint Protection* profiles for [device configuration](../configuration/device-profile-create.md) or *device restriction* profiles for [device compliance](../protect/device-compliance-get-started.md), those other profiles include additional categories of settings that are unrelated to Antivirus, which can complicate the task of configuring Antivirus. Additionally, for macOS devices, the Antivirus settings are not available through other profiles. The macOS Antivirus profile replaces the need to configure the settings by using *.plist* files.
-
-## Prerequisites
-
-**Supported Platforms**
-
-- macOS
-- Windows 10 and later
-
-**Defender ATP**
-
-You must integrate Defender ATP with Intune and deploy Defender ATP to the devices you will manage with Antivirus policy.  
-
-For more information, see the following articles as applicable for platforms you manage:
-
-- [Microsoft Defender ATP for Windows](../protect/advanced-threat-protection.md) (In the Intune documentation)
-- [Defender ATP for macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (In the Defender ATP documentation)
+ 
 
 ## Antivirus profiles
 
@@ -58,11 +43,26 @@ The available profiles depend on the device platform.
 
 ### macOS
 
+**Prerequisites**:
+
+- Any supported version of macOS
+- For Intune to manage antivirus settings on a device, Defender ATP must be installed on that device. See. [Defender ATP for macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (In the Defender ATP documentation)
+
+**Profiles**:
+
 - **Antivirus** - Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-macos.md) for macOS.
 
   When you use [Microsoft Defender ATP for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), you can configure and deploy Antivirus settings to your managed macOS devices through Intune instead of configuring those settings by use of *.plist* files.  
 
 ### Windows 10 and later
+
+**Prerequisites**:
+
+- Windows 10 and later
+- For Intune to manage antivirus settings on a device, Defender ATP must be installed on that device. See, [Microsoft Defender ATP for Windows](../protect/advanced-threat-protection.md), in the Intune documentation.
+- The Windows Security app is installed on all devices that run Window 10, and no additional prerequisites are required.
+
+**Profiles**:
 
 - **Microsoft Defender Antivirus** – Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-windows.md) for Windows 10.
 

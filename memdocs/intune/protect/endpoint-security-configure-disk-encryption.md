@@ -36,14 +36,6 @@ Disk encryption profiles contain only the settings that are relevant for encrypt
 
 While you can configure the same device settings by using *Endpoint Protection profiles* for device configuration, the device configuration profiles include additional categories of settings that are unrelated to disk encryption, which can complicate the task of configuring only disk encryption.
 
-Disk Encryption policy supports the following platforms and profiles:
-
-- macOS:
-  Profile: **FileVault**
-
-- Windows 10 and later:
-  Profile: **BitLocker**
-
 ## FileVault profile for macOS
 
 Use the **FileVault** profile to manage the settings that apply only to FileVault on macOS. FileVault provides built-in Full Disk Encryption for macOS devices.
@@ -54,7 +46,7 @@ After you encrypt devices, use the Intune encryption report to view encryption d
 
 ### Prerequisites for FileVault
 
-- Devices must run macOS 10.13 or later
+- Devices must run macOS 10.13 or later.
 - To manage this profile, your account must have the following FileVault permissions, which are part of the **Remote tasks** category, and the built-in RBAC roles that grant the permission:
 
   - **Get FileVault key**:
@@ -118,7 +110,8 @@ After you encrypt devices, use the Intune [encryption report](../protect/encrypt
 
 ### Prerequisites for BitLocker
 
-BitLocker is available on devices that run Windows 10 or later.
+- BitLocker is available on devices that run Windows 10 or later.
+- Some settings for BitLocker can require a TPM.
 
 ### Configure the BitLocker profile
 

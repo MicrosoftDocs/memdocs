@@ -71,12 +71,15 @@
         href: security-baselines-monitor.md
     - name: Security tasks
       href: atp-manage-vulnerabilities.md 
-    - name: Policy
+    - name: Security policy
       items:
-      - name: Antivirus policy
-        href: endpoint-security-configure-antivirus.md
-      - name: Disk encryption policy
-        href: endpoint-security-configure-disk-encryption.md
+      - name: Security policy
+        href: endpoint-security-policy.md
+        items:
+        - name: Antivirus policy
+          href: endpoint-security-configure-antivirus.md
+        - name: Disk encryption policy
+          href: endpoint-security-configure-disk-encryption.md
     - name: Microsoft Defender ATP
       href: advanced-threat-protection.md  
     - name: Mobile Threat Defense partners
