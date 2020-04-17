@@ -169,7 +169,7 @@ You may run into memory contention issues if there are more than 16 physical cor
 
 ### Will SQL Always On impact my performance?
 
-In general, SQL Always On has negligible effect on performance of the system when sufficient networking is available between the SQL replica servers. You can have rapid database log *.ldf* file growth in a busy SQL Always On environment. However, log file space is automatically released after a successful database backup. Add a SQL job for the Configuration Manager database to perform a backup, for example every 24 hours, and an *.ldf* backup every six hours. For more information about SQL Always On and Configuration Manager, including more about SQL backup strategies, see [SQL Server Always On for a highly available site database](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
+In general, SQL Always On has negligible effect on performance of the system when sufficient networking is available between the SQL replica servers. You can have rapid database log *.ldf* file growth in a busy SQL Always On environment. However, log file space is automatically released after a successful database backup. Add a SQL job for the Configuration Manager database to perform a backup, for example every 24 hours, and an *.ldf* backup every six hours. For more information about SQL Always On and Configuration Manager, including more about SQL backup strategies, see [SQL Server Always On for a highly available site database](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 ### Should I enable SQL compression on my database?
 

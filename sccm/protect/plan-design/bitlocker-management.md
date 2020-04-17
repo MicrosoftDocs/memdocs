@@ -21,12 +21,12 @@ manager: dougeby
 Starting in version 1910, use Configuration Manager to manage BitLocker Drive Encryption (BDE) for on-premises Windows clients. It provides full BitLocker lifecycle management that can replace the use of Microsoft BitLocker Administration and Monitoring (MBAM).
 
 > [!Note]  
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/configmgr/core/servers/manage/install-in-console-updates#bkmk_options).  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
 For more information, see [BitLocker overview](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview).
 
 > [!TIP]
-> To manage encryption on co-managed Windows 10 devices using the Microsoft Endpoint Manager cloud service, switch the [**Endpoint Protection** workload](/configmgr/comanage/workloads#endpoint-protection) to Intune. For more information on using Intune, see [Windows Encryption](/intune/protect/endpoint-protection-windows-10#windows-encryption).
+> To manage encryption on co-managed Windows 10 devices using the Microsoft Endpoint Manager cloud service, switch the [**Endpoint Protection** workload](../../comanage/workloads.md#endpoint-protection) to Intune. For more information on using Intune, see [Windows Encryption](/intune/protect/endpoint-protection-windows-10#windows-encryption).
 
 ## Features
 
@@ -75,14 +75,14 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
   - Configure the management point for HTTPS. This option applies to Configuration Manager versions 1910 or 2002.
 
-  For more information, see [Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data).
+  For more information, see [Encrypt recovery data](../deploy-use/bitlocker/encrypt-recovery-data.md).
 
-- To use the BitLocker management reports, install the reporting services point site system role. For more information, see [Configure reporting](/configmgr/core/servers/manage/configuring-reporting).
+- To use the BitLocker management reports, install the reporting services point site system role. For more information, see [Configure reporting](../../core/servers/manage/configuring-reporting.md).
 
     > [!NOTE]
     > For the **Recovery Audit Report** to work from the administration and monitoring website, only use a reporting services point at the primary site.
 
-- To use the self-service portal or the administration and monitoring website, you need a Windows server running IIS. You can reuse a Configuration Manager site system, or use a standalone web server that has connectivity to the site database server. Use a [supported OS version for site system servers](/configmgr/core/plan-design/configs/supported-operating-systems-for-site-system-servers).
+- To use the self-service portal or the administration and monitoring website, you need a Windows server running IIS. You can reuse a Configuration Manager site system, or use a standalone web server that has connectivity to the site database server. Use a [supported OS version for site system servers](../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md).
 
     > [!NOTE]
     > Only install the self-service portal and the administration and monitoring website with a primary site database. In a hierarchy, install these websites for each primary site.
@@ -94,10 +94,10 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 - BitLocker Management is not supported on virtual machines (VMs). For this reason some features may not work as expected on virtual machines. For example BitLocker Management will not start the encryption on fixed drives of virtual machines. Additional fixed drives in virtual machines may show as compliant even though they are not encrypted.
 
 > [!TIP]
-> By default, the **Enable BitLocker** task sequence step only encrypts *used space* on the drive. BitLocker management uses *full disk* encryption. Configure this task sequence step to enable the option to **Use full disk encryption**. For more information, see [Task sequence steps - Enable BitLocker](/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker).
+> By default, the **Enable BitLocker** task sequence step only encrypts *used space* on the drive. BitLocker management uses *full disk* encryption. Configure this task sequence step to enable the option to **Use full disk encryption**. For more information, see [Task sequence steps - Enable BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).
 
 ## Next steps
 
-[Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data) (an optional prerequisite before deploying policy for the first time)
+[Encrypt recovery data](../deploy-use/bitlocker/encrypt-recovery-data.md) (an optional prerequisite before deploying policy for the first time)
 
-[Deploy BitLocker management client](/configmgr/protect/deploy-use/bitlocker/deploy-management-agent)
+[Deploy BitLocker management client](../deploy-use/bitlocker/deploy-management-agent.md)

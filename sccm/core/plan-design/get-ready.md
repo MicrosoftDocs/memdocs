@@ -27,6 +27,6 @@ Use the information in the following topics when you're ready to start planning 
 
 -   [Understand how clients find site resources and services for Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)  
 
--   [Prepare your network environment for Configuration Manager](/sccm/core/plan-design/network/configure-firewalls-ports-domains)  
+-   [Prepare your network environment for Configuration Manager](network/configure-firewalls-ports-domains.md)  
 
 -   [Supported configurations for Configuration Manager](../../core/plan-design/configs/supported-configurations.md)  

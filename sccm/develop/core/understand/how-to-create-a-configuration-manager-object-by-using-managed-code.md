@@ -17,7 +17,7 @@ To create a Configuration Manager object by using the managed SMS Provider, use 
 
 ### To create a Configuration Manager object  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](sms-provider-fundamentals.md).  
 
 2.  Using the **WqlConnectionManager** connection object you obtain in step one, call **[CreateInstance** to create the required the WMI object, and receive its IResultObject object instance.  
 
@@ -80,7 +80,7 @@ public void CreatePackage(WqlConnectionManager connection)
  The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
 
 ## See Also  
- [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
+ [Objects overview](configuration-manager-objects-overview.md)
  [Configuration Manager Lazy Properties](../../../develop/core/understand/configuration-manager-lazy-properties.md)   
  [How to Call a Configuration Manager Object Class Method by Using Managed Code](../../../develop/core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-managed-code.md)   
  [How to Connect to a Configuration Manager Provider using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   

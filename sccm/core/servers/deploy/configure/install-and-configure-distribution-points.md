@@ -43,7 +43,7 @@ Configure most of the distribution point settings with either method. A few sett
 
 ## <a name="bkmk_install"></a> Install a distribution point  
 
-Choose a site system server as a distribution point before content can be made available to client computers. Assign a distribution point to at least one [boundary group](/sccm/core/servers/deploy/configure/boundary-groups#distribution-points) before on-premises client computers can use that distribution point as a content source location. Add the distribution point role to a new site system server, or add it to an existing site system server.
+Choose a site system server as a distribution point before content can be made available to client computers. Assign a distribution point to at least one [boundary group](boundary-groups.md#distribution-points) before on-premises client computers can use that distribution point as a content source location. Add the distribution point role to a new site system server, or add it to an existing site system server.
 
 ### <a name="bkmk_install-prereq"></a> Prerequisites
 
@@ -65,7 +65,7 @@ When you install a new distribution point, you use an installation wizard that w
 
 Use this procedure to add a new distribution point. To change the configuration of an existing distribution point, see the [Configure a distribution point](#bkmk_configs) section.  
 
-Start with the general procedure to [Install site system roles](/sccm/core/servers/deploy/configure/install-site-system-roles). Select the **Distribution point** role on the **System Role Selection** page of the Create Site System Server wizard. This action adds the following pages to the wizard:  
+Start with the general procedure to [Install site system roles](install-site-system-roles.md). Select the **Distribution point** role on the **System Role Selection** page of the Create Site System Server wizard. This action adds the following pages to the wizard:  
 
 - [Distribution point](#bkmk_config-general)
 - [Communication](#bkmk_config-comm)
@@ -246,16 +246,16 @@ To put a distribution point in maintenance mode, your user account requires the 
 
 To view the current state of the distribution points, add the "Maintenance mode" column to the **Distribution Points** node in the console.
 
-For more information on automating this process with the Configuration Manager SDK, see [SetDPMaintenanceMode method in class SMS_DistributionPointInfo](/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo).
+For more information on automating this process with the Configuration Manager SDK, see [SetDPMaintenanceMode method in class SMS_DistributionPointInfo](../../../../develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo.md).
 
 
 ## <a name="bkmk_configs"></a> Configure a distribution point  
 
 Individual distribution points support a variety of different configurations. However, not all distribution point types support all configurations. For example, cloud distribution points don't support PXE- or multicast-enabled deployments. For more information about specific limitations, see the following articles:  
 
-- [Use a cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)  
+- [Use a cloud distribution point](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
 
-- [Use a pull-distribution point](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)  
+- [Use a pull-distribution point](../../../plan-design/hierarchy/use-a-pull-distribution-point.md)  
 
 The following sections describe the distribution point configurations when you're [installing a new one](#bkmk_install-procedure) or [editing an existing one](#bkmk_change-procedure):  
 
@@ -293,9 +293,9 @@ The following settings are on the **Distribution point** page of the Create Site
     > [!NOTE]  
     > This option is only on the **Distribution point** page of the Create Site System Server wizard. It's available only when you're [installing a new distribution point](#bkmk_install-procedure).  
 
-- **Enable and configure BranchCache for this distribution point**: Choose this setting to let Configuration Manager configure Windows BranchCache on the distribution point server. For more information, see [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache).  
+- **Enable and configure BranchCache for this distribution point**: Choose this setting to let Configuration Manager configure Windows BranchCache on the distribution point server. For more information, see [BranchCache](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
 
-- **Adjust the download speed to use the unused network bandwidth (Windows LEDBAT)**<!--1358112-->: Starting in version 1806, enable distribution points to use network congestion control. For more information, see [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat). Minimum requirements for LEDBAT support:<!-- SCCMDocs issue 883 -->  
+- **Adjust the download speed to use the unused network bandwidth (Windows LEDBAT)**<!--1358112-->: Starting in version 1806, enable distribution points to use network congestion control. For more information, see [Windows LEDBAT](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#windows-ledbat). Minimum requirements for LEDBAT support:<!-- SCCMDocs issue 883 -->  
 
     - Configuration Manager version 1806 (general release)  
 
@@ -312,9 +312,9 @@ The following settings are on the **Distribution point** page of the Create Site
         - Windows Server 2016 with updates KB4132216 and KB4284833
         - Windows Server 2019  
 
-- **Enable this distribution point for prestaged content**: This setting enables you to add content to the server before you distribute software. Because the content files are already in the content library, they don't transfer over the network when you distribute the software. For more information, see [Prestaged content](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).  
+- **Enable this distribution point for prestaged content**: This setting enables you to add content to the server before you distribute software. Because the content files are already in the content library, they don't transfer over the network when you distribute the software. For more information, see [Prestaged content](../../../plan-design/hierarchy/manage-network-bandwidth.md#BKMK_PrestagingContent).  
 
-- **Enable this distribution point to be used as Microsoft Connected Cache server**: Starting in version 1906, you can install a Microsoft Connected Cache server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links. For more information, including description of the additional settings, see [Microsoft Connected Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/microsoft-connected-cache).
+- **Enable this distribution point to be used as Microsoft Connected Cache server**: Starting in version 1906, you can install a Microsoft Connected Cache server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links. For more information, including description of the additional settings, see [Microsoft Connected Cache in Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md).
 
 
 ### <a name="bkmk_config-comm"></a> Communication
@@ -324,7 +324,7 @@ The following settings are on the **Distribution point** page of the Create Site
 
 The following settings are on the **Communication** page of the Create Site System Server wizard and the distribution point properties window:  
 
-- **Configure how client devices communicate with the distribution point**: There are advantages and disadvantages to using **HTTP** or **HTTPS**. For more information, see [Security best practices for content management](/sccm/core/plan-design/hierarchy/security-and-privacy-for-content-management#BKMK_Security_ContentManagement).  
+- **Configure how client devices communicate with the distribution point**: There are advantages and disadvantages to using **HTTP** or **HTTPS**. For more information, see [Security best practices for content management](../../../plan-design/hierarchy/security-and-privacy-for-content-management.md#BKMK_Security_ContentManagement).  
 
 - **Allow clients to connect anonymously**: This setting specifies whether the distribution point allows anonymous connections from Configuration Manager clients to the content library.  
 
@@ -354,9 +354,9 @@ The following settings are on the **Communication** page of the Create Site Syst
     > [!TIP]  
     > There are no specific requirements for the certificate subject or subject alternative name (SAN). If necessary, use the same certificate for multiple distribution points.  
 
-    For more information about the certificate requirements, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
+    For more information about the certificate requirements, see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md).  
 
-    For an example deployment of this certificate, see [Deploying the client certificate for distribution points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012).  
+    For an example deployment of this certificate, see [Deploying the client certificate for distribution points](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clientdistributionpoint2008_cm2012).  
 
 ### <a name="bkmk_config-drive"></a> Drive settings  
 
@@ -372,7 +372,7 @@ Specify the drive settings for the distribution point. Configure up to two disk 
 > [!Tip]  
 > To prevent Configuration Manager from installing on a specific drive, create an empty file named **no_sms_on_drive.sms** and copy it to the root folder of the drive before you install the distribution point.  
 
-For more information, see [The content library](/sccm/core/plan-design/hierarchy/the-content-library).
+For more information, see [The content library](../../../plan-design/hierarchy/the-content-library.md).
 
 ### <a name="bkmk_firewall"></a> Firewall Settings
 
@@ -385,7 +385,7 @@ Without these rules clients will receive error 0x801901F4 in DataTransferService
 
 ### <a name="bkmk_config-pull"></a> Pull distribution point  
 
-When you **Enable this distribution point to pull content from other distribution points**, it becomes a pull-distribution point. You change the behavior of how the distribution point gets the content that you distribute to it. For more information, see [Use a pull-distribution point](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).
+When you **Enable this distribution point to pull content from other distribution points**, it becomes a pull-distribution point. You change the behavior of how the distribution point gets the content that you distribute to it. For more information, see [Use a pull-distribution point](../../../plan-design/hierarchy/use-a-pull-distribution-point.md).
 
 For each pull-distribution point that you configure, specify one or more source distribution points from which it gets the content:  
 
@@ -395,7 +395,7 @@ For each pull-distribution point that you configure, specify one or more source 
 
 ### <a name="bkmk_config-pxe"></a> PXE  
 
-Specify whether to enable PXE on the distribution point. Use PXE to start OS deployments on clients. For more information on how to use PXE in Configuration Manager, see [Use PXE to deploy Windows over the network](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network).
+Specify whether to enable PXE on the distribution point. Use PXE to start OS deployments on clients. For more information on how to use PXE in Configuration Manager, see [Use PXE to deploy Windows over the network](../../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md).
 
 When you enable PXE, Configuration Manager installs Windows Deployment Services (WDS) on the server, if necessary. WDS is the service that performs the PXE boot to install operating systems. After you finish the wizard to create the distribution point, Configuration Manager installs a provider in WDS that uses the PXE boot functions.
 
@@ -406,11 +406,11 @@ Select the option to **Enable PXE support for clients**, and then configure the 
 > [!Note]  
 > Select **Yes** in the **Review Required Ports for PXE** dialog box to confirm that you want to enable PXE. Configuration Manager automatically configures the default ports on Windows firewall. If you use a different firewall, manually configure the ports.  
 >
-> If you install WDS and DHCP on the same server, configure WDS to listen on a different port. By default, DHCP listens on the same port. For more information, see [Considerations when you have WDS and DHCP on the same server](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment#BKMK_WDSandDHCP).  
+> If you install WDS and DHCP on the same server, configure WDS to listen on a different port. By default, DHCP listens on the same port. For more information, see [Considerations when you have WDS and DHCP on the same server](../../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_WDSandDHCP).  
 
 - **Allow this distribution point to respond to incoming PXE requests**: Specify whether to enable WDS to respond to PXE service requests. Use this setting to enable and disable the service without removing the PXE functionality from the distribution point.  
 
-- **Enable unknown computer support**: Specify whether to enable support for computers that Configuration Manager doesn't manage. For more information, see [Prepare for unknown computer deployments](/sccm/osd/get-started/prepare-for-unknown-computer-deployments).  
+- **Enable unknown computer support**: Specify whether to enable support for computers that Configuration Manager doesn't manage. For more information, see [Prepare for unknown computer deployments](../../../../osd/get-started/prepare-for-unknown-computer-deployments.md).  
 
 - **Enable a PXE responder without Windows Deployment Service**: Starting in version 1806, this option enables a PXE responder on the distribution point, which doesn't require WDS. This PXE responder supports IPv6 networks. If you enable this option on a distribution point that's already PXE-enabled, Configuration Manager suspends the WDS service. If you disable this option, but still **Enable PXE support for clients**, then the distribution point enables WDS again.<!--1357580-->  
 
@@ -429,7 +429,7 @@ Select the option to **Enable PXE support for clients**, and then configure the 
 
   - **Do not allow user device affinity**: Choose this setting to specify that users aren't associated with the destination computer. This setting is the default.  
 
-    For more information about user device affinity, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
+    For more information about user device affinity, see [Link users and devices with user device affinity](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).  
 
 - **Network interfaces**: Specify that the distribution point responds to PXE requests from all network interfaces or from specific network interfaces. If the distribution point responds to specific network interfaces, then provide the MAC address for each network interface.  
 
@@ -440,13 +440,13 @@ Select the option to **Enable PXE support for clients**, and then configure the 
 
 ### <a name="bkmk_config-multicast"></a> Multicast  
 
-Specify whether to enable multicast on the distribution point. Multicast deployments conserve network bandwidth by simultaneously sending data to multiple Configuration Manager clients. Without multicast, the server sends a copy of the data to each client over a separate connection. For more information about using multicast for OS deployment, see [Use multicast to deploy Windows over the network](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network).
+Specify whether to enable multicast on the distribution point. Multicast deployments conserve network bandwidth by simultaneously sending data to multiple Configuration Manager clients. Without multicast, the server sends a copy of the data to each client over a separate connection. For more information about using multicast for OS deployment, see [Use multicast to deploy Windows over the network](../../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md).
 
 When you enable multicast, Configuration Manager installs Windows Deployment Services (WDS) on the server, if necessary.  
 
 Select the option to **Enable multicast to simultaneously send data to multiple clients**, and then configure the following settings:  
 
-- **Multicast Connection Account**: Specify the account to use when you configure Configuration Manager database connections for multicast. For more information, see the [Multicast connection account](/sccm/core/plan-design/hierarchy/accounts#multicast-connection-account).  
+- **Multicast Connection Account**: Specify the account to use when you configure Configuration Manager database connections for multicast. For more information, see the [Multicast connection account](../../../plan-design/hierarchy/accounts.md#multicast-connection-account).  
 
 - **Multicast address settings**: Specify the IP addresses for sending data to the destination computers. By default, it obtains the IP address from a DHCP server that's enabled to distribute multicast addresses. Depending on the network environment, you can specify a range of IP addresses from 239.0.0.0 through 239.255.255.255.  
 
@@ -491,11 +491,11 @@ To remove this distribution point from a distribution point group, select the gr
 
 Manage the content that you distributed to the distribution point. Select from the list of deployment packages, and perform the following actions:  
 
-- **Validate**: Start the process to validate the integrity of the content files for the software. To view the results of the content validation process, in the **Monitoring** workspace, expand **Distribution Status**, and then choose the **Content Status** node. For more information, see [Validate content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#validate-content).  
+- **Validate**: Start the process to validate the integrity of the content files for the software. To view the results of the content validation process, in the **Monitoring** workspace, expand **Distribution Status**, and then choose the **Content Status** node. For more information, see [Validate content](deploy-and-manage-content.md#validate-content).  
 
-- **Redistribute**: Copies all of the content files for the selected software to the distribution point, and overwrites the existing files. You typically use this action to repair content files. For more information, see [Redistribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#redistribute-content).  
+- **Redistribute**: Copies all of the content files for the selected software to the distribution point, and overwrites the existing files. You typically use this action to repair content files. For more information, see [Redistribute content](deploy-and-manage-content.md#redistribute-content).  
 
-- **Remove**: Removes the content files for the software from the distribution point. For more information, see [Remove content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#remove-content).  
+- **Remove**: Removes the content files for the software from the distribution point. For more information, see [Remove content](deploy-and-manage-content.md#remove-content).  
 
 ### <a name="bkmk_config-valid"></a> Content validation  
 
@@ -506,19 +506,19 @@ To view the results of the content validation process, in the **Monitoring** wor
 > [!WARNING]  
 > Although you specify the content validation schedule by using the local time for the computer, the Configuration Manager console shows the schedule in UTC.  
 
-For more information, see [Validate content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#validate-content).
+For more information, see [Validate content](deploy-and-manage-content.md#validate-content).
 
 ### <a name="bkmk_config-boundary"></a> Boundary groups  
 
 Manage the boundary groups to which you assign this distribution point. Add the distribution point to at least one boundary group. During content deployment, clients must be in a boundary group associated with a distribution point to use that distribution point as a source location for content.
 
-Configure boundary group *relationships* that define when and to which boundary groups a client can fall back to find content. For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).
+Configure boundary group *relationships* that define when and to which boundary groups a client can fall back to find content. For more information, see [Boundary groups](boundary-groups.md).
 
 Choose **Add** and select an existing boundary group from the list.
 
-To create a new boundary group for this distribution point, choose **Create**. For more information on how to create and configure a boundary group, see [Procedures for boundary groups](/sccm/core/servers/deploy/configure/boundary-group-procedures).
+To create a new boundary group for this distribution point, choose **Create**. For more information on how to create and configure a boundary group, see [Procedures for boundary groups](boundary-group-procedures.md).
 
-When you're editing the properties of a previously installed distribution point, manage the option to **Enable for on-demand distribution**. This option allows Configuration Manager to automatically distribute content to this server when a client requests it. For more information, see [On-demand content distribution](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#on-demand-content-distribution).
+When you're editing the properties of a previously installed distribution point, manage the option to **Enable for on-demand distribution**. This option allows Configuration Manager to automatically distribute content to this server when a client requests it. For more information, see [On-demand content distribution](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#on-demand-content-distribution).
 
 ### <a name="bkmk_config-sched"></a> Schedule  
 

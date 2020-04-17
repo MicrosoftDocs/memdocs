@@ -21,7 +21,7 @@ manager: dougeby
 An OS upgrade package in Configuration Manager contains the Windows setup source files to upgrade an existing OS on a computer. This article describes how to add, distribute, and service an OS upgrade package.
 
 > [!NOTE]
-> OS upgrade packages can also be used for new installations of Windows. However it is dependent on drivers being compatible with this method. When performing new installations of Windows from an OS upgrade package, drivers are installed while still in Windows PE versus simply being injected while in Windows PE. Some drivers are not compatible with being installed while in Windows PE. If drivers are not compatible with being installed while in Windows PE, then use an [OS image](/configmgr/osd/get-started/manage-operating-system-images), such as **install.wim**, instead.
+> OS upgrade packages can also be used for new installations of Windows. However it is dependent on drivers being compatible with this method. When performing new installations of Windows from an OS upgrade package, drivers are installed while still in Windows PE versus simply being injected while in Windows PE. Some drivers are not compatible with being installed while in Windows PE. If drivers are not compatible with being installed while in Windows PE, then use an [OS image](manage-operating-system-images.md), such as **install.wim**, instead.
 
 ## <a name="BKMK_AddOSUpgradePkgs"></a> Add an OS upgrade package  
 
@@ -46,7 +46,7 @@ Before you can use an OS upgrade package, first add it to your Configuration Man
         > [!IMPORTANT]  
         > Configuration Manager overwrites the existing install.wim in the OS upgrade package. It extracts the image index to a temporary location, and then moves it into the original source directory. Before you import an OS upgrade package and enable this option, make sure to backup the original source files.
 
-    - If you want to pre-cache content on a client, specify the **Architecture** and **Language** of the image. For more information, see [Configure pre-cache content](/configmgr/osd/deploy-use/configure-precache-content).  
+    - If you want to pre-cache content on a client, specify the **Architecture** and **Language** of the image. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).  
 
 4. On the **General** page, specify the following information. This information is useful for identification purposes when you have more than one OS upgrade package.  
 
@@ -62,10 +62,10 @@ Next, distribute the OS upgrade package to distribution points.
 
 ## <a name="BKMK_Distribute"></a> Distribute content to a distribution point  
 
-Distribute OS upgrade packages to distribution points the same as other content. Before you deploy the task sequence, distribute the OS upgrade package to at least one distribution point. For more information, see [Distribute content](/configmgr/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).  
+Distribute OS upgrade packages to distribution points the same as other content. Before you deploy the task sequence, distribute the OS upgrade package to at least one distribution point. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
 [!INCLUDE [Apply software updates to an image](includes/wim-apply-updates.md)]
 
 ## Next steps
 
-[Create a task sequence to upgrade an OS](/configmgr/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)
+[Create a task sequence to upgrade an OS](../deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md)

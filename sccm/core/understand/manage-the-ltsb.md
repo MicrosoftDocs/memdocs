@@ -30,11 +30,11 @@ Only critical security updates are made available as in-console updates in the L
 
 Information about regular updates for the subsequent Current Branch releases are visible in the console, but are not made available to the LTSB. They are not downloaded and cannot be installed.
 
-To support in-console updates for critical security fixes, an LTSB site requires the use of [the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point). You can configure this site system role in offline or online mode, as is done for the Current Branch. The LTSB collects and submits the same telemetry and usage data as the Current Branch.
+To support in-console updates for critical security fixes, an LTSB site requires the use of [the service connection point](../servers/deploy/configure/about-the-service-connection-point.md). You can configure this site system role in offline or online mode, as is done for the Current Branch. The LTSB collects and submits the same telemetry and usage data as the Current Branch.
 
 The LTSB supports the use of the Hotfix Installer and the Update Registration tool, as documented for the Current Branch.
 
-For general information about updates and servicing, see [Updates for Configuration Manager](/sccm/core/servers/manage/updates).
+For general information about updates and servicing, see [Updates for Configuration Manager](../servers/manage/updates.md).
 
 
 ## Changes for site expansion and the CD.Latest folder
@@ -42,7 +42,7 @@ When you run the LTSB and are expanding a stand-alone primary site by installing
 
 Although you do not run Setup for site expansion from the CD.Latest folder, you continue to use the CD.Latest folder for site recovery, and to install a new child primary site when your first LTSB site was a central administration site.
 
-For more information about site expansion, see [Expand a stand-alone primary site](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_expand). For more information about the CD.Latest folder, see [The CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder).
+For more information about site expansion, see [Expand a stand-alone primary site](../servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand). For more information about the CD.Latest folder, see [The CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder).
 
 
 ## Recovery

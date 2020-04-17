@@ -22,7 +22,7 @@ manager: dougeby
 Use the data warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.
 
 > [!Note]  
-> In version 1910, Configuration Manager enables this feature by default. In version 1906 or earlier, Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+> In version 1910, Configuration Manager enables this feature by default. In version 1906 or earlier, Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](install-in-console-updates.md#bkmk_options).<!--505213-->  
 
 
 The data warehouse supports up to 2 TB of data, with timestamps for change tracking. The data warehouse stores data by automatically synchronizing data from the Configuration Manager site database to the data warehouse database. This information is then accessible from your reporting service point. Data synchronized to the data warehouse database is kept for three years. Periodically, a built-in task removes data that's older than three years.
@@ -67,9 +67,9 @@ Starting in version 1810, you can synchronize more tables from the site database
 
     - SQL Server failover cluster  
 
-- If you use [distributed views](/sccm/core/plan-design/hierarchy/database-replication#bkmk_distviews), the data warehouse service point must install on the same server that hosts the central administration site's database.  
+- If you use [distributed views](../../plan-design/hierarchy/database-replication.md#bkmk_distviews), the data warehouse service point must install on the same server that hosts the central administration site's database.  
 
-For more information on SQL Server licensing, see the [product and licensing FAQ](/sccm/core/understand/product-and-licensing-faq). <!-- sms500967 -->
+For more information on SQL Server licensing, see the [product and licensing FAQ](../../understand/product-and-licensing-faq.md). <!-- sms500967 -->
 
 Size the data warehouse database the same as your site database. While the data warehouse is smaller at first, it will grow over time. <!--SCCMDocs issue 756-->
 
@@ -79,7 +79,7 @@ Size the data warehouse database the same as your site database. While the data 
 
 Each hierarchy supports a single instance of this role, on any site system of the top-tier site. The SQL Server that hosts the database for the warehouse can be local to the site system role, or remote. The data warehouse works with the reporting services point installed at the same site. You don't need to install the two site system roles on the same server.   
 
-To install the role, use the **Add Site System Roles Wizard** or the **Create Site System Server Wizard**. For more information, see [Install site system roles](/sccm/core/servers/deploy/configure/install-site-system-roles). On the **System Role Selection** page of the wizard, select the **Data Warehouse service point** role. 
+To install the role, use the **Add Site System Roles Wizard** or the **Create Site System Server Wizard**. For more information, see [Install site system roles](../deploy/configure/install-site-system-roles.md). On the **System Role Selection** page of the wizard, select the **Data Warehouse service point** role. 
 
 When you install the role, Configuration Manager creates the data warehouse database for you on the instance of SQL Server that you specify. If you specify the name of an existing database, Configuration Manager doesn’t create a new database. Instead it uses the one you specify. This process is the same as when you [move the data warehouse database to a new SQL Server](#move-the-database).
 

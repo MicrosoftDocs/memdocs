@@ -1,4 +1,4 @@
-﻿---
+---
 title: How to run reports
 titleSuffix: Configuration Manager
 description: Information about how to access reports in the Configuration Manager console or by using Report Manager.
@@ -32,7 +32,7 @@ Report Manager is a web-based report access and management tool that you use to 
 1. In the Configuration Manager console, select **Monitoring**.
 1. In the **Monitoring** workspace, expand **Reporting**, and then select **Reports** to list the available reports.
     > [!TIP]
-    > If no reports are listed, verify that the reporting services point is installed and configured. For more information, see the topic [Configuring Reporting in Configuration Manager](/sccm/core/servers/manage/configuring-reporting).
+    > If no reports are listed, verify that the reporting services point is installed and configured. For more information, see the topic [Configuring Reporting in Configuration Manager](../../../../core/servers/manage/configuring-reporting.md).
 
 1. Select the report that you want to run, and then on the **Home** tab, in the **Report Group** section, select **Run** to open the report.
 1. When there are required parameters, specify the parameters, and then select **View Report**.
@@ -43,7 +43,7 @@ Report Manager is a web-based report access and management tool that you use to 
 1. In Report Manager, select the report folder for Configuration Manager, for example, ConfigMgr\_CAS.
 
     > [!TIP]
-    > If no reports are listed, verify that the reporting services point is installed and configured. For more information, see the topic [Configuring Reporting in Configuration Manager](/sccm/core/servers/manage/configuring-reporting).
+    > If no reports are listed, verify that the reporting services point is installed and configured. For more information, see the topic [Configuring Reporting in Configuration Manager](../../../../core/servers/manage/configuring-reporting.md).
 
 1. Select the report category for the report that you want to run, and then select the link for the report. The report opens in Report Manager.
 1. When there are required parameters, specify the parameters, and then select **View Report**.

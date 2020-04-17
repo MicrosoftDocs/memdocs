@@ -20,10 +20,10 @@ manager: dougeby
 
 This article provides details on how to deploy the Configuration Manager client to Windows computers. For more information on planning and preparing for client deployment, see these articles:
 
-- [Client installation methods](/sccm/core/clients/deploy/plan/client-installation-methods)  
-- [Prerequisites for deploying clients to Windows computers](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers)
-- [Security and privacy for Configuration Manager clients](/sccm/core/clients/deploy/plan/security-and-privacy-for-clients)  
-- [Best practices for client deployment](/sccm/core/clients/deploy/plan/best-practices-for-client-deployment)  
+- [Client installation methods](plan/client-installation-methods.md)  
+- [Prerequisites for deploying clients to Windows computers](prerequisites-for-deploying-clients-to-windows-computers.md)
+- [Security and privacy for Configuration Manager clients](plan/security-and-privacy-for-clients.md)  
+- [Best practices for client deployment](plan/best-practices-for-client-deployment.md)  
 
 
 ## <a name="BKMK_ClientPush"></a> Client push installation
@@ -34,7 +34,7 @@ There are three main ways to use client push:
 
 - Start client push installation by running the Client Push Installation Wizard for a specific collection or resource within a collection.  
 
-- Use the Client Push Installation Wizard to install the Configuration Manager client, which you can use to [query](/sccm/core/servers/manage/introduction-to-queries) the result. The installation will succeed only if one of the items returned by the query is the **ResourceID** attribute of the **System Resource** class.
+- Use the Client Push Installation Wizard to install the Configuration Manager client, which you can use to [query](../../servers/manage/introduction-to-queries.md) the result. The installation will succeed only if one of the items returned by the query is the **ResourceID** attribute of the **System Resource** class.
 
 If the site server can't contact the client computer or start the setup process, it automatically retries the installation every hour. The server continues to retry for up to seven days.  
 
@@ -43,7 +43,7 @@ To help track the client installation process, install a fallback status point b
 Client log files provide more detailed information for troubleshooting. The log files don't require a fallback status point. For example, the CCM.log file on the site server records any problems that occur when the site server connects to the computer. The CCMSetup.log file on the client records the installation process.  
 
 > [!IMPORTANT]  
-> Client push only succeeds if all prerequisites are met. For more information, see [Installation method dependencies](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#installation-method-dependencies).
+> Client push only succeeds if all prerequisites are met. For more information, see [Installation method dependencies](prerequisites-for-deploying-clients-to-windows-computers.md#installation-method-dependencies).
 
 ### Configure the site to automatically use client push for discovered computers
 
@@ -75,7 +75,7 @@ Client log files provide more detailed information for troubleshooting. The log 
 
 8. Specify any required installation properties on the **Installation Properties** tab.
 
-    If you've extended the Active Directory schema for Configuration Manager, the site publishes the specified [client installation properties](/sccm/core/clients/deploy/about-client-installation-properties) to Active Directory Domain Services. When CCMSetup runs without installation properties, it reads these properties from Active Directory.  
+    If you've extended the Active Directory schema for Configuration Manager, the site publishes the specified [client installation properties](about-client-installation-properties.md) to Active Directory Domain Services. When CCMSetup runs without installation properties, it reads these properties from Active Directory.  
 
     > [!NOTE]  
     > If you enable client push installation on a secondary site, set the **SMSSITECODE** property to the Configuration Manager site code of its parent primary site. If you've extended the Active Directory schema for Configuration Manager, to automatically find the correct site assignment, set this property to **AUTO**.
@@ -90,7 +90,7 @@ Client log files provide more detailed information for troubleshooting. The log 
 
 4. Specify any required installation properties on the **Installation Properties** tab.  
 
-    If you've extended the Active Directory schema for Configuration Manager, the site publishes the specified [client installation properties](/sccm/core/clients/deploy/about-client-installation-properties) to Active Directory Domain Services. When CCMSetup runs without installation properties, it reads these properties from Active Directory.
+    If you've extended the Active Directory schema for Configuration Manager, the site publishes the specified [client installation properties](about-client-installation-properties.md) to Active Directory Domain Services. When CCMSetup runs without installation properties, it reads these properties from Active Directory.
 
 5. In the Configuration Manager console, go to the **Assets and Compliance** workspace.  
 
@@ -118,13 +118,13 @@ Software update-based client installation publishes the client to a software upd
 If the Configuration Manager client is installed on a computer, the computer receives client policy from the site. This policy includes the software update-point server name and port from which to get software updates.
 
 > [!IMPORTANT]  
-> For software update-based installation, use the same Windows Server Update Services (WSUS) server for client installation and software updates. This server must be the active software update point in a primary site. For more information, see [Install a software update point](/sccm/sum/get-started/install-a-software-update-point).
+> For software update-based installation, use the same Windows Server Update Services (WSUS) server for client installation and software updates. This server must be the active software update point in a primary site. For more information, see [Install a software update point](../../../sum/get-started/install-a-software-update-point.md).
 
 If the Configuration Manager client isn't installed on a computer, configure and assign a Group Policy Object. The Group Policy specifies the server name of the software update point.  
 
 You can't add command-line properties to a software update-based client installation. If you've extended the Active Directory schema for Configuration Manager, the client installation automatically queries Active Directory Domain Services for the installation properties.  
 
-If you haven't extended the Active Directory schema, use Group Policy to provision client installation settings. These settings are automatically applied to any software update-based client installation. For more information, see the section on [How to provision client installation properties](#BKMK_Provision) and the article on [How to assign clients to a site](/sccm/core/clients/deploy/assign-clients-to-a-site).  
+If you haven't extended the Active Directory schema, use Group Policy to provision client installation settings. These settings are automatically applied to any software update-based client installation. For more information, see the section on [How to provision client installation properties](#BKMK_Provision) and the article on [How to assign clients to a site](assign-clients-to-a-site.md).  
 
 Use the following procedures to configure computers without a Configuration Manager client to use the software update point. There's also a procedure for publishing the client software to the software update point.  
 
@@ -146,7 +146,7 @@ Use the following procedures to configure computers without a Configuration Mana
     - If the Configuration Manager site system isn't configured to use an FQDN, use a short name format.
 
     > [!TIP]  
-    > To determine the port number, see [How to determine the port settings used by WSUS](/sccm/sum/plan-design/plan-for-software-updates).
+    > To determine the port number, see [How to determine the port settings used by WSUS](../../../sum/plan-design/plan-for-software-updates.md).
 
     Example in the FQDN format: `http://server1.contoso.com:8530`  
 
@@ -180,7 +180,7 @@ Use the Windows Installer package CCMSetup.msi for Group Policy-based installati
 > [!IMPORTANT]  
 > You must have administrator permissions to access the client installation files.  
 
-- If you've extended the Active Directory schema for Configuration Manager, and you selected the domain on the **Publishing** tab of the **Site Properties** dialog box, client computers automatically search Active Directory Domain Services for installation properties. For more information, see [About client installation properties published to Active Directory Domain Services](/sccm/core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services).  
+- If you've extended the Active Directory schema for Configuration Manager, and you selected the domain on the **Publishing** tab of the **Site Properties** dialog box, client computers automatically search Active Directory Domain Services for installation properties. For more information, see [About client installation properties published to Active Directory Domain Services](about-client-installation-properties-published-to-active-directory-domain-services.md).  
 
 - If you haven't extended the Active Directory schema, see the section on [provisioning client installation properties](#BKMK_Provision) for information about storing installation properties in the Windows registry of computers. The client uses these installation properties when it installs.  
 
@@ -212,10 +212,10 @@ In this example, the client installs with the following options:
 |`SMSSITECODE=AUTO`|This Client.msi property specifies that the client tries to locate the Configuration Manager site code to use, by using Active Directory Domain Services, for example.|  
 |`FSP=SMSFP01`|This Client.msi property specifies that the fallback status point named SMSFP01 is used to receive state messages sent from the client computer.|  
 
-For more information, see [About client installation parameters and properties](/sccm/core/clients/deploy/about-client-installation-properties).  
+For more information, see [About client installation parameters and properties](about-client-installation-properties.md).  
 
 > [!TIP]  
-> For the procedure to install the Configuration Manager client on a modern Windows 10 device by using Azure Active Directory (Azure AD) identity, see [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure). That procedure is for clients on an intranet or the internet.  
+> For the procedure to install the Configuration Manager client on a modern Windows 10 device by using Azure Active Directory (Azure AD) identity, see [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](deploy-clients-cmg-azure.md). That procedure is for clients on an intranet or the internet.  
 
 ### Manual installation examples
 
@@ -247,7 +247,7 @@ This command installs the client with no additional parameters or properties. Th
 - Fallback status point.
 - Communicate using HTTPS only.  
 
-For more information, see [About client installation properties published to Active Directory Domain Services](/sccm/core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services).  
+For more information, see [About client installation properties published to Active Directory Domain Services](about-client-installation-properties-published-to-active-directory-domain-services.md).  
 
 #### Manual example 2  
 
@@ -274,9 +274,9 @@ If you don't specify an installation source by using the `/Source` parameter and
 Use Configuration Manager to create and deploy a package and program that upgrades the client software for selected devices. Configuration Manager supplies a package definition file that populates the package properties with typically used values. Customize the behavior of the client installation by specifying additional command-line parameters and properties.  
 
 > [!NOTE]  
-> You can't upgrade Configuration Manager 2007 clients by using this method. Instead, use automatic client upgrade, which automatically creates and deploys a package that contains the latest version of the client. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients).  
+> You can't upgrade Configuration Manager 2007 clients by using this method. Instead, use automatic client upgrade, which automatically creates and deploys a package that contains the latest version of the client. For more information, see [Upgrade clients](../manage/upgrade/upgrade-clients.md).  
 >
-> For more information about how to migrate from older versions of the Configuration Manager client, see [Planning a client migration strategy](/sccm/core/migration/planning-a-client-migration-strategy).  
+> For more information about how to migrate from older versions of the Configuration Manager client, see [Planning a client migration strategy](../../migration/planning-a-client-migration-strategy.md).  
 
 ### Create a package and program for the client software  
 
@@ -305,9 +305,9 @@ Deploy the Configuration Manager client to devices that are enrolled with Micros
 
 This procedure is for a traditional client that's connected to an intranet. It uses traditional client authentication methods. To make sure the device remains in a managed state after it installs the client, it must be on the intranet and within a Configuration Manager site boundary.  
 
-For the procedure to install the Configuration Manager client on a modern Windows 10 device by using Azure AD identity, see [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
+For the procedure to install the Configuration Manager client on a modern Windows 10 device by using Azure AD identity, see [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](deploy-clients-cmg-azure.md).
 
-After you install the Configuration Manager client, devices don't unenroll from Intune. They can use the Configuration Manager client and MDM enrollment at the same time. For more information, see [Co-management overview](/sccm/comanage/overview).  
+After you install the Configuration Manager client, devices don't unenroll from Intune. They can use the Configuration Manager client and MDM enrollment at the same time. For more information, see [Co-management overview](../../../comanage/overview.md).  
 
 > [!Note]
 > You can use other client installation methods to install the Configuration Manager client on an Intune-managed device. For example, if an Intune-managed device is on the intranet, and joined to the Active Directory domain, you can use group policy to install the Configuration Manager client.<!-- SCCMDocs#757 -->
@@ -321,7 +321,7 @@ After you install the Configuration Manager client, devices don't unenroll from 
     `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<your site code> DNSSUFFIX=<DNS suffix of management point>"`  
 
     > [!NOTE]  
-    > For an example of a command to use with a modern Windows 10 client using Azure AD authentication, see [How to prepare internet-based devices for co-management](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client).  
+    > For an example of a command to use with a modern Windows 10 client using Azure AD authentication, see [How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client).  
 
 3. [Assign the app](https://docs.microsoft.com/mem/intune/apps/apps-deploy) to a group of the enrolled Windows computers.  
 
@@ -330,7 +330,7 @@ After you install the Configuration Manager client, devices don't unenroll from 
 Preinstall the Configuration Manager client on a reference computer that you use to create an OS image.
 
 > [!IMPORTANT]  
-> When you use the Configuration Manager task sequence to deploy an OS image, the [Prepare ConfigMgr Client](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture) step completely removes the Configuration Manager client.  
+> When you use the Configuration Manager task sequence to deploy an OS image, the [Prepare ConfigMgr Client](../../../osd/understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture) step completely removes the Configuration Manager client.  
 
 ### Prepare the client computer for imaging  
 
@@ -350,7 +350,7 @@ Preinstall the Configuration Manager client on a reference computer that you use
     > [!NOTE]  
     > If clients can't query Active Directory Domain Services to locate a management point, they use the trusted root key to determine trusted management points. If you deploy all imaged clients in the same hierarchy as that of the master computer, leave the trusted root key in place.
     >
-    > If you deploy the clients in different hierarchies, remove the trusted root key. Also provision these clients with the new trusted root key. For more information, see [Planning for the trusted root key](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForRTK).  
+    > If you deploy the clients in different hierarchies, remove the trusted root key. Also provision these clients with the new trusted root key. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
 
 6. Use your imaging software to capture an image of the reference computer.  
 
@@ -364,7 +364,7 @@ Configuration Manager supports client installation for computers in workgroups. 
 
 - Manually install the client on each workgroup computer. During installation, the interactive user must have local administrator rights.  
 
-- To access resources in the Configuration Manager site server domain, configure the network access account for the site. Specify this account in the software distribution site component. For more information, see [Site components](/sccm/core/servers/deploy/configure/site-components).  
+- To access resources in the Configuration Manager site server domain, configure the network access account for the site. Specify this account in the software distribution site component. For more information, see [Site components](../../servers/deploy/configure/site-components.md).  
 
 ### Limitations  
 
@@ -405,9 +405,9 @@ This example requires the client to be on a network location that's configured i
 ## <a name="BKMK_ClientInternet"></a> Internet-based client management  
 
 > [!NOTE]  
-> This section doesn't apply to clients that use a [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). To install internet-based clients by using a cloud management gateway, see [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
+> This section doesn't apply to clients that use a [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). To install internet-based clients by using a cloud management gateway, see [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](deploy-clients-cmg-azure.md).  
 
-When the Configuration Manager site supports [internet-based client management](/sccm/core/clients/manage/plan-internet-based-client-management) for clients that are sometimes on an intranet and sometimes on the internet, you have two options when you install clients on the intranet:  
+When the Configuration Manager site supports [internet-based client management](../manage/plan-internet-based-client-management.md) for clients that are sometimes on an intranet and sometimes on the internet, you have two options when you install clients on the intranet:  
 
 - Include the Client.msi property `CCMHOSTNAME=<internet FQDN of the internet-based management point>` when you install the client, by using manual installation or client push, for example. When you use this method, directly assign the client to the site. You can't use automatic site assignment. See the [How to install Configuration Manager clients manually](#BKMK_Manual) section, which provides an example of this configuration method.  
 
@@ -422,7 +422,7 @@ To install clients that are on the internet, choose one of the following support
 > [!NOTE]  
 > Configuration Manager doesn't support installing a client directly from the internet-based management point or from the internet-based software update point.
 
-Clients that are managed over the internet must communicate with internet-based site systems. Ensure that these clients also have public key infrastructure (PKI) certificates before you install the client. Install these certificates independently from Configuration Manager. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
+Clients that are managed over the internet must communicate with internet-based site systems. Ensure that these clients also have public key infrastructure (PKI) certificates before you install the client. Install these certificates independently from Configuration Manager. For more information, see [PKI certificate requirements](../../plan-design/network/pki-certificate-requirements.md).  
 
 ### Install clients on the internet by specifying CCMSetup command-line properties  
 
@@ -447,7 +447,7 @@ Clients that are managed over the internet must communicate with internet-based 
 
 4. If you're installing the client for internet-only client management, specify the Client.msi property `CCMALWAYSINF=1`.  
 
-5. Determine whether you have to specify additional CCMSetup command-line parameters. For example, if the client has more than one valid PKI certificate, you might have to specify a certificate selection criterion. For a list of available properties, see [About client installation parameters and properties](/sccm/core/clients/deploy/about-client-installation-properties).  
+5. Determine whether you have to specify additional CCMSetup command-line parameters. For example, if the client has more than one valid PKI certificate, you might have to specify a certificate selection criterion. For a list of available properties, see [About client installation parameters and properties](about-client-installation-properties.md).  
 
 #### Internet-based example
 
@@ -538,6 +538,6 @@ A group policy administrative template named `ConfigMgrInstallation.adm` is supp
 
 3. Select **Enabled**.  
 
-4. In the **CCMSetup** box, enter the required CCMSetup command-line properties. For a list of all CCMSetup command-line properties and examples of their use, see [About client installation parameters and properties](/sccm/core/clients/deploy/about-client-installation-properties).  
+4. In the **CCMSetup** box, enter the required CCMSetup command-line properties. For a list of all CCMSetup command-line properties and examples of their use, see [About client installation parameters and properties](about-client-installation-properties.md).  
 
 5. Assign the GPO to the computers that you want to provision with Configuration Manager client installation properties.  

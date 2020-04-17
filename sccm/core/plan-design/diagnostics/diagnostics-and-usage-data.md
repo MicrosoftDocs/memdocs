@@ -20,7 +20,7 @@ manager: dougeby
 
 Configuration Manager collects diagnostics and usage data about itself, which is used by Microsoft to improve the installation experience, quality, and security of future releases.  
 
-Each Configuration Manager hierarchy enables diagnostics and usage data. It consists of SQL Server queries that run on a weekly basis on each primary site and at the central administration site (CAS). When the hierarchy uses a CAS, child primary sites replicate their data to that CAS. At the top-level site of your hierarchy, the [service connection point](/configmgr/core/servers/deploy/configure/about-the-service-connection-point) submits this information when it checks for updates. If the service connection point is in offline mode, you transfer the information by using the [service connection tool](/configmgr/core/servers/manage/use-the-service-connection-tool).
+Each Configuration Manager hierarchy enables diagnostics and usage data. It consists of SQL Server queries that run on a weekly basis on each primary site and at the central administration site (CAS). When the hierarchy uses a CAS, child primary sites replicate their data to that CAS. At the top-level site of your hierarchy, the [service connection point](../../servers/deploy/configure/about-the-service-connection-point.md) submits this information when it checks for updates. If the service connection point is in offline mode, you transfer the information by using the [service connection tool](../../servers/manage/use-the-service-connection-tool.md).
 
 > [!NOTE]  
 > Configuration Manager collects data only from the site's SQL server database, and it doesn't collect data directly from clients or site servers.  
@@ -28,4 +28,4 @@ Each Configuration Manager hierarchy enables diagnostics and usage data. It cons
 For more information, see the [Microsoft privacy statement](https://go.microsoft.com/fwlink/?LinkID=626527).  
 
 > [!div class="nextstepaction"]
-> [How Microsoft uses diagnostics and usage data](/configmgr/core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used)
+> [How Microsoft uses diagnostics and usage data](how-diagnostics-and-usage-data-is-used.md)

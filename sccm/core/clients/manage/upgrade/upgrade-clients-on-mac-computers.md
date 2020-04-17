@@ -21,7 +21,7 @@ manager: dougeby
 Follow the high-level steps in this article to upgrade the client for Mac computers by using a Configuration Manager application. You can also download the Mac client installation file, copy it to a shared network location or a local folder on the Mac computer, and then instruct users to manually run the installation.  
 
 > [!NOTE]  
-> Before you do these steps, make sure that your Mac computer meets the prerequisites. See [Supported operating systems for Mac computers](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#mac-computers).  
+> Before you do these steps, make sure that your Mac computer meets the prerequisites. See [Supported operating systems for Mac computers](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).  
 
 ## Download the latest Mac client
 
@@ -41,13 +41,13 @@ Copy **Macclient.dmg** to a Mac computer. Mount the Macclient.dmg file in macOS,
 
 2. Copy the new **CMClient.pkg.cmmac** file to a network location that's available to the computer running the Configuration Manager console.  
 
-    For more information, see the [Supplemental procedures to create and deploy applications for Mac computers](/sccm/apps/get-started/creating-mac-computer-applications#supplemental-procedures-to-create-and-deploy-applications-for-mac-computers).  
+    For more information, see the [Supplemental procedures to create and deploy applications for Mac computers](../../../../apps/get-started/creating-mac-computer-applications.md#supplemental-procedures-to-create-and-deploy-applications-for-mac-computers).  
 
 ## Create and deploy the app
 
-1. In the Configuration Manager console, [create an application](/sccm/apps/get-started/creating-mac-computer-applications) from the **CMClient.pkg.cmmac** file.  
+1. In the Configuration Manager console, [create an application](../../../../apps/get-started/creating-mac-computer-applications.md) from the **CMClient.pkg.cmmac** file.  
 
-2. [Deploy this application](/sccm/apps/deploy-use/deploy-applications) to Mac computers in your hierarchy.  
+2. [Deploy this application](../../../../apps/deploy-use/deploy-applications.md) to Mac computers in your hierarchy.  
 
 ## Install the updated client
 
@@ -61,7 +61,7 @@ If you don't use Configuration Manager enrollment, but install the client certif
 
 Use this procedure to prevent the Computer Enrollment Wizard from running, and to configure the upgraded client to use an existing client certificate.  
 
-1. In the Configuration Manager console, [create a configuration item](/sccm/compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client) of the type **Mac OS X**.  
+1. In the Configuration Manager console, [create a configuration item](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md) of the type **Mac OS X**.  
 
 1. Add a setting to this configuration item with the setting type **Script**.  
 
@@ -92,4 +92,4 @@ Use this procedure to prevent the Computer Enrollment Wizard from running, and t
   exit  
   ```  
 
-1. Add the configuration item to a [configuration baseline](/sccm/compliance/deploy-use/create-configuration-baselines). Then [deploy the configuration baseline](/sccm/compliance/deploy-use/deploy-configuration-baselines) to all Mac computers that install a certificate independently from Configuration Manager.  
+1. Add the configuration item to a [configuration baseline](../../../../compliance/deploy-use/create-configuration-baselines.md). Then [deploy the configuration baseline](../../../../compliance/deploy-use/deploy-configuration-baselines.md) to all Mac computers that install a certificate independently from Configuration Manager.  

@@ -26,7 +26,7 @@ Configuration baselines in Configuration Manager contain predefined configuratio
 
  There are two methods that you can use to create configuration baselines:  
 
-- Import configuration data from a file. To start the **Import Configuration Data Wizard**, in the **Configuration Items** or **Configuration Baselines** node in the **Assets and Compliance** workspace, click **Import Configuration Data**. For more information, see [Import configuration data](/sccm/compliance/deploy-use/import-configuration-data).
+- Import configuration data from a file. To start the **Import Configuration Data Wizard**, in the **Configuration Items** or **Configuration Baselines** node in the **Assets and Compliance** workspace, click **Import Configuration Data**. For more information, see [Import configuration data](import-configuration-data.md).
 
 - Use the **Create Configuration Baseline** dialog box to create a new configuration baseline.  
 
@@ -77,7 +77,7 @@ To create a configuration baseline by using the **Create Configuration Baseline*
 <!--3608345-->
 *(Introduced in version 1910)*
 
-Starting in version 1910, you can add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you have an option to **Evaluate this baseline as part of compliance policy assessment**. When adding or editing a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**. For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Azure AD. You can then use it for conditional access to your Office 365 resources. For more information, see [Conditional access with co-management](/configmgr/comanage/quickstart-conditional-access).
+Starting in version 1910, you can add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you have an option to **Evaluate this baseline as part of compliance policy assessment**. When adding or editing a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**. For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Azure AD. You can then use it for conditional access to your Office 365 resources. For more information, see [Conditional access with co-management](../../comanage/quickstart-conditional-access.md).
 
 To include custom configuration baselines as part of compliance policy assessment, do the following:
 
@@ -85,7 +85,7 @@ To include custom configuration baselines as part of compliance policy assessmen
 - Select [**Evaluate this baseline as part of compliance policy assessment**](#bkmk_eval-baseline) in a configuration baseline deployed to a device collection.
 
 > [!IMPORTANT]
-> When targeting devices that are co-managed, ensure you meet the [co-management prerequisites](/configmgr/comanage/overview#prerequisites).
+> When targeting devices that are co-managed, ensure you meet the [co-management prerequisites](../../comanage/overview.md#prerequisites).
 
 ### Example evaluation scenario
 
@@ -146,4 +146,4 @@ When `User1` uses `Device2`, only `Configuration Baseline 2` gets evaluated when
 
 ## Next steps
 
-[Import configuration data](/sccm/compliance/deploy-use/import-configuration-data)
+[Import configuration data](import-configuration-data.md)

@@ -18,9 +18,9 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Before you continue, please review [Application deployment client components](/sccm/apps/understand/client-components-technical-reference) to understand DCM and CI Agent job processing.
+Before you continue, please review [Application deployment client components](client-components-technical-reference.md) to understand DCM and CI Agent job processing.
 
-Application evaluation is performed by the DCM Agent and CI Agent components when the deployment is activated. To understand when the assignment is activated, see the [Application Deployment to Device Collections](/sccm/apps/understand/device-deployment-technical-reference) or [Application Deployment to User Collections](/sccm/apps/understand/user-deployment-technical-reference) articles.
+Application evaluation is performed by the DCM Agent and CI Agent components when the deployment is activated. To understand when the assignment is activated, see the [Application Deployment to Device Collections](device-deployment-technical-reference.md) or [Application Deployment to User Collections](user-deployment-technical-reference.md) articles.
 
 ## Application Detection and Evaluation
 
@@ -52,8 +52,8 @@ Next, the client evaluates the desired state of the application based on the Dep
 In the log entry above, **Current State** indicates whether the application is currently installed on the device. **Applicability** indicates whether the application is applicable based on defined requirement rules. **ResolvedState** indicates the desired state of the application based on the deployment purpose.
 
 > [!TIP]
-> Use the [Deployment Monitoring Tool](/sccm/core/support/deployment-monitoring-tool) to view the application state, applicability state and requirement violations.
+> Use the [Deployment Monitoring Tool](../../core/support/deployment-monitoring-tool.md) to view the application state, applicability state and requirement violations.
 
 ## Next Steps
 
-- [Application Download](/sccm/apps/understand/deployment-download-technical-reference)
+- [Application Download](deployment-download-technical-reference.md)

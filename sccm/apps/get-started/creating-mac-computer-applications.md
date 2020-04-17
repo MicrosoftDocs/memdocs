@@ -206,4 +206,4 @@ Use the following procedure to help you create an application for Mac computers 
 ###  Step 5: Monitor the deployment of the Mac application  
  You can use the same process to monitor application deployments to Mac computers as you would to monitor application deployments to Windows computers.  
 
- For more information, see [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
+ For more information, see [Monitor applications](../deploy-use/monitor-applications-from-the-console.md).  

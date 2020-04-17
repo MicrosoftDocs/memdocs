@@ -47,7 +47,7 @@ If you want to use public key infrastructure (PKI) certificates for client conne
 
     - **HTTPS or HTTP**: You don't require clients to use PKI certificates.  
 
-    - **Use Configuration Manager-generated certificates for HTTP site systems**: For more information on this setting, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).  
+    - **Use Configuration Manager-generated certificates for HTTP site systems**: For more information on this setting, see [Enhanced HTTP](../hierarchy/enhanced-http.md).  
 
 4.  Select the settings for client computers.  
 
@@ -55,15 +55,15 @@ If you want to use public key infrastructure (PKI) certificates for client conne
 
     When more than one valid PKI client certificate is available on a client, choose **Modify** to configure the client certificate selection methods.  
 
-    For more information about the client certificate selection method, see [Planning for PKI client certificate selection](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForClientCertificateSelection).  
+    For more information about the client certificate selection method, see [Planning for PKI client certificate selection](plan-for-security.md#BKMK_PlanningForClientCertificateSelection).  
 
     - **Clients check the certificate revocation list (CRL) for site systems**: Enable this setting for clients to check your organization's CRL for revoked certificates.  
 
-    For more information about CRL checking for clients, see [Planning for PKI certificate revocation](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs).  
+    For more information about CRL checking for clients, see [Planning for PKI certificate revocation](plan-for-security.md#BKMK_PlanningForCRLs).  
 
 5.  To import, view, and delete the certificates for trusted root certification authorities, choose **Set**.  
 
-    For more information, see [Planning for the PKI trusted root certificates and the certificate issuers List](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForRootCAs).  
+    For more information, see [Planning for the PKI trusted root certificates and the certificate issuers List](plan-for-security.md#BKMK_PlanningForRootCAs).  
 
 
 Repeat this procedure for all primary sites in the hierarchy.  
@@ -103,7 +103,7 @@ Repeat this procedure for all primary sites in the hierarchy.
 
 Role-based administration combines security roles, security scopes, and assigned collections to define the administrative scope for each administrative user. A scope includes the objects that a user can view in the console, and the tasks related to those objects that they have permission to do. Role-based administration configurations are applied at each site in a hierarchy.  
 
-For more information, see [Configure role-based administration](/sccm/core/servers/deploy/configure/configure-role-based-administration). This article details the following actions:  
+For more information, see [Configure role-based administration](../../servers/deploy/configure/configure-role-based-administration.md). This article details the following actions:  
 
 - Create custom security roles  
 
@@ -118,7 +118,7 @@ For more information, see [Configure role-based administration](/sccm/core/serve
 - Modify the administrative scope of an administrative user  
 
 > [!IMPORTANT]  
->  Your own administrative scope defines the objects and settings that you can assign when you configure role-based administration for another administrative user. For information about planning for role-based administration, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).  
+>  Your own administrative scope defines the objects and settings that you can assign when you configure role-based administration for another administrative user. For information about planning for role-based administration, see [Fundamentals of role-based administration](../../understand/fundamentals-of-role-based-administration.md).  
 
 
 
@@ -137,30 +137,30 @@ Configuration Manager supports Windows accounts for many different tasks and use
     > [!NOTE]  
     >  The password that you specify must match this account's password in Active Directory.  
 
-For more information, see [Accounts used in Configuration Manager](/sccm/core/plan-design/hierarchy/accounts).
+For more information, see [Accounts used in Configuration Manager](../hierarchy/accounts.md).
 
 
 
 ##  <a name="bkmk_azuread"></a> Configure Azure Active Directory
 
-Integrate Configuration Manager with Azure Active Directory (Azure AD) to simplify and cloud-enable your environment. Enable the site and clients to authenticate by using Azure AD. For more information, see the **Cloud Management** service in [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard).
+Integrate Configuration Manager with Azure Active Directory (Azure AD) to simplify and cloud-enable your environment. Enable the site and clients to authenticate by using Azure AD. For more information, see the **Cloud Management** service in [Configure Azure services](../../servers/deploy/configure/azure-services-wizard.md).
 
 
 
 ## <a name="bkmk_auth"></a> Configure SMS Provider authentication
 
-Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth). <!--1357013-->  
+Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md#bkmk_auth). <!--1357013-->  
 
 
 
 ## See also
 
-- [Plan for security](/sccm/core/plan-design/security/plan-for-security)  
+- [Plan for security](plan-for-security.md)  
 
-- [Security and privacy for Configuration Manager clients](/sccm/core/clients/deploy/plan/security-and-privacy-for-clients)  
+- [Security and privacy for Configuration Manager clients](../../clients/deploy/plan/security-and-privacy-for-clients.md)  
 
-- [Communication between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints)  
+- [Communication between endpoints](../hierarchy/communications-between-endpoints.md)  
 
-- [Cryptographic controls technical reference](/sccm/core/plan-design/security/cryptographic-controls-technical-reference)  
+- [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md)  
 
-- [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements)  
+- [PKI certificate requirements](../network/pki-certificate-requirements.md)  

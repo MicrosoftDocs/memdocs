@@ -43,7 +43,7 @@ When you install Configuration Manager for the first time, the first Configurati
 
 -   [Design a hierarchy of sites for Configuration Manager](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)  
 
--   [Install Configuration Manager sites](/sccm/core/servers/deploy/install/installing-sites)  
+-   [Install Configuration Manager sites](../servers/deploy/install/installing-sites.md)  
 
 ## Site system servers and site system roles  
  Each Configuration Manager site installs *site system roles* that support management operations. The following roles are installed by default when you install a site:

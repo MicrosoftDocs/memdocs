@@ -155,7 +155,7 @@ The script also generates other *diagnostic files* in the working folder. For ex
 
 ### <a name="bkmk_ex5"></a> Example 5: Deploy script via Configuration Manager **Scripts**
 
-For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
+For more information, see [Create and run PowerShell scripts from the Configuration Manager console](../apps/deploy-use/create-deploy-scripts.md).
 
 DesktopAnalyticsLogsCollector.ps1 is digitally signed by Microsoft. You may need to add its Microsoft code signing certificate as a Trusted Publisher on the target device.
 
@@ -171,6 +171,6 @@ DesktopAnalyticsLogsCollector.ps1 is digitally signed by Microsoft. You may need
 
 ## See also
 
-- [Troubleshoot Desktop Analytics](/sccm/desktop-analytics/troubleshooting)
+- [Troubleshoot Desktop Analytics](troubleshooting.md)
 
-- [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts)
+- [Create and run PowerShell scripts from the Configuration Manager console](../apps/deploy-use/create-deploy-scripts.md)

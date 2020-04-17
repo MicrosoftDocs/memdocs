@@ -16,13 +16,13 @@ ms.author: aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-In addition to the other Configuration Manager requirements and procedures for [creating an application](/sccm/apps/deploy-use/create-applications), also take the following considerations into account when you create and deploy applications for Windows devices.  
+In addition to the other Configuration Manager requirements and procedures for [creating an application](../deploy-use/create-applications.md), also take the following considerations into account when you create and deploy applications for Windows devices.  
 
 ## <a name="bkmk_general"></a> General considerations  
 
 Configuration Manager supports the deployment of Windows app package (.appx) and app bundle (.appxbundle) formats for Windows 8.1 and Windows 10 devices.
 
-When you create an application in the Configuration Manager console, select the application installation file **Type** as **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)**. For more information on creating apps in general, see [Create applications](/sccm/apps/deploy-use/create-applications). For more information on the MSIX format, see [Support for MSIX format](#bkmk_msix).
+When you create an application in the Configuration Manager console, select the application installation file **Type** as **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)**. For more information on creating apps in general, see [Create applications](../deploy-use/create-applications.md). For more information on the MSIX format, see [Support for MSIX format](#bkmk_msix).
 
 > [!Note]  
 > To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.<!--SCCMDocs issue 646-->  
@@ -32,7 +32,7 @@ When you create an application in the Configuration Manager console, select the 
 Provision an application with a Windows app package for all users on the device. One common example of this scenario is provisioning an app from the Microsoft Store for Business and Education, like Minecraft: Education Edition, to all devices used by students in a school. Previously, Configuration Manager only supported installing these applications per user. After signing in to a new device, a student would have to wait to access an app. Now when the app is provisioned to the device for all users, they can be productive more quickly.
 
 > [!Important]  
-> Be careful with installing, provisioning, and updating different versions of the same Windows app package on a device, which may cause unexpected results. This behavior may occur when using Configuration Manager to provision the app, but then allowing users to update the app from the Microsoft Store. For more information, see the next step guidance when you [Manage apps from the Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#next-steps).  
+> Be careful with installing, provisioning, and updating different versions of the same Windows app package on a device, which may cause unexpected results. This behavior may occur when using Configuration Manager to provision the app, but then allowing users to update the app from the Microsoft Store. For more information, see the next step guidance when you [Manage apps from the Microsoft Store for Business](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).  
 
 When provisioning an offline licensed app, Configuration Manager doesn't allow Windows to automatically update it from the Microsoft Store.  
 
@@ -43,7 +43,7 @@ Configuration Manager supports app provisioning on all supported versions of Win
 - Uninstall action: Windows 10, version 1703 and later
 -->
 
-To configure a Windows app deployment type for this feature, enable the option to **Provision this application for all users on the device**. For more information, see [Create applications](/sccm/apps/deploy-use/create-applications).
+To configure a Windows app deployment type for this feature, enable the option to **Provision this application for all users on the device**. For more information, see [Create applications](../deploy-use/create-applications.md).
 
 > [!Note]  
 > If you need to uninstall a provisioned application from devices to which users have already signed on, you need to create two uninstall deployments. Target the first uninstall deployment to a device collection that contains the devices. Target the second uninstall deployment to a user collection that contains the users who have already signed on to devices with the provisioned application. When uninstalling a provisioned app on a device, Windows currently doesn't uninstall that app for users as well.
@@ -102,14 +102,14 @@ To use this MSIX app, you first need to digitally sign it so that clients trust 
 - [MSIX – The MSIX Packaging Tool – signing the MSIX package](https://blogs.msdn.microsoft.com/sgern/2018/09/06/msix-the-msix-packaging-tool-signing-the-msix-package/)
 - [How to sign an app package using SignTool](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
 
-After signing the app, create a new deployment type on the application in Configuration Manager. For more information, see [Create deployment types for the application](/sccm/apps/deploy-use/create-applications#bkmk_create-dt).
+After signing the app, create a new deployment type on the application in Configuration Manager. For more information, see [Create deployment types for the application](../deploy-use/create-applications.md#bkmk_create-dt).
 
 ## <a name="bkmk_tsdt"></a> Task sequence deployment type
 
 <!--3555953-->
 
 > [!Note]  
-> In this version of Configuration Manager, the task sequence deployment type is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).  
+> In this version of Configuration Manager, the task sequence deployment type is a pre-release feature. To enable it, see [Pre-release features](../../core/servers/manage/pre-release-features.md).  
 
 Starting in version 2002, you can install complex applications using task sequences via the application model. Add a task sequence deployment type to an app either to install or uninstall the app. This deployment type provides the following behaviors:
 
@@ -127,7 +127,7 @@ When you add this deployment type to an app, configure its properties on the **T
 
 Create a custom task sequence:
 
-- Use only non-OS deployment steps, for example: **Install Package**, **Run Command Line**, or **Run PowerShell Script**. For more information including the full list of supported steps, see [Create a task sequence for non-OS deployments](/configmgr/osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments).
+- Use only non-OS deployment steps, for example: **Install Package**, **Run Command Line**, or **Run PowerShell Script**. For more information including the full list of supported steps, see [Create a task sequence for non-OS deployments](../../osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md).
 
 - On the task sequence properties, **User Notification** tab, don't select the option for a high-impact task sequence.
 
@@ -143,7 +143,7 @@ When you create the application, to add a task sequence deployment type, your us
 
 - You can't yet deploy an app task sequence to a user collection
 
-- Don't use the **Install Application** step in this task sequence. Use the [Install Package](/configmgr/osd/understand/task-sequence-steps#BKMK_InstallPackage) step to install apps.
+- Don't use the **Install Application** step in this task sequence. Use the [Install Package](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) step to install apps.
 
 ## <a name="bkmk_uwp"></a> Support for Universal Windows Platform (UWP) apps  
 

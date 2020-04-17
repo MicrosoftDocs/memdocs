@@ -20,7 +20,7 @@ manager: dougeby
 
 Prepare backup and recovery approaches to avoid data loss. For Configuration Manager sites, a backup and recovery approach can help you to recover sites and hierarchies more quickly, and with the least data loss.  
 
-The sections in this article can help you back up your sites. To recover a site, see [Recovery for Configuration Manager](/sccm/core/servers/manage/recover-sites).  
+The sections in this article can help you back up your sites. To recover a site, see [Recovery for Configuration Manager](recover-sites.md).  
 
 <!--/SCCMdocs/issues/2108-->
 >[!WARNING]
@@ -32,13 +32,13 @@ The sections in this article can help you back up your sites. To recover a site,
 
 ## Considerations before creating a backup  
 
--   If you use a SQL Server Always On availability group to host the site database: Modify your backup and recovery plans as described in [Prepare to use SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#changes-for-site-backup).  
+-   If you use a SQL Server Always On availability group to host the site database: Modify your backup and recovery plans as described in [Prepare to use SQL Server Always On](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#changes-for-site-backup).  
 
 -   Configuration Manager can recover the site database from the Configuration Manager backup task. It can also use a backup of the site database that you create with another process.   
 
      For example, you can restore the site database from a backup that's created as part of a Microsoft SQL Server maintenance plan. You can also use a backup that's created by using Data Protection Manager to back up your site database.  
 
--   Starting with version 1806, install an additional site server in *passive* mode. The site server in passive mode is in addition to your existing site server in *active* mode. A site server in passive mode is available for immediate use, when needed. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability). While this role doesn't remove the need to plan for and practice backup and recovery operations, it significantly reduces the effort to recover a site when necessary.  
+-   Starting with version 1806, install an additional site server in *passive* mode. The site server in passive mode is in addition to your existing site server in *active* mode. A site server in passive mode is available for immediate use, when needed. For more information, see [Site server high availability](../deploy/configure/site-server-high-availability.md). While this role doesn't remove the need to plan for and practice backup and recovery operations, it significantly reduces the effort to recover a site when necessary.  
   
 
 ####  Using Data Protection Manager to back up your site database
@@ -62,7 +62,7 @@ You can automate backup for Configuration Manager sites by scheduling the predef
 -   Backs up specific folders and files
 -   Backs up the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder)   
 
-Plan to run the default site backup task at a minimum of every five days. This schedule is because Configuration Manager uses a *SQL Server change tracking retention period* of five days. For more information, see [SQL Server change tracking retention period](/sccm/core/servers/manage/recover-sites#sql-server-change-tracking-retention-period).
+Plan to run the default site backup task at a minimum of every five days. This schedule is because Configuration Manager uses a *SQL Server change tracking retention period* of five days. For more information, see [SQL Server change tracking retention period](recover-sites.md#sql-server-change-tracking-retention-period).
 
 To simplify the backup process, you can create an **AfterBackup.bat** file. This script automatically runs post-backup actions after the backup task completes successfully. Use the AfterBackup.bat file to archive the backup snapshot to a secure location. You can also use the AfterBackup.bat file to copy files to your backup folder, or to start other backup tasks.  
 
@@ -167,14 +167,14 @@ For more information about backing up your custom reports in Reporting Services,
 ### Back up content files  
 The content library in Configuration Manager is the location where all content files are stored for all software deployments. The content library is located on the site server and on each distribution point. The Backup Site Server maintenance task doesn't back up the content library or package source files. When a site server fails, the information about the content library is restored to the site database, but you must restore the content library and package source files.  
 
--   The content library must be restored before you can redistribute content to distribution points. When you start content redistribution, Configuration Manager copies the files from the site server's content library to the distribution points. For more information, see [The content library](/sccm/core/plan-design/hierarchy/the-content-library).  
+-   The content library must be restored before you can redistribute content to distribution points. When you start content redistribution, Configuration Manager copies the files from the site server's content library to the distribution points. For more information, see [The content library](../../plan-design/hierarchy/the-content-library.md).  
 
 -   The package source files must be restored before you can update content on distribution points. When you start a content update, Configuration Manager copies new or modified files from the package source to the content library. It then copies the files to associated distribution points. Run the following SQL Server query against the site database to find the package source location for all packages and applications: `SELECT * FROM v_Package`. You can identify the package source site by looking at the first three characters of the package ID. For example, if the package ID is CEN00001, the site code for the source site is CEN. When you restore the package source files, they must be restored to the same location where they were before the failure.  
 
 Verify that you include both the content library and package source files in your file system backup for the site server.  
 
 ### Back up custom software updates  
-System Center Updates Publisher is a stand-alone tool that lets you manage custom software updates. Updates Publisher uses a local database for its software update repository. When you use Updates Publisher to manage custom software updates, determine whether you should include the Updates Publisher database in your backup plan. For more information, see [System Center Updates Publisher](/sccm/sum/tools/updates-publisher).  
+System Center Updates Publisher is a stand-alone tool that lets you manage custom software updates. Updates Publisher uses a local database for its software update repository. When you use Updates Publisher to manage custom software updates, determine whether you should include the Updates Publisher database in your backup plan. For more information, see [System Center Updates Publisher](../../../sum/tools/updates-publisher.md).  
 
 Use the following procedure to back up the Updates Publisher database.  
 

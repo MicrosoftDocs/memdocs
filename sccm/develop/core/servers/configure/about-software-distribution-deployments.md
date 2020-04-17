@@ -26,5 +26,5 @@ In Configuration Manager, after a software distribution package has been created
   The site's clients cannot receive advertised programs until you enable the software distribution advertised programs client agent on the site's clients. The **Advertised Programs Client Agent** performs the necessary software distribution-related tasks on these clients, primarily allowing the clients to receive and run the programs that you advertise.  
 
 ## See Also  
- [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)
- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+ [About deployments](about-software-distribution-deployments.md)
+ [Software distribution overview](software-distribution-overview.md)

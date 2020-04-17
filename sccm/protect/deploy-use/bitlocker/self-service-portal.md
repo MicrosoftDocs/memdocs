@@ -20,12 +20,12 @@ manager: dougeby
 
 <!--3601034-->
 
-After you [install the BitLocker self-service portal](/configmgr/protect/deploy-use/bitlocker/setup-websites), if BitLocker locks a user's device, they can independently get access to their computers. The self-service portal requires no assistance from help desk staff.
+After you [install the BitLocker self-service portal](setup-websites.md), if BitLocker locks a user's device, they can independently get access to their computers. The self-service portal requires no assistance from help desk staff.
 
 [![Screenshot of default BitLocker self-service portal](media/bitlocker-self-service-portal.png)](media/bitlocker-self-service-portal.png#lightbox)
 
 > [!IMPORTANT]
-> To get a recovery key from the self-service portal, a user must have successfully signed in to the computer at least once. This sign-in must be local to the device, not in a remote session. Otherwise, they need to contact the help desk for key recovery. A help desk administrator can use the [administration and monitoring website](/configmgr/protect/deploy-use/bitlocker/helpdesk-portal) to request the recovery key.
+> To get a recovery key from the self-service portal, a user must have successfully signed in to the computer at least once. This sign-in must be local to the device, not in a remote session. Otherwise, they need to contact the help desk for key recovery. A help desk administrator can use the [administration and monitoring website](helpdesk-portal.md) to request the recovery key.
 
 BitLocker can lock the device in the following situations:
 

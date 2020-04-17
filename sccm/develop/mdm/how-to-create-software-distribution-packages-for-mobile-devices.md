@@ -48,5 +48,5 @@ Configuration Manager device management enables mobile device software distribut
 
 ## See also
 
-- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
-- [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)
+- [Software distribution overview](../core/servers/configure/software-distribution-overview.md)
+- [About deployments](../core/servers/configure/about-software-distribution-deployments.md)

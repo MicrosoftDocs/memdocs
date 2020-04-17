@@ -22,11 +22,11 @@ Prestaged media in Configuration Manager is a Windows Image (WIM) file. It can b
 
 Use prestaged media for the following OS deployment scenarios:  
 
-- [Create an image for an OEM in factory or a local depot](/sccm/osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot)  
+- [Create an image for an OEM in factory or a local depot](create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
 
-- [Install a new version of Windows on a new computer (bare metal)](/sccm/osd/deploy-use/install-new-windows-version-new-computer-bare-metal)  
+- [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
 
-- [Deploy Windows to Go](/sccm/osd/deploy-use/deploy-windows-to-go)  
+- [Deploy Windows to Go](deploy-windows-to-go.md)  
 
 
 ## Usage
@@ -47,13 +47,13 @@ Consider the following points about the boot image that you use in the task sequ
 
 ### Create a task sequence to deploy an OS
 
-As part of the prestaged media, specify the task sequence to deploy the OS. For more information, see [Create a task sequence to install an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
+As part of the prestaged media, specify the task sequence to deploy the OS. For more information, see [Create a task sequence to install an OS](create-a-task-sequence-to-install-an-operating-system.md).
 
 ### Distribute all content associated with the task sequence
 
 Distribute all content that the task sequence requires to at least one distribution point. This content includes the boot image, OS image, and other associated files. The wizard gathers the content from the distribution point when it creates the prestaged media.
 
-Your user account needs at least **Read** access rights to the content library on that distribution point. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
+Your user account needs at least **Read** access rights to the content library on that distribution point. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
 
 ### Hard drive on the destination computer
 
@@ -101,7 +101,7 @@ The hard drive of the destination computer must be formatted before the prestage
 
 6. On the **Security** page, specify the following options:  
 
-    - **Enable unknown computer support**: Allow the media to deploy an OS to a computer that's not managed by Configuration Manager. There's no record of these computers in the Configuration Manager database. For more information, see [Prepare for unknown computer deployments](/sccm/osd/get-started/prepare-for-unknown-computer-deployments).  
+    - **Enable unknown computer support**: Allow the media to deploy an OS to a computer that's not managed by Configuration Manager. There's no record of these computers in the Configuration Manager database. For more information, see [Prepare for unknown computer deployments](../get-started/prepare-for-unknown-computer-deployments.md).  
 
     - **Protect media with a password**: Enter a strong password to help protect the media from unauthorized access. When you specify a password, the user must provide that password to use the prestaged media.  
 
@@ -115,9 +115,9 @@ The hard drive of the destination computer must be formatted before the prestage
 
     - For HTTPS communications, select **Import PKI certificate**. Then specify the certificate to import and its password.  
 
-        For more information about this client certificate that boot images use, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
+        For more information about this client certificate that boot images use, see [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements.md).  
 
-    - **User device affinity**: To support user-centric management in Configuration Manager, specify how you want the media to associate users with the destination computer. For more information about how OS deployment supports user device affinity, see [Associate users with a destination computer](/sccm/osd/get-started/associate-users-with-a-destination-computer).  
+    - **User device affinity**: To support user-centric management in Configuration Manager, specify how you want the media to associate users with the destination computer. For more information about how OS deployment supports user device affinity, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).  
 
         - **Allow user device affinity with auto-approval**: The media automatically associates users with the destination computer. This functionality is based on the actions of the task sequence that deploys the OS. In this scenario, the task sequence creates a relationship between the specified users and destination computer when it deploys the OS to the destination computer.  
 
@@ -153,7 +153,7 @@ The hard drive of the destination computer must be formatted before the prestage
 
 9. On the **Images** page, specify the following options:  
 
-    - **Image package**: Specify the OS image to use. For more information, see [Manage OS images](/sccm/osd/get-started/manage-operating-system-images).  
+    - **Image package**: Specify the OS image to use. For more information, see [Manage OS images](../get-started/manage-operating-system-images.md).  
 
     - **Image index**: If the package contains multiple OS images, specify the index of the image to deploy.  
 
@@ -167,13 +167,13 @@ The hard drive of the destination computer must be formatted before the prestage
 
 13. On the **Distribution Points** page, select one or more distribution points from which to get content.  
 
-    Configuration Manager only displays distribution points that have the content. Distribute all of the content associated with the task sequence to at least one distribution point before you continue. After you distribute the content, refresh the distribution point list. Remove any distribution points that you already selected on this page, go to the previous page, and then back to the **Distribution Points** page. Alternatively, restart the wizard. For more information, see [Distribute content referenced by a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DistributeTS) and [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
+    Configuration Manager only displays distribution points that have the content. Distribute all of the content associated with the task sequence to at least one distribution point before you continue. After you distribute the content, refresh the distribution point list. Remove any distribution points that you already selected on this page, go to the previous page, and then back to the **Distribution Points** page. Alternatively, restart the wizard. For more information, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS) and [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 14. On the **Customization** page, specify the following options:  
 
     - Add any variables that the task sequence uses.  
 
-    - **Enable prestart command**: Specify any prestart commands that you want to run before the task sequence runs. Prestart commands are a script or an executable that can interact with the user in Windows PE before the task sequence runs. For more information, see [Prestart commands for task sequence media](/sccm/osd/understand/prestart-commands-for-task-sequence-media).  
+    - **Enable prestart command**: Specify any prestart commands that you want to run before the task sequence runs. Prestart commands are a script or an executable that can interact with the user in Windows PE before the task sequence runs. For more information, see [Prestart commands for task sequence media](../understand/prestart-commands-for-task-sequence-media.md).  
 
         > [!TIP]  
         > During media creation, the task sequence writes the package ID and prestart command-line, including the value for any task sequence variables, to the **CreateTSMedia.log** file on the computer that runs the Configuration Manager console. You can review this log file to verify the value for the task sequence variables.  
@@ -185,4 +185,4 @@ The hard drive of the destination computer must be formatted before the prestage
 
 ## Next steps
 
-[Create an image for an OEM in factory or a local depot](/sccm/osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot)
+[Create an image for an OEM in factory or a local depot](create-an-image-for-an-oem-in-factory-or-a-local-depot.md)

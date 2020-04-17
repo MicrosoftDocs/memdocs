@@ -17,7 +17,7 @@ Conditions can be added to an operating system deployment step (action and group
 
 ### To add a condition to a step  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Obtain a task sequence step object. This can be an [SMS_TaskSequence_Group](../../develop/reference/osd/sms_tasksequence_group-server-wmi-class.md) object for a group, or a  [SMS_TaskSequenceAction](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) derived class object for an action, for more information, see [How to Add an Operating System Deployment Task Sequence Action](../../develop/osd/how-to-add-an-operating-system-deployment-task-sequence-action.md).  
 
@@ -143,8 +143,8 @@ public void AddRegistryCondition(
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
+ [Objects overview](../core/understand/configuration-manager-objects-overview.md)
  [How to Add an Operating System Deployment Task Sequence Action](../../develop/osd/how-to-add-an-operating-system-deployment-task-sequence-action.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to an SMS Provider in Configuration Manager  by Using WMI](../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
- [Task sequence overview](/sccm/develop/osd/operating-system-deployment-task-sequences-overview)
+ [Task sequence overview](operating-system-deployment-task-sequences-overview.md)

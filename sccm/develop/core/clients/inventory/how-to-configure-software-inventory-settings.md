@@ -188,5 +188,5 @@ public void ConfigureSoftwareInventoryClientAgentSettings(WqlConnectionManager c
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)   
  [SMS_SCI_Component Server WMI Class](../../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md)   
- [About schedules](/sccm/develop/core/understand/about-configuration-manager-schedules)
+ [About schedules](../../understand/about-configuration-manager-schedules.md)
  [How to Create a Schedule Token](../../../../develop/core/understand/how-to-create-a-schedule-token.md)

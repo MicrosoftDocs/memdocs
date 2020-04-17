@@ -14,9 +14,9 @@ manager: dougeby
 
 # Health status monitoring in Desktop Analytics
 
-As you [deploy an update to production](/sccm/desktop-analytics/deploy-prod), use Desktop Analytics to help monitor the health state of your devices. This article explains in detail how health monitoring works.
+As you [deploy an update to production](deploy-prod.md), use Desktop Analytics to help monitor the health state of your devices. This article explains in detail how health monitoring works.
 
-For more information on how to use this feature, see [Monitor the health of updated devices](/sccm/desktop-analytics/deploy-prod#bkmk_monitor).
+For more information on how to use this feature, see [Monitor the health of updated devices](deploy-prod.md#bkmk_monitor).
 
 ![Screenshot of the Monitor Health page of Desktop Analytics](media/monitor-health.png)
 
@@ -59,7 +59,7 @@ At the bottom of the app details page, the following three tabs can help you tro
 
 - **Other versions**: A list of alternative versions of this app. For each version, it shows the relative changes to the crash rates within your organization and the commercial average. If you find a later version of the app with a lower crash rate, updating the app may help.  
 
-    It also shows if the version has advanced insights. For more information, see [Compatibility assessment](/sccm/desktop-analytics/compat-assessment).  
+    It also shows if the version has advanced insights. For more information, see [Compatibility assessment](compat-assessment.md).  
 
 - **Top issues**: A list of the most frequent failure IDs by instance count. A failure ID identifies the stack trace associated with the crash. You can use this ID when you call the app vendor for support.  
 
@@ -69,6 +69,6 @@ If you find a serious health regression that you're unable to fix, change the ap
 
 ## See also
 
-- [Compatibility assessment in Desktop Analytics](/sccm/desktop-analytics/compat-assessment)  
+- [Compatibility assessment in Desktop Analytics](compat-assessment.md)  
 
-- [How to deploy to production with Desktop Analytics](/sccm/desktop-analytics/deploy-prod)  
+- [How to deploy to production with Desktop Analytics](deploy-prod.md)  

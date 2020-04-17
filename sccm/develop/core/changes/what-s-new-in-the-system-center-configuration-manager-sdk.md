@@ -43,7 +43,7 @@ ISMIFCOM is a COM library with a class wrapper for the install status MIF functi
 
 - [Microsoft.ConfigurationManagement.ISMIFCOM.amd64](https://www.nuget.org/packages/Microsoft.ConfigurationManagement.ISMIFCOM.amd64/)
 
-For more information, see the [ISMIFCOM documentation](/sccm/develop/reference/core/servers/manage/status-mif-functions).
+For more information, see the [ISMIFCOM documentation](../../reference/core/servers/manage/status-mif-functions.md).
 
 
 ### Data discovery record creation libraries 
@@ -61,7 +61,7 @@ SMSRsGen and SMSRsGenCtl are legacy COM libraries used to create data discovery 
 
 - [Microsoft.ConfigurationManagement.SMSRsGenCtl.amd64](https://www.nuget.org/packages/Microsoft.ConfigurationManagement.SMSRsGenCtl.amd64/)  
 
-For more information, see the [SMSResGen documentation](/sccm/develop/reference/core/servers/configure/smsresgen-com-automation-class)  
+For more information, see the [SMSResGen documentation](../../reference/core/servers/configure/smsresgen-com-automation-class.md)  
 
 
 ## See Also  

@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-The Role-based Administration and Auditing Tool is one of the [Configuration Manager tools](/sccm/core/support/tools). Use this tool for the following tasks:
+The Role-based Administration and Auditing Tool is one of the [Configuration Manager tools](tools.md). Use this tool for the following tasks:
 
 - Model security roles with specific permissions  
 
@@ -56,7 +56,7 @@ Use the following procedure to model permissions for a new role that you want to
     > [!Note]  
     > To see whether there's an existing security role that meets your requirements, switch to the **Similarity** tab.  
 
-4. Click **Export** to save the role as an XML file. Then import it to the Configuration Manager console. For more information, see [Create custom security roles](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole).
+4. Click **Export** to save the role as an XML file. Then import it to the Configuration Manager console. For more information, see [Create custom security roles](../servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole).
 
 
 ### Audit existing security scopes
@@ -88,5 +88,5 @@ Use the following procedure to audit the role-based administration configuration
 
 ## See also
 
-- [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration)
-- [Configure role-based administration](/sccm/core/servers/deploy/configure/configure-role-based-administration)
+- [Fundamentals of role-based administration](../understand/fundamentals-of-role-based-administration.md)
+- [Configure role-based administration](../servers/deploy/configure/configure-role-based-administration.md)

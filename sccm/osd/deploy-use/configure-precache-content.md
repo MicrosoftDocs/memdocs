@@ -17,10 +17,10 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 <!--1021244-->
-The pre-cache feature for available deployments of task sequences lets clients download relevant content before a user installs the task sequence. The client can pre-cache content for task sequences that [upgrade an OS](/configmgr/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system) or [install an OS image](/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
+The pre-cache feature for available deployments of task sequences lets clients download relevant content before a user installs the task sequence. The client can pre-cache content for task sequences that [upgrade an OS](create-a-task-sequence-to-upgrade-an-operating-system.md) or [install an OS image](create-a-task-sequence-to-install-an-operating-system.md).
 
 > [!Note]  
-> In version 1910, Configuration Manager enables this feature by default. In version 1906 or earlier, Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/configmgr/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+> In version 1910, Configuration Manager enables this feature by default. In version 1906 or earlier, Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
 
 For example, you only want a single in-place upgrade task sequence for all users, and have many architectures and languages. In previous versions, the content starts to download when the user installs an available task sequence deployment from Software Center. This delay adds additional time before the installation is ready to start. All content referenced in the task sequence is downloaded. This content includes the OS upgrade package for all languages and architectures. If each upgrade package is roughly 3 GB in size, the total content is very large.
 
@@ -50,15 +50,15 @@ The client evaluates attributes of the packages to determine which content it do
 
 #### OS upgrade package
 
-Create [OS upgrade packages](/configmgr/osd/get-started/manage-operating-system-upgrade-packages) for specific architectures and languages. Specify the **Architecture** and **Language** on the **Data Source** tab of its properties.
+Create [OS upgrade packages](../get-started/manage-operating-system-upgrade-packages.md) for specific architectures and languages. Specify the **Architecture** and **Language** on the **Data Source** tab of its properties.
 
 #### OS image
 
-Create [OS images](/configmgr/osd/get-started/manage-operating-system-images) for specific architectures and languages. Specify the **Architecture** and **Language** on the **Data Source** tab of its properties.
+Create [OS images](../get-started/manage-operating-system-images.md) for specific architectures and languages. Specify the **Architecture** and **Language** on the **Data Source** tab of its properties.
 
 #### Driver package
 
-Create [driver packages](/configmgr/osd/get-started/manage-drivers#BKMK_ManagingDriverPackages) for specific hardware models. Specify the **Model** on the **General** tab of its properties.
+Create [driver packages](../get-started/manage-drivers.md#BKMK_ManagingDriverPackages) for specific hardware models. Specify the **Model** on the **General** tab of its properties.
 
 To determine which driver package it downloads during pre-caching, the client evaluates the model against the **Name** property of the **Win32_ComputerSystemProduct** WMI class.
 
@@ -67,7 +67,7 @@ To determine which driver package it downloads during pre-caching, the client ev
 
 #### Package
 
-Create [packages](/configmgr/apps/deploy-use/packages-and-programs) for specific architectures and languages. Specify the **Architecture** and **Language** on the **General** tab of its properties.
+Create [packages](../../apps/deploy-use/packages-and-programs.md) for specific architectures and languages. Specify the **Architecture** and **Language** on the **General** tab of its properties.
 
 
 ### <a name="bkmk_createts"></a> 2. Create a task sequence
@@ -76,10 +76,10 @@ Create a task sequence with conditional steps for the different languages and ar
 
 |Content|Step|
 |---------|---------|
-|OS upgrade package|[Upgrade OS](/configmgr/osd/understand/task-sequence-steps#BKMK_UpgradeOS)|
-|OS image|[Apply OS Image](/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyOperatingSystemImage)|
-|Driver package|[Apply Driver Package](/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage)|
-|Package|[Install Package](/configmgr/osd/understand/task-sequence-steps#BKMK_InstallPackage)|
+|OS upgrade package|[Upgrade OS](../understand/task-sequence-steps.md#BKMK_UpgradeOS)|
+|OS image|[Apply OS Image](../understand/task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)|
+|Driver package|[Apply Driver Package](../understand/task-sequence-steps.md#BKMK_ApplyDriverPackage)|
+|Package|[Install Package](../understand/task-sequence-steps.md#BKMK_InstallPackage)|
 
 For example, the following **Upgrade OS** step uses the English version:  
 
@@ -99,7 +99,7 @@ For example, the following **Upgrade OS** step uses the English version:
 
 ### <a name="bkmk_deploy"></a> 3. Deploy the task sequence
 
-[Deploy the task sequence](/configmgr/osd/deploy-use/deploy-a-task-sequence). For the pre-cache feature, configure the following settings:  
+[Deploy the task sequence](deploy-a-task-sequence.md). For the pre-cache feature, configure the following settings:  
 
 - On the **General** tab, select **Pre-download content for this task sequence**.  
 
@@ -124,5 +124,5 @@ For example, the following **Upgrade OS** step uses the English version:
 
 ## See also
 
-- [Create a task sequence to upgrade an OS](/configmgr/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)
-- [Scenario to upgrade Windows to the latest version](/configmgr/osd/deploy-use/upgrade-windows-to-the-latest-version)
+- [Create a task sequence to upgrade an OS](create-a-task-sequence-to-upgrade-an-operating-system.md)
+- [Scenario to upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md)

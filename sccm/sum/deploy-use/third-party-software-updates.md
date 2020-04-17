@@ -21,7 +21,7 @@ manager: dougeby
 Beginning with version 1806, the **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point (SUP), and then deploy them to clients.  <!--1357605, 1352101, 1358714-->
 
 > [!Note]  
-> Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Enable third party update support on clients**. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
+> Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Enable third party update support on clients**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
 
 
 ## Prerequisites 
@@ -89,7 +89,7 @@ If you need to manually configure the certificate, such as needing to use a PKI 
 
 
 ## Enable third-party updates on the clients
-Enable third-party updates on the clients in the client settings. The setting sets the Windows Update agent policy for [Allow signed updates for an intranet Microsoft update service location](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location). This client setting also installs the WSUS signing certificate to the Trusted Publisher store on the client. The certificate management logging is seen in `updatesdeployment.log` on the clients.  Run these steps for each custom client setting you want to use for third-party updates. For more information, see the [About client settings](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates) article.
+Enable third-party updates on the clients in the client settings. The setting sets the Windows Update agent policy for [Allow signed updates for an intranet Microsoft update service location](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location). This client setting also installs the WSUS signing certificate to the Trusted Publisher store on the client. The certificate management logging is seen in `updatesdeployment.log` on the clients.  Run these steps for each custom client setting you want to use for third-party updates. For more information, see the [About client settings](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) article.
 
 1. In the Configuration Manager console, go to the **Administration** workspace and select the **Client Settings** node.
 2. Select an existing custom client setting or create a new one. 
@@ -232,7 +232,7 @@ Synchronization of third-party software updates is handled by the SMS_ISVUPDATES
      - You can still use the older catalog cab file version as long as the download URL is https and the updates are signed. The content will fail to publish because the certificates for the binaries aren't in the cab file and already approved. You can work around this issue by finding the certificate in the **Certificates** node, unblocking it, then publish the update again. If you're publishing multiple updates signed with different certificates, you'll need to unblock each certificate that is used.
      - For more information, see status messages 11523 and 11524 in the below status message table.
 -  When the third-party software update synchronization service on the top-level software update point requires a proxy server for internet access, digital signature checks may fail. To mitigate this issue, configure the WinHTTP proxy settings on the site system. For more information, see [Netsh commands for WinHTTP](https://go.microsoft.com/fwlink/p/?linkid=199086).
-- When using a CMG for content storage, the content for third-party updates won't download to clients if [Delivery Optimization](/configmgr/core/clients/deploy/about-client-settings#delivery-optimization) is enabled. <!--6598587--> 
+- When using a CMG for content storage, the content for third-party updates won't download to clients if [Delivery Optimization](../../core/clients/deploy/about-client-settings.md#delivery-optimization) is enabled. <!--6598587--> 
 
 ## Status messages
 

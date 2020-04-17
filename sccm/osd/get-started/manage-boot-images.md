@@ -85,8 +85,8 @@ During site installation, Configuration Manager automatically adds boot images t
 
 For example, use the Configuration Manager console to customize boot images based on Windows PE 10 from the Windows ADK for Windows 10. For a boot image based on Windows PE 5, customize it from a different computer using the version of DISM from the Windows ADK for Windows 8. Then add the custom boot image to the Configuration Manager console. For more information, see the following articles:
 
-- [Customize boot images](/configmgr/osd/get-started/customize-boot-images)
-- [Support for Windows 10 ADK](/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-adk)
+- [Customize boot images](customize-boot-images.md)
+- [Support for Windows 10 ADK](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk)
 - [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)
 
 <a name="bkmk_note1"></a>
@@ -125,7 +125,7 @@ The boot image is now listed in the **Boot Image** node. Before using the boot i
 
 Boot images are distributed to distribution points in the same way as you distribute other content. Before you deploy an OS or create media, distribute the boot image to at least one distribution point.
 
-For more information on how to distribute a boot image, see [Distribute content](/configmgr/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).  
+For more information on how to distribute a boot image, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
 To use PXE to deploy an OS, consider the following points before you distribute the boot image:  
 
@@ -133,7 +133,7 @@ To use PXE to deploy an OS, consider the following points before you distribute 
 - Distribute both an x86 and an x64 PXE-enabled boot image to at least one PXE-enabled distribution point.  
 - Configuration Manager distributes the boot images to the **RemoteInstall** folder on the PXE-enabled distribution point.  
   
-For more information about using PXE to deploy operating systems, see [Use PXE to deploy Windows over the network](/configmgr/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network).  
+For more information about using PXE to deploy operating systems, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
 ## <a name="BKMK_ModifyBootImages"></a> Modify a boot image  
 
@@ -143,7 +143,7 @@ Add or remove device drivers to the image, or edit the properties of the boot im
 
 - When you modify a boot image, the boot image doesn't change any of the associated packages that the boot image references.  
 
-- After you make changes to a boot image, **update** the boot image on the distribution points that already have it. This process makes the most current version of the boot image available to clients. For more information, see [Manage content you've distributed](/configmgr/core/servers/deploy/configure/deploy-and-manage-content#bkmk_manage).  
+- After you make changes to a boot image, **update** the boot image on the distribution points that already have it. This process makes the most current version of the boot image available to clients. For more information, see [Manage content you've distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
 
 ### Modify the properties of a boot image  
 
@@ -176,7 +176,7 @@ On the **Drivers** tab, add the Windows device drivers that WinPE requires to bo
 - To hide drivers that don't have a valid digital signature, select **Hide drivers that are not digitally signed**.  
 
 > [!NOTE]  
-> Import device drivers into the drivers catalog before you add them to a boot image. For information about how to import device drivers, see [Manage drivers](/configmgr/osd/get-started/manage-drivers).  
+> Import device drivers into the drivers catalog before you add them to a boot image. For information about how to import device drivers, see [Manage drivers](manage-drivers.md).  
 
 #### Customization
 
@@ -239,7 +239,7 @@ On the **Data Source** tab, update any of the following settings:
 
 - To specify that the site only distributes changed files when it updates the boot image package on the distribution point, select **Enable binary differential replication** (BDR). This setting minimizes the network traffic between sites. BDR is especially useful when the boot image package is large and the changes are relatively small.  
 
-- If you use the boot image in a PXE-enabled deployment, select **Deploy this boot image from the PXE-enabled distribution point**. For more information, see [Use PXE to deploy Windows over the network](/configmgr/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network).  
+- If you use the boot image in a PXE-enabled deployment, select **Deploy this boot image from the PXE-enabled distribution point**. For more information, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
 #### Data Access
 
@@ -251,9 +251,9 @@ On the **Distribution Settings** tab, select any of the following settings:
 
 - In the **Distribution priority** list, specify the priority level. Configuration Manager uses this priority list when the site distributes multiple packages to the same distribution point.  
 
-- If you want to enable on-demand content distribution to preferred distribution points, select **Enable for on-demand distribution**. When you enable this setting, if a client requests the content for the package and the content isn't available on any distribution points, then the management point distributes the content. For more information, see [On-demand content distribution](/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management#on-demand-content-distribution).  
+- If you want to enable on-demand content distribution to preferred distribution points, select **Enable for on-demand distribution**. When you enable this setting, if a client requests the content for the package and the content isn't available on any distribution points, then the management point distributes the content. For more information, see [On-demand content distribution](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#on-demand-content-distribution).  
 
-- To specify how you want the site to distribute the boot image to distribution points that are enabled for prestaged content, set the **Prestaged distribution point settings**. For more information about prestaged content, see [Prestage content](/configmgr/core/servers/deploy/configure/deploy-and-manage-content#bkmk_prestage).  
+- To specify how you want the site to distribute the boot image to distribution points that are enabled for prestaged content, set the **Prestaged distribution point settings**. For more information about prestaged content, see [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage).  
 
 #### Content Locations
 
@@ -279,7 +279,7 @@ Before you can use a boot image for a PXE-based deployment, configure the boot i
 
 3. On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.  
 
-4. On the **Data Source** tab, select **Deploy this boot image from the PXE-enabled distribution point**. For more information, see [Use PXE to deploy Windows over the network](/configmgr/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network).  
+4. On the **Data Source** tab, select **Deploy this boot image from the PXE-enabled distribution point**. For more information, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
 ## <a name="BKMK_BootImageLanguage"></a> Configure multiple languages
 

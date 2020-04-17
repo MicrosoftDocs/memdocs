@@ -16,7 +16,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Use the steps in this article to set up the administration service on your SMS Provider. Before you start, read the administration service [Prerequisites](/configmgr/develop/adminservice/overview#prerequisites).
+Use the steps in this article to set up the administration service on your SMS Provider. Before you start, read the administration service [Prerequisites](overview.md#prerequisites).
 
 ## <a name="bkmk_https"></a> Enable secure HTTPS communication
 
@@ -37,7 +37,7 @@ In version 1910 and earlier, use one of the following options:
 >
 > Starting in version 2002, the administration service automatically uses the site's self-signed certificate. The Enhanced HTTP site setting to **Use Configuration Manager-generated certificates for HTTP site systems** only controls whether site systems use it or not. Now the administration service ignores this site setting, as it always uses the site's certificate even if no other site system is using Enhanced HTTP.
 
-If you enable [Enhanced HTTP](/configmgr/core/plan-design/hierarchy/enhanced-http), the site generates certificates for site system roles like the SMS Provider. The site server issues and signs these certificates with its self-signed **SMS Issuing** root certificate. This option doesn't require a public key infrastructure (PKI). Configuration Manager creates and manages the certificates, and binds them to the IIS services as needed.
+If you enable [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md), the site generates certificates for site system roles like the SMS Provider. The site server issues and signs these certificates with its self-signed **SMS Issuing** root certificate. This option doesn't require a public key infrastructure (PKI). Configuration Manager creates and manages the certificates, and binds them to the IIS services as needed.
 
 When the site creates a certificate for the SMS Provider, clients won't trust it by default. If you try to access the administration service from a web browser on a client, you may see a security warning. Export the SMS Issuing root certificate from the Configuration Manager site, and install it on clients in the Trusted Root Certification Authorities store.
 
@@ -82,7 +82,7 @@ There are two primary methods of using a server authentication certificate:
 
 - From your organization's public key infrastructure (PKI)
 
-  - If your environment already has a PKI, you can use it to issue a server authentication certificate for the SMS Provider. This certificate is similar to the certificate you would use for a management point or distribution point. For more information, see [PKI certificate requirements](/configmgr/core/plan-design/network/pki-certificate-requirements#BKMK_PKIcertificates_for_servers).
+  - If your environment already has a PKI, you can use it to issue a server authentication certificate for the SMS Provider. This certificate is similar to the certificate you would use for a management point or distribution point. For more information, see [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers).
 
   - Most enterprise PKI implementations add the trusted root CAs to Windows clients. For example, using Active Directory Certificate Services with group policy. If you issue the certificate from a CA that your clients don't automatically trust, add the CA trusted root certificate to clients. You can scope this trust to only the clients that need to access the administration service.
 
@@ -118,7 +118,7 @@ For example:
 
 You can use the administration service on-premises only, or you can enable it for access through the cloud management gateway (CMG). Some scenarios require access to the administration service from the internet, such as tenant attach or app approvals via email.
 
-Before you can configure the SMS Provider to allow CMG traffic, first set up a CMG. For more information, see [Plan for the cloud management gateway](/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway).
+Before you can configure the SMS Provider to allow CMG traffic, first set up a CMG. For more information, see [Plan for the cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).
 
 Then use the following process to enable the administration service through the CMG:
 
@@ -140,7 +140,7 @@ To access the administration service from the internet, replace the SMS Provider
 > [!TIP]
 > To get the value for this endpoint, use the following steps:
 >
-> - Create a CMG. For more information, see [Set up a CMG](/configmgr/core/clients/manage/cmg/setup-cloud-management-gateway).
+> - Create a CMG. For more information, see [Set up a CMG](../../core/clients/manage/cmg/setup-cloud-management-gateway.md).
 > - On an active client, open a Windows PowerShell command prompt as an administrator.
 > - Run the following command:
 >
@@ -193,4 +193,4 @@ Completing request with response code [200] reason [OK]
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [How to use the administration service](/configmgr/develop/adminservice/usage)
+> [How to use the administration service](usage.md)

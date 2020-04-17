@@ -17,7 +17,7 @@ The following example shows how to list the maintenance windows for a specific c
 
 ### To list the maintenance windows and properties for a collection  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../../understand/sms-provider-fundamentals.md).  
 
 2.  Get the existing collection settings instance by using the collection ID provided.  
 
@@ -166,10 +166,10 @@ public void ListMaintenanceWindowsAndPropertiesForASpecificCollection(WqlConnect
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [About maintenance windows](/sccm/develop/core/servers/configure/about-maintenance-windows)
- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
- [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)
- [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
+ [About maintenance windows](about-maintenance-windows.md)
+ [Software distribution overview](software-distribution-overview.md)
+ [About deployments](about-software-distribution-deployments.md)
+ [Objects overview](../../understand/configuration-manager-objects-overview.md)
  [How to Connect to a Configuration Manager Provider using Managed Code](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to a Configuration Manager Provider Using WMI](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [SMS_CollectionSettings Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionsettings-server-wmi-class.md)   

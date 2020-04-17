@@ -148,4 +148,4 @@ The **Maintenance Tasks** tab gives you information such as:
 
 ## Next steps
 
-[Reference for maintenance tasks](/sccm/core/servers/manage/reference-for-maintenance-tasks)
+[Reference for maintenance tasks](reference-for-maintenance-tasks.md)

@@ -83,21 +83,21 @@ Configuration items for user data and profiles include settings that control how
 
 Deploy these configuration items to user collections. Monitor their compliance from the **Monitoring** node of the Configuration Manager console. Unlike other configuration items, don't add them to configuration baselines before you deploy them. Deploy them directly by clicking **Deploy** in the ribbon.  
 
-For more information, see [Create user data and profiles configuration items](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items).  
+For more information, see [Create user data and profiles configuration items](../deploy-use/create-user-data-and-profiles-configuration-items.md).  
 
 
 
 ## Remote connection profiles  
 Remote connection profiles provide a set of tools and resources to help you create, deploy, and monitor remote connection settings. By deploying these settings to devices, you minimize the effort that end users require to connect their computers to the corporate network.  
 
-For more information, see [Create remote connection profiles](/sccm/compliance/deploy-use/create-remote-connection-profiles).  
+For more information, see [Create remote connection profiles](../deploy-use/create-remote-connection-profiles.md).  
 
 
 
 ## Windows edition upgrade
 The edition upgrade policy automatically upgrades devices that run certain versions of Windows 10 to a newer edition. This policy supplies a new product key or license file that the device consumes to upgrade.
 
-For more information, see [Upgrade Windows devices with the edition upgrade policy](/sccm/compliance/deploy-use/upgrade-windows-version)
+For more information, see [Upgrade Windows devices with the edition upgrade policy](../deploy-use/upgrade-windows-version.md)
 
 
 
@@ -105,5 +105,5 @@ For more information, see [Upgrade Windows devices with the edition upgrade poli
 <!-- 1357310 -->
 Starting in version 1802, for customers who use the [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) web browser on Windows 10 clients, create a compliance settings policy to configure several Microsoft Edge settings. 
 
-For more information, see [Microsoft Edge browser profiles](/sccm/compliance/deploy-use/browser-profiles).
+For more information, see [Microsoft Edge browser profiles](../deploy-use/browser-profiles.md).
 

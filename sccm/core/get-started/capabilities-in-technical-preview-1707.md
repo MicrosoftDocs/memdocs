@@ -28,7 +28,7 @@ This article introduces the features that are available in the Technical Preview
 -->
 
 **Known Issues in this Technical Preview:**
-- **Update to preview version 1707 fails when you have a site server in passive mode**. When you run the preview version 1706 and have a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), you must uninstall the passive mode site server before you can successfully update your preview site to version 1707. You can reinstall the passive mode site server after your site runs version 1707.
+- **Update to preview version 1707 fails when you have a site server in passive mode**. When you run the preview version 1706 and have a [primary site server in passive mode](capabilities-in-technical-preview-1706.md#site-server-role-high-availability), you must uninstall the passive mode site server before you can successfully update your preview site to version 1707. You can reinstall the passive mode site server after your site runs version 1707.
 
   To uninstall the passive mode site server:
   1. In the console go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**, and then select the passive mode site server.
@@ -92,13 +92,13 @@ To read more about Windows Defender Application Guard, see [this blog post](http
 
 <!-- 1236459 --->
 
-In the last Technical Preview, we introduced a new capability that lets you [Create and run PowerShell scripts from the Configuration Manager console](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console).
+In the last Technical Preview, we introduced a new capability that lets you [Create and run PowerShell scripts from the Configuration Manager console](capabilities-in-technical-preview-1706.md#create-and-run-powershell-scripts-from-the-configuration-manager-console).
 In this Technical Preview, we've expanded on this capability. Configuration Manager now reads the PowerShell script, and displays any parameters in the Create Script Wizard. You can supply a value for the parameter in the wizard that will be used when the script is run. Alternatively, you can leave the parameter blank. If you do this, you will need to supply a value for the parameter when you run the script.
 In this technical preview, you must supply any parameters that a script requires. In a future release, we plan to make supplying script parameters optional.
 
 ### Try it out!
 
-1. Follow the instructions to [Create and run PowerShell scripts from the Configuration Manager console](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console).
+1. Follow the instructions to [Create and run PowerShell scripts from the Configuration Manager console](capabilities-in-technical-preview-1706.md#create-and-run-powershell-scripts-from-the-configuration-manager-console).
 2. On the new **Script Parameters** page of the **Create Script Wizard**, choose a parameter, and then click **Edit**.
 3. Supply a parameter value for the selected parameter, and then click **OK**.
 4. Complete the wizard.

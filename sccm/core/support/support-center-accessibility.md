@@ -70,4 +70,4 @@ Support Center stores annotations in memory. You can only use them within a log 
 
 ## See also
 
-[Accessibility features in Configuration Manager](/sccm/core/understand/accessibility-features)
+[Accessibility features in Configuration Manager](../understand/accessibility-features.md)

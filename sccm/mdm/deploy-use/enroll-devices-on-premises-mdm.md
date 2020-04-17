@@ -20,10 +20,10 @@ To manage devices with Configuration Manager on-premises mobile device managemen
 
 - **User enrollment**: Users start the enrollment process on their device. For user enrollment to succeed, install the trusted root certificate on the device, and provision the user for enrollment in client settings. To enroll a device, the user only needs to enter their credentials.
 
-    For more information, see [How users enroll devices](/configmgr/mdm/deploy-use/user-enroll-devices-on-premises-mdm).
+    For more information, see [How users enroll devices](user-enroll-devices-on-premises-mdm.md).
 
 - **Bulk enrollment**: The user of the device doesn't start enrollment. You create a bulk enrollment package in Configuration Manager. When you open it on the device, the package provides the information required to enroll the device.
 
-    For more information, see [How to bulk-enroll devices](/configmgr/mdm/deploy-use/bulk-enroll-devices-on-premises-mdm).
+    For more information, see [How to bulk-enroll devices](bulk-enroll-devices-on-premises-mdm.md).
 
-For more information on the OS versions that Configuration Manager supports for device enrollment in on-premises MDM, see [Supported configurations](/configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#bkmk_OnpremOS).
+For more information on the OS versions that Configuration Manager supports for device enrollment in on-premises MDM, see [Supported configurations](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_OnpremOS).

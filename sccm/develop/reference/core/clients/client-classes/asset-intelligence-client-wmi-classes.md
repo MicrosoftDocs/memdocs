@@ -40,4 +40,4 @@ In Configuration Manager, the Asset Intelligence client Windows Management Instr
 -   `Win32_USBDevice` class. Tracks devices connected to USB ports.  
 
 ## See Also  
-[Initiate Asset Intelligence synchronization](/sccm/develop/core/clients/asset-intelligence/how-to-initiate-a-synchronization)
+[Initiate Asset Intelligence synchronization](../../../../core/clients/asset-intelligence/how-to-initiate-a-synchronization.md)

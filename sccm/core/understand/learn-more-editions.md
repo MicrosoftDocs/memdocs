@@ -42,7 +42,7 @@ The current branch requires an active Software Assurance agreement or equivalent
 
 This branch is supported for use in production environments that want to receive regular quality and feature updates from Microsoft. It provides access to use all features and improvements.
 
-Beginning with the 1710 release, each update version remains in support for 18 months from its general availability release date. For more information, see [Support for Configuration Manager current branch versions](/sccm/core/servers/manage/current-branch-versions-supported).
+Beginning with the 1710 release, each update version remains in support for 18 months from its general availability release date. For more information, see [Support for Configuration Manager current branch versions](../servers/manage/current-branch-versions-supported.md).
 
 ### Long-term servicing branch (LTSB)
 
@@ -60,7 +60,7 @@ You can upgrade the evaluation installation to a full installation of the curren
 
 ### Technical preview branch
 
-The [technical preview branch](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) is also available. This branch is a limited build of Configuration Manager that lets you try out new features. You install the technical preview using different media than the licensed versions. For more information, see [Technical Preview](/sccm/core/get-started/technical-preview).
+The [technical preview branch](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) is also available. This branch is a limited build of Configuration Manager that lets you try out new features. You install the technical preview using different media than the licensed versions. For more information, see [Technical Preview](../get-started/technical-preview.md).
 
 
 ## Software Assurance agreements

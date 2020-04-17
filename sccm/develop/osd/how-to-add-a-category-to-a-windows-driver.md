@@ -22,7 +22,7 @@ In Configuration Manager, you add a category to a Windows driver by adding the u
 
 ### To add a category to a Windows driver  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Get the [SMS_Driver](../../develop/reference/osd/sms_driver-server-wmi-class.md) object for the driver you want to add a category to.  
 

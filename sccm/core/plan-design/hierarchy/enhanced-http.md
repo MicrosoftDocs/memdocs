@@ -21,7 +21,7 @@ manager: dougeby
 <!--1356889,1358460-->
 
 > [!Tip]  
-> This feature was first introduced in version 1806 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1810, this feature is no longer a pre-release feature.  
+> This feature was first introduced in version 1806 as a [pre-release feature](../../servers/manage/pre-release-features.md). Beginning with version 1810, this feature is no longer a pre-release feature.  
 
 Microsoft recommends using HTTPS communication for all Configuration Manager communication paths, but it's challenging for some customers due to the overhead of managing PKI certificates.
 
@@ -53,14 +53,14 @@ The following scenarios benefit from these improvements:
 [Azure Active Directory (Azure AD)-joined devices](/azure/active-directory/devices/concept-azure-ad-join) can communicate with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.
 
 > [!Note]  
-> This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for Azure AD-joined clients communicating through a cloud management gateway. For more information, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
+> This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for Azure AD-joined clients communicating through a cloud management gateway. For more information, see [Enable management point for HTTPS](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
 
 ### <a name="bkmk_scenario2"></a> Scenario 2: Client to distribution point
 
 <!--1358228-->
 A workgroup or Azure AD-joined client can authenticate and download content over a secure channel from a distribution point configured for HTTP. These types of devices can also authenticate and download content from a distribution point configured for HTTPS without requiring a PKI certificate on the client. It's challenging to add a client authentication certificate to a workgroup or Azure AD-joined client.
 
-This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center. For more information, see [Network access account](/sccm/core/plan-design/hierarchy/accounts#network-access-account).<!--1358278-->
+This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center. For more information, see [Network access account](accounts.md#network-access-account).<!--1358278-->
 
 ### <a name="bkmk_scenario3"></a> Scenario 3: Azure AD device identity
 
@@ -72,12 +72,12 @@ An Azure AD-joined or [hybrid Azure AD device](/azure/active-directory/devices/c
 
 The following Configuration Manager features support or require enhanced HTTP:
 
-- [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
-- [OS deployment without a network access account](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#enhanced-http)
-- [Enable co-management for new internet-based Windows 10 devices](/sccm/comanage/tutorial-co-manage-new-devices)
-- [App approvals via email](/sccm/apps/deploy-use/app-approval#bkmk_email-approve)
-- [Administration service](/configmgr/develop/adminservice/overview)
-- [View recently connected consoles](/sccm/core/servers/manage/admin-console#bkmk_viewconnected)
+- [Cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md)
+- [OS deployment without a network access account](../../../osd/plan-design/planning-considerations-for-automating-tasks.md#enhanced-http)
+- [Enable co-management for new internet-based Windows 10 devices](../../../comanage/tutorial-co-manage-new-devices.md)
+- [App approvals via email](../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
+- [Administration service](../../../develop/adminservice/overview.md)
+- [View recently connected consoles](../../servers/manage/admin-console.md#bkmk_viewconnected)
 
 > [!Note]  
 > The software update point and related scenarios have always supported secure HTTP traffic with clients as well as the cloud management gateway. It uses a mechanism with the management point that's different from certificate- or token-based authentication.<!-- SCCMDocs issue #1148 -->
@@ -115,15 +115,15 @@ Starting in version 1902, you can also enable enhanced HTTP for the central admi
 
 You can see these certificates in the Configuration Manager console. Go to the **Administration** workspace, expand **Security**, and select the **Certificates** node. Look for the **SMS Issuing** root certificate, as well as the site server role certificates issued by the SMS Issuing root.
 
-For more information on how the client communicates with the management point and distribution point with this configuration, see [Communications from clients to site systems and services](/sccm/core/plan-design/hierarchy/communications-between-endpoints#Planning_Client_to_Site_System).
+For more information on how the client communicates with the management point and distribution point with this configuration, see [Communications from clients to site systems and services](communications-between-endpoints.md#Planning_Client_to_Site_System).
 
 
 ## See also
 
-- [Plan for security](/sccm/core/plan-design/security/plan-for-security)  
+- [Plan for security](../security/plan-for-security.md)  
 
-- [Security and privacy for Configuration Manager clients](/sccm/core/clients/deploy/plan/security-and-privacy-for-clients)  
+- [Security and privacy for Configuration Manager clients](../../clients/deploy/plan/security-and-privacy-for-clients.md)  
 
-- [Configure security](/sccm/core/plan-design/security/configure-security)  
+- [Configure security](../security/configure-security.md)  
 
-- [Communication between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints)  
+- [Communication between endpoints](communications-between-endpoints.md)  

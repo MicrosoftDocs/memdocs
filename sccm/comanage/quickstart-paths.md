@@ -45,7 +45,7 @@ Here's what you need to set it up:
 - Assign Intune user licenses
 - Enable co-management in Configuration Manager
 
-For a tutorial on this path, see [Tutorial: Enable co-management for existing Configuration Manager clients](/sccm/comanage/tutorial-co-manage-clients).
+For a tutorial on this path, see [Tutorial: Enable co-management for existing Configuration Manager clients](tutorial-co-manage-clients.md).
 
 
 
@@ -53,10 +53,10 @@ For a tutorial on this path, see [Tutorial: Enable co-management for existing Co
 
 Here's what you need to set it up:
 
-1. [Setup enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)  
-2. [Create the cloud services in Azure](/sccm/core/servers/deploy/configure/azure-services-wizard)  
-3. [Configure the management point and clients to use the cloud management gateway](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)  
-4. [Use Intune to deploy the Configuration Manager client](/sccm/comanage/how-to-prepare-win10)  
+1. [Setup enhanced HTTP](../core/plan-design/hierarchy/enhanced-http.md)  
+2. [Create the cloud services in Azure](../core/servers/deploy/configure/azure-services-wizard.md)  
+3. [Configure the management point and clients to use the cloud management gateway](../core/clients/manage/cmg/setup-cloud-management-gateway.md)  
+4. [Use Intune to deploy the Configuration Manager client](how-to-prepare-Win10.md)  
 
 > [!Note]  
 > A tutorial for this path is coming soon.

@@ -17,7 +17,7 @@ You disable the PXE Service Point role, in Configuration Manager, by getting an 
 
 ### To disable a PXE service point role  
 
-1.  Set up a connection to the SMS Provider. For more information see, [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information see, [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Get an instance of a specific distribution point.  
 
@@ -74,6 +74,6 @@ public void DisablePXE(WqlConnectionManager connection,                         
 
 ## See Also  
  [SMS_SCI_SysResUse Server WMI Class](../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md)   
- [About OS deployment site role configuration](/sccm/develop/osd/about-operating-system-deployment-site-role-configuration)
+ [About OS deployment site role configuration](about-operating-system-deployment-site-role-configuration.md)
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)

@@ -67,20 +67,20 @@ Make the following changes to your Configuration Manager site to support this UU
 
 #### Diagnostics and usage data level
 
-Consider increasing the Configuration Manager diagnostic and data usage level during this preview. The **Full** level helps Microsoft better analyze and troubleshoot issues with this new feature. For more information, see [Levels of diagnostic usage data collection for version 1906](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906).
+Consider increasing the Configuration Manager diagnostic and data usage level during this preview. The **Full** level helps Microsoft better analyze and troubleshoot issues with this new feature. For more information, see [Levels of diagnostic usage data collection for version 1906](../../core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md).
 
 #### Install the latest update
 
 1. Update the site with one of the following updates:
 
     - Version 1902 with the [update rollup](https://support.microsoft.com/help/4500571)
-    - [Version 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906)
+    - [Version 1906](../../core/servers/manage/checklist-for-installing-update-1906.md)
 
-    For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).
+    For more information, see [Install in-console updates](../../core/servers/manage/install-in-console-updates.md).
 
 2. Update clients.  
 
-    - To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
+    - To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](../../core/clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade).  
 
     - To prevent *unnecessarily downloading around 6 GB* of unused content to the client, update all clients to which you target UUP updates.
 
@@ -90,7 +90,7 @@ For UUP updates to install successfully, install both of the following updates:
 
 1. A specific minimum cumulative monthly compliance level.
 
-2. A specific non-cumulative, non-security update from the Microsoft Update Catalog. To import the update into Configuration Manager for deployment, see [Import updates from the Microsoft Update Catalog](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog).
+2. A specific non-cumulative, non-security update from the Microsoft Update Catalog. To import the update into Configuration Manager for deployment, see [Import updates from the Microsoft Update Catalog](../get-started/synchronize-software-updates.md#import-updates-from-the-microsoft-update-catalog).
 
 #### Supported versions of Windows 10 and required updates
 
@@ -104,7 +104,7 @@ For UUP updates to install successfully, install both of the following updates:
 > [!IMPORTANT]
 > - If you apply the November 12, 2019 updates to the client before applying the November 7, 2019 additional catalog update, the Windows Update Agent changes needed to support UUP will be overwritten. To remediate clients in that scenario, apply the additional catalog update after the November 12, 2019 updates are installed.
 > - If you apply a feature update to the client, you will need to reinstall the additional catalog update after the upgrade is complete.
-> - To make it easier to test feature updates, import the updates into Configuration Manager. For more information, see [Import updates from the Microsoft Update Catalog](/configmgr/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog). After the feature update is complete, the additional catalog update shows as **required**, which allows for automatic deployment to the up-level OS version.
+> - To make it easier to test feature updates, import the updates into Configuration Manager. For more information, see [Import updates from the Microsoft Update Catalog](../get-started/synchronize-software-updates.md#import-updates-from-the-microsoft-update-catalog). After the feature update is complete, the additional catalog update shows as **required**, which allows for automatic deployment to the up-level OS version.
 
 ### 4. Allow clients to download delta content when available
 
@@ -112,7 +112,7 @@ For UUP updates to download correctly, enable the client setting to **Allow clie
 
 When you enable this setting, it doesn't affect server content downloads from the internet. It only applies to client downloads. Before you deploy UUP updates to clients, apply this setting to clients that meet the supported versions for UUP. The prerequisite client updates fix compatibility issues for UUP updates in WSUS and Configuration Manager.
 
-For more information on this client setting, see [About client settings - Software updates](/sccm/core/clients/deploy/about-client-settings#allow-clients-to-download-delta-content-when-available)
+For more information on this client setting, see [About client settings - Software updates](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)
 
 ### 5. Review your software update infrastructure
 
@@ -126,7 +126,7 @@ Review your compliance reports and revise as necessary. For example, if you meas
 
 Once you're ready to start syncing UUP updates, and Microsoft has approved your WSUS ID, enable the new products:
 
-1. [Synchronize software updates](/sccm/sum/get-started/synchronize-software-updates) to populate the new products.  
+1. [Synchronize software updates](../get-started/synchronize-software-updates.md) to populate the new products.  
 
 2. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.
 
@@ -198,12 +198,12 @@ When you look at the total content that's downloaded and distributed over a 12-m
 For the preview, test your typical real-world scenarios. UUP supports all content channels, including:
 
 - Windows Delivery Optimization (DO)
-  - When using DO, ensure it's configured properly. For more information, see [Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery).
+  - When using DO, ensure it's configured properly. For more information, see [Optimize Windows 10 update delivery](optimize-windows-10-update-delivery.md).
 - Configuration Manager peer cache
 - Windows BranchCache
 - Use the **No deployment package** option, and clients download straight from Microsoft Update. Use this option with delivery optimization.
 - Third-party alternate content providers
 
-For more information about content channels, see [Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery).
+For more information about content channels, see [Optimize Windows 10 update delivery](optimize-windows-10-update-delivery.md).
 
 <!-- TODO: Addlink to WSUS Perf documentation-->

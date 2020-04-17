@@ -18,13 +18,13 @@ Desktop Analytics is tightly integrated with Configuration Manager. First, make 
 
 ## <a name="bkmk_hotfix"></a> Update the site
 
-First, make sure that your Configuration Manager site is running at least version 1902. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).
+First, make sure that your Configuration Manager site is running at least version 1902. For more information, see [Install in-console updates](../core/servers/manage/install-in-console-updates.md).
 
 You also need to install the version 1902 update rollup (4500571) to support integration with Desktop Analytics. For more information on this update, see [Update rollup for Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4500571).
 
-1. Update the site with the update rollup for version 1902. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).
+1. Update the site with the update rollup for version 1902. For more information, see [Install in-console updates](../core/servers/manage/install-in-console-updates.md).
 
-2. Update clients. To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).
+2. Update clients. To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](../core/clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade).
 
 ## <a name="bkmk_connect"></a> Connect to the service
 
@@ -55,7 +55,7 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 5. In most cases, you can create an app for the Desktop Analytics connection with this wizard. Select **Create**.<!-- 3572123 -->
 
     > [!TIP]
-    > If you can't create the app from this wizard, you can manually create the app in Azure AD, and then import into Configuration Manager. For more information, see [Create and import app for Configuration Manager](/sccm/desktop-analytics/troubleshooting#create-and-import-app-for-configuration-manager).
+    > If you can't create the app from this wizard, you can manually create the app in Azure AD, and then import into Configuration Manager. For more information, see [Create and import app for Configuration Manager](troubleshooting.md#create-and-import-app-for-configuration-manager).
 
 6. Configure the following settings in the **Create Server Application** window:
 
@@ -76,9 +76,9 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
 7. On the **Diagnostic Data** page, configure the following settings:
 
-    - **Commercial ID**: this value should automatically populate with your organization's ID. If it doesn't, make sure your proxy server is configured to allow all required [endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints) before continuing. Alternatively, retrieve your Commercial ID manually from the [Desktop Analytics portal](/sccm/desktop-analytics/monitor-connection-health#bkmk_ViewCommercialID).
+    - **Commercial ID**: this value should automatically populate with your organization's ID. If it doesn't, make sure your proxy server is configured to allow all required [endpoints](enable-data-sharing.md#endpoints) before continuing. Alternatively, retrieve your Commercial ID manually from the [Desktop Analytics portal](monitor-connection-health.md#bkmk_ViewCommercialID).
 
-    - **Windows 10 diagnostic data level**: select at least **Basic**. See [Diagnostic data levels](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels)
+    - **Windows 10 diagnostic data level**: select at least **Basic**. See [Diagnostic data levels](enable-data-sharing.md#diagnostic-data-levels)
   
     - **Allow Device Name in diagnostic data**: select **Enable**
 
@@ -124,15 +124,15 @@ Configuration Manager creates a settings policy to configure devices in the Targ
 
 Monitor the configuration of your devices for Desktop Analytics. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Desktop Analytics Servicing** node, and select the **Connection Health** dashboard.
 
-For more information, see [Monitor connection health](/sccm/desktop-analytics/monitor-connection-health).
+For more information, see [Monitor connection health](monitor-connection-health.md).
 
 Configuration Manager synchronizes your collections within 60 minutes of creating the connection. In the Desktop Analytics portal, go to**Global Pilot**, and see your Configuration Manager device collections.
 
 > [!NOTE]
-> The Configuration Manager connection to Desktop Analytics relies upon the service connection point. Any changes to this site system role may impact synchronization with the cloud service. For more information, see [About the service connection point](/configmgr/core/servers/deploy/configure/about-the-service-connection-point#bkmk_move).
+> The Configuration Manager connection to Desktop Analytics relies upon the service connection point. Any changes to this site system role may impact synchronization with the cloud service. For more information, see [About the service connection point](../core/servers/deploy/configure/about-the-service-connection-point.md#bkmk_move).
 
 ## Next steps
 
 Advance to the next article to enroll devices to Desktop Analytics.
 > [!div class="nextstepaction"]
-> [Enroll devices](/sccm/desktop-analytics/enroll-devices)
+> [Enroll devices](enroll-devices.md)

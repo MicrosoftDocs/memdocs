@@ -26,7 +26,7 @@ Starting in Configuration Manager version 2002, you can upload your Configuratio
    - Onboarding creates a third-party app and a first party service principal in your Azure AD tenant.
 - An Azure public cloud environment.
 - The user accounts triggering device actions have the following prerequisites:
-   - Has been discovered with both [Azure Active Directory user discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc) and [Active Directory user discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
+   - Has been discovered with both [Azure Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) and [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
       - This means the user account needs to be a synced user object in Azure AD.
    - The **Initiate Configuration Manager action** permission under **Remote tasks** in the Microsoft Endpoint Manager admin center.
 
@@ -70,7 +70,7 @@ If you don't have co-management enabled, use the **Configure co-management** wiz
 1. Click **Sign In**. Use your *Global Administrator* account to sign in.
 1. Ensure the **Upload to Microsoft Endpoint Manager admin center** option is selected on the **Tenant onboarding** page.
    - Make sure the option **Enable automatic client enrollment for co-management** isn't checked if you don't want to enable co-management now. If you do want to enable co-management, select the option.
-   - If you enable co-management along with device upload, you'll be given additional pages in the wizard to complete. For more information, see [Enable co-management](/sccm/comanage/how-to-enable).
+   - If you enable co-management along with device upload, you'll be given additional pages in the wizard to complete. For more information, see [Enable co-management](../comanage/how-to-enable.md).
 
    [![Co-management Configuration Wizard](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
 1. Click **Next** and then **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.

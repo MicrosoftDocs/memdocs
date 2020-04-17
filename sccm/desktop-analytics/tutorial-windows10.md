@@ -39,7 +39,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 - An active Azure subscription, with [**Global Admin**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) permissions  
 
-    For more information, see [Desktop Analytics prerequisites](/sccm/desktop-analytics/overview#prerequisites).
+    For more information, see [Desktop Analytics prerequisites](overview.md#prerequisites).
 
 - Configuration Manager, version 1902 with update rollup (4500571) or later, with **Full administrator** role  
 
@@ -55,7 +55,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 - Business approval to configure Windows diagnostic data level to **Enhanced (Limited)** on the pilot devices  
 
-    For more information, see [Desktop Analytics privacy](/sccm/desktop-analytics/privacy).
+    For more information, see [Desktop Analytics privacy](privacy.md).
 
 - Network connectivity from the device to the following internet endpoints:
 
@@ -76,10 +76,10 @@ Before you start this tutorial, make sure you have the following prerequisites:
     - `https://graph.windows.net` (on Configuration Manager server role only)
     - `https://*.manage.microsoft.com` (on Configuration Manager server role only)
 
-    For more information, see [How to enable data sharing for Desktop Analytics](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
+    For more information, see [How to enable data sharing for Desktop Analytics](enable-data-sharing.md#endpoints).  
 
 > [!Important]  
-> These prerequisites are for the purposes of this tutorial. For more information about the general prerequisites for Desktop Analytics with Configuration Manager, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).  
+> These prerequisites are for the purposes of this tutorial. For more information about the general prerequisites for Desktop Analytics with Configuration Manager, see [Prerequisites](overview.md#prerequisites).  
 
 
 
@@ -108,7 +108,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 5. On the page to **Set up your workspace**:  
 
     > [!Note]  
-    > To complete this step, the user needs **Workspace Owner** permissions and additional access to the Azure subscription and Resource Group. For more information, see [prerequisites](/sccm/desktop-analytics/overview#prerequisites).  
+    > To complete this step, the user needs **Workspace Owner** permissions and additional access to the Azure subscription and Resource Group. For more information, see [prerequisites](overview.md#prerequisites).  
 
     - Select your Azure subscription.  
 
@@ -130,7 +130,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 
     > [!Note]  
-    > This consent is to assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace. This application role is required by Desktop Analytics. For more information, see [MALogAnalyticsReader application role](/sccm/desktop-analytics/troubleshooting#bkmk_MALogAnalyticsReader).  
+    > This consent is to assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace. This application role is required by Desktop Analytics. For more information, see [MALogAnalyticsReader application role](troubleshooting.md#bkmk_MALogAnalyticsReader).  
 
 8. Back on the page to **Set up your workspace**, select **Next**.  
 
@@ -146,9 +146,9 @@ Use this procedure to update Configuration Manager, connect to Desktop Analytics
 
 Install the Configuration Manager version 1902 update rollup (4500571) to support integration with Desktop Analytics. For more information on this update, see [Update rollup for Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4500571).
 
-1. Update the site with the update rollup for version 1902. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).  
+1. Update the site with the update rollup for version 1902. For more information, see [Install in-console updates](../core/servers/manage/install-in-console-updates.md).  
 
-2. Update clients. To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
+2. Update clients. To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](../core/clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade).  
 
 
 ### Connect to the service
@@ -213,7 +213,7 @@ Install the Configuration Manager version 1902 update rollup (4500571) to suppor
 Configuration Manager creates a settings policy to configure devices in the Target Collection. This policy includes the diagnostic data settings to enable devices to send data to Microsoft. By default, clients update policy every hour. After receiving the new settings, it can be several hours more before the data is available in Desktop Analytics.
 
 > [!Note]  
-> For more information on these settings, see [Windows settings](/sccm/desktop-analytics/enroll-devices#windows-settings).  
+> For more information on these settings, see [Windows settings](enroll-devices.md#windows-settings).  
 
 Monitor the configuration of your devices for Desktop Analytics. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Desktop Analytics Servicing** node, and select the **Connection Health** dashboard.  
 
@@ -248,7 +248,7 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
     - **Completion date**: Choose the date by which Windows should be fully deployed to all the targeted devices.  
 
-5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. To expedite processing, request an on-demand data refresh. For more information, see [Desktop Analytics FAQ](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
+5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. To expedite processing, request an on-demand data refresh. For more information, see [Desktop Analytics FAQ](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
 
 6. Open the deployment plan by selecting its name.  
 
@@ -258,7 +258,7 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
     2. Select each app, and then select **Edit**. You can select more than one app to edit at the same time.  
 
-    3. Choose an importance level from the **Importance** list. If you want Desktop Analytics to validate the app during the pilot, select **Critical** or **Important**. It doesn't validate apps marked as **Not Important**. Assess its [compatibility](/sccm/desktop-analytics/compat-assessment) and other plan insights when assigning importance levels.  
+    3. Choose an importance level from the **Importance** list. If you want Desktop Analytics to validate the app during the pilot, select **Critical** or **Important**. It doesn't validate apps marked as **Not Important**. Assess its [compatibility](compat-assessment.md) and other plan insights when assigning importance levels.  
 
         When assigning importance levels, you can also choose the Upgrade decision.  
 
@@ -357,7 +357,7 @@ Next, distribute the OS upgrade package to distribution points.
 4. On the **General** page of the Deploy Software Wizard, select **Browse** next to the **Software** field. Select your Windows 10 in-place upgrade task sequence, and select **Next**.  
 
     > [!Note]  
-    > With the Desktop Analytics integration, Configuration Manager automatically creates pilot and production collections for the deployment plan. Before you can use them, it can take time for these collections to synchronize. For more information, see [Troubleshoot - Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).<!-- 4984639 -->
+    > With the Desktop Analytics integration, Configuration Manager automatically creates pilot and production collections for the deployment plan. Before you can use them, it can take time for these collections to synchronize. For more information, see [Troubleshoot - Data latency](troubleshooting.md#data-latency).<!-- 4984639 -->
     >
     > This collection is reserved for Desktop Analytics deployment plan devices. Manual changes to this collection aren't supported.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
@@ -390,4 +390,4 @@ Next, distribute the OS upgrade package to distribution points.
 
 Advance to the next article to learn more about Desktop Analytics deployment plans.
 > [!div class="nextstepaction"]  
-> [Deployment plans](/sccm/desktop-analytics/about-deployment-plans)
+> [Deployment plans](about-deployment-plans.md)

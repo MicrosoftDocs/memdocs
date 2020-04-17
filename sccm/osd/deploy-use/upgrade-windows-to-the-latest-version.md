@@ -29,7 +29,7 @@ This article provides the steps in Configuration Manager to upgrade the OS on a 
 - Is faster and more resilient than traditional OS deployments
 
 > [!Note]  
-> The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet. For more information, see [Deploy Windows 10 in-place upgrade via CMG](/sccm/osd/deploy-use/deploy-a-task-sequence#deploy-windows-10-in-place-upgrade-via-cmg). <!-- 1357149 -->
+> The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet. For more information, see [Deploy Windows 10 in-place upgrade via CMG](deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg). <!-- 1357149 -->
 
 
 ## Supported versions
@@ -82,39 +82,39 @@ The following tasks aren't compatible with the in-place upgrade. They require yo
 
   - Changing disk partitions
   - Changing the system architecture from x86 to x64
-  - Implementing UEFI. (For more information on a possible option, see [Convert from BIOS to UEFI during an in-place upgrade](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade).)
+  - Implementing UEFI. (For more information on a possible option, see [Convert from BIOS to UEFI during an in-place upgrade](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).)
   - Modifying the base OS language  
 
 - You have custom requirements including using a custom base image, using third-party disk encryption, or require WinPE offline operations.  
 
 ### Infrastructure requirements  
 
-The only prerequisite for the upgrade scenario is to have a distribution point available. Distribute the OS upgrade package and any other packages that you include in the task sequence. For more information, see [Install or modify a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points).
+The only prerequisite for the upgrade scenario is to have a distribution point available. Distribute the OS upgrade package and any other packages that you include in the task sequence. For more information, see [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md).
 
 
 ## <a name="BKMK_Configure"></a> Configure  
 
 ### Prepare the OS upgrade package  
 
-The Windows 10 upgrade package contains the source files necessary to upgrade the OS on the destination computer. The upgrade package must be the same edition, architecture, and language as the clients that you upgrade. For more information, see [Manage OS upgrade packages](/sccm/osd/get-started/manage-operating-system-upgrade-packages).  
+The Windows 10 upgrade package contains the source files necessary to upgrade the OS on the destination computer. The upgrade package must be the same edition, architecture, and language as the clients that you upgrade. For more information, see [Manage OS upgrade packages](../get-started/manage-operating-system-upgrade-packages.md).  
 
 ### Create a task sequence to upgrade the OS  
 
-Use the steps in [Create a task sequence to upgrade an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system) to automate the upgrade of the OS.  
+Use the steps in [Create a task sequence to upgrade an OS](create-a-task-sequence-to-upgrade-an-operating-system.md) to automate the upgrade of the OS.  
 
 > [!NOTE]  
-> To create a task sequence to upgrade an OS to Windows 10, you typically use the steps in [Create a task sequence to upgrade an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system). The task sequence includes the **Upgrade OS** step, as well as additional recommended steps and groups to handle the end-to-end upgrade process.
+> To create a task sequence to upgrade an OS to Windows 10, you typically use the steps in [Create a task sequence to upgrade an OS](create-a-task-sequence-to-upgrade-an-operating-system.md). The task sequence includes the **Upgrade OS** step, as well as additional recommended steps and groups to handle the end-to-end upgrade process.
 >
-> You can create a custom task sequence and add the [Upgrade OS](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS) step. This step is the only one required to upgrade the OS to Windows 10. If you choose this method, to complete the upgrade, also add the [Restart Computer](/sccm/osd/understand/task-sequence-steps#BKMK_RestartComputer) step after the **Upgrade OS** step. Be sure to use the **The currently installed default operating system** setting to restart the computer into the installed OS and not Windows PE.  
+> You can create a custom task sequence and add the [Upgrade OS](../understand/task-sequence-steps.md#BKMK_UpgradeOS) step. This step is the only one required to upgrade the OS to Windows 10. If you choose this method, to complete the upgrade, also add the [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step after the **Upgrade OS** step. Be sure to use the **The currently installed default operating system** setting to restart the computer into the installed OS and not Windows PE.  
 
 
 ## <a name="BKMK_Deploy"></a> Deploy  
 
 To deploy the OS, use one of the following deployment methods:  
 
-- [Use Software Center to deploy Windows over the network](/sccm/osd/deploy-use/use-software-center-to-deploy-windows-over-the-network)  
+- [Use Software Center to deploy Windows over the network](use-software-center-to-deploy-windows-over-the-network.md)  
 
-- [Use stand-alone media to deploy Windows without using the network](/sccm/osd/deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network)  
+- [Use stand-alone media to deploy Windows without using the network](use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
 
   > [!IMPORTANT]  
   > When you use stand-alone media, you must include a boot image in the task sequence. This configuration makes the task sequence available in the Task Sequence Media Wizard.
@@ -122,4 +122,4 @@ To deploy the OS, use one of the following deployment methods:
 
 ## Monitor  
 
-To monitor the task sequence deployment to upgrade the OS, see [Monitor OS deployments](/sccm/osd/deploy-use/monitor-operating-system-deployments).  
+To monitor the task sequence deployment to upgrade the OS, see [Monitor OS deployments](monitor-operating-system-deployments.md).  

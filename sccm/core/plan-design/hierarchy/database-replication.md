@@ -28,7 +28,7 @@ Note the following points about database replication:
 
 - When the site installation finishes, database replication automatically starts.  
 
-When you add a new site to a hierarchy, Configuration Manager creates a generic database at the new site. The parent site creates a snapshot of the relevant data in its database. It then transfers the snapshot to the new site using [file-based replication](/sccm/core/plan-design/hierarchy/file-based-replication). The new site then uses the SQL Server Bulk Copy Program (BCP) to load the information into its local copy of the Configuration Manager database. After the snapshot loads, each site conducts database replication with the other site.  
+When you add a new site to a hierarchy, Configuration Manager creates a generic database at the new site. The parent site creates a snapshot of the relevant data in its database. It then transfers the snapshot to the new site using [file-based replication](file-based-replication.md). The new site then uses the SQL Server Bulk Copy Program (BCP) to load the information into its local copy of the Configuration Manager database. After the snapshot loads, each site conducts database replication with the other site.  
 
 To replicate data between sites, Configuration Manager uses its own database replication service. The database replication service uses SQL Server change tracking to monitor the local site database for changes. It then replicates the changes to other sites by using SQL Server Service Broker (SSB). By default, this process uses TCP port 4022.  
 
@@ -99,9 +99,9 @@ To control the transfer of data across the replication link, change settings for
 To configure a database replication link, in the Configuration Manager console, go to the **Monitoring** workspace. Select the **Database Replication** node, and edit the properties for the link. This node is also in the **Administration** workspace, under the **Hierarchy Configuration** node. Edit a replication link from either the parent site or the child site of the replication link.  
 
 > [!TIP]  
-> You can edit database replication links from the **Database Replication** node in either workspace. However, when you use the **Database Replication** node in the **Monitoring** workspace, you can also view the status of database replication. It also provides access to the [Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA) tool. Use this tool to help investigate problems with database replication.  
+> You can edit database replication links from the **Database Replication** node in either workspace. However, when you use the **Database Replication** node in the **Monitoring** workspace, you can also view the status of database replication. It also provides access to the [Replication Link Analyzer](../../servers/manage/monitor-replication.md#BKMK_RLA) tool. Use this tool to help investigate problems with database replication.  
 
-For more information about how to configure replication links, see [Site database replication controls](#BKMK_DBRepControls). For more information about how to monitor replication, see [Monitor database replication](/sccm/core/servers/manage/monitor-replication).  
+For more information about how to configure replication links, see [Site database replication controls](#BKMK_DBRepControls). For more information about how to monitor replication, see [Monitor database replication](../../servers/manage/monitor-replication.md).  
 
 
 ## <a name="bkmk_distviews"></a> Distributed views  
@@ -139,7 +139,7 @@ For example, you use a Configuration Manager console connected to the CAS. You r
 If a replication link has a type of data enabled for distributed views, the child primary site doesn't replicate that data to the CAS. When you turn off distributed views for a type of data, the child primary site resumes normal data replication to the CAS. Before this data is available at the CAS, the replication groups for this data must reinitialize between the primary site and the CAS. After you uninstall a primary site that has distributed views turned on, the CAS must complete reinitialization of its data before you can access data that you enabled for distributed views on the CAS.  
 
 > [!IMPORTANT]  
-> When you use distributed views on any replication link in the site hierarchy, before you uninstall any primary site, turn off distributed views for all replication links. For more information, see [Uninstall a primary site that uses distributed views](/sccm/core/servers/deploy/install/uninstall-sites-and-hierarchies#bkmk_distviews).  
+> When you use distributed views on any replication link in the site hierarchy, before you uninstall any primary site, turn off distributed views for all replication links. For more information, see [Uninstall a primary site that uses distributed views](../../servers/deploy/install/uninstall-sites-and-hierarchies.md#bkmk_distviews).  
 
 ### Prerequisites and limitations for distributed views  
 
@@ -151,9 +151,9 @@ If a replication link has a type of data enabled for distributed views, the chil
 
 - You can only install one reporting services point at the CAS. Install SQL Server Reporting Services on the site database server. This configuration supports Kerberos authentication. The SQL server at the CAS requires Kerberos to access the SQL server at the child primary site.
 
-- You can't host the site database on a [SQL Server cluster](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database).
+- You can't host the site database on a [SQL Server cluster](../../servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md).
 
-- In version 1902 and earlier, you can't host the site database on a [SQL Server Always On availability group](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database). To support this configuration, update to version 1906 or later.<!-- SCCMDocs-pr#3792 -->
+- In version 1902 and earlier, you can't host the site database on a [SQL Server Always On availability group](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md). To support this configuration, update to version 1906 or later.<!-- SCCMDocs-pr#3792 -->
 
 - The computer account of the CAS database server requires **Read** permissions on the primary site database.
 
@@ -195,7 +195,7 @@ When you increase the number of retries before the site sets the link to degrade
 
 To understand how frequently replication of that group occurs, consider the replication sync interval for each replication group. To view the **Synchronization Interval** for replication groups, go to the **Monitoring** workspace in the Configuration Manager console. In the **Database Replication** node, select the **Replication Detail** tab of a replication link.  
 
-For more information about how to monitor database replication, including how to view the replication status, see [Monitor database replication](/sccm/core/servers/manage/monitor-replication).  
+For more information about how to monitor database replication, including how to view the replication status, see [Monitor database replication](../../servers/manage/monitor-replication.md).  
 
 
 ## <a name="BKMK_DBRepControls"></a> Site database replication controls  
@@ -218,6 +218,6 @@ To change the settings for the replication controls for a site database, in the 
 
 ## See also
 
-[Monitor replication](/sccm/core/servers/manage/monitor-replication)
+[Monitor replication](../../servers/manage/monitor-replication.md)
 
-[Troubleshoot SQL replication](/sccm/core/servers/manage/replication/overview)
+[Troubleshoot SQL replication](../../servers/manage/replication/overview.md)

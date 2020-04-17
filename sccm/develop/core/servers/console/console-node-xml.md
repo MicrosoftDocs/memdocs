@@ -47,4 +47,4 @@ The node XML for the Configuration Manager console is in workspace XML files loc
 ## See also
 
  [How to Create a Configuration Manager Console Node](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-console-node.md)
- [About console nodes](/sccm/develop/core/servers/console/about-configuration-manager-console-nodes)
+ [About console nodes](about-configuration-manager-console-nodes.md)

@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-The Content Library Transfer tool is one of the [Configuration Manager tools](/sccm/core/support/tools). It transfers content from one disk drive to another. The tool is designed to run on distribution point site systems. It supports distribution points colocated with a site or remote site systems.  
+The Content Library Transfer tool is one of the [Configuration Manager tools](tools.md). It transfers content from one disk drive to another. The tool is designed to run on distribution point site systems. It supports distribution points colocated with a site or remote site systems.  
 
 The tool is useful for the scenario when the disk drive hosting the content library becomes full. First add or identify another hard disk with sufficient space to host the content library. Then use **ContentLibraryTransfer.exe** to transfer content from the old filled hard disk to the new, empty drive.
  
@@ -50,5 +50,5 @@ Run **ContentLibraryTransfer.exe** as a user with administrative permissions on 
 
 ## See also
 
-- [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)
-- [The content library](/sccm/core/plan-design/hierarchy/the-content-library)
+- [Fundamental concepts for content management](../plan-design/hierarchy/fundamental-concepts-for-content-management.md)
+- [The content library](../plan-design/hierarchy/the-content-library.md)

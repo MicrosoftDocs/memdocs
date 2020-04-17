@@ -16,13 +16,13 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Collections are groupings of users or devices. Use collections for tasks like managing applications, deploying compliance settings, or installing software updates. You can also use collections to manage groups of client settings or use them with role-based administration to specify the resources that an administrative user can access. Configuration Manager contains several built-in collections. For more information, see [Introduction to collections](/sccm/core/clients/manage/collections/introduction-to-collections).  
+Collections are groupings of users or devices. Use collections for tasks like managing applications, deploying compliance settings, or installing software updates. You can also use collections to manage groups of client settings or use them with role-based administration to specify the resources that an administrative user can access. Configuration Manager contains several built-in collections. For more information, see [Introduction to collections](introduction-to-collections.md).  
 
 > [!NOTE]  
 > A collection can contain users or devices, but not both.  
 
 
-The information in this article can help you create collections in Configuration Manager. You can also import collections that were created at the current  Configuration Manager site or at another one. For more information about how to export and import collections, see [How to manage collections](/sccm/core/clients/manage/collections/manage-collections).  
+The information in this article can help you create collections in Configuration Manager. You can also import collections that were created at the current  Configuration Manager site or at another one. For more information about how to export and import collections, see [How to manage collections](manage-collections.md).  
 
 
 ## Collection rules
@@ -39,14 +39,14 @@ Use direct rules to choose the users or computers that you want to add to a coll
 
 Dynamically update the membership of a collection based on a query that Configuration Manager runs on a schedule. For example, you can create a collection of users that are a member of the Human Resources organizational unit in Active Directory Domain Services. This collection is automatically updated when new users are added to or removed from the Human Resources organizational unit.
 
-For example queries that you can use to build collections, see [How to create queries](/sccm/core/servers/manage/create-queries).
+For example queries that you can use to build collections, see [How to create queries](../../../servers/manage/create-queries.md).
 
 
 ### Device category rule
 
 You can make management of your devices easier by associating device categories with the device collections. 
 
-For more information, see [Automatically categorize devices into collections](/sccm/core/clients/manage/collections/automatically-categorize-devices-into-collections).<!-- SCCMDocs issue 552 -->
+For more information, see [Automatically categorize devices into collections](automatically-categorize-devices-into-collections.md).<!-- SCCMDocs issue 552 -->
 
 
 ### Include collection rule
@@ -160,11 +160,11 @@ In the **Query Rule Properties** dialog box, specify the following information.
 
 - **Name**: Specify a unique name for the query.  
 
-- **Import Query Statement**: Opens the **Browse Query** dialog box. Select a [Configuration Manager query](/sccm/core/servers/manage/create-queries) to use as the query rule for the collection.   
+- **Import Query Statement**: Opens the **Browse Query** dialog box. Select a [Configuration Manager query](../../../servers/manage/create-queries.md) to use as the query rule for the collection.   
 
 - **Resource class**: Select the type of resource you want to search for and add to the collection. Select a value from **System Resource** to search for inventory data returned from client computers or from **Unknown Computer** to select from values returned by unknown computers.  
 
-- **Edit Query Statement**: Opens the **Query Statement Properties** dialog box, where you can write a query to use as the rule for the collection. For more information about queries, see [Introduction to queries](/sccm/core/servers/manage/introduction-to-queries).  
+- **Edit Query Statement**: Opens the **Query Statement Properties** dialog box, where you can write a query to use as the rule for the collection. For more information about queries, see [Introduction to queries](../../../servers/manage/introduction-to-queries.md).  
 
         
         > [!TIP]  
@@ -178,7 +178,7 @@ The following actions are available in the **Select Device Categories** window.
 - **Rename**: Rename the selected category.
 - **Delete**: Select one or more categories, and use this action to remove them from the list.
 
-For more information, see [Automatically categorize devices into collections](/sccm/core/clients/manage/collections/automatically-categorize-devices-into-collections).<!-- SCCMDocs issue 552 -->
+For more information, see [Automatically categorize devices into collections](automatically-categorize-devices-into-collections.md).<!-- SCCMDocs issue 552 -->
 
 
 ### <a name="bkmk-include"></a> Configure an include collection rule  
@@ -201,7 +201,7 @@ When you export a collection from a site, Configuration Manager saves it as a Ma
 > 
 > - Make sure the file was exported from a site running the same version of Configuration Manager that you're using.  
 
-For more information about exporting collections, see [How to manage collections](/sccm/core/clients/manage/collections/manage-collections).
+For more information about exporting collections, see [How to manage collections](manage-collections.md).
 
 
 1. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select either the **User Collections** or the **Device Collections** node.  
@@ -218,7 +218,7 @@ For more information about exporting collections, see [How to manage collections
 
 <!--3607475-->
 > [!Tip]  
-> This feature was first introduced in version 1906 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 2002, it's no longer a pre-release feature.  
+> This feature was first introduced in version 1906 as a [pre-release feature](../../../servers/manage/pre-release-features.md). Beginning with version 2002, it's no longer a pre-release feature.  
 
 You can enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization allows you to use your existing on premises grouping rules in the cloud by creating Azure AD group memberships based on collection membership results. You can synchronize device collections. Only devices with an Azure Active Directory record are reflected in the Azure AD Group. Both Hybrid Azure AD Joined and Azure Active Director joined devices are supported.
 
@@ -227,8 +227,8 @@ The Azure AD synchronization happens every five minutes. It's a one-way process,
 
 ### Prerequisites
 
-- [Cloud Management](/sccm/core/servers/deploy/configure/azure-services-wizard)
-- [Azure Active Directory user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)
+- [Cloud Management](../../../servers/deploy/configure/azure-services-wizard.md)
+- [Azure Active Directory user discovery](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
 
 ### Create a group and set the owner in Azure AD
 
@@ -280,4 +280,4 @@ You can use PowerShell to create and import collections. For more information, s
 
 ## Next steps
 
-[Manage collections](/sccm/core/clients/manage/collections/manage-collections)
+[Manage collections](manage-collections.md)

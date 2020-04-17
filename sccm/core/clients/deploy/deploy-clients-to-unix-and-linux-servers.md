@@ -37,7 +37,7 @@ Before you can manage a Linux or UNIX server with Configuration Manager, you mus
 
  When you install a client, you can use the same process and command-line properties regardless of the client installation package you use.  
 
- For information about the operating systems, platforms, and client installation packages that are supported by each release of the Configuration Manager client for Linux and UNIX, see [Linux and UNIX servers](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#linux-and-unix-servers).  
+ For information about the operating systems, platforms, and client installation packages that are supported by each release of the Configuration Manager client for Linux and UNIX, see [Linux and UNIX servers](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#linux-and-unix-servers).  
 
 ##  <a name="BKMK_InstallLnUClient"></a> Install the client on Linux and UNIX servers  
  To install the client for Linux and UNIX, you run a script on each Linux or UNIX computer. The script is named **install** and supports command-line properties that modify the installation behavior and reference the client installation package. The install script and client installation package must be located on the client. The client installation package contains the Configuration Manager client files for a specific Linux or UNIX operating system and platform.
@@ -105,7 +105,7 @@ Before you can manage a Linux or UNIX server with Configuration Manager, you mus
 
 -   `-fsp <server_FQDN>`  
 
-     Optional. Specifies by FQDN, the fallback status point server that the client uses to submit state messages. For more information, see [Determine whether you require a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#fallback-status-point).  
+     Optional. Specifies by FQDN, the fallback status point server that the client uses to submit state messages. For more information, see [Determine whether you require a fallback status point](plan/determine-the-site-system-roles-for-clients.md#fallback-status-point).  
 
 -   `-dir <directory>`  
 
@@ -129,7 +129,7 @@ Before you can manage a Linux or UNIX server with Configuration Manager, you mus
 
 -   `-UsePKICert <parameter>`  
 
-     Optional. Specifies the full path and file name to a X.509 PKI certificate in the Public Key Certificate Standard (PKCS#12) format. This certificate is used for client authentication. If a certificate is not specified during installation and you need to add or change a certificate, use the **certutil** utility. For more information, see [How to manage certificates on the client for Linux and UNIX](/sccm/core/clients/manage/manage-clients-for-linux-and-unix-servers#BKMK_ManageLinuxCerts).  
+     Optional. Specifies the full path and file name to a X.509 PKI certificate in the Public Key Certificate Standard (PKCS#12) format. This certificate is used for client authentication. If a certificate is not specified during installation and you need to add or change a certificate, use the **certutil** utility. For more information, see [How to manage certificates on the client for Linux and UNIX](../manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts).  
 
      When you use `-UsePKICert`, you must also supply the password associated with the PKCS#12 file by use of the `-certpw` command-line parameter.  
 
@@ -184,7 +184,7 @@ Before you can manage a Linux or UNIX server with Configuration Manager, you mus
 
      Optional. Specifies the full path and **.cer** file name of the exported self-signed certificate on the site server. If PKI certificates aren't available, the Configuration Manager site server automatically generates self-signed certificates.  
 
-     These certificates are used to validate that the client policies downloaded from the management point were sent from the intended site. If a self-signed certificate is not specified during installation, or you need to change the certificate, use the **certutil** utility. For more information, see [How to manage certificates on the client for Linux and UNIX](/sccm/core/clients/manage/manage-clients-for-linux-and-unix-servers#BKMK_ManageLinuxCerts).  
+     These certificates are used to validate that the client policies downloaded from the management point were sent from the intended site. If a self-signed certificate is not specified during installation, or you need to change the certificate, use the **certutil** utility. For more information, see [How to manage certificates on the client for Linux and UNIX](../manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts).  
 
      This certificate can be retrieved through the **SMS** certificate store and has the Subject name **Site Server** and the friendly name **Site Server Signing Certificate**.  
 
@@ -223,4 +223,4 @@ Before you can manage a Linux or UNIX server with Configuration Manager, you mus
 
  The Configuration Manager client for Linux and UNIX contacts this management point at the time the client installs. If the client fails to contact the management point, the client software continues to retry until successful.  
 
- For more information about how clients locate management points, see [Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points).
+ For more information about how clients locate management points, see [Locating Management Points](assign-clients-to-a-site.md#locating-management-points).

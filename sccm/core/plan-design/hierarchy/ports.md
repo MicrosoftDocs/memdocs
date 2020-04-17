@@ -128,7 +128,7 @@ In addition to the ports that are listed in this table, wake-up proxy also uses 
 |Windows PE Peer cache broadcast|8004|--|  
 |Windows PE Peer cache download|--|8003|  
 
-For more information, see [Windows PE Peer Cache](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic#BKMK_PeerCacheRequirements).
+For more information, see [Windows PE Peer Cache](../../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md#BKMK_PeerCacheRequirements).
 
 
 ###  <a name="BKMK_PortsClient-PolicyModule"></a> Client -- > Configuration Manager Network Device Enrollment Service (NDES) policy module   
@@ -145,7 +145,7 @@ For more information, see [Windows PE Peer Cache](/sccm/osd/get-started/prepare-
 |-----------------|---------|---------|  
 |HTTPS|--|443|  
 
-For more information, see [Ports and data flow](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_dataflow).
+For more information, see [Ports and data flow](use-a-cloud-based-distribution-point.md#bkmk_dataflow).
 
 
 ###  <a name="bkmk_client-cmg"></a> Client -- > Cloud management gateway (CMG)  
@@ -154,7 +154,7 @@ For more information, see [Ports and data flow](/sccm/core/plan-design/hierarchy
 |-----------------|---------|---------|  
 |HTTPS|--|443|  
 
-For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#ports-and-data-flow).
+For more information, see [CMG Ports and data flow](../../clients/manage/cmg/plan-cloud-management-gateway.md#ports-and-data-flow).
 
 
 ###  <a name="BKMK_PortsClient-DP"></a> Client -- > Distribution point, both standard and pull  
@@ -227,7 +227,7 @@ A Configuration Manager client doesn't contact a global catalog server when it's
 
 ###  <a name="bkmk_cmgcp-cmg"></a> CMG connection point -- > CMG cloud service  
 
-Configuration Manager uses these connections to build the CMG channel. For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#ports-and-data-flow).
+Configuration Manager uses these connections to build the CMG channel. For more information, see [CMG Ports and data flow](../../clients/manage/cmg/plan-cloud-management-gateway.md#ports-and-data-flow).
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -252,7 +252,7 @@ The specific port depends upon the management point configuration.
 |-----------------|---------|---------|  
 |HTTPS|--|443|
 
-For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#ports-and-data-flow).
+For more information, see [CMG Ports and data flow](../../clients/manage/cmg/plan-cloud-management-gateway.md#ports-and-data-flow).
 
 
 ###  <a name="bkmk_cmgcp-sup"></a> CMG connection point -- > Software update point  
@@ -264,7 +264,7 @@ The specific port depends upon the software update point configuration.
 |HTTPS|--|443|
 |HTTP|--|80|  
 
-For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#ports-and-data-flow).
+For more information, see [CMG Ports and data flow](../../clients/manage/cmg/plan-cloud-management-gateway.md#ports-and-data-flow).
 
 
 ###  <a name="BKMK_PortsConsole-Client"></a> Configuration Manager console -- > Client  
@@ -447,7 +447,7 @@ A distribution point communicates to the management point in the following scena
 |-----------------|---------|---------|  
 |HTTPS|--|443|
 
-For more information, see [Internet access requirements](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls) for the service connection point.
+For more information, see [Internet access requirements](../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_urls) for the service connection point.
 
 
 ###  <a name="bkmk_scp-cmg"></a> Service connection point -- > Azure (CMG)  
@@ -456,7 +456,7 @@ For more information, see [Internet access requirements](/sccm/core/servers/depl
 |-----------------|---------|---------|  
 |HTTPS for CMG service deployment|--|443|
 
-For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#ports-and-data-flow).
+For more information, see [CMG Ports and data flow](../../clients/manage/cmg/plan-cloud-management-gateway.md#ports-and-data-flow).
 
 
 ###  <a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> Site server &lt; -- > Application Catalog web service point  
@@ -499,7 +499,7 @@ For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cm
 |-----------------|---------|---------|  
 |HTTPS|--|443|  
 
-For more information, see [Ports and data flow](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_dataflow).
+For more information, see [Ports and data flow](use-a-cloud-based-distribution-point.md#bkmk_dataflow).
 
 
 ###  <a name="BKMK_PortsSite-DP"></a> Site server -- > Distribution point, both standard and pull  
@@ -585,7 +585,7 @@ For more information, see [Ports and data flow](/sccm/core/plan-design/hierarchy
 
 
 ###  <a name="BKMK_PortsSite-RCL"></a> Site server -- > Server hosting Remote Content Library Share  
-Starting in version 1806 you can relocate the Content Library to another storage location to free up hard drive space on your central administration or primary site servers. For more information, see [Configure a remote content library for the site server](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).  
+Starting in version 1806 you can relocate the Content Library to another storage location to free up hard drive space on your central administration or primary site servers. For more information, see [Configure a remote content library for the site server](the-content-library.md#bkmk_remote).  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -862,7 +862,7 @@ On-premises Configuration Manager clients or site systems can make the following
 ###  <a name="BKMK_IBCMports"></a> Installation requirements for site systems that support internet-based clients  
 
 > [!Note]  
-> This section only applies to internet-based client management (IBCM). It doesn't apply to the cloud management gateway. For more information, see [Manage clients on the internet](/sccm/core/clients/manage/manage-clients-internet).  
+> This section only applies to internet-based client management (IBCM). It doesn't apply to the cloud management gateway. For more information, see [Manage clients on the internet](../../clients/manage/manage-clients-internet.md).  
 
 Internet-based management points and distribution points that support internet-based clients, the software update point, and the fallback status point use the following ports for installation and repair:  
 
@@ -888,14 +888,14 @@ Use IPsec to help secure the traffic between the site server and site systems. I
 
 The ports that Configuration Manager uses during client installation depends on the deployment method. 
 
-- For a list of ports for each client deployment method, see [Ports used during Configuration Manager client deployment](/sccm/core/clients/deploy/windows-firewall-and-port-settings-for-clients#ports-used-during-configuration-manager-client-deployment)  
+- For a list of ports for each client deployment method, see [Ports used during Configuration Manager client deployment](../../clients/deploy/windows-firewall-and-port-settings-for-clients.md#ports-used-during-configuration-manager-client-deployment)  
 
-- For more information about how to configure Windows Firewall on the client for client installation and post-installation communication, see [Windows Firewall and port settings for clients](/sccm/core/clients/deploy/windows-firewall-and-port-settings-for-clients)  
+- For more information about how to configure Windows Firewall on the client for client installation and post-installation communication, see [Windows Firewall and port settings for clients](../../clients/deploy/windows-firewall-and-port-settings-for-clients.md)  
 
 
 ###  <a name="BKMK_MigrationPorts"></a> Ports used by migration  
 
-The site server that runs migration uses several ports to connect to applicable sites in the source hierarchy. For more information, see [Required configurations for migration](/sccm/core/migration/prerequisites-for-migration#BKMK_Required_Configurations).  
+The site server that runs migration uses several ports to connect to applicable sites in the source hierarchy. For more information, see [Required configurations for migration](../../migration/prerequisites-for-migration.md#BKMK_Required_Configurations).  
 
 
 ###  <a name="BKMK_ServerPorts"></a> Ports used by Windows Server  

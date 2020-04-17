@@ -267,4 +267,4 @@ Class SMS_TaskSequence_ApplyOperatingSystemAction : SMS_TaskSequence_Action
 
 ## See also
 
-[SMS_TaskSequence_SetupWindowsAndSMSAction server WMI class](/sccm/develop/reference/osd/sms_tasksequence_setupwindowsandsmsaction-server-wmi-class)
+[SMS_TaskSequence_SetupWindowsAndSMSAction server WMI class](sms_tasksequence_setupwindowsandsmsaction-server-wmi-class.md)

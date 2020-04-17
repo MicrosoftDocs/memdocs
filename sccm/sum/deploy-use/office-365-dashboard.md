@@ -24,7 +24,7 @@ Beginning in Configuration Manager version 1802, you can review Office 365 clien
 
 The data that is displayed in the Office 365 Client Management dashboard comes from hardware inventory. Enable hardware inventory and select the **Office 365 ProPlus Configurations** hardware inventory class for data to display in the dashboard.
  
-1. Enable hardware inventory, if it isn't yet enabled. For details, see [Configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
+1. Enable hardware inventory, if it isn't yet enabled. For details, see [Configure hardware inventory](../../core/clients/manage/inventory/configure-hardware-inventory.md).
 2. In the Configuration Manager console, navigate to **Administration** > **Client Settings** > **Default Client Settings**.  
 3. On the **Home** tab, in the **Properties** group, click **Properties**.  
 4. In the **Default Client Settings** dialog box, click **Hardware Inventory**.  
@@ -245,4 +245,4 @@ There is a known issue with the **Deploy Pilot**  tile. At this time it can't be
 
 ## Next steps
 
-[Manage Office 365 ProPlus with Configuration Manager](/sccm/sum/deploy-use/manage-office-365-proplus-updates)
+[Manage Office 365 ProPlus with Configuration Manager](manage-office-365-proplus-updates.md)

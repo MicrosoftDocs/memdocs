@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Follow these steps to make sure that you're ready to [deploy the Configuration Manager client to Mac computers](/sccm/core/clients/deploy/deploy-clients-to-macs).
+Follow these steps to make sure that you're ready to [deploy the Configuration Manager client to Mac computers](deploy-clients-to-macs.md).
 
 
 
@@ -26,7 +26,7 @@ Follow these steps to make sure that you're ready to [deploy the Configuration M
 
 The Mac client installation package isn't supplied with the Configuration Manager media. Download the **Clients for additional operating systems** from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184).  
 
-For the list of supported versions, see [Supported operating systems for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#mac-computers).
+For the list of supported versions, see [Supported operating systems for clients and devices](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 
 
 
@@ -40,16 +40,16 @@ If Mac clients can't locate the certificate revocation list (CRL), they can't co
 
 Before you install the Configuration Manager client on a Mac computer, decide how to install the client certificate:  
 
--   Use Configuration Manager enrollment by using the [CMEnroll tool](/sccm/core/clients/deploy/deploy-clients-to-macs#client-and-certificate-automation-with-cmenroll). The enrollment process doesn't support automatic certificate renewal. Re-enroll Mac computers before the certificate expires.  
+-   Use Configuration Manager enrollment by using the [CMEnroll tool](deploy-clients-to-macs.md#client-and-certificate-automation-with-cmenroll). The enrollment process doesn't support automatic certificate renewal. Re-enroll Mac computers before the certificate expires.  
 
--   [Use a certificate request and installation method that's independent from Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-macs#bkmk_external).  
+-   [Use a certificate request and installation method that's independent from Configuration Manager](deploy-clients-to-macs.md#bkmk_external).  
 
-For more information about Mac client certificate requirements, see [PKI certificate requirements for Configuration Manager](/sccm/core/plan-design/network/pki-certificate-requirements).  
+For more information about Mac client certificate requirements, see [PKI certificate requirements for Configuration Manager](../../plan-design/network/pki-certificate-requirements.md).  
 
 Mac clients are automatically assigned to the Configuration Manager site that manages them. Mac clients install as internet-only clients, even if communication is restricted to the intranet. This configuration means that they communicate with internet-enabled management points and distribution points in their assigned site. Mac computers don't communicate with site systems outside their assigned site.  
 
 > [!IMPORTANT]  
->  The Configuration Manager client for macOS can't be used to connect to a management point that's configured to use a [database replica](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).  
+>  The Configuration Manager client for macOS can't be used to connect to a management point that's configured to use a [database replica](../../servers/deploy/configure/database-replicas-for-management-points.md).  
 
 
 
@@ -69,7 +69,7 @@ The web server certificate must include the internet FQDN that's specified in th
 
 Specify the site system's internet FQDN value in the web server certificate for the management point, the distribution point, and the enrollment proxy point.
 
-For more information of an example deployment, see [Deploying the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
+For more information of an example deployment, see [Deploying the web server certificate for site systems that run IIS](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012).  
 
 
 
@@ -81,9 +81,9 @@ If these site systems don't have it, deploy a client authentication certificate 
 
 -   Distribution point  
 
-For an example deployment that creates and installs the client certificate for management points, see the [Deploying the client certificate for Windows computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).  
+For an example deployment that creates and installs the client certificate for management points, see the [Deploying the client certificate for Windows computers](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012).  
 
-For an example deployment that creates and installs the client certificate for distribution points, see the [Deploying the client certificate for distribution points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012).  
+For an example deployment that creates and installs the client certificate for distribution points, see the [Deploying the client certificate for distribution points](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clientdistributionpoint2008_cm2012).  
 
 > [!IMPORTANT]  
 >  To deploy the client to devices running macOS Sierra, the subject name of the management point certificate must be configured correctly. For example, use the FQDN of the management point server.  
@@ -94,7 +94,7 @@ For an example deployment that creates and installs the client certificate for d
 
 The certificate template must have **Read** and **Enroll** permissions for the user account that enrolls the certificate on the Mac computer.  
 
-For more information, see [Deploying the client certificate for Mac computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_MacClient_SP1).  
+For more information, see [Deploying the client certificate for Mac computers](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_MacClient_SP1).  
 
 
 
@@ -145,9 +145,9 @@ The site system roles must be in a primary site.
 
 Install both roles in the same site. You don't have to install them on the same site system server, or in the same Active Directory forest.  
 
-For more information about site system role placement and considerations, see [Site system roles](/sccm/core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles#bkmk_planroles).  
+For more information about site system role placement and considerations, see [Site system roles](../../plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md#bkmk_planroles).  
 
-To add the site system roles to support Mac computers, see [Install site system roles](/configmgr/core/servers/deploy/configure/install-site-system-roles).
+To add the site system roles to support Mac computers, see [Install site system roles](../../servers/deploy/configure/install-site-system-roles.md).
 
 On the **System Role Selection** page, select **Enrollment proxy point** and **Enrollment point** from the list of available roles.  
 
@@ -155,10 +155,10 @@ On the **System Role Selection** page, select **Enrollment proxy point** and **E
 
 ## Install the reporting services point  
 
-For more information, see [Install the reporting services point](/sccm/core/servers/manage/configuring-reporting).  
+For more information, see [Install the reporting services point](../../servers/manage/configuring-reporting.md).  
 
 
 
 ## Next steps
 
-[Deploy the Configuration Manager client to Mac computers](/sccm/core/clients/deploy/deploy-clients-to-macs)  
+[Deploy the Configuration Manager client to Mac computers](deploy-clients-to-macs.md)  

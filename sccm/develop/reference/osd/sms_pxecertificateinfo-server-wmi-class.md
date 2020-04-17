@@ -166,4 +166,4 @@ Class SMS_PXECertificateInfo : SMS_CertificateInfo
 
 ## See also
 
-[SMS_CertificateInfo server WMI class](/sccm/develop/reference/osd/sms_certificateinfo-server-wmi-class)
+[SMS_CertificateInfo server WMI class](sms_certificateinfo-server-wmi-class.md)

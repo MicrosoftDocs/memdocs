@@ -40,8 +40,8 @@ For more information, see the following articles:
 
 - [Microsoft Support article](https://support.microsoft.com/help/4096323)  
 - [Configuration Manager support blog post](https://techcommunity.microsoft.com/t5/configuration-manager-blog/configuration-manager-2007-approaching-end-of-support-what-you/ba-p/274995)  
-- [Introduction to Configuration Manager current branch](/sccm/core/understand/introduction)  
-- [Documentation on how to migrate to Configuration Manager current branch](/sccm/core/migration/migrate-data-between-hierarchies)  
+- [Introduction to Configuration Manager current branch](../understand/introduction.md)  
+- [Documentation on how to migrate to Configuration Manager current branch](../migration/migrate-data-between-hierarchies.md)  
     This article also includes a video that discusses and demonstrates common migration scenarios.
 
 The [Configuration Manager 2007 documentation library](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb735860\(v=technet.10\)) is still available.

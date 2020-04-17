@@ -63,5 +63,5 @@ After successful deployment and testing in their pre-production environment, thi
 
 If you need assistance setting up Azure AD at any point in the process, go to [Microsoft FastTrack](https://Microsoft.com/FastTrack/), sign in, and request assistance. 
 
-For more information, see [Get help from FastTrack](/sccm/comanage/quickstart-fasttrack). 
+For more information, see [Get help from FastTrack](quickstart-fasttrack.md). 
 

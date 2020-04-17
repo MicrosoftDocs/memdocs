@@ -20,7 +20,7 @@ manager: dougeby
 
 The **Install Software Updates** step is commonly used in Configuration Manager task sequences. When installing or updating the OS, it triggers the software updates components to scan for and deploy updates. This step can cause challenges for some customers, such as long timeout delays or missed updates. Use the information in this article to help mitigate common issues with this step, and for better troubleshooting when things go wrong.
 
-For more information on the step, see [Install Software Updates](/sccm/osd/understand/task-sequence-steps#BKMK_InstallSoftwareUpdates)
+For more information on the step, see [Install Software Updates](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)
 
 
 
@@ -36,13 +36,13 @@ To help this process be successful, use the following recommendations:
 
 Use Configuration Manager to regularly install applicable software updates to your image files. This practice then reduces the number of updates that you need to install during the task sequence.
 
-For more information, see [Apply software updates to an image](/sccm/osd/get-started/manage-operating-system-images#BKMK_OSImagesApplyUpdates).
+For more information, see [Apply software updates to an image](../get-started/manage-operating-system-images.md#BKMK_OSImagesApplyUpdates).
 
 ### Single index
 
 Many image files include multiple indexes, such as for different editions of Windows. Reduce the image file to a single index that you require. This practice reduces the amount of time to apply software updates to the image. It also enables the next recommendation to reduce the image size.
 
-Starting in version 1902, automate this process when you add an OS image to the site. For more information, see [Add an OS image](/sccm/osd/get-started/manage-operating-system-images#BKMK_AddOSImages).<!--3719699-->
+Starting in version 1902, automate this process when you add an OS image to the site. For more information, see [Add an OS image](../get-started/manage-operating-system-images.md#BKMK_AddOSImages).<!--3719699-->
 
 ### <a name="bkmk_resetbase"></a> Reduce image size
 
@@ -54,7 +54,7 @@ dism /Image:C:\Mountdir /Cleanup-Image /StartComponentCleanup /ResetBase
 dism /Unmount-Image /MountDir:C:\Mountdir /Commit  
 ```
 
-Starting in version 1902, there's a new option to automate this process. For more information, see [Optimized image servicing](/sccm/osd/get-started/manage-operating-system-images#bkmk_resetbase).<!--3555951-->
+Starting in version 1902, there's a new option to automate this process. For more information, see [Optimized image servicing](../get-started/manage-operating-system-images.md#bkmk_resetbase).<!--3555951-->
 
 
 ## Image engineering decisions
@@ -69,7 +69,7 @@ When you design your imaging process, there are several options that can impact 
 
 You have an automated process to capture a custom OS image on a regular schedule. This capture task sequence installs the latest software updates. These updates can include cumulative, non-cumulative, and other critical updates such as servicing stack updates (SSU). The deployment task sequence installs any additional updates since capture.
 
-For more information on this process, see [Create a task sequence to capture an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system).
+For more information on this process, see [Create a task sequence to capture an OS](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md).
 
 #### Advantages
 
@@ -89,7 +89,7 @@ For more information on this process, see [Create a task sequence to capture an 
 
 Schedule Configuration Manager to apply software updates to your images.
 
-For more information, see [Apply software updates to an image](/sccm/osd/get-started/manage-operating-system-images#BKMK_OSImagesApplyUpdates).
+For more information, see [Apply software updates to an image](../get-started/manage-operating-system-images.md#BKMK_OSImagesApplyUpdates).
 
 #### Advantages
 
@@ -149,7 +149,7 @@ This flowchart diagram shows the process when you include the Install Software U
 2. **Compile and evaluate policies**: The client compiles all software update policies into WMI RequestedConfigs namespace. (CIAgent.log)
 3. *Is this instance the first time it's called?*  
     1. **Yes**: Go to **Full scan**  
-    2. **No**: *Is the step configured with the option to [Evaluate software updates from cached scan results](/sccm/osd/understand/task-sequence-steps#evaluate-software-updates-from-cached-scan-results)?*
+    2. **No**: *Is the step configured with the option to [Evaluate software updates from cached scan results](task-sequence-steps.md#evaluate-software-updates-from-cached-scan-results)?*
         1. **Yes**: Go to **Scan from cached results**
         2. **No**: Go to **Full scan**
 4. Scan process: either a full scan or scan from cached results, with monitoring process in parallel.
@@ -160,7 +160,7 @@ This flowchart diagram shows the process when you include the Install Software U
     3. **Start scan timer**: The task sequence engine starts a timer and waits. (This process happens in parallel with either the full scan or scan from cached results process.)
         1. **Monitoring**: The task sequence engine monitors the SUM agent for status.
         2. *What's the response from the SUM agent?*
-            - **In progress**: Has the timer reached the value in task sequence variable [SMSTSSoftwareUpdateScanTimeout](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout)? (Default 1 hour)
+            - **In progress**: Has the timer reached the value in task sequence variable [SMSTSSoftwareUpdateScanTimeout](task-sequence-variables.md#SMSTSSoftwareUpdateScanTimeout)? (Default 1 hour)
                 - **Yes**: The step fails.
                 - **No**: Go to **Monitoring**
             - **Failed**: The step fails.
@@ -170,7 +170,7 @@ This flowchart diagram shows the process when you include the Install Software U
     - **Yes**: Go to **Install updates**
     - **No**: Nothing to install, the step successfully completes.
 7. Deployment process: The install updates process happens in parallel with the deployment monitoring process.
-    1. **Install updates**: The task sequence engine calls the SUM agent via Update Deployment API to install all available or only mandatory updates. This behavior is based on the configuration of the step, whether you select **Required for installation - Mandatory software updates only** or **Available for installation - All software updates**. You can also specify this behavior using the [SMSInstallUpdateTarget](/sccm/osd/understand/task-sequence-variables#SMSInstallUpdateTarget) variable.
+    1. **Install updates**: The task sequence engine calls the SUM agent via Update Deployment API to install all available or only mandatory updates. This behavior is based on the configuration of the step, whether you select **Required for installation - Mandatory software updates only** or **Available for installation - All software updates**. You can also specify this behavior using the [SMSInstallUpdateTarget](task-sequence-variables.md#SMSInstallUpdateTarget) variable.
         1. **SUM agent install**: Normal install process using existing cached list of updates, with standard content download. Install update via Windows Update Agent (WUA). (UpdatesDeployment.log, UpdatesHandler.log, WuaHandler.log, WindowsUpdate.log)
     2. **Start deployment timer and show progress**: The task sequence engine starts an installation timer, shows sub-progress at 10% intervals in TS Progress UI, and waits.
         1. **Monitoring**: The task sequence engine polls the SUM agent for status.
@@ -206,12 +206,12 @@ Use the following resources and additional information to help you troubleshoot 
 
 - To help improve overall performance, reduce the size of the software update catalog. For example:  
 
-    - Remove unnecessary classifications, products, and languages. For more information, see [Configure classifications and products to synchronize](/sccm/sum/get-started/configure-classifications-and-products).  
+    - Remove unnecessary classifications, products, and languages. For more information, see [Configure classifications and products to synchronize](../../sum/get-started/configure-classifications-and-products.md).  
 
     - Reindex the site database and rebuild statistics. For more information, see the [Configuration Manager Perf and Scale Guidance Whitepaper](https://gallery.technet.microsoft.com/Configuration-Manager-ba55428e).  
 
     - Decline unnecessary updates, for example:
-        - Superseded (Starting in version 1810, Configuration Manager does this action for you. For more information, see [WSUS cleanup behavior starting in version 1810](/sccm/sum/deploy-use/software-updates-maintenance#wsus-cleanup-behavior-starting-in-version-1810).)
+        - Superseded (Starting in version 1810, Configuration Manager does this action for you. For more information, see [WSUS cleanup behavior starting in version 1810](../../sum/deploy-use/software-updates-maintenance.md#wsus-cleanup-behavior-starting-in-version-1810).)
         - Itanium
         - Beta
         - Version Next

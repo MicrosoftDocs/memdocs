@@ -21,7 +21,7 @@ ROBOTS: NOINDEX
 
 This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1804. You can install this version to update and add new capabilities to your technical preview site. 
 
-Review the [Technical Preview](/sccm/core/get-started/technical-preview) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
+Review the [Technical Preview](technical-preview.md) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
 
 
 <!--  Known Issues Template   -->
@@ -58,9 +58,9 @@ Reconfigure the application catalog web service point to communicate using HTTP 
 
 ## Configure a remote content library for the site server  
 <!--1357525-->
-To free up hard drive space on your primary site server, relocate its [content library](/sccm/core/plan-design/hierarchy/the-content-library) to another storage location. You can move the content library to another drive on the site server, a separate server, or fault-tolerant disks in a storage area network (SAN). We recommend a SAN as it provides elastic storage that grows or shrinks over time to meet your changing content requirements. 
+To free up hard drive space on your primary site server, relocate its [content library](../plan-design/hierarchy/the-content-library.md) to another storage location. You can move the content library to another drive on the site server, a separate server, or fault-tolerant disks in a storage area network (SAN). We recommend a SAN as it provides elastic storage that grows or shrinks over time to meet your changing content requirements. 
 
-This remote content library is a new prerequisite for [site server role high availability](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability). 
+This remote content library is a new prerequisite for [site server role high availability](capabilities-in-technical-preview-1706.md#site-server-role-high-availability). 
 
 > [!Note]  
 > This action only moves the content library on the site server. It doesn't impact the location of the content library on distribution points. 
@@ -77,7 +77,7 @@ This remote content library is a new prerequisite for [site server role high ava
 
 3. Select **On a network share** and enter a valid network path. This path is the location to which the site moves the content library. Click **OK**.  
 
-4. Note the **Status** property in the Content Library column on the details pane. It updates to show the site's progress in moving the content library. When in progress it displays the percentage complete. If there is an error state, it displays the error. Common errors include `access denied` or `disk full`. When complete it displays `OK`. See the **distmgr.log** for details. For more information, see [Site server and site system server logs](/sccm/core/plan-design/hierarchy/log-files#BKMK_SiteSiteServerLog).  
+4. Note the **Status** property in the Content Library column on the details pane. It updates to show the site's progress in moving the content library. When in progress it displays the percentage complete. If there is an error state, it displays the error. Common errors include `access denied` or `disk full`. When complete it displays `OK`. See the **distmgr.log** for details. For more information, see [Site server and site system server logs](../plan-design/hierarchy/log-files.md#BKMK_SiteSiteServerLog).  
 
 If you need to move the content library back to the site server, repeat this process but select the option **Local to the site server**.  
 
@@ -118,7 +118,7 @@ The following anonymous information is always included with the feedback for con
 
 - The exact location in the console from which you clicked the smile  
 
-This data is consistent with the collection of our diagnostics and usage data. For more information, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).
+This data is consistent with the collection of our diagnostics and usage data. For more information, see [Diagnostics and usage data](../plan-design/diagnostics/diagnostics-and-usage-data.md).
 
 ### Known issues
 
@@ -245,7 +245,7 @@ To reduce the number of discovered objects, you can now exclude specific contain
 You can now control whether the link to **Open the Application Catalog web site** appears in the **Installation status** node of Software Center.  
 
 > [!Note]  
-> Support for the Application Catalog website user experience ends with the first update released after June 1, 2018. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+> Support for the Application Catalog website user experience ends with the first update released after June 1, 2018. For more information, see [Removed and deprecated features](../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).  
 
 ### Try it out!
  Try to complete the tasks. Then send [Feedback](#bkmk_feedback) letting us know how it worked.
@@ -258,7 +258,7 @@ You can now control whether the link to **Open the Application Catalog web site*
 
 4. Enable the option to **Hide the Application Catalog web site link in Software Center**.   
 
-For more information on client settings, see [Configure client settings](/sccm/core/clients/deploy/configure-client-settings).
+For more information on client settings, see [Configure client settings](../clients/deploy/configure-client-settings.md).
 
 
 
@@ -291,7 +291,7 @@ After adding the architecture criteria, the automatic deployment rule properties
 ## Improvements to OS deployment
 We made the following improvements to OS deployment, some of which were the result of your user voice feedback.  
 
-- [Mask sensitive data stored in task sequence variables](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): In the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step, select the new option to **Do not display this value**. For example, when specifying a password.<!--1358330--> The following behaviors apply when you enable this option:
+- [Mask sensitive data stored in task sequence variables](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): In the [Set Task Sequence Variable](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) step, select the new option to **Do not display this value**. For example, when specifying a password.<!--1358330--> The following behaviors apply when you enable this option:
   - The value of the variable isn't displayed in smsts.log.
   - The Configuration Manager console and SMS Provider handle this value the same as other secrets such as passwords.
   - The value isn't included when you export the task sequence.
@@ -301,7 +301,7 @@ We made the following improvements to OS deployment, some of which were the resu
   > Variables and their values are saved with the task sequence as XML, and obfuscated in the database. When the client requests a task sequence policy from the management point, it is encrypted in transit and when stored on the client. However, all variable values are plain text in the task sequence environment in memory during runtime on the client. If the task sequence includes a step to output the value of the variable, this output is in plain text. This behavior requires an explicit action by the administrator to include such a step in the task sequence. 
 
 
-- [Mask program name during Run Command Step of a task sequence](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): To prevent potentially sensitive data from being displayed or logged, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`. This variable masks the program name in the smsts.log during a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) task sequence step. <!--1358493-->  
+- [Mask program name during Run Command Step of a task sequence](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): To prevent potentially sensitive data from being displayed or logged, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`. This variable masks the program name in the smsts.log during a [Run Command Line](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) task sequence step. <!--1358493-->  
 
 
 
@@ -311,4 +311,4 @@ We made the following improvements to OS deployment, some of which were the resu
 
 
 ## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).    

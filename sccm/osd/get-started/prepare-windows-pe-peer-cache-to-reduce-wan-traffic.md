@@ -19,7 +19,7 @@ manager: dougeby
 
 When you deploy a new operating system in Configuration Manager, computers that run the task sequence can use Windows PE Peer Cache to obtain content from a local peer (a peer cache source) instead of downloading content from a distribution point. This helps minimize wide area network (WAN) traffic in branch office scenarios where there is no local distribution point.  
 
- Windows PE Peer Cache is similar to [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache), but functions in the Windows Preinstallation Environment (Windows PE). The following terms are used to describe the clients that use Windows PE Peer Cache:  
+ Windows PE Peer Cache is similar to [Windows BranchCache](../../core/plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache), but functions in the Windows Preinstallation Environment (Windows PE). The following terms are used to describe the clients that use Windows PE Peer Cache:  
 
 -   A **peer cache client** is a computer that is configured to use Windows PE Peer Cache.  
 
@@ -63,12 +63,12 @@ Use the following sections to manage Peer Cache.
 
     -   Port for content downloading from a peer cache source (HTTP and HTTPS). By default, this is TCP port 8003.  
     
-        For more information, see [Ports used for connections](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp).  
+        For more information, see [Ports used for connections](../../core/plan-design/hierarchy/ports.md#BKMK_PortsClient-ClientWakeUp).  
 
         > [!TIP]  
         >  Clients will use HTTPS to download content when it is available. However, the same port number is used for either HTTP or HTTPS.  
 
--   [Configure the Client Cache for Configuration Manager Clients](/sccm/core/clients/manage/manage-clients#BKMK_ClientCache) on clients to ensure they have enough space to hold and store the images you deploy. Windows PE Peer Cache does not affect the configuration or behavior of the client cache.  
+-   [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) on clients to ensure they have enough space to hold and store the images you deploy. Windows PE Peer Cache does not affect the configuration or behavior of the client cache.  
 
 -   The deployment options for the  task sequence deployment must be configured as Download content locally when needed by task sequence.  
 
@@ -79,7 +79,7 @@ Use the following sections to manage Peer Cache.
 
 - A peer cache client can get content from another peer cache client (a peer cache source).  Because the client is configured for peer cache, when it runs a task sequence that is configured to preserve the cached content, the client becomes a peer cache source.  
 
-- A  client runs a task sequence that includes the optional step, [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent), which is used to prestage the relevant content that is included in the Windows PE Peer Cache task sequence. When you use this method:  
+- A  client runs a task sequence that includes the optional step, [Download Package Content](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent), which is used to prestage the relevant content that is included in the Windows PE Peer Cache task sequence. When you use this method:  
 
   -   The client does not need to install the image that is being deployed.  
 
@@ -127,7 +127,7 @@ Use the following sections to manage Peer Cache.
 
    This flags the content in the task sequence to be retained in the Configuration Manager client cache after the deployment. This is different than using SMSTSPersisContent which only preserves the content for the duration of the task sequence and uses the task sequence cache, not the Configuration Manager client cache.  
 
-  For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).  
+  For more information, see [Task sequence variables](../understand/task-sequence-variables.md).  
 
 ###  <a name="BKMK_PeerCacheValidate"></a> Validate the success of using Windows PE peer cache  
  After you use Windows PE peer cache to deploy and install a task sequence, you can confirm that peer cache was successfully used in the process by viewing the **smsts.log** on the client that ran the task sequence.  

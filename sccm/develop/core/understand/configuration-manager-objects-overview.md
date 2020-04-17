@@ -33,17 +33,17 @@ The Configuration Manager objects are instances of Configuration Manager-specifi
 
  \<InstallationDirectory>\Microsoft.ConfigurationManagement.exe /SMS:DebugView=1  
 
- For more information, see [Configuration Manager console command-line options](/sccm/core/servers/manage/admin-console#command-line-options).  
+ For more information, see [Configuration Manager console command-line options](../../../core/servers/manage/admin-console.md#command-line-options).  
 
 ## See Also  
  [Configuration Manager Association Classes](../../../develop/core/understand/association-classes.md)   
  [Configuration Manager Bit Field Properties](../../../develop/core/understand/configuration-manager-bit-field-properties.md)   
- [Configuration Manager console command-line options](/sccm/core/servers/manage/admin-console#command-line-options)
+ [Configuration Manager console command-line options](../../../core/servers/manage/admin-console.md#command-line-options)
  [Configuration Manager Date and Time Formats](../../../develop/core/understand/date-and-time-formats.md)   
  [Configuration Manager Embedded Objects](../../../develop/core/understand/embedded-objects.md)   
  [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md)   
- [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
+ [Objects overview](configuration-manager-objects-overview.md)
  [Configuration Manager Lazy Properties](../../../develop/core/understand/configuration-manager-lazy-properties.md)   
- [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)
+ [About errors](about-configuration-manager-errors.md)
  [Configuration Manager Object Security](../../../develop/core/understand/configuration-manager-object-security.md)   
  [Configuration Manager Special Queries](../../../develop/core/understand/special-queries.md)

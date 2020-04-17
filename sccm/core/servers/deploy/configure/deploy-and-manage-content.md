@@ -119,7 +119,7 @@ You can prestage content files for applications and package types:
 
 - **When you prestage content for a package with a long package source path** (for example, more than 140 characters), the Extract Content command-line tool might fail to successfully extract the content for that package to the content library.  
 
-For information about when to prestage content files, see  *Prestaged content* in the [Manage network bandwidth for content management](/sccm/core/plan-design/hierarchy/manage-network-bandwidth) topic.  
+For information about when to prestage content files, see  *Prestaged content* in the [Manage network bandwidth for content management](../../../plan-design/hierarchy/manage-network-bandwidth.md) topic.  
 
 Use the following sections to prestage content.  
 

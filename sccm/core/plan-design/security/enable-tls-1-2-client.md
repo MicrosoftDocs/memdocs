@@ -24,7 +24,7 @@ When enabling TLS 1.2 for your Configuration Manager environment, start by ensur
 - Ensure that TLS 1.2 is enabled as a protocol for SChannel at the operating system level
 - Update and configure the .NET Framework to support TLS 1.2
 
-For more information about dependencies for specific Configuration Manager features and scenarios, see [About enabling TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2).
+For more information about dependencies for specific Configuration Manager features and scenarios, see [About enabling TLS 1.2](enable-tls-1-2.md).
 
 ## <a name="bkmk_winhttp"></a> Update Windows and WinHTTP
 
@@ -61,6 +61,6 @@ The example above shows the value of `0xAA0` for the WinHTTP `DefaultSecureProto
 
 ## Next steps
 
-- [Enable TLS 1.2 on the site servers and remote site systems](/sccm/core/plan-design/security/enable-tls-1-2-server)
-- [Common issues when enabling TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2-troubleshoot)
+- [Enable TLS 1.2 on the site servers and remote site systems](enable-tls-1-2-server.md)
+- [Common issues when enabling TLS 1.2](enable-tls-1-2-troubleshoot.md)
 

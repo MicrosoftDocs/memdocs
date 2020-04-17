@@ -18,7 +18,7 @@ manager: dougeby
 
 When you enable co-management, you can gain immediate value. Then once you're ready, you can start transitioning workloads as needed in your environment.
 
-Make sure the co-management prerequisites are set up before you start this process. For more information, see [Prerequisites](/sccm/comanage/overview#prerequisites).
+Make sure the co-management prerequisites are set up before you start this process. For more information, see [Prerequisites](overview.md#prerequisites).
 
 ## Enable co-management starting in version 1906
 
@@ -36,8 +36,8 @@ To enable co-management for Configuration Manager version 1902 and earlier, foll
 
 Now that you've enabled co-management, look at the following articles for immediate value you can gain in your environment:
 
-- [Conditional access](/sccm/comanage/quickstart-conditional-access)  
+- [Conditional access](quickstart-conditional-access.md)  
 
-- [Remote actions from Intune](/sccm/comanage/quickstart-remote-actions)  
+- [Remote actions from Intune](quickstart-remote-actions.md)  
 
-- [Client health](/sccm/comanage/quickstart-client-health)  
+- [Client health](quickstart-client-health.md)  

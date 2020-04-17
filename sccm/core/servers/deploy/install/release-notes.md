@@ -20,14 +20,14 @@ With Configuration Manager, product release notes are limited to urgent issues. 
 
 Feature-specific documentation includes information about known issues that affect core scenarios.  
 
-This article contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](/sccm/core/get-started/technical-preview)  
+This article contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](../../../get-started/technical-preview.md)  
 
 For information about the new features introduced with different versions, see the following articles:
 
-- [What's new in version 2002](/sccm/core/plan-design/changes/whats-new-in-version-2002)
-- [What's new in version 1910](/sccm/core/plan-design/changes/whats-new-in-version-1910)
-- [What's new in version 1906](/sccm/core/plan-design/changes/whats-new-in-version-1906)  
-- [What's new in version 1902](/sccm/core/plan-design/changes/whats-new-in-version-1902)
+- [What's new in version 2002](../../../plan-design/changes/whats-new-in-version-2002.md)
+- [What's new in version 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
+- [What's new in version 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
+- [What's new in version 1902](../../../plan-design/changes/whats-new-in-version-1902.md)
 
 > [!Tip]  
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
@@ -41,7 +41,7 @@ For information about the new features introduced with different versions, see t
 
 *Applies to version 1910*
 
-If your site uses [automatic client upgrade](/configmgr/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade), when you update the site to version 1910, all clients immediately upgrade after the site updates successfully. The only randomization is when clients receive the policy, which by default is every hour. For a large site with many clients, this behavior can consume a significant amount of network traffic and stress distribution points.
+If your site uses [automatic client upgrade](../../../clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade), when you update the site to version 1910, all clients immediately upgrade after the site updates successfully. The only randomization is when clients receive the policy, which by default is every hour. For a large site with many clients, this behavior can consume a significant amount of network traffic and stress distribution points.
 
 For more information on affected versions, see [Client update for Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4538166).
 
@@ -51,7 +51,7 @@ For more information on affected versions, see [Client update for Configuration 
 
 *Applies to version 1910*
 
-If your site includes a [site server in passive mode](/configmgr/core/servers/deploy/configure/site-server-high-availability), you may lose inventory customizations when you update the site. The site doesn't currently synchronize the configuration.mof when you fail over the site servers.
+If your site includes a [site server in passive mode](../configure/site-server-high-availability.md), you may lose inventory customizations when you update the site. The site doesn't currently synchronize the configuration.mof when you fail over the site servers.
 
 To work around this issue, manually back up and restore the site's configuration.mof.
 
@@ -81,7 +81,7 @@ If you then expand a standalone primary site to a hierarchy with a central admin
 
 `Could not obtain application secret for tenant xxxxx. If this is after a site expansion, please run "Renew Secret Key" from admin console.`
 
-To work around this issue, renew the key associated with the app registration in Azure AD. For more information, see [Renew secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
+To work around this issue, renew the key associated with the app registration in Azure AD. For more information, see [Renew secret key](../configure/azure-services-wizard.md#bkmk_renew).
 
 ## Role based administration
 
@@ -89,7 +89,7 @@ To work around this issue, renew the key associated with the app registration in
 <!--6306759-->
 *Applies to version 1910*
 
-After upgrade to version 1910, [security scopes for folders](/configmgr/core/servers/deploy/configure/configure-role-based-administration#bkmk_config-folder) in user collections and device collections don't get replicated from the CAS to primary sites.
+After upgrade to version 1910, [security scopes for folders](../configure/configure-role-based-administration.md#bkmk_config-folder) in user collections and device collections don't get replicated from the CAS to primary sites.
 
 ## Application management
 
@@ -141,7 +141,7 @@ There's no workaround for this issue.
 <!--3479337, SCCMDocs-pr issue 3095-->
 *Applies to: Configuration Manager versions 1810, 1902*
 
-The **OS Deployment Manager** built-in security role has permissions to [phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence). The following roles are missing these permissions:  
+The **OS Deployment Manager** built-in security role has permissions to [phased deployments](../../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md). The following roles are missing these permissions:  
 
 - **Application Administrator**  
 - **Application Deployment Manager**  
@@ -158,7 +158,7 @@ To work around this issue, create a custom security role. Copy an existing secur
 - Modify  
 - Read  
 
-For more information, see [Create custom security roles](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole)
+For more information, see [Create custom security roles](../configure/configure-role-based-administration.md#BKMK_CreateSecRole)
 
 ## Desktop Analytics
 
@@ -167,7 +167,7 @@ For more information, see [Create custom security roles](/sccm/core/servers/depl
 <!-- 4950335 -->
 *Applies to: Configuration Manager version 1902 with update rollup, and version 1906*
 
-If you have a hierarchy, and enable **Hardware inventory** site data for [distributed views](/sccm/core/plan-design/hierarchy/database-replication#bkmk_distviews) on any site replication links, after you configure the Desktop Analytics connection in Configuration Manager you'll see the following error in M365UploadWorker.log:
+If you have a hierarchy, and enable **Hardware inventory** site data for [distributed views](../../../plan-design/hierarchy/database-replication.md#bkmk_distviews) on any site replication links, after you configure the Desktop Analytics connection in Configuration Manager you'll see the following error in M365UploadWorker.log:
 
 `Unexpected exception 'System.Data.SqlClient.SqlException' Remote access is not supported for transaction isolation level "SNAPSHOT".:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action'1 wrapCloseInAction)`
 
@@ -178,7 +178,7 @@ To work around this issue, disable **Hardware inventory** site data for distribu
 <!-- 4749443 -->
 *Applies to: Configuration Manager version 1902 with update rollup*
 
-After you connect the site to [Desktop Analytics](/sccm/desktop-analytics/connect-configmgr), you can **Select specific collections to synchronize with Desktop Analytics**. If you remove a collection and apply the changes, immediately adding a new collection causes an unhandled exception. The console unexpectedly closes.
+After you connect the site to [Desktop Analytics](../../../../desktop-analytics/connect-configmgr.md), you can **Select specific collections to synchronize with Desktop Analytics**. If you remove a collection and apply the changes, immediately adding a new collection causes an unhandled exception. The console unexpectedly closes.
 
 To work around this issue, when you remove a collection, select **OK** to close the properties window. Then open the properties again to add a new collection on the **Desktop Analytics Connection** tab.
 
@@ -235,7 +235,7 @@ To work around this issue:
 
 - Update the site to the globally available version of 1910, released on December 20, 2019. (If you previously updated to the 1910 early update ring, you need to update to this build when it's available.)
 
-- Alternatively, use a traditional [cloud distribution point](/configmgr/core/plan-design/hierarchy/use-a-cloud-based-distribution-point). That role doesn't enforce TLS 1.2, but is compatible with clients that require TLS 1.2.
+- Alternatively, use a traditional [cloud distribution point](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md). That role doesn't enforce TLS 1.2, but is compatible with clients that require TLS 1.2.
 
 ## Protection
 
@@ -247,7 +247,7 @@ To work around this issue:
 
 After November 21, 2019, if you update to version 1906 from version 1902 or earlier, the BitLocker management feature will be turned on and available. This feature is an optional feature starting in version 1910. It's unsupported in version 1906. If you try to use it in version 1906, you may experience unexpected results. If you don't use the feature, there's no impact.
 
-To use the [BitLocker management feature](/configmgr/protect/plan-design/bitlocker-management), update to version 1910.
+To use the [BitLocker management feature](../../../../protect/plan-design/bitlocker-management.md), update to version 1910.
 
 <!--
 ## Backup and recovery

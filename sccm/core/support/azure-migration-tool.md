@@ -31,7 +31,7 @@ This tool, introduced in version 1910, helps you to programmatically create Azur
 
 - Your user account needs to be a Configuration Manager **Full Administrator** and have administrator rights on the primary site server.
 
-- To add a passive server, the primary site must meet the [site server high availability requirements](/sccm/core/servers/deploy/configure/site-server-high-availability#prerequisites). For example, it requires a [remote content library](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).
+- To add a passive server, the primary site must meet the [site server high availability requirements](../servers/deploy/configure/site-server-high-availability.md#prerequisites). For example, it requires a [remote content library](../plan-design/hierarchy/the-content-library.md#bkmk_remote).
 
 ### Required Azure permissions
 
@@ -86,7 +86,7 @@ For more information about permissions and assigning roles, see [Manage access t
 
 1. On the **Site Server High Availability** tab, select **Check** to evaluate your site's readiness.
 
-    If any of the checks fail, select **More detail** to determine how to remediate the problem. For more information about these prerequisites, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability#prerequisites).
+    If any of the checks fail, select **More detail** to determine how to remediate the problem. For more information about these prerequisites, see [Site server high availability](../servers/deploy/configure/site-server-high-availability.md#prerequisites).
 
 2. If you want to extend or migrate your site server to Azure, select **Create a site server in Azure**. Then fill in the following fields:
 
@@ -117,7 +117,7 @@ For more information about permissions and assigning roles, see [Manage access t
     > [!TIP]
     > You can also use the [Azure portal](https://portal.azure.com) to check the status, find errors, and determine potential fixes.
 
-1. When the deployment finishes, go to your SQL servers, and grant permissions for the new Azure VM. For more information, see [Site server high availability - Prerequisites](/sccm/core/servers/deploy/configure/site-server-high-availability#prerequisites).
+1. When the deployment finishes, go to your SQL servers, and grant permissions for the new Azure VM. For more information, see [Site server high availability - Prerequisites](../servers/deploy/configure/site-server-high-availability.md#prerequisites).
 
 1. To add the Azure VM as a site server in passive mode, select **Add site server in passive mode**.
 
@@ -131,8 +131,8 @@ For more information about permissions and assigning roles, see [Manage access t
 
 The tool doesn't currently have any tasks to migrate the database from on-premises to Azure. You can choose to move the database from an on-premises SQL server to an Azure SQL Server VM. The tool lists the following articles on the **Site Database** tab to help:
 
-- [Backup and restore the database](/sccm/core/servers/manage/backup-and-recovery)
-- [Configure SQL Always On and allow the data to replicate](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#changes-for-site-backup)
+- [Backup and restore the database](../servers/manage/backup-and-recovery.md)
+- [Configure SQL Always On and allow the data to replicate](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#changes-for-site-backup)
 - [Migrate a SQL database to an Azure SQL Server VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
 
 ## Site system roles

@@ -27,7 +27,7 @@ After you enable software inventory and the clients run a software inventory cyc
 
 - Create [query-based collections](../../../../core/clients/manage/collections/introduction-to-collections.md) that include devices with specified files.   
 
-- [Run reports](/configmgr/core/servers/manage/introduction-to-reporting) that provide details about files on devices.
+- [Run reports](../../../servers/manage/introduction-to-reporting.md) that provide details about files on devices.
 
 - Use [Resource Explorer](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md) to examine detailed information about the files that were inventoried and collected from client devices.   
 

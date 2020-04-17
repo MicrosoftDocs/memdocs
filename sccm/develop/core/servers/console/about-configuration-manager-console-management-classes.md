@@ -19,9 +19,9 @@ Configuration Manager uses XML to define management classes whose instances cont
  For information about node XML, see [Configuration Manager Console Management Class XML](../../../../develop/core/servers/console/console-management-class-xml.md).  
 
 ## See Also  
- [About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions)
- [About console forms](/sccm/develop/core/servers/console/about-configuration-manager-console-forms)
- [About console views](/sccm/develop/core/servers/console/about-configuration-manager-console-views)
+ [About Configuration Manager console actions](configuration-manager-actions.md)
+ [About console forms](about-configuration-manager-console-forms.md)
+ [About console views](about-configuration-manager-console-views.md)
  [How to Create a Configuration Manager Administrator Console Node](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-console-node.md)   
  [How to Find a Configuration Manager Node GUID](../../../../develop/core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md)   
  [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node-xml.md)

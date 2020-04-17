@@ -20,9 +20,9 @@ Use the Configuration Manager **Windows 8.1 and Windows 10** configuration item 
 
 For more general information on compliance settings in Configuration Manager, see the following articles:
 
-- [Get started with compliance settings](/configmgr/compliance/get-started/get-started-with-compliance-settings)
+- [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md)
 
-- [Plan for and configure compliance settings](/configmgr/compliance/plan-design/plan-for-and-configure-compliance-settings)
+- [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)
 
 ## Create a configuration item
 
@@ -297,7 +297,7 @@ These settings are for devices running Windows 8.1 and Windows 10.
 
 ### Allowed and blocked apps list
 
-These settings are only for devices running Windows Phone, which Configuration Manager on-premises MDM doesn't support. For more information, see [What happened to hybrid?](/configmgr/mdm/understand/what-happened-to-hybrid).
+These settings are only for devices running Windows Phone, which Configuration Manager on-premises MDM doesn't support. For more information, see [What happened to hybrid?](../understand/what-happened-to-hybrid.md).
 
 ### Windows 10 Team
 
@@ -379,4 +379,4 @@ On the **Device Settings** page of the wizard, if you select the option to **Con
 
 ## Next steps
 
-[Monitor compliance settings](/configmgr/compliance/deploy-use/monitor-compliance-settings)
+[Monitor compliance settings](../../compliance/deploy-use/monitor-compliance-settings.md)

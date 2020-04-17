@@ -20,9 +20,9 @@ Starting in version 1906, from the Configuration Manager console you can install
 
 ## Prerequisites
 
-- Enable the [optional feature](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**.  
+- Enable the [optional feature](../../core/servers/manage/install-in-console-updates.md#bkmk_options) **Approve application requests for users per device**.  
 
-- [Deploy the application](/sccm/apps/deploy-use/deploy-applications) as *Available* to a device collection.  
+- [Deploy the application](deploy-applications.md) as *Available* to a device collection.  
 
     - On the **Deployment Settings** page of the deployment wizard, select the following option: **An administrator must approve a request for this application on the device**.  
 
@@ -55,4 +55,4 @@ Monitor the app installation the same as usual in the **Deployments** node of th
 
 ## See also
 
-[Approve applications](/sccm/apps/deploy-use/app-approval)
+[Approve applications](app-approval.md)
