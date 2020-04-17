@@ -171,7 +171,7 @@ Endpoint security also provides easy access to *Device compliance* and *Conditio
 
 ![Manage policies](./media/endpoint-security/endpoint-security-policies.png)
 
-To start using secuirty policies, see [Manage device security with endpoint security](../protect/endpoint-security-policy.md)
+To start using security policies, see [Manage device security with endpoint security](../protect/endpoint-security-policy.md)
 
 ### About policy conflicts
 
