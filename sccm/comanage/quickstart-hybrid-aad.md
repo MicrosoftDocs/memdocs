@@ -98,7 +98,7 @@ Azure AD provides several options to ease your work load, for example:
 
 If you already have an on-premises Active Directory environment, and you want to join your domain-joined devices to Azure AD, configure hybrid Azure AD-joined devices. For more information, [How To: Plan your hybrid Azure Active Directory join implementation](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
 
-Configuration Manager has a client setting to [Automatically register new Windows 10 domain-joined devices with Azure AD](/sccm/core/clients/deploy/about-client-settings#automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory). For more information on configuring client settings, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
+Configuration Manager has a client setting to [Automatically register new Windows 10 domain-joined devices with Azure AD](../core/clients/deploy/about-client-settings.md#automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory). For more information on configuring client settings, see [How to configure client settings](../core/clients/deploy/configure-client-settings.md).
 
 If you want to configure Azure AD-join for your devices without also joining them to your on-premises domain, review the considerations for Azure AD-join in your environment. Once you decided to go with Azure AD join, you have many options to deploy it based on your organization's needs. For more information, see the following articles:
 

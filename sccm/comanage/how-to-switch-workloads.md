@@ -20,11 +20,11 @@ One of the benefits of co-management is switching workloads from Configuration M
 
 If you switch a workload to Intune, but later change your mind, you can switch it back to Configuration Manager.
 
-For more information on the supported workloads, see [Workloads](/sccm/comanage/workloads).
+For more information on the supported workloads, see [Workloads](workloads.md).
 
 ## Switch workloads starting in version 1906
 <!--3555750 FKA 1357954 -->
-Starting in version 1906, you can configure different pilot collections for each of the co-management workloads. Being able to use different pilot collections allows you to take a more granular approach when shifting workloads. You can switch workloads when you enable co-management, or later when you're ready. If you haven't already enabled co-management, do that first. For more information, see [How to enable co-management](/sccm/comanage/how-to-enable). After you enable co-management, modify the settings in the co-management properties.
+Starting in version 1906, you can configure different pilot collections for each of the co-management workloads. Being able to use different pilot collections allows you to take a more granular approach when shifting workloads. You can switch workloads when you enable co-management, or later when you're ready. If you haven't already enabled co-management, do that first. For more information, see [How to enable co-management](how-to-enable.md). After you enable co-management, modify the settings in the co-management properties.
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node.  
 2. Select the co-management object, and then choose **Properties** in the ribbon.  
@@ -48,7 +48,7 @@ Starting in version 1906, you can configure different pilot collections for each
 
 ## Switch workloads in version 1902 and earlier
 
-You can switch workloads when you enable co-management, or later when you're ready. If you haven't already enabled co-management, do that first. For more information, see [How to enable co-management](/sccm/comanage/how-to-enable). After you enable co-management, modify the settings in the co-management properties.
+You can switch workloads when you enable co-management, or later when you're ready. If you haven't already enabled co-management, do that first. For more information, see [How to enable co-management](how-to-enable.md). After you enable co-management, modify the settings in the co-management properties.
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node.  
 
@@ -75,4 +75,4 @@ You can switch workloads when you enable co-management, or later when you're rea
 
 ## Next steps
 
-[Monitor co-management](/sccm/comanage/how-to-monitor)
+[Monitor co-management](how-to-monitor.md)

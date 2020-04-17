@@ -122,7 +122,7 @@ Select a state in the tile to drill through to a list of devices in that state.
 
 Displays a bar chart with the number of devices that you've transitioned to Microsoft Intune for the available workloads.
 
-The list of workloads varies by version of Configuration Manager. For more information, see [Workloads able to be transitioned to Intune](/sccm/comanage/workloads).
+The list of workloads varies by version of Configuration Manager. For more information, see [Workloads able to be transitioned to Intune](workloads.md).
 
 Hover over a chart section to show the number of devices transitioned for the workload. 
 
@@ -146,14 +146,14 @@ There are hundreds of possible errors. The following table lists the most common
 | 2149056554 (0x‭8018002A‬)<br>&nbsp; | The user canceled the operation<br><br>If MDM enrollment requires multi-factor authentication, and the user hasn't signed in with a supported second factor, Windows displays a toast notification to the user to enroll. If the user doesn't respond to toast notification, this error occurs. This issue should be transient, as Configuration Manager will retry and prompt the user. Users should use multi-factor authentication when they sign in to Windows. Also educate them to expect this behavior, and if prompted, take action. | 
 | 2149056533 (0x80180015)<br>MENROLL_E_NOTSUPPORTED | Mobile device management generally not supported | 
 | 2149056514 (0x80180002)<br>MENROLL_E_DEVICE_AUTHENTICATION_ERROR | Server failed to authenticate the user<br><br> There's no Azure AD token for the user. Make sure the user can authenticate to Azure AD. |
-| 2147942450 (0x‭80070032‬)<br>&nbsp; | MDM auto-enrollment is only supported on Windows RS3 and above.<br><br>Make sure the device meets the [minimum requirements](/sccm/comanage/overview#windows-10) for co-management. |
+| 2147942450 (0x‭80070032‬)<br>&nbsp; | MDM auto-enrollment is only supported on Windows RS3 and above.<br><br>Make sure the device meets the [minimum requirements](overview.md#windows-10) for co-management. |
 | 3400073293 | ADAL user realm account response unknown<br><br>Check your Azure AD configuration, and make sure that users can successfully authenticate. | 
 | 3399548929 | Need user sign-in<br><br>This issue should be transient. It occurs when the user quickly signs out before the enrollment task happens. | 
 | 3400073236 | ADAL security token request failed.<br><br>Check your Azure AD configuration, and make sure that users can successfully authenticate. |
 | 2149122477 | Generic HTTP issue |
 | 3400073247 | ADAL-integrated Windows authentication is only supported in federated flow<br><br>[Plan your hybrid Azure Active Directory join implementation](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) | 
 | 3399942148 | The server or proxy was not found.<br><br>This issue should be transient, when the client can't communicate with cloud. If it persists, make sure the client has consistent connectivity to Azure. | 
-| 2149056532 | Specific platform or version is not supported<br><br>Make sure the device meets the [minimum requirements](/sccm/comanage/overview#windows-10) for co-management. |
+| 2149056532 | Specific platform or version is not supported<br><br>Make sure the device meets the [minimum requirements](overview.md#windows-10) for co-management. |
 | 2147943568 | Element not found<br><br>This issue should be transient. If it persists, contact Microsoft Support. |
 | 2192179208 | Not enough memory resources are available to process this command.<br><br>This issue should be transient, it should resolve itself when the client retries. |
 | 3399614467 | ADAL Authorization grant failed for this assertion<br><br>Check your Azure AD configuration, and make sure that users can successfully authenticate. |
@@ -171,7 +171,7 @@ The production policy (CoMgmtSettingsProd) is targeted to the **All Systems** co
 
 ## WMI device data
 
-Query the **SMS_Client_ComanagementState** WMI class. You can create custom collections in Configuration Manager, which help determine the status of your co-management deployment. For more information on creating custom collections, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).
+Query the **SMS_Client_ComanagementState** WMI class. You can create custom collections in Configuration Manager, which help determine the status of your co-management deployment. For more information on creating custom collections, see [How to create collections](../core/clients/manage/collections/create-collections.md).
 
 The following fields are available in the WMI class:  
 
