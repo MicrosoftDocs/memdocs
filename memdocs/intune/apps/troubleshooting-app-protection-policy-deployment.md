@@ -8,8 +8,8 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.date: 4/17/2020
-ms.prod: intune
-ms.topic: article
+ms.service: microsoft-intune
+ms.topic: conceptual
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
