@@ -35,7 +35,7 @@ This procedure configures custom client settings for Endpoint Protection, which 
 
 4. In the **Create Custom Client Device Settings** dialog box, provide a name and a description for the group of settings, and then select **Endpoint Protection**.  
 
-5. Configure the Endpoint Protection client settings that you require. For a full list of Endpoint Protection client settings that you can configure, see the Endpoint Protection section in [About client settings](/sccm/core/clients/deploy/about-client-settings#endpoint-protection).  
+5. Configure the Endpoint Protection client settings that you require. For a full list of Endpoint Protection client settings that you can configure, see the Endpoint Protection section in [About client settings](../../core/clients/deploy/about-client-settings.md#endpoint-protection).  
 
    > [!IMPORTANT]  
    >  Install the Endpoint Protection site system role before you configure client settings for Endpoint Protection.  
@@ -46,7 +46,7 @@ This procedure configures custom client settings for Endpoint Protection, which 
 
 8. In the **Select Collection** dialog box, choose the collection to which you want to deploy the client settings and then click **OK**. The new deployment is shown in the **Deployments** tab of the details pane.  
 
-Clients are configured with these settings when they next download client policy. For more information, see [Initiate policy retrieval for a Configuration Manager client](/sccm/core/clients/manage/manage-clients#BKMK_PolicyRetrieval).  
+Clients are configured with these settings when they next download client policy. For more information, see [Initiate policy retrieval for a Configuration Manager client](../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval).  
 
 
 
@@ -66,7 +66,7 @@ The following list contains the required prerequisites for installing the Endpoi
 
 - You must have access to the Endpoint Protection client installation package, **scepinstall.exe**. Find this package in the **Client** folder of the Configuration Manager installation folder on the site server.  
 
-- To deploy the Endpoint Protection client with your organization's required configuration, create and export an antimalware policy. Then specify this policy when you manually install the Endpoint Protection client. For more information, see [How to create and deploy antimalware policies](/sccm/protect/deploy-use/endpoint-antimalware-policies).  
+- To deploy the Endpoint Protection client with your organization's required configuration, create and export an antimalware policy. Then specify this policy when you manually install the Endpoint Protection client. For more information, see [How to create and deploy antimalware policies](endpoint-antimalware-policies.md).  
 
   > [!NOTE]  
   >  You can't export the **Default Client Antimalware Policy**.  
@@ -168,5 +168,5 @@ When you deploy an OS image that contains the Endpoint Protection client, it aut
 
 ## See also
 
-For more information about OS deployment in Configuration Manager, see [Manage OS images](/sccm/osd/get-started/manage-operating-system-images).
+For more information about OS deployment in Configuration Manager, see [Manage OS images](../../osd/get-started/manage-operating-system-images.md).
 

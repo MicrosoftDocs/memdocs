@@ -52,7 +52,7 @@ Use these steps to configure your infrastructure for SCEP, or PFX certificates.
 3. Deploy to this server a PKI certificate that supports client authentication. You might already have a suitable certificate installed on the computer that you can use, or you might have to (or prefer to) deploy a certificate specifically for this purpose. For more information about the requirements for this certificate, refer to the details for Servers running the Configuration Manager Policy Module with the Network Device Enrollment Service role service in the **PKI Certificates for Servers** section in the [PKI certificate requirements for Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md) topic.  
 
    > [!TIP]
-   >  If you need help deploying this certificate, you can use the instructions for [Deploying the Client Certificate for Distribution Points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012), because the certificate requirements are the same with one exception:  
+   >  If you need help deploying this certificate, you can use the instructions for [Deploying the Client Certificate for Distribution Points](../../core/plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clientdistributionpoint2008_cm2012), because the certificate requirements are the same with one exception:  
    > 
    > - Do not select the **Allow private key to be exported** check box on the **Request Handling** tab of the properties for the certificate template.  
    > 

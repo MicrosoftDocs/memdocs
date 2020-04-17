@@ -16,9 +16,9 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuration Manager supports multiple VPN connection types. For more information on the connection types available for the different device platforms, see [VPN profiles](/configmgr/protect/deploy-use/vpn-profiles).
+Configuration Manager supports multiple VPN connection types. For more information on the connection types available for the different device platforms, see [VPN profiles](vpn-profiles.md).
 
-For third-party VPN connections, distribute the VPN app before you deploy the VPN profile. If you don't deploy the app, users will be prompted to do so when they try to connect to the VPN. For more information, see [Deploy applications](/configmgr/apps/deploy-use/deploy-applications).
+For third-party VPN connections, distribute the VPN app before you deploy the VPN profile. If you don't deploy the app, users will be prompted to do so when they try to connect to the VPN. For more information, see [Deploy applications](../../apps/deploy-use/deploy-applications.md).
 
 ## Create a VPN profile
 
@@ -43,7 +43,7 @@ For third-party VPN connections, distribute the VPN app before you deploy the VP
 
 1. On the **Connection** page, specify the following information:
 
-    - **Connection type**: Choose the VPN connection type. For more information on the supported types, see [VPN profiles](/configmgr/protect/deploy-use/vpn-profiles).
+    - **Connection type**: Choose the VPN connection type. For more information on the supported types, see [VPN profiles](vpn-profiles.md).
 
     - **Server list**: Add a new server to use for the VPN connection. Depending on the connection type, you can add one or more VPN servers and specify which server is the default.
 
@@ -57,7 +57,7 @@ For third-party VPN connections, distribute the VPN app before you deploy the VP
 
     - For a *desktop app*, provide the file path of the app.
 
-    - For a *universal app*, provide the package family name (PFN). To learn how to find the PFN for an app, see [Find a package family name for per-app VPN](/configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn).
+    - For a *universal app*, provide the package family name (PFN). To learn how to find the PFN for an app, see [Find a package family name for per-app VPN](find-a-pfn-for-per-app-vpn.md).
 
     You can also configure an option so that **Only the listed apps can use this VPN**.
 
@@ -171,6 +171,6 @@ Depending on the selected options, you might be asked to specify more informatio
 
 ## Next steps
 
-- For third-party VPN connections, distribute the VPN app before you deploy the VPN profile. If you don't deploy the app, users will be prompted to do so when they try to connect to the VPN. For more information, see [Deploy applications](/configmgr/apps/deploy-use/deploy-applications).
+- For third-party VPN connections, distribute the VPN app before you deploy the VPN profile. If you don't deploy the app, users will be prompted to do so when they try to connect to the VPN. For more information, see [Deploy applications](../../apps/deploy-use/deploy-applications.md).
 
-- Deploy the VPN profile. For more information, see [How to deploy profiles](/configmgr/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles).
+- Deploy the VPN profile. For more information, see [How to deploy profiles](deploy-wifi-vpn-email-cert-profiles.md).

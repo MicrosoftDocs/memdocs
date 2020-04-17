@@ -126,7 +126,7 @@ If the issue persists, continue to the next step.
 
 #### Step 6: Contact Microsoft support  
 
-If these steps didn't resolve the issue, contact Microsoft support. For more information, see [Support options and community resources](/sccm/core/understand/find-help#BKMK_SupportOptions).  
+If these steps didn't resolve the issue, contact Microsoft support. For more information, see [Support options and community resources](../../core/understand/find-help.md#BKMK_SupportOptions).  
 
 ## Starting Windows Defender or Endpoint Protection service
 
@@ -152,7 +152,7 @@ Close all applications and restart your computer.
 
     1. If this action isn't available, select **Stop**. Wait for the service to stop, and then select the **Start** action to restart the service.  
 
-Note any errors that may appear during this process. [Contact Microsoft Support](/sccm/core/understand/find-help#BKMK_SupportOptions) and provide the error information.  
+Note any errors that may appear during this process. [Contact Microsoft Support](../../core/understand/find-help.md#BKMK_SupportOptions) and provide the error information.  
 
 #### Step 3: Remove any third-party security programs  
 
@@ -196,6 +196,6 @@ When Windows Defender or Endpoint Protection detects a potential threat, it trie
 
 ## See also
 
-[Endpoint Protection client frequently asked questions](/sccm/protect/deploy-use/endpoint-protection-client-faq)
+[Endpoint Protection client frequently asked questions](endpoint-protection-client-faq.md)
 
-[Endpoint Protection client help](/sccm/protect/deploy-use/endpoint-protection-client-help)
+[Endpoint Protection client help](endpoint-protection-client-help.md)
