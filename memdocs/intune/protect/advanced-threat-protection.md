@@ -114,7 +114,9 @@ You only need to enable Defender ATP a single time per tenant.
 >
 > To view classic conditional access policies, in [Azure](https://portal.azure.com/#home), go to **Azure Active Directory** > **Conditional Access** > **Classic policies**.
 
-## Onboard devices by using a configuration profile (for Windows devices only)
+## Onboard Windows devices by using a configuration profile 
+
+*Applies to Windows devices only*
 
 For the Windows platform, after you establish the service-to-service connection between Intune and Microsoft Defender ATP, you onboard your Intune managed devices to ATP so that data about their risk level can be collected and used. To onboard devices, you use a device configuration profile for Microsoft Defender ATP.
 
