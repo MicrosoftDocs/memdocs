@@ -2223,7 +2223,7 @@ With this feature update, you can create a device configuration profile that swi
 Applies to: the most recent [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) build (while in preview).
 
 #### Windows Defender ATP configuration package automatically added to configuration profile<!-- 2144658 -->
-When using [Advanced Threat Protection and onboarding](../protect/advanced-threat-protection.md#onboard-devices-by-using-a-configuration-profile) devices in Intune, you previously had to download a configuration package, and add it to your configuration profile. With this update, Intune automatically gets the package from Windows Defender Security Center, and adds it to your profile.
+When using [Advanced Threat Protection and onboarding](../protect/advanced-threat-protection.md#onboard-windows-devices-by-using-a-configuration-profile) devices in Intune, you previously had to download a configuration package, and add it to your configuration profile. With this update, Intune automatically gets the package from Windows Defender Security Center, and adds it to your profile.
 Applies to Windows 10 and later.
 
 #### Require users to connect during device setup<!--2311457-->
