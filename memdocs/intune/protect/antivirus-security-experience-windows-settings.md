@@ -95,7 +95,7 @@ View the Antivirus policy settings you can configure for the **Windows Security 
   Use this setting to block Windows Security notifications to your users for all of the preceding feature settings. Alternatively, you can manage the Windows Security app notifications per feature by using the proceeding settings.
 
   - **Not configured** (*default*) - All Windows Security app notifications that are not controlled by another setting are allowed.
-  - **Block non-crtiical notification** - Notifications such as scan completions are blocked.
+  - **Block non-critical notification** - Notifications such as scan completions are blocked.
   - **Block all notifications** - Critical and non-critical notifications are blocked for all Windows Security features.
 
 - **Hide the Windows Security icon from the notification area**  
