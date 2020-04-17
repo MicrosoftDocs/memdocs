@@ -22,7 +22,7 @@ With Configuration Manager on-premises mobile device management (MDM), users can
 
 - You install the required trusted root certificate on the device.
 
-For more information on how to set up enrollment, see [Set up device enrollment for on-premises MDM](/configmgr/mdm/get-started/set-up-device-enrollment-on-premises-mdm).
+For more information on how to set up enrollment, see [Set up device enrollment for on-premises MDM](../get-started/set-up-device-enrollment-on-premises-mdm.md).
 
 ## <a name="bkmk_enrollDesk"></a> Enroll Windows 10
 
