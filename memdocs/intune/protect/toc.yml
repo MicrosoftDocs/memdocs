@@ -63,6 +63,8 @@
   - name: Endpoint security
     href: endpoint-security.md
     items:
+    - name: Manage devices
+      href: endpoint-security-manage-devices.md
     - name: Security baselines
       items: 
       - name: Security baselines 
