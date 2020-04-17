@@ -84,7 +84,7 @@ The following samples are in the `%Program Files%\Microsoft System Center 2012 R
 |Sample|Description|  
 |------------|-----------------|  
 |DcmAssignBaseline|Demonstrates how to assign a configuration baseline to a collection by using an assignment object.|  
-|DcmImport|Demonstrates how to create an [SMS_ConfigurationItem Server WMI Class](/configmgr/develop/reference/compliance/sms_configurationitem-server-wmi-class) from an existing XML definition of a configuration item.|  
+|DcmImport|Demonstrates how to create an [SMS_ConfigurationItem Server WMI Class](../../reference/compliance/sms_configurationitem-server-wmi-class.md) from an existing XML definition of a configuration item.|  
 |Schema|The XML digest schema file and digest authoring document for Compliance Settings.|  
 
 ## Header files

@@ -17,7 +17,7 @@ You create a collection variable for a Configuration Manager collection by addin
 
 ### To create a collection variable  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Get an instance of [SMS_CollectionSettings](../../develop/reference/core/clients/collections/sms_collectionsettings-server-wmi-class.md).  
 
@@ -164,10 +164,10 @@ public void CreateCollectionVariable(
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
+ [Objects overview](../core/understand/configuration-manager-objects-overview.md)
  [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to an SMS Provider in Configuration Manager  by Using WMI](../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [How to Create a Computer Variable in Configuration Manager](../../develop/osd/how-to-create-a-computer-variable.md)   
  [How to Create a Configuration Manager Object by Using Managed Code](../../develop/core/understand/how-to-create-a-configuration-manager-object-by-using-managed-code.md)   
  [How to Create a Configuration Manager Object by Using WMI](../../develop/core/understand/how-to-create-a-configuration-manager-object-by-using-wmi.md)   
- [About OS deployment computer management](/sccm/develop/osd/about-computer-management)
+ [About OS deployment computer management](about-computer-management.md)

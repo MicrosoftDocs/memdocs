@@ -20,5 +20,5 @@ For detailed information about Configuration Manager maintenance windows, see th
 -   [Program Run Scenario using Maintenance Windows](https://technet.microsoft.com/library/bb694197.aspx)  
 
 ## See Also  
- [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)
- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+ [About deployments](about-software-distribution-deployments.md)
+ [Software distribution overview](software-distribution-overview.md)

@@ -26,7 +26,7 @@ In Configuration Manager, you set the operating system deployment PXE service po
 
 ### To set the PXE response to network interfaces  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Make a connection to the distribution point instance with PXE enabled.  
 
@@ -81,7 +81,7 @@ public void SetNetworkInterface(WqlConnectionManager connection,                
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [About OS deployment site role configuration](/sccm/develop/osd/about-operating-system-deployment-site-role-configuration)
+ [About OS deployment site role configuration](about-operating-system-deployment-site-role-configuration.md)
  [How to Set the PXE Service Point Response for a Specific Network Interface](../../develop/osd/how-to-set-the-pxe-service-point-response-for-a-specific-network-interface.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)

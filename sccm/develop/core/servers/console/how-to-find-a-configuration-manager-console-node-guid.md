@@ -29,5 +29,5 @@ Globally Unique Identifiers (GUIDs) are used to identify parts of the Configurat
 
 ### See also
 
- [About console nodes](/sccm/develop/core/servers/console/about-configuration-manager-console-nodes)
+ [About console nodes](about-configuration-manager-console-nodes.md)
  [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node-xml.md)

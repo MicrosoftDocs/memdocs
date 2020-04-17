@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Exercise 1: Run an existing report'
 titleSuffix: Configuration Manager
 description: Run an existing Configuration Manager report and review specific report elements.
@@ -18,7 +18,7 @@ manager: dougeby
 
 In this exercise, you will run an existing Configuration Manager report and review specific report elements.
 
-For more information about how to work with reports in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).
+For more information about how to work with reports in Configuration Manager, see [Introduction to reporting](../../../../core/servers/manage/introduction-to-reporting.md).
 
 ## To run an existing Configuration Manager report
 

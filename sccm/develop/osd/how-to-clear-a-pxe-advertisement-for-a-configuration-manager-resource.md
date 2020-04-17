@@ -21,7 +21,7 @@ To clear a PXE advertisement for a Configuration Manager resource, you call the 
 
 ### To clear a PXE advertisement for a resource  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Create the `ClearLastNBSAdvForMachines` method resource identifier array for the method parameters.  
 
@@ -120,4 +120,4 @@ public void ClearPxeAdvertisementResource(WqlConnectionManager connection, int r
 
 ## See Also  
  [How to Clear a PXE Advertisement For a Configuration Manager Collection](../../develop/osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-collection.md)   
- [About image management](/sccm/develop/osd/about-operating-system-deployment-image-management)
+ [About image management](about-operating-system-deployment-image-management.md)

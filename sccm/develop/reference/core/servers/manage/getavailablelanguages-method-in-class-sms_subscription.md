@@ -48,4 +48,4 @@ sint32 GetAvailableLanguages(
 
 ## See also
 
-[SMS_Alert server WMI class](/sccm/develop/reference/core/servers/manage/sms_alert-server-wmi-class)
+[SMS_Alert server WMI class](sms_alert-server-wmi-class.md)

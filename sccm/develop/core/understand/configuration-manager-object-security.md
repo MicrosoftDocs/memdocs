@@ -50,7 +50,7 @@ manager: dougeby
  MIF files: \<SMS>/inboxes/inventry.box  
 
 ## See Also  
- [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
+ [Objects overview](configuration-manager-objects-overview.md)
  [Configuration Manager Association Classes](../../../develop/core/understand/association-classes.md)   
  [Configuration Manager Bit Field Properties](../../../develop/core/understand/configuration-manager-bit-field-properties.md)   
  [Configuration Manager Date and Time Formats](../../../develop/core/understand/date-and-time-formats.md)   
@@ -58,4 +58,4 @@ manager: dougeby
  [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md)   
  [Configuration Manager Lazy Properties](../../../develop/core/understand/configuration-manager-lazy-properties.md)   
  [Configuration Manager Special Queries](../../../develop/core/understand/special-queries.md)   
- [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)
+ [About errors](about-configuration-manager-errors.md)

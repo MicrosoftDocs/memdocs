@@ -25,4 +25,4 @@ This section provides reference content for the operating system deployment task
 
 ## See also
 
-[OS deployment client COM automation classes](/sccm/develop/reference/core/clients/client-classes/operating-system-deployment-client-com-automation-classes)
+[OS deployment client COM automation classes](operating-system-deployment-client-com-automation-classes.md)

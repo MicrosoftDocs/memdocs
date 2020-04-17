@@ -73,13 +73,13 @@ Configuration Manager clients receive policy by periodically polling a Configura
 
 **Primary WMI Namespace:** ROOT\SMS\SITE_\<site code>  
 
-**Server WMI Classes:** [Configuration Manager API reference](/sccm/develop/reference/configuration-manager-reference)  
+**Server WMI Classes:** [Configuration Manager API reference](../../reference/configuration-manager-reference.md)  
 
 ### Client  
 
 **Primary WMI Namespace:** ROOT\CCM  
 
-**Client WMI Classes:** [Configuration Manager API reference](/sccm/develop/reference/configuration-manager-reference)  
+**Client WMI Classes:** [Configuration Manager API reference](../../reference/configuration-manager-reference.md)  
 
 > [!IMPORTANT]
 > The client-side programming story for Configuration Manager is evolving to be primarily WMI-based. In the past, a set of client-side COM classes were the primary method used to access client functionality, although additional client-side WMI classes/methods were also used. With the release of System Center 2012 Configuration Manager, the focus is shifting to a set of WMI classes in the namespace: **root/ccm/ClientSDK**. Understandably, an abstraction, in the form of COM or specific SDK classes, provides a useful abstraction from underlying architectural changes over the course of product updates.  
@@ -108,13 +108,13 @@ Configuration Manager clients receive policy by periodically polling a Configura
 > [!IMPORTANT]
 > The SDK most often provides code examples in VBScript and C#. This does not mean that other languages will not work with the SMS Provider. The SMS Provider is language agnostic, as long as the correct objects and constructs can be exchanged. Use the language (tool) that is most appropriate for your environment. C# is used internally as a baseline for testing the SDK code snippets, so examples of object manipulation and code constructs will most often be provided in C#. If you use another language, you should be comfortable translating from C# to your language of choice.  
 
-- [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)  
+- [SMS Provider fundamentals](sms-provider-fundamentals.md)  
 
-- [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
+- [Objects overview](configuration-manager-objects-overview.md)
 
-- [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file)  
+- [About the site control file](about-the-configuration-manager-site-control-file.md)  
 
-- [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)  
+- [About errors](about-configuration-manager-errors.md)  
 
 ## Basic tools  
 

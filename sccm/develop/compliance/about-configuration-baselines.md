@@ -81,4 +81,4 @@ In Configuration Manager, baselines are used to define the configuration of a pr
 
 ## See Also
 
-[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)
+[About authoring configuration baselines and items](about-authoring-configuration-baselines-and-configuration-items.md)

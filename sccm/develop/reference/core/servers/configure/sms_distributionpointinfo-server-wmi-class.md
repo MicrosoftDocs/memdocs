@@ -15,7 +15,7 @@ manager: dougeby
 
 # SMS_DistributionPointInfo server WMI class
 
-The `SMS_DistributionPointInfo` WMI class is an SMS Provider server class in Configuration Manager. It provides information about a specific [SMS_DistributionPoint server WMI class](/sccm/develop/reference/core/servers/configure/sms_distributionpoint-server-wmi-class) object.  
+The `SMS_DistributionPointInfo` WMI class is an SMS Provider server class in Configuration Manager. It provides information about a specific [SMS_DistributionPoint server WMI class](sms_distributionpoint-server-wmi-class.md) object.  
 
 ## Syntax  
 
@@ -72,8 +72,8 @@ The following table lists the methods in the `SMS_DistributionPointInfo` class.
 
 |||  
 |-|-|  
-|[GetChainedPullDPs Method in Class SMSDistributionPointInfo](/sccm/develop/reference/core/servers/configure/getchainedpulldps-method-in-class-smsdistributionpointinfo)|Ensures that when a source distribution point is assigned, a looping chain is not generated.|  
-|[SetDPMaintenanceMode method in class SMS_DistributionPointInfo](/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo)|Starting in version 1902, put a distribution point in maintenance mode.|
+|[GetChainedPullDPs Method in Class SMSDistributionPointInfo](getchainedpulldps-method-in-class-smsdistributionpointinfo.md)|Ensures that when a source distribution point is assigned, a looping chain is not generated.|  
+|[SetDPMaintenanceMode method in class SMS_DistributionPointInfo](setdpmaintenancemode-method-in-class-sms-distributionpointinfo.md)|Starting in version 1902, put a distribution point in maintenance mode.|
 
 
 ## Properties
@@ -503,20 +503,20 @@ Class qualifiers for this class include:
 
 - Read (read-only)  
 
-For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager class and property qualifiers](/sccm/develop/reference/misc/class-and-property-qualifiers).  
+For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager class and property qualifiers](../../../misc/class-and-property-qualifiers.md).  
 
 
 ## Requirements  
 
 ### Runtime requirements
 
-For more information, see [Configuration Manager server runtime requirements](/sccm/develop/core/reqs/server-runtime-requirements).  
+For more information, see [Configuration Manager server runtime requirements](../../../../core/reqs/server-runtime-requirements.md).  
 
 ### Development requirements
 
-For more information, see [Configuration Manager server development requirements](/sccm/develop/core/reqs/server-development-requirements).
+For more information, see [Configuration Manager server development requirements](../../../../core/reqs/server-development-requirements.md).
 
 
 ## See also
 
-- [SMS_DistributionPoint server WMI class](/sccm/develop/reference/core/servers/configure/sms_distributionpoint-server-wmi-class)
+- [SMS_DistributionPoint server WMI class](sms_distributionpoint-server-wmi-class.md)

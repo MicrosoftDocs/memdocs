@@ -38,7 +38,7 @@ You use the SMS Provider to access and modify Configuration Manager data. The SM
 ## Schema  
  WMI objects are described by classes, providing definitions of their properties, attributes, and other information. These classes are organized into an inheritance hierarchy supporting object associations and grouped by areas of interest, such as networking, applications, and systems. Each area of interest represents a schema, which is a subset of the information that is available about the managed environment.  
 
- For more information, see the [Schema overview](/sccm/develop/core/understand/configuration-manager-schema-overview).  
+ For more information, see the [Schema overview](configuration-manager-schema-overview.md).  
 
  For information about accessing the SMS Provider using WMI, see [WMI Configuration Manager Provider Fundamentals](../../../develop/core/understand/wmi-configuration-manager-provider-fundamentals.md)  
 
@@ -51,4 +51,4 @@ You use the SMS Provider to access and modify Configuration Manager data. The SM
 
 ## See also
 
-[SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)
+[SMS Provider fundamentals](sms-provider-fundamentals.md)

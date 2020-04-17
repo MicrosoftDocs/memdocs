@@ -27,7 +27,7 @@ In Configuration Manager, you read an embedded property list from a site control
 
 ### To read  a site control file embedded property list  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](sms-provider-fundamentals.md).  
 
 2.  Using the connection object from step one, get a site control file resource. For more information, see [About the Configuration Manager Site Control File](../../../develop/core/understand/about-the-configuration-manager-site-control-file.md).  
 

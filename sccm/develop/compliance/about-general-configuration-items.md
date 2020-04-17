@@ -19,4 +19,4 @@ In Configuration Manager, general configuration items are models of settings and
 >  General configuration items are referred to as BusinessPolicy configuration items in the DCMDigest.xsd  
 
 ## See Also  
-[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)
+[About authoring configuration baselines and items](about-authoring-configuration-baselines-and-configuration-items.md)

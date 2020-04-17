@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # How to Create an Advertisement
-The following example shows how to create an advertisement by using the [SMS_Advertisement](/sccm/develop/reference/core/servers/configure/sms_advertisement-server-wmi-class) class and class properties in Configuration Manager.  
+The following example shows how to create an advertisement by using the [SMS_Advertisement](../../../reference/core/servers/configure/sms_advertisement-server-wmi-class.md) class and class properties in Configuration Manager.  
 
 > [!IMPORTANT]
 >  To create an advertisement that targets a collection, you must have "Deploy Packages" permissions for the collection and "Read" permissions for the package.  
@@ -31,7 +31,7 @@ The following example shows how to create an advertisement by using the [SMS_Adv
 ## Example  
  The following example method creates an advertisement for software distribution.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](/sccm/develop/core/understand/calling-code-snippets).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -124,9 +124,9 @@ public void CreateSWDAdvertisement(WqlConnectionManager connection, string exist
  mscorlib  
 
 ## Robust Programming  
- For more information about error handling, see [About Configuration Manager Errors](/sccm/develop/core/understand/about-configuration-manager-errors).  
+ For more information about error handling, see [About Configuration Manager Errors](../../understand/about-configuration-manager-errors.md).  
 
 ## See also
 
-- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
-- [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)
+- [Software distribution overview](software-distribution-overview.md)
+- [About deployments](about-software-distribution-deployments.md)

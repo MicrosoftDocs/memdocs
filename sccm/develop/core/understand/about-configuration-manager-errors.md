@@ -46,7 +46,7 @@ In Configuration Manager, when a Configuration Manager error occurs it is either
  For more information about handling asynchronous exceptions, see [How to Handle Configuration Manager Asynchronous Errors by Using Managed Code](../../../develop/core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md).  
 
 ## See Also  
- [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)
+ [About errors](about-configuration-manager-errors.md)
  [How to Handle Configuration Manager Synchronous Errors by Using WMI](../../../develop/core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-wmi.md)   
  [How to Handle Configuration Manager Asynchronous Errors by Using WMI](../../../develop/core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-wmi.md)   
  [Configuration Manager Asynchronous Errors by Using Managed Code](../../../develop/core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md)   

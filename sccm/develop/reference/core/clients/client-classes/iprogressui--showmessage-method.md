@@ -72,10 +72,10 @@ The method succeeded.
 
 ## See also
 
-- [OS deployment client COM automation classes](/sccm/develop/reference/core/clients/client-classes/operating-system-deployment-client-com-automation-classes)  
+- [OS deployment client COM automation classes](operating-system-deployment-client-com-automation-classes.md)  
 
-- [IProgressUI interface](/sccm/develop/reference/core/clients/client-classes/iprogressui-interface)  
+- [IProgressUI interface](iprogressui-interface.md)  
 
-- [About reporting Configuration Manager custom action progress](/sccm/develop/osd/about-reporting-configuration-manager-custom-action-progress)  
+- [About reporting Configuration Manager custom action progress](../../../../osd/about-reporting-configuration-manager-custom-action-progress.md)  
 
-- [How to use task sequence variables in a running Configuration Manager task sequence](/sccm/develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence)  
+- [How to use task sequence variables in a running Configuration Manager task sequence](../../../../osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)  
