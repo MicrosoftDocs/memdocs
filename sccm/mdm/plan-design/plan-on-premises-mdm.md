@@ -30,7 +30,7 @@ Consider the following requirements before preparing the Configuration Manager i
 
 ## <a name="bkmk_devices"></a> Supported devices  
 
-The current branch of Configuration Manager supports enrollment in on-premises mobile device management for devices running Windows 10. These device types primarily include laptops, IoT, and Surface Hub. For more information and the list of specific editions, see [Supported OS versions for clients and devices](/configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#bkmk_OnpremOS).
+The current branch of Configuration Manager supports enrollment in on-premises mobile device management for devices running Windows 10. These device types primarily include laptops, IoT, and Surface Hub. For more information and the list of specific editions, see [Supported OS versions for clients and devices](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_OnpremOS).
 
 ## <a name="bkmk_roles"></a> Site system roles
 
@@ -49,7 +49,7 @@ Depending on the needs of your organization, you can install these roles on the 
 > [!NOTE]
 > You need to configure each role used for on-premises MDM as an HTTPS endpoint for communicating with trusted devices. For more information, see [Required trusted communications](#bkmk_trustedComs).
 
-For more general information, see [Plan for site system servers and roles](/sccm/core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles).
+For more general information, see [Plan for site system servers and roles](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).
 
 ## <a name="bkmk_trustedComs"></a> Trusted communications
 
@@ -59,7 +59,7 @@ On-premises MDM requires that you enable site system roles for HTTPS communicati
 
 - The **trusted root certificate** of the CA that issues the web server certificates. Install this root certificate on all devices that need to connect to the site system roles.
 
-For more information, see [Set up certificates for trusted communications in on-premises MDM](/sccm/mdm/get-started/set-up-certificates-on-premises-mdm).
+For more information, see [Set up certificates for trusted communications in on-premises MDM](../get-started/set-up-certificates-on-premises-mdm.md).
 
 ## <a name="bkmk_enrollment"></a> Device enrollment
 
@@ -71,9 +71,9 @@ To enable device enrollment for on-premises MDM:
 
 As an alternative to user-initiated enrollment, you can set up a bulk enrollment package. This package allows the device to enroll without user intervention. Deliver the package to the device before it's provisioned for use or after it goes through its OOBE process.
 
-For more information, see [Set up device enrollment for on-premises MDM](/sccm/mdm/get-started/set-up-device-enrollment-on-premises-mdm).
+For more information, see [Set up device enrollment for on-premises MDM](../get-started/set-up-device-enrollment-on-premises-mdm.md).
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Install site system roles](/configmgr/mdm/get-started/install-site-system-roles-for-on-premises-mdm)
+> [Install site system roles](../get-started/install-site-system-roles-for-on-premises-mdm.md)

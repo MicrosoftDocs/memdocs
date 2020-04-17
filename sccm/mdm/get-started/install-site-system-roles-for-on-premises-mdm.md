@@ -28,19 +28,19 @@ Configuration Manager on-premises mobile device management (MDM) requires the fo
 
 ## Requirements and limitations
 
-- On-premises MDM requires that you enable site system roles for HTTPS communications. For more information, see [Set up certificates for trusted communications in on-premises MDM](/sccm/mdm/get-started/set-up-certificates-on-premises-mdm).
+- On-premises MDM requires that you enable site system roles for HTTPS communications. For more information, see [Set up certificates for trusted communications in on-premises MDM](set-up-certificates-on-premises-mdm.md).
 
 - The current branch of Configuration Manager only supports *intranet* connections from devices to the distribution points and device management points for on-premises MDM. However, if you also manage macOS computers, those clients require *internet* connections to those same roles. When you configure the distribution point and the device management point, use the option to **Allow intranet and internet connections**.
 
-- Distribution points that you configure for intranet connections require that you configure site boundaries for them. Configuration Manager only supports IPv4 range boundaries for on-premises MDM. For more information, see [Define site boundaries and boundary groups](/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
+- Distribution points that you configure for intranet connections require that you configure site boundaries for them. Configuration Manager only supports IPv4 range boundaries for on-premises MDM. For more information, see [Define site boundaries and boundary groups](../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md).
 
-- If you use [database replicas](/configmgr/core/servers/deploy/configure/database-replicas-for-management-points) with your device management point, newly enrolled devices will initially fail to connect. This connection failure occurs because the database replica doesn't have the information about the newly enrolled device necessary for a successful connection. Replicas synchronize every five minutes. Devices will fail to connect for the first five minutes after enrollment, which is usually two connection attempts. Then devices will connect successfully.
+- If you use [database replicas](../../core/servers/deploy/configure/database-replicas-for-management-points.md) with your device management point, newly enrolled devices will initially fail to connect. This connection failure occurs because the database replica doesn't have the information about the newly enrolled device necessary for a successful connection. Replicas synchronize every five minutes. Devices will fail to connect for the first five minutes after enrollment, which is usually two connection attempts. Then devices will connect successfully.
 
 ## Add roles
 
 If you're adding on-premises MDM to a site that has most devices managed with the Configuration Manager client, you might already have some of these roles installed in the site. For example, the distribution point is a common role, and the device management point is required to manage macOS devices.
 
-For more information on how to add roles to your site, see [Add site system roles](/configmgr/core/servers/deploy/configure/install-site-system-roles).
+For more information on how to add roles to your site, see [Add site system roles](../../core/servers/deploy/configure/install-site-system-roles.md).
 
 ## Configure roles
 
@@ -81,4 +81,4 @@ Configure new or existing roles to manage mobile devices. Follow the steps below
 After you add and configure the roles for managing mobile devices, configure the servers as trusted endpoints. This trust enables the roles to communicate with and enroll managed devices.
 
 > [!div class="nextstepaction"]
-> [Set up certificates for trusted communications](/configmgr/mdm/get-started/set-up-certificates-on-premises-mdm)
+> [Set up certificates for trusted communications](set-up-certificates-on-premises-mdm.md)
