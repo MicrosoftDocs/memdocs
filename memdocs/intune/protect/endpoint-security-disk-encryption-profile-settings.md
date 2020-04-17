@@ -96,7 +96,7 @@ Supported platforms and profiles:
 - **Hide prompt about third-party encryption**  
   CSP: [AllowWarningForOtherDiskEncryption](https://go.microsoft.com/fwlink/?linkid=872525)
 
-  If BitLocker is enabled on a system that has already been encrypted by a third-party encryption product, it may render the device unusable. Data loss may occur and you may need to reinstall Windows. It is highly suggested to never enable BitLocker on a device that has third-party encryption installed or enabled.
+  If BitLocker is enabled on a system that's already encrypted by a third-party encryption product, it might render the device unusable. Data loss can occur and you might need to reinstall Windows. It's highly suggested to never enable BitLocker on a device that has third-party encryption installed or enabled.
 
   By default, the BitLocker setup wizard prompts users to confirm that no third-party encryption is in place.
 
@@ -109,7 +109,7 @@ Supported platforms and profiles:
 
   - **Allow standard users to enable encryption during Autopilot**  
     CSP: [AllowStandardUserEncryption](https://go.microsoft.com/fwlink/?linkid=2114200)
-    - **Not configured** (*default*) – During Azure Active Directory Join (AADJ) silent enable scenarios, users do not need to be local administrators to enable BitLocker.
+    - **Not configured** (*default*) – During Azure Active Directory Join (AADJ) silent enable scenarios, users don't need to be local administrators to enable BitLocker.
     - **Yes** - The setting is left as client default, which is to require local admin access to enable BitLocker.
 
     For non-silent enablement and Autopilot scenarios, the user must be a local admin to complete the BitLocker setup wizard.
@@ -117,7 +117,7 @@ Supported platforms and profiles:
 - **Enable client-driven recovery password for**  
   CSP: [ConfigureRecoveryPasswordRotation](https://go.microsoft.com/fwlink/?linkid=2114201)
 
-  Add Work Account (AWA, formally Workplace Joined) devices are not supported for key rotation.
+  Add Work Account (AWA, formally Workplace Joined) devices aren't supported for key rotation.
   - **Not configured** (*default*) – The client won’t rotate BitLocker recovery keys.
   - **Disabled**
   - **Azure AD-joined devices**
@@ -133,7 +133,7 @@ Supported platforms and profiles:
 
     Control how BitLocker-protected fixed data-drives are recovered in the absence of the required startup key information.
 
-    - **Not configured** (*default*) - The default recovery options are supported including DRA, the end user can specify recovery options and recovery information is not backed up to Azure Active Directory.
+    - **Not configured** (*default*) - The default recovery options are supported including DRA. The end user can specify recovery options and recovery information isn't backed up to Azure Active Directory.
     - **Configure** – Enable access to configure various drive recovery techniques.
 
     When set to *Configure* the following settings are available:
@@ -144,12 +144,12 @@ Supported platforms and profiles:
       - **Allowed**
 
     - **Configure BitLocker recovery package**
-      - **Password and Key** (*default*) - Include both the BitLocker recovery password (used by admins and users to unlock protected drives) and recovery key packages (used by admins for data recovery purposes) in Active Directory.
+      - **Password and Key** (*default*) - Include both the BitLocker recovery password that's used by admins and users to unlock protected drives, and recovery key packages that are used by admins for data recovery purposes) in Active Directory.
       - **Password only** - The recovery key packages might not be accessible when needed.
 
     - **Require device to back up recovery information to Azure Ad**
       - **Not configured** (*default*) - BitLocker enablement will complete even if recovery key backup to Azure AD fails. This can result in no recovery information being stored externally.
-      - **Yes** - BitLocker will not complete enablement until recovery keys have been successfully saved to Azure Active Directory.
+      - **Yes** - BitLocker won't complete enablement until recovery keys have been successfully saved to Azure Active Directory.
 
     - **User creation of recovery password**  
       - **Blocked** (*default*)
@@ -158,14 +158,14 @@ Supported platforms and profiles:
 
     - **Hide recovery options during BitLocker setup**
       - **Not configured** (*default*) - Allow the user to access extra recovery options.
-      - **Yes** - Block the end user from being able to choose extra recovery options such as printing recovery keys during the BitLocker setup wizard.
+      - **Yes** - Block the end user from choosing extra recovery options such as printing recovery keys during the BitLocker setup wizard.
 
     - **Enable BitLocker after recovery information to store**
       - **Not configured** (*default*)  
       - **Yes**
 
     - **Block the use of certificate-based data recovery agent (DRA)**
-      - **Not configured** (*default*) - Allow the use of DRA to be setup. Setting up DRA requires an enterprise PKI and Group Policy Objects to deploy the DRA agent and certificates.
+      - **Not configured** (*default*) - Allow the use of DRA to be set up. Setting up DRA requires an enterprise PKI and Group Policy Objects to deploy the DRA agent and certificates.
       - **Yes** - Block the ability to use Data Recovery Agent (DRA) to recover BitLocker enabled drives.
 
   - **Block write access to fixed data-drives not protected by BitLocker**  
@@ -173,7 +173,7 @@ Supported platforms and profiles:
     This setting is available when *BitLocker fixed drive policy* is set to *Configure*.
 
     - **Not configured** (*default*) - Data can be written to non-encrypted fixed drives.
-    - **Yes** - Windows will not allow any data to be written to fixed drives that are not BitLocker protected. If a fixed drive is not encrypted, the user will need to complete the BitLocker setup wizard for the drive before write access is granted.
+    - **Yes** - Windows won't allow any data to be written to fixed drives that aren't BitLocker protected. If a fixed drive isn't encrypted, the user will need to complete the BitLocker setup wizard for the drive before write access is granted.
 
   - **Configure encryption method for fixed data-drives**  
     CSP: [EncryptionMethodByDriveType](hhttps://go.microsoft.com/fwlink/?linkid=872526)  
@@ -200,14 +200,14 @@ Supported platforms and profiles:
     CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527)
 
     - **Not configured** (*default*)
-    - **Yes** - Configure the additional authentication requirements at system start up, including utilizing the use of Trusted Platform Module (TPM) or startup PIN requirements.
+    - **Yes** - Configure the additional authentication requirements at system startup, including utilizing the use of Trusted Platform Module (TPM) or startup PIN requirements.
 
     When set to *Yes* you can configure the following settings:
 
     - **Compatible TPM startup**  
       CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527)
 
-      It is recommended to require a TPM for BitLocker. This setting only applies when first enabling BitLocker and has no effect if BitLocker is already enabled.
+      It's recommended to require a TPM for BitLocker. This setting only applies when first enabling BitLocker and has no effect if BitLocker is already enabled.
 
       - **Blocked** (*default*) - BitLocker doesn’t utilize the TPM.
       - **Required** - BitLocker enables only if a TPM is present and usable.
@@ -278,12 +278,12 @@ Supported platforms and profiles:
         - **Allowed**
 
       - **Configure BitLocker recovery package**
-        - **Password and Key** (*default*) - Include both the BitLocker recovery password (used by admins and users to unlock protected drives) and recovery key packages (used by admins for data recovery purposes) in Active Directory.
+        - **Password and Key** (*default*) - Include both the BitLocker recovery password that's used by admins and users to unlock protected drives, and recovery key packages that are used by admins for data recovery purposes) in Active Directory.
         - **Password only** - The recovery key packages might not be accessible when needed.
 
       - **Require device to back up recovery information to Azure Ad**
         - **Not configured** (*default*) - BitLocker enablement will complete even if recovery key backup to Azure AD fails. This can result in no recovery information being stored externally.
-        - **Yes** - BitLocker will not complete enablement until recovery keys have been successfully saved to Azure Active Directory.
+        - **Yes** - BitLocker won't complete enablement until recovery keys have been successfully saved to Azure Active Directory.
 
       - **User creation of recovery password**  
         - **Blocked** (*default*)
@@ -292,14 +292,14 @@ Supported platforms and profiles:
 
       - **Hide recovery options during BitLocker setup**
         - **Not configured** (*default*) - Allow the user to access extra recovery options.
-        - **Yes** - Block the end user from being able to choose extra recovery options such as printing recovery keys during the BitLocker setup wizard.
+        - **Yes** - Block the end user from choosing extra recovery options such as printing recovery keys during the BitLocker setup wizard.
 
       - **Enable BitLocker after recovery information to store**
         - **Not configured** (*default*)  
         - **Yes**
 
       - **Block the use of certificate-based data recovery agent (DRA)**
-        - **Not configured** (*default*) - Allow the use of DRA to be setup. Setting up DRA requires an enterprise PKI and Group Policy Objects to deploy the DRA agent and certificates.
+        - **Not configured** (*default*) - Allow the use of DRA to be set up. Setting up DRA requires an enterprise PKI and Group Policy Objects to deploy the DRA agent and certificates.
         - **Yes** - Block the ability to use Data Recovery Agent (DRA) to recover BitLocker enabled drives.
 
     - **Minimum PIN length**  
@@ -307,7 +307,7 @@ Supported platforms and profiles:
 
       Specify the minimum startup PIN length when TPM + PIN is required during BitLocker enablement. The PIN length must be between 4 and 20 digits.
 
-      If you do not configure this setting, users are able to configure a startup PIN of any length (between 4 and 20 digits)
+      If you do not configure this setting, users can configure a startup PIN of any length (between 4 and 20 digits)
 
       This setting only applies when first enabling BitLocker and has no effect if BitLocker is already enabled.
 

@@ -44,50 +44,50 @@ View the Antivirus policy settings you can configure for the **Windows Security 
 - **Hide the Virus and threat protection area in the Windows Security app**  
   CSP: [DisableVirusUI](https://go.microsoft.com/fwlink/?linkid=873662)
 
-  - **Not configured** (*default*) - The setting returns to the client default which is to allow user access and notifications.
-  - **Yes** - The virus and threat protection area in the Windows Security app is hidden from end-users. Virus and threat protection related notifications are suppressed.
+  - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
+  - **Yes** - The virus and threat protection area in the Windows Security app is hidden from end-users. Virus and threat protection-related notifications are suppressed.
 
   - **Hide the Ransomware data recovery option in the Windows Security app**  
     CSP: [](https://go.microsoft.com/fwlink/?linkid=873664)
 
-  - **Not configured** (*default*) - The setting returns to the client default which is to allow user access and notifications.
+  - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
   - **Yes** - The ransomware data recovery area in the Windows Security app is hidden from end-users. Ransomware related notifications are suppressed.
 
 - **Hide the Account protection area in the Windows Security app**  
   CSP: [DisableAccountProtectionUI](https://go.microsoft.com/fwlink/?linkid=873666)
 
-  - **Not configured** (*default*) - The setting returns to the client default which is to allow user access and notifications.
-  - **Yes** - The account protection area in the Windows Security app is hidden from end-users. Account protection related notifications are suppressed.
+  - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
+  - **Yes** - The account protection area in the Windows Security app is hidden from end-users. Account protection-related notifications are suppressed.
 
 - **Hide the Firewall and network protection area in the Windows Security app**  
   CSP: [DisableNetworkUI](https://go.microsoft.com/fwlink/?linkid=873668)
 
-  - **Not configured** (*default*) - The setting returns to the client default which is to allow user access and notifications.
-  - **Yes** - The firewall and network protection area in the Windows Security is be hidden from end-users. Firewall and network protection related notifications are suppressed.
+  - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
+  - **Yes** - The firewall and network protection area in the Windows Security is be hidden from end-users. Firewall and network protection-related notifications are suppressed.
 
 - **Hide the App and browser control area in the Windows Security app**  
   CSP: [DisableAppBrowserUI](https://go.microsoft.com/fwlink/?linkid=873669)
 
-  - **Not configured** (*default*) - The setting returns to the client default which is to allow user access and notifications.
+  - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
   - **Yes** - The app and browser control area in the Windows Security is be hidden from end-users. App and browser control related notifications are suppressed.
 
 - **Hide the Device security area in the Windows Security app**  
   CSP: [DisableDeviceSecurityUI](https://go.microsoft.com/fwlink/?linkid=873670)
 
-  - **Not configured** (*default*) - The setting returns to the client default which is to allow user access and notifications.
-  - **Yes** - The hardware protection area in the Windows Security app are hidden from end-users. Hardware protection related notifications will be suppressed.
+  - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
+  - **Yes** - The hardware protection area in the Windows Security app is hidden from end-users. Hardware protection-related notifications will be suppressed.
   
 - **Hide the Device performance and health area in the Windows Security app**  
   CSP: [DisableHealthUI](https://go.microsoft.com/fwlink/?linkid=873671)
 
-  - **Not configured** (*default*) - The setting returns to the client default which is to allow user access and notifications.
-  - **Yes** - The device performance and health area in the Windows Security app are hidden from end-users. Device performance and health related notifications ware suppressed
+  - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
+  - **Yes** - The device performance and health area in the Windows Security app are hidden from end-users. Device performance and health-related notifications ware suppressed
 
 - **Hide the Family options area in the Windows Security app**  
   CSP: [DisableFamilyUI](https://go.microsoft.com/fwlink/?linkid=873673)
 
-  - **Not configured** (*default*) - The setting returns to the client default which is to allow user access and notifications.
-  - **Yes** - The family options area in the Windows Security app will are from end-users. Also, family options related notifications are suppressed.
+  - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
+  - **Yes** - The family options area in the Windows Security app will are from end-users. Also, notifications related to family options are suppressed.
 
 - **Windows Security app notifications**  
   CSP: [](https://go.microsoft.com/fwlink/?linkid=873675)
@@ -102,13 +102,13 @@ View the Antivirus policy settings you can configure for the **Windows Security 
   CSP: [HideWindowsSecurityNotificationAreaControl](https://go.microsoft.com/fwlink/?linkid=2114313&clcid=0x409)
 
   For this setting to take effect, the user needs to either sign out and back in, or reboot the computer.
-  - **Not configured** (*default*) - The setting returns the client to the default which is to show the icon.
+  - **Not configured** (*default*) - The setting returns the client to the default, which is to show the icon.
   - **Yes** - Hide the Windows Security icon from the users system tray.
   
 - **Disable the Clear TPM option in the Windows Security app**  
   CSP: [DisableClearTpmButton](https://go.microsoft.com/fwlink/?linkid=2114125&clcid=0x409)
 
-  - **Not configured** (*default*) - The setting returns to the client default which allows access to the button.
+  - **Not configured** (*default*) - The setting returns to the client default, which allows access to the button.
   - **Yes** - Disable access to the clear TPM button in the Windows Security app.
 
 - **Prompt users to update TPM firmware if vulnerability is discovered**  

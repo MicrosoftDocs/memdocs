@@ -34,7 +34,7 @@ As a Security Admin, use the *Endpoint security* node in Intune to configure dev
 
 The Endpoint security node groups the tools that are available through Intune that you’ll use to keep devices secure:
 
-- **Review the status of all your managed devices**. Use the [All devices](#manage-devices) view where you can view device compliance from a high level and then drill into specific devices to understand which compliance policies weren't met so you can act to resolve them.
+- **Review the status of all your managed devices**. Use the [All devices](#manage-devices) view where you can view device compliance from a high level and then drill into specific devices to understand which compliance policies weren't met so you can resolve them.
 
 - **Deploy security baselines that establish best practice security configurations for devices**. Intune includes [security baselines](#manage-security-baselines) for Windows devices and a growing list of applications, like Defender ATP and Microsoft Edge.
 
@@ -66,7 +66,7 @@ Consider the following fields:
 
   - **MDM**  - These devices are managed by Intune. Compliance data is collected and reported by Intune to the admin center.
 
-  - **ConfigMgr** – These devices appear when you use *tenant attach* to add your devices that are managed by Configuration Manager to the Microsoft Endpoint Manager admin center. Devices that are added from Configuration Manager include the devices that are identified by Configuration Manager as **Client** = **Yes** and include:
+  - **ConfigMgr** – These devices appear when you use *tenant attach* to add your devices that are managed by Configuration Manager to the Microsoft Endpoint Manager admin center. Devices that are added from Configuration Manager include the devices that Configuration Manager identifies as **Client** = **Yes** and include:
 
     - Workgroup (AAD joined and otherwise)
     - Domain Joined
@@ -195,7 +195,7 @@ The [available compliance settings](../protect/device-compliance-get-started.md#
 - Specifying a maximum allowed device threat-level, as determined by Defender ATP or another Mobile Threat Defense partner
 - Use of network locations
 
-In addition to setting conditions for compliance, you can configure automatic actions to take when a device is not compliant. Actions include sending email or notifications to alert device users about non-compliance, remotely locking devices, or even retiring non-compliant devices and removing any company data that might be on it.
+In addition to setting conditions for compliance, you can configure automatic actions to take when a device isn't compliant. Actions include sending email or notifications to alert device users about non-compliance, remotely locking devices, or even retiring non-compliant devices and removing any company data that might be on it.
 
 When you integrate Intune with Azure AD [conditional access policies](#configure-conditional-access) to enforce compliance policies, Conditional access can use the compliance data to gate access to corporate resources for both managed devices, and devices that aren’t managed yet.
 
@@ -205,14 +205,14 @@ To learn more, see [Set rules on devices to allow access to resources in your or
 
 To protect your devices and corporate resources, you can use Azure Active Directory (Azure AD) Conditional Access policies with Intune.
 
-Intune passes the results of your device compliance policies to Azure AD, which then uses conditional access policies enforce which devices and apps can access your corporate resources. Conditional access policies can also be configured to gate access for devices that aren’t managed by Intune. You can even use compliance details from [Mobile Threat Defense partners](../protect/mobile-threat-defense.md) you integrate with Intune.
+Intune passes the results of your device compliance policies to Azure AD, which then uses conditional access policies enforce which devices and apps can access your corporate resources. Conditional access policies can help gate access for devices that aren’t managed by Intune. You can even use compliance details from [Mobile Threat Defense partners](../protect/mobile-threat-defense.md) you integrate with Intune.
 
 The following are two common methods of using conditional access with Intune include:
 
 - Device-based Conditional Access
 - App-based conditional access
 
-When you select *Conditional Access* from within the Microsoft Endpoint Manager admin center, the Conditional Access node that opens in the admin center is the node from Azure AD, and the policies you create are created in Azure.
+When you select *Conditional Access* from within the Microsoft Endpoint Manager admin center, the Conditional Access node that opens in the admin center is the node from Azure AD. Your conditional access policies are created in Azure AD.
 
 To learn more about using conditional access with Intune, see [Learn about Conditional Access and Intune](../protect/conditional-access.md).
 
