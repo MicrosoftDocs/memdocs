@@ -250,3 +250,6 @@ The following steps may be required if necessary in your environment:
 ## Daily monitoring
 
 When you have a site server in passive mode, monitor it daily. Make sure its Status remains OK and is ready for use. In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Site Server Status** node. View both site servers and their current status. Also view status in the **Administration** workspace. Expand **Site Configuration**, and select the **Sites** node. Select the site, and then switch to the **Nodes** tab.
+
+[!NOTE]
+> When you update the site to a new version of Configuration Manager, it also updates the site server in passive mode. <!-- SCCMDocs-pr#4293 -->
