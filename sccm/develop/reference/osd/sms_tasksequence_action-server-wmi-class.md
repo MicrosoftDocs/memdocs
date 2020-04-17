@@ -130,4 +130,4 @@ Class SMS_TaskSequence_Action : SMS_TaskSequence_Step
 
 ## See also
 
-[SMS_TaskSequence_Step server WMI class](/sccm/develop/reference/osd/sms_tasksequence_step-server-wmi-class)
+[SMS_TaskSequence_Step server WMI class](sms_tasksequence_step-server-wmi-class.md)

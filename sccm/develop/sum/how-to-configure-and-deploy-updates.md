@@ -197,6 +197,6 @@ public void ConfigureAndDeploySUMUpdates(WqlConnectionManager connection,
 
 ## See also
 
-[About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
+[About software update deployments](about-software-updates-deployments.md)
 
-[SMS_UpdatesAssignment](/sccm/develop/reference/sum/sms_updatesassignment-server-wmi-class)
+[SMS_UpdatesAssignment](../reference/sum/sms_updatesassignment-server-wmi-class.md)

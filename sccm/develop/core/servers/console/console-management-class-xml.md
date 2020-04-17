@@ -30,4 +30,4 @@ The management classes XML for the Configuration Manager console are located %*P
 
 ## See also
 
-[About console management classes](/sccm/develop/core/servers/console/about-configuration-manager-console-management-classes)
+[About console management classes](about-configuration-manager-console-management-classes.md)

@@ -124,6 +124,6 @@ public void CreatePackage(WqlConnectionManager connection, string newPackageName
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+ [Software distribution overview](software-distribution-overview.md)
  [SMS_Package Server WMI Class](../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md)   
  [PowerShell Cmdlet: New-CMPackage](https://go.microsoft.com/fwlink/?LinkId=309284)

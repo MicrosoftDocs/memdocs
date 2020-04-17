@@ -42,6 +42,6 @@ In Configuration Manager, the Group action creates a menu group, also known as a
 ```  
 
 ## See Also  
-[About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions)
+[About Configuration Manager console actions](configuration-manager-actions.md)
  [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md)   
  [How to Find a Configuration Manager Node GUID](../../../../develop/core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md)

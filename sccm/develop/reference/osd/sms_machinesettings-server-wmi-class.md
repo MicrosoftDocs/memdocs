@@ -98,4 +98,4 @@ Class SMS_MachineSettings
 
 ## See also
 
-[SMS_MachineVariable server WMI class](/sccm/develop/reference/osd/sms_machinevariable-server-wmi-class)
+[SMS_MachineVariable server WMI class](sms_machinevariable-server-wmi-class.md)

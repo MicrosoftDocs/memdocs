@@ -17,7 +17,7 @@ In Configuration Manager, you update the Windows Image (WIM) file that is associ
 
 ### To update an operating system image package  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Get the `SMS_ImagePackage` class instance you want to update.  
 
@@ -106,4 +106,4 @@ public void UpdateOSImage(
 
 ## See also
 
-[About image management](/sccm/develop/osd/about-operating-system-deployment-image-management)
+[About image management](about-operating-system-deployment-image-management.md)

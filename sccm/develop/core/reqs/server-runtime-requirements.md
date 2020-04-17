@@ -34,7 +34,7 @@ Microsoft Configuration Manager server applications that are developed by using 
 
 - .NET Framework 4.0  
 
-  For more information, see [About console extensions](/sccm/develop/core/servers/console/about-configuration-manager-console-extension).  
+  For more information, see [About console extensions](../servers/console/about-configuration-manager-console-extension.md).  
 
 ## VBScript  
 
@@ -51,6 +51,6 @@ Microsoft Configuration Manager server applications that are developed by using 
 >  For more information about general Configuration Manager requirements, see [Supported configurations for Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-configurations).  
 
 ## See Also  
-[About console extensions](/sccm/develop/core/servers/console/about-configuration-manager-console-extension)
+[About console extensions](../servers/console/about-configuration-manager-console-extension.md)
  [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client-development-requirements.md)   
  [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md)

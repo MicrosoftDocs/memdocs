@@ -52,6 +52,6 @@ There are several package types that Configuration Manager uses to manage refere
 
 ## See also
 
-[Operating System Deployment Task Sequence Object Model](/sccm/develop/osd/operating-system-deployment-task-sequence-object-model)
+[Operating System Deployment Task Sequence Object Model](operating-system-deployment-task-sequence-object-model.md)
 
-[Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+[Software distribution overview](../core/servers/configure/software-distribution-overview.md)

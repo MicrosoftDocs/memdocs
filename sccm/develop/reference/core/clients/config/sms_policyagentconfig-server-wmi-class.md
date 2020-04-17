@@ -176,8 +176,8 @@ The time that must elapse before the actual configuration is updated.
 
 ## Runtime requirements
 
-For more information, see [Configuration Manager server runtime requirements](/sccm/develop/core/reqs/server-runtime-requirements).  
+For more information, see [Configuration Manager server runtime requirements](../../../../core/reqs/server-runtime-requirements.md).  
 
 ## Development requirements
 
-For more information, see [Configuration Manager server development requirements](/sccm/develop/core/reqs/server-development-requirements).
+For more information, see [Configuration Manager server development requirements](../../../../core/reqs/server-development-requirements.md).

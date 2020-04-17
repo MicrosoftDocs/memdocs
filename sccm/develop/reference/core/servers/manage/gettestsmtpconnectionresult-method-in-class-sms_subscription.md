@@ -66,4 +66,4 @@ sint32 GetTestSmtpConnectionResult(
 
 ## See also
 
-[SMS_Subscription server WMI class](/sccm/develop/reference/core/servers/manage/sms_subscription-server-wmi-class)
+[SMS_Subscription server WMI class](sms_subscription-server-wmi-class.md)

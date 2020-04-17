@@ -219,4 +219,4 @@ public void ModifyProgramSupportedPlatforms(WqlConnectionManager connection,
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+ [Software distribution overview](software-distribution-overview.md)

@@ -51,8 +51,8 @@ The following table lists the methods in the `SMS_DistributionPoint` class.
 
 |Method|Description|  
 |------------|-----------------|  
-|[VerifyPackage method in class SMS_DistributionPoint](/sccm/develop/reference/core/servers/configure/verifypackage-method-in-class-sms_distributionpoint)|Verifies the integrity of the package.|  
-|[CancelDistribution method in class SMS_DistributionPoint](/sccm/develop/reference/core/servers/configure/canceldistribution-method-in-class-sms_distributionpoint)|Cancels the distribution of a package.|  
+|[VerifyPackage method in class SMS_DistributionPoint](verifypackage-method-in-class-sms_distributionpoint.md)|Verifies the integrity of the package.|  
+|[CancelDistribution method in class SMS_DistributionPoint](canceldistribution-method-in-class-sms_distributionpoint.md)|Cancels the distribution of a package.|  
 
 
 ## Properties
@@ -95,7 +95,7 @@ Access type: Read/Write
 
 Qualifiers: [large, lazy]  
 
-Values allow a single ISV to store data that relates to the [SMS_Program Server WMI Class](/sccm/develop/reference/core/servers/configure/sms_program-server-wmi-class) object associated with the package. For more information, see [Remarks](#remarks).  
+Values allow a single ISV to store data that relates to the [SMS_Program Server WMI Class](sms_program-server-wmi-class.md) object associated with the package. For more information, see [Remarks](#remarks).  
 
 ### `ISVDataSize`  
 
@@ -228,7 +228,7 @@ Qualifiers: [key, SizeLimit("3")]
 
 Site code of the site that this distribution point belongs to. The default value is "".  
 
-The value that is furnished for this property must match the value of `ServerNALPath`. Your application retrieves the value from [SMS_SystemResourceList server WMI class](/sccm/develop/reference/core/servers/configure/sms_systemresourcelist-server-wmi-class). For more information, see [Remarks](#remarks).  
+The value that is furnished for this property must match the value of `ServerNALPath`. Your application retrieves the value from [SMS_SystemResourceList server WMI class](sms_systemresourcelist-server-wmi-class.md). For more information, see [Remarks](#remarks).  
 
 ### `SiteName`  
 
@@ -269,13 +269,13 @@ Current status of the package on the distribution point. Possible values are lis
 
 ## Remarks
 
-There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager class and property qualifiers](/sccm/develop/reference/misc/class-and-property-qualifiers).  
+There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager class and property qualifiers](../../../misc/class-and-property-qualifiers.md).  
 
 A distribution point is always associated with a particular package, and a package can have several distribution points.  
 
 Your application can't change the `PackageID` property after the distribution point is created. To associate the distribution point with a different package, the application must delete the `SMS_DistributionPoint` object and create a new instance with a new `PackageID` value.  
 
-The [SMS_SystemResourceList server WMI class](/sccm/develop/reference/core/servers/configure/sms_systemresourcelist-server-wmi-class) class contains a list of the available distribution points and their NAL paths. Your application should select the `NALPath` property of `SMS_SystemResourceList` that corresponds to a `RoleName` property setting of "SMS Distribution Point".  
+The [SMS_SystemResourceList server WMI class](sms_systemresourcelist-server-wmi-class.md) class contains a list of the available distribution points and their NAL paths. Your application should select the `NALPath` property of `SMS_SystemResourceList` that corresponds to a `RoleName` property setting of "SMS Distribution Point".  
 
 When your application deletes an instance of `SMS_DistributionPoint`, the instance isn't totally deleted until its related components are deleted. Instead, Configuration Manager sets the `Status` property to 3 (delete) to inform the application that the distribution point is marked for deletion. To make sure that a query doesn't retrieve distribution points that have been deleted or marked for deletion, your application should add this case to its WHERE clause.  
 
@@ -285,12 +285,12 @@ There are no restrictions or defined formats for the data that is indicated by `
 
 ### Runtime requirements
 
-For more information, see [Configuration Manager server runtime requirements](/sccm/develop/core/reqs/server-runtime-requirements).  
+For more information, see [Configuration Manager server runtime requirements](../../../../core/reqs/server-runtime-requirements.md).  
 
 ### Development requirements
 
-For more information, see [Configuration Manager server development requirements](/sccm/develop/core/reqs/server-development-requirements).  
+For more information, see [Configuration Manager server development requirements](../../../../core/reqs/server-development-requirements.md).  
 
 ## See also  
 
-- [SMS_SystemResourceList server WMI class](/sccm/develop/reference/core/servers/configure/sms_systemresourcelist-server-wmi-class)
+- [SMS_SystemResourceList server WMI class](sms_systemresourcelist-server-wmi-class.md)

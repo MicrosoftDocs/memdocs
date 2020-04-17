@@ -194,4 +194,4 @@ Class SMS_CIToContent : SMS_BaseClass
 
 ## See Also  
  [SMS_CIContentFiles Server WMI Class](../../../develop/reference/sum/sms_cicontentfiles-server-wmi-class.md)   
- [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
+ [About software update deployments](../../sum/about-software-updates-deployments.md)

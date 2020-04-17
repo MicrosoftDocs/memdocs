@@ -163,6 +163,6 @@ public void CreateSUMDeploymentTemplate(WqlConnectionManager connection,
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
+ [About software update deployments](about-software-updates-deployments.md)
  [How to Assign a Package to a Distribution Point](../../develop/core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md)   
  [SMS_Template](../../develop/reference/sum/sms_template-server-wmi-class.md)

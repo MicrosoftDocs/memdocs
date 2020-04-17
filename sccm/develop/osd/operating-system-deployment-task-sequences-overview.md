@@ -36,7 +36,7 @@ In Configuration Manager, a task sequence is a series of one or more task steps 
 
 #### To run a task sequence  
 
-1.  Ensure that you have the Configuration Manager site server installed and that you have clients to deploy task sequences to. Depending on your environment, you might need to configure the State Migration Point or PXE Service Point. For more information, see [About OS deployment site role configuration](/sccm/develop/osd/about-operating-system-deployment-site-role-configuration).  
+1.  Ensure that you have the Configuration Manager site server installed and that you have clients to deploy task sequences to. Depending on your environment, you might need to configure the State Migration Point or PXE Service Point. For more information, see [About OS deployment site role configuration](about-operating-system-deployment-site-role-configuration.md).  
 
 2.  Create a package containing the files you need for deployment. For example, to deploy a boot image you will need to create a boot image package ([SMS_BootImagePackage Server WMI Class](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md)).  
 
@@ -80,4 +80,4 @@ In Configuration Manager, a task sequence is a series of one or more task steps 
 
 ## See also
 
-[OS deployment task sequence object model](/sccm/develop/osd/operating-system-deployment-task-sequence-object-model)
+[OS deployment task sequence object model](operating-system-deployment-task-sequence-object-model.md)

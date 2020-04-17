@@ -82,4 +82,4 @@ public void CreateRole(WqlConnectionManager connection, string computerName, str
 ## See Also  
  [SMS_EmbeddedProperty Server WMI Class](../../../develop/reference/core/servers/configure/sms_embeddedproperty-server-wmi-class.md)   
  [SMS_SCI_SysResUse Server WMI Class](../../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md)   
- [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file)
+ [About the site control file](about-the-configuration-manager-site-control-file.md)

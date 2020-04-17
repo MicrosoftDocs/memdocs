@@ -109,4 +109,4 @@ void bw1_QueryProcessorCompleted(object sender, RunWorkerCompletedEventArgs e)
  For more information about error handling, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)
+ [About errors](about-configuration-manager-errors.md)

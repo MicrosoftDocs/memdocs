@@ -16,4 +16,4 @@ manager: dougeby
 In Configuration Manager, operating system configuration items include all of the functionality of general configuration items, but they are tightly coupled with a specific version of the Windows operating system.  
 
 ## See Also  
-[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)
+[About authoring configuration baselines and items](about-authoring-configuration-baselines-and-configuration-items.md)

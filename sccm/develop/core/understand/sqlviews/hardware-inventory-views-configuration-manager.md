@@ -18,7 +18,7 @@ manager: dougeby
 
 The hardware inventory views contain information about the computer hardware scanned on Configuration Manager client computers. Many hardware inventory views are created in Configuration Manager by default, and many more can be enabled or creating classes by using the hardware inventory classes dialog box, accessible from client settings. Because of this, it is likely that Configuration Manager sites collect different hardware inventory resulting in different hardware inventory views.
 
-For more information about extending Configuration Manager hardware inventory, see [How to extend hardware inventory in Configuration Manager](/sccm/core/clients/manage/inventory/extend-hardware-inventory).
+For more information about extending Configuration Manager hardware inventory, see [How to extend hardware inventory in Configuration Manager](../../../../core/clients/manage/inventory/extend-hardware-inventory.md).
 
 ## Hardware inventory schema views
 
@@ -43,7 +43,7 @@ FROM v_GroupMap GM INNER JOIN v_GroupAttributeMap GAM
 Most of the hardware inventory views start with the **v_GS_** view name followed by the name of the hardware component, such as CDROM (for example, **v_GS_CDROM**). As a general rule, each hardware inventory view has an associated inventory history view that starts with the **v_HS_** view name. The hardware inventory views can all be joined with other system data views by using the **ResourceID** column, which is demonstrated in Appendix A, in the topic [Sample queries for hardware inventory in Configuration Manager](sample-queries-hardware-inventory-configuration-manager.md). The standard hardware inventory views are described in this section.
 
 > [!NOTE]
-> Not all of the items listed are collected by default when using Configuration Manager hardware inventory. For information about how to enable or disable hardware inventory classes, see the [How to extend hardware inventory in Configuration Manager](/sccm/core/clients/manage/inventory/extend-hardware-inventory) topic in the Configuration Manager Documentation Library
+> Not all of the items listed are collected by default when using Configuration Manager hardware inventory. For information about how to enable or disable hardware inventory classes, see the [How to extend hardware inventory in Configuration Manager](../../../../core/clients/manage/inventory/extend-hardware-inventory.md) topic in the Configuration Manager Documentation Library
 
 ### v_InventoryClass
 

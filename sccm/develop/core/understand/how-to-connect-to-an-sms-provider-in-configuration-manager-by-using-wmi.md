@@ -36,7 +36,7 @@ Before connecting to the SMS Provider for a local or remote Configuration Manage
 
 4.  Using the [SMS_ProviderLocation](../../../develop/reference/misc/sms_providerlocation-server-wmi-class.md) object *ProviderForLocalSite* property, connect to the SMS Provider for the local computer and receive a [SWbemServices object](https://docs.microsoft.com/windows/desktop/wmisdk/swbemservices).  
 
-5.  Use the [SWbemServices](https://docs.microsoft.com/windows/desktop/wmisdk/swbemservices) object to access provider objects. For more information, see [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview).  
+5.  Use the [SWbemServices](https://docs.microsoft.com/windows/desktop/wmisdk/swbemservices) object to access provider objects. For more information, see [Objects overview](configuration-manager-objects-overview.md).  
 
 ## Examples  
  The following examples connects to the server. It then attempts to connect to the SMS Provider for that server. Typically this will be the same computer. If it is not, [SMS_ProviderLocation](../../../develop/reference/misc/sms_providerlocation-server-wmi-class.md) provides the correct computer name.  
@@ -139,6 +139,6 @@ $connection = $SWbemLocator.ConnectServer($siteServer,$Namespace,$username,$pass
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)   
+ [SMS Provider fundamentals](sms-provider-fundamentals.md)   
  [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md)   
  [Windows Management Instrumentation](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-start-page)
