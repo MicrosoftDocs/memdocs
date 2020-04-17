@@ -133,7 +133,7 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink
 
 ### Step 4. Upload your token and choose scope tags.
 
-1. In the **Apple token** box, browse to the certificate (.pem) file, choose **Open**.
+1. In the **Apple token** box, browse to the certificate (.p7m) file, choose **Open**.
 2. If you want to apply [scope tags](../fundamentals/scope-tags.md) to this DEP token, choose **Scope (tags)**, and select the scope tags that you want. Scope tags applied to a token will be inherited by profiles and devices added to this token.
 3. Choose **Create**.
 
