@@ -65,7 +65,7 @@ In addition to installing and configuring the data warehouse database, several n
 - The database is not supported on a *SQL Server AlwaysOn availability group*.
 
 ### Install the Data Warehouse
-You install the Data Warehouse site system role on a central administration site or primary site by using the **Add Site System Roles Wizard** or the **Create Site System Server Wizard**. See [Install site system roles](/sccm/core/servers/deploy/configure/install-site-system-roles) for more information. A hierarchy supports multiple instances of this role, but only one instance is supported at each site.  
+You install the Data Warehouse site system role on a central administration site or primary site by using the **Add Site System Roles Wizard** or the **Create Site System Server Wizard**. See [Install site system roles](../servers/deploy/configure/install-site-system-roles.md) for more information. A hierarchy supports multiple instances of this role, but only one instance is supported at each site.  
 
 When you install the role, Configuration Manager creates the data warehouse database for you on the instance of SQL Server that you specify. If you specify the name of an existing database (as you would do if you [move the data warehouse database to a new SQL Server](#move-the-data-warehouse-database)), Configuration Manager doesn't create a new database but instead uses the one you specify.
 
@@ -266,7 +266,7 @@ To enable express installation files support on clients, you must enable express
 
  Configuration Manager now provides a RESTful OData endpoint for accessing Configuration Manager data. The endpoint is compatible with Odata version 4, which enables tools such as Excel and Power BI to easily access Configuration Manager data through a single endpoint. Technical Preview 1612 only supports read access to objects in Configuration Manager.  
 
-Data that is currently available in the [Configuration Manager WMI Provider](/sccm/develop/reference/configuration-manager-reference) is now also accessible with the new OData RESTful endpoint. The entity sets exposed by the OData endpoint enable you to enumerate over the same data you can query with the WMI provider.
+Data that is currently available in the [Configuration Manager WMI Provider](../../develop/reference/configuration-manager-reference.md) is now also accessible with the new OData RESTful endpoint. The entity sets exposed by the OData endpoint enable you to enumerate over the same data you can query with the WMI provider.
 
 ### Try it out
 
@@ -307,7 +307,7 @@ There are several requirements for enabling the creation of user policy in the C
 
 - The Azure AD onboarding process must be complete, and the client has to be initially connected to the corporate network to get the connection information.
 - Clients must be both domain-joined (registered in Active Directory) and cloud-domain-joined (registered in Azure AD).
-- You must run [Active Directory User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
+- You must run [Active Directory User Discovery](../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 - You must modify the Configuration Manager client to allow user policy requests over the Internet, and deploy the change to the client. Because this change to the client takes place *on the client device*, it can be deployed through the Cloud Management Gateway although you haven't completed the configuration changes needed for user policy.
 - Your management point must be configured to use HTTPS to secure the token on the network, and must have .Net 4.5 installed.
 

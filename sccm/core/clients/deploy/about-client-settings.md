@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Manage all client settings in the Configuration Manager console from the **Client Settings** node in the **Administration** workspace. Configuration Manager comes with a set of default settings. When you change the default client settings, these settings are applied to all clients in the hierarchy. You can also configure custom client settings, which override the default client settings when you assign them to collections. For more information, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
+Manage all client settings in the Configuration Manager console from the **Client Settings** node in the **Administration** workspace. Configuration Manager comes with a set of default settings. When you change the default client settings, these settings are applied to all clients in the hierarchy. You can also configure custom client settings, which override the default client settings when you assign them to collections. For more information, see [How to configure client settings](configure-client-settings.md).
 
 The following sections describe settings and options in further detail.  
 
@@ -55,8 +55,7 @@ Specify the maximum transfer rate that clients can use outside the BITS throttli
 
 ### Configure BranchCache
 
-Set up the client computer for [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache
-). To allow BranchCache caching on the client, set **Enable BranchCache** to **Yes**.
+Set up the client computer for [Windows BranchCache](../../plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache). To allow BranchCache caching on the client, set **Enable BranchCache** to **Yes**.
 
 - **Enable BranchCache**: Enables BranchCache on client computers.
 
@@ -81,13 +80,13 @@ If you choose **Yes**, then specify:
 > [!Note]  
 > In version 1902 and earlier, this setting was named **Enable Configuration Manager client in full OS to share content**. The behavior of the setting didn't change.
 
-Enables [peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) for Configuration Manager clients. Choose **Yes**, and then specify the port through which the client communicates with the peer computer.
+Enables [peer cache](../../plan-design/hierarchy/client-peer-cache.md) for Configuration Manager clients. Choose **Yes**, and then specify the port through which the client communicates with the peer computer.
 
 - **Port for initial network broadcast** (default UDP 8004): Configuration Manager uses this port in Windows PE or the full Windows OS. The task sequence engine in Windows PE sends the broadcast to get content locations before it starts the task sequence.<!--SCCMDocs issue 910-->
 
 - **Port for content download from peer** (default TCP 8003): Configuration Manager automatically configures Windows Firewall rules to allow this traffic. If you use a different firewall, you must manually configure rules to allow this traffic.  
 
-    For more information, see [Ports used for connections](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp).  
+    For more information, see [Ports used for connections](../../plan-design/hierarchy/ports.md#BKMK_PortsClient-ClientWakeUp).  
 
 ### Minimum duration before cached content can be removed (minutes)
 
@@ -111,11 +110,11 @@ Specifies how frequently the following Configuration Manager clients download cl
 - Mac computers  
 - Computers that run Linux or UNIX  
 
-This value is 60 minutes by default. Reducing this value causes clients to poll the site more frequently. With numerous clients, this behavior can have a negative impact on the site performance. The [size and scale guidance](/sccm/core/plan-design/configs/size-and-scale-numbers) is based on the default value. Increasing this value causes clients to poll the site less often. Any changes to client policies, including new deployments, take longer for clients to download and process.<!-- SCCMDocs issue 823 -->
+This value is 60 minutes by default. Reducing this value causes clients to poll the site more frequently. With numerous clients, this behavior can have a negative impact on the site performance. The [size and scale guidance](../../plan-design/configs/size-and-scale-numbers.md) is based on the default value. Increasing this value causes clients to poll the site less often. Any changes to client policies, including new deployments, take longer for clients to download and process.<!-- SCCMDocs issue 823 -->
 
 ### Enable user policy on clients
 
-When you set this option to **Yes**, and use [user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser), then clients receive applications and programs targeted to the signed-in user.  
+When you set this option to **Yes**, and use [user discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser), then clients receive applications and programs targeted to the signed-in user.  
 
 If this setting is **No**, users don't receive required applications that you deploy to users. Users also don't receive any other management tasks in user policies.  
 
@@ -130,13 +129,13 @@ This setting applies to users when their computer is on either the intranet or t
 
 Set this option to **Yes** for users to receive the user policy on internet-based computers. The following requirements also apply:  
 
-- The client and site are configured for [internet-based client management](/sccm/core/clients/manage/plan-internet-based-client-management) or a [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
+- The client and site are configured for [internet-based client management](../manage/plan-internet-based-client-management.md) or a [cloud management gateway](../manage/cmg/plan-cloud-management-gateway.md).  
 
 - The **Enable user policy on clients** setting is **Yes**.  
 
-- The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM). For more information, see [Considerations for client communications from the internet](/sccm/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan).  
+- The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM). For more information, see [Considerations for client communications from the internet](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
-- The cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications on Azure AD-joined devices](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- The cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications on Azure AD-joined devices](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices).  
 
 If you set this option to **No**, or any of the previous requirements aren't met, then a computer on the internet only receives computer policies. In this scenario, users can still see, request, and install applications from an internet-based application catalog. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users don't receive user policies until the computer is connected to the intranet.  
 
@@ -149,7 +148,7 @@ If you set this option to **No**, or any of the previous requirements aren't met
 
 *Applies to version 1910*
 
-By default, this setting is disabled. Even if you enable user policies, starting in version 1906 the client disables them by default on any device that allows multiple concurrent active user sessions. For example, terminal servers or Windows 10 Enterprise multi-session in [Windows Virtual Desktop](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-virtual-desktop).
+By default, this setting is disabled. Even if you enable user policies, starting in version 1906 the client disables them by default on any device that allows multiple concurrent active user sessions. For example, terminal servers or Windows 10 Enterprise multi-session in [Windows Virtual Desktop](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
 
 The client only disables user policy when it detects this type of device during a new installation. For an existing client of this type that you update to version 1906 or later, the previous behavior persists. On an existing device, it configures the user policy setting even if it detects that the device allows multiple user sessions.
 
@@ -184,7 +183,7 @@ Select **Schedule** to create the default schedule for configuration baseline de
 
 ### Enable User Data and Profiles
 
-Choose **Yes** if you want to deploy [user data and profiles](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items) configuration items.
+Choose **Yes** if you want to deploy [user data and profiles](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md) configuration items.
 
 
 
@@ -192,7 +191,7 @@ Choose **Yes** if you want to deploy [user data and profiles](/sccm/compliance/d
 
 ### User notifications for required deployments
 
-For more information about the following three settings, see [User notifications for required deployments](/sccm/apps/deploy-use/deploy-applications#bkmk_notify):
+For more information about the following three settings, see [User notifications for required deployments](../../../apps/deploy-use/deploy-applications.md#bkmk_notify):
 
 - **Deployment deadline greater than 24 hours, remind user every (hours)**
 - **Deployment deadline less than 24 hours, remind user every (hours)**
@@ -205,8 +204,8 @@ For more information about the following three settings, see [User notifications
 >
 > For more information, see the following articles:
 >
-> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
-> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
+> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
+> - [Removed and deprecated features](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
 
 Configuration Manager uses this setting to connect users to the application catalog from Software Center. Select **Set Website** to specify a server that hosts the application catalog website point. Enter its NetBIOS name or FQDN, specify automatic detection, or specify a URL for customized deployments. In most cases, automatic detection is the best choice.
 
@@ -217,8 +216,8 @@ Configuration Manager uses this setting to connect users to the application cata
 >
 > For more information, see the following articles:
 >
-> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
-> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
+> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
+> - [Removed and deprecated features](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
 
 If this option is **Yes**, the client automatically adds the current default application catalog website URL to the Internet Explorer trusted sites zone.  
 
@@ -231,17 +230,17 @@ If you leave this option as **No**, Configuration Manager clients might not be a
 > [!Important]  
 > The client doesn't automatically install Silverlight.
 >
-> Starting in version 1806, the **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).  
+> Starting in version 1806, the **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. For more information, see [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex).  
 
 This setting must be **Yes** for users to use the application catalog.  
 
 If you change this setting, it takes effect when users next load their browser, or refresh their currently opened browser window.  
 
-For more information about this setting, see [Certificates for Microsoft Silverlight 5, and elevated trust mode required for the application catalog](/sccm/apps/plan-design/security-and-privacy-for-application-management#BKMK_CertificatesSilverlight5).  
+For more information about this setting, see [Certificates for Microsoft Silverlight 5, and elevated trust mode required for the application catalog](../../../apps/plan-design/security-and-privacy-for-application-management.md#BKMK_CertificatesSilverlight5).  
 
 ### Organization name displayed in Software Center
 
-Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](/sccm/apps/plan-design/plan-for-software-center#branding-software-center).  
+Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](../../../apps/plan-design/plan-for-software-center.md#branding-software-center).  
 
 ### Use new Software Center
 
@@ -251,7 +250,7 @@ When you set this option to **Yes**, then all client computers use the Software 
 
 ### Enable communication with Health Attestation Service
 
-Set this option to **Yes** for Windows 10 devices to use [Health attestation](/sccm/core/servers/manage/health-attestation). When you enable this setting, the following setting is also available for configuration.
+Set this option to **Yes** for Windows 10 devices to use [Health attestation](../../servers/manage/health-attestation.md). When you enable this setting, the following setting is also available for configuration.
 
 ### Use on-premises Health Attestation Service
 
@@ -324,7 +323,7 @@ If clients must install required software updates at the deployment deadline wit
 
 If you want to give users more time to install required application or software update deployments beyond the deadline, set this option to **Yes**. This grace period is for a computer turned off for an extended time, and the user needs to install many application or update deployments. For example, this setting is helpful if a user returns from vacation, and has to wait for a long time while the client installs overdue application deployments.
 
-Set a grace period of 1 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications#delay-enforcement-with-a-grace-period).
+Set a grace period of 1 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
 
 ## Computer restart
@@ -335,14 +334,14 @@ The following settings must be shorter in duration than the shortest maintenance
 - **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**
 
 
-For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
+For more information about maintenance windows, see [How to use maintenance windows](../manage/collections/use-maintenance-windows.md).
 
 - **Specify the snooze duration for computer restart countdown notifications (minutes)** (Starting in version 1906)<!--3976435-->
   - The default value is 240 minutes.
   - Your snooze duration value should be less than the temporary notification value minus the value for the notification the user can't dismiss.
-  - For more information, see [Device restart notifications](/sccm/core/clients/deploy/device-restart-notifications).
+  - For more information, see [Device restart notifications](device-restart-notifications.md).
 
-**When a deployment requires a restart, show a dialog window to the user instead of a toast notification**<!--3555947-->: Starting in version 1902, configuring this setting to **Yes** changes the user experience to be more intrusive. This setting applies to all deployments of applications, task sequences, and software updates. For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact).
+**When a deployment requires a restart, show a dialog window to the user instead of a toast notification**<!--3555947-->: Starting in version 1902, configuring this setting to **Yes** changes the user experience to be more intrusive. This setting applies to all deployments of applications, task sequences, and software updates. For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact).
 
 > [!IMPORTANT]
 > In Configuration Manager 1902, under certain circumstances, the dialog box won't replace toast notifications. To resolve this issue, install the [update rollup for Configuration Manager version 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
@@ -363,18 +362,18 @@ You use Configuration Manager boundary groups to define and regulate content dis
 Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content.
 
  [!Note]
-> Microsoft recommends allowing the client to configure this setting via local policy rather than group policy. This allows the boundary group identifier to be set as the Delivery Optimization group identifier on the client. For more information, see [Delivery Optimization](/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization).
+> Microsoft recommends allowing the client to configure this setting via local policy rather than group policy. This allows the boundary group identifier to be set as the Delivery Optimization group identifier on the client. For more information, see [Delivery Optimization](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
 
 ### Enable devices managed by Configuration Manager to use Microsoft Connected Cache servers for content download
 
 <!--3555764-->
-Choose **Yes** to allow clients to download content from an on-premises distribution point that you enable as a Microsoft Connected Cache server. For more information, see [Microsoft Connected Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/microsoft-connected-cache).
+Choose **Yes** to allow clients to download content from an on-premises distribution point that you enable as a Microsoft Connected Cache server. For more information, see [Microsoft Connected Cache in Configuration Manager](../../plan-design/hierarchy/microsoft-connected-cache.md).
 
 
 ## Endpoint Protection
 
 > [!Tip]
-> In addition to the following information, you can find details about using Endpoint Protection client settings in [Example scenario: Using Endpoint Protection to protect computers from malware](/sccm/protect/deploy-use/scenarios-endpoint-protection).
+> In addition to the following information, you can find details about using Endpoint Protection client settings in [Example scenario: Using Endpoint Protection to protect computers from malware](../../../protect/deploy-use/scenarios-endpoint-protection.md).
 
 ### Manage Endpoint Protection client on client computers
 
@@ -430,13 +429,13 @@ Enter the number of minutes that modern devices poll for policy. This setting is
 
 To enable user-based enrollment of legacy devices, set this option to **Yes**, and then configure the following setting:
 
-- **Enrollment profile**: Select **Set Profile** to create or select an enrollment profile. For more information, see [Configure client settings for enrollment](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings).
+- **Enrollment profile**: Select **Set Profile** to create or select an enrollment profile. For more information, see [Configure client settings for enrollment](deploy-clients-to-macs.md#configure-client-settings).
 
 ### Allow users to enroll modern devices
 
 To enable user-based enrollment of modern devices, set this option to **Yes**, and then configure the following setting:
 
-- **Modern device enrollment profile**: Select **Set Profile** to create or select an enrollment profile. For more information, see [Create an enrollment profile that allows users to enroll modern devices](/sccm/mdm/get-started/set-up-device-enrollment-on-premises-mdm#bkmk_createProf).
+- **Modern device enrollment profile**: Select **Set Profile** to create or select an enrollment profile. For more information, see [Create an enrollment profile that allows users to enroll modern devices](../../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md#bkmk_createProf).
 
 
 
@@ -444,7 +443,7 @@ To enable user-based enrollment of modern devices, set this option to **Yes**, a
 
 ### Enable hardware inventory on clients
 
-By default, this setting is **Yes**. For more information, see [Introduction to hardware inventory](/sccm/core/clients/manage/inventory/introduction-to-hardware-inventory).
+By default, this setting is **Yes**. For more information, see [Introduction to hardware inventory](../manage/inventory/introduction-to-hardware-inventory.md).
 
 ### Hardware inventory schedule
 
@@ -463,7 +462,7 @@ Specify the maximum size, in kilobytes (KB), allowed for each custom Management 
 
 ### Hardware inventory classes
 
-Select **Set Classes** to extend the hardware information that you collect from clients without manually editing the sms_def.mof file. For more information, see [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory).  
+Select **Set Classes** to extend the hardware information that you collect from clients without manually editing the sms_def.mof file. For more information, see [How to configure hardware inventory](../manage/inventory/configure-hardware-inventory.md).  
 
 ### Collect MIF files
 
@@ -519,7 +518,7 @@ Choose one of the following options for this setting:
 
 ### Allow power management of devices
 
-Set this option to **Yes** to enable power management on clients. For more information, see [Introduction to power management](/sccm/core/clients/manage/power/introduction-to-power-management).
+Set this option to **Yes** to enable power management on clients. For more information, see [Introduction to power management](../manage/power/introduction-to-power-management.md).
 
 ### Allow users to exclude their device from power management
 
@@ -533,7 +532,7 @@ Added in 1810. When set to **Enable**, configures the power settings on the netw
 
 Specify **Yes** to supplement the site's Wake On LAN setting, when it's configured for unicast packets.  
 
-For more information about wake-up proxy, see [Plan how to wake up clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).  
+For more information about wake-up proxy, see [Plan how to wake up clients](plan/plan-wake-up-clients.md).  
 
 > [!WARNING]  
 > Don't enable wake-up proxy in a production network without first understanding how it works and evaluating it in a test environment.  
@@ -751,7 +750,7 @@ Initiate this action from a client as follows: in the **Configuration Manager** 
 
 ### Enable software inventory on clients
 
-This option is set to **Yes** by default. For more information, see [Introduction to software inventory](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).
+This option is set to **Yes** by default. For more information, see [Introduction to software inventory](../manage/inventory/introduction-to-software-inventory.md).
 
 ### Schedule software inventory and file collection
 
@@ -813,7 +812,7 @@ If you want to collect files from client computers, select **Set Files**, and th
     > [!IMPORTANT]
     > If you configure software inventory to collect many large files, this configuration might negatively affect the performance of your network and site server.  
 
-    For information about how to view collected files, see [How to use Resource Explorer to view software inventory](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory).  
+    For information about how to view collected files, see [How to use Resource Explorer to view software inventory](../manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
 
     Select **OK** to close the **Collected File Properties** dialog box. Add all the files that you want to collect, and then select **OK** to close the **Configure Client Setting** dialog box.  
 
@@ -833,7 +832,7 @@ The software inventory agent retrieves manufacturer and product names from file 
 
 ### Enable software metering on clients
 
-This setting is set to **Yes** by default. For more information, see [Software metering](/sccm/apps/deploy-use/monitor-app-usage-with-software-metering#configure-software-metering).
+This setting is set to **Yes** by default. For more information, see [Software metering](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md#configure-software-metering).
 
 ### Schedule data collection
 
@@ -852,7 +851,7 @@ Use this setting to enable software updates on Configuration Manager clients. Wh
 
 ### Software update scan schedule
 
-Select **Schedule** to specify how often the client initiates a compliance assessment scan. This scan determines the state for software updates on the client (for example, required or installed). For more information about compliance assessment, see [Software updates compliance assessment](/sccm/sum/understand/software-updates-introduction#BKMK_SUMCompliance).  
+Select **Schedule** to specify how often the client initiates a compliance assessment scan. This scan determines the state for software updates on the client (for example, required or installed). For more information about compliance assessment, see [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
 
 By default, this scan uses a simple schedule to initiate every seven days. You can create a custom schedule. You can specify an exact start day and time, use Universal Coordinated Time (UTC) or the local time, and configure the recurring interval for a specific day of the week.  
 
@@ -887,8 +886,8 @@ Use this setting to specify the period of time for the previous setting. You can
 
 Set this option to **Yes** to allow clients to use delta content files. This setting allows the Windows Update Agent on the device to determine what content is needed and selectively download it. 
 
-- Before enabling this client setting, ensure Delivery Optimization is configured appropriately for your environment. For more information, see [Windows Delivery Optimization](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#windows-delivery-optimization) and the [Delivery Optimization client setting](#delivery-optimization).
- - This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
+- Before enabling this client setting, ensure Delivery Optimization is configured appropriately for your environment. For more information, see [Windows Delivery Optimization](../../../sum/deploy-use/optimize-windows-10-update-delivery.md#windows-delivery-optimization) and the [Delivery Optimization client setting](#delivery-optimization).
+ - This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
  - Starting in Configuration Manager version 1910, when this option is set, delta download is used for all Windows update installation files, not just express installation files.
     - When using a CMG for content storage, the content for third-party updates won't download to clients if **Download delta content when available** is enabled. <!--6598587--> 
 
@@ -905,7 +904,7 @@ This setting configures the local port for the HTTP listener to download delta c
 
 ### Enable management of the Office 365 Client Agent
 
-When you set this option to **Yes**, it enables the configuration of Office 365 installation settings. It also enables downloading files from Office Content Delivery Networks (CDNs), and deploying the files as an application in Configuration Manager. For more information, see [Manage Office 365 ProPlus](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
+When you set this option to **Yes**, it enables the configuration of Office 365 installation settings. It also enables downloading files from Office Content Delivery Networks (CDNs), and deploying the files as an application in Configuration Manager. For more information, see [Manage Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="bkmk_SUMMaint"></a> Enable installation of software updates in "All deployments" maintenance window when "Software Update" maintenance window is available
 
@@ -931,7 +930,7 @@ By default, the client only installs software updates during the second maintena
 ### <a name="bkmk_thread-priority"></a> Specify thread priority for feature updates
 
 <!--3734525-->
-Starting in Configuration Manager version 1902, you can adjust the priority with which Windows 10 version 1709 or later clients install a feature update through [Windows 10 servicing](/sccm/osd/deploy-use/manage-windows-as-a-service). This setting has no impact on Windows 10 in-place upgrade task sequences.
+Starting in Configuration Manager version 1902, you can adjust the priority with which Windows 10 version 1709 or later clients install a feature update through [Windows 10 servicing](../../../osd/deploy-use/manage-windows-as-a-service.md). This setting has no impact on Windows 10 in-place upgrade task sequences.
 
 This client setting provides the following options:
 
@@ -989,11 +988,11 @@ Choose **Yes** to create automatic user device affinity based on the usage infor
 
 ### Allow user to define their primary devices
 <!--3485366-->
-When this setting is **Yes**, users can identify their own primary devices in Software Center. For more information, see the [Software Center user guide](/sccm/core/understand/software-center#work-information).
+When this setting is **Yes**, users can identify their own primary devices in Software Center. For more information, see the [Software Center user guide](../../understand/software-center.md#work-information).
 
 ## Windows Analytics
 
 > [!Important]  
 > The Windows Analytics service is retired as of January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 >
-> Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](/sccm/desktop-analytics/overview).
+> Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](../../../desktop-analytics/overview.md).

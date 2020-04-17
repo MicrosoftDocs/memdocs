@@ -44,7 +44,7 @@ Disable user input during setup, but displays the setup wizard. Use this option 
 
 Run a site reset that resets the database and service accounts for the site.
 
-For more information, see [Run a site reset](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_reset).  
+For more information, see [Run a site reset](../../manage/modify-your-infrastructure.md#bkmk_reset).  
 
 ### `/TESTDBUPGRADE`
 
@@ -67,7 +67,7 @@ Provide the instance name and database name for the site database. If you specif
 
 Run an unattended upgrade of a site. Specify the product key including the dashes (`-`). Also specify the path to the previously downloaded setup prerequisite files.  
 
-For more information about setup prerequisite files, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader).  
+For more information about setup prerequisite files, see [Setup Downloader](setup-downloader.md).  
 
 #### Usage
 
@@ -75,7 +75,7 @@ For more information about setup prerequisite files, see [Setup Downloader](/scc
 
 ### `/SCRIPT`
 
-Run an unattended installation. Use a setup initialization file with this option. For more information about how to run setup unattended, see [Install sites using a command line](/sccm/core/servers/deploy/install/use-a-command-line-to-install-sites).  
+Run an unattended installation. Use a setup initialization file with this option. For more information about how to run setup unattended, see [Install sites using a command line](use-a-command-line-to-install-sites.md).  
 
 #### Usage
 
@@ -83,7 +83,7 @@ Run an unattended installation. Use a setup initialization file with this option
 
 ### `/SDKINST`
 
-Install the SMS Provider on the specified computer. Provide the fully qualified domain name (FQDN) for the SMS Provider computer. For more information about the SMS Provider, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).  
+Install the SMS Provider on the specified computer. Provide the fully qualified domain name (FQDN) for the SMS Provider computer. For more information about the SMS Provider, see [Plan for the SMS Provider](../../../plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
 #### Usage
 
@@ -466,7 +466,7 @@ Use the following details to install a CAS by using an unattended setup script f
 
         - `1` = Software Assurance is active
 
-    - **Details:** Specify if you have active Software Assurance. For more information, see [Product and licensing FAQ](/sccm/core/understand/product-and-licensing-faq).
+    - **Details:** Specify if you have active Software Assurance. For more information, see [Product and licensing FAQ](../../../understand/product-and-licensing-faq.md).
 
 - **Key name:** CurrentBranch
 
@@ -478,7 +478,7 @@ Use the following details to install a CAS by using an unattended setup script f
 
         - `1` = Install current branch
 
-    - **Details:** Specify whether to use Configuration Manager current branch or long-term servicing branch (LTSB). For more information, see [Which branch of Configuration Manager should I use?](/sccm/core/understand/which-branch-should-i-use).
+    - **Details:** Specify whether to use Configuration Manager current branch or long-term servicing branch (LTSB). For more information, see [Which branch of Configuration Manager should I use?](../../../understand/which-branch-should-i-use.md).
 
 ### Unattended install for a primary site
 
@@ -830,7 +830,7 @@ Use the following details to install a primary site by using an unattended setup
 
         - `1` = Software Assurance is active
 
-    - **Details:** Specify if you have active Software Assurance. For more information, see [Product and licensing FAQ](/sccm/core/understand/product-and-licensing-faq).
+    - **Details:** Specify if you have active Software Assurance. For more information, see [Product and licensing FAQ](../../../understand/product-and-licensing-faq.md).
 
 - **Key name:** CurrentBranch
 
@@ -842,7 +842,7 @@ Use the following details to install a primary site by using an unattended setup
 
         - `1` = Install current branch
 
-    - **Details:** Specify whether to use Configuration Manager current branch or long-term servicing branch (LTSB). For more information, see [Which branch of Configuration Manager should I use?](/sccm/core/understand/which-branch-should-i-use).
+    - **Details:** Specify whether to use Configuration Manager current branch or long-term servicing branch (LTSB). For more information, see [Which branch of Configuration Manager should I use?](../../../understand/which-branch-should-i-use.md).
 
 ### Unattended recovery for a CAS
 
@@ -980,7 +980,7 @@ Use the following details to recover a CAS by using an unattended setup script f
 
     - **Details:** Specifies the FQDN for the server that hosts the SMS Provider. Specify the server that hosted the SMS Provider before the failure.  
 
-        After the initial installation, you can configure additional SMS Providers for the site. For more information about the SMS Provider, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).  
+        After the initial installation, you can configure additional SMS Providers for the site. For more information about the SMS Provider, see [Plan for the SMS Provider](../../../plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
 - **Key name:** PrerequisiteComp  
 
@@ -1246,7 +1246,7 @@ Use the following details to recover a primary site by using an unattended setup
 
     - **Values:** <*SMS Provider FQDN*>  
 
-    - **Details:** Specifies the FQDN for the server that hosts the SMS Provider. Specify the server that hosted the SMS Provider before the failure. After the initial installation, you can configure additional SMS Providers for the site. For more information about the SMS Provider, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).  
+    - **Details:** Specifies the FQDN for the server that hosts the SMS Provider. Specify the server that hosted the SMS Provider before the failure. After the initial installation, you can configure additional SMS Providers for the site. For more information about the SMS Provider, see [Plan for the SMS Provider](../../../plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
 - **Key name:** PrerequisiteComp  
 

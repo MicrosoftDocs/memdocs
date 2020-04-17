@@ -36,9 +36,9 @@ This information may change in the future. It might not include each deprecated 
 
 If you need to upgrade your version of SQL Server, we recommend the following methods, from easy to more complex:
 
-1. [Upgrade SQL Server in-place](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#BKMK_SupConfigUpgradeDBSrv) (recommended).  
+1. [Upgrade SQL Server in-place](../../../servers/manage/upgrade-on-premises-infrastructure.md#BKMK_SupConfigUpgradeDBSrv) (recommended).  
 
-2. Install a new version of SQL Server on a new computer. Then to point your site server at the new SQL Server, [use the database move option](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_dbconfig) of Configuration Manager setup.  
+2. Install a new version of SQL Server on a new computer. Then to point your site server at the new SQL Server, [use the database move option](../../../servers/manage/modify-your-infrastructure.md#bkmk_dbconfig) of Configuration Manager setup.  
 
 3. Use [backup and recovery](/sccm/protect/understand/backup-and-recovery).  
 
@@ -46,8 +46,8 @@ If you need to upgrade your version of SQL Server, we recommend the following me
 
 For more information, see the following articles:
 
-- [Removed and deprecated](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)  
+- [Removed and deprecated](removed-and-deprecated.md)  
 
 - [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle)  
 
-- [Support for current branch versions of Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported)  
+- [Support for current branch versions of Configuration Manager](../../../servers/manage/current-branch-versions-supported.md)  

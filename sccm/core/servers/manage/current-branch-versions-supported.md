@@ -33,6 +33,6 @@ Figure 1. Example of the release cycle overlap for current branch servicing supp
 >
 > Update your Configuration Manager environment to the latest version before support for your current version expires.
 
-For a list of the current branch versions, see [Version details](/sccm/core/servers/manage/updates#version-details).
+For a list of the current branch versions, see [Version details](updates.md#version-details).
 
-For more information about version numbers, and availability as an in-console update or as a baseline, see [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines).
+For more information about version numbers, and availability as an in-console update or as a baseline, see [Baseline and update versions](updates.md#bkmk_Baselines).

@@ -24,22 +24,22 @@ Learn about the Windows 10 versions that Configuration Manager supports, includi
 > [!Tip]
 > Windows Server builds as a client are supported the same as the associated Windows 10 version. For example, Windows Server 2016 is the same build version as Windows 10 LTSB 2016, and Windows Server version 1803 is the same build version as Windows 10 version 1803.
 >
-> For more information on Windows Server as a site system, see [Supported operating systems for Configuration Manager site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#bkmk_core).
+> For more information on Windows Server as a site system, see [Supported operating systems for Configuration Manager site system servers](supported-operating-systems-for-site-system-servers.md#bkmk_core).
 
 ## Windows 10 as a client
 
 Configuration Manager attempts to provide support as a client for each new Windows 10 version as soon as possible after it becomes available. Because the products have separate development and release schedules, the support that Configuration Manager provides depends on when each becomes available.
 
-A Configuration Manager version drops from the matrix after [support for that version](/sccm/core/servers/manage/current-branch-versions-supported) ends. Similarly, support for Windows 10 versions like the Enterprise 2015 LTSB or 1511 drops from the matrix when they're removed from support.
+A Configuration Manager version drops from the matrix after [support for that version](../../servers/manage/current-branch-versions-supported.md) ends. Similarly, support for Windows 10 versions like the Enterprise 2015 LTSB or 1511 drops from the matrix when they're removed from support.
 
-- The latest version of Configuration Manager current branch receives both security and critical updates, which can include fixes for issues with Windows 10 versions. When Microsoft releases a new version of Configuration Manager current branch, prior versions only receive security updates. For more information, see [Support for Configuration Manager current branch versions](/sccm/core/servers/manage/current-branch-versions-supported).  
+- The latest version of Configuration Manager current branch receives both security and critical updates, which can include fixes for issues with Windows 10 versions. When Microsoft releases a new version of Configuration Manager current branch, prior versions only receive security updates. For more information, see [Support for Configuration Manager current branch versions](../../servers/manage/current-branch-versions-supported.md).  
 
     > [!Note]  
-    > The best way to stay current with Windows 10 is to stay current with Configuration Manager. For more information, see [Configuration Manager and Windows as a Service](/sccm/core/understand/configuration-manager-and-windows-as-service).  
+    > The best way to stay current with Windows 10 is to stay current with Configuration Manager. For more information, see [Configuration Manager and Windows as a Service](../../understand/configuration-manager-and-windows-as-service.md).  
 
-- This information supplements [Supported operating systems for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).  
+- This information supplements [Supported operating systems for clients and devices](supported-operating-systems-for-clients-and-devices.md).  
 
-- If you use the long-term servicing branch of Configuration Manager, see [Supported configurations for the long-term servicing branch](/sccm/core/understand/supported-configurations-for-ltsb).  
+- If you use the long-term servicing branch of Configuration Manager, see [Supported configurations for the long-term servicing branch](../../understand/supported-configurations-for-ltsb.md).  
 
 The following table lists the versions of Windows 10 that you can use as a client with different versions of Configuration Manager.
 
@@ -82,7 +82,7 @@ Starting in version 2002,<!--5954175--> the **All Windows 10 (ARM64)** platform 
 
 ### <a name="bkmk_WIfB-support"></a> Support for Windows Insider
 
-Starting in Configuration Manager version 1906, you can [update and service Windows Insider](/sccm/sum/get-started/configure-classifications-and-products#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, the support for it is best effort. Configuration Manager might not issue a hotfix for this functionality if it ceases to function.  
+Starting in Configuration Manager version 1906, you can [update and service Windows Insider](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, the support for it is best effort. Configuration Manager might not issue a hotfix for this functionality if it ceases to function.  
 
 To provide feedback on Windows Insider, use the [Feedback Hub](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-feedback).
 
@@ -90,7 +90,7 @@ To provide feedback on Windows Insider, use the [Feedback Hub](https://docs.micr
 
 When you deploy operating systems with Configuration Manager, the Windows ADK is a required external dependency. For more information, see the following articles:
 
-- [Infrastructure requirements for OS deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment#windows-adk-for-windows-10)
+- [Infrastructure requirements for OS deployment](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk-for-windows-10)
 
 - [Download the Windows ADK for Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install)
 

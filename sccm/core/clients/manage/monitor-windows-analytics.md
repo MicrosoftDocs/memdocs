@@ -19,17 +19,17 @@ manager: dougeby
 > [!Important]  
 > The Windows Analytics service is retired as of January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 >
-> Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](/sccm/desktop-analytics/overview).
+> Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](../../../desktop-analytics/overview.md).
 
-If your Configuration Manager site had a connection to Upgrade Readiness, you need to remove it and reconfigure clients. For more information, see [Remove Upgrade Readiness connection](/configmgr/core/clients/manage/upgrade-readiness#bkmk_remove).
+If your Configuration Manager site had a connection to Upgrade Readiness, you need to remove it and reconfigure clients. For more information, see [Remove Upgrade Readiness connection](upgrade-readiness.md#bkmk_remove).
 
 <!--
-[Windows Analytics](https://docs.microsoft.com/windows/deployment/update/windows-analytics-overview) is a set of solutions that allow you to gain insight into the current state of your environment. Windows devices in your environment report data to Microsoft, which you can access and analyze through these solutions. For example, connect [Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness) to Configuration Manager to directly access the data in the **Monitoring** workspace of the Configuration Manager console.
+[Windows Analytics](https://docs.microsoft.com/windows/deployment/update/windows-analytics-overview) is a set of solutions that allow you to gain insight into the current state of your environment. Windows devices in your environment report data to Microsoft, which you can access and analyze through these solutions. For example, connect [Upgrade Readiness](upgrade-readiness.md) to Configuration Manager to directly access the data in the **Monitoring** workspace of the Configuration Manager console.
 
 The data used by Windows Analytics isn't transferred directly to the Configuration Manager site server. Client computers send data to the Windows cloud service. This service then transfers the relevant data to Windows Analytics solutions hosted in one of your organization's workspaces. Configuration Manager then directs you to relevant data in the web portal with in-context links. It can also directly display data that's part of solutions that you connect to Configuration Manager.
 
 > [!Important]  
-> Configuration Manager reports diagnostics and usage data to Microsoft. This data is separate from Windows Analytics data. For more information, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).  
+> Configuration Manager reports diagnostics and usage data to Microsoft. This data is separate from Windows Analytics data. For more information, see [Diagnostics and usage data](../../plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
 
 
@@ -43,7 +43,7 @@ To configure Windows Analytics:
 2. In the ribbon, select **Create Custom Device Client Settings**.  
 3. Add the **Windows Analytics** group to this custom device client settings policy.  
 
-For more information on creating custom device client settings, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
+For more information on creating custom device client settings, see [How to configure client settings](../deploy/configure-client-settings.md).
 
 Select the **Windows Analytics** settings tab, and configure the following settings:  
 
@@ -71,7 +71,7 @@ On devices running Windows 8.1 or earlier, Internet Explorer can collect data ab
 
 Upgrade Readiness enables you to analyze device readiness and compatibility with Windows 10. This assessment allows for smoother upgrades. After connecting Configuration Manager to Upgrade Readiness, access this client upgrade compatibility data directly in the Configuration Manager console. Then target devices for upgrade or remediation from the device list.
 
-For more information and details on how to configure and connect to Upgrade Readiness, see [Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness).
+For more information and details on how to configure and connect to Upgrade Readiness, see [Upgrade Readiness](upgrade-readiness.md).
 
 
 

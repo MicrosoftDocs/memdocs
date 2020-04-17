@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-The Run Meter Summarization Tool is one of the [Configuration Manager tools](/sccm/core/support/tools). Use it to immediately trigger the maintenance tasks for software metering summarization on primary sites. By default, these tasks run as scheduled in **Site Maintenance** tasks, which start after 12:00 AM every day. 
+The Run Meter Summarization Tool is one of the [Configuration Manager tools](tools.md). Use it to immediately trigger the maintenance tasks for software metering summarization on primary sites. By default, these tasks run as scheduled in **Site Maintenance** tasks, which start after 12:00 AM every day. 
 
 These tasks summarize the data in the **MeterData** SQL table, and write the summary results into the **FileUsageSummary** and **MonthlyUsageSummary** tables. Then you see the summarized result in software metering reports. Any Configuration Manager administrative user who can connect to the primary site database can use this tool to run summarization. 
 
@@ -52,5 +52,5 @@ The tool summarizes the software metering usage generated before the delay. By d
 
 ## See also
 
-- [Maintenance tasks](/sccm/core/servers/manage/maintenance-tasks)
-- [Monitor app usage with software metering](/sccm/apps/deploy-use/monitor-app-usage-with-software-metering)
+- [Maintenance tasks](../servers/manage/maintenance-tasks.md)
+- [Monitor app usage with software metering](../../apps/deploy-use/monitor-app-usage-with-software-metering.md)

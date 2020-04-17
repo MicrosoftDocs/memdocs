@@ -162,7 +162,7 @@ Specify remote access and remote control settings for your computer
     - **Repeatedly during session**
     - **Never**
 
-    For more info, see [Introduction to Remote Control](/configmgr/core/clients/manage/remote-control/introduction-to-remote-control)
+    For more info, see [Introduction to Remote Control](../clients/manage/remote-control/introduction-to-remote-control.md)
     
 
 ## Custom tab in Software Center

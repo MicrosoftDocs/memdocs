@@ -17,7 +17,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-To install a new Configuration Manager site by using a guided user interface, use the Configuration Manager Setup Wizard (setup.exe). The wizard supports installing a primary site or central administration site. You also use the wizard to [upgrade an evaluation installation](/sccm/core/servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install) of Configuration Manager to a fully licensed installation. When you don't want to use the wizard, you can instead use an [installation script](/sccm/core/servers/deploy/install/use-a-command-line-to-install-sites) and run an unattended command-line installation.
+To install a new Configuration Manager site by using a guided user interface, use the Configuration Manager Setup Wizard (setup.exe). The wizard supports installing a primary site or central administration site. You also use the wizard to [upgrade an evaluation installation](upgrade-an-evaluation-install-to-a-full-install.md) of Configuration Manager to a fully licensed installation. When you don't want to use the wizard, you can instead use an [installation script](use-a-command-line-to-install-sites.md) and run an unattended command-line installation.
 
 Install a secondary site from within the Configuration Manager console. Secondary sites don't support a scripted command-line installation.
 
@@ -25,15 +25,15 @@ Install a secondary site from within the Configuration Manager console. Secondar
 > Starting in version 1906, the **splash.hta** file no longer exists at the root of the installation media. It provided links to the following information:<!--SCCMDocs-pr#3545-->
 >
 > - **Install site**: `smssetup\bin\x64\setup.exe`. For more information, see [Install a central administration or primary site](#bkmk_primary).
-> - **Before you begin**: [Design a hierarchy of sites](/sccm/core/plan-design/hierarchy/design-a-hierarchy-of-sites) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626543 -->
-> - **Assess server readiness**: [Prerequisite Checker](/sccm/core/servers/deploy/install/prerequisite-checker) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626546 -->
-> - **Download required prerequisite files**: `smssetup\bin\x64\setupdl.exe`. For more information, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader).
-> - **Install Configuration Manager console**: `smssetup\bin\i386\consolesetup.exe`. For more information, see [Install consoles](/sccm/core/servers/deploy/install/install-consoles).
-> - [**Download System Center Updates Publisher**](/sccm/sum/tools/updates-publisher) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626548 -->
+> - **Before you begin**: [Design a hierarchy of sites](../../../plan-design/hierarchy/design-a-hierarchy-of-sites.md) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626543 -->
+> - **Assess server readiness**: [Prerequisite Checker](prerequisite-checker.md) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626546 -->
+> - **Download required prerequisite files**: `smssetup\bin\x64\setupdl.exe`. For more information, see [Setup Downloader](setup-downloader.md).
+> - **Install Configuration Manager console**: `smssetup\bin\i386\consolesetup.exe`. For more information, see [Install consoles](install-consoles.md).
+> - [**Download System Center Updates Publisher**](../../../../sum/tools/updates-publisher.md) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626548 -->
 > - **Download clients for additional operating systems**: <!-- https://go.microsoft.com/fwlink/p/?LinkId=626550 -->
 >   - [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850)
 >   - [Clients for UNIX and Linux](https://www.microsoft.com/download/details.aspx?id=47719)
-> - [**Release notes**](/sccm/core/servers/deploy/install/release-notes) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
+> - [**Release notes**](release-notes.md) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
 > - [**Read documentation**](https://docs.microsoft.com/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
 > - **Obtain installation assistance**: [TechNet Forums: Configuration Manager (Current Branch) – Site and Client Deployment](https://social.technet.microsoft.com/Forums/en-us/home?forum=ConfigMgrDeployment) <!--NOTE: this link requires en-us locale to work-->   <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
 > - **Configuration Manager community**: [System Center Community: How to Participate](https://social.technet.microsoft.com/wiki/contents/articles/11504.system-center-community-how-to-participate.aspx) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626544 -->
@@ -46,10 +46,10 @@ Use the following procedure to install a central administration site or a primar
 
 Before starting the site installation, be familiar with the details in the following articles:
 
-- [Prepare to install sites](/sccm/core/servers/deploy/install/prepare-to-install-sites)
-- [Prerequisites for installing sites](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites)
+- [Prepare to install sites](prepare-to-install-sites.md)
+- [Prerequisites for installing sites](prerequisites-for-installing-sites.md)
 
-If you're installing a central administration site as part of a site expansion scenario, review [Expanding a stand-alone primary site](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_expand) before using the following procedure.
+If you're installing a central administration site as part of a site expansion scenario, review [Expanding a stand-alone primary site](use-the-setup-wizard-to-install-sites.md#bkmk_expand) before using the following procedure.
 
 ### <a name="bkmk_installpri"></a> Process to install a primary or central administration site
 
@@ -94,7 +94,7 @@ If you're installing a central administration site as part of a site expansion s
         > [!NOTE]  
         > Microsoft doesn't validate the expiration date that you entered and doesn't use this date for license validation. You can use it as a reminder of your expiration date. This date is useful because Configuration Manager periodically checks for new software updates offered online. Your software assurance license status should be current so that you're eligible to use these additional updates.  
 
-    For more information, see [Licensing and branches](/sccm/core/understand/learn-more-editions).  
+    For more information, see [Licensing and branches](../../../understand/learn-more-editions.md).  
 
 5. On the **Microsoft Software License Terms** page, read and accept the license terms.  
 
@@ -104,12 +104,12 @@ If you're installing a central administration site as part of a site expansion s
 
     - If you want Setup to download the files at this time, select **Download required files**. Then specify a location to store the files.  
 
-    - If you previously downloaded the files by using [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader), select **Use previously downloaded files**. Then specify the download folder.  
+    - If you previously downloaded the files by using [Setup Downloader](setup-downloader.md), select **Use previously downloaded files**. Then specify the download folder.  
 
         > [!TIP]  
         > If you use previously downloaded files, verify that the path to the download folder contains the most recent version of the files.  
 
-8. On the **Server Language Selection** page, select the languages that are available for the Configuration Manager console and for reports. (English is selected by default and can't be removed.) For more information, see [Language packs](/sccm/core/servers/deploy/install/language-packs).  
+8. On the **Server Language Selection** page, select the languages that are available for the Configuration Manager console and for reports. (English is selected by default and can't be removed.) For more information, see [Language packs](language-packs.md).  
 
 9. On the **Client Language Selection** page, select the languages that are available to client computers. Also specify whether to enable all client languages for mobile device clients. (English is selected by default and can't be removed.)  
 
@@ -118,7 +118,7 @@ If you're installing a central administration site as part of a site expansion s
 
 10. On the **Site and Installation Settings** page, specify the following settings for the new site that you're installing:  
 
-    - **Site code**: [Each site code in a hierarchy must be unique](/sccm/core/servers/deploy/install/prepare-to-install-sites#bkmk_sitecodes). Use three alpha-numeric digits: A through Z and 0 through 9. Because the site code is used in folder names, don't use Windows-reserved names, including:  
+    - **Site code**: [Each site code in a hierarchy must be unique](prepare-to-install-sites.md#bkmk_sitecodes). Use three alpha-numeric digits: A through Z and 0 through 9. Because the site code is used in folder names, don't use Windows-reserved names, including:  
         - AUX  
         - CON  
         - NUL  
@@ -183,11 +183,11 @@ If you're installing a central administration site as part of a site expansion s
 
     - By default, it specifies the site server.  
 
-    - After the site installs, you can configure additional SMS Providers. For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).  
+    - After the site installs, you can configure additional SMS Providers. For more information, see [Plan for the SMS Provider](../../../plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
 15. On the **Client Communication Settings** page, choose whether to configure all site systems to accept only HTTPS communication from clients or for the communication method to be configured for each site system role.  
 
-    When you select **All site system roles accept only HTTPS communication from clients**, the client computer must have a valid PKI certificate for client authentication. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
+    When you select **All site system roles accept only HTTPS communication from clients**, the client computer must have a valid PKI certificate for client authentication. For more information, see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md).  
 
     > [!NOTE]  
     > This step only applies when you install a primary site. If you're installing a central administration site, skip this step.  
@@ -202,9 +202,9 @@ If you're installing a central administration site as part of a site expansion s
     > This step only applies when you install a primary site. If you're installing a central administration site, skip this step.  
 
     > [!NOTE]  
-    > To install site system roles, Setup uses the **site system installation account**. By default, this uses the primary site’s computer account. This account must be a local administrator on a remote computer to install the site system role. If this account lacks the required permissions, uncheck the site system roles and install them later from within the Configuration Manager console, after configuring additional accounts to use as site system installation accounts. For more information, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#site-system-installation-account).  
+    > To install site system roles, Setup uses the **site system installation account**. By default, this uses the primary site’s computer account. This account must be a local administrator on a remote computer to install the site system role. If this account lacks the required permissions, uncheck the site system roles and install them later from within the Configuration Manager console, after configuring additional accounts to use as site system installation accounts. For more information, see [Accounts](../../../plan-design/hierarchy/accounts.md#site-system-installation-account).  
 
-17. On the **Usage Data** page, review the information about data that Microsoft collects, and then choose **Next**. For more information, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).  
+17. On the **Usage Data** page, review the information about data that Microsoft collects, and then choose **Next**. For more information, see [Diagnostics and usage data](../../../plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
 18. The **Service Connection Point Setup** page is only available during the following scenarios:  
 
@@ -217,7 +217,7 @@ If you're installing a central administration site as part of a site expansion s
 
      If you're installing a central administration site as part of a site expansion scenario, and this role is already installed at the stand-alone primary site, first uninstall this role from the stand-alone primary site. Only one instance of this role is permitted in a hierarchy, and it's only supported at the top-tier site of the hierarchy.  
 
-     After you select a configuration for the **Service Connection Point**, choose **Next**. After Setup completes, you can change this configuration from within the Configuration Manager console. For more information, see [About the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point).  
+     After you select a configuration for the **Service Connection Point**, choose **Next**. After Setup completes, you can change this configuration from within the Configuration Manager console. For more information, see [About the service connection point](../configure/about-the-service-connection-point.md).  
 
 19. On the **Settings Summary** page, review the setting that you've selected. When you're ready, choose **Next** to start the Prerequisite Checker.  
 
@@ -232,7 +232,7 @@ If you're installing a central administration site as part of a site expansion s
         When the Prerequisite Checker runs, and no checks receive a **Failed** status, you can choose **Begin Install** to start the site installation.  
 
     > [!TIP]  
-    > In addition to the feedback that the wizard provides, you can find additional information about prerequisite issues in the **ConfigMgrPrereq.log** file. It's in the root of the system drive of the computer on which you're installing the site. For more information, see [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks).  
+    > In addition to the feedback that the wizard provides, you can find additional information about prerequisite issues in the **ConfigMgrPrereq.log** file. It's in the root of the system drive of the computer on which you're installing the site. For more information, see [List of prerequisite checks](list-of-prerequisite-checks.md).  
 
 21. On the **Installation** page, Setup displays the installation status. When the core site server installation is complete, you can **Close** the installation wizard. When you close the wizard, the installation and initial site configurations continue in the background.  
 
@@ -249,7 +249,7 @@ When you expand a stand-alone primary site, you install a new central administra
 
 - You can only expand a stand-alone primary site into a new hierarchy.  
 
-- You can only expand one stand-alone primary site into a specific hierarchy. You can't use this option to join additional stand-alone primary sites into the same hierarchy. Instead, use the Migration Wizard to migrate data from one hierarchy into another. For more information, see [Migrate data between hierarchies](/sccm/core/migration/migrate-data-between-hierarchies).  
+- You can only expand one stand-alone primary site into a specific hierarchy. You can't use this option to join additional stand-alone primary sites into the same hierarchy. Instead, use the Migration Wizard to migrate data from one hierarchy into another. For more information, see [Migrate data between hierarchies](../../../migration/migrate-data-between-hierarchies.md).  
 
 - After you expand a stand-alone site into a hierarchy with a central administration site, you can add additional child primary child sites.  
 
@@ -265,7 +265,7 @@ To expand the site, use the Configuration Manager Setup Wizard to install a new 
 
 - On the **Site Installation** page, select the option to expand the stand-alone primary site.  
 
-To expand a stand-alone primary site, first see the [prerequisites to expand a site](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand). Then use the procedure [To install a primary or central administration site](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_installpri) earlier in this article.
+To expand a stand-alone primary site, first see the [prerequisites to expand a site](prerequisites-for-installing-sites.md#bkmk_expand). Then use the procedure [To install a primary or central administration site](use-the-setup-wizard-to-install-sites.md#bkmk_installpri) earlier in this article.
 
 
 ## <a name="bkmk_secondary"></a> Install a secondary site
@@ -320,7 +320,7 @@ Use the Configuration Manager console to install a secondary site.
         - The CD.Latest source file location includes a folder named **Redist**. Move this **Redist** folder as a subfolder under the **SMSSETUP** folder.  
 
             > [!Note]  
-            > If hash mismatch errors occur during setup, update the **Redist** folder. Use the [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader) to get the latest files. For any files that cause a hash mismatch error, also copy them from the updated **Redist** folder to the **SMSSETUP\BIN\X64** folder.
+            > If hash mismatch errors occur during setup, update the **Redist** folder. Use the [Setup Downloader](setup-downloader.md) to get the latest files. For any files that cause a hash mismatch error, also copy them from the updated **Redist** folder to the **SMSSETUP\BIN\X64** folder.
 
     - **Version 1806 and later**<!-- SCCMDocs-pr issue 3164 -->
 
@@ -357,7 +357,7 @@ Use the Configuration Manager console to install a secondary site.
         - **SQL Server Broker port**: Specify the SQL Server Service Broker (SSB) port for SQL Server to use. Specify a valid port that no other site or service is using, and that no firewall restrictions block.  
 
     > [!TIP]  
-    > For a list of the SQL Server versions that Configuration Manager supports, see [Supported SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions).  
+    > For a list of the SQL Server versions that Configuration Manager supports, see [Supported SQL Server versions](../../../plan-design/configs/support-for-sql-server-versions.md).  
 
 7. On the **Distribution Point** page, configure settings for the distribution point that will be installed on the secondary site server.  
 
@@ -365,7 +365,7 @@ Use the Configuration Manager console to install a secondary site.
 
         - **Specify how client devices communicate with the distribution point**: Choose between HTTP and HTTPS.  
 
-        - **Create a self-signed certificate or import a PKI client certificate**: Choose between using a self-signed certificate or importing a certificate from your PKI. A self-signed certificate lets you also allow anonymous connections from Configuration Manager clients to the content library. The certificate is used to authenticate the distribution point to a management point before the distribution point sends status messages. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
+        - **Create a self-signed certificate or import a PKI client certificate**: Choose between using a self-signed certificate or importing a certificate from your PKI. A self-signed certificate lets you also allow anonymous connections from Configuration Manager clients to the content library. The certificate is used to authenticate the distribution point to a management point before the distribution point sends status messages. For more information, see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md).  
 
     - **Optional settings:**  
 
@@ -404,7 +404,7 @@ Use the Configuration Manager console to install a secondary site.
 
     - You can select the **Allow fallback source location for content** option to allow clients outside these boundary groups to fall back and use the distribution point as a source location for content when no preferred distribution points are available.  
 
-        For more information, see the [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management).  
+        For more information, see the [Fundamental concepts for content management](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
 11. On the **Summary** page, verify the settings, and then choose **Next** to install the secondary site. When the wizard presents the **Completion** page, you can close the wizard. The secondary site installation continues in the background.  
 

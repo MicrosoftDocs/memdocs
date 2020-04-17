@@ -45,7 +45,7 @@ The pre-cache content feature gives you the option to allow the client to only d
 
 ### To configure the pre-cache feature
 
-1. Create operating system upgrade packages for specific architectures and languages. Specify the architecture and language on the **Data Source** tab of the package. For the language, use the decimal conversion (for example, 1033 is the decimal for English and 0x0409 is the hexadecimal equivalent). For details, see [Create a task sequence to upgrade an operating system](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system).
+1. Create operating system upgrade packages for specific architectures and languages. Specify the architecture and language on the **Data Source** tab of the package. For the language, use the decimal conversion (for example, 1033 is the decimal for English and 0x0409 is the hexadecimal equivalent). For details, see [Create a task sequence to upgrade an operating system](../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md).
 
     The architecture and language values are used to match task sequence step conditions that you will create in the next step to determine whether the operating system upgrade package should be pre-cached.
 2. Create a task sequence with conditional steps for the different languages and architectures. For example, for the English version you could create a step like the following:

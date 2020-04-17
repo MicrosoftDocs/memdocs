@@ -24,31 +24,31 @@ Configuration Manager provides comprehensive control over feature updates for Wi
 
 | Article        | Description          | 
 | ------------- |-------------|
-|[Overview of Configuration Manager current branch](/sccm/core/plan-design/changes/whats-new-incremental-versions)|Provides a brief summary of the key points for the new servicing model for Configuration Manager (Current Branch)|
-|[Support lifecycle](/sccm/core/servers/manage/current-branch-versions-supported)|Explains the new support and servicing model.|
+|[Overview of Configuration Manager current branch](../plan-design/changes/whats-new-incremental-versions.md)|Provides a brief summary of the key points for the new servicing model for Configuration Manager (Current Branch)|
+|[Support lifecycle](../servers/manage/current-branch-versions-supported.md)|Explains the new support and servicing model.|
 |[Removed and deprecated items](/sccm//core/plan-design/changes/deprecated/removed-and-deprecated)|Provides early notice about future changes that might affect your use of Configuration Manager.|
-|[Updates to Configuration Manager current branch](/sccm/core/servers/manage/updates)|Explains the easy in-console method of applying feature updates to Configuration Manager.|
-|[Get available updates](/sccm/core/servers/manage/install-in-console-updates#get-available-updates)|Explains the two modes available to get new Configuration Manager feature updates.|
-|[Update checklist](/sccm/core/servers/manage/install-in-console-updates#bkmk_beforeinstall)|Provides update version-specific checklists, if applicable.| 
-|[Install new Configuration Manager feature updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_install)|Explains the simple installation steps for feature updates.|
-|[Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)|Provides a support matrix for Windows 10 (and ADK) versions.|
-|[Technical Previews for Configuration Manager](/sccm/core/get-started/technical-preview)|Provides information about the ConfigMgr technical preview program.|
+|[Updates to Configuration Manager current branch](../servers/manage/updates.md)|Explains the easy in-console method of applying feature updates to Configuration Manager.|
+|[Get available updates](../servers/manage/install-in-console-updates.md#get-available-updates)|Explains the two modes available to get new Configuration Manager feature updates.|
+|[Update checklist](../servers/manage/install-in-console-updates.md#bkmk_beforeinstall)|Provides update version-specific checklists, if applicable.| 
+|[Install new Configuration Manager feature updates](../servers/manage/install-in-console-updates.md#bkmk_install)|Explains the simple installation steps for feature updates.|
+|[Support for Windows 10](../plan-design/configs/support-for-windows-10.md)|Provides a support matrix for Windows 10 (and ADK) versions.|
+|[Technical Previews for Configuration Manager](../get-started/technical-preview.md)|Provides information about the ConfigMgr technical preview program.|
 
 
 ## Key articles about adopting Windows as a service
 
 | Article        | Description          |
 | ------------- |-------------|
-|[Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service)|Explains how to use servicing plans to deploy Windows 10 feature updates.|
-|[Upgrade Windows 10 via task sequence](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)|The details of creating a task sequence to upgrade Windows 10 with additional recommendations.|
-|[Phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|Phased deployments automate a coordinated, sequenced rollout of a task sequence across multiple collections.|  
-|[Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)|Use Configuration Manager to manage update content to stay current with Windows 10.|
-|[Use Desktop Analytics](/configmgr/desktop-analytics/overview)|Desktop Analytics allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10.|
-|[Windows Update for Business integration (optional)](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)|Explains how to define and deploy Windows Update for Business (WUfB) policies using Configuration Manager.|
-|[Use co-management with Microsoft Intune and Windows Update for Business (optional)](/sccm/comanage/overview)|Provides an overview of co-management|
+|[Manage Windows as a service](../../osd/deploy-use/manage-windows-as-a-service.md)|Explains how to use servicing plans to deploy Windows 10 feature updates.|
+|[Upgrade Windows 10 via task sequence](../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md)|The details of creating a task sequence to upgrade Windows 10 with additional recommendations.|
+|[Phased deployments](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md)|Phased deployments automate a coordinated, sequenced rollout of a task sequence across multiple collections.|  
+|[Optimize Windows 10 update delivery](../../sum/deploy-use/optimize-windows-10-update-delivery.md)|Use Configuration Manager to manage update content to stay current with Windows 10.|
+|[Use Desktop Analytics](../../desktop-analytics/overview.md)|Desktop Analytics allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10.|
+|[Windows Update for Business integration (optional)](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md)|Explains how to define and deploy Windows Update for Business (WUfB) policies using Configuration Manager.|
+|[Use co-management with Microsoft Intune and Windows Update for Business (optional)](../../comanage/overview.md)|Provides an overview of co-management|
 
 
 ## Related articles
 
-- [In-place upgrade to Configuration Manager current branch from System Center 2012 Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
-- [Plan for migration to Configuration Manager current branch](/sccm/core/migration/planning-for-migration)
+- [In-place upgrade to Configuration Manager current branch from System Center 2012 Configuration Manager](../servers/deploy/install/upgrade-to-configuration-manager.md)
+- [Plan for migration to Configuration Manager current branch](../migration/planning-for-migration.md)

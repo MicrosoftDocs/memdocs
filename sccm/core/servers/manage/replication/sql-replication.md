@@ -16,7 +16,7 @@ manager: dougeby
 
 # SQL replication
 
-In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](/sccm/core/plan-design/hierarchy/database-replication).
+In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
 
 Use the following diagram to start troubleshooting SQL replication when a link fails:
 
@@ -51,6 +51,6 @@ WHERE Status = 120
 
 ## Next steps
 
-- [SQL replication reinitialization (reinit)](/sccm/core/servers/manage/replication/sql-replication-reinit)
-- [SQL performance](/sccm/core/servers/manage/replication/sql-performance)
-- [SQL configuration](/sccm/core/servers/manage/replication/sql-configuration)
+- [SQL replication reinitialization (reinit)](sql-replication-reinit.md)
+- [SQL performance](sql-performance.md)
+- [SQL configuration](sql-configuration.md)

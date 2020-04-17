@@ -20,7 +20,7 @@ manager: dougeby
 
 In Configuration Manager, client and site server components record process information in individual log files. You can use the information in these log files to help you troubleshoot issues that might occur. By default, Configuration Manager enables logging for client and server components.
 
-For more general information about log files in Configuration Manager, see [About log files](/configmgr/core/plan-design/hierarchy/about-log-files). That article includes information on the tools to use, how to configure the logs, and where to find them.
+For more general information about log files in Configuration Manager, see [About log files](about-log-files.md). That article includes information on the tools to use, how to configure the logs, and where to find them.
 
 The following sections provide details about the different log files available to you. Monitor Configuration Manager client and server logs for operation details, and view error information to troubleshoot problems.  
 
@@ -896,10 +896,10 @@ These log files are located in the `%ProgramFiles%\Update Services\LogFiles` fol
 
 ## See also
 
-- [About log files](/configmgr/core/plan-design/hierarchy/about-log-files)
+- [About log files](about-log-files.md)
 
-- [Support Center OneTrace](/configmgr/core/support/support-center-onetrace)
+- [Support Center OneTrace](../../support/support-center-onetrace.md)
 
-- [Support Center log file viewer](/configmgr/core/support/support-center#support-center-log-file-viewer)
+- [Support Center log file viewer](../../support/support-center.md#support-center-log-file-viewer)
 
-- [CMTrace](/configmgr/core/support/cmtrace)
+- [CMTrace](../../support/cmtrace.md)

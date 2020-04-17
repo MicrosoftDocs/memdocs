@@ -29,7 +29,7 @@ The following requirements apply to all site system servers:
 
 - Each site system server must use a 64-bit OS. The only exception is the distribution point site system role, which you can install on some 32-bit operating systems.  
 
-- Site systems aren't supported on Server Core installations of any operating system. An exception is that Server Core installations are supported for the distribution point site system role. For more information, see [Supported operating systems for Configuration Manager site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).  
+- Site systems aren't supported on Server Core installations of any operating system. An exception is that Server Core installations are supported for the distribution point site system role. For more information, see [Supported operating systems for Configuration Manager site system servers](supported-operating-systems-for-site-system-servers.md).  
 
 - After a site system server is installed, it's not supported to change:  
 
@@ -41,9 +41,9 @@ The following requirements apply to all site system servers:
 
     If you must change any of these items, first remove the site system role from the computer. Then reinstall the role after the change is complete. For changes affecting the site server, first uninstall the site. Then reinstall the site after the change is complete.  
 
-- Site system roles aren't supported on an instance of a Windows Server cluster. The only exception is the site database server. For more information, see [Use a SQL Server cluster for the Configuration Manager site database](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database).  
+- Site system roles aren't supported on an instance of a Windows Server cluster. The only exception is the site database server. For more information, see [Use a SQL Server cluster for the Configuration Manager site database](../../servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md).  
 
-    Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode. For more information, see [High availability options](/sccm/core/servers/deploy/configure/high-availability-options). <!--3607761, fka 1359132-->  
+    Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode. For more information, see [High availability options](../../servers/deploy/configure/high-availability-options.md). <!--3607761, fka 1359132-->  
 
 - It's not supported to change the startup type or "Log on as" settings for any Configuration Manager service. If you do, you might prevent key services from running correctly.  
 
@@ -93,9 +93,9 @@ For more information about .NET Framework versions, see the following articles:
 
 ### Windows ADK  
 
-- Before you install or upgrade a central administration site or primary site, install the version of the Windows Assessment and Deployment Kit (ADK) that's required by the version of Configuration Manager you're installing or upgrading to. For more information, see [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).  
+- Before you install or upgrade a central administration site or primary site, install the version of the Windows Assessment and Deployment Kit (ADK) that's required by the version of Configuration Manager you're installing or upgrading to. For more information, see [Windows 10 ADK](support-for-windows-10.md#windows-10-adk).  
 
-- For more information about this requirement, see [Infrastructure requirements for OS deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
+- For more information about this requirement, see [Infrastructure requirements for OS deployment](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
 
 ### Visual C++ Redistributable  
 
@@ -105,7 +105,7 @@ For more information about .NET Framework versions, see the following articles:
 
 ### SQL Server Native Client
 
-When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
 ## <a name="bkmk_2012secpreq"></a> Secondary site server
@@ -141,7 +141,7 @@ For more information about .NET Framework versions, see the following articles:
 
 ### SQL Server Native Client
 
-When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
 ## <a name="bkmk_2012dbpreq"></a> Database server  
@@ -152,7 +152,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ### SQL Server  
 
-- Before you install a central administration site or primary site, install a supported version of SQL Server to host the site database. For more information, see [Supported SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions).  
+- Before you install a central administration site or primary site, install a supported version of SQL Server to host the site database. For more information, see [Supported SQL Server versions](support-for-sql-server-versions.md).  
 
 - Before you install a secondary site, you can install a supported version of SQL Server.  
 
@@ -160,29 +160,29 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ### SQL Server Native Client
 
-When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
 ## <a name="bkmk_2012smsprovpreq"></a> SMS Provider server  
 
 ### Windows ADK
 
-- The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're installing or upgrading to requires. For more information, see [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).  
+- The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're installing or upgrading to requires. For more information, see [Windows 10 ADK](support-for-windows-10.md#windows-10-adk).  
 
-- For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
+- For more information about this requirement, see [Infrastructure requirements for operating system deployment](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
 
 ### Windows Server roles and features
 
-- If you're using the [administration service](/configmgr/develop/adminservice/overview), the server that hosts the SMS Provider role requires .NET 4.5 or later  <!-- SCCMDocs issue #1203 -->
+- If you're using the [administration service](../../../develop/adminservice/overview.md), the server that hosts the SMS Provider role requires .NET 4.5 or later  <!-- SCCMDocs issue #1203 -->
 
     > [!NOTE]
     > Configuration Manager version 1810 requires .NET 4.5.2 or later.
 
-- Web Server (IIS): Every provider attempts to install the [administration service](/configmgr/develop/adminservice/overview). This service has a dependency on IIS to bind a certificate to HTTPS port 443. Configuration Manager uses IIS APIs to check this certificate configuration. If you configure the site for [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http), Configuration Manager uses IIS APIs to bind the site-generated certificate. Starting in version 2002, the site automatically uses the site's self-signed certificate.
+- Web Server (IIS): Every provider attempts to install the [administration service](../../../develop/adminservice/overview.md). This service has a dependency on IIS to bind a certificate to HTTPS port 443. Configuration Manager uses IIS APIs to check this certificate configuration. If you configure the site for [Enhanced HTTP](../hierarchy/enhanced-http.md), Configuration Manager uses IIS APIs to bind the site-generated certificate. Starting in version 2002, the site automatically uses the site's self-signed certificate.
 
 ### SQL Server Native Client
 
-When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
 ## <a name="bkmk_2012acwspreq"></a> Application catalog website point  
@@ -192,8 +192,8 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 >
 > For more information, see the following articles:
 >
-> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
-> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
+> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
+> - [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
 
 ### Windows Server roles and features
 
@@ -246,8 +246,8 @@ For more information about .NET Framework versions, see the following articles:
 >
 > For more information, see the following articles:
 >
-> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
-> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
+> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
+> - [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
 
 ### Windows Server roles and features
 
@@ -296,7 +296,7 @@ For more information about .NET Framework versions, see the following articles:
 
 ### SQL Server Native Client
 
-When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
 ## <a name="bkmk_2012AIpreq"></a> Asset Intelligence synchronization point  
@@ -312,7 +312,7 @@ For more information about .NET Framework versions, see the following articles:
 
 ### SQL Server Native Client
 
-When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
 ## <a name="bkmk_2012crppreq"></a> Certificate registration point  
@@ -348,7 +348,7 @@ For more information about .NET Framework versions, see the following articles:
 
 ### SQL Server Native Client
 
-When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
 ## <a name="bkmk_2012dppreq"></a> Distribution point  
@@ -396,9 +396,9 @@ When you install a new site, Configuration Manager automatically installs SQL Se
     > [!NOTE]  
     > WDS installs and configures automatically when you configure a distribution point to support PXE or multicast on a server that runs Windows Server 2012 or later.  
 
-- For a multicast-enabled distribution point, make sure the SQL Server Native Client is installed and up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+- For a multicast-enabled distribution point, make sure the SQL Server Native Client is installed and up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
-For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
+For more information, see [Install and configure distribution points](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).
 
 <!--sms.503672 -Clarified BITS use-->
 > [!NOTE]  
@@ -415,7 +415,7 @@ For more information, see [Install and configure distribution points](/sccm/core
 
 ### SQL Server Native Client
 
-When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
 ## <a name="bkmk_2012Enrollpreq"></a> Enrollment point  
@@ -472,7 +472,7 @@ For more information about .NET Framework versions, see the following articles:
 
 ### SQL Server Native Client
 
-When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
 ## <a name="bkmk_2012EnrollProxpreq"></a> Enrollment proxy point  
@@ -576,7 +576,7 @@ For more information about .NET Framework versions, see the following articles:
 
 ### SQL Server Native Client
 
-When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
 ## <a name="bkmk_2012RSpoint"></a> Reporting services point  
@@ -600,7 +600,7 @@ For more information about .NET Framework versions, see the following articles:
 
 ### SQL Server Native Client
 
-When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
 ## <a name="bkmk_SCPpreq"></a> Service connection point  
@@ -627,7 +627,7 @@ For more information about .NET Framework versions, see the following articles:
 
 ### SQL Server Native Client
 
-When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
 ## <a name="bkmk_2012SUPpreq"></a> Software update point  
@@ -653,14 +653,14 @@ For more information about .NET Framework versions, see the following articles:
 
 - Install the Windows server role Windows Server Update Services on a computer before installing a software update point.  
 
-- For more information, see [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates).  
+- For more information, see [Plan for software updates](../../../sum/plan-design/plan-for-software-updates.md).  
 
 > [!NOTE]  
 > When you use a Software Update Point on a server other than the site server, you must install the WSUS Administration Console on the site server.
 
 ### SQL Server Native Client
 
-When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
 ## <a name="bkmk_2012SMPpreq"></a> State migration point
@@ -710,5 +710,5 @@ For more information about .NET Framework versions, see the following articles:
 
 ### SQL Server Native Client
 
-When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 

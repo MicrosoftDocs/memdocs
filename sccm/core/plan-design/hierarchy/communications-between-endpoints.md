@@ -63,17 +63,17 @@ For more information, see [Manage network bandwidth for content management](mana
 
 ##  <a name="Planning_Client_to_Site_System"></a> Communications from clients to site systems and services  
 
-Clients initiate communication to site system roles, Active Directory Domain Services, and online services. To enable these communications, firewalls must allow the network traffic between clients and the endpoint of their communications. For more information about ports and protocols used by clients when they communicate to these endpoints, see [Ports used in Configuration Manager](/sccm/core/plan-design/hierarchy/ports).  
+Clients initiate communication to site system roles, Active Directory Domain Services, and online services. To enable these communications, firewalls must allow the network traffic between clients and the endpoint of their communications. For more information about ports and protocols used by clients when they communicate to these endpoints, see [Ports used in Configuration Manager](ports.md).  
 
-Before a client can communicate with a site system role, the client uses service location to find a role that supports the client's protocol (HTTP or HTTPS). By default, clients use the most secure method that's available to them. For more information, see  [Understand how clients find site resources and services](/sccm/core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services).  
+Before a client can communicate with a site system role, the client uses service location to find a role that supports the client's protocol (HTTP or HTTPS). By default, clients use the most secure method that's available to them. For more information, see  [Understand how clients find site resources and services](understand-how-clients-find-site-resources-and-services.md).  
 
 To use HTTPS, configure one of the following options:  
 
-- Use a public key infrastructure (PKI) and install PKI certificates on clients and servers. For information about how to use certificates, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
+- Use a public key infrastructure (PKI) and install PKI certificates on clients and servers. For information about how to use certificates, see [PKI certificate requirements](../network/pki-certificate-requirements.md).  
 
-- Starting in version 1806, configure the site to **Use Configuration Manager-generated certificates for HTTP site systems**. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).  
+- Starting in version 1806, configure the site to **Use Configuration Manager-generated certificates for HTTP site systems**. For more information, see [Enhanced HTTP](enhanced-http.md).  
 
-When you deploy a site system role that uses Internet Information Services (IIS) and supports communication from clients, you must specify whether clients connect to the site system by using HTTP or HTTPS. If you use HTTP, you must also consider signing and encryption choices. For more information, see [Planning for signing and encryption](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForSigningEncryption).  
+When you deploy a site system role that uses Internet Information Services (IIS) and supports communication from clients, you must specify whether clients connect to the site system by using HTTP or HTTPS. If you use HTTP, you must also consider signing and encryption choices. For more information, see [Planning for signing and encryption](../security/plan-for-security.md#BKMK_PlanningForSigningEncryption).  
 
 
 ### <a name="bkmk_client2mp"></a> Client to management point communication
@@ -92,7 +92,7 @@ Use the following table to understand how this process works:
 | HTTPS    | Using one of the following methods:<br> - PKI certificate<br> - Windows-integrated authentication<br> - Azure AD *user* or *device* token | Location request: Anonymous<br>Client package: Anonymous<br>Registration, using one of the following methods to prove device identity:<br> - Anonymous (manual approval)<br> - Windows-integrated authentication<br> - PKI certificate<br> - Azure AD *user* or *device* token<br>After registration, the client uses message signing to prove device identity | For user-centric scenarios, using one of the following methods to prove user identity:<br> - Windows-integrated authentication<br> - Azure AD *user* token |
 
 > [!Tip]  
-> For more information on the configuration of the management point for different device identity types and with the cloud management gateway, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
+> For more information on the configuration of the management point for different device identity types and with the cloud management gateway, see [Enable management point for HTTPS](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
 
 
 ### <a name="bkmk_client2dp"></a> Client to distribution point communication
@@ -132,7 +132,7 @@ The following site system roles installed at primary sites support connections f
 ### <a name="bkmk_internetfacing"></a> About internet-facing site systems
 
 > [!Note]  
-> The following section is about internet-based client management scenarios. It doesn't apply to cloud management gateway scenarios. For more information, see [Manage clients on the internet](/sccm/core/clients/manage/manage-clients-internet).  
+> The following section is about internet-based client management scenarios. It doesn't apply to cloud management gateway scenarios. For more information, see [Manage clients on the internet](../../clients/manage/manage-clients-internet.md).  
 
 There's no requirement to have a trust between a client's forest and that of the site system server. However, when the forest that contains an internet-facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the internet when you enable the **Client Policy** client setting **Enable user policy requests from internet clients**.  
 
@@ -186,11 +186,11 @@ When you install site system servers in an untrusted Active Directory forest, th
 
 For more information, see the following articles:  
 
--   [Manage conflicting records](/sccm/core/clients/manage/manage-clients#BKMK_ConflictingRecords)  
+-   [Manage conflicting records](../../clients/manage/manage-clients.md#BKMK_ConflictingRecords)  
 
--   [Network access account](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#accounts-used-for-content-management)  
+-   [Network access account](fundamental-concepts-for-content-management.md#accounts-used-for-content-management)  
 
--   [How to install Configuration Manager clients on workgroup computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientWorkgroup)  
+-   [How to install Configuration Manager clients on workgroup computers](../../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup)  
 
 
 ###  <a name="bkmk_span"></a> Scenarios to support a site or hierarchy that spans multiple domains and forests  
@@ -252,7 +252,7 @@ Additionally, the following site system roles require direct access to the site 
 
 -   State migration point  
 
-For more information, see [Ports used in Configuration Manager](/sccm/core/plan-design/hierarchy/ports).  
+For more information, see [Ports used in Configuration Manager](ports.md).  
 
 You might need to configure the management point and enrollment point access to the site database.
 
@@ -294,13 +294,13 @@ To publish site information to another Active Directory forest:
 
 ####  <a name="bkmk_xchange"></a> Scenario 4: Put the Exchange Server connector in a remote forest  
 
-To support this scenario, make sure that name resolution works between the forests. For example, configure DNS forwards. When you configure the Exchange Server connector, specify the intranet FQDN of the Exchange Server. For more information, see [Manage mobile devices with Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
+To support this scenario, make sure that name resolution works between the forests. For example, configure DNS forwards. When you configure the Exchange Server connector, specify the intranet FQDN of the Exchange Server. For more information, see [Manage mobile devices with Configuration Manager and Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 
 
 
 ## See also
 
-- [Plan for security](/sccm/core/plan-design/security/plan-for-security)  
+- [Plan for security](../security/plan-for-security.md)  
 
-- [Security and privacy for Configuration Manager clients](/sccm/core/clients/deploy/plan/security-and-privacy-for-clients)  
+- [Security and privacy for Configuration Manager clients](../../clients/deploy/plan/security-and-privacy-for-clients.md)  
 

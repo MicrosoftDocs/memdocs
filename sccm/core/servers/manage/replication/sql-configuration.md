@@ -16,7 +16,7 @@ manager: dougeby
 
 # SQL configuration
 
-In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](/sccm/core/plan-design/hierarchy/database-replication).
+In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
 
 Use the following diagram to start troubleshooting SQL configuration related to SQL Service Broker:
 

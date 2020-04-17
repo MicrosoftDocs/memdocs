@@ -19,7 +19,7 @@ manager: dougeby
 <!-- This topic drops from TOC with the release of version 1706 -->
 
 The information in this topic is specific to using boundary groups with versions 1511, 1602, and 1606 of Configuration Manager.
-If you use version 1610 or later, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) for information about how to use the redesigned boundary groups.  
+If you use version 1610 or later, see [Configure boundary groups](boundary-groups.md) for information about how to use the redesigned boundary groups.  
 
 
 ##  <a name="BKMK_BoundaryGroups"></a> Boundary groups  

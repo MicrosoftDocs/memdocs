@@ -24,7 +24,7 @@ Before you can use a Windows computer as a site system server for Configuration 
 
 - Because the method to enable Windows features and roles differs among OS versions, refer to the documentation for your OS version for detailed information about how to set up the OS that you use.  
 
-The information in this article provides an overview of the types of Windows configurations that are required to support Configuration Manager site systems. For configuration details for specific site system roles, see [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).
+The information in this article provides an overview of the types of Windows configurations that are required to support Configuration Manager site systems. For configuration details for specific site system roles, see [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md).
 
 ##  <a name="BKMK_WinFeatures"></a> Windows features and roles  
 When you set up Windows features and roles on a computer, you might be required to reboot the computer to complete that configuration. Therefore, it's a good idea to identify computers that will host specific site system roles before you install a Configuration Manager site or site system server.
@@ -118,7 +118,7 @@ For example, source files for a software deployment might include a folder named
 > - Edits that you make at the server level apply to all websites on the server.   
 >     - Edits that you make to individual websites apply to only that website.  
 > 
-> The security best practice is to run Configuration Manager on a dedicated web server. If you must run other applications on the web server, use a custom website for Configuration Manager. For information, see [Websites for site system servers](/sccm/core/plan-design/network/websites-for-site-system-servers).  
+> The security best practice is to run Configuration Manager on a dedicated web server. If you must run other applications on the web server, use a custom website for Configuration Manager. For information, see [Websites for site system servers](websites-for-site-system-servers.md).  
 
 ## HTTP verbs
 **Management points:** To ensure that clients can successfully communicate with a management point, on the management point server ensure the following HTTP verbs are allowed:  

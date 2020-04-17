@@ -27,8 +27,8 @@ This article introduces the features that are available in the Technical Preview
     Workaround details.
 -->
 **Known Issues in this Technical Preview:**
-- **Support for Windows 10, version 1709 (also known as the Fall Creators Update)**.  Beginning with this Windows release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
-- **Update to a new preview version fails when you have a site server in passive mode**. When you run a preview version that has a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), you must uninstall the passive mode site server before you can successfully update your preview site to this new preview version. You can reinstall the passive mode site server after your site completes the update.
+- **Support for Windows 10, version 1709 (also known as the Fall Creators Update)**.  Beginning with this Windows release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](../plan-design/configs/support-for-windows-10.md#windows-10-as-a-client).
+- **Update to a new preview version fails when you have a site server in passive mode**. When you run a preview version that has a [primary site server in passive mode](capabilities-in-technical-preview-1706.md#site-server-role-high-availability), you must uninstall the passive mode site server before you can successfully update your preview site to this new preview version. You can reinstall the passive mode site server after your site completes the update.
 
   To uninstall the passive mode site server:
   1. In the console go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**, and then select the passive mode site server.
@@ -53,7 +53,7 @@ With this release, PowerShell scripts you deploy now support use of the followin
 - **Real-time monitoring**. When you monitor the run of a script, it is now in real-time as the script runs.
 - **Parameter validation**. Each parameter in your script has a **Script Parameter Properties** dialog for you to add validation for that parameter. After adding validation, you should get errors if you are entering a value for a parameter that does not meet its validation.
 
-Deployment of PowerShell scripts was first introduced in Technical Preview [Tech Preview 1706](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console). Additional improvements were delivered with [Tech Preview 1707](/sccm/core/get-started/capabilities-in-technical-preview-1707#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager) and then [Tech Preview 1708](/sccm/core/get-started/capabilities-in-technical-preview-1708#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager).
+Deployment of PowerShell scripts was first introduced in Technical Preview [Tech Preview 1706](capabilities-in-technical-preview-1706.md#create-and-run-powershell-scripts-from-the-configuration-manager-console). Additional improvements were delivered with [Tech Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager) and then [Tech Preview 1708](capabilities-in-technical-preview-1708.md#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager).
 
 
 ### Try it out!
@@ -76,7 +76,7 @@ The Enhanced (Limited) level includes metrics from the basic level, as well as a
 With this release, Software Center will no longer distort icons that are larger than 250x250. Software Center made such icons look blurry. You can now set an icon with a pixel dimensions of up to 512x512, and it displays without distortion.
 
 ### Try it out!
-Add an icon for your app in Software Center. To try it out see [Create applications](/sccm/apps/deploy-use/create-applications).
+Add an icon for your app in Software Center. To try it out see [Create applications](../../apps/deploy-use/create-applications.md).
 
 
 ## Check compliance from Software Center for co-managed devices
@@ -145,7 +145,7 @@ For best results, we recommend building the Subject Name from Active Directory i
 
 
 ## Improved descriptions for pending computer restarts   <!--1356283 -->
-In [technical preview 1708](/sccm/core/get-started/capabilities-in-technical-preview-1708#restart-computers-from-the-configuration-manager-console), we added the capability to identify devices that are pending a restart from within the Configuration Manager console.
+In [technical preview 1708](capabilities-in-technical-preview-1708.md#restart-computers-from-the-configuration-manager-console), we added the capability to identify devices that are pending a restart from within the Configuration Manager console.
 
 Beginning with this technical preview, the console displays additional details that provide information about the process or action that is requesting the reboot.
 
@@ -215,4 +215,4 @@ To create a policy, and to browse the available settings:
 To read more about Windows Defender Application Guard, see [this blog post](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97). Additionally, to learn more about Windows Defender Application Guard Standalone mode, see [this blog post](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903).
 
 ## Next Steps
-For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).    

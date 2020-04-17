@@ -24,10 +24,10 @@ Occasionally, you might need to troubleshoot CMPivot. For example, if a state me
 
 In Configuration Manager versions 1902 and later, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client.
 
-When you run CMPivot from CAS, it uses the high-speed message subscription channel to communicate with the primary site. CMPivot doesn't use standard SQL replication between sites. If your SQL Server instance or your SQL provider is remote, or if you use SQL Server Always On, you'll have a "double hop scenario" for CMPivot. For information on how to define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902).
+When you run CMPivot from CAS, it uses the high-speed message subscription channel to communicate with the primary site. CMPivot doesn't use standard SQL replication between sites. If your SQL Server instance or your SQL provider is remote, or if you use SQL Server Always On, you'll have a "double hop scenario" for CMPivot. For information on how to define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](cmpivot.md#bkmk_cmpivot1902).
 
 >[!IMPORTANT]
-> When troubleshooting CMPivot, enable verbose logging on your management points (MPs) and on the site server's SMS_MESSAGE_PROCESSING_ENGINE to get more information. Also, if the client's output is larger than 80 KB, enable verbose logging on the MP and the site server's SMS_STATE_SYSTEM component. For information about how to enable verbose logging, see [Site server logging options](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
+> When troubleshooting CMPivot, enable verbose logging on your management points (MPs) and on the site server's SMS_MESSAGE_PROCESSING_ENGINE to get more information. Also, if the client's output is larger than 80 KB, enable verbose logging on the MP and the site server's SMS_STATE_SYSTEM component. For information about how to enable verbose logging, see [Site server logging options](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-site).
 
 ### Get information from the site server
 
@@ -42,7 +42,7 @@ Look in `smsprov.log` for these lines:
   <pre><code lang="Log">Type parameter is 135.
   Auditing: User &ltusername> ran script 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 with hash dc6c2ad05f1bfda88d880c54121c8b5cea6a394282425a88dd4d8714547dc4a2 on collection &ltCollectionId>. </code></pre>
 
- `7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14` is the Script-Guid for CMPivot. You can also see this GUID in [CMPivot audit status messages](/sccm/core/servers/manage/cmpivot#cmpivot-audit-status-messages).
+ `7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14` is the Script-Guid for CMPivot. You can also see this GUID in [CMPivot audit status messages](cmpivot.md#cmpivot-audit-status-messages).
 
 Next, find the ID in the CMPivot window. This ID is the `ClientOperationID`.
 
@@ -81,7 +81,7 @@ Result are sent for ScriptGuid: 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 and <b>Task
 
 ### Review messages on the site server
 
-When [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-client) is enabled on the management point, you can see how incoming client messages are handled. In   `MP_RelayMsgMgr.log`, look for the `TaskID`.
+When [verbose logging](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-client) is enabled on the management point, you can see how incoming client messages are handled. In   `MP_RelayMsgMgr.log`, look for the `TaskID`.
 
 In the `MP_RelayMsgMgr.log` example, you can see the client's ID `(GUID:83F67728-2E6D-4E4F-8075-ED035C31B783)` and the `Task ID {9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}`. A message ID gets assigned to the client's response before it's sent to the message processing engine:
 
@@ -92,7 +92,7 @@ Put message succeeded for message id 22f00adf-181e-4bad-b35e-d18912f39f89
 CRelayMsgMgrHandler::HandleMessage(): ExecuteTask() succeeded
 </code></pre>
 
-When [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_logoptions) is enabled on `SMS_MESSAGE_PROCESSING_ENGINE.log`, the client results are processed. Use the message ID you found from the `MP_RelayMsgMgr.log`. The processing log entries are similar to the following example:
+When [verbose logging](../../plan-design/hierarchy/about-log-files.md#bkmk_logoptions) is enabled on `SMS_MESSAGE_PROCESSING_ENGINE.log`, the client results are processed. Use the message ID you found from the `MP_RelayMsgMgr.log`. The processing log entries are similar to the following example:
 
 <pre><code lang="Log">Processing 2 messages with type Instant and IDs <b>22f00adf-181e-4bad-b35e-d18912f39f89[19]</b>, 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]...
 Processed 2 messages with type Instant. Failed to process 0 messages. All message IDs <b>22f00adf-181e-4bad-b35e-d18912f39f89[19]</b>, 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]
@@ -183,7 +183,7 @@ Successfully forwarded State Messages to the MP StateMessage 7/3/2018 11:44:47 A
 
 ### Review messages on the site server
 
-Open `statesys.log` to see if the message is received and processed. In the following example, you see `TaskID` near the bottom of the message next to `<Param>`. Enable [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_logoptions) on the SMS_STATE_SYSTEM component to see these log entries.
+Open `statesys.log` to see if the message is received and processed. In the following example, you see `TaskID` near the bottom of the message next to `<Param>`. Enable [verbose logging](../../plan-design/hierarchy/about-log-files.md#bkmk_logoptions) on the SMS_STATE_SYSTEM component to see these log entries.
 
 ``` XML
 CMessageProcessor - the cmdline to DB exec dbo.spProcessStateReport N'?<?xml version="1.0" encoding="UTF-
@@ -211,7 +211,7 @@ select * from vSMS_CMPivotStatus where TaskID='{F8C7C37F-B42B-4C0A-B050-2BB44DF1
 ```
 
 >[!NOTE]
->For clients that are using version 1810 or higher, state messaging isn't used unless the output is larger than 80 KB. When troubleshooting CMPivot in these cases, you can get more information when you enable verbose logging on your MPs and the site server's SMS_MESSAGE_PROCESSING_ENGINE. For information on how to enable verbose logging, see [Site server logging options](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
+>For clients that are using version 1810 or higher, state messaging isn't used unless the output is larger than 80 KB. When troubleshooting CMPivot in these cases, you can get more information when you enable verbose logging on your MPs and the site server's SMS_MESSAGE_PROCESSING_ENGINE. For information on how to enable verbose logging, see [Site server logging options](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-site).
 >
 > To troubleshoot, refer to the following logs:
 >
@@ -220,5 +220,5 @@ select * from vSMS_CMPivotStatus where TaskID='{F8C7C37F-B42B-4C0A-B050-2BB44DF1
 
 ## Next steps
 
-- [Using CMPivot](/sccm/core/servers/manage/cmpivot)
-- [Create and run PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts)
+- [Using CMPivot](cmpivot.md)
+- [Create and run PowerShell scripts](../../../apps/deploy-use/create-deploy-scripts.md)

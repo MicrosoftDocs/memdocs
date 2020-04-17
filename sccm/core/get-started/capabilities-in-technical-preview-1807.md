@@ -21,7 +21,7 @@ ROBOTS: NOINDEX
 
 This article introduces the features that are available in the technical preview for Configuration Manager, version 1807. Install this version to update and add new features to your technical preview site. 
 
-Review the [technical preview](/sccm/core/get-started/technical-preview) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
+Review the [technical preview](technical-preview.md) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
 
 
 <!--  Known Issues Template
@@ -169,22 +169,22 @@ Configure email notifications for application approval requests. When a user req
 ### Prerequisites
 
 #### To send email notifications
-- Enable the [optional feature](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**.  
+- Enable the [optional feature](../servers/manage/install-in-console-updates.md#bkmk_options) **Approve application requests for users per device**.  
 
-- Configure [email notification for alerts](/sccm/core/servers/manage/use-alerts-and-the-status-system#to-configure-email-notification-for-alerts).  
+- Configure [email notification for alerts](../servers/manage/use-alerts-and-the-status-system.md#to-configure-email-notification-for-alerts).  
 
 #### To approve or deny requests from email
 If you don't configure these prerequisites, the site sends email notification for application requests without links to approve or deny the request.  
 
-- In the site properties, **Enable REST endpoint for all providers roles on this site and allow Configuration Manager cloud management gateway traffic**. For more information, see [OData endpoint data access](/sccm/core/get-started/capabilities-in-technical-preview-1612#odata-endpoint-data-access).  
+- In the site properties, **Enable REST endpoint for all providers roles on this site and allow Configuration Manager cloud management gateway traffic**. For more information, see [OData endpoint data access](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access).  
 
     - Restart the SMS_EXEC service after enabling the REST endpoint
 
-- [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)  
+- [Cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md)  
 
-- Onboard the site to [Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**  
+- Onboard the site to [Azure services](../servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**  
 
-    - Enable [Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
+    - Enable [Azure AD User Discovery](../servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
 
     - Manually configure the following settings for this native app in Azure AD:  
 
@@ -239,7 +239,7 @@ Microsoft Windows 10 Enterprise
 
 Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) with your thoughts on the feature.
 
-1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Device Collections** node. Right-click a collection, and select **Run Script**. For more information on creating and running scripts, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Device Collections** node. Right-click a collection, and select **Run Script**. For more information on creating and running scripts, see [Create and run PowerShell scripts from the Configuration Manager console](../../apps/deploy-use/create-deploy-scripts.md).  
 
 2. Run a script on the target collection.  
 
@@ -254,12 +254,12 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 
 You can now modify the properties of custom catalogs.
 
-For more information, see [Third-party software updates support for custom catalogs](/sccm/core/get-started/capabilities-in-technical-preview-1806-2#bkmk_3pupdate).
+For more information, see [Third-party software updates support for custom catalogs](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate).
 
 
 
 ## Next steps
 
-For more information about installing or updating the technical preview branch, see [Technical preview](/sccm/core/get-started/technical-preview).    
+For more information about installing or updating the technical preview branch, see [Technical preview](technical-preview.md).    
 
-For more information about the different branches of Configuration Manager, see [Which branch of Configuration Manager should I use?](/sccm/core/understand/which-branch-should-i-use)
+For more information about the different branches of Configuration Manager, see [Which branch of Configuration Manager should I use?](../understand/which-branch-should-i-use.md)

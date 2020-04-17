@@ -18,14 +18,14 @@ manager: dougeby
 
 *Applies to: Configuration Manager (Current Branch)*
 
-When enabling TLS 1.2 for your Configuration Manager environment, start with [enabling TLS 1.2 for the clients](/sccm/core/plan-design/security/enable-tls-1-2-client) first. Then, enable TLS 1.2 on the site servers and remote site systems second. Finally, test client to site system communications before potentially disabling the older protocols on the server side. The following tasks are needed for enabling TLS 1.2 on the site servers and remote site systems:
+When enabling TLS 1.2 for your Configuration Manager environment, start with [enabling TLS 1.2 for the clients](enable-tls-1-2-client.md) first. Then, enable TLS 1.2 on the site servers and remote site systems second. Finally, test client to site system communications before potentially disabling the older protocols on the server side. The following tasks are needed for enabling TLS 1.2 on the site servers and remote site systems:
 
 - Ensure that TLS 1.2 is enabled as a protocol for SChannel at the operating system level
 - Update and configure the .NET Framework to support TLS 1.2
 - Update SQL Server and client components
 - Update Windows Server Update Services (WSUS)
 
-For more information about dependencies for specific Configuration Manager features and scenarios, see [About enabling TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2). 
+For more information about dependencies for specific Configuration Manager features and scenarios, see [About enabling TLS 1.2](enable-tls-1-2.md). 
 
 ## <a name="bkmk_protocol"></a> Ensure that TLS 1.2 is enabled as a protocol for SChannel at the operating system level
 
@@ -47,7 +47,7 @@ Secondary site servers need to use at least SQL Server 2016 Express with Service
 > [!NOTE]
 > [KB 3135244](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server) also describes requirements for SQL Server client components.
 
-Make sure to also update the SQL Server Native Client to at least version SQL 2012 SP4 (11.*.7001.0). Starting in version 1810, this requirement is a [prerequisite check (warning)](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+Make sure to also update the SQL Server Native Client to at least version SQL 2012 SP4 (11.*.7001.0). Starting in version 1810, this requirement is a [prerequisite check (warning)](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 Configuration Manager uses SQL Server Native Client on the following site system roles:
 
@@ -80,4 +80,4 @@ Starting in Windows Server 2016, TLS 1.2 is supported by default for WSUS.  TLS 
 
 ## Next steps
 
-- [Common issues when enabling TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2-troubleshoot)
+- [Common issues when enabling TLS 1.2](enable-tls-1-2-troubleshoot.md)

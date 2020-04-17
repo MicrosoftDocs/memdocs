@@ -18,7 +18,7 @@ manager: dougeby
 
 Update 2002 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1806 or later. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 2002.
 
-Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2002](/sccm/core/servers/manage/checklist-for-installing-update-2002). After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-2002#post-update-checklist).
+Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2002](../../servers/manage/checklist-for-installing-update-2002.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2002.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
@@ -32,7 +32,7 @@ To take full advantage of new Configuration Manager features, after you update t
 <!--3555758-->
 Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. Starting in this release you can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center.
 
-For more information, see [Microsoft Endpoint Manager tenant attach](/sccm/tenant-attach/device-sync-actions).
+For more information, see [Microsoft Endpoint Manager tenant attach](../../../tenant-attach/device-sync-actions.md).
 
 ## <a name="bkmk_infra"></a> Site infrastructure
 
@@ -41,7 +41,7 @@ For more information, see [Microsoft Endpoint Manager tenant attach](/sccm/tenan
 
 If your hierarchy consists of a central administration site (CAS) and a single child primary site, you can now remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single primary site.
 
-For more information, see [Remove the CAS](/configmgr/core/servers/deploy/install/remove-central-administration-site).
+For more information, see [Remove the CAS](../../servers/deploy/install/remove-central-administration-site.md).
 
 ### New management insight rules
 
@@ -64,7 +64,7 @@ This release includes the following management insight rules:
   - Sites that don't have proper HTTPS configuration
   - Devices not uploaded to Azure AD
 
-For more information, see [Management insights](/configmgr/core/servers/manage/management-insights).
+For more information, see [Management insights](../../servers/manage/management-insights.md).
 
 ### Improvements to administration service
 
@@ -79,8 +79,8 @@ Starting in this release, the administration service automatically uses the site
 
 For more information, see the following new articles:
 
-- [What is the administration service?](/configmgr/develop/adminservice/overview)
-- [How to set up the administration service](/configmgr/develop/adminservice/set-up)
+- [What is the administration service?](../../../develop/adminservice/overview.md)
+- [How to set up the administration service](../../../develop/adminservice/set-up.md)
 
 ### Proxy support for Azure Active Directory discovery and group sync
 
@@ -92,7 +92,7 @@ The site system's proxy settings, including authentication, are now used by:
 - Azure AD user group discovery
 - Synchronizing collection membership results to Azure Active Directory groups
 
-For more information, see [Proxy server support](/configmgr/core/plan-design/network/proxy-server-support#bkmk_other).
+For more information, see [Proxy server support](../network/proxy-server-support.md#bkmk_other).
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
@@ -113,17 +113,17 @@ Configuration Manager extends its device support with the following methods:
 - Register on the internal network for a unique token
 - Create a bulk registration token for internet-based devices
 
-For more information, see [Token-based authentication for CMG](/configmgr/core/clients/deploy/deploy-clients-cmg-token).
+For more information, see [Token-based authentication for CMG](../../clients/deploy/deploy-clients-cmg-token.md).
 
 ### Microsoft Endpoint Configuration Manager cloud features
 
 <!--5834830-->
 
-When new cloud-based features are available in the Microsoft Endpoint Manager admin center, or other attached cloud services for your on-premises Configuration Manager installation, you can now opt in to these new features in the Configuration Manager console. For more information on enabling features in the Configuration Manager console, see [Enable optional features from updates](/configmgr/core/servers/manage/install-in-console-updates#bkmk_options).
+When new cloud-based features are available in the Microsoft Endpoint Manager admin center, or other attached cloud services for your on-premises Configuration Manager installation, you can now opt in to these new features in the Configuration Manager console. For more information on enabling features in the Configuration Manager console, see [Enable optional features from updates](../../servers/manage/install-in-console-updates.md#bkmk_options).
 
 ## <a name="bkmk_da"></a> Desktop Analytics
 
-For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](/configmgr/desktop-analytics/whats-new).
+For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../desktop-analytics/whats-new.md).
 
 ### Connection Health dashboard shows client connection issues
 
@@ -133,7 +133,7 @@ Use the Desktop Analytics Connection Health dashboard in Configuration Manager t
 
 - **Connectivity status**: If your clients use a proxy server to access the Desktop Analytics cloud service, Configuration Manager now displays proxy authentication issues from clients. Drill down to see clients that are unable to enroll because of proxy authentication.<!-- 4963383 -->
 
-For more information, see [Monitor connection health](/configmgr/desktop-analytics/monitor-connection-health).
+For more information, see [Monitor connection health](../../../desktop-analytics/monitor-connection-health.md).
 
 ## <a name="bkmk_real"></a> Real-time management
 
@@ -143,7 +143,7 @@ For more information, see [Monitor connection health](/configmgr/desktop-analyti
 
 We've made it easier to navigate CMPivot entities. You can now search CMPivot entities. New icons have also been added to easily differentiate the entities and the entity object types.
 
-For more information, see [CMPivot](/configmgr/core/servers/manage/cmpivot#bkmk_2002).
+For more information, see [CMPivot](../../servers/manage/cmpivot.md#bkmk_2002).
 
 ## <a name="bkmk_content"></a> Content management
 
@@ -153,13 +153,13 @@ For more information, see [CMPivot](/configmgr/core/servers/manage/cmpivot#bkmk_
 
 Boundary groups include the following option for peer downloads: **During peer downloads, only use peers within the same subnet**. If you enable this option, the content location list from the management point only includes peer sources that are in the same subnet and boundary group as the client. Depending on the configuration of your network, you can now exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet.
 
-For more information, see [Boundary group options](/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
+For more information, see [Boundary group options](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
 
 ### Proxy support for Microsoft Connected Cache
 
 <!-- 5856396 -->
 
-If your environment uses an unauthenticated proxy server for internet access, now when you enable a Configuration Manager distribution point for Microsoft Connected Cache, it can communicate through the proxy. For more information, see [Microsoft Connected Cache](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache).
+If your environment uses an unauthenticated proxy server for internet access, now when you enable a Configuration Manager distribution point for Microsoft Connected Cache, it can communicate through the proxy. For more information, see [Microsoft Connected Cache](../hierarchy/microsoft-connected-cache.md).
 
 ## <a name="bkmk_client"></a> Client management
 
@@ -169,7 +169,7 @@ If your environment uses an unauthenticated proxy server for internet access, no
 
 You can now trigger a client device to upload its client logs to the site server by sending a client notification action from the Configuration Manager console.
 
-For more information, see [Client notification](/configmgr/core/clients/manage/client-notification#client-diagnostics).
+For more information, see [Client notification](../../clients/manage/client-notification.md#client-diagnostics).
 
 ### Wake up a device from the central administration site
 
@@ -177,7 +177,7 @@ For more information, see [Client notification](/configmgr/core/clients/manage/c
 
 From the central administration site (CAS), in the Devices or Device Collections node, you can now use the client notification action to Wake Up devices. This action was previously only available from a primary site.
 
-For more information, see [How to configure Wake on LAN](/configmgr/core/clients/deploy/configure-wake-on-lan#bkmk_wol-1810).
+For more information, see [How to configure Wake on LAN](../../clients/deploy/configure-wake-on-lan.md#bkmk_wol-1810).
 
 ### Improvements to support for ARM64 devices
 
@@ -188,13 +188,13 @@ The **All Windows 10 (ARM64)** platform is available in the list of supported OS
 > [!NOTE]
 > If you previously selected the top-level **Windows 10** platform, this action automatically selected both **All Windows 10 (64-bit)** and **All Windows 10 (32-bit)**. This new platform isn't automatically selected. If you want to add **All Windows 10 (ARM64)**, manually select it in the list.
 
-For more information on Configuration Manager's support for ARM64 devices, see [Windows 10 on ARM64](/configmgr/core/plan-design/configs/support-for-windows-10#bkmk_arm64).
+For more information on Configuration Manager's support for ARM64 devices, see [Windows 10 on ARM64](../configs/support-for-windows-10.md#bkmk_arm64).
 
 ### Track configuration item remediations
 <!--4261411-->
 You can now **Track remediation history when supported** on your configuration item compliance rules. When this option is enabled, any remediation that occurs on the client for the configuration item generates a state message. The history is stored in the Configuration Manager database.
 
-For more information on this setting, see [Create custom configuration items for Windows desktop and server computers managed with the Configuration Manager client](/configmgr/compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client#bkmk_track).
+For more information on this setting, see [Create custom configuration items for Windows desktop and server computers managed with the Configuration Manager client](../../../compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md#bkmk_track).
 
 <!-- ## <a name="bkmk_comgmt"></a> Co-management -->
 
@@ -213,7 +213,7 @@ The Microsoft Edge management dashboard provides you insights on the usage of Mi
 
 From the Software Library workspace, click Microsoft Edge Management to see the dashboard. Change the collection for the graph data by clicking Browse and choosing another collection. By default your five largest collections are in the drop-down list. When you select a collection that isn't in the list, the newly selected collection takes the bottom spot on your drop-down list.
 
-For more information, see [Microsoft Edge management](/configmgr/apps/deploy-use/deploy-edge#bkmk_edge-dash).
+For more information, see [Microsoft Edge management](../../../apps/deploy-use/deploy-edge.md#bkmk_edge-dash).
 
 ### Improvements to Microsoft Edge management
 
@@ -221,7 +221,7 @@ For more information, see [Microsoft Edge management](/configmgr/apps/deploy-use
 
 You can now create a Microsoft Edge application that's set up to receive automatic updates rather than having automatic updates disabled. This change allows you to choose to manage updates for Microsoft Edge with Configuration Manager or allow Microsoft Edge to automatically update. When creating the application, select Allow Microsoft Edge to automatically update the version of the client on the end user's device on the Microsoft Edge Settings page.
 
-For more information, see [Microsoft Edge management](/configmgr/apps/deploy-use/deploy-edge#bkmk_autoupdate).
+For more information, see [Microsoft Edge management](../../../apps/deploy-use/deploy-edge.md#bkmk_autoupdate).
 
 ### Task sequence as an app model deployment type
 
@@ -233,7 +233,7 @@ You can now install complex applications using task sequences via the applicatio
 
 - Define additional metadata for the app task sequence, including localized information
 
-For more information, see [Create Windows applications](/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt).
+For more information, see [Create Windows applications](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt).
 
 ## <a name="bkmk_osd"></a> OS deployment
 
@@ -243,7 +243,7 @@ For more information, see [Create Windows applications](/configmgr/apps/get-star
 
 When you install and register a new Configuration Manager client, and also deploy a task sequence to it, it's difficult to determine how soon after registration it will run the task sequence. This release introduces a new client setup property that you can use to start a task sequence on a client after it successfully registers with the site.
 
-For more information, see [About client installation properties - PROVISIONTS](/configmgr/core/clients/deploy/about-client-installation-properties#provisionts).
+For more information, see [About client installation properties - PROVISIONTS](../../clients/deploy/about-client-installation-properties.md#provisionts).
 
 ### Improvements to Check Readiness task sequence step
 
@@ -259,7 +259,7 @@ You can now verify more device properties in the **Check Readiness** task sequen
 - AC power plugged in
 - Network adapter is connected and not wireless
 
-For more information, see [Task sequence steps - Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness).
+For more information, see [Task sequence steps - Check Readiness](../../../osd/understand/task-sequence-steps.md#BKMK_CheckReadiness).
 
 ### Improvements to task sequence progress
 
@@ -270,17 +270,17 @@ The task sequence progress window now includes the following improvements:
 - You can enable it to show the current step number, total number of steps, and percent completion
 - Increased the width of the window to give you more space to better show the organization name in a single line
 
-For more information, see [User experiences for OS deployment](/configmgr/osd/understand/user-experience#task-sequence-progress).
+For more information, see [User experiences for OS deployment](../../../osd/understand/user-experience.md#task-sequence-progress).
 
 ### Improvements to OS deployment
 
 This release includes the following improvements to OS deployment:
 
-- The task sequence environment includes a new read-only variable, `_TSSecureBoot`.<!--5842295--> Use this variable to determine the state of secure boot on a UEFI-enabled device. For more information, see [_TSSecureBoot](/configmgr/osd/understand/task-sequence-variables#TSSecureBoot).
+- The task sequence environment includes a new read-only variable, `_TSSecureBoot`.<!--5842295--> Use this variable to determine the state of secure boot on a UEFI-enabled device. For more information, see [_TSSecureBoot](../../../osd/understand/task-sequence-variables.md#TSSecureBoot).
 
-- Set task sequence variables to configure the user context for the **Run Command Line** and **Run PowerShell Script** steps.<!-- 5573175 --> For more information, see [SMSTSRunCommandLineAsUser](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineAsUser) and [SMSTSRunPowerShellAsUser](/configmgr/osd/understand/task-sequence-variables#SMSTSRunPowerShellAsUser).
+- Set task sequence variables to configure the user context for the **Run Command Line** and **Run PowerShell Script** steps.<!-- 5573175 --> For more information, see [SMSTSRunCommandLineAsUser](../../../osd/understand/task-sequence-variables.md#SMSTSRunCommandLineAsUser) and [SMSTSRunPowerShellAsUser](../../../osd/understand/task-sequence-variables.md#SMSTSRunPowerShellAsUser).
 
-- On the **Run PowerShell Script** step, you can now set the **Parameters** property to a variable.<!-- 5690481 --> For more information, see [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript).
+- On the **Run PowerShell Script** step, you can now set the **Parameters** property to a variable.<!-- 5690481 --> For more information, see [Run PowerShell Script](../../../osd/understand/task-sequence-steps.md#BKMK_RunPowerShellScript).
 
 - The Configuration Manager PXE responder now sends status messages to the site server. This change makes it easier to troubleshoot OS deployments that use this service.<!-- 5568051 -->
 
@@ -298,7 +298,7 @@ An orchestration group gives you the flexibility to update devices based on a pe
 
 Members of an orchestration group can be any Configuration Manager client, not just servers. The orchestration group rules apply to the devices for all software update deployments to any collection that contains an orchestration group member. Other deployment behaviors still apply. For example, maintenance windows and deployment schedules.
 
-For more information, see [Orchestration groups](/configmgr/sum/deploy-use/orchestration-groups).
+For more information, see [Orchestration groups](../../../sum/deploy-use/orchestration-groups.md).
 
 ### Evaluate software updates after a servicing stack update
 
@@ -306,7 +306,7 @@ For more information, see [Orchestration groups](/configmgr/sum/deploy-use/orche
 
 Configuration Manager now detects if a servicing stack update (SSU) is part of an installation for multiple updates. When an SSU is detected, it's installed first. After install of the SSU, a software update evaluation cycle runs to install the remaining updates. This change allows a dependent cumulative update to be installed after the servicing stack update. The device doesn't need to restart between installs, and you don't need to create an additional maintenance window. SSUs are installed first only for non-user initiated installs. For instance, if a user initiates an installation for multiple updates from Software Center, the SSU might not be installed first.
 
-For more information, see [Plan for software updates](/configmgr/sum/plan-design/plan-for-software-updates#bkmk_ssu).
+For more information, see [Plan for software updates](../../../sum/plan-design/plan-for-software-updates.md#bkmk_ssu).
 
 ### Office 365 updates for disconnected software update points
 
@@ -314,7 +314,7 @@ For more information, see [Plan for software updates](/configmgr/sum/plan-design
 
 You can use a new tool to import Office 365 updates from an internet-connected WSUS server into a disconnected Configuration Manager environment. Previously when you exported and imported metadata for software updated in disconnected environments, you were unable to deploy Office 365 updates. Office 365 updates require additional metadata downloaded from an Office API and the Office CDN, which isn't possible for disconnected environments.
 
-For more information, see [Synchronize Office 365 updates from a disconnected software update point](/configmgr/sum/get-started/synchronize-office-updates-disconnected).
+For more information, see [Synchronize Office 365 updates from a disconnected software update point](../../../sum/get-started/synchronize-office-updates-disconnected.md).
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
 
@@ -323,15 +323,15 @@ For more information, see [Synchronize Office 365 updates from a disconnected so
 ### Expand Microsoft Defender Advanced Threat Protection (ATP) onboarding
 
 <!-- 5229962 -->
-Configuration Manager has expanded its support for onboarding devices to Microsoft Defender ATP. For more information, see [Microsoft Defender Advanced Threat Protection](/sccm/protect/deploy-use/windows-defender-advanced-threat-protection#onboard-devices).
+Configuration Manager has expanded its support for onboarding devices to Microsoft Defender ATP. For more information, see [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
 
 ### Improvements to BitLocker management
 
-- The BitLocker management policy now includes additional settings, including policies for fixed and removable drives.<!-- 5925683 --> For more information, see [BitLocker settings reference](/configmgr/protect/tech-ref/bitlocker/settings).
+- The BitLocker management policy now includes additional settings, including policies for fixed and removable drives.<!-- 5925683 --> For more information, see [BitLocker settings reference](../../../protect/tech-ref/bitlocker/settings.md).
 
 - In Configuration Manager current branch version 1910, to integrate the BitLocker recovery service you had to HTTPS-enable a management point. The HTTPS connection is necessary to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Configuring the management point and all clients for HTTPS can be challenging for many customers.
 
-    Starting in this version, the HTTPS requirement is for the IIS website that hosts the recovery service, not the entire management point role. This change relaxes the certificate requirements, and still encrypts the recovery keys in transit.<!-- 5925660 --> For more information, see [Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data).
+    Starting in this version, the HTTPS requirement is for the IIS website that hosts the recovery service, not the entire management point role. This change relaxes the certificate requirements, and still encrypts the recovery keys in transit.<!-- 5925660 --> For more information, see [Encrypt recovery data](../../../protect/deploy-use/bitlocker/encrypt-recovery-data.md).
 
 ## <a name="bkmk_report"></a> Reporting
 
@@ -341,7 +341,7 @@ Configuration Manager has expanded its support for onboarding devices to Microso
 
 You can now integrate Power BI Report Server with Configuration Manager reporting. This integration gives you modern visualization and better performance. It adds console support for Power BI reports similar to what already exists with SQL Server Reporting Services.
 
-For more information, see [Integrate with Power BI Report Server](/configmgr/core/servers/manage/powerbi-report-server).
+For more information, see [Integrate with Power BI Report Server](../../servers/manage/powerbi-report-server.md).
 
 ## <a name="bkmk_admin"></a> Configuration Manager console
 
@@ -351,7 +351,7 @@ For more information, see [Integrate with Power BI Report Server](/configmgr/cor
 
 To help you better troubleshoot device behaviors with boundary groups, you can now view the boundary groups for specific devices. In the **Devices** node or when you show the members of a **Device Collection**, add the new **Boundary Group(s)** column to the list view.
 
-For more information, see [Boundary groups](/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_show-boundary).
+For more information, see [Boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_show-boundary).
 
 ### Send a smile improvements
 
@@ -366,7 +366,7 @@ When you Send a smile or Send a frown, a status message is created when the feed
 
 A status message with an ID of 53900 is a successful submission and 53901 is a failed submission.
 
-For more information, see [Product feedback](/configmgr/core/understand/find-help#BKMK_1806Feedback).
+For more information, see [Product feedback](../../understand/find-help.md#BKMK_1806Feedback).
 
 ### Search all subfolders for configuration items and configuration baselines
 
@@ -386,26 +386,26 @@ OneTrace now supports customizable log groups, similar to the feature in Support
 - Compliance settings (also referred to as Desired Configuration Management)
 - Software updates
 
-For more information, see [Support Center OneTrace](/configmgr/core/support/support-center-onetrace).
+For more information, see [Support Center OneTrace](../../support/support-center-onetrace.md).
 
 ### <a name="bkmk_extend"></a> Improvements to extend and migrate on-premises site to Microsoft Azure
 <!--5665775, 6307931-->
 The tool to extend and migrate on-premises site to Microsoft Azure now supports provisioning multiple site system roles on a single Azure virtual machine. You can add site system roles after the initial Azure virtual machine deployment has completed.
 
-For more information, see [Extend and migrate on-premises site to Microsoft Azure](/configmgr/core/support/azure-migration-tool#bkmk_add_role).
+For more information, see [Extend and migrate on-premises site to Microsoft Azure](../../support/azure-migration-tool.md#bkmk_add_role).
 
 ## Other updates
 
-Starting with this version, the following features are no longer [pre-release](/configmgr/core/servers/manage/pre-release-features):
+Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 
-- [Azure Active Directory user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco)<!--3611956-->
-- [Synchronize collection membership results to Azure Active Directory](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync)<!--3607475-->
-- [CMPivot standalone](/sccm/core/servers/manage/cmpivot#bkmk_standalone)<!--3555890/4692885-->
-- [Client apps for co-managed devices](/configmgr/comanage/workloads#client-apps) (previously known as *Mobile apps for co-managed devices*)<!-- 1357892/3600959 -->
+- [Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956-->
+- [Synchronize collection membership results to Azure Active Directory](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync)<!--3607475-->
+- [CMPivot standalone](../../servers/manage/cmpivot.md#bkmk_standalone)<!--3555890/4692885-->
+- [Client apps for co-managed devices](../../../comanage/workloads.md#client-apps) (previously known as *Mobile apps for co-managed devices*)<!-- 1357892/3600959 -->
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2002 release notes](https://docs.microsoft.com/powershell/sccm/2002-release-notes?view=sccm-ps).
 
-For more information on changes to the administration service REST API, see [Administration service release notes](/configmgr/develop/adminservice/release-notes#bkmk_2002).
+For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md#bkmk_2002).
 
 <!--
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/nnnnn).
@@ -424,24 +424,24 @@ The following additional hotfixes are available to address specific issues:
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
 
 > [!NOTE]  
-> Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](/sccm/core/servers/manage/updates#bkmk_supersede).
+> Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
 -->
 
 ## Next steps
 
-At this time, version 2002 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](/sccm/core/servers/manage/checklist-for-installing-update-2002#early-update-ring).
+At this time, version 2002 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring).
 <!-- As of December 20, 2019, version 2002 is globally available for all customers to install. -->
 
-When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates) and [Checklist for installing update 2002](/sccm/core/servers/manage/checklist-for-installing-update-2002).
+When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2002](../../servers/manage/checklist-for-installing-update-2002.md).
 
 > [!TIP]
 > To install a new site, use a baseline version of Configuration Manager.
 >
 > Learn more about:
 >
-> - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)
-> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md)
+> - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)
 
-For known significant issues, see the [Release notes](/sccm/core/servers/deploy/install/release-notes).
+For known significant issues, see the [Release notes](../../servers/deploy/install/release-notes.md).
 
-After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-2002#post-update-checklist).
+After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2002.md#post-update-checklist).

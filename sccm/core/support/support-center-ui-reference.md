@@ -162,7 +162,7 @@ When you load client details, Support Center shows the following properties:
 
 ### <a name="bkmk_support-policy"></a> Policy tab
 
-Use the actions on this tab instead of the older [PolicySpy](/sccm/core/support/policy-spy) tool.
+Use the actions on this tab instead of the older [PolicySpy](policy-spy.md) tool.
 
 #### Load policy
 This option varies depending upon the view:

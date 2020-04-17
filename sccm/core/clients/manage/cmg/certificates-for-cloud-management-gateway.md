@@ -30,7 +30,7 @@ Depending upon the scenario you use to manage clients on the internet with the c
 
 - [Azure management certificate](#bkmk_azuremgmt)  
 
-For more information about the different scenarios, see [plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
+For more information about the different scenarios, see [plan for cloud management gateway](plan-cloud-management-gateway.md).
 
 ## General information
 
@@ -39,11 +39,11 @@ Certificates for the cloud management gateway support the following configuratio
 
 - 2048-bit or 4096-bit key length
 
-- Key storage providers for certificate private keys. For more information, see [CNG certificates overview](/sccm/core/plan-design/network/cng-certificates-overview).  
+- Key storage providers for certificate private keys. For more information, see [CNG certificates overview](../../../plan-design/network/cng-certificates-overview.md).  
 
 - When you configure Windows with the following policy: **System cryptography: Use FIPS-compliant algorithms for encryption, hashing, and signing**  
 
-- **TLS 1.2**. For more information, see [How to enable TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2).  
+- **TLS 1.2**. For more information, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).  
 
 ## <a name="bkmk_serverauth"></a> CMG server authentication certificate
 
@@ -56,7 +56,7 @@ The CMG creates an HTTPS service to which internet-based clients connect. The se
 > [!NOTE]
 > The CMG server authentication certificate supports wildcards. Some certificate authorities issue certificates using a wildcard character for the hostname. For example, `*.contoso.com`. Some organizations use wildcard certificates to simplify their PKI and reduce maintenance costs.<!--491233-->  
 >
-> For more information on how to use a wildcard certificate with a CMG, see [Set up a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#set-up-a-cmg).<!--SCCMDocs issue #565-->  
+> For more information on how to use a wildcard certificate with a CMG, see [Set up a CMG](setup-cloud-management-gateway.md#set-up-a-cmg).<!--SCCMDocs issue #565-->  
 
 This certificate requires a globally unique name to identify the service in Azure. Before requesting a certificate, confirm that the Azure domain name you want is unique. For example, *GraniteFalls.CloudApp.Net*.
 
@@ -83,9 +83,9 @@ Clients must trust the CMG server authentication certificate. There are two meth
 
 - Use a certificate issued by an enterprise CA from your public key infrastructure (PKI). Most enterprise PKI implementations add the trusted root CAs to Windows clients. For example, using Active Directory Certificate Services with group policy. If you issue the CMG server authentication certificate from a CA that your clients don't automatically trust, add the CA trusted root certificate to internet-based clients.  
 
-  - You can also use Configuration Manager certificate profiles to provision certificates on clients. For more information, see [Introduction to certificate profiles](/sccm/protect/deploy-use/introduction-to-certificate-profiles).
+  - You can also use Configuration Manager certificate profiles to provision certificates on clients. For more information, see [Introduction to certificate profiles](../../../../protect/deploy-use/introduction-to-certificate-profiles.md).
 
-  - If you plan to [install the Configuration Manager client from Intune](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client), you can also use Intune certificate profiles to provision certificates on clients. For more see [Configure a certificate profile](https://docs.microsoft.com/intune/certificates-configure).
+  - If you plan to [install the Configuration Manager client from Intune](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client), you can also use Intune certificate profiles to provision certificates on clients. For more see [Configure a certificate profile](https://docs.microsoft.com/intune/certificates-configure).
 
 ### <a name="bkmk_serverauthpublic"></a> Server authentication certificate issued by public provider
 
@@ -112,7 +112,7 @@ When you create the CMG instance in Configuration Manager, while the certificate
 
 ### <a name="bkmk_serverauthpki"></a> Server authentication certificate issued from enterprise PKI
 
-Create a custom SSL certificate for the CMG the same as for a cloud distribution point. Follow the instructions for [Deploying the service certificate for cloud-based distribution points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012) but do the following things differently:
+Create a custom SSL certificate for the CMG the same as for a cloud distribution point. Follow the instructions for [Deploying the service certificate for cloud-based distribution points](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clouddp2008_cm2012) but do the following things differently:
 
 - When requesting the custom web server certificate, provide an FQDN for the certificate's common name. This name can be a public domain name you own or you may use the cloudapp.net domain. If using your own public domain, refer to the process above for creating a DNS alias in your organization's public DNS.  
 
@@ -128,14 +128,14 @@ Create a custom SSL certificate for the CMG the same as for a cloud distribution
 
 The clients use this certificate to authenticate with the CMG. Windows 10 devices that are hybrid or cloud domain-joined don't require this certificate because they use Azure AD to authenticate.
 
-Provision this certificate outside of the context of Configuration Manager. For example, use Active Directory Certificate Services and group policy to issue client authentication certificates. For more information, see [Deploying the client certificate for Windows computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).
+Provision this certificate outside of the context of Configuration Manager. For example, use Active Directory Certificate Services and group policy to issue client authentication certificates. For more information, see [Deploying the client certificate for Windows computers](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012).
 
 To securely forward client requests, the CMG connection point requires a client authentication certificate that corresponds to the server authentication certificate on the HTTPS management point. If clients use Azure AD authentication, or you configure the management point for Enhanced HTTP, this certificate isn't required. For more information, see [Enable management point for HTTPS](#bkmk_mphttps).
 
 > [!NOTE]
-> Microsoft recommends joining devices to Azure AD. Internet-based devices can use Azure AD to authenticate with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network. For more information, see [Install and register the client using Azure AD identity](/configmgr/core/clients/deploy/deploy-clients-cmg-azure#install-and-register-the-client-using-azure-ad-identity).
+> Microsoft recommends joining devices to Azure AD. Internet-based devices can use Azure AD to authenticate with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network. For more information, see [Install and register the client using Azure AD identity](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
 >
-> Starting in version 2002,<!--5686290--> Configuration Manager extends its support for internet-based devices that don't often connect to the internal network, aren't able to join Azure Active Directory (Azure AD), and don't have a method to install a PKI-issued certificate. For more information, see [Token-based authentication for CMG](/configmgr/core/clients/deploy/deploy-clients-cmg-token).
+> Starting in version 2002,<!--5686290--> Configuration Manager extends its support for internet-based devices that don't often connect to the internal network, aren't able to join Azure Active Directory (Azure AD), and don't have a method to install a PKI-issued certificate. For more information, see [Token-based authentication for CMG](../../deploy/deploy-clients-cmg-token.md).
 
 ### <a name="bkmk_clientroot"></a> Client trusted root certificate to CMG
 
@@ -184,9 +184,9 @@ After issuing a client authentication certificate to a computer, use this proces
 
 ## <a name="bkmk_mphttps"></a> Enable management point for HTTPS
 
-Provision this certificate outside of the context of Configuration Manager. For example, use Active Directory Certificate Services and group policy to issue a web server certificate. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements) and [Deploy the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).
+Provision this certificate outside of the context of Configuration Manager. For example, use Active Directory Certificate Services and group policy to issue a web server certificate. For more information, see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md) and [Deploy the web server certificate for site systems that run IIS](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012).
 
-When using the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
+When using the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
 
 > [!Tip]  
 > If you aren't using Enhanced HTTP, and your environment has multiple management points, you don't have to HTTPS-enable them all for CMG. Configure the CMG-enabled management points as **Internet only**. Then your on-premises clients don't try to use them.<!-- SCCMDocs#1676 -->
@@ -244,7 +244,7 @@ Configure an on-premises management point with the following client connection m
 *This certificate is required for classic service deployments. It's not required for Azure Resource Manager deployments.*
 
 > [!Important]  
-> Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud management gateway. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
+> Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud management gateway. For more information, see [Plan for CMG](plan-cloud-management-gateway.md#azure-resource-manager).
 >
 > Starting in Configuration Manager version 1902, Azure Resource Manager is the only deployment mechanism for new instances of the cloud management gateway. This certificate isn't required in Configuration Manager version 1902 or later.<!-- 3605704 -->
 
@@ -263,8 +263,8 @@ For more information and instructions for how to upload a management certificate
 
 ## Next steps
 
-- [Set up cloud management gateway](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)  
+- [Set up cloud management gateway](setup-cloud-management-gateway.md)  
 
-- [Frequently asked questions about the cloud management gateway](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)  
+- [Frequently asked questions about the cloud management gateway](cloud-management-gateway-faq.md)  
 
-- [Security and privacy for cloud management gateway](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)  
+- [Security and privacy for cloud management gateway](security-and-privacy-for-cloud-management-gateway.md)  

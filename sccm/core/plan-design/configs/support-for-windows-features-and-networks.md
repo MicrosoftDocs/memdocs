@@ -54,7 +54,7 @@ For more information, see [BranchCache for Windows](https://docs.microsoft.com/w
 
 Configuration Manager provides support for clients in workgroups.  
 
-- Configuration Manager supports moving a client from a workgroup to a domain or from a domain to a workgroup. For more information, see [How to install Configuration Manager clients on workgroup computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientWorkgroup).  
+- Configuration Manager supports moving a client from a workgroup to a domain or from a domain to a workgroup. For more information, see [How to install Configuration Manager clients on workgroup computers](../../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup).  
 
 > [!NOTE]
 > Although clients in workgroups are supported, all site systems must be members of a supported Active Directory domain.  

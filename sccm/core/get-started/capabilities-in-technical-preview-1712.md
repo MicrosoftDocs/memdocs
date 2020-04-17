@@ -20,7 +20,7 @@ ROBOTS: NOINDEX
 
 This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1712. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. 
 
-Review [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview) before installing this version of the technical preview. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
+Review [Technical Preview for Configuration Manager](technical-preview.md) before installing this version of the technical preview. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
 
 
 <!--  Known Issues Template   
@@ -30,7 +30,7 @@ Review [Technical Preview for Configuration Manager](/sccm/core/get-started/tech
 **Known Issues in this Technical Preview:**
 -->
 **Known Issues in this Technical Preview:**
-- **Update to a new preview version fails when you have a site server in passive mode**. If you have a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), then you must uninstall the passive mode site server before updating to this new preview version. You can reinstall the passive mode site server after your site completes the update.
+- **Update to a new preview version fails when you have a site server in passive mode**. If you have a [primary site server in passive mode](capabilities-in-technical-preview-1706.md#site-server-role-high-availability), then you must uninstall the passive mode site server before updating to this new preview version. You can reinstall the passive mode site server after your site completes the update.
 
   To uninstall the passive mode site server:
   1. In the Configuration Manager console, go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**, and then select the passive mode site server.
@@ -69,7 +69,7 @@ When using multi-select mode in the **Applications** tab, the following criteria
 
 ### Try it out!
 **In the Configuration Manager console:**
-Deploy to a user or device multiple applications for installation, as either available or required (with the deadline in the future). Do not require administrator approval. For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).
+Deploy to a user or device multiple applications for installation, as either available or required (with the deadline in the future). Do not require administrator approval. For more information, see [Deploy applications](../../apps/deploy-use/deploy-applications.md).
 
 **In Software Center:**
  1. The **Applications** tab should open by default. 
@@ -152,4 +152,4 @@ Continue to use our [user voice page](https://configurationmanager.uservoice.com
 <!-- When we have another H2 in this topic, Add this Next Steps section back in.  -->
 
 ## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).    

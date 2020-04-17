@@ -22,7 +22,7 @@ Because this release is a technical preview, details and functionality are subje
 
 This information applies to all versions of the Configuration Manager technical preview branch. This article lists each new feature along with the technical preview version in which it first appears. For example, version **2001** for January (`01`) of 2020 (`20`). Separate articles dedicated to each preview version detail the individual features.
 
-For information about what's new in the *current branch* of Configuration Manager, see [What's new in Configuration Manager incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions).
+For information about what's new in the *current branch* of Configuration Manager, see [What's new in Configuration Manager incremental versions](../plan-design/changes/whats-new-incremental-versions.md).
 
 > [!Tip]
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
@@ -33,7 +33,7 @@ For information about what's new in the *current branch* of Configuration Manage
 > [!IMPORTANT]
 > The technical preview is licensed for use only in a lab environment. Microsoft may not provide support services and certain features may not be available in technical previews. Additionally, technical preview software may have reduced or different security, privacy, accessibility, availability, and reliability standards relative to commercially provided software.
 
-For most product prerequisites, use the information in the [Supported configurations](/sccm/core/plan-design/configs/supported-configurations). The following exceptions apply to the technical preview branch:
+For most product prerequisites, use the information in the [Supported configurations](../plan-design/configs/supported-configurations.md). The following exceptions apply to the technical preview branch:
 
 - Each install is active for 90 days before it becomes inactive.
 
@@ -50,11 +50,11 @@ For most product prerequisites, use the information in the [Supported configurat
 
 - The following features aren't supported with the technical preview branch:
 
-  - [Migration](/sccm/core/migration/migrate-data-between-hierarchies) to or from this preview branch.
+  - [Migration](../migration/migrate-data-between-hierarchies.md) to or from this preview branch.
 
-  - [Upgrade](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager) to this preview branch.
+  - [Upgrade](../servers/deploy/install/upgrade-to-configuration-manager.md) to this preview branch.
 
-  - [Site recovery](/sccm/core/servers/manage/recover-sites) from the cd.latest folder.<!--507106-->
+  - [Site recovery](../servers/manage/recover-sites.md) from the cd.latest folder.<!--507106-->
 
 - There's no support for updating to current branch from this preview branch.
 
@@ -72,7 +72,7 @@ The technical preview branch of Configuration Manager supports the following pro
   - SQL Server 2014 (with service pack 1 or later)
   - SQL Server 2012 (with service pack 3 or later)
 
-- The site supports up to 10 clients, which can run any [supported client OS version](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).<!-- SCCMDocs#1656 -->
+- The site supports up to 10 clients, which can run any [supported client OS version](../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).<!-- SCCMDocs#1656 -->
 
 > [!Note]
 > The inclusion of these products in this content doesn't imply an extension of support for a version that's beyond its support lifecycle. Configuration Manager doesn't support products that are beyond their support lifecycle. For more information, see [Microsoft Lifecycle Policy](https://go.microsoft.com/fwlink/p/?LinkId=208270).
@@ -100,7 +100,7 @@ Download a baseline version from the [TechNet Evaluation Center](https://www.mic
 
 ## <a name="BKMK_TPFeedback"></a> Providing feedback
 
-We love to hear your feedback about the new features in the technical preview. For more information, see [Product feedback](/sccm/core/understand/find-help#product-feedback).
+We love to hear your feedback about the new features in the technical preview. For more information, see [Product feedback](../understand/find-help.md#product-feedback).
 
 If you have ideas about new features you would like to see, let us know! Submit new ideas and vote on the ideas by others: [Configuration Manager UserVoice](https://configurationmanager.uservoice.com).
 
@@ -117,21 +117,21 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](/sccm/core/get-started/2020/technical-preview-2003#bkmk_anchor) <!--ID-->
+<!-- - [title](2020/technical-preview-2003.md#bkmk_anchor) <!--ID-->
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
 ### Technical preview version 2003
 
-- [Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager console](/sccm/core/get-started/2020/technical-preview-2003#bkmk_atp) <!--5691658-->
-- [Track configuration item remediations](/sccm/core/get-started/2020/technical-preview-2003#bkmk_track) <!--4261411 in 2002-->
-- [Show boundary groups for devices](/sccm/core/get-started/2020/technical-preview-2003#bkmk_boundary) <!--6521835 in 2002-->
-- [New feedback wizard](/sccm/core/get-started/2020/technical-preview-2003#bkmk_feedback) <!--3180826-->
-- [Improvements to Microsoft Edge Management dashboard](/sccm/core/get-started/2020/technical-preview-2003#bkmk_edge) <!--5907383-->
-- [Improvements to CMPivot](/sccm/core/get-started/2020/technical-preview-2003#bkmk_cmpivot) <!--6518631-->
-- [Query for feedback sent to Microsoft](/sccm/core/get-started/2020/technical-preview-2003#bkmk_smile) <!--6488450-->
-- [New SDK method for task sequence progress](/sccm/core/get-started/2020/technical-preview-2003#bkmk_tsapi) <!--6448458-->
-- [Improvements to OS deployment](/sccm/core/get-started/2020/technical-preview-2003#bkmk_osd) <!--6452769-->
+- [Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager console](2020/technical-preview-2003.md#bkmk_atp) <!--5691658-->
+- [Track configuration item remediations](2020/technical-preview-2003.md#bkmk_track) <!--4261411 in 2002-->
+- [Show boundary groups for devices](2020/technical-preview-2003.md#bkmk_boundary) <!--6521835 in 2002-->
+- [New feedback wizard](2020/technical-preview-2003.md#bkmk_feedback) <!--3180826-->
+- [Improvements to Microsoft Edge Management dashboard](2020/technical-preview-2003.md#bkmk_edge) <!--5907383-->
+- [Improvements to CMPivot](2020/technical-preview-2003.md#bkmk_cmpivot) <!--6518631-->
+- [Query for feedback sent to Microsoft](2020/technical-preview-2003.md#bkmk_smile) <!--6488450-->
+- [New SDK method for task sequence progress](2020/technical-preview-2003.md#bkmk_tsapi) <!--6448458-->
+- [Improvements to OS deployment](2020/technical-preview-2003.md#bkmk_osd) <!--6452769-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -147,7 +147,7 @@ When there's a new CB, add any features not in that CB to the table in H2 "Featu
 <!--temp remove for 2002 CB  The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1910: -->
 
 > [!TIP]
-> When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions#supported-versions).
+> When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 <!-- ### Technical preview version 2003 -->
 
@@ -163,14 +163,14 @@ The following features were released with previous versions of the Configuration
 
 | Feature        | Technical preview version |
 |----------------|---------------------------|
-| Attach files to feedback <!--3556011--> | [Tech preview 1910](/sccm/core/get-started/2019/technical-preview-1910#attach-files-to-feedback) |
-| Improvements to multicast-enabled distribution points <!--3785535--> | [Tech preview 1908.2](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_multicast) |
-| Phased deployment templates <!--4961086--> | [Tech preview 1908](/sccm/core/get-started/2019/technical-preview-1908#phased-deployment-templates) |
-| Remote control anywhere using cloud management gateway <!--4575930--> | [Tech Preview 1906](/sccm/core/get-started/2019/technical-preview-1906#remote-control-anywhere-using-cloud-management-gateway) |
-| Improvements to Community Hub <!--3555935--> | [Tech Preview 1906](/sccm/core/get-started/2019/technical-preview-1906#bkmk_hub) |
-| Improvements to Community Hub <!--4224401--> | [Tech Preview 1905](/sccm/core/get-started/2019/technical-preview-1905#bkmk_hub) |
-| Community Hub and GitHub <!--3555935--> | [Tech Preview 1904](/sccm/core/get-started/2019/technical-preview-1904#community-hub-and-github) |
-| Cloud services cost estimator <!--3555774--> | [Tech Preview 1903](/sccm/core/get-started/2019/technical-preview-1903#bkmk_cmg) |
+| Attach files to feedback <!--3556011--> | [Tech preview 1910](2019/technical-preview-1910.md#attach-files-to-feedback) |
+| Improvements to multicast-enabled distribution points <!--3785535--> | [Tech preview 1908.2](2019/technical-preview-1908-2.md#bkmk_multicast) |
+| Phased deployment templates <!--4961086--> | [Tech preview 1908](2019/technical-preview-1908.md#phased-deployment-templates) |
+| Remote control anywhere using cloud management gateway <!--4575930--> | [Tech Preview 1906](2019/technical-preview-1906.md#remote-control-anywhere-using-cloud-management-gateway) |
+| Improvements to Community Hub <!--3555935--> | [Tech Preview 1906](2019/technical-preview-1906.md#bkmk_hub) |
+| Improvements to Community Hub <!--4224401--> | [Tech Preview 1905](2019/technical-preview-1905.md#bkmk_hub) |
+| Community Hub and GitHub <!--3555935--> | [Tech Preview 1904](2019/technical-preview-1904.md#community-hub-and-github) |
+| Cloud services cost estimator <!--3555774--> | [Tech Preview 1903](2019/technical-preview-1903.md#bkmk_cmg) |
 | Download reports from the Community Hub <!--3555936--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) |
 | Community Hub <!--3556020, fka 1357766--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) |
 | Client-based PXE responder service <!--3556018, fka 1357148--> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
@@ -182,11 +182,11 @@ The following features were released with previous versions of the Configuration
 
 For more information, see the following articles:
 
-- [Evaluate Configuration Manager in a lab](/sccm/core/get-started/evaluate-with-lab-environment)
-- [What's new in Configuration Manager incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions)
-- [Introduction to Configuration Manager](/sccm/core/understand/introduction)
+- [Evaluate Configuration Manager in a lab](evaluate-with-lab-environment.md)
+- [What's new in Configuration Manager incremental versions](../plan-design/changes/whats-new-incremental-versions.md)
+- [Introduction to Configuration Manager](../understand/introduction.md)
 
 > [!Tip]
-> For more information on current branch features that require consent to enable, see [pre-release features](/sccm/core/servers/manage/pre-release-features).
+> For more information on current branch features that require consent to enable, see [pre-release features](../servers/manage/pre-release-features.md).
 >
-> For more information on current branch features that you must enable first, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
+> For more information on current branch features that you must enable first, see [Enable optional features from updates](../servers/manage/install-in-console-updates.md#bkmk_options).

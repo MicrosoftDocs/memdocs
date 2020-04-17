@@ -38,7 +38,7 @@ Resource Explorer has the following sections related to hardware inventory:
     - Expand an item to see a **Current** node and one or more nodes with the historical date. Compare the information in the current node to one of the historical nodes to see the items that changed.  
 
 > [!NOTE]  
-> By default, Configuration Manager deletes hardware inventory data that's been inactive for 90 days. Adjust this number of days in the **Delete Aged Inventory History** site maintenance task. For more information, see [Maintenance tasks](/sccm/core/servers/manage/maintenance-tasks).  
+> By default, Configuration Manager deletes hardware inventory data that's been inactive for 90 days. Adjust this number of days in the **Delete Aged Inventory History** site maintenance task. For more information, see [Maintenance tasks](../../../servers/manage/maintenance-tasks.md).  
 
 
 
@@ -65,6 +65,6 @@ For a property with a value that doesn't change, like total disk size, you may n
 
 ## See also
 
-For information about how to view hardware inventory from clients that run Linux and UNIX, see [How to monitor clients for Linux and UNIX servers](/sccm/core/clients/manage/monitor-clients-for-linux-and-unix-servers).  
+For information about how to view hardware inventory from clients that run Linux and UNIX, see [How to monitor clients for Linux and UNIX servers](../monitor-clients-for-linux-and-unix-servers.md).  
 
-Resource Explorer also shows Software Inventory. For more information, see [How to use Resource Explorer to view software inventory](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory).
+Resource Explorer also shows Software Inventory. For more information, see [How to use Resource Explorer to view software inventory](use-resource-explorer-to-view-software-inventory.md).

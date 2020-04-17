@@ -21,7 +21,7 @@ ROBOTS: NOINDEX
 
 This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1803. You can install this version to update and add new capabilities to your technical preview site. 
 
-Review the [Technical Preview](/sccm/core/get-started/technical-preview) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
+Review the [Technical Preview](technical-preview.md) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
 
 
 <!--  Known Issues Template   
@@ -40,14 +40,14 @@ Review the [Technical Preview](/sccm/core/get-started/technical-preview) article
  
 ## Pull-distribution points support cloud distribution points as source  
 <!--1321554-->
-Many customers use [pull-distribution points](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point) in remote or branch offices, which download content from a source distribution point across the WAN. If your remote offices have a better connection to the internet, or to reduce load on your WAN links, you can now use a [cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) in Microsoft Azure as the source. When you add a source on the **Pull Distribution Point** tab of the distribution point properties, any cloud distribution point in the site is now listed as an available distribution point. The behavior of both site system roles remains the same otherwise. 
+Many customers use [pull-distribution points](../plan-design/hierarchy/use-a-pull-distribution-point.md) in remote or branch offices, which download content from a source distribution point across the WAN. If your remote offices have a better connection to the internet, or to reduce load on your WAN links, you can now use a [cloud distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md) in Microsoft Azure as the source. When you add a source on the **Pull Distribution Point** tab of the distribution point properties, any cloud distribution point in the site is now listed as an available distribution point. The behavior of both site system roles remains the same otherwise. 
 
 ### Prerequisites
 - The pull-distribution point needs internet access to communicate with Microsoft Azure.
 - The content must be distributed to the source cloud distribution point.
 
 > [!Note]  
-> This feature does incur charges to your Azure subscription for data storage and network egress. For more information, see the [Cost of using cloud-based distribution](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost).
+> This feature does incur charges to your Azure subscription for data storage and network egress. For more information, see the [Cost of using cloud-based distribution](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_cost).
 
 
 
@@ -77,7 +77,7 @@ Contoso has a single primary site with two boundary groups: Headquarters (HQ) an
 ### Try it out!
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
 
-1. Set up [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) and [peer cache sources](/sccm/core/plan-design/hierarchy/client-peer-cache) per normal.
+1. Set up [boundary groups](../servers/deploy/configure/boundary-groups.md) and [peer cache sources](../plan-design/hierarchy/client-peer-cache.md) per normal.
 2. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select **Sites**. Click **Hierarchy Settings** in the ribbon. 
 3. On the **General** tab, enable the option to **Configure client peer cache sources to divide content into parts**. 
 4. Create a required deployment with content.  
@@ -145,4 +145,4 @@ The pre-release version of SCAP Extensions is available in the Cd.latest folder 
 
 
 ## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).    

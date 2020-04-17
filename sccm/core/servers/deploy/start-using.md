@@ -19,12 +19,12 @@ manager: dougeby
 
 After you plan out your Configuration Manager site and hierarchy topology and are ready to get sites installed or upgraded, use the information in the following articles:  
 
-- [Install Configuration Manager sites](/sccm/core/servers/deploy/install/installing-sites)  
+- [Install Configuration Manager sites](install/installing-sites.md)  
 
-- [Upgrade to Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)  
+- [Upgrade to Configuration Manager](install/upgrade-to-configuration-manager.md)  
 
-- [Scenarios to streamline your installation of Configuration Manager](/sccm/core/servers/deploy/install/scenarios-to-streamline-your-installation)  
+- [Scenarios to streamline your installation of Configuration Manager](install/scenarios-to-streamline-your-installation.md)  
 
-- [Configure sites and hierarchies](/sccm/core/servers/deploy/configure/configure-sites-and-hierarchies)  
+- [Configure sites and hierarchies](configure/configure-sites-and-hierarchies.md)  
 
-- [Migrate data between hierarchies](/sccm/core/migration/migrate-data-between-hierarchies)  
+- [Migrate data between hierarchies](../../migration/migrate-data-between-hierarchies.md)  

@@ -36,7 +36,7 @@ Unless noted otherwise, each supported OS is supported as a Configuration Manage
 |Windows 8: Professional, Enterprise|January 12, 2016|Version 1802|
 |Windows Embedded 8 Pro|January 12, 2016|Version 1802|
 |Windows Embedded 8 Industry|January 12, 2016|Version 1802|
-|Windows XP Embedded <br><br> Includes all [XP-based embedded operating systems](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-embedded-computers)|July 10, 2015|Version 1702|
+|Windows XP Embedded <br><br> Includes all [XP-based embedded operating systems](../../configs/supported-operating-systems-for-clients-and-devices.md#windows-embedded-computers)|July 10, 2015|Version 1702|
 |Windows Vista|July 10, 2015|Version 1511|
 |Windows Server 2003 R2|July 10, 2015|Version 1511|
 |Windows Server 2003|July 10, 2015|Version 1511|
@@ -50,8 +50,8 @@ Unless noted otherwise, each supported OS is supported as a Configuration Manage
 
 For more information, see the following articles:
 
-- [Removed and deprecated](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)  
+- [Removed and deprecated](removed-and-deprecated.md)  
 
 - [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle)  
 
-- [Support for current branch versions of Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported)  
+- [Support for current branch versions of Configuration Manager](../../../servers/manage/current-branch-versions-supported.md)  

@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-The Deployment Monitoring Tool is one of the [Configuration Manager tools](/sccm/core/support/tools). It's a graphical user interface designed to assist in troubleshooting application, software update, and configuration baseline deployments on a Configuration Manager client. The tool is read-only as it doesn't change any state on the client. You can safely use it to diagnose common deployment scenarios.
+The Deployment Monitoring Tool is one of the [Configuration Manager tools](tools.md). It's a graphical user interface designed to assist in troubleshooting application, software update, and configuration baseline deployments on a Configuration Manager client. The tool is read-only as it doesn't change any state on the client. You can safely use it to diagnose common deployment scenarios.
 
 
 ## Features
@@ -64,6 +64,6 @@ The following actions are available in the **Actions** menu:
 
 ## See also
 
-- [Deploy applications](/sccm/apps/deploy-use/deploy-applications)
-- [Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates)
-- [Deploy configuration baselines](/sccm/compliance/deploy-use/deploy-configuration-baselines)
+- [Deploy applications](../../apps/deploy-use/deploy-applications.md)
+- [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md)
+- [Deploy configuration baselines](../../compliance/deploy-use/deploy-configuration-baselines.md)

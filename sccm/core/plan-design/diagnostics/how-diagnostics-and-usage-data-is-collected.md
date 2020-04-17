@@ -22,9 +22,9 @@ At the top-level site of a hierarchy, the service connection point submits this 
 
 - **Online**: Once a week, the service connection point automatically sends diagnostics and usage data to the cloud service.
 
-- **Offline**: You manually transfer diagnostics and usage data with the [service connection tool](/configmgr/core/servers/manage/use-the-service-connection-tool).
+- **Offline**: You manually transfer diagnostics and usage data with the [service connection tool](../../servers/manage/use-the-service-connection-tool.md).
 
-For more information, see [About the service connection point](/configmgr/core/servers/deploy/configure/about-the-service-connection-point).
+For more information, see [About the service connection point](../../servers/deploy/configure/about-the-service-connection-point.md).
 
 > [!div class="nextstepaction"]
-> [How to view diagnostics and usage data](/configmgr/core/plan-design/diagnostics/view-diagnostics-and-usage-data)
+> [How to view diagnostics and usage data](view-diagnostics-and-usage-data.md)
