@@ -39,7 +39,7 @@ You can configure one of the following modes:
 2. **Audit only** - Allow all executables to run, but log untrusted executables that run in the local client event log.
 
 > [!Tip]  
-> This feature was first introduced in version 1702 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1906, it's no longer a pre-release feature.  
+> This feature was first introduced in version 1702 as a [pre-release feature](../../core/servers/manage/pre-release-features.md). Beginning with version 1906, it's no longer a pre-release feature.  
 
 ## What can run when you deploy a Windows Defender Application Control policy?
 
@@ -114,7 +114,7 @@ After the policy is processed on a client PC, a restart is scheduled on that cli
 
 ## How to monitor a Windows Defender Application Control policy
 
-Use the information in the [Monitor compliance settings](/sccm/compliance/deploy-use/monitor-compliance-settings) article to help you monitor that the deployed policy has been applied to all PCs correctly.
+Use the information in the [Monitor compliance settings](../../compliance/deploy-use/monitor-compliance-settings.md) article to help you monitor that the deployed policy has been applied to all PCs correctly.
 
 To monitor the processing of a Windows Defender Application Control policy, use the following log file on client PCs:
 
@@ -149,7 +149,7 @@ In this situation, the software might continue to be allowed to run even if the 
 
 ## Next steps
 
- [Manage antimalware policies and firewall settings](/configmgr/protect/deploy-use/endpoint-antimalware-firewall)
+ [Manage antimalware policies and firewall settings](endpoint-antimalware-firewall.md)
 
 
 

@@ -71,4 +71,4 @@ To monitor SCEP certificate compliance  use these  certificate reports under the
 
 
 
- For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
+ For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](../../core/servers/manage/introduction-to-reporting.md).  

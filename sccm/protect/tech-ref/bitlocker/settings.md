@@ -376,7 +376,7 @@ When you enable this setting, Configuration Manager automatically and silently b
 
 - **Select BitLocker recovery information to store**: Configure the key recovery service to back up BitLocker recovery information. It provides an administrative method of recovering data encrypted by BitLocker, which helps prevent data loss because of the lack of key information.
 
-- **Allow recovery information to be stored in plain text**: Without a BitLocker management encryption certificate for SQL Server, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data).
+- **Allow recovery information to be stored in plain text**: Without a BitLocker management encryption certificate for SQL Server, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data](../../deploy-use/bitlocker/encrypt-recovery-data.md).
 
 - **Client checking status frequency (minutes)**: At the configured frequency, the client checks the BitLocker protection policies and status on the computer and also backs up the client recovery key. By default, the Configuration Manager client updates its BitLocker recovery information every 90 minutes.
 

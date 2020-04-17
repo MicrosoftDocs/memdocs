@@ -28,9 +28,9 @@ You can configure Wi-Fi profiles for the following OS versions:
 
 - Windows 10 or Windows 10 Mobile
 
-You can also use Configuration Manager to deploy wireless network settings to mobile devices using on-premises mobile device management (MDM). For more general information, see [What is on-premises MDM](/configmgr/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure).
+You can also use Configuration Manager to deploy wireless network settings to mobile devices using on-premises mobile device management (MDM). For more general information, see [What is on-premises MDM](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).
 
-When you create a Wi-Fi profile, you can include a wide range of security settings. These settings include certificates for server validation and client authentication that have been pushed using Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles](/configmgr/protect/deploy-use/introduction-to-certificate-profiles).
+When you create a Wi-Fi profile, you can include a wide range of security settings. These settings include certificates for server validation and client authentication that have been pushed using Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles](introduction-to-certificate-profiles.md).
 
 ## Create a Wi-Fi profile
 
@@ -77,7 +77,7 @@ When you create a Wi-Fi profile, you can include a wide range of security settin
 1. On the **Security Configuration** page, specify the following information:
 
     > [!IMPORTANT]
-    > If you're creating a Wi-Fi profile for [on-premises MDM](/configmgr/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure), the current branch of Configuration Manager only supports the following Wi-Fi security configurations:  
+    > If you're creating a Wi-Fi profile for [on-premises MDM](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md), the current branch of Configuration Manager only supports the following Wi-Fi security configurations:  
     >
     > - Security types: **WPA2 Enterprise** or **WPA2 Personal**  
     > - Encryption types: **AES** or **TKIP**  
@@ -110,4 +110,4 @@ When you create a Wi-Fi profile, you can include a wide range of security settin
 ## Next step
 
 > [!div class="nextstepaction"]
-> [How to deploy Wi-Fi profiles](/configmgr/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles)
+> [How to deploy Wi-Fi profiles](deploy-wifi-vpn-email-cert-profiles.md)
