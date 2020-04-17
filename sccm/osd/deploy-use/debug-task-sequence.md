@@ -23,7 +23,7 @@ manager: dougeby
 Starting in version 1906, the task sequence debugger is a new troubleshooting tool. You deploy a task sequence in debug mode to a small collection. It lets you step through the task sequence in a controlled manner to aid troubleshooting and investigation. The debugger currently runs on the same device as the task sequence engine, it's not a remote debugger.
 
 > [!Note]  
-> In this version of Configuration Manager, the task sequence debugger is a pre-release feature. To enable it, see [Pre-release features](/configmgr/core/servers/manage/pre-release-features).  
+> In this version of Configuration Manager, the task sequence debugger is a pre-release feature. To enable it, see [Pre-release features](../../core/servers/manage/pre-release-features.md).  
 
 
 ## Prerequisites
@@ -44,12 +44,12 @@ Starting in version 1906, the task sequence debugger is a new troubleshooting to
     > [!Tip]  
     > Alternatively, set the variable **TSDebugMode** to `TRUE` on a collection or computer object to which the task sequence is deployed. Any device that has this variable set will put any task sequence deployed to it into debug mode.
 
-1. Create a debug deployment. The deployment settings are the same as a normal task sequence deployment. For more information, see [Deploy a task sequence](/configmgr/osd/deploy-use/deploy-a-task-sequence#process).
+1. Create a debug deployment. The deployment settings are the same as a normal task sequence deployment. For more information, see [Deploy a task sequence](deploy-a-task-sequence.md#process).
 
     > [!Note]  
     > You can only select a small collection for a debug deployment. It only displays device collections with 10 or less members.
 
-Starting in version 1910, use the new task sequence variable **TSDebugOnError** to automatically start the debugger when the task sequence returns an error.<!-- 5012536 --> For more information, see [Task sequence variables - TSDebugOnError](/configmgr/osd/understand/task-sequence-variables#TSDebugOnError).
+Starting in version 1910, use the new task sequence variable **TSDebugOnError** to automatically start the debugger when the task sequence returns an error.<!-- 5012536 --> For more information, see [Task sequence variables - TSDebugOnError](../understand/task-sequence-variables.md#TSDebugOnError).
 
 ## Use the tool
 
@@ -77,11 +77,11 @@ The debugger includes the following controls:
 
     - Starting in version 1910, if you create a break point in the debugger, and then the task sequence restarts the computer, the debugger keeps your break points after restart.<!-- 5012509 -->
 
-    - In version 1906, break points aren't saved after the computer restarts, like with the [Restart Computer](/configmgr/osd/understand/task-sequence-steps#BKMK_RestartComputer) step. For example, if you start the debugger from Software Center for an imaging task sequence, don't set breaks in the Windows PE phase. When the computer restarts into Windows PE, the debugger pauses the task sequence so that you can set breaks.
+    - In version 1906, break points aren't saved after the computer restarts, like with the [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step. For example, if you start the debugger from Software Center for an imaging task sequence, don't set breaks in the Windows PE phase. When the computer restarts into Windows PE, the debugger pauses the task sequence so that you can set breaks.
 
 - **Clear All Breaks**: Remove all break points.
 
-- **Log File**: Opens the current task sequence log file, **smsts.log**, with [CMTrace](/configmgr/core/support/cmtrace). You can see log entries when the task sequence engine is "Waiting for the debugger."
+- **Log File**: Opens the current task sequence log file, **smsts.log**, with [CMTrace](../../core/support/cmtrace.md). You can see log entries when the task sequence engine is "Waiting for the debugger."
 
 - **Cmd Prompt**: In Windows PE, opens a command prompt.
 
@@ -89,14 +89,14 @@ The debugger includes the following controls:
 
 - **Quit**: Detach and close the debugger, but the task sequence continues to run normally.
 
-The **Task Sequence Variables** window shows the current values for all variables in the task sequence environment. For more information, see [Task sequence variables](/configmgr/osd/understand/task-sequence-variables). If you use the [Set Task Sequence Variable](/configmgr/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step with the option to **Do not display this value**, the debugger doesn't display the variable value. You can't edit the variable values in the debugger.
+The **Task Sequence Variables** window shows the current values for all variables in the task sequence environment. For more information, see [Task sequence variables](../understand/task-sequence-variables.md). If you use the [Set Task Sequence Variable](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) step with the option to **Do not display this value**, the debugger doesn't display the variable value. You can't edit the variable values in the debugger.
 
 > [!Note]
 > Some task sequence variables are for internal use only, and not listed in the reference documentation.
 
-The task sequence debugger continues to run after a [Restart Computer](/configmgr/osd/understand/task-sequence-steps#BKMK_RestartComputer) step, but you need to recreate any break points. Even though the task sequence may not require it, since the debugger requires user interaction, you need to sign in to Windows to continue. If you don't sign in after one hour to continue debugging, the task sequence fails.
+The task sequence debugger continues to run after a [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step, but you need to recreate any break points. Even though the task sequence may not require it, since the debugger requires user interaction, you need to sign in to Windows to continue. If you don't sign in after one hour to continue debugging, the task sequence fails.
 
-It also steps into a child task sequence with the [Run Task Sequence](/configmgr/osd/understand/task-sequence-steps#child-task-sequence) step. The debugger window shows the steps of the child task sequence along with the main task sequence.
+It also steps into a child task sequence with the [Run Task Sequence](../understand/task-sequence-steps.md#child-task-sequence) step. The debugger window shows the steps of the child task sequence along with the main task sequence.
 
 
 ## Known issues
@@ -106,7 +106,7 @@ If you target both a normal deployment and debug deployment to the same device t
 
 ## See also
 
-- [About task sequence steps](/configmgr/osd/understand/task-sequence-steps)
-- [Task sequence variables](/configmgr/osd/understand/task-sequence-variables)
-- [How to use task sequence variables](/configmgr/osd/understand/using-task-sequence-variables)
-- [Deploy a task sequence](/configmgr/osd/deploy-use/deploy-a-task-sequence)
+- [About task sequence steps](../understand/task-sequence-steps.md)
+- [Task sequence variables](../understand/task-sequence-variables.md)
+- [How to use task sequence variables](../understand/using-task-sequence-variables.md)
+- [Deploy a task sequence](deploy-a-task-sequence.md)

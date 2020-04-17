@@ -38,14 +38,14 @@ After you complete the Create Task Sequence Wizard, Configuration Manager adds t
 
 ## See also
 
-For a list of available task sequence steps, see [Task sequence steps](/sccm/osd/understand/task-sequence-steps).  
+For a list of available task sequence steps, see [Task sequence steps](../understand/task-sequence-steps.md).  
 
-For more information about how to edit a task sequence, see [Use the task sequence editor](/sccm/osd/understand/task-sequence-editor).  
+For more information about how to edit a task sequence, see [Use the task sequence editor](../understand/task-sequence-editor.md).  
 
-Most often you'll use task sequences to automate tasks for OS deployment, but you can create a custom task sequence to automate different kinds of tasks. For more information, see [Create a task sequence for non-OS deployments](/sccm/osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments).
+Most often you'll use task sequences to automate tasks for OS deployment, but you can create a custom task sequence to automate different kinds of tasks. For more information, see [Create a task sequence for non-OS deployments](create-a-task-sequence-for-non-operating-system-deployments.md).
 
-Starting in version 2002, install complex applications using task sequences via the application model. Add a deployment type to an app that's a task sequence, either to install or uninstall the app. For more information, see [Create Windows applications](/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt).<!-- 3555953 -->
+Starting in version 2002, install complex applications using task sequences via the application model. Add a deployment type to an app that's a task sequence, either to install or uninstall the app. For more information, see [Create Windows applications](../../apps/get-started/creating-windows-applications.md#bkmk_tsdt).<!-- 3555953 -->
 
 ## Next steps
 
-[Deploy the task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence)
+[Deploy the task sequence](deploy-a-task-sequence.md)

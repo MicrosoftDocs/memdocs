@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Capture media in Configuration Manager allows you to capture an OS image from a reference computer. Capture media contains the boot image that starts the reference computer and the task sequence that captures the OS image. Use capture media for the scenario to [Create a task sequence to capture an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system).  
+Capture media in Configuration Manager allows you to capture an OS image from a reference computer. Capture media contains the boot image that starts the reference computer and the task sequence that captures the OS image. Use capture media for the scenario to [Create a task sequence to capture an OS](create-a-task-sequence-to-capture-an-operating-system.md).  
 
 
 ## Prerequisites
@@ -36,7 +36,7 @@ Consider the following points about the boot image that you use in the task sequ
 
 Distribute all content that the task sequence requires to at least one distribution point. This content includes the boot image, OS image, and other associated files. The wizard gathers the content from the distribution point when it creates the capture media.
 
-Your user account needs at least **Read** access rights to the content library on that distribution point. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
+Your user account needs at least **Read** access rights to the content library on that distribution point. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
 
 ### Prepare the removable USB drive
 
@@ -100,4 +100,4 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
 ## Next steps
 
-[Create a task sequence to capture an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system)
+[Create a task sequence to capture an OS](create-a-task-sequence-to-capture-an-operating-system.md)
