@@ -34,7 +34,7 @@ As a Security Admin, use the *Endpoint security* node in Intune to configure dev
 
 The Endpoint security node groups the tools that are available through Intune that you’ll use to keep devices secure:
 
-- **Review the status of all your managed devices**. Use the [All devices](#view-all-devices-and-manage-device-actions) view where you can view device compliance from a high level and then drill into specific devices to understand which compliance policies weren't met so you can act to resolve them.
+- **Review the status of all your managed devices**. Use the [All devices](#manage-devices) view where you can view device compliance from a high level and then drill into specific devices to understand which compliance policies weren't met so you can act to resolve them.
 
 - **Deploy security baselines that establish best practice security configurations for devices**. Intune includes [security baselines](#manage-security-baselines) for Windows devices and a growing list of applications, like Defender ATP and Microsoft Edge.
 

@@ -63,7 +63,6 @@
   - name: Endpoint security
     href: endpoint-security.md
     items:
-<<<<<<< HEAD
     - name: Security baselines
       items: 
       - name: Security baselines 
