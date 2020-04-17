@@ -25,7 +25,7 @@ Configuration Manager continues to support packages and programs that were used 
 - Scripts that run on a recurring schedule and can't use global evaluation
 
 > [!TIP]  
-> Consider using the [Scripts](/sccm/apps/deploy-use/create-deploy-scripts) feature in the Configuration Manager console. Scripts may be a better solution for some of the preceding scenarios instead of using packages and programs.
+> Consider using the [Scripts](create-deploy-scripts.md) feature in the Configuration Manager console. Scripts may be a better solution for some of the preceding scenarios instead of using packages and programs.
 
 When you migrate packages from an earlier version of Configuration Manager, you can deploy them in your Configuration Manager hierarchy. After migration is complete, the packages appear in the **Packages** node in the **Software Library** workspace.
 
@@ -34,9 +34,9 @@ You can modify and deploy these packages in the same way you did by using softwa
 > [!NOTE]  
 > Use Package Conversion Manager to convert packages and programs into Configuration Manager applications.  
 >
-> Starting in version 1806, Package Conversion Manager is integrated with Configuration Manager. For more information, see [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager).  
+> Starting in version 1806, Package Conversion Manager is integrated with Configuration Manager. For more information, see [Package Conversion Manager](../pcm/package-conversion-manager.md).  
 
-Packages can use some new features of Configuration Manager, including distribution point groups and monitoring. You can't deploy Microsoft Application Virtualization (App-V) applications with packages and programs in Configuration Manager. To distribute virtual applications, create them as Configuration Manager applications. For more information, see [Deploy App-V virtual applications](/sccm/apps/get-started/deploying-app-v-virtual-applications).  
+Packages can use some new features of Configuration Manager, including distribution point groups and monitoring. You can't deploy Microsoft Application Virtualization (App-V) applications with packages and programs in Configuration Manager. To distribute virtual applications, create them as Configuration Manager applications. For more information, see [Deploy App-V virtual applications](../get-started/deploying-app-v-virtual-applications.md).  
 
 
 ## Create a package and program
@@ -66,7 +66,7 @@ Packages can use some new features of Configuration Manager, including distribut
         > [!NOTE]  
         > The computer account of the site server must have read access permissions to the source folder that you specify.  
 
-    - Starting in version 1906, if you want to pre-cache content on a client, specify the **Architecture** and **Language** of the package. For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).<!--4224642-->  
+    - Starting in version 1906, if you want to pre-cache content on a client, specify the **Architecture** and **Language** of the package. For more information, see [Configure pre-cache content](../../osd/deploy-use/configure-precache-content.md).<!--4224642-->  
 
 4. On the **Program Type** page of the **Create Package and Program Wizard**, select the type of program to create, and then choose **Next**. You can create a program for a [computer](#create-a-standard-program) or [device](#create-a-device-program), or you can skip this step and create a program later.  
 
@@ -200,7 +200,7 @@ Packages can use some new features of Configuration Manager, including distribut
         > [!NOTE]
         > If multiple users are signed into the device, package and task sequence deployments may not appear in Software Center.
 
-    - **Send wake-up packets**: If you set the deployment purpose to **Required** and select this option, the site first sends a wake-up packet to computers at the installation deadline time. Before you can use this option, configure computers for Wake On LAN. For more information, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).  
+    - **Send wake-up packets**: If you set the deployment purpose to **Required** and select this option, the site first sends a wake-up packet to computers at the installation deadline time. Before you can use this option, configure computers for Wake On LAN. For more information, see [How to configure Wake on LAN](../../core/clients/deploy/configure-wake-on-lan.md).  
 
     - **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs**  
 
@@ -231,7 +231,7 @@ Packages can use some new features of Configuration Manager, including distribut
     - **Embedded devices**: When you deploy packages and programs to Windows Embedded devices that are write-filter-enabled, you can specify that they install packages and programs on the temporary overlay and commit changes later. Alternately, commit the changes on the installation deadline or during a maintenance window. When you commit changes on the installation deadline or during a maintenance window, a restart is required, and the changes persist on the device.  
 
         > [!NOTE]  
-        > When you deploy a package or program to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window. For more information about how maintenance windows are used when you deploy packages and programs to Windows Embedded devices, see [Creating Windows Embedded applications](/sccm/apps/get-started/creating-windows-embedded-applications).  
+        > When you deploy a package or program to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window. For more information about how maintenance windows are used when you deploy packages and programs to Windows Embedded devices, see [Creating Windows Embedded applications](../get-started/creating-windows-embedded-applications.md).  
 
 8. On the **Distribution Points** page, specify the following information:  
 
@@ -249,11 +249,11 @@ View the deployment in the **Deployments** node of the **Monitoring** workspace 
 
 ## Monitor packages and programs
 
-To monitor package and program deployments, use the same procedures that you use to monitor applications as detailed in [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
+To monitor package and program deployments, use the same procedures that you use to monitor applications as detailed in [Monitor applications](monitor-applications-from-the-console.md).  
 
 Packages and programs also include a number of built-in reports, which enable you to monitor information about the deployment status of packages and programs. These reports have the report category of **Software Distribution – Packages and Programs** and **Software Distribution – Package and Program Deployment Status**.  
 
-For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
+For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](../../core/servers/manage/introduction-to-reporting.md).  
 
 
 ## Manage packages and programs
@@ -289,8 +289,8 @@ Updates distribution points with the latest content for the selected package and
 
 ## See also
 
-- [Scripts](/sccm/apps/deploy-use/create-deploy-scripts)
+- [Scripts](create-deploy-scripts.md)
 
-- [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager)
+- [Package Conversion Manager](../pcm/package-conversion-manager.md)
 
-- [Package definition files](/sccm/apps/deploy-use/package-definition-files)
+- [Package definition files](package-definition-files.md)

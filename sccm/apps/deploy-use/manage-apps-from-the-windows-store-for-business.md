@@ -49,7 +49,7 @@ To deploy online licensed apps to Windows 10 devices with the Configuration Mana
 
 #### <a name="bkmk_note2"></a> Note 2: Configuration Manager minimum version
 
-Starting in version 1806. For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).  
+Starting in version 1806. For more information, see [Create Windows applications](../get-started/creating-windows-applications.md#bkmk_provision).  
 
 ### Deploying online apps using the Microsoft Store for Business and Education to devices that run the Configuration Manager client
 
@@ -105,7 +105,7 @@ At the next application evaluation cycle:
 
 When you synchronize the list of Microsoft Store for Business and Education apps that your organization acquired, you see these apps in the Configuration Manager console.
 
-Connect your Configuration Manager site to Azure AD and the Microsoft Store for Business and Education. For more information and details of this process, see [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard). Create a connection to the **Microsoft Store for Business** service.
+Connect your Configuration Manager site to Azure AD and the Microsoft Store for Business and Education. For more information and details of this process, see [Configure Azure services](../../core/servers/deploy/configure/azure-services-wizard.md). Create a connection to the **Microsoft Store for Business** service.
 
 Make sure the service connection point and targeted devices can access the cloud service. For more information, see [Prerequisites for Microsoft Store for Business and Education - Proxy configuration](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 
@@ -139,8 +139,8 @@ The site creates a Configuration Manager application containing the Microsoft St
 
 Then deploy and monitor this application as you would any other Configuration Manager application. For more information, see the following articles:  
 
-- [Deploy applications](/sccm/apps/deploy-use/deploy-applications)
-- [Monitor applications from the console](/sccm/apps/deploy-use/monitor-applications-from-the-console)
+- [Deploy applications](deploy-applications.md)
+- [Monitor applications from the console](monitor-applications-from-the-console.md)
 
 ## Next steps
 
@@ -161,4 +161,4 @@ After the Microsoft Store for Business and Education administrator acquires an o
 
 ## See also
 
-[Troubleshoot the Microsoft Store for Business and Education integration with Configuration Manager](/sccm/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration)
+[Troubleshoot the Microsoft Store for Business and Education integration with Configuration Manager](troubleshoot-microsoft-store-for-business-integration.md)

@@ -64,7 +64,7 @@ Create a Microsoft Edge application using the built-in application experience, w
    - The channel to deploy
    - The version to deploy
    - If you want to **Allow Microsoft Edge to automatically update the version of the client on the end user's device** (added in version 2002)
-1. On the **Deployment** page, decide if you want to deploy the application. If you select **Yes**, you can specify your deployment settings for the application. For more information about deployment settings, see [Deploy applications](/configmgr/apps/deploy-use/deploy-applications#bkmk_deploy-general).
+1. On the **Deployment** page, decide if you want to deploy the application. If you select **Yes**, you can specify your deployment settings for the application. For more information about deployment settings, see [Deploy applications](deploy-applications.md#bkmk_deploy-general).
 1. In **Software Center** on the client device, the user can see and install the application.
 
    ![Microsoft Edge Settings page in the deployment wizard](./media/4561024-software-center-install-edge.png)
@@ -74,7 +74,7 @@ Create a Microsoft Edge application using the built-in application experience, w
 |Location|Log|Use|
 |---|---|---|
 | Site server|SMSProv.log|Shows details if the creation of the app or deployment fails.|
-| [Varies](/sccm/core/plan-design/hierarchy/log-files)|PatchDownloader.log| Shows details if the content download fails|
+| [Varies](../../core/plan-design/hierarchy/log-files.md)|PatchDownloader.log| Shows details if the content download fails|
 | Client|  AppEnforce.log|Shows installation information|
 
 ## Update Microsoft Edge
@@ -82,21 +82,21 @@ Create a Microsoft Edge application using the built-in application experience, w
 
 Starting in Configuration Manager version 1910, you'll see a node called **All Microsoft Edge updates** under **Microsoft Edge Management**. This node helps you manage updates for all Microsoft Edge channels.<!--initial edge updates released Jan 15,2020-->
 
-1. To get updates for Microsoft Edge, ensure you have the **Updates** classification and the **Microsoft Edge** product [selected for synchronization](/configmgr/sum/get-started/configure-classifications-and-products).
+1. To get updates for Microsoft Edge, ensure you have the **Updates** classification and the **Microsoft Edge** product [selected for synchronization](../../sum/get-started/configure-classifications-and-products.md).
 
    [![Select Microsoft Edge as product in software update point properties](./media/4831871-microsoft-edge-product-sup.png)](./media/4831871-microsoft-edge-product-sup.png#lightbox)
 
 1. In the **Software Library** workspace, expand **Microsoft Edge Management** and click on the **All Microsoft Edge Updates** node.
 
-1. If needed, click **Synchronize Software Updates** in the ribbon to start a synchronization. For more information, see [Synchronize software updates](/configmgr/sum/get-started/synchronize-software-updates).
+1. If needed, click **Synchronize Software Updates** in the ribbon to start a synchronization. For more information, see [Synchronize software updates](../../sum/get-started/synchronize-software-updates.md).
 
    ![All Microsoft Edge updates node](./media/4831871-all-microsoft-edge-updates.png)
 
-1. Manage and deploy Microsoft Edge updates like any other update, such as adding them to your [automatic deployment rule](/configmgr/sum/deploy-use/automatically-deploy-software-updates). Some of the common updates tasks you can do from the **All Microsoft Edge Updates** node include:
+1. Manage and deploy Microsoft Edge updates like any other update, such as adding them to your [automatic deployment rule](../../sum/deploy-use/automatically-deploy-software-updates.md). Some of the common updates tasks you can do from the **All Microsoft Edge Updates** node include:
 
-   - [Create a phased deployment](/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)
-   - [Manually deploy software updates](/configmgr/sum/deploy-use/manually-deploy-software-updates)
-   - [Download software updates](/configmgr/sum/deploy-use/download-software-updates)
+   - [Create a phased deployment](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md)
+   - [Manually deploy software updates](../../sum/deploy-use/manually-deploy-software-updates.md)
+   - [Download software updates](../../sum/deploy-use/download-software-updates.md)
 
 ## <a name="bkmk_edge-dash"></a> Microsoft Edge Management dashboard
 <!--3871913-->
@@ -113,7 +113,7 @@ Starting in Configuration Manager 2002, the Microsoft Edge Management dashboard 
 
 ### Prerequisites for the dashboard
 
-Enable the following properties in the below [hardware inventory](/configmgr/core/clients/manage/inventory/extend-hardware-inventory) classes for the Microsoft Edge Management dashboard:
+Enable the following properties in the below [hardware inventory](../../core/clients/manage/inventory/extend-hardware-inventory.md) classes for the Microsoft Edge Management dashboard:
 
 - **Installed Software - Asset Intelligence (SMS_InstalledSoftware)**
    - Software Code
@@ -135,8 +135,8 @@ From the **Software Library** workspace, click **Microsoft Edge Management** to 
 
 ## Next steps
 
-[Monitor applications](/configmgr/apps/deploy-use/monitor-applications-from-the-console)
+[Monitor applications](monitor-applications-from-the-console.md)
 
-[Monitor software updates](/configmgr/sum/deploy-use/monitor-software-updates)
+[Monitor software updates](../../sum/deploy-use/monitor-software-updates.md)
 
-[Manage and monitor phased deployments](/configmgr/osd/deploy-use/manage-monitor-phased-deployments)
+[Manage and monitor phased deployments](../../osd/deploy-use/manage-monitor-phased-deployments.md)

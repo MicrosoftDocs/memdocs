@@ -21,7 +21,7 @@ ROBOTS: NOINDEX
 
 <!--1357861-->
 
-This article describes the XML elements in the Configuration Manager configuration file (Microsoft.ConfigurationManagement.exe.config) that control the operation of the Package Conversion Manager plug-in. For more information on how to use this plug-in, see [How to use the Package Conversion Manager plug-in](/sccm/apps/pcm/how-to-use-plug-in).
+This article describes the XML elements in the Configuration Manager configuration file (Microsoft.ConfigurationManagement.exe.config) that control the operation of the Package Conversion Manager plug-in. For more information on how to use this plug-in, see [How to use the Package Conversion Manager plug-in](how-to-use-plug-in.md).
 
 
 

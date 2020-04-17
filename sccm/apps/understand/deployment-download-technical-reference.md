@@ -18,14 +18,14 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Before you continue, please review [Application deployment client components](/sccm/apps/understand/client-components-technical-reference) to understand DCM and CI Agent job processing.
+Before you continue, please review [Application deployment client components](client-components-technical-reference.md) to understand DCM and CI Agent job processing.
 
 ## Download Initiation
 
 Application content download is initiated by the CI Agent component on the client during the **StateDownloadingContents** phase. This process is the same, regardless of whether the application is deployed to a Device Collection or a User collection.
 
 - For **Available** deployments, application content is downloaded when the user initiates the application installation from Software Center.
-- For **Required** deployments, application content is downloaded when the assignment is activated and the application is found Applicable after evaluation. To understand when the assignment is activated, see the [Application Deployment to Device Collections](/sccm/apps/understand/device-deployment-technical-reference) or [Application Deployment to User Collections](/sccm/apps/understand/user-deployment-technical-reference) articles.
+- For **Required** deployments, application content is downloaded when the assignment is activated and the application is found Applicable after evaluation. To understand when the assignment is activated, see the [Application Deployment to Device Collections](device-deployment-technical-reference.md) or [Application Deployment to User Collections](user-deployment-technical-reference.md) articles.
 
 When CI Agent initiates the content download, it creates a task that is handled by the CI Task Manager component. CI Task Manager then initiates the content download. This activity can be tracked in the **CITaskMgr.log** by using the Deployment Type Unique ID.
 
@@ -45,9 +45,9 @@ Reply Message Body : <Reply XML Body>
 > [!IMPORTANT]
 > Although Location Services component handles the location requests, it doesn't directly request locations from the Management Point. All requests to the Management Point typically go through CCM Messaging component, which logs to **CcmMessaging.log**.
 
-Location reply XML contains the list of distribution points based on the client's boundary group. This list is parsed and persisted in WMI on the client according to the [Content Source Priority](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority). This activity can be seen in **ContentTransferManager.log**, by using the Content Unique ID and looking for `Persisted location`. 
+Location reply XML contains the list of distribution points based on the client's boundary group. This list is parsed and persisted in WMI on the client according to the [Content Source Priority](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#content-source-priority). This activity can be seen in **ContentTransferManager.log**, by using the Content Unique ID and looking for `Persisted location`. 
 
-If the location reply XML doesn't contain any distribution points, **ContentTransferManager.log** would show `Received empty location update` and the client may get stuck at 0% while downloading the application. This reply can typically occur because of boundary group configuration issues. For more information, see [Download failures](/sccm/apps/deploy-use/troubleshoot-application-deployment#download-failures).
+If the location reply XML doesn't contain any distribution points, **ContentTransferManager.log** would show `Received empty location update` and the client may get stuck at 0% while downloading the application. This reply can typically occur because of boundary group configuration issues. For more information, see [Download failures](../deploy-use/troubleshoot-application-deployment.md#download-failures).
 
 ## Content Download
 
@@ -84,4 +84,4 @@ Finally, after content is verified, CI Agent receives the task complete notifica
 
 ## Next Steps
 
-- [Application Installation](/sccm/apps/understand/deployment-install-technical-reference)
+- [Application Installation](deployment-install-technical-reference.md)

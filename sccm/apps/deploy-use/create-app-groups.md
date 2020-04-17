@@ -23,7 +23,7 @@ manager: dougeby
 Starting in version 1906, create a group of applications that you can send to a user or device collection as a single deployment. The metadata you specify about the app group is seen in Software Center as a single entity. You can order the apps in the group so that the client installs them in a specific order.
 
 > [!Note]  
-> In this version of Configuration Manager, app groups are a pre-release feature. To enable it, see [Pre-release features](/configmgr/core/servers/manage/pre-release-features).  
+> In this version of Configuration Manager, app groups are a pre-release feature. To enable it, see [Pre-release features](../../core/servers/manage/pre-release-features.md).  
 
 1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Application Management** and select the **Application Group** node.  
 
@@ -37,7 +37,7 @@ Starting in version 1906, create a group of applications that you can send to a 
 
 1. Complete the wizard.  
 
-Deploy the app group using the same process as for an application. For more information, see [Deploy applications](/configmgr/apps/deploy-use/deploy-applications). Starting in version 1910, you can deploy an app group to device or user collections.
+Deploy the app group using the same process as for an application. For more information, see [Deploy applications](deploy-applications.md). Starting in version 1910, you can deploy an app group to device or user collections.
 
 After you deploy the group:
 

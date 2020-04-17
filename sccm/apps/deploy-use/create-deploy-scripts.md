@@ -22,7 +22,7 @@ manager: dougeby
 Configuration Manager has an integrated ability to run PowerShell scripts. PowerShell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently.  
 
 > [!Note]  
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
 
 
 With this integration in Configuration Manager, you can use the *Run Scripts* functionality to do the following things:
@@ -34,7 +34,7 @@ With this integration in Configuration Manager, you can use the *Run Scripts* fu
 - Monitor script execution and view reporting results from script output.
 
 > [!WARNING]
-> - Given the power of scripts, we remind you to be intentional and careful with their usage. We have built in additional safeguards to assist you; segregated roles and scopes. Be sure to validate the accuracy of scripts before running them and confirm they are from a trusted source, to prevent unintended script execution. Be mindful of extended characters or other obfuscation and educate yourself about securing scripts. [Learn more about PowerShell script security](/sccm/apps/deploy-use/learn-script-security)
+> - Given the power of scripts, we remind you to be intentional and careful with their usage. We have built in additional safeguards to assist you; segregated roles and scopes. Be sure to validate the accuracy of scripts before running them and confirm they are from a trusted source, to prevent unintended script execution. Be mindful of extended characters or other obfuscation and educate yourself about securing scripts. [Learn more about PowerShell script security](learn-script-security.md)
 > - Certain anti-malware software may inadvertently trigger events against the Configuration Manager Run Scripts or CMPivot features. It is recommended to exclude %windir%\CCM\ScriptStore so that the anti-malware software permits those features to run without interference.
 
 ## Prerequisites
@@ -49,7 +49,7 @@ With this integration in Configuration Manager, you can use the *Run Scripts* fu
 For more information about Configuration Manager security roles:</br>
 [Security scopes for run scripts](#security-scopes)</br>
 [Security roles for run scripts](#bkmk_ScriptRoles)</br>
-[Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
+[Fundamentals of role-based administration](../../core/understand/fundamentals-of-role-based-administration.md).
 
 ## Limitations
 
@@ -60,7 +60,7 @@ Run Scripts currently supports:
 
 
 >[!WARNING]
->Be aware that when using parameters, it opens a surface area for potential PowerShell injection attack risk. There are various ways to mitigate and work around, such as using regular expressions to validate parameter input or using predefined parameters. Common best practice is not to include secrets in your PowerShell scripts (no passwords, etc.). [Learn more about PowerShell script security](/sccm/apps/deploy-use/learn-script-security) <!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
+>Be aware that when using parameters, it opens a surface area for potential PowerShell injection attack risk. There are various ways to mitigate and work around, such as using regular expressions to validate parameter input or using predefined parameters. Common best practice is not to include secrets in your PowerShell scripts (no passwords, etc.). [Learn more about PowerShell script security](learn-script-security.md) <!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
 
 
 ## Run Script authors and approvers
@@ -165,7 +165,7 @@ The three security roles used for running scripts aren't created by default in C
 5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it. 
 
 > [!IMPORTANT]
-> Avoid scripting a device reboot or a restart of the Configuration Manager agent when using the Run Scripts feature. Doing so could lead to a continuous rebooting state. If needed, there are enhancements to the client notification feature that enable restarting devices, starting in Configuration Manager version 1710. The [pending restart column](/sccm/core/clients/manage/manage-clients#restart-clients) can help identify devices that need a restart. 
+> Avoid scripting a device reboot or a restart of the Configuration Manager agent when using the Run Scripts feature. Doing so could lead to a continuous rebooting state. If needed, there are enhancements to the client notification feature that enable restarting devices, starting in Configuration Manager version 1710. The [pending restart column](../../core/clients/manage/manage-clients.md#restart-clients) can help identify devices that need a restart. 
 > <!--SMS503978  -->
 
 ## Script parameters
@@ -346,4 +346,4 @@ Starting in version 1810, additional logging was added for troubleshooting.
 ## See Also
 
 - [Configure role-based administration for Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md)
-- [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration)
+- [Fundamentals of role-based administration](../../core/understand/fundamentals-of-role-based-administration.md)
