@@ -5,7 +5,7 @@ description: Learn about the different digital certificates to use with the clou
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -24,9 +24,6 @@ Depending upon the scenario you use to manage clients on the internet with the c
   - [Server authentication certificate issued from enterprise PKI](#bkmk_serverauthpki)  
 
 - [Client authentication certificate](#bkmk_clientauth)  
-    - [Client trusted root certificate to CMG](#bkmk_clientroot)  
-    
-- [Enable management point for HTTPE](#bkmk_mphttpe)
   - [Client trusted root certificate to CMG](#bkmk_clientroot)  
 
 - [Enable management point for HTTPS](#bkmk_mphttps)  
@@ -185,17 +182,6 @@ After issuing a client authentication certificate to a computer, use this proces
 
 8. Export all of the certificates in the certification path of the original client authentication certificate. Make note of which exported certificates are intermediate CAs, and which ones are trusted root CAs.  
 
-
-## <a name="bkmk_mphttpe"></a> Enable management point for HTTPE
-
-When a Site Server has been configured to "Use Configuration Manager-generated certificates for HTTP site systems.", you can Configure a HTTP Management point to allow CMG clients communnication requests.
-
-When a site system is configured as HTTP on the Site server, the Site server will generate a self signed certificate for E-HTTP, secured communications. The certificate is configured on the IIS 'Default Web site' Bindgings (443 port) as "SMS Role SSL Certifcate".
-    
-This will allow The HTTP site system to reply AAD clients requests on SSL channel, while on premisses clients can use pure HTTP mode.
-    
-    
-
 ## <a name="bkmk_mphttps"></a> Enable management point for HTTPS
 
 Provision this certificate outside of the context of Configuration Manager. For example, use Active Directory Certificate Services and group policy to issue a web server certificate. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements) and [Deploy the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).
@@ -204,6 +190,10 @@ When using the site option to **Use Configuration Manager-generated certificates
 
 > [!Tip]  
 > If you aren't using Enhanced HTTP, and your environment has multiple management points, you don't have to HTTPS-enable them all for CMG. Configure the CMG-enabled management points as **Internet only**. Then your on-premises clients don't try to use them.<!-- SCCMDocs#1676 -->
+
+### Enhanced HTTP certificate for management points
+
+When you enable Enhanced HTTP, the site server generates a self-signed certificate named **SMS Role SSL Certificate**, issued by the root SMS Issuing certificate. The management point adds this certificate to the IIS Default Web site bound to port 443.
 
 ### Management point client connection mode summary
 
