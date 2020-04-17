@@ -59,8 +59,9 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 -->
  
 <!-- ***********************************************-->
+<!--
 ## App management
-
+-->
 
 <!-- ***********************************************-->
 ## Device configuration
